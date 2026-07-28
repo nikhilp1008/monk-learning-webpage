@@ -291,7 +291,7 @@ export default function LessonPlayerPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-cream-light">
+    <div className="min-h-screen flex flex-col bg-ruled-body">
       <Header />
 
       <audio
@@ -306,7 +306,7 @@ export default function LessonPlayerPage() {
         onEnded={handleEnded}
       />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 md:px-8 py-6 flex flex-col">
+      <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-6 flex flex-col animate-ml-rise">
         {loading ? (
           <div className="py-24 flex flex-col items-center justify-center gap-3 text-ink-muted flex-1">
             <div className="w-8 h-8 border-3 border-orange border-t-transparent rounded-full animate-ml-spin" />
@@ -332,7 +332,7 @@ export default function LessonPlayerPage() {
               <div className="flex items-center gap-3.5">
                 <Link
                   href="/lessons"
-                  className="font-semibold text-sm px-3.5 py-2 rounded-full text-ink-light hover:text-ink hover:bg-cream/40 transition-colors"
+                  className="font-semibold text-sm px-3.5 py-2 rounded-full text-ink-light hover:text-ink hover:bg-white/60 transition-colors"
                 >
                   ← All lessons
                 </Link>
@@ -354,7 +354,7 @@ export default function LessonPlayerPage() {
 
               <div className="flex items-center gap-3">
                 {/* Language Toggle Switch */}
-                <div className="inline-flex gap-1 p-1 bg-ink/5 rounded-full">
+                <div className="inline-flex gap-[3px] p-[3px] bg-[rgba(28,26,22,0.055)] rounded-full">
                   <button
                     onClick={() => setLanguage("english")}
                     className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
@@ -381,10 +381,10 @@ export default function LessonPlayerPage() {
                 <button
                   onClick={togglePlayPause}
                   disabled={!audioUrl}
-                  className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 rounded-full text-cream-light bg-ink shadow-md hover:-translate-y-0.5 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 rounded-full text-dark-card bg-orange shadow-ref-pill hover:-translate-y-0.5 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isBuffering ? (
-                    <div className="w-4 h-4 border-2 border-cream-light border-t-transparent rounded-full animate-ml-spin" />
+                    <div className="w-4 h-4 border-2 border-dark-card border-t-transparent rounded-full animate-ml-spin" />
                   ) : isPlaying ? (
                     <svg
                       viewBox="0 0 24 24"
@@ -412,19 +412,23 @@ export default function LessonPlayerPage() {
 
             {/* Main Board Player + Sidebar Grid */}
             <div
-              className={`grid grid-cols-1 lg:grid-cols-4 gap-5 items-stretch transition-all ${
+              className={`grid grid-cols-1 lg:grid-cols-[minmax(0,3.4fr)_minmax(0,1fr)] gap-5 items-stretch transition-all ${
                 isFullScreen
                   ? "fixed inset-0 z-50 p-6 bg-cream-light"
-                  : "h-[calc(100vh-280px)] min-h-[480px]"
+                  : "h-[calc(100vh-320px)] min-h-[460px]"
               }`}
             >
               {/* Board Area */}
               <div
-                className={`lg:col-span-3 relative flex flex-col bg-white border border-border-subtle rounded-2xl p-5 md:p-7 shadow-md overflow-hidden ${
+                className={`relative flex flex-col bg-ruled-board border-[1.5px] border-ink rounded-[18px] p-[24px_28px_24px_54px] shadow-ref-board overflow-hidden ${
                   isFullScreen ? "h-full" : ""
                 }`}
               >
-                <span className="absolute top-5 bottom-5 left-9 w-[1.4px] bg-red-note/35 pointer-events-none" />
+                {/* Red Margin Line */}
+                <span
+                  aria-hidden="true"
+                  className="absolute top-5 bottom-5 left-[36px] w-[1.4px] bg-red-note/35 pointer-events-none"
+                />
 
                 <div className="flex items-center gap-3 mb-4 flex-none z-10">
                   <span
@@ -483,7 +487,7 @@ export default function LessonPlayerPage() {
 
                 <div
                   ref={boardContainerRef}
-                  className="flex-1 min-h-0 overflow-y-auto pl-7 pr-2 space-y-3 z-10"
+                  className="flex-1 min-h-0 overflow-y-auto pl-4 pr-2 space-y-3 z-10"
                 >
                   {boardEvents.length === 0 ? (
                     <div className="py-12 text-center text-ink-muted text-sm italic">
@@ -527,7 +531,7 @@ export default function LessonPlayerPage() {
               </div>
 
               {/* Sidebar */}
-              <div className="lg:col-span-1 flex flex-col bg-white border border-border-subtle rounded-2xl p-4.5 shadow-sm overflow-hidden h-full">
+              <div className="flex flex-col bg-white border border-border-subtle rounded-[18px] p-[18px_14px] shadow-ref-stat overflow-hidden h-full">
                 <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted mb-3 block">
                   Curriculum Modules
                 </span>
@@ -567,14 +571,14 @@ export default function LessonPlayerPage() {
                                 onClick={() => handleSelectSection(originalIndex)}
                                 className={`w-full text-left flex items-center gap-2 p-1.5 rounded-lg transition-all ${
                                   isActive
-                                    ? "bg-orange text-ink font-bold shadow-xs"
+                                    ? "bg-orange text-dark-card font-bold shadow-xs"
                                     : "hover:bg-cream/50 text-ink-light font-medium"
                                 }`}
                               >
                                 <span
                                   className={`w-4 h-4 rounded-full flex items-center justify-center text-[0.65rem] flex-none ${
                                     isActive
-                                      ? "bg-ink text-cream-light font-extrabold"
+                                      ? "bg-dark-card text-cream-light font-extrabold"
                                       : "bg-ink/10 text-ink-muted font-bold"
                                   }`}
                                 >
@@ -599,10 +603,10 @@ export default function LessonPlayerPage() {
             </div>
 
             {/* Bottom Live Captions Banner */}
-            <div className="bg-dark-bg text-[#EFEBDD] rounded-xl p-3.5 md:p-4 mt-4 shadow-sm flex flex-col gap-1">
+            <div className="bg-dark-bg text-[#EFEBDD] rounded-xl p-[13px_18px] mt-4 shadow-sm flex flex-col gap-1">
               <div className="flex items-center justify-between text-[0.62rem] font-extrabold tracking-widest uppercase text-orange">
                 <span>Monk · Live board sync</span>
-                <span className="text-ink-muted normal-case font-medium">
+                <span className="text-[#C7C1B3] normal-case font-medium">
                   {language === "english" ? "English narration" : "Hinglish narration"}
                 </span>
               </div>

@@ -64,7 +64,6 @@ export default function OnboardingPage() {
     setErrorMsg("");
 
     try {
-      // Ensure enrolled_class is sent strictly as a number (11 | 12)
       const numericClass = Number(enrolledClass);
 
       const { error } = await supabase.from("profiles").upsert({
@@ -93,7 +92,7 @@ export default function OnboardingPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-cream-light">
+      <div className="min-h-screen flex items-center justify-center bg-ruled-body">
         <div className="flex flex-col items-center gap-3 text-ink-muted">
           <div className="w-8 h-8 border-3 border-orange border-t-transparent rounded-full animate-ml-spin" />
           <span className="text-sm font-semibold">Loading setup...</span>
@@ -103,9 +102,9 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-cream-light p-4 md:p-8">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-ruled-body p-4 md:p-8">
       {/* Single Clean Onboarding Card */}
-      <div className="w-full max-w-xl bg-white border border-border-subtle rounded-2xl md:rounded-[24px] p-6 md:p-10 shadow-md animate-ml-rise">
+      <div className="w-full max-w-[540px] bg-white border border-border-subtle rounded-[24px] p-6 md:p-10 shadow-ref-card animate-ml-rise">
         {/* Header */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-2">
@@ -173,7 +172,7 @@ export default function OnboardingPage() {
             </div>
           </div>
 
-          {/* Field 3: Enrolled Class (Sent strictly as number 11 | 12) */}
+          {/* Field 3: Enrolled Class */}
           <div>
             <label className="block text-xs font-bold text-ink-light mb-2">
               Enrolled class
@@ -232,10 +231,10 @@ export default function OnboardingPage() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full py-4 px-6 rounded-full bg-orange text-ink font-bold text-sm shadow-md hover:-translate-y-0.5 transition-transform disabled:opacity-50 flex items-center justify-center gap-2 mt-2"
+            className="w-full py-4 px-6 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill hover:-translate-y-0.5 transition-transform disabled:opacity-50 flex items-center justify-center gap-2 mt-2"
           >
             {submitting ? (
-              <div className="w-4 h-4 border-2 border-ink border-t-transparent rounded-full animate-ml-spin" />
+              <div className="w-4 h-4 border-2 border-dark-card border-t-transparent rounded-full animate-ml-spin" />
             ) : (
               "Start learning with Monk →"
             )}

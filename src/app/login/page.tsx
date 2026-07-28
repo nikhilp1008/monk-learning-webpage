@@ -80,7 +80,6 @@ export default function LoginPage() {
         }
 
         if (data.session && data.user) {
-          // Check if profile exists
           const { data: profile } = await supabase
             .from("profiles")
             .select("id")
@@ -93,14 +92,12 @@ export default function LoginPage() {
             router.push("/dashboard");
           }
         } else if (data.user && !data.session) {
-          // Email confirmation enabled state
           setInfoMsg(
             "Account created! Please check your email inbox to confirm your address before logging in."
           );
           setLoading(false);
         }
       } else {
-        // Sign In
         const { data, error } = await supabase.auth.signInWithPassword({
           email,
           password,
@@ -140,16 +137,30 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-cream-light animate-ml-rise">
       {/* Left Column - Pitch Panel on Ruled Paper */}
-      <div className="relative overflow-hidden flex flex-col justify-between bg-[#FFFEFB] border-r border-border-subtle p-8 md:p-14 lg:p-16">
+      <div className="relative overflow-hidden flex flex-col justify-between bg-ruled-pitch border-r border-border-subtle p-8 md:p-14 lg:p-[44px_64px_40px_92px]">
         {/* Red Margin Line */}
         <span
           aria-hidden="true"
-          className="absolute top-0 bottom-0 left-12 md:left-16 w-[1.5px] bg-red-note/30 pointer-events-none"
+          className="absolute top-0 bottom-0 left-12 md:left-[60px] w-[1.5px] bg-red-note/30 pointer-events-none"
         />
+
+        {/* Floating Math Expressions */}
+        <span
+          aria-hidden="true"
+          className="absolute top-[22%] right-[8%] rotate-[4deg] font-script font-bold text-[1.15rem] text-ink/10 animate-ml-float pointer-events-none"
+        >
+          E = hν
+        </span>
+        <span
+          aria-hidden="true"
+          className="absolute bottom-[14%] right-[10%] -rotate-[5deg] font-script font-bold text-[1.05rem] text-orange/30 animate-ml-float pointer-events-none"
+        >
+          PV = nRT
+        </span>
 
         {/* Brand Header */}
         <div className="relative z-10 flex items-center gap-3">
-          <svg viewBox="0 0 120 120" className="w-11 h-11 flex-none" fill="none">
+          <svg viewBox="0 0 120 120" className="w-[44px] h-[44px] flex-none" fill="none">
             <circle
               cx="60"
               cy="60"
@@ -181,9 +192,9 @@ export default function LoginPage() {
         {/* Main Pitch */}
         <div className="relative z-10 my-auto py-10 max-w-lg space-y-8">
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-tight text-ink">
+            <h1 className="text-[2.65rem] leading-[1.08] tracking-[-0.03em] font-medium text-ink">
               A personal teacher who{" "}
-              <span className="font-script font-bold text-red-note whitespace-nowrap">
+              <span className="font-script font-bold text-red-note whitespace-nowrap -rotate-0.5 inline-block">
                 never sleeps.
               </span>
             </h1>
@@ -234,7 +245,7 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <div className="relative bg-white border-1.5 border-ink rounded-xl p-4 pl-9 shadow-md max-w-sm">
+          <div className="relative bg-white border-1.5 border-ink rounded-xl p-4 pl-9 shadow-ref-card max-w-sm">
             <span className="absolute top-0 bottom-0 left-6 w-[1.4px] bg-red-note/35" />
             <span className="absolute -top-2.5 left-3 bg-orange border border-ink rounded px-2 py-0.5 font-extrabold text-[0.55rem] tracking-wider uppercase text-ink">
               LIVE NOW
@@ -256,7 +267,7 @@ export default function LoginPage() {
           <span className="font-semibold px-3 py-1 rounded-full border border-border-subtle bg-white">
             English
           </span>
-          <span className="font-script font-bold text-red-note text-sm ml-1">
+          <span className="font-script font-bold text-red-note text-sm ml-1 -rotate-0.5 inline-block">
             — padho apni bhasha mein.
           </span>
         </div>
@@ -264,8 +275,8 @@ export default function LoginPage() {
 
       {/* Right Column - Auth Card */}
       <div className="flex flex-col justify-center items-center p-6 md:p-12 lg:p-16 bg-white">
-        <div className="w-full max-w-md space-y-6">
-          <div className="flex p-1 bg-cream-card border border-border-subtle rounded-full mb-6">
+        <div className="w-full max-w-[430px] space-y-6">
+          <div className="flex p-[3px] bg-[rgba(28,26,22,0.055)] rounded-full mb-6">
             <button
               onClick={() => {
                 setMode("signup");
@@ -394,10 +405,10 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3.5 px-6 rounded-full bg-orange text-ink font-bold text-sm shadow-md hover:-translate-y-0.5 transition-transform disabled:opacity-50 flex items-center justify-center gap-2"
+              className="w-full py-3.5 px-6 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill hover:-translate-y-0.5 transition-transform disabled:opacity-50 flex items-center justify-center gap-2"
             >
               {loading ? (
-                <div className="w-4 h-4 border-2 border-ink border-t-transparent rounded-full animate-ml-spin" />
+                <div className="w-4 h-4 border-2 border-dark-card border-t-transparent rounded-full animate-ml-spin" />
               ) : mode === "signup" ? (
                 "Create account"
               ) : (

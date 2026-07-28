@@ -138,22 +138,21 @@ export default function LessonsPage() {
   }, [selectedClass, selectedSubject]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-cream-light">
+    <div className="min-h-screen flex flex-col bg-ruled-body">
       <Header />
 
-      <main className="flex-1 max-w-6xl w-full mx-auto px-4 md:px-11 py-8">
+      <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
         {/* Title Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
           <div>
-            <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-ink leading-tight">
+            <h1 className="text-[2.3rem] leading-[1.05] tracking-[-0.025em] font-medium text-ink">
               Every chapter, taught by Monk.
             </h1>
-            <p className="text-ink-light text-base md:text-lg mt-2 max-w-2xl">
-              Press play on any chapter and Monk teaches it end to end on the
-              board, at your own pace.
+            <p className="text-ink-light text-base mt-2 max-w-2xl">
+              Press play on any chapter and Monk teaches it end to end on the board, at your own pace.
             </p>
           </div>
-          <span className="inline-flex items-center gap-1.5 font-bold text-xs text-ink-light border border-border-subtle rounded-full px-3.5 py-1.5 bg-white self-start md:self-auto">
+          <span className="inline-flex items-center gap-1.5 font-bold text-xs text-ink-light border border-border-subtle rounded-full px-3.5 py-1.5 bg-white self-start md:self-auto shadow-2xs">
             <svg
               viewBox="0 0 24 24"
               className="w-3.5 h-3.5"
@@ -170,7 +169,7 @@ export default function LessonsPage() {
         </div>
 
         {/* Card Container */}
-        <div className="bg-white border border-border-subtle rounded-2xl md:rounded-[20px] p-5 md:p-6 shadow-sm">
+        <div className="bg-white border border-border-subtle rounded-[20px] p-[22px_24px_8px] shadow-ref-card">
           {/* Controls Bar */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
             <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
@@ -183,7 +182,7 @@ export default function LessonsPage() {
               </span>
 
               {/* Class Toggle */}
-              <div className="inline-flex gap-1 p-1 bg-ink/5 rounded-full">
+              <div className="inline-flex gap-[3px] p-[3px] bg-[rgba(28,26,22,0.055)] rounded-full">
                 {CLASSES.map((cls) => {
                   const isActive = selectedClass === cls;
                   return (
@@ -258,13 +257,13 @@ export default function LessonsPage() {
 
                 const cardContent = (
                   <div
-                    className={`flex items-center gap-3 md:gap-4 p-3 md:p-3.5 border-b border-dashed border-border-subtle rounded-xl transition-colors ${
+                    className={`flex items-center gap-3 md:gap-4 py-[15px] px-2 border-b border-dashed border-[rgba(28,26,22,0.1)] rounded-[10px] transition-colors ${
                       isClickable
-                        ? "hover:bg-cream/50 cursor-pointer"
+                        ? "hover:bg-[rgba(252,244,224,0.5)] cursor-pointer"
                         : "bg-ink/[0.02] opacity-60 cursor-not-allowed"
                     }`}
                   >
-                    <span className="font-script font-bold text-sm md:text-base text-ink-dim w-7 flex-none">
+                    <span className="font-script font-bold text-[0.86rem] text-ink-dim w-7 flex-none">
                       {numStr}
                     </span>
 

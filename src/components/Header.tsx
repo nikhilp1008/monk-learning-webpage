@@ -11,10 +11,8 @@ type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
 export function Header() {
   const pathname = usePathname();
   const router = useRouter();
-
   const [profile, setProfile] = useState<ProfileRow | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -26,30 +24,25 @@ export function Header() {
         } = await supabase.auth.getUser();
 
         if (user) {
-          const { data: userProfile } = await supabase
+          const { data } = await supabase
             .from("profiles")
             .select("*")
             .eq("id", user.id)
             .maybeSingle();
 
-          if (isMounted) {
-            setProfile(userProfile || null);
+          if (isMounted && data) {
+            setProfile(data);
           }
         } else {
-          if (isMounted) {
-            setProfile(null);
-          }
+          if (isMounted) setProfile(null);
         }
       } catch (err) {
-        console.error("Error loading session in header:", err);
-      } finally {
-        if (isMounted) setLoading(false);
+        console.error("Error loading session in Header:", err);
       }
     }
 
     loadUserSession();
 
-    // Listen for auth state changes
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(() => {
@@ -84,9 +77,9 @@ export function Header() {
     : "S";
 
   return (
-    <header className="flex-none">
+    <header className="flex flex-col flex-none w-full z-40">
       {/* Night Band */}
-      <div className="relative bg-dark-bg text-[#EFEBDD] px-4 md:px-11 py-4.5 overflow-hidden flex-none">
+      <div className="relative bg-dark-bg text-[#EFEBDD] px-6 md:px-11 py-4.5 overflow-hidden">
         <span
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -94,9 +87,9 @@ export function Header() {
               "radial-gradient(90% 120% at 30% -20%, rgba(238,163,31,0.1), transparent 60%)",
           }}
         />
-        <div className="relative flex items-center gap-6">
-          <Link href="/" className="flex items-center gap-1.5 flex-none">
-            <svg viewBox="0 0 120 120" className="w-11 h-11" fill="none">
+        <div className="relative max-w-[1180px] w-full mx-auto flex items-center justify-between gap-6">
+          <Link href="/dashboard" className="flex items-center gap-2 flex-none">
+            <svg viewBox="0 0 120 120" className="w-[44px] h-[44px]" fill="none">
               <circle
                 cx="60"
                 cy="60"
@@ -119,126 +112,142 @@ export function Header() {
               />
               <circle cx="60" cy="60" r="6" className="fill-orange" />
             </svg>
-            <span className="text-[1.52rem] leading-none">
+            <span className="text-[1.52rem] leading-none tracking-tight">
               <b className="font-extrabold text-white">monk</b>
               <span className="font-medium text-[#938d80]">learning</span>
             </span>
           </Link>
 
-          <div className="hidden sm:flex flex-1 min-w-0 border-l border-white/10 pl-6 flex-col justify-center">
-            <div className="flex items-center gap-2.5">
-              <span className="font-extrabold text-[0.6rem] tracking-[0.16em] uppercase text-orange">
+          {/* Today's Push Banner */}
+          <div className="hidden md:flex flex-1 min-w-0 border-l border-white/10 pl-6 items-center justify-between gap-4">
+            <div>
+              <span className="block font-extrabold text-[0.6rem] tracking-[0.16em] uppercase text-orange">
                 Today&apos;s push
               </span>
+              <div className="text-[1.16rem] font-semibold text-[#EFEBDD] mt-0.5 leading-snug">
+                One chapter tonight.{" "}
+                <span className="font-script font-bold text-orange-light text-[1.1rem] inline-block -rotate-0.5">
+                  70% marks tomorrow.
+                </span>
+              </div>
             </div>
-            <div className="text-[1.05rem] font-semibold text-[#EFEBDD] mt-1 leading-snug truncate">
-              Master every concept with live board explanations{" "}
-              <span className="font-script font-bold text-orange-light text-[1.1rem] inline-block -rotate-0.5">
-                step by step
-              </span>
-            </div>
+
+            <Link
+              href="/lessons"
+              className="inline-flex items-center gap-2 font-bold text-xs px-5 py-2.5 rounded-full bg-orange text-dark-card shadow-ref-pill hover:-translate-y-0.5 transition-transform flex-none"
+            >
+              Learn with Monk
+              <svg
+                viewBox="0 0 16 16"
+                className="w-3.5 h-3.5 stroke-current"
+                fill="none"
+                strokeWidth="1.9"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M2 8h11M9 3.5 13.5 8 9 12.5" />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Nav Row */}
-      <div className="flex items-center justify-between gap-1.5 px-4 md:px-11 py-2.5 border-b border-border-subtle bg-white/60 sticky top-0 z-30 backdrop-blur-md">
-        <nav className="flex items-center gap-1 overflow-x-auto py-1">
-          {navItems.map((item) => {
-            const isActive =
-              pathname === item.href ||
-              (item.href !== "/" && pathname.startsWith(item.href));
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-colors ${
-                  isActive
-                    ? "bg-ink text-cream-light"
-                    : "text-ink-light hover:text-ink hover:bg-cream/40"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+      {/* Sticky Nav Row */}
+      <div className="sticky top-0 bg-white/70 backdrop-blur-md border-b border-border-subtle px-6 md:px-11 py-2.5 z-30">
+        <div className="max-w-[1180px] w-full mx-auto flex items-center justify-between gap-2 overflow-x-auto">
+          <nav className="flex items-center gap-1.5 flex-nowrap">
+            {navItems.map((item) => {
+              const isActive =
+                pathname === item.href ||
+                (item.href !== "/" && pathname.startsWith(item.href));
 
-        {/* User Session Menu / Sign In button */}
-        <div className="relative flex items-center gap-3">
-          {!loading && (
-            <>
-              {profile ? (
-                <div className="relative">
-                  <button
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    className="flex items-center gap-2 cursor-pointer p-1 rounded-full hover:bg-cream/50 transition-colors"
-                  >
-                    <span className="w-8 h-8 rounded-full grid place-items-center bg-gradient-to-br from-orange-light to-orange text-ink font-extrabold text-sm shadow-xs">
-                      {initial}
-                    </span>
-                    <span className="font-bold text-sm text-ink hidden sm:inline">
-                      {profile.display_name}
-                    </span>
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="w-3.5 h-3.5 stroke-ink-light"
-                      fill="none"
-                      strokeWidth="2.4"
-                      strokeLinecap="round"
-                    >
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-
-                  {/* Dropdown Menu */}
-                  {menuOpen && (
-                    <>
-                      <div
-                        className="fixed inset-0 z-40"
-                        onClick={() => setMenuOpen(false)}
-                      />
-                      <div className="absolute right-0 top-full mt-2 w-56 bg-white border border-border-subtle rounded-2xl shadow-xl p-2 z-50 animate-ml-rise">
-                        <div className="p-2.5 border-b border-dashed border-border-subtle mb-1">
-                          <b className="block font-bold text-sm text-ink truncate">
-                            {profile.display_name}
-                          </b>
-                          <span className="block text-xs text-ink-muted mt-0.5">
-                            Class {profile.enrolled_class} · {profile.target_exam}
-                          </span>
-                        </div>
-
-                        <button
-                          onClick={handleSignOut}
-                          className="w-full flex items-center gap-2.5 p-2.5 rounded-xl font-semibold text-sm text-red-note hover:bg-red-note/10 transition-colors"
-                        >
-                          <svg
-                            viewBox="0 0 24 24"
-                            className="w-4 h-4 stroke-current"
-                            fill="none"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-                            <path d="m16 17 5-5-5-5M21 12H9" />
-                          </svg>
-                          Sign out
-                        </button>
-                      </div>
-                    </>
-                  )}
-                </div>
-              ) : (
+              return (
                 <Link
-                  href="/login"
-                  className="font-bold text-xs md:text-sm px-4 py-1.5 rounded-full bg-orange text-ink shadow-xs hover:-translate-y-0.5 transition-transform"
+                  key={item.href}
+                  href={item.href}
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors ${
+                    isActive
+                      ? "bg-ink/5 text-ink font-bold"
+                      : "text-ink-light hover:text-ink"
+                  }`}
                 >
-                  Sign in
+                  {item.label}
                 </Link>
-              )}
-            </>
-          )}
+              );
+            })}
+          </nav>
+
+          {/* Right User Auth Action */}
+          <div className="flex items-center gap-3 flex-none pl-2">
+            {profile ? (
+              <div className="relative">
+                <button
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  className="inline-flex items-center gap-2.5 cursor-pointer py-1 px-2 rounded-full hover:bg-ink/5 transition-colors"
+                >
+                  <span className="w-8 h-8 rounded-full grid place-items-center bg-gradient-to-br from-orange-light to-orange text-[#3A2A06] font-extrabold text-xs shadow-xs">
+                    {initial}
+                  </span>
+                  <span className="font-bold text-xs text-ink hidden sm:inline-block">
+                    {profile.display_name}
+                  </span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-3.5 h-3.5 stroke-ink-light"
+                    fill="none"
+                    strokeWidth="2.4"
+                    strokeLinecap="round"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                {menuOpen && (
+                  <>
+                    <div
+                      onClick={() => setMenuOpen(false)}
+                      className="fixed inset-0 z-40"
+                    />
+                    <div className="absolute right-0 top-[calc(100%+8px)] z-50 w-56 bg-white border border-border-subtle rounded-2xl shadow-ref-card p-2 animate-ml-rise">
+                      <div className="p-3 border-b border-dashed border-border-subtle mb-1">
+                        <b className="block font-bold text-xs text-ink truncate">
+                          {profile.display_name}
+                        </b>
+                        <span className="block text-[0.7rem] text-ink-muted mt-0.5 truncate">
+                          Class {profile.enrolled_class || 11} · {profile.target_exam || "JEE"}
+                        </span>
+                      </div>
+
+                      <button
+                        onClick={handleSignOut}
+                        className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-xs text-red-dark hover:bg-red-note/10 transition-colors text-left"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          className="w-4 h-4 stroke-current"
+                          fill="none"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                          <path d="m16 17 5-5-5-5M21 12H9" />
+                        </svg>
+                        Sign out
+                      </button>
+                    </div>
+                  </>
+                )}
+              </div>
+            ) : (
+              <Link
+                href="/login"
+                className="inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-full bg-ink text-cream-light hover:bg-ink/90 transition-colors shadow-xs"
+              >
+                Sign in
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </header>
