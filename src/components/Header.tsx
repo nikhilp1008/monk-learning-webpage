@@ -71,7 +71,7 @@ export function Header() {
   };
 
   const navItems = [
-    { label: "Dashboard", href: "/" },
+    { label: "Dashboard", href: "/dashboard" },
     { label: "Practice", href: "/practice" },
     { label: "Progress", href: "/progress" },
     { label: "Lessons", href: "/lessons" },

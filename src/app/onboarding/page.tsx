@@ -41,7 +41,7 @@ export default function OnboardingPage() {
         .maybeSingle();
 
       if (profile) {
-        router.push("/lessons");
+        router.push("/dashboard");
         return;
       }
 
@@ -82,7 +82,7 @@ export default function OnboardingPage() {
         return;
       }
 
-      router.push("/lessons");
+      router.push("/dashboard");
       router.refresh();
     } catch (err) {
       console.error("Unexpected error saving profile:", err);

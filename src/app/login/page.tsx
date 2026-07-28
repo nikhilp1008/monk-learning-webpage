@@ -90,7 +90,7 @@ export default function LoginPage() {
           if (!profile) {
             router.push("/onboarding");
           } else {
-            router.push("/lessons");
+            router.push("/dashboard");
           }
         } else if (data.user && !data.session) {
           // Email confirmation enabled state
@@ -126,7 +126,7 @@ export default function LoginPage() {
           if (!profile) {
             router.push("/onboarding");
           } else {
-            router.push("/lessons");
+            router.push("/dashboard");
           }
         }
       }
