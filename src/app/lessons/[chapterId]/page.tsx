@@ -51,7 +51,7 @@ export default function LessonPlayerPage() {
   const [chapter, setChapter] = useState<ChapterRow | null>(null);
   const [sections, setSections] = useState<SectionRow[]>([]);
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [language, setLanguage] = useState<Language>("english");
+  const [language, setLanguage] = useState<Language>("hinglish");
 
   const [loading, setLoading] = useState<boolean>(true);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -65,7 +65,36 @@ export default function LessonPlayerPage() {
 
   const currentSection = sections[activeIndex] ?? null;
 
-  // Selected audio URL and timestamps according to current language
+  // Load user profile preference for teaching_language
+  useEffect(() => {
+    async function loadLanguagePreference() {
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+
+        if (user) {
+          const { data: profile } = await supabase
+            .from("profiles")
+            .select("teaching_language")
+            .eq("id", user.id)
+            .maybeSingle();
+
+          if (profile?.teaching_language) {
+            const lang = profile.teaching_language.toLowerCase();
+            if (lang === "english" || lang === "hinglish") {
+              setLanguage(lang as Language);
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Error loading language preference:", err);
+      }
+    }
+
+    loadLanguagePreference();
+  }, []);
+
   const audioUrl = useMemo(() => {
     if (!currentSection) return "";
     return language === "english"
@@ -87,7 +116,6 @@ export default function LessonPlayerPage() {
     return parseRevealTimestamps(json, boardEvents.length);
   }, [currentSection, language, boardEvents.length]);
 
-  // Derived state: events revealed based on currentTime
   const revealedEventsCount = useMemo(() => {
     if (boardEvents.length === 0) return 0;
     let count = 0;
@@ -102,7 +130,6 @@ export default function LessonPlayerPage() {
     return count;
   }, [boardEvents.length, revealTimestamps, currentTime]);
 
-  // Group sections by subtopic
   const subtopicGroups = useMemo<SubtopicGroup[]>(() => {
     if (sections.length === 0) return [];
     const map = new Map<string, { section: SectionRow; originalIndex: number }[]>();
@@ -122,7 +149,6 @@ export default function LessonPlayerPage() {
     return groups;
   }, [sections]);
 
-  // Load Chapter & Sections from Supabase
   useEffect(() => {
     let isMounted = true;
     async function loadData() {
@@ -163,7 +189,6 @@ export default function LessonPlayerPage() {
     };
   }, [chapterId]);
 
-  // Audio Handlers
   const handleTimeUpdate = useCallback(() => {
     if (audioRef.current) {
       setCurrentTime(audioRef.current.currentTime);
@@ -196,7 +221,6 @@ export default function LessonPlayerPage() {
 
   const handleEnded = useCallback(() => {
     setIsPlaying(false);
-    // Auto advance to next section
     setActiveIndex((prev) => {
       if (prev < sections.length - 1) {
         return prev + 1;
@@ -205,7 +229,6 @@ export default function LessonPlayerPage() {
     });
   }, [sections.length]);
 
-  // Reset audio & sync state on section change or language switch
   useEffect(() => {
     const audioEl = audioRef.current;
     if (!audioEl) return;
@@ -232,7 +255,6 @@ export default function LessonPlayerPage() {
     };
   }, [activeIndex, audioUrl]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Global Audio Cleanup on Unmount
   useEffect(() => {
     return () => {
       if (audioRef.current) {
@@ -504,7 +526,7 @@ export default function LessonPlayerPage() {
                 </div>
               </div>
 
-              {/* Sidebar: Grouped Subtopics Index */}
+              {/* Sidebar */}
               <div className="lg:col-span-1 flex flex-col bg-white border border-border-subtle rounded-2xl p-4.5 shadow-sm overflow-hidden h-full">
                 <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted mb-3 block">
                   Curriculum Modules

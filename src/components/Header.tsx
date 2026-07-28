@@ -1,10 +1,74 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabase";
+import type { Database } from "@/lib/database.types";
+
+type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
 
 export function Header() {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const [profile, setProfile] = useState<ProfileRow | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadUserSession() {
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+
+        if (user) {
+          const { data: userProfile } = await supabase
+            .from("profiles")
+            .select("*")
+            .eq("id", user.id)
+            .maybeSingle();
+
+          if (isMounted) {
+            setProfile(userProfile || null);
+          }
+        } else {
+          if (isMounted) {
+            setProfile(null);
+          }
+        }
+      } catch (err) {
+        console.error("Error loading session in header:", err);
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    }
+
+    loadUserSession();
+
+    // Listen for auth state changes
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange(() => {
+      loadUserSession();
+    });
+
+    return () => {
+      isMounted = false;
+      subscription.unsubscribe();
+    };
+  }, []);
+
+  const handleSignOut = async () => {
+    setMenuOpen(false);
+    await supabase.auth.signOut();
+    setProfile(null);
+    router.push("/lessons");
+    router.refresh();
+  };
 
   const navItems = [
     { label: "Dashboard", href: "/" },
@@ -14,6 +78,10 @@ export function Header() {
     { label: "Notes", href: "/notes" },
     { label: "My doubts", href: "/doubts" },
   ];
+
+  const initial = profile?.display_name
+    ? profile.display_name.trim().charAt(0).toUpperCase()
+    : "S";
 
   return (
     <header className="flex-none">
@@ -74,7 +142,7 @@ export function Header() {
       </div>
 
       {/* Nav Row */}
-      <div className="flex items-center gap-1.5 px-4 md:px-11 py-2.5 border-b border-border-subtle bg-white/60 sticky top-0 z-30 backdrop-blur-md">
+      <div className="flex items-center justify-between gap-1.5 px-4 md:px-11 py-2.5 border-b border-border-subtle bg-white/60 sticky top-0 z-30 backdrop-blur-md">
         <nav className="flex items-center gap-1 overflow-x-auto py-1">
           {navItems.map((item) => {
             const isActive =
@@ -95,6 +163,83 @@ export function Header() {
             );
           })}
         </nav>
+
+        {/* User Session Menu / Sign In button */}
+        <div className="relative flex items-center gap-3">
+          {!loading && (
+            <>
+              {profile ? (
+                <div className="relative">
+                  <button
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    className="flex items-center gap-2 cursor-pointer p-1 rounded-full hover:bg-cream/50 transition-colors"
+                  >
+                    <span className="w-8 h-8 rounded-full grid place-items-center bg-gradient-to-br from-orange-light to-orange text-ink font-extrabold text-sm shadow-xs">
+                      {initial}
+                    </span>
+                    <span className="font-bold text-sm text-ink hidden sm:inline">
+                      {profile.display_name}
+                    </span>
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="w-3.5 h-3.5 stroke-ink-light"
+                      fill="none"
+                      strokeWidth="2.4"
+                      strokeLinecap="round"
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  {menuOpen && (
+                    <>
+                      <div
+                        className="fixed inset-0 z-40"
+                        onClick={() => setMenuOpen(false)}
+                      />
+                      <div className="absolute right-0 top-full mt-2 w-56 bg-white border border-border-subtle rounded-2xl shadow-xl p-2 z-50 animate-ml-rise">
+                        <div className="p-2.5 border-b border-dashed border-border-subtle mb-1">
+                          <b className="block font-bold text-sm text-ink truncate">
+                            {profile.display_name}
+                          </b>
+                          <span className="block text-xs text-ink-muted mt-0.5">
+                            Class {profile.enrolled_class} · {profile.target_exam}
+                          </span>
+                        </div>
+
+                        <button
+                          onClick={handleSignOut}
+                          className="w-full flex items-center gap-2.5 p-2.5 rounded-xl font-semibold text-sm text-red-note hover:bg-red-note/10 transition-colors"
+                        >
+                          <svg
+                            viewBox="0 0 24 24"
+                            className="w-4 h-4 stroke-current"
+                            fill="none"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                            <path d="m16 17 5-5-5-5M21 12H9" />
+                          </svg>
+                          Sign out
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  href="/login"
+                  className="font-bold text-xs md:text-sm px-4 py-1.5 rounded-full bg-orange text-ink shadow-xs hover:-translate-y-0.5 transition-transform"
+                >
+                  Sign in
+                </Link>
+              )}
+            </>
+          )}
+        </div>
       </div>
     </header>
   );

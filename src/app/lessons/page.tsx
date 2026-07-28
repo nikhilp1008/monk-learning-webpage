@@ -33,6 +33,33 @@ export default function LessonsPage() {
   );
   const [loading, setLoading] = useState<boolean>(true);
 
+  // Check user profile for default enrolled_class preference
+  useEffect(() => {
+    async function loadProfilePreference() {
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+
+        if (user) {
+          const { data: profile } = await supabase
+            .from("profiles")
+            .select("enrolled_class")
+            .eq("id", user.id)
+            .maybeSingle();
+
+          if (profile?.enrolled_class) {
+            setSelectedClass(profile.enrolled_class);
+          }
+        }
+      } catch (err) {
+        console.error("Error loading user profile preference:", err);
+      }
+    }
+
+    loadProfilePreference();
+  }, []);
+
   useEffect(() => {
     let isMounted = true;
     async function loadChaptersAndCounts() {
