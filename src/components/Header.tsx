@@ -74,12 +74,14 @@ export function Header() {
 
   const initial = profile?.display_name
     ? profile.display_name.trim().charAt(0).toUpperCase()
-    : "S";
+    : "B";
+
+  const displayName = profile?.display_name || "balayya";
 
   return (
     <header className="flex flex-col flex-none w-full z-40">
       {/* Night Band */}
-      <div className="relative bg-dark-bg text-[#EFEBDD] px-6 md:px-11 py-4.5 overflow-hidden">
+      <div className="relative bg-[#16130E] text-[#EFEBDD] px-6 md:px-11 py-4.5 overflow-hidden">
         <span
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -87,8 +89,8 @@ export function Header() {
               "radial-gradient(90% 120% at 30% -20%, rgba(238,163,31,0.1), transparent 60%)",
           }}
         />
-        <div className="relative max-w-[1180px] w-full mx-auto flex items-center justify-between gap-6">
-          <Link href="/dashboard" className="flex items-center gap-2 flex-none">
+        <div className="relative max-w-[1180px] w-full mx-auto flex items-center gap-6">
+          <Link href="/dashboard" className="flex items-center gap-1.5 flex-none">
             <svg viewBox="0 0 120 120" className="w-[44px] h-[44px]" fill="none">
               <circle
                 cx="60"
@@ -118,36 +120,24 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Today's Push Banner */}
+          {/* Today's Push Banner - Exact Reference Text */}
           <div className="hidden md:flex flex-1 min-w-0 border-l border-white/10 pl-6 items-center justify-between gap-4">
             <div>
-              <span className="block font-extrabold text-[0.6rem] tracking-[0.16em] uppercase text-orange">
-                Today&apos;s push
-              </span>
-              <div className="text-[1.16rem] font-semibold text-[#EFEBDD] mt-0.5 leading-snug">
-                One chapter tonight.{" "}
+              <div className="flex items-center gap-2.5">
+                <span className="block font-extrabold text-[0.6rem] tracking-[0.16em] uppercase text-orange">
+                  Today&apos;s push
+                </span>
+                <span className="inline-flex items-center gap-1 font-bold text-[0.58rem] tracking-wider uppercase px-2 py-0.5 rounded-full border border-white/18 text-[#938d80]">
+                  🔄 1 / 7
+                </span>
+              </div>
+              <div className="text-[1.16rem] font-semibold text-[#EFEBDD] mt-1 leading-snug">
+                15.4 lakh students wrote JEE Main last year. Just 24 scored a perfect 100 percentile —{" "}
                 <span className="font-script font-bold text-orange-light text-[1.1rem] inline-block -rotate-0.5">
-                  70% marks tomorrow.
+                  mastery, not luck.
                 </span>
               </div>
             </div>
-
-            <Link
-              href="/lessons"
-              className="inline-flex items-center gap-2 font-bold text-xs px-5 py-2.5 rounded-full bg-orange text-dark-card shadow-ref-pill hover:-translate-y-0.5 transition-transform flex-none"
-            >
-              Learn with Monk
-              <svg
-                viewBox="0 0 16 16"
-                className="w-3.5 h-3.5 stroke-current"
-                fill="none"
-                strokeWidth="1.9"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M2 8h11M9 3.5 13.5 8 9 12.5" />
-              </svg>
-            </Link>
           </div>
         </div>
       </div>
@@ -165,9 +155,9 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors ${
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors ${
                     isActive
-                      ? "bg-ink/5 text-ink font-bold"
+                      ? "bg-ink text-white font-bold"
                       : "text-ink-light hover:text-ink"
                   }`}
                 >
@@ -177,19 +167,26 @@ export function Header() {
             })}
           </nav>
 
-          {/* Right User Auth Action */}
-          <div className="flex items-center gap-3 flex-none pl-2">
+          {/* Right User Auth & Theme Switcher Dots */}
+          <div className="flex items-center gap-3.5 flex-none pl-2">
+            {/* Theme switcher dots from reference */}
+            <div className="hidden sm:flex items-center gap-1.5" title="Page background theme">
+              <span className="w-4 h-4 rounded-full bg-[#FCFAF4] border border-ink/20 cursor-pointer shadow-2xs" title="Cream background" />
+              <span className="w-4 h-4 rounded-full bg-[#FFFEFB] border border-ink/20 cursor-pointer shadow-2xs" title="Soft background" />
+              <span className="w-4 h-4 rounded-full bg-[#FFFFFF] border border-ink/20 cursor-pointer shadow-2xs" title="White background" />
+            </div>
+
             {profile ? (
               <div className="relative">
                 <button
                   onClick={() => setMenuOpen(!menuOpen)}
-                  className="inline-flex items-center gap-2.5 cursor-pointer py-1 px-2 rounded-full hover:bg-ink/5 transition-colors"
+                  className="inline-flex items-center gap-2 cursor-pointer py-1 px-2 rounded-full hover:bg-ink/5 transition-colors"
                 >
                   <span className="w-8 h-8 rounded-full grid place-items-center bg-gradient-to-br from-orange-light to-orange text-[#3A2A06] font-extrabold text-xs shadow-xs">
                     {initial}
                   </span>
                   <span className="font-bold text-xs text-ink hidden sm:inline-block">
-                    {profile.display_name}
+                    {displayName}
                   </span>
                   <svg
                     viewBox="0 0 24 24"
@@ -211,7 +208,7 @@ export function Header() {
                     <div className="absolute right-0 top-[calc(100%+8px)] z-50 w-56 bg-white border border-border-subtle rounded-2xl shadow-ref-card p-2 animate-ml-rise">
                       <div className="p-3 border-b border-dashed border-border-subtle mb-1">
                         <b className="block font-bold text-xs text-ink truncate">
-                          {profile.display_name}
+                          {displayName}
                         </b>
                         <span className="block text-[0.7rem] text-ink-muted mt-0.5 truncate">
                           Class {profile.enrolled_class || 11} · {profile.target_exam || "JEE"}
