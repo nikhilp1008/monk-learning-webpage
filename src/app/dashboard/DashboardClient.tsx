@@ -154,7 +154,7 @@ export function DashboardClient({
                   <circle cx="60" cy="60" r="6" className="fill-orange" />
                 </svg>
               </span>
-              <span className="font-extrabold text-[0.56rem] tracking-[0.1em] uppercase rounded-[6px] px-2.5 py-1 bg-[rgba(245,203,96,0.14)] text-[#F5CB60] border border-[rgba(245,203,96,0.3)]">
+              <span className="font-extrabold text-[0.56rem] tracking-[0.1em] uppercase rounded-[6px] px-[9px] py-1 bg-[rgba(245,203,96,0.14)] text-[#F5CB60] border border-[rgba(245,203,96,0.3)]">
                 Most loved
               </span>
             </div>

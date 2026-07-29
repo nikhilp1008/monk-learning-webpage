@@ -35,14 +35,12 @@ export async function middleware(request: NextRequest) {
     },
   });
 
-  // Refresh user session
   const {
     data: { user },
   } = await supabase.auth.getUser();
 
   const pathname = request.nextUrl.pathname;
 
-  // Exclude static assets and system routes
   const isPublicAsset =
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
@@ -50,7 +48,6 @@ export async function middleware(request: NextRequest) {
     pathname === "/favicon.ico";
 
   if (!isPublicAsset && user) {
-    // If user is authenticated, check if they have a profile row
     const { data: profile } = await supabase
       .from("profiles")
       .select("id")
@@ -62,16 +59,14 @@ export async function middleware(request: NextRequest) {
     const isOnboardingRoute = pathname === "/onboarding";
 
     if (!profile && !isOnboardingRoute && !isAuthRoute) {
-      // Redirect authenticated user without profile to onboarding
       const url = request.nextUrl.clone();
       url.pathname = "/onboarding";
       return NextResponse.redirect(url);
     }
 
     if (profile && isOnboardingRoute) {
-      // Redirect user who already has a profile away from onboarding to lessons
       const url = request.nextUrl.clone();
-      url.pathname = "/lessons";
+      url.pathname = "/dashboard";
       return NextResponse.redirect(url);
     }
   }
