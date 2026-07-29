@@ -9,8 +9,9 @@ export default function OnboardingPage() {
 
   const [step, setStep] = useState<number>(1);
   const [displayName, setDisplayName] = useState<string>("");
-  const [targetExam, setTargetExam] = useState<string>("JEE");
+  const [targetExam, setTargetExam] = useState<"JEE" | "NEET">("JEE");
   const [enrolledClass, setEnrolledClass] = useState<number>(11);
+  const [teachingLanguage, setTeachingLanguage] = useState<"english" | "hinglish">("hinglish");
 
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string>("");
@@ -44,16 +45,23 @@ export default function OnboardingPage() {
         return;
       }
 
-      // User logged in, move to Step 2 (Exam selection)
-      setStep(2);
+      // User logged in, land on profile setup
+      setStep(1);
     }
 
     checkAuth();
   }, [router]);
 
-  const handleFinish = async () => {
+  const handleFinish = async (e: React.FormEvent) => {
+    e.preventDefault();
+
     if (!userId) {
       router.push("/login");
+      return;
+    }
+
+    if (!displayName.trim()) {
+      setErrorMsg("Please enter your name.");
       return;
     }
 
@@ -65,10 +73,10 @@ export default function OnboardingPage() {
 
       const { error } = await supabase.from("profiles").upsert({
         id: userId,
-        display_name: displayName.trim() || "Student",
+        display_name: displayName.trim(),
         target_exam: targetExam,
         enrolled_class: numericClass,
-        teaching_language: "hinglish",
+        teaching_language: teachingLanguage,
       });
 
       if (error) {
@@ -87,24 +95,11 @@ export default function OnboardingPage() {
     }
   };
 
-  const EXAMS = [
-    { id: "JEE", title: "JEE Main & Advanced", sub: "Engineering", desc: "Physics, Chemistry, Maths" },
-    { id: "NEET", title: "NEET UG", sub: "Medical", desc: "Physics, Chemistry, Biology" },
-    { id: "BOARDS", title: "Class 11 / 12 School Boards", sub: "CBSE, ISC, State", desc: "NCERT focus" },
-    { id: "FOUNDATION", title: "Foundation & Olympiads", sub: "Class 9-10", desc: "Early JEE/NEET prep" },
-  ];
-
-  const CLASSES = [
-    { id: 11, title: "Class 11", desc: "Target 2027" },
-    { id: 12, title: "Class 12", desc: "Target 2026" },
-    { id: 13, title: 12, desc: "Dropper / Repeat Year (Target 2026)" },
-  ];
-
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-cream-light animate-ml-rise">
       {/* LEFT COLUMN · Pitch Panel written on Ruled Notebook Paper */}
       <div className="relative overflow-hidden flex flex-col justify-between bg-ruled-pitch border-r border-border-subtle p-8 md:p-14 lg:p-[44px_64px_40px_92px]">
-        {/* Red Vertical Line */}
+        {/* Red Vertical Margin Line */}
         <span
           aria-hidden="true"
           className="absolute top-0 bottom-0 left-12 md:left-[60px] w-[1.5px] bg-red-note/30 pointer-events-none"
@@ -137,7 +132,7 @@ export default function OnboardingPage() {
           </span>
         </div>
 
-        {/* Main Content List */}
+        {/* Main Pitch & Benefit List */}
         <div className="relative z-10 my-auto py-10 max-w-lg space-y-8">
           <div>
             <h1 className="text-[2.65rem] leading-[1.08] tracking-[-0.03em] font-medium text-ink">
@@ -151,6 +146,7 @@ export default function OnboardingPage() {
             </p>
           </div>
 
+          {/* All 4 Benefit Rows */}
           <div className="space-y-4">
             <div className="flex items-center gap-3.5">
               <span className="w-11 h-11 flex-none rounded-xl bg-white border border-border-subtle shadow-xs grid place-items-center">
@@ -202,6 +198,7 @@ export default function OnboardingPage() {
             </div>
           </div>
 
+          {/* LIVE NOW Note Card with Green Kalam Checkmark */}
           <div className="relative bg-white border-1.5 border-ink rounded-xl p-4 pl-9 shadow-ref-card max-w-sm">
             <span className="absolute top-0 bottom-0 left-6 w-[1.4px] bg-red-note/35" />
             <span className="absolute -top-2.5 left-3 bg-orange border border-ink rounded px-2 py-0.5 font-extrabold text-[0.56rem] tracking-wider uppercase text-ink">
@@ -220,6 +217,7 @@ export default function OnboardingPage() {
           </div>
         </div>
 
+        {/* All 3 Language Tag Pills */}
         <div className="relative z-10 flex items-center gap-2 flex-wrap text-xs text-ink-light">
           <span className="font-semibold px-3 py-1 rounded-full border border-border-subtle bg-white">
             हिंदी
@@ -236,13 +234,13 @@ export default function OnboardingPage() {
         </div>
       </div>
 
-      {/* RIGHT COLUMN · Onboarding Steps Panel */}
+      {/* RIGHT COLUMN · Form Panel with Progress Meter & Navigation */}
       <div className="flex flex-col justify-center items-center p-6 md:p-12 lg:p-16 bg-white">
         <div className="w-full max-w-[430px] space-y-6">
           {/* Progress Meter Bar */}
           <div className="w-full space-y-2">
             <div className="flex gap-1.5">
-              {[1, 2, 3, 4].map((i) => (
+              {[1, 2].map((i) => (
                 <span
                   key={i}
                   className={`h-1.5 flex-1 rounded-full transition-colors ${
@@ -252,7 +250,7 @@ export default function OnboardingPage() {
               ))}
             </div>
             <div className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
-              Step {step} of 4: {step === 1 ? "Account" : step === 2 ? "Exam" : "Class"}
+              Step {step} of 2: {step === 1 ? "Study Profile" : "Preferences"}
             </div>
           </div>
 
@@ -262,123 +260,159 @@ export default function OnboardingPage() {
             </div>
           )}
 
-          {/* STEP 2: Exam Picker */}
-          {step === 2 && (
-            <div className="space-y-6 animate-ml-rise">
-              <div>
-                <h2 className="text-[1.55rem] font-bold tracking-[-0.02em] text-ink">
-                  Which exam are you preparing for?
-                </h2>
-                <p className="text-ink-light text-sm mt-1">
-                  This sets your syllabus, question bank and mock tests. You can change it later.
-                </p>
-              </div>
+          <form onSubmit={handleFinish} className="space-y-5">
+            {step === 1 ? (
+              <div className="space-y-5 animate-ml-rise">
+                <div>
+                  <h2 className="text-[1.55rem] font-bold tracking-[-0.02em] text-ink">
+                    Set up your study profile
+                  </h2>
+                  <p className="text-ink-light text-sm mt-1">
+                    Tell Monk your name, target exam and enrolled class.
+                  </p>
+                </div>
 
-              <div className="space-y-3">
-                {EXAMS.map((x) => {
-                  const isSelected = targetExam === x.id;
-                  return (
-                    <button
-                      key={x.id}
-                      type="button"
-                      onClick={() => setTargetExam(x.id)}
-                      className={`w-full flex items-center justify-between p-4 rounded-xl border text-left transition-all ${
-                        isSelected
-                          ? "border-orange bg-cream-card shadow-xs"
-                          : "border-border-subtle hover:border-ink/20 bg-white"
-                      }`}
-                    >
-                      <div>
-                        <b className="block font-bold text-[1.08rem] text-ink">{x.title}</b>
-                        <span className="text-xs text-ink-light">{x.sub} — {x.desc}</span>
-                      </div>
-                      <span
-                        className={`w-5 h-5 rounded-full border grid place-items-center flex-none ${
-                          isSelected ? "border-orange bg-orange text-dark-card font-bold text-xs" : "border-ink/20"
-                        }`}
-                      >
-                        {isSelected ? "✓" : ""}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
+                <div>
+                  <label className="block text-xs font-bold text-ink-light mb-1.5">
+                    Full name
+                  </label>
+                  <input
+                    type="text"
+                    value={displayName}
+                    onChange={(e) => setDisplayName(e.target.value)}
+                    placeholder="Aarav Sharma"
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-border-subtle bg-white text-sm text-ink focus:outline-none focus:border-orange transition-colors"
+                  />
+                </div>
 
-              <button
-                type="button"
-                onClick={() => setStep(3)}
-                className="w-full py-3.5 px-6 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill hover:-translate-y-0.5 transition-transform flex items-center justify-center gap-2"
-              >
-                Continue →
-              </button>
-            </div>
-          )}
+                <div>
+                  <label className="block text-xs font-bold text-ink-light mb-2">
+                    Target exam
+                  </label>
+                  <div className="grid grid-cols-2 gap-3">
+                    {[
+                      { id: "JEE", label: "JEE Main & Adv" },
+                      { id: "NEET", label: "NEET UG" },
+                    ].map((exam) => {
+                      const isSelected = targetExam === exam.id;
+                      return (
+                        <button
+                          key={exam.id}
+                          type="button"
+                          onClick={() => setTargetExam(exam.id as "JEE" | "NEET")}
+                          className={`py-3 px-4 rounded-xl border text-center transition-all ${
+                            isSelected
+                              ? "border-orange bg-cream-card text-ink font-extrabold shadow-xs"
+                              : "border-border-subtle text-ink-light hover:border-ink/20 font-medium"
+                          }`}
+                        >
+                          <span className="text-sm">{exam.label}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
 
-          {/* STEP 3: Class Picker */}
-          {step === 3 && (
-            <div className="space-y-6 animate-ml-rise">
-              <div>
-                <h2 className="text-[1.55rem] font-bold tracking-[-0.02em] text-ink">
-                  Which class are you in?
-                </h2>
-                <p className="text-ink-light text-sm mt-1">
-                  Monk paces your plan around it — {targetExam}, your way.
-                </p>
-              </div>
+                <div>
+                  <label className="block text-xs font-bold text-ink-light mb-2">
+                    Enrolled class
+                  </label>
+                  <div className="grid grid-cols-2 gap-3">
+                    {[11, 12].map((cls) => {
+                      const isSelected = enrolledClass === cls;
+                      return (
+                        <button
+                          key={cls}
+                          type="button"
+                          onClick={() => setEnrolledClass(cls)}
+                          className={`py-3 px-4 rounded-xl border text-center transition-all ${
+                            isSelected
+                              ? "border-orange bg-cream-card text-ink font-extrabold shadow-xs"
+                              : "border-border-subtle text-ink-light hover:border-ink/20 font-medium"
+                          }`}
+                        >
+                          <span className="text-sm">Class {cls}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
 
-              <div className="space-y-3">
-                {CLASSES.map((c, idx) => {
-                  const isSelected = enrolledClass === c.id;
-                  return (
-                    <button
-                      key={idx}
-                      type="button"
-                      onClick={() => setEnrolledClass(c.id)}
-                      className={`w-full flex items-center justify-between p-4 rounded-xl border text-left transition-all ${
-                        isSelected
-                          ? "border-orange bg-cream-card shadow-xs"
-                          : "border-border-subtle hover:border-ink/20 bg-white"
-                      }`}
-                    >
-                      <div>
-                        <b className="block font-bold text-[1.02rem] text-ink">{c.title}</b>
-                        <span className="text-xs text-ink-light">{c.desc}</span>
-                      </div>
-                      <span
-                        className={`w-5 h-5 rounded-full border grid place-items-center flex-none ${
-                          isSelected ? "border-orange bg-orange text-dark-card font-bold text-xs" : "border-ink/20"
-                        }`}
-                      >
-                        {isSelected ? "✓" : ""}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-
-              <div className="flex items-center gap-3 pt-2">
                 <button
                   type="button"
-                  onClick={() => setStep(2)}
-                  className="px-5 py-3 rounded-full border border-border-subtle text-ink font-semibold text-xs hover:border-ink"
+                  onClick={() => {
+                    if (!displayName.trim()) {
+                      setErrorMsg("Please enter your name.");
+                      return;
+                    }
+                    setErrorMsg("");
+                    setStep(2);
+                  }}
+                  className="w-full py-3.5 px-6 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill hover:-translate-y-0.5 transition-transform flex items-center justify-center gap-2 mt-2"
                 >
-                  ← Back
-                </button>
-                <button
-                  type="button"
-                  onClick={handleFinish}
-                  disabled={submitting}
-                  className="flex-1 py-3.5 px-6 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill hover:-translate-y-0.5 transition-transform disabled:opacity-50 flex items-center justify-center gap-2"
-                >
-                  {submitting ? (
-                    <div className="w-4 h-4 border-2 border-dark-card border-t-transparent rounded-full animate-ml-spin" />
-                  ) : (
-                    "Start learning with Monk →"
-                  )}
+                  Continue →
                 </button>
               </div>
-            </div>
-          )}
+            ) : (
+              <div className="space-y-5 animate-ml-rise">
+                <div>
+                  <h2 className="text-[1.55rem] font-bold tracking-[-0.02em] text-ink">
+                    Teaching language preference
+                  </h2>
+                  <p className="text-ink-light text-sm mt-1">
+                    Choose how Monk narrates your lessons on the board.
+                  </p>
+                </div>
+
+                <div>
+                  <div className="grid grid-cols-1 gap-3">
+                    {[
+                      { id: "hinglish", label: "Hinglish (Hindi + English explanation)" },
+                      { id: "english", label: "English (Full English narration)" },
+                    ].map((lang) => {
+                      const isSelected = teachingLanguage === lang.id;
+                      return (
+                        <button
+                          key={lang.id}
+                          type="button"
+                          onClick={() => setTeachingLanguage(lang.id as "english" | "hinglish")}
+                          className={`p-4 rounded-xl border text-left transition-all ${
+                            isSelected
+                              ? "border-orange bg-cream-card text-ink font-extrabold shadow-xs"
+                              : "border-border-subtle text-ink-light hover:border-ink/20 font-medium"
+                          }`}
+                        >
+                          <span className="text-sm block">{lang.label}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 pt-2">
+                  <button
+                    type="button"
+                    onClick={() => setStep(1)}
+                    className="px-5 py-3 rounded-full border border-border-subtle text-ink font-semibold text-xs hover:border-ink"
+                  >
+                    ← Back
+                  </button>
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="flex-1 py-3.5 px-6 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill hover:-translate-y-0.5 transition-transform disabled:opacity-50 flex items-center justify-center gap-2"
+                  >
+                    {submitting ? (
+                      <div className="w-4 h-4 border-2 border-dark-card border-t-transparent rounded-full animate-ml-spin" />
+                    ) : (
+                      "Start learning with Monk →"
+                    )}
+                  </button>
+                </div>
+              </div>
+            )}
+          </form>
         </div>
       </div>
     </div>

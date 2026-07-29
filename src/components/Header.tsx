@@ -74,9 +74,9 @@ export function Header() {
 
   const initial = profile?.display_name
     ? profile.display_name.trim().charAt(0).toUpperCase()
-    : "B";
+    : "S";
 
-  const displayName = profile?.display_name || "balayya";
+  const displayName = profile?.display_name || "Student";
 
   return (
     <header className="flex flex-col flex-none w-full z-40">
@@ -89,7 +89,7 @@ export function Header() {
               "radial-gradient(90% 120% at 30% -20%, rgba(238,163,31,0.1), transparent 60%)",
           }}
         />
-        <div className="relative max-w-[1180px] w-full mx-auto flex items-center gap-6">
+        <div className="relative max-w-[1180px] w-full mx-auto flex items-center justify-between gap-6">
           <Link href="/dashboard" className="flex items-center gap-1.5 flex-none">
             <svg viewBox="0 0 120 120" className="w-[44px] h-[44px]" fill="none">
               <circle
@@ -120,7 +120,7 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Today's Push Banner - Exact Reference Text */}
+          {/* Today's Push Banner */}
           <div className="hidden md:flex flex-1 min-w-0 border-l border-white/10 pl-6 items-center justify-between gap-4">
             <div>
               <div className="flex items-center gap-2.5">
@@ -132,9 +132,9 @@ export function Header() {
                 </span>
               </div>
               <div className="text-[1.16rem] font-semibold text-[#EFEBDD] mt-1 leading-snug">
-                15.4 lakh students wrote JEE Main last year. Just 24 scored a perfect 100 percentile —{" "}
+                One chapter tonight.{" "}
                 <span className="font-script font-bold text-orange-light text-[1.1rem] inline-block -rotate-0.5">
-                  mastery, not luck.
+                  70% marks tomorrow.
                 </span>
               </div>
             </div>
@@ -167,15 +167,8 @@ export function Header() {
             })}
           </nav>
 
-          {/* Right User Auth & Theme Switcher Dots */}
+          {/* Right User Auth Action */}
           <div className="flex items-center gap-3.5 flex-none pl-2">
-            {/* Theme switcher dots from reference */}
-            <div className="hidden sm:flex items-center gap-1.5" title="Page background theme">
-              <span className="w-4 h-4 rounded-full bg-[#FCFAF4] border border-ink/20 cursor-pointer shadow-2xs" title="Cream background" />
-              <span className="w-4 h-4 rounded-full bg-[#FFFEFB] border border-ink/20 cursor-pointer shadow-2xs" title="Soft background" />
-              <span className="w-4 h-4 rounded-full bg-[#FFFFFF] border border-ink/20 cursor-pointer shadow-2xs" title="White background" />
-            </div>
-
             {profile ? (
               <div className="relative">
                 <button
