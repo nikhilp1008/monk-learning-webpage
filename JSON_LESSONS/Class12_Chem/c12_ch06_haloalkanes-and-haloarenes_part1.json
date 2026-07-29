@@ -1,0 +1,2124 @@
+{
+  "chapter": "Haloalkanes and Haloarenes",
+  "subject": "chemistry",
+  "class_level": 12,
+  "chapter_order": 6,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish",
+    "hindi"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "The C–X bond: one swap changes everything",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One swapped atom makes carbon reactive"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Replace one H of a hydrocarbon with a halogen (Cl, Br, I) and the whole molecule becomes reactive."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Halogen is more electronegative than carbon, so bonding electrons are pulled toward the halogen."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "caption": "Polar C–X bond: electron-poor carbon, electron-rich halogen",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 400 200' xmlns='http://www.w3.org/2000/svg'><line x1='150' y1='100' x2='250' y2='100' stroke='#181818' stroke-width='4'/><circle cx='140' cy='100' r='26' fill='#FCFAF4' stroke='#181818' stroke-width='3'/><text x='140' y='108' font-size='24' text-anchor='middle' fill='#181818' font-family=\"system-ui, sans-serif\">C</text><circle cx='260' cy='100' r='26' fill='#FCFAF4' stroke='#181818' stroke-width='3'/><text x='260' y='108' font-size='24' text-anchor='middle' fill='#181818' font-family=\"system-ui, sans-serif\">X</text><text x='118' y='58' font-size='22' fill='#DD4433' font-family=\"system-ui, sans-serif\">&#948;+</text><text x='250' y='58' font-size='22' fill='#DD4433' font-family=\"system-ui, sans-serif\">&#948;&#8722;</text><path d='M175 135 Q200 158 225 135' fill='none' stroke='#EEA31F' stroke-width='3'/><polygon points='225,135 216,133 222,142' fill='#EEA31F'/><text x='120' y='185' font-size='14' fill='#55565C' font-family=\"system-ui, sans-serif\">electron density shifts toward the halogen</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Hold this picture: electrophilic carbon, departing halogen."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "The electron-poor carbon attracts an electron-donor (a nucleophile); the halogen leaves easily (a good leaving group)."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 62,
+          "text": "This one image explains preparation, physical properties, and every reaction to come."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Let me start with the single image that runs through this whole chapter.</curious> Take an ordinary hydrocarbon, non polar and chemically lazy, and swap just one hydrogen for a halogen. That one swap hands the molecule a heavy, electron greedy suitcase, and suddenly it becomes reactive."
+            },
+            {
+              "seq": 2,
+              "text": "Why does one atom matter so much? Because everything here flows from the carbon halogen bond, which we write as C to X, where X is chlorine, bromine, or iodine."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the reason. A halogen is more electronegative than carbon, so it pulls the shared bonding electrons toward itself. Carbon is left electron poor, and the halogen becomes electron rich. That is a polar covalent bond."
+            },
+            {
+              "seq": 4,
+              "text": "On the board, the carbon carries a small delta plus, the halogen a small delta minus, and the electron cloud is dragged toward the halogen end."
+            },
+            {
+              "seq": 5,
+              "text": "<whisper>Burn this one line in: electrophilic carbon, departing halogen.</whisper> That electron poor carbon is a sitting duck for anything wanting to donate electrons."
+            },
+            {
+              "seq": 6,
+              "text": "The electron donor is called a nucleophile, and the halogen, because it leaves so readily, is a good leaving group. So the molecule is set up perfectly to have its halogen replaced."
+            },
+            {
+              "seq": 7,
+              "text": "Keep this picture, because it explains how we prepare these compounds, how they behave physically, and every reaction we will meet later."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>सबसे पहले वो एक image समझ लो जो पूरे chapter में चलती है।</curious> एक normal hydrocarbon लो, non polar और chemically lazy, और उसका सिर्फ़ एक hydrogen हटाकर halogen लगा दो. ये swap molecule को एक भारी electron greedy suitcase पकड़ा देता है, और वो अचानक reactive हो जाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक atom इतना फ़र्क़ क्यों डालता है? क्योंकि यहाँ सब कुछ carbon halogen bond से निकलता है, जिसे हम C to X लिखते हैं, जहाँ X chlorine, bromine या iodine है।"
+            },
+            {
+              "seq": 3,
+              "text": "वजह ये है. Halogen, carbon से ज़्यादा electronegative है, इसलिए वो shared bonding electrons को अपनी तरफ़ खींचता है। Carbon electron poor रह जाता है और halogen electron rich हो जाता है। यही polar covalent bond है।"
+            },
+            {
+              "seq": 4,
+              "text": "Board पर carbon पर छोटा delta plus, halogen पर छोटा delta minus, और electron cloud halogen की तरफ़ खिंचा हुआ।"
+            },
+            {
+              "seq": 5,
+              "text": "<whisper>ये एक line पक्की कर लो: electrophilic carbon, departing halogen.</whisper> वो electron poor carbon किसी भी electron देने वाले के लिए आसान शिकार है।"
+            },
+            {
+              "seq": 6,
+              "text": "जो electron देता है उसे nucleophile कहते हैं, और halogen इतनी आसानी से निकलता है कि उसे good leaving group कहते हैं। मतलब molecule पूरी तरह तैयार है कि उसका halogen replace हो जाए।"
+            },
+            {
+              "seq": 7,
+              "text": "इस picture को पकड़े रखो, क्योंकि यही बताता है कि इन compounds को कैसे बनाते हैं, ये physically कैसे behave करते हैं, और आगे की हर reaction कैसे होती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>सबसे पहले वह एक चित्र समझिए जो पूरे अध्याय में चलता है।</curious> एक साधारण हाइड्रोकार्बन लीजिए, अध्रुवीय और रासायनिक रूप से आलसी, और उसका केवल एक हाइड्रोजन हटाकर एक हैलोजन जोड़ दीजिए। यह अदला बदली अणु को एक भारी, इलेक्ट्रॉन का लालची सूटकेस थमा देती है, और वह अचानक क्रियाशील हो जाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक परमाणु इतना अंतर क्यों लाता है? क्योंकि यहाँ सब कुछ कार्बन हैलोजन बंध से निकलता है, जिसे हम C to X लिखते हैं, जहाँ X क्लोरीन, ब्रोमीन या आयोडीन है।"
+            },
+            {
+              "seq": 3,
+              "text": "कारण यह है। हैलोजन, कार्बन से अधिक विद्युतऋणात्मक है, इसलिए वह साझा इलेक्ट्रॉनों को अपनी ओर खींचता है। कार्बन इलेक्ट्रॉन की कमी वाला रह जाता है और हैलोजन इलेक्ट्रॉन से भरपूर। यही ध्रुवीय सहसंयोजक बंध है।"
+            },
+            {
+              "seq": 4,
+              "text": "बोर्ड पर कार्बन पर छोटा डेल्टा धन, हैलोजन पर छोटा डेल्टा ऋण, और इलेक्ट्रॉन का बादल हैलोजन की ओर खिंचा हुआ।"
+            },
+            {
+              "seq": 5,
+              "text": "<whisper>यह एक पंक्ति पक्की कर लीजिए: electrophilic carbon, departing halogen.</whisper> वह इलेक्ट्रॉन की कमी वाला कार्बन किसी भी इलेक्ट्रॉन दाता के लिए आसान शिकार है।"
+            },
+            {
+              "seq": 6,
+              "text": "जो इलेक्ट्रॉन देता है उसे nucleophile कहते हैं, और हैलोजन इतनी आसानी से निकलता है कि उसे good leaving group कहते हैं। अर्थात अणु पूरी तरह तैयार है कि उसका हैलोजन प्रतिस्थापित हो जाए।"
+            },
+            {
+              "seq": 7,
+              "text": "इस चित्र को पकड़े रखिए, क्योंकि यही बताता है कि इन यौगिकों को कैसे बनाते हैं, ये भौतिक रूप से कैसे व्यवहार करते हैं, और आगे की हर अभिक्रिया कैसे होती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Classification is a prediction tool, not a vocabulary list",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The carbon holding X decides the behaviour"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Four personalities of the C–X bond",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 240' xmlns='http://www.w3.org/2000/svg'><text x='10' y='24' font-size='15' fill='#181818' font-family=\"system-ui, sans-serif\" font-weight='bold'>sp3 carbon (ordinary bond)</text><rect x='10' y='34' width='210' height='40' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='18' y='59' font-size='13' fill='#181818' font-family=\"system-ui, sans-serif\">Alkyl: X on plain sp3 C</text><rect x='10' y='80' width='210' height='40' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='18' y='105' font-size='13' fill='#181818' font-family=\"system-ui, sans-serif\">Allylic / benzylic: next to C=C or ring</text><text x='240' y='24' font-size='15' fill='#DD4433' font-family=\"system-ui, sans-serif\" font-weight='bold'>sp2 carbon (stubborn)</text><rect x='240' y='34' width='210' height='40' rx='6' fill='#FCFAF4' stroke='#DD4433' stroke-width='2'/><text x='248' y='59' font-size='13' fill='#181818' font-family=\"system-ui, sans-serif\">Vinylic: X on C=C carbon</text><rect x='240' y='80' width='210' height='40' rx='6' fill='#FCFAF4' stroke='#DD4433' stroke-width='2'/><text x='248' y='105' font-size='13' fill='#181818' font-family=\"system-ui, sans-serif\">Aryl: X on benzene ring carbon</text><line x1='10' y1='150' x2='450' y2='150' stroke='#55565C' stroke-width='1'/><text x='10' y='176' font-size='14' fill='#181818' font-family=\"system-ui, sans-serif\" font-weight='bold'>Counting halogens:</text><text x='10' y='200' font-size='13' fill='#181818' font-family=\"system-ui, sans-serif\">gem-dihalide: both X on the SAME carbon</text><text x='10' y='222' font-size='13' fill='#181818' font-family=\"system-ui, sans-serif\">vic-dihalide: X on ADJACENT carbons</text></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Alkyl (sp3): the standard reactive case. Allylic/benzylic (sp3 next to C=C or a ring): a neighbour can stabilise charge later."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Vinylic / aryl (sp2): C–X is shorter, stronger, and reluctant to break — the stubborn cousins."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Why sp2 grips harder: it holds electrons closer, AND the halogen lone pair leaks into the adjacent π system."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "One glance at the carbon — hybridisation + neighbours — predicts eager vs stubborn."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Not every C to X bond behaves the same, and this is where classification earns its keep. The personality of the bond depends entirely on what kind of carbon holds the halogen."
+            },
+            {
+              "seq": 2,
+              "text": "Look at the four types on the board. On the left, the halogen sits on an s p three carbon; on the right, on an s p two carbon. Below, we also count how many halogens and where they sit."
+            },
+            {
+              "seq": 3,
+              "text": "Alkyl halides are the standard reactive case. Allylic and benzylic halides also sit on an s p three carbon, but right next to a double bond or a ring, so a neighbour can stabilise any charge that forms later."
+            },
+            {
+              "seq": 4,
+              "text": "Vinylic and aryl halides are the stubborn ones. Here the halogen sits on an s p two carbon, and that carbon to halogen bond is shorter, stronger, and far less willing to break."
+            },
+            {
+              "seq": 5,
+              "text": "Two effects cause this. An s p two carbon holds its electrons closer to the nucleus, so it grips the halogen more tightly, and on top of that the halogen lone pair leaks into the neighbouring pi system. Both shorten and stiffen the bond."
+            },
+            {
+              "seq": 6,
+              "text": "Down here we also label arrangement: a gem dihalide carries both halogens on the same carbon, a vic dihalide spreads them over adjacent carbons. So treat classification as a prediction tool. One glance at the carbon tells you in advance whether the molecule reacts eagerly or digs in its heels."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हर C to X bond एक जैसा behave नहीं करता, और यहीं classification काम आती है। Bond की personality पूरी तरह इस बात पर depend करती है कि halogen को कौन सा carbon पकड़े हुए है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board पर चारों types देखो। बाईं तरफ़ halogen s p three carbon पर है, दाईं तरफ़ s p two carbon पर। नीचे हम ये भी count करते हैं कि कितने halogen हैं और कहाँ हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Alkyl halides standard reactive case हैं। Allylic और benzylic halides भी s p three carbon पर हैं, पर double bond या ring के ठीक बगल में, तो neighbour बाद में बनने वाले charge को stabilise कर सकता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Vinylic और aryl halides stubborn हैं। यहाँ halogen s p two carbon पर है, और वो carbon to halogen bond छोटा, मज़बूत, और टूटने में बहुत आनाकानी करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दो effects इसकी वजह हैं। s p two carbon अपने electrons को nucleus के ज़्यादा पास रखता है, तो halogen को कसकर पकड़ता है, और ऊपर से halogen का lone pair बगल वाले pi system में leak करता है। दोनों bond को छोटा और सख़्त कर देते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "नीचे हम arrangement भी label करते हैं: gem dihalide में दोनों halogen एक ही carbon पर, vic dihalide में adjacent carbons पर। तो classification को prediction tool की तरह लो। Carbon पर एक नज़र बता देती है कि molecule खुशी से react करेगा या अड़ जाएगा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हर C to X बंध एक जैसा व्यवहार नहीं करता, और यहीं वर्गीकरण काम आता है। बंध का स्वभाव पूरी तरह इस बात पर निर्भर करता है कि हैलोजन को किस प्रकार का कार्बन पकड़े हुए है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड पर चारों प्रकार देखिए। बाईं ओर हैलोजन s p three कार्बन पर है, दाईं ओर s p two कार्बन पर। नीचे हम यह भी गिनते हैं कि कितने हैलोजन हैं और कहाँ हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "एल्किल हैलाइड मानक क्रियाशील स्थिति हैं। एलिलिक और बेंज़ाइलिक हैलाइड भी s p three कार्बन पर हैं, पर द्विबंध या वलय के ठीक बगल में, तो पड़ोसी बाद में बनने वाले आवेश को स्थायी कर सकता है।"
+            },
+            {
+              "seq": 4,
+              "text": "वाइनिलिक और एरिल हैलाइड ज़िद्दी हैं। यहाँ हैलोजन s p two कार्बन पर है, और वह कार्बन हैलोजन बंध छोटा, मज़बूत, और टूटने में बहुत अनिच्छुक होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दो प्रभाव इसका कारण हैं। s p two कार्बन अपने इलेक्ट्रॉनों को नाभिक के अधिक पास रखता है, तो हैलोजन को कसकर पकड़ता है, और ऊपर से हैलोजन का एकाकी युग्म बगल वाले पाई तंत्र में रिसता है। दोनों बंध को छोटा और कठोर कर देते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "नीचे हम व्यवस्था भी अंकित करते हैं: gem डाइहैलाइड में दोनों हैलोजन एक ही कार्बन पर, vic डाइहैलाइड में निकटवर्ती कार्बनों पर। तो वर्गीकरण को भविष्यवाणी का औज़ार मानिए। कार्बन पर एक नज़र बता देती है कि अणु उत्साह से अभिक्रिया करेगा या अड़ जाएगा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Bond length, bond strength, and the dipole surprise",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two opposite trends you must internalise"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Length rises, strength falls, going down the group",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 200' xmlns='http://www.w3.org/2000/svg'><text x='10' y='22' font-size='14' fill='#181818' font-family=\"system-ui, sans-serif\" font-weight='bold'>Bond length: C–F &lt; C–Cl &lt; C–Br &lt; C–I</text><rect x='10' y='34' width='40' height='18' fill='#181818'/><rect x='60' y='34' width='70' height='18' fill='#181818'/><rect x='140' y='34' width='100' height='18' fill='#181818'/><rect x='250' y='34' width='140' height='18' fill='#181818'/><text x='10' y='96' font-size='14' fill='#181818' font-family=\"system-ui, sans-serif\" font-weight='bold'>Bond strength: C–F &gt; C–Cl &gt; C–Br &gt; C–I</text><rect x='10' y='108' width='140' height='18' fill='#EEA31F'/><rect x='160' y='108' width='100' height='18' fill='#EEA31F'/><rect x='270' y='108' width='70' height='18' fill='#EEA31F'/><rect x='350' y='108' width='40' height='18' fill='#EEA31F'/><text x='10' y='165' font-size='14' fill='#DD4433' font-family=\"system-ui, sans-serif\" font-weight='bold'>C–I: longest + weakest &#8594; most reactive</text><text x='10' y='188' font-size='13' fill='#55565C' font-family=\"system-ui, sans-serif\">C–F: shortest + strongest</text></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Going down F → Cl → Br → I, the bond gets LONGER but WEAKER. So C–I is longest and weakest."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Weakest bond = easiest to break: iodides are the most reactive in substitution."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Dipole surprise: chlorobenzene (≈1.69 D) has a LOWER dipole than chloromethane (≈1.83 D)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Reason: in the aryl halide the halogen lone pair delocalises into the ring, and the sp2 carbon is more electronegative."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Memory: \"Aryl is shy\" — aryl dipole < alkyl dipole."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "There are two bond trends here that pull in opposite directions, and mixing them up is the classic trap. So look carefully."
+            },
+            {
+              "seq": 2,
+              "text": "On the board, the top bars are bond length and the bottom bars are bond strength. Notice they are mirror images of each other."
+            },
+            {
+              "seq": 3,
+              "text": "Going down the group, from C to F, then chlorine, bromine, iodine, the bond gets longer but weaker. The C to F bond is short and tight; the C to I bond is long and loose."
+            },
+            {
+              "seq": 4,
+              "text": "<excited>And here is the payoff.</excited> The weakest bond is the easiest to break, so iodides are the most reactive in substitution, while fluorides, with the strongest bond, are the most reluctant."
+            },
+            {
+              "seq": 5,
+              "text": "Now a subtle, heavily tested fact. You would expect the aromatic ring to make no difference, but the dipole moment of chlorobenzene, about one point six nine debye, is actually lower than chloromethane, about one point eight three debye."
+            },
+            {
+              "seq": 6,
+              "text": "The reason is the same resonance idea from before. In the aryl halide the halogen lone pair delocalises into the ring, and the carbon is the more electronegative s p two type. Both effects trim the net polarity."
+            },
+            {
+              "seq": 7,
+              "text": "So remember it as a phrase: aryl is shy. The aryl halide dipole is always lower than the corresponding alkyl halide."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ दो bond trends हैं जो opposite directions में खींचती हैं, और इन्हें mix कर देना classic trap है। तो ध्यान से देखो।"
+            },
+            {
+              "seq": 2,
+              "text": "Board पर ऊपर वाले bars bond length हैं और नीचे वाले bond strength। देखो, ये एक दूसरे के mirror image हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Group में नीचे जाते हुए, C to F, फिर chlorine, bromine, iodine, bond लंबा पर कमज़ोर होता जाता है। C to F छोटा और tight है; C to I लंबा और loose है।"
+            },
+            {
+              "seq": 4,
+              "text": "<excited>और यही असली point है।</excited> सबसे कमज़ोर bond सबसे आसानी से टूटता है, तो iodides substitution में सबसे reactive हैं, जबकि fluorides, सबसे मज़बूत bond के साथ, सबसे आनाकानी करते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "अब एक subtle, बार बार पूछा जाने वाला fact। तुम सोचोगे ring से कोई फ़र्क़ नहीं पड़ेगा, पर chlorobenzene का dipole moment, लगभग one point six nine debye, chloromethane, लगभग one point eight three debye, से कम है।"
+            },
+            {
+              "seq": 6,
+              "text": "वजह वही resonance वाली है। Aryl halide में halogen lone pair ring में delocalise होता है, और carbon ज़्यादा electronegative s p two type है। दोनों net polarity घटा देते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो इसे एक phrase में याद रखो: aryl is shy. Aryl halide का dipole हमेशा corresponding alkyl halide से कम होता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ दो बंध प्रवृत्तियाँ हैं जो विपरीत दिशाओं में खींचती हैं, और इन्हें मिला देना सामान्य भूल है। तो ध्यान से देखिए।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड पर ऊपर वाली पट्टियाँ बंध लंबाई हैं और नीचे वाली बंध सामर्थ्य। देखिए, ये एक दूसरे की दर्पण छवि हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "समूह में नीचे जाते हुए, C to F, फिर क्लोरीन, ब्रोमीन, आयोडीन, बंध लंबा पर कमज़ोर होता जाता है। C to F छोटा और कसा हुआ; C to I लंबा और ढीला।"
+            },
+            {
+              "seq": 4,
+              "text": "<excited>और यही असली बात है।</excited> सबसे कमज़ोर बंध सबसे आसानी से टूटता है, इसलिए आयोडाइड प्रतिस्थापन में सबसे क्रियाशील हैं, जबकि फ़्लोराइड, सबसे मज़बूत बंध के साथ, सबसे अनिच्छुक।"
+            },
+            {
+              "seq": 5,
+              "text": "अब एक सूक्ष्म, बार बार पूछा जाने वाला तथ्य। आप सोचेंगे वलय से कोई अंतर नहीं पड़ेगा, पर क्लोरोबेंज़ीन का द्विध्रुव आघूर्ण, लगभग one point six nine debye, क्लोरोमेथेन, लगभग one point eight three debye, से कम है।"
+            },
+            {
+              "seq": 6,
+              "text": "कारण वही अनुनाद वाला है। एरिल हैलाइड में हैलोजन का एकाकी युग्म वलय में विस्थानित होता है, और कार्बन अधिक विद्युतऋणात्मक s p two प्रकार का है। दोनों कुल ध्रुवता घटा देते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो इसे एक वाक्यांश में याद रखिए: aryl is shy. एरिल हैलाइड का द्विध्रुव सदैव संगत एल्किल हैलाइड से कम होता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Boiling point: what actually sets it",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Boiling point is about intermolecular forces, not bond strength"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Same alkyl group, different halogen: R–I > R–Br > R–Cl > R–F."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Heavier, more polarisable halogens → stronger van der Waals forces → higher boiling point."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "caption": "Two more levers: chain length raises b.p., branching lowers it",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 180' xmlns='http://www.w3.org/2000/svg'><text x='10' y='22' font-size='14' fill='#181818' font-family=\"system-ui, sans-serif\" font-weight='bold'>Longer chain &#8594; more surface contact &#8594; higher b.p.</text><line x1='20' y1='50' x2='120' y2='50' stroke='#181818' stroke-width='3'/><line x1='20' y1='70' x2='260' y2='70' stroke='#181818' stroke-width='3'/><text x='270' y='74' font-size='12' fill='#55565C' font-family=\"system-ui, sans-serif\">bigger surface</text><text x='10' y='112' font-size='14' fill='#DD4433' font-family=\"system-ui, sans-serif\" font-weight='bold'>Branching &#8594; more spherical &#8594; less contact &#8594; lower b.p.</text><circle cx='70' cy='145' r='22' fill='none' stroke='#DD4433' stroke-width='3'/><text x='105' y='150' font-size='12' fill='#55565C' font-family=\"system-ui, sans-serif\">compact ball packs poorly</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Longer chain raises b.p. (more contact surface); branching lowers it (a compact sphere touches less)."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "Higher than the parent hydrocarbon, but LOWER than the corresponding alcohol (which H-bonds)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the property students most often reason about wrongly, so let us nail the cause first. Boiling point is decided by intermolecular forces, how strongly neighbouring molecules cling to each other, not by how strong the internal carbon to halogen bond is."
+            },
+            {
+              "seq": 2,
+              "text": "Take the same alkyl group and just change the halogen. The order of boiling point is R iodide greater than R bromide greater than R chloride greater than R fluoride."
+            },
+            {
+              "seq": 3,
+              "text": "The reason is size and polarisability. A heavier, larger halogen has a bigger, squishier electron cloud, which makes stronger van der Waals attractions between molecules, and stronger attractions mean a higher boiling point."
+            },
+            {
+              "seq": 4,
+              "text": "Two more levers sit on the board. The first is chain length, the second is branching."
+            },
+            {
+              "seq": 5,
+              "text": "A longer chain has more surface to touch its neighbours, so boiling point rises with chain length. Branching folds the molecule into a compact, ball like shape with less surface contact, so branching lowers the boiling point."
+            },
+            {
+              "seq": 6,
+              "text": "Finally, two anchors for comparison. A haloalkane boils higher than the parent hydrocarbon of similar mass, because of its extra dipole and larger electron cloud, but lower than the matching alcohol, because the alcohol can form hydrogen bonds and haloalkanes cannot."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यही property students सबसे ज़्यादा गलत reason करते हैं, तो पहले cause पक्का कर लो। Boiling point intermolecular forces से तय होती है, यानी पड़ोसी molecules एक दूसरे को कितनी मज़बूती से पकड़ते हैं, अंदर वाले carbon to halogen bond की strength से नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "वही alkyl group लो और सिर्फ़ halogen बदलो। Boiling point का order है R iodide greater than R bromide greater than R chloride greater than R fluoride।"
+            },
+            {
+              "seq": 3,
+              "text": "वजह size और polarisability है। भारी, बड़ा halogen का electron cloud बड़ा और मुलायम होता है, जिससे molecules के बीच van der Waals attraction मज़बूत होता है, और मज़बूत attraction मतलब ज़्यादा boiling point।"
+            },
+            {
+              "seq": 4,
+              "text": "Board पर दो और levers हैं। पहला chain length, दूसरा branching।"
+            },
+            {
+              "seq": 5,
+              "text": "लंबी chain के पास पड़ोसियों को छूने के लिए ज़्यादा surface होता है, तो chain length के साथ boiling point बढ़ती है। Branching molecule को compact, गेंद जैसी shape में मोड़ देती है जिसमें surface contact कम होता है, तो branching boiling point घटाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "आख़िर में दो anchors। Haloalkane parent hydrocarbon से ज़्यादा boil होता है, extra dipole और बड़े electron cloud की वजह से, पर matching alcohol से कम, क्योंकि alcohol hydrogen bond बना सकता है और haloalkane नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यही गुण विद्यार्थी सबसे अधिक गलत तर्क करते हैं, तो पहले कारण पक्का कर लीजिए। क्वथनांक अंतराआण्विक बलों से तय होता है, अर्थात पड़ोसी अणु एक दूसरे को कितनी मज़बूती से पकड़ते हैं, भीतरी कार्बन हैलोजन बंध की सामर्थ्य से नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "वही एल्किल समूह लीजिए और केवल हैलोजन बदलिए। क्वथनांक का क्रम है R iodide greater than R bromide greater than R chloride greater than R fluoride।"
+            },
+            {
+              "seq": 3,
+              "text": "कारण आकार और ध्रुवणीयता है। भारी, बड़े हैलोजन का इलेक्ट्रॉन बादल बड़ा और नरम होता है, जिससे अणुओं के बीच वान डर वाल्स आकर्षण मज़बूत होता है, और मज़बूत आकर्षण अर्थात अधिक क्वथनांक।"
+            },
+            {
+              "seq": 4,
+              "text": "बोर्ड पर दो और साधन हैं। पहला श्रृंखला की लंबाई, दूसरा शाखन।"
+            },
+            {
+              "seq": 5,
+              "text": "लंबी श्रृंखला के पास पड़ोसियों को छूने के लिए अधिक सतह होती है, तो लंबाई के साथ क्वथनांक बढ़ता है। शाखन अणु को सघन, गेंद जैसी आकृति में मोड़ देता है जिसमें सतह संपर्क कम होता है, तो शाखन क्वथनांक घटाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "अंत में दो आधार। हैलोऐल्केन जनक हाइड्रोकार्बन से अधिक क्वथता है, अतिरिक्त द्विध्रुव और बड़े इलेक्ट्रॉन बादल के कारण, पर संगत ऐल्कोहॉल से कम, क्योंकि ऐल्कोहॉल हाइड्रोजन बंध बना सकता है और हैलोऐल्केन नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Density, solubility, melting point & detection",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The rest of the physical picture"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "style": "red-margin",
+          "text": "Only bromo, iodo, and polyhalogen compounds are DENSER than water. Chloro & fluoro are lighter."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Density rises with the mass and number of halogen atoms."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Solubility: essentially insoluble in water (can't repay the energy of breaking water's H-bond network); freely soluble in organic solvents."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "caption": "Among o-, m-, p-dihalobenzenes the para isomer melts highest",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 170' xmlns='http://www.w3.org/2000/svg'><text x='10' y='20' font-size='14' fill='#181818' font-family=\"system-ui, sans-serif\" font-weight='bold'>para packs symmetrically &#8594; tight lattice &#8594; highest m.p.</text><g stroke='#181818' stroke-width='2' fill='none'><polygon points='60,70 90,55 120,70 120,105 90,120 60,105'/><polygon points='190,70 220,55 250,70 250,105 220,120 190,105'/><polygon points='320,70 350,55 380,70 380,105 350,120 320,105'/></g><text x='55' y='145' font-size='12' fill='#55565C' font-family=\"system-ui, sans-serif\">ortho</text><text x='185' y='145' font-size='12' fill='#55565C' font-family=\"system-ui, sans-serif\">meta</text><text x='315' y='145' font-size='12' fill='#DD4433' font-family=\"system-ui, sans-serif\" font-weight='bold'>para (highest m.p.)</text><circle cx='90' cy='55' r='5' fill='#DD4433'/><circle cx='120' cy='70' r='5' fill='#DD4433'/><circle cx='220' cy='55' r='5' fill='#DD4433'/><circle cx='250' cy='105' r='5' fill='#DD4433'/><circle cx='350' cy='55' r='5' fill='#DD4433'/><circle cx='350' cy='120' r='5' fill='#DD4433'/></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Melting point of dihalobenzenes: para melts highest — its symmetry lets molecules pack tightly into the lattice."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Detection: the Beilstein test — a green-edged flame on a copper wire confirms a halogen is present."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us finish the physical picture with density, solubility, melting point, and one detection test."
+            },
+            {
+              "seq": 2,
+              "text": "<whisper>This is the density line examiners love to trip you on.</whisper> Only bromo, iodo, and polyhalogen compounds are denser than water. Chloro and fluoro derivatives are lighter, so they float."
+            },
+            {
+              "seq": 3,
+              "text": "The underlying rule is simple: density rises with the mass and the number of halogen atoms packed onto the molecule."
+            },
+            {
+              "seq": 4,
+              "text": "For solubility, haloalkanes are essentially insoluble in water. To dissolve, they would have to break water's hydrogen bond network, and the weak haloalkane to water interactions cannot pay that energy back. In organic solvents, though, they dissolve freely."
+            },
+            {
+              "seq": 5,
+              "text": "Now a neat melting point fact for dihalobenzenes. Compare the ortho, meta, and para isomers on the board."
+            },
+            {
+              "seq": 6,
+              "text": "The para isomer melts highest. Its symmetric shape lets molecules stack tightly into the crystal lattice, and a tighter lattice needs more energy to break, so the melting point is highest."
+            },
+            {
+              "seq": 7,
+              "text": "Finally, one detection test worth remembering. The Beilstein test: heat the sample on a copper wire, and a green edged flame confirms a halogen is present."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Physical picture को density, solubility, melting point, और एक detection test के साथ पूरा करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "<whisper>यही density की line है जिस पर examiners फँसाते हैं।</whisper> सिर्फ़ bromo, iodo, और polyhalogen compounds पानी से भारी होते हैं। Chloro और fluoro हल्के होते हैं, तो तैरते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Rule simple है: density halogen atoms की mass और संख्या के साथ बढ़ती है।"
+            },
+            {
+              "seq": 4,
+              "text": "Solubility में, haloalkanes पानी में लगभग insoluble हैं। घुलने के लिए इन्हें पानी का hydrogen bond network तोड़ना पड़ेगा, और कमज़ोर haloalkane to water interactions वो energy वापस नहीं दे सकते। पर organic solvents में ये आसानी से घुल जाते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "अब dihalobenzenes का एक साफ़ melting point fact। Board पर ortho, meta, और para isomers compare करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Para isomer सबसे ऊँचा melt होता है। इसकी symmetric shape molecules को crystal lattice में कसकर pack करने देती है, और tight lattice तोड़ने में ज़्यादा energy लगती है, तो melting point सबसे ऊँचा।"
+            },
+            {
+              "seq": 7,
+              "text": "आख़िर में एक detection test। Beilstein test: sample को copper wire पर गरम करो, हरे किनारे वाली flame halogen की मौजूदगी confirm करती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "भौतिक चित्र को घनत्व, विलेयता, गलनांक, और एक पहचान परीक्षण के साथ पूरा करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "<whisper>यही घनत्व की पंक्ति है जिस पर परीक्षक फँसाते हैं।</whisper> केवल ब्रोमो, आयोडो, और बहुहैलोजन यौगिक पानी से भारी होते हैं। क्लोरो और फ़्लोरो हल्के होते हैं, तो तैरते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "नियम सरल है: घनत्व हैलोजन परमाणुओं के द्रव्यमान और संख्या के साथ बढ़ता है।"
+            },
+            {
+              "seq": 4,
+              "text": "विलेयता में, हैलोऐल्केन पानी में लगभग अविलेय हैं। घुलने के लिए इन्हें पानी का हाइड्रोजन बंध जाल तोड़ना पड़ेगा, और कमज़ोर हैलोऐल्केन जल अंतःक्रियाएँ वह ऊर्जा वापस नहीं दे सकतीं। पर कार्बनिक विलायकों में ये सरलता से घुल जाते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "अब डाइहैलोबेंज़ीन का एक स्पष्ट गलनांक तथ्य। बोर्ड पर ऑर्थो, मेटा, और पैरा समावयवी की तुलना कीजिए।"
+            },
+            {
+              "seq": 6,
+              "text": "पैरा समावयवी सबसे ऊँचा गलता है। इसकी सममित आकृति अणुओं को क्रिस्टल जालक में कसकर सजने देती है, और सघन जालक तोड़ने में अधिक ऊर्जा लगती है, तो गलनांक सबसे ऊँचा।"
+            },
+            {
+              "seq": 7,
+              "text": "अंत में एक पहचान परीक्षण। बाइलस्टाइन परीक्षण: नमूने को कॉपर तार पर गरम कीजिए, हरे किनारे वाली ज्वाला हैलोजन की उपस्थिति की पुष्टि करती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "The IUPAC naming algorithm",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Naming is an algorithm, run it in order"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Step 1: find the longest chain carrying the most substituents — this is the parent."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Step 2: number from the end giving the lowest set of locants (compare at first point of difference)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Step 3: name halogens as prefixes (fluoro/chloro/bromo/iodo), list all substituents alphabetically, assemble locant-prefix-parent."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Step 4: for rings with two halogens, IUPAC prefers numerals 1,2- / 1,3- / 1,4- over o-/m-/p-."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Why: one molecule → exactly one name worldwide. Lowest-locant rule is just the tie-break."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "There is no derivation to learn here. Naming is an algorithm, and if you run the steps in order you get the right answer every time."
+            },
+            {
+              "seq": 2,
+              "text": "Step one: find the longest carbon chain that also carries the maximum number of substituents. That chain is your parent."
+            },
+            {
+              "seq": 3,
+              "text": "Step two: number the chain from whichever end gives the lowest set of locants. When there is a contest, you compare the two sets number by number, and the lower one at the first point of difference wins."
+            },
+            {
+              "seq": 4,
+              "text": "Step three: name each halogen as a prefix, fluoro, chloro, bromo, or iodo, arrange all substituents alphabetically, and assemble in the order locant, prefix, parent."
+            },
+            {
+              "seq": 5,
+              "text": "Step four is the ring rule. For a benzene ring carrying two halogens, IUPAC prefers numerals, one comma two, one comma three, one comma four, rather than the older ortho, meta, para labels."
+            },
+            {
+              "seq": 6,
+              "text": "And why all this fuss? So that one molecule maps to exactly one name anywhere in the world. The lowest locant rule is simply a tie break convention that removes ambiguity, nothing deeper."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ कोई derivation नहीं है। Naming एक algorithm है, और steps को order में चलाओ तो हर बार सही answer मिलता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Step one: सबसे लंबी carbon chain ढूँढो जिस पर सबसे ज़्यादा substituents भी हों। वही chain तुम्हारा parent है।"
+            },
+            {
+              "seq": 3,
+              "text": "Step two: chain को उस end से number करो जो lowest set of locants दे। जब मुक़ाबला हो, तो दोनों sets को number by number compare करो, और first point of difference पर जो छोटा है वो जीतता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Step three: हर halogen को prefix की तरह name करो, fluoro, chloro, bromo, या iodo, सारे substituents alphabetically arrange करो, और locant, prefix, parent के order में जोड़ो।"
+            },
+            {
+              "seq": 5,
+              "text": "Step four ring rule है। दो halogen वाले benzene ring के लिए IUPAC numerals prefer करता है, one comma two, one comma three, one comma four, न कि पुराने ortho, meta, para labels।"
+            },
+            {
+              "seq": 6,
+              "text": "और ये सारा झंझट क्यों? ताकि एक molecule दुनिया में कहीं भी exactly एक ही name से match करे। Lowest locant rule बस एक tie break convention है जो confusion हटाता है, इससे ज़्यादा कुछ नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ कोई व्युत्पत्ति नहीं है। नामकरण एक कलनविधि है, और चरणों को क्रम में चलाइए तो हर बार सही उत्तर मिलता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला चरण: सबसे लंबी कार्बन श्रृंखला खोजिए जिस पर सबसे अधिक प्रतिस्थापी भी हों। वही श्रृंखला आपका जनक है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा चरण: श्रृंखला को उस सिरे से क्रमांकित कीजिए जो सबसे छोटा अंक समुच्चय दे। जब मुक़ाबला हो, तो दोनों समुच्चयों की अंक दर अंक तुलना कीजिए, और पहले अंतर बिंदु पर जो छोटा है वह जीतता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा चरण: हर हैलोजन को उपसर्ग की तरह नाम दीजिए, fluoro, chloro, bromo, या iodo, सभी प्रतिस्थापी वर्णक्रम में सजाइए, और अंक, उपसर्ग, जनक के क्रम में जोड़िए।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा चरण वलय नियम है। दो हैलोजन वाले बेंज़ीन वलय के लिए IUPAC अंक पसंद करता है, one comma two, one comma three, one comma four, न कि पुराने ऑर्थो, मेटा, पैरा नाम।"
+            },
+            {
+              "seq": 6,
+              "text": "और यह सारा झंझट क्यों? ताकि एक अणु संसार में कहीं भी ठीक एक ही नाम से मेल खाए। सबसे छोटे अंक का नियम बस एक निर्णायक परंपरा है जो अस्पष्टता हटाती है, इससे अधिक कुछ नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "concept",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Preparing haloalkanes: pick the route by feedstock",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Choose the route by what you are handed"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Feedstock → reagent → haloalkane",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 220' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><rect x='10' y='14' width='120' height='34' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='18' y='36' font-size='13' fill='#181818'>Alcohol R–OH</text><text x='140' y='36' font-size='12' fill='#DD4433'>SOCl2 (purest), PCl3/PCl5, red P + X2</text><rect x='10' y='58' width='120' height='34' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='18' y='80' font-size='13' fill='#181818'>Alkane</text><text x='140' y='80' font-size='12' fill='#DD4433'>X2 + UV/heat (gives mixtures)</text><rect x='10' y='102' width='120' height='34' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='18' y='124' font-size='13' fill='#181818'>Alkene</text><text x='140' y='124' font-size='12' fill='#DD4433'>HX (Markovnikov) or X2 &#8594; vic-dihalide</text><rect x='10' y='146' width='120' height='34' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='18' y='168' font-size='13' fill='#181818'>Halogen swap</text><text x='140' y='168' font-size='12' fill='#DD4433'>NaI / dry acetone (Finkelstein) &#8594; R–I</text><rect x='10' y='190' width='120' height='24' rx='6' fill='#FCFAF4' stroke='#EEA31F' stroke-width='2'/><text x='18' y='207' font-size='12' fill='#181818'>RCOOAg (JEE)</text><text x='140' y='207' font-size='12' fill='#55565C'>Br2/CCl4 (Hunsdiecker): loses one C</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "From an alcohol (most common): SOCl2 is best — its by-products SO2 and HCl are gases that escape, leaving pure product. Ease with HX: 3° > 2° > 1° (tracks carbocation stability)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "For bromides/iodides use red P + Br2/I2 — never H2SO4 + KI (the acid oxidises iodide)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "From an alkane: free-radical halogenation gives messy mixtures. From an alkene: HX (Markovnikov) or X2 in CCl4 → vic-dihalide (decolourises bromine)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Finkelstein swaps Cl/Br for I in dry acetone; the NaCl/NaBr precipitates, so Le Chatelier drives it forward."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Hunsdiecker (JEE): RCOOAg + Br2 → R–Br with ONE carbon fewer; yield 1° > 2° > 3°."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "There are several ways to make a haloalkane, and the reason is simple: each starts from a different available feedstock. So pick the route by what you are handed."
+            },
+            {
+              "seq": 2,
+              "text": "The board maps it out. On the left is the starting material, in the middle the reagent, on the right the product."
+            },
+            {
+              "seq": 3,
+              "text": "The most common in problems is from an alcohol. Thionyl chloride, S O C l two, is the best reagent, because its by products, sulphur dioxide and H C l, are both gases that simply escape, leaving a pure alkyl chloride. Note the ease of reaction with H X follows tertiary greater than secondary greater than primary, because it mirrors carbocation stability."
+            },
+            {
+              "seq": 4,
+              "text": "For bromides and iodides, use red phosphorus with bromine or iodine, which makes the phosphorus halide in situ. Never use sulphuric acid plus potassium iodide, because the acid oxidises the iodide away before it can act."
+            },
+            {
+              "seq": 5,
+              "text": "From an alkane, free radical halogenation works but gives a mixture of mono and poly substituted products, so it is poor for clean synthesis. From an alkene, add H X following Markovnikov for a monohalide, or add X two in carbon tetrachloride to get a vic dihalide, and the fading of bromine's colour is the classic unsaturation test."
+            },
+            {
+              "seq": 6,
+              "text": "Halogen exchange is the Finkelstein reaction. Sodium iodide in dry acetone swaps chloride or bromide for iodide, and because the sodium chloride or bromide is insoluble in acetone it precipitates out, so by Le Chatelier's principle the equilibrium is pushed forward."
+            },
+            {
+              "seq": 7,
+              "text": "One extra for J E E, the Hunsdiecker reaction. The silver salt of a carboxylic acid reacts with bromine to give an alkyl bromide with one carbon fewer than the acid. That loss of one carbon is the marker examiners exploit, and the yield falls primary greater than secondary greater than tertiary."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Haloalkane बनाने के कई तरीक़े हैं, और वजह simple है: हर तरीक़ा अलग available feedstock से शुरू होता है। तो route वही चुनो जो तुम्हें दिया गया है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board इसे map करता है। बाईं तरफ़ starting material, बीच में reagent, दाईं तरफ़ product।"
+            },
+            {
+              "seq": 3,
+              "text": "Problems में सबसे common alcohol से है। Thionyl chloride, S O C l two, सबसे बढ़िया reagent है, क्योंकि इसके by products, sulphur dioxide और H C l, दोनों gases हैं जो निकल जाते हैं, pure alkyl chloride छोड़कर। H X के साथ ease of reaction tertiary greater than secondary greater than primary है, क्योंकि ये carbocation stability को mirror करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Bromides और iodides के लिए red phosphorus को bromine या iodine के साथ use करो, जो phosphorus halide in situ बनाता है। Sulphuric acid plus potassium iodide कभी मत use करो, क्योंकि acid iodide को oxidise कर देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Alkane से, free radical halogenation चलती है पर mono और poly substituted products का mixture देती है, तो clean synthesis के लिए ख़राब है। Alkene से, Markovnikov के हिसाब से H X add करो monohalide के लिए, या carbon tetrachloride में X two add करो vic dihalide के लिए, और bromine का रंग उड़ना classic unsaturation test है।"
+            },
+            {
+              "seq": 6,
+              "text": "Halogen exchange यानी Finkelstein reaction। Dry acetone में sodium iodide chloride या bromide को iodide से बदल देता है, और चूँकि sodium chloride या bromide acetone में insoluble है वो precipitate हो जाता है, तो Le Chatelier's principle से equilibrium आगे धकेला जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "J E E के लिए एक extra, Hunsdiecker reaction। Carboxylic acid का silver salt bromine के साथ react करके एक carbon कम वाला alkyl bromide देता है। यही एक carbon की कमी examiners का marker है, और yield primary greater than secondary greater than tertiary गिरती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हैलोऐल्केन बनाने के कई तरीक़े हैं, और कारण सरल है: हर तरीक़ा अलग उपलब्ध कच्चे माल से शुरू होता है। तो मार्ग वही चुनिए जो आपको दिया गया है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड इसे मानचित्रित करता है। बाईं ओर आरंभिक पदार्थ, बीच में अभिकर्मक, दाईं ओर उत्पाद।"
+            },
+            {
+              "seq": 3,
+              "text": "प्रश्नों में सबसे सामान्य ऐल्कोहॉल से है। थायोनिल क्लोराइड, S O C l two, सबसे अच्छा अभिकर्मक है, क्योंकि इसके उपोत्पाद, सल्फ़र डाइऑक्साइड और H C l, दोनों गैसें हैं जो निकल जाती हैं, शुद्ध ऐल्किल क्लोराइड छोड़कर। H X के साथ अभिक्रिया की सुगमता tertiary greater than secondary greater than primary है, क्योंकि यह कार्बोकैटायन स्थायित्व को दर्शाती है।"
+            },
+            {
+              "seq": 4,
+              "text": "ब्रोमाइड और आयोडाइड के लिए लाल फ़ॉस्फ़ोरस को ब्रोमीन या आयोडीन के साथ प्रयोग कीजिए, जो फ़ॉस्फ़ोरस हैलाइड यथास्थान बनाता है। सल्फ़्यूरिक अम्ल जमा पोटैशियम आयोडाइड कभी प्रयोग न कीजिए, क्योंकि अम्ल आयोडाइड को ऑक्सीकृत कर देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "ऐल्केन से, मुक्त मूलक हैलोजनन चलता है पर मोनो और बहु प्रतिस्थापित उत्पादों का मिश्रण देता है, तो स्वच्छ संश्लेषण के लिए ख़राब है। ऐल्कीन से, मार्कोनिकॉफ़ के अनुसार H X जोड़िए मोनोहैलाइड के लिए, या कार्बन टेट्राक्लोराइड में X two जोड़िए vic डाइहैलाइड के लिए, और ब्रोमीन का रंग उड़ना पारंपरिक असंतृप्ति परीक्षण है।"
+            },
+            {
+              "seq": 6,
+              "text": "हैलोजन विनिमय अर्थात Finkelstein अभिक्रिया। शुष्क ऐसीटोन में सोडियम आयोडाइड क्लोराइड या ब्रोमाइड को आयोडाइड से बदल देता है, और चूँकि सोडियम क्लोराइड या ब्रोमाइड ऐसीटोन में अविलेय है वह अवक्षेपित हो जाता है, तो ली शातेलिए सिद्धांत से साम्य आगे धकेला जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "J E E के लिए एक अतिरिक्त, Hunsdiecker अभिक्रिया। कार्बोक्सिलिक अम्ल का सिल्वर लवण ब्रोमीन के साथ अभिक्रिया करके एक कार्बन कम वाला ऐल्किल ब्रोमाइड देता है। यही एक कार्बन की कमी परीक्षकों का चिह्न है, और उपज primary greater than secondary greater than tertiary घटती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "concept",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Preparing haloarenes: EAS vs the diazonium route",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Aryl halides need their own two routes"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Route 1 — Electrophilic aromatic substitution: arene + Cl2/Br2 with a Lewis acid (Fe or FeX3) → aryl halide + HX."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Iodination is reversible → add an oxidant (HNO3, HIO4) to destroy the HI. Direct fluorination is too violent."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "caption": "Diazonium branch map: one salt, four halogen exits",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 210' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><rect x='150' y='10' width='170' height='40' rx='8' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='162' y='28' font-size='12' fill='#181818'>Ar–NH2 &#8594; (NaNO2/HCl,</text><text x='162' y='44' font-size='12' fill='#181818'>273–278 K) &#8594; ArN2+ salt</text><line x1='235' y1='50' x2='60' y2='90' stroke='#55565C' stroke-width='1.5'/><line x1='235' y1='50' x2='190' y2='90' stroke='#55565C' stroke-width='1.5'/><line x1='235' y1='50' x2='300' y2='90' stroke='#55565C' stroke-width='1.5'/><line x1='235' y1='50' x2='420' y2='90' stroke='#55565C' stroke-width='1.5'/><text x='15' y='108' font-size='12' fill='#DD4433'>CuCl/CuBr</text><text x='20' y='126' font-size='12' fill='#181818'>Ar–Cl / Ar–Br</text><text x='30' y='142' font-size='11' fill='#55565C'>(Sandmeyer)</text><text x='160' y='108' font-size='12' fill='#DD4433'>Cu powder/HX</text><text x='165' y='126' font-size='12' fill='#181818'>same, lower yield</text><text x='172' y='142' font-size='11' fill='#55565C'>(Gattermann)</text><text x='290' y='108' font-size='12' fill='#DD4433'>KI (no Cu)</text><text x='300' y='126' font-size='12' fill='#181818'>Ar–I</text><text x='395' y='108' font-size='12' fill='#DD4433'>HBF4, heat</text><text x='405' y='126' font-size='12' fill='#181818'>Ar–F</text><text x='388' y='142' font-size='11' fill='#55565C'>(Balz–Schiemann)</text></g></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Route 2 — via the diazonium salt: diazotise a 1° aromatic amine (NaNO2/HCl, 273–278 K) to ArN2+, then send it down the branch you need."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "Sandmeyer = Cu(I) gives Ar–Cl/Ar–Br; KI alone gives Ar–I; Balz–Schiemann (HBF4) gives Ar–F."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Aryl halides cannot be made by the simple alcohol route, because there is no aryl alcohol to react. So two different pathways dominate."
+            },
+            {
+              "seq": 2,
+              "text": "Route one is electrophilic aromatic substitution. Treat the arene with chlorine or bromine in the presence of a Lewis acid, iron or the iron halide, and you get the aryl halide plus H X."
+            },
+            {
+              "seq": 3,
+              "text": "Two cautions. Iodination is reversible, so you add an oxidising agent such as nitric acid to destroy the H I as it forms and pull the reaction forward. And direct fluorination is simply too violent to be useful."
+            },
+            {
+              "seq": 4,
+              "text": "Route two runs through the diazonium salt, and the board shows it as one salt with four exits."
+            },
+            {
+              "seq": 5,
+              "text": "First diazotise a primary aromatic amine, using sodium nitrite and H C l at two hundred seventy three to two hundred seventy eight kelvin, to make the aryl diazonium ion. Then send it down whichever branch gives the halogen you want."
+            },
+            {
+              "seq": 6,
+              "text": "Lock in the branches. Copper one salts, that is the Sandmeyer reaction, give the aryl chloride or bromide. Copper powder does the same with lower yield, the Gattermann version. Potassium iodide alone, no copper needed, gives the aryl iodide. And H B F four followed by heat, the Balz Schiemann reaction, gives the aryl fluoride."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Aryl halides simple alcohol route से नहीं बन सकते, क्योंकि react करने के लिए कोई aryl alcohol है ही नहीं। तो दो अलग pathways dominate करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Route one electrophilic aromatic substitution है। Arene को chlorine या bromine के साथ Lewis acid, iron या iron halide, की मौजूदगी में treat करो, और aryl halide plus H X मिलता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दो cautions। Iodination reversible है, तो nitric acid जैसा oxidising agent डालते हैं जो बनते ही H I को destroy करके reaction आगे खींचता है। और direct fluorination बस बहुत violent है, useless है।"
+            },
+            {
+              "seq": 4,
+              "text": "Route two diazonium salt से चलता है, और board इसे एक salt और चार exits की तरह दिखाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "पहले primary aromatic amine को diazotise करो, sodium nitrite और H C l से two hundred seventy three से two hundred seventy eight kelvin पर, aryl diazonium ion बनाने के लिए। फिर उसे उस branch में भेजो जो तुम्हारा halogen देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Branches पक्की कर लो। Copper one salts, यानी Sandmeyer reaction, aryl chloride या bromide देते हैं। Copper powder वही कम yield पर करता है, Gattermann version। सिर्फ़ potassium iodide, बिना copper, aryl iodide देता है। और H B F four फिर heat, Balz Schiemann reaction, aryl fluoride देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एरिल हैलाइड सरल ऐल्कोहॉल मार्ग से नहीं बन सकते, क्योंकि अभिक्रिया करने के लिए कोई एरिल ऐल्कोहॉल है ही नहीं। तो दो भिन्न मार्ग प्रमुख हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला मार्ग विद्युतस्नेही ऐरोमैटिक प्रतिस्थापन है। ऐरीन को क्लोरीन या ब्रोमीन के साथ लूइस अम्ल, आयरन या आयरन हैलाइड, की उपस्थिति में उपचारित कीजिए, और एरिल हैलाइड जमा H X मिलता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दो सावधानियाँ। आयोडीनन प्रतिवर्ती है, तो नाइट्रिक अम्ल जैसा ऑक्सीकारक डालते हैं जो बनते ही H I को नष्ट करके अभिक्रिया आगे खींचता है। और सीधा फ़्लोरीनन बस बहुत प्रचंड है, अनुपयोगी है।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा मार्ग डाइऐज़ोनियम लवण से चलता है, और बोर्ड इसे एक लवण और चार निकासों की तरह दिखाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "पहले प्राथमिक ऐरोमैटिक ऐमीन को डाइऐज़ोटीकृत कीजिए, सोडियम नाइट्राइट और H C l से two hundred seventy three से two hundred seventy eight केल्विन पर, एरिल डाइऐज़ोनियम आयन बनाने के लिए। फिर उसे उस शाखा में भेजिए जो आपका हैलोजन देती है।"
+            },
+            {
+              "seq": 6,
+              "text": "शाखाएँ पक्की कर लीजिए। कॉपर एक लवण, अर्थात Sandmeyer अभिक्रिया, एरिल क्लोराइड या ब्रोमाइड देते हैं। कॉपर चूर्ण वही कम उपज पर करता है, Gattermann रूप। केवल पोटैशियम आयोडाइड, बिना कॉपर, एरिल आयोडाइड देता है। और H B F four फिर ताप, Balz Schiemann अभिक्रिया, एरिल फ़्लोराइड देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Worked example — IUPAC name & classify the carbon [CBSE]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Name (CH3)2CH–CH2–CHBr–CH3 and classify the C–Br carbon"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Number from the right: lowest locant to bromo",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 160' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><line x1='40' y1='90' x2='400' y2='90' stroke='#181818' stroke-width='3'/><circle cx='40' cy='90' r='4' fill='#181818'/><circle cx='130' cy='90' r='4' fill='#181818'/><circle cx='220' cy='90' r='4' fill='#181818'/><circle cx='310' cy='90' r='4' fill='#181818'/><circle cx='400' cy='90' r='4' fill='#181818'/><line x1='130' y1='90' x2='130' y2='50' stroke='#181818' stroke-width='3'/><text x='120' y='42' font-size='13' fill='#55565C'>CH3</text><line x1='310' y1='90' x2='310' y2='50' stroke='#DD4433' stroke-width='3'/><text x='300' y='42' font-size='14' fill='#DD4433' font-weight='bold'>Br</text><text x='34' y='118' font-size='13' fill='#181818'>5</text><text x='124' y='118' font-size='13' fill='#181818'>4</text><text x='214' y='118' font-size='13' fill='#181818'>3</text><text x='304' y='118' font-size='13' fill='#DD4433' font-weight='bold'>2</text><text x='394' y='118' font-size='13' fill='#181818'>1</text><text x='40' y='145' font-size='12' fill='#55565C'>parent = pentane (5 C)</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Step 1: longest chain = 5 carbons → parent is pentane."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Step 2: both ends give locants {2,4}. Tie-break alphabetically → bromo gets the lower number → Br on C-2, methyl on C-4."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Step 3: assemble → 2-bromo-4-methylpentane."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "Answer: 2-bromo-4-methylpentane; the C–Br carbon is attached to two carbons → secondary (2°)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A clean C B S E level naming question. We are asked to name this bromo compound and then say whether the carbon bearing bromine is primary, secondary, or tertiary."
+            },
+            {
+              "seq": 2,
+              "text": "First draw and number it, as on the board. Numbering from the right places bromine on carbon two and the methyl branch on carbon four."
+            },
+            {
+              "seq": 3,
+              "text": "Step one, find the longest chain. It runs five carbons, so the parent is pentane."
+            },
+            {
+              "seq": 4,
+              "text": "Step two, number for lowest locants. From either end the set comes out as two and four, so we break the tie alphabetically. Bromo comes before methyl, so bromo takes the lower number, and bromine sits on carbon two."
+            },
+            {
+              "seq": 5,
+              "text": "Step three, assemble the name in order: two bromo, four methyl, pentane. That gives two bromo four methylpentane."
+            },
+            {
+              "seq": 6,
+              "text": "Finally classify the carbon. The carbon holding bromine is attached to two other carbons, so it is a secondary halide. Answer: two bromo four methylpentane, and the carbon to bromine carbon is secondary."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक साफ़ C B S E level naming question। हमसे इस bromo compound को name करने को कहा है और फिर बताना है कि bromine वाला carbon primary, secondary, या tertiary है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले draw करके number करो, जैसे board पर है। दाईं तरफ़ से numbering bromine को carbon two पर और methyl branch को carbon four पर रखती है।"
+            },
+            {
+              "seq": 3,
+              "text": "Step one, सबसे लंबी chain ढूँढो। ये पाँच carbon की है, तो parent pentane है।"
+            },
+            {
+              "seq": 4,
+              "text": "Step two, lowest locants के लिए number करो। किसी भी end से set two और four आता है, तो tie alphabetically तोड़ते हैं। Bromo, methyl से पहले आता है, तो bromo को छोटा number मिलता है, और bromine carbon two पर बैठता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Step three, name को order में जोड़ो: two bromo, four methyl, pentane. यानी two bromo four methylpentane।"
+            },
+            {
+              "seq": 6,
+              "text": "आख़िर में carbon classify करो। Bromine वाला carbon दो और carbons से जुड़ा है, तो ये secondary halide है। Answer: two bromo four methylpentane, और carbon to bromine carbon secondary है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक स्वच्छ C B S E स्तर का नामकरण प्रश्न। हमसे इस ब्रोमो यौगिक को नाम देने को कहा है और फिर बताना है कि ब्रोमीन वाला कार्बन प्राथमिक, द्वितीयक, या तृतीयक है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले बनाकर क्रमांकित कीजिए, जैसे बोर्ड पर है। दाईं ओर से क्रमांकन ब्रोमीन को कार्बन दो पर और मेथिल शाखा को कार्बन चार पर रखता है।"
+            },
+            {
+              "seq": 3,
+              "text": "पहला चरण, सबसे लंबी श्रृंखला खोजिए। यह पाँच कार्बन की है, तो जनक पेंटेन है।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा चरण, सबसे छोटे अंकों के लिए क्रमांकित कीजिए। किसी भी सिरे से समुच्चय दो और चार आता है, तो निर्णय वर्णक्रम से करते हैं। bromo, methyl से पहले आता है, तो bromo को छोटा अंक मिलता है, और ब्रोमीन कार्बन दो पर बैठता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तीसरा चरण, नाम को क्रम में जोड़िए: two bromo, four methyl, pentane. अर्थात two bromo four methylpentane।"
+            },
+            {
+              "seq": 6,
+              "text": "अंत में कार्बन का वर्गीकरण कीजिए। ब्रोमीन वाला कार्बन दो अन्य कार्बनों से जुड़ा है, तो यह द्वितीयक हैलाइड है। उत्तर: two bromo four methylpentane, और कार्बन ब्रोमीन कार्बन द्वितीयक है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Worked example — boiling point order without numbers [NEET]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Order by b.p.: 1-chlorobutane, 1-chloropropane, chlorobenzene, 1-chloroethane"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The trap: students try to recall exact boiling points. Don't."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Same halogen (Cl) → b.p. tracks the size of the rest of the molecule. The aromatic ring is the bulkiest, most polarisable framework here."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Just order by 'how big is the rest of the molecule'",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 150' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><rect x='20' y='90' width='40' height='30' fill='#181818'/><text x='16' y='138' font-size='11' fill='#55565C'>ethyl</text><rect x='110' y='75' width='40' height='45' fill='#181818'/><text x='100' y='138' font-size='11' fill='#55565C'>propyl</text><rect x='200' y='60' width='40' height='60' fill='#181818'/><text x='192' y='138' font-size='11' fill='#55565C'>butyl</text><rect x='300' y='35' width='55' height='85' fill='#DD4433'/><text x='288' y='138' font-size='11' fill='#DD4433' font-weight='bold'>chlorobenzene</text><text x='380' y='60' font-size='13' fill='#181818'>rising b.p.</text><path d='M375 75 L430 75' stroke='#181818' stroke-width='2'/><polygon points='430,75 421,71 421,79' fill='#181818'/></g></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "style": "red-margin",
+          "text": "Answer: 1-chloroethane < 1-chloropropane < 1-chlorobutane < chlorobenzene."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Mental elimination: any option putting chlorobenzene lowest is wrong on sight."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A classic N E E T speed trap. Arrange four chlorine compounds in increasing order of boiling point."
+            },
+            {
+              "seq": 2,
+              "text": "The trap is that students waste time trying to recall exact boiling point numbers. Do not do that."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the shortcut. The halogen is the same, chlorine, in all four, so boiling point simply tracks the size of the rest of the molecule, its van der Waals surface. And the aromatic ring is the bulkiest, most polarisable framework in the list."
+            },
+            {
+              "seq": 4,
+              "text": "So on the board, just rank by how big the carbon part is. Ethyl is smallest, then propyl, then butyl, and the benzene ring is biggest of all."
+            },
+            {
+              "seq": 5,
+              "text": "That gives the order one chloroethane, then one chloropropane, then one chlorobutane, then chlorobenzene highest."
+            },
+            {
+              "seq": 6,
+              "text": "And a fast elimination trick for the exam: any option that puts chlorobenzene at the bottom is wrong the instant you see it. The same bigger framework wins logic also settles density and melting comparisons, so one rule clears a whole family of questions."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक classic N E E T speed trap। चार chlorine compounds को boiling point के बढ़ते order में लगाओ।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap ये है कि students exact boiling point numbers याद करने में time बर्बाद करते हैं। ये मत करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Shortcut ये है। चारों में halogen एक ही है, chlorine, तो boiling point बस बाक़ी molecule के size, उसके van der Waals surface, को track करती है। और list में aromatic ring सबसे भारी, सबसे polarisable framework है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो board पर बस carbon part के size से rank करो। Ethyl सबसे छोटा, फिर propyl, फिर butyl, और benzene ring सबसे बड़ा।"
+            },
+            {
+              "seq": 5,
+              "text": "इससे order बनता है one chloroethane, फिर one chloropropane, फिर one chlorobutane, फिर chlorobenzene सबसे ऊपर।"
+            },
+            {
+              "seq": 6,
+              "text": "और exam के लिए fast elimination trick: कोई भी option जो chlorobenzene को सबसे नीचे रखे, देखते ही ग़लत है। यही bigger framework जीतता है logic density और melting comparisons भी settle करता है, तो एक rule पूरे family के questions clear कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक पारंपरिक N E E T गति जाल। चार क्लोरीन यौगिकों को क्वथनांक के बढ़ते क्रम में लगाइए।"
+            },
+            {
+              "seq": 2,
+              "text": "जाल यह है कि विद्यार्थी सटीक क्वथनांक अंक याद करने में समय बर्बाद करते हैं। यह मत कीजिए।"
+            },
+            {
+              "seq": 3,
+              "text": "सरल उपाय यह है। चारों में हैलोजन एक ही है, क्लोरीन, तो क्वथनांक बस शेष अणु के आकार, उसकी वान डर वाल्स सतह, का अनुसरण करता है। और सूची में ऐरोमैटिक वलय सबसे भारी, सबसे ध्रुवणीय ढाँचा है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो बोर्ड पर बस कार्बन भाग के आकार से क्रम दीजिए। एथिल सबसे छोटा, फिर प्रोपिल, फिर ब्यूटिल, और बेंज़ीन वलय सबसे बड़ा।"
+            },
+            {
+              "seq": 5,
+              "text": "इससे क्रम बनता है one chloroethane, फिर one chloropropane, फिर one chlorobutane, फिर chlorobenzene सबसे ऊपर।"
+            },
+            {
+              "seq": 6,
+              "text": "और परीक्षा के लिए तेज़ निष्कासन युक्ति: कोई भी विकल्प जो क्लोरोबेंज़ीन को सबसे नीचे रखे, देखते ही गलत है। यही बड़ा ढाँचा जीतता है तर्क घनत्व और गलन तुलनाएँ भी सुलझाता है, तो एक नियम पूरे परिवार के प्रश्न हल कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Worked example — peroxide effect then Finkelstein [JEE Main]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Propene + HBr/peroxide, then heat with NaI/dry acetone. Final product?"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Two-step route: anti-Markovnikov addition, then halogen exchange",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 150' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='13' fill='#181818'><text x='10' y='40'>CH3–CH=CH2</text><text x='150' y='30' font-size='11' fill='#DD4433'>HBr, peroxide</text><text x='150' y='46' font-size='10' fill='#55565C'>(anti-Markovnikov)</text><path d='M120 36 L240 36' stroke='#181818' stroke-width='1.5'/><polygon points='240,36 231,32 231,40' fill='#181818'/><text x='250' y='40'>CH3CH2CH2Br</text><text x='170' y='95' font-size='11' fill='#DD4433'>NaI, dry acetone</text><text x='180' y='111' font-size='10' fill='#55565C'>(Finkelstein)</text><path d='M310 50 L310 120' stroke='#181818' stroke-width='1.5'/><polygon points='310,120 306,111 314,111' fill='#181818'/><text x='250' y='140' font-weight='bold' fill='#DD4433'>CH3CH2CH2I  (1-iodopropane)</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Step 1: HBr with peroxide = Kharasch/anti-Markovnikov → Br adds to the terminal carbon → 1-bromopropane."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "(Without peroxide, Markovnikov would have given 2-bromopropane — that contrast is exactly what the question probes.)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Step 2: NaI in dry acetone (Finkelstein) → swaps Br for I → 1-iodopropane."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "Answer: 1-iodopropane; principles = peroxide (anti-Markovnikov) effect + Finkelstein reaction."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A two step J E E Main problem. Propene is treated with H Br in the presence of an organic peroxide, then the product is heated with sodium iodide in dry acetone. We need the final product and the two governing principles."
+            },
+            {
+              "seq": 2,
+              "text": "Follow the route on the board. It is two arrows: an addition, then a halogen exchange."
+            },
+            {
+              "seq": 3,
+              "text": "Step one is the addition of H Br with a peroxide present. That is the Kharasch, or anti Markovnikov, effect: bromine adds to the terminal, less substituted carbon, giving one bromopropane."
+            },
+            {
+              "seq": 4,
+              "text": "Notice the contrast the examiner is testing. Without the peroxide, ordinary Markovnikov addition would have put bromine on the middle carbon, giving two bromopropane. The peroxide flips the outcome, and that is the whole point of the question."
+            },
+            {
+              "seq": 5,
+              "text": "Step two is the Finkelstein exchange. Sodium iodide in dry acetone swaps the bromide for iodide, driven forward as the sodium bromide precipitates, giving one iodopropane."
+            },
+            {
+              "seq": 6,
+              "text": "So the final answer is one iodopropane, and the two principles are the peroxide or anti Markovnikov effect, and the Finkelstein reaction."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक two step J E E Main problem। Propene को organic peroxide की मौजूदगी में H Br से treat करते हैं, फिर product को dry acetone में sodium iodide के साथ गरम करते हैं। हमें final product और दो governing principles चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Board पर route follow करो। ये दो arrows हैं: एक addition, फिर एक halogen exchange।"
+            },
+            {
+              "seq": 3,
+              "text": "Step one peroxide की मौजूदगी में H Br का addition है। ये Kharasch, या anti Markovnikov, effect है: bromine terminal, कम substituted carbon पर add होता है, one bromopropane देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Examiner जो contrast test कर रहा है उसे देखो। Peroxide के बिना, normal Markovnikov addition bromine को बीच वाले carbon पर रखता, two bromopropane देता। Peroxide result को flip कर देता है, और यही question का पूरा point है।"
+            },
+            {
+              "seq": 5,
+              "text": "Step two Finkelstein exchange है। Dry acetone में sodium iodide bromide को iodide से बदल देता है, sodium bromide precipitate होने से आगे धकेला जाता है, one iodopropane देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो final answer one iodopropane है, और दो principles हैं peroxide या anti Markovnikov effect, और Finkelstein reaction।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक दो चरण J E E Main समस्या। प्रोपीन को कार्बनिक परॉक्साइड की उपस्थिति में H Br से उपचारित करते हैं, फिर उत्पाद को शुष्क ऐसीटोन में सोडियम आयोडाइड के साथ गरम करते हैं। हमें अंतिम उत्पाद और दो नियंत्रक सिद्धांत चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड पर मार्ग का अनुसरण कीजिए। ये दो तीर हैं: एक योग, फिर एक हैलोजन विनिमय।"
+            },
+            {
+              "seq": 3,
+              "text": "पहला चरण परॉक्साइड की उपस्थिति में H Br का योग है। यह Kharasch, या anti Markovnikov, प्रभाव है: ब्रोमीन सिरे वाले, कम प्रतिस्थापित कार्बन पर जुड़ता है, one bromopropane देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "परीक्षक जो विरोधाभास जाँच रहा है उसे देखिए। परॉक्साइड के बिना, सामान्य मार्कोनिकॉफ़ योग ब्रोमीन को बीच वाले कार्बन पर रखता, two bromopropane देता। परॉक्साइड परिणाम पलट देता है, और यही प्रश्न का पूरा सार है।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा चरण Finkelstein विनिमय है। शुष्क ऐसीटोन में सोडियम आयोडाइड ब्रोमाइड को आयोडाइड से बदल देता है, सोडियम ब्रोमाइड अवक्षेपित होने से आगे धकेला जाता है, one iodopropane देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो अंतिम उत्तर one iodopropane है, और दो सिद्धांत हैं परॉक्साइड या anti Markovnikov प्रभाव, और Finkelstein अभिक्रिया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Worked example — synthesise 1-bromo-4-iodobenzene from aniline [JEE Advanced]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "From aniline to 1-bromo-4-iodobenzene, halogens only via diazonium"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Order is forced: fix para with the –NH2 handle, install iodine last",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 170' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='11'><rect x='10' y='30' width='95' height='40' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='20' y='47' fill='#181818'>aniline</text><text x='20' y='62' fill='#55565C'>(–NH2 handle)</text><path d='M108 50 L150 50' stroke='#181818' stroke-width='1.5'/><polygon points='150,50 141,46 141,54' fill='#181818'/><text x='112' y='24' fill='#DD4433'>acetylate,</text><text x='112' y='90' fill='#DD4433'>Br2, hydrolyse</text><rect x='155' y='30' width='110' height='40' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='163' y='47' fill='#181818'>4-bromoaniline</text><text x='163' y='62' fill='#55565C'>(Br fixed para)</text><path d='M268 50 L305 50' stroke='#181818' stroke-width='1.5'/><polygon points='305,50 296,46 296,54' fill='#181818'/><text x='266' y='24' fill='#DD4433'>NaNO2/HCl</text><text x='266' y='90' fill='#DD4433'>273–278 K</text><rect x='310' y='30' width='140' height='40' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='318' y='47' fill='#181818'>4-bromobenzene-</text><text x='318' y='62' fill='#181818'>diazonium chloride</text><path d='M380 72 L380 110' stroke='#181818' stroke-width='1.5'/><polygon points='380,110 376,101 384,101' fill='#181818'/><text x='300' y='128' fill='#DD4433'>KI (no Cu)</text><rect x='250' y='134' width='200' height='28' rx='6' fill='#FCFAF4' stroke='#DD4433' stroke-width='2'/><text x='258' y='152' fill='#DD4433' font-weight='bold'>1-bromo-4-iodobenzene</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "text": "Insight: a diazonium group can only sit where an –NH2 was. We must fix the first halogen para to the nitrogen handle, then convert the surviving handle to the second halogen."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Step 1: aniline's –NH2 over-brominates, so acetylate → acetanilide, brominate to para, then hydrolyse back → 4-bromoaniline."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Step 2: diazotise (NaNO2/HCl, 273–278 K) → 4-bromobenzenediazonium chloride. Step 3: shake with KI → iodine replaces N2."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 58,
+          "style": "red-margin",
+          "text": "Iodine must come LAST: ring iodination is reversible & sluggish; diazonium + KI is the clean, high-yield route."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A J E E Advanced synthesis. Starting from aniline, we must build one bromo four iodobenzene, and the catch is that each halogen may only be introduced through diazonium chemistry, with the two halogens ending up para."
+            },
+            {
+              "seq": 2,
+              "text": "Trace the strategy on the board, left to right. The key realisation is that a diazonium group can only be installed where an amino group already sits."
+            },
+            {
+              "seq": 3,
+              "text": "So the plan is forced. We place the first halogen by ordinary aromatic substitution, para to the nitrogen handle, and then convert the surviving nitrogen handle into the second halogen."
+            },
+            {
+              "seq": 4,
+              "text": "Step one. Aniline's amino group is so strongly ortho para directing that direct bromination over brominates, so we first acetylate to acetanilide, which moderates the ring. Then we brominate to get bromine at the para position, and hydrolyse back to four bromoaniline."
+            },
+            {
+              "seq": 5,
+              "text": "Step two, diazotise four bromoaniline with sodium nitrite and H C l at two hundred seventy three to two hundred seventy eight kelvin, giving the four bromobenzene diazonium chloride. Step three, shake that salt with potassium iodide, and iodine replaces the diazonium group, no copper needed."
+            },
+            {
+              "seq": 6,
+              "text": "Why must iodine come last? Because direct ring iodination is reversible and sluggish, whereas displacing the diazonium group with potassium iodide is the clean, high yielding route. That is a recurring theme whenever iodine is the target on a ring. The answer is one bromo four iodobenzene."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Advanced synthesis। Aniline से शुरू करके हमें one bromo four iodobenzene बनाना है, और catch ये है कि हर halogen सिर्फ़ diazonium chemistry से डाला जा सकता है, और दोनों halogens para पर आने चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Board पर strategy को बाएँ से दाएँ trace करो। मुख्य समझ ये है कि diazonium group सिर्फ़ वहीं लग सकता है जहाँ पहले से amino group हो।"
+            },
+            {
+              "seq": 3,
+              "text": "तो plan मजबूरन तय है। पहला halogen हम ordinary aromatic substitution से लगाते हैं, nitrogen handle के para, और फिर बचे nitrogen handle को दूसरे halogen में बदलते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Step one। Aniline का amino group इतना strongly ortho para directing है कि direct bromination over brominate कर देता है, तो पहले acetanilide में acetylate करते हैं जो ring को moderate करता है। फिर para position पर bromine लाने के लिए brominate करते हैं, और वापस four bromoaniline में hydrolyse करते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Step two, four bromoaniline को sodium nitrite और H C l से two hundred seventy three से two hundred seventy eight kelvin पर diazotise करते हैं, four bromobenzene diazonium chloride देता है। Step three, उस salt को potassium iodide के साथ हिलाओ, iodine diazonium group को replace कर देता है, copper की ज़रूरत नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "Iodine last में क्यों? क्योंकि direct ring iodination reversible और sluggish है, जबकि diazonium group को potassium iodide से displace करना clean, high yielding route है। ये theme बार बार आती है जब भी ring पर iodine target हो। Answer one bromo four iodobenzene है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Advanced संश्लेषण। ऐनिलीन से शुरू करके हमें one bromo four iodobenzene बनाना है, और पेच यह है कि हर हैलोजन केवल डाइऐज़ोनियम रसायन से डाला जा सकता है, और दोनों हैलोजन पैरा पर आने चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड पर रणनीति को बाएँ से दाएँ देखिए। मुख्य समझ यह है कि डाइऐज़ोनियम समूह केवल वहीं लग सकता है जहाँ पहले से ऐमीनो समूह हो।"
+            },
+            {
+              "seq": 3,
+              "text": "तो योजना विवश है। पहला हैलोजन हम साधारण ऐरोमैटिक प्रतिस्थापन से लगाते हैं, नाइट्रोजन हैंडल के पैरा, और फिर बचे नाइट्रोजन हैंडल को दूसरे हैलोजन में बदलते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "पहला चरण। ऐनिलीन का ऐमीनो समूह इतना प्रबल ऑर्थो पैरा निर्देशक है कि सीधा ब्रोमीनन अति ब्रोमीनन कर देता है, तो पहले ऐसीटैनिलाइड में ऐसीटिलीकृत करते हैं जो वलय को संयमित करता है। फिर पैरा स्थिति पर ब्रोमीन लाने के लिए ब्रोमीनन करते हैं, और वापस four bromoaniline में जलअपघटित करते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा चरण, four bromoaniline को सोडियम नाइट्राइट और H C l से two hundred seventy three से two hundred seventy eight केल्विन पर डाइऐज़ोटीकृत करते हैं, four bromobenzene diazonium chloride देता है। तीसरा चरण, उस लवण को पोटैशियम आयोडाइड के साथ हिलाइए, आयोडीन डाइऐज़ोनियम समूह को प्रतिस्थापित कर देता है, कॉपर की आवश्यकता नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "आयोडीन अंत में क्यों? क्योंकि सीधा वलय आयोडीनन प्रतिवर्ती और मंद है, जबकि डाइऐज़ोनियम समूह को पोटैशियम आयोडाइड से विस्थापित करना स्वच्छ, उच्च उपज मार्ग है। यह विषय बार बार आता है जब भी वलय पर आयोडीन लक्ष्य हो। उत्तर one bromo four iodobenzene है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "tips",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Pitfalls & pro-tips: don't confuse bond strength with these",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The traps this sub-topic is built to catch"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "style": "red-margin",
+          "text": "Bond strength ≠ boiling point. B.p. is about intermolecular forces (mass/polarisability), not the C–X bond."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Density blunder: NOT all alkyl halides sink. Only bromo, iodo, and polyhalogen compounds are denser than water."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Never use H2SO4 + KI to make iodides — the acid oxidises iodide to I2. Use red P + I2."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Diazonium scope: Sandmeyer → Cl/Br; KI alone → I; Balz–Schiemann (HBF4) → F. Don't mix these up."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "Reagent fingerprints (\"FiSS\"): Finkelstein = NaI/acetone; Swarts = AgF; Sandmeyer = CuX on diazonium."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us gather the pitfalls this sub topic is specifically designed to catch, so you don't walk into them."
+            },
+            {
+              "seq": 2,
+              "text": "The biggest one: students feel that the strongest bond, carbon to fluorine, should give the highest boiling point. It does not. Boiling point is set by intermolecular forces, mass and polarisability, not by the internal bond strength. Keep the two ideas in separate boxes."
+            },
+            {
+              "seq": 3,
+              "text": "The density blunder. Many students write that all alkyl halides sink in water. Wrong. Only bromo, iodo, and polyhalogen compounds are denser than water; chloro and fluoro derivatives float."
+            },
+            {
+              "seq": 4,
+              "text": "A reagent trap. Never try to make an iodide with sulphuric acid plus potassium iodide, because the acid oxidises iodide to iodine and no H I survives. Use red phosphorus with iodine instead."
+            },
+            {
+              "seq": 5,
+              "text": "And keep the diazonium exits straight. Sandmeyer gives chloride and bromide, potassium iodide alone gives iodide, and Balz Schiemann with H B F four gives fluoride. Mixing these up loses easy marks."
+            },
+            {
+              "seq": 6,
+              "text": "Finally, a pro tip. For name the reaction questions, anchor on the distinctive reagent, the fingerprint. Remember the word FiSS: Finkelstein is sodium iodide in acetone, Swarts is silver fluoride, Sandmeyer is a copper halide on a diazonium salt."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस sub topic के वो pitfalls इकट्ठा करते हैं जो ख़ास तुम्हें फँसाने के लिए बने हैं, ताकि तुम उनमें न फँसो।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा: students को लगता है कि सबसे मज़बूत bond, carbon to fluorine, को सबसे ऊँचा boiling point देना चाहिए। नहीं देता। Boiling point intermolecular forces, mass और polarisability, से तय होता है, अंदर वाली bond strength से नहीं। दोनों ideas अलग boxes में रखो।"
+            },
+            {
+              "seq": 3,
+              "text": "Density blunder। बहुत students लिखते हैं कि सारे alkyl halides पानी में डूबते हैं। ग़लत। सिर्फ़ bromo, iodo, और polyhalogen compounds पानी से भारी हैं; chloro और fluoro तैरते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "एक reagent trap। Iodide बनाने के लिए sulphuric acid plus potassium iodide कभी मत try करो, क्योंकि acid iodide को iodine में oxidise कर देता है और कोई H I बचता ही नहीं। इसके बजाय red phosphorus को iodine के साथ use करो।"
+            },
+            {
+              "seq": 5,
+              "text": "और diazonium exits सीधे रखो। Sandmeyer chloride और bromide देता है, अकेला potassium iodide iodide देता है, और H B F four के साथ Balz Schiemann fluoride देता है। इन्हें mix करना easy marks गँवा देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "आख़िर में एक pro tip। Name the reaction questions के लिए distinctive reagent, fingerprint, पर anchor करो। FiSS word याद रखो: Finkelstein मतलब acetone में sodium iodide, Swarts मतलब silver fluoride, Sandmeyer मतलब diazonium salt पर copper halide।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस उपविषय के वे जाल इकट्ठा करते हैं जो ख़ास आपको फँसाने के लिए बने हैं, ताकि आप उनमें न फँसें।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा: विद्यार्थियों को लगता है कि सबसे मज़बूत बंध, कार्बन फ़्लोरीन, को सबसे ऊँचा क्वथनांक देना चाहिए। नहीं देता। क्वथनांक अंतराआण्विक बलों, द्रव्यमान और ध्रुवणीयता, से तय होता है, भीतरी बंध सामर्थ्य से नहीं। दोनों विचार अलग खानों में रखिए।"
+            },
+            {
+              "seq": 3,
+              "text": "घनत्व की भूल। बहुत विद्यार्थी लिखते हैं कि सारे एल्किल हैलाइड पानी में डूबते हैं। गलत। केवल ब्रोमो, आयोडो, और बहुहैलोजन यौगिक पानी से भारी हैं; क्लोरो और फ़्लोरो तैरते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "एक अभिकर्मक जाल। आयोडाइड बनाने के लिए सल्फ़्यूरिक अम्ल जमा पोटैशियम आयोडाइड कभी मत आज़माइए, क्योंकि अम्ल आयोडाइड को आयोडीन में ऑक्सीकृत कर देता है और कोई H I बचता ही नहीं। इसके बजाय लाल फ़ॉस्फ़ोरस को आयोडीन के साथ प्रयोग कीजिए।"
+            },
+            {
+              "seq": 5,
+              "text": "और डाइऐज़ोनियम निकास सीधे रखिए। Sandmeyer क्लोराइड और ब्रोमाइड देता है, अकेला पोटैशियम आयोडाइड आयोडाइड देता है, और H B F four के साथ Balz Schiemann फ़्लोराइड देता है। इन्हें मिलाना आसान अंक गँवा देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "अंत में एक सुझाव। अभिक्रिया का नाम बताओ प्रश्नों के लिए विशिष्ट अभिकर्मक, चिह्न, पर टिकिए। FiSS शब्द याद रखिए: Finkelstein अर्थात ऐसीटोन में सोडियम आयोडाइड, Swarts अर्थात सिल्वर फ़्लोराइड, Sandmeyer अर्थात डाइऐज़ोनियम लवण पर कॉपर हैलाइड।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "cheat_sheet",
+      "subtopic": "Nomenclature, Preparation & Physical Properties",
+      "title": "Cheat sheet — nomenclature, prep & physical properties",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Quick-recall box: Sub-topic 01"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "C–X is polar (Cδ+–Xδ−). Length C–F < C–Cl < C–Br < C–I; strength is the reverse. C–I = most reactive."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Classify by: number of X (mono/di — gem vs vic); carbon type (1°/2°/3°); hybridisation (sp3 alkyl/allylic/benzylic vs sp2 vinylic/aryl)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Haloalkane prep: alcohol + SOCl2 (purest)/PCl3/PCl5/red P + X2; alkane + X2/UV (mixtures); alkene + HX (Markovnikov) or X2 (vic-dihalide); Finkelstein (NaI, dry acetone); Swarts (metal fluoride)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Haloarene prep: arene + X2/Lewis acid (EAS); Sandmeyer (CuCl/CuBr); Gattermann (Cu powder, lower yield); KI for Ar–I; Balz–Schiemann (HBF4, heat) for Ar–F."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Physical: b.p. RI > RBr > RCl > RF; rises with chain, falls with branching; > parent HC, < corresponding alcohol; only Br/I/poly denser than water; insoluble in water; para-dihalobenzene melts highest; Beilstein green flame detects halogen."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "\"Aryl is shy\" (aryl dipole < alkyl). \"FiSS\": Finkelstein=NaI/acetone, Swarts=AgF, Sandmeyer=CuX."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the quick recall box for the whole sub topic. Use this as your last minute revision sheet."
+            },
+            {
+              "seq": 2,
+              "text": "First the bond. The carbon to halogen bond is polar. Bond length increases from carbon fluorine up to carbon iodine, and bond strength runs the opposite way, so carbon iodine is the most reactive."
+            },
+            {
+              "seq": 3,
+              "text": "Classification, three ways: by the number of halogens, mono or di, and for di whether it is gem or vic; by the carbon type, primary, secondary, tertiary; and by hybridisation, s p three for alkyl, allylic and benzylic, versus s p two for vinylic and aryl."
+            },
+            {
+              "seq": 4,
+              "text": "Haloalkane preparation in one breath: from an alcohol use S O C l two for the purest product, or the phosphorus reagents, or red phosphorus with the halogen; from an alkane, halogenation under U V but expect mixtures; from an alkene, H X by Markovnikov or X two for a vic dihalide; plus Finkelstein and Swarts for halogen exchange."
+            },
+            {
+              "seq": 5,
+              "text": "Haloarene preparation: electrophilic substitution with a Lewis acid; then the diazonium family, Sandmeyer for chloride and bromide, Gattermann with copper powder at lower yield, potassium iodide for the iodide, and Balz Schiemann for the fluoride."
+            },
+            {
+              "seq": 6,
+              "text": "Physical properties: boiling point falls in the order R iodide down to R fluoride, rises with chain length, falls with branching, sits above the parent hydrocarbon but below the alcohol; only bromo, iodo and polyhalogen compounds sink in water; para dihalobenzene melts highest; and the Beilstein green flame detects a halogen."
+            },
+            {
+              "seq": 7,
+              "text": "Two memory hooks to close: aryl is shy, meaning the aryl halide dipole is lower than the alkyl, and FiSS, Finkelstein sodium iodide acetone, Swarts silver fluoride, Sandmeyer copper halide."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूरे sub topic का quick recall box यहाँ है। इसे last minute revision sheet की तरह use करो।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले bond। Carbon to halogen bond polar है। Bond length carbon fluorine से carbon iodine तक बढ़ती है, और bond strength उल्टी चलती है, तो carbon iodine सबसे reactive है।"
+            },
+            {
+              "seq": 3,
+              "text": "Classification, तीन तरह: halogens की संख्या से, mono या di, और di में gem या vic; carbon type से, primary, secondary, tertiary; और hybridisation से, alkyl, allylic और benzylic के लिए s p three, versus vinylic और aryl के लिए s p two।"
+            },
+            {
+              "seq": 4,
+              "text": "Haloalkane preparation एक साँस में: alcohol से purest product के लिए S O C l two, या phosphorus reagents, या red phosphorus halogen के साथ; alkane से U V में halogenation पर mixtures expect करो; alkene से Markovnikov के हिसाब H X या vic dihalide के लिए X two; और halogen exchange के लिए Finkelstein और Swarts।"
+            },
+            {
+              "seq": 5,
+              "text": "Haloarene preparation: Lewis acid के साथ electrophilic substitution; फिर diazonium family, chloride और bromide के लिए Sandmeyer, कम yield पर copper powder के साथ Gattermann, iodide के लिए potassium iodide, और fluoride के लिए Balz Schiemann।"
+            },
+            {
+              "seq": 6,
+              "text": "Physical properties: boiling point R iodide से R fluoride order में गिरती है, chain length के साथ बढ़ती है, branching के साथ घटती है, parent hydrocarbon से ऊपर पर alcohol से नीचे; सिर्फ़ bromo, iodo और polyhalogen compounds पानी में डूबते हैं; para dihalobenzene सबसे ऊँचा melt होता है; और Beilstein green flame halogen detect करती है।"
+            },
+            {
+              "seq": 7,
+              "text": "बंद करने के लिए दो memory hooks: aryl is shy, यानी aryl halide dipole alkyl से कम, और FiSS, Finkelstein sodium iodide acetone, Swarts silver fluoride, Sandmeyer copper halide।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूरे उपविषय का त्वरित स्मरण बॉक्स यहाँ है। इसे अंतिम समय की पुनरावृत्ति शीट की तरह प्रयोग कीजिए।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले बंध। कार्बन हैलोजन बंध ध्रुवीय है। बंध लंबाई कार्बन फ़्लोरीन से कार्बन आयोडीन तक बढ़ती है, और बंध सामर्थ्य उल्टी चलती है, तो कार्बन आयोडीन सबसे क्रियाशील है।"
+            },
+            {
+              "seq": 3,
+              "text": "वर्गीकरण, तीन तरह: हैलोजन की संख्या से, मोनो या डाइ, और डाइ में gem या vic; कार्बन प्रकार से, प्राथमिक, द्वितीयक, तृतीयक; और संकरण से, ऐल्किल, एलिलिक और बेंज़ाइलिक के लिए s p three, बनाम वाइनिलिक और एरिल के लिए s p two।"
+            },
+            {
+              "seq": 4,
+              "text": "हैलोऐल्केन निर्माण एक साँस में: ऐल्कोहॉल से सबसे शुद्ध उत्पाद के लिए S O C l two, या फ़ॉस्फ़ोरस अभिकर्मक, या लाल फ़ॉस्फ़ोरस हैलोजन के साथ; ऐल्केन से U V में हैलोजनन पर मिश्रण की अपेक्षा कीजिए; ऐल्कीन से मार्कोनिकॉफ़ अनुसार H X या vic डाइहैलाइड के लिए X two; और हैलोजन विनिमय के लिए Finkelstein और Swarts।"
+            },
+            {
+              "seq": 5,
+              "text": "एरिल हैलाइड निर्माण: लूइस अम्ल के साथ विद्युतस्नेही प्रतिस्थापन; फिर डाइऐज़ोनियम परिवार, क्लोराइड और ब्रोमाइड के लिए Sandmeyer, कम उपज पर कॉपर चूर्ण के साथ Gattermann, आयोडाइड के लिए पोटैशियम आयोडाइड, और फ़्लोराइड के लिए Balz Schiemann।"
+            },
+            {
+              "seq": 6,
+              "text": "भौतिक गुण: क्वथनांक R iodide से R fluoride क्रम में गिरता है, श्रृंखला के साथ बढ़ता है, शाखन के साथ घटता है, जनक हाइड्रोकार्बन से ऊपर पर ऐल्कोहॉल से नीचे; केवल ब्रोमो, आयोडो और बहुहैलोजन यौगिक पानी में डूबते हैं; para डाइहैलोबेंज़ीन सबसे ऊँचा गलता है; और Beilstein हरी ज्वाला हैलोजन का पता लगाती है।"
+            },
+            {
+              "seq": 7,
+              "text": "समाप्त करने के लिए दो स्मृति सूत्र: aryl is shy, अर्थात एरिल हैलाइड द्विध्रुव ऐल्किल से कम, और FiSS, Finkelstein sodium iodide acetone, Swarts silver fluoride, Sandmeyer copper halide।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

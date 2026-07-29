@@ -1,0 +1,2653 @@
+{
+  "chapter": "Relations and Functions",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 1,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Types of Relations",
+      "title": "A relation is just a bundle of connections",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "What is a RELATION?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "A relation R on a set A is simply a chosen collection of connected pairs."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "Picture an arrow between two students whenever 'sits in the same row as' is true."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "R \\subseteq A \\times A"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "text": "It is nothing more than a subset of all possible ordered pairs $(a,b)$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Two boring extremes"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "R = \\varnothing \\ \\text{(empty)} \\qquad R = A \\times A \\ \\text{(universal)}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "I_A = \\{(a,a) : a \\in A\\}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Let's begin with the simplest possible idea. Forget every formula for a minute. A relation is just a rule that decides which pairs of things are connected."
+            },
+            {
+              "seq": 2,
+              "text": "Picture every student in your batch. Draw an arrow from one to another whenever the rule sits in the same row as is true. That whole bundle of arrows is the relation."
+            },
+            {
+              "seq": 3,
+              "text": "We don't draw arrows forever, though. We just list the connected pairs as ordered pairs, a and b, and collect them into one set."
+            },
+            {
+              "seq": 4,
+              "text": "So a relation R on a set A is nothing grander than a chosen subset of A cross A, the set of every ordered pair you could possibly form."
+            },
+            {
+              "seq": 5,
+              "text": "That is the entire definition. Pick some pairs, leave the rest out, and the collection you kept is your relation."
+            },
+            {
+              "seq": 6,
+              "text": "Two extremes are worth naming first. If you connect nothing to anything, you get the empty, or void, relation."
+            },
+            {
+              "seq": 7,
+              "text": "If you connect everything to everything, you get the universal relation, all of A cross A."
+            },
+            {
+              "seq": 8,
+              "text": "And if every element connects only to itself, like the rule is the same person as, you get the identity relation, I sub A."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>चलो सबसे simple idea से शुरू करते हैं। एक minute के लिए formulas भूल जाओ। एक relation बस एक rule है जो decide करता है कि कौन से pairs connected हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "अपने batch के हर student को imagine करो। जब भी rule sits in the same row as true हो, एक arrow draw करो। यह पूरा arrows का bundle ही relation है।"
+            },
+            {
+              "seq": 3,
+              "text": "पर हम हमेशा arrows draw नहीं करते। हम बस connected pairs को ordered pairs की तरह list कर लेते हैं, a और b, और उन्हें एक set में इकट्ठा कर लेते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "तो set A पर relation R बस A cross A का एक chosen subset है, यानी हर possible ordered pair के set का हिस्सा।"
+            },
+            {
+              "seq": 5,
+              "text": "यही पूरी definition है। कुछ pairs चुन लो, बाकी छोड़ दो, और जो collection बची वही तुम्हारा relation है।"
+            },
+            {
+              "seq": 6,
+              "text": "दो extremes को पहले नाम देना ज़रूरी है। अगर कुछ भी connect ना करो, तो मिलता है empty, या void, relation।"
+            },
+            {
+              "seq": 7,
+              "text": "अगर सब कुछ सबसे connect कर दो, तो मिलता है universal relation, पूरा A cross A।"
+            },
+            {
+              "seq": 8,
+              "text": "और अगर हर element सिर्फ़ खुद से connect हो, जैसे rule is the same person as, तो मिलता है identity relation, I sub A।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Types of Relations",
+      "title": "The three personality traits of a relation",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Three traits that judge a relation"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Reflexive is the self-loop: does every element relate to itself?"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "\\text{Reflexive:}\\ (a,a) \\in R \\ \\ \\forall\\, a \\in A"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Symmetric is the two-way street: if a links to b, does b link back to a?"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "\\text{Symmetric:}\\ (a,b)\\in R \\Rightarrow (b,a)\\in R"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Transitive is the chain: if a to b and b to c, is the shortcut a to c present?"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "latex": "\\text{Transitive:}\\ (a,b),(b,c)\\in R \\Rightarrow (a,c)\\in R"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "text": "Antisymmetric is different: $(a,b)$ and $(b,a)$ in $R$ force $a=b$. Not the opposite of symmetric.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 9,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "caption": "Directed-graph view of reflexive, symmetric, and transitive on {a, b, c}",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 700 250\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"a\" markerWidth=\"9\" markerHeight=\"9\" refX=\"7\" refY=\"4.5\" orient=\"auto\"><path d=\"M0,0 L9,4.5 L0,9 Z\" fill=\"#1d4e79\"/></marker><marker id=\"r\" markerWidth=\"9\" markerHeight=\"9\" refX=\"7\" refY=\"4.5\" orient=\"auto\"><path d=\"M0,0 L9,4.5 L0,9 Z\" fill=\"#c0392b\"/></marker></defs><text x=\"130\" y=\"26\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">Reflexive: self-loops</text><text x=\"360\" y=\"26\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">Symmetric: two-way</text><text x=\"590\" y=\"26\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">Transitive: shortcut</text><g stroke=\"#1d4e79\" stroke-width=\"2\" fill=\"#eaf1f8\"><circle cx=\"70\" cy=\"160\" r=\"15\"/><circle cx=\"150\" cy=\"120\" r=\"15\"/><circle cx=\"170\" cy=\"205\" r=\"15\"/></g><g font-size=\"13\" text-anchor=\"middle\" fill=\"#1d4e79\"><text x=\"70\" y=\"165\">a</text><text x=\"150\" y=\"125\">b</text><text x=\"170\" y=\"210\">c</text></g><path d=\"M60,148 C45,118 95,118 80,148\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2\" marker-end=\"url(#a)\"/><path d=\"M140,108 C125,78 175,78 160,108\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2\" marker-end=\"url(#a)\"/><path d=\"M160,193 C145,163 195,163 180,193\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2\" marker-end=\"url(#a)\"/><g stroke=\"#1d4e79\" stroke-width=\"2\" fill=\"#eaf1f8\"><circle cx=\"310\" cy=\"160\" r=\"15\"/><circle cx=\"410\" cy=\"160\" r=\"15\"/></g><g font-size=\"13\" text-anchor=\"middle\" fill=\"#1d4e79\"><text x=\"310\" y=\"165\">a</text><text x=\"410\" y=\"165\">b</text></g><path d=\"M324,152 C355,135 365,135 396,152\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2\" marker-end=\"url(#a)\"/><path d=\"M396,170 C365,187 355,187 324,170\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2\" marker-end=\"url(#a)\"/><g stroke=\"#1d4e79\" stroke-width=\"2\" fill=\"#eaf1f8\"><circle cx=\"540\" cy=\"115\" r=\"15\"/><circle cx=\"650\" cy=\"115\" r=\"15\"/><circle cx=\"595\" cy=\"205\" r=\"15\"/></g><g font-size=\"13\" text-anchor=\"middle\" fill=\"#1d4e79\"><text x=\"540\" y=\"120\">a</text><text x=\"650\" y=\"120\">b</text><text x=\"595\" y=\"210\">c</text></g><line x1=\"556\" y1=\"115\" x2=\"634\" y2=\"115\" stroke=\"#1d4e79\" stroke-width=\"2\" marker-end=\"url(#a)\"/><line x1=\"643\" y1=\"128\" x2=\"608\" y2=\"192\" stroke=\"#1d4e79\" stroke-width=\"2\" marker-end=\"url(#a)\"/><line x1=\"548\" y1=\"128\" x2=\"585\" y2=\"192\" stroke=\"#c0392b\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\" marker-end=\"url(#r)\"/><text x=\"505\" y=\"180\" font-size=\"12\" fill=\"#c0392b\">shortcut a → c</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The interesting relations live between the extremes, and we judge them by three personality traits."
+            },
+            {
+              "seq": 2,
+              "text": "First, reflexive, the self-loop. Does every single element relate to itself? Is in the same class as passes, because you are obviously in the same class as yourself."
+            },
+            {
+              "seq": 3,
+              "text": "Formally, reflexive means the pair a comma a sits in R for every a in A. Miss even one self-loop, and the relation is no longer reflexive."
+            },
+            {
+              "seq": 4,
+              "text": "Second, symmetric, the two-way street. If a is connected to b, is b automatically connected back to a? Is a neighbour of is symmetric."
+            },
+            {
+              "seq": 5,
+              "text": "Formally, whenever a comma b is in R, the reverse pair b comma a must also be in R."
+            },
+            {
+              "seq": 6,
+              "text": "Third, transitive, the chain or shortcut. If a links to b and b links to c, must the shortcut a to c exist? Lives in the same city as is transitive."
+            },
+            {
+              "seq": 7,
+              "text": "Formally, if both a comma b and b comma c sit in R, then a comma c must sit in R too."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>Watch out for one look-alike. Antisymmetric says if both a comma b and b comma a are present, then a equals b. It is a completely different idea, not the opposite of symmetric."
+            },
+            {
+              "seq": 9,
+              "text": "This diagram shows all three at once on a tiny set a, b, c: self-loops for reflexive, matched reverse arrows for symmetric, and the red shortcut arrow for transitive."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Interesting relations extremes के बीच में रहते हैं, और हम उन्हें तीन personality traits से judge करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, reflexive, यानी self-loop. क्या हर element खुद से relate करता है? is in the same class as pass होता है, क्योंकि तुम obviously खुद की ही class में हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Formally, reflexive का मतलब है pair a comma a हर a के लिए R में हो। एक भी self-loop missing हुआ, तो relation reflexive नहीं रहा।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा, symmetric, यानी two-way street. अगर a, b से connected है, तो क्या b वापस a से connected है? is a neighbour of symmetric है।"
+            },
+            {
+              "seq": 5,
+              "text": "Formally, जब भी a comma b R में हो, reverse pair b comma a भी R में होना चाहिए।"
+            },
+            {
+              "seq": 6,
+              "text": "तीसरा, transitive, यानी chain या shortcut. अगर a से b और b से c, तो क्या shortcut a to c मौजूद है? lives in the same city as transitive है।"
+            },
+            {
+              "seq": 7,
+              "text": "Formally, अगर a comma b और b comma c दोनों R में हों, तो a comma c भी R में होना चाहिए।"
+            },
+            {
+              "seq": 8,
+              "text": "<excited>एक look-alike से बचना। Antisymmetric कहता है अगर a comma b और b comma a दोनों present हों, तो a equals b। यह बिलकुल अलग idea है, symmetric का opposite नहीं।"
+            },
+            {
+              "seq": 9,
+              "text": "यह diagram तीनों को एक साथ छोटे set a, b, c पर दिखाता है: reflexive के self-loops, symmetric के matched reverse arrows, और transitive का red shortcut arrow।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Types of Relations",
+      "title": "Equivalence relations sort a set into buckets",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "All three traits at once"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "latex": "\\text{Equivalence} = \\text{reflexive} \\ \\wedge\\ \\text{symmetric} \\ \\wedge\\ \\text{transitive}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Change 'directly connected by train' to 'reachable by any sequence of trains'."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "That new rule is reflexive, symmetric, AND transitive at the same time."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "[a] = \\{\\, x \\in A : x\\,R\\,a \\,\\}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "text": "Distinct classes are disjoint and their union is all of $A$: they partition $A$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Each bucket is one equivalence class of mutually related elements."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "caption": "An equivalence relation partitions A into disjoint classes",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 640 240\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"320\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">Equivalence relation splits A into disjoint classes</text><rect x=\"30\" y=\"50\" width=\"180\" height=\"150\" rx=\"16\" fill=\"#eaf1f8\" stroke=\"#1d4e79\" stroke-width=\"2\"/><line x1=\"80\" y1=\"110\" x2=\"165\" y2=\"110\" stroke=\"#1d4e79\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"110\" x2=\"120\" y2=\"165\" stroke=\"#1d4e79\" stroke-width=\"1.5\"/><line x1=\"165\" y1=\"110\" x2=\"120\" y2=\"165\" stroke=\"#1d4e79\" stroke-width=\"1.5\"/><circle cx=\"80\" cy=\"110\" r=\"10\" fill=\"#1d4e79\"/><circle cx=\"165\" cy=\"110\" r=\"10\" fill=\"#1d4e79\"/><circle cx=\"120\" cy=\"165\" r=\"10\" fill=\"#1d4e79\"/><text x=\"120\" y=\"222\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1d4e79\">class [a]</text><rect x=\"245\" y=\"50\" width=\"150\" height=\"150\" rx=\"16\" fill=\"#eef7ee\" stroke=\"#2e7d32\" stroke-width=\"2\"/><line x1=\"290\" y1=\"120\" x2=\"350\" y2=\"150\" stroke=\"#2e7d32\" stroke-width=\"1.5\"/><circle cx=\"290\" cy=\"120\" r=\"10\" fill=\"#2e7d32\"/><circle cx=\"350\" cy=\"150\" r=\"10\" fill=\"#2e7d32\"/><text x=\"320\" y=\"222\" text-anchor=\"middle\" font-size=\"13\" fill=\"#2e7d32\">class [d]</text><rect x=\"430\" y=\"50\" width=\"150\" height=\"150\" rx=\"16\" fill=\"#fdf0e6\" stroke=\"#b9770e\" stroke-width=\"2\"/><circle cx=\"505\" cy=\"125\" r=\"10\" fill=\"#b9770e\"/><text x=\"505\" y=\"222\" text-anchor=\"middle\" font-size=\"13\" fill=\"#b9770e\">class [f]</text><text x=\"605\" y=\"130\" font-size=\"12\" fill=\"#555\">no</text><text x=\"605\" y=\"146\" font-size=\"12\" fill=\"#555\">cross</text><text x=\"605\" y=\"162\" font-size=\"12\" fill=\"#555\">links</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the star of the show. A relation that has all three traits at once, reflexive and symmetric and transitive together, earns a special name: an equivalence relation."
+            },
+            {
+              "seq": 2,
+              "text": "In symbols, equivalence equals reflexive and symmetric and transitive, all holding simultaneously. Any one missing, and it is not an equivalence relation."
+            },
+            {
+              "seq": 3,
+              "text": "Think of the railway network. Is directly connected by a train is symmetric but not transitive, since two direct routes need not join into one."
+            },
+            {
+              "seq": 4,
+              "text": "But change the rule to can reach by any sequence of trains, and suddenly it becomes reflexive, symmetric, and transitive all at once."
+            },
+            {
+              "seq": 5,
+              "text": "The superpower of an equivalence relation is sorting. The class of a, written square-bracket a, is the set of all x that relate to a."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Here is the exam-critical fact: these distinct classes never overlap, and together they cover the whole set. They partition A into neat buckets."
+            },
+            {
+              "seq": 7,
+              "text": "Each bucket is one equivalence class, a group of mutually reachable, mutually related elements, completely separate from the others."
+            },
+            {
+              "seq": 8,
+              "text": "The diagram shows exactly this: three sealed buckets, fully connected inside, with no arrows crossing between them."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब show का star. जिस relation में तीनों traits एक साथ हों, reflexive और symmetric और transitive, उसे special नाम मिलता है: equivalence relation।"
+            },
+            {
+              "seq": 2,
+              "text": "Symbols में, equivalence equals reflexive and symmetric and transitive, तीनों एक साथ। कोई एक भी missing, तो यह equivalence relation नहीं है।"
+            },
+            {
+              "seq": 3,
+              "text": "Railway network सोचो। is directly connected by a train symmetric है पर transitive नहीं, क्योंकि दो direct routes ज़रूरी नहीं कि जुड़ें।"
+            },
+            {
+              "seq": 4,
+              "text": "पर rule को बदलो can reach by any sequence of trains, और अचानक यह reflexive, symmetric और transitive तीनों बन जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Equivalence relation की superpower है sorting. a की class, यानी square-bracket a, उन सारे x का set है जो a से relate करते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>यह exam-critical fact है: ये distinct classes कभी overlap नहीं करतीं, और मिलकर पूरे set को cover करती हैं। ये A को साफ़ buckets में partition कर देती हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "हर bucket एक equivalence class है, mutually reachable और mutually related elements का group, बाकी से बिलकुल अलग।"
+            },
+            {
+              "seq": 8,
+              "text": "Diagram यही दिखाता है: तीन sealed buckets, अंदर से पूरी तरह connected, और बीच में कोई arrow cross नहीं करता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "Types of Relations",
+      "title": "Counting relations: the four exponents",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "How many relations exist?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "A relation on A is a subset of A cross A, which has n squared ordered pairs."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 13,
+          "latex": "\\text{Relations on } A: \\ 2^{\\,n^2}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Each pair is independently in or out, giving two choices per pair."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "latex": "\\text{Reflexive relations}: \\ 2^{\\,n^2 - n}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "\\text{Symmetric relations}: \\ 2^{\\,n(n+1)/2}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\text{Equivalence relations}: \\ B_n \\ \\text{(Bell number)}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "text": "Bell numbers begin $B_1=1,\\ B_2=2,\\ B_3=5,\\ B_4=15,\\ B_5=52$.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "In this subtopic, counting formulas play the role that formulas play in physics. Let us derive the headline one and then list the rest."
+            },
+            {
+              "seq": 2,
+              "text": "A relation on A is a subset of A cross A. Now A cross A has n times n, that is n squared, ordered pairs inside it."
+            },
+            {
+              "seq": 3,
+              "text": "Each of those n squared pairs is independently either in R or out of R, two choices each, so the total number of relations is two raised to n squared."
+            },
+            {
+              "seq": 4,
+              "text": "That two-choices-per-pair logic is the whole engine. Reflexive relations just force the n self-pairs to be present."
+            },
+            {
+              "seq": 5,
+              "text": "With n self-pairs locked in, only n squared minus n pairs stay free, so reflexive relations number two raised to n squared minus n."
+            },
+            {
+              "seq": 6,
+              "text": "Symmetric relations pair up off-diagonal entries, leaving n times n plus one over two free choices, giving two raised to that exponent."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>And the prize one: the number of equivalence relations equals the n-th Bell number, because equivalence relations match one-to-one with partitions of the set."
+            },
+            {
+              "seq": 8,
+              "text": "Memorise the opening Bell numbers, one, two, five, fifteen, fifty two. They turn many JEE counting questions into instant answers."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic में counting formulas वही role play करते हैं जो physics में formulas करते हैं। पहले headline वाला derive करते हैं, फिर बाकी list करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "A पर relation, A cross A का subset है। अब A cross A के अंदर n times n, यानी n squared, ordered pairs होते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "उन n squared pairs में से हर एक independently या तो R में है या बाहर, दो choices, तो total relations two raised to n squared होते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "यही two-choices-per-pair logic पूरा engine है। Reflexive relations बस n self-pairs को present होने पर force करते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "जब n self-pairs lock हो जाएँ, तो सिर्फ़ n squared minus n pairs free रहते हैं, इसलिए reflexive relations two raised to n squared minus n होते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Symmetric relations off-diagonal entries को pair कर देते हैं, जिससे n times n plus one over two free choices बचती हैं, यानी two raised to that exponent।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>और prize वाला: equivalence relations की संख्या n-th Bell number के बराबर है, क्योंकि equivalence relations set के partitions से one-to-one match करते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "शुरुआती Bell numbers याद कर लो, one, two, five, fifteen, fifty two। ये कई JEE counting questions को instant answers बना देते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Types of Relations",
+      "title": "Classifying a relation, step by step",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The fast classification routine"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Step one: check reflexive first, since one missing self-pair kills equivalence."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "Steps two and three: hunt a single counterexample for symmetric, then transitive."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "A = \\{1,2,3,4\\},\\ R = \\{(1,1),(2,2),(3,3),(4,4),(1,2),(2,1),(3,4)\\}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Reflexive: all of (1,1),(2,2),(3,3),(4,4) are present, so it passes."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "text": "Symmetric fails: $(3,4)\\in R$ but $(4,3)\\notin R$ — one missing reverse is enough.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "text": "Transitive: every chain here lands on a pair already in R, so it holds."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "latex": "\\text{Verdict: reflexive and transitive, NOT symmetric} \\Rightarrow \\text{not equivalence}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us turn the traits into a fast routine you can run under exam pressure, then apply it to a real relation."
+            },
+            {
+              "seq": 2,
+              "text": "Step one, always test reflexive first. It is the cheapest check, and a single missing self-pair instantly kills reflexivity and equivalence, saving you the harder work."
+            },
+            {
+              "seq": 3,
+              "text": "For symmetric and transitive, do not verify everything. Just hunt for one counterexample, because a single broken case is enough to reject the property."
+            },
+            {
+              "seq": 4,
+              "text": "Take A equals one, two, three, four, with R holding the four self-pairs plus one comma two, two comma one, and three comma four."
+            },
+            {
+              "seq": 5,
+              "text": "Reflexive check. We need every a comma a. All four, one one, two two, three three, four four, are present, so R is reflexive."
+            },
+            {
+              "seq": 6,
+              "text": "Symmetric check. The pair three comma four sits in R, but its reverse four comma three does not. One missing reverse, and symmetry is dead."
+            },
+            {
+              "seq": 7,
+              "text": "Transitive check. Every chain we can form, like one two then two one giving one one, lands on a pair already inside R. So transitivity holds."
+            },
+            {
+              "seq": 8,
+              "text": "Verdict: R is reflexive and transitive but not symmetric, and therefore not an equivalence relation."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो traits को एक fast routine में बदलते हैं जो exam pressure में चला सको, फिर उसे एक real relation पर apply करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Step one, हमेशा reflexive पहले test करो। यह सबसे cheap check है, और एक भी missing self-pair reflexivity और equivalence को instantly kill कर देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Symmetric और transitive के लिए सब कुछ verify मत करो। बस एक counterexample ढूँढो, क्योंकि एक broken case ही property reject करने के लिए काफ़ी है।"
+            },
+            {
+              "seq": 4,
+              "text": "लो A equals one, two, three, four, और R में चार self-pairs plus one comma two, two comma one, और three comma four।"
+            },
+            {
+              "seq": 5,
+              "text": "Reflexive check. हर a comma a चाहिए। चारों, one one, two two, three three, four four, present हैं, तो R reflexive है।"
+            },
+            {
+              "seq": 6,
+              "text": "Symmetric check. Pair three comma four R में है, पर उसका reverse four comma three नहीं। एक missing reverse, और symmetry ख़त्म।"
+            },
+            {
+              "seq": 7,
+              "text": "Transitive check. जो भी chain बनती है, जैसे one two फिर two one देता है one one, वो R के अंदर already मौजूद pair पर लैंड करती है। तो transitivity holds करती है।"
+            },
+            {
+              "seq": 8,
+              "text": "Verdict: R reflexive और transitive है पर symmetric नहीं, इसलिए यह equivalence relation नहीं है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Types of Relations",
+      "title": "The empty-relation trap and a counting twist",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Emptiness is not 'no properties'"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "A = \\{1,2,3\\}, \\quad R_1 = \\varnothing"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 12,
+          "text": "$R_1$ is vacuously symmetric and transitive, but NOT reflexive on a non-empty set.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "text": "With no pairs, the if-then conditions are never triggered, so they hold for free."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\text{Relations on } A = \\{1,2,3\\}: \\ 2^{\\,3^2} = 2^9 = 512"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Now take R with all self-pairs plus (1,2) and (2,1): it is already an equivalence relation."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\text{Pairs to add to make it equivalence} = 0"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "text": "Equivalence relations containing $(1,2)$: only $\\{1,2\\}\\,|\\,\\{3\\}$ and $\\{1,2,3\\}$, so exactly 2.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example carries the single most popular trap in the whole subtopic, so slow down here."
+            },
+            {
+              "seq": 2,
+              "text": "Let A be one, two, three, and let R one be the empty relation, with no pairs at all inside it."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the twist. The empty relation is vacuously symmetric and vacuously transitive, but it is not reflexive on a non-empty set."
+            },
+            {
+              "seq": 4,
+              "text": "Why? Symmetry and transitivity are if-then statements. With no pairs, the if part never triggers, so there is no counterexample, and the property holds for free."
+            },
+            {
+              "seq": 5,
+              "text": "Now a counting warm-up. On the three-element set, the number of relations is two raised to three squared, which is two to the nine, equals five hundred twelve."
+            },
+            {
+              "seq": 6,
+              "text": "Next, take R with all three self-pairs plus one comma two and two comma one. Test it: reflexive, symmetric, and transitive all pass."
+            },
+            {
+              "seq": 7,
+              "text": "So R is already an equivalence relation, and the number of pairs you must add is zero. The trap is helpfully adding two comma three and over-merging."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, how many equivalence relations contain one comma two? Only the partition one-two alone with three, and the all-together partition. Exactly two."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस example में पूरे subtopic का सबसे popular trap है, तो यहाँ थोड़ा slow down करो।"
+            },
+            {
+              "seq": 2,
+              "text": "मान लो A है one, two, three, और R one empty relation है, जिसमें कोई pair नहीं है।"
+            },
+            {
+              "seq": 3,
+              "text": "अब twist. Empty relation vacuously symmetric और vacuously transitive है, पर non-empty set पर reflexive नहीं है।"
+            },
+            {
+              "seq": 4,
+              "text": "क्यों? Symmetry और transitivity if-then statements हैं। कोई pair नहीं है तो if part कभी trigger नहीं होता, कोई counterexample नहीं, इसलिए property free में hold करती है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब एक counting warm-up. तीन-element set पर relations की संख्या two raised to three squared है, यानी two to the nine, equals five hundred twelve।"
+            },
+            {
+              "seq": 6,
+              "text": "आगे, R लो तीनों self-pairs plus one comma two और two comma one के साथ। Test करो: reflexive, symmetric, transitive तीनों pass।"
+            },
+            {
+              "seq": 7,
+              "text": "तो R already एक equivalence relation है, और add करने वाले pairs की संख्या zero है। Trap है helpfully two comma three जोड़ना और classes को over-merge कर देना।"
+            },
+            {
+              "seq": 8,
+              "text": "आख़िर में, कितनी equivalence relations में one comma two है? सिर्फ़ partition one-two अकेले with three, और all-together partition। Exactly two।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Types of Relations",
+      "title": "The archetype: congruence modulo n is an equivalence",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Prove R is an equivalence relation"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "a\\,R\\,b \\iff (a-b)\\ \\text{is divisible by } n, \\quad a,b \\in \\mathbb{Z}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Reflexive: a minus a is zero, which every n divides, so aRa always holds."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "a - a = 0 = n\\cdot 0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Symmetric: if a minus b is n k, then b minus a is n times minus k."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "b - a = -(a-b) = n(-k)"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Transitive: add the two differences and the middle term cancels."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "latex": "a - c = (a-b)+(b-c) = n(k_1 + k_2)"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 57,
+          "text": "All three hold, so classes are the residues $[0],[1],\\dots,[n-1]$ — exactly $n$ buckets.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the model proof worth memorising, because congruence modulo n is the archetype of every equivalence relation you will meet."
+            },
+            {
+              "seq": 2,
+              "text": "Fix a positive integer n. Define a related to b to mean that a minus b is divisible by n, for integers a and b."
+            },
+            {
+              "seq": 3,
+              "text": "Reflexive first. For any integer a, the difference a minus a is zero, and zero is divisible by everything, including n."
+            },
+            {
+              "seq": 4,
+              "text": "In symbols, a minus a equals zero equals n times zero. So every integer trivially relates to itself, and reflexivity holds."
+            },
+            {
+              "seq": 5,
+              "text": "Symmetric next. Suppose a relates to b, so a minus b equals n times some integer k. Divisibility is not disturbed by a sign flip."
+            },
+            {
+              "seq": 6,
+              "text": "Then b minus a equals minus of a minus b, which is n times minus k, still a multiple of n. So b relates to a, and symmetry holds."
+            },
+            {
+              "seq": 7,
+              "text": "Transitive last. Suppose a minus b is n k one and b minus c is n k two. Add these two differences together."
+            },
+            {
+              "seq": 8,
+              "text": "The middle term b cancels, leaving a minus c equals n times k one plus k two, a multiple of n. So a relates to c, and transitivity holds."
+            },
+            {
+              "seq": 9,
+              "text": "All three hold, so R is an equivalence relation, and its classes are the residues zero through n minus one, partitioning the integers into exactly n buckets."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह वो model proof है जो याद करने लायक़ है, क्योंकि congruence modulo n हर equivalence relation का archetype है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक positive integer n fix करो। Define करो a related to b का मतलब a minus b, n से divisible है, integers a और b के लिए।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले reflexive. किसी भी integer a के लिए, difference a minus a zero है, और zero हर चीज़ से divisible है, n से भी।"
+            },
+            {
+              "seq": 4,
+              "text": "Symbols में, a minus a equals zero equals n times zero. तो हर integer trivially खुद से relate करता है, reflexivity holds।"
+            },
+            {
+              "seq": 5,
+              "text": "अब symmetric. मान लो a, b से relate करता है, यानी a minus b equals n times कोई integer k। Divisibility sign flip से disturb नहीं होती।"
+            },
+            {
+              "seq": 6,
+              "text": "तो b minus a equals minus of a minus b, यानी n times minus k, फिर भी n का multiple। तो b, a से relate करता है, symmetry holds।"
+            },
+            {
+              "seq": 7,
+              "text": "आख़िर में transitive. मान लो a minus b, n k one है और b minus c, n k two। इन दोनों differences को जोड़ो।"
+            },
+            {
+              "seq": 8,
+              "text": "Middle term b cancel हो जाता है, बचता है a minus c equals n times k one plus k two, n का multiple। तो a, c से relate करता है, transitivity holds।"
+            },
+            {
+              "seq": 9,
+              "text": "तीनों hold करते हैं, तो R equivalence relation है, और उसकी classes residues zero से n minus one तक हैं, जो integers को exactly n buckets में partition करती हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Types of Relations",
+      "title": "JEE Advanced: closeness versus same fractional part",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two relations on the real line"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "a\\,R_1\\,b \\iff |a-b| \\le 1 \\qquad a\\,R_2\\,b \\iff (a-b) \\in \\mathbb{Z}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "R one is reflexive and symmetric, but transitivity breaks."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "|0-1|\\le 1,\\ |1-2|\\le 1,\\ \\text{yet}\\ |0-2| = 2 \\not\\le 1"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "text": "Closeness relations almost always fail transitivity: small gaps accumulate.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "R two is a genuine equivalence: same fractional part."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "[x] = \\{\\, x + k : k \\in \\mathbb{Z} \\,\\}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Its classes are labelled by the fractional part in the interval zero to one."
+        },
+        {
+          "seq": 9,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "caption": "R2 classes: evenly spaced points seeded by each fractional part",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 660 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"330\" y=\"22\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">Each fractional part seeds its own class, spacing 1</text><line x1=\"40\" y1=\"120\" x2=\"620\" y2=\"120\" stroke=\"#333\" stroke-width=\"1.5\"/><g font-size=\"12\" text-anchor=\"middle\" fill=\"#333\"><line x1=\"70\" y1=\"115\" x2=\"70\" y2=\"125\" stroke=\"#333\"/><text x=\"70\" y=\"142\">-1</text><line x1=\"150\" y1=\"115\" x2=\"150\" y2=\"125\" stroke=\"#333\"/><text x=\"150\" y=\"142\">0</text><line x1=\"230\" y1=\"115\" x2=\"230\" y2=\"125\" stroke=\"#333\"/><text x=\"230\" y=\"142\">1</text><line x1=\"310\" y1=\"115\" x2=\"310\" y2=\"125\" stroke=\"#333\"/><text x=\"310\" y=\"142\">2</text><line x1=\"390\" y1=\"115\" x2=\"390\" y2=\"125\" stroke=\"#333\"/><text x=\"390\" y=\"142\">3</text><line x1=\"470\" y1=\"115\" x2=\"470\" y2=\"125\" stroke=\"#333\"/><text x=\"470\" y=\"142\">4</text><line x1=\"550\" y1=\"115\" x2=\"550\" y2=\"125\" stroke=\"#333\"/><text x=\"550\" y=\"142\">5</text></g><g fill=\"#1d4e79\"><circle cx=\"150\" cy=\"120\" r=\"6\"/><circle cx=\"230\" cy=\"120\" r=\"6\"/><circle cx=\"310\" cy=\"120\" r=\"6\"/><circle cx=\"390\" cy=\"120\" r=\"6\"/><circle cx=\"470\" cy=\"120\" r=\"6\"/></g><text x=\"150\" y=\"105\" font-size=\"11\" fill=\"#1d4e79\">part 0</text><g fill=\"#2e7d32\"><circle cx=\"174\" cy=\"90\" r=\"6\"/><circle cx=\"254\" cy=\"90\" r=\"6\"/><circle cx=\"334\" cy=\"90\" r=\"6\"/><circle cx=\"414\" cy=\"90\" r=\"6\"/></g><text x=\"174\" y=\"78\" font-size=\"11\" fill=\"#2e7d32\">part 0.3</text><g fill=\"#b9770e\"><circle cx=\"206\" cy=\"150\" r=\"6\"/><circle cx=\"286\" cy=\"150\" r=\"6\"/><circle cx=\"366\" cy=\"150\" r=\"6\"/><circle cx=\"446\" cy=\"150\" r=\"6\"/></g><text x=\"206\" y=\"172\" font-size=\"11\" fill=\"#b9770e\">part 0.7</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a JEE Advanced pairing that contrasts a fake equivalence with a real one, on the whole real line."
+            },
+            {
+              "seq": 2,
+              "text": "Define a R one b as the absolute value of a minus b being at most one, and a R two b as a minus b being an integer."
+            },
+            {
+              "seq": 3,
+              "text": "For R one, reflexive is fine since the distance from a point to itself is zero, and symmetric is fine since distance ignores order. But transitivity is the problem."
+            },
+            {
+              "seq": 4,
+              "text": "Take a equals zero, b equals one, c equals two. Zero to one has distance one, one to two has distance one, yet zero to two has distance two, which exceeds one."
+            },
+            {
+              "seq": 5,
+              "text": "That counterexample kills transitivity. The moral is worth keeping: closeness relations almost always break transitivity, because small gaps quietly accumulate."
+            },
+            {
+              "seq": 6,
+              "text": "R two is a different animal. Two reals relate exactly when their difference is a whole number, which means they share the same fractional part. This is a genuine equivalence."
+            },
+            {
+              "seq": 7,
+              "text": "Each class is a copy of the integers shifted by x, that is all numbers x plus k for integer k. For example, the class of zero point three contains minus zero point seven, zero point three, one point three, and so on."
+            },
+            {
+              "seq": 8,
+              "text": "So the classes are labelled by the fractional part, which always lives in the interval from zero up to but not including one, and every fractional value gives a different class."
+            },
+            {
+              "seq": 9,
+              "text": "The diagram makes it visible: three colour-coded class systems, each an evenly spaced set of points seeded by its own fractional part, never colliding."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक JEE Advanced pairing जो एक fake equivalence को एक real equivalence से contrast करती है, पूरी real line पर।"
+            },
+            {
+              "seq": 2,
+              "text": "Define करो a R one b का मतलब absolute value of a minus b at most one, और a R two b का मतलब a minus b एक integer है।"
+            },
+            {
+              "seq": 3,
+              "text": "R one के लिए reflexive ठीक है क्योंकि किसी point की खुद से distance zero है, और symmetric ठीक है क्योंकि distance order नहीं देखती। पर transitivity problem है।"
+            },
+            {
+              "seq": 4,
+              "text": "लो a equals zero, b equals one, c equals two। zero to one की distance one, one to two की distance one, फिर भी zero to two की distance two है, जो one से ज़्यादा है।"
+            },
+            {
+              "seq": 5,
+              "text": "यह counterexample transitivity kill कर देता है। Moral याद रखने लायक़ है: closeness relations लगभग हमेशा transitivity तोड़ती हैं, क्योंकि छोटे gaps चुपचाप accumulate हो जाते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "R two अलग जानवर है। दो reals तब relate करते हैं जब उनका difference whole number हो, यानी उनका fractional part same हो। यह genuine equivalence है।"
+            },
+            {
+              "seq": 7,
+              "text": "हर class integers की एक copy है, x से shifted, यानी सारे numbers x plus k for integer k। जैसे zero point three की class में minus zero point seven, zero point three, one point three वग़ैरह हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो classes fractional part से label होती हैं, जो हमेशा zero से लेकर one से ठीक पहले तक के interval में रहता है, और हर fractional value एक अलग class देती है।"
+            },
+            {
+              "seq": 9,
+              "text": "Diagram इसे visible बना देता है: तीन colour-coded class systems, हर एक evenly spaced points का set, अपने fractional part से seeded, कभी collide नहीं करते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "tips",
+      "subtopic": "Types of Relations",
+      "title": "Pitfalls and pro-tips for relations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where marks quietly leak"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "text": "'Some self-loops' is NOT reflexive: you need $(a,a)$ for EVERY element of $A$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "The empty relation is symmetric and transitive, never reflexive on a non-empty set."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "text": "Symmetric and antisymmetric are not opposites: identity is both, many relations are neither.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Every trait is relative to the underlying set A, so always state the set."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Speed pro-tips"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Test reflexive first; then hunt one counterexample for symmetric and transitive."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{Memorise exponents: relations } n^2,\\ \\text{reflexive } n^2-n,\\ \\text{symmetric } \\tfrac{n(n+1)}{2}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us close the subtopic with the traps that quietly drain marks, then the speed habits that save time."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, the biggest board-exam slip. Finding a few self-pairs and stopping is not reflexivity. You need a comma a for every single element of A."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, the empty relation. It is symmetric and transitive vacuously, but never reflexive on a non-empty set. Do not write empty, so no properties."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, symmetric and antisymmetric are not opposites. The identity relation is both. Many relations are neither. Not symmetric never implies antisymmetric."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, every trait is relative to the underlying set A. The same list of pairs can be reflexive on one set and fail on a larger one, so always state the set."
+            },
+            {
+              "seq": 6,
+              "text": "Now the speed habits that make classification fast under time pressure."
+            },
+            {
+              "seq": 7,
+              "text": "Always test reflexive first, since one missing self-pair kills equivalence immediately. For symmetric and transitive, hunt a single counterexample rather than checking everything."
+            },
+            {
+              "seq": 8,
+              "text": "And memorise the three counting exponents: relations use n squared, reflexive uses n squared minus n, symmetric uses n times n plus one over two."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो subtopic को उन traps से close करते हैं जो चुपचाप marks खा जाते हैं, फिर वो speed habits जो time बचाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, सबसे बड़ा board-exam slip. कुछ self-pairs मिलना और रुक जाना reflexivity नहीं है। तुम्हें A के हर एक element के लिए a comma a चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, empty relation. यह vacuously symmetric और transitive है, पर non-empty set पर कभी reflexive नहीं। empty, so no properties मत लिखो।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, symmetric और antisymmetric opposites नहीं हैं। Identity relation दोनों है। कई relations कोई नहीं हैं। not symmetric का मतलब antisymmetric कभी नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, हर trait underlying set A के relative है। Same pairs एक set पर reflexive हो सकते हैं और बड़े set पर fail, तो हमेशा set बताओ।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वो speed habits जो time pressure में classification fast बना देते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "हमेशा reflexive पहले test करो, क्योंकि एक missing self-pair equivalence तुरंत kill कर देता है। Symmetric और transitive के लिए सब check करने के बजाय एक counterexample ढूँढो।"
+            },
+            {
+              "seq": 8,
+              "text": "और तीन counting exponents याद रखो: relations में n squared, reflexive में n squared minus n, symmetric में n times n plus one over two।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Types of Functions",
+      "title": "A function is a machine with one strict rule",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One input, exactly one output"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "A vending machine: press cold coffee, get exactly one cold coffee, never two, never none."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "f : A \\to B, \\quad A = \\text{domain}, \\ B = \\text{codomain}"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Question 1: do different inputs share an output?"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "If no two inputs ever share an output, f is one-one, also called injective."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "latex": "\\text{Injective:}\\ f(x_1)=f(x_2)\\Rightarrow x_1=x_2"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Even powers and $\\pm$ symmetry signal many-one: both $+2$ and $-2$ map to $4$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "caption": "One-one mapping versus a many-one mapping",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 640 270\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"m\" markerWidth=\"9\" markerHeight=\"9\" refX=\"7\" refY=\"4.5\" orient=\"auto\"><path d=\"M0,0 L9,4.5 L0,9 Z\" fill=\"#1d4e79\"/></marker></defs><text x=\"160\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">One-one (injective)</text><ellipse cx=\"80\" cy=\"150\" rx=\"45\" ry=\"90\" fill=\"#eaf1f8\" stroke=\"#1d4e79\" stroke-width=\"2\"/><ellipse cx=\"245\" cy=\"150\" rx=\"45\" ry=\"90\" fill=\"#eaf1f8\" stroke=\"#1d4e79\" stroke-width=\"2\"/><text x=\"80\" y=\"255\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1d4e79\">A</text><text x=\"245\" y=\"255\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1d4e79\">B</text><g fill=\"#1d4e79\"><circle cx=\"80\" cy=\"110\" r=\"6\"/><circle cx=\"80\" cy=\"150\" r=\"6\"/><circle cx=\"80\" cy=\"190\" r=\"6\"/><circle cx=\"245\" cy=\"100\" r=\"6\"/><circle cx=\"245\" cy=\"140\" r=\"6\"/><circle cx=\"245\" cy=\"180\" r=\"6\"/><circle cx=\"245\" cy=\"220\" r=\"6\"/></g><line x1=\"86\" y1=\"110\" x2=\"239\" y2=\"100\" stroke=\"#1d4e79\" stroke-width=\"1.6\" marker-end=\"url(#m)\"/><line x1=\"86\" y1=\"150\" x2=\"239\" y2=\"140\" stroke=\"#1d4e79\" stroke-width=\"1.6\" marker-end=\"url(#m)\"/><line x1=\"86\" y1=\"190\" x2=\"239\" y2=\"180\" stroke=\"#1d4e79\" stroke-width=\"1.6\" marker-end=\"url(#m)\"/><text x=\"270\" y=\"224\" font-size=\"11\" fill=\"#c0392b\">unhit</text><text x=\"480\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c0392b\">Many-one</text><ellipse cx=\"400\" cy=\"150\" rx=\"45\" ry=\"90\" fill=\"#fdf0e6\" stroke=\"#b9770e\" stroke-width=\"2\"/><ellipse cx=\"565\" cy=\"150\" rx=\"45\" ry=\"90\" fill=\"#fdf0e6\" stroke=\"#b9770e\" stroke-width=\"2\"/><text x=\"400\" y=\"255\" text-anchor=\"middle\" font-size=\"12\" fill=\"#b9770e\">A</text><text x=\"565\" y=\"255\" text-anchor=\"middle\" font-size=\"12\" fill=\"#b9770e\">B</text><g fill=\"#b9770e\"><circle cx=\"400\" cy=\"110\" r=\"6\"/><circle cx=\"400\" cy=\"150\" r=\"6\"/><circle cx=\"400\" cy=\"190\" r=\"6\"/><circle cx=\"565\" cy=\"130\" r=\"6\"/><circle cx=\"565\" cy=\"180\" r=\"6\"/></g><line x1=\"406\" y1=\"110\" x2=\"559\" y2=\"130\" stroke=\"#b9770e\" stroke-width=\"1.6\" marker-end=\"url(#m)\"/><line x1=\"406\" y1=\"150\" x2=\"559\" y2=\"130\" stroke=\"#b9770e\" stroke-width=\"1.6\" marker-end=\"url(#m)\"/><line x1=\"406\" y1=\"190\" x2=\"559\" y2=\"180\" stroke=\"#b9770e\" stroke-width=\"1.6\" marker-end=\"url(#m)\"/><text x=\"470\" y=\"118\" font-size=\"11\" fill=\"#c0392b\">two → one</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now we move from relations to functions. A function is a machine with one strict rule: feed it one input, and it returns exactly one output."
+            },
+            {
+              "seq": 2,
+              "text": "A vending machine is the perfect picture. Press the button for cold coffee and you get exactly one cold coffee. Never nothing, never two different drinks at once."
+            },
+            {
+              "seq": 3,
+              "text": "That wiring from inputs to outputs is the function f from A to B, where A is the domain of valid buttons and B is the codomain of every slot the machine could reach."
+            },
+            {
+              "seq": 4,
+              "text": "<curious>The types of functions are just answers to two simple questions. Here is question one: do different buttons ever give the same drink?"
+            },
+            {
+              "seq": 5,
+              "text": "If no two different inputs ever share an output, the function is one-one, also called injective. Think of Aadhaar numbers, where every citizen gets a distinct number."
+            },
+            {
+              "seq": 6,
+              "text": "Formally, injective means that whenever f of x one equals f of x two, the inputs x one and x two must actually be equal."
+            },
+            {
+              "seq": 7,
+              "text": "The opposite is many-one, where two or more inputs collapse to the same output. Whenever you spot an even power or a plus-minus symmetry, suspect many-one. Both plus two and minus two map to four."
+            },
+            {
+              "seq": 8,
+              "text": "The diagram contrasts a clean one-one mapping, where distinct inputs hit distinct outputs, with a many-one mapping, where two inputs crash into a single output."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब हम relations से functions की तरफ़ बढ़ते हैं। एक function एक machine है एक strict rule के साथ: एक input दो, और यह exactly एक output लौटाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Vending machine perfect picture है। cold coffee का button दबाओ और exactly एक cold coffee मिलती है। कभी कुछ नहीं, कभी दो अलग drinks एक साथ नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "Inputs से outputs की यह wiring ही function f from A to B है, जहाँ A valid buttons का domain है और B हर slot का codomain जिसे machine पहुँचा सकती है।"
+            },
+            {
+              "seq": 4,
+              "text": "<curious>Functions के types बस दो simple questions के answers हैं। यह रहा question one: क्या अलग buttons कभी same drink देते हैं?"
+            },
+            {
+              "seq": 5,
+              "text": "अगर कोई भी दो अलग inputs कभी same output share ना करें, तो function one-one है, जिसे injective भी कहते हैं। Aadhaar numbers सोचो, जहाँ हर citizen को distinct number मिलता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Formally, injective का मतलब है जब भी f of x one equals f of x two हो, तो inputs x one और x two बराबर होने ही चाहिए।"
+            },
+            {
+              "seq": 7,
+              "text": "इसका opposite many-one है, जहाँ दो या ज़्यादा inputs same output पर collapse हो जाते हैं। जब भी even power या plus-minus symmetry दिखे, many-one का शक करो। plus two और minus two दोनों four पर जाते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "Diagram एक clean one-one mapping को contrast करता है, जहाँ distinct inputs distinct outputs पर जाते हैं, एक many-one mapping से, जहाँ दो inputs एक ही output पर टकराते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Types of Functions",
+      "title": "Onto, into, and the perfect pairing",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Question 2: is every slot used?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "If every codomain element is hit, f is onto, also called surjective."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "\\text{Surjective:}\\ \\forall\\, y \\in B\\ \\exists\\, x \\in A\\ \\text{with } f(x)=y \\iff \\mathrm{Range}(f)=B"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "The opposite is into: some codomain elements stay empty seats."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "f(x)=x^2 \\ (\\mathbb{R}\\to\\mathbb{R}) \\ \\text{is into: no negative output}"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Both at once: bijective"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Bijective = one-one AND onto = invertible: every input private, every output claimed.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "caption": "Horizontal-line test: a parabola fails one-one",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 480 300\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"240\" y=\"22\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">Horizontal-line test: a parabola fails</text><line x1=\"40\" y1=\"250\" x2=\"440\" y2=\"250\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"240\" y1=\"40\" x2=\"240\" y2=\"270\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"432\" y=\"268\" font-size=\"12\" fill=\"#333\">x</text><text x=\"250\" y=\"50\" font-size=\"12\" fill=\"#333\">y</text><path d=\"M120,60 Q240,360 360,60\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"150\" x2=\"420\" y2=\"150\" stroke=\"#c0392b\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><circle cx=\"180\" cy=\"150\" r=\"5\" fill=\"#c0392b\"/><circle cx=\"300\" cy=\"150\" r=\"5\" fill=\"#c0392b\"/><text x=\"300\" y=\"140\" font-size=\"12\" fill=\"#c0392b\">two inputs, one output</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is question two about the wiring: does every slot in the codomain actually get used?"
+            },
+            {
+              "seq": 2,
+              "text": "If every element of the codomain has at least one input pointing to it, the function is onto, also called surjective. Picture a full bus with every seat occupied."
+            },
+            {
+              "seq": 3,
+              "text": "Formally, surjective means for every y in B there exists some x in A with f of x equal to y, which is the same as saying the range equals the whole codomain B."
+            },
+            {
+              "seq": 4,
+              "text": "The opposite is into, where some codomain elements are never reached, leaving empty seats behind."
+            },
+            {
+              "seq": 5,
+              "text": "The squaring machine from the reals to the reals is a clean example of into, because no negative number is ever an output, so the entire negative half of the codomain sits empty."
+            },
+            {
+              "seq": 6,
+              "text": "<excited>Now put both answers together. A function that is one-one and onto is bijective, a flawless pairing where every input has a private output and every output is claimed."
+            },
+            {
+              "seq": 7,
+              "text": "Bijective equals one-one and onto, and crucially, it equals invertible. Bijections are exactly the functions you can run backwards, which we will exploit in composition and inverses."
+            },
+            {
+              "seq": 8,
+              "text": "One graphical shortcut: sweep a horizontal line across the graph. If it ever cuts the curve twice, two inputs share an output, so it fails one-one. A parabola fails; a straight line passes."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा wiring के बारे में question two: क्या codomain का हर slot सच में use होता है?"
+            },
+            {
+              "seq": 2,
+              "text": "अगर codomain के हर element पर कम से कम एक input point करे, तो function onto है, जिसे surjective भी कहते हैं। एक भरी हुई bus सोचो जिसमें हर seat भरी हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Formally, surjective का मतलब है हर y in B के लिए कोई x in A मौजूद हो जिसका f of x equal to y हो, जो यही कहना है कि range पूरे codomain B के बराबर है।"
+            },
+            {
+              "seq": 4,
+              "text": "इसका opposite into है, जहाँ कुछ codomain elements कभी reach नहीं होते, पीछे empty seats छोड़ जाते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Reals से reals वाली squaring machine into का clean example है, क्योंकि कोई negative number कभी output नहीं होता, तो codomain का पूरा negative half खाली रहता है।"
+            },
+            {
+              "seq": 6,
+              "text": "<excited>अब दोनों answers को जोड़ो। जो function one-one और onto दोनों हो वो bijective है, एक flawless pairing जहाँ हर input का private output है और हर output claimed है।"
+            },
+            {
+              "seq": 7,
+              "text": "Bijective equals one-one and onto, और crucially, यह equals invertible भी है। Bijections बिलकुल वो functions हैं जिन्हें backwards चला सकते हो, जिसे हम composition और inverses में use करेंगे।"
+            },
+            {
+              "seq": 8,
+              "text": "एक graphical shortcut: graph पर horizontal line sweep करो। अगर वो curve को दो बार काटे, तो दो inputs एक output share करते हैं, one-one fail। Parabola fail करता है, straight line pass।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Types of Functions",
+      "title": "Definitions, special functions, and set-dependence",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The negations and special maps"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "\\text{Many-one:}\\ \\exists\\, x_1 \\ne x_2\\ \\text{with } f(x_1)=f(x_2); \\quad \\text{Into: } \\mathrm{Range}(f) \\subsetneq B"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Identity is always bijective; a constant map is many-one and into when B has size above one."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "\\text{Odd-degree polynomial} \\Rightarrow \\text{onto}; \\ \\text{even-degree} \\Rightarrow \\text{into}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "A strictly monotonic function is one-one, since it can never revisit an output."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "text": "The type depends entirely on the declared domain and codomain.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "f(x)=x^2:\\ \\mathbb{R}\\to\\mathbb{R}\\ \\text{into}, \\ \\mathbb{R}\\to[0,\\infty)\\ \\text{onto}, \\ [0,\\infty)\\to[0,\\infty)\\ \\text{bijective}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "So 'is this function onto?' is incomplete until the codomain B is fixed."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us pin down the definitions cleanly and collect the structural facts that turn many questions into one-liners."
+            },
+            {
+              "seq": 2,
+              "text": "The two negations: many-one means some pair of distinct inputs shares an output, and into means the range is a strict subset of the codomain, not all of it."
+            },
+            {
+              "seq": 3,
+              "text": "A few special maps repay memory. The identity map is always bijective. A constant map is many-one, and it is into whenever the codomain has more than one element."
+            },
+            {
+              "seq": 4,
+              "text": "A powerful fact for real polynomials from the reals to the reals: odd degree forces onto, while even degree forces into and can never be onto."
+            },
+            {
+              "seq": 5,
+              "text": "Another shortcut: a strictly monotonic function, always increasing or always decreasing, is automatically one-one, because a curve that never turns back can never revisit an output."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Now the trap that catches most students. The type of a function depends entirely on the declared domain and codomain, not on the formula alone."
+            },
+            {
+              "seq": 7,
+              "text": "Watch x squared change character. From the reals to the reals it is into. From the reals to zero-to-infinity it becomes onto. From zero-to-infinity to itself it is fully bijective. Same formula, three answers."
+            },
+            {
+              "seq": 8,
+              "text": "So the question is this function onto is incomplete until the codomain B is fixed. Always read the sets before you classify."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो definitions को साफ़-साफ़ pin down करें और वो structural facts इकट्ठा करें जो कई questions को one-liners बना देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "दो negations: many-one का मतलब कुछ distinct inputs एक output share करें, और into का मतलब range codomain का strict subset है, पूरा नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "कुछ special maps याद रखने लायक़ हैं। Identity map हमेशा bijective है। Constant map many-one है, और तब into है जब codomain में एक से ज़्यादा element हों।"
+            },
+            {
+              "seq": 4,
+              "text": "Real polynomials के लिए, reals से reals तक, एक powerful fact: odd degree onto force करता है, जबकि even degree into force करता है और कभी onto नहीं हो सकता।"
+            },
+            {
+              "seq": 5,
+              "text": "एक और shortcut: strictly monotonic function, हमेशा increasing या हमेशा decreasing, automatically one-one होता है, क्योंकि जो curve कभी मुड़ती ही नहीं वो output दोबारा नहीं छू सकती।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>अब वो trap जो ज़्यादातर students को फँसाता है। Function का type पूरी तरह declared domain और codomain पर depend करता है, सिर्फ़ formula पर नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "देखो x squared कैसे character बदलता है। reals से reals तक into है। reals से zero-to-infinity तक onto बन जाता है। zero-to-infinity से खुद तक पूरा bijective है। Same formula, तीन answers।"
+            },
+            {
+              "seq": 8,
+              "text": "तो question is this function onto तब तक incomplete है जब तक codomain B fix ना हो। Classify करने से पहले हमेशा sets पढ़ो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "formulas",
+      "subtopic": "Types of Functions",
+      "title": "Counting functions by type",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Four counts, four feasibility gates"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "latex": "\\text{All functions } A \\to B: \\ m^{\\,n}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Each of the n inputs independently picks one of m images."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "\\text{Injective (one-one)}: \\ {}^{m}P_{n} = \\dfrac{m!}{(m-n)!} \\quad (m \\ge n)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "latex": "\\text{Bijective}: \\ n! \\quad (m = n)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "latex": "\\text{Surjective (onto)}: \\ \\sum_{k=0}^{m} (-1)^k \\binom{m}{k}(m-k)^n \\quad (n \\ge m)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "text": "Watch base versus exponent: it is $m^n$, not $n^m$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Feasibility: no one-one map when the domain is bigger, no onto when the codomain is bigger."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "These counting formulas are the formulas of this subtopic, and every one carries a feasibility gate you must respect."
+            },
+            {
+              "seq": 2,
+              "text": "Start with all functions from A to B. Each of the n inputs independently picks one of m possible images, so the total is m raised to the power n."
+            },
+            {
+              "seq": 3,
+              "text": "That multiplication logic is the base. Read the count as m to the n, and be careful never to swap base and exponent."
+            },
+            {
+              "seq": 4,
+              "text": "For injective, or one-one, functions, the count is m permute n, that is m factorial over m minus n factorial. This is only feasible when m is at least n."
+            },
+            {
+              "seq": 5,
+              "text": "For bijective functions the two sets must have equal size, m equals n, and the count is simply n factorial, the number of perfect pairings."
+            },
+            {
+              "seq": 6,
+              "text": "For surjective, or onto, functions we need inclusion-exclusion: the alternating sum over k of minus one to the k, times m choose k, times m minus k to the n. Feasible only when n is at least m."
+            },
+            {
+              "seq": 7,
+              "text": "A constant reminder in the exam: it is m to the n, not n to the m. Swapping base and exponent is a classic slip that changes the answer completely."
+            },
+            {
+              "seq": 8,
+              "text": "And keep the feasibility gates handy. There is no one-one map when the domain is bigger than the codomain, and no onto map when the codomain is bigger than the domain."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये counting formulas इस subtopic के formulas हैं, और हर एक के साथ एक feasibility gate है जिसे respect करना ज़रूरी है।"
+            },
+            {
+              "seq": 2,
+              "text": "शुरू करो all functions from A to B से। n inputs में से हर एक independently m possible images में से एक चुनता है, तो total m raised to the power n है।"
+            },
+            {
+              "seq": 3,
+              "text": "यही multiplication logic base है। Count को m to the n पढ़ो, और base तथा exponent को कभी swap मत करना।"
+            },
+            {
+              "seq": 4,
+              "text": "Injective, यानी one-one functions के लिए, count m permute n है, यानी m factorial over m minus n factorial। यह तभी feasible है जब m कम से कम n हो।"
+            },
+            {
+              "seq": 5,
+              "text": "Bijective functions के लिए दोनों sets का size बराबर होना चाहिए, m equals n, और count बस n factorial है, perfect pairings की संख्या।"
+            },
+            {
+              "seq": 6,
+              "text": "Surjective, यानी onto functions के लिए inclusion-exclusion चाहिए: k पर alternating sum, minus one to the k times m choose k times m minus k to the n। तभी feasible जब n कम से कम m हो।"
+            },
+            {
+              "seq": 7,
+              "text": "Exam में एक constant reminder: यह m to the n है, n to the m नहीं। Base और exponent swap करना classic slip है जो answer पूरा बदल देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और feasibility gates हाथ में रखो। domain, codomain से बड़ा हो तो one-one map नहीं होता, और codomain, domain से बड़ा हो तो onto map नहीं होता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Types of Functions",
+      "title": "Testing one-one and onto on a linear map",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The two testing routines"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "One-one: assume f of x1 equals f of x2 and try to force x1 equals x2."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "Onto: solve y equals f of x for x, and ask if a valid x exists for every y."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "f : \\mathbb{R} \\to \\mathbb{R}, \\quad f(x) = 2x - 7"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "One-one: 2x1 minus 7 equals 2x2 minus 7 collapses straight to x1 equals x2."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "2x_1 - 7 = 2x_2 - 7 \\Rightarrow x_1 = x_2"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "text": "Onto: solve for x and check it is real for every real y."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 51,
+          "latex": "y = 2x - 7 \\Rightarrow x = \\tfrac{y+7}{2} \\in \\mathbb{R} \\Rightarrow \\text{onto, hence bijective}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us convert the two questions into concrete testing routines, then prove a linear function is a bijection."
+            },
+            {
+              "seq": 2,
+              "text": "To test one-one algebraically, assume f of x one equals f of x two, and try to force x one equals x two. If you can, it is one-one."
+            },
+            {
+              "seq": 3,
+              "text": "To test onto, solve y equals f of x for x in terms of y, then ask whether a valid x in the domain exists for every y in the codomain."
+            },
+            {
+              "seq": 4,
+              "text": "Take f from the reals to the reals given by f of x equals two x minus seven, the classic board-exam bijection."
+            },
+            {
+              "seq": 5,
+              "text": "One-one test. Set two x one minus seven equal to two x two minus seven. The minus seven cancels, the two divides out, and you are left with x one equals x two."
+            },
+            {
+              "seq": 6,
+              "text": "Written out, two x one minus seven equals two x two minus seven forces x one equals x two directly. So the function is one-one."
+            },
+            {
+              "seq": 7,
+              "text": "Onto test. Take any real y and solve y equals two x minus seven for x, which gives x equals y plus seven over two."
+            },
+            {
+              "seq": 8,
+              "text": "That x is a real number for every real y, and it maps back to y, so every y has a preimage. The function is onto, and therefore bijective."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो दोनों questions को concrete testing routines में बदलें, फिर prove करें कि एक linear function bijection है।"
+            },
+            {
+              "seq": 2,
+              "text": "One-one algebraically test करने के लिए, मान लो f of x one equals f of x two, और x one equals x two force करने की कोशिश करो। अगर कर पाओ, तो one-one है।"
+            },
+            {
+              "seq": 3,
+              "text": "Onto test करने के लिए, y equals f of x को x के लिए y में solve करो, फिर पूछो कि क्या हर y in codomain के लिए domain में valid x मौजूद है।"
+            },
+            {
+              "seq": 4,
+              "text": "लो f, reals से reals तक, f of x equals two x minus seven, classic board-exam bijection।"
+            },
+            {
+              "seq": 5,
+              "text": "One-one test. two x one minus seven को two x two minus seven के बराबर रखो। minus seven cancel, two divide हो जाता है, और बचता है x one equals x two।"
+            },
+            {
+              "seq": 6,
+              "text": "लिखकर देखें तो two x one minus seven equals two x two minus seven सीधे x one equals x two force करता है। तो function one-one है।"
+            },
+            {
+              "seq": 7,
+              "text": "Onto test. कोई भी real y लो और y equals two x minus seven को x के लिए solve करो, जो देता है x equals y plus seven over two।"
+            },
+            {
+              "seq": 8,
+              "text": "वो x हर real y के लिए real number है, और वापस y पर map करता है, तो हर y का preimage है। Function onto है, और इसलिए bijective।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Types of Functions",
+      "title": "Same formula, flipped codomain, flipped answer",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Read the codomain before saying onto"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) = x^2 + 1"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "One-one verdict is the same for both cases: an even power gives f of minus a equals f of a."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "f(2) = f(-2) = 5 \\Rightarrow \\text{many-one}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Case a: from the reals to the reals, outputs never drop below one."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "\\mathbb{R} \\to \\mathbb{R}: \\ \\mathrm{Range} = [1,\\infty) \\subsetneq \\mathbb{R} \\Rightarrow \\text{into}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Case b: from the reals to one-to-infinity, the range fills the codomain."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "latex": "\\mathbb{R} \\to [1,\\infty): \\ \\mathrm{Range} = [1,\\infty) \\Rightarrow \\text{onto}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example drives home the single most common speed-trap error, declaring onto without checking the codomain."
+            },
+            {
+              "seq": 2,
+              "text": "Take f of x equals x squared plus one, and classify it in two cases that share the same formula but differ in codomain."
+            },
+            {
+              "seq": 3,
+              "text": "First the one-one verdict, which is the same for both cases. An even power means f of minus a equals f of a, so two inputs share one output, no algebra needed."
+            },
+            {
+              "seq": 4,
+              "text": "Concretely, f of two and f of minus two both equal five. Two inputs, one output, so the function is many-one in both cases."
+            },
+            {
+              "seq": 5,
+              "text": "Now case a, from the reals to the reals. The outputs satisfy x squared plus one is at least one, so the range is one to infinity."
+            },
+            {
+              "seq": 6,
+              "text": "That range is a strict subset of the reals, since everything below one is never hit, so case a is many-one and into."
+            },
+            {
+              "seq": 7,
+              "text": "Case b changes only the codomain, from the reals to the interval one to infinity. Now the range exactly equals the codomain."
+            },
+            {
+              "seq": 8,
+              "text": "So case b is many-one but onto. The one-one verdict never changed, yet flipping the codomain flipped the onto verdict. Never declare onto without checking B."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example सबसे common speed-trap error घर तक पहुँचाता है, codomain check किए बिना onto बोल देना।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f of x equals x squared plus one, और इसे दो cases में classify करो जिनका formula same है पर codomain अलग।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले one-one verdict, जो दोनों cases में same है। Even power का मतलब f of minus a equals f of a, तो दो inputs एक output share करते हैं, कोई algebra नहीं चाहिए।"
+            },
+            {
+              "seq": 4,
+              "text": "Concretely, f of two और f of minus two दोनों five के बराबर हैं। दो inputs, एक output, तो function दोनों cases में many-one है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब case a, reals से reals तक। Outputs satisfy करते हैं x squared plus one कम से कम one, तो range one to infinity है।"
+            },
+            {
+              "seq": 6,
+              "text": "वो range reals का strict subset है, क्योंकि one से नीचे सब कुछ कभी hit नहीं होता, तो case a many-one और into है।"
+            },
+            {
+              "seq": 7,
+              "text": "Case b सिर्फ़ codomain बदलता है, reals से interval one to infinity तक। अब range बिलकुल codomain के बराबर है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो case b many-one पर onto है। One-one verdict कभी नहीं बदला, फिर भी codomain flip करने से onto verdict flip हो गया। B check किए बिना कभी onto मत बोलो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Types of Functions",
+      "title": "Counting functions with inclusion-exclusion",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Count by type, mind the direction"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "|X| = 4, \\quad |Y| = 5"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Functions from X to Y: each of four inputs picks one of five images."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "5^4 = 625"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "One-one from X to Y is feasible since five is at least four."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "{}^{5}P_{4} = \\dfrac{5!}{1!} = 120"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Onto from Y to X needs inclusion-exclusion, feasible since five is at least four."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "latex": "4^5 - \\tbinom{4}{1}3^5 + \\tbinom{4}{2}2^5 - \\tbinom{4}{3}1^5 = 1024 - 972 + 192 - 4 = 240"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a three-part counting example that exercises all three formulas and, crucially, the direction of the map."
+            },
+            {
+              "seq": 2,
+              "text": "Let X have four elements and Y have five elements. We will count plain functions, one-one functions, and onto functions in turn."
+            },
+            {
+              "seq": 3,
+              "text": "Part a, functions from X to Y. Each of the four inputs independently picks one of five images, using the m-to-the-n rule."
+            },
+            {
+              "seq": 4,
+              "text": "That gives five raised to the four, which equals six hundred twenty five."
+            },
+            {
+              "seq": 5,
+              "text": "Part b, one-one functions from X to Y. This is feasible because the codomain size five is at least the domain size four."
+            },
+            {
+              "seq": 6,
+              "text": "The count is five permute four, that is five factorial over one factorial, which equals one hundred twenty."
+            },
+            {
+              "seq": 7,
+              "text": "Part c reverses direction: onto functions from Y to X, feasible because five is at least four. Onto counting needs inclusion-exclusion to subtract maps that miss a target."
+            },
+            {
+              "seq": 8,
+              "text": "The alternating sum is four to the five, minus four choose one times three to the five, plus four choose two times two to the five, minus four choose three, and that works out to two hundred forty."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक तीन-part counting example जो तीनों formulas exercise करता है और, crucially, map की direction भी।"
+            },
+            {
+              "seq": 2,
+              "text": "मान लो X में चार elements हैं और Y में पाँच। हम बारी-बारी plain functions, one-one functions, और onto functions count करेंगे।"
+            },
+            {
+              "seq": 3,
+              "text": "Part a, functions from X to Y। चार inputs में से हर एक independently पाँच images में से एक चुनता है, m-to-the-n rule से।"
+            },
+            {
+              "seq": 4,
+              "text": "इससे मिलता है five raised to the four, जो equals six hundred twenty five।"
+            },
+            {
+              "seq": 5,
+              "text": "Part b, one-one functions from X to Y। यह feasible है क्योंकि codomain size पाँच, domain size चार से कम नहीं है।"
+            },
+            {
+              "seq": 6,
+              "text": "Count है five permute four, यानी five factorial over one factorial, जो equals one hundred twenty।"
+            },
+            {
+              "seq": 7,
+              "text": "Part c direction उलट देता है: onto functions from Y to X, feasible क्योंकि पाँच, चार से कम नहीं। Onto counting में inclusion-exclusion चाहिए ताकि target miss करने वाले maps घटाए जाएँ।"
+            },
+            {
+              "seq": 8,
+              "text": "Alternating sum है four to the five, minus four choose one times three to the five, plus four choose two times two to the five, minus four choose three, और यह बनता है two hundred forty।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "Types of Functions",
+      "title": "JEE Advanced: taming a cubic into a bijection",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Classify, then restrict"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f : \\mathbb{R} \\to \\mathbb{R}, \\quad f(x) = x^3 - 3x"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Onto: an odd-degree polynomial sweeps from minus infinity to plus infinity, hitting every value."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "One-one fails: the derivative changes sign, so the curve turns back."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "f'(x) = 3x^2 - 3 = 3(x-1)(x+1)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "text": "$f(0)=0$ and $f(\\sqrt{3})=0$: two inputs share the output $0$, so many-one.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Restrict to x at least one, where the derivative stays non-negative, and adjust the codomain."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "latex": "f : [1,\\infty) \\to [-2,\\infty) \\ \\text{is bijective}"
+        },
+        {
+          "seq": 9,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "caption": "y = x cubed minus 3x, with the x at least one branch used for the bijection",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 560 280\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"280\" y=\"20\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">y = x³ − 3x : onto on R, but not one-one</text><line x1=\"180\" y1=\"150\" x2=\"480\" y2=\"150\" stroke=\"#333\" stroke-width=\"1.3\"/><line x1=\"330\" y1=\"55\" x2=\"330\" y2=\"245\" stroke=\"#333\" stroke-width=\"1.3\"/><text x=\"470\" y=\"168\" font-size=\"12\" fill=\"#333\">x</text><text x=\"340\" y=\"66\" font-size=\"12\" fill=\"#333\">y</text><polyline points=\"210,239 216,215 226,150 250,116 270,106 285,116 300,140 330,150 360,160 375,184 390,194 410,150 434,150 450,116 462,84\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><polyline points=\"390,194 410,150 434,150 450,116 462,84\" fill=\"none\" stroke=\"#2e7d32\" stroke-width=\"3\"/><line x1=\"200\" y1=\"150\" x2=\"460\" y2=\"150\" stroke=\"#c0392b\" stroke-width=\"1.6\" stroke-dasharray=\"5 4\"/><circle cx=\"226\" cy=\"150\" r=\"4.5\" fill=\"#c0392b\"/><circle cx=\"330\" cy=\"150\" r=\"4.5\" fill=\"#c0392b\"/><circle cx=\"434\" cy=\"150\" r=\"4.5\" fill=\"#c0392b\"/><circle cx=\"270\" cy=\"106\" r=\"4\" fill=\"#1d4e79\"/><text x=\"255\" y=\"100\" font-size=\"11\" fill=\"#1d4e79\">(-1, 2)</text><circle cx=\"390\" cy=\"194\" r=\"4\" fill=\"#1d4e79\"/><text x=\"392\" y=\"210\" font-size=\"11\" fill=\"#1d4e79\">(1, -2)</text><text x=\"452\" y=\"106\" font-size=\"11\" fill=\"#2e7d32\">x ≥ 1 branch</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This JEE Advanced example shows how to diagnose a function and then surgically restrict it into a bijection."
+            },
+            {
+              "seq": 2,
+              "text": "Take f from the reals to the reals given by f of x equals x cubed minus three x, and classify it before repairing it."
+            },
+            {
+              "seq": 3,
+              "text": "Onto first. This is an odd-degree polynomial, continuous, sweeping from minus infinity up to plus infinity, so by the intermediate value theorem it attains every real value. It is onto."
+            },
+            {
+              "seq": 4,
+              "text": "One-one next, and here it fails. The derivative changes sign, which means the curve rises, turns, and falls, so it must revisit some outputs."
+            },
+            {
+              "seq": 5,
+              "text": "The derivative is three x squared minus three, which factors as three times x minus one times x plus one, zero at plus and minus one, and it changes sign there."
+            },
+            {
+              "seq": 6,
+              "text": "Concretely, f of zero is zero and f of root three is also zero. Two different inputs share the output zero, so the function is many-one on the reals."
+            },
+            {
+              "seq": 7,
+              "text": "To repair it, restrict the domain to x at least one. On that branch the derivative stays non-negative, so the function is strictly increasing and hence one-one."
+            },
+            {
+              "seq": 8,
+              "text": "Its image on that branch starts at f of one, which is one minus three equals minus two, so choosing the codomain minus two to infinity makes it onto too."
+            },
+            {
+              "seq": 9,
+              "text": "The final restricted map, from one-to-infinity to minus-two-to-infinity, is bijective, as the shaded increasing branch in the graph shows."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह JEE Advanced example दिखाता है कि function को कैसे diagnose करें और फिर surgically restrict करके bijection बनाएँ।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f, reals से reals तक, f of x equals x cubed minus three x, और repair करने से पहले इसे classify करो।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले onto. यह odd-degree polynomial है, continuous, minus infinity से plus infinity तक sweep करता है, तो intermediate value theorem से यह हर real value attain करता है। यह onto है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब one-one, और यहाँ यह fail करता है। Derivative sign बदलता है, यानी curve चढ़ती है, मुड़ती है, गिरती है, तो कुछ outputs दोबारा छूने ही पड़ते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Derivative है three x squared minus three, जो factor होता है three times x minus one times x plus one, plus और minus one पर zero, और वहाँ sign बदलता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Concretely, f of zero, zero है और f of root three भी zero है। दो अलग inputs output zero share करते हैं, तो function reals पर many-one है।"
+            },
+            {
+              "seq": 7,
+              "text": "Repair करने के लिए, domain को x at least one पर restrict करो। उस branch पर derivative non-negative रहता है, तो function strictly increasing और इसलिए one-one है।"
+            },
+            {
+              "seq": 8,
+              "text": "उस branch पर इसका image f of one से शुरू होता है, जो one minus three equals minus two है, तो codomain minus two to infinity चुनने से यह onto भी बन जाता है।"
+            },
+            {
+              "seq": 9,
+              "text": "आख़िरी restricted map, one-to-infinity से minus-two-to-infinity तक, bijective है, जैसा graph में shaded increasing branch दिखाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "tips",
+      "subtopic": "Types of Functions",
+      "title": "Pitfalls and pro-tips for functions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where classification goes wrong"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "text": "Declaring 'onto' without stating the codomain: compare the range with $B$, not with $\\mathbb{R}$ by reflex.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Even powers, absolute value, and trig functions are many-one; check symmetry before any algebra."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Into is a valid function type, not a broken function; it simply means not onto."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "text": "Counting: one-one uses $^mP_n$, not $m^n$; respect feasibility gates.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Speed pro-tips"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "For differentiable maps, check monotonicity first: a one-sign derivative means one-one, no algebra."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{Odd degree} \\Rightarrow \\text{onto}; \\ \\text{even degree} \\Rightarrow \\text{into}; \\ |A|>|B| \\Rightarrow \\text{no one-one}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us close functions with the classification traps, then the reflexes that make you fast."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, declaring onto without stating the codomain. Onto is meaningless until B is fixed, so compare the range with the given B, not with the reals out of habit."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, forgetting that even powers, absolute value, and trig functions are many-one. The plus-minus symmetry or periodicity silently kills injectivity, so check it before any algebra."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, confusing into with not a function. Into is a perfectly valid function type. It simply means not onto, so do not reject the map."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, counting blunders. Use m permute n for one-one, never m to the n, and always respect the feasibility gates on domain and codomain sizes."
+            },
+            {
+              "seq": 6,
+              "text": "Now the speed reflexes that save real time in the exam."
+            },
+            {
+              "seq": 7,
+              "text": "For differentiable functions, check monotonicity first. If the derivative keeps one sign throughout, the function is one-one and you are done, with no algebra at all."
+            },
+            {
+              "seq": 8,
+              "text": "And keep the sanity checks ready: odd degree means onto, even degree means into, and if the domain is larger than the codomain, one-one is simply impossible."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो functions को classification traps से close करें, फिर वो reflexes जो तुम्हें fast बनाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, codomain बताए बिना onto declare करना। Onto तब तक meaningless है जब तक B fix ना हो, तो range को दिए गए B से compare करो, आदतन reals से नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, यह भूलना कि even powers, absolute value, और trig functions many-one हैं। plus-minus symmetry या periodicity चुपचाप injectivity kill कर देती है, तो algebra से पहले check करो।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, into को not a function समझ लेना। Into बिलकुल valid function type है। इसका मतलब सिर्फ़ not onto है, तो map reject मत करो।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, counting blunders। one-one के लिए m permute n use करो, कभी m to the n नहीं, और domain तथा codomain sizes पर feasibility gates हमेशा respect करो।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वो speed reflexes जो exam में सच में time बचाते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Differentiable functions के लिए monotonicity पहले check करो। अगर derivative पूरे throughout एक sign रखे, तो function one-one है और काम ख़त्म, बिना किसी algebra के।"
+            },
+            {
+              "seq": 8,
+              "text": "और sanity checks तैयार रखो: odd degree का मतलब onto, even degree का मतलब into, और अगर domain, codomain से बड़ा हो, तो one-one बस impossible है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

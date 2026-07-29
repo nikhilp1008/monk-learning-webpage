@@ -1,0 +1,3740 @@
+{
+  "chapter": "The Living World",
+  "subject": "biology",
+  "class_level": 11,
+  "chapter_order": 1,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "What is 'Living'? Characteristics of Living Organisms",
+      "title": "The two-gate defining-property test",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "high",
+          "reveal_at": 0,
+          "text": "Is it a DEFINING property of life?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Valid ID = every living thing has it AND no non-living thing does."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "svg": "<svg viewBox=\"0 0 480 300\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"240\" y=\"24\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\">Is it a DEFINING property of life?</text><rect x=\"18\" y=\"42\" width=\"212\" height=\"222\" rx=\"8\" fill=\"#ffebee\" stroke=\"#c62828\" stroke-width=\"2\"/><text x=\"124\" y=\"64\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#b71c1c\">FAILS the test</text><text x=\"124\" y=\"92\" text-anchor=\"middle\" font-size=\"14\" fill=\"#b71c1c\">Growth &#10007;</text><text x=\"124\" y=\"112\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7f1d1d\">non-living also grows</text><text x=\"124\" y=\"126\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7f1d1d\">(dune, crystal) by accretion</text><text x=\"124\" y=\"164\" text-anchor=\"middle\" font-size=\"14\" fill=\"#b71c1c\">Reproduction &#10007;</text><text x=\"124\" y=\"184\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7f1d1d\">many living things don&#39;t:</text><text x=\"124\" y=\"198\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7f1d1d\">mule, worker bee, infertile couple</text><rect x=\"250\" y=\"42\" width=\"212\" height=\"222\" rx=\"8\" fill=\"#e8f5e9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"356\" y=\"64\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b5e20\">PASSES the test</text><text x=\"356\" y=\"90\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b5e20\">Metabolism &#10003;</text><text x=\"356\" y=\"106\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#14532d\">all living, no exception</text><text x=\"356\" y=\"134\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b5e20\">Cellular organisation &#10003;</text><text x=\"356\" y=\"162\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b5e20\">Consciousness &#10003;</text><text x=\"356\" y=\"178\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#14532d\">the defining property</text><rect x=\"270\" y=\"200\" width=\"172\" height=\"48\" rx=\"6\" fill=\"#fff8e1\" stroke=\"#f9a825\"/><text x=\"356\" y=\"220\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7c5c00\">test tube reaction =</text><text x=\"356\" y=\"236\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7c5c00\">neither living nor non-living</text><text x=\"240\" y=\"286\" text-anchor=\"middle\" font-size=\"11\" fill=\"#555\">A property is valid ID only if EVERY living has it AND NO non-living has it.</text></svg>",
+          "caption": "Two-gate ID check for life"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Two failure modes: a non-living thing HAS it, or a living thing LACKS it.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "Candidates: Growth, Reproduction, Metabolism, Cellular organisation, Consciousness."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 62,
+          "text": "Growth & Reproduction fail. Metabolism, Cellular organisation, Consciousness pass."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 73,
+          "text": "Technical question, not the philosophical one."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 87,
+          "text": "High yield, pure reasoning — almost no memorisation.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Ask a child, is it alive? and they answer in a flash. A sparrow, yes. A stone, no. But ask an adult to say exactly why, and it turns surprisingly slippery."
+            },
+            {
+              "seq": 2,
+              "text": "A car moves and burns fuel, a river flows and carves valleys, a salt crystal swells in a beaker. None is alive. So a property is a valid identity card only if every living thing shows it and no non-living thing does."
+            },
+            {
+              "seq": 3,
+              "text": "Picture yourself as a bouncer at a club called Life, checking identity cards at the door. Here is the guest list, split into who gets in and who gets turned away."
+            },
+            {
+              "seq": 4,
+              "text": "A candidate can fail in two ways. One, some non-living thing also shows it. Two, some living thing lacks it. Either one, and the property is disqualified from being defining."
+            },
+            {
+              "seq": 5,
+              "text": "Five famous candidates apply for the job: Growth, Reproduction, Metabolism, Cellular organisation, and Consciousness. This whole subtopic is really the story of which ones pass the test."
+            },
+            {
+              "seq": 6,
+              "text": "Growth and reproduction get caught with a fake identity card. Metabolism, cellular organisation and consciousness clear both gates cleanly. We will run each one through the test in turn."
+            },
+            {
+              "seq": 7,
+              "text": "Notice the framing. The question what is living splits in two: a technical half, what separates living from non-living, and a philosophical half, what is the purpose of life. As scientists we deliberately chase only the first."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper> And here is the exam secret. This topic is pure reasoning with almost nothing to memorise. Run the two-gate test in your head and the answer usually appears in seconds."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> किसी बच्चे से पूछो, ye alive hai kya? वो पलक झपकते बता देगा। sparrow, yes; stone, no. लेकिन adult से पूछो exactly kyun, तो बात फिसलने लगती है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक car चलती है और fuel jalati hai, एक river बहती और valleys काटती है, एक salt crystal beaker में फूलता है। इनमें से कोई alive नहीं। तो कोई property valid identity card तभी है जब हर living thing में हो और किसी भी non-living में ना हो।"
+            },
+            {
+              "seq": 3,
+              "text": "खुद को Life नाम के club का bouncer समझो, दरवाज़े पर identity cards check करते हुए। ये रही guest list, दो हिस्सों में — कौन अंदर आता है और किसे बाहर कर दिया जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "कोई candidate दो तरीकों से fail हो सकता है। पहला, कोई non-living thing भी उसे दिखाए। दूसरा, कोई living thing उसमें कमी रखे। इनमें से एक भी हो — property defining होने से disqualified।"
+            },
+            {
+              "seq": 5,
+              "text": "पाँच famous candidates इस job के लिए apply करते हैं: Growth, Reproduction, Metabolism, Cellular organisation, और Consciousness। पूरा subtopic असल में यही कहानी है कि इनमें से कौन test pass करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Growth और reproduction fake identity card के साथ पकड़े जाते हैं। Metabolism, cellular organisation और consciousness दोनों gates आराम से clear करते हैं। हम हर एक को बारी-बारी test से गुज़ारेंगे।"
+            },
+            {
+              "seq": 7,
+              "text": "framing पर ध्यान दो। सवाल what is living दो हिस्सों में बँटता है: एक technical, जो living को non-living से अलग करता है, और एक philosophical, कि जीवन का purpose क्या है। scientists के तौर पर हम जानबूझकर सिर्फ़ पहला वाला chase करते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper> और exam secret ये है। ये topic pure reasoning है, याद करने jaisa कुछ नहीं। दिमाग में two-gate test चलाओ और answer अक्सर seconds में सामने आ जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "What is 'Living'? Characteristics of Living Organisms",
+      "title": "Growth fails: intrinsic vs extrinsic",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Candidate 1 — Growth: caught faking"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "svg": "<svg viewBox=\"0 0 480 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"240\" y=\"22\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\">Two ways to &#8220;get bigger&#8221;</text><rect x=\"20\" y=\"36\" width=\"210\" height=\"200\" rx=\"8\" fill=\"#e8f5e9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"125\" y=\"58\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#1b5e20\">INTRINSIC (living)</text><circle cx=\"125\" cy=\"120\" r=\"42\" fill=\"#a5d6a7\" stroke=\"#2e7d32\"/><line x1=\"125\" y1=\"78\" x2=\"125\" y2=\"162\" stroke=\"#2e7d32\" stroke-dasharray=\"4 3\"/><line x1=\"83\" y1=\"120\" x2=\"167\" y2=\"120\" stroke=\"#2e7d32\" stroke-dasharray=\"4 3\"/><text x=\"125\" y=\"200\" text-anchor=\"middle\" font-size=\"11\" fill=\"#14532d\">new cells from WITHIN,</text><text x=\"125\" y=\"215\" text-anchor=\"middle\" font-size=\"11\" fill=\"#14532d\">by cell division (twofold)</text><rect x=\"250\" y=\"36\" width=\"210\" height=\"200\" rx=\"8\" fill=\"#ffebee\" stroke=\"#c62828\" stroke-width=\"2\"/><text x=\"355\" y=\"58\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#b71c1c\">EXTRINSIC (non-living)</text><polygon points=\"355,150 315,150 345,105 365,80 385,105 395,150\" fill=\"#ef9a9a\" stroke=\"#c62828\"/><circle cx=\"330\" cy=\"95\" r=\"4\" fill=\"#c62828\"/><circle cx=\"378\" cy=\"100\" r=\"4\" fill=\"#c62828\"/><circle cx=\"355\" cy=\"82\" r=\"4\" fill=\"#c62828\"/><text x=\"355\" y=\"200\" text-anchor=\"middle\" font-size=\"11\" fill=\"#7f1d1d\">material piles on the</text><text x=\"355\" y=\"215\" text-anchor=\"middle\" font-size=\"11\" fill=\"#7f1d1d\">OUTER surface (accretion)</text></svg>",
+          "caption": "Intrinsic vs extrinsic growth"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "text": "Same outward result — but look at the mechanism."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "Intrinsic (living): new cells from within, by cell division."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Extrinsic (accretion): material piles on the outer surface.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "Living growth is twofold: mass + number."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "text": "Single-cell case: growing in number IS reproducing."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 76,
+          "text": "Non-living things grow too → growth is NOT defining.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Our first candidate steps up: Growth. Living things clearly grow. A kitten becomes a cat, a seedling becomes a tree. Surely, you think, that must define life."
+            },
+            {
+              "seq": 2,
+              "text": "<curious> Not so fast. A mountain rises over ages, a sand dune spreads, a boulder enlarges, a salt crystal visibly swells over days. All of them grow, and not one of them is alive."
+            },
+            {
+              "seq": 3,
+              "text": "So the outward result is identical. It got bigger. But look closer at the mechanism, and two completely different processes appear underneath."
+            },
+            {
+              "seq": 4,
+              "text": "In a living thing, growth is intrinsic. New cells are added from within, throughout the body, by cell division. A tree adds cells in its interior; a child's bones lengthen from the inside."
+            },
+            {
+              "seq": 5,
+              "text": "In a non-living thing, growth is extrinsic, also called accretion. Material simply piles onto the outer surface. A mountain rises as sediment settles on top; a crystal enlarges as ions deposit on its faces."
+            },
+            {
+              "seq": 6,
+              "text": "Note too that living growth is twofold. It is an increase in mass and in the number of cells or individuals, both happening at once."
+            },
+            {
+              "seq": 7,
+              "text": "One subtle point for later. In single-celled organisms, growing in number and reproducing become the very same event, because the cell simply divides."
+            },
+            {
+              "seq": 8,
+              "text": "So here is the verdict. Same outward result, opposite mechanism. And because non-living things also enlarge, growth fails the first gate. It cannot be a defining property of life."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पहला candidate आगे आता है: Growth. living things साफ़-साफ़ बढ़ती हैं। kitten cat बनता है, seedling एक पेड़। तो लगता है, यही तो life को define करता होगा।"
+            },
+            {
+              "seq": 2,
+              "text": "<curious> इतनी जल्दी नहीं। पहाड़ सदियों में ऊँचा होता है, sand dune फैलता है, boulder बड़ा होता है, salt crystal दिनों में फूलता है। सब बढ़ते हैं, और एक भी alive नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो बाहरी result एक जैसा है। बड़ा हो गया। पर mechanism को ग़ौर से देखो, तो नीचे दो बिलकुल अलग processes दिखते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "living thing में growth intrinsic है। नए cells अंदर से, पूरे body में, cell division से जुड़ते हैं। पेड़ अपने अंदर cells जोड़ता है; बच्चे की हड्डियाँ अंदर से लंबी होती हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "non-living में growth extrinsic है, जिसे accretion भी कहते हैं। material बस बाहरी surface पर जमता जाता है। पहाड़ ऊपर तलछट जमने से उठता है; crystal अपनी faces पर ions जमने से बड़ा होता है।"
+            },
+            {
+              "seq": 6,
+              "text": "ये भी note करो कि living growth twofold है। ये mass में और cells या individuals की संख्या में बढ़त है, दोनों एक साथ।"
+            },
+            {
+              "seq": 7,
+              "text": "आगे के लिए एक subtle point। single-celled organisms में, संख्या में बढ़ना और reproduce करना बिलकुल एक ही event बन जाते हैं, क्योंकि cell बस divide हो जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो verdict ये है। एक जैसा result, उलटा mechanism। और चूँकि non-living चीज़ें भी बड़ी होती हैं, growth पहला gate fail कर देता है। ये life की defining property नहीं हो सकती।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "What is 'Living'? Characteristics of Living Organisms",
+      "title": "Reproduction fails: the all-inclusive gap",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Candidate 2 — Reproduction"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "text": "But many living things never reproduce."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "One living thing lacking it → not all-inclusive.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 29,
+          "svg": "<svg viewBox=\"0 0 460 230\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"230\" y=\"24\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\">In a unicellular organism, one event = both</text><circle cx=\"90\" cy=\"120\" r=\"40\" fill=\"#bbdefb\" stroke=\"#1565c0\" stroke-width=\"2\"/><text x=\"90\" y=\"125\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0d47a1\">one cell</text><text x=\"200\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" fill=\"#1565c0\">&#8594;</text><text x=\"200\" y=\"138\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0d47a1\">divides</text><circle cx=\"320\" cy=\"88\" r=\"30\" fill=\"#bbdefb\" stroke=\"#1565c0\" stroke-width=\"2\"/><circle cx=\"320\" cy=\"156\" r=\"30\" fill=\"#bbdefb\" stroke=\"#1565c0\" stroke-width=\"2\"/><text x=\"320\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0d47a1\">daughter</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0d47a1\">daughter</text><rect x=\"378\" y=\"70\" width=\"74\" height=\"42\" rx=\"6\" fill=\"#e8f5e9\" stroke=\"#2e7d32\"/><text x=\"415\" y=\"88\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#1b5e20\">growth</text><text x=\"415\" y=\"102\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#1b5e20\">(number up)</text><rect x=\"378\" y=\"132\" width=\"74\" height=\"42\" rx=\"6\" fill=\"#fff8e1\" stroke=\"#f9a825\"/><text x=\"415\" y=\"150\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7c5c00\">reproduction</text><text x=\"415\" y=\"164\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7c5c00\">(new copies)</text><text x=\"230\" y=\"216\" text-anchor=\"middle\" font-size=\"11\" fill=\"#555\">Growth and reproduction are the SAME event here.</text></svg>",
+          "caption": "In unicellular life, one division = growth AND reproduction"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Unicellular: reproduction and growth are synonymous."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Definition: progeny more or less similar to the parents."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 62,
+          "text": "Reproduction = a characteristic of life, but NOT defining.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The second candidate applies: Reproduction. Surely only living things make copies of themselves? A yeast buds, a fish spawns, a mammal gives birth. This one feels unbeatable."
+            },
+            {
+              "seq": 2,
+              "text": "But reproduction is also caught. A mule, a sterile worker bee, an infertile human couple, all of them are unquestionably alive, and not one of them reproduces."
+            },
+            {
+              "seq": 3,
+              "text": "And remember gate two. A property fails the moment even a single living thing lacks it. So reproduction cannot be an all-inclusive defining feature."
+            },
+            {
+              "seq": 4,
+              "text": "There is a beautiful special case hiding here, worth seeing on the board."
+            },
+            {
+              "seq": 5,
+              "text": "In a unicellular organism, a single cell division does two jobs at once. It increases the number of individuals, which is reproduction, and it is the organism's whole way of increasing in number, which is growth. Here the two are synonymous."
+            },
+            {
+              "seq": 6,
+              "text": "For the record, reproduction is the production of progeny possessing features more or less similar to the parents. It can be asexual, like budding, fragmentation and spore formation, or sexual."
+            },
+            {
+              "seq": 7,
+              "text": "So the verdict on candidate two. Reproduction is a genuine characteristic of living things, but because some living things lack it entirely, it is not by itself a defining property."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दूसरा candidate apply करता है: Reproduction. आख़िर सिर्फ़ living things ही तो अपनी copies बनाती हैं? yeast bud करता है, मछली spawn करती है, mammal बच्चा देता है। ये तो unbeatable लगता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पर reproduction भी पकड़ा जाता है। एक mule, एक sterile worker bee, एक infertile human couple — ये सब बिना शक alive हैं, और इनमें से कोई reproduce नहीं करता।"
+            },
+            {
+              "seq": 3,
+              "text": "और gate दो याद करो। कोई property उसी पल fail हो जाती है जब एक भी living thing उसमें कमी रखे। तो reproduction एक all-inclusive defining feature नहीं हो सकती।"
+            },
+            {
+              "seq": 4,
+              "text": "यहाँ एक ख़ूबसूरत special case छिपा है, जिसे board पर देखना बनता है।"
+            },
+            {
+              "seq": 5,
+              "text": "unicellular organism में, एक अकेला cell division दो काम एक साथ करता है। ये individuals की संख्या बढ़ाता है, जो reproduction है, और यही organism के बढ़ने का पूरा तरीक़ा है, जो growth है। यहाँ दोनों synonymous हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "record के लिए, reproduction का मतलब है ऐसी progeny पैदा करना जिसके features parents से कमोबेश मिलते हों। ये asexual हो सकता है, जैसे budding, fragmentation और spore formation, या sexual।"
+            },
+            {
+              "seq": 7,
+              "text": "तो candidate दो पर verdict। Reproduction living things की एक सच्ची characteristic है, पर चूँकि कुछ living things इसमें पूरी तरह कमी रखती हैं, ये अकेले defining property नहीं है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "What is 'Living'? Characteristics of Living Organisms",
+      "title": "Metabolism and the test-tube argument",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "high",
+          "reveal_at": 0,
+          "text": "Candidate 3 — Metabolism: passes cleanly"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "No non-living object does this on its own."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "svg": "<svg viewBox=\"0 0 460 250\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"230\" y=\"22\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\">Metabolism needs cellular organisation</text><rect x=\"24\" y=\"42\" width=\"196\" height=\"180\" rx=\"8\" fill=\"#e8f5e9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"122\" y=\"64\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b5e20\">Inside a cell</text><circle cx=\"122\" cy=\"140\" r=\"58\" fill=\"#c8e6c9\" stroke=\"#2e7d32\"/><circle cx=\"122\" cy=\"140\" r=\"20\" fill=\"#81c784\" stroke=\"#2e7d32\"/><text x=\"122\" y=\"112\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#14532d\">reactions</text><text x=\"122\" y=\"176\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#14532d\">organised in a body</text><text x=\"122\" y=\"212\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1b5e20\">LIVING &#10003;</text><rect x=\"240\" y=\"42\" width=\"196\" height=\"180\" rx=\"8\" fill=\"#fff8e1\" stroke=\"#f9a825\" stroke-width=\"2\"/><text x=\"338\" y=\"64\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#7c5c00\">Cell-free test tube</text><path d=\"M320 90 h36 v70 a18 18 0 0 1 -36 0 z\" fill=\"#ffe082\" stroke=\"#f9a825\"/><rect x=\"316\" y=\"84\" width=\"44\" height=\"8\" fill=\"#f9a825\"/><text x=\"338\" y=\"188\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7c5c00\">a living REACTION,</text><text x=\"338\" y=\"204\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b26a00\">but neither living</text><text x=\"338\" y=\"218\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b26a00\">nor non-living</text></svg>",
+          "caption": "Metabolism inside a cell vs in a cell-free tube"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "You can run a metabolic reaction in a cell-free flask."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "text": "A living REACTION, but the system is neither living nor non-living.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "So metabolism must be coupled with cellular organisation."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 66,
+          "text": "Test-tube reaction = neither living nor non-living. Most-tested trap.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a candidate that actually passes: Metabolism. Every living organism, from a single bacterium to a blue whale, runs a non-stop web of chemical reactions, building molecules up and breaking them down."
+            },
+            {
+              "seq": 2,
+              "text": "Run it through both gates. Is there a living thing without metabolism? No, there is no exception. Is there a non-living object doing metabolism on its own? No. It clears both gates."
+            },
+            {
+              "seq": 3,
+              "text": "But there is a famous subtlety, and this is the single most-tested idea in the whole subtopic. Watch the board carefully."
+            },
+            {
+              "seq": 4,
+              "text": "You can extract enzymes and run a genuine metabolic reaction outside any cell, in a cell-free flask. The reaction proceeds perfectly well. So is that flask alive?"
+            },
+            {
+              "seq": 5,
+              "text": "No. The reaction in it is a living reaction, a surrogate, but the flask as a system is neither living nor non-living. A real metabolic reaction is happening in something that is not alive."
+            },
+            {
+              "seq": 6,
+              "text": "The conclusion is sharp. Metabolism alone is not enough to define life. It must occur within the cellular organisation of a body for the system to count as living."
+            },
+            {
+              "seq": 7,
+              "text": "Lock this in. A test-tube metabolic reaction is neither living nor non-living. Students who call it living lose the mark, every single time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक candidate जो सच में pass होता है: Metabolism. हर living organism, एक अकेले bacterium से लेकर blue whale तक, chemical reactions का एक non-stop web चलाता है — molecules बनाना और तोड़ना।"
+            },
+            {
+              "seq": 2,
+              "text": "इसे दोनों gates से गुज़ारो। क्या कोई living thing बिना metabolism के है? नहीं, कोई exception नहीं। क्या कोई non-living object अपने आप metabolism करता है? नहीं। ये दोनों gates clear करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "पर एक famous subtlety है, और यही पूरे subtopic में सबसे ज़्यादा test होने वाला idea है। board को ध्यान से देखो।"
+            },
+            {
+              "seq": 4,
+              "text": "तुम enzymes निकालकर किसी भी cell के बाहर, एक cell-free flask में एक सच्ची metabolic reaction चला सकते हो। reaction बढ़िया चलती है। तो क्या वो flask alive है?"
+            },
+            {
+              "seq": 5,
+              "text": "नहीं। उसमें चल रही reaction एक living reaction है, एक surrogate, पर flask एक system के तौर पर neither living nor non-living है। एक असली metabolic reaction ऐसी चीज़ में हो रही है जो alive नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "conclusion बिलकुल साफ़ है। अकेला metabolism life को define करने के लिए काफ़ी नहीं। इसे किसी body के cellular organisation के भीतर होना चाहिए, तभी वो system living माना जाएगा।"
+            },
+            {
+              "seq": 7,
+              "text": "इसे पक्का कर लो। एक test-tube metabolic reaction neither living nor non-living है। जो student इसे living कह देता है, वो हर बार mark गँवाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "What is 'Living'? Characteristics of Living Organisms",
+      "title": "Consciousness, cellular organisation, and the defining bundle",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Candidates 4 & 5 — the structural and responsive IDs"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Cellular organisation — all life is built of cells."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "text": "Consciousness (biological) = sensing and responding to stimuli."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 29,
+          "text": "Plants, breeders, microbes — all respond."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Consciousness ≠ self-consciousness. Humans alone are self-aware.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "svg": "<svg viewBox=\"0 0 420 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"210\" y=\"24\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\">The defining bundle &#8212; &#8220;MCC&#8221;</text><circle cx=\"150\" cy=\"120\" r=\"66\" fill=\"#bbdefb\" fill-opacity=\"0.55\" stroke=\"#1565c0\"/><circle cx=\"270\" cy=\"120\" r=\"66\" fill=\"#c8e6c9\" fill-opacity=\"0.55\" stroke=\"#2e7d32\"/><circle cx=\"210\" cy=\"176\" r=\"66\" fill=\"#ffe082\" fill-opacity=\"0.55\" stroke=\"#f9a825\"/><text x=\"120\" y=\"112\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0d47a1\">Metabolism</text><text x=\"300\" y=\"112\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1b5e20\">Cellular</text><text x=\"300\" y=\"127\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1b5e20\">organisation</text><text x=\"210\" y=\"200\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#7c5c00\">Consciousness</text><text x=\"210\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b71c1c\">LIFE</text><text x=\"210\" y=\"250\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#555\">Growth &amp; reproduction are guests, not members.</text></svg>",
+          "caption": "The defining bundle: Metabolism + Cellular organisation + Consciousness"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Life = Metabolism + Cellular organisation + Consciousness = MCC.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two more candidates clear the gates: Cellular organisation and Consciousness. Together with metabolism, they form the real definition of life."
+            },
+            {
+              "seq": 2,
+              "text": "Cellular organisation is the structural identity. All life is built of cells, and it is this organisation of the body out of cells that ultimately defines a living thing."
+            },
+            {
+              "seq": 3,
+              "text": "Consciousness, in the biological sense, is the ability to sense the surroundings and respond to stimuli. This is offered as the defining property of living organisms."
+            },
+            {
+              "seq": 4,
+              "text": "And it is universal. Plants turn to light, seasonal breeders time reproduction to day-length, and the simplest microbe reacts to a chemical gradient. Every organism senses and responds."
+            },
+            {
+              "seq": 5,
+              "text": "Do not confuse two things here. Biological consciousness is responsiveness, shown by all organisms. Self-consciousness, being aware of your own self, is the narrower human-only extension."
+            },
+            {
+              "seq": 6,
+              "text": "Put the three passing candidates together and you get the whole definition on one picture."
+            },
+            {
+              "seq": 7,
+              "text": "So the defining bundle is metabolism plus cellular organisation plus consciousness, three letters, M C C. Growth and reproduction are guests at this club, never members."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो और candidates gates clear करते हैं: Cellular organisation और Consciousness. metabolism के साथ मिलकर, यही life की असली definition बनाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Cellular organisation structural identity है। सारी life cells से बनी है, और body का cells में यही organisation ही आख़िरकार एक living thing को define करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Consciousness, biological मायने में, surroundings को महसूस करने और stimuli पर react करने की क्षमता है। इसे living organisms की defining property कहा जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "और ये universal है। पौधे light की तरफ़ मुड़ते हैं, seasonal breeders reproduction को day-length से time करते हैं, और सबसे साधारण microbe एक chemical gradient पर react करता है। हर organism महसूस करता और react करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "यहाँ दो चीज़ें mat उलझाओ। Biological consciousness responsiveness है, जो हर organism दिखाता है। Self-consciousness, अपने खुद के होने का एहसास, वो narrow, सिर्फ़-इंसानों-वाला extension है।"
+            },
+            {
+              "seq": 6,
+              "text": "तीनों pass होने वाले candidates को एक साथ रखो और पूरी definition एक ही तस्वीर पर मिल जाती है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो defining bundle है metabolism plus cellular organisation plus consciousness, तीन letters, M C C. Growth और reproduction इस club के मेहमान हैं, member कभी नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "What is 'Living'? Characteristics of Living Organisms",
+      "title": "Key terms and precise definitions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The vocabulary examiners weaponise"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "text": "Living: a self-replicating, evolving, self-regulating, interactive system responding to stimuli."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Growth: increase in mass + number; intrinsic in life. Accretion = extrinsic, non-living."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Reproduction: progeny like the parents; asexual (budding, spores) or sexual."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "svg": "<svg viewBox=\"0 0 460 200\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"230\" y=\"24\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\">Metabolism = anabolism + catabolism</text><rect x=\"30\" y=\"50\" width=\"150\" height=\"90\" rx=\"8\" fill=\"#e8f5e9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"105\" y=\"82\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b5e20\">Anabolism</text><text x=\"105\" y=\"106\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#14532d\">building UP</text><text x=\"105\" y=\"124\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#14532d\">molecules</text><text x=\"230\" y=\"100\" text-anchor=\"middle\" font-size=\"26\" fill=\"#555\">+</text><rect x=\"280\" y=\"50\" width=\"150\" height=\"90\" rx=\"8\" fill=\"#ffebee\" stroke=\"#c62828\" stroke-width=\"2\"/><text x=\"355\" y=\"82\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#b71c1c\">Catabolism</text><text x=\"355\" y=\"106\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7f1d1d\">breaking DOWN</text><text x=\"355\" y=\"124\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7f1d1d\">molecules</text><text x=\"230\" y=\"176\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0d47a1\">chemicals involved = metabolites &#183; universal to all life</text></svg>",
+          "caption": "Metabolism = anabolism + catabolism"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "Metabolism = anabolism + catabolism; the chemicals = metabolites."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Stimulus: any environmental change an organism responds to."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 73,
+          "text": "Emergent properties appear at higher levels, not in the parts alone.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Biology has no formulas here, so these precise definitions are the equations of the subtopic. Distractors are built by swapping a single word, so learn them exactly."
+            },
+            {
+              "seq": 2,
+              "text": "First, the holistic definition. A living thing, in the technical sense, is a self-replicating, evolving, self-regulating, interactive system that is capable of responding to external stimuli."
+            },
+            {
+              "seq": 3,
+              "text": "Growth is an increase in mass and in number of cells. In living things it is intrinsic and twofold. Accretion is extrinsic growth, deposition on the outer surface, and is not a property of life."
+            },
+            {
+              "seq": 4,
+              "text": "Reproduction is the production of progeny more or less similar to the parents. It is asexual, by budding in yeast and Hydra, by fragmentation, or by spore formation in fungi, or it is sexual."
+            },
+            {
+              "seq": 5,
+              "text": "Now the term that always passes the test, broken into its two halves on the board."
+            },
+            {
+              "seq": 6,
+              "text": "Metabolism is the sum total of all chemical reactions in a living body, comprising anabolism, the building up, and catabolism, the breaking down. The molecules involved are called metabolites."
+            },
+            {
+              "seq": 7,
+              "text": "Consciousness is sensing and responding to stimuli. A stimulus is any change in the environment to which an organism responds, such as photoperiod, pollutants, or predators."
+            },
+            {
+              "seq": 8,
+              "text": "One more term examiners love: emergent properties. These are new properties that appear at a higher level of organisation, arising from interactions among lower-level parts, and not present in those parts alone."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ biology में कोई formulas नहीं, तो ये precise definitions ही इस subtopic के equations हैं। distractors एक word बदलकर बनाए जाते हैं, इसलिए इन्हें बिलकुल सही सीखो।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले holistic definition। एक living thing, technical मायने में, एक self-replicating, evolving, self-regulating, interactive system है जो external stimuli पर react कर सके।"
+            },
+            {
+              "seq": 3,
+              "text": "Growth mass में और cells की संख्या में बढ़त है। living things में ये intrinsic और twofold है। Accretion extrinsic growth है, बाहरी surface पर जमाव, और ये life की property नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Reproduction का मतलब है parents से कमोबेश मिलती progeny पैदा करना। ये asexual है — yeast और Hydra में budding से, fragmentation से, fungi में spore formation से — या फिर sexual।"
+            },
+            {
+              "seq": 5,
+              "text": "अब वो term जो हमेशा test pass करती है, board पर उसके दो हिस्सों में।"
+            },
+            {
+              "seq": 6,
+              "text": "Metabolism एक living body की सारी chemical reactions का sum total है, जिसमें anabolism यानी बनाना और catabolism यानी तोड़ना शामिल हैं। इसमें शामिल molecules metabolites कहलाते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Consciousness stimuli को महसूस करना और react करना है। एक stimulus environment में कोई भी बदलाव है जिस पर organism react करता है, जैसे photoperiod, pollutants, या predators।"
+            },
+            {
+              "seq": 8,
+              "text": "examiners को पसंद एक और term: emergent properties. ये नई properties हैं जो organisation के higher level पर उभरती हैं, lower-level parts के बीच interactions से बनती हैं, और अकेले उन parts में मौजूद नहीं होतीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "What is 'Living'? Characteristics of Living Organisms",
+      "title": "Worked examples: define metabolism & the growth A-R",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 — Define metabolism (CBSE, 2 marks)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "text": "Definition: sum of all reactions = anabolic + catabolic."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "text": "Reason: ALL living things show it; NO non-living object does it alone.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Structure: precise definition, then the 'no exception' justification."
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Example 2 — Assertion-Reason (CBSE HOTS)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "A is true; R is true."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "text": "R is exactly WHY A holds → option 1."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 81,
+          "text": "Trap = option 2: accepting both but missing that R is the mechanism.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us work two exam-style problems. First, a clean board question. Define metabolism, and state one reason it is considered a defining feature of living organisms."
+            },
+            {
+              "seq": 2,
+              "text": "The definition first. Metabolism is the sum total of all the chemical reactions occurring in the body of an organism, including building-up anabolic reactions and breaking-down catabolic reactions; the chemicals involved are metabolites."
+            },
+            {
+              "seq": 3,
+              "text": "Now the reason, which earns the second mark. It is a defining feature because all living organisms, without a single exception, exhibit metabolism, and no non-living object carries it out on its own."
+            },
+            {
+              "seq": 4,
+              "text": "Notice the answer structure. A precise definition, then the no-exception, universal justification. That two-part shape is exactly what earns full marks on such questions."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> Second problem, an assertion-reason. Assertion: growth cannot be taken as a defining property. Reason: non-living objects such as mountains and crystals also increase in size. Do they connect?"
+            },
+            {
+              "seq": 6,
+              "text": "Test each. The assertion is true, growth does fail as a defining property. The reason is also true, non-living things do enlarge. So both statements stand on their own."
+            },
+            {
+              "seq": 7,
+              "text": "Now the key move. Is the reason the explanation of the assertion? Yes. Precisely because non-living objects also grow, growth cannot separate living from non-living. So the answer is option one, both true and R explains A."
+            },
+            {
+              "seq": 8,
+              "text": "The trap is option two. Students accept both statements but miss that the non-living-also-grows fact is the actual mechanism behind the assertion. Always ask whether the reason is the cause, not just a true side-fact."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो दो exam-style problems करते हैं। पहला, एक साफ़ board question। metabolism को define करो, और एक reason बताओ कि इसे living organisms की defining feature क्यों माना जाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले definition। Metabolism एक organism के शरीर में हो रही सारी chemical reactions का sum total है, जिसमें बनाने वाली anabolic और तोड़ने वाली catabolic reactions शामिल हैं; इसमें शामिल chemicals metabolites हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "अब reason, जो दूसरा mark दिलाता है। ये defining feature इसलिए है क्योंकि सारे living organisms, बिना एक भी exception के, metabolism दिखाते हैं, और कोई non-living object इसे अपने आप नहीं करता।"
+            },
+            {
+              "seq": 4,
+              "text": "answer का structure देखो। एक precise definition, फिर no-exception, universal justification। यही दो-हिस्सों वाला shape ऐसे सवालों पर पूरे marks दिलाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> दूसरा problem, एक assertion-reason। Assertion: growth को defining property नहीं माना जा सकता। Reason: mountains और crystals जैसे non-living objects भी size में बढ़ते हैं। क्या ये जुड़ते हैं?"
+            },
+            {
+              "seq": 6,
+              "text": "हर एक को test करो। assertion सही है, growth defining property के तौर पर fail करता है। reason भी सही है, non-living चीज़ें बड़ी होती हैं। तो दोनों statements अपने आप में खड़े हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "अब असली move। क्या reason ही assertion की explanation है? हाँ। ठीक इसीलिए कि non-living objects भी बढ़ते हैं, growth living को non-living से अलग नहीं कर सकता। तो answer है option one, both true और R explains A."
+            },
+            {
+              "seq": 8,
+              "text": "trap option two है। students दोनों statements मान लेते हैं पर चूक जाते हैं कि non-living-भी-बढ़ते-हैं वाला fact ही assertion के पीछे का असली mechanism है। हमेशा पूछो कि reason cause है या बस एक सच्चा side-fact।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "What is 'Living'? Characteristics of Living Organisms",
+      "title": "Worked examples: the dividing alga & statement count",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 — The dividing alga (NEET)"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "svg": "<svg viewBox=\"0 0 440 210\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"220\" y=\"22\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\">Unicellular alga divides once</text><circle cx=\"80\" cy=\"110\" r=\"38\" fill=\"#c8e6c9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"80\" y=\"114\" text-anchor=\"middle\" font-size=\"11\" fill=\"#14532d\">alga cell</text><text x=\"170\" y=\"108\" text-anchor=\"middle\" font-size=\"22\" fill=\"#2e7d32\">&#8594;</text><circle cx=\"270\" cy=\"80\" r=\"28\" fill=\"#c8e6c9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><circle cx=\"270\" cy=\"146\" r=\"28\" fill=\"#c8e6c9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"270\" y=\"84\" text-anchor=\"middle\" font-size=\"10\" fill=\"#14532d\">daughter</text><text x=\"270\" y=\"150\" text-anchor=\"middle\" font-size=\"10\" fill=\"#14532d\">daughter</text><rect x=\"320\" y=\"82\" width=\"108\" height=\"46\" rx=\"8\" fill=\"#fff8e1\" stroke=\"#f9a825\"/><text x=\"374\" y=\"102\" text-anchor=\"middle\" font-size=\"11\" fill=\"#7c5c00\">growth AND</text><text x=\"374\" y=\"118\" text-anchor=\"middle\" font-size=\"11\" fill=\"#7c5c00\">reproduction</text><text x=\"220\" y=\"196\" text-anchor=\"middle\" font-size=\"11\" fill=\"#555\">Answer: the two are synonymous &#8212; option three.</text></svg>",
+          "caption": "One division = growth and reproduction together"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "text": "Answer 3: growth and reproduction are synonymous here."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Speed-trap: forcing it into one box (growth-only or reproduction-only).",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Example 4 — Count the correct statements (NEET)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "text": "A: test-tube reaction is 'living' — FALSE."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "B, C, D all TRUE — mule alive, consciousness defining, humans self-aware."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 78,
+          "text": "Answer: three. The single false one (A) is the most-tested misconception.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two N E E T level problems now. A unicellular alga divides to form two daughter cells. With reference to this single event, is it growth only, reproduction only, both, or neither?"
+            },
+            {
+              "seq": 2,
+              "text": "Draw the event out. One cell becomes two, and we ask what that single division counts as."
+            },
+            {
+              "seq": 3,
+              "text": "The answer is option three. That single division increases the number of individuals, which is reproduction, and it is the organism's whole mode of increasing in number, which is growth. In single-celled forms the two are synonymous."
+            },
+            {
+              "seq": 4,
+              "text": "The speed-trap is options one or two, forcing the event into a single box. Students forget the textbook point that in single-celled organisms growth and reproduction are the same thing."
+            },
+            {
+              "seq": 5,
+              "text": "Second N E E T problem, a statement count. How many of four statements are correct? Read them carefully, one by one."
+            },
+            {
+              "seq": 6,
+              "text": "Statement A says isolated metabolic reactions in a cell-free test tube are living things. That is false. Such a reaction is a living reaction, but the test-tube system is neither living nor non-living."
+            },
+            {
+              "seq": 7,
+              "text": "The other three are true. B, a mule is alive though it cannot reproduce. C, consciousness is regarded as the defining property. D, human beings are the only organisms aware of themselves."
+            },
+            {
+              "seq": 8,
+              "text": "So three statements are correct, B, C and D. And notice, the single false one, A, the test-tube claim, is the most-tested misconception in the entire subtopic. Spot it and this question is yours."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब दो N E E T level problems। एक unicellular alga divide होकर दो daughter cells बनाता है। इस एक event के हिसाब से, ये growth only है, reproduction only, both, या neither?"
+            },
+            {
+              "seq": 2,
+              "text": "event को खींचकर देखो। एक cell दो बनता है, और हम पूछते हैं कि वो एक division किसमें गिना जाए।"
+            },
+            {
+              "seq": 3,
+              "text": "answer option three है। वो एक division individuals की संख्या बढ़ाता है, जो reproduction है, और यही organism के बढ़ने का पूरा तरीक़ा है, जो growth है। single-celled forms में दोनों synonymous हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "speed-trap option one या two है, event को एक ही box में ठूँसना। students वो textbook point भूल जाते हैं कि single-celled organisms में growth और reproduction एक ही चीज़ हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा N E E T problem, एक statement count। चार statements में से कितने सही हैं? इन्हें ध्यान से, एक-एक करके पढ़ो।"
+            },
+            {
+              "seq": 6,
+              "text": "statement A कहता है कि cell-free test tube में isolated metabolic reactions living things हैं। ये false है। ऐसी reaction एक living reaction है, पर test-tube system neither living nor non-living है।"
+            },
+            {
+              "seq": 7,
+              "text": "बाक़ी तीन true हैं। B, mule alive है हालाँकि reproduce नहीं कर सकता। C, consciousness को defining property माना जाता है। D, इंसान ही अकेले अपने बारे में aware हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो तीन statements सही हैं, B, C और D. और ध्यान दो, अकेली false वाली, A, test-tube claim, पूरे subtopic की सबसे ज़्यादा test होने वाली misconception है। इसे पकड़ लो और ये question तुम्हारा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "tips",
+      "subtopic": "What is 'Living'? Characteristics of Living Organisms",
+      "title": "Pitfalls & pro-tips: the two-gate speed test",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Four traps that cost easy marks"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Trap 1: calling growth a defining feature.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "Trap 2: calling reproduction all-defining.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Trap 3: saying a test-tube reaction is 'living'.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Trap 4: confusing consciousness with self-consciousness.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "svg": "<svg viewBox=\"0 0 440 250\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"220\" y=\"22\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\">The two-gate speed test</text><rect x=\"140\" y=\"36\" width=\"160\" height=\"34\" rx=\"6\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"220\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0d47a1\">Candidate property</text><line x1=\"220\" y1=\"70\" x2=\"220\" y2=\"88\" stroke=\"#555\"/><rect x=\"90\" y=\"88\" width=\"260\" height=\"34\" rx=\"6\" fill=\"#fff8e1\" stroke=\"#f9a825\"/><text x=\"220\" y=\"110\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7c5c00\">Gate 1: does any NON-living thing have it?</text><line x1=\"220\" y1=\"122\" x2=\"220\" y2=\"140\" stroke=\"#555\"/><rect x=\"90\" y=\"140\" width=\"260\" height=\"34\" rx=\"6\" fill=\"#fff8e1\" stroke=\"#f9a825\"/><text x=\"220\" y=\"162\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7c5c00\">Gate 2: does any LIVING thing lack it?</text><line x1=\"150\" y1=\"174\" x2=\"110\" y2=\"196\" stroke=\"#c62828\"/><line x1=\"290\" y1=\"174\" x2=\"330\" y2=\"196\" stroke=\"#2e7d32\"/><rect x=\"30\" y=\"196\" width=\"150\" height=\"40\" rx=\"6\" fill=\"#ffebee\" stroke=\"#c62828\"/><text x=\"105\" y=\"214\" text-anchor=\"middle\" font-size=\"11\" fill=\"#b71c1c\">Yes to either &#8594;</text><text x=\"105\" y=\"228\" text-anchor=\"middle\" font-size=\"11\" fill=\"#b71c1c\">FAILS (growth, reproduction)</text><rect x=\"260\" y=\"196\" width=\"150\" height=\"40\" rx=\"6\" fill=\"#e8f5e9\" stroke=\"#2e7d32\"/><text x=\"335\" y=\"214\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b5e20\">No to both &#8594; DEFINING</text><text x=\"335\" y=\"228\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b5e20\">(metabolism, consciousness)</text></svg>",
+          "caption": "Two-gate speed test for any 'defining property' MCQ"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "text": "Pro-tip: run both gates mentally — G & R fall out instantly."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "text": "Memory aid: MCC defines, G & R decline.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a high-scoring topic, so let us close the common leaks. Four pitfalls quietly cost students easy marks every year."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, calling growth a defining feature. It is not. Non-living dunes and crystals grow too, by external accumulation. Growth simply fails the test."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, calling reproduction all-defining. Mules, sterile worker bees and infertile couples are alive yet do not reproduce, so reproduction is not all-inclusive."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, saying a test-tube metabolic reaction is living. It is a living reaction, but the cell-free system is neither living nor non-living. Metabolism needs cellular organisation."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, confusing consciousness with self-consciousness. Biological consciousness is responsiveness to stimuli, shown by all organisms. Self-consciousness, awareness of one's own self, is humans only."
+            },
+            {
+              "seq": 6,
+              "text": "Now the pro-tip that turns all of this into speed on the exam."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> On any which-is-the-defining-property question, run the two gates in your head. Does any non-living thing have it? Does any living thing lack it? Growth and reproduction get eliminated instantly, leaving metabolism, cellular organisation and consciousness."
+            },
+            {
+              "seq": 8,
+              "text": "And the memory aid to carry into the hall. M C C defines, G and R decline. Metabolism, cellular organisation, consciousness are members; growth and reproduction are only guests."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये एक high-scoring topic है, तो चलो common leaks बंद करते हैं। चार pitfalls हर साल चुपचाप students के easy marks खा जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "trap एक, growth को defining feature कहना। ये नहीं है। non-living dunes और crystals भी बढ़ते हैं, external accumulation से। growth बस test fail करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "trap दो, reproduction को all-defining कहना। mules, sterile worker bees और infertile couples alive हैं फिर भी reproduce नहीं करते, तो reproduction all-inclusive नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "trap तीन, test-tube metabolic reaction को living कहना। ये एक living reaction है, पर cell-free system neither living nor non-living है। metabolism को cellular organisation चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "trap चार, consciousness को self-consciousness से उलझाना। biological consciousness stimuli पर responsiveness है, जो हर organism दिखाता है। self-consciousness, अपने खुद के होने का एहसास, सिर्फ़ इंसानों में।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वो pro-tip जो इस सब को exam पर speed में बदल देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> किसी भी which-is-the-defining-property सवाल पर, दिमाग में दोनों gates चलाओ। क्या कोई non-living चीज़ उसे रखती है? क्या कोई living चीज़ उसमें कमी रखती है? Growth और reproduction तुरंत बाहर, बचते हैं metabolism, cellular organisation और consciousness।"
+            },
+            {
+              "seq": 8,
+              "text": "और exam hall में ले जाने वाला memory aid। M C C defines, G and R decline. metabolism, cellular organisation, consciousness member हैं; growth और reproduction सिर्फ़ मेहमान।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Biodiversity & Nomenclature",
+      "title": "Why scientific names? Local chaos to one universal label",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Five names, one vegetable"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "One botanist emails another — local names get lost."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "svg": "<svg viewBox=\"0 0 470 270\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"235\" y=\"22\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\">Many local names &#8594; one universal name</text><g font-size=\"11.5\"><rect x=\"14\" y=\"42\" width=\"96\" height=\"30\" rx=\"14\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"62\" y=\"62\" text-anchor=\"middle\" fill=\"#0d47a1\">begun</text><rect x=\"360\" y=\"42\" width=\"96\" height=\"30\" rx=\"14\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"408\" y=\"62\" text-anchor=\"middle\" fill=\"#0d47a1\">kathirikai</text><rect x=\"8\" y=\"120\" width=\"96\" height=\"30\" rx=\"14\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"56\" y=\"140\" text-anchor=\"middle\" fill=\"#0d47a1\">vangi</text><rect x=\"366\" y=\"120\" width=\"96\" height=\"30\" rx=\"14\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"414\" y=\"140\" text-anchor=\"middle\" fill=\"#0d47a1\">brinjal</text><rect x=\"185\" y=\"40\" width=\"100\" height=\"30\" rx=\"14\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"235\" y=\"60\" text-anchor=\"middle\" fill=\"#0d47a1\">eggplant</text></g><ellipse cx=\"235\" cy=\"150\" rx=\"46\" ry=\"34\" fill=\"#c8e6c9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"235\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#14532d\">one plant</text><g stroke=\"#9e9e9e\"><line x1=\"62\" y1=\"72\" x2=\"210\" y2=\"130\"/><line x1=\"408\" y1=\"72\" x2=\"262\" y2=\"130\"/><line x1=\"56\" y1=\"150\" x2=\"190\" y2=\"150\"/><line x1=\"414\" y1=\"150\" x2=\"282\" y2=\"150\"/><line x1=\"235\" y1=\"70\" x2=\"235\" y2=\"116\"/></g><rect x=\"120\" y=\"214\" width=\"230\" height=\"40\" rx=\"8\" fill=\"#fff8e1\" stroke=\"#f9a825\" stroke-width=\"2\"/><text x=\"235\" y=\"239\" text-anchor=\"middle\" font-size=\"15\" font-style=\"italic\" font-weight=\"bold\" fill=\"#7c5c00\">Solanum melongena</text></svg>",
+          "caption": "Many local names converge on one scientific name"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Vernacular names change by region → useless for worldwide precision.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Solanum melongena — one universal name."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "Scientific names are the pin codes of life."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "text": "Biodiversity = variety & variability across genes, species, ecosystems."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 83,
+          "text": "Biodiversity is about VARIETY, not raw count.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 96,
+          "text": "So much variety makes naming & classifying unavoidable.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Picture a sabzi mandi on a busy morning. In Kolkata a vendor shouts begun; in Chennai the same purple vegetable is kathirikai; a Mumbai cart labels it vangi; the English board reads brinjal; a tourist calls it eggplant."
+            },
+            {
+              "seq": 2,
+              "text": "Five names, one single vegetable. Now a botanist in Chandigarh emails a botanist in Chicago about this plant. Write any local name, and half the message is lost in translation."
+            },
+            {
+              "seq": 3,
+              "text": "But the moment she writes Solanum melongena, every biologist on Earth knows exactly which organism she means. No ambiguity, no regional accent, no guesswork."
+            },
+            {
+              "seq": 4,
+              "text": "That is the entire motivation. Vernacular names are warm and familiar, but they change from district to district and language to language, so they are useless for precise, worldwide communication."
+            },
+            {
+              "seq": 5,
+              "text": "Science needs one name per organism, recognised universally. Solanum melongena is that name for our brinjal, the same everywhere."
+            },
+            {
+              "seq": 6,
+              "text": "Think of a railway station code. N D L S means New Delhi to a clerk in Kerala and in Kashmir alike, and a pin code points to exactly one locality. Scientific names are the pin codes of life."
+            },
+            {
+              "seq": 7,
+              "text": "Now the biodiversity half. Biodiversity is not just counting plants and animals; it is the sheer variety and variability among all living organisms, across genes, species and ecosystems, in a region under natural conditions."
+            },
+            {
+              "seq": 8,
+              "text": "Of the roughly one point seven to one point eight million species described so far, a huge share live in tropical, megadiverse countries like ours. But careful, biodiversity is about variety, not raw count."
+            },
+            {
+              "seq": 9,
+              "text": "A vast single-crop field is low diversity; twenty plant and twenty animal species in one habitat is high diversity. And this very variety is what makes naming and classifying unavoidable, because you cannot study a library of millions of books without a cataloguing scheme."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> एक busy सुबह की sabzi mandi सोचो। Kolkata में vendor चिल्लाता है begun; Chennai में वही बैंगनी सब्ज़ी kathirikai है; Mumbai की cart उसे vangi लिखती है; English board पर brinjal; एक tourist उसे eggplant कहता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पाँच नाम, एक ही सब्ज़ी। अब Chandigarh का एक botanist Chicago के botanist को इस plant के बारे में email करता है। कोई भी local नाम लिखो, और आधा message translation में खो जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "पर जिस पल वो लिखती है Solanum melongena, धरती का हर biologist ठीक-ठीक जान जाता है कि वो किस organism की बात कर रही है। कोई ambiguity नहीं, कोई regional accent नहीं, कोई guesswork नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "यही पूरी motivation है। Vernacular नाम अपने और जाने-पहचाने होते हैं, पर ये district से district और भाषा से भाषा बदलते हैं, इसलिए precise, worldwide communication के लिए बेकार हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Science को हर organism का एक नाम चाहिए, जो universally पहचाना जाए। Solanum melongena हमारे brinjal का वही नाम है, हर जगह एक जैसा।"
+            },
+            {
+              "seq": 6,
+              "text": "railway station code jaisa सोचो। N D L S का मतलब Kerala और Kashmir दोनों के clerk को एक जैसा New Delhi है, और एक pin code ठीक एक locality बताता है। Scientific नाम life के pin code हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "अब biodiversity वाला हिस्सा। Biodiversity सिर्फ़ plants और animals गिनना नहीं; ये सारे living organisms के बीच की भारी variety और variability है, genes, species और ecosystems के आर-पार, किसी region में natural conditions के तहत।"
+            },
+            {
+              "seq": 8,
+              "text": "अब तक बताई गई करीब one point seven to one point eight million species में से, एक बड़ा हिस्सा हमारे jaise tropical, megadiverse देशों में रहता है। पर सावधान, biodiversity variety की बात है, raw count की नहीं।"
+            },
+            {
+              "seq": 9,
+              "text": "एक ही crop का विशाल खेत low diversity है; एक habitat में twenty plant और twenty animal species high diversity है। और यही variety naming और classifying को unavoidable बनाती है, क्योंकि लाखों किताबों की library तुम बिना cataloguing scheme के नहीं पढ़ सकते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Biodiversity & Nomenclature",
+      "title": "Key terms: identification, nomenclature, taxonomy, systematics",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The definitions are the equations here"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Nomenclature: one organism, one name worldwide."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Identification: is it the same as an already-known organism?"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 29,
+          "text": "Classification: arrange into groups by shared, observable characters."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "svg": "<svg viewBox=\"0 0 420 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"210\" y=\"22\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\">The terms nest inside each other</text><rect x=\"30\" y=\"36\" width=\"360\" height=\"212\" rx=\"10\" fill=\"#e3f2fd\" stroke=\"#1565c0\" stroke-width=\"2\"/><text x=\"210\" y=\"54\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0d47a1\">Systematics (adds evolution)</text><rect x=\"58\" y=\"64\" width=\"304\" height=\"172\" rx=\"10\" fill=\"#e8f5e9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"210\" y=\"82\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b5e20\">Taxonomy</text><rect x=\"90\" y=\"94\" width=\"240\" height=\"130\" rx=\"10\" fill=\"#fff8e1\" stroke=\"#f9a825\" stroke-width=\"2\"/><text x=\"210\" y=\"118\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7c5c00\">characterisation</text><text x=\"210\" y=\"140\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7c5c00\">identification</text><text x=\"210\" y=\"162\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7c5c00\">nomenclature</text><text x=\"210\" y=\"184\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7c5c00\">classification</text><text x=\"210\" y=\"212\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#8a6d00\">(the four jobs of a taxonomist)</text></svg>",
+          "caption": "The terms nest: taxonomy inside systematics"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Taxonomy = characterisation + identification + nomenclature + classification."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Systematics = diversity + evolutionary relationships (Systema Naturae)."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 61,
+          "text": "Nesting: identification/nomenclature/classification ⊂ taxonomy ⊂ systematics.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 70,
+          "text": "A taxon = a group of ANY rank (Panthera; Panthera leo; Mammalia).",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Biology has no formulas in this subtopic; the precise definitions are its equations. Distractors are built by swapping one word, so hold these exactly."
+            },
+            {
+              "seq": 2,
+              "text": "Nomenclature is the process of assigning standardised scientific names, so that the same organism is known by the same name across the world. And naming is only meaningful after correct identification."
+            },
+            {
+              "seq": 3,
+              "text": "Identification is determining that a given organism is the same as an already-known, correctly described one. First you identify, then you name."
+            },
+            {
+              "seq": 4,
+              "text": "Classification is arranging organisms into convenient categories on the basis of easily observable, shared characters."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> Now the crucial part, how these terms sit inside one another. Watch the nesting on the board."
+            },
+            {
+              "seq": 6,
+              "text": "Taxonomy is the umbrella over four jobs, characterisation, identification, nomenclature and classification. A single taxonomist does all four."
+            },
+            {
+              "seq": 7,
+              "text": "Systematics is broader still. It is the study of the diversity of organisms and their evolutionary relationships. The word comes from the Latin systema, and Linnaeus titled his foundational work Systema Naturae."
+            },
+            {
+              "seq": 8,
+              "text": "So the nesting is clear. Identification, nomenclature and classification all sit inside taxonomy, which sits inside systematics. Systematics is broadest because it adds evolution."
+            },
+            {
+              "seq": 9,
+              "text": "One more term. A taxon is a taxonomic group of any rank. The genus Panthera is a taxon; the species Panthera leo is a taxon; the class Mammalia is a taxon. Rank does not matter, it is any named group."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic में biology के कोई formulas नहीं; precise definitions ही इसके equations हैं। distractors एक शब्द बदलकर बनते हैं, तो इन्हें बिलकुल सही पकड़ो।"
+            },
+            {
+              "seq": 2,
+              "text": "Nomenclature standardised scientific नाम देने की process है, ताकि एक ही organism पूरी दुनिया में एक ही नाम से जाना जाए। और naming तभी meaningful है जब identification सही हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Identification का मतलब है ये तय करना कि दिया गया organism किसी पहले से जाने-पहचाने, सही तरह बताए गए organism jaisa ही है। पहले identify, फिर नाम।"
+            },
+            {
+              "seq": 4,
+              "text": "Classification का मतलब है organisms को आसानी से दिखने वाले, साझा characters के आधार पर सुविधाजनक categories में जमाना।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> अब crucial हिस्सा, ये terms एक-दूसरे के अंदर कैसे बैठते हैं। board पर nesting देखो।"
+            },
+            {
+              "seq": 6,
+              "text": "Taxonomy चार कामों की छतरी है, characterisation, identification, nomenclature और classification. एक ही taxonomist चारों करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Systematics और भी broad है। ये organisms की diversity और उनके evolutionary relationships का अध्ययन है। ये शब्द Latin के systema से आया, और Linnaeus ने अपनी foundational किताब का नाम Systema Naturae रखा।"
+            },
+            {
+              "seq": 8,
+              "text": "तो nesting साफ़ है। Identification, nomenclature और classification सब taxonomy के अंदर बैठते हैं, जो systematics के अंदर बैठती है। Systematics सबसे broad है क्योंकि ये evolution जोड़ती है।"
+            },
+            {
+              "seq": 9,
+              "text": "एक और term। एक taxon किसी भी rank का taxonomic group है। genus Panthera एक taxon है; species Panthera leo एक taxon है; class Mammalia एक taxon है। rank matter नहीं करता, ये कोई भी named group है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Biodiversity & Nomenclature",
+      "title": "Writing a scientific name: the five conventions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "How to write a scientific name — five rules"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Rule 1: two words, in Latin — a 'dead' language, so meanings stay stable."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Rule 2: genus Capitalised, species lowercase — Mangifera indica."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "text": "This capitalisation rule is the most-tested point in the subtopic.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "text": "Rule 3: both words italicised in print."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Rule 4: handwritten → underline the two words separately."
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "svg": "<svg viewBox=\"0 0 470 230\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"235\" y=\"26\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\">Anatomy of a scientific name</text><text x=\"90\" y=\"96\" text-anchor=\"middle\" font-size=\"20\" font-style=\"italic\" font-weight=\"bold\" fill=\"#1565c0\">Mangifera</text><text x=\"228\" y=\"96\" text-anchor=\"middle\" font-size=\"20\" font-style=\"italic\" font-weight=\"bold\" fill=\"#2e7d32\">indica</text><text x=\"360\" y=\"96\" text-anchor=\"middle\" font-size=\"18\" fill=\"#c62828\">Linn.</text><line x1=\"40\" y1=\"104\" x2=\"140\" y2=\"104\" stroke=\"#1565c0\" stroke-width=\"2\"/><line x1=\"196\" y1=\"104\" x2=\"260\" y2=\"104\" stroke=\"#2e7d32\" stroke-width=\"2\"/><rect x=\"40\" y=\"128\" width=\"118\" height=\"72\" rx=\"6\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"99\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0d47a1\">generic name</text><text x=\"99\" y=\"166\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0d47a1\">Capital + italic</text><text x=\"99\" y=\"184\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0d47a1\">(the genus)</text><rect x=\"170\" y=\"128\" width=\"118\" height=\"72\" rx=\"6\" fill=\"#e8f5e9\" stroke=\"#2e7d32\"/><text x=\"229\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b5e20\">specific epithet</text><text x=\"229\" y=\"166\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#14532d\">lowercase + italic</text><text x=\"229\" y=\"184\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#14532d\">(the species)</text><rect x=\"300\" y=\"128\" width=\"130\" height=\"72\" rx=\"6\" fill=\"#ffebee\" stroke=\"#c62828\"/><text x=\"365\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" fill=\"#b71c1c\">author citation</text><text x=\"365\" y=\"166\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7f1d1d\">Roman, last,</text><text x=\"365\" y=\"184\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#7f1d1d\">optional</text></svg>",
+          "caption": "Anatomy of Mangifera indica Linn."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "Rule 5: author citation after the epithet, Roman, optional."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 80,
+          "text": "Three written items (Mangifera, indica, Linn.), still two names.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the rules examiners live on, the five conventions for writing a scientific name correctly."
+            },
+            {
+              "seq": 2,
+              "text": "Rule one, two words, in Latin or latinised form. Why Latin? Because it is a dead language, no longer evolving in everyday speech, so the names will not drift in meaning. Stability is the whole point."
+            },
+            {
+              "seq": 3,
+              "text": "Rule two, genus first and capitalised, species second and lowercase. Mangifera indica, never mangifera Indica. The capital flags the broader group, the small letter the specific member."
+            },
+            {
+              "seq": 4,
+              "text": "Underline this mentally. This single capitalisation rule is the most-tested point in the entire subtopic. One wrong case, and the mark is gone."
+            },
+            {
+              "seq": 5,
+              "text": "Rule three, both words are italicised in print. Italics signal that this is a scientific name, to be treated as a single unit."
+            },
+            {
+              "seq": 6,
+              "text": "Rule four, when handwritten or typed without italics, underline the two words separately. Underlining is the manuscript stand-in for italics, and separate underlines because they are two distinct words."
+            },
+            {
+              "seq": 7,
+              "text": "Let us dissect a real name on the board, part by part."
+            },
+            {
+              "seq": 8,
+              "text": "Rule five, the author citation comes after the specific epithet, in Roman upright type, and is optional. In Mangifera indica Linn., the Linn. abbreviates Linnaeus, who first validly described the species. Upright, so it is not mistaken for part of the name."
+            },
+            {
+              "seq": 9,
+              "text": "So the full logic. Mangifera is the generic name, capital and italic; indica is the specific epithet, lowercase and italic; Linn. is the author, Roman and optional. Three written items, but still just two names."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब वो rules जिन पर examiners जीते हैं, scientific नाम सही लिखने के पाँच conventions।"
+            },
+            {
+              "seq": 2,
+              "text": "Rule एक, दो शब्द, Latin या latinised रूप में। Latin ही क्यों? क्योंकि ये एक dead language है, रोज़मर्रा की बोली में अब बदलती नहीं, तो नाम अपने meaning से नहीं भटकते। Stability ही पूरी बात है।"
+            },
+            {
+              "seq": 3,
+              "text": "Rule दो, genus पहले और capital में, species दूसरा और lowercase में। Mangifera indica, कभी भी mangifera Indica नहीं। capital broader group बताता है, छोटा अक्षर specific member।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे दिमाग में underline कर लो। ये अकेला capitalisation rule पूरे subtopic का सबसे ज़्यादा test होने वाला point है। एक ग़लत case, और mark गया।"
+            },
+            {
+              "seq": 5,
+              "text": "Rule तीन, print में दोनों शब्द italic होते हैं। Italics बताते हैं कि ये एक scientific नाम है, जिसे एक single unit माना जाए।"
+            },
+            {
+              "seq": 6,
+              "text": "Rule चार, जब हाथ से लिखो या बिना italics type करो, दोनों शब्दों को अलग-अलग underline करो। Underlining italics का manuscript वाला बदल है, और अलग underline इसलिए क्योंकि ये दो अलग शब्द हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "चलो board पर एक असली नाम को हिस्सा-दर-हिस्सा चीरते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "Rule पाँच, author citation specific epithet के बाद आता है, Roman upright type में, और optional है। Mangifera indica Linn. में, Linn. का मतलब Linnaeus, जिसने पहली बार इस species को validly describe किया। upright, ताकि इसे नाम का हिस्सा ना समझा जाए।"
+            },
+            {
+              "seq": 9,
+              "text": "तो पूरी logic। Mangifera generic नाम है, capital और italic; indica specific epithet है, lowercase और italic; Linn. author है, Roman और optional। तीन लिखे items, पर फिर भी सिर्फ़ दो नाम।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "concept",
+      "subtopic": "Biodiversity & Nomenclature",
+      "title": "The naming codes and the biological species concept",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Codes & the definition of a species"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Binomial nomenclature (Linnaeus) = generic name + specific epithet."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "text": "Codes: I C B N plants, I C Z N animals, I C N B bacteria."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "text": "I C B N ↔ I C Z N swap is the single most-exploited trap.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "svg": "<svg viewBox=\"0 0 460 220\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"230\" y=\"22\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\">Biological species test (Mayr)</text><ellipse cx=\"80\" cy=\"90\" rx=\"52\" ry=\"34\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"80\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0d47a1\">horse</text><text x=\"80\" y=\"102\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0d47a1\">(female)</text><ellipse cx=\"380\" cy=\"90\" rx=\"52\" ry=\"34\" fill=\"#e8f5e9\" stroke=\"#2e7d32\"/><text x=\"380\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b5e20\">donkey</text><text x=\"380\" y=\"102\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#1b5e20\">(male)</text><text x=\"230\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"#555\">interbreed &#8594;</text><line x1=\"132\" y1=\"96\" x2=\"200\" y2=\"120\" stroke=\"#9e9e9e\"/><line x1=\"328\" y1=\"96\" x2=\"260\" y2=\"120\" stroke=\"#9e9e9e\"/><rect x=\"176\" y=\"122\" width=\"108\" height=\"40\" rx=\"8\" fill=\"#fff8e1\" stroke=\"#f9a825\"/><text x=\"230\" y=\"140\" text-anchor=\"middle\" font-size=\"12\" fill=\"#7c5c00\">mule</text><text x=\"230\" y=\"156\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#b26a00\">STERILE &#10007;</text><text x=\"230\" y=\"192\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#b71c1c\">offspring not fertile &#8594; still two separate species</text></svg>",
+          "caption": "Biological species test: interbreed + fertile offspring"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Species (Mayr): interbreed freely + fertile offspring; shared gene pool."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 68,
+          "text": "Mule test: interbreed but sterile → separate species."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 85,
+          "text": "Tautonym: identical genus + epithet (Rattus rattus); valid in zoology."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 97,
+          "text": "Systems: artificial (Linnaeus), natural, phylogenetic; karyo-, chemo-taxonomy.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the naming codes and the definition of a species, both prime exam targets."
+            },
+            {
+              "seq": 2,
+              "text": "The two-word system itself is binomial nomenclature, bi meaning two, nomen meaning name, and we owe it to Carolus Linnaeus, the father of taxonomy. The first word is the generic name, the second the specific epithet."
+            },
+            {
+              "seq": 3,
+              "text": "Biology has no measurement formulas, so the naming codes act as its standards bodies. I C B N governs plants, I C Z N governs animals, and I C N B governs bacteria, each independent of the others."
+            },
+            {
+              "seq": 4,
+              "text": "Now the single most-exploited trap in the chapter. Do not swap them. I C B N is botanical, so plants. I C Z N is zoological, so animals. The Z in I C Z N stands for zoo, animals."
+            },
+            {
+              "seq": 5,
+              "text": "The definition of a species is best seen through its most famous test case, on the board."
+            },
+            {
+              "seq": 6,
+              "text": "By the biological species concept, associated with Ernst Mayr, a species is a group of organisms capable of interbreeding freely in nature and producing fertile offspring, sharing a common gene pool."
+            },
+            {
+              "seq": 7,
+              "text": "Apply it to a horse and a donkey. They interbreed and give a mule, but the mule is sterile. The fertile-offspring test fails, so horse and donkey stay separate species. Mere resemblance, or even a high share of common genes, is not enough."
+            },
+            {
+              "seq": 8,
+              "text": "One vocabulary point often tested. A tautonym is a scientific name where the generic name and the specific epithet are identical, like Rattus rattus. It is perfectly valid in zoological naming."
+            },
+            {
+              "seq": 9,
+              "text": "Finally, the systems of classification. Linnaeus's was artificial, using one or a few easily-seen characters. A natural system uses many characters and real affinities. A phylogenetic system groups by evolutionary relationships. Karyotaxonomy uses chromosomes; chemotaxonomy uses chemical data."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब naming codes और species की definition, दोनों prime exam targets।"
+            },
+            {
+              "seq": 2,
+              "text": "दो शब्दों वाला system ही binomial nomenclature है, bi यानी दो, nomen यानी नाम, और इसका श्रेय Carolus Linnaeus को, taxonomy के पिता। पहला शब्द generic नाम है, दूसरा specific epithet।"
+            },
+            {
+              "seq": 3,
+              "text": "biology में कोई measurement formulas नहीं, तो naming codes ही इसके standards bodies हैं। I C B N plants को govern करता है, I C Z N animals को, और I C N B bacteria को, हर एक बाक़ियों से independent।"
+            },
+            {
+              "seq": 4,
+              "text": "अब chapter का सबसे ज़्यादा exploit होने वाला trap। इन्हें आपस में mat बदलो। I C B N botanical है, यानी plants। I C Z N zoological है, यानी animals। I C Z N का Z zoo, यानी animals के लिए।"
+            },
+            {
+              "seq": 5,
+              "text": "species की definition को इसके सबसे famous test case से देखना बेहतर है, board पर।"
+            },
+            {
+              "seq": 6,
+              "text": "biological species concept के हिसाब से, जो Ernst Mayr से जुड़ा है, एक species उन organisms का group है जो nature में स्वतंत्र रूप से interbreed कर सकें और fertile offspring पैदा करें, एक common gene pool साझा करते हुए।"
+            },
+            {
+              "seq": 7,
+              "text": "इसे horse और donkey पर लगाओ। ये interbreed करके mule देते हैं, पर mule sterile है। fertile-offspring test fail हो जाता है, तो horse और donkey अलग species रहते हैं। सिर्फ़ मिलती-जुलती शक्ल, या common genes का बड़ा हिस्सा भी, काफ़ी नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "एक अक्सर test होने वाला vocabulary point। एक tautonym वो scientific नाम है जहाँ generic नाम और specific epithet एक जैसे हों, जैसे Rattus rattus। ये zoological naming में बिलकुल valid है।"
+            },
+            {
+              "seq": 9,
+              "text": "आख़िर में, classification के systems। Linnaeus का artificial था, एक या कुछ आसानी से दिखने वाले characters से। natural system कई characters और असली affinities use करता है। phylogenetic system evolutionary relationships से group करता है। Karyotaxonomy chromosomes use करती है; chemotaxonomy chemical data।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Biodiversity & Nomenclature",
+      "title": "Worked examples: correct the name & the binomial A-R",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 — correct 'felis Catus' (CBSE)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "text": "Errors: genus → Felis (Capital); epithet → catus (lowercase)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "text": "Print: Felis catus (italic). Hand: Felis catus, underlined separately."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "Answer shape: state the rule violated, then the corrected name in the asked form.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Example 2 — assertion-reason (CBSE HOTS)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "text": "A true (three items); R true (binomial = genus + epithet only)."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 65,
+          "text": "R explains A → option 1."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 76,
+          "text": "Binomial = genus + epithet only; the author is an optional add-on.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two nomenclature problems. First, a student writes the domestic cat as felis Catus. Identify the errors and rewrite it correctly, both in print and by hand."
+            },
+            {
+              "seq": 2,
+              "text": "Work the conventions. The genus must be capitalised, so felis is wrong, it should be Felis. The specific epithet must be lowercase, so Catus is wrong, it should be catus."
+            },
+            {
+              "seq": 3,
+              "text": "So the correct printed form is Felis catus, both words italicised. The handwritten form is Felis catus with the two words underlined separately."
+            },
+            {
+              "seq": 4,
+              "text": "The answer shape earns the marks. State the rule that was violated, then present the corrected name, and always finish in the exact form the question asks for."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> Second, an assertion-reason. Assertion: Mangifera indica Linn. has three written components, yet it is still binomial nomenclature. Reason: the author's name is not counted, it is an optional citation."
+            },
+            {
+              "seq": 6,
+              "text": "The assertion is true. The printed entry does carry three written items, Mangifera, indica and Linn. The reason is also true, binomial counts only the generic name plus the specific epithet."
+            },
+            {
+              "seq": 7,
+              "text": "And the reason is exactly why the assertion holds. Three written items, still only two names. So the answer is option one, both true and R explains A."
+            },
+            {
+              "seq": 8,
+              "text": "Carry this away. Binomial counts only genus plus epithet. The author citation is an optional add-on that names who first described the species, never part of the two-word name."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो nomenclature problems। पहला, एक student domestic cat को felis Catus लिखता है। errors पहचानो और इसे सही से दोबारा लिखो, print में भी और हाथ से भी।"
+            },
+            {
+              "seq": 2,
+              "text": "conventions लगाओ। genus capital होना चाहिए, तो felis ग़लत है, ये Felis होना चाहिए। specific epithet lowercase होना चाहिए, तो Catus ग़लत है, ये catus होना चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "तो सही printed रूप है Felis catus, दोनों शब्द italic। हाथ से लिखा रूप है Felis catus, जिसमें दोनों शब्द अलग-अलग underline हों।"
+            },
+            {
+              "seq": 4,
+              "text": "answer का shape ही marks दिलाता है। बताओ कौन सा rule टूटा, फिर corrected नाम पेश करो, और हमेशा उसी form में ख़त्म करो जो question माँगता है।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> दूसरा, एक assertion-reason। Assertion: Mangifera indica Linn. के तीन लिखे components हैं, फिर भी ये binomial nomenclature है। Reason: author का नाम गिना नहीं जाता, ये एक optional citation है।"
+            },
+            {
+              "seq": 6,
+              "text": "assertion सही है। printed entry में सच में तीन लिखे items हैं, Mangifera, indica और Linn. reason भी सही है, binomial सिर्फ़ generic नाम plus specific epithet गिनता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और reason ही ठीक वजह है कि assertion सही है। तीन लिखे items, फिर भी सिर्फ़ दो नाम। तो answer है option one, both true और R explains A।"
+            },
+            {
+              "seq": 8,
+              "text": "इसे साथ ले जाओ। binomial सिर्फ़ genus plus epithet गिनता है। author citation एक optional add-on है जो बताता है किसने पहली बार species describe की, दो-शब्द नाम का हिस्सा कभी नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Biodiversity & Nomenclature",
+      "title": "Worked examples: Brassica names & statement count",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 — the three Brassica names (NEET)"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "svg": "<svg viewBox=\"0 0 460 210\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"230\" y=\"22\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\">Read the FIRST TWO words only</text><g font-size=\"12.5\" font-style=\"italic\"><rect x=\"20\" y=\"40\" width=\"420\" height=\"36\" rx=\"6\" fill=\"#e8f5e9\" stroke=\"#2e7d32\"/><text x=\"30\" y=\"63\" fill=\"#1b5e20\" font-weight=\"bold\">Brassica oleracea</text><text x=\"215\" y=\"63\" fill=\"#555\" font-style=\"normal\">var. capitata &#8212; cabbage</text><rect x=\"20\" y=\"84\" width=\"420\" height=\"36\" rx=\"6\" fill=\"#e8f5e9\" stroke=\"#2e7d32\"/><text x=\"30\" y=\"107\" fill=\"#1b5e20\" font-weight=\"bold\">Brassica oleracea</text><text x=\"215\" y=\"107\" fill=\"#555\" font-style=\"normal\">var. botrytis &#8212; cauliflower</text><rect x=\"20\" y=\"128\" width=\"420\" height=\"36\" rx=\"6\" fill=\"#fff8e1\" stroke=\"#f9a825\"/><text x=\"30\" y=\"151\" fill=\"#b26a00\" font-weight=\"bold\">Brassica nigra</text><text x=\"215\" y=\"151\" fill=\"#555\" font-style=\"normal\">&#8212; black mustard</text></g><text x=\"230\" y=\"192\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0d47a1\">Same genus + species vs same genus only &#8212; the 2nd word fixes species.</text></svg>",
+          "caption": "Compare the first two words of each name"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Cabbage & cauliflower = same species; mustard = same genus only."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Answer 2. Speed-trap: seeing 'Brassica' thrice and rushing to 'all same'.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Example 4 — count the correct statements (NEET)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "A false (systematics is broader); C false (codes swapped)."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 69,
+          "text": "B true (Mayr); D false (tautonyms valid) → only one correct."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 83,
+          "text": "Three of four traps rest on a single reversed word — read every word.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two N E E T problems. Three organisms: Brassica oleracea variety capitata, cabbage; Brassica oleracea variety botrytis, cauliflower; and Brassica nigra, black mustard. Reading the names alone, what is true?"
+            },
+            {
+              "seq": 2,
+              "text": "The trick is to read only the first two words. Put the three names side by side on the board."
+            },
+            {
+              "seq": 3,
+              "text": "Cabbage and cauliflower are both Brassica oleracea; the trailing variety just marks varieties of the same species, so they share genus and species. Black mustard is Brassica nigra, same genus but a different epithet, hence a different species."
+            },
+            {
+              "seq": 4,
+              "text": "So cabbage and cauliflower share genus and species; mustard shares only the genus. The answer is option two. The speed-trap is seeing Brassica three times and rushing to all same species. The second word fixes the species."
+            },
+            {
+              "seq": 5,
+              "text": "Second, a statement count. How many of four are correct? Read each word."
+            },
+            {
+              "seq": 6,
+              "text": "A says systematics is narrower than taxonomy, which is false; systematics is broader, it adds evolutionary relationships. C says I C B N deals with animals and I C Z N with plants, which is false; they are swapped."
+            },
+            {
+              "seq": 7,
+              "text": "B is true, the biological species concept, interbreeding plus fertile offspring, from Mayr. D is false, a tautonym like Rattus rattus is perfectly valid, the words need not differ. So only one statement, B, is correct."
+            },
+            {
+              "seq": 8,
+              "text": "Notice the pattern. Three of the four traps each rest on a single reversed word. The exam rewards students who read every word, not the gist."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो N E E T problems। तीन organisms: Brassica oleracea variety capitata, cabbage; Brassica oleracea variety botrytis, cauliflower; और Brassica nigra, black mustard। सिर्फ़ नाम पढ़कर, क्या सही है?"
+            },
+            {
+              "seq": 2,
+              "text": "trick ये है कि सिर्फ़ पहले दो शब्द पढ़ो। तीनों नामों को board पर साथ-साथ रखो।"
+            },
+            {
+              "seq": 3,
+              "text": "cabbage और cauliflower दोनों Brassica oleracea हैं; आख़िर में लगा variety बस एक ही species की varieties बताता है, तो वे genus और species दोनों साझा करते हैं। black mustard Brassica nigra है, genus वही पर epithet अलग, इसलिए अलग species।"
+            },
+            {
+              "seq": 4,
+              "text": "तो cabbage और cauliflower genus और species साझा करते हैं; mustard सिर्फ़ genus। answer option two है। speed-trap है Brassica तीन बार देखकर all same species की ओर भागना। दूसरा शब्द ही species तय करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा, एक statement count। चार में से कितने सही हैं? हर शब्द पढ़ो।"
+            },
+            {
+              "seq": 6,
+              "text": "A कहता है systematics taxonomy से narrow है, जो false है; systematics broad है, ये evolutionary relationships जोड़ती है। C कहता है I C B N animals से और I C Z N plants से है, जो false है; ये swap हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "B true है, biological species concept, interbreeding plus fertile offspring, Mayr से। D false है, Rattus rattus jaisa tautonym बिलकुल valid है, शब्दों का अलग होना ज़रूरी नहीं। तो सिर्फ़ एक statement, B, सही है।"
+            },
+            {
+              "seq": 8,
+              "text": "pattern देखो। चार में से तीन traps हर एक एक ही उलटे शब्द पर टिके हैं। exam उन students को इनाम देता है जो हर शब्द पढ़ते हैं, सिर्फ़ मतलब नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "tips",
+      "subtopic": "Biodiversity & Nomenclature",
+      "title": "Pitfalls & pro-tips: the four-check name scan",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Four pitfalls, then a fixed scan"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Pitfall 1: capitalisation slip. Genus Capital, species lowercase — always.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Pitfall 2: author confusion. Linn. is Roman, optional, last — never italic.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Pitfall 3: I C B N ↔ I C Z N swap.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "text": "Pitfall 4: inverting taxonomy vs systematics — systematics is broadest.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "svg": "<svg viewBox=\"0 0 430 250\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"215\" y=\"22\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\">Four-check scan for a name</text><g font-size=\"11.5\"><rect x=\"40\" y=\"38\" width=\"350\" height=\"40\" rx=\"6\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"60\" y=\"63\" fill=\"#0d47a1\">1 &#183; Two words, latinised?</text><rect x=\"40\" y=\"86\" width=\"350\" height=\"40\" rx=\"6\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"60\" y=\"111\" fill=\"#0d47a1\">2 &#183; Genus Capital, species lowercase?</text><rect x=\"40\" y=\"134\" width=\"350\" height=\"40\" rx=\"6\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"60\" y=\"159\" fill=\"#0d47a1\">3 &#183; Italic (print) / underlined separately?</text><rect x=\"40\" y=\"182\" width=\"350\" height=\"40\" rx=\"6\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"60\" y=\"207\" fill=\"#0d47a1\">4 &#183; Author in Roman, last, optional?</text></g><text x=\"215\" y=\"240\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#555\">The wrong option almost always fails exactly one check.</text></svg>",
+          "caption": "Four-check scan for any name-error MCQ"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "Scan order: two words? case? italic/underline? author Roman & last?"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "text": "Memory aids: 'Genus Gets the Great capital letter'; 'B in I C B N = Botany'.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This subtopic is low-effort and high-return, so let us seal the leaks. Four pitfalls first, then a fast scan."
+            },
+            {
+              "seq": 2,
+              "text": "Pitfall one, the capitalisation slip. Writing Mangifera Indica or mangifera indica. Genus capital, species lowercase, always. This is the highest-frequency error, and the easiest mark to win or lose."
+            },
+            {
+              "seq": 3,
+              "text": "Pitfall two, author confusion. Treating Linn. as the second word, or italicising it. The author citation is Roman, upright, optional, and sits after the specific epithet."
+            },
+            {
+              "seq": 4,
+              "text": "Pitfall three, the I C B N versus I C Z N swap, the single most-exploited trap in the chapter. I C B N is botanical, plants. I C Z N is zoological, animals."
+            },
+            {
+              "seq": 5,
+              "text": "Pitfall four, which term is bigger. Students invert taxonomy and systematics. Systematics is the broadest, because it includes evolutionary relationships; taxonomy sits inside it."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> And here is the speed weapon for name-error questions."
+            },
+            {
+              "seq": 7,
+              "text": "On any scientific-name-written-incorrectly question, scan in a fixed order. One, two words? Two, genus capital, species small? Three, italic or underlined? Four, author in Roman and last? The wrong option almost always fails exactly one check, so you eliminate in seconds without knowing the organism."
+            },
+            {
+              "seq": 8,
+              "text": "Two memory aids for the hall. Genus gets the great, capital, letter. And the B in I C B N stands for Botany, plants."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये subtopic low-effort और high-return है, तो चलो leaks सील करते हैं। पहले चार pitfalls, फिर एक तेज़ scan।"
+            },
+            {
+              "seq": 2,
+              "text": "pitfall एक, capitalisation slip। Mangifera Indica या mangifera indica लिखना। genus capital, species lowercase, हमेशा। ये सबसे ज़्यादा होने वाली ग़लती है, और जीतने या गँवाने वाला सबसे आसान mark।"
+            },
+            {
+              "seq": 3,
+              "text": "pitfall दो, author confusion। Linn. को दूसरा शब्द समझना, या उसे italic करना। author citation Roman, upright, optional है, और specific epithet के बाद आता है।"
+            },
+            {
+              "seq": 4,
+              "text": "pitfall तीन, I C B N बनाम I C Z N swap, chapter का सबसे ज़्यादा exploit होने वाला trap। I C B N botanical है, plants। I C Z N zoological है, animals।"
+            },
+            {
+              "seq": 5,
+              "text": "pitfall चार, कौन सा term बड़ा है। students taxonomy और systematics को उलट देते हैं। Systematics सबसे broad है, क्योंकि ये evolutionary relationships समेटती है; taxonomy इसके अंदर बैठती है।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> और ये रहा name-error सवालों के लिए speed weapon।"
+            },
+            {
+              "seq": 7,
+              "text": "किसी भी scientific-name-ग़लत-लिखा question पर, एक fixed order में scan करो। एक, दो शब्द? दो, genus capital, species छोटा? तीन, italic या underlined? चार, author Roman और आख़िर में? ग़लत option लगभग हमेशा ठीक एक check fail करता है, तो तुम organism जाने बिना seconds में eliminate कर देते हो।"
+            },
+            {
+              "seq": 8,
+              "text": "exam hall के लिए दो memory aids। Genus gets the great, capital, letter। और I C B N का B Botany, plants के लिए है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "concept",
+      "subtopic": "Taxonomic Hierarchy",
+      "title": "The nested hierarchy and the master trend",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A species never floats alone"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Like house → village → district → state → nation."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "Taxonomic hierarchy = ranked groups, specific at bottom, broad at top."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "svg": "<svg viewBox=\"0 0 460 300\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"230\" y=\"22\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\">The taxonomic ladder (inverted funnel)</text><g stroke=\"#333\" font-size=\"11.5\"><polygon points=\"60,36 400,36 372,68 88,68\" fill=\"#bbdefb\"/><text x=\"230\" y=\"58\" text-anchor=\"middle\" fill=\"#0d47a1\">Kingdom</text><polygon points=\"88,70 372,70 348,102 112,102\" fill=\"#c5cae9\"/><text x=\"230\" y=\"92\" text-anchor=\"middle\" fill=\"#283593\">Phylum / Division</text><polygon points=\"112,104 348,104 324,136 136,136\" fill=\"#c8e6c9\"/><text x=\"230\" y=\"126\" text-anchor=\"middle\" fill=\"#1b5e20\">Class</text><polygon points=\"136,138 324,138 300,170 160,170\" fill=\"#dcedc8\"/><text x=\"230\" y=\"160\" text-anchor=\"middle\" fill=\"#33691e\">Order</text><polygon points=\"160,172 300,172 276,204 184,204\" fill=\"#fff9c4\"/><text x=\"230\" y=\"194\" text-anchor=\"middle\" fill=\"#7c5c00\">Family</text><polygon points=\"184,206 276,206 252,238 208,238\" fill=\"#ffe0b2\"/><text x=\"230\" y=\"228\" text-anchor=\"middle\" fill=\"#b26a00\">Genus</text><polygon points=\"208,240 252,240 240,268 220,268\" fill=\"#ffccbc\"/><text x=\"230\" y=\"260\" text-anchor=\"middle\" fill=\"#bf360c\" font-size=\"10\">Species</text></g><text x=\"42\" y=\"150\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#c62828\" transform=\"rotate(-90 42 150)\">organisms increase &#8593;</text><text x=\"424\" y=\"150\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#2e7d32\" transform=\"rotate(90 424 150)\">common characters increase &#8595;</text><text x=\"230\" y=\"288\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#555\">Seven obligate categories (Linnaeus).</text></svg>",
+          "caption": "Seven ranks: an inverted funnel"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "text": "Master key: higher up → fewer shared characters, larger looser groups."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 61,
+          "text": "Nesting: each level fully contains those below it."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 76,
+          "text": "Reverse fails: sharing a kingdom says little about sharing a genus.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 86,
+          "text": "Seven obligate categories: Species → ... → Kingdom (Linnaeus)."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 97,
+          "text": "Optional intermediates may be inserted, but the seven are always present.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Recall how a scientific name pins an organism down to a single species, the basic unit, defined by free interbreeding and fertile offspring. But a species does not float alone."
+            },
+            {
+              "seq": 2,
+              "text": "Just as you are not only an individual, you belong to a household, in a village, inside a district, within a state, inside India, every species sits nested inside larger and larger groups of relatives."
+            },
+            {
+              "seq": 3,
+              "text": "That is taxonomic hierarchy, the step-wise arrangement of organisms into ranked groups, from the most specific at the bottom to the most all-embracing at the top."
+            },
+            {
+              "seq": 4,
+              "text": "Picture it as an inverted funnel, or a set of nesting steel tiffin boxes. Watch the seven bands on the board."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> Notice what happens as you climb. Two houses on one street share almost everything; two houses merely in the same state might share nothing beyond it. The higher you go, the fewer the common characters and the larger the group. That single trend is the master key."
+            },
+            {
+              "seq": 6,
+              "text": "And the nesting dolls give the second big idea. Each level completely contains every level below it. So if two organisms are in the same family, they are automatically in the same order, class, phylum and kingdom too."
+            },
+            {
+              "seq": 7,
+              "text": "But the reverse is not true. Sharing a kingdom says almost nothing about sharing a genus. Downward membership forces upward membership, never the other way."
+            },
+            {
+              "seq": 8,
+              "text": "There are seven obligate, that is compulsory, categories forming the backbone: species, genus, family, order, class, phylum or division, and kingdom. The whole system was introduced by Linnaeus."
+            },
+            {
+              "seq": 9,
+              "text": "Between these seven, biologists may insert optional intermediate categories when a group is large, like sub-class, super-class, tribe or sub-species. But the seven obligate ranks are always present."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "याद करो कि एक scientific नाम एक organism को एक single species तक पिन कर देता है, basic unit, जो free interbreeding और fertile offspring से define होती है। पर एक species अकेली नहीं तैरती।"
+            },
+            {
+              "seq": 2,
+              "text": "जैसे तुम सिर्फ़ एक individual नहीं, तुम एक household के हो, एक गाँव में, एक district के अंदर, एक राज्य में, India के अंदर, वैसे ही हर species रिश्तेदारों के बड़े और बड़े groups में nested बैठती है।"
+            },
+            {
+              "seq": 3,
+              "text": "यही taxonomic hierarchy है, organisms का ranked groups में step-wise जमाव, सबसे specific नीचे से सबसे all-embracing ऊपर तक।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे एक inverted funnel jaisa सोचो, या nesting steel tiffin boxes का set। board पर सातों bands देखो।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> देखो ऊपर चढ़ते वक़्त क्या होता है। एक ही street के दो घर लगभग सब कुछ साझा करते हैं; एक ही राज्य के दो घर शायद उसके अलावा कुछ भी नहीं। जितना ऊपर जाओ, उतने कम common characters और उतना बड़ा group। यही एक trend master key है।"
+            },
+            {
+              "seq": 6,
+              "text": "और nesting dolls दूसरा बड़ा idea देते हैं। हर level अपने नीचे के हर level को पूरी तरह contain करता है। तो अगर दो organisms एक ही family में हैं, वे अपने आप एक ही order, class, phylum और kingdom में भी हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "पर उल्टा सही नहीं। एक kingdom साझा करना genus साझा करने के बारे में लगभग कुछ नहीं बताता। नीचे की membership ऊपर की membership को मजबूर करती है, कभी उल्टा नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "सात obligate, यानी compulsory, categories इस ढाँचे की रीढ़ बनाती हैं: species, genus, family, order, class, phylum या division, और kingdom। पूरा system Linnaeus ने introduce किया।"
+            },
+            {
+              "seq": 9,
+              "text": "इन सातों के बीच, biologists बड़े group के लिए optional intermediate categories डाल सकते हैं, जैसे sub-class, super-class, tribe या sub-species। पर सातों obligate ranks हमेशा मौजूद रहती हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "concept",
+      "subtopic": "Taxonomic Hierarchy",
+      "title": "The seven ranks, defined",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Naming and defining the seven ranks"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "svg": "<svg viewBox=\"0 0 440 280\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"220\" y=\"22\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\">Seven obligate categories</text><g font-size=\"12.5\"><rect x=\"130\" y=\"36\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#bbdefb\" stroke=\"#1565c0\"/><text x=\"220\" y=\"56\" text-anchor=\"middle\" fill=\"#0d47a1\">Kingdom</text><rect x=\"130\" y=\"70\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#c5cae9\" stroke=\"#3949ab\"/><text x=\"220\" y=\"90\" text-anchor=\"middle\" fill=\"#283593\">Phylum / Division</text><rect x=\"130\" y=\"104\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#c8e6c9\" stroke=\"#2e7d32\"/><text x=\"220\" y=\"124\" text-anchor=\"middle\" fill=\"#1b5e20\">Class</text><rect x=\"130\" y=\"138\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#dcedc8\" stroke=\"#558b2f\"/><text x=\"220\" y=\"158\" text-anchor=\"middle\" fill=\"#33691e\">Order</text><rect x=\"130\" y=\"172\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#fff9c4\" stroke=\"#f9a825\"/><text x=\"220\" y=\"192\" text-anchor=\"middle\" fill=\"#7c5c00\">Family</text><rect x=\"130\" y=\"206\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#ffe0b2\" stroke=\"#ef6c00\"/><text x=\"220\" y=\"226\" text-anchor=\"middle\" fill=\"#b26a00\">Genus</text><rect x=\"130\" y=\"240\" width=\"180\" height=\"30\" rx=\"5\" fill=\"#ffccbc\" stroke=\"#d84315\"/><text x=\"220\" y=\"260\" text-anchor=\"middle\" fill=\"#bf360c\">Species (basic unit)</text></g><text x=\"64\" y=\"52\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#555\">broad</text><text x=\"64\" y=\"258\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#555\">specific</text><text x=\"376\" y=\"216\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"#b26a00\">mono = 1 sp.</text><text x=\"376\" y=\"230\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"#b26a00\">poly = &#8805;2 sp.</text></svg>",
+          "caption": "The seven obligate categories, species to kingdom"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "Species: basic unit; interbreed + fertile; maximum shared characters."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Genus: closely related species from a common ancestor."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "text": "Monotypic = one species (Homo); polytypic = ≥2 (Panthera, Solanum).",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "text": "Family → Order → Class: each groups the one below."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Phylum (Cuvier) / Division (Eichler) → Kingdom (all phyla)."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 77,
+          "text": "Preview: category = abstract rank; taxon = the real group."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 90,
+          "text": "Up (species→kingdom): common characters ↓, number of organisms ↑.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us name and define the seven ranks, lowest to highest. These definitions are the currency of the subtopic; distractors tamper with a single phrase."
+            },
+            {
+              "seq": 2,
+              "text": "Here is the full ladder on the board, from species at the bottom to kingdom at the top."
+            },
+            {
+              "seq": 3,
+              "text": "Species is the lowest, basic unit, organisms that interbreed freely and produce fertile offspring, sharing a common gene pool. Its members share the maximum number of characters."
+            },
+            {
+              "seq": 4,
+              "text": "Genus is a group of closely related species that descend from a common ancestor and share certain common characters. It is the first category above species."
+            },
+            {
+              "seq": 5,
+              "text": "A key split. A monotypic genus contains a single species, like Homo, with Homo sapiens. A polytypic genus contains two or more, like Panthera with lion, tiger and leopard, or Solanum with potato, tomato and brinjal."
+            },
+            {
+              "seq": 6,
+              "text": "Moving up, a family is a group of related genera. An order is an assemblage of related families with still fewer shared characters. A class is a group of related orders."
+            },
+            {
+              "seq": 7,
+              "text": "Above class comes phylum in animals, coined by Cuvier, and division in plants, coined by Eichler, each a group of related classes. And the kingdom is the highest and broadest, the assemblage of all phyla or divisions."
+            },
+            {
+              "seq": 8,
+              "text": "One preview to hold. A category is the abstract rank, like class or division. A taxon is the real group of organisms occupying that rank, like Mammalia or Bryophyta. We will nail this distinction shortly."
+            },
+            {
+              "seq": 9,
+              "text": "And the two governing trends, one each way. As we ascend from species to kingdom, the number of common characters decreases, while the number of organisms and the size of the group increases, and kinship grows more distant."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो सातों ranks को नाम देकर define करते हैं, नीचे से ऊपर। ये definitions इस subtopic की currency हैं; distractors एक ही phrase से छेड़छाड़ करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "board पर पूरी ladder, नीचे species से ऊपर kingdom तक।"
+            },
+            {
+              "seq": 3,
+              "text": "Species सबसे नीचे, basic unit है, ऐसे organisms जो free interbreed करें और fertile offspring दें, एक common gene pool साझा करते हुए। इसके members सबसे ज़्यादा characters साझा करते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Genus उन closely related species का group है जो एक common ancestor से आती हैं और कुछ common characters साझा करती हैं। ये species के ठीक ऊपर वाली पहली category है।"
+            },
+            {
+              "seq": 5,
+              "text": "एक key split। एक monotypic genus में एक ही species होती है, जैसे Homo, Homo sapiens के साथ। एक polytypic genus में दो या ज़्यादा, जैसे Panthera — lion, tiger और leopard, या Solanum — potato, tomato और brinjal।"
+            },
+            {
+              "seq": 6,
+              "text": "ऊपर बढ़ते हुए, एक family related genera का group है। एक order related families का जमघट है, और भी कम साझा characters के साथ। एक class related orders का group है।"
+            },
+            {
+              "seq": 7,
+              "text": "class के ऊपर animals में phylum आता है, जो Cuvier ने गढ़ा, और plants में division, जो Eichler ने गढ़ा, हर एक related classes का group। और kingdom सबसे ऊँची और broadest है, सारे phyla या divisions का जमघट।"
+            },
+            {
+              "seq": 8,
+              "text": "एक preview पकड़ो। एक category abstract rank है, जैसे class या division। एक taxon उस rank पर बैठे organisms का असली group है, जैसे Mammalia या Bryophyta। ये फ़र्क़ हम जल्द पक्का करेंगे।"
+            },
+            {
+              "seq": 9,
+              "text": "और दो governing trends, हर दिशा में एक। जैसे-जैसे हम species से kingdom की ओर चढ़ते हैं, common characters की संख्या घटती है, जबकि organisms की संख्या और group का आकार बढ़ता है, और रिश्ता ज़्यादा दूर होता जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "concept",
+      "subtopic": "Taxonomic Hierarchy",
+      "title": "Reading the ladder: containment and inference",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Read the ladder in both directions"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Up: bigger, fewer characters. Down: tighter, more characters."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "svg": "<svg viewBox=\"0 0 380 280\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"190\" y=\"22\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\">Containment: nesting boxes</text><rect x=\"20\" y=\"34\" width=\"340\" height=\"238\" rx=\"8\" fill=\"#e3f2fd\" stroke=\"#1565c0\"/><text x=\"190\" y=\"50\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0d47a1\">Kingdom</text><rect x=\"42\" y=\"58\" width=\"296\" height=\"206\" rx=\"8\" fill=\"#e8eaf6\" stroke=\"#3949ab\"/><text x=\"190\" y=\"74\" text-anchor=\"middle\" font-size=\"11\" fill=\"#283593\">Phylum</text><rect x=\"64\" y=\"82\" width=\"252\" height=\"174\" rx=\"8\" fill=\"#e8f5e9\" stroke=\"#2e7d32\"/><text x=\"190\" y=\"98\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b5e20\">Class</text><rect x=\"86\" y=\"106\" width=\"208\" height=\"142\" rx=\"8\" fill=\"#f1f8e9\" stroke=\"#558b2f\"/><text x=\"190\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" fill=\"#33691e\">Order</text><rect x=\"108\" y=\"130\" width=\"164\" height=\"110\" rx=\"8\" fill=\"#fff9c4\" stroke=\"#f9a825\"/><text x=\"190\" y=\"146\" text-anchor=\"middle\" font-size=\"11\" fill=\"#7c5c00\">Family</text><rect x=\"130\" y=\"154\" width=\"120\" height=\"78\" rx=\"8\" fill=\"#ffe0b2\" stroke=\"#ef6c00\"/><text x=\"190\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" fill=\"#b26a00\">Genus</text><rect x=\"152\" y=\"178\" width=\"76\" height=\"46\" rx=\"6\" fill=\"#ffccbc\" stroke=\"#d84315\"/><text x=\"190\" y=\"205\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#bf360c\">Species</text><text x=\"190\" y=\"288\" text-anchor=\"middle\" font-size=\"0\" fill=\"#fff\">.</text></svg>",
+          "caption": "Every higher category wraps around the lower ones"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Containment: you can't be in an inner box without every box around it."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Downward implies upward: same lower category ⇒ share all higher.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Same family → guaranteed same order, class, phylum, kingdom."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "But same order need NOT mean same family — never reverse it."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 67,
+          "text": "This inference is a favourite N E E T question — answer in seconds.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now learn to read the ladder in both directions, because the exam tests the reading, not just the list."
+            },
+            {
+              "seq": 2,
+              "text": "Going up from species to kingdom, groups get bigger, shared characters get fewer, relationships more distant. Going down from kingdom to species, groups get smaller and tighter, characters multiply, relationships get closer."
+            },
+            {
+              "seq": 3,
+              "text": "The reason sits in these nesting boxes. Watch how each rank wraps completely around the one inside it."
+            },
+            {
+              "seq": 4,
+              "text": "This is containment. Every higher category fully contains the lower ones, exactly like the nesting dolls. You cannot be in an inner box without also being in every box that surrounds it."
+            },
+            {
+              "seq": 5,
+              "text": "So the golden inference. If two organisms belong to the same lower category, they must share every higher category too. Downward membership forces upward membership."
+            },
+            {
+              "seq": 6,
+              "text": "Concretely, two animals in the same family are guaranteed to be in the same order, class, phylum and kingdom. That is certain, no exceptions."
+            },
+            {
+              "seq": 7,
+              "text": "But the reverse fails. Two animals in the same order need not be in the same family. Always reason downward implies upward, never upward implies downward."
+            },
+            {
+              "seq": 8,
+              "text": "And this is a favourite N E E T question. Give the ranks once, find the lowest category two organisms share, and everything above is automatically shared. You answer in seconds."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब ladder को दोनों दिशाओं में पढ़ना सीखो, क्योंकि exam पढ़ाई को test करता है, सिर्फ़ list को नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "species से kingdom की ओर ऊपर जाते हुए, groups बड़े होते हैं, साझा characters कम, रिश्ते दूर। kingdom से species की ओर नीचे जाते हुए, groups छोटे और घने होते हैं, characters बढ़ते हैं, रिश्ते करीब।"
+            },
+            {
+              "seq": 3,
+              "text": "वजह इन nesting boxes में है। देखो कैसे हर rank अपने अंदर वाली को पूरी तरह लपेटती है।"
+            },
+            {
+              "seq": 4,
+              "text": "यही containment है। हर higher category निचली वालों को पूरी तरह contain करती है, बिलकुल nesting dolls jaise। तुम किसी inner box में नहीं हो सकते बिना उन सारे boxes में हुए जो तुम्हें घेरे हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "तो golden inference। अगर दो organisms एक ही निचली category में हैं, तो उन्हें हर higher category भी साझा करनी पड़ेगी। नीचे की membership ऊपर की membership को मजबूर करती है।"
+            },
+            {
+              "seq": 6,
+              "text": "ठोस रूप में, एक ही family के दो animals पक्के तौर पर एक ही order, class, phylum और kingdom में होंगे। ये निश्चित है, कोई exception नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "पर उल्टा fail करता है। एक ही order के दो animals ज़रूरी नहीं कि एक ही family में हों। हमेशा सोचो downward implies upward, कभी upward implies downward नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "और ये एक favourite N E E T question है। ranks एक बार लिख लो, दो organisms जो सबसे निचली category साझा करते हैं वो ढूँढो, और उसके ऊपर सब अपने आप साझा। तुम seconds में answer दे देते हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 20,
+      "section_type": "concept",
+      "subtopic": "Taxonomic Hierarchy",
+      "title": "Classifying an organism and Table 1.1",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Build the address from the inside out"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "svg": "<svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"150\" y=\"22\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\">Housefly climbs the ladder</text><g font-size=\"12\"><rect x=\"40\" y=\"34\" width=\"220\" height=\"30\" rx=\"5\" fill=\"#bbdefb\" stroke=\"#1565c0\"/><text x=\"150\" y=\"54\" text-anchor=\"middle\" fill=\"#0d47a1\">Animalia</text><rect x=\"40\" y=\"70\" width=\"220\" height=\"30\" rx=\"5\" fill=\"#c5cae9\" stroke=\"#3949ab\"/><text x=\"150\" y=\"90\" text-anchor=\"middle\" fill=\"#283593\">Arthropoda</text><rect x=\"40\" y=\"106\" width=\"220\" height=\"30\" rx=\"5\" fill=\"#c8e6c9\" stroke=\"#2e7d32\"/><text x=\"150\" y=\"126\" text-anchor=\"middle\" fill=\"#1b5e20\">Insecta</text><rect x=\"40\" y=\"142\" width=\"220\" height=\"30\" rx=\"5\" fill=\"#dcedc8\" stroke=\"#558b2f\"/><text x=\"150\" y=\"162\" text-anchor=\"middle\" fill=\"#33691e\">Diptera</text><rect x=\"40\" y=\"178\" width=\"220\" height=\"30\" rx=\"5\" fill=\"#fff9c4\" stroke=\"#f9a825\"/><text x=\"150\" y=\"198\" text-anchor=\"middle\" fill=\"#7c5c00\">Muscidae</text><rect x=\"40\" y=\"214\" width=\"220\" height=\"30\" rx=\"5\" fill=\"#ffe0b2\" stroke=\"#ef6c00\"/><text x=\"150\" y=\"234\" text-anchor=\"middle\" fill=\"#b26a00\">Musca</text><rect x=\"40\" y=\"250\" width=\"220\" height=\"30\" rx=\"5\" fill=\"#ffccbc\" stroke=\"#d84315\"/><text x=\"150\" y=\"270\" text-anchor=\"middle\" font-style=\"italic\" fill=\"#bf360c\">Musca domestica</text></g></svg>",
+          "caption": "Housefly: Musca domestica up to Animalia"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Musca domestica → genus Musca → family Muscidae."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "→ order Diptera → class Insecta → phylum Arthropoda → kingdom Animalia."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Top-down: Animalia → Arthropoda → ... → M. domestica."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "text": "For a plant, say Division instead of Phylum.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Memorise NCERT Table 1.1: Man, Housefly, Mango, Wheat."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "Man: Homo/Hominidae/Primata/Mammalia/Chordata."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 68,
+          "text": "Mango & Wheat split at Class (Dicot/Monocot) yet share Division Angiospermae.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the recipe to classify any organism. Build its address from the inside out, starting at the species."
+            },
+            {
+              "seq": 2,
+              "text": "Let us do it with the common housefly, climbing the ladder on the board."
+            },
+            {
+              "seq": 3,
+              "text": "Start at the species, Musca domestica. The genus is the first word, Musca. Group related genera into the family, Muscidae."
+            },
+            {
+              "seq": 4,
+              "text": "Group related families into the order, Diptera, the true two-winged flies. Group related orders into the class, Insecta. Group related classes into the phylum, Arthropoda. And the broadest box, the kingdom, is Animalia."
+            },
+            {
+              "seq": 5,
+              "text": "Read it back top-down and you get the full hierarchy: Animalia, then Arthropoda, Insecta, Diptera, Muscidae, Musca, and finally Musca domestica."
+            },
+            {
+              "seq": 6,
+              "text": "The procedure is identical for a plant, with one change. You say division instead of phylum for that rank between class and kingdom."
+            },
+            {
+              "seq": 7,
+              "text": "Now the must-memorise reference, N C E R T Table one point one. Four organisms recur constantly, so learn each complete lineage: Man, Housefly, Mango and Wheat."
+            },
+            {
+              "seq": 8,
+              "text": "For Man, it is Homo, Hominidae, Primata, Mammalia, Chordata. For Mango, Mangifera, Anacardiaceae, Sapindales, Dicotyledonae, Angiospermae. Animals use phylum, plants use division."
+            },
+            {
+              "seq": 9,
+              "text": "And a lovely comparison. Mango and wheat split at the class level, Dicotyledonae versus Monocotyledonae, yet they share the very same division, Angiospermae. Reading a column compares the same rank across organisms."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "किसी भी organism को classify करने की recipe। इसका address अंदर से बाहर बनाओ, species से शुरू करके।"
+            },
+            {
+              "seq": 2,
+              "text": "चलो इसे common housefly के साथ करते हैं, board पर ladder चढ़ते हुए।"
+            },
+            {
+              "seq": 3,
+              "text": "species से शुरू करो, Musca domestica। genus पहला शब्द है, Musca। related genera को family में जमाओ, Muscidae।"
+            },
+            {
+              "seq": 4,
+              "text": "related families को order में जमाओ, Diptera, असली दो-पंख वाली मक्खियाँ। related orders को class में, Insecta। related classes को phylum में, Arthropoda। और सबसे बड़ा box, kingdom, है Animalia।"
+            },
+            {
+              "seq": 5,
+              "text": "इसे ऊपर से नीचे पढ़ो और पूरी hierarchy मिलती है: Animalia, फिर Arthropoda, Insecta, Diptera, Muscidae, Musca, और आख़िर में Musca domestica।"
+            },
+            {
+              "seq": 6,
+              "text": "यही procedure एक plant के लिए भी वैसा ही है, बस एक बदलाव। class और kingdom के बीच वाली उस rank के लिए तुम phylum की जगह division कहते हो।"
+            },
+            {
+              "seq": 7,
+              "text": "अब must-memorise reference, N C E R T Table one point one। चार organisms बार-बार आते हैं, तो हर एक की पूरी lineage सीखो: Man, Housefly, Mango और Wheat।"
+            },
+            {
+              "seq": 8,
+              "text": "Man के लिए, ये है Homo, Hominidae, Primata, Mammalia, Chordata। Mango के लिए, Mangifera, Anacardiaceae, Sapindales, Dicotyledonae, Angiospermae। animals phylum use करते हैं, plants division।"
+            },
+            {
+              "seq": 9,
+              "text": "और एक प्यारी comparison। Mango और wheat class level पर बँटते हैं, Dicotyledonae बनाम Monocotyledonae, फिर भी वे बिलकुल एक ही division साझा करते हैं, Angiospermae। एक column पढ़ना अलग organisms में एक ही rank की तुलना करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 21,
+      "section_type": "concept",
+      "subtopic": "Taxonomic Hierarchy",
+      "title": "Taxon vs category, and phylum vs division",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The abstract-or-concrete test"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "svg": "<svg viewBox=\"0 0 460 220\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"230\" y=\"22\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\">Category vs Taxon</text><rect x=\"24\" y=\"42\" width=\"204\" height=\"150\" rx=\"8\" fill=\"#e3f2fd\" stroke=\"#1565c0\" stroke-width=\"2\"/><text x=\"126\" y=\"64\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0d47a1\">CATEGORY</text><text x=\"126\" y=\"82\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0d47a1\">the rank / shelf-label (abstract)</text><rect x=\"52\" y=\"96\" width=\"148\" height=\"26\" rx=\"4\" fill=\"#fff\" stroke=\"#1565c0\"/><text x=\"126\" y=\"114\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#0d47a1\">Class</text><rect x=\"52\" y=\"128\" width=\"148\" height=\"26\" rx=\"4\" fill=\"#fff\" stroke=\"#1565c0\"/><text x=\"126\" y=\"146\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#0d47a1\">Division</text><text x=\"126\" y=\"178\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#555\">a level, no organisms attached</text><rect x=\"232\" y=\"42\" width=\"204\" height=\"150\" rx=\"8\" fill=\"#e8f5e9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"334\" y=\"64\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b5e20\">TAXON</text><text x=\"334\" y=\"82\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#1b5e20\">the real group / box (concrete)</text><rect x=\"260\" y=\"96\" width=\"148\" height=\"26\" rx=\"4\" fill=\"#fff\" stroke=\"#2e7d32\"/><text x=\"334\" y=\"114\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b5e20\">Mammalia</text><rect x=\"260\" y=\"128\" width=\"148\" height=\"26\" rx=\"4\" fill=\"#fff\" stroke=\"#2e7d32\"/><text x=\"334\" y=\"146\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b5e20\">Bryophyta</text><text x=\"334\" y=\"178\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#555\">organisms you could point to</text></svg>",
+          "caption": "Category = the shelf label; taxon = the real box"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Category = a rank with no organisms attached (Order, Class) — abstract."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "text": "Taxon = a real group you can point to (Mammalia, Bryophyta) — concrete."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Mnemonic: category = catalogue heading; taxon = the taxa filed under it.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "Phylum vs Division: same rank between Class and Kingdom."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "Phylum = animals (Cuvier); Division = plants (Eichler)."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 65,
+          "text": "'Phylum in animals ≡ which plant level?' → simply Division.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two terms examiners deliberately blur: taxon and category. The fix is a quick abstract-or-concrete test."
+            },
+            {
+              "seq": 2,
+              "text": "Put them side by side on the board, a shelf label against a real box."
+            },
+            {
+              "seq": 3,
+              "text": "A category is a rank or level with no organisms attached, like order, class or division. It is abstract, just the label on the shelf."
+            },
+            {
+              "seq": 4,
+              "text": "A taxon is an actual group you could in principle point to, like Mammalia, Bryophyta or Solanaceae. It is concrete, real biological objects, the box sitting on the shelf."
+            },
+            {
+              "seq": 5,
+              "text": "So the mnemonic. The category is the catalogue heading; the taxon is the real taxa filed under it. When a question hands you a term, ask, is this a level, or a group of real organisms?"
+            },
+            {
+              "seq": 6,
+              "text": "Now the second trap in this pair. Phylum and division are the same rank, the one between class and kingdom, just named differently per kingdom."
+            },
+            {
+              "seq": 7,
+              "text": "Phylum is the animal name, coined by Cuvier. Division is the plant name, coined by Eichler. Same level, two labels."
+            },
+            {
+              "seq": 8,
+              "text": "So if a question asks, phylum in animals is equivalent to which level in plants, it is simply asking you to answer division. Nothing more."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो terms जिन्हें examiners जानबूझकर धुँधला करते हैं: taxon और category। fix है एक झटपट abstract-या-concrete test।"
+            },
+            {
+              "seq": 2,
+              "text": "इन्हें board पर साथ रखो, एक shelf label बनाम एक असली box।"
+            },
+            {
+              "seq": 3,
+              "text": "एक category एक rank या level है जिससे कोई organisms जुड़े नहीं, जैसे order, class या division। ये abstract है, बस shelf पर लगा label।"
+            },
+            {
+              "seq": 4,
+              "text": "एक taxon असल में एक ऐसा group है जिसकी ओर तुम इशारा कर सको, जैसे Mammalia, Bryophyta या Solanaceae। ये concrete है, असली biological objects, shelf पर रखा box।"
+            },
+            {
+              "seq": 5,
+              "text": "तो mnemonic। category catalogue heading है; taxon उसके नीचे रखी असली taxa। जब कोई question तुम्हें एक term दे, पूछो, ये एक level है, या असली organisms का group?"
+            },
+            {
+              "seq": 6,
+              "text": "अब इस जोड़ी का दूसरा trap। phylum और division एक ही rank हैं, class और kingdom के बीच वाली, बस हर kingdom में अलग नाम से।"
+            },
+            {
+              "seq": 7,
+              "text": "Phylum animals का नाम है, Cuvier ने गढ़ा। Division plants का नाम है, Eichler ने गढ़ा। एक ही level, दो labels।"
+            },
+            {
+              "seq": 8,
+              "text": "तो अगर कोई question पूछे, animals में phylum plants की किस level के बराबर है, तो वो बस तुमसे division कहलवाना चाहता है। इससे ज़्यादा कुछ नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 22,
+      "section_type": "worked_examples",
+      "subtopic": "Taxonomic Hierarchy",
+      "title": "Worked examples: arrange the ranks & the containment A-R",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 — arrange the categories (CBSE)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "text": "Order: Species, Genus, Family, Order, Class, Phylum, Kingdom."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Classic slip: family and order the wrong way round."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Then the trend: toward kingdom, common characters decrease.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "text": "Example 2 — assertion-reason (CBSE HOTS)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "A true; R states containment and is true."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 62,
+          "text": "R explains A → option 1."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "text": "Wrong move = option 3: R is the mechanism, not a mere restatement.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two problems on the hierarchy. First, arrange these categories from lowest to highest and state what happens to shared characters: Class, Species, Family, Kingdom, Genus, Order, Phylum."
+            },
+            {
+              "seq": 2,
+              "text": "Sort them against the fixed seven-rank ladder. The correct order, lowest to highest, is species, genus, family, order, class, phylum, kingdom."
+            },
+            {
+              "seq": 3,
+              "text": "The classic slip here is placing family and order the wrong way round. Lock family, then order, and the rest falls into place."
+            },
+            {
+              "seq": 4,
+              "text": "Then the second half of the answer. As we move from species towards kingdom, the number of common characters decreases, while the number of organisms in each group increases. Write the sequence, then state that trend."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> Second, an assertion-reason. Assertion: two insects in the same order are certain to be in the same class. Reason: a class is a higher category that contains its orders."
+            },
+            {
+              "seq": 6,
+              "text": "The assertion is true. Class is above order, and by the containment principle, sharing the lower category guarantees sharing the higher one that surrounds it."
+            },
+            {
+              "seq": 7,
+              "text": "The reason states exactly that containment logic and is itself true, and it is the correct explanation of the assertion. So the answer is option one."
+            },
+            {
+              "seq": 8,
+              "text": "The instinctive wrong move is option three, where students feel the reason is just a restatement. It is not, it is the actual mechanism. Ask whether the reason explains, not just repeats."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "hierarchy पर दो problems। पहला, इन categories को नीचे से ऊपर जमाओ और बताओ shared characters का क्या होता है: Class, Species, Family, Kingdom, Genus, Order, Phylum।"
+            },
+            {
+              "seq": 2,
+              "text": "इन्हें fixed सात-rank ladder के सामने रखो। सही order, नीचे से ऊपर, है species, genus, family, order, class, phylum, kingdom।"
+            },
+            {
+              "seq": 3,
+              "text": "यहाँ classic slip है family और order को उल्टा रख देना। family, फिर order पक्का कर लो, बाक़ी अपने आप जम जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "फिर answer का दूसरा हिस्सा। जैसे-जैसे हम species से kingdom की ओर बढ़ते हैं, common characters की संख्या घटती है, जबकि हर group में organisms की संख्या बढ़ती है। sequence लिखो, फिर वो trend बताओ।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> दूसरा, एक assertion-reason। Assertion: एक ही order के दो insects पक्के तौर पर एक ही class में होंगे। Reason: class एक higher category है जो अपने orders को contain करती है।"
+            },
+            {
+              "seq": 6,
+              "text": "assertion सही है। class order के ऊपर है, और containment principle से, निचली category साझा करना उस higher वाली को साझा करना guarantee करता है जो उसे घेरे है।"
+            },
+            {
+              "seq": 7,
+              "text": "reason ठीक वही containment logic बताता है और खुद सही है, और assertion की सही explanation है। तो answer option one है।"
+            },
+            {
+              "seq": 8,
+              "text": "instinctive ग़लत move option three है, जहाँ students को लगता है reason बस restatement है। ऐसा नहीं, ये असली mechanism है। पूछो कि reason explain करता है या बस दोहराता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 23,
+      "section_type": "worked_examples",
+      "subtopic": "Taxonomic Hierarchy",
+      "title": "Worked examples: monotypic vs polytypic & statement count",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 — Corvus vs Pavo (NEET)"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "svg": "<svg viewBox=\"0 0 460 220\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"230\" y=\"22\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\">Monotypic vs Polytypic genus</text><rect x=\"24\" y=\"40\" width=\"204\" height=\"160\" rx=\"8\" fill=\"#e8f5e9\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"126\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" font-style=\"italic\" fill=\"#1b5e20\">Corvus</text><text x=\"126\" y=\"80\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b5e20\">POLYtypic (&#8805; 2 species)</text><text x=\"126\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" fill=\"#14532d\">house crow</text><text x=\"126\" y=\"130\" text-anchor=\"middle\" font-size=\"11\" fill=\"#14532d\">jungle crow</text><text x=\"126\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" fill=\"#14532d\">raven</text><text x=\"126\" y=\"184\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#555\">three species</text><rect x=\"232\" y=\"40\" width=\"204\" height=\"160\" rx=\"8\" fill=\"#e3f2fd\" stroke=\"#1565c0\" stroke-width=\"2\"/><text x=\"334\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" font-style=\"italic\" fill=\"#0d47a1\">Pavo</text><text x=\"334\" y=\"80\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0d47a1\">MONOtypic (one species)</text><text x=\"334\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0d47a1\">peafowl</text><text x=\"334\" y=\"184\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#555\">single species</text></svg>",
+          "caption": "Corvus (polytypic) vs Pavo (monotypic)"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Corvus = 3 species (polytypic); Pavo = 1 (monotypic)."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Answer 2. Speed-trap: blurring the prefixes mono (one) and poly (many).",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "text": "Example 4 — count the correct statements (NEET)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "A, C, D true — trend, obligate-plus-intermediates, phylum ≡ division."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "text": "B false: 'Family' is the category, 'Felidae' is the taxon → three correct."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 71,
+          "text": "The whole difficulty is spotting the single reversed pair in B.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two N E E T problems. The genus Corvus includes the house crow, the jungle crow and the raven, while the genus Pavo, the peafowl, includes only a single species. Which is monotypic, which polytypic?"
+            },
+            {
+              "seq": 2,
+              "text": "Put the two genera side by side and count species."
+            },
+            {
+              "seq": 3,
+              "text": "Corvus has three species, so it is polytypic. Pavo has one species, so it is monotypic."
+            },
+            {
+              "seq": 4,
+              "text": "Monotypic means one species, polytypic means two or more. So the answer is option two. The speed-trap is the lookalike prefixes, mono for one and poly for many. Students who blur them flip the answer."
+            },
+            {
+              "seq": 5,
+              "text": "Second, a statement count. How many of four are correct? Read carefully."
+            },
+            {
+              "seq": 6,
+              "text": "A is true, going from kingdom down to species the number of organisms in a taxon decreases while shared characters increase. C is true, there are seven obligate categories with intermediates like sub-class allowed. D is true, phylum in animals equals division in plants."
+            },
+            {
+              "seq": 7,
+              "text": "B is false, and it is reversed. Family is the category, the rank, while Felidae is the taxon, the real group. So three statements, A, C and D, are correct."
+            },
+            {
+              "seq": 8,
+              "text": "The whole difficulty sits in spotting that single reversed pair in B. Master the category-versus-taxon distinction and this question is a gift."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो N E E T problems। genus Corvus में house crow, jungle crow और raven हैं, जबकि genus Pavo, peafowl, में सिर्फ़ एक species है। कौन monotypic है, कौन polytypic?"
+            },
+            {
+              "seq": 2,
+              "text": "दोनों genera को साथ रखो और species गिनो।"
+            },
+            {
+              "seq": 3,
+              "text": "Corvus में तीन species हैं, तो ये polytypic है। Pavo में एक species है, तो ये monotypic है।"
+            },
+            {
+              "seq": 4,
+              "text": "Monotypic का मतलब एक species, polytypic का मतलब दो या ज़्यादा। तो answer option two है। speed-trap है मिलते-जुलते prefixes, mono यानी एक और poly यानी बहुत। जो इन्हें धुँधला कर देते हैं वे answer उल्टा कर देते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा, एक statement count। चार में से कितने सही हैं? ध्यान से पढ़ो।"
+            },
+            {
+              "seq": 6,
+              "text": "A true है, kingdom से नीचे species तक एक taxon में organisms की संख्या घटती है जबकि shared characters बढ़ते हैं। C true है, सात obligate categories हैं, sub-class jaise intermediates allowed। D true है, animals में phylum plants में division के बराबर।"
+            },
+            {
+              "seq": 7,
+              "text": "B false है, और ये उल्टा है। Family category है, rank, जबकि Felidae taxon है, असली group। तो तीन statements, A, C और D, सही हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "पूरी मुश्किल B में उस एक उल्टी जोड़ी को पकड़ने में है। category-बनाम-taxon फ़र्क़ पक्का कर लो और ये question एक तोहफ़ा है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 24,
+      "section_type": "tips",
+      "subtopic": "Taxonomic Hierarchy",
+      "title": "Pitfalls & pro-tips: King Philip and the containment rule",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Four traps to nail the hierarchy"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "text": "Trap 1: Family ↔ Order swap — correct is Family then Order.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "text": "Trap 2: Mammalia is a taxon; Class is the category.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Trap 3: mono/poly flip — monotypic = one, polytypic = many.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Trap 4: reversing the master trend as you ascend.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "svg": "<svg viewBox=\"0 0 440 230\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"sans-serif\"><text x=\"220\" y=\"22\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\">Mnemonic + downward-implies-upward</text><g font-size=\"12\"><text x=\"30\" y=\"56\" fill=\"#1565c0\" font-weight=\"bold\">King</text><text x=\"120\" y=\"56\" fill=\"#555\">Kingdom</text><text x=\"30\" y=\"80\" fill=\"#1565c0\" font-weight=\"bold\">Philip</text><text x=\"120\" y=\"80\" fill=\"#555\">Phylum</text><text x=\"30\" y=\"104\" fill=\"#1565c0\" font-weight=\"bold\">Came</text><text x=\"120\" y=\"104\" fill=\"#555\">Class</text><text x=\"30\" y=\"128\" fill=\"#1565c0\" font-weight=\"bold\">Over</text><text x=\"120\" y=\"128\" fill=\"#555\">Order</text><text x=\"30\" y=\"152\" fill=\"#1565c0\" font-weight=\"bold\">For</text><text x=\"120\" y=\"152\" fill=\"#555\">Family</text><text x=\"30\" y=\"176\" fill=\"#1565c0\" font-weight=\"bold\">Good</text><text x=\"120\" y=\"176\" fill=\"#555\">Genus</text><text x=\"30\" y=\"200\" fill=\"#1565c0\" font-weight=\"bold\">Soup</text><text x=\"120\" y=\"200\" fill=\"#555\">Species</text></g><rect x=\"230\" y=\"70\" width=\"190\" height=\"110\" rx=\"8\" fill=\"#fff8e1\" stroke=\"#f9a825\"/><text x=\"325\" y=\"94\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7c5c00\">Same LOWER category</text><text x=\"325\" y=\"112\" text-anchor=\"middle\" font-size=\"18\" fill=\"#b26a00\">&#8595;</text><text x=\"325\" y=\"136\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7c5c00\">must share ALL higher.</text><text x=\"325\" y=\"160\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#8a6d00\">Reverse does not hold.</text></svg>",
+          "caption": "King Philip mnemonic + downward-implies-upward"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "text": "Pro-tip: find the lowest shared rank; everything above is shared."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 71,
+          "text": "Memory aid: 'King Philip Came Over For Good Soup' = Kingdom→Species.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is one of the most reliably tested sections, so let us close every leak. Four traps, then the mnemonic that saves you in the hall."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, the family versus order swap, by far the most frequent sequencing error. The correct middle is family then order. Genus is more specific than family; order is broader than family."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, calling a taxon a category, or the reverse. Mammalia is a taxon, the real group; class is the category, the rank. Real group is taxon, rank or label is category."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, the mono-poly flip. Monotypic is one species, polytypic is many. Do not let the similar prefixes trip you."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, reversing the master trend. As you ascend from species to kingdom, shared characters decrease and group size increases. Many wrong options are built on the inverse."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> And here is the mnemonic, with the containment rule beside it."
+            },
+            {
+              "seq": 7,
+              "text": "The pro-tip. For any do-they-share-category question, use downward implies upward. Write the seven ranks once, find the lowest category the two organisms share, and they automatically share everything above and nothing reliably below."
+            },
+            {
+              "seq": 8,
+              "text": "And the sequence mnemonic to carry in. King Philip Came Over For Good Soup, read top-down, gives Kingdom, Phylum, Class, Order, Family, Genus, Species. Reverse it for species to kingdom."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये सबसे भरोसेमंद test होने वाले sections में से है, तो चलो हर leak बंद करते हैं। चार traps, फिर वो mnemonic जो exam hall में बचाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "trap एक, family बनाम order swap, अब तक की सबसे common sequencing ग़लती। सही बीच है family फिर order। genus family से ज़्यादा specific है; order family से broad।"
+            },
+            {
+              "seq": 3,
+              "text": "trap दो, taxon को category कहना, या उल्टा। Mammalia एक taxon है, असली group; class category है, rank। असली group taxon, rank या label category।"
+            },
+            {
+              "seq": 4,
+              "text": "trap तीन, mono-poly flip। Monotypic यानी एक species, polytypic यानी बहुत। मिलते-जुलते prefixes तुम्हें गिराने ना पाएँ।"
+            },
+            {
+              "seq": 5,
+              "text": "trap चार, master trend को उल्टा करना। जैसे species से kingdom चढ़ो, shared characters घटते हैं और group size बढ़ता है। कई ग़लत options इसके उलटे पर बने होते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> और ये रहा mnemonic, containment rule उसके बग़ल में।"
+            },
+            {
+              "seq": 7,
+              "text": "pro-tip। किसी भी do-they-share-category सवाल के लिए, downward implies upward use करो। सातों ranks एक बार लिखो, दो organisms जो सबसे निचली category साझा करते हैं वो ढूँढो, और वे अपने आप ऊपर सब साझा करते हैं और नीचे कुछ भी भरोसे से नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "और साथ ले जाने वाला sequence mnemonic। King Philip Came Over For Good Soup, ऊपर से नीचे पढ़ो, देता है Kingdom, Phylum, Class, Order, Family, Genus, Species। species से kingdom के लिए इसे उल्टा कर दो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 25,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter revision",
+      "title": "The Living World — one-screen recall",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "high",
+          "reveal_at": 0,
+          "text": "THE LIVING WORLD — quick recall"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Defining bundle = Metabolism + Cellular organisation + Consciousness (MCC).",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Growth fails (extrinsic vs intrinsic); reproduction fails; test-tube reaction = neither.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Binomial (Linnaeus): Genus Capital + epithet lowercase, italic/underlined; author Roman, last.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Codes: ICBN plants, ICZN animals, ICNB bacteria — Latin, because stable.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "Nesting: identification ⊂ nomenclature/classification ⊂ taxonomy ⊂ systematics. Species = interbreed + fertile (Mayr).",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 62,
+          "text": "Seven categories: Species → Genus → Family → Order → Class → Phylum/Division → Kingdom.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "Master trend up: characters ↓, organisms ↑. Containment: same lower ⇒ share all higher.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 83,
+          "text": "Taxon (Mammalia) = real group; category (Class) = rank. Phylum ≡ Division.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 95,
+          "text": "Mnemonics: 'MCC defines, G&R decline' · 'B in ICBN = Botany' · 'King Philip Came Over For Good Soup'.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us lock the whole chapter into one screen of recall. Three subtopics, the essentials only."
+            },
+            {
+              "seq": 2,
+              "text": "What is living. The defining bundle is M C C, metabolism, cellular organisation and consciousness. Growth and reproduction are characteristics but not defining. M C C defines, G and R decline."
+            },
+            {
+              "seq": 3,
+              "text": "Growth fails because non-living things grow too, by extrinsic accretion, while living growth is intrinsic and twofold. Reproduction fails for mules, sterile bees and infertile couples; in unicellular forms growth equals reproduction. A test-tube reaction is neither living nor non-living."
+            },
+            {
+              "seq": 4,
+              "text": "Nomenclature. Binomial nomenclature from Linnaeus, generic name capital plus specific epithet lowercase, both italic or separately underlined, author in Roman, optional, and last."
+            },
+            {
+              "seq": 5,
+              "text": "The codes. I C B N for plants, I C Z N for animals, I C N B for bacteria, all in Latin because Latin is stable."
+            },
+            {
+              "seq": 6,
+              "text": "Term nesting. Identification, nomenclature and classification sit inside taxonomy, which sits inside systematics, the broadest. A species, by Mayr, interbreeds freely and gives fertile offspring."
+            },
+            {
+              "seq": 7,
+              "text": "The hierarchy. Seven obligate categories, species, genus, family, order, class, phylum or division, and kingdom. Remember King Philip Came Over For Good Soup, top-down from kingdom."
+            },
+            {
+              "seq": 8,
+              "text": "The master trend. Ascending toward kingdom, common characters decrease and the number of organisms increases. And containment, sharing a lower category means sharing every higher one, never the reverse."
+            },
+            {
+              "seq": 9,
+              "text": "Two vocabulary anchors. A taxon like Mammalia is a real group; a category like class is the rank. Phylum in animals, coined by Cuvier, equals division in plants, coined by Eichler."
+            },
+            {
+              "seq": 10,
+              "text": "Three mnemonics to carry into the hall. M C C defines and G and R decline. The B in I C B N stands for Botany. And King Philip Came Over For Good Soup for the sequence. That is the whole chapter."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो पूरे chapter को एक screen के recall में बंद कर लें। तीन subtopics, सिर्फ़ ज़रूरी बातें।"
+            },
+            {
+              "seq": 2,
+              "text": "What is living। defining bundle है M C C, metabolism, cellular organisation और consciousness। Growth और reproduction characteristics हैं पर defining नहीं। M C C defines, G and R decline।"
+            },
+            {
+              "seq": 3,
+              "text": "Growth इसलिए fail करता है क्योंकि non-living चीज़ें भी बढ़ती हैं, extrinsic accretion से, जबकि living growth intrinsic और twofold है। Reproduction mules, sterile bees और infertile couples के लिए fail करता है; unicellular forms में growth बराबर reproduction। test-tube reaction neither living nor non-living है।"
+            },
+            {
+              "seq": 4,
+              "text": "Nomenclature। Linnaeus से binomial nomenclature, generic नाम capital plus specific epithet lowercase, दोनों italic या अलग-अलग underlined, author Roman में, optional, और आख़िर में।"
+            },
+            {
+              "seq": 5,
+              "text": "codes। I C B N plants के लिए, I C Z N animals के लिए, I C N B bacteria के लिए, सब Latin में क्योंकि Latin stable है।"
+            },
+            {
+              "seq": 6,
+              "text": "Term nesting। identification, nomenclature और classification taxonomy के अंदर बैठते हैं, जो systematics के अंदर, सबसे broad। एक species, Mayr के हिसाब से, free interbreed करती है और fertile offspring देती है।"
+            },
+            {
+              "seq": 7,
+              "text": "hierarchy। सात obligate categories, species, genus, family, order, class, phylum या division, और kingdom। याद रखो King Philip Came Over For Good Soup, ऊपर से नीचे kingdom से।"
+            },
+            {
+              "seq": 8,
+              "text": "master trend। kingdom की ओर चढ़ते हुए, common characters घटते हैं और organisms की संख्या बढ़ती है। और containment, एक निचली category साझा करना हर higher को साझा करना है, कभी उल्टा नहीं।"
+            },
+            {
+              "seq": 9,
+              "text": "दो vocabulary anchors। Mammalia jaisa taxon असली group है; class jaisi category rank है। animals में phylum, Cuvier का, plants में division, Eichler का, के बराबर।"
+            },
+            {
+              "seq": 10,
+              "text": "exam hall में ले जाने वाले तीन mnemonics। M C C defines और G and R decline। I C B N का B Botany के लिए। और sequence के लिए King Philip Came Over For Good Soup। यही पूरा chapter है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

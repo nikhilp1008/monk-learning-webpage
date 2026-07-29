@@ -1,0 +1,1824 @@
+{
+  "chapter": "Introduction to Three Dimensional Geometry",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 11,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "From the flat page to the room",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "From 2D to 3D: adding a third direction"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "On paper: an origin and two perpendicular axes, x and y, fix any point as an ordered pair."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "Lift your pen off the page. That upward direction is a brand-new third axis: z."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 21,
+          "text": "Three mutually perpendicular axes meet at one origin O."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 29,
+          "caption": "Right-handed 3D coordinate system",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 340\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"210,180 295,200 355,155 270,135\" fill=\"#8ecae6\" opacity=\"0.35\"/><polygon points=\"210,180 270,135 270,65 210,110\" fill=\"#ffb703\" opacity=\"0.30\"/><polygon points=\"210,180 210,110 295,130 295,200\" fill=\"#a7c957\" opacity=\"0.30\"/><line x1=\"210\" y1=\"180\" x2=\"40\" y2=\"140\" stroke=\"#999\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/><line x1=\"210\" y1=\"180\" x2=\"90\" y2=\"270\" stroke=\"#999\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/><line x1=\"210\" y1=\"180\" x2=\"210\" y2=\"320\" stroke=\"#999\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/><line x1=\"210\" y1=\"180\" x2=\"380\" y2=\"220\" stroke=\"#023047\" stroke-width=\"2.5\"/><line x1=\"210\" y1=\"180\" x2=\"330\" y2=\"90\" stroke=\"#023047\" stroke-width=\"2.5\"/><line x1=\"210\" y1=\"180\" x2=\"210\" y2=\"40\" stroke=\"#023047\" stroke-width=\"2.5\"/><circle cx=\"210\" cy=\"180\" r=\"4\" fill=\"#d00000\"/><text x=\"388\" y=\"228\" font-size=\"16\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">X</text><text x=\"336\" y=\"86\" font-size=\"16\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Y</text><text x=\"216\" y=\"38\" font-size=\"16\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Z</text><text x=\"26\" y=\"136\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#777\">X&#39;</text><text x=\"76\" y=\"284\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#777\">Y&#39;</text><text x=\"216\" y=\"332\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#777\">Z&#39;</text><text x=\"194\" y=\"176\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#d00000\">O</text><text x=\"300\" y=\"186\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#023047\">XY</text><text x=\"236\" y=\"100\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#023047\">YZ</text><text x=\"238\" y=\"152\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#023047\">ZX</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "The corner of your room is O; its three edges are the x, y, and z axes."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "Floor = XY-plane. One wall = YZ-plane. The other wall = ZX-plane."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "text": "The three flat surfaces meeting at that corner are the three coordinate planes."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Ready to leave the flatland you have lived in all through coordinate geometry?</curious> So far every point you have plotted has been trapped on a single sheet of paper. Today we give that world some height."
+            },
+            {
+              "seq": 2,
+              "text": "Think back to how two dimensions work. You fix an origin, draw two perpendicular lines, the x axis and the y axis, and then any point is nailed down by just two numbers, an ordered pair. Clean, but completely flat."
+            },
+            {
+              "seq": 3,
+              "text": "Now do something physical. Lift your pen straight up off the page. That upward direction was never available on the sheet. It is genuinely new and independent, and we call it the z axis."
+            },
+            {
+              "seq": 4,
+              "text": "So now we have three straight lines, each at right angles to the other two, all crossing at a single point. That meeting point is the origin, O. This is the leap from a flat world into the actual room you are sitting in."
+            },
+            {
+              "seq": 5,
+              "text": "Here is the picture. Three axes fanning out from O. Notice each one also runs backwards into its negative half, shown dashed, and the three planes between them are lightly shaded."
+            },
+            {
+              "seq": 6,
+              "text": "Want an anchor you will never forget? Look at the corner of your room where two walls meet the floor. That corner is the origin. The three edges leaving it, one along the floor to your side, one along the floor away from you, one straight up the wall, are your three axes."
+            },
+            {
+              "seq": 7,
+              "text": "And the flat surfaces are the coordinate planes. The floor you would walk on is the X Y plane. One wall is the Y Z plane. The other wall is the Z X plane."
+            },
+            {
+              "seq": 8,
+              "text": "Every wall and the floor is one coordinate plane, and all three slam together exactly at that corner, the origin. Hold this room in your head; the whole chapter lives inside it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>क्या आप तैयार हैं उस flatland को छोड़ने के लिए जिसमें आप अब तक coordinate geometry करते आए हैं?</curious> अब तक हर point एक ही sheet of paper पर फँसा हुआ था। आज हम उस world को height देंगे।"
+            },
+            {
+              "seq": 2,
+              "text": "याद करो two dimensions कैसे काम करता है। एक origin fix करो, दो perpendicular lines खींचो, x axis और y axis, और फिर कोई भी point सिर्फ़ दो numbers से fix हो जाता है, एक ordered pair। साफ़, पर पूरी तरह flat।"
+            },
+            {
+              "seq": 3,
+              "text": "अब कुछ physical करो। अपना pen page से सीधा ऊपर उठाओ। वो upward direction sheet पर कभी थी ही नहीं। ये बिल्कुल नई और independent है, और इसे हम z axis कहते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "तो अब हमारे पास तीन straight lines हैं, हर एक बाक़ी दोनों के right angle पर, और तीनों एक ही point पर मिलती हैं। वो meeting point है origin, O। यही है flat world से उस असली room में छलांग जिसमें आप बैठे हो।"
+            },
+            {
+              "seq": 5,
+              "text": "देखो ये picture। तीन axes O से बाहर निकलती हुई। ध्यान दो हर axis अपने negative half में भी जाती है, dashed दिखाया है, और बीच के तीन planes हल्के shade किए हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "एक ऐसा anchor चाहिए जो कभी न भूलो? अपने room के उस corner को देखो जहाँ दो walls floor से मिलती हैं। वो corner है origin। उससे निकलती तीन edges, एक floor पर आपकी तरफ़, एक floor पर आपसे दूर, एक सीधी wall के ऊपर, यही आपकी तीन axes हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "और वो flat surfaces हैं coordinate planes। जिस floor पर आप चलते, वो है X Y plane। एक wall है Y Z plane। दूसरी wall है Z X plane।"
+            },
+            {
+              "seq": 8,
+              "text": "हर wall और floor एक coordinate plane है, और तीनों ठीक उसी corner पर आकर टकराते हैं, origin पर। इस room को दिमाग़ में रखो; पूरा chapter इसी के अंदर चलता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "Coordinates as signed perpendicular distances",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "What each coordinate really means"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "To locate P we ask three questions: how far right, how far in, how far up?"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "Those three signed numbers are the coordinates (x, y, z)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "text": "A coordinate is the signed perpendicular distance of P from a coordinate plane."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 29,
+          "latex": "x=\\operatorname{dist}(P,\\,YZ),\\quad y=\\operatorname{dist}(P,\\,ZX),\\quad z=\\operatorname{dist}(P,\\,XY)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 38,
+          "style": "red-margin",
+          "text": "Distance from a plane is $|x|$, $|y|$, or $|z|$ — never negative."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "The sign only records which side of the plane you are on."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "On the floor $z = 0$; on an axis two coordinates are zero; the origin has all three zero."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Coordinates are not magic labels; each one answers a very concrete question. Let me make the meaning airtight, because this is exactly the definition examiners test."
+            },
+            {
+              "seq": 2,
+              "text": "To pin down a point P in the room, you ask three things: how far to the right, how far into the room, and how far up. Right, in, up."
+            },
+            {
+              "seq": 3,
+              "text": "Bundle those three answers together, keeping their signs, and you get the ordered triple x, y, z. That is the coordinates of P."
+            },
+            {
+              "seq": 4,
+              "text": "But here is the cleaner, exam-grade way to say what each number is. A coordinate is the signed perpendicular distance of P from a coordinate plane. Perpendicular, and signed."
+            },
+            {
+              "seq": 5,
+              "text": "Precisely: x is the distance from the Y Z plane, y is the distance from the Z X plane, and z is the distance from the X Y plane. Each coordinate is measured against the plane it is not named after."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Here is the distinction that trips people up.</whisper> The actual distance from a plane is the absolute value of that coordinate. Distance is never negative, even when the coordinate is."
+            },
+            {
+              "seq": 7,
+              "text": "So what does the sign do? It only records which side of the plane you are standing on. Positive on one side, negative on the other. Same distance, opposite sides."
+            },
+            {
+              "seq": 8,
+              "text": "And watch the special cases. A point resting on the floor has z equal to zero. A point on an axis has two coordinates zero. The origin, sitting at the corner, has all three equal to zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Coordinates कोई magic labels नहीं हैं; हर एक बहुत concrete सवाल का जवाब देता है। चलो meaning को airtight कर दें, क्योंकि examiners ठीक यही definition test करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "किसी point P को room में fix करने के लिए तुम तीन चीज़ें पूछते हो: कितना right, कितना अंदर, और कितना ऊपर। Right, in, up।"
+            },
+            {
+              "seq": 3,
+              "text": "इन तीनों जवाबों को उनके signs के साथ मिला दो, तो मिलता है ordered triple x, y, z। यही P के coordinates हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "पर exam-grade तरीक़ा ये है। एक coordinate है P की signed perpendicular distance किसी coordinate plane से। Perpendicular, और signed।"
+            },
+            {
+              "seq": 5,
+              "text": "ठीक-ठीक: x है Y Z plane से distance, y है Z X plane से, और z है X Y plane से। हर coordinate उस plane से नापा जाता है जिसके नाम पर वो नहीं है।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>यहीं पर लोग फँसते हैं।</whisper> किसी plane से असली distance उस coordinate का absolute value होता है। Distance कभी negative नहीं होता, चाहे coordinate negative हो।"
+            },
+            {
+              "seq": 7,
+              "text": "तो sign क्या करता है? वो सिर्फ़ बताता है कि तुम plane के किस side पर खड़े हो। एक तरफ़ positive, दूसरी तरफ़ negative। Distance same, sides opposite।"
+            },
+            {
+              "seq": 8,
+              "text": "और special cases देखो। Floor पर बैठे point का z zero होता है। किसी axis पर point के दो coordinates zero। और origin, corner पर, तीनों zero।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "Eight rooms around the origin: octants",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Eight rooms stacked around the origin"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Extend each wall and the floor through the corner: each becomes a full infinite plane."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "Three infinite planes cut all of space into eight regions."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "caption": "First octant (all +) and its opposite (all −)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 320\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"200\" y1=\"170\" x2=\"200\" y2=\"40\" stroke=\"#023047\" stroke-width=\"2.5\"/><line x1=\"200\" y1=\"170\" x2=\"360\" y2=\"210\" stroke=\"#023047\" stroke-width=\"2.5\"/><line x1=\"200\" y1=\"170\" x2=\"320\" y2=\"90\" stroke=\"#023047\" stroke-width=\"2.5\"/><line x1=\"200\" y1=\"170\" x2=\"200\" y2=\"300\" stroke=\"#999\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/><line x1=\"200\" y1=\"170\" x2=\"40\" y2=\"130\" stroke=\"#999\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/><line x1=\"200\" y1=\"170\" x2=\"80\" y2=\"250\" stroke=\"#999\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/><polygon points=\"200,170 280,190 320,150 240,130\" fill=\"#a7c957\" opacity=\"0.30\"/><circle cx=\"200\" cy=\"170\" r=\"4\" fill=\"#d00000\"/><text x=\"326\" y=\"88\" font-size=\"15\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Y</text><text x=\"366\" y=\"216\" font-size=\"15\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">X</text><text x=\"206\" y=\"40\" font-size=\"15\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Z</text><text x=\"298\" y=\"122\" font-size=\"20\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#2a9d8f\">I</text><text x=\"108\" y=\"236\" font-size=\"18\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#777\">VII</text><text x=\"182\" y=\"166\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#d00000\">O</text><text x=\"236\" y=\"182\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#555\">all +</text><text x=\"90\" y=\"252\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#777\">all &#8722;</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "text": "Each region is an octant — the 3D cousin of the four quadrants."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "latex": "2^{2}=4\\ \\text{quadrants}\\ \\longrightarrow\\ 2^{3}=8\\ \\text{octants}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Which octant a point sits in is decided entirely by the sign pattern of (x, y, z)."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 57,
+          "style": "red-margin",
+          "text": "All positive → octant I. All negative → octant VII."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 65,
+          "text": "A point with any zero coordinate lies on a boundary and belongs to no octant."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We have built one corner of one room. Now let us fill out all of space."
+            },
+            {
+              "seq": 2,
+              "text": "Take each wall and the floor and extend them straight through the corner, out the other side. Each finite surface becomes a full, infinite plane slicing all the way across space."
+            },
+            {
+              "seq": 3,
+              "text": "Three infinite planes, all perpendicular to each other, chop space into pieces. Not four pieces like on paper, but eight."
+            },
+            {
+              "seq": 4,
+              "text": "Picture it: the room you are physically in is one of those eight boxes. Diagonally opposite, on the far side of the origin, sits its mirror-image box."
+            },
+            {
+              "seq": 5,
+              "text": "Each of these eight regions of space is called an octant. It is the direct three-dimensional cousin of the four quadrants you know from the plane."
+            },
+            {
+              "seq": 6,
+              "text": "And the counting is beautiful. Two perpendicular lines gave two squared, four quadrants. Three perpendicular planes give two cubed, which is eight octants. One factor of two per independent direction."
+            },
+            {
+              "seq": 7,
+              "text": "So which octant does a point live in? That is decided entirely by the pattern of signs in its coordinates. The sizes of the numbers are irrelevant; only the plus and minus signs matter."
+            },
+            {
+              "seq": 8,
+              "text": "Anchor on the two easy ones. All three coordinates positive is octant one, the room you are in. All three negative is octant seven, diagonally opposite."
+            },
+            {
+              "seq": 9,
+              "text": "One more crucial thing. If even one coordinate is zero, the point is sitting on a plane or an axis, right on a boundary, and it belongs to no octant at all. Examiners love planting that stray zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हमने एक room का एक corner बना लिया। अब पूरी space भर देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "हर wall और floor को corner के आर-पार खींच दो, दूसरी तरफ़ तक। हर finite surface एक पूरा, infinite plane बन जाता है जो पूरी space को काटता है।"
+            },
+            {
+              "seq": 3,
+              "text": "तीन infinite planes, तीनों एक-दूसरे के perpendicular, space को टुकड़ों में काटते हैं। Paper की तरह चार नहीं, बल्कि आठ।"
+            },
+            {
+              "seq": 4,
+              "text": "सोचो: जिस room में तुम हो वो इन आठ boxes में से एक है। ठीक diagonally opposite, origin के उस पार, उसका mirror-image box बैठा है।"
+            },
+            {
+              "seq": 5,
+              "text": "Space के इन आठ regions में से हर एक को octant कहते हैं। ये plane वाले चार quadrants का सीधा three-dimensional cousin है।"
+            },
+            {
+              "seq": 6,
+              "text": "और counting बहुत सुंदर है। दो perpendicular lines ने दिया two squared, यानी चार quadrants। तीन perpendicular planes देते हैं two cubed, यानी आठ octants। हर independent direction के लिए एक two।"
+            },
+            {
+              "seq": 7,
+              "text": "तो कोई point किस octant में है? ये पूरी तरह उसके coordinates के signs के pattern से तय होता है। Numbers की size बेकार है; सिर्फ़ plus-minus मायने रखते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "दो आसान वाले याद रखो। तीनों positive यानी octant one, तुम्हारा अपना room। तीनों negative यानी octant seven, diagonally opposite।"
+            },
+            {
+              "seq": 9,
+              "text": "एक और ज़रूरी बात। अगर एक भी coordinate zero है, तो point किसी plane या axis पर है, boundary पर, और किसी भी octant का नहीं। Examiners ये stray zero जान-बूझकर डालते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "Reading the octant sign table",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The octant sign table (NCERT convention)"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "caption": "Sign pattern of (x, y, z) per octant",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 170\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"10\" width=\"404\" height=\"32\" fill=\"#023047\" opacity=\"0.9\"/><rect x=\"8\" y=\"42\" width=\"404\" height=\"112\" fill=\"#f5f7fa\" stroke=\"#ccc\"/><text x=\"22\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#023047\">x</text><text x=\"22\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#023047\">y</text><text x=\"22\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#023047\">z</text><text x=\"16\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\">Oct</text><text x=\"70\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">I</text><text x=\"115\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">II</text><text x=\"160\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">III</text><text x=\"205\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">IV</text><text x=\"250\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">V</text><text x=\"295\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">VI</text><text x=\"340\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">VII</text><text x=\"385\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">VIII</text><text x=\"70\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"70\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"70\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"115\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"115\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"115\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"160\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"160\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"160\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"205\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"205\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"205\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"250\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"250\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"250\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"295\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"295\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"295\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"340\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"340\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"340\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"385\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"385\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"385\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><line x1=\"45\" y1=\"42\" x2=\"45\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"92\" y1=\"42\" x2=\"92\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"137\" y1=\"42\" x2=\"137\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"182\" y1=\"42\" x2=\"182\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"227\" y1=\"42\" x2=\"227\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"272\" y1=\"42\" x2=\"272\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"317\" y1=\"42\" x2=\"317\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"362\" y1=\"42\" x2=\"362\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "text": "Octants I–IV sit above the floor: $z \\gt 0$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Their (x, y) signs cycle exactly like the four quadrants of the plane."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "text": "Octants V–VIII are the mirror images below the floor: $z \\lt 0$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Only octants I (all +) and VII (all −) have a single repeated sign."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "To use it: keep only the signs, discard the magnitudes, and read across."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "Example: $(-7, 3, -2)$ has pattern $(-,+,-)$ → octant VI."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This little table is, frankly, the single most useful object in the whole subtopic. Learn to read it and half the questions here become instant."
+            },
+            {
+              "seq": 2,
+              "text": "Here it is. Eight columns, one per octant, and three rows for the signs of x, y, and z. Every octant is just a column of three signs."
+            },
+            {
+              "seq": 3,
+              "text": "Read it in two halves. The first four octants, one through four, all sit above the floor, so their z is positive."
+            },
+            {
+              "seq": 4,
+              "text": "And across those four, the x and y signs cycle in exactly the same order as the four quadrants you already know from two-dimensional geometry. Nothing new to memorise there."
+            },
+            {
+              "seq": 5,
+              "text": "The next four, five through eight, are simply the mirror images sitting below the floor, so their z is negative. Same x y dance, one flight of stairs down."
+            },
+            {
+              "seq": 6,
+              "text": "The only two columns that are all one sign are octant one, all positive, and octant seven, all negative. Anchor on those two, then read everything else off the z sign."
+            },
+            {
+              "seq": 7,
+              "text": "To actually use the table on a point, throw away the magnitudes completely. Keep only the sign of each coordinate, then find the matching column."
+            },
+            {
+              "seq": 8,
+              "text": "Take minus seven, three, minus two. Its sign pattern is minus, plus, minus. Scan the table for that column and you land on octant six. Notice the seven and the two did absolutely nothing."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये छोटी सी table, सच कहूँ तो, पूरे subtopic की सबसे useful चीज़ है। इसे पढ़ना सीख लो और यहाँ के आधे सवाल instant हो जाएँगे।"
+            },
+            {
+              "seq": 2,
+              "text": "ये रही। आठ columns, हर octant के लिए एक, और तीन rows x, y, z के signs के लिए। हर octant बस तीन signs का एक column है।"
+            },
+            {
+              "seq": 3,
+              "text": "इसे दो हिस्सों में पढ़ो। पहले चार octants, one से four, floor के ऊपर बैठे हैं, तो उनका z positive है।"
+            },
+            {
+              "seq": 4,
+              "text": "और इन चारों में x और y के signs ठीक उसी order में घूमते हैं जैसे two-dimensional geometry के चार quadrants। यहाँ नया कुछ याद नहीं करना।"
+            },
+            {
+              "seq": 5,
+              "text": "अगले चार, five से eight, बस floor के नीचे के mirror images हैं, तो उनका z negative है। वही x y वाला dance, एक मंज़िल नीचे।"
+            },
+            {
+              "seq": 6,
+              "text": "सिर्फ़ दो columns ऐसे हैं जिनमें एक ही sign है, octant one, all positive, और octant seven, all negative। इन दोनों पर anchor करो, बाक़ी सब z के sign से पढ़ लो।"
+            },
+            {
+              "seq": 7,
+              "text": "Point पर table use करने के लिए, magnitudes को पूरी तरह फेंक दो। सिर्फ़ हर coordinate का sign रखो, फिर matching column ढूँढो।"
+            },
+            {
+              "seq": 8,
+              "text": "लो minus seven, three, minus two। इसका sign pattern है minus, plus, minus। Table में वो column ढूँढो तो octant six मिलता है। ध्यान दो, seven और two ने कुछ नहीं किया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "Procedures: octant ID and foot of perpendicular",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two core procedures: locate and project"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "text": "Procedure A — octant of a point: keep the signs, read the table."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "The size of a coordinate never changes the octant; only its sign does."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "text": "Procedure B — foot on a plane: zero the coordinate the plane kills."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 29,
+          "latex": "P(x,y,z)\\ \\xrightarrow{\\text{onto }XY}\\ (x,\\,y,\\,0)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "latex": "\\text{onto }YZ:\\ (0,\\,y,\\,z)\\qquad \\text{onto }ZX:\\ (x,\\,0,\\,z)"
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "caption": "Drop to the floor (lose z), then to the x-axis (lose y)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"220\" x2=\"120\" y2=\"60\" stroke=\"#023047\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"220\" x2=\"330\" y2=\"260\" stroke=\"#023047\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"220\" x2=\"250\" y2=\"140\" stroke=\"#023047\" stroke-width=\"2.5\"/><polygon points=\"120,220 250,240 320,195 190,175\" fill=\"#8ecae6\" opacity=\"0.25\"/><line x1=\"255\" y1=\"95\" x2=\"255\" y2=\"205\" stroke=\"#d00000\" stroke-width=\"1.8\" stroke-dasharray=\"5,4\"/><line x1=\"255\" y1=\"205\" x2=\"205\" y2=\"192\" stroke=\"#e07a00\" stroke-width=\"1.8\" stroke-dasharray=\"5,4\"/><circle cx=\"255\" cy=\"95\" r=\"4\" fill=\"#023047\"/><circle cx=\"255\" cy=\"205\" r=\"3.5\" fill=\"#d00000\"/><circle cx=\"205\" cy=\"192\" r=\"3.5\" fill=\"#e07a00\"/><circle cx=\"120\" cy=\"220\" r=\"4\" fill=\"#333\"/><text x=\"262\" y=\"92\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">P(x, y, z)</text><text x=\"262\" y=\"216\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#d00000\">M(x, y, 0)</text><text x=\"146\" y=\"196\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#e07a00\">L(x, 0, 0)</text><text x=\"104\" y=\"216\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">O</text><text x=\"258\" y=\"160\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#d00000\">lose z</text><text x=\"200\" y=\"214\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#e07a00\">lose y</text><text x=\"335\" y=\"264\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">X</text><text x=\"252\" y=\"136\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Y</text><text x=\"126\" y=\"58\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Z</text></svg>"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "text": "Foot on an axis: keep only that axis's coordinate, zero the other two."
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "latex": "\\text{on }x\\text{-axis}:\\ (x,0,0)\\quad y:\\ (0,y,0)\\quad z:\\ (0,0,z)"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Almost every exam question on this subtopic is one of three procedures. Let us nail the first two now; reflections get their own section next."
+            },
+            {
+              "seq": 2,
+              "text": "Procedure A, finding the octant, you have basically already seen. Strip each coordinate down to just its sign, then read that triple against the table."
+            },
+            {
+              "seq": 3,
+              "text": "The one thing to internalise: magnitude is a decoy. A coordinate of minus point zero one and a coordinate of minus five hundred are, for octant purposes, identical. Only the sign speaks."
+            },
+            {
+              "seq": 4,
+              "text": "Procedure B is projection, the foot of the perpendicular. To drop a point onto a coordinate plane, you kill exactly one coordinate: the one that plane sets to zero."
+            },
+            {
+              "seq": 5,
+              "text": "Project P onto the X Y plane and the height z simply goes to zero, leaving x, y, zero. The perpendicular runs purely in the z direction, so x and y are untouched."
+            },
+            {
+              "seq": 6,
+              "text": "Same logic elsewhere. Onto the Y Z plane, x dies, giving zero, y, z. Onto the Z X plane, y dies, giving x, zero, z. Each plane erases the one coordinate it is defined by."
+            },
+            {
+              "seq": 7,
+              "text": "The picture makes it vivid. Drop straight down from P to the floor and you lose z first, landing at the foot M. Then slide along to the x-axis and you lose y too, landing at L."
+            },
+            {
+              "seq": 8,
+              "text": "Projecting onto an axis is stricter still. A line is one-dimensional, so only one coordinate survives; you keep the coordinate along that axis and zero the other two."
+            },
+            {
+              "seq": 9,
+              "text": "So the foot on the x-axis is x, zero, zero. On the y-axis, zero, y, zero. On the z-axis, zero, zero, z. Keep one, kill two."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic का लगभग हर exam सवाल तीन procedures में से एक है। पहले दो अभी pakka कर लें; reflections अगली section में।"
+            },
+            {
+              "seq": 2,
+              "text": "Procedure A, octant ढूँढना, तुम देख ही चुके हो। हर coordinate को सिर्फ़ उसके sign तक घटा दो, फिर वो triple table से पढ़ो।"
+            },
+            {
+              "seq": 3,
+              "text": "एक बात दिमाग़ में बैठा लो: magnitude एक decoy है। minus point zero one और minus five hundred, octant के लिए, बिल्कुल एक जैसे हैं। सिर्फ़ sign बोलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Procedure B है projection, foot of the perpendicular। किसी point को coordinate plane पर गिराने के लिए, तुम ठीक एक coordinate मारते हो: वो जो plane zero कर देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "P को X Y plane पर project करो तो height z सीधा zero हो जाती है, बचता है x, y, zero। Perpendicular सिर्फ़ z direction में चलता है, तो x और y untouched।"
+            },
+            {
+              "seq": 6,
+              "text": "यही logic बाक़ी जगह। Y Z plane पर, x मरता है, मिलता है zero, y, z। Z X plane पर, y मरता है, मिलता है x, zero, z। हर plane अपना defining coordinate मिटाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Picture इसे साफ़ कर देती है। P से सीधा नीचे floor पर गिरो तो पहले z खोते हो, foot M पर पहुँचते हो। फिर सरककर x-axis तक, तो y भी खो देते हो, L पर।"
+            },
+            {
+              "seq": 8,
+              "text": "Axis पर projection और भी सख़्त है। Line one-dimensional है, तो सिर्फ़ एक coordinate बचता है; उस axis वाला coordinate रखो, बाक़ी दो zero करो।"
+            },
+            {
+              "seq": 9,
+              "text": "तो x-axis पर foot है x, zero, zero। y-axis पर zero, y, zero। z-axis पर zero, zero, z। एक रखो, दो मारो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "Procedure C: reflections in a plane, axis, or origin",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Procedure C — reflections: count before you flip"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "text": "Mirror in a plane → flip the one perpendicular coordinate."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "\\text{in }XY:\\ (x,y,z)\\to(x,y,-z)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "latex": "\\text{in }YZ:\\ (-x,y,z)\\qquad \\text{in }ZX:\\ (x,-y,z)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "text": "Mirror in an axis → flip the two perpendicular coordinates."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "\\text{in }x\\text{-axis}:\\ (x,y,z)\\to(x,-y,-z)"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Mirror in the origin → flip all three coordinates."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "latex": "(x,y,z)\\to(-x,-y,-z)"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "style": "red-margin",
+          "text": "Flip count: plane 1, axis 2, origin 3. Count first, then flip."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Procedure C is reflection, taking the mirror image of a point. There is one governing idea, and if you hold it, you will never miscount the signs."
+            },
+            {
+              "seq": 2,
+              "text": "The idea: a mirror only reverses the direction that crosses it, and leaves everything within it alone. A plane is two directions wide, so reflecting in it touches only the single perpendicular direction."
+            },
+            {
+              "seq": 3,
+              "text": "Concretely, reflect in the X Y plane and only z flips sign. The point x, y, z becomes x, y, minus z. The x and y live inside the mirror, so they do not move."
+            },
+            {
+              "seq": 4,
+              "text": "By the same rule, reflecting in the Y Z plane flips only x, and reflecting in the Z X plane flips only y. One plane, one sign change, every time."
+            },
+            {
+              "seq": 5,
+              "text": "Now an axis. An axis is only one direction wide, so the two directions perpendicular to it both get reversed. Reflecting in an axis flips two signs."
+            },
+            {
+              "seq": 6,
+              "text": "Reflect in the x-axis and the y and z both flip, while x, lying along the axis, survives. So x, y, z becomes x, minus y, minus z."
+            },
+            {
+              "seq": 7,
+              "text": "And the origin is a point, zero directions wide, so nothing survives. Reflection in the origin reverses all three."
+            },
+            {
+              "seq": 8,
+              "text": "Every coordinate flips: x, y, z becomes minus x, minus y, minus z. It is the same as a full point-inversion through the corner."
+            },
+            {
+              "seq": 9,
+              "text": "So carry one clean rule into the exam. Plane flips one sign, axis flips two, origin flips three. Count the flips first, then apply them. Miscounting is the single commonest error here."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Procedure C है reflection, किसी point का mirror image। एक governing idea है, और वो पकड़ लो तो signs कभी गलत नहीं गिनोगे।"
+            },
+            {
+              "seq": 2,
+              "text": "Idea: mirror सिर्फ़ उस direction को उलटता है जो उसे cross करती है, और अंदर वाली सब direction को छोड़ देता है। Plane दो direction चौड़ा है, तो उसमें reflect करने पर सिर्फ़ एक perpendicular direction बदलती है।"
+            },
+            {
+              "seq": 3,
+              "text": "साफ़-साफ़, X Y plane में reflect करो तो सिर्फ़ z का sign बदलता है। Point x, y, z बन जाता है x, y, minus z। x और y mirror के अंदर रहते हैं, तो हिलते नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "इसी rule से, Y Z plane में reflect करने पर सिर्फ़ x flip होता है, और Z X में सिर्फ़ y। एक plane, एक sign change, हर बार।"
+            },
+            {
+              "seq": 5,
+              "text": "अब axis। Axis सिर्फ़ एक direction चौड़ा है, तो उसके perpendicular दोनों directions उलट जाती हैं। Axis में reflect करने पर दो signs flip।"
+            },
+            {
+              "seq": 6,
+              "text": "x-axis में reflect करो तो y और z दोनों flip, जबकि x, axis के साथ होने से, बच जाता है। तो x, y, z बनता है x, minus y, minus z।"
+            },
+            {
+              "seq": 7,
+              "text": "और origin एक point है, zero direction चौड़ा, तो कुछ नहीं बचता। Origin में reflection तीनों उलट देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "हर coordinate flip: x, y, z बनता है minus x, minus y, minus z। ये corner के through पूरा point-inversion जैसा है।"
+            },
+            {
+              "seq": 9,
+              "text": "तो exam में एक साफ़ rule ले जाओ। Plane एक sign flip करता है, axis दो, origin तीन। पहले flips गिनो, फिर लगाओ। गलत गिनना यहाँ की सबसे common गलती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "The 3D coordinate toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The 3D coordinate toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "XY:\\ z=0 \\qquad YZ:\\ x=0 \\qquad ZX:\\ y=0"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "latex": "x\\text{-axis}:\\ y=z=0 \\quad y\\text{-axis}:\\ x=z=0 \\quad z\\text{-axis}:\\ x=y=0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "x=\\operatorname{dist}(P,YZ),\\ \\ y=\\operatorname{dist}(P,ZX),\\ \\ z=\\operatorname{dist}(P,XY)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "latex": "\\operatorname{dist}(P,YZ)=|x|,\\quad \\operatorname{dist}(P,ZX)=|y|,\\quad \\operatorname{dist}(P,XY)=|z|"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "\\text{octants}=2^{3}=8"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "Reflection flip-count: plane 1, axis 2, origin 3."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "text": "Reflection in the origin: $(x, y, z)\\to(-x, -y, -z)$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us gather every equation from this subtopic into one clean toolkit you can picture on the board."
+            },
+            {
+              "seq": 2,
+              "text": "First the three coordinate planes. Each is defined by setting one coordinate to zero. The X Y plane is z equals zero, the Y Z plane is x equals zero, and the Z X plane is y equals zero."
+            },
+            {
+              "seq": 3,
+              "text": "The three axes need two coordinates zero. The x-axis is y equals zero and z equals zero. The y-axis is x equals zero and z equals zero. The z-axis is x equals zero and y equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "Each coordinate is a signed perpendicular distance. x is the distance of P from the Y Z plane, y from the Z X plane, and z from the X Y plane."
+            },
+            {
+              "seq": 5,
+              "text": "Strip the sign and you get the true distance. The distance from the Y Z plane is the absolute value of x, from the Z X plane the absolute value of y, and from the X Y plane the absolute value of z."
+            },
+            {
+              "seq": 6,
+              "text": "The headcount of regions: two raised to the power three, which is eight octants. One factor of two for each independent sign choice."
+            },
+            {
+              "seq": 7,
+              "text": "And keep the reflection rule in the margin. A plane flips one sign, an axis flips two, the origin flips three."
+            },
+            {
+              "seq": 8,
+              "text": "As the cleanest instance, reflection in the origin sends x, y, z to minus x, minus y, minus z. All three reversed at once."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो इस subtopic की हर equation को एक साफ़ toolkit में इकट्ठा कर लें, जिसे तुम board पर picture कर सको।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले तीन coordinate planes। हर एक एक coordinate को zero करके define होता है। X Y plane है z equals zero, Y Z plane है x equals zero, और Z X plane है y equals zero।"
+            },
+            {
+              "seq": 3,
+              "text": "तीन axes को दो coordinates zero चाहिए। x-axis है y zero और z zero। y-axis है x zero और z zero। z-axis है x zero और y zero।"
+            },
+            {
+              "seq": 4,
+              "text": "हर coordinate एक signed perpendicular distance है। x है P की Y Z plane से distance, y है Z X plane से, और z है X Y plane से।"
+            },
+            {
+              "seq": 5,
+              "text": "Sign हटाओ तो असली distance मिलता है। Y Z plane से distance है x का absolute value, Z X से y का, और X Y से z का।"
+            },
+            {
+              "seq": 6,
+              "text": "Regions की गिनती: two raised to three, यानी आठ octants। हर independent sign choice के लिए एक two।"
+            },
+            {
+              "seq": 7,
+              "text": "और reflection rule margin में रखो। Plane एक sign flip करता है, axis दो, origin तीन।"
+            },
+            {
+              "seq": 8,
+              "text": "सबसे साफ़ example के तौर पर, origin में reflection x, y, z को भेजता है minus x, minus y, minus z पर। तीनों एक साथ उलटे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "Worked example: octant, foot, and distance",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: octant, foot, and distance"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Point $P(5, -4, 9)$: find its octant, its foot on the ZX-plane, and its distance from the XY-plane."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "(a) Sign pattern of $(5, -4, 9)$ is $(+, -, +)$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "latex": "(+,\\,-,\\,+)\\ \\Rightarrow\\ \\text{octant IV}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "text": "(b) The ZX-plane is $y = 0$, so projecting kills the y-coordinate."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "\\text{foot on }ZX=(5,\\,0,\\,9)"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "(c) Distance from the XY-plane is $|z|$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "latex": "|z|=|9|=9\\ \\text{units}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 61,
+          "style": "red-margin",
+          "text": "Quote the rule ('ZX ⇒ y = 0') before substituting — it earns method marks."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us run a clean CBSE-level example that exercises three separate skills at once: naming an octant, finding a foot of perpendicular, and computing a distance."
+            },
+            {
+              "seq": 2,
+              "text": "The point is P equals five, minus four, nine. Three tasks: which octant is it in, where is its foot on the Z X plane, and how far is it from the X Y plane."
+            },
+            {
+              "seq": 3,
+              "text": "Part a. Ignore the numbers, read the signs. Five is positive, minus four is negative, nine is positive. So the sign pattern is plus, minus, plus."
+            },
+            {
+              "seq": 4,
+              "text": "Scan the octant table for the column plus, minus, plus, and it is octant four. Done, without touching the magnitudes."
+            },
+            {
+              "seq": 5,
+              "text": "Part b, the foot on the Z X plane. First quote the rule: the Z X plane is y equals zero. Projecting onto it kills the y coordinate."
+            },
+            {
+              "seq": 6,
+              "text": "So we set that minus four to zero and leave x and z alone. The foot is five, zero, nine."
+            },
+            {
+              "seq": 7,
+              "text": "Part c, distance from the X Y plane. That plane is z equals zero, so the distance is simply the absolute value of the z coordinate."
+            },
+            {
+              "seq": 8,
+              "text": "The absolute value of nine is nine, so P is nine units from the X Y plane. It is a distance, so there is no sign."
+            },
+            {
+              "seq": 9,
+              "text": "One presentation habit worth marks: always write the rule you are using, like Z X implies y equals zero, before you substitute. In the boards that earns method marks even if your arithmetic slips."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो एक साफ़ CBSE-level example चलाते हैं जो एक साथ तीन skills use करता है: octant बताना, foot of perpendicular ढूँढना, और distance निकालना।"
+            },
+            {
+              "seq": 2,
+              "text": "Point है P equals five, minus four, nine। तीन काम: ये किस octant में है, इसका Z X plane पर foot कहाँ है, और X Y plane से कितनी दूर है।"
+            },
+            {
+              "seq": 3,
+              "text": "Part a। Numbers छोड़ो, signs पढ़ो। Five positive, minus four negative, nine positive। तो sign pattern है plus, minus, plus।"
+            },
+            {
+              "seq": 4,
+              "text": "Octant table में column plus, minus, plus ढूँढो, तो octant four। हो गया, magnitudes को छुए बिना।"
+            },
+            {
+              "seq": 5,
+              "text": "Part b, Z X plane पर foot। पहले rule बोलो: Z X plane है y equals zero। उस पर project करने से y coordinate मरता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो उस minus four को zero कर दो और x, z छोड़ दो। Foot है five, zero, nine।"
+            },
+            {
+              "seq": 7,
+              "text": "Part c, X Y plane से distance। वो plane है z equals zero, तो distance बस z coordinate का absolute value है।"
+            },
+            {
+              "seq": 8,
+              "text": "Nine का absolute value nine है, तो P, X Y plane से nine units दूर है। ये distance है, इसलिए कोई sign नहीं।"
+            },
+            {
+              "seq": 9,
+              "text": "एक presentation आदत जो marks देती है: substitute करने से पहले हमेशा rule लिखो, जैसे Z X implies y equals zero। Boards में ये method marks देती है चाहे arithmetic slip हो जाए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "Speed trap: how many lie below the floor?",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Speed trap: how many lie below the floor?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Points $A(-1,-2,-3)$, $B(2,-5,4)$, $C(-6,7,-1)$, $D(3,8,-2)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "text": "'Below the XY-plane' just means $z \\lt 0$ — octants V–VIII."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "text": "So scan only the z-coordinate; ignore x and y entirely."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "style": "red-margin",
+          "text": "A: $z=-3$ yes.  B: $z=4$ no.  C: $z=-1$ yes.  D: $z=-2$ yes."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "latex": "\\text{count}(z\\lt 0)=3"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "text": "The trap: fully classifying each point wastes a minute."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "Read what is actually asked before you compute."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a JEE-Main-style speed trap. Same ideas, but the whole point is to answer fast and not fall into busywork."
+            },
+            {
+              "seq": 2,
+              "text": "We are given four points: A, B, C, and D, with the coordinates on the board. The question asks how many of them lie in octants that are entirely below the X Y plane."
+            },
+            {
+              "seq": 3,
+              "text": "Translate the words first. Entirely below the X Y plane means the z coordinate is negative. Those are octants five through eight. The question is really only about the sign of z."
+            },
+            {
+              "seq": 4,
+              "text": "So do not classify anything. Just run your eye down the z coordinates and count the negatives. x and y are pure distraction here."
+            },
+            {
+              "seq": 5,
+              "text": "A has z equals minus three, negative, yes. B has z equals four, positive, no. C has z equals minus one, yes. D has z equals minus two, yes."
+            },
+            {
+              "seq": 6,
+              "text": "Three of the four have negative z. So the answer is three. That took about ten seconds."
+            },
+            {
+              "seq": 7,
+              "text": "Here is the trap the question is built around. A rushed student starts fully naming octant five, octant two, and so on for each point, and burns a full minute."
+            },
+            {
+              "seq": 8,
+              "text": "The fix is a habit: read exactly what is being asked before you compute. The question touched only one coordinate's sign, so you only needed one coordinate."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक JEE-Main जैसा speed trap। Ideas वही, पर पूरा मक़सद है fast जवाब देना और busywork में न फँसना।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चार points दिए हैं: A, B, C, और D, coordinates board पर हैं। सवाल है इनमें से कितने उन octants में हैं जो पूरी तरह X Y plane के नीचे हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले words को translate करो। पूरी तरह X Y plane के नीचे का मतलब z coordinate negative। वो हैं octants five से eight। सवाल असल में सिर्फ़ z के sign के बारे में है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो कुछ classify मत करो। बस z coordinates पर नज़र दौड़ाओ और negatives गिनो। x और y यहाँ pure distraction हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "A का z है minus three, negative, हाँ। B का z है four, positive, नहीं। C का z है minus one, हाँ। D का z है minus two, हाँ।"
+            },
+            {
+              "seq": 6,
+              "text": "चार में से तीन का z negative है। तो जवाब है three। ये करीब दस second में हुआ।"
+            },
+            {
+              "seq": 7,
+              "text": "जिस trap पर सवाल बना है वो ये है। एक rushed student हर point के लिए octant five, octant two, ऐसे पूरा naming करने लगता है और पूरा minute जला देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Fix एक आदत है: compute करने से पहले पढ़ो कि पूछा क्या गया है। सवाल ने सिर्फ़ एक coordinate का sign छुआ, तो तुम्हें सिर्फ़ एक coordinate चाहिए था।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "Reflection chain: track the signs in order",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Reflection chain: track the signs in order"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "$P(4, -3, 7)$: reflect in the YZ-plane to get Q, then reflect Q in the x-axis to get R."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "text": "Reflection in the YZ-plane flips only x."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "latex": "Q=(-4,\\,-3,\\,7)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "text": "Reflection in the x-axis flips y and z."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "R=(-4,\\,3,\\,-7)"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Sign pattern of R is $(-, +, -)$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "latex": "(-,\\,+,\\,-)\\ \\Rightarrow\\ \\text{octant VI}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 61,
+          "style": "red-margin",
+          "text": "Order matters: plane = one flip, axis = two flips. Sequence them carefully."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one chains two reflections together, so it tests whether you know that a plane and an axis flip different numbers of signs, and whether you can keep the order straight."
+            },
+            {
+              "seq": 2,
+              "text": "Start with P equals four, minus three, seven. First we reflect it in the Y Z plane to get a point Q, then we reflect Q in the x-axis to get R, and we want R's octant."
+            },
+            {
+              "seq": 3,
+              "text": "First reflection, in the Y Z plane. A plane flips exactly one sign, the perpendicular one. The Y Z plane is perpendicular to the x direction, so only x changes sign."
+            },
+            {
+              "seq": 4,
+              "text": "So four becomes minus four, and y and z ride along unchanged. Q is minus four, minus three, seven."
+            },
+            {
+              "seq": 5,
+              "text": "Second reflection, now in the x-axis. An axis flips two signs, the two perpendicular to it. For the x-axis those are y and z."
+            },
+            {
+              "seq": 6,
+              "text": "Starting from Q, we flip its y and z. Minus three becomes plus three, seven becomes minus seven, and the x stays minus four. So R is minus four, three, minus seven."
+            },
+            {
+              "seq": 7,
+              "text": "Now read R's signs. Minus four is negative, three is positive, minus seven is negative. Pattern minus, plus, minus."
+            },
+            {
+              "seq": 8,
+              "text": "That column in the table is octant six. So R lands in octant six."
+            },
+            {
+              "seq": 9,
+              "text": "The lesson is discipline. Reflection in a plane is one flip, in an axis is two, and doing them in the wrong order, or flipping the wrong count, drops you in a completely different octant."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये दो reflections को chain करता है, तो test करता है कि तुम जानते हो plane और axis अलग-अलग signs flip करते हैं, और तुम order सही रख सकते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "शुरू करो P equals four, minus three, seven से। पहले इसे Y Z plane में reflect करके Q पाते हैं, फिर Q को x-axis में reflect करके R, और हमें R का octant चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "पहला reflection, Y Z plane में। Plane ठीक एक sign flip करता है, perpendicular वाला। Y Z plane x direction के perpendicular है, तो सिर्फ़ x का sign बदलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो four बनता है minus four, और y, z साथ-साथ unchanged चलते हैं। Q है minus four, minus three, seven।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा reflection, अब x-axis में। Axis दो signs flip करता है, उसके perpendicular वाले दो। x-axis के लिए वो हैं y और z।"
+            },
+            {
+              "seq": 6,
+              "text": "Q से शुरू करके उसके y और z flip करो। Minus three बनता है plus three, seven बनता है minus seven, और x रहता है minus four। तो R है minus four, three, minus seven।"
+            },
+            {
+              "seq": 7,
+              "text": "अब R के signs पढ़ो। Minus four negative, three positive, minus seven negative। Pattern minus, plus, minus।"
+            },
+            {
+              "seq": 8,
+              "text": "Table में वो column है octant six। तो R octant six में गिरता है।"
+            },
+            {
+              "seq": 9,
+              "text": "सबक़ है discipline। Plane में reflection एक flip, axis में दो, और गलत order में करना, या गलत count flip करना, तुम्हें बिल्कुल अलग octant में डाल देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "Advanced: locus equidistant from two planes",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Advanced: locus equidistant from two planes"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Find all points equidistant from the XY-plane and the YZ-plane."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Distance from XY is $|z|$; distance from YZ is $|x|$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "latex": "|x|=|z|"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "latex": "x^2=z^2\\ \\Rightarrow\\ x^2-z^2=0\\ \\Rightarrow\\ (x-z)(x+z)=0"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 39,
+          "text": "So the locus is a PAIR of planes, not one."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "x=z \\qquad \\text{and} \\qquad x=-z"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "caption": "Looking down the y-axis: the two bisecting planes",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 300 260\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\" stroke=\"#bbb\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"240\" stroke=\"#bbb\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"30\" x2=\"250\" y2=\"230\" stroke=\"#2a9d8f\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"230\" x2=\"250\" y2=\"30\" stroke=\"#e07a00\" stroke-width=\"2.5\"/><circle cx=\"150\" cy=\"130\" r=\"4\" fill=\"#d00000\"/><text x=\"256\" y=\"126\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">x</text><text x=\"156\" y=\"30\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">z</text><text x=\"248\" y=\"234\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#2a9d8f\">z = x</text><text x=\"192\" y=\"42\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#e07a00\">z = &#8722;x</text><text x=\"128\" y=\"150\" font-size=\"11\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#d00000\">O (y-axis)</text></svg>"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 68,
+          "style": "red-margin",
+          "text": "Keep the modulus! Solving $x=z$ alone throws away half the locus."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us finish the subtopic with a JEE Advanced flavour, where the whole game is rigour, specifically not losing half the answer."
+            },
+            {
+              "seq": 2,
+              "text": "The task: find every point in space that is equidistant from the X Y plane and the Y Z plane. Set up, do not guess."
+            },
+            {
+              "seq": 3,
+              "text": "Recall the distances. A point's distance from the X Y plane is the absolute value of z. Its distance from the Y Z plane is the absolute value of x. Equidistant means those two are equal."
+            },
+            {
+              "seq": 4,
+              "text": "So the condition is absolute value of x equals absolute value of z. And this is the exact moment students get careless."
+            },
+            {
+              "seq": 5,
+              "text": "Square both sides to remove the moduli: x squared equals z squared, so x squared minus z squared is zero, which factors into x minus z, times x plus z, equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "A product is zero when either factor is zero. So this is not one surface, it is a pair of planes."
+            },
+            {
+              "seq": 7,
+              "text": "The two planes are x equals z, and x equals minus z. And notice y never appeared in the condition, so y is completely free; each of these is a full plane containing the entire y-axis."
+            },
+            {
+              "seq": 8,
+              "text": "If you look straight down the y-axis, the two planes appear edge-on as two lines crossing at the origin, an X-shape. They are the planes that bisect the angle between the X Y and Y Z planes."
+            },
+            {
+              "seq": 9,
+              "text": "And here is the rigour lesson worth real marks. The modulus is non-negotiable. If you dropped it and solved only x equals z, you would silently throw away the second plane, the classic Advanced deduction."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो subtopic को एक JEE Advanced flavour से खत्म करें, जहाँ पूरा खेल rigour का है, ख़ासकर आधा जवाब न खोने का।"
+            },
+            {
+              "seq": 2,
+              "text": "काम: space में हर वो point ढूँढो जो X Y plane और Y Z plane से equidistant है। Set up करो, guess मत करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Distances याद करो। किसी point की X Y plane से distance है z का absolute value। Y Z plane से distance है x का absolute value। Equidistant यानी ये दोनों बराबर।"
+            },
+            {
+              "seq": 4,
+              "text": "तो condition है absolute value of x equals absolute value of z। और ठीक यहीं students लापरवाह हो जाते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "दोनों तरफ़ square करो moduli हटाने के लिए: x squared equals z squared, तो x squared minus z squared zero, जो factor होता है x minus z, into x plus z, equals zero।"
+            },
+            {
+              "seq": 6,
+              "text": "Product तब zero होता है जब कोई एक factor zero हो। तो ये एक surface नहीं, planes की एक pair है।"
+            },
+            {
+              "seq": 7,
+              "text": "दोनों planes हैं x equals z, और x equals minus z। और ध्यान दो y condition में आया ही नहीं, तो y पूरी तरह free है; हर एक एक पूरा plane है जिसमें पूरी y-axis है।"
+            },
+            {
+              "seq": 8,
+              "text": "अगर तुम सीधे y-axis के नीचे देखो, तो दोनों planes edge-on दो lines जैसे origin पर cross करते दिखते हैं, एक X-shape। ये वो planes हैं जो X Y और Y Z के बीच का angle bisect करते हैं।"
+            },
+            {
+              "seq": 9,
+              "text": "और यहाँ rigour का सबक़ जो असली marks देता है। Modulus non-negotiable है। अगर तुम इसे छोड़कर सिर्फ़ x equals z हल करते, तो दूसरा plane चुपचाप खो देते, वो classic Advanced deduction।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "tips",
+      "subtopic": "Coordinate Axes, Planes, and Octants",
+      "title": "Common pitfalls and the pro-move",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Common pitfalls and the pro-move"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "Memorise SIGNS, not octant names — the signs are the definition."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "Distance of P from a plane is $|x|$, not $x$: for $(-5, 1, 2)$ it is 5, never $-5$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 23,
+          "text": "Any zero coordinate → the point is on a plane or axis, in NO octant."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "Examiners plant a stray zero precisely to catch this."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 39,
+          "style": "red-margin",
+          "text": "Reflection: plane 1 flip, axis 2, origin 3 — count before you flip."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "text": "Pro-move: anchor on octant I (all +) and VII (all −)."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "Then read the rest off the z-sign: $z \\gt 0$ is I–IV, $z \\lt 0$ is V–VIII."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us close Subtopic one by collecting the mistakes that quietly cost marks, and the one habit that makes you fast."
+            },
+            {
+              "seq": 2,
+              "text": "First pitfall: trying to memorise octant names like some Roman-numeral chant. That is fragile. The signs are the actual definition; the numeral is just a label hanging off them. Learn the sign table, not the names."
+            },
+            {
+              "seq": 3,
+              "text": "Second: confusing a coordinate with a distance. The distance of a point from a plane is the absolute value of the coordinate, never the raw signed value. For minus five, one, two, the distance from the Y Z plane is five, not minus five. Distances are never negative."
+            },
+            {
+              "seq": 4,
+              "text": "Third, and the most planted trap: if any coordinate is zero, the point is sitting on a plane or an axis, and it belongs to no octant whatsoever."
+            },
+            {
+              "seq": 5,
+              "text": "Examiners slip a zero into a coordinate on purpose, hoping you will force it into some octant anyway. Spot the zero and state that it is on a boundary."
+            },
+            {
+              "seq": 6,
+              "text": "Fourth: reflection sign errors. Keep the count in your margin. A plane flips one sign, an axis flips two, the origin flips three. Count first, then flip."
+            },
+            {
+              "seq": 7,
+              "text": "Now the pro-move that ties it together. Anchor on the only two clean octants: octant one is all positive, octant seven is all negative."
+            },
+            {
+              "seq": 8,
+              "text": "From there, read everything off the z sign. Positive z lands you in octants one through four, behaving just like the plane's quadrants; negative z drops you into five through eight, the same quadrant pattern mirrored below the floor."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो Subtopic one को उन गलतियों को इकट्ठा करके खत्म करें जो चुपचाप marks खाती हैं, और वो एक आदत जो तुम्हें fast बनाती है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली गलती: octant names को किसी Roman-numeral जाप की तरह रटने की कोशिश। ये fragile है। Signs असली definition हैं; numeral बस एक label है उन पर टँगा। Sign table सीखो, names नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी: coordinate को distance समझ बैठना। Plane से किसी point की distance उस coordinate का absolute value है, कभी raw signed value नहीं। minus five, one, two के लिए, Y Z plane से distance five है, minus five नहीं। Distances कभी negative नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरी, और सबसे ज़्यादा plant की जाने वाली trap: अगर कोई भी coordinate zero है, तो point एक plane या axis पर है, और किसी octant का नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Examiners जान-बूझकर coordinate में zero डालते हैं, इस उम्मीद में कि तुम फिर भी उसे किसी octant में ठूँस दोगे। Zero पहचानो और बोलो कि ये boundary पर है।"
+            },
+            {
+              "seq": 6,
+              "text": "चौथी: reflection sign errors। Count margin में रखो। Plane एक sign flip, axis दो, origin तीन। पहले गिनो, फिर flip।"
+            },
+            {
+              "seq": 7,
+              "text": "अब वो pro-move जो सब जोड़ देती है। सिर्फ़ दो साफ़ octants पर anchor करो: octant one all positive, octant seven all negative।"
+            },
+            {
+              "seq": 8,
+              "text": "वहाँ से, सब z के sign से पढ़ो। Positive z तुम्हें octants one से four में डालता है, बिल्कुल plane के quadrants जैसा; negative z तुम्हें five से eight में गिराता है, वही quadrant pattern floor के नीचे mirror।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

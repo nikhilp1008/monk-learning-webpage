@@ -1,0 +1,2751 @@
+{
+  "chapter": "Sets",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 1,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish",
+    "hindi"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Sets and their Representations",
+      "title": "What makes a collection a set",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "When is a collection a SET?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "A set is a well-defined collection: for any object you can answer 'in or out?' with a definite yes/no."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The objects inside are its elements (members)."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "'Tall students' is NOT a set. 'Students taller than 170 cm' IS."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Membership: $a \\in A$ (a is in A), $b \\notin A$ (b is not in A)."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Repetition & order irrelevant: {1, 2, 2, 3} = {1, 2, 3}, {a, b, c} = {c, a, b}."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "So 'how many elements?' always means how many DISTINCT elements."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "Empty set $\\emptyset$ = { }: no members at all."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Let's start with the one question this whole chapter rests on. When does a collection of things actually count as a set?"
+            },
+            {
+              "seq": 2,
+              "text": "A set is any well defined collection. Well defined means this: pick any object in the universe, and you can say 'in' or 'out' with a definite yes or no. Picture a cricket captain's team sheet. Either your name is on the eleven, or it isn't. There's no debate."
+            },
+            {
+              "seq": 3,
+              "text": "The objects sitting inside the set are called its elements, or members."
+            },
+            {
+              "seq": 4,
+              "text": "Here's the catch that trips people. The set of tall students is not a set, because tall is just an opinion. But the set of students taller than one hundred seventy centimetres is a genuine set. Measure anyone and you get a clean yes or no."
+            },
+            {
+              "seq": 5,
+              "text": "We write a belongs to A using the epsilon like symbol, and b does not belong to A using that same symbol struck through."
+            },
+            {
+              "seq": 6,
+              "text": "Two rules fall straight out of the team sheet. Repetition means nothing, writing a name twice doesn't field two players, so the set one, two, two, three is just one, two, three. And order means nothing, reshuffling the line up changes nobody, so a, b, c equals c, a, b."
+            },
+            {
+              "seq": 7,
+              "text": "Because of that, whenever we ask how many elements, we always mean how many distinct elements."
+            },
+            {
+              "seq": 8,
+              "text": "And one special set deserves respect: the empty set, written with the slashed symbol or empty braces. It has no members at all, like the set of students who scored above one hundred on a one hundred mark paper. Nobody qualifies."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> चलो शुरू करते हैं उस एक सवाल से जिस पर पूरा chapter टिका है। कोई collection actually set कब बनता है?"
+            },
+            {
+              "seq": 2,
+              "text": "Set एक well-defined collection होता है। Well-defined का मतलब है: universe में से कोई भी object उठाओ, और आप definite yes या no में बता सको कि वो 'in' है या 'out'। एक cricket captain की team sheet सोचो, या तो आपका नाम eleven में है, या नहीं है, कोई बहस नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "Set के अंदर बैठे objects को उसके elements या members कहते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "अब यहाँ वो catch है जहाँ लोग फँसते हैं। 'Tall students' का collection set नहीं है, क्योंकि 'tall' सिर्फ़ एक opinion है। लेकिन 'एक सौ सत्तर centimetre से लंबे students' एक genuine set है, किसी को भी measure करो और clean yes या no मिल जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "हम लिखते हैं a belongs to A, epsilon जैसे symbol से, और b does not belong to A उसी symbol पर एक line लगाकर।"
+            },
+            {
+              "seq": 6,
+              "text": "Team sheet से दो rules सीधे निकल आते हैं। Repetition का कोई मतलब नहीं, नाम दो बार लिखने से दो players नहीं आ जाते, तो set एक, दो, दो, तीन असल में एक, दो, तीन ही है। और order का कोई मतलब नहीं, तो a, b, c बराबर है c, a, b के।"
+            },
+            {
+              "seq": 7,
+              "text": "इसीलिए जब भी हम पूछते हैं कितने elements हैं, तो हमेशा मतलब होता है कितने distinct elements।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक special set respect का हक़दार है: empty set, slashed symbol या खाली braces से लिखते हैं। इसमें कोई member होता ही नहीं, जैसे सौ में से सौ से ऊपर score करने वाले students का set। कोई qualify ही नहीं करता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> आइए उसी एक प्रश्न से शुरू करें जिस पर यह पूरा अध्याय टिका है। कोई संग्रह वास्तव में समुच्चय कब बनता है?"
+            },
+            {
+              "seq": 2,
+              "text": "समुच्चय एक सुपरिभाषित संग्रह होता है। सुपरिभाषित का अर्थ है: कोई भी वस्तु लो, और आप निश्चित हाँ या ना में बता सको कि वह उसमें है या बाहर। एक क्रिकेट कप्तान की टीम-सूची सोचिए, या तो आपका नाम उन ग्यारह में है, या नहीं है, कोई बहस नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "समुच्चय के भीतर की वस्तुएँ उसके अवयव या सदस्य कहलाती हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "अब वह पेच जहाँ विद्यार्थी फिसलते हैं। 'लंबे विद्यार्थी' समुच्चय नहीं है, क्योंकि 'लंबा' केवल एक राय है। पर 'एक सौ सत्तर सेंटीमीटर से लंबे विद्यार्थी' एक सच्चा समुच्चय है, किसी को भी नापिए और साफ़ हाँ या ना मिल जाती है।"
+            },
+            {
+              "seq": 5,
+              "text": "हम लिखते हैं a, A का सदस्य है, एप्सिलन जैसे चिह्न से, और b, A का सदस्य नहीं है, उसी चिह्न पर तिरछी रेखा लगाकर।"
+            },
+            {
+              "seq": 6,
+              "text": "टीम-सूची से दो नियम सीधे निकलते हैं। पुनरावृत्ति का कोई अर्थ नहीं, नाम दो बार लिखने से दो खिलाड़ी नहीं आते, तो समुच्चय एक, दो, दो, तीन असल में एक, दो, तीन ही है। और क्रम का भी अर्थ नहीं, तो a, b, c बराबर है c, a, b के।"
+            },
+            {
+              "seq": 7,
+              "text": "इसीलिए जब भी हम पूछें कितने अवयव हैं, तो हमेशा अर्थ होता है कितने भिन्न अवयव।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक विशेष समुच्चय आदर का पात्र है: रिक्त समुच्चय, तिरछे चिह्न या खाली कोष्ठकों से लिखते हैं। इसमें कोई सदस्य होता ही नहीं, जैसे सौ में से सौ से अधिक अंक पाने वाले विद्यार्थियों का समुच्चय। कोई योग्य ही नहीं होता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Sets and their Representations",
+      "title": "Two ways to describe a set: roster and set-builder",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two languages for one set"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Roster (tabular) form: list every member inside braces, e.g. {2, 4, 6}."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Set-builder form: state the rule members satisfy, $A = \\{x : P(x)\\}$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "The colon ':' reads 'such that'."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Roster is concrete but useless for endless collections; set-builder captures infinite sets in one line."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Roster can only hint at infinity with dots: {1, 2, 3, ...} — never truly list it."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "style": "red-margin",
+          "text": "Roster lists every 'yes'. Set-builder writes the yes/no question itself."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Once you have a set, how do you describe it to someone else? There are exactly two languages, and this section is about switching fluently between them."
+            },
+            {
+              "seq": 2,
+              "text": "The first is roster form, also called tabular form. You simply read out every member by name inside braces. The set of even numbers up to six is two, four, six. It's like reading a team sheet aloud."
+            },
+            {
+              "seq": 3,
+              "text": "The second is set builder form. Instead of naming members, you state the rule they all satisfy. In symbols, A equals the set of all x such that P of x holds, where P is the defining property."
+            },
+            {
+              "seq": 4,
+              "text": "That colon in the middle is important, it reads as 'such that'. So A equals x such that x is even, is just 'the set of all x such that x is even'."
+            },
+            {
+              "seq": 5,
+              "text": "Why keep both? Roster is concrete but hopeless for huge or endless collections, you cannot list every natural number. Set builder is a single rule that captures even an infinite set in one line."
+            },
+            {
+              "seq": 6,
+              "text": "Roster can only suggest an infinite set with dots, one, two, three, and so on. Those dots are a hint, they never truly list the set."
+            },
+            {
+              "seq": 7,
+              "text": "Here's the clean way to hold the difference. Roster form lists every 'yes'. Set builder form writes down the yes or no question itself."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Set मिल जाने के बाद, उसे किसी और को describe कैसे करें? बिल्कुल दो languages हैं, और यह section उन दोनों के बीच fluently switch करने के बारे में है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली है roster form, जिसे tabular form भी कहते हैं। आप बस हर member का नाम braces के अंदर लिख देते हैं। छह तक के even numbers का set है दो, चार, छह। यह team sheet को ज़ोर से पढ़ने जैसा है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी है set-builder form। Members के नाम लिखने के बजाय, आप वो rule लिखते हैं जो वे सब satisfy करते हैं। Symbols में, A बराबर set of all x such that P of x, जहाँ P defining property है।"
+            },
+            {
+              "seq": 4,
+              "text": "बीच वाला colon important है, इसे पढ़ते हैं 'such that', यानी 'ऐसा कि'। तो A बराबर x such that x is even, का मतलब है 'उन सभी x का set जो even हैं'।"
+            },
+            {
+              "seq": 5,
+              "text": "दोनों क्यों रखें? Roster concrete है पर बड़े या endless collections के लिए बेकार, आप हर natural number list नहीं कर सकते। Set-builder एक single rule है जो infinite set को भी एक line में पकड़ लेता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Roster सिर्फ़ dots से infinite set का इशारा कर सकता है, एक, दो, तीन, और आगे। ये dots सिर्फ़ एक hint हैं, ये कभी सच में set को list नहीं करते।"
+            },
+            {
+              "seq": 7,
+              "text": "फ़र्क़ याद रखने का साफ़ तरीक़ा: roster form हर 'yes' को list करता है। Set-builder form ख़ुद वो yes या no वाला सवाल लिख देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "समुच्चय मिल जाने पर, उसे किसी और को कैसे बताएँ? ठीक दो भाषाएँ हैं, और यह खंड उन दोनों के बीच सहजता से बदलने के बारे में है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली है रोस्टर रूप, जिसे तालिका रूप भी कहते हैं। आप बस हर सदस्य का नाम कोष्ठकों के भीतर लिख देते हैं। छह तक की सम संख्याओं का समुच्चय है दो, चार, छह। यह टीम-सूची को ऊँचे स्वर में पढ़ने जैसा है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी है समुच्चय-निर्माण रूप। सदस्यों के नाम लिखने के बजाय, आप वह नियम लिखते हैं जिसे वे सब संतुष्ट करते हैं। चिह्नों में, A बराबर उन सभी x का समुच्चय ऐसा कि P of x सत्य है, जहाँ P परिभाषी गुण है।"
+            },
+            {
+              "seq": 4,
+              "text": "बीच का विसर्ग-चिह्न महत्वपूर्ण है, इसे पढ़ते हैं 'ऐसा कि'। तो A बराबर x ऐसा कि x सम है, का अर्थ है 'उन सभी x का समुच्चय जो सम हैं'।"
+            },
+            {
+              "seq": 5,
+              "text": "दोनों क्यों रखें? रोस्टर मूर्त है पर विशाल या अनंत संग्रहों के लिए बेकार, आप हर प्राकृत संख्या नहीं गिना सकते। समुच्चय-निर्माण एक ही नियम है जो अनंत समुच्चय को भी एक पंक्ति में पकड़ लेता है।"
+            },
+            {
+              "seq": 6,
+              "text": "रोस्टर केवल बिंदुओं से अनंत समुच्चय का संकेत दे सकता है, एक, दो, तीन, और आगे। ये बिंदु केवल एक संकेत हैं, ये कभी सचमुच समुच्चय को नहीं गिनाते।"
+            },
+            {
+              "seq": 7,
+              "text": "अंतर याद रखने का साफ़ तरीक़ा: रोस्टर रूप हर 'हाँ' को गिना देता है। समुच्चय-निर्माण रूप स्वयं वह हाँ या ना वाला प्रश्न लिख देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Sets and their Representations",
+      "title": "Empty, singleton, finite, infinite — and equal vs equivalent",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Classifying sets & comparing them"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "{0} is NOT empty (one element: 0). {∅} is NOT empty (one element: ∅)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Singleton: exactly one element, e.g. {a}."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Finite: $n(A)$ is a definite whole number. Infinite: not finite."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Equal sets $A = B$: identical elements (mutual containment)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Equivalent sets: same cardinality, $n(A) = n(B)$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 53,
+          "style": "red-margin",
+          "text": "Equal ⇒ equivalent, but equivalent ⇏ equal. {1,2,3} & {a,b,c}: equivalent, not equal."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now let's give sets their labels, and learn the two ways to compare them. This is where a lot of easy marks are quietly won or lost."
+            },
+            {
+              "seq": 2,
+              "text": "First, the trap everyone falls into. The set containing zero is not the empty set, it holds one element, the number zero. Likewise the set containing the empty set is not empty, it holds one element, namely the empty set itself. A box with an empty box inside is still not an empty box."
+            },
+            {
+              "seq": 3,
+              "text": "A set with exactly one element is called a singleton, like the set containing just a."
+            },
+            {
+              "seq": 4,
+              "text": "A set is finite if its number of elements, written n of A, is a definite whole number you could finish counting. If you can never finish counting, it's infinite."
+            },
+            {
+              "seq": 5,
+              "text": "Now comparing. Two sets are equal, A equals B, when they have identical elements, every element of A is in B and every element of B is in A."
+            },
+            {
+              "seq": 6,
+              "text": "Two sets are merely equivalent when they only have the same cardinality, that is, n of A equals n of B, the same head count."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> Here's the exam secret. Equal always implies equivalent, but equivalent does not imply equal. The set one, two, three and the set a, b, c are equivalent, both have size three, yet they are absolutely not equal. Same count is not same faces."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब sets को उनके labels देते हैं, और उन्हें compare करने के दो तरीक़े सीखते हैं। यहीं easy marks चुपचाप बनते या बिगड़ते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले वो trap जिसमें सब फँसते हैं। zero वाला set empty set नहीं है, इसमें एक element है, number zero। इसी तरह empty set वाला set empty नहीं है, इसमें एक element है, ख़ुद empty set। एक खाली box के अंदर रखा खाली box, फिर भी खाली box नहीं है।"
+            },
+            {
+              "seq": 3,
+              "text": "जिस set में ठीक एक element हो उसे singleton कहते हैं, जैसे सिर्फ़ a वाला set।"
+            },
+            {
+              "seq": 4,
+              "text": "Set finite है अगर उसके elements की संख्या, यानी n of A, एक definite whole number है जिसे आप गिन कर ख़त्म कर सको। अगर गिनती कभी ख़त्म ही न हो, तो वो infinite है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब comparing। दो sets equal हैं, A बराबर B, जब उनके elements बिल्कुल identical हों, A का हर element B में और B का हर element A में।"
+            },
+            {
+              "seq": 6,
+              "text": "दो sets सिर्फ़ equivalent हैं जब उनकी सिर्फ़ cardinality same हो, यानी n of A बराबर n of B, बस गिनती बराबर।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> अब exam का राज़। Equal हमेशा equivalent को imply करता है, पर equivalent, equal को imply नहीं करता। Set एक, दो, तीन और set a, b, c equivalent हैं, दोनों की size तीन, फिर भी ये बिल्कुल equal नहीं हैं। Same count का मतलब same faces नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब समुच्चयों को उनके नाम देते हैं, और उनकी तुलना के दो तरीक़े सीखते हैं। यहीं आसान अंक चुपचाप बनते या बिगड़ते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले वह जाल जिसमें सब फँसते हैं। शून्य वाला समुच्चय रिक्त समुच्चय नहीं है, इसमें एक अवयव है, संख्या शून्य। इसी तरह रिक्त समुच्चय वाला समुच्चय रिक्त नहीं है, इसमें एक अवयव है, स्वयं रिक्त समुच्चय। खाली डिब्बे के भीतर रखा खाली डिब्बा, फिर भी खाली डिब्बा नहीं है।"
+            },
+            {
+              "seq": 3,
+              "text": "जिस समुच्चय में ठीक एक अवयव हो उसे एकल समुच्चय, यानी singleton कहते हैं, जैसे केवल a वाला समुच्चय।"
+            },
+            {
+              "seq": 4,
+              "text": "समुच्चय परिमित है यदि उसके अवयवों की संख्या, n of A, एक निश्चित पूर्ण संख्या हो जिसे आप गिनकर समाप्त कर सकें। यदि गिनती कभी समाप्त ही न हो, तो वह अपरिमित है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब तुलना। दो समुच्चय समान हैं, A बराबर B, जब उनके अवयव बिल्कुल एक जैसे हों, A का हर अवयव B में और B का हर अवयव A में।"
+            },
+            {
+              "seq": 6,
+              "text": "दो समुच्चय केवल तुल्य हैं जब उनकी केवल गणनीयता समान हो, यानी n of A बराबर n of B, बस गिनती बराबर।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> अब परीक्षा का रहस्य। समान होना हमेशा तुल्य होने को दर्शाता है, पर तुल्य होना समान होने को नहीं दर्शाता। समुच्चय एक, दो, तीन और समुच्चय a, b, c तुल्य हैं, दोनों का आकार तीन, फिर भी ये बिल्कुल समान नहीं। समान गिनती का अर्थ समान अवयव नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Sets and their Representations",
+      "title": "The standard number sets and their nesting",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The universes you'll meet everywhere"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "$\\mathbb{N} = \\{1,2,3,\\dots\\}$ naturals; $\\mathbb{W} = \\{0,1,2,\\dots\\}$ wholes."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "$\\mathbb{Z} = \\{\\dots,-2,-1,0,1,2,\\dots\\}$ integers; $\\mathbb{Q} = \\{p/q : p,q \\in \\mathbb{Z},\\ q \\ne 0\\}$ rationals."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "$\\mathbb{R}$ = reals; irrationals $\\mathbb{T}$ = reals that are not rational."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "latex": "\\mathbb{N} \\subset \\mathbb{W} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}"
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "caption": "Nested number sets, with irrationals as the shaded band of R outside Q",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 480 340\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"0\" y=\"0\" width=\"480\" height=\"340\" fill=\"#ffffff\"/>\n<ellipse cx=\"240\" cy=\"170\" rx=\"220\" ry=\"150\" fill=\"#fde8ef\" stroke=\"#c2185b\" stroke-width=\"2\"/>\n<ellipse cx=\"230\" cy=\"175\" rx=\"165\" ry=\"115\" fill=\"#e8f0fe\" stroke=\"#1a56c4\" stroke-width=\"2\"/>\n<ellipse cx=\"215\" cy=\"182\" rx=\"118\" ry=\"82\" fill=\"#e6f4ea\" stroke=\"#1e8e3e\" stroke-width=\"2\"/>\n<ellipse cx=\"185\" cy=\"190\" rx=\"70\" ry=\"48\" fill=\"#fff7e0\" stroke=\"#e08600\" stroke-width=\"2\"/>\n<text x=\"420\" y=\"70\" font-family=\"system-ui, sans-serif\" font-size=\"22\" fill=\"#c2185b\">&#8477;</text>\n<text x=\"335\" y=\"110\" font-family=\"system-ui, sans-serif\" font-size=\"22\" fill=\"#1a56c4\">&#8484;</text>\n<text x=\"270\" y=\"140\" font-family=\"system-ui, sans-serif\" font-size=\"22\" fill=\"#1e8e3e\">&#8474;</text>\n<text x=\"170\" y=\"196\" font-family=\"system-ui, sans-serif\" font-size=\"22\" fill=\"#e08600\">&#8469;</text>\n<text x=\"150\" y=\"165\" font-family=\"system-ui, sans-serif\" font-size=\"15\" fill=\"#333\">3</text>\n<text x=\"290\" y=\"205\" font-family=\"system-ui, sans-serif\" font-size=\"15\" fill=\"#333\">-5</text>\n<text x=\"240\" y=\"110\" font-family=\"system-ui, sans-serif\" font-size=\"15\" fill=\"#333\">2/3</text>\n<text x=\"380\" y=\"250\" font-family=\"system-ui, sans-serif\" font-size=\"15\" fill=\"#333\">&#8730;2</text>\n<text x=\"120\" y=\"300\" font-family=\"system-ui, sans-serif\" font-size=\"15\" fill=\"#333\">&#960;</text>\n<text x=\"300\" y=\"300\" font-family=\"system-ui, sans-serif\" font-size=\"14\" fill=\"#c2185b\" font-style=\"italic\">irrationals &#120139; = &#8477; outside &#8474;</text>\n</svg>"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "The universe symbol decides the answer: {x : x² = 2} is empty over ℕ, a doubleton over ℝ."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "In set builder form you always work inside some universe of numbers, so let's memorise the standard ones. These are the most common universes you'll see for the rest of your maths."
+            },
+            {
+              "seq": 2,
+              "text": "The naturals, capital N, are one, two, three, and onward. Add zero and you get the wholes, capital W, zero, one, two, and onward."
+            },
+            {
+              "seq": 3,
+              "text": "Bring in the negatives and you get the integers, capital Z, running from minus infinity through zero to plus infinity. Allow ratios p over q with integer p and q, and q not zero, and you get the rationals, capital Q."
+            },
+            {
+              "seq": 4,
+              "text": "The reals, capital R, are the full number line. And the irrationals, capital T, are exactly the reals that are not rational, numbers like root two and pi."
+            },
+            {
+              "seq": 5,
+              "text": "The key relationship is this chain of nesting: the naturals sit inside the wholes, inside the integers, inside the rationals, inside the reals. Each is a subset of the next."
+            },
+            {
+              "seq": 6,
+              "text": "Picture it as concentric ovals. Naturals in the centre, then integers, then rationals, then reals as the outer boundary. The shaded band, the part of the reals lying outside the rationals, is the irrationals, where root two and pi live."
+            },
+            {
+              "seq": 7,
+              "text": "Burn this in: the universe symbol quietly decides the answer. The set of x with x squared equals two is empty over the naturals, but a two element set over the reals. Always read the universe before you solve."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Set-builder form में आप हमेशा किसी numbers के universe के अंदर काम करते हैं, तो standard universes याद कर लेते हैं। बाक़ी पूरी maths में यही सबसे common universes दिखेंगे।"
+            },
+            {
+              "seq": 2,
+              "text": "Naturals, capital N, हैं एक, दो, तीन, और आगे। zero जोड़ दो तो मिलते हैं wholes, capital W, zero, एक, दो, और आगे।"
+            },
+            {
+              "seq": 3,
+              "text": "Negatives ले आओ तो मिलते हैं integers, capital Z, minus infinity से zero होते हुए plus infinity तक। p over q जैसे ratios allow करो, जहाँ p और q integers हों और q zero न हो, तो मिलते हैं rationals, capital Q।"
+            },
+            {
+              "seq": 4,
+              "text": "Reals, capital R, पूरी number line हैं। और irrationals, capital T, बिल्कुल वही reals हैं जो rational नहीं, जैसे root two और pi।"
+            },
+            {
+              "seq": 5,
+              "text": "Key relationship यह nesting की chain है: naturals बैठे हैं wholes के अंदर, वो integers के अंदर, वो rationals के अंदर, वो reals के अंदर। हर एक अगले का subset है।"
+            },
+            {
+              "seq": 6,
+              "text": "इसे concentric ovals की तरह सोचो। बीच में naturals, फिर integers, फिर rationals, फिर बाहर की boundary पर reals। shaded band, reals का वो हिस्सा जो rationals के बाहर है, वही irrationals है, जहाँ root two और pi रहते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "यह दिमाग़ में बैठा लो: universe symbol चुपचाप answer तय कर देता है। x का set जहाँ x squared बराबर two है, naturals पर empty है, पर reals पर two-element set। हल करने से पहले हमेशा universe पढ़ो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "समुच्चय-निर्माण रूप में आप हमेशा संख्याओं के किसी समष्टि के भीतर काम करते हैं, तो मानक समष्टियाँ याद कर लें। बाक़ी पूरे गणित में यही सबसे प्रचलित समष्टियाँ दिखेंगी।"
+            },
+            {
+              "seq": 2,
+              "text": "प्राकृत संख्याएँ, कैपिटल N, हैं एक, दो, तीन, और आगे। शून्य जोड़ दें तो मिलती हैं पूर्ण संख्याएँ, कैपिटल W, शून्य, एक, दो, और आगे।"
+            },
+            {
+              "seq": 3,
+              "text": "ऋणात्मक संख्याएँ ले आएँ तो मिलते हैं पूर्णांक, कैपिटल Z, ऋण अनंत से शून्य होते हुए धन अनंत तक। p बटा q जैसे अनुपात मानें, जहाँ p और q पूर्णांक हों और q शून्य न हो, तो मिलती हैं परिमेय संख्याएँ, कैपिटल Q।"
+            },
+            {
+              "seq": 4,
+              "text": "वास्तविक संख्याएँ, कैपिटल R, पूरी संख्या-रेखा हैं। और अपरिमेय संख्याएँ, कैपिटल T, ठीक वही वास्तविक हैं जो परिमेय नहीं, जैसे रूट टू और पाई।"
+            },
+            {
+              "seq": 5,
+              "text": "मुख्य संबंध यह अंतर्वेशन की श्रृंखला है: प्राकृत, पूर्ण के भीतर, वह पूर्णांक के भीतर, वह परिमेय के भीतर, वह वास्तविक के भीतर। हर एक अगले का उपसमुच्चय है।"
+            },
+            {
+              "seq": 6,
+              "text": "इसे संकेंद्री अंडाकारों की तरह सोचिए। बीच में प्राकृत, फिर पूर्णांक, फिर परिमेय, फिर बाहरी सीमा पर वास्तविक। छायांकित पट्टी, वास्तविक का वह भाग जो परिमेय के बाहर है, वही अपरिमेय है, जहाँ रूट टू और पाई रहते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "यह मन में बैठा लें: समष्टि का चिह्न चुपचाप उत्तर तय कर देता है। x का समुच्चय जहाँ x का वर्ग दो है, प्राकृत पर रिक्त है, पर वास्तविक पर दो-अवयव समुच्चय। हल करने से पहले हमेशा समष्टि पढ़ें।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Sets and their Representations",
+      "title": "Set-builder to roster: two-digit numbers with digit-sum 8",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two-digit numbers, digits adding to 8"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Want: two-digit numbers (10–99) with digit-sum = 8. Let tens digit $t \\ge 1$, units $u$, with $t + u = 8$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "$t=1{,}u=7 \\to 17$; $t=2{,}u=6 \\to 26$; $t=3{,}u=5 \\to 35$; $t=4{,}u=4 \\to 44$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "$t=5{,}u=3 \\to 53$; $t=6{,}u=2 \\to 62$; $t=7{,}u=1 \\to 71$; $t=8{,}u=0 \\to 80$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "80 qualifies: 8 + 0 = 8. Don't drop it!"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\{17,\\ 26,\\ 35,\\ 44,\\ 53,\\ 62,\\ 71,\\ 80\\}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Our first worked example is a classic board question: write, in roster form, the set of all two digit natural numbers whose digits add up to eight."
+            },
+            {
+              "seq": 2,
+              "text": "Set up the structure. A two digit number lives between ten and ninety nine. Call the tens digit t and the units digit u. Since it's a two digit number, t is at least one, and the condition is t plus u equals eight. Now just walk t upward."
+            },
+            {
+              "seq": 3,
+              "text": "t equals one gives u equals seven, the number seventeen. t equals two, u equals six, gives twenty six. t equals three, u equals five, gives thirty five. t equals four, u equals four, gives forty four."
+            },
+            {
+              "seq": 4,
+              "text": "Keep going. t equals five gives fifty three, t equals six gives sixty two, t equals seven gives seventy one, and t equals eight gives eighty."
+            },
+            {
+              "seq": 5,
+              "text": "Watch this last one carefully, it's where marks vanish. Eighty qualifies, because eight plus zero equals eight. Students routinely drop it because the units digit is zero. Don't."
+            },
+            {
+              "seq": 6,
+              "text": "So the answer, in roster form, is seventeen, twenty six, thirty five, forty four, fifty three, sixty two, seventy one, eighty. Eight numbers, listed cleanly in braces."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हमारा पहला worked example एक classic board question है: roster form में लिखो उन सभी two-digit natural numbers का set जिनके digits का जोड़ आठ हो।"
+            },
+            {
+              "seq": 2,
+              "text": "Structure set करो। Two-digit number दस और निन्यानवे के बीच होता है। tens digit को t कहो, units digit को u। Two-digit होने से t कम से कम एक है, और condition है t plus u बराबर आठ। अब बस t को बढ़ाते जाओ।"
+            },
+            {
+              "seq": 3,
+              "text": "t बराबर एक देता है u बराबर सात, यानी सत्रह। t बराबर दो, u बराबर छह, देता है छब्बीस। t बराबर तीन, u बराबर पाँच, देता है पैंतीस। t बराबर चार, u बराबर चार, देता है चौवालीस।"
+            },
+            {
+              "seq": 4,
+              "text": "आगे बढ़ो। t बराबर पाँच देता है तिरेपन, t बराबर छह देता है बासठ, t बराबर सात देता है इकहत्तर, और t बराबर आठ देता है अस्सी।"
+            },
+            {
+              "seq": 5,
+              "text": "इस आख़िरी को ध्यान से देखो, यहीं marks उड़ते हैं। अस्सी qualify करता है, क्योंकि आठ plus zero बराबर आठ। Students अक्सर इसे छोड़ देते हैं क्योंकि units digit zero है। मत छोड़ो।"
+            },
+            {
+              "seq": 6,
+              "text": "तो answer, roster form में, है सत्रह, छब्बीस, पैंतीस, चौवालीस, तिरेपन, बासठ, इकहत्तर, अस्सी। आठ numbers, braces में साफ़-साफ़ list किए हुए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हमारा पहला हल किया उदाहरण एक प्रचलित बोर्ड प्रश्न है: रोस्टर रूप में लिखिए उन सभी दो-अंकीय प्राकृत संख्याओं का समुच्चय जिनके अंकों का योग आठ हो।"
+            },
+            {
+              "seq": 2,
+              "text": "संरचना बनाइए। दो-अंकीय संख्या दस और निन्यानवे के बीच होती है। दहाई का अंक t कहिए, इकाई का अंक u। दो-अंकीय होने से t कम से कम एक है, और शर्त है t जोड़ u बराबर आठ। अब बस t को बढ़ाते जाइए।"
+            },
+            {
+              "seq": 3,
+              "text": "t बराबर एक देता है u बराबर सात, यानी सत्रह। t बराबर दो, u बराबर छह, देता है छब्बीस। t बराबर तीन, u बराबर पाँच, देता है पैंतीस। t बराबर चार, u बराबर चार, देता है चौवालीस।"
+            },
+            {
+              "seq": 4,
+              "text": "आगे बढ़िए। t बराबर पाँच देता है तिरेपन, t बराबर छह देता है बासठ, t बराबर सात देता है इकहत्तर, और t बराबर आठ देता है अस्सी।"
+            },
+            {
+              "seq": 5,
+              "text": "इस अंतिम को ध्यान से देखिए, यहीं अंक उड़ते हैं। अस्सी योग्य है, क्योंकि आठ जोड़ शून्य बराबर आठ। विद्यार्थी अक्सर इसे छोड़ देते हैं क्योंकि इकाई अंक शून्य है। मत छोड़िए।"
+            },
+            {
+              "seq": 6,
+              "text": "तो उत्तर, रोस्टर रूप में, है सत्रह, छब्बीस, पैंतीस, चौवालीस, तिरेपन, बासठ, इकहत्तर, अस्सी। आठ संख्याएँ, कोष्ठकों में साफ़-साफ़ सूचीबद्ध।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Sets and their Representations",
+      "title": "Speed trap: which set is empty?",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Spot the empty set — fast"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Options: (a) $\\{x \\in \\mathbb{R} : x^2 + 1 = 0\\}$  (b) {x : x is an even prime}  (c) {0}  (d) $\\{x \\in \\mathbb{N} : x < 1\\}$"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "(a) $x^2 = -1$ has no real solution → EMPTY."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "(d) smallest natural is 1, so no natural is $< 1$ → EMPTY."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "style": "red-margin",
+          "text": "(b) = {2}, NOT empty (2 is prime). (c) = {0}, NOT empty. Both are decoys."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Speed move: check the universe FIRST — ℕ starting at 1 kills (d) instantly."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here's a speed trap, the kind where the exam rewards recognition over calculation. Without lengthy work, identify which of four options is the empty set."
+            },
+            {
+              "seq": 2,
+              "text": "The options are: a, the reals x with x squared plus one equals zero; b, x that is an even prime; c, the set containing zero; and d, natural numbers x less than one."
+            },
+            {
+              "seq": 3,
+              "text": "Scan for impossibility. Option a says x squared equals minus one, which has no real solution, so over the reals it is empty."
+            },
+            {
+              "seq": 4,
+              "text": "Option d, the smallest natural number is one, so no natural number is strictly less than one. Empty again."
+            },
+            {
+              "seq": 5,
+              "text": "Now the decoys. Option b is the set containing two, because two is the one and only even prime, so it's not empty, students forget two is prime. And option c contains the number zero, so it's not empty either, that's the classic set containing zero versus empty set trap."
+            },
+            {
+              "seq": 6,
+              "text": "The real lesson is the speed move: check the universe before you compute. In option d, seeing that the naturals start at one instantly kills it, no arithmetic needed. Domain first, always."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह एक speed trap है, जहाँ exam calculation से ज़्यादा recognition को reward करता है। बिना लंबी mehnat के बताओ, चार में से कौन सा option empty set है।"
+            },
+            {
+              "seq": 2,
+              "text": "Options हैं: a, reals x जहाँ x squared plus one बराबर zero; b, x जो even prime हो; c, zero वाला set; और d, natural numbers x जो one से कम हों।"
+            },
+            {
+              "seq": 3,
+              "text": "Impossibility के लिए scan करो। Option a कहता है x squared बराबर minus one, जिसका कोई real solution नहीं, तो reals पर यह empty है।"
+            },
+            {
+              "seq": 4,
+              "text": "Option d, सबसे छोटा natural number एक है, तो कोई भी natural number strictly one से कम नहीं। फिर empty।"
+            },
+            {
+              "seq": 5,
+              "text": "अब decoys। Option b है two वाला set, क्योंकि two ही एकमात्र even prime है, तो यह empty नहीं, students भूल जाते हैं कि two prime है। और option c में number zero है, तो यह भी empty नहीं, यही classic zero-वाला-set बनाम empty-set trap है।"
+            },
+            {
+              "seq": 6,
+              "text": "असली सबक़ है speed move: compute करने से पहले universe check करो। Option d में, यह देखना कि naturals one से शुरू होते हैं, इसे तुरंत ख़त्म कर देता है, कोई arithmetic नहीं। Domain पहले, हमेशा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह एक गति-जाल है, जहाँ परीक्षा गणना से अधिक पहचान को पुरस्कृत करती है। बिना लंबी मेहनत के बताइए, चार में से कौन-सा विकल्प रिक्त समुच्चय है।"
+            },
+            {
+              "seq": 2,
+              "text": "विकल्प हैं: a, वास्तविक x जहाँ x का वर्ग जोड़ एक बराबर शून्य; b, x जो सम अभाज्य हो; c, शून्य वाला समुच्चय; और d, प्राकृत संख्याएँ x जो एक से कम हों।"
+            },
+            {
+              "seq": 3,
+              "text": "असंभवता के लिए देखिए। विकल्प a कहता है x का वर्ग बराबर ऋण एक, जिसका कोई वास्तविक हल नहीं, तो वास्तविक पर यह रिक्त है।"
+            },
+            {
+              "seq": 4,
+              "text": "विकल्प d, सबसे छोटी प्राकृत संख्या एक है, तो कोई भी प्राकृत संख्या ठीक एक से कम नहीं। फिर रिक्त।"
+            },
+            {
+              "seq": 5,
+              "text": "अब छलावे। विकल्प b है दो वाला समुच्चय, क्योंकि दो ही एकमात्र सम अभाज्य है, तो यह रिक्त नहीं, विद्यार्थी भूल जाते हैं कि दो अभाज्य है। और विकल्प c में संख्या शून्य है, तो यह भी रिक्त नहीं, यही प्रसिद्ध शून्य-वाला-समुच्चय बनाम रिक्त-समुच्चय जाल है।"
+            },
+            {
+              "seq": 6,
+              "text": "असली सीख है गति-चाल: गणना से पहले समष्टि जाँचिए। विकल्प d में, यह देखना कि प्राकृत संख्याएँ एक से शुरू होती हैं, इसे तुरंत समाप्त कर देता है, कोई अंकगणित नहीं। समष्टि पहले, हमेशा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Sets and their Representations",
+      "title": "Cardinality and equality: |x| ≤ 2 versus x³ = x",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find n(A), n(B); is A = B?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$A = \\{x \\in \\mathbb{Z} : |x| \\le 2\\}$,  $B = \\{x \\in \\mathbb{Z} : x^3 = x\\}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "$A = \\{-2,-1,0,1,2\\}$, so $n(A) = 5$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "latex": "x^3 = x \\;\\Rightarrow\\; x(x-1)(x+1) = 0 \\;\\Rightarrow\\; x \\in \\{-1,0,1\\}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "So $B = \\{-1,0,1\\}$, $n(B) = 3$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Every element of B is in A, but −2, 2 ∈ A are not in B → A ≠ B (in fact B ⊂ A)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one links absolute value reasoning with polynomial factoring, over a restricted universe. We need the size of two sets, and whether they're equal."
+            },
+            {
+              "seq": 2,
+              "text": "A is the integers x with absolute value of x at most two. B is the integers x satisfying x cubed equals x. Note both live in the integers, that restriction matters."
+            },
+            {
+              "seq": 3,
+              "text": "For A, absolute value at most two means x runs from minus two to two: minus two, minus one, zero, one, two. So n of A is five."
+            },
+            {
+              "seq": 4,
+              "text": "For B, rearrange x cubed equals x to x cubed minus x equals zero, then factor: x times x minus one times x plus one equals zero. The roots are minus one, zero, and one, all integers."
+            },
+            {
+              "seq": 5,
+              "text": "So B is minus one, zero, one, and n of B is three."
+            },
+            {
+              "seq": 6,
+              "text": "Now test equality with mutual containment. Every element of B does lie in A, good, but minus two and two are in A and not in B. Containment fails one direction, so A is not equal to B. In fact B is a proper subset of A. Final answer: n of A is five, n of B is three, and A is not equal to B."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example absolute-value reasoning को polynomial factoring से जोड़ता है, एक restricted universe पर। हमें दो sets की size चाहिए, और यह कि वे equal हैं या नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "A है वो integers x जिनका absolute value x ज़्यादा से ज़्यादा two हो। B है वो integers x जो x cubed बराबर x satisfy करें। ध्यान दो दोनों integers में हैं, यह restriction मायने रखता है।"
+            },
+            {
+              "seq": 3,
+              "text": "A के लिए, absolute value ज़्यादा से ज़्यादा two का मतलब x minus two से two तक: minus two, minus one, zero, one, two। तो n of A है five।"
+            },
+            {
+              "seq": 4,
+              "text": "B के लिए, x cubed बराबर x को rearrange करो x cubed minus x बराबर zero, फिर factor करो: x into x minus one into x plus one बराबर zero। Roots हैं minus one, zero, और one, सब integers।"
+            },
+            {
+              "seq": 5,
+              "text": "तो B है minus one, zero, one, और n of B है three।"
+            },
+            {
+              "seq": 6,
+              "text": "अब mutual containment से equality test करो। B का हर element A में है, अच्छा, पर minus two और two, A में हैं और B में नहीं। एक direction में containment fail, तो A बराबर B नहीं। असल में B, A का proper subset है। Final answer: n of A है five, n of B है three, और A बराबर B नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह उदाहरण निरपेक्ष-मान तर्क को बहुपद गुणनखंडन से जोड़ता है, एक सीमित समष्टि पर। हमें दो समुच्चयों का आकार चाहिए, और यह कि वे समान हैं या नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "A है वे पूर्णांक x जिनका निरपेक्ष मान अधिकतम दो हो। B है वे पूर्णांक x जो x घन बराबर x को संतुष्ट करें। ध्यान दें दोनों पूर्णांकों में हैं, यह प्रतिबंध मायने रखता है।"
+            },
+            {
+              "seq": 3,
+              "text": "A के लिए, निरपेक्ष मान अधिकतम दो का अर्थ x ऋण दो से दो तक: ऋण दो, ऋण एक, शून्य, एक, दो। तो n of A है पाँच।"
+            },
+            {
+              "seq": 4,
+              "text": "B के लिए, x घन बराबर x को बदलिए x घन ऋण x बराबर शून्य, फिर गुणनखंड कीजिए: x गुणा x ऋण एक गुणा x जोड़ एक बराबर शून्य। मूल हैं ऋण एक, शून्य, और एक, सब पूर्णांक।"
+            },
+            {
+              "seq": 5,
+              "text": "तो B है ऋण एक, शून्य, एक, और n of B है तीन।"
+            },
+            {
+              "seq": 6,
+              "text": "अब परस्पर अंतर्वेशन से समानता जाँचिए। B का हर अवयव A में है, अच्छा, पर ऋण दो और दो, A में हैं और B में नहीं। एक दिशा में अंतर्वेशन विफल, तो A बराबर B नहीं। वास्तव में B, A का उचित उपसमुच्चय है। अंतिम उत्तर: n of A है पाँच, n of B है तीन, और A बराबर B नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Sets and their Representations",
+      "title": "Advanced: parameter a with n(T) = 1 over the naturals",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "For which a is n(T) = 1?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "$T = \\{x \\in \\mathbb{N} : x^2 - (a+1)x + a = 0\\}$, $a$ a real parameter."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 15,
+          "latex": "x^2 - (a+1)x + a = (x-1)(x-a) = 0 \\;\\Rightarrow\\; x = 1 \\text{ or } x = a"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "Root $x = 1 \\in \\mathbb{N}$ always. The root $x = a$ counts only if $a \\in \\mathbb{N}$, and is distinct only if $a \\ne 1$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "If $a \\in \\mathbb{N},\\ a \\ne 1$: $T = \\{1, a\\}$, $n(T) = 2$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "If $a = 1$: roots coincide, $T = \\{1\\}$. If $a \\notin \\mathbb{N}$: only 1 survives, $T = \\{1\\}$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "n(T) = 1 ⟺ a = 1 OR a ∉ ℕ (i.e. a is not a natural number greater than 1)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is an Advanced level problem, and the whole thing turns on remembering the domain. The set T lives in the naturals, and we want to find every value of the parameter a for which T has exactly one element."
+            },
+            {
+              "seq": 2,
+              "text": "T is the natural numbers x satisfying x squared minus a plus one, times x, plus a, equals zero. Here a is any real number, that's the parameter we're solving for."
+            },
+            {
+              "seq": 3,
+              "text": "First factor the quadratic, which is independent of the domain. x squared minus a plus one x plus a factors beautifully as x minus one, times x minus a. So the two roots are x equals one, and x equals a."
+            },
+            {
+              "seq": 4,
+              "text": "Now think about the domain. The root x equals one is a natural number always, so one is always a member of T. The second root, x equals a, contributes a member only if a itself is a natural number, and it's a distinct member only if a is not equal to one."
+            },
+            {
+              "seq": 5,
+              "text": "So the casework. If a is a natural number and not equal to one, we get two distinct naturals, T is one and a, so n of T is two, that's the case we must avoid."
+            },
+            {
+              "seq": 6,
+              "text": "If a equals one, both roots coincide at one, so T is just the set containing one. And if a is not a natural number at all, say zero, or minus three, or root two, that root is filtered out, only one survives, so again T is just one."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> So n of T equals one exactly when a equals one, or a is not a natural number. Equivalently, a is not a natural number greater than one. Pure algebra would wrongly report two roots for every a, the domain filter is the entire problem."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह Advanced level का problem है, और पूरा खेल domain याद रखने पर टिका है। Set T naturals में है, और हमें parameter a की हर वो value ढूँढनी है जिसके लिए T में exactly one element हो।"
+            },
+            {
+              "seq": 2,
+              "text": "T है वो natural numbers x जो x squared minus, a plus one, into x, plus a, बराबर zero satisfy करें। यहाँ a कोई भी real number है, यही parameter है जिसके लिए हम solve कर रहे हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले quadratic factor करो, जो domain से independent है। x squared minus a plus one x plus a बहुत सुंदर factor होता है x minus one, into x minus a। तो दो roots हैं x बराबर one, और x बराबर a।"
+            },
+            {
+              "seq": 4,
+              "text": "अब domain के बारे में सोचो। Root x बराबर one हमेशा natural number है, तो one हमेशा T का member है। दूसरा root, x बराबर a, तभी member देता है जब a ख़ुद natural number हो, और distinct member तभी जब a बराबर one न हो।"
+            },
+            {
+              "seq": 5,
+              "text": "तो casework। अगर a natural number है और one के बराबर नहीं, तो दो distinct naturals मिलते हैं, T है one और a, तो n of T है two, यही case हमें avoid करना है।"
+            },
+            {
+              "seq": 6,
+              "text": "अगर a बराबर one, दोनों roots one पर मिल जाते हैं, तो T सिर्फ़ one वाला set है। और अगर a natural number है ही नहीं, जैसे zero, या minus three, या root two, तो वो root filter हो जाता है, सिर्फ़ one बचता है, फिर T सिर्फ़ one।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> तो n of T बराबर one ठीक तब जब a बराबर one हो, या a natural number न हो। यानी, a कोई ऐसा natural number न हो जो one से बड़ा हो। सिर्फ़ algebra हर a के लिए ग़लती से दो roots बताती, domain filter ही पूरा problem है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह प्रवीण स्तर का प्रश्न है, और पूरा खेल समष्टि याद रखने पर टिका है। समुच्चय T प्राकृत संख्याओं में है, और हमें प्राचल a का हर वह मान ढूँढना है जिसके लिए T में ठीक एक अवयव हो।"
+            },
+            {
+              "seq": 2,
+              "text": "T है वे प्राकृत संख्याएँ x जो x वर्ग ऋण, a जोड़ एक, गुणा x, जोड़ a, बराबर शून्य को संतुष्ट करें। यहाँ a कोई भी वास्तविक संख्या है, यही प्राचल है जिसके लिए हम हल कर रहे हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले द्विघात का गुणनखंड कीजिए, जो समष्टि से स्वतंत्र है। x वर्ग ऋण a जोड़ एक x जोड़ a बहुत सुंदर गुणनखंडित होता है x ऋण एक, गुणा x ऋण a। तो दो मूल हैं x बराबर एक, और x बराबर a।"
+            },
+            {
+              "seq": 4,
+              "text": "अब समष्टि के बारे में सोचिए। मूल x बराबर एक हमेशा प्राकृत संख्या है, तो एक हमेशा T का सदस्य है। दूसरा मूल, x बराबर a, तभी सदस्य देता है जब a स्वयं प्राकृत संख्या हो, और भिन्न सदस्य तभी जब a एक के बराबर न हो।"
+            },
+            {
+              "seq": 5,
+              "text": "तो स्थिति-विश्लेषण। यदि a प्राकृत संख्या है और एक के बराबर नहीं, तो दो भिन्न प्राकृत मिलते हैं, T है एक और a, तो n of T है दो, यही स्थिति हमें टालनी है।"
+            },
+            {
+              "seq": 6,
+              "text": "यदि a बराबर एक, दोनों मूल एक पर मिल जाते हैं, तो T केवल एक वाला समुच्चय है। और यदि a प्राकृत संख्या है ही नहीं, जैसे शून्य, या ऋण तीन, या रूट टू, तो वह मूल छन जाता है, केवल एक बचता है, फिर T केवल एक।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> तो n of T बराबर एक ठीक तब जब a बराबर एक हो, या a प्राकृत संख्या न हो। यानी, a एक से बड़ी कोई प्राकृत संख्या न हो। केवल बीजगणित हर a के लिए ग़लती से दो मूल बताता, समष्टि की छननी ही पूरा प्रश्न है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "tips",
+      "subtopic": "Sets and their Representations",
+      "title": "Pitfalls & pro-tips: representations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Traps that quietly cost marks"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "style": "red-margin",
+          "text": "Treating {0} or {∅} as empty. Both are singletons; empty means ZERO elements."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "style": "red-margin",
+          "text": "Counting repeats: 'MATHEMATICS' has 11 letters but only 8 distinct."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "Ignoring the universe: {x : x² = 2} is empty over ℕ, a doubleton over ℝ."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "style": "red-margin",
+          "text": "Confusing equal with equivalent: same count ≠ same elements."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "text": "PRO-TIP: circle the universe symbol first and ask 'is this even possible here?'"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's collect the traps examiners plant in this topic, because knowing them in advance is worth easy marks."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, treating the set containing zero, or the set containing the empty set, as empty. Both are singletons, they each hold one element. Empty means genuinely zero elements, only the slashed symbol or empty braces."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, counting repeats. In the word mathematics, students write eleven letters, but only eight are distinct, m, a, t, h, e, i, c, s. Sets discard duplicates, so the count is eight."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, ignoring the universe symbol. The set of x with x squared equals two is empty over the naturals, but a two element set over the reals. The domain is part of the question, not decoration."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, confusing equal with equivalent. Same number of elements is not the same as same elements. Equal needs identical faces, equivalent only needs an identical count."
+            },
+            {
+              "seq": 6,
+              "text": "And the one pro tip to carry into every set builder problem: before solving anything, circle the universe symbol first and ask, is this even possible here? Two seconds of domain checking catches empty sets and impossible root traps instantly, exactly where examiners plant marks."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो इस topic में examiners जो traps लगाते हैं उन्हें इकट्ठा करते हैं, क्योंकि इन्हें पहले से जानना easy marks दिलाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, zero वाले set, या empty set वाले set को empty समझना। दोनों singletons हैं, हर एक में एक element है। Empty का मतलब है सच में zero elements, सिर्फ़ slashed symbol या खाली braces।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, repeats गिनना। शब्द mathematics में students ग्यारह letters लिख देते हैं, पर distinct सिर्फ़ आठ हैं, m, a, t, h, e, i, c, s। Sets duplicates हटा देते हैं, तो count आठ है।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, universe symbol को नज़रअंदाज़ करना। x का set जहाँ x squared बराबर two है, naturals पर empty है, पर reals पर two-element set। Domain question का हिस्सा है, सजावट नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, equal को equivalent से confuse करना। Same number of elements का मतलब same elements नहीं। Equal को identical faces चाहिए, equivalent को सिर्फ़ identical count।"
+            },
+            {
+              "seq": 6,
+              "text": "और हर set-builder problem में ले जाने वाली एक pro tip: कुछ भी solve करने से पहले, universe symbol पर पहले घेरा लगाओ और पूछो, क्या यह यहाँ possible भी है? दो second की domain checking empty sets और impossible-root traps तुरंत पकड़ लेती है, ठीक वहीं जहाँ examiners marks छिपाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आइए इस विषय में परीक्षक जो जाल बिछाते हैं उन्हें इकट्ठा करें, क्योंकि इन्हें पहले से जानना आसान अंक दिलाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "जाल एक, शून्य वाले समुच्चय, या रिक्त समुच्चय वाले समुच्चय को रिक्त समझना। दोनों एकल समुच्चय हैं, हर एक में एक अवयव है। रिक्त का अर्थ है सचमुच शून्य अवयव, केवल तिरछा चिह्न या खाली कोष्ठक।"
+            },
+            {
+              "seq": 3,
+              "text": "जाल दो, पुनरावृत्तियाँ गिनना। शब्द mathematics में विद्यार्थी ग्यारह अक्षर लिख देते हैं, पर भिन्न केवल आठ हैं, m, a, t, h, e, i, c, s। समुच्चय द्विरुक्तियाँ हटा देते हैं, तो गिनती आठ है।"
+            },
+            {
+              "seq": 4,
+              "text": "जाल तीन, समष्टि चिह्न की अनदेखी। x का समुच्चय जहाँ x वर्ग बराबर दो है, प्राकृत पर रिक्त है, पर वास्तविक पर दो-अवयव समुच्चय। समष्टि प्रश्न का हिस्सा है, सजावट नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "जाल चार, समान को तुल्य से भ्रमित करना। समान संख्या का अर्थ समान अवयव नहीं। समान को एक जैसे अवयव चाहिए, तुल्य को केवल एक जैसी गिनती।"
+            },
+            {
+              "seq": 6,
+              "text": "और हर समुच्चय-निर्माण प्रश्न में ले जाने वाली एक प्रो-टिप: कुछ भी हल करने से पहले, समष्टि चिह्न पर पहले घेरा लगाइए और पूछिए, क्या यह यहाँ संभव भी है? दो सेकंड की समष्टि-जाँच रिक्त समुच्चय और असंभव-मूल जाल तुरंत पकड़ लेती है, ठीक वहीं जहाँ परीक्षक अंक छिपाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Subsets, Power Set, and Universal Set",
+      "title": "Subsets, proper subsets, and supersets",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "When is one set inside another?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$A \\subseteq B$: every element of A is also an element of B (B may have extras)."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "style": "red-margin",
+          "text": "Always: $A \\subseteq A$ (self) and $\\emptyset \\subseteq B$ (empty is a subset of every set)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Proper subset $A \\subsetneq B$: $A \\subseteq B$ AND $A \\ne B$ (B has at least one extra)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Superset: $B \\supseteq A$ means B contains A."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "A = B \\iff (A \\subseteq B \\text{ and } B \\subseteq A)"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> When do we say one set sits inside another? Picture the fifteen member squad India announces, and the playing eleven the captain picks from it."
+            },
+            {
+              "seq": 2,
+              "text": "Every player in the eleven is also in the squad, and that is exactly the idea of a subset. A is a subset of B, written A with the cup shaped symbol under it pointing at B, when every element of A is also an element of B. Crucially, B is allowed extras, the bench players, all we demand is that nobody in A is missing from B."
+            },
+            {
+              "seq": 3,
+              "text": "Two boundary cases always hold, and both trip students up. Every set is a subset of itself, the full squad is a valid selection from the full squad. And the empty set is a subset of every set, the empty guest list breaks no rule of any party, because to fail you'd need to point at someone on it who wasn't invited, and there's nobody to point at."
+            },
+            {
+              "seq": 4,
+              "text": "When A is a subset of B but not the whole of B, so there's at least one extra in B, we call A a proper subset, written with the cup symbol carrying a slash, or a strict subset sign."
+            },
+            {
+              "seq": 5,
+              "text": "And then B is called a superset of A, written with the symbol flipped the other way. The playing eleven is a proper subset of the squad, the squad is a superset of the eleven."
+            },
+            {
+              "seq": 6,
+              "text": "Finally, the cleanest test for equality: A equals B exactly when A is a subset of B and B is a subset of A. Mutual containment both ways is equality."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> हम कब कहते हैं कि एक set दूसरे के अंदर बैठा है? सोचो India जो पंद्रह-member squad announce करती है, और captain उसमें से जो playing eleven चुनता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Eleven का हर player squad में भी है, और यही subset का पूरा idea है। A, B का subset है, जब A का हर element B का भी element हो। ख़ास बात, B के पास extras allowed हैं, bench players, हमें सिर्फ़ यह चाहिए कि A का कोई भी B में से गायब न हो।"
+            },
+            {
+              "seq": 3,
+              "text": "दो boundary cases हमेशा सच होते हैं, और दोनों students को उलझाते हैं। हर set अपना ही subset है, पूरी squad, पूरी squad से एक valid selection है। और empty set हर set का subset है, खाली guest list किसी party का कोई rule नहीं तोड़ती, क्योंकि fail होने के लिए आपको उस list पर किसी ऐसे की ओर इशारा करना पड़ेगा जिसे invite नहीं किया, और वहाँ कोई है ही नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "जब A, B का subset है पर पूरा B नहीं, यानी B में कम से कम एक extra है, तो A को proper subset कहते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "और तब B को A का superset कहते हैं, symbol उल्टी दिशा में। Playing eleven squad का proper subset है, squad, eleven का superset है।"
+            },
+            {
+              "seq": 6,
+              "text": "आख़िर में, equality का सबसे साफ़ test: A बराबर B ठीक तब जब A, B का subset हो और B, A का subset हो। दोनों तरफ़ mutual containment ही equality है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> हम कब कहें कि एक समुच्चय दूसरे के भीतर बैठा है? सोचिए भारत जो पंद्रह-सदस्यीय दल घोषित करता है, और कप्तान उसमें से जो खेलने वाले ग्यारह चुनता है।"
+            },
+            {
+              "seq": 2,
+              "text": "ग्यारह का हर खिलाड़ी दल में भी है, और यही उपसमुच्चय का पूरा विचार है। A, B का उपसमुच्चय है, जब A का हर अवयव B का भी अवयव हो। मुख्य बात, B के पास अतिरिक्त अवयव हो सकते हैं, बेंच के खिलाड़ी, हमें केवल यह चाहिए कि A का कोई भी B में से लापता न हो।"
+            },
+            {
+              "seq": 3,
+              "text": "दो सीमांत स्थितियाँ हमेशा सत्य होती हैं, और दोनों विद्यार्थियों को उलझाती हैं। हर समुच्चय अपना ही उपसमुच्चय है, पूरा दल, पूरे दल से एक मान्य चयन है। और रिक्त समुच्चय हर समुच्चय का उपसमुच्चय है, खाली अतिथि-सूची किसी उत्सव का कोई नियम नहीं तोड़ती, क्योंकि विफल होने के लिए आपको उस सूची पर किसी ऐसे की ओर इशारा करना पड़ेगा जिसे न्योता न मिला हो, और वहाँ कोई है ही नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "जब A, B का उपसमुच्चय है पर पूरा B नहीं, यानी B में कम से कम एक अतिरिक्त है, तो A को उचित उपसमुच्चय कहते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "और तब B को A का अधिसमुच्चय, यानी superset कहते हैं। खेलने वाले ग्यारह दल के उचित उपसमुच्चय हैं, दल, ग्यारह का अधिसमुच्चय है।"
+            },
+            {
+              "seq": 6,
+              "text": "अंत में, समानता की सबसे साफ़ जाँच: A बराबर B ठीक तब जब A, B का उपसमुच्चय हो और B, A का उपसमुच्चय हो। दोनों ओर परस्पर अंतर्वेशन ही समानता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Subsets, Power Set, and Universal Set",
+      "title": "The ∈ vs ⊆ distinction, universal set, and intervals",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Element-to-set vs set-to-set"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "style": "red-margin",
+          "text": "∈ relates an element to a set; ⊆ relates a set to a set. Never mix them."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "e.g. $1 \\in \\{1,2\\}$ (element), but $\\{1\\} \\subseteq \\{1,2\\}$ (subset). Writing $1 \\subseteq A$ is a category error."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "Universal set $U$: all objects under discussion. Every set here is a subset of $U$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Interval = an unbroken stretch of ℝ. $<$ → round bracket (open); $\\le$ → square bracket (closed)."
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "caption": "The interval [2, 5): 2 included (filled), 5 excluded (open)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 460 120\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"0\" y=\"0\" width=\"460\" height=\"120\" fill=\"#ffffff\"/>\n<line x1=\"30\" y1=\"70\" x2=\"430\" y2=\"70\" stroke=\"#333\" stroke-width=\"2\"/>\n<polygon points=\"430,70 420,65 420,75\" fill=\"#333\"/>\n<line x1=\"140\" y1=\"64\" x2=\"140\" y2=\"76\" stroke=\"#333\" stroke-width=\"2\"/>\n<line x1=\"320\" y1=\"64\" x2=\"320\" y2=\"76\" stroke=\"#333\" stroke-width=\"2\"/>\n<text x=\"134\" y=\"96\" font-family=\"system-ui, sans-serif\" font-size=\"16\" fill=\"#333\">2</text>\n<text x=\"314\" y=\"96\" font-family=\"system-ui, sans-serif\" font-size=\"16\" fill=\"#333\">5</text>\n<line x1=\"140\" y1=\"70\" x2=\"320\" y2=\"70\" stroke=\"#1a56c4\" stroke-width=\"6\"/>\n<circle cx=\"140\" cy=\"70\" r=\"7\" fill=\"#1a56c4\" stroke=\"#1a56c4\" stroke-width=\"2\"/>\n<circle cx=\"320\" cy=\"70\" r=\"7\" fill=\"#ffffff\" stroke=\"#1a56c4\" stroke-width=\"2\"/>\n<text x=\"150\" y=\"35\" font-family=\"system-ui, sans-serif\" font-size=\"16\" fill=\"#1a56c4\">[2, 5) = { x : 2 &#8804; x &lt; 5 }</text>\n<text x=\"60\" y=\"35\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#1e8e3e\">closed</text>\n<text x=\"330\" y=\"55\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#c2185b\">open</text>\n</svg>"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "style": "red-margin",
+          "text": "An interval like (2, 5) is an INFINITE set, even though it 'looks small'."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This section holds the single most important hurdle in the whole chapter: the difference between the two symbols, belongs to, and is a subset of."
+            },
+            {
+              "seq": 2,
+              "text": "The belongs to symbol relates an element to a set. The subset symbol relates a set to a set. They live at different levels, and mixing them is the most common error you'll make if you're not careful."
+            },
+            {
+              "seq": 3,
+              "text": "Concretely, one belongs to the set one, two, because one is an element. But the set containing one is a subset of the set one, two. Writing one is a subset of A, or the set containing one belongs to A, is a category error. A player is in the team, a partnership is part of the team."
+            },
+            {
+              "seq": 4,
+              "text": "Now widen the lens. Every discussion happens inside some agreed playing field, the set of all objects currently under consideration. That's the universal set, capital U. In an election it's all registered voters, in a number chapter it might be the integers or the reals. Every set in the discussion is a subset of U."
+            },
+            {
+              "seq": 5,
+              "text": "A special continuous case of subset of the reals is an interval, an unbroken stretch of the number line. Read the inequality type: a strict less than becomes a round bracket, meaning the endpoint is excluded, open. A less than or equal becomes a square bracket, meaning the endpoint is included, closed."
+            },
+            {
+              "seq": 6,
+              "text": "Look at the picture. The interval two, five, written square bracket two comma five round bracket, includes two, the filled dot, and excludes five, the open dot. The square bracket is a promise that the endpoint belongs."
+            },
+            {
+              "seq": 7,
+              "text": "And a warning that surprises people: an interval like open two to five is an infinite set. It looks small on the page, but between any two reals there are infinitely many more. Small width does not mean few elements."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस section में पूरे chapter की सबसे बड़ी hurdle है: दो symbols का फ़र्क़, belongs to, और is a subset of।"
+            },
+            {
+              "seq": 2,
+              "text": "Belongs to symbol एक element को set से जोड़ता है। Subset symbol एक set को set से जोड़ता है। ये अलग-अलग levels पर रहते हैं, और इन्हें mix करना वो सबसे common ग़लती है जो आप बेध्यानी में करोगे।"
+            },
+            {
+              "seq": 3,
+              "text": "ठोस रूप में, one, set one-two में belongs करता है, क्योंकि one एक element है। पर one वाला set, set one-two का subset है। one is a subset of A लिखना, या one वाला set belongs to A लिखना, category error है। Player team में है, partnership team का हिस्सा है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब lens चौड़ा करो। हर discussion किसी तय playing field के अंदर होती है, उन सभी objects का set जो अभी under consideration हैं। यही universal set है, capital U। Election में सारे registered voters, number chapter में शायद integers या reals। Discussion का हर set U का subset है।"
+            },
+            {
+              "seq": 5,
+              "text": "Reals के subset का एक ख़ास continuous case है interval, number line का एक अटूट टुकड़ा। Inequality type पढ़ो: strict less than बनता है round bracket, यानी endpoint बाहर, open। Less than or equal बनता है square bracket, यानी endpoint अंदर, closed।"
+            },
+            {
+              "seq": 6,
+              "text": "Picture देखो। Interval two, five, यानी square bracket two comma five round bracket, two को शामिल करता है, filled dot, और five को छोड़ता है, open dot। Square bracket एक वादा है कि endpoint belong करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और एक warning जो लोगों को चौंकाती है: open two से five जैसा interval infinite set है। Page पर छोटा दिखता है, पर किन्हीं दो reals के बीच infinitely many और होते हैं। कम चौड़ाई का मतलब कम elements नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस खंड में पूरे अध्याय की सबसे बड़ी बाधा है: दो चिह्नों का अंतर, सदस्य है, और उपसमुच्चय है।"
+            },
+            {
+              "seq": 2,
+              "text": "सदस्यता का चिह्न एक अवयव को समुच्चय से जोड़ता है। उपसमुच्चय का चिह्न एक समुच्चय को समुच्चय से जोड़ता है। ये अलग-अलग स्तरों पर रहते हैं, और इन्हें मिलाना वह सबसे प्रचलित भूल है जो आप असावधानी में करेंगे।"
+            },
+            {
+              "seq": 3,
+              "text": "ठोस रूप में, एक, समुच्चय एक-दो का सदस्य है, क्योंकि एक एक अवयव है। पर एक वाला समुच्चय, समुच्चय एक-दो का उपसमुच्चय है। एक उपसमुच्चय है A का लिखना, या एक वाला समुच्चय A का सदस्य है लिखना, कोटि-दोष है। खिलाड़ी टीम में है, साझेदारी टीम का हिस्सा है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब दृष्टि चौड़ी कीजिए। हर चर्चा किसी तय मैदान के भीतर होती है, उन सभी वस्तुओं का समुच्चय जो अभी विचाराधीन हैं। यही समष्टीय समुच्चय है, कैपिटल U। चुनाव में सभी पंजीकृत मतदाता, संख्या-अध्याय में शायद पूर्णांक या वास्तविक। चर्चा का हर समुच्चय U का उपसमुच्चय है।"
+            },
+            {
+              "seq": 5,
+              "text": "वास्तविक के उपसमुच्चय का एक विशेष सतत रूप है अंतराल, संख्या-रेखा का एक अखंड टुकड़ा। असमिका का प्रकार पढ़िए: निरा से कम बनता है गोल कोष्ठक, यानी सिरा बाहर, विवृत। से कम या बराबर बनता है वर्गाकार कोष्ठक, यानी सिरा भीतर, संवृत।"
+            },
+            {
+              "seq": 6,
+              "text": "चित्र देखिए। अंतराल दो, पाँच, यानी वर्ग कोष्ठक दो अल्पविराम पाँच गोल कोष्ठक, दो को सम्मिलित करता है, भरा बिंदु, और पाँच को छोड़ता है, खुला बिंदु। वर्ग कोष्ठक एक वादा है कि सिरा उसमें है।"
+            },
+            {
+              "seq": 7,
+              "text": "और एक चेतावनी जो लोगों को चौंकाती है: विवृत दो से पाँच जैसा अंतराल अपरिमित समुच्चय है। पृष्ठ पर छोटा दिखता है, पर किन्हीं दो वास्तविक के बीच असंख्य और होते हैं। कम चौड़ाई का अर्थ कम अवयव नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Subsets, Power Set, and Universal Set",
+      "title": "The power set and the coin-flip intuition",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The set of ALL subsets"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "For $A = \\{a, b\\}$, the sub-selections are $\\emptyset, \\{a\\}, \\{b\\}, \\{a,b\\}$ — four of them."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "P(A) = \\{X : X \\subseteq A\\}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "The power set $P(A)$ is the complete menu of every sub-selection you could make."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "style": "red-margin",
+          "text": "Coin per element: n independent in/out choices → $2^n$ subsets."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "text": "$\\in$ vs $\\subseteq$ again: $\\{1\\} \\subseteq \\{1,2\\}$, but $\\{1\\} \\in P(\\{1,2\\})$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now meet the power set, the object behind almost every counting question in this subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "Take a small set, a and b. List all its possible sub selections: the empty set, the set with just a, the set with just b, and the set with both. Four of them."
+            },
+            {
+              "seq": 3,
+              "text": "The set whose members are all these subsets is called the power set of A, written P of A, formally the set of all X such that X is a subset of A."
+            },
+            {
+              "seq": 4,
+              "text": "So the power set is the complete menu of every sub selection you could possibly make from A. Its members are themselves sets, that's the key mental shift."
+            },
+            {
+              "seq": 5,
+              "text": "Here's the engine that powers everything. To build a subset of A, walk down the list of elements and, for each one, flip a coin, in or out. With n elements you make n independent two way choices, so you get two times two times two, n times, which is two to the power n subsets."
+            },
+            {
+              "seq": 6,
+              "text": "And notice the belongs to versus subset distinction returning, sharper now. The set containing one is a subset of one, two, but the same set containing one is an element, a member, of the power set of one, two. Same object, different relationship, depending on which set you compare it to."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब मिलो power set से, वो object जो इस subtopic के लगभग हर counting question के पीछे है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक छोटा set लो, a और b। इसके सारे possible sub-selections list करो: empty set, सिर्फ़ a वाला set, सिर्फ़ b वाला set, और दोनों वाला set। चार हुए।"
+            },
+            {
+              "seq": 3,
+              "text": "जिस set के members ये सारे subsets हों, उसे A का power set कहते हैं, P of A, औपचारिक रूप से उन सभी X का set जो A के subset हों।"
+            },
+            {
+              "seq": 4,
+              "text": "तो power set वो पूरा menu है, हर sub-selection का जो आप A से बना सकते हो। इसके members ख़ुद sets हैं, यही key mental shift है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब वो engine जो सब कुछ चलाता है। A का subset बनाने के लिए, elements की list पर चलो और हर एक के लिए एक coin उछालो, in या out। n elements के साथ आप n independent two-way choices करते हो, तो मिलता है two into two into two, n बार, यानी two to the power n subsets।"
+            },
+            {
+              "seq": 6,
+              "text": "और देखो belongs to बनाम subset का फ़र्क़ लौट आया, अब और तेज़। one वाला set, one-two का subset है, पर वही one वाला set, one-two के power set का element, यानी member, है। एक ही object, अलग relationship, depending on किससे compare कर रहे हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब मिलिए घात समुच्चय से, वह वस्तु जो इस उपविषय के लगभग हर गणना-प्रश्न के पीछे है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक छोटा समुच्चय लीजिए, a और b। इसके सभी संभव उप-चयन गिनाइए: रिक्त समुच्चय, केवल a वाला समुच्चय, केवल b वाला समुच्चय, और दोनों वाला समुच्चय। चार हुए।"
+            },
+            {
+              "seq": 3,
+              "text": "जिस समुच्चय के सदस्य ये सभी उपसमुच्चय हों, उसे A का घात समुच्चय कहते हैं, P of A, औपचारिक रूप से उन सभी X का समुच्चय जो A के उपसमुच्चय हों।"
+            },
+            {
+              "seq": 4,
+              "text": "तो घात समुच्चय वह पूरा मेन्यू है, हर उप-चयन का जो आप A से बना सकते हैं। इसके सदस्य स्वयं समुच्चय हैं, यही मुख्य मानसिक बदलाव है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब वह इंजन जो सब कुछ चलाता है। A का उपसमुच्चय बनाने के लिए, अवयवों की सूची पर चलिए और हर एक के लिए एक सिक्का उछालिए, भीतर या बाहर। n अवयवों के साथ आप n स्वतंत्र दो-तरफ़ा चयन करते हैं, तो मिलता है दो गुणा दो गुणा दो, n बार, यानी दो की घात n उपसमुच्चय।"
+            },
+            {
+              "seq": 6,
+              "text": "और देखिए सदस्य बनाम उपसमुच्चय का अंतर लौट आया, अब और तीखा। एक वाला समुच्चय, एक-दो का उपसमुच्चय है, पर वही एक वाला समुच्चय, एक-दो के घात समुच्चय का सदस्य है। एक ही वस्तु, अलग संबंध, इस पर निर्भर कि किससे तुलना कर रहे हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "formulas",
+      "subtopic": "Subsets, Power Set, and Universal Set",
+      "title": "Subset counting formulas and why 2ⁿ",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The counting toolkit (n(A) = n)"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "latex": "n[P(A)] = 2^{n}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "latex": "\\text{proper subsets} = 2^{n} - 1, \\qquad \\text{non-empty subsets} = 2^{n} - 1"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "latex": "\\text{non-empty proper} = 2^{n} - 2, \\qquad \\text{exactly } r \\text{ elements} = \\binom{n}{r}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Derivation: each element gets an independent in/out choice, so $2 \\times 2 \\times \\cdots$ (n times)."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "latex": "\\underbrace{2 \\times 2 \\times \\cdots \\times 2}_{n \\text{ factors}} = 2^{n}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "latex": "\\binom{n}{0} + \\binom{n}{1} + \\cdots + \\binom{n}{n} = (1+1)^{n} = 2^{n}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lay out the counting toolkit for a set with n elements. These formulas turn a whole family of exam questions into one line of arithmetic."
+            },
+            {
+              "seq": 2,
+              "text": "The headline: the number of subsets, that is the size of the power set, is two to the power n. This is the one to memorise cold."
+            },
+            {
+              "seq": 3,
+              "text": "From it, the number of proper subsets is two to the n minus one, since we exclude only the full set itself. And the number of non empty subsets is also two to the n minus one, since we exclude only the empty set. Different reason, same number."
+            },
+            {
+              "seq": 4,
+              "text": "The number of non empty proper subsets is two to the n minus two, excluding both extremes. And the number of subsets with exactly r elements is n choose r, the binomial coefficient."
+            },
+            {
+              "seq": 5,
+              "text": "Now the derivation, so this is understanding, not memorising. To specify a subset, you decide for each element, independently, whether it's in or out. That's two choices for the first element, times two for the second, and so on."
+            },
+            {
+              "seq": 6,
+              "text": "So the total is two multiplied by itself n times, which is two to the power n. The all out choice gives the empty set, the all in choice gives the full set, so this count already includes both improper subsets, which is exactly why proper subsets are one fewer."
+            },
+            {
+              "seq": 7,
+              "text": "And here's a beautiful cross check using the binomial theorem. Subsets of size zero, plus size one, all the way to size n, is n choose zero plus n choose one, up to n choose n, which equals one plus one, all to the power n, which is two to the n. The two routes agree perfectly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो n elements वाले set का counting toolkit रख देते हैं। ये formulas exam questions के पूरे परिवार को एक line की arithmetic में बदल देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Headline: subsets की संख्या, यानी power set की size, है two to the power n। यही पक्का याद करना है।"
+            },
+            {
+              "seq": 3,
+              "text": "इससे, proper subsets की संख्या है two to the n minus one, क्योंकि हम सिर्फ़ पूरे set को छोड़ते हैं। और non-empty subsets की संख्या भी two to the n minus one, क्योंकि हम सिर्फ़ empty set को छोड़ते हैं। कारण अलग, संख्या same।"
+            },
+            {
+              "seq": 4,
+              "text": "Non-empty proper subsets की संख्या है two to the n minus two, दोनों extremes को छोड़कर। और ठीक r elements वाले subsets की संख्या है n choose r, binomial coefficient।"
+            },
+            {
+              "seq": 5,
+              "text": "अब derivation, ताकि यह समझ हो, रटना नहीं। एक subset specify करने के लिए, आप हर element के लिए independently तय करते हो कि वो in है या out। यानी पहले element के लिए two choices, दूसरे के लिए two, और आगे।"
+            },
+            {
+              "seq": 6,
+              "text": "तो total है two को ख़ुद से n बार multiply करना, यानी two to the power n। All-out choice empty set देती है, all-in choice पूरा set देती है, तो यह count पहले से दोनों improper subsets को शामिल करता है, इसीलिए proper subsets एक कम हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "और यह रहा binomial theorem से एक सुंदर cross-check। size zero के subsets, plus size one, size n तक, यानी n choose zero plus n choose one, n choose n तक, बराबर one plus one, whole to the power n, यानी two to the n। दोनों रास्ते perfectly agree करते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आइए n अवयवों वाले समुच्चय का गणना-उपकरण रख दें। ये सूत्र परीक्षा-प्रश्नों के पूरे परिवार को एक पंक्ति के अंकगणित में बदल देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "मुख्य बात: उपसमुच्चयों की संख्या, यानी घात समुच्चय का आकार, है दो की घात n। यही पक्का याद करना है।"
+            },
+            {
+              "seq": 3,
+              "text": "इससे, उचित उपसमुच्चयों की संख्या है दो की घात n ऋण एक, क्योंकि हम केवल पूरे समुच्चय को छोड़ते हैं। और अरिक्त उपसमुच्चयों की संख्या भी दो की घात n ऋण एक, क्योंकि हम केवल रिक्त समुच्चय को छोड़ते हैं। कारण अलग, संख्या समान।"
+            },
+            {
+              "seq": 4,
+              "text": "अरिक्त उचित उपसमुच्चयों की संख्या है दो की घात n ऋण दो, दोनों छोरों को छोड़कर। और ठीक r अवयव वाले उपसमुच्चयों की संख्या है n choose r, द्विपद गुणांक।"
+            },
+            {
+              "seq": 5,
+              "text": "अब व्युत्पत्ति, ताकि यह समझ हो, रटना नहीं। एक उपसमुच्चय निर्दिष्ट करने के लिए, आप हर अवयव के लिए स्वतंत्र रूप से तय करते हैं कि वह भीतर है या बाहर। यानी पहले अवयव के लिए दो विकल्प, दूसरे के लिए दो, और आगे।"
+            },
+            {
+              "seq": 6,
+              "text": "तो कुल है दो को स्वयं से n बार गुणा करना, यानी दो की घात n। सब-बाहर विकल्प रिक्त समुच्चय देता है, सब-भीतर विकल्प पूरा समुच्चय देता है, तो यह गणना पहले से दोनों अनुचित उपसमुच्चयों को सम्मिलित करती है, इसीलिए उचित उपसमुच्चय एक कम हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "और यह रहा द्विपद प्रमेय से एक सुंदर जाँच। आकार शून्य के उपसमुच्चय, जोड़ आकार एक, आकार n तक, यानी n choose zero जोड़ n choose one, n choose n तक, बराबर एक जोड़ एक, पूरा घात n, यानी दो की घात n। दोनों रास्ते पूर्णतः सहमत हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Subsets, Power Set, and Universal Set",
+      "title": "Power set of {p, q, r}, listed by size",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Write P(A) for A = {p, q, r}"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "size 0: $\\emptyset$;  size 1: {p}, {q}, {r}."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "size 2: {p,q}, {p,r}, {q,r};  size 3: {p,q,r}."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "P(A) = \\{\\, \\emptyset, \\{p\\}, \\{q\\}, \\{r\\}, \\{p,q\\}, \\{p,r\\}, \\{q,r\\}, \\{p,q,r\\} \\,\\}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "latex": "n[P(A)] = 2^{3} = 8"
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "caption": "Power-set lattice: ∅ at bottom, {p,q,r} at top, edges to subsets one element larger",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 480 360\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"0\" y=\"0\" width=\"480\" height=\"360\" fill=\"#ffffff\"/>\n<line x1=\"240\" y1=\"322\" x2=\"120\" y2=\"238\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"240\" y1=\"322\" x2=\"240\" y2=\"238\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"240\" y1=\"322\" x2=\"360\" y2=\"238\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"120\" y1=\"222\" x2=\"120\" y2=\"138\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"120\" y1=\"222\" x2=\"240\" y2=\"138\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"240\" y1=\"222\" x2=\"120\" y2=\"138\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"240\" y1=\"222\" x2=\"360\" y2=\"138\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"360\" y1=\"222\" x2=\"240\" y2=\"138\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"360\" y1=\"222\" x2=\"360\" y2=\"138\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"120\" y1=\"122\" x2=\"240\" y2=\"58\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"240\" y1=\"122\" x2=\"240\" y2=\"58\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<line x1=\"360\" y1=\"122\" x2=\"240\" y2=\"58\" stroke=\"#999\" stroke-width=\"1.5\"/>\n<g font-family=\"system-ui, sans-serif\" font-size=\"15\" text-anchor=\"middle\">\n<rect x=\"212\" y=\"326\" width=\"56\" height=\"26\" rx=\"6\" fill=\"#fff7e0\" stroke=\"#e08600\"/>\n<text x=\"240\" y=\"344\" fill=\"#333\">&#8709;</text>\n<rect x=\"92\" y=\"222\" width=\"56\" height=\"26\" rx=\"6\" fill=\"#e6f4ea\" stroke=\"#1e8e3e\"/>\n<text x=\"120\" y=\"240\" fill=\"#333\">{p}</text>\n<rect x=\"212\" y=\"222\" width=\"56\" height=\"26\" rx=\"6\" fill=\"#e6f4ea\" stroke=\"#1e8e3e\"/>\n<text x=\"240\" y=\"240\" fill=\"#333\">{q}</text>\n<rect x=\"332\" y=\"222\" width=\"56\" height=\"26\" rx=\"6\" fill=\"#e6f4ea\" stroke=\"#1e8e3e\"/>\n<text x=\"360\" y=\"240\" fill=\"#333\">{r}</text>\n<rect x=\"88\" y=\"122\" width=\"64\" height=\"26\" rx=\"6\" fill=\"#e8f0fe\" stroke=\"#1a56c4\"/>\n<text x=\"120\" y=\"140\" fill=\"#333\">{p,q}</text>\n<rect x=\"208\" y=\"122\" width=\"64\" height=\"26\" rx=\"6\" fill=\"#e8f0fe\" stroke=\"#1a56c4\"/>\n<text x=\"240\" y=\"140\" fill=\"#333\">{p,r}</text>\n<rect x=\"328\" y=\"122\" width=\"64\" height=\"26\" rx=\"6\" fill=\"#e8f0fe\" stroke=\"#1a56c4\"/>\n<text x=\"360\" y=\"140\" fill=\"#333\">{q,r}</text>\n<rect x=\"204\" y=\"42\" width=\"72\" height=\"26\" rx=\"6\" fill=\"#fde8ef\" stroke=\"#c2185b\"/>\n<text x=\"240\" y=\"60\" fill=\"#333\">{p,q,r}</text>\n</g>\n</svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's build a power set carefully, and use the trick that guarantees you never miss a subset: list by size, smallest first."
+            },
+            {
+              "seq": 2,
+              "text": "Start at size zero, that's the empty set, one of them. Then size one, the singletons: the set p, the set q, the set r, three of them. Starting from the empty set is what stops people forgetting it."
+            },
+            {
+              "seq": 3,
+              "text": "Next, size two, the pairs: p q, p r, and q r, three of them. And finally size three, the full set p q r, one of them."
+            },
+            {
+              "seq": 4,
+              "text": "So the power set of A is the collection of all eight: the empty set, the three singletons, the three pairs, and the full set. Notice every member here is itself a set."
+            },
+            {
+              "seq": 5,
+              "text": "And the count checks out: n of the power set is two to the power three, which is eight, exactly what we listed. If your list doesn't hit the power of two, you've missed something."
+            },
+            {
+              "seq": 6,
+              "text": "The picture shows this as a power set lattice. The empty set sits at the bottom, the full set p q r at the top, and each subset connects upward to the subsets one element larger. Organising by size is what prevents the two commonest omissions, forgetting the empty set and forgetting the full set."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो एक power set ध्यान से बनाते हैं, और वो trick use करते हैं जो guarantee देती है कि आप कोई subset miss नहीं करोगे: size के हिसाब से list करो, सबसे छोटा पहले।"
+            },
+            {
+              "seq": 2,
+              "text": "Size zero से शुरू, यानी empty set, एक। फिर size one, singletons: set p, set q, set r, तीन। empty set से शुरू करना ही लोगों को उसे भूलने से रोकता है।"
+            },
+            {
+              "seq": 3,
+              "text": "आगे, size two, pairs: p q, p r, और q r, तीन। और आख़िर में size three, पूरा set p q r, एक।"
+            },
+            {
+              "seq": 4,
+              "text": "तो A का power set है सारे आठ का collection: empty set, तीन singletons, तीन pairs, और पूरा set। ध्यान दो यहाँ हर member ख़ुद एक set है।"
+            },
+            {
+              "seq": 5,
+              "text": "और count सही बैठता है: power set का n है two to the power three, यानी आठ, बिल्कुल जितने हमने list किए। अगर आपकी list power of two पर नहीं आती, तो कुछ छूट गया है।"
+            },
+            {
+              "seq": 6,
+              "text": "Picture इसे power-set lattice की तरह दिखाता है। empty set सबसे नीचे, पूरा set p q r सबसे ऊपर, और हर subset ऊपर की ओर उन subsets से जुड़ता है जो एक element बड़े हैं। Size से organise करना ही दो सबसे common omissions रोकता है, empty set भूलना और पूरा set भूलना।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आइए एक घात समुच्चय ध्यान से बनाएँ, और वह तरक़ीब उपयोग करें जो गारंटी देती है कि आप कोई उपसमुच्चय नहीं छोड़ेंगे: आकार के अनुसार गिनाइए, सबसे छोटा पहले।"
+            },
+            {
+              "seq": 2,
+              "text": "आकार शून्य से शुरू, यानी रिक्त समुच्चय, एक। फिर आकार एक, एकल: समुच्चय p, समुच्चय q, समुच्चय r, तीन। रिक्त समुच्चय से शुरू करना ही लोगों को उसे भूलने से रोकता है।"
+            },
+            {
+              "seq": 3,
+              "text": "आगे, आकार दो, युग्म: p q, p r, और q r, तीन। और अंत में आकार तीन, पूरा समुच्चय p q r, एक।"
+            },
+            {
+              "seq": 4,
+              "text": "तो A का घात समुच्चय है सभी आठ का संग्रह: रिक्त समुच्चय, तीन एकल, तीन युग्म, और पूरा समुच्चय। ध्यान दें यहाँ हर सदस्य स्वयं एक समुच्चय है।"
+            },
+            {
+              "seq": 5,
+              "text": "और गिनती सही बैठती है: घात समुच्चय का n है दो की घात तीन, यानी आठ, ठीक जितने हमने गिनाए। यदि आपकी सूची दो की घात पर नहीं आती, तो कुछ छूट गया है।"
+            },
+            {
+              "seq": 6,
+              "text": "चित्र इसे घात-समुच्चय जालक की तरह दिखाता है। रिक्त समुच्चय सबसे नीचे, पूरा समुच्चय p q r सबसे ऊपर, और हर उपसमुच्चय ऊपर की ओर उन उपसमुच्चयों से जुड़ता है जो एक अवयव बड़े हैं। आकार से व्यवस्थित करना ही दो सबसे प्रचलित चूकें रोकता है, रिक्त समुच्चय भूलना और पूरा समुच्चय भूलना।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Subsets, Power Set, and Universal Set",
+      "title": "Speed trap: from n[P(A)] = 256 to n(A) and proper subsets",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Given n[P(A)] = 256"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Speed move: recognise the power of two. $256 = 2^8$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "latex": "n[P(A)] = 2^{n(A)} = 2^{8} \\;\\Rightarrow\\; n(A) = 8"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 23,
+          "latex": "\\text{proper subsets} = 2^{8} - 1 = 255"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 31,
+          "style": "red-margin",
+          "text": "Trap A: n(A) = 256 is wrong — 256 is the number of subsets, not elements."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Trap B: proper = 254 is wrong — subtract 1 (only the set itself is excluded), not 2."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A pure speed trap. You're told the power set of A has two hundred fifty six members, and asked for the number of elements in A and the number of proper subsets."
+            },
+            {
+              "seq": 2,
+              "text": "The move that saves you is instant recognition of a power of two. Two hundred fifty six is two to the power eight. Memorising the small powers of two turns this from a sixty second problem into a five second one."
+            },
+            {
+              "seq": 3,
+              "text": "Now, the size of the power set is two to the power n of A, and we're told that equals two to the eight. So n of A is simply eight."
+            },
+            {
+              "seq": 4,
+              "text": "The number of proper subsets is two to the eight minus one, which is two hundred fifty five, since we exclude only the full set itself."
+            },
+            {
+              "seq": 5,
+              "text": "Now the two traps. Trap A, writing n of A equals two hundred fifty six. But two hundred fifty six is the number of subsets, not the number of elements. Don't confuse the power set's size with the set's size."
+            },
+            {
+              "seq": 6,
+              "text": "Trap B, writing two hundred fifty four for proper subsets by wrongly subtracting two. Only the set itself is excluded from being proper, so you subtract one, giving two hundred fifty five. The off by one here is a classic examiner trap."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक pure speed trap। आपको बताया गया कि A के power set में दो सौ छप्पन members हैं, और पूछा गया A के elements की संख्या और proper subsets की संख्या।"
+            },
+            {
+              "seq": 2,
+              "text": "जो move आपको बचाती है वो है power of two की instant recognition। दो सौ छप्पन है two to the power eight। small powers of two याद रखना इसे साठ second के problem से पाँच second का बना देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "अब, power set की size है two to the power n of A, और हमें बताया कि यह बराबर two to the eight है। तो n of A बस eight है।"
+            },
+            {
+              "seq": 4,
+              "text": "Proper subsets की संख्या है two to the eight minus one, यानी दो सौ पचपन, क्योंकि हम सिर्फ़ पूरे set को छोड़ते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "अब दो traps। Trap A, n of A बराबर दो सौ छप्पन लिखना। पर दो सौ छप्पन subsets की संख्या है, elements की नहीं। power set की size को set की size से confuse मत करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Trap B, proper subsets के लिए दो सौ चौवन लिखना, ग़लती से two घटाकर। proper से सिर्फ़ ख़ुद set निकलता है, तो one घटाओ, यानी दो सौ पचपन। यहाँ off-by-one एक classic examiner trap है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक शुद्ध गति-जाल। आपको बताया गया कि A के घात समुच्चय में दो सौ छप्पन सदस्य हैं, और पूछा गया A के अवयवों की संख्या और उचित उपसमुच्चयों की संख्या।"
+            },
+            {
+              "seq": 2,
+              "text": "जो चाल आपको बचाती है वह है दो की घात की तत्काल पहचान। दो सौ छप्पन है दो की घात आठ। दो की छोटी घातें याद रखना इसे साठ सेकंड के प्रश्न से पाँच सेकंड का बना देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "अब, घात समुच्चय का आकार है दो की घात n of A, और हमें बताया कि यह बराबर दो की घात आठ है। तो n of A बस आठ है।"
+            },
+            {
+              "seq": 4,
+              "text": "उचित उपसमुच्चयों की संख्या है दो की घात आठ ऋण एक, यानी दो सौ पचपन, क्योंकि हम केवल पूरे समुच्चय को छोड़ते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "अब दो जाल। जाल A, n of A बराबर दो सौ छप्पन लिखना। पर दो सौ छप्पन उपसमुच्चयों की संख्या है, अवयवों की नहीं। घात समुच्चय के आकार को समुच्चय के आकार से भ्रमित मत कीजिए।"
+            },
+            {
+              "seq": 6,
+              "text": "जाल B, उचित उपसमुच्चयों के लिए दो सौ चौवन लिखना, ग़लती से दो घटाकर। उचित से केवल स्वयं समुच्चय निकलता है, तो एक घटाइए, यानी दो सौ पचपन। यहाँ एक-की-चूक एक प्रसिद्ध परीक्षक-जाल है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Subsets, Power Set, and Universal Set",
+      "title": "Quadratic inequality over ℤ, then the power-set count",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find n[P(A)] for a quadratic-defined A"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "$A = \\{x \\in \\mathbb{Z} : x^2 - x - 6 \\le 0\\}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "latex": "x^2 - x - 6 = (x-3)(x+2) \\le 0 \\;\\Rightarrow\\; -2 \\le x \\le 3"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Over $\\mathbb{Z}$: $A = \\{-2,-1,0,1,2,3\\}$, so $n(A) = 6$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "latex": "n[P(A)] = 2^{6} = 64"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "style": "red-margin",
+          "text": "The integer domain is decisive: over ℝ, A = [−2, 3] is infinite — no finite power-set count."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one stitches together three skills: a quadratic inequality, an integer domain, and the power set count. Watch how the domain quietly controls the answer."
+            },
+            {
+              "seq": 2,
+              "text": "A is the integers x satisfying x squared minus x minus six, less than or equal to zero. So first we solve the inequality, then we filter to integers."
+            },
+            {
+              "seq": 3,
+              "text": "Factor the quadratic: x squared minus x minus six is x minus three, times x plus two. A product of two factors is less than or equal to zero exactly between its roots, so x runs from minus two to three."
+            },
+            {
+              "seq": 4,
+              "text": "Now the domain kicks in. Over the integers, x from minus two to three means minus two, minus one, zero, one, two, three. That's six integers, so n of A is six."
+            },
+            {
+              "seq": 5,
+              "text": "The power set count is then two to the power six, which is sixty four. Clean."
+            },
+            {
+              "seq": 6,
+              "text": "And here's the lesson worth underlining. The integer domain is decisive. If instead the universe were the reals, A would be the entire closed interval from minus two to three, an infinite set, with no finite power set count at all. Same inequality, completely different answer, purely because of the domain."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example तीन skills को जोड़ता है: एक quadratic inequality, एक integer domain, और power set count। देखो कैसे domain चुपचाप answer control करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "A है वो integers x जो x squared minus x minus six, less than or equal to zero satisfy करें। तो पहले inequality solve करते हैं, फिर integers तक filter करते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Quadratic factor करो: x squared minus x minus six है x minus three, into x plus two। दो factors का product तभी less than or equal to zero होता है जब आप roots के बीच हों, तो x minus two से three तक चलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब domain आता है काम में। integers पर, x minus two से three का मतलब minus two, minus one, zero, one, two, three। यानी छह integers, तो n of A है six।"
+            },
+            {
+              "seq": 5,
+              "text": "फिर power set count है two to the power six, यानी चौंसठ। साफ़।"
+            },
+            {
+              "seq": 6,
+              "text": "और यह रहा underline करने लायक़ सबक़। integer domain decisive है। अगर universe reals होता, तो A minus two से three तक का पूरा closed interval होता, एक infinite set, जिसका कोई finite power set count है ही नहीं। वही inequality, बिल्कुल अलग answer, सिर्फ़ domain की वजह से।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह उदाहरण तीन कौशल जोड़ता है: एक द्विघात असमिका, एक पूर्णांक समष्टि, और घात समुच्चय गणना। देखिए कैसे समष्टि चुपचाप उत्तर नियंत्रित करती है।"
+            },
+            {
+              "seq": 2,
+              "text": "A है वे पूर्णांक x जो x वर्ग ऋण x ऋण छह, शून्य से कम या बराबर को संतुष्ट करें। तो पहले असमिका हल करते हैं, फिर पूर्णांकों तक छानते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "द्विघात का गुणनखंड कीजिए: x वर्ग ऋण x ऋण छह है x ऋण तीन, गुणा x जोड़ दो। दो गुणनखंडों का गुणनफल तभी शून्य से कम या बराबर होता है जब आप मूलों के बीच हों, तो x ऋण दो से तीन तक चलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब समष्टि काम में आती है। पूर्णांकों पर, x ऋण दो से तीन का अर्थ ऋण दो, ऋण एक, शून्य, एक, दो, तीन। यानी छह पूर्णांक, तो n of A है छह।"
+            },
+            {
+              "seq": 5,
+              "text": "फिर घात समुच्चय गणना है दो की घात छह, यानी चौंसठ। साफ़।"
+            },
+            {
+              "seq": 6,
+              "text": "और यह रहा रेखांकित करने योग्य सबक़। पूर्णांक समष्टि निर्णायक है। यदि समष्टि वास्तविक होती, तो A ऋण दो से तीन तक का पूरा संवृत अंतराल होता, एक अपरिमित समुच्चय, जिसकी कोई परिमित घात-गणना है ही नहीं। वही असमिका, बिल्कुल अलग उत्तर, केवल समष्टि के कारण।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "Subsets, Power Set, and Universal Set",
+      "title": "Advanced: odd-only subsets and the complement principle",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A = {1,2,3,4,5,6,7}: two subset counts"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Split: odds $O = \\{1,3,5,7\\}$ (n = 4), evens $E = \\{2,4,6\\}$ (n = 3)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "(a) 'Only odd numbers' = a subset of O."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 23,
+          "latex": "\\text{(a)} \\quad 2^{4} = 16 \\ \\text{subsets (includes } \\emptyset)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "(b) 'At least one even' = (all subsets) − (subsets with no even)."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\text{(b)} \\quad 2^{7} - 2^{4} = 128 - 16 = 112"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "An Advanced favourite. Take the set one through seven, and answer two counting questions, the second of which teaches the reflex that separates strong students."
+            },
+            {
+              "seq": 2,
+              "text": "First, split the set. The odd numbers are one, three, five, seven, that's four of them. The even numbers are two, four, six, that's three of them."
+            },
+            {
+              "seq": 3,
+              "text": "Part a asks for subsets containing only odd numbers. A subset made purely of odd numbers is precisely a subset of the odd set. So we just count subsets of a four element set."
+            },
+            {
+              "seq": 4,
+              "text": "By the coin flip argument, that's two to the power four, which is sixteen. And note, this count includes the empty set, which technically has no even numbers, so it correctly counts as odd only."
+            },
+            {
+              "seq": 5,
+              "text": "Part b asks for subsets with at least one even number. Here's the reflex, don't sum exactly one even, exactly two evens, and so on. Instead use the complement principle: at least one even equals all subsets, minus the subsets with no even number at all."
+            },
+            {
+              "seq": 6,
+              "text": "Subsets with no even number are exactly the subsets of the odd set, which is sixteen. Total subsets of the whole seven element set are two to the seven, which is one hundred twenty eight. So the answer is one hundred twenty eight minus sixteen, which is one hundred twelve. Counting the easy opposite and subtracting is the standard Advanced move."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक Advanced favourite। Set one से seven लो, और दो counting questions answer करो, जिनमें दूसरा वो reflex सिखाता है जो strong students को अलग करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले set को split करो। Odd numbers हैं one, three, five, seven, यानी चार। Even numbers हैं two, four, six, यानी तीन।"
+            },
+            {
+              "seq": 3,
+              "text": "Part a पूछता है सिर्फ़ odd numbers वाले subsets। पूरी तरह odd numbers से बना subset बिल्कुल odd set का subset है। तो हम बस चार-element set के subsets गिनते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Coin-flip argument से, वो है two to the power four, यानी सोलह। और ध्यान दो, यह count empty set को शामिल करता है, जिसमें technically कोई even number नहीं, तो वो सही तरह odd-only गिना जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Part b पूछता है कम से कम एक even number वाले subsets। यहाँ reflex, exactly one even, exactly two evens, ऐसे मत जोड़ो। बल्कि complement principle use करो: कम से कम एक even बराबर सारे subsets, minus वो subsets जिनमें कोई even ही नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "जिन subsets में कोई even नहीं वो बिल्कुल odd set के subsets हैं, यानी सोलह। पूरे seven-element set के total subsets हैं two to the seven, यानी एक सौ अट्ठाईस। तो answer है एक सौ अट्ठाईस minus सोलह, यानी एक सौ बारह। आसान opposite गिनकर घटाना ही standard Advanced move है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक प्रवीण-स्तर का पसंदीदा। समुच्चय एक से सात लीजिए, और दो गणना-प्रश्न हल कीजिए, जिनमें दूसरा वह प्रतिवर्त सिखाता है जो कुशल विद्यार्थियों को अलग करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले समुच्चय को बाँटिए। विषम संख्याएँ हैं एक, तीन, पाँच, सात, यानी चार। सम संख्याएँ हैं दो, चार, छह, यानी तीन।"
+            },
+            {
+              "seq": 3,
+              "text": "भाग a पूछता है केवल विषम संख्याओं वाले उपसमुच्चय। पूरी तरह विषम संख्याओं से बना उपसमुच्चय ठीक विषम समुच्चय का उपसमुच्चय है। तो हम बस चार-अवयव समुच्चय के उपसमुच्चय गिनते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "सिक्का-उछाल तर्क से, वह है दो की घात चार, यानी सोलह। और ध्यान दें, यह गणना रिक्त समुच्चय को सम्मिलित करती है, जिसमें तकनीकी रूप से कोई सम संख्या नहीं, तो वह सही रूप से केवल-विषम गिना जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "भाग b पूछता है कम से कम एक सम संख्या वाले उपसमुच्चय। यहाँ प्रतिवर्त, ठीक एक सम, ठीक दो सम, ऐसे मत जोड़िए। बल्कि पूरक-सिद्धांत उपयोग कीजिए: कम से कम एक सम बराबर सभी उपसमुच्चय, ऋण वे उपसमुच्चय जिनमें कोई सम है ही नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "जिन उपसमुच्चयों में कोई सम नहीं वे ठीक विषम समुच्चय के उपसमुच्चय हैं, यानी सोलह। पूरे सात-अवयव समुच्चय के कुल उपसमुच्चय हैं दो की घात सात, यानी एक सौ अट्ठाईस। तो उत्तर है एक सौ अट्ठाईस ऋण सोलह, यानी एक सौ बारह। आसान विपरीत गिनकर घटाना ही मानक प्रवीण-चाल है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "tips",
+      "subtopic": "Subsets, Power Set, and Universal Set",
+      "title": "Pitfalls & pro-tips: subsets and power sets",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where subset/power-set marks vanish"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "style": "red-margin",
+          "text": "∈ vs ⊆: $1 \\in A$, but $\\{1\\} \\subseteq A$ and $\\{1\\} \\in P(A)$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "style": "red-margin",
+          "text": "Forgetting ∅ and A itself when listing subsets. Organise by size so you can't miss them."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "Proper subsets = $2^n - 1$ (exclude only A), NOT $2^n - 2$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "style": "red-margin",
+          "text": "Reading $n[P(A)]$ as $n(A)$: if $n[P(A)] = 1024 = 2^{10}$, then $n(A) = 10$, never 1024."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "text": "PRO-TIP: memorise 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 — half of power-set MCQs are just 'spot the power of two'."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's gather the traps that quietly drain marks in subsets and power sets, so they never catch you."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, and the biggest, confusing belongs to with subset. Elements join a set with belongs to, sub collections relate with subset. One belongs to A, but the set containing one is a subset of A, and that same set containing one is an element of the power set of A. Three true statements, three different symbols."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, forgetting the empty set and the full set itself when listing subsets. They are always there, both of them. Organise by size, smallest first, and you literally cannot miss them."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, the off by one in proper subsets. Proper subsets is two to the n minus one, you exclude only the set itself, not two to the n minus two. Subtracting two is a reflex error, resist it."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, reading the size of the power set as the size of the set. If the power set has one thousand twenty four members, that's two to the ten, so the set has ten elements, never one thousand twenty four."
+            },
+            {
+              "seq": 6,
+              "text": "And the pro tip that pays off constantly: memorise the small powers of two, two, four, eight, sixteen, thirty two, sixty four, one twenty eight, two fifty six, five twelve, one thousand twenty four. Half of all power set multiple choice questions reduce to spotting which power of two you're looking at, and instant recognition turns a minute long problem into a five second one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो subsets और power sets में चुपचाप marks चूसने वाले traps इकट्ठा करते हैं, ताकि वे आपको कभी न पकड़ें।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, और सबसे बड़ा, belongs to को subset से confuse करना। Elements set में belongs to से जुड़ते हैं, sub-collections subset से relate करती हैं। One, A में belongs करता है, पर one वाला set, A का subset है, और वही one वाला set, A के power set का element है। तीन सच्चे statements, तीन अलग symbols।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, subsets list करते वक़्त empty set और पूरा set भूलना। ये हमेशा वहाँ होते हैं, दोनों। Size से organise करो, सबसे छोटा पहले, और आप इन्हें miss कर ही नहीं सकते।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, proper subsets में off-by-one। Proper subsets है two to the n minus one, आप सिर्फ़ ख़ुद set को छोड़ते हो, two to the n minus two नहीं। दो घटाना एक reflex ग़लती है, इसे रोको।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, power set की size को set की size पढ़ना। अगर power set में एक हज़ार चौबीस members हैं, वो two to the ten है, तो set में दस elements हैं, कभी एक हज़ार चौबीस नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "और वो pro tip जो लगातार फ़ायदा देती है: small powers of two याद करो, two, four, eight, sixteen, thirty two, sixty four, one twenty eight, two fifty six, five twelve, एक हज़ार चौबीस। आधे power set MCQs बस इस पर सिमट जाते हैं कि आप कौन सी power of two देख रहे हो, और instant recognition मिनट भर के problem को पाँच second का बना देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आइए उपसमुच्चय और घात समुच्चय में चुपचाप अंक चूसने वाले जाल इकट्ठा करें, ताकि वे आपको कभी न पकड़ें।"
+            },
+            {
+              "seq": 2,
+              "text": "जाल एक, और सबसे बड़ा, सदस्यता को उपसमुच्चय से भ्रमित करना। अवयव समुच्चय में सदस्यता से जुड़ते हैं, उप-संग्रह उपसमुच्चय से संबंधित होते हैं। एक, A का सदस्य है, पर एक वाला समुच्चय, A का उपसमुच्चय है, और वही एक वाला समुच्चय, A के घात समुच्चय का सदस्य है। तीन सच्चे कथन, तीन अलग चिह्न।"
+            },
+            {
+              "seq": 3,
+              "text": "जाल दो, उपसमुच्चय गिनाते समय रिक्त समुच्चय और पूरा समुच्चय भूलना। ये हमेशा वहाँ होते हैं, दोनों। आकार से व्यवस्थित कीजिए, सबसे छोटा पहले, और आप इन्हें चूक ही नहीं सकते।"
+            },
+            {
+              "seq": 4,
+              "text": "जाल तीन, उचित उपसमुच्चयों में एक-की-चूक। उचित उपसमुच्चय है दो की घात n ऋण एक, आप केवल स्वयं समुच्चय को छोड़ते हैं, दो की घात n ऋण दो नहीं। दो घटाना एक प्रतिवर्त भूल है, इसे रोकिए।"
+            },
+            {
+              "seq": 5,
+              "text": "जाल चार, घात समुच्चय के आकार को समुच्चय का आकार पढ़ना। यदि घात समुच्चय में एक हज़ार चौबीस सदस्य हैं, वह दो की घात दस है, तो समुच्चय में दस अवयव हैं, कभी एक हज़ार चौबीस नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "और वह प्रो-टिप जो लगातार लाभ देती है: दो की छोटी घातें याद कीजिए, दो, चार, आठ, सोलह, बत्तीस, चौंसठ, एक सौ अट्ठाईस, दो सौ छप्पन, पाँच सौ बारह, एक हज़ार चौबीस। आधे घात-समुच्चय बहुविकल्पीय प्रश्न बस इस पर सिमट जाते हैं कि आप कौन-सी दो की घात देख रहे हैं, और तत्काल पहचान मिनट भर के प्रश्न को पाँच सेकंड का बना देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2163 @@
+{
+  "chapter": "Probability",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 13,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Total Probability: weighting the origin stories",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Total Probability — Weighting the Origin Stories"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "A mithai shop sources kaju katli from three suppliers: A 50%, B 30%, C 20%."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Each supplier occasionally sends a stale piece. Pick a random box — is it stale?"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "No single spoilage rate answers it — the box could be from any supplier."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Weight each supplier's spoilage rate by how much stock they ship, then add."
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "caption": "P(stale) = sum of (share × spoilage rate).",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 195\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"25\" y=\"28\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#334155\">Total stock, split by supplier (a partition)</text><rect x=\"25\" y=\"50\" width=\"210\" height=\"46\" fill=\"#cfe3ff\" stroke=\"#2b6cb0\" stroke-width=\"2\"/><rect x=\"235\" y=\"50\" width=\"126\" height=\"46\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><rect x=\"361\" y=\"50\" width=\"84\" height=\"46\" fill=\"#fed7aa\" stroke=\"#b7791f\" stroke-width=\"2\"/><text x=\"108\" y=\"78\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">A 50%</text><text x=\"276\" y=\"78\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#14532d\">B 30%</text><text x=\"384\" y=\"78\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#7c2d12\">C 20%</text><text x=\"25\" y=\"132\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#334155\">P(stale) = 0.50 × rateA + 0.30 × rateB + 0.20 × rateC</text><text x=\"25\" y=\"158\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#64748b\">weight each spoilage rate by the supplier share, then add</text></svg>"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "P(A) = \\sum_{j=1}^{n} P(E_j)\\,P(A \\mid E_j)"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "The suppliers form a partition: every box comes from exactly one, and some, supplier."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Partition = disjoint (no overlap) and exhaustive (covers everything)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's meet the engine of this subtopic through a Diwali sweet shop."
+            },
+            {
+              "seq": 2,
+              "text": "A mithai shop sources its kaju katli from three suppliers: A ships fifty percent of the stock, B thirty percent, and C twenty percent."
+            },
+            {
+              "seq": 3,
+              "text": "Each supplier occasionally sends a stale piece. You walk in and pick a random box. What's the chance it's stale?"
+            },
+            {
+              "seq": 4,
+              "text": "No single supplier's spoilage rate answers this, because the box could have come from any of them."
+            },
+            {
+              "seq": 5,
+              "text": "So you weight each supplier's spoilage rate by how much stock they contribute, and add it all up. That weighted sum is the Theorem of Total Probability."
+            },
+            {
+              "seq": 6,
+              "text": "Picture it as three stock segments; each contributes its share times its spoilage rate, and the total stale chance is the sum of those contributions."
+            },
+            {
+              "seq": 7,
+              "text": "In symbols, the probability of the effect A is the sum, over every cause, of the cause's prior times the effect's likelihood under that cause."
+            },
+            {
+              "seq": 8,
+              "text": "For this to work, the suppliers must form a partition: every box comes from exactly one supplier, and from some supplier."
+            },
+            {
+              "seq": 9,
+              "text": "That's the two-word requirement: disjoint, so the causes never overlap, and exhaustive, so together they cover every possibility."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic का engine एक Diwali sweet shop से समझते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "एक mithai shop अपनी kaju katli तीन suppliers से लेती है: A stock का पचास percent भेजता है, B तीस percent, और C बीस percent।"
+            },
+            {
+              "seq": 3,
+              "text": "हर supplier कभी-कभी एक stale piece भेज देता है। तुम अंदर जाके एक random box उठाते हो। Stale होने का chance क्या है?"
+            },
+            {
+              "seq": 4,
+              "text": "किसी एक supplier का spoilage rate इसका जवाब नहीं देता, क्योंकि box किसी से भी आ सकता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो हर supplier के spoilage rate को उसके shipped stock से weight करो, और सब जोड़ दो। यही weighted sum Theorem of Total Probability है।"
+            },
+            {
+              "seq": 6,
+              "text": "इसे तीन stock segments की तरह सोचो; हर एक अपना share गुणा अपना spoilage rate contribute करता है, और कुल stale chance उन contributions का sum है।"
+            },
+            {
+              "seq": 7,
+              "text": "Symbols में, effect A की probability बराबर है sum, हर cause पे, cause के prior गुणा उस cause के under effect की likelihood का।"
+            },
+            {
+              "seq": 8,
+              "text": "ये चलने के लिए suppliers को एक partition बनाना होगा: हर box ठीक एक supplier से आए, और किसी न किसी supplier से आए।"
+            },
+            {
+              "seq": 9,
+              "text": "यही दो-शब्द requirement है: disjoint, ताकि causes कभी overlap न करें, और exhaustive, ताकि मिलकर हर possibility cover करें।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Forward vs backward: Bayes is inverse probability",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Forward vs Backward — Bayes Is Inverse Probability"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Total Probability reasons forward: cause leads to effect."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "You know suppliers and spoilage rates; you predict the chance of a stale piece."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "But the real question runs backward: you bit a stale piece — which supplier?"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "style": "red-margin",
+          "text": "Effect back to cause. That inversion is exactly Bayes' Theorem."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "A courtroom: a prior belief about each suspect, updated by a piece of evidence."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Spam filters do this millions of times a day: prior spam chance, updated per word."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "An airtight alibi (prior near zero) stays innocent, however well the evidence fits."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Total Probability and Bayes are two directions of the same machinery</curious> — let's separate them."
+            },
+            {
+              "seq": 2,
+              "text": "Total Probability reasons forward, from cause to effect."
+            },
+            {
+              "seq": 3,
+              "text": "You know the suppliers and their spoilage rates, and you predict the chance of a stale piece. Cause first, effect second."
+            },
+            {
+              "seq": 4,
+              "text": "But the interesting exam questions run the film backward. You've already bitten into a stale piece; now, which supplier most likely sent it?"
+            },
+            {
+              "seq": 5,
+              "text": "That backward question, from observed effect to hidden cause, is exactly what Bayes' Theorem answers. It inverts the direction of conditioning, which is why it's called inverse probability."
+            },
+            {
+              "seq": 6,
+              "text": "A courtroom captures the spirit. Before any evidence, the judge holds a prior belief about each suspect. A fingerprint arrives, and belief updates toward whoever best fits both plausibility and evidence."
+            },
+            {
+              "seq": 7,
+              "text": "Spam filters run the same loop millions of times a day: a prior chance that a message is spam, updated by the likelihood of each word it contains."
+            },
+            {
+              "seq": 8,
+              "text": "And a crucial point: a suspect with an airtight alibi, a prior near zero, stays innocent no matter how well the evidence fits. That's why some causes simply drop out."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Total Probability और Bayes एक ही machinery की दो directions हैं</curious>, इन्हें अलग करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Total Probability forward reason करता है, cause से effect की ओर।"
+            },
+            {
+              "seq": 3,
+              "text": "तुम suppliers और उनके spoilage rates जानते हो, और stale piece का chance predict करते हो। पहले cause, फिर effect।"
+            },
+            {
+              "seq": 4,
+              "text": "पर interesting exam questions film को backward चलाते हैं। तुमने एक stale piece खा ही ली है; अब, किस supplier ने भेजी होगी?"
+            },
+            {
+              "seq": 5,
+              "text": "ये backward question, observed effect से hidden cause तक, बिल्कुल वही है जो Bayes' Theorem जवाब देता है। ये conditioning की direction को invert करता है, इसलिए इसे inverse probability कहते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "एक courtroom इसकी भावना पकड़ता है। किसी evidence से पहले, judge हर suspect के बारे में एक prior belief रखता है। एक fingerprint आती है, और belief उसकी ओर update होती है जो plausibility और evidence दोनों में सबसे fit हो।"
+            },
+            {
+              "seq": 7,
+              "text": "Spam filters यही loop दिन में लाखों बार चलाते हैं: message के spam होने का prior chance, हर word की likelihood से update होता।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक crucial बात: airtight alibi वाला suspect, prior लगभग zero, innocent ही रहता है चाहे evidence कितना भी fit हो। इसीलिए कुछ causes बस drop out हो जाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "The base-rate trap",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The Base-Rate Trap"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Your gut blames the worst spoilage rate — but volume matters too."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "A 95%-accurate test for a rare disease can still leave a positive patient likely healthy."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "Prior = base rate; likelihood = test accuracy; posterior = updated belief."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Healthy people vastly outnumber sick ones, so false positives pile up."
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "caption": "Among positives, false alarms can dominate.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 450 165\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"25\" y=\"26\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#334155\">Everyone who tests positive</text><rect x=\"25\" y=\"46\" width=\"400\" height=\"46\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"25\" y=\"46\" width=\"65\" height=\"46\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"2\"/><rect x=\"90\" y=\"46\" width=\"335\" height=\"46\" fill=\"#fca5a5\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"28\" y=\"114\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#14532d\">truly carriers ≈ 16%</text><text x=\"250\" y=\"114\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#7f1d1d\">false alarms ≈ 84%</text><text x=\"25\" y=\"146\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#64748b\">a rare condition makes false positives dominate the positives</text></svg>"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Bayes forces you to respect both the prior and the likelihood."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Posteriors that don't sum to one? Suspect a non-partition or the wrong denominator."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "The error is structural — re-examine the cases before re-checking the sums."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the trap your intuition sets, and the single biggest reason Bayes surprises people."
+            },
+            {
+              "seq": 2,
+              "text": "Your gut screams that the culprit is whoever has the worst spoilage rate. But if that supplier barely ships anything, sheer volume from a cleaner supplier can make it the likelier source."
+            },
+            {
+              "seq": 3,
+              "text": "The classic version is medical. <excited>A test that's ninety five percent accurate for a rare disease can still leave a patient who tested positive far more likely to be healthy than sick!</excited>"
+            },
+            {
+              "seq": 4,
+              "text": "Three names to hold: the prior is the base rate, the likelihood is the test's accuracy, and the posterior is your updated belief after seeing the result."
+            },
+            {
+              "seq": 5,
+              "text": "Why the surprise? Healthy people vastly outnumber sick ones, so even a small false-positive rate, applied to that huge pool, produces a flood of false positives."
+            },
+            {
+              "seq": 6,
+              "text": "Picture everyone who tests positive: only a thin slice are truly carriers; the rest are false alarms from the large healthy majority."
+            },
+            {
+              "seq": 7,
+              "text": "Bayes forces you to respect both numbers, the prior and the likelihood, instead of chasing the scary accuracy figure alone."
+            },
+            {
+              "seq": 8,
+              "text": "A practical consequence: if your posteriors ever fail to sum to one, you've used a non-partition or divided by the wrong denominator."
+            },
+            {
+              "seq": 9,
+              "text": "That error is structural, not arithmetic, so re-examine your cases before you re-check your sums."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब वो trap जो तुम्हारी intuition बिछाती है, और सबसे बड़ी वजह कि Bayes लोगों को चौंकाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "तुम्हारा gut चिल्लाता है कि culprit वही है जिसका spoilage rate सबसे ख़राब है। पर अगर वो supplier मुश्किल से कुछ भेजता है, तो एक cleaner supplier का sheer volume उसे ज़्यादा likely source बना सकता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Classic version medical है। <excited>एक test जो rare disease के लिए पचानवे percent accurate है, फिर भी positive आए patient को sick से ज़्यादा healthy होने की likely छोड़ सकता है!</excited>"
+            },
+            {
+              "seq": 4,
+              "text": "तीन नाम पकड़ो: prior है base rate, likelihood है test की accuracy, और posterior है result देखने के बाद तुम्हारी updated belief।"
+            },
+            {
+              "seq": 5,
+              "text": "Surprise क्यों? Healthy लोग sick से बहुत ज़्यादा हैं, तो एक छोटा false-positive rate भी, उस huge pool पे लगे, तो false positives की बाढ़ ला देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "उन सबको सोचो जो positive test करते हैं: सिर्फ एक पतली slice सचमुच carriers हैं; बाकी बड़ी healthy majority से false alarms हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Bayes तुम्हें दोनों numbers, prior और likelihood, respect करने पे मजबूर करता है, बजाय अकेले scary accuracy figure के पीछे भागने के।"
+            },
+            {
+              "seq": 8,
+              "text": "एक practical नतीजा: अगर तुम्हारे posteriors कभी one में add न हों, तो या तो non-partition use किया या ग़लत denominator से भाग दिया।"
+            },
+            {
+              "seq": 9,
+              "text": "वो error structural है, arithmetic नहीं, तो sums दुबारा check करने से पहले अपने cases दुबारा जाँचो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Proof: the Theorem of Total Probability",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof — Theorem of Total Probability"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Causes are exhaustive, so $A$ lies entirely inside their union."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "A = A \\cap S = \\bigcup_{j} (A \\cap E_j)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "The pieces don't overlap, because the causes themselves are disjoint."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(A) = \\sum_{j} P(A \\cap E_j)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Rewrite each piece with the multiplication theorem from Sub-01."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "P(A) = \\sum_{j} P(E_j)\\,P(A \\mid E_j)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Exhaustive lets us split; disjoint lets us add without corrections."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's prove Total Probability — it's short, and it shows exactly where each partition property is used."
+            },
+            {
+              "seq": 2,
+              "text": "Because the causes are exhaustive, their union is the whole sample space, so every outcome of A falls into one of them."
+            },
+            {
+              "seq": 3,
+              "text": "That lets us slice A along the partition: A is the union, over all causes, of A-and-that-cause."
+            },
+            {
+              "seq": 4,
+              "text": "These pieces are pairwise disjoint, because the causes themselves are disjoint. No two of them share an outcome."
+            },
+            {
+              "seq": 5,
+              "text": "And for a disjoint union, probabilities simply add: probability of A is the sum of probability of A-and-each-cause."
+            },
+            {
+              "seq": 6,
+              "text": "Now rewrite each piece with the multiplication theorem from the last subtopic: probability of A-and-a-cause is the cause's prior times the likelihood of A under it."
+            },
+            {
+              "seq": 7,
+              "text": "Substituting gives the theorem: probability of A equals the sum, over all causes, of prior times likelihood."
+            },
+            {
+              "seq": 8,
+              "text": "So the two partition properties each earn their keep: exhaustive lets us split A into the union, and disjoint lets us add the probabilities with no overlap corrections."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Total Probability prove करते हैं, ये छोटा है और दिखाता है कि हर partition property कहाँ इस्तेमाल होती है।"
+            },
+            {
+              "seq": 2,
+              "text": "चूँकि causes exhaustive हैं, उनका union पूरा sample space है, तो A का हर outcome उनमें से किसी एक में गिरता है।"
+            },
+            {
+              "seq": 3,
+              "text": "इससे हम A को partition के साथ slice कर सकते हैं: A है union, सारे causes पे, A-and-उस-cause का।"
+            },
+            {
+              "seq": 4,
+              "text": "ये pieces pairwise disjoint हैं, क्योंकि causes खुद disjoint हैं। इनमें से कोई दो एक outcome share नहीं करते।"
+            },
+            {
+              "seq": 5,
+              "text": "और disjoint union के लिए probabilities बस जुड़ जाती हैं: probability of A बराबर probability of A-and-हर-cause का sum।"
+            },
+            {
+              "seq": 6,
+              "text": "अब हर piece को पिछले subtopic के multiplication theorem से rewrite करो: probability of A-and-a-cause बराबर cause का prior गुणा उसके under A की likelihood।"
+            },
+            {
+              "seq": 7,
+              "text": "Substitute करने पे theorem मिलता है: probability of A बराबर sum, सारे causes पे, prior गुणा likelihood का।"
+            },
+            {
+              "seq": 8,
+              "text": "तो दोनों partition properties अपनी क़ीमत वसूल करती हैं: exhaustive हमें A को union में split करने देती है, और disjoint बिना overlap corrections के probabilities जोड़ने देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Proof: Bayes' Theorem",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof — Bayes' Theorem"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Start from the definition of the conditional we actually want."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "P(E_i \\mid A) = \\dfrac{P(E_i \\cap A)}{P(A)}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Rewrite the numerator with the multiplication theorem, conditioning on the cause."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(E_i \\cap A) = P(E_i)\\,P(A \\mid E_i)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Replace the denominator with Total Probability."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "P(E_i \\mid A) = \\dfrac{P(E_i)\\,P(A \\mid E_i)}{\\sum_{j} P(E_j)\\,P(A \\mid E_j)}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "We know likelihoods (effect given cause); Bayes flips them into posteriors."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Bayes' Theorem falls out of two things you already have: the definition of conditional probability and Total Probability."
+            },
+            {
+              "seq": 2,
+              "text": "Start from the definition, applied to the conditional we actually want, the cause given the evidence."
+            },
+            {
+              "seq": 3,
+              "text": "Probability of cause E-i given A is probability of E-i-and-A over probability of A."
+            },
+            {
+              "seq": 4,
+              "text": "For the numerator, use the multiplication theorem the convenient way round, conditioning on the cause, whose likelihood we actually know."
+            },
+            {
+              "seq": 5,
+              "text": "That makes the numerator the cause's prior times the likelihood of A under that cause."
+            },
+            {
+              "seq": 6,
+              "text": "For the denominator, substitute Total Probability, the full sum over all causes."
+            },
+            {
+              "seq": 7,
+              "text": "Putting the two together gives Bayes' Theorem: prior times likelihood on top, and the total probability of the evidence on the bottom."
+            },
+            {
+              "seq": 8,
+              "text": "The physical idea: we're handed the likelihoods, effect given cause, but we want the posteriors, cause given effect. Bayes is the bridge that flips the direction, and Total Probability builds its denominator."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Bayes' Theorem दो चीज़ों से निकल आता है जो तुम्हारे पास पहले से हैं: conditional probability की definition और Total Probability।"
+            },
+            {
+              "seq": 2,
+              "text": "Definition से शुरू करो, उसी conditional पे लगाई जो हमें सचमुच चाहिए, evidence के given cause।"
+            },
+            {
+              "seq": 3,
+              "text": "Probability of cause E-i given A बराबर probability of E-i-and-A बटा probability of A।"
+            },
+            {
+              "seq": 4,
+              "text": "Numerator के लिए multiplication theorem उस सुविधाजनक तरीक़े से use करो, cause पे condition करके, जिसकी likelihood हमें पता है।"
+            },
+            {
+              "seq": 5,
+              "text": "इससे numerator बनता है cause का prior गुणा उस cause के under A की likelihood।"
+            },
+            {
+              "seq": 6,
+              "text": "Denominator के लिए Total Probability substitute करो, सारे causes पे पूरा sum।"
+            },
+            {
+              "seq": 7,
+              "text": "दोनों को जोड़ने पे Bayes' Theorem मिलता है: ऊपर prior गुणा likelihood, और नीचे evidence की total probability।"
+            },
+            {
+              "seq": 8,
+              "text": "Physical idea: हमें likelihoods दी जाती हैं, effect given cause, पर हमें चाहिए posteriors, cause given effect। Bayes वो पुल है जो direction flip करता है, और Total Probability उसका denominator बनाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "The probability-tree device",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The Probability-Tree Device"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Every Total-Probability or Bayes problem is a two-level tree."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "caption": "Priors on the first branches, likelihoods on the second.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 500 285\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"35\" cy=\"140\" r=\"7\" fill=\"#334155\"/><text x=\"14\" y=\"162\" font-family=\"system-ui, sans-serif\" font-size=\"10\" fill=\"#334155\">start</text><line x1=\"42\" y1=\"140\" x2=\"203\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"42\" y1=\"140\" x2=\"203\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"42\" y1=\"140\" x2=\"203\" y2=\"225\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"95\" y=\"88\" font-family=\"system-ui, sans-serif\" font-size=\"10\" fill=\"#2b6cb0\">P(E1)</text><text x=\"102\" y=\"133\" font-family=\"system-ui, sans-serif\" font-size=\"10\" fill=\"#2b6cb0\">P(E2)</text><text x=\"95\" y=\"196\" font-family=\"system-ui, sans-serif\" font-size=\"10\" fill=\"#2b6cb0\">P(E3)</text><circle cx=\"210\" cy=\"55\" r=\"6\" fill=\"#2b6cb0\"/><text x=\"186\" y=\"52\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#2b6cb0\">E1</text><circle cx=\"210\" cy=\"140\" r=\"6\" fill=\"#2b6cb0\"/><text x=\"186\" y=\"137\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#2b6cb0\">E2</text><circle cx=\"210\" cy=\"225\" r=\"6\" fill=\"#2b6cb0\"/><text x=\"186\" y=\"222\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#2b6cb0\">E3</text><line x1=\"216\" y1=\"55\" x2=\"392\" y2=\"35\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"216\" y1=\"55\" x2=\"392\" y2=\"80\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"216\" y1=\"140\" x2=\"392\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"216\" y1=\"140\" x2=\"392\" y2=\"160\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"216\" y1=\"225\" x2=\"392\" y2=\"205\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"216\" y1=\"225\" x2=\"392\" y2=\"250\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"298\" y=\"33\" font-family=\"system-ui, sans-serif\" font-size=\"9\" fill=\"#b7791f\">P(A|E1)</text><text x=\"298\" y=\"117\" font-family=\"system-ui, sans-serif\" font-size=\"9\" fill=\"#b7791f\">P(A|E2)</text><text x=\"298\" y=\"202\" font-family=\"system-ui, sans-serif\" font-size=\"9\" fill=\"#b7791f\">P(A|E3)</text><text x=\"396\" y=\"39\" font-family=\"system-ui, sans-serif\" font-size=\"10\" fill=\"#15803d\">A occurs</text><text x=\"396\" y=\"84\" font-family=\"system-ui, sans-serif\" font-size=\"9\" fill=\"#94a3b8\">A fails</text><text x=\"396\" y=\"124\" font-family=\"system-ui, sans-serif\" font-size=\"10\" fill=\"#15803d\">A occurs</text><text x=\"396\" y=\"164\" font-family=\"system-ui, sans-serif\" font-size=\"9\" fill=\"#94a3b8\">A fails</text><text x=\"396\" y=\"209\" font-family=\"system-ui, sans-serif\" font-size=\"10\" fill=\"#15803d\">A occurs</text><text x=\"396\" y=\"254\" font-family=\"system-ui, sans-serif\" font-size=\"9\" fill=\"#94a3b8\">A fails</text><text x=\"55\" y=\"279\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#334155\">P(A) = sum of the three A-occurs path products</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Each root-to-leaf path multiplies its labels: prior times likelihood."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "\\text{path product} = P(E_i)\\,P(A \\mid E_i)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Total Probability is the sum of all the 'A occurs' path-products."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "latex": "P(E_i \\mid A) = \\dfrac{\\text{that A-path}}{\\text{sum of all A-paths}}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Draw the tree first — the denominator becomes impossible to get wrong."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Here's the device that turns any messy Bayes problem into bookkeeping:</curious> the probability tree."
+            },
+            {
+              "seq": 2,
+              "text": "Every Total-Probability or Bayes question can be drawn as a two-level tree, and the tree is the formula made visible."
+            },
+            {
+              "seq": 3,
+              "text": "From a single root, branches fan out to the causes, each labelled with its prior. From every cause, two more branches lead to 'A occurs' and 'A fails,' labelled with the likelihoods."
+            },
+            {
+              "seq": 4,
+              "text": "Each complete path from root to a leaf multiplies the labels along it, and that product is prior times likelihood."
+            },
+            {
+              "seq": 5,
+              "text": "So each 'A occurs' path carries probability equal to the cause's prior times the likelihood of A under that cause."
+            },
+            {
+              "seq": 6,
+              "text": "Total Probability is simply the sum of all the 'A occurs' path-products."
+            },
+            {
+              "seq": 7,
+              "text": "And Bayes asks: out of that total, what fraction travelled through cause E-i? That's the single path-product divided by the sum of the A-paths."
+            },
+            {
+              "seq": 8,
+              "text": "Draw the tree first. Because you literally add up the paths you drew, the denominator becomes impossible to get wrong."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>ये रहा वो device जो किसी भी messy Bayes problem को bookkeeping बना देता है:</curious> probability tree।"
+            },
+            {
+              "seq": 2,
+              "text": "हर Total-Probability या Bayes question एक two-level tree की तरह draw हो सकता है, और tree ही formula का दिखने वाला रूप है।"
+            },
+            {
+              "seq": 3,
+              "text": "एक single root से branches causes की ओर फैलती हैं, हर एक अपने prior से labelled। हर cause से दो और branches 'A occurs' और 'A fails' की ओर जाती हैं, likelihoods से labelled।"
+            },
+            {
+              "seq": 4,
+              "text": "Root से leaf तक हर पूरा path अपने labels को multiply करता है, और वो product है prior गुणा likelihood।"
+            },
+            {
+              "seq": 5,
+              "text": "तो हर 'A occurs' path की probability बराबर है cause का prior गुणा उस cause के under A की likelihood।"
+            },
+            {
+              "seq": 6,
+              "text": "Total Probability बस सारे 'A occurs' path-products का sum है।"
+            },
+            {
+              "seq": 7,
+              "text": "और Bayes पूछता है: उस total में से, कितना हिस्सा cause E-i से होकर गया? वो single path-product बटा A-paths का sum।"
+            },
+            {
+              "seq": 8,
+              "text": "Tree पहले draw करो। चूँकि तुम literally वही paths जोड़ते हो जो draw किए, denominator ग़लत होना नामुमकिन हो जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Core formulas: partition, Total Probability, Bayes",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Core Formulas — Total Probability & Bayes"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Partition: causes are disjoint, exhaustive, each with positive probability."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "E_1 \\cup \\cdots \\cup E_n = S, \\quad E_i \\cap E_j = \\varnothing \\ (i \\neq j)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "latex": "P(A) = \\sum_{j=1}^{n} P(E_j)\\,P(A \\mid E_j)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "That's the forward direction: weight each cause's likelihood by its prior."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "P(E_i \\mid A) = \\dfrac{P(E_i)\\,P(A \\mid E_i)}{\\sum_{j} P(E_j)\\,P(A \\mid E_j)}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "The denominator is exactly $P(A)$ from Total Probability."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "In words: posterior equals prior times likelihood, over the probability of the evidence."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the toolkit for this subtopic — three formulas that do all the work."
+            },
+            {
+              "seq": 2,
+              "text": "First, the partition. Your causes must be disjoint, so they never overlap; exhaustive, so they cover everything; and each must have positive probability."
+            },
+            {
+              "seq": 3,
+              "text": "In symbols, the causes' union is the whole sample space, and any two distinct causes have empty intersection."
+            },
+            {
+              "seq": 4,
+              "text": "Total Probability: the probability of A is the sum, over all causes, of each cause's prior times the likelihood of A under it."
+            },
+            {
+              "seq": 5,
+              "text": "That's the forward direction: you weight each cause's likelihood by its prior and add them up."
+            },
+            {
+              "seq": 6,
+              "text": "Bayes: the posterior for cause E-i is that cause's prior times likelihood, divided by the full sum over all causes."
+            },
+            {
+              "seq": 7,
+              "text": "And the denominator is not a new quantity; it's exactly probability of A from Total Probability."
+            },
+            {
+              "seq": 8,
+              "text": "In words: posterior equals prior times likelihood, over the probability of the evidence."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic का toolkit ये रहा, तीन formulas जो सारा काम करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले partition। तुम्हारे causes disjoint हों, ताकि कभी overlap न करें; exhaustive हों, ताकि सब cover करें; और हर एक की probability positive हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Symbols में, causes का union पूरा sample space है, और कोई भी दो अलग causes का intersection empty है।"
+            },
+            {
+              "seq": 4,
+              "text": "Total Probability: A की probability है sum, सारे causes पे, हर cause के prior गुणा उसके under A की likelihood का।"
+            },
+            {
+              "seq": 5,
+              "text": "यही forward direction है: तुम हर cause की likelihood को उसके prior से weight करते हो और जोड़ देते हो।"
+            },
+            {
+              "seq": 6,
+              "text": "Bayes: cause E-i का posterior है उस cause का prior गुणा likelihood, बटा सारे causes पे पूरा sum।"
+            },
+            {
+              "seq": 7,
+              "text": "और denominator कोई नई quantity नहीं; वो बिल्कुल Total Probability वाला probability of A है।"
+            },
+            {
+              "seq": 8,
+              "text": "शब्दों में: posterior बराबर prior गुणा likelihood, बटा evidence की probability।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "formulas",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Two-cause Bayes and the free consistency check",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two-Cause Bayes & the Free Check"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Just a cause $E$ and its complement $E'$ — the Boards template."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "P(E \\mid A) = \\dfrac{P(E)\\,P(A \\mid E)}{P(E)\\,P(A \\mid E) + P(E')\\,P(A \\mid E')}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "This is the disease-test and single-bag form; write the answer in one line."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "\\sum_{i} P(E_i \\mid A) = 1"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "Posteriors sum to one — a free consistency check."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Priors also sum to one; if they don't, you don't have a partition."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "If the posteriors miss one, suspect a non-partition or the wrong denominator."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "One special case deserves its own slot, because it's the form Boards ask most."
+            },
+            {
+              "seq": 2,
+              "text": "When there are just two causes, an event E and its complement E-prime, Bayes collapses neatly."
+            },
+            {
+              "seq": 3,
+              "text": "The posterior for E is prior times likelihood for E, over prior times likelihood for E plus the same product for E-prime."
+            },
+            {
+              "seq": 4,
+              "text": "This is the disease-test and single-bag template. Recognise it and you can write the answer in a single line."
+            },
+            {
+              "seq": 5,
+              "text": "And here's a gift the structure gives you: the posteriors over any partition must sum to one."
+            },
+            {
+              "seq": 6,
+              "text": "Use that as a free consistency check at the end of every Bayes problem."
+            },
+            {
+              "seq": 7,
+              "text": "The priors must also sum to one; if they don't, what you have isn't a partition at all."
+            },
+            {
+              "seq": 8,
+              "text": "So if your posteriors miss one, don't just re-add. Suspect a non-partition or the wrong denominator, which are structural mistakes."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक special case अपनी अलग जगह का हक़दार है, क्योंकि Boards यही form सबसे ज़्यादा पूछते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "जब सिर्फ दो causes हों, एक event E और उसका complement E-prime, तो Bayes साफ़-सुथरा collapse हो जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "E का posterior है E के लिए prior गुणा likelihood, बटा E के लिए prior गुणा likelihood जोड़ E-prime के लिए वही product।"
+            },
+            {
+              "seq": 4,
+              "text": "ये disease-test और single-bag template है। इसे पहचान लो तो answer एक ही line में लिख सकते हो।"
+            },
+            {
+              "seq": 5,
+              "text": "और ये structure एक gift देता है: किसी भी partition पे posteriors का sum one होना ही चाहिए।"
+            },
+            {
+              "seq": 6,
+              "text": "इसे हर Bayes problem के आख़िर में एक free consistency check की तरह use करो।"
+            },
+            {
+              "seq": 7,
+              "text": "Priors का sum भी one होना चाहिए; अगर नहीं, तो जो तुम्हारे पास है वो partition है ही नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो अगर posteriors one से चूकें, बस दुबारा जोड़ो मत। Non-partition या ग़लत denominator पे शक करो, जो structural mistakes हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Worked example: which bag? (CBSE)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Which Bag? (CBSE)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Bag I: $4$ red, $6$ blue. Bag II: $7$ red, $3$ blue. Pick a bag, draw one — it's red."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Causes: Bag I or Bag II, each prior $\\tfrac{1}{2}$. Effect $A$: a red ball."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(A \\mid E_1) = \\tfrac{4}{10}, \\quad P(A \\mid E_2) = \\tfrac{7}{10}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(A) = \\tfrac{1}{2}\\cdot\\tfrac{4}{10} + \\tfrac{1}{2}\\cdot\\tfrac{7}{10} = \\tfrac{11}{20}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "P(E_1 \\mid A) = \\dfrac{\\tfrac{1}{2}\\cdot\\tfrac{4}{10}}{\\tfrac{11}{20}} = \\dfrac{4}{11}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Check: $P(\\text{Bag II} \\mid \\text{red}) = \\tfrac{7}{11}$, and $\\tfrac{4}{11} + \\tfrac{7}{11} = 1$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "The red ball is likelier from Bag II, which is richer in red."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "Equal priors, so the posteriors just reflect the likelihood ratio."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A clean Boards Bayes problem: the two-bag template you'll see again and again."
+            },
+            {
+              "seq": 2,
+              "text": "Bag one holds four red and six blue balls; bag two holds seven red and three blue. You pick a bag at random and draw one ball, and it turns out red."
+            },
+            {
+              "seq": 3,
+              "text": "The causes are bag one chosen and bag two chosen, each with prior one half. The observed effect is a red ball."
+            },
+            {
+              "seq": 4,
+              "text": "The likelihoods: probability of red from bag one is four tenths; from bag two it's seven tenths."
+            },
+            {
+              "seq": 5,
+              "text": "Total probability of red is one half times four tenths, plus one half times seven tenths, which is eleven twentieths."
+            },
+            {
+              "seq": 6,
+              "text": "Bayes for bag one: one half times four tenths, over eleven twentieths, which simplifies to four elevenths."
+            },
+            {
+              "seq": 7,
+              "text": "Check the partition: probability of bag two given red is seven elevenths, and four elevenths plus seven elevenths is one."
+            },
+            {
+              "seq": 8,
+              "text": "The red ball is likelier to have come from bag two, which is richer in red."
+            },
+            {
+              "seq": 9,
+              "text": "And since the priors were equal, the posteriors simply reflect the ratio of the likelihoods."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक साफ़ Boards Bayes problem: वो two-bag template जो बार-बार दिखेगा।"
+            },
+            {
+              "seq": 2,
+              "text": "Bag one में चार red और छह blue balls; bag two में सात red और तीन blue। तुम random एक bag चुनते हो और एक ball निकालते हो, और वो red निकलती है।"
+            },
+            {
+              "seq": 3,
+              "text": "Causes हैं bag one chosen और bag two chosen, हर एक का prior one half। Observed effect है एक red ball।"
+            },
+            {
+              "seq": 4,
+              "text": "Likelihoods: bag one से red की probability है four tenths; bag two से seven tenths।"
+            },
+            {
+              "seq": 5,
+              "text": "Red की total probability है one half गुणा four tenths, जोड़ one half गुणा seven tenths, जो है eleven twentieths।"
+            },
+            {
+              "seq": 6,
+              "text": "Bag one के लिए Bayes: one half गुणा four tenths, बटा eleven twentieths, जो simplify होकर four elevenths।"
+            },
+            {
+              "seq": 7,
+              "text": "Partition check करो: red के given bag two की probability है seven elevenths, और four elevenths जोड़ seven elevenths बराबर one।"
+            },
+            {
+              "seq": 8,
+              "text": "Red ball के bag two से आने की ज़्यादा likely है, जो red में richer है।"
+            },
+            {
+              "seq": 9,
+              "text": "और चूँकि priors बराबर थे, posteriors बस likelihoods के ratio को दर्शाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Worked example: the 95% test trap (JEE Main)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — The 95% Test Trap (JEE Main)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "$2\\%$ carry a condition. Test flags a carrier $95\\%$, a non-carrier $10\\%$. Result: positive."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "style": "red-margin",
+          "text": "Don't answer 95% — that's a likelihood, not the posterior."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(D) = 0.02, \\quad P(D') = 0.98"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(+ \\mid D) = 0.95, \\quad P(+ \\mid D') = 0.10"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "P(+) = 0.02(0.95) + 0.98(0.10) = 0.117"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "P(D \\mid +) = \\dfrac{0.019}{0.117} \\approx 0.162"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "False positives from the huge healthy pool swamp the true positives."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "Base rate wins: about 16%, not 95% — the hallmark Bayes surprise."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A textbook base-rate problem, and a classic J E E Main speed trap."
+            },
+            {
+              "seq": 2,
+              "text": "Two percent of people carry a condition. The test flags a carrier ninety five percent of the time, and wrongly flags a non-carrier ten percent of the time. Someone tests positive."
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>Don't reach for ninety five percent — that's a likelihood, not the posterior.</whisper>"
+            },
+            {
+              "seq": 4,
+              "text": "Set the priors: probability of carrier is zero point zero two, probability of non-carrier is zero point nine eight."
+            },
+            {
+              "seq": 5,
+              "text": "The likelihoods: probability of positive given carrier is zero point nine five; positive given non-carrier is zero point one zero."
+            },
+            {
+              "seq": 6,
+              "text": "Total probability of a positive: zero point zero two times zero point nine five, plus zero point nine eight times zero point one zero, which is zero point one one seven."
+            },
+            {
+              "seq": 7,
+              "text": "Posterior: zero point zero one nine over zero point one one seven, about zero point one six."
+            },
+            {
+              "seq": 8,
+              "text": "The huge non-carrier pool produces a flood of false positives that swamps the true positives."
+            },
+            {
+              "seq": 9,
+              "text": "So the base rate wins: about sixteen percent, not ninety five. That's the hallmark Bayes surprise."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक textbook base-rate problem, और एक classic J E E Main speed trap।"
+            },
+            {
+              "seq": 2,
+              "text": "दो percent लोग एक condition रखते हैं। Test एक carrier को पचानवे percent बार flag करता है, और एक non-carrier को ग़लती से दस percent बार flag करता है। कोई positive test करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>पचानवे percent की ओर मत भागो, वो likelihood है, posterior नहीं।</whisper>"
+            },
+            {
+              "seq": 4,
+              "text": "Priors रखो: probability of carrier है zero point zero two, probability of non-carrier है zero point nine eight।"
+            },
+            {
+              "seq": 5,
+              "text": "Likelihoods: probability of positive given carrier है zero point nine five; positive given non-carrier है zero point one zero।"
+            },
+            {
+              "seq": 6,
+              "text": "Positive की total probability: zero point zero two गुणा zero point nine five, जोड़ zero point nine eight गुणा zero point one zero, जो है zero point one one seven।"
+            },
+            {
+              "seq": 7,
+              "text": "Posterior: zero point zero one nine बटा zero point one one seven, लगभग zero point one six।"
+            },
+            {
+              "seq": 8,
+              "text": "बड़ी non-carrier pool false positives की बाढ़ पैदा करती है जो true positives को swamp कर देती है।"
+            },
+            {
+              "seq": 9,
+              "text": "तो base rate जीतता है: लगभग सोलह percent, पचानवे नहीं। यही hallmark Bayes surprise है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Worked example: two white balls (JEE Main)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Two White Balls (JEE Main)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "A: 3W,2B. B: 1W,4B. C: 4W,1B. Pick a box, draw $2$ together — both white."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Priors $\\tfrac{1}{3}$ each. Effect $W$: both drawn balls white. Use combinations."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(W \\mid A) = \\dfrac{\\binom{3}{2}}{\\binom{5}{2}} = \\dfrac{3}{10}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(W \\mid B) = 0, \\quad P(W \\mid C) = \\dfrac{\\binom{4}{2}}{\\binom{5}{2}} = \\dfrac{6}{10}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "P(W) = \\tfrac{1}{3}\\!\\left(\\tfrac{3}{10} + 0 + \\tfrac{6}{10}\\right) = \\tfrac{3}{10}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "P(C \\mid W) = \\dfrac{\\tfrac{1}{3}\\cdot\\tfrac{6}{10}}{\\tfrac{3}{10}} = \\dfrac{2}{3}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Box B contributes zero — it can't yield two whites at all."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "Combinations supply the likelihoods; Bayes does the rest."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now Bayes fused with a bit of counting, a favourite J E E Main multi-concept."
+            },
+            {
+              "seq": 2,
+              "text": "Three identical boxes. Box A has three white and two black; box B has one white and four black; box C has four white and one black. You pick a box at random and draw two balls together, and both are white."
+            },
+            {
+              "seq": 3,
+              "text": "Priors are one third each. The effect W is both drawn balls white, and we get each likelihood using combinations."
+            },
+            {
+              "seq": 4,
+              "text": "For box A: choose two whites from three, over choose two from five, which is three tenths."
+            },
+            {
+              "seq": 5,
+              "text": "Box B gives zero, since you can't choose two whites from one; box C gives choose two from four, over ten, which is six tenths."
+            },
+            {
+              "seq": 6,
+              "text": "Total probability of two whites is one third times the sum three tenths plus zero plus six tenths, which is three tenths."
+            },
+            {
+              "seq": 7,
+              "text": "Bayes for box C: one third times six tenths, over three tenths, which is two thirds."
+            },
+            {
+              "seq": 8,
+              "text": "Notice box B contributes exactly zero; it simply can't produce two whites."
+            },
+            {
+              "seq": 9,
+              "text": "So combinations supply the likelihoods and Bayes does the rest, counting and probability working together."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब Bayes थोड़ी counting के साथ, एक favourite J E E Main multi-concept।"
+            },
+            {
+              "seq": 2,
+              "text": "तीन identical boxes। Box A में तीन white और दो black; box B में एक white और चार black; box C में चार white और एक black। तुम random एक box चुनते हो और दो balls एक साथ निकालते हो, और दोनों white।"
+            },
+            {
+              "seq": 3,
+              "text": "Priors हर एक one third। Effect W है दोनों drawn balls white, और हर likelihood combinations से निकालते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Box A के लिए: तीन में से दो whites choose करो, बटा पाँच में से दो choose करो, जो है three tenths।"
+            },
+            {
+              "seq": 5,
+              "text": "Box B zero देता है, क्योंकि एक में से दो whites choose नहीं हो सकते; box C देता है चार में से दो choose, बटा ten, जो six tenths।"
+            },
+            {
+              "seq": 6,
+              "text": "दो whites की total probability है one third गुणा sum three tenths जोड़ zero जोड़ six tenths, जो है three tenths।"
+            },
+            {
+              "seq": 7,
+              "text": "Box C के लिए Bayes: one third गुणा six tenths, बटा three tenths, जो है two thirds।"
+            },
+            {
+              "seq": 8,
+              "text": "ध्यान दो box B बिल्कुल zero contribute करता है; वो दो whites बना ही नहीं सकता।"
+            },
+            {
+              "seq": 9,
+              "text": "तो combinations likelihoods देते हैं और Bayes बाकी करता है, counting और probability साथ काम करते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Worked example: three production lines (JEE Advanced)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Three Production Lines (JEE Advanced)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "L1: $60\\%$ output, $2\\%$ defects. L2: $25\\%$, $4\\%$. L3: $15\\%$, $8\\%$. An item is defective."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Causes L1, L2, L3 partition output. Effect D: defective. Build joint = prior times likelihood."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(L_1)\\,P(D \\mid L_1) = 0.60(0.02) = 0.012"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(L_2)\\,P(D \\mid L_2) = 0.010, \\quad P(L_3)\\,P(D \\mid L_3) = 0.012"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "P(D) = 0.012 + 0.010 + 0.012 = 0.034"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "P(L_1 \\mid D) = \\tfrac{6}{17}, \\ P(L_2 \\mid D) = \\tfrac{5}{17}, \\ P(L_3 \\mid D) = \\tfrac{6}{17}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Check: $\\tfrac{6}{17} + \\tfrac{5}{17} + \\tfrac{6}{17} = 1$."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "L1 and L3 are tied as the likeliest source, though L3 is four times as defect-prone."
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 81,
+          "style": "red-margin",
+          "text": "High volume at a low defect rate is just as guilty as low volume at a high rate."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A full J E E Advanced build with a genuine insight at the end."
+            },
+            {
+              "seq": 2,
+              "text": "A workshop runs three lines. Line one makes sixty percent of output with a two percent defect rate; line two, twenty five percent with four percent; line three, fifteen percent with eight percent. An item is found defective."
+            },
+            {
+              "seq": 3,
+              "text": "The three lines partition the output. The effect D is defective. Build the joint probability for each, prior times likelihood."
+            },
+            {
+              "seq": 4,
+              "text": "Line one: zero point six times zero point zero two is zero point zero one two."
+            },
+            {
+              "seq": 5,
+              "text": "Line two gives zero point zero one zero, and line three gives zero point zero one two."
+            },
+            {
+              "seq": 6,
+              "text": "Total probability of a defect is zero point zero one two plus zero point zero one zero plus zero point zero one two, which is zero point zero three four."
+            },
+            {
+              "seq": 7,
+              "text": "The posteriors come out six seventeenths, five seventeenths, and six seventeenths."
+            },
+            {
+              "seq": 8,
+              "text": "Check: six seventeenths plus five seventeenths plus six seventeenths is one."
+            },
+            {
+              "seq": 9,
+              "text": "Here's the insight: line one and line three are tied as the likeliest source, even though line three is four times as defect-prone."
+            },
+            {
+              "seq": 10,
+              "text": "High volume at a low defect rate is just as guilty as low volume at a high rate. Weigh both; don't chase the scariest defect rate alone."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक पूरा J E E Advanced build, आख़िर में एक genuine insight के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "एक workshop तीन lines चलाती है। Line one output का साठ percent बनाती है दो percent defect rate से; line two, पच्चीस percent चार percent से; line three, पंद्रह percent आठ percent से। एक item defective मिलता है।"
+            },
+            {
+              "seq": 3,
+              "text": "तीनों lines output को partition करती हैं। Effect D है defective। हर एक के लिए joint probability बनाओ, prior गुणा likelihood।"
+            },
+            {
+              "seq": 4,
+              "text": "Line one: zero point six गुणा zero point zero two बराबर zero point zero one two।"
+            },
+            {
+              "seq": 5,
+              "text": "Line two देती है zero point zero one zero, और line three देती है zero point zero one two।"
+            },
+            {
+              "seq": 6,
+              "text": "Defect की total probability है zero point zero one two जोड़ zero point zero one zero जोड़ zero point zero one two, जो है zero point zero three four।"
+            },
+            {
+              "seq": 7,
+              "text": "Posteriors निकलते हैं six seventeenths, five seventeenths, और six seventeenths।"
+            },
+            {
+              "seq": 8,
+              "text": "Check: six seventeenths जोड़ five seventeenths जोड़ six seventeenths बराबर one।"
+            },
+            {
+              "seq": 9,
+              "text": "ये रहा insight: line one और line three सबसे likely source में tied हैं, भले ही line three चार गुना ज़्यादा defect-prone है।"
+            },
+            {
+              "seq": 10,
+              "text": "Low defect rate पे high volume उतना ही guilty है जितना high rate पे low volume। दोनों weigh करो; अकेले सबसे scary defect rate के पीछे मत भागो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "tips",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Common pitfalls to avoid",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Common Pitfalls — Total Probability & Bayes"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 9,
+          "style": "red-margin",
+          "text": "Pitfall 1: base-rate neglect — quoting the likelihood as the posterior."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "The test's accuracy is not the probability you have the disease."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "Pitfall 2: inverting the conditional — $P(A \\mid E_i)$ is given, $P(E_i \\mid A)$ is wanted."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "They point in opposite directions; swapping them skips Bayes entirely."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "Pitfall 3: a non-partition — causes that overlap or leave gaps."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "If the priors don't sum to one, Total Probability silently fails."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Pitfall 4: wrong denominator — dividing by one term, not the full sum."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "Bayes' denominator is always the total probability of the evidence."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Four traps sink the most marks here, so let's name them."
+            },
+            {
+              "seq": 2,
+              "text": "Pitfall one: base-rate neglect, quoting the likelihood as if it were the posterior."
+            },
+            {
+              "seq": 3,
+              "text": "The test's accuracy is not the probability you have the disease. The prior always gets a vote."
+            },
+            {
+              "seq": 4,
+              "text": "Pitfall two: inverting the conditional. You're given probability of the effect given the cause; you want probability of the cause given the effect."
+            },
+            {
+              "seq": 5,
+              "text": "They point in opposite directions, and swapping them skips Bayes entirely."
+            },
+            {
+              "seq": 6,
+              "text": "Pitfall three: a non-partition. Using causes that overlap, or that don't cover every case."
+            },
+            {
+              "seq": 7,
+              "text": "If the priors don't sum to one, you don't have a partition, and Total Probability silently gives nonsense."
+            },
+            {
+              "seq": 8,
+              "text": "Pitfall four: the wrong denominator. Dividing by a single prior-times-likelihood term instead of the full sum."
+            },
+            {
+              "seq": 9,
+              "text": "Bayes' denominator is always the total probability of the evidence, never one term."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चार traps यहाँ सबसे ज़्यादा marks डुबाते हैं, तो इन्हें नाम देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Pitfall one: base-rate neglect, likelihood को ऐसे quote करना जैसे वो posterior हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Test की accuracy ये probability नहीं कि तुम्हें disease है। Prior का हमेशा एक vote होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Pitfall two: conditional invert करना। तुम्हें दी जाती है probability of effect given cause; चाहिए probability of cause given effect।"
+            },
+            {
+              "seq": 5,
+              "text": "ये opposite directions में हैं, और इन्हें swap करना Bayes को पूरी तरह skip कर देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Pitfall three: non-partition। ऐसे causes use करना जो overlap करें, या हर case cover न करें।"
+            },
+            {
+              "seq": 7,
+              "text": "अगर priors one में add न हों, तो partition है ही नहीं, और Total Probability चुपचाप बकवास देती है।"
+            },
+            {
+              "seq": 8,
+              "text": "Pitfall four: ग़लत denominator। एक single prior-गुणा-likelihood term से भाग देना, पूरे sum के बजाय।"
+            },
+            {
+              "seq": 9,
+              "text": "Bayes का denominator हमेशा evidence की total probability है, कभी एक term नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "tips",
+      "subtopic": "Total Probability & Bayes' Theorem",
+      "title": "Pro-tips: the table method and chaining",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pro-Tips — The Table and the Chain"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Build one row per cause: prior, likelihood, and their product."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "\\text{row product} = P(E_i)\\,P(A \\mid E_i)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Sum the product column — that sum is your denominator, the probability of the evidence."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(E_i \\mid A) = \\dfrac{\\text{row product}}{\\text{column sum}}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "This makes the full 5–6 mark Board solution almost mechanical."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Advanced: when evidence arrives in stages, today's posterior becomes tomorrow's prior."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Chain the updates — don't restart from scratch for the second observation."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "Final check every time: the posteriors must add up to one."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two reflexes close this subtopic, and together they cover most exam Bayes questions."
+            },
+            {
+              "seq": 2,
+              "text": "First, build a tiny table: one row per cause, with columns for the prior, the likelihood, and their product."
+            },
+            {
+              "seq": 3,
+              "text": "Each row's product is the cause's prior times the likelihood of the evidence under it."
+            },
+            {
+              "seq": 4,
+              "text": "Sum the product column, and that single total is your denominator, the probability of the evidence."
+            },
+            {
+              "seq": 5,
+              "text": "Then every posterior is just that row's product divided by the column sum."
+            },
+            {
+              "seq": 6,
+              "text": "This layout makes the full five or six mark Board solution almost mechanical, and it kills placement errors."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Advanced trick: when evidence arrives in stages, today's posterior becomes tomorrow's prior.</whisper>"
+            },
+            {
+              "seq": 8,
+              "text": "Chain the updates, feeding the new probabilities back into Bayes for the next observation, rather than restarting from scratch."
+            },
+            {
+              "seq": 9,
+              "text": "And run the same final check every time: the posteriors must add up to one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो reflexes इस subtopic को बंद करते हैं, और मिलकर ये ज़्यादातर exam Bayes questions cover कर लेते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, एक छोटी table बनाओ: हर cause की एक row, columns prior, likelihood, और उनके product के लिए।"
+            },
+            {
+              "seq": 3,
+              "text": "हर row का product है cause का prior गुणा उसके under evidence की likelihood।"
+            },
+            {
+              "seq": 4,
+              "text": "Product column जोड़ो, और वो एक total तुम्हारा denominator है, evidence की probability।"
+            },
+            {
+              "seq": 5,
+              "text": "फिर हर posterior बस उस row का product बटा column sum है।"
+            },
+            {
+              "seq": 6,
+              "text": "ये layout पूरे पाँच या छह mark Board solution को लगभग mechanical बना देता है, और placement errors ख़त्म करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Advanced trick: जब evidence stages में आए, आज का posterior कल का prior बन जाता है।</whisper>"
+            },
+            {
+              "seq": 8,
+              "text": "Updates को chain करो, नई probabilities को अगली observation के लिए Bayes में वापस डालो, बजाय scratch से शुरू करने के।"
+            },
+            {
+              "seq": 9,
+              "text": "और हर बार वही final check चलाओ: posteriors का sum one होना चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2179 @@
+{
+  "chapter": "Matrices",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 3,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Foundations & Representation",
+      "title": "Building a matrix from a recipe",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Building a matrix from a recipe"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A matrix is a filled-in grid: rows times columns, and every cell has an address."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The entry in row $i$, column $j$ is written $a_{ij}$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "$i$ = row, $j$ = column. Never swap them."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Given a rule $a_{ij} = f(i,j)$, walk the grid cell by cell and apply it."
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "caption": "Each cell gets its own address",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 220\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"220\" y=\"28\" text-anchor=\"middle\" font-family=\"system-ui, sans-serif\" font-size=\"18\" font-weight=\"bold\" fill=\"#1a1a1a\">A = [aᵢⱼ] , order 2 × 3</text>\n  <g stroke=\"#33475b\" stroke-width=\"2\" fill=\"#eef4ff\">\n    <rect x=\"70\" y=\"50\" width=\"100\" height=\"60\"/>\n    <rect x=\"170\" y=\"50\" width=\"100\" height=\"60\"/>\n    <rect x=\"270\" y=\"50\" width=\"100\" height=\"60\"/>\n    <rect x=\"70\" y=\"110\" width=\"100\" height=\"60\"/>\n    <rect x=\"170\" y=\"110\" width=\"100\" height=\"60\"/>\n    <rect x=\"270\" y=\"110\" width=\"100\" height=\"60\"/>\n  </g>\n  <g font-family=\"system-ui, sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1a1a1a\">\n    <text x=\"120\" y=\"87\">a₁₁</text>\n    <text x=\"220\" y=\"87\">a₁₂</text>\n    <text x=\"320\" y=\"87\">a₁₃</text>\n    <text x=\"120\" y=\"147\">a₂₁</text>\n    <text x=\"220\" y=\"147\">a₂₂</text>\n    <text x=\"320\" y=\"147\">a₂₃</text>\n  </g>\n  <text x=\"220\" y=\"200\" text-anchor=\"middle\" font-family=\"system-ui, sans-serif\" font-size=\"14\" fill=\"#5b6b7b\">Each cell carries its own address: row i, column j.</text>\n</svg>"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Order $m \\times n$ means exactly $m \\times n$ cells — no more, no fewer."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "A $2 \\times 3$ matrix and a $3 \\times 2$ matrix are different objects."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>What actually is a matrix? Strip away the fear and it is just a filled-in grid of numbers, arranged in rows and columns."
+            },
+            {
+              "seq": 2,
+              "text": "Every single cell in that grid has an address, and the whole game rests on respecting those addresses."
+            },
+            {
+              "seq": 3,
+              "text": "We write the entry sitting in row i and column j as a i j. So a two three lives in the second row, third column."
+            },
+            {
+              "seq": 4,
+              "text": "Lock this in: i always counts the row, j always counts the column. Swap them and every entry lands in the wrong cell."
+            },
+            {
+              "seq": 5,
+              "text": "Now, if someone hands you a recipe — a formula a i j equals f of i and j — you just walk the grid one cell at a time and apply that recipe. It is exactly like a cinema seating chart where the price depends on which row and which seat you are in."
+            },
+            {
+              "seq": 6,
+              "text": "Picture the grid: each box carries its own coordinates, its own address, and its own value."
+            },
+            {
+              "seq": 7,
+              "text": "The order, written m by n, tells you the grid has exactly m times n cells. Not one more, not one fewer — a matrix is never partially filled."
+            },
+            {
+              "seq": 8,
+              "text": "And order is an ordered pair: a two by three matrix is a genuinely different object from a three by two matrix, even though both hold six numbers."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Matrix असल में है क्या? डर हटा दो तो ये सिर्फ numbers से भरा हुआ एक grid है, जो rows और columns में arranged है।"
+            },
+            {
+              "seq": 2,
+              "text": "इस grid के हर एक cell का एक address होता है, और पूरा खेल इन्हीं addresses को respect करने पर टिका है।"
+            },
+            {
+              "seq": 3,
+              "text": "जो entry row i और column j में बैठी है उसे हम a i j लिखते हैं। तो a two three दूसरी row, तीसरे column में रहता है।"
+            },
+            {
+              "seq": 4,
+              "text": "ये पक्का याद रखो: i हमेशा row गिनता है, j हमेशा column। इन्हें swap किया तो हर entry गलत cell में चली जाएगी।"
+            },
+            {
+              "seq": 5,
+              "text": "अब अगर कोई तुम्हें एक recipe दे — यानी एक formula a i j equals f of i and j — तो तुम बस grid को एक-एक cell करके चलते हो और वो recipe apply करते हो। बिल्कुल एक cinema seating chart की तरह, जहाँ price इस पर depend करता है कि कौन सी row और कौन सी seat है।"
+            },
+            {
+              "seq": 6,
+              "text": "Grid को picture करो: हर box के अपने coordinates हैं, अपना address है, और अपनी value है।"
+            },
+            {
+              "seq": 7,
+              "text": "Order, यानी m by n, बताता है कि grid में exactly m times n cells हैं। एक भी ज़्यादा नहीं, एक भी कम नहीं — matrix कभी partially filled नहीं होता।"
+            },
+            {
+              "seq": 8,
+              "text": "और order एक ordered pair है: एक two by three matrix, three by two matrix से बिलकुल अलग object है, भले ही दोनों में छह numbers हों।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "formulas",
+      "subtopic": "Foundations & Representation",
+      "title": "Two counting principles",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Counting without computing"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Possible orders of an $N$-element matrix = number of divisors of $N$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "N = p_1^{e_1} p_2^{e_2}\\cdots \\ \\Rightarrow\\ d(N) = (e_1+1)(e_2+1)\\cdots"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "If $N$ is prime, only two orders exist: $1 \\times N$ and $N \\times 1$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Number of distinct $m \\times n$ matrices with entries from a $k$-set:"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "k^{\\,mn}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Each of the $mn$ cells is filled independently in $k$ ways."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Construction: substitute $i$ and $j$ into $a_{ij} = f(i,j)$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two little counting ideas hide in this topic, and both get examined every year. The beautiful part: neither needs any real computation — they are pure logic."
+            },
+            {
+              "seq": 2,
+              "text": "First: if a matrix has exactly N elements, how many possible orders can it have? Every way of writing N as rows times columns is one valid order. So the number of possible orders equals the number of divisors of N."
+            },
+            {
+              "seq": 3,
+              "text": "The fast route to that divisor count: factor N into primes, then multiply each exponent plus one together. That single product is d of N."
+            },
+            {
+              "seq": 4,
+              "text": "A neat special case: if N is a prime number, its only divisors are one and itself, so exactly two orders survive — one by N, and N by one."
+            },
+            {
+              "seq": 5,
+              "text": "Second idea: how many distinct matrices of a fixed order m by n can you build if every entry is chosen from a set of k allowed values?"
+            },
+            {
+              "seq": 6,
+              "text": "The answer is k raised to the power m n."
+            },
+            {
+              "seq": 7,
+              "text": "Here is why: the grid has m times n cells, each one filled completely independently, and each has k choices — so you multiply k by itself m n times."
+            },
+            {
+              "seq": 8,
+              "text": "And to actually construct a matrix from a rule, you just substitute the row number i and column number j into the formula a i j equals f of i j, cell by cell."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस topic में दो छोटे-छोटे counting ideas छुपे हैं, और दोनों हर साल exam में आते हैं। खूबसूरत बात ये है कि किसी में भी real computation नहीं चाहिए — ये pure logic हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला: अगर एक matrix में exactly N elements हैं, तो उसके कितने possible orders हो सकते हैं? N को rows times columns लिखने का हर तरीका एक valid order है। तो possible orders की संख्या, N के divisors की संख्या के बराबर होती है।"
+            },
+            {
+              "seq": 3,
+              "text": "उस divisor count का fast तरीका: N को primes में factor करो, फिर हर exponent plus one को multiply कर दो। वही product है d of N।"
+            },
+            {
+              "seq": 4,
+              "text": "एक neat special case: अगर N एक prime number है, तो उसके divisors सिर्फ one और खुद वो number हैं, इसलिए exactly दो orders बचते हैं — one by N, और N by one।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा idea: एक fixed order m by n के कितने distinct matrices बन सकते हैं, अगर हर entry k allowed values के set में से चुनी जाए?"
+            },
+            {
+              "seq": 6,
+              "text": "Answer है k raised to the power m n।"
+            },
+            {
+              "seq": 7,
+              "text": "क्यों: grid में m times n cells हैं, हर एक completely independently भरी जाती है, और हर एक के पास k choices हैं — तो तुम k को खुद से m n बार multiply करते हो।"
+            },
+            {
+              "seq": 8,
+              "text": "और किसी rule से matrix construct करने के लिए, बस row number i और column number j को formula a i j equals f of i j में substitute कर दो, cell by cell।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations & Representation",
+      "title": "Build a 2 x 3 matrix from a rule",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: build a $2 \\times 3$ matrix"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Rule: $a_{ij} = 2i + 3j$, order $2 \\times 3$ (so $i = 1,2$ and $j = 1,2,3$)."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "a_{11} = 2(1)+3(1) = 5 \\qquad a_{12} = 2(1)+3(2) = 8"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "a_{13} = 2(1)+3(3) = 11"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "a_{21} = 2(2)+3(1) = 7 \\qquad a_{22} = 2(2)+3(2) = 10"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "a_{23} = 2(2)+3(3) = 13"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "A = \\begin{bmatrix} 5 & 8 & 11 \\\\ 7 & 10 & 13 \\end{bmatrix}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Fill row 1 fully, then row 2. Keep $i$ fixed, sweep $j$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us build one from scratch. This is the classic one-mark opener, and the only way to lose it is carelessness."
+            },
+            {
+              "seq": 2,
+              "text": "The rule is a i j equals two i plus three j, and the order is two by three. So i runs over one and two, j runs over one, two, three — six cells to fill."
+            },
+            {
+              "seq": 3,
+              "text": "Start with the top row, i equals one. a one one is two times one plus three times one, which is five. a one two is two plus six, that is eight."
+            },
+            {
+              "seq": 4,
+              "text": "a one three is two times one plus three times three — two plus nine — eleven."
+            },
+            {
+              "seq": 5,
+              "text": "Now drop to the second row, i equals two. a two one is four plus three, seven. a two two is four plus six, ten."
+            },
+            {
+              "seq": 6,
+              "text": "a two three is four plus nine, thirteen."
+            },
+            {
+              "seq": 7,
+              "text": "Assemble them in place and the matrix is five, eight, eleven on top; seven, ten, thirteen below."
+            },
+            {
+              "seq": 8,
+              "text": "The discipline that keeps you error free: fix the row, sweep across the columns, then move to the next row. Never jump around."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो एक matrix scratch से बनाते हैं। ये classic one-mark opener है, और इसे खोने का एकमात्र तरीका है carelessness।"
+            },
+            {
+              "seq": 2,
+              "text": "Rule है a i j equals two i plus three j, और order है two by three। तो i, one और two पर चलता है, j, one, two, three पर — कुल छह cells भरनी हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "top row से शुरू करो, i equals one। a one one है two times one plus three times one, यानी five। a one two है two plus six, यानी eight।"
+            },
+            {
+              "seq": 4,
+              "text": "a one three है two times one plus three times three — two plus nine — eleven।"
+            },
+            {
+              "seq": 5,
+              "text": "अब दूसरी row पर आओ, i equals two। a two one है four plus three, seven। a two two है four plus six, ten।"
+            },
+            {
+              "seq": 6,
+              "text": "a two three है four plus nine, thirteen।"
+            },
+            {
+              "seq": 7,
+              "text": "इन्हें अपनी जगह पर रखो और matrix बनता है — ऊपर five, eight, eleven; नीचे seven, ten, thirteen।"
+            },
+            {
+              "seq": 8,
+              "text": "जो discipline तुम्हें error free रखती है: row fix करो, columns के across sweep करो, फिर अगली row पर जाओ। कभी इधर-उधर मत कूदो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations & Representation",
+      "title": "A piecewise construction rule",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: a piecewise rule"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Order $2 \\times 2$, with $a_{ij} = i+j$ if $i \\le j$, and $a_{ij} = i-j$ if $i > j$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "First decide which branch each cell uses by comparing $i$ and $j$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "a_{11}:\\ i=j \\ \\Rightarrow\\ i+j = 2"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "a_{12}:\\ i<j \\ \\Rightarrow\\ i+j = 3"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "a_{21}:\\ i>j \\ \\Rightarrow\\ i-j = 1"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "a_{22}:\\ i=j \\ \\Rightarrow\\ i+j = 4"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "A = \\begin{bmatrix} 2 & 3 \\\\ 1 & 4 \\end{bmatrix}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Same skill, one twist: the rule now branches. The recipe changes depending on how i compares to j, so the very first move in each cell is a comparison, not a calculation."
+            },
+            {
+              "seq": 2,
+              "text": "The definition: a i j equals i plus j when i is less than or equal to j, but i minus j when i is strictly greater than j. Two by two, so four cells."
+            },
+            {
+              "seq": 3,
+              "text": "For every cell, decide the branch before you compute. Ask: is the row index at most the column index, or bigger?"
+            },
+            {
+              "seq": 4,
+              "text": "a one one: i equals j, one and one, so that satisfies i less than or equal to j. Use i plus j — one plus one is two."
+            },
+            {
+              "seq": 5,
+              "text": "a one two: i is one, j is two, so i is less than j. Again the i plus j branch — one plus two is three."
+            },
+            {
+              "seq": 6,
+              "text": "a two one: now i is two, j is one, so i is strictly greater than j. Switch to i minus j — two minus one is one."
+            },
+            {
+              "seq": 7,
+              "text": "a two two: i equals j again, so i plus j — two plus two is four."
+            },
+            {
+              "seq": 8,
+              "text": "The matrix is two, three on top; one, four below. Notice the trap the examiner is hoping for: rushing into arithmetic and forgetting to check the condition first."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "वही skill, एक twist के साथ: अब rule branch करता है। Recipe इस बात पर बदलती है कि i, j से कैसे compare होता है, तो हर cell में पहला move calculation नहीं, comparison है।"
+            },
+            {
+              "seq": 2,
+              "text": "Definition: a i j equals i plus j जब i, j से less than or equal हो, लेकिन i minus j जब i, j से strictly greater हो। Two by two, यानी चार cells।"
+            },
+            {
+              "seq": 3,
+              "text": "हर cell के लिए, compute करने से पहले branch decide करो। पूछो: row index, column index से at most है या बड़ा?"
+            },
+            {
+              "seq": 4,
+              "text": "a one one: i equals j, one और one, तो ये i less than or equal to j को satisfy करता है। i plus j use करो — one plus one is two।"
+            },
+            {
+              "seq": 5,
+              "text": "a one two: i है one, j है two, तो i, j से कम है। फिर से i plus j branch — one plus two is three।"
+            },
+            {
+              "seq": 6,
+              "text": "a two one: अब i है two, j है one, तो i, j से strictly बड़ा है। i minus j पर switch करो — two minus one is one।"
+            },
+            {
+              "seq": 7,
+              "text": "a two two: फिर से i equals j, तो i plus j — two plus two is four।"
+            },
+            {
+              "seq": 8,
+              "text": "Matrix बनता है — ऊपर two, three; नीचे one, four। वो trap देखो जिसकी examiner उम्मीद कर रहा है: arithmetic में जल्दबाज़ी और condition पहले check करना भूल जाना।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations & Representation",
+      "title": "Counting orders and counting matrices",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked examples: counting orders and matrices"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Ex 3: a matrix has 18 elements — how many possible orders?"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "18 = 2 \\times 3^2 \\ \\Rightarrow\\ d(18) = (1+1)(2+1) = 6"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Factor pairs: $1{\\times}18,\\ 2{\\times}9,\\ 3{\\times}6,\\ 6{\\times}3,\\ 9{\\times}2,\\ 18{\\times}1$ — six orders."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "If it had 7 elements (prime): only $1 \\times 7$ and $7 \\times 1$ — two orders."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Ex 4: how many $3 \\times 3$ matrices with entries from $\\{0,1\\}$?"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "k^{\\,mn} = 2^{9} = 512"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\text{And a } 2\\times 2 \\text{ over } \\{1,2,3\\}:\\ 3^{4} = 81"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two counting problems back to back — this is where the divisor idea and the k to the m n idea earn their marks."
+            },
+            {
+              "seq": 2,
+              "text": "Example three: a matrix has eighteen elements. How many possible orders? We just count the ways to write eighteen as rows times columns."
+            },
+            {
+              "seq": 3,
+              "text": "Fastest path: factor eighteen as two times three squared. The divisor count is one plus one, times two plus one — that is two times three — six."
+            },
+            {
+              "seq": 4,
+              "text": "And you can list them to be sure: one by eighteen, two by nine, three by six, six by three, nine by two, eighteen by one. Six orders, exactly matching the divisor count."
+            },
+            {
+              "seq": 5,
+              "text": "The follow up: what if it had seven elements? Seven is prime, so its only divisors are one and seven — just two orders, seven by one and one by seven."
+            },
+            {
+              "seq": 6,
+              "text": "Example four flips to the other principle. How many distinct three by three matrices can you build using only the entries zero and one?"
+            },
+            {
+              "seq": 7,
+              "text": "Nine cells, each filled two ways: two to the ninth power, which is five hundred twelve."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>And a two by two matrix over the set one, two, three? Four cells, three choices each: three to the fourth — eighty one. Same principle every time: choices per cell, raised to the number of cells."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक के बाद एक दो counting problems — यहीं divisor idea और k to the m n idea अपने marks कमाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Example three: एक matrix में अठारह elements हैं। कितने possible orders? हम बस अठारह को rows times columns लिखने के तरीके गिनते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "सबसे fast तरीका: अठारह को two times three squared factor करो। Divisor count है one plus one, times two plus one — यानी two times three — six।"
+            },
+            {
+              "seq": 4,
+              "text": "और पक्का करने के लिए list भी कर सकते हो: one by eighteen, two by nine, three by six, six by three, nine by two, eighteen by one। छह orders, बिल्कुल divisor count के बराबर।"
+            },
+            {
+              "seq": 5,
+              "text": "Follow up: अगर सात elements होते तो? सात prime है, तो उसके divisors सिर्फ one और seven हैं — बस दो orders, seven by one और one by seven।"
+            },
+            {
+              "seq": 6,
+              "text": "Example four दूसरे principle पर पलटता है। सिर्फ zero और one entries use करके कितने distinct three by three matrices बन सकते हैं?"
+            },
+            {
+              "seq": 7,
+              "text": "नौ cells, हर एक दो तरीकों से भरी: two to the ninth power, यानी five hundred twelve।"
+            },
+            {
+              "seq": 8,
+              "text": "<excited>और set one, two, three के ऊपर two by two matrix? चार cells, हर एक में तीन choices: three to the fourth — eighty one। हर बार वही principle: choices per cell, raised to the number of cells।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "tips",
+      "subtopic": "Foundations & Representation",
+      "title": "Traps in construction and counting",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Traps in construction and counting"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Swapping $i$ and $j$ while building — the number-one error."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "$m \\times n$ and $n \\times m$ are different orders — do not merge them."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "For 'possible orders', count divisors — do not drop a factor pair."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "In $k^{mn}$: base = choices per cell, exponent = number of cells. Do not flip them."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Pro-tip (orders): prime-factor $N$, multiply the (exponent$+1$)s."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Pro-tip (matrices): (choices per cell) raised to (number of cells), always."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Memory aid: 'i before j — row before column.'"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<whisper>Here is where the easy marks quietly leak away. Four traps, and every one is avoidable."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, the big one: swapping i and j while constructing. If you let j drive the row, every entry lands in the wrong place and the whole matrix is wrong."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: treating m by n and n by m as the same order. They are not. A two by three and a three by two are different matrices, full stop."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, on the orders question: miscounting divisors — usually by forgetting that each factor pair counts twice, once each way, unless the number is a perfect square."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, on the counting question: flipping the base and exponent. The base is how many choices each cell has; the exponent is how many cells there are. Never the reverse."
+            },
+            {
+              "seq": 6,
+              "text": "Two pro-tips to bank. For possible orders: prime-factor N, then multiply each exponent plus one. Done in seconds."
+            },
+            {
+              "seq": 7,
+              "text": "For number of matrices: it is always choices per cell raised to the number of cells. One formula, no exceptions."
+            },
+            {
+              "seq": 8,
+              "text": "And the anchor that fixes the whole topic: i before j — row before column."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<whisper>यहीं easy marks चुपचाप निकल जाते हैं। चार traps, और हर एक avoidable है।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, सबसे बड़ा: construct करते वक्त i और j को swap कर देना। अगर j से row चलाई, तो हर entry गलत जगह जाएगी और पूरा matrix गलत हो जाएगा।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: m by n और n by m को same order मानना। ये same नहीं हैं। Two by three और three by two अलग matrices हैं, बस।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, orders वाले question पर: divisors गलत गिनना — अक्सर ये भूलकर कि हर factor pair दो बार गिना जाता है, एक-एक तरीके से, जब तक number perfect square न हो।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, counting वाले question पर: base और exponent को flip कर देना। Base है हर cell के पास कितनी choices हैं; exponent है कितनी cells हैं। कभी उल्टा नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "दो pro-tips याद कर लो। Possible orders के लिए: N को prime-factor करो, फिर हर exponent plus one को multiply करो। सेकंडों में हो जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Number of matrices के लिए: ये हमेशा choices per cell raised to number of cells होता है। एक formula, कोई exception नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "और वो anchor जो पूरा topic fix कर देता है: i before j — row before column।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "concept",
+      "subtopic": "Matrix Algebra & Operations",
+      "title": "A matrix is a labelled grid where position carries meaning",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Position carries meaning"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Rows = trains, columns = classes, each cell = one fare. That grid of numbers is a matrix."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Entry in row $i$, column $j$ is $a_{ij}$; the whole matrix $A = [a_{ij}]_{m \\times n}$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "$a_{23} \\ne a_{32}$ in general — position is not interchangeable."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "caption": "order = 3 x 4 (rows first, columns second)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"system-ui, sans-serif\" font-size=\"18\" font-weight=\"bold\" fill=\"#1a1a1a\">Matrix A</text>\n  <g font-family=\"system-ui, sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#c0392b\" font-weight=\"bold\">\n    <text x=\"130\" y=\"58\">C1</text>\n    <text x=\"210\" y=\"58\">C2</text>\n    <text x=\"290\" y=\"58\">C3</text>\n    <text x=\"370\" y=\"58\">C4</text>\n  </g>\n  <g font-family=\"system-ui, sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#2471a3\" font-weight=\"bold\">\n    <text x=\"62\" y=\"102\">R1</text>\n    <text x=\"62\" y=\"157\">R2</text>\n    <text x=\"62\" y=\"212\">R3</text>\n  </g>\n  <g stroke=\"#33475b\" stroke-width=\"1.5\" fill=\"#f7f9fb\">\n    <rect x=\"90\" y=\"70\" width=\"80\" height=\"55\"/>\n    <rect x=\"170\" y=\"70\" width=\"80\" height=\"55\"/>\n    <rect x=\"250\" y=\"70\" width=\"80\" height=\"55\"/>\n    <rect x=\"330\" y=\"70\" width=\"80\" height=\"55\"/>\n    <rect x=\"90\" y=\"125\" width=\"80\" height=\"55\"/>\n    <rect x=\"170\" y=\"125\" width=\"80\" height=\"55\"/>\n    <rect x=\"330\" y=\"125\" width=\"80\" height=\"55\"/>\n    <rect x=\"90\" y=\"180\" width=\"80\" height=\"55\"/>\n    <rect x=\"170\" y=\"180\" width=\"80\" height=\"55\"/>\n    <rect x=\"250\" y=\"180\" width=\"80\" height=\"55\"/>\n    <rect x=\"330\" y=\"180\" width=\"80\" height=\"55\"/>\n  </g>\n  <rect x=\"250\" y=\"125\" width=\"80\" height=\"55\" stroke=\"#b8860b\" stroke-width=\"3\" fill=\"#ffe08a\"/>\n  <text x=\"290\" y=\"158\" text-anchor=\"middle\" font-family=\"system-ui, sans-serif\" font-size=\"17\" fill=\"#7a5c00\" font-weight=\"bold\">a₂₃</text>\n  <text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"system-ui, sans-serif\" font-size=\"14\" fill=\"#5b6b7b\">order = 3 × 4 (rows first, columns second)</text>\n</svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Addition: add two same-shaped boards cell by cell."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Scalar multiplication: one number stretches every cell (a 10% hike is $\\times 1.1$)."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Multiplication: NOT cell by cell — a 'row meets column' handshake."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Add/subtract need identical order; multiply needs cols(first) = rows(second)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Picture the reservation board at New Delhi station. Trains run down the left — Rajdhani, Shatabdi, Duronto. Travel classes run across the top — first A C, second A C, third A C, sleeper. Every cell holds one fare."
+            },
+            {
+              "seq": 2,
+              "text": "Strip that board down to just the numbers and you have a matrix — a rectangular arrangement of numbers in rows and columns."
+            },
+            {
+              "seq": 3,
+              "text": "We name the entry in row i, column j as a i j, and the whole matrix as A equals the array a i j, of order m by n, where m is the number of rows and n the number of columns."
+            },
+            {
+              "seq": 4,
+              "text": "Here is the idea everything hangs on: position carries meaning. The number in row two, column three is not the same as the one in row three, column two — one might be the second A C Shatabdi fare, the other the sleeper Duronto fare."
+            },
+            {
+              "seq": 5,
+              "text": "On the board you can see it: a three by four grid, rows first, columns second, with the cell at row two, column three singled out as a two three."
+            },
+            {
+              "seq": 6,
+              "text": "Now the operations. Suppose the railways add a festival surcharge board with the same layout. To get the new fares, you add the two boards cell by cell — that is matrix addition, and it only works because the layouts match."
+            },
+            {
+              "seq": 7,
+              "text": "If instead every fare rises ten percent, you multiply every single cell by one point one. One ordinary number stretching the whole grid — that is scalar multiplication."
+            },
+            {
+              "seq": 8,
+              "text": "The third operation, matrix multiplication, is the tricky one, because it is not done cell by cell. Picture a sweet-shop bill: a row of quantities meets a column of prices to produce a total. That row-meets-column handshake is the whole idea."
+            },
+            {
+              "seq": 9,
+              "text": "And two hidden conditions bite immediately: addition and subtraction demand identical orders, while multiplication demands that the columns of the first match the rows of the second."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "New Delhi station के reservation board को picture करो। बाईं तरफ trains — Rajdhani, Shatabdi, Duronto। ऊपर travel classes — first A C, second A C, third A C, sleeper। हर cell में एक fare है।"
+            },
+            {
+              "seq": 2,
+              "text": "उस board को सिर्फ numbers तक simplify कर दो और तुम्हारे पास एक matrix है — rows और columns में numbers का rectangular arrangement।"
+            },
+            {
+              "seq": 3,
+              "text": "row i, column j की entry को हम a i j कहते हैं, और पूरे matrix को A equals array a i j, order m by n, जहाँ m rows की संख्या है और n columns की।"
+            },
+            {
+              "seq": 4,
+              "text": "यहाँ वो idea है जिस पर सब कुछ टिका है: position का meaning होता है। row two, column three का number, row three, column two वाले से अलग है — एक second A C Shatabdi fare हो सकता है, दूसरा sleeper Duronto fare।"
+            },
+            {
+              "seq": 5,
+              "text": "board पर तुम इसे देख सकते हो: एक three by four grid, rows पहले, columns बाद में, और row two, column three की cell को a two three के रूप में अलग दिखाया गया है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब operations। मान लो railways एक festival surcharge board add करती है, same layout के साथ। नए fares पाने के लिए, तुम दोनों boards को cell by cell add करते हो — यही matrix addition है, और ये सिर्फ इसलिए काम करता है क्योंकि layouts match करते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "अगर इसके बजाय हर fare दस percent बढ़ जाए, तो तुम हर cell को one point one से multiply करते हो। एक ordinary number पूरे grid को stretch कर रहा है — यही scalar multiplication है।"
+            },
+            {
+              "seq": 8,
+              "text": "तीसरा operation, matrix multiplication, tricky है, क्योंकि ये cell by cell नहीं होता। एक sweet-shop bill को picture करो: quantities की एक row, prices के एक column से मिलती है और total बनाती है। यही row-meets-column handshake पूरा idea है।"
+            },
+            {
+              "seq": 9,
+              "text": "और दो hidden conditions तुरंत काटती हैं: addition और subtraction identical orders माँगते हैं, जबकि multiplication माँगता है कि पहले के columns, दूसरे की rows से match करें।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "concept",
+      "subtopic": "Matrix Algebra & Operations",
+      "title": "The family of matrices, and when two are equal",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The family of matrices, and equality"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Row matrix: $1 \\times n$. Column matrix: $m \\times 1$. Square: $n \\times n$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Diagonal: square with $a_{ij} = 0$ for $i \\ne j$. Scalar: diagonal, all diagonal entries equal."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Identity $I_n$: scalar with every diagonal entry 1. Null $O$: every entry 0."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Triangular: upper (zeros below the diagonal) or lower (zeros above)."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\operatorname{tr}(A) = \\sum_{i=1}^{n} a_{ii}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Equality: $A = B$ iff same order AND $a_{ij} = b_{ij}$ for every $i,j$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Equality splits one matrix equation into many scalar equations."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before the operations, meet the family — the special shapes that keep reappearing in exam questions."
+            },
+            {
+              "seq": 2,
+              "text": "A row matrix is a single row, order one by n. A column matrix is a single column, m by one. A square matrix has equal rows and columns, n by n — and squareness is what unlocks inverses and powers later."
+            },
+            {
+              "seq": 3,
+              "text": "A diagonal matrix is square with every off-diagonal entry zero. A scalar matrix goes further: it is diagonal with all the diagonal entries equal to each other."
+            },
+            {
+              "seq": 4,
+              "text": "Push that once more and you get the identity, written I n — a scalar matrix with every diagonal entry equal to one. Its opposite in spirit is the null or zero matrix, every entry zero."
+            },
+            {
+              "seq": 5,
+              "text": "A triangular matrix is either upper, with zeros below the diagonal, or lower, with zeros above it."
+            },
+            {
+              "seq": 6,
+              "text": "One number attached to any square matrix is its trace — the sum of the diagonal entries, a one one plus a two two, and so on down the diagonal."
+            },
+            {
+              "seq": 7,
+              "text": "Now equality. Two matrices are equal only if two things hold: they share the same order, and every corresponding entry matches — a i j equals b i j for all i and j."
+            },
+            {
+              "seq": 8,
+              "text": "That definition is quietly powerful. A single two by two matrix equation is secretly four ordinary scalar equations bundled together — which is exactly how the board's favourite find-the-unknowns problems get solved."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Operations से पहले, family से मिलो — वो special shapes जो exam questions में बार-बार आती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Row matrix एक single row है, order one by n। Column matrix एक single column, m by one। Square matrix में rows और columns बराबर होते हैं, n by n — और यही squareness आगे inverses और powers को unlock करती है।"
+            },
+            {
+              "seq": 3,
+              "text": "Diagonal matrix square होती है जिसमें हर off-diagonal entry zero है। Scalar matrix एक कदम और आगे: ये diagonal होती है जिसमें सारी diagonal entries आपस में बराबर हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे एक बार और push करो तो identity मिलती है, जिसे I n लिखते हैं — एक scalar matrix जिसकी हर diagonal entry one के बराबर है। इसका उल्टा है null या zero matrix, जिसकी हर entry zero है।"
+            },
+            {
+              "seq": 5,
+              "text": "Triangular matrix या तो upper होती है, diagonal के नीचे zeros के साथ, या lower, diagonal के ऊपर zeros के साथ।"
+            },
+            {
+              "seq": 6,
+              "text": "किसी भी square matrix से जुड़ा एक number है उसका trace — diagonal entries का sum, a one one plus a two two, और diagonal के नीचे यूं ही।"
+            },
+            {
+              "seq": 7,
+              "text": "अब equality। दो matrices तभी equal हैं जब दो बातें सच हों: उनका order same हो, और हर corresponding entry match करे — a i j equals b i j, हर i और j के लिए।"
+            },
+            {
+              "seq": 8,
+              "text": "ये definition चुपचाप बहुत powerful है। एक single two by two matrix equation असल में चार ordinary scalar equations का bundle है — और बिल्कुल इसी तरह board के favourite find-the-unknowns problems solve होते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "concept",
+      "subtopic": "Matrix Algebra & Operations",
+      "title": "Three shocks matrices spring on you",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Three shocks matrices spring on you"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Multiplication chains two processes: apply $B$, then $A$. Entry $(i,j)$ sums over the shared index."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "(AB)_{ij} = \\sum_{r} a_{ir}\\,b_{rj}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "text": "Shock 1 — non-commutative: in general $AB \\ne BA$, even when both exist."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "A=\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix},\\ B=\\begin{bmatrix}1&0\\\\1&1\\end{bmatrix}\\Rightarrow AB=\\begin{bmatrix}2&1\\\\1&1\\end{bmatrix},\\ BA=\\begin{bmatrix}1&1\\\\1&2\\end{bmatrix}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Shock 2 — $AB = O$ does not force $A = O$ or $B = O$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\begin{bmatrix}1&0\\\\0&0\\end{bmatrix}\\begin{bmatrix}0&0\\\\0&1\\end{bmatrix}=\\begin{bmatrix}0&0\\\\0&0\\end{bmatrix}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Shock 3 — cancellation fails: $AB = AC$ does NOT give $B = C$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Matrices behave like numbers just often enough to lull you — and then they spring three shocks that ordinary algebra never prepared you for."
+            },
+            {
+              "seq": 2,
+              "text": "First, why is multiplication a row-times-column sum rather than cell by cell? Because it encodes chaining two processes: first apply B, then apply A. The entry in row i, column j must gather every path from input j to output i, and that is a sum over the shared middle index."
+            },
+            {
+              "seq": 3,
+              "text": "That is the rule: the i j entry of A B is the sum over r of a i r times b r j. The shared index r is exactly why the inner dimensions must agree."
+            },
+            {
+              "seq": 4,
+              "text": "Shock one: multiplication is non-commutative. In general A B is not equal to B A, even when both products exist."
+            },
+            {
+              "seq": 5,
+              "text": "Take A as one, one, zero, one and B as one, zero, one, one. Then A B comes out two, one, one, one, but B A comes out one, one, one, two. Genuinely different matrices — the order of multiplication matters."
+            },
+            {
+              "seq": 6,
+              "text": "Shock two, and this one really stings: A B equal to the zero matrix does not force either A or B to be zero."
+            },
+            {
+              "seq": 7,
+              "text": "Watch: the matrix that keeps only the first coordinate, times the matrix that keeps only the second, gives the zero matrix — yet neither factor is zero. The familiar rule, if a product is zero a factor is zero, is simply false for matrices."
+            },
+            {
+              "seq": 8,
+              "text": "Shock three follows from it: cancellation fails. A B equal to A C does not let you conclude B equals C. You can never just cancel a matrix out of an equation."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Matrices बस इतनी बार numbers की तरह behave करते हैं कि तुम्हें बहला दें — और फिर तीन shocks देते हैं जिनके लिए ordinary algebra ने कभी तैयार नहीं किया।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, multiplication cell by cell के बजाय row-times-column sum क्यों है? क्योंकि ये दो processes का chaining encode करता है: पहले B apply करो, फिर A। row i, column j की entry को input j से output i तक के हर path को gather करना होता है, और वो shared middle index के ऊपर एक sum है।"
+            },
+            {
+              "seq": 3,
+              "text": "यही rule है: A B की i j entry, r के ऊपर a i r times b r j का sum है। यही shared index r वजह है कि inner dimensions match करनी चाहिए।"
+            },
+            {
+              "seq": 4,
+              "text": "Shock one: multiplication non-commutative है। generally A B, B A के बराबर नहीं, भले ही दोनों products exist करें।"
+            },
+            {
+              "seq": 5,
+              "text": "A को one, one, zero, one लो और B को one, zero, one, one। तब A B आता है two, one, one, one, लेकिन B A आता है one, one, one, two। सचमुच अलग matrices — multiplication का order matter करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Shock two, और ये वाला सच में चुभता है: A B equal to zero matrix, A या B में से किसी को भी zero होने पर मजबूर नहीं करता।"
+            },
+            {
+              "seq": 7,
+              "text": "देखो: वो matrix जो सिर्फ first coordinate रखती है, times वो matrix जो सिर्फ second रखती है, zero matrix देती है — फिर भी कोई factor zero नहीं। वो familiar rule, अगर product zero है तो कोई factor zero है, matrices के लिए बस गलत है।"
+            },
+            {
+              "seq": 8,
+              "text": "Shock three इसी से निकलता है: cancellation fail हो जाता है। A B equal to A C से तुम ये conclude नहीं कर सकते कि B equals C। तुम कभी किसी matrix को equation से बस cancel नहीं कर सकते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "formulas",
+      "subtopic": "Matrix Algebra & Operations",
+      "title": "The operation rulebook",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The operation rulebook"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "(A+B)_{ij} = a_{ij} + b_{ij} \\quad (\\text{same order } m\\times n)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "(kA)_{ij} = k\\,a_{ij} \\quad (\\text{any order})"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "(AB)_{ij} = \\sum_{r=1}^{n} a_{ir} b_{rj} \\quad (A:\\ m\\times n,\\ B:\\ n\\times p \\Rightarrow AB:\\ m\\times p)"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Conformability: cols(first) = rows(second). 'Inner match, outer survive.'"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Addition: commutative, associative; identity $O$; inverse $-A$ (all need equal orders)."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Scalar: $k(A+B) = kA+kB$; $(k+l)A = kA+lA$; $(kl)A = k(lA)$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "A(BC)=(AB)C,\\quad A(B+C)=AB+AC,\\quad I_m A = A = A I_n"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the formal rulebook — the three operations, with the exact condition each one demands."
+            },
+            {
+              "seq": 2,
+              "text": "Addition is entrywise: the i j entry of A plus B is simply a i j plus b i j. The non-negotiable condition is identical order — the same m by n on both."
+            },
+            {
+              "seq": 3,
+              "text": "Scalar multiplication is even simpler: the i j entry of k A is k times a i j. This one has no order restriction — you can scale any matrix."
+            },
+            {
+              "seq": 4,
+              "text": "Multiplication is the deep one: the i j entry of A B is the sum over r of a i r times b r j. If A is m by n and B is n by p, the product A B is m by p."
+            },
+            {
+              "seq": 5,
+              "text": "The gatekeeper is conformability: the columns of the first must equal the rows of the second. Say it as inner match, outer survive — the inner numbers must agree, and the outer pair becomes the result's order."
+            },
+            {
+              "seq": 6,
+              "text": "Addition's properties feel familiar: it is commutative and associative, the zero matrix is the additive identity, and minus A is the additive inverse — all of these requiring equal orders."
+            },
+            {
+              "seq": 7,
+              "text": "Scalar multiplication distributes cleanly: k times A plus B equals k A plus k B; k plus l, times A, equals k A plus l A; and k l times A equals k times l A."
+            },
+            {
+              "seq": 8,
+              "text": "Multiplication is associative and distributive, and the identity leaves a matrix unchanged: I m times A equals A equals A times I n. But remember — it is not commutative, and A B equal to the zero matrix does not make a factor zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ formal rulebook है — तीनों operations, हर एक की exact condition के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "Addition entrywise है: A plus B की i j entry बस a i j plus b i j है। Non-negotiable condition है identical order — दोनों पर same m by n।"
+            },
+            {
+              "seq": 3,
+              "text": "Scalar multiplication और भी simple है: k A की i j entry है k times a i j। इसमें कोई order restriction नहीं — तुम किसी भी matrix को scale कर सकते हो।"
+            },
+            {
+              "seq": 4,
+              "text": "Multiplication deep वाला है: A B की i j entry है r के ऊपर a i r times b r j का sum। अगर A, m by n है और B, n by p, तो product A B, m by p होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Gatekeeper है conformability: पहले के columns, दूसरे की rows के बराबर होने चाहिए। इसे कहो inner match, outer survive — inner numbers match करें, और outer pair result का order बन जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Addition की properties familiar लगती हैं: ये commutative और associative है, zero matrix additive identity है, और minus A additive inverse — इन सबके लिए equal orders चाहिए।"
+            },
+            {
+              "seq": 7,
+              "text": "Scalar multiplication cleanly distribute होता है: k times A plus B equals k A plus k B; k plus l, times A, equals k A plus l A; और k l times A equals k times l A।"
+            },
+            {
+              "seq": 8,
+              "text": "Multiplication associative और distributive है, और identity matrix को unchanged छोड़ती है: I m times A equals A equals A times I n। लेकिन याद रखो — ये commutative नहीं है, और A B equal to zero matrix किसी factor को zero नहीं बनाता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Matrix Algebra & Operations",
+      "title": "Solve a matrix equation for four unknowns",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: solve for four unknowns"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "2\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix} + 3\\begin{bmatrix}1&-1\\\\0&2\\end{bmatrix} = \\begin{bmatrix}5&1\\\\6&16\\end{bmatrix}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Step 1: carry out the scalar multiplications and the addition on the left."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\begin{bmatrix}2a+3 & 2b-3\\\\ 2c & 2d+6\\end{bmatrix} = \\begin{bmatrix}5&1\\\\6&16\\end{bmatrix}"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Equality → equate corresponding entries → four scalar equations."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "2a+3=5\\Rightarrow a=1,\\qquad 2b-3=1\\Rightarrow b=2"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "2c=6\\Rightarrow c=3,\\qquad 2d+6=16\\Rightarrow d=5"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "a=1,\\ b=2,\\ c=3,\\ d=5"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the board's bread and butter: a single matrix equation hiding four unknowns."
+            },
+            {
+              "seq": 2,
+              "text": "We are given two times the matrix a, b, c, d, plus three times the matrix one, minus one, zero, two, all equal to five, one, six, sixteen."
+            },
+            {
+              "seq": 3,
+              "text": "Step one: do the arithmetic on the left. Multiply the first matrix by two, the second by three, and add them together."
+            },
+            {
+              "seq": 4,
+              "text": "The left side collapses to a single matrix: two a plus three, and two b minus three on top; two c, and two d plus six below."
+            },
+            {
+              "seq": 5,
+              "text": "Now the key move: two matrices are equal only when corresponding entries match. So this one matrix equation splits into four separate scalar equations."
+            },
+            {
+              "seq": 6,
+              "text": "Top row: two a plus three equals five gives a equals one. Two b minus three equals one gives b equals two."
+            },
+            {
+              "seq": 7,
+              "text": "Bottom row: two c equals six gives c equals three. Two d plus six equals sixteen gives d equals five."
+            },
+            {
+              "seq": 8,
+              "text": "So a is one, b is two, c is three, d is five. The whole method is just this: simplify the left, then read off four little equations."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये board का bread and butter है: एक single matrix equation जिसमें चार unknowns छुपे हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें दिया है two times matrix a, b, c, d, plus three times matrix one, minus one, zero, two, ये सब equal to five, one, six, sixteen।"
+            },
+            {
+              "seq": 3,
+              "text": "Step one: बाईं तरफ arithmetic करो। पहली matrix को two से, दूसरी को three से multiply करो, और add कर दो।"
+            },
+            {
+              "seq": 4,
+              "text": "बायाँ side एक single matrix में collapse हो जाता है: ऊपर two a plus three, और two b minus three; नीचे two c, और two d plus six।"
+            },
+            {
+              "seq": 5,
+              "text": "अब key move: दो matrices तभी equal हैं जब corresponding entries match करें। तो ये एक matrix equation चार अलग scalar equations में बँट जाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "Top row: two a plus three equals five से a equals one। two b minus three equals one से b equals two।"
+            },
+            {
+              "seq": 7,
+              "text": "Bottom row: two c equals six से c equals three। two d plus six equals sixteen से d equals five।"
+            },
+            {
+              "seq": 8,
+              "text": "तो a है one, b है two, c है three, d है five। पूरा method बस इतना है: बायाँ side simplify करो, फिर चार छोटी equations पढ़ लो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Matrix Algebra & Operations",
+      "title": "Which products even exist? (conformability)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: which products even exist?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "$A$ is $3\\times 2$, $B$ is $2\\times 4$, $C$ is $4\\times 3$. Which of $AB, BA, BC, (AB)C, A(BC)$ are defined?"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "Do not compute entries — just chain orders and check inner matches."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "AB:\\ (3\\times 2)(2\\times 4)\\ \\Rightarrow\\ 3\\times 4\\ \\ \\checkmark"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "BA:\\ (2\\times 4)(3\\times 2)\\ \\Rightarrow\\ 4\\ne 3\\ \\text{ (undefined)}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "BC:\\ (2\\times 4)(4\\times 3)\\ \\Rightarrow\\ 2\\times 3\\ \\ \\checkmark"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "(AB)C:\\ (3\\times 4)(4\\times 3)\\Rightarrow 3\\times 3;\\quad A(BC):\\ (3\\times 2)(2\\times 3)\\Rightarrow 3\\times 3"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "$(AB)C$ and $A(BC)$ agree — a quiet confirmation of associativity."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a speed trap. The slow student starts computing entries; the fast student never multiplies a single number."
+            },
+            {
+              "seq": 2,
+              "text": "We have A of order three by two, B of order two by four, and C of order four by three. The question asks which of five products are defined, and their orders."
+            },
+            {
+              "seq": 3,
+              "text": "The trick: write the orders side by side and check only the inner numbers. If they match, the product exists and inherits the outer pair."
+            },
+            {
+              "seq": 4,
+              "text": "A B is three by two, times two by four. Inner numbers are two and two — they match — so A B exists and is three by four."
+            },
+            {
+              "seq": 5,
+              "text": "B A is two by four, times three by two. Inner numbers are four and three — they clash — so B A is simply not defined."
+            },
+            {
+              "seq": 6,
+              "text": "B C is two by four, times four by three. Inner four and four match, so B C exists and is two by three."
+            },
+            {
+              "seq": 7,
+              "text": "For the chained ones: A B, times C, is three by four times four by three, giving three by three. And A, times B C, is three by two times two by three, also three by three."
+            },
+            {
+              "seq": 8,
+              "text": "Notice the two chained products land on the same order — a quiet confirmation of associativity. The lesson: conformability is settled by dimensions alone, in seconds, so never start grinding entries."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये एक speed trap है। slow student entries compute करने लगता है; fast student एक भी number multiply नहीं करता।"
+            },
+            {
+              "seq": 2,
+              "text": "हमारे पास A order three by two, B order two by four, और C order four by three। question पूछता है कि पाँच products में से कौन defined हैं, और उनके orders क्या हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Trick: orders को side by side लिखो और सिर्फ inner numbers check करो। अगर match करें, product exist करता है और outer pair inherit करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "A B है three by two, times two by four। Inner numbers two और two — match करते हैं — तो A B exist करता है और three by four है।"
+            },
+            {
+              "seq": 5,
+              "text": "B A है two by four, times three by two। Inner numbers four और three — टकराते हैं — तो B A बस defined नहीं है।"
+            },
+            {
+              "seq": 6,
+              "text": "B C है two by four, times four by three। Inner four और four match करते हैं, तो B C exist करता है और two by three है।"
+            },
+            {
+              "seq": 7,
+              "text": "chained वालों के लिए: A B, times C, है three by four times four by three, यानी three by three। और A, times B C, है three by two times two by three, ये भी three by three।"
+            },
+            {
+              "seq": 8,
+              "text": "देखो, दोनों chained products same order पर आते हैं — associativity का एक quiet confirmation। सबक: conformability सिर्फ dimensions से तय होती है, सेकंडों में, तो कभी entries grind मत करने लगो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Matrix Algebra & Operations",
+      "title": "A power that reveals a pattern (induction)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: a power that reveals a pattern"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "A=\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix},\\qquad A^{n} = \\begin{bmatrix}1&2026\\\\0&1\\end{bmatrix}\\ \\Rightarrow\\ n=?"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "A^{2} = \\begin{bmatrix}1&1\\\\0&1\\end{bmatrix}\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix} = \\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "A^{3} = A^{2}A = \\begin{bmatrix}1&3\\\\0&1\\end{bmatrix}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "The top-right entry counts up by one each time — conjecture the pattern."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "A^{n} = \\begin{bmatrix}1&n\\\\0&1\\end{bmatrix}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Verify by induction: $A^{k}A = A^{k+1}$ keeps the form, top-right $k \\to k+1$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\text{Match the given matrix:}\\quad n = 2026"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Powers of a matrix look terrifying, but a good one hides a pattern you can spot from the first two steps."
+            },
+            {
+              "seq": 2,
+              "text": "We are told A is one, one, zero, one, and some power A to the n equals one, two thousand twenty six, zero, one. Find n."
+            },
+            {
+              "seq": 3,
+              "text": "Build from the bottom. A squared is A times A. Multiply it out and the top-right entry becomes two — you get one, two, zero, one."
+            },
+            {
+              "seq": 4,
+              "text": "A cubed is A squared times A, and now the top-right is three — one, three, zero, one."
+            },
+            {
+              "seq": 5,
+              "text": "The pattern is loud: the diagonal stays one, the bottom-left stays zero, and the top-right simply counts up by one at each power."
+            },
+            {
+              "seq": 6,
+              "text": "So we conjecture A to the n is one, n, zero, one."
+            },
+            {
+              "seq": 7,
+              "text": "Make it rigorous with induction: assume A to the k is one, k, zero, one; multiply by A and the top-right ticks from k to k plus one, completing the step."
+            },
+            {
+              "seq": 8,
+              "text": "Now just match the given matrix: the top-right is two thousand twenty six, so n equals two thousand twenty six."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Matrix की powers डरावनी लगती हैं, लेकिन एक अच्छी power पहले दो steps से ही एक pattern छुपा देती है जिसे तुम पकड़ सकते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें बताया गया है कि A है one, one, zero, one, और कोई power A to the n equals one, two thousand twenty six, zero, one। n निकालो।"
+            },
+            {
+              "seq": 3,
+              "text": "नीचे से build करो। A squared है A times A। इसे multiply करो तो top-right entry two बन जाती है — मिलता है one, two, zero, one।"
+            },
+            {
+              "seq": 4,
+              "text": "A cubed है A squared times A, और अब top-right three है — one, three, zero, one।"
+            },
+            {
+              "seq": 5,
+              "text": "Pattern साफ है: diagonal one रहता है, bottom-left zero रहता है, और top-right हर power पर बस one से बढ़ता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो हम conjecture करते हैं कि A to the n है one, n, zero, one।"
+            },
+            {
+              "seq": 7,
+              "text": "इसे induction से rigorous बनाओ: मान लो A to the k है one, k, zero, one; A से multiply करो और top-right, k से k plus one पर बढ़ जाती है, step पूरा।"
+            },
+            {
+              "seq": 8,
+              "text": "अब बस given matrix से match करो: top-right है two thousand twenty six, तो n equals two thousand twenty six।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Matrix Algebra & Operations",
+      "title": "Spotting A^2 = I collapses a huge sum",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: $A^{2}=I$ collapses everything"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "A=\\begin{bmatrix}2&-1\\\\3&-2\\end{bmatrix},\\qquad S = A + A^{2} + A^{3} + \\cdots + A^{2025}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "A^{2} = \\begin{bmatrix}2&-1\\\\3&-2\\end{bmatrix}\\begin{bmatrix}2&-1\\\\3&-2\\end{bmatrix} = \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} = I"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "$A^{2}=I$: even powers give $I$, odd powers give $A$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Among the exponents $1$ to $2025$: 1013 odd, 1012 even."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "S = 1013\\,A + 1012\\,I"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "S = 1013\\begin{bmatrix}2&-1\\\\3&-2\\end{bmatrix} + 1012\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "S = \\begin{bmatrix}3038 & -1013\\\\ 3039 & -1014\\end{bmatrix}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Here is an Advanced-level problem that looks impossible — a sum of two thousand twenty five matrix powers — until one observation collapses the whole thing."
+            },
+            {
+              "seq": 2,
+              "text": "We have A equals two, minus one, three, minus two, and we want S, the sum of A plus A squared plus A cubed, all the way to A to the two thousand twenty five."
+            },
+            {
+              "seq": 3,
+              "text": "Never brute-force it. Probe the structure first: square A. Work through the entries and, remarkably, A squared comes out as the identity matrix."
+            },
+            {
+              "seq": 4,
+              "text": "That single fact — A squared equals I — collapses every power into just two values: every even power is the identity, and every odd power is A itself."
+            },
+            {
+              "seq": 5,
+              "text": "So the sum only needs a head count. Among the exponents one through two thousand twenty five, there are one thousand thirteen odd ones and one thousand twelve even ones."
+            },
+            {
+              "seq": 6,
+              "text": "Therefore S is one thousand thirteen copies of A, plus one thousand twelve copies of the identity."
+            },
+            {
+              "seq": 7,
+              "text": "Write that out: one thousand thirteen times the matrix two, minus one, three, minus two, plus one thousand twelve times the identity."
+            },
+            {
+              "seq": 8,
+              "text": "Add entrywise and S comes out three thousand thirty eight, minus one thousand thirteen, three thousand thirty nine, minus one thousand fourteen. The entire problem turned on spotting A squared equals I early."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>यहाँ एक Advanced-level problem है जो impossible दिखता है — दो हज़ार पच्चीस matrix powers का sum — जब तक एक observation पूरी चीज़ को collapse नहीं कर देता।"
+            },
+            {
+              "seq": 2,
+              "text": "हमारे पास A equals two, minus one, three, minus two, और हमें चाहिए S, यानी A plus A squared plus A cubed का sum, ठीक A to the two thousand twenty five तक।"
+            },
+            {
+              "seq": 3,
+              "text": "इसे कभी brute-force मत करो। पहले structure probe करो: A को square करो। entries के through काम करो और, हैरानी की बात, A squared identity matrix निकलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "यही एक fact — A squared equals I — हर power को सिर्फ दो values में collapse कर देता है: हर even power identity है, और हर odd power खुद A है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो sum को बस एक head count चाहिए। exponents one से two thousand twenty five के बीच, one thousand thirteen odd हैं और one thousand twelve even।"
+            },
+            {
+              "seq": 6,
+              "text": "इसलिए S है A की one thousand thirteen copies, plus identity की one thousand twelve copies।"
+            },
+            {
+              "seq": 7,
+              "text": "इसे लिखो: one thousand thirteen times matrix two, minus one, three, minus two, plus one thousand twelve times identity।"
+            },
+            {
+              "seq": 8,
+              "text": "entrywise add करो और S निकलता है three thousand thirty eight, minus one thousand thirteen, three thousand thirty nine, minus one thousand fourteen। पूरा problem A squared equals I को जल्दी पकड़ने पर टिका था।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "tips",
+      "subtopic": "Matrix Algebra & Operations",
+      "title": "The traps that live in matrix algebra",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Traps in matrix algebra"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "$AB$ is NOT $[a_{ij}b_{ij}]$ — it is the row-times-column sum."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Assuming $AB=BA$ corrupts $(A+B)^2$, $(A-B)(A+B)$, and $(AB)^2$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "(A+B)^2 = A^2 + AB + BA + B^2 \\quad(\\text{not } A^2+2AB+B^2)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "$AB=O$ with $A,B \\ne O$ is routine — never 'cancel' a matrix."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Check conformability by inner numbers, not outer."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Pro-tip (powers): for diagonal/triangular $A$ never brute-force; test $A^2=I$ or $A^2=A$ first."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Anchors: 'inner match, outer survive'; 'matrices don't swap.'"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Four traps swallow more marks in this subtopic than anything else. Name them and you disarm them."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one: multiplying element by element. A B is not the matrix of a i j times b i j. It is the row-meets-column sum. Element-wise multiplication is a different, non-syllabus operation entirely."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, the silent killer: assuming A B equals B A. That single false step corrupts the expansion of A plus B, all squared; of A minus B, times A plus B; and of A B, all squared."
+            },
+            {
+              "seq": 4,
+              "text": "Done honestly, A plus B all squared is A squared plus A B plus B A plus B squared — with A B and B A kept separate, not collapsed into two A B."
+            },
+            {
+              "seq": 5,
+              "text": "Trap three: believing that if A B is the zero matrix, some factor must be zero. Two non-zero matrices multiplying to zero is completely routine, so you can never cancel a matrix out of an equation."
+            },
+            {
+              "seq": 6,
+              "text": "Trap four: checking the wrong dimensions for conformability. Look at the inner numbers, not the outer ones — inner match, outer survive."
+            },
+            {
+              "seq": 7,
+              "text": "And a pro-tip that saves whole minutes: for a diagonal or triangular matrix, never brute-force a power; and always test early whether A squared equals I, or A squared equals A — it can collapse an entire summation."
+            },
+            {
+              "seq": 8,
+              "text": "Two anchors to carry: inner match, outer survive; and matrices don't swap."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic में चार traps बाकी किसी भी चीज़ से ज़्यादा marks खा जाते हैं। इन्हें पहचान लो और तुम इन्हें disarm कर देते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one: element by element multiply करना। A B, a i j times b i j की matrix नहीं है। ये row-meets-column sum है। Element-wise multiplication एक अलग, non-syllabus operation है।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, silent killer: ये मान लेना कि A B equals B A। वो एक गलत step, A plus B, all squared; A minus B, times A plus B; और A B, all squared — इन सबको corrupt कर देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "ईमानदारी से करें तो A plus B all squared है A squared plus A B plus B A plus B squared — जिसमें A B और B A अलग रखे जाते हैं, two A B में collapse नहीं होते।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap three: ये मानना कि अगर A B zero matrix है, तो कोई factor zero होना चाहिए। दो non-zero matrices का zero में multiply होना बिल्कुल routine है, तो तुम कभी किसी matrix को equation से cancel नहीं कर सकते।"
+            },
+            {
+              "seq": 6,
+              "text": "Trap four: conformability के लिए गलत dimensions check करना। Inner numbers देखो, outer नहीं — inner match, outer survive।"
+            },
+            {
+              "seq": 7,
+              "text": "और एक pro-tip जो पूरे minutes बचाता है: diagonal या triangular matrix के लिए power को कभी brute-force मत करो; और हमेशा जल्दी test करो कि A squared equals I है, या A squared equals A — ये पूरी summation collapse कर सकता है।"
+            },
+            {
+              "seq": 8,
+              "text": "दो anchors साथ रखो: inner match, outer survive; और matrices don't swap।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

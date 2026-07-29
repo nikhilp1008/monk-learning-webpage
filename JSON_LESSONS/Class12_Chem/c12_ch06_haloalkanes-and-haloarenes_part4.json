@@ -1,0 +1,2179 @@
+{
+  "chapter": "Haloalkanes and Haloarenes",
+  "subject": "chemistry",
+  "class_level": 12,
+  "chapter_order": 6,
+  "part": 4,
+  "language_set": [
+    "english",
+    "hinglish",
+    "hindi"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "The Complete Reaction Map",
+      "title": "The haloalkane as a synthetic hub",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One substrate, many destinations"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A haloalkane is a gateway: swap the halogen for a different nucleophile and you land on a whole new functional class."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "This is why nucleophilic substitution is a synthetic superpower — it converts one cheap starting material into alcohols, ethers, nitriles, amines, and more."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "Don't memorise a list of reactions — memorise ONE map with the halide at the centre."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Every spoke is the same move (Nu attacks C, X leaves); only the nucleophile changes."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Two twists make this section interesting: some nucleophiles can attack through two different atoms, and the aryl halide needs its own special routes."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "So the plan: build the main map, then the ambident twist, then Dow's process, benzyne, and aromatic substitution."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>We finish the chapter by tying everything together into a single picture.</curious> Think of a haloalkane not as one compound with one reaction, but as a hub, a central station from which many roads lead out."
+            },
+            {
+              "seq": 2,
+              "text": "The idea is this. A haloalkane is a gateway. Swap its halogen for a different nucleophile, and you land on a completely different functional class of compound."
+            },
+            {
+              "seq": 3,
+              "text": "That is exactly why nucleophilic substitution is treated as a synthetic superpower. It lets you take one cheap, easily made starting material and turn it into alcohols, ethers, nitriles, amines, thiols, esters, and more, just by choosing the reagent."
+            },
+            {
+              "seq": 4,
+              "text": "So here is my advice. Do not try to memorise a long list of separate reactions. Memorise one map, with the halide sitting at the centre and each product branching off it."
+            },
+            {
+              "seq": 5,
+              "text": "And the beautiful thing is that every branch, every spoke of that map, is the same underlying move: a nucleophile attacks the carbon, the halogen leaves. Only the nucleophile changes from spoke to spoke."
+            },
+            {
+              "seq": 6,
+              "text": "Two twists make this section more than a list. First, some nucleophiles are two faced, able to attack through either of two different atoms. Second, the aryl halide, being stubborn, needs its own special routes."
+            },
+            {
+              "seq": 7,
+              "text": "So the plan for this final section is to build the main map, then add the ambident twist, and then cover the aromatic side: Dow's process, the benzyne mechanism, and electrophilic aromatic substitution."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Chapter को हम सब कुछ एक single picture में बाँधकर ख़त्म करते हैं।</curious> Haloalkane को एक reaction वाला एक compound मत सोचो, बल्कि एक hub की तरह, एक central station जिससे कई सड़कें निकलती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Idea ये है। Haloalkane एक gateway है। इसका halogen एक अलग nucleophile से बदलो, और तुम एक पूरी तरह अलग functional class पर पहुँच जाते हो।"
+            },
+            {
+              "seq": 3,
+              "text": "इसीलिए nucleophilic substitution को synthetic superpower माना जाता है। ये एक सस्ता, आसानी से बना starting material लेकर उसे alcohols, ethers, nitriles, amines, thiols, esters, और भी बहुत कुछ में बदल देता है, बस reagent चुनकर।"
+            },
+            {
+              "seq": 4,
+              "text": "तो मेरी सलाह। अलग अलग reactions की लंबी list रटने की कोशिश मत करो। एक map रटो, जिसमें halide बीच में बैठा हो और हर product उससे निकलता हो।"
+            },
+            {
+              "seq": 5,
+              "text": "और सुंदर बात ये है कि उस map की हर branch, हर spoke, वही underlying move है: nucleophile carbon पर attack करता है, halogen निकल जाता है। बस nucleophile spoke दर spoke बदलता है।"
+            },
+            {
+              "seq": 6,
+              "text": "दो twists इस section को list से ज़्यादा बनाते हैं। पहला, कुछ nucleophiles दो चेहरों वाले हैं, दो अलग atoms में से किसी से भी attack कर सकते हैं। दूसरा, aryl halide, ज़िद्दी होने से, अपने ख़ास routes माँगता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो इस आख़िरी section का plan है main map बनाना, फिर ambident twist जोड़ना, फिर aromatic side cover करना: Dow's process, benzyne mechanism, और electrophilic aromatic substitution।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>अध्याय को हम सब कुछ एक चित्र में बाँधकर समाप्त करते हैं।</curious> हैलोऐल्केन को एक अभिक्रिया वाला एक यौगिक मत सोचिए, बल्कि एक केंद्र की तरह, एक केंद्रीय स्टेशन जिससे कई सड़कें निकलती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "विचार यह है। हैलोऐल्केन एक प्रवेशद्वार है। इसका हैलोजन एक भिन्न nucleophile से बदलिए, और आप एक पूरी तरह भिन्न क्रियात्मक वर्ग पर पहुँच जाते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "इसीलिए nucleophilic प्रतिस्थापन को संश्लेषी महाशक्ति माना जाता है। यह एक सस्ता, सरलता से बना आरंभिक पदार्थ लेकर उसे ऐल्कोहॉल, ईथर, नाइट्राइल, ऐमीन, थायॉल, एस्टर, और भी बहुत कुछ में बदल देता है, बस अभिकर्मक चुनकर।"
+            },
+            {
+              "seq": 4,
+              "text": "तो मेरी सलाह। अलग अलग अभिक्रियाओं की लंबी सूची रटने की कोशिश मत कीजिए। एक मानचित्र रटिए, जिसमें हैलाइड बीच में बैठा हो और हर उत्पाद उससे निकलता हो।"
+            },
+            {
+              "seq": 5,
+              "text": "और सुंदर बात यह है कि उस मानचित्र की हर शाखा, हर तीली, वही अंतर्निहित चाल है: nucleophile कार्बन पर आक्रमण करता है, हैलोजन निकल जाता है। बस nucleophile शाखा दर शाखा बदलता है।"
+            },
+            {
+              "seq": 6,
+              "text": "दो मोड़ इस खंड को सूची से अधिक बनाते हैं। पहला, कुछ nucleophile दो चेहरों वाले हैं, दो भिन्न परमाणुओं में से किसी से भी आक्रमण कर सकते हैं। दूसरा, एरिल हैलाइड, ज़िद्दी होने से, अपने ख़ास मार्ग माँगता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो इस अंतिम खंड की योजना है मुख्य मानचित्र बनाना, फिर ambident मोड़ जोड़ना, फिर ऐरोमैटिक पक्ष कवर करना: Dow प्रक्रिया, benzyne क्रियाविधि, और विद्युतस्नेही ऐरोमैटिक प्रतिस्थापन।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "The Complete Reaction Map",
+      "title": "The main spokes: one halide, many functional groups",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Learn the hub-and-spoke picture"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "R–X at the centre; each nucleophile gives a new functional class",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 260' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='11'><circle cx='230' cy='130' r='30' fill='#EEA31F' stroke='#181818' stroke-width='2'/><text x='214' y='134' font-size='14' fill='#181818'>R–X</text><line x1='210' y1='108' x2='120' y2='40' stroke='#55565C' stroke-width='1'/><text x='60' y='34' fill='#181818'>KOH &#8594; R–OH (alcohol)</text><line x1='250' y1='108' x2='330' y2='40' stroke='#55565C' stroke-width='1'/><text x='300' y='34' fill='#181818'>NaOR&#8242; &#8594; ether</text><line x1='200' y1='130' x2='60' y2='130' stroke='#55565C' stroke-width='1'/><text x='10' y='118' fill='#181818'>KCN &#8594; R–CN</text><text x='10' y='148' fill='#181818'>NH3 &#8594; amine</text><line x1='260' y1='130' x2='400' y2='130' stroke='#55565C' stroke-width='1'/><text x='340' y='118' fill='#181818'>KSH &#8594; thiol</text><text x='330' y='148' fill='#181818'>R&#8242;COOAg &#8594; ester</text><line x1='210' y1='152' x2='120' y2='220' stroke='#55565C' stroke-width='1'/><text x='60' y='236' fill='#181818'>NaI &#8594; R–I (Finkelstein)</text><line x1='250' y1='152' x2='330' y2='220' stroke='#55565C' stroke-width='1'/><text x='300' y='236' fill='#181818'>Na &#8594; R–R (Wurtz)</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "KOH → alcohol; NaOR′ → ether (Williamson, best with 1° R–X); KCN → nitrile; NH3 → amine."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "KSH → thiol; R′COOAg → ester; NaI/acetone → iodide (Finkelstein); Na/ether → alkane (Wurtz)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Each product is a launchpad: a nitrile hydrolyses to an acid, reduces to an amine — so the map extends far beyond one step."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "This single diagram answers a huge fraction of 'convert A into B' problems — read it as your synthesis toolbox."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us actually draw the hub and spoke map, because once it is in your head, a whole category of exam questions becomes routine."
+            },
+            {
+              "seq": 2,
+              "text": "On the board, R X sits at the centre, and every arrow leads to a different product. Take a moment to see it as one picture, not eight separate facts."
+            },
+            {
+              "seq": 3,
+              "text": "Starting round the spokes: potassium hydroxide gives an alcohol; a sodium alkoxide gives an ether, which is the Williamson synthesis, best done with a primary halide; potassium cyanide gives a nitrile; and ammonia gives an amine."
+            },
+            {
+              "seq": 4,
+              "text": "Continuing: potassium hydrogen sulphide gives a thiol; the silver salt of a carboxylic acid gives an ester; sodium iodide in acetone gives the iodide by the Finkelstein reaction; and sodium in dry ether couples two halides into an alkane by the Wurtz reaction."
+            },
+            {
+              "seq": 5,
+              "text": "And here is what makes the map powerful. Each product is itself a launchpad. A nitrile, for instance, can be hydrolysed onward to a carboxylic acid, or reduced to an amine, so the map really extends far beyond a single step."
+            },
+            {
+              "seq": 6,
+              "text": "So treat this one diagram as your synthesis toolbox. A huge fraction of convert compound A into compound B problems are solved simply by finding the right path across this map, and that is why it repays learning it as a single connected image."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो सच में hub and spoke map बनाएँ, क्योंकि एक बार ये दिमाग़ में बैठ जाए, exam questions की एक पूरी category routine बन जाती है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board पर R X बीच में बैठा है, और हर arrow एक अलग product की ओर ले जाता है। एक पल रुककर इसे एक picture की तरह देखो, आठ अलग facts की तरह नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "Spokes पर शुरू करते हैं: potassium hydroxide alcohol देता है; sodium alkoxide ether देता है, जो Williamson synthesis है, primary halide से सबसे अच्छा; potassium cyanide nitrile देता है; और ammonia amine देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "आगे: potassium hydrogen sulphide thiol देता है; carboxylic acid का silver salt ester देता है; acetone में sodium iodide Finkelstein reaction से iodide देता है; और dry ether में sodium दो halides को Wurtz reaction से alkane में जोड़ता है।"
+            },
+            {
+              "seq": 5,
+              "text": "और यही map को powerful बनाता है। हर product ख़ुद एक launchpad है। जैसे एक nitrile आगे hydrolyse होकर carboxylic acid बन सकता है, या reduce होकर amine, तो map सच में एक step से बहुत आगे तक जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो इस एक diagram को अपना synthesis toolbox मानो। Convert compound A into compound B वाले problems का बड़ा हिस्सा बस इस map पर सही path ढूँढकर हल हो जाता है, और इसीलिए इसे एक जुड़ी हुई image की तरह सीखना फ़ायदा देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए सच में केंद्र और तीली मानचित्र बनाएँ, क्योंकि एक बार यह दिमाग़ में बैठ जाए, परीक्षा प्रश्नों की एक पूरी श्रेणी नियमित बन जाती है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड पर R X बीच में बैठा है, और हर तीर एक भिन्न उत्पाद की ओर ले जाता है। एक पल रुककर इसे एक चित्र की तरह देखिए, आठ अलग तथ्यों की तरह नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "तीलियों पर शुरू करते हैं: पोटैशियम हाइड्रॉक्साइड ऐल्कोहॉल देता है; सोडियम ऐल्कॉक्साइड ईथर देता है, जो Williamson संश्लेषण है, प्राथमिक हैलाइड से सबसे अच्छा; पोटैशियम सायनाइड नाइट्राइल देता है; और अमोनिया ऐमीन देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "आगे: पोटैशियम हाइड्रोजन सल्फ़ाइड थायॉल देता है; कार्बोक्सिलिक अम्ल का सिल्वर लवण एस्टर देता है; ऐसीटोन में सोडियम आयोडाइड Finkelstein अभिक्रिया से आयोडाइड देता है; और शुष्क ईथर में सोडियम दो हैलाइड को Wurtz अभिक्रिया से ऐल्केन में जोड़ता है।"
+            },
+            {
+              "seq": 5,
+              "text": "और यही मानचित्र को शक्तिशाली बनाता है। हर उत्पाद स्वयं एक प्रक्षेपण स्थल है। जैसे एक नाइट्राइल आगे जलअपघटित होकर कार्बोक्सिलिक अम्ल बन सकता है, या अपचयित होकर ऐमीन, तो मानचित्र सच में एक चरण से बहुत आगे तक जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो इस एक आरेख को अपना संश्लेषण औज़ार पेटी मानिए। Convert compound A into compound B वाले प्रश्नों का बड़ा हिस्सा बस इस मानचित्र पर सही मार्ग ढूँढकर हल हो जाता है, और इसीलिए इसे एक जुड़ी हुई छवि की तरह सीखना लाभ देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "The Complete Reaction Map",
+      "title": "Ambident nucleophiles I — cyanide's two faces",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The same reagent, two different products"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "An ambident nucleophile can attack through EITHER of two atoms. Cyanide, [C≡N]⁻, can bond through C or through N."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Ionic KCN → C-attack (nitrile); covalent AgCN → N-attack (isocyanide)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 160' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><rect x='170' y='12' width='120' height='30' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='200' y='32' fill='#181818'>R–X + cyanide</text><line x1='210' y1='42' x2='110' y2='95' stroke='#55565C' stroke-width='1.5'/><line x1='250' y1='42' x2='360' y2='95' stroke='#55565C' stroke-width='1.5'/><text x='40' y='112' fill='#181818' font-weight='bold'>KCN (ionic)</text><text x='40' y='130' fill='#55565C'>C attacks &#8594; R–CN</text><text x='40' y='146' fill='#181818'>alkyl nitrile</text><text x='300' y='112' fill='#DD4433' font-weight='bold'>AgCN (covalent)</text><text x='300' y='130' fill='#55565C'>N attacks &#8594; R–NC</text><text x='300' y='146' fill='#181818'>alkyl isocyanide</text></g></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "KCN is ionic → free cyanide, and carbon is the stronger nucleophile → R–CN, an alkyl nitrile."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "AgCN is largely covalent → carbon is tied up, only nitrogen's lone pair is free → R–NC, an alkyl isocyanide."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "So the metal, not the substrate, chooses the product: potassium vs silver flips carbon-attack to nitrogen-attack."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the twist that makes this section interesting, the ambident nucleophile. Ambident means two teeth: such a nucleophile can attack through either of two different atoms, giving two different products from the same starting halide."
+            },
+            {
+              "seq": 2,
+              "text": "Our first example is the cyanide ion, written C triple bond N, carrying a negative charge. It has a lone pair on the carbon and a lone pair on the nitrogen, so it can bond to the substrate through either end."
+            },
+            {
+              "seq": 3,
+              "text": "The board shows the fork. Which end attacks depends entirely on the metal we pair the cyanide with, potassium on the left, silver on the right."
+            },
+            {
+              "seq": 4,
+              "text": "With potassium cyanide, the salt is essentially ionic, so it releases a free cyanide ion. In a free cyanide, carbon is the stronger, more available nucleophile, so it attacks through carbon, giving R C N, an alkyl nitrile."
+            },
+            {
+              "seq": 5,
+              "text": "With silver cyanide, the bonding is largely covalent, so the carbon is tied up to the silver and is not free to attack. That leaves only the nitrogen's lone pair available, so attack happens through nitrogen, giving R N C, an alkyl isocyanide."
+            },
+            {
+              "seq": 6,
+              "text": "So notice the striking point. It is the metal, not the alkyl halide, that chooses the product. Simply switching from potassium to silver flips the reaction from carbon attack to nitrogen attack, and hence from a nitrile to an isocyanide."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब वो twist जो इस section को interesting बनाता है, ambident nucleophile। Ambident मतलब दो दाँत: ऐसा nucleophile दो अलग atoms में से किसी से भी attack कर सकता है, उसी halide से दो अलग products देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला example cyanide ion है, जिसे C triple bond N negative charge के साथ लिखते हैं। इसमें carbon पर एक lone pair और nitrogen पर एक lone pair है, तो ये substrate से किसी भी छोर से bond बना सकता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Board fork दिखाता है। कौन सा छोर attack करेगा ये पूरी तरह उस metal पर depend करता है जिसके साथ cyanide को pair करते हैं, बाईं तरफ़ potassium, दाईं तरफ़ silver।"
+            },
+            {
+              "seq": 4,
+              "text": "Potassium cyanide के साथ, salt मूलतः ionic है, तो ये एक free cyanide ion छोड़ता है। Free cyanide में carbon ज़्यादा strong, ज़्यादा available nucleophile है, तो ये carbon से attack करता है, R C N देता है, एक alkyl nitrile।"
+            },
+            {
+              "seq": 5,
+              "text": "Silver cyanide के साथ, bonding काफ़ी covalent है, तो carbon silver से बँधा है और attack करने को free नहीं। बचता है सिर्फ़ nitrogen का lone pair, तो attack nitrogen से होता है, R N C देता है, एक alkyl isocyanide।"
+            },
+            {
+              "seq": 6,
+              "text": "तो striking point देखो। Product को metal चुनता है, alkyl halide नहीं। बस potassium से silver पर switch करना reaction को carbon attack से nitrogen attack में पलट देता है, और इसलिए nitrile से isocyanide में।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब वह मोड़ जो इस खंड को रोचक बनाता है, ambident nucleophile। Ambident अर्थात दो दाँत: ऐसा nucleophile दो भिन्न परमाणुओं में से किसी से भी आक्रमण कर सकता है, उसी हैलाइड से दो भिन्न उत्पाद देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला उदाहरण सायनाइड आयन है, जिसे C triple bond N ऋण आवेश के साथ लिखते हैं। इसमें कार्बन पर एक एकाकी युग्म और नाइट्रोजन पर एक एकाकी युग्म है, तो यह पदार्थ से किसी भी छोर से बंध बना सकता है।"
+            },
+            {
+              "seq": 3,
+              "text": "बोर्ड द्विभाजन दिखाता है। कौन सा छोर आक्रमण करेगा यह पूरी तरह उस धातु पर निर्भर करता है जिसके साथ सायनाइड को जोड़ते हैं, बाईं ओर पोटैशियम, दाईं ओर सिल्वर।"
+            },
+            {
+              "seq": 4,
+              "text": "पोटैशियम सायनाइड के साथ, लवण मूलतः आयनिक है, तो यह एक मुक्त सायनाइड आयन छोड़ता है। मुक्त सायनाइड में कार्बन अधिक प्रबल, अधिक उपलब्ध nucleophile है, तो यह कार्बन से आक्रमण करता है, R C N देता है, एक ऐल्किल नाइट्राइल।"
+            },
+            {
+              "seq": 5,
+              "text": "सिल्वर सायनाइड के साथ, आबंधन काफ़ी सहसंयोजक है, तो कार्बन सिल्वर से बँधा है और आक्रमण करने को मुक्त नहीं। बचता है केवल नाइट्रोजन का एकाकी युग्म, तो आक्रमण नाइट्रोजन से होता है, R N C देता है, एक ऐल्किल आइसोसायनाइड।"
+            },
+            {
+              "seq": 6,
+              "text": "तो उल्लेखनीय बिंदु देखिए। उत्पाद को धातु चुनती है, ऐल्किल हैलाइड नहीं। बस पोटैशियम से सिल्वर पर बदलना अभिक्रिया को कार्बन आक्रमण से नाइट्रोजन आक्रमण में पलट देता है, और इसलिए नाइट्राइल से आइसोसायनाइड में।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "The Complete Reaction Map",
+      "title": "Ambident nucleophiles II — nitrite, and the 'silver = nitrogen' rule",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The nitrite pair, and one rule to bind them"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "KNO2 → O-attack (nitrite ester); AgNO2 → N-attack (nitroalkane)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 160' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><rect x='170' y='12' width='120' height='30' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='200' y='32' fill='#181818'>R–X + nitrite</text><line x1='210' y1='42' x2='110' y2='95' stroke='#55565C' stroke-width='1.5'/><line x1='250' y1='42' x2='360' y2='95' stroke='#55565C' stroke-width='1.5'/><text x='40' y='112' fill='#181818' font-weight='bold'>KNO2 (ionic)</text><text x='40' y='130' fill='#55565C'>O attacks &#8594; R–O–N=O</text><text x='40' y='146' fill='#181818'>alkyl nitrite</text><text x='300' y='112' fill='#DD4433' font-weight='bold'>AgNO2 (covalent)</text><text x='300' y='130' fill='#55565C'>N attacks &#8594; R–NO2</text><text x='300' y='146' fill='#181818'>nitroalkane</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Nitrite [O–N=O]⁻ is ambident too — it can bond through oxygen or through nitrogen."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "KNO2 (ionic): O-attack → R–O–N=O, an alkyl nitrite (an ester of nitrous acid)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "AgNO2 (covalent): N-attack → R–NO2, a nitroalkane."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The unifying rule: SILVER = NITROGEN. Silver salts always bond through N (isocyanide, nitroalkane); potassium salts through C or O."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "text": "Reason (HSAB): the soft silver locks the softer atom (C in CN, giving N free); ionic K leaves the ion free to use its most nucleophilic site."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The second ambident case is the nitrite ion, and it lets us pull both examples together into one memorable rule."
+            },
+            {
+              "seq": 2,
+              "text": "The board mirrors the cyanide fork exactly. Nitrite, written O N double bond O with a negative charge, is also two faced: it can bond through its oxygen or through its nitrogen."
+            },
+            {
+              "seq": 3,
+              "text": "With potassium nitrite, which is ionic, attack is through oxygen, giving R O N double bond O, an alkyl nitrite, which is an ester of nitrous acid."
+            },
+            {
+              "seq": 4,
+              "text": "With silver nitrite, which is more covalent, attack is through nitrogen, giving R N O two, a nitroalkane. Notice this is exactly the same potassium versus silver pattern we saw for cyanide."
+            },
+            {
+              "seq": 5,
+              "text": "So here is the one rule that binds both cases together, and it is worth memorising as a slogan: silver equals nitrogen. Whenever you see a silver salt of an ambident nucleophile, the bond forms through nitrogen, giving the isocyanide with silver cyanide and the nitroalkane with silver nitrite."
+            },
+            {
+              "seq": 6,
+              "text": "The potassium salts, being ionic, instead let the free ion attack through its most nucleophilic site, which is carbon for cyanide and oxygen for nitrite."
+            },
+            {
+              "seq": 7,
+              "text": "And the underlying reason, for those who like it, is the hard soft acid base idea. Soft silver locks onto the softer atom, tying up carbon in cyanide and leaving only nitrogen free, whereas the ionic potassium salt simply frees the ion to use whichever site is most nucleophilic."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दूसरा ambident case nitrite ion है, और ये हमें दोनों examples को एक यादगार rule में खींचने देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board cyanide fork को बिल्कुल mirror करता है। Nitrite, जिसे O N double bond O negative charge के साथ लिखते हैं, भी दो चेहरों वाला है: ये अपने oxygen या nitrogen से bond बना सकता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Potassium nitrite के साथ, जो ionic है, attack oxygen से होता है, R O N double bond O देता है, एक alkyl nitrite, जो nitrous acid का ester है।"
+            },
+            {
+              "seq": 4,
+              "text": "Silver nitrite के साथ, जो ज़्यादा covalent है, attack nitrogen से होता है, R N O two देता है, एक nitroalkane। ध्यान दो ये बिल्कुल वही potassium versus silver pattern है जो cyanide के लिए देखा।"
+            },
+            {
+              "seq": 5,
+              "text": "तो यहाँ वो एक rule है जो दोनों cases को जोड़ता है, और इसे slogan की तरह रटना चाहिए: silver equals nitrogen। जब भी ambident nucleophile का silver salt दिखे, bond nitrogen से बनता है, silver cyanide के साथ isocyanide और silver nitrite के साथ nitroalkane देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Potassium salts, ionic होने से, इसके बजाय free ion को उसके सबसे nucleophilic site से attack करने देते हैं, जो cyanide के लिए carbon और nitrite के लिए oxygen है।"
+            },
+            {
+              "seq": 7,
+              "text": "और underlying reason, जिन्हें पसंद हो, hard soft acid base idea है। Soft silver softer atom पर lock करता है, cyanide में carbon को बाँधकर सिर्फ़ nitrogen free छोड़ता है, जबकि ionic potassium salt बस ion को free कर देता है कि जो site सबसे nucleophilic हो उसे use करे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दूसरा ambident प्रकरण नाइट्राइट आयन है, और यह हमें दोनों उदाहरणों को एक यादगार नियम में खींचने देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड सायनाइड द्विभाजन को बिल्कुल प्रतिबिंबित करता है। नाइट्राइट, जिसे O N double bond O ऋण आवेश के साथ लिखते हैं, भी दो चेहरों वाला है: यह अपने ऑक्सीजन या नाइट्रोजन से बंध बना सकता है।"
+            },
+            {
+              "seq": 3,
+              "text": "पोटैशियम नाइट्राइट के साथ, जो आयनिक है, आक्रमण ऑक्सीजन से होता है, R O N double bond O देता है, एक ऐल्किल नाइट्राइट, जो नाइट्रस अम्ल का एस्टर है।"
+            },
+            {
+              "seq": 4,
+              "text": "सिल्वर नाइट्राइट के साथ, जो अधिक सहसंयोजक है, आक्रमण नाइट्रोजन से होता है, R N O two देता है, एक नाइट्रोऐल्केन। ध्यान दीजिए यह बिल्कुल वही पोटैशियम बनाम सिल्वर पैटर्न है जो सायनाइड के लिए देखा।"
+            },
+            {
+              "seq": 5,
+              "text": "तो यहाँ वह एक नियम है जो दोनों प्रकरणों को जोड़ता है, और इसे सूत्र की तरह रटना चाहिए: silver equals nitrogen। जब भी ambident nucleophile का सिल्वर लवण दिखे, बंध नाइट्रोजन से बनता है, सिल्वर सायनाइड के साथ आइसोसायनाइड और सिल्वर नाइट्राइट के साथ नाइट्रोऐल्केन देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "पोटैशियम लवण, आयनिक होने से, इसके बजाय मुक्त आयन को उसके सबसे nucleophilic स्थल से आक्रमण करने देते हैं, जो सायनाइड के लिए कार्बन और नाइट्राइट के लिए ऑक्सीजन है।"
+            },
+            {
+              "seq": 7,
+              "text": "और अंतर्निहित कारण, जिन्हें पसंद हो, कठोर मृदु अम्ल क्षार विचार है। मृदु सिल्वर मृदुतर परमाणु पर बँधता है, सायनाइड में कार्बन को बाँधकर केवल नाइट्रोजन मुक्त छोड़ता है, जबकि आयनिक पोटैशियम लवण बस आयन को मुक्त कर देता है कि जो स्थल सबसे nucleophilic हो उसे उपयोग करे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "The Complete Reaction Map",
+      "title": "The aryl halide's own map: three special routes",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Aryl halides need forcing conditions or clever tricks"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Recall: the aryl C–X is welded on (resonance + sp2 C), so ordinary SN1/SN2 don't happen."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Route A — activated NAS: strong ortho/para EWGs let a nucleophile displace the halide (addition–elimination), covered earlier."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Route B — forcing conditions (Dow's process): very high temperature and pressure force plain chlorobenzene to react."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Route C — very strong base (NaNH2): triggers an elimination–addition through a benzyne intermediate."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "Match the condition to the mechanism: EWG present → NAS; brute force → Dow; NaNH2 → benzyne."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "The next two sections take Dow's process and the benzyne route one at a time."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now we turn to the aromatic side of the map, because the aryl halide plays by completely different rules and deserves its own small map of three routes."
+            },
+            {
+              "seq": 2,
+              "text": "Remember why it is difficult. In an aryl halide the carbon to halogen bond is effectively welded on, by resonance into the ring and by sitting on an s p two carbon, so the ordinary S N one and S N two mechanisms simply do not occur."
+            },
+            {
+              "seq": 3,
+              "text": "Route A is the one we have already met, activated nucleophilic aromatic substitution. If strong electron withdrawing groups sit ortho or para to the halogen, a nucleophile can displace it by the addition elimination mechanism."
+            },
+            {
+              "seq": 4,
+              "text": "Route B is brute force, and it is the basis of Dow's process. If there are no helper groups, you can still force plain chlorobenzene to react by applying very high temperature and pressure."
+            },
+            {
+              "seq": 5,
+              "text": "Route C is the cleverest. If instead you use a very strong base such as sodium amide, you trigger a completely different pathway, an elimination followed by addition, that goes through a strained intermediate called benzyne."
+            },
+            {
+              "seq": 6,
+              "text": "So the exam skill is to match the condition to the mechanism. See ortho or para electron withdrawing groups, think nucleophilic aromatic substitution. See extreme heat and pressure, think Dow. See sodium amide, think benzyne."
+            },
+            {
+              "seq": 7,
+              "text": "The next two sections take the two harder routes one at a time, first Dow's process, then the benzyne mechanism with its lovely cine substitution result."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब map के aromatic side की ओर मुड़ते हैं, क्योंकि aryl halide एकदम अलग rules से चलता है और अपने तीन routes का छोटा map माँगता है।"
+            },
+            {
+              "seq": 2,
+              "text": "याद करो ये मुश्किल क्यों है। Aryl halide में carbon to halogen bond असल में weld है, ring में resonance से और s p two carbon पर बैठने से, तो ordinary S N one और S N two mechanisms होते ही नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "Route A वही है जो पहले मिल चुका, activated nucleophilic aromatic substitution। अगर strong electron withdrawing groups halogen के ortho या para बैठें, तो एक nucleophile उसे addition elimination mechanism से displace कर सकता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Route B brute force है, और यही Dow's process का आधार है। अगर कोई helper groups न हों, तो भी तुम plain chlorobenzene को बहुत high temperature और pressure लगाकर react करा सकते हो।"
+            },
+            {
+              "seq": 5,
+              "text": "Route C सबसे चालाक है। अगर इसके बजाय तुम बहुत strong base जैसे sodium amide use करो, तो एक एकदम अलग pathway trigger होता है, elimination फिर addition, जो benzyne नाम के एक strained intermediate से गुज़रता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो exam skill है condition को mechanism से match करना। Ortho या para electron withdrawing groups देखो, तो nucleophilic aromatic substitution सोचो। Extreme heat और pressure देखो, तो Dow सोचो। Sodium amide देखो, तो benzyne सोचो।"
+            },
+            {
+              "seq": 7,
+              "text": "अगले दो sections दोनों मुश्किल routes को एक एक करके लेते हैं, पहले Dow's process, फिर benzyne mechanism अपने प्यारे cine substitution result के साथ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब मानचित्र के ऐरोमैटिक पक्ष की ओर मुड़ते हैं, क्योंकि एरिल हैलाइड बिल्कुल भिन्न नियमों से चलता है और अपने तीन मार्गों का छोटा मानचित्र माँगता है।"
+            },
+            {
+              "seq": 2,
+              "text": "याद कीजिए यह कठिन क्यों है। एरिल हैलाइड में कार्बन हैलोजन बंध वास्तव में जड़ा हुआ है, वलय में अनुनाद से और s p two कार्बन पर बैठने से, तो सामान्य S N one और S N two क्रियाविधियाँ होती ही नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "मार्ग A वही है जो पहले मिल चुका, सक्रियित nucleophilic ऐरोमैटिक प्रतिस्थापन। यदि प्रबल इलेक्ट्रॉन आकर्षी समूह हैलोजन के ऑर्थो या पैरा बैठें, तो एक nucleophile उसे योग विलोपन क्रियाविधि से विस्थापित कर सकता है।"
+            },
+            {
+              "seq": 4,
+              "text": "मार्ग B प्रचंड बल है, और यही Dow प्रक्रिया का आधार है। यदि कोई सहायक समूह न हों, तो भी आप सादे क्लोरोबेंज़ीन को बहुत उच्च ताप और दाब लगाकर अभिक्रिया करा सकते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "मार्ग C सबसे चतुर है। यदि इसके बजाय आप बहुत प्रबल क्षार जैसे सोडियम एमाइड उपयोग करें, तो एक बिल्कुल भिन्न मार्ग प्रेरित होता है, विलोपन फिर योग, जो benzyne नाम के एक तनावग्रस्त मध्यवर्ती से गुज़रता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो परीक्षा कुशलता है परिस्थिति को क्रियाविधि से मिलाना। ऑर्थो या पैरा इलेक्ट्रॉन आकर्षी समूह देखिए, तो nucleophilic ऐरोमैटिक प्रतिस्थापन सोचिए। अत्यधिक ताप और दाब देखिए, तो Dow सोचिए। सोडियम एमाइड देखिए, तो benzyne सोचिए।"
+            },
+            {
+              "seq": 7,
+              "text": "अगले दो खंड दोनों कठिन मार्गों को एक एक करके लेते हैं, पहले Dow प्रक्रिया, फिर benzyne क्रियाविधि अपने सुंदर cine प्रतिस्थापन परिणाम के साथ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "The Complete Reaction Map",
+      "title": "Dow's process — phenol by brute force",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Making phenol from plain chlorobenzene"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Chlorobenzene + NaOH (623 K, high P) → phenoxide → phenol",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 150' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><rect x='10' y='50' width='110' height='34' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='24' y='72' fill='#181818'>C6H5Cl</text><path d='M125 67 L185 67' stroke='#181818' stroke-width='1.5'/><polygon points='185,67 176,63 176,71' fill='#181818'/><text x='120' y='45' fill='#DD4433'>NaOH, 623 K</text><text x='128' y='98' fill='#55565C'>~300 atm</text><rect x='190' y='50' width='120' height='34' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='200' y='72' fill='#181818'>C6H5O&#8722;Na+</text><path d='M315 67 L370 67' stroke='#181818' stroke-width='1.5'/><polygon points='370,67 361,63 361,71' fill='#181818'/><text x='320' y='45' fill='#DD4433'>H+</text><rect x='375' y='50' width='75' height='34' rx='6' fill='#EEA31F' stroke='#181818' stroke-width='2'/><text x='388' y='72' fill='#181818'>phenol</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Chlorobenzene resists NaOH — so Dow's process uses ~623 K and ~300 atm to force it."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "The product is sodium phenoxide; acidifying it (adding H⁺) then liberates phenol."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "This is nucleophilic aromatic substitution driven purely by energy, with no activating groups on the ring."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The extreme conditions ARE the exam signal — they tell you this is Dow, not gentle NAS."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Dow's process is the industrial answer to a hard question: how do you make phenol from plain chlorobenzene, when the ring carries no helpful electron withdrawing groups at all?"
+            },
+            {
+              "seq": 2,
+              "text": "The board lays out the two steps. Chlorobenzene is treated with sodium hydroxide, then the product is acidified to release phenol."
+            },
+            {
+              "seq": 3,
+              "text": "The catch is that chlorobenzene, on its own, resists sodium hydroxide completely. So Dow's process simply overpowers that resistance, using roughly six hundred twenty three kelvin and about three hundred atmospheres of pressure to force the reaction through."
+            },
+            {
+              "seq": 4,
+              "text": "Under those forcing conditions the hydroxide does displace the chlorine, and the first product is sodium phenoxide. Then, in the second step, you acidify by adding acid, and this liberates the neutral phenol."
+            },
+            {
+              "seq": 5,
+              "text": "Conceptually, this is still nucleophilic aromatic substitution, but here it is driven purely by brute energy rather than by any activating group on the ring. There is no nitro group helping this time; the temperature and pressure do all the work."
+            },
+            {
+              "seq": 6,
+              "text": "So carry this as a recognition cue. When a problem shows plain chlorobenzene with sodium hydroxide under extreme temperature and pressure, those conditions themselves are the signal that you are looking at Dow's process, not at the gentle, group activated substitution from earlier."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Dow's process एक मुश्किल सवाल का industrial जवाब है: plain chlorobenzene से phenol कैसे बनाओ, जब ring पर कोई helpful electron withdrawing groups हैं ही नहीं?"
+            },
+            {
+              "seq": 2,
+              "text": "Board दो steps बिछाता है। Chlorobenzene को sodium hydroxide से treat करते हैं, फिर product को acidify करके phenol निकालते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Catch ये है कि chlorobenzene अकेला sodium hydroxide का पूरी तरह resist करता है। तो Dow's process बस उस resistance को overpower करता है, लगभग six hundred twenty three kelvin और लगभग three hundred atmospheres pressure लगाकर reaction को force करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "उन forcing conditions में hydroxide chlorine को displace कर देता है, और पहला product sodium phenoxide है। फिर, दूसरे step में, तुम acid डालकर acidify करते हो, और ये neutral phenol निकाल देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Conceptually, ये अब भी nucleophilic aromatic substitution है, पर यहाँ ये किसी activating group के बजाय बस brute energy से driven है। इस बार कोई nitro group मदद नहीं कर रहा; temperature और pressure सारा काम करते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "तो इसे recognition cue की तरह रखो। जब कोई problem plain chlorobenzene को sodium hydroxide के साथ extreme temperature और pressure में दिखाए, तो वही conditions signal हैं कि तुम Dow's process देख रहे हो, न कि पहले वाला gentle, group activated substitution।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Dow प्रक्रिया एक कठिन सवाल का औद्योगिक उत्तर है: सादे क्लोरोबेंज़ीन से फ़ीनॉल कैसे बनाएँ, जब वलय पर कोई सहायक इलेक्ट्रॉन आकर्षी समूह हैं ही नहीं?"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड दो चरण बिछाता है। क्लोरोबेंज़ीन को सोडियम हाइड्रॉक्साइड से उपचारित करते हैं, फिर उत्पाद को अम्लीकृत करके फ़ीनॉल निकालते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "पेच यह है कि क्लोरोबेंज़ीन अकेला सोडियम हाइड्रॉक्साइड का पूरी तरह प्रतिरोध करता है। तो Dow प्रक्रिया बस उस प्रतिरोध को अभिभूत करती है, लगभग six hundred twenty three केल्विन और लगभग three hundred वायुमंडल दाब लगाकर अभिक्रिया को विवश करती है।"
+            },
+            {
+              "seq": 4,
+              "text": "उन प्रबल परिस्थितियों में हाइड्रॉक्साइड क्लोरीन को विस्थापित कर देता है, और पहला उत्पाद सोडियम फ़ीनॉक्साइड है। फिर, दूसरे चरण में, आप अम्ल डालकर अम्लीकृत करते हैं, और यह उदासीन फ़ीनॉल निकाल देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "वैचारिक रूप से, यह अब भी nucleophilic ऐरोमैटिक प्रतिस्थापन है, पर यहाँ यह किसी सक्रियक समूह के बजाय बस प्रचंड ऊर्जा से प्रेरित है। इस बार कोई nitro समूह सहायता नहीं कर रहा; ताप और दाब सारा काम करते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "तो इसे पहचान संकेत की तरह रखिए। जब कोई प्रश्न सादे क्लोरोबेंज़ीन को सोडियम हाइड्रॉक्साइड के साथ अत्यधिक ताप और दाब में दिखाए, तो वही परिस्थितियाँ संकेत हैं कि आप Dow प्रक्रिया देख रहे हैं, न कि पहले वाला मृदु, समूह सक्रियित प्रतिस्थापन।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "concept",
+      "subtopic": "The Complete Reaction Map",
+      "title": "The benzyne mechanism and cine substitution",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A very strong base takes a different road"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Elimination to strained benzyne, then addition at EITHER carbon",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 170' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='11'><polygon points='40,45 70,30 100,45 100,80 70,95 40,80' fill='none' stroke='#181818' stroke-width='2'/><text x='102' y='40' fill='#DD4433'>Cl</text><text x='102' y='95' fill='#55565C'>H</text><path d='M120 60 L160 60' stroke='#181818' stroke-width='1.5'/><polygon points='160,60 151,56 151,64' fill='#181818'/><text x='120' y='48' fill='#DD4433'>NaNH2 (&#8722;HCl)</text><polygon points='190,45 220,30 250,45 250,80 220,95 190,80' fill='none' stroke='#181818' stroke-width='2'/><line x1='250' y1='45' x2='250' y2='80' stroke='#EEA31F' stroke-width='3'/><text x='256' y='66' fill='#EEA31F'>&#8801;</text><text x='196' y='118' fill='#55565C'>benzyne (strained triple bond)</text><path d='M270 60 L310 60' stroke='#181818' stroke-width='1.5'/><polygon points='310,60 301,56 301,64' fill='#181818'/><text x='272' y='48' fill='#181818'>NH2&#8722; adds</text><text x='320' y='50' fill='#181818'>at C1 OR C2</text><text x='320' y='72' fill='#DD4433'>&#8594; two anilines (cine)</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Sodium amide first removes a hydrogen ortho to the halogen; the halide then leaves → a strained 'triple bond', benzyne."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "That extra bond is symmetric between the two carbons, so the incoming nucleophile can add to EITHER of them."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Result: the new group can appear on a DIFFERENT carbon than the one that held the halogen — 'cine' substitution."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Proof: 14C-labelled chlorobenzene + NaNH2 gives aniline with the label split ~50:50 between the two positions."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "style": "red-margin",
+          "text": "Signature: NaNH2 (strong base) → benzyne → possible position shift. Not addition–elimination."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The benzyne mechanism is the most elegant reaction in the whole chapter, and it happens when an unactivated aryl halide meets a very strong base such as sodium amide."
+            },
+            {
+              "seq": 2,
+              "text": "Follow the board across. First an elimination creates a strange intermediate, then a nucleophile adds to it, and crucially it can add at either of two carbons."
+            },
+            {
+              "seq": 3,
+              "text": "In detail: the strong base first pulls off a hydrogen from the carbon next to the halogen, ortho to it. Then the halide leaves, and the two electrons left behind form an extra bond, giving a strained species with what looks like a triple bond in the ring. That species is benzyne."
+            },
+            {
+              "seq": 4,
+              "text": "Now the key point. That extra bond is symmetric, shared equally between the two carbons that lost the hydrogen and the halogen. So when the nucleophile finally adds, it can attack either of those two carbons with roughly equal ease."
+            },
+            {
+              "seq": 5,
+              "text": "The consequence is remarkable. The new group can end up on a different carbon from the one that originally held the halogen. Chemists call this cine substitution, where the position quietly shifts."
+            },
+            {
+              "seq": 6,
+              "text": "And here is the beautiful proof. If you start with chlorobenzene labelled with radioactive carbon fourteen at the carbon bearing chlorine and react it with sodium amide, the resulting aniline carries that label split roughly fifty fifty between the original carbon and its neighbour, exactly as a symmetric benzyne predicts."
+            },
+            {
+              "seq": 7,
+              "text": "So the signature to recognise is this: sodium amide, a very strong base, means benzyne, which means a possible shift in position. That is completely different from the addition elimination route, which needs electron withdrawing groups and never shifts the position."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Benzyne mechanism पूरे chapter की सबसे elegant reaction है, और ये तब होती है जब एक unactivated aryl halide किसी बहुत strong base जैसे sodium amide से मिलता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board पर आगे follow करो। पहले एक elimination एक अजीब intermediate बनाता है, फिर एक nucleophile उसमें add होता है, और ख़ास बात, वो दो carbons में से किसी में भी add हो सकता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Detail में: strong base पहले halogen के बगल वाले carbon से, उसके ortho, एक hydrogen खींचता है। फिर halide निकलता है, और पीछे बचे दो electrons एक extra bond बनाते हैं, एक strained species देते हैं जिसमें ring में triple bond जैसा दिखता है। वही species benzyne है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब key point। वो extra bond symmetric है, उन दो carbons के बीच बराबर बँटा जिन्होंने hydrogen और halogen खोया। तो जब nucleophile आख़िर में add होता है, वो उन दोनों carbons में से किसी पर भी लगभग बराबर आसानी से attack कर सकता है।"
+            },
+            {
+              "seq": 5,
+              "text": "नतीजा remarkable है। नया group उस carbon से अलग carbon पर आ सकता है जिस पर मूल रूप से halogen था। Chemists इसे cine substitution कहते हैं, जहाँ position चुपचाप shift हो जाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "और यहाँ सुंदर proof है। अगर तुम chlorine वाले carbon पर radioactive carbon fourteen से labelled chlorobenzene से शुरू करो और sodium amide से react करो, तो बनने वाला aniline वो label मूल carbon और उसके पड़ोसी के बीच लगभग fifty fifty बँटा हुआ लेकर आता है, बिल्कुल जैसा symmetric benzyne predict करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो पहचानने की signature ये है: sodium amide, एक बहुत strong base, मतलब benzyne, मतलब position में संभव shift। ये addition elimination route से एकदम अलग है, जिसे electron withdrawing groups चाहिए और जो position कभी shift नहीं करता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Benzyne क्रियाविधि पूरे अध्याय की सबसे सुरुचिपूर्ण अभिक्रिया है, और यह तब होती है जब एक असक्रियित एरिल हैलाइड किसी बहुत प्रबल क्षार जैसे सोडियम एमाइड से मिलता है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड पर आगे देखिए। पहले एक विलोपन एक अजीब मध्यवर्ती बनाता है, फिर एक nucleophile उसमें जुड़ता है, और ख़ास बात, वह दो कार्बनों में से किसी में भी जुड़ सकता है।"
+            },
+            {
+              "seq": 3,
+              "text": "विस्तार में: प्रबल क्षार पहले हैलोजन के बगल वाले कार्बन से, उसके ऑर्थो, एक हाइड्रोजन खींचता है। फिर हैलाइड निकलता है, और पीछे बचे दो इलेक्ट्रॉन एक अतिरिक्त बंध बनाते हैं, एक तनावग्रस्त स्पीशीज़ देते हैं जिसमें वलय में त्रिबंध जैसा दिखता है। वही स्पीशीज़ benzyne है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब मुख्य बिंदु। वह अतिरिक्त बंध सममित है, उन दो कार्बनों के बीच बराबर बँटा जिन्होंने हाइड्रोजन और हैलोजन खोया। तो जब nucleophile अंत में जुड़ता है, वह उन दोनों कार्बनों में से किसी पर भी लगभग बराबर सरलता से आक्रमण कर सकता है।"
+            },
+            {
+              "seq": 5,
+              "text": "परिणाम उल्लेखनीय है। नया समूह उस कार्बन से भिन्न कार्बन पर आ सकता है जिस पर मूल रूप से हैलोजन था। रसायनज्ञ इसे cine प्रतिस्थापन कहते हैं, जहाँ स्थिति चुपचाप स्थानांतरित हो जाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "और यहाँ सुंदर प्रमाण है। यदि आप क्लोरीन वाले कार्बन पर रेडियोधर्मी carbon fourteen से चिह्नित क्लोरोबेंज़ीन से शुरू करें और सोडियम एमाइड से अभिक्रिया करें, तो बनने वाला ऐनिलीन वह चिह्न मूल कार्बन और उसके पड़ोसी के बीच लगभग fifty fifty बँटा हुआ लेकर आता है, बिल्कुल जैसा सममित benzyne भविष्यवाणी करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो पहचानने की छाप यह है: सोडियम एमाइड, एक बहुत प्रबल क्षार, अर्थात benzyne, अर्थात स्थिति में संभव स्थानांतरण। यह योग विलोपन मार्ग से बिल्कुल भिन्न है, जिसे इलेक्ट्रॉन आकर्षी समूह चाहिए और जो स्थिति कभी स्थानांतरित नहीं करता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "concept",
+      "subtopic": "The Complete Reaction Map",
+      "title": "Haloarene EAS: deactivating yet ortho/para-directing",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The halogen: a two-signal substituent"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Haloarenes still undergo normal electrophilic aromatic substitution (nitration, halogenation, sulphonation, Friedel–Crafts)."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "–I pulls electrons out (slows); +R feeds the o/p positions (directs)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 160' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><polygon points='120,40 160,40 180,80 160,120 120,120 100,80' fill='none' stroke='#181818' stroke-width='2'/><line x1='140' y1='40' x2='140' y2='15' stroke='#181818' stroke-width='2'/><text x='134' y='12' fill='#DD4433'>X</text><path d='M148 20 Q175 25 175 55' fill='none' stroke='#DD4433' stroke-width='1.5' stroke-dasharray='3 2'/><text x='185' y='35' fill='#DD4433'>&#8722;I: withdraws (deactivates)</text><path d='M132 30 Q100 60 110 90' fill='none' stroke='#EEA31F' stroke-width='1.5' stroke-dasharray='3 2'/><text x='40' y='140' fill='#EEA31F'>+R: donates to o/p carbons (directs)</text></g></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Signal 1 — inductive (–I): the electronegative halogen pulls electron density OUT, so the ring is less reactive than benzene (deactivating)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Signal 2 — resonance (+R): the lone pair feeds density back specifically into the ortho and para positions (directing)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Net effect: slower than benzene, but the products are mainly ortho and para."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Halogen is the classic 'deactivating but o/p-directing' group — the one exception students must remember."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We finish the reaction map with the electrophilic aromatic substitution of haloarenes, which hides a subtlety that examiners love."
+            },
+            {
+              "seq": 2,
+              "text": "First, the simple fact. Haloarenes do still undergo the normal electrophilic aromatic substitutions, nitration, halogenation, sulphonation, and Friedel Crafts reactions. The halogen does not shut the ring down."
+            },
+            {
+              "seq": 3,
+              "text": "But the halogen sends two opposing signals, and the board shows both. One arrow pulls electrons out of the ring, the other feeds them back into specific positions."
+            },
+            {
+              "seq": 4,
+              "text": "Signal one is inductive, the minus I effect. Because the halogen is electronegative, it pulls electron density out of the ring, which makes the ring less reactive than plain benzene. That is why halogens are deactivating."
+            },
+            {
+              "seq": 5,
+              "text": "Signal two is resonance, the plus R effect. The halogen's lone pair can feed electron density back into the ring, but by the geometry of resonance it lands specifically on the ortho and para carbons, not the meta ones."
+            },
+            {
+              "seq": 6,
+              "text": "So the two signals split the job between them. The inductive withdrawal makes the reaction slower than benzene, while the resonance donation steers the incoming electrophile to the ortho and para positions."
+            },
+            {
+              "seq": 7,
+              "text": "So remember the halogen as the classic exception: it is deactivating, yet ortho para directing. Every other common deactivator sends the electrophile to meta, so this single group is the one students are expected to flag and explain."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Reaction map को हम haloarenes के electrophilic aromatic substitution के साथ ख़त्म करते हैं, जो एक subtlety छुपाए है जो examiners को पसंद है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले simple fact। Haloarenes अब भी normal electrophilic aromatic substitutions करते हैं, nitration, halogenation, sulphonation, और Friedel Crafts reactions। Halogen ring को बंद नहीं करता।"
+            },
+            {
+              "seq": 3,
+              "text": "पर halogen दो opposing signals भेजता है, और board दोनों दिखाता है। एक arrow ring से electrons बाहर खींचता है, दूसरा उन्हें specific positions में वापस feed करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Signal one inductive है, minus I effect। चूँकि halogen electronegative है, ये ring से electron density बाहर खींचता है, जिससे ring plain benzene से कम reactive हो जाता है। इसीलिए halogens deactivating हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Signal two resonance है, plus R effect। Halogen का lone pair ring में electron density वापस feed कर सकता है, पर resonance की geometry से ये ख़ासकर ortho और para carbons पर आता है, meta पर नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "तो दोनों signals काम आपस में बाँट लेते हैं। Inductive withdrawal reaction को benzene से धीमा करता है, जबकि resonance donation आने वाले electrophile को ortho और para positions की ओर steer करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो halogen को classic exception की तरह याद रखो: ये deactivating है, फिर भी ortho para directing। बाक़ी हर common deactivator electrophile को meta भेजता है, तो यही एक group है जिसे students से flag और explain करने की उम्मीद की जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अभिक्रिया मानचित्र को हम एरिल हैलाइड के विद्युतस्नेही ऐरोमैटिक प्रतिस्थापन के साथ समाप्त करते हैं, जो एक सूक्ष्मता छुपाए है जो परीक्षकों को पसंद है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले सरल तथ्य। एरिल हैलाइड अब भी सामान्य विद्युतस्नेही ऐरोमैटिक प्रतिस्थापन करते हैं, नाइट्रीकरण, हैलोजनन, सल्फ़ोनन, और Friedel Crafts अभिक्रियाएँ। हैलोजन वलय को बंद नहीं करता।"
+            },
+            {
+              "seq": 3,
+              "text": "पर हैलोजन दो विरोधी संकेत भेजता है, और बोर्ड दोनों दिखाता है। एक तीर वलय से इलेक्ट्रॉन बाहर खींचता है, दूसरा उन्हें विशिष्ट स्थितियों में वापस भेजता है।"
+            },
+            {
+              "seq": 4,
+              "text": "संकेत एक प्रेरणिक है, minus I प्रभाव। चूँकि हैलोजन विद्युतऋणात्मक है, यह वलय से इलेक्ट्रॉन घनत्व बाहर खींचता है, जिससे वलय सादे बेंज़ीन से कम क्रियाशील हो जाता है। इसीलिए हैलोजन निष्क्रियकारी हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "संकेत दो अनुनाद है, plus R प्रभाव। हैलोजन का एकाकी युग्म वलय में इलेक्ट्रॉन घनत्व वापस भेज सकता है, पर अनुनाद की ज्यामिति से यह ख़ासकर ऑर्थो और पैरा कार्बनों पर आता है, मेटा पर नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "तो दोनों संकेत काम आपस में बाँट लेते हैं। प्रेरणिक निष्कर्षण अभिक्रिया को बेंज़ीन से धीमा करता है, जबकि अनुनाद दान आने वाले विद्युतस्नेही को ऑर्थो और पैरा स्थितियों की ओर निर्देशित करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो हैलोजन को पारंपरिक अपवाद की तरह याद रखिए: यह निष्क्रियकारी है, फिर भी ऑर्थो पैरा निर्देशक। बाक़ी हर सामान्य निष्क्रियकारी विद्युतस्नेही को मेटा भेजता है, तो यही एक समूह है जिसे विद्यार्थियों से चिह्नित और समझाने की अपेक्षा की जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "The Complete Reaction Map",
+      "title": "Worked example — product of R–X with KCN vs AgCN [CBSE]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Give the products of ethyl bromide with (a) KCN and (b) AgCN"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Same halide, metal decides C- vs N-attack",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 130' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><text x='10' y='45' fill='#181818'>C2H5Br + KCN</text><path d='M120 40 L175 40' stroke='#181818' stroke-width='1.5'/><polygon points='175,40 166,36 166,44' fill='#181818'/><text x='185' y='45' fill='#EEA31F'>C2H5–CN (propanenitrile)</text><text x='10' y='95' fill='#181818'>C2H5Br + AgCN</text><path d='M120 90 L175 90' stroke='#181818' stroke-width='1.5'/><polygon points='175,90 166,86 166,94' fill='#181818'/><text x='185' y='95' fill='#DD4433'>C2H5–NC (ethyl isocyanide)</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "(a) KCN is ionic → cyanide attacks through carbon → ethyl cyanide, C2H5–CN (propanenitrile)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "(b) AgCN is covalent → attack through nitrogen → ethyl isocyanide, C2H5–NC."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Both are C3-count on paper, but they are different functional groups — a nitrile vs an isocyanide."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Answer: KCN → nitrile (C-bonded); AgCN → isocyanide (N-bonded). Silver = nitrogen."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A direct C B S E question on the ambident idea. Give the products when ethyl bromide reacts, first with potassium cyanide, then with silver cyanide."
+            },
+            {
+              "seq": 2,
+              "text": "The board pairs the two side by side, so you can see that the only thing that changes is the metal."
+            },
+            {
+              "seq": 3,
+              "text": "In part a, potassium cyanide is ionic, so it releases free cyanide, which attacks through carbon. The product is ethyl cyanide, C two H five C N, also named propanenitrile."
+            },
+            {
+              "seq": 4,
+              "text": "In part b, silver cyanide is largely covalent, so its carbon is tied up and only nitrogen is free to attack. The product is ethyl isocyanide, C two H five N C."
+            },
+            {
+              "seq": 5,
+              "text": "It is worth pausing to notice that both products contain the same atoms on paper, but they are genuinely different functional groups, a nitrile in one case and an isocyanide in the other, with different chemistry and even different smells."
+            },
+            {
+              "seq": 6,
+              "text": "So the answer is that potassium cyanide gives the carbon bonded nitrile, while silver cyanide gives the nitrogen bonded isocyanide. And the one line memory hook that produces this instantly is silver equals nitrogen."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ambident idea पर एक direct C B S E question। Products बताओ जब ethyl bromide react करे, पहले potassium cyanide से, फिर silver cyanide से।"
+            },
+            {
+              "seq": 2,
+              "text": "Board दोनों को side by side रखता है, ताकि तुम देख सको कि बदलती सिर्फ़ metal है।"
+            },
+            {
+              "seq": 3,
+              "text": "Part a में, potassium cyanide ionic है, तो ये free cyanide छोड़ता है, जो carbon से attack करता है। Product ethyl cyanide है, C two H five C N, जिसे propanenitrile भी कहते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Part b में, silver cyanide काफ़ी covalent है, तो इसका carbon बँधा है और सिर्फ़ nitrogen attack करने को free है। Product ethyl isocyanide है, C two H five N C।"
+            },
+            {
+              "seq": 5,
+              "text": "रुककर ये notice करना ज़रूरी है कि दोनों products में paper पर वही atoms हैं, पर ये सच में अलग functional groups हैं, एक में nitrile और दूसरे में isocyanide, अलग chemistry और यहाँ तक कि अलग smell के साथ।"
+            },
+            {
+              "seq": 6,
+              "text": "तो answer ये है कि potassium cyanide carbon bonded nitrile देता है, जबकि silver cyanide nitrogen bonded isocyanide। और वो एक line का memory hook जो इसे तुरंत देता है वो है silver equals nitrogen।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ambident विचार पर एक सीधा C B S E प्रश्न। उत्पाद बताइए जब एथिल ब्रोमाइड अभिक्रिया करे, पहले पोटैशियम सायनाइड से, फिर सिल्वर सायनाइड से।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड दोनों को साथ साथ रखता है, ताकि आप देख सकें कि बदलती केवल धातु है।"
+            },
+            {
+              "seq": 3,
+              "text": "भाग a में, पोटैशियम सायनाइड आयनिक है, तो यह मुक्त सायनाइड छोड़ता है, जो कार्बन से आक्रमण करता है। उत्पाद एथिल सायनाइड है, C two H five C N, जिसे propanenitrile भी कहते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "भाग b में, सिल्वर सायनाइड काफ़ी सहसंयोजक है, तो इसका कार्बन बँधा है और केवल नाइट्रोजन आक्रमण करने को मुक्त है। उत्पाद एथिल आइसोसायनाइड है, C two H five N C।"
+            },
+            {
+              "seq": 5,
+              "text": "रुककर यह ध्यान देना ज़रूरी है कि दोनों उत्पादों में कागज़ पर वही परमाणु हैं, पर ये सच में भिन्न क्रियात्मक समूह हैं, एक में नाइट्राइल और दूसरे में आइसोसायनाइड, भिन्न रसायन और यहाँ तक कि भिन्न गंध के साथ।"
+            },
+            {
+              "seq": 6,
+              "text": "तो उत्तर यह है कि पोटैशियम सायनाइड कार्बन आबंधित नाइट्राइल देता है, जबकि सिल्वर सायनाइड नाइट्रोजन आबंधित आइसोसायनाइड। और वह एक पंक्ति का स्मृति सूत्र जो इसे तुरंत देता है वह है silver equals nitrogen।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "The Complete Reaction Map",
+      "title": "Worked example — nitrite ambident product [NEET]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "CH3CH2Br with AgNO2 gives mainly…?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Nitrite is ambident (O or N); the metal decides. Apply 'silver = nitrogen'."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Silver salt → N-attack → nitroalkane",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 120' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><text x='10' y='45' fill='#181818'>C2H5Br + AgNO2</text><path d='M130 40 L185 40' stroke='#181818' stroke-width='1.5'/><polygon points='185,40 176,36 176,44' fill='#181818'/><text x='195' y='45' fill='#DD4433'>C2H5–NO2 (nitroethane)</text><text x='10' y='90' fill='#55565C'>compare: KNO2 would give C2H5–O–N=O (ethyl nitrite)</text></g></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "AgNO2 is covalent → attack through nitrogen → the nitroalkane, C2H5–NO2 (nitroethane)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Had the reagent been KNO2 (ionic), attack would be through oxygen → ethyl nitrite, C2H5–O–N=O."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Answer: nitroethane. Distinguish it from the KNO2 product (the nitrite ester) in the exam."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A quick N E E T application of the second ambident case. Ethyl bromide reacts with silver nitrite; what is the main product?"
+            },
+            {
+              "seq": 2,
+              "text": "Recognise at once that nitrite is ambident, able to bond through oxygen or nitrogen, and that the metal is what decides. So reach straight for the rule, silver equals nitrogen."
+            },
+            {
+              "seq": 3,
+              "text": "The board shows the outcome. Silver nitrite is covalent, so bonding happens through nitrogen."
+            },
+            {
+              "seq": 4,
+              "text": "Attack through nitrogen gives the carbon to nitrogen bond of a nitroalkane. So the product is C two H five N O two, which is nitroethane."
+            },
+            {
+              "seq": 5,
+              "text": "Now hold on to the contrast, because the examiner often offers the wrong twin as a distractor. Had the reagent been potassium nitrite, which is ionic, attack would have been through oxygen instead, giving ethyl nitrite, C two H five O N double bond O, an ester of nitrous acid."
+            },
+            {
+              "seq": 6,
+              "text": "So the answer here is nitroethane, and the skill being tested is your ability to distinguish it cleanly from the potassium nitrite product, the nitrite ester, using nothing more than silver equals nitrogen."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दूसरे ambident case का एक quick N E E T application। Ethyl bromide silver nitrite से react करता है; main product क्या है?"
+            },
+            {
+              "seq": 2,
+              "text": "तुरंत पहचानो कि nitrite ambident है, oxygen या nitrogen से bond बना सकता है, और metal ही decide करता है। तो सीधे rule उठाओ, silver equals nitrogen।"
+            },
+            {
+              "seq": 3,
+              "text": "Board outcome दिखाता है। Silver nitrite covalent है, तो bonding nitrogen से होती है।"
+            },
+            {
+              "seq": 4,
+              "text": "Nitrogen से attack एक nitroalkane का carbon to nitrogen bond देता है। तो product C two H five N O two है, जो nitroethane है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब contrast पकड़े रखो, क्योंकि examiner अक्सर ग़लत twin को distractor की तरह देता है। अगर reagent potassium nitrite होता, जो ionic है, तो attack इसके बजाय oxygen से होता, ethyl nitrite देता, C two H five O N double bond O, nitrous acid का ester।"
+            },
+            {
+              "seq": 6,
+              "text": "तो यहाँ answer nitroethane है, और जो skill test हो रही है वो है इसे potassium nitrite के product, यानी nitrite ester, से साफ़ अलग करने की क्षमता, सिर्फ़ silver equals nitrogen से।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दूसरे ambident प्रकरण का एक त्वरित N E E T अनुप्रयोग। एथिल ब्रोमाइड सिल्वर नाइट्राइट से अभिक्रिया करता है; मुख्य उत्पाद क्या है?"
+            },
+            {
+              "seq": 2,
+              "text": "तुरंत पहचानिए कि नाइट्राइट ambident है, ऑक्सीजन या नाइट्रोजन से बंध बना सकता है, और धातु ही निर्णय करती है। तो सीधे नियम उठाइए, silver equals nitrogen।"
+            },
+            {
+              "seq": 3,
+              "text": "बोर्ड परिणाम दिखाता है। सिल्वर नाइट्राइट सहसंयोजक है, तो आबंधन नाइट्रोजन से होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "नाइट्रोजन से आक्रमण एक नाइट्रोऐल्केन का कार्बन नाइट्रोजन बंध देता है। तो उत्पाद C two H five N O two है, जो nitroethane है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब विरोधाभास पकड़े रखिए, क्योंकि परीक्षक अक्सर गलत जुड़वाँ को भटकाव की तरह देता है। यदि अभिकर्मक पोटैशियम नाइट्राइट होता, जो आयनिक है, तो आक्रमण इसके बजाय ऑक्सीजन से होता, एथिल नाइट्राइट देता, C two H five O N double bond O, नाइट्रस अम्ल का एस्टर।"
+            },
+            {
+              "seq": 6,
+              "text": "तो यहाँ उत्तर nitroethane है, और जो कुशलता जाँची जा रही है वह है इसे पोटैशियम नाइट्राइट के उत्पाद, अर्थात नाइट्राइट एस्टर, से स्पष्ट अलग करने की क्षमता, केवल silver equals nitrogen से।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "The Complete Reaction Map",
+      "title": "Worked example — a two-step synthesis across the map [JEE Main]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Convert bromoethane into propan-1-amine (C2H5Br → C3H7NH2)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Note the carbon count: 2 → 3. We must gain one carbon AND end with an –NH2."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Nitrile route: add a carbon as CN, then reduce",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 120' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><text x='10' y='50' fill='#181818'>C2H5Br</text><path d='M70 45 L120 45' stroke='#181818' stroke-width='1.5'/><polygon points='120,45 111,41 111,49' fill='#181818'/><text x='72' y='34' fill='#DD4433'>KCN</text><text x='130' y='50' fill='#181818'>C2H5CN</text><path d='M210 45 L275 45' stroke='#181818' stroke-width='1.5'/><polygon points='275,45 266,41 266,49' fill='#181818'/><text x='212' y='34' fill='#DD4433'>H2 / Ni (reduce)</text><text x='285' y='50' fill='#EEA31F'>C3H7NH2</text><text x='10' y='95' fill='#55565C'>CN adds the extra carbon; reduction turns CN &#8594; CH2NH2</text></g></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Step 1: bromoethane + KCN → propanenitrile (C2H5–CN). The cyanide supplies the extra carbon."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Step 2: reduce the nitrile (H2/Ni, or LiAlH4) → propan-1-amine (C3H7NH2)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Why not just NH3 on bromoethane? That gives ethylamine — same carbon count, and messy over-alkylation. The nitrile route is cleaner and adds the carbon."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Answer: KCN, then reduce. Use KCN (not AgCN) — you need the C-bonded nitrile, not the isocyanide."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A J E E Main synthesis that shows the map working across two steps. Convert bromoethane into propan one amine."
+            },
+            {
+              "seq": 2,
+              "text": "The first thing a good student does is count carbons. Bromoethane has two, the target amine has three, so along the way we must gain one carbon and also finish with an amino group. Both requirements matter."
+            },
+            {
+              "seq": 3,
+              "text": "The board shows the elegant route that does both jobs at once, the nitrile route."
+            },
+            {
+              "seq": 4,
+              "text": "Step one, treat bromoethane with potassium cyanide to get propanenitrile. Notice that the cyanide group brings a new carbon with it, so this single step raises the count from two carbons to three."
+            },
+            {
+              "seq": 5,
+              "text": "Step two, reduce that nitrile, using hydrogen over nickel or lithium aluminium hydride. Reduction turns the C N group into a C H two N H two group, delivering propan one amine, our target."
+            },
+            {
+              "seq": 6,
+              "text": "Now, why not just treat bromoethane with ammonia directly? Because that would give ethylamine, which has only two carbons, the wrong count, and ammonia also tends to over alkylate into a messy mixture. The nitrile route is cleaner and, crucially, it adds the extra carbon we needed."
+            },
+            {
+              "seq": 7,
+              "text": "So the answer is potassium cyanide, then reduction. And note one careful detail: you must use potassium cyanide, not silver cyanide, because you need the carbon bonded nitrile that reduces to the amine, not the nitrogen bonded isocyanide."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Main synthesis जो map को दो steps में काम करते दिखाती है। Bromoethane को propan one amine में convert करो।"
+            },
+            {
+              "seq": 2,
+              "text": "अच्छा student पहला काम carbons गिनने का करता है। Bromoethane में दो हैं, target amine में तीन, तो रास्ते में हमें एक carbon gain करना है और amino group के साथ ख़त्म भी करना है। दोनों requirements मायने रखती हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Board वो elegant route दिखाता है जो दोनों काम एक साथ करता है, nitrile route।"
+            },
+            {
+              "seq": 4,
+              "text": "Step one, bromoethane को potassium cyanide से treat करके propanenitrile पाओ। ध्यान दो कि cyanide group अपने साथ एक नया carbon लाता है, तो ये एक step count को दो carbons से तीन कर देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Step two, उस nitrile को reduce करो, hydrogen over nickel या lithium aluminium hydride से। Reduction C N group को C H two N H two group में बदल देता है, propan one amine देता है, हमारा target।"
+            },
+            {
+              "seq": 6,
+              "text": "अब, bromoethane को सीधे ammonia से क्यों न treat करें? क्योंकि वो ethylamine देगा, जिसमें सिर्फ़ दो carbons हैं, ग़लत count, और ammonia over alkylate होकर messy mixture भी बनाता है। Nitrile route cleaner है और, ख़ास बात, वो ज़रूरी extra carbon जोड़ता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो answer है potassium cyanide, फिर reduction। और एक careful detail note करो: तुम्हें potassium cyanide use करना है, silver cyanide नहीं, क्योंकि तुम्हें वो carbon bonded nitrile चाहिए जो amine में reduce हो, nitrogen bonded isocyanide नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Main संश्लेषण जो मानचित्र को दो चरणों में काम करते दिखाता है। ब्रोमोएथेन को propan one amine में परिवर्तित कीजिए।"
+            },
+            {
+              "seq": 2,
+              "text": "अच्छा विद्यार्थी पहला काम कार्बन गिनने का करता है। ब्रोमोएथेन में दो हैं, लक्ष्य ऐमीन में तीन, तो रास्ते में हमें एक कार्बन बढ़ाना है और ऐमीनो समूह के साथ समाप्त भी करना है। दोनों आवश्यकताएँ मायने रखती हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "बोर्ड वह सुरुचिपूर्ण मार्ग दिखाता है जो दोनों काम एक साथ करता है, नाइट्राइल मार्ग।"
+            },
+            {
+              "seq": 4,
+              "text": "पहला चरण, ब्रोमोएथेन को पोटैशियम सायनाइड से उपचारित करके propanenitrile पाइए। ध्यान दीजिए कि सायनाइड समूह अपने साथ एक नया कार्बन लाता है, तो यह एक चरण गिनती को दो कार्बन से तीन कर देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा चरण, उस नाइट्राइल को अपचयित कीजिए, हाइड्रोजन ओवर निकेल या लिथियम ऐलुमिनियम हाइड्राइड से। अपचयन C N समूह को C H two N H two समूह में बदल देता है, propan one amine देता है, हमारा लक्ष्य।"
+            },
+            {
+              "seq": 6,
+              "text": "अब, ब्रोमोएथेन को सीधे अमोनिया से क्यों न उपचारित करें? क्योंकि वह एथिलऐमीन देगा, जिसमें केवल दो कार्बन हैं, गलत गिनती, और अमोनिया अति ऐल्किलन होकर गड़बड़ मिश्रण भी बनाता है। नाइट्राइल मार्ग स्वच्छतर है और, ख़ास बात, वह ज़रूरी अतिरिक्त कार्बन जोड़ता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो उत्तर है पोटैशियम सायनाइड, फिर अपचयन। और एक सावधान विवरण ध्यान दीजिए: आपको पोटैशियम सायनाइड उपयोग करना है, सिल्वर सायनाइड नहीं, क्योंकि आपको वह कार्बन आबंधित नाइट्राइल चाहिए जो ऐमीन में अपचयित हो, नाइट्रोजन आबंधित आइसोसायनाइड नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "The Complete Reaction Map",
+      "title": "Worked example — the benzyne labelling proof [JEE Advanced]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Why does 14C-labelled chlorobenzene + NaNH2 give two labelled anilines?"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Symmetric benzyne → NH2 adds at C1 or C2 → 50:50 label",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 160' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='11'><polygon points='40,50 70,35 100,50 100,85 70,100 40,85' fill='none' stroke='#181818' stroke-width='2'/><circle cx='70' cy='35' r='5' fill='#DD4433'/><text x='105' y='40' fill='#DD4433'>*C–Cl</text><path d='M115 65 L150 65' stroke='#181818' stroke-width='1.5'/><polygon points='150,65 141,61 141,69' fill='#181818'/><text x='115' y='52' fill='#55565C'>NaNH2</text><polygon points='175,50 205,35 235,50 235,85 205,100 175,85' fill='none' stroke='#181818' stroke-width='2'/><line x1='205' y1='35' x2='235' y2='50' stroke='#EEA31F' stroke-width='3'/><circle cx='205' cy='35' r='5' fill='#DD4433'/><text x='175' y='120' fill='#55565C'>benzyne (symmetric)</text><path d='M250 65 L285 65' stroke='#181818' stroke-width='1.5'/><polygon points='285,65 276,61 276,69' fill='#181818'/><text x='300' y='50' fill='#181818'>*C–NH2 (50%)</text><text x='300' y='72' fill='#181818'>+ NH2 on C2 (50%)</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Mechanism = benzyne (elimination–addition). NaNH2 removes the ortho-H; Cl leaves → benzyne with a symmetric extra bond between C1 and C2."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "The amide (NH2⁻) then adds to EITHER C1 or C2 with equal probability."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "So half the aniline carries the –NH2 on the original labelled carbon, half on its neighbour — the label splits ~50:50."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "This is the classic experimental proof that a symmetric benzyne intermediate exists (cine substitution)."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "style": "red-margin",
+          "text": "Answer: the two products (label on C1 vs C2) prove the symmetric benzyne — impossible for addition–elimination."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A J E E Advanced classic, the isotope labelling experiment that pinned down the benzyne mechanism. Why does chlorobenzene labelled with carbon fourteen, treated with sodium amide, give two different labelled anilines?"
+            },
+            {
+              "seq": 2,
+              "text": "The board tracks the labelled carbon, shown as a red dot, all the way through, so we can see where it ends up."
+            },
+            {
+              "seq": 3,
+              "text": "The mechanism is benzyne, that is elimination followed by addition. Sodium amide first removes the hydrogen ortho to the chlorine, then the chlorine leaves, and the result is benzyne, carrying a symmetric extra bond shared equally between carbon one, which was labelled, and carbon two, its neighbour."
+            },
+            {
+              "seq": 4,
+              "text": "Now the decisive step. Because that extra bond is symmetric, the amide ion, N H two minus, cannot tell the two carbons apart, so it adds to either carbon one or carbon two with equal probability."
+            },
+            {
+              "seq": 5,
+              "text": "So the product splits in two. In roughly half the molecules the amino group ends up on the original labelled carbon, and in the other half it ends up on the neighbouring carbon. The radioactive label is therefore split about fifty fifty between the two positions."
+            },
+            {
+              "seq": 6,
+              "text": "That split is the whole point. It is the classic experimental proof that a genuinely symmetric benzyne intermediate exists, and it is a textbook example of cine substitution, where the entering group ends up next to where the leaving group was."
+            },
+            {
+              "seq": 7,
+              "text": "So the answer is that the two labelled anilines, one with the label on carbon one and one with it on carbon two, together prove the symmetric benzyne intermediate. Crucially, a simple addition elimination mechanism could never produce that scrambling, so this experiment cleanly rules it out."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Advanced classic, वो isotope labelling experiment जिसने benzyne mechanism को पक्का किया। Carbon fourteen से labelled chlorobenzene, sodium amide से treat होकर, दो अलग labelled anilines क्यों देता है?"
+            },
+            {
+              "seq": 2,
+              "text": "Board labelled carbon को, लाल dot के रूप में, पूरे रास्ते track करता है, ताकि हम देख सकें वो कहाँ ख़त्म होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Mechanism benzyne है, यानी elimination फिर addition। Sodium amide पहले chlorine के ortho वाला hydrogen हटाता है, फिर chlorine निकलता है, और नतीजा benzyne है, जो carbon one, जो labelled था, और carbon two, उसके पड़ोसी, के बीच बराबर बँटा symmetric extra bond रखता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब decisive step। चूँकि वो extra bond symmetric है, amide ion, N H two minus, दोनों carbons में फ़र्क़ नहीं कर सकता, तो वो carbon one या carbon two में से किसी पर बराबर probability से add होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो product दो में बँट जाता है। लगभग आधे molecules में amino group मूल labelled carbon पर आता है, और बाक़ी आधे में पड़ोसी carbon पर। इसलिए radioactive label दोनों positions के बीच लगभग fifty fifty बँटता है।"
+            },
+            {
+              "seq": 6,
+              "text": "वही split पूरा point है। ये classic experimental proof है कि एक सचमुच symmetric benzyne intermediate मौजूद है, और ये cine substitution का textbook example है, जहाँ entering group उस जगह के बगल आता है जहाँ leaving group था।"
+            },
+            {
+              "seq": 7,
+              "text": "तो answer ये है कि दोनों labelled anilines, एक में label carbon one पर और एक में carbon two पर, मिलकर symmetric benzyne intermediate साबित करते हैं। ख़ास बात, एक simple addition elimination mechanism वो scrambling कभी नहीं दे सकता, तो ये experiment उसे साफ़ rule out कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Advanced क्लासिक, वह समस्थानिक अंकन प्रयोग जिसने benzyne क्रियाविधि को पक्का किया। carbon fourteen से चिह्नित क्लोरोबेंज़ीन, सोडियम एमाइड से उपचारित होकर, दो भिन्न चिह्नित ऐनिलीन क्यों देता है?"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड चिह्नित कार्बन को, लाल बिंदु के रूप में, पूरे रास्ते देखता है, ताकि हम देख सकें वह कहाँ समाप्त होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "क्रियाविधि benzyne है, अर्थात विलोपन फिर योग। सोडियम एमाइड पहले क्लोरीन के ऑर्थो वाला हाइड्रोजन हटाता है, फिर क्लोरीन निकलता है, और परिणाम benzyne है, जो कार्बन एक, जो चिह्नित था, और कार्बन दो, उसके पड़ोसी, के बीच बराबर बँटा सममित अतिरिक्त बंध रखता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब निर्णायक चरण। चूँकि वह अतिरिक्त बंध सममित है, एमाइड आयन, N H two minus, दोनों कार्बनों में अंतर नहीं कर सकता, तो वह कार्बन एक या कार्बन दो में से किसी पर बराबर प्रायिकता से जुड़ता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो उत्पाद दो में बँट जाता है। लगभग आधे अणुओं में ऐमीनो समूह मूल चिह्नित कार्बन पर आता है, और बाक़ी आधे में पड़ोसी कार्बन पर। इसलिए रेडियोधर्मी चिह्न दोनों स्थितियों के बीच लगभग fifty fifty बँटता है।"
+            },
+            {
+              "seq": 6,
+              "text": "वही विभाजन पूरा सार है। यह क्लासिक प्रायोगिक प्रमाण है कि एक सचमुच सममित benzyne मध्यवर्ती मौजूद है, और यह cine प्रतिस्थापन का पाठ्यपुस्तक उदाहरण है, जहाँ प्रवेशी समूह उस स्थान के बगल आता है जहाँ त्यागी समूह था।"
+            },
+            {
+              "seq": 7,
+              "text": "तो उत्तर यह है कि दोनों चिह्नित ऐनिलीन, एक में चिह्न कार्बन एक पर और एक में कार्बन दो पर, मिलकर सममित benzyne मध्यवर्ती सिद्ध करते हैं। ख़ास बात, एक सरल योग विलोपन क्रियाविधि वह मिश्रण कभी नहीं दे सकती, तो यह प्रयोग उसे स्पष्ट रूप से अस्वीकृत कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "tips",
+      "subtopic": "The Complete Reaction Map",
+      "title": "Pitfalls & pro-tips: read the metal, read the conditions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The traps hidden in the reaction map"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "style": "red-margin",
+          "text": "Ambident nucleophiles: SILVER = NITROGEN. AgCN → isocyanide, AgNO2 → nitroalkane; KCN → nitrile, KNO2 → nitrite ester."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Match aryl conditions to mechanism: o/p-EWG → addition–elimination; extreme T & P → Dow; NaNH2 → benzyne."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Benzyne can shift the position (cine substitution); addition–elimination never does. Don't apply the wrong one."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "In EAS, halogen is deactivating BUT o/p-directing — the standard exception. Don't call it meta-directing."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "For 'add a carbon' targets, reach for KCN → nitrile → (reduce/hydrolyse). NH3 keeps the carbon count and over-alkylates."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "Pro-tip: on any reagent, first read the metal (K vs Ag) and the conditions — they carry the answer."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us gather the traps hidden in the reaction map, because most of them turn on one small detail in the reagent that students skim past."
+            },
+            {
+              "seq": 2,
+              "text": "The biggest is the ambident rule. Silver equals nitrogen. Silver cyanide gives the isocyanide, silver nitrite gives the nitroalkane, while the potassium salts give the nitrile and the nitrite ester respectively. Read the metal before you write the product."
+            },
+            {
+              "seq": 3,
+              "text": "Second, for aryl halides, always match the conditions to the mechanism. Ortho or para electron withdrawing groups mean addition elimination, extreme temperature and pressure mean Dow's process, and sodium amide means benzyne."
+            },
+            {
+              "seq": 4,
+              "text": "Third, remember that only the benzyne route can shift the position of substitution, the cine outcome. The addition elimination route never moves the position, so do not apply cine reasoning to it."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, in electrophilic aromatic substitution, the halogen is deactivating but ortho para directing. It is the standard exception, so never carelessly call it meta directing."
+            },
+            {
+              "seq": 6,
+              "text": "Fifth, a synthesis habit. When a target needs one more carbon, reach for potassium cyanide to make a nitrile, then reduce it to an amine or hydrolyse it to an acid. Ammonia does not add a carbon and tends to over alkylate into a mixture."
+            },
+            {
+              "seq": 7,
+              "text": "So the master pro tip for this whole section is simple. On any reagent, read the metal first, potassium versus silver, and read the conditions, gentle versus forcing versus a strong base. Those two small details almost always carry the answer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Reaction map में छुपे traps इकट्ठा करते हैं, क्योंकि ज़्यादातर reagent के एक छोटे detail पर टिके हैं जिसे students skim कर जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा ambident rule है। Silver equals nitrogen। Silver cyanide isocyanide देता है, silver nitrite nitroalkane देता है, जबकि potassium salts क्रमशः nitrile और nitrite ester देते हैं। Product लिखने से पहले metal पढ़ो।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, aryl halides के लिए, हमेशा conditions को mechanism से match करो। Ortho या para electron withdrawing groups मतलब addition elimination, extreme temperature और pressure मतलब Dow's process, और sodium amide मतलब benzyne।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, याद रखो कि सिर्फ़ benzyne route substitution की position shift कर सकता है, cine outcome। Addition elimination route position कभी नहीं हिलाता, तो उस पर cine reasoning मत लगाओ।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, electrophilic aromatic substitution में, halogen deactivating है पर ortho para directing। ये standard exception है, तो इसे लापरवाही से meta directing कभी मत कहो।"
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ, एक synthesis habit। जब target को एक और carbon चाहिए, nitrile बनाने के लिए potassium cyanide उठाओ, फिर उसे amine में reduce या acid में hydrolyse करो। Ammonia carbon नहीं जोड़ता और over alkylate होकर mixture बनाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो इस पूरे section का master pro tip simple है। किसी भी reagent पर, पहले metal पढ़ो, potassium versus silver, और conditions पढ़ो, gentle versus forcing versus strong base। वो दो छोटे details लगभग हमेशा answer लेकर आते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अभिक्रिया मानचित्र में छुपे जाल इकट्ठा करते हैं, क्योंकि अधिकांश अभिकर्मक के एक छोटे विवरण पर टिके हैं जिसे विद्यार्थी छोड़ जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा ambident नियम है। Silver equals nitrogen। सिल्वर सायनाइड आइसोसायनाइड देता है, सिल्वर नाइट्राइट नाइट्रोऐल्केन देता है, जबकि पोटैशियम लवण क्रमशः नाइट्राइल और नाइट्राइट एस्टर देते हैं। उत्पाद लिखने से पहले धातु पढ़िए।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, एरिल हैलाइड के लिए, हमेशा परिस्थितियों को क्रियाविधि से मिलाइए। ऑर्थो या पैरा इलेक्ट्रॉन आकर्षी समूह अर्थात योग विलोपन, अत्यधिक ताप और दाब अर्थात Dow प्रक्रिया, और सोडियम एमाइड अर्थात benzyne।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, याद रखिए कि केवल benzyne मार्ग प्रतिस्थापन की स्थिति स्थानांतरित कर सकता है, cine परिणाम। योग विलोपन मार्ग स्थिति कभी नहीं हिलाता, तो उस पर cine तर्क मत लगाइए।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, विद्युतस्नेही ऐरोमैटिक प्रतिस्थापन में, हैलोजन निष्क्रियकारी है पर ऑर्थो पैरा निर्देशक। यह मानक अपवाद है, तो इसे लापरवाही से मेटा निर्देशक कभी मत कहिए।"
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ, एक संश्लेषण आदत। जब लक्ष्य को एक और कार्बन चाहिए, नाइट्राइल बनाने के लिए पोटैशियम सायनाइड उठाइए, फिर उसे ऐमीन में अपचयित या अम्ल में जलअपघटित कीजिए। अमोनिया कार्बन नहीं जोड़ता और अति ऐल्किलन होकर मिश्रण बनाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो इस पूरे खंड का मुख्य सुझाव सरल है। किसी भी अभिकर्मक पर, पहले धातु पढ़िए, पोटैशियम बनाम सिल्वर, और परिस्थितियाँ पढ़िए, मृदु बनाम प्रबल बनाम प्रबल क्षार। वे दो छोटे विवरण लगभग हमेशा उत्तर लेकर आते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "cheat_sheet",
+      "subtopic": "The Complete Reaction Map",
+      "title": "Cheat sheet — the complete reaction map",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Quick-recall box: Sub-topic 04"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "R–X hub: KOH→alcohol, NaOR′→ether, KCN→nitrile, NH3→amine, KSH→thiol, R′COOAg→ester, NaI→iodide, Na→alkane."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Ambident + 'silver = nitrogen': KCN→R–CN (nitrile), AgCN→R–NC (isocyanide); KNO2→R–O–N=O (nitrite ester), AgNO2→R–NO2 (nitroalkane)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Aryl routes: NAS (o/p-EWG, addition–elimination); Dow's process (chlorobenzene + NaOH, 623 K/300 atm → phenoxide → phenol); benzyne (NaNH2, elimination–addition, cine substitution proven by 14C labelling)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Haloarene EAS: deactivating (–I) but ortho/para-directing (+R) — slower than benzene, o/p products. The standard exception."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "One image to keep: halide at the centre; read the metal (K/Ag) and the conditions to choose the branch."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the quick recall box for the complete reaction map, your final revision sheet for the chapter."
+            },
+            {
+              "seq": 2,
+              "text": "The R X hub in one breath: potassium hydroxide gives an alcohol, a sodium alkoxide gives an ether, potassium cyanide gives a nitrile, ammonia gives an amine, potassium hydrogen sulphide gives a thiol, a silver carboxylate gives an ester, sodium iodide gives the iodide, and sodium gives an alkane."
+            },
+            {
+              "seq": 3,
+              "text": "For the ambident nucleophiles, recall silver equals nitrogen. Potassium cyanide gives the nitrile and silver cyanide the isocyanide, while potassium nitrite gives the nitrite ester and silver nitrite the nitroalkane."
+            },
+            {
+              "seq": 4,
+              "text": "The three aryl routes: nucleophilic aromatic substitution when ortho or para electron withdrawing groups are present, by addition elimination; Dow's process, chlorobenzene with sodium hydroxide at about six hundred twenty three kelvin and three hundred atmospheres to give phenoxide and then phenol; and the benzyne route with sodium amide, elimination then addition, giving cine substitution, proved by the carbon fourteen labelling experiment."
+            },
+            {
+              "seq": 5,
+              "text": "And for electrophilic substitution on haloarenes, the halogen is deactivating through its inductive effect but ortho para directing through resonance. So the reaction is slower than benzene and gives ortho and para products, the standard exception you must remember."
+            },
+            {
+              "seq": 6,
+              "text": "So keep one image for the whole chapter: the halide at the centre of the map, and to choose the right branch you simply read the metal, potassium or silver, and the conditions, gentle, forcing, or a strong base. That single habit closes the chapter."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Complete reaction map का quick recall box यहाँ है, chapter की तुम्हारी आख़िरी revision sheet।"
+            },
+            {
+              "seq": 2,
+              "text": "R X hub एक साँस में: potassium hydroxide alcohol देता है, sodium alkoxide ether देता है, potassium cyanide nitrile देता है, ammonia amine देता है, potassium hydrogen sulphide thiol देता है, silver carboxylate ester देता है, sodium iodide iodide देता है, और sodium alkane देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Ambident nucleophiles के लिए, silver equals nitrogen याद करो। Potassium cyanide nitrile और silver cyanide isocyanide देता है, जबकि potassium nitrite nitrite ester और silver nitrite nitroalkane देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीन aryl routes: nucleophilic aromatic substitution जब ortho या para electron withdrawing groups हों, addition elimination से; Dow's process, chlorobenzene sodium hydroxide के साथ लगभग six hundred twenty three kelvin और three hundred atmospheres पर phenoxide और फिर phenol देता है; और benzyne route sodium amide के साथ, elimination फिर addition, cine substitution देता है, carbon fourteen labelling experiment से साबित।"
+            },
+            {
+              "seq": 5,
+              "text": "और haloarenes पर electrophilic substitution के लिए, halogen अपने inductive effect से deactivating है पर resonance से ortho para directing। तो reaction benzene से धीमी है और ortho और para products देती है, वही standard exception जो याद रखना है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो पूरे chapter के लिए एक image रखो: map के बीच में halide, और सही branch चुनने के लिए बस metal पढ़ो, potassium या silver, और conditions, gentle, forcing, या strong base। वही एक habit chapter बंद कर देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूर्ण अभिक्रिया मानचित्र का त्वरित स्मरण बॉक्स यहाँ है, अध्याय की आपकी अंतिम पुनरावृत्ति शीट।"
+            },
+            {
+              "seq": 2,
+              "text": "R X केंद्र एक साँस में: पोटैशियम हाइड्रॉक्साइड ऐल्कोहॉल देता है, सोडियम ऐल्कॉक्साइड ईथर देता है, पोटैशियम सायनाइड नाइट्राइल देता है, अमोनिया ऐमीन देता है, पोटैशियम हाइड्रोजन सल्फ़ाइड थायॉल देता है, सिल्वर कार्बोक्सिलेट एस्टर देता है, सोडियम आयोडाइड आयोडाइड देता है, और सोडियम ऐल्केन देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "ambident nucleophiles के लिए, silver equals nitrogen याद कीजिए। पोटैशियम सायनाइड नाइट्राइल और सिल्वर सायनाइड आइसोसायनाइड देता है, जबकि पोटैशियम नाइट्राइट नाइट्राइट एस्टर और सिल्वर नाइट्राइट नाइट्रोऐल्केन देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीन एरिल मार्ग: nucleophilic ऐरोमैटिक प्रतिस्थापन जब ऑर्थो या पैरा इलेक्ट्रॉन आकर्षी समूह हों, योग विलोपन से; Dow प्रक्रिया, क्लोरोबेंज़ीन सोडियम हाइड्रॉक्साइड के साथ लगभग six hundred twenty three केल्विन और three hundred वायुमंडल पर फ़ीनॉक्साइड और फिर फ़ीनॉल देता है; और benzyne मार्ग सोडियम एमाइड के साथ, विलोपन फिर योग, cine प्रतिस्थापन देता है, carbon fourteen अंकन प्रयोग से सिद्ध।"
+            },
+            {
+              "seq": 5,
+              "text": "और एरिल हैलाइड पर विद्युतस्नेही प्रतिस्थापन के लिए, हैलोजन अपने प्रेरणिक प्रभाव से निष्क्रियकारी है पर अनुनाद से ऑर्थो पैरा निर्देशक। तो अभिक्रिया बेंज़ीन से धीमी है और ऑर्थो और पैरा उत्पाद देती है, वही मानक अपवाद जो याद रखना है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो पूरे अध्याय के लिए एक छवि रखिए: मानचित्र के बीच में हैलाइड, और सही शाखा चुनने के लिए बस धातु पढ़िए, पोटैशियम या सिल्वर, और परिस्थितियाँ, मृदु, प्रबल, या प्रबल क्षार। वही एक आदत अध्याय बंद कर देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

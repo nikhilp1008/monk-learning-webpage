@@ -1,0 +1,2970 @@
+{
+  "chapter": "Sequences and Series",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 8,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "What is a Sequence?",
+      "title": "A sequence is a function of its position",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A sequence: an ordered list with a rule"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Order matters — 1st, 2nd, 3rd term each sit in a fixed position."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "caption": "Position n goes in, term aₙ comes out",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 200\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"18\" y=\"70\" width=\"112\" height=\"62\" rx=\"8\" fill=\"#eef2ff\" stroke=\"#4f46e5\" stroke-width=\"2\"/>\n  <text x=\"74\" y=\"95\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e293b\">input</text>\n  <text x=\"74\" y=\"116\" text-anchor=\"middle\" font-size=\"13\" fill=\"#334155\">n = 1, 2, 3, …</text>\n  <line x1=\"130\" y1=\"101\" x2=\"188\" y2=\"101\" stroke=\"#475569\" stroke-width=\"2\" marker-end=\"url(#a1)\"/>\n  <rect x=\"188\" y=\"66\" width=\"92\" height=\"70\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/>\n  <text x=\"234\" y=\"106\" text-anchor=\"middle\" font-size=\"15\" fill=\"#7c2d12\">rule aₙ</text>\n  <line x1=\"280\" y1=\"101\" x2=\"338\" y2=\"101\" stroke=\"#475569\" stroke-width=\"2\" marker-end=\"url(#a1)\"/>\n  <rect x=\"338\" y=\"70\" width=\"114\" height=\"62\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n  <text x=\"395\" y=\"95\" text-anchor=\"middle\" font-size=\"14\" fill=\"#14532d\">output</text>\n  <text x=\"395\" y=\"116\" text-anchor=\"middle\" font-size=\"13\" fill=\"#166534\">a₁, a₂, a₃, …</text>\n  <defs><marker id=\"a1\" markerWidth=\"9\" markerHeight=\"9\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#475569\"/></marker></defs>\n</svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "text": "Think of the term as a function of its position: input $n$, output $a_n$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "latex": "a_n = 2n - 1 \\;\\Rightarrow\\; 1,\\,3,\\,5,\\,7,\\dots"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "latex": "a_1 = a_2 = 1,\\quad a_n = a_{n-1} + a_{n-2}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "A sequence is NOT a set: 1, 1, 2 keeps its order and its repeat."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "text": "Finite sequence ends; infinite sequence runs on forever."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's start at the very foundation. A sequence is just an ordered list of numbers that follows a rule, like the house numbers down one side of a street."
+            },
+            {
+              "seq": 2,
+              "text": "The order is everything here. The first term, the second, the third — each one sits in a fixed position that you cannot swap around."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the picture to carry with you. A sequence behaves like a machine: you feed in a position, and it hands back the term that lives at that spot."
+            },
+            {
+              "seq": 4,
+              "text": "So install this habit right now — treat the term as a function of its position. Put in n, and out comes a sub n, the nth term."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> There are two ways someone can hand you the rule. An explicit rule gives a sub n directly — like a sub n equals two n minus one, which prints one, three, five, seven."
+            },
+            {
+              "seq": 6,
+              "text": "A recursive rule instead builds each term from the earlier ones plus a seed value. Fibonacci is the classic: start with two ones, and every later term is the sum of the previous two."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> One quiet trap to remember. A sequence is not a set. One, one, two is a perfectly valid sequence, and both the order and the repeated one genuinely matter."
+            },
+            {
+              "seq": 8,
+              "text": "And finally, a finite sequence stops after finitely many terms, while an infinite sequence just keeps going without any end."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो बिलकुल foundation से शुरू करते हैं। एक sequence बस numbers की एक ordered list है जो किसी rule को follow करती है, जैसे किसी street के एक side के house numbers।"
+            },
+            {
+              "seq": 2,
+              "text": "यहाँ order ही सब कुछ है। first term, second term, third term — हर एक की एक fixed position होती है जिसे तुम आपस में बदल नहीं सकते।"
+            },
+            {
+              "seq": 3,
+              "text": "यह picture दिमाग में बिठा लो। एक sequence एक machine की तरह काम करती है: तुम एक position डालते हो, और वो उस जगह का term वापस देती है।"
+            },
+            {
+              "seq": 4,
+              "text": "<curious> तो यह habit अभी डाल लो — term को उसकी position का function मानो। n डालो, और बाहर आता है a sub n, यानी nth term।"
+            },
+            {
+              "seq": 5,
+              "text": "rule देने के दो तरीके होते हैं। explicit rule सीधे a sub n देता है — जैसे a sub n equals two n minus one, जो one, three, five, seven print करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "recursive rule हर term को पिछले terms और एक seed value से बनाता है। Fibonacci classic है: दो ones से शुरू करो, और हर अगला term पिछले दो का sum है।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> एक quiet trap याद रखना। sequence एक set नहीं है। one, one, two एक बिलकुल valid sequence है, और order तथा repeat दोनों सच में matter करते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "और आखिर में, finite sequence finitely many terms के बाद रुक जाती है, जबकि infinite sequence बिना किसी end के चलती रहती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "From Sequence to Series",
+      "title": "Stop listing, start adding: the series",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A series is the running total of a sequence"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Sequence 1, 2, 3, 4 becomes the series 1 + 2 + 3 + 4."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 15,
+          "latex": "a_1 + a_2 + \\cdots + a_n = \\sum_{k=1}^{n} a_k"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Sequences are about the terms; series are about the total."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Cricket: runs each over form a sequence; the score after $n$ overs is the series."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Finite series: finitely many terms. Infinite series: continued without end."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The index need not start at 1: a partial sum is $\\sum_1^n - \\sum_1^{m-1}$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Golden habit: position → general term aₙ → then list or sum."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the second big idea. A series is what you get the moment you stop listing terms and start adding them up."
+            },
+            {
+              "seq": 2,
+              "text": "Take the simple sequence one, two, three, four. Turn the commas into plus signs and it becomes the series one plus two plus three plus four."
+            },
+            {
+              "seq": 3,
+              "text": "We write that compactly with the summation sign: a sub one plus a sub two, all the way to a sub n, equals the sum from k equals one to n of a sub k."
+            },
+            {
+              "seq": 4,
+              "text": "So keep the two ideas clean and separate. A sequence is about the individual terms; a series is about their total."
+            },
+            {
+              "seq": 5,
+              "text": "A cricket over makes this concrete. The runs scored in each over form a sequence, while the cumulative score after n overs is the series."
+            },
+            {
+              "seq": 6,
+              "text": "Just like sequences, series come in two flavours. A finite series adds finitely many terms; an infinite series continues its addition without end."
+            },
+            {
+              "seq": 7,
+              "text": "One notation point worth flagging. The index does not have to start at one. A partial sum from term m onward is just the whole sum up to n minus the whole sum up to m minus one."
+            },
+            {
+              "seq": 8,
+              "text": "And here is the golden habit for the entire chapter: go from position, to the general term a sub n, and only then decide whether to list the terms or sum them."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब दूसरा बड़ा idea। एक series वही है जो तुम्हें तब मिलती है जब तुम terms को list करना बंद करके उन्हें add करना शुरू करते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "simple sequence one, two, three, four लो। commas को plus signs में बदल दो और यह series बन जाती है — one plus two plus three plus four।"
+            },
+            {
+              "seq": 3,
+              "text": "इसे हम summation sign से compact लिखते हैं: a sub one plus a sub two, a sub n तक, equals sum from k equals one to n of a sub k।"
+            },
+            {
+              "seq": 4,
+              "text": "तो दोनों ideas को साफ़ और अलग रखो। sequence individual terms के बारे में है; series उनके total के बारे में है।"
+            },
+            {
+              "seq": 5,
+              "text": "एक cricket over इसे concrete बना देता है। हर over में बने runs एक sequence हैं, जबकि n overs के बाद का cumulative score series है।"
+            },
+            {
+              "seq": 6,
+              "text": "sequences की तरह series भी दो तरह की होती हैं। finite series finitely many terms जोड़ती है; infinite series बिना end के add करती रहती है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक notation point flag करने लायक है। index का one से शुरू होना ज़रूरी नहीं। term m से आगे का partial sum बस पूरा sum up to n minus पूरा sum up to m minus one है।"
+            },
+            {
+              "seq": 8,
+              "text": "और यह रहा पूरे chapter का golden habit: position से चलो, general term a sub n तक जाओ, और तभी decide करो कि terms list करने हैं या sum।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "formulas",
+      "subtopic": "Sigma Notation and Its Algebra",
+      "title": "The three rules that move sums around",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Sigma is shorthand for addition — with three algebra rules"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\sum_{k=1}^{n} (a_k + b_k) = \\sum_{k=1}^{n} a_k + \\sum_{k=1}^{n} b_k"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "\\sum_{k=1}^{n} c\\,a_k = c \\sum_{k=1}^{n} a_k"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "\\sum_{k=1}^{n} c = c\\,n"
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "caption": "Expand, substitute, add",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 460 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"30\" y=\"90\" font-size=\"46\" fill=\"#4f46e5\">Σ</text>\n  <text x=\"26\" y=\"45\" font-size=\"14\" fill=\"#334155\">4</text>\n  <text x=\"20\" y=\"128\" font-size=\"14\" fill=\"#334155\">k=1</text>\n  <text x=\"72\" y=\"90\" font-size=\"20\" fill=\"#1e293b\">(2k − 1)</text>\n  <text x=\"185\" y=\"90\" font-size=\"22\" fill=\"#475569\">=</text>\n  <text x=\"215\" y=\"90\" font-size=\"20\" fill=\"#0f766e\">1 + 3 + 5 + 7</text>\n  <text x=\"360\" y=\"90\" font-size=\"22\" fill=\"#475569\">=</text>\n  <text x=\"392\" y=\"90\" font-size=\"22\" fill=\"#b91c1c\">16</text>\n  <text x=\"70\" y=\"140\" font-size=\"13\" fill=\"#64748b\">read the range · substitute k · add</text>\n</svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Explicit rule gives $a_n$ directly; recursive rule needs seeds."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "A rule must hold for ALL $n$ — three matching terms is only a conjecture."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "To find aₙ from a pattern: constant differences → linear; constant ratios → GP."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "These are the tools that let you rearrange any sum, so let's meet them properly."
+            },
+            {
+              "seq": 2,
+              "text": "First, the sum of a sum splits apart. The sum of a sub k plus b sub k equals the sum of the a's plus the sum of the b's — you can separate the two families."
+            },
+            {
+              "seq": 3,
+              "text": "Second, a constant multiplier pulls straight out. The sum of c times a sub k is just c times the sum of a sub k."
+            },
+            {
+              "seq": 4,
+              "text": "Third, adding the same constant c a total of n times gives c times n — obvious, but it saves you every time a bare constant appears inside the sigma."
+            },
+            {
+              "seq": 5,
+              "text": "Reading a sigma is mechanical: read the index range, substitute each k, and add. The sum from k equals one to four of two k minus one is one plus three plus five plus seven, which is sixteen."
+            },
+            {
+              "seq": 6,
+              "text": "Two ways to define the underlying sequence carry over here. An explicit rule hands you a sub n directly; a recursive rule needs its seed values before it can generate anything."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> Now the trap that quietly ruins pattern problems. A general term must hold for every n. Fitting the first three terms is only a conjecture until the rule is stated and checked."
+            },
+            {
+              "seq": 8,
+              "text": "And a fast diagnostic for spotting the pattern: constant first differences mean a sub n is linear, and constant ratios mean it is geometric."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये वो tools हैं जो तुम्हें किसी भी sum को rearrange करने देते हैं, तो इन्हें ठीक से समझ लो।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, sum का sum अलग हो जाता है। sum of a sub k plus b sub k equals sum of the a's plus sum of the b's — तुम दोनों families को separate कर सकते हो।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, constant multiplier सीधे बाहर आ जाता है। sum of c times a sub k बस c times sum of a sub k है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, एक ही constant c को n बार add करना c times n देता है — obvious है, पर हर बार काम आता है जब sigma के अंदर bare constant आता है।"
+            },
+            {
+              "seq": 5,
+              "text": "sigma पढ़ना mechanical है: index range पढ़ो, हर k substitute करो, और add करो। sum from k equals one to four of two k minus one है one plus three plus five plus seven, यानी sixteen।"
+            },
+            {
+              "seq": 6,
+              "text": "sequence define करने के दोनों तरीके यहाँ भी लागू होते हैं। explicit rule सीधे a sub n देता है; recursive rule को कुछ भी generate करने से पहले अपने seed values चाहिए।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> अब वो trap जो pattern problems को चुपके से बर्बाद करता है। general term को हर n के लिए hold करना चाहिए। पहले तीन terms fit कर लेना सिर्फ़ एक conjecture है जब तक rule state और check न हो।"
+            },
+            {
+              "seq": 8,
+              "text": "और pattern पहचानने का fast diagnostic: constant first differences का मतलब a sub n linear है, और constant ratios का मतलब यह geometric है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations Worked Examples",
+      "title": "Listing terms from a formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Write the first four terms of aₙ = (2n − 3)/4"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Just substitute $n = 1, 2, 3, 4$ into the rule."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "latex": "a_1 = \\frac{2(1)-3}{4} = -\\frac{1}{4}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "latex": "a_2 = \\frac{1}{4}, \\quad a_3 = \\frac{3}{4}, \\quad a_4 = \\frac{5}{4}"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 31,
+          "style": "red-margin",
+          "text": "Terms −¼, ¼, ¾, 5⁄4 rise by ½ each — they form an AP!"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "text": "Substitution is Procedure 1: from general term to terms."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "Answer: the four terms are −¼, ¼, ¾, and 5⁄4."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's put the machine to work on a clean board example. We are asked for the first four terms of a sub n equals two n minus three, all over four."
+            },
+            {
+              "seq": 2,
+              "text": "There is nothing subtle here — this is procedure one, from general term to terms. You simply substitute n equals one, two, three, and four into the rule."
+            },
+            {
+              "seq": 3,
+              "text": "Start with n equals one. Two times one is two, minus three is minus one, over four gives minus one quarter. That is our first term."
+            },
+            {
+              "seq": 4,
+              "text": "Carrying on the same way, n equals two gives one quarter, n equals three gives three quarters, and n equals four gives five over four."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> Now notice something lovely. Those four terms climb by exactly one half each step, so they secretly form an arithmetic progression — a little preview of the next unit."
+            },
+            {
+              "seq": 6,
+              "text": "So the whole move was just substitution — the most basic habit in the chapter, and the one everything else is built on."
+            },
+            {
+              "seq": 7,
+              "text": "Our answer, cleanly stated: the first four terms are minus one quarter, one quarter, three quarters, and five over four."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो machine को एक clean board example पर काम में लाते हैं। हमसे a sub n equals two n minus three, over four के first four terms माँगे गए हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "यहाँ कुछ भी subtle नहीं है — यह procedure one है, general term से terms तक। तुम बस n equals one, two, three, और four rule में substitute करते हो।"
+            },
+            {
+              "seq": 3,
+              "text": "n equals one से शुरू करो। two times one is two, minus three is minus one, over four gives minus one quarter। यह हमारा पहला term है।"
+            },
+            {
+              "seq": 4,
+              "text": "इसी तरह आगे बढ़ते हुए, n equals two देता है one quarter, n equals three देता है three quarters, और n equals four देता है five over four।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> अब एक प्यारी बात notice करो। ये चारों terms हर step पर exactly one half बढ़ते हैं, तो ये चुपके से एक arithmetic progression बनाते हैं — अगले unit की एक छोटी झलक।"
+            },
+            {
+              "seq": 6,
+              "text": "तो पूरा move सिर्फ़ substitution था — chapter की सबसे basic habit, और वो जिस पर बाकी सब कुछ खड़ा है।"
+            },
+            {
+              "seq": 7,
+              "text": "हमारा answer, साफ़ तौर पर: first four terms हैं minus one quarter, one quarter, three quarters, और five over four।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations Worked Examples",
+      "title": "Finding a general term from a pattern",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find the general term of 3, 8, 15, 24, 35, …"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Check the differences first: 5, 7, 9, 11 — themselves an AP."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "text": "Constant SECOND differences ⇒ $a_n$ is quadratic in $n$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "a_n = n^2 + 2n = n(n+2)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "1\\cdot 3 = 3,\\;\\; 2\\cdot 4 = 8,\\;\\; 3\\cdot 5 = 15 \\;\\checkmark"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Always verify a 4th term: a pattern is a conjecture until it holds."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Answer: aₙ = n(n + 2)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one flips the direction — we are given the terms three, eight, fifteen, twenty-four, thirty-five, and asked to recover the rule."
+            },
+            {
+              "seq": 2,
+              "text": "The first move for any pattern is to look at the differences. Here they are five, seven, nine, eleven, and those differences themselves form an arithmetic progression."
+            },
+            {
+              "seq": 3,
+              "text": "That is the tell. When the second differences are constant, the general term must be quadratic in n — a formula built from n squared."
+            },
+            {
+              "seq": 4,
+              "text": "Working it out, the rule is a sub n equals n squared plus two n, which factors neatly as n times n plus two."
+            },
+            {
+              "seq": 5,
+              "text": "Let's confirm it. One times three is three, two times four is eight, three times five is fifteen — every term matches."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> And never skip this. A pattern is only a conjecture until you have verified it holds beyond the terms you used to guess it."
+            },
+            {
+              "seq": 7,
+              "text": "So the answer is clean: a sub n equals n times n plus two."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example direction को उलट देता है — हमें terms three, eight, fifteen, twenty-four, thirty-five दिए गए हैं और rule recover करना है।"
+            },
+            {
+              "seq": 2,
+              "text": "किसी भी pattern के लिए पहला move है differences देखना। यहाँ ये हैं five, seven, nine, eleven, और ये differences खुद एक arithmetic progression बनाते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "यही संकेत है। जब second differences constant हों, तो general term n में quadratic होना चाहिए — n squared से बना एक formula।"
+            },
+            {
+              "seq": 4,
+              "text": "हल करने पर, rule है a sub n equals n squared plus two n, जो साफ़-सुथरे factor होकर n times n plus two बन जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "चलो confirm करें। one times three is three, two times four is eight, three times five is fifteen — हर term match करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> और इसे कभी skip मत करो। एक pattern सिर्फ़ conjecture है जब तक तुम verify न कर लो कि यह उन terms से आगे भी hold करता है जिनसे तुमने guess किया।"
+            },
+            {
+              "seq": 7,
+              "text": "तो answer साफ़ है: a sub n equals n times n plus two।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations Worked Examples",
+      "title": "Recursive sequences need not be AP or GP",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Write five terms: a₁ = 2, aₙ = 3aₙ₋₁ + 1"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Each term is built from the one before it — feed it forward."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "a_2 = 3(2) + 1 = 7"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "a_3 = 3(7) + 1 = 22, \\quad a_4 = 67, \\quad a_5 = 202"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Differences 5, 15, 45… and ratios both change — neither AP nor GP."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Recursion is Procedure 4: unfold terms one at a time."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Answer: 2, 7, 22, 67, 202."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here the rule is recursive, so we cannot jump straight to any term — we have to build them up in order. The seed is a sub one equals two."
+            },
+            {
+              "seq": 2,
+              "text": "The recipe is: each new term is three times the previous term, plus one. So we just feed the sequence forward, one step at a time."
+            },
+            {
+              "seq": 3,
+              "text": "From the seed of two, a sub two is three times two plus one, which is seven."
+            },
+            {
+              "seq": 4,
+              "text": "Continuing, a sub three is three times seven plus one, so twenty-two; then sixty-seven; then two hundred and two."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> Now look carefully at what we built. The gaps are five, fifteen, forty-five — not constant — and the ratios shift too, so this is neither an arithmetic nor a geometric progression."
+            },
+            {
+              "seq": 6,
+              "text": "That is the real lesson of the example. Recursive sequences are their own thing; you unfold them term by term rather than reaching for a closed formula."
+            },
+            {
+              "seq": 7,
+              "text": "So the first five terms are two, seven, twenty-two, sixty-seven, and two hundred and two."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ rule recursive है, तो हम सीधे किसी भी term पर नहीं कूद सकते — हमें उन्हें order में build करना होगा। seed है a sub one equals two।"
+            },
+            {
+              "seq": 2,
+              "text": "recipe यह है: हर नया term पिछले term का three times, plus one होता है। तो हम sequence को एक-एक step आगे feed करते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "two के seed से, a sub two is three times two plus one, यानी seven।"
+            },
+            {
+              "seq": 4,
+              "text": "आगे बढ़ते हुए, a sub three is three times seven plus one, तो twenty-two; फिर sixty-seven; फिर two hundred and two।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> अब ध्यान से देखो हमने क्या बनाया। gaps हैं five, fifteen, forty-five — constant नहीं — और ratios भी बदलते हैं, तो यह न arithmetic है न geometric progression।"
+            },
+            {
+              "seq": 6,
+              "text": "यही example का असली सबक है। recursive sequences अपनी अलग चीज़ हैं; तुम इन्हें term by term unfold करते हो, closed formula की तरफ़ नहीं भागते।"
+            },
+            {
+              "seq": 7,
+              "text": "तो पहले पाँच terms हैं two, seven, twenty-two, sixty-seven, और two hundred and two।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations Worked Examples",
+      "title": "Splitting a sum with sigma linearity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Evaluate Σ (3k² − 2k + 1) from k = 1 to n"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Split by linearity into three standard sums."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "3\\sum k^2 - 2\\sum k + \\sum 1"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "3\\cdot\\frac{n(n+1)(2n+1)}{6} - 2\\cdot\\frac{n(n+1)}{2} + n"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "latex": "= n^3 + \\tfrac{1}{2}n^2 + \\tfrac{1}{2}n = \\frac{n(2n^2 + n + 1)}{2}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "Split the sum, apply known sums — the engine of Unit 7."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Answer: n(2n² + n + 1) / 2."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a preview of the summation engine we'll build in Unit seven. We want the sum from k equals one to n of three k squared minus two k plus one."
+            },
+            {
+              "seq": 2,
+              "text": "The key is linearity. A messy summand splits into three separate sums, each of which we can handle on its own."
+            },
+            {
+              "seq": 3,
+              "text": "So this becomes three times the sum of k squared, minus two times the sum of k, plus the sum of one."
+            },
+            {
+              "seq": 4,
+              "text": "Now plug in the standard results: the sum of k squared is n times n plus one times two n plus one over six, the sum of k is n times n plus one over two, and the sum of one is just n."
+            },
+            {
+              "seq": 5,
+              "text": "Doing the algebra, everything collapses to n cubed plus one half n squared plus one half n, which tidies up to n times two n squared plus n plus one, all over two."
+            },
+            {
+              "seq": 6,
+              "text": "<excited> That is the whole philosophy in one problem — split the sum, apply the sums you already know. This exact move powers the special-series unit later."
+            },
+            {
+              "seq": 7,
+              "text": "So the closed form is n times the quantity two n squared plus n plus one, divided by two."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब Unit seven में हम जो summation engine बनाएँगे उसकी एक झलक। हमें sum from k equals one to n of three k squared minus two k plus one चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "key है linearity। एक messy summand तीन अलग sums में split हो जाता है, और हर एक को हम अलग से handle कर सकते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो यह बन जाता है three times sum of k squared, minus two times sum of k, plus sum of one।"
+            },
+            {
+              "seq": 4,
+              "text": "अब standard results डालो: sum of k squared है n times n plus one times two n plus one over six, sum of k है n times n plus one over two, और sum of one बस n है।"
+            },
+            {
+              "seq": 5,
+              "text": "algebra करने पर, सब कुछ n cubed plus one half n squared plus one half n में सिमट जाता है, जो साफ़ होकर n times two n squared plus n plus one, over two बनता है।"
+            },
+            {
+              "seq": 6,
+              "text": "<excited> यही पूरी philosophy एक ही problem में है — sum को split करो, जो sums पहले से पता हैं उन्हें apply करो। यही exact move बाद में special-series unit चलाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो closed form है n times the quantity two n squared plus n plus one, over two।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "tips",
+      "subtopic": "Foundations",
+      "title": "Foundations: the four traps and the golden habit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Foundations — mistakes to hunt, habits to keep"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Trap 1: confusing the nth term aₙ with the sum Sₙ."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Trap 2: declaring a general term from 3 terms without checking a 4th."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Trap 3: misreading the limits of $\\sum$ (starting at 1 when it starts at 2)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Trap 4: treating a sequence as an unordered set, losing order/repetition."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Pro-tip: write $a_n$ FIRST, then decide — list, sum, or test for AP/GP."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "To classify: differences constant → linear; ratios constant → GP."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Golden habit: position → general term aₙ → then list or sum."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lock in the four traps that leak errors into everything downstream, then the one habit that prevents most of them."
+            },
+            {
+              "seq": 2,
+              "text": "The foundational trap, and the parent of countless later slips, is confusing the nth term a sub n with the running sum S sub n. Keep those two symbols crystal clear."
+            },
+            {
+              "seq": 3,
+              "text": "The second trap is over-fitting a pattern — declaring a general term from just three terms without ever checking a fourth. A pattern stays a guess until the rule is confirmed."
+            },
+            {
+              "seq": 4,
+              "text": "Third is a pure reading error: misjudging the limits of the sigma, for instance summing from one when the index actually starts at two."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth is quietly treating a sequence as an unordered set, which throws away the order and any repeats that carry real information."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> Now the pro-tip that dissolves most of these. Always write the general term a sub n first, and only then decide what to do with it — list it, sum it, or test it for AP or GP."
+            },
+            {
+              "seq": 7,
+              "text": "And to classify fast: constant differences tell you it is linear, while constant ratios tell you it is geometric."
+            },
+            {
+              "seq": 8,
+              "text": "Hold the golden habit above all: go from position, to the general term a sub n, and then choose to list or to sum. Get this reflex right and the whole chapter stops leaking."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो उन चार traps को pin कर लें जो हर downstream चीज़ में errors leak करते हैं, और फिर वो एक habit जो इनमें से ज़्यादातर को रोकती है।"
+            },
+            {
+              "seq": 2,
+              "text": "foundational trap, और बाद के अनगिनत slips का parent, है nth term a sub n को running sum S sub n के साथ confuse करना। इन दोनों symbols को बिलकुल साफ़ रखो।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा trap है pattern को over-fit करना — सिर्फ़ तीन terms से general term declare कर देना बिना कोई चौथा check किए। pattern तब तक guess रहता है जब तक rule confirm न हो।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा एक pure reading error है: sigma की limits को गलत आँकना, जैसे one से sum करना जबकि index असल में two से शुरू होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा है चुपके से sequence को unordered set मान लेना, जो order और उन repeats को फेंक देता है जो असली information रखते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> अब वो pro-tip जो इनमें से ज़्यादातर को घोल देती है। हमेशा general term a sub n पहले लिखो, और तभी decide करो कि इसका क्या करना है — list करना, sum करना, या AP या GP के लिए test करना।"
+            },
+            {
+              "seq": 7,
+              "text": "और fast classify करने के लिए: constant differences बताते हैं यह linear है, जबकि constant ratios बताते हैं यह geometric है।"
+            },
+            {
+              "seq": 8,
+              "text": "सबसे ऊपर golden habit रखो: position से चलो, general term a sub n तक जाओ, और फिर list या sum चुनो। यह reflex सही कर लो और पूरा chapter leak करना बंद कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "concept",
+      "subtopic": "AP - Concept",
+      "title": "An AP is repeated addition — the staircase",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Arithmetic progression: add the same step, over and over"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "Equal steps of height d; plotting aₙ vs n gives a line",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 240\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"210\" x2=\"250\" y2=\"210\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <rect x=\"55\" y=\"180\" width=\"42\" height=\"30\" fill=\"#e0e7ff\" stroke=\"#4f46e5\"/>\n  <rect x=\"97\" y=\"150\" width=\"42\" height=\"60\" fill=\"#e0e7ff\" stroke=\"#4f46e5\"/>\n  <rect x=\"139\" y=\"120\" width=\"42\" height=\"90\" fill=\"#e0e7ff\" stroke=\"#4f46e5\"/>\n  <rect x=\"181\" y=\"90\" width=\"42\" height=\"120\" fill=\"#e0e7ff\" stroke=\"#4f46e5\"/>\n  <text x=\"76\" y=\"174\" text-anchor=\"middle\" font-size=\"12\" fill=\"#3730a3\">a</text>\n  <text x=\"118\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" fill=\"#3730a3\">a+d</text>\n  <text x=\"160\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" fill=\"#3730a3\">a+2d</text>\n  <text x=\"202\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"#3730a3\">a+3d</text>\n  <text x=\"120\" y=\"228\" text-anchor=\"middle\" font-size=\"12\" fill=\"#64748b\">equal steps of height d</text>\n  <line x1=\"300\" y1=\"210\" x2=\"300\" y2=\"70\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <line x1=\"300\" y1=\"210\" x2=\"450\" y2=\"210\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <line x1=\"310\" y1=\"200\" x2=\"440\" y2=\"95\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n  <circle cx=\"322\" cy=\"190\" r=\"4\" fill=\"#16a34a\"/>\n  <circle cx=\"352\" cy=\"166\" r=\"4\" fill=\"#16a34a\"/>\n  <circle cx=\"382\" cy=\"142\" r=\"4\" fill=\"#16a34a\"/>\n  <circle cx=\"412\" cy=\"118\" r=\"4\" fill=\"#16a34a\"/>\n  <text x=\"375\" y=\"235\" text-anchor=\"middle\" font-size=\"12\" fill=\"#64748b\">aₙ vs n : slope d</text>\n</svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "text": "The defining property: the gap between consecutive terms never changes."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 25,
+          "latex": "d = a_2 - a_1 = a_3 - a_2 = \\cdots = a_k - a_{k-1}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Climb $(n-1)$ steps from $a$ and you already have $a + (n-1)d$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "text": "Savings, stadium seating, auto-fare — all everyday APs."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "An AP is 'linear': plot aₙ vs n and you get a straight line of slope d."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "Nearly every AP property is just a fact about straight lines."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the first real progression. An arithmetic progression is the mathematics of adding the same step, over and over again."
+            },
+            {
+              "seq": 2,
+              "text": "Picture a staircase where every step has exactly the same height. You start at floor level a, and each step lifts you by the same amount d."
+            },
+            {
+              "seq": 3,
+              "text": "That is the single defining property: the gap between consecutive terms never changes. That fixed gap has a name — the common difference d."
+            },
+            {
+              "seq": 4,
+              "text": "Written out, d equals a sub two minus a sub one, equals a sub three minus a sub two, and so on down the line — every consecutive pair differs by the same d."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> And here is the beautiful part: after climbing n minus one steps from a, you are already standing at a plus n minus one times d. You have essentially derived the nth-term formula just by walking up the stairs."
+            },
+            {
+              "seq": 6,
+              "text": "These show up everywhere in daily life — fixed monthly savings, stadium seating that grows by a couple of seats per row, or an auto fare with a flat per-kilometre charge."
+            },
+            {
+              "seq": 7,
+              "text": "The deep idea to install early is that an AP is linear. Plot a sub n against n and the points land on a straight line whose slope is exactly d."
+            },
+            {
+              "seq": 8,
+              "text": "That one image explains almost every property we'll meet — because they are all just facts about straight lines wearing a disguise."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब पहली असली progression। एक arithmetic progression वही गणित है जिसमें तुम एक ही step को बार-बार add करते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "एक staircase सोचो जहाँ हर step की height बिलकुल same है। तुम floor level a से शुरू करते हो, और हर step तुम्हें same amount d से ऊपर उठाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "यही single defining property है: consecutive terms के बीच का gap कभी नहीं बदलता। इस fixed gap का एक नाम है — common difference d।"
+            },
+            {
+              "seq": 4,
+              "text": "लिखने पर, d equals a sub two minus a sub one, equals a sub three minus a sub two, और इसी तरह आगे — हर consecutive pair same d से differ करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> और यह रही खूबसूरत बात: a से n minus one steps चढ़ने के बाद, तुम पहले से ही a plus n minus one times d पर खड़े हो। तुमने सीढ़ियाँ चढ़ते हुए ही nth-term formula essentially derive कर लिया।"
+            },
+            {
+              "seq": 6,
+              "text": "ये daily life में हर जगह दिखते हैं — fixed monthly savings, stadium seating जो हर row में दो-चार seats बढ़ती है, या auto fare जिसमें flat per-kilometre charge हो।"
+            },
+            {
+              "seq": 7,
+              "text": "जल्दी बिठाने वाला deep idea यह है कि AP linear है। a sub n को n के against plot करो और points एक straight line पर आते हैं जिसकी slope exactly d है।"
+            },
+            {
+              "seq": 8,
+              "text": "यही एक image लगभग हर property को समझा देती है जो हम मिलेंगे — क्योंकि वे सब बस straight lines के facts हैं, disguise पहने हुए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "AP - Derivations",
+      "title": "Deriving the nth term and the Gauss sum",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two board-derivable results you must reproduce"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Stack the defining equations $a_k = a_{k-1} + d$ and add."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 15,
+          "latex": "a_n = a + (n-1)d"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "text": "For the sum: write $S_n$ forwards, then backwards, and add."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "latex": "2S_n = n\\,[\\,2a + (n-1)d\\,]"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 39,
+          "latex": "S_n = \\frac{n}{2}\\,[\\,2a + (n-1)d\\,] = \\frac{n}{2}(a + l)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "style": "red-margin",
+          "text": "This is Gauss's trick — pair first-with-last, each column sums to a + l."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "Both formulas assume $n$ is a positive integer."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "These two derivations are named, board-derivable results — examiners can ask for them line by line, so let's build them cleanly."
+            },
+            {
+              "seq": 2,
+              "text": "For the nth term, stack up the defining equations: each term equals the previous one plus d. Add all n minus one of them, and every interior term cancels telescopically."
+            },
+            {
+              "seq": 3,
+              "text": "What survives is beautifully simple: a sub n equals a plus n minus one times d. That is the workhorse formula of the whole unit."
+            },
+            {
+              "seq": 4,
+              "text": "The sum uses a different trick, the one the young Gauss reputedly used. Write the sum S sub n forwards, then write it again backwards underneath."
+            },
+            {
+              "seq": 5,
+              "text": "Now add the two lines column by column. Each of the n columns gives the same value, two a plus n minus one d, so twice S sub n equals n times that quantity."
+            },
+            {
+              "seq": 6,
+              "text": "Divide by two and you have it: S sub n equals n over two times two a plus n minus one d — and since the last term is l, that is also n over two times a plus l."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> Feel the elegance here — pairing the first term with the last, the second with the second-last, every pair adds to the same total. That symmetry is the entire proof."
+            },
+            {
+              "seq": 8,
+              "text": "One quiet condition underlies both formulas: n must be a positive integer. If your algebra ever hands you a fraction or a negative n, that is a signal, not an answer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये दो derivations named, board-derivable results हैं — examiners इन्हें line by line पूछ सकते हैं, तो इन्हें साफ़-सुथरे बनाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "nth term के लिए, defining equations को stack करो: हर term पिछले term plus d के बराबर है। इन n minus one equations को add करो, और हर interior term telescopically cancel हो जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "जो बचता है वो बेहद simple है: a sub n equals a plus n minus one times d। यही पूरे unit का workhorse formula है।"
+            },
+            {
+              "seq": 4,
+              "text": "sum एक अलग trick use करता है, वही जो young Gauss ने कथित रूप से use किया था। sum S sub n को forwards लिखो, फिर उसके नीचे उसे backwards दोबारा लिखो।"
+            },
+            {
+              "seq": 5,
+              "text": "अब दोनों lines को column by column add करो। हर एक n columns same value देता है, two a plus n minus one d, तो twice S sub n equals n times that quantity।"
+            },
+            {
+              "seq": 6,
+              "text": "two से divide करो और यह मिल गया: S sub n equals n over two times two a plus n minus one d — और चूँकि last term l है, यह n over two times a plus l भी है।"
+            },
+            {
+              "seq": 7,
+              "text": "<excited> यहाँ की elegance महसूस करो — first term को last से pair करना, second को second-last से, हर pair same total देता है। यही symmetry पूरा proof है।"
+            },
+            {
+              "seq": 8,
+              "text": "एक quiet condition दोनों formulas के नीचे है: n एक positive integer होना चाहिए। अगर तुम्हारा algebra कभी fraction या negative n दे, तो वो एक signal है, answer नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "formulas",
+      "subtopic": "AP - Core Formulas",
+      "title": "The AP core formula set",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Locked notation, and the four core formulas"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$a$ = first term, $d$ = common difference, $l$ = last term, $S_n$ = sum."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 15,
+          "latex": "a_n = a + (n-1)d"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "latex": "a'_n = l - (n-1)d \\quad (\\text{nth term from the end})"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 31,
+          "latex": "S_n = \\frac{n}{2}\\,[\\,2a + (n-1)d\\,]"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "latex": "S_n = \\frac{n}{2}(a + l)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "style": "red-margin",
+          "text": "Off-by-one alert: it is (n − 1)d, never nd. Always say 'n minus one'."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "d can be positive, zero, or negative — never assume $d > 0$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the notation and the formulas you will reach for constantly. This notation stays locked for the rest of the chapter."
+            },
+            {
+              "seq": 2,
+              "text": "The symbols are: a for the first term, d for the common difference, l for the last term, and S sub n for the sum of the first n terms."
+            },
+            {
+              "seq": 3,
+              "text": "The nth term from the beginning is a plus n minus one times d — the formula we just derived and the one you'll use most."
+            },
+            {
+              "seq": 4,
+              "text": "Sometimes it is cleaner to count from the end. The nth term from the end is l minus n minus one times d — the same structure, walking the other way."
+            },
+            {
+              "seq": 5,
+              "text": "The sum from first principles is n over two times two a plus n minus one d. Use this form whenever you know a and d."
+            },
+            {
+              "seq": 6,
+              "text": "When you happen to know the last term l instead, the sum simplifies to the lovely n over two times a plus l — first plus last, times how many pairs."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> Here is the single most common AP error to guard against. It is n minus one times d, never n times d. Whisper 'n minus one' to yourself every single time."
+            },
+            {
+              "seq": 8,
+              "text": "And one more caution: d can be positive, zero, or negative. Never quietly assume d is positive, or you will lose every decreasing-AP and first-negative-term problem."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो notation और वो formulas consolidate करें जिन्हें तुम लगातार reach करोगे। यह notation बाकी chapter के लिए locked रहती है।"
+            },
+            {
+              "seq": 2,
+              "text": "symbols हैं: first term के लिए a, common difference के लिए d, last term के लिए l, और first n terms के sum के लिए S sub n।"
+            },
+            {
+              "seq": 3,
+              "text": "beginning से nth term है a plus n minus one times d — वही formula जो हमने अभी derive किया और जिसे तुम सबसे ज़्यादा use करोगे।"
+            },
+            {
+              "seq": 4,
+              "text": "कभी-कभी end से गिनना cleaner होता है। end से nth term है l minus n minus one times d — same structure, दूसरी तरफ़ चलते हुए।"
+            },
+            {
+              "seq": 5,
+              "text": "first principles से sum है n over two times two a plus n minus one d। यह form तब use करो जब तुम्हें a और d पता हों।"
+            },
+            {
+              "seq": 6,
+              "text": "जब तुम्हें last term l पता हो, तो sum simplify होकर प्यारा n over two times a plus l बन जाता है — first plus last, times कितने pairs।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> यह रही सबसे common AP error जिससे बचना है। यह n minus one times d है, कभी n times d नहीं। हर बार खुद से 'n minus one' whisper करो।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक caution: d positive, zero, या negative हो सकता है। चुपके से यह मत मान लो कि d positive है, वरना तुम हर decreasing-AP और first-negative-term problem हार जाओगे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "formulas",
+      "subtopic": "AP - Means and Characterization",
+      "title": "Arithmetic means and the Sₙ = An² + Bn test",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Arithmetic mean, inserting means, and the sum test"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "a,\\,b,\\,c \\text{ in AP} \\iff b = \\frac{a+c}{2}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Insert $m$ AMs between $a$ and $b$: the extended AP has $m + 2$ terms."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "d = \\frac{b-a}{m+1}, \\qquad A_k = a + k\\cdot\\frac{b-a}{m+1}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\sum_{k=1}^{m} A_k = m\\left(\\frac{a+b}{2}\\right)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_n = An^2 + Bn \\iff \\text{AP, with } d = 2A,\\; a_1 = A + B"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The test needs ZERO constant term: $S_n = An^2 + Bn + c$ with $c \\ne 0$ is NOT an AP."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Three-term test: $2a_2 = a_1 + a_3$ — needs no knowledge of $a$ or $d$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the means and one of JEE's favourite characterizations. If a, b, c are in AP, then b is the arithmetic mean of a and c — simply their average, a plus c over two."
+            },
+            {
+              "seq": 2,
+              "text": "That is the b equals a plus c over two condition, and it is the fastest three-term AP test there is."
+            },
+            {
+              "seq": 3,
+              "text": "To insert m arithmetic means between a and b, imagine an extended AP with those m means sitting between the endpoints — that is m plus two terms in total."
+            },
+            {
+              "seq": 4,
+              "text": "The common difference of that extended AP is b minus a over m plus one, and the k-th mean is a plus k times that step."
+            },
+            {
+              "seq": 5,
+              "text": "There is a lovely shortcut for their total: the sum of all m means equals m times the single AM of the endpoints, a plus b over two."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> And here is the characterization examiners love. A sequence is an AP exactly when its sum has the form A n squared plus B n — and then the common difference is two A, with first term A plus B."
+            },
+            {
+              "seq": 7,
+              "text": "But watch the fine print carefully. The test demands a zero constant term. If the sum is A n squared plus B n plus c with c not zero, it is not an AP — only the terms from the second onward are. This is the single most punished trap on this formula."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, the cleanest test of all: three numbers are in AP exactly when twice the middle equals the sum of the outer two — no need to know a or d at all."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब means और JEE की एक favourite characterization। अगर a, b, c AP में हैं, तो b, a और c का arithmetic mean है — बस उनका average, a plus c over two।"
+            },
+            {
+              "seq": 2,
+              "text": "यही b equals a plus c over two condition है, और यह सबसे fast three-term AP test है।"
+            },
+            {
+              "seq": 3,
+              "text": "a और b के बीच m arithmetic means insert करने के लिए, एक extended AP सोचो जिसमें वो m means endpoints के बीच बैठे हों — यानी कुल m plus two terms।"
+            },
+            {
+              "seq": 4,
+              "text": "उस extended AP का common difference है b minus a over m plus one, और k-th mean है a plus k times that step।"
+            },
+            {
+              "seq": 5,
+              "text": "उनके total के लिए एक प्यारा shortcut है: सभी m means का sum m times the single AM of the endpoints के बराबर है, यानी a plus b over two।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> और यह रही वो characterization जो examiners को पसंद है। एक sequence तभी AP है जब उसका sum A n squared plus B n के form का हो — और तब common difference two A है, first term A plus B के साथ।"
+            },
+            {
+              "seq": 7,
+              "text": "पर fine print ध्यान से देखो। test को zero constant term चाहिए। अगर sum A n squared plus B n plus c है जिसमें c zero नहीं, तो यह AP नहीं — सिर्फ़ second से आगे के terms हैं। यह इस formula का सबसे ज़्यादा punish होने वाला trap है।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिर में, सबसे clean test: तीन numbers तभी AP में हैं जब twice the middle equals the sum of the outer two — a या d जानने की ज़रूरत ही नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "concept",
+      "subtopic": "AP - Technique",
+      "title": "Symmetric selection: killing the d's",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "When a sum is given, pick terms symmetrically"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "Three symmetric terms sum to 3a — d cancels",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 460 150\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"30\" y1=\"80\" x2=\"430\" y2=\"80\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <circle cx=\"90\" cy=\"80\" r=\"5\" fill=\"#4f46e5\"/><circle cx=\"200\" cy=\"80\" r=\"6\" fill=\"#b91c1c\"/><circle cx=\"310\" cy=\"80\" r=\"5\" fill=\"#4f46e5\"/>\n  <text x=\"90\" y=\"66\" text-anchor=\"middle\" font-size=\"15\" fill=\"#3730a3\">a − d</text>\n  <text x=\"200\" y=\"62\" text-anchor=\"middle\" font-size=\"16\" fill=\"#b91c1c\">a</text>\n  <text x=\"310\" y=\"66\" text-anchor=\"middle\" font-size=\"15\" fill=\"#3730a3\">a + d</text>\n  <path d=\"M96,90 Q145,120 194,90\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.3\"/>\n  <path d=\"M206,90 Q255,120 304,90\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.3\"/>\n  <text x=\"150\" y=\"118\" text-anchor=\"middle\" font-size=\"12\" fill=\"#64748b\">+d</text>\n  <text x=\"260\" y=\"118\" text-anchor=\"middle\" font-size=\"12\" fill=\"#64748b\">+d</text>\n  <text x=\"200\" y=\"142\" text-anchor=\"middle\" font-size=\"13\" fill=\"#0f766e\">sum = 3a  (the d's cancel)</text>\n</svg>"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "3 \\text{ terms: } a-d,\\; a,\\; a+d \\quad (\\text{sum} = 3a)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "latex": "5 \\text{ terms: } a-2d,\\, a-d,\\, a,\\, a+d,\\, a+2d \\quad (\\text{sum} = 5a)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "latex": "4 \\text{ terms: } a-3d,\\, a-d,\\, a+d,\\, a+3d \\quad (\\text{CD} = 2d)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "text": "This turns a two-unknown system into one unknown instantly."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Even count uses common difference 2d, NOT d — a frequent slip."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is a technique that makes 'sum of terms' problems almost trivial. When a problem hands you the sum of some AP terms, choose them symmetrically about the middle."
+            },
+            {
+              "seq": 2,
+              "text": "The reason is visible on the board: if you place terms as a minus d, a, a plus d, the plus d and minus d cancel when you add, leaving a clean three a."
+            },
+            {
+              "seq": 3,
+              "text": "So for three terms, use a minus d, a, a plus d — their sum is simply three a, and one unknown vanishes on sight."
+            },
+            {
+              "seq": 4,
+              "text": "For five terms, extend the same idea outward: a minus two d, a minus d, a, a plus d, a plus two d, summing to five a."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> The even case has a twist worth memorising. For four terms use a minus three d, a minus d, a plus d, a plus three d — and notice the common difference between them is two d, not d."
+            },
+            {
+              "seq": 6,
+              "text": "The payoff is huge: a system that looked like two unknowns collapses to one unknown the instant you switch to symmetric terms."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> But that four-term twist is exactly where students slip — the spacing there is two d, so never carry a bare d into the even case."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रही एक technique जो 'sum of terms' problems को लगभग trivial बना देती है। जब कोई problem तुम्हें कुछ AP terms का sum दे, तो उन्हें middle के around symmetrically चुनो।"
+            },
+            {
+              "seq": 2,
+              "text": "reason board पर दिख रहा है: अगर तुम terms को a minus d, a, a plus d रखो, तो add करते वक़्त plus d और minus d cancel हो जाते हैं, और साफ़ three a बचता है।"
+            },
+            {
+              "seq": 3,
+              "text": "तो तीन terms के लिए, use करो a minus d, a, a plus d — इनका sum बस three a है, और एक unknown देखते ही गायब हो जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "पाँच terms के लिए, वही idea बाहर की तरफ़ बढ़ाओ: a minus two d, a minus d, a, a plus d, a plus two d, जिनका sum five a है।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> even case में एक twist है जो memorise करने लायक है। चार terms के लिए use करो a minus three d, a minus d, a plus d, a plus three d — और ध्यान दो इनके बीच common difference two d है, d नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "payoff बहुत बड़ा है: जो system दो unknowns जैसा दिखता था, symmetric terms पर switch करते ही एक unknown में सिमट जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> पर वही four-term twist है जहाँ students फिसलते हैं — वहाँ spacing two d है, तो even case में कभी bare d मत ले जाओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "AP Worked Examples",
+      "title": "28th term and the first negative term",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "AP 20, 19¼, 18½, 17¾, … — find a₂₈ and the first negative term"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "a = 20, \\quad d = 19\\tfrac{1}{4} - 20 = -\\tfrac{3}{4}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "a_{28} = 20 + 27\\left(-\\tfrac{3}{4}\\right) = 20 - \\tfrac{81}{4} = -\\tfrac{1}{4}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "First negative term needs $a_n < 0$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "80 - 3(n-1) < 0 \\;\\Rightarrow\\; n > 27\\tfrac{2}{3}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "$n \\in \\mathbb{N}$ forces rounding UP: smallest integer is n = 28."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "So the 28th term is itself the first negative term, equal to −¼."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's start the AP examples with a board classic that hides a subtle integer step. The progression is twenty, nineteen and a quarter, eighteen and a half, and so on."
+            },
+            {
+              "seq": 2,
+              "text": "First read off the parameters. The first term a is twenty, and the common difference d is nineteen and a quarter minus twenty, which is minus three quarters — a decreasing AP."
+            },
+            {
+              "seq": 3,
+              "text": "For the twenty-eighth term, plug into the formula: twenty plus twenty-seven times minus three quarters. That is twenty minus eighty-one over four, which comes to minus one quarter."
+            },
+            {
+              "seq": 4,
+              "text": "Now the second question — the first negative term. We need a sub n to be strictly less than zero, so we solve the inequality."
+            },
+            {
+              "seq": 5,
+              "text": "Cleaning it up, the condition becomes eighty minus three times n minus one is less than zero, which gives n greater than twenty-seven and two thirds."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> Here is the careful part. Because n must be a natural number, we round up, not down — the smallest integer beyond twenty-seven and two thirds is twenty-eight."
+            },
+            {
+              "seq": 7,
+              "text": "So the two answers connect neatly: the twenty-eighth term is itself the very first negative term, and its value is minus one quarter."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो AP examples एक board classic से शुरू करें जो एक subtle integer step छुपाए हुए है। progression है twenty, nineteen and a quarter, eighteen and a half, वगैरह।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले parameters पढ़ लो। first term a है twenty, और common difference d है nineteen and a quarter minus twenty, यानी minus three quarters — एक decreasing AP।"
+            },
+            {
+              "seq": 3,
+              "text": "twenty-eighth term के लिए formula में डालो: twenty plus twenty-seven times minus three quarters। यह है twenty minus eighty-one over four, जो minus one quarter आता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब दूसरा सवाल — first negative term। हमें a sub n को strictly less than zero चाहिए, तो हम inequality solve करते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "साफ़ करने पर, condition बनती है eighty minus three times n minus one is less than zero, जो देती है n greater than twenty-seven and two thirds।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> यह रहा careful हिस्सा। चूँकि n एक natural number होना चाहिए, हम ऊपर round करते हैं, नीचे नहीं — twenty-seven and two thirds से आगे का सबसे छोटा integer है twenty-eight।"
+            },
+            {
+              "seq": 7,
+              "text": "तो दोनों answers साफ़ जुड़ते हैं: twenty-eighth term खुद ही सबसे पहला negative term है, और उसकी value minus one quarter है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "AP Worked Examples",
+      "title": "Scattered terms via the equidistant property",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Given a₁+a₅+a₁₀+a₁₅+a₂₀+a₂₄ = 225, find S₂₄"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "Equidistant property: $a_1 + a_{24} = a_5 + a_{20} = a_{10} + a_{15}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The six given terms pair into three EQUAL sums."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "3(a_1 + a_{24}) = 225 \\;\\Rightarrow\\; a_1 + a_{24} = 75"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "S_{24} = \\frac{24}{2}(a_1 + a_{24}) = 12 \\times 75 = 900"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "No need for $a$ or $d$ individually — linearity does the work."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Answer: S₂₄ = 900."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example rewards knowing one slick property instead of grinding algebra. We are told six scattered terms of an AP add to two hundred and twenty-five."
+            },
+            {
+              "seq": 2,
+              "text": "The key is the equidistant property. In any AP, terms equally spaced from the ends sum to the same total, so a sub one plus a sub twenty-four equals a sub five plus a sub twenty, equals a sub ten plus a sub fifteen."
+            },
+            {
+              "seq": 3,
+              "text": "Look at the six given indices: one and twenty-four, five and twenty, ten and fifteen. Each pair straddles the centre equally, so the six terms fall into three equal sums."
+            },
+            {
+              "seq": 4,
+              "text": "That means three times the quantity a sub one plus a sub twenty-four equals two hundred and twenty-five, so that pair-sum is seventy-five."
+            },
+            {
+              "seq": 5,
+              "text": "Now finish with the first-plus-last form of the sum. S sub twenty-four is twenty-four over two times a sub one plus a sub twenty-four, which is twelve times seventy-five, equal to nine hundred."
+            },
+            {
+              "seq": 6,
+              "text": "<excited> Notice we never found a or d on their own — the linearity of the AP did all the heavy lifting in a single line."
+            },
+            {
+              "seq": 7,
+              "text": "So the sum of the first twenty-four terms is nine hundred."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example एक slick property जानने का इनाम देता है, algebra घिसने के बजाय। हमें बताया गया है कि एक AP के छह scattered terms two hundred and twenty-five में add होते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "key है equidistant property। किसी भी AP में, ends से equally spaced terms same total में add होते हैं, तो a sub one plus a sub twenty-four equals a sub five plus a sub twenty, equals a sub ten plus a sub fifteen।"
+            },
+            {
+              "seq": 3,
+              "text": "छह दिए गए indices देखो: one और twenty-four, five और twenty, ten और fifteen। हर pair centre को बराबर straddle करती है, तो छह terms तीन equal sums में गिरते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "इसका मतलब three times the quantity a sub one plus a sub twenty-four equals two hundred and twenty-five, तो वो pair-sum seventy-five है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब sum के first-plus-last form से finish करो। S sub twenty-four है twenty-four over two times a sub one plus a sub twenty-four, यानी twelve times seventy-five, बराबर nine hundred।"
+            },
+            {
+              "seq": 6,
+              "text": "<excited> ध्यान दो हमने a या d को अलग से कभी नहीं निकाला — AP की linearity ने पूरा heavy lifting एक ही line में कर दिया।"
+            },
+            {
+              "seq": 7,
+              "text": "तो first twenty-four terms का sum nine hundred है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "AP Worked Examples",
+      "title": "Ratio of sums to ratio of terms",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two APs' sums are in ratio (7n+1):(4n+17). Find the ratio of 24th terms."
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "Standard device: ratio of $m$-th terms = ratio of $S_n$ at $n = 2m - 1$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac{a^{(1)}_m}{a^{(2)}_m} = \\frac{S^{(1)}_{2m-1}}{S^{(2)}_{2m-1}}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "For the 24th terms, $m = 24 \\Rightarrow n = 2(24) - 1 = 47$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\frac{7(47)+1}{4(47)+17} = \\frac{330}{205} = \\frac{66}{41}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Why 2m−1? Because $S_{2m-1} = \\tfrac{2m-1}{2}[2a + (2m-2)d]$ collapses to the mth term."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Answer: the 24th terms are in ratio 66 : 41."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a JEE Main favourite, and the whole game is knowing one substitution. We are given the ratio of the sums of n terms of two APs, and asked for the ratio of their twenty-fourth terms."
+            },
+            {
+              "seq": 2,
+              "text": "The standard device is this: the ratio of the m-th terms equals the ratio of the sums evaluated at n equals two m minus one. It converts a term ratio into a sum ratio."
+            },
+            {
+              "seq": 3,
+              "text": "So we simply write the ratio of a-m-one over a-m-two as the ratio of the two sums, both taken at that special index."
+            },
+            {
+              "seq": 4,
+              "text": "For the twenty-fourth terms, m is twenty-four, so the magic index is two times twenty-four minus one, which is forty-seven."
+            },
+            {
+              "seq": 5,
+              "text": "Substitute forty-seven into the given expression: seven times forty-seven plus one over four times forty-seven plus seventeen, which is three hundred thirty over two hundred five, simplifying to sixty-six over forty-one."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> And why does two m minus one work? Because the sum at that index carries the factor two a plus two m minus two d — exactly twice the m-th term's core — so the ratio collapses to the ratio of the terms themselves."
+            },
+            {
+              "seq": 7,
+              "text": "So the twenty-fourth terms of the two progressions are in the ratio sixty-six to forty-one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह JEE Main का favourite है, और पूरा खेल एक substitution जानने में है। हमें दो APs के n terms के sums का ratio दिया गया है, और उनके twenty-fourth terms का ratio पूछा गया है।"
+            },
+            {
+              "seq": 2,
+              "text": "standard device यह है: m-th terms का ratio उन sums के ratio के बराबर है जो n equals two m minus one पर evaluate किए गए हों। यह term ratio को sum ratio में बदल देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "तो हम बस a-m-one over a-m-two के ratio को उन दो sums के ratio के रूप में लिखते हैं, दोनों उसी special index पर लिए गए।"
+            },
+            {
+              "seq": 4,
+              "text": "twenty-fourth terms के लिए, m है twenty-four, तो magic index है two times twenty-four minus one, यानी forty-seven।"
+            },
+            {
+              "seq": 5,
+              "text": "forty-seven को दिए गए expression में डालो: seven times forty-seven plus one over four times forty-seven plus seventeen, जो three hundred thirty over two hundred five है, simplify होकर sixty-six over forty-one।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> और two m minus one क्यों काम करता है? क्योंकि उस index पर sum factor two a plus two m minus two d रखता है — exactly m-th term के core का दुगना — तो ratio खुद terms के ratio में सिमट जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो दोनों progressions के twenty-fourth terms sixty-six to forty-one के ratio में हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "AP Worked Examples",
+      "title": "Inserting eleven arithmetic means",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Insert 11 AMs between 28 and 10; find the three middle means"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The extended AP $28, A_1, \\dots, A_{11}, 10$ has 12 gaps."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "d = \\frac{10 - 28}{11 + 1} = \\frac{-18}{12} = -\\frac{3}{2}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Eleven means is odd, so the three middle ones are $A_5, A_6, A_7$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "A_5 = 28 + 5d = \\tfrac{41}{2}, \\quad A_6 = 19, \\quad A_7 = \\tfrac{35}{2}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "$A_6 = 19$ is the AM of 28 and 10 — the centre of a symmetric AP, as it must be."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Answer: the three middle means are 41⁄2, 19, and 35⁄2."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example drills the inserting-means machinery. We must place eleven arithmetic means between twenty-eight and ten, then pick out the three in the middle."
+            },
+            {
+              "seq": 2,
+              "text": "Picture the extended progression: twenty-eight, then the eleven means, then ten. That is thirteen terms, and crucially twelve equal gaps between them."
+            },
+            {
+              "seq": 3,
+              "text": "So the common difference is ten minus twenty-eight over twelve, which is minus eighteen over twelve, or minus three halves."
+            },
+            {
+              "seq": 4,
+              "text": "Since eleven means is an odd count, there is a genuine centre. The three middle means are the fifth, sixth, and seventh."
+            },
+            {
+              "seq": 5,
+              "text": "Computing them: A five is twenty-eight plus five d, giving forty-one halves; A six is nineteen; and A seven is thirty-five halves."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> Notice the beautiful check hiding in A six. It equals nineteen, which is exactly the arithmetic mean of twenty-eight and ten — the dead centre of a symmetric AP, precisely as it should be."
+            },
+            {
+              "seq": 7,
+              "text": "So the three middle means are forty-one halves, nineteen, and thirty-five halves."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example inserting-means machinery drill करता है। हमें twenty-eight और ten के बीच eleven arithmetic means रखने हैं, फिर बीच के तीन चुनने हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "extended progression सोचो: twenty-eight, फिर eleven means, फिर ten। यह thirteen terms हैं, और crucially उनके बीच twelve equal gaps।"
+            },
+            {
+              "seq": 3,
+              "text": "तो common difference है ten minus twenty-eight over twelve, यानी minus eighteen over twelve, या minus three halves।"
+            },
+            {
+              "seq": 4,
+              "text": "चूँकि eleven means एक odd count है, एक genuine centre है। बीच के तीन means हैं fifth, sixth, और seventh।"
+            },
+            {
+              "seq": 5,
+              "text": "इन्हें compute करो: A five है twenty-eight plus five d, यानी forty-one halves; A six है nineteen; और A seven है thirty-five halves।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> A six में छुपा खूबसूरत check देखो। यह nineteen के बराबर है, जो exactly twenty-eight और ten का arithmetic mean है — एक symmetric AP का ठीक centre, बिलकुल जैसा होना चाहिए।"
+            },
+            {
+              "seq": 7,
+              "text": "तो बीच के तीन means हैं forty-one halves, nineteen, और thirty-five halves।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "worked_examples",
+      "subtopic": "AP Worked Examples",
+      "title": "The savings word problem",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Saves ₹200/month for 3 months, then ₹40 more each month. When is total ₹11040?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Model the monthly savings as ₹200, 200, 200, 240, 280, … then sum."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Translating the word problem into $a$ and $d$ is the whole skill."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "S_n = 11040"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "text": "Summing all $n$ months gives a quadratic in $n$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "n = 21 \\text{ months (the positive integer root)}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The ₹-savings archetype: reject the non-integer / negative root."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Word problems live or die on the translation step, so let's do that carefully. A man saves two hundred rupees each of the first three months, then forty rupees more every month after."
+            },
+            {
+              "seq": 2,
+              "text": "Model the monthly amounts directly: two hundred, two hundred, two hundred, then two hundred forty, two hundred eighty, and so on climbing by forty."
+            },
+            {
+              "seq": 3,
+              "text": "The entire skill here is turning that sentence into a and d — once the amounts are an AP, the machinery is routine."
+            },
+            {
+              "seq": 4,
+              "text": "We want the running total to hit eleven thousand and forty rupees, so we set the sum of the first n months equal to that figure."
+            },
+            {
+              "seq": 5,
+              "text": "Because the sum formula is quadratic in n, setting it equal to eleven thousand forty produces a quadratic equation to solve."
+            },
+            {
+              "seq": 6,
+              "text": "<excited> Solving that quadratic, the positive integer root is twenty-one, so after twenty-one months his total savings reach the target."
+            },
+            {
+              "seq": 7,
+              "text": "And remember the archetype's discipline: a quadratic gives two roots, but only the positive whole-number one counts as a month-count — discard the rest."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "word problems translation step पर जीते या मरते हैं, तो इसे ध्यान से करते हैं। एक आदमी पहले तीन महीने हर महीने two hundred rupees बचाता है, फिर उसके बाद हर महीने forty rupees ज़्यादा।"
+            },
+            {
+              "seq": 2,
+              "text": "monthly amounts को सीधे model करो: two hundred, two hundred, two hundred, फिर two hundred forty, two hundred eighty, और इसी तरह forty से बढ़ते हुए।"
+            },
+            {
+              "seq": 3,
+              "text": "यहाँ पूरी skill उस sentence को a और d में बदलने की है — एक बार amounts AP बन गए, तो machinery routine है।"
+            },
+            {
+              "seq": 4,
+              "text": "हम चाहते हैं running total eleven thousand and forty rupees पर पहुँचे, तो हम first n months का sum उस figure के बराबर रखते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "चूँकि sum formula n में quadratic है, इसे eleven thousand forty के बराबर रखने से एक quadratic equation बनती है जिसे solve करना है।"
+            },
+            {
+              "seq": 6,
+              "text": "<excited> उस quadratic को solve करने पर, positive integer root twenty-one है, तो twenty-one महीनों के बाद उसकी total savings target तक पहुँच जाती हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "और archetype का discipline याद रखो: quadratic दो roots देता है, पर सिर्फ़ positive whole-number वाला ही month-count गिना जाता है — बाकी discard करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "worked_examples",
+      "subtopic": "AP Worked Examples",
+      "title": "AP fused with logarithms",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "If log₂, log(2ˣ−1), log(2ˣ+3) are in AP, find x"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "Three terms in AP ⇒ middle is the AM of the outer two."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "2\\log_{10}(2^x - 1) = \\log_{10} 2 + \\log_{10}(2^x + 3)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "(2^x - 1)^2 = 2(2^x + 3)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "u^2 - 4u - 5 = 0 \\;\\Rightarrow\\; (u-5)(u+1) = 0, \\quad u = 2^x"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "$2^x > 0$ rejects $u = -1$; never skip the domain check."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "So $2^x = 5 \\Rightarrow x = \\log_2 5$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now an Advanced-flavoured problem where AP meets logarithms. We are told log two, log of two-to-the-x minus one, and log of two-to-the-x plus three are in arithmetic progression."
+            },
+            {
+              "seq": 2,
+              "text": "The three-term AP condition is our entry point: the middle term is the arithmetic mean of the outer two, so twice the middle equals the sum of the ends."
+            },
+            {
+              "seq": 3,
+              "text": "Written with the logs, that reads two log of two-to-the-x minus one equals log two plus log of two-to-the-x plus three."
+            },
+            {
+              "seq": 4,
+              "text": "Using log rules, the equation becomes two-to-the-x minus one, all squared, equals two times two-to-the-x plus three — the logs have done their job and vanished."
+            },
+            {
+              "seq": 5,
+              "text": "Substitute u for two-to-the-x. Expanding gives u squared minus four u minus five equals zero, which factors as u minus five times u plus one."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> Here is the step that separates the careful student. Since u is two-to-the-x, it must be positive, so the root u equals minus one is rejected outright. Never skip that domain check."
+            },
+            {
+              "seq": 7,
+              "text": "That leaves u equals five, meaning two-to-the-x equals five, so x equals log base two of five."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक Advanced-flavoured problem जहाँ AP logarithms से मिलती है। हमें बताया गया है कि log two, log of two-to-the-x minus one, और log of two-to-the-x plus three arithmetic progression में हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "three-term AP condition हमारा entry point है: middle term outer दोनों का arithmetic mean है, तो twice the middle equals the sum of the ends।"
+            },
+            {
+              "seq": 3,
+              "text": "logs के साथ लिखने पर, यह होता है two log of two-to-the-x minus one equals log two plus log of two-to-the-x plus three।"
+            },
+            {
+              "seq": 4,
+              "text": "log rules use करके, equation बनती है two-to-the-x minus one, all squared, equals two times two-to-the-x plus three — logs ने अपना काम कर दिया और गायब हो गए।"
+            },
+            {
+              "seq": 5,
+              "text": "two-to-the-x के लिए u substitute करो। expand करने पर मिलता है u squared minus four u minus five equals zero, जो factor होता है u minus five times u plus one।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> यह रहा वो step जो careful student को अलग करता है। चूँकि u, two-to-the-x है, यह positive होना चाहिए, तो root u equals minus one सीधे reject हो जाता है। वो domain check कभी skip मत करो।"
+            },
+            {
+              "seq": 7,
+              "text": "इससे बचता है u equals five, यानी two-to-the-x equals five, तो x equals log base two of five।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 20,
+      "section_type": "worked_examples",
+      "subtopic": "AP Worked Examples",
+      "title": "Natural-number constraint pins the difference",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "S₇ : S₁₁ = 6 : 11, terms natural, 130 < a₇ < 140. Find d."
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\frac{S_7}{S_{11}} = \\frac{7(a + 3d)}{11(a + 5d)} = \\frac{6}{11}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "7(a + 3d) = 6(a + 5d) \\;\\Rightarrow\\; a = 9d"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "a_7 = a + 6d = 15d"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "130 < 15d < 140 \\;\\Rightarrow\\; 8.67 < d < 9.33"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Terms are natural ⇒ d is an integer ⇒ $d = 9$ is forced."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Answer: d = 9 — the integer constraint does essential work."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This JEE problem shows how a hidden integer constraint can pin down an answer that would otherwise float free. We are given a ratio of sums and a range for the seventh term."
+            },
+            {
+              "seq": 2,
+              "text": "Start with the ratio. S seven over S eleven is seven times a plus three d over eleven times a plus five d, and we set that equal to six over eleven."
+            },
+            {
+              "seq": 3,
+              "text": "The elevens cancel against the eleven in the ratio, leaving seven times a plus three d equals six times a plus five d, which simplifies cleanly to a equals nine d."
+            },
+            {
+              "seq": 4,
+              "text": "Now compute the seventh term. It is a plus six d, and substituting a equals nine d gives fifteen d."
+            },
+            {
+              "seq": 5,
+              "text": "The given range says the seventh term sits between one hundred thirty and one hundred forty, so fifteen d lies in that band, meaning d is between roughly eight point six seven and nine point three three."
+            },
+            {
+              "seq": 6,
+              "text": "<excited> Here is where the quiet condition earns its keep. The terms are natural numbers, so d must be a whole number — and the only integer in that narrow band is nine."
+            },
+            {
+              "seq": 7,
+              "text": "So the common difference is nine. Without the natural-number constraint, d could not have been pinned down at all."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह JEE problem दिखाता है कि एक hidden integer constraint कैसे एक ऐसे answer को pin कर सकता है जो वरना free तैरता रहता। हमें sums का ratio और seventh term की एक range दी गई है।"
+            },
+            {
+              "seq": 2,
+              "text": "ratio से शुरू करो। S seven over S eleven है seven times a plus three d over eleven times a plus five d, और हम इसे six over eleven के बराबर रखते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "elevens ratio के eleven के साथ cancel हो जाते हैं, बचता है seven times a plus three d equals six times a plus five d, जो साफ़ होकर a equals nine d बनता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब seventh term compute करो। यह है a plus six d, और a equals nine d डालने पर मिलता है fifteen d।"
+            },
+            {
+              "seq": 5,
+              "text": "दी गई range कहती है seventh term one hundred thirty और one hundred forty के बीच है, तो fifteen d उस band में है, यानी d लगभग eight point six seven और nine point three three के बीच।"
+            },
+            {
+              "seq": 6,
+              "text": "<excited> यहाँ वो quiet condition अपनी कीमत वसूल करती है। terms natural numbers हैं, तो d एक whole number होना चाहिए — और उस narrow band में इकलौता integer nine है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो common difference nine है। natural-number constraint के बिना, d को pin किया ही नहीं जा सकता था।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 21,
+      "section_type": "worked_examples",
+      "subtopic": "AP Worked Examples",
+      "title": "Three APs as residue classes",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "AP(1;3) ∩ AP(2;5) ∩ AP(3;7) = AP(a;d). Find a + d."
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "A number in all three sets satisfies three congruences."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "x \\equiv 1\\,(\\mathrm{mod}\\,3),\\;\\; x \\equiv 2\\,(\\mathrm{mod}\\,5),\\;\\; x \\equiv 3\\,(\\mathrm{mod}\\,7)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "By CRT the common solutions themselves form an AP."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "d = \\mathrm{lcm}(3,5,7) = 105"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "x = 52:\\;\\; 52 = 3(17)+1,\\; 5(10)+2,\\; 7(7)+3 \\;\\checkmark"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "So $a = 52$, $d = 105$, and $a + d = 157$ — the AP-as-residue-class view."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We finish the AP examples with a genuinely Advanced one, where an AP is reframed as a set of remainders. We intersect three infinite APs and are told the result is itself an AP."
+            },
+            {
+              "seq": 2,
+              "text": "The reframing is the key insight. Belonging to AP one with difference three means leaving remainder one on division by three, and similarly for the other two."
+            },
+            {
+              "seq": 3,
+              "text": "So a number lying in all three sets must satisfy three congruences at once: one mod three, two mod five, and three mod seven."
+            },
+            {
+              "seq": 4,
+              "text": "By the Chinese Remainder Theorem, the numbers solving all three congruences themselves march along in a single arithmetic progression."
+            },
+            {
+              "seq": 5,
+              "text": "The common difference of that progression is the least common multiple of three, five, and seven, which is one hundred five."
+            },
+            {
+              "seq": 6,
+              "text": "Now we just need the first solution. Testing fifty-two: it is three times seventeen plus one, five times ten plus two, and seven times seven plus three — all three check out."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> So the intersection is the AP with first term fifty-two and difference one hundred five, giving a plus d equal to one hundred fifty-seven. That is the AP-as-residue-class viewpoint the exam loves."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हम AP examples को एक सच में Advanced example से खत्म करते हैं, जहाँ एक AP को remainders के set के रूप में reframe किया जाता है। हम तीन infinite APs intersect करते हैं और बताया जाता है कि result खुद एक AP है।"
+            },
+            {
+              "seq": 2,
+              "text": "reframing ही key insight है। difference three वाली AP one में होने का मतलब three से divide करने पर remainder one छोड़ना, और वैसे ही बाकी दो के लिए।"
+            },
+            {
+              "seq": 3,
+              "text": "तो तीनों sets में पड़ा एक number एक साथ तीन congruences satisfy करे: one mod three, two mod five, और three mod seven।"
+            },
+            {
+              "seq": 4,
+              "text": "Chinese Remainder Theorem से, वो numbers जो तीनों congruences solve करते हैं खुद एक single arithmetic progression में चलते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "उस progression का common difference है three, five, और seven का least common multiple, यानी one hundred five।"
+            },
+            {
+              "seq": 6,
+              "text": "अब हमें बस पहला solution चाहिए। fifty-two test करो: यह है three times seventeen plus one, five times ten plus two, और seven times seven plus three — तीनों सही निकलते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "<excited> तो intersection वो AP है जिसका first term fifty-two और difference one hundred five है, जो a plus d को one hundred fifty-seven देता है। यही AP-as-residue-class viewpoint है जो exam को पसंद है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 22,
+      "section_type": "tips",
+      "subtopic": "AP",
+      "title": "AP: the trap list and the pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "AP — the traps that cost marks, and the shortcuts that save them"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Off-by-one: use $a + (n-1)d$, never $a + nd$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Sum trap: $S_n = An^2 + Bn + c$ with $c \\ne 0$ is NOT an AP."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Even symmetric pick uses CD $2d$, not $d$; and never assume $d > 0$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Reject non-integer $n$ (no such term) and extraneous roots (domain checks)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Pro-tip: given a SUM, switch to symmetric terms; given TERMS, use $a+(n-1)d$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The equidistant identity collapses 'scattered terms' problems in one line."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Fast tests: $a_n$ linear in $n$, or $S_n$ quadratic with zero constant."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close the unit by gathering the traps that quietly cost marks, then the shortcuts that win them back."
+            },
+            {
+              "seq": 2,
+              "text": "The number-one AP error is off-by-one: writing a plus n d instead of a plus n minus one d. Say 'n minus one' out loud every time."
+            },
+            {
+              "seq": 3,
+              "text": "The second big trap is the sum test. If the sum is A n squared plus B n plus a nonzero constant, the sequence is not a true AP — only the terms from the second onward behave."
+            },
+            {
+              "seq": 4,
+              "text": "Two more to watch: the even symmetric selection uses spacing two d, not d, and you must never assume the common difference is positive."
+            },
+            {
+              "seq": 5,
+              "text": "Also stay disciplined about roots. A non-integer n means there is no such term, and in log or quadratic problems, domain checks throw out extraneous roots."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> Now the winning reflex. When a problem gives you a sum, switch to symmetric terms to halve the unknowns; when it gives you specific terms, stay with a plus n minus one d."
+            },
+            {
+              "seq": 7,
+              "text": "And keep the equidistant identity in your pocket — first plus last equals second plus second-last, and so on. It collapses scattered-term problems in a single line."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, two lightning tests for whether something is an AP: check if the term is linear in n, or if the sum is quadratic with a zero constant. Master those and AP becomes almost mechanical."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो unit को उन traps को इकट्ठा करके बंद करें जो चुपके से marks खाते हैं, फिर वो shortcuts जो उन्हें वापस जिताते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "number-one AP error है off-by-one: a plus n d लिखना, a plus n minus one d के बजाय। हर बार 'n minus one' ज़ोर से कहो।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा बड़ा trap है sum test। अगर sum A n squared plus B n plus एक nonzero constant है, तो sequence true AP नहीं — सिर्फ़ second से आगे के terms सही चलते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "दो और ध्यान देने योग्य: even symmetric selection spacing two d use करती है, d नहीं, और तुम्हें कभी नहीं मानना चाहिए कि common difference positive है।"
+            },
+            {
+              "seq": 5,
+              "text": "roots को लेकर भी disciplined रहो। एक non-integer n का मतलब ऐसा कोई term नहीं, और log या quadratic problems में, domain checks extraneous roots को बाहर फेंकते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> अब winning reflex। जब problem sum दे, तो symmetric terms पर switch करके unknowns आधे कर दो; जब यह specific terms दे, तो a plus n minus one d के साथ रहो।"
+            },
+            {
+              "seq": 7,
+              "text": "और equidistant identity जेब में रखो — first plus last equals second plus second-last, और इसी तरह। यह scattered-term problems को एक ही line में collapse कर देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिर में, यह जाँचने के दो lightning tests कि कुछ AP है या नहीं: देखो term n में linear है, या sum zero constant के साथ quadratic है। इन्हें master कर लो और AP लगभग mechanical बन जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2182 @@
+{
+  "chapter": "Probability",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 13,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Random variable: turning outcomes into numbers",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Random Variable — Turning Outcomes into Numbers"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Watch one T20 over: how many runs? $0$, maybe $6$, maybe an unlikely $36$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "You mapped a messy experiment to a single real number."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "A random variable X is a function: outcome in, real number out."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "X : S \\to \\mathbb{R}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Heads in three tosses, defective bulbs, customers in an hour — all random variables."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "The values can be listed one by one, so these are discrete random variables."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Listing the values is always the first move — you can't build a distribution without them."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "Naming X is how we tame an unpredictable situation into arithmetic."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Watch one over of a T20 match and ask a simple question: how many runs came off it?</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "The answer is a single number: zero, maybe six, maybe an unlikely thirty six. Which number you get depends on how the six balls play out."
+            },
+            {
+              "seq": 3,
+              "text": "You've quietly done something profound. You took a messy, unpredictable experiment and boiled each outcome down to one real number."
+            },
+            {
+              "seq": 4,
+              "text": "That mapping, outcome to number, is exactly what a random variable is. Formally it's a function whose input is an outcome and whose output is a real number, written X."
+            },
+            {
+              "seq": 5,
+              "text": "In symbols, X is a function from the sample space S into the real numbers."
+            },
+            {
+              "seq": 6,
+              "text": "Runs per over is a random variable; so is the number of heads in three coin tosses, defective bulbs in a packet of ten, or customers at a chai stall in an hour."
+            },
+            {
+              "seq": 7,
+              "text": "Because the possible values can be listed one by one, these are discrete random variables, and that's all the syllabus needs."
+            },
+            {
+              "seq": 8,
+              "text": "Listing the values is always your first move. You cannot build a distribution until you know exactly which values are on the table."
+            },
+            {
+              "seq": 9,
+              "text": "Naming X is how we tame an unpredictable situation and turn it into clean arithmetic."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>T20 match का एक over देखो और एक simple सवाल पूछो: उससे कितने runs आए?</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "जवाब एक single number है: zero, शायद six, शायद एक unlikely छत्तीस। कौन सा number मिलेगा ये इस पे depend करता है कि छह balls कैसे खेली गईं।"
+            },
+            {
+              "seq": 3,
+              "text": "तुमने चुपचाप कुछ profound किया। एक messy, unpredictable experiment को लेकर हर outcome को एक real number में समेट दिया।"
+            },
+            {
+              "seq": 4,
+              "text": "यही mapping, outcome से number, बिल्कुल वही है जो random variable है। Formally ये एक function है जिसका input एक outcome और output एक real number है, X लिखते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Symbols में, X एक function है sample space S से real numbers तक।"
+            },
+            {
+              "seq": 6,
+              "text": "Runs per over एक random variable है; वैसे ही तीन coin tosses में heads की संख्या, दस के packet में defective bulbs, या एक घंटे में chai stall पे customers।"
+            },
+            {
+              "seq": 7,
+              "text": "चूँकि possible values एक-एक करके list हो सकते हैं, ये discrete random variables हैं, और syllabus को बस यही चाहिए।"
+            },
+            {
+              "seq": 8,
+              "text": "Values list करना हमेशा तुम्हारा पहला move है। जब तक तुम्हें पता न हो कौन से values हैं, distribution बना ही नहीं सकते।"
+            },
+            {
+              "seq": 9,
+              "text": "X को नाम देना ही वो तरीक़ा है जिससे हम एक unpredictable situation को tame करके clean arithmetic में बदलते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Random Variables & Distributions",
+      "title": "The probability distribution: a fingerprint",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The Probability Distribution — a Fingerprint"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "List every value X can take with the probability of each."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "It's a two-row table: values on top, probabilities below."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\begin{array}{c|cccc} X & x_1 & x_2 & \\cdots & x_n \\\\ \\hline P & p_1 & p_2 & \\cdots & p_n \\end{array}"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "style": "red-margin",
+          "text": "Iron rule 1: every probability lies between $0$ and $1$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "\\sum_{i=1}^{n} p_i = 1"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Iron rule 2: probabilities sum to exactly one — something must happen."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "To find an unknown constant, impose sum = 1 and reject any negative probability."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Once you have a random variable, the natural question is: how are its values distributed?"
+            },
+            {
+              "seq": 2,
+              "text": "List every value X can take, alongside the probability of each, and you get the probability distribution, the complete fingerprint of the variable."
+            },
+            {
+              "seq": 3,
+              "text": "It's really just a two-row table: the values on the top row, their probabilities on the bottom."
+            },
+            {
+              "seq": 4,
+              "text": "Here is that table in general form, values x-one through x-n on top, matching probabilities p-one through p-n below."
+            },
+            {
+              "seq": 5,
+              "text": "Two iron rules govern it. First, every probability sits between zero and one; none can be negative or exceed one."
+            },
+            {
+              "seq": 6,
+              "text": "Second, the probabilities must add up to exactly one."
+            },
+            {
+              "seq": 7,
+              "text": "Why? Because on any single run of the experiment, something must happen, so the total chance is one."
+            },
+            {
+              "seq": 8,
+              "text": "These two rules are also your tools: to find an unknown constant in a distribution, impose sum equals one, then reject any value that produces a negative probability."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "जैसे ही random variable मिल गया, natural सवाल है: उसके values कैसे distributed हैं?"
+            },
+            {
+              "seq": 2,
+              "text": "X के हर value को, उसकी probability के साथ, list करो और मिलती है probability distribution, variable का पूरा fingerprint।"
+            },
+            {
+              "seq": 3,
+              "text": "ये असल में बस एक two-row table है: ऊपर की row में values, नीचे उनकी probabilities।"
+            },
+            {
+              "seq": 4,
+              "text": "ये रही वो table general form में, ऊपर x-one से x-n तक values, नीचे matching probabilities p-one से p-n तक।"
+            },
+            {
+              "seq": 5,
+              "text": "इस पे दो iron rules राज करते हैं। पहला, हर probability zero और one के बीच होती है; कोई negative नहीं और one से बड़ी नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "दूसरा, probabilities का sum ठीक one होना चाहिए।"
+            },
+            {
+              "seq": 7,
+              "text": "क्यों? क्योंकि experiment के हर एक run पे कुछ न कुछ होना ही है, तो total chance one है।"
+            },
+            {
+              "seq": 8,
+              "text": "ये दो rules तुम्हारे tools भी हैं: distribution में unknown constant निकालने के लिए sum बराबर one लगाओ, फिर कोई भी value जो negative probability दे उसे reject करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Random Variables & Distributions",
+      "title": "The mean as a balance point",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Mean = Expectation = Balance Point"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "The mean is a probability-weighted average, not a plain average."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "\\mu = E(X) = \\sum_{i} x_i\\, p_i"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Lucky-dip: $90\\%$ win ₹$10$, $10\\%$ win ₹$100$. Naive average says ₹$55$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "style": "red-margin",
+          "text": "But almost nobody wins the big prize — that figure is wildly optimistic."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "E(X) = 0.9(10) + 0.1(100) = 19"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Weighted by how often each occurs, the honest expected prize is ₹19."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "caption": "Weights are probabilities; the mean is where the beam balances.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 235\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"35\" y1=\"150\" x2=\"345\" y2=\"150\" stroke=\"#334155\" stroke-width=\"1.5\"/><rect x=\"50\" y=\"120\" width=\"40\" height=\"30\" fill=\"#93c5fd\" stroke=\"#2b6cb0\"/><rect x=\"130\" y=\"60\" width=\"40\" height=\"90\" fill=\"#93c5fd\" stroke=\"#2b6cb0\"/><rect x=\"210\" y=\"60\" width=\"40\" height=\"90\" fill=\"#93c5fd\" stroke=\"#2b6cb0\"/><rect x=\"290\" y=\"120\" width=\"40\" height=\"30\" fill=\"#93c5fd\" stroke=\"#2b6cb0\"/><text x=\"55\" y=\"113\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#1e3a8a\">1/8</text><text x=\"135\" y=\"53\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#1e3a8a\">3/8</text><text x=\"215\" y=\"53\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#1e3a8a\">3/8</text><text x=\"295\" y=\"113\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#1e3a8a\">1/8</text><text x=\"66\" y=\"166\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">0</text><text x=\"146\" y=\"166\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">1</text><text x=\"226\" y=\"166\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">2</text><text x=\"306\" y=\"166\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">3</text><line x1=\"45\" y1=\"188\" x2=\"335\" y2=\"188\" stroke=\"#7c3aed\" stroke-width=\"3\"/><polygon points=\"190,190 178,210 202,210\" fill=\"#b91c1c\"/><text x=\"146\" y=\"228\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#b91c1c\">mean = balance point at 1.5</text></svg>"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "The balance point need not be a value X ever takes."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A full distribution table is bulky, so we summarise it with a single centre number: the mean, also called the expectation."
+            },
+            {
+              "seq": 2,
+              "text": "The crucial word is weighted. The mean is not a plain average of the listed values; it's a probability-weighted average, so values that occur more often pull it toward themselves."
+            },
+            {
+              "seq": 3,
+              "text": "In symbols, mu equals E of X equals the sum of each value times its probability."
+            },
+            {
+              "seq": 4,
+              "text": "Feel why the weights matter. A lucky-dip: ninety percent of tickets win ten rupees, ten percent win a hundred. A naive average of the prizes says fifty five rupees."
+            },
+            {
+              "seq": 5,
+              "text": "But almost nobody wins the hundred, so fifty five is wildly optimistic. The plain average ignored how rare the big prize is."
+            },
+            {
+              "seq": 6,
+              "text": "<excited>The honest expected prize weights each value by how often it occurs: zero point nine times ten, plus zero point one times a hundred, which is nineteen rupees!</excited>"
+            },
+            {
+              "seq": 7,
+              "text": "That nineteen is the mean, and it's exactly what a fair ticket price would be in the long run. Probabilities are the weights; ignore them and the mean is meaningless."
+            },
+            {
+              "seq": 8,
+              "text": "Picture a beam with a weight equal to each probability placed at each value; the mean is the one point where the beam balances."
+            },
+            {
+              "seq": 9,
+              "text": "And notice it need not sit at any value X actually takes. The balance point of a fair-coin count can be one point five, a number of heads you never literally see."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूरी distribution table भारी होती है, तो हम इसे एक single centre number से summarise करते हैं: mean, जिसे expectation भी कहते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "अहम शब्द है weighted। Mean listed values का plain average नहीं; ये probability-weighted average है, तो जो values ज़्यादा बार आते हैं वो इसे अपनी ओर खींचते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Symbols में, mu बराबर E of X बराबर हर value गुणा उसकी probability का sum।"
+            },
+            {
+              "seq": 4,
+              "text": "Feel करो weights क्यों matter करते हैं। एक lucky-dip: नब्बे percent tickets दस rupees जीतते हैं, दस percent सौ। Prizes का naive average कहता है पचपन rupees।"
+            },
+            {
+              "seq": 5,
+              "text": "पर सौ लगभग कोई नहीं जीतता, तो पचपन wildly optimistic है। Plain average ने ignore किया कि बड़ा prize कितना rare है।"
+            },
+            {
+              "seq": 6,
+              "text": "<excited>Honest expected prize हर value को उसकी frequency से weight करता है: zero point nine गुणा दस, जोड़ zero point one गुणा सौ, जो है उन्नीस rupees!</excited>"
+            },
+            {
+              "seq": 7,
+              "text": "वो उन्नीस ही mean है, और long run में यही एक fair ticket price होगी। Probabilities ही weights हैं; इन्हें ignore करो तो mean meaningless है।"
+            },
+            {
+              "seq": 8,
+              "text": "एक beam सोचो जिस पे हर value पे उसकी probability के बराबर weight रखा हो; mean वो एक point है जहाँ beam balance करता है।"
+            },
+            {
+              "seq": 9,
+              "text": "और ध्यान दो ये ज़रूरी नहीं कि X के किसी actual value पे बैठे। Fair-coin count का balance point one point five हो सकता है, heads की एक संख्या जो तुम कभी literally नहीं देखते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Variance: measuring the spread",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Variance — Measuring the Spread"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Two batsmen, same average: one steady, one duck-or-century."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "caption": "Same mean, very different spread.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"22\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#15803d\">Consistent — low variance</text><line x1=\"20\" y1=\"92\" x2=\"200\" y2=\"92\" stroke=\"#334155\" stroke-width=\"1\"/><rect x=\"70\" y=\"57\" width=\"22\" height=\"35\" fill=\"#86efac\" stroke=\"#15803d\"/><rect x=\"95\" y=\"37\" width=\"22\" height=\"55\" fill=\"#86efac\" stroke=\"#15803d\"/><rect x=\"120\" y=\"57\" width=\"22\" height=\"35\" fill=\"#86efac\" stroke=\"#15803d\"/><polygon points=\"106,97 98,112 114,112\" fill=\"#b91c1c\"/><text x=\"238\" y=\"22\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#b91c1c\">Volatile — high variance</text><line x1=\"240\" y1=\"92\" x2=\"420\" y2=\"92\" stroke=\"#334155\" stroke-width=\"1\"/><rect x=\"250\" y=\"47\" width=\"22\" height=\"45\" fill=\"#fca5a5\" stroke=\"#b91c1c\"/><rect x=\"320\" y=\"62\" width=\"22\" height=\"30\" fill=\"#fca5a5\" stroke=\"#b91c1c\"/><rect x=\"388\" y=\"47\" width=\"22\" height=\"45\" fill=\"#fca5a5\" stroke=\"#b91c1c\"/><polygon points=\"326,97 318,112 334,112\" fill=\"#b91c1c\"/><text x=\"55\" y=\"148\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">Two batsmen, same average — one steady, one duck-or-century.</text><text x=\"55\" y=\"170\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#64748b\">The fulcrum (mean) is the same; the spread is not.</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Variance is the average squared distance of values from the mean."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "\\sigma^2 = \\sum_{i}(x_i - \\mu)^2\\, p_i"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Why square? Signed deviations always cancel to zero."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Squaring kills the sign and penalises far values more heavily."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "latex": "\\sigma = \\sqrt{\\sigma^2}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "The square root returns us to the original units of X."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The mean tells you the centre, but two variables with the same centre can feel completely different. That's what variance measures."
+            },
+            {
+              "seq": 2,
+              "text": "Cricket gives the perfect picture. Two batsmen can share the same average yet play nothing alike: one grinds out forty every innings, the other alternates a golden duck and a blazing century."
+            },
+            {
+              "seq": 3,
+              "text": "Same mean, wildly different spread. Variance is the number that captures that spread."
+            },
+            {
+              "seq": 4,
+              "text": "Concretely, variance is the average squared distance of the values from the mean."
+            },
+            {
+              "seq": 5,
+              "text": "In symbols, sigma squared is the sum of each squared deviation from mu, weighted by its probability."
+            },
+            {
+              "seq": 6,
+              "text": "Why square the deviations? Because a natural first attempt, the average signed deviation, is always exactly zero: the values above the mean cancel the values below it. That's literally what makes mu the balance point."
+            },
+            {
+              "seq": 7,
+              "text": "Squaring kills the sign so nothing cancels, and it also penalises far-flung values more heavily. A value twice as far from the mean contributes four times as much."
+            },
+            {
+              "seq": 8,
+              "text": "Taking the square root at the end gives the standard deviation, sigma."
+            },
+            {
+              "seq": 9,
+              "text": "That square root simply returns us to the original units of X, which is why standard deviation is often the more interpretable spread."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Mean centre बताता है, पर same centre वाले दो variables बिल्कुल अलग feel कर सकते हैं। यही variance measure करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Cricket perfect picture देता है। दो batsmen का average same हो सकता है फिर भी खेल बिल्कुल अलग: एक हर innings चालीस पीसता है, दूसरा golden duck और blazing century के बीच झूलता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Same mean, बहुत अलग spread। Variance वो number है जो उस spread को पकड़ता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Concretely, variance है values का mean से average squared distance।"
+            },
+            {
+              "seq": 5,
+              "text": "Symbols में, sigma squared है mu से हर squared deviation का sum, उसकी probability से weighted।"
+            },
+            {
+              "seq": 6,
+              "text": "Deviations square क्यों करें? क्योंकि एक natural पहली कोशिश, average signed deviation, हमेशा बिल्कुल zero होती है: mean से ऊपर वाले values नीचे वालों को cancel कर देते हैं। यही तो mu को balance point बनाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Squaring sign को ख़त्म कर देता है ताकि कुछ cancel न हो, और दूर वाले values को ज़्यादा भारी penalise करता है। Mean से दुगुना दूर value चार गुना contribute करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "आख़िर में square root लेने से standard deviation मिलता है, sigma।"
+            },
+            {
+              "seq": 9,
+              "text": "वो square root बस हमें X की original units में वापस लाता है, इसीलिए standard deviation अक्सर ज़्यादा interpretable spread है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Derivation: the computational form of variance",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Derivation — the Computational Form of Variance"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Start from the definition and expand the square inside the expectation."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "\\sigma^2 = E[(X-\\mu)^2] = E[X^2 - 2\\mu X + \\mu^2]"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Expectation distributes across a sum; constants pull out."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "= E(X^2) - 2\\mu\\,E(X) + \\mu^2"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Now use $E(X) = \\mu$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "\\sigma^2 = E(X^2) - \\mu^2"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "One table pass gives both sums, then combine — far fewer decimal slips."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The definition of variance is honest but slow. Let's derive the faster computational form."
+            },
+            {
+              "seq": 2,
+              "text": "Start from the definition and expand the square inside the expectation: X minus mu, all squared, is X squared minus two mu X plus mu squared."
+            },
+            {
+              "seq": 3,
+              "text": "So sigma squared equals the expectation of that whole expression."
+            },
+            {
+              "seq": 4,
+              "text": "Expectation distributes across a sum, and constants pull outside, exactly like a weighted sum does."
+            },
+            {
+              "seq": 5,
+              "text": "That gives expectation of X squared, minus two mu times expectation of X, plus mu squared."
+            },
+            {
+              "seq": 6,
+              "text": "Now use the fact that expectation of X is mu itself."
+            },
+            {
+              "seq": 7,
+              "text": "The middle and last terms collapse, leaving sigma squared equals expectation of X squared minus mu squared."
+            },
+            {
+              "seq": 8,
+              "text": "Why this matters: instead of subtracting mu from every value first, you accumulate the sum of x-p and the sum of x-squared-p in a single table pass, then combine once at the end. Far fewer decimal slips."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Variance की definition honest है पर slow। तेज़ computational form derive करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Definition से शुरू करो और expectation के अंदर square expand करो: X minus mu, whole squared, बराबर X squared minus two mu X plus mu squared।"
+            },
+            {
+              "seq": 3,
+              "text": "तो sigma squared बराबर उस पूरी expression की expectation।"
+            },
+            {
+              "seq": 4,
+              "text": "Expectation एक sum पे distribute होती है, और constants बाहर निकल जाते हैं, बिल्कुल जैसे weighted sum करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "इससे मिलता है expectation of X squared, minus two mu गुणा expectation of X, plus mu squared।"
+            },
+            {
+              "seq": 6,
+              "text": "अब ये fact use करो कि expectation of X ख़ुद mu है।"
+            },
+            {
+              "seq": 7,
+              "text": "बीच और आख़िरी terms collapse हो जाते हैं, बचता है sigma squared बराबर expectation of X squared minus mu squared।"
+            },
+            {
+              "seq": 8,
+              "text": "ये क्यों matter करता है: हर value से पहले mu घटाने के बजाय, तुम एक ही table pass में sum of x-p और sum of x-squared-p इकट्ठा करते हो, फिर आख़िर में एक बार combine करते हो। बहुत कम decimal slips।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Derivation: linear transformations of a random variable",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Derivation — Linear Transformations"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Let $Y = aX + b$. Then the mean shifts and scales."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "E(aX + b) = a\\,E(X) + b"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\operatorname{Var}(Y) = E[(aX + b - a\\mu - b)^2]"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "The $+b$ cancels itself out inside the square."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "\\operatorname{Var}(aX + b) = a^2\\,\\operatorname{Var}(X)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "A pure shift b moves the mean but never the spread."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "The scale factor a enters variance squared."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "One more derivation, and it saves you a whole second table in exams: how mean and variance behave under a linear change."
+            },
+            {
+              "seq": 2,
+              "text": "Let Y be a times X plus b. We want the mean and variance of Y."
+            },
+            {
+              "seq": 3,
+              "text": "The mean is easy: expectation of a X plus b equals a times expectation of X, plus b. The shift and scale pass straight through."
+            },
+            {
+              "seq": 4,
+              "text": "For the variance, write it as the expectation of Y minus its mean, squared. Y's mean is a mu plus b, so inside the bracket you get a X plus b minus a mu minus b."
+            },
+            {
+              "seq": 5,
+              "text": "The plus b and minus b cancel, leaving a times the quantity X minus mu."
+            },
+            {
+              "seq": 6,
+              "text": "Square that and pull the a out: variance of a X plus b is a squared times variance of X."
+            },
+            {
+              "seq": 7,
+              "text": "So a pure shift, the plus b, moves the mean but never touches the spread. Sliding all your data sideways changes the average, not how scattered it is."
+            },
+            {
+              "seq": 8,
+              "text": "And the scale factor a enters variance squared: double the variable and the variance quadruples."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक और derivation, और ये exam में एक पूरी दूसरी table बचा देती है: linear change के तहत mean और variance कैसे behave करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "मानो Y बराबर a गुणा X plus b। हमें Y का mean और variance चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Mean आसान है: expectation of a X plus b बराबर a गुणा expectation of X, plus b। Shift और scale सीधे pass हो जाते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Variance के लिए, इसे लिखो Y minus उसके mean, whole squared की expectation। Y का mean है a mu plus b, तो bracket के अंदर मिलता है a X plus b minus a mu minus b।"
+            },
+            {
+              "seq": 5,
+              "text": "Plus b और minus b cancel हो जाते हैं, बचता है a गुणा quantity X minus mu।"
+            },
+            {
+              "seq": 6,
+              "text": "उसे square करो और a बाहर निकालो: variance of a X plus b बराबर a squared गुणा variance of X।"
+            },
+            {
+              "seq": 7,
+              "text": "तो एक pure shift, वो plus b, mean को हिलाता है पर spread को कभी नहीं छूता। सारा data बग़ल में खिसकाने से average बदलता है, बिखराव नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "और scale factor a variance में squared घुसता है: variable दुगुना करो और variance चौगुना हो जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Core formulas: valid distribution, mean, E(X-squared)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Core Formulas — Distribution, Mean, E(X²)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "A distribution is valid only if every probability is legal and they total one."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "p_i \\ge 0, \\quad \\sum_{i} p_i = 1"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "latex": "\\mu = E(X) = \\sum_{i} x_i\\, p_i"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "The mean is the probability-weighted centre, not a plain average."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "E(X^2) = \\sum_{i} x_i^2\\, p_i"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "You need E(X²) for variance — accumulate it in the same table pass."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "To pin an unknown k, set the probabilities' sum to one and solve."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lay out the formula toolkit for this subtopic, starting with the basics."
+            },
+            {
+              "seq": 2,
+              "text": "A distribution is valid only when every probability is legal and they add to one."
+            },
+            {
+              "seq": 3,
+              "text": "In symbols: each p-i is at least zero, and the sum of all p-i is one."
+            },
+            {
+              "seq": 4,
+              "text": "The mean, or expectation, is the sum of each value times its probability. It's the probability-weighted centre."
+            },
+            {
+              "seq": 5,
+              "text": "Say it out loud so you never slip: weighted, not plain. Frequent values pull the mean toward themselves."
+            },
+            {
+              "seq": 6,
+              "text": "You'll also need expectation of X squared: the sum of each value squared times its probability."
+            },
+            {
+              "seq": 7,
+              "text": "That quantity is what feeds the variance, so accumulate it in the same table pass as the mean."
+            },
+            {
+              "seq": 8,
+              "text": "And to pin an unknown constant k in a distribution, set the sum of the probabilities to one and solve for k, then check every probability stays legal."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic का formula toolkit रख देते हैं, basics से शुरू।"
+            },
+            {
+              "seq": 2,
+              "text": "एक distribution तभी valid है जब हर probability legal हो और उनका sum one हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Symbols में: हर p-i कम से कम zero, और सारे p-i का sum one।"
+            },
+            {
+              "seq": 4,
+              "text": "Mean, या expectation, है हर value गुणा उसकी probability का sum। ये probability-weighted centre है।"
+            },
+            {
+              "seq": 5,
+              "text": "ज़ोर से बोलो ताकि कभी न फिसलो: weighted, plain नहीं। बार-बार आने वाले values mean को अपनी ओर खींचते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "तुम्हें expectation of X squared भी चाहिए: हर value squared गुणा उसकी probability का sum।"
+            },
+            {
+              "seq": 7,
+              "text": "वही quantity variance को feed करती है, तो इसे mean वाले same table pass में इकट्ठा करो।"
+            },
+            {
+              "seq": 8,
+              "text": "और distribution में unknown constant k pin करने के लिए, probabilities का sum one रखो और k solve करो, फिर check करो हर probability legal रहे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "formulas",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Core formulas: variance, SD, and the linear rules",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Core Formulas — Variance, SD, Linear Rules"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "latex": "\\sigma^2 = \\sum_{i}(x_i - \\mu)^2 p_i"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "\\sigma^2 = E(X^2) - [E(X)]^2"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Two equal forms; the second is the fast computational one."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "\\sigma = \\sqrt{\\sigma^2}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "E(aX + b) = a\\,E(X) + b"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "\\operatorname{Var}(aX + b) = a^2\\,\\operatorname{Var}(X)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "The $+b$ shifts the mean but never affects the variance."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Variance is always $\\ge 0$ — a negative answer means a dropped $\\mu^2$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now variance, standard deviation, and the linear-transformation rules that J E E leans on."
+            },
+            {
+              "seq": 2,
+              "text": "Variance in its definition form is the sum of squared deviations from the mean, each weighted by its probability."
+            },
+            {
+              "seq": 3,
+              "text": "The equivalent computational form is expectation of X squared, minus the square of expectation of X."
+            },
+            {
+              "seq": 4,
+              "text": "The two are equal; reach for the second one in exams because it's far faster on decimals."
+            },
+            {
+              "seq": 5,
+              "text": "Standard deviation is just the square root of the variance."
+            },
+            {
+              "seq": 6,
+              "text": "For a linear change: expectation of a X plus b is a times expectation of X, plus b."
+            },
+            {
+              "seq": 7,
+              "text": "And variance of a X plus b is a squared times variance of X."
+            },
+            {
+              "seq": 8,
+              "text": "Note the plus b shifts the mean but never affects the variance, while the scale factor a enters squared."
+            },
+            {
+              "seq": 9,
+              "text": "One permanent sanity check: variance is always greater than or equal to zero. A negative answer means you dropped the square on mu."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब variance, standard deviation, और वो linear-transformation rules जिन पे J E E टिका रहता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Variance अपनी definition form में है mean से squared deviations का sum, हर एक अपनी probability से weighted।"
+            },
+            {
+              "seq": 3,
+              "text": "Equivalent computational form है expectation of X squared, minus expectation of X का square।"
+            },
+            {
+              "seq": 4,
+              "text": "दोनों बराबर हैं; exam में दूसरी वाली उठाओ क्योंकि decimals पे ये कहीं तेज़ है।"
+            },
+            {
+              "seq": 5,
+              "text": "Standard deviation बस variance का square root है।"
+            },
+            {
+              "seq": 6,
+              "text": "Linear change के लिए: expectation of a X plus b बराबर a गुणा expectation of X, plus b।"
+            },
+            {
+              "seq": 7,
+              "text": "और variance of a X plus b बराबर a squared गुणा variance of X।"
+            },
+            {
+              "seq": 8,
+              "text": "ध्यान दो plus b mean को shift करता है पर variance को कभी affect नहीं करता, जबकि scale factor a squared घुसता है।"
+            },
+            {
+              "seq": 9,
+              "text": "एक permanent sanity check: variance हमेशा zero से बड़ा या बराबर होता है। Negative जवाब मतलब तुमने mu पे square गिरा दिया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Worked example: three coin tosses (CBSE)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Three Coin Tosses (CBSE)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Fair coin tossed $3$ times. $X$ = number of heads. Values $0,1,2,3$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "P(0)=\\tfrac{1}{8},\\ P(1)=\\tfrac{3}{8},\\ P(2)=\\tfrac{3}{8},\\ P(3)=\\tfrac{1}{8}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "Check: 1/8 + 3/8 + 3/8 + 1/8 = 1."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "\\mu = 0\\cdot\\tfrac18 + 1\\cdot\\tfrac38 + 2\\cdot\\tfrac38 + 3\\cdot\\tfrac18 = \\tfrac{12}{8} = \\tfrac32"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "E(X^2) = 1\\cdot\\tfrac38 + 4\\cdot\\tfrac38 + 9\\cdot\\tfrac18 = \\tfrac{24}{8} = 3"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "\\sigma^2 = E(X^2) - \\mu^2 = 3 - \\tfrac94 = \\tfrac34"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "So mean 3/2, variance 3/4, SD about 0.87."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Mean 1.5 isn't a value X takes — perfectly normal for an average."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The Boards classic: build a distribution, then its mean and variance."
+            },
+            {
+              "seq": 2,
+              "text": "A fair coin is tossed three times, and X is the number of heads. X can be zero, one, two, or three."
+            },
+            {
+              "seq": 3,
+              "text": "With eight equally likely outcomes, the probabilities are one eighth, three eighths, three eighths, one eighth."
+            },
+            {
+              "seq": 4,
+              "text": "Always check first: one eighth plus three eighths plus three eighths plus one eighth is one."
+            },
+            {
+              "seq": 5,
+              "text": "The mean: zero times one eighth, plus one times three eighths, plus two times three eighths, plus three times one eighth, which is twelve eighths, or three halves."
+            },
+            {
+              "seq": 6,
+              "text": "For expectation of X squared, square each value: one times three eighths, plus four times three eighths, plus nine times one eighth, which is twenty four eighths, or three."
+            },
+            {
+              "seq": 7,
+              "text": "Variance is expectation of X squared minus mu squared: three minus nine quarters, which is three quarters."
+            },
+            {
+              "seq": 8,
+              "text": "So the mean is three halves, the variance is three quarters, and the standard deviation is about zero point eight seven."
+            },
+            {
+              "seq": 9,
+              "text": "Notice the mean, one point five, isn't a value X ever takes. That's perfectly normal: it's the long-run average number of heads per three tosses."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Boards classic: एक distribution बनाओ, फिर उसका mean और variance।"
+            },
+            {
+              "seq": 2,
+              "text": "एक fair coin तीन बार toss होता है, और X है heads की संख्या। X हो सकता है zero, one, two, या three।"
+            },
+            {
+              "seq": 3,
+              "text": "आठ equally likely outcomes के साथ, probabilities हैं one eighth, three eighths, three eighths, one eighth।"
+            },
+            {
+              "seq": 4,
+              "text": "हमेशा पहले check: one eighth जोड़ three eighths जोड़ three eighths जोड़ one eighth बराबर one।"
+            },
+            {
+              "seq": 5,
+              "text": "Mean: zero गुणा one eighth, जोड़ one गुणा three eighths, जोड़ two गुणा three eighths, जोड़ three गुणा one eighth, जो है twelve eighths, यानी three halves।"
+            },
+            {
+              "seq": 6,
+              "text": "Expectation of X squared के लिए, हर value square करो: one गुणा three eighths, जोड़ four गुणा three eighths, जोड़ nine गुणा one eighth, जो है twenty four eighths, यानी three।"
+            },
+            {
+              "seq": 7,
+              "text": "Variance है expectation of X squared minus mu squared: three minus nine quarters, जो है three quarters।"
+            },
+            {
+              "seq": 8,
+              "text": "तो mean है three halves, variance है three quarters, और standard deviation लगभग zero point eight seven।"
+            },
+            {
+              "seq": 9,
+              "text": "ध्यान दो mean, one point five, X का कोई actual value नहीं। ये बिल्कुल normal है: ये प्रति तीन tosses heads की long-run average है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Worked example: fast variance (JEE Main)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Fast Variance (JEE Main)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "$X: \\{1,2,3\\}$ with $P: \\{0.2, 0.5, 0.3\\}$. Find the variance."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "style": "red-margin",
+          "text": "The trap: grinding out squared deviations with decimals."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\mu = 1(0.2) + 2(0.5) + 3(0.3) = 2.1"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "E(X^2) = 1(0.2) + 4(0.5) + 9(0.3) = 4.9"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "\\sigma^2 = 4.9 - (2.1)^2 = 4.9 - 4.41 = 0.49"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "So variance 0.49, SD 0.7 — one table pass, one subtraction."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "The computational form scales painlessly to five or six values."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A speed-focused problem: the point is method, not difficulty."
+            },
+            {
+              "seq": 2,
+              "text": "X takes one, two, three with probabilities zero point two, zero point five, zero point three. Find the variance."
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>The trap is to grind out the sum of squared deviations with decimals — slow and slip-prone.</whisper>"
+            },
+            {
+              "seq": 4,
+              "text": "Instead, one table pass. The mean is one times zero point two, plus two times zero point five, plus three times zero point three, which is two point one."
+            },
+            {
+              "seq": 5,
+              "text": "Expectation of X squared is one times zero point two, plus four times zero point five, plus nine times zero point three, which is four point nine."
+            },
+            {
+              "seq": 6,
+              "text": "Variance is four point nine minus two point one squared, that's four point nine minus four point four one, which is zero point four nine."
+            },
+            {
+              "seq": 7,
+              "text": "So the variance is zero point four nine and the standard deviation is zero point seven, from a single sweep and one subtraction."
+            },
+            {
+              "seq": 8,
+              "text": "The long route gives the same answer but with three subtractions and three squarings of awkward decimals. The computational form scales painlessly to five or six values, where the deviation form becomes a minefield."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक speed-focused problem: बात method की है, difficulty की नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "X लेता है one, two, three probabilities zero point two, zero point five, zero point three के साथ। Variance निकालो।"
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>Trap है squared deviations का sum decimals के साथ पीसना, slow और slip-prone।</whisper>"
+            },
+            {
+              "seq": 4,
+              "text": "इसके बजाय, एक table pass। Mean है one गुणा zero point two, जोड़ two गुणा zero point five, जोड़ three गुणा zero point three, जो है two point one।"
+            },
+            {
+              "seq": 5,
+              "text": "Expectation of X squared है one गुणा zero point two, जोड़ four गुणा zero point five, जोड़ nine गुणा zero point three, जो है four point nine।"
+            },
+            {
+              "seq": 6,
+              "text": "Variance है four point nine minus two point one squared, यानी four point nine minus four point four one, जो है zero point four nine।"
+            },
+            {
+              "seq": 7,
+              "text": "तो variance है zero point four nine और standard deviation zero point seven, एक ही sweep और एक subtraction से।"
+            },
+            {
+              "seq": 8,
+              "text": "लंबा रास्ता वही जवाब देता है पर तीन subtractions और awkward decimals की तीन squarings के साथ। Computational form पाँच या छह values तक painlessly scale करता है, जहाँ deviation form एक minefield बन जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Worked example: number of aces (JEE Main)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Number of Aces (JEE Main)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Draw $2$ cards together from $52$. $X$ = number of aces. Values $0,1,2$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "\\text{total} = \\binom{52}{2} = 1326; \\quad 4 \\text{ aces}, \\ 48 \\text{ non-aces}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(0) = \\dfrac{\\binom{48}{2}}{1326} = \\dfrac{188}{221}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(1) = \\dfrac{\\binom{4}{1}\\binom{48}{1}}{1326} = \\dfrac{32}{221}, \\quad P(2) = \\dfrac{\\binom{4}{2}}{1326} = \\dfrac{1}{221}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "Check: (188 + 32 + 1)/221 = 1."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "E(X) = 1\\cdot\\tfrac{32}{221} + 2\\cdot\\tfrac{1}{221} = \\tfrac{34}{221} = \\tfrac{2}{13}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Mean about 0.154 aces per two-card draw."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Sanity: each card is an ace with chance $\\tfrac{1}{13}$, so $2 \\times \\tfrac{1}{13} = \\tfrac{2}{13}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A distribution built with combinations, then its mean, a favourite J E E Main crossover."
+            },
+            {
+              "seq": 2,
+              "text": "Draw two cards together from a standard deck of fifty two. X is the number of aces, so X is zero, one, or two."
+            },
+            {
+              "seq": 3,
+              "text": "Total ways to draw two cards is fifty two choose two, which is one thousand three hundred twenty six. There are four aces and forty eight non-aces."
+            },
+            {
+              "seq": 4,
+              "text": "Probability of zero aces is forty eight choose two, over that total, which reduces to one hundred eighty eight over two hundred twenty one."
+            },
+            {
+              "seq": 5,
+              "text": "Probability of one ace is four choose one times forty eight choose one, over the total, giving thirty two over two hundred twenty one; and two aces is four choose two over the total, which is one over two hundred twenty one."
+            },
+            {
+              "seq": 6,
+              "text": "Check the sum: one hundred eighty eight plus thirty two plus one, over two hundred twenty one, is one."
+            },
+            {
+              "seq": 7,
+              "text": "The mean is one times thirty two over two twenty one, plus two times one over two twenty one, which is thirty four over two twenty one, or two thirteenths."
+            },
+            {
+              "seq": 8,
+              "text": "So on average about zero point one five aces per two-card draw."
+            },
+            {
+              "seq": 9,
+              "text": "A neat sanity check: each single card is an ace with chance one thirteenth, so over two cards the mean count is two times one thirteenth, which is two thirteenths. It matches."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Combinations से बनी एक distribution, फिर उसका mean, एक favourite J E E Main crossover।"
+            },
+            {
+              "seq": 2,
+              "text": "बावन cards के standard deck से दो cards एक साथ निकालो। X है aces की संख्या, तो X है zero, one, या two।"
+            },
+            {
+              "seq": 3,
+              "text": "दो cards निकालने के total ways हैं बावन choose two, जो है तेरह सौ छब्बीस। चार aces और अड़तालीस non-aces हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Zero aces की probability है अड़तालीस choose two, बटा उस total, जो reduce होकर एक सौ अठासी बटा दो सौ इक्कीस।"
+            },
+            {
+              "seq": 5,
+              "text": "One ace की probability है four choose one गुणा अड़तालीस choose one, बटा total, जो देता है बत्तीस बटा दो सौ इक्कीस; और two aces है four choose two बटा total, जो है one बटा दो सौ इक्कीस।"
+            },
+            {
+              "seq": 6,
+              "text": "Sum check: एक सौ अठासी जोड़ बत्तीस जोड़ one, बटा दो सौ इक्कीस, बराबर one।"
+            },
+            {
+              "seq": 7,
+              "text": "Mean है one गुणा बत्तीस बटा दो सौ इक्कीस, जोड़ two गुणा one बटा दो सौ इक्कीस, जो है चौंतीस बटा दो सौ इक्कीस, यानी two thirteenths।"
+            },
+            {
+              "seq": 8,
+              "text": "तो average लगभग zero point one five aces प्रति two-card draw।"
+            },
+            {
+              "seq": 9,
+              "text": "एक neat sanity check: हर single card एक ace है one thirteenth chance से, तो दो cards पे mean count है two गुणा one thirteenth, जो है two thirteenths। ये match करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Worked example: formula-defined distribution (JEE Advanced)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Formula-Defined Distribution (JEE Advanced)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "$X$ takes $1,2,3,4$ with $P(X=x) = kx$. Find $k$, $E(X)$, $\\operatorname{Var}(X)$, then $Y = 2X - 1$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "\\sum p_i = k(1+2+3+4) = 10k = 1 \\;\\Rightarrow\\; k = \\tfrac{1}{10}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "All four probabilities 1/10, 2/10, 3/10, 4/10 lie in [0,1]."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "E(X) = \\tfrac{1+4+9+16}{10} = \\tfrac{30}{10} = 3"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "E(X^2) = \\tfrac{1+8+27+64}{10} = \\tfrac{100}{10} = 10"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "\\operatorname{Var}(X) = 10 - 3^2 = 1"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Now Y = 2X - 1 — use the linear rules, no new table."
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "latex": "E(Y) = 2(3) - 1 = 5, \\quad \\operatorname{Var}(Y) = 2^2 \\cdot 1 = 4"
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 81,
+          "style": "red-margin",
+          "text": "Doubling X quadrupled the spread; the −1 shift left variance alone."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A full J E E Advanced build on a formula-defined distribution, ending with a linear transformation."
+            },
+            {
+              "seq": 2,
+              "text": "X takes one, two, three, four, with probability of X equal to k times x. Find k, then the mean and variance, then handle Y equals two X minus one."
+            },
+            {
+              "seq": 3,
+              "text": "First k: the probabilities must sum to one, so k times the total one plus two plus three plus four is ten k equals one, giving k equal to one tenth."
+            },
+            {
+              "seq": 4,
+              "text": "Check the probabilities: one tenth, two tenths, three tenths, four tenths all lie between zero and one, so k is valid."
+            },
+            {
+              "seq": 5,
+              "text": "The mean is the sum of x times k x, which is one plus four plus nine plus sixteen, over ten, equal to thirty over ten, or three."
+            },
+            {
+              "seq": 6,
+              "text": "Expectation of X squared is one plus eight plus twenty seven plus sixty four, over ten, which is one hundred over ten, or ten."
+            },
+            {
+              "seq": 7,
+              "text": "So variance is ten minus three squared, which is one."
+            },
+            {
+              "seq": 8,
+              "text": "Now for Y equals two X minus one, don't rebuild a table; use the linear rules."
+            },
+            {
+              "seq": 9,
+              "text": "Expectation of Y is two times three minus one, which is five; and variance of Y is two squared times one, which is four."
+            },
+            {
+              "seq": 10,
+              "text": "Read the result: doubling X, the factor a equals two, quadrupled the spread, while the minus one shift moved the mean but left the variance untouched. That's why a enters squared and the constant drops out."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक formula-defined distribution पे पूरा J E E Advanced build, आख़िर में एक linear transformation के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "X लेता है one, two, three, four, probability of X बराबर k गुणा x। k निकालो, फिर mean और variance, फिर Y बराबर two X minus one handle करो।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले k: probabilities का sum one होना चाहिए, तो k गुणा total one जोड़ two जोड़ three जोड़ four बराबर ten k बराबर one, जो देता है k बराबर one tenth।"
+            },
+            {
+              "seq": 4,
+              "text": "Probabilities check करो: one tenth, two tenths, three tenths, four tenths सब zero और one के बीच हैं, तो k valid है।"
+            },
+            {
+              "seq": 5,
+              "text": "Mean है x गुणा k x का sum, जो है one जोड़ four जोड़ nine जोड़ sixteen, बटा ten, बराबर thirty बटा ten, यानी three।"
+            },
+            {
+              "seq": 6,
+              "text": "Expectation of X squared है one जोड़ eight जोड़ twenty seven जोड़ sixty four, बटा ten, जो है one hundred बटा ten, यानी ten।"
+            },
+            {
+              "seq": 7,
+              "text": "तो variance है ten minus three squared, जो है one।"
+            },
+            {
+              "seq": 8,
+              "text": "अब Y बराबर two X minus one के लिए, table दुबारा मत बनाओ; linear rules use करो।"
+            },
+            {
+              "seq": 9,
+              "text": "Expectation of Y है two गुणा three minus one, जो है five; और variance of Y है two squared गुणा one, जो है four।"
+            },
+            {
+              "seq": 10,
+              "text": "Result पढ़ो: X दुगुना करना, factor a बराबर two, spread को चौगुना कर गया, जबकि minus one shift ने mean हिलाया पर variance को नहीं छुआ। इसीलिए a squared घुसता है और constant drop out हो जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "tips",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Common pitfalls to avoid",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Common Pitfalls — Random Variables"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 9,
+          "style": "red-margin",
+          "text": "Pitfall 1: plain average instead of the probability-weighted mean."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "The mean must weight each value by its probability, not divide by n."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "Pitfall 2: forgetting to square the mean in variance."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Variance is E(X²) minus [E(X)]², not E(X²) minus E(X)."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "Pitfall 3: confusing variance with standard deviation."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "SD is the square root of variance and carries the same units as X."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Pitfall 4: skipping the sum-to-one check, or accepting a negative probability."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Pitfall 5: using a formula-defined P without first finding the constant."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Five traps quietly cost marks on random-variable questions, so let's name them."
+            },
+            {
+              "seq": 2,
+              "text": "Pitfall one: taking a plain average instead of the probability-weighted mean."
+            },
+            {
+              "seq": 3,
+              "text": "The mean must weight each value by its probability; you never simply divide the sum of the values by n."
+            },
+            {
+              "seq": 4,
+              "text": "Pitfall two: forgetting to square the mean in the variance formula."
+            },
+            {
+              "seq": 5,
+              "text": "Variance is expectation of X squared minus the square of expectation of X, not minus expectation of X itself. The subtracted term is the mean squared."
+            },
+            {
+              "seq": 6,
+              "text": "Pitfall three: confusing variance with standard deviation."
+            },
+            {
+              "seq": 7,
+              "text": "Standard deviation is the square root of variance, and it carries the same units as X. Report whichever the question actually asks for."
+            },
+            {
+              "seq": 8,
+              "text": "Pitfall four: skipping the sum-to-one check, or accepting a value of the constant that yields a negative probability."
+            },
+            {
+              "seq": 9,
+              "text": "Pitfall five: with a formula-defined distribution like k x or c x squared, plugging in values before finding the constant. Always solve for the constant first, then confirm every probability is legal."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पाँच traps चुपचाप random-variable questions पे marks खाते हैं, तो इन्हें नाम देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Pitfall one: probability-weighted mean के बजाय plain average लेना।"
+            },
+            {
+              "seq": 3,
+              "text": "Mean को हर value उसकी probability से weight करना ही है; तुम कभी values का sum बस n से divide नहीं करते।"
+            },
+            {
+              "seq": 4,
+              "text": "Pitfall two: variance formula में mean square करना भूल जाना।"
+            },
+            {
+              "seq": 5,
+              "text": "Variance है expectation of X squared minus expectation of X का square, minus expectation of X नहीं। घटाया गया term है mean squared।"
+            },
+            {
+              "seq": 6,
+              "text": "Pitfall three: variance को standard deviation से confuse करना।"
+            },
+            {
+              "seq": 7,
+              "text": "Standard deviation variance का square root है, और X जैसी ही units रखता है। जो question सचमुच माँगे वही report करो।"
+            },
+            {
+              "seq": 8,
+              "text": "Pitfall four: sum-to-one check छोड़ देना, या constant का ऐसा value मान लेना जो negative probability दे।"
+            },
+            {
+              "seq": 9,
+              "text": "Pitfall five: k x या c x squared जैसी formula-defined distribution पे, constant निकालने से पहले values plug कर देना। हमेशा पहले constant solve करो, फिर confirm करो हर probability legal है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "tips",
+      "subtopic": "Random Variables & Distributions",
+      "title": "Pro-tip: the four-column table method",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pro-Tip — the Four-Column Table"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Set up columns: value, probability, value×prob, value²×prob."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "x_i \\ \\mid\\ p_i \\ \\mid\\ x_i p_i \\ \\mid\\ x_i^2 p_i"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Sum the third column for E(X); sum the fourth for E(X²)."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "\\operatorname{Var}(X) = (\\text{4th sum}) - (\\text{3rd sum})^2"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "The p-column summing to 1 is your built-in validity check."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "One single-pass table converts any mean/variance question into arithmetic."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Sanity: variance can never be negative — if it is, you dropped the $\\mu^2$ square."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "This layout is exactly what earns full method marks in Boards."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Close the subtopic with the one layout that makes every mean-and-variance question mechanical."
+            },
+            {
+              "seq": 2,
+              "text": "Set up four columns: the value, its probability, the value times its probability, and the value squared times its probability."
+            },
+            {
+              "seq": 3,
+              "text": "Fill one row per value: x-i, then p-i, then x-i p-i, then x-i squared p-i."
+            },
+            {
+              "seq": 4,
+              "text": "Sum the third column to get expectation of X; sum the fourth to get expectation of X squared."
+            },
+            {
+              "seq": 5,
+              "text": "Then variance is the fourth-column sum minus the square of the third-column sum, in one final line."
+            },
+            {
+              "seq": 6,
+              "text": "A bonus: the probability column summing to one is your built-in validity check, done before you even reach the mean."
+            },
+            {
+              "seq": 7,
+              "text": "This single-pass table converts any mean or variance question into plain arithmetic, and it scales to five or six values without fuss."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>And the sanity check that never fails: variance can never be negative. If it comes out negative, you dropped the square on mu.</whisper>"
+            },
+            {
+              "seq": 9,
+              "text": "This is also exactly the layout that earns full method marks in Boards, because every step is visible and organised."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Subtopic को उस एक layout से बंद करते हैं जो हर mean-and-variance question को mechanical बना देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "चार columns सेट करो: value, उसकी probability, value गुणा उसकी probability, और value squared गुणा उसकी probability।"
+            },
+            {
+              "seq": 3,
+              "text": "हर value की एक row भरो: x-i, फिर p-i, फिर x-i p-i, फिर x-i squared p-i।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा column जोड़ो expectation of X के लिए; चौथा जोड़ो expectation of X squared के लिए।"
+            },
+            {
+              "seq": 5,
+              "text": "फिर variance है चौथे-column का sum minus तीसरे-column के sum का square, एक final line में।"
+            },
+            {
+              "seq": 6,
+              "text": "एक bonus: probability column का one में जुड़ना तुम्हारा built-in validity check है, mean तक पहुँचने से पहले ही।"
+            },
+            {
+              "seq": 7,
+              "text": "ये single-pass table किसी भी mean या variance question को plain arithmetic बना देता है, और पाँच या छह values तक बिना झंझट scale करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>और वो sanity check जो कभी fail नहीं होता: variance कभी negative नहीं हो सकता। अगर negative आए, तो तुमने mu पे square गिरा दिया।</whisper>"
+            },
+            {
+              "seq": 9,
+              "text": "ये वही layout भी है जो Boards में full method marks दिलाता है, क्योंकि हर step visible और organised है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

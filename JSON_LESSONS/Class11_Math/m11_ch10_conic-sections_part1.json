@@ -1,0 +1,1948 @@
+{
+  "chapter": "Conic Sections",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 10,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "The Conic Family",
+      "title": "One family, four slices",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Four curves, one object"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Circle, parabola, ellipse and hyperbola are all slices of ONE double cone."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 320\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"210\" y1=\"15\" x2=\"210\" y2=\"305\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"5 4\"/><line x1=\"210\" y1=\"160\" x2=\"132\" y2=\"42\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"210\" y1=\"160\" x2=\"288\" y2=\"42\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><ellipse cx=\"210\" cy=\"42\" rx=\"78\" ry=\"17\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"210\" y1=\"160\" x2=\"132\" y2=\"278\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"210\" y1=\"160\" x2=\"288\" y2=\"278\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><ellipse cx=\"210\" cy=\"278\" rx=\"78\" ry=\"17\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><ellipse cx=\"210\" cy=\"112\" rx=\"58\" ry=\"13\" fill=\"#3b82f6\" fill-opacity=\"0.22\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><circle cx=\"210\" cy=\"160\" r=\"3.5\" fill=\"#dc2626\"/><path d=\"M 210 160 L 210 122 A 38 38 0 0 1 192 128 Z\" fill=\"#f59e0b\" fill-opacity=\"0.35\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"215\" y=\"176\" font-size=\"12\" fill=\"#dc2626\">vertex</text><text x=\"214\" y=\"28\" font-size=\"12\" fill=\"#475569\">axis</text><text x=\"292\" y=\"70\" font-size=\"12\" fill=\"#475569\">generator</text><text x=\"92\" y=\"112\" font-size=\"12\" fill=\"#2563eb\">cutting plane</text><text x=\"183\" y=\"150\" font-size=\"11\" fill=\"#b45309\">alpha</text></svg>",
+          "caption": "Double cone: axis, vertex, generator, and a cutting plane"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "$\\alpha$ = semi-vertical angle (axis to generator), fixed for a cone. $\\beta$ = angle the cutting plane makes with the axis."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "$\\beta = 90^\\circ$ gives a circle. $\\alpha < \\beta < 90^\\circ$ gives an ellipse."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "$\\beta = \\alpha$ (plane parallel to a generator) gives a parabola."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "text": "$0 \\le \\beta < \\alpha$ gives a hyperbola: the plane cuts BOTH nappes."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 80,
+          "text": "Two branches = one plane slicing both cones. That is the hyperbola.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Here is the single most useful idea in this whole chapter, so let me say it up front."
+            },
+            {
+              "seq": 2,
+              "text": "The circle, parabola, ellipse and hyperbola are not four unrelated curves to memorise separately. They are one family, four different slices of the same double cone."
+            },
+            {
+              "seq": 3,
+              "text": "Picture two ice-cream cones joined tip to tip, running up and down forever. The meeting point is the vertex, the central line is the axis, and any line down the slope is a generator."
+            },
+            {
+              "seq": 4,
+              "text": "Two angles decide everything. Alpha is the cone's own semi-vertical angle, fixed for a given cone. Beta is the angle at which your cutting plane meets the axis."
+            },
+            {
+              "seq": 5,
+              "text": "Cut straight across, beta equal to ninety degrees, and the slice is a circle. Tilt gently, so alpha is less than beta which is less than ninety, and it stretches into an ellipse."
+            },
+            {
+              "seq": 6,
+              "text": "Keep tilting until the plane runs exactly parallel to one generator, beta equal to alpha. That knife-edge cut is the parabola."
+            },
+            {
+              "seq": 7,
+              "text": "Tilt past that, beta below alpha, and the plane is now steep enough to reach the second cone as well, and that gives a hyperbola."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>And that is the real reason a hyperbola comes in two branches: your plane is slicing through both nappes of the double cone at once."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>इस पूरे chapter का सबसे useful idea पहले ही बता देता हूँ।"
+            },
+            {
+              "seq": 2,
+              "text": "Circle, parabola, ellipse और hyperbola, ये चार अलग curves नहीं हैं जिन्हें अलग से याद करना पड़े। ये एक ही family हैं, एक double cone के चार अलग slices।"
+            },
+            {
+              "seq": 3,
+              "text": "सोचो दो ice-cream cones tip से tip जुड़े हुए, ऊपर-नीचे infinitely फैले। मिलने वाला point है vertex, बीच की line है axis, और slope पर की कोई भी line है generator।"
+            },
+            {
+              "seq": 4,
+              "text": "दो angles सब decide करते हैं। Alpha है cone का अपना semi-vertical angle, जो fixed रहता है। Beta है वो angle जिस पर तुम्हारा cutting plane axis से मिलता है।"
+            },
+            {
+              "seq": 5,
+              "text": "सीधा across काटो, beta बराबर ninety degrees, तो slice एक circle है। हल्का tilt करो, alpha less than beta less than ninety, तो वो खिंचकर ellipse बन जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "tilt करते जाओ जब तक plane बिल्कुल एक generator के parallel न हो, beta बराबर alpha। यही knife-edge cut parabola है।"
+            },
+            {
+              "seq": 7,
+              "text": "इससे आगे tilt करो, beta alpha से कम, तो plane अब इतना steep है कि दूसरे cone तक भी पहुँच जाता है, और यही hyperbola देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>और यही असली वजह है कि hyperbola दो branches में आता है: तुम्हारा plane double cone के दोनों nappes को एक साथ काट रहा होता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "The Conic Family",
+      "title": "The eccentricity dial and the edge cases",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One number tunes the whole family: eccentricity e"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "A conic = all points whose (distance to focus) divided by (distance to directrix) equals a constant $e$."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"95\" x2=\"405\" y2=\"95\" stroke=\"#334155\" stroke-width=\"1.5\"/><polygon points=\"410,95 400,90 400,100\" fill=\"#334155\"/><text x=\"416\" y=\"99\" font-size=\"12\" fill=\"#334155\">e</text><line x1=\"60\" y1=\"89\" x2=\"60\" y2=\"101\" stroke=\"#334155\" stroke-width=\"1.5\"/><text x=\"55\" y=\"116\" font-size=\"12\" fill=\"#334155\">0</text><line x1=\"250\" y1=\"87\" x2=\"250\" y2=\"103\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"246\" y=\"116\" font-size=\"12\" fill=\"#dc2626\">1</text><circle cx=\"60\" cy=\"68\" r=\"9\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"42\" y=\"52\" font-size=\"11\" fill=\"#2563eb\">circle</text><ellipse cx=\"150\" cy=\"68\" rx=\"15\" ry=\"8\" fill=\"none\" stroke=\"#0891b2\" stroke-width=\"1.5\"/><text x=\"130\" y=\"50\" font-size=\"11\" fill=\"#0891b2\">ellipse</text><path d=\"M 238 78 Q 250 56 262 78\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"228\" y=\"50\" font-size=\"11\" fill=\"#dc2626\">parabola</text><path d=\"M 332 56 Q 350 68 332 80\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><path d=\"M 374 56 Q 356 68 374 80\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><text x=\"326\" y=\"50\" font-size=\"11\" fill=\"#7c3aed\">hyperbola</text><text x=\"140\" y=\"134\" font-size=\"11\" fill=\"#475569\">0 to 1</text><text x=\"330\" y=\"134\" font-size=\"11\" fill=\"#475569\">greater than 1</text></svg>",
+          "caption": "The eccentricity scale: one number, four curves"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "$e = 0$: circle. $0 < e < 1$: ellipse."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "text": "$e = 1$: parabola. $e > 1$: hyperbola."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 57,
+          "text": "Parabola is the hinge: $e = 1$, exactly matching $\\beta = \\alpha$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 68,
+          "text": "Degenerate case: if the plane passes through the VERTEX, the slice collapses."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 79,
+          "text": "Through the vertex you get a single point, one straight line, or a pair of intersecting lines."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "There is a second way to see the same family that needs no cone at all, just one number, the eccentricity."
+            },
+            {
+              "seq": 2,
+              "text": "Fix a point called the focus and a line called the directrix. A conic is every point whose distance to the focus, divided by its distance to the directrix, equals a fixed constant e."
+            },
+            {
+              "seq": 3,
+              "text": "Now treat e like a dial. Turn it up from zero and you sweep smoothly through the entire family."
+            },
+            {
+              "seq": 4,
+              "text": "At e equal to zero the shape is perfectly round, a circle. Between zero and one the focus is winning slightly, and you get an ellipse."
+            },
+            {
+              "seq": 5,
+              "text": "At e exactly one the two distances are perfectly balanced, and that is the parabola. Push e above one and the curve tears open into the two arms of a hyperbola."
+            },
+            {
+              "seq": 6,
+              "text": "Notice the parabola sits right on the boundary, e equal to one, the same knife-edge we saw geometrically when beta equalled alpha. Two languages, one fact."
+            },
+            {
+              "seq": 7,
+              "text": "One warning before we move on. Everything so far assumes the cutting plane misses the vertex. If it passes through the vertex, the curve collapses."
+            },
+            {
+              "seq": 8,
+              "text": "Then you get a degenerate conic: just a single point, or one straight line, or a pair of intersecting straight lines. Examiners love testing this edge case."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इसी family को देखने का एक दूसरा तरीका भी है जिसमें cone की ज़रूरत ही नहीं, बस एक number, eccentricity।"
+            },
+            {
+              "seq": 2,
+              "text": "एक point fix करो जिसे focus कहते हैं और एक line जिसे directrix। conic है हर वो point जिसका focus से distance, directrix से distance से divide करने पर एक fixed constant e के बराबर हो।"
+            },
+            {
+              "seq": 3,
+              "text": "अब e को एक dial समझो। zero से ऊपर घुमाओ और तुम पूरी family में से smoothly गुज़र जाओगे।"
+            },
+            {
+              "seq": 4,
+              "text": "e बराबर zero पर shape बिल्कुल गोल है, एक circle। zero और one के बीच focus थोड़ा जीत रहा होता है, तो ellipse मिलता है।"
+            },
+            {
+              "seq": 5,
+              "text": "e बराबर exactly one पर दोनों distances perfectly balanced होते हैं, और वही parabola है। e को one से ऊपर करो तो curve फटकर hyperbola की दो arms बन जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "देखो parabola ठीक boundary पर बैठा है, e बराबर one, वही knife-edge जो geometrically beta बराबर alpha पर दिखा था। दो languages, एक ही fact।"
+            },
+            {
+              "seq": 7,
+              "text": "आगे बढ़ने से पहले एक warning। अब तक सब कुछ मानकर चला कि cutting plane vertex को miss करता है। अगर वो vertex से गुज़रे, तो curve collapse हो जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "तब मिलता है degenerate conic: बस एक single point, या एक straight line, या दो intersecting straight lines का pair। examiners इस edge case को खूब पूछते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "The Conic Family",
+      "title": "How to name any conic",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two five-second classifiers"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "From geometry: compare $\\beta$ with $\\alpha$, and first check whether the plane hits the vertex."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "text": "From an equation with NO $xy$ term: read the signs of $A$ (coeff of $x^2$) and $C$ (coeff of $y^2$)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "$A = C$: circle. Same sign but unequal: ellipse. One of them zero: parabola. Opposite signs: hyperbola."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "text": "Same sign closes the curve; opposite signs open it into arms.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "With an $xy$ term present the conic is rotated, so use the discriminant instead."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 65,
+          "latex": "\\Delta = B^2 - 4AC"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "$\\Delta < 0$: ellipse. $\\Delta = 0$: parabola. $\\Delta > 0$: hyperbola. Rotation never changes $\\Delta$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "So how do you actually name a conic in the exam hall? Two quick tests cover almost everything."
+            },
+            {
+              "seq": 2,
+              "text": "If the problem is geometric, compare beta with alpha, but first check whether the plane passes through the vertex, because that would make it degenerate."
+            },
+            {
+              "seq": 3,
+              "text": "If instead you are handed an equation with no x-y cross term, just look at A, the coefficient of x squared, and C, the coefficient of y squared."
+            },
+            {
+              "seq": 4,
+              "text": "If A equals C, it is a circle. Same sign but unequal, an ellipse. If one of them is zero, a parabola. Opposite signs, a hyperbola."
+            },
+            {
+              "seq": 5,
+              "text": "The intuition is clean: coefficients with the same sign curve the graph the same way, so it closes up; opposite signs curve it oppositely, so it opens into arms."
+            },
+            {
+              "seq": 6,
+              "text": "The one case that needs more care is when an x-y term is present, which means the conic is rotated relative to the axes."
+            },
+            {
+              "seq": 7,
+              "text": "Then you fall back on a single quantity, the discriminant: B squared minus four A C."
+            },
+            {
+              "seq": 8,
+              "text": "Negative means ellipse, zero means parabola, positive means hyperbola. And crucially, rotating the axes can never change this value, so it classifies correctly no matter the tilt."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "तो exam hall में conic को actually name कैसे करें? दो quick tests लगभग सब कुछ cover कर देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "अगर problem geometric है, तो beta को alpha से compare करो, पर पहले check करो कि plane vertex से गुज़र तो नहीं रहा, वरना वो degenerate हो जाएगा।"
+            },
+            {
+              "seq": 3,
+              "text": "और अगर तुम्हें बिना x-y term वाली equation दी गई है, तो बस A देखो, x squared का coefficient, और C, y squared का coefficient।"
+            },
+            {
+              "seq": 4,
+              "text": "अगर A बराबर C है, तो circle। same sign पर unequal, तो ellipse। इनमें से कोई एक zero, तो parabola। opposite signs, तो hyperbola।"
+            },
+            {
+              "seq": 5,
+              "text": "Intuition simple है: same sign वाले coefficients graph को एक ही तरफ मोड़ते हैं, तो वो बंद हो जाता है; opposite signs उल्टा मोड़ते हैं, तो वो arms में खुल जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "जिस case में ज़्यादा ध्यान चाहिए वो है जब x-y term मौजूद हो, यानी conic axes के relative rotated है।"
+            },
+            {
+              "seq": 7,
+              "text": "तब तुम एक ही quantity पर आ जाते हो, discriminant: B squared minus four A C।"
+            },
+            {
+              "seq": 8,
+              "text": "Negative मतलब ellipse, zero मतलब parabola, positive मतलब hyperbola। और खास बात, axes rotate करने से ये value कभी नहीं बदलती, इसलिए tilt कुछ भी हो, ये सही classify करती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "The Conic Family",
+      "title": "The classification tables",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Reference: classify by angle, by e, and by equation"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "By cutting angle (plane not through the vertex):"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "$\\beta = 90^\\circ$ circle; $\\alpha < \\beta < 90^\\circ$ ellipse; $\\beta = \\alpha$ parabola; $0 \\le \\beta < \\alpha$ hyperbola."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "By eccentricity: $e = 0$ circle; $0 < e < 1$ ellipse; $e = 1$ parabola; $e > 1$ hyperbola."
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "The general second-degree equation"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "latex": "Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 58,
+          "latex": "\\Delta = B^2 - 4AC"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "$\\Delta < 0$ ellipse (circle if also $A = C$, $B = 0$); $\\Delta = 0$ parabola; $\\Delta > 0$ hyperbola."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 75,
+          "text": "$B = 0$ means axes parallel to the coordinate axes: the Class 11 default.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me lay out the full reference so you have every classifier in one place."
+            },
+            {
+              "seq": 2,
+              "text": "First, classification straight from the geometry, assuming the plane does not pass through the vertex."
+            },
+            {
+              "seq": 3,
+              "text": "Ninety degrees gives a circle; a gentle tilt between alpha and ninety gives an ellipse; exactly alpha gives a parabola; and anything below alpha gives a hyperbola."
+            },
+            {
+              "seq": 4,
+              "text": "Second, the same family read off the eccentricity: zero for a circle, between zero and one for an ellipse, exactly one for a parabola, and above one for a hyperbola."
+            },
+            {
+              "seq": 5,
+              "text": "Third, and most useful for equations, comes the general second-degree equation."
+            },
+            {
+              "seq": 6,
+              "text": "Every conic in the plane is A x squared plus B x y plus C y squared plus D x plus E y plus F equal to zero, with A, B, C not all zero."
+            },
+            {
+              "seq": 7,
+              "text": "The classifier is its discriminant, B squared minus four A C, worth committing to memory."
+            },
+            {
+              "seq": 8,
+              "text": "Negative gives an ellipse, and a circle specifically when A equals C with no x-y term; zero gives a parabola; positive gives a hyperbola."
+            },
+            {
+              "seq": 9,
+              "text": "In Class eleven the cross term is almost always zero, which simply means the conic's axes line up with the coordinate axes."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूरा reference एक जगह रख देता हूँ ताकि हर classifier एक ही जगह मिल जाए।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, सीधे geometry से classification, ये मानकर कि plane vertex से नहीं गुज़रता।"
+            },
+            {
+              "seq": 3,
+              "text": "Ninety degrees पर circle; alpha और ninety के बीच हल्का tilt पर ellipse; बिल्कुल alpha पर parabola; और alpha से नीचे कुछ भी पर hyperbola।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा, वही family eccentricity से पढ़ो: circle के लिए zero, ellipse के लिए zero और one के बीच, parabola के लिए exactly one, और hyperbola के लिए one से ऊपर।"
+            },
+            {
+              "seq": 5,
+              "text": "तीसरा, और equations के लिए सबसे useful, आता है general second-degree equation।"
+            },
+            {
+              "seq": 6,
+              "text": "plane का हर conic है A x squared plus B x y plus C y squared plus D x plus E y plus F बराबर zero, जहाँ A, B, C तीनों zero नहीं हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Classifier है इसका discriminant, B squared minus four A C, इसे याद कर लेना।"
+            },
+            {
+              "seq": 8,
+              "text": "Negative पर ellipse, और खास तौर पर circle जब A बराबर C हो और कोई x-y term न हो; zero पर parabola; positive पर hyperbola।"
+            },
+            {
+              "seq": 9,
+              "text": "Class eleven में cross term लगभग हमेशा zero होता है, जिसका बस मतलब है कि conic के axes coordinate axes के साथ line up हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "The Conic Family",
+      "title": "Naming conics: worked examples I",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 (CBSE): a cone cut at an angle"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Cone with $\\alpha = 30^\\circ$; plane at $\\beta = 50^\\circ$, not through the vertex. Name the section."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "Compare: $30^\\circ < 50^\\circ < 90^\\circ$, so $\\alpha < \\beta < 90^\\circ$, giving an ELLIPSE."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 31,
+          "text": "If instead $\\beta = 30^\\circ = \\alpha$, the plane is parallel to a generator: a PARABOLA.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Example 2 (JEE Main): classify by inspection"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "latex": "3x^2 + 3y^2 - 12x + 6y - 4 = 0"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "No $xy$ term, and the coeffs of $x^2$ and $y^2$ are equal ($A = C = 3$)."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 71,
+          "text": "Equal squared-term coefficients with no $xy$ term: it is a CIRCLE. No centre or radius needed."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us put the classifiers to work. Example one is a CBSE-style geometry question."
+            },
+            {
+              "seq": 2,
+              "text": "A cone has semi-vertical angle thirty degrees, and a plane cuts it at fifty degrees to the axis without passing through the vertex. Name the section."
+            },
+            {
+              "seq": 3,
+              "text": "Just compare the angles. Thirty is less than fifty is less than ninety, so alpha is less than beta which is less than ninety, and that is exactly the ellipse condition."
+            },
+            {
+              "seq": 4,
+              "text": "And the follow-up: if the plane were at thirty degrees, equal to alpha, it would run parallel to a generator, giving a parabola, the boundary case."
+            },
+            {
+              "seq": 5,
+              "text": "Example two is a JEE Main speed question, and the whole trick is to not compute anything you do not need."
+            },
+            {
+              "seq": 6,
+              "text": "The equation is three x squared plus three y squared minus twelve x plus six y minus four equals zero."
+            },
+            {
+              "seq": 7,
+              "text": "Look only at the top: there is no x-y term, and the coefficients of x squared and y squared are both three, so A equals C."
+            },
+            {
+              "seq": 8,
+              "text": "Equal squared coefficients with no cross term is the circle signature. It is a circle, and you never had to find the centre or radius to say so."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब classifiers को काम पर लगाते हैं। Example one एक CBSE-style geometry question है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक cone का semi-vertical angle thirty degrees है, और एक plane उसे axis से fifty degrees पर काटता है, vertex से गुज़रे बिना। section name करो।"
+            },
+            {
+              "seq": 3,
+              "text": "बस angles compare करो। thirty less than fifty less than ninety, यानी alpha less than beta less than ninety, और यही तो ellipse की condition है।"
+            },
+            {
+              "seq": 4,
+              "text": "और follow-up: अगर plane thirty degrees पर होता, alpha के बराबर, तो वो generator के parallel चलता, और parabola देता, boundary case।"
+            },
+            {
+              "seq": 5,
+              "text": "Example two एक JEE Main speed question है, और पूरा trick है वो कुछ भी compute न करना जो ज़रूरी नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "Equation है three x squared plus three y squared minus twelve x plus six y minus four बराबर zero।"
+            },
+            {
+              "seq": 7,
+              "text": "बस ऊपर देखो: कोई x-y term नहीं, और x squared तथा y squared दोनों के coefficients three हैं, तो A बराबर C।"
+            },
+            {
+              "seq": 8,
+              "text": "बिना cross term equal squared coefficients circle की पहचान है। ये एक circle है, और तुम्हें ये कहने के लिए centre या radius निकालने की ज़रूरत ही नहीं पड़ी।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "The Conic Family",
+      "title": "Naming conics: worked examples II",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 (JEE Main): opposite signs"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 3,
+          "latex": "4x^2 - 9y^2 + 8x + 36y - 68 = 0"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "No $xy$ term. $A = 4$ and $C = -9$ have opposite signs."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "latex": "B^2 - 4AC = 0 - 4(4)(-9) = 144 > 0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "Positive discriminant, so a HYPERBOLA, hence $e > 1$. The two tests agree."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "text": "Example 4 (JEE Advanced): a rotated conic"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "latex": "5x^2 - 4xy + 8y^2 - 16x - 14y + 5 = 0"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 62,
+          "latex": "\\Delta = (-4)^2 - 4(5)(8) = 16 - 160 = -144 < 0"
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 77,
+          "text": "Negative, so an ELLIPSE. The $xy$ term only rotates it; $\\Delta$ is rotation-invariant."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three, JEE Main, shows opposite-sign coefficients."
+            },
+            {
+              "seq": 2,
+              "text": "The equation is four x squared minus nine y squared plus eight x plus thirty-six y minus sixty-eight equals zero."
+            },
+            {
+              "seq": 3,
+              "text": "There is no x-y term, and now A is four while C is minus nine, opposite signs."
+            },
+            {
+              "seq": 4,
+              "text": "Feed that into the discriminant: B squared minus four A C is zero minus four times four times minus nine, which is a hundred and forty-four, positive."
+            },
+            {
+              "seq": 5,
+              "text": "A positive discriminant means a hyperbola, and a hyperbola always has eccentricity above one. The discriminant test and the eccentricity scale are just two languages for the same fact."
+            },
+            {
+              "seq": 6,
+              "text": "Example four is the Advanced one, and it finally has an x-y term, meaning the conic is rotated."
+            },
+            {
+              "seq": 7,
+              "text": "The curve is five x squared minus four x y plus eight y squared minus sixteen x minus fourteen y plus five equals zero."
+            },
+            {
+              "seq": 8,
+              "text": "Compute the discriminant: minus four, squared, is sixteen; minus four times five times eight is a hundred and sixty; sixteen minus a hundred and sixty is minus a hundred and forty-four, which is negative."
+            },
+            {
+              "seq": 9,
+              "text": "Negative means an ellipse. The clever point is that the x-y term only tilts the ellipse; the quantity B squared minus four A C stays fixed under rotation, so you classify without ever straightening the axes."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three, JEE Main, opposite-sign coefficients दिखाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Equation है four x squared minus nine y squared plus eight x plus thirty-six y minus sixty-eight बराबर zero।"
+            },
+            {
+              "seq": 3,
+              "text": "कोई x-y term नहीं, और अब A है four जबकि C है minus nine, opposite signs।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे discriminant में डालो: B squared minus four A C है zero minus four into four into minus nine, यानी one hundred forty-four, positive।"
+            },
+            {
+              "seq": 5,
+              "text": "Positive discriminant मतलब hyperbola, और hyperbola का eccentricity हमेशा one से ऊपर होता है। discriminant test और eccentricity scale एक ही fact की दो languages हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Example four Advanced वाला है, और इसमें आखिरकार x-y term है, यानी conic rotated है।"
+            },
+            {
+              "seq": 7,
+              "text": "Curve है five x squared minus four x y plus eight y squared minus sixteen x minus fourteen y plus five बराबर zero।"
+            },
+            {
+              "seq": 8,
+              "text": "Discriminant निकालो: minus four का square sixteen; minus four into five into eight है one hundred sixty; sixteen minus one hundred sixty है minus one hundred forty-four, जो negative है।"
+            },
+            {
+              "seq": 9,
+              "text": "Negative मतलब ellipse। समझदारी की बात ये है कि x-y term बस ellipse को tilt करता है; B squared minus four A C rotation पर fixed रहता है, इसलिए axes सीधे किए बिना ही classify हो जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "tips",
+      "subtopic": "The Conic Family",
+      "title": "Pitfalls and pro-tips: the conic family",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Traps that cost marks"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "text": "A plane through the vertex is NEVER a normal curve. It is degenerate.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "The parabola is a single boundary, not a range: $\\beta = \\alpha$ and $e = 1$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "A circle needs $A = C$ AND $B = 0$. Equal $x^2,y^2$ coeffs WITH an $xy$ term is a rotated ellipse."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "Never rotate axes before classifying; $B^2 - 4AC$ already names the curve."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "The two-classifier reflex"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 61,
+          "text": "Geometry: compare $\\beta$ to $\\alpha$, and check the vertex first."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "text": "Equation: no $xy$ term, read signs of $A$ and $C$; with an $xy$ term, sign of $B^2 - 4AC$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before we leave the family, here are the traps that quietly cost marks."
+            },
+            {
+              "seq": 2,
+              "text": "First, never forget the degenerate cases. A plane through the vertex never gives a normal curve, only a point, a line, or a pair of lines. Students skip this and examiners pounce."
+            },
+            {
+              "seq": 3,
+              "text": "Second, the parabola is a single boundary, not a range. It is beta exactly equal to alpha, and e exactly one. Do not lump it in with the ellipse."
+            },
+            {
+              "seq": 4,
+              "text": "Third, be careful with equal coefficients. A circle needs A equal to C and no x-y term. Equal x-squared and y-squared coefficients with an x-y term present is a rotated ellipse, not a circle."
+            },
+            {
+              "seq": 5,
+              "text": "And fourth, never waste time rotating the axes to remove the cross term before classifying; the discriminant already tells you the type."
+            },
+            {
+              "seq": 6,
+              "text": "Lock in the reflex, two classifiers that handle almost every question."
+            },
+            {
+              "seq": 7,
+              "text": "From geometry: compare beta to alpha, and always check the vertex first."
+            },
+            {
+              "seq": 8,
+              "text": "From an equation: with no x-y term, read the signs of A and C; if there is an x-y term, fall back on the sign of B squared minus four A C."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "family छोड़ने से पहले, वो traps जो चुपके से marks ले जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, degenerate cases मत भूलो। vertex से गुज़रता plane कभी normal curve नहीं देता, सिर्फ एक point, एक line, या lines का pair। students इसे छोड़ देते हैं और examiners यहीं पकड़ते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, parabola एक single boundary है, range नहीं। ये beta बिल्कुल alpha के बराबर है, और e बिल्कुल one। इसे ellipse के साथ मत मिलाओ।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, equal coefficients में सावधान रहो। circle के लिए A बराबर C चाहिए और कोई x-y term नहीं। x-y term के साथ equal x-squared और y-squared coefficients एक rotated ellipse है, circle नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "और चौथा, classify करने से पहले cross term हटाने के लिए axes rotate करने में time मत गँवाओ; discriminant पहले ही type बता देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "reflex पक्का कर लो, दो classifiers जो लगभग हर question संभाल लेते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "geometry से: beta को alpha से compare करो, और हमेशा पहले vertex check करो।"
+            },
+            {
+              "seq": 8,
+              "text": "equation से: बिना x-y term A और C के signs पढ़ो; x-y term हो तो B squared minus four A C के sign पर आ जाओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "concept",
+      "subtopic": "The Circle",
+      "title": "The circle: one centre, one distance",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A circle: all points at a fixed distance from a centre"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Tie a goat to a peg with a taut rope; the path it traces is a circle of radius $r$."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 320 300\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><circle cx=\"160\" cy=\"150\" r=\"3\" fill=\"#dc2626\"/><text x=\"120\" y=\"168\" font-size=\"12\" fill=\"#dc2626\">C(h,k)</text><line x1=\"160\" y1=\"150\" x2=\"231\" y2=\"79\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><circle cx=\"231\" cy=\"79\" r=\"3\" fill=\"#2563eb\"/><text x=\"236\" y=\"76\" font-size=\"12\" fill=\"#2563eb\">P(x,y)</text><text x=\"190\" y=\"104\" font-size=\"12\" fill=\"#2563eb\">r</text></svg>",
+          "caption": "Centre $(h,k)$ with radius $r$ drawn to a point $P(x,y)$"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "In the conic family the circle is the calmest member: eccentricity $e = 0$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "text": "A circle is the limiting ellipse whose two foci have merged into the centre.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Standard form wears its centre and radius openly."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 69,
+          "text": "General form hides them inside a quadratic; recover them by completing the square."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 79,
+          "text": "Same circle, two costumes: recognising that is most of this topic."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Of all the conics, the circle is the one your hand already knows."
+            },
+            {
+              "seq": 2,
+              "text": "Tie a goat to a peg with a rope and let it wander, keeping the rope taut. Every point it reaches is the same distance from the peg, so it traces a circle. That distance is the radius."
+            },
+            {
+              "seq": 3,
+              "text": "Formally, fix a centre at the point h, k, and let a moving point x, y keep its distance to the centre equal to r. That single rule is the whole circle."
+            },
+            {
+              "seq": 4,
+              "text": "In the eccentricity language of this chapter, the circle is the calmest member of the family, sitting right at e equal to zero."
+            },
+            {
+              "seq": 5,
+              "text": "It is the limiting ellipse whose two foci have drifted together into a single point at the centre, equally wide in every direction."
+            },
+            {
+              "seq": 6,
+              "text": "Because the rule is so clean, the equation is too, and it comes in two faces. The standard form wears its centre and radius openly, readable at a glance."
+            },
+            {
+              "seq": 7,
+              "text": "The general form hides them inside a tidy quadratic, and your job is to recover the centre and radius by completing the square."
+            },
+            {
+              "seq": 8,
+              "text": "Recognising that these two forms are the same circle in different costumes is most of what this topic asks of you."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "सारे conics में से, circle वो है जिसे तुम्हारा हाथ पहले से जानता है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक बकरी को peg से rope से बाँधो और घूमने दो, rope को tight रखते हुए। जिस भी point तक वो पहुँचती है वो peg से same distance पर है, तो वो एक circle बनाती है। वही distance radius है।"
+            },
+            {
+              "seq": 3,
+              "text": "Formally, centre को point h, k पर fix करो, और एक moving point x, y को centre से distance r के बराबर रखने दो। यही एक rule पूरा circle है।"
+            },
+            {
+              "seq": 4,
+              "text": "इस chapter की eccentricity language में, circle family का सबसे शांत member है, ठीक e बराबर zero पर।"
+            },
+            {
+              "seq": 5,
+              "text": "ये वो limiting ellipse है जिसके दोनों foci खिसककर centre पर एक ही point में मिल गए, हर direction में equally चौड़ा।"
+            },
+            {
+              "seq": 6,
+              "text": "rule इतना clean है तो equation भी है, और वो दो faces में आती है। standard form अपना centre और radius खुलकर दिखाती है, एक नज़र में पढ़ने लायक।"
+            },
+            {
+              "seq": 7,
+              "text": "general form उन्हें एक tidy quadratic के अंदर छुपा देती है, और तुम्हारा काम है completing the square से centre और radius निकालना।"
+            },
+            {
+              "seq": 8,
+              "text": "ये पहचानना कि ये दोनों forms अलग costumes में एक ही circle हैं, यही इस topic का ज़्यादातर सवाल है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "concept",
+      "subtopic": "The Circle",
+      "title": "Deriving the circle's equations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "From the distance rule to the equation"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Centre $C(h,k)$, point $P(x,y)$ on the circle, with $CP = r$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "latex": "\\sqrt{(x-h)^2 + (y-k)^2} = r"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 29,
+          "latex": "(x-h)^2 + (y-k)^2 = r^2"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "General form: complete the square"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "latex": "x^2 + y^2 + 2gx + 2fy + c = 0"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 69,
+          "latex": "(x+g)^2 + (y+f)^2 = g^2 + f^2 - c"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 79,
+          "text": "Matching the standard form gives centre $(-g,-f)$ and $r^2 = g^2 + f^2 - c$."
+        },
+        {
+          "seq": 9,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 97,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 320 260\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"140\" r=\"90\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"70\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"#334155\" stroke-width=\"1.5\"/><circle cx=\"70\" cy=\"140\" r=\"3\" fill=\"#dc2626\"/><text x=\"54\" y=\"156\" font-size=\"12\" fill=\"#dc2626\">A</text><circle cx=\"250\" cy=\"140\" r=\"3\" fill=\"#dc2626\"/><text x=\"256\" y=\"156\" font-size=\"12\" fill=\"#dc2626\">B</text><line x1=\"70\" y1=\"140\" x2=\"120\" y2=\"63\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><line x1=\"250\" y1=\"140\" x2=\"120\" y2=\"63\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><circle cx=\"120\" cy=\"63\" r=\"3\" fill=\"#2563eb\"/><text x=\"112\" y=\"55\" font-size=\"12\" fill=\"#2563eb\">Q</text><path d=\"M 118 76 L 130 70 L 124 82\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"140\" y=\"82\" font-size=\"11\" fill=\"#16a34a\">90 deg</text><circle cx=\"160\" cy=\"140\" r=\"2.5\" fill=\"#334155\"/><text x=\"150\" y=\"158\" font-size=\"11\" fill=\"#334155\">centre</text></svg>",
+          "caption": "Angle in a semicircle is $90^\\circ$, which yields the diameter form"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me derive both equations, because the derivation is itself a favourite board question."
+            },
+            {
+              "seq": 2,
+              "text": "Take the centre at h, k and any point P at x, y on the circle. The defining condition is simply that the distance C P equals the radius r."
+            },
+            {
+              "seq": 3,
+              "text": "Write that distance with the distance formula: the square root of x minus h squared plus y minus k squared equals r."
+            },
+            {
+              "seq": 4,
+              "text": "Both sides are non-negative, so squaring is safe and introduces no false points. That gives the standard equation, x minus h squared plus y minus k squared equals r squared. The whole derivation is just the distance formula with the distance pinned to r."
+            },
+            {
+              "seq": 5,
+              "text": "Now the general form. Start from x squared plus y squared plus two g x plus two f y plus c equals zero, and complete the square on the x-terms and the y-terms separately."
+            },
+            {
+              "seq": 6,
+              "text": "That is the general form as given, and it hides the centre and radius inside."
+            },
+            {
+              "seq": 7,
+              "text": "Completing the square turns it into x plus g squared plus y plus f squared equals g squared plus f squared minus c."
+            },
+            {
+              "seq": 8,
+              "text": "Match this against the standard form and you read off the centre as minus g, minus f, and r squared as g squared plus f squared minus c. Now it is visible why the radius can fail: that expression must be positive."
+            },
+            {
+              "seq": 9,
+              "text": "One more result: if A B is a diameter and P is any other point on the circle, the angle at P is a right angle, the angle in a semicircle. Writing perpendicular slopes and clearing fractions gives the diameter form directly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दोनों equations derive कर देता हूँ, क्योंकि derivation खुद board का favourite question है।"
+            },
+            {
+              "seq": 2,
+              "text": "centre को h, k पर लो और circle पर कोई भी point P को x, y पर। defining condition बस इतनी है कि distance C P बराबर radius r।"
+            },
+            {
+              "seq": 3,
+              "text": "उस distance को distance formula से लिखो: square root of x minus h squared plus y minus k squared बराबर r।"
+            },
+            {
+              "seq": 4,
+              "text": "दोनों sides non-negative हैं, तो squaring safe है और कोई false point नहीं लाती। इससे मिलती है standard equation, x minus h squared plus y minus k squared बराबर r squared। पूरी derivation बस distance formula है जिसमें distance को r पर pin कर दिया।"
+            },
+            {
+              "seq": 5,
+              "text": "अब general form। शुरू करो x squared plus y squared plus two g x plus two f y plus c बराबर zero से, और x-terms तथा y-terms पर अलग-अलग square complete करो।"
+            },
+            {
+              "seq": 6,
+              "text": "यही general form है जैसी दी गई है, और ये centre और radius को अंदर छुपाए हुए है।"
+            },
+            {
+              "seq": 7,
+              "text": "square complete करने पर ये बन जाती है x plus g squared plus y plus f squared बराबर g squared plus f squared minus c।"
+            },
+            {
+              "seq": 8,
+              "text": "इसे standard form से match करो तो centre मिलता है minus g, minus f, और r squared मिलता है g squared plus f squared minus c। अब साफ है कि radius fail क्यों हो सकता है: वो expression positive होना चाहिए।"
+            },
+            {
+              "seq": 9,
+              "text": "एक और result: अगर A B एक diameter है और P circle पर कोई और point, तो P पर angle right angle होता है, angle in a semicircle। perpendicular slopes लिखकर fractions clear करने पर सीधे diameter form मिल जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "formulas",
+      "subtopic": "The Circle",
+      "title": "The circle: formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Every circle formula you need"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "(x-h)^2 + (y-k)^2 = r^2"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "latex": "x^2 + y^2 + 2gx + 2fy + c = 0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 23,
+          "latex": "\\text{centre} = (-g,-f), \\quad r = \\sqrt{g^2 + f^2 - c}"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "$g^2 + f^2 - c$: positive = real, zero = point circle, negative = imaginary.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "latex": "(x-x_1)(x-x_2) + (y-y_1)(y-y_2) = 0"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "text": "That is the diameter form, with $A(x_1,y_1)$ and $B(x_2,y_2)$ as the diameter ends."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 68,
+          "latex": "S_1 = x_1^2 + y_1^2 + 2gx_1 + 2fy_1 + c"
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 75,
+          "text": "Sign of $S_1$: outside, on, or inside. Tangent length from an outside point is $\\sqrt{S_1}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the complete toolkit for circles, all in one place."
+            },
+            {
+              "seq": 2,
+              "text": "Standard form: x minus h squared plus y minus k squared equals r squared, with centre h, k and radius r read off directly."
+            },
+            {
+              "seq": 3,
+              "text": "General form: x squared plus y squared plus two g x plus two f y plus c equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "From the general form, the centre is minus g, minus f, and the radius is the square root of g squared plus f squared minus c. Halve the linear coefficients and flip the sign to get the centre."
+            },
+            {
+              "seq": 5,
+              "text": "Always check the quantity under the root. Positive gives a real circle, zero collapses it to a single point, and negative means no real circle at all."
+            },
+            {
+              "seq": 6,
+              "text": "When you are handed the two ends of a diameter, use the diameter form directly."
+            },
+            {
+              "seq": 7,
+              "text": "With A at x-one y-one and B at x-two y-two as the ends, this one line beats converting through the midpoint and half-distance."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, define S-one by plugging a point into the left side of the circle's equation."
+            },
+            {
+              "seq": 9,
+              "text": "Its sign places the point, positive outside, zero on, negative inside, and when the point is outside, the square root of S-one is the length of the tangent from it. One quantity, two jobs."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "circles के लिए पूरा toolkit एक जगह।"
+            },
+            {
+              "seq": 2,
+              "text": "standard form: x minus h squared plus y minus k squared बराबर r squared, centre h, k और radius r सीधे पढ़ लो।"
+            },
+            {
+              "seq": 3,
+              "text": "general form: x squared plus y squared plus two g x plus two f y plus c बराबर zero।"
+            },
+            {
+              "seq": 4,
+              "text": "general form से centre है minus g, minus f, और radius है square root of g squared plus f squared minus c। centre पाने के लिए linear coefficients आधा करो और sign flip करो।"
+            },
+            {
+              "seq": 5,
+              "text": "root के नीचे वाली quantity हमेशा check करो। positive पर real circle, zero पर वो एक single point में सिमट जाता है, और negative मतलब कोई real circle है ही नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "जब तुम्हें diameter के दो ends दिए जाएँ, तो सीधे diameter form use करो।"
+            },
+            {
+              "seq": 7,
+              "text": "A को x-one y-one और B को x-two y-two ends मानकर, ये एक line midpoint और half-distance से convert करने को हरा देती है।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिर में, S-one को define करो एक point को circle की equation के left side में डालकर।"
+            },
+            {
+              "seq": 9,
+              "text": "इसका sign point को place करता है, positive बाहर, zero on, negative अंदर, और जब point बाहर हो, तो S-one का square root उससे tangent की length है। एक quantity, दो काम।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "The Circle",
+      "title": "Circle worked examples I",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 (CBSE): centre and radius"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "latex": "x^2 + y^2 - 6x + 8y - 11 = 0"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "Match: $2g = -6,\\ 2f = 8,\\ c = -11$, so $g = -3,\\ f = 4$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "\\text{centre} = (3,-4), \\quad r = \\sqrt{9 + 16 + 11} = 6"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Example 2 (JEE Main): diameter form"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Diameter ends $A(1,2)$ and $B(5,6)$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "(x-1)(x-5) + (y-2)(y-6) = 0"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "latex": "x^2 + y^2 - 6x - 8y + 17 = 0"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one, CBSE, asks for the centre and radius from a general-form circle."
+            },
+            {
+              "seq": 2,
+              "text": "The circle is x squared plus y squared minus six x plus eight y minus eleven equals zero."
+            },
+            {
+              "seq": 3,
+              "text": "Match against the general form: two g is minus six, so g is minus three; two f is eight, so f is four; and c is minus eleven."
+            },
+            {
+              "seq": 4,
+              "text": "The centre is minus g, minus f, which is three, minus four. The radius is the square root of g squared plus f squared minus c, that is nine plus sixteen plus eleven, thirty-six, whose root is six."
+            },
+            {
+              "seq": 5,
+              "text": "Example two, JEE Main, hands you the two ends of a diameter, so reach straight for the diameter form."
+            },
+            {
+              "seq": 6,
+              "text": "The ends are A at one, two and B at five, six."
+            },
+            {
+              "seq": 7,
+              "text": "The diameter form is x minus one times x minus five, plus y minus two times y minus six, all equal to zero."
+            },
+            {
+              "seq": 8,
+              "text": "Expand and tidy up and you get x squared plus y squared minus six x minus eight y plus seventeen equals zero. One line of setup instead of three."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one, CBSE, general-form circle से centre और radius माँगता है।"
+            },
+            {
+              "seq": 2,
+              "text": "circle है x squared plus y squared minus six x plus eight y minus eleven बराबर zero।"
+            },
+            {
+              "seq": 3,
+              "text": "general form से match करो: two g है minus six, तो g है minus three; two f है eight, तो f है four; और c है minus eleven।"
+            },
+            {
+              "seq": 4,
+              "text": "centre है minus g, minus f, यानी three, minus four। radius है square root of g squared plus f squared minus c, यानी nine plus sixteen plus eleven, thirty-six, जिसका root है six।"
+            },
+            {
+              "seq": 5,
+              "text": "Example two, JEE Main, तुम्हें diameter के दो ends देता है, तो सीधे diameter form उठाओ।"
+            },
+            {
+              "seq": 6,
+              "text": "ends हैं A one, two पर और B five, six पर।"
+            },
+            {
+              "seq": 7,
+              "text": "diameter form है x minus one into x minus five, plus y minus two into y minus six, सब बराबर zero।"
+            },
+            {
+              "seq": 8,
+              "text": "expand करके साफ करो तो मिलता है x squared plus y squared minus six x minus eight y plus seventeen बराबर zero। तीन के बजाय एक line का setup।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "The Circle",
+      "title": "Circle worked examples II",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 (JEE Main): radius from a point, then position test"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Centre $(2,-1)$, passing through $(5,3)$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "r = \\sqrt{(5-2)^2 + (3+1)^2} = \\sqrt{9+16} = 5"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "(x-2)^2 + (y+1)^2 = 25"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Test $(4,2)$: $S_1 = 16 + 4 - 16 + 4 - 20 = -12 < 0$, so it lies INSIDE."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Example 4 (JEE Adv): three points, then tangent length"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Through $O(0,0),\\ A(6,0),\\ B(0,8)$: gives $c = 0,\\ g = -3,\\ f = -4$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "latex": "x^2 + y^2 - 6x - 8y = 0, \\quad \\text{centre }(3,4),\\ r = 5"
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 89,
+          "latex": "S_1 = 49 + 81 - 42 - 72 = 16, \\quad \\ell = \\sqrt{16} = 4"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three, JEE Main, chains three ideas: radius as a distance, the equation, and the position test."
+            },
+            {
+              "seq": 2,
+              "text": "The circle has centre two, minus one and passes through the point five, three."
+            },
+            {
+              "seq": 3,
+              "text": "The radius is just the distance from the centre to that point: root of three squared plus four squared, which is root twenty-five, five."
+            },
+            {
+              "seq": 4,
+              "text": "So the equation is x minus two squared plus y plus one squared equals twenty-five."
+            },
+            {
+              "seq": 5,
+              "text": "Now test the point four, two using S-one. Plugging in gives sixteen plus four minus sixteen plus four minus twenty, which is minus twelve, negative, so the point lies inside the circle."
+            },
+            {
+              "seq": 6,
+              "text": "Example four is Advanced: find the circle through three points, then a tangent length."
+            },
+            {
+              "seq": 7,
+              "text": "Substitute the three points O, A and B into the general form. The origin gives c equal to zero; the point six, zero gives g equal to minus three; the point zero, eight gives f equal to minus four."
+            },
+            {
+              "seq": 8,
+              "text": "So the circle is x squared plus y squared minus six x minus eight y equals zero, with centre three, four and radius five. A neat check: O A and O B are perpendicular, so A B is a diameter, and its midpoint three, four is indeed the centre."
+            },
+            {
+              "seq": 9,
+              "text": "For the tangent from the point seven, nine, compute S-one: forty-nine plus eighty-one minus forty-two minus seventy-two, which is sixteen. The tangent length is its square root, four units."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three, JEE Main, तीन ideas जोड़ता है: radius as a distance, equation, और position test।"
+            },
+            {
+              "seq": 2,
+              "text": "circle का centre है two, minus one और वो point five, three से गुज़रता है।"
+            },
+            {
+              "seq": 3,
+              "text": "radius बस centre से उस point तक की distance है: root of three squared plus four squared, यानी root twenty-five, five।"
+            },
+            {
+              "seq": 4,
+              "text": "तो equation है x minus two squared plus y plus one squared बराबर twenty-five।"
+            },
+            {
+              "seq": 5,
+              "text": "अब point four, two को S-one से test करो। डालने पर मिलता है sixteen plus four minus sixteen plus four minus twenty, यानी minus twelve, negative, तो point circle के अंदर है।"
+            },
+            {
+              "seq": 6,
+              "text": "Example four Advanced है: तीन points से गुज़रता circle निकालो, फिर tangent length।"
+            },
+            {
+              "seq": 7,
+              "text": "तीनों points O, A और B को general form में डालो। origin से c बराबर zero; point six, zero से g बराबर minus three; point zero, eight से f बराबर minus four।"
+            },
+            {
+              "seq": 8,
+              "text": "तो circle है x squared plus y squared minus six x minus eight y बराबर zero, centre three, four और radius five। एक सुंदर check: O A और O B perpendicular हैं, तो A B एक diameter है, और उसका midpoint three, four ही centre है।"
+            },
+            {
+              "seq": 9,
+              "text": "point seven, nine से tangent के लिए S-one निकालो: forty-nine plus eighty-one minus forty-two minus seventy-two, यानी sixteen। tangent length इसका square root है, four units।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "tips",
+      "subtopic": "The Circle",
+      "title": "Pitfalls and pro-tips: the circle",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where circle marks leak away"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "text": "Centre is $(-g,-f)$: halve the linear coeffs and flip the sign. Not $(g,f)$, not $(2g,2f)$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Always confirm $g^2 + f^2 - c > 0$ before you trust a radius."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Given a diameter's ends, use the diameter form; faster and safer than centre-plus-radius."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "A real circle needs equal $x^2,y^2$ coeffs and no $xy$ term; if they differ, it is not a circle."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "The one-pass reflex"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Read $g = \\tfrac12(\\text{coeff of }x)$ and $f = \\tfrac12(\\text{coeff of }y)$; then centre $(-g,-f)$, radius $\\sqrt{g^2+f^2-c}$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 78,
+          "text": "$S_1$: plug a point in; its sign locates the point, its square root measures the tangent.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me close the circle with the mistakes that quietly drain marks."
+            },
+            {
+              "seq": 2,
+              "text": "The biggest is the centre sign. From the general form the centre is minus g, minus f. Halve the linear coefficients and flip the sign. It is never plain g, f, and never twice that."
+            },
+            {
+              "seq": 3,
+              "text": "Second, always confirm that g squared plus f squared minus c is positive before announcing a radius. Zero gives only a point circle, and negative gives no real circle."
+            },
+            {
+              "seq": 4,
+              "text": "Third, if a problem gives you the two ends of a diameter, the one-line diameter form is faster and safer than computing the centre and radius separately."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, a real circle must have equal x-squared and y-squared coefficients and no x-y term. If those coefficients differ, you are not even looking at a circle."
+            },
+            {
+              "seq": 6,
+              "text": "Here is the reflex that ties it together, done in a single pass over the equation."
+            },
+            {
+              "seq": 7,
+              "text": "Read g as half the x-coefficient and f as half the y-coefficient; then the centre is minus g, minus f and the radius is the root of g squared plus f squared minus c."
+            },
+            {
+              "seq": 8,
+              "text": "And remember S-one does double duty: plug a point into the circle's left side, its sign tells you out, on, or in, and its square root is the tangent length."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "circle को उन गलतियों के साथ बंद करते हैं जो चुपके से marks निकाल देती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ी है centre का sign। general form से centre है minus g, minus f। linear coefficients आधा करो और sign flip करो। ये कभी plain g, f नहीं, और कभी उसका double नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, radius बताने से पहले हमेशा confirm करो कि g squared plus f squared minus c positive है। zero सिर्फ point circle देता है, और negative कोई real circle नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, अगर problem diameter के दो ends दे, तो एक-line वाली diameter form centre और radius अलग निकालने से faster और safer है।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, real circle के x-squared और y-squared coefficients बराबर होने चाहिए और कोई x-y term नहीं। अगर वो coefficients अलग हैं, तो तुम circle देख ही नहीं रहे।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वो reflex जो सब जोड़ देता है, equation पर एक ही pass में।"
+            },
+            {
+              "seq": 7,
+              "text": "g को x-coefficient का आधा पढ़ो और f को y-coefficient का आधा; फिर centre है minus g, minus f और radius है root of g squared plus f squared minus c।"
+            },
+            {
+              "seq": 8,
+              "text": "और याद रखो S-one दोहरा काम करता है: point को circle के left side में डालो, इसका sign बताता है बाहर, on, या अंदर, और इसका square root tangent length है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

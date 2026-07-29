@@ -1,0 +1,3410 @@
+{
+  "chapter": "Trigonometric Functions",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 3,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish",
+    "hindi"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "01 · Angle Measurement and Radians",
+      "title": "Why degrees are arbitrary and the radian is the circle's own ruler",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Degrees vs radians: whose ruler?",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "A degree is 1/360 of a full turn. Why 360? A Babylonian convention — nothing about a circle demands it.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "A radian uses the circle itself: walk along the rim a distance equal to the radius, and the angle you sweep is 1 radian.",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "diagram",
+          "emphasis": "normal",
+          "caption": "One radian: arc length equal to the radius",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"200\" cy=\"150\" r=\"90\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"200\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"200\" y1=\"150\" x2=\"248.6\" y2=\"74.3\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 290 150 A 90 90 0 0 0 248.6 74.3\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3.5\"/><circle cx=\"200\" cy=\"150\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"188\" y=\"170\" font-size=\"14\" fill=\"#1e293b\">O</text><text x=\"295\" y=\"155\" font-size=\"14\" fill=\"#1e293b\">A</text><text x=\"252\" y=\"70\" font-size=\"14\" fill=\"#1e293b\">B</text><text x=\"235\" y=\"128\" font-size=\"12\" fill=\"#1e293b\">r</text><text x=\"300\" y=\"105\" font-size=\"12\" fill=\"#dc2626\">arc AB = radius</text><text x=\"120\" y=\"120\" font-size=\"13\" fill=\"#2563eb\">angle AOB = 1 rad</text><text x=\"120\" y=\"138\" font-size=\"12\" fill=\"#2563eb\">&#8776; 57.3&#176;</text></svg>",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "1 radian ≈ 57.3° — a little less than 60°.",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Radian = arc ÷ radius = length ÷ length, so it is a pure number with no units.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "The whole rim is 2πr, i.e. 2π radius-lengths, so one full turn = $2\\pi$ radians.",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Anticlockwise rotation is a positive angle; clockwise is negative.",
+          "seq": 8,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's begin the whole chapter with one honest question about angles."
+            },
+            {
+              "seq": 2,
+              "text": "You've always measured angles in degrees, but think about it: why exactly three hundred sixty parts in a full turn? The answer is just history. The Babylonians liked three hundred sixty because it divides so neatly. There is nothing about a circle that wants to be cut into that many pieces. A degree is a convention, like measuring cloth in cubits."
+            },
+            {
+              "seq": 3,
+              "text": "The radian throws away the invented number and lets the circle measure itself. Take any circle, walk along its edge a distance exactly equal to the radius, and the angle you've turned through, seen from the centre, is defined as one radian."
+            },
+            {
+              "seq": 4,
+              "text": "<curious>Here is that idea drawn out.</curious> The bent arc from A to B has the same length as the straight radius, and the angle it opens up at the centre O is precisely one radian."
+            },
+            {
+              "seq": 5,
+              "text": "Notice the size: one radian is about fifty seven point three degrees, a bit under sixty. Keep that picture, it's your sanity check for the whole chapter."
+            },
+            {
+              "seq": 6,
+              "text": "And here is the deep point. A radian is arc length divided by radius, that is, a length divided by a length. The units cancel completely, so a radian is a pure number. This is why later it can sit inside derivatives and power series where a degree never could."
+            },
+            {
+              "seq": 7,
+              "text": "Because the entire rim measures two pi radius-lengths, one complete turn is two pi radians. Half a turn is pi, a quarter turn is pi over two. The pi isn't decoration, it's literally how many radius-lengths wrap around the circle, halved."
+            },
+            {
+              "seq": 8,
+              "text": "One more convention we lock in now: rotating anticlockwise gives a positive angle, clockwise gives a negative one. An old clock's hands move clockwise, so by our rule they move in the negative direction."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chapter की शुरुआत एक simple सवाल से करते हैं angles के बारे में."
+            },
+            {
+              "seq": 2,
+              "text": "आपने हमेशा angles को degrees में measure किया है, but सोचिए: एक full turn में तीन सौ साठ parts ही क्यों? इसका जवाब सिर्फ़ history है. Babylonians को तीन सौ साठ पसंद था क्योंकि ये आसानी से divide हो जाता है. Circle में ऐसा कुछ नहीं जो इतने pieces माँगे. Degree बस एक convention है."
+            },
+            {
+              "seq": 3,
+              "text": "<curious>Radian इस बनाए हुए number को हटा देता है</curious> और circle को खुद measure करने देता है. किसी भी circle का edge उतना चलिए जितना उसका radius है, और centre से देखा हुआ वो angle define होता है one radian."
+            },
+            {
+              "seq": 4,
+              "text": "यही idea यहाँ बना हुआ है. A से B तक का ये arc बिल्कुल radius जितना लंबा है, और centre O पर जो angle खुलता है वो exactly one radian है."
+            },
+            {
+              "seq": 5,
+              "text": "Size देखिए: one radian लगभग सत्तावन point three degrees होता है, साठ से थोड़ा कम. ये picture याद रखिए, पूरे chapter का sanity check यही है."
+            },
+            {
+              "seq": 6,
+              "text": "अब deep point. Radian का मतलब है arc length divided by radius, यानी length divided by length. Units पूरी तरह cancel हो जाती हैं, so radian एक pure number है. इसीलिए बाद में ये derivatives और series के अंदर बैठ सकता है, degree नहीं."
+            },
+            {
+              "seq": 7,
+              "text": "पूरा rim two pi radius-lengths का होता है, so one complete turn is two pi radians. आधा turn pi, quarter turn pi over two. ये pi सजावट नहीं, ये गिनती है कि कितने radius circle के around fit होते हैं, आधा किया हुआ."
+            },
+            {
+              "seq": 8,
+              "text": "एक और convention अभी fix कर लेते हैं: anticlockwise घुमाने पर angle positive, clockwise पर negative. पुरानी clock के हाथ clockwise चलते हैं, so हमारे rule से वो negative direction में हैं."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूरे chapter की शुरुआत angles के बारे में एक सीधे सवाल से करते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "आपने हमेशा angles को degrees में नापा है, पर सोचिए: एक पूरे turn में तीन सौ साठ हिस्से ही क्यों? इसका जवाब सिर्फ़ इतिहास है. Babylon के लोगों को तीन सौ साठ इसलिए पसंद था क्योंकि ये आसानी से भाग हो जाता है. Circle में ऐसा कुछ नहीं जो इतने टुकड़े माँगता हो. Degree बस एक परंपरा है."
+            },
+            {
+              "seq": 3,
+              "text": "Radian इस बनाए हुए अंक को छोड़ देता है और circle को खुद को नापने देता है. किसी भी circle के किनारे पर उसके radius जितनी दूरी चलिए, और centre से दिखने वाला वो angle one radian कहलाता है."
+            },
+            {
+              "seq": 4,
+              "text": "यही विचार यहाँ खींचा गया है. A से B तक का ये arc ठीक radius जितना लंबा है, और centre O पर खुलने वाला angle बिल्कुल one radian है."
+            },
+            {
+              "seq": 5,
+              "text": "इसका आकार देखिए: one radian करीब सत्तावन दशमलव तीन degrees होता है, साठ से थोड़ा कम. यही चित्र याद रखिए, पूरे chapter का जाँच-बिंदु यही है."
+            },
+            {
+              "seq": 6,
+              "text": "अब गहरी बात. Radian यानी arc length बटा radius, यानी एक लंबाई बटा दूसरी लंबाई. Units पूरी तरह कट जाती हैं, इसलिए radian एक शुद्ध संख्या है. इसी वजह से आगे ये derivatives और series के भीतर बैठ पाता है, degree नहीं."
+            },
+            {
+              "seq": 7,
+              "text": "पूरा rim two pi radius जितना होता है, इसलिए एक पूरा turn two pi radians का है. आधा turn pi, चौथाई turn pi बटा दो. ये pi सजावट नहीं, ये गिनती है कि कितने radius circle के चारों ओर समाते हैं, आधा किया हुआ."
+            },
+            {
+              "seq": 8,
+              "text": "एक और नियम अभी तय कर लेते हैं: anticlockwise घुमाने पर angle धनात्मक, clockwise पर ऋणात्मक. पुरानी घड़ी के काँटे clockwise चलते हैं, तो हमारे नियम से वे ऋणात्मक दिशा में हैं."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "01 · Angle Measurement and Radians",
+      "title": "The cornerstone definition and the master conversion",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "The cornerstone definition",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\theta = \\dfrac{s}{r}\\quad(\\theta\\ \\text{in radians})",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Here $s$ is arc length and $r$ is radius. Both are lengths, so $\\theta$ is dimensionless \\u2014 a pure number.",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Master conversion relation",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\pi\\ \\text{radian} = 180^\\circ",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Degree to radian: multiply by $\\frac{\\pi}{180}$. Radian to degree: multiply by $\\frac{180}{\\pi}$.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "1° ≈ 0.01746 rad; 1 rad ≈ 57°16′. The two factors are reciprocals.",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Standard angles: $30^\\circ=\\frac{\\pi}{6}$, $45^\\circ=\\frac{\\pi}{4}$, $60^\\circ=\\frac{\\pi}{3}$, $90^\\circ=\\frac{\\pi}{2}$, $180^\\circ=\\pi$, $360^\\circ=2\\pi$.",
+          "seq": 8,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "A bare number in this chapter always means radians.",
+          "seq": 9,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the one definition everything else in this subtopic is built on."
+            },
+            {
+              "seq": 2,
+              "text": "The angle theta equals the arc length s divided by the radius r, with theta in radians. Memorise this single relation, not its consequences."
+            },
+            {
+              "seq": 3,
+              "text": "Look at the right side: s and r are both lengths, so their ratio has no dimension. That is the clean, formal reason a radian is a pure number, and it's the fact that quietly rescues you in Class twelve calculus."
+            },
+            {
+              "seq": 4,
+              "text": "From that definition comes the one relation you truly need for conversions."
+            },
+            {
+              "seq": 5,
+              "text": "Pi radians equal one hundred eighty degrees. Everything else is just scaling this."
+            },
+            {
+              "seq": 6,
+              "text": "To go from degrees to radians, multiply by pi over one hundred eighty. To go the other way, multiply by one hundred eighty over pi. Same relation, read in two directions."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Two benchmarks worth burning in:</whisper> one degree is about zero point zero one seven radian, and one radian is about fifty seven degrees sixteen minutes. The two conversion factors are simply reciprocals of each other."
+            },
+            {
+              "seq": 8,
+              "text": "And lock the standard table cold: thirty is pi over six, forty five is pi over four, sixty is pi over three, ninety is pi over two, one hundred eighty is pi, three hundred sixty is two pi."
+            },
+            {
+              "seq": 9,
+              "text": "From here on, a bare number with no degree sign always means radians — no exceptions in this chapter."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब वो एक definition जिस पर इस subtopic का सब कुछ खड़ा है."
+            },
+            {
+              "seq": 2,
+              "text": "Angle theta equals arc length s divided by radius r, theta radians में. सिर्फ़ यही एक relation याद कीजिए, इसके consequences नहीं."
+            },
+            {
+              "seq": 3,
+              "text": "Right side देखिए: s और r दोनों lengths हैं, so इनके ratio का कोई dimension नहीं. यही clean reason है कि radian एक pure number है, और यही fact Class twelve calculus में आपको बचाता है."
+            },
+            {
+              "seq": 4,
+              "text": "इसी definition से वो एक relation निकलता है जो conversions के लिए ज़रूरी है."
+            },
+            {
+              "seq": 5,
+              "text": "Pi radians बराबर एक सौ अस्सी degrees. बाकी सब बस इसी की scaling है."
+            },
+            {
+              "seq": 6,
+              "text": "Degrees से radians जाने के लिए pi over one hundred eighty से multiply कीजिए. उल्टा जाने के लिए one hundred eighty over pi से. वही relation, दो directions में."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>दो benchmarks पक्के कर लीजिए:</whisper> one degree करीब zero point zero one seven radian, और one radian करीब सत्तावन degrees सोलह minutes. दोनों factors एक दूसरे के reciprocals हैं."
+            },
+            {
+              "seq": 8,
+              "text": "और standard table बिल्कुल रट लीजिए: तीस pi over six, पैंतालीस pi over four, साठ pi over three, नब्बे pi over two, एक सौ अस्सी pi, तीन सौ साठ two pi."
+            },
+            {
+              "seq": 9,
+              "text": "अब से बिना degree sign वाला bare number हमेशा radians में है, इस chapter में कोई exception नहीं."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब वह एक definition जिस पर इस subtopic का सब कुछ टिका है."
+            },
+            {
+              "seq": 2,
+              "text": "Angle theta बराबर arc length s बटा radius r, जहाँ theta radians में है. सिर्फ़ यही एक संबंध याद कीजिए, इसके परिणाम नहीं."
+            },
+            {
+              "seq": 3,
+              "text": "दाहिनी ओर देखिए: s और r दोनों लंबाइयाँ हैं, इसलिए इनके अनुपात का कोई dimension नहीं. यही साफ़ कारण है कि radian एक शुद्ध संख्या है, और यही तथ्य Class बारह के calculus में आपको बचाता है."
+            },
+            {
+              "seq": 4,
+              "text": "इसी definition से वह एक संबंध निकलता है जो conversions के लिए चाहिए."
+            },
+            {
+              "seq": 5,
+              "text": "Pi radians बराबर एक सौ अस्सी degrees. बाकी सब बस इसी को scale करना है."
+            },
+            {
+              "seq": 6,
+              "text": "Degrees से radians जाने के लिए pi बटा एक सौ अस्सी से गुणा कीजिए. उल्टी दिशा के लिए एक सौ अस्सी बटा pi से. वही संबंध, दो दिशाओं में."
+            },
+            {
+              "seq": 7,
+              "text": "दो benchmarks पक्के कर लीजिए: one degree करीब शून्य दशमलव शून्य एक सात radian, और one radian करीब सत्तावन degrees सोलह minutes. दोनों factors एक-दूसरे के reciprocals हैं."
+            },
+            {
+              "seq": 8,
+              "text": "और standard table बिल्कुल याद कर लीजिए: तीस pi बटा छह, पैंतालीस pi बटा चार, साठ pi बटा तीन, नब्बे pi बटा दो, एक सौ अस्सी pi, तीन सौ साठ two pi."
+            },
+            {
+              "seq": 9,
+              "text": "अब से बिना degree चिह्न वाली संख्या हमेशा radians में है, इस chapter में कोई अपवाद नहीं."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "formulas",
+      "subtopic": "01 · Angle Measurement and Radians",
+      "title": "Arc length and sector area — both fall out of one definition",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "From theta = s/r, everything follows",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "s = r\\theta\\quad(\\theta\\ \\text{in radians})",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Proportion route: $\\frac{s}{2\\pi r}=\\frac{\\theta}{2\\pi}$. The $2\\pi$ cancels only because $\\theta$ is in radians.",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "A_{\\text{sect}} = \\tfrac{1}{2}\\,r^2\\theta",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "A sector is the same fraction of the disc as its angle is of the full turn: $\\frac{A}{\\pi r^2}=\\frac{\\theta}{2\\pi}$.",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "A_{\\text{sect}} = \\tfrac{1}{2}\\,r\\,s",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "diagram",
+          "emphasis": "normal",
+          "caption": "Sector: two radii r, arc s, central angle theta",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 360 240\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 150 160 L 253.4 122.4 A 110 110 0 0 0 169.1 51.7 Z\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"132\" y=\"176\" font-size=\"14\" fill=\"#1e293b\">O</text><text x=\"205\" y=\"130\" font-size=\"13\" fill=\"#1e293b\">r</text><text x=\"150\" y=\"100\" font-size=\"13\" fill=\"#1e293b\">r</text><text x=\"228\" y=\"78\" font-size=\"13\" fill=\"#dc2626\">s</text><text x=\"176\" y=\"150\" font-size=\"13\" fill=\"#2563eb\">&#952;</text><text x=\"60\" y=\"210\" font-size=\"13\" fill=\"#1e293b\">Area = &#189; r&#178; &#952;</text></svg>",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "All three assume θ in radians. Use degrees and your answer is roughly 57× too big.",
+          "seq": 8,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the payoff of that one definition: two famous formulas come out for free."
+            },
+            {
+              "seq": 2,
+              "text": "Rearrange theta equals s over r and you get arc length s equals r theta, with theta in radians."
+            },
+            {
+              "seq": 3,
+              "text": "The version examiners want is by proportion. Arc length is to the whole circumference as the angle is to the full turn: s over two pi r equals theta over two pi. The two pi cancels cleanly, and it only cancels because theta is in radians. In degrees you'd be stuck carrying an ugly pi over one eighty."
+            },
+            {
+              "seq": 4,
+              "text": "The sector area is just as easy. Area of a sector equals one half r squared theta."
+            },
+            {
+              "seq": 5,
+              "text": "The logic is identical: the sector is the same slice of the disc as its angle is of the whole turn, so area over pi r squared equals theta over two pi. Rearranged, that's one half r squared theta."
+            },
+            {
+              "seq": 6,
+              "text": "And a handy twin form, using s equals r theta, is area equals one half r times s."
+            },
+            {
+              "seq": 7,
+              "text": "This is the picture: two radii r, the arc s along the rim, the angle theta at the centre, and the shaded area."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>Here's the warning that earns marks:</excited> all three formulas assume theta is in radians. Plug in degrees and your answer comes out about fifty seven times too big. Convert first, always."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस एक definition का फ़ायदा: दो famous formulas मुफ़्त में निकल आते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "Theta equals s over r को rearrange कीजिए और मिलता है arc length s equals r theta, theta radians में."
+            },
+            {
+              "seq": 3,
+              "text": "Examiners जो चाहते हैं वो proportion वाला तरीका है. Arc length का whole circumference से वही ratio है जो angle का full turn से: s over two pi r equals theta over two pi. Two pi cleanly cancel हो जाता है, और सिर्फ़ इसलिए क्योंकि theta radians में है. Degrees में आप pi over one eighty ढोते रहते."
+            },
+            {
+              "seq": 4,
+              "text": "Sector area भी उतना ही आसान है. Area of a sector equals one half r squared theta."
+            },
+            {
+              "seq": 5,
+              "text": "Logic same है: sector disc का उतना ही हिस्सा है जितना उसका angle full turn का, so area over pi r squared equals theta over two pi. Rearrange करने पर one half r squared theta."
+            },
+            {
+              "seq": 6,
+              "text": "और एक काम का twin form, s equals r theta use करके: area equals one half r into s."
+            },
+            {
+              "seq": 7,
+              "text": "<excited>यही picture है:</excited> दो radii r, rim पर arc s, centre पर angle theta, और shaded area."
+            },
+            {
+              "seq": 8,
+              "text": "जो warning marks दिलाती है: तीनों formulas theta को radians में मानते हैं. Degrees डालेंगे तो answer करीब सत्तावन गुना बड़ा आएगा. पहले convert कीजिए, हमेशा."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस एक definition का फल: दो प्रसिद्ध formulas मुफ़्त में निकल आते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "Theta बराबर s बटा r को फिर से जमाइए और मिलता है arc length s बराबर r theta, theta radians में."
+            },
+            {
+              "seq": 3,
+              "text": "Examiners जो देखना चाहते हैं वह proportion वाला तरीका है. Arc length का पूरे circumference से वही अनुपात है जो angle का full turn से: s बटा two pi r बराबर theta बटा two pi. Two pi साफ़ कट जाता है, और सिर्फ़ इसलिए क्योंकि theta radians में है. Degrees में आपको pi बटा एक सौ अस्सी ढोना पड़ता."
+            },
+            {
+              "seq": 4,
+              "text": "Sector area भी उतना ही सरल है. Area of a sector बराबर आधा r squared theta."
+            },
+            {
+              "seq": 5,
+              "text": "तर्क वही है: sector disc का उतना ही हिस्सा है जितना उसका angle पूरे turn का, इसलिए area बटा pi r squared बराबर theta बटा two pi. फिर से जमाने पर आधा r squared theta."
+            },
+            {
+              "seq": 6,
+              "text": "और एक काम का जुड़वाँ रूप, s बराबर r theta का उपयोग करके: area बराबर आधा r गुणा s."
+            },
+            {
+              "seq": 7,
+              "text": "यही चित्र है: दो radii r, rim पर arc s, centre पर angle theta, और छायांकित area."
+            },
+            {
+              "seq": 8,
+              "text": "जो चेतावनी marks दिलाती है: तीनों formulas theta को radians में मानते हैं. Degrees डालेंगे तो उत्तर करीब सत्तावन गुना बड़ा आएगा. पहले convert कीजिए, हमेशा."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "01 · Angle Measurement and Radians",
+      "title": "Converting an angle and finding a radius",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 1 — convert 40°20′ to radians",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Fold the minutes into degrees first: $40^\\circ 20' = 40 + \\tfrac{20}{60} = \\tfrac{121}{3}$ degrees.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\frac{121}{3}\\times\\frac{\\pi}{180} = \\frac{121\\pi}{540}\\ \\text{radian}",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 2 — find the radius",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "A central angle of $60^\\circ$ cuts an arc of $37.4$ cm. Convert first: $60^\\circ=\\frac{\\pi}{3}$.",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "r = \\frac{s}{\\theta} = \\frac{37.4}{\\pi/3} = \\frac{112.2\\times 7}{22} = 35.7\\ \\text{cm}",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Signature trap: forgetting to turn 60° into radians before using s = rθ.",
+          "seq": 7,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's put the conversion factor to work on a board-level problem."
+            },
+            {
+              "seq": 2,
+              "text": "We want forty degrees twenty minutes in radians. First deal with the minutes: twenty minutes is twenty over sixty of a degree, so the whole angle is one hundred twenty one over three degrees."
+            },
+            {
+              "seq": 3,
+              "text": "Now multiply by pi over one hundred eighty. One hundred twenty one over three, times pi over one hundred eighty, gives one hundred twenty one pi over five hundred forty radians. That's the answer, left symbolic in pi."
+            },
+            {
+              "seq": 4,
+              "text": "Second example, a classic find-the-radius problem."
+            },
+            {
+              "seq": 5,
+              "text": "A central angle of sixty degrees intercepts an arc of thirty seven point four centimetres. Before touching s equals r theta, convert: sixty degrees is pi over three radians."
+            },
+            {
+              "seq": 6,
+              "text": "Now r equals s over theta, which is thirty seven point four divided by pi over three. Using pi as twenty two over seven, this works out to thirty five point seven centimetres."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Watch this one:</whisper> the single biggest mistake here is using sixty directly in s equals r theta without converting. Always send the angle to radians first."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Conversion factor को एक board-level problem पर लगाते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए forty degrees twenty minutes radians में. पहले minutes: twenty minutes यानी twenty over sixty degree, so पूरा angle one hundred twenty one over three degrees."
+            },
+            {
+              "seq": 3,
+              "text": "अब pi over one hundred eighty से multiply. One hundred twenty one over three, times pi over one hundred eighty, देता है one hundred twenty one pi over five hundred forty radians. यही answer है, pi में symbolic."
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा example, classic find-the-radius problem."
+            },
+            {
+              "seq": 5,
+              "text": "साठ degrees का central angle thirty seven point four centimetre का arc काटता है. s equals r theta छूने से पहले convert: sixty degrees is pi over three radians."
+            },
+            {
+              "seq": 6,
+              "text": "अब r equals s over theta, यानी thirty seven point four divided by pi over three. Pi को twenty two over seven लेने पर, ये आता है thirty five point seven centimetres."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>इसका ध्यान रखिए:</whisper> यहाँ सबसे बड़ी ग़लती है sixty को सीधे s equals r theta में डाल देना बिना convert किए. Angle हमेशा पहले radians में भेजिए."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Conversion factor को एक board-level problem पर लगाते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए forty degrees twenty minutes radians में. पहले minutes: twenty minutes यानी बीस बटा साठ degree, तो पूरा angle एक सौ इक्कीस बटा तीन degrees."
+            },
+            {
+              "seq": 3,
+              "text": "अब pi बटा एक सौ अस्सी से गुणा. एक सौ इक्कीस बटा तीन, गुणा pi बटा एक सौ अस्सी, देता है एक सौ इक्कीस pi बटा पाँच सौ चालीस radians. यही उत्तर है, pi में."
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा example, classic radius निकालने वाला problem."
+            },
+            {
+              "seq": 5,
+              "text": "साठ degrees का central angle thirty seven point four centimetre का arc काटता है. s बराबर r theta छूने से पहले convert: sixty degrees बराबर pi बटा तीन radians."
+            },
+            {
+              "seq": 6,
+              "text": "अब r बराबर s बटा theta, यानी thirty seven point four बटा pi बटा तीन. Pi को twenty two बटा seven लेने पर यह आता है thirty five point seven centimetres."
+            },
+            {
+              "seq": 7,
+              "text": "इसका ध्यान रखिए: यहाँ सबसे बड़ी ग़लती है sixty को सीधे s बराबर r theta में डाल देना बिना convert किए. Angle हमेशा पहले radians में भेजिए."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "01 · Angle Measurement and Radians",
+      "title": "Angular motion and the shared-arc ratio",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 3 — a spinning wheel",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "$360$ revolutions per minute $= \\frac{360}{60}=6$ revolutions per second. Each revolution is $2\\pi$.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\omega = 6\\times 2\\pi = 12\\pi \\approx 37.7\\ \\text{rad s}^{-1}",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "This ω in rad s⁻¹ feeds straight into v = rω in rotational mechanics.",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 4 — equal arcs in two circles",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Same arc: $r_1\\theta_1 = r_2\\theta_2$. The angles appear only as a ratio, so degrees are fine here.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\frac{r_1}{r_2} = \\frac{\\theta_2}{\\theta_1} = \\frac{75}{60} = \\frac{5}{4}",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Bigger angle on the same arc means a smaller radius — the inverse relationship is the trap.",
+          "seq": 8,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example is the quiet bridge from maths straight into physics."
+            },
+            {
+              "seq": 2,
+              "text": "A wheel makes three hundred sixty revolutions in a minute. Per second that's three hundred sixty over sixty, which is six revolutions. Each revolution is two pi radians."
+            },
+            {
+              "seq": 3,
+              "text": "So the angular speed omega is six times two pi, that is twelve pi, about thirty seven point seven radians per second."
+            },
+            {
+              "seq": 4,
+              "text": "That omega, in radians per second, is exactly what plugs into v equals r omega for rim speed. Fumble the units here and you lose marks in rotational mechanics too."
+            },
+            {
+              "seq": 5,
+              "text": "The fourth example is a favourite ratio trap."
+            },
+            {
+              "seq": 6,
+              "text": "Two circles have arcs of equal length subtending sixty degrees and seventy five degrees at their centres. Since the arcs are equal, r one theta one equals r two theta two. The angles only appear as a ratio, so we can leave them in degrees, the conversion factor would cancel anyway."
+            },
+            {
+              "seq": 7,
+              "text": "So r one over r two equals theta two over theta one, which is seventy five over sixty, equal to five over four."
+            },
+            {
+              "seq": 8,
+              "text": "Read the meaning: a bigger angle sitting on the same arc means a tighter, smaller circle. Students who memorised s equals r theta but never felt it often flip this and write four to five."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये example maths से सीधे physics में जाने वाला pul है."
+            },
+            {
+              "seq": 2,
+              "text": "एक wheel एक minute में तीन सौ साठ revolutions करता है. Per second ये three hundred sixty over sixty, यानी six revolutions. हर revolution two pi radians का है."
+            },
+            {
+              "seq": 3,
+              "text": "So angular speed omega है six times two pi, यानी twelve pi, करीब thirty seven point seven radians per second."
+            },
+            {
+              "seq": 4,
+              "text": "यही omega, radians per second में, exactly वही है जो v equals r omega में rim speed के लिए जाता है. Units यहाँ गड़बड़ की तो rotational mechanics में भी marks गए."
+            },
+            {
+              "seq": 5,
+              "text": "चौथा example एक favourite ratio trap है."
+            },
+            {
+              "seq": 6,
+              "text": "दो circles के arcs equal length के हैं, centres पर sixty और seventy five degrees बनाते हैं. Arcs equal हैं, so r one theta one equals r two theta two. Angles सिर्फ़ ratio में आते हैं, so degrees में छोड़ सकते हैं, conversion factor वैसे भी cancel हो जाता."
+            },
+            {
+              "seq": 7,
+              "text": "So r one over r two equals theta two over theta one, यानी seventy five over sixty, बराबर five over four."
+            },
+            {
+              "seq": 8,
+              "text": "मतलब समझिए: same arc पर बड़ा angle मतलब tighter, छोटा circle. जो s equals r theta रट लेते हैं पर feel नहीं करते वो अक्सर इसे उल्टा four to five लिख देते हैं."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example maths से सीधे physics में जाने वाला पुल है."
+            },
+            {
+              "seq": 2,
+              "text": "एक wheel एक minute में तीन सौ साठ revolutions करता है. प्रति second यह तीन सौ साठ बटा साठ, यानी छह revolutions. हर revolution two pi radians का है."
+            },
+            {
+              "seq": 3,
+              "text": "तो angular speed omega है छह गुना two pi, यानी twelve pi, करीब thirty seven point seven radians प्रति second."
+            },
+            {
+              "seq": 4,
+              "text": "यही omega, radians प्रति second में, ठीक वही है जो v बराबर r omega में rim की speed के लिए जाता है. Units यहाँ गड़बड़ हुई तो rotational mechanics में भी marks जाते हैं."
+            },
+            {
+              "seq": 5,
+              "text": "चौथा example एक पसंदीदा ratio जाल है."
+            },
+            {
+              "seq": 6,
+              "text": "दो circles के arcs बराबर लंबाई के हैं, centres पर sixty और seventy five degrees बनाते हैं. Arcs बराबर हैं, तो r one theta one बराबर r two theta two. Angles सिर्फ़ ratio में आते हैं, इसलिए degrees में छोड़ सकते हैं, conversion factor वैसे भी कट जाता."
+            },
+            {
+              "seq": 7,
+              "text": "तो r one बटा r two बराबर theta two बटा theta one, यानी seventy five बटा sixty, बराबर five बटा four."
+            },
+            {
+              "seq": 8,
+              "text": "अर्थ समझिए: एक ही arc पर बड़ा angle यानी अधिक कसा हुआ, छोटा circle. जो s बराबर r theta रट लेते हैं पर महसूस नहीं करते, वे अक्सर इसे उल्टा four to five लिख देते हैं."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "01 · Angle Measurement and Radians",
+      "title": "A chord-to-arc chain and the sector inversion",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 5 — from chord to arc",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Diameter $40$ cm gives $r=20$. A chord of $20$ cm; the perpendicular from the centre bisects it.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\sin\\tfrac{\\theta}{2} = \\tfrac{10}{20} = \\tfrac{1}{2}\\ \\Rightarrow\\ \\tfrac{\\theta}{2}=\\tfrac{\\pi}{6}\\ \\Rightarrow\\ \\theta=\\tfrac{\\pi}{3}",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "s = r\\theta = 20\\times\\tfrac{\\pi}{3} = \\tfrac{20\\pi}{3}\\approx 20.94\\ \\text{cm}",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 6 — the sector inversion",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Perimeter $2r+s=16$; area $\\tfrac{1}{2}r^2\\theta=16$, so $r^2\\theta=32$ and $s=\\tfrac{32}{r}$.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "2r+\\tfrac{32}{r}=16\\ \\Rightarrow\\ (r-4)^2=0\\ \\Rightarrow\\ r=4,\\ \\theta=2",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Two unknowns from two conditions — the JEE Advanced pattern: easy trig, hard algebra.",
+          "seq": 8,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example five chains two ideas: a chord relation, then the arc formula."
+            },
+            {
+              "seq": 2,
+              "text": "A circle of diameter forty gives radius twenty. A chord is twenty centimetres long. Drop a perpendicular from the centre; it bisects the chord, leaving a right triangle with hypotenuse twenty and half-chord ten."
+            },
+            {
+              "seq": 3,
+              "text": "So sine of theta over two equals ten over twenty, which is one half. That means theta over two is pi over six, so theta is pi over three."
+            },
+            {
+              "seq": 4,
+              "text": "Now the arc: s equals r theta, twenty times pi over three, which is twenty pi over three, about twenty point nine four centimetres."
+            },
+            {
+              "seq": 5,
+              "text": "Example six looks the hardest but the trig is trivial — it's an algebra puzzle in disguise."
+            },
+            {
+              "seq": 6,
+              "text": "A sector has perimeter sixteen and area sixteen. Perimeter is two radii plus the arc: two r plus s equals sixteen. Area is one half r squared theta equals sixteen, so r squared theta is thirty two, and since s equals r theta, s equals thirty two over r."
+            },
+            {
+              "seq": 7,
+              "text": "Substitute into the perimeter: two r plus thirty two over r equals sixteen. Clear it and you get r minus four, all squared, equals zero. So r is four, s is eight, and theta is s over r, which is two radians."
+            },
+            {
+              "seq": 8,
+              "text": "Notice the design: two unknowns pinned down by two conditions. The angle work is child's play; the difficulty is the algebra. That's the signature JEE Advanced move."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example पाँच दो ideas को chain करता है: पहले chord relation, फिर arc formula."
+            },
+            {
+              "seq": 2,
+              "text": "Diameter चालीस वाले circle का radius बीस. Chord बीस centimetres लंबा है. Centre से perpendicular गिराइए; वो chord को bisect करता है, बनता है right triangle जिसका hypotenuse बीस और half-chord दस."
+            },
+            {
+              "seq": 3,
+              "text": "So sine of theta over two equals ten over twenty, यानी one half. मतलब theta over two is pi over six, so theta is pi over three."
+            },
+            {
+              "seq": 4,
+              "text": "अब arc: s equals r theta, twenty times pi over three, यानी twenty pi over three, करीब twenty point nine four centimetres."
+            },
+            {
+              "seq": 5,
+              "text": "Example छह सबसे मुश्किल दिखता है पर trig मामूली है, ये असल में algebra की पहेली है."
+            },
+            {
+              "seq": 6,
+              "text": "एक sector का perimeter सोलह और area सोलह. Perimeter है two radii plus arc: two r plus s equals sixteen. Area है one half r squared theta equals sixteen, so r squared theta is thirty two, और s equals r theta से s equals thirty two over r."
+            },
+            {
+              "seq": 7,
+              "text": "Perimeter में डालिए: two r plus thirty two over r equals sixteen. साफ़ करने पर r minus four, whole squared, equals zero. So r चार, s आठ, और theta equals s over r, यानी two radians."
+            },
+            {
+              "seq": 8,
+              "text": "Design देखिए: दो unknowns, दो conditions से fix. Angle का काम बच्चों जैसा; मुश्किल algebra है. यही signature J E E Advanced move है."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example पाँच दो विचारों को जोड़ता है: पहले chord संबंध, फिर arc formula."
+            },
+            {
+              "seq": 2,
+              "text": "चालीस diameter वाले circle का radius बीस. Chord बीस centimetres लंबा है. Centre से perpendicular गिराइए; वह chord को आधा बाँटता है, बनता है right triangle जिसका hypotenuse बीस और आधा-chord दस."
+            },
+            {
+              "seq": 3,
+              "text": "तो sine of theta बटा दो बराबर दस बटा बीस, यानी एक बटा दो. इसका मतलब theta बटा दो बराबर pi बटा छह, तो theta बराबर pi बटा तीन."
+            },
+            {
+              "seq": 4,
+              "text": "अब arc: s बराबर r theta, बीस गुणा pi बटा तीन, यानी twenty pi बटा तीन, करीब twenty point nine four centimetres."
+            },
+            {
+              "seq": 5,
+              "text": "Example छह सबसे कठिन दिखता है पर trig मामूली है, यह दरअसल algebra की पहेली है."
+            },
+            {
+              "seq": 6,
+              "text": "एक sector का perimeter सोलह और area सोलह. Perimeter है दो radii जमा arc: two r plus s बराबर sixteen. Area है आधा r squared theta बराबर sixteen, तो r squared theta बराबर बत्तीस, और s बराबर r theta से s बराबर बत्तीस बटा r."
+            },
+            {
+              "seq": 7,
+              "text": "Perimeter में रखिए: two r plus बत्तीस बटा r बराबर sixteen. साफ़ करने पर r minus four, पूरा squared, बराबर zero. तो r चार, s आठ, और theta बराबर s बटा r, यानी two radians."
+            },
+            {
+              "seq": 8,
+              "text": "Design देखिए: दो unknowns, दो conditions से तय. Angle का काम बच्चों जैसा; कठिन तो algebra है. यही J E E Advanced की पहचान वाली चाल है."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "tips",
+      "subtopic": "01 · Angle Measurement and Radians",
+      "title": "The pitfalls that quietly cost marks",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Traps in angle measurement",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "#1 Signature trap: using degrees inside s = rθ or A = ½ r²θ. Convert to radians first — always.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#2 Flipping the factor. Degree to radian uses π/180; radian to degree uses 180/π. They are reciprocals.",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#3 A radian is dimensionless \\u2014 don't 'cancel radians' like metres. In $\\omega=\\theta/t$ you simply get $\\text{s}^{-1}$.",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#4 DMS is base-60: 0.5° is 30′, not 50′; and 20′ is one-third of a degree.",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#5 Clockwise is a negative angle. #6 Check your calculator's DEG vs RAD mode before numerical work.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Sanity check: 1 rad ≈ 57°. A huge 'radian' answer for a small angle means you flipped the factor.",
+          "seq": 7,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before we leave radians, here are the traps that decide the easy marks."
+            },
+            {
+              "seq": 2,
+              "text": "The signature trap, number one: using degrees inside s equals r theta or the sector area formula. Both are defined for theta in radians. Convert first, every single time. A wrong answer about fifty seven times too large is the fingerprint of this error."
+            },
+            {
+              "seq": 3,
+              "text": "Number two, flipping the conversion factor. Degree to radian uses pi over one eighty; radian to degree uses one eighty over pi. They're reciprocals, so mixing them up scales your answer wildly."
+            },
+            {
+              "seq": 4,
+              "text": "Number three, treating radian as a unit you carry along. It's dimensionless. In omega equals theta over time, the radian vanishes and you're left with per-second. Don't cancel radians as if they were metres."
+            },
+            {
+              "seq": 5,
+              "text": "Number four, the base-sixty arithmetic of degrees, minutes, seconds. Half a degree is thirty minutes, not fifty. Twenty minutes is one third of a degree. Convert minutes and seconds to fractions before multiplying."
+            },
+            {
+              "seq": 6,
+              "text": "Number five, clockwise rotation is negative. And number six, when you start numerical trig, check whether your calculator is in degree or radian mode, wrong mode gives nonsense."
+            },
+            {
+              "seq": 7,
+              "text": "And the one-second sanity check to keep forever: one radian is about fifty seven degrees. If a small angle gives you a huge number of radians, you almost certainly flipped the factor."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Radians छोड़ने से पहले, वो traps जो आसान marks तय करते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "Signature trap, number one: degrees को s equals r theta या sector area formula के अंदर use करना. दोनों theta radians के लिए बने हैं. पहले convert, हर बार. करीब सत्तावन गुना बड़ा answer इसी ग़लती का fingerprint है."
+            },
+            {
+              "seq": 3,
+              "text": "Number two, conversion factor flip करना. Degree to radian pi over one eighty; radian to degree one eighty over pi. Reciprocals हैं, so mix करने पर answer बुरी तरह scale हो जाता है."
+            },
+            {
+              "seq": 4,
+              "text": "Number three, radian को unit मानकर ढोना. ये dimensionless है. Omega equals theta over time में radian ग़ायब हो जाता है, बचता है per second. Radians को metres की तरह cancel मत कीजिए."
+            },
+            {
+              "seq": 5,
+              "text": "Number four, degrees minutes seconds की base sixty arithmetic. आधा degree तीस minutes है, पचास नहीं. बीस minutes एक तिहाई degree है. Multiply से पहले minutes seconds को fractions में बदलिए."
+            },
+            {
+              "seq": 6,
+              "text": "Number five, clockwise negative है. और number six, numerical trig शुरू करते ही check कीजिए calculator degree mode में है या radian, ग़लत mode बकवास देता है."
+            },
+            {
+              "seq": 7,
+              "text": "और एक-second का sanity check हमेशा के लिए: one radian करीब सत्तावन degrees. छोटे angle पर बहुत बड़ा radian number आया तो factor flip हो गया है."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Radians छोड़ने से पहले, वे traps जो आसान marks तय करते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "Signature trap, पहला: degrees को s बराबर r theta या sector area formula के भीतर use करना. दोनों theta radians के लिए बने हैं. पहले convert, हर बार. करीब सत्तावन गुना बड़ा उत्तर इसी ग़लती की पहचान है."
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, conversion factor उलट देना. Degree to radian pi बटा एक सौ अस्सी; radian to degree एक सौ अस्सी बटा pi. ये reciprocals हैं, इसलिए मिला देने पर उत्तर बुरी तरह बदल जाता है."
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, radian को एक unit मानकर ढोना. यह dimensionless है. Omega बराबर theta बटा time में radian ग़ायब हो जाता है, बचता है per second. Radians को metres की तरह cancel मत कीजिए."
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, degrees minutes seconds की base sixty arithmetic. आधा degree तीस minutes है, पचास नहीं. बीस minutes एक तिहाई degree है. गुणा से पहले minutes seconds को fractions में बदलिए."
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ, clockwise ऋणात्मक है. और छठा, numerical trig शुरू करते ही जाँचिए calculator degree mode में है या radian, ग़लत mode बेकार उत्तर देता है."
+            },
+            {
+              "seq": 7,
+              "text": "और एक sanity check हमेशा के लिए: one radian करीब सत्तावन degrees. छोटे angle पर बहुत बड़ा radian आ जाए तो factor उलट गया है."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "concept",
+      "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+      "title": "From the right triangle to the unit circle",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Why we leave the triangle",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "A right triangle caps angles at $90^\\circ$. To reach $\\sin 210^\\circ$ or $\\cos(-40^\\circ)$ we need the unit circle.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "diagram",
+          "emphasis": "normal",
+          "caption": "Unit circle: terminal point P in Quadrant II",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 360 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"150\" x2=\"330\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"180\" y1=\"20\" x2=\"180\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"180\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"180\" y1=\"150\" x2=\"115.7\" y2=\"73.4\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"115.7\" y1=\"73.4\" x2=\"115.7\" y2=\"150\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><circle cx=\"115.7\" cy=\"73.4\" r=\"4\" fill=\"#2563eb\"/><text x=\"98\" y=\"66\" font-size=\"13\" fill=\"#2563eb\">P(a, b)</text><text x=\"140\" y=\"110\" font-size=\"12\" fill=\"#1e293b\">1</text><text x=\"112\" y=\"168\" font-size=\"12\" fill=\"#1e293b\">M</text><text x=\"128\" y=\"120\" font-size=\"11\" fill=\"#dc2626\">b = sin&#952; (+)</text><text x=\"60\" y=\"145\" font-size=\"11\" fill=\"#1e293b\">a = cos&#952; (&#8722;)</text><text x=\"235\" y=\"90\" font-size=\"12\" fill=\"#64748b\">II</text><text x=\"235\" y=\"215\" font-size=\"12\" fill=\"#64748b\">I</text><text x=\"100\" y=\"215\" font-size=\"12\" fill=\"#64748b\">IV</text><text x=\"100\" y=\"40\" font-size=\"12\" fill=\"#64748b\">III</text></svg>",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\cos\\theta = a\\ (x\\text{-coordinate}),\\qquad \\sin\\theta = b\\ (y\\text{-coordinate})",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Cosine is the across-coordinate; sine is the up-coordinate. Everything downstream falls out of this.",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "The point never leaves the circle, so $|\\sin\\theta|\\le 1$ and $|\\cos\\theta|\\le 1$.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "This one idea — cosine across, sine up — runs the entire subtopic.",
+          "seq": 7,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This subtopic is the single biggest upgrade in the chapter: from ratios to functions."
+            },
+            {
+              "seq": 2,
+              "text": "In earlier classes, sine, cosine and tangent were just side ratios in a right triangle, and a right triangle can only hold angles between zero and ninety degrees. But we want to talk about sine of two hundred ten degrees, or cosine of minus forty. For that we need a frame with no ninety-degree cap: the unit circle, a circle of radius one at the origin."
+            },
+            {
+              "seq": 3,
+              "text": "Here it is. Rotate a ray to angle theta, anticlockwise as we locked in earlier, and look at where its tip P lands, at coordinates a and b."
+            },
+            {
+              "seq": 4,
+              "text": "The whole engine is this: cosine of theta is the x-coordinate a, and sine of theta is the y-coordinate b."
+            },
+            {
+              "seq": 5,
+              "text": "Say it as a picture: cosine is how far across, sine is how far up. Every sign, every range, every quadrantal value comes straight out of that."
+            },
+            {
+              "seq": 6,
+              "text": "And because the point sits on a circle of radius one, it can never be more than one unit from the centre. So the size of sine is at most one, and the size of cosine is at most one, a physical fact becoming a mathematical range."
+            },
+            {
+              "seq": 7,
+              "text": "<curious>Hold on to this one sentence</curious> — cosine across, sine up — and the rest of the subtopic is just reading it off the picture."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये subtopic chapter का सबसे बड़ा upgrade है: ratios से functions तक."
+            },
+            {
+              "seq": 2,
+              "text": "पहले sine, cosine, tangent बस right triangle के side ratios थे, और right triangle सिर्फ़ zero से ninety degrees के angles रख सकता है. पर हमें बात करनी है sine of two hundred ten degrees की, या cosine of minus forty की. इसके लिए चाहिए बिना ninety-degree cap वाला frame: unit circle, origin पर radius one का circle."
+            },
+            {
+              "seq": 3,
+              "text": "ये रहा. एक ray को angle theta तक घुमाइए, anticlockwise जैसा हमने lock किया, और देखिए उसका tip P कहाँ गिरता है, coordinates a और b पर."
+            },
+            {
+              "seq": 4,
+              "text": "पूरा engine यही है: cosine of theta है x-coordinate a, और sine of theta है y-coordinate b."
+            },
+            {
+              "seq": 5,
+              "text": "Picture की तरह कहिए: cosine कितना across, sine कितना up. हर sign, हर range, हर quadrantal value इसी से निकलती है."
+            },
+            {
+              "seq": 6,
+              "text": "और चूँकि point radius one के circle पर है, वो centre से कभी एक unit से ज़्यादा दूर नहीं जा सकता. So sine का size ज़्यादा से ज़्यादा one, cosine का size ज़्यादा से ज़्यादा one, एक physical fact गणित की range बन गई."
+            },
+            {
+              "seq": 7,
+              "text": "<curious>इस एक वाक्य को पकड़े रहिए</curious>, cosine across, sine up, और बाकी subtopic बस इसे picture से पढ़ना है."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह subtopic chapter का सबसे बड़ा upgrade है: ratios से functions तक."
+            },
+            {
+              "seq": 2,
+              "text": "पहले sine, cosine, tangent बस right triangle के side ratios थे, और right triangle सिर्फ़ zero से ninety degrees के angles रख सकता है. पर हमें बात करनी है sine of two hundred ten degrees की, या cosine of minus forty की. इसके लिए चाहिए बिना ninety-degree सीमा वाला frame: unit circle, origin पर radius one का circle."
+            },
+            {
+              "seq": 3,
+              "text": "यह रहा. एक ray को angle theta तक घुमाइए, anticlockwise जैसा हमने तय किया, और देखिए उसका सिरा P कहाँ गिरता है, coordinates a और b पर."
+            },
+            {
+              "seq": 4,
+              "text": "पूरा engine यही है: cosine of theta है x-coordinate a, और sine of theta है y-coordinate b."
+            },
+            {
+              "seq": 5,
+              "text": "चित्र की तरह कहिए: cosine कितना आर-पार, sine कितना ऊपर. हर sign, हर range, हर quadrantal value इसी से निकलती है."
+            },
+            {
+              "seq": 6,
+              "text": "और चूँकि point radius one के circle पर है, वह centre से कभी एक unit से ज़्यादा दूर नहीं जा सकता. तो sine का आकार अधिक से अधिक one, cosine का आकार अधिक से अधिक one, एक भौतिक तथ्य गणित की range बन गई."
+            },
+            {
+              "seq": 7,
+              "text": "इस एक वाक्य को पकड़े रहिए, cosine आर-पार, sine ऊपर, और बाकी subtopic बस इसे चित्र से पढ़ना है."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "concept",
+      "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+      "title": "General definitions, reciprocal pairings and the sign engine",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Six functions for any radius r",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\sin\\theta=\\tfrac{y}{r},\\quad \\cos\\theta=\\tfrac{x}{r},\\quad \\tan\\theta=\\tfrac{y}{x}",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\csc\\theta=\\tfrac{r}{y},\\quad \\sec\\theta=\\tfrac{r}{x},\\quad \\cot\\theta=\\tfrac{x}{y}",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Since $r>0$ always, the sign of each function is fixed entirely by the quadrant \\u2014 the signs of $x$ and $y$.",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Pairing rule: cosec goes with sine, sec goes with cosine. Read the third letter.",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "All Silver Tea Cups (ASTC)",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Q I: all positive. Q II: sin and csc. Q III: tan and cot. Q IV: cos and sec.",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "diagram",
+          "emphasis": "normal",
+          "caption": "ASTC: which functions are positive in each quadrant",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 320 320\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"160\" y1=\"20\" x2=\"160\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"228\" y=\"95\" font-size=\"15\" fill=\"#16a34a\" font-weight=\"bold\">All +</text><text x=\"60\" y=\"95\" font-size=\"14\" fill=\"#2563eb\" font-weight=\"bold\">sin, csc +</text><text x=\"60\" y=\"235\" font-size=\"14\" fill=\"#9333ea\" font-weight=\"bold\">tan, cot +</text><text x=\"222\" y=\"235\" font-size=\"14\" fill=\"#dc2626\" font-weight=\"bold\">cos, sec +</text><text x=\"240\" y=\"150\" font-size=\"12\" fill=\"#64748b\">I</text><text x=\"145\" y=\"150\" font-size=\"12\" fill=\"#64748b\">II</text><text x=\"145\" y=\"185\" font-size=\"12\" fill=\"#64748b\">III</text><text x=\"240\" y=\"185\" font-size=\"12\" fill=\"#64748b\">IV</text><path d=\"M 250 70 A 120 120 0 0 0 90 90\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#a)\"/><defs><marker id=\"a\" markerWidth=\"8\" markerHeight=\"8\" refX=\"4\" refY=\"4\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 z\" fill=\"#334155\"/></marker></defs><text x=\"120\" y=\"315\" font-size=\"12\" fill=\"#334155\">A &#8594; S &#8594; T &#8594; C (anticlockwise)</text></svg>",
+          "seq": 8,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Reciprocals always share their parent's sign.",
+          "seq": 9,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's write the definitions for a point at any distance, not just radius one."
+            },
+            {
+              "seq": 2,
+              "text": "Take a point x, y on the terminal side, at distance r from the origin. Then sine is y over r, cosine is x over r, tangent is y over x."
+            },
+            {
+              "seq": 3,
+              "text": "Their reciprocals: cosecant is r over y, secant is r over x, cotangent is x over y."
+            },
+            {
+              "seq": 4,
+              "text": "Now the key observation. r is always positive, so it can never change a sign. The sign of every function is decided purely by the signs of x and y, that is, by the quadrant. That is the whole sign engine."
+            },
+            {
+              "seq": 5,
+              "text": "One pairing to fix now, because it trips people: cosecant pairs with sine, and secant pairs with cosine, despite the co in the name. Read the third letter. Co-sec-ant, the third letter matches sine."
+            },
+            {
+              "seq": 6,
+              "text": "The signs are captured by the classic mnemonic, All Silver Tea Cups."
+            },
+            {
+              "seq": 7,
+              "text": "In Quadrant one, all are positive. In two, sine and its reciprocal cosec. In three, tangent and cot. In four, cosine and sec."
+            },
+            {
+              "seq": 8,
+              "text": "Here it is on the circle, going anticlockwise, A, S, T, C."
+            },
+            {
+              "seq": 9,
+              "text": "<whisper>And remember,</whisper> a reciprocal always carries the same sign as its parent, so cosec follows sine, sec follows cosine."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब definitions लिखते हैं किसी भी distance वाले point के लिए, सिर्फ़ radius one नहीं."
+            },
+            {
+              "seq": 2,
+              "text": "Terminal side पर point x, y लीजिए, origin से distance r पर. तो sine है y over r, cosine है x over r, tangent है y over x."
+            },
+            {
+              "seq": 3,
+              "text": "इनके reciprocals: cosecant r over y, secant r over x, cotangent x over y."
+            },
+            {
+              "seq": 4,
+              "text": "अब key बात. r हमेशा positive है, so वो sign कभी बदल नहीं सकता. हर function का sign सिर्फ़ x और y के signs से तय होता है, यानी quadrant से. यही पूरा sign engine है."
+            },
+            {
+              "seq": 5,
+              "text": "एक pairing अभी fix कीजिए, क्योंकि यहाँ लोग फँसते हैं: cosecant pairs with sine, और secant pairs with cosine, नाम में co होने के बावजूद. तीसरा letter पढ़िए. Co-sec-ant, तीसरा letter sine से match करता है."
+            },
+            {
+              "seq": 6,
+              "text": "Signs को classic mnemonic पकड़ता है, All Silver Tea Cups."
+            },
+            {
+              "seq": 7,
+              "text": "Quadrant one में सब positive. Two में sine और उसका reciprocal cosec. Three में tangent और cot. Four में cosine और sec."
+            },
+            {
+              "seq": 8,
+              "text": "ये रहा circle पर, anticlockwise, A, S, T, C."
+            },
+            {
+              "seq": 9,
+              "text": "<whisper>और याद रखिए,</whisper> reciprocal हमेशा अपने parent का sign रखता है, so cosec sine को follow करता है, sec cosine को."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब definitions लिखते हैं किसी भी distance वाले point के लिए, सिर्फ़ radius one नहीं."
+            },
+            {
+              "seq": 2,
+              "text": "Terminal side पर point x, y लीजिए, origin से distance r पर. तो sine है y बटा r, cosine है x बटा r, tangent है y बटा x."
+            },
+            {
+              "seq": 3,
+              "text": "इनके reciprocals: cosecant r बटा y, secant r बटा x, cotangent x बटा y."
+            },
+            {
+              "seq": 4,
+              "text": "अब मुख्य बात. r हमेशा धनात्मक है, इसलिए वह sign कभी नहीं बदल सकता. हर function का sign सिर्फ़ x और y के signs से तय होता है, यानी quadrant से. यही पूरा sign engine है."
+            },
+            {
+              "seq": 5,
+              "text": "एक pairing अभी तय कीजिए, क्योंकि यहाँ लोग फँसते हैं: cosecant का जोड़ा sine के साथ, और secant का जोड़ा cosine के साथ, नाम में co होने के बावजूद. तीसरा अक्षर पढ़िए. Co-sec-ant, तीसरा अक्षर sine से मिलता है."
+            },
+            {
+              "seq": 6,
+              "text": "Signs को classic mnemonic पकड़ता है, All Silver Tea Cups."
+            },
+            {
+              "seq": 7,
+              "text": "Quadrant one में सब धनात्मक. दो में sine और उसका reciprocal cosec. तीन में tangent और cot. चार में cosine और sec."
+            },
+            {
+              "seq": 8,
+              "text": "यह रहा circle पर, anticlockwise, A, S, T, C."
+            },
+            {
+              "seq": 9,
+              "text": "और याद रखिए, reciprocal हमेशा अपने parent का sign रखता है, इसलिए cosec sine का अनुसरण करता है, sec cosine का."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "formulas",
+      "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+      "title": "The three Pythagorean identities and the ranges",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "The three Pythagorean identities",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sin^2\\theta + \\cos^2\\theta = 1",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "1 + \\tan^2\\theta = \\sec^2\\theta",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "1 + \\cot^2\\theta = \\csc^2\\theta",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "The first is just the circle equation $a^2+b^2=1$ with $a=\\cos\\theta,\\ b=\\sin\\theta$. Divide by $\\cos^2$ or $\\sin^2$ for the others.",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Ranges — the built-in sanity check",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "$\\sin,\\cos\\in[-1,1]$; $\\sec,\\csc$ never lie strictly inside $(-1,1)$; $\\tan,\\cot$ sweep all reals.",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "A value outside its range is as impossible as negative mass. Range-check every answer.",
+          "seq": 8,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Three identities power almost everything that follows."
+            },
+            {
+              "seq": 2,
+              "text": "First: sine squared plus cosine squared equals one."
+            },
+            {
+              "seq": 3,
+              "text": "Second: one plus tangent squared equals secant squared."
+            },
+            {
+              "seq": 4,
+              "text": "Third: one plus cotangent squared equals cosecant squared."
+            },
+            {
+              "seq": 5,
+              "text": "And you don't memorise them blind. The first is literally the circle's equation, a squared plus b squared equals one, with a as cosine and b as sine. Divide that through by cosine squared and you get the tangent-secant one; divide by sine squared and you get the cotangent-cosecant one. All three from one circle."
+            },
+            {
+              "seq": 6,
+              "text": "Now the layer that catches more mistakes than any other: ranges."
+            },
+            {
+              "seq": 7,
+              "text": "Sine and cosine live between minus one and one. Secant and cosecant, being reciprocals of things no bigger than one, can never sit strictly between minus one and one. Tangent and cotangent sweep every real number."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>Treat this like dimensional analysis:</excited> a sine of one point two is as impossible as a negative mass. Make the range check the last thing you do on every problem."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "तीन identities आगे का लगभग सब कुछ चलाती हैं."
+            },
+            {
+              "seq": 2,
+              "text": "पहली: sine squared plus cosine squared equals one."
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी: one plus tangent squared equals secant squared."
+            },
+            {
+              "seq": 4,
+              "text": "तीसरी: one plus cotangent squared equals cosecant squared."
+            },
+            {
+              "seq": 5,
+              "text": "और इन्हें blindly रटना नहीं है. पहली literally circle की equation है, a squared plus b squared equals one, a cosine और b sine के साथ. इसे cosine squared से divide कीजिए तो tangent-secant वाली मिलती है; sine squared से divide कीजिए तो cotangent-cosecant वाली. तीनों एक circle से."
+            },
+            {
+              "seq": 6,
+              "text": "अब वो layer जो सबसे ज़्यादा mistakes पकड़ती है: ranges."
+            },
+            {
+              "seq": 7,
+              "text": "Sine और cosine minus one से one के बीच रहते हैं. Secant और cosecant, one से बड़े ना होने वाली चीज़ों के reciprocals, कभी minus one और one के strictly बीच नहीं बैठ सकते. Tangent और cotangent हर real number sweep करते हैं."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>इसे dimensional analysis की तरह लीजिए:</excited> sine of one point two उतना ही impossible है जितना negative mass. हर problem के आख़िर में range check कीजिए."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "तीन identities आगे का लगभग सब कुछ चलाती हैं."
+            },
+            {
+              "seq": 2,
+              "text": "पहली: sine squared plus cosine squared बराबर one."
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी: one plus tangent squared बराबर secant squared."
+            },
+            {
+              "seq": 4,
+              "text": "तीसरी: one plus cotangent squared बराबर cosecant squared."
+            },
+            {
+              "seq": 5,
+              "text": "और इन्हें बिना समझे रटना नहीं है. पहली सचमुच circle की equation है, a squared plus b squared बराबर one, जहाँ a cosine और b sine है. इसे cosine squared से भाग दीजिए तो tangent-secant वाली मिलती है; sine squared से भाग दीजिए तो cotangent-cosecant वाली. तीनों एक circle से."
+            },
+            {
+              "seq": 6,
+              "text": "अब वह परत जो सबसे ज़्यादा ग़लतियाँ पकड़ती है: ranges."
+            },
+            {
+              "seq": 7,
+              "text": "Sine और cosine minus one से one के बीच रहते हैं. Secant और cosecant, one से बड़े न होने वाली चीज़ों के reciprocals, कभी minus one और one के ठीक बीच नहीं बैठ सकते. Tangent और cotangent हर real number नाप लेते हैं."
+            },
+            {
+              "seq": 8,
+              "text": "इसे dimensional analysis की तरह लीजिए: sine of one point two उतना ही असंभव है जितना ऋणात्मक mass. हर problem के अंत में range जाँच कीजिए."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+      "title": "The signature board problem — find the other five",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 1 — sin x = 3/5, x in Quadrant II",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Magnitude first: $\\cos^2 x = 1-\\tfrac{9}{25}=\\tfrac{16}{25}$, so $\\cos x=\\pm\\tfrac{4}{5}$.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "The sign decision is the whole question. In Quadrant II, cosine is negative.",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\cos x=-\\tfrac{4}{5},\\ \\tan x=-\\tfrac{3}{4},\\ \\cot x=-\\tfrac{4}{3},\\ \\sec x=-\\tfrac{5}{4},\\ \\csc x=\\tfrac{5}{3}",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 2 — quadrantal evaluation",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\sin\\tfrac{3\\pi}{2}+\\cos\\pi-\\tan\\pi = -1+(-1)-0 = -2",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Writing cos x = +4/5 here is the most common board mistake.",
+          "seq": 7,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the problem that appears on nearly every board paper, so do it cleanly."
+            },
+            {
+              "seq": 2,
+              "text": "Given sine x is three fifths with x in the second quadrant. Do magnitude first: cosine squared x is one minus nine over twenty five, which is sixteen over twenty five, so cosine x is plus or minus four fifths."
+            },
+            {
+              "seq": 3,
+              "text": "Now the part that is the entire question, the sign. x is in Quadrant two, where cosine is negative. So we take the minus."
+            },
+            {
+              "seq": 4,
+              "text": "Cosine x is minus four fifths. From there, tangent is sine over cosine, minus three quarters; cotangent minus four thirds; secant minus five fourths; and cosecant, the reciprocal of sine, is plus five thirds."
+            },
+            {
+              "seq": 5,
+              "text": "A quick quadrantal one to warm the axis values."
+            },
+            {
+              "seq": 6,
+              "text": "Sine of three pi over two is minus one; cosine of pi is minus one; tangent of pi is zero. So minus one plus minus one minus zero gives minus two."
+            },
+            {
+              "seq": 7,
+              "text": "The single most common board mistake in this whole topic is writing cosine x as plus four fifths, skipping the quadrant. Magnitude, then sign, always two steps."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये problem लगभग हर board paper पर आता है, so इसे साफ़ कीजिए."
+            },
+            {
+              "seq": 2,
+              "text": "दिया है sine x तीन बटा पाँच, x second quadrant में. पहले magnitude: cosine squared x है one minus nine over twenty five, यानी sixteen over twenty five, so cosine x है plus or minus four fifths."
+            },
+            {
+              "seq": 3,
+              "text": "अब वो हिस्सा जो पूरा सवाल है, sign. x Quadrant two में है, जहाँ cosine negative है. So हम minus लेते हैं."
+            },
+            {
+              "seq": 4,
+              "text": "Cosine x है minus four fifths. वहाँ से tangent है sine over cosine, minus three quarters; cotangent minus four thirds; secant minus five fourths; और cosecant, sine का reciprocal, plus five thirds."
+            },
+            {
+              "seq": 5,
+              "text": "एक quick quadrantal, axis values गरम करने के लिए."
+            },
+            {
+              "seq": 6,
+              "text": "Sine of three pi over two है minus one; cosine of pi minus one; tangent of pi zero. So minus one plus minus one minus zero देता है minus two."
+            },
+            {
+              "seq": 7,
+              "text": "पूरे topic की सबसे common board mistake है cosine x को plus four fifths लिखना, quadrant छोड़कर. Magnitude, फिर sign, हमेशा दो steps."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह problem लगभग हर board paper पर आता है, इसलिए इसे साफ़ कीजिए."
+            },
+            {
+              "seq": 2,
+              "text": "दिया है sine x तीन बटा पाँच, x second quadrant में. पहले magnitude: cosine squared x है one minus नौ बटा पच्चीस, यानी सोलह बटा पच्चीस, तो cosine x है plus या minus four fifths."
+            },
+            {
+              "seq": 3,
+              "text": "अब वह हिस्सा जो पूरा सवाल है, sign. x Quadrant two में है, जहाँ cosine ऋणात्मक है. तो हम minus लेते हैं."
+            },
+            {
+              "seq": 4,
+              "text": "Cosine x है minus four fifths. वहाँ से tangent है sine बटा cosine, minus three quarters; cotangent minus four thirds; secant minus five fourths; और cosecant, sine का reciprocal, plus five thirds."
+            },
+            {
+              "seq": 5,
+              "text": "एक quick quadrantal, axis values गरम करने के लिए."
+            },
+            {
+              "seq": 6,
+              "text": "Sine of three pi बटा two है minus one; cosine of pi minus one; tangent of pi zero. तो minus one plus minus one minus zero देता है minus two."
+            },
+            {
+              "seq": 7,
+              "text": "पूरे topic की सबसे आम board ग़लती है cosine x को plus four fifths लिखना, quadrant छोड़कर. Magnitude, फिर sign, हमेशा दो steps."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+      "title": "Reduce first, then read the sign",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 3 — the sign of cos 1170°",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Always reduce first: $1170^\\circ - 3(360^\\circ) = 1170^\\circ - 1080^\\circ = 90^\\circ$.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\cos 1170^\\circ = \\cos 90^\\circ = 0",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "The trap is guessing a sign 'because it's big'. The answer is the boundary value 0.",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 4 — cot θ = −4/3, θ in Quadrant II",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Q II: $\\sin>0$, $\\cos<0$. Reference triangle $3\\!-\\!4\\!-\\!5$ gives $\\cos\\theta=-\\tfrac{4}{5},\\ \\sin\\theta=+\\tfrac{3}{5}$.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\frac{2\\cos\\theta-3\\sin\\theta}{4\\sin\\theta-9\\cos\\theta} = \\frac{-17/5}{48/5} = -\\frac{17}{48}",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Two steps always: magnitude from the triangle, sign from the quadrant.",
+          "seq": 8,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "For a large angle, never guess, reduce."
+            },
+            {
+              "seq": 2,
+              "text": "We want the sign of cosine of one thousand one hundred seventy degrees. Subtract whole turns: three times three hundred sixty is one thousand eighty, and eleven seventy minus ten eighty is ninety degrees."
+            },
+            {
+              "seq": 3,
+              "text": "So cosine of eleven seventy equals cosine of ninety, which is exactly zero."
+            },
+            {
+              "seq": 4,
+              "text": "The trap here is students eyeballing a big angle and guessing positive or negative. The honest answer is the boundary value, zero, neither positive nor negative. Reduce first, then read."
+            },
+            {
+              "seq": 5,
+              "text": "The fourth example evaluates an expression once the quadrant fixes the signs."
+            },
+            {
+              "seq": 6,
+              "text": "Given cotangent theta is minus four thirds with theta in Quadrant two. In two, sine is positive and cosine negative, which is consistent with a negative cotangent. The reference triangle three, four, five gives cosine theta minus four fifths and sine theta plus three fifths."
+            },
+            {
+              "seq": 7,
+              "text": "Substitute into the expression: two cosine minus three sine over four sine minus nine cosine. The top is minus seventeen fifths, the bottom is forty eight fifths, so the whole thing is minus seventeen over forty eight."
+            },
+            {
+              "seq": 8,
+              "text": "Same discipline every time: get the magnitudes from the reference triangle, then let the quadrant decide the signs."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "बड़े angle के लिए guess कभी नहीं, reduce कीजिए."
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए cosine of one thousand one hundred seventy degrees का sign. Whole turns घटाइए: three times three hundred sixty is one thousand eighty, और eleven seventy minus ten eighty is ninety degrees."
+            },
+            {
+              "seq": 3,
+              "text": "So cosine of eleven seventy equals cosine of ninety, जो exactly zero है."
+            },
+            {
+              "seq": 4,
+              "text": "Trap यहाँ ये है कि students बड़ा angle देखकर positive या negative guess कर लेते हैं. सही answer boundary value है, zero, ना positive ना negative. पहले reduce, फिर पढ़िए."
+            },
+            {
+              "seq": 5,
+              "text": "चौथा example एक expression evaluate करता है जब quadrant signs fix कर देता है."
+            },
+            {
+              "seq": 6,
+              "text": "दिया cotangent theta minus four thirds, theta Quadrant two में. Two में sine positive और cosine negative, जो negative cotangent से consistent है. Reference triangle three, four, five देता है cosine theta minus four fifths और sine theta plus three fifths."
+            },
+            {
+              "seq": 7,
+              "text": "Expression में डालिए: two cosine minus three sine over four sine minus nine cosine. ऊपर minus seventeen fifths, नीचे forty eight fifths, so पूरा minus seventeen over forty eight."
+            },
+            {
+              "seq": 8,
+              "text": "हर बार वही discipline: magnitudes reference triangle से, फिर signs quadrant से."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "बड़े angle के लिए अनुमान कभी नहीं, reduce कीजिए."
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए cosine of one thousand one hundred seventy degrees का sign. पूरे turns घटाइए: three गुना three hundred sixty बराबर one thousand eighty, और eleven seventy minus ten eighty बराबर ninety degrees."
+            },
+            {
+              "seq": 3,
+              "text": "तो cosine of eleven seventy बराबर cosine of ninety, जो ठीक zero है."
+            },
+            {
+              "seq": 4,
+              "text": "Trap यहाँ यह है कि students बड़ा angle देखकर positive या negative अनुमान लगा लेते हैं. सही उत्तर boundary value है, zero, न धनात्मक न ऋणात्मक. पहले reduce, फिर पढ़िए."
+            },
+            {
+              "seq": 5,
+              "text": "चौथा example एक expression का मान निकालता है जब quadrant signs तय कर देता है."
+            },
+            {
+              "seq": 6,
+              "text": "दिया cotangent theta minus four thirds, theta Quadrant two में. Two में sine धनात्मक और cosine ऋणात्मक, जो ऋणात्मक cotangent से मेल खाता है. Reference triangle three, four, five देता है cosine theta minus four fifths और sine theta plus three fifths."
+            },
+            {
+              "seq": 7,
+              "text": "Expression में रखिए: two cosine minus three sine बटा four sine minus nine cosine. ऊपर minus seventeen fifths, नीचे forty eight fifths, तो पूरा minus seventeen बटा forty eight."
+            },
+            {
+              "seq": 8,
+              "text": "हर बार वही अनुशासन: magnitudes reference triangle से, फिर signs quadrant से."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+      "title": "Range as the engine — a sin x + b cos x, and impossibility",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 5 — range of 5 sin x − 12 cos x + 3",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "R = \\sqrt{5^2 + 12^2} = 13",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "So $5\\sin x - 12\\cos x \\in [-13,13]$; adding $3$ shifts the whole interval.",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "f(x)\\in[-13+3,\\ 13+3] = [-10,\\ 16]",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 6 — when no solution can exist",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "$\\sin x = \\frac{a^2+b^2}{2ab}$. By AM\\u2013GM this is $\\ge 1$, but $\\sin x \\le 1$.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\sin x = 1 \\Rightarrow x=\\tfrac{\\pi}{2}+2n\\pi,\\quad \\text{only if } |a|=|b|",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "The bounded range turns a trig equation into an inequality constraint.",
+          "seq": 8,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example five shows the range fact doing real work."
+            },
+            {
+              "seq": 2,
+              "text": "For five sine x minus twelve cosine x, the amplitude R is the square root of five squared plus twelve squared, which is thirteen."
+            },
+            {
+              "seq": 3,
+              "text": "So that combination ranges from minus thirteen to thirteen. The plus three at the end just shifts the whole window up."
+            },
+            {
+              "seq": 4,
+              "text": "So f of x runs from minus thirteen plus three to thirteen plus three, that is minus ten to sixteen. No calculus needed, just the amplitude."
+            },
+            {
+              "seq": 5,
+              "text": "Example six is the advanced version, where the range fact rules out solutions entirely."
+            },
+            {
+              "seq": 6,
+              "text": "We're asked to solve sine x equals a squared plus b squared over two a b. By the arithmetic-mean geometric-mean inequality, that right side is at least one. But sine x can never exceed one."
+            },
+            {
+              "seq": 7,
+              "text": "So a solution exists only when the right side is exactly one, which forces a equal to b in magnitude, and then sine x equals one, giving x equal to pi over two plus two n pi."
+            },
+            {
+              "seq": 8,
+              "text": "That's the deep move: the fact that the size of sine is at most one converts a trig equation into a pure inequality constraint on a and b."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example पाँच range fact को असली काम करते दिखाता है."
+            },
+            {
+              "seq": 2,
+              "text": "Five sine x minus twelve cosine x के लिए, amplitude R है square root of five squared plus twelve squared, यानी thirteen."
+            },
+            {
+              "seq": 3,
+              "text": "So ये combination minus thirteen से thirteen तक range करता है. आख़िर का plus three पूरी window ऊपर shift कर देता है."
+            },
+            {
+              "seq": 4,
+              "text": "So f of x चलता है minus thirteen plus three से thirteen plus three तक, यानी minus ten to sixteen. Calculus नहीं चाहिए, बस amplitude."
+            },
+            {
+              "seq": 5,
+              "text": "Example छह advanced version है, जहाँ range fact solutions को पूरी तरह ख़ारिज कर देता है."
+            },
+            {
+              "seq": 6,
+              "text": "पूछा है solve कीजिए sine x equals a squared plus b squared over two a b. A M G M inequality से, वो right side कम से कम one है. पर sine x कभी one से ज़्यादा नहीं हो सकता."
+            },
+            {
+              "seq": 7,
+              "text": "So solution तभी है जब right side exactly one हो, जो a को b के बराबर magnitude में force करता है, और तब sine x equals one, यानी x equals pi over two plus two n pi."
+            },
+            {
+              "seq": 8,
+              "text": "यही deep move है: sine का size ज़्यादा से ज़्यादा one होना एक trig equation को a और b पर pure inequality constraint बना देता है."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example पाँच range fact को असली काम करते दिखाता है."
+            },
+            {
+              "seq": 2,
+              "text": "Five sine x minus twelve cosine x के लिए, amplitude R है square root of five squared plus twelve squared, यानी thirteen."
+            },
+            {
+              "seq": 3,
+              "text": "तो यह combination minus thirteen से thirteen तक जाता है. अंत का plus three पूरी window को ऊपर खिसका देता है."
+            },
+            {
+              "seq": 4,
+              "text": "तो f of x चलता है minus thirteen plus three से thirteen plus three तक, यानी minus ten से sixteen. Calculus नहीं चाहिए, बस amplitude."
+            },
+            {
+              "seq": 5,
+              "text": "Example छह advanced रूप है, जहाँ range fact solutions को पूरी तरह रद्द कर देता है."
+            },
+            {
+              "seq": 6,
+              "text": "पूछा है solve कीजिए sine x बराबर a squared plus b squared बटा two a b. A M G M inequality से, वह right side कम से कम one है. पर sine x कभी one से ज़्यादा नहीं हो सकता."
+            },
+            {
+              "seq": 7,
+              "text": "तो solution तभी है जब right side ठीक one हो, जो a को b के बराबर magnitude में बाध्य करता है, और तब sine x बराबर one, यानी x बराबर pi बटा two plus two n pi."
+            },
+            {
+              "seq": 8,
+              "text": "यही गहरी चाल है: sine का आकार अधिक से अधिक one होना एक trig equation को a और b पर शुद्ध inequality बना देता है."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "tips",
+      "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+      "title": "Pitfalls with signs, ranges and reciprocals",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Where the marks leak away",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "#1 Signature trap: forgetting the quadrant sign on a square root. cos x = ±√(1−sin²x) — the ± is set by the quadrant, never defaulted to +.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#2 Never claim $\\sin$ or $\\cos$ outside $[-1,1]$, or $\\sec/\\csc$ inside $(-1,1)$. Range-check as a reflex.",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#3 Reciprocal pairing: $\\sec=1/\\cos$, $\\csc=1/\\sin$. Third-letter rule: cosec \\u2194 sine.",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#4 Pythagorean: $1+\\tan^2=\\sec^2$, $1+\\cot^2=\\csc^2$. Don't swap them.",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#5 $\\tan\\tfrac{\\pi}{2}$, $\\cot 0$ are undefined \\u2014 not $\\infty$ or $0$. #6 Reduce large angles before reading a sign.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Golden rule: magnitude from the identity, sign from the quadrant — always two steps.",
+          "seq": 7,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here are the six leaks that drain marks in this subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "The signature trap: when you take a square root, you must attach the quadrant's sign. Cosine x equals plus or minus the root of one minus sine squared, and the plus or minus is chosen by the quadrant, never quietly defaulted to plus. This is the highest-yield error here."
+            },
+            {
+              "seq": 3,
+              "text": "Second, never let a sine or cosine escape the band from minus one to one, and never let a secant or cosecant sneak inside minus one to one. Make that check automatic before you finalise."
+            },
+            {
+              "seq": 4,
+              "text": "Third, the reciprocal pairing. Secant is one over cosine, cosecant is one over sine, not the other way. The third-letter rule keeps you honest: cosec matches sine."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, the Pythagorean identities. It's one plus tan squared equals sec squared, and one plus cot squared equals cosec squared. Swapping them is common, so pair tan with sec in your head."
+            },
+            {
+              "seq": 6,
+              "text": "Fifth, tangent of pi over two and cotangent of zero are undefined, not infinity, not zero. Watch domain exclusions. And sixth, reduce any large angle modulo three sixty before you dare read off a sign."
+            },
+            {
+              "seq": 7,
+              "text": "The golden rule that ties it together: magnitude from the identity, sign from the quadrant. Always two separate steps, so the sign step never gets skipped."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic में marks निकालने वाले छह leaks."
+            },
+            {
+              "seq": 2,
+              "text": "Signature trap: square root लेते समय quadrant का sign लगाना ज़रूरी है. Cosine x equals plus or minus root of one minus sine squared, और वो plus or minus quadrant चुनता है, चुपचाप plus default कभी नहीं. यहाँ यही सबसे बड़ी ग़लती है."
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, sine या cosine को minus one से one की band से बाहर मत जाने दीजिए, और secant या cosecant को minus one से one के अंदर मत घुसने दीजिए. Finalise से पहले ये check automatic कीजिए."
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, reciprocal pairing. Secant है one over cosine, cosecant one over sine, उल्टा नहीं. Third-letter rule सही रखता है: cosec sine से match."
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, Pythagorean identities. ये है one plus tan squared equals sec squared, और one plus cot squared equals cosec squared. इन्हें swap करना common है, so दिमाग़ में tan को sec के साथ pair कीजिए."
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ, tangent of pi over two और cotangent of zero undefined हैं, infinity नहीं, zero नहीं. Domain exclusions देखिए. और छठा, sign पढ़ने से पहले किसी भी बड़े angle को three sixty से reduce कीजिए."
+            },
+            {
+              "seq": 7,
+              "text": "जो golden rule सब जोड़ता है: magnitude identity से, sign quadrant से. हमेशा दो अलग steps, ताकि sign step कभी skip ना हो."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic में marks निकालने वाले छह leaks."
+            },
+            {
+              "seq": 2,
+              "text": "Signature trap: square root लेते समय quadrant का sign लगाना ज़रूरी है. Cosine x बराबर plus या minus root of one minus sine squared, और वह plus या minus quadrant चुनता है, चुपचाप plus कभी नहीं. यहाँ यही सबसे बड़ी ग़लती है."
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, sine या cosine को minus one से one की पट्टी से बाहर मत जाने दीजिए, और secant या cosecant को minus one से one के भीतर मत घुसने दीजिए. Finalise से पहले यह जाँच स्वतः कीजिए."
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, reciprocal pairing. Secant है one बटा cosine, cosecant one बटा sine, उल्टा नहीं. Third-letter rule सही रखता है: cosec sine से मिलता है."
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, Pythagorean identities. यह है one plus tan squared बराबर sec squared, और one plus cot squared बराबर cosec squared. इन्हें आपस में बदलना आम है, इसलिए मन में tan को sec के साथ जोड़िए."
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ, tangent of pi बटा two और cotangent of zero undefined हैं, infinity नहीं, zero नहीं. Domain exclusions देखिए. और छठा, sign पढ़ने से पहले किसी भी बड़े angle को three sixty से reduce कीजिए."
+            },
+            {
+              "seq": 7,
+              "text": "जो golden rule सबको जोड़ता है: magnitude identity से, sign quadrant से. हमेशा दो अलग steps, ताकि sign वाला step कभी छूटे नहीं."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "concept",
+      "subtopic": "03 · Standard Values, Even-Odd Nature and Allied Angles",
+      "title": "Standard values come from two special triangles",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Why only a handful of angles are 'nice'",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Every standard value is a side ratio in one of two triangles: the 45-45-90 and the 30-60-90.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "diagram",
+          "emphasis": "normal",
+          "caption": "The two special triangles behind all standard values",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 220\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,180 160,180 40,60\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><rect x=\"40\" y=\"164\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.2\"/><text x=\"92\" y=\"198\" font-size=\"13\" fill=\"#1e293b\">1</text><text x=\"24\" y=\"125\" font-size=\"13\" fill=\"#1e293b\">1</text><text x=\"108\" y=\"112\" font-size=\"13\" fill=\"#dc2626\">&#8730;2</text><text x=\"140\" y=\"176\" font-size=\"11\" fill=\"#64748b\">45&#176;</text><text x=\"46\" y=\"76\" font-size=\"11\" fill=\"#64748b\">45&#176;</text><polygon points=\"250,180 390,180 250,60\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"250\" y=\"164\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"315\" y=\"198\" font-size=\"13\" fill=\"#1e293b\">&#8730;3</text><text x=\"234\" y=\"125\" font-size=\"13\" fill=\"#1e293b\">1</text><text x=\"330\" y=\"112\" font-size=\"13\" fill=\"#dc2626\">2</text><text x=\"366\" y=\"176\" font-size=\"11\" fill=\"#64748b\">30&#176;</text><text x=\"256\" y=\"76\" font-size=\"11\" fill=\"#64748b\">60&#176;</text></svg>",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\sin 45^\\circ = \\cos 45^\\circ = \\tfrac{1}{\\sqrt{2}},\\qquad \\tan 45^\\circ = 1",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\sin 30^\\circ = \\tfrac{1}{2},\\quad \\cos 30^\\circ = \\tfrac{\\sqrt{3}}{2},\\quad \\sin 60^\\circ=\\tfrac{\\sqrt{3}}{2}",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Sine row 0° to 90°: √0/2, √1/2, √2/2, √3/2, √4/2. Cosine row is the same list reversed.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "$0^\\circ$ and $90^\\circ$ read straight off the circle: the points $(1,0)$ and $(0,1)$.",
+          "seq": 7,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The famous standard values aren't magic — they come from two triangles you already know."
+            },
+            {
+              "seq": 2,
+              "text": "Every so-called standard value is just a side ratio read off the forty five, forty five, ninety triangle, or the thirty, sixty, ninety triangle, and placed on the unit circle."
+            },
+            {
+              "seq": 3,
+              "text": "Here they are. On the left, an isosceles right triangle with legs one and one and hypotenuse root two. On the right, half an equilateral triangle: hypotenuse two, short side one, long side root three."
+            },
+            {
+              "seq": 4,
+              "text": "From the left triangle: sine forty five equals cosine forty five equals one over root two, and tangent forty five is one."
+            },
+            {
+              "seq": 5,
+              "text": "From the right triangle: sine thirty is one half, cosine thirty is root three over two, and sine sixty is root three over two."
+            },
+            {
+              "seq": 6,
+              "text": "<curious>Here's a lovely pattern to lock the sine row:</curious> for zero, thirty, forty five, sixty, ninety, sine is root zero over two, root one over two, root two over two, root three over two, root four over two. The cosine row is exactly that list, reversed."
+            },
+            {
+              "seq": 7,
+              "text": "And the two ends, zero and ninety, you just read off the circle: the point at zero is one comma zero, and at ninety it's zero comma one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Famous standard values कोई जादू नहीं, वो दो triangles से आती हैं जो आप जानते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "हर so-called standard value बस एक side ratio है, forty five forty five ninety triangle से या thirty sixty ninety triangle से पढ़ा हुआ, और unit circle पर रखा हुआ."
+            },
+            {
+              "seq": 3,
+              "text": "ये रहे. Left पर isosceles right triangle, legs one और one, hypotenuse root two. Right पर आधा equilateral triangle: hypotenuse two, short side one, long side root three."
+            },
+            {
+              "seq": 4,
+              "text": "Left triangle से: sine forty five equals cosine forty five equals one over root two, और tangent forty five is one."
+            },
+            {
+              "seq": 5,
+              "text": "Right triangle से: sine thirty is one half, cosine thirty root three over two, और sine sixty root three over two."
+            },
+            {
+              "seq": 6,
+              "text": "<curious>Sine row lock करने का सुंदर pattern:</curious> zero, thirty, forty five, sixty, ninety के लिए sine है root zero over two, root one over two, root two over two, root three over two, root four over two. Cosine row बिल्कुल वही list है, उल्टी."
+            },
+            {
+              "seq": 7,
+              "text": "और दो सिरे, zero और ninety, बस circle से पढ़िए: zero पर point one comma zero, ninety पर zero comma one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "प्रसिद्ध standard values कोई जादू नहीं, वे दो triangles से आती हैं जिन्हें आप जानते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "हर तथाकथित standard value बस एक side ratio है, forty five forty five ninety triangle से या thirty sixty ninety triangle से पढ़ा हुआ, और unit circle पर रखा हुआ."
+            },
+            {
+              "seq": 3,
+              "text": "ये रहे. बाईं ओर isosceles right triangle, legs one और one, hypotenuse root two. दाईं ओर आधा equilateral triangle: hypotenuse two, छोटी side one, लंबी side root three."
+            },
+            {
+              "seq": 4,
+              "text": "बाएँ triangle से: sine forty five बराबर cosine forty five बराबर one बटा root two, और tangent forty five बराबर one."
+            },
+            {
+              "seq": 5,
+              "text": "दाएँ triangle से: sine thirty बराबर one half, cosine thirty root three बटा two, और sine sixty root three बटा two."
+            },
+            {
+              "seq": 6,
+              "text": "Sine row याद करने का सुंदर pattern: zero, thirty, forty five, sixty, ninety के लिए sine है root zero बटा two, root one बटा two, root two बटा two, root three बटा two, root four बटा two. Cosine row ठीक वही list है, उल्टी."
+            },
+            {
+              "seq": 7,
+              "text": "और दो सिरे, zero और ninety, बस circle से पढ़िए: zero पर point one comma zero, ninety पर zero comma one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "concept",
+      "subtopic": "03 · Standard Values, Even-Odd Nature and Allied Angles",
+      "title": "Even/odd nature and the one rule for all reductions",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Even and odd — the mirror across the x-axis",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Replacing $\\theta$ by $-\\theta$ reflects the point across the $x$-axis: cosine (the $x$-coord) is unchanged, sine (the $y$-coord) flips.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\cos(-\\theta)=\\cos\\theta,\\quad \\sec(-\\theta)=\\sec\\theta\\qquad(\\text{even})",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\sin(-\\theta)=-\\sin\\theta,\\quad \\tan(-\\theta)=-\\tan\\theta\\qquad(\\text{odd})",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "One rule: '90° flips, 180° doesn't'",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "For $f(n\\cdot 90^\\circ \\pm \\theta)$: $n$ odd $\\Rightarrow$ change to the co-function; $n$ even $\\Rightarrow$ same function.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Sign: find the quadrant of the whole angle and apply ASTC to the original function.",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Odd multiples of 90° sit on the vertical axis and swap sin ↔ cos.",
+          "seq": 8,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two small ideas now let you evaluate essentially any angle."
+            },
+            {
+              "seq": 2,
+              "text": "First, even and odd. Replacing theta with minus theta reflects the point across the x-axis. The x-coordinate, cosine, is untouched; the y-coordinate, sine, flips sign."
+            },
+            {
+              "seq": 3,
+              "text": "So cosine of minus theta equals cosine theta, and secant is the same, these are even."
+            },
+            {
+              "seq": 4,
+              "text": "But sine of minus theta is minus sine theta, and tangent flips too, these are odd. Only cosine and secant are even; the other four are odd."
+            },
+            {
+              "seq": 5,
+              "text": "Second, the one rule that replaces the whole allied-angle table. To evaluate any function of n times ninety degrees, plus or minus theta."
+            },
+            {
+              "seq": 6,
+              "text": "Ask: is n odd or even? If n is odd, the ninety and two seventy cases, the function changes to its co-function, sine to cosine, tangent to cotangent. If n is even, the one eighty and three sixty cases, the function stays the same."
+            },
+            {
+              "seq": 7,
+              "text": "Then the sign: figure out which quadrant the whole angle lands in for small theta, and give the answer the sign the original function has there, straight from All Silver Tea Cups."
+            },
+            {
+              "seq": 8,
+              "text": "The reason odd flips: odd multiples of ninety sit on the vertical axis, and reflecting about a vertical direction swaps the roles of across and up, which is exactly swapping cosine and sine."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो छोटे ideas अब आपको लगभग किसी भी angle का value निकालने देते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "पहला, even और odd. Theta को minus theta से replace करना point को x-axis के पार reflect करता है. X-coordinate, cosine, अछूता रहता है; y-coordinate, sine, sign flip करता है."
+            },
+            {
+              "seq": 3,
+              "text": "So cosine of minus theta equals cosine theta, और secant भी वही, ये even हैं."
+            },
+            {
+              "seq": 4,
+              "text": "पर sine of minus theta है minus sine theta, और tangent भी flip, ये odd हैं. सिर्फ़ cosine और secant even हैं; बाकी चार odd."
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा, वो एक rule जो पूरी allied-angle table की जगह ले लेता है. किसी भी function of n times ninety degrees, plus or minus theta को evaluate करने के लिए."
+            },
+            {
+              "seq": 6,
+              "text": "पूछिए: n odd है या even? अगर n odd है, ninety और two seventy cases, तो function अपने co-function में बदलता है, sine to cosine, tangent to cotangent. अगर n even है, one eighty और three sixty cases, function वही रहता है."
+            },
+            {
+              "seq": 7,
+              "text": "फिर sign: छोटे theta के लिए पूरा angle किस quadrant में गिरता है देखिए, और answer को वही sign दीजिए जो original function का वहाँ है, सीधे All Silver Tea Cups से."
+            },
+            {
+              "seq": 8,
+              "text": "Odd क्यों flip करता है: ninety के odd multiples vertical axis पर होते हैं, और vertical direction के around reflect करने से across और up के roles swap हो जाते हैं, यानी cosine और sine का swap."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो छोटे विचार अब आपको लगभग किसी भी angle का value निकालने देते हैं."
+            },
+            {
+              "seq": 2,
+              "text": "पहला, even और odd. Theta को minus theta से बदलना point को x-axis के पार reflect करता है. X-coordinate, cosine, अछूता रहता है; y-coordinate, sine, sign बदल देता है."
+            },
+            {
+              "seq": 3,
+              "text": "तो cosine of minus theta बराबर cosine theta, और secant भी वही, ये even हैं."
+            },
+            {
+              "seq": 4,
+              "text": "पर sine of minus theta है minus sine theta, और tangent भी बदलता है, ये odd हैं. सिर्फ़ cosine और secant even हैं; बाकी चार odd."
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा, वह एक rule जो पूरी allied-angle table की जगह ले लेता है. किसी भी function of n गुना ninety degrees, plus या minus theta को निकालने के लिए."
+            },
+            {
+              "seq": 6,
+              "text": "पूछिए: n odd है या even? अगर n odd है, ninety और two seventy वाले cases, तो function अपने co-function में बदलता है, sine से cosine, tangent से cotangent. अगर n even है, one eighty और three sixty वाले cases, function वही रहता है."
+            },
+            {
+              "seq": 7,
+              "text": "फिर sign: छोटे theta के लिए पूरा angle किस quadrant में गिरता है देखिए, और उत्तर को वही sign दीजिए जो original function का वहाँ है, सीधे All Silver Tea Cups से."
+            },
+            {
+              "seq": 8,
+              "text": "Odd क्यों बदलता है: ninety के odd multiples vertical axis पर होते हैं, और vertical दिशा के चारों ओर reflect करने से across और up की भूमिकाएँ बदल जाती हैं, यानी cosine और sine का अदला-बदली."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "03 · Standard Values, Even-Odd Nature and Allied Angles",
+      "title": "Evaluating by reduction — basic to large angles",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 1 — sin 210°",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\sin 210^\\circ = \\sin(180^\\circ+30^\\circ) = -\\sin 30^\\circ = -\\tfrac{1}{2}",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 2 — cos(−300°)",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\cos(-300^\\circ)=\\cos 300^\\circ = \\cos(360^\\circ-60^\\circ) = +\\cos 60^\\circ = \\tfrac{1}{2}",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 3 — sin 1230° (reduce first)",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "1230^\\circ - 1080^\\circ = 150^\\circ,\\quad \\sin 150^\\circ = \\sin 30^\\circ = \\tfrac{1}{2}",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 4 — tan 135° (the co-function case)",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\tan 135^\\circ = \\tan(90^\\circ+45^\\circ) = -\\cot 45^\\circ = -1",
+          "seq": 8,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Two routes agree: 135° = 180°−45° gives −tan 45° = −1 as well.",
+          "seq": 9,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "First up, sine of two hundred ten."
+            },
+            {
+              "seq": 2,
+              "text": "Write it as one eighty plus thirty; that lands in Quadrant three where sine is negative, and n equals two is even so the function stays sine. So it's minus sine thirty, minus one half."
+            },
+            {
+              "seq": 3,
+              "text": "Next, cosine of minus three hundred."
+            },
+            {
+              "seq": 4,
+              "text": "Cosine is even, so this equals cosine three hundred. Three hundred is three sixty minus sixty, Quadrant four, cosine positive, so it's plus cosine sixty, one half."
+            },
+            {
+              "seq": 5,
+              "text": "Third, sine of twelve thirty — and here you must reduce first."
+            },
+            {
+              "seq": 6,
+              "text": "Subtract three full turns, that's minus ten eighty, giving one fifty. One fifty is one eighty minus thirty, Quadrant two, sine positive, so sine thirty, one half."
+            },
+            {
+              "seq": 7,
+              "text": "Fourth, tangent of one thirty five, the co-function case."
+            },
+            {
+              "seq": 8,
+              "text": "Ninety plus forty five, n equals one is odd, so tangent becomes cotangent. It's in Quadrant two where tangent is negative, so minus cotangent forty five, which is minus one."
+            },
+            {
+              "seq": 9,
+              "text": "<whisper>Notice the cross-check:</whisper> you could instead write one thirty five as one eighty minus forty five, giving minus tangent forty five, also minus one. Two routes, same answer — that's your safety net."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "सबसे पहले, sine of two hundred ten."
+            },
+            {
+              "seq": 2,
+              "text": "इसे one eighty plus thirty लिखिए; ये Quadrant three में गिरता है जहाँ sine negative, और n equals two even है so function sine रहता है. So minus sine thirty, minus one half."
+            },
+            {
+              "seq": 3,
+              "text": "अगला, cosine of minus three hundred."
+            },
+            {
+              "seq": 4,
+              "text": "Cosine even है, so ये equals cosine three hundred. Three hundred है three sixty minus sixty, Quadrant four, cosine positive, so plus cosine sixty, one half."
+            },
+            {
+              "seq": 5,
+              "text": "तीसरा, sine of twelve thirty, और यहाँ पहले reduce करना ज़रूरी है."
+            },
+            {
+              "seq": 6,
+              "text": "तीन full turns घटाइए, यानी minus ten eighty, देता है one fifty. One fifty है one eighty minus thirty, Quadrant two, sine positive, so sine thirty, one half."
+            },
+            {
+              "seq": 7,
+              "text": "चौथा, tangent of one thirty five, co-function case."
+            },
+            {
+              "seq": 8,
+              "text": "Ninety plus forty five, n equals one odd, so tangent बनता है cotangent. ये Quadrant two में है जहाँ tangent negative, so minus cotangent forty five, यानी minus one."
+            },
+            {
+              "seq": 9,
+              "text": "<whisper>Cross-check देखिए:</whisper> आप one thirty five को one eighty minus forty five भी लिख सकते थे, देता minus tangent forty five, वो भी minus one. दो routes, वही answer, यही आपकी safety net है."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "सबसे पहले, sine of two hundred ten."
+            },
+            {
+              "seq": 2,
+              "text": "इसे one eighty plus thirty लिखिए; यह Quadrant three में गिरता है जहाँ sine ऋणात्मक, और n बराबर two even है इसलिए function sine रहता है. तो minus sine thirty, minus one half."
+            },
+            {
+              "seq": 3,
+              "text": "अगला, cosine of minus three hundred."
+            },
+            {
+              "seq": 4,
+              "text": "Cosine even है, तो यह बराबर cosine three hundred. Three hundred है three sixty minus sixty, Quadrant four, cosine धनात्मक, तो plus cosine sixty, one half."
+            },
+            {
+              "seq": 5,
+              "text": "तीसरा, sine of twelve thirty, और यहाँ पहले reduce करना ज़रूरी है."
+            },
+            {
+              "seq": 6,
+              "text": "तीन full turns घटाइए, यानी minus ten eighty, देता है one fifty. One fifty है one eighty minus thirty, Quadrant two, sine धनात्मक, तो sine thirty, one half."
+            },
+            {
+              "seq": 7,
+              "text": "चौथा, tangent of one thirty five, co-function वाला case."
+            },
+            {
+              "seq": 8,
+              "text": "Ninety plus forty five, n बराबर one odd, तो tangent बनता है cotangent. यह Quadrant two में है जहाँ tangent ऋणात्मक, तो minus cotangent forty five, यानी minus one."
+            },
+            {
+              "seq": 9,
+              "text": "Cross-check देखिए: आप one thirty five को one eighty minus forty five भी लिख सकते थे, देता minus tangent forty five, वह भी minus one. दो routes, वही उत्तर, यही आपकी सुरक्षा है."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "worked_examples",
+      "subtopic": "03 · Standard Values, Even-Odd Nature and Allied Angles",
+      "title": "Long allied-angle products that collapse",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 5 — simplify to a constant",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "$\\sin(90^\\circ{+}\\theta)=\\cos\\theta$; $\\cos(180^\\circ{-}\\theta)=-\\cos\\theta$; $\\cos(90^\\circ{-}\\theta)=\\sin\\theta$; $\\sin(180^\\circ{+}\\theta)=-\\sin\\theta$.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "(\\cos\\theta)(-\\cos\\theta)+(\\sin\\theta)(-\\sin\\theta) = -(\\cos^2\\theta+\\sin^2\\theta) = -1",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 6 — prove cos(270°+θ) = sinθ",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "$270^\\circ+\\theta$ is in Quadrant IV (cosine $+$); $n=3$ is odd, so $\\cos\\to\\sin$.",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\cos(270^\\circ+\\theta) = +\\sin\\theta",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Example 7 — a long product (JEE Advanced)",
+          "seq": 7,
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\frac{\\tan^2\\theta}{-\\tan^2\\theta} = -1",
+          "seq": 8,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Long allied-angle products almost always collapse to ±1. If yours doesn't, recheck a sign.",
+          "seq": 9,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example five simplifies a four-term expression down to a single constant."
+            },
+            {
+              "seq": 2,
+              "text": "Reduce each piece: sine of ninety plus theta is cosine theta; cosine of one eighty minus theta is minus cosine theta; cosine of ninety minus theta is sine theta; sine of one eighty plus theta is minus sine theta."
+            },
+            {
+              "seq": 3,
+              "text": "Multiply and add: cosine times minus cosine, plus sine times minus sine, gives minus cosine squared minus sine squared, which is minus one. The whole expression collapses to a constant."
+            },
+            {
+              "seq": 4,
+              "text": "Example six is a short proof: show cosine of two seventy plus theta equals sine theta."
+            },
+            {
+              "seq": 5,
+              "text": "Two seventy plus theta sits in Quadrant four for small theta, where cosine is positive, and n equals three is odd so cosine becomes sine."
+            },
+            {
+              "seq": 6,
+              "text": "So the result is plus sine theta. Done."
+            },
+            {
+              "seq": 7,
+              "text": "Example seven is an intimidating-looking product and quotient of six reduced terms."
+            },
+            {
+              "seq": 8,
+              "text": "Reduce each term: the numerator becomes tangent squared theta while the denominator becomes minus tangent squared theta, so their ratio is simply minus one."
+            },
+            {
+              "seq": 9,
+              "text": "<excited>The lesson is worth gold:</excited> long allied-angle products almost always collapse to plus or minus one. If yours refuses to, you've dropped a sign — go back and find it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example पाँच एक four-term expression को एक single constant में simplify करता है."
+            },
+            {
+              "seq": 2,
+              "text": "हर piece reduce कीजिए: sine of ninety plus theta है cosine theta; cosine of one eighty minus theta minus cosine theta; cosine of ninety minus theta sine theta; sine of one eighty plus theta minus sine theta."
+            },
+            {
+              "seq": 3,
+              "text": "Multiply और add कीजिए: cosine times minus cosine, plus sine times minus sine, देता minus cosine squared minus sine squared, यानी minus one. पूरी expression एक constant में collapse हो जाती है."
+            },
+            {
+              "seq": 4,
+              "text": "Example छह एक short proof है: दिखाइए cosine of two seventy plus theta equals sine theta."
+            },
+            {
+              "seq": 5,
+              "text": "Two seventy plus theta छोटे theta के लिए Quadrant four में बैठता है, जहाँ cosine positive, और n equals three odd so cosine बनता है sine."
+            },
+            {
+              "seq": 6,
+              "text": "So result है plus sine theta. हो गया."
+            },
+            {
+              "seq": 7,
+              "text": "Example सात छह reduced terms का डरावना दिखने वाला product और quotient है."
+            },
+            {
+              "seq": 8,
+              "text": "हर term reduce कीजिए: numerator बनता है tangent squared theta जबकि denominator minus tangent squared theta, so इनका ratio बस minus one."
+            },
+            {
+              "seq": 9,
+              "text": "<excited>ये सबक सोने के बराबर है:</excited> long allied-angle products लगभग हमेशा plus या minus one में collapse होते हैं. अगर नहीं हो रहा, तो एक sign छूट गया, वापस जाकर ढूँढिए."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example पाँच एक four-term expression को एक single constant में simplify करता है."
+            },
+            {
+              "seq": 2,
+              "text": "हर हिस्सा reduce कीजिए: sine of ninety plus theta है cosine theta; cosine of one eighty minus theta minus cosine theta; cosine of ninety minus theta sine theta; sine of one eighty plus theta minus sine theta."
+            },
+            {
+              "seq": 3,
+              "text": "गुणा और जोड़िए: cosine गुणा minus cosine, जमा sine गुणा minus sine, देता minus cosine squared minus sine squared, यानी minus one. पूरी expression एक constant में सिमट जाती है."
+            },
+            {
+              "seq": 4,
+              "text": "Example छह एक छोटा proof है: दिखाइए cosine of two seventy plus theta बराबर sine theta."
+            },
+            {
+              "seq": 5,
+              "text": "Two seventy plus theta छोटे theta के लिए Quadrant four में बैठता है, जहाँ cosine धनात्मक, और n बराबर three odd इसलिए cosine बनता है sine."
+            },
+            {
+              "seq": 6,
+              "text": "तो result है plus sine theta. हो गया."
+            },
+            {
+              "seq": 7,
+              "text": "Example सात छह reduced terms का डरावना दिखने वाला product और quotient है."
+            },
+            {
+              "seq": 8,
+              "text": "हर term reduce कीजिए: numerator बनता है tangent squared theta जबकि denominator minus tangent squared theta, तो इनका ratio बस minus one."
+            },
+            {
+              "seq": 9,
+              "text": "यह सबक सोने के बराबर है: long allied-angle products लगभग हमेशा plus या minus one में सिमटते हैं. अगर नहीं सिमट रहा, तो एक sign छूट गया, वापस जाकर ढूँढिए."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "tips",
+      "subtopic": "03 · Standard Values, Even-Odd Nature and Allied Angles",
+      "title": "Pitfalls in reduction and value recall",
+      "board_events": [
+        {
+          "type": "heading",
+          "emphasis": "normal",
+          "text": "Reduction traps",
+          "seq": 1,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "#1 Signature trap: wrong sign in a reduction. The sign comes from the quadrant of the WHOLE allied angle via ASTC, applied to the original function.",
+          "seq": 2,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#2 Forgetting to switch to the co-function at 90°/270°. Odd multiples flip sin ↔ cos; even multiples (180°, 360°) don't.",
+          "seq": 3,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#3 Misremembering a standard value — use the √0..4 over 2 sine pattern and reverse it for cosine, never guess.",
+          "seq": 4,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#4 Even/odd slip: only cos and sec are even. Don't pull a minus out of cos(−θ).",
+          "seq": 5,
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "emphasis": "normal",
+          "text": "#5 Reduce angles above 360° or below 0° by whole turns before applying the rule.",
+          "seq": 6,
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Two routes cross-check most reductions: 135° = 90°+45° = 180°−45°.",
+          "seq": 7,
+          "reveal_at": 0
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Five traps to close out standard values and allied angles."
+            },
+            {
+              "seq": 2,
+              "text": "The signature trap: a wrong sign in a reduction. The sign is never guessed, it comes from the quadrant of the whole allied angle, read through All Silver Tea Cups, applied to the original function. Identify the quadrant first."
+            },
+            {
+              "seq": 3,
+              "text": "Second, forgetting to switch to the co-function at ninety or two seventy. Odd multiples of ninety flip sine and cosine; the even ones, one eighty and three sixty, leave the function alone."
+            },
+            {
+              "seq": 4,
+              "text": "Third, misremembering a standard value. Don't guess, rebuild it: sine row is root zero to root four, each over two, and cosine is that reversed."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, an even-odd slip. Only cosine and secant are even. Pulling a minus sign out of cosine of minus theta is simply wrong, cosine doesn't care about the sign of the angle."
+            },
+            {
+              "seq": 6,
+              "text": "Fifth, for angles above three sixty or below zero, subtract or add whole turns first, then apply the rule to what's left."
+            },
+            {
+              "seq": 7,
+              "text": "And a habit that saves you: most reductions have two routes, one thirty five as ninety plus forty five, or as one eighty minus forty five. Use whichever is faster, and let the other confirm your answer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Standard values और allied angles ख़त्म करने के लिए पाँच traps."
+            },
+            {
+              "seq": 2,
+              "text": "Signature trap: reduction में ग़लत sign. Sign कभी guess नहीं होता, वो पूरे allied angle के quadrant से आता है, All Silver Tea Cups से पढ़ा हुआ, original function पर लगाया हुआ. पहले quadrant पहचानिए."
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, ninety या two seventy पर co-function में switch करना भूलना. Ninety के odd multiples sine और cosine flip करते हैं; even वाले, one eighty और three sixty, function वैसा ही छोड़ देते हैं."
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, standard value ग़लत याद रखना. Guess मत कीजिए, rebuild कीजिए: sine row है root zero से root four, हर एक over two, और cosine वही उल्टा."
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, even-odd slip. सिर्फ़ cosine और secant even हैं. Cosine of minus theta से minus sign बाहर खींचना बस ग़लत है, cosine को angle के sign की परवाह नहीं."
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ, three sixty से ऊपर या zero से नीचे वाले angles के लिए पहले whole turns घटाइए या जोड़िए, फिर बचे हुए पर rule लगाइए."
+            },
+            {
+              "seq": 7,
+              "text": "और एक आदत जो बचाती है: ज़्यादातर reductions के दो routes होते हैं, one thirty five को ninety plus forty five, या one eighty minus forty five. जो तेज़ हो वो use कीजिए, दूसरा answer confirm कर देगा."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Standard values और allied angles समेटने के लिए पाँच traps."
+            },
+            {
+              "seq": 2,
+              "text": "Signature trap: reduction में ग़लत sign. Sign कभी अनुमान नहीं होता, वह पूरे allied angle के quadrant से आता है, All Silver Tea Cups से पढ़ा हुआ, original function पर लगाया हुआ. पहले quadrant पहचानिए."
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, ninety या two seventy पर co-function में बदलना भूलना. Ninety के odd multiples sine और cosine बदलते हैं; even वाले, one eighty और three sixty, function वैसा ही छोड़ देते हैं."
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, standard value ग़लत याद रखना. अनुमान मत कीजिए, फिर से बनाइए: sine row है root zero से root four, हर एक बटा two, और cosine वही उल्टा."
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, even-odd चूक. सिर्फ़ cosine और secant even हैं. Cosine of minus theta से minus बाहर खींचना बस ग़लत है, cosine को angle के sign की परवाह नहीं."
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ, three sixty से ऊपर या zero से नीचे वाले angles के लिए पहले पूरे turns घटाइए या जोड़िए, फिर बचे हुए पर rule लगाइए."
+            },
+            {
+              "seq": 7,
+              "text": "और एक आदत जो बचाती है: ज़्यादातर reductions के दो routes होते हैं, one thirty five को ninety plus forty five, या one eighty minus forty five. जो तेज़ हो वह use कीजिए, दूसरा उत्तर पक्का कर देगा."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

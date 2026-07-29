@@ -1,0 +1,2254 @@
+{
+  "chapter": "Integrals",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 7,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Foundations of Integration: Indefinite Integrals & Standard Forms",
+      "title": "Integration: undoing the derivative",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Integration: undoing the derivative"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Differentiation gives a rate of change. Integration reverses it: from the rate, rebuild the function."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "If $F'(x)=f(x)$, then $F(x)$ is an anti-derivative of $f(x)$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "Differentiation erases constants, so we can't recover which one — we add $+C$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\int 2x\\,dx = x^2 + C"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "The answer is never one curve but a whole family $F(x)+C$, stacked vertically."
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "caption": "A family of parallel curves; tangents on any vertical line share one slope.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 260\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"260\" fill=\"#ffffff\"/><line x1=\"30\" y1=\"230\" x2=\"380\" y2=\"230\" stroke=\"#888\" stroke-width=\"1\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"240\" stroke=\"#888\" stroke-width=\"1\"/><g fill=\"none\" stroke=\"#2b6cb0\" stroke-width=\"2\"><path d=\"M 40 200 C 110 200, 150 150, 200 130 S 320 95, 380 100\" transform=\"translate(0,0)\"/><path d=\"M 40 200 C 110 200, 150 150, 200 130 S 320 95, 380 100\" transform=\"translate(0,-35)\"/><path d=\"M 40 200 C 110 200, 150 150, 200 130 S 320 95, 380 100\" transform=\"translate(0,-70)\"/><path d=\"M 40 200 C 110 200, 150 150, 200 130 S 320 95, 380 100\" transform=\"translate(0,-105)\"/></g><line x1=\"200\" y1=\"15\" x2=\"200\" y2=\"235\" stroke=\"#e53e3e\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"205\" y=\"248\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#e53e3e\">x = a</text><g stroke=\"#dd6b20\" stroke-width=\"2\"><line x1=\"178\" y1=\"140\" x2=\"222\" y2=\"120\"/><line x1=\"178\" y1=\"105\" x2=\"222\" y2=\"85\"/><line x1=\"178\" y1=\"70\" x2=\"222\" y2=\"50\"/><line x1=\"178\" y1=\"35\" x2=\"222\" y2=\"15\"/></g><text x=\"292\" y=\"150\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#2b6cb0\">F(x)+C</text></svg>"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Along a line $x=a$, every curve has slope $f(a)$ — shifting up or down never changes steepness."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Let me start with a question that turns everything you know about derivatives around."
+            },
+            {
+              "seq": 2,
+              "text": "Differentiation takes a function and hands you its rate of change. Integration asks the reverse, harder question: given the rate at every instant, can I rebuild the original function?"
+            },
+            {
+              "seq": 3,
+              "text": "We name that rebuilt function. If capital F differentiates to little f, then capital F is an anti-derivative of f — it literally un-does the derivative."
+            },
+            {
+              "seq": 4,
+              "text": "Now the crucial catch. When you differentiate, every constant vanishes: x squared plus seven and x squared minus a hundred have the same derivative. Running it backwards, you can't tell which constant was there, so we honestly write plus C."
+            },
+            {
+              "seq": 5,
+              "text": "So the integral of two x is x squared plus C, where C is any constant at all."
+            },
+            {
+              "seq": 6,
+              "text": "That means an indefinite integral is never a single curve. It's an entire family, F of x, F of x plus one, F of x plus two, stacked like a ladder."
+            },
+            {
+              "seq": 7,
+              "text": "Picture that ladder: identical curves, each lifted by its own value of C."
+            },
+            {
+              "seq": 8,
+              "text": "<chuckle>And here's the pretty part. Pick any vertical line x equals a. It cuts every curve, and the tangent at each crossing has the same slope, because sliding a curve up or down never changes how steep it is."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>चलो एक ऐसे सवाल से शुरू करते हैं जो derivatives के बारे में आपकी सोच पलट देगा।"
+            },
+            {
+              "seq": 2,
+              "text": "Differentiation किसी function को लेकर उसका rate of change देता है। Integration ठीक उल्टा, मुश्किल सवाल पूछता है: हर instant का rate पता हो, तो क्या original function वापस बन सकता है?"
+            },
+            {
+              "seq": 3,
+              "text": "उस वापस बनी function को हम नाम देते हैं। अगर capital F differentiate होकर little f देता है, तो capital F, f का anti-derivative है, यह सचमुच derivative को un-do करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब असली catch। जब आप differentiate करते हैं, हर constant गायब हो जाता है: x square plus seven और x square minus hundred का derivative same होता है। उल्टा चलने पर पता नहीं चलता कौन सा constant था, इसलिए हम ईमानदारी से plus C लिखते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "तो two x का integral है x square plus C, जहाँ C कोई भी constant हो सकता है।"
+            },
+            {
+              "seq": 6,
+              "text": "मतलब indefinite integral कभी एक अकेली curve नहीं होती। यह पूरा family है, F of x, F of x plus one, F of x plus two, ladder की तरह stacked।"
+            },
+            {
+              "seq": 7,
+              "text": "उस ladder को देखो: एक जैसी curves, हर एक अपने C के हिसाब से ऊपर उठी हुई।"
+            },
+            {
+              "seq": 8,
+              "text": "<chuckle>और यह रहा खूबसूरत हिस्सा। कोई भी vertical line लो, x equals a। यह हर curve को काटती है, और हर crossing पर tangent का slope same रहता है, क्योंकि curve को ऊपर-नीचे खिसकाने से steepness नहीं बदलती।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "formulas",
+      "subtopic": "Foundations of Integration: Indefinite Integrals & Standard Forms",
+      "title": "The standard integral table and linearity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Standard forms and the two workhorse rules"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C,\\quad n \\neq -1"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\int \\frac{1}{x}\\,dx = \\ln|x| + C"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int e^x\\,dx = e^x + C \\qquad \\int a^x\\,dx = \\frac{a^x}{\\ln a} + C"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\int \\cos x\\,dx = \\sin x + C \\qquad \\int \\sin x\\,dx = -\\cos x + C"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int \\sec^2 x\\,dx = \\tan x + C \\qquad \\int \\csc^2 x\\,dx = -\\cot x + C"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\int \\frac{1}{1+x^2}\\,dx = \\tan^{-1}x + C \\qquad \\int \\frac{1}{\\sqrt{1-x^2}}\\,dx = \\sin^{-1}x + C"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Linearity: $\\int[k_1 f + k_2 g]\\,dx = k_1\\int f\\,dx + k_2\\int g\\,dx$ — sums and constants only."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "Self-check any row by differentiating the right side; if you don't get the integrand back, it's wrong."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here's the toolkit you must know cold. Every direct integral in this subtopic is just pattern-matching to one of these rows."
+            },
+            {
+              "seq": 2,
+              "text": "The power rule: x to the n integrates to x to the n plus one, over n plus one, valid for every n except minus one, where the denominator would blow up."
+            },
+            {
+              "seq": 3,
+              "text": "That single exception, one over x, integrates to log of the absolute value of x. Keep the modulus, since one over x is defined for negative x too."
+            },
+            {
+              "seq": 4,
+              "text": "Exponentials: e to the x integrates to itself; a general base a to the x picks up a division by natural log a."
+            },
+            {
+              "seq": 5,
+              "text": "The trig pair to burn in: cosine integrates to plus sine, but sine integrates to minus cosine. The minus lives with the sine integral."
+            },
+            {
+              "seq": 6,
+              "text": "Secant squared gives tangent; cosecant squared gives minus cotangent, these are just the derivative table read backwards."
+            },
+            {
+              "seq": 7,
+              "text": "And two inverse-trig forms: one over one plus x squared gives arctan x; one over root one minus x squared gives arcsin x."
+            },
+            {
+              "seq": 8,
+              "text": "Tying it together is linearity: you may split sums and pull out constant multiples freely. But never products or quotients, those need real methods later."
+            },
+            {
+              "seq": 9,
+              "text": "One habit makes the whole table self-verifying: differentiate your answer. If it doesn't return the integrand, hunt for the slip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा वो toolkit जो रट लेना ज़रूरी है। इस subtopic का हर direct integral बस इन्हीं rows में से किसी से pattern-match करना है।"
+            },
+            {
+              "seq": 2,
+              "text": "Power rule: x to the n integrate होकर बनता है x to the n plus one, बटा n plus one, हर n के लिए valid, सिवाय minus one के, जहाँ denominator zero हो जाता।"
+            },
+            {
+              "seq": 3,
+              "text": "वही एक exception, one over x, integrate होकर बनता है log of the absolute value of x. Modulus रखना, क्योंकि one over x negative x के लिए भी defined है।"
+            },
+            {
+              "seq": 4,
+              "text": "Exponentials: e to the x खुद में integrate होता है; general base a to the x में natural log a का division आ जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "याद रखने वाली trig जोड़ी: cosine integrate होकर plus sine, पर sine integrate होकर minus cosine। Minus हमेशा sine के integral के साथ रहता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Secant square देता है tangent; cosecant square देता है minus cotangent, ये बस derivative table को उल्टा पढ़ना है।"
+            },
+            {
+              "seq": 7,
+              "text": "और दो inverse-trig forms: one over one plus x square देता है arctan x; one over root one minus x square देता है arcsin x।"
+            },
+            {
+              "seq": 8,
+              "text": "इन सबको जोड़ता है linearity: sums को split और constant multiples को बाहर निकाल सकते हैं। पर products या quotients कभी नहीं, उनके लिए आगे अलग methods हैं।"
+            },
+            {
+              "seq": 9,
+              "text": "एक आदत पूरी table को self-verifying बना देती है: अपना answer differentiate करो। अगर integrand वापस नहीं मिला, तो गलती ढूँढो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations of Integration: Indefinite Integrals & Standard Forms",
+      "title": "Worked examples: split, simplify, integrate",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1: split with linearity"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int\\left(3x^2+\\tfrac{4}{x}-5\\sec^2 x\\right)dx$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Split term by term, pull out constants, then use rows one, two and seven."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "3\\cdot\\frac{x^3}{3} + 4\\ln|x| - 5\\tan x + C = x^3 + 4\\ln|x| - 5\\tan x + C"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 2: divide before you integrate"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Evaluate $\\int \\frac{x^2+2x+5}{x}\\,dx$ — the trap is reaching for a substitution."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Split the fraction first: $\\frac{x^2+2x+5}{x} = x + 2 + \\frac{5}{x}$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\int\\left(x+2+\\frac{5}{x}\\right)dx = \\frac{x^2}{2} + 2x + 5\\ln|x| + C"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Polynomial over a single monomial? Divide through first — save a minute, skip the substitution."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's put the table to work. First a clean Board-level split."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral of three x squared, plus four over x, minus five secant squared x."
+            },
+            {
+              "seq": 3,
+              "text": "Linearity lets us break this into three separate integrals and pull the constants out front, then match rows one, two, and seven of the table."
+            },
+            {
+              "seq": 4,
+              "text": "Row one turns three x squared into x cubed; four over x becomes four log mod x; five secant squared becomes five tan x. Notice the single C at the end, and the modulus inside the log."
+            },
+            {
+              "seq": 5,
+              "text": "<curious>Now a J E E speed trap, where the obvious move is the wrong one."
+            },
+            {
+              "seq": 6,
+              "text": "We want the integral of x squared plus two x plus five, all over x. The trap is reaching for a substitution."
+            },
+            {
+              "seq": 7,
+              "text": "Don't. Just split the fraction term by term: it becomes x plus two plus five over x."
+            },
+            {
+              "seq": 8,
+              "text": "Now every piece is a standard form: x squared over two, plus two x, plus five log mod x, plus C."
+            },
+            {
+              "seq": 9,
+              "text": "The lesson: whenever a polynomial sits over a single monomial, divide through first. You'll save time and dodge a needless substitution."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब table को काम पर लगाते हैं। पहले एक साफ़ Board-level split।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें integral चाहिए three x square, plus four over x, minus five secant square x का।"
+            },
+            {
+              "seq": 3,
+              "text": "Linearity से इसे तीन अलग integrals में तोड़ते हैं और constants बाहर निकालते हैं, फिर table की rows one, two, और seven से match करते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Row one से three x square बनता है x cube; four over x बनता है four log mod x; five secant square बनता है five tan x. ध्यान दो, अंत में एक ही C, और log के अंदर modulus।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious>अब एक J E E speed trap, जहाँ obvious move ही गलत है।"
+            },
+            {
+              "seq": 6,
+              "text": "हमें integral चाहिए x square plus two x plus five, बटा x का। Trap है substitution की तरफ़ भागना।"
+            },
+            {
+              "seq": 7,
+              "text": "मत भागो। बस fraction को term by term split करो: यह बन जाता है x plus two plus five over x।"
+            },
+            {
+              "seq": 8,
+              "text": "अब हर piece एक standard form है: x square बटा two, plus two x, plus five log mod x, plus C।"
+            },
+            {
+              "seq": 9,
+              "text": "सबक: जब भी polynomial किसी single monomial के ऊपर हो, पहले divide कर दो। समय बचेगा और बेकार का substitution टलेगा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations of Integration: Indefinite Integrals & Standard Forms",
+      "title": "Worked examples: identities and recovering a function",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3: an identity clears the way"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int \\frac{\\cos 2x}{\\cos^2 x\\,\\sin^2 x}\\,dx$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Use $\\cos 2x = \\cos^2 x - \\sin^2 x$, then split over the denominator."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\frac{\\cos^2 x - \\sin^2 x}{\\cos^2 x\\,\\sin^2 x} = \\frac{1}{\\sin^2 x} - \\frac{1}{\\cos^2 x} = \\csc^2 x - \\sec^2 x"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\int(\\csc^2 x - \\sec^2 x)\\,dx = -\\cot x - \\tan x + C"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 4: recover a function from its slope"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Given $f'(x)=\\frac{(x+1)(x-1)}{x}$ for $x>0$, through $(1,\\tfrac{3}{2})$. Simplify: $f'(x)=x-\\tfrac{1}{x}$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "f(x) = \\int\\left(x-\\frac{1}{x}\\right)dx = \\frac{x^2}{2} - \\ln x + C"
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "The point pins $C$: $\\tfrac{3}{2} = \\tfrac{1}{2} + C \\Rightarrow C = 1$, so $f(x)=\\tfrac{x^2}{2}-\\ln x + 1$ and $f(e)=\\tfrac{e^2}{2}$."
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "A boundary condition turns the whole family into one function — the bridge to differential equations."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one looks brutal until an identity dissolves it."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral of cosine two x, over cosine squared x times sine squared x."
+            },
+            {
+              "seq": 3,
+              "text": "Rewrite cosine two x as cosine squared minus sine squared, then split that over the denominator."
+            },
+            {
+              "seq": 4,
+              "text": "The cosine squared over cosine squared sine squared collapses to one over sine squared; the other term to one over cosine squared. Those are cosecant squared minus secant squared."
+            },
+            {
+              "seq": 5,
+              "text": "And those integrate straight from the table: minus cotangent x, minus tangent x, plus C. The whole difficulty was algebraic."
+            },
+            {
+              "seq": 6,
+              "text": "<curious>Now an Advanced problem that hides integration inside a slope question."
+            },
+            {
+              "seq": 7,
+              "text": "We're given f prime of x, and told the graph passes through the point one, three-halves. First simplify the derivative to x minus one over x."
+            },
+            {
+              "seq": 8,
+              "text": "Integrate to get the family: x squared over two, minus log x, plus C."
+            },
+            {
+              "seq": 9,
+              "text": "The passing-through point fixes C. Plug in: three-halves equals one-half plus C, so C is one. That selects one curve, f of x is x squared over two minus log x plus one, and f of e is e squared over two."
+            },
+            {
+              "seq": 10,
+              "text": "The deep idea: a single boundary condition converts an entire family into one unique function. That's exactly the bridge to differential equations later this year."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह देखने में भयानक लगता है, जब तक एक identity इसे घोल न दे।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें integral चाहिए cosine two x, बटा cosine square x times sine square x का।"
+            },
+            {
+              "seq": 3,
+              "text": "Cosine two x को लिखो cosine square minus sine square, फिर उसे denominator पर split करो।"
+            },
+            {
+              "seq": 4,
+              "text": "Cosine square बटा cosine square sine square सिमटकर one over sine square बनता है; दूसरा term one over cosine square. ये हैं cosecant square minus secant square।"
+            },
+            {
+              "seq": 5,
+              "text": "और ये सीधे table से integrate होते हैं: minus cotangent x, minus tangent x, plus C. पूरी मुश्किल बस algebraic थी।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious>अब एक Advanced problem जो integration को slope के सवाल में छिपा देती है।"
+            },
+            {
+              "seq": 7,
+              "text": "हमें f prime of x दिया है, और बताया है कि graph point one, three-halves से गुज़रता है। पहले derivative को simplify करो x minus one over x।"
+            },
+            {
+              "seq": 8,
+              "text": "Integrate करके family निकालो: x square बटा two, minus log x, plus C।"
+            },
+            {
+              "seq": 9,
+              "text": "गुज़रने वाला point C को fix करता है। रखो: three-halves बराबर one-half plus C, तो C है one. यह एक curve चुन लेता है, f of x है x square बटा two minus log x plus one, और f of e है e square बटा two।"
+            },
+            {
+              "seq": 10,
+              "text": "गहरी बात: एक अकेली boundary condition पूरे family को एक unique function में बदल देती है। यही आगे differential equations का bridge है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "tips",
+      "subtopic": "Foundations of Integration: Indefinite Integrals & Standard Forms",
+      "title": "Pitfalls: the +C reflex and forbidden moves",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The five slips that cost easy marks"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Forgetting $+C$ is the most-penalised Board error. Write it the instant you finish."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Never apply the power rule at $n=-1$: $\\int\\frac{1}{x}\\,dx = \\ln|x|+C$, a separate memorised result — not $\\frac{x^0}{0}$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Keep the modulus in $\\ln|x|$: the integrand $\\frac{1}{x}$ is defined for negative $x$ too, so it's required, not decoration."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Sign trap: $\\int \\sin x\\,dx = -\\cos x$ but $\\int \\cos x\\,dx = +\\sin x$. The minus lives with sine."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Linearity covers sums and constant multiples only — never $\\int(f\\cdot g)=\\int f\\cdot\\int g$. Products and quotients need their own methods."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\frac{d}{dx}(\\text{your answer}) \\stackrel{?}{=} \\text{integrand}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The universal safety net: differentiate your answer. Integration is the one operation you can instantly self-check."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lock in the mistakes that quietly bleed marks, because avoiding them is free points."
+            },
+            {
+              "seq": 2,
+              "text": "Number one: forgetting plus C. In Boards it's the most penalised error, a perfect function part still loses marks without it. Train the reflex to write plus C the instant you finish."
+            },
+            {
+              "seq": 3,
+              "text": "Number two: never apply the power rule at n equals minus one. One over x does not become x to the zero over zero. It's a separate, memorised result, log mod x plus C."
+            },
+            {
+              "seq": 4,
+              "text": "Number three: keep the modulus in log mod x. Since one over x is defined for negative x as well, the absolute value is mathematically required, not decoration."
+            },
+            {
+              "seq": 5,
+              "text": "Number four, the classic sign slip: sine integrates to minus cosine, but cosine integrates to plus sine. The minus lives with the sine integral."
+            },
+            {
+              "seq": 6,
+              "text": "Number five: linearity is only for sums and constant multiples. The integral of a product is not the product of integrals, those need their own methods."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Here's the secret weapon on the board: differentiate what you wrote, and check it equals the integrand."
+            },
+            {
+              "seq": 8,
+              "text": "Do that every time. Integration is the only school-level operation you can instantly reverse-check, and if the derivative isn't the integrand, you've caught your mistake before the examiner did."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब उन गलतियों को पक्का कर लें जो चुपचाप marks खा जाती हैं, क्योंकि इन्हें टालना मुफ़्त के points हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली: plus C भूलना। Boards में यह सबसे ज़्यादा penalise होने वाली गलती है, perfect function part भी इसके बिना marks खोता है। आदत डालो कि खत्म करते ही plus C लिख दो।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी: power rule को n equals minus one पर कभी मत लगाओ। One over x कभी x to the zero over zero नहीं बनता। यह अलग, रटा हुआ result है, log mod x plus C।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरी: log mod x में modulus रखो। चूँकि one over x negative x के लिए भी defined है, absolute value mathematically ज़रूरी है, decoration नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथी, classic sign slip: sine integrate होकर minus cosine, पर cosine integrate होकर plus sine. Minus हमेशा sine के integral के साथ।"
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवी: linearity सिर्फ़ sums और constant multiples के लिए है। किसी product का integral, integrals का product नहीं होता, उनके अपने methods हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>यह रहा board पर लिखा secret weapon: जो लिखा उसे differentiate करो, और check करो कि वह integrand के बराबर है।"
+            },
+            {
+              "seq": 8,
+              "text": "हर बार यही करो। Integration ही एकमात्र school-level operation है जिसे तुरंत reverse-check कर सकते हैं, और अगर derivative integrand नहीं है, तो examiner से पहले गलती पकड़ ली।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Integration by Substitution",
+      "title": "Substitution: the chain rule in reverse",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Substitution: the chain rule in reverse"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The table can't touch $\\int 2x\\cos(x^2)\\,dx$ — there's no entry for $\\cos(x^2)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Chain rule: $\\frac{d}{dx}F(g(x)) = F'(g(x))\\,g'(x)$. So (function of $g$)$\\times g'$ is a disguised derivative."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\int f(g(x))\\,g'(x)\\,dx = \\int f(u)\\,du,\\quad u=g(x)"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "The step $du = g'(x)\\,dx$ is the exchange rate — forget it and the answer is wrong."
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "caption": "Switch to the u-world, integrate cleanly, then convert back.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"420\" height=\"200\" fill=\"#ffffff\"/><defs><marker id=\"arw\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#444\"/></marker></defs><rect x=\"20\" y=\"70\" width=\"90\" height=\"50\" rx=\"6\" fill=\"#ebf8ff\" stroke=\"#2b6cb0\" stroke-width=\"1.5\"/><text x=\"65\" y=\"100\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#2b6cb0\" text-anchor=\"middle\">x - world</text><rect x=\"165\" y=\"70\" width=\"90\" height=\"50\" rx=\"6\" fill=\"#f0fff4\" stroke=\"#2f855a\" stroke-width=\"1.5\"/><text x=\"210\" y=\"100\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#2f855a\" text-anchor=\"middle\">u - world</text><rect x=\"310\" y=\"70\" width=\"90\" height=\"50\" rx=\"6\" fill=\"#ebf8ff\" stroke=\"#2b6cb0\" stroke-width=\"1.5\"/><text x=\"355\" y=\"100\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#2b6cb0\" text-anchor=\"middle\">x - world</text><line x1=\"112\" y1=\"95\" x2=\"162\" y2=\"95\" stroke=\"#444\" stroke-width=\"1.5\" marker-end=\"url(#arw)\"/><line x1=\"257\" y1=\"95\" x2=\"307\" y2=\"95\" stroke=\"#444\" stroke-width=\"1.5\" marker-end=\"url(#arw)\"/><text x=\"137\" y=\"60\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#2f855a\" text-anchor=\"middle\">u = g(x)</text><text x=\"137\" y=\"140\" font-family=\"system-ui, sans-serif\" font-size=\"10\" fill=\"#666\" text-anchor=\"middle\">du = g-prime dx</text><text x=\"282\" y=\"60\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#2b6cb0\" text-anchor=\"middle\">back-sub</text><text x=\"210\" y=\"152\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#2f855a\" text-anchor=\"middle\">integrate here</text></svg>"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Substitution only helps when $g'(x)$ — or a constant times it — is actually present."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "For an indefinite integral, always convert back to $x$ at the end."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>What do you do when the integrand simply isn't in the table?"
+            },
+            {
+              "seq": 2,
+              "text": "Take the integral of two x times cosine of x squared. There's no row for cosine of x squared, so we're stuck, until we reshape it."
+            },
+            {
+              "seq": 3,
+              "text": "The idea mirrors the chain rule in reverse. The chain rule says the derivative of F of g of x is F prime of g, times g prime of x. So if an integrand looks like a function of g, times g prime, it's exactly a disguised derivative."
+            },
+            {
+              "seq": 4,
+              "text": "So we peel off the inner function, call it u, and the whole thing becomes the integral of f of u, du, clean and familiar."
+            },
+            {
+              "seq": 5,
+              "text": "The one step everyone forgets is the accounting: d u equals g prime of x d x. Think of it as the exchange rate, drop it and your answer is off by a factor."
+            },
+            {
+              "seq": 6,
+              "text": "Picture converting rupees to another currency: switch to the u-world, do the easy shopping, then convert your answer back to the x-world."
+            },
+            {
+              "seq": 7,
+              "text": "Substitution only helps when g prime of x, or a constant multiple of it, is actually sitting in the integrand. If it's missing, this method stalls."
+            },
+            {
+              "seq": 8,
+              "text": "And for an indefinite integral, always convert back to x at the very end, never leave your answer in u."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>क्या करोगे जब integrand table में है ही नहीं?"
+            },
+            {
+              "seq": 2,
+              "text": "लो integral two x times cosine of x square का। Cosine of x square की कोई row नहीं, तो हम अटक गए, जब तक इसे reshape न करें।"
+            },
+            {
+              "seq": 3,
+              "text": "Idea chain rule का उल्टा है। Chain rule कहता है F of g of x का derivative है F prime of g, times g prime of x. तो अगर integrand दिखे function of g, times g prime जैसा, तो यह बिलकुल एक छिपा हुआ derivative है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो हम inner function छील लेते हैं, उसे u कहते हैं, और पूरी चीज़ बन जाती है integral of f of u, du, साफ़ और जाना-पहचाना।"
+            },
+            {
+              "seq": 5,
+              "text": "एक step जो सब भूलते हैं वो है accounting: d u बराबर g prime of x d x. इसे exchange rate समझो, छोड़ा तो answer factor भर गलत हो जाएगा।"
+            },
+            {
+              "seq": 6,
+              "text": "सोचो rupees को दूसरी currency में बदलना: u-world में जाओ, आसान shopping करो, फिर answer वापस x-world में बदलो।"
+            },
+            {
+              "seq": 7,
+              "text": "Substitution तभी काम आता है जब g prime of x, या उसका constant multiple, सचमुच integrand में मौजूद हो। नहीं है, तो method रुक जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और indefinite integral के लिए, आखिर में हमेशा वापस x में बदलो, answer कभी u में मत छोड़ो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Integration by Substitution",
+      "title": "Substitution patterns and standard results",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The two patterns and four results to know"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\int \\frac{f'(x)}{f(x)}\\,dx = \\ln|f(x)| + C"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "In words: a numerator that is the derivative of the denominator integrates to log of the denominator."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int [f(x)]^n\\,f'(x)\\,dx = \\frac{[f(x)]^{n+1}}{n+1} + C,\\quad n\\neq -1"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\int \\tan x\\,dx = \\ln|\\sec x| + C \\qquad \\int \\cot x\\,dx = \\ln|\\sin x| + C"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int \\sec x\\,dx = \\ln|\\sec x + \\tan x| + C \\qquad \\int \\csc x\\,dx = \\ln|\\csc x - \\cot x| + C"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The $\\tan$ and $\\sec$ results are the $\\int f'/f$ pattern in disguise — numerator equals the denominator's derivative."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Reflex: is the numerator a constant times the derivative of the denominator? If yes, the answer is a log."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Substitution has two master patterns; memorise these and half of exam integrals fall instantly."
+            },
+            {
+              "seq": 2,
+              "text": "First, the logarithmic pattern: the integral of f prime over f is log of the absolute value of f."
+            },
+            {
+              "seq": 3,
+              "text": "Say it in words, whenever the numerator is exactly the derivative of the denominator, the answer is log of that denominator. This one reflex is worth a lot of marks."
+            },
+            {
+              "seq": 4,
+              "text": "Second, the power-chain pattern: a function to the n, times its own derivative, integrates like the power rule, f to the n plus one, over n plus one."
+            },
+            {
+              "seq": 5,
+              "text": "From these we derive four standard results. Tan x integrates to log mod sec x; cot x to log mod sin x."
+            },
+            {
+              "seq": 6,
+              "text": "And the trickier pair: sec x integrates to log mod sec x plus tan x; cosec x to log mod cosec x minus cot x."
+            },
+            {
+              "seq": 7,
+              "text": "Both the tan and sec results are secretly the f prime over f pattern, in each case the numerator turns out to be the derivative of the denominator."
+            },
+            {
+              "seq": 8,
+              "text": "So train one question before you compute: is the numerator a constant times the derivative of the denominator? If yes, write log immediately, no formal substitution needed."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Substitution के दो master patterns हैं; इन्हें रट लो तो आधे exam integrals तुरंत गिर जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, logarithmic pattern: integral of f prime over f होता है log of the absolute value of f।"
+            },
+            {
+              "seq": 3,
+              "text": "शब्दों में, जब भी numerator ठीक denominator का derivative हो, answer उस denominator का log है। यह एक reflex बहुत marks दिलाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा, power-chain pattern: कोई function to the n, times उसका अपना derivative, power rule की तरह integrate होता है, f to the n plus one, बटा n plus one।"
+            },
+            {
+              "seq": 5,
+              "text": "इनसे चार standard results निकलते हैं। Tan x integrate होकर log mod sec x; cot x होकर log mod sin x।"
+            },
+            {
+              "seq": 6,
+              "text": "और मुश्किल जोड़ी: sec x integrate होकर log mod sec x plus tan x; cosec x होकर log mod cosec x minus cot x।"
+            },
+            {
+              "seq": 7,
+              "text": "Tan और sec दोनों results असल में f prime over f pattern ही हैं, हर बार numerator निकलता है denominator का derivative।"
+            },
+            {
+              "seq": 8,
+              "text": "तो compute से पहले एक सवाल की आदत डालो: क्या numerator, denominator के derivative का constant multiple है? हाँ, तो सीधे log लिखो, औपचारिक substitution की ज़रूरत नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Integration by Substitution",
+      "title": "Substitution examples: spot the inner function",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1: the derivative is already there"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int 2x\\sqrt{x^2+1}\\,dx$. Let $u=x^2+1$, so $du=2x\\,dx$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\int \\sqrt{u}\\,du = \\frac{u^{3/2}}{3/2} = \\frac{2}{3}u^{3/2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int 2x\\sqrt{x^2+1}\\,dx = \\frac{2}{3}(x^2+1)^{3/2} + C"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 2: spot f-prime over f instantly"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Evaluate $\\int \\frac{x}{x^2+4}\\,dx$. Derivative of $x^2+4$ is $2x$, and $x=\\tfrac{1}{2}(2x)$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\frac{1}{2}\\int \\frac{2x}{x^2+4}\\,dx = \\frac{1}{2}\\ln(x^2+4) + C"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Numerator a constant times the denominator's derivative? Write (constant) times ln(denominator) at once."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's spot inner functions in the wild. First, one where the derivative is handed to us."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral of two x times root x squared plus one. Let u be x squared plus one; then d u is exactly two x d x, and that two x d x is sitting right there."
+            },
+            {
+              "seq": 3,
+              "text": "So the integral becomes root u d u, which is u to the three-halves, over three-halves, that is, two-thirds u to the three-halves."
+            },
+            {
+              "seq": 4,
+              "text": "Back-substitute u equals x squared plus one, and we're done: two-thirds times x squared plus one, to the three-halves, plus C."
+            },
+            {
+              "seq": 5,
+              "text": "<excited>Now watch how the f prime over f reflex skips the busywork entirely."
+            },
+            {
+              "seq": 6,
+              "text": "We want the integral of x over x squared plus four. The derivative of the denominator is two x, and our numerator x is just half of that."
+            },
+            {
+              "seq": 7,
+              "text": "So pull out the one-half: the integral becomes one-half log of x squared plus four, plus C, no formal u needed."
+            },
+            {
+              "seq": 8,
+              "text": "That's the shortcut: whenever the numerator is a constant times the denominator's derivative, write constant times log of the denominator immediately."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आओ inner functions पहचानें। पहले वो, जहाँ derivative पहले से हाथ में है।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें integral चाहिए two x times root x square plus one का। मान लो u है x square plus one; तो d u ठीक two x d x, और वो two x d x वहीं मौजूद है।"
+            },
+            {
+              "seq": 3,
+              "text": "तो integral बन जाता है root u d u, यानी u to the three-halves, बटा three-halves, मतलब two-thirds u to the three-halves।"
+            },
+            {
+              "seq": 4,
+              "text": "वापस रखो u बराबर x square plus one, और हो गया: two-thirds times x square plus one, to the three-halves, plus C।"
+            },
+            {
+              "seq": 5,
+              "text": "<excited>अब देखो f prime over f reflex कैसे पूरी मेहनत छोड़ देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "हमें integral चाहिए x बटा x square plus four का। Denominator का derivative है two x, और हमारा numerator x उसका बस आधा है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो one-half बाहर निकालो: integral बन जाता है one-half log of x square plus four, plus C, कोई औपचारिक u नहीं चाहिए।"
+            },
+            {
+              "seq": 8,
+              "text": "यही shortcut है: जब भी numerator, denominator के derivative का constant multiple हो, तुरंत constant times log of denominator लिख दो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Integration by Substitution",
+      "title": "Substitution examples: nested and rationalising",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3: a nested substitution"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int \\frac{e^{\\sqrt{x}}}{\\sqrt{x}}\\,dx$. Let $u=\\sqrt{x}$, so $\\frac{dx}{\\sqrt{x}}=2\\,du$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\int e^{\\sqrt{x}}\\cdot\\frac{dx}{\\sqrt{x}} = \\int e^{u}\\cdot 2\\,du = 2e^{u} + C"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int \\frac{e^{\\sqrt{x}}}{\\sqrt{x}}\\,dx = 2e^{\\sqrt{x}} + C"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 4: substitute the root away"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Evaluate $\\int \\frac{1}{1+\\sqrt{x}}\\,dx$. Put $x=t^2$ ($t\\ge 0$): $dx=2t\\,dt$, $\\sqrt{x}=t$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\int \\frac{2t}{1+t}\\,dt = 2\\int\\left(1-\\frac{1}{1+t}\\right)dt = 2\\big(t-\\ln|1+t|\\big) + C"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\int \\frac{1}{1+\\sqrt{x}}\\,dx = 2\\sqrt{x} - 2\\ln(1+\\sqrt{x}) + C"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "The split $\\frac{t}{1+t}=1-\\frac{1}{1+t}$ (an improper fraction) is a recurring trick — keep it handy."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one nests a root inside an exponent, perfect for a clean substitution."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral of e to the root x, over root x. Let u be root x; then d u is one over two root x d x, which means d x over root x equals two d u."
+            },
+            {
+              "seq": 3,
+              "text": "Rewrite the integral: e to the root x times d x over root x becomes e to the u times two d u, which is just two e to the u, plus C."
+            },
+            {
+              "seq": 4,
+              "text": "Back-substitute u equals root x: the answer is two e to the root x, plus C. The awkward one over root x was exactly twice the derivative of the exponent."
+            },
+            {
+              "seq": 5,
+              "text": "<curious>Now what if the root blocks every table entry? Substitute it away entirely."
+            },
+            {
+              "seq": 6,
+              "text": "We want the integral of one over one plus root x. Put x equals t squared, so d x is two t d t and root x is just t."
+            },
+            {
+              "seq": 7,
+              "text": "The integral becomes two t over one plus t d t. Split that improper fraction as one minus one over one plus t, and integrate: two times t minus log mod one plus t."
+            },
+            {
+              "seq": 8,
+              "text": "Back-substitute t equals root x: two root x minus two log of one plus root x, plus C."
+            },
+            {
+              "seq": 9,
+              "text": "Tuck away that move, splitting t over one plus t into one minus one over one plus t. That improper-fraction split shows up again and again."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह एक root को exponent के अंदर nest करता है, एक साफ़ substitution के लिए perfect।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें integral चाहिए e to the root x, बटा root x का। मान लो u है root x; तो d u है one over two root x d x, यानी d x बटा root x बराबर two d u।"
+            },
+            {
+              "seq": 3,
+              "text": "Integral फिर से लिखो: e to the root x times d x over root x बन जाता है e to the u times two d u, यानी बस two e to the u, plus C।"
+            },
+            {
+              "seq": 4,
+              "text": "वापस रखो u बराबर root x: answer है two e to the root x, plus C। वो अटपटा one over root x ठीक exponent के derivative का दुगुना था।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious>अब क्या हो जब root हर table entry को रोक दे? उसे पूरी तरह substitute करके हटा दो।"
+            },
+            {
+              "seq": 6,
+              "text": "हमें integral चाहिए one over one plus root x का। रखो x बराबर t square, तो d x है two t d t और root x बस t है।"
+            },
+            {
+              "seq": 7,
+              "text": "Integral बन जाता है two t बटा one plus t d t. उस improper fraction को one minus one over one plus t की तरह split करो, और integrate करो: two times t minus log mod one plus t।"
+            },
+            {
+              "seq": 8,
+              "text": "वापस रखो t बराबर root x: two root x minus two log of one plus root x, plus C।"
+            },
+            {
+              "seq": 9,
+              "text": "यह move याद रखो, t over one plus t को one minus one over one plus t में तोड़ना। यह improper-fraction split बार-बार आता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "tips",
+      "subtopic": "Integration by Substitution",
+      "title": "Substitution pitfalls",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where substitution quietly goes wrong"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Replace $g'(x)\\,dx$ with $du$ — not just $g(x)$ with $u$. Dropping the $du$ is the number-one error."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "For an indefinite integral, always back-substitute to $x$. Leaving the answer in $u$ loses marks."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Mind the constant factor in $f'/f$: $\\int\\frac{x}{x^2+a^2}$ carries a $\\tfrac{1}{2}$; $\\int\\frac{2x}{x^2+a^2}$ does not."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Sign check: $\\int\\tan x = +\\ln|\\sec x|$ and $\\int\\cot x = +\\ln|\\sin x|$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Substitution only works if $g'$ is present. If it isn't, don't force it — reach for a different method."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{numerator} = k\\cdot\\tfrac{d}{dx}(\\text{denominator})\\ \\Rightarrow\\ \\text{answer is a log}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The reflex handling a huge share of exam integrals: check if the numerator is the derivative of the denominator first."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A few small habits separate a clean substitution from a wrong one. Let's name them."
+            },
+            {
+              "seq": 2,
+              "text": "First and biggest: you must replace g prime of x d x with d u, not just swap g of x for u. Dropping the d u accounting is the single most common substitution error."
+            },
+            {
+              "seq": 3,
+              "text": "Second: for an indefinite integral, always convert back to x. An answer left in u is incomplete and loses marks."
+            },
+            {
+              "seq": 4,
+              "text": "Third, the constant factor. The integral of x over x squared plus a squared carries a one-half; but two x over x squared plus a squared does not. Check whether your numerator is the whole derivative or a fraction of it."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, a sign check: tan x integrates to plus log mod sec x, and cot x to plus log mod sin x. Get the signs from the derivation, not from guessing."
+            },
+            {
+              "seq": 6,
+              "text": "And remember, substitution only works if g prime is actually present. If it isn't, don't force the method, step back and pick another."
+            },
+            {
+              "seq": 7,
+              "text": "The board sums up the golden reflex: if the numerator is a constant times the derivative of the denominator, the answer is a log."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Ask that one question before you write anything, and a huge share of exam integrals become one-liners."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "कुछ छोटी आदतें एक साफ़ substitution को गलत से अलग करती हैं। चलो इन्हें नाम दें।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली और सबसे बड़ी: g prime of x d x को d u से बदलना ज़रूरी है, सिर्फ़ g of x को u से नहीं। d u की accounting छोड़ना सबसे common substitution error है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी: indefinite integral के लिए हमेशा वापस x में बदलो। u में छोड़ा answer अधूरा है और marks खोता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरी, constant factor। Integral of x over x square plus a square में one-half आता है; पर two x over x square plus a square में नहीं। देखो numerator पूरा derivative है या उसका अंश।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथी, sign check: tan x integrate होकर plus log mod sec x, और cot x होकर plus log mod sin x. Signs derivation से लो, अंदाज़े से नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "और याद रखो, substitution तभी चलता है जब g prime मौजूद हो। नहीं है, तो method को ज़बरदस्ती मत थोपो, पीछे हटकर दूसरा चुनो।"
+            },
+            {
+              "seq": 7,
+              "text": "Board golden reflex बताता है: अगर numerator, denominator के derivative का constant multiple है, तो answer एक log है।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>कुछ भी लिखने से पहले वही एक सवाल पूछो, और exam के बहुत सारे integrals one-liner बन जाएँगे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Integration using Trigonometric Identities",
+      "title": "First rewrite, then integrate",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "First rewrite, then integrate"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "You can't integrate $\\sin^2 x$ directly — there's no table entry for it."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Identities convert powers and products of sines and cosines into sums of plain $\\sin(kx)$ and $\\cos(kx)$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\sin^2 x = \\frac{1-\\cos 2x}{2} \\qquad \\cos^2 x = \\frac{1+\\cos 2x}{2}"
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "caption": "A complex trig chord splits into pure tones you can integrate.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"420\" height=\"220\" fill=\"#ffffff\"/><text x=\"210\" y=\"20\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">sin^2 x = 1/2 - (1/2) cos 2x</text><line x1=\"20\" y1=\"70\" x2=\"400\" y2=\"70\" stroke=\"#ccc\" stroke-width=\"1\"/><path d=\"M20 90 Q 55 40 90 90 Q 125 40 160 90 Q 195 40 230 90 Q 265 40 300 90 Q 335 40 370 90 Q 388 65 400 70\" fill=\"none\" stroke=\"#2b6cb0\" stroke-width=\"2\"/><text x=\"30\" y=\"60\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#2b6cb0\">sin^2 x (a chord)</text><line x1=\"20\" y1=\"160\" x2=\"400\" y2=\"160\" stroke=\"#dd6b20\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"30\" y=\"152\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#dd6b20\">constant 1/2 (pure tone)</text><path d=\"M20 190 Q 40 170 60 190 Q 80 210 100 190 Q 120 170 140 190 Q 160 210 180 190 Q 200 170 220 190 Q 240 210 260 190 Q 280 170 300 190 Q 320 210 340 190 Q 360 170 380 190 Q 390 200 400 190\" fill=\"none\" stroke=\"#805ad5\" stroke-width=\"2\"/><text x=\"30\" y=\"212\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#805ad5\">cos 2x (pure tone)</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Each plain $\\sin(kx)$ or $\\cos(kx)$ integrates instantly, so the whole thing becomes term-by-term."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Walli's formula applies only to definite integrals over $[0,\\tfrac{\\pi}{2}]$ — never indefinite ones."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The method is a two-step dance: pick the right identity for the shape, then integrate each term."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here's a whole class of integrals the table can't touch on its own, and one idea that cracks all of them."
+            },
+            {
+              "seq": 2,
+              "text": "Try to integrate sine squared x. There's simply no table entry for it, so a direct attack fails."
+            },
+            {
+              "seq": 3,
+              "text": "The fix is identities. They convert awkward powers and products of sines and cosines into sums of plain sine k x and cosine k x, each of which we can integrate on sight."
+            },
+            {
+              "seq": 4,
+              "text": "The two workhorses are the power-reduction formulas: sine squared x is one minus cosine two x, all over two; cosine squared x is one plus cosine two x, over two."
+            },
+            {
+              "seq": 5,
+              "text": "Think of a musical chord, it sounds complex, but it's just pure tones stacked together. Identities are the spectrum analyser that breaks a trig chord into those pure tones."
+            },
+            {
+              "seq": 6,
+              "text": "<excited>And every pure tone is trivial to integrate, so the whole problem collapses into term-by-term integration."
+            },
+            {
+              "seq": 7,
+              "text": "One boundary to respect: Walli's formula, which we'll use for high powers, works only for definite integrals from zero to pi over two, never for indefinite ones."
+            },
+            {
+              "seq": 8,
+              "text": "So the method is really a two-step dance: first pick the identity that matches the shape, then integrate each resulting term."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह integrals का एक पूरा वर्ग है जिसे table अकेले नहीं छू सकता, और एक idea जो इन सबको तोड़ देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Sine square x को integrate करने की कोशिश करो। इसकी कोई table entry है ही नहीं, तो सीधा हमला fail हो जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "इलाज है identities। ये sines और cosines के अटपटे powers और products को plain sine k x और cosine k x के sums में बदल देती हैं, जिनमें से हर एक देखते ही integrate हो जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "दो workhorses हैं power-reduction formulas: sine square x है one minus cosine two x, बटा two; cosine square x है one plus cosine two x, बटा two।"
+            },
+            {
+              "seq": 5,
+              "text": "एक musical chord सोचो, सुनने में complex, पर असल में बस pure tones एक साथ। Identities वो spectrum analyser हैं जो trig chord को उन pure tones में तोड़ती हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "<excited>और हर pure tone integrate करना trivial है, तो पूरी problem term-by-term integration में सिमट जाती है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक सीमा का ध्यान: Walli's formula, जो हम high powers के लिए इस्तेमाल करेंगे, सिर्फ़ zero to pi over two के definite integrals के लिए है, indefinite के लिए कभी नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो method असल में दो-step का नाच है: पहले shape से match करती identity चुनो, फिर हर term को integrate करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "formulas",
+      "subtopic": "Integration using Trigonometric Identities",
+      "title": "The trig identity toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Identities that make trig integrable"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\sin^2 x = \\frac{1-\\cos 2x}{2} \\qquad \\cos^2 x = \\frac{1+\\cos 2x}{2}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\sin^3 x = \\frac{3\\sin x - \\sin 3x}{4} \\qquad \\cos^3 x = \\frac{3\\cos x + \\cos 3x}{4}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "2\\sin A\\cos B = \\sin(A+B) + \\sin(A-B)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "2\\cos A\\cos B = \\cos(A+B)+\\cos(A-B) \\qquad 2\\sin A\\sin B = \\cos(A-B)-\\cos(A+B)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Choose by shape: even power uses power-reduction; odd power peels one factor and substitutes; a product uses product-to-sum."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\int_{0}^{\\pi/2}\\sin^n x\\,\\cos^m x\\,dx = \\frac{(n-1)!!\\,(m-1)!!}{(m+n)!!}\\times\\begin{cases}\\frac{\\pi}{2} & m,n\\text{ both even}\\\\ 1 & \\text{otherwise}\\end{cases}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Powers of $\\tan/\\sec$: use $\\sec^2 x = 1+\\tan^2 x$ and peel off a $\\sec^2 x$ to substitute."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the dictionary. Every trig integral in this subtopic is a lookup into one of these identities."
+            },
+            {
+              "seq": 2,
+              "text": "Power-reduction for even powers: sine squared is one minus cosine two x over two; cosine squared is one plus cosine two x over two. Note the sign difference, that trips people up."
+            },
+            {
+              "seq": 3,
+              "text": "Triple-angle forms handle cubes: sine cubed is three sine x minus sine three x, over four; cosine cubed is three cosine x plus cosine three x, over four."
+            },
+            {
+              "seq": 4,
+              "text": "For a sine-times-cosine product, use two sine A cosine B equals sine of A plus B plus sine of A minus B."
+            },
+            {
+              "seq": 5,
+              "text": "The companion product-to-sum identities: two cosine A cosine B, and two sine A sine B, each collapse to a sum or difference of cosines."
+            },
+            {
+              "seq": 6,
+              "text": "The strategy is to classify by shape. Even power? Power-reduction. Odd power? Peel one factor off and substitute. A product? Product-to-sum."
+            },
+            {
+              "seq": 7,
+              "text": "For definite integrals from zero to pi over two of sine to the n cosine to the m, Walli's formula gives the answer as a ratio of double-factorials, with a pi-over-two only when both powers are even."
+            },
+            {
+              "seq": 8,
+              "text": "And for powers of tan or sec, use secant squared equals one plus tan squared, then peel off a secant squared to substitute."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रही dictionary। इस subtopic का हर trig integral इन्हीं identities में से किसी का lookup है।"
+            },
+            {
+              "seq": 2,
+              "text": "Even powers के लिए power-reduction: sine square है one minus cosine two x बटा two; cosine square है one plus cosine two x बटा two। Sign का फ़र्क़ ध्यान से, यही लोगों को फँसाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Cubes को triple-angle forms सँभालते हैं: sine cube है three sine x minus sine three x, बटा four; cosine cube है three cosine x plus cosine three x, बटा four।"
+            },
+            {
+              "seq": 4,
+              "text": "Sine-times-cosine product के लिए, इस्तेमाल करो two sine A cosine B बराबर sine of A plus B plus sine of A minus B।"
+            },
+            {
+              "seq": 5,
+              "text": "साथी product-to-sum identities: two cosine A cosine B, और two sine A sine B, हर एक cosines के sum या difference में सिमट जाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "Strategy है shape से classify करना। Even power? Power-reduction. Odd power? एक factor छीलो और substitute करो। Product? Product-to-sum।"
+            },
+            {
+              "seq": 7,
+              "text": "Zero to pi over two के definite integrals में sine to the n cosine to the m के लिए, Walli's formula answer देता है double-factorials के ratio के रूप में, pi-over-two सिर्फ़ तभी जब दोनों powers even हों।"
+            },
+            {
+              "seq": 8,
+              "text": "और tan या sec के powers के लिए, secant square बराबर one plus tan square इस्तेमाल करो, फिर एक secant square छीलकर substitute करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Integration using Trigonometric Identities",
+      "title": "Trig examples: power-reduction and product-to-sum",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1: an even power"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int \\cos^2 x\\,dx$. Use $\\cos^2 x = \\frac{1+\\cos 2x}{2}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\int \\frac{1+\\cos 2x}{2}\\,dx = \\frac{x}{2} + \\frac{\\sin 2x}{4} + C"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Example 2: a product of two frequencies"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Evaluate $\\int \\sin 5x\\cos 3x\\,dx$. Product-to-sum: $2\\sin 5x\\cos 3x = \\sin 8x + \\sin 2x$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int \\sin 5x\\cos 3x\\,dx = \\frac{1}{2}\\int(\\sin 8x + \\sin 2x)\\,dx"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "= -\\frac{\\cos 8x}{16} - \\frac{\\cos 2x}{4} + C"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Never try parts on a sine-cosine product — product-to-sum makes it two trivial integrals."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's run the two most common trig moves. First, an even power."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral of cosine squared x. There's no direct entry, so use power-reduction: cosine squared is one plus cosine two x, over two."
+            },
+            {
+              "seq": 3,
+              "text": "Now each piece is trivial. One-half integrates to x over two; cosine two x integrates to sine two x over two, then halved again, giving sine two x over four. So the answer is x over two plus sine two x over four, plus C."
+            },
+            {
+              "seq": 4,
+              "text": "<curious>Next, a product of two different frequencies, where a smart identity beats brute force."
+            },
+            {
+              "seq": 5,
+              "text": "We want the integral of sine five x cosine three x. Product-to-sum says two sine five x cosine three x equals sine eight x plus sine two x."
+            },
+            {
+              "seq": 6,
+              "text": "So the integral is one-half times the integral of sine eight x plus sine two x."
+            },
+            {
+              "seq": 7,
+              "text": "Integrating each sine gives minus cosine over its frequency; after the one-half, we get minus cosine eight x over sixteen, minus cosine two x over four, plus C."
+            },
+            {
+              "seq": 8,
+              "text": "The lesson: never reach for integration by parts on a sine-cosine product. Product-to-sum turns it into two trivial integrals."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो दो सबसे common trig moves चलाएँ। पहले, एक even power।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें integral चाहिए cosine square x का। कोई direct entry नहीं, तो power-reduction इस्तेमाल करो: cosine square है one plus cosine two x, बटा two।"
+            },
+            {
+              "seq": 3,
+              "text": "अब हर piece trivial है। One-half integrate होकर x बटा two; cosine two x integrate होकर sine two x बटा two, फिर आधा, यानी sine two x बटा four। तो answer है x बटा two plus sine two x बटा four, plus C।"
+            },
+            {
+              "seq": 4,
+              "text": "<curious>अगला, दो अलग frequencies का product, जहाँ एक चतुर identity brute force को हरा देती है।"
+            },
+            {
+              "seq": 5,
+              "text": "हमें integral चाहिए sine five x cosine three x का। Product-to-sum कहता है two sine five x cosine three x बराबर sine eight x plus sine two x।"
+            },
+            {
+              "seq": 6,
+              "text": "तो integral है one-half times integral of sine eight x plus sine two x।"
+            },
+            {
+              "seq": 7,
+              "text": "हर sine integrate होकर minus cosine बटा उसकी frequency; one-half के बाद मिलता है minus cosine eight x बटा sixteen, minus cosine two x बटा four, plus C।"
+            },
+            {
+              "seq": 8,
+              "text": "सबक: sine-cosine product पर integration by parts कभी मत उठाओ। Product-to-sum इसे दो trivial integrals बना देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Integration using Trigonometric Identities",
+      "title": "Trig examples: odd powers and Walli's formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3: an odd power, peel and substitute"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int \\sin^3 x\\cos^2 x\\,dx$. Peel one $\\sin x$: $\\sin^3 x = (1-\\cos^2 x)\\sin x$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Let $u=\\cos x$, $du=-\\sin x\\,dx$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "-\\int(1-u^2)u^2\\,du = -\\int(u^2-u^4)\\,du = -\\left(\\frac{u^3}{3}-\\frac{u^5}{5}\\right) + C"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\int \\sin^3 x\\cos^2 x\\,dx = \\frac{\\cos^5 x}{5} - \\frac{\\cos^3 x}{3} + C"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 4: Walli's formula"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Evaluate $\\int_{0}^{\\pi/2}\\sin^6 x\\cos^2 x\\,dx$. Here $n=6$, $m=2$, both even, so the $\\tfrac{\\pi}{2}$ branch applies."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\frac{5!!\\cdot 1!!}{8!!}\\cdot\\frac{\\pi}{2} = \\frac{(5\\cdot 3\\cdot 1)(1)}{8\\cdot 6\\cdot 4\\cdot 2}\\cdot\\frac{\\pi}{2} = \\frac{15}{384}\\cdot\\frac{\\pi}{2} = \\frac{5\\pi}{256}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Walli collapses a brutal expansion into one double-factorial fraction — priceless when time is short."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Odd powers get a different treatment, peel and substitute."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral of sine cubed x cosine squared x. Since the sine power is odd, peel off one sine x and convert the rest: sine cubed becomes one minus cosine squared, times sine x."
+            },
+            {
+              "seq": 3,
+              "text": "Now let u be cosine x, so d u is minus sine x d x, and that spare sine x is exactly what we need."
+            },
+            {
+              "seq": 4,
+              "text": "The integral becomes minus the integral of one minus u squared, times u squared, d u, that is minus u cubed over three, minus u to the fifth over five, with the sign worked through."
+            },
+            {
+              "seq": 5,
+              "text": "Back-substitute u equals cosine x, and after tidying signs the answer is cosine to the fifth x over five, minus cosine cubed x over three, plus C."
+            },
+            {
+              "seq": 6,
+              "text": "<excited>Now a definite integral where Walli's formula turns a nightmare into one line."
+            },
+            {
+              "seq": 7,
+              "text": "We want the integral from zero to pi over two of sine to the sixth x, cosine squared x. Here n is six and m is two, both even, so the pi-over-two branch of Walli applies."
+            },
+            {
+              "seq": 8,
+              "text": "Plug in the double-factorials: five double-factorial times one double-factorial, over eight double-factorial, times pi over two. That's fifteen over three hundred eighty-four, times pi over two, which simplifies to five pi over two hundred fifty-six."
+            },
+            {
+              "seq": 9,
+              "text": "See what Walli bought us: it collapsed a brutal expansion into a single double-factorial fraction. When the clock is running, that's priceless."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Odd powers का इलाज अलग है, peel करो और substitute करो।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें integral चाहिए sine cube x cosine square x का। चूँकि sine की power odd है, एक sine x छीलो और बाकी को बदलो: sine cube बनता है one minus cosine square, times sine x।"
+            },
+            {
+              "seq": 3,
+              "text": "अब मान लो u है cosine x, तो d u है minus sine x d x, और वो बचा हुआ sine x ठीक वही है जो चाहिए।"
+            },
+            {
+              "seq": 4,
+              "text": "Integral बन जाता है minus integral of one minus u square, times u square, d u, यानी minus u cube बटा three, minus u to the fifth बटा five, sign सँभालते हुए।"
+            },
+            {
+              "seq": 5,
+              "text": "वापस रखो u बराबर cosine x, और signs ठीक करने पर answer है cosine to the fifth x बटा five, minus cosine cube x बटा three, plus C।"
+            },
+            {
+              "seq": 6,
+              "text": "<excited>अब एक definite integral जहाँ Walli's formula एक nightmare को एक line बना देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "हमें integral चाहिए zero to pi over two, sine to the sixth x, cosine square x का। यहाँ n है six और m है two, दोनों even, तो Walli का pi-over-two branch लगता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Double-factorials रखो: five double-factorial times one double-factorial, बटा eight double-factorial, times pi over two। यह है fifteen बटा three hundred eighty-four, times pi over two, जो सिमटकर बनता है five pi बटा two hundred fifty-six।"
+            },
+            {
+              "seq": 9,
+              "text": "देखो Walli ने क्या दिया: एक brutal expansion को एक अकेले double-factorial fraction में सिकोड़ दिया। जब घड़ी चल रही हो, यह अनमोल है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "tips",
+      "subtopic": "Integration using Trigonometric Identities",
+      "title": "Trig integral pitfalls",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Trig traps to sidestep"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "$\\int \\sin^2 x\\,dx \\neq \\frac{\\sin^3 x}{3}$. The power rule integrates powers of $x$, not of $\\sin x$ — use an identity first."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Don't try parts on $\\sin(ax)\\cos(bx)$ — product-to-sum is faster and avoids circular parts."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "Watch the double-angle sign: $\\sin^2 x$ uses $1-\\cos 2x$; $\\cos^2 x$ uses $1+\\cos 2x$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Walli's formula is only for $\\int_0^{\\pi/2}$. Never use it on an indefinite integral or with other limits."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Classify by shape: even power halve it; odd power peel one off and substitute; product product-to-sum."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{even} \\to \\text{power-reduce};\\quad \\text{odd} \\to \\text{peel + substitute};\\quad \\text{product} \\to \\text{sum}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Naming the shape picks the identity automatically — most of the work is recognition, not algebra."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Trig integrals have a handful of signature traps. Name them once and you'll stop falling in."
+            },
+            {
+              "seq": 2,
+              "text": "The big one: the integral of sine squared x is not sine cubed over three. The power rule integrates powers of x, not powers of sine x, you must apply an identity first."
+            },
+            {
+              "seq": 3,
+              "text": "Next: don't reach for integration by parts on a sine times cosine product. Product-to-sum is faster and skips the circular parts loop entirely."
+            },
+            {
+              "seq": 4,
+              "text": "Watch the double-angle sign carefully. Sine squared uses one minus cosine two x; cosine squared uses one plus cosine two x. Mixing them flips a sign and wrecks the answer."
+            },
+            {
+              "seq": 5,
+              "text": "And Walli's formula is strictly for the definite integral from zero to pi over two. Never apply it to an indefinite integral, or with any other limits."
+            },
+            {
+              "seq": 6,
+              "text": "The habit that prevents all of these: classify by shape before you compute. Even power, halve it; odd power, peel one off and substitute; product, product-to-sum."
+            },
+            {
+              "seq": 7,
+              "text": "The board says it in one line, even, odd, and product each map to a fixed move."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Name the shape and the identity picks itself. Most of the battle here is recognition, not algebra."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Trig integrals के कुछ signature traps हैं। एक बार नाम दे दो, फिर गिरना बंद।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा: sine square x का integral, sine cube बटा three नहीं है। Power rule x के powers को integrate करता है, sine x के powers को नहीं, पहले identity लगाना ज़रूरी है।"
+            },
+            {
+              "seq": 3,
+              "text": "अगला: sine times cosine product पर integration by parts मत उठाओ। Product-to-sum तेज़ है और circular parts का चक्कर पूरी तरह छोड़ देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Double-angle sign को ध्यान से देखो। Sine square में one minus cosine two x; cosine square में one plus cosine two x। इन्हें मिलाया तो sign पलटेगा और answer बिगड़ेगा।"
+            },
+            {
+              "seq": 5,
+              "text": "और Walli's formula सख़्ती से zero to pi over two के definite integral के लिए है। इसे indefinite integral पर, या किसी और limits के साथ कभी मत लगाओ।"
+            },
+            {
+              "seq": 6,
+              "text": "वो आदत जो इन सबको रोकती है: compute से पहले shape से classify करो। Even power, आधा करो; odd power, एक छीलो और substitute करो; product, product-to-sum।"
+            },
+            {
+              "seq": 7,
+              "text": "Board इसे एक line में कहता है, even, odd, और product हर एक एक तय move पर जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Shape को नाम दो और identity खुद चुन जाती है। यहाँ ज़्यादातर लड़ाई recognition की है, algebra की नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

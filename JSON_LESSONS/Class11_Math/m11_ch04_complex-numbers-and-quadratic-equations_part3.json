@@ -1,0 +1,4368 @@
+{
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 4,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish",
+    "hindi"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "Euler's formula packages the polar form",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One symbol for cos + i sin"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "e^{i\\theta}=\\cos\\theta+i\\sin\\theta,\\qquad z=re^{i\\theta}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "A unit number $e^{i\\theta}$ is just 'the arrow of length 1 pointing at angle $\\theta$'."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "e^{i\\theta_1}e^{i\\theta_2}=e^{i(\\theta_1+\\theta_2)}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "'Multiplication is rotation' becomes 'multiplication adds exponents'."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "re^{i\\theta}\\ \\text{has conjugate}\\ re^{-i\\theta};\\quad \\frac{1}{re^{i\\theta}}=\\frac{1}{r}e^{-i\\theta}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\cos\\theta=\\frac{e^{i\\theta}+e^{-i\\theta}}{2},\\qquad \\sin\\theta=\\frac{e^{i\\theta}-e^{-i\\theta}}{2i}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "This is a JEE extension — beyond strict NCERT Class-11 scope."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>What if that whole polar bracket could be written as a single exponential?</curious> That's exactly what Euler's formula does."
+            },
+            {
+              "seq": 2,
+              "text": "Euler's formula says e to the i theta equals cosine theta plus i sine theta. So any number becomes z equals r times e to the i theta."
+            },
+            {
+              "seq": 3,
+              "text": "Read a unit number, e to the i theta, as simply the arrow of length one pointing at angle theta. The whole polar form collapses into one clean symbol."
+            },
+            {
+              "seq": 4,
+              "text": "And here the geometry becomes literal algebra: e to the i theta one, times e to the i theta two, equals e to the i, theta one plus theta two, by the ordinary exponent rule."
+            },
+            {
+              "seq": 5,
+              "text": "So the slogan from before, multiplication is rotation, upgrades to something even simpler: multiplication just adds exponents."
+            },
+            {
+              "seq": 6,
+              "text": "Two consequences fall out immediately. The conjugate of r e to the i theta is r e to the minus i theta, and its reciprocal is one over r, times e to the minus i theta."
+            },
+            {
+              "seq": 7,
+              "text": "And running Euler backwards gives the inverse relations: cosine theta is e to the i theta plus e to the minus i theta, over two, and sine theta is the difference, over two i."
+            },
+            {
+              "seq": 8,
+              "text": "A quick note on scope: this subtopic is a JEE extension, beyond strict NCERT Class eleven. If you're preparing for boards only, you can treat it lightly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Kya ho agar wo poora polar bracket ek single exponential ki tarah likha ja sake?</curious> Yehi Euler's formula karta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Euler's formula kehta hai e to the i theta barabar cosine theta plus i sine theta. To koi bhi number ban jaata hai z equals r times e to the i theta."
+            },
+            {
+              "seq": 3,
+              "text": "Ek unit number, e to the i theta, ko bas length one wala arrow samjho jo angle theta par point karta hai. Poora polar form ek clean symbol mein collapse ho jaata hai."
+            },
+            {
+              "seq": 4,
+              "text": "Aur yahan geometry literal algebra ban jaati hai: e to the i theta one, times e to the i theta two, barabar e to the i, theta one plus theta two, ordinary exponent rule se."
+            },
+            {
+              "seq": 5,
+              "text": "To pehle wala slogan, multiplication is rotation, aur bhi simple cheez mein upgrade ho jaata hai: multiplication bas exponents add karta hai."
+            },
+            {
+              "seq": 6,
+              "text": "Do consequences turant nikalte hain. r e to the i theta ka conjugate hai r e to the minus i theta, aur iska reciprocal hai one over r, times e to the minus i theta."
+            },
+            {
+              "seq": 7,
+              "text": "Aur Euler ko ulta chalane se inverse relations milte hain: cosine theta hai e to the i theta plus e to the minus i theta, over two, aur sine theta hai difference, over two i."
+            },
+            {
+              "seq": 8,
+              "text": "Scope par ek quick note: ye subtopic JEE extension hai, strict NCERT Class eleven se aage. Agar sirf boards ke liye taiyaari hai, to ise halka le sakte ho."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>क्या हो अगर वो पूरा polar bracket एक single exponential की तरह लिखा जा सके?</curious> यही Euler's formula करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Euler's formula कहता है e to the i theta बराबर cosine theta plus i sine theta। तो कोई भी number बन जाता है z equals r times e to the i theta।"
+            },
+            {
+              "seq": 3,
+              "text": "एक unit number, e to the i theta, को बस length one वाला arrow समझो जो angle theta पर point करता है। पूरा polar form एक clean symbol में collapse हो जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "और यहां geometry literal algebra बन जाती है: e to the i theta one, times e to the i theta two, बराबर e to the i, theta one plus theta two, ordinary exponent rule से।"
+            },
+            {
+              "seq": 5,
+              "text": "तो पहले वाला slogan, multiplication is rotation, और भी simple चीज़ में upgrade हो जाता है: multiplication बस exponents add करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "दो consequences तुरंत निकलते हैं। r e to the i theta का conjugate है r e to the minus i theta, और इसका reciprocal है one over r, times e to the minus i theta।"
+            },
+            {
+              "seq": 7,
+              "text": "और Euler को उलटा चलाने से inverse relations मिलते हैं: cosine theta है e to the i theta plus e to the minus i theta, over two, और sine theta है difference, over two i।"
+            },
+            {
+              "seq": 8,
+              "text": "Scope पर एक quick note: ये subtopic JEE extension है, strict NCERT Class eleven से आगे। अगर सिर्फ boards के लिए तैयारी है, तो इसे हल्का ले सकते हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "Roots live on a circle, equally spaced",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Taking an nth root divides the angle"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "An $n$th root divides the angle by $n$ — but the angle is known only up to $2\\pi$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "So there are $n$ legitimate answers, spaced $\\tfrac{2\\pi}{n}$ apart."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "caption": "n roots = vertices of a regular n-gon",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 300' xmlns='http://www.w3.org/2000/svg'><circle cx='120' cy='150' r='80' fill='none' stroke='#bbb' stroke-width='1.2'/><line x1='30' y1='150' x2='210' y2='150' stroke='#ddd' stroke-width='1'/><line x1='120' y1='60' x2='120' y2='240' stroke='#ddd' stroke-width='1'/><polygon points='200,150 80,81 80,219' fill='none' stroke='#2ea043' stroke-width='1.6'/><circle cx='200' cy='150' r='4' fill='#2ea043'/><circle cx='80' cy='81' r='4' fill='#2ea043'/><circle cx='80' cy='219' r='4' fill='#2ea043'/><text x='70' y='285' font-size='12' fill='#2ea043'>cube roots (n=3)</text><circle cx='350' cy='150' r='80' fill='none' stroke='#bbb' stroke-width='1.2'/><line x1='260' y1='150' x2='440' y2='150' stroke='#ddd' stroke-width='1'/><line x1='350' y1='60' x2='350' y2='240' stroke='#ddd' stroke-width='1'/><polygon points='430,150 350,70 270,150 350,230' fill='none' stroke='#1f6feb' stroke-width='1.6'/><circle cx='430' cy='150' r='4' fill='#1f6feb'/><circle cx='350' cy='70' r='4' fill='#1f6feb'/><circle cx='270' cy='150' r='4' fill='#1f6feb'/><circle cx='350' cy='230' r='4' fill='#1f6feb'/><text x='300' y='285' font-size='12' fill='#1f6feb'>4th roots (n=4)</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "text": "They lie on a circle of radius $r^{1/n}$, forming a regular $n$-gon."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "latex": "z^{n}=r^{n}e^{in\\theta}\\ \\text{(De Moivre, Euler form)}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 61,
+          "style": "red-margin",
+          "text": "Powers multiply the angle; roots divide it over n branches."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 71,
+          "text": "The $n$th roots of unity are that polygon inscribed in the unit circle, one vertex at $1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Euler form makes powers trivial, and it makes roots beautifully geometric. Here is the key picture."
+            },
+            {
+              "seq": 2,
+              "text": "Taking an nth root divides the angle by n. But remember the argument was only ever known up to a full turn, two pi."
+            },
+            {
+              "seq": 3,
+              "text": "That extra freedom is exactly why there are n legitimate answers, not one. They come out equally spaced, two pi over n apart, as you fold in each extra turn."
+            },
+            {
+              "seq": 4,
+              "text": "So the n roots are the vertices of a regular n-gon. The cube roots form an equilateral triangle; the fourth roots form a square."
+            },
+            {
+              "seq": 5,
+              "text": "They all sit on a circle whose radius is the nth root of the original modulus, spread evenly around it."
+            },
+            {
+              "seq": 6,
+              "text": "Contrast this with powers. In Euler form, z to the n is r to the n times e to the i n theta: a single answer, with the angle multiplied by n."
+            },
+            {
+              "seq": 7,
+              "text": "So keep the duality straight: powers multiply the angle and give one number, while roots divide the angle but spread over n branches."
+            },
+            {
+              "seq": 8,
+              "text": "And the special case we keep meeting, the nth roots of unity, is simply that regular polygon inscribed in the unit circle, with one vertex pinned at one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Euler form powers ko trivial banata hai, aur roots ko khoobsurati se geometric. Ye rahi key picture."
+            },
+            {
+              "seq": 2,
+              "text": "Ek nth root angle ko n se divide karta hai. Par yaad rakho argument sirf ek full turn, two pi, tak hi known tha."
+            },
+            {
+              "seq": 3,
+              "text": "Wahi extra freedom exactly kyun hai ki n legitimate answers hote hain, ek nahi. Wo equally spaced nikalte hain, two pi over n apart, jaise aap har extra turn fold karte ho."
+            },
+            {
+              "seq": 4,
+              "text": "To n roots ek regular n-gon ke vertices hain. Cube roots ek equilateral triangle banate hain; fourth roots ek square."
+            },
+            {
+              "seq": 5,
+              "text": "Wo sab ek circle par baithte hain jiska radius original modulus ka nth root hai, uske around evenly faile hue."
+            },
+            {
+              "seq": 6,
+              "text": "Ise powers se contrast karo. Euler form mein, z to the n hai r to the n times e to the i n theta: ek single answer, angle n se multiply hua."
+            },
+            {
+              "seq": 7,
+              "text": "To duality clear rakho: powers angle ko multiply karke ek number dete hain, jabki roots angle ko divide karte hain par n branches par faile hote hain."
+            },
+            {
+              "seq": 8,
+              "text": "Aur wo special case jo baar baar milta hai, nth roots of unity, bas wahi regular polygon hai unit circle mein inscribed, ek vertex one par pinned."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Euler form powers को trivial बनाता है, और roots को खूबसूरती से geometric। ये रही key picture।"
+            },
+            {
+              "seq": 2,
+              "text": "एक nth root angle को n से divide करता है। पर याद रखो argument सिर्फ एक full turn, two pi, तक ही known था।"
+            },
+            {
+              "seq": 3,
+              "text": "वही extra freedom exactly क्यों है कि n legitimate answers होते हैं, एक नहीं। वो equally spaced निकलते हैं, two pi over n apart।"
+            },
+            {
+              "seq": 4,
+              "text": "तो n roots एक regular n-gon के vertices हैं। Cube roots एक equilateral triangle बनाते हैं; fourth roots एक square।"
+            },
+            {
+              "seq": 5,
+              "text": "वो सब एक circle पर बैठते हैं जिसका radius original modulus का nth root है, उसके around evenly फैले हुए।"
+            },
+            {
+              "seq": 6,
+              "text": "इसे powers से contrast करो। Euler form में, z to the n है r to the n times e to the i n theta: एक single answer, angle n से multiply हुआ।"
+            },
+            {
+              "seq": 7,
+              "text": "तो duality clear रखो: powers angle को multiply करके एक number देते हैं, जबकि roots angle को divide करते हैं पर n branches पर फैले होते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "और वो special case जो बार बार मिलता है, nth roots of unity, बस वही regular polygon है unit circle में inscribed, एक vertex one पर pinned।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "The nth roots formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "All n roots of a complex number"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Solve $w^{n}=z=re^{i\\theta}$: match modulus and argument."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "w_k=r^{1/n}e^{\\,i(\\theta+2k\\pi)/n},\\quad k=0,1,\\dots,n-1"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Equivalently $r^{1/n}\\left[\\cos\\tfrac{\\theta+2k\\pi}{n}+i\\sin\\tfrac{\\theta+2k\\pi}{n}\\right]$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 37,
+          "style": "red-margin",
+          "text": "Exactly n roots, from k = 0 to n-1. Fewer is the root-count error."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "Using $k\\ge n$ just repeats roots already found."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "Method: (1) put $z$ in Euler form, (2) take $r^{1/n}$, (3) list the $n$ angles, (4) convert back if needed."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "text": "The proof: $\\rho^{n}e^{in\\phi}=re^{i\\theta}$ forces $\\rho=r^{1/n}$ and $n\\phi=\\theta+2k\\pi$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the workhorse formula of this subtopic: finding every nth root of a complex number."
+            },
+            {
+              "seq": 2,
+              "text": "We want all w with w to the n equal to z, where z is r e to the i theta. Match moduli and match arguments, remembering the argument is only fixed up to two pi."
+            },
+            {
+              "seq": 3,
+              "text": "The result is: w sub k equals r to the one over n, times e to the i, theta plus two k pi, over n, for k running from zero up to n minus one."
+            },
+            {
+              "seq": 4,
+              "text": "In trig form that's r to the one over n, times cosine of theta plus two k pi over n, plus i sine of the same angle."
+            },
+            {
+              "seq": 5,
+              "text": "The crucial counting rule: there are exactly n roots, given by k from zero to n minus one. Reporting fewer than n is the root-count error, the signature trap here."
+            },
+            {
+              "seq": 6,
+              "text": "And you don't get extra roots by pushing k to n or beyond; those just repeat roots you already listed. Stop at n minus one."
+            },
+            {
+              "seq": 7,
+              "text": "The method is four steps. Put z in Euler form. Take the nth root of the modulus. List the n angles by stepping k. Convert back to a plus i b form only if the question asks."
+            },
+            {
+              "seq": 8,
+              "text": "The proof is short: write w as rho e to the i phi. Then rho to the n e to the i n phi equals r e to the i theta forces rho to be r to the one over n, and n phi to be theta plus two k pi. Dividing gives the n angles."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ab is subtopic ka workhorse formula: kisi complex number ka har nth root nikaalna."
+            },
+            {
+              "seq": 2,
+              "text": "Humein saare w chahiye with w to the n barabar z, jahan z hai r e to the i theta. Moduli match karo aur arguments match karo, yaad rakhte hue ki argument sirf two pi tak fixed hai."
+            },
+            {
+              "seq": 3,
+              "text": "Result hai: w sub k barabar r to the one over n, times e to the i, theta plus two k pi, over n, k zero se n minus one tak."
+            },
+            {
+              "seq": 4,
+              "text": "Trig form mein wo hai r to the one over n, times cosine of theta plus two k pi over n, plus i sine of the same angle."
+            },
+            {
+              "seq": 5,
+              "text": "Crucial counting rule: theek n roots hote hain, k zero se n minus one tak. n se kam report karna root-count error hai, yahan ka signature trap."
+            },
+            {
+              "seq": 6,
+              "text": "Aur k ko n ya usse aage push karke extra roots nahi milte; wo bas pehle listed roots repeat karte hain. n minus one par ruko."
+            },
+            {
+              "seq": 7,
+              "text": "Method chaar steps hai. z ko Euler form mein daalo. Modulus ka nth root lo. k ko step karke n angles list karo. a plus i b form mein wapas sirf tab convert karo jab question maange."
+            },
+            {
+              "seq": 8,
+              "text": "Proof chhota hai: w ko rho e to the i phi likho. To rho to the n e to the i n phi barabar r e to the i theta majboor karta hai rho ko r to the one over n, aur n phi ko theta plus two k pi. Divide karke n angles milte hain."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब इस subtopic का workhorse formula: किसी complex number का हर nth root निकालना।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें सारे w चाहिए with w to the n बराबर z, जहां z है r e to the i theta। Moduli match करो और arguments match करो, याद रखते हुए कि argument सिर्फ two pi तक fixed है।"
+            },
+            {
+              "seq": 3,
+              "text": "Result है: w sub k बराबर r to the one over n, times e to the i, theta plus two k pi, over n, k zero से n minus one तक।"
+            },
+            {
+              "seq": 4,
+              "text": "Trig form में वो है r to the one over n, times cosine of theta plus two k pi over n, plus i sine of the same angle।"
+            },
+            {
+              "seq": 5,
+              "text": "Crucial counting rule: ठीक n roots होते हैं, k zero से n minus one तक। n से कम report करना root-count error है, यहां का signature trap।"
+            },
+            {
+              "seq": 6,
+              "text": "और k को n या उससे आगे push करके extra roots नहीं मिलते; वो बस पहले listed roots repeat करते हैं। n minus one पर रुको।"
+            },
+            {
+              "seq": 7,
+              "text": "Method चार steps है। z को Euler form में डालो। Modulus का nth root लो। k को step करके n angles list करो। a plus i b form में वापस सिर्फ तब convert करो जब question मांगे।"
+            },
+            {
+              "seq": 8,
+              "text": "Proof छोटा है: w को rho e to the i phi लिखो। तो rho to the n e to the i n phi बराबर r e to the i theta मजबूर करता है rho को r to the one over n, और n phi को theta plus two k pi। Divide करके n angles मिलते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "nth roots of unity and the cube-root workhorse",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Roots of unity: a regular n-gon"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "\\alpha_k=e^{2\\pi i k/n}=\\cos\\tfrac{2k\\pi}{n}+i\\sin\\tfrac{2k\\pi}{n},\\ k=0,\\dots,n-1"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "Writing $\\alpha=e^{2\\pi i/n}$, the roots are $1,\\alpha,\\alpha^{2},\\dots,\\alpha^{n-1}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "latex": "1+\\alpha+\\alpha^{2}+\\cdots+\\alpha^{n-1}=0\\quad(n\\ge2)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "text": "Proof: a geometric series with ratio $\\alpha\\neq1$ and $\\alpha^{n}=1$ sums to zero."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "latex": "\\omega=e^{2\\pi i/3}=-\\tfrac{1}{2}+\\tfrac{\\sqrt3}{2}i,\\quad \\omega^{2}=\\bar\\omega,\\quad \\omega^{3}=1"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "latex": "1+\\omega+\\omega^{2}=0,\\qquad \\omega^{n}=\\omega^{\\,n\\bmod 3}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "Always reduce an $\\omega$ exponent mod 3."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Set z equal to one in the roots formula and you get the nth roots of unity, the most useful special case of all."
+            },
+            {
+              "seq": 2,
+              "text": "They are alpha sub k equals e to the two pi i k over n, which is cosine of two k pi over n plus i sine of the same, for k from zero to n minus one."
+            },
+            {
+              "seq": 3,
+              "text": "Write alpha as e to the two pi i over n. Then the full set of roots is simply one, alpha, alpha squared, and so on up to alpha to the n minus one, the powers of a single root."
+            },
+            {
+              "seq": 4,
+              "text": "A key identity: for n at least two, the sum of all n roots of unity is zero."
+            },
+            {
+              "seq": 5,
+              "text": "The proof is a one-liner. The roots form a geometric series with common ratio alpha, and since alpha to the n is one but alpha itself is not one, the series sums to zero. Geometrically, the equally spaced arrows cancel."
+            },
+            {
+              "seq": 6,
+              "text": "The workhorse case is n equals three. The non-real cube root omega is e to the two pi i over three, which is minus one half plus root three over two i. And omega squared is its conjugate, with omega cubed equal to one."
+            },
+            {
+              "seq": 7,
+              "text": "Two facts to keep in muscle memory: one plus omega plus omega squared is zero, and omega to any power equals omega to that power reduced modulo three."
+            },
+            {
+              "seq": 8,
+              "text": "So whenever you see a high power of omega, immediately reduce the exponent mod three. Omega to the hundred is omega to the one, because one hundred leaves remainder one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Roots formula mein z ko one ke barabar set karo aur milte hain nth roots of unity, sabse useful special case."
+            },
+            {
+              "seq": 2,
+              "text": "Wo hain alpha sub k barabar e to the two pi i k over n, jo hai cosine of two k pi over n plus i sine of the same, k zero se n minus one tak."
+            },
+            {
+              "seq": 3,
+              "text": "alpha ko e to the two pi i over n likho. To roots ka poora set bas hai one, alpha, alpha squared, aur aise hi alpha to the n minus one tak, ek single root ki powers."
+            },
+            {
+              "seq": 4,
+              "text": "Ek key identity: n at least two ke liye, saare n roots of unity ka sum zero hai."
+            },
+            {
+              "seq": 5,
+              "text": "Proof ek line ka hai. Roots ek geometric series banate hain common ratio alpha ke saath, aur kyunki alpha to the n one hai par alpha khud one nahi, series zero ban jaati hai. Geometrically, equally spaced arrows cancel ho jaate hain."
+            },
+            {
+              "seq": 6,
+              "text": "Workhorse case hai n barabar three. Non-real cube root omega hai e to the two pi i over three, jo hai minus one half plus root three over two i. Aur omega squared iska conjugate hai, omega cubed barabar one ke saath."
+            },
+            {
+              "seq": 7,
+              "text": "Do facts muscle memory mein rakho: one plus omega plus omega squared zero hai, aur omega ki koi bhi power barabar omega ki wo power modulo three reduce ki hui."
+            },
+            {
+              "seq": 8,
+              "text": "To jab bhi omega ki high power dikhe, turant exponent ko mod three reduce karo. Omega to the hundred hai omega to the one, kyunki one hundred remainder one deta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Roots formula में z को one के बराबर set करो और मिलते हैं nth roots of unity, सबसे useful special case।"
+            },
+            {
+              "seq": 2,
+              "text": "वो हैं alpha sub k बराबर e to the two pi i k over n, जो है cosine of two k pi over n plus i sine of the same, k zero से n minus one तक।"
+            },
+            {
+              "seq": 3,
+              "text": "alpha को e to the two pi i over n लिखो। तो roots का पूरा set बस है one, alpha, alpha squared, और ऐसे ही alpha to the n minus one तक, एक single root की powers।"
+            },
+            {
+              "seq": 4,
+              "text": "एक key identity: n at least two के लिए, सारे n roots of unity का sum zero है।"
+            },
+            {
+              "seq": 5,
+              "text": "Proof एक line का है। Roots एक geometric series बनाते हैं common ratio alpha के साथ, और क्योंकि alpha to the n one है पर alpha खुद one नहीं, series zero बन जाती है। Geometrically, equally spaced arrows cancel हो जाते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Workhorse case है n बराबर three। Non-real cube root omega है e to the two pi i over three, जो है minus one half plus root three over two i। और omega squared इसका conjugate है, omega cubed बराबर one के साथ।"
+            },
+            {
+              "seq": 7,
+              "text": "दो facts muscle memory में रखो: one plus omega plus omega squared zero है, और omega की कोई भी power बराबर omega की वो power modulo three reduce की हुई।"
+            },
+            {
+              "seq": 8,
+              "text": "तो जब भी omega की high power दिखे, तुरंत exponent को mod three reduce करो। Omega to the hundred है omega to the one, क्योंकि one hundred remainder one देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "Factorization identities using omega",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "omega turns sums into products"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "a^{2}+ab+b^{2}=(a-b\\omega)(a-b\\omega^{2})"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "latex": "a^{2}-ab+b^{2}=(a+b\\omega)(a+b\\omega^{2})"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "a^{3}+b^{3}=(a+b)(a+b\\omega)(a+b\\omega^{2})"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "latex": "a^{3}-b^{3}=(a-b)(a-b\\omega)(a-b\\omega^{2})"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "latex": "a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a+b\\omega+c\\omega^{2})(a+b\\omega^{2}+c\\omega)"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "These come from splitting a real polynomial into its complex linear factors."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "Heavily used in JEE Advanced algebra — memorize the cubic-sum one."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Because omega and omega squared are the non-trivial cube roots, they factor several standard expressions into neat products."
+            },
+            {
+              "seq": 2,
+              "text": "First, a squared plus a b plus b squared factors as a minus b omega, times a minus b omega squared."
+            },
+            {
+              "seq": 3,
+              "text": "Flip the middle sign and you get a squared minus a b plus b squared equals a plus b omega, times a plus b omega squared."
+            },
+            {
+              "seq": 4,
+              "text": "The sum of two cubes gets a full factorization: a cubed plus b cubed equals a plus b, times a plus b omega, times a plus b omega squared."
+            },
+            {
+              "seq": 5,
+              "text": "Similarly the difference of two cubes: a cubed minus b cubed equals a minus b, times a minus b omega, times a minus b omega squared."
+            },
+            {
+              "seq": 6,
+              "text": "And the star identity, worth memorizing outright: a cubed plus b cubed plus c cubed minus three a b c factors as a plus b plus c, times a plus b omega plus c omega squared, times a plus b omega squared plus c omega."
+            },
+            {
+              "seq": 7,
+              "text": "All of these arise for the same reason: a real polynomial is being split into its complex linear factors, and omega supplies exactly the right roots to do it."
+            },
+            {
+              "seq": 8,
+              "text": "These show up heavily in JEE Advanced algebra. The cubic-sum identity in particular is one you should have instantly at your fingertips."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Kyunki omega aur omega squared non-trivial cube roots hain, wo kai standard expressions ko neat products mein factor karte hain."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle, a squared plus a b plus b squared factor hota hai a minus b omega, times a minus b omega squared."
+            },
+            {
+              "seq": 3,
+              "text": "Beech ka sign flip karo aur milta hai a squared minus a b plus b squared barabar a plus b omega, times a plus b omega squared."
+            },
+            {
+              "seq": 4,
+              "text": "Sum of two cubes ko full factorization milti hai: a cubed plus b cubed barabar a plus b, times a plus b omega, times a plus b omega squared."
+            },
+            {
+              "seq": 5,
+              "text": "Waise hi difference of two cubes: a cubed minus b cubed barabar a minus b, times a minus b omega, times a minus b omega squared."
+            },
+            {
+              "seq": 6,
+              "text": "Aur star identity, seedhe yaad karne layak: a cubed plus b cubed plus c cubed minus three a b c factor hota hai a plus b plus c, times a plus b omega plus c omega squared, times a plus b omega squared plus c omega."
+            },
+            {
+              "seq": 7,
+              "text": "Ye sab ek hi wajah se aate hain: ek real polynomial apne complex linear factors mein split ho raha hai, aur omega bilkul sahi roots deta hai ye karne ke liye."
+            },
+            {
+              "seq": 8,
+              "text": "Ye JEE Advanced algebra mein bahut aate hain. Cubic-sum identity khaas taur par aapke fingertips par turant honi chahiye."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "क्योंकि omega और omega squared non-trivial cube roots हैं, वो कई standard expressions को neat products में factor करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले, a squared plus a b plus b squared factor होता है a minus b omega, times a minus b omega squared।"
+            },
+            {
+              "seq": 3,
+              "text": "बीच का sign flip करो और मिलता है a squared minus a b plus b squared बराबर a plus b omega, times a plus b omega squared।"
+            },
+            {
+              "seq": 4,
+              "text": "Sum of two cubes को full factorization मिलती है: a cubed plus b cubed बराबर a plus b, times a plus b omega, times a plus b omega squared।"
+            },
+            {
+              "seq": 5,
+              "text": "वैसे ही difference of two cubes: a cubed minus b cubed बराबर a minus b, times a minus b omega, times a minus b omega squared।"
+            },
+            {
+              "seq": 6,
+              "text": "और star identity, सीधे याद करने लायक: a cubed plus b cubed plus c cubed minus three a b c factor होता है a plus b plus c, times a plus b omega plus c omega squared, times a plus b omega squared plus c omega।"
+            },
+            {
+              "seq": 7,
+              "text": "ये सब एक ही वजह से आते हैं: एक real polynomial अपने complex linear factors में split हो रहा है, और omega बिलकुल सही roots देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "ये JEE Advanced algebra में बहुत आते हैं। Cubic-sum identity खास तौर पर आपके fingertips पर तुरंत होनी चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "formulas",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "Euler, De Moivre and roots toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Consolidated: exponential form"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "e^{i\\theta}=\\cos\\theta+i\\sin\\theta,\\qquad z=re^{i\\theta}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "latex": "\\cos\\theta=\\frac{e^{i\\theta}+e^{-i\\theta}}{2},\\quad \\sin\\theta=\\frac{e^{i\\theta}-e^{-i\\theta}}{2i}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "z^{n}=r^{n}e^{in\\theta}=r^{n}(\\cos n\\theta+i\\sin n\\theta)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 37,
+          "latex": "w_k=r^{1/n}e^{\\,i(\\theta+2k\\pi)/n},\\ k=0,\\dots,n-1\\ (\\text{exactly }n)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "\\text{unity: }1,\\alpha,\\dots,\\alpha^{n-1},\\ \\alpha=e^{2\\pi i/n};\\ \\text{sum}=0"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "latex": "1,\\omega,\\omega^{2};\\ \\omega^{3}=1;\\ 1+\\omega+\\omega^{2}=0;\\ \\omega^{2}=\\bar\\omega"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "latex": "a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a+b\\omega+c\\omega^{2})(a+b\\omega^{2}+c\\omega)"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the exponential-form toolkit, all on one board, restated for quick recall."
+            },
+            {
+              "seq": 2,
+              "text": "Euler's formula: e to the i theta equals cosine theta plus i sine theta, and any number is r times e to the i theta."
+            },
+            {
+              "seq": 3,
+              "text": "The inverse relations express the trig functions back: cosine theta as the sum of e to the plus and minus i theta over two, and sine theta as the difference over two i."
+            },
+            {
+              "seq": 4,
+              "text": "De Moivre for powers: z to the n equals r to the n times e to the i n theta, equivalently r to the n times cosine n theta plus i sine n theta."
+            },
+            {
+              "seq": 5,
+              "text": "The roots formula: w sub k equals r to the one over n times e to the i, theta plus two k pi, over n, for k from zero to n minus one, giving exactly n roots."
+            },
+            {
+              "seq": 6,
+              "text": "The roots of unity: one, alpha, up to alpha to the n minus one, with alpha equal to e to the two pi i over n, and they sum to zero."
+            },
+            {
+              "seq": 7,
+              "text": "The cube roots of unity: one, omega, omega squared, with omega cubed one, their sum zero, and omega squared equal to the conjugate of omega."
+            },
+            {
+              "seq": 8,
+              "text": "And the cubic-sum factorization: a cubed plus b cubed plus c cubed minus three a b c equals a plus b plus c, times the two omega-factors. Keep this whole board as your quick reference."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye raha exponential-form toolkit, sab ek board par, quick recall ke liye restate kiya hua."
+            },
+            {
+              "seq": 2,
+              "text": "Euler's formula: e to the i theta barabar cosine theta plus i sine theta, aur koi bhi number hai r times e to the i theta."
+            },
+            {
+              "seq": 3,
+              "text": "Inverse relations trig functions ko wapas express karte hain: cosine theta as e to the plus aur minus i theta ka sum over two, aur sine theta as difference over two i."
+            },
+            {
+              "seq": 4,
+              "text": "Powers ke liye De Moivre: z to the n barabar r to the n times e to the i n theta, equivalently r to the n times cosine n theta plus i sine n theta."
+            },
+            {
+              "seq": 5,
+              "text": "Roots formula: w sub k barabar r to the one over n times e to the i, theta plus two k pi, over n, k zero se n minus one tak, theek n roots dete hue."
+            },
+            {
+              "seq": 6,
+              "text": "Roots of unity: one, alpha, up to alpha to the n minus one, alpha barabar e to the two pi i over n, aur wo sum hoke zero."
+            },
+            {
+              "seq": 7,
+              "text": "Cube roots of unity: one, omega, omega squared, omega cubed one, unka sum zero, aur omega squared barabar omega ka conjugate."
+            },
+            {
+              "seq": 8,
+              "text": "Aur cubic-sum factorization: a cubed plus b cubed plus c cubed minus three a b c barabar a plus b plus c, times do omega-factors. Is poore board ko apna quick reference rakho."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा exponential-form toolkit, सब एक board पर, quick recall के लिए restate किया हुआ।"
+            },
+            {
+              "seq": 2,
+              "text": "Euler's formula: e to the i theta बराबर cosine theta plus i sine theta, और कोई भी number है r times e to the i theta।"
+            },
+            {
+              "seq": 3,
+              "text": "Inverse relations trig functions को वापस express करते हैं: cosine theta as e to the plus और minus i theta का sum over two, और sine theta as difference over two i।"
+            },
+            {
+              "seq": 4,
+              "text": "Powers के लिए De Moivre: z to the n बराबर r to the n times e to the i n theta, equivalently r to the n times cosine n theta plus i sine n theta।"
+            },
+            {
+              "seq": 5,
+              "text": "Roots formula: w sub k बराबर r to the one over n times e to the i, theta plus two k pi, over n, k zero से n minus one तक, ठीक n roots देते हुए।"
+            },
+            {
+              "seq": 6,
+              "text": "Roots of unity: one, alpha, up to alpha to the n minus one, alpha बराबर e to the two pi i over n, और वो sum होके zero।"
+            },
+            {
+              "seq": 7,
+              "text": "Cube roots of unity: one, omega, omega squared, omega cubed one, उनका sum zero, और omega squared बराबर omega का conjugate।"
+            },
+            {
+              "seq": 8,
+              "text": "और cubic-sum factorization: a cubed plus b cubed plus c cubed minus three a b c बराबर a plus b plus c, times दो omega-factors। इस पूरे board को अपना quick reference रखो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "Worked: Euler form powers and 4th roots of unity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A power, and a full set of roots"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Write $z=-1+i$ in Euler form and find $z^{8}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "r=\\sqrt2,\\ \\arg z=\\tfrac{3\\pi}{4}\\ \\Rightarrow\\ z=\\sqrt2\\,e^{i3\\pi/4}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "z^{8}=(\\sqrt2)^{8}e^{i6\\pi}=16\\,e^{i6\\pi}=16"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Now the four 4th roots of unity: $\\alpha_k=e^{ik\\pi/2}$, $k=0,1,2,3$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "1,\\ i,\\ -1,\\ -i"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Their sum is $1+i-1-i=0$, as the roots-of-unity theorem promises."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Four roots, not one — always $k=0$ to $n-1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's exercise Euler form on a power, then list a complete set of roots."
+            },
+            {
+              "seq": 2,
+              "text": "Write z equals minus one plus i in Euler form, then find z to the eighth."
+            },
+            {
+              "seq": 3,
+              "text": "The modulus is root two, and the argument, being in quadrant two, is three pi over four. So z is root two times e to the i three pi over four."
+            },
+            {
+              "seq": 4,
+              "text": "Raise to the eighth: root two to the eighth is sixteen, and the angle becomes eight times three pi over four, which is six pi. e to the i six pi is one, so z to the eighth is just sixteen."
+            },
+            {
+              "seq": 5,
+              "text": "Now the four fourth roots of unity, using the roots-of-unity formula: alpha sub k equals e to the i k pi over two, for k zero, one, two, three."
+            },
+            {
+              "seq": 6,
+              "text": "Stepping k gives one, then i, then minus one, then minus i. A perfect square on the unit circle."
+            },
+            {
+              "seq": 7,
+              "text": "Their sum is one plus i minus one minus i, which is zero, exactly as the roots-of-unity theorem promises."
+            },
+            {
+              "seq": 8,
+              "text": "And note we listed four roots, not one. Always run k from zero to n minus one, and you'll never fall into the root-count trap."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Euler form ko ek power par exercise karte hain, phir ek complete set of roots list karte hain."
+            },
+            {
+              "seq": 2,
+              "text": "z equals minus one plus i ko Euler form mein likho, phir z to the eighth nikaalo."
+            },
+            {
+              "seq": 3,
+              "text": "Modulus hai root two, aur argument, quadrant two mein hone se, three pi over four. To z hai root two times e to the i three pi over four."
+            },
+            {
+              "seq": 4,
+              "text": "Eighth tak raise karo: root two to the eighth hai sixteen, aur angle ban jaata hai eight times three pi over four, jo hai six pi. e to the i six pi hai one, to z to the eighth bas sixteen hai."
+            },
+            {
+              "seq": 5,
+              "text": "Ab chaar fourth roots of unity, roots-of-unity formula se: alpha sub k barabar e to the i k pi over two, k zero, one, two, three ke liye."
+            },
+            {
+              "seq": 6,
+              "text": "k step karne se milta hai one, phir i, phir minus one, phir minus i. Unit circle par ek perfect square."
+            },
+            {
+              "seq": 7,
+              "text": "Unka sum hai one plus i minus one minus i, jo hai zero, bilkul jaisa roots-of-unity theorem promise karta hai."
+            },
+            {
+              "seq": 8,
+              "text": "Aur dhyaan do humne chaar roots list kiye, ek nahi. Hamesha k ko zero se n minus one tak chalao, aur aap kabhi root-count trap mein nahi giroge."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Euler form को एक power पर exercise करते हैं, फिर एक complete set of roots list करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "z बराबर minus one plus i को Euler form में लिखो, फिर z to the eighth निकालो।"
+            },
+            {
+              "seq": 3,
+              "text": "Modulus है root two, और argument, quadrant two में होने से, three pi over four। तो z है root two times e to the i three pi over four।"
+            },
+            {
+              "seq": 4,
+              "text": "Eighth तक raise करो: root two to the eighth है sixteen, और angle बन जाता है eight times three pi over four, जो है six pi। e to the i six pi है one, तो z to the eighth बस sixteen है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब चार fourth roots of unity, roots-of-unity formula से: alpha sub k बराबर e to the i k pi over two, k zero, one, two, three के लिए।"
+            },
+            {
+              "seq": 6,
+              "text": "k step करने से मिलता है one, फिर i, फिर minus one, फिर minus i। Unit circle पर एक perfect square।"
+            },
+            {
+              "seq": 7,
+              "text": "उनका sum है one plus i minus one minus i, जो है zero, बिलकुल जैसा roots-of-unity theorem promise करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और ध्यान दो हमने चार roots list किए, एक नहीं। हमेशा k को zero से n minus one तक चलाओ, और आप कभी root-count trap में नहीं गिरोगे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "Worked: all cube roots of 8i",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The nth-roots method in full"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Find all cube roots of $8i$. First, $8i=8e^{i\\pi/2}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\rho=8^{1/3}=2;\\quad \\text{angles}=\\frac{\\pi/2+2k\\pi}{3},\\ k=0,1,2"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "\\text{angles}=\\tfrac{\\pi}{6},\\ \\tfrac{5\\pi}{6},\\ \\tfrac{3\\pi}{2}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "2\\left(\\cos\\tfrac{\\pi}{6}+i\\sin\\tfrac{\\pi}{6}\\right)=\\sqrt3+i"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "2\\left(\\cos\\tfrac{5\\pi}{6}+i\\sin\\tfrac{5\\pi}{6}\\right)=-\\sqrt3+i"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "2\\left(\\cos\\tfrac{3\\pi}{2}+i\\sin\\tfrac{3\\pi}{2}\\right)=-2i"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Three roots, evenly spaced 120 degrees apart on radius 2."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's run the full nth-roots method on a clean example: all cube roots of eight i."
+            },
+            {
+              "seq": 2,
+              "text": "First put eight i in Euler form. Its modulus is eight and its argument is pi over two, so eight i is eight times e to the i pi over two."
+            },
+            {
+              "seq": 3,
+              "text": "The radius of the roots is the cube root of eight, which is two. The angles are pi over two plus two k pi, all divided by three, for k equals zero, one, two."
+            },
+            {
+              "seq": 4,
+              "text": "Stepping k gives three angles: pi over six, five pi over six, and three pi over two."
+            },
+            {
+              "seq": 5,
+              "text": "The first root is two times cosine pi over six plus i sine pi over six, which works out to root three plus i."
+            },
+            {
+              "seq": 6,
+              "text": "The second is two times cosine five pi over six plus i sine five pi over six, which is minus root three plus i."
+            },
+            {
+              "seq": 7,
+              "text": "The third is two times cosine three pi over two plus i sine three pi over two, which is minus two i."
+            },
+            {
+              "seq": 8,
+              "text": "So three roots, each on a circle of radius two, evenly spaced one hundred twenty degrees apart. That even spacing is your built-in check that you found them all."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Full nth-roots method ek clean example par chalate hain: eight i ke saare cube roots."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle eight i ko Euler form mein daalo. Iska modulus hai eight aur argument hai pi over two, to eight i hai eight times e to the i pi over two."
+            },
+            {
+              "seq": 3,
+              "text": "Roots ka radius hai eight ka cube root, jo hai two. Angles hain pi over two plus two k pi, poora divided by three, k barabar zero, one, two ke liye."
+            },
+            {
+              "seq": 4,
+              "text": "k step karne se teen angles milte hain: pi over six, five pi over six, aur three pi over two."
+            },
+            {
+              "seq": 5,
+              "text": "Pehla root hai two times cosine pi over six plus i sine pi over six, jo banta hai root three plus i."
+            },
+            {
+              "seq": 6,
+              "text": "Doosra hai two times cosine five pi over six plus i sine five pi over six, jo hai minus root three plus i."
+            },
+            {
+              "seq": 7,
+              "text": "Teesra hai two times cosine three pi over two plus i sine three pi over two, jo hai minus two i."
+            },
+            {
+              "seq": 8,
+              "text": "To teen roots, har ek radius two ke circle par, evenly spaced one hundred twenty degrees apart. Wo even spacing aapka built-in check hai ki aapne sab dhoondh liye."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Full nth-roots method एक clean example पर चलाते हैं: eight i के सारे cube roots।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले eight i को Euler form में डालो। इसका modulus है eight और argument है pi over two, तो eight i है eight times e to the i pi over two।"
+            },
+            {
+              "seq": 3,
+              "text": "Roots का radius है eight का cube root, जो है two। Angles हैं pi over two plus two k pi, पूरा divided by three, k बराबर zero, one, two के लिए।"
+            },
+            {
+              "seq": 4,
+              "text": "k step करने से तीन angles मिलते हैं: pi over six, five pi over six, और three pi over two।"
+            },
+            {
+              "seq": 5,
+              "text": "पहला root है two times cosine pi over six plus i sine pi over six, जो बनता है root three plus i।"
+            },
+            {
+              "seq": 6,
+              "text": "दूसरा है two times cosine five pi over six plus i sine five pi over six, जो है minus root three plus i।"
+            },
+            {
+              "seq": 7,
+              "text": "तीसरा है two times cosine three pi over two plus i sine three pi over two, जो है minus two i।"
+            },
+            {
+              "seq": 8,
+              "text": "तो तीन roots, हर एक radius two के circle पर, evenly spaced one hundred twenty degrees apart। वो even spacing आपका built-in check है कि आपने सब ढूंढ लिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "Worked (JEE Advanced): a product of omega-terms",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Reduce exponents, then collapse"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Evaluate $(1+\\omega)(1+\\omega^{2})(1+\\omega^{4})(1+\\omega^{8})$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Reduce exponents mod 3: $\\omega^{4}=\\omega$, $\\omega^{8}=\\omega^{2}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "=(1+\\omega)(1+\\omega^{2})(1+\\omega)(1+\\omega^{2})=\\big[(1+\\omega)(1+\\omega^{2})\\big]^{2}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "(1+\\omega)(1+\\omega^{2})=1+\\omega+\\omega^{2}+\\omega^{3}=0+1=1"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "latex": "\\text{value}=1^{2}=1"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The step $1+\\omega+\\omega^{2}=0$ does all the work."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Reduce $\\omega$ powers first — that is the whole game."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A classic Advanced problem that looks intimidating until you reduce the exponents."
+            },
+            {
+              "seq": 2,
+              "text": "Evaluate one plus omega, times one plus omega squared, times one plus omega to the fourth, times one plus omega to the eighth."
+            },
+            {
+              "seq": 3,
+              "text": "The first move is always the same: reduce every exponent modulo three. Omega to the fourth is omega, and omega to the eighth is omega squared."
+            },
+            {
+              "seq": 4,
+              "text": "So the product becomes one plus omega, times one plus omega squared, times one plus omega, times one plus omega squared. That's the bracket, one plus omega times one plus omega squared, all squared."
+            },
+            {
+              "seq": 5,
+              "text": "Expand that bracket: one plus omega plus omega squared plus omega cubed. The first three sum to zero, and omega cubed is one, so the bracket is just one."
+            },
+            {
+              "seq": 6,
+              "text": "Therefore the value is one squared, which is one."
+            },
+            {
+              "seq": 7,
+              "text": "Notice that the single identity, one plus omega plus omega squared equals zero, did essentially all the work once the exponents were reduced."
+            },
+            {
+              "seq": 8,
+              "text": "So the whole game with omega products is: reduce the powers modulo three first, then let the zero-sum identity collapse everything."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ek classic Advanced problem jo intimidating lagta hai jab tak aap exponents reduce na karo."
+            },
+            {
+              "seq": 2,
+              "text": "Evaluate karo one plus omega, times one plus omega squared, times one plus omega to the fourth, times one plus omega to the eighth."
+            },
+            {
+              "seq": 3,
+              "text": "Pehla move hamesha same hai: har exponent ko modulo three reduce karo. Omega to the fourth hai omega, aur omega to the eighth hai omega squared."
+            },
+            {
+              "seq": 4,
+              "text": "To product ban jaata hai one plus omega, times one plus omega squared, times one plus omega, times one plus omega squared. Wo hai bracket, one plus omega times one plus omega squared, poora squared."
+            },
+            {
+              "seq": 5,
+              "text": "Wo bracket expand karo: one plus omega plus omega squared plus omega cubed. Pehle teen sum hoke zero, aur omega cubed hai one, to bracket bas one hai."
+            },
+            {
+              "seq": 6,
+              "text": "Isliye value hai one squared, jo hai one."
+            },
+            {
+              "seq": 7,
+              "text": "Dhyaan do ki wo single identity, one plus omega plus omega squared barabar zero, ne essentially saara kaam kar diya jaise hi exponents reduce hue."
+            },
+            {
+              "seq": 8,
+              "text": "To omega products ka poora game hai: pehle powers ko modulo three reduce karo, phir zero-sum identity ko sab collapse karne do."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक classic Advanced problem जो intimidating लगता है जब तक आप exponents reduce ना करो।"
+            },
+            {
+              "seq": 2,
+              "text": "Evaluate करो one plus omega, times one plus omega squared, times one plus omega to the fourth, times one plus omega to the eighth।"
+            },
+            {
+              "seq": 3,
+              "text": "पहला move हमेशा same है: हर exponent को modulo three reduce करो। Omega to the fourth है omega, और omega to the eighth है omega squared।"
+            },
+            {
+              "seq": 4,
+              "text": "तो product बन जाता है one plus omega, times one plus omega squared, times one plus omega, times one plus omega squared। वो है bracket, one plus omega times one plus omega squared, पूरा squared।"
+            },
+            {
+              "seq": 5,
+              "text": "वो bracket expand करो: one plus omega plus omega squared plus omega cubed। पहले तीन sum होके zero, और omega cubed है one, तो bracket बस one है।"
+            },
+            {
+              "seq": 6,
+              "text": "इसलिए value है one squared, जो है one।"
+            },
+            {
+              "seq": 7,
+              "text": "ध्यान दो कि वो single identity, one plus omega plus omega squared बराबर zero, ने essentially सारा काम कर दिया जैसे ही exponents reduce हुए।"
+            },
+            {
+              "seq": 8,
+              "text": "तो omega products का पूरा game है: पहले powers को modulo three reduce करो, फिर zero-sum identity को सब collapse करने दो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "Worked (JEE Advanced): the cubic-sum identity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "a^3 + b^3 + c^3 - 3abc"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Evaluate for $a=1,\\ b=2,\\ c=3$ using the standard factorization."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "a+b+c=6"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "a^{2}+b^{2}+c^{2}-ab-bc-ca=14-11=3"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "latex": "(6)(3)=18"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The $\\omega$-factorization gives the same product as three complex linear factors."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Real answer, complex tools — the factors pair up to stay real."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is how the omega factorization delivers a concrete number for the classic cubic-sum expression."
+            },
+            {
+              "seq": 2,
+              "text": "Evaluate a cubed plus b cubed plus c cubed minus three a b c, for a equals one, b equals two, c equals three."
+            },
+            {
+              "seq": 3,
+              "text": "The standard real factorization is a plus b plus c, times a squared plus b squared plus c squared minus a b minus b c minus c a."
+            },
+            {
+              "seq": 4,
+              "text": "The first factor, a plus b plus c, is one plus two plus three, which is six."
+            },
+            {
+              "seq": 5,
+              "text": "The second factor: a squared plus b squared plus c squared is one plus four plus nine, fourteen; and a b plus b c plus c a is two plus six plus three, eleven. Fourteen minus eleven is three."
+            },
+            {
+              "seq": 6,
+              "text": "So the value is six times three, which is eighteen."
+            },
+            {
+              "seq": 7,
+              "text": "The omega version factors the very same expression into three complex linear factors, a plus b plus c, times the two omega-mixtures, and it produces exactly the same product."
+            },
+            {
+              "seq": 8,
+              "text": "That's the elegance: a real answer emerges from complex tools, because the complex factors pair up so that the imaginary parts cancel perfectly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye raha kaise omega factorization classic cubic-sum expression ke liye ek concrete number deta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Evaluate karo a cubed plus b cubed plus c cubed minus three a b c, a equals one, b equals two, c equals three ke liye."
+            },
+            {
+              "seq": 3,
+              "text": "Standard real factorization hai a plus b plus c, times a squared plus b squared plus c squared minus a b minus b c minus c a."
+            },
+            {
+              "seq": 4,
+              "text": "Pehla factor, a plus b plus c, hai one plus two plus three, jo hai six."
+            },
+            {
+              "seq": 5,
+              "text": "Doosra factor: a squared plus b squared plus c squared hai one plus four plus nine, fourteen; aur a b plus b c plus c a hai two plus six plus three, eleven. Fourteen minus eleven hai three."
+            },
+            {
+              "seq": 6,
+              "text": "To value hai six times three, jo hai eighteen."
+            },
+            {
+              "seq": 7,
+              "text": "Omega version usi expression ko teen complex linear factors mein factor karta hai, a plus b plus c, times do omega-mixtures, aur wo bilkul wahi product deta hai."
+            },
+            {
+              "seq": 8,
+              "text": "Yehi elegance hai: ek real answer complex tools se nikalta hai, kyunki complex factors aise pair up karte hain ki imaginary parts perfectly cancel ho jaate hain."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा कैसे omega factorization classic cubic-sum expression के लिए एक concrete number देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Evaluate करो a cubed plus b cubed plus c cubed minus three a b c, a equals one, b equals two, c equals three के लिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Standard real factorization है a plus b plus c, times a squared plus b squared plus c squared minus a b minus b c minus c a।"
+            },
+            {
+              "seq": 4,
+              "text": "पहला factor, a plus b plus c, है one plus two plus three, जो है six।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा factor: a squared plus b squared plus c squared है one plus four plus nine, fourteen; और a b plus b c plus c a है two plus six plus three, eleven। Fourteen minus eleven है three।"
+            },
+            {
+              "seq": 6,
+              "text": "तो value है six times three, जो है eighteen।"
+            },
+            {
+              "seq": 7,
+              "text": "Omega version उसी expression को तीन complex linear factors में factor करता है, a plus b plus c, times दो omega-mixtures, और वो बिलकुल वही product देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "यही elegance है: एक real answer complex tools से निकलता है, क्योंकि complex factors ऐसे pair up करते हैं कि imaginary parts perfectly cancel हो जाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "tips",
+      "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+      "title": "Pitfalls & pro-tips: Euler form and roots",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Root traps, exponential shortcuts"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "An $n$th root has exactly $n$ values — never report just one."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Reduce every $\\omega$ exponent mod 3; reduce roots-of-unity powers mod $n$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "Don't confuse $e^{i\\theta}$ with $e^{\\theta}$, or mix degrees and radians."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Remember $\\omega^{2}=\\bar\\omega$, and $\\omega,\\omega^{2}$ are a conjugate pair."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Pro-tip: powers multiply the angle; roots divide it over $n$ branches — go Euler first."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "$1+\\omega=-\\omega^{2}$ and $1+\\omega^{2}=-\\omega$ — instant simplifiers."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "The $n$ roots of unity sum to zero — use symmetry to kill sums fast."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lock in the traps and shortcuts for Euler form and roots."
+            },
+            {
+              "seq": 2,
+              "text": "The signature trap: an nth root has exactly n values. Reporting just the principal root, or the wrong count, is the classic mistake here."
+            },
+            {
+              "seq": 3,
+              "text": "Keep the arithmetic tidy: reduce every omega exponent modulo three, and reduce roots-of-unity powers modulo n. That prevents almost all algebra slips."
+            },
+            {
+              "seq": 4,
+              "text": "Second trap: don't confuse e to the i theta with e to the theta, and never mix degrees and radians inside the exponent. Pick radians and stay there."
+            },
+            {
+              "seq": 5,
+              "text": "Third: remember omega squared is the conjugate of omega, so omega and omega squared always come as a conjugate pair."
+            },
+            {
+              "seq": 6,
+              "text": "Now the pro-tips. Keep the duality clear: powers multiply the angle, roots divide it over n branches. For anything with powers or roots, go to Euler form first, never expand."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>And two instant simplifiers:</whisper> one plus omega equals minus omega squared, and one plus omega squared equals minus omega. They shortcut a huge number of omega problems."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, the n roots of unity always sum to zero and form a regular polygon. Use that symmetry to kill sums instantly instead of adding term by term."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Euler form aur roots ke traps aur shortcuts lock kar lete hain."
+            },
+            {
+              "seq": 2,
+              "text": "Signature trap: ek nth root ke theek n values hote hain. Sirf principal root, ya galat count, report karna yahan ki classic mistake hai."
+            },
+            {
+              "seq": 3,
+              "text": "Arithmetic tidy rakho: har omega exponent ko modulo three reduce karo, aur roots-of-unity powers ko modulo n. Ye lagbhag saare algebra slips rok deta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Doosra trap: e to the i theta ko e to the theta se confuse mat karo, aur exponent ke andar degrees aur radians kabhi mix mat karo. Radians chuno aur usi mein raho."
+            },
+            {
+              "seq": 5,
+              "text": "Teesra: yaad rakho omega squared hai omega ka conjugate, to omega aur omega squared hamesha ek conjugate pair ki tarah aate hain."
+            },
+            {
+              "seq": 6,
+              "text": "Ab pro-tips. Duality clear rakho: powers angle ko multiply karte hain, roots use n branches par divide karte hain. Powers ya roots wali kisi bhi cheez ke liye pehle Euler form mein jaao, expand kabhi mat karo."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Aur do instant simplifiers:</whisper> one plus omega barabar minus omega squared, aur one plus omega squared barabar minus omega. Ye bahut saare omega problems shortcut karte hain."
+            },
+            {
+              "seq": 8,
+              "text": "Aakhir mein, n roots of unity hamesha sum hoke zero aur ek regular polygon banate hain. Us symmetry ko use karke sums turant khatam karo, term by term add karne ke bajaay."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Euler form और roots के traps और shortcuts lock कर लेते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Signature trap: एक nth root के ठीक n values होते हैं। सिर्फ principal root, या गलत count, report करना यहां की classic mistake है।"
+            },
+            {
+              "seq": 3,
+              "text": "Arithmetic tidy रखो: हर omega exponent को modulo three reduce करो, और roots-of-unity powers को modulo n। ये लगभग सारे algebra slips रोक देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा trap: e to the i theta को e to the theta से confuse मत करो, और exponent के अंदर degrees और radians कभी mix मत करो। Radians चुनो और उसी में रहो।"
+            },
+            {
+              "seq": 5,
+              "text": "तीसरा: याद रखो omega squared है omega का conjugate, तो omega और omega squared हमेशा एक conjugate pair की तरह आते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "अब pro-tips। Duality clear रखो: powers angle को multiply करते हैं, roots उसे n branches पर divide करते हैं। Powers या roots वाली किसी भी चीज़ के लिए पहले Euler form में जाओ, expand कभी मत करो।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>और दो instant simplifiers:</whisper> one plus omega बराबर minus omega squared, और one plus omega squared बराबर minus omega। ये बहुत सारे omega problems shortcut करते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिर में, n roots of unity हमेशा sum होके zero और एक regular polygon बनाते हैं। उस symmetry को use करके sums तुरंत खत्म करो, term by term add करने के बजाय।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "Complex numbers as position vectors",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "z is a point AND an arrow"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$z=x+iy$ is the point $(x,y)$ and the position vector $\\vec{OP}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "$z_2-z_1$ is the displacement from $z_1$ to $z_2$; $|z_2-z_1|$ is the distance."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "\\text{distance}=|z_1-z_2|,\\qquad \\text{midpoint}=\\frac{z_1+z_2}{2}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "\\text{dividing } z_1 z_2 \\text{ in } m:n=\\frac{nz_1+mz_2}{m+n}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "\\text{centroid}=\\frac{z_1+z_2+z_3}{3}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Every vector idea from coordinate geometry transfers directly to $z$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "This is a JEE extension — the heart of Advanced complex numbers."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The final subtopic turns complex numbers into geometry. The key realization: a complex number is both a point and a position vector."
+            },
+            {
+              "seq": 2,
+              "text": "z equals x plus i y is the point x comma y, and simultaneously the arrow from the origin O to that point P. So everything you know about vectors carries over."
+            },
+            {
+              "seq": 3,
+              "text": "In particular, z two minus z one is the displacement vector from z one to z two, and its modulus, the modulus of z two minus z one, is the distance between the two points."
+            },
+            {
+              "seq": 4,
+              "text": "From this, the standard formulas follow directly. The distance between z one and z two is the modulus of their difference. The midpoint is their average, z one plus z two over two."
+            },
+            {
+              "seq": 5,
+              "text": "The point dividing the segment from z one to z two in the ratio m to n is n z one plus m z two, over m plus n — the section formula, unchanged from coordinate geometry."
+            },
+            {
+              "seq": 6,
+              "text": "And the centroid of a triangle with vertices z one, z two, z three is simply their average, z one plus z two plus z three, over three."
+            },
+            {
+              "seq": 7,
+              "text": "The theme is that every vector idea from coordinate geometry transfers directly into complex numbers, often more cleanly, because one complex number packs both coordinates."
+            },
+            {
+              "seq": 8,
+              "text": "Like the previous subtopic, this is a JEE extension, but it's the heart of Advanced complex numbers, so it rewards careful study."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Aakhri subtopic complex numbers ko geometry mein badalta hai. Key realization: ek complex number ek point bhi hai aur ek position vector bhi."
+            },
+            {
+              "seq": 2,
+              "text": "z equals x plus i y hai point x comma y, aur saath hi origin O se us point P tak jaata arrow. To vectors ke baare mein jo kuch aap jaante ho, sab carry over hota hai."
+            },
+            {
+              "seq": 3,
+              "text": "Khaas taur par, z two minus z one hai z one se z two tak ka displacement vector, aur iska modulus, z two minus z one ka modulus, do points ke beech ki distance hai."
+            },
+            {
+              "seq": 4,
+              "text": "Isse standard formulas seedhe nikalte hain. z one aur z two ke beech distance hai unke difference ka modulus. Midpoint hai unka average, z one plus z two over two."
+            },
+            {
+              "seq": 5,
+              "text": "z one se z two tak ke segment ko ratio m to n mein divide karne wala point hai n z one plus m z two, over m plus n — section formula, coordinate geometry se unchanged."
+            },
+            {
+              "seq": 6,
+              "text": "Aur z one, z two, z three vertices wale triangle ka centroid bas unka average hai, z one plus z two plus z three, over three."
+            },
+            {
+              "seq": 7,
+              "text": "Theme ye hai ki coordinate geometry ka har vector idea seedha complex numbers mein transfer hota hai, aksar zyada cleanly, kyunki ek complex number dono coordinates pack karta hai."
+            },
+            {
+              "seq": 8,
+              "text": "Pichhle subtopic ki tarah, ye JEE extension hai, par ye Advanced complex numbers ka dil hai, to careful study reward karta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आखिरी subtopic complex numbers को geometry में बदलता है। Key realization: एक complex number एक point भी है और एक position vector भी।"
+            },
+            {
+              "seq": 2,
+              "text": "z equals x plus i y है point x comma y, और साथ ही origin O से उस point P तक जाता arrow। तो vectors के बारे में जो कुछ आप जानते हो, सब carry over होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "खास तौर पर, z two minus z one है z one से z two तक का displacement vector, और इसका modulus, z two minus z one का modulus, दो points के बीच की distance है।"
+            },
+            {
+              "seq": 4,
+              "text": "इससे standard formulas सीधे निकलते हैं। z one और z two के बीच distance है उनके difference का modulus। Midpoint है उनका average, z one plus z two over two।"
+            },
+            {
+              "seq": 5,
+              "text": "z one से z two तक के segment को ratio m to n में divide करने वाला point है n z one plus m z two, over m plus n — section formula, coordinate geometry से unchanged।"
+            },
+            {
+              "seq": 6,
+              "text": "और z one, z two, z three vertices वाले triangle का centroid बस उनका average है, z one plus z two plus z three, over three।"
+            },
+            {
+              "seq": 7,
+              "text": "Theme ये है कि coordinate geometry का हर vector idea सीधा complex numbers में transfer होता है, अक्सर ज़्यादा cleanly, क्योंकि एक complex number दोनों coordinates pack करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "पिछले subtopic की तरह, ये JEE extension है, पर ये Advanced complex numbers का दिल है, तो careful study reward करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "concept",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "The rotation theorem",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Rotation = multiply the displacement by e^{i theta}"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "To rotate $\\vec{AB}$ about $A$ by angle $\\theta$, multiply $z_B-z_A$ by $e^{i\\theta}$."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Angle at the common vertex, between two displacements",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 300' xmlns='http://www.w3.org/2000/svg'><circle cx='90' cy='210' r='4' fill='#333'/><text x='70' y='228' font-size='13' fill='#333'>z1</text><line x1='90' y1='210' x2='330' y2='150' stroke='#1f6feb' stroke-width='2.5'/><polygon points='330,150 316,148 322,160' fill='#1f6feb'/><circle cx='330' cy='150' r='4' fill='#1f6feb'/><text x='336' y='150' font-size='13' fill='#1f6feb'>z2</text><line x1='90' y1='210' x2='250' y2='60' stroke='#2ea043' stroke-width='2.5'/><polygon points='250,60 244,73 256,71' fill='#2ea043'/><circle cx='250' cy='60' r='4' fill='#2ea043'/><text x='256' y='58' font-size='13' fill='#2ea043'>z3</text><path d='M 175 191 A 90 90 0 0 0 148 132' fill='none' stroke='#d29922' stroke-width='1.5'/><text x='150' y='170' font-size='13' fill='#d29922'>theta</text><text x='40' y='285' font-size='11' fill='#777'>angle at z1, from z1z3 to z1z2</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "latex": "\\frac{z_2-z_1}{z_3-z_1}=\\left|\\frac{z_2-z_1}{z_3-z_1}\\right|e^{i\\theta},\\quad \\theta=\\arg\\frac{z_2-z_1}{z_3-z_1}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "The angle is measured at the common vertex $z_1$, from $\\vec{z_1z_3}$ to $\\vec{z_1z_2}$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "Reversing the ratio reverses the angle's sign."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "This single move finds a third vertex, proves a right angle, or builds a square."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "style": "red-margin",
+          "text": "$e^{i\\theta}$ is anticlockwise; $e^{-i\\theta}$ is clockwise."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The rotation theorem is the single most powerful tool in Argand geometry. It solves a huge class of configuration problems in one line."
+            },
+            {
+              "seq": 2,
+              "text": "The core idea: to rotate the vector from A to B about the point A through an angle theta, you multiply the displacement z B minus z A by e to the i theta."
+            },
+            {
+              "seq": 3,
+              "text": "Picture three points forming a triangle, with two displacement vectors leaving the common vertex z one, and an angle theta between them."
+            },
+            {
+              "seq": 4,
+              "text": "The theorem packages that as a ratio: z two minus z one, over z three minus z one, equals the ratio of their lengths times e to the i theta, where theta is the argument of that same ratio."
+            },
+            {
+              "seq": 5,
+              "text": "Read the geometry carefully: the angle sits at the common vertex z one, measured from the direction of z one to z three, turning toward z one to z two."
+            },
+            {
+              "seq": 6,
+              "text": "And mind the order: reversing the ratio, swapping which displacement is on top, reverses the sign of the angle. Getting this backwards is the rotation-sign error."
+            },
+            {
+              "seq": 7,
+              "text": "With this one move you can find an unknown third vertex, prove that an angle is a right angle, or construct a square or an equilateral triangle."
+            },
+            {
+              "seq": 8,
+              "text": "Keep the direction convention firm: multiplying by e to the i theta rotates anticlockwise, while e to the minus i theta rotates clockwise."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Rotation theorem Argand geometry ka sabse powerful tool hai. Ye configuration problems ki ek badi class ek line mein solve karta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Core idea: A se B tak ke vector ko point A ke baare mein angle theta se rotate karne ke liye, aap displacement z B minus z A ko e to the i theta se multiply karo."
+            },
+            {
+              "seq": 3,
+              "text": "Teen points ko triangle banate socho, do displacement vectors common vertex z one se nikalte hue, aur unke beech ek angle theta."
+            },
+            {
+              "seq": 4,
+              "text": "Theorem ise ek ratio ki tarah package karta hai: z two minus z one, over z three minus z one, barabar unki lengths ka ratio times e to the i theta, jahan theta hai usi ratio ka argument."
+            },
+            {
+              "seq": 5,
+              "text": "Geometry dhyaan se padho: angle common vertex z one par baithta hai, z one se z three ki direction se naapa, z one se z two ki taraf ghoomte hue."
+            },
+            {
+              "seq": 6,
+              "text": "Aur order dhyaan se: ratio ulta karna, upar kaun sa displacement hai wo swap karna, angle ka sign ulta kar deta hai. Ise ulta karna rotation-sign error hai."
+            },
+            {
+              "seq": 7,
+              "text": "Is ek move se aap ek unknown teesra vertex nikaal sakte ho, prove kar sakte ho ki koi angle right angle hai, ya ek square ya equilateral triangle bana sakte ho."
+            },
+            {
+              "seq": 8,
+              "text": "Direction convention pakka rakho: e to the i theta se multiply karna anticlockwise rotate karta hai, jabki e to the minus i theta clockwise."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Rotation theorem Argand geometry का सबसे powerful tool है। ये configuration problems की एक बड़ी class एक line में solve करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Core idea: A से B तक के vector को point A के बारे में angle theta से rotate करने के लिए, आप displacement z B minus z A को e to the i theta से multiply करो।"
+            },
+            {
+              "seq": 3,
+              "text": "तीन points को triangle बनाते सोचो, दो displacement vectors common vertex z one से निकलते हुए, और उनके बीच एक angle theta।"
+            },
+            {
+              "seq": 4,
+              "text": "Theorem इसे एक ratio की तरह package करता है: z two minus z one, over z three minus z one, बराबर उनकी lengths का ratio times e to the i theta, जहां theta है उसी ratio का argument।"
+            },
+            {
+              "seq": 5,
+              "text": "Geometry ध्यान से पढ़ो: angle common vertex z one पर बैठता है, z one से z three की direction से नापा, z one से z two की तरफ घूमते हुए।"
+            },
+            {
+              "seq": 6,
+              "text": "और order ध्यान से: ratio उलटा करना angle का sign उलटा कर देता है। इसे उलटा करना rotation-sign error है।"
+            },
+            {
+              "seq": 7,
+              "text": "इस एक move से आप एक unknown तीसरा vertex निकाल सकते हो, prove कर सकते हो कि कोई angle right angle है, या एक square या equilateral triangle बना सकते हो।"
+            },
+            {
+              "seq": 8,
+              "text": "Direction convention पक्का रखो: e to the i theta से multiply करना anticlockwise rotate करता है, जबकि e to the minus i theta clockwise।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "concept",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "Lines, collinearity, and the perpendicular bisector",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Straight-line conditions in z"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$z$ lies on the line through $z_1,z_2$ iff $\\dfrac{z-z_1}{z_2-z_1}$ is real."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "latex": "\\frac{z-z_1}{z_2-z_1}=\\overline{\\left(\\frac{z-z_1}{z_2-z_1}\\right)}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\bar a z+a\\bar z+b=0\\quad(a\\in\\mathbb{C},\\ b\\in\\mathbb{R})"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "text": "Collinearity: $z_1,z_2,z_3$ collinear iff $\\dfrac{z_3-z_1}{z_2-z_1}\\in\\mathbb{R}$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "latex": "|z-z_1|=|z-z_2|\\ \\Rightarrow\\ \\text{perpendicular bisector of } z_1 z_2"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "'Equidistant from two points' reads directly as the perpendicular bisector."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "Translate words to a $z$-equation; that is the whole skill."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's express straight-line conditions in the language of z. The recurring skill is translating a geometric sentence into a complex equation."
+            },
+            {
+              "seq": 2,
+              "text": "A point z lies on the line through z one and z two exactly when the ratio z minus z one, over z two minus z one, is a real number — because being on the line means zero turning."
+            },
+            {
+              "seq": 3,
+              "text": "Equivalently, that ratio equals its own conjugate, which is just the algebraic way of saying it's real."
+            },
+            {
+              "seq": 4,
+              "text": "The general equation of a line in this notation is a bar z, plus a z bar, plus b equals zero, where a is complex and b is real."
+            },
+            {
+              "seq": 5,
+              "text": "Collinearity is the same idea for three points: z one, z two, z three are collinear exactly when z three minus z one, over z two minus z one, is real — same direction, no turn."
+            },
+            {
+              "seq": 6,
+              "text": "Now the perpendicular bisector. The condition modulus of z minus z one equals modulus of z minus z two describes all points equidistant from z one and z two."
+            },
+            {
+              "seq": 7,
+              "text": "And equidistant from two fixed points is, word for word, the perpendicular bisector of the segment joining them. Reading the words straight off gives the locus."
+            },
+            {
+              "seq": 8,
+              "text": "That's the whole skill of this subtopic: translate the geometric words into a z-equation, and translate a z-equation back into geometry."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Straight-line conditions ko z ki bhaasha mein express karte hain. Recurring skill hai ek geometric sentence ko complex equation mein translate karna."
+            },
+            {
+              "seq": 2,
+              "text": "Ek point z, z one aur z two se jaati line par tabhi hai jab ratio z minus z one, over z two minus z one, ek real number ho — kyunki line par hona matlab zero turning."
+            },
+            {
+              "seq": 3,
+              "text": "Equivalently, wo ratio apne hi conjugate ke barabar hai, jo bas real hone ka algebraic tareeka hai."
+            },
+            {
+              "seq": 4,
+              "text": "Is notation mein line ki general equation hai a bar z, plus a z bar, plus b barabar zero, jahan a complex hai aur b real."
+            },
+            {
+              "seq": 5,
+              "text": "Collinearity teen points ke liye wahi idea hai: z one, z two, z three collinear tabhi hain jab z three minus z one, over z two minus z one, real ho — same direction, koi turn nahi."
+            },
+            {
+              "seq": 6,
+              "text": "Ab perpendicular bisector. Condition modulus of z minus z one barabar modulus of z minus z two un saare points ko describe karti hai jo z one aur z two se equidistant hain."
+            },
+            {
+              "seq": 7,
+              "text": "Aur do fixed points se equidistant hona, shabd-ba-shabd, unhe jodne wale segment ka perpendicular bisector hai. Shabdon ko seedha padhne se locus mil jaata hai."
+            },
+            {
+              "seq": 8,
+              "text": "Yehi is subtopic ki poori skill hai: geometric words ko z-equation mein translate karo, aur z-equation ko wapas geometry mein."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Straight-line conditions को z की भाषा में express करते हैं। Recurring skill है एक geometric sentence को complex equation में translate करना।"
+            },
+            {
+              "seq": 2,
+              "text": "एक point z, z one और z two से जाती line पर तभी है जब ratio z minus z one, over z two minus z one, एक real number हो — क्योंकि line पर होना मतलब zero turning।"
+            },
+            {
+              "seq": 3,
+              "text": "Equivalently, वो ratio अपने ही conjugate के बराबर है, जो बस real होने का algebraic तरीका है।"
+            },
+            {
+              "seq": 4,
+              "text": "इस notation में line की general equation है a bar z, plus a z bar, plus b बराबर zero, जहां a complex है और b real।"
+            },
+            {
+              "seq": 5,
+              "text": "Collinearity तीन points के लिए वही idea है: z one, z two, z three collinear तभी हैं जब z three minus z one, over z two minus z one, real हो — same direction, कोई turn नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "अब perpendicular bisector। Condition modulus of z minus z one बराबर modulus of z minus z two उन सारे points को describe करती है जो z one और z two से equidistant हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "और दो fixed points से equidistant होना, शब्द-बा-शब्द, उन्हें जोड़ने वाले segment का perpendicular bisector है। शब्दों को सीधा पढ़ने से locus मिल जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "यही इस subtopic की पूरी skill है: geometric words को z-equation में translate करो, और z-equation को वापस geometry में।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "concept",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "Circles and the Apollonius locus",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Circles, and the k=1 vs k!=1 split"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "|z-z_0|=r\\quad(\\text{centre } z_0,\\ \\text{radius } r)"
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "A circle, and a perpendicular-bisector line",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 280' xmlns='http://www.w3.org/2000/svg'><circle cx='250' cy='140' r='75' fill='none' stroke='#1f6feb' stroke-width='2'/><circle cx='250' cy='140' r='3.5' fill='#1f6feb'/><text x='258' y='138' font-size='12' fill='#1f6feb'>z0</text><line x1='250' y1='140' x2='321' y2='118' stroke='#999' stroke-width='1.4' stroke-dasharray='4 3'/><text x='278' y='120' font-size='12' fill='#999'>r</text><text x='195' y='40' font-size='12' fill='#1f6feb'>|z - z0| = r</text><line x1='40' y1='60' x2='120' y2='220' stroke='#2ea043' stroke-width='2'/><text x='30' y='245' font-size='12' fill='#2ea043'>|z-z1|=|z-z2|: line</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "latex": "z\\bar z+\\bar a z+a\\bar z+b=0\\ (a\\in\\mathbb{C},b\\in\\mathbb{R}),\\ \\text{centre }-a,\\ \\text{radius }\\sqrt{|a|^{2}-b}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\frac{|z-z_1|}{|z-z_2|}=k"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "$k=1$: perpendicular bisector (a LINE), not a circle."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "$k>0,\\ k\\neq1$: an Apollonius circle."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "text": "Proof idea: expand with $|w|^{2}=w\\bar w$; the $z\\bar z$ term survives only when $k\\neq1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Circles are the other fundamental locus, and the Apollonius condition is where a subtle trap hides."
+            },
+            {
+              "seq": 2,
+              "text": "The cleanest circle is modulus of z minus z zero equals r: all points at fixed distance r from the centre z zero. That reads straight off as a circle."
+            },
+            {
+              "seq": 3,
+              "text": "The picture shows both loci: a circle of radius r about its centre, and, for contrast, a perpendicular-bisector line."
+            },
+            {
+              "seq": 4,
+              "text": "In general form, a circle is z z bar plus a bar z plus a z bar plus b equals zero, with a complex and b real, having centre minus a and radius root of the modulus of a squared minus b."
+            },
+            {
+              "seq": 5,
+              "text": "Now the Apollonius locus: the set where the ratio of distances, modulus of z minus z one over modulus of z minus z two, equals a constant k."
+            },
+            {
+              "seq": 6,
+              "text": "Here's the trap. When k equals one, the two distances are equal, so this is the perpendicular bisector, a straight line, not a circle."
+            },
+            {
+              "seq": 7,
+              "text": "But when k is positive and not equal to one, the locus really is a circle, the Apollonius circle."
+            },
+            {
+              "seq": 8,
+              "text": "The proof idea: square the condition and expand using modulus w squared equals w times w bar. The z z bar term survives only when k is not one; at k equal one it cancels, leaving a line."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Circles doosra fundamental locus hain, aur Apollonius condition wahan hai jahan ek subtle trap chhupa hai."
+            },
+            {
+              "seq": 2,
+              "text": "Sabse clean circle hai modulus of z minus z zero barabar r: saare points jo centre z zero se fixed distance r par hain. Ye seedha circle padha jaata hai."
+            },
+            {
+              "seq": 3,
+              "text": "Picture dono loci dikhati hai: apne centre ke around radius r ka circle, aur contrast ke liye, ek perpendicular-bisector line."
+            },
+            {
+              "seq": 4,
+              "text": "General form mein, circle hai z z bar plus a bar z plus a z bar plus b barabar zero, a complex aur b real ke saath, jiska centre hai minus a aur radius hai modulus of a squared minus b ka root."
+            },
+            {
+              "seq": 5,
+              "text": "Ab Apollonius locus: wo set jahan distances ka ratio, modulus of z minus z one over modulus of z minus z two, ek constant k ke barabar ho."
+            },
+            {
+              "seq": 6,
+              "text": "Ye raha trap. Jab k barabar one ho, dono distances equal hain, to ye perpendicular bisector hai, ek straight line, circle nahi."
+            },
+            {
+              "seq": 7,
+              "text": "Par jab k positive aur one ke barabar na ho, locus sach mein ek circle hai, Apollonius circle."
+            },
+            {
+              "seq": 8,
+              "text": "Proof idea: condition ko square karo aur modulus w squared barabar w times w bar se expand karo. z z bar term sirf tab survive karta hai jab k one na ho; k barabar one par wo cancel ho jaata hai, ek line chhodte hue."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Circles दूसरा fundamental locus हैं, और Apollonius condition वहां है जहां एक subtle trap छिपा है।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे clean circle है modulus of z minus z zero बराबर r: सारे points जो centre z zero से fixed distance r पर हैं। ये सीधा circle पढ़ा जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Picture दोनों loci दिखाती है: अपने centre के around radius r का circle, और contrast के लिए, एक perpendicular-bisector line।"
+            },
+            {
+              "seq": 4,
+              "text": "General form में, circle है z z bar plus a bar z plus a z bar plus b बराबर zero, a complex और b real के साथ, जिसका centre है minus a और radius है modulus of a squared minus b का root।"
+            },
+            {
+              "seq": 5,
+              "text": "अब Apollonius locus: वो set जहां distances का ratio, modulus of z minus z one over modulus of z minus z two, एक constant k के बराबर हो।"
+            },
+            {
+              "seq": 6,
+              "text": "ये रहा trap। जब k बराबर one हो, दोनों distances equal हैं, तो ये perpendicular bisector है, एक straight line, circle नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "पर जब k positive और one के बराबर ना हो, locus सच में एक circle है, Apollonius circle।"
+            },
+            {
+              "seq": 8,
+              "text": "Proof idea: condition को square करो और modulus w squared बराबर w times w bar से expand करो। z z bar term सिर्फ तब survive करता है जब k one ना हो; k बराबर one पर वो cancel हो जाता है, एक line छोड़ते हुए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "concept",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "Arg-loci, equilateral triangles, and modulus extrema",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Arcs, triangles, and extremes on a circle"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "\\arg\\frac{z-z_1}{z-z_2}=\\alpha\\ \\text{(fixed)}: \\text{ an ARC of a circle through } z_1,z_2"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "style": "red-margin",
+          "text": "A fixed argument gives an arc, NOT the whole circle."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "$\\alpha=\\tfrac{\\pi}{2}$ gives the circle with diameter $z_1z_2$ (minus endpoints)."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "latex": "\\text{concyclic}:\\ \\frac{(z_1-z_3)(z_2-z_4)}{(z_1-z_4)(z_2-z_3)}\\in\\mathbb{R}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "\\text{equilateral}:\\ z_1^{2}+z_2^{2}+z_3^{2}=z_1 z_2+z_2 z_3+z_3 z_1"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 57,
+          "latex": "\\text{on } |z-z_0|=r:\\ \\big||z_0|-r\\big|\\le |z|\\le |z_0|+r"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "text": "Nearest and farthest points lie along the line through $O$ and $z_0$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A few more standard loci and conditions round out the toolkit. First, the argument locus."
+            },
+            {
+              "seq": 2,
+              "text": "If the argument of z minus z one over z minus z two is held at a fixed value alpha, the locus is an arc of a circle passing through z one and z two."
+            },
+            {
+              "seq": 3,
+              "text": "Emphasize the word arc. A fixed argument does not give the whole circle, only the arc on which the segment subtends that constant angle. Calling it the full circle is a classic error."
+            },
+            {
+              "seq": 4,
+              "text": "The special case alpha equals pi over two is the familiar one: it gives the circle with the segment z one to z two as diameter, excluding the two endpoints."
+            },
+            {
+              "seq": 5,
+              "text": "For four points, the concyclic condition: z one, z two, z three, z four lie on a circle, or a line, exactly when their cross-ratio is real."
+            },
+            {
+              "seq": 6,
+              "text": "The equilateral-triangle condition is a clean symmetric identity: z one squared plus z two squared plus z three squared equals z one z two plus z two z three plus z three z one."
+            },
+            {
+              "seq": 7,
+              "text": "Finally, modulus extrema on a circle. If z lies on the circle of centre z zero and radius r, then the modulus of z is squeezed between the size of modulus z zero minus r, and modulus z zero plus r."
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically, the nearest and farthest points from the origin lie along the straight line through O and the centre z zero. Don't guess the extremes — walk that line."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Kuch aur standard loci aur conditions toolkit ko poora karte hain. Pehle, argument locus."
+            },
+            {
+              "seq": 2,
+              "text": "Agar z minus z one over z minus z two ka argument ek fixed value alpha par rakha jaaye, to locus hai z one aur z two se guzarti ek circle ka arc."
+            },
+            {
+              "seq": 3,
+              "text": "Shabd arc par zor do. Fixed argument poora circle nahi deta, sirf wo arc jahan segment wo constant angle subtend karta hai. Ise full circle kehna ek classic error hai."
+            },
+            {
+              "seq": 4,
+              "text": "Special case alpha barabar pi over two familiar hai: ye wo circle deta hai jiska diameter segment z one se z two hai, do endpoints ko chhodkar."
+            },
+            {
+              "seq": 5,
+              "text": "Chaar points ke liye, concyclic condition: z one, z two, z three, z four ek circle par, ya ek line par, tabhi hain jab unka cross-ratio real ho."
+            },
+            {
+              "seq": 6,
+              "text": "Equilateral-triangle condition ek clean symmetric identity hai: z one squared plus z two squared plus z three squared barabar z one z two plus z two z three plus z three z one."
+            },
+            {
+              "seq": 7,
+              "text": "Aakhir mein, circle par modulus extrema. Agar z centre z zero aur radius r ke circle par ho, to z ka modulus dab jaata hai size of modulus z zero minus r, aur modulus z zero plus r ke beech."
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically, origin se nearest aur farthest points O aur centre z zero se jaati straight line par hote hain. Extremes guess mat karo — us line par chalo."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "कुछ और standard loci और conditions toolkit को पूरा करते हैं। पहले, argument locus।"
+            },
+            {
+              "seq": 2,
+              "text": "अगर z minus z one over z minus z two का argument एक fixed value alpha पर रखा जाए, तो locus है z one और z two से गुज़रती एक circle का arc।"
+            },
+            {
+              "seq": 3,
+              "text": "शब्द arc पर ज़ोर दो। Fixed argument पूरा circle नहीं देता, सिर्फ वो arc जहां segment वो constant angle subtend करता है। इसे full circle कहना एक classic error है।"
+            },
+            {
+              "seq": 4,
+              "text": "Special case alpha बराबर pi over two familiar है: ये वो circle देता है जिसका diameter segment z one से z two है, दो endpoints को छोड़कर।"
+            },
+            {
+              "seq": 5,
+              "text": "चार points के लिए, concyclic condition: z one, z two, z three, z four एक circle पर, या एक line पर, तभी हैं जब उनका cross-ratio real हो।"
+            },
+            {
+              "seq": 6,
+              "text": "Equilateral-triangle condition एक clean symmetric identity है: z one squared plus z two squared plus z three squared बराबर z one z two plus z two z three plus z three z one।"
+            },
+            {
+              "seq": 7,
+              "text": "आखिर में, circle पर modulus extrema। अगर z centre z zero और radius r के circle पर हो, तो z का modulus दब जाता है size of modulus z zero minus r, और modulus z zero plus r के बीच।"
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically, origin से nearest और farthest points O और centre z zero से जाती straight line पर होते हैं। Extremes guess मत करो — उस line पर चलो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "formulas",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "Argand geometry & loci toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Consolidated: geometry in z"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "\\text{dist}=|z_1-z_2|,\\ \\text{mid}=\\tfrac{z_1+z_2}{2},\\ \\text{centroid}=\\tfrac{z_1+z_2+z_3}{3}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "\\frac{z_2-z_1}{z_3-z_1}=\\left|\\frac{z_2-z_1}{z_3-z_1}\\right|e^{i\\theta};\\ \\text{multiply by } i=+90^{\\circ}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\text{collinear}:\\ \\tfrac{z_3-z_1}{z_2-z_1}\\in\\mathbb{R};\\quad \\text{perp bisector}:\\ |z-z_1|=|z-z_2|"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "latex": "\\text{circle}:\\ |z-z_0|=r;\\quad \\text{Apollonius}:\\ \\tfrac{|z-z_1|}{|z-z_2|}=k\\ (k\\neq1\\Rightarrow\\text{circle})"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "\\arg\\tfrac{z-z_1}{z-z_2}=\\alpha\\Rightarrow \\text{arc};\\quad \\text{equilateral}:\\ \\sum z_i^{2}=\\sum z_i z_j"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 57,
+          "latex": "\\text{on } |z-z_0|=r:\\ \\big||z_0|-r\\big|\\le|z|\\le|z_0|+r"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "Simplify every locus with $|w|^{2}=w\\bar w$ — it linearises the algebra."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the Argand-geometry toolkit consolidated on one board."
+            },
+            {
+              "seq": 2,
+              "text": "Distance is the modulus of the difference; the midpoint is the average of two; the centroid is the average of three."
+            },
+            {
+              "seq": 3,
+              "text": "The rotation theorem: the ratio z two minus z one over z three minus z one equals its length-ratio times e to the i theta. And multiplying by i is a plus ninety degree turn."
+            },
+            {
+              "seq": 4,
+              "text": "Collinearity means the ratio z three minus z one over z two minus z one is real; the perpendicular bisector is modulus z minus z one equals modulus z minus z two."
+            },
+            {
+              "seq": 5,
+              "text": "A circle is modulus z minus z zero equals r; the Apollonius ratio equals k gives a circle when k is not one, and a line when k is one."
+            },
+            {
+              "seq": 6,
+              "text": "A fixed argument of the ratio gives an arc; and the equilateral condition is the sum of the squares equals the sum of the pairwise products."
+            },
+            {
+              "seq": 7,
+              "text": "On a circle, the modulus of z is bounded between the size of modulus z zero minus r, and modulus z zero plus r."
+            },
+            {
+              "seq": 8,
+              "text": "And the one habit that unlocks every locus problem: simplify using modulus w squared equals w times w bar. It linearises the algebra every single time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye raha Argand-geometry toolkit ek board par consolidated."
+            },
+            {
+              "seq": 2,
+              "text": "Distance hai difference ka modulus; midpoint hai do ka average; centroid hai teen ka average."
+            },
+            {
+              "seq": 3,
+              "text": "Rotation theorem: ratio z two minus z one over z three minus z one barabar uske length-ratio times e to the i theta. Aur i se multiply karna ek plus ninety degree turn hai."
+            },
+            {
+              "seq": 4,
+              "text": "Collinearity matlab ratio z three minus z one over z two minus z one real hai; perpendicular bisector hai modulus z minus z one barabar modulus z minus z two."
+            },
+            {
+              "seq": 5,
+              "text": "Circle hai modulus z minus z zero barabar r; Apollonius ratio barabar k ek circle deta hai jab k one na ho, aur ek line jab k one ho."
+            },
+            {
+              "seq": 6,
+              "text": "Ratio ka fixed argument ek arc deta hai; aur equilateral condition hai squares ka sum barabar pairwise products ka sum."
+            },
+            {
+              "seq": 7,
+              "text": "Circle par, z ka modulus size of modulus z zero minus r, aur modulus z zero plus r ke beech bounded hai."
+            },
+            {
+              "seq": 8,
+              "text": "Aur wo ek aadat jo har locus problem unlock karti hai: modulus w squared barabar w times w bar se simplify karo. Ye har baar algebra ko linearise kar deti hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा Argand-geometry toolkit एक board पर consolidated।"
+            },
+            {
+              "seq": 2,
+              "text": "Distance है difference का modulus; midpoint है दो का average; centroid है तीन का average।"
+            },
+            {
+              "seq": 3,
+              "text": "Rotation theorem: ratio z two minus z one over z three minus z one बराबर उसके length-ratio times e to the i theta। और i से multiply करना एक plus ninety degree turn है।"
+            },
+            {
+              "seq": 4,
+              "text": "Collinearity मतलब ratio z three minus z one over z two minus z one real है; perpendicular bisector है modulus z minus z one बराबर modulus z minus z two।"
+            },
+            {
+              "seq": 5,
+              "text": "Circle है modulus z minus z zero बराबर r; Apollonius ratio बराबर k एक circle देता है जब k one ना हो, और एक line जब k one हो।"
+            },
+            {
+              "seq": 6,
+              "text": "Ratio का fixed argument एक arc देता है; और equilateral condition है squares का sum बराबर pairwise products का sum।"
+            },
+            {
+              "seq": 7,
+              "text": "Circle पर, z का modulus size of modulus z zero minus r, और modulus z zero plus r के बीच bounded है।"
+            },
+            {
+              "seq": 8,
+              "text": "और वो एक आदत जो हर locus problem unlock करती है: modulus w squared बराबर w times w bar से simplify करो। ये हर बार algebra को linearise कर देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "worked_examples",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "Worked: reading a locus off the words",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Perpendicular bisector, and a circle"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Find the locus of $z$ if $|z-2|=|z+2|$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Equidistant from $2$ and $-2$ — the perpendicular bisector of that segment."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "latex": "|z-2|=|z+2|\\ \\Rightarrow\\ \\operatorname{Re}(z)=0\\ (\\text{the imaginary axis})"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Now identify the curve $|z-3|=2$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "|z-3|=2\\ \\Rightarrow\\ \\text{circle, centre }(3,0),\\ \\text{radius }2"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Match to the standard form $|z-z_0|=r$: read off $z_0$ and $r$ directly."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Translate the words; you rarely need to expand."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's practise reading a locus straight from the words, with two quick examples."
+            },
+            {
+              "seq": 2,
+              "text": "First, find the locus of z satisfying modulus of z minus two equals modulus of z plus two."
+            },
+            {
+              "seq": 3,
+              "text": "In words, z is equidistant from the points two and minus two. That is exactly the perpendicular bisector of the segment joining them."
+            },
+            {
+              "seq": 4,
+              "text": "That segment lies on the real axis, so its perpendicular bisector is the imaginary axis: the real part of z is zero."
+            },
+            {
+              "seq": 5,
+              "text": "Second, identify the curve modulus of z minus three equals two."
+            },
+            {
+              "seq": 6,
+              "text": "This is the set of points at distance two from the point three, so it's a circle with centre at three comma zero and radius two."
+            },
+            {
+              "seq": 7,
+              "text": "You get that just by matching to the standard form, modulus of z minus z zero equals r, and reading off z zero and r directly. No algebra needed."
+            },
+            {
+              "seq": 8,
+              "text": "That's the pattern throughout: translate the geometric words, and you rarely need to expand anything into a plus i b."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Locus ko seedha words se padhna practise karte hain, do quick examples ke saath."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle, z ka locus nikaalo jo modulus of z minus two barabar modulus of z plus two satisfy karta ho."
+            },
+            {
+              "seq": 3,
+              "text": "Words mein, z points two aur minus two se equidistant hai. Ye bilkul unhe jodne wale segment ka perpendicular bisector hai."
+            },
+            {
+              "seq": 4,
+              "text": "Wo segment real axis par hai, to iska perpendicular bisector imaginary axis hai: z ka real part zero."
+            },
+            {
+              "seq": 5,
+              "text": "Doosra, curve modulus of z minus three barabar two ko identify karo."
+            },
+            {
+              "seq": 6,
+              "text": "Ye point three se distance two par ke points ka set hai, to ye ek circle hai centre three comma zero aur radius two ke saath."
+            },
+            {
+              "seq": 7,
+              "text": "Ye aapko bas standard form, modulus of z minus z zero barabar r, se match karke, z zero aur r seedha padhke milta hai. Koi algebra nahi chahiye."
+            },
+            {
+              "seq": 8,
+              "text": "Ye pattern har jagah hai: geometric words translate karo, aur aapko shaayad hi kabhi kuch a plus i b mein expand karna pade."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Locus को सीधा words से पढ़ना practise करते हैं, दो quick examples के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले, z का locus निकालो जो modulus of z minus two बराबर modulus of z plus two satisfy करता हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Words में, z points two और minus two से equidistant है। ये बिलकुल उन्हें जोड़ने वाले segment का perpendicular bisector है।"
+            },
+            {
+              "seq": 4,
+              "text": "वो segment real axis पर है, तो इसका perpendicular bisector imaginary axis है: z का real part zero।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा, curve modulus of z minus three बराबर two को identify करो।"
+            },
+            {
+              "seq": 6,
+              "text": "ये point three से distance two पर के points का set है, तो ये एक circle है centre three comma zero और radius two के साथ।"
+            },
+            {
+              "seq": 7,
+              "text": "ये आपको बस standard form, modulus of z minus z zero बराबर r, से match करके, z zero और r सीधा पढ़के मिलता है। कोई algebra नहीं चाहिए।"
+            },
+            {
+              "seq": 8,
+              "text": "ये pattern हर जगह है: geometric words translate करो, और आपको शायद ही कभी कुछ a plus i b में expand करना पड़े।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "worked_examples",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "Worked: greatest and least |z| on a circle",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Extremes along the O-z0 line"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$z$ lies on $|z-3-4i|=2$. Find the greatest and least $|z|$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "z_0=3+4i,\\quad |z_0|=\\sqrt{9+16}=5,\\quad r=2"
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "caption": "Nearest and farthest points lie on the O-z0 line",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 280' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='230' r='4' fill='#333'/><text x='24' y='250' font-size='12' fill='#333'>O</text><circle cx='250' cy='110' r='60' fill='none' stroke='#1f6feb' stroke-width='2'/><circle cx='250' cy='110' r='3.5' fill='#1f6feb'/><text x='258' y='108' font-size='12' fill='#1f6feb'>z0</text><line x1='40' y1='230' x2='430' y2='7' stroke='#999' stroke-width='1.2' stroke-dasharray='4 3'/><circle cx='198' cy='140' r='4' fill='#2ea043'/><text x='150' y='160' font-size='11' fill='#2ea043'>nearest |z0|-r</text><circle cx='302' cy='80' r='4' fill='#d29922'/><text x='300' y='70' font-size='11' fill='#d29922'>farthest |z0|+r</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "|z|_{\\max}=|z_0|+r=7,\\qquad |z|_{\\min}=|z_0|-r=3"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "The farthest point is beyond the centre; the nearest is on the near side."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "No calculus needed — just $|z_0|\\pm r$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "style": "red-margin",
+          "text": "Always locate the centre's distance $|z_0|$ first."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A very common exam question: the greatest and least distance of a point on a circle from the origin."
+            },
+            {
+              "seq": 2,
+              "text": "z lies on the circle modulus of z minus three minus four i equals two. Find the greatest and least values of the modulus of z."
+            },
+            {
+              "seq": 3,
+              "text": "Identify the pieces. The centre is z zero equals three plus four i, whose modulus is root of nine plus sixteen, which is five. The radius is two."
+            },
+            {
+              "seq": 4,
+              "text": "Now the picture. Draw the line from the origin through the centre. The nearest and farthest points of the circle lie exactly on that line."
+            },
+            {
+              "seq": 5,
+              "text": "So the maximum of modulus z is the centre distance plus the radius, five plus two, which is seven. The minimum is the centre distance minus the radius, five minus two, which is three."
+            },
+            {
+              "seq": 6,
+              "text": "Intuitively, the farthest point sits just beyond the centre along that line, and the nearest point sits on the near side of the circle, closest to the origin."
+            },
+            {
+              "seq": 7,
+              "text": "Notice there's no calculus at all. Once you have the centre distance and the radius, the extremes are simply the centre distance plus or minus the radius."
+            },
+            {
+              "seq": 8,
+              "text": "So the very first move on any such problem is to find the distance of the centre from the origin, the modulus of z zero. Everything else follows."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ek bahut common exam question: circle par ke point ki origin se greatest aur least distance."
+            },
+            {
+              "seq": 2,
+              "text": "z circle modulus of z minus three minus four i barabar two par hai. Modulus of z ki greatest aur least values nikaalo."
+            },
+            {
+              "seq": 3,
+              "text": "Pieces identify karo. Centre hai z zero barabar three plus four i, jiska modulus hai nine plus sixteen ka root, jo hai five. Radius hai two."
+            },
+            {
+              "seq": 4,
+              "text": "Ab picture. Origin se centre se hokar line kheencho. Circle ke nearest aur farthest points theek us line par hote hain."
+            },
+            {
+              "seq": 5,
+              "text": "To modulus z ka maximum hai centre distance plus radius, five plus two, jo hai seven. Minimum hai centre distance minus radius, five minus two, jo hai three."
+            },
+            {
+              "seq": 6,
+              "text": "Intuitively, farthest point us line ke saath centre se thoda aage baithta hai, aur nearest point circle ke near side par, origin ke sabse kareeb."
+            },
+            {
+              "seq": 7,
+              "text": "Dhyaan do koi calculus bilkul nahi. Ek baar centre distance aur radius mil gaye, extremes bas centre distance plus or minus radius hain."
+            },
+            {
+              "seq": 8,
+              "text": "To aise kisi bhi problem par pehla move hai centre ki origin se distance nikaalna, modulus of z zero. Baaki sab follow karta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक बहुत common exam question: circle पर के point की origin से greatest और least distance।"
+            },
+            {
+              "seq": 2,
+              "text": "z circle modulus of z minus three minus four i बराबर two पर है। Modulus of z की greatest और least values निकालो।"
+            },
+            {
+              "seq": 3,
+              "text": "Pieces identify करो। Centre है z zero बराबर three plus four i, जिसका modulus है nine plus sixteen का root, जो है five। Radius है two।"
+            },
+            {
+              "seq": 4,
+              "text": "अब picture। Origin से centre से होकर line खींचो। Circle के nearest और farthest points ठीक उस line पर होते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "तो modulus z का maximum है centre distance plus radius, five plus two, जो है seven। Minimum है centre distance minus radius, five minus two, जो है three।"
+            },
+            {
+              "seq": 6,
+              "text": "Intuitively, farthest point उस line के साथ centre से थोड़ा आगे बैठता है, और nearest point circle के near side पर, origin के सबसे करीब।"
+            },
+            {
+              "seq": 7,
+              "text": "ध्यान दो कोई calculus बिलकुल नहीं। एक बार centre distance और radius मिल गए, extremes बस centre distance plus or minus radius हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो ऐसे किसी भी problem पर पहला move है centre की origin से distance निकालना, modulus of z zero। बाकी सब follow करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 20,
+      "section_type": "worked_examples",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "Worked (JEE Advanced): find a square's vertex by rotation",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Rotation theorem builds the vertex"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Square $ABCD$ (anticlockwise): $A=1+2i$, $B=3+i$. Find $C$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Rotate $\\vec{BA}$ about $B$ by $-90^{\\circ}$ to reach $\\vec{BC}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "z_C-z_B=(z_A-z_B)\\cdot e^{-i\\pi/2}=(z_A-z_B)(-i)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "z_A-z_B=(1+2i)-(3+i)=-2+i"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "z_C-z_B=(-2+i)(-i)=2i-i^{2}=1+2i"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "z_C=(3+i)+(1+2i)=4+3i"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Pick the turn direction from the labelling (anticlockwise here)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Here's the rotation theorem doing real work: finding a missing vertex of a square.</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "A square A B C D is labelled anticlockwise, with A equals one plus two i and B equals three plus i. Find the vertex C."
+            },
+            {
+              "seq": 3,
+              "text": "At vertex B, the side to C is the side to A turned by ninety degrees. For this anticlockwise labelling, we rotate the vector from B to A about B by minus ninety degrees to reach the vector from B to C."
+            },
+            {
+              "seq": 4,
+              "text": "In formula terms: z C minus z B equals z A minus z B, times e to the minus i pi over two, and e to the minus i pi over two is just minus i."
+            },
+            {
+              "seq": 5,
+              "text": "Compute the displacement z A minus z B: one plus two i, minus three plus i, which is minus two plus i."
+            },
+            {
+              "seq": 6,
+              "text": "Multiply by minus i: minus two plus i, times minus i, gives two i minus i squared, which is one plus two i."
+            },
+            {
+              "seq": 7,
+              "text": "Add that back to z B: three plus i, plus one plus two i, gives four plus three i. So C is four plus three i."
+            },
+            {
+              "seq": 8,
+              "text": "The one judgement call is the direction of the turn, which you read from the labelling. Anticlockwise labelling here fixed the minus ninety degrees; get that sign right and the rest is mechanical."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Ye raha rotation theorem asli kaam karte hue: square ka ek missing vertex nikaalna.</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "Ek square A B C D anticlockwise labelled hai, A barabar one plus two i aur B barabar three plus i ke saath. Vertex C nikaalo."
+            },
+            {
+              "seq": 3,
+              "text": "Vertex B par, C tak ki side, A tak ki side ko ninety degrees turn karke banti hai. Is anticlockwise labelling ke liye, hum B se A tak ke vector ko B ke baare mein minus ninety degrees rotate karke B se C tak ka vector paate hain."
+            },
+            {
+              "seq": 4,
+              "text": "Formula mein: z C minus z B barabar z A minus z B, times e to the minus i pi over two, aur e to the minus i pi over two bas minus i hai."
+            },
+            {
+              "seq": 5,
+              "text": "Displacement z A minus z B compute karo: one plus two i, minus three plus i, jo hai minus two plus i."
+            },
+            {
+              "seq": 6,
+              "text": "Minus i se multiply karo: minus two plus i, times minus i, deta hai two i minus i squared, jo hai one plus two i."
+            },
+            {
+              "seq": 7,
+              "text": "Ise z B mein wapas add karo: three plus i, plus one plus two i, deta hai four plus three i. To C hai four plus three i."
+            },
+            {
+              "seq": 8,
+              "text": "Ek judgement call hai turn ki direction, jo aap labelling se padhte ho. Yahan anticlockwise labelling ne minus ninety degrees fix kiya; wo sign sahi karo aur baaki mechanical hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>ये रहा rotation theorem असली काम करते हुए: square का एक missing vertex निकालना।</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "एक square A B C D anticlockwise labelled है, A बराबर one plus two i और B बराबर three plus i के साथ। Vertex C निकालो।"
+            },
+            {
+              "seq": 3,
+              "text": "Vertex B पर, C तक की side, A तक की side को ninety degrees turn करके बनती है। इस anticlockwise labelling के लिए, हम B से A तक के vector को B के बारे में minus ninety degrees rotate करके B से C तक का vector पाते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Formula में: z C minus z B बराबर z A minus z B, times e to the minus i pi over two, और e to the minus i pi over two बस minus i है।"
+            },
+            {
+              "seq": 5,
+              "text": "Displacement z A minus z B compute करो: one plus two i, minus three plus i, जो है minus two plus i।"
+            },
+            {
+              "seq": 6,
+              "text": "Minus i से multiply करो: minus two plus i, times minus i, देता है two i minus i squared, जो है one plus two i।"
+            },
+            {
+              "seq": 7,
+              "text": "इसे z B में वापस add करो: three plus i, plus one plus two i, देता है four plus three i। तो C है four plus three i।"
+            },
+            {
+              "seq": 8,
+              "text": "एक judgement call है turn की direction, जो आप labelling से पढ़ते हो। यहां anticlockwise labelling ने minus ninety degrees fix किया; वो sign सही करो और बाकी mechanical है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 21,
+      "section_type": "worked_examples",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "Worked (JEE Advanced): an arg-locus is an arc",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A constant argument gives a semicircle"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Find the locus of $z$ with $\\arg\\dfrac{z-1}{z+1}=\\dfrac{\\pi}{2}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "A constant argument of $\\tfrac{\\pi}{2}$ means the segment from $-1$ to $1$ subtends a right angle at $z$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Points where a fixed segment subtends $90^{\\circ}$ lie on the circle with that segment as diameter."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "\\text{circle } |z|=1,\\ \\text{diameter from }-1\\text{ to }1"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "It is an ARC (a semicircle), not the whole circle."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The sign $+\\tfrac{\\pi}{2}$ selects the upper half, $\\operatorname{Im}(z)>0$, endpoints excluded."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "So: the open upper unit semicircle."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>What curve do you get when an argument is held constant?</curious> Let's work it out."
+            },
+            {
+              "seq": 2,
+              "text": "Find the locus of z for which the argument of z minus one, over z plus one, equals pi over two."
+            },
+            {
+              "seq": 3,
+              "text": "A constant argument of pi over two means the directed angle from the vector z plus one to the vector z minus one is a right angle. In other words, the segment from minus one to one subtends ninety degrees at z."
+            },
+            {
+              "seq": 4,
+              "text": "And there's a classical fact: the set of points at which a fixed segment subtends a right angle is the circle having that segment as a diameter."
+            },
+            {
+              "seq": 5,
+              "text": "Here the segment runs from minus one to one, so the circle is the unit circle, modulus of z equals one, with that segment as its diameter."
+            },
+            {
+              "seq": 6,
+              "text": "But be careful: a fixed argument gives only an arc, a semicircle, not the whole circle. Half the circle would give the opposite sign of the angle."
+            },
+            {
+              "seq": 7,
+              "text": "The plus sign, plus pi over two, selects the upper half, where the imaginary part of z is positive, and the two endpoints are excluded because the ratio is undefined there."
+            },
+            {
+              "seq": 8,
+              "text": "So the final locus is the open upper half of the unit circle — an arc, exactly as the arg-locus rule warns."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Jab ek argument constant rakha jaaye to kaunsa curve milta hai?</curious> Chalo nikaalte hain."
+            },
+            {
+              "seq": 2,
+              "text": "z ka locus nikaalo jiske liye z minus one, over z plus one, ka argument barabar pi over two ho."
+            },
+            {
+              "seq": 3,
+              "text": "Pi over two ka constant argument matlab z plus one vector se z minus one vector tak ka directed angle ek right angle hai. Doosre shabdon mein, minus one se one tak ka segment z par ninety degrees subtend karta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Aur ek classical fact hai: wo points ka set jahan ek fixed segment right angle subtend karta hai, wo circle hai jiska diameter wahi segment ho."
+            },
+            {
+              "seq": 5,
+              "text": "Yahan segment minus one se one tak chalta hai, to circle hai unit circle, modulus of z barabar one, us segment ko apna diameter banate hue."
+            },
+            {
+              "seq": 6,
+              "text": "Par savdhaan: fixed argument sirf ek arc deta hai, ek semicircle, poora circle nahi. Aadha circle angle ka opposite sign deta."
+            },
+            {
+              "seq": 7,
+              "text": "Plus sign, plus pi over two, upper half select karta hai, jahan z ka imaginary part positive hai, aur do endpoints exclude hain kyunki wahan ratio undefined hai."
+            },
+            {
+              "seq": 8,
+              "text": "To final locus hai unit circle ka open upper half — ek arc, bilkul jaisa arg-locus rule warn karta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>जब एक argument constant रखा जाए तो कौनसा curve मिलता है?</curious> चलो निकालते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "z का locus निकालो जिसके लिए z minus one, over z plus one, का argument बराबर pi over two हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Pi over two का constant argument मतलब z plus one vector से z minus one vector तक का directed angle एक right angle है। दूसरे शब्दों में, minus one से one तक का segment z पर ninety degrees subtend करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "और एक classical fact है: वो points का set जहां एक fixed segment right angle subtend करता है, वो circle है जिसका diameter वही segment हो।"
+            },
+            {
+              "seq": 5,
+              "text": "यहां segment minus one से one तक चलता है, तो circle है unit circle, modulus of z बराबर one, उस segment को अपना diameter बनाते हुए।"
+            },
+            {
+              "seq": 6,
+              "text": "पर सावधान: fixed argument सिर्फ एक arc देता है, एक semicircle, पूरा circle नहीं। आधा circle angle का opposite sign देता।"
+            },
+            {
+              "seq": 7,
+              "text": "Plus sign, plus pi over two, upper half select करता है, जहां z का imaginary part positive है, और दो endpoints exclude हैं क्योंकि वहां ratio undefined है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो final locus है unit circle का open upper half — एक arc, बिलकुल जैसा arg-locus rule warn करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 22,
+      "section_type": "tips",
+      "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+      "title": "Pitfalls & pro-tips: Argand geometry and loci",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Geometry traps, locus shortcuts"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "$e^{i\\theta}$ is anticlockwise, $e^{-i\\theta}$ clockwise — fix the ratio order."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The $k=1$ Apollonius locus is the perpendicular-bisector LINE, not a circle."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "A fixed-argument locus is an ARC, never the full circle."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Modulus extrema on a circle are $|z_0|\\pm r$ — don't guess."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Pro-tip: translate words to a $z$-equation — distance, equidistant, constant angle."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "For vertex problems, reach for the rotation theorem: displacement $\\times\\,e^{i\\theta}$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "Linearise every locus with $|w|^{2}=w\\bar w$; use $|z_0|\\pm r$ for extremes."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close the subtopic, and the chapter's teaching, with the geometry traps and the locus shortcuts."
+            },
+            {
+              "seq": 2,
+              "text": "First trap, on rotation: e to the i theta turns anticlockwise, and e to the minus i theta turns clockwise. Also mind the ratio order, since flipping it flips the sign of the angle."
+            },
+            {
+              "seq": 3,
+              "text": "Second: the Apollonius locus with k equal to one is not a circle. Equal distances give the perpendicular-bisector line. Calling it a circle is the classic mistake."
+            },
+            {
+              "seq": 4,
+              "text": "Third: a locus of constant argument is an arc, never the full circle. The other half carries the opposite angle."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth: for the extremes of modulus z on a circle, the answers are the centre distance plus or minus the radius. Don't guess and don't reach for calculus."
+            },
+            {
+              "seq": 6,
+              "text": "Now the pro-tips. Translate the words into a z-equation: distance from a point becomes modulus z minus z zero; equidistant becomes a perpendicular bisector; constant angle becomes an arc."
+            },
+            {
+              "seq": 7,
+              "text": "For any vertex-finding or configuration problem, reach straight for the rotation theorem: take a displacement and multiply by e to the i theta."
+            },
+            {
+              "seq": 8,
+              "text": "And two habits to keep: linearise every locus using modulus w squared equals w times w bar, and for modulus extremes on a circle just use the centre distance plus or minus the radius."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Subtopic, aur chapter ki teaching, band karte hain geometry traps aur locus shortcuts ke saath."
+            },
+            {
+              "seq": 2,
+              "text": "Pehla trap, rotation par: e to the i theta anticlockwise ghoomta hai, aur e to the minus i theta clockwise. Ratio order bhi dhyaan mein rakho, kyunki use flip karna angle ka sign flip kar deta hai."
+            },
+            {
+              "seq": 3,
+              "text": "Doosra: k barabar one wala Apollonius locus circle nahi hai. Equal distances perpendicular-bisector line dete hain. Ise circle kehna classic mistake hai."
+            },
+            {
+              "seq": 4,
+              "text": "Teesra: constant argument ka locus ek arc hai, kabhi poora circle nahi. Doosra half opposite angle rakhta hai."
+            },
+            {
+              "seq": 5,
+              "text": "Chautha: circle par modulus z ke extremes ke liye, answers hain centre distance plus or minus radius. Guess mat karo aur calculus mat uthao."
+            },
+            {
+              "seq": 6,
+              "text": "Ab pro-tips. Words ko z-equation mein translate karo: kisi point se distance banti hai modulus z minus z zero; equidistant banta hai perpendicular bisector; constant angle banta hai arc."
+            },
+            {
+              "seq": 7,
+              "text": "Kisi bhi vertex-finding ya configuration problem ke liye seedha rotation theorem uthao: ek displacement lo aur e to the i theta se multiply karo."
+            },
+            {
+              "seq": 8,
+              "text": "Aur do aadatein rakho: har locus ko modulus w squared barabar w times w bar se linearise karo, aur circle par modulus extremes ke liye bas centre distance plus or minus radius use karo."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Subtopic, और chapter की teaching, बंद करते हैं geometry traps और locus shortcuts के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला trap, rotation पर: e to the i theta anticlockwise घूमता है, और e to the minus i theta clockwise। Ratio order भी ध्यान में रखो, क्योंकि उसे flip करना angle का sign flip कर देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा: k बराबर one वाला Apollonius locus circle नहीं है। Equal distances perpendicular-bisector line देते हैं। इसे circle कहना classic mistake है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा: constant argument का locus एक arc है, कभी पूरा circle नहीं। दूसरा half opposite angle रखता है।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा: circle पर modulus z के extremes के लिए, answers हैं centre distance plus or minus radius। Guess मत करो और calculus मत उठाओ।"
+            },
+            {
+              "seq": 6,
+              "text": "अब pro-tips। Words को z-equation में translate करो: किसी point से distance बनती है modulus z minus z zero; equidistant बनता है perpendicular bisector; constant angle बनता है arc।"
+            },
+            {
+              "seq": 7,
+              "text": "किसी भी vertex-finding या configuration problem के लिए सीधा rotation theorem उठाओ: एक displacement लो और e to the i theta से multiply करो।"
+            },
+            {
+              "seq": 8,
+              "text": "और दो आदतें रखो: हर locus को modulus w squared बराबर w times w bar से linearise करो, और circle पर modulus extremes के लिए बस centre distance plus or minus radius use करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 23,
+      "section_type": "formula_recap",
+      "subtopic": "Complex Numbers and Quadratic Equations",
+      "title": "Formula recap: your complete toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The whole chapter's formulas, at a glance"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "i^{2}=-1;\\ i^{n}\\ \\text{by } n\\bmod 4;\\ z^{-1}=\\frac{a-ib}{a^{2}+b^{2}}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "\\bar z=a-ib;\\quad z\\bar z=|z|^{2}=a^{2}+b^{2};\\quad |z_1z_2|=|z_1||z_2|"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "|z_1+z_2|\\le|z_1|+|z_2|;\\quad z=r(\\cos\\theta+i\\sin\\theta)=re^{i\\theta}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 37,
+          "latex": "z^{n}=r^{n}e^{in\\theta};\\quad w_k=r^{1/n}e^{i(\\theta+2k\\pi)/n},\\ k=0,\\dots,n-1"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "1+\\omega+\\omega^{2}=0,\\ \\omega^{3}=1;\\quad x=\\frac{-b\\pm\\sqrt{D}}{2a},\\ D=b^{2}-4ac"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "latex": "\\alpha+\\beta=-\\tfrac{b}{a},\\ \\alpha\\beta=\\tfrac{c}{a};\\quad \\sqrt{a+ib}=\\pm(x+iy),\\ \\operatorname{sgn}(xy)=\\operatorname{sgn}(b)"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "latex": "\\frac{z_2-z_1}{z_3-z_1}=\\left|\\cdot\\right|e^{i\\theta};\\ |z-z_0|=r;\\ \\big||z_0|-r\\big|\\le|z|\\le|z_0|+r"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a recap, not a re-teach: here's your complete toolkit for the whole chapter, on a single board."
+            },
+            {
+              "seq": 2,
+              "text": "From the algebra: i squared is minus one, powers of i come from n modulo four, and the inverse of z is a minus i b over a squared plus b squared."
+            },
+            {
+              "seq": 3,
+              "text": "From modulus and conjugate: the conjugate flips the imaginary sign, z times z bar is the modulus squared, and the modulus of a product is the product of moduli."
+            },
+            {
+              "seq": 4,
+              "text": "The triangle inequality bounds a sum, and any nonzero number has polar and exponential forms, r times cosine theta plus i sine theta, equal to r e to the i theta."
+            },
+            {
+              "seq": 5,
+              "text": "For powers and roots: z to the n is r to the n e to the i n theta, and the n roots are r to the one over n e to the i, theta plus two k pi, over n, for k from zero to n minus one."
+            },
+            {
+              "seq": 6,
+              "text": "The cube roots of unity sum to zero with omega cubed one; and the quadratic formula gives x as minus b plus or minus root D over two a."
+            },
+            {
+              "seq": 7,
+              "text": "Vieta ties roots to coefficients, sum is minus b over a and product is c over a; and the square root of a complex number uses the x-squared, y-squared split with the sign of x y matching b."
+            },
+            {
+              "seq": 8,
+              "text": "And from the geometry: the rotation ratio equals its length-ratio times e to the i theta, a circle is modulus z minus z zero equals r, and on that circle the modulus is squeezed between the centre distance minus and plus the radius. That's the entire chapter in one glance."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye recap hai, dobara padhaana nahi: ye raha poore chapter ke liye aapka complete toolkit, ek single board par."
+            },
+            {
+              "seq": 2,
+              "text": "Algebra se: i squared minus one hai, i ki powers n modulo four se aati hain, aur z ka inverse hai a minus i b over a squared plus b squared."
+            },
+            {
+              "seq": 3,
+              "text": "Modulus aur conjugate se: conjugate imaginary sign flip karta hai, z times z bar modulus squared hai, aur product ka modulus moduli ka product hai."
+            },
+            {
+              "seq": 4,
+              "text": "Triangle inequality ek sum ko bound karti hai, aur koi bhi nonzero number ki polar aur exponential forms hain, r times cosine theta plus i sine theta, barabar r e to the i theta."
+            },
+            {
+              "seq": 5,
+              "text": "Powers aur roots ke liye: z to the n hai r to the n e to the i n theta, aur n roots hain r to the one over n e to the i, theta plus two k pi, over n, k zero se n minus one tak."
+            },
+            {
+              "seq": 6,
+              "text": "Cube roots of unity sum hoke zero, omega cubed one ke saath; aur quadratic formula deta hai x barabar minus b plus or minus root D over two a."
+            },
+            {
+              "seq": 7,
+              "text": "Vieta roots ko coefficients se jodta hai, sum minus b over a aur product c over a; aur complex number ka square root x-squared, y-squared split use karta hai, x y ka sign b se match karte hue."
+            },
+            {
+              "seq": 8,
+              "text": "Aur geometry se: rotation ratio barabar uske length-ratio times e to the i theta, circle hai modulus z minus z zero barabar r, aur us circle par modulus centre distance minus aur plus radius ke beech dab jaata hai. Ye poora chapter ek nazar mein."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये recap है, दोबारा पढ़ाना नहीं: ये रहा पूरे chapter के लिए आपका complete toolkit, एक single board पर।"
+            },
+            {
+              "seq": 2,
+              "text": "Algebra से: i squared minus one है, i की powers n modulo four से आती हैं, और z का inverse है a minus i b over a squared plus b squared।"
+            },
+            {
+              "seq": 3,
+              "text": "Modulus और conjugate से: conjugate imaginary sign flip करता है, z times z bar modulus squared है, और product का modulus moduli का product है।"
+            },
+            {
+              "seq": 4,
+              "text": "Triangle inequality एक sum को bound करती है, और कोई भी nonzero number की polar और exponential forms हैं, r times cosine theta plus i sine theta, बराबर r e to the i theta।"
+            },
+            {
+              "seq": 5,
+              "text": "Powers और roots के लिए: z to the n है r to the n e to the i n theta, और n roots हैं r to the one over n e to the i, theta plus two k pi, over n, k zero से n minus one तक।"
+            },
+            {
+              "seq": 6,
+              "text": "Cube roots of unity sum होके zero, omega cubed one के साथ; और quadratic formula देता है x बराबर minus b plus or minus root D over two a।"
+            },
+            {
+              "seq": 7,
+              "text": "Vieta roots को coefficients से जोड़ता है, sum minus b over a और product c over a; और complex number का square root x-squared, y-squared split use करता है, x y का sign b से match करते हुए।"
+            },
+            {
+              "seq": 8,
+              "text": "और geometry से: rotation ratio बराबर उसके length-ratio times e to the i theta, circle है modulus z minus z zero बराबर r, और उस circle पर modulus centre distance minus और plus radius के बीच दब जाता है। ये पूरा chapter एक नज़र में।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 24,
+      "section_type": "cheat_sheet",
+      "subtopic": "Complex Numbers and Quadratic Equations",
+      "title": "Cheat sheet: fast recall before the exam",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Quick-recall cheat sheet"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "$i^{4k}=1$; four consecutive powers of $i$ sum to $0$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "latex": "\\sqrt{-a}\\sqrt{-b}=-\\sqrt{ab}\\ (a,b>0);\\quad (1+i)^{2}=2i,\\ (1-i)^{2}=-2i"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "$\\bar z$ flips imaginary sign; $-z$ flips both. Order undefined on $\\mathbb{C}$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "latex": "\\text{quadrant arg: I}\\!\\to\\!\\alpha,\\ \\text{II}\\!\\to\\!\\pi-\\alpha,\\ \\text{III}\\!\\to\\!\\alpha-\\pi,\\ \\text{IV}\\!\\to\\!-\\alpha"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "1+i=\\sqrt2\\angle\\tfrac{\\pi}{4},\\ 1+i\\sqrt3=2\\angle\\tfrac{\\pi}{3},\\ \\sqrt3+i=2\\angle\\tfrac{\\pi}{6}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "style": "red-margin",
+          "text": "$n$th root: exactly $n$ values. Reduce $\\omega$ powers mod 3."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "Apollonius $k=1$ = line; arg-locus = arc; on a circle $|z|=|z_0|\\pm r$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Finally, a fast-recall cheat sheet: the highest-yield facts to run through right before the exam."
+            },
+            {
+              "seq": 2,
+              "text": "Powers of i: i to any multiple of four is one, and any four consecutive powers of i add to zero. That collapses long sums instantly."
+            },
+            {
+              "seq": 3,
+              "text": "Watch the root-of-negatives trap: root of minus a, times root of minus b, is minus root a b, not plus. And keep the two speed facts, one plus i squared is two i, one minus i squared is minus two i."
+            },
+            {
+              "seq": 4,
+              "text": "Conjugate versus negative: the conjugate flips only the imaginary sign, while minus z flips both. And remember there's no order on the complex numbers."
+            },
+            {
+              "seq": 5,
+              "text": "For the argument, run the quadrant table: quadrant one gives alpha, two gives pi minus alpha, three gives alpha minus pi, four gives minus alpha."
+            },
+            {
+              "seq": 6,
+              "text": "Three standard polar values worth memorizing: one plus i is root two at forty five degrees, one plus i root three is two at sixty degrees, and root three plus i is two at thirty degrees."
+            },
+            {
+              "seq": 7,
+              "text": "For roots: an nth root has exactly n values, and always reduce omega powers modulo three before doing anything else."
+            },
+            {
+              "seq": 8,
+              "text": "And the geometry catches: Apollonius with k equal to one is a line, a constant-argument locus is only an arc, and on a circle the modulus of z ranges over the centre distance plus or minus the radius. Walk this sheet once and you're ready."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Aakhir mein, ek fast-recall cheat sheet: sabse high-yield facts jo exam se theek pehle dohraane hain."
+            },
+            {
+              "seq": 2,
+              "text": "Powers of i: i ki kisi bhi multiple of four par one, aur i ki koi bhi four consecutive powers add hoke zero. Ye lambe sums turant collapse karta hai."
+            },
+            {
+              "seq": 3,
+              "text": "Root-of-negatives trap dhyaan mein: root of minus a, times root of minus b, hai minus root a b, plus nahi. Aur do speed facts rakho, one plus i squared hai two i, one minus i squared hai minus two i."
+            },
+            {
+              "seq": 4,
+              "text": "Conjugate versus negative: conjugate sirf imaginary sign flip karta hai, jabki minus z dono flip karta hai. Aur yaad rakho complex numbers par koi order nahi hai."
+            },
+            {
+              "seq": 5,
+              "text": "Argument ke liye, quadrant table chalao: quadrant one deta hai alpha, two deta hai pi minus alpha, three deta hai alpha minus pi, four deta hai minus alpha."
+            },
+            {
+              "seq": 6,
+              "text": "Teen standard polar values yaad karne layak: one plus i hai root two at forty five degrees, one plus i root three hai two at sixty degrees, aur root three plus i hai two at thirty degrees."
+            },
+            {
+              "seq": 7,
+              "text": "Roots ke liye: ek nth root ke theek n values hote hain, aur kuch bhi karne se pehle hamesha omega powers ko modulo three reduce karo."
+            },
+            {
+              "seq": 8,
+              "text": "Aur geometry catches: k barabar one wala Apollonius ek line hai, constant-argument locus sirf ek arc hai, aur circle par modulus of z centre distance plus or minus radius par range karta hai. Is sheet ko ek baar chalo aur aap ready ho."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आखिर में, एक fast-recall cheat sheet: सबसे high-yield facts जो exam से ठीक पहले दोहराने हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Powers of i: i की किसी भी multiple of four पर one, और i की कोई भी four consecutive powers add होके zero। ये लंबे sums तुरंत collapse करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Root-of-negatives trap ध्यान में: root of minus a, times root of minus b, है minus root a b, plus नहीं। और दो speed facts रखो, one plus i squared है two i, one minus i squared है minus two i।"
+            },
+            {
+              "seq": 4,
+              "text": "Conjugate versus negative: conjugate सिर्फ imaginary sign flip करता है, जबकि minus z दोनों flip करता है। और याद रखो complex numbers पर कोई order नहीं है।"
+            },
+            {
+              "seq": 5,
+              "text": "Argument के लिए, quadrant table चलाओ: quadrant one देता है alpha, two देता है pi minus alpha, three देता है alpha minus pi, four देता है minus alpha।"
+            },
+            {
+              "seq": 6,
+              "text": "तीन standard polar values याद करने लायक: one plus i है root two at forty five degrees, one plus i root three है two at sixty degrees, और root three plus i है two at thirty degrees।"
+            },
+            {
+              "seq": 7,
+              "text": "Roots के लिए: एक nth root के ठीक n values होते हैं, और कुछ भी करने से पहले हमेशा omega powers को modulo three reduce करो।"
+            },
+            {
+              "seq": 8,
+              "text": "और geometry catches: k बराबर one वाला Apollonius एक line है, constant-argument locus सिर्फ एक arc है, और circle पर modulus of z centre distance plus or minus radius पर range करता है। इस sheet को एक बार चलो और आप ready हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

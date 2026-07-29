@@ -1,0 +1,2483 @@
+{
+  "chapter": "Straight Lines",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 9,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Point of Intersection, Concurrency and Family of Lines",
+      "title": "Where lines meet, and concurrency",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where Lines Meet"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Two non-parallel roads cross at exactly one junction."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Finding it is just solving the two line equations together."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Three lines all passing through one point are concurrent.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"60\" x2=\"360\" y2=\"180\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"60\" y1=\"180\" x2=\"360\" y2=\"60\" stroke=\"#1a56db\" stroke-width=\"2\"/><line x1=\"210\" y1=\"30\" x2=\"210\" y2=\"210\" stroke=\"#c026d3\" stroke-width=\"2\"/><circle cx=\"210\" cy=\"120\" r=\"5\" fill=\"#333\"/><text x=\"218\" y=\"116\" font-size=\"11\" fill=\"#333\">concurrent point</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Three lines through one point are concurrent — a very common exam setup."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "You could intersect two and test the third, but a determinant does it in one shot."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "A unique intersection needs non-parallel lines: $a_1 b_2 - a_2 b_1 \\ne 0$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Parallel lines never meet; coincident lines meet everywhere."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's talk about where lines meet — one of the most heavily tested ideas in the whole chapter."
+            },
+            {
+              "seq": 2,
+              "text": "Two roads that are not parallel cross at exactly one junction. There is one meeting point, no more."
+            },
+            {
+              "seq": 3,
+              "text": "Finding that junction algebraically is nothing fancy: it is just solving the two line equations together, the pair of x and y that satisfies both."
+            },
+            {
+              "seq": 4,
+              "text": "Now scale up. When do three roads all meet at a single roundabout? Look at the picture — three lines threading one common point."
+            },
+            {
+              "seq": 5,
+              "text": "That situation is called concurrency, and it appears again and again, in medians meeting, altitudes meeting, and so on."
+            },
+            {
+              "seq": 6,
+              "text": "You could find where two of them cross and then check the third passes through it — but there is a slicker determinant test that settles it in a single computation."
+            },
+            {
+              "seq": 7,
+              "text": "One caution: a unique intersection only exists when the lines are not parallel, which the algebra encodes as a one b two minus a two b one, not equal to zero."
+            },
+            {
+              "seq": 8,
+              "text": "If that quantity is zero, the lines are either parallel and never meet, or coincident and meet everywhere."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "बात करते हैं कि lines कहाँ मिलती हैं — पूरे chapter का सबसे ज़्यादा test होने वाला idea।"
+            },
+            {
+              "seq": 2,
+              "text": "दो roads जो parallel नहीं हैं, ठीक एक junction पर cross करती हैं। एक ही meeting point, बस।"
+            },
+            {
+              "seq": 3,
+              "text": "उस junction को algebraically ढूँढना कोई fancy चीज़ नहीं: बस दोनों line equations को साथ solve करना, वो x और y जो दोनों को satisfy करे।"
+            },
+            {
+              "seq": 4,
+              "text": "अब scale up करो। तीन roads एक ही roundabout पर कब मिलती हैं? picture देखो — तीन lines एक common point से गुज़रती हुई।"
+            },
+            {
+              "seq": 5,
+              "text": "इसे concurrency कहते हैं, और यह बार-बार आता है, medians के मिलने में, altitudes के मिलने में, वग़ैरह।"
+            },
+            {
+              "seq": 6,
+              "text": "तुम दो का crossing ढूँढकर तीसरी को check कर सकते हो — पर एक slicker determinant test है जो इसे एक ही computation में तय कर देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक caution: unique intersection तभी होता है जब lines parallel न हों, जिसे algebra a one b two minus a two b one, zero के बराबर नहीं, से लिखता है।"
+            },
+            {
+              "seq": 8,
+              "text": "अगर वो quantity zero हो, तो lines या तो parallel हैं और कभी नहीं मिलतीं, या coincident हैं और हर जगह मिलती हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Point of Intersection, Concurrency and Family of Lines",
+      "title": "The family trick",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The Family Trick: $L_1 + \\lambda L_2 = 0$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Suppose $L_1 = 0$ and $L_2 = 0$ cross at a junction $J$."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Every line L1 + lambda L2 = 0 passes through the junction J.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 260\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"60\" x2=\"360\" y2=\"200\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"60\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"100\" y1=\"60\" x2=\"320\" y2=\"200\" stroke=\"#c026d3\" stroke-width=\"1.3\" stroke-dasharray=\"5 4\"/><line x1=\"110\" y1=\"200\" x2=\"310\" y2=\"60\" stroke=\"#c026d3\" stroke-width=\"1.3\" stroke-dasharray=\"5 4\"/><line x1=\"210\" y1=\"30\" x2=\"210\" y2=\"230\" stroke=\"#c026d3\" stroke-width=\"1.3\" stroke-dasharray=\"5 4\"/><circle cx=\"210\" cy=\"130\" r=\"4.5\" fill=\"#333\"/><text x=\"216\" y=\"126\" font-size=\"12\" fill=\"#333\">J</text><text x=\"70\" y=\"66\" font-size=\"11\" fill=\"#059669\">L1 = 0</text><text x=\"70\" y=\"200\" font-size=\"11\" fill=\"#059669\">L2 = 0</text><text x=\"300\" y=\"248\" font-size=\"10\" fill=\"#c026d3\">family through J</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "At $J$, both $L_1$ and $L_2$ are zero, so the combination is automatically zero too."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "L_1 + \\lambda L_2 = 0"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "So this is a whole family of lines through $J$ — one line for each value of $\\lambda$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The family captures every line through $J$ except $L_2 = 0$ itself (that needs $\\lambda \\to \\infty$)."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Impose one extra condition to pin down $\\lambda$ — you never compute $J$ at all."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Here is the cleverest single idea in the whole chapter — and it feels like magic the first time.</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "Suppose two lines, L one equals zero and L two equals zero, cross at some junction J."
+            },
+            {
+              "seq": 3,
+              "text": "Now watch the picture: every one of these dashed lines passes through J too. What are they?"
+            },
+            {
+              "seq": 4,
+              "text": "Consider the combination L one plus lambda times L two. At the junction J, both L one and L two are exactly zero, so the whole combination is automatically zero there, whatever lambda is."
+            },
+            {
+              "seq": 5,
+              "text": "In symbols, L one plus lambda L two equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "So this single expression is a whole family of lines, all passing through J, one line for each value of lambda you choose."
+            },
+            {
+              "seq": 7,
+              "text": "One fine print: this family reaches every line through J except L two itself, which would need lambda running off to infinity. If your answer might be L two, check it on its own."
+            },
+            {
+              "seq": 8,
+              "text": "And the payoff: if you need the line through J that also meets one more condition, just impose that condition to fix lambda — you never have to find J at all."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>यह रहा पूरे chapter का सबसे clever idea — और पहली बार यह जादू जैसा लगता है।</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "मान लो दो lines, L one बराबर zero और L two बराबर zero, किसी junction J पर cross करती हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "अब picture देखो: इन dashed lines में से हर एक भी J से गुज़रती है। ये क्या हैं?"
+            },
+            {
+              "seq": 4,
+              "text": "Combination L one plus lambda times L two सोचो। Junction J पर L one और L two दोनों बिल्कुल zero हैं, तो पूरी combination वहाँ अपने-आप zero हो जाती है, lambda चाहे कुछ भी हो।"
+            },
+            {
+              "seq": 5,
+              "text": "Symbols में, L one plus lambda L two बराबर zero।"
+            },
+            {
+              "seq": 6,
+              "text": "तो यह अकेली expression lines का एक पूरा family है, सब J से गुज़रती हुई, हर चुने lambda के लिए एक line।"
+            },
+            {
+              "seq": 7,
+              "text": "एक fine print: यह family J से गुज़रती हर line तक पहुँचता है सिवाय L two के, जिसके लिए lambda infinity तक जाना पड़ेगा। अगर तुम्हारा answer L two हो सकता है, उसे अलग से check करो।"
+            },
+            {
+              "seq": 8,
+              "text": "और payoff: अगर तुम्हें J से गुज़रती वो line चाहिए जो एक और condition भी पूरी करे, तो बस वो condition impose करके lambda fix कर लो — J ढूँढने की ज़रूरत ही नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Point of Intersection, Concurrency and Family of Lines",
+      "title": "Proof: the family passes through the junction",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: The Family Passes Through $J$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Let $L_1 \\equiv a_1 x + b_1 y + c_1$ and $L_2 \\equiv a_2 x + b_2 y + c_2$ meet at $J(x_0, y_0)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Since $J$ lies on both lines, each expression vanishes there."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "L_1(x_0, y_0) = 0, \\quad L_2(x_0, y_0) = 0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "L_1(x_0, y_0) + \\lambda L_2(x_0, y_0) = 0 + \\lambda \\cdot 0 = 0"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "So $J$ satisfies $L_1 + \\lambda L_2 = 0$ for every $\\lambda$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "And $L_1 + \\lambda L_2 = 0$ is first-degree, so it is itself a line through $J$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "'Both zero $\\Rightarrow$ sum zero' — that is the whole reason the trick works."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's prove that the family really does pass through the junction — it is a two-line argument."
+            },
+            {
+              "seq": 2,
+              "text": "Write L one as a one x plus b one y plus c one, and L two as a two x plus b two y plus c two, meeting at the junction J with coordinates x nought, y nought."
+            },
+            {
+              "seq": 3,
+              "text": "Because J sits on both lines, each of these expressions evaluates to zero when you plug in J."
+            },
+            {
+              "seq": 4,
+              "text": "That is, L one at J is zero, and L two at J is zero."
+            },
+            {
+              "seq": 5,
+              "text": "Now form the combination at J: L one at J plus lambda times L two at J is zero plus lambda times zero, which is zero."
+            },
+            {
+              "seq": 6,
+              "text": "So J satisfies L one plus lambda L two equals zero for every single value of lambda — the junction is on all of them."
+            },
+            {
+              "seq": 7,
+              "text": "And since L one plus lambda L two is still a first-degree expression, its graph is a line, so it is genuinely a line through J."
+            },
+            {
+              "seq": 8,
+              "text": "The entire trick rests on that one clean fact: both zero implies the sum is zero. That is why the junction rides along for free."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो prove करें कि family सचमुच junction से गुज़रता है — यह दो-line वाला argument है।"
+            },
+            {
+              "seq": 2,
+              "text": "L one को a one x plus b one y plus c one लिखो, और L two को a two x plus b two y plus c two, जो junction J पर मिलती हैं, coordinates x nought, y nought के साथ।"
+            },
+            {
+              "seq": 3,
+              "text": "क्योंकि J दोनों lines पर है, J डालने पर इनमें से हर expression zero हो जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "यानी L one at J zero है, और L two at J zero है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब J पर combination बनाओ: L one at J plus lambda times L two at J है zero plus lambda times zero, जो zero है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो J, L one plus lambda L two बराबर zero को हर एक lambda के लिए satisfy करता है — junction सब पर है।"
+            },
+            {
+              "seq": 7,
+              "text": "और चूँकि L one plus lambda L two अभी भी first-degree expression है, इसका graph एक line है, तो यह सचमुच J से गुज़रती line है।"
+            },
+            {
+              "seq": 8,
+              "text": "पूरा trick उसी एक clean fact पर टिका है: both zero मतलब sum zero। इसीलिए junction मुफ़्त में साथ चलता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Point of Intersection, Concurrency and Family of Lines",
+      "title": "Proof: the concurrency determinant, and the family procedure",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: The Concurrency Determinant"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Three lines $L_i \\equiv a_i x + b_i y + c_i = 0$, with no two parallel."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Let $L_1, L_2$ meet at $J(x_0, y_0)$; concurrency means $L_3$ also passes through $J$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\begin{pmatrix} a_1 & b_1 & c_1 \\\\ a_2 & b_2 & c_2 \\\\ a_3 & b_3 & c_3 \\end{pmatrix} \\begin{pmatrix} x_0 \\\\ y_0 \\\\ 1 \\end{pmatrix} = \\mathbf{0}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "This homogeneous system has the nonzero solution $(x_0, y_0, 1)$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "A homogeneous system has a nonzero solution only if its determinant vanishes."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\begin{vmatrix} a_1 & b_1 & c_1 \\\\ a_2 & b_2 & c_2 \\\\ a_3 & b_3 & c_3 \\end{vmatrix} = 0"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Family procedure: write $L_1 + \\lambda L_2 = 0$, impose the extra condition, then solve for $\\lambda$."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "Through a point $\\Rightarrow$ substitute it; given slope $\\Rightarrow$ set $-A/B$; perpendicular $\\Rightarrow$ slope product $-1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the determinant test for concurrency, and why it works."
+            },
+            {
+              "seq": 2,
+              "text": "Take three lines, L one, L two, L three, in general form, and assume no two of them are parallel."
+            },
+            {
+              "seq": 3,
+              "text": "Let the first two meet at the junction J. Concurrency simply means the third line also passes through that same J."
+            },
+            {
+              "seq": 4,
+              "text": "So all three equations hold at J. Stack them as a matrix of coefficients times the column x nought, y nought, one, and the result is the zero vector."
+            },
+            {
+              "seq": 5,
+              "text": "That is a homogeneous system, and it has a genuinely nonzero solution, namely x nought, y nought, one — the last entry is one, so it cannot be all zeros."
+            },
+            {
+              "seq": 6,
+              "text": "Here is the key algebra fact: a homogeneous system can have a nonzero solution only if its coefficient determinant is zero."
+            },
+            {
+              "seq": 7,
+              "text": "So concurrency forces that three by three determinant of the coefficients to vanish. That is the whole test."
+            },
+            {
+              "seq": 8,
+              "text": "And the family procedure in practice: write L one plus lambda L two equals zero, impose whatever extra condition the problem gives, and solve for lambda."
+            },
+            {
+              "seq": 9,
+              "text": "If it must pass through a point, substitute the point; if it has a given slope, set minus A over B equal to it; if it is perpendicular to something, set the slope product to minus one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब concurrency के लिए determinant test, और यह क्यों काम करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "तीन lines लो, L one, L two, L three, general form में, और मान लो इनमें से कोई दो parallel नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "पहली दो को junction J पर मिलने दो। Concurrency का बस इतना मतलब है कि तीसरी line भी उसी J से गुज़रती है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो तीनों equations J पर hold करती हैं। Coefficients के matrix को column x nought, y nought, one से multiply करो, और result zero vector है।"
+            },
+            {
+              "seq": 5,
+              "text": "यह एक homogeneous system है, और इसका एक सचमुच nonzero solution है, यानी x nought, y nought, one — आख़िरी entry one है, तो यह पूरा zero नहीं हो सकता।"
+            },
+            {
+              "seq": 6,
+              "text": "यह रहा key algebra fact: homogeneous system का nonzero solution तभी हो सकता है जब उसका coefficient determinant zero हो।"
+            },
+            {
+              "seq": 7,
+              "text": "तो concurrency उस three by three coefficient determinant को zero होने पर मजबूर कर देती है। यही पूरा test है।"
+            },
+            {
+              "seq": 8,
+              "text": "और practice में family procedure: L one plus lambda L two बराबर zero लिखो, problem जो भी extra condition दे उसे impose करो, और lambda के लिए solve करो।"
+            },
+            {
+              "seq": 9,
+              "text": "अगर किसी point से गुज़रनी हो, point substitute करो; given slope हो, minus A over B उसके बराबर रखो; किसी चीज़ के perpendicular हो, slope product minus one रखो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "formulas",
+      "subtopic": "Point of Intersection, Concurrency and Family of Lines",
+      "title": "Intersection and family: formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Intersection & Family — Toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\text{Cramer: } x = \\frac{b_1 c_2 - b_2 c_1}{a_1 b_2 - a_2 b_1}, \\quad y = \\frac{c_1 a_2 - c_2 a_1}{a_1 b_2 - a_2 b_1}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{Parallel: } \\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\ne \\frac{c_1}{c_2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{Intersecting: } \\frac{a_1}{a_2} \\ne \\frac{b_1}{b_2}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{Coincident: } \\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\text{Concurrency: } \\begin{vmatrix} a_1 & b_1 & c_1 \\\\ a_2 & b_2 & c_2 \\\\ a_3 & b_3 & c_3 \\end{vmatrix} = 0"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\text{Family: } L_1 + \\lambda L_2 = 0"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "The concurrency test assumes no two of the three lines are parallel."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the toolkit for intersection, parallelism, concurrency, and the family trick."
+            },
+            {
+              "seq": 2,
+              "text": "The intersection point by Cramer's rule: x is b one c two minus b two c one, over a one b two minus a two b one; y has the same denominator with c one a two minus c two a one on top."
+            },
+            {
+              "seq": 3,
+              "text": "Two lines are parallel and distinct when the a-ratio equals the b-ratio but differs from the c-ratio."
+            },
+            {
+              "seq": 4,
+              "text": "They intersect when the a-ratio is not equal to the b-ratio."
+            },
+            {
+              "seq": 5,
+              "text": "And they are coincident when all three ratios are equal — the same line written twice."
+            },
+            {
+              "seq": 6,
+              "text": "Three lines are concurrent when the three by three determinant of their coefficients is zero."
+            },
+            {
+              "seq": 7,
+              "text": "And the family through a junction is L one plus lambda L two equals zero."
+            },
+            {
+              "seq": 8,
+              "text": "One standing caveat: the concurrency test assumes no two of the three lines are parallel, so always sanity-check that."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा intersection, parallelism, concurrency, और family trick का toolkit।"
+            },
+            {
+              "seq": 2,
+              "text": "Cramer's rule से intersection point: x है b one c two minus b two c one, over a one b two minus a two b one; y का denominator वही, ऊपर c one a two minus c two a one।"
+            },
+            {
+              "seq": 3,
+              "text": "दो lines parallel और distinct हैं जब a-ratio बराबर b-ratio हो पर c-ratio से अलग हो।"
+            },
+            {
+              "seq": 4,
+              "text": "वे intersect करती हैं जब a-ratio, b-ratio के बराबर न हो।"
+            },
+            {
+              "seq": 5,
+              "text": "और coincident हैं जब तीनों ratios बराबर हों — वही line दो बार लिखी हुई।"
+            },
+            {
+              "seq": 6,
+              "text": "तीन lines concurrent हैं जब उनके coefficients का three by three determinant zero हो।"
+            },
+            {
+              "seq": 7,
+              "text": "और junction से family है L one plus lambda L two बराबर zero।"
+            },
+            {
+              "seq": 8,
+              "text": "एक standing caveat: concurrency test मानता है कि तीनों में कोई दो parallel नहीं, तो हमेशा यह sanity-check करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Point of Intersection, Concurrency and Family of Lines",
+      "title": "Worked examples: intersection and concurrency",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Intersection & Concurrency"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Example 1: intersection of $2x + 3y - 8 = 0$ and $x - y + 1 = 0$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "x = y - 1 \\;\\Rightarrow\\; 2(y-1) + 3y - 8 = 0 \\;\\Rightarrow\\; 5y = 10"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "(x, y) = (1, 2)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 2: are $x+y-2=0$, $2x-y-1=0$, $4x-y-5=0$ concurrent?"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\begin{vmatrix} 1 & 1 & -2 \\\\ 2 & -1 & -1 \\\\ 4 & -1 & -5 \\end{vmatrix} = 4 - (-6) - 4 = 6"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Determinant is $6 \\ne 0$, so the lines are NOT concurrent."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Anchor the $+\\,-\\,+$ signs across the top row and expand slowly."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two examples: a plain intersection, then a concurrency check by determinant."
+            },
+            {
+              "seq": 2,
+              "text": "Example one: find where two x plus three y minus eight equals zero meets x minus y plus one equals zero."
+            },
+            {
+              "seq": 3,
+              "text": "From the second line, x equals y minus one. Substitute into the first: two times y minus one, plus three y minus eight, equals zero, which gives five y equals ten."
+            },
+            {
+              "seq": 4,
+              "text": "So y is two and x is one; the intersection is the point one comma two."
+            },
+            {
+              "seq": 5,
+              "text": "Example two: are the three lines x plus y minus two, two x minus y minus one, and four x minus y minus five all concurrent?"
+            },
+            {
+              "seq": 6,
+              "text": "Drop straight into the determinant — do not solve two and test the third. Expanding along the top row gives four, minus a negative six, minus four, which is six."
+            },
+            {
+              "seq": 7,
+              "text": "The determinant is six, which is not zero, so the three lines are not concurrent."
+            },
+            {
+              "seq": 8,
+              "text": "The only trap here is a sign slip in the cofactor expansion, so anchor the plus, minus, plus pattern across the top row and expand slowly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो examples: एक plain intersection, फिर determinant से concurrency check।"
+            },
+            {
+              "seq": 2,
+              "text": "Example one: ढूँढो कि two x plus three y minus eight बराबर zero, x minus y plus one बराबर zero से कहाँ मिलती है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी line से, x बराबर y minus one। पहली में substitute करो: two times y minus one, plus three y minus eight, बराबर zero, जो देता है five y बराबर ten।"
+            },
+            {
+              "seq": 4,
+              "text": "तो y है two और x है one; intersection है point one comma two।"
+            },
+            {
+              "seq": 5,
+              "text": "Example two: क्या तीन lines x plus y minus two, two x minus y minus one, और four x minus y minus five सब concurrent हैं?"
+            },
+            {
+              "seq": 6,
+              "text": "सीधे determinant में उतरो — दो solve करके तीसरी test मत करो। Top row के साथ expand करने पर मिलता है four, minus a negative six, minus four, जो है six।"
+            },
+            {
+              "seq": 7,
+              "text": "Determinant है six, जो zero नहीं, तो तीनों lines concurrent नहीं हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "यहाँ एकमात्र trap है cofactor expansion में sign slip, तो top row के साथ plus, minus, plus pattern anchor करो और धीरे expand करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Point of Intersection, Concurrency and Family of Lines",
+      "title": "Worked example: the family method",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: The Family Method"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Find the line through the intersection of $x+2y-5=0$ and $3x-y+1=0$ that also passes through $(2,1)$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "(x + 2y - 5) + \\lambda(3x - y + 1) = 0"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Impose passage through the point $(2,1)$:"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "(2 + 2 - 5) + \\lambda(6 - 1 + 1) = 0 \\;\\Rightarrow\\; -1 + 6\\lambda = 0"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\lambda = \\tfrac{1}{6}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "9x + 11y - 29 = 0"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "We never computed the intersection point — that is the payoff."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Now the family method in action — watch us solve without ever finding the intersection.</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "Find the line through the intersection of x plus two y minus five and three x minus y plus one that also passes through the point two comma one."
+            },
+            {
+              "seq": 3,
+              "text": "Write the family: the quantity x plus two y minus five, plus lambda times the quantity three x minus y plus one, equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "Now impose the extra condition that it passes through two comma one — just substitute those coordinates."
+            },
+            {
+              "seq": 5,
+              "text": "That gives two plus two minus five, plus lambda times six minus one plus one, equals zero, which is minus one plus six lambda equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "So lambda is one sixth."
+            },
+            {
+              "seq": 7,
+              "text": "Substitute lambda back, clear the fraction, and you get nine x plus eleven y minus twenty nine equals zero."
+            },
+            {
+              "seq": 8,
+              "text": "And notice the whole point: we never computed the intersection of the two lines. Skipping that step is exactly the elegance examiners reward."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>अब family method action में — देखो हम intersection ढूँढे बिना ही solve करते हैं।</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "x plus two y minus five और three x minus y plus one के intersection से गुज़रती वो line ढूँढो जो point two comma one से भी गुज़रे।"
+            },
+            {
+              "seq": 3,
+              "text": "Family लिखो: the quantity x plus two y minus five, plus lambda times the quantity three x minus y plus one, बराबर zero।"
+            },
+            {
+              "seq": 4,
+              "text": "अब extra condition impose करो कि यह two comma one से गुज़रती है — बस वो coordinates substitute करो।"
+            },
+            {
+              "seq": 5,
+              "text": "इससे मिलता है two plus two minus five, plus lambda times six minus one plus one, बराबर zero, यानी minus one plus six lambda बराबर zero।"
+            },
+            {
+              "seq": 6,
+              "text": "तो lambda है one sixth।"
+            },
+            {
+              "seq": 7,
+              "text": "Lambda वापस substitute करो, fraction clear करो, और मिलता है nine x plus eleven y minus twenty nine बराबर zero।"
+            },
+            {
+              "seq": 8,
+              "text": "और पूरी बात यही: हमने दोनों lines का intersection कभी compute नहीं किया। उस step को skip करना ही वो elegance है जो examiners reward करते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Point of Intersection, Concurrency and Family of Lines",
+      "title": "Worked example: concurrency with a parameter (advanced)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Concurrency with a Parameter (Advanced)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "For what $a$ are $ax+2y+1=0$, $2x+ay+2=0$, $x+y-1=0$ concurrent?"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\begin{vmatrix} a & 2 & 1 \\\\ 2 & a & 2 \\\\ 1 & 1 & -1 \\end{vmatrix} = 0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "a(-a-2) - 2(-2-2) + (2-a) = -a^2 - 3a + 10 = 0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "a^2 + 3a - 10 = 0 \\;\\Rightarrow\\; (a+5)(a-2) = 0"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "a = -5 \\quad\\text{or}\\quad a = 2"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "At $a=2$ the first two lines become parallel — concurrency is impossible; discard it."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "a = -5"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>An Advanced twist: solving the determinant is only half the job — the parallel-check is the trap.</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "For what value of a are the lines a x plus two y plus one, two x plus a y plus two, and x plus y minus one all concurrent?"
+            },
+            {
+              "seq": 3,
+              "text": "Set the coefficient determinant to zero."
+            },
+            {
+              "seq": 4,
+              "text": "Expanding along the top row: a times minus a minus two, minus two times minus two minus two, plus the quantity two minus a. That collapses to minus a squared minus three a plus ten equals zero."
+            },
+            {
+              "seq": 5,
+              "text": "Multiply through by minus one: a squared plus three a minus ten equals zero, which factors as a plus five, times a minus two."
+            },
+            {
+              "seq": 6,
+              "text": "So a is minus five or a is two — two candidates from the algebra."
+            },
+            {
+              "seq": 7,
+              "text": "Now the Advanced check. At a equals two, the first two lines become two x plus two y plus one and two x plus two y plus two — parallel and distinct, so they never meet, and concurrency is impossible. Discard a equals two."
+            },
+            {
+              "seq": 8,
+              "text": "At a equals minus five, no two lines are parallel, so it survives. The single valid answer is a equals minus five."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>एक Advanced twist: determinant solve करना आधा काम है — parallel-check ही trap है।</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "किस a के लिए lines a x plus two y plus one, two x plus a y plus two, और x plus y minus one सब concurrent हैं?"
+            },
+            {
+              "seq": 3,
+              "text": "Coefficient determinant को zero रखो।"
+            },
+            {
+              "seq": 4,
+              "text": "Top row से expand: a times minus a minus two, minus two times minus two minus two, plus the quantity two minus a। यह गिरकर बनता है minus a squared minus three a plus ten बराबर zero।"
+            },
+            {
+              "seq": 5,
+              "text": "Minus one से multiply करो: a squared plus three a minus ten बराबर zero, जो factor होता है a plus five, times a minus two।"
+            },
+            {
+              "seq": 6,
+              "text": "तो a है minus five या a है two — algebra से दो candidates।"
+            },
+            {
+              "seq": 7,
+              "text": "अब Advanced check। a बराबर two पर, पहली दो lines बन जाती हैं two x plus two y plus one और two x plus two y plus two — parallel और distinct, तो वे कभी नहीं मिलतीं, और concurrency असंभव है। a बराबर two discard करो।"
+            },
+            {
+              "seq": 8,
+              "text": "a बराबर minus five पर कोई दो lines parallel नहीं, तो यह बच जाता है। एकमात्र valid answer है a बराबर minus five।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "tips",
+      "subtopic": "Point of Intersection, Concurrency and Family of Lines",
+      "title": "Pitfalls and pro-tips: intersection and family",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pitfalls: Intersection & Family"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "If a line passes through an intersection plus one condition, use $L_1 + \\lambda L_2 = 0$ — skip finding the point."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "After the concurrency determinant is zero, still check that no two lines are parallel."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The family $L_1 + \\lambda L_2 = 0$ misses $L_2$ itself — test that case separately if needed."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Keep the $+\\,-\\,+$ sign pattern explicit when expanding a determinant."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Pro-tip: 'line through the intersection of ... and ...' should trigger the family trick instantly."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Finding the point first is almost always the slower, more error-prone path."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Determinant dies $\\Rightarrow$ they meet — with the no-two-parallel caveat."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close this subtopic with the traps and the one habit that saves the most time."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, really a time-saver: if a question wants a line through an intersection plus one more condition, reach for L one plus lambda L two equals zero and skip finding the point entirely."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: a zero concurrency determinant can also be satisfied by a degenerate, parallel configuration, so always verify that no two of the lines are parallel."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: the family L one plus lambda L two can produce every line through the junction except L two itself. If L two might be your answer, test that case on its own."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: when expanding a three by three determinant, keep the plus, minus, plus sign pattern explicit across your chosen row — rushing the middle term is where marks vanish."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>And the pro-tip: the phrase 'line through the intersection of, and' should trigger the family trick instantly, before you write anything else.</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "Finding the intersection point first is almost always the slower path, and it introduces extra arithmetic to slip on."
+            },
+            {
+              "seq": 8,
+              "text": "Sum it up as: determinant dies, they meet — always with the no-two-parallel caveat attached."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic को traps और उस एक आदत के साथ बंद करते हैं जो सबसे ज़्यादा time बचाती है।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, असल में time-saver: अगर सवाल intersection से गुज़रती line plus एक और condition माँगे, तो L one plus lambda L two बराबर zero लो और point ढूँढना पूरी तरह skip करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: zero concurrency determinant एक degenerate, parallel configuration से भी satisfy हो सकता है, तो हमेशा verify करो कि कोई दो lines parallel नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: family L one plus lambda L two junction से गुज़रती हर line बना सकता है सिवाय L two के। अगर L two तुम्हारा answer हो सकता है, उसे अलग से test करो।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: three by three determinant expand करते समय अपनी chosen row पर plus, minus, plus sign pattern explicit रखो — बीच का term जल्दबाज़ी में करना ही marks खाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>और pro-tip: phrase 'line through the intersection of, and' को family trick तुरंत trigger करना चाहिए, कुछ और लिखने से पहले।</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "पहले intersection point ढूँढना लगभग हमेशा slower रास्ता है, और इसमें slip करने को extra arithmetic आ जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "इसे ऐसे याद रखो: determinant dies, they meet — हमेशा no-two-parallel caveat के साथ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Angle Bisectors of Two Lines",
+      "title": "Angle bisectors: the equidistant lines",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Angle Bisectors: the Equidistant Lines"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "When two lines cross they make four angles; the bisectors split them exactly in half."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "The two angle bisectors are always perpendicular to each other.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 260\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"190\" x2=\"360\" y2=\"70\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"60\" y1=\"70\" x2=\"360\" y2=\"190\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"60\" y1=\"130\" x2=\"360\" y2=\"130\" stroke=\"#1a56db\" stroke-width=\"1.6\" stroke-dasharray=\"6 4\"/><line x1=\"210\" y1=\"20\" x2=\"210\" y2=\"240\" stroke=\"#1a56db\" stroke-width=\"1.6\" stroke-dasharray=\"6 4\"/><circle cx=\"210\" cy=\"130\" r=\"3.5\" fill=\"#333\"/><text x=\"216\" y=\"126\" font-size=\"11\" fill=\"#333\">O</text><text x=\"298\" y=\"122\" font-size=\"11\" fill=\"#1a56db\">bisector</text><text x=\"216\" y=\"36\" font-size=\"11\" fill=\"#1a56db\">bisector</text><text x=\"66\" y=\"202\" font-size=\"11\" fill=\"#059669\">line 1</text><text x=\"66\" y=\"66\" font-size=\"11\" fill=\"#059669\">line 2</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "A point lies on a bisector exactly when it is equidistant from the two lines."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\frac{a_1 x + b_1 y + c_1}{\\sqrt{a_1^2 + b_1^2}} = \\pm\\frac{a_2 x + b_2 y + c_2}{\\sqrt{a_2^2 + b_2^2}}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Dropping the moduli introduces a $\\pm$ — the two signs give the two bisectors."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The identification rules require both constants positive first — normalize $c_1, c_2 > 0$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The two bisectors are always perpendicular — a free check on every answer."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "When two lines cross, they make four angles in two equal pairs, and the bisectors are the lines that split those angles exactly in half."
+            },
+            {
+              "seq": 2,
+              "text": "Look at the picture: two crossing lines, and their two bisectors. Notice something — the bisectors sit at right angles to each other, always."
+            },
+            {
+              "seq": 3,
+              "text": "Because they bisect supplementary angles, once you have one bisector, the other is automatically perpendicular to it."
+            },
+            {
+              "seq": 4,
+              "text": "The defining property is beautifully simple: a point lies on a bisector exactly when it is the same perpendicular distance from both lines. Equidistant means on the bisector."
+            },
+            {
+              "seq": 5,
+              "text": "Since distance from a line is that familiar expression over the root of a squared plus b squared, equidistant becomes the first ratio equal to plus or minus the second."
+            },
+            {
+              "seq": 6,
+              "text": "Dropping the two moduli is what introduces the plus or minus, and that single sign choice is the whole story: the two signs give the two bisectors."
+            },
+            {
+              "seq": 7,
+              "text": "One crucial setup: the clean identification rules only work if you first rewrite both lines with positive constant terms. Skip that and every sign rule inverts on you."
+            },
+            {
+              "seq": 8,
+              "text": "And keep in mind the free check: whatever two bisectors you compute, they must come out perpendicular."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "जब दो lines cross करती हैं, तो चार angles बनते हैं दो equal pairs में, और bisectors वे lines हैं जो उन angles को ठीक आधा बाँटती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Picture देखो: दो crossing lines, और उनके दो bisectors। एक बात देखो — bisectors एक दूसरे के right angles पर बैठते हैं, हमेशा।"
+            },
+            {
+              "seq": 3,
+              "text": "क्योंकि वे supplementary angles को bisect करते हैं, एक bisector मिलते ही दूसरा अपने-आप उसके perpendicular होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Defining property बेहद simple है: एक point bisector पर तभी होता है जब वो दोनों lines से same perpendicular distance पर हो। Equidistant मतलब bisector पर।"
+            },
+            {
+              "seq": 5,
+              "text": "चूँकि line से distance वही familiar expression over root of a squared plus b squared है, equidistant बन जाता है पहला ratio बराबर plus या minus दूसरा।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों moduli हटाना ही plus या minus लाता है, और वही एक sign choice पूरी कहानी है: दो signs दो bisectors देते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "एक crucial setup: clean identification rules तभी काम करते हैं जब तुम पहले दोनों lines को positive constant terms के साथ लिखो। इसे skip करो तो हर sign rule उलट जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और free check याद रखो: जो भी दो bisectors compute करो, वे perpendicular आने ही चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Angle Bisectors of Two Lines",
+      "title": "Proof: the bisector is the equidistant locus",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: The Bisector is the Equidistant Locus"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A point $P$ is equidistant from lines $L_1$ and $L_2$."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Equal perpendicular distances from P to both lines.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"200\" x2=\"320\" y2=\"40\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"120\" y1=\"200\" x2=\"390\" y2=\"160\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"322\" y=\"40\" font-size=\"11\" fill=\"#059669\">L1</text><text x=\"392\" y=\"162\" font-size=\"11\" fill=\"#059669\">L2</text><circle cx=\"120\" cy=\"200\" r=\"3\" fill=\"#333\"/><circle cx=\"270\" cy=\"120\" r=\"4\" fill=\"#c026d3\"/><text x=\"276\" y=\"116\" font-size=\"12\" fill=\"#c026d3\">P</text><line x1=\"270\" y1=\"120\" x2=\"238\" y2=\"94\" stroke=\"#c026d3\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><line x1=\"270\" y1=\"120\" x2=\"286\" y2=\"158\" stroke=\"#c026d3\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><text x=\"212\" y=\"90\" font-size=\"10\" fill=\"#666\">equal</text><text x=\"292\" y=\"156\" font-size=\"10\" fill=\"#666\">equal</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\frac{|a_1 x + b_1 y + c_1|}{\\sqrt{a_1^2 + b_1^2}} = \\frac{|a_2 x + b_2 y + c_2|}{\\sqrt{a_2^2 + b_2^2}}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Removing the moduli gives two cases — the expressions equal, or negatives of each other."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\frac{a_1 x + b_1 y + c_1}{\\sqrt{a_1^2 + b_1^2}} = \\pm\\frac{a_2 x + b_2 y + c_2}{\\sqrt{a_2^2 + b_2^2}}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Each sign is a first-degree equation, hence a line — together, the two bisectors."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Each line gets its OWN denominator $\\sqrt{a^2 + b^2}$ — never share one."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's prove that the bisector really is the locus of equidistant points — it follows straight from the distance formula."
+            },
+            {
+              "seq": 2,
+              "text": "Take a point P that is equidistant from the two lines L one and L two."
+            },
+            {
+              "seq": 3,
+              "text": "Picture it: the perpendicular from P to the first line and the perpendicular to the second are the same length."
+            },
+            {
+              "seq": 4,
+              "text": "Write that as an equation using the point-to-line distance: the modulus of L one over its own root equals the modulus of L two over its own root."
+            },
+            {
+              "seq": 5,
+              "text": "Now remove the moduli. Two expressions can have equal absolute values in exactly two ways — they are equal, or they are negatives of each other."
+            },
+            {
+              "seq": 6,
+              "text": "That is exactly the plus or minus: the first ratio equals plus or minus the second."
+            },
+            {
+              "seq": 7,
+              "text": "Each choice of sign is a first-degree equation, so each is a line. Together, those two lines are the two angle bisectors."
+            },
+            {
+              "seq": 8,
+              "text": "One thing students routinely botch: each line carries its own denominator, the root of its own a squared plus b squared. Never share a single denominator across both."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो prove करें कि bisector सचमुच equidistant points का locus है — यह सीधे distance formula से निकलता है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक point P लो जो दोनों lines L one और L two से equidistant है।"
+            },
+            {
+              "seq": 3,
+              "text": "Picture करो: P से पहली line तक perpendicular और दूसरी तक perpendicular same length के हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे point-to-line distance से equation लिखो: L one का modulus over उसका अपना root बराबर L two का modulus over उसका अपना root।"
+            },
+            {
+              "seq": 5,
+              "text": "अब moduli हटाओ। दो expressions के absolute values ठीक दो तरीक़ों से बराबर हो सकते हैं — या तो वे equal हों, या एक दूसरे के negatives हों।"
+            },
+            {
+              "seq": 6,
+              "text": "यही तो plus या minus है: पहला ratio बराबर plus या minus दूसरा।"
+            },
+            {
+              "seq": 7,
+              "text": "हर sign choice एक first-degree equation है, तो हर एक line है। साथ में, वे दो lines ही दो angle bisectors हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "एक चीज़ जो students अक्सर बिगाड़ते हैं: हर line अपना denominator रखती है, अपने a squared plus b squared का root। दोनों पर एक ही denominator कभी share मत करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Angle Bisectors of Two Lines",
+      "title": "Which bisector is which?",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Which Bisector Is Which?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Step 1: rewrite both lines so the constants are positive, $c_1, c_2 > 0$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Step 2: the $+$ sign gives the bisector of the angle containing the origin."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "Why positive constants? They pin the origin to the 'positive' side of both lines."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Step 3: to label acute versus obtuse, compute $a_1 a_2 + b_1 b_2$ with the positive forms."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "a_1 a_2 + b_1 b_2 > 0 \\;\\Rightarrow\\; \\text{'+' is the obtuse bisector}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "a_1 a_2 + b_1 b_2 < 0 \\;\\Rightarrow\\; \\text{'+' is the acute bisector}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "The two bisectors always satisfy $m_1 m_2 = -1$ — verify at the end."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Writing the two bisectors is easy; the real exam skill is telling which is which. Here is the procedure."
+            },
+            {
+              "seq": 2,
+              "text": "Step one: rewrite both lines so their constant terms are positive. If a constant is negative, multiply that whole equation by minus one."
+            },
+            {
+              "seq": 3,
+              "text": "Step two: with both constants positive, the plus sign always gives the bisector of the angle that contains the origin."
+            },
+            {
+              "seq": 4,
+              "text": "Why does forcing positive constants matter? Because the sign of the constant encodes which side of the line the origin is on; making both positive pins the origin to the positive side of both, and that is what makes the plus sign mean the origin's angle."
+            },
+            {
+              "seq": 5,
+              "text": "Step three: to label acute versus obtuse, compute a one a two plus b one b two, using the positive-constant forms."
+            },
+            {
+              "seq": 6,
+              "text": "If that sum is positive, the plus bisector is the obtuse one."
+            },
+            {
+              "seq": 7,
+              "text": "If that sum is negative, the plus bisector is the acute one."
+            },
+            {
+              "seq": 8,
+              "text": "And whatever you get, the two bisectors must satisfy m one times m two equals minus one — verify that perpendicularity at the end as a check."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो bisectors लिखना आसान है; असली exam skill है यह बताना कि कौन-सा कौन-सा है। यह रही procedure।"
+            },
+            {
+              "seq": 2,
+              "text": "Step one: दोनों lines को ऐसे लिखो कि उनके constant terms positive हों। अगर कोई constant negative हो, तो उस पूरी equation को minus one से multiply करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Step two: दोनों constants positive होने पर, plus sign हमेशा उस angle का bisector देता है जिसमें origin है।"
+            },
+            {
+              "seq": 4,
+              "text": "Positive constants ज़रूरी क्यों? क्योंकि constant का sign बताता है origin line के किस side है; दोनों को positive करना origin को दोनों के positive side पर pin कर देता है, और यही plus sign को origin के angle का मतलब देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Step three: acute बनाम obtuse label करने के लिए, positive-constant forms से a one a two plus b one b two निकालो।"
+            },
+            {
+              "seq": 6,
+              "text": "अगर वो sum positive हो, तो plus bisector obtuse वाला है।"
+            },
+            {
+              "seq": 7,
+              "text": "अगर वो sum negative हो, तो plus bisector acute वाला है।"
+            },
+            {
+              "seq": 8,
+              "text": "और जो भी मिले, दोनों bisectors को m one times m two बराबर minus one satisfy करना चाहिए — अंत में वो perpendicularity check कर लो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "formulas",
+      "subtopic": "Angle Bisectors of Two Lines",
+      "title": "Angle bisectors: formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Angle Bisectors — Toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\frac{a_1 x + b_1 y + c_1}{\\sqrt{a_1^2 + b_1^2}} = \\pm\\frac{a_2 x + b_2 y + c_2}{\\sqrt{a_2^2 + b_2^2}}"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "Normalize first: make $c_1 > 0$ and $c_2 > 0$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{Origin's bisector: the '+' sign}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "a_1 a_2 + b_1 b_2 > 0 \\Rightarrow \\text{'+' obtuse}; \\quad < 0 \\Rightarrow \\text{'+' acute}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Decide acute versus obtuse only when the question asks for it."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{Always: } m_{b_1}\\, m_{b_2} = -1"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Each line carries its own $\\sqrt{a^2 + b^2}$ denominator — do not share one."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the whole toolkit for angle bisectors on one board."
+            },
+            {
+              "seq": 2,
+              "text": "The pair of bisectors: the first line over its root equals plus or minus the second line over its root."
+            },
+            {
+              "seq": 3,
+              "text": "Before anything else, normalize: make both constant terms positive."
+            },
+            {
+              "seq": 4,
+              "text": "With that done, the plus sign is the bisector of the angle containing the origin."
+            },
+            {
+              "seq": 5,
+              "text": "For acute versus obtuse, look at a one a two plus b one b two: positive means the plus bisector is obtuse, negative means the plus bisector is acute."
+            },
+            {
+              "seq": 6,
+              "text": "But only bother with this when the question actually asks acute or obtuse — do not compute it out of habit."
+            },
+            {
+              "seq": 7,
+              "text": "And always, the slopes of the two bisectors multiply to minus one."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, remember each line keeps its own root of a squared plus b squared in the denominator; do not share one across both."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा angle bisectors का पूरा toolkit एक board पर।"
+            },
+            {
+              "seq": 2,
+              "text": "Bisectors का pair: पहली line over उसका root बराबर plus या minus दूसरी line over उसका root।"
+            },
+            {
+              "seq": 3,
+              "text": "सबसे पहले normalize करो: दोनों constant terms positive बनाओ।"
+            },
+            {
+              "seq": 4,
+              "text": "यह करने पर, plus sign उस angle का bisector है जिसमें origin है।"
+            },
+            {
+              "seq": 5,
+              "text": "Acute बनाम obtuse के लिए, a one a two plus b one b two देखो: positive मतलब plus bisector obtuse, negative मतलब plus bisector acute।"
+            },
+            {
+              "seq": 6,
+              "text": "पर इसकी परवाह तभी करो जब सवाल सचमुच acute या obtuse माँगे — आदत से मत compute करो।"
+            },
+            {
+              "seq": 7,
+              "text": "और हमेशा, दोनों bisectors की slopes multiply होकर minus one देती हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "आख़िर में, याद रखो हर line denominator में अपना root of a squared plus b squared रखती है; दोनों पर एक share मत करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Angle Bisectors of Two Lines",
+      "title": "Worked examples: both bisectors and the origin's bisector",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Both Bisectors & the Origin's"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Example 1: bisectors of $3x - 4y + 7 = 0$ and $5x + 12y - 2 = 0$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac{3x - 4y + 7}{5} = \\pm\\frac{5x + 12y - 2}{13}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{'+' sign: } 14x - 112y + 101 = 0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\text{'-' sign: } 64x + 8y + 81 = 0"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 2: origin's bisector of $4x + 3y - 6 = 0$ and $5x + 12y + 9 = 0$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Make constants positive: rewrite the first as $-4x - 3y + 6 = 0$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\frac{-4x - 3y + 6}{5} = +\\frac{5x + 12y + 9}{13}"
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "latex": "7x + 9y - 3 = 0"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two examples: first write both bisectors, then pick out just the origin's bisector."
+            },
+            {
+              "seq": 2,
+              "text": "Example one: the bisectors of three x minus four y plus seven and five x plus twelve y minus two."
+            },
+            {
+              "seq": 3,
+              "text": "The roots are five and thirteen, so set three x minus four y plus seven over five equal to plus or minus five x plus twelve y minus two over thirteen."
+            },
+            {
+              "seq": 4,
+              "text": "Take the plus sign, cross-multiply, and simplify to fourteen x minus one hundred twelve y plus one hundred one equals zero."
+            },
+            {
+              "seq": 5,
+              "text": "Take the minus sign and you get sixty four x plus eight y plus eighty one equals zero. Those are the two bisectors."
+            },
+            {
+              "seq": 6,
+              "text": "Example two: find only the bisector of the angle containing the origin for four x plus three y minus six and five x plus twelve y plus nine."
+            },
+            {
+              "seq": 7,
+              "text": "First make constants positive. The first has a negative six, so multiply it by minus one to get minus four x minus three y plus six. The second already has plus nine."
+            },
+            {
+              "seq": 8,
+              "text": "Now take the plus sign: minus four x minus three y plus six over five equals five x plus twelve y plus nine over thirteen."
+            },
+            {
+              "seq": 9,
+              "text": "Cross-multiply and simplify, and the origin's bisector is seven x plus nine y minus three equals zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो examples: पहले दोनों bisectors लिखो, फिर सिर्फ़ origin वाला bisector चुनो।"
+            },
+            {
+              "seq": 2,
+              "text": "Example one: three x minus four y plus seven और five x plus twelve y minus two के bisectors।"
+            },
+            {
+              "seq": 3,
+              "text": "Roots हैं five और thirteen, तो three x minus four y plus seven over five को plus या minus five x plus twelve y minus two over thirteen के बराबर रखो।"
+            },
+            {
+              "seq": 4,
+              "text": "Plus sign लो, cross-multiply करो, और simplify करके मिलता है fourteen x minus one hundred twelve y plus one hundred one बराबर zero।"
+            },
+            {
+              "seq": 5,
+              "text": "Minus sign लो तो मिलता है sixty four x plus eight y plus eighty one बराबर zero। ये दो bisectors हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Example two: four x plus three y minus six और five x plus twelve y plus nine के लिए सिर्फ़ origin वाले angle का bisector ढूँढो।"
+            },
+            {
+              "seq": 7,
+              "text": "पहले constants positive करो। पहली में negative six है, तो उसे minus one से multiply करके minus four x minus three y plus six बनाओ। दूसरी में पहले से plus nine है।"
+            },
+            {
+              "seq": 8,
+              "text": "अब plus sign लो: minus four x minus three y plus six over five बराबर five x plus twelve y plus nine over thirteen।"
+            },
+            {
+              "seq": 9,
+              "text": "Cross-multiply और simplify करो, और origin का bisector है seven x plus nine y minus three बराबर zero।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Angle Bisectors of Two Lines",
+      "title": "Worked example: identifying the acute bisector",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Identifying the Acute Bisector"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "For $x + y - 2 = 0$ and $7x - y + 3 = 0$, find the acute-angle bisector."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "Make constants positive: rewrite the first as $-x - y + 2 = 0$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "a_1 a_2 + b_1 b_2 = (-1)(7) + (-1)(-1) = -6 < 0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "With positive constants and $a_1 a_2 + b_1 b_2 < 0$, the '+' sign is the acute bisector."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\frac{-x - y + 2}{\\sqrt{2}} = +\\frac{7x - y + 3}{\\sqrt{50}}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "12x + 4y - 7 = 0"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Normalize constants first, then read the acute/obtuse rule — order matters."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the harder skill: not just writing a bisector, but identifying the acute one."
+            },
+            {
+              "seq": 2,
+              "text": "For x plus y minus two and seven x minus y plus three, find the acute-angle bisector."
+            },
+            {
+              "seq": 3,
+              "text": "First make constants positive. The first line has a negative constant, so rewrite it as minus x minus y plus two. The second already has plus three."
+            },
+            {
+              "seq": 4,
+              "text": "Now compute a one a two plus b one b two with these forms: minus one times seven, plus minus one times minus one, which is minus seven plus one, that is minus six."
+            },
+            {
+              "seq": 5,
+              "text": "Since the constants are positive and this sum is negative, the rule tells us the plus sign gives the acute bisector."
+            },
+            {
+              "seq": 6,
+              "text": "So take the plus sign: minus x minus y plus two over root two equals seven x minus y plus three over root fifty."
+            },
+            {
+              "seq": 7,
+              "text": "Since root fifty is five root two, multiply both sides by five root two and simplify, giving twelve x plus four y minus seven equals zero — the acute-angle bisector."
+            },
+            {
+              "seq": 8,
+              "text": "The order is everything here: normalize the constants first, then read the acute-obtuse rule. Reverse them and the rule points the wrong way."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब कठिन skill: सिर्फ़ bisector लिखना नहीं, बल्कि acute वाला identify करना।"
+            },
+            {
+              "seq": 2,
+              "text": "x plus y minus two और seven x minus y plus three के लिए acute-angle bisector ढूँढो।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले constants positive करो। पहली line का constant negative है, तो उसे minus x minus y plus two लिखो। दूसरी में पहले से plus three है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब इन forms से a one a two plus b one b two निकालो: minus one times seven, plus minus one times minus one, जो है minus seven plus one, यानी minus six।"
+            },
+            {
+              "seq": 5,
+              "text": "चूँकि constants positive हैं और यह sum negative है, rule कहता है plus sign acute bisector देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो plus sign लो: minus x minus y plus two over root two बराबर seven x minus y plus three over root fifty।"
+            },
+            {
+              "seq": 7,
+              "text": "चूँकि root fifty है five root two, दोनों sides को five root two से multiply करके simplify करो, तो मिलता है twelve x plus four y minus seven बराबर zero — acute-angle bisector।"
+            },
+            {
+              "seq": 8,
+              "text": "यहाँ order ही सब कुछ है: पहले constants normalize करो, फिर acute-obtuse rule पढ़ो। इन्हें उलटो तो rule ग़लत दिशा में इशारा करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Angle Bisectors of Two Lines",
+      "title": "Worked example: bisectors are perpendicular (advanced)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Bisectors Are Perpendicular (Advanced)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Verify perpendicularity for the two bisectors found in Example 1."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "14x - 112y + 101 = 0 \\;\\Rightarrow\\; m_1 = \\tfrac{14}{112} = \\tfrac{1}{8}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "64x + 8y + 81 = 0 \\;\\Rightarrow\\; m_2 = -\\tfrac{64}{8} = -8"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "m_1 m_2 = \\tfrac{1}{8} \\times (-8) = -1"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Why it must hold: the bisectors split supplementary angles, differing by exactly $90^\\circ$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "If one angle is $2\\alpha$, the other is $2(90^\\circ - \\alpha)$ — half-lines $90^\\circ$ apart."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "So this perpendicularity is a structural fact, and a free sanity check every time."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This Advanced example confirms the free check we keep mentioning — that the two bisectors are perpendicular."
+            },
+            {
+              "seq": 2,
+              "text": "Take the two bisectors we found in example one and verify their slopes multiply to minus one."
+            },
+            {
+              "seq": 3,
+              "text": "The first bisector, fourteen x minus one hundred twelve y plus one hundred one, has slope fourteen over one hundred twelve, which is one eighth."
+            },
+            {
+              "seq": 4,
+              "text": "The second, sixty four x plus eight y plus eighty one, has slope minus sixty four over eight, which is minus eight."
+            },
+            {
+              "seq": 5,
+              "text": "Their product is one eighth times minus eight, which is minus one — perpendicular, confirmed."
+            },
+            {
+              "seq": 6,
+              "text": "Now why it must always hold: the two bisectors split the two supplementary angles at the crossing, and those half-lines differ in direction by exactly ninety degrees."
+            },
+            {
+              "seq": 7,
+              "text": "If one full angle is two alpha, the other is two times ninety minus alpha, so their bisecting directions sit exactly ninety degrees apart."
+            },
+            {
+              "seq": 8,
+              "text": "So the perpendicularity is not a coincidence, it is structural — which makes it a free sanity check on every bisector computation you ever do."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह Advanced example उस free check की पुष्टि करता है जो हम बार-बार कहते हैं — कि दो bisectors perpendicular हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Example one में मिले दो bisectors लो और verify करो कि उनकी slopes multiply होकर minus one देती हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "पहला bisector, fourteen x minus one hundred twelve y plus one hundred one, की slope है fourteen over one hundred twelve, यानी one eighth।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा, sixty four x plus eight y plus eighty one, की slope है minus sixty four over eight, यानी minus eight।"
+            },
+            {
+              "seq": 5,
+              "text": "इनका product है one eighth times minus eight, जो है minus one — perpendicular, confirmed।"
+            },
+            {
+              "seq": 6,
+              "text": "अब यह हमेशा क्यों hold करता है: दो bisectors crossing पर दो supplementary angles को बाँटते हैं, और वे half-lines direction में ठीक ninety degrees का फ़र्क़ रखती हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "अगर एक full angle two alpha हो, तो दूसरा two times ninety minus alpha है, तो उनकी bisecting directions ठीक ninety degrees अलग बैठती हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो perpendicularity coincidence नहीं, structural है — जो इसे हर bisector computation पर एक free sanity check बना देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "tips",
+      "subtopic": "Angle Bisectors of Two Lines",
+      "title": "Pitfalls and pro-tips: angle bisectors",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pitfalls: Angle Bisectors"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Skipping the positive-constant normalization inverts every identification rule."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Acute/obtuse rule: with $c_1, c_2 > 0$, $a_1 a_2 + b_1 b_2 > 0 \\Rightarrow$ '+' obtuse; $< 0 \\Rightarrow$ '+' acute."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Your two bisectors must satisfy $m_1 m_2 = -1$; if not, there is an arithmetic error."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Each line gets its own $\\sqrt{a^2 + b^2}$ — do not share one denominator."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Pro-tip: the origin's bisector is the '+' one after making constants positive — memorise that anchor."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Compute $a_1 a_2 + b_1 b_2$ only when the question actually asks acute versus obtuse."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Don't compute everything — compute exactly what's asked."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close bisectors with the traps and one clean anchor to memorise."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, the biggest: skipping the positive-constant normalization. Every identification rule — origin, acute, obtuse — assumes both constants are positive, so normalize first, every single time."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: get the acute-obtuse direction right. With positive constants, a one a two plus b one b two positive means the plus bisector is obtuse; negative means it is acute. Write it down before deciding."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: your two bisectors must satisfy slope one times slope two equals minus one. If they do not, you have an arithmetic error somewhere — go back."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: each line gets its own root of a squared plus b squared. Do not share a single denominator across the two lines."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>And the one anchor to memorise: after making both constants positive, the origin's bisector is simply the plus one.</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "Only reach for a one a two plus b one b two when the question specifically asks acute versus obtuse."
+            },
+            {
+              "seq": 8,
+              "text": "In short, do not compute everything — compute exactly what is asked, and no more."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Bisectors को traps और एक clean anchor के साथ बंद करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, सबसे बड़ा: positive-constant normalization छोड़ना। हर identification rule — origin, acute, obtuse — मानता है कि दोनों constants positive हैं, तो पहले normalize करो, हर बार।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: acute-obtuse direction सही रखो। Positive constants के साथ, a one a two plus b one b two positive मतलब plus bisector obtuse; negative मतलब acute। decide करने से पहले लिख लो।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: तुम्हारे दो bisectors को slope one times slope two बराबर minus one satisfy करना चाहिए। अगर नहीं, तो कहीं arithmetic error है — वापस जाओ।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: हर line अपना root of a squared plus b squared रखती है। दोनों lines पर एक ही denominator share मत करो।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>और memorise करने का एक anchor: दोनों constants positive करने के बाद, origin का bisector बस plus वाला है।</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "a one a two plus b one b two तभी उठाओ जब सवाल specifically acute बनाम obtuse माँगे।"
+            },
+            {
+              "seq": 8,
+              "text": "संक्षेप में, सब कुछ मत compute करो — बस वही करो जो पूछा गया है, उससे ज़्यादा नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

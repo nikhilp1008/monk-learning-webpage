@@ -1,0 +1,2446 @@
+{
+  "chapter": "Three Dimensional Geometry",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 11,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Shortest Distance & Angle Between Two Lines",
+      "title": "The angle between two lines: a dot-product story",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "How do two lines cross, and how close do they come?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Lines that neither meet nor run parallel are called skew lines."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The angle between two lines depends only on their directions, never on position."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\cos\\theta=\\dfrac{|\\vec{b}_1\\cdot\\vec{b}_2|}{|\\vec{b}_1||\\vec{b}_2|}"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "text": "Wrap the numerator in $|\\cdot|$ — we always report the acute angle.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Think of the dot product as a sameness meter."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\text{Perp: }\\ \\vec{b}_1\\cdot\\vec{b}_2=0;\\qquad \\text{Parallel: }\\ \\tfrac{a_1}{a_2}=\\tfrac{b_1}{b_2}=\\tfrac{c_1}{c_2}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Picture two metro tunnels bored deep under a city — they never meet and they are not parallel</curious>. Two natural questions arise: at what angle do they cross, and what is the thinnest wall of earth between them?"
+            },
+            {
+              "seq": 2,
+              "text": "Lines in space that neither meet nor run parallel, like these tunnels, are called skew lines, and they are the heart of this subtopic."
+            },
+            {
+              "seq": 3,
+              "text": "Take the angle first. The liberating idea is that the angle between two lines depends only on their directions, never on where they sit. So we slide both directions to a common point and measure between the arrows."
+            },
+            {
+              "seq": 4,
+              "text": "That is exactly the dot product. The cosine of the angle is the dot product of the two direction vectors, divided by the product of their magnitudes."
+            },
+            {
+              "seq": 5,
+              "text": "There is one subtlety. A line points two opposite ways, so the dot product might come out negative, suggesting an obtuse angle. By convention we report the acute angle, so we wrap the numerator in a modulus."
+            },
+            {
+              "seq": 6,
+              "text": "Think of the dot product as a sameness meter. When two directions align it is large and positive; when perpendicular it is exactly zero; when they oppose it is large and negative. Strip the sign and you have the cosine of the sharp angle."
+            },
+            {
+              "seq": 7,
+              "text": "This instantly hands you two free tests: the lines are perpendicular when the dot product is zero, and parallel when the direction ratios are proportional."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>दो metro tunnels सोचिए जो शहर के नीचे गहरे खोदी गई हैं — वो कभी मिलती नहीं और parallel भी नहीं हैं</curious>। दो natural सवाल उठते हैं: वो किस angle पर cross करती हैं, और उनके बीच सबसे पतली मिट्टी की दीवार कितनी है?"
+            },
+            {
+              "seq": 2,
+              "text": "Space में जो lines न मिलती हैं न parallel चलती हैं, इन tunnels की तरह, उन्हें skew lines कहते हैं, और यही इस subtopic का दिल हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले angle लीजिए। छूट देने वाला idea ये है कि दो lines के बीच का angle सिर्फ उनकी directions पर निर्भर करता है, कभी उनकी जगह पर नहीं। तो हम दोनों directions को एक common point पर slide करके arrows के बीच नापते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "यही तो dot product है। angle का cosine है दोनों direction vectors का dot product, उनके magnitudes के product से divide किया हुआ।"
+            },
+            {
+              "seq": 5,
+              "text": "एक subtlety है। एक line दो opposite तरफ point करती है, तो dot product negative आ सकता है, जो obtuse angle का सुझाव देता है। convention से हम acute angle report करते हैं, तो numerator को modulus में लपेट देते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Dot product को एक sameness meter सोचिए। जब दो directions align होती हैं तो ये बड़ा और positive होता है; perpendicular पर ठीक zero; और opposite पर बड़ा और negative। sign हटा दीजिए और आपके पास sharp angle का cosine है।"
+            },
+            {
+              "seq": 7,
+              "text": "ये तुरंत दो free tests देता है: lines perpendicular हैं जब dot product zero हो, और parallel जब direction ratios proportional हों।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Shortest Distance & Angle Between Two Lines",
+      "title": "Shortest distance: cross to bridge, dot to project",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The thinnest wall between two skew lines"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Two crooked pencils are bridged by a stick meeting both at right angles."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 300\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"s1\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#c0392b\"/></marker>\n<marker id=\"s2\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#2980b9\"/></marker>\n<marker id=\"s3\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#27ae60\"/></marker></defs>\n<line x1=\"40\" y1=\"90\" x2=\"330\" y2=\"60\" stroke=\"#c0392b\" stroke-width=\"2\"/>\n<line x1=\"150\" y1=\"80\" x2=\"230\" y2=\"72\" stroke=\"#c0392b\" stroke-width=\"2.4\" marker-end=\"url(#s1)\"/>\n<text x=\"335\" y=\"58\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">L1, dir b1</text>\n<line x1=\"70\" y1=\"250\" x2=\"380\" y2=\"200\" stroke=\"#2980b9\" stroke-width=\"2\"/>\n<line x1=\"190\" y1=\"231\" x2=\"270\" y2=\"218\" stroke=\"#2980b9\" stroke-width=\"2.4\" marker-end=\"url(#s2)\"/>\n<text x=\"384\" y=\"200\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#2980b9\">L2, dir b2</text>\n<line x1=\"205\" y1=\"72\" x2=\"215\" y2=\"226\" stroke=\"#7f8c8d\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/>\n<text x=\"222\" y=\"150\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#7f8c8d\">d</text>\n<rect x=\"205\" y=\"72\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#7f8c8d\" stroke-width=\"1\"/>\n<line x1=\"100\" y1=\"130\" x2=\"120\" y2=\"235\" stroke=\"#8e44ad\" stroke-width=\"1.4\" stroke-dasharray=\"3 2\"/>\n<text x=\"70\" y=\"185\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#8e44ad\">a2 - a1</text>\n<line x1=\"215\" y1=\"150\" x2=\"255\" y2=\"118\" stroke=\"#27ae60\" stroke-width=\"2.2\" marker-end=\"url(#s3)\"/>\n<text x=\"258\" y=\"112\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#27ae60\">b1 x b2</text>\n<text x=\"120\" y=\"285\" font-size=\"11\" font-family=\"system-ui, sans-serif\">gap d is measured along b1 x b2 only</text>\n</svg>",
+          "caption": "The common perpendicular b1 x b2 bridges the skew lines"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Project the joining vector $\\vec{a}_2-\\vec{a}_1$ onto that common perpendicular."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "d=\\dfrac{|(\\vec{a}_2-\\vec{a}_1)\\cdot(\\vec{b}_1\\times\\vec{b}_2)|}{|\\vec{b}_1\\times\\vec{b}_2|}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "The triple product is a volume; dividing by base area gives the height."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Cross to bridge, dot to project — one cross product, one dot product, one magnitude.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the shortest distance. Picture the thinnest wall between the tunnels. The shortest segment connecting two skew lines is special: it is perpendicular to both lines at once."
+            },
+            {
+              "seq": 2,
+              "text": "Think of two pencils held crookedly in the air. The shortest gap between them is bridged by a third tiny stick that meets both pencils at right angles. Which way must that stick point? Perpendicular to both directions at once."
+            },
+            {
+              "seq": 3,
+              "text": "And the cross product of the two directions is built to be exactly that common perpendicular. Here it is, bridging the two lines. The gap d is measured only along this direction."
+            },
+            {
+              "seq": 4,
+              "text": "So we take any vector joining the two lines, the vector a two minus a one between their reference points, and measure only its component along that common perpendicular direction. Everything else runs along the tunnels and does not count toward the gap."
+            },
+            {
+              "seq": 5,
+              "text": "That projection gives the shortest distance: the scalar triple product of the joining vector with the cross product, divided by the size of that cross product."
+            },
+            {
+              "seq": 6,
+              "text": "There is a lovely reading of this. The scalar triple product is the volume of the slanted box built on those three vectors. Divide that volume by the area of its base, the size of the cross product, and you get its height — and the height is the perpendicular gap. Distance is volume per unit base area."
+            },
+            {
+              "seq": 7,
+              "text": "So the whole computation is three vector operations chained together: a cross product to find the common perpendicular, a dot product to project the joining vector, and a magnitude to finish."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब shortest distance। tunnels के बीच सबसे पतली दीवार सोचिए। दो skew lines को जोड़ने वाला shortest segment खास है: ये एक साथ दोनों lines के perpendicular होता है।"
+            },
+            {
+              "seq": 2,
+              "text": "हवा में टेढ़े पकड़े दो pencils सोचिए। उनके बीच का shortest gap एक तीसरी छोटी stick से bridge होता है जो दोनों pencils को right angle पर मिलती है। वो stick किस तरफ point करेगी? एक साथ दोनों directions के perpendicular।"
+            },
+            {
+              "seq": 3,
+              "text": "और दोनों directions का cross product ठीक वही common perpendicular बनने के लिए बना है। यहाँ है, दोनों lines को bridge करता हुआ। gap d सिर्फ इसी direction के साथ नापा जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो हम दोनों lines को जोड़ने वाला कोई भी vector लेते हैं, उनके reference points के बीच a two minus a one, और सिर्फ उसका component उस common perpendicular direction के साथ नापते हैं। बाकी सब tunnels के साथ चलता है और gap में नहीं गिना जाता।"
+            },
+            {
+              "seq": 5,
+              "text": "वो projection shortest distance देता है: joining vector का cross product के साथ scalar triple product, उस cross product के size से divide किया हुआ।"
+            },
+            {
+              "seq": 6,
+              "text": "इसका एक सुंदर मतलब है। scalar triple product उन तीन vectors पर बने slanted box का volume है। उस volume को उसके base के area से, यानी cross product के size से, divide कीजिए और आपको height मिलती है — और height ही perpendicular gap है। Distance है volume per unit base area।"
+            },
+            {
+              "seq": 7,
+              "text": "तो पूरी computation तीन vector operations की एक कड़ी है: common perpendicular ढूँढने के लिए cross product, joining vector project करने के लिए dot product, और खत्म करने के लिए magnitude।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Shortest Distance & Angle Between Two Lines",
+      "title": "Intersecting, parallel, or skew — one number decides",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Know which configuration you are in first"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Two lines can intersect, be parallel, or be skew."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "(\\vec{a}_2-\\vec{a}_1)\\cdot(\\vec{b}_1\\times\\vec{b}_2)=0\\ \\Longleftrightarrow\\ \\text{coplanar (meet or parallel)}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Combine the triple product with a glance at whether $\\vec{b}_1,\\vec{b}_2$ are proportional."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\text{Parallel lines: }\\ d=\\dfrac{|\\vec{b}\\times(\\vec{a}_2-\\vec{a}_1)|}{|\\vec{b}|}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Shortest distance $=0$ is the working definition of the lines meeting.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The reported acute angle always lies in $[0^{\\circ},90^{\\circ}]$ — a sanity bound."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before computing anything, it pays to know which of three situations you are in, because each behaves differently."
+            },
+            {
+              "seq": 2,
+              "text": "Two distinct lines can intersect, sharing exactly one point, so the shortest distance is zero; they can be parallel, the same direction, never meeting, with a constant gap; or they can be skew, different directions yet still never meeting."
+            },
+            {
+              "seq": 3,
+              "text": "One quantity separates the cases cleanly. The scalar triple product is zero for intersecting and parallel lines, because both are coplanar, and non zero exactly for skew lines."
+            },
+            {
+              "seq": 4,
+              "text": "Combine that triple product with a glance at whether the two directions are proportional, and all three cases are told apart with no heavy algebra: proportional directions plus zero triple product means parallel, non proportional plus zero means intersecting, and non zero means skew."
+            },
+            {
+              "seq": 5,
+              "text": "For parallel lines the skew formula fails, because the cross product of the shared direction with itself is zero. Instead, since they never tilt, the gap is the same everywhere: the perpendicular distance from any one point of one line to the other."
+            },
+            {
+              "seq": 6,
+              "text": "And keep this in mind: if the shortest distance comes out zero, the lines are not skew at all — they intersect. Shortest distance equals zero is the working definition of the lines meeting, and it is the same as the coplanarity condition."
+            },
+            {
+              "seq": 7,
+              "text": "One useful bound to close on: once the modulus is applied, the reported angle always lies between zero and ninety degrees. A line with itself gives zero, perpendicular lines give ninety, and the value never strays outside that band."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "कुछ भी compute करने से पहले, ये जानना फायदेमंद है कि आप तीन में से किस situation में हैं, क्योंकि हर एक अलग तरह से behave करती है।"
+            },
+            {
+              "seq": 2,
+              "text": "दो अलग lines intersect कर सकती हैं, ठीक एक point साझा करते हुए, तो shortest distance zero; वो parallel हो सकती हैं, same direction, कभी न मिलते हुए, constant gap के साथ; या वो skew हो सकती हैं, अलग directions पर फिर भी कभी न मिलते हुए।"
+            },
+            {
+              "seq": 3,
+              "text": "एक quantity cases को साफ़ी से अलग करती है। scalar triple product intersecting और parallel lines के लिए zero होता है, क्योंकि दोनों coplanar हैं, और ठीक skew lines के लिए non zero।"
+            },
+            {
+              "seq": 4,
+              "text": "उस triple product को इस नज़र के साथ मिलाइए कि दोनों directions proportional हैं या नहीं, और तीनों cases बिना भारी algebra के अलग हो जाती हैं: proportional directions plus zero triple product का मतलब parallel, non proportional plus zero का मतलब intersecting, और non zero का मतलब skew।"
+            },
+            {
+              "seq": 5,
+              "text": "Parallel lines के लिए skew formula fail हो जाता है, क्योंकि shared direction का खुद के साथ cross product zero है। इसके बजाय, चूँकि वो कभी tilt नहीं करतीं, gap हर जगह same है: एक line के किसी भी एक point की दूसरी से perpendicular distance।"
+            },
+            {
+              "seq": 6,
+              "text": "और ये याद रखिए: अगर shortest distance zero आए, तो lines skew हैं ही नहीं — वो intersect करती हैं। shortest distance equals zero lines के मिलने की working definition है, और ये coplanarity condition के बराबर है।"
+            },
+            {
+              "seq": 7,
+              "text": "बंद करने के लिए एक उपयोगी bound: modulus लगने के बाद, reported angle हमेशा zero और नब्बे degrees के बीच होता है। एक line खुद के साथ zero देती है, perpendicular lines नब्बे, और value कभी उस band के बाहर नहीं जाती।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "Shortest Distance & Angle Between Two Lines",
+      "title": "Angle and shortest distance: the formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Angles and distances between lines, in one place"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\cos\\theta=\\dfrac{|\\vec{b}_1\\cdot\\vec{b}_2|}{|\\vec{b}_1||\\vec{b}_2|}=|l_1l_2+m_1m_2+n_1n_2|"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{Perp: }\\vec{b}_1\\cdot\\vec{b}_2=0;\\quad \\text{Parallel: }\\tfrac{a_1}{a_2}=\\tfrac{b_1}{b_2}=\\tfrac{c_1}{c_2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "d_{\\text{skew}}=\\dfrac{|(\\vec{a}_2-\\vec{a}_1)\\cdot(\\vec{b}_1\\times\\vec{b}_2)|}{|\\vec{b}_1\\times\\vec{b}_2|}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "d=\\dfrac{\\left|\\ \\begin{matrix} x_2-x_1 & y_2-y_1 & z_2-z_1 \\\\ a_1 & b_1 & c_1 \\\\ a_2 & b_2 & c_2 \\end{matrix}\\ \\right|}{\\sqrt{(b_1c_2-b_2c_1)^2+(c_1a_2-c_2a_1)^2+(a_1b_2-a_2b_1)^2}}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\text{Coplanar}\\iff(\\vec{a}_2-\\vec{a}_1)\\cdot(\\vec{b}_1\\times\\vec{b}_2)=0;\\quad d_{\\parallel}=\\dfrac{|\\vec{b}\\times(\\vec{a}_2-\\vec{a}_1)|}{|\\vec{b}|}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Pick the form that matches your data — vectors, direction ratios, or Cartesian."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's collect the formulas for angle and shortest distance before we solve with them."
+            },
+            {
+              "seq": 2,
+              "text": "The acute angle: the sign stripped, normalised overlap of the two directions. If you are given direction cosines, the denominator is one and it is just the modulus of the dot product."
+            },
+            {
+              "seq": 3,
+              "text": "The two quick tests: dot product zero for perpendicular, proportional ratios for parallel."
+            },
+            {
+              "seq": 4,
+              "text": "The skew shortest distance in vector form — volume divided by base area."
+            },
+            {
+              "seq": 5,
+              "text": "The Cartesian determinant form is just the same thing written out coordinate by coordinate: the triple product is the determinant, and the denominator is the size of the cross product."
+            },
+            {
+              "seq": 6,
+              "text": "And two more: the coplanarity condition, the triple product equals zero, which doubles as the shortest distance numerator; and the parallel line distance, the cross of the shared direction with the joining vector over the direction's size."
+            },
+            {
+              "seq": 7,
+              "text": "A closing note on choice: the angle expressions in vectors, ratios and cosines all say the same thing, so pick whichever matches the data you were handed. Same for shortest distance — vector form if given vectors, determinant form if given the symmetric equations."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए angle और shortest distance के formulas इकट्ठा कर लेते हैं, इससे पहले कि हम इनसे solve करें।"
+            },
+            {
+              "seq": 2,
+              "text": "Acute angle: दोनों directions का sign हटाया हुआ, normalised overlap। अगर आपको direction cosines दिए हों, denominator one है और ये बस dot product का modulus है।"
+            },
+            {
+              "seq": 3,
+              "text": "दो quick tests: perpendicular के लिए dot product zero, parallel के लिए proportional ratios।"
+            },
+            {
+              "seq": 4,
+              "text": "Skew shortest distance vector form में — volume, base area से divide किया हुआ।"
+            },
+            {
+              "seq": 5,
+              "text": "Cartesian determinant form बस वही चीज़ है coordinate दर coordinate लिखी हुई: triple product determinant है, और denominator cross product का size।"
+            },
+            {
+              "seq": 6,
+              "text": "और दो और: coplanarity condition, triple product बराबर zero, जो shortest distance का numerator भी है; और parallel line distance, shared direction का joining vector के साथ cross, direction के size से divide।"
+            },
+            {
+              "seq": 7,
+              "text": "Choice पर एक आखिरी बात: vectors, ratios और cosines में angle के expressions सब एक ही बात कहते हैं, तो जो आपके दिए data से match करे वही उठाइए। shortest distance के लिए भी वही — vectors दिए हों तो vector form, symmetric equations दिए हों तो determinant form।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Shortest Distance & Angle Between Two Lines",
+      "title": "Worked example: the acute angle between two lines",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Angle between two given lines in symmetric form"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec{b}_1=(2,-1,2),\\qquad \\vec{b}_2=(1,2,2)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\vec{b}_1\\cdot\\vec{b}_2=(2)(1)+(-1)(2)+(2)(2)=2-2+4=4"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "|\\vec{b}_1|=\\sqrt{4+1+4}=3,\\qquad |\\vec{b}_2|=\\sqrt{1+4+4}=3"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\cos\\theta=\\dfrac{|4|}{3\\cdot 3}=\\dfrac{4}{9}\\ \\Rightarrow\\ \\theta=\\cos^{-1}\\!\\left(\\tfrac{4}{9}\\right)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "A negative dot product would still give $\\theta=\\cos^{-1}\\tfrac{4}{9}$ after the modulus.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Only the acute angle carries meaning for a pair of lines."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A clean board level angle problem. We want the acute angle between two lines given in symmetric form, so we read off their direction ratios first."
+            },
+            {
+              "seq": 2,
+              "text": "From the denominators, the first line has direction ratios two, minus one, two, and the second has one, two, two."
+            },
+            {
+              "seq": 3,
+              "text": "The dot product is two times one, plus minus one times two, plus two times two — that is two minus two plus four, equals four."
+            },
+            {
+              "seq": 4,
+              "text": "Each magnitude is root nine, which is three."
+            },
+            {
+              "seq": 5,
+              "text": "So the cosine of the angle is the size of four over three times three, which is four ninths. The acute angle is the inverse cosine of four ninths."
+            },
+            {
+              "seq": 6,
+              "text": "Notice: had the dot product come out negative, say minus four, the modulus would still return the same acute angle. The equations describe the same pair of lines whichever way you walk along them, so only the acute angle carries meaning."
+            },
+            {
+              "seq": 7,
+              "text": "That is the whole lesson of the modulus here: for a pair of lines, direction is reversible, so we always report the sharp, acute angle between them."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक साफ़ board level angle problem। हमें symmetric form में दी गई दो lines के बीच acute angle चाहिए, तो हम पहले उनके direction ratios पढ़ते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Denominators से, पहली line के direction ratios हैं two, minus one, two, और दूसरी के one, two, two।"
+            },
+            {
+              "seq": 3,
+              "text": "Dot product है two times one, plus minus one times two, plus two times two — यानी two minus two plus four, बराबर चार।"
+            },
+            {
+              "seq": 4,
+              "text": "हर magnitude root नौ है, यानी तीन।"
+            },
+            {
+              "seq": 5,
+              "text": "तो angle का cosine है चार का size, तीन times तीन पर, यानी four ninths। acute angle है inverse cosine of four ninths।"
+            },
+            {
+              "seq": 6,
+              "text": "ध्यान दीजिए: अगर dot product negative आता, जैसे minus four, तो भी modulus वही acute angle लौटाता। equations उन्हीं lines की जोड़ी बताते हैं चाहे आप किसी भी तरफ चलें, तो सिर्फ acute angle का मतलब होता है।"
+            },
+            {
+              "seq": 7,
+              "text": "यही यहाँ modulus का पूरा सबक है: lines की जोड़ी के लिए, direction उलटी जा सकती है, तो हम हमेशा उनके बीच का sharp, acute angle report करते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Shortest Distance & Angle Between Two Lines",
+      "title": "Worked example: perpendicular and parallel tests",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two fast tests — no full angle needed"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "(a) DRs $(2,-1,1)$ and $(1,1,-1)$: perpendicularity needs one dot product."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "(2)(1)+(-1)(1)+(1)(-1)=2-1-1=0\\ \\Rightarrow\\ \\perp"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "(b) $(3,p,2)$ parallel to $(6,-4,4)$: parallelism needs ratio equality."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\tfrac{3}{6}=\\tfrac{p}{-4}=\\tfrac{2}{4}\\ \\Rightarrow\\ \\tfrac{1}{2}=\\tfrac{p}{-4}\\ \\Rightarrow\\ p=-2"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Dot product $=0$ means perpendicular; equal ratios mean parallel — never swap them.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "A reliable habit: write the dot product first, then check proportionality only if needed."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This speed trap has two parts. Part a asks us to show two lines are perpendicular; part b asks us to find a parameter that makes two lines parallel."
+            },
+            {
+              "seq": 2,
+              "text": "For part a, perpendicularity needs only a single dot product — no angle computation at all. The direction ratios are two, minus one, one and one, one, minus one."
+            },
+            {
+              "seq": 3,
+              "text": "The dot product is two minus one minus one, which is zero. A zero dot product means the lines are perpendicular. We are done — no need to touch the cosine formula."
+            },
+            {
+              "seq": 4,
+              "text": "For part b, parallelism needs only ratio equality. We set the ratios of corresponding components of three, p, two and six, minus four, four equal."
+            },
+            {
+              "seq": 5,
+              "text": "Three over six and two over four both equal one half. So p over minus four equals one half, giving p equal to minus two."
+            },
+            {
+              "seq": 6,
+              "text": "Lock it in: dot product equals zero means perpendicular, and equal ratios mean parallel. The trap is reaching for the full cosine formula for part a, or mixing up the two tests. Write the dot product first — if it is zero you are finished."
+            },
+            {
+              "seq": 7,
+              "text": "So build a reliable habit: write the dot product first. If it is zero, the lines are perpendicular and you stop. Only if it is not zero is it worth checking proportionality for parallelism or computing a full angle."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस speed trap के दो हिस्से हैं। हिस्सा a कहता है दो lines को perpendicular दिखाइए; हिस्सा b कहता है वो parameter निकालिए जो दो lines को parallel बनाए।"
+            },
+            {
+              "seq": 2,
+              "text": "हिस्सा a के लिए, perpendicularity को सिर्फ एक dot product चाहिए — कोई angle computation नहीं। direction ratios हैं two, minus one, one और one, one, minus one।"
+            },
+            {
+              "seq": 3,
+              "text": "Dot product है two minus one minus one, यानी zero। zero dot product का मतलब lines perpendicular हैं। हो गया — cosine formula को छूने की ज़रूरत नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "हिस्सा b के लिए, parallelism को सिर्फ ratio equality चाहिए। हम three, p, two और six, minus four, four के corresponding components के ratios बराबर रखते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Three over six और two over four दोनों one half के बराबर हैं। तो p over minus four बराबर one half, जो p को minus two देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "पक्का कीजिए: dot product बराबर zero का मतलब perpendicular, और equal ratios का मतलब parallel। trap है हिस्सा a के लिए पूरा cosine formula उठाना, या दोनों tests को गड्डमड्ड करना। पहले dot product लिखिए — अगर zero है तो आप खत्म।"
+            },
+            {
+              "seq": 7,
+              "text": "तो एक reliable आदत बनाइए: पहले dot product लिखिए। अगर zero है, lines perpendicular हैं और आप रुक जाते हैं। सिर्फ अगर zero न हो, तभी parallelism के लिए proportionality check करना या पूरा angle निकालना worth है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Shortest Distance & Angle Between Two Lines",
+      "title": "Worked example: shortest distance between skew lines",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Shortest distance in vector form"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec{a}_1=(1,2,-1),\\ \\vec{b}_1=(2,1,-2);\\quad \\vec{a}_2=(3,-1,1),\\ \\vec{b}_2=(1,2,2)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\vec{b}_1\\times\\vec{b}_2=(6,-6,3),\\qquad |\\vec{b}_1\\times\\vec{b}_2|=\\sqrt{81}=9"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\vec{a}_2-\\vec{a}_1=(2,-3,2)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "(\\vec{a}_2-\\vec{a}_1)\\cdot(\\vec{b}_1\\times\\vec{b}_2)=12+18+6=36"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "d=\\dfrac{|36|}{9}=4\\ \\text{units}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Check: $(6,-6,3)$ is perpendicular to both directions (both dots $=0$).",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a full shortest distance computation between two skew lines given in vector form. We read the reference points and directions from each."
+            },
+            {
+              "seq": 2,
+              "text": "The first line has reference point one, two, minus one and direction two, one, minus two. The second has reference point three, minus one, one and direction one, two, two."
+            },
+            {
+              "seq": 3,
+              "text": "First the common perpendicular: the cross product of the two directions is six, minus six, three, whose magnitude is root eighty one, equal to nine. Compute this first — its size is your denominator."
+            },
+            {
+              "seq": 4,
+              "text": "The joining vector between reference points is two, minus three, two."
+            },
+            {
+              "seq": 5,
+              "text": "The scalar triple product is two times six, plus minus three times minus six, plus two times three — that is twelve plus eighteen plus six, equals thirty six."
+            },
+            {
+              "seq": 6,
+              "text": "So the shortest distance is the size of thirty six over nine, which is four units."
+            },
+            {
+              "seq": 7,
+              "text": "A quick check that we projected along the genuine common perpendicular: six, minus six, three dotted with each direction gives zero, confirming it is perpendicular to both lines. Cross product, then dot product, then magnitude — three operations chained into one distance."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब vector form में दी गई दो skew lines के बीच पूरी shortest distance computation। हम हर एक से reference points और directions पढ़ते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली line का reference point one, two, minus one और direction two, one, minus two। दूसरी का reference point three, minus one, one और direction one, two, two।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले common perpendicular: दोनों directions का cross product है six, minus six, three, जिसका magnitude root इक्यासी है, बराबर नौ। इसे पहले compute कीजिए — इसका size आपका denominator है।"
+            },
+            {
+              "seq": 4,
+              "text": "Reference points के बीच joining vector है two, minus three, two।"
+            },
+            {
+              "seq": 5,
+              "text": "Scalar triple product है two times six, plus minus three times minus six, plus two times three — यानी बारह plus अठारह plus छह, बराबर छत्तीस।"
+            },
+            {
+              "seq": 6,
+              "text": "तो shortest distance है छत्तीस का size नौ पर, यानी चार units।"
+            },
+            {
+              "seq": 7,
+              "text": "एक quick check कि हमने असली common perpendicular के साथ project किया: six, minus six, three को हर direction के साथ dot करने पर zero मिलता है, जो confirm करता है ये दोनों lines के perpendicular है। cross product, फिर dot product, फिर magnitude — तीन operations एक distance में जुड़ी।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Shortest Distance & Angle Between Two Lines",
+      "title": "Worked example: coplanarity fixes a parameter",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find $k$ so two lines are coplanar, then their meeting point"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec{a}_2-\\vec{a}_1=(-1,\\,k-1,\\,3),\\ \\ \\vec{b}_1=(1,2,3),\\ \\ \\vec{b}_2=(3,2,1)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\begin{vmatrix}-1 & k-1 & 3\\\\ 1 & 2 & 3\\\\ 3 & 2 & 1\\end{vmatrix}=0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "-1(-4)-(k-1)(-8)+3(-4)=8k-16"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "8k-16=0\\ \\Rightarrow\\ k=2"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "s=\\tfrac{3}{4},\\ t=\\tfrac{5}{4}\\ \\Rightarrow\\ \\text{point}=\\left(\\tfrac{13}{4},\\tfrac{7}{2},\\tfrac{11}{4}\\right)"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Coplanarity is a single scalar equation — one special $k$ makes the pair meet."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "An advanced problem. We must find the value of k for which two lines are coplanar, and then locate their point of intersection."
+            },
+            {
+              "seq": 2,
+              "text": "We apply the coplanarity determinant. The joining vector is minus one, k minus one, three, and the two directions are one, two, three and three, two, one."
+            },
+            {
+              "seq": 3,
+              "text": "Coplanarity means this three by three determinant, with the joining vector on top and the two directions below, equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "Expanding along the first row and simplifying, the whole determinant collapses to eight k minus sixteen."
+            },
+            {
+              "seq": 5,
+              "text": "Setting that to zero gives eight k equals sixteen, so k equals two."
+            },
+            {
+              "seq": 6,
+              "text": "With k equal to two, write general points on each line and equate coordinates. Solving the linear system gives the parameters three quarters and five quarters, and the intersection point is thirteen quarters, seven halves, eleven quarters."
+            },
+            {
+              "seq": 7,
+              "text": "The deeper idea: coplanarity is a single scalar equation, the triple product, so a one parameter family of line pairs has exactly the special value of k that makes them meet."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक advanced problem। हमें वो k निकालना है जिसके लिए दो lines coplanar हों, और फिर उनका point of intersection ढूँढना है।"
+            },
+            {
+              "seq": 2,
+              "text": "हम coplanarity determinant लगाते हैं। joining vector है minus one, k minus one, three, और दोनों directions one, two, three और three, two, one।"
+            },
+            {
+              "seq": 3,
+              "text": "Coplanarity का मतलब ये three by three determinant, ऊपर joining vector और नीचे दोनों directions के साथ, zero के बराबर हो।"
+            },
+            {
+              "seq": 4,
+              "text": "पहली row के साथ expand करके simplify करने पर, पूरा determinant घटकर eight k minus सोलह बनता है।"
+            },
+            {
+              "seq": 5,
+              "text": "उसे zero रखने पर eight k बराबर सोलह, तो k बराबर दो।"
+            },
+            {
+              "seq": 6,
+              "text": "K बराबर दो के साथ, हर line पर general points लिखकर coordinates बराबर कीजिए। linear system solve करने पर parameters three quarters और five quarters मिलते हैं, और intersection point है thirteen quarters, seven halves, eleven quarters।"
+            },
+            {
+              "seq": 7,
+              "text": "गहरा idea: coplanarity एक single scalar equation है, triple product, तो line pairs की one parameter family में ठीक वही खास k होता है जो उन्हें मिलाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "tips",
+      "subtopic": "Shortest Distance & Angle Between Two Lines",
+      "title": "Angle and shortest distance: pitfalls and pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The slips that cost distance-and-angle marks"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "Never drop the modulus in the angle formula.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Do not swap the perpendicular and parallel tests."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Do not use the skew formula on parallel lines — the cross product dies."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Keep the modulus on the triple product; recognise coplanar $\\iff$ STP $=0$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Compute $\\vec{b}_1\\times\\vec{b}_2$ first — its size and its zero-ness both inform you.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Every distance answer must be $\\ge 0$; a negative result means a missing modulus."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lock in the traps that examiners set around angles and shortest distances between lines."
+            },
+            {
+              "seq": 2,
+              "text": "First, never drop the modulus in the angle formula. A negative dot product yields an obtuse value, but the angle between two lines is always reported acute. And you must divide by both magnitudes — forgetting the denominator can even give a cosine bigger than one."
+            },
+            {
+              "seq": 3,
+              "text": "Second, do not swap the two tests. Perpendicular means the dot product is zero; parallel means the ratios are equal. Students routinely apply the wrong one — checking proportionality when they meant perpendicularity."
+            },
+            {
+              "seq": 4,
+              "text": "Third, never use the skew distance formula on parallel lines. When the directions are proportional, their cross product is the zero vector and the formula divides by zero. Switch to the parallel line formula instead."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, distance is never negative, so keep the modulus on the scalar triple product even though the product itself can be negative. And remember that show the lines intersect is the very same task as show the determinant is zero."
+            },
+            {
+              "seq": 6,
+              "text": "A pro tip to finish: in any shortest distance problem, compute the cross product of the two directions first. Its magnitude is your denominator, and its zero ness immediately tells you whether the lines are parallel — two pieces of information from one calculation."
+            },
+            {
+              "seq": 7,
+              "text": "And one last sanity check: every distance answer must be at least zero. A negative result is impossible and simply means you forgot a modulus somewhere along the way."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए उन traps को पक्का करते हैं जो examiners lines के बीच angles और shortest distances के आसपास लगाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, angle formula में modulus कभी मत गिराइए। negative dot product obtuse value देता है, पर दो lines के बीच angle हमेशा acute report होता है। और आपको दोनों magnitudes से divide करना है — denominator भूलना cosine को one से भी बड़ा दे सकता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, दोनों tests swap मत कीजिए। perpendicular का मतलब dot product zero; parallel का मतलब ratios बराबर। students अक्सर गलत वाला लगा देते हैं — perpendicularity के लिए proportionality check कर बैठते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, parallel lines पर skew distance formula कभी मत use कीजिए। जब directions proportional हों, उनका cross product zero vector है और formula zero से divide करता है। इसके बजाय parallel line formula पर switch कीजिए।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, distance कभी negative नहीं होती, तो scalar triple product पर modulus रखिए भले product खुद negative हो सके। और याद रखिए कि lines को intersect दिखाना बिल्कुल वही काम है जो determinant को zero दिखाना।"
+            },
+            {
+              "seq": 6,
+              "text": "खत्म करने के लिए एक pro tip: किसी भी shortest distance problem में, पहले दोनों directions का cross product निकालिए। इसका magnitude आपका denominator है, और इसका zero होना तुरंत बता देता है lines parallel हैं या नहीं — एक calculation से दो जानकारियाँ।"
+            },
+            {
+              "seq": 7,
+              "text": "और एक आखिरी sanity check: हर distance answer कम से कम zero होना चाहिए। negative result असंभव है और बस इतना बताता है कि आप कहीं रास्ते में एक modulus भूल गए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Planes in Space — Equations, Family, Angles & Distances",
+      "title": "A plane is a point plus a normal",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The flattest surface in space"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The direction it faces is the normal vector $\\vec n$ — tilt it and the whole plane tilts."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 300\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"p1\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#c0392b\"/></marker>\n<marker id=\"p2\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#2980b9\"/></marker></defs>\n<polygon points=\"60,210 300,210 380,140 140,140\" fill=\"#eef4fb\" stroke=\"#5b7ea6\" stroke-width=\"1.4\"/>\n<circle cx=\"180\" cy=\"175\" r=\"4.5\" fill=\"#333\"/>\n<text x=\"158\" y=\"195\" font-size=\"13\" font-family=\"system-ui, sans-serif\">A (a)</text>\n<line x1=\"180\" y1=\"175\" x2=\"180\" y2=\"55\" stroke=\"#c0392b\" stroke-width=\"2.4\" marker-end=\"url(#p1)\"/>\n<text x=\"188\" y=\"60\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">normal n</text>\n<rect x=\"180\" y=\"163\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#c0392b\" stroke-width=\"1\"/>\n<circle cx=\"300\" cy=\"165\" r=\"4\" fill=\"#2980b9\"/>\n<text x=\"306\" y=\"163\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#2980b9\">R (r)</text>\n<line x1=\"180\" y1=\"175\" x2=\"300\" y2=\"165\" stroke=\"#2980b9\" stroke-width=\"2\" marker-end=\"url(#p2)\"/>\n<text x=\"210\" y=\"200\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#2980b9\">r - a lies in the plane</text>\n<text x=\"70\" y=\"245\" font-size=\"11\" font-family=\"system-ui, sans-serif\">R is on the plane exactly when (r - a) . n = 0</text>\n</svg>",
+          "caption": "A point R lies on the plane when (r - a) . n = 0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "(\\vec r-\\vec a)\\cdot\\vec n=0\\quad\\Longleftrightarrow\\quad \\vec r\\cdot\\vec n=d"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Given three points, cross two edges to manufacture the normal."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\dfrac{x}{a}+\\dfrac{y}{b}+\\dfrac{z}{c}=1"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Normal form $\\vec r\\cdot\\hat n=p$ needs $\\hat n$ a unit vector and $p\\ge 0$.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A plane is the flattest, most unbending surface in space — an infinite tabletop. The remarkable thing is how little it takes to fix one: a single point on it, plus the direction it faces."
+            },
+            {
+              "seq": 2,
+              "text": "The direction a plane faces is captured by a vector sticking straight out of the surface, the normal vector n. Tilt the normal and the whole tabletop tilts with it; slide the point and it slides parallel to itself."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the picture. Stand a pencil upright on a sheet of glass — the pencil is the normal, the glass is the plane. Any point R lies on the glass exactly when the arrow from the base point A to R runs flat along the glass, perpendicular to the pencil."
+            },
+            {
+              "seq": 4,
+              "text": "Perpendicular means the dot product is zero, which gives the master equation of a plane in one stroke: r minus a, dotted with n, equals zero — or, tidied up, r dot n equals a constant d."
+            },
+            {
+              "seq": 5,
+              "text": "Every form of the plane equation is just this idea in different clothes. Given three points instead of a normal, build two edge vectors and cross them — the cross product is perpendicular to both edges, so you have manufactured a normal out of thin air."
+            },
+            {
+              "seq": 6,
+              "text": "Even the intercept form, with intercepts a, b, c on the axes, is just three points in disguise — the three axis crossings."
+            },
+            {
+              "seq": 7,
+              "text": "One caution on the normal form. Writing r dot n hat equals p gives p as the true distance from the origin only when n hat is a unit vector and p is non negative. Otherwise p is not the origin distance."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक plane space में सबसे flat, सबसे न झुकने वाली surface है — एक अनंत tabletop। कमाल की बात ये है कि एक को तय करने में कितना कम लगता है: उस पर एक point, plus वो जिस direction को face करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक plane जिस direction को face करता है वो surface से सीधे बाहर निकलते एक vector से पकड़ी जाती है, normal vector n। normal tilt कीजिए और पूरा tabletop उसके साथ tilt हो जाता है; point slide कीजिए और वो अपने parallel slide होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "यहाँ picture है। एक pencil को काँच की एक sheet पर सीधा खड़ा कीजिए — pencil normal है, काँच plane है। कोई point R काँच पर ठीक तब होता है जब base point A से R तक का arrow काँच के साथ flat चले, pencil के perpendicular।"
+            },
+            {
+              "seq": 4,
+              "text": "Perpendicular का मतलब dot product zero, जो एक झटके में plane का master equation देता है: r minus a, n के साथ dot, बराबर zero — या, साफ़ करके, r dot n बराबर एक constant d।"
+            },
+            {
+              "seq": 5,
+              "text": "Plane equation का हर form बस यही idea अलग कपड़ों में है। normal के बजाय तीन points दिए हों, तो दो edge vectors बनाकर उन्हें cross कीजिए — cross product दोनों edges के perpendicular है, तो आपने हवा से एक normal बना लिया।"
+            },
+            {
+              "seq": 6,
+              "text": "Intercept form भी, axes पर intercepts a, b, c के साथ, बस भेस बदले तीन points हैं — तीन axis crossings।"
+            },
+            {
+              "seq": 7,
+              "text": "Normal form पर एक caution। r dot n hat equals p लिखने से p origin से true distance तभी है जब n hat एक unit vector हो और p non negative। वरना p origin distance नहीं है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Planes in Space — Equations, Family, Angles & Distances",
+      "title": "Angles: plane-to-plane cosine, line-to-plane sine",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Handle a plane through its normal"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\cos\\theta=\\dfrac{|\\vec n_1\\cdot\\vec n_2|}{|\\vec n_1||\\vec n_2|}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "But the line-and-plane case hides a twist."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 300\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"l1\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#c0392b\"/></marker>\n<marker id=\"l2\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#27ae60\"/></marker></defs>\n<polygon points=\"50,230 300,230 380,175 130,175\" fill=\"#eef4fb\" stroke=\"#5b7ea6\" stroke-width=\"1.4\"/>\n<circle cx=\"205\" cy=\"202\" r=\"4.5\" fill=\"#333\"/>\n<line x1=\"205\" y1=\"202\" x2=\"205\" y2=\"70\" stroke=\"#c0392b\" stroke-width=\"2.2\" marker-end=\"url(#l1)\"/>\n<text x=\"212\" y=\"72\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">normal n</text>\n<rect x=\"205\" y=\"190\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#c0392b\" stroke-width=\"1\"/>\n<line x1=\"205\" y1=\"202\" x2=\"345\" y2=\"95\" stroke=\"#27ae60\" stroke-width=\"2.4\" marker-end=\"url(#l2)\"/>\n<text x=\"330\" y=\"90\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#27ae60\">line, dir b</text>\n<path d=\"M205,140 A70,70 0 0,1 245,155\" fill=\"none\" stroke=\"#8e44ad\" stroke-width=\"1.4\"/>\n<text x=\"222\" y=\"140\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#8e44ad\">alpha</text>\n<path d=\"M258,168 A62,62 0 0,1 268,202\" fill=\"none\" stroke=\"#e67e22\" stroke-width=\"1.4\"/>\n<text x=\"268\" y=\"188\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#e67e22\">phi</text>\n<text x=\"60\" y=\"265\" font-size=\"11\" font-family=\"system-ui, sans-serif\">phi is measured to the surface, so phi = 90 - alpha (use sine)</text>\n</svg>",
+          "caption": "Line-plane angle phi is the complement of the line-normal angle alpha"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\sin\\varphi=\\dfrac{|\\vec b\\cdot\\vec n|}{|\\vec b||\\vec n|}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Plane-to-plane cosine; line-to-plane sine — never interchangeable.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Parallel planes: $\\vec n_1\\parallel\\vec n_2$; perpendicular: $\\vec n_1\\cdot\\vec n_2=0$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the single most useful trick in the whole subtopic: a plane is most easily handled through its normal. Angles are where this really pays off."
+            },
+            {
+              "seq": 2,
+              "text": "The angle between two planes is simply the angle between their normals. Two surfaces compare like two arrows, so we use the cosine of the angle between the normals."
+            },
+            {
+              "seq": 3,
+              "text": "But the line and plane case hides a twist. When a line meets a plane, the angle we care about is measured against the surface, not against the normal — and the normal sticks up at ninety degrees to the surface."
+            },
+            {
+              "seq": 4,
+              "text": "Here it is. If alpha is the angle between the line and the normal, then the angle phi we want, between the line and the surface, is its complement — ninety degrees minus alpha."
+            },
+            {
+              "seq": 5,
+              "text": "Cosine of the complement is sine, so the line plane angle uses a sine: sin phi equals the modulus of b dot n, over the product of magnitudes. Forgetting this single sine cosine swap is the most common mistake on the entire topic."
+            },
+            {
+              "seq": 6,
+              "text": "So carry this hook: plane to plane uses cosine, line to plane uses sine. Two surfaces compare like two arrows with cosine; a line piercing a surface is measured against the flat, which flips cosine to sine."
+            },
+            {
+              "seq": 7,
+              "text": "And the normals decide everything else too. Two planes are parallel when their normals are proportional, and perpendicular when the normals dot to zero. A line lies in or is parallel to a plane when its direction dots the normal to zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ पूरे subtopic का सबसे उपयोगी trick है: एक plane को उसके normal के ज़रिए सबसे आसानी से संभाला जाता है। Angles वहाँ है जहाँ इसका असली फायदा मिलता है।"
+            },
+            {
+              "seq": 2,
+              "text": "दो planes के बीच का angle बस उनके normals के बीच का angle है। दो surfaces दो arrows की तरह तुलना करती हैं, तो हम normals के बीच के angle का cosine use करते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "पर line और plane वाला case एक twist छिपाता है। जब कोई line plane को मिलती है, जो angle हमें चाहिए वो surface के against नापा जाता है, normal के against नहीं — और normal surface से नब्बे degrees पर खड़ा रहता है।"
+            },
+            {
+              "seq": 4,
+              "text": "यहाँ है। अगर alpha line और normal के बीच का angle है, तो जो angle phi हमें चाहिए, line और surface के बीच, वो उसका complement है — नब्बे degrees minus alpha।"
+            },
+            {
+              "seq": 5,
+              "text": "Complement का cosine sine होता है, तो line plane angle एक sine use करता है: sin phi बराबर b dot n का modulus, magnitudes के product पर। इस एक sine cosine swap को भूलना पूरे topic की सबसे common गलती है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो ये hook याद रखिए: plane to plane cosine use करता है, line to plane sine। दो surfaces दो arrows की तरह cosine से तुलना करती हैं; एक line surface को छेदती हुई flat के against नापी जाती है, जो cosine को sine में बदल देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और normals बाकी सब भी तय करते हैं। दो planes parallel हैं जब उनके normals proportional हों, और perpendicular जब normals का dot zero हो। एक line plane में हो या parallel हो जब उसकी direction normal के साथ dot करके zero दे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Planes in Space — Equations, Family, Angles & Distances",
+      "title": "Distance, and what the sign tells you",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "How far is a point from a plane?"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "D=\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The sign of $ax_1+by_1+cz_1+d$ tells you which side of the plane the point is on."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Same sign at two points $\\Rightarrow$ same side; different signs $\\Rightarrow$ the plane separates them."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "D_{\\parallel}=\\dfrac{|d_1-d_2|}{\\sqrt{a^2+b^2+c^2}}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Divide by $\\sqrt{a^2+b^2+c^2}$, never by $a^2+b^2+c^2$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "This side-test needs no work beyond the distance you were already computing."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "To find the distance of a point from a plane, drop a perpendicular and measure along the normal. The formula is beautifully mechanical."
+            },
+            {
+              "seq": 2,
+              "text": "You simply feed the point into the plane expression and divide by the length of the normal. The modulus is there because distance cannot be negative."
+            },
+            {
+              "seq": 3,
+              "text": "But the sign of that expression, before you take the modulus, actually tells you which side of the plane the point is on — a fact that solves a whole class of problems for free."
+            },
+            {
+              "seq": 4,
+              "text": "Evaluate the plane expression at two points. If both give the same sign, the points lie on the same side; if the signs differ, the plane separates them, and the segment joining them must cross the plane."
+            },
+            {
+              "seq": 5,
+              "text": "For two parallel planes, the gap follows the same recipe: the difference of the constants over the length of the shared normal. But you must scale both planes to identical normals first, or the constants are not comparable."
+            },
+            {
+              "seq": 6,
+              "text": "A recurring slip: the distance divides by the length of the normal, root a squared plus b squared plus c squared — not by its square. Dropping the square root, or squaring the denominator, both give the wrong number."
+            },
+            {
+              "seq": 7,
+              "text": "So the side test is essentially free: to decide whether the origin, or any point, lies on the same side as another, just compare the signs of the plane expression — no extra computation beyond what the distance already required."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "किसी point की plane से distance निकालने के लिए, एक perpendicular गिराइए और normal के साथ नापिए। formula बेहद mechanical है।"
+            },
+            {
+              "seq": 2,
+              "text": "आप बस point को plane expression में डालते हैं और normal की length से divide करते हैं। modulus इसलिए है क्योंकि distance negative नहीं हो सकती।"
+            },
+            {
+              "seq": 3,
+              "text": "पर उस expression का sign, modulus लेने से पहले, असल में बताता है point plane के किस side पर है — एक fact जो problems की पूरी एक class free में solve करती है।"
+            },
+            {
+              "seq": 4,
+              "text": "Plane expression को दो points पर evaluate कीजिए। अगर दोनों same sign दें, points एक ही side पर हैं; अगर signs अलग हों, plane उन्हें अलग करता है, और उन्हें जोड़ने वाला segment plane को cross करना ही पड़ता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दो parallel planes के लिए, gap वही recipe follow करता है: constants का difference shared normal की length पर। पर आपको पहले दोनों planes को identical normals पर scale करना होगा, वरना constants comparable नहीं हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "एक बार-बार होने वाली गलती: distance normal की length से divide होती है, root a squared plus b squared plus c squared — उसके square से नहीं। square root गिराना, या denominator square करना, दोनों गलत number देते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो side test असल में free है: ये तय करने के लिए कि origin, या कोई point, दूसरे के same side पर है या नहीं, बस plane expression के signs की तुलना कीजिए — distance ने जो पहले ही माँगा उससे ज़्यादा कोई computation नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "concept",
+      "subtopic": "Planes in Space — Equations, Family, Angles & Distances",
+      "title": "The family of planes: an elegant shortcut",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A plane through a line of intersection, without finding the line"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "P_1+\\lambda P_2=0"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Geometrically it is a pencil of planes — a book of pages hinged along one spine."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The extra condition selects the one page you need."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "A point condition: substitute and solve for $\\lambda$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "The form $P_1+\\lambda P_2$ can never reproduce $P_2$ itself.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "A perpendicularity condition sets the dot product of normals to zero."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "When a problem says the plane through the line where two planes meet, do not find that line. There is a far more elegant shortcut."
+            },
+            {
+              "seq": 2,
+              "text": "Instead write P one plus lambda P two equals zero. Every choice of lambda is automatically a plane through that intersection line, and one extra condition pins down the single right lambda."
+            },
+            {
+              "seq": 3,
+              "text": "Geometrically, this is a pencil of planes — an infinite book of pages all hinged along the same spine, which is the intersection line. Sweeping lambda across all real values flips through every page of the book."
+            },
+            {
+              "seq": 4,
+              "text": "The extra condition simply selects the one page you need. A point to pass through, or a plane to be perpendicular to, becomes a single linear equation in lambda."
+            },
+            {
+              "seq": 5,
+              "text": "If the condition is a point lying on the plane, substitute that point into the family and solve for lambda. That is it — no system of simultaneous equations and no parametrisation of the line."
+            },
+            {
+              "seq": 6,
+              "text": "One limit to remember: the form P one plus lambda P two can never reproduce P two itself, since no finite lambda gives it. If the correct answer happens to be P two, use the symmetric form, mu times P one plus P two, to recover it."
+            },
+            {
+              "seq": 7,
+              "text": "And if the condition is being perpendicular to a given plane, set the dot product of the family's normal with that plane's normal to zero. Whatever the condition, it collapses to one equation in lambda."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "जब कोई problem कहे उस line से गुज़रता plane जहाँ दो planes मिलते हैं, उस line को मत ढूँढिए। एक कहीं ज़्यादा elegant shortcut है।"
+            },
+            {
+              "seq": 2,
+              "text": "इसके बजाय P one plus lambda P two equals zero लिखिए। lambda का हर choice अपने आप उस intersection line से गुज़रता एक plane है, और एक extra condition उस एक सही lambda को तय कर देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Geometrically, ये एक pencil of planes है — pages की एक अनंत किताब जो सब एक ही spine पर hinged हैं, वो spine intersection line है। lambda को सारी real values पर sweep करना किताब के हर page को पलट देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Extra condition बस वो एक page चुनता है जो आपको चाहिए। किसी point से गुज़रना, या किसी plane के perpendicular होना, lambda में एक single linear equation बन जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "अगर condition है कोई point plane पर हो, तो उस point को family में substitute करके lambda के लिए solve कीजिए। बस — कोई simultaneous equations का system नहीं और line का कोई parametrisation नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "याद रखने लायक एक limit: P one plus lambda P two form कभी P two को खुद reproduce नहीं कर सकता, क्योंकि कोई finite lambda वो नहीं देता। अगर सही answer P two ही हो, तो उसे पाने के लिए symmetric form, mu times P one plus P two, use कीजिए।"
+            },
+            {
+              "seq": 7,
+              "text": "और अगर condition है किसी दिए plane के perpendicular होना, तो family के normal का उस plane के normal के साथ dot product zero रखिए। condition जो भी हो, वो lambda में एक equation में घट जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "formulas",
+      "subtopic": "Planes in Space — Equations, Family, Angles & Distances",
+      "title": "Planes: forms, family, angles, distances",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The plane toolkit on one board"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "a(x-x_1)+b(y-y_1)+c(z-z_1)=0\\ \\Longleftrightarrow\\ \\vec r\\cdot\\vec n=d"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\begin{vmatrix}x-x_1 & y-y_1 & z-z_1\\\\ x_2-x_1 & y_2-y_1 & z_2-z_1\\\\ x_3-x_1 & y_3-y_1 & z_3-z_1\\end{vmatrix}=0,\\quad \\dfrac{x}{a}+\\dfrac{y}{b}+\\dfrac{z}{c}=1"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "P_1+\\lambda P_2=0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\cos\\theta=\\dfrac{|\\vec n_1\\cdot\\vec n_2|}{|\\vec n_1||\\vec n_2|},\\qquad \\sin\\varphi=\\dfrac{|\\vec b\\cdot\\vec n|}{|\\vec b||\\vec n|}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "D=\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}},\\qquad D_{\\parallel}=\\dfrac{|d_1-d_2|}{\\sqrt{a^2+b^2+c^2}}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Notice: every formula here is built from the normal $\\vec n$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's gather every plane formula before we start solving."
+            },
+            {
+              "seq": 2,
+              "text": "The point normal form, where the coefficients are the normal and the fixed values are the point."
+            },
+            {
+              "seq": 3,
+              "text": "The three point determinant form, and the intercept form for a plane meeting the axes at a, b, c."
+            },
+            {
+              "seq": 4,
+              "text": "The family of planes through a line of intersection — fix lambda with one extra condition."
+            },
+            {
+              "seq": 5,
+              "text": "The plane to plane angle uses cosine of the normals; the line to plane angle uses sine. Remember: plane to plane cosine, line to plane sine."
+            },
+            {
+              "seq": 6,
+              "text": "The point to plane distance, and the parallel plane distance after scaling both to equal normals. Both divide by the length of the normal."
+            },
+            {
+              "seq": 7,
+              "text": "Notice the thread running through the whole board: every single formula here is built from the normal. That is why identifying the normal is always the efficient first move on a plane question."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए solve शुरू करने से पहले हर plane formula इकट्ठा कर लेते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Point normal form, जहाँ coefficients normal हैं और fixed values point।"
+            },
+            {
+              "seq": 3,
+              "text": "Three point determinant form, और intercept form उस plane के लिए जो axes को a, b, c पर मिले।"
+            },
+            {
+              "seq": 4,
+              "text": "Line of intersection से गुज़रती planes की family — एक extra condition से lambda तय कीजिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Plane to plane angle normals का cosine use करता है; line to plane angle sine। याद रखिए: plane to plane cosine, line to plane sine।"
+            },
+            {
+              "seq": 6,
+              "text": "Point to plane distance, और parallel plane distance दोनों को equal normals पर scale करने के बाद। दोनों normal की length से divide होती हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "पूरे board में चलता धागा ध्यान दीजिए: यहाँ का हर एक formula normal से बना है। इसीलिए किसी plane सवाल पर normal पहचानना हमेशा efficient पहला कदम है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Planes in Space — Equations, Family, Angles & Distances",
+      "title": "Worked example: plane from point and normal, and its distance",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Plane through $(2,-1,3)$ with normal $\\hat i+2\\hat j-2\\hat k$; distance from origin"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "1(x-2)+2(y+1)-2(z-3)=0"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "x+2y-2z+6=0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "D=\\dfrac{|0+0-0+6|}{\\sqrt{1+4+4}}=\\dfrac{6}{3}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "D=2\\ \\text{units}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "The same answer falls out of the normal form: $\\vec r\\cdot\\hat n=2$ with unit $\\hat n$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Forms come from a normal; distance divides by the normal's length."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A foundational warm up. Find the plane through the point two, minus one, three with normal i plus two j minus two k, and its perpendicular distance from the origin."
+            },
+            {
+              "seq": 2,
+              "text": "Apply the point normal form. One times x minus two, plus two times y plus one, minus two times z minus three, equals zero."
+            },
+            {
+              "seq": 3,
+              "text": "Expanding and collecting terms gives the plane x plus two y minus two z plus six equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "For the distance of the origin, feed zero, zero, zero into the plane expression and divide by the length of the normal, root nine, which is three."
+            },
+            {
+              "seq": 5,
+              "text": "That gives six over three, which is two units."
+            },
+            {
+              "seq": 6,
+              "text": "The same answer falls out of the normal form. Dividing the plane by the size of the normal and flipping signs so the right side is non negative gives r dot n hat equals two, with n hat a unit vector — confirming the origin distance is two."
+            },
+            {
+              "seq": 7,
+              "text": "The through line here: the plane form came straight from the normal, and the distance divided by the normal's length. Identify the normal first and the rest follows."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक foundational warm up। point two, minus one, three से गुज़रता plane निकालिए जिसका normal i plus two j minus two k हो, और origin से उसकी perpendicular distance।"
+            },
+            {
+              "seq": 2,
+              "text": "Point normal form लगाइए। one times x minus two, plus two times y plus one, minus two times z minus three, बराबर zero।"
+            },
+            {
+              "seq": 3,
+              "text": "Expand करके terms इकट्ठा करने पर plane मिलता है x plus two y minus two z plus six equals zero।"
+            },
+            {
+              "seq": 4,
+              "text": "Origin की distance के लिए, zero, zero, zero को plane expression में डालिए और normal की length root नौ से divide कीजिए, जो तीन है।"
+            },
+            {
+              "seq": 5,
+              "text": "वो six over three देता है, यानी दो units।"
+            },
+            {
+              "seq": 6,
+              "text": "वही answer normal form से भी निकलता है। plane को normal के size से divide करके और signs flip करके ताकि right side non negative हो, r dot n hat equals two मिलता है, n hat एक unit vector के साथ — origin distance दो होना confirm करते हुए।"
+            },
+            {
+              "seq": 7,
+              "text": "यहाँ का through line: plane form सीधे normal से आया, और distance normal की length से divide हुई। पहले normal पहचानिए और बाकी अपने आप हो जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Planes in Space — Equations, Family, Angles & Distances",
+      "title": "Worked example: the line-plane angle sine trap",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Angle between a line and a plane"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec b=(2,-1,2),\\qquad \\vec n=(3,-6,2)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\vec b\\cdot\\vec n=6+6+4=16"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "|\\vec b|=3,\\qquad |\\vec n|=7"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\sin\\varphi=\\dfrac{|16|}{3\\cdot 7}=\\dfrac{16}{21}\\ \\Rightarrow\\ \\varphi=\\sin^{-1}\\!\\left(\\tfrac{16}{21}\\right)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "$\\cos^{-1}\\tfrac{16}{21}$ would report the angle with the NORMAL — off by $90^\\circ$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "A built-in check: $\\sin\\varphi=\\tfrac{16}{21}<1$, as any genuine sine must be."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the classic sine trap. Find the angle between a given line and the plane three x minus six y plus two z equals seven."
+            },
+            {
+              "seq": 2,
+              "text": "The line's direction is two, minus one, two, and the plane's normal is three, minus six, two."
+            },
+            {
+              "seq": 3,
+              "text": "The dot product is two times three, plus minus one times minus six, plus two times two — that is six plus six plus four, equals sixteen."
+            },
+            {
+              "seq": 4,
+              "text": "The magnitude of the direction is three, and of the normal is seven."
+            },
+            {
+              "seq": 5,
+              "text": "Because this is a line and a plane, we use sine, not cosine. Sin phi is sixteen over twenty one, so phi is the inverse sine of sixteen over twenty one."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Here is the trap</whisper>. Sixteen over twenty one is the cosine of the angle the line makes with the normal. A student who writes inverse cosine has reported the angle with the normal, not the plane — off by exactly ninety degrees. Whenever a line meets a plane, reach for sine."
+            },
+            {
+              "seq": 7,
+              "text": "And there is a built in safeguard: sin phi is sixteen over twenty one, which is less than one, exactly as any genuine sine must be. Had we divided by only one magnitude, the result would have exceeded one, instantly flagging the slip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये classic sine trap है। एक दी गई line और plane three x minus six y plus two z equals seven के बीच का angle निकालिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Line की direction है two, minus one, two, और plane का normal three, minus six, two।"
+            },
+            {
+              "seq": 3,
+              "text": "Dot product है two times three, plus minus one times minus six, plus two times two — यानी छह plus छह plus चार, बराबर सोलह।"
+            },
+            {
+              "seq": 4,
+              "text": "Direction का magnitude तीन है, और normal का सात।"
+            },
+            {
+              "seq": 5,
+              "text": "क्योंकि ये line और plane है, हम sine use करते हैं, cosine नहीं। sin phi है सोलह over इक्कीस, तो phi है inverse sine of सोलह over इक्कीस।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>यहाँ trap है</whisper>। सोलह over इक्कीस उस angle का cosine है जो line normal के साथ बनाती है। जो student inverse cosine लिखता है उसने normal के साथ angle report किया, plane के साथ नहीं — ठीक नब्बे degrees off। जब भी कोई line plane को मिले, sine उठाइए।"
+            },
+            {
+              "seq": 7,
+              "text": "और एक built in safeguard है: sin phi सोलह over इक्कीस है, जो one से कम है, ठीक जैसा किसी भी असली sine को होना चाहिए। अगर हम सिर्फ एक magnitude से divide करते, तो result one से बड़ा हो जाता, तुरंत गलती दिखाते हुए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "Planes in Space — Equations, Family, Angles & Distances",
+      "title": "Worked example: family of planes through a point",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Plane through a line of intersection, passing through $(1,1,1)$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "(x+y+z-6)+\\lambda(2x+3y+4z+5)=0"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "(1+1+1-6)+\\lambda(2+3+4+5)=0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "-3+14\\lambda=0\\ \\Rightarrow\\ \\lambda=\\tfrac{3}{14}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "14(x+y+z-6)+3(2x+3y+4z+5)=0"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "20x+23y+26z-69=0"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The family avoids ever computing the intersection line."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A multi concept problem using the family shortcut. Find the plane through the line of intersection of x plus y plus z equals six and two x plus three y plus four z plus five equals zero, passing through one, one, one."
+            },
+            {
+              "seq": 2,
+              "text": "Write the family: x plus y plus z minus six, plus lambda times two x plus three y plus four z plus five, equals zero."
+            },
+            {
+              "seq": 3,
+              "text": "Impose the point one, one, one by substituting it in. The first bracket becomes three minus six, and the second becomes fourteen."
+            },
+            {
+              "seq": 4,
+              "text": "So minus three plus fourteen lambda equals zero, giving lambda equal to three over fourteen."
+            },
+            {
+              "seq": 5,
+              "text": "Substitute this lambda back and clear the fraction by multiplying through by fourteen."
+            },
+            {
+              "seq": 6,
+              "text": "Collecting terms gives the plane twenty x plus twenty three y plus twenty six z minus sixty nine equals zero. Check: at one, one, one, that sums to zero."
+            },
+            {
+              "seq": 7,
+              "text": "The whole problem collapsed to one linear equation in lambda. Because the family already encodes through the intersection line, a single point condition fully determined the plane — no simultaneous equations, no parametrisation."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Family shortcut use करता एक multi concept problem। x plus y plus z equals six और two x plus three y plus four z plus five equals zero के line of intersection से गुज़रता plane निकालिए, जो one, one, one से गुज़रे।"
+            },
+            {
+              "seq": 2,
+              "text": "Family लिखिए: x plus y plus z minus six, plus lambda times two x plus three y plus four z plus five, equals zero।"
+            },
+            {
+              "seq": 3,
+              "text": "Point one, one, one को substitute करके impose कीजिए। पहला bracket three minus six बनता है, और दूसरा चौदह।"
+            },
+            {
+              "seq": 4,
+              "text": "तो minus three plus fourteen lambda equals zero, जो lambda को three over fourteen देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "इस lambda को वापस substitute कीजिए और चौदह से multiply करके fraction साफ़ कीजिए।"
+            },
+            {
+              "seq": 6,
+              "text": "Terms इकट्ठा करने पर plane मिलता है twenty x plus twenty three y plus twenty six z minus sixty nine equals zero। check: one, one, one पर, ये zero में जुड़ता है।"
+            },
+            {
+              "seq": 7,
+              "text": "पूरी problem lambda में एक linear equation में घट गई। चूँकि family पहले से intersection line से गुज़रना encode करती है, एक single point condition ने plane पूरी तरह तय कर दिया — कोई simultaneous equations नहीं, कोई parametrisation नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "worked_examples",
+      "subtopic": "Planes in Space — Equations, Family, Angles & Distances",
+      "title": "Worked example: family plus a perpendicularity condition",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Plane through a line of intersection, perpendicular to a given plane"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec N=(2+\\lambda,\\ 1-\\lambda,\\ -1+2\\lambda)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\vec N\\cdot(3,2,1)=0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "3(2+\\lambda)+2(1-\\lambda)+1(-1+2\\lambda)=0\\ \\Rightarrow\\ 7+3\\lambda=0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\lambda=-\\tfrac{7}{3}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "x-10y+17z+2=0"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "One condition, one plane — the pencil has a single free parameter.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "An advanced family problem. Find the plane through the line of intersection of two x plus y minus z equals three and x minus y plus two z equals one, that is perpendicular to the plane three x plus two y plus z equals zero."
+            },
+            {
+              "seq": 2,
+              "text": "Write the family, two x plus y minus z minus three, plus lambda times x minus y plus two z minus one. Its normal is two plus lambda, one minus lambda, minus one plus two lambda."
+            },
+            {
+              "seq": 3,
+              "text": "Perpendicular to the plane three x plus two y plus z means the family's normal dotted with three, two, one equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "Expanding: three times two plus lambda, plus two times one minus lambda, plus one times minus one plus two lambda. This simplifies to seven plus three lambda equals zero."
+            },
+            {
+              "seq": 5,
+              "text": "So lambda equals minus seven thirds."
+            },
+            {
+              "seq": 6,
+              "text": "Substituting and clearing the fraction gives the plane x minus ten y plus seventeen z plus two equals zero. Its normal one, minus ten, seventeen dots with three, two, one to give zero — genuinely perpendicular."
+            },
+            {
+              "seq": 7,
+              "text": "The advanced idea: perpendicular to a plane became a single dot product condition on the family normal. One condition yields exactly one plane, because the family carries a single free parameter; two conditions would over determine the pencil."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक advanced family problem। two x plus y minus z equals three और x minus y plus two z equals one के line of intersection से गुज़रता plane निकालिए, जो plane three x plus two y plus z equals zero के perpendicular हो।"
+            },
+            {
+              "seq": 2,
+              "text": "Family लिखिए, two x plus y minus z minus three, plus lambda times x minus y plus two z minus one। इसका normal है two plus lambda, one minus lambda, minus one plus two lambda।"
+            },
+            {
+              "seq": 3,
+              "text": "Plane three x plus two y plus z के perpendicular का मतलब family का normal three, two, one के साथ dot करके zero दे।"
+            },
+            {
+              "seq": 4,
+              "text": "Expand करने पर: three times two plus lambda, plus two times one minus lambda, plus one times minus one plus two lambda। ये seven plus three lambda equals zero में simplify होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो lambda बराबर minus seven thirds।"
+            },
+            {
+              "seq": 6,
+              "text": "Substitute करके fraction साफ़ करने पर plane मिलता है x minus ten y plus seventeen z plus two equals zero। इसका normal one, minus ten, seventeen, three, two, one के साथ dot करके zero देता है — सचमुच perpendicular।"
+            },
+            {
+              "seq": 7,
+              "text": "Advanced idea: किसी plane के perpendicular होना family normal पर एक single dot product condition बन गया। एक condition ठीक एक plane देती है, क्योंकि family में एक ही free parameter है; दो conditions pencil को over determine कर देतीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "tips",
+      "subtopic": "Planes in Space — Equations, Family, Angles & Distances",
+      "title": "Planes: pitfalls and pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where plane marks quietly disappear"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "Line-plane angle uses SINE, not cosine.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Never swap the point and the normal in $a(x-x_1)+\\dots$"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Normal form gives origin distance only if $\\hat n$ is a unit vector."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Scale parallel planes to identical normals before comparing constants."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "In family problems, never solve for the intersection line — write $P_1+\\lambda P_2=0$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The normal is everything: forms, angles, and distances all flow from it."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close the plane subtopic by locking in the traps examiners rely on."
+            },
+            {
+              "seq": 2,
+              "text": "First and biggest: the line plane angle is the complement of the line normal angle, so it uses sine. Writing cosine reports the angle with the normal, off by ninety degrees."
+            },
+            {
+              "seq": 3,
+              "text": "Second, in the point normal form, the coefficients a, b, c are the normal, while x one, y one, z one is the point — never the reverse. Swapping them builds the wrong plane entirely."
+            },
+            {
+              "seq": 4,
+              "text": "Third, the normal form r dot n hat equals p gives p as the distance from the origin only if n hat is a genuine unit vector. If you forgot to normalise, p is not the distance."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, before using the parallel plane distance, scale both planes so their normals are identical. Two x minus y plus two z equals six and four x minus two y plus four z equals nine must first be matched, or the constants are not comparable."
+            },
+            {
+              "seq": 6,
+              "text": "Fifth, in family problems you never need the intersection line. Write P one plus lambda P two equals zero and impose the single extra condition. And remember the form can never reproduce P two itself."
+            },
+            {
+              "seq": 7,
+              "text": "The one pro tip that ties it together: almost every plane question reduces to find the normal. Forms come from a normal, the plane to plane angle is the normal to normal angle, and distance divides by the normal's length. Identify the normal first and the rest follows."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए plane subtopic को उन traps पक्का करके बंद करते हैं जिन पर examiners भरोसा करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला और सबसे बड़ा: line plane angle line normal angle का complement है, तो ये sine use करता है। cosine लिखना normal के साथ angle report करता है, नब्बे degrees off।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, point normal form में, coefficients a, b, c normal हैं, जबकि x one, y one, z one point है — कभी उल्टा नहीं। इन्हें swap करना पूरी तरह गलत plane बनाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, normal form r dot n hat equals p, p को origin से distance तभी देता है जब n hat एक असली unit vector हो। अगर आप normalise करना भूल गए, p distance नहीं है।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, parallel plane distance use करने से पहले, दोनों planes को scale कीजिए ताकि उनके normals identical हों। two x minus y plus two z equals six और four x minus two y plus four z equals nine को पहले match करना होगा, वरना constants comparable नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ, family problems में आपको intersection line की कभी ज़रूरत नहीं। P one plus lambda P two equals zero लिखिए और एक extra condition लगाइए। और याद रखिए form कभी P two को खुद reproduce नहीं कर सकता।"
+            },
+            {
+              "seq": 7,
+              "text": "वो एक pro tip जो सब बाँधता है: लगभग हर plane सवाल घटकर normal ढूँढो बन जाता है। forms normal से आते हैं, plane to plane angle normal to normal angle है, और distance normal की length से divide होती है। पहले normal पहचानिए और बाकी अपने आप होता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

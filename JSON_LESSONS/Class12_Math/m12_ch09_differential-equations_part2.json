@@ -1,0 +1,2465 @@
+{
+  "chapter": "Differential Equations",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 9,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "part": 2,
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Linear Differential Equations",
+      "title": "The integrating factor idea: one tuck folds the whole sheet",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "A third tool for a third type"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "type": "text",
+          "text": "A huge family resists both separation and $y = vx$: equations where $y$ and $\\frac{dy}{dx}$ each appear only to the FIRST power — no products like $y\\frac{dy}{dx}$, no powers like $y^2$."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} + P\\,y = Q"
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 44,
+          "type": "text",
+          "text": "The LHS is ALMOST the derivative of a product — but not quite."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "type": "text",
+          "text": "The trick: find one magic multiplier — the IF — so that after multiplying through, the LHS becomes EXACTLY $\\frac{d}{dx}(\\text{IF} \\cdot y)$."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 75,
+          "type": "text",
+          "text": "Fitted-bedsheet picture: the elastic corners fight you — until one specific tuck makes the whole sheet fold flat in a single motion."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 95,
+          "type": "formula",
+          "latex": "\\text{IF} = e^{\\int P\\,dx}"
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 109,
+          "type": "note",
+          "style": "red-margin",
+          "text": "The multiplier is completely predictable — you NEVER have to guess it."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Our toolbox holds two tools: separate the variables, or switch to ratios. This section adds the third, and it is the single most examined method in the whole chapter."
+            },
+            {
+              "seq": 2,
+              "text": "A huge family of equations resists both existing tools: equations where y and its derivative d y by d x both appear, each only to the first power, with no products like y times d y by d x, and no powers like y squared. These are called linear differential equations."
+            },
+            {
+              "seq": 3,
+              "text": "Their standard form is on the board: d y by d x, plus P times y, equals Q, where P and Q are functions of x alone."
+            },
+            {
+              "seq": 4,
+              "text": "Now stare at that left side. It is almost the derivative of a product, by the product rule, but not quite. Something is missing."
+            },
+            {
+              "seq": 5,
+              "text": "The integrating factor method supplies the missing piece. It finds one magic multiplier, call it the I F, such that after you multiply the whole equation through by it, the left side becomes exactly the derivative of I F times y. One clean derivative, so one integration finishes the problem."
+            },
+            {
+              "seq": 6,
+              "text": "A homely picture. Folding a fitted bedsheet: the elastic corners fight you and nothing lies flat. But there is one specific way to tuck the corners, and after that tuck, the whole sheet folds into a neat rectangle in one motion. The integrating factor is that tuck."
+            },
+            {
+              "seq": 7,
+              "text": "And here is the genius: the magic multiplier is completely predictable. For d y by d x plus P y equals Q, it is always e raised to the integral of P d x."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>You never have to guess it. One formula, every linear equation, guaranteed.</excited> The next boards prove why, and then we drill it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हमारी toolbox में दो tools हैं: variables separate करो, या ratios पर switch करो। यह section तीसरा जोड़ता है, और यही पूरे chapter का सबसे ज़्यादा examined method है।"
+            },
+            {
+              "seq": 2,
+              "text": "Equations की एक बहुत बड़ी family दोनों मौजूदा tools को resist करती है: ऐसी equations जिनमें y और उसका derivative d y by d x दोनों आते हैं, हर एक सिर्फ first power में, y times d y by d x जैसे products नहीं, y squared जैसी powers नहीं। इन्हें कहते हैं linear differential equations."
+            },
+            {
+              "seq": 3,
+              "text": "इनकी standard form board पर है: d y by d x, plus P times y, equals Q, जहाँ P और Q सिर्फ x के functions हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "अब उस left side को ग़ौर से देखिए। यह product rule से किसी product का derivative लगभग है, लेकिन पूरा नहीं। कुछ missing है।"
+            },
+            {
+              "seq": 5,
+              "text": "Integrating factor method वही missing piece देता है। यह एक magic multiplier ढूँढता है, इसे I F कहिए, ऐसा कि पूरी equation को इससे multiply करने के बाद left side exactly बन जाए derivative of I F times y. एक clean derivative, तो एक integration में problem ख़त्म।"
+            },
+            {
+              "seq": 6,
+              "text": "एक घरेलू picture. Fitted bedsheet folding: elastic corners लड़ते हैं और कुछ भी flat नहीं बैठता। लेकिन corners tuck करने का एक specific तरीक़ा है, और उस tuck के बाद पूरी sheet एक ही motion में neat rectangle बन जाती है। Integrating factor वही tuck है।"
+            },
+            {
+              "seq": 7,
+              "text": "और यही genius है: magic multiplier पूरी तरह predictable है। d y by d x plus P y equals Q के लिए, वह हमेशा है e raised to the integral of P d x."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>इसे कभी guess नहीं करना पड़ता। एक formula, हर linear equation, guaranteed.</excited> अगले boards पर prove करेंगे क्यों, फिर drill करेंगे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Linear Differential Equations",
+      "title": "Why the IF is forced: the CBSE derivation",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "The one derivation CBSE can ask"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "type": "text",
+          "text": "Multiply the standard form through by an unknown function $\\mu(x)$:"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "type": "formula",
+          "latex": "\\mu\\frac{dy}{dx} + \\mu P\\,y = \\mu Q \\qquad (1)"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "type": "formula",
+          "latex": "\\frac{d}{dx}(\\mu y) = \\mu\\frac{dy}{dx} + \\frac{d\\mu}{dx}\\,y \\qquad (2)"
+        },
+        {
+          "seq": 5,
+          "emphasis": "high",
+          "reveal_at": 54,
+          "type": "text",
+          "text": "Comparing (1) and (2): the left sides match provided $\\frac{d\\mu}{dx} = \\mu P$ — itself a SEPARABLE equation for $\\mu$."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 71,
+          "type": "formula",
+          "latex": "\\frac{d\\mu}{\\mu} = P\\,dx \\;\\Rightarrow\\; \\log\\mu = \\int P\\,dx \\;\\Rightarrow\\; \\mu = e^{\\int P\\,dx}"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 89,
+          "type": "formula",
+          "latex": "\\frac{d}{dx}\\big(y \\cdot \\text{IF}\\big) = Q \\cdot \\text{IF} \\;\\;\\Rightarrow\\;\\; y \\cdot \\text{IF} = \\int Q \\cdot \\text{IF}\\;dx + C"
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 107,
+          "type": "note",
+          "style": "red-margin",
+          "text": "The multiplier is FORCED — no other choice makes the LHS a perfect derivative. Chapter eats its own cooking: a separable DE builds the linear method."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Where does e to the integral of P d x come from? This is the one genuine derivation of the subtopic, and C B S E can ask for it directly. Watch how short it is."
+            },
+            {
+              "seq": 2,
+              "text": "Start from the standard form and multiply through by an as yet unknown function mu of x. We will let the mathematics tell us what mu must be."
+            },
+            {
+              "seq": 3,
+              "text": "Equation one on the board: mu d y by d x, plus mu P y, equals mu Q. Our wish: the left side should be the derivative of the single product mu times y."
+            },
+            {
+              "seq": 4,
+              "text": "Equation two is what the product rule says that derivative actually is: the derivative of mu y equals mu d y by d x, plus d mu by d x times y."
+            },
+            {
+              "seq": 5,
+              "text": "Compare the left sides term by term: the first terms already match, and the second match provided d mu by d x equals mu times P. That condition is a separable equation for mu, the very type mastered in Part one."
+            },
+            {
+              "seq": 6,
+              "text": "Separate and solve it: d mu over mu equals P d x, integrate to get log mu equals the integral of P d x, exponentiate, and mu equals e to the integral of P d x. The multiplier is forced, no other choice works."
+            },
+            {
+              "seq": 7,
+              "text": "With that choice, equation one collapses to: the derivative of y times I F, equals Q times I F. Integrate both sides once, and the general solution appears: y times I F equals the integral of Q times I F d x, plus C."
+            },
+            {
+              "seq": 8,
+              "text": "Notice the chapter eating its own cooking: a separable equation, our first tool, just built the machinery of the linear method, our third. Write this derivation out twice by hand and it is yours for the exam."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "e to the integral of P d x आता कहाँ से है? यही इस subtopic की एक genuine derivation है, और C B S E इसे सीधे पूछ सकता है। देखिए कितनी छोटी है।"
+            },
+            {
+              "seq": 2,
+              "text": "Standard form से शुरू कीजिए और पूरी equation को एक अभी अनजान function mu of x से multiply कीजिए। Mathematics ख़ुद बताएगी mu क्या होना चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Board पर equation one: mu d y by d x, plus mu P y, equals mu Q. हमारी wish: left side, single product mu times y का derivative बन जाए।"
+            },
+            {
+              "seq": 4,
+              "text": "Equation two बताती है product rule के हिसाब से वह derivative असल में क्या है: derivative of mu y equals mu d y by d x, plus d mu by d x times y."
+            },
+            {
+              "seq": 5,
+              "text": "Left sides को term by term compare कीजिए: पहली terms पहले से match, दूसरी match करती हैं बशर्ते d mu by d x equals mu times P. वह condition mu के लिए separable equation है, वही type जो Part one में master किया।"
+            },
+            {
+              "seq": 6,
+              "text": "Separate करके solve कीजिए: d mu over mu equals P d x, integrate करने पर log mu equals integral of P d x, exponentiate कीजिए, और mu equals e to the integral of P d x. Multiplier forced है, कोई दूसरा choice काम नहीं करता।"
+            },
+            {
+              "seq": 7,
+              "text": "इसी choice के साथ equation one सिमट जाती है: derivative of y times I F, equals Q times I F. दोनों sides एक बार integrate कीजिए, और general solution हाज़िर: y times I F equals integral of Q times I F d x, plus C."
+            },
+            {
+              "seq": 8,
+              "text": "ध्यान दीजिए chapter अपना ही खाना खा रहा है: एक separable equation, हमारा पहला tool, ने linear method की machinery बना दी, हमारा तीसरा। इस derivation को हाथ से दो बार लिखिए, exam के लिए आपकी हो जाएगी।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Linear Differential Equations",
+      "title": "The five-step drill and the flip test",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Procedure — solving a linear DE"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 8,
+          "type": "text",
+          "text": "Step 1 — STANDARD FORM: make the coefficient of $\\frac{dy}{dx}$ exactly 1. A leading $x$ or $\\cos x$ must be divided out BEFORE reading $P$. Skipping this is the number-one error."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "type": "text",
+          "text": "Step 2 — IDENTIFY $P$ and $Q$, both functions of $x$ only. Step 3 — COMPUTE IF $= e^{\\int P\\,dx}$, watching the SIGN of $\\int P\\,dx$."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "type": "text",
+          "text": "Step 4 — WRITE $y \\cdot \\text{IF} = \\int Q \\cdot \\text{IF}\\,dx + C$ and do the (often by-parts) integral. Step 5 — apply any initial condition to find $C$."
+        },
+        {
+          "seq": 5,
+          "emphasis": "high",
+          "reveal_at": 61,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Never expand the LHS: after multiplying by IF it is GUARANTEED to be $\\frac{d}{dx}(y \\cdot \\text{IF})$ — jump straight to integrating $Q \\cdot \\text{IF}$."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 78,
+          "type": "heading",
+          "text": "The flip test — linear in x"
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 82,
+          "type": "text",
+          "text": "Linearity is about $y$, not $x$: if $y$ is tangled nonlinearly but $x$ appears to the first power, flip the viewpoint."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 94,
+          "type": "formula",
+          "latex": "\\frac{dx}{dy} + P_1\\,x = Q_1 \\quad\\Rightarrow\\quad \\text{IF} = e^{\\int P_1\\,dy}, \\qquad x \\cdot \\text{IF} = \\int Q_1 \\cdot \\text{IF}\\;dy + C"
+        },
+        {
+          "seq": 9,
+          "emphasis": "normal",
+          "reveal_at": 114,
+          "type": "note",
+          "style": "red-margin",
+          "text": "$P_1$, $Q_1$ are functions of $y$ alone. Many hard problems are ordinary linear DEs in disguise."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The derivation done, the method compresses into a five step drill. Run it identically on every linear equation."
+            },
+            {
+              "seq": 2,
+              "text": "Step one, the number one error in the chapter: reduce to standard form, coefficient of d y by d x exactly one. Any x or cos x in front of the derivative gets divided out before you even glance at P. Read P off the raw equation and everything downstream is wrong."
+            },
+            {
+              "seq": 3,
+              "text": "Step two: identify P and Q, both functions of x only. Step three: compute the integrating factor, e to the integral of P d x, watching the sign like a hawk; negative P gives a negative power or decaying exponential."
+            },
+            {
+              "seq": 4,
+              "text": "Step four: write y times I F equals the integral of Q times I F d x, plus C, and evaluate, frequently by parts. Step five: apply any initial condition to pin down C."
+            },
+            {
+              "seq": 5,
+              "text": "A professional habit inside step four: never expand the left hand side; after multiplying by the I F it is guaranteed to be the derivative of y times I F. Jump straight to integrating Q times I F on the right."
+            },
+            {
+              "seq": 6,
+              "text": "Now the flip test, the twist J E E loves."
+            },
+            {
+              "seq": 7,
+              "text": "Linearity is a statement about y, not about x. If y appears nonlinearly, but x appears only to the first power, flip your viewpoint and treat x as the unknown."
+            },
+            {
+              "seq": 8,
+              "text": "The mirror machinery is on the board: d x by d y plus P one x equals Q one, I F equals e to the integral of P one d y, solution x times I F equals the integral of Q one times I F d y, plus C."
+            },
+            {
+              "seq": 9,
+              "text": "P one and Q one must be functions of y alone. Many problems hopeless in y are ordinary linear equations in x, wearing a disguise."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Derivation हो गई, अब method पाँच steps की drill में compress होता है। हर linear equation पर इसे identical चलाइए।"
+            },
+            {
+              "seq": 2,
+              "text": "Step one, chapter की number one error: standard form, d y by d x का coefficient exactly one. Derivative के आगे कोई x या cos x हो, तो P देखने से पहले उसे divide कीजिए। Raw equation से P पढ़ा, तो आगे का सब ग़लत।"
+            },
+            {
+              "seq": 3,
+              "text": "Step two: P और Q identify कीजिए, दोनों सिर्फ x के functions. Step three: integrating factor, e to the integral of P d x, sign पर बाज़ जैसी नज़र; negative P देता है negative power या decaying exponential."
+            },
+            {
+              "seq": 4,
+              "text": "Step four: y times I F equals integral of Q times I F d x, plus C लिखिए, और evaluate कीजिए, अक्सर by parts से। Step five: initial condition से C pin कीजिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Step four के अंदर professional habit: left hand side कभी expand मत कीजिए; I F से multiply होते ही वह guaranteed derivative of y times I F है। सीधे right पर Q times I F integrate करने कूदिए।"
+            },
+            {
+              "seq": 6,
+              "text": "अब flip test, वह twist जो J E E को पसंद है।"
+            },
+            {
+              "seq": 7,
+              "text": "Linearity y के बारे में statement है, x के बारे में नहीं। y nonlinear ढंग से उलझा हो, लेकिन x सिर्फ first power में आए, तो viewpoint पलटिए और x को unknown मानिए।"
+            },
+            {
+              "seq": 8,
+              "text": "Mirror machinery board पर है: d x by d y plus P one x equals Q one, I F equals e to the integral of P one d y, solution x times I F equals integral of Q one times I F d y, plus C."
+            },
+            {
+              "seq": 9,
+              "text": "P one और Q one सिर्फ y के functions होने चाहिए। कई problems जो y में hopeless दिखती हैं, x में ordinary linear equations हैं, भेस बदले हुए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "Linear Differential Equations",
+      "title": "The linear toolkit on one board",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Everything linear, in four lines"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 9,
+          "type": "formula",
+          "latex": "\\text{Standard form:}\\quad \\frac{dy}{dx} + P\\,y = Q, \\qquad P = P(x),\\; Q = Q(x)"
+        },
+        {
+          "seq": 3,
+          "emphasis": "high",
+          "reveal_at": 26,
+          "type": "formula",
+          "latex": "\\text{IF} = e^{\\int P\\,dx}"
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 35,
+          "type": "formula",
+          "latex": "y \\cdot \\text{IF} = \\int Q \\cdot \\text{IF}\\;dx + C"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "type": "formula",
+          "latex": "\\text{Mirror (linear in } x\\text{):}\\quad \\frac{dx}{dy} + P_1\\,x = Q_1, \\quad \\text{IF} = e^{\\int P_1\\,dy}, \\quad x \\cdot \\text{IF} = \\int Q_1 \\cdot \\text{IF}\\;dy + C"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "type": "text",
+          "text": "Log-power simplifications you will use constantly: $e^{2\\log x} = x^2$, $\\;e^{-3\\log x} = x^{-3}$, $\\;e^{\\log \\sin x} = \\sin x$."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 90,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Sign discipline: $\\int \\frac{2}{x}dx = 2\\log x \\Rightarrow \\text{IF} = x^2$; but $\\int -\\frac{2}{x}dx = -2\\log x \\Rightarrow \\text{IF} = x^{-2}$. One slipped sign flips the whole IF."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 108,
+          "type": "text",
+          "text": "You integrate $Q \\cdot \\text{IF}$ — the IF rides along into the integral, never $Q$ alone."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the entire linear method compressed onto one board, the four lines to write from memory before touching any problem."
+            },
+            {
+              "seq": 2,
+              "text": "Line one, the standard form: d y by d x plus P y equals Q, with the coefficient of the derivative exactly one, and P and Q functions of x only. Every solve begins by forcing the equation into this shape."
+            },
+            {
+              "seq": 3,
+              "text": "Line two, the integrating factor: I F equals e raised to the integral of P d x. Predictable, formulaic, never guessed."
+            },
+            {
+              "seq": 4,
+              "text": "Line three, the solution: y times I F equals the integral of Q times I F d x, plus C. This one line is the whole method."
+            },
+            {
+              "seq": 5,
+              "text": "Line four, the mirror for equations linear in x: d x by d y plus P one x equals Q one, I F equals e to the integral of P one d y, solution x times I F equals the integral of Q one times I F d y, plus C."
+            },
+            {
+              "seq": 6,
+              "text": "Because P is so often a constant over x, these log power simplifications appear constantly: e to the two log x is x squared, e to the minus three log x is x to the minus three, and e to the log sine x is simply sine x. Fluency here is fluency in the whole method."
+            },
+            {
+              "seq": 7,
+              "text": "Sign discipline, the silent killer: the integral of two over x gives I F equals x squared, but minus two over x gives I F equals x to the minus two. One slipped sign flips the entire integrating factor, and everything after it."
+            },
+            {
+              "seq": 8,
+              "text": "And the last habit on this board: you integrate Q times I F, never Q alone. The integrating factor rides along into the integral. Forgetting the passenger is the most common slip in the final step."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा पूरा linear method एक board पर compress, वे चार lines जो किसी भी problem को छूने से पहले memory से लिखनी हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Line one, standard form: d y by d x plus P y equals Q, derivative का coefficient exactly one, और P, Q सिर्फ x के functions. हर solve equation को इसी shape में लाने से शुरू होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Line two, integrating factor: I F equals e raised to the integral of P d x. Predictable, formulaic, कभी guess नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Line three, solution: y times I F equals integral of Q times I F d x, plus C. यही एक line पूरा method है।"
+            },
+            {
+              "seq": 5,
+              "text": "Line four, x में linear equations का mirror: d x by d y plus P one x equals Q one, I F equals e to the integral of P one d y, solution x times I F equals integral of Q one times I F d y, plus C."
+            },
+            {
+              "seq": 6,
+              "text": "क्योंकि P अक्सर कोई constant over x होता है, ये log power simplifications बार बार आती हैं: e to the two log x है x squared, e to the minus three log x है x to the minus three, और e to the log sine x है simply sine x. यहाँ की fluency पूरे method की fluency है।"
+            },
+            {
+              "seq": 7,
+              "text": "Sign discipline, ख़ामोश killer: two over x का integral देता है I F equals x squared, लेकिन minus two over x देता है I F equals x to the minus two. एक फिसला sign पूरा integrating factor पलट देता है, और उसके बाद का सब।"
+            },
+            {
+              "seq": 8,
+              "text": "और इस board की आख़िरी habit: integrate होता है Q times I F, कभी अकेला Q नहीं। Integrating factor integral के अंदर साथ चलता है। इस passenger को भूलना final step की सबसे common फिसलन है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Linear Differential Equations",
+      "title": "Straight application, then the standard-form trap",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 1 — CBSE: the method verbatim"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 11,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} + \\frac{2}{x}\\,y = x^3: \\quad P = \\frac{2}{x},\\;\\; \\text{IF} = e^{2\\log x} = x^2"
+        },
+        {
+          "seq": 3,
+          "emphasis": "high",
+          "reveal_at": 26,
+          "type": "formula",
+          "latex": "y \\cdot x^2 = \\int x^3 \\cdot x^2\\,dx + C = \\frac{x^6}{6} + C \\;\\;\\Rightarrow\\;\\; y = \\frac{x^4}{6} + \\frac{C}{x^2}"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "type": "heading",
+          "text": "Example 2 — the trap, screaming"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "type": "formula",
+          "latex": "x\\frac{dy}{dx} - 3y = x^5 \\;\\;\\xrightarrow{\\div x}\\;\\; \\frac{dy}{dx} - \\frac{3}{x}\\,y = x^4"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 76,
+          "type": "formula",
+          "latex": "\\text{IF} = e^{\\int -\\frac{3}{x}dx} = e^{-3\\log x} = x^{-3}"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 85,
+          "type": "formula",
+          "latex": "y \\cdot x^{-3} = \\int x^4 \\cdot x^{-3}\\,dx + C = \\frac{x^2}{2} + C \\;\\;\\Rightarrow\\;\\; y = \\frac{x^5}{2} + Cx^3"
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 101,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Skip the division and you read $P = -3$, get IF $= e^{-3x}$, and the whole problem collapses. Coefficient of $\\frac{dy}{dx}$ must be 1 BEFORE you touch $P$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Drill time. Example one, C B S E level, the method verbatim: solve d y by d x plus two over x times y, equals x cubed."
+            },
+            {
+              "seq": 2,
+              "text": "Standard form: already there, P is two over x, Q is x cubed. The I F: e to the two log x, which simplifies to x squared, the first log power simplification, exactly as promised."
+            },
+            {
+              "seq": 3,
+              "text": "The template gives y times x squared equals x to the sixth over six, plus C, so y equals x to the fourth over six, plus C over x squared. Show the I F explicitly and integrate Q times I F, both carry marks."
+            },
+            {
+              "seq": 4,
+              "text": "Example two looks almost identical, but the trap is screaming: solve x d y by d x minus three y equals x to the fifth."
+            },
+            {
+              "seq": 5,
+              "text": "A coefficient x sits in front of d y by d x, so P may not be read yet. Divide through by x: d y by d x minus three over x times y, equals x to the fourth. Only now, P is minus three over x, Q is x to the fourth."
+            },
+            {
+              "seq": 6,
+              "text": "The I F: e to the minus three log x, x to the minus three. Negative P, negative power, mind that sign."
+            },
+            {
+              "seq": 7,
+              "text": "The template: the integrand collapses to just x, giving x squared over two, so y times x to the minus three equals that plus C. Multiplying back, y equals x to the fifth over two, plus C x cubed."
+            },
+            {
+              "seq": 8,
+              "text": "The trap: skip the division, read P equals minus three, get I F equals e to the minus three x, nonsense. Speed rule, permanently: the coefficient of d y by d x must be one before you touch P."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Drill का समय। Example one, C B S E level, method verbatim: solve कीजिए d y by d x plus two over x times y, equals x cubed."
+            },
+            {
+              "seq": 2,
+              "text": "Standard form: पहले से है, P है two over x, Q है x cubed. I F: e to the two log x, simplify होकर x squared, पहली log power simplification, बिलकुल वादे जैसी।"
+            },
+            {
+              "seq": 3,
+              "text": "Template देता है y times x squared equals x to the sixth over six, plus C, तो y equals x to the fourth over six, plus C over x squared. I F explicitly दिखाइए और Q times I F integrate कीजिए, दोनों पर marks हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Example two लगभग वैसा ही दिखता है, लेकिन trap चीख़ रहा है: solve कीजिए x d y by d x minus three y equals x to the fifth."
+            },
+            {
+              "seq": 5,
+              "text": "d y by d x के आगे coefficient x बैठा है, तो P अभी नहीं पढ़ सकते। x से divide कीजिए: d y by d x minus three over x times y, equals x to the fourth. सिर्फ अब, P है minus three over x, Q है x to the fourth."
+            },
+            {
+              "seq": 6,
+              "text": "I F: e to the minus three log x, x to the minus three. Negative P, negative power, sign सँभालिए।"
+            },
+            {
+              "seq": 7,
+              "text": "Template: integrand सिमटकर सिर्फ x, यानी x squared over two, तो y times x to the minus three equals वही plus C. वापस multiply करने पर, y equals x to the fifth over two, plus C x cubed।"
+            },
+            {
+              "seq": 8,
+              "text": "Trap: division skip की, P equals minus three पढ़ा, I F equals e to the minus three x, nonsense. Speed rule, हमेशा के लिए: P छूने से पहले d y by d x का coefficient one होना चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Linear Differential Equations",
+      "title": "A cotangent IF and a collapsing integral",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 3 — JEE Main: three skills chained"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 11,
+          "type": "text",
+          "text": "A curve satisfies the equation below and passes through $(\\pi/2,\\, 0)$. Find $y$."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} + y\\cot x = 4x\\csc x"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "type": "formula",
+          "latex": "\\text{IF} = e^{\\int \\cot x\\,dx} = e^{\\log \\sin x} = \\sin x"
+        },
+        {
+          "seq": 5,
+          "emphasis": "high",
+          "reveal_at": 49,
+          "type": "text",
+          "text": "The twist: $\\csc x \\cdot \\sin x = 1$, so $\\int 4x\\csc x \\cdot \\sin x\\,dx = \\int 4x\\,dx$ — the integral collapses."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 69,
+          "type": "formula",
+          "latex": "y\\sin x = 2x^2 + C; \\quad (\\pi/2,\\, 0):\\;\\; 0 = 2\\left(\\frac{\\pi}{2}\\right)^2 + C \\;\\Rightarrow\\; C = -\\frac{\\pi^2}{2}"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 89,
+          "type": "formula",
+          "latex": "y = \\frac{4x^2 - \\pi^2}{2\\sin x}"
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 97,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Three skills: build the IF, spot the trig collapse, pin $C$ with the point. JEE packages them together deliberately."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three is J E E Main's favourite packaging again: an initial value problem, a trig integrating factor, and a hidden simplification, all in one question."
+            },
+            {
+              "seq": 2,
+              "text": "A curve satisfies the equation on the board and passes through the point pi by two comma zero. Find y."
+            },
+            {
+              "seq": 3,
+              "text": "The equation is already in standard form: P equals cot x, Q equals four x csc x. Both functions of x alone, so the linear machine applies."
+            },
+            {
+              "seq": 4,
+              "text": "Compute the integrating factor: e to the integral of cot x d x. The integral of cot x is log sine x, so the I F is e to the log sine x, which is simply sine x. Another log power simplification doing its job."
+            },
+            {
+              "seq": 5,
+              "text": "Write the template: y sine x equals the integral of four x csc x times sine x, d x, plus C. Now the twist that makes this question fair instead of brutal: csc x times sine x equals one. The horrible looking integrand collapses to just four x."
+            },
+            {
+              "seq": 6,
+              "text": "So y sine x equals two x squared plus C. Apply the point: at x equals pi by two, y equals zero, and sine of pi by two is one. Zero equals two times pi by two squared, plus C, giving C equals minus pi squared over two."
+            },
+            {
+              "seq": 7,
+              "text": "Divide through by sine x and box it: y equals four x squared minus pi squared, over two sine x."
+            },
+            {
+              "seq": 8,
+              "text": "Count the skills: build a trig integrating factor, spot the csc times sine collapse to dodge a horrible integral, and pin the constant with the given point. J E E chains them deliberately, and each link, on its own, is cheap."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three फिर J E E Main की favourite packaging है: initial value problem, trig integrating factor, और एक छिपी simplification, सब एक question में।"
+            },
+            {
+              "seq": 2,
+              "text": "एक curve board वाली equation satisfy करता है और point pi by two comma zero से गुज़रता है। y निकालिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Equation पहले से standard form में है: P equals cot x, Q equals four x csc x. दोनों सिर्फ x के functions, तो linear machine लागू।"
+            },
+            {
+              "seq": 4,
+              "text": "Integrating factor compute कीजिए: e to the integral of cot x d x. cot x का integral है log sine x, तो I F है e to the log sine x, यानी simply sine x. एक और log power simplification अपना काम करती हुई।"
+            },
+            {
+              "seq": 5,
+              "text": "Template लिखिए: y sine x equals integral of four x csc x times sine x, d x, plus C. अब वह twist जो इस question को brutal की जगह fair बनाता है: csc x times sine x equals one. डरावना दिखने वाला integrand सिमटकर सिर्फ four x."
+            },
+            {
+              "seq": 6,
+              "text": "तो y sine x equals two x squared plus C. Point लगाइए: x equals pi by two पर, y equals zero, और sine of pi by two है one. Zero equals two times pi by two का square, plus C, जिससे C equals minus pi squared over two."
+            },
+            {
+              "seq": 7,
+              "text": "sine x से divide करके box कीजिए: y equals four x squared minus pi squared, over two sine x."
+            },
+            {
+              "seq": 8,
+              "text": "Skills गिनिए: trig integrating factor बनाना, csc times sine का collapse पकड़कर एक horrible integral से बचना, और दिए हुए point से constant pin करना। J E E इन्हें जानबूझकर chain करता है, और हर कड़ी, अकेले में, सस्ती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Linear Differential Equations",
+      "title": "Linear in x, not y: the JEE Advanced flip",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 4 — when y refuses, ask x"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} = \\frac{y}{x + y^2}"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "type": "text",
+          "text": "In $y$ this is hopeless: $y^2$ in the denominator is nonlinear. Don't fight it — FLIP."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "type": "formula",
+          "latex": "\\frac{dx}{dy} = \\frac{x + y^2}{y} = \\frac{x}{y} + y \\;\\;\\Rightarrow\\;\\; \\frac{dx}{dy} - \\frac{1}{y}\\,x = y"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "type": "formula",
+          "latex": "\\text{IF} = e^{\\int -\\frac{1}{y}\\,dy} = e^{-\\log y} = \\frac{1}{y}"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "type": "formula",
+          "latex": "x \\cdot \\frac{1}{y} = \\int y \\cdot \\frac{1}{y}\\,dy + C = y + C"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 87,
+          "type": "formula",
+          "latex": "x = y^2 + Cy"
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 93,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Verify: $\\frac{dx}{dy} = 2y + C$ ⇒ $\\frac{dy}{dx} = \\frac{1}{2y + C}$, and $\\frac{y}{x + y^2} = \\frac{y}{2y^2 + Cy} = \\frac{1}{2y + C}$ ✓. The whole difficulty was recognising WHICH variable is linear."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The final worked example is pure J E E Advanced taste: an equation whose entire difficulty is recognising which variable it is linear in."
+            },
+            {
+              "seq": 2,
+              "text": "Solve d y by d x equals y, over x plus y squared."
+            },
+            {
+              "seq": 3,
+              "text": "Try to force standard form in y and you hit a wall: the y squared in the denominator makes the equation nonlinear in y. No integrating factor in the world fixes that. Do not fight it."
+            },
+            {
+              "seq": 4,
+              "text": "Flip to d x by d y instead. The reciprocal is x plus y squared, over y, which splits as x over y, plus y. Move the x term left: d x by d y, minus one over y times x, equals y. Suddenly this is a linear equation in x, with P one equals minus one over y and Q one equals y, both functions of y alone."
+            },
+            {
+              "seq": 5,
+              "text": "Run the mirror machinery. The integrating factor: e to the integral of minus one over y d y, which is e to the minus log y, which is one over y."
+            },
+            {
+              "seq": 6,
+              "text": "The template: x times one over y equals the integral of y times one over y, d y, plus C. The integrand is just one, the integral is y, so x over y equals y plus C."
+            },
+            {
+              "seq": 7,
+              "text": "Multiply through by y and box it: x equals y squared plus C y."
+            },
+            {
+              "seq": 8,
+              "text": "Verify, because Advanced rewards the habit: from the answer, d x by d y equals two y plus C, so d y by d x is one over two y plus C. And the original right hand side, y over x plus y squared, becomes y over two y squared plus C y, which is also one over two y plus C. They match. The calculus here was trivial; the entire question was the flip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िरी worked example शुद्ध J E E Advanced का स्वाद है: एक equation जिसकी पूरी difficulty यह पहचानना है कि वह किस variable में linear है।"
+            },
+            {
+              "seq": 2,
+              "text": "Solve कीजिए d y by d x equals y, over x plus y squared."
+            },
+            {
+              "seq": 3,
+              "text": "y में standard form force करने की कोशिश कीजिए और दीवार से टकराइए: denominator का y squared equation को y में nonlinear बना देता है। दुनिया का कोई integrating factor इसे ठीक नहीं करता। लड़िए मत।"
+            },
+            {
+              "seq": 4,
+              "text": "बजाय इसके d x by d y पर flip कीजिए। Reciprocal है x plus y squared, over y, जो टूटता है x over y, plus y में। x वाली term left लाइए: d x by d y, minus one over y times x, equals y. अचानक यह x में linear equation है, P one equals minus one over y और Q one equals y, दोनों सिर्फ y के functions."
+            },
+            {
+              "seq": 5,
+              "text": "Mirror machinery चलाइए। Integrating factor: e to the integral of minus one over y d y, यानी e to the minus log y, यानी one over y."
+            },
+            {
+              "seq": 6,
+              "text": "Template: x times one over y equals integral of y times one over y, d y, plus C. Integrand सिर्फ one है, integral है y, तो x over y equals y plus C."
+            },
+            {
+              "seq": 7,
+              "text": "y से multiply करके box कीजिए: x equals y squared plus C y."
+            },
+            {
+              "seq": 8,
+              "text": "Verify कीजिए, क्योंकि Advanced इस आदत को reward करता है: answer से, d x by d y equals two y plus C, तो d y by d x है one over two y plus C. और original right hand side, y over x plus y squared, बनती है y over two y squared plus C y, जो भी one over two y plus C है। Match. यहाँ की calculus मामूली थी; पूरा question flip ही था।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "tips",
+      "subtopic": "Linear Differential Equations",
+      "title": "Pitfalls: where the most examined method leaks marks",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Four leaks, one glance"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 8,
+          "type": "text",
+          "text": "Reading $P$ before standard form: a coefficient in front of $\\frac{dy}{dx}$ must be divided out FIRST — otherwise $P$, the IF, and everything after are wrong."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "type": "text",
+          "text": "Sign errors in the IF: $P$ negative ⇒ $\\int P\\,dx$ negative ⇒ IF is a negative power or decaying exponential. Double-check the sign BEFORE exponentiating."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "type": "text",
+          "text": "Integrating $Q$ instead of $Q \\cdot \\text{IF}$: the solution is $y \\cdot \\text{IF} = \\int Q \\cdot \\text{IF}\\,dx$ — the IF rides along into the integral."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "type": "text",
+          "text": "Missing 'linear in $x$': if $y$ is tangled but $x$ is first-degree, flip to $\\frac{dx}{dy}$. Many hard problems are ordinary linear DEs in disguise."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 81,
+          "type": "heading",
+          "text": "The pro glance"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 86,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Before solving, one look: first power in $y$ and $y'$, no products? → linear in $y$. $y$ messy but $x$ clean? → linear in $x$. Then: standard form first, $P$ second."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 109,
+          "type": "text",
+          "text": "Memory hooks: IF $=$ $e$ to the integral of $P$; the IF rides into the integral; never expand the LHS; messy in $y$? try $x$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The most examined method deserves the sharpest error list. Four leaks, then the one glance that prevents them."
+            },
+            {
+              "seq": 2,
+              "text": "Leak one, the biggest in the chapter: reading P before standard form. Any coefficient in front of d y by d x must be divided out first. Read P off the raw equation and the integrating factor is wrong, and everything after it."
+            },
+            {
+              "seq": 3,
+              "text": "Leak two: sign errors in the integrating factor. When P is negative, the integral of P d x is negative, and the I F comes out as a negative power of x or a decaying exponential. Double check the sign before you exponentiate, not after the problem falls apart."
+            },
+            {
+              "seq": 4,
+              "text": "Leak three: integrating Q instead of Q times I F. The solution line is y times I F equals the integral of Q times I F d x. The integrating factor rides along into the integral. Dropping the passenger is quietly fatal."
+            },
+            {
+              "seq": 5,
+              "text": "Leak four: missing linear in x. If y is tangled nonlinearly but x appears only to the first power, flip to d x by d y and run the mirror. Many problems advertised as hard are ordinary linear equations in disguise."
+            },
+            {
+              "seq": 6,
+              "text": "Now the glance that organises all of it, two seconds before any algebra."
+            },
+            {
+              "seq": 7,
+              "text": "One look: first power in y and y prime, no products? Linear in y. y messy but x clean and first degree? Linear in x, flip. Either way the sequence is fixed: standard form first, P second. <whisper>And once the I F multiplies in, never expand the left side, it is already the derivative you need.</whisper>"
+            },
+            {
+              "seq": 8,
+              "text": "Memory hooks to close the subtopic: I F equals e to the integral of P. The I F rides into the integral. Never expand the left side. And, messy in y? Try x."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "सबसे ज़्यादा examined method को सबसे तेज़ error list चाहिए। चार leaks, फिर वह एक glance जो सबको रोकती है।"
+            },
+            {
+              "seq": 2,
+              "text": "Leak one, chapter का सबसे बड़ा: standard form से पहले P पढ़ लेना। d y by d x के आगे बैठा coefficient पहले divide होना चाहिए। Raw equation से P पढ़ा तो integrating factor ग़लत, और उसके बाद का सब।"
+            },
+            {
+              "seq": 3,
+              "text": "Leak two: integrating factor में sign errors. P negative हो, तो integral of P d x negative, और I F निकलता है x की negative power या decaying exponential. Exponentiate करने से पहले sign double check कीजिए, problem बिखरने के बाद नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Leak three: Q times I F की जगह अकेला Q integrate कर देना। Solution line है y times I F equals integral of Q times I F d x. Integrating factor integral के अंदर साथ चलता है। Passenger को उतार देना चुपचाप fatal है।"
+            },
+            {
+              "seq": 5,
+              "text": "Leak four: linear in x को miss कर देना। y nonlinear ढंग से उलझा हो लेकिन x सिर्फ first power में आए, तो d x by d y पर flip करके mirror चलाइए। कई problems जो hard बताई जाती हैं, भेस बदली हुई ordinary linear equations हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वह glance जो सब कुछ organise करती है, किसी भी algebra से two seconds पहले।"
+            },
+            {
+              "seq": 7,
+              "text": "एक नज़र: y और y prime first power में, कोई product नहीं? y में linear. y messy लेकिन x clean और first degree? x में linear, flip. दोनों हालत में sequence fixed: standard form first, P second. <whisper>और I F से multiply होते ही left side कभी expand मत कीजिए, वह पहले से वही derivative है जो चाहिए।</whisper>"
+            },
+            {
+              "seq": 8,
+              "text": "Subtopic बंद करने के लिए memory hooks: I F equals e to the integral of P. I F integral में साथ चलता है। Left side कभी expand नहीं। और, y में messy? x try कीजिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "concept",
+      "subtopic": "Applications of Differential Equations",
+      "title": "Every rate sentence is a differential equation in disguise",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Where the chapter meets the world"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "type": "text",
+          "text": "\"Bacteria multiply faster when there are more of them.\" \"Hot tea cools quicker when the gap with the room is larger.\" \"The steeper the slope, the faster the curve climbs.\""
+        },
+        {
+          "seq": 3,
+          "emphasis": "high",
+          "reveal_at": 25,
+          "type": "text",
+          "text": "Each links a RATE OF CHANGE to the CURRENT STATE — a DE waiting to be written and solved."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "type": "text",
+          "text": "Model 1 — growth & decay: rate ∝ own size ⇒ $\\frac{dN}{dt} = kN$. Populations, bacteria, radioactive atoms, compound interest."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "type": "text",
+          "text": "Model 2 — Newton's cooling: heat lost ∝ how much HOTTER than the surroundings ⇒ the driver is the DIFFERENCE $(\\theta - \\theta_s)$, not $\\theta$ itself."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 75,
+          "type": "text",
+          "text": "Model 3 — geometry: slope of tangent, subnormal $y\\frac{dy}{dx}$, subtangent, or families crossing at right angles."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 92,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Chai insight: fresh from the kettle it cools FAST (huge gap); near room temperature it barely cools (tiny gap). The rate tracks the GAP — that single idea is half the marks."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 113,
+          "type": "text",
+          "text": "Every model here reduces to a separable or linear DE you already know how to solve."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Everything so far has been technique. This final subtopic is where the chapter meets the real world, and it pays off in guaranteed exam marks."
+            },
+            {
+              "seq": 2,
+              "text": "Listen to three sentences from science. Bacteria multiply faster when there are more of them. Hot tea cools quicker when the gap with the room is larger. The steeper the slope, the faster the curve climbs."
+            },
+            {
+              "seq": 3,
+              "text": "Each one links a rate of change to the current state, and that link is a differential equation waiting to be written and solved. Almost every rate sentence in science is secretly one of ours."
+            },
+            {
+              "seq": 4,
+              "text": "Three model situations cover the overwhelming majority of exam questions. Model one, growth and decay: a quantity changing at a rate proportional to its own size. Populations, bacteria, radioactive atoms, compound interest, all obey d N by d t equals k N."
+            },
+            {
+              "seq": 5,
+              "text": "Model two, Newton's law of cooling: a hot body loses heat at a rate proportional to how much hotter it is than its surroundings. Read that carefully: the driver is the difference, theta minus theta s, not the body's own temperature."
+            },
+            {
+              "seq": 6,
+              "text": "Model three, geometric applications: the data is about the curve's shape. The slope of the tangent, the subnormal, which is y times d y by d x, the subtangent, or the demand that two families of curves cross at right angles."
+            },
+            {
+              "seq": 7,
+              "text": "Return to the chai one last time: fresh from the kettle it cools fast, huge gap; near room temperature it barely cools, tiny gap. The rate tracks the gap, not the chai's own temperature, the single insight separating Newton's cooling from ordinary decay, worth half the marks on any cooling question."
+            },
+            {
+              "seq": 8,
+              "text": "And the comfort before we start: every model here reduces to a separable or linear equation, tools you already own. The only new skill is translation."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब तक सब technique था। यह आख़िरी subtopic वह जगह है जहाँ chapter असली दुनिया से मिलता है, और guaranteed exam marks में payoff देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Science के तीन sentences सुनिए। Bacteria तब तेज़ multiply करते हैं जब वे ज़्यादा हों। गरम chai तब जल्दी ठंडी होती है जब room से gap बड़ा हो। Slope जितनी steep, curve उतनी तेज़ चढ़ता है।"
+            },
+            {
+              "seq": 3,
+              "text": "हर एक rate of change को current state से जोड़ता है, और यही link एक differential equation है जो लिखे और solve होने का इंतज़ार कर रही है। Science का लगभग हर rate sentence छिपे तौर पर हमारा ही है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीन model situations exam questions की overwhelming majority cover करती हैं। Model one, growth and decay: कोई quantity अपने ही size के proportional rate से बदल रही है। Populations, bacteria, radioactive atoms, compound interest, सब obey करते हैं d N by d t equals k N."
+            },
+            {
+              "seq": 5,
+              "text": "Model two, Newton's law of cooling: गरम body उतनी rate से heat खोती है जितनी वह surroundings से ज़्यादा गरम है। ध्यान से पढ़िए: driver है difference, theta minus theta s, body का अपना temperature नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "Model three, geometric applications: data curve की shape के बारे में है। Tangent का slope, subnormal, यानी y times d y by d x, subtangent, या यह demand कि curves की दो families right angles पर cross करें।"
+            },
+            {
+              "seq": 7,
+              "text": "आख़िरी बार chai पर लौटिए: kettle से ताज़ा, तेज़ ठंडी, बड़ा gap; room temperature के पास, मुश्किल से ठंडी, छोटा gap. Rate gap को track करती है, chai के अपने temperature को नहीं, यही insight Newton's cooling को ordinary decay से अलग करती है, हर cooling question के आधे marks इसी में।"
+            },
+            {
+              "seq": 8,
+              "text": "और शुरू करने से पहले तसल्ली: यहाँ का हर model एक separable या linear equation में reduce होता है, tools जो पहले से आपके पास हैं। नई skill सिर्फ translation है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Applications of Differential Equations",
+      "title": "Translate, solve, answer: the word-problem discipline",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "The five-step routine"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "type": "text",
+          "text": "Step 1 — NAME the variables: what changes with respect to what? ($N$ with $t$, $\\theta$ with $t$, $y$ with $x$)."
+        },
+        {
+          "seq": 3,
+          "emphasis": "high",
+          "reveal_at": 24,
+          "type": "text",
+          "text": "Step 2 — TRANSLATE the rate sentence: 'rate ∝ size' → $\\frac{dN}{dt} = kN$; 'rate ∝ gap with surroundings' → $\\frac{d\\theta}{dt} = -k(\\theta - \\theta_s)$; 'slope = …' → the geometric condition. Fix the SIGN by asking: does the quantity rise or fall?"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "type": "text",
+          "text": "Step 3 — SOLVE the DE (these models are separable; some geometric ones are linear)."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "type": "text",
+          "text": "Step 4 — APPLY conditions IN ORDER: the initial value pins $N_0$ / the constant; a second data point pins $k$."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 77,
+          "type": "text",
+          "text": "Step 5 — ANSWER the exact question asked (a time, a temperature, a fraction, a curve) and sanity-check the limiting behaviour."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 89,
+          "type": "note",
+          "style": "red-margin",
+          "text": "The most expensive error is mis-translating the English. UNDERLINE the rate word — 'rate', 'proportional to', 'slope', 'cuts at right angles' — and WHAT it is proportional to, before writing any symbols."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 107,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Sign check: decay and cooling LOSE quantity ⇒ $\\frac{dN}{dt} = -kN$, $\\frac{d\\theta}{dt} = -k(\\theta - \\theta_s)$, with $k > 0$. A wrong sign makes a cooling body heat up forever."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Word problems fail at the translation step far more often than the calculus step, so here is the routine that protects the translation."
+            },
+            {
+              "seq": 2,
+              "text": "Step one: name the variables, what changes with respect to what: N with t for populations, theta with t for temperatures, y with x for curves. Five seconds of writing, half the confusion prevented."
+            },
+            {
+              "seq": 3,
+              "text": "Step two, the heart: translate the rate sentence. Rate proportional to size becomes d N by d t equals k N; rate proportional to the gap becomes d theta by d t equals minus k times theta minus theta s; a slope condition becomes its geometric equation. Fix the sign by asking: does the quantity rise or fall?"
+            },
+            {
+              "seq": 4,
+              "text": "Step three: solve the equation. Every model in this subtopic is separable, and a few geometric ones are linear. Nothing new, only Part one and this part's earlier machinery."
+            },
+            {
+              "seq": 5,
+              "text": "Step four: apply the given conditions in order. The initial value pins down N zero or the arbitrary constant. A second data point pins down k. Applying them out of order is a classic way to chase your own tail."
+            },
+            {
+              "seq": 6,
+              "text": "Step five: answer the exact question asked, a time, a temperature, a fraction, a curve, and sanity check the limiting behaviour: does the answer settle where physics says it should?"
+            },
+            {
+              "seq": 7,
+              "text": "Now the discipline that pays for itself: the most expensive error in this entire subtopic is mistranslating the English. Before writing any symbols, underline the rate word, rate, proportional to, slope, cuts at right angles, and underline what it is proportional to."
+            },
+            {
+              "seq": 8,
+              "text": "And the sign check in red: decay and cooling lose quantity, so the models carry minus k with k positive. Get the sign wrong and your cooling body heats up forever, an answer that should scream at you from the page."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Word problems calculus step से कहीं ज़्यादा translation step पर fail होते हैं, इसलिए यह रही वह routine जो translation की हिफ़ाज़त करती है।"
+            },
+            {
+              "seq": 2,
+              "text": "Step one: variables को नाम दीजिए, क्या किसके respect में बदल रहा है: populations के लिए N with t, temperatures के लिए theta with t, curves के लिए y with x. Five seconds की लिखाई, आधी confusion रुक जाती है।"
+            },
+            {
+              "seq": 3,
+              "text": "Step two, इसका दिल: rate sentence translate कीजिए। Rate proportional to size बनता है d N by d t equals k N; rate proportional to the gap बनता है d theta by d t equals minus k times theta minus theta s; slope वाली condition बनती है उसकी geometric equation. Sign fix कीजिए पूछकर: quantity बढ़ रही है या घट रही है?"
+            },
+            {
+              "seq": 4,
+              "text": "Step three: equation solve कीजिए। इस subtopic का हर model separable है, और कुछ geometric वाले linear. कुछ नया नहीं, सिर्फ Part one और इसी part की पिछली machinery."
+            },
+            {
+              "seq": 5,
+              "text": "Step four: दी गई conditions को order में लगाइए। Initial value से N zero या arbitrary constant pin होता है। दूसरा data point k pin करता है। Order उलटा किया, तो अपनी ही पूँछ के पीछे भागना classic है।"
+            },
+            {
+              "seq": 6,
+              "text": "Step five: exactly वही answer दीजिए जो पूछा गया है, कोई time, temperature, fraction, या curve, और limiting behaviour का sanity check: answer वहीं settle होता है जहाँ physics कहती है?"
+            },
+            {
+              "seq": 7,
+              "text": "अब वह discipline जो अपनी क़ीमत ख़ुद वसूल कर देती है: इस पूरे subtopic की सबसे महँगी error है English का ग़लत translation. कोई भी symbol लिखने से पहले rate word underline कीजिए, rate, proportional to, slope, cuts at right angles, और underline कीजिए कि वह किसके proportional है।"
+            },
+            {
+              "seq": 8,
+              "text": "और लाल स्याही में sign check: decay और cooling quantity खोते हैं, इसलिए models में minus k आता है, k positive के साथ। Sign ग़लत हुआ तो आपकी ठंडी होती body हमेशा के लिए गरम होने लगेगी, ऐसा answer जो page से चीख़कर आपको बताना चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "formulas",
+      "subtopic": "Applications of Differential Equations",
+      "title": "The three model equations and their solutions",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Models to write on sight"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 9,
+          "type": "formula",
+          "latex": "\\text{Growth / decay:}\\quad \\frac{dN}{dt} = kN \\;\\Rightarrow\\; N = N_0\\,e^{kt} \\qquad (k > 0 \\text{ grow},\\; k < 0 \\text{ decay})"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "type": "formula",
+          "latex": "\\text{Doubling time / half-life:}\\quad t = \\frac{\\ln 2}{|k|}, \\qquad \\frac{N}{N_0} = \\left(\\frac{1}{2}\\right)^{t / t_{1/2}}"
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 45,
+          "type": "formula",
+          "latex": "\\text{Newton's cooling:}\\quad \\frac{d\\theta}{dt} = -k(\\theta - \\theta_s) \\;\\Rightarrow\\; \\theta = \\theta_s + (\\theta_0 - \\theta_s)\\,e^{-kt}"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "type": "text",
+          "text": "Cooling has a FLOOR: the exponential decays to zero, so $\\theta \\to \\theta_s$ as $t \\to \\infty$ — the body settles at the room, never below it."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 80,
+          "type": "formula",
+          "latex": "\\text{Subtangent} = \\frac{y}{dy/dx}, \\qquad \\text{Subnormal} = y\\frac{dy}{dx}"
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 98,
+          "type": "formula",
+          "latex": "\\text{Orthogonal trajectories: replace}\\;\\; \\frac{dy}{dx} \\;\\to\\; -\\frac{1}{dy/dx}\\;\\; \\text{in the family's DE, then solve}"
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 112,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Notation: $N_0$, $\\theta_0$ = values at $t = 0$; $\\theta_s$ = surroundings; $k > 0$ always, with the sign written explicitly in the model."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here are the model equations with their solutions, the lines you should write on sight the moment you recognise the situation."
+            },
+            {
+              "seq": 2,
+              "text": "Growth and decay: d N by d t equals k N, solving to N equals N zero e to the k t; k positive grows, k negative decays. Proportional to itself always means exponential; the only questions are the sign and the constants."
+            },
+            {
+              "seq": 3,
+              "text": "Two companion results: doubling time or half life is natural log two over the magnitude of k, and the fraction remaining after time t is one half to the power t over the half life. The second form often skips the calculus entirely."
+            },
+            {
+              "seq": 4,
+              "text": "Newton's cooling: d theta by d t equals minus k times theta minus theta s, solving to theta equals theta s plus theta zero minus theta s, times e to the minus k t. Memorise the structure: room temperature, plus initial gap, decaying exponentially."
+            },
+            {
+              "seq": 5,
+              "text": "Read the limiting behaviour off that solution: as t goes to infinity the exponential dies, so theta approaches theta s. Cooling has a floor: the body settles at room temperature, never below, and any answer undershooting the room is automatically wrong."
+            },
+            {
+              "seq": 6,
+              "text": "For geometric problems, two lengths defined at any point of a curve: the subtangent is y over d y by d x, and the subnormal is y times d y by d x. Word problems quote these by name and expect the translation instantly."
+            },
+            {
+              "seq": 7,
+              "text": "The orthogonal trajectory recipe: form the given family's differential equation, replace d y by d x with its negative reciprocal, minus one over d y by d x, and solve the new equation."
+            },
+            {
+              "seq": 8,
+              "text": "Notation: N zero and theta zero are values at time zero, theta s the surroundings, and k always positive, the sign shown explicitly in the model itself."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहीं model equations अपने solutions के साथ, वे lines जो situation पहचानते ही देखते ही लिख देनी चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Growth and decay: d N by d t equals k N, solve होकर N equals N zero e to the k t; k positive बढ़ता है, k negative decay. Proportional to itself का मतलब हमेशा exponential; सवाल सिर्फ sign और constants के हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "दो साथी results: doubling time या half life है natural log two over k का magnitude, और time t के बाद बची fraction है one half to the power t over the half life. दूसरी form अक्सर पूरी calculus skip करा देती है।"
+            },
+            {
+              "seq": 4,
+              "text": "Newton's cooling: d theta by d t equals minus k times theta minus theta s, solve होकर theta equals theta s plus theta zero minus theta s, times e to the minus k t. Structure याद रखिए: room temperature, plus initial gap, exponentially decay होता हुआ।"
+            },
+            {
+              "seq": 5,
+              "text": "उसी solution से limiting behaviour पढ़िए: t infinity की तरफ़ जाए तो exponential मर जाता है, theta approaches theta s. Cooling की floor है: body room temperature पर settle होती है, नीचे कभी नहीं, room से नीचे उतरता answer अपने आप ग़लत।"
+            },
+            {
+              "seq": 6,
+              "text": "Geometric problems के लिए, curve के किसी भी point पर define दो lengths: subtangent है y over d y by d x, और subnormal है y times d y by d x. Word problems इन्हें नाम से quote करते हैं और तुरंत translation expect करते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Orthogonal trajectory की recipe: दी गई family की differential equation form कीजिए, d y by d x की जगह उसका negative reciprocal, minus one over d y by d x, रखिए, और नई equation solve कीजिए।"
+            },
+            {
+              "seq": 8,
+              "text": "Notation: N zero और theta zero time zero की values, theta s surroundings, और k हमेशा positive, sign model में ही explicitly दिखाया जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Applications of Differential Equations",
+      "title": "Growth and decay: solve one, count the other",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 1 — CBSE: bacteria doubling"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "type": "text",
+          "text": "A culture grows at a rate proportional to its size and DOUBLES in 4 hours. How long to become 8 times the original?"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "type": "formula",
+          "latex": "N = N_0 e^{kt}; \\quad 2N_0 = N_0 e^{4k} \\Rightarrow k = \\frac{\\ln 2}{4}; \\quad 8 = e^{kt} \\Rightarrow t = \\frac{3\\ln 2}{(\\ln 2)/4} = 12"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Sanity check: $8 = 2^3$ and each doubling takes 4 h ⇒ $3 \\times 4 = 12$ h. Matches."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "type": "heading",
+          "text": "Example 2 — the counting shortcut"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "type": "text",
+          "text": "Half-life 1600 years. What fraction remains after 4800 years?"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 75,
+          "type": "formula",
+          "latex": "\\frac{4800}{1600} = 3 \\text{ half-lives} \\;\\Rightarrow\\; \\left(\\frac{1}{2}\\right)^3 = \\frac{1}{8}"
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 90,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Trap: setting up $N = N_0 e^{-kt}$ and solving for $k$ — correct but SLOW, and easy to slip a sign. Whole number of half-lives ⇒ just COUNT. Non-integer ⇒ fall back to $(1/2)^{t/t_{1/2}}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two exam staples, and a lesson about when not to use calculus at all."
+            },
+            {
+              "seq": 2,
+              "text": "Example one, C B S E level. A bacterial culture grows at a rate proportional to its size, and doubles in four hours. How long does it take to become eight times its original size?"
+            },
+            {
+              "seq": 3,
+              "text": "The model writes itself: N equals N zero e to the k t. From the doubling, e to the four k equals two, so k equals natural log two over four. The target: eight equals e to the k t, so k t equals log of eight, three natural log two. Divide, and t equals twelve. Twelve hours."
+            },
+            {
+              "seq": 4,
+              "text": "Always sanity check word problems. Eight is two cubed, and each doubling takes four hours, so three doublings take twelve. The calculus and the counting agree, which is your certificate of correctness."
+            },
+            {
+              "seq": 5,
+              "text": "Example two teaches the shortcut directly. A radioactive substance has a half life of one thousand six hundred years. What fraction remains after four thousand eight hundred years?"
+            },
+            {
+              "seq": 6,
+              "text": "Do not reach for e to the minus k t. Divide first."
+            },
+            {
+              "seq": 7,
+              "text": "Four thousand eight hundred over one thousand six hundred is exactly three half lives. Each half life halves the amount, so the fraction remaining is one half cubed, which is one eighth. Done, in one line."
+            },
+            {
+              "seq": 8,
+              "text": "The trap, named: setting up the full exponential model, solving for k, then substituting back. It is correct but slow, and a sign slip lurks at every step. The speed rule: when the elapsed time is a whole number of half lives, just count the halvings. For awkward, non integer multiples, fall back to the fraction formula, one half to the power t over the half life."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो exam staples, और एक सबक़ कि calculus कब बिलकुल इस्तेमाल नहीं करनी।"
+            },
+            {
+              "seq": 2,
+              "text": "Example one, C B S E level. एक bacterial culture अपने size के proportional rate से बढ़ता है, और four hours में double हो जाता है। Original size का eight times होने में कितना समय लगेगा?"
+            },
+            {
+              "seq": 3,
+              "text": "Model ख़ुद लिख जाता है: N equals N zero e to the k t. Doubling से, e to the four k equals two, तो k equals natural log two over four. Target: eight equals e to the k t, तो k t equals log of eight, three natural log two. Divide कीजिए, t equals twelve. Twelve hours."
+            },
+            {
+              "seq": 4,
+              "text": "Word problems में हमेशा sanity check कीजिए। Eight है two cubed, और हर doubling में four hours लगते हैं, तो तीन doublings में twelve. Calculus और गिनती दोनों agree करते हैं, यही आपकी correctness का certificate है।"
+            },
+            {
+              "seq": 5,
+              "text": "Example two shortcut सीधे सिखाता है। एक radioactive substance की half life है one thousand six hundred years. Four thousand eight hundred years के बाद कितनी fraction बचेगी?"
+            },
+            {
+              "seq": 6,
+              "text": "e to the minus k t की तरफ़ हाथ मत बढ़ाइए। पहले divide कीजिए।"
+            },
+            {
+              "seq": 7,
+              "text": "Four thousand eight hundred over one thousand six hundred exactly three half lives है। हर half life amount को आधा करती है, तो बची fraction है one half cubed, यानी one eighth. ख़त्म, एक line में।"
+            },
+            {
+              "seq": 8,
+              "text": "Trap, नाम लेकर: पूरा exponential model set करना, k solve करना, फिर वापस substitute करना। Correct है लेकिन slow, और हर step पर sign slip घात लगाए बैठी है। Speed rule: elapsed time half lives की whole number हो, तो बस halvings गिनिए। Awkward, non integer multiples के लिए fraction formula पर लौटिए, one half to the power t over half life."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Applications of Differential Equations",
+      "title": "Newton's cooling without ever solving for k",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 3 — JEE Main: the squared-ratio trick"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "type": "text",
+          "text": "A body at $100°$C is placed in a room at $25°$C. It cools to $70°$C in 10 minutes. Temperature after a FURTHER 10 minutes?"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "type": "formula",
+          "latex": "\\theta = 25 + 75\\,e^{-kt}"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "type": "diagram",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"210\" x2=\"400\" y2=\"210\" stroke=\"#555\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"210\" x2=\"40\" y2=\"20\" stroke=\"#555\" stroke-width=\"1.5\"/><path d=\"M40,40 C110,120 180,160 260,178 C320,188 370,192 398,193\" fill=\"none\" stroke=\"#d62728\" stroke-width=\"2.5\"/><line x1=\"40\" y1=\"196\" x2=\"400\" y2=\"196\" stroke=\"#1f77b4\" stroke-width=\"1.5\" stroke-dasharray=\"6,5\"/><circle cx=\"40\" cy=\"40\" r=\"4\" fill=\"#d62728\"/><text x=\"50\" y=\"38\" font-size=\"13\" fill=\"#d62728\">start: theta 0 (steep drop, big gap)</text><text x=\"250\" y=\"168\" font-size=\"13\" fill=\"#d62728\">flattens as gap shrinks</text><text x=\"300\" y=\"230\" font-size=\"13\" fill=\"#1f77b4\">room temp: theta s</text><text x=\"18\" y=\"30\" font-size=\"13\" fill=\"#555\">temp</text><text x=\"385\" y=\"228\" font-size=\"13\" fill=\"#555\">time</text></svg>",
+          "caption": "Cooling tracks the gap: steep at first, flattening toward the room-temperature floor"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "type": "formula",
+          "latex": "t = 10:\\;\\; 70 = 25 + 75e^{-10k} \\;\\Rightarrow\\; e^{-10k} = \\frac{45}{75} = \\frac{3}{5}"
+        },
+        {
+          "seq": 6,
+          "emphasis": "high",
+          "reveal_at": 71,
+          "type": "formula",
+          "latex": "t = 20:\\;\\; \\theta = 25 + 75\\,(e^{-10k})^2 = 25 + 75 \\cdot \\frac{9}{25} = 25 + 27 = 52°\\text{C}"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 87,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Writing $e^{-20k} = (e^{-10k})^2$ avoids ever solving for $k$ — a clean shortcut whenever the second time is a multiple of the first."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 107,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Sanity: 52 is between 70 and 25, and the second drop (18°) is smaller than the first (30°) — the gap is shrinking, exactly as the curve shows."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three is the J E E Main cooling classic, and it carries a shortcut that skips the ugliest part of the algebra entirely."
+            },
+            {
+              "seq": 2,
+              "text": "A body at one hundred degrees Celsius is placed in a room at twenty five degrees. It cools to seventy degrees in ten minutes. Find its temperature after a further ten minutes, that is, at the twenty minute mark."
+            },
+            {
+              "seq": 3,
+              "text": "Write the model from the template: theta equals twenty five, plus the initial gap of seventy five, times e to the minus k t. Room plus gap times decay, exactly the memorised structure."
+            },
+            {
+              "seq": 4,
+              "text": "Here is the shape of what is happening: a steep drop at first, when the gap is huge, flattening as the gap shrinks, sliding toward the room temperature floor and never crossing it."
+            },
+            {
+              "seq": 5,
+              "text": "Feed in the first data point, t equals ten, theta equals seventy: seventy five e to the minus ten k equals forty five, so e to the minus ten k equals three fifths. Stop there. Do not solve for k."
+            },
+            {
+              "seq": 6,
+              "text": "At t equals twenty the model needs e to the minus twenty k, which is just e to the minus ten k, squared: nine twenty fifths. So theta equals twenty five plus twenty seven: fifty two degrees Celsius."
+            },
+            {
+              "seq": 7,
+              "text": "The trick in one sentence: writing e to the minus twenty k as the square of the known e to the minus ten k avoids ever touching k. Use it whenever the second time is a multiple of the first, it is faster and it dodges every logarithm."
+            },
+            {
+              "seq": 8,
+              "text": "Sanity check to finish: fifty two sits between seventy and twenty five, and the second drop, eighteen degrees, is smaller than the first, thirty degrees. The gap is shrinking, exactly as the curve on the board shows. Physics and algebra shake hands."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three J E E Main का cooling classic है, और इसमें ऐसा shortcut है जो algebra का सबसे बदसूरत हिस्सा पूरी तरह skip कर देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "One hundred degrees Celsius की एक body twenty five degrees वाले room में रखी जाती है। Ten minutes में वह seventy degrees तक ठंडी होती है। Further ten minutes के बाद, यानी twenty minute mark पर, उसका temperature निकालिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Template से model लिखिए: theta equals twenty five, plus seventy five का initial gap, times e to the minus k t. Room plus gap times decay, बिलकुल याद की हुई structure."
+            },
+            {
+              "seq": 4,
+              "text": "जो हो रहा है उसकी shape यह है: शुरुआत में steep गिरावट, जब gap बहुत बड़ा है, फिर gap सिकुड़ते हुए flatten होती हुई, room temperature की floor की तरफ़ फिसलती हुई, उसे कभी पार न करती हुई।"
+            },
+            {
+              "seq": 5,
+              "text": "पहला data point डालिए, t equals ten, theta equals seventy: seventy five e to the minus ten k equals forty five, तो e to the minus ten k equals three fifths. वहीं रुकिए। k solve मत कीजिए।"
+            },
+            {
+              "seq": 6,
+              "text": "t equals twenty पर model को चाहिए e to the minus twenty k, यानी बस e to the minus ten k का square: nine twenty fifths. तो theta equals twenty five plus twenty seven: fifty two degrees Celsius."
+            },
+            {
+              "seq": 7,
+              "text": "Trick एक sentence में: e to the minus twenty k को known e to the minus ten k के square की तरह लिखने से k को छूना ही नहीं पड़ता। जब भी दूसरा time पहले का multiple हो, इसे इस्तेमाल कीजिए, यह तेज़ है और हर logarithm से बचा लेता है।"
+            },
+            {
+              "seq": 8,
+              "text": "ख़त्म करने के लिए sanity check: fifty two, seventy और twenty five के बीच बैठता है, और दूसरी गिरावट, eighteen degrees, पहली, thirty degrees, से छोटी है। Gap सिकुड़ रहा है, बिलकुल वैसे जैसे board का curve दिखाता है। Physics और algebra हाथ मिलाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Applications of Differential Equations",
+      "title": "Orthogonal trajectories: the chapter in one problem",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 4 — JEE Advanced: parabolas ⊥ ?"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "type": "text",
+          "text": "Find the orthogonal trajectories of the family of parabolas $y = Cx^2$."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "type": "formula",
+          "latex": "\\text{Form the family's DE:}\\;\\; \\frac{dy}{dx} = 2Cx,\\;\\; C = \\frac{y}{x^2} \\;\\Rightarrow\\; \\frac{dy}{dx} = \\frac{2y}{x}"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "type": "formula",
+          "latex": "\\text{Orthogonality swap:}\\;\\; \\frac{dy}{dx} = -\\frac{x}{2y} \\;\\Rightarrow\\; 2y\\,dy = -x\\,dx"
+        },
+        {
+          "seq": 5,
+          "emphasis": "high",
+          "reveal_at": 60,
+          "type": "formula",
+          "latex": "y^2 = -\\frac{x^2}{2} + C_1 \\;\\;\\Rightarrow\\;\\; \\frac{x^2}{2} + y^2 = C_1 \\quad \\text{(a family of ellipses)}"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 77,
+          "type": "diagram",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"120\" x2=\"400\" y2=\"120\" stroke=\"#888\" stroke-width=\"1\"/><line x1=\"210\" y1=\"12\" x2=\"210\" y2=\"228\" stroke=\"#888\" stroke-width=\"1\"/><path d=\"M130,20 Q210,300 290,20\" fill=\"none\" stroke=\"#d62728\" stroke-width=\"2\"/><path d=\"M160,20 Q210,215 260,20\" fill=\"none\" stroke=\"#d62728\" stroke-width=\"2\"/><ellipse cx=\"210\" cy=\"120\" rx=\"130\" ry=\"92\" fill=\"none\" stroke=\"#1f77b4\" stroke-width=\"2\"/><ellipse cx=\"210\" cy=\"120\" rx=\"78\" ry=\"55\" fill=\"none\" stroke=\"#1f77b4\" stroke-width=\"2\"/><text x=\"30\" y=\"34\" font-size=\"13\" fill=\"#d62728\">parabolas y = C x squared</text><text x=\"252\" y=\"222\" font-size=\"13\" fill=\"#1f77b4\">ellipses x sq / 2 + y sq = C1</text><text x=\"60\" y=\"140\" font-size=\"13\" fill=\"#333\">every crossing at 90 degrees</text></svg>",
+          "caption": "Every parabola meets every ellipse at ninety degrees"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 89,
+          "type": "note",
+          "style": "red-margin",
+          "text": "One problem, three subtopics chained: FORMATION (eliminate $C$) → the orthogonality SWAP (negative reciprocal) → SEPARABLE solving. Exactly the synthesis JEE Advanced rewards."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 105,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Never swap slopes while $C$ is still in the equation — eliminate the constant FIRST, then replace $\\frac{dy}{dx}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The final worked example of the chapter is chosen deliberately: it chains three subtopics into one question, exactly the synthesis J E E Advanced rewards."
+            },
+            {
+              "seq": 2,
+              "text": "Find the orthogonal trajectories of the family of parabolas y equals C x squared, the family of curves that cuts every one of these parabolas at right angles."
+            },
+            {
+              "seq": 3,
+              "text": "Stage one is formation, from earlier in the chapter. Differentiate: d y by d x equals two C x. Eliminate the constant using C equals y over x squared, and the family's own differential equation emerges: d y by d x equals two y over x."
+            },
+            {
+              "seq": 4,
+              "text": "Stage two is the orthogonality swap. Curves crossing at right angles have negative reciprocal slopes, so replace d y by d x with minus x over two y. Cross multiply, and the new equation separates instantly: two y d y equals minus x d x."
+            },
+            {
+              "seq": 5,
+              "text": "Stage three is separable solving, our very first tool. Integrate both sides: y squared equals minus x squared over two, plus C one. Rearranged: x squared over two, plus y squared, equals C one. That is a family of ellipses."
+            },
+            {
+              "seq": 6,
+              "text": "Here is the picture: the red parabolas rising through the plane, the blue ellipses wrapped around the origin, and every crossing between the two families at exactly ninety degrees."
+            },
+            {
+              "seq": 7,
+              "text": "Step back and admire the structure: formation eliminated the constant, the swap encoded the geometry, and separation finished the calculus. Three subtopics, one seamless chain. This is what a full syllabus question looks like when you own every link."
+            },
+            {
+              "seq": 8,
+              "text": "One warning to carry away: never perform the slope swap while the arbitrary constant is still in the equation. Eliminate C first, then replace the derivative. Swapping too early entangles the constant with the geometry and wrecks the answer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chapter का आख़िरी worked example जानबूझकर चुना गया है: यह तीन subtopics को एक question में chain करता है, बिलकुल वही synthesis जिसे J E E Advanced reward करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Parabolas की family y equals C x squared की orthogonal trajectories निकालिए, यानी curves की वह family जो इन parabolas में से हर एक को right angles पर काटे।"
+            },
+            {
+              "seq": 3,
+              "text": "Stage one है formation, chapter के शुरुआती हिस्से से। Differentiate कीजिए: d y by d x equals two C x. C equals y over x squared से constant eliminate कीजिए, और family की अपनी differential equation निकल आती है: d y by d x equals two y over x."
+            },
+            {
+              "seq": 4,
+              "text": "Stage two है orthogonality swap. Right angles पर cross करने वाले curves के slopes negative reciprocal होते हैं, तो d y by d x की जगह रखिए minus x over two y. Cross multiply कीजिए, और नई equation तुरंत separate हो जाती है: two y d y equals minus x d x."
+            },
+            {
+              "seq": 5,
+              "text": "Stage three है separable solving, हमारा सबसे पहला tool. दोनों sides integrate कीजिए: y squared equals minus x squared over two, plus C one. Rearrange करने पर: x squared over two, plus y squared, equals C one. यह ellipses की family है।"
+            },
+            {
+              "seq": 6,
+              "text": "यह रही picture: plane में उठते लाल parabolas, origin के गिर्द लिपटे नीले ellipses, और दोनों families की हर crossing exactly ninety degrees पर।"
+            },
+            {
+              "seq": 7,
+              "text": "पीछे हटकर structure की तारीफ़ कीजिए: formation ने constant eliminate किया, swap ने geometry encode की, और separation ने calculus पूरी की। तीन subtopics, एक seamless chain. जब हर कड़ी आपकी हो, तो full syllabus question ऐसा दिखता है।"
+            },
+            {
+              "seq": 8,
+              "text": "साथ ले जाने के लिए एक warning: slope swap कभी तब मत कीजिए जब arbitrary constant अभी equation में हो। पहले C eliminate कीजिए, फिर derivative replace कीजिए। जल्दी swap करने से constant geometry में उलझ जाता है और answer बर्बाद।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "tips",
+      "subtopic": "Applications of Differential Equations",
+      "title": "Pitfalls: signs, gaps, and needless algebra",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Four leaks in applications"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 9,
+          "type": "text",
+          "text": "Wrong sign of $k$: decay and cooling LOSE quantity — use $\\frac{dN}{dt} = -kN$ and $\\frac{d\\theta}{dt} = -k(\\theta - \\theta_s)$ with $k > 0$. A sign slip makes things grow or heat without bound."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 29,
+          "type": "text",
+          "text": "Cooling modelled on temperature, not the gap: it is ∝ $(\\theta - \\theta_s)$, NEVER ∝ $\\theta$. This is the classic setup error."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "type": "text",
+          "text": "Solving for $k$ when you don't need to: second time a multiple of the first ⇒ write $e^{-20k} = (e^{-10k})^2$ and substitute the known ratio. Skip $k$ entirely."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 65,
+          "type": "text",
+          "text": "Mis-translating the English: underline the rate word and WHAT it is proportional to before writing symbols. 'Slope', 'subnormal', 'cuts at right angles' each map to a specific derivative condition."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 80,
+          "type": "heading",
+          "text": "The counting reflex"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 85,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Count, don't compute: whole number of doubling-times or half-lives ⇒ $2^n$ or $(1/2)^n$ directly — seconds instead of minutes. Reserve the full $e^{kt}$ machinery for awkward ratios."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 104,
+          "type": "text",
+          "text": "Memory hooks: proportional to itself ⇒ exponential; cooling tracks the gap, not the heat; lose ⇒ minus $k$; right angles ⇒ negative reciprocal slope."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The last error list of the chapter, four leaks specific to word problems, and the reflex that converts minutes into seconds."
+            },
+            {
+              "seq": 2,
+              "text": "Leak one: the sign of k. Decay and cooling lose quantity, so their models carry minus k, with k itself positive. Slip the sign and your substance grows without bound or your tea heats itself forever, absurdities that should jump off the page during the sanity check."
+            },
+            {
+              "seq": 3,
+              "text": "Leak two, the classic setup error: modelling cooling on the temperature instead of the gap. Newton's law is proportional to theta minus theta s, never to theta alone. The rate tracks the gap. Write the difference before anything else."
+            },
+            {
+              "seq": 4,
+              "text": "Leak three: solving for k when the question never needed it. Whenever the second time is a multiple of the first, write the later exponential as a power of the known one and substitute the ratio directly. Every logarithm you skip is a sign error that cannot happen."
+            },
+            {
+              "seq": 5,
+              "text": "Leak four: mistranslation. Before any symbols, underline the rate word and what it is proportional to. Slope, subnormal, cuts at right angles, each maps to one specific derivative condition, and the mapping is where the marks live."
+            },
+            {
+              "seq": 6,
+              "text": "Now the reflex worth stealing for every growth and decay question."
+            },
+            {
+              "seq": 7,
+              "text": "Count, do not compute. A whole number of doubling times or half lives means two to the n, or one half to the n, directly. Seconds instead of minutes. Reserve the full exponential machinery for awkward, non integer ratios, where it genuinely earns its keep."
+            },
+            {
+              "seq": 8,
+              "text": "And the four memory hooks that summarise the subtopic: proportional to itself means exponential. Cooling tracks the gap, not the heat. Lose means minus k. Right angles means negative reciprocal slope. Carry these four lines into the exam hall and the applications section is yours."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chapter की आख़िरी error list, word problems के चार ख़ास leaks, और वह reflex जो minutes को seconds में बदल देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Leak one: k का sign. Decay और cooling quantity खोते हैं, इसलिए उनके models में minus k आता है, k ख़ुद positive. Sign फिसला तो आपका substance बेहिसाब बढ़ेगा या आपकी chai ख़ुद को हमेशा गरम करती रहेगी, ऐसी absurdities जो sanity check में page से उछलकर दिखनी चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Leak two, classic setup error: cooling को gap की जगह temperature पर model करना। Newton's law proportional है theta minus theta s के, कभी अकेले theta के नहीं। Rate gap को track करती है। सबसे पहले difference लिखिए।"
+            },
+            {
+              "seq": 4,
+              "text": "Leak three: k solve करना जब question ने माँगा ही नहीं। जब भी दूसरा time पहले का multiple हो, बाद वाले exponential को known वाले की power लिखिए और ratio सीधे substitute कीजिए। हर skip किया हुआ logarithm एक sign error है जो हो ही नहीं सकती।"
+            },
+            {
+              "seq": 5,
+              "text": "Leak four: mistranslation. किसी भी symbol से पहले rate word underline कीजिए और यह भी कि वह किसके proportional है। Slope, subnormal, cuts at right angles, हर एक किसी specific derivative condition पर map होता है, और marks उसी mapping में रहते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वह reflex जो हर growth and decay question के लिए चुरा लेने लायक़ है।"
+            },
+            {
+              "seq": 7,
+              "text": "Count, do not compute. Doubling times या half lives की whole number का मतलब सीधे two to the n, या one half to the n. Minutes की जगह seconds. पूरी exponential machinery awkward, non integer ratios के लिए बचाकर रखिए, जहाँ वह सचमुच काम की है।"
+            },
+            {
+              "seq": 8,
+              "text": "और subtopic को summarise करते चार memory hooks: proportional to itself matlab exponential. Cooling gap को track करती है, heat को नहीं। Lose matlab minus k. Right angles matlab negative reciprocal slope. ये चार lines exam hall ले जाइए, applications का section आपका है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Recap",
+      "title": "Your complete toolkit: every formula of Chapter 9",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Differential Equations — the complete toolkit"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "type": "formula",
+          "latex": "\\text{Order = highest derivative present.}\\quad \\text{Degree = its power, in polynomial form — else NOT DEFINED.}\\quad \\text{Order = independent constants.}"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "type": "formula",
+          "latex": "\\text{Formation: } n \\text{ constants} \\;\\Rightarrow\\; \\text{differentiate } n \\text{ times} \\;\\Rightarrow\\; \\text{order-}n \\text{ DE, constant-free}"
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 37,
+          "type": "formula",
+          "latex": "\\text{Separable:}\\;\\; \\frac{dy}{dx} = g(x)h(y) \\;\\Rightarrow\\; \\int\\frac{dy}{h(y)} = \\int g(x)\\,dx + C"
+        },
+        {
+          "seq": 5,
+          "emphasis": "high",
+          "reveal_at": 52,
+          "type": "formula",
+          "latex": "\\text{Homogeneous:}\\;\\; \\frac{dy}{dx} = \\phi\\!\\left(\\frac{y}{x}\\right),\\;\\; y = vx \\;\\Rightarrow\\; \\frac{dv}{\\phi(v) - v} = \\frac{dx}{x}"
+        },
+        {
+          "seq": 6,
+          "emphasis": "high",
+          "reveal_at": 70,
+          "type": "formula",
+          "latex": "\\text{Linear:}\\;\\; \\frac{dy}{dx} + Py = Q,\\;\\; \\text{IF} = e^{\\int P\\,dx},\\;\\; y\\cdot\\text{IF} = \\int Q\\cdot\\text{IF}\\,dx + C"
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 90,
+          "type": "formula",
+          "latex": "\\frac{dN}{dt} = kN \\Rightarrow N = N_0 e^{kt}; \\qquad \\frac{d\\theta}{dt} = -k(\\theta - \\theta_s) \\Rightarrow \\theta = \\theta_s + (\\theta_0 - \\theta_s)e^{-kt}"
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 105,
+          "type": "formula",
+          "latex": "\\text{Subnormal} = y\\frac{dy}{dx};\\quad \\text{Subtangent} = \\frac{y}{dy/dx};\\quad \\text{Orthogonal: } \\frac{dy}{dx} \\to -\\frac{1}{dy/dx}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is your complete toolkit for Chapter nine, every formula in one place. This is a restatement for revision, not a re-teaching, so let each line click as it passes."
+            },
+            {
+              "seq": 2,
+              "text": "The vocabulary line. Order is the highest derivative present. Degree is that derivative's power, read only in polynomial form, otherwise not defined. And order equals the number of independent arbitrary constants in the general solution."
+            },
+            {
+              "seq": 3,
+              "text": "The formation line. n independent constants means differentiate n times, and the result is an order n differential equation, free of every constant."
+            },
+            {
+              "seq": 4,
+              "text": "Tool one, separable. When the rate splits as g of x times h of y, sort the variables and integrate each side, with one constant C. Remember the lost solution check where h of y is zero."
+            },
+            {
+              "seq": 5,
+              "text": "Tool two, homogeneous. When the right side is a function of y over x alone, substitute y equals v x, and the equation collapses to d v over phi of v minus v, equals d x over x. Separable again, then back substitute."
+            },
+            {
+              "seq": 6,
+              "text": "Tool three, linear, the most examined. Standard form d y by d x plus P y equals Q, integrating factor e to the integral of P d x, and the solution y times I F equals the integral of Q times I F d x, plus C."
+            },
+            {
+              "seq": 7,
+              "text": "The applications line. Growth and decay: N equals N zero e to the k t. Newton's cooling: theta equals theta s, plus the initial gap times e to the minus k t, settling at the room."
+            },
+            {
+              "seq": 8,
+              "text": "And the geometric line. Subnormal is y times d y by d x, subtangent is y over d y by d x, and orthogonal trajectories come from swapping the slope for its negative reciprocal. Toolkit complete. Every question in this chapter is one of these lines, recognised and executed."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रही Chapter nine की आपकी complete toolkit, हर formula एक जगह। यह revision के लिए restatement है, दोबारा पढ़ाना नहीं, तो हर line गुज़रते हुए click होती जाए।"
+            },
+            {
+              "seq": 2,
+              "text": "Vocabulary line. Order है highest derivative present. Degree है उसी derivative की power, सिर्फ polynomial form में पढ़ी हुई, वरना not defined. और order equals general solution के independent arbitrary constants की संख्या।"
+            },
+            {
+              "seq": 3,
+              "text": "Formation line. n independent constants का मतलब n बार differentiate, और result है order n की differential equation, हर constant से free."
+            },
+            {
+              "seq": 4,
+              "text": "Tool one, separable. जब rate, g of x times h of y की तरह split हो, variables को sort करके हर side integrate कीजिए, एक constant C के साथ। h of y equals zero वाला lost solution check याद रखिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Tool two, homogeneous. जब right side सिर्फ y over x का function हो, y equals v x substitute कीजिए, और equation सिमट जाती है: d v over phi of v minus v, equals d x over x. फिर से separable, फिर back substitute."
+            },
+            {
+              "seq": 6,
+              "text": "Tool three, linear, सबसे ज़्यादा examined. Standard form d y by d x plus P y equals Q, integrating factor e to the integral of P d x, और solution y times I F equals integral of Q times I F d x, plus C."
+            },
+            {
+              "seq": 7,
+              "text": "Applications line. Growth and decay: N equals N zero e to the k t. Newton's cooling: theta equals theta s, plus initial gap times e to the minus k t, room पर settle होती हुई।"
+            },
+            {
+              "seq": 8,
+              "text": "और geometric line. Subnormal है y times d y by d x, subtangent है y over d y by d x, और orthogonal trajectories मिलती हैं slope को उसके negative reciprocal से बदलकर। Toolkit complete. इस chapter का हर question इन्हीं lines में से एक है, पहचाना हुआ और execute किया हुआ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Recap",
+      "title": "Quick recall: Differential Equations in ninety seconds",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Cheat sheet — Differential Equations"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 7,
+          "type": "text",
+          "text": "Order: highest derivative. Degree: its power, polynomial form only — transcendental wrapper ⇒ NOT DEFINED. Clear roots first: order stays, degree changes. Constants = order (independent only — collapse $c_1 + c_2$ and exponent constants first)."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "type": "text",
+          "text": "Formation: differentiate once per constant, eliminate all, no constant survives. Geometry → parameters: circles on the $x$-axis through origin ⇒ 1; ALL circles ⇒ 3."
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 34,
+          "type": "text",
+          "text": "Separable: sort into $\\frac{dy}{h(y)} = g(x)dx$, integrate, ONE constant. Watch lost solutions $h(y) = 0$. Homogeneous: RHS sees only $y/x$ ⇒ $y = vx$ ⇒ separable ⇒ back-substitute. Stray constant ⇒ shift origin."
+        },
+        {
+          "seq": 5,
+          "emphasis": "high",
+          "reveal_at": 55,
+          "type": "text",
+          "text": "Linear: standard form FIRST (coefficient of $y'$ = 1), IF $= e^{\\int P dx}$, $y \\cdot$ IF $= \\int Q \\cdot$ IF $dx + C$. Messy in $y$? Flip to $\\frac{dx}{dy}$. Never expand the LHS; the IF rides into the integral."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 74,
+          "type": "text",
+          "text": "Applications: rate ∝ itself ⇒ $N_0 e^{kt}$; cooling tracks the GAP ⇒ $\\theta_s + (\\theta_0 - \\theta_s)e^{-kt}$; whole half-lives ⇒ COUNT $(1/2)^n$; right angles ⇒ swap slope for negative reciprocal."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 92,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Memory aids: no polynomial, no degree · clean before you count · count the dials = count the order · came in as $y$, must leave as $y$ · IF rides into the integral · cooling tracks the gap, not the heat."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 109,
+          "type": "text",
+          "text": "Speed reflexes: root over derivative → square; transcendental → undefined; numerator ∝ derivative of denominator → single log; second time a multiple of the first → square the known ratio."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ninety seconds of pure recall. Say each line with me, and star anything not yet automatic."
+            },
+            {
+              "seq": 2,
+              "text": "Vocabulary block. Order: highest derivative. Degree: its power, polynomial form only; transcendental wrapper means not defined. Clear roots first: order stays, degree changes. Constants equal order, independent only, collapse before counting."
+            },
+            {
+              "seq": 3,
+              "text": "Formation block. Differentiate once per constant, eliminate all, no constant survives the answer. Geometric families: translate to parameters first, circles on the x axis through the origin carry one; all circles carry three."
+            },
+            {
+              "seq": 4,
+              "text": "Solving, part one. Separable: sort into d y over h of y equals g of x d x, integrate, one constant, watch lost solutions at h of y zero. Homogeneous: right side sees only y over x, put y equals v x, separate, back substitute. Stray constant, shift the origin."
+            },
+            {
+              "seq": 5,
+              "text": "Linear machine: standard form first, coefficient of y prime one. I F equals e to the integral of P d x; y times I F equals the integral of Q times I F d x, plus C. Messy in y, flip. Never expand the left side."
+            },
+            {
+              "seq": 6,
+              "text": "Applications: rate proportional to itself gives N zero e to the k t; cooling tracks the gap, theta s plus initial gap times e to the minus k t. Whole half lives, count one half to the n. Right angles, negative reciprocal."
+            },
+            {
+              "seq": 7,
+              "text": "Six memory aids, one breath each: no polynomial, no degree. Clean before you count. Count the dials, count the order. Came in as y, leave as y. The I F rides into the integral. Cooling tracks the gap, not the heat."
+            },
+            {
+              "seq": 8,
+              "text": "Four speed reflexes that win minutes: root over a derivative, square it. Transcendental wrapper, undefined. Numerator proportional to derivative of denominator, single log. Second time a multiple of the first, square the known ratio. Chapter nine, closed."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ninety seconds की pure recall. हर line मेरे साथ बोलिए, और जो automatic न लगे उस पर star लगाइए।"
+            },
+            {
+              "seq": 2,
+              "text": "Vocabulary block. Order: highest derivative. Degree: उसकी power, सिर्फ polynomial form में; transcendental wrapper matlab not defined. पहले roots clear: order रहती है, degree बदलती है। Constants equal order, सिर्फ independent, गिनने से पहले collapse."
+            },
+            {
+              "seq": 3,
+              "text": "Formation block. हर constant पर एक differentiation, सब eliminate, answer में कोई constant ज़िंदा नहीं। Geometric families: पहले parameters में translate कीजिए, x axis पर centre वाले, origin से गुज़रते circles में एक; सारे circles में तीन।"
+            },
+            {
+              "seq": 4,
+              "text": "Solving, part one. Separable: d y over h of y equals g of x d x में sort, integrate, एक constant, h of y zero वाले lost solutions पर नज़र। Homogeneous: right side सिर्फ y over x देखती है, y equals v x रखिए, separate, back substitute. Stray constant, origin shift."
+            },
+            {
+              "seq": 5,
+              "text": "Linear machine: पहले standard form, y prime का coefficient one. I F equals e to the integral of P d x; y times I F equals integral of Q times I F d x, plus C. y में messy, flip. Left side कभी expand नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "Applications: rate proportional to itself देता है N zero e to the k t; cooling gap को track करती है, theta s plus initial gap times e to the minus k t. Whole half lives, one half to the n गिनिए। Right angles, negative reciprocal."
+            },
+            {
+              "seq": 7,
+              "text": "छह memory aids, एक साँस में: no polynomial, no degree. Clean before you count. Count the dials, count the order. y बनकर आए, y बनकर जाओ। I F integral में साथ चलता है। Cooling gap को track करती है, heat को नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "चार speed reflexes जो minutes जिताते हैं: derivative पर root, square कीजिए। Transcendental wrapper, undefined. Numerator proportional to derivative of denominator, single log. दूसरा time पहले का multiple, known ratio का square. Chapter nine, बंद।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

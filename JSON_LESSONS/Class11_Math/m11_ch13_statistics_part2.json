@@ -1,0 +1,1809 @@
+{
+  "chapter": "Statistics",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 13,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Why we square the deviations",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "From absolute values to squares",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "The modulus |x| has a sharp corner at 0 — mathematically grumpy, no clean calculus.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Statisticians wanted smooth. Their trick: instead of |deviation|, SQUARE each deviation.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Squaring does 3 jobs: kills the sign, stays perfectly smooth, and punishes large deviations hard.",
+          "seq": 4,
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2 = \\frac{1}{n}\\sum_{i=1}^{n}(x_i-\\bar{x})^2",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "diagram",
+          "caption": "Each deviation drawn as the side of a square",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 220\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"210\" y=\"16\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\">Variance = average AREA of these squares</text><line x1=\"30\" y1=\"185\" x2=\"400\" y2=\"185\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"150\" y1=\"95\" x2=\"150\" y2=\"200\" stroke=\"#c0392b\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"138\" y=\"212\" font-size=\"10\" fill=\"#c0392b\">mean</text><rect x=\"123\" y=\"171\" width=\"14\" height=\"14\" fill=\"#2980b9\" opacity=\"0.35\" stroke=\"#2980b9\"/><rect x=\"157\" y=\"169\" width=\"16\" height=\"16\" fill=\"#2980b9\" opacity=\"0.35\" stroke=\"#2980b9\"/><rect x=\"185\" y=\"155\" width=\"30\" height=\"30\" fill=\"#8e44ad\" opacity=\"0.30\" stroke=\"#8e44ad\"/><rect x=\"301\" y=\"107\" width=\"78\" height=\"78\" fill=\"#c0392b\" opacity=\"0.25\" stroke=\"#c0392b\"/><circle cx=\"130\" cy=\"185\" r=\"3\" fill=\"#2c3e50\"/><circle cx=\"165\" cy=\"185\" r=\"3\" fill=\"#2c3e50\"/><circle cx=\"200\" cy=\"185\" r=\"3\" fill=\"#2c3e50\"/><circle cx=\"340\" cy=\"185\" r=\"3\" fill=\"#2c3e50\"/><text x=\"330\" y=\"103\" font-size=\"10\" fill=\"#c0392b\">distant outlier dominates</text></svg>",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "2 units away contributes 4; 10 units away contributes 100. One outlier blows up the average area.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "In the last subtopic we measured spread by averaging absolute deviations. It worked, but the modulus sign is mathematically grumpy, so let's see what statisticians did instead."
+            },
+            {
+              "seq": 2,
+              "text": "The problem is precise: mod x has a sharp corner at zero. You cannot differentiate it cleanly there, so it refuses to cooperate with the calculus and algebra that later chapters need."
+            },
+            {
+              "seq": 3,
+              "text": "Statisticians wanted a spread measure that kills the sign but stays smooth. Their trick is beautifully simple: instead of taking the absolute value of each deviation, they square it."
+            },
+            {
+              "seq": 4,
+              "text": "Squaring does three jobs at once. It throws away the sign, because a square is never negative. It is perfectly smooth, no corners. And crucially, it punishes large deviations far more than small ones."
+            },
+            {
+              "seq": 5,
+              "text": "The average of these squared deviations is the variance, written sigma squared: one over n, times the sum of x i minus x bar, all squared."
+            },
+            {
+              "seq": 6,
+              "text": "Picture each deviation as the side of a little square drawn on the number line. A point near the mean draws a tiny square; a far outlier draws an enormous one. Variance is the average area of all these squares."
+            },
+            {
+              "seq": 7,
+              "text": "See the arithmetic of that punishment: an observation two units from the mean contributes four, but one ten units away contributes one hundred, not ten. A single distant outlier can blow up the average area dramatically."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Pichhle subtopic mein humne spread ko absolute deviations ka average le ke measure kiya. Kaam ho gaya, lekin modulus sign mathematically grumpy hai, toh dekhte hain statisticians ne iske bajaye kya kiya."
+            },
+            {
+              "seq": 2,
+              "text": "Problem precise hai: mod x ka zero pe ek sharp corner hai. Aap use wahaan cleanly differentiate nahi kar sakte, toh wo aage ke chapters ki calculus aur algebra ke saath cooperate nahi karta."
+            },
+            {
+              "seq": 3,
+              "text": "Statisticians ko ek aisa spread measure chahiye tha jo sign kill kare par smooth rahe. Unka trick khoobsurati se simple hai: har deviation ki absolute value lene ke bajaye, use square kar do."
+            },
+            {
+              "seq": 4,
+              "text": "Squaring teen kaam ek saath karti hai. Ye sign phenk deti hai, kyunki square kabhi negative nahi hota. Ye perfectly smooth hai, koi corners nahi. Aur sabse important, ye badi deviations ko chhoti se kahin zyada punish karti hai."
+            },
+            {
+              "seq": 5,
+              "text": "In squared deviations ka average variance hai, likha jaata hai sigma squared: one over n, times sum of x i minus x bar, poora squared."
+            },
+            {
+              "seq": 6,
+              "text": "Har deviation ko number line pe bane ek chhote square ki side ki tarah socho. Mean ke paas ka point ek tiny square banata hai; ek door outlier ek enormous square. Variance in saare squares ka average area hai."
+            },
+            {
+              "seq": 7,
+              "text": "Us punishment ka arithmetic dekho: mean se do units door ek observation four contribute karti hai, par das units door wali one hundred, ten nahi. Ek akela door outlier average area ko dramatically blow up kar sakta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Standard deviation: back to real units",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "The units problem — and its cure",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "If the data is in marks, variance comes out in marks² — an awkward unit nobody can read.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Cure: take the POSITIVE square root of the variance to return to the original units.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma = +\\sqrt{\\sigma^2}",
+          "seq": 4,
+          "reveal_at": 24
+        },
+        {
+          "type": "text",
+          "text": "Batsman P: 44, 46, 45, 43, 47.  Batsman Q: 5, 90, 12, 88, 30.  Both average 45.",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "For a must-win final you pick P — and σ is exactly the number that says P is the safer bet.",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Indian SIP investors use the same idea: equal average returns, lower σ = the calmer ride.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Variance has one real inconvenience, and standard deviation exists purely to fix it."
+            },
+            {
+              "seq": 2,
+              "text": "If your data is in marks, then the squared deviations are in marks squared, and so is the variance. Marks squared is an awkward unit nobody can actually interpret or picture."
+            },
+            {
+              "seq": 3,
+              "text": "The cure could not be simpler: take the positive square root of the variance. That drags the measure right back into the original units of the data."
+            },
+            {
+              "seq": 4,
+              "text": "That square root is the standard deviation, sigma, always the positive root. It is the single most-used measure of spread in all of statistics."
+            },
+            {
+              "seq": 5,
+              "text": "Here's why it matters. Two batsmen both average forty five runs. Batsman P scores forty four, forty six, forty five, forty three, forty seven, tight and dependable. Batsman Q scores five, ninety, twelve, eighty eight, thirty, wild swings around the same average."
+            },
+            {
+              "seq": 6,
+              "text": "For a must-win final you pick P, and the standard deviation is precisely the number that tells you P is the safer bet. Q's large sigma exposes the wild inconsistency the average alone hid."
+            },
+            {
+              "seq": 7,
+              "text": "Indian SIP investors run the very same logic. Two mutual funds may report identical average returns, but the one with the lower standard deviation is the calmer, steadier ride."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Variance mein ek real inconvenience hai, aur standard deviation sirf use theek karne ke liye exist karta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Agar aapka data marks mein hai, toh squared deviations marks squared mein hain, aur variance bhi. Marks squared ek awkward unit hai jise koi actually interpret ya picture nahi kar sakta."
+            },
+            {
+              "seq": 3,
+              "text": "Cure isse simple ho hi nahi sakta: variance ka positive square root le lo. Ye measure ko wapas data ke original units mein le aata hai."
+            },
+            {
+              "seq": 4,
+              "text": "Wo square root standard deviation hai, sigma, hamesha positive root. Ye saari statistics mein spread ka sabse zyada use hone waala measure hai."
+            },
+            {
+              "seq": 5,
+              "text": "Ye kyun matter karta hai, suno. Do batsmen dono forty five runs average karte hain. Batsman P banata hai forty four, forty six, forty five, forty three, forty seven, tight aur dependable. Batsman Q banata hai five, ninety, twelve, eighty eight, thirty, same average ke aas-paas wild swings."
+            },
+            {
+              "seq": 6,
+              "text": "Ek must-win final ke liye aap P chunte ho, aur standard deviation theek wahi number hai jo batata hai ki P safer bet hai. Q ki badi sigma wo wild inconsistency expose karti hai jo akela average chhupa raha tha."
+            },
+            {
+              "seq": 7,
+              "text": "Indian SIP investors bilkul yahi logic chalate hain. Do mutual funds identical average returns report kar sakte hain, par jiski standard deviation kam hai wo calmer, steadier ride hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Coefficient of variation: comparing across scales",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "When two series live on different scales",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "σ carries units, so you can't fairly compare heights (cm) against weights (kg) with σ alone.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Normalise: divide σ by the mean and express it as a percentage.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{C.V.} = \\frac{\\sigma}{\\bar{x}}\\times 100",
+          "seq": 4,
+          "reveal_at": 24
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Lower C.V. = more consistent. Being a pure number, it compares apples to oranges.",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "text",
+          "text": "A ₹10 swing is huge on a ₹50 item but invisible on a ₹50,000 item — C.V. captures that.",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Verdict is always: lower C.V. → more consistent; higher C.V. → more variable.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Standard deviation is great, but it hits a wall the moment you want to compare the consistency of two things measured on different scales."
+            },
+            {
+              "seq": 2,
+              "text": "The trouble is that sigma carries units. A spread of five kilograms and a spread of five centimetres are just not comparable numbers, so sigma alone cannot referee a heights-versus-weights contest."
+            },
+            {
+              "seq": 3,
+              "text": "The fix is to normalise. Divide the standard deviation by the mean, and multiply by one hundred to express it as a percentage. That strips away units and scale."
+            },
+            {
+              "seq": 4,
+              "text": "That gives the coefficient of variation: sigma over x bar, times one hundred. A single clean percentage for each series."
+            },
+            {
+              "seq": 5,
+              "text": "Because it is a pure number, the coefficient of variation compares apples to oranges, rupees against runs, heights against marks. And the rule is friendly: lower coefficient of variation means more consistent."
+            },
+            {
+              "seq": 6,
+              "text": "Think about why relative spread matters. A ten rupee swing is enormous on a fifty rupee item but completely invisible on a fifty thousand rupee item. Measuring spread relative to size captures exactly that difference."
+            },
+            {
+              "seq": 7,
+              "text": "So the verdict is always the same, and it's worth memorising: lower coefficient of variation means more consistent; higher coefficient of variation means more variable."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Standard deviation bढ़िya hai, par ye ek wall se takrata hai jis pal aap alag alag scales pe measure ki gayi do cheezon ki consistency compare karna chaho."
+            },
+            {
+              "seq": 2,
+              "text": "Dikkat ye hai ki sigma units rakhta hai. Paanch kilograms ki spread aur paanch centimetres ki spread comparable numbers hain hi nahi, toh sigma akela heights-versus-weights ka muqabla referee nahi kar sakta."
+            },
+            {
+              "seq": 3,
+              "text": "Fix hai normalise karna. Standard deviation ko mean se divide karo, aur one hundred se multiply karke percentage mein express karo. Ye units aur scale hata deta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Isse milta hai coefficient of variation: sigma over x bar, times one hundred. Har series ke liye ek single clean percentage."
+            },
+            {
+              "seq": 5,
+              "text": "Kyunki ye ek pure number hai, coefficient of variation apples ko oranges se compare karta hai, rupees ko runs se, heights ko marks se. Aur rule friendly hai: kam coefficient of variation matlab zyada consistent."
+            },
+            {
+              "seq": 6,
+              "text": "Socho relative spread kyun matter karti hai. Das rupee ka swing pachaas rupee ke item pe enormous hai par pachaas hazaar rupee ke item pe bilkul invisible. Spread ko size ke relative measure karna theek yahi difference pakadta hai."
+            },
+            {
+              "seq": 7,
+              "text": "Toh verdict hamesha same hai, aur yaad rakhne layak hai: kam coefficient of variation matlab zyada consistent; zyada coefficient of variation matlab zyada variable."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Why variance is always measured about the mean",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "Variance sits on the mean — and only the mean",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Unlike M.D. (which can sit on any centre), variance is always taken about the mean.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Why: just as the median minimises ∑|x_i − a|, the MEAN minimises the mean of squared deviations.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "That's not a convention — it's a minimisation result (we prove it next).",
+          "seq": 4,
+          "reveal_at": 24
+        },
+        {
+          "type": "text",
+          "text": "Because of the squaring, variance is hypersensitive to outliers, so for skewed data it can overstate spread.",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2 = 0 \\iff x_i = \\bar{x}\\ \\ \\text{for every } i",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "The only way to get zero variance is a perfectly flat data set.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "One structural fact separates variance from mean deviation, and it is worth understanding rather than memorising."
+            },
+            {
+              "seq": 2,
+              "text": "Mean deviation could be anchored to any central value, the mean, the median, or the mode. Variance is not so free. It is always measured about the mean, never anything else."
+            },
+            {
+              "seq": 3,
+              "text": "And that is not arbitrary. Recall from Subtopic one that the median minimises the sum of absolute deviations. The exact parallel holds here: the mean minimises the mean of the squared deviations."
+            },
+            {
+              "seq": 4,
+              "text": "So anchoring variance to the mean is not a convention someone chose for convenience. It is a genuine minimisation result, and we will prove it on the very next board."
+            },
+            {
+              "seq": 5,
+              "text": "One caution comes straight from the squaring. Variance is hypersensitive to outliers, because a single distant point contributes its distance squared. For heavily skewed data, variance can overstate the true spread."
+            },
+            {
+              "seq": 6,
+              "text": "And a clean boundary case, on the board: variance equals zero if and only if every single observation equals the mean."
+            },
+            {
+              "seq": 7,
+              "text": "In plain words, the only way to get zero variance is a perfectly flat data set where nothing varies at all. Any wobble at all makes sigma squared strictly positive."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ek structural fact variance ko mean deviation se alag karta hai, aur ise memorise karne ke bajaye samajhna behtar hai."
+            },
+            {
+              "seq": 2,
+              "text": "Mean deviation kisi bhi central value pe anchor ho sakta tha, mean, median, ya mode. Variance itna free nahi hai. Ye hamesha mean ke baare mein measure hota hai, aur kisi cheez ke baare mein nahi."
+            },
+            {
+              "seq": 3,
+              "text": "Aur ye arbitrary nahi hai. Subtopic one se yaad karo ki median absolute deviations ke sum ko minimise karta hai. Exact parallel yahaan hai: mean squared deviations ke mean ko minimise karta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Toh variance ko mean pe anchor karna koi convention nahi jo kisi ne convenience ke liye chuna. Ye ek genuine minimisation result hai, aur hum use theek agle board pe prove karenge."
+            },
+            {
+              "seq": 5,
+              "text": "Ek caution seedha squaring se aata hai. Variance outliers ke liye hypersensitive hai, kyunki ek akela door point apni distance squared contribute karta hai. Bahut skewed data ke liye, variance true spread ko overstate kar sakta hai."
+            },
+            {
+              "seq": 6,
+              "text": "Aur ek clean boundary case, board pe: variance zero hai if and only if har ek observation mean ke barabar ho."
+            },
+            {
+              "seq": 7,
+              "text": "Simple shabdon mein, zero variance paane ka ekmaatra tareeka ek perfectly flat data set hai jahaan kuch bhi vary nahi karta. Zara sa bhi wobble sigma squared ko strictly positive bana deta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Deriving the workhorse shortcut formula",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "From the definition to the fast form",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "latex": "\\sigma^2 = \\frac{1}{n}\\sum(x_i-\\bar{x})^2 = \\frac{1}{n}\\sum\\left(x_i^2 - 2\\bar{x}x_i + \\bar{x}^2\\right)",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Split the sum into three pieces — legal, because summation distributes over addition.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "latex": "\\sigma^2 = \\frac{1}{n}\\sum x_i^2 - \\frac{2\\bar{x}}{n}\\sum x_i + \\frac{1}{n}\\sum \\bar{x}^2",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "text",
+          "text": "Use (1/n)∑x_i = x̄, so the middle term is −2x̄·x̄ = −2x̄²; and ∑x̄² = nx̄².",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2 = \\frac{1}{n}\\sum x_i^2 - \\bar{x}^2",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "The workhorse: it avoids every individual deviation — ideal when x̄ isn't a whole number.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a standard CBSE board derivation, and it produces the formula you'll actually use in almost every numerical, so follow each step."
+            },
+            {
+              "seq": 2,
+              "text": "Start from the definition and expand the square inside the sum. Sigma squared is one over n times the sum of x i minus x bar squared, which expands to x i squared, minus two x bar x i, plus x bar squared."
+            },
+            {
+              "seq": 3,
+              "text": "The reason we expand is to separate the data-dependent part, the sum of x i squared, from the constant mean, so we never have to compute individual deviations."
+            },
+            {
+              "seq": 4,
+              "text": "Now split the sum into three pieces. This is legal because summation distributes over addition. You get one over n sum of x i squared, minus two x bar over n times sum of x i, plus one over n sum of x bar squared."
+            },
+            {
+              "seq": 5,
+              "text": "Use two facts. First, one over n times the sum of x i is exactly x bar, so the middle term becomes minus two x bar times x bar, which is minus two x bar squared. Second, x bar squared is a constant, so its sum is n x bar squared, and the last term collapses to just x bar squared."
+            },
+            {
+              "seq": 6,
+              "text": "Combine minus two x bar squared plus x bar squared, and you land on the workhorse: sigma squared equals one over n sum of x i squared, minus x bar squared."
+            },
+            {
+              "seq": 7,
+              "text": "This form is the one to reach for, because it avoids computing a single individual deviation. It's especially valuable when the mean turns out not to be a whole number."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye ek standard CBSE board derivation hai, aur ye wo formula banati hai jo aap lagbhag har numerical mein actually use karoge, toh har step follow karo."
+            },
+            {
+              "seq": 2,
+              "text": "Definition se shuru karo aur sum ke andar square expand karo. Sigma squared one over n times sum of x i minus x bar squared hai, jo expand hoke banta hai x i squared, minus two x bar x i, plus x bar squared."
+            },
+            {
+              "seq": 3,
+              "text": "Expand karne ki wajah ye hai ki hum data-dependent part, sum of x i squared, ko constant mean se alag kar sakein, taaki humein kabhi individual deviations compute na karni padein."
+            },
+            {
+              "seq": 4,
+              "text": "Ab sum ko teen tukdon mein baanto. Ye legal hai kyunki summation addition pe distribute hota hai. Milta hai one over n sum of x i squared, minus two x bar over n times sum of x i, plus one over n sum of x bar squared."
+            },
+            {
+              "seq": 5,
+              "text": "Do facts use karo. Pehla, one over n times sum of x i exactly x bar hai, toh middle term ban jaata hai minus two x bar times x bar, jo hai minus two x bar squared. Doosra, x bar squared ek constant hai, toh iska sum n x bar squared hai, aur aakhri term collapse hoke sirf x bar squared reh jaata hai."
+            },
+            {
+              "seq": 6,
+              "text": "Minus two x bar squared plus x bar squared ko jodo, aur aap workhorse pe pahunchte ho: sigma squared equals one over n sum of x i squared, minus x bar squared."
+            },
+            {
+              "seq": 7,
+              "text": "Yahi form pakadna chahiye, kyunki ye ek bhi individual deviation compute karne se bacha leta hai. Ye khaas taur pe tab valuable hai jab mean whole number na nikle."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Why the mean, and no other anchor",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "The mean minimises mean-square deviation",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Let g(a) = (1/n) ∑(x_i − a)². Minimise the average squared spread over the anchor a.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "g'(a) = \\frac{1}{n}\\sum 2(x_i-a)(-1) = -\\frac{2}{n}\\sum(x_i-a)",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "text",
+          "text": "Set the derivative to zero to find the minimising anchor.",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sum x_i = na \\ \\Rightarrow\\ a = \\bar{x}",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "The mean is the UNIQUE anchor giving the smallest average squared spread.",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Perfect parallel: median minimises absolute deviation; mean minimises squared deviation.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We claimed the mean minimises the squared spread. Let's actually prove it, because the argument is short and the result anchors the whole subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "Define a function g of a, equal to one over n times the sum of x i minus a, all squared. Here a is a free anchor, and we ask which value of a makes this average squared spread as small as possible."
+            },
+            {
+              "seq": 3,
+              "text": "Differentiate with respect to a. Bring the power down: g prime of a is one over n times the sum of two, times x i minus a, times minus one, which tidies to minus two over n times the sum of x i minus a."
+            },
+            {
+              "seq": 4,
+              "text": "To find the minimiser, set that derivative equal to zero. The constant factor minus two over n doesn't matter, so we just need the sum of x i minus a to vanish."
+            },
+            {
+              "seq": 5,
+              "text": "The sum of x i minus a equals zero means the sum of x i equals n times a, and dividing by n gives a equals x bar. So the minimising anchor is exactly the mean."
+            },
+            {
+              "seq": 6,
+              "text": "That is the whole point: the mean is the unique anchor that gives the smallest average squared spread. No other value of a can do better, which is why variance is always tied to the mean."
+            },
+            {
+              "seq": 7,
+              "text": "And notice the perfect parallel across the two subtopics. The median minimises absolute deviation; the mean minimises squared deviation. Two centres, two minimisation crowns."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Humne claim kiya tha ki mean squared spread ko minimise karta hai. Chalo ise actually prove karte hain, kyunki argument chhota hai aur result poore subtopic ko anchor karta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Ek function g of a define karo, equal to one over n times sum of x i minus a, poora squared. Yahaan a ek free anchor hai, aur hum poochhte hain a ki kaunsi value is average squared spread ko sabse chhota banaati hai."
+            },
+            {
+              "seq": 3,
+              "text": "a ke respect mein differentiate karo. Power neeche laao: g prime of a hai one over n times sum of two, times x i minus a, times minus one, jo saaf hoke banta hai minus two over n times sum of x i minus a."
+            },
+            {
+              "seq": 4,
+              "text": "Minimiser dhoondhne ke liye, us derivative ko zero ke barabar rakho. Constant factor minus two over n matter nahi karta, toh humein bas sum of x i minus a ko vanish karna hai."
+            },
+            {
+              "seq": 5,
+              "text": "Sum of x i minus a equals zero ka matlab sum of x i equals n times a, aur n se divide karne pe a equals x bar. Toh minimising anchor exactly mean hai."
+            },
+            {
+              "seq": 6,
+              "text": "Yahi poori baat hai: mean wo unique anchor hai jo sabse chhota average squared spread deta hai. a ki koi doosri value behtar nahi kar sakti, isiliye variance hamesha mean se juda hota hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aur dono subtopics ke beech perfect parallel dekho. Median absolute deviation ko minimise karta hai; mean squared deviation ko. Do centres, do minimisation crowns."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "concept",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "The step-deviation method for grouped data",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "Coding big mid-points into tiny integers",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Step 1: replace each class by its mid-point x_i.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Step 2: pick an assumed mean A (a central mid-point) and width h; code d_i = (x_i − A)/h.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "text",
+          "text": "Step 3: build the columns f_i d_i and f_i d_i², then their totals.",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2 = h^2\\!\\left[\\frac{\\sum f_i d_i^2}{N} - \\left(\\frac{\\sum f_i d_i}{N}\\right)^2\\right]",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "The h² (not h) undoes the coding — squared, because variance scales by the SQUARE of any factor.",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Coding shrinks large mid-points to integers like −2… 2, slashing arithmetic error.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "For a grouped frequency distribution, computing variance by hand can get ugly fast. The step-deviation method exists to keep the arithmetic small and clean."
+            },
+            {
+              "seq": 2,
+              "text": "Step one is the usual move for continuous data: replace each class by its mid-point x i, one representative value per class."
+            },
+            {
+              "seq": 3,
+              "text": "Step two is the clever part. Choose a convenient assumed mean A, ideally a central mid-point, and note the class width h. Then code each mid-point as d i equals x i minus A, over h."
+            },
+            {
+              "seq": 4,
+              "text": "Step three, build two columns from the codes: f i times d i, and f i times d i squared. Add each column to get its total. These small numbers are all the arithmetic you need."
+            },
+            {
+              "seq": 5,
+              "text": "Then apply the step-deviation formula: sigma squared equals h squared, times the quantity sum of f i d i squared over N, minus the square of sum of f i d i over N."
+            },
+            {
+              "seq": 6,
+              "text": "Pay attention to that h squared, not h. It undoes the scaling by h from step two, and it must be squared precisely because variance scales by the square of any factor. Using h alone is a classic error."
+            },
+            {
+              "seq": 7,
+              "text": "The whole point of coding is that it shrinks large mid-points, say ten to ninety, into tiny integers like minus two through two, which slashes the chance of an arithmetic slip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ek grouped frequency distribution ke liye, haath se variance nikaalna jaldi ugly ho sakta hai. Step-deviation method isiliye hai ki arithmetic chhoti aur clean rahe."
+            },
+            {
+              "seq": 2,
+              "text": "Step one continuous data ka usual move hai: har class ko uske mid-point x i se replace karo, ek representative value per class."
+            },
+            {
+              "seq": 3,
+              "text": "Step two clever part hai. Ek convenient assumed mean A chuno, ideally ek central mid-point, aur class width h note karo. Phir har mid-point ko code karo d i equals x i minus A, over h."
+            },
+            {
+              "seq": 4,
+              "text": "Step three, codes se do columns banao: f i times d i, aur f i times d i squared. Har column ko jodke uska total nikaalo. Yahi chhote numbers aapki poori arithmetic hain."
+            },
+            {
+              "seq": 5,
+              "text": "Phir step-deviation formula apply karo: sigma squared equals h squared, times the quantity sum of f i d i squared over N, minus square of sum of f i d i over N."
+            },
+            {
+              "seq": 6,
+              "text": "Us h squared pe dhyan do, h nahi. Ye step two ki h se scaling undo karta hai, aur ise squared hona hi chahiye theek isliye kyunki variance kisi bhi factor ke square se scale karta hai. Sirf h use karna ek classic error hai."
+            },
+            {
+              "seq": 7,
+              "text": "Coding ka poora point ye hai ki ye badi mid-points ko, maano das se nabbe, chhote integers mein simat deta hai jaise minus two se two, jo arithmetic slip ka chance kaafi kam kar deta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "formulas",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Variance & SD: every formula in one place",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "Subtopic 02 formula toolkit",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2 = \\frac{1}{n}\\sum(x_i-\\bar{x})^2 = \\frac{1}{n}\\sum x_i^2 - \\bar{x}^2,\\qquad \\sigma = +\\sqrt{\\sigma^2}",
+          "seq": 2,
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "\\sigma^2 = \\frac{1}{N}\\sum f_i x_i^2 - \\left(\\frac{\\sum f_i x_i}{N}\\right)^2\\quad(N=\\textstyle\\sum f_i)",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "latex": "\\sigma^2 = h^2\\!\\left[\\frac{\\sum f_i d_i^2}{N} - \\left(\\frac{\\sum f_i d_i}{N}\\right)^2\\right],\\ \\ d_i=\\frac{x_i-A}{h}",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{C.V.}=\\frac{\\sigma}{\\bar{x}}\\times 100;\\qquad x\\mapsto ax+b:\\ \\ \\sigma^2\\mapsto a^2\\sigma^2,\\ \\ \\sigma\\mapsto|a|\\sigma",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "latex": "\\sigma^2 = \\frac{n_1(\\sigma_1^2+d_1^2)+n_2(\\sigma_2^2+d_2^2)}{n_1+n_2},\\ \\ d_i=\\bar{x}_i-\\bar{x}",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Std result: variance of first n naturals = (n²−1)/12.  Sanity: σ² ≥ 0, σ ≤ range.",
+          "seq": 7,
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate every formula from this subtopic onto one board. I'm restating for quick recall, not re-teaching, so use this as your reference toolkit."
+            },
+            {
+              "seq": 2,
+              "text": "At the core: variance is one over n sum of x i minus x bar squared, and equivalently the shortcut, one over n sum of x i squared minus x bar squared. Standard deviation is the positive square root of variance."
+            },
+            {
+              "seq": 3,
+              "text": "For a frequency distribution, variance is one over N sum of f i x i squared, minus the square of sum of f i x i over N, where N is the total frequency."
+            },
+            {
+              "seq": 4,
+              "text": "For grouped data by coding, variance is h squared times the bracket, sum of f i d i squared over N minus the square of sum of f i d i over N, with d i equal to x i minus A, over h."
+            },
+            {
+              "seq": 5,
+              "text": "Two must-knows for MCQs. The coefficient of variation is sigma over x bar times one hundred. And under the transformation x maps to a x plus b, variance scales by a squared, standard deviation by the absolute value of a, and b does nothing."
+            },
+            {
+              "seq": 6,
+              "text": "For two combined groups: variance equals n one times sigma one squared plus d one squared, plus n two times sigma two squared plus d two squared, all over n one plus n two, where each d is the group mean minus the combined mean."
+            },
+            {
+              "seq": 7,
+              "text": "Finally, in red: a standard result worth memorising, the variance of the first n natural numbers is n squared minus one, over twelve. And your permanent sanity checks, variance is never negative, and sigma never exceeds the range."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo is subtopic ke saare formulas ek board pe consolidate karte hain. Main quick recall ke liye restate kar raha hoon, dobara nahi padha raha, toh ise apni reference toolkit ki tarah use karo."
+            },
+            {
+              "seq": 2,
+              "text": "Core pe: variance one over n sum of x i minus x bar squared hai, aur equivalently shortcut, one over n sum of x i squared minus x bar squared. Standard deviation variance ka positive square root hai."
+            },
+            {
+              "seq": 3,
+              "text": "Ek frequency distribution ke liye, variance one over N sum of f i x i squared hai, minus square of sum of f i x i over N, jahaan N total frequency hai."
+            },
+            {
+              "seq": 4,
+              "text": "Coding se grouped data ke liye, variance h squared times the bracket hai, sum of f i d i squared over N minus square of sum of f i d i over N, d i equal to x i minus A over h ke saath."
+            },
+            {
+              "seq": 5,
+              "text": "MCQs ke liye do must-knows. Coefficient of variation sigma over x bar times one hundred hai. Aur transformation x maps to a x plus b ke under, variance a squared se scale hota hai, standard deviation absolute value of a se, aur b kuch nahi karta."
+            },
+            {
+              "seq": 6,
+              "text": "Do combined groups ke liye: variance equals n one times sigma one squared plus d one squared, plus n two times sigma two squared plus d two squared, poora over n one plus n two, jahaan har d group mean minus combined mean hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aakhir mein, red mein: ek standard result yaad rakhne layak, first n natural numbers ka variance n squared minus one, over twelve hai. Aur aapke permanent sanity checks, variance kabhi negative nahi hota, aur sigma kabhi range se zyada nahi hota."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Worked example: variance and SD of a small data set",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "CBSE level: units sold on five days",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Data: 12, 15, 18, 21, 24.  Find the variance and standard deviation.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "\\bar{x}=\\frac{12+15+18+21+24}{5}=\\frac{90}{5}=18",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "text",
+          "text": "Deviations: −6, −3, 0, 3, 6.  Squared: 36, 9, 0, 9, 36.  Sum = 90.",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2 = \\frac{90}{5} = 18\\ (\\text{units}^2)",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma = \\sqrt{18} = 3\\sqrt{2} \\approx 4.24\\ \\text{units}",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "Units: variance in units², SD in units. And 4.24 ≤ range (12). Consistent.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's start with the cleanest possible CBSE example to lock in the definition. A small shop sold twelve, fifteen, eighteen, twenty one, and twenty four units over five days. Find the variance and standard deviation."
+            },
+            {
+              "seq": 2,
+              "text": "Read what's asked: two quantities, the variance and then the standard deviation, from these five daily figures."
+            },
+            {
+              "seq": 3,
+              "text": "First the mean. Add twelve, fifteen, eighteen, twenty one, twenty four to get ninety, then divide by five. The mean is exactly eighteen, a whole number, so we can use the definition directly."
+            },
+            {
+              "seq": 4,
+              "text": "Now the deviations from eighteen: minus six, minus three, zero, three, six. Square each one: thirty six, nine, zero, nine, thirty six. Those squares add up to ninety."
+            },
+            {
+              "seq": 5,
+              "text": "Variance is the average of those squared deviations: ninety over five, which is eighteen. Note the unit, it's units squared, because we squared the deviations."
+            },
+            {
+              "seq": 6,
+              "text": "Standard deviation is the positive square root of eighteen, which is three root two, approximately four point two four units. The square root brings us back to plain units."
+            },
+            {
+              "seq": 7,
+              "text": "Finish with the checks: variance in units squared, standard deviation in units, and four point two four is comfortably below the range of twelve. Everything is consistent."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo sabse clean CBSE example se shuru karte hain taaki definition lock ho jaaye. Ek chhoti shop ne paanch din mein twelve, fifteen, eighteen, twenty one, aur twenty four units beche. Variance aur standard deviation nikaalo."
+            },
+            {
+              "seq": 2,
+              "text": "Padho kya poochha hai: do quantities, variance aur phir standard deviation, in paanch daily figures se."
+            },
+            {
+              "seq": 3,
+              "text": "Pehle mean. Twelve, fifteen, eighteen, twenty one, twenty four jodke ninety, phir five se divide. Mean exactly eighteen hai, ek whole number, toh hum definition seedhe use kar sakte hain."
+            },
+            {
+              "seq": 4,
+              "text": "Ab eighteen se deviations: minus six, minus three, zero, three, six. Har ek ko square karo: thirty six, nine, zero, nine, thirty six. Ye squares jodke ninety."
+            },
+            {
+              "seq": 5,
+              "text": "Variance in squared deviations ka average hai: ninety over five, jo hai eighteen. Unit note karo, ye units squared hai, kyunki humne deviations square kiye."
+            },
+            {
+              "seq": 6,
+              "text": "Standard deviation eighteen ka positive square root hai, jo hai three root two, lagbhag four point two four units. Square root humein wapas plain units mein le aata hai."
+            },
+            {
+              "seq": 7,
+              "text": "Checks ke saath khatam: variance units squared mein, standard deviation units mein, aur four point two four range twelve se aaram se neeche. Sab consistent hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Worked example: the transformation property",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "JEE Main: multiply by 3, then add 4",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "The variance of 20 observations is 5. Each is transformed by (×3, then +4).",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "The +4 shifts all data equally → cannot change spread. The ×3 scales the spread.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "For variance the scale factor enters SQUARED: a = 3 → factor 9.",
+          "seq": 4,
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2_{\\text{new}} = 3^2 \\times 5 = 45",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma_{\\text{new}} = |3|\\times\\sqrt{5} = 3\\sqrt{5} \\approx 6.71",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Trap: multiplying the variance by 3 (→15). Variance ×a², SD ×|a|, and b does nothing.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the single most common JEE Main statistics question, dressed up as a transformation. The variance of twenty observations is five. Each observation is transformed by the rule: multiply by three, then add four."
+            },
+            {
+              "seq": 2,
+              "text": "We're asked for the new variance and the new standard deviation after that rule is applied to every value."
+            },
+            {
+              "seq": 3,
+              "text": "Split the rule into a shift and a scale. The plus four shifts all the data equally, and a uniform shift cannot change spread at all. The times three is the scale, and that's what actually stretches the spread."
+            },
+            {
+              "seq": 4,
+              "text": "Here's the crucial bit. For variance, the scale factor does not enter as three, it enters squared. So a equals three contributes a factor of nine, not three."
+            },
+            {
+              "seq": 5,
+              "text": "Therefore the new variance is three squared times five, which is nine times five, equals forty five."
+            },
+            {
+              "seq": 6,
+              "text": "The new standard deviation is the absolute value of three times root five, which is three root five, approximately six point seven one. You could also just take the square root of forty five and get the same thing."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>And here's the signature trap. Students multiply the variance by three, getting fifteen, or fumble the square root. Lock it in: variance scales by a squared, standard deviation by the absolute value of a, and the additive constant does nothing."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye sabse common JEE Main statistics question hai, ek transformation ke roop mein saja hua. Twenty observations ka variance five hai. Har observation is rule se transform hoti hai: three se multiply karo, phir four add karo."
+            },
+            {
+              "seq": 2,
+              "text": "Humse naya variance aur naya standard deviation poochha gaya hai jab wo rule har value pe apply ho jaaye."
+            },
+            {
+              "seq": 3,
+              "text": "Rule ko ek shift aur ek scale mein baanto. Plus four saara data equally shift karta hai, aur ek uniform shift spread ko bilkul nahi badal sakta. Times three scale hai, aur wahi actually spread ko stretch karta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Yahaan crucial baat hai. Variance ke liye, scale factor three ke roop mein nahi aata, ye squared aata hai. Toh a equals three nine ka factor deta hai, three nahi."
+            },
+            {
+              "seq": 5,
+              "text": "Isliye naya variance three squared times five hai, jo nine times five, equals forty five."
+            },
+            {
+              "seq": 6,
+              "text": "Naya standard deviation absolute value of three times root five hai, jo hai three root five, lagbhag six point seven one. Aap forty five ka square root le ke bhi wahi paa sakte ho."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Aur yahaan signature trap hai. Students variance ko three se multiply karke fifteen paa lete hain, ya square root gadbada dete hain. Lock karo: variance a squared se scale hota hai, standard deviation absolute value of a se, aur additive constant kuch nahi karta."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Worked example: variance via the shortcut formula",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "JEE Main: frequency distribution, one sweep",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "diagram",
+          "caption": "Build ∑f_i x_i and ∑f_i x_i² in the same table",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 198\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"210.0\" y=\"18\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\">Frequency distribution (shortcut)</text><rect x=\"10\" y=\"34\" width=\"400\" height=\"22\" fill=\"#2c3e50\"/><text x=\"60.0\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">x_i</text><text x=\"160.0\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i</text><text x=\"260.0\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i*x_i</text><text x=\"360.0\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i*x_i^2</text><rect x=\"10\" y=\"56\" width=\"400\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"60.0\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">4</text><text x=\"160.0\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">2</text><text x=\"260.0\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">8</text><text x=\"360.0\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">32</text><rect x=\"10\" y=\"78\" width=\"400\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"60.0\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">8</text><text x=\"160.0\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">5</text><text x=\"260.0\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">40</text><text x=\"360.0\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">320</text><rect x=\"10\" y=\"100\" width=\"400\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"60.0\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">12</text><text x=\"160.0\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">8</text><text x=\"260.0\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">96</text><text x=\"360.0\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">1152</text><rect x=\"10\" y=\"122\" width=\"400\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"60.0\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">16</text><text x=\"160.0\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">3</text><text x=\"260.0\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">48</text><text x=\"360.0\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">768</text><rect x=\"10\" y=\"144\" width=\"400\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"60.0\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">20</text><text x=\"160.0\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">2</text><text x=\"260.0\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">40</text><text x=\"360.0\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">800</text><rect x=\"10\" y=\"166\" width=\"400\" height=\"22\" fill=\"#fbeec1\" stroke=\"#c0392b\"/><text x=\"60.0\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\"></text><text x=\"160.0\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">20</text><text x=\"260.0\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">232</text><text x=\"360.0\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">3072</text></svg>",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "\\bar{x}=\\frac{\\sum f_i x_i}{N}=\\frac{232}{20}=11.6",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "latex": "\\sum f_i x_i^2 = 32+320+1152+768+800 = 3072",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2 = \\frac{3072}{20}-(11.6)^2 = 153.6-134.56 = 19.04",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma \\approx 4.36",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "The shortcut paid off — we never touched a single (x_i − 11.6) deviation.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now watch why the shortcut formula earns its keep. We need the variance of a frequency distribution where x i takes values four, eight, twelve, sixteen, twenty, with frequencies two, five, eight, three, two."
+            },
+            {
+              "seq": 2,
+              "text": "The table on the board is the whole strategy. We build two columns in one sweep: f i times x i, and f i times x i squared. No deviations anywhere."
+            },
+            {
+              "seq": 3,
+              "text": "First the mean. The total frequency N is twenty. The sum of f i x i is two hundred thirty two, so the mean is two hundred thirty two over twenty, equals eleven point six. Notice that's not a whole number, which is exactly when the shortcut shines."
+            },
+            {
+              "seq": 4,
+              "text": "Next, the sum of f i x i squared. Adding the last column, thirty two plus three hundred twenty plus one thousand one hundred fifty two plus seven hundred sixty eight plus eight hundred, gives three thousand seventy two."
+            },
+            {
+              "seq": 5,
+              "text": "Now apply the shortcut. Variance is the sum of f i x i squared over N, minus x bar squared: three thousand seventy two over twenty, minus eleven point six squared. That's one hundred fifty three point six, minus one hundred thirty four point five six, equals nineteen point zero four."
+            },
+            {
+              "seq": 6,
+              "text": "The standard deviation is the square root of nineteen point zero four, approximately four point three six."
+            },
+            {
+              "seq": 7,
+              "text": "The payoff is clear: with the mean at eleven point six, computing every deviation would have meant ugly decimals like x i minus eleven point six. The shortcut let us avoid all of them."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ab dekho shortcut formula apni jagah kyun banata hai. Humein ek frequency distribution ka variance chahiye jahaan x i values leta hai four, eight, twelve, sixteen, twenty, frequencies two, five, eight, three, two ke saath."
+            },
+            {
+              "seq": 2,
+              "text": "Board pe table poori strategy hai. Hum do columns ek sweep mein banate hain: f i times x i, aur f i times x i squared. Kahin koi deviations nahi."
+            },
+            {
+              "seq": 3,
+              "text": "Pehle mean. Total frequency N twenty hai. Sum of f i x i two hundred thirty two hai, toh mean two hundred thirty two over twenty hai, equals eleven point six. Dhyan do ye whole number nahi hai, aur theek tab shortcut chamakta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Aage, sum of f i x i squared. Aakhri column jodte hue, thirty two plus three hundred twenty plus one thousand one hundred fifty two plus seven hundred sixty eight plus eight hundred, deta hai three thousand seventy two."
+            },
+            {
+              "seq": 5,
+              "text": "Ab shortcut apply karo. Variance sum of f i x i squared over N hai, minus x bar squared: three thousand seventy two over twenty, minus eleven point six squared. Ye hai one hundred fifty three point six, minus one hundred thirty four point five six, equals nineteen point zero four."
+            },
+            {
+              "seq": 6,
+              "text": "Standard deviation nineteen point zero four ka square root hai, lagbhag four point three six."
+            },
+            {
+              "seq": 7,
+              "text": "Payoff clear hai: mean eleven point six pe hone se, har deviation compute karne ka matlab hota ugly decimals jaise x i minus eleven point six. Shortcut ne humein un sab se bacha liya."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Worked example: combined standard deviation of two groups",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "JEE Advanced: you cannot average two SDs",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Section A: 30 students, mean 60, SD 8.  Section B: 20 students, mean 70, SD 6.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "\\bar{x}=\\frac{30(60)+20(70)}{50}=\\frac{3200}{50}=64",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "text",
+          "text": "Group-mean deviations from 64: d₁ = 60 − 64 = −4, d₂ = 70 − 64 = 6.",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2 = \\frac{30(8^2+4^2)+20(6^2+6^2)}{50}=\\frac{2400+1440}{50}=76.8",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma = \\sqrt{76.8}\\approx 8.76",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "Combined SD (8.76) exceeds BOTH group SDs — the d² terms inject the between-group spread.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This JEE Advanced classic tests whether you understand that combined spread is more than the parts. Section A has thirty students with mean sixty and standard deviation eight. Section B has twenty students with mean seventy and standard deviation six. Find the standard deviation of all fifty combined."
+            },
+            {
+              "seq": 2,
+              "text": "The whole trap lives in one temptation: you cannot just average the two standard deviations. The gap between the group means adds its own spread, and we have to account for it."
+            },
+            {
+              "seq": 3,
+              "text": "First, the combined mean. It's thirty times sixty plus twenty times seventy, all over fifty. That's thirty two hundred over fifty, equals sixty four."
+            },
+            {
+              "seq": 4,
+              "text": "Now measure how far each group's mean sits from that combined mean. d one is sixty minus sixty four, equals minus four. d two is seventy minus sixty four, equals six. These are the between-group deviations."
+            },
+            {
+              "seq": 5,
+              "text": "Apply the combined-variance formula. Each group contributes its own variance plus its d squared, weighted by its size: thirty times sixty four plus sixteen, plus twenty times thirty six plus thirty six, all over fifty. That's twenty four hundred plus fourteen forty, over fifty, equals seventy six point eight."
+            },
+            {
+              "seq": 6,
+              "text": "The combined standard deviation is the square root of seventy six point eight, approximately eight point seven six."
+            },
+            {
+              "seq": 7,
+              "text": "Now the insight worth the marks: the combined standard deviation, eight point seven six, is larger than either group's, eight and six. Pooling groups with different means injects extra spread through the d squared terms. A student who naively averages eight and six to get seven misses this entirely."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye JEE Advanced classic test karta hai ki aap samajhte ho ya nahi ki combined spread parts se zyada hoti hai. Section A mein thirty students, mean sixty, standard deviation eight. Section B mein twenty students, mean seventy, standard deviation six. Saare fifty combined ka standard deviation nikaalo."
+            },
+            {
+              "seq": 2,
+              "text": "Poora trap ek temptation mein hai: aap do standard deviations ko simply average nahi kar sakte. Group means ke beech ka gap apni khud ki spread jodta hai, aur humein use account karna padega."
+            },
+            {
+              "seq": 3,
+              "text": "Pehle, combined mean. Ye thirty times sixty plus twenty times seventy hai, poora over fifty. Ye hai thirty two hundred over fifty, equals sixty four."
+            },
+            {
+              "seq": 4,
+              "text": "Ab measure karo har group ka mean us combined mean se kitni door hai. d one sixty minus sixty four hai, equals minus four. d two seventy minus sixty four hai, equals six. Ye between-group deviations hain."
+            },
+            {
+              "seq": 5,
+              "text": "Combined-variance formula apply karo. Har group apna variance plus apna d squared contribute karta hai, apne size se weighted: thirty times sixty four plus sixteen, plus twenty times thirty six plus thirty six, poora over fifty. Ye hai twenty four hundred plus fourteen forty, over fifty, equals seventy six point eight."
+            },
+            {
+              "seq": 6,
+              "text": "Combined standard deviation seventy six point eight ka square root hai, lagbhag eight point seven six."
+            },
+            {
+              "seq": 7,
+              "text": "Ab wo insight jo marks dilata hai: combined standard deviation, eight point seven six, dono groups se bada hai, eight aur six. Alag means wale groups ko pool karna d squared terms ke through extra spread inject karta hai. Jo student naively eight aur six ka average le ke seven paata hai, wo ye poori tarah miss kar deta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Worked example: step-deviation on grouped marks",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "CBSE: variance of 30 students' marks",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "diagram",
+          "caption": "Code d_i = (x_i − 50)/20, then build f_i d_i and f_i d_i²",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 198\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"210.0\" y=\"18\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\">Step-deviation (A=50, h=20)</text><rect x=\"10\" y=\"34\" width=\"400\" height=\"22\" fill=\"#2c3e50\"/><text x=\"50.0\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">x_i</text><text x=\"130.0\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i</text><text x=\"210.0\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">d_i</text><text x=\"290.0\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i*d_i</text><text x=\"370.0\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i*d_i^2</text><rect x=\"10\" y=\"56\" width=\"400\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"50.0\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">10</text><text x=\"130.0\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">4</text><text x=\"210.0\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">-2</text><text x=\"290.0\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">-8</text><text x=\"370.0\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">16</text><rect x=\"10\" y=\"78\" width=\"400\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"50.0\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">30</text><text x=\"130.0\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">6</text><text x=\"210.0\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">-1</text><text x=\"290.0\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">-6</text><text x=\"370.0\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">6</text><rect x=\"10\" y=\"100\" width=\"400\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"50.0\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">50</text><text x=\"130.0\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">10</text><text x=\"210.0\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">0</text><text x=\"290.0\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">0</text><text x=\"370.0\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">0</text><rect x=\"10\" y=\"122\" width=\"400\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"50.0\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">70</text><text x=\"130.0\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">7</text><text x=\"210.0\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">1</text><text x=\"290.0\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">7</text><text x=\"370.0\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">7</text><rect x=\"10\" y=\"144\" width=\"400\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"50.0\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">90</text><text x=\"130.0\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">3</text><text x=\"210.0\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">2</text><text x=\"290.0\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">6</text><text x=\"370.0\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">12</text><rect x=\"10\" y=\"166\" width=\"400\" height=\"22\" fill=\"#fbeec1\" stroke=\"#c0392b\"/><text x=\"50.0\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\"></text><text x=\"130.0\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">30</text><text x=\"210.0\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\"></text><text x=\"290.0\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">-1</text><text x=\"370.0\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">41</text></svg>",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Assumed mean A = 50, width h = 20 → codes are the integers −2, −1, 0, 1, 2.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "latex": "\\sum f_i d_i = -1,\\qquad \\sum f_i d_i^2 = 41",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2 = 20^2\\!\\left[\\frac{41}{30}-\\left(\\frac{-1}{30}\\right)^2\\right] \\approx 546.2",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma = \\sqrt{546.2}\\approx 23.4\\ \\text{marks}",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "The h² = 400 undoes the coding. Don't drop the tiny (−1/30)² term — graders look for it.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's finish the computation examples with the step-deviation method on grouped marks. Thirty students' marks fall into five bands of width twenty, and we want the variance and standard deviation."
+            },
+            {
+              "seq": 2,
+              "text": "The table on the board sets it all up. First replace each class by its mid-point, giving ten, thirty, fifty, seventy, ninety."
+            },
+            {
+              "seq": 3,
+              "text": "Now the coding. Take the assumed mean A as fifty, a central mid-point, and the width h as twenty. Then d i equals x i minus fifty, over twenty, which turns those mid-points into the tidy integers minus two, minus one, zero, one, two. Far less error-prone than the raw numbers."
+            },
+            {
+              "seq": 4,
+              "text": "Build and total the two coded columns. The sum of f i d i comes to minus one, and the sum of f i d i squared comes to forty one, as the table's total row shows."
+            },
+            {
+              "seq": 5,
+              "text": "Apply the step-deviation formula. Variance is h squared, that's twenty squared, or four hundred, times the bracket: forty one over thirty, minus the square of minus one over thirty. That works out to approximately five hundred forty six point two."
+            },
+            {
+              "seq": 6,
+              "text": "The standard deviation is the square root of that, approximately twenty three point four marks."
+            },
+            {
+              "seq": 7,
+              "text": "Two reminders. The h squared, four hundred, is what undoes the coding, and it's squared because variance scales by the square of any factor. And don't drop the tiny correction term, minus one over thirty squared, small as it is, because graders specifically look for it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo computation examples ko step-deviation method se khatam karte hain grouped marks pe. Thirty students ke marks width twenty ke paanch bands mein aate hain, aur humein variance aur standard deviation chahiye."
+            },
+            {
+              "seq": 2,
+              "text": "Board pe table sab set up kar deta hai. Pehle har class ko uske mid-point se replace karo, jo deta hai ten, thirty, fifty, seventy, ninety."
+            },
+            {
+              "seq": 3,
+              "text": "Ab coding. Assumed mean A ko fifty lo, ek central mid-point, aur width h ko twenty. Phir d i equals x i minus fifty, over twenty, jo un mid-points ko tidy integers minus two, minus one, zero, one, two mein badal deta hai. Raw numbers se kahin kam error-prone."
+            },
+            {
+              "seq": 4,
+              "text": "Do coded columns banao aur total karo. Sum of f i d i minus one aata hai, aur sum of f i d i squared forty one aata hai, jaisa table ki total row dikhaati hai."
+            },
+            {
+              "seq": 5,
+              "text": "Step-deviation formula apply karo. Variance h squared hai, yaani twenty squared, ya four hundred, times the bracket: forty one over thirty, minus square of minus one over thirty. Ye nikalta hai lagbhag five hundred forty six point two."
+            },
+            {
+              "seq": 6,
+              "text": "Standard deviation uska square root hai, lagbhag twenty three point four marks."
+            },
+            {
+              "seq": 7,
+              "text": "Do reminders. h squared, four hundred, hi coding undo karta hai, aur ye squared hai kyunki variance kisi bhi factor ke square se scale karta hai. Aur wo tiny correction term mat girao, minus one over thirty squared, chhota hone ke bawajood, kyunki graders khaas taur pe use dhoondhte hain."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "tips",
+      "subtopic": "Variance and Standard Deviation",
+      "title": "Pitfalls and pro-tips: four ways students lose marks",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "The classic slips — and how to dodge them",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "1. Confusing variance with SD — they differ by a √ and by units (marks² vs marks). Read the question.",
+          "seq": 2,
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "2. Transformation rule: variance ×a², SD ×|a|, b irrelevant. Classic slip: scaling variance by a, not a².",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "text",
+          "text": "3. Stopping the shortcut early — forgetting the −x̄², or subtracting x̄ instead of x̄².",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sigma^2 = \\frac{1}{n}\\sum x_i^2 - \\bar{x}^2 \\quad(\\text{if } \\sigma^2<0,\\ \\text{you swapped the terms})",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "text",
+          "text": "4. Averaging two groups' SDs — use the combined-variance formula, which adds the d² terms.",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Two instant checks: σ² ≥ 0, and σ ≤ range. For consistency, go to C.V. (lower wins).",
+          "seq": 7,
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close Subtopic two the same way, with the four classic slips that quietly cost marks, and exactly how to dodge each."
+            },
+            {
+              "seq": 2,
+              "text": "Slip one: confusing variance with standard deviation. They differ by a square root and by units, marks squared versus marks. Read the question carefully; if it asks for the standard deviation and you stop at variance, you lose the mark even with perfect working."
+            },
+            {
+              "seq": 3,
+              "text": "Slip two: mishandling the transformation rule. Under x maps to a x plus b, variance scales by a squared, standard deviation by the absolute value of a, and b is irrelevant. The classic slip is scaling variance by a instead of a squared."
+            },
+            {
+              "seq": 4,
+              "text": "Slip three: stopping the shortcut formula early. Students routinely forget the minus x bar squared at the end, or they subtract x bar instead of x bar squared. Either one wrecks the answer."
+            },
+            {
+              "seq": 5,
+              "text": "Keep the shortcut on the board in front of you: variance is one over n sum of x i squared, minus x bar squared. And here's a free diagnostic, if your variance comes out negative, you've swapped the two terms."
+            },
+            {
+              "seq": 6,
+              "text": "Slip four: averaging the standard deviations of two groups. The combined standard deviation is never the average of the parts. You must use the combined-variance formula, which adds the between-group d squared terms."
+            },
+            {
+              "seq": 7,
+              "text": "And two instant checks before you commit anything: variance must be at least zero, and the standard deviation must be no bigger than the range. For any consistency comparison, go straight to the coefficient of variation, and remember lower wins."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo Subtopic two ko usi tarah band karte hain, un chaar classic slips ke saath jo chupke se marks kha jaate hain, aur exactly har ek ko kaise dodge karein."
+            },
+            {
+              "seq": 2,
+              "text": "Slip one: variance ko standard deviation se confuse karna. Ye ek square root aur units se alag hain, marks squared versus marks. Question dhyan se padho; agar wo standard deviation maangta hai aur aap variance pe ruk jaate ho, toh perfect working ke bawajood mark chala jaata hai."
+            },
+            {
+              "seq": 3,
+              "text": "Slip two: transformation rule galat handle karna. Under x maps to a x plus b, variance a squared se scale hota hai, standard deviation absolute value of a se, aur b irrelevant hai. Classic slip hai variance ko a se scale karna, a squared se nahi."
+            },
+            {
+              "seq": 4,
+              "text": "Slip three: shortcut formula jaldi rok dena. Students aksar aakhir mein minus x bar squared bhool jaate hain, ya x bar squared ke bajaye x bar subtract kar dete hain. Dono mein se koi bhi answer barbaad kar deta hai."
+            },
+            {
+              "seq": 5,
+              "text": "Shortcut ko board pe apne saamne rakho: variance one over n sum of x i squared hai, minus x bar squared. Aur ek free diagnostic, agar aapka variance negative aata hai, toh aapne dono terms swap kar diye hain."
+            },
+            {
+              "seq": 6,
+              "text": "Slip four: do groups ke standard deviations ko average karna. Combined standard deviation kabhi parts ka average nahi hota. Aapko combined-variance formula use karna hi padega, jo between-group d squared terms jodta hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aur kuch bhi commit karne se pehle do instant checks: variance kam se kam zero ho, aur standard deviation range se bada na ho. Kisi bhi consistency comparison ke liye, seedhe coefficient of variation pe jao, aur yaad rakho kam wala jeetta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

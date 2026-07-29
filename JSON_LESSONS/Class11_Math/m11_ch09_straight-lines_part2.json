@@ -1,0 +1,2498 @@
+{
+  "chapter": "Straight Lines",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 9,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Equations of a Line",
+      "title": "Six costumes for one line",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Six Costumes for One Line"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A line is the simplest curve, yet it can wear six different forms."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Each form answers a different clue: a point and a direction, two points, the intercepts, or the distance from the origin."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "One line, described four different ways at once.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 280\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"220\" x2=\"420\" y2=\"220\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"250\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"422\" y=\"224\" font-size=\"12\" fill=\"#333\">x</text><text x=\"46\" y=\"20\" font-size=\"12\" fill=\"#333\">y</text><line x1=\"60\" y1=\"80\" x2=\"300\" y2=\"220\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"220\" r=\"4\" fill=\"#1a56db\"/><text x=\"286\" y=\"238\" font-size=\"11\" fill=\"#1a56db\">(a, 0)</text><circle cx=\"60\" cy=\"80\" r=\"4\" fill=\"#1a56db\"/><text x=\"14\" y=\"80\" font-size=\"11\" fill=\"#1a56db\">(0, b)</text><circle cx=\"180\" cy=\"150\" r=\"4\" fill=\"#c026d3\"/><text x=\"186\" y=\"146\" font-size=\"11\" fill=\"#c026d3\">P</text><line x1=\"60\" y1=\"220\" x2=\"121\" y2=\"116\" stroke=\"#999\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><text x=\"92\" y=\"152\" font-size=\"11\" fill=\"#666\">p, omega</text><text x=\"150\" y=\"256\" font-size=\"11\" fill=\"#333\">Ax + By + C = 0</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "All six are dialects of one sentence: the general form $Ax + By + C = 0$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Slope-intercept and point-slope cannot describe a vertical line — slope is undefined there."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Intercept form breaks for a line through the origin or parallel to an axis."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The real exam skill is translating fluently between forms, not memorising six."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Why does one simple line need six different equations?</curious> Let's see what each one is really for."
+            },
+            {
+              "seq": 2,
+              "text": "A line is the simplest curve there is, and yet it can appear in six different costumes."
+            },
+            {
+              "seq": 3,
+              "text": "Each costume answers a different clue you are handed: sometimes a point and a direction, sometimes two points, sometimes where it crosses the axes, sometimes how far it sits from the origin."
+            },
+            {
+              "seq": 4,
+              "text": "Picture one single line, labelled every way at once: a point on it, its two axis crossings, and the perpendicular from the origin. Every description pins down the same line."
+            },
+            {
+              "seq": 5,
+              "text": "All six are really dialects of one sentence, the general form A x plus B y plus C equals zero. Any line at all can be written this way."
+            },
+            {
+              "seq": 6,
+              "text": "Two cautions. The slope-intercept and point-slope forms both assume a slope exists, so neither can describe a vertical line."
+            },
+            {
+              "seq": 7,
+              "text": "And intercept form falls apart when the line passes through the origin, or runs parallel to an axis, because an intercept goes missing or to zero."
+            },
+            {
+              "seq": 8,
+              "text": "So the skill that actually earns marks is not memorising six formulas; it is translating between them on demand — pull the slope out of the general form, or rewrite point-slope as intercept form in seconds."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>एक simple line को छह अलग equations की ज़रूरत क्यों?</curious> देखते हैं हर एक असल में किसके लिए है।"
+            },
+            {
+              "seq": 2,
+              "text": "Line सबसे simple curve है, फिर भी यह छह अलग costumes में आ सकती है।"
+            },
+            {
+              "seq": 3,
+              "text": "हर costume एक अलग clue का जवाब देता है: कभी एक point और direction, कभी दो points, कभी axes के crossing, कभी origin से distance।"
+            },
+            {
+              "seq": 4,
+              "text": "एक ही line को एक साथ हर तरह से labelled सोचो: उस पर एक point, उसके दो axis crossings, और origin से perpendicular। हर description उसी एक line को pin करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "छहों असल में एक ही sentence के dialects हैं, general form A x plus B y plus C बराबर zero। कोई भी line इसी तरह लिखी जा सकती है।"
+            },
+            {
+              "seq": 6,
+              "text": "दो cautions. Slope-intercept और point-slope दोनों मानते हैं कि slope exist करती है, इसलिए इनमें से कोई vertical line describe नहीं कर सकता।"
+            },
+            {
+              "seq": 7,
+              "text": "और intercept form तब टूट जाता है जब line origin से गुज़रे, या किसी axis के parallel हो, क्योंकि तब एक intercept गायब या zero हो जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो marks असल में देता है छह formulas रटना नहीं, बल्कि उनके बीच on-demand translate करना — general form से slope निकालना, या point-slope को seconds में intercept form में बदलना।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Equations of a Line",
+      "title": "Proof: point-slope form and its descendants",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: Point-Slope Form"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Take any point $(x,y)$ on a line of slope $m$ through the fixed point $(x_1,y_1)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The slope computed from those two points must equal $m$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\frac{y - y_1}{x - x_1} = m"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "y - y_1 = m(x - x_1)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Put a second point $(x_2,y_2)$ in place of $m$ to get the two-point form."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "y - y_1 = \\frac{y_2 - y_1}{x_2 - x_1}(x - x_1)"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Set $(x_1,y_1) = (0,c)$ and it collapses to $y = mx + c$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the beautiful part: five of the six forms descend from one tiny proof. Let's build it."
+            },
+            {
+              "seq": 2,
+              "text": "Take a line of slope m through a fixed point x one, y one, and let x, y be any other point sitting on it."
+            },
+            {
+              "seq": 3,
+              "text": "The slope you would compute from those two points has to equal the line's own slope m — that is what being on the line means."
+            },
+            {
+              "seq": 4,
+              "text": "So y minus y one over x minus x one equals m."
+            },
+            {
+              "seq": 5,
+              "text": "Multiply across and you get y minus y one equals m times x minus x one. That is the point-slope form, and everything else grows from it."
+            },
+            {
+              "seq": 6,
+              "text": "Need the two-point form? Just replace the slope m by the two-point slope, y two minus y one over x two minus x one."
+            },
+            {
+              "seq": 7,
+              "text": "That gives y minus y one equals that fraction times x minus x one — the same proof, one substitution later."
+            },
+            {
+              "seq": 8,
+              "text": "And if the fixed point happens to be zero comma c, the equation collapses straight to y equals m x plus c, the slope-intercept form. One proof, three forms."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रही सुंदर बात: छह में से पाँच forms एक tiny proof से निकलते हैं। चलो बनाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Slope m वाली एक line fixed point x one, y one से लो, और x, y को उस पर बैठा कोई भी दूसरा point मान लो।"
+            },
+            {
+              "seq": 3,
+              "text": "उन दो points से जो slope निकलेगी वो line की अपनी slope m के बराबर होनी ही चाहिए — line पर होने का यही मतलब है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो y minus y one over x minus x one बराबर m।"
+            },
+            {
+              "seq": 5,
+              "text": "Cross multiply करो और मिलता है y minus y one बराबर m times x minus x one। यही point-slope form है, और बाकी सब इसी से उगता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Two-point form चाहिए? बस slope m को two-point slope से replace कर दो, y two minus y one over x two minus x one।"
+            },
+            {
+              "seq": 7,
+              "text": "इससे मिलता है y minus y one बराबर वो fraction times x minus x one — वही proof, एक substitution बाद।"
+            },
+            {
+              "seq": 8,
+              "text": "और अगर fixed point zero comma c हो जाए, तो equation सीधे y बराबर m x plus c में गिर जाता है, slope-intercept form। एक proof, तीन forms।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Equations of a Line",
+      "title": "Proof: intercept form and normal form",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: Intercept & Normal Forms"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Apply the two-point form to the intercepts $(a,0)$ and $(0,b)$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "y - 0 = \\frac{b-0}{0-a}(x-a)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\frac{x}{a} + \\frac{y}{b} = 1"
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "caption": "The line cuts the axes at A(a,0) and B(0,b), with triangle OAB.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"230\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"382\" y=\"204\" font-size=\"12\" fill=\"#333\">x</text><text x=\"46\" y=\"20\" font-size=\"12\" fill=\"#333\">y</text><polygon points=\"60,200 300,200 60,60\" fill=\"#1a56db18\" stroke=\"none\"/><line x1=\"300\" y1=\"200\" x2=\"60\" y2=\"60\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"200\" r=\"4\" fill=\"#1a56db\"/><text x=\"286\" y=\"218\" font-size=\"11\" fill=\"#1a56db\">A(a, 0)</text><circle cx=\"60\" cy=\"60\" r=\"4\" fill=\"#1a56db\"/><text x=\"14\" y=\"60\" font-size=\"11\" fill=\"#1a56db\">B(0, b)</text><text x=\"44\" y=\"216\" font-size=\"11\" fill=\"#666\">O</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "For the normal form, the foot $N$ of the perpendicular from $O$ is $(p\\cos\\omega,\\, p\\sin\\omega)$."
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "caption": "Perpendicular ON of length p makes angle omega with the +x-axis.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 260\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"210\" x2=\"400\" y2=\"210\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"240\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"402\" y=\"214\" font-size=\"12\" fill=\"#333\">x</text><line x1=\"35\" y1=\"51\" x2=\"248\" y2=\"200\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"70\" y1=\"210\" x2=\"133\" y2=\"120\" stroke=\"#c026d3\" stroke-width=\"1.6\" stroke-dasharray=\"5 3\"/><circle cx=\"133\" cy=\"120\" r=\"3.5\" fill=\"#c026d3\"/><text x=\"138\" y=\"116\" font-size=\"11\" fill=\"#c026d3\">N</text><text x=\"90\" y=\"158\" font-size=\"11\" fill=\"#c026d3\">p</text><text x=\"84\" y=\"203\" font-size=\"11\" fill=\"#666\">omega</text><text x=\"56\" y=\"226\" font-size=\"11\" fill=\"#666\">O</text></svg>"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The line through $N$ is perpendicular to $ON$; simplify with $\\cos^2\\omega + \\sin^2\\omega = 1$."
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "latex": "x\\cos\\omega + y\\sin\\omega = p"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the two forms built from special clues — intercept form and normal form."
+            },
+            {
+              "seq": 2,
+              "text": "For intercept form, feed the two axis crossings, a comma zero and zero comma b, into the two-point form."
+            },
+            {
+              "seq": 3,
+              "text": "The slope between them is b minus zero over zero minus a, so y equals minus b over a, times x minus a."
+            },
+            {
+              "seq": 4,
+              "text": "Multiply out and divide by b, and it tidies into x over a plus y over b equals one — clean and symmetric."
+            },
+            {
+              "seq": 5,
+              "text": "Geometrically it is just the line closing off a right triangle with the two axes, cutting them at a and at b."
+            },
+            {
+              "seq": 6,
+              "text": "The normal form uses a different clue: the perpendicular distance p from the origin, at angle omega. The foot of that perpendicular sits at p cos omega, p sin omega."
+            },
+            {
+              "seq": 7,
+              "text": "Picture the perpendicular O N of length p, tilted at angle omega. The line we want passes through N, at right angles to O N."
+            },
+            {
+              "seq": 8,
+              "text": "Write the line through N with the right perpendicular slope, multiply through by sin omega, and use the identity cos squared plus sin squared equals one."
+            },
+            {
+              "seq": 9,
+              "text": "Everything collapses to x cos omega plus y sin omega equals p — the normal form, with p as the honest distance from the origin."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब वो दो forms जो special clues से बनते हैं — intercept form और normal form।"
+            },
+            {
+              "seq": 2,
+              "text": "Intercept form के लिए दोनों axis crossings, a comma zero और zero comma b, को two-point form में डालो।"
+            },
+            {
+              "seq": 3,
+              "text": "उनके बीच slope है b minus zero over zero minus a, तो y बराबर minus b over a, times x minus a।"
+            },
+            {
+              "seq": 4,
+              "text": "Multiply करो और b से divide करो, तो यह साफ़ हो जाता है x over a plus y over b बराबर one — clean और symmetric।"
+            },
+            {
+              "seq": 5,
+              "text": "Geometrically यह बस एक line है जो दोनों axes के साथ right triangle बंद करती है, उन्हें a और b पर काटती हुई।"
+            },
+            {
+              "seq": 6,
+              "text": "Normal form एक अलग clue लेता है: origin से perpendicular distance p, angle omega पर। उस perpendicular का foot बैठता है p cos omega, p sin omega पर।"
+            },
+            {
+              "seq": 7,
+              "text": "Length p वाला perpendicular O N सोचो, angle omega पर झुका हुआ। जो line चाहिए वो N से गुज़रती है, O N के right angles पर।"
+            },
+            {
+              "seq": 8,
+              "text": "N से line को सही perpendicular slope से लिखो, sin omega से multiply करो, और identity cos squared plus sin squared बराबर one use करो।"
+            },
+            {
+              "seq": 9,
+              "text": "सब कुछ गिरकर बनता है x cos omega plus y sin omega बराबर p — normal form, जहाँ p origin से honest distance है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Equations of a Line",
+      "title": "Reducing the general form to normal form",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Reducing $Ax+By+C=0$ to Normal Form"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Move the constant across: $Ax + By = -C$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Divide by $\\pm\\sqrt{A^2+B^2}$, choosing the sign so the right side is positive."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "Pick the sign opposite to that of $C$ — a distance $p$ cannot be negative."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\cos\\omega = \\frac{A}{\\pm\\sqrt{A^2+B^2}}, \\quad \\sin\\omega = \\frac{B}{\\pm\\sqrt{A^2+B^2}}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "p = \\frac{|C|}{\\sqrt{A^2+B^2}}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Fix $\\omega$ from the signs of $\\cos\\omega$ and $\\sin\\omega$ together — never from one alone."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "General form is the only form that never fails — your universal fallback."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one step trips up more students than any other in the subtopic, so let's walk it slowly."
+            },
+            {
+              "seq": 2,
+              "text": "Start with the general form and move the constant to the right: A x plus B y equals minus C."
+            },
+            {
+              "seq": 3,
+              "text": "Now divide both sides by the square root of A squared plus B squared — but with a sign in front, chosen so the right-hand side comes out positive."
+            },
+            {
+              "seq": 4,
+              "text": "Why the sign choice? Because that right side becomes p, and p is a distance, which can never be negative. Concretely, pick the sign opposite to the sign of C."
+            },
+            {
+              "seq": 5,
+              "text": "Once divided, cos omega is A over the signed root, and sin omega is B over the same signed root."
+            },
+            {
+              "seq": 6,
+              "text": "And p is simply the modulus of C over the root of A squared plus B squared."
+            },
+            {
+              "seq": 7,
+              "text": "The last trap: find omega from the signs of cos omega and sin omega together, because those two fix the quadrant. Reading it from cos omega alone leaves you guessing between two angles."
+            },
+            {
+              "seq": 8,
+              "text": "And remember, whatever the situation, the general form never fails — it is the one description that always works, so keep it as your fallback."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह एक step इस subtopic में बाकी सबसे ज़्यादा students को गिराता है, तो इसे धीरे-धीरे चलते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "General form से शुरू करो और constant को right में ले जाओ: A x plus B y बराबर minus C।"
+            },
+            {
+              "seq": 3,
+              "text": "अब दोनों sides को square root of A squared plus B squared से divide करो — पर आगे एक sign के साथ, ऐसा चुना कि right-hand side positive आए।"
+            },
+            {
+              "seq": 4,
+              "text": "Sign क्यों चुनना? क्योंकि वो right side p बनता है, और p एक distance है, जो कभी negative नहीं हो सकती। Concretely, C के sign के opposite sign चुनो।"
+            },
+            {
+              "seq": 5,
+              "text": "Divide करने के बाद, cos omega है A over the signed root, और sin omega है B over उसी signed root।"
+            },
+            {
+              "seq": 6,
+              "text": "और p बस है modulus of C over root of A squared plus B squared।"
+            },
+            {
+              "seq": 7,
+              "text": "आख़िरी trap: omega को cos omega और sin omega के signs से एक साथ ढूँढो, क्योंकि ये दोनों quadrant fix करते हैं। सिर्फ़ cos omega से पढ़ोगे तो दो angles के बीच guess करते रह जाओगे।"
+            },
+            {
+              "seq": 8,
+              "text": "और याद रखो, कोई भी situation हो, general form कभी fail नहीं होता — यही एक description हमेशा काम करता है, इसे fallback रखो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "formulas",
+      "subtopic": "Equations of a Line",
+      "title": "Equations of a line: formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Equations of a Line — Toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\text{Horizontal / vertical: } y = b, \\quad x = a"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\text{Point-slope: } y - y_1 = m(x - x_1)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{Two-point: } y - y_1 = \\frac{y_2 - y_1}{x_2 - x_1}(x - x_1)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{Slope-intercept: } y = mx + c"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\text{Intercept: } \\frac{x}{a} + \\frac{y}{b} = 1"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{Normal: } x\\cos\\omega + y\\sin\\omega = p, \\quad p \\ge 0"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\text{General: } Ax + By + C = 0"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "From general form: $m = -\\tfrac{A}{B}$, $a = -\\tfrac{C}{A}$, $b = -\\tfrac{C}{B}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the complete family of line equations on one board — your reference for the whole subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "A horizontal line is y equals b; a vertical line is x equals a. These are the two that slope cannot handle."
+            },
+            {
+              "seq": 3,
+              "text": "Point-slope: y minus y one equals m times x minus x one. This is the parent of the whole family."
+            },
+            {
+              "seq": 4,
+              "text": "Two-point form is the same, with the slope written as y two minus y one over x two minus x one."
+            },
+            {
+              "seq": 5,
+              "text": "Slope-intercept: y equals m x plus c, ready to read off slope and y-intercept at a glance."
+            },
+            {
+              "seq": 6,
+              "text": "Intercept form: x over a plus y over b equals one, using the two axis crossings directly."
+            },
+            {
+              "seq": 7,
+              "text": "Normal form: x cos omega plus y sin omega equals p, with p the non-negative distance from the origin."
+            },
+            {
+              "seq": 8,
+              "text": "And the universal fallback, general form: A x plus B y plus C equals zero."
+            },
+            {
+              "seq": 9,
+              "text": "From that general form, read off the slope as minus A over B, the x-intercept as minus C over A, and the y-intercept as minus C over B."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा line equations का पूरा परिवार एक board पर — पूरे subtopic के लिए तुम्हारा reference।"
+            },
+            {
+              "seq": 2,
+              "text": "Horizontal line है y बराबर b; vertical line है x बराबर a। यही दो हैं जिन्हें slope handle नहीं कर सकती।"
+            },
+            {
+              "seq": 3,
+              "text": "Point-slope: y minus y one बराबर m times x minus x one। यही पूरे परिवार का parent है।"
+            },
+            {
+              "seq": 4,
+              "text": "Two-point form वही है, slope को y two minus y one over x two minus x one लिखकर।"
+            },
+            {
+              "seq": 5,
+              "text": "Slope-intercept: y बराबर m x plus c, slope और y-intercept एक नज़र में पढ़ने के लिए तैयार।"
+            },
+            {
+              "seq": 6,
+              "text": "Intercept form: x over a plus y over b बराबर one, दोनों axis crossings को सीधे use करके।"
+            },
+            {
+              "seq": 7,
+              "text": "Normal form: x cos omega plus y sin omega बराबर p, जहाँ p origin से non-negative distance है।"
+            },
+            {
+              "seq": 8,
+              "text": "और universal fallback, general form: A x plus B y plus C बराबर zero।"
+            },
+            {
+              "seq": 9,
+              "text": "उस general form से, slope पढ़ो minus A over B, x-intercept minus C over A, और y-intercept minus C over B।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Equations of a Line",
+      "title": "Worked examples: two-point and general form",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Two-Point & General Form"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Example 1: line through $(-2,5)$ and $(3,-1)$; find it and its $y$-intercept."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "m = \\frac{-1-5}{3-(-2)} = -\\frac{6}{5}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "y - 5 = -\\tfrac{6}{5}(x+2) \\;\\Rightarrow\\; 6x + 5y - 13 = 0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 2: for $3x - 4y + 12 = 0$, read the slope and intercepts fast."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "m = -\\frac{A}{B} = -\\frac{3}{-4} = \\frac{3}{4}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "x\\text{-intercept} = -4, \\quad y\\text{-intercept} = 3"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Slope is $-\\tfrac{A}{B}$, not $\\tfrac{A}{B}$ — the sign trap."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two quick examples: build a line from two points, then dissect one already in general form."
+            },
+            {
+              "seq": 2,
+              "text": "Example one: find the line through minus two, five and three, minus one, and give its y-intercept."
+            },
+            {
+              "seq": 3,
+              "text": "Slope first: minus one minus five over three minus minus two, which is minus six over five."
+            },
+            {
+              "seq": 4,
+              "text": "Point-slope through minus two, five, then clear fractions, and you land on six x plus five y minus thirteen equals zero. Setting x to zero gives the y-intercept, thirteen over five."
+            },
+            {
+              "seq": 5,
+              "text": "Example two: for three x minus four y plus twelve equals zero, read everything off with the reduction formulas."
+            },
+            {
+              "seq": 6,
+              "text": "Slope is minus A over B, that is minus three over minus four, which is plus three over four."
+            },
+            {
+              "seq": 7,
+              "text": "For the intercepts, set y to zero to get x equals minus four, and set x to zero to get y equals three."
+            },
+            {
+              "seq": 8,
+              "text": "The trap lives right here: the slope is minus A over B, not A over B. Both plus and minus three over four appear on the option list, so anchor it — the line rises to the right, so the slope is positive."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो quick examples: दो points से line बनाओ, फिर general form वाली एक को dissect करो।"
+            },
+            {
+              "seq": 2,
+              "text": "Example one: minus two, five और three, minus one से गुज़रती line ढूँढो, और उसका y-intercept दो।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले slope: minus one minus five over three minus minus two, जो है minus six over five।"
+            },
+            {
+              "seq": 4,
+              "text": "Point-slope minus two, five से लो, फिर fractions clear करो, और मिलता है six x plus five y minus thirteen बराबर zero। x को zero करने पर y-intercept मिलता है, thirteen over five।"
+            },
+            {
+              "seq": 5,
+              "text": "Example two: three x minus four y plus twelve बराबर zero के लिए, reduction formulas से सब पढ़ लो।"
+            },
+            {
+              "seq": 6,
+              "text": "Slope है minus A over B, यानी minus three over minus four, जो है plus three over four।"
+            },
+            {
+              "seq": 7,
+              "text": "Intercepts के लिए, y को zero करो तो x बराबर minus four, और x को zero करो तो y बराबर three।"
+            },
+            {
+              "seq": 8,
+              "text": "Trap ठीक यहीं है: slope है minus A over B, A over B नहीं। Plus और minus three over four दोनों options में होते हैं, तो anchor करो — line right की तरफ़ चढ़ती है, तो slope positive है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Equations of a Line",
+      "title": "Worked example: perpendicular line in intercept form",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Perpendicular Line, Intercept Form"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Line through $(2,3)$ perpendicular to $4x - 3y + 7 = 0$; give intercept form."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "m_1 = -\\frac{A}{B} = -\\frac{4}{-3} = \\frac{4}{3}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "m = -\\frac{1}{m_1} = -\\frac{3}{4}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "y - 3 = -\\tfrac{3}{4}(x - 2) \\;\\Rightarrow\\; 3x + 4y - 18 = 0"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Now divide $3x + 4y = 18$ by $18$ for intercept form."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\frac{x}{6} + \\frac{y}{9/2} = 1"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Chain: reduction gives slope, flip-and-negate gives $\\perp$, then convert form."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example chains three ideas: reading a slope, building a perpendicular, and converting to intercept form."
+            },
+            {
+              "seq": 2,
+              "text": "We want the line through two, three that is perpendicular to four x minus three y plus seven equals zero, expressed in intercept form."
+            },
+            {
+              "seq": 3,
+              "text": "First read the given line's slope by reduction: minus A over B is minus four over minus three, that is four over three."
+            },
+            {
+              "seq": 4,
+              "text": "Perpendicular means flip and negate, so our slope is minus three over four."
+            },
+            {
+              "seq": 5,
+              "text": "Point-slope through two, three, then clear fractions, gives three x plus four y minus eighteen equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "For intercept form, write three x plus four y equals eighteen, and divide the whole thing by eighteen."
+            },
+            {
+              "seq": 7,
+              "text": "That gives x over six plus y over nine-halves equals one — so the x-intercept is six and the y-intercept is four point five."
+            },
+            {
+              "seq": 8,
+              "text": "Notice the chain: the reduction formula handed us a slope, flip-and-negate gave the perpendicular, and one division converted the form. Three subtopic ideas, one clean problem."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example तीन ideas को chain करता है: slope पढ़ना, perpendicular बनाना, और intercept form में बदलना।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें two, three से गुज़रती वो line चाहिए जो four x minus three y plus seven बराबर zero के perpendicular हो, intercept form में।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले दी गई line की slope reduction से पढ़ो: minus A over B है minus four over minus three, यानी four over three।"
+            },
+            {
+              "seq": 4,
+              "text": "Perpendicular का मतलब flip and negate, तो हमारी slope है minus three over four।"
+            },
+            {
+              "seq": 5,
+              "text": "Point-slope two, three से, फिर fractions clear करो, तो मिलता है three x plus four y minus eighteen बराबर zero।"
+            },
+            {
+              "seq": 6,
+              "text": "Intercept form के लिए three x plus four y बराबर eighteen लिखो, और पूरे को eighteen से divide करो।"
+            },
+            {
+              "seq": 7,
+              "text": "इससे मिलता है x over six plus y over nine-halves बराबर one — तो x-intercept six और y-intercept four point five।"
+            },
+            {
+              "seq": 8,
+              "text": "Chain देखो: reduction formula ने slope दी, flip-and-negate ने perpendicular, और एक division ने form बदल दी। तीन subtopic ideas, एक clean problem।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Equations of a Line",
+      "title": "Worked example: normal form (advanced)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Normal Form (Advanced)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Reduce $x - \\sqrt{3}\\,y + 8 = 0$ to normal form; find $p$ and $\\omega$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\sqrt{A^2 + B^2} = \\sqrt{1 + 3} = 2"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Since $C = 8 > 0$, divide by $-2$ so the right side becomes positive."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "-\\tfrac{1}{2}x + \\tfrac{\\sqrt{3}}{2}y = 4"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\cos\\omega = -\\tfrac{1}{2}, \\quad \\sin\\omega = \\tfrac{\\sqrt{3}}{2}, \\quad p = 4"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "$\\cos\\omega < 0$ and $\\sin\\omega > 0$ place $\\omega$ in the second quadrant: $\\omega = 120^\\circ$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Dividing by $+2$ instead would give '$p = -4$' — a forbidden negative distance."
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "latex": "x\\cos 120^\\circ + y\\sin 120^\\circ = 4"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Now the Advanced version, where the sign choice is the whole game.</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "Reduce x minus root three y plus eight equals zero to normal form, and find both p and omega exactly."
+            },
+            {
+              "seq": 3,
+              "text": "Here A is one, B is minus root three, so the root of A squared plus B squared is the root of one plus three, which is two."
+            },
+            {
+              "seq": 4,
+              "text": "The constant C is plus eight, which is positive, so we must divide by minus two to force the right-hand side positive."
+            },
+            {
+              "seq": 5,
+              "text": "Dividing gives minus one half x plus root three over two y equals four."
+            },
+            {
+              "seq": 6,
+              "text": "So cos omega is minus one half, sin omega is root three over two, and p is four."
+            },
+            {
+              "seq": 7,
+              "text": "Now read omega from both signs together: cosine negative and sine positive put omega in the second quadrant, so omega is one hundred twenty degrees."
+            },
+            {
+              "seq": 8,
+              "text": "Had we divided by plus two instead, the right side would read minus four, claiming p equals minus four — a negative distance, which is forbidden. That alone flags the wrong sign choice."
+            },
+            {
+              "seq": 9,
+              "text": "So the normal form is x cos one hundred twenty plus y sin one hundred twenty equals four, with p four and omega one hundred twenty degrees."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>अब Advanced version, जहाँ sign choice ही पूरा खेल है।</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "x minus root three y plus eight बराबर zero को normal form में reduce करो, और p और omega दोनों exactly ढूँढो।"
+            },
+            {
+              "seq": 3,
+              "text": "यहाँ A है one, B है minus root three, तो root of A squared plus B squared है root of one plus three, यानी two।"
+            },
+            {
+              "seq": 4,
+              "text": "Constant C है plus eight, जो positive है, इसलिए right-hand side positive करने के लिए हमें minus two से divide करना होगा।"
+            },
+            {
+              "seq": 5,
+              "text": "Divide करने पर मिलता है minus one half x plus root three over two y बराबर four।"
+            },
+            {
+              "seq": 6,
+              "text": "तो cos omega है minus one half, sin omega है root three over two, और p है four।"
+            },
+            {
+              "seq": 7,
+              "text": "अब omega को दोनों signs से एक साथ पढ़ो: cosine negative और sine positive omega को second quadrant में डालते हैं, तो omega है one hundred twenty degrees।"
+            },
+            {
+              "seq": 8,
+              "text": "अगर plus two से divide करते, तो right side minus four पढ़ता, यानी p बराबर minus four — negative distance, जो forbidden है। यही अकेले ग़लत sign choice बता देता है।"
+            },
+            {
+              "seq": 9,
+              "text": "तो normal form है x cos one hundred twenty plus y sin one hundred twenty बराबर four, p four और omega one hundred twenty degrees के साथ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "tips",
+      "subtopic": "Equations of a Line",
+      "title": "Pitfalls and pro-tips: equations of a line",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pitfalls: Equations of a Line"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Slope from the general form is $m = -\\tfrac{A}{B}$, not $\\tfrac{A}{B}$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "A negative $p$ in normal form means the wrong sign was chosen — flip it."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Read $\\omega$ from the signs of both $\\cos\\omega$ and $\\sin\\omega$, never one alone."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Lines through the origin or parallel to an axis have no valid intercept form."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Pro-tip: set $y=0$ for the $x$-intercept and $x=0$ for the $y$-intercept — no signs to memorise."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The substitution carries the signs for you, every time."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "And the general form never fails — keep it as your universal fallback."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close this subtopic with the four traps examiners plant in equation problems."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, the most frequent: the slope from the general form is minus A over B, not A over B. Forgetting that minus is the classic error."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: if your normal-form reduction ever hands you a negative p, you chose the wrong sign for the radical. A distance cannot be negative, so just flip it."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: fix omega from the signs of both cosine and sine together. Cosine alone leaves one hundred twenty and two hundred forty degrees indistinguishable."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: do not force intercept form onto a line through the origin or one parallel to an axis — it has no valid intercept form there."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>And the pro-tip that saves sign errors: to find intercepts, just set y to zero for the x-intercept and x to zero for the y-intercept.</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "The substitution carries all the signs for you, so you never have to recall minus C over A or minus C over B under pressure."
+            },
+            {
+              "seq": 8,
+              "text": "And whenever a form feels awkward, fall back on the general form — it is the one description that never fails."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic को उन चार traps के साथ बंद करते हैं जो examiners equation problems में लगाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, सबसे common: general form से slope है minus A over B, A over B नहीं। वो minus भूलना classic error है।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: अगर normal-form reduction कभी negative p दे, तो तुमने radical का sign ग़लत चुना है। Distance negative नहीं हो सकती, तो बस flip कर दो।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: omega को cosine और sine दोनों के signs से एक साथ fix करो। अकेली cosine one hundred twenty और two hundred forty degrees को अलग नहीं कर पाती।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: origin से गुज़रती या किसी axis के parallel line पर intercept form ज़बरदस्ती मत डालो — वहाँ valid intercept form होता ही नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>और वो pro-tip जो sign errors बचाता है: intercepts के लिए बस y को zero करो x-intercept के लिए, और x को zero करो y-intercept के लिए।</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "Substitution सारे signs खुद carry कर लेता है, तो pressure में minus C over A या minus C over B याद करने की ज़रूरत ही नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "और जब कोई form awkward लगे, general form पर लौट आओ — यही एक description है जो कभी fail नहीं होता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Distance Formulas",
+      "title": "Distance is the perpendicular drop",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Distance = the Perpendicular Drop"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The distance from a point to a line is the shortest path — the perpendicular dropped onto it."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The vector $(A,B)$ points perpendicular to $Ax + By + C = 0$: its normal direction."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Distance = the projection of the gap onto the normal (A,B).",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"180\" x2=\"360\" y2=\"80\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"250\" y=\"96\" font-size=\"11\" fill=\"#059669\">Ax + By + C = 0</text><circle cx=\"140\" cy=\"60\" r=\"4\" fill=\"#c026d3\"/><text x=\"120\" y=\"56\" font-size=\"12\" fill=\"#c026d3\">P</text><circle cx=\"168\" cy=\"144\" r=\"4\" fill=\"#1a56db\"/><text x=\"150\" y=\"162\" font-size=\"11\" fill=\"#1a56db\">Q</text><line x1=\"140\" y1=\"60\" x2=\"168\" y2=\"144\" stroke=\"#c026d3\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><text x=\"176\" y=\"104\" font-size=\"11\" fill=\"#666\">d</text><line x1=\"240\" y1=\"133\" x2=\"268\" y2=\"49\" stroke=\"#999\" stroke-width=\"1.2\"/><text x=\"272\" y=\"48\" font-size=\"10\" fill=\"#999\">normal (A, B)</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "d = \\frac{|Ax_1 + By_1 + C|}{\\sqrt{A^2 + B^2}}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Two parallel lines share one normal, so their distance collapses to a constant."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The symmetric form describes a line as 'stand at $P$, face $\\theta$, walk a distance $r$'."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "All three tools give the perpendicular distance — never a slant along some other direction."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "You can already write a line; the natural next question is how far something is from it."
+            },
+            {
+              "seq": 2,
+              "text": "If a railway track is the line and your house is a point, the distance that matters is not some random diagonal — it is the shortest path, the perpendicular dropped straight onto the track."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the quiet fact that powers everything: the vector A comma B points perpendicular to the line A x plus B y plus C equals zero. That is the line's normal direction."
+            },
+            {
+              "seq": 4,
+              "text": "So to measure how far a point P sits from the line, you just project the gap between P and the line onto that normal direction and read off the length."
+            },
+            {
+              "seq": 5,
+              "text": "That projection is exactly the famous formula: d equals the modulus of A x one plus B y one plus C, over the root of A squared plus B squared."
+            },
+            {
+              "seq": 6,
+              "text": "Two parallel lines are just a special case: they share the same normal, so the distance between them collapses to one clean constant."
+            },
+            {
+              "seq": 7,
+              "text": "There is also a third tool, the symmetric form, which describes a line as: stand at P, face the inclination theta, and walk a signed distance r."
+            },
+            {
+              "seq": 8,
+              "text": "One thing ties them together: all three measure the perpendicular distance, never a slant along some arbitrary direction."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Line लिखना तो तुम्हें आ गया; अगला natural सवाल है कि उससे कोई चीज़ कितनी दूर है।"
+            },
+            {
+              "seq": 2,
+              "text": "अगर railway track line है और तुम्हारा घर एक point, तो मायने रखने वाली distance कोई random diagonal नहीं — वो shortest path है, track पर सीधे गिराया perpendicular।"
+            },
+            {
+              "seq": 3,
+              "text": "यह रहा वो quiet fact जो सब कुछ चलाता है: vector A comma B line A x plus B y plus C बराबर zero के perpendicular point करता है। यही line की normal direction है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो point P line से कितनी दूर है नापने के लिए, बस P और line के बीच के gap को उस normal direction पर project करो और length पढ़ लो।"
+            },
+            {
+              "seq": 5,
+              "text": "यही projection ठीक वो famous formula है: d बराबर modulus of A x one plus B y one plus C, over root of A squared plus B squared।"
+            },
+            {
+              "seq": 6,
+              "text": "दो parallel lines बस एक special case हैं: उनकी normal same होती है, तो उनके बीच की distance एक clean constant में गिर जाती है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक तीसरा tool भी है, symmetric form, जो line को ऐसे describe करता है: P पर खड़े हो, inclination theta की तरफ़ मुँह करो, और signed distance r चलो।"
+            },
+            {
+              "seq": 8,
+              "text": "एक बात इन्हें जोड़ती है: तीनों perpendicular distance नापते हैं, कभी किसी arbitrary direction का slant नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Distance Formulas",
+      "title": "Proof: distance of a point from a line",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: Distance of a Point from a Line"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Every first-degree equation $Ax+By+C=0$ is a line: rewrite it as $y = -\\tfrac{A}{B}x - \\tfrac{C}{B}$ or as $x = -\\tfrac{C}{A}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The unit normal is $\\hat{n} = \\dfrac{(A,B)}{\\sqrt{A^2+B^2}}$; pick any point $R(x_0,y_0)$ on the line."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "Ax_0 + By_0 + C = 0 \\;\\Rightarrow\\; Ax_0 + By_0 = -C"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "The distance is the projection of $\\vec{RP}$ onto $\\hat{n}$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "d = \\left| \\vec{RP} \\cdot \\hat{n} \\right| = \\frac{|A(x_1 - x_0) + B(y_1 - y_0)|}{\\sqrt{A^2+B^2}}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "d = \\frac{|Ax_1 + By_1 + C|}{\\sqrt{A^2+B^2}}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "The signed value, without the bars, tells you which side of the line $P$ lies on."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's derive the point-to-line formula so it becomes something you can rebuild, not just recall."
+            },
+            {
+              "seq": 2,
+              "text": "First a quick lead-in: every first-degree equation is genuinely a line. If B is non-zero, rewrite it as y equals minus A over B, x, minus C over B; if B is zero, it is the vertical line x equals minus C over A."
+            },
+            {
+              "seq": 3,
+              "text": "Now the unit normal is the vector A comma B divided by the root of A squared plus B squared. Pick any point R on the line at all."
+            },
+            {
+              "seq": 4,
+              "text": "Since R lies on the line, A x nought plus B y nought plus C equals zero, so A x nought plus B y nought equals minus C. Hold that."
+            },
+            {
+              "seq": 5,
+              "text": "The perpendicular distance from P is just the length of the projection of the vector from R to P onto the unit normal."
+            },
+            {
+              "seq": 6,
+              "text": "That projection is the modulus of A times x one minus x nought, plus B times y one minus y nought, all over the root."
+            },
+            {
+              "seq": 7,
+              "text": "Substitute the fact we held: the bracket becomes A x one plus B y one plus C, and the distance is the modulus of that over the root of A squared plus B squared."
+            },
+            {
+              "seq": 8,
+              "text": "One bonus: keep the signed value without the bars and its sign tells you which side of the line P is on — a fact we will exploit later."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो point-to-line formula derive करते हैं ताकि यह recall नहीं, rebuild करने लायक बन जाए।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले एक quick lead-in: हर first-degree equation सचमुच एक line है। अगर B non-zero हो, तो इसे y बराबर minus A over B, x, minus C over B लिखो; अगर B zero हो, तो यह vertical line x बराबर minus C over A है।"
+            },
+            {
+              "seq": 3,
+              "text": "अब unit normal है vector A comma B, root of A squared plus B squared से divided। Line पर कोई भी point R चुन लो।"
+            },
+            {
+              "seq": 4,
+              "text": "R line पर है, इसलिए A x nought plus B y nought plus C बराबर zero, यानी A x nought plus B y nought बराबर minus C। इसे पकड़ो।"
+            },
+            {
+              "seq": 5,
+              "text": "P से perpendicular distance बस R से P तक के vector का unit normal पर projection की length है।"
+            },
+            {
+              "seq": 6,
+              "text": "वो projection है modulus of A times x one minus x nought, plus B times y one minus y nought, whole over the root।"
+            },
+            {
+              "seq": 7,
+              "text": "पकड़ी हुई बात substitute करो: bracket बन जाता है A x one plus B y one plus C, और distance है उसका modulus over root of A squared plus B squared।"
+            },
+            {
+              "seq": 8,
+              "text": "एक bonus: signed value bars के बिना रखो तो उसका sign बताता है P line के किस side है — यही आगे काम आएगा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Distance Formulas",
+      "title": "Proof: parallel lines and the symmetric form",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: Parallel Lines & the Symmetric Form"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Parallel lines $Ax+By+C_1=0$ and $Ax+By+C_2=0$ are everywhere the same distance apart."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Pick the point $\\left(-\\tfrac{C_1}{A},\\, 0\\right)$ on the first, then measure to the second."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "d = \\frac{|C_1 - C_2|}{\\sqrt{A^2 + B^2}}"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Valid only after both lines show identical $A$ and $B$ — normalize first."
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "caption": "A point at signed distance r from P along inclination theta.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"200\" x2=\"400\" y2=\"200\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"402\" y=\"204\" font-size=\"12\" fill=\"#333\">x</text><line x1=\"60\" y1=\"200\" x2=\"330\" y2=\"45\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"180\" r=\"4\" fill=\"#1a56db\"/><text x=\"70\" y=\"176\" font-size=\"12\" fill=\"#1a56db\">P</text><circle cx=\"246\" cy=\"90\" r=\"4\" fill=\"#c026d3\"/><text x=\"252\" y=\"88\" font-size=\"12\" fill=\"#c026d3\">Q</text><line x1=\"90\" y1=\"180\" x2=\"246\" y2=\"90\" stroke=\"#c026d3\" stroke-width=\"1.4\" stroke-dasharray=\"5 3\"/><text x=\"150\" y=\"126\" font-size=\"11\" fill=\"#666\">r</text><text x=\"118\" y=\"196\" font-size=\"11\" fill=\"#666\">theta</text><text x=\"252\" y=\"68\" font-size=\"10\" fill=\"#666\">(cos t, sin t)</text></svg>"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "x = x_1 + r\\cos\\theta, \\quad y = y_1 + r\\sin\\theta"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Because $(\\cos\\theta,\\sin\\theta)$ is a unit step, the parameter $r$ is the true distance."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now two shorter derivations: the gap between parallel lines, and why the symmetric form hands you distance for free."
+            },
+            {
+              "seq": 2,
+              "text": "Two parallel lines share the same A and B and differ only in the constant. Since they are parallel, they sit the same distance apart everywhere."
+            },
+            {
+              "seq": 3,
+              "text": "So the trick is easy: grab a convenient point on the first line, say minus C one over A comma zero, and measure its distance to the second line with the formula we just proved."
+            },
+            {
+              "seq": 4,
+              "text": "The A x and B y terms cancel neatly, and what survives is the modulus of C one minus C two over the root of A squared plus B squared."
+            },
+            {
+              "seq": 5,
+              "text": "One firm condition, though: this only works once both lines show identical A and B. If they do not, normalize one line first, or your answer is simply wrong."
+            },
+            {
+              "seq": 6,
+              "text": "Now the symmetric form. Start at P, face the inclination theta, and step a signed distance r along that direction."
+            },
+            {
+              "seq": 7,
+              "text": "The point you reach has coordinates x one plus r cos theta, and y one plus r sin theta."
+            },
+            {
+              "seq": 8,
+              "text": "And here is the elegance: because cos theta, sin theta is a unit step, the parameter r is the genuine distance travelled — so solving for r reads off distances directly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब दो छोटी derivations: parallel lines के बीच का gap, और symmetric form distance मुफ़्त में क्यों देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "दो parallel lines की A और B same होती हैं, सिर्फ़ constant अलग। Parallel होने से वे हर जगह एक ही distance पर रहती हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो trick आसान है: पहली line पर एक convenient point लो, जैसे minus C one over A comma zero, और उसकी distance दूसरी line से उसी formula से नापो जो अभी prove की।"
+            },
+            {
+              "seq": 4,
+              "text": "A x और B y terms साफ़ cancel हो जाते हैं, और बचता है modulus of C one minus C two over root of A squared plus B squared।"
+            },
+            {
+              "seq": 5,
+              "text": "पर एक firm condition: यह तभी काम करता है जब दोनों lines की A और B identical हों। अगर नहीं, तो पहले एक line normalize करो, वरना answer बस ग़लत है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब symmetric form। P से शुरू करो, inclination theta की तरफ़ मुँह करो, और उस direction में signed distance r चलो।"
+            },
+            {
+              "seq": 7,
+              "text": "जिस point पर पहुँचते हो उसके coordinates हैं x one plus r cos theta, और y one plus r sin theta।"
+            },
+            {
+              "seq": 8,
+              "text": "और यही elegance है: क्योंकि cos theta, sin theta एक unit step है, parameter r चली गई असली distance है — तो r के लिए solve करना सीधे distances पढ़ देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "formulas",
+      "subtopic": "Distance Formulas",
+      "title": "Distance formulas: toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Distance Formulas — Toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\text{Point to line: } d = \\frac{|Ax_1 + By_1 + C|}{\\sqrt{A^2 + B^2}}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\text{Parallel lines: } d = \\frac{|C_1 - C_2|}{\\sqrt{A^2 + B^2}}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "Normalize to identical $A, B$ before using the parallel-line formula."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{Symmetric form: } \\frac{x - x_1}{\\cos\\theta} = \\frac{y - y_1}{\\sin\\theta} = r"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Here $r$ is the signed distance from $(x_1,y_1)$ along inclination $\\theta$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{Side test: sign of } (Ax_1 + By_1 + C)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Same sign $\\Rightarrow$ same side; opposite signs $\\Rightarrow$ the line separates the points."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the compact toolkit for every distance question in this chapter."
+            },
+            {
+              "seq": 2,
+              "text": "Point to line: d is the modulus of A x one plus B y one plus C, over the root of A squared plus B squared. The line must be in general form first."
+            },
+            {
+              "seq": 3,
+              "text": "Parallel lines: d is the modulus of C one minus C two over the same root."
+            },
+            {
+              "seq": 4,
+              "text": "But only after normalizing both lines to identical A and B — this is the single most common slip, so write it on your hand."
+            },
+            {
+              "seq": 5,
+              "text": "The symmetric form: x minus x one over cos theta equals y minus y one over sin theta equals r."
+            },
+            {
+              "seq": 6,
+              "text": "Here r is the signed distance from the base point along the inclination theta — the parameter is the ruler."
+            },
+            {
+              "seq": 7,
+              "text": "And the side test: just look at the sign of A x one plus B y one plus C."
+            },
+            {
+              "seq": 8,
+              "text": "Same sign for two points means they are on the same side; opposite signs mean the line runs between them."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा इस chapter के हर distance सवाल के लिए compact toolkit।"
+            },
+            {
+              "seq": 2,
+              "text": "Point to line: d है modulus of A x one plus B y one plus C, over root of A squared plus B squared। Line पहले general form में होनी चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Parallel lines: d है modulus of C one minus C two over उसी root।"
+            },
+            {
+              "seq": 4,
+              "text": "पर सिर्फ़ दोनों lines को identical A और B में normalize करने के बाद — यही सबसे common slip है, तो इसे हाथ पर लिख लो।"
+            },
+            {
+              "seq": 5,
+              "text": "Symmetric form: x minus x one over cos theta बराबर y minus y one over sin theta बराबर r।"
+            },
+            {
+              "seq": 6,
+              "text": "यहाँ r base point से inclination theta के साथ signed distance है — parameter ही ruler है।"
+            },
+            {
+              "seq": 7,
+              "text": "और side test: बस A x one plus B y one plus C का sign देखो।"
+            },
+            {
+              "seq": 8,
+              "text": "दो points का same sign मतलब वे same side पर; opposite signs मतलब line उनके बीच से गुज़रती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Distance Formulas",
+      "title": "Worked examples: point-line and parallel lines",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Point-Line & Parallel Lines"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Example 1: distance of $(3,-4)$ from $4x + 3y - 5 = 0$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "d = \\frac{|4(3) + 3(-4) - 5|}{\\sqrt{16 + 9}} = \\frac{5}{5} = 1"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Example 2: distance between $3x - 4y + 7 = 0$ and $6x - 8y - 5 = 0$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Normalize the second: divide by $2$ to get $3x - 4y - 2.5 = 0$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "d = \\frac{|7 - (-2.5)|}{5} = \\frac{9.5}{5} = 1.9"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Using the lines as written gives $\\tfrac{12}{5} = 2.4$ — the planted wrong answer."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Always normalize to identical $A, B$ before subtracting the constants."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two worked examples: a plain point-to-line distance, then a parallel-line trap."
+            },
+            {
+              "seq": 2,
+              "text": "Example one: the distance of the point three, minus four from the line four x plus three y minus five equals zero."
+            },
+            {
+              "seq": 3,
+              "text": "Plug in: four times three plus three times minus four minus five, in modulus, is five; the root of sixteen plus nine is five; so the distance is one unit."
+            },
+            {
+              "seq": 4,
+              "text": "Example two: the distance between three x minus four y plus seven equals zero and six x minus eight y minus five equals zero."
+            },
+            {
+              "seq": 5,
+              "text": "The lines are parallel, but not yet comparable — the second has doubled coefficients. Divide it by two to get three x minus four y minus two point five equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "Now C one is seven and C two is minus two point five, over the root, which is five. The distance is nine point five over five, that is one point nine."
+            },
+            {
+              "seq": 7,
+              "text": "The trap is using the lines as written: modulus of seven minus minus five over five gives two point four — exactly the planted wrong answer."
+            },
+            {
+              "seq": 8,
+              "text": "So the rule is absolute: always normalize both lines to identical A and B before you subtract the constants."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो worked examples: एक plain point-to-line distance, फिर एक parallel-line trap।"
+            },
+            {
+              "seq": 2,
+              "text": "Example one: point three, minus four की line four x plus three y minus five बराबर zero से distance।"
+            },
+            {
+              "seq": 3,
+              "text": "Plug in करो: four times three plus three times minus four minus five, modulus में, है five; root of sixteen plus nine है five; तो distance है one unit।"
+            },
+            {
+              "seq": 4,
+              "text": "Example two: three x minus four y plus seven बराबर zero और six x minus eight y minus five बराबर zero के बीच distance।"
+            },
+            {
+              "seq": 5,
+              "text": "Lines parallel हैं, पर अभी comparable नहीं — दूसरी के coefficients doubled हैं। इसे two से divide करो तो three x minus four y minus two point five बराबर zero।"
+            },
+            {
+              "seq": 6,
+              "text": "अब C one है seven और C two है minus two point five, root over, जो five है। Distance है nine point five over five, यानी one point nine।"
+            },
+            {
+              "seq": 7,
+              "text": "Trap है lines को as written use करना: modulus of seven minus minus five over five देता है two point four — ठीक वही planted wrong answer।"
+            },
+            {
+              "seq": 8,
+              "text": "तो rule absolute है: constants subtract करने से पहले हमेशा दोनों lines को identical A और B में normalize करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Distance Formulas",
+      "title": "Worked example: distance from origin to line AB",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Distance from Origin to Line AB"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Find the perpendicular distance from the origin to the line joining $A(1,2)$ and $B(4,6)$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{slope} = \\frac{6 - 2}{4 - 1} = \\frac{4}{3}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "y - 2 = \\tfrac{4}{3}(x - 1) \\;\\Rightarrow\\; 4x - 3y + 2 = 0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Now apply the point-line distance from $O(0,0)$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "d = \\frac{|4(0) - 3(0) + 2|}{\\sqrt{16 + 9}} = \\frac{2}{5}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Two subtopics chained: the two-point equation, then the distance formula."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The answer is two-fifths, or zero point four units."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example chains the two-point equation from the last subtopic into the distance formula from this one."
+            },
+            {
+              "seq": 2,
+              "text": "Find the perpendicular distance from the origin to the line joining A at one, two and B at four, six."
+            },
+            {
+              "seq": 3,
+              "text": "Step one is the line's equation. Its slope is six minus two over four minus one, which is four over three."
+            },
+            {
+              "seq": 4,
+              "text": "Point-slope through one, two, cleared of fractions, gives four x minus three y plus two equals zero."
+            },
+            {
+              "seq": 5,
+              "text": "Step two: apply the point-to-line distance, using the origin at zero, zero as the point."
+            },
+            {
+              "seq": 6,
+              "text": "That is the modulus of four times zero minus three times zero plus two, over the root of sixteen plus nine, which is two over five."
+            },
+            {
+              "seq": 7,
+              "text": "Notice the two-subtopic chain: first you built the line from two points, then you measured with the distance formula. No shortcut skips the equation step."
+            },
+            {
+              "seq": 8,
+              "text": "So the answer is two-fifths, or zero point four units. Clean and direct."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example पिछले subtopic की two-point equation को इस subtopic के distance formula के साथ chain करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Origin से उस line की perpendicular distance ढूँढो जो A at one, two और B at four, six को जोड़ती है।"
+            },
+            {
+              "seq": 3,
+              "text": "Step one है line की equation। इसकी slope है six minus two over four minus one, यानी four over three।"
+            },
+            {
+              "seq": 4,
+              "text": "Point-slope one, two से, fractions clear करके, देता है four x minus three y plus two बराबर zero।"
+            },
+            {
+              "seq": 5,
+              "text": "Step two: point-to-line distance apply करो, origin zero, zero को point मानकर।"
+            },
+            {
+              "seq": 6,
+              "text": "यह है modulus of four times zero minus three times zero plus two, over root of sixteen plus nine, जो है two over five।"
+            },
+            {
+              "seq": 7,
+              "text": "Two-subtopic chain देखो: पहले दो points से line बनाई, फिर distance formula से नापा। कोई shortcut equation step को skip नहीं करता।"
+            },
+            {
+              "seq": 8,
+              "text": "तो answer है two-fifths, यानी zero point four units। Clean और direct।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Distance Formulas",
+      "title": "Worked example: symmetric form (advanced)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Symmetric Form (Advanced)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A line through $P(1,1)$ with $\\theta = 60^\\circ$ meets $2x + y = 8$ at $Q$. Find $PQ$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "x = 1 + \\tfrac{r}{2}, \\quad y = 1 + \\tfrac{\\sqrt{3}}{2}r"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Substitute into $2x + y = 8$ and solve directly for $r$, which is the distance."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "2\\left(1 + \\tfrac{r}{2}\\right) + \\left(1 + \\tfrac{\\sqrt{3}}{2}r\\right) = 8"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "r\\left(1 + \\tfrac{\\sqrt{3}}{2}\\right) = 5 \\;\\Rightarrow\\; r = \\frac{10}{2 + \\sqrt{3}}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "r = 10(2 - \\sqrt{3}) = 20 - 10\\sqrt{3}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "The unit direction is what makes $r$ the true length — non-unit numbers break it."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Here is where the symmetric form really shines — it delivers a distance as a single solved number.</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "A line through P at one, one with inclination sixty degrees meets the line two x plus y equals eight at Q. Find the length P Q."
+            },
+            {
+              "seq": 3,
+              "text": "Parametrize with the unit direction cos sixty, sin sixty, which is one half and root three over two. So x is one plus r over two, and y is one plus root three over two, r."
+            },
+            {
+              "seq": 4,
+              "text": "Now substitute both into two x plus y equals eight and solve straight for r — and that r is the distance we want."
+            },
+            {
+              "seq": 5,
+              "text": "The substitution gives two times the quantity one plus r over two, plus the quantity one plus root three over two r, equals eight."
+            },
+            {
+              "seq": 6,
+              "text": "That simplifies to r times one plus root three over two equals five, so r equals ten over two plus root three."
+            },
+            {
+              "seq": 7,
+              "text": "Rationalize the denominator and r becomes ten times two minus root three, that is twenty minus ten root three, about two point six eight units."
+            },
+            {
+              "seq": 8,
+              "text": "The whole trick rests on using the unit direction. Feed in non-unit direction numbers and the parameter stops equalling the true length — that failure is silent, so guard against it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>यहीं symmetric form सच में चमकता है — यह distance को एक ही solved number की तरह दे देता है।</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "P at one, one से inclination sixty degrees वाली line, line two x plus y बराबर eight को Q पर मिलती है। Length P Q ढूँढो।"
+            },
+            {
+              "seq": 3,
+              "text": "Unit direction cos sixty, sin sixty से parametrize करो, जो है one half और root three over two। तो x है one plus r over two, और y है one plus root three over two, r।"
+            },
+            {
+              "seq": 4,
+              "text": "अब दोनों को two x plus y बराबर eight में substitute करो और सीधे r के लिए solve करो — और वही r हमारी distance है।"
+            },
+            {
+              "seq": 5,
+              "text": "Substitution देता है two times the quantity one plus r over two, plus the quantity one plus root three over two r, बराबर eight।"
+            },
+            {
+              "seq": 6,
+              "text": "यह simplify होकर r times one plus root three over two बराबर five बनता है, तो r बराबर ten over two plus root three।"
+            },
+            {
+              "seq": 7,
+              "text": "Denominator rationalize करो और r बन जाता है ten times two minus root three, यानी twenty minus ten root three, लगभग two point six eight units।"
+            },
+            {
+              "seq": 8,
+              "text": "पूरा trick unit direction use करने पर टिका है। Non-unit direction numbers डालो तो parameter true length के बराबर नहीं रहता — वो failure silent है, तो सावधान रहो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "tips",
+      "subtopic": "Distance Formulas",
+      "title": "Pitfalls and pro-tips: distance formulas",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pitfalls: Distance Formulas"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Skipping normalization for parallel lines gives the wrong distance — rescale first."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Distance is non-negative: keep the modulus in the point-line formula."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The denominator is $\\sqrt{A^2 + B^2}$ — not $A^2 + B^2$, and not $|A| + |B|$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "In the symmetric form, only the unit direction $(\\cos\\theta,\\sin\\theta)$ makes $r$ the true distance."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Pro-tip: the sign of $\\dfrac{Ax_1 + By_1 + C}{\\sqrt{A^2+B^2}}$ tells you which side a point is on."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Same sign means same side; opposite signs mean the line separates them."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "That settles 'same side?' and 'is the origin inside the triangle?' with no extra construction."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close distances with the four traps that quietly drain marks."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, the big one: skipping normalization for parallel lines. The constant-difference formula is valid only when both lines show identical A and B, so rescale one first, every time."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: distance is never negative, so keep the modulus in the point-to-line formula. The signed version is useful, but it is not the distance."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: the denominator is the root of A squared plus B squared — not A squared plus B squared, and not the sum of the absolute values. It is the same root-sum-of-squares you met in the normal form."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: in the symmetric form, only the genuine unit direction, cos theta and sin theta, makes the parameter r equal the true distance."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>And the pro-tip worth its weight in marks: the sign of the signed distance tells you which side of the line a point sits on.</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "Two points with the same sign lie on the same side; opposite signs mean the line runs between them."
+            },
+            {
+              "seq": 8,
+              "text": "That one idea settles questions like 'are these on the same side?' and even 'is the origin inside this triangle?' with no extra construction at all."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Distances को उन चार traps के साथ बंद करते हैं जो chुपके से marks निकाल लेते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, बड़ा वाला: parallel lines के लिए normalization छोड़ना। Constant-difference formula तभी valid है जब दोनों lines की A और B identical हों, तो पहले एक rescale करो, हर बार।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: distance कभी negative नहीं होती, तो point-to-line formula में modulus रखो। Signed version useful है, पर वो distance नहीं है।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: denominator है root of A squared plus B squared — A squared plus B squared नहीं, और absolute values का sum भी नहीं। यही root-sum-of-squares तुम्हें normal form में मिला था।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: symmetric form में सिर्फ़ असली unit direction, cos theta और sin theta, parameter r को true distance के बराबर बनाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>और वो pro-tip जो marks के बराबर कीमती है: signed distance का sign बताता है point line के किस side पर है।</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "Same sign वाले दो points same side पर; opposite signs मतलब line उनके बीच से गुज़रती है।"
+            },
+            {
+              "seq": 8,
+              "text": "यही एक idea 'same side पर हैं क्या' और यहाँ तक कि 'origin इस triangle के अंदर है क्या' जैसे सवाल बिना किसी extra construction के हल कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

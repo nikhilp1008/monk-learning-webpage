@@ -1,0 +1,2881 @@
+{
+  "chapter": "Vector Algebra",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 10,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Vector Operations & Components",
+      "title": "Scalar vs vector: the auto-driver test",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Scalar vs Vector: what is missing?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Scalar = size only. Vector = size AND direction."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "'Take me 4 km' is incomplete; '4 km towards Nehru Place' is a vector."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "style": "red-margin",
+          "text": "The number alone is a scalar; attach a direction and it becomes a vector."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Scalars: temperature, mass, distance, speed, bank balance."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Vectors: displacement, velocity, force, a fielder's throw."
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "caption": "The number 4 km is a scalar; add a direction and it becomes a vector.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah1\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 Z\" fill=\"#333\"/></marker></defs><text x=\"120\" y=\"28\" font-size=\"15\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Same size, different vectors</text><circle cx=\"90\" cy=\"150\" r=\"4\" fill=\"#333\"/><text x=\"55\" y=\"175\" font-size=\"12\" font-family=\"system-ui, sans-serif\">Start (CP)</text><line x1=\"90\" y1=\"150\" x2=\"250\" y2=\"70\" stroke=\"#c0392b\" stroke-width=\"2.5\" marker-end=\"url(#ah1)\"/><text x=\"252\" y=\"64\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">4 km to Nehru Place</text><line x1=\"90\" y1=\"150\" x2=\"205\" y2=\"215\" stroke=\"#2c6fbb\" stroke-width=\"2.5\" marker-end=\"url(#ah1)\"/><text x=\"208\" y=\"222\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#2c6fbb\">4 km to Karol Bagh</text><text x=\"20\" y=\"120\" font-size=\"12\" font-family=\"system-ui, sans-serif\">Scalar: just 4 km</text></svg>"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "This single distinction is the seed of the whole chapter."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Let me start with a puzzle. You hop into an auto at Connaught Place and say, take me four kilometres. Where does the driver go?"
+            },
+            {
+              "seq": 2,
+              "text": "The problem is that a plain number carries only size. Four kilometres is a scalar, it tells you how much but never which way."
+            },
+            {
+              "seq": 3,
+              "text": "The instant you say four kilometres towards Nehru Place, you have handed over a vector, a quantity with both a magnitude and a direction."
+            },
+            {
+              "seq": 4,
+              "text": "Hold on to this: the bare number is a scalar, and the moment you attach a direction to it, it becomes a vector."
+            },
+            {
+              "seq": 5,
+              "text": "So which quantities are scalars? Temperature, mass, distance, speed, even your bank balance, each is fully pinned down by a single number."
+            },
+            {
+              "seq": 6,
+              "text": "And vectors? Displacement, velocity, force, and a fielder's throw in cricket, a throw of eighty kilometres an hour means nothing until you add, towards the stumps."
+            },
+            {
+              "seq": 7,
+              "text": "Picture it on the board: four kilometres by itself sits as a lonely number, while the two arrows leave the same point heading to completely different corners of the city."
+            },
+            {
+              "seq": 8,
+              "text": "That one distinction, size alone versus size with direction, is the seed from which this entire chapter grows."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Ek puzzle से शुरू करते हैं। आप Connaught Place पर auto में बैठते हैं और कहते हैं, take me four kilometres. Driver कहाँ जाएगा?"
+            },
+            {
+              "seq": 2,
+              "text": "Problem ये है कि एक plain number सिर्फ size बताता है। Four kilometres एक scalar है, कितना बताता है but किधर कभी नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "जैसे ही आप कहते हैं four kilometres towards Nehru Place, आपने एक vector दे दिया, ऐसी quantity जिसमें magnitude और direction दोनों हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "ये याद रखिए: अकेला number एक scalar है, और जिस moment आप उसमें direction जोड़ते हैं, वो vector बन जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो कौन सी quantities scalars हैं? Temperature, mass, distance, speed, यहाँ तक कि आपका bank balance, हर एक सिर्फ एक number से पूरी तरह fix हो जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "और vectors? Displacement, velocity, force, और cricket में fielder का throw, eighty kilometres per hour का throw तब तक अधूरा है जब तक आप ना कहें, towards the stumps."
+            },
+            {
+              "seq": 7,
+              "text": "Board पर देखिए: four kilometres अकेला एक lonely number की तरह बैठा है, जबकि दो arrows एक ही point से निकल कर shehar के अलग अलग corners की तरफ जा रहे हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "यही एक distinction, size alone बनाम size with direction, वो seed है जिससे ये पूरा chapter grow करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Vector Operations & Components",
+      "title": "A vector is a portable instruction",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A vector is a portable instruction"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Draw a vector as a directed segment, an arrow from tail A to head B, written $\\vec{AB}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Arrow length is the magnitude $\\lvert \\vec{AB}\\rvert$; the arrowhead is the direction."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "The instruction 'move this far, in this direction' does not care where you start."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "style": "red-margin",
+          "text": "Same length and same direction means the same vector, wherever it sits."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "So we can freely slide a vector to set it tail-to-head with another."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Equality needs BOTH: same magnitude AND same direction, never one alone."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "caption": "Two arrows of equal length and direction are the same vector, wherever they are drawn.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah1\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 Z\" fill=\"#333\"/></marker></defs><text x=\"120\" y=\"28\" font-size=\"15\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Same size, different vectors</text><circle cx=\"90\" cy=\"150\" r=\"4\" fill=\"#333\"/><text x=\"55\" y=\"175\" font-size=\"12\" font-family=\"system-ui, sans-serif\">Start (CP)</text><line x1=\"90\" y1=\"150\" x2=\"250\" y2=\"70\" stroke=\"#c0392b\" stroke-width=\"2.5\" marker-end=\"url(#ah1)\"/><text x=\"252\" y=\"64\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">4 km to Nehru Place</text><line x1=\"90\" y1=\"150\" x2=\"205\" y2=\"215\" stroke=\"#2c6fbb\" stroke-width=\"2.5\" marker-end=\"url(#ah1)\"/><text x=\"208\" y=\"222\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#2c6fbb\">4 km to Karol Bagh</text><text x=\"20\" y=\"120\" font-size=\"12\" font-family=\"system-ui, sans-serif\">Scalar: just 4 km</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the mental picture that makes vectors easy: a vector is simply an instruction, move this far, in this direction."
+            },
+            {
+              "seq": 2,
+              "text": "We draw that instruction as an arrow. It runs from a tail, point A, to a head, point B, and we write it A B with an arrow on top."
+            },
+            {
+              "seq": 3,
+              "text": "The arrow does two jobs at once: its length shows the magnitude, and its arrowhead shows the direction."
+            },
+            {
+              "seq": 4,
+              "text": "Now the crucial twist, the instruction does not care where you begin. Two hundred metres due east is the same journey from any gate of the colony."
+            },
+            {
+              "seq": 5,
+              "text": "So remember this firmly: two arrows with the same length and the same direction are the very same vector, no matter where they sit on the page."
+            },
+            {
+              "seq": 6,
+              "text": "That freedom is powerful. It lets us slide a vector across the diagram and set it tail-to-head against another one when we add them."
+            },
+            {
+              "seq": 7,
+              "text": "But equality is strict, it needs both conditions. Same length alone is not enough, and same direction alone is not enough, you need both together."
+            },
+            {
+              "seq": 8,
+              "text": "On the board those two arrows sit in different places yet point the same way with equal length, so they are, truly, one and the same vector."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ वो mental picture है जो vectors को easy बना देती है: एक vector बस एक instruction है, move this far, in this direction."
+            },
+            {
+              "seq": 2,
+              "text": "उस instruction को हम arrow की तरह draw करते हैं। ये tail, point A, से head, point B, तक जाता है, और हम इसे A B ऊपर arrow लगा कर लिखते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Arrow दो काम एक साथ करता है: उसकी length magnitude दिखाती है, और उसका arrowhead direction दिखाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब crucial twist, instruction को फ़र्क नहीं पड़ता कि आप कहाँ से शुरू करते हैं। Two hundred metres due east हर gate से वही journey है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो ये पक्का याद रखिए: same length और same direction वाले दो arrows बिल्कुल एक ही vector हैं, चाहे वो page पर कहीं भी हों।"
+            },
+            {
+              "seq": 6,
+              "text": "ये freedom बहुत powerful है। इससे हम vector को diagram पर slide करके दूसरे के tail-to-head रख सकते हैं जब add करना हो।"
+            },
+            {
+              "seq": 7,
+              "text": "पर equality strict है, इसमें दोनों conditions चाहिए। सिर्फ same length काफ़ी नहीं, और सिर्फ same direction भी काफ़ी नहीं, दोनों एक साथ चाहिए।"
+            },
+            {
+              "seq": 8,
+              "text": "Board पर वो दो arrows अलग जगह हैं फिर भी same way point करते हैं equal length के साथ, तो वो सच में एक ही vector हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Vector Operations & Components",
+      "title": "Resolving into components: the i, j, k grid",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Resolving into components"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Grid directions: 'go 3 blocks east, 2 north, 1 floor up' fixes where you land."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Three perpendicular unit vectors: $\\hat i$ (x-axis), $\\hat j$ (y-axis), $\\hat k$ (z-axis), each of length 1."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\vec r = x\\,\\hat i + y\\,\\hat j + z\\,\\hat k"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Here $x, y, z$ are the scalar components of $\\vec r$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "style": "red-margin",
+          "text": "The arrow and the triple $(x, y, z)$ are two faces of the same object."
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "caption": "Any vector r resolves into components along the i, j, k axes.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 260\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah3\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 Z\" fill=\"#333\"/></marker></defs><line x1=\"60\" y1=\"200\" x2=\"330\" y2=\"200\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#ah3)\"/><text x=\"335\" y=\"205\" font-size=\"13\" font-family=\"system-ui, sans-serif\">x</text><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"40\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#ah3)\"/><text x=\"48\" y=\"35\" font-size=\"13\" font-family=\"system-ui, sans-serif\">z</text><line x1=\"60\" y1=\"200\" x2=\"180\" y2=\"250\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#ah3)\"/><text x=\"185\" y=\"255\" font-size=\"13\" font-family=\"system-ui, sans-serif\">y</text><line x1=\"60\" y1=\"200\" x2=\"250\" y2=\"90\" stroke=\"#c0392b\" stroke-width=\"2.5\" marker-end=\"url(#ah3)\"/><text x=\"240\" y=\"80\" font-size=\"14\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">r = x i + y j + z k</text><text x=\"150\" y=\"218\" font-size=\"11\" font-family=\"system-ui, sans-serif\">x component</text></svg>"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Every vector in space can be written this one way, which makes vectors computable."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We have an arrow, but arrows are hard to compute with, so we translate every vector into numbers by resolving it into components."
+            },
+            {
+              "seq": 2,
+              "text": "Think of giving directions on a city grid: go three blocks east, then two blocks north, then up one floor. Those three numbers fix your endpoint exactly."
+            },
+            {
+              "seq": 3,
+              "text": "In maths the three grid directions are the unit vectors, i-hat along the x-axis, j-hat along the y-axis, and k-hat along the z-axis, each exactly one unit long."
+            },
+            {
+              "seq": 4,
+              "text": "So any vector r becomes x times i-hat, plus y times j-hat, plus z times k-hat."
+            },
+            {
+              "seq": 5,
+              "text": "Those coefficients x, y and z are called the scalar components of the vector."
+            },
+            {
+              "seq": 6,
+              "text": "Here is the key idea: the arrow you draw and the triple x, y, z are just two faces of the very same object."
+            },
+            {
+              "seq": 7,
+              "text": "On the board you can see the arrow reaching into space while its shadow drops onto each axis to read off x, y and z."
+            },
+            {
+              "seq": 8,
+              "text": "Because every vector in space can be written this single way, components are what let us actually calculate with vectors."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हमारे पास arrow है but arrows से compute करना मुश्किल है, तो हम हर vector को numbers में translate करते हैं, उसे components में resolve करके।"
+            },
+            {
+              "seq": 2,
+              "text": "City grid पर directions सोचिए: three blocks east जाओ, फिर two blocks north, फिर up one floor. ये तीन numbers आपका endpoint exactly fix कर देते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Maths में वो तीन grid directions हैं unit vectors, i-hat x-axis के साथ, j-hat y-axis के साथ, और k-hat z-axis के साथ, हर एक exactly one unit लंबा।"
+            },
+            {
+              "seq": 4,
+              "text": "तो कोई भी vector r बन जाता है x times i-hat, plus y times j-hat, plus z times k-hat."
+            },
+            {
+              "seq": 5,
+              "text": "वो coefficients x, y और z vector के scalar components कहलाते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Key idea ये है: जो arrow आप draw करते हैं और वो triple x, y, z, दोनों एक ही object के दो faces हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Board पर arrow space में पहुँचता दिख रहा है जबकि उसकी shadow हर axis पर गिर कर x, y और z बता देती है।"
+            },
+            {
+              "seq": 8,
+              "text": "क्योंकि space का हर vector इसी एक तरीके से लिखा जा सकता है, components ही हैं जो हमें vectors के साथ actually calculate करने देते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Vector Operations & Components",
+      "title": "Four assumptions exams love to attack",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Four assumptions exams love to attack"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "1. A position vector is NOT free, it is tied to the origin O."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "2. Equality needs BOTH: same magnitude and same direction."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "3. The zero vector $\\vec 0$ has magnitude 0 and no definite direction."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "style": "red-margin",
+          "text": "'The direction cosines of $\\vec 0$' is a meaningless phrase."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "4. A unit vector needs a non-zero vector, since we divide by the magnitude."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Most 'silly' mistakes here are really a violation of one of these four."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Drag all four into the light before every problem."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before we compute anything, let me drag four quiet assumptions into the light, because exams attack them directly."
+            },
+            {
+              "seq": 2,
+              "text": "First, a position vector is not a free vector. It is deliberately anchored to the origin O; slide it and you change what it means."
+            },
+            {
+              "seq": 3,
+              "text": "Second, equality is a double condition. Two vectors are equal only when they share both magnitude and direction; parallel but different length does not count."
+            },
+            {
+              "seq": 4,
+              "text": "Third, the zero vector has magnitude zero and, importantly, no definite direction at all."
+            },
+            {
+              "seq": 5,
+              "text": "So a phrase like the direction cosines of the zero vector is simply meaningless, there is no direction to take cosines of."
+            },
+            {
+              "seq": 6,
+              "text": "Fourth, a unit vector can only be built from a non-zero vector, because the recipe divides by the magnitude, and you cannot divide by zero."
+            },
+            {
+              "seq": 7,
+              "text": "Here is the pattern to notice: most so-called silly mistakes in this topic are really a quiet violation of one of these four rules."
+            },
+            {
+              "seq": 8,
+              "text": "So keep all four in view before you start any problem, they catch errors before they happen."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "कुछ भी compute करने से पहले, चार quiet assumptions को light में लाते हैं, क्योंकि exams इन पर सीधा attack करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, position vector free vector नहीं है। ये deliberately origin O से anchored है; इसे slide करोगे तो उसका मतलब ही बदल जाएगा।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, equality double condition है। दो vectors तभी equal हैं जब magnitude और direction दोनों same हों; parallel but अलग length नहीं चलेगा।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, zero vector की magnitude zero है और, importantly, कोई definite direction है ही नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "तो direction cosines of the zero vector जैसा phrase बस meaningless है, direction ही नहीं है तो cosine किसका लें।"
+            },
+            {
+              "seq": 6,
+              "text": "चौथा, unit vector सिर्फ non-zero vector से बन सकता है, क्योंकि recipe magnitude से divide करती है, और zero से divide नहीं कर सकते।"
+            },
+            {
+              "seq": 7,
+              "text": "Pattern notice कीजिए: इस topic की ज़्यादातर so-called silly mistakes असल में इन्हीं चार rules में से किसी एक का quiet violation होती हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो कोई भी problem शुरू करने से पहले चारों को नज़र में रखिए, ये errors होने से पहले ही पकड़ लेती हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Vector Operations & Components",
+      "title": "The vector zoo",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The vector zoo"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Zero vector $\\vec 0$: magnitude 0, direction undefined."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Unit vector: magnitude exactly 1."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Equal vectors: same magnitude AND same direction."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Negative of $\\vec a$: same magnitude, opposite direction, written $-\\vec a$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Collinear / parallel: $\\vec a = \\lambda \\vec b$ for some scalar $\\lambda$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Coplanar: all lie in one plane. Position vector: drawn from O to a fixed point."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Know each by its ONE defining property, that is what MCQs test."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me introduce the whole cast of characters, the vector zoo, because exams test whether you know each by its one defining property."
+            },
+            {
+              "seq": 2,
+              "text": "The zero vector: magnitude zero, and direction undefined. It is the odd one out that breaks many careless statements."
+            },
+            {
+              "seq": 3,
+              "text": "The unit vector: the only property that matters is magnitude exactly one, it is pure direction."
+            },
+            {
+              "seq": 4,
+              "text": "Equal vectors: same magnitude and same direction, both together, as we already stressed."
+            },
+            {
+              "seq": 5,
+              "text": "The negative of a vector a: same length, but pointing exactly the opposite way, and we write it minus a."
+            },
+            {
+              "seq": 6,
+              "text": "Collinear or parallel vectors: one is a scalar multiple of the other, a equals lambda times b for some number lambda."
+            },
+            {
+              "seq": 7,
+              "text": "Coplanar vectors all lie in, or parallel to, a single plane; and a position vector is the special one drawn from the origin to a fixed point."
+            },
+            {
+              "seq": 8,
+              "text": "For the exam, learn each animal by its single defining property, that one line is exactly what the multiple choice questions probe."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूरा cast of characters introduce करता हूँ, vector zoo, क्योंकि exams test करते हैं कि आप हर एक को उसकी one defining property से पहचानते हैं या नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "Zero vector: magnitude zero, और direction undefined. ये odd one out है जो कई careless statements तोड़ देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Unit vector: सिर्फ एक property matter करती है, magnitude exactly one, ये pure direction है।"
+            },
+            {
+              "seq": 4,
+              "text": "Equal vectors: same magnitude और same direction, दोनों एक साथ, जैसा हम पहले stress कर चुके हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Vector a का negative: same length, but exactly opposite direction, और हम इसे minus a लिखते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Collinear या parallel vectors: एक दूसरे का scalar multiple है, a equals lambda times b किसी number lambda के लिए।"
+            },
+            {
+              "seq": 7,
+              "text": "Coplanar vectors सब एक ही plane में, या उसके parallel, होते हैं; और position vector वो special है जो origin से किसी fixed point तक draw होता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Exam के लिए हर animal को उसकी single defining property से सीखिए, वही एक line है जो multiple choice questions probe करती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "formulas",
+      "subtopic": "Vector Operations & Components",
+      "title": "Magnitude and the unit vector",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Magnitude and the unit vector"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "For $\\vec r = x\\hat i + y\\hat j + z\\hat k$, the magnitude is the 3-D Pythagoras length."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "\\lvert \\vec r \\rvert = \\sqrt{x^2 + y^2 + z^2}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "style": "red-margin",
+          "text": "$\\lvert \\vec r\\rvert \\ge 0$; it equals zero only for the zero vector."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "A unit vector has magnitude exactly 1, keeping direction and dropping size."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "\\hat a = \\dfrac{\\vec a}{\\lvert \\vec a\\rvert}, \\quad \\vec a \\neq \\vec 0"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "Defined only when $\\vec a \\neq \\vec 0$, you cannot divide by zero."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "To get a vector of magnitude $k$ along $\\vec a$, scale its unit vector: $k\\,\\hat a$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now we pin a vector down with numbers, and the first thing we want is its length, its magnitude."
+            },
+            {
+              "seq": 2,
+              "text": "If the vector is x i plus y j plus z k, its length is just the three dimensional version of Pythagoras' theorem."
+            },
+            {
+              "seq": 3,
+              "text": "Written out: the magnitude of r equals the square root of x squared plus y squared plus z squared. Square each component, add them, take the root."
+            },
+            {
+              "seq": 4,
+              "text": "One quiet property, this length is never negative, and it hits exactly zero only for the zero vector."
+            },
+            {
+              "seq": 5,
+              "text": "Very often we do not want the size, only the direction. For that we build a unit vector, magnitude exactly one, pure direction."
+            },
+            {
+              "seq": 6,
+              "text": "The recipe is simple: divide the vector by its own magnitude. a-hat equals a over the magnitude of a."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>But watch the fine print, this is defined only when a is non-zero, because dividing by zero magnitude is meaningless."
+            },
+            {
+              "seq": 8,
+              "text": "And if you need a vector of some length k pointing along a, just scale the unit vector by k, that is, k times a-hat."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब हम vector को numbers से pin down करते हैं, और सबसे पहले चाहिए उसकी length, यानी magnitude."
+            },
+            {
+              "seq": 2,
+              "text": "अगर vector है x i plus y j plus z k, तो उसकी length बस Pythagoras theorem का three dimensional version है।"
+            },
+            {
+              "seq": 3,
+              "text": "पूरा लिखें: magnitude of r equals square root of x squared plus y squared plus z squared. हर component को square करो, add करो, root ले लो।"
+            },
+            {
+              "seq": 4,
+              "text": "एक quiet property, ये length कभी negative नहीं होती, और exactly zero सिर्फ zero vector के लिए होती है।"
+            },
+            {
+              "seq": 5,
+              "text": "अक्सर हमें size नहीं, सिर्फ direction चाहिए। उसके लिए हम बनाते हैं unit vector, magnitude exactly one, सिर्फ direction."
+            },
+            {
+              "seq": 6,
+              "text": "Recipe simple है: vector को उसकी अपनी magnitude से divide कर दो। a-hat equals a over magnitude of a."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>पर fine print देखिए, ये तभी defined है जब a non-zero हो, क्योंकि zero magnitude से divide करना meaningless है।"
+            },
+            {
+              "seq": 8,
+              "text": "और अगर length k वाला vector चाहिए a की direction में, तो unit vector को k से scale कर दो, यानी k times a-hat."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Vector Operations & Components",
+      "title": "Position vector and joining two points",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Position vector and joining two points"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Position vector of $P(x, y, z)$ relative to origin O:"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "\\vec{OP} = x\\,\\hat i + y\\,\\hat j + z\\,\\hat k, \\qquad \\lvert \\vec{OP}\\rvert = \\sqrt{x^2 + y^2 + z^2}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "If A, B have position vectors $\\vec a, \\vec b$, the vector from A to B is head minus tail:"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "latex": "\\vec{AB} = \\vec b - \\vec a"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "style": "red-margin",
+          "text": "$\\vec{AB} = -\\,\\vec{BA}$, subtraction order is everything."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Always head minus tail; reverse it and every sign flips."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "This one rule powers the section formula, collinearity, and areas later."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two closely related formulas now, the position vector of a point, and the vector that joins two points."
+            },
+            {
+              "seq": 2,
+              "text": "The position vector of a point P with coordinates x, y, z is measured from the origin O."
+            },
+            {
+              "seq": 3,
+              "text": "It is simply x i-hat plus y j-hat plus z k-hat, and its magnitude is the square root of x squared plus y squared plus z squared, the same Pythagoras length as before."
+            },
+            {
+              "seq": 4,
+              "text": "Now if A and B have position vectors a and b, how do we get the arrow from A to B? Head minus tail."
+            },
+            {
+              "seq": 5,
+              "text": "So the vector A B equals b minus a, the head's position vector minus the tail's."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>And here is the trap: A B equals minus B A. The order of subtraction is everything."
+            },
+            {
+              "seq": 7,
+              "text": "Say it like a mantra, always head minus tail. Reverse the order and every single sign flips on you."
+            },
+            {
+              "seq": 8,
+              "text": "This one humble rule quietly powers the section formula, the collinearity test, and the area formulas you will meet later."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब दो closely related formulas, किसी point का position vector, और वो vector जो दो points को join करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Point P, coordinates x, y, z के साथ, का position vector origin O से measure होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "ये बस x i-hat plus y j-hat plus z k-hat है, और इसकी magnitude square root of x squared plus y squared plus z squared है, वही Pythagoras length जो पहले थी।"
+            },
+            {
+              "seq": 4,
+              "text": "अब अगर A और B के position vectors a और b हैं, तो A से B तक का arrow कैसे मिलेगा? Head minus tail."
+            },
+            {
+              "seq": 5,
+              "text": "तो vector A B equals b minus a, head का position vector minus tail का।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>और यहाँ trap है: A B equals minus B A. Subtraction का order ही सब कुछ है।"
+            },
+            {
+              "seq": 7,
+              "text": "इसे mantra की तरह बोलिए, always head minus tail. Order उल्टा किया तो हर एक sign flip हो जाएगा।"
+            },
+            {
+              "seq": 8,
+              "text": "यही एक humble rule चुपचाप section formula, collinearity test, और आगे आने वाले area formulas को power करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "formulas",
+      "subtopic": "Vector Operations & Components",
+      "title": "Scalar multiplication",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Scalar multiplication"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Multiply $\\vec a$ by a scalar $\\lambda$, it stretches or flips, never rotates sideways."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "\\lvert \\lambda \\vec a\\rvert = \\lvert \\lambda\\rvert\\,\\lvert \\vec a\\rvert"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "If $\\lambda > 0$: same direction. If $\\lambda < 0$: opposite direction."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "If $\\lambda = 0$: you get the zero vector $\\vec 0$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "style": "red-margin",
+          "text": "Magnitude scales by $\\lvert\\lambda\\rvert$, the absolute value, never by $\\lambda$ itself."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "This is exactly how we rescale a unit vector to any length."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Stretch, shrink, or reverse, but direction stays on the same line."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Scalar multiplication is the simplest operation, take a vector a and multiply it by a plain number lambda."
+            },
+            {
+              "seq": 2,
+              "text": "Geometrically it only stretches or flips the arrow along its own line; it never swings it sideways to a new direction."
+            },
+            {
+              "seq": 3,
+              "text": "The magnitude rule: the length of lambda a equals the absolute value of lambda, times the length of a."
+            },
+            {
+              "seq": 4,
+              "text": "The direction depends on the sign. If lambda is positive the direction is unchanged; if lambda is negative the arrow reverses."
+            },
+            {
+              "seq": 5,
+              "text": "And if lambda is exactly zero, the whole thing collapses to the zero vector."
+            },
+            {
+              "seq": 6,
+              "text": "Notice carefully, the length scales by the absolute value of lambda, not lambda itself, because a length can never be negative."
+            },
+            {
+              "seq": 7,
+              "text": "This is precisely the tool we used a moment ago to rescale a unit vector to any length we like."
+            },
+            {
+              "seq": 8,
+              "text": "So: stretch, shrink, or reverse, but the direction always stays on the same straight line."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Scalar multiplication सबसे simple operation है, vector a लो और उसे एक plain number lambda से multiply करो।"
+            },
+            {
+              "seq": 2,
+              "text": "Geometrically ये arrow को सिर्फ उसकी अपनी line पर stretch या flip करता है; कभी sideways नई direction में नहीं घुमाता।"
+            },
+            {
+              "seq": 3,
+              "text": "Magnitude rule: length of lambda a equals absolute value of lambda, times length of a."
+            },
+            {
+              "seq": 4,
+              "text": "Direction sign पर depend करती है। अगर lambda positive है direction unchanged; अगर negative है arrow reverse हो जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "और अगर lambda exactly zero है, तो पूरी चीज़ zero vector में collapse हो जाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "ध्यान से देखिए, length absolute value of lambda से scale होती है, lambda से नहीं, क्योंकि length कभी negative नहीं हो सकती।"
+            },
+            {
+              "seq": 7,
+              "text": "यही वो tool है जो हमने अभी unit vector को किसी भी length पर rescale करने के लिए use किया।"
+            },
+            {
+              "seq": 8,
+              "text": "तो: stretch, shrink, या reverse, but direction हमेशा उसी straight line पर रहती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "formulas",
+      "subtopic": "Vector Operations & Components",
+      "title": "Direction cosines and the l^2+m^2+n^2=1 identity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Direction cosines"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Cosines of the angles $\\alpha, \\beta, \\gamma$ a vector makes with the positive x, y, z axes."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "l = \\cos\\alpha,\\quad m = \\cos\\beta,\\quad n = \\cos\\gamma"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "For $\\vec r$ with magnitude $r$: divide each component by $r$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "l = \\frac{x}{r},\\quad m = \\frac{y}{r},\\quad n = \\frac{z}{r}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "l^2 + m^2 + n^2 = 1"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "If three numbers' squares do not sum to 1, they are NOT direction cosines."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "caption": "The vector r makes angles alpha, beta, gamma with the three axes.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah9\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 Z\" fill=\"#333\"/></marker></defs><text x=\"90\" y=\"28\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">l = cos a, m = cos b, n = cos g</text><line x1=\"70\" y1=\"190\" x2=\"330\" y2=\"190\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#ah9)\"/><text x=\"335\" y=\"195\" font-size=\"13\" font-family=\"system-ui, sans-serif\">x</text><line x1=\"70\" y1=\"190\" x2=\"70\" y2=\"50\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#ah9)\"/><text x=\"58\" y=\"45\" font-size=\"13\" font-family=\"system-ui, sans-serif\">z</text><line x1=\"70\" y1=\"190\" x2=\"170\" y2=\"235\" stroke=\"#333\" stroke-width=\"1.5\" marker-end=\"url(#ah9)\"/><text x=\"175\" y=\"238\" font-size=\"13\" font-family=\"system-ui, sans-serif\">y</text><line x1=\"70\" y1=\"190\" x2=\"270\" y2=\"85\" stroke=\"#c0392b\" stroke-width=\"2.5\" marker-end=\"url(#ah9)\"/><text x=\"274\" y=\"80\" font-size=\"14\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">r</text><text x=\"150\" y=\"182\" font-size=\"12\" font-family=\"system-ui, sans-serif\">alpha</text><text x=\"90\" y=\"130\" font-size=\"12\" font-family=\"system-ui, sans-serif\">beta, gamma</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Direction cosines are how we capture a vector's direction as three clean numbers."
+            },
+            {
+              "seq": 2,
+              "text": "They are the cosines of the three angles, alpha, beta and gamma, that the vector makes with the positive x, y and z axes."
+            },
+            {
+              "seq": 3,
+              "text": "We name them l, m and n: l is cosine alpha, m is cosine beta, n is cosine gamma."
+            },
+            {
+              "seq": 4,
+              "text": "To compute them for a vector r of magnitude r, you just divide each component by that magnitude."
+            },
+            {
+              "seq": 5,
+              "text": "So l is x over r, m is y over r, and n is z over r, you are simply reading off the unit vector's components."
+            },
+            {
+              "seq": 6,
+              "text": "And they obey a beautiful identity: l squared plus m squared plus n squared equals one. Always."
+            },
+            {
+              "seq": 7,
+              "text": "<curious>Why care? Because if someone hands you three numbers whose squares do not add to one, they cannot possibly be direction cosines, so reject them instantly."
+            },
+            {
+              "seq": 8,
+              "text": "On the board you can see the single arrow leaning against all three axes, one angle to each, that is the whole picture."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Direction cosines वो तरीका हैं जिससे हम vector की direction को तीन clean numbers में capture करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "ये तीन angles, alpha, beta और gamma, के cosines हैं जो vector positive x, y और z axes के साथ बनाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "इन्हें हम l, m और n नाम देते हैं: l है cosine alpha, m है cosine beta, n है cosine gamma."
+            },
+            {
+              "seq": 4,
+              "text": "किसी vector r, magnitude r के लिए इन्हें निकालना है तो बस हर component को उस magnitude से divide कर दो।"
+            },
+            {
+              "seq": 5,
+              "text": "तो l है x over r, m है y over r, और n है z over r, आप बस unit vector के components पढ़ रहे हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "और ये एक beautiful identity follow करते हैं: l squared plus m squared plus n squared equals one. हमेशा।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious>Care क्यों करें? क्योंकि अगर कोई तीन numbers दे जिनके squares one में add ना हों, तो वो direction cosines हो ही नहीं सकते, instantly reject."
+            },
+            {
+              "seq": 8,
+              "text": "Board पर single arrow तीनों axes से टिका दिख रहा है, हर एक से एक angle, यही पूरी picture है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "formulas",
+      "subtopic": "Vector Operations & Components",
+      "title": "Direction ratios",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Direction ratios"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Any three numbers $(a, b, c)$ proportional to the direction cosines."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "\\frac{l}{a} = \\frac{m}{b} = \\frac{n}{c} = \\frac{1}{\\sqrt{a^2 + b^2 + c^2}}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "The scalar components $(x, y, z)$ are themselves a valid set of direction ratios."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "style": "red-margin",
+          "text": "Direction cosines are unique (up to sign); direction ratios are NOT unique."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "$(2, -1, 2)$ and $(4, -2, 4)$ describe the same direction."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "To turn ratios into cosines: divide by $\\sqrt{a^2+b^2+c^2}$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Remember: DR means Ratio-only; DC means Divided-by-magnitude."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Direction ratios are the relaxed cousins of direction cosines."
+            },
+            {
+              "seq": 2,
+              "text": "They are any three numbers a, b, c that are proportional to the direction cosines, the proportions matter, not the exact size."
+            },
+            {
+              "seq": 3,
+              "text": "The link is this chain of equal ratios: l over a equals m over b equals n over c equals one over the root of a squared plus b squared plus c squared."
+            },
+            {
+              "seq": 4,
+              "text": "A handy fact: the plain scalar components x, y, z of a vector already form a perfectly valid set of direction ratios."
+            },
+            {
+              "seq": 5,
+              "text": "But here is the key contrast, direction cosines are unique, up to an overall sign, while direction ratios are not unique at all."
+            },
+            {
+              "seq": 6,
+              "text": "For instance two, minus one, two, and four, minus two, four, describe exactly the same direction, just scaled differently."
+            },
+            {
+              "seq": 7,
+              "text": "To convert ratios into cosines, normalise: divide each ratio by the root of a squared plus b squared plus c squared."
+            },
+            {
+              "seq": 8,
+              "text": "Lock in the memory hook, D R means ratio only, D C means divided by magnitude."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Direction ratios, direction cosines के relaxed cousins हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "ये कोई भी तीन numbers a, b, c हैं जो direction cosines के proportional हों, proportion matter करता है, exact size नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "Link ये equal ratios की chain है: l over a equals m over b equals n over c equals one over root of a squared plus b squared plus c squared."
+            },
+            {
+              "seq": 4,
+              "text": "Handy fact: vector के plain scalar components x, y, z पहले से ही perfectly valid direction ratios बनाते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "पर key contrast यहाँ है, direction cosines unique होते हैं, overall sign तक, जबकि direction ratios बिल्कुल unique नहीं होते।"
+            },
+            {
+              "seq": 6,
+              "text": "जैसे two, minus one, two, और four, minus two, four, exactly same direction describe करते हैं, बस अलग scale पर।"
+            },
+            {
+              "seq": 7,
+              "text": "Ratios को cosines में convert करने के लिए normalise करो: हर ratio को root of a squared plus b squared plus c squared से divide कर दो।"
+            },
+            {
+              "seq": 8,
+              "text": "Memory hook पक्का कर लीजिए, D R मतलब ratio only, D C मतलब divided by magnitude."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "formulas",
+      "subtopic": "Vector Operations & Components",
+      "title": "The section formula: internal, external, midpoint",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The section formula"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Point R divides the join of $A(\\vec a)$ and $B(\\vec b)$ in ratio $m : n$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "latex": "\\vec{OR}_{\\text{internal}} = \\frac{m\\vec b + n\\vec a}{m + n}\\quad (m+n \\neq 0)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\vec{OR}_{\\text{external}} = \\frac{m\\vec b - n\\vec a}{m - n}\\quad (m \\neq n)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "\\text{Midpoint} = \\frac{\\vec a + \\vec b}{2}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "style": "red-margin",
+          "text": "Internal ADDS; external SUBTRACTS, and the denominators differ too."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "External division lands R outside the segment, beyond A or B."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "caption": "R splits segment AB internally in the ratio m to n.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 160\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"105\" y=\"32\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">R divides AB in ratio m : n</text><line x1=\"50\" y1=\"95\" x2=\"370\" y2=\"95\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"95\" r=\"5\" fill=\"#2c6fbb\"/><text x=\"40\" y=\"120\" font-size=\"14\" font-family=\"system-ui, sans-serif\">A (a)</text><circle cx=\"250\" cy=\"95\" r=\"5\" fill=\"#c0392b\"/><text x=\"242\" y=\"120\" font-size=\"14\" font-family=\"system-ui, sans-serif\">R</text><circle cx=\"370\" cy=\"95\" r=\"5\" fill=\"#2c6fbb\"/><text x=\"358\" y=\"120\" font-size=\"14\" font-family=\"system-ui, sans-serif\">B (b)</text><text x=\"140\" y=\"82\" font-size=\"13\" font-family=\"system-ui, sans-serif\">m</text><text x=\"305\" y=\"82\" font-size=\"13\" font-family=\"system-ui, sans-serif\">n</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The section formula answers a very common question: where does a point R sit if it divides the segment from A to B in a given ratio m to n?"
+            },
+            {
+              "seq": 2,
+              "text": "Take A and B with position vectors a and b, and let R split A B in the ratio m to n."
+            },
+            {
+              "seq": 3,
+              "text": "For internal division R lies between them, and its position vector is m times b plus n times a, all over m plus n, and note that m plus n must not be zero."
+            },
+            {
+              "seq": 4,
+              "text": "For external division R lies outside the segment, and the formula switches a sign: m times b minus n times a, over m minus n, with m not equal to n."
+            },
+            {
+              "seq": 5,
+              "text": "And the midpoint is the friendly special case, just a plus b over two, the average of the two ends."
+            },
+            {
+              "seq": 6,
+              "text": "Here is the mnemonic that saves you in the exam, internal adds, external subtracts, and the denominators differ in exactly the same way."
+            },
+            {
+              "seq": 7,
+              "text": "A quick sanity check: external division pushes R outside the segment, landing it beyond A or beyond B; if your point sits between them, you used the wrong formula."
+            },
+            {
+              "seq": 8,
+              "text": "On the board R sits between A and B, carving the segment into the ratio m to n, picture that whenever you plug in."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Section formula एक बहुत common सवाल का जवाब देता है: point R कहाँ बैठेगा अगर वो A से B तक के segment को दिए हुए ratio m to n में divide करे?"
+            },
+            {
+              "seq": 2,
+              "text": "A और B लीजिए position vectors a और b के साथ, और R को A B को ratio m to n में split करने दीजिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Internal division के लिए R उनके बीच होता है, और उसका position vector है m times b plus n times a, whole over m plus n, और ध्यान रहे m plus n zero नहीं होना चाहिए।"
+            },
+            {
+              "seq": 4,
+              "text": "External division के लिए R segment के बाहर होता है, और formula एक sign बदल देता है: m times b minus n times a, over m minus n, with m not equal to n."
+            },
+            {
+              "seq": 5,
+              "text": "और midpoint friendly special case है, बस a plus b over two, दोनों ends का average."
+            },
+            {
+              "seq": 6,
+              "text": "यहाँ वो mnemonic है जो exam में बचा लेगा, internal adds, external subtracts, और denominators भी exactly उसी तरह अलग होते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Quick sanity check: external division R को segment के बाहर धकेल देता है, A या B से आगे; अगर आपका point बीच में बैठा है, तो आपने ग़लत formula use किया।"
+            },
+            {
+              "seq": 8,
+              "text": "Board पर R, A और B के बीच बैठ कर segment को ratio m to n में काट रहा है, plug in करते वक़्त यही picture रखिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "formulas",
+      "subtopic": "Vector Operations & Components",
+      "title": "Collinearity condition",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Collinearity condition"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Three points A, B, C are collinear when they lie on one straight line."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "latex": "\\vec{AB} = \\lambda\\,\\vec{AC}\\quad\\text{for some scalar }\\lambda"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Equivalently, $\\vec b - \\vec a$ and $\\vec c - \\vec a$ are parallel."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "style": "red-margin",
+          "text": "One vector is a scalar multiple of the other, that IS collinearity."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "This turns a geometry question into one quick proportionality check."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Used constantly in 'find k so that A, B, C are collinear' problems."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "caption": "Three collinear points: AB and AC lie along the same line.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 160\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah12\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 Z\" fill=\"#333\"/></marker></defs><text x=\"105\" y=\"28\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">AB is a scalar multiple of AC</text><line x1=\"40\" y1=\"112\" x2=\"385\" y2=\"50\" stroke=\"#999\" stroke-width=\"1.3\" stroke-dasharray=\"4 4\"/><circle cx=\"60\" cy=\"108\" r=\"5\" fill=\"#333\"/><text x=\"52\" y=\"130\" font-size=\"13\" font-family=\"system-ui, sans-serif\">A</text><circle cx=\"200\" cy=\"83\" r=\"5\" fill=\"#333\"/><text x=\"192\" y=\"105\" font-size=\"13\" font-family=\"system-ui, sans-serif\">B</text><circle cx=\"360\" cy=\"55\" r=\"5\" fill=\"#333\"/><text x=\"352\" y=\"77\" font-size=\"13\" font-family=\"system-ui, sans-serif\">C</text><line x1=\"60\" y1=\"108\" x2=\"200\" y2=\"83\" stroke=\"#c0392b\" stroke-width=\"2.5\" marker-end=\"url(#ah12)\"/><line x1=\"60\" y1=\"108\" x2=\"360\" y2=\"55\" stroke=\"#2c6fbb\" stroke-width=\"1.3\" marker-end=\"url(#ah12)\"/></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Collinearity is just a fancy word for three points sitting on a single straight line."
+            },
+            {
+              "seq": 2,
+              "text": "Take three points A, B and C, when are they collinear?"
+            },
+            {
+              "seq": 3,
+              "text": "The test is clean: the vector A B must be a scalar multiple of the vector A C. That is, A B equals lambda times A C for some number lambda."
+            },
+            {
+              "seq": 4,
+              "text": "Equivalently, b minus a and c minus a point along the same line, they are parallel."
+            },
+            {
+              "seq": 5,
+              "text": "The whole idea is that one of these vectors is simply a stretched or shrunk copy of the other; that is exactly what collinearity means."
+            },
+            {
+              "seq": 6,
+              "text": "The payoff is that a geometry question collapses into a single, quick proportionality check, no diagram gymnastics needed."
+            },
+            {
+              "seq": 7,
+              "text": "You will use this constantly in problems that say, find the value of k so that A, B and C are collinear."
+            },
+            {
+              "seq": 8,
+              "text": "On the board all three points sit on one line, with A B and A C pointing the same way, one just longer than the other."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Collinearity बस एक fancy word है तीन points के एक ही straight line पर बैठने के लिए।"
+            },
+            {
+              "seq": 2,
+              "text": "तीन points A, B और C लीजिए, ये कब collinear होते हैं?"
+            },
+            {
+              "seq": 3,
+              "text": "Test clean है: vector A B, vector A C का scalar multiple होना चाहिए। यानी A B equals lambda times A C किसी number lambda के लिए।"
+            },
+            {
+              "seq": 4,
+              "text": "Equivalently, b minus a और c minus a एक ही line के साथ point करते हैं, वो parallel हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "पूरा idea ये है कि इनमें से एक vector दूसरे की बस stretched या shrunk copy है; collinearity का यही मतलब है।"
+            },
+            {
+              "seq": 6,
+              "text": "फ़ायदा ये कि एक geometry सवाल एक single, quick proportionality check में collapse हो जाता है, कोई diagram gymnastics नहीं चाहिए।"
+            },
+            {
+              "seq": 7,
+              "text": "आप इसे constantly use करेंगे उन problems में जो कहती हैं, find the value of k so that A, B and C are collinear."
+            },
+            {
+              "seq": 8,
+              "text": "Board पर तीनों points एक line पर बैठे हैं, A B और A C same way point करते, बस एक दूसरे से लंबा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Vector Operations & Components",
+      "title": "Proof: why the DC squares sum to one",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: why the DC squares sum to one"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Claim: for any non-zero vector, $l^2 + m^2 + n^2 = 1$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Let $\\vec r = x\\hat i + y\\hat j + z\\hat k$ with $r = \\sqrt{x^2+y^2+z^2} > 0$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "l = \\frac{x}{r},\\quad m = \\frac{y}{r},\\quad n = \\frac{z}{r}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Square each and add; the denominators are all $r^2$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "l^2 + m^2 + n^2 = \\frac{x^2 + y^2 + z^2}{r^2} = \\frac{r^2}{r^2} = 1"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "The numerator collapses to $r^2$ because $r^2 = x^2+y^2+z^2$ by definition."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Reading it: a valid direction is exactly one whose DC-squares total 1."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us actually prove the identity we just met, that the direction cosines of any non-zero vector square to one."
+            },
+            {
+              "seq": 2,
+              "text": "The claim, precisely: for any non-zero vector, l squared plus m squared plus n squared equals one."
+            },
+            {
+              "seq": 3,
+              "text": "Start with r equals x i-hat plus y j-hat plus z k-hat, and let its magnitude r be the root of x squared plus y squared plus z squared, which is strictly positive."
+            },
+            {
+              "seq": 4,
+              "text": "By definition the direction cosines are the components divided by that length: l is x over r, m is y over r, n is z over r."
+            },
+            {
+              "seq": 5,
+              "text": "Now square each of the three and add them. Since each is divided by r, every denominator is r squared."
+            },
+            {
+              "seq": 6,
+              "text": "So the sum is x squared plus y squared plus z squared, all over r squared, which is r squared over r squared, and that is one."
+            },
+            {
+              "seq": 7,
+              "text": "The numerator collapses to r squared precisely because r squared was defined as x squared plus y squared plus z squared, the magnitude definition does the work."
+            },
+            {
+              "seq": 8,
+              "text": "Read the result plainly: a legitimate direction is exactly one whose three cosine-squares total one. It is the fastest sanity check in the topic."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब उस identity को actually prove करते हैं जो अभी मिली, कि किसी भी non-zero vector के direction cosines square होकर one बनते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Claim, precisely: किसी भी non-zero vector के लिए, l squared plus m squared plus n squared equals one."
+            },
+            {
+              "seq": 3,
+              "text": "शुरू करते हैं r equals x i-hat plus y j-hat plus z k-hat से, और उसकी magnitude r को root of x squared plus y squared plus z squared मानते हैं, जो strictly positive है।"
+            },
+            {
+              "seq": 4,
+              "text": "Definition से direction cosines components को उस length से divide करके मिलते हैं: l है x over r, m है y over r, n है z over r."
+            },
+            {
+              "seq": 5,
+              "text": "अब तीनों को square करके add करो। चूँकि हर एक r से divided है, हर denominator r squared है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो sum है x squared plus y squared plus z squared, whole over r squared, जो r squared over r squared है, और वो one है।"
+            },
+            {
+              "seq": 7,
+              "text": "Numerator ठीक r squared में collapse होता है क्योंकि r squared define ही किया गया था x squared plus y squared plus z squared के रूप में, magnitude definition काम कर देती है।"
+            },
+            {
+              "seq": 8,
+              "text": "Result को plainly पढ़िए: legitimate direction ठीक वही है जिसके तीन cosine-squares one बनाते हैं। ये topic का fastest sanity check है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Vector Operations & Components",
+      "title": "Proof: the internal section formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: the internal section formula"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "R divides A B internally in ratio $m : n$, so $AR : RB = m : n$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Same direction along the segment gives $n\\,\\vec{AR} = m\\,\\vec{RB}$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Write segments head minus tail: $\\vec{AR} = \\vec r - \\vec a$, $\\vec{RB} = \\vec b - \\vec r$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "n(\\vec r - \\vec a) = m(\\vec b - \\vec r)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "(m + n)\\,\\vec r = m\\vec b + n\\vec a"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\vec r = \\frac{m\\vec b + n\\vec a}{m + n}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Since R lies strictly between A and B, $m + n \\neq 0$, so dividing is legal."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a proof that also shows you the technique for a hundred other problems, deriving the internal section formula."
+            },
+            {
+              "seq": 2,
+              "text": "R divides A B internally in the ratio m to n, which means the pieces A R and R B are in that same ratio m to n."
+            },
+            {
+              "seq": 3,
+              "text": "Because A R and R B point the very same way along the segment, we can promote that ratio to a vector equation: n times A R equals m times R B."
+            },
+            {
+              "seq": 4,
+              "text": "Now write both segment vectors as head minus tail. A R is r minus a, and R B is b minus r, where r is the position vector of R."
+            },
+            {
+              "seq": 5,
+              "text": "Substituting gives n times the quantity r minus a, equals m times the quantity b minus r."
+            },
+            {
+              "seq": 6,
+              "text": "Expand and gather all the r terms on one side, and you get m plus n, times r, equals m b plus n a."
+            },
+            {
+              "seq": 7,
+              "text": "Divide through and there it is: r equals m b plus n a, over m plus n, the internal section formula, proven."
+            },
+            {
+              "seq": 8,
+              "text": "And dividing is perfectly legal because R sits strictly between A and B, so m plus n can never be zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक proof जो साथ में सौ दूसरी problems की technique भी दिखाता है, internal section formula derive करना।"
+            },
+            {
+              "seq": 2,
+              "text": "R, A B को internally ratio m to n में divide करता है, यानी pieces A R और R B उसी same ratio m to n में हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "चूँकि A R और R B segment के साथ बिल्कुल same way point करते हैं, हम उस ratio को vector equation में promote कर सकते हैं: n times A R equals m times R B."
+            },
+            {
+              "seq": 4,
+              "text": "अब दोनों segment vectors को head minus tail लिखो। A R है r minus a, और R B है b minus r, जहाँ r, R का position vector है।"
+            },
+            {
+              "seq": 5,
+              "text": "Substitute करने पर मिलता है n times the quantity r minus a, equals m times the quantity b minus r."
+            },
+            {
+              "seq": 6,
+              "text": "Expand करके सारे r terms एक तरफ इकट्ठा करो, और मिलता है m plus n, times r, equals m b plus n a."
+            },
+            {
+              "seq": 7,
+              "text": "Divide कर दो और ये रहा: r equals m b plus n a, over m plus n, internal section formula, proven."
+            },
+            {
+              "seq": 8,
+              "text": "और divide करना perfectly legal है क्योंकि R, A और B के strictly बीच बैठा है, तो m plus n कभी zero नहीं हो सकता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Vector Operations & Components",
+      "title": "Proof: the collinearity test",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: the collinearity test"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Claim: A, B, C are collinear iff $\\vec b - \\vec a = \\lambda(\\vec c - \\vec a)$ for some $\\lambda$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "A, B, C on one line means $\\vec{AB}$ and $\\vec{AC}$ run along the same line."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Two vectors along one line means one is a scalar multiple of the other."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "\\vec{AB} = \\lambda\\,\\vec{AC}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Substitute $\\vec{AB} = \\vec b - \\vec a$ and $\\vec{AC} = \\vec c - \\vec a$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\vec b - \\vec a = \\lambda(\\vec c - \\vec a)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "The 'iff' runs both ways: parallel-through-A is the same as collinear."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This proof is short, and it makes the collinearity test feel inevitable."
+            },
+            {
+              "seq": 2,
+              "text": "The claim: points A, B and C are collinear if and only if b minus a equals lambda times c minus a, for some scalar lambda."
+            },
+            {
+              "seq": 3,
+              "text": "Start from the geometry. A, B and C lying on one straight line simply means the arrows A B and A C run along the very same line."
+            },
+            {
+              "seq": 4,
+              "text": "But two vectors lying along one line is precisely the statement that one is a scalar multiple of the other."
+            },
+            {
+              "seq": 5,
+              "text": "So A B equals lambda times A C; that scalar lambda is the whole content of the condition."
+            },
+            {
+              "seq": 6,
+              "text": "Now substitute the head-minus-tail forms: A B is b minus a, and A C is c minus a."
+            },
+            {
+              "seq": 7,
+              "text": "That gives b minus a equals lambda times the quantity c minus a, exactly the condition we claimed."
+            },
+            {
+              "seq": 8,
+              "text": "And note the if-and-only-if runs both directions: being parallel through the common point A is the same thing as being collinear."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये proof छोटा है, और collinearity test को inevitable feel कराता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Claim: points A, B और C collinear हैं if and only if b minus a equals lambda times c minus a, किसी scalar lambda के लिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Geometry से शुरू करो। A, B और C का एक straight line पर होना बस ये मतलब है कि arrows A B और A C बिल्कुल same line के साथ चलते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "पर दो vectors का एक line के साथ होना ठीक यही statement है कि एक दूसरे का scalar multiple है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो A B equals lambda times A C; वो scalar lambda ही पूरी condition का content है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब head-minus-tail forms substitute करो: A B है b minus a, और A C है c minus a."
+            },
+            {
+              "seq": 7,
+              "text": "इससे मिलता है b minus a equals lambda times the quantity c minus a, बिल्कुल वही condition जो हमने claim की।"
+            },
+            {
+              "seq": 8,
+              "text": "और ध्यान दो कि if-and-only-if दोनों directions में चलता है: common point A से parallel होना collinear होने जैसी ही बात है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Vector Operations & Components",
+      "title": "Example: unit vector, then scale to 35",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example: unit vector, then scale to 35"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Given $\\vec a = 6\\hat i - 2\\hat j + 3\\hat k$. Find $\\hat a$, then the vector of magnitude 35 along it."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "\\lvert \\vec a\\rvert = \\sqrt{6^2 + (-2)^2 + 3^2} = \\sqrt{49} = 7"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\hat a = \\frac{1}{7}\\left(6\\hat i - 2\\hat j + 3\\hat k\\right)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Scale the unit vector by 35 to get the required vector."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "35\\,\\hat a = 5\\left(6\\hat i - 2\\hat j + 3\\hat k\\right) = 30\\hat i - 10\\hat j + 15\\hat k"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "Check: $\\sqrt{30^2 + 10^2 + 15^2} = \\sqrt{1225} = 35$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Two steps every time: normalise to a unit vector, then rescale."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us put the magnitude and unit vector machinery to work on a clean board-level problem."
+            },
+            {
+              "seq": 2,
+              "text": "We are given a equals six i-hat minus two j-hat plus three k-hat, and we want its unit vector, and then a vector of magnitude thirty five in the same direction."
+            },
+            {
+              "seq": 3,
+              "text": "Step one, the magnitude: root of six squared plus minus-two squared plus three squared, which is root of thirty six plus four plus nine, equal to root forty nine, that is seven."
+            },
+            {
+              "seq": 4,
+              "text": "Step two, the unit vector: divide a by seven, giving one seventh of the bracket six i-hat minus two j-hat plus three k-hat."
+            },
+            {
+              "seq": 5,
+              "text": "Step three, we want length thirty five, so we simply scale that unit vector by thirty five."
+            },
+            {
+              "seq": 6,
+              "text": "Thirty five over seven is five, so the answer is five times the bracket, thirty i-hat minus ten j-hat plus fifteen k-hat."
+            },
+            {
+              "seq": 7,
+              "text": "And a quick check seals it: root of thirty squared plus ten squared plus fifteen squared is root twelve twenty five, which is exactly thirty five. It works."
+            },
+            {
+              "seq": 8,
+              "text": "The rhythm is always the same two steps, normalise to a unit vector first, then rescale to the length you need."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब magnitude और unit vector की machinery को एक clean board-level problem पर काम में लाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें दिया है a equals six i-hat minus two j-hat plus three k-hat, और चाहिए उसका unit vector, फिर same direction में magnitude thirty five वाला vector."
+            },
+            {
+              "seq": 3,
+              "text": "Step one, magnitude: root of six squared plus minus-two squared plus three squared, यानी root of thirty six plus four plus nine, equal to root forty nine, that is seven."
+            },
+            {
+              "seq": 4,
+              "text": "Step two, unit vector: a को seven से divide करो, मिलता है one seventh of the bracket six i-hat minus two j-hat plus three k-hat."
+            },
+            {
+              "seq": 5,
+              "text": "Step three, हमें length thirty five चाहिए, तो बस उस unit vector को thirty five से scale कर दो।"
+            },
+            {
+              "seq": 6,
+              "text": "Thirty five over seven है five, तो answer है five times the bracket, thirty i-hat minus ten j-hat plus fifteen k-hat."
+            },
+            {
+              "seq": 7,
+              "text": "और एक quick check seal कर देता है: root of thirty squared plus ten squared plus fifteen squared है root twelve twenty five, जो exactly thirty five है। काम कर गया।"
+            },
+            {
+              "seq": 8,
+              "text": "Rhythm हमेशा वही दो steps है, पहले unit vector में normalise करो, फिर ज़रूरत की length पर rescale."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "Vector Operations & Components",
+      "title": "Example: the QP order trap",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example: the QP order trap"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$P(2, -1, 3)$ and $Q(5, 3, -1)$. Find the unit vector along $\\vec{QP}$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "style": "red-margin",
+          "text": "Trap: computing $\\vec{PQ}$ flips every sign, and is marked wrong."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "$\\vec{QP}$ goes from Q to P: head P minus tail Q."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "\\vec{QP} = (2-5)\\hat i + (-1-3)\\hat j + (3-(-1))\\hat k = -3\\hat i - 4\\hat j + 4\\hat k"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "\\lvert \\vec{QP}\\rvert = \\sqrt{9 + 16 + 16} = \\sqrt{41}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\widehat{QP} = \\frac{1}{\\sqrt{41}}\\left(-3\\hat i - 4\\hat j + 4\\hat k\\right)"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "MCQ shortcut: fix signs from Q to P and spot the $\\sqrt{41}$ denominator first."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one is a classic trap, and reading the order carefully is the whole battle."
+            },
+            {
+              "seq": 2,
+              "text": "We have P at two, minus one, three, and Q at five, three, minus one, and we want the unit vector along Q P."
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>Here is the trap, under pressure students compute P Q instead of Q P, and every sign flips, so the answer is marked wrong."
+            },
+            {
+              "seq": 4,
+              "text": "So read it slowly. Q P runs from Q to P, which means head P minus tail Q."
+            },
+            {
+              "seq": 5,
+              "text": "Component by component: two minus five is minus three, minus one minus three is minus four, and three minus minus one is plus four, so Q P is minus three i-hat minus four j-hat plus four k-hat."
+            },
+            {
+              "seq": 6,
+              "text": "Its magnitude is the root of nine plus sixteen plus sixteen, which is root forty one."
+            },
+            {
+              "seq": 7,
+              "text": "So the unit vector is one over root forty one, times the bracket minus three i-hat minus four j-hat plus four k-hat."
+            },
+            {
+              "seq": 8,
+              "text": "In a multiple choice setting, decide the signs from Q to P and spot the root forty one denominator first; any option with the wrong signs or a different denominator is gone instantly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये एक classic trap है, और order को carefully पढ़ना ही पूरी लड़ाई है।"
+            },
+            {
+              "seq": 2,
+              "text": "हमारे पास P है two, minus one, three पर, और Q है five, three, minus one पर, और चाहिए Q P की direction का unit vector."
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>यहाँ trap है, pressure में students Q P की जगह P Q compute कर देते हैं, और हर sign flip हो जाता है, तो answer wrong mark होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो धीरे पढ़ो। Q P, Q से P तक जाता है, यानी head P minus tail Q."
+            },
+            {
+              "seq": 5,
+              "text": "Component by component: two minus five है minus three, minus one minus three है minus four, और three minus minus one है plus four, तो Q P है minus three i-hat minus four j-hat plus four k-hat."
+            },
+            {
+              "seq": 6,
+              "text": "उसकी magnitude है root of nine plus sixteen plus sixteen, जो root forty one है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो unit vector है one over root forty one, times the bracket minus three i-hat minus four j-hat plus four k-hat."
+            },
+            {
+              "seq": 8,
+              "text": "Multiple choice में Q से P से signs decide करो और पहले root forty one denominator पहचानो; ग़लत signs या अलग denominator वाला कोई भी option तुरंत बाहर।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "worked_examples",
+      "subtopic": "Vector Operations & Components",
+      "title": "Example: section formula meets direction cosines",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example: section formula meets DCs"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "R divides $A(3,-2,4)$ and $B(8,3,-6)$ internally in $2:3$. Find $\\vec{OR}$ and its DCs."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "\\vec{OR} = \\frac{2\\vec b + 3\\vec a}{2 + 3} = \\frac{2(8\\hat i + 3\\hat j - 6\\hat k) + 3(3\\hat i - 2\\hat j + 4\\hat k)}{5}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Numerator componentwise: i: $16+9=25$; j: $6-6=0$; k: $-12+12=0$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "latex": "\\vec{OR} = \\frac{25\\hat i}{5} = 5\\hat i"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Magnitude is 5, so the direction cosines are components over 5."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "l = 1,\\quad m = 0,\\quad n = 0"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Check: $1^2 + 0^2 + 0^2 = 1$. R lies on the positive x-axis."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This J E E Main level problem stitches two ideas together, first the section formula, then direction cosines of the result."
+            },
+            {
+              "seq": 2,
+              "text": "R divides A at three, minus two, four, and B at eight, three, minus six, internally in the ratio two to three; we want R's position vector and its direction cosines."
+            },
+            {
+              "seq": 3,
+              "text": "Apply the internal formula: two b plus three a, all over two plus three, which is five, plugging in the two vectors up top."
+            },
+            {
+              "seq": 4,
+              "text": "Work the numerator component by component. For i-hat, sixteen plus nine is twenty five; for j-hat, six minus six is zero; for k-hat, minus twelve plus twelve is zero."
+            },
+            {
+              "seq": 5,
+              "text": "So the numerator is just twenty five i-hat, and dividing by five gives O R equals five i-hat, a clean vector straight along the x-axis."
+            },
+            {
+              "seq": 6,
+              "text": "Its magnitude is five, so the direction cosines are each component divided by five."
+            },
+            {
+              "seq": 7,
+              "text": "That gives l equals one, m equals zero, n equals zero."
+            },
+            {
+              "seq": 8,
+              "text": "The identity check confirms it, one squared plus zero plus zero is one, and it makes sense, because R sits right on the positive x-axis."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये J E E Main level problem दो ideas को एक साथ stitch करती है, पहले section formula, फिर result के direction cosines."
+            },
+            {
+              "seq": 2,
+              "text": "R, A को three, minus two, four पर और B को eight, three, minus six पर, internally ratio two to three में divide करता है; चाहिए R का position vector और उसके direction cosines."
+            },
+            {
+              "seq": 3,
+              "text": "Internal formula apply करो: two b plus three a, whole over two plus three, जो five है, ऊपर दोनों vectors plug in करके।"
+            },
+            {
+              "seq": 4,
+              "text": "Numerator को component by component solve करो। i-hat के लिए sixteen plus nine है twenty five; j-hat के लिए six minus six है zero; k-hat के लिए minus twelve plus twelve है zero."
+            },
+            {
+              "seq": 5,
+              "text": "तो numerator बस twenty five i-hat है, और five से divide करने पर O R equals five i-hat मिलता है, एक clean vector सीधा x-axis के साथ।"
+            },
+            {
+              "seq": 6,
+              "text": "उसकी magnitude five है, तो direction cosines हर component को five से divide करके मिलते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "इससे मिलता है l equals one, m equals zero, n equals zero."
+            },
+            {
+              "seq": 8,
+              "text": "Identity check confirm कर देता है, one squared plus zero plus zero है one, और ये sense बनाता है, क्योंकि R ठीक positive x-axis पर बैठा है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "worked_examples",
+      "subtopic": "Vector Operations & Components",
+      "title": "Example: the centroid from medians",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example: the centroid from medians"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Triangle $ABC$ with vertices $\\vec a, \\vec b, \\vec c$. D is midpoint of BC; P divides median AD in $2:1$ from A."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "\\vec{OD} = \\frac{\\vec b + \\vec c}{2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\vec{OP} = \\frac{2\\,\\vec{OD} + 1\\cdot\\vec a}{2 + 1} = \\frac{\\vec a + \\vec b + \\vec c}{3}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "The result is completely symmetric in $\\vec a, \\vec b, \\vec c$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Starting from any vertex's median gives the identical point."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\vec{OG} = \\frac{\\vec a + \\vec b + \\vec c}{3}"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "caption": "The three medians of triangle ABC meet at the centroid G.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 320 290\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"160,40 50,240 270,240\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"160\" y1=\"40\" x2=\"160\" y2=\"240\" stroke=\"#2c6fbb\" stroke-width=\"1.3\"/><line x1=\"50\" y1=\"240\" x2=\"215\" y2=\"140\" stroke=\"#2c6fbb\" stroke-width=\"1.3\"/><line x1=\"270\" y1=\"240\" x2=\"105\" y2=\"140\" stroke=\"#2c6fbb\" stroke-width=\"1.3\"/><circle cx=\"160\" cy=\"173\" r=\"5\" fill=\"#c0392b\"/><text x=\"168\" y=\"178\" font-size=\"14\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">G</text><text x=\"152\" y=\"32\" font-size=\"13\" font-family=\"system-ui, sans-serif\">A</text><text x=\"32\" y=\"256\" font-size=\"13\" font-family=\"system-ui, sans-serif\">B</text><text x=\"276\" y=\"256\" font-size=\"13\" font-family=\"system-ui, sans-serif\">C</text><text x=\"150\" y=\"258\" font-size=\"11\" font-family=\"system-ui, sans-serif\">D</text><text x=\"80\" y=\"282\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">G = (a + b + c) / 3</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a J E E Advanced flavoured proof that shows the sheer economy of the vector method."
+            },
+            {
+              "seq": 2,
+              "text": "In triangle A B C with vertices a, b and c, let D be the midpoint of B C, and let P divide the median A D in the ratio two to one, measured from A."
+            },
+            {
+              "seq": 3,
+              "text": "First locate D by the midpoint formula, it is b plus c over two."
+            },
+            {
+              "seq": 4,
+              "text": "Now divide A D in two to one from A to D. Plugging into the section formula, the two-thirds point works out to a plus b plus c, all over three."
+            },
+            {
+              "seq": 5,
+              "text": "Look closely at that result, it is completely symmetric in a, b and c; not one vertex is special."
+            },
+            {
+              "seq": 6,
+              "text": "So if we had instead started from the median at B, or at C, the identical algebra would hand us the very same point."
+            },
+            {
+              "seq": 7,
+              "text": "That common point is the centroid G, with position vector a plus b plus c over three, and it proves all three medians are concurrent."
+            },
+            {
+              "seq": 8,
+              "text": "On the board the three medians cross at a single G, which divides each median two to one from its vertex, three lines of vector algebra doing what coordinate geometry needs a page for."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक J E E Advanced flavour वाला proof जो vector method की sheer economy दिखाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Triangle A B C में vertices a, b और c के साथ, D को B C का midpoint मानो, और P को median A D को ratio two to one में, A से measure करते हुए, divide करने दो।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले D को midpoint formula से locate करो, वो है b plus c over two."
+            },
+            {
+              "seq": 4,
+              "text": "अब A D को two to one में A से D तक divide करो। Section formula में plug करने पर two-thirds point निकलता है a plus b plus c, whole over three."
+            },
+            {
+              "seq": 5,
+              "text": "उस result को ध्यान से देखो, वो a, b और c में completely symmetric है; कोई एक vertex special नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "तो अगर हम B के median से, या C से शुरू करते, तो वही identical algebra हमें बिल्कुल वही point दे देती।"
+            },
+            {
+              "seq": 7,
+              "text": "वो common point centroid G है, position vector a plus b plus c over three के साथ, और ये prove करता है कि तीनों medians concurrent हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "Board पर तीनों medians एक single G पर cross करते हैं, जो हर median को उसके vertex से two to one में divide करता है, vector algebra की तीन lines वो कर देती हैं जिसमें coordinate geometry को एक page लगता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 20,
+      "section_type": "tips",
+      "subtopic": "Vector Operations & Components",
+      "title": "Pitfalls and the squares-sum-to-one gatekeeper",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pitfalls and the squares-sum-to-one gatekeeper"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "DR vs DC mix-up: DRs are any proportional triple; DCs satisfy $l^2+m^2+n^2=1$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "style": "red-margin",
+          "text": "If it says 'direction cosines', you MUST divide by the magnitude."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Subtraction order: always $\\vec{AB} = \\vec b - \\vec a$. Writing $\\vec a - \\vec b$ gives $\\vec{BA}$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Internal vs external: internal has $+$ and $m+n$; external has $-$ and $m-n$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Unit-vector slip: divide by $\\lvert \\vec r\\rvert$, never by $\\lvert \\vec r\\rvert^2$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Pro-tip: to test any claimed DCs or unit vector, square the three and add, expect 1."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "One check kills two or three MCQ distractors in seconds."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me close this subtopic with the mistakes that quietly cost marks, and one pro-tip that hands them back."
+            },
+            {
+              "seq": 2,
+              "text": "The commonest error is mixing up direction ratios and direction cosines, ratios are any proportional triple, but cosines must satisfy the squares-sum-to-one identity."
+            },
+            {
+              "seq": 3,
+              "text": "So whenever the question actually says direction cosines, you must divide by the magnitude; do not stop at the ratios."
+            },
+            {
+              "seq": 4,
+              "text": "Second, the subtraction order, always head minus tail, A B equals b minus a. Writing a minus b silently computes B A and flips every sign."
+            },
+            {
+              "seq": 5,
+              "text": "Third, internal versus external section formula: internal carries a plus sign with denominator m plus n, while external carries a minus with denominator m minus n."
+            },
+            {
+              "seq": 6,
+              "text": "Fourth, the unit vector slip, you divide by the magnitude, never by its square; the denominator is the length itself."
+            },
+            {
+              "seq": 7,
+              "text": "And now the pro-tip that pays off constantly, whenever an option claims to be direction cosines or a unit vector, just square the three numbers and add."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>If you do not land on one, eliminate that option on sight; this single check often kills two or three distractors in seconds."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic को उन mistakes के साथ close करते हैं जो चुपचाप marks खा जाती हैं, और एक pro-tip जो वो marks वापस दे देती है।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे common error है direction ratios और direction cosines को mix कर देना, ratios कोई भी proportional triple हैं, but cosines को squares-sum-to-one identity satisfy करनी पड़ती है।"
+            },
+            {
+              "seq": 3,
+              "text": "तो जब भी सवाल actually कहे direction cosines, आपको magnitude से divide करना ही है; ratios पर मत रुको।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा, subtraction order, always head minus tail, A B equals b minus a. a minus b लिखना चुपचाप B A compute कर देता है और हर sign flip कर देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तीसरा, internal versus external section formula: internal में plus sign होता है denominator m plus n के साथ, जबकि external में minus होता है denominator m minus n के साथ।"
+            },
+            {
+              "seq": 6,
+              "text": "चौथा, unit vector slip, आप magnitude से divide करते हो, कभी उसके square से नहीं; denominator length ही है।"
+            },
+            {
+              "seq": 7,
+              "text": "और अब वो pro-tip जो constantly pay off करती है, जब भी कोई option खुद को direction cosines या unit vector कहे, बस तीन numbers को square करके add कर दो।"
+            },
+            {
+              "seq": 8,
+              "text": "<excited>अगर one पर नहीं पहुँचे, तो उस option को देखते ही eliminate कर दो; ये single check अक्सर two या three distractors seconds में मार देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

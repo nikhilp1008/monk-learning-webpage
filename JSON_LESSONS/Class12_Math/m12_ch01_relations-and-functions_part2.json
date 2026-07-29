@@ -1,0 +1,2353 @@
+{
+  "chapter": "Relations and Functions",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 1,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Composition and Inverse of Functions",
+      "title": "Composition: chaining functions in series",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Composition: functions in series"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "A two-stage water system: an RO purifier feeds a chiller, giving cold clean water."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 13,
+          "latex": "(g \\circ f)(x) = g(f(x))"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Run f first, then feed its output into g."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "text": "Innermost first: in $g \\circ f$, even though $g$ is on the left, $f$ touches $x$ first.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "g \\circ f \\ne f \\circ g \\quad \\text{(not commutative)}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "h \\circ (g \\circ f) = (h \\circ g) \\circ f \\quad \\text{(associative)}"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "caption": "The relay: x enters f, hands its output to g, then the result comes out",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 560 150\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"m\" markerWidth=\"9\" markerHeight=\"9\" refX=\"7\" refY=\"4.5\" orient=\"auto\"><path d=\"M0,0 L9,4.5 L0,9 Z\" fill=\"#1d4e79\"/></marker></defs><text x=\"280\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">Composition g ∘ f: run f first, then g</text><text x=\"55\" y=\"97\" text-anchor=\"middle\" font-size=\"14\" fill=\"#333\">x</text><rect x=\"120\" y=\"70\" width=\"70\" height=\"46\" rx=\"8\" fill=\"#eaf1f8\" stroke=\"#1d4e79\" stroke-width=\"2\"/><text x=\"155\" y=\"99\" text-anchor=\"middle\" font-size=\"16\" fill=\"#1d4e79\">f</text><rect x=\"300\" y=\"70\" width=\"70\" height=\"46\" rx=\"8\" fill=\"#eaf1f8\" stroke=\"#1d4e79\" stroke-width=\"2\"/><text x=\"335\" y=\"99\" text-anchor=\"middle\" font-size=\"16\" fill=\"#1d4e79\">g</text><text x=\"475\" y=\"97\" text-anchor=\"middle\" font-size=\"13\" fill=\"#333\">output</text><line x1=\"70\" y1=\"93\" x2=\"114\" y2=\"93\" stroke=\"#1d4e79\" stroke-width=\"1.8\" marker-end=\"url(#m)\"/><line x1=\"192\" y1=\"93\" x2=\"296\" y2=\"93\" stroke=\"#1d4e79\" stroke-width=\"1.8\" marker-end=\"url(#m)\"/><line x1=\"372\" y1=\"93\" x2=\"438\" y2=\"93\" stroke=\"#1d4e79\" stroke-width=\"1.8\" marker-end=\"url(#m)\"/><text x=\"155\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" fill=\"#c0392b\">acts first</text><text x=\"335\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" fill=\"#555\">acts second</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Now we chain functions together. Picture a two-stage water system at home: first an RO purifier, then a chiller."
+            },
+            {
+              "seq": 2,
+              "text": "Pour in tap water, the purifier cleans it, and its output immediately feeds the chiller, which cools it. Tap water in, cold clean water out."
+            },
+            {
+              "seq": 3,
+              "text": "That is exactly composition. The composite g after f, written g ring f, is defined as g of f of x."
+            },
+            {
+              "seq": 4,
+              "text": "In words, run f first, then feed its output straight into g. The order of operations is the whole story here."
+            },
+            {
+              "seq": 5,
+              "text": "Build one habit above all: the innermost function acts first. In g ring f, even though g sits on the left, it is f that touches x first."
+            },
+            {
+              "seq": 6,
+              "text": "Composition is a relay race, and swapping who runs first usually changes the race. So in general g ring f is not equal to f ring g. It is not commutative."
+            },
+            {
+              "seq": 7,
+              "text": "It is, however, associative. Chaining three machines gives the same result no matter how you group them, so h ring, bracket g ring f, equals bracket h ring g, ring f."
+            },
+            {
+              "seq": 8,
+              "text": "The diagram shows the relay clearly: x enters f, f hands its output to g, and the final result comes out, with f always acting first."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>अब हम functions को chain करते हैं। घर के two-stage water system को सोचो: पहले एक RO purifier, फिर एक chiller।"
+            },
+            {
+              "seq": 2,
+              "text": "Tap water डालो, purifier उसे clean करता है, और उसका output तुरंत chiller को feed होता है, जो उसे cool करता है। Tap water अंदर, cold clean water बाहर।"
+            },
+            {
+              "seq": 3,
+              "text": "यही बिलकुल composition है। Composite g after f, जिसे g ring f लिखते हैं, define होता है g of f of x।"
+            },
+            {
+              "seq": 4,
+              "text": "शब्दों में, पहले f चलाओ, फिर उसका output सीधे g में feed करो। यहाँ order of operations ही पूरी कहानी है।"
+            },
+            {
+              "seq": 5,
+              "text": "एक habit सबसे ऊपर बनाओ: innermost function पहले act करता है। g ring f में, चाहे g बाईं तरफ़ हो, x को f ही पहले छूता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Composition एक relay race है, और कौन पहले दौड़े यह swap करने से race आम तौर पर बदल जाती है। तो generally g ring f, f ring g के बराबर नहीं है। यह commutative नहीं है।"
+            },
+            {
+              "seq": 7,
+              "text": "पर यह associative है। तीन machines को chain करो तो grouping चाहे जो हो, result वही रहता है, यानी h ring, bracket g ring f, equals bracket h ring g, ring f।"
+            },
+            {
+              "seq": 8,
+              "text": "Diagram relay साफ़ दिखाता है: x, f में घुसता है, f अपना output g को देता है, और final result बाहर आता है, f हमेशा पहले act करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Composition and Inverse of Functions",
+      "title": "Inverse: the undo button",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Inverse: the undo button"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Pressing control Z reverses the last action, landing you exactly where you started."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 13,
+          "latex": "f^{-1} \\circ f = I \\quad \\text{and} \\quad f \\circ f^{-1} = I"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "The inverse is defined as the thing that composes with f to give 'do nothing'."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "text": "Not every function has an inverse: $f$ must be bijective (one-one and onto).",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "If f were many-one, f inverse of a shared output could not decide which input to return."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 43,
+          "latex": "f \\text{ is invertible} \\iff f \\text{ is bijective}"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "caption": "The inverse is the mirror image of f across the line y = x",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"150\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4e79\">Inverse: reflection across y = x</text><line x1=\"40\" y1=\"260\" x2=\"285\" y2=\"260\" stroke=\"#333\" stroke-width=\"1.3\"/><line x1=\"40\" y1=\"260\" x2=\"40\" y2=\"30\" stroke=\"#333\" stroke-width=\"1.3\"/><line x1=\"40\" y1=\"260\" x2=\"260\" y2=\"40\" stroke=\"#888\" stroke-width=\"1.2\" stroke-dasharray=\"5 4\"/><text x=\"200\" y=\"88\" font-size=\"12\" fill=\"#888\">y = x</text><polyline points=\"60,240 100,180 150,120 210,80 255,60\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2.4\"/><polyline points=\"60,240 120,200 180,150 220,90 240,45\" fill=\"none\" stroke=\"#2e7d32\" stroke-width=\"2.4\"/><text x=\"258\" y=\"60\" font-size=\"13\" fill=\"#1d4e79\">f</text><text x=\"150\" y=\"145\" font-size=\"13\" fill=\"#2e7d32\">f⁻¹</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now meet the undo button. Picture pressing control Z: whatever the last action did, undo reverses it perfectly, landing you exactly where you started."
+            },
+            {
+              "seq": 2,
+              "text": "An inverse function f inverse is the control Z of f. If f sends a to b, then f inverse sends b straight back to a."
+            },
+            {
+              "seq": 3,
+              "text": "Formally, f inverse composed with f is the identity, and f composed with f inverse is also the identity, where identity is the do-nothing function."
+            },
+            {
+              "seq": 4,
+              "text": "Composition and inverse meet right here: the inverse is defined as the thing that composes with f to give do nothing."
+            },
+            {
+              "seq": 5,
+              "text": "But here is the catch. Not every function has an inverse. For the undo to work, f must be bijective, that is one-one and onto."
+            },
+            {
+              "seq": 6,
+              "text": "Why bijective? If f were many-one, say both two and minus two map to four, then f inverse of four could not decide whether to return two or minus two. The undo is ambiguous."
+            },
+            {
+              "seq": 7,
+              "text": "And if f were not onto, some target would have no input to return to. So f is invertible exactly when f is bijective, the bridge straight from the previous subtopic."
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically, the inverse is the mirror image of f across the line y equals x, as this reflection diagram shows."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब undo button से मिलो। control Z दबाना सोचो: last action ने जो भी किया, undo उसे perfectly reverse कर देता है, तुम्हें बिलकुल वहीं वापस लाकर जहाँ से शुरू किया था।"
+            },
+            {
+              "seq": 2,
+              "text": "Inverse function f inverse, f का control Z है। अगर f, a को b पर भेजता है, तो f inverse, b को सीधे वापस a पर भेजता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Formally, f inverse composed with f identity है, और f composed with f inverse भी identity है, जहाँ identity do-nothing function है।"
+            },
+            {
+              "seq": 4,
+              "text": "Composition और inverse यहीं मिलते हैं: inverse उसी चीज़ के रूप में define होता है जो f के साथ compose करके do nothing देती है।"
+            },
+            {
+              "seq": 5,
+              "text": "पर यह रहा catch। हर function का inverse नहीं होता। Undo के काम करने के लिए f bijective होना चाहिए, यानी one-one और onto।"
+            },
+            {
+              "seq": 6,
+              "text": "Bijective क्यों? अगर f many-one हो, जैसे two और minus two दोनों four पर जाएँ, तो f inverse of four decide नहीं कर पाएगा कि two लौटाए या minus two। Undo ambiguous है।"
+            },
+            {
+              "seq": 7,
+              "text": "और अगर f onto ना हो, तो किसी target के पास लौटने को कोई input नहीं होगा। तो f तभी invertible है जब f bijective हो, यह bridge पिछले subtopic से सीधा आता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically, inverse, f का mirror image है line y equals x के across, जैसा यह reflection diagram दिखाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "formulas",
+      "subtopic": "Composition and Inverse of Functions",
+      "title": "The composition and inverse property toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Properties you carry everywhere"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "(g \\circ f)(x) = g(f(x)), \\quad g \\circ f : A \\to C, \\ \\ \\mathrm{Range}(f) \\subseteq \\mathrm{Dom}(g)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "latex": "f \\circ I_A = f = I_B \\circ f"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "text": "Inheritance: if f and g are both injective, so is g ring f; likewise surjective and bijective."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "f^{-1} \\circ f = I_A, \\quad f \\circ f^{-1} = I_B, \\quad \\text{exists} \\iff f \\text{ bijective}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "latex": "(f^{-1})^{-1} = f, \\quad \\mathrm{Dom}(f^{-1}) = \\mathrm{Range}(f)"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "latex": "(g \\circ f)^{-1} = f^{-1} \\circ g^{-1}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "The superscript $-1$ means inverse function, never the reciprocal $\\tfrac{1}{f(x)}$.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us gather the properties you will lean on in every problem, first for composition, then for inverse."
+            },
+            {
+              "seq": 2,
+              "text": "Composition sends A to C through B, defined by g of f of x, and it only makes sense when the range of the inner f lies inside the domain of the outer g."
+            },
+            {
+              "seq": 3,
+              "text": "The identity is neutral: composing f with the identity on either side just gives f back, so f ring identity equals f equals identity ring f."
+            },
+            {
+              "seq": 4,
+              "text": "Composition also inherits good behaviour. If f and g are both injective, so is g ring f, and the same holds for surjective and for bijective."
+            },
+            {
+              "seq": 5,
+              "text": "For the inverse: f inverse composed with f is the identity on A, and f composed with f inverse is the identity on B, and it exists exactly when f is bijective."
+            },
+            {
+              "seq": 6,
+              "text": "Two more: undoing an inverse gives back the original, so f inverse inverse equals f, and the domain of f inverse is the range of f."
+            },
+            {
+              "seq": 7,
+              "text": "The star property, order reversal: the inverse of g ring f equals f inverse ring g inverse. You undo the last-applied function first."
+            },
+            {
+              "seq": 8,
+              "text": "And the constant warning: the superscript minus one means the inverse function, never the reciprocal one over f of x. Keep those two apart."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो वो properties इकट्ठा करें जिन पर हर problem में भरोसा करोगे, पहले composition के लिए, फिर inverse के लिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Composition, A को C तक B के ज़रिए भेजता है, define होता है g of f of x से, और यह तभी sense बनाता है जब inner f का range, outer g के domain के अंदर हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Identity neutral है: f को identity के साथ किसी भी तरफ़ compose करो तो f ही वापस मिलता है, यानी f ring identity equals f equals identity ring f।"
+            },
+            {
+              "seq": 4,
+              "text": "Composition अच्छे behaviour को inherit भी करता है। अगर f और g दोनों injective हों, तो g ring f भी है, और यही surjective और bijective के लिए भी।"
+            },
+            {
+              "seq": 5,
+              "text": "Inverse के लिए: f inverse composed with f, A पर identity है, और f composed with f inverse, B पर identity है, और यह तभी exist करता है जब f bijective हो।"
+            },
+            {
+              "seq": 6,
+              "text": "दो और: inverse को undo करो तो original वापस मिलता है, यानी f inverse inverse equals f, और f inverse का domain, f का range होता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Star property, order reversal: g ring f का inverse equals f inverse ring g inverse। जो function आख़िर में apply हुआ उसे पहले undo करते हो।"
+            },
+            {
+              "seq": 8,
+              "text": "और constant warning: superscript minus one का मतलब inverse function है, कभी reciprocal one over f of x नहीं। इन दोनों को अलग रखो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "Composition and Inverse of Functions",
+      "title": "Computing a composite both ways",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Substitute, then simplify"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Rule: put the whole formula of the inner function into every input slot of the outer, then simplify."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "f(x) = 3x + 1, \\quad g(x) = x^2 - 2"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "(f \\circ g)(x) = 3(x^2 - 2) + 1 = 3x^2 - 5"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "(g \\circ f)(x) = (3x + 1)^2 - 2 = 9x^2 + 6x - 1"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Test x equal to two: f ring g gives seven, g ring f gives forty seven."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "text": "So $f \\circ g \\ne g \\circ f$ — composition is genuinely not commutative.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Always confirm the handoff: the inner range must lie inside the outer domain."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us make composition concrete by computing both orders and seeing them disagree."
+            },
+            {
+              "seq": 2,
+              "text": "The rule is mechanical: take the whole formula of the inner function and drop it into every input slot of the outer one, then simplify."
+            },
+            {
+              "seq": 3,
+              "text": "Take f of x equals three x plus one and g of x equals x squared minus two, both on the reals."
+            },
+            {
+              "seq": 4,
+              "text": "For f ring g, feed g into f. Wherever f says input, write x squared minus two. So three times x squared minus two, plus one, giving three x squared minus five."
+            },
+            {
+              "seq": 5,
+              "text": "For g ring f, feed f into g. Square three x plus one and subtract two, which expands to nine x squared plus six x minus one."
+            },
+            {
+              "seq": 6,
+              "text": "Test at x equal to two. f ring g gives seven, while g ring f gives forty seven. Very different numbers from the same two functions."
+            },
+            {
+              "seq": 7,
+              "text": "So f ring g is not equal to g ring f. Composition is genuinely not commutative, and order is never optional."
+            },
+            {
+              "seq": 8,
+              "text": "One habit before you finish: always confirm the handoff, meaning the range of the inner function must lie inside the domain of the outer function."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो composition को concrete बनाएँ, दोनों orders compute करके और उन्हें disagree करते देख कर।"
+            },
+            {
+              "seq": 2,
+              "text": "Rule mechanical है: inner function का पूरा formula लो और उसे outer के हर input slot में डाल दो, फिर simplify करो।"
+            },
+            {
+              "seq": 3,
+              "text": "लो f of x equals three x plus one और g of x equals x squared minus two, दोनों reals पर।"
+            },
+            {
+              "seq": 4,
+              "text": "f ring g के लिए, g को f में feed करो। जहाँ भी f कहे input, वहाँ x squared minus two लिखो। तो three times x squared minus two, plus one, यानी three x squared minus five।"
+            },
+            {
+              "seq": 5,
+              "text": "g ring f के लिए, f को g में feed करो। three x plus one का square करो और two घटाओ, जो expand होकर बनता है nine x squared plus six x minus one।"
+            },
+            {
+              "seq": 6,
+              "text": "x equal to two पर test करो। f ring g देता है seven, जबकि g ring f देता है forty seven। एक ही दो functions से बहुत अलग numbers।"
+            },
+            {
+              "seq": 7,
+              "text": "तो f ring g, g ring f के बराबर नहीं। Composition सच में commutative नहीं है, और order कभी optional नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "ख़त्म करने से पहले एक habit: हमेशा handoff confirm करो, यानी inner function का range, outer function के domain के अंदर होना चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Composition and Inverse of Functions",
+      "title": "Finding an inverse: swap and solve",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Swap-and-solve, and involutions"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Steps: check bijectivity, write y equals f of x, solve for x, then swap x and y."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "f(x) = 7 - 3x \\ \\Rightarrow \\ f^{-1}(x) = \\dfrac{7 - x}{3}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "text": "Trap: $f^{-1}(x) \\ne \\dfrac{1}{7 - 3x}$ — the reciprocal is not the inverse.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "A self-inverse, or involution, returns x when you apply it twice."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "p(x) = \\tfrac{1}{x}: \\ p(p(x)) = x \\ \\Rightarrow \\ \\text{self-inverse}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "q(x) = 2x: \\ q(q(x)) = 4x \\ne x \\ \\Rightarrow \\ \\text{not self-inverse}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "To spot a self-inverse fast, compose the function with itself and look for x."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the standard recipe for an inverse, plus a neat special case you should recognise on sight."
+            },
+            {
+              "seq": 2,
+              "text": "The steps: first check the function is bijective, then write y equals f of x, solve for x in terms of y, and finally swap x and y to name f inverse."
+            },
+            {
+              "seq": 3,
+              "text": "Take f of x equals seven minus three x. It multiplies by minus three, then adds seven. Undo in reverse: subtract seven, then divide by minus three, giving f inverse of x equals seven minus x over three."
+            },
+            {
+              "seq": 4,
+              "text": "Guard against the classic trap. f inverse of x is not one over seven minus three x. The reciprocal is a completely different object from the inverse."
+            },
+            {
+              "seq": 5,
+              "text": "Now a special case. A self-inverse, also called an involution, is a function that returns x when you apply it twice."
+            },
+            {
+              "seq": 6,
+              "text": "Take p of x equals one over x. Applying it twice, p of p of x, gives one over one over x, which is just x. So p is its own inverse."
+            },
+            {
+              "seq": 7,
+              "text": "Contrast q of x equals two x. Applying it twice gives four x, which is not x, so q is not a self-inverse."
+            },
+            {
+              "seq": 8,
+              "text": "The fast test for a self-inverse is exactly this: compose the function with itself and check whether it collapses back to x."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा inverse का standard recipe, साथ में एक neat special case जिसे देखते ही पहचानना चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Steps: पहले check करो function bijective है, फिर y equals f of x लिखो, x को y में solve करो, और आख़िर में x और y swap करके f inverse नाम दो।"
+            },
+            {
+              "seq": 3,
+              "text": "लो f of x equals seven minus three x। यह minus three से multiply करता है, फिर seven जोड़ता है। Reverse में undo करो: seven घटाओ, फिर minus three से divide करो, जिससे f inverse of x equals seven minus x over three।"
+            },
+            {
+              "seq": 4,
+              "text": "Classic trap से बचो। f inverse of x, one over seven minus three x नहीं है। Reciprocal, inverse से बिलकुल अलग चीज़ है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब एक special case। Self-inverse, जिसे involution भी कहते हैं, वो function है जो दो बार apply करने पर x लौटाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "लो p of x equals one over x। दो बार apply करो, p of p of x, तो मिलता है one over one over x, जो बस x है। तो p अपना ही inverse है।"
+            },
+            {
+              "seq": 7,
+              "text": "Contrast करो q of x equals two x। दो बार apply करने पर four x मिलता है, जो x नहीं है, तो q self-inverse नहीं है।"
+            },
+            {
+              "seq": 8,
+              "text": "Self-inverse का fast test बिलकुल यही है: function को खुद से compose करो और देखो कि वह वापस x पर collapse होता है या नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Composition and Inverse of Functions",
+      "title": "Inverse of a rational (Mobius) function",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Inverse of a rational map"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f : \\mathbb{R}\\setminus\\{3\\} \\to \\mathbb{R}\\setminus\\{2\\}, \\quad f(x) = \\dfrac{2x - 1}{x - 3}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Set y equal to the expression and clear the fraction."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "y(x - 3) = 2x - 1 \\ \\Rightarrow \\ x(y - 2) = 3y - 1"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "x = \\dfrac{3y - 1}{y - 2}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "latex": "f^{-1}(x) = \\dfrac{3x - 1}{x - 2}, \\quad \\text{domain } \\mathbb{R}\\setminus\\{2\\}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "text": "Sanity check: $\\mathrm{Dom}(f^{-1}) = \\mathrm{Range}(f)$ and $\\mathrm{Range}(f^{-1}) = \\mathrm{Dom}(f)$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "When the domain-range swap holds, your inverse is confirmed correct."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now invert a rational function, the kind that appears constantly in JEE Main. The method is swap and solve, handled carefully."
+            },
+            {
+              "seq": 2,
+              "text": "Take f from the reals without three to the reals without two, given by two x minus one over x minus three. Between those sets it is one-one and onto, so the inverse exists."
+            },
+            {
+              "seq": 3,
+              "text": "Set y equal to two x minus one over x minus three, then clear the fraction by multiplying across."
+            },
+            {
+              "seq": 4,
+              "text": "That gives y times x minus three equals two x minus one. Gather the x terms: x times y minus two equals three y minus one."
+            },
+            {
+              "seq": 5,
+              "text": "Solve for x, giving x equals three y minus one over y minus two."
+            },
+            {
+              "seq": 6,
+              "text": "Now swap y and x to name the inverse: f inverse of x equals three x minus one over x minus two, with domain the reals without two."
+            },
+            {
+              "seq": 7,
+              "text": "Do the sanity check. The domain of f inverse is the reals without two, which is exactly the range of f, and the range of f inverse is the reals without three, exactly the domain of f."
+            },
+            {
+              "seq": 8,
+              "text": "That domain-range swap holding is your built-in confirmation that the inverse is correct."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक rational function invert करते हैं, वो type जो JEE Main में लगातार आता है। Method वही swap and solve है, careful तरीक़े से।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f, reals without three से reals without two तक, given by two x minus one over x minus three। उन sets के बीच यह one-one और onto है, तो inverse exist करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "y को two x minus one over x minus three के बराबर रखो, फिर across multiply करके fraction clear करो।"
+            },
+            {
+              "seq": 4,
+              "text": "इससे मिलता है y times x minus three equals two x minus one। x terms इकट्ठा करो: x times y minus two equals three y minus one।"
+            },
+            {
+              "seq": 5,
+              "text": "x के लिए solve करो, जिससे x equals three y minus one over y minus two।"
+            },
+            {
+              "seq": 6,
+              "text": "अब y और x swap करके inverse नाम दो: f inverse of x equals three x minus one over x minus two, domain reals without two के साथ।"
+            },
+            {
+              "seq": 7,
+              "text": "Sanity check करो। f inverse का domain reals without two है, जो बिलकुल f का range है, और f inverse का range reals without three है, बिलकुल f का domain।"
+            },
+            {
+              "seq": 8,
+              "text": "वो domain-range swap का hold करना तुम्हारा built-in confirmation है कि inverse सही है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Composition and Inverse of Functions",
+      "title": "Order reversal proven two ways",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Socks and shoes, confirmed"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) = x^3 + 2, \\quad g(x) = 2x - 1"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "latex": "(g \\circ f)(x) = 2(x^3 + 2) - 1 = 2x^3 + 3"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "latex": "(g \\circ f)^{-1}(x) = \\left(\\dfrac{x - 3}{2}\\right)^{1/3}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Now the second route: invert each piece, then reverse the order."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "latex": "f^{-1}(x) = (x - 2)^{1/3}, \\quad g^{-1}(x) = \\dfrac{x + 1}{2}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "latex": "(f^{-1} \\circ g^{-1})(x) = \\left(\\dfrac{x - 3}{2}\\right)^{1/3}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Both routes match: $(g \\circ f)^{-1} = f^{-1} \\circ g^{-1}$ — undo the last step first.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 9,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "caption": "Do f then g; to undo, reverse the order: g inverse then f inverse",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 620 210\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"mf\" markerWidth=\"9\" markerHeight=\"9\" refX=\"7\" refY=\"4.5\" orient=\"auto\"><path d=\"M0,0 L9,4.5 L0,9 Z\" fill=\"#1d4e79\"/></marker><marker id=\"mb\" markerWidth=\"9\" markerHeight=\"9\" refX=\"7\" refY=\"4.5\" orient=\"auto\"><path d=\"M0,0 L9,4.5 L0,9 Z\" fill=\"#2e7d32\"/></marker></defs><text x=\"310\" y=\"22\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#333\">Do f then g; undo g⁻¹ then f⁻¹</text><text x=\"30\" y=\"52\" font-size=\"11\" fill=\"#1d4e79\">do: f then g</text><text x=\"45\" y=\"80\" text-anchor=\"middle\" font-size=\"13\" fill=\"#333\">x</text><rect x=\"110\" y=\"55\" width=\"60\" height=\"40\" rx=\"7\" fill=\"#eaf1f8\" stroke=\"#1d4e79\" stroke-width=\"2\"/><text x=\"140\" y=\"81\" text-anchor=\"middle\" font-size=\"15\" fill=\"#1d4e79\">f</text><rect x=\"300\" y=\"55\" width=\"60\" height=\"40\" rx=\"7\" fill=\"#eaf1f8\" stroke=\"#1d4e79\" stroke-width=\"2\"/><text x=\"330\" y=\"81\" text-anchor=\"middle\" font-size=\"15\" fill=\"#1d4e79\">g</text><text x=\"490\" y=\"80\" text-anchor=\"middle\" font-size=\"13\" fill=\"#333\">y</text><line x1=\"60\" y1=\"75\" x2=\"105\" y2=\"75\" stroke=\"#1d4e79\" stroke-width=\"1.8\" marker-end=\"url(#mf)\"/><line x1=\"172\" y1=\"75\" x2=\"296\" y2=\"75\" stroke=\"#1d4e79\" stroke-width=\"1.8\" marker-end=\"url(#mf)\"/><line x1=\"362\" y1=\"75\" x2=\"482\" y2=\"75\" stroke=\"#1d4e79\" stroke-width=\"1.8\" marker-end=\"url(#mf)\"/><text x=\"30\" y=\"142\" font-size=\"11\" fill=\"#2e7d32\">undo: g⁻¹ then f⁻¹</text><text x=\"490\" y=\"170\" text-anchor=\"middle\" font-size=\"13\" fill=\"#333\">y</text><rect x=\"300\" y=\"145\" width=\"60\" height=\"40\" rx=\"7\" fill=\"#eef7ee\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"330\" y=\"171\" text-anchor=\"middle\" font-size=\"14\" fill=\"#2e7d32\">g⁻¹</text><rect x=\"110\" y=\"145\" width=\"60\" height=\"40\" rx=\"7\" fill=\"#eef7ee\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"140\" y=\"171\" text-anchor=\"middle\" font-size=\"14\" fill=\"#2e7d32\">f⁻¹</text><text x=\"45\" y=\"170\" text-anchor=\"middle\" font-size=\"13\" fill=\"#333\">x</text><line x1=\"482\" y1=\"165\" x2=\"362\" y2=\"165\" stroke=\"#2e7d32\" stroke-width=\"1.8\" marker-end=\"url(#mb)\"/><line x1=\"296\" y1=\"165\" x2=\"172\" y2=\"165\" stroke=\"#2e7d32\" stroke-width=\"1.8\" marker-end=\"url(#mb)\"/><line x1=\"105\" y1=\"165\" x2=\"60\" y2=\"165\" stroke=\"#2e7d32\" stroke-width=\"1.8\" marker-end=\"url(#mb)\"/></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example proves the order-reversal law by computing the same inverse two independent ways and watching them agree."
+            },
+            {
+              "seq": 2,
+              "text": "Take f of x equals x cubed plus two and g of x equals two x minus one, both on the reals."
+            },
+            {
+              "seq": 3,
+              "text": "Way one, direct. Build the composite g ring f: substitute f into g to get two times x cubed plus two, minus one, which is two x cubed plus three."
+            },
+            {
+              "seq": 4,
+              "text": "Invert that composite. Set y equals two x cubed plus three, solve, and you get the inverse equals the cube root of x minus three over two."
+            },
+            {
+              "seq": 5,
+              "text": "Way two uses the law. Invert each piece separately, then reverse the order of composition."
+            },
+            {
+              "seq": 6,
+              "text": "The inverses are f inverse of x equals the cube root of x minus two, and g inverse of x equals x plus one over two."
+            },
+            {
+              "seq": 7,
+              "text": "Now compose f inverse after g inverse. Feed x plus one over two into f inverse and simplify, and it collapses to the cube root of x minus three over two."
+            },
+            {
+              "seq": 8,
+              "text": "Both routes give exactly the same answer, confirming that the inverse of g ring f equals f inverse ring g inverse. Undo the last-applied step first."
+            },
+            {
+              "seq": 9,
+              "text": "The diagram captures it: doing f then g goes left to right, and undoing runs backward, g inverse first, then f inverse, like taking off shoes before socks."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example order-reversal law को prove करता है, same inverse को दो independent तरीक़ों से compute करके और उन्हें agree करते देख कर।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f of x equals x cubed plus two और g of x equals two x minus one, दोनों reals पर।"
+            },
+            {
+              "seq": 3,
+              "text": "Way one, direct। Composite g ring f बनाओ: f को g में substitute करके two times x cubed plus two, minus one, यानी two x cubed plus three।"
+            },
+            {
+              "seq": 4,
+              "text": "उस composite को invert करो। y equals two x cubed plus three रखो, solve करो, और मिलता है inverse equals cube root of x minus three over two।"
+            },
+            {
+              "seq": 5,
+              "text": "Way two law use करता है। हर piece को अलग-अलग invert करो, फिर composition का order reverse करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Inverses हैं f inverse of x equals cube root of x minus two, और g inverse of x equals x plus one over two।"
+            },
+            {
+              "seq": 7,
+              "text": "अब f inverse को g inverse के बाद compose करो। x plus one over two को f inverse में feed करो और simplify करो, तो यह collapse होकर cube root of x minus three over two बन जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "दोनों routes बिलकुल same answer देते हैं, confirm करते हुए कि g ring f का inverse equals f inverse ring g inverse। जो step आख़िर में apply हुआ उसे पहले undo करो।"
+            },
+            {
+              "seq": 9,
+              "text": "Diagram इसे पकड़ता है: f फिर g करना बाएँ से दाएँ जाता है, और undo करना उल्टा चलता है, पहले g inverse, फिर f inverse, जैसे socks से पहले shoes उतारना।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "tips",
+      "subtopic": "Composition and Inverse of Functions",
+      "title": "Pitfalls and pro-tips for composition and inverse",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where these problems go wrong"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "text": "Composition is not commutative: $f \\circ g$ and $g \\circ f$ almost always differ; read innermost-first.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 12,
+          "text": "The reciprocal trap: $f^{-1}(x)$ is the inverse function, never $\\tfrac{1}{f(x)}$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "text": "No inverse exists unless f is bijective; if it is not, restrict the domain first."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Inverting a composite reverses the order: (g ring f) inverse equals f inverse ring g inverse."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Speed pro-tips"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "To evaluate f inverse at c without the whole inverse, just solve f of x equals c for x."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Verify any claimed inverse fast: if f of f inverse of x collapses to x, you are done."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Always state the domain of $f^{-1}$: it equals the range of $f$.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us close this subtopic with the traps that cost marks, then the reflexes that save time."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, treating composition as commutative. f ring g and g ring f are almost always different, so respect the order and read innermost-first: in g ring f, f touches x first."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, the reciprocal trap. f inverse of x is the inverse function, never one over f of x. The same superscript means two different things on functions versus numbers."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, inverting a non-bijective function. No inverse exists unless f is one-one and onto. If it is not, you must restrict the domain or codomain first."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, keeping the same order when inverting a composite. The inverse of g ring f is f inverse ring g inverse, with the order reversed, socks and shoes."
+            },
+            {
+              "seq": 6,
+              "text": "Now the speed reflexes that make these problems quick."
+            },
+            {
+              "seq": 7,
+              "text": "To evaluate f inverse at a single value c, do not build the whole inverse. Just solve f of x equals c for x, and that one value is f inverse of c."
+            },
+            {
+              "seq": 8,
+              "text": "And to verify any claimed inverse in seconds, check that f of f inverse of x collapses to x. If it does, you are done."
+            },
+            {
+              "seq": 9,
+              "text": "One more habit: always state the domain of f inverse, because it equals the range of f, and examiners look for it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो इस subtopic को उन traps से close करें जो marks खाते हैं, फिर वो reflexes जो time बचाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, composition को commutative मानना। f ring g और g ring f लगभग हमेशा अलग होते हैं, तो order respect करो और innermost-first पढ़ो: g ring f में x को f पहले छूता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, reciprocal trap। f inverse of x, inverse function है, कभी one over f of x नहीं। वही superscript functions पर और numbers पर दो अलग चीज़ें कहता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, non-bijective function को invert करना। जब तक f one-one और onto ना हो, inverse exist नहीं करता। अगर ना हो, तो पहले domain या codomain restrict करो।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, composite invert करते समय same order रखना। g ring f का inverse, f inverse ring g inverse है, order उल्टा, socks and shoes।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वो speed reflexes जो इन problems को quick बना देते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "f inverse को single value c पर evaluate करने के लिए, पूरा inverse मत बनाओ। बस f of x equals c को x के लिए solve करो, और वो एक value ही f inverse of c है।"
+            },
+            {
+              "seq": 8,
+              "text": "और किसी भी claimed inverse को seconds में verify करने के लिए, check करो कि f of f inverse of x, x पर collapse होता है। अगर हो, तो काम ख़त्म।"
+            },
+            {
+              "seq": 9,
+              "text": "एक और habit: f inverse का domain हमेशा बताओ, क्योंकि यह f के range के बराबर है, और examiners इसे ढूँढते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "concept",
+      "subtopic": "Domain and Range of Real Functions",
+      "title": "Domain: which inputs are allowed?",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Domain: which inputs are allowed?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "The domain is the list of ingredients the machine will accept without jamming."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 13,
+          "text": "Jam 1 — division by zero: any denominator equal to $0$ is forbidden.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Jam 2 — even root of a negative: the content under a square root must be at least zero."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Jam 3 — log of a non-positive number: a log argument must be strictly greater than zero."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Find every place these jams could occur, write each condition, and intersect them all."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "latex": "\\text{Domain} = \\{\\, x : \\text{every constraint holds simultaneously} \\,\\}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "text": "Simultaneously means intersection, never union."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Every function is a machine, and the domain answers one question: which inputs is it allowed to accept?"
+            },
+            {
+              "seq": 2,
+              "text": "Think of a kitchen. The domain is the list of ingredients the recipe will accept. Hand it something it cannot process, and the machine jams."
+            },
+            {
+              "seq": 3,
+              "text": "There are exactly three jams to watch for. Jam one is division by zero: any denominator that becomes zero is forbidden, because the machine explodes there."
+            },
+            {
+              "seq": 4,
+              "text": "Jam two is an even root of a negative. The square root, or any even root, of a negative number is not real, so whatever sits under it must be at least zero."
+            },
+            {
+              "seq": 5,
+              "text": "Jam three is the logarithm of a non-positive number. A log only accepts strictly positive inputs, so the argument of any log must be greater than zero."
+            },
+            {
+              "seq": 6,
+              "text": "The routine is simple. Find every place these three jams could occur, write down the condition that avoids each one, and then intersect all the conditions."
+            },
+            {
+              "seq": 7,
+              "text": "That intersection is the domain, the set of x for which every constraint holds at the same time."
+            },
+            {
+              "seq": 8,
+              "text": "Say it aloud so it sticks: simultaneously means intersection, never union. Constraints meet, they do not merely mingle."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>हर function एक machine है, और domain एक सवाल का जवाब देता है: यह कौन से inputs accept करने की इजाज़त देता है?"
+            },
+            {
+              "seq": 2,
+              "text": "एक kitchen सोचो। Domain उन ingredients की list है जो recipe accept करेगी। कुछ ऐसा दो जो process ना हो, और machine jam हो जाती है।"
+            },
+            {
+              "seq": 3,
+              "text": "देखने के लिए बिलकुल तीन jams हैं। Jam one है division by zero: कोई भी denominator जो zero बन जाए वो forbidden है, क्योंकि machine वहाँ explode करती है।"
+            },
+            {
+              "seq": 4,
+              "text": "Jam two है negative का even root। किसी negative number का square root, या कोई भी even root, real नहीं है, तो उसके नीचे जो भी हो वो कम से कम zero होना चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Jam three है non-positive number का logarithm। Log सिर्फ़ strictly positive inputs accept करता है, तो किसी भी log का argument zero से बड़ा होना चाहिए।"
+            },
+            {
+              "seq": 6,
+              "text": "Routine simple है। हर उस जगह ढूँढो जहाँ ये तीन jams हो सकते हैं, हर एक से बचने वाली condition लिखो, और फिर सारी conditions को intersect करो।"
+            },
+            {
+              "seq": 7,
+              "text": "वही intersection domain है, उन x का set जिनके लिए हर constraint एक साथ hold करती है।"
+            },
+            {
+              "seq": 8,
+              "text": "इसे बोलकर याद रखो: simultaneously का मतलब intersection है, कभी union नहीं। Constraints मिलती हैं, बस mingle नहीं करतीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Domain and Range of Real Functions",
+      "title": "Range: turning the machine inside out",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Range: which outputs can appear?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Range is harder than domain; you usually cannot just read it off."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "The reliable trick: set y equal to f of x, solve for x, then ask which y give a legal x."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "y = f(x) \\ \\longrightarrow \\ x = (\\text{expression in } y) \\ \\longrightarrow \\ \\text{keep valid } y"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Those y-values, for which a real in-domain x exists, form the range."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "text": "The range depends on the domain: shrink the domain and the range can shrink too.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 43,
+          "text": "Range is not the codomain: '$f:\\mathbb{R}\\to\\mathbb{R}$' does not mean every real is hit.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "latex": "\\mathrm{Range}(f) \\subseteq B, \\ \\text{with equality only when } f \\text{ is onto}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The range is the harder twin of the domain. Domain asks what may go in; range asks what can possibly come out."
+            },
+            {
+              "seq": 2,
+              "text": "And you usually cannot just read the range off the formula, so we need a reliable method rather than guessing."
+            },
+            {
+              "seq": 3,
+              "text": "The trick is to turn the machine inside out. Set y equal to f of x, solve for x in terms of y, and then ask for which values of y a legal x actually exists."
+            },
+            {
+              "seq": 4,
+              "text": "In symbols, y equals f of x, then x becomes some expression in y, and you keep only the y that produce a valid x."
+            },
+            {
+              "seq": 5,
+              "text": "Those y-values, the ones for which a real in-domain x exists, are exactly the range. You are asking the machine to run backwards and seeing which outputs have a source."
+            },
+            {
+              "seq": 6,
+              "text": "Two cautions. First, the range depends on the domain. Shrink the domain, and the range can shrink with it."
+            },
+            {
+              "seq": 7,
+              "text": "Second, the range is not automatically the codomain. Writing f from the reals to the reals only promises outputs land in the reals, not that every real is hit."
+            },
+            {
+              "seq": 8,
+              "text": "So the range is a subset of the codomain B, and they are equal only when the function is onto."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Range, domain का harder twin है। Domain पूछता है क्या अंदर जा सकता है; range पूछता है क्या बाहर आ सकता है।"
+            },
+            {
+              "seq": 2,
+              "text": "और range को आम तौर पर formula से सीधे पढ़ नहीं सकते, तो guessing के बजाय एक reliable method चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Trick है machine को inside out कर देना। y को f of x के बराबर रखो, x को y में solve करो, और फिर पूछो कि y की कौन सी values के लिए legal x सच में exist करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Symbols में, y equals f of x, फिर x, y में कोई expression बन जाता है, और तुम सिर्फ़ वो y रखते हो जो valid x देती हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "वो y-values, जिनके लिए real in-domain x मौजूद है, बिलकुल range हैं। तुम machine को backwards चलाने को कह रहे हो और देख रहे हो कि किन outputs का source है।"
+            },
+            {
+              "seq": 6,
+              "text": "दो cautions। पहला, range domain पर depend करता है। Domain छोटा करो, तो range भी छोटा हो सकता है।"
+            },
+            {
+              "seq": 7,
+              "text": "दूसरा, range automatically codomain नहीं है। f, reals से reals लिखना सिर्फ़ यह promise करता है कि outputs reals में गिरते हैं, यह नहीं कि हर real hit होता है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो range, codomain B का subset है, और वे तभी बराबर हैं जब function onto हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "formulas",
+      "subtopic": "Domain and Range of Real Functions",
+      "title": "The constraint catalogue and range shortcuts",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Domain constraints at a glance"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "\\tfrac{P(x)}{Q(x)}: \\ Q(x) \\ne 0; \\qquad \\sqrt[2k]{g(x)}: \\ g(x) \\ge 0"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "latex": "\\dfrac{1}{\\sqrt{g(x)}}: \\ g(x) > 0 \\ \\text{(strict)}; \\qquad \\log_a g(x): \\ g(x) > 0"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "text": "Standard ranges worth memorising"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "x^2, |x| : [0,\\infty); \\quad e^x : (0,\\infty); \\quad \\ln x : \\mathbb{R}; \\quad \\sin x, \\cos x : [-1,1]"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "For a rational a x plus b over c x plus d, the range is all reals except a over c."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 39,
+          "latex": "\\text{Range of } \\dfrac{ax + b}{cx + d} = \\mathbb{R} \\setminus \\left\\{ \\tfrac{a}{c} \\right\\}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "For a quadratic over a quadratic, cross-multiply and force the discriminant to be non-negative."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the working catalogue: the domain constraints on one side, and the range shortcuts on the other."
+            },
+            {
+              "seq": 2,
+              "text": "For domains, a rational needs its denominator non-zero, and an even root needs its content at least zero."
+            },
+            {
+              "seq": 3,
+              "text": "Two sharper cases. A root sitting in a denominator needs its content strictly greater than zero, and a log needs its argument strictly greater than zero."
+            },
+            {
+              "seq": 4,
+              "text": "Now the standard ranges, worth committing to memory so you never re-derive them."
+            },
+            {
+              "seq": 5,
+              "text": "x squared and absolute value give zero to infinity, e to the x gives strictly positive reals, natural log gives all reals, and sine and cosine give minus one to one."
+            },
+            {
+              "seq": 6,
+              "text": "A powerful shortcut. For a rational, a x plus b over c x plus d, the range is all the reals except a single value."
+            },
+            {
+              "seq": 7,
+              "text": "That excluded value is a over c, the horizontal asymptote that the function approaches but never actually reaches."
+            },
+            {
+              "seq": 8,
+              "text": "And for a quadratic divided by a quadratic, do not guess. Cross-multiply into a quadratic in x and force its discriminant to be non-negative."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा working catalogue: एक तरफ़ domain constraints, दूसरी तरफ़ range shortcuts।"
+            },
+            {
+              "seq": 2,
+              "text": "Domains के लिए, rational को अपना denominator non-zero चाहिए, और even root को अपना content कम से कम zero।"
+            },
+            {
+              "seq": 3,
+              "text": "दो sharper cases। Denominator में बैठे root को अपना content strictly zero से बड़ा चाहिए, और log को अपना argument strictly zero से बड़ा।"
+            },
+            {
+              "seq": 4,
+              "text": "अब standard ranges, memory में डालने लायक़ ताकि तुम इन्हें कभी दोबारा derive ना करो।"
+            },
+            {
+              "seq": 5,
+              "text": "x squared और absolute value देते हैं zero to infinity, e to the x देता है strictly positive reals, natural log देता है all reals, और sine तथा cosine देते हैं minus one to one।"
+            },
+            {
+              "seq": 6,
+              "text": "एक powerful shortcut। Rational के लिए, a x plus b over c x plus d, range एक single value को छोड़कर सारे reals हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "वो excluded value है a over c, यानी horizontal asymptote जिसके पास function जाता है पर कभी सच में पहुँचता नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "और quadratic divided by quadratic के लिए, guess मत करो। x में एक quadratic में cross-multiply करो और उसके discriminant को non-negative होने पर force करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Domain and Range of Real Functions",
+      "title": "Two domain problems: a root sum and a log",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Root-plus-fraction, and a log"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) = \\sqrt{x - 3} + \\dfrac{1}{x - 5}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "The root needs x minus three at least zero; the denominator needs x not equal to five."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "\\mathrm{Dom}(f) = [3, 5) \\cup (5, \\infty)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "g(x) = \\log(x^2 - 4)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Only one constraint: the log argument must be strictly positive, so x squared exceeds four."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "\\mathrm{Dom}(g) = (-\\infty, -2) \\cup (2, \\infty)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "text": "Using $\\ge 0$ here is the root rule; a log needs $> 0$, so $x = \\pm 2$ is excluded.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 9,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "caption": "The domain of the root-plus-fraction as an interval, with x = 5 removed",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 560 140\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ar\" markerWidth=\"9\" markerHeight=\"9\" refX=\"7\" refY=\"4.5\" orient=\"auto\"><path d=\"M0,0 L9,4.5 L0,9 Z\" fill=\"#1d4e79\"/></marker></defs><text x=\"280\" y=\"26\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">Domain of √(x−3) + 1/(x−5): [3, 5) ∪ (5, ∞)</text><line x1=\"40\" y1=\"80\" x2=\"520\" y2=\"80\" stroke=\"#333\" stroke-width=\"1.4\"/><g font-size=\"12\" text-anchor=\"middle\" fill=\"#333\"><line x1=\"120\" y1=\"75\" x2=\"120\" y2=\"85\" stroke=\"#333\"/><text x=\"120\" y=\"102\">1</text><line x1=\"180\" y1=\"75\" x2=\"180\" y2=\"85\" stroke=\"#333\"/><text x=\"180\" y=\"102\">2</text><line x1=\"240\" y1=\"75\" x2=\"240\" y2=\"85\" stroke=\"#333\"/><text x=\"240\" y=\"102\">3</text><line x1=\"300\" y1=\"75\" x2=\"300\" y2=\"85\" stroke=\"#333\"/><text x=\"300\" y=\"102\">4</text><line x1=\"360\" y1=\"75\" x2=\"360\" y2=\"85\" stroke=\"#333\"/><text x=\"360\" y=\"102\">5</text><line x1=\"420\" y1=\"75\" x2=\"420\" y2=\"85\" stroke=\"#333\"/><text x=\"420\" y=\"102\">6</text><line x1=\"480\" y1=\"75\" x2=\"480\" y2=\"85\" stroke=\"#333\"/><text x=\"480\" y=\"102\">7</text></g><line x1=\"240\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#1d4e79\" stroke-width=\"4\"/><line x1=\"360\" y1=\"80\" x2=\"512\" y2=\"80\" stroke=\"#1d4e79\" stroke-width=\"4\" marker-end=\"url(#ar)\"/><circle cx=\"240\" cy=\"80\" r=\"6\" fill=\"#1d4e79\"/><circle cx=\"360\" cy=\"80\" r=\"6\" fill=\"#fff\" stroke=\"#c0392b\" stroke-width=\"2.5\"/><text x=\"360\" y=\"60\" text-anchor=\"middle\" font-size=\"11\" fill=\"#c0392b\">x = 5 excluded</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us apply the constraint catalogue to two problems, a sum with a root and a fraction, and a logarithm."
+            },
+            {
+              "seq": 2,
+              "text": "Take f of x equals the square root of x minus three plus one over x minus five, which mixes two different jams."
+            },
+            {
+              "seq": 3,
+              "text": "The root demands x minus three is at least zero, so x is at least three. The denominator demands x minus five is non-zero, so x is not five. Now intersect."
+            },
+            {
+              "seq": 4,
+              "text": "Intersecting, the domain is three up to five, including three but excluding five, together with everything beyond five. Written as three to five, union five to infinity."
+            },
+            {
+              "seq": 5,
+              "text": "Now the log example: g of x equals log of x squared minus four, which has just one constraint."
+            },
+            {
+              "seq": 6,
+              "text": "The log argument must be strictly positive, so x squared minus four is greater than zero, meaning x squared exceeds four, that is the absolute value of x is greater than two."
+            },
+            {
+              "seq": 7,
+              "text": "So the domain of g is everything below minus two, together with everything above two."
+            },
+            {
+              "seq": 8,
+              "text": "Watch the trap here. Writing greater than or equal to zero would be the root rule, but a log needs strictly greater than zero, so x equal to plus or minus two, where the log would be log of zero, is excluded."
+            },
+            {
+              "seq": 9,
+              "text": "The number line makes the first answer vivid: a solid stretch from three, an open hole at five, and an arrow continuing to infinity."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो constraint catalogue को दो problems पर apply करें, एक root और fraction वाला sum, और एक logarithm।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f of x equals square root of x minus three plus one over x minus five, जो दो अलग jams को mix करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Root माँगता है x minus three कम से कम zero, तो x कम से कम three। Denominator माँगता है x minus five non-zero, तो x, five नहीं। अब intersect करो।"
+            },
+            {
+              "seq": 4,
+              "text": "Intersect करने पर, domain three से पाँच तक है, three शामिल पर five बाहर, साथ में five के आगे सब कुछ। लिखो three to five, union five to infinity।"
+            },
+            {
+              "seq": 5,
+              "text": "अब log example: g of x equals log of x squared minus four, जिसमें बस एक constraint है।"
+            },
+            {
+              "seq": 6,
+              "text": "Log argument strictly positive होना चाहिए, तो x squared minus four, zero से बड़ा, यानी x squared, four से ज़्यादा, यानी absolute value of x, two से बड़ा।"
+            },
+            {
+              "seq": 7,
+              "text": "तो g का domain है minus two से नीचे सब कुछ, साथ में two से ऊपर सब कुछ।"
+            },
+            {
+              "seq": 8,
+              "text": "यहाँ trap देखो। greater than or equal to zero लिखना root rule होता, पर log को strictly greater than zero चाहिए, तो x equal to plus या minus two, जहाँ log, log of zero होता, वो excluded है।"
+            },
+            {
+              "seq": 9,
+              "text": "Number line पहला answer साफ़ दिखाती है: three से एक solid stretch, five पर एक open hole, और infinity तक जाता arrow।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Domain and Range of Real Functions",
+      "title": "Range by the y-method",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Invert to find the range"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) = \\dfrac{x}{1 + x^2}, \\quad x \\in \\mathbb{R}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "The domain is all reals, since one plus x squared is always positive."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "y = \\dfrac{x}{1 + x^2} \\ \\Rightarrow \\ y x^2 - x + y = 0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "For a real x to exist, this quadratic in x needs a non-negative discriminant."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "(-1)^2 - 4y \\cdot y \\ge 0 \\ \\Rightarrow \\ 1 - 4y^2 \\ge 0"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\mathrm{Range}(f) = \\left[ -\\tfrac{1}{2}, \\ \\tfrac{1}{2} \\right]"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "caption": "The curve stays trapped between y = minus one half and y = one half",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 480 300\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"240\" y=\"20\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">y = x/(1+x²): range is [−0.5, 0.5]</text><line x1=\"40\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#333\" stroke-width=\"1.3\"/><line x1=\"240\" y1=\"45\" x2=\"240\" y2=\"270\" stroke=\"#333\" stroke-width=\"1.3\"/><text x=\"442\" y=\"168\" font-size=\"12\" fill=\"#333\">x</text><text x=\"250\" y=\"56\" font-size=\"12\" fill=\"#333\">y</text><line x1=\"60\" y1=\"60\" x2=\"440\" y2=\"60\" stroke=\"#c0392b\" stroke-width=\"1.5\" stroke-dasharray=\"6 4\"/><line x1=\"60\" y1=\"240\" x2=\"440\" y2=\"240\" stroke=\"#c0392b\" stroke-width=\"1.5\" stroke-dasharray=\"6 4\"/><text x=\"330\" y=\"54\" font-size=\"11\" fill=\"#c0392b\">y = 0.5</text><text x=\"330\" y=\"256\" font-size=\"11\" fill=\"#c0392b\">y = −0.5</text><polyline points=\"40,185 120,204 160,222 200,240 220,222 240,150 260,78 280,60 320,78 360,96 440,116\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2.4\"/><circle cx=\"280\" cy=\"60\" r=\"4.5\" fill=\"#1d4e79\"/><circle cx=\"200\" cy=\"240\" r=\"4.5\" fill=\"#1d4e79\"/><text x=\"288\" y=\"56\" font-size=\"11\" fill=\"#1d4e79\">max at x=1</text><text x=\"150\" y=\"256\" font-size=\"11\" fill=\"#1d4e79\">min at x=−1</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example shows the y-method in its purest form: turn the range question into a discriminant condition."
+            },
+            {
+              "seq": 2,
+              "text": "Take f of x equals x over one plus x squared, defined for all real x."
+            },
+            {
+              "seq": 3,
+              "text": "First the domain. Since one plus x squared is always at least one, the denominator never vanishes, so the domain is all of the reals."
+            },
+            {
+              "seq": 4,
+              "text": "Now set y equal to x over one plus x squared and clear the fraction. Rearranging gives y x squared minus x plus y equals zero, a quadratic in x."
+            },
+            {
+              "seq": 5,
+              "text": "Here is the key idea. For a real input x to exist for a given y, this quadratic must have a non-negative discriminant."
+            },
+            {
+              "seq": 6,
+              "text": "The discriminant is minus one squared minus four times y times y, which must be at least zero, giving one minus four y squared is at least zero."
+            },
+            {
+              "seq": 7,
+              "text": "Solving, y squared is at most one quarter, so y lies between minus one half and one half. That closed interval is the range."
+            },
+            {
+              "seq": 8,
+              "text": "The graph shows exactly this trapping: the curve peaks at one half, bottoms at minus one half, and never escapes the band between them."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example y-method को उसके purest रूप में दिखाता है: range के सवाल को discriminant condition में बदल देना।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f of x equals x over one plus x squared, सारे real x के लिए defined।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले domain। चूँकि one plus x squared हमेशा कम से कम one है, denominator कभी vanish नहीं होता, तो domain पूरे reals है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब y को x over one plus x squared के बराबर रखो और fraction clear करो। Rearrange करने पर मिलता है y x squared minus x plus y equals zero, x में एक quadratic।"
+            },
+            {
+              "seq": 5,
+              "text": "यह रहा key idea। किसी दिए गए y के लिए real input x के exist करने के लिए, इस quadratic का discriminant non-negative होना चाहिए।"
+            },
+            {
+              "seq": 6,
+              "text": "Discriminant है minus one squared minus four times y times y, जो कम से कम zero होना चाहिए, जिससे one minus four y squared कम से कम zero।"
+            },
+            {
+              "seq": 7,
+              "text": "Solve करने पर, y squared ज़्यादा से ज़्यादा one quarter, तो y, minus one half और one half के बीच है। वो closed interval ही range है।"
+            },
+            {
+              "seq": 8,
+              "text": "Graph बिलकुल यही trapping दिखाता है: curve one half पर peak करता है, minus one half पर bottom, और उनके बीच के band से कभी नहीं भागता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Domain and Range of Real Functions",
+      "title": "The discriminant method in full",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Range of a quadratic over a quadratic"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) = \\dfrac{x^2 - x + 1}{x^2 + x + 1}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "The denominator is a shifted square plus three quarters, always positive, so the domain is all reals."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "(y - 1)x^2 + (y + 1)x + (y - 1) = 0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Force the discriminant to be non-negative so a real x exists."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "(y + 1)^2 - 4(y - 1)^2 \\ge 0 \\ \\Rightarrow \\ (3 - y)(3y - 1) \\ge 0"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\mathrm{Range}(f) = \\left[ \\tfrac{1}{3}, \\ 3 \\right]"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "text": "Check the degenerate $y = 1$: it gives $x = 0$, valid, and $1$ already lies in the range.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the full discriminant method on a quadratic over a quadratic, the exact template JEE loves to test."
+            },
+            {
+              "seq": 2,
+              "text": "Take f of x equals x squared minus x plus one, all over x squared plus x plus one."
+            },
+            {
+              "seq": 3,
+              "text": "First note the denominator can be written as x plus one half squared, plus three quarters, which is always positive, so the domain is all of the reals."
+            },
+            {
+              "seq": 4,
+              "text": "Set y equal to the whole fraction and cross-multiply. Collecting terms gives y minus one times x squared, plus y plus one times x, plus y minus one, equals zero."
+            },
+            {
+              "seq": 5,
+              "text": "This is a quadratic in x, so for a real x to exist for a given y, force its discriminant to be non-negative."
+            },
+            {
+              "seq": 6,
+              "text": "The discriminant condition is y plus one squared minus four times y minus one squared is at least zero, which factors neatly into three minus y times three y minus one is at least zero."
+            },
+            {
+              "seq": 7,
+              "text": "That product is non-negative for y between one third and three, so the range is the closed interval one third to three."
+            },
+            {
+              "seq": 8,
+              "text": "Finally check the degenerate case y equal to one, where the quadratic becomes linear. It gives x equal to zero, a valid input, and one already lies inside the range, so nothing changes."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब quadratic over quadratic पर full discriminant method, वही template जिसे JEE test करना पसंद करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f of x equals x squared minus x plus one, बटा x squared plus x plus one।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले note करो कि denominator को x plus one half squared, plus three quarters लिख सकते हैं, जो हमेशा positive है, तो domain पूरे reals है।"
+            },
+            {
+              "seq": 4,
+              "text": "y को पूरे fraction के बराबर रखो और cross-multiply करो। Terms इकट्ठा करने पर मिलता है y minus one times x squared, plus y plus one times x, plus y minus one, equals zero।"
+            },
+            {
+              "seq": 5,
+              "text": "यह x में एक quadratic है, तो किसी दिए गए y के लिए real x के exist करने के लिए, इसके discriminant को non-negative पर force करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Discriminant condition है y plus one squared minus four times y minus one squared कम से कम zero, जो neatly factor होकर बनता है three minus y times three y minus one कम से कम zero।"
+            },
+            {
+              "seq": 7,
+              "text": "वो product, y के one third और three के बीच होने पर non-negative है, तो range closed interval one third to three है।"
+            },
+            {
+              "seq": 8,
+              "text": "आख़िर में degenerate case y equal to one check करो, जहाँ quadratic linear बन जाता है। यह x equal to zero देता है, एक valid input, और one पहले से range के अंदर है, तो कुछ नहीं बदलता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Domain and Range of Real Functions",
+      "title": "JEE Advanced: a nested domain with a log flip",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A layered square-root-of-a-log"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) = \\sqrt{\\log_{1/2}\\!\\left( \\dfrac{x - 2}{x + 1} \\right)}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Constraint one: the inner log argument must be positive."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "\\dfrac{x - 2}{x + 1} > 0 \\ \\Rightarrow \\ x < -1 \\ \\text{or} \\ x > 2"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Constraint two: the square-root content must be non-negative, so the log is at least zero."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "text": "Base $\\tfrac{1}{2} < 1$, so $\\log_{1/2}(t) \\ge 0$ means $t \\le 1$: the inequality flips.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "\\dfrac{x - 2}{x + 1} \\le 1 \\ \\Rightarrow \\ \\dfrac{-3}{x + 1} \\le 0 \\ \\Rightarrow \\ x > -1"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "latex": "\\mathrm{Dom}(f) = (2, \\infty)"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This JEE Advanced problem layers a logarithm inside a square root, and the whole difficulty is one inequality flip."
+            },
+            {
+              "seq": 2,
+              "text": "Take f of x equals the square root of log base one half of the fraction x minus two over x plus one."
+            },
+            {
+              "seq": 3,
+              "text": "Constraint one comes from the inner log: its argument must be positive."
+            },
+            {
+              "seq": 4,
+              "text": "The fraction x minus two over x plus one is positive when x is below minus one or above two. Hold that set."
+            },
+            {
+              "seq": 5,
+              "text": "Constraint two comes from the square root: its content must be non-negative, which means the log itself must be at least zero."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Here is the exam-deciding subtlety. The base is one half, which is below one, so log base one half of t being at least zero means t is at most one. The inequality flips direction."
+            },
+            {
+              "seq": 7,
+              "text": "So the fraction is at most one, which rearranges to minus three over x plus one is at most zero, and that holds when x is greater than minus one."
+            },
+            {
+              "seq": 8,
+              "text": "Now intersect the two constraints. The first gave x below minus one or above two; the second gave x above minus one; together they leave only x above two, so the domain is two to infinity."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह JEE Advanced problem एक logarithm को square root के अंदर layer करता है, और पूरी difficulty बस एक inequality flip है।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f of x equals square root of log base one half of fraction x minus two over x plus one।"
+            },
+            {
+              "seq": 3,
+              "text": "Constraint one inner log से आती है: उसका argument positive होना चाहिए।"
+            },
+            {
+              "seq": 4,
+              "text": "Fraction x minus two over x plus one तब positive है जब x, minus one से नीचे या two से ऊपर हो। उस set को पकड़ो।"
+            },
+            {
+              "seq": 5,
+              "text": "Constraint two square root से आती है: उसका content non-negative होना चाहिए, यानी log खुद कम से कम zero होना चाहिए।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>यह रही exam-deciding subtlety। Base one half है, जो one से नीचे है, तो log base one half of t का कम से कम zero होना मतलब t ज़्यादा से ज़्यादा one। Inequality की direction flip हो जाती है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो fraction ज़्यादा से ज़्यादा one, जो rearrange होकर बनता है minus three over x plus one ज़्यादा से ज़्यादा zero, और यह तब holds करता है जब x, minus one से बड़ा हो।"
+            },
+            {
+              "seq": 8,
+              "text": "अब दोनों constraints intersect करो। पहली ने दिया x, minus one से नीचे या two से ऊपर; दूसरी ने दिया x, minus one से ऊपर; साथ में सिर्फ़ x, two से ऊपर बचता है, तो domain two to infinity है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "tips",
+      "subtopic": "Domain and Range of Real Functions",
+      "title": "Pitfalls and pro-tips for domain and range",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where domain and range slip"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "text": "Root rule versus log rule: under a root $\\ge 0$, inside a log strictly $> 0$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Multiple constraints must all hold together: always intersect, never union."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "text": "For a log base below one, the inequality flips: $\\log_{1/2}(t) \\ge 0 \\iff 0 < t \\le 1$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "The codomain is not the range: compute the actual outputs, do not assume all of the reals."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Speed pro-tips"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\text{Rational } \\tfrac{ax + b}{cx + d}: \\ \\text{range} = \\mathbb{R} \\setminus \\{a/c\\} \\ \\text{instantly}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "For sin or cos builds, push the bound minus one to one through the operations rather than inverting."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us close domain and range with the traps that drain marks, then the shortcuts that save time."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, confusing the root rule with the log rule. Under a root the content is at least zero, but inside a log it is strictly greater than zero. Mixing them adds or drops boundary points."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, union instead of intersection. When several constraints apply, they must all hold together, so you always intersect, never union."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, forgetting the flip for a log base below one. Log base one half of t being at least zero means t is between zero and one, with the direction reversed."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, calling the codomain the range. f from the reals to the reals does not mean the range is all the reals, so always compute the actual outputs."
+            },
+            {
+              "seq": 6,
+              "text": "Now the shortcuts that make these instant."
+            },
+            {
+              "seq": 7,
+              "text": "For a rational a x plus b over c x plus d, the range is immediately all reals except a over c, with no algebra needed."
+            },
+            {
+              "seq": 8,
+              "text": "And for anything built from sine or cosine, push the known bound minus one to one through the operations, rather than inverting the whole function."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो domain और range को उन traps से close करें जो marks खा जाते हैं, फिर वो shortcuts जो time बचाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, root rule को log rule से confuse करना। Root के नीचे content कम से कम zero, पर log के अंदर strictly zero से बड़ा। इन्हें mix करना boundary points जोड़ या हटा देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, intersection की जगह union। जब कई constraints लागू हों, तो सब एक साथ hold करनी चाहिए, तो हमेशा intersect करो, कभी union नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, one से नीचे वाले log base के लिए flip भूल जाना। Log base one half of t का कम से कम zero होना मतलब t, zero और one के बीच, direction उल्टी।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, codomain को range कहना। f, reals से reals का मतलब range पूरे reals नहीं, तो हमेशा actual outputs compute करो।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वो shortcuts जो इन्हें instant बना देते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Rational a x plus b over c x plus d के लिए, range तुरंत सारे reals except a over c है, बिना किसी algebra के।"
+            },
+            {
+              "seq": 8,
+              "text": "और sine या cosine से बने किसी भी function के लिए, पूरे function को invert करने के बजाय known bound minus one to one को operations से push करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

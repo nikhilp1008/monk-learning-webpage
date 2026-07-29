@@ -1,0 +1,2496 @@
+{
+  "chapter": "Probability",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 13,
+  "part": 4,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Bernoulli trial: the atom of the topic",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Bernoulli Trial — the Atom of the Topic"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "A penalty kick: goal or miss, with a fixed conversion chance, say 0.8."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "style": "red-margin",
+          "text": "One trial, exactly two outcomes, a fixed success probability p."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Coin toss, bulb tested, student pass/fail, one archer's arrow — all Bernoulli trials."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "q = 1 - p"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "'Success' is just a label for the outcome you're counting."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Drawing a defective item counts as 'success' if defectives are what you want."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Repeat this identical trial and the counting story begins."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Think of a penalty shootout — what are the possible outcomes of a single kick?</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "Just two: goal or miss. And a striker of fixed quality converts with some steady probability, say zero point eight, on every attempt."
+            },
+            {
+              "seq": 3,
+              "text": "A single two-outcome attempt with a fixed success probability is a Bernoulli trial: the atom of this whole topic."
+            },
+            {
+              "seq": 4,
+              "text": "One coin toss, one bulb tested for a defect, one student passing or failing, one archer's single arrow — each is a Bernoulli trial the moment we call one result success and the other failure."
+            },
+            {
+              "seq": 5,
+              "text": "We write the success probability as p, and the failure probability as q, which is simply one minus p."
+            },
+            {
+              "seq": 6,
+              "text": "And a key subtlety: success is just a label for the outcome you're counting. It need not be anything good."
+            },
+            {
+              "seq": 7,
+              "text": "So drawing a defective item is a perfectly valid success when defectives are exactly what you want to count."
+            },
+            {
+              "seq": 8,
+              "text": "Now repeat this identical trial many times, and the counting story of the binomial distribution begins."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>एक penalty shootout सोचो — एक single kick के possible outcomes क्या हैं?</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "बस दो: goal या miss। और एक fixed quality का striker हर attempt पे किसी steady probability से, मान लो zero point eight, convert करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "एक single two-outcome attempt, fixed success probability के साथ, एक Bernoulli trial है: इस पूरे topic का atom।"
+            },
+            {
+              "seq": 4,
+              "text": "एक coin toss, एक bulb का defect test, एक student का pass या fail, एक archer का single arrow — हर एक Bernoulli trial है जिस पल हम एक result को success और दूसरे को failure कहते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Success probability को p लिखते हैं, और failure probability को q, जो बस one minus p है।"
+            },
+            {
+              "seq": 6,
+              "text": "और एक key subtlety: success बस उस outcome का label है जिसे तुम गिन रहे हो। ज़रूरी नहीं कि वो कुछ अच्छा हो।"
+            },
+            {
+              "seq": 7,
+              "text": "तो एक defective item निकालना बिल्कुल valid success है जब defectives ही वो हैं जो तुम गिनना चाहते हो।"
+            },
+            {
+              "seq": 8,
+              "text": "अब इस identical trial को कई बार repeat करो, और binomial distribution की counting कहानी शुरू होती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "The binomial distribution: counting successes",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The Binomial Distribution — Counting Successes"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Repeat the kick n times: how many goals? That count is a random variable."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Its distribution is the binomial distribution."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "To get r successes: pick which r trials succeed, then have the rest fail."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "\\text{ways to pick} = \\binom{n}{r}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "P(X = r) = \\binom{n}{r} p^r q^{n-r}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Defectives in a carton, sixes in dice rolls, correct guesses — all fit this mould."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Read it: choose the successes, power up p, power down with q for the failures."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "The surface stories differ; the skeleton is identical."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now repeat the kick n times under identical conditions and ask the natural question: how many goals?"
+            },
+            {
+              "seq": 2,
+              "text": "That count, the number of successes in n independent, identical Bernoulli trials, is itself a random variable."
+            },
+            {
+              "seq": 3,
+              "text": "Its distribution is the binomial distribution, the single most important named distribution in school probability."
+            },
+            {
+              "seq": 4,
+              "text": "Here's how the formula is built. To get exactly r successes, you must do two things: pick which r of the n trials succeed, and then have those succeed while the rest fail."
+            },
+            {
+              "seq": 5,
+              "text": "The number of ways to pick which r trials are the successes is n choose r."
+            },
+            {
+              "seq": 6,
+              "text": "Each such arrangement has probability p to the r times q to the n minus r, because the trials are independent. Multiply, and probability of X equals r is n choose r, times p to the r, times q to the n minus r."
+            },
+            {
+              "seq": 7,
+              "text": "Defectives in a carton of twenty, sixes in a string of dice rolls, correct answers from pure guessing, rainy days in a week — all of them fit this mould."
+            },
+            {
+              "seq": 8,
+              "text": "Read the formula in three pieces: choose the successes with n choose r, power up p for the r successes, and power down with q for the n minus r failures."
+            },
+            {
+              "seq": 9,
+              "text": "The surface stories differ wildly, but strip them down and the skeleton is identical: count the successes in n fixed, independent, equal-probability yes-no trials."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब kick को identical conditions में n बार repeat करो और natural सवाल पूछो: कितने goals?"
+            },
+            {
+              "seq": 2,
+              "text": "वो count, n independent, identical Bernoulli trials में successes की संख्या, ख़ुद एक random variable है।"
+            },
+            {
+              "seq": 3,
+              "text": "उसकी distribution है binomial distribution, school probability की सबसे important named distribution।"
+            },
+            {
+              "seq": 4,
+              "text": "Formula ऐसे बनता है। ठीक r successes पाने के लिए, दो काम करने हैं: चुनो कौन से r trials succeed करें, और फिर वो succeed करें जबकि बाकी fail।"
+            },
+            {
+              "seq": 5,
+              "text": "कौन से r trials successes हैं ये चुनने के ways हैं n choose r।"
+            },
+            {
+              "seq": 6,
+              "text": "हर ऐसे arrangement की probability है p to the r गुणा q to the n minus r, क्योंकि trials independent हैं। Multiply करो, और probability of X बराबर r है n choose r, गुणा p to the r, गुणा q to the n minus r।"
+            },
+            {
+              "seq": 7,
+              "text": "बीस के carton में defectives, dice rolls की string में sixes, pure guessing से correct answers, हफ़्ते में rainy days — सब इसी mould में fit होते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "Formula को तीन टुकड़ों में पढ़ो: n choose r से successes चुनो, r successes के लिए p power up करो, और n minus r failures के लिए q power down करो।"
+            },
+            {
+              "seq": 9,
+              "text": "Surface की कहानियाँ बहुत अलग हैं, पर उन्हें उतारो तो skeleton same है: n fixed, independent, equal-probability yes-no trials में successes गिनो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "The four conditions for a binomial",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The Four Conditions for Binomial"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "1. A finite, fixed number of trials, n."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "2. The trials are independent."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "3. Each trial has exactly two outcomes."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "4. The success probability p stays constant."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "Strip away any one condition and the binomial formula no longer applies."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Classic violation: drawing without replacement — the deck's composition shifts."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Without replacement, p drifts trial to trial — not binomial. Replace, and it is."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Four conditions must hold for a sequence of trials to be Bernoulli, and hence for the count to be binomial."
+            },
+            {
+              "seq": 2,
+              "text": "One: there is a finite, fixed number of trials, called n. You know in advance how many there are."
+            },
+            {
+              "seq": 3,
+              "text": "Two: the trials are independent. What happens on one trial doesn't influence any other."
+            },
+            {
+              "seq": 4,
+              "text": "Three: each trial has exactly two outcomes, success and failure."
+            },
+            {
+              "seq": 5,
+              "text": "Four: the success probability p stays constant across every trial."
+            },
+            {
+              "seq": 6,
+              "text": "Strip away any one of these four and the binomial formula no longer applies."
+            },
+            {
+              "seq": 7,
+              "text": "The classic violation is drawing without replacement. Pull cards one by one and the composition of the deck changes."
+            },
+            {
+              "seq": 8,
+              "text": "So p drifts from trial to trial and the draws become dependent — not binomial. Replace the card each time and it becomes binomial again. Whenever you see without replacement, your binomial antenna should switch off."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "किसी trials के sequence को Bernoulli, और इसलिए count को binomial, होने के लिए चार conditions होनी चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "एक: trials की एक finite, fixed संख्या हो, जिसे n कहते हैं। तुम्हें पहले से पता हो कितने हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "दो: trials independent हों। एक trial पे जो हो वो किसी दूसरे को influence न करे।"
+            },
+            {
+              "seq": 4,
+              "text": "तीन: हर trial के ठीक दो outcomes हों, success और failure।"
+            },
+            {
+              "seq": 5,
+              "text": "चार: success probability p हर trial पे constant रहे।"
+            },
+            {
+              "seq": 6,
+              "text": "इन चारों में से कोई एक भी हटाओ और binomial formula लागू नहीं होता।"
+            },
+            {
+              "seq": 7,
+              "text": "Classic violation है without replacement drawing। Cards एक-एक करके निकालो और deck की composition बदल जाती है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो p trial-to-trial drift करता है और draws dependent हो जाते हैं — binomial नहीं। हर बार card replace करो तो फिर से binomial हो जाता है। जब भी without replacement दिखे, तुम्हारा binomial antenna बंद हो जाना चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Shape, mode, and variance below the mean",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Shape, Mode, and Variance < Mean"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "caption": "B(6, 0.8): peak at the mode 5, mean at 4.8.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 205\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"25\" y1=\"160\" x2=\"405\" y2=\"160\" stroke=\"#334155\" stroke-width=\"1.5\"/><rect x=\"30\" y=\"159\" width=\"34\" height=\"1\" fill=\"#93c5fd\" stroke=\"#2b6cb0\"/><rect x=\"85\" y=\"159\" width=\"34\" height=\"1\" fill=\"#93c5fd\" stroke=\"#2b6cb0\"/><rect x=\"140\" y=\"155\" width=\"34\" height=\"5\" fill=\"#93c5fd\" stroke=\"#2b6cb0\"/><rect x=\"195\" y=\"135\" width=\"34\" height=\"25\" fill=\"#93c5fd\" stroke=\"#2b6cb0\"/><rect x=\"250\" y=\"85\" width=\"34\" height=\"75\" fill=\"#93c5fd\" stroke=\"#2b6cb0\"/><rect x=\"305\" y=\"40\" width=\"34\" height=\"120\" fill=\"#60a5fa\" stroke=\"#1d4ed8\"/><rect x=\"360\" y=\"80\" width=\"34\" height=\"80\" fill=\"#93c5fd\" stroke=\"#2b6cb0\"/><text x=\"44\" y=\"175\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">0</text><text x=\"99\" y=\"175\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">1</text><text x=\"154\" y=\"175\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">2</text><text x=\"209\" y=\"175\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">3</text><text x=\"264\" y=\"175\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">4</text><text x=\"319\" y=\"175\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">5</text><text x=\"374\" y=\"175\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#334155\">6</text><line x1=\"311\" y1=\"38\" x2=\"311\" y2=\"160\" stroke=\"#b91c1c\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"296\" y=\"34\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#1d4ed8\">mode = 5</text><text x=\"150\" y=\"196\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#b91c1c\">mean 4.8 (dashed), peak at 5</text></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "$p = 0.5$ is symmetric; $p > 0.5$ leans to higher counts (left-skewed)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "$p < 0.5$ leans to lower counts (right-skewed)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "The peak sits at the mode, near np; mean and mode need not coincide."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "\\text{variance } npq \\; < \\; np \\text{ (mean)}, \\quad \\text{since } q < 1"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "A 'binomial' with variance larger than the mean is inconsistent data."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "A binomial on n trials has exactly $n + 1$ possible values, $0$ through $n$."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Two binomials with $p$ and $1 - p$ are mirror images of each other."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "It pays to picture the shape of a binomial distribution before you compute, because the picture catches gross errors."
+            },
+            {
+              "seq": 2,
+              "text": "Here's the distribution for six trials with success probability zero point eight. The bars rise to a clear peak at five, with the mean sitting a little lower at four point eight."
+            },
+            {
+              "seq": 3,
+              "text": "When p equals one half, the binomial is perfectly symmetric. When p is above one half, it leans toward higher counts, which we call left-skewed."
+            },
+            {
+              "seq": 4,
+              "text": "When p is below one half, it leans toward lower counts, or right-skewed."
+            },
+            {
+              "seq": 5,
+              "text": "<excited>The peak sits at the mode, near n times p — and notice the mode and the mean need not be the same value!</excited>"
+            },
+            {
+              "seq": 6,
+              "text": "A permanent identity: the variance, n p q, is always strictly less than the mean, n p, because q is less than one."
+            },
+            {
+              "seq": 7,
+              "text": "So if a problem ever hands you a binomial whose variance is larger than its mean, the data is inconsistent — a favourite trap."
+            },
+            {
+              "seq": 8,
+              "text": "A couple of structural facts: a binomial on n trials has exactly n plus one possible values, zero through n."
+            },
+            {
+              "seq": 9,
+              "text": "And two binomials with the same n but success probabilities p and one minus p are perfect mirror images of each other."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Compute करने से पहले binomial distribution की shape picture करना फ़ायदेमंद है, क्योंकि picture बड़ी galतियाँ पकड़ लेती है।"
+            },
+            {
+              "seq": 2,
+              "text": "ये रही छह trials की distribution success probability zero point eight के साथ। Bars एक साफ़ peak तक चढ़ते हैं five पे, mean थोड़ा नीचे four point eight पे बैठा।"
+            },
+            {
+              "seq": 3,
+              "text": "जब p बराबर one half हो, binomial बिल्कुल symmetric होती है। जब p one half से ऊपर हो, ये higher counts की ओर झुकती है, जिसे left-skewed कहते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "जब p one half से नीचे हो, ये lower counts की ओर झुकती है, यानी right-skewed।"
+            },
+            {
+              "seq": 5,
+              "text": "<excited>Peak mode पे बैठता है, n गुणा p के पास — और ध्यान दो mode और mean का same value होना ज़रूरी नहीं!</excited>"
+            },
+            {
+              "seq": 6,
+              "text": "एक permanent identity: variance, n p q, हमेशा strictly mean, n p, से कम होती है, क्योंकि q, one से कम है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो अगर कोई problem तुम्हें ऐसी binomial दे जिसकी variance उसके mean से बड़ी हो, तो data inconsistent है — एक favourite trap।"
+            },
+            {
+              "seq": 8,
+              "text": "कुछ structural facts: n trials की binomial के ठीक n plus one possible values होते हैं, zero से n तक।"
+            },
+            {
+              "seq": 9,
+              "text": "और same n पर success probabilities p और one minus p वाली दो binomials एक-दूसरे की perfect mirror images होती हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Derivation: the binomial formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Derivation — the Binomial Formula"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Fix one pattern: successes on the first r trials, failures on the rest."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "\\underbrace{p \\cdots p}_{r}\\;\\underbrace{q \\cdots q}_{n-r} = p^r q^{n-r}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Every arrangement of r successes carries the same probability."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "The number of distinct arrangements is n choose r."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "P(X = r) = \\binom{n}{r} p^r q^{n-r}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "The arrangements are mutually exclusive, so we add their equal probabilities."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "latex": "\\sum_{r=0}^{n} \\binom{n}{r} p^r q^{n-r} = (q + p)^n = 1"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "The probabilities are the terms of $(q+p)^n$ — that's why it's 'binomial.'"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's derive the binomial formula, because reading it as three meaningful pieces makes it almost impossible to misremember."
+            },
+            {
+              "seq": 2,
+              "text": "Fix one specific pattern of r successes and n minus r failures — say successes on the first r trials, and failures on all the rest."
+            },
+            {
+              "seq": 3,
+              "text": "Because the trials are independent, the probability of that exact sequence is p multiplied r times, then q multiplied n minus r times: p to the r, times q to the n minus r."
+            },
+            {
+              "seq": 4,
+              "text": "Now the crucial observation: every arrangement of r successes among the n trials carries the same probability, p to the r q to the n minus r. Only the order differs."
+            },
+            {
+              "seq": 5,
+              "text": "The number of distinct arrangements is the number of ways to choose which r trials are the successes, namely n choose r."
+            },
+            {
+              "seq": 6,
+              "text": "Since those arrangements are mutually exclusive, we add their equal probabilities, giving probability of X equals r is n choose r times p to the r times q to the n minus r."
+            },
+            {
+              "seq": 7,
+              "text": "That addition of equal, mutually exclusive arrangements is where the n choose r factor comes from — it's not decoration."
+            },
+            {
+              "seq": 8,
+              "text": "As a check, sum over all r from zero to n. By the Binomial Theorem, that's q plus p, all to the n, which is one to the n, which is one."
+            },
+            {
+              "seq": 9,
+              "text": "The probabilities are literally the terms of q plus p to the n. That's exactly why the distribution is named binomial."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Binomial formula derive करते हैं, क्योंकि इसे तीन meaningful टुकड़ों में पढ़ना इसे misremember करना लगभग नामुमकिन बना देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "r successes और n minus r failures का एक specific pattern fix करो — मान लो पहले r trials पे successes, और बाकी सब पे failures।"
+            },
+            {
+              "seq": 3,
+              "text": "चूँकि trials independent हैं, उस exact sequence की probability है p को r बार multiply, फिर q को n minus r बार: p to the r, गुणा q to the n minus r।"
+            },
+            {
+              "seq": 4,
+              "text": "अब crucial observation: n trials में r successes के हर arrangement की probability same है, p to the r q to the n minus r। सिर्फ order बदलता है।"
+            },
+            {
+              "seq": 5,
+              "text": "distinct arrangements की संख्या है कौन से r trials successes हैं ये चुनने के ways, यानी n choose r।"
+            },
+            {
+              "seq": 6,
+              "text": "चूँकि वो arrangements mutually exclusive हैं, हम उनकी equal probabilities जोड़ देते हैं, जिससे probability of X बराबर r है n choose r गुणा p to the r गुणा q to the n minus r।"
+            },
+            {
+              "seq": 7,
+              "text": "equal, mutually exclusive arrangements का वही जोड़ है जहाँ से n choose r factor आता है — ये सजावट नहीं है।"
+            },
+            {
+              "seq": 8,
+              "text": "Check के लिए, r को zero से n तक sum करो। Binomial Theorem से, वो है q plus p, whole to the n, जो है one to the n, यानी one।"
+            },
+            {
+              "seq": 9,
+              "text": "Probabilities literally q plus p to the n के terms हैं। बिल्कुल इसीलिए distribution का नाम binomial है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Derivation: mean np and variance npq",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Derivation — Mean np and Variance npq"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Use the identity $r \\cdot \\binom{n}{r} = n \\cdot \\binom{n-1}{r-1}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "E(X) = \\sum_{r=0}^{n} r\\,\\binom{n}{r} p^r q^{n-r} = np"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "The index shift collapses the sum to $(q + p)^{n-1} = 1$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "For variance, first compute E[X(X-1)] = n(n-1)p²."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "\\operatorname{Var}(X) = E[X(X-1)] + E(X) - [E(X)]^2"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "= n(n-1)p^2 + np - (np)^2 = npq"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Concrete check B(2, ½): mean 1, variance ½ — matches np and npq."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Read mean and variance straight off n and p — no table needed."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The mean and variance of a binomial can be read straight off n and p. Here's why, in brief."
+            },
+            {
+              "seq": 2,
+              "text": "For the mean, start from the sum of r times the binomial term, and use the identity r times n choose r equals n times n minus one choose r minus one."
+            },
+            {
+              "seq": 3,
+              "text": "That identity pulls an n p outside the sum."
+            },
+            {
+              "seq": 4,
+              "text": "The leftover sum is just a smaller binomial expansion, q plus p to the n minus one, which equals one. So the expectation of X is n p."
+            },
+            {
+              "seq": 5,
+              "text": "For the variance, the neat route is to first compute the expectation of X times X minus one, which works out to n times n minus one, times p squared, by the same index shift done twice."
+            },
+            {
+              "seq": 6,
+              "text": "Then variance equals that expectation of X times X minus one, plus the expectation of X, minus the square of the expectation of X."
+            },
+            {
+              "seq": 7,
+              "text": "Substituting gives n n-minus-one p squared, plus n p, minus n p all squared, which simplifies cleanly to n p q."
+            },
+            {
+              "seq": 8,
+              "text": "A concrete check with two fair-coin tosses: the mean is one and the variance is one half, and those match n p and n p q exactly."
+            },
+            {
+              "seq": 9,
+              "text": "So the shortcuts aren't magic; they're the table calculation done once and for all. Read mean and variance straight off n and p."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Binomial का mean और variance सीधे n और p से पढ़े जा सकते हैं। क्यों, संक्षेप में देखते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Mean के लिए, r गुणा binomial term के sum से शुरू करो, और identity use करो: r गुणा n choose r बराबर n गुणा n minus one choose r minus one।"
+            },
+            {
+              "seq": 3,
+              "text": "वो identity एक n p को sum के बाहर खींच लेती है।"
+            },
+            {
+              "seq": 4,
+              "text": "बचा हुआ sum बस एक छोटी binomial expansion है, q plus p to the n minus one, जो बराबर one है। तो expectation of X है n p।"
+            },
+            {
+              "seq": 5,
+              "text": "Variance के लिए neat रास्ता है पहले expectation of X गुणा X minus one निकालना, जो निकलता है n गुणा n minus one, गुणा p squared, वही index shift दो बार करके।"
+            },
+            {
+              "seq": 6,
+              "text": "फिर variance बराबर वो expectation of X गुणा X minus one, जोड़ expectation of X, minus expectation of X का square।"
+            },
+            {
+              "seq": 7,
+              "text": "Substitute करने पे मिलता है n n-minus-one p squared, जोड़ n p, minus n p whole squared, जो साफ़-साफ़ simplify होकर n p q।"
+            },
+            {
+              "seq": 8,
+              "text": "दो fair-coin tosses के साथ concrete check: mean है one और variance है one half, और ये n p और n p q से बिल्कुल match करते हैं।"
+            },
+            {
+              "seq": 9,
+              "text": "तो shortcuts जादू नहीं हैं; ये table calculation है जो एक बार में हमेशा के लिए कर ली गई। Mean और variance सीधे n और p से पढ़ो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Core formulas: Bernoulli and binomial setup",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Core Formulas — Bernoulli & Binomial Setup"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Bernoulli trial: two outcomes, success $p$, failure $q = 1 - p$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "style": "red-margin",
+          "text": "Binomial conditions: fixed n · independent · two outcomes · constant p."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "X \\sim B(n, p)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "P(X = r) = \\binom{n}{r} p^r q^{n-r}, \\quad r = 0, 1, \\dots, n"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "There are exactly $n + 1$ probabilities, one for each r."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "latex": "\\sum_{r=0}^{n} P(X = r) = (q + p)^n = 1"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Symmetric exactly when $p = \\tfrac12$; skewed as $p$ moves away from $\\tfrac12$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the binomial toolkit, starting with the setup."
+            },
+            {
+              "seq": 2,
+              "text": "A Bernoulli trial has two outcomes: success with probability p, failure with probability q, which is one minus p."
+            },
+            {
+              "seq": 3,
+              "text": "For a count to be binomial, four conditions must hold: a fixed number of trials n, independent trials, exactly two outcomes, and a constant success probability p."
+            },
+            {
+              "seq": 4,
+              "text": "When they hold, we write X follows B of n comma p."
+            },
+            {
+              "seq": 5,
+              "text": "The distribution is: probability of X equals r is n choose r times p to the r times q to the n minus r, for r running from zero to n."
+            },
+            {
+              "seq": 6,
+              "text": "There are exactly n plus one probabilities, one for each possible count r."
+            },
+            {
+              "seq": 7,
+              "text": "They automatically sum to one, because they are the terms of q plus p, all to the n."
+            },
+            {
+              "seq": 8,
+              "text": "And the shape: the distribution is symmetric exactly when p is one half, and grows more skewed as p moves away from one half."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Binomial toolkit consolidate करते हैं, setup से शुरू।"
+            },
+            {
+              "seq": 2,
+              "text": "एक Bernoulli trial के दो outcomes होते हैं: success probability p के साथ, failure probability q के साथ, जो one minus p है।"
+            },
+            {
+              "seq": 3,
+              "text": "किसी count के binomial होने के लिए चार conditions होनी चाहिए: trials की fixed संख्या n, independent trials, ठीक दो outcomes, और constant success probability p।"
+            },
+            {
+              "seq": 4,
+              "text": "जब ये hold करें, हम लिखते हैं X follows B of n comma p।"
+            },
+            {
+              "seq": 5,
+              "text": "Distribution है: probability of X बराबर r है n choose r गुणा p to the r गुणा q to the n minus r, r के लिए zero से n तक।"
+            },
+            {
+              "seq": 6,
+              "text": "ठीक n plus one probabilities होती हैं, हर possible count r के लिए एक।"
+            },
+            {
+              "seq": 7,
+              "text": "ये अपने आप one में जुड़ जाती हैं, क्योंकि ये q plus p, whole to the n, के terms हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "और shape: distribution ठीक तब symmetric होती है जब p one half हो, और p के one half से दूर जाने पे ज़्यादा skewed होती जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "formulas",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Core formulas: moments, mode, and parameter recovery",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Core Formulas — Moments, Mode, Recovery"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 9,
+          "latex": "\\text{mean} = np, \\quad \\text{variance} = npq, \\quad \\text{SD} = \\sqrt{npq}"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "style": "red-margin",
+          "text": "Always variance $npq <$ mean $np$, since $q < 1$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\text{mode: } (n+1)p - 1 \\le r \\le (n+1)p"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "If $(n+1)p$ isn't an integer, the mode is $\\lfloor (n+1)p \\rfloor$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "P(X \\ge 1) = 1 - q^n"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "'At least one' is always the complement of 'none.'"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "latex": "q = \\dfrac{\\text{variance}}{\\text{mean}}, \\quad p = 1 - q, \\quad n = \\dfrac{\\text{mean}}{p}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Recover parameters by dividing variance by mean first."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the moments and the exam shortcuts."
+            },
+            {
+              "seq": 2,
+              "text": "Mean is n p, variance is n p q, and standard deviation is the square root of n p q."
+            },
+            {
+              "seq": 3,
+              "text": "Carry this always: the variance is strictly less than the mean, because q is below one."
+            },
+            {
+              "seq": 4,
+              "text": "The mode, the most probable number of successes, is the integer r satisfying n plus one, times p, minus one, is at most r, which is at most n plus one times p."
+            },
+            {
+              "seq": 5,
+              "text": "When n plus one times p is not an integer, the mode is simply the floor of that quantity — round down."
+            },
+            {
+              "seq": 6,
+              "text": "For at least one success, use the complement: one minus q to the n. Never sum all the terms."
+            },
+            {
+              "seq": 7,
+              "text": "That's a reflex worth burning in — at least one is always one minus the probability of none."
+            },
+            {
+              "seq": 8,
+              "text": "To recover parameters from a given mean and variance, divide variance by mean to get q, then p is one minus q, and n is the mean divided by p."
+            },
+            {
+              "seq": 9,
+              "text": "That order matters: get q first from the ratio, and the rest falls out in one step each."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब moments और exam shortcuts।"
+            },
+            {
+              "seq": 2,
+              "text": "Mean है n p, variance है n p q, और standard deviation है n p q का square root।"
+            },
+            {
+              "seq": 3,
+              "text": "ये हमेशा साथ रखो: variance strictly mean से कम है, क्योंकि q, one से नीचे है।"
+            },
+            {
+              "seq": 4,
+              "text": "Mode, successes की सबसे probable संख्या, वो integer r है जो satisfy करे: n plus one, गुणा p, minus one, कम से कम r, जो ज़्यादा से ज़्यादा n plus one गुणा p हो।"
+            },
+            {
+              "seq": 5,
+              "text": "जब n plus one गुणा p integer न हो, mode बस उस quantity का floor है — नीचे round करो।"
+            },
+            {
+              "seq": 6,
+              "text": "At least one success के लिए complement use करो: one minus q to the n। सारे terms कभी मत जोड़ो।"
+            },
+            {
+              "seq": 7,
+              "text": "ये एक reflex है जो पक्का कर लेना चाहिए — at least one हमेशा one minus probability of none है।"
+            },
+            {
+              "seq": 8,
+              "text": "दिए mean और variance से parameters recover करने के लिए, variance को mean से divide करके q निकालो, फिर p है one minus q, और n है mean बटा p।"
+            },
+            {
+              "seq": 9,
+              "text": "वो order matter करता है: पहले ratio से q निकालो, और बाकी एक-एक step में निकल आता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Worked example: exactly two sixes (CBSE)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Exactly Two Sixes (CBSE)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "A fair die is rolled $5$ times. Find $P(\\text{exactly 2 sixes})$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Success = a six, so $p = \\tfrac16$, $q = \\tfrac56$; $n = 5$, $r = 2$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(X=2) = \\binom{5}{2}\\left(\\tfrac16\\right)^2\\left(\\tfrac56\\right)^3"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "= 10 \\cdot \\tfrac{1}{36} \\cdot \\tfrac{125}{216} = \\tfrac{625}{3888} \\approx 0.161"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Follow-up: at most one six means P(0) + P(1)."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "latex": "P(X \\le 1) = \\left(\\tfrac56\\right)^5 + \\binom{5}{1}\\tfrac16\\left(\\tfrac56\\right)^4"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "latex": "= \\tfrac{3125 + 3125}{7776} = \\tfrac{6250}{7776} \\approx 0.804"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "List r = 0,1,...,5 and compute only the few you need."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A clean Boards binomial: exactly r successes."
+            },
+            {
+              "seq": 2,
+              "text": "A fair die is rolled five times, and we want the probability of getting exactly two sixes."
+            },
+            {
+              "seq": 3,
+              "text": "Each roll is a Bernoulli trial. Call a six a success, so p is one sixth and q is five sixths; n is five and r is two."
+            },
+            {
+              "seq": 4,
+              "text": "By the formula, probability of exactly two is five choose two, times one sixth squared, times five sixths cubed."
+            },
+            {
+              "seq": 5,
+              "text": "That's ten times one thirty sixth times one hundred twenty five over two hundred sixteen, which is six hundred twenty five over three thousand eight hundred eighty eight, about zero point one six one."
+            },
+            {
+              "seq": 6,
+              "text": "A common follow-up asks for at most one six, which is probability of zero plus probability of one."
+            },
+            {
+              "seq": 7,
+              "text": "That's five sixths to the fifth, plus five choose one times one sixth times five sixths to the fourth."
+            },
+            {
+              "seq": 8,
+              "text": "The two pieces are three thousand one hundred twenty five each, over seven thousand seven hundred seventy six, giving six thousand two hundred fifty over that, about zero point eight zero four."
+            },
+            {
+              "seq": 9,
+              "text": "The standard Board layout is to list the counts zero through five and compute only the few probabilities you actually need."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक साफ़ Boards binomial: ठीक r successes।"
+            },
+            {
+              "seq": 2,
+              "text": "एक fair die पाँच बार roll होती है, और हमें ठीक दो sixes आने की probability चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "हर roll एक Bernoulli trial है। एक six को success कहो, तो p है one sixth और q है five sixths; n है five और r है two।"
+            },
+            {
+              "seq": 4,
+              "text": "Formula से, ठीक दो की probability है five choose two, गुणा one sixth squared, गुणा five sixths cubed।"
+            },
+            {
+              "seq": 5,
+              "text": "यानी ten गुणा one thirty sixth गुणा एक सौ पच्चीस बटा दो सौ सोलह, जो है छह सौ पच्चीस बटा तीन हज़ार आठ सौ अठासी, लगभग zero point one six one।"
+            },
+            {
+              "seq": 6,
+              "text": "एक common follow-up at most one six माँगता है, जो है probability of zero जोड़ probability of one।"
+            },
+            {
+              "seq": 7,
+              "text": "यानी five sixths to the fifth, जोड़ five choose one गुणा one sixth गुणा five sixths to the fourth।"
+            },
+            {
+              "seq": 8,
+              "text": "दोनों टुकड़े तीन हज़ार एक सौ पच्चीस each हैं, बटा सात हज़ार सात सौ छिहत्तर, जिससे छह हज़ार दो सौ पचास बटा वो, लगभग zero point eight zero four।"
+            },
+            {
+              "seq": 9,
+              "text": "Standard Board layout है counts zero से five तक list करना और सिर्फ वो कुछ probabilities compute करना जो सचमुच चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Worked example: at least one defective (JEE Main)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — At Least One Defective (JEE Main)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "$5\\%$ of items defective. Sample of $10$. Find $P(\\text{at least one})$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "style": "red-margin",
+          "text": "'At least one' = complement of 'none' — never sum ten terms."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(X \\ge 1) = 1 - \\binom{10}{0}(0.05)^0(0.95)^{10}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "= 1 - (0.95)^{10} \\approx 1 - 0.599 = 0.401"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "\\text{mean} = np = 10(0.05) = 0.5"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "latex": "\\text{variance} = npq = 10(0.05)(0.95) = 0.475"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Variance 0.475 < mean 0.5, as it must be."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "Even a 5% rate gives about a 40% chance of catching one in ten."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A J E E Main speed trap built on the at-least-one reflex."
+            },
+            {
+              "seq": 2,
+              "text": "In a production run, five percent of items are defective. A random sample of ten is taken. Find the probability that at least one is defective, and state the mean and variance."
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>At least one is the complement of none — never sum ten separate terms.</whisper>"
+            },
+            {
+              "seq": 4,
+              "text": "So probability of at least one is one minus probability of zero defectives, which is one minus ten choose zero times zero point zero five to the zero times zero point nine five to the tenth."
+            },
+            {
+              "seq": 5,
+              "text": "That's one minus zero point nine five to the tenth, about one minus zero point five nine nine, which is zero point four zero one."
+            },
+            {
+              "seq": 6,
+              "text": "The mean number of defectives is n p, ten times zero point zero five, which is zero point five."
+            },
+            {
+              "seq": 7,
+              "text": "The variance is n p q, ten times zero point zero five times zero point nine five, which is zero point four seven five."
+            },
+            {
+              "seq": 8,
+              "text": "Notice the variance, zero point four seven five, is below the mean, zero point five, exactly as a binomial requires."
+            },
+            {
+              "seq": 9,
+              "text": "The result is a nice reality check: even a five percent defect rate gives roughly a forty percent chance of catching at least one defective in ten. Small per-item risks accumulate fast."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "At-least-one reflex पे बना एक J E E Main speed trap।"
+            },
+            {
+              "seq": 2,
+              "text": "एक production run में पाँच percent items defective हैं। दस का एक random sample लिया जाता है। कम से कम एक defective होने की probability निकालो, और mean और variance बताओ।"
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>At least one, none का complement है — दस अलग terms कभी मत जोड़ो।</whisper>"
+            },
+            {
+              "seq": 4,
+              "text": "तो probability of at least one है one minus probability of zero defectives, जो है one minus ten choose zero गुणा zero point zero five to the zero गुणा zero point nine five to the tenth।"
+            },
+            {
+              "seq": 5,
+              "text": "यानी one minus zero point nine five to the tenth, लगभग one minus zero point five nine nine, जो है zero point four zero one।"
+            },
+            {
+              "seq": 6,
+              "text": "Defectives की mean संख्या है n p, ten गुणा zero point zero five, जो है zero point five।"
+            },
+            {
+              "seq": 7,
+              "text": "Variance है n p q, ten गुणा zero point zero five गुणा zero point nine five, जो है zero point four seven five।"
+            },
+            {
+              "seq": 8,
+              "text": "ध्यान दो variance, zero point four seven five, mean, zero point five, से नीचे है, बिल्कुल जैसे binomial requires करता है।"
+            },
+            {
+              "seq": 9,
+              "text": "Result एक अच्छा reality check है: पाँच percent defect rate भी दस में कम से कम एक defective पकड़ने का लगभग चालीस percent chance देता है। छोटे per-item risks तेज़ी से जमा होते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Worked example: recover n and p (JEE Main)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Recover n and p (JEE Main)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Mean and variance of a binomial are $4$ and $2$. Find $n$, $p$, $P(X=2)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Two numbers pin a binomial completely — divide to get q."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "q = \\dfrac{npq}{np} = \\dfrac{2}{4} = \\tfrac12 \\;\\Rightarrow\\; p = \\tfrac12"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "np = 4 \\Rightarrow n = \\dfrac{4}{1/2} = 8"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "P(X=2) = \\binom{8}{2}\\left(\\tfrac12\\right)^8 = \\tfrac{28}{256} = \\tfrac{7}{64}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Cross-check: $npq = 8 \\cdot \\tfrac12 \\cdot \\tfrac12 = 2$, variance $<$ mean."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Divide variance by mean first — that's the whole trick."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A parameter-recovery problem, and the trick is one clean division."
+            },
+            {
+              "seq": 2,
+              "text": "The mean and variance of a binomial variable are four and two. Find n, p, and the probability of exactly two successes."
+            },
+            {
+              "seq": 3,
+              "text": "A binomial is completely determined by just two numbers, n and p, so mean and variance are exactly enough to pin it down."
+            },
+            {
+              "seq": 4,
+              "text": "Divide variance by mean: n p q over n p leaves q, which is two over four, one half. So p is one minus q, also one half."
+            },
+            {
+              "seq": 5,
+              "text": "Then from mean equals n p equals four, with p one half, n is four divided by one half, which is eight."
+            },
+            {
+              "seq": 6,
+              "text": "So X follows B of eight comma one half, and probability of exactly two is eight choose two times one half to the eighth, which is twenty eight over two hundred fifty six, or seven over sixty four."
+            },
+            {
+              "seq": 7,
+              "text": "Cross-check the given data: variance is eight times one half times one half, which is two, and the mean is four. They match, and variance is below mean as required."
+            },
+            {
+              "seq": 8,
+              "text": "The whole trick is to divide variance by mean first, which hands you q in a single step."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक parameter-recovery problem, और trick है एक साफ़ division।"
+            },
+            {
+              "seq": 2,
+              "text": "एक binomial variable का mean और variance हैं four और two। n, p, और ठीक दो successes की probability निकालो।"
+            },
+            {
+              "seq": 3,
+              "text": "एक binomial सिर्फ दो numbers, n और p, से पूरी तरह determined होती है, तो mean और variance इसे pin करने के लिए बिल्कुल काफ़ी हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Variance को mean से divide करो: n p q बटा n p में q बचता है, जो है two बटा four, one half। तो p है one minus q, भी one half।"
+            },
+            {
+              "seq": 5,
+              "text": "फिर mean बराबर n p बराबर four से, p one half के साथ, n है four बटा one half, जो है eight।"
+            },
+            {
+              "seq": 6,
+              "text": "तो X follows B of eight comma one half, और ठीक दो की probability है eight choose two गुणा one half to the eighth, जो है twenty eight बटा दो सौ छप्पन, यानी seven बटा sixty four।"
+            },
+            {
+              "seq": 7,
+              "text": "दिए data को cross-check करो: variance है eight गुणा one half गुणा one half, जो है two, और mean है four। ये match करते हैं, और variance mean से नीचे है जैसा चाहिए।"
+            },
+            {
+              "seq": 8,
+              "text": "पूरा trick है variance को mean से पहले divide करना, जो एक ही step में q दे देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Worked example: most probable hits (JEE Advanced)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Most Probable Hits (JEE Advanced)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Archer hits with $p = 0.8$, fires $6$ shots. Find the mode and its probability."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "(n+1)p = 7(0.8) = 5.6 \\text{ (not an integer)}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\text{mode } r = \\lfloor 5.6 \\rfloor = 5"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "P(X=5) = \\binom{6}{5}(0.8)^5(0.2)^1 = 0.393"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "The mean is np = 4.8, yet the single most likely count is 5."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Mean and mode need not coincide."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "The mode comes from the ratio of consecutive probabilities."
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "latex": "\\dfrac{P(X=r)}{P(X=r-1)} = \\dfrac{(n-r+1)p}{r\\,q}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A J E E Advanced problem on the mode: the most probable number of successes."
+            },
+            {
+              "seq": 2,
+              "text": "An archer hits the bull's-eye with probability zero point eight on each shot and fires six independent shots. Find the most probable number of bull's-eyes, and the probability of achieving it."
+            },
+            {
+              "seq": 3,
+              "text": "Here n is six and p is zero point eight, so n plus one times p is seven times zero point eight, which is five point six — not an integer."
+            },
+            {
+              "seq": 4,
+              "text": "When that quantity isn't an integer, the mode is its floor, so the mode is five."
+            },
+            {
+              "seq": 5,
+              "text": "The probability of five hits is six choose five times zero point eight to the fifth times zero point two, which is about zero point three nine three."
+            },
+            {
+              "seq": 6,
+              "text": "Here's the insight: the mean is n p, four point eight, yet the single most likely count is five."
+            },
+            {
+              "seq": 7,
+              "text": "Mean and mode need not coincide, and the mode formula pins the peak of the distribution directly."
+            },
+            {
+              "seq": 8,
+              "text": "Where does the mode formula come from? Look at the ratio of consecutive probabilities."
+            },
+            {
+              "seq": 9,
+              "text": "That ratio is n minus r plus one, times p, over r times q. The probabilities keep rising while the ratio exceeds one and start falling once it drops below one, so the peak sits at the largest r where the climb is still happening."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Mode पे एक J E E Advanced problem: successes की सबसे probable संख्या।"
+            },
+            {
+              "seq": 2,
+              "text": "एक archer हर shot पे bull's-eye zero point eight probability से hit करता है और छह independent shots चलाता है। सबसे probable bull's-eyes की संख्या, और उसे पाने की probability निकालो।"
+            },
+            {
+              "seq": 3,
+              "text": "यहाँ n है six और p है zero point eight, तो n plus one गुणा p है seven गुणा zero point eight, जो है five point six — integer नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "जब वो quantity integer न हो, mode उसका floor है, तो mode है five।"
+            },
+            {
+              "seq": 5,
+              "text": "पाँच hits की probability है six choose five गुणा zero point eight to the fifth गुणा zero point two, जो है लगभग zero point three nine three।"
+            },
+            {
+              "seq": 6,
+              "text": "ये रहा insight: mean है n p, four point eight, फिर भी single सबसे likely count है five।"
+            },
+            {
+              "seq": 7,
+              "text": "Mean और mode का coincide होना ज़रूरी नहीं, और mode formula distribution के peak को सीधे pin करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Mode formula कहाँ से आता है? Consecutive probabilities के ratio को देखो।"
+            },
+            {
+              "seq": 9,
+              "text": "वो ratio है n minus r plus one, गुणा p, बटा r गुणा q। Probabilities तब तक चढ़ती रहती हैं जब तक ratio one से बड़ा है और तभी गिरने लगती हैं जब वो one से नीचे जाता है, तो peak उस सबसे बड़े r पे बैठता है जहाँ चढ़ाई अब भी हो रही है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "tips",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Common pitfalls to avoid",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Common Pitfalls — Binomial Distribution"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 9,
+          "style": "red-margin",
+          "text": "Pitfall 1: forcing binomial onto without-replacement (dependent) trials."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "There p shifts each draw, so it is not binomial."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "Pitfall 2: swapping $p$ and $q$, or $r$ and $n - r$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Successes get p to the r; failures get q to the n − r."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "Pitfall 3: believing variance can exceed the mean."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "For a binomial, npq is always less than np."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Pitfall 4: the long road to 'at least one' instead of $1 - q^n$."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Pitfall 5: dropping or miscounting the nCr factor."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Five traps sink the most marks on binomial questions, so let's name them."
+            },
+            {
+              "seq": 2,
+              "text": "Pitfall one: forcing the binomial formula onto trials that are dependent, like draws without replacement."
+            },
+            {
+              "seq": 3,
+              "text": "There the success probability shifts on each draw, so the setup is simply not binomial."
+            },
+            {
+              "seq": 4,
+              "text": "Pitfall two: swapping p and q, or equivalently r and n minus r."
+            },
+            {
+              "seq": 5,
+              "text": "Successes get p raised to r; failures get q raised to n minus r. Naming success clearly up front prevents this."
+            },
+            {
+              "seq": 6,
+              "text": "Pitfall three: believing the variance can exceed the mean."
+            },
+            {
+              "seq": 7,
+              "text": "For a binomial, n p q is always less than n p. A binomial with variance above the mean signals inconsistent data."
+            },
+            {
+              "seq": 8,
+              "text": "Pitfall four: taking the long road to at least one by summing every term, instead of one minus q to the n."
+            },
+            {
+              "seq": 9,
+              "text": "Pitfall five: dropping the n choose r factor, or miscomputing it — for example forgetting the n minus r factorial in the denominator. Always include it and evaluate it carefully."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पाँच traps binomial questions पे सबसे ज़्यादा marks डुबाते हैं, तो इन्हें नाम देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Pitfall one: binomial formula को dependent trials पे ज़बरदस्ती लगाना, जैसे without replacement draws।"
+            },
+            {
+              "seq": 3,
+              "text": "वहाँ success probability हर draw पे shift होती है, तो setup binomial है ही नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Pitfall two: p और q swap करना, या इसी तरह r और n minus r।"
+            },
+            {
+              "seq": 5,
+              "text": "Successes को p raised to r मिलता है; failures को q raised to n minus r। शुरू में success साफ़ नाम देना इसे रोकता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Pitfall three: ये मानना कि variance mean से बड़ी हो सकती है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक binomial के लिए, n p q हमेशा n p से कम है। Variance mean से ऊपर वाली binomial inconsistent data का signal है।"
+            },
+            {
+              "seq": 8,
+              "text": "Pitfall four: हर term जोड़कर at least one का लंबा रास्ता लेना, one minus q to the n के बजाय।"
+            },
+            {
+              "seq": 9,
+              "text": "Pitfall five: n choose r factor गिरा देना, या ग़लत compute करना — जैसे denominator में n minus r factorial भूल जाना। हमेशा इसे शामिल करो और ध्यान से evaluate करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "tips",
+      "subtopic": "Bernoulli Trials & Binomial Distribution",
+      "title": "Pro-tips: three reflexes",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pro-Tips — Three Reflexes"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Any 'at least' or 'at most' should trigger the complement reflex."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "P(X \\ge 1) = 1 - P(X = 0)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "For 'mean and variance given,' divide variance by mean first."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "q = \\dfrac{\\text{variance}}{\\text{mean}}, \\quad p = 1 - q, \\quad n = \\dfrac{\\text{mean}}{p}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "For several consecutive probabilities, compute P(0) once, then walk up."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "latex": "\\dfrac{P(X=r)}{P(X=r-1)} = \\dfrac{(n-r+1)p}{r\\,q}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Each next probability is the previous one times a simple factor."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Three reflexes cover the bulk of exam binomial questions. Burn them in."
+            },
+            {
+              "seq": 2,
+              "text": "First: any at-least or at-most question should trigger the complement reflex, choosing whichever side has fewer terms."
+            },
+            {
+              "seq": 3,
+              "text": "The cleanest case: probability of at least one is one minus probability of zero."
+            },
+            {
+              "seq": 4,
+              "text": "Second: whenever you're given a mean and variance and asked for n and p, divide variance by mean first."
+            },
+            {
+              "seq": 5,
+              "text": "That hands you q in one step; then p is one minus q, and n is the mean divided by p."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Third: when you need several consecutive probabilities, compute probability of zero once, then walk up.</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "Use the ratio of consecutive probabilities: n minus r plus one, times p, over r times q."
+            },
+            {
+              "seq": 8,
+              "text": "Each next probability is just the previous one times that simple factor — far quicker than recomputing the whole term every time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "तीन reflexes exam की ज़्यादातर binomial questions cover कर लेते हैं। इन्हें पक्का कर लो।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला: कोई भी at-least या at-most question complement reflex trigger करे, वो side चुनो जिसमें कम terms हों।"
+            },
+            {
+              "seq": 3,
+              "text": "सबसे साफ़ case: probability of at least one है one minus probability of zero।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा: जब भी mean और variance दिए हों और n और p माँगे जाएँ, variance को mean से पहले divide करो।"
+            },
+            {
+              "seq": 5,
+              "text": "वो एक step में q दे देता है; फिर p है one minus q, और n है mean बटा p।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>तीसरा: जब कई consecutive probabilities चाहिए हों, probability of zero एक बार compute करो, फिर ऊपर चलो।</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "Consecutive probabilities का ratio use करो: n minus r plus one, गुणा p, बटा r गुणा q।"
+            },
+            {
+              "seq": 8,
+              "text": "हर अगली probability बस पिछली गुणा वो simple factor है — हर बार पूरा term दुबारा compute करने से कहीं तेज़।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "formula_recap",
+      "subtopic": "Master Formula Sheet & Revision Capstone",
+      "title": "Formula recap: your complete toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Formula Recap — Your Complete Toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "latex": "P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}, \\quad P(A \\cap B) = P(A)\\,P(B \\mid A)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "P(A \\cap B) = P(A)P(B); \\quad P(\\text{at least one}) = 1 - \\prod_i (1 - P(A_i))"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(A) = \\sum_j P(E_j)\\,P(A \\mid E_j)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(E_i \\mid A) = \\dfrac{P(E_i)\\,P(A \\mid E_i)}{\\sum_j P(E_j)\\,P(A \\mid E_j)}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "E(X) = \\sum_i x_i p_i, \\quad \\operatorname{Var}(X) = E(X^2) - [E(X)]^2"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "latex": "E(aX+b) = aE(X) + b, \\quad \\operatorname{Var}(aX+b) = a^2\\operatorname{Var}(X)"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "latex": "X \\sim B(n,p): \\ P(X=r) = \\binom{n}{r} p^r q^{n-r}"
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "latex": "\\text{mean} = np, \\quad \\text{variance} = npq, \\quad \\text{SD} = \\sqrt{npq}"
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 81,
+          "style": "red-margin",
+          "text": "Restate, don't re-derive — this is your night-before single page."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the whole chapter's formulas in one place — your complete toolkit. This restates; it doesn't re-teach."
+            },
+            {
+              "seq": 2,
+              "text": "Conditional probability and the multiplication theorem: probability of A given B is A-and-B over B, and probability of A-and-B is probability of A times probability of B given A."
+            },
+            {
+              "seq": 3,
+              "text": "Independence is the product rule; and for at least one of several independent events, take one minus the product of the failure probabilities."
+            },
+            {
+              "seq": 4,
+              "text": "Total Probability: the probability of an effect is the sum over all causes of prior times likelihood."
+            },
+            {
+              "seq": 5,
+              "text": "Bayes: the posterior for a cause is its prior times likelihood, over that same total probability."
+            },
+            {
+              "seq": 6,
+              "text": "For a random variable, the mean is the probability-weighted sum, and the variance is expectation of X squared minus the mean squared."
+            },
+            {
+              "seq": 7,
+              "text": "Under a linear change, the mean scales and shifts, while the variance scales by the square of a and ignores the shift."
+            },
+            {
+              "seq": 8,
+              "text": "The binomial: X follows B of n comma p, with the probability of r successes equal to n choose r times p to the r times q to the n minus r."
+            },
+            {
+              "seq": 9,
+              "text": "Its mean is n p, its variance is n p q, and its standard deviation is the square root of n p q."
+            },
+            {
+              "seq": 10,
+              "text": "Keep this one page for the night before. It's a memory map, not a place to re-derive anything."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब पूरे chapter के formulas एक जगह — तुम्हारा complete toolkit। ये restate करता है; दुबारा नहीं पढ़ाता।"
+            },
+            {
+              "seq": 2,
+              "text": "Conditional probability और multiplication theorem: probability of A given B है A-and-B बटा B, और probability of A-and-B है probability of A गुणा probability of B given A।"
+            },
+            {
+              "seq": 3,
+              "text": "Independence product rule है; और कई independent events में से at least one के लिए, one minus failure probabilities का product लो।"
+            },
+            {
+              "seq": 4,
+              "text": "Total Probability: एक effect की probability है सारे causes पे prior गुणा likelihood का sum।"
+            },
+            {
+              "seq": 5,
+              "text": "Bayes: एक cause का posterior है उसका prior गुणा likelihood, बटा वही total probability।"
+            },
+            {
+              "seq": 6,
+              "text": "एक random variable के लिए, mean है probability-weighted sum, और variance है expectation of X squared minus mean squared।"
+            },
+            {
+              "seq": 7,
+              "text": "Linear change के तहत, mean scale और shift होता है, जबकि variance a के square से scale होता है और shift को ignore करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Binomial: X follows B of n comma p, r successes की probability बराबर n choose r गुणा p to the r गुणा q to the n minus r।"
+            },
+            {
+              "seq": 9,
+              "text": "इसका mean है n p, variance है n p q, और standard deviation है n p q का square root।"
+            },
+            {
+              "seq": 10,
+              "text": "ये एक page रात-भर-पहले के लिए रखो। ये एक memory map है, कुछ दुबारा derive करने की जगह नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "cheat_sheet",
+      "subtopic": "Master Formula Sheet & Revision Capstone",
+      "title": "Cheat sheet: three distinctions and the mantra",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Cheat Sheet — Three Distinctions & the Mantra"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Mutually exclusive vs independent: $P(A \\cap B) = 0$ versus $P(A \\cap B) = P(A)P(B)$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "style": "red-margin",
+          "text": "For positive probabilities they can never both hold."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Total Probability vs Bayes: forward (cause to effect) versus backward (effect to cause)."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "style": "red-margin",
+          "text": "Bayes uses Total Probability as its denominator."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "With vs without replacement: independent constant-p versus dependent shifting-p."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Without replacement is not binomial — use conditional probability and counting."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Binomial sanity: variance $npq <$ mean $np$; probabilities are terms of $(q+p)^n$."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Mantra: condition, multiply, check independence, add causes, invert for Bayes, count for binomial."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Close the chapter with the three distinctions that decide most questions, and one mantra."
+            },
+            {
+              "seq": 2,
+              "text": "Mutually exclusive versus independent: mutually exclusive means the intersection is zero; independent means the intersection equals the product of the probabilities."
+            },
+            {
+              "seq": 3,
+              "text": "For positive probabilities these can never both hold at once — one forbids, the other ignores."
+            },
+            {
+              "seq": 4,
+              "text": "Total Probability versus Bayes: Total Probability runs forward, from cause to effect; Bayes runs backward, from observed effect to hidden cause."
+            },
+            {
+              "seq": 5,
+              "text": "And Bayes uses Total Probability as its denominator, so the two are always linked."
+            },
+            {
+              "seq": 6,
+              "text": "With versus without replacement: with replacement means independent trials with constant p; without replacement means dependent trials with a shifting p."
+            },
+            {
+              "seq": 7,
+              "text": "So without replacement is not binomial — reach for conditional probability and counting instead."
+            },
+            {
+              "seq": 8,
+              "text": "A binomial sanity check: the variance n p q is always below the mean n p, and the probabilities are the terms of q plus p to the n."
+            },
+            {
+              "seq": 9,
+              "text": "And the one-line mantra for the whole chapter: condition to shrink the world, multiply to combine, check independence, add causes for Total Probability, invert for Bayes, then count successes for the binomial."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chapter को उन तीन distinctions से बंद करो जो ज़्यादातर questions तय करती हैं, और एक mantra से।"
+            },
+            {
+              "seq": 2,
+              "text": "Mutually exclusive बनाम independent: mutually exclusive मतलब intersection zero; independent मतलब intersection probabilities के product के बराबर।"
+            },
+            {
+              "seq": 3,
+              "text": "Positive probabilities के लिए ये दोनों एक साथ कभी hold नहीं कर सकते — एक मना करता है, दूसरा ignore।"
+            },
+            {
+              "seq": 4,
+              "text": "Total Probability बनाम Bayes: Total Probability forward चलता है, cause से effect; Bayes backward चलता है, observed effect से hidden cause।"
+            },
+            {
+              "seq": 5,
+              "text": "और Bayes, Total Probability को अपना denominator इस्तेमाल करता है, तो दोनों हमेशा जुड़े हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "With बनाम without replacement: with replacement मतलब independent trials constant p के साथ; without replacement मतलब dependent trials shifting p के साथ।"
+            },
+            {
+              "seq": 7,
+              "text": "तो without replacement binomial नहीं है — इसके बजाय conditional probability और counting उठाओ।"
+            },
+            {
+              "seq": 8,
+              "text": "एक binomial sanity check: variance n p q हमेशा mean n p से नीचे, और probabilities q plus p to the n के terms हैं।"
+            },
+            {
+              "seq": 9,
+              "text": "और पूरे chapter का one-line mantra: condition करके दुनिया shrink करो, multiply करके combine करो, independence check करो, Total Probability के लिए causes जोड़ो, Bayes के लिए invert करो, फिर binomial के लिए successes गिनो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

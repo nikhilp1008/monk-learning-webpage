@@ -1,0 +1,2466 @@
+{
+  "chapter": "Straight Lines",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 9,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Coordinate Foundations",
+      "title": "Geometry becomes arithmetic",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Geometry → Arithmetic on the Plane"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The coordinate plane turns every geometry question into a calculation."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Distance between two towns becomes a subtraction and a square root."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Two points on the plane; the gap resolves into a right triangle.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 260\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"220\" x2=\"400\" y2=\"220\" stroke=\"#333\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"220\" x2=\"40\" y2=\"20\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"404\" y=\"224\" font-size=\"12\" fill=\"#333\">x</text><text x=\"28\" y=\"20\" font-size=\"12\" fill=\"#333\">y</text><line x1=\"120\" y1=\"170\" x2=\"320\" y2=\"70\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"170\" r=\"4\" fill=\"#1a56db\"/><text x=\"94\" y=\"162\" font-size=\"12\" fill=\"#1a56db\">A (x1, y1)</text><circle cx=\"320\" cy=\"70\" r=\"4\" fill=\"#c026d3\"/><text x=\"300\" y=\"62\" font-size=\"12\" fill=\"#c026d3\">B (x2, y2)</text><line x1=\"120\" y1=\"170\" x2=\"320\" y2=\"170\" stroke=\"#999\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"320\" y1=\"170\" x2=\"320\" y2=\"70\" stroke=\"#999\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><text x=\"196\" y=\"186\" font-size=\"11\" fill=\"#666\">x2 - x1</text><text x=\"326\" y=\"124\" font-size=\"11\" fill=\"#666\">y2 - y1</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Collinear points enclose ZERO area — a feature, not a failure."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "'One-third of the way along the highway' becomes the section formula."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Three core tools: distance, the section point, and triangle area."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Master these and the rest of the chapter becomes bookkeeping."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Let's begin with the single biggest idea in this whole chapter.</curious> On the coordinate plane, geometry quietly turns into arithmetic."
+            },
+            {
+              "seq": 2,
+              "text": "Every question about shapes becomes a question about numbers — that is the whole power of Descartes' idea."
+            },
+            {
+              "seq": 3,
+              "text": "Ask how far one town sits from another, and the answer is just a subtraction followed by a square root, nothing more mysterious than that."
+            },
+            {
+              "seq": 4,
+              "text": "Picture the two towns as points. The horizontal gap and the vertical gap form a right triangle, and the straight-line distance is simply its hypotenuse."
+            },
+            {
+              "seq": 5,
+              "text": "Here is a lovely twist: if three points sit on one straight line, the triangle they form has zero area, and that zero is exactly the collinearity test we will lean on later."
+            },
+            {
+              "seq": 6,
+              "text": "Ask for the point one-third of the way along a highway, and that is the section formula doing its job."
+            },
+            {
+              "seq": 7,
+              "text": "So keep three tools close at hand: the distance between points, the point that divides a segment, and the area of a triangle."
+            },
+            {
+              "seq": 8,
+              "text": "Get fluent with these and everything later in Straight Lines is just careful bookkeeping."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>चलो शुरू करते हैं इस पूरे chapter के सबसे बड़े idea से।</curious> Coordinate plane पर geometry chुपके से arithmetic बन जाती है।"
+            },
+            {
+              "seq": 2,
+              "text": "हर shape का सवाल numbers के सवाल में बदल जाता है — यही तो Descartes के idea की असली ताकत है।"
+            },
+            {
+              "seq": 3,
+              "text": "पूछो कि एक town दूसरे से कितनी दूर है, तो answer बस एक subtraction और फिर एक square root है, इससे ज़्यादा कुछ नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "दो towns को points की तरह सोचो। Horizontal gap और vertical gap मिलकर एक right triangle बनाते हैं, और सीधी distance उसका hypotenuse है।"
+            },
+            {
+              "seq": 5,
+              "text": "एक सुंदर बात: अगर तीन points एक ही straight line पर हों, तो उनका triangle zero area बनाता है, और यही zero हमारा collinearity test है।"
+            },
+            {
+              "seq": 6,
+              "text": "किसी highway पर one-third रास्ते वाला point पूछो, तो वहाँ section formula काम कर रहा होता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो तीन tools हमेशा पास रखो: points के बीच distance, segment को divide करने वाला point, और triangle का area।"
+            },
+            {
+              "seq": 8,
+              "text": "इनमें fluent हो जाओ, तो Straight Lines का बाकी सब कुछ बस careful bookkeeping है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Coordinate Foundations",
+      "title": "The idea of a locus",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Locus: the path a rule traces"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A locus is the set of all points that obey one geometric rule."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "A goat tied to a peg traces a circle: the rule is 'stay 5 m from the peg'."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Points equidistant from two villages trace the perpendicular bisector.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"170\" x2=\"300\" y2=\"170\" stroke=\"#333\" stroke-width=\"1.2\"/><circle cx=\"120\" cy=\"170\" r=\"4\" fill=\"#1a56db\"/><text x=\"96\" y=\"188\" font-size=\"12\" fill=\"#1a56db\">Village A</text><circle cx=\"300\" cy=\"170\" r=\"4\" fill=\"#1a56db\"/><text x=\"278\" y=\"188\" font-size=\"12\" fill=\"#1a56db\">Village B</text><line x1=\"210\" y1=\"40\" x2=\"210\" y2=\"212\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"216\" y=\"52\" font-size=\"11\" fill=\"#059669\">perpendicular bisector</text><circle cx=\"210\" cy=\"82\" r=\"3.5\" fill=\"#c026d3\"/><text x=\"216\" y=\"82\" font-size=\"12\" fill=\"#c026d3\">P</text><line x1=\"120\" y1=\"170\" x2=\"210\" y2=\"82\" stroke=\"#c026d3\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"300\" y1=\"170\" x2=\"210\" y2=\"82\" stroke=\"#c026d3\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><text x=\"146\" y=\"120\" font-size=\"11\" fill=\"#666\">equal</text><text x=\"248\" y=\"120\" font-size=\"11\" fill=\"#666\">equal</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Points equidistant from two villages trace the perpendicular bisector — a straight line."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "External section blows up when $m = n$: that point runs off to infinity."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Translation shifts the origin but never rotates it; slopes and distances stay unchanged."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Finding a locus equation is the bridge from a verbal rule to an algebraic curve."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the second big idea of this subtopic — the locus, which is simply the path traced by a moving point."
+            },
+            {
+              "seq": 2,
+              "text": "A locus is the set of every point that obeys one geometric rule, and nothing else."
+            },
+            {
+              "seq": 3,
+              "text": "Think of a goat tied to a peg by a rope. Its rule is 'stay five metres from the peg', so the path it can walk is a perfect circle."
+            },
+            {
+              "seq": 4,
+              "text": "Now take two villages and ask for the points that are equally far from both. Watch what that path turns out to be."
+            },
+            {
+              "seq": 5,
+              "text": "It is the perpendicular bisector of the segment joining them — a straight line, born purely from an equal-distance rule."
+            },
+            {
+              "seq": 6,
+              "text": "One caution from the edge cases: the external section formula divides by m minus n, so when m equals n it blows up, because that dividing point has run off to infinity."
+            },
+            {
+              "seq": 7,
+              "text": "And remember, translation of axes only slides the origin, it never rotates it, so slopes and distances stay exactly the same, only the coordinate labels change."
+            },
+            {
+              "seq": 8,
+              "text": "Almost every problem that says 'find the path of a point such that' is really a locus problem — turn the words into an equation and you are done."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब इस subtopic का दूसरा बड़ा idea — locus, यानी किसी moving point का traced रास्ता।"
+            },
+            {
+              "seq": 2,
+              "text": "Locus उन सारे points का set है जो एक geometric rule को follow करते हैं, और बस।"
+            },
+            {
+              "seq": 3,
+              "text": "सोचो एक बकरी peg से rope से बंधी है। उसका rule है 'peg से five metres दूर रहो', तो उसका रास्ता एक perfect circle बन जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब दो villages लो और पूछो कि कौन-से points दोनों से equally दूर हैं। देखो यह path क्या निकलता है।"
+            },
+            {
+              "seq": 5,
+              "text": "यह दोनों को जोड़ने वाले segment का perpendicular bisector है — एक straight line, सिर्फ़ equal-distance rule से बनी।"
+            },
+            {
+              "seq": 6,
+              "text": "Edge case का एक ध्यान: external section formula में m minus n से divide होता है, इसलिए जब m बराबर n हो तो यह blow up कर जाता है, क्योंकि वो point infinity पर चला जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और याद रखो, translation of axes सिर्फ़ origin को slide करता है, rotate कभी नहीं, इसलिए slopes और distances वैसे ही रहते हैं, बस coordinate labels बदलते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "जब भी सवाल कहे 'ऐसे point का path ढूँढो कि', तो समझ जाओ यह locus problem है — words को equation में बदलो, बस।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Coordinate Foundations",
+      "title": "Proof: the internal section formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: Internal Section Formula"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "$P$ divides $AB$ internally in ratio $m : n$. Drop perpendiculars to the x-axis."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Perpendiculars from A, P, B create similar right triangles.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"200\" x2=\"400\" y2=\"200\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"404\" y=\"204\" font-size=\"12\" fill=\"#333\">x</text><line x1=\"90\" y1=\"160\" x2=\"330\" y2=\"60\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"160\" r=\"4\" fill=\"#1a56db\"/><text x=\"72\" y=\"152\" font-size=\"12\" fill=\"#1a56db\">A</text><circle cx=\"330\" cy=\"60\" r=\"4\" fill=\"#1a56db\"/><text x=\"336\" y=\"60\" font-size=\"12\" fill=\"#1a56db\">B</text><circle cx=\"210\" cy=\"110\" r=\"4\" fill=\"#c026d3\"/><text x=\"216\" y=\"106\" font-size=\"12\" fill=\"#c026d3\">P</text><line x1=\"90\" y1=\"160\" x2=\"90\" y2=\"200\" stroke=\"#999\" stroke-dasharray=\"4 3\"/><line x1=\"210\" y1=\"110\" x2=\"210\" y2=\"200\" stroke=\"#999\" stroke-dasharray=\"4 3\"/><line x1=\"330\" y1=\"60\" x2=\"330\" y2=\"200\" stroke=\"#999\" stroke-dasharray=\"4 3\"/><text x=\"138\" y=\"122\" font-size=\"11\" fill=\"#666\">m</text><text x=\"268\" y=\"74\" font-size=\"11\" fill=\"#666\">n</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Similar triangles split the base in the same ratio $m : n$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\frac{x_P - x_1}{x_2 - x_P} = \\frac{m}{n}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "n(x_P - x_1) = m(x_2 - x_P) \\;\\Rightarrow\\; x_P(m+n) = m x_2 + n x_1"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "x_P = \\frac{m x_2 + n x_1}{m+n}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "P = \\left(\\frac{m x_2 + n x_1}{m+n},\\; \\frac{m y_2 + n y_1}{m+n}\\right)"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's actually prove the section formula, because a formula you can rebuild is a formula you never forget."
+            },
+            {
+              "seq": 2,
+              "text": "Take points A and B, and let P divide the segment internally in the ratio m to n. Now drop perpendiculars from all three points straight down to the x-axis."
+            },
+            {
+              "seq": 3,
+              "text": "Those perpendiculars carve out two similar right triangles, one sitting inside the other."
+            },
+            {
+              "seq": 4,
+              "text": "Because the triangles are similar, the way P splits the segment in the ratio m to n is copied exactly onto the x-coordinates along the base."
+            },
+            {
+              "seq": 5,
+              "text": "So the ratio of x P minus x one to x two minus x P equals m over n."
+            },
+            {
+              "seq": 6,
+              "text": "Cross-multiply and gather the x P terms: n times the first bracket equals m times the second, which rearranges to x P times m plus n equals m x two plus n x one."
+            },
+            {
+              "seq": 7,
+              "text": "Divide through by m plus n and x P pops out as m x two plus n x one, all over m plus n."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>The y-coordinate follows by the identical argument, giving the full section point.</excited> Notice the denominator is m plus n for internal division — hold onto that."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो section formula को सचमुच prove करते हैं, क्योंकि जो formula तुम खुद बना सको, उसे कभी भूलते नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "Points A और B लो, और मान लो P segment को internally ratio m to n में बाँटता है। अब तीनों points से x-axis तक सीधे perpendiculars गिराओ।"
+            },
+            {
+              "seq": 3,
+              "text": "ये perpendiculars दो similar right triangles बना देते हैं, एक दूसरे के अंदर बैठा हुआ।"
+            },
+            {
+              "seq": 4,
+              "text": "Similar होने की वजह से, जिस ratio m to n में P segment को बाँटता है, वही ratio नीचे base पर x-coordinates पर copy हो जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो x P minus x one का x two minus x P से ratio, m over n के बराबर है।"
+            },
+            {
+              "seq": 6,
+              "text": "Cross-multiply करके x P terms इकट्ठा करो: n times पहला bracket बराबर m times दूसरा, जो rearrange होकर देता है x P times m plus n बराबर m x two plus n x one।"
+            },
+            {
+              "seq": 7,
+              "text": "m plus n से divide करो और x P निकल आता है, m x two plus n x one, whole over m plus n।"
+            },
+            {
+              "seq": 8,
+              "text": "<excited>y-coordinate बिल्कुल वैसे ही argument से आता है, और पूरा section point मिल जाता है।</excited> ध्यान दो, internal division के लिए denominator m plus n है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Coordinate Foundations",
+      "title": "Proof: area of a triangle, and collinearity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: Area of a Triangle"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Drop perpendiculars from each vertex to the x-axis, forming three trapezia."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "The triangle area is the algebraic sum of three trapezium areas.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"200\" x2=\"400\" y2=\"200\" stroke=\"#333\" stroke-width=\"1.5\"/><polygon points=\"90,150 200,60 320,130\" fill=\"#05966922\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"150\" r=\"3.5\" fill=\"#1a56db\"/><text x=\"72\" y=\"146\" font-size=\"12\" fill=\"#1a56db\">A</text><circle cx=\"200\" cy=\"60\" r=\"3.5\" fill=\"#1a56db\"/><text x=\"196\" y=\"52\" font-size=\"12\" fill=\"#1a56db\">B</text><circle cx=\"320\" cy=\"130\" r=\"3.5\" fill=\"#1a56db\"/><text x=\"326\" y=\"128\" font-size=\"12\" fill=\"#1a56db\">C</text><line x1=\"90\" y1=\"150\" x2=\"90\" y2=\"200\" stroke=\"#999\" stroke-dasharray=\"4 3\"/><line x1=\"200\" y1=\"60\" x2=\"200\" y2=\"200\" stroke=\"#999\" stroke-dasharray=\"4 3\"/><line x1=\"320\" y1=\"130\" x2=\"320\" y2=\"200\" stroke=\"#999\" stroke-dasharray=\"4 3\"/><text x=\"132\" y=\"216\" font-size=\"11\" fill=\"#666\">trapezia under the sides</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\Delta = \\tfrac{1}{2}(x_1-x_2)(y_1+y_2) + \\tfrac{1}{2}(x_2-x_3)(y_2+y_3) + \\tfrac{1}{2}(x_3-x_1)(y_3+y_1)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Expanding and collecting terms collapses this cleanly."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\Delta = \\tfrac{1}{2}\\left| x_1(y_2-y_3) + x_2(y_3-y_1) + x_3(y_1-y_2) \\right|"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The modulus removes orientation sign — area is never negative."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "When $\\Delta = 0$ the three points are collinear."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Next, the area of a triangle from its three vertices — and the trick is trapezia."
+            },
+            {
+              "seq": 2,
+              "text": "Drop a perpendicular from each vertex down to the x-axis. Between the sides and the axis you get three trapezia."
+            },
+            {
+              "seq": 3,
+              "text": "The triangle's area is just the algebraic sum of these three trapezium areas — some added, some subtracted, depending on direction."
+            },
+            {
+              "seq": 4,
+              "text": "Writing each trapezium as half the sum of parallel sides times the width gives this three-term sum."
+            },
+            {
+              "seq": 5,
+              "text": "It looks messy, but expand every bracket and watch the clutter cancel."
+            },
+            {
+              "seq": 6,
+              "text": "What survives is one half the modulus of x one times y two minus y three, plus x two times y three minus y one, plus x three times y one minus y two — the formula you will use every time."
+            },
+            {
+              "seq": 7,
+              "text": "The modulus is doing real work here: it strips off the orientation sign so that area comes out non-negative, always."
+            },
+            {
+              "seq": 8,
+              "text": "And here is the payoff: if this area comes out as exactly zero, the three points cannot enclose anything — they lie on one straight line."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब तीन vertices से triangle का area — और trick है trapezia।"
+            },
+            {
+              "seq": 2,
+              "text": "हर vertex से x-axis तक एक perpendicular गिराओ। Sides और axis के बीच तीन trapezia बन जाते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Triangle का area बस इन तीन trapezium areas का algebraic sum है — कुछ add, कुछ subtract, direction के हिसाब से।"
+            },
+            {
+              "seq": 4,
+              "text": "हर trapezium को half times parallel sides का sum times width लिखो, तो यह तीन-term वाला sum मिलता है।"
+            },
+            {
+              "seq": 5,
+              "text": "देखने में messy है, पर हर bracket expand करो और सारा clutter cancel होते देखो।"
+            },
+            {
+              "seq": 6,
+              "text": "जो बचता है वो है one half into modulus of x one times y two minus y three, plus x two times y three minus y one, plus x three times y one minus y two — यही formula हर बार काम आएगा।"
+            },
+            {
+              "seq": 7,
+              "text": "यहाँ modulus असली काम कर रहा है: यह orientation sign हटा देता है ताकि area हमेशा non-negative आए।"
+            },
+            {
+              "seq": 8,
+              "text": "और यही payoff है: अगर यह area exactly zero आ जाए, तो तीनों points कुछ enclose नहीं कर सकते — वे एक ही straight line पर हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "formulas",
+      "subtopic": "Coordinate Foundations",
+      "title": "Coordinate foundations: formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Coordinate Foundations — Toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "AB = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{Internal: } \\left(\\frac{m x_2 + n x_1}{m+n},\\; \\frac{m y_2 + n y_1}{m+n}\\right)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{External: } \\left(\\frac{m x_2 - n x_1}{m-n},\\; \\frac{m y_2 - n y_1}{m-n}\\right)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{Midpoint: } \\left(\\frac{x_1+x_2}{2},\\; \\frac{y_1+y_2}{2}\\right)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\text{Centroid: } \\left(\\frac{x_1+x_2+x_3}{3},\\; \\frac{y_1+y_2+y_3}{3}\\right)"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\Delta = \\tfrac{1}{2}\\left| x_1(y_2-y_3) + x_2(y_3-y_1) + x_3(y_1-y_2) \\right|"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Collinear $\\Leftrightarrow \\Delta = 0$."
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "latex": "\\text{Shift of origin to } (h,k):\\; X = x - h,\\; Y = y - k"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is your complete toolkit for points — keep this board as your reference."
+            },
+            {
+              "seq": 2,
+              "text": "Distance: A B equals the square root of x two minus x one, squared, plus y two minus y one, squared. It is just Pythagoras on the plane."
+            },
+            {
+              "seq": 3,
+              "text": "Internal section point in the ratio m to n uses the denominator m plus n, with the coordinates cross-weighted as shown."
+            },
+            {
+              "seq": 4,
+              "text": "The external version is nearly identical, but every plus becomes a minus — denominator m minus n."
+            },
+            {
+              "seq": 5,
+              "text": "The midpoint is simply the internal formula at ratio one to one: average the x-coordinates, average the y-coordinates."
+            },
+            {
+              "seq": 6,
+              "text": "The centroid of a triangle averages all three vertices, dividing each sum by three."
+            },
+            {
+              "seq": 7,
+              "text": "The area is one half the modulus of that cyclic expression in x and y."
+            },
+            {
+              "seq": 8,
+              "text": "And the single most useful consequence: the area is zero exactly when the three points are collinear."
+            },
+            {
+              "seq": 9,
+              "text": "Finally, to shift the origin to the point h comma k, the new coordinates are old minus the shift: capital X is x minus h, capital Y is y minus k."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा points के लिए तुम्हारा पूरा toolkit — इस board को reference की तरह रखो।"
+            },
+            {
+              "seq": 2,
+              "text": "Distance: A B बराबर square root of x two minus x one, squared, plus y two minus y one, squared। यह plane पर बस Pythagoras है।"
+            },
+            {
+              "seq": 3,
+              "text": "Ratio m to n में internal section point में denominator m plus n होता है, और coordinates cross-weighted होते हैं जैसा दिखाया है।"
+            },
+            {
+              "seq": 4,
+              "text": "External version लगभग same है, पर हर plus minus बन जाता है — denominator m minus n।"
+            },
+            {
+              "seq": 5,
+              "text": "Midpoint बस internal formula है ratio one to one पर: x-coordinates का average, y-coordinates का average।"
+            },
+            {
+              "seq": 6,
+              "text": "Triangle का centroid तीनों vertices का average है, हर sum को three से divide करके।"
+            },
+            {
+              "seq": 7,
+              "text": "Area उस cyclic expression के modulus का one half है।"
+            },
+            {
+              "seq": 8,
+              "text": "और सबसे useful बात: area exactly zero तभी होता है जब तीनों points collinear हों।"
+            },
+            {
+              "seq": 9,
+              "text": "आख़िर में, origin को h comma k पर shift करने के लिए, नए coordinates old minus shift हैं: capital X बराबर x minus h, capital Y बराबर y minus k।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Coordinate Foundations",
+      "title": "Worked examples: centroid and collinearity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Centroid & Collinearity"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Example 1: centroid of $A(2,-3)$, $B(-4,5)$, $C(8,1)$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "G = \\left(\\frac{2-4+8}{3},\\; \\frac{-3+5+1}{3}\\right) = \\left(\\frac{6}{3},\\frac{3}{3}\\right)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "G = (2,\\, 1)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 2: are $(1,4)$, $(3,-2)$, $(-3,16)$ collinear? Use area $= 0$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "2\\Delta = \\left| 1(-2-16) + 3(16-4) + (-3)(4-(-2)) \\right|"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "= \\left| -18 + 36 - 18 \\right| = 0"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Area zero ⇒ collinear — one line beats three slope computations."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's put the toolkit to work with two quick classics."
+            },
+            {
+              "seq": 2,
+              "text": "First, find the centroid of the triangle with vertices A at two, minus three; B at minus four, five; and C at eight, one."
+            },
+            {
+              "seq": 3,
+              "text": "Just average coordinate by coordinate. The x-values two, minus four, eight sum to six; the y-values minus three, five, one sum to three; each divided by three."
+            },
+            {
+              "seq": 4,
+              "text": "That gives the centroid at two comma one. Done in a single step."
+            },
+            {
+              "seq": 5,
+              "text": "Second, are the points one comma four, three comma minus two, and minus three comma sixteen collinear? Do not chase three slopes — set the area to zero instead."
+            },
+            {
+              "seq": 6,
+              "text": "Plug into the area determinant: one times minus two minus sixteen, plus three times sixteen minus four, plus minus three times four minus minus two."
+            },
+            {
+              "seq": 7,
+              "text": "That is minus eighteen plus thirty six minus eighteen, and the modulus of that is zero."
+            },
+            {
+              "seq": 8,
+              "text": "Zero area means the three points lie in a row. Notice how the determinant did in one line what three slope checks would have done with three chances to slip a sign."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो toolkit को दो quick classics पर आज़माते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, उस triangle का centroid ढूँढो जिसके vertices हैं A at two, minus three; B at minus four, five; और C at eight, one।"
+            },
+            {
+              "seq": 3,
+              "text": "बस coordinate by coordinate average करो। x-values two, minus four, eight का sum six; y-values minus three, five, one का sum three; हर एक three से divide।"
+            },
+            {
+              "seq": 4,
+              "text": "इससे centroid मिलता है two comma one पर। एक ही step में हो गया।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा, क्या points one comma four, three comma minus two, और minus three comma sixteen collinear हैं? तीन slopes के पीछे मत भागो — area को zero रखो।"
+            },
+            {
+              "seq": 6,
+              "text": "Area determinant में डालो: one times minus two minus sixteen, plus three times sixteen minus four, plus minus three times four minus minus two।"
+            },
+            {
+              "seq": 7,
+              "text": "यह है minus eighteen plus thirty six minus eighteen, और उसका modulus zero है।"
+            },
+            {
+              "seq": 8,
+              "text": "Zero area का मतलब तीनों points एक line में हैं। देखो, determinant ने एक line में वो कर दिया जो तीन slope checks तीन बार sign-slip के risk से करते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Coordinate Foundations",
+      "title": "Worked example: section point, then distance",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Section Point, then Distance"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "$P$ divides $A(-1,3)$ to $B(5,-9)$ with $AP:PB = 2:1$. Find $P$, then $OP$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Use the internal section formula with $m:n = 2:1$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "P = \\left(\\frac{2(5)+1(-1)}{3},\\; \\frac{2(-9)+1(3)}{3}\\right) = \\left(\\frac{9}{3},\\frac{-15}{3}\\right)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "P = (3,\\, -5)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Now the distance from the origin $O(0,0)$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "OP = \\sqrt{3^2 + (-5)^2} = \\sqrt{34}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Chain the tools: section point first, distance second."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a two-step problem that chains our tools together."
+            },
+            {
+              "seq": 2,
+              "text": "The point P divides the segment from A at minus one, three to B at five, minus nine, with A P to P B equal to two to one. Find P, then its distance from the origin."
+            },
+            {
+              "seq": 3,
+              "text": "Since the division is internal, reach for the section formula with m to n equal to two to one."
+            },
+            {
+              "seq": 4,
+              "text": "The x-coordinate is two times five plus one times minus one, all over three; the y-coordinate is two times minus nine plus one times three, all over three."
+            },
+            {
+              "seq": 5,
+              "text": "That simplifies to nine over three and minus fifteen over three, giving P at three comma minus five."
+            },
+            {
+              "seq": 6,
+              "text": "With P known, the second half is just distance from the origin at zero, zero."
+            },
+            {
+              "seq": 7,
+              "text": "O P is the square root of three squared plus minus five squared, which is the square root of nine plus twenty five, that is root thirty four."
+            },
+            {
+              "seq": 8,
+              "text": "The lesson is the chaining: find the point with one tool, then measure with the next. Most multi-concept questions are exactly this."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक two-step problem जो हमारे tools को आपस में chain करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Point P segment को A at minus one, three से B at five, minus nine तक बाँटता है, A P to P B बराबर two to one। P ढूँढो, फिर origin से उसकी distance।"
+            },
+            {
+              "seq": 3,
+              "text": "Division internal है, तो section formula लो m to n बराबर two to one के साथ।"
+            },
+            {
+              "seq": 4,
+              "text": "x-coordinate है two times five plus one times minus one, whole over three; y-coordinate है two times minus nine plus one times three, whole over three।"
+            },
+            {
+              "seq": 5,
+              "text": "यह simplify होकर nine over three और minus fifteen over three बनता है, तो P मिलता है three comma minus five।"
+            },
+            {
+              "seq": 6,
+              "text": "P पता चलते ही, दूसरा half बस origin zero, zero से distance है।"
+            },
+            {
+              "seq": 7,
+              "text": "O P है square root of three squared plus minus five squared, यानी square root of nine plus twenty five, that is root thirty four।"
+            },
+            {
+              "seq": 8,
+              "text": "सीख है chaining की: एक tool से point ढूँढो, फिर अगले से measure करो। ज़्यादातर multi-concept सवाल बस यही हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Coordinate Foundations",
+      "title": "Worked example: a locus (Apollonius circle)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Locus — Apollonius Circle"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A point moves so its distance from $(4,0)$ is twice its distance from $(1,0)$. Let $P(h,k)$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "(h-4)^2 + k^2 = 4\\left[(h-1)^2 + k^2\\right]"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Expand both sides carefully."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "h^2 - 8h + 16 + k^2 = 4h^2 - 8h + 4 + 4k^2"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "0 = 3h^2 + 3k^2 - 12 \\;\\Rightarrow\\; h^2 + k^2 = 4"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "x^2 + y^2 = 4"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "The linear $-8h$ terms cancel — the signature of an Apollonius locus."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Now a real locus problem — let's turn a sentence into a curve.</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "A point moves so that its distance from four comma zero is always twice its distance from one comma zero. Call the moving point P at h comma k."
+            },
+            {
+              "seq": 3,
+              "text": "Write the condition and square both sides to kill the roots: h minus four squared plus k squared equals four times the quantity h minus one squared plus k squared."
+            },
+            {
+              "seq": 4,
+              "text": "Now expand every bracket carefully and line the terms up."
+            },
+            {
+              "seq": 5,
+              "text": "The left side is h squared minus eight h plus sixteen plus k squared; the right side is four h squared minus eight h plus four plus four k squared."
+            },
+            {
+              "seq": 6,
+              "text": "Bring everything to one side. The minus eight h terms cancel, and what remains is three h squared plus three k squared minus twelve equals zero, so h squared plus k squared equals four."
+            },
+            {
+              "seq": 7,
+              "text": "Replace h comma k with x comma y and the locus is x squared plus y squared equals four — a circle of radius two centred at the origin."
+            },
+            {
+              "seq": 8,
+              "text": "Watch the tell: those linear minus eight h terms cancelling is the fingerprint of an Apollonius locus. Spot it early and you save yourself a page of algebra."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>अब एक असली locus problem — चलो एक sentence को curve में बदलते हैं।</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "एक point ऐसे move करता है कि four comma zero से उसकी distance हमेशा one comma zero से distance की twice हो। Moving point को P at h comma k कहो।"
+            },
+            {
+              "seq": 3,
+              "text": "Condition लिखो और roots हटाने के लिए दोनों sides square करो: h minus four squared plus k squared बराबर four times the quantity h minus one squared plus k squared।"
+            },
+            {
+              "seq": 4,
+              "text": "अब हर bracket ध्यान से expand करो और terms को line up करो।"
+            },
+            {
+              "seq": 5,
+              "text": "Left side है h squared minus eight h plus sixteen plus k squared; right side है four h squared minus eight h plus four plus four k squared।"
+            },
+            {
+              "seq": 6,
+              "text": "सब एक तरफ़ लाओ। minus eight h terms cancel हो जाते हैं, और बचता है three h squared plus three k squared minus twelve बराबर zero, तो h squared plus k squared बराबर four।"
+            },
+            {
+              "seq": 7,
+              "text": "h comma k को x comma y से replace करो और locus बन जाता है x squared plus y squared बराबर four — origin पर centred, radius two का circle।"
+            },
+            {
+              "seq": 8,
+              "text": "Signature देखो: वो linear minus eight h terms का cancel होना Apollonius locus की पहचान है। इसे जल्दी पकड़ लो तो एक page का algebra बच जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "tips",
+      "subtopic": "Coordinate Foundations",
+      "title": "Pitfalls and pro-tips: coordinate foundations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pitfalls: Coordinate Foundations"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Internal vs external: internal uses $m+n$; external uses $m-n$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "Dropping the modulus in area gives a negative 'area' — impossible."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Scale the centroid: $x_1+x_2+x_3 = 3\\bar{x}$ before solving for a missing vertex."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Sign of the shift: new $=$ old $-$ shift, i.e. $X = x-h$, $Y = y-k$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Pro-tip: for collinearity, the area determinant beats comparing slopes every time."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "It never divides by zero and the modulus guards against orientation errors."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Get these cold and Straight Lines turns into bookkeeping."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before we leave foundations, let's lock in the mistakes examiners bank on."
+            },
+            {
+              "seq": 2,
+              "text": "Number one: internal versus external section. Internal uses m plus n in the denominator, external uses m minus n. Pick the wrong one and your point jumps to the wrong side."
+            },
+            {
+              "seq": 3,
+              "text": "Number two: never drop the modulus in the area formula. Without those bars you can report a negative area, and a negative area does not exist."
+            },
+            {
+              "seq": 4,
+              "text": "Number three: when a vertex is missing and you know the centroid, remember the sum of the three coordinates equals three times the centroid coordinate. Scale up by three first, then solve."
+            },
+            {
+              "seq": 5,
+              "text": "Number four: the shift of origin is new equals old minus shift, so capital X is x minus h and capital Y is y minus k. Adding instead of subtracting is the classic slip."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>And here is the pro-tip worth memorising: for any collinearity question, the area determinant beats comparing slopes, every single time.</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "It never divides by zero, so no vertical-line worry, and the modulus quietly protects you from orientation sign errors."
+            },
+            {
+              "seq": 8,
+              "text": "Get all of this cold and, as promised, the rest of Straight Lines becomes pure bookkeeping."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Foundations छोड़ने से पहले, आओ वो mistakes पक्की कर लें जिन पर examiners दांव लगाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली: internal बनाम external section. Internal denominator में m plus n लेता है, external m minus n। ग़लत चुना तो point ग़लत side पर चला जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी: area formula में modulus कभी मत छोड़ो। उन bars के बिना negative area आ सकता है, और negative area होता ही नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरी: जब कोई vertex missing हो और centroid पता हो, याद रखो तीनों coordinates का sum बराबर three times centroid coordinate होता है। पहले three से scale करो, फिर solve।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथी: shift of origin है new बराबर old minus shift, तो capital X है x minus h और capital Y है y minus k। Subtract की जगह add करना classic slip है।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>और यह रहा memorise करने लायक pro-tip: किसी भी collinearity सवाल में area determinant slopes compare करने से हर बार बेहतर है।</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "यह कभी zero से divide नहीं करता, तो vertical-line की चिंता नहीं, और modulus chुपके से orientation sign errors से बचाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "यह सब cold याद कर लो, और जैसा कहा था, बाकी Straight Lines pure bookkeeping बन जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Slope of a Line and Angles",
+      "title": "Slope: one number for a line's tilt",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Slope: One Number for a Line's Tilt"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Slope captures how steeply a line tilts — like a railway track climbing a valley."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Inclination $\\theta$ is the anticlockwise angle from the $+x$-axis, with $0^\\circ \\le \\theta < 180^\\circ$."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Lines at 30 degrees (gentle), 135 degrees (falling), and 90 degrees (vertical).",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 280\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"140\" x2=\"400\" y2=\"140\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"404\" y=\"144\" font-size=\"12\" fill=\"#333\">x</text><line x1=\"210\" y1=\"20\" x2=\"210\" y2=\"260\" stroke=\"#ccc\" stroke-width=\"1\" stroke-dasharray=\"5 4\"/><text x=\"214\" y=\"32\" font-size=\"11\" fill=\"#999\">90 (vertical)</text><line x1=\"106\" y1=\"200\" x2=\"314\" y2=\"80\" stroke=\"#1a56db\" stroke-width=\"2\"/><text x=\"316\" y=\"80\" font-size=\"11\" fill=\"#1a56db\">30</text><line x1=\"125\" y1=\"55\" x2=\"295\" y2=\"225\" stroke=\"#c026d3\" stroke-width=\"2\"/><text x=\"298\" y=\"228\" font-size=\"11\" fill=\"#c026d3\">135</text><circle cx=\"210\" cy=\"140\" r=\"3\" fill=\"#333\"/><text x=\"188\" y=\"158\" font-size=\"11\" fill=\"#666\">O</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "m = \\tan\\theta"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "A $45^\\circ$ line has slope exactly $1$; a downhill-to-the-right line has negative slope."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Vertical line: slope is UNDEFINED — never 'infinite', never 'zero'."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Same slope $\\Rightarrow$ parallel; slopes multiplying to $-1 \\Rightarrow$ perpendicular."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Slope is the most-used idea in all of coordinate geometry, and wonderfully, one number does the whole job."
+            },
+            {
+              "seq": 2,
+              "text": "Picture walking a railway track climbing out of a valley: some stretches barely rise, others are steep. Slope is exactly that steepness, turned into a number."
+            },
+            {
+              "seq": 3,
+              "text": "Start from the positive x-axis and rotate anticlockwise until you point along the line. That rotation is the inclination theta, and by convention it lives from zero up to, but not including, one hundred eighty degrees."
+            },
+            {
+              "seq": 4,
+              "text": "Look at the three lines: a gentle one at thirty degrees, one falling to the right at one hundred thirty five degrees, and the dashed upright one at ninety degrees."
+            },
+            {
+              "seq": 5,
+              "text": "We convert that angle into a pure number with the tangent: slope m equals tan theta."
+            },
+            {
+              "seq": 6,
+              "text": "Why tangent? Because slope is rise over run, and that is exactly the tangent of the inclination. A forty five degree line has slope precisely one; a line heading downhill to the right has a negative slope."
+            },
+            {
+              "seq": 7,
+              "text": "There is exactly one place this breaks, and setters love it: the vertical line. Its inclination is ninety degrees, tan ninety does not exist, so its slope is undefined — never call it infinite, never call it zero."
+            },
+            {
+              "seq": 8,
+              "text": "Two quick reads: lines with equal slope point the same way and are parallel; lines whose slopes multiply to minus one meet at a right angle and are perpendicular."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Slope पूरी coordinate geometry का सबसे ज़्यादा use होने वाला idea है, और कमाल यह कि एक ही number पूरा काम कर देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "सोचो valley से ऊपर चढ़ती railway track पर चलना: कहीं मुश्किल से rise, कहीं steep। Slope बस वही steepness है, number में बदली हुई।"
+            },
+            {
+              "seq": 3,
+              "text": "Positive x-axis से शुरू करो और anticlockwise घूमो जब तक line के साथ point न हो जाओ। वो rotation है inclination theta, और convention से यह zero से लेकर one hundred eighty degrees तक रहता है, one hundred eighty शामिल नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "तीन lines देखो: एक gentle at thirty degrees, एक right की तरफ़ गिरती at one hundred thirty five degrees, और dashed upright वाली at ninety degrees।"
+            },
+            {
+              "seq": 5,
+              "text": "उस angle को हम tangent से pure number बना देते हैं: slope m बराबर tan theta।"
+            },
+            {
+              "seq": 6,
+              "text": "Tangent ही क्यों? क्योंकि slope है rise over run, और वही तो inclination का tangent है। forty five degree line की slope बिल्कुल one; right की तरफ़ downhill जाती line की slope negative।"
+            },
+            {
+              "seq": 7,
+              "text": "बस एक जगह यह टूटता है, और setters इसे बहुत पसंद करते हैं: vertical line. इसका inclination ninety degrees, tan ninety exist ही नहीं करता, तो इसकी slope undefined है — इसे infinite मत कहो, zero भी मत कहो।"
+            },
+            {
+              "seq": 8,
+              "text": "दो quick reads: equal slope वाली lines एक ही तरफ़ point करती हैं और parallel हैं; जिनकी slopes multiply होकर minus one दें वे right angle पर मिलती हैं और perpendicular हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Slope of a Line and Angles",
+      "title": "Proof: slope = rise over run, and perpendicularity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: Slope = Rise over Run"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Through $P(x_1,y_1)$, $Q(x_2,y_2)$ build a right triangle $QPN$ with $PN$ horizontal."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "PN is the run, QN is the rise; angle at P equals the inclination theta.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"200\" x2=\"400\" y2=\"200\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"404\" y=\"204\" font-size=\"12\" fill=\"#333\">x</text><line x1=\"110\" y1=\"160\" x2=\"330\" y2=\"60\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"160\" r=\"4\" fill=\"#1a56db\"/><text x=\"90\" y=\"152\" font-size=\"12\" fill=\"#1a56db\">P</text><circle cx=\"330\" cy=\"60\" r=\"4\" fill=\"#1a56db\"/><text x=\"336\" y=\"60\" font-size=\"12\" fill=\"#1a56db\">Q</text><line x1=\"110\" y1=\"160\" x2=\"330\" y2=\"160\" stroke=\"#c026d3\" stroke-width=\"1.5\"/><line x1=\"330\" y1=\"160\" x2=\"330\" y2=\"60\" stroke=\"#c026d3\" stroke-width=\"1.5\"/><rect x=\"318\" y=\"148\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#666\"/><text x=\"300\" y=\"176\" font-size=\"11\" fill=\"#666\">N</text><text x=\"196\" y=\"176\" font-size=\"11\" fill=\"#666\">run = x2 - x1</text><text x=\"336\" y=\"116\" font-size=\"11\" fill=\"#666\">rise = y2 - y1</text><text x=\"132\" y=\"152\" font-size=\"12\" fill=\"#059669\">theta</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\tan\\theta = \\frac{QN}{PN} = \\frac{y_2 - y_1}{x_2 - x_1}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "If $x_1 = x_2$ the run is $0$, the triangle degenerates, and the slope is undefined."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "For perpendicular lines, take $\\theta_2 = \\theta_1 + 90^\\circ$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "m_2 = \\tan(\\theta_1 + 90^\\circ) = -\\cot\\theta_1 = -\\frac{1}{m_1}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "m_1 m_2 = -1"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's prove why slope equals rise over run — the whole formula sits inside one right triangle."
+            },
+            {
+              "seq": 2,
+              "text": "Take a rising line through P and Q. Drop a horizontal segment P N from P, and a vertical segment down from Q to meet it at N. That builds a right triangle, right-angled at N."
+            },
+            {
+              "seq": 3,
+              "text": "Because P N is parallel to the x-axis, the angle the line makes at P equals the inclination theta. The horizontal side P N is the run, and the vertical side Q N is the rise."
+            },
+            {
+              "seq": 4,
+              "text": "In that right triangle, tan theta is opposite over adjacent, which is Q N over P N, and that is y two minus y one over x two minus x one — rise over run."
+            },
+            {
+              "seq": 5,
+              "text": "If x one equals x two, the run collapses to zero, the triangle degenerates, theta becomes ninety degrees, and the slope is undefined. That is the vertical line showing up in the algebra."
+            },
+            {
+              "seq": 6,
+              "text": "Now perpendicularity. If two lines meet at a right angle, their inclinations differ by exactly ninety degrees, so take theta two as theta one plus ninety."
+            },
+            {
+              "seq": 7,
+              "text": "Then m two is tan of theta one plus ninety, and the identity turns that into minus cot theta one, which is minus one over m one."
+            },
+            {
+              "seq": 8,
+              "text": "Cross-multiply and you land on the clean condition: m one times m two equals minus one. That single line powers every perpendicular problem you will meet."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो prove करते हैं कि slope बराबर rise over run क्यों है — पूरा formula एक ही right triangle में छिपा है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक rising line लो P और Q से होकर। P से एक horizontal segment P N निकालो, और Q से नीचे एक vertical segment जो उसे N पर मिले। यह N पर right-angled triangle बनाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "क्योंकि P N x-axis के parallel है, line P पर जो angle बनाती है वो inclination theta के बराबर है। Horizontal side P N है run, और vertical side Q N है rise।"
+            },
+            {
+              "seq": 4,
+              "text": "उस right triangle में tan theta है opposite over adjacent, यानी Q N over P N, और वो है y two minus y one over x two minus x one — rise over run।"
+            },
+            {
+              "seq": 5,
+              "text": "अगर x one बराबर x two हो, तो run zero हो जाता है, triangle degenerate हो जाता है, theta ninety degrees बन जाता है, और slope undefined। यही vertical line algebra में दिखती है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब perpendicularity. अगर दो lines right angle पर मिलें, तो उनके inclinations में ठीक ninety degrees का फ़र्क़ होता है, तो theta two को theta one plus ninety लो।"
+            },
+            {
+              "seq": 7,
+              "text": "फिर m two है tan of theta one plus ninety, और identity उसे minus cot theta one में बदल देती है, जो है minus one over m one।"
+            },
+            {
+              "seq": 8,
+              "text": "Cross-multiply करो और साफ़ condition मिलती है: m one times m two बराबर minus one। यही एक line हर perpendicular problem को चलाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Slope of a Line and Angles",
+      "title": "The angle between two lines",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The Angle Between Two Lines"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Two lines form two supplementary angles $\\theta$ and $180^\\circ - \\theta$; the modulus picks the acute one."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\tan\\theta = \\left| \\frac{m_2 - m_1}{1 + m_1 m_2} \\right|"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Step 1: check for a vertical line first — the formula assumes both slopes exist."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Step 2: if $1 + m_1 m_2 = 0$, the lines are perpendicular, answer $90^\\circ$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Denominator zero $\\Rightarrow$ perpendicular — that is the degenerate case."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Step 3: evaluate the ratio; Step 4: take $\\theta = \\tan^{-1}$ of that value."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The obtuse angle, if it is asked, is simply $180^\\circ - \\theta$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "When two lines cross, how do we measure the angle between them from their slopes alone? Here is the tool."
+            },
+            {
+              "seq": 2,
+              "text": "A crossing actually makes two angles that add to one hundred eighty degrees — an acute one and its obtuse partner. The modulus in the formula is what selects the acute angle for us."
+            },
+            {
+              "seq": 3,
+              "text": "The formula: tan theta equals the modulus of m two minus m one over one plus m one m two."
+            },
+            {
+              "seq": 4,
+              "text": "Before you plug in, step one: glance for a vertical line. If one slope is undefined, this formula does not apply — handle it from inclinations directly."
+            },
+            {
+              "seq": 5,
+              "text": "Step two: compute one plus m one m two. If that comes out zero, the lines are perpendicular, the answer is ninety degrees, and you stop right there."
+            },
+            {
+              "seq": 6,
+              "text": "That is worth writing down: a zero denominator is not an error, it is precisely the perpendicular case, where tan theta blows up because theta is ninety degrees."
+            },
+            {
+              "seq": 7,
+              "text": "Step three, evaluate the ratio; step four, take the inverse tangent of that value to get the acute angle theta."
+            },
+            {
+              "seq": 8,
+              "text": "And if the question wants the obtuse angle instead, it is simply one hundred eighty degrees minus theta. One formula, both angles."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "जब दो lines cross करती हैं, तो सिर्फ़ उनकी slopes से बीच का angle कैसे नापें? यह रहा tool।"
+            },
+            {
+              "seq": 2,
+              "text": "Crossing असल में दो angles बनाता है जो जुड़कर one hundred eighty degrees देते हैं — एक acute और उसका obtuse partner। Formula का modulus हमारे लिए acute angle चुन लेता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Formula: tan theta बराबर modulus of m two minus m one over one plus m one m two।"
+            },
+            {
+              "seq": 4,
+              "text": "Plug in करने से पहले, step one: vertical line पर नज़र डालो। अगर एक slope undefined हो, तो यह formula लागू नहीं होता — उसे सीधे inclinations से handle करो।"
+            },
+            {
+              "seq": 5,
+              "text": "Step two: one plus m one m two निकालो। अगर वो zero आए, तो lines perpendicular हैं, answer ninety degrees, और वहीं रुक जाओ।"
+            },
+            {
+              "seq": 6,
+              "text": "यह लिख लेने लायक है: zero denominator error नहीं, बल्कि ठीक perpendicular case है, जहाँ tan theta blow up करता है क्योंकि theta ninety degrees है।"
+            },
+            {
+              "seq": 7,
+              "text": "Step three, ratio evaluate करो; step four, उसका inverse tangent लो और acute angle theta मिल जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और अगर सवाल obtuse angle माँगे, तो वो बस one hundred eighty degrees minus theta है। एक formula, दोनों angles।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "formulas",
+      "subtopic": "Slope of a Line and Angles",
+      "title": "Slope and angles: formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Slope & Angles — Toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "m = \\tan\\theta,\\quad \\theta \\ne 90^\\circ"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "m = \\frac{y_2 - y_1}{x_2 - x_1},\\quad x_1 \\ne x_2"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{Parallel: } m_1 = m_2"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\text{Perpendicular: } m_1 m_2 = -1"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\tan\\theta = \\left| \\frac{m_2 - m_1}{1 + m_1 m_2} \\right|"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{Collinear: } \\text{slope}(AB) = \\text{slope}(BC)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Equally inclined to the axes $\\Rightarrow m = \\pm 1$ ($\\theta = 45^\\circ$ or $135^\\circ$)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the compact toolkit for slope and angles — six facts that cover almost every question."
+            },
+            {
+              "seq": 2,
+              "text": "Slope equals tan of the inclination, valid for every line except the vertical one at ninety degrees."
+            },
+            {
+              "seq": 3,
+              "text": "From two points, slope is y two minus y one over x two minus x one, provided the x-values differ."
+            },
+            {
+              "seq": 4,
+              "text": "Parallel lines share the same slope: m one equals m two."
+            },
+            {
+              "seq": 5,
+              "text": "Perpendicular lines satisfy m one times m two equals minus one — flip and negate."
+            },
+            {
+              "seq": 6,
+              "text": "The angle between two lines is the inverse tangent of the modulus of m two minus m one over one plus m one m two."
+            },
+            {
+              "seq": 7,
+              "text": "Three points are collinear when the slope of A B equals the slope of B C."
+            },
+            {
+              "seq": 8,
+              "text": "And a handy special case: a line equally inclined to both axes has slope plus or minus one, since its inclination is forty five or one hundred thirty five degrees."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा slope और angles का compact toolkit — छह facts जो लगभग हर सवाल cover कर लेते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Slope बराबर tan of inclination, हर line के लिए valid सिवाय ninety degrees वाली vertical line के।"
+            },
+            {
+              "seq": 3,
+              "text": "दो points से slope है y two minus y one over x two minus x one, बशर्ते x-values अलग हों।"
+            },
+            {
+              "seq": 4,
+              "text": "Parallel lines की slope same होती है: m one बराबर m two।"
+            },
+            {
+              "seq": 5,
+              "text": "Perpendicular lines satisfy करती हैं m one times m two बराबर minus one — flip and negate।"
+            },
+            {
+              "seq": 6,
+              "text": "दो lines के बीच का angle है inverse tangent of the modulus of m two minus m one over one plus m one m two।"
+            },
+            {
+              "seq": 7,
+              "text": "तीन points collinear हैं जब slope of A B बराबर slope of B C हो।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक handy special case: दोनों axes से equally inclined line की slope plus या minus one होती है, क्योंकि उसका inclination forty five या one hundred thirty five degrees है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Slope of a Line and Angles",
+      "title": "Worked examples: slope and perpendicularity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Slope & Perpendicularity"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Example 1: slope of the line through $A(-3,2)$ and $B(5,-4)$; acute or obtuse?"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "m = \\frac{-4-2}{5-(-3)} = \\frac{-6}{8} = -\\frac{3}{4}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "$m < 0$, so the inclination is obtuse."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 2: line through $(2,7)$, $(k,1)$ is $\\perp$ to the line through $(0,-3)$, $(4,5)$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "m_2 = \\frac{5-(-3)}{4-0} = 2 \\;\\Rightarrow\\; m_1 = -\\frac{1}{2}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\frac{1-7}{k-2} = -\\frac{1}{2} \\;\\Rightarrow\\; k = 14"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Flip AND negate — perpendicular slopes have opposite signs."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two worked examples now — first a plain slope, then a perpendicular condition with a speed trap."
+            },
+            {
+              "seq": 2,
+              "text": "Example one: find the slope of the line through A at minus three, two and B at five, minus four, and say whether its inclination is acute or obtuse."
+            },
+            {
+              "seq": 3,
+              "text": "Two-point slope: minus four minus two over five minus minus three, which is minus six over eight, or minus three over four."
+            },
+            {
+              "seq": 4,
+              "text": "Since the slope is negative, the line falls to the right, so its inclination is obtuse — between ninety and one hundred eighty degrees."
+            },
+            {
+              "seq": 5,
+              "text": "Example two: the line through two, seven and k, one is perpendicular to the line through zero, minus three and four, five. Find k."
+            },
+            {
+              "seq": 6,
+              "text": "First the known line's slope: five minus minus three over four minus zero equals two. Perpendicular means flip and negate, so our line's slope is minus one half."
+            },
+            {
+              "seq": 7,
+              "text": "Set the first line's slope equal to that: one minus seven over k minus two equals minus one half. That gives minus six over k minus two equals minus one half, so k minus two is twelve, and k is fourteen."
+            },
+            {
+              "seq": 8,
+              "text": "The trap is forgetting the minus and writing plus one half, which lands on the planted answer minus ten. Flip and negate — perpendicular slopes always carry opposite signs."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब दो worked examples — पहला plain slope, फिर एक perpendicular condition speed trap के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "Example one: A at minus three, two और B at five, minus four से गुज़रती line की slope ढूँढो, और बताओ inclination acute है या obtuse।"
+            },
+            {
+              "seq": 3,
+              "text": "Two-point slope: minus four minus two over five minus minus three, जो है minus six over eight, यानी minus three over four।"
+            },
+            {
+              "seq": 4,
+              "text": "Slope negative है, तो line right की तरफ़ गिरती है, इसलिए inclination obtuse है — ninety और one hundred eighty degrees के बीच।"
+            },
+            {
+              "seq": 5,
+              "text": "Example two: two, seven और k, one से गुज़रती line, zero, minus three और four, five वाली line के perpendicular है। k ढूँढो।"
+            },
+            {
+              "seq": 6,
+              "text": "पहले known line की slope: five minus minus three over four minus zero बराबर two। Perpendicular का मतलब flip and negate, तो हमारी line की slope minus one half।"
+            },
+            {
+              "seq": 7,
+              "text": "पहली line की slope उसके बराबर रखो: one minus seven over k minus two बराबर minus one half। इससे minus six over k minus two बराबर minus one half, तो k minus two है twelve, और k है fourteen।"
+            },
+            {
+              "seq": 8,
+              "text": "Trap है minus भूलकर plus one half लिखना, जो planted answer minus ten पर पहुँचा देता है। Flip and negate — perpendicular slopes के signs हमेशा opposite होते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Slope of a Line and Angles",
+      "title": "Worked example: collinearity, then angle",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Collinearity, then Angle"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "$P(1,1)$, $Q(4,7)$, $R(a,a+5)$. Find $a$ making them collinear."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{slope}(PQ) = \\frac{7-1}{4-1} = 2"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\frac{(a+5)-1}{a-1} = 2 \\;\\Rightarrow\\; a+4 = 2a-2 \\;\\Rightarrow\\; a = 6"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "So $R = (6,11)$ and the line has slope $m_1 = 2$. Angle with $y = x$?"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\tan\\theta = \\left| \\frac{1-2}{1+2(1)} \\right| = \\frac{1}{3}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\theta = \\tan^{-1}\\tfrac{1}{3} \\approx 18.43^\\circ"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Two tools chained: collinearity fixes $a$, the angle formula finishes."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is a two-part example that chains collinearity into the angle formula."
+            },
+            {
+              "seq": 2,
+              "text": "The points are P at one, one; Q at four, seven; and R at a comma a plus five. Part one: find a so that all three are collinear."
+            },
+            {
+              "seq": 3,
+              "text": "First anchor the slope of P Q: seven minus one over four minus one equals two."
+            },
+            {
+              "seq": 4,
+              "text": "For collinearity, the slope of P R must also be two. So a plus five minus one over a minus one equals two, giving a plus four equals two a minus two, which solves to a equals six."
+            },
+            {
+              "seq": 5,
+              "text": "So R is six comma eleven, and the whole line has slope two. Part two: what acute angle does it make with the line y equals x, whose slope is one?"
+            },
+            {
+              "seq": 6,
+              "text": "Use the angle formula: tan theta is the modulus of one minus two over one plus two times one, which is the modulus of minus one third, that is one third."
+            },
+            {
+              "seq": 7,
+              "text": "So theta is the inverse tangent of one third, about eighteen point four three degrees."
+            },
+            {
+              "seq": 8,
+              "text": "Notice the structure: collinearity pinned down a, and only then did the angle formula finish the job. Chaining tools like this is the heart of the multi-concept questions."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा एक two-part example जो collinearity को angle formula के साथ chain करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Points हैं P at one, one; Q at four, seven; और R at a comma a plus five। Part one: a ऐसा ढूँढो कि तीनों collinear हों।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले P Q की slope anchor करो: seven minus one over four minus one बराबर two।"
+            },
+            {
+              "seq": 4,
+              "text": "Collinearity के लिए P R की slope भी two होनी चाहिए। तो a plus five minus one over a minus one बराबर two, जिससे a plus four बराबर two a minus two, और solve होकर a बराबर six।"
+            },
+            {
+              "seq": 5,
+              "text": "तो R है six comma eleven, और पूरी line की slope two है। Part two: यह line y बराबर x से क्या acute angle बनाती है, जिसकी slope one है?"
+            },
+            {
+              "seq": 6,
+              "text": "Angle formula use करो: tan theta है modulus of one minus two over one plus two times one, यानी modulus of minus one third, that is one third।"
+            },
+            {
+              "seq": 7,
+              "text": "तो theta है inverse tangent of one third, लगभग eighteen point four three degrees।"
+            },
+            {
+              "seq": 8,
+              "text": "Structure देखो: collinearity ने a fix किया, और तभी angle formula ने काम पूरा किया। इस तरह tools chain करना ही multi-concept सवालों का दिल है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Slope of a Line and Angles",
+      "title": "Worked example: a line at 45 degrees (advanced)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: A Line at 45° (Advanced)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Line $\\ell$ makes $45^\\circ$ with $3x - y + 5 = 0$, whose slope is $m_2 = 3$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "'$45^\\circ$ with a line' works on either side — set the signed tangent to $\\pm 1$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\frac{m - 3}{1 + 3m} = \\pm 1"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{Case } +1:\\; m - 3 = 1 + 3m \\;\\Rightarrow\\; m = -2"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\text{Case } -1:\\; m - 3 = -(1+3m) \\;\\Rightarrow\\; m = \\tfrac{1}{2}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Vertical check: $90^\\circ$ vs $71.57^\\circ$ gives $18.43^\\circ \\ne 45^\\circ$ — no vertical solution."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "m = -2 \\quad\\text{or}\\quad m = \\tfrac{1}{2}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now an Advanced-flavoured example where two things bite: the plus-or-minus, and the vertical line."
+            },
+            {
+              "seq": 2,
+              "text": "A line ell makes a forty five degree angle with the line three x minus y plus five equals zero. Rearranged, that line is y equals three x plus five, so its slope m two is three."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the subtlety: making forty five degrees with a line can happen on either side of it, so we must not take the modulus blindly. Set the signed tangent equal to plus or minus one."
+            },
+            {
+              "seq": 4,
+              "text": "So m minus three over one plus three m equals plus or minus one — two equations, not one."
+            },
+            {
+              "seq": 5,
+              "text": "Take the plus one case: m minus three equals one plus three m, which gives minus two m equals four, so m is minus two."
+            },
+            {
+              "seq": 6,
+              "text": "Take the minus one case: m minus three equals minus one minus three m, which gives four m equals two, so m is one half."
+            },
+            {
+              "seq": 7,
+              "text": "Now the Advanced check most students skip: could a vertical line also work? A vertical line has inclination ninety degrees; the given line sits at about seventy one point five seven degrees, so the gap is about eighteen point four degrees, not forty five. So no vertical solution."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>Both genuine slopes come from the algebra: minus two, or one half.</excited> Miss either the plus-or-minus or the vertical check and you lose marks."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक Advanced-flavour example जहाँ दो चीज़ें काटती हैं: plus-or-minus, और vertical line।"
+            },
+            {
+              "seq": 2,
+              "text": "एक line ell, line three x minus y plus five बराबर zero से forty five degree angle बनाती है। Rearrange करने पर वो line है y बराबर three x plus five, तो उसकी slope m two three है।"
+            },
+            {
+              "seq": 3,
+              "text": "यह रही subtlety: किसी line से forty five degrees line के दोनों तरफ़ बन सकता है, इसलिए modulus आँख मूँदकर मत लो। Signed tangent को plus या minus one के बराबर रखो।"
+            },
+            {
+              "seq": 4,
+              "text": "तो m minus three over one plus three m बराबर plus या minus one — दो equations, एक नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Plus one case लो: m minus three बराबर one plus three m, जिससे minus two m बराबर four, तो m है minus two।"
+            },
+            {
+              "seq": 6,
+              "text": "Minus one case लो: m minus three बराबर minus one minus three m, जिससे four m बराबर two, तो m है one half।"
+            },
+            {
+              "seq": 7,
+              "text": "अब वो Advanced check जो ज़्यादातर students छोड़ देते हैं: क्या कोई vertical line भी चलेगी? Vertical line का inclination ninety degrees; दी गई line लगभग seventy one point five seven degrees पर, तो gap लगभग eighteen point four degrees है, forty five नहीं। तो कोई vertical solution नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "<excited>दोनों असली slopes algebra से आती हैं: minus two, या one half।</excited> Plus-or-minus या vertical check में से एक भी छूटा तो marks गए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "tips",
+      "subtopic": "Slope of a Line and Angles",
+      "title": "Pitfalls and pro-tips: slope and angles",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pitfalls: Slope & Angles"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "A vertical line's slope is UNDEFINED — not infinity, not zero."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Perpendicular means $m_1 m_2 = -1$, not $+1$ — keep the minus sign."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "For 'a line making angle $\\alpha$', use $\\pm\\tan\\alpha$, not the modulus — two lines exist."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "In Advanced problems, always check the vertical-line case separately."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Pro-tip: glance at geometry first — rising $\\Rightarrow +$, falling $\\Rightarrow -$, flat $\\Rightarrow 0$, upright $\\Rightarrow$ undefined."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "That two-second sign check catches most arithmetic slips before they cost marks."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Slope is the workhorse of the whole chapter — keep these poles straight."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close the subtopic by locking in the four traps that eat marks on slope questions."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, the biggest of all: a vertical line's slope is undefined. Not infinity, not zero. Zero is the horizontal line; mixing these two poles is the single most common slope error."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: perpendicular means the product of slopes is minus one, not plus one. If both your perpendicular slopes share a sign, you have already made the mistake."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: when a problem asks for the line making a given angle with another, set the signed ratio equal to plus or minus tan of that angle, because there are genuinely two such lines. Use the modulus only when you want the angle between two given lines."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: the moment you write 'let the slope be m', you have quietly excluded vertical lines. In Advanced problems, check the vertical case on its own."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>And the pro-tip: before any computation, just look at the picture. Rising means positive, falling means negative, flat means zero, upright means undefined.</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "That two-second sign check catches most arithmetic slips before they ever cost you a mark."
+            },
+            {
+              "seq": 8,
+              "text": "Slope is the workhorse of this entire chapter, so keep those two poles — horizontal zero, vertical undefined — crystal clear."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic को बंद करते हैं वो चार traps पक्की करके जो slope सवालों में marks खा जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, सबसे बड़ा: vertical line की slope undefined है। न infinity, न zero। Zero तो horizontal line है; इन दो poles को mix करना सबसे common slope error है।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: perpendicular का मतलब slopes का product minus one, plus one नहीं। अगर तुम्हारी दोनों perpendicular slopes का sign same हो, तो गलती हो चुकी है।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: जब सवाल किसी line से दिए गए angle वाली line माँगे, तो signed ratio को plus या minus tan of that angle के बराबर रखो, क्योंकि सचमुच ऐसी दो lines होती हैं। Modulus सिर्फ़ तब जब दो दी गई lines के बीच का angle चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: जैसे ही तुम लिखते हो 'slope को m मान लो', तुमने chुपके से vertical lines बाहर कर दीं। Advanced problems में vertical case अलग से check करो।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>और pro-tip: किसी भी computation से पहले बस picture देखो। Rising यानी positive, falling यानी negative, flat यानी zero, upright यानी undefined।</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "वो two-second sign check ज़्यादातर arithmetic slips को marks खोने से पहले ही पकड़ लेता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Slope इस पूरे chapter का workhorse है, तो उन दो poles — horizontal zero, vertical undefined — को crystal clear रखो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

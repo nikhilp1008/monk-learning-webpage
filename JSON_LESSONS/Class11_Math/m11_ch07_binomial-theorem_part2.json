@@ -1,0 +1,1683 @@
+{
+  "chapter": "Binomial Theorem",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 7,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 16,
+      "section_type": "concept",
+      "subtopic": "Greatest Term and Greatest Binomial Coefficient",
+      "title": "Two different 'biggest' questions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two 'biggest' questions students confuse"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Greatest binomial coefficient: which of $\\binom{n}{0},\\dots,\\binom{n}{n}$ is largest? Depends on $n$ only."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "style": "red-margin",
+          "text": "From Pascal, rows peak in the middle — so the largest coefficient is always the middle one."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Numerically greatest TERM: in an actual $(a+b)^n$ at given numbers, which term has the largest magnitude? Depends on $a,b,n$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "latex": "\\left|\\frac{T_{r+1}}{T_r}\\right|>1\\ \\Rightarrow\\ \\text{still growing};\\qquad <1\\ \\Rightarrow\\ \\text{shrinking}"
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "caption": "Term magnitudes rise, peak, then fall",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 220\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"180\" x2=\"452\" y2=\"180\" stroke=\"#7a5a2f\" stroke-width=\"2\"/><rect x=\"45\" y=\"152\" width=\"36\" height=\"28\" fill=\"#f0e4c8\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"63\" y=\"196\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#3a2b16\">T1</text><rect x=\"89\" y=\"122\" width=\"36\" height=\"58\" fill=\"#f0e4c8\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"107\" y=\"196\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#3a2b16\">T2</text><rect x=\"133\" y=\"88\" width=\"36\" height=\"92\" fill=\"#f0e4c8\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"151\" y=\"196\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#3a2b16\">T3</text><rect x=\"177\" y=\"58\" width=\"36\" height=\"122\" fill=\"#f0e4c8\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"195\" y=\"196\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#3a2b16\">T4</text><rect x=\"221\" y=\"40\" width=\"36\" height=\"140\" fill=\"#b5651d\" stroke=\"#8a4d16\" stroke-width=\"1.5\"/><text x=\"239\" y=\"196\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#3a2b16\">T5</text><rect x=\"265\" y=\"72\" width=\"36\" height=\"108\" fill=\"#f0e4c8\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"283\" y=\"196\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#3a2b16\">T6</text><rect x=\"309\" y=\"108\" width=\"36\" height=\"72\" fill=\"#f0e4c8\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"327\" y=\"196\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#3a2b16\">T7</text><rect x=\"353\" y=\"138\" width=\"36\" height=\"42\" fill=\"#f0e4c8\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"371\" y=\"196\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#3a2b16\">T8</text><text x=\"110\" y=\"34\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#2e7d32\">ratio &gt; 1: terms grow</text><text x=\"392\" y=\"34\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#c0392b\">ratio &lt; 1: terms shrink</text><path d=\"M243 22 L243 36\" stroke=\"#8a4d16\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#tb)\"/><text x=\"243\" y=\"16\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#8a4d16\">greatest term (ratio crosses 1)</text><defs><marker id=\"tb\" markerWidth=\"8\" markerHeight=\"8\" refX=\"4\" refY=\"6\" orient=\"auto\"><path d=\"M0 0 L8 0 L4 7 z\" fill=\"#8a4d16\"/></marker></defs></svg>"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "style": "red-margin",
+          "text": "For $(a-b)^n$ the terms alternate in sign — the numerically greatest term may be negative."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> This subtopic hides a trap in plain sight: there are two completely different 'biggest' questions here, and students mix them up constantly. Let's separate them cleanly before touching any formula."
+            },
+            {
+              "seq": 2,
+              "text": "Question one, the greatest binomial coefficient. Among n C zero, n C one, all the way to n C n, which single coefficient is the largest? Notice this depends only on n. There is no x anywhere — it's a pure question about the numbers in a Pascal row."
+            },
+            {
+              "seq": 3,
+              "text": "And you already know the answer from Pascal's triangle. The rows rise to a peak in the middle and fall away symmetrically. So the largest coefficient is always the middle one — the very same middle term we located in the last subtopic."
+            },
+            {
+              "seq": 4,
+              "text": "Question two is genuinely harder: the numerically greatest term. In an actual expansion, say a plus b to the n evaluated at real numbers, which whole term — coefficient times its powers — has the largest magnitude? This one depends on a, b, and n together, because a big coefficient can be dragged down by a small power, or a modest coefficient lifted by a large one."
+            },
+            {
+              "seq": 5,
+              "text": "Here's the key idea that cracks it. Walk along the terms and watch the ratio of each term to the one before it. While that ratio is bigger than one, the terms are still growing. The moment it drops below one, they start shrinking."
+            },
+            {
+              "seq": 6,
+              "text": "Picture the magnitudes as bars. They climb, reach a single peak, and then fall. The greatest term sits right at that turning point. So instead of computing all n plus one terms, we just find where the ratio crosses one."
+            },
+            {
+              "seq": 7,
+              "text": "One caution for later. When the binomial is a minus b to the n, the terms alternate in sign, so the numerically greatest term might actually be negative. Keep that in your back pocket — it changes what 'greatest' means, and we'll deal with it head-on."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Yeh subtopic ek trap saamne rakhe hue chhupata hai: yahan do bilkul alag 'biggest' questions hain, aur students inhe baar-baar mix kar dete hain. Kisi formula ko chhune se pehle inhe saaf alag karte hain."
+            },
+            {
+              "seq": 2,
+              "text": "Question one, greatest binomial coefficient. $n\\,C\\,0$, $n\\,C\\,1$, se le kar $n\\,C\\,n$ tak, kaunsa single coefficient sabse bada hai? Gaur karo yeh sirf $n$ pe depend karta hai. Kahin koi $x$ नहीं — yeh Pascal row ke numbers ka pure sawaal hai."
+            },
+            {
+              "seq": 3,
+              "text": "Aur answer aap Pascal's triangle se pehle se jaante ho. Rows beech mein ek peak tak chadhti hain aur symmetrically girti hain. Toh sabse bada coefficient hamesha middle waala hota hai — wahi middle term jo humne pichhle subtopic mein nikaala tha."
+            },
+            {
+              "seq": 4,
+              "text": "Question two sach mein zyada mushkil hai: numerically greatest term. Ek asli expansion mein, maan lo $a+b$ power $n$ real numbers pe, kaunsa poora term — coefficient into uski powers — sabse bada magnitude rakhta hai? Yeh $a$, $b$, aur $n$ teeno pe depend karta hai, kyunki bada coefficient chhoti power se neeche kheencha ja sakta hai, ya modest coefficient badi power se upar."
+            },
+            {
+              "seq": 5,
+              "text": "Yeh raha woh key idea jo isse todta hai. Terms ke saath chalo aur har term ka pichhle term se ratio dekho. Jab tak woh ratio one se bada hai, terms badh rahe hain. Jaise hi woh one se neeche giraa, woh ghatne lagte hain."
+            },
+            {
+              "seq": 6,
+              "text": "Magnitudes ko bars ki tarah socho. Woh chadhte hain, ek single peak pe pahunchte hain, phir girte hain. Greatest term theek us turning point pe baithta hai. Toh saare $n+1$ terms compute karne ke bajaye, hum bas dhoondhte hain ki ratio one kahan cross karta hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aage ke liye ek caution. Jab binomial $a-b$ power $n$ ho, terms sign mein alternate karte hain, toh numerically greatest term asal mein negative ho sakta hai. Isse peeche jeb mein rakho — yeh 'greatest' ka matlab badal deta hai, aur hum isse seedhe niptenge."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "formulas",
+      "subtopic": "Greatest Term and Greatest Binomial Coefficient",
+      "title": "The formulas: peak coefficient, ratio method, shortcut",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Everything you need to locate the biggest"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "n\\ \\text{even}:\\ \\binom{n}{n/2}\\ (\\text{unique});\\quad n\\ \\text{odd}:\\ \\binom{n}{(n-1)/2}=\\binom{n}{(n+1)/2}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "\\left|\\frac{T_{r+1}}{T_r}\\right|=\\frac{n-r+1}{r}\\left|\\frac{b}{a}\\right|\\ \\ge 1"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Solve that inequality for $r$ to locate the numerically greatest term."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "(1+x)^n:\\quad k=\\frac{(n+1)|x|}{1+|x|}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "$k$ not an integer $\\Rightarrow$ greatest is $T_{\\lfloor k\\rfloor+1}$. $k$ an integer $\\Rightarrow T_k=T_{k+1}$ (tie)."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "latex": "(1+\\lambda x)^n:\\quad \\frac{c_{r+1}}{c_r}=\\frac{n-r}{r+1}\\,\\lambda\\ \\ge 1\\ \\ (\\text{greatest coefficient})"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 74,
+          "style": "red-margin",
+          "text": "$a,b$ are the two parts, $x$ the value, $n$ the index, $r$ the term index — all pure numbers."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the toolkit. There are really just three formulas here, one for each flavour of 'biggest', so let's lay them out and label exactly when each fires."
+            },
+            {
+              "seq": 2,
+              "text": "First, the greatest binomial coefficient, which is pure parity. If n is even, the single largest coefficient is n C n over two, and it's unique. If n is odd, there are two equal champions, n C n minus one over two and n C n plus one over two. No x involved — just look at n."
+            },
+            {
+              "seq": 3,
+              "text": "Second, the numerically greatest term, found by the ratio method. The magnitude of T r plus one over T r is n minus r plus one, over r, times the size of b over a. That's the consecutive-term ratio."
+            },
+            {
+              "seq": 4,
+              "text": "You set that ratio greater than or equal to one and solve for r. That inequality tells you exactly how far the terms keep growing before they start to shrink — and that boundary is your greatest term."
+            },
+            {
+              "seq": 5,
+              "text": "Third, a clean shortcut when the binomial is one plus x to the n. Compute k equals n plus one, times the size of x, divided by one plus the size of x. This one number collapses the whole inequality into a single division."
+            },
+            {
+              "seq": 6,
+              "text": "Read k like this. If k is not an integer, the greatest term is T at the floor of k, plus one. If k comes out an exact integer, then T k and T k plus one are equal and both are greatest — a tie. Watch for that integer case; it's a favourite exam trap."
+            },
+            {
+              "seq": 7,
+              "text": "There's a close cousin for the greatest coefficient of one plus lambda x to the n, where the coefficients themselves are n C r times lambda to the r. Apply the same ratio idea: c r plus one over c r is n minus r, over r plus one, times lambda, set greater than or equal to one."
+            },
+            {
+              "seq": 8,
+              "text": "And the usual reminder about the cast: a and b are the two parts of the binomial, x is the value you plug in, n is the index, r is the term index. Every one of these is a pure number — no units to chase."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ab toolkit. Yahan asal mein sirf teen formulas hain, har 'biggest' ke flavour ke liye ek, toh inhe rakhte hain aur label karte hain ki har ek kab chalta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Pehla, greatest binomial coefficient, jo pure parity hai. Agar $n$ even hai, sabse bada single coefficient hai $n\\,C\\,n$ upon two, aur woh unique hai. Agar $n$ odd hai, do barabar champions hain, $n\\,C\\,n-1$ upon two aur $n\\,C\\,n+1$ upon two. Koi $x$ नहीं — bas $n$ dekho."
+            },
+            {
+              "seq": 3,
+              "text": "Doosra, numerically greatest term, ratio method se. $T$ $r+1$ upon $T$ $r$ ka magnitude hai $n-r+1$, upon $r$, into $b$ upon $a$ ka size. Yahi consecutive-term ratio hai."
+            },
+            {
+              "seq": 4,
+              "text": "Aap us ratio ko one se bada ya barabar rakho aur $r$ solve karo. Woh inequality batati hai ki terms kitni door tak badhte rehte hain girne se pehle — aur woh boundary aapka greatest term hai."
+            },
+            {
+              "seq": 5,
+              "text": "Teesra, ek saaf shortcut jab binomial $1+x$ power $n$ ho. $k$ equals $n+1$, into $x$ ka size, divided by one plus $x$ ka size compute karo. Yeh ek number poori inequality ko ek single division mein badal deta hai."
+            },
+            {
+              "seq": 6,
+              "text": "$k$ ko aise padho. Agar $k$ integer नहीं hai, greatest term hai $T$ at floor of $k$, plus one. Agar $k$ exact integer nikle, toh $T$ $k$ aur $T$ $k+1$ barabar hain aur dono greatest hain — ek tie. Us integer case pe nazar rakho; woh favourite exam trap hai."
+            },
+            {
+              "seq": 7,
+              "text": "$1+\\lambda x$ power $n$ ke greatest coefficient ke liye ek close cousin hai, jahan coefficients khud $n\\,C\\,r$ into lambda power $r$ hain. Wahi ratio idea lagao: $c$ $r+1$ upon $c$ $r$ hai $n-r$, upon $r+1$, into lambda, one se bada ya barabar rakha."
+            },
+            {
+              "seq": 8,
+              "text": "Aur cast ka usual reminder: $a$ aur $b$ binomial ke do parts hain, $x$ woh value jo aap plug karte ho, $n$ index, $r$ term index. Inme se har ek pure number hai — koi units nahi peechha karne."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "concept",
+      "subtopic": "Greatest Term and Greatest Binomial Coefficient",
+      "title": "Why the middle coefficient wins, and the ratio algorithm",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof of the peak, and the step-by-step method"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\frac{\\binom{n}{r}}{\\binom{n}{r-1}}=\\frac{n-r+1}{r}>1\\iff r<\\frac{n+1}{2}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "So coefficients increase while $r<\\tfrac{n+1}{2}$ and decrease after — they peak at the middle."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "NGT step 1: write $\\left|\\tfrac{T_{r+1}}{T_r}\\right|=\\tfrac{n-r+1}{r}\\left|\\tfrac{b}{a}\\right|$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Step 2: solve $\\ge 1$ to get $r\\le k$. Step 3: greatest is $T_{\\lfloor k\\rfloor+1}$; integer $k\\Rightarrow$ tie."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "Step 4: for $(a-b)^n$, if that term is negative and the ALGEBRAIC greatest is asked, compare its positive neighbours."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "One ratio crossing 1 marks the unique turning point of a rise-then-fall sequence."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's prove the peak claim rather than just assert it, and then turn the ratio idea into a clean step-by-step method."
+            },
+            {
+              "seq": 2,
+              "text": "Take the ratio of consecutive coefficients: n C r over n C r minus one is n minus r plus one, over r. Ask when that exceeds one. Cross-multiplying, it happens exactly when n minus r plus one is bigger than r, which rearranges to r less than n plus one over two."
+            },
+            {
+              "seq": 3,
+              "text": "So read off the behaviour. While r is below n plus one over two, each coefficient is bigger than the last — they're increasing. Past that point they decrease. That means they rise to a peak right in the middle. For even n the peak is a single value; for odd n two central coefficients tie. Proof done."
+            },
+            {
+              "seq": 4,
+              "text": "Now the algorithm for the numerically greatest term. Step one: write the magnitude ratio, T r plus one over T r, as n minus r plus one, over r, times the size of b over a. This is the same crossing idea, just with the actual numbers in play."
+            },
+            {
+              "seq": 5,
+              "text": "Step two: set that ratio greater than or equal to one and solve, which gives r less than or equal to some number k. Step three: the terms grow up to the floor of k and shrink after, so the greatest term is T at floor of k plus one. If k lands on an exact integer, two adjacent terms tie."
+            },
+            {
+              "seq": 6,
+              "text": "Step four is the subtle one, only for a minus b to the n. The term you found is the numerically greatest, but it may be negative. If the question actually asks for the algebraically greatest — the largest signed value — then compare its positive neighbours and pick the bigger of those instead."
+            },
+            {
+              "seq": 7,
+              "text": "The reasoning underneath all of this is one clean fact: a single ratio crossing one marks the unique turning point of a sequence that rises and then falls. Find that crossing and you've found the maximum, without evaluating every term."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo peak waale claim ko sirf keh dene ke bajaye prove karte hain, aur phir ratio idea ko ek saaf step-by-step method mein badalte hain."
+            },
+            {
+              "seq": 2,
+              "text": "Consecutive coefficients ka ratio lo: $n\\,C\\,r$ upon $n\\,C\\,r-1$ hai $n-r+1$, upon $r$. Poochho yeh kab one se bada hota hai. Cross-multiply karke, yeh tab hota hai jab $n-r+1$ $r$ se bada ho, jo rearrange hokar $r$ less than $n+1$ upon two ban jaata hai."
+            },
+            {
+              "seq": 3,
+              "text": "Toh behaviour padho. Jab tak $r$ $n+1$ upon two se neeche hai, har coefficient pichhle se bada hai — woh badh rahe hain. Us point ke baad woh ghatte hain. Matlab woh beech mein ek peak tak chadhte hain. Even $n$ ke liye peak ek single value hai; odd $n$ ke liye do central coefficients tie karte hain. Proof done."
+            },
+            {
+              "seq": 4,
+              "text": "Ab numerically greatest term ka algorithm. Step one: magnitude ratio likho, $T$ $r+1$ upon $T$ $r$, as $n-r+1$, upon $r$, into $b$ upon $a$ ka size. Yeh wahi crossing idea hai, bas asli numbers ke saath."
+            },
+            {
+              "seq": 5,
+              "text": "Step two: us ratio ko one se bada ya barabar rakho aur solve karo, jo deta hai $r$ less than ya equal to koi number $k$. Step three: terms floor of $k$ tak badhte hain aur baad mein ghatte hain, toh greatest term hai $T$ at floor of $k$ plus one. Agar $k$ exact integer pe aata hai, do adjacent terms tie karte hain."
+            },
+            {
+              "seq": 6,
+              "text": "Step four subtle hai, sirf $a-b$ power $n$ ke liye. Jo term aapne nikaala woh numerically greatest hai, par woh negative ho sakta hai. Agar question asal mein algebraically greatest maange — sabse bada signed value — toh uske positive neighbours compare karo aur unme se bada chuno."
+            },
+            {
+              "seq": 7,
+              "text": "In sabke neeche ka reasoning ek saaf fact hai: ek single ratio ka one cross karna ek rise-then-fall sequence ka unique turning point maark karta hai. Woh crossing dhoondho aur aapne maximum dhoondh liya, bina har term evaluate kiye."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "worked_examples",
+      "subtopic": "Greatest Term and Greatest Binomial Coefficient",
+      "title": "Greatest coefficient, and a numerically greatest term with a tie",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 [CBSE]: greatest binomial coeff in $(1+x)^{12}$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "n=12\\ \\text{even}\\Rightarrow \\binom{12}{6}=924"
+        },
+        {
+          "seq": 3,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Example 2 [JEE Main]: numerically greatest term in $(1+4x)^8,\\ x=\\tfrac12$"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "At $x=\\tfrac12$, magnitude $\\propto\\binom{8}{r}2^r$ (use $|4x|=2$, not $|x|$)."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "\\frac{T_{r+1}}{T_r}=\\frac{2(9-r)}{r}\\ge 1\\Rightarrow r\\le 6"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\text{at }r=6:\\ \\frac{2(9-6)}{6}=1\\ \\Rightarrow\\ T_6=T_7\\ (\\text{tie})"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "latex": "T_6=\\binom{8}{5}(4x)^5=1792,\\quad T_7=\\binom{8}{6}(4x)^6=1792"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Trap: using $|x|=\\tfrac12$ in the ratio. The full second part is $4x$, so $|b/a|=2$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one is a warm-up on the easy question. Find the greatest binomial coefficient in one plus x to the twelfth."
+            },
+            {
+              "seq": 2,
+              "text": "n is twelve, which is even, so there's a single largest coefficient sitting dead centre: twelve C six. Compute it and you get nine hundred twenty four. No ratio work needed — for the coefficient question, even n just means the middle one."
+            },
+            {
+              "seq": 3,
+              "text": "Example two is the real deal: the numerically greatest term in one plus four x to the eighth, evaluated at x equals one half. This is where people go wrong, so watch the setup carefully."
+            },
+            {
+              "seq": 4,
+              "text": "At x equals one half, the magnitude of a term is proportional to eight C r times two to the r. Where does the two come from? The second part of the binomial is four x, and at x equals one half that's four times one half, which is two. You must use the full four x, giving size two — not just the size of x."
+            },
+            {
+              "seq": 5,
+              "text": "Form the ratio. T r plus one over T r works out to two times nine minus r, over r. Set it greater than or equal to one, and you get r less than or equal to six. So the terms keep growing up to r equals six."
+            },
+            {
+              "seq": 6,
+              "text": "Now check the boundary exactly. At r equals six, the ratio is two times nine minus six, over six, which is two times three over six, equal to exactly one. That's the integer-crossing case — the ratio hits one on the nose, so T six and T seven are equal and jointly greatest."
+            },
+            {
+              "seq": 7,
+              "text": "Evaluate both to confirm. T six is eight C five times four x to the fifth, which comes out to seventeen ninety two. T seven is eight C six times four x to the sixth, also seventeen ninety two. Two equal greatest terms, exactly as the tie predicted."
+            },
+            {
+              "seq": 8,
+              "text": "And the trap, spelled out. If you carelessly use the size of x, one half, in the ratio instead of the size of four x, which is two, you land on the wrong r entirely. The b over a factor must carry the full second part of the binomial. That single slip is the most common wrong answer here."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one aasaan sawaal pe warm-up hai. $1+x$ power twelve mein greatest binomial coefficient nikaalo."
+            },
+            {
+              "seq": 2,
+              "text": "$n$ twelve hai, jo even hai, toh ek single largest coefficient bilkul beech mein baitha hai: $12\\,C\\,6$. Isse compute karo toh milta hai nine-hundred-twenty-four. Koi ratio kaam नहीं — coefficient question ke liye, even $n$ ka matlab bas middle waala."
+            },
+            {
+              "seq": 3,
+              "text": "Example two asli cheez hai: $1+4x$ power eight ka numerically greatest term, $x$ equals one-half pe. Yahin log galti karte hain, toh setup dhyaan se dekho."
+            },
+            {
+              "seq": 4,
+              "text": "$x$ equals one-half pe, ek term ka magnitude proportional hai $8\\,C\\,r$ into two power $r$. Yeh two kahan se aaya? Binomial ka second part hai $4x$, aur $x$ equals one-half pe woh four into one-half, matlab two. Aapko poora $4x$ use karna hai, jo size two deta hai — sirf $x$ ka size नहीं."
+            },
+            {
+              "seq": 5,
+              "text": "Ratio banao. $T$ $r+1$ upon $T$ $r$ nikalta hai two into nine minus $r$, upon $r$. Isse one se bada ya barabar rakho, aur milta hai $r$ less than ya equal to six. Toh terms $r$ equals six tak badhte rehte hain."
+            },
+            {
+              "seq": 6,
+              "text": "Ab boundary exactly check karo. $r$ equals six pe, ratio hai two into nine minus six, upon six, matlab two into three upon six, equal to exactly one. Yeh integer-crossing case hai — ratio theek one pe lagta hai, toh $T$ six aur $T$ seven barabar aur jointly greatest hain."
+            },
+            {
+              "seq": 7,
+              "text": "Dono ko evaluate karke confirm karo. $T$ six hai $8\\,C\\,5$ into $4x$ power five, jo nikalta hai seventeen-ninety-two. $T$ seven hai $8\\,C\\,6$ into $4x$ power six, bhi seventeen-ninety-two. Do barabar greatest terms, theek jaise tie ne predict kiya."
+            },
+            {
+              "seq": 8,
+              "text": "Aur trap, khol ke. Agar aap laaparwaahi se ratio mein $x$ ka size, one-half, use karo $4x$ ke size, two, ke bajaye, toh aap poori tarah galat $r$ pe pahunchoge. $b$ upon $a$ factor mein binomial ka poora second part hona chahiye. Wahi ek galti yahan sabse common wrong answer hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 20,
+      "section_type": "worked_examples",
+      "subtopic": "Greatest Term and Greatest Binomial Coefficient",
+      "title": "Greatest coefficient, and numerical vs algebraic greatest",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 [JEE Main]: greatest coefficient in $(1+2x)^6$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "c_r=\\binom{6}{r}2^r:\\quad \\frac{c_{r+1}}{c_r}=\\frac{6-r}{r+1}\\cdot 2\\ge 1\\Rightarrow r\\le 3.67"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "c_4=\\binom{6}{4}2^4=15\\cdot16=240"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "style": "red-margin",
+          "text": "This is the coeff of $x^4$, NOT the middle term — the $2^r$ factor shifts the peak right."
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 4 [JEE Adv]: $(4-3x)^8$ at $x=1$"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\frac{|T_{r+1}|}{|T_r|}=\\frac{9-r}{r}\\cdot\\frac34\\ge 1\\Rightarrow r\\le \\tfrac{27}{7}\\approx 3.86"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "latex": "|T_4|=\\binom{8}{3}4^5 3^3=1{,}548{,}288,\\ \\text{but }T_4<0\\ (\\text{odd power of }-3x)"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "latex": "T_3=+1{,}032{,}192,\\ T_5=+1{,}451{,}520\\Rightarrow \\text{algebraically greatest}=T_5"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three shifts to the greatest coefficient — not the greatest term, the greatest coefficient — in one plus two x to the sixth. The two inside the bracket changes the story."
+            },
+            {
+              "seq": 2,
+              "text": "The coefficients here are c r equals six C r times two to the r. Apply the coefficient ratio: c r plus one over c r is six minus r, over r plus one, times two. Set that at least one and solve, and you get r at most three point six seven."
+            },
+            {
+              "seq": 3,
+              "text": "So the coefficients climb up to r equals four. Evaluate there: c four is six C four times two to the fourth, that's fifteen times sixteen, which is two hundred forty. That's your greatest coefficient."
+            },
+            {
+              "seq": 4,
+              "text": "Notice something important. This peak sits at the coefficient of x to the fourth, not at the middle term. The factor two to the r rewards larger r, so it drags the peak rightward, away from the centre. Greatest coefficient and middle term are not the same once a lambda is present."
+            },
+            {
+              "seq": 5,
+              "text": "Example four is the Advanced-level finale, and it forces the numerical-versus-algebraic distinction. Take four minus three x to the eighth, evaluated at x equals one."
+            },
+            {
+              "seq": 6,
+              "text": "The magnitude ratio is nine minus r, over r, times three quarters, because the size of the second part is three at x equals one, and the first part is four. Set it at least one: three times nine minus r is at least four r, giving twenty seven at least seven r, so r at most twenty seven sevenths, about three point eight six. So magnitudes grow up to r equals three."
+            },
+            {
+              "seq": 7,
+              "text": "That points to T four as numerically greatest. Its magnitude is eight C three times four to the fifth times three cubed, which is one million five hundred forty eight thousand two hundred eighty eight. But T four carries minus three x cubed — an odd power — so T four is actually negative."
+            },
+            {
+              "seq": 8,
+              "text": "<excited> So for the algebraically greatest, compare its positive neighbours. T three is plus one million thirty two thousand one hundred ninety two, and T five is plus one million four hundred fifty one thousand five hundred twenty. Since T five beats T three, the algebraically greatest term is T five. Numerically greatest and algebraically greatest are different terms here — that's the whole point of the problem."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three greatest coefficient pe shift karta hai — greatest term नahi, greatest coefficient — $1+2x$ power six mein. Bracket ke andar ka two kahani badal deta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Yahan coefficients hain $c$ $r$ equals $6\\,C\\,r$ into two power $r$. Coefficient ratio lagao: $c$ $r+1$ upon $c$ $r$ hai six minus $r$, upon $r+1$, into two. Isse at least one rakho aur solve karo, milta hai $r$ at most three point six seven."
+            },
+            {
+              "seq": 3,
+              "text": "Toh coefficients $r$ equals four tak chadhte hain. Wahan evaluate karo: $c$ four hai $6\\,C\\,4$ into two power four, matlab fifteen into sixteen, jo two-hundred-forty hai. Yahi aapka greatest coefficient hai."
+            },
+            {
+              "seq": 4,
+              "text": "Ek zaroori cheez gaur karo. Yeh peak $x$ power four ke coefficient pe baithta hai, middle term pe नahi. Factor two power $r$ bade $r$ ko reward karta hai, toh peak ko daayein kheenchta hai, centre se door. Lambda aate hi greatest coefficient aur middle term ek jaise नahi rehte."
+            },
+            {
+              "seq": 5,
+              "text": "Example four Advanced-level finale hai, aur yeh numerical-versus-algebraic distinction majboor karta hai. $4-3x$ power eight lo, $x$ equals one pe evaluate."
+            },
+            {
+              "seq": 6,
+              "text": "Magnitude ratio hai nine minus $r$, upon $r$, into three-quarters, kyunki second part ka size $x$ equals one pe three hai, aur first part four. Isse at least one rakho: three into nine minus $r$ at least four $r$, deta hai twenty-seven at least seven $r$, toh $r$ at most twenty-seven-sevenths, lagbhag three point eight six. Toh magnitudes $r$ equals three tak badhte hain."
+            },
+            {
+              "seq": 7,
+              "text": "Yeh $T$ four ko numerically greatest bataata hai. Iska magnitude hai $8\\,C\\,3$ into four power five into three cube, jo hai ek million five-hundred-forty-eight-thousand two-hundred-eighty-eight. Par $T$ four minus three $x$ cube carry karta hai — ek odd power — toh $T$ four asal mein negative hai."
+            },
+            {
+              "seq": 8,
+              "text": "<excited> Toh algebraically greatest ke liye, uske positive neighbours compare karo. $T$ three hai plus one-million thirty-two-thousand one-hundred-ninety-two, aur $T$ five hai plus one-million four-hundred-fifty-one-thousand five-hundred-twenty. Kyunki $T$ five $T$ three ko haraata hai, algebraically greatest term hai $T$ five. Numerically greatest aur algebraically greatest yahan alag terms hain — yahi poori problem ka point hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 21,
+      "section_type": "tips",
+      "subtopic": "Greatest Term and Greatest Binomial Coefficient",
+      "title": "Pitfalls and pro-tips for greatest term and coefficient",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where marks leak in this subtopic"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Don't confuse the two: greatest COEFFICIENT $=$ middle (no $x$); greatest TERM depends on $a,b,x$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "style": "red-margin",
+          "text": "In $(1+4x)^n$ the ratio uses $|4x|$, not $|x|$ — the full second part enters."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Integer crossing point $\\Rightarrow$ two terms tie — report BOTH."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "For $(a-b)^n$: numerically greatest may be negative; compare neighbours for algebraically greatest."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Pro-Tip: for $(1+x)^n$ memorise $k=\\tfrac{(n+1)|x|}{1+|x|}$ and read $r=\\lfloor k\\rfloor$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Memory aid: coefficient peak $=$ middle; term peak $=$ where the ratio crosses 1."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's gather the traps for this subtopic. Almost every lost mark here comes from one of four confusions, so make these reflexive."
+            },
+            {
+              "seq": 2,
+              "text": "First and biggest: don't confuse the two questions. The greatest coefficient is always the middle one and doesn't depend on x at all. The greatest term does depend on a, b, and x, through the ratio test. Read which one the question actually asks before you start."
+            },
+            {
+              "seq": 3,
+              "text": "Second: dropping the coefficient inside the bracket. In one plus four x to the n, the ratio uses the size of four x, not the size of x. The full second part of the binomial enters the ratio — forget the four and your r is wrong."
+            },
+            {
+              "seq": 4,
+              "text": "Third: the integer crossing point. When k comes out an exact integer, two adjacent terms are jointly greatest. Report both. Reporting only one is a partial answer that loses marks."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth: numerical versus algebraic for a minus b to the n. The numerically greatest term can be negative, and then the algebraically greatest is a neighbouring positive term. Compare the neighbours explicitly rather than assuming they're the same."
+            },
+            {
+              "seq": 6,
+              "text": "And the pro-tip that saves the most time: for one plus x to the n, memorise k equals n plus one, times the size of x, over one plus the size of x. Then r is just the floor of k. It collapses the whole inequality into a single division — ideal for objective papers."
+            },
+            {
+              "seq": 7,
+              "text": "Hold one line in memory and you'll never mix them up: the coefficient peak is the middle, and the term peak is wherever the ratio crosses one. Two different peaks, two different questions."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo iss subtopic ke traps ikattha karte hain. Yahan lagbhag har khoya hua mark chaar confusions mein se ek se aata hai, toh inhe reflex bana lo."
+            },
+            {
+              "seq": 2,
+              "text": "Pehla aur sabse bada: dono questions ko confuse mat karo. Greatest coefficient hamesha middle waala hai aur $x$ pe bilkul depend नahi karta. Greatest term $a$, $b$, aur $x$ pe depend karta hai, ratio test ke through. Shuru karne se pehle padho ki question asal mein kaunsa maang raha hai."
+            },
+            {
+              "seq": 3,
+              "text": "Doosra: bracket ke andar ka coefficient chhod dena. $1+4x$ power $n$ mein, ratio $4x$ ka size use karta hai, $x$ ka नahi. Binomial ka poora second part ratio mein aata hai — four bhool jao aur aapka $r$ galat."
+            },
+            {
+              "seq": 4,
+              "text": "Teesra: integer crossing point. Jab $k$ exact integer nikle, do adjacent terms jointly greatest hain. Dono report karo. Sirf ek report karna partial answer hai jo marks kho deta hai."
+            },
+            {
+              "seq": 5,
+              "text": "Chautha: $a-b$ power $n$ ke liye numerical versus algebraic. Numerically greatest term negative ho sakta hai, aur tab algebraically greatest ek neighbouring positive term hota hai. Neighbours ko explicitly compare karo, yeh maan ke mat chalo ki woh same hain."
+            },
+            {
+              "seq": 6,
+              "text": "Aur woh pro-tip jo sabse zyada time bachaata hai: $1+x$ power $n$ ke liye, $k$ equals $n+1$, into $x$ ka size, upon one plus $x$ ka size ratt lo. Phir $r$ bas floor of $k$ hai. Yeh poori inequality ko ek single division mein badal deta hai — objective papers ke liye ideal."
+            },
+            {
+              "seq": 7,
+              "text": "Ek line yaad mein rakho aur aap kabhi inhe mix नahi karoge: coefficient peak middle hai, aur term peak wahan hai jahan ratio one cross karta hai. Do alag peaks, do alag questions."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 22,
+      "section_type": "concept",
+      "subtopic": "Properties of Binomial Coefficients and Summation of Series",
+      "title": "The expansion as a machine with a dial",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One identity, operated four ways ($C_r=\\binom{n}{r}$)"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "(1+x)^n=C_0+C_1x+C_2x^2+\\cdots+C_nx^n"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Turn the dial (a value of $x$) or operate on the whole identity — out drop closed forms for 'impossible' sums."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "$x=1\\Rightarrow\\sum C_r=2^n$;   $x=-1\\Rightarrow\\sum(-1)^rC_r=0$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Differentiation makes the weight $r$; integration makes the weight $\\tfrac{1}{r+1}$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Multiplying two copies makes products like $\\sum C_r^2$."
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "caption": "One identity, four operations, four sums",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 480 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"146\" y=\"12\" width=\"188\" height=\"42\" rx=\"9\" fill=\"#fbf3df\" stroke=\"#8a4d16\" stroke-width=\"2\"/><text x=\"240\" y=\"38\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#3a2b16\">(1+x)^n = &#931; C_r x^r</text><line x1=\"240\" y1=\"54\" x2=\"64\" y2=\"123\" stroke=\"#b5651d\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#da)\"/><rect x=\"10\" y=\"125\" width=\"108\" height=\"80\" rx=\"8\" fill=\"none\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"64\" y=\"158\" font-family=\"system-ui, sans-serif\" font-size=\"10.5\" text-anchor=\"middle\" fill=\"#7a5a2f\">put x = 1</text><text x=\"64\" y=\"182\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">&#931; C_r = 2^n</text><line x1=\"240\" y1=\"54\" x2=\"181\" y2=\"123\" stroke=\"#b5651d\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#da)\"/><rect x=\"127\" y=\"125\" width=\"108\" height=\"80\" rx=\"8\" fill=\"none\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"181\" y=\"158\" font-family=\"system-ui, sans-serif\" font-size=\"10.5\" text-anchor=\"middle\" fill=\"#7a5a2f\">put x = -1</text><text x=\"181\" y=\"182\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">&#931; (-1)^r C_r = 0</text><line x1=\"240\" y1=\"54\" x2=\"299\" y2=\"123\" stroke=\"#b5651d\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#da)\"/><rect x=\"245\" y=\"125\" width=\"108\" height=\"80\" rx=\"8\" fill=\"none\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"299\" y=\"158\" font-family=\"system-ui, sans-serif\" font-size=\"10.5\" text-anchor=\"middle\" fill=\"#7a5a2f\">d/dx, then x = 1</text><text x=\"299\" y=\"182\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">&#931; r C_r = n·2^(n-1)</text><line x1=\"240\" y1=\"54\" x2=\"416\" y2=\"123\" stroke=\"#b5651d\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#da)\"/><rect x=\"362\" y=\"125\" width=\"108\" height=\"80\" rx=\"8\" fill=\"none\" stroke=\"#a9884f\" stroke-width=\"1.5\"/><text x=\"416\" y=\"158\" font-family=\"system-ui, sans-serif\" font-size=\"10.5\" text-anchor=\"middle\" fill=\"#7a5a2f\">integrate 0 to 1</text><text x=\"416\" y=\"182\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">&#931; C_r/(r+1)</text><defs><marker id=\"da\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0 L7 3 L0 6 z\" fill=\"#b5651d\"/></marker></defs></svg>"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 74,
+          "style": "red-margin",
+          "text": "Never brute-force the sum — recognise which operation makes the weights you see, then apply and substitute."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Here is the mindset shift that makes this entire subtopic easy. The expansion of one plus x to the n is not just a formula to look at — it's a machine, and x is a dial you can turn."
+            },
+            {
+              "seq": 2,
+              "text": "Write it out: one plus x to the n equals C zero, plus C one x, plus C two x squared, and so on to C n x to the n. Here C r just means n C r; I'll use that short notation throughout."
+            },
+            {
+              "seq": 3,
+              "text": "Now, turn the dial to different values of x, or operate on the whole identity — differentiate it, integrate it, multiply two copies together — and out drop exact closed forms for sums that look impossible to add directly."
+            },
+            {
+              "seq": 4,
+              "text": "The simplest turns. Set x to one and the left side becomes two to the n, so all the coefficients add to two to the n. Set x to minus one and the left side becomes zero, so the alternating sum collapses to zero. No term-by-term addition anywhere."
+            },
+            {
+              "seq": 5,
+              "text": "Two deeper operations. Differentiation multiplies each x to the r term by r, so it manufactures exactly the weight r on each coefficient. Integration divides by r plus one, so it manufactures the weight one over r plus one. That's the whole trick — the operation creates the weight pattern you want."
+            },
+            {
+              "seq": 6,
+              "text": "And to get products of coefficients, like the sum of the squares C r squared, you multiply two copies of the expansion together and read off a single coefficient on each side. Different tool, same philosophy."
+            },
+            {
+              "seq": 7,
+              "text": "Picture the machine: one central identity, four operations branching off it, four families of sums coming out. Substitution for constant weights, differentiation for weight r, integration for one over r plus one, multiplication for squares."
+            },
+            {
+              "seq": 8,
+              "text": "So the golden rule for this subtopic: you never sum the series by brute force. You look at the weights in front of you, recognise which operation produces exactly those weights, apply it to the master identity, and substitute. Match the pattern, and the answer falls out."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Yeh raha woh mindset shift jo poore subtopic ko aasaan bana deta hai. $1+x$ power $n$ ka expansion sirf dekhne ka formula नahi — yeh ek machine hai, aur $x$ ek dial hai jise aap ghuma sakte ho."
+            },
+            {
+              "seq": 2,
+              "text": "Isse likho: $1+x$ power $n$ equals $C$ zero, plus $C$ one $x$, plus $C$ two $x$ square, aise hi $C$ $n$ $x$ power $n$ tak. Yahan $C$ $r$ bas $n\\,C\\,r$ hai; main yeh short notation poore mein use karunga."
+            },
+            {
+              "seq": 3,
+              "text": "Ab, dial ko $x$ ki alag values pe ghumao, ya poori identity pe operate karo — differentiate, integrate, do copies multiply — aur nikalte hain exact closed forms un sums ke liye jo seedhe add karna namumkin lagta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Sabse simple turns. $x$ ko one rakho aur left side two power $n$ ban jaata hai, toh saare coefficients add hokar two power $n$. $x$ ko minus one rakho aur left side zero ban jaata hai, toh alternating sum zero ho jaata hai. Kahin koi term-by-term addition नahi."
+            },
+            {
+              "seq": 5,
+              "text": "Do gehre operations. Differentiation har $x$ power $r$ term ko $r$ se multiply karta hai, toh woh har coefficient pe theek weight $r$ banaata hai. Integration $r+1$ se divide karta hai, toh woh weight one upon $r+1$ banaata hai. Yahi poora trick hai — operation aapka manchaha weight pattern bana deta hai."
+            },
+            {
+              "seq": 6,
+              "text": "Aur coefficients ke products, jaise squares ka sum $C$ $r$ square, paane ke liye, aap expansion ki do copies multiply karte ho aur har side pe ek single coefficient padhte ho. Alag tool, wahi philosophy."
+            },
+            {
+              "seq": 7,
+              "text": "Machine ko picture karo: ek central identity, usse chaar operations nikal rahe, chaar families of sums aa rahe. Substitution constant weights ke liye, differentiation weight $r$ ke liye, integration one upon $r+1$ ke liye, multiplication squares ke liye."
+            },
+            {
+              "seq": 8,
+              "text": "Toh iss subtopic ka golden rule: aap kabhi series ko brute force se sum नahi karte. Aap saamne ke weights dekhte ho, pehchaante ho ki kaunsa operation theek woh weights banaata hai, usse master identity pe lagate ho, aur substitute karte ho. Pattern match karo, aur answer nikal aata hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 23,
+      "section_type": "formulas",
+      "subtopic": "Properties of Binomial Coefficients and Summation of Series",
+      "title": "The identity families",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The results, grouped by the tool that makes them"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\sum_{r=0}^{n}C_r=2^n,\\quad\\sum_{r=0}^{n}(-1)^rC_r=0,\\quad C_0+C_2+\\cdots=C_1+C_3+\\cdots=2^{n-1}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "r\\,C_r=n\\,C_{r-1},\\qquad \\frac{C_r}{r+1}=\\frac{1}{n+1}\\binom{n+1}{r+1}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\sum_{r=1}^{n}r\\,C_r=n\\,2^{n-1},\\qquad \\sum_{r=1}^{n}r^2\\,C_r=n(n+1)2^{n-2}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "latex": "\\sum_{r=0}^{n}\\frac{C_r}{r+1}=\\frac{2^{n+1}-1}{n+1},\\qquad \\sum_{r=0}^{n}\\frac{(-1)^rC_r}{r+1}=\\frac{1}{n+1}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\sum_{r=0}^{n}C_r^2=\\binom{2n}{n},\\qquad \\sum_{r=0}^{n-k}C_r\\,C_{r+k}=\\binom{2n}{n-k}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 68,
+          "latex": "\\text{Vandermonde: }\\ \\sum_{k}\\binom{m}{k}\\binom{n}{p-k}=\\binom{m+n}{p}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 78,
+          "style": "red-margin",
+          "text": "Throughout $C_r=\\binom{n}{r}$; all quantities are pure numbers."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here's the full result sheet, but don't memorise it as a flat list. Group each identity by the tool that produces it — that's how you'll actually recall them under pressure."
+            },
+            {
+              "seq": 2,
+              "text": "The substitution family. The coefficients sum to two to the n. The alternating sum is zero. And splitting into even and odd indices, the even-indexed coefficients and the odd-indexed coefficients each add to two to the n minus one — the two halves are equal."
+            },
+            {
+              "seq": 3,
+              "text": "Two handy index identities. r times C r equals n times C r minus one — that's how a stray factor of r gets absorbed. And C r over r plus one equals one over n plus one, times the n plus one choose r plus one coefficient — the integration counterpart."
+            },
+            {
+              "seq": 4,
+              "text": "The differentiation family. The sum of r times C r is n times two to the n minus one. Differentiate a second time and the sum of r squared times C r is n times n plus one, times two to the n minus two."
+            },
+            {
+              "seq": 5,
+              "text": "The integration family. The sum of C r over r plus one is two to the n plus one, minus one, all over n plus one. The alternating version, with minus one to the r on top, is simply one over n plus one."
+            },
+            {
+              "seq": 6,
+              "text": "The coefficient-comparison family, for products. The sum of the squares C r squared equals two n choose n. More generally the sum of C r times C r plus k equals two n choose n minus k. These come from multiplying two expansions."
+            },
+            {
+              "seq": 7,
+              "text": "And the capstone, Vandermonde's identity: the sum over k of m choose k, times n choose p minus k, equals m plus n choose p. Same multiply-and-compare engine, one level up."
+            },
+            {
+              "seq": 8,
+              "text": "One notational reminder threaded through all of it: C r always means n C r here, and every quantity on this board is a pure number. Now let's see why each family is true."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Yeh raha poora result sheet, par isse ek flat list ki tarah ratt mat lo. Har identity ko us tool se group karo jo usse banaata hai — pressure mein aap aise hi yaad karoge."
+            },
+            {
+              "seq": 2,
+              "text": "Substitution family. Coefficients add hokar two power $n$. Alternating sum zero. Aur even aur odd indices mein baant do, toh even-indexed coefficients aur odd-indexed coefficients har ek two power $n-1$ banate hain — dono halves barabar."
+            },
+            {
+              "seq": 3,
+              "text": "Do kaam ki index identities. $r$ into $C$ $r$ equals $n$ into $C$ $r-1$ — aise ek stray $r$ factor absorb hota hai. Aur $C$ $r$ upon $r+1$ equals one upon $n+1$, into $n+1$ choose $r+1$ coefficient — integration counterpart."
+            },
+            {
+              "seq": 4,
+              "text": "Differentiation family. $r$ into $C$ $r$ ka sum hai $n$ into two power $n-1$. Doosri baar differentiate karo aur $r$ square into $C$ $r$ ka sum hai $n$ into $n+1$, into two power $n-2$."
+            },
+            {
+              "seq": 5,
+              "text": "Integration family. $C$ $r$ upon $r+1$ ka sum hai two power $n+1$, minus one, upon $n+1$. Alternating version, upar minus one power $r$ ke saath, bas one upon $n+1$ hai."
+            },
+            {
+              "seq": 6,
+              "text": "Coefficient-comparison family, products ke liye. Squares ka sum $C$ $r$ square equals two-$n$ choose $n$. Aur general mein $C$ $r$ into $C$ $r+k$ ka sum equals two-$n$ choose $n-k$. Yeh do expansions multiply karne se aate hain."
+            },
+            {
+              "seq": 7,
+              "text": "Aur capstone, Vandermonde's identity: $k$ ke upar sum of $m$ choose $k$, into $n$ choose $p-k$, equals $m+n$ choose $p$. Wahi multiply-and-compare engine, ek level upar."
+            },
+            {
+              "seq": 8,
+              "text": "Ek notation reminder poore mein piroya hua: $C$ $r$ hamesha yahan $n\\,C\\,r$ hai, aur iss board pe har quantity ek pure number hai. Ab dekhte hain har family kyun sach hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 24,
+      "section_type": "concept",
+      "subtopic": "Properties of Binomial Coefficients and Summation of Series",
+      "title": "Four techniques that crack every sum",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Substitute · Differentiate · Integrate · Compare"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A) Substitution: $x=1$ and $x=-1$; add to isolate even indices, subtract for odd."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "n(1+x)^{n-1}=\\sum_{r=1}^{n}r\\,C_r x^{r-1}\\ \\xrightarrow{x=1}\\ \\sum r\\,C_r=n\\,2^{n-1}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "B) Differentiation manufactures the weight $r$; differentiate twice for $r^2$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\int_0^1(1+x)^n\\,dx=\\frac{2^{n+1}-1}{n+1}=\\sum_{r=0}^{n}\\frac{C_r}{r+1}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "(1+x)^n(1+x)^n=(1+x)^{2n}\\ \\Rightarrow\\ \\sum C_r^2=\\binom{2n}{n}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "After differentiating, the sum runs from $r=1$ (the $r=0$ term vanishes) — re-check limits."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 76,
+          "style": "red-margin",
+          "text": "Match the weight pattern to the operation — that is 90% of every problem here."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's prove the four techniques, because once you see why each works, you'll never have to guess which one to reach for."
+            },
+            {
+              "seq": 2,
+              "text": "Technique A, substitution. Put x equals one into the identity to get the sum of the coefficients, two to the n. Put x equals minus one to get the alternating sum, zero. Then here's the neat move: add those two equations and the odd-indexed terms cancel, leaving twice the even sum; subtract them and the even terms cancel. That isolates the even and odd families cleanly."
+            },
+            {
+              "seq": 3,
+              "text": "Technique B, differentiation. Differentiate one plus x to the n. The left becomes n times one plus x to the n minus one; the right becomes the sum of r times C r, x to the r minus one. Now set x to one, and the left is n times two to the n minus one. So the sum of r C r equals n two to the n minus one — the weight r appeared exactly because differentiation multiplies each term by its exponent."
+            },
+            {
+              "seq": 4,
+              "text": "That's the whole logic of technique B: differentiation manufactures the weight r on each coefficient. Want the weight r squared instead? Differentiate a second time. The operation you choose is dictated by the weight you're trying to build."
+            },
+            {
+              "seq": 5,
+              "text": "Technique C, integration. Integrate one plus x to the n from zero to one. The left side gives two to the n plus one, minus one, over n plus one. The right side, integrating term by term, gives the sum of C r over r plus one. Equate them and you have that identity — integration built the weight one over r plus one."
+            },
+            {
+              "seq": 6,
+              "text": "Technique D, coefficient comparison. Start from one plus x to the n, times one plus x to the n, which is one plus x to the two n. Expand the left as a product and the coefficient of x to the n comes out as the sum of C r squared, using symmetry. On the right, the coefficient of x to the n is two n choose n. Equate, and the sum of squares identity drops out."
+            },
+            {
+              "seq": 7,
+              "text": "One bookkeeping warning that trips people. After differentiating, the r equals zero term vanishes, so the sum now genuinely runs from r equals one, and the limits shift. Always re-read which sum you've actually produced before you substitute."
+            },
+            {
+              "seq": 8,
+              "text": "And the meta-strategy that ties the four together: match the weight pattern to the operation. Constant weights, substitute. Weight r, differentiate. Weight one over r plus one, integrate. Squared coefficients, multiply and compare. That single decision is ninety percent of every problem in this subtopic."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo chaaron techniques prove karte hain, kyunki ek baar aap dekh lo har ek kyun kaam karti hai, aapko kabhi guess नahi karna padega ki kaunsi uthaani hai."
+            },
+            {
+              "seq": 2,
+              "text": "Technique A, substitution. Identity mein $x$ equals one daalo toh coefficients ka sum milta hai, two power $n$. $x$ equals minus one daalo toh alternating sum, zero. Phir yeh neat move: in do equations ko add karo aur odd-indexed terms cancel ho jaate hain, twice even sum bacha ke; subtract karo aur even terms cancel. Isse even aur odd families saaf isolate ho jaati hain."
+            },
+            {
+              "seq": 3,
+              "text": "Technique B, differentiation. $1+x$ power $n$ ko differentiate karo. Left ban jaata hai $n$ into $1+x$ power $n-1$; right ban jaata hai $r$ into $C$ $r$, $x$ power $r-1$ ka sum. Ab $x$ ko one rakho, aur left hai $n$ into two power $n-1$. Toh $r$ $C$ $r$ ka sum equals $n$ two power $n-1$ — weight $r$ theek isliye aaya kyunki differentiation har term ko uske exponent se multiply karta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Yahi technique B ka poora logic hai: differentiation har coefficient pe weight $r$ banaata hai. Weight $r$ square chahiye? Doosri baar differentiate karo. Jo operation aap chunte ho woh us weight se tay hota hai jo aap banana chahte ho."
+            },
+            {
+              "seq": 5,
+              "text": "Technique C, integration. $1+x$ power $n$ ko zero se one tak integrate karo. Left side deta hai two power $n+1$, minus one, upon $n+1$. Right side, term by term integrate karke, deta hai $C$ $r$ upon $r+1$ ka sum. Inhe equate karo aur woh identity mil gayi — integration ne weight one upon $r+1$ banaya."
+            },
+            {
+              "seq": 6,
+              "text": "Technique D, coefficient comparison. $1+x$ power $n$, into $1+x$ power $n$, jo $1+x$ power two-$n$ hai, se shuru karo. Left ko product ki tarah expand karo aur $x$ power $n$ ka coefficient nikalta hai $C$ $r$ square ka sum, symmetry se. Right pe, $x$ power $n$ ka coefficient hai two-$n$ choose $n$. Equate karo, aur sum of squares identity nikal aati hai."
+            },
+            {
+              "seq": 7,
+              "text": "Ek bookkeeping warning jo logon ko phasati hai. Differentiate karne ke baad, $r$ equals zero term gayab ho jaata hai, toh sum ab sach mein $r$ equals one se chalta hai, aur limits shift ho jaati hain. Substitute karne se pehle hamesha dobara padho ki aapne asal mein kaunsa sum banaya."
+            },
+            {
+              "seq": 8,
+              "text": "Aur meta-strategy jo chaaron ko jodti hai: weight pattern ko operation se match karo. Constant weights, substitute. Weight $r$, differentiate. Weight one upon $r+1$, integrate. Squared coefficients, multiply aur compare. Wahi ek decision iss subtopic ki har problem ka ninety percent hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 25,
+      "section_type": "worked_examples",
+      "subtopic": "Properties of Binomial Coefficients and Summation of Series",
+      "title": "Isolating even coefficients, and a differentiation sum",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 [CBSE]: show $C_0+C_2+C_4+\\cdots=2^{n-1}$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "x=1:\\ \\sum C_r=2^n;\\qquad x=-1:\\ C_0-C_1+C_2-\\cdots=0"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "\\text{add}:\\ 2(C_0+C_2+\\cdots)=2^n\\ \\Rightarrow\\ C_0+C_2+\\cdots=2^{n-1}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "style": "red-margin",
+          "text": "Subtracting instead gives $C_1+C_3+\\cdots=2^{n-1}$ too — the halves are equal."
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 2 [JEE Main]: $C_1+2C_2+\\cdots+nC_n$ for $(1+x)^{10}$"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Weights $1,2,3,\\dots$ are the differentiation signature."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 58,
+          "latex": "\\sum_{r=1}^{n}r\\,C_r=n\\,2^{n-1}\\ \\xrightarrow{n=10}\\ 10\\cdot2^9=5120"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 70,
+          "style": "red-margin",
+          "text": "Trap: computing each $rC_r$ and adding. See the index-weights, reach for $n\\,2^{n-1}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one is the classic even-sum identity, a perfect showcase for substitution. Show that C zero plus C two plus C four, and so on, equals two to the n minus one."
+            },
+            {
+              "seq": 2,
+              "text": "Put x equals one: the coefficients add to two to the n. Put x equals minus one: the alternating sum, C zero minus C one plus C two and so on, is zero. Two equations, ready to combine."
+            },
+            {
+              "seq": 3,
+              "text": "Add the two equations. The odd-indexed terms have opposite signs and cancel; the even-indexed terms reinforce and double. So twice the even sum equals two to the n, which means the even sum is two to the n minus one. Clean and instant."
+            },
+            {
+              "seq": 4,
+              "text": "And a bonus: if you subtract the equations instead, the even terms cancel and you find the odd-indexed sum is also two to the n minus one. So the even family and the odd family are exactly equal — each is half of the total."
+            },
+            {
+              "seq": 5,
+              "text": "Example two switches to differentiation. Evaluate C one, plus two C two, plus three C three, all the way to n C n, for the tenth power."
+            },
+            {
+              "seq": 6,
+              "text": "Read the weights first. One, two, three, up the line — each coefficient carries its own index as a multiplier. That is the unmistakable signature of differentiation. So we don't derive anything; we reach straight for the ready-made result."
+            },
+            {
+              "seq": 7,
+              "text": "The sum of r times C r is n times two to the n minus one. Here n is ten, so it's ten times two to the ninth, which is ten times five twelve, giving five thousand one hundred twenty. One line, no expansion."
+            },
+            {
+              "seq": 8,
+              "text": "The trap is to compute each r C r term individually and add them — slow and error-prone. The instant you see index-weights on the coefficients, reach for n times two to the n minus one. Recognising the pattern is the entire skill."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one classic even-sum identity hai, substitution ke liye perfect showcase. Dikhao ki $C$ zero plus $C$ two plus $C$ four, aise hi, equals two power $n-1$."
+            },
+            {
+              "seq": 2,
+              "text": "$x$ equals one daalo: coefficients add hokar two power $n$. $x$ equals minus one daalo: alternating sum, $C$ zero minus $C$ one plus $C$ two aise hi, zero hai. Do equations, combine karne ko taiyaar."
+            },
+            {
+              "seq": 3,
+              "text": "Do equations add karo. Odd-indexed terms ke opposite signs hain aur cancel; even-indexed terms reinforce aur double ho jaate hain. Toh twice even sum equals two power $n$, matlab even sum hai two power $n-1$. Saaf aur turant."
+            },
+            {
+              "seq": 4,
+              "text": "Aur ek bonus: agar aap equations subtract karo, toh even terms cancel aur aap paate ho odd-indexed sum bhi two power $n-1$ hai. Toh even family aur odd family bilkul barabar hain — har ek total ka aadha."
+            },
+            {
+              "seq": 5,
+              "text": "Example two differentiation pe switch karta hai. $C$ one, plus two $C$ two, plus three $C$ three, poore $n$ $C$ $n$ tak, tenth power ke liye evaluate karo."
+            },
+            {
+              "seq": 6,
+              "text": "Pehle weights padho. One, two, three, line ke upar — har coefficient apna index ek multiplier ki tarah carry karta hai. Yeh differentiation ka pehchaan-chinh hai. Toh hum kuch derive नahi karte; seedha ready-made result uthate hain."
+            },
+            {
+              "seq": 7,
+              "text": "$r$ into $C$ $r$ ka sum hai $n$ into two power $n-1$. Yahan $n$ ten hai, toh yeh ten into two power nine, matlab ten into five-twelve, deta hai five-thousand-one-hundred-twenty. Ek line, koi expansion नahi."
+            },
+            {
+              "seq": 8,
+              "text": "Trap yeh hai ki har $r$ $C$ $r$ term alag se compute karke add karo — slow aur galti-bhara. Jaise hi aap coefficients pe index-weights dekho, $n$ into two power $n-1$ uthao. Pattern pehchaanna hi poori skill hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 26,
+      "section_type": "worked_examples",
+      "subtopic": "Properties of Binomial Coefficients and Summation of Series",
+      "title": "An integration sum, and the sum of squares",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 [JEE Main]: $C_0+\\tfrac{C_1}{2}+\\cdots+\\tfrac{C_n}{n+1}$ for $n=5$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Weights $\\tfrac{1}{r+1}$ are the integration signature."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "\\sum_{r=0}^{n}\\frac{C_r}{r+1}=\\frac{2^{n+1}-1}{n+1}\\ \\xrightarrow{n=5}\\ \\frac{2^6-1}{6}=\\frac{63}{6}=\\frac{21}{2}"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Example 4 [JEE Adv]: prove $\\sum C_r^2=\\binom{2n}{n}$, evaluate at $n=4$"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Multiply $(1+x)^n(1+x)^n=(1+x)^{2n}$; compare the coefficient of $x^n$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\text{coeff of }x^n:\\ \\sum_r C_r C_{n-r}=\\sum_r C_r^2\\ (\\text{symmetry})=\\binom{2n}{n}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "latex": "n=4:\\ 1^2+4^2+6^2+4^2+1^2=70=\\binom{8}{4}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Sum of squares $\\ne$ square of sum: $\\binom{2n}{n}$, not $(2^n)^2$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three is the integration counterpart. Evaluate C zero, plus C one over two, plus C two over three, up to C n over n plus one, for n equals five."
+            },
+            {
+              "seq": 2,
+              "text": "Read the weights: one over r plus one on each coefficient. That's the integration signature, so we pull the ready-made integration result rather than integrating from scratch."
+            },
+            {
+              "seq": 3,
+              "text": "The sum of C r over r plus one is two to the n plus one, minus one, all over n plus one. Put n equals five: that's two to the sixth minus one, over six, which is sixty three over six, equal to twenty one halves. Recognise the weight, plug in, done in two steps."
+            },
+            {
+              "seq": 4,
+              "text": "Example four is the Advanced classic: prove the sum of the squares of the coefficients equals two n choose n, then evaluate it for n equals four."
+            },
+            {
+              "seq": 5,
+              "text": "The proof is pure coefficient comparison. Write one plus x to the n, times one plus x to the n, which equals one plus x to the two n. Now compare the coefficient of x to the n on both sides."
+            },
+            {
+              "seq": 6,
+              "text": "On the left, the coefficient of x to the n is the sum over r of C r times C n minus r. By symmetry C n minus r equals C r, so that's the sum of C r squared. On the right, the coefficient of x to the n in one plus x to the two n is two n choose n. Equate the two and the identity is proved."
+            },
+            {
+              "seq": 7,
+              "text": "Now evaluate at n equals four. The coefficients of one plus x to the fourth are one, four, six, four, one. Square and add: one plus sixteen plus thirty six plus sixteen plus one is seventy. And two n choose n is eight choose four, which is also seventy. It checks."
+            },
+            {
+              "seq": 8,
+              "text": "One warning worth burning in: the sum of squares is not the square of the sum. It's two n choose n, not two to the n, all squared. Students who write four to the n here are confusing the sum of squares with the square of the total — a costly slip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three integration counterpart hai. $C$ zero, plus $C$ one upon two, plus $C$ two upon three, $C$ $n$ upon $n+1$ tak, $n$ equals five ke liye evaluate karo."
+            },
+            {
+              "seq": 2,
+              "text": "Weights padho: har coefficient pe one upon $r+1$. Yeh integration signature hai, toh hum ready-made integration result kheenchte hain, shuru se integrate karne ke bajaye."
+            },
+            {
+              "seq": 3,
+              "text": "$C$ $r$ upon $r+1$ ka sum hai two power $n+1$, minus one, upon $n+1$. $n$ equals five daalo: yeh two power six minus one, upon six, matlab sixty-three upon six, equal to twenty-one by two. Weight pehchaano, plug karo, do steps mein done."
+            },
+            {
+              "seq": 4,
+              "text": "Example four Advanced classic hai: prove karo ki coefficients ke squares ka sum equals two-$n$ choose $n$, phir $n$ equals four ke liye evaluate karo."
+            },
+            {
+              "seq": 5,
+              "text": "Proof pure coefficient comparison hai. $1+x$ power $n$, into $1+x$ power $n$ likho, jo $1+x$ power two-$n$ ke barabar hai. Ab dono sides pe $x$ power $n$ ka coefficient compare karo."
+            },
+            {
+              "seq": 6,
+              "text": "Left pe, $x$ power $n$ ka coefficient hai $r$ ke upar $C$ $r$ into $C$ $n-r$ ka sum. Symmetry se $C$ $n-r$ equals $C$ $r$, toh yeh $C$ $r$ square ka sum hai. Right pe, $1+x$ power two-$n$ mein $x$ power $n$ ka coefficient hai two-$n$ choose $n$. Dono equate karo aur identity prove ho gayi."
+            },
+            {
+              "seq": 7,
+              "text": "Ab $n$ equals four pe evaluate karo. $1+x$ power four ke coefficients hain one, four, six, four, one. Square karke add karo: one plus sixteen plus thirty-six plus sixteen plus one hai seventy. Aur two-$n$ choose $n$ hai eight choose four, jo bhi seventy hai. Check ho gaya."
+            },
+            {
+              "seq": 8,
+              "text": "Ek warning yaad rakhne layak: squares ka sum, sum ka square नahi hai. Yeh two-$n$ choose $n$ hai, na ki two power $n$, poora squared. Jo students yahan four power $n$ likhte hain woh squares ke sum ko total ke square se confuse kar rahe hain — ek mehanga slip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 27,
+      "section_type": "tips",
+      "subtopic": "Properties of Binomial Coefficients and Summation of Series",
+      "title": "Pitfalls and pro-tips for coefficient sums",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The slips that turn a 15-second solve into a mess"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "$\\sum C_r^2=\\binom{2n}{n}$, NOT $(2^n)^2$ — sum of squares $\\ne$ square of sum."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "style": "red-margin",
+          "text": "After differentiating, the exponent drops: $n(1+x)^{n-1}$ gives $n\\,2^{n-1}$ at $x=1$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Integration limits: $\\int_0^1$ for the plain sum; $[-1,0]$ (or $x=-1$) for the alternating one."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Index-shift: after differentiating, the sum starts at $r=1$ — the $r=0$ term is gone."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Pro-Tip: read the weights, then pick the tool. That single step is most of the problem."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Memory aid: substitute for constants, differentiate for $r$, integrate for $\\tfrac{1}{r+1}$, multiply-compare for squares."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close the subtopic with the traps. Each of these turns a fifteen-second recognition problem into a two-minute mess, so make them automatic."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, the big one: the sum of the squares is two n choose n, not two to the n all squared. Sum of squares is not the square of the sum. The product-then-compare technique is mandatory here — there's no shortcut through squaring the total."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: forgetting that the exponent drops after differentiating. The derivative of one plus x to the n is n times one plus x to the n minus one, so at x equals one you get n times two to the n minus one — the exponent is n minus one, not n. Miss that and every differentiation sum is off by a factor of two."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: the wrong limits of integration. The plain sum of C r over r plus one comes from integrating zero to one. The alternating version needs the interval minus one to zero, or equivalently the x equals minus one endpoint. Mix the limits and the answer flips."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: index-shift bookkeeping. After you differentiate, the r equals zero term disappears, so the sum genuinely starts at r equals one now. Re-check which sum you've actually produced before substituting — the limits are not what they were."
+            },
+            {
+              "seq": 6,
+              "text": "And the pro-tip that governs everything: read the weights, then pick the tool. Constant weights mean substitute. Weights that are r, or r squared, mean differentiate, once or twice. Weights of one over r plus one mean integrate. Squared or product coefficients mean multiply two expansions and compare one coefficient. That single decision is most of the problem."
+            },
+            {
+              "seq": 7,
+              "text": "So hold the four-way memory aid: substitute for constants, differentiate for r, integrate for one over r plus one, and multiply-and-compare for squares. Get that mapping instant and this subtopic becomes recognition, not calculation."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo subtopic ko traps ke saath band karte hain. Inme se har ek pandrah-second recognition problem ko two-minute gadbad mein badal deta hai, toh inhe automatic bana lo."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, bada waala: squares ka sum two-$n$ choose $n$ hai, na ki two power $n$ poora squared. Squares ka sum, sum ka square नahi hai. Yahan product-then-compare technique zaroori hai — total ko square karke koi shortcut नahi."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: yeh bhoolna ki differentiate karne ke baad exponent girta hai. $1+x$ power $n$ ka derivative hai $n$ into $1+x$ power $n-1$, toh $x$ equals one pe milta hai $n$ into two power $n-1$ — exponent $n-1$ hai, $n$ नahi. Yeh chooko aur har differentiation sum two ke factor se galat."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: integration ki galat limits. $C$ $r$ upon $r+1$ ka plain sum zero se one integrate karne se aata hai. Alternating version ke liye minus one se zero interval chahiye, ya barabar $x$ equals minus one endpoint. Limits mix karo aur answer palat jaata hai."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: index-shift bookkeeping. Differentiate karne ke baad, $r$ equals zero term gayab ho jaata hai, toh sum ab sach mein $r$ equals one se shuru hota hai. Substitute karne se pehle dobara check karo ki aapne asal mein kaunsa sum banaya — limits pehle jaisi नahi rahi."
+            },
+            {
+              "seq": 6,
+              "text": "Aur woh pro-tip jo sab kuch chalata hai: weights padho, phir tool chuno. Constant weights matlab substitute. Weights jo $r$ hain, ya $r$ square, matlab differentiate, ek ya do baar. Weights one upon $r+1$ matlab integrate. Squared ya product coefficients matlab do expansions multiply karo aur ek coefficient compare karo. Wahi ek decision zyaadatar problem hai."
+            },
+            {
+              "seq": 7,
+              "text": "Toh four-way memory aid pakdo: constants ke liye substitute, $r$ ke liye differentiate, one upon $r+1$ ke liye integrate, aur squares ke liye multiply-and-compare. Woh mapping turant kar lo aur yeh subtopic recognition ban jaata hai, calculation नahi."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

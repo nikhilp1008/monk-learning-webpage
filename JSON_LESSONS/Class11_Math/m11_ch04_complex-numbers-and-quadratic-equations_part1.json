@@ -1,0 +1,3662 @@
+{
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 4,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish",
+    "hindi"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "Why complex numbers exist, and what i really is",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Why do we need complex numbers?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$x^2+1=0$ has no real solution: no real number squares to a negative."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Each time an equation refused to solve, we grew the number system — negatives, fractions, then all reals."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "$i$ is a quarter-turn, not a ghost."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "caption": "Multiplying by i rotates 90 degrees anticlockwise",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 420 260' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='130' x2='390' y2='130' stroke='#555' stroke-width='1.5'/><line x1='210' y1='20' x2='210' y2='240' stroke='#555' stroke-width='1.5'/><text x='378' y='148' font-size='13' fill='#555'>Re</text><text x='218' y='30' font-size='13' fill='#555'>Im</text><line x1='210' y1='130' x2='330' y2='130' stroke='#1f6feb' stroke-width='3'/><polygon points='330,130 320,125 320,135' fill='#1f6feb'/><text x='300' y='150' font-size='12' fill='#1f6feb'>1</text><line x1='210' y1='130' x2='210' y2='40' stroke='#2ea043' stroke-width='3'/><polygon points='210,40 205,50 215,50' fill='#2ea043'/><text x='218' y='60' font-size='12' fill='#2ea043'>i</text><line x1='210' y1='130' x2='95' y2='130' stroke='#d29922' stroke-width='3'/><polygon points='95,130 105,125 105,135' fill='#d29922'/><text x='70' y='150' font-size='12' fill='#d29922'>-1</text><line x1='210' y1='130' x2='210' y2='215' stroke='#8957e5' stroke-width='3'/><polygon points='210,215 205,205 215,205' fill='#8957e5'/><text x='218' y='215' font-size='12' fill='#8957e5'>-i</text><path d='M 285 130 A 75 75 0 0 0 210 55' fill='none' stroke='#999' stroke-width='1.2' stroke-dasharray='4 3'/><text x='268' y='95' font-size='11' fill='#999'>x i (90 deg)</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Multiply by $i$: turn 90 degrees. Do it twice and you have turned 180 degrees, landing on $-1$ — that is $i^2=-1$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "Four quarter-turns bring you home, so $i^4=1$ and the powers of $i$ repeat every four steps."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "A complex number $z=a+ib$ is an address: real part is east–west, imaginary part is north–south."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's start with the question the whole chapter answers: why invent complex numbers at all?"
+            },
+            {
+              "seq": 2,
+              "text": "Look at x squared plus one equals zero. Over the real numbers this has no solution, because no real number, positive or negative, squares to give something negative."
+            },
+            {
+              "seq": 3,
+              "text": "But this discomfort is old. People once refused to accept that x plus five equals two could be solved, until negatives were allowed. Every time a familiar equation stalls, we enlarge the number system, and complex numbers are the enlargement that finally lets every polynomial have a root."
+            },
+            {
+              "seq": 4,
+              "text": "<curious>Here's the picture that makes i click.</curious> The word imaginary is bad PR. Think of i as a quarter-turn, not some ghost."
+            },
+            {
+              "seq": 5,
+              "text": "Picture a hand pointing right, along the positive real direction. Multiplying by i rotates it ninety degrees anticlockwise, so now it points up."
+            },
+            {
+              "seq": 6,
+              "text": "Multiply by i a second time and you have turned a full one hundred eighty degrees, so the hand now points left, at minus one. That single fact, two quarter-turns making a half-turn, is the entire meaning of i squared equals minus one."
+            },
+            {
+              "seq": 7,
+              "text": "Keep going: four quarter-turns is a full circle back to the start, which is exactly why i to the fourth equals one, and why every power of i just cycles through four values."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, read z equals a plus i b like a city address. The real part a tells you how far east, the imaginary part b tells you how far north. Two numbers pin one point."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo shuru karte hain us sawaal se jiska jawaab poora chapter deta hai: complex numbers invent karne ki zaroorat hi kyun padi?"
+            },
+            {
+              "seq": 2,
+              "text": "Dekho, $x^2+1=0$ — real numbers mein iska koi solution nahi hai, kyunki koi bhi real number square hoke negative nahi banta."
+            },
+            {
+              "seq": 3,
+              "text": "Par ye discomfort purani hai. Pehle log $x+5=2$ ko bhi unsolvable maante the, jab tak negatives accept nahi hue. Jab bhi koi equation atak jaati hai, hum number system ko bada karte hain, aur complex numbers wahi enlargement hain jo har polynomial ko ek root de deta hai."
+            },
+            {
+              "seq": 4,
+              "text": "<curious>Ab wo picture jisse i samajh aata hai.</curious> Naam imaginary thoda galat hai. i ko ek quarter-turn samjho, koi ghost nahi."
+            },
+            {
+              "seq": 5,
+              "text": "Socho ek hand right taraf point kar raha hai, positive real direction mein. i se multiply karo, to wo ninety degrees anticlockwise ghoom jaata hai, ab upar point karta hai."
+            },
+            {
+              "seq": 6,
+              "text": "Doosri baar i se multiply karo, to poore one hundred eighty degrees ghoom gaye, ab hand left taraf hai, yaani minus one par. Yehi baat, do quarter-turns milke half-turn, i squared equals minus one ka poora matlab hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aage badho: chaar quarter-turns matlab poora circle, wapas start par. Isiliye i to the fourth equals one, aur i ki har power sirf chaar values mein cycle karti rehti hai."
+            },
+            {
+              "seq": 8,
+              "text": "Aakhri baat: z equals a plus i b ko ek address ki tarah padho. Real part a batata hai kitna east, imaginary part b batata hai kitna north. Do numbers, ek point fix."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आइए उस सवाल से शुरू करें जिसका जवाब पूरा चैप्टर देता है: complex numbers बनाने की जरूरत आखिर पड़ी क्यों?"
+            },
+            {
+              "seq": 2,
+              "text": "देखिए, x square प्लस वन बराबर ज़ीरो — real numbers में इसका कोई हल नहीं, क्योंकि कोई भी real number square होकर negative नहीं बनता।"
+            },
+            {
+              "seq": 3,
+              "text": "पर यह बेचैनी पुरानी है। पहले लोग x प्लस फाइव बराबर टू को भी असंभव मानते थे, जब तक negatives स्वीकार नहीं हुए। जब भी कोई equation अटकती है, हम number system को बड़ा करते हैं, और complex numbers वही विस्तार हैं जो हर polynomial को एक root दे देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "<curious>अब वह तस्वीर जिससे i समझ आता है।</curious> नाम imaginary थोड़ा गलत है। i को एक quarter-turn समझिए, कोई भूत नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "सोचिए एक हाथ right ओर इशारा कर रहा है, positive real direction में। i से multiply करो, तो वह ninety degrees anticlockwise घूम जाता है, अब ऊपर इशारा करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "दूसरी बार i से multiply करो, तो पूरे one hundred eighty degrees घूम गए, अब हाथ left ओर है, यानी minus one पर। यही बात, दो quarter-turns मिलकर half-turn, i square बराबर minus one का पूरा मतलब है।"
+            },
+            {
+              "seq": 7,
+              "text": "आगे बढ़िए: चार quarter-turns यानी पूरा circle, वापस start पर। इसीलिए i to the fourth बराबर one, और i की हर power सिर्फ चार values में cycle करती रहती है।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिरी बात: z बराबर a प्लस i b को एक पते की तरह पढ़िए। real part a बताता है कितना east, imaginary part b बताता है कितना north। दो numbers, एक point fix।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "Powers of i cycle with period four",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Powers of i repeat every 4"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "i^{1}=i,\\quad i^{2}=-1,\\quad i^{3}=-i,\\quad i^{4}=1"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "i^{4k}=1,\\ \\ i^{4k+1}=i,\\ \\ i^{4k+2}=-1,\\ \\ i^{4k+3}=-i"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "To evaluate $i^{n}$, divide $n$ by 4 and keep only the remainder."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "style": "red-margin",
+          "text": "$i^{135}$: $135=4\\times 33+3$, so $i^{135}=i^{3}=-i$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "For negative powers, add a multiple of 4 first: $i^{-1}=i^{3}=-i$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "i^{n}+i^{n+1}+i^{n+2}+i^{n+3}=0"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "Any four consecutive powers of $i$ add to zero — a huge shortcut for long sums."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "From the rotation picture, the powers of i can only ever be four things, and they repeat in a cycle."
+            },
+            {
+              "seq": 2,
+              "text": "Here is the cycle: i to the one is i, i squared is minus one, i cubed is minus i, and i to the fourth is back to one."
+            },
+            {
+              "seq": 3,
+              "text": "Writing that generally: i to the power four k is one, four k plus one gives i, four k plus two gives minus one, and four k plus three gives minus i. The exponent's remainder on division by four is all that matters."
+            },
+            {
+              "seq": 4,
+              "text": "So to evaluate any power of i, you don't compute the whole thing. You just divide the exponent by four and keep the remainder."
+            },
+            {
+              "seq": 5,
+              "text": "Take i to the one hundred thirty five. One hundred thirty five is four times thirty three plus three, so the remainder is three, and i to the one hundred thirty five equals i cubed equals minus i."
+            },
+            {
+              "seq": 6,
+              "text": "For a negative exponent, add a multiple of four to make it positive first. So i to the minus one becomes i cubed, which is minus i."
+            },
+            {
+              "seq": 7,
+              "text": "And here is a gorgeous fact worth memorizing: any four consecutive powers of i sum to zero."
+            },
+            {
+              "seq": 8,
+              "text": "Why? Factor out the first one and you're left with one plus i plus i squared plus i cubed, which is one plus i minus one minus i, exactly zero. Use this to collapse long sums instantly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Rotation wali picture se i ki powers sirf chaar cheezein ho sakti hain, aur wo ek cycle mein repeat hoti hain."
+            },
+            {
+              "seq": 2,
+              "text": "Ye rahi cycle: i to the one is i, i squared is minus one, i cubed is minus i, aur i to the fourth wapas one."
+            },
+            {
+              "seq": 3,
+              "text": "Generally likhein to: i to the power four k is one, four k plus one deta hai i, four k plus two deta hai minus one, aur four k plus three deta hai minus i. Sirf exponent ka remainder, four se divide karke, matter karta hai."
+            },
+            {
+              "seq": 4,
+              "text": "To i ki koi bhi power nikaalne ke liye poora calculate mat karo. Bas exponent ko four se divide karo aur remainder rakho."
+            },
+            {
+              "seq": 5,
+              "text": "Lo i to the one hundred thirty five. One hundred thirty five is four times thirty three plus three, to remainder three, aur i to the one hundred thirty five equals i cubed equals minus i."
+            },
+            {
+              "seq": 6,
+              "text": "Negative exponent ke liye pehle four ka multiple add karke positive banao. To i to the minus one ban jaata hai i cubed, yaani minus i."
+            },
+            {
+              "seq": 7,
+              "text": "Aur ye ek khoobsurat fact hai yaad rakhne layak: i ki koi bhi four consecutive powers add hoke zero ban jaati hain."
+            },
+            {
+              "seq": 8,
+              "text": "Kyun? Pehli power factor out karo, bachta hai one plus i plus i squared plus i cubed, jo hai one plus i minus one minus i, bilkul zero. Isse lambe sums turant collapse karo."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Rotation वाली तस्वीर से i की powers सिर्फ चार चीज़ें हो सकती हैं, और वे एक cycle में repeat होती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "ये रही cycle: i to the one is i, i square is minus one, i cube is minus i, और i to the fourth वापस one।"
+            },
+            {
+              "seq": 3,
+              "text": "आम रूप से: i to the power four k is one, four k plus one देता है i, four k plus two देता है minus one, और four k plus three देता है minus i। सिर्फ exponent का remainder, चार से भाग देने पर, मायने रखता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो i की कोई भी power निकालने के लिए पूरा calculate मत करिए। बस exponent को चार से भाग देकर remainder रखिए।"
+            },
+            {
+              "seq": 5,
+              "text": "लीजिए i to the one hundred thirty five। One hundred thirty five is four times thirty three plus three, तो remainder तीन, और i to the one hundred thirty five बराबर i cube बराबर minus i।"
+            },
+            {
+              "seq": 6,
+              "text": "Negative exponent के लिए पहले four का multiple add करके positive बनाइए। तो i to the minus one बन जाता है i cube, यानी minus i।"
+            },
+            {
+              "seq": 7,
+              "text": "और यह एक सुंदर fact है याद रखने लायक: i की कोई भी four consecutive powers add होकर ज़ीरो बन जाती हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "क्यों? पहली power factor out करिए, बचता है one plus i plus i square plus i cube, जो है one plus i minus one minus i, बिलकुल ज़ीरो। इससे लंबे sums तुरंत collapse करिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "The root-of-negatives trap",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A trap: root a times root b can fail"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "The rule $\\sqrt{a}\\,\\sqrt{b}=\\sqrt{ab}$ holds for real $a,b$ only when they are NOT both negative."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "style": "red-margin",
+          "text": "$\\sqrt{-2}\\,\\sqrt{-3}=-\\sqrt{6}$, not $+\\sqrt{6}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\sqrt{-2}\\,\\sqrt{-3}=(i\\sqrt{2})(i\\sqrt{3})=i^{2}\\sqrt{6}=-\\sqrt{6}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Always convert each root of a negative to $i$ times a root of a positive first."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\sqrt{-4}\\cdot\\sqrt{-9}=(2i)(3i)=6i^{2}=-6"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "text": "The naive $\\sqrt{(-4)(-9)}=\\sqrt{36}=6$ is wrong — the sign flips."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 68,
+          "style": "red-margin",
+          "text": "Rule of thumb: strip the $i$ out first, then simplify."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a trap that costs marks in every exam. The familiar rule that root a times root b equals root a b is not universal."
+            },
+            {
+              "seq": 2,
+              "text": "It holds for real numbers a and b only when they are not both negative. The moment both are negative, the rule breaks."
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>Here's the secret exam catch:</whisper> root of minus two times root of minus three is minus root six, not plus root six."
+            },
+            {
+              "seq": 4,
+              "text": "Watch the honest calculation. Root of minus two is i root two, root of minus three is i root three. Multiply them and you get i squared times root six, and i squared is minus one, so the answer is minus root six."
+            },
+            {
+              "seq": 5,
+              "text": "So the safe habit is: convert each square root of a negative into i times the square root of a positive before you multiply anything."
+            },
+            {
+              "seq": 6,
+              "text": "Another one: root minus four times root minus nine. Write it as two i times three i, which is six i squared, equal to minus six."
+            },
+            {
+              "seq": 7,
+              "text": "If you had naively multiplied the negatives under one root, you'd get root of thirty six equals six. That is wrong. The correct answer carries a minus sign."
+            },
+            {
+              "seq": 8,
+              "text": "So the rule of thumb is simple: strip the i out first, then simplify. Never combine two negative radicands under a single root."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ab ek trap jo har exam mein marks le jaata hai. Ye familiar rule ki root a times root b equals root a b, universal nahi hai."
+            },
+            {
+              "seq": 2,
+              "text": "Ye real numbers a aur b ke liye tabhi valid hai jab wo dono negative na hon. Jaise hi dono negative hue, rule toot jaata hai."
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>Ye raha exam ka chhupa hua catch:</whisper> root of minus two times root of minus three is minus root six, plus root six nahi."
+            },
+            {
+              "seq": 4,
+              "text": "Sahi calculation dekho. Root of minus two hai i root two, root of minus three hai i root three. Multiply karo to milta hai i squared times root six, aur i squared is minus one, to answer hai minus root six."
+            },
+            {
+              "seq": 5,
+              "text": "To safe habit ye hai: multiply karne se pehle har square root of a negative ko i times square root of a positive mein convert karo."
+            },
+            {
+              "seq": 6,
+              "text": "Ek aur: root minus four times root minus nine. Isko likho two i times three i, jo hai six i squared, barabar minus six."
+            },
+            {
+              "seq": 7,
+              "text": "Agar aap ne naively negatives ko ek hi root ke neeche multiply kiya, to milega root of thirty six equals six. Ye galat hai. Sahi answer mein minus sign aata hai."
+            },
+            {
+              "seq": 8,
+              "text": "To rule of thumb simple hai: pehle i ko bahar nikaalo, phir simplify karo. Do negative radicands ko kabhi ek root ke neeche mat milao."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक trap जो हर exam में marks ले जाता है। यह familiar rule कि root a times root b बराबर root a b, universal नहीं है।"
+            },
+            {
+              "seq": 2,
+              "text": "यह real numbers a और b के लिए तभी सही है जब वे दोनों negative न हों। जैसे ही दोनों negative हुए, rule टूट जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "<whisper>यह रहा exam का छिपा हुआ catch:</whisper> root of minus two times root of minus three बराबर minus root six, plus root six नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "सही calculation देखिए। Root of minus two है i root two, root of minus three है i root three। Multiply करो तो मिलता है i square times root six, और i square is minus one, तो answer है minus root six।"
+            },
+            {
+              "seq": 5,
+              "text": "तो safe आदत यह है: multiply करने से पहले हर square root of a negative को i times square root of a positive में convert करो।"
+            },
+            {
+              "seq": 6,
+              "text": "एक और: root minus four times root minus nine। इसे लिखो two i times three i, जो है six i square, बराबर minus six।"
+            },
+            {
+              "seq": 7,
+              "text": "अगर आपने negatives को एक ही root के नीचे multiply किया, तो मिलेगा root of thirty six बराबर six। यह गलत है। सही answer में minus sign आता है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो rule of thumb आसान है: पहले i को बाहर निकालो, फिर simplify करो। दो negative radicands को कभी एक root के नीचे मत मिलाओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "Anatomy of a complex number",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "z = a + ib: real and imaginary parts"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "z=a+ib,\\qquad a,b\\in\\mathbb{R}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "$a=\\operatorname{Re}(z)$ is the real part; $b=\\operatorname{Im}(z)$ is the imaginary part."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "$\\operatorname{Im}(z)=b$, a real number — not $ib$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "$z$ is purely real if $b=0$; purely imaginary if $a=0$ and $b\\neq 0$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "\\mathbb{N}\\subset\\mathbb{W}\\subset\\mathbb{Z}\\subset\\mathbb{Q}\\subset\\mathbb{R}\\subset\\mathbb{C}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Order is undefined on $\\mathbb{C}$: '$9+6i>3+2i$' is meaningless."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "You may compare real numbers, and compare moduli, but never two non-real complex numbers with $<$ or $>$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's pin down the anatomy of a complex number precisely, because small definitional slips here cascade into every later subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "The standard form is z equals a plus i b, where both a and b are real numbers. That's the crucial part: a and b themselves live on the real line."
+            },
+            {
+              "seq": 3,
+              "text": "We call a the real part, written Re of z, and b the imaginary part, written Im of z."
+            },
+            {
+              "seq": 4,
+              "text": "Now the classic trap. The imaginary part of z is b, a plain real number. It is not i b. The i is not part of the imaginary part; only the coefficient b is."
+            },
+            {
+              "seq": 5,
+              "text": "Two special cases: z is purely real when b is zero, and purely imaginary when a is zero but b is not zero."
+            },
+            {
+              "seq": 6,
+              "text": "And complex numbers sit at the top of the whole nesting: naturals inside wholes inside integers inside rationals inside reals inside complex. Every real number is already a complex number with b equal to zero."
+            },
+            {
+              "seq": 7,
+              "text": "One more crucial fact. Order does not exist on the complex numbers. Writing nine plus six i is greater than three plus two i is simply meaningless."
+            },
+            {
+              "seq": 8,
+              "text": "You can compare two real numbers, and you can compare their moduli, which are real. But you can never put a less-than or greater-than between two non-real complex numbers."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Complex number ki anatomy ko theek se pin karte hain, kyunki yahan chhoti definitional galtiyan har baad wale subtopic mein cascade karti hain."
+            },
+            {
+              "seq": 2,
+              "text": "Standard form hai z equals a plus i b, jahan a aur b dono real numbers hain. Yehi crucial baat hai: a aur b khud real line par rehte hain."
+            },
+            {
+              "seq": 3,
+              "text": "a ko hum real part kehte hain, likha Re of z, aur b ko imaginary part, likha Im of z."
+            },
+            {
+              "seq": 4,
+              "text": "Ab classic trap. z ka imaginary part hai b, ek plain real number. Ye i b nahi hai. i imaginary part ka hissa nahi hai; sirf coefficient b hai."
+            },
+            {
+              "seq": 5,
+              "text": "Do special cases: z purely real hai jab b zero ho, aur purely imaginary jab a zero ho par b zero na ho."
+            },
+            {
+              "seq": 6,
+              "text": "Aur complex numbers poore nesting ke top par baithte hain: naturals inside wholes inside integers inside rationals inside reals inside complex. Har real number pehle se hi ek complex number hai jiska b zero hai."
+            },
+            {
+              "seq": 7,
+              "text": "Ek aur crucial fact. Complex numbers par order exist hi nahi karta. Nine plus six i is greater than three plus two i likhna bilkul meaningless hai."
+            },
+            {
+              "seq": 8,
+              "text": "Aap do real numbers compare kar sakte ho, aur unke moduli compare kar sakte ho, jo real hain. Par do non-real complex numbers ke beech less-than ya greater-than kabhi nahi laga sakte."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Complex number की रचना को ठीक से समझते हैं, क्योंकि यहां छोटी definitional गलतियां हर बाद वाले subtopic में cascade करती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Standard form है z बराबर a प्लस i b, जहां a और b दोनों real numbers हैं। यही अहम बात है: a और b खुद real line पर रहते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "a को हम real part कहते हैं, लिखा Re of z, और b को imaginary part, लिखा Im of z।"
+            },
+            {
+              "seq": 4,
+              "text": "अब classic trap। z का imaginary part है b, एक plain real number। यह i b नहीं है। i imaginary part का हिस्सा नहीं है; सिर्फ coefficient b है।"
+            },
+            {
+              "seq": 5,
+              "text": "दो special cases: z purely real है जब b ज़ीरो हो, और purely imaginary जब a ज़ीरो हो पर b ज़ीरो न हो।"
+            },
+            {
+              "seq": 6,
+              "text": "और complex numbers पूरे nesting के टॉप पर बैठते हैं: naturals inside wholes inside integers inside rationals inside reals inside complex। हर real number पहले से ही एक complex number है जिसका b ज़ीरो है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक और अहम बात। Complex numbers पर order exist ही नहीं करता। Nine plus six i is greater than three plus two i लिखना बिलकुल meaningless है।"
+            },
+            {
+              "seq": 8,
+              "text": "आप दो real numbers compare कर सकते हो, और उनके moduli compare कर सकते हो, जो real हैं। पर दो non-real complex numbers के बीच less-than या greater-than कभी नहीं लगा सकते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "Equality needs two conditions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "When are two complex numbers equal?"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "a+ib=c+id \\iff a=c \\ \\text{and}\\ b=d"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Two addresses match only if BOTH coordinates agree."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "Satisfying only one equation is the partial-equality error."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "One complex equation therefore becomes TWO real equations."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Standard Method B: for $A+iB=C+iD$ in real unknowns, set $A=C$ and $B=D$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "You then solve the two simultaneous real equations for the real unknowns."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Match real-to-real and imaginary-to-imaginary — never mix them."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "When do we say two complex numbers are equal? This looks trivial but it hides the single most-tested technique of the subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "a plus i b equals c plus i d if and only if a equals c and b equals d. Both conditions, joined by and, are required."
+            },
+            {
+              "seq": 3,
+              "text": "Go back to the address analogy: two addresses name the same place only when both the east coordinate and the north coordinate agree. One matching coordinate is not enough."
+            },
+            {
+              "seq": 4,
+              "text": "That's exactly where students lose marks: they satisfy only the real part or only the imaginary part. That's the partial-equality error, and it's an easy trap to fall into under time pressure."
+            },
+            {
+              "seq": 5,
+              "text": "The upside is powerful: a single complex equation quietly hands you two real equations for free."
+            },
+            {
+              "seq": 6,
+              "text": "This is Standard Method B. Given some expression A plus i B equals C plus i D in real unknowns, you set A equal to C, and separately B equal to D."
+            },
+            {
+              "seq": 7,
+              "text": "Now you have two ordinary simultaneous real equations, and you solve them for your real unknowns like any system from earlier algebra."
+            },
+            {
+              "seq": 8,
+              "text": "Just remember the discipline: match real part to real part, and imaginary part to imaginary part. Never let a real term equal an imaginary term."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Do complex numbers ko equal kab kehte hain? Ye trivial lagta hai par isme subtopic ki sabse zyada test hone wali technique chhupi hai."
+            },
+            {
+              "seq": 2,
+              "text": "a plus i b equals c plus i d if and only if a equals c aur b equals d. Dono conditions, and se judi, zaroori hain."
+            },
+            {
+              "seq": 3,
+              "text": "Address analogy par wapas: do addresses ek hi jagah ko tabhi naam dete hain jab east coordinate aur north coordinate dono match karein. Ek coordinate match karna kaafi nahi."
+            },
+            {
+              "seq": 4,
+              "text": "Yehi wo jagah hai jahan students marks khote hain: wo sirf real part ya sirf imaginary part satisfy karte hain. Ye partial-equality error hai, aur time pressure mein aasani se ho jaata hai."
+            },
+            {
+              "seq": 5,
+              "text": "Faayda powerful hai: ek single complex equation chupke se aapko do real equations muft mein de deti hai."
+            },
+            {
+              "seq": 6,
+              "text": "Ye hai Standard Method B. Kisi expression A plus i B equals C plus i D mein, real unknowns ke saath, aap A ko C ke barabar, aur alag se B ko D ke barabar set karo."
+            },
+            {
+              "seq": 7,
+              "text": "Ab aapke paas do ordinary simultaneous real equations hain, aur unhe apne real unknowns ke liye solve karo, jaise koi bhi purana algebra system."
+            },
+            {
+              "seq": 8,
+              "text": "Bas discipline yaad rakho: real part ko real part se, aur imaginary part ko imaginary part se match karo. Kabhi real term ko imaginary term ke barabar mat karo."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो complex numbers को equal कब कहते हैं? यह trivial लगता है पर इसमें subtopic की सबसे ज़्यादा test होने वाली technique छिपी है।"
+            },
+            {
+              "seq": 2,
+              "text": "a plus i b बराबर c plus i d if and only if a बराबर c और b बराबर d। दोनों conditions, and से जुड़ी, जरूरी हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Address analogy पर वापस: दो addresses एक ही जगह को तभी नाम देते हैं जब east coordinate और north coordinate दोनों match करें। एक coordinate match करना काफी नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "यही वह जगह है जहां students marks खोते हैं: वे सिर्फ real part या सिर्फ imaginary part satisfy करते हैं। यह partial-equality error है, और time pressure में आसानी से हो जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "फायदा powerful है: एक single complex equation चुपके से आपको दो real equations मुफ्त में दे देती है।"
+            },
+            {
+              "seq": 6,
+              "text": "यह है Standard Method B। किसी expression A plus i B बराबर C plus i D में, real unknowns के साथ, आप A को C के बराबर, और अलग से B को D के बराबर set करो।"
+            },
+            {
+              "seq": 7,
+              "text": "अब आपके पास दो ordinary simultaneous real equations हैं, और उन्हें अपने real unknowns के लिए solve करो।"
+            },
+            {
+              "seq": 8,
+              "text": "बस discipline याद रखो: real part को real part से, और imaginary part को imaginary part से match करो। कभी real term को imaginary term के बराबर मत करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "formulas",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "The four operations and the inverse",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Arithmetic of a + ib"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "z_1+z_2=(a+c)+i(b+d)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "latex": "z_1-z_2=(a-c)+i(b-d)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 23,
+          "latex": "z_1 z_2=(ac-bd)+i(ad+bc)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Multiply like two binomials, replace $i^2$ with $-1$, then collect."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "latex": "\\frac{z_1}{z_2}=\\frac{(ac+bd)+i(bc-ad)}{c^{2}+d^{2}}\\quad (z_2\\neq 0)"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "text": "For division, multiply top and bottom by $c-id$ so the denominator becomes the real number $c^2+d^2$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "latex": "z^{-1}=\\frac{a-ib}{a^{2}+b^{2}}\\quad (z\\neq 0)"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 73,
+          "style": "red-margin",
+          "text": "Leaving a complex denominator is not standard form."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's gather the four operations in one place — this is the machinery every later subtopic assumes is automatic."
+            },
+            {
+              "seq": 2,
+              "text": "Addition is easy: add the real parts and add the imaginary parts. z one plus z two is a plus c, all plus i times b plus d."
+            },
+            {
+              "seq": 3,
+              "text": "Subtraction is the same idea with minus signs: a minus c, plus i times b minus d."
+            },
+            {
+              "seq": 4,
+              "text": "Multiplication is where i earns its keep. z one times z two equals a c minus b d, plus i times a d plus b c."
+            },
+            {
+              "seq": 5,
+              "text": "You don't memorize that as a formula; you just multiply the two brackets like ordinary binomials, replace i squared by minus one wherever it appears, and collect real and imaginary parts."
+            },
+            {
+              "seq": 6,
+              "text": "Division is the interesting one. z one over z two equals a c plus b d, plus i times b c minus a d, all over c squared plus d squared."
+            },
+            {
+              "seq": 7,
+              "text": "The trick behind it: multiply top and bottom by c minus i d. That turns the denominator into the real number c squared plus d squared, and now you can split into real and imaginary parts cleanly."
+            },
+            {
+              "seq": 8,
+              "text": "The multiplicative inverse is just one over z: it equals a minus i b over a squared plus b squared, valid whenever z is not zero."
+            },
+            {
+              "seq": 9,
+              "text": "And a standing rule for the whole chapter: never leave a complex number sitting in a denominator. An answer with a complex denominator is not in standard form."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chaaron operations ek jagah rakhte hain — ye wo machinery hai jo har baad wale subtopic automatic maanta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Addition aasan hai: real parts add karo aur imaginary parts add karo. z one plus z two hai a plus c, poora plus i times b plus d."
+            },
+            {
+              "seq": 3,
+              "text": "Subtraction wahi idea minus signs ke saath: a minus c, plus i times b minus d."
+            },
+            {
+              "seq": 4,
+              "text": "Multiplication mein i apni keemat vasool karta hai. z one times z two barabar a c minus b d, plus i times a d plus b c."
+            },
+            {
+              "seq": 5,
+              "text": "Isko formula ki tarah rattne ki zaroorat nahi; bas dono brackets ko ordinary binomials ki tarah multiply karo, jahan i square dikhe use minus one se replace karo, aur real aur imaginary parts collect karo."
+            },
+            {
+              "seq": 6,
+              "text": "Division interesting hai. z one over z two barabar a c plus b d, plus i times b c minus a d, poora over c square plus d square."
+            },
+            {
+              "seq": 7,
+              "text": "Iske peeche trick: top aur bottom ko c minus i d se multiply karo. Isse denominator ban jaata hai real number c square plus d square, aur ab aap real aur imaginary parts cleanly alag kar sakte ho."
+            },
+            {
+              "seq": 8,
+              "text": "Multiplicative inverse bas one over z hai: barabar a minus i b over a square plus b square, valid jab bhi z zero na ho."
+            },
+            {
+              "seq": 9,
+              "text": "Aur poore chapter ke liye ek pakka rule: complex number ko kabhi denominator mein mat chhodo. Complex denominator wala answer standard form mein nahi hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चारों operations एक जगह रखते हैं — यह वह machinery है जो हर बाद वाले subtopic automatic मानता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Addition आसान है: real parts add करो और imaginary parts add करो। z one plus z two है a plus c, पूरा plus i times b plus d।"
+            },
+            {
+              "seq": 3,
+              "text": "Subtraction वही idea minus signs के साथ: a minus c, plus i times b minus d।"
+            },
+            {
+              "seq": 4,
+              "text": "Multiplication में i अपनी कीमत वसूल करता है। z one times z two बराबर a c minus b d, plus i times a d plus b c।"
+            },
+            {
+              "seq": 5,
+              "text": "इसे formula की तरह रटने की जरूरत नहीं; बस दोनों brackets को ordinary binomials की तरह multiply करो, जहां i square दिखे उसे minus one से replace करो, और real और imaginary parts collect करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Division interesting है। z one over z two बराबर a c plus b d, plus i times b c minus a d, पूरा over c square plus d square।"
+            },
+            {
+              "seq": 7,
+              "text": "इसके पीछे trick: top और bottom को c minus i d से multiply करो। इससे denominator बन जाता है real number c square plus d square, और अब आप real और imaginary parts साफ़ अलग कर सकते हो।"
+            },
+            {
+              "seq": 8,
+              "text": "Multiplicative inverse बस one over z है: बराबर a minus i b over a square plus b square, valid जब भी z ज़ीरो न हो।"
+            },
+            {
+              "seq": 9,
+              "text": "और पूरे chapter के लिए एक पक्का rule: complex number को कभी denominator में मत छोड़ो। Complex denominator वाला answer standard form में नहीं है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "Worked: arithmetic and powers of i",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Warm-up: add, multiply, powers of i"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$(3+2i)+(-6+5i)$: add the parts to get $-3+7i$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "(2+3i)(1-4i)=2-8i+3i-12i^{2}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Replace $i^2=-1$: $=2-5i+12=14-5i$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "i^{135}+i^{-50}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "$135=4\\times 33+3\\Rightarrow i^{135}=i^{3}=-i$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "i^{-50}=i^{-50+52}=i^{2}=-1"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Sum $=-1-i$. Divide the exponent by 4, keep the remainder."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's put the arithmetic to work on a few quick examples, board level building up to the powers of i."
+            },
+            {
+              "seq": 2,
+              "text": "First, a pure addition. Three plus two i, plus minus six plus five i. Add real to real, imaginary to imaginary: minus three plus seven i. Done."
+            },
+            {
+              "seq": 3,
+              "text": "Now a product: two plus three i, times one minus four i. Expand it like any binomial: two, minus eight i, plus three i, minus twelve i squared."
+            },
+            {
+              "seq": 4,
+              "text": "Replace i squared with minus one, so minus twelve i squared becomes plus twelve. Collect: two plus twelve is fourteen, and minus eight i plus three i is minus five i. The answer is fourteen minus five i."
+            },
+            {
+              "seq": 5,
+              "text": "Next, powers. Evaluate i to the one hundred thirty five plus i to the minus fifty."
+            },
+            {
+              "seq": 6,
+              "text": "For the first, one hundred thirty five divided by four leaves remainder three, so i to the one hundred thirty five is i cubed, which is minus i."
+            },
+            {
+              "seq": 7,
+              "text": "For the second, the exponent is negative, so add fifty two to reach a positive multiple structure: minus fifty plus fifty two is two. So i to the minus fifty equals i squared equals minus one."
+            },
+            {
+              "seq": 8,
+              "text": "Add them: minus one, minus i. Notice the whole method is just: divide the exponent by four and keep the remainder."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Arithmetic ko kuch quick examples par kaam pe lagate hain, board level se shuru karke powers of i tak."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle, pure addition. Three plus two i, plus minus six plus five i. Real ko real se, imaginary ko imaginary se add karo: minus three plus seven i. Ho gaya."
+            },
+            {
+              "seq": 3,
+              "text": "Ab ek product: two plus three i, times one minus four i. Kisi bhi binomial ki tarah expand karo: two, minus eight i, plus three i, minus twelve i squared."
+            },
+            {
+              "seq": 4,
+              "text": "i squared ko minus one se replace karo, to minus twelve i squared ban jaata hai plus twelve. Collect: two plus twelve is fourteen, aur minus eight i plus three i is minus five i. Answer hai fourteen minus five i."
+            },
+            {
+              "seq": 5,
+              "text": "Aage, powers. Nikaalo i to the one hundred thirty five plus i to the minus fifty."
+            },
+            {
+              "seq": 6,
+              "text": "Pehle wale mein, one hundred thirty five ko four se divide karne par remainder three, to i to the one hundred thirty five hai i cube, yaani minus i."
+            },
+            {
+              "seq": 7,
+              "text": "Doosre mein exponent negative hai, to fifty two add karke positive banao: minus fifty plus fifty two is two. To i to the minus fifty barabar i square barabar minus one."
+            },
+            {
+              "seq": 8,
+              "text": "Add karo: minus one, minus i. Dhyaan do, poora method bas ye hai: exponent ko four se divide karo aur remainder rakho."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Arithmetic को कुछ quick examples पर काम पे लगाते हैं, board level से शुरू करके powers of i तक।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले, pure addition। Three plus two i, plus minus six plus five i। Real को real से, imaginary को imaginary से add करो: minus three plus seven i। हो गया।"
+            },
+            {
+              "seq": 3,
+              "text": "अब एक product: two plus three i, times one minus four i। किसी भी binomial की तरह expand करो: two, minus eight i, plus three i, minus twelve i square।"
+            },
+            {
+              "seq": 4,
+              "text": "i square को minus one से replace करो, तो minus twelve i square बन जाता है plus twelve। Collect: two plus twelve is fourteen, और minus eight i plus three i is minus five i। Answer है fourteen minus five i।"
+            },
+            {
+              "seq": 5,
+              "text": "आगे, powers। निकालो i to the one hundred thirty five plus i to the minus fifty।"
+            },
+            {
+              "seq": 6,
+              "text": "पहले वाले में, one hundred thirty five को four से divide करने पर remainder three, तो i to the one hundred thirty five है i cube, यानी minus i।"
+            },
+            {
+              "seq": 7,
+              "text": "दूसरे में exponent negative है, तो fifty two add करके positive बनाओ: minus fifty plus fifty two is two। तो i to the minus fifty बराबर i square बराबर minus one।"
+            },
+            {
+              "seq": 8,
+              "text": "Add करो: minus one, minus i। ध्यान दो, पूरा method बस ये है: exponent को four से divide करो और remainder रखो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "Worked: equating real and imaginary parts",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Solve by equating parts"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Find real $x,y$ if $4x+i(3x-y)=3+i(-6)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Match real parts: $4x=3$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "Match imaginary parts: $3x-y=-6$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "latex": "4x=3 \\ \\Rightarrow\\ x=\\tfrac{3}{4}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "latex": "y=3x+6=\\tfrac{9}{4}+6=\\tfrac{33}{4}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Two real equations from one complex equation."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Answer: $x=\\tfrac{3}{4}$ and $y=\\tfrac{33}{4}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is Method B in action — turning one complex equation into two real ones and solving."
+            },
+            {
+              "seq": 2,
+              "text": "We're told, for real x and y, that four x plus i times three x minus y equals three plus i times minus six."
+            },
+            {
+              "seq": 3,
+              "text": "Match the real parts on both sides. On the left the real part is four x; on the right it is three. So four x equals three."
+            },
+            {
+              "seq": 4,
+              "text": "Now match the imaginary parts. On the left the imaginary part is three x minus y; on the right it is minus six. So three x minus y equals minus six."
+            },
+            {
+              "seq": 5,
+              "text": "From the first equation, x is three over four."
+            },
+            {
+              "seq": 6,
+              "text": "Substitute into the second: y equals three x plus six, which is nine over four plus six, giving thirty three over four."
+            },
+            {
+              "seq": 7,
+              "text": "Notice what happened: one complex equation split cleanly into two real equations, and each unknown fell out."
+            },
+            {
+              "seq": 8,
+              "text": "So the answer is x equals three over four and y equals thirty three over four."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye raha Method B action mein — ek complex equation ko do real equations mein badalna aur solve karna."
+            },
+            {
+              "seq": 2,
+              "text": "Humein bola gaya, real x aur y ke liye, ki four x plus i times three x minus y equals three plus i times minus six."
+            },
+            {
+              "seq": 3,
+              "text": "Dono taraf ke real parts match karo. Left par real part hai four x; right par three. To four x equals three."
+            },
+            {
+              "seq": 4,
+              "text": "Ab imaginary parts match karo. Left par imaginary part hai three x minus y; right par minus six. To three x minus y equals minus six."
+            },
+            {
+              "seq": 5,
+              "text": "Pehli equation se, x hai three over four."
+            },
+            {
+              "seq": 6,
+              "text": "Doosri mein substitute karo: y equals three x plus six, jo hai nine over four plus six, matlab thirty three over four."
+            },
+            {
+              "seq": 7,
+              "text": "Dekho kya hua: ek complex equation saaf do real equations mein bat gayi, aur har unknown nikal aaya."
+            },
+            {
+              "seq": 8,
+              "text": "To answer hai x equals three over four aur y equals thirty three over four."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा Method B action में — एक complex equation को दो real equations में बदलना और solve करना।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें बोला गया, real x और y के लिए, कि four x plus i times three x minus y बराबर three plus i times minus six।"
+            },
+            {
+              "seq": 3,
+              "text": "दोनों तरफ के real parts match करो। Left पर real part है four x; right पर three। तो four x बराबर three।"
+            },
+            {
+              "seq": 4,
+              "text": "अब imaginary parts match करो। Left पर imaginary part है three x minus y; right पर minus six। तो three x minus y बराबर minus six।"
+            },
+            {
+              "seq": 5,
+              "text": "पहली equation से, x है three over four।"
+            },
+            {
+              "seq": 6,
+              "text": "दूसरी में substitute करो: y बराबर three x plus six, जो है nine over four plus six, मतलब thirty three over four।"
+            },
+            {
+              "seq": 7,
+              "text": "देखो क्या हुआ: एक complex equation साफ़ दो real equations में बंट गई, और हर unknown निकल आया।"
+            },
+            {
+              "seq": 8,
+              "text": "तो answer है x बराबर three over four और y बराबर thirty three over four।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "Worked: inverse & the purely-real condition",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Inverse, and 'when is it purely real?'"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Inverse of $z=3-4i$: compute $a^2+b^2=9+16=25$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "z^{-1}=\\frac{3+4i}{25}=\\tfrac{3}{25}+\\tfrac{4}{25}i"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Check: $(3-4i)\\cdot\\dfrac{3+4i}{25}=\\dfrac{9+16}{25}=1.$"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "For real $\\theta$, when is $z=\\dfrac{3+2i\\sin\\theta}{1-2i\\sin\\theta}$ purely real?"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "z=\\frac{(3-4\\sin^{2}\\theta)+8i\\sin\\theta}{1+4\\sin^{2}\\theta}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Purely real means the imaginary part vanishes: $8\\sin\\theta=0$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "So $\\theta=n\\pi,\\ n\\in\\mathbb{Z}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two JEE-Main flavoured examples: a multiplicative inverse, then a purely-real condition."
+            },
+            {
+              "seq": 2,
+              "text": "For z equals three minus four i, the inverse formula needs a squared plus b squared. That's nine plus sixteen, which is twenty five."
+            },
+            {
+              "seq": 3,
+              "text": "So z inverse is the conjugate three plus four i over twenty five, which we write as three twenty-fifths plus four twenty-fifths i."
+            },
+            {
+              "seq": 4,
+              "text": "Always verify: multiply three minus four i by three plus four i over twenty five. The top is nine plus sixteen, twenty five over twenty five equals one. The inverse checks out."
+            },
+            {
+              "seq": 5,
+              "text": "Now the second question. For real theta, when is z equals three plus two i sine theta, over one minus two i sine theta, purely real?"
+            },
+            {
+              "seq": 6,
+              "text": "Clear the denominator by multiplying top and bottom by one plus two i sine theta. After simplifying, z becomes three minus four sine squared theta, plus eight i sine theta, all over one plus four sine squared theta."
+            },
+            {
+              "seq": 7,
+              "text": "For z to be purely real, its imaginary part must be zero. The imaginary numerator is eight sine theta, so we need eight sine theta equal to zero."
+            },
+            {
+              "seq": 8,
+              "text": "That forces sine theta equals zero, so theta is any integer multiple of pi. Clearing the denominator first is what made the imaginary part readable."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Do JEE-Main flavour ke examples: ek multiplicative inverse, phir ek purely-real condition."
+            },
+            {
+              "seq": 2,
+              "text": "z equals three minus four i ke liye, inverse formula ko chahiye a square plus b square. Wo hai nine plus sixteen, jo hai twenty five."
+            },
+            {
+              "seq": 3,
+              "text": "To z inverse hai conjugate three plus four i over twenty five, jise hum likhte hain three twenty-fifths plus four twenty-fifths i."
+            },
+            {
+              "seq": 4,
+              "text": "Hamesha verify karo: three minus four i ko three plus four i over twenty five se multiply karo. Top hai nine plus sixteen, twenty five over twenty five barabar one. Inverse sahi hai."
+            },
+            {
+              "seq": 5,
+              "text": "Ab doosra sawaal. Real theta ke liye, z equals three plus two i sine theta, over one minus two i sine theta, kab purely real hai?"
+            },
+            {
+              "seq": 6,
+              "text": "Denominator clear karo, top aur bottom ko one plus two i sine theta se multiply karke. Simplify karne ke baad, z ban jaata hai three minus four sine square theta, plus eight i sine theta, poora over one plus four sine square theta."
+            },
+            {
+              "seq": 7,
+              "text": "z ke purely real hone ke liye, uska imaginary part zero hona chahiye. Imaginary numerator hai eight sine theta, to humein chahiye eight sine theta barabar zero."
+            },
+            {
+              "seq": 8,
+              "text": "Isse sine theta barabar zero, to theta hai pi ka koi bhi integer multiple. Pehle denominator clear karna hi imaginary part ko readable banata hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो JEE-Main flavour के examples: एक multiplicative inverse, फिर एक purely-real condition।"
+            },
+            {
+              "seq": 2,
+              "text": "z बराबर three minus four i के लिए, inverse formula को चाहिए a square plus b square। वो है nine plus sixteen, जो है twenty five।"
+            },
+            {
+              "seq": 3,
+              "text": "तो z inverse है conjugate three plus four i over twenty five, जिसे हम लिखते हैं three twenty-fifths plus four twenty-fifths i।"
+            },
+            {
+              "seq": 4,
+              "text": "हमेशा verify करो: three minus four i को three plus four i over twenty five से multiply करो। Top है nine plus sixteen, twenty five over twenty five बराबर one। Inverse सही है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब दूसरा सवाल। Real theta के लिए, z बराबर three plus two i sine theta, over one minus two i sine theta, कब purely real है?"
+            },
+            {
+              "seq": 6,
+              "text": "Denominator clear करो, top और bottom को one plus two i sine theta से multiply करके। Simplify करने के बाद, z बन जाता है three minus four sine square theta, plus eight i sine theta, पूरा over one plus four sine square theta।"
+            },
+            {
+              "seq": 7,
+              "text": "z के purely real होने के लिए, उसका imaginary part ज़ीरो होना चाहिए। Imaginary numerator है eight sine theta, तो हमें चाहिए eight sine theta बराबर ज़ीरो।"
+            },
+            {
+              "seq": 8,
+              "text": "इससे sine theta बराबर ज़ीरो, तो theta है pi का कोई भी integer multiple। पहले denominator clear करना ही imaginary part को readable बनाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "Worked (JEE Advanced): big sums and powers",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Advanced: collapse with the period-4 trick"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "S=\\sum_{n=1}^{100} i^{\\,n!}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "For $n\\ge 4$, $n!$ is a multiple of 4, so $i^{n!}=1$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "First three terms: $i^{1!}=i$, $i^{2!}=i^{2}=-1$, $i^{3!}=i^{6}=-1$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "S=(i-1-1)+\\underbrace{(1+\\cdots+1)}_{97}=95+i"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Next: least positive $m$ with $\\left(\\dfrac{1+i}{1-i}\\right)^{m}=1$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\frac{1+i}{1-i}=\\frac{(1+i)^{2}}{2}=\\frac{2i}{2}=i"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "So $i^{m}=1$; least positive $m=4$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Now two Advanced-tier problems that look scary but collapse instantly once you use the period-four idea.</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "Evaluate the sum S, of i to the power n factorial, as n runs from one to one hundred."
+            },
+            {
+              "seq": 3,
+              "text": "Key observation: as soon as n is four or more, n factorial contains the factor four, so it's a multiple of four, and i to that power is just one."
+            },
+            {
+              "seq": 4,
+              "text": "So only the first three terms are interesting. i to the one factorial is i. i to the two factorial is i squared, minus one. i to the three factorial is i to the six, which is minus one."
+            },
+            {
+              "seq": 5,
+              "text": "So the sum is i minus one minus one, from the first three terms, plus ninety seven ones from the rest. That's i minus two plus ninety seven, which is ninety five plus i."
+            },
+            {
+              "seq": 6,
+              "text": "Second problem: find the least positive integer m for which one plus i over one minus i, all to the power m, equals one."
+            },
+            {
+              "seq": 7,
+              "text": "Simplify the base first. Multiply top and bottom to get one plus i squared over two, which is two i over two, exactly i."
+            },
+            {
+              "seq": 8,
+              "text": "So the condition becomes i to the m equals one, true precisely when m is a multiple of four. The least positive value is four."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Ab do Advanced-tier problems jo scary lagte hain par period-four idea use karte hi turant collapse ho jaate hain.</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "Sum S nikaalo, i to the power n factorial ka, jahan n one se one hundred tak chalta hai."
+            },
+            {
+              "seq": 3,
+              "text": "Key observation: jaise hi n four ya zyada hota hai, n factorial mein factor four aa jaata hai, to wo multiple of four hai, aur i us power par bas one hai."
+            },
+            {
+              "seq": 4,
+              "text": "To sirf pehle teen terms interesting hain. i to the one factorial hai i. i to the two factorial hai i square, minus one. i to the three factorial hai i to the six, jo hai minus one."
+            },
+            {
+              "seq": 5,
+              "text": "To sum hai i minus one minus one, pehle teen terms se, plus ninety seven ones baaki se. Wo hai i minus two plus ninety seven, jo hai ninety five plus i."
+            },
+            {
+              "seq": 6,
+              "text": "Doosra problem: wo least positive integer m nikaalo jiske liye one plus i over one minus i, poora to the power m, barabar one ho."
+            },
+            {
+              "seq": 7,
+              "text": "Pehle base simplify karo. Top aur bottom multiply karke milta hai one plus i square over two, jo hai two i over two, bilkul i."
+            },
+            {
+              "seq": 8,
+              "text": "To condition ban jaati hai i to the m barabar one, jo tabhi sach hai jab m multiple of four ho. Least positive value hai four."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>अब दो Advanced-tier problems जो scary लगते हैं पर period-four idea use करते ही तुरंत collapse हो जाते हैं।</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "Sum S निकालो, i to the power n factorial का, जहां n one से one hundred तक चलता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Key observation: जैसे ही n four या ज़्यादा होता है, n factorial में factor four आ जाता है, तो वो multiple of four है, और i उस power पर बस one है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो सिर्फ पहले तीन terms interesting हैं। i to the one factorial है i। i to the two factorial है i square, minus one। i to the three factorial है i to the six, जो है minus one।"
+            },
+            {
+              "seq": 5,
+              "text": "तो sum है i minus one minus one, पहले तीन terms से, plus ninety seven ones बाकी से। वो है i minus two plus ninety seven, जो है ninety five plus i।"
+            },
+            {
+              "seq": 6,
+              "text": "दूसरा problem: वो least positive integer m निकालो जिसके लिए one plus i over one minus i, पूरा to the power m, बराबर one हो।"
+            },
+            {
+              "seq": 7,
+              "text": "पहले base simplify करो। Top और bottom multiply करके मिलता है one plus i square over two, जो है two i over two, बिलकुल i।"
+            },
+            {
+              "seq": 8,
+              "text": "तो condition बन जाती है i to the m बराबर one, जो तभी सच है जब m multiple of four हो। Least positive value है four।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "tips",
+      "subtopic": "Algebra of Complex Numbers",
+      "title": "Pitfalls & pro-tips: algebra of complex numbers",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Traps to avoid, shortcuts to keep"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "Replace $i^2$ with $-1$ immediately — never leave it."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Don't combine roots of negatives directly; strip the $i$ out first."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "$\\operatorname{Im}(z)=b$, not $bi$; and never write $<,>$ between non-real complex numbers."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Always rationalize: multiply by the conjugate so the denominator is real."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Pro-tip: for $i^n$ only $n\\bmod 4$ matters; any four consecutive powers cancel."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Memorize $(1+i)^2=2i$ and $(1-i)^2=-2i$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "To test purely real or imaginary, clear the denominator first, then see which part must vanish."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lock in the traps and shortcuts for this whole subtopic, because clean arithmetic here saves time everywhere later."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, and the biggest: the moment i squared appears, replace it with minus one. Leaving i squared un-simplified, or worse treating it as plus one, is the most common slip."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: don't combine two roots of negatives directly. Root minus two times root minus three is not root six. Strip the i out of each first, then multiply."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: the imaginary part is the real number b, never b i. And you can't order complex numbers, so never write a less-than or greater-than between two non-real ones."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: always rationalize. Multiply by the conjugate so the denominator becomes real; a complex denominator is not a finished answer."
+            },
+            {
+              "seq": 6,
+              "text": "Now the shortcuts. For any power of i, only the exponent modulo four matters, and any four consecutive powers of i add to zero, which collapses long sums."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>And a quiet exam secret:</whisper> memorize that one plus i squared is two i, and one minus i squared is minus two i. They shortcut a huge number of power problems."
+            },
+            {
+              "seq": 8,
+              "text": "Last shortcut: to test whether an expression is purely real or purely imaginary, clear the denominator first, then just read off which part is forced to vanish."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Is poore subtopic ke traps aur shortcuts lock kar lete hain, kyunki yahan clean arithmetic aage har jagah time bachati hai."
+            },
+            {
+              "seq": 2,
+              "text": "Trap ek, aur sabse bada: jaise hi i square aaye, use minus one se replace karo. i square ko un-simplified chhodna, ya usse bhi bura plus one maanna, sabse common slip hai."
+            },
+            {
+              "seq": 3,
+              "text": "Trap do: do roots of negatives ko directly combine mat karo. Root minus two times root minus three, root six nahi hai. Pehle har ek se i bahar nikaalo, phir multiply karo."
+            },
+            {
+              "seq": 4,
+              "text": "Trap teen: imaginary part real number b hai, kabhi b i nahi. Aur complex numbers ko order nahi kar sakte, to do non-real ke beech less-than ya greater-than kabhi mat likho."
+            },
+            {
+              "seq": 5,
+              "text": "Trap chaar: hamesha rationalize karo. Conjugate se multiply karo taaki denominator real ban jaaye; complex denominator finished answer nahi hai."
+            },
+            {
+              "seq": 6,
+              "text": "Ab shortcuts. i ki kisi bhi power ke liye sirf exponent modulo four matter karta hai, aur i ki koi bhi four consecutive powers add hoke zero, jo lambe sums collapse karti hai."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Aur ek chupa exam secret:</whisper> yaad rakho ki one plus i square hai two i, aur one minus i square hai minus two i. Ye bahut saare power problems shortcut karte hain."
+            },
+            {
+              "seq": 8,
+              "text": "Aakhri shortcut: kisi expression ko purely real ya imaginary test karne ke liye pehle denominator clear karo, phir bas dekho kaun sa part vanish hone par majboor hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस पूरे subtopic के traps और shortcuts lock कर लेते हैं, क्योंकि यहां clean arithmetic आगे हर जगह time बचाती है।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap एक, और सबसे बड़ा: जैसे ही i square आए, उसे minus one से replace करो। i square को un-simplified छोड़ना, या उससे भी बुरा plus one मानना, सबसे common slip है।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap दो: दो roots of negatives को directly combine मत करो। Root minus two times root minus three, root six नहीं है। पहले हर एक से i बाहर निकालो, फिर multiply करो।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap तीन: imaginary part real number b है, कभी b i नहीं। और complex numbers को order नहीं कर सकते, तो दो non-real के बीच less-than या greater-than कभी मत लिखो।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap चार: हमेशा rationalize करो। Conjugate से multiply करो ताकि denominator real बन जाए; complex denominator finished answer नहीं है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब shortcuts। i की किसी भी power के लिए सिर्फ exponent modulo four matter करता है, और i की कोई भी four consecutive powers add होकर ज़ीरो, जो लंबे sums collapse करती है।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>और एक छिपा exam secret:</whisper> याद रखो कि one plus i square है two i, और one minus i square है minus two i। ये बहुत सारे power problems shortcut करते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिरी shortcut: किसी expression को purely real या imaginary test करने के लिए पहले denominator clear करो, फिर बस देखो कौन सा part vanish होने पर मजबूर है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "The Modulus and the Conjugate of a Complex Number",
+      "title": "The conjugate: a mirror reflection",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The conjugate reflects across the real axis"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "\\bar z = a - ib"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "Only the sign of the imaginary part flips."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "Contrast the additive inverse $-z=-a-ib$: there BOTH signs flip."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "caption": "z and its conjugate mirror across the real axis",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 420 300' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='150' x2='390' y2='150' stroke='#555' stroke-width='1.5'/><line x1='150' y1='20' x2='150' y2='280' stroke='#555' stroke-width='1.5'/><text x='378' y='168' font-size='13' fill='#555'>Re</text><text x='158' y='30' font-size='13' fill='#555'>Im</text><line x1='150' y1='150' x2='300' y2='80' stroke='#1f6feb' stroke-width='2.5'/><circle cx='300' cy='80' r='4' fill='#1f6feb'/><text x='308' y='78' font-size='13' fill='#1f6feb'>z = a + ib</text><line x1='150' y1='150' x2='300' y2='220' stroke='#d29922' stroke-width='2.5' stroke-dasharray='5 3'/><circle cx='300' cy='220' r='4' fill='#d29922'/><text x='308' y='226' font-size='13' fill='#d29922'>z-bar = a - ib</text><line x1='300' y1='80' x2='300' y2='220' stroke='#999' stroke-width='1' stroke-dasharray='3 3'/><text x='60' y='120' font-size='12' fill='#1f6feb'>|z|</text><text x='150' y='300' font-size='11' fill='#777'>real axis = the waterline</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "A first-quadrant number has its conjugate in the fourth quadrant."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "latex": "z=\\bar z \\iff z\\ \\text{is purely real}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "text": "So $z=\\bar z$ exactly when $z$ sits on the real axis — the waterline."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "In the last subtopic the conjugate showed up only as a tool for division. Now we study it as an object in its own right."
+            },
+            {
+              "seq": 2,
+              "text": "The definition is simple. For z equals a plus i b, the conjugate, written z bar, is a minus i b."
+            },
+            {
+              "seq": 3,
+              "text": "Notice: only the sign of the imaginary part flips. The real part a stays exactly as it was."
+            },
+            {
+              "seq": 4,
+              "text": "Contrast this with the additive inverse, minus z, which is minus a minus i b. There both signs flip. Confusing the conjugate with minus z is a classic error."
+            },
+            {
+              "seq": 5,
+              "text": "<curious>Here's the picture.</curious> Imagine a temple beside a still water tank at dawn. The real axis is the waterline. The conjugate is the reflection of z below that waterline, sitting exactly as far below as z sits above."
+            },
+            {
+              "seq": 6,
+              "text": "Because only the vertical coordinate flips, a number in the first quadrant has its conjugate in the fourth quadrant, directly below it."
+            },
+            {
+              "seq": 7,
+              "text": "And here is a clean test: z equals its own conjugate if and only if z is purely real."
+            },
+            {
+              "seq": 8,
+              "text": "That makes sense from the picture: a point equals its reflection only when it lies right on the waterline, the real axis, with no height above or below."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Pichhle subtopic mein conjugate sirf division ke tool ki tarah aaya tha. Ab hum ise ek object ki tarah, apne aap mein, study karte hain."
+            },
+            {
+              "seq": 2,
+              "text": "Definition simple hai. z equals a plus i b ke liye, conjugate, likha z bar, hai a minus i b."
+            },
+            {
+              "seq": 3,
+              "text": "Dhyaan do: sirf imaginary part ka sign flip hota hai. Real part a bilkul waisa hi rehta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Ise additive inverse, minus z, se contrast karo, jo hai minus a minus i b. Wahan dono signs flip hote hain. Conjugate ko minus z se confuse karna ek classic error hai."
+            },
+            {
+              "seq": 5,
+              "text": "<curious>Ye rahi picture.</curious> Socho subah ek shaant paani ke tank ke paas ek mandir. Real axis hai waterline. Conjugate hai z ka reflection us waterline ke neeche, utna hi neeche jitna z upar hai."
+            },
+            {
+              "seq": 6,
+              "text": "Kyunki sirf vertical coordinate flip hota hai, first quadrant ka number apne conjugate ko fourth quadrant mein, theek uske neeche, paata hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aur ye raha ek clean test: z apne hi conjugate ke barabar hai if and only if z purely real ho."
+            },
+            {
+              "seq": 8,
+              "text": "Picture se sense banta hai: ek point apne reflection ke barabar tabhi hota hai jab wo theek waterline par ho, real axis par, bina kisi height ke upar ya neeche."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पिछ्ले subtopic में conjugate सिर्फ division के tool की तरह आया था। अब हम इसे एक object की तरह, अपने आप में, study करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Definition सिम्पल है। z बराबर a plus i b के लिए, conjugate, लिखा z bar, है a minus i b।"
+            },
+            {
+              "seq": 3,
+              "text": "ध्यान दो: सिर्फ imaginary part का sign flip होता है। Real part a बिलकुल वैसा ही रहता है।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे additive inverse, minus z, से contrast करो, जो है minus a minus i b। वहां दोनों signs flip होते हैं। Conjugate को minus z से confuse करना एक classic error है।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious>ये रही picture।</curious> सोचो सुबह एक शांत पानी के tank के पास एक मंदिर। Real axis है waterline। Conjugate है z का reflection उस waterline के नीचे, उतना ही नीचे जितना z ऊपर है।"
+            },
+            {
+              "seq": 6,
+              "text": "क्योंकि सिर्फ vertical coordinate flip होता है, first quadrant का number अपने conjugate को fourth quadrant में, ठीक उसके नीचे, पाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और ये रहा एक clean test: z अपने ही conjugate के बराबर है if and only if z purely real हो।"
+            },
+            {
+              "seq": 8,
+              "text": "Picture से sense बनता है: एक point अपने reflection के बराबर तभी होता है जब वो ठीक waterline पर हो, real axis पर, बिना किसी height के ऊपर या नीचे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "concept",
+      "subtopic": "The Modulus and the Conjugate of a Complex Number",
+      "title": "Conjugate properties",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "What the conjugate does to sums and products"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "\\overline{(\\bar z)}=z,\\quad z+\\bar z=2\\operatorname{Re}(z),\\quad z-\\bar z=2i\\operatorname{Im}(z)"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "Adding a number to its conjugate kills the imaginary part; subtracting kills the real part."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "latex": "z\\bar z = a^{2}+b^{2}=|z|^{2}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "text": "Multiplying a number by its mirror image gives a non-negative real — the squared distance."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "\\overline{z_1 z_2}=\\bar z_1\\,\\bar z_2,\\qquad \\overline{z_1\\pm z_2}=\\bar z_1\\pm\\bar z_2"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "style": "red-margin",
+          "text": "$\\overline{z_1 z_2}=\\bar z_1\\bar z_2$ — a product, NOT $\\bar z_1+\\bar z_2$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "text": "Likewise the conjugate of a quotient is the quotient of conjugates, and $\\overline{z^{n}}=(\\bar z)^{n}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The conjugate has a small toolkit of properties that make it powerful. Let's walk through them."
+            },
+            {
+              "seq": 2,
+              "text": "First, conjugating twice returns you to z. Adding z and its conjugate gives two times the real part. Subtracting gives two i times the imaginary part."
+            },
+            {
+              "seq": 3,
+              "text": "Read that intuitively: adding a number to its mirror image cancels the up-down parts and leaves twice the horizontal, while subtracting cancels the horizontal and leaves the vertical."
+            },
+            {
+              "seq": 4,
+              "text": "Now the star property: z times z bar equals a squared plus b squared, which is the modulus of z, squared."
+            },
+            {
+              "seq": 5,
+              "text": "This is magical because a complex times its mirror image produces a plain, non-negative real number, exactly the squared distance from the origin. That's the trick behind every division and every proof of realness."
+            },
+            {
+              "seq": 6,
+              "text": "Conjugation also plays nicely with operations: the conjugate of a product is the product of conjugates, and the conjugate of a sum or difference splits across the terms."
+            },
+            {
+              "seq": 7,
+              "text": "Watch the trap here: the conjugate of a product is z one bar times z two bar. It is a product of conjugates, not a sum of them."
+            },
+            {
+              "seq": 8,
+              "text": "And it extends: the conjugate of a quotient is the quotient of the conjugates, and the conjugate of a power is that power of the conjugate."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Conjugate ke paas properties ka ek chhota toolkit hai jo ise powerful banata hai. Chalo inpe chalte hain."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle, do baar conjugate karne se wapas z mil jaata hai. z aur uske conjugate ko add karne se milta hai two times real part. Subtract karne se milta hai two i times imaginary part."
+            },
+            {
+              "seq": 3,
+              "text": "Ise intuitively padho: kisi number ko uske mirror image se add karne par up-down parts cancel ho jaate hain aur twice horizontal bachta hai, jabki subtract karne par horizontal cancel aur vertical bachta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Ab star property: z times z bar barabar a square plus b square, jo hai modulus of z, squared."
+            },
+            {
+              "seq": 5,
+              "text": "Ye magical hai kyunki ek complex apne mirror image se multiply hoke ek plain, non-negative real number banata hai, theek origin se squared distance. Yehi trick hai har division aur har realness proof ke peeche."
+            },
+            {
+              "seq": 6,
+              "text": "Conjugation operations ke saath achhe se chalti hai: product ka conjugate hai conjugates ka product, aur sum ya difference ka conjugate terms par split ho jaata hai."
+            },
+            {
+              "seq": 7,
+              "text": "Yahan trap dekho: product ka conjugate hai z one bar times z two bar. Ye conjugates ka product hai, unka sum nahi."
+            },
+            {
+              "seq": 8,
+              "text": "Aur ye extend hota hai: quotient ka conjugate hai conjugates ka quotient, aur power ka conjugate hai conjugate ki wahi power."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Conjugate के पास properties का एक छोटा toolkit है जो इसे powerful बनाता है। चलो इनपे चलते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले, दो बार conjugate करने से वापस z मिल जाता है। z और उसके conjugate को add करने से मिलता है two times real part। Subtract करने से मिलता है two i times imaginary part।"
+            },
+            {
+              "seq": 3,
+              "text": "इसे intuitively पढ़ो: किसी number को उसके mirror image से add करने पर up-down parts cancel हो जाते हैं और twice horizontal बचता है, जबकि subtract करने पर horizontal cancel और vertical बचता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब star property: z times z bar बराबर a square plus b square, जो है modulus of z, squared।"
+            },
+            {
+              "seq": 5,
+              "text": "ये magical है क्योंकि एक complex अपने mirror image से multiply होकर एक plain, non-negative real number बनाता है, ठीक origin से squared distance। यही trick है हर division और हर realness proof के पीछे।"
+            },
+            {
+              "seq": 6,
+              "text": "Conjugation operations के साथ अच्छे से चलती है: product का conjugate है conjugates का product, और sum या difference का conjugate terms पर split हो जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "यहां trap देखो: product का conjugate है z one bar times z two bar। ये conjugates का product है, उनका sum नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "और ये extend होता है: quotient का conjugate है conjugates का quotient, और power का conjugate है conjugate की वही power।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "concept",
+      "subtopic": "The Modulus and the Conjugate of a Complex Number",
+      "title": "The modulus: distance from the origin",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Modulus: 'as the crow flies'"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "|z|=\\sqrt{a^{2}+b^{2}}\\ \\ge 0"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "The modulus is the straight-line distance from the origin to $(a,b)$ — Pythagoras on the grid."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 25,
+          "style": "red-margin",
+          "text": "$|z|$ is always non-negative — you cannot write $|z|=\\pm z$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "|z|=|\\bar z|=|-z|,\\quad |z_1 z_2|=|z_1||z_2|,\\quad |z^{n}|=|z|^{n}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Modulus is multiplicative — take it factor by factor across products, powers, quotients."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "latex": "|\\operatorname{Re}(z)|\\le |z|,\\qquad |\\operatorname{Im}(z)|\\le |z|"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 65,
+          "text": "Each coordinate is at most the whole distance — obvious from the right triangle."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The conjugate is a reflection; the modulus is a distance. Together they run the whole chapter."
+            },
+            {
+              "seq": 2,
+              "text": "The modulus of z is the square root of a squared plus b squared, and it is always greater than or equal to zero."
+            },
+            {
+              "seq": 3,
+              "text": "Geometrically it's the straight-line distance from the origin to the point a comma b. If the address tells you how to walk there, the modulus tells you how far it is, as the crow flies. It's just Pythagoras on the grid."
+            },
+            {
+              "seq": 4,
+              "text": "A crucial warning: the modulus is always non-negative. The real-number habit of writing absolute value equals plus or minus x does not carry over. You can never write modulus of z equals plus or minus z."
+            },
+            {
+              "seq": 5,
+              "text": "The properties are clean. The modulus of z equals the modulus of its conjugate equals the modulus of minus z. The modulus of a product is the product of moduli, and the modulus of a power is the power of the modulus."
+            },
+            {
+              "seq": 6,
+              "text": "So modulus is multiplicative. For any product, power, or quotient, take the modulus factor by factor instead of multiplying everything out first."
+            },
+            {
+              "seq": 7,
+              "text": "Two more bounds: the size of the real part is at most the modulus, and the size of the imaginary part is at most the modulus."
+            },
+            {
+              "seq": 8,
+              "text": "That's obvious once you picture the right triangle: neither leg can be longer than the hypotenuse, which is the modulus."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Conjugate ek reflection hai; modulus ek distance hai. Dono milke poora chapter chalate hain."
+            },
+            {
+              "seq": 2,
+              "text": "z ka modulus hai a square plus b square ka square root, aur ye hamesha zero se greater than or equal to hota hai."
+            },
+            {
+              "seq": 3,
+              "text": "Geometrically ye origin se point a comma b tak ki straight-line distance hai. Agar address batata hai wahan kaise chalna hai, to modulus batata hai kitna door hai, as the crow flies. Ye bas grid par Pythagoras hai."
+            },
+            {
+              "seq": 4,
+              "text": "Ek crucial warning: modulus hamesha non-negative hai. Real-number wali aadat, absolute value barabar plus or minus x likhne ki, yahan nahi chalti. Aap kabhi modulus of z barabar plus or minus z nahi likh sakte."
+            },
+            {
+              "seq": 5,
+              "text": "Properties clean hain. z ka modulus barabar uske conjugate ka modulus barabar minus z ka modulus. Product ka modulus hai moduli ka product, aur power ka modulus hai modulus ki power."
+            },
+            {
+              "seq": 6,
+              "text": "To modulus multiplicative hai. Kisi bhi product, power, ya quotient ke liye, sab kuch expand karne ke bajaay modulus ko factor by factor lo."
+            },
+            {
+              "seq": 7,
+              "text": "Do aur bounds: real part ka size at most modulus hai, aur imaginary part ka size at most modulus hai."
+            },
+            {
+              "seq": 8,
+              "text": "Ye obvious hai jab aap right triangle picture karo: koi bhi leg hypotenuse se lambi nahi ho sakti, jo hai modulus."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Conjugate एक reflection है; modulus एक distance है। दोनों मिलके पूरा chapter चलाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "z का modulus है a square plus b square का square root, और ये हमेशा ज़ीरो से greater than or equal to होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Geometrically ये origin से point a comma b तक की straight-line distance है। अगर address बताता है वहां कैसे चलना है, तो modulus बताता है कितना दूर है। ये बस grid पर Pythagoras है।"
+            },
+            {
+              "seq": 4,
+              "text": "एक crucial warning: modulus हमेशा non-negative है। Real-number वाली आदत, absolute value बराबर plus or minus x लिखने की, यहां नहीं चलती। आप कभी modulus of z बराबर plus or minus z नहीं लिख सकते।"
+            },
+            {
+              "seq": 5,
+              "text": "Properties clean हैं। z का modulus बराबर उसके conjugate का modulus बराबर minus z का modulus। Product का modulus है moduli का product, और power का modulus है modulus की power।"
+            },
+            {
+              "seq": 6,
+              "text": "तो modulus multiplicative है। किसी भी product, power, या quotient के लिए, सब कुछ expand करने के बजाय modulus को factor by factor लो।"
+            },
+            {
+              "seq": 7,
+              "text": "दो और bounds: real part का size at most modulus है, और imaginary part का size at most modulus है।"
+            },
+            {
+              "seq": 8,
+              "text": "ये obvious है जब आप right triangle picture करो: कोई भी leg hypotenuse से लंबी नहीं हो सकती, जो है modulus।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "concept",
+      "subtopic": "The Modulus and the Conjugate of a Complex Number",
+      "title": "Triangle inequality & parallelogram identity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "How moduli behave under addition"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "|z_1+z_2|\\ \\le\\ |z_1|+|z_2|"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "The modulus does NOT distribute over a sum — only $\\le$ holds."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "Equality holds only when the two point the same way (one a non-negative real multiple of the other)."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "caption": "Two sides plus the closing side: the triangle inequality",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 260' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='210' r='4' fill='#333'/><text x='24' y='230' font-size='12' fill='#333'>O</text><line x1='40' y1='210' x2='230' y2='120' stroke='#1f6feb' stroke-width='2.5'/><polygon points='230,120 218,120 226,130' fill='#1f6feb'/><text x='120' y='150' font-size='12' fill='#1f6feb'>z1</text><line x1='230' y1='120' x2='360' y2='60' stroke='#2ea043' stroke-width='2.5'/><polygon points='360,60 348,62 354,72' fill='#2ea043'/><text x='300' y='78' font-size='12' fill='#2ea043'>z2</text><line x1='40' y1='210' x2='360' y2='60' stroke='#d29922' stroke-width='2.5' stroke-dasharray='6 4'/><text x='150' y='205' font-size='12' fill='#d29922'>z1 + z2</text><text x='40' y='30' font-size='12' fill='#777'>|z1+z2| &#8804; |z1| + |z2|</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "latex": "\\big||z_1|-|z_2|\\big|\\ \\le\\ |z_1-z_2|"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "latex": "|z_1+z_2|^{2}+|z_1-z_2|^{2}=2\\left(|z_1|^{2}+|z_2|^{2}\\right)"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 69,
+          "text": "The parallelogram identity: the two diagonals and the two sides are locked together."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Modulus is multiplicative, and that was clean. But under addition it behaves differently, and this is where mistakes cluster."
+            },
+            {
+              "seq": 2,
+              "text": "The triangle inequality says: the modulus of z one plus z two is less than or equal to the modulus of z one plus the modulus of z two."
+            },
+            {
+              "seq": 3,
+              "text": "Read the warning carefully. The modulus does not distribute over a sum. It is only ever less than or equal, never automatically equal."
+            },
+            {
+              "seq": 4,
+              "text": "Equality is special: it holds only when the two numbers point in the same direction, that is, when one is a non-negative real multiple of the other."
+            },
+            {
+              "seq": 5,
+              "text": "The name comes straight from geometry. Draw z one, then z two starting where z one ended; the straight closing side, z one plus z two, can never be longer than going around the two other sides."
+            },
+            {
+              "seq": 6,
+              "text": "There's a companion lower bound too: the size of the difference of the moduli is at most the modulus of the difference."
+            },
+            {
+              "seq": 7,
+              "text": "And a beautiful equality, the parallelogram identity: the modulus of the sum squared plus the modulus of the difference squared equals two times the sum of the individual moduli squared."
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically that says the two diagonals of a parallelogram and its two sides are rigidly locked together — a fact you can quote directly in proofs."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Modulus multiplicative tha, aur wo clean tha. Par addition ke under ye alag behave karta hai, aur yahin mistakes cluster hoti hain."
+            },
+            {
+              "seq": 2,
+              "text": "Triangle inequality kehti hai: z one plus z two ka modulus less than or equal to hai z one ke modulus plus z two ke modulus."
+            },
+            {
+              "seq": 3,
+              "text": "Warning dhyaan se padho. Modulus sum par distribute nahi karta. Ye hamesha sirf less than or equal hai, kabhi automatically equal nahi."
+            },
+            {
+              "seq": 4,
+              "text": "Equality special hai: ye tabhi hoti hai jab dono numbers same direction mein point karein, yaani jab ek doosre ka non-negative real multiple ho."
+            },
+            {
+              "seq": 5,
+              "text": "Naam geometry se seedha aata hai. z one banao, phir z two wahan se jahan z one khatam hua; seedhi closing side, z one plus z two, kabhi do doosri sides ke around jaane se lambi nahi ho sakti."
+            },
+            {
+              "seq": 6,
+              "text": "Ek companion lower bound bhi hai: moduli ke difference ka size at most difference ke modulus jitna hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aur ek khoobsurat equality, parallelogram identity: sum ke modulus squared plus difference ke modulus squared barabar two times individual moduli squared ka sum."
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically ye kehti hai ki parallelogram ke do diagonals aur uski do sides rigidly locked hain — ek fact jo aap proofs mein seedhe quote kar sakte ho."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Modulus multiplicative था, और वो clean था। पर addition के under ये अलग behave करता है, और यहीं mistakes cluster होती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Triangle inequality कहती है: z one plus z two का modulus less than or equal to है z one के modulus plus z two के modulus।"
+            },
+            {
+              "seq": 3,
+              "text": "Warning ध्यान से पढ़ो। Modulus sum पर distribute नहीं करता। ये हमेशा सिर्फ less than or equal है, कभी automatically equal नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Equality special है: ये तभी होती है जब दोनों numbers same direction में point करें, यानी जब एक दूसरे का non-negative real multiple हो।"
+            },
+            {
+              "seq": 5,
+              "text": "नाम geometry से सीधा आता है। z one बनाओ, फिर z two वहां से जहां z one खत्म हुआ; सीधी closing side, z one plus z two, कभी दो दूसरी sides के around जाने से लंबी नहीं हो सकती।"
+            },
+            {
+              "seq": 6,
+              "text": "एक companion lower bound भी है: moduli के difference का size at most difference के modulus जितना है।"
+            },
+            {
+              "seq": 7,
+              "text": "और एक खूबसूरत equality, parallelogram identity: sum के modulus squared plus difference के modulus squared बराबर two times individual moduli squared का sum।"
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically ये कहती है कि parallelogram के दो diagonals और उसकी दो sides rigidly locked हैं — एक fact जो आप proofs में सीधे quote कर सकते हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "formulas",
+      "subtopic": "The Modulus and the Conjugate of a Complex Number",
+      "title": "Modulus & conjugate: the toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Consolidated properties"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "\\bar z=a-ib;\\ \\ z+\\bar z=2\\operatorname{Re}(z);\\ \\ z-\\bar z=2i\\operatorname{Im}(z)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "z\\bar z=|z|^{2}=a^{2}+b^{2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\overline{z_1 z_2}=\\bar z_1\\bar z_2;\\ \\ \\overline{\\left(\\tfrac{z_1}{z_2}\\right)}=\\tfrac{\\bar z_1}{\\bar z_2};\\ \\ \\overline{z^{\\,n}}=(\\bar z)^{n}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "latex": "|z_1 z_2|=|z_1||z_2|;\\ \\ \\left|\\tfrac{z_1}{z_2}\\right|=\\tfrac{|z_1|}{|z_2|};\\ \\ |z^{n}|=|z|^{n}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "latex": "z^{-1}=\\frac{\\bar z}{|z|^{2}}=\\frac{a-ib}{a^{2}+b^{2}}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "On the unit circle, where $|z|=1$, the conjugate equals the reciprocal: $\\bar z=\\tfrac{1}{z}$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "The one identity to internalize: $z\\bar z=|z|^2$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the whole toolkit on one board — your consolidated reference for modulus and conjugate."
+            },
+            {
+              "seq": 2,
+              "text": "The conjugate is a minus i b. Adding z and its conjugate gives twice the real part; subtracting gives two i times the imaginary part."
+            },
+            {
+              "seq": 3,
+              "text": "The workhorse: z times z bar equals the modulus squared, which is a squared plus b squared."
+            },
+            {
+              "seq": 4,
+              "text": "Conjugation over operations: the conjugate of a product is the product of conjugates, of a quotient the quotient of conjugates, and of a power the power of the conjugate."
+            },
+            {
+              "seq": 5,
+              "text": "Modulus over operations: the modulus of a product is the product of moduli, of a quotient the quotient of moduli, and of a power the power of the modulus."
+            },
+            {
+              "seq": 6,
+              "text": "The inverse, cleanly: z inverse equals z bar over the modulus squared, which is a minus i b over a squared plus b squared."
+            },
+            {
+              "seq": 7,
+              "text": "And a favourite special case: when z sits on the unit circle, so its modulus is one, the conjugate equals the reciprocal, one over z. That substitution simplifies a huge number of problems."
+            },
+            {
+              "seq": 8,
+              "text": "If you internalize only one line from this board, make it this: z times z bar equals modulus squared. Everything downstream leans on it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye raha poora toolkit ek board par — modulus aur conjugate ke liye aapka consolidated reference."
+            },
+            {
+              "seq": 2,
+              "text": "Conjugate hai a minus i b. z aur uske conjugate ko add karne se milta hai twice real part; subtract karne se two i times imaginary part."
+            },
+            {
+              "seq": 3,
+              "text": "Workhorse: z times z bar barabar modulus squared, jo hai a square plus b square."
+            },
+            {
+              "seq": 4,
+              "text": "Conjugation operations par: product ka conjugate hai conjugates ka product, quotient ka quotient, aur power ka conjugate ki wahi power."
+            },
+            {
+              "seq": 5,
+              "text": "Modulus operations par: product ka modulus hai moduli ka product, quotient ka quotient, aur power ka modulus ki wahi power."
+            },
+            {
+              "seq": 6,
+              "text": "Inverse, cleanly: z inverse barabar z bar over modulus squared, jo hai a minus i b over a square plus b square."
+            },
+            {
+              "seq": 7,
+              "text": "Aur ek favourite special case: jab z unit circle par ho, to modulus one, conjugate barabar reciprocal, one over z. Ye substitution bahut saare problems simplify karti hai."
+            },
+            {
+              "seq": 8,
+              "text": "Agar is board se sirf ek line internalize karni ho, to ye karo: z times z bar barabar modulus squared. Aage sab kuch isi par tika hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा पूरा toolkit एक board पर — modulus और conjugate के लिए आपका consolidated reference।"
+            },
+            {
+              "seq": 2,
+              "text": "Conjugate है a minus i b। z और उसके conjugate को add करने से मिलता है twice real part; subtract करने से two i times imaginary part।"
+            },
+            {
+              "seq": 3,
+              "text": "Workhorse: z times z bar बराबर modulus squared, जो है a square plus b square।"
+            },
+            {
+              "seq": 4,
+              "text": "Conjugation operations पर: product का conjugate है conjugates का product, quotient का quotient, और power का conjugate की वही power।"
+            },
+            {
+              "seq": 5,
+              "text": "Modulus operations पर: product का modulus है moduli का product, quotient का quotient, और power का modulus की वही power।"
+            },
+            {
+              "seq": 6,
+              "text": "Inverse, cleanly: z inverse बराबर z bar over modulus squared, जो है a minus i b over a square plus b square।"
+            },
+            {
+              "seq": 7,
+              "text": "और एक favourite special case: जब z unit circle पर हो, तो modulus one, conjugate बराबर reciprocal, one over z। ये substitution बहुत सारे problems simplify करती है।"
+            },
+            {
+              "seq": 8,
+              "text": "अगर इस board से सिर्फ एक line internalize करनी हो, तो ये करो: z times z bar बराबर modulus squared। आगे सब कुछ इसी पर टिका है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "The Modulus and the Conjugate of a Complex Number",
+      "title": "Worked: conjugate, modulus, and a cube",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Basics: find conjugate and modulus"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$z=3+i$: conjugate $3-i$, modulus $\\sqrt{3^{2}+1^{2}}=\\sqrt{10}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "$w=2-5i$: conjugate $2+5i$, modulus $\\sqrt{4+25}=\\sqrt{29}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "(5-3i)^{3}=5^{3}-3(5^{2})(3i)+3(5)(3i)^{2}-(3i)^{3}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Expand carefully, using $i^{2}=-1$ and $i^{3}=-i$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "(5-3i)^{3}=125-225i-135+27i=-10-198i"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "So its conjugate is $-10+198i$ — just flip the sign of the imaginary part."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Keep the $i^2,i^3$ substitutions clean; collect at the very end."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's ground the definitions on numbers, then push into a cube."
+            },
+            {
+              "seq": 2,
+              "text": "Take z equals three plus i. Its conjugate flips the imaginary sign, giving three minus i. Its modulus is the root of three squared plus one squared, which is root ten."
+            },
+            {
+              "seq": 3,
+              "text": "Take w equals two minus five i. Its conjugate is two plus five i, and its modulus is the root of four plus twenty five, which is root twenty nine."
+            },
+            {
+              "seq": 4,
+              "text": "Now a harder one: expand five minus three i, cubed. Use the binomial expansion: five cubed, minus three times five squared times three i, plus three times five times three i squared, minus three i cubed."
+            },
+            {
+              "seq": 5,
+              "text": "Substitute carefully. Three i squared uses i squared equals minus one, and three i cubed uses i cubed equals minus i. Keep those clean as you go."
+            },
+            {
+              "seq": 6,
+              "text": "Collecting everything: one hundred twenty five, minus two hundred twenty five i, minus one hundred thirty five, plus twenty seven i. The reals give minus ten, the imaginaries give minus one hundred ninety eight i."
+            },
+            {
+              "seq": 7,
+              "text": "So the cube is minus ten minus one hundred ninety eight i, and its conjugate is simply minus ten plus one hundred ninety eight i — flip only the imaginary sign."
+            },
+            {
+              "seq": 8,
+              "text": "The lesson: powers get messy, so substitute i squared and i cubed cleanly and only collect real and imaginary parts at the very end."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Definitions ko numbers par ground karte hain, phir ek cube tak jaate hain."
+            },
+            {
+              "seq": 2,
+              "text": "z equals three plus i lo. Iska conjugate imaginary sign flip karke deta hai three minus i. Iska modulus hai three square plus one square ka root, jo hai root ten."
+            },
+            {
+              "seq": 3,
+              "text": "w equals two minus five i lo. Iska conjugate hai two plus five i, aur modulus hai four plus twenty five ka root, jo hai root twenty nine."
+            },
+            {
+              "seq": 4,
+              "text": "Ab ek mushkil: five minus three i, cubed expand karo. Binomial expansion use karo: five cube, minus three times five square times three i, plus three times five times three i square, minus three i cube."
+            },
+            {
+              "seq": 5,
+              "text": "Dhyaan se substitute karo. Three i square mein i square barabar minus one, aur three i cube mein i cube barabar minus i. Inhe chalte-chalte clean rakho."
+            },
+            {
+              "seq": 6,
+              "text": "Sab collect karke: one hundred twenty five, minus two hundred twenty five i, minus one hundred thirty five, plus twenty seven i. Reals dete hain minus ten, imaginaries dete hain minus one hundred ninety eight i."
+            },
+            {
+              "seq": 7,
+              "text": "To cube hai minus ten minus one hundred ninety eight i, aur iska conjugate bas minus ten plus one hundred ninety eight i — sirf imaginary sign flip."
+            },
+            {
+              "seq": 8,
+              "text": "Sabak: powers messy ho jaati hain, to i square aur i cube ko cleanly substitute karo aur real aur imaginary parts sirf end mein collect karo."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Definitions को numbers पर ground करते हैं, फिर एक cube तक जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "z बराबर three plus i लो। इसका conjugate imaginary sign flip करके देता है three minus i। इसका modulus है three square plus one square का root, जो है root ten।"
+            },
+            {
+              "seq": 3,
+              "text": "w बराबर two minus five i लो। इसका conjugate है two plus five i, और modulus है four plus twenty five का root, जो है root twenty nine।"
+            },
+            {
+              "seq": 4,
+              "text": "अब एक मुश्किल: five minus three i, cubed expand करो। Binomial expansion use करो: five cube, minus three times five square times three i, plus three times five times three i square, minus three i cube।"
+            },
+            {
+              "seq": 5,
+              "text": "ध्यान से substitute करो। Three i square में i square बराबर minus one, और three i cube में i cube बराबर minus i। इन्हें चलते-चलते clean रखो।"
+            },
+            {
+              "seq": 6,
+              "text": "सब collect करके: one hundred twenty five, minus two hundred twenty five i, minus one hundred thirty five, plus twenty seven i। Reals देते हैं minus ten, imaginaries देते हैं minus one hundred ninety eight i।"
+            },
+            {
+              "seq": 7,
+              "text": "तो cube है minus ten minus one hundred ninety eight i, और इसका conjugate बस minus ten plus one hundred ninety eight i — सिर्फ imaginary sign flip।"
+            },
+            {
+              "seq": 8,
+              "text": "सबक: powers messy हो जाती हैं, तो i square और i cube को cleanly substitute करो और real और imaginary parts सिर्फ end में collect करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "worked_examples",
+      "subtopic": "The Modulus and the Conjugate of a Complex Number",
+      "title": "Worked: inverse via conjugate & a modulus proof",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Inverse from z-bar over |z|^2, and prove via modulus"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$z=4-3i$: $|z|^{2}=16+9=25$ and $\\bar z=4+3i$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "z^{-1}=\\frac{4+3i}{25}=\\tfrac{4}{25}+\\tfrac{3}{25}i"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Now prove: if $a+ib=\\dfrac{c+i}{c-i}$ with $c$ real, then $a^{2}+b^{2}=1$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Take the modulus of both sides — moduli are multiplicative."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "|a+ib|=\\frac{|c+i|}{|c-i|}=\\frac{\\sqrt{c^{2}+1}}{\\sqrt{c^{2}+1}}=1"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "So $\\sqrt{a^{2}+b^{2}}=1$, giving $a^{2}+b^{2}=1$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Taking $|\\cdot|$ across a quotient beats expanding into $a+ib$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two examples that show off the conjugate-and-modulus toolkit in action."
+            },
+            {
+              "seq": 2,
+              "text": "First, the inverse of z equals four minus three i, but now using the clean formula. The modulus squared is sixteen plus nine, twenty five. The conjugate is four plus three i."
+            },
+            {
+              "seq": 3,
+              "text": "So z inverse is z bar over modulus squared: four plus three i over twenty five, which is four twenty-fifths plus three twenty-fifths i."
+            },
+            {
+              "seq": 4,
+              "text": "Now a proof. Suppose a plus i b equals c plus i, over c minus i, where c is real. Show that a squared plus b squared equals one."
+            },
+            {
+              "seq": 5,
+              "text": "The elegant move is to take the modulus of both sides, because modulus is multiplicative and splits across the quotient."
+            },
+            {
+              "seq": 6,
+              "text": "On the right, the top has modulus root c squared plus one, and the bottom has the very same modulus, root c squared plus one. They cancel to give one."
+            },
+            {
+              "seq": 7,
+              "text": "So the modulus of a plus i b is one, meaning root of a squared plus b squared equals one, hence a squared plus b squared equals one. Proof complete."
+            },
+            {
+              "seq": 8,
+              "text": "Notice how much work we skipped: taking the modulus across the quotient was far faster than expanding the fraction into a plus i b form."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Do examples jo conjugate-and-modulus toolkit ko action mein dikhate hain."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle, z equals four minus three i ka inverse, par ab clean formula use karke. Modulus squared hai sixteen plus nine, twenty five. Conjugate hai four plus three i."
+            },
+            {
+              "seq": 3,
+              "text": "To z inverse hai z bar over modulus squared: four plus three i over twenty five, jo hai four twenty-fifths plus three twenty-fifths i."
+            },
+            {
+              "seq": 4,
+              "text": "Ab ek proof. Maano a plus i b barabar c plus i, over c minus i, jahan c real hai. Dikhao ki a square plus b square barabar one."
+            },
+            {
+              "seq": 5,
+              "text": "Elegant move hai dono taraf ka modulus lena, kyunki modulus multiplicative hai aur quotient par split ho jaata hai."
+            },
+            {
+              "seq": 6,
+              "text": "Right par, top ka modulus hai root c square plus one, aur bottom ka bilkul wahi modulus, root c square plus one. Wo cancel hoke dete hain one."
+            },
+            {
+              "seq": 7,
+              "text": "To a plus i b ka modulus hai one, matlab a square plus b square ka root barabar one, isliye a square plus b square barabar one. Proof poora."
+            },
+            {
+              "seq": 8,
+              "text": "Dekho kitna kaam bach gaya: quotient par modulus lena fraction ko a plus i b form mein expand karne se kaafi tez tha."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो examples जो conjugate-and-modulus toolkit को action में दिखाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले, z बराबर four minus three i का inverse, पर अब clean formula use करके। Modulus squared है sixteen plus nine, twenty five। Conjugate है four plus three i।"
+            },
+            {
+              "seq": 3,
+              "text": "तो z inverse है z bar over modulus squared: four plus three i over twenty five, जो है four twenty-fifths plus three twenty-fifths i।"
+            },
+            {
+              "seq": 4,
+              "text": "अब एक proof। मानो a plus i b बराबर c plus i, over c minus i, जहां c real है। दिखाओ कि a square plus b square बराबर one।"
+            },
+            {
+              "seq": 5,
+              "text": "Elegant move है दोनों तरफ का modulus लेना, क्योंकि modulus multiplicative है और quotient पर split हो जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Right पर, top का modulus है root c square plus one, और bottom का बिलकुल वही modulus, root c square plus one। वो cancel होके देते हैं one।"
+            },
+            {
+              "seq": 7,
+              "text": "तो a plus i b का modulus है one, मतलब a square plus b square का root बराबर one, इसलिए a square plus b square बराबर one। Proof पूरा।"
+            },
+            {
+              "seq": 8,
+              "text": "देखो कितना काम बच गया: quotient पर modulus लेना fraction को a plus i b form में expand करने से काफी तेज़ था।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "worked_examples",
+      "subtopic": "The Modulus and the Conjugate of a Complex Number",
+      "title": "Worked (JEE Advanced): conjugate identities & product moduli",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Advanced: z^2 = (z-bar)^2, and a big product"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "If $z^{2}=(\\bar z)^{2}$, show $z$ is purely real or purely imaginary."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "z^{2}=(x^{2}-y^{2})+2ixy,\\qquad (\\bar z)^{2}=(x^{2}-y^{2})-2ixy"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Equating forces $2xy=-2xy$, so $xy=0$: either $x=0$ or $y=0$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Now the product $(2+i)(2+2i)\\cdots(2+ni)=x+iy$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "\\prod_{k=1}^{n}\\sqrt{4+k^{2}}=|x+iy|=\\sqrt{x^{2}+y^{2}}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\prod_{k=1}^{n}(4+k^{2})=x^{2}+y^{2}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "So $5\\cdot 8\\cdot 13\\cdots(4+n^{2})=x^{2}+y^{2}$ — moduli tamed a scary product."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Two Advanced-tier problems where the conjugate and modulus do all the heavy lifting.</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "First: if z squared equals z bar squared, prove that z must be purely real or purely imaginary."
+            },
+            {
+              "seq": 3,
+              "text": "Write z as x plus i y. Then z squared is x squared minus y squared, plus two i x y. And z bar squared is x squared minus y squared, minus two i x y."
+            },
+            {
+              "seq": 4,
+              "text": "Equating the two forces two x y to equal minus two x y, so four x y is zero, meaning the product x y is zero. That means either x is zero, purely imaginary, or y is zero, purely real. Done."
+            },
+            {
+              "seq": 5,
+              "text": "Second: the product of two plus i, two plus two i, up to two plus n i, equals some x plus i y. We want the value of five times eight times thirteen, and so on, up to four plus n squared."
+            },
+            {
+              "seq": 6,
+              "text": "Take the modulus across the product. The modulus of two plus k i is the root of four plus k squared, so the product of those roots equals the modulus of x plus i y, which is the root of x squared plus y squared."
+            },
+            {
+              "seq": 7,
+              "text": "Now square both sides: the product of four plus k squared, from k equals one to n, equals x squared plus y squared."
+            },
+            {
+              "seq": 8,
+              "text": "And that left side is exactly five times eight times thirteen and onward to four plus n squared. So the whole scary product equals x squared plus y squared. Modulus turned it into one clean line."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Do Advanced-tier problems jahan conjugate aur modulus saara heavy lifting karte hain.</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "Pehla: agar z square barabar z bar square, prove karo ki z purely real ya purely imaginary hona chahiye."
+            },
+            {
+              "seq": 3,
+              "text": "z ko x plus i y likho. To z square hai x square minus y square, plus two i x y. Aur z bar square hai x square minus y square, minus two i x y."
+            },
+            {
+              "seq": 4,
+              "text": "Dono ko equate karna two x y ko minus two x y ke barabar karta hai, to four x y zero, matlab product x y zero. Iska matlab ya to x zero, purely imaginary, ya y zero, purely real. Ho gaya."
+            },
+            {
+              "seq": 5,
+              "text": "Doosra: two plus i, two plus two i, up to two plus n i ka product, barabar koi x plus i y. Humein chahiye five times eight times thirteen, waise hi aage, up to four plus n square ki value."
+            },
+            {
+              "seq": 6,
+              "text": "Product par modulus lo. Two plus k i ka modulus hai four plus k square ka root, to un roots ka product barabar x plus i y ke modulus, jo hai x square plus y square ka root."
+            },
+            {
+              "seq": 7,
+              "text": "Ab dono taraf square karo: four plus k square ka product, k barabar one se n tak, barabar x square plus y square."
+            },
+            {
+              "seq": 8,
+              "text": "Aur wo left side bilkul wahi hai, five times eight times thirteen aur aage four plus n square tak. To poora scary product barabar x square plus y square. Modulus ne ise ek clean line bana diya."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>दो Advanced-tier problems जहां conjugate और modulus सारा heavy lifting करते हैं।</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "पहला: अगर z square बराबर z bar square, prove करो कि z purely real या purely imaginary होना चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "z को x plus i y लिखो। तो z square है x square minus y square, plus two i x y। और z bar square है x square minus y square, minus two i x y।"
+            },
+            {
+              "seq": 4,
+              "text": "दोनों को equate करना two x y को minus two x y के बराबर करता है, तो four x y ज़ीरो, मतलब product x y ज़ीरो। इसका मतलब या तो x ज़ीरो, purely imaginary, या y ज़ीरो, purely real। हो गया।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा: two plus i, two plus two i, up to two plus n i का product, बराबर कोई x plus i y। हमें चाहिए five times eight times thirteen, वैसे ही आगे, up to four plus n square की value।"
+            },
+            {
+              "seq": 6,
+              "text": "Product पर modulus लो। Two plus k i का modulus है four plus k square का root, तो उन roots का product बराबर x plus i y के modulus, जो है x square plus y square का root।"
+            },
+            {
+              "seq": 7,
+              "text": "अब दोनों तरफ square करो: four plus k square का product, k बराबर one से n तक, बराबर x square plus y square।"
+            },
+            {
+              "seq": 8,
+              "text": "और वो left side बिलकुल वही है, five times eight times thirteen और आगे four plus n square तक। तो पूरा scary product बराबर x square plus y square। Modulus ने इसे एक clean line बना दिया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 20,
+      "section_type": "tips",
+      "subtopic": "The Modulus and the Conjugate of a Complex Number",
+      "title": "Pitfalls & pro-tips: modulus and conjugate",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The classic modulus / conjugate traps"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "$|z_1+z_2|\\neq |z_1|+|z_2|$ in general — only $\\le$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Never write $|z|=\\pm z$; the modulus is a single non-negative real."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "$\\bar z$ flips only the imaginary sign; $-z$ flips both — don't confuse them."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "And $z\\bar z=|z|^{2}$ is a non-negative real — not $(\\bar z)^{2}$ and not $|z|$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Pro-tip: to prove '$E$ is real', show $E=\\bar E$; for 'imaginary', show $E+\\bar E=0$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "For moduli of products, powers, and quotients, take $|\\cdot|$ factor by factor."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "On $|z|=1$, substitute $\\bar z=1/z$ — it collapses unit-circle problems."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's finish this subtopic with the traps that reliably cost marks, and the shortcuts that reliably save them."
+            },
+            {
+              "seq": 2,
+              "text": "Biggest trap first: the modulus of a sum is not the sum of the moduli. In general only the less-than-or-equal holds; equality is the exception, not the rule."
+            },
+            {
+              "seq": 3,
+              "text": "Second: never write modulus of z equals plus or minus z. The modulus is one single non-negative real number, full stop."
+            },
+            {
+              "seq": 4,
+              "text": "Third: the conjugate flips only the imaginary sign, while minus z flips both signs. Mixing these two up is one of the most common errors in the chapter."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth: z times z bar is the modulus squared, a non-negative real. It is not z bar squared, and it is not the modulus itself."
+            },
+            {
+              "seq": 6,
+              "text": "Now the pro-tips. To prove an expression E is real, show it equals its own conjugate. To prove it's purely imaginary, show E plus E bar is zero. This usually beats expanding."
+            },
+            {
+              "seq": 7,
+              "text": "For moduli of products, powers, and quotients, always take the modulus factor by factor rather than multiplying everything out."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>And the unit-circle secret:</whisper> whenever modulus of z is one, replace z bar with one over z. That single substitution collapses a whole class of hard problems."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Is subtopic ko finish karte hain un traps ke saath jo pakka marks le jaate hain, aur un shortcuts ke saath jo pakka bachate hain."
+            },
+            {
+              "seq": 2,
+              "text": "Sabse bada trap pehle: sum ka modulus, moduli ka sum nahi hai. Generally sirf less-than-or-equal chalta hai; equality exception hai, rule nahi."
+            },
+            {
+              "seq": 3,
+              "text": "Doosra: kabhi modulus of z barabar plus or minus z mat likho. Modulus ek single non-negative real number hai, bas."
+            },
+            {
+              "seq": 4,
+              "text": "Teesra: conjugate sirf imaginary sign flip karta hai, jabki minus z dono signs flip karta hai. In dono ko mix karna chapter ki sabse common errors mein se ek hai."
+            },
+            {
+              "seq": 5,
+              "text": "Chautha: z times z bar hai modulus squared, ek non-negative real. Ye z bar squared nahi hai, aur ye khud modulus bhi nahi hai."
+            },
+            {
+              "seq": 6,
+              "text": "Ab pro-tips. Kisi expression E ko real prove karne ke liye dikhao ki wo apne hi conjugate ke barabar hai. Purely imaginary prove karne ke liye dikhao ki E plus E bar zero hai. Ye aksar expanding se behtar hai."
+            },
+            {
+              "seq": 7,
+              "text": "Products, powers, aur quotients ke moduli ke liye hamesha modulus factor by factor lo, sab kuch multiply karne ke bajaay."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Aur unit-circle secret:</whisper> jab bhi modulus of z one ho, z bar ko one over z se replace karo. Wo ek substitution mushkil problems ki poori class collapse kar deti hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic को finish करते हैं उन traps के साथ जो पक्का marks ले जाते हैं, और उन shortcuts के साथ जो पक्का बचाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा trap पहले: sum का modulus, moduli का sum नहीं है। Generally सिर्फ less-than-or-equal चलता है; equality exception है, rule नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा: कभी modulus of z बराबर plus or minus z मत लिखो। Modulus एक single non-negative real number है, बस।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा: conjugate सिर्फ imaginary sign flip करता है, जबकि minus z दोनों signs flip करता है। इन दोनों को mix करना chapter की सबसे common errors में से एक है।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा: z times z bar है modulus squared, एक non-negative real। ये z bar squared नहीं है, और ये खुद modulus भी नहीं है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब pro-tips। किसी expression E को real prove करने के लिए दिखाओ कि वो अपने ही conjugate के बराबर है। Purely imaginary prove करने के लिए दिखाओ कि E plus E bar ज़ीरो है। ये अक्सर expanding से बेहतर है।"
+            },
+            {
+              "seq": 7,
+              "text": "Products, powers, और quotients के moduli के लिए हमेशा modulus factor by factor लो, सब कुछ multiply करने के बजाय।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>और unit-circle secret:</whisper> जब भी modulus of z one हो, z bar को one over z से replace करो। वो एक substitution मुश्किल problems की पूरी class collapse कर देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

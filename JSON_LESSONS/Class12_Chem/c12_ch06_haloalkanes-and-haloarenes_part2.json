@@ -1,0 +1,2237 @@
+{
+  "chapter": "Haloalkanes and Haloarenes",
+  "subject": "chemistry",
+  "class_level": 12,
+  "chapter_order": 6,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish",
+    "hindi"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Nucleophilic substitution — and the fork with elimination",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The headline reaction, and its rival"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Electron-poor carbon (Cδ+) attracts an electron-rich nucleophile; the halide leaves. That is nucleophilic substitution."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "One substrate, two fates: substitute at C, or eliminate at the β-carbon",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 200' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><text x='170' y='20' font-size='13' fill='#181818'>Nu / base meets R–X</text><rect x='175' y='28' width='110' height='30' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='205' y='48' font-size='13' fill='#181818'>R–X</text><line x1='210' y1='58' x2='110' y2='105' stroke='#55565C' stroke-width='1.5'/><line x1='250' y1='58' x2='360' y2='105' stroke='#55565C' stroke-width='1.5'/><text x='60' y='125' font-size='12' fill='#181818' font-weight='bold'>acts as NUCLEOPHILE</text><text x='70' y='143' font-size='12' fill='#55565C'>attacks carbon &#8594;</text><text x='60' y='160' font-size='12' fill='#181818'>substitution (new group)</text><text x='300' y='125' font-size='12' fill='#DD4433' font-weight='bold'>acts as BASE</text><text x='300' y='143' font-size='12' fill='#55565C'>grabs β-H &#8594;</text><text x='300' y='160' font-size='12' fill='#181818'>elimination (C=C, loses HX)</text></g></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "The complication: the SAME reagent can act as a base instead — grabbing a hydrogen from the neighbouring β-carbon."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "If it does, the molecule kicks out HX and forms a double bond — that is elimination."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "A haloalkane at a fork: which path wins is a race won by the fastest runner."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "text": "Small eager nucleophile + mild conditions → substitution wins."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "Bulky strong base + high temperature → elimination wins. Everything else in this section is a variation on this theme."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Let me set up the whole section with one picture and one rivalry.</curious> Recall that the polar carbon to halogen bond leaves carbon electron poor and the halogen ready to leave."
+            },
+            {
+              "seq": 2,
+              "text": "An electron rich species, a nucleophile, is drawn to that electron poor carbon like a customer to a half open shop. It bonds to carbon, the halogen departs, and we call that nucleophilic substitution. That is the headline reaction of haloalkanes."
+            },
+            {
+              "seq": 3,
+              "text": "But there is a complication, and the board shows it. The very same reagent stands at a fork. Down the left it acts as a nucleophile and attacks carbon; down the right it acts as a base."
+            },
+            {
+              "seq": 4,
+              "text": "As a base, instead of attacking carbon, it grabs a hydrogen from the carbon next door, the beta carbon."
+            },
+            {
+              "seq": 5,
+              "text": "If it does that, the molecule kicks out H X and a double bond forms. That is elimination, a completely different product from the same starting materials."
+            },
+            {
+              "seq": 6,
+              "text": "So a haloalkane facing a base or nucleophile is at a fork in the road, and which path wins is simply a race won by the fastest runner."
+            },
+            {
+              "seq": 7,
+              "text": "A small, eager nucleophile in mild conditions runs the substitution race and wins it."
+            },
+            {
+              "seq": 8,
+              "text": "A bulky, strong base at high temperature wins the elimination race instead. Hold that rivalry, because everything else in this section is a variation on this one theme."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>पूरे section को एक picture और एक rivalry से set up करते हैं।</curious> याद करो कि polar carbon to halogen bond carbon को electron poor और halogen को निकलने के लिए तैयार छोड़ देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक electron rich species, यानी nucleophile, उस electron poor carbon की तरफ़ खिंचता है जैसे आधी खुली दुकान की तरफ़ ग्राहक। वो carbon से bond बनाता है, halogen निकल जाता है, और इसे nucleophilic substitution कहते हैं। यही haloalkanes की headline reaction है।"
+            },
+            {
+              "seq": 3,
+              "text": "पर एक complication है, और board इसे दिखाता है। वही reagent एक fork पर खड़ा है। बाईं तरफ़ वो nucleophile बनकर carbon पर attack करता है; दाईं तरफ़ वो base बन जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Base बनकर, carbon पर attack करने के बजाय, वो बगल वाले carbon, यानी beta carbon, से एक hydrogen खींच लेता है।"
+            },
+            {
+              "seq": 5,
+              "text": "अगर ऐसा हुआ, तो molecule H X बाहर फेंकता है और एक double bond बनता है। यही elimination है, उन्हीं starting materials से एकदम अलग product।"
+            },
+            {
+              "seq": 6,
+              "text": "तो base या nucleophile के सामने खड़ा haloalkane एक fork पर है, और कौन सा path जीतेगा ये बस सबसे तेज़ धावक की race है।"
+            },
+            {
+              "seq": 7,
+              "text": "छोटा, उत्सुक nucleophile mild conditions में substitution की race दौड़ता है और जीतता है।"
+            },
+            {
+              "seq": 8,
+              "text": "बड़ा, strong base high temperature पर elimination की race जीत लेता है। इस rivalry को पकड़े रखो, क्योंकि इस section का बाक़ी सब इसी एक theme का variation है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>पूरे खंड को एक चित्र और एक प्रतिद्वंद्विता से आरंभ करते हैं।</curious> याद कीजिए कि ध्रुवीय कार्बन हैलोजन बंध कार्बन को इलेक्ट्रॉन की कमी वाला और हैलोजन को निकलने को तैयार छोड़ देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक इलेक्ट्रॉन समृद्ध स्पीशीज़, अर्थात nucleophile, उस इलेक्ट्रॉन की कमी वाले कार्बन की ओर खिंचती है जैसे आधी खुली दुकान की ओर ग्राहक। वह कार्बन से बंध बनाती है, हैलोजन निकल जाता है, और इसे nucleophilic substitution कहते हैं। यही हैलोऐल्केन की मुख्य अभिक्रिया है।"
+            },
+            {
+              "seq": 3,
+              "text": "पर एक जटिलता है, और बोर्ड इसे दिखाता है। वही अभिकर्मक एक द्विभाजन पर खड़ा है। बाईं ओर वह nucleophile बनकर कार्बन पर आक्रमण करता है; दाईं ओर वह क्षार बन जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "क्षार बनकर, कार्बन पर आक्रमण करने के बजाय, वह बगल वाले कार्बन, अर्थात बीटा कार्बन, से एक हाइड्रोजन खींच लेता है।"
+            },
+            {
+              "seq": 5,
+              "text": "यदि ऐसा हुआ, तो अणु H X बाहर फेंकता है और एक द्विबंध बनता है। यही विलोपन है, उन्हीं आरंभिक पदार्थों से बिल्कुल भिन्न उत्पाद।"
+            },
+            {
+              "seq": 6,
+              "text": "तो क्षार या nucleophile के सामने खड़ा हैलोऐल्केन एक द्विभाजन पर है, और कौन सा मार्ग जीतेगा यह बस सबसे तेज़ धावक की दौड़ है।"
+            },
+            {
+              "seq": 7,
+              "text": "छोटा, उत्सुक nucleophile मृदु परिस्थितियों में प्रतिस्थापन की दौड़ दौड़ता है और जीतता है।"
+            },
+            {
+              "seq": 8,
+              "text": "बड़ा, प्रबल क्षार उच्च ताप पर विलोपन की दौड़ जीत लेता है। इस प्रतिद्वंद्विता को पकड़े रखिए, क्योंकि इस खंड का शेष सब इसी एक विषय का रूपांतर है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "SN2 vs SN1: two styles, two stereochemical fates",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two ways to run a substitution"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "SN2 — one concerted step. Nucleophile comes in as halide leaves, in one smooth motion. The molecule flips inside-out → INVERSION."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "\\text{rate} = k[\\text{R–X}][\\text{Nu}^-] \\quad (\\text{second order})"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "SN2 reactivity tracks steric openness: CH3X > 1° > 2° > 3° (least crowded reacts fastest)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "SN1 — two steps. Halide leaves first, forming a flat carbocation; then the nucleophile attacks from either face → RACEMISATION."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "latex": "\\text{rate} = k[\\text{R–X}] \\quad (\\text{first order})"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "SN1 reactivity tracks carbocation stability: 3° > 2° > 1° > CH3X. Allylic & benzylic race ahead (resonance-stabilised cations)."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 62,
+          "style": "red-margin",
+          "text": "SN2 = 2 reactants, back-door, flips (inversion). SN1 = 1 reactant ionises first, flat cation, both faces (racemic)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Nucleophilic substitution runs in two distinct styles, and telling them apart is the single most tested skill in this chapter. Picture them as two ways of passing a relay baton."
+            },
+            {
+              "seq": 2,
+              "text": "In the S N two style, the incoming runner comes up from behind and takes the baton the very instant the outgoing runner lets go, one smooth simultaneous motion. Because the nucleophile pushes in from the back, the molecule's umbrella flips inside out. That flip is inversion of configuration."
+            },
+            {
+              "seq": 3,
+              "text": "Because both reactants must meet in that one step, the rate depends on both. Rate equals k times R X times the nucleophile, so it is second order."
+            },
+            {
+              "seq": 4,
+              "text": "And S N two speed tracks steric openness. Methyl is fastest, then primary, then secondary, and tertiary halides essentially cannot react this way, because the crowded back door is blocked."
+            },
+            {
+              "seq": 5,
+              "text": "In the S N one style, the outgoing runner steps off first. The halide leaves, forming a flat carbocation, and only then does the nucleophile board. Since the flat cation is open on both faces, attack comes from either side equally, giving a fifty fifty mixture of mirror images, which is racemisation."
+            },
+            {
+              "seq": 6,
+              "text": "Here only the halide leaves in the slow step, so the rate depends on the alkyl halide alone. Rate equals k times R X, first order."
+            },
+            {
+              "seq": 7,
+              "text": "And S N one speed tracks carbocation stability. Tertiary is fastest, down to methyl, and allylic and benzylic halides race ahead because their carbocations are resonance stabilised."
+            },
+            {
+              "seq": 8,
+              "text": "So lock the contrast in as two slogans. S N two: two reactants, back door attack, flips, meaning inversion. S N one: one reactant ionises first, flat cation, both faces, meaning racemic."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Nucleophilic substitution दो अलग styles में चलती है, और इन्हें पहचानना इस chapter की सबसे ज़्यादा test होने वाली skill है। इन्हें relay baton pass करने के दो तरीक़ों की तरह सोचो।"
+            },
+            {
+              "seq": 2,
+              "text": "S N two style में, आने वाला runner पीछे से आता है और उसी पल baton लेता है जिस पल जाने वाला छोड़ता है, एक smooth simultaneous motion। चूँकि nucleophile पीछे से घुसता है, molecule का umbrella उल्टा flip हो जाता है। यही flip inversion of configuration है।"
+            },
+            {
+              "seq": 3,
+              "text": "चूँकि दोनों reactants को उस एक step में मिलना है, rate दोनों पर depend करती है। Rate equals k times R X times nucleophile, तो ये second order है।"
+            },
+            {
+              "seq": 4,
+              "text": "और S N two speed steric openness को track करती है। Methyl सबसे तेज़, फिर primary, फिर secondary, और tertiary halides इस तरह react कर ही नहीं पाते, क्योंकि भीड़ भरा back door block है।"
+            },
+            {
+              "seq": 5,
+              "text": "S N one style में, जाने वाला runner पहले उतरता है। Halide पहले निकलता है, एक flat carbocation बनाता है, और तभी nucleophile चढ़ता है। चूँकि flat cation दोनों faces से खुला है, attack किसी भी तरफ़ से बराबर आता है, mirror images का fifty fifty mixture देता है, जो racemisation है।"
+            },
+            {
+              "seq": 6,
+              "text": "यहाँ slow step में सिर्फ़ halide निकलता है, तो rate सिर्फ़ alkyl halide पर depend करती है। Rate equals k times R X, first order।"
+            },
+            {
+              "seq": 7,
+              "text": "और S N one speed carbocation stability को track करती है। Tertiary सबसे तेज़, methyl तक, और allylic और benzylic halides आगे दौड़ते हैं क्योंकि इनके carbocations resonance stabilised हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो contrast को दो slogans में पक्का करो। S N two: दो reactants, back door attack, flips, यानी inversion। S N one: एक reactant पहले ionise, flat cation, both faces, यानी racemic।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Nucleophilic substitution दो भिन्न शैलियों में चलती है, और इन्हें पहचानना इस अध्याय की सबसे अधिक जाँची जाने वाली कुशलता है। इन्हें रिले बैटन पास करने के दो तरीक़ों की तरह सोचिए।"
+            },
+            {
+              "seq": 2,
+              "text": "S N two शैली में, आने वाला धावक पीछे से आता है और उसी क्षण बैटन लेता है जिस क्षण जाने वाला छोड़ता है, एक सहज एक साथ गति। चूँकि nucleophile पीछे से घुसता है, अणु का छाता उल्टा पलट जाता है। यही पलटाव विन्यास का प्रतिलोमन है।"
+            },
+            {
+              "seq": 3,
+              "text": "चूँकि दोनों अभिकारकों को उस एक चरण में मिलना है, दर दोनों पर निर्भर करती है। Rate equals k times R X times nucleophile, तो यह द्वितीय कोटि है।"
+            },
+            {
+              "seq": 4,
+              "text": "और S N two गति त्रिविम खुलेपन का अनुसरण करती है। मेथिल सबसे तेज़, फिर प्राथमिक, फिर द्वितीयक, और तृतीयक हैलाइड इस तरह अभिक्रिया कर ही नहीं पाते, क्योंकि भीड़ भरा पिछला द्वार अवरुद्ध है।"
+            },
+            {
+              "seq": 5,
+              "text": "S N one शैली में, जाने वाला धावक पहले उतरता है। हैलाइड पहले निकलता है, एक चपटा कार्बोकैटायन बनाता है, और तभी nucleophile चढ़ता है। चूँकि चपटा कैटायन दोनों फलकों से खुला है, आक्रमण किसी भी ओर से बराबर आता है, दर्पण छवियों का fifty fifty मिश्रण देता है, जो रेसीमीकरण है।"
+            },
+            {
+              "seq": 6,
+              "text": "यहाँ मंद चरण में केवल हैलाइड निकलता है, तो दर केवल ऐल्किल हैलाइड पर निर्भर करती है। Rate equals k times R X, प्रथम कोटि।"
+            },
+            {
+              "seq": 7,
+              "text": "और S N one गति कार्बोकैटायन स्थायित्व का अनुसरण करती है। तृतीयक सबसे तेज़, मेथिल तक, और एलिलिक तथा बेंज़ाइलिक हैलाइड आगे दौड़ते हैं क्योंकि इनके कार्बोकैटायन अनुनाद स्थायीकृत हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो विरोधाभास को दो सूत्रों में पक्का कीजिए। S N two: दो अभिकारक, पिछले द्वार से आक्रमण, पलटाव, अर्थात प्रतिलोमन। S N one: एक अभिकारक पहले आयनित, चपटा कैटायन, दोनों फलक, अर्थात रेसीमिक।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Leaving group, solvent, and the substitution-vs-elimination conditions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The knobs that tune the outcome"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Leaving-group order (same for both mechanisms, set by C–X strength): R–I > R–Br > R–Cl ≫ R–F."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Solvent: SN1 is favoured by polar protic solvents (water, alcohols) that stabilise the carbocation and the departing anion. Higher dielectric = faster SN1."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Same haloalkane, different base/solvent → different reaction",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 170' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><rect x='180' y='12' width='100' height='30' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='215' y='32' font-size='13' fill='#181818'>R–X</text><line x1='215' y1='42' x2='110' y2='90' stroke='#55565C' stroke-width='1.5'/><line x1='245' y1='42' x2='360' y2='90' stroke='#55565C' stroke-width='1.5'/><text x='40' y='108' font-size='12' fill='#181818'>aqueous KOH (cooler)</text><text x='70' y='126' font-size='13' fill='#181818' font-weight='bold'>R–OH (substitution)</text><text x='300' y='108' font-size='12' fill='#DD4433'>alcoholic KOH + heat</text><text x='300' y='126' font-size='13' fill='#181818' font-weight='bold'>alkene (elimination)</text></g></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Aqueous KOH, cooler → hydroxide acts as nucleophile → alcohol (substitution)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Alcoholic KOH, hotter → hydroxide acts as base → alkene (elimination, loses HX)."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "Saytzeff rule: the major alkene is the MORE substituted one — it is the more stable product."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the practical knobs, the conditions that decide which reaction and which product you actually get."
+            },
+            {
+              "seq": 2,
+              "text": "First the leaving group, and this order is the same for both mechanisms because it is set by the carbon to halogen bond strength. R iodide leaves best, then bromide, then chloride, and fluoride is far, far worse. The weakest bond makes the best leaving group."
+            },
+            {
+              "seq": 3,
+              "text": "Next the solvent. S N one is favoured by polar protic solvents like water and alcohols, because they wrap around and stabilise both the carbocation and the departing anion. So a higher dielectric constant means a faster S N one."
+            },
+            {
+              "seq": 4,
+              "text": "Now look at the board. The same haloalkane, given a different base and solvent, gives a completely different reaction."
+            },
+            {
+              "seq": 5,
+              "text": "With aqueous potassium hydroxide, kept cooler, the hydroxide behaves as a nucleophile and substitutes, giving the alcohol."
+            },
+            {
+              "seq": 6,
+              "text": "But with alcoholic potassium hydroxide and heat, the very same hydroxide now behaves as a strong base, removes a beta hydrogen, and you get elimination, forming the alkene and losing H X."
+            },
+            {
+              "seq": 7,
+              "text": "And when elimination can give more than one alkene, Saytzeff's rule decides. The major product is the more substituted alkene, the one with more alkyl groups on the double bonded carbons, because it is the more stable product."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब practical knobs, यानी वो conditions जो तय करती हैं कि actually कौन सी reaction और कौन सा product मिलता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले leaving group, और ये order दोनों mechanisms के लिए एक ही है क्योंकि ये carbon to halogen bond strength से तय होता है। R iodide सबसे अच्छा निकलता है, फिर bromide, फिर chloride, और fluoride बहुत ही ख़राब। सबसे कमज़ोर bond सबसे अच्छा leaving group बनाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "फिर solvent। S N one polar protic solvents जैसे water और alcohols से favour होता है, क्योंकि वो लपेटकर carbocation और निकलते anion दोनों को stabilise करते हैं। तो ज़्यादा dielectric constant मतलब तेज़ S N one।"
+            },
+            {
+              "seq": 4,
+              "text": "अब board देखो। वही haloalkane, अलग base और solvent के साथ, एकदम अलग reaction देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Aqueous potassium hydroxide के साथ, ठंडा रखकर, hydroxide nucleophile की तरह behave करता है और substitute करता है, alcohol देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "पर alcoholic potassium hydroxide और heat के साथ, वही hydroxide अब strong base की तरह behave करता है, beta hydrogen हटाता है, और elimination मिलता है, alkene बनता है और H X निकलता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और जब elimination एक से ज़्यादा alkene दे सकता हो, Saytzeff's rule तय करता है। Major product ज़्यादा substituted alkene है, जिसके double bonded carbons पर ज़्यादा alkyl groups हों, क्योंकि वो ज़्यादा stable product है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब व्यावहारिक घुंडियाँ, अर्थात वे परिस्थितियाँ जो तय करती हैं कि वास्तव में कौन सी अभिक्रिया और कौन सा उत्पाद मिलता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले त्यागी समूह, और यह क्रम दोनों क्रियाविधियों के लिए एक ही है क्योंकि यह कार्बन हैलोजन बंध सामर्थ्य से तय होता है। R iodide सबसे अच्छा निकलता है, फिर ब्रोमाइड, फिर क्लोराइड, और फ़्लोराइड बहुत ही ख़राब। सबसे कमज़ोर बंध सबसे अच्छा त्यागी समूह बनाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "फिर विलायक। S N one ध्रुवीय प्रोटिक विलायकों जैसे जल और ऐल्कोहॉल से अनुकूलित होता है, क्योंकि वे लपेटकर कार्बोकैटायन और निकलते ऋणायन दोनों को स्थायी करते हैं। तो अधिक परावैद्युतांक अर्थात तेज़ S N one।"
+            },
+            {
+              "seq": 4,
+              "text": "अब बोर्ड देखिए। वही हैलोऐल्केन, भिन्न क्षार और विलायक के साथ, बिल्कुल भिन्न अभिक्रिया देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "जलीय पोटैशियम हाइड्रॉक्साइड के साथ, ठंडा रखकर, हाइड्रॉक्साइड nucleophile की तरह व्यवहार करता है और प्रतिस्थापन करता है, ऐल्कोहॉल देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "पर ऐल्कोहॉलिक पोटैशियम हाइड्रॉक्साइड और ताप के साथ, वही हाइड्रॉक्साइड अब प्रबल क्षार की तरह व्यवहार करता है, बीटा हाइड्रोजन हटाता है, और विलोपन मिलता है, ऐल्कीन बनता है और H X निकलता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और जब विलोपन एक से अधिक ऐल्कीन दे सके, Saytzeff नियम तय करता है। मुख्य उत्पाद अधिक प्रतिस्थापित ऐल्कीन है, जिसके द्विबंधित कार्बनों पर अधिक ऐल्किल समूह हों, क्योंकि वह अधिक स्थायी उत्पाद है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Reactions with metals, and why aryl halides refuse",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two loose ends: metals, and the stubborn aryl halide"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Grignard: R–X + Mg (dry ether) → R–MgX. The C–Mg bond is polar (Cδ−); destroyed by any proton source, so moisture must be excluded."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Wurtz: 2 R–X + 2Na (dry ether) → R–R (doubles the carbon count). Wurtz–Fittig → alkylarene; Fittig → biaryl (Ar–Ar)."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "caption": "Why the aryl C–X won't break: the lone pair welds it to the ring",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 170' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><polygon points='120,40 160,40 180,80 160,120 120,120 100,80' fill='none' stroke='#181818' stroke-width='2'/><line x1='180' y1='80' x2='240' y2='80' stroke='#181818' stroke-width='3'/><text x='250' y='86' font-size='16' fill='#181818'>X</text><path d='M255 70 Q210 30 150 50' fill='none' stroke='#DD4433' stroke-width='2' stroke-dasharray='4 3'/><text x='260' y='55' font-size='11' fill='#DD4433'>lone pair feeds into ring</text><text x='40' y='150' font-size='12' fill='#181818'>partial double-bond &#8594; shorter, stronger, won't leave</text></g></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "In aryl halides the halogen lone pair delocalises into the ring: C–X gains partial double-bond character, becomes shorter/stronger, on an electronegative sp2 carbon."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "So aryl/vinyl halides do neither simple mechanism: no stable aryl cation (no SN1), and the backside is shielded & repelled by the π cloud (no SN2)."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 58,
+          "style": "red-margin",
+          "text": "They react only under forcing conditions, or when strong EWGs sit ortho/para to the halogen."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two loose ends close this theory block: how haloalkanes react with metals, and why aryl halides are so stubborn."
+            },
+            {
+              "seq": 2,
+              "text": "First, metals. The Grignard reagent forms when an alkyl halide meets magnesium in dry ether, giving R magnesium X. That carbon to magnesium bond is strongly polar, with carbon now negative, and it is destroyed by any proton source, so moisture must be rigorously excluded."
+            },
+            {
+              "seq": 3,
+              "text": "The Wurtz reaction couples two alkyl halides with sodium in dry ether to give R to R, doubling the carbon count. Its aromatic relatives are Wurtz Fittig, which joins an alkyl and an aryl halide to give an alkylarene, and Fittig, which joins two aryl halides to give a biaryl."
+            },
+            {
+              "seq": 4,
+              "text": "Now the aryl halide. Look at the board. The halogen's lone pair delocalises straight into the aromatic ring."
+            },
+            {
+              "seq": 5,
+              "text": "That gives the carbon to halogen bond partial double bond character, so it becomes shorter and stronger, and it sits on an electronegative s p two carbon. The halogen is, in effect, welded on."
+            },
+            {
+              "seq": 6,
+              "text": "So aryl and vinyl halides do neither simple mechanism. S N one is ruled out because there is no stable aryl or vinyl cation, and S N two is blocked because the back side is shielded by the ring and repelled by its pi cloud."
+            },
+            {
+              "seq": 7,
+              "text": "They react only under forcing conditions, or when strong electron withdrawing groups sit ortho or para to the halogen, and that special case is the whole story of the next mechanism."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो loose ends इस theory block को बंद करते हैं: haloalkanes metals के साथ कैसे react करते हैं, और aryl halides इतने stubborn क्यों हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले metals। Grignard reagent तब बनता है जब alkyl halide dry ether में magnesium से मिलता है, R magnesium X देता है। वो carbon to magnesium bond बहुत polar है, अब carbon negative है, और किसी भी proton source से नष्ट हो जाता है, तो moisture को सख़्ती से बाहर रखना पड़ता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Wurtz reaction दो alkyl halides को dry ether में sodium के साथ couple करके R to R देता है, carbon count double कर देता है। इसके aromatic relatives हैं Wurtz Fittig, जो alkyl और aryl halide जोड़कर alkylarene देता है, और Fittig, जो दो aryl halides जोड़कर biaryl देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब aryl halide। Board देखो। Halogen का lone pair सीधे aromatic ring में delocalise होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "इससे carbon to halogen bond को partial double bond character मिलता है, तो वो छोटा और मज़बूत हो जाता है, और वो एक electronegative s p two carbon पर बैठा है। Halogen मानो weld हो गया है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो aryl और vinyl halides कोई भी simple mechanism नहीं करते। S N one out है क्योंकि कोई stable aryl या vinyl cation नहीं, और S N two block है क्योंकि back side ring से shielded और उसके pi cloud से repelled है।"
+            },
+            {
+              "seq": 7,
+              "text": "ये सिर्फ़ forcing conditions में react करते हैं, या तब जब strong electron withdrawing groups halogen के ortho या para बैठें, और वही special case अगले mechanism की पूरी कहानी है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो छूटे सिरे इस सैद्धांतिक खंड को बंद करते हैं: हैलोऐल्केन धातुओं के साथ कैसे अभिक्रिया करते हैं, और एरिल हैलाइड इतने ज़िद्दी क्यों हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले धातुएँ। Grignard अभिकर्मक तब बनता है जब ऐल्किल हैलाइड शुष्क ईथर में मैग्नीशियम से मिलता है, R magnesium X देता है। वह कार्बन मैग्नीशियम बंध बहुत ध्रुवीय है, अब कार्बन ऋणात्मक है, और किसी भी प्रोटॉन स्रोत से नष्ट हो जाता है, तो नमी को सख़्ती से बाहर रखना पड़ता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Wurtz अभिक्रिया दो ऐल्किल हैलाइड को शुष्क ईथर में सोडियम के साथ युग्मित करके R to R देती है, कार्बन संख्या दुगनी कर देती है। इसके ऐरोमैटिक संबंधी हैं Wurtz Fittig, जो ऐल्किल और एरिल हैलाइड जोड़कर ऐल्किलऐरीन देता है, और Fittig, जो दो एरिल हैलाइड जोड़कर बाइएरिल देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब एरिल हैलाइड। बोर्ड देखिए। हैलोजन का एकाकी युग्म सीधे ऐरोमैटिक वलय में विस्थानित होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "इससे कार्बन हैलोजन बंध को आंशिक द्विबंध गुण मिलता है, तो वह छोटा और मज़बूत हो जाता है, और वह एक विद्युतऋणात्मक s p two कार्बन पर बैठा है। हैलोजन मानो जड़ गया है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो एरिल और वाइनिल हैलाइड कोई भी सरल क्रियाविधि नहीं करते। S N one बाहर है क्योंकि कोई स्थायी एरिल या वाइनिल कैटायन नहीं, और S N two अवरुद्ध है क्योंकि पिछला भाग वलय से ढका और उसके पाई बादल से प्रतिकर्षित है।"
+            },
+            {
+              "seq": 7,
+              "text": "ये केवल प्रबल परिस्थितियों में अभिक्रिया करते हैं, या तब जब प्रबल इलेक्ट्रॉन आकर्षी समूह हैलोजन के ऑर्थो या पैरा बैठें, और वही विशेष स्थिति अगली क्रियाविधि की पूरी कहानी है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Mechanism — SN2, one concerted step",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "SN2: backside attack in a single motion"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Nu attacks opposite X; the umbrella inverts through a 5-coordinate transition state",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 190' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><text x='30' y='95' font-size='16' fill='#181818'>Nu</text><path d='M55 90 L110 90' stroke='#181818' stroke-width='2' stroke-dasharray='5 3'/><polygon points='110,90 101,86 101,94' fill='#181818'/><circle cx='150' cy='90' r='10' fill='#181818'/><text x='138' y='75' font-size='12' fill='#55565C'>C</text><line x1='150' y1='90' x2='150' y2='45' stroke='#181818' stroke-width='2'/><line x1='150' y1='90' x2='118' y2='125' stroke='#181818' stroke-width='2'/><line x1='150' y1='90' x2='182' y2='125' stroke='#181818' stroke-width='2'/><path d='M162 90 L215 90' stroke='#DD4433' stroke-width='2' stroke-dasharray='5 3'/><text x='225' y='95' font-size='16' fill='#DD4433'>X</text><text x='90' y='165' font-size='12' fill='#55565C'>three groups pass through a plane...</text><text x='300' y='95' font-size='12' fill='#181818'>&#8594; product inverted</text><path d='M300 120 Q330 150 370 120' fill='none' stroke='#EEA31F' stroke-width='2'/><text x='300' y='175' font-size='11' fill='#EEA31F'>umbrella flips (Walden inversion)</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "The nucleophile approaches directly OPPOSITE the leaving halogen — the C–X antibonding orbital is only accessible from behind."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "As the Nu–C bond forms, the C–X bond breaks simultaneously — one transition state, carbon transiently 5-coordinate and roughly sp2 (three groups in a plane)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Because attack is from the back, the other three groups flip — the configuration inverts (Walden inversion)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "The rate needs both reactants meeting in that one step → second order."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "style": "red-margin",
+          "text": "Steric crowding kills it: CH3 & 1° fastest; 3° essentially cannot react this way."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us walk the S N two mechanism slowly, because the diagram carries the whole idea."
+            },
+            {
+              "seq": 2,
+              "text": "On the board, the nucleophile comes in from the left, the halide leaves to the right, and in between the carbon is caught mid flip. Watch how the three unchanged groups swing from one side to the other, like an umbrella turning inside out."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the geometry rule. The nucleophile approaches directly opposite the leaving halogen, from behind, because the empty carbon to halogen antibonding orbital, the orbital it must feed into, is only accessible from that back side."
+            },
+            {
+              "seq": 4,
+              "text": "As the nucleophile to carbon bond forms, the carbon to halogen bond breaks at the same instant. The reaction passes through a single transition state in which carbon is briefly five coordinate and roughly s p two, with the three unchanged groups lying in a plane."
+            },
+            {
+              "seq": 5,
+              "text": "And because the attack came from the back, those three groups are pushed through and flip to the other side. The configuration inverts. We call this Walden inversion."
+            },
+            {
+              "seq": 6,
+              "text": "Since both reactants have to meet in that one concerted step, the rate depends on both, and the reaction is second order."
+            },
+            {
+              "seq": 7,
+              "text": "Finally, crowding is fatal here. Methyl and primary halides are fastest because the back door is open, while tertiary halides essentially cannot react this way at all, because that back door is blocked by bulk."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "S N two mechanism को धीरे धीरे walk करते हैं, क्योंकि diagram पूरी idea carry करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board पर nucleophile बाईं तरफ़ से आता है, halide दाईं तरफ़ निकलता है, और बीच में carbon flip के बीच पकड़ा गया है। देखो कैसे तीनों unchanged groups एक तरफ़ से दूसरी तरफ़ swing करते हैं, जैसे umbrella उल्टा हो रहा हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Geometry rule ये है। Nucleophile leaving halogen के ठीक opposite, पीछे से approach करता है, क्योंकि जो खाली carbon to halogen antibonding orbital उसे feed करना है, वो सिर्फ़ उसी back side से accessible है।"
+            },
+            {
+              "seq": 4,
+              "text": "जैसे nucleophile to carbon bond बनता है, carbon to halogen bond उसी पल टूटता है। Reaction एक single transition state से गुज़रती है जिसमें carbon थोड़ी देर के लिए five coordinate और लगभग s p two है, तीनों unchanged groups एक plane में।"
+            },
+            {
+              "seq": 5,
+              "text": "और चूँकि attack पीछे से आया, वो तीनों groups धकेलकर दूसरी तरफ़ flip हो जाते हैं। Configuration invert हो जाता है। इसे Walden inversion कहते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "चूँकि दोनों reactants को उस एक concerted step में मिलना है, rate दोनों पर depend करती है, और reaction second order है।"
+            },
+            {
+              "seq": 7,
+              "text": "आख़िर में, यहाँ crowding जानलेवा है। Methyl और primary halides सबसे तेज़ हैं क्योंकि back door खुला है, जबकि tertiary halides इस तरह react कर ही नहीं सकते, क्योंकि वो back door bulk से block है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "S N two क्रियाविधि को धीरे धीरे देखते हैं, क्योंकि आरेख पूरी अवधारणा वहन करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड पर nucleophile बाईं ओर से आता है, हैलाइड दाईं ओर निकलता है, और बीच में कार्बन पलटाव के बीच पकड़ा गया है। देखिए कैसे तीनों अपरिवर्तित समूह एक ओर से दूसरी ओर झूलते हैं, जैसे छाता उल्टा हो रहा हो।"
+            },
+            {
+              "seq": 3,
+              "text": "ज्यामिति नियम यह है। Nucleophile निकलते हैलोजन के ठीक विपरीत, पीछे से पहुँचता है, क्योंकि जो खाली कार्बन हैलोजन प्रतिबंधन कक्षक उसे भरना है, वह केवल उसी पिछली ओर से पहुँच योग्य है।"
+            },
+            {
+              "seq": 4,
+              "text": "जैसे nucleophile कार्बन बंध बनता है, कार्बन हैलोजन बंध उसी क्षण टूटता है। अभिक्रिया एक एकल संक्रमण अवस्था से गुज़रती है जिसमें कार्बन थोड़ी देर के लिए पंच समन्वयी और लगभग s p two है, तीनों अपरिवर्तित समूह एक समतल में।"
+            },
+            {
+              "seq": 5,
+              "text": "और चूँकि आक्रमण पीछे से आया, वे तीनों समूह धकेलकर दूसरी ओर पलट जाते हैं। विन्यास प्रतिलोमित हो जाता है। इसे Walden प्रतिलोमन कहते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "चूँकि दोनों अभिकारकों को उस एक समकालिक चरण में मिलना है, दर दोनों पर निर्भर करती है, और अभिक्रिया द्वितीय कोटि है।"
+            },
+            {
+              "seq": 7,
+              "text": "अंत में, यहाँ भीड़ घातक है। मेथिल और प्राथमिक हैलाइड सबसे तेज़ हैं क्योंकि पिछला द्वार खुला है, जबकि तृतीयक हैलाइड इस तरह अभिक्रिया कर ही नहीं सकते, क्योंकि वह पिछला द्वार भारीपन से अवरुद्ध है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Mechanism — SN1, two steps via a carbocation",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "SN1: ionise first, then attack a flat cation"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Slow ionisation to a planar cation, then attack from BOTH faces → racemic",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 190' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><text x='10' y='40' font-size='12' fill='#55565C'>Step 1 (slow):</text><text x='10' y='60' font-size='13' fill='#181818'>R–X</text><path d='M45 55 L110 55' stroke='#181818' stroke-width='1.5'/><polygon points='110,55 101,51 101,59' fill='#181818'/><text x='120' y='60' font-size='13' fill='#DD4433'>R+  +  X&#8722;</text><text x='120' y='78' font-size='11' fill='#55565C'>planar carbocation</text><text x='10' y='120' font-size='12' fill='#55565C'>Step 2 (fast):</text><circle cx='230' cy='140' r='11' fill='#181818'/><text x='214' y='120' font-size='12' fill='#55565C'>C+</text><path d='M230 105 L230 128' stroke='#EEA31F' stroke-width='2'/><polygon points='230,128 226,119 234,119' fill='#EEA31F'/><path d='M230 175 L230 152' stroke='#EEA31F' stroke-width='2'/><polygon points='230,152 226,161 234,161' fill='#EEA31F'/><text x='250' y='100' font-size='11' fill='#EEA31F'>Nu from top</text><text x='250' y='185' font-size='11' fill='#EEA31F'>Nu from bottom</text><text x='320' y='145' font-size='12' fill='#181818'>50:50 enantiomers</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Step 1 (slow, rate-determining): the polar C–X ionises on its own, helped by a polar protic solvent → planar carbocation + halide."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Only the halide leaves in this step, so the rate depends on the alkyl halide alone — first order."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Step 2 (fast): the nucleophile attacks the flat sp2 cation from either face with equal probability → both configurations in equal amount (racemic)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "The more stable the carbocation, the easier Step 1 — so tertiary, benzylic and allylic halides race ahead."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "style": "red-margin",
+          "text": "SN1 signature: first-order kinetics + racemisation, driven by carbocation stability."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the S N one mechanism, which runs in two steps and gives a very different stereochemical result."
+            },
+            {
+              "seq": 2,
+              "text": "The board splits it in two. Step one is slow, forming a flat cation; step two is fast, and the nucleophile attacks that flat cation from both the top and the bottom."
+            },
+            {
+              "seq": 3,
+              "text": "In step one, the slow and rate determining step, the polar carbon to halogen bond ionises on its own, helped by solvation in a polar protic solvent, giving a planar carbocation and the halide ion."
+            },
+            {
+              "seq": 4,
+              "text": "Because only the halide is leaving in this slow step, the rate depends on the concentration of the alkyl halide alone, and the reaction is first order."
+            },
+            {
+              "seq": 5,
+              "text": "In step two, the fast step, the nucleophile attacks the flat s p two carbocation. Since the cation is planar, the nucleophile can approach from either face with equal probability, producing both configurations in equal amount, a racemic mixture."
+            },
+            {
+              "seq": 6,
+              "text": "And the whole rate hinges on step one, so the more stable the carbocation, the easier that ionisation. That is why tertiary, benzylic and allylic halides race ahead in S N one, their cations are the most stabilised."
+            },
+            {
+              "seq": 7,
+              "text": "So the S N one signature you look for in a problem is first order kinetics together with racemisation, both driven by carbocation stability."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब S N one mechanism, जो दो steps में चलता है और एकदम अलग stereochemical result देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board इसे दो हिस्सों में बाँटता है। Step one slow है, एक flat cation बनाता है; step two fast है, और nucleophile उस flat cation पर ऊपर और नीचे दोनों से attack करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Step one में, slow और rate determining step, polar carbon to halogen bond अपने आप ionise होता है, polar protic solvent में solvation से मदद पाकर, planar carbocation और halide ion देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "चूँकि इस slow step में सिर्फ़ halide निकल रहा है, rate सिर्फ़ alkyl halide की concentration पर depend करती है, और reaction first order है।"
+            },
+            {
+              "seq": 5,
+              "text": "Step two में, fast step, nucleophile flat s p two carbocation पर attack करता है। चूँकि cation planar है, nucleophile किसी भी face से बराबर probability से approach कर सकता है, दोनों configurations बराबर मात्रा में देता है, एक racemic mixture।"
+            },
+            {
+              "seq": 6,
+              "text": "और पूरी rate step one पर टिकी है, तो carbocation जितना stable, वो ionisation उतना आसान। इसीलिए tertiary, benzylic और allylic halides S N one में आगे दौड़ते हैं, इनके cations सबसे ज़्यादा stabilised हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो problem में जो S N one signature ढूँढो वो है first order kinetics के साथ racemisation, दोनों carbocation stability से driven।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब S N one क्रियाविधि, जो दो चरणों में चलती है और बिल्कुल भिन्न त्रिविम परिणाम देती है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड इसे दो भागों में बाँटता है। पहला चरण मंद है, एक चपटा कैटायन बनाता है; दूसरा चरण तेज़ है, और nucleophile उस चपटे कैटायन पर ऊपर और नीचे दोनों से आक्रमण करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले चरण में, मंद और दर निर्धारक चरण, ध्रुवीय कार्बन हैलोजन बंध अपने आप आयनित होता है, ध्रुवीय प्रोटिक विलायक में विलायकन से सहायता पाकर, समतलीय कार्बोकैटायन और हैलाइड आयन देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "चूँकि इस मंद चरण में केवल हैलाइड निकल रहा है, दर केवल ऐल्किल हैलाइड की सांद्रता पर निर्भर करती है, और अभिक्रिया प्रथम कोटि है।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरे चरण में, तेज़ चरण, nucleophile चपटे s p two कार्बोकैटायन पर आक्रमण करता है। चूँकि कैटायन समतलीय है, nucleophile किसी भी फलक से बराबर प्रायिकता से पहुँच सकता है, दोनों विन्यास बराबर मात्रा में देता है, एक रेसीमिक मिश्रण।"
+            },
+            {
+              "seq": 6,
+              "text": "और पूरी दर पहले चरण पर टिकी है, तो कार्बोकैटायन जितना स्थायी, वह आयनन उतना आसान। इसीलिए तृतीयक, बेंज़ाइलिक और एलिलिक हैलाइड S N one में आगे दौड़ते हैं, इनके कैटायन सबसे अधिक स्थायीकृत हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो समस्या में जो S N one पहचान ढूँढिए वह है प्रथम कोटि बलगतिकी के साथ रेसीमीकरण, दोनों कार्बोकैटायन स्थायित्व से प्रेरित।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "concept",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Mechanism — β-elimination",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Elimination: base removes a β-H as X leaves"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Alcoholic KOH abstracts the β-H while C–X breaks → C=C",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 180' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><circle cx='150' cy='90' r='11' fill='none' stroke='#181818' stroke-width='2'/><text x='128' y='95' font-size='12' fill='#55565C'>&#946;</text><circle cx='250' cy='90' r='11' fill='none' stroke='#181818' stroke-width='2'/><text x='270' y='95' font-size='12' fill='#55565C'>&#945;</text><line x1='161' y1='90' x2='239' y2='90' stroke='#181818' stroke-width='2'/><line x1='150' y1='79' x2='150' y2='45' stroke='#181818' stroke-width='2'/><text x='144' y='40' font-size='13' fill='#181818'>H</text><line x1='250' y1='79' x2='250' y2='45' stroke='#DD4433' stroke-width='2'/><text x='244' y='40' font-size='13' fill='#DD4433'>X</text><text x='40' y='30' font-size='12' fill='#EEA31F'>KOH (alc.) grabs H</text><path d='M120 30 Q135 55 148 72' fill='none' stroke='#EEA31F' stroke-width='2' stroke-dasharray='4 3'/><path d='M300 55 Q280 45 258 55' fill='none' stroke='#DD4433' stroke-width='2' stroke-dasharray='4 3'/><text x='150' y='150' font-size='13' fill='#181818' font-weight='bold'>&#8594; C=C forms, HX lost</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "A strong base (alcoholic KOH, heat) removes a hydrogen from the β-carbon while the halogen leaves from the α-carbon."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "The two departing bonds become a new C=C double bond — the molecule loses HX."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "If more than one β-hydrogen is available, more than one alkene is possible."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "Saytzeff's rule: the MORE substituted (more stable) alkene is the major product."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The third mechanism is elimination, and its name, beta elimination, tells you exactly where the action is."
+            },
+            {
+              "seq": 2,
+              "text": "Follow the board. Label the carbon holding the halogen as alpha, and its neighbour as beta. The base swoops in on the beta hydrogen just as the carbon to halogen bond breaks at alpha."
+            },
+            {
+              "seq": 3,
+              "text": "So when a haloalkane that has a beta hydrogen meets a strong base, typically alcoholic potassium hydroxide with heat, the base removes that beta hydrogen while the halogen leaves from the alpha carbon."
+            },
+            {
+              "seq": 4,
+              "text": "The electrons left behind form a new carbon to carbon double bond between the alpha and beta carbons. The overall change is that the molecule has lost H X, and a C double bond C has appeared."
+            },
+            {
+              "seq": 5,
+              "text": "Now here is the subtlety. If the alpha carbon has more than one beta carbon carrying a hydrogen, then more than one alkene can form, depending on which beta hydrogen is removed."
+            },
+            {
+              "seq": 6,
+              "text": "That is exactly where Saytzeff's rule steps in. Among the possible alkenes, the more substituted one, the one with more alkyl groups on the double bonded carbons, is the more stable, and so it is the major product."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "तीसरा mechanism elimination है, और इसका नाम, beta elimination, बता देता है कि action कहाँ है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board follow करो। Halogen वाले carbon को alpha, और उसके पड़ोसी को beta label करो। Base beta hydrogen पर झपटता है ठीक उसी वक़्त जब alpha पर carbon to halogen bond टूटता है।"
+            },
+            {
+              "seq": 3,
+              "text": "तो जब beta hydrogen वाला haloalkane strong base से मिलता है, आमतौर पर alcoholic potassium hydroxide heat के साथ, base उस beta hydrogen को हटाता है जबकि halogen alpha carbon से निकलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "पीछे बचे electrons alpha और beta carbons के बीच एक नया carbon to carbon double bond बनाते हैं। कुल बदलाव ये है कि molecule ने H X खो दिया, और एक C double bond C आ गया।"
+            },
+            {
+              "seq": 5,
+              "text": "अब subtlety ये है। अगर alpha carbon के पास एक से ज़्यादा beta carbon हों जिन पर hydrogen हो, तो एक से ज़्यादा alkene बन सकते हैं, इस पर कि कौन सा beta hydrogen हटा।"
+            },
+            {
+              "seq": 6,
+              "text": "और यहीं Saytzeff's rule आता है। संभव alkenes में, ज़्यादा substituted वाला, जिसके double bonded carbons पर ज़्यादा alkyl groups हों, ज़्यादा stable है, और इसलिए वही major product है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "तीसरी क्रियाविधि विलोपन है, और इसका नाम, बीटा विलोपन, बता देता है कि क्रिया कहाँ है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड का अनुसरण कीजिए। हैलोजन वाले कार्बन को अल्फ़ा, और उसके पड़ोसी को बीटा नाम दीजिए। क्षार बीटा हाइड्रोजन पर झपटता है ठीक उसी समय जब अल्फ़ा पर कार्बन हैलोजन बंध टूटता है।"
+            },
+            {
+              "seq": 3,
+              "text": "तो जब बीटा हाइड्रोजन वाला हैलोऐल्केन प्रबल क्षार से मिलता है, प्रायः ऐल्कोहॉलिक पोटैशियम हाइड्रॉक्साइड ताप के साथ, क्षार उस बीटा हाइड्रोजन को हटाता है जबकि हैलोजन अल्फ़ा कार्बन से निकलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "पीछे बचे इलेक्ट्रॉन अल्फ़ा और बीटा कार्बनों के बीच एक नया कार्बन कार्बन द्विबंध बनाते हैं। कुल परिवर्तन यह है कि अणु ने H X खो दिया, और एक C double bond C आ गया।"
+            },
+            {
+              "seq": 5,
+              "text": "अब सूक्ष्मता यह है। यदि अल्फ़ा कार्बन के पास एक से अधिक बीटा कार्बन हों जिन पर हाइड्रोजन हो, तो एक से अधिक ऐल्कीन बन सकते हैं, इस पर कि कौन सा बीटा हाइड्रोजन हटा।"
+            },
+            {
+              "seq": 6,
+              "text": "और यहीं Saytzeff नियम आता है। संभव ऐल्कीनों में, अधिक प्रतिस्थापित वाला, जिसके द्विबंधित कार्बनों पर अधिक ऐल्किल समूह हों, अधिक स्थायी है, और इसलिए वही मुख्य उत्पाद है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "concept",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Mechanism — nucleophilic substitution in haloarenes (addition–elimination)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "An ortho/para EWG unlocks the aryl halide"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "OH⁻ adds; the negative charge parks on the para-NO₂ oxygen; then Cl⁻ leaves",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 190' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><polygon points='120,40 160,40 180,80 160,120 120,120 100,80' fill='none' stroke='#181818' stroke-width='2'/><line x1='100' y1='80' x2='60' y2='80' stroke='#181818' stroke-width='2'/><text x='40' y='85' font-size='13' fill='#DD4433'>Cl</text><text x='10' y='60' font-size='12' fill='#EEA31F'>OH&#8722; adds (slow)</text><path d='M35 65 Q55 75 78 80' fill='none' stroke='#EEA31F' stroke-width='2' stroke-dasharray='4 3'/><line x1='160' y1='120' x2='180' y2='150' stroke='#181818' stroke-width='2'/><text x='182' y='162' font-size='13' fill='#181818'>NO2</text><path d='M150 90 Q175 130 190 148' fill='none' stroke='#DD4433' stroke-width='2' stroke-dasharray='4 3'/><text x='210' y='95' font-size='11' fill='#DD4433'>charge delocalises</text><text x='210' y='112' font-size='11' fill='#DD4433'>onto NO2 oxygen</text><text x='250' y='150' font-size='12' fill='#181818'>then Cl&#8722; leaves (fast) &#8594; p-nitrophenol</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Ordinary aryl halides resist substitution — but an electron-withdrawing group (–NO2) ortho/para changes everything."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Step 1 (slow): the nucleophile ADDS to the carbon bearing the halogen → a resonance-stabilised carbanion."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "An ortho/para nitro group parks the negative charge on its own oxygen, stabilising the intermediate strongly."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Step 2 (fast): the halide is expelled, restoring aromaticity → the substituted product."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "style": "red-margin",
+          "text": "Meta fails: only ortho/para EWGs sit on charge-bearing carbons, so only they can delocalise the charge."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The last mechanism is how aryl halides are forced to undergo substitution, once we place the right helper group on the ring."
+            },
+            {
+              "seq": 2,
+              "text": "The board uses para nitrochlorobenzene as the classic case. Hydroxide adds to the ring carbon that carries chlorine, the negative charge then slides onto the oxygen of the para nitro group, and finally chloride leaves to give para nitrophenol."
+            },
+            {
+              "seq": 3,
+              "text": "Ordinary aryl halides resist substitution completely, as we said. But put an electron withdrawing group, such as a nitro group, at the ortho or para position, and everything changes."
+            },
+            {
+              "seq": 4,
+              "text": "In step one, the slow step, the nucleophile adds to the ring carbon bearing the halogen, generating a carbanion whose negative charge is spread, or delocalised, around the ring."
+            },
+            {
+              "seq": 5,
+              "text": "This is where the nitro group earns its place. Sitting ortho or para, it can park that negative charge onto its own oxygen atom, stabilising the intermediate very strongly, and that is what lets the slow addition happen at all."
+            },
+            {
+              "seq": 6,
+              "text": "In step two, the fast step, the halide is expelled, the ring restores its full aromaticity, and we have the substituted product."
+            },
+            {
+              "seq": 7,
+              "text": "And here is why meta fails. The resonance structures that carry the negative charge place it only on carbons that are ortho or para to the point of attack. A nitro group at the meta position never lands on one of those charge bearing carbons, so it cannot delocalise the charge onto its oxygen, and offers no help at all."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िरी mechanism ये है कि aryl halides को substitution के लिए कैसे मजबूर करते हैं, एक बार जब हम ring पर सही helper group लगा दें।"
+            },
+            {
+              "seq": 2,
+              "text": "Board para nitrochlorobenzene को classic case की तरह लेता है। Hydroxide उस ring carbon पर add होता है जिस पर chlorine है, negative charge फिर para nitro group के oxygen पर सरकता है, और आख़िर में chloride निकलकर para nitrophenol देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "जैसा हमने कहा, ordinary aryl halides substitution को पूरी तरह resist करते हैं। पर एक electron withdrawing group, जैसे nitro group, ortho या para position पर लगा दो, और सब बदल जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Step one में, slow step, nucleophile उस ring carbon पर add होता है जिस पर halogen है, एक carbanion बनाता है जिसका negative charge ring में फैला, यानी delocalise, होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "यहीं nitro group अपनी जगह कमाता है। Ortho या para बैठकर, वो उस negative charge को अपने oxygen atom पर park कर सकता है, intermediate को बहुत मज़बूती से stabilise करता है, और यही वो चीज़ है जो slow addition को होने ही देती है।"
+            },
+            {
+              "seq": 6,
+              "text": "Step two में, fast step, halide निकल जाता है, ring अपनी पूरी aromaticity वापस पा लेता है, और हमारे पास substituted product है।"
+            },
+            {
+              "seq": 7,
+              "text": "और meta क्यों fail होता है। जो resonance structures negative charge carry करते हैं वो उसे सिर्फ़ उन carbons पर रखते हैं जो point of attack के ortho या para हैं। Meta position वाला nitro group कभी उन charge वाले carbons पर नहीं आता, तो वो charge को अपने oxygen पर delocalise नहीं कर सकता, और बिल्कुल मदद नहीं करता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अंतिम क्रियाविधि यह है कि एरिल हैलाइड को प्रतिस्थापन के लिए कैसे विवश करते हैं, एक बार जब हम वलय पर सही सहायक समूह लगा दें।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड para nitrochlorobenzene को पारंपरिक स्थिति की तरह लेता है। हाइड्रॉक्साइड उस वलय कार्बन पर जुड़ता है जिस पर क्लोरीन है, ऋण आवेश फिर para nitro समूह के ऑक्सीजन पर सरकता है, और अंत में क्लोराइड निकलकर para nitrophenol देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "जैसा हमने कहा, साधारण एरिल हैलाइड प्रतिस्थापन का पूरी तरह प्रतिरोध करते हैं। पर एक इलेक्ट्रॉन आकर्षी समूह, जैसे nitro समूह, ऑर्थो या पैरा स्थिति पर लगा दीजिए, और सब बदल जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "पहले चरण में, मंद चरण, nucleophile उस वलय कार्बन पर जुड़ता है जिस पर हैलोजन है, एक कार्बऋणायन बनाता है जिसका ऋण आवेश वलय में फैला, अर्थात विस्थानित, होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "यहीं nitro समूह अपना स्थान अर्जित करता है। ऑर्थो या पैरा बैठकर, वह उस ऋण आवेश को अपने ऑक्सीजन परमाणु पर रख सकता है, मध्यवर्ती को बहुत मज़बूती से स्थायी करता है, और यही वह चीज़ है जो मंद योग को होने ही देती है।"
+            },
+            {
+              "seq": 6,
+              "text": "दूसरे चरण में, तेज़ चरण, हैलाइड निकल जाता है, वलय अपनी पूरी ऐरोमैटिकता वापस पा लेता है, और हमारे पास प्रतिस्थापित उत्पाद है।"
+            },
+            {
+              "seq": 7,
+              "text": "और मेटा क्यों विफल होता है। जो अनुनाद संरचनाएँ ऋण आवेश वहन करती हैं वे उसे केवल उन कार्बनों पर रखती हैं जो आक्रमण बिंदु के ऑर्थो या पैरा हैं। मेटा स्थिति वाला nitro समूह कभी उन आवेशित कार्बनों पर नहीं आता, तो वह आवेश को अपने ऑक्सीजन पर विस्थानित नहीं कर सकता, और बिल्कुल सहायता नहीं करता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Worked example — aqueous vs alcoholic KOH on 2-bromobutane [CBSE]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "2-bromobutane with (a) aq. KOH and (b) alcoholic KOH, heated"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Same substrate, opposite roles of hydroxide",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 160' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><rect x='170' y='12' width='130' height='30' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='185' y='32' font-size='12' fill='#181818'>2-bromobutane</text><line x1='210' y1='42' x2='110' y2='90' stroke='#55565C' stroke-width='1.5'/><line x1='260' y1='42' x2='360' y2='90' stroke='#55565C' stroke-width='1.5'/><text x='30' y='108' font-size='12' fill='#181818'>aq. KOH: OH&#8722; = nucleophile</text><text x='55' y='126' font-size='13' fill='#181818' font-weight='bold'>butan-2-ol</text><text x='300' y='108' font-size='12' fill='#DD4433'>alc. KOH + heat: OH&#8722; = base</text><text x='330' y='126' font-size='13' fill='#181818' font-weight='bold'>but-2-ene</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "(a) Aqueous KOH, milder: hydroxide acts as a NUCLEOPHILE and substitutes bromide → butan-2-ol. This is nucleophilic substitution."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "(b) Alcoholic KOH, heated: hydroxide now acts as a strong BASE, removes a β-hydrogen → elimination (dehydrohalogenation)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Two alkenes are possible: but-1-ene and but-2-ene. By Saytzeff's rule the more substituted but-2-ene is major."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Answer: (a) butan-2-ol, substitution; (b) but-2-ene (major), elimination by Saytzeff."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A clean C B S E level question that tests the substitution versus elimination distinction directly. We treat two bromobutane first with aqueous potassium hydroxide, then with alcoholic potassium hydroxide under heat."
+            },
+            {
+              "seq": 2,
+              "text": "The board shows the key idea: the very same hydroxide plays two different roles depending on the conditions."
+            },
+            {
+              "seq": 3,
+              "text": "In part a, with aqueous potassium hydroxide and milder conditions, hydroxide behaves as a nucleophile. It substitutes the bromide, and we get butan two ol. That is nucleophilic substitution."
+            },
+            {
+              "seq": 4,
+              "text": "In part b, with alcoholic potassium hydroxide and heat, the same hydroxide now behaves as a strong base. It removes a beta hydrogen, and we get elimination, also called dehydrohalogenation."
+            },
+            {
+              "seq": 5,
+              "text": "Here two alkenes are possible, but one ene and but two ene, depending on which beta hydrogen is lost. By Saytzeff's rule, the more substituted alkene, but two ene, is the major product."
+            },
+            {
+              "seq": 6,
+              "text": "So the answer: part a gives butan two ol by substitution, and part b gives but two ene as the major product by elimination, following Saytzeff's rule."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक साफ़ C B S E level question जो substitution versus elimination distinction को सीधे test करता है। हम two bromobutane को पहले aqueous potassium hydroxide से, फिर alcoholic potassium hydroxide से heat के साथ treat करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Board key idea दिखाता है: वही hydroxide conditions के हिसाब से दो अलग roles निभाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Part a में, aqueous potassium hydroxide और milder conditions के साथ, hydroxide nucleophile की तरह behave करता है। वो bromide को substitute करता है, और हमें butan two ol मिलता है। यही nucleophilic substitution है।"
+            },
+            {
+              "seq": 4,
+              "text": "Part b में, alcoholic potassium hydroxide और heat के साथ, वही hydroxide अब strong base की तरह behave करता है। वो beta hydrogen हटाता है, और हमें elimination मिलता है, जिसे dehydrohalogenation भी कहते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "यहाँ दो alkenes possible हैं, but one ene और but two ene, इस पर कि कौन सा beta hydrogen गया। Saytzeff's rule से, ज़्यादा substituted alkene, but two ene, major product है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो answer: part a substitution से butan two ol देता है, और part b elimination से but two ene major product देता है, Saytzeff's rule के हिसाब से।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक स्वच्छ C B S E स्तर का प्रश्न जो प्रतिस्थापन बनाम विलोपन भेद को सीधे जाँचता है। हम two bromobutane को पहले जलीय पोटैशियम हाइड्रॉक्साइड से, फिर ऐल्कोहॉलिक पोटैशियम हाइड्रॉक्साइड से ताप के साथ उपचारित करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड मुख्य विचार दिखाता है: वही हाइड्रॉक्साइड परिस्थितियों के अनुसार दो भिन्न भूमिकाएँ निभाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "भाग a में, जलीय पोटैशियम हाइड्रॉक्साइड और मृदु परिस्थितियों के साथ, हाइड्रॉक्साइड nucleophile की तरह व्यवहार करता है। वह ब्रोमाइड को प्रतिस्थापित करता है, और हमें butan two ol मिलता है। यही nucleophilic substitution है।"
+            },
+            {
+              "seq": 4,
+              "text": "भाग b में, ऐल्कोहॉलिक पोटैशियम हाइड्रॉक्साइड और ताप के साथ, वही हाइड्रॉक्साइड अब प्रबल क्षार की तरह व्यवहार करता है। वह बीटा हाइड्रोजन हटाता है, और हमें विलोपन मिलता है, जिसे विहाइड्रोहैलोजनन भी कहते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "यहाँ दो ऐल्कीन संभव हैं, but one ene और but two ene, इस पर कि कौन सा बीटा हाइड्रोजन गया। Saytzeff नियम से, अधिक प्रतिस्थापित ऐल्कीन, but two ene, मुख्य उत्पाद है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो उत्तर: भाग a प्रतिस्थापन से butan two ol देता है, और भाग b विलोपन से but two ene मुख्य उत्पाद देता है, Saytzeff नियम के अनुसार।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Worked example — which is hydrolysed fastest by SN1 [NEET]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Fastest by SN1: 1-chlorobutane, 2-chlorobutane, 2-chloro-2-methylpropane, chlorobenzene?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Don't compute anything. SN1 speed = carbocation stability."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Rank the cations; strike the aryl one on sight",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 150' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><rect x='10' y='40' width='90' height='55' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='24' y='63' fill='#181818'>1&#176; cation</text><text x='30' y='82' fill='#55565C'>least</text><rect x='120' y='40' width='90' height='55' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='134' y='63' fill='#181818'>2&#176; cation</text><text x='140' y='82' fill='#55565C'>middle</text><rect x='230' y='40' width='90' height='55' rx='6' fill='#EEA31F' stroke='#181818' stroke-width='2'/><text x='244' y='63' fill='#181818'>3&#176; cation</text><text x='244' y='82' fill='#181818' font-weight='bold'>WINS</text><rect x='340' y='40' width='105' height='55' rx='6' fill='#FCFAF4' stroke='#DD4433' stroke-width='2'/><text x='350' y='63' fill='#DD4433'>aryl cation</text><text x='352' y='82' fill='#DD4433'>impossible</text><text x='10' y='125' fill='#55565C'>increasing SN1 rate &#8594;</text></g></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Rank the cations: tertiary (2-chloro-2-methylpropane) > secondary (2-chlorobutane) > primary (1-chlorobutane)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Chlorobenzene can't form an aryl cation at all — no SN1. Strike it first."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "Answer: 2-chloro-2-methylpropane (forms the stable 3° carbocation)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A quick N E E T speed trap. Which of these four is hydrolysed fastest by an S N one pathway?"
+            },
+            {
+              "seq": 2,
+              "text": "Do not compute anything or recall any numbers. For S N one, speed is simply carbocation stability, so this becomes a one line ranking."
+            },
+            {
+              "seq": 3,
+              "text": "Look at the board. Line up the cations each substrate would form, and immediately strike out the impossible one."
+            },
+            {
+              "seq": 4,
+              "text": "Ranking the cations: the tertiary cation from two chloro two methylpropane is most stable, then the secondary cation from two chlorobutane, then the primary cation from one chlorobutane."
+            },
+            {
+              "seq": 5,
+              "text": "And chlorobenzene cannot form an aryl cation at all, so it does no S N one whatsoever. Strike it the instant you see it, so you never waste time on it."
+            },
+            {
+              "seq": 6,
+              "text": "So the tertiary halide wins instantly. The answer is two chloro two methylpropane, because it forms the stable tertiary carbocation."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक quick N E E T speed trap। इन चारों में से कौन सा S N one pathway से सबसे तेज़ hydrolyse होता है?"
+            },
+            {
+              "seq": 2,
+              "text": "कुछ compute मत करो या numbers मत याद करो। S N one के लिए, speed बस carbocation stability है, तो ये एक line की ranking बन जाती है।"
+            },
+            {
+              "seq": 3,
+              "text": "Board देखो। हर substrate जो cation बनाएगा उन्हें line up करो, और impossible वाले को तुरंत काट दो।"
+            },
+            {
+              "seq": 4,
+              "text": "Cations की ranking: two chloro two methylpropane से बना tertiary cation सबसे stable है, फिर two chlorobutane से secondary cation, फिर one chlorobutane से primary cation।"
+            },
+            {
+              "seq": 5,
+              "text": "और chlorobenzene aryl cation बना ही नहीं सकता, तो ये S N one करता ही नहीं। देखते ही काट दो, ताकि उस पर time बर्बाद न हो।"
+            },
+            {
+              "seq": 6,
+              "text": "तो tertiary halide तुरंत जीतता है। Answer two chloro two methylpropane है, क्योंकि ये stable tertiary carbocation बनाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक त्वरित N E E T गति जाल। इन चारों में से कौन सा S N one मार्ग से सबसे तेज़ जलअपघटित होता है?"
+            },
+            {
+              "seq": 2,
+              "text": "कुछ गणना मत कीजिए या अंक मत याद कीजिए। S N one के लिए, गति बस कार्बोकैटायन स्थायित्व है, तो यह एक पंक्ति की श्रेणीबद्धता बन जाती है।"
+            },
+            {
+              "seq": 3,
+              "text": "बोर्ड देखिए। हर पदार्थ जो कैटायन बनाएगा उन्हें पंक्तिबद्ध कीजिए, और असंभव वाले को तुरंत काट दीजिए।"
+            },
+            {
+              "seq": 4,
+              "text": "कैटायनों की श्रेणी: two chloro two methylpropane से बना तृतीयक कैटायन सबसे स्थायी है, फिर two chlorobutane से द्वितीयक कैटायन, फिर one chlorobutane से प्राथमिक कैटायन।"
+            },
+            {
+              "seq": 5,
+              "text": "और क्लोरोबेंज़ीन एरिल कैटायन बना ही नहीं सकता, तो यह S N one करता ही नहीं। देखते ही काट दीजिए, ताकि उस पर समय बर्बाद न हो।"
+            },
+            {
+              "seq": 6,
+              "text": "तो तृतीयक हैलाइड तुरंत जीतता है। उत्तर two chloro two methylpropane है, क्योंकि यह स्थायी तृतीयक कार्बोकैटायन बनाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Worked example — SN2 inversion vs SN1 racemisation [JEE Main]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "(–)-2-bromobutane + CN⁻ in acetone (SN2 setting): stereochemistry?"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "SN2 → single inverted product; contrast: tertiary + ionising → racemic",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 170' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><text x='10' y='30' fill='#181818' font-weight='bold'>SN2 (2&#176;, strong Nu, aprotic)</text><rect x='10' y='42' width='100' height='34' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='20' y='63' fill='#181818'>(&#8722;) reactant</text><path d='M115 59 L175 59' stroke='#181818' stroke-width='1.5'/><polygon points='175,59 166,55 166,63' fill='#181818'/><rect x='180' y='42' width='150' height='34' rx='6' fill='#EEA31F' stroke='#181818' stroke-width='2'/><text x='190' y='63' fill='#181818'>single INVERTED product</text><text x='10' y='115' fill='#DD4433' font-weight='bold'>SN1 (3&#176;, ionising/protic)</text><rect x='10' y='127' width='120' height='34' rx='6' fill='#FCFAF4' stroke='#DD4433' stroke-width='2'/><text x='20' y='148' fill='#181818'>flat carbocation</text><path d='M135 144 L195 144' stroke='#DD4433' stroke-width='1.5'/><polygon points='195,144 186,140 186,148' fill='#DD4433'/><rect x='200' y='127' width='160' height='34' rx='6' fill='#FCFAF4' stroke='#DD4433' stroke-width='2'/><text x='210' y='148' fill='#181818'>RACEMIC (optically inactive)</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Step 1: a secondary substrate + strong nucleophile in a polar aprotic solvent → favours SN2."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Step 2: SN2 = backside attack → the product is inverted relative to the reactant — a single optically active product (not racemic)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Contrast: a tertiary halide in an ionising (polar protic) medium → SN1 via a planar cation → attack from both faces → racemic (optically inactive)."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "Answer: SN2 → inversion → single optically active inverted product. Don't confuse with SN1 racemisation."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A J E E Main stereochemistry problem. Optically active minus two bromobutane reacts with cyanide in acetone, which is a good S N two setting. We need to predict the stereochemical relationship between reactant and product."
+            },
+            {
+              "seq": 2,
+              "text": "The board contrasts the two possible fates so you never mix them up, S N two on top giving inversion, and the S N one alternative below giving a racemic mixture."
+            },
+            {
+              "seq": 3,
+              "text": "Step one, identify the mechanism. A secondary substrate with a strong nucleophile in a polar aprotic solvent favours S N two."
+            },
+            {
+              "seq": 4,
+              "text": "Step two, the stereochemistry. Because S N two proceeds by backside attack, the product has the inverted configuration relative to the reactant. The new stereocentre is the mirror image of the original, so you get a single, optically active product, and importantly it is not racemic."
+            },
+            {
+              "seq": 5,
+              "text": "Now the contrast the examiner wants. Had the substrate been a tertiary halide in an ionising, polar protic medium, it would react by S N one through a planar carbocation. Attack from both faces would then give a racemic mixture, which is optically inactive."
+            },
+            {
+              "seq": 6,
+              "text": "So the answer is S N two, giving inversion, giving a single optically active inverted product. This is exactly the point the syllabus tests by pairing S N two inversion against S N one racemisation, so keep the two firmly apart."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Main stereochemistry problem। Optically active minus two bromobutane acetone में cyanide से react करता है, जो एक अच्छा S N two setting है। हमें reactant और product के बीच stereochemical relationship predict करना है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board दोनों possible fates को contrast करता है ताकि तुम कभी mix न करो, ऊपर S N two inversion देता, और नीचे S N one alternative racemic mixture देता।"
+            },
+            {
+              "seq": 3,
+              "text": "Step one, mechanism पहचानो। Polar aprotic solvent में strong nucleophile के साथ secondary substrate S N two को favour करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Step two, stereochemistry। चूँकि S N two backside attack से चलता है, product की configuration reactant के मुक़ाबले inverted होती है। नया stereocentre original का mirror image है, तो single, optically active product मिलता है, और ख़ास बात, ये racemic नहीं है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब examiner जो contrast चाहता है। अगर substrate tertiary halide होता ionising, polar protic medium में, तो वो S N one से planar carbocation के through react करता। दोनों faces से attack फिर racemic mixture देता, जो optically inactive है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो answer S N two है, inversion देता, single optically active inverted product देता। यही वो point है जो syllabus S N two inversion को S N one racemisation के साथ pair करके test करता है, तो दोनों को अलग रखो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Main त्रिविम रसायन समस्या। प्रकाशिक सक्रिय ऋण two bromobutane ऐसीटोन में सायनाइड से अभिक्रिया करता है, जो एक अच्छा S N two परिवेश है। हमें अभिकारक और उत्पाद के बीच त्रिविम संबंध की भविष्यवाणी करनी है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड दोनों संभव परिणामों का विरोधाभास करता है ताकि आप कभी न मिलाएँ, ऊपर S N two प्रतिलोमन देता, और नीचे S N one विकल्प रेसीमिक मिश्रण देता।"
+            },
+            {
+              "seq": 3,
+              "text": "पहला चरण, क्रियाविधि पहचानिए। ध्रुवीय एप्रोटिक विलायक में प्रबल nucleophile के साथ द्वितीयक पदार्थ S N two को अनुकूलित करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा चरण, त्रिविम रसायन। चूँकि S N two पिछले भाग से आक्रमण द्वारा चलता है, उत्पाद का विन्यास अभिकारक की तुलना में प्रतिलोमित होता है। नया त्रिविम केंद्र मूल का दर्पण प्रतिबिंब है, तो एकल, प्रकाशिक सक्रिय उत्पाद मिलता है, और ख़ास बात, यह रेसीमिक नहीं है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब परीक्षक जो विरोधाभास चाहता है। यदि पदार्थ तृतीयक हैलाइड होता आयनकारी, ध्रुवीय प्रोटिक माध्यम में, तो वह S N one से समतलीय कार्बोकैटायन के माध्यम से अभिक्रिया करता। दोनों फलकों से आक्रमण फिर रेसीमिक मिश्रण देता, जो प्रकाशिक निष्क्रिय है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो उत्तर S N two है, प्रतिलोमन देता, एकल प्रकाशिक सक्रिय प्रतिलोमित उत्पाद देता। यही वह बिंदु है जो पाठ्यक्रम S N two प्रतिलोमन को S N one रेसीमीकरण के साथ जोड़कर जाँचता है, तो दोनों को अलग रखिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Worked example — rate of NAS across nitro-substituted chlorobenzenes [JEE Advanced]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Order the rate of NAS with hot aq. NaOH: chlorobenzene, 1-chloro-4-nitro-, 1-chloro-2,4-dinitrobenzene"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "More well-placed (o/p) EWGs → more stabilised intermediate → faster",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 150' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><rect x='10' y='45' width='110' height='50' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='30' y='68' fill='#181818'>(I) none</text><text x='34' y='86' fill='#55565C'>slowest</text><rect x='140' y='45' width='120' height='50' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='150' y='68' fill='#181818'>(II) one p-NO2</text><rect x='280' y='45' width='160' height='50' rx='6' fill='#EEA31F' stroke='#181818' stroke-width='2'/><text x='290' y='68' fill='#181818'>(III) o- and p-NO2</text><text x='300' y='86' fill='#181818' font-weight='bold'>fastest</text><text x='10' y='125' fill='#55565C'>increasing rate &#8594;   (I) &lt; (II) &lt; (III)</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Mechanism = addition–elimination. OH⁻ adds to the C–Cl carbon → carbanion whose charge delocalises into the ring."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "An ortho/para –NO2 accepts that charge onto its oxygen, stabilising the intermediate and speeding the slow addition step."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Counting well-placed EWGs: (I) none, (II) one p-NO2, (III) two (o + p) → rate rises with their number."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Why meta fails: the charge sits on carbons ortho/para to the attack point; a meta-NO2 is never on one of them, so it can't delocalise the charge."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 58,
+          "style": "red-margin",
+          "text": "Answer: rate (I) < (II) < (III); o/p-EWGs stabilise by resonance, meta-EWGs do not."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A J E E Advanced reasoning problem. Three chlorobenzene derivatives are treated with hot aqueous sodium hydroxide, and we must arrange them in increasing rate of nucleophilic substitution and justify it."
+            },
+            {
+              "seq": 2,
+              "text": "The board previews the answer as a rising staircase: no helper group, then one, then two, with rate increasing left to right."
+            },
+            {
+              "seq": 3,
+              "text": "First fix the mechanism. This is addition then elimination. Hydroxide adds to the carbon carrying chlorine, creating a carbanion whose negative charge is delocalised around the ring."
+            },
+            {
+              "seq": 4,
+              "text": "An electron withdrawing nitro group at the ortho or para position can accept that charge onto its own oxygen, dramatically stabilising the intermediate, and it is that intermediate stability that speeds up the slow addition step."
+            },
+            {
+              "seq": 5,
+              "text": "So count the well placed groups. Compound one has none, compound two has one para nitro, compound three has two nitro groups, one ortho and one para. Stabilisation, and therefore rate, rises with the number of well placed groups."
+            },
+            {
+              "seq": 6,
+              "text": "And meta fails for a precise reason. The resonance structures put the carbanion's charge on the carbons that are ortho and para to the point of attack. A nitro group at the meta position is never on one of those charge bearing carbons, so it cannot delocalise the charge onto its oxygen."
+            },
+            {
+              "seq": 7,
+              "text": "So the rate order is one less than two less than three, because ortho and para electron withdrawing groups stabilise the addition intermediate by resonance, while meta groups do not."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Advanced reasoning problem। तीन chlorobenzene derivatives को hot aqueous sodium hydroxide से treat करते हैं, और हमें इन्हें nucleophilic substitution की बढ़ती rate में लगाकर justify करना है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board answer को एक चढ़ती सीढ़ी की तरह preview करता है: कोई helper group नहीं, फिर एक, फिर दो, rate बाएँ से दाएँ बढ़ती हुई।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले mechanism fix करो। ये addition फिर elimination है। Hydroxide उस carbon पर add होता है जिस पर chlorine है, एक carbanion बनाता है जिसका negative charge ring में delocalise होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Ortho या para position पर एक electron withdrawing nitro group उस charge को अपने oxygen पर accept कर सकता है, intermediate को नाटकीय रूप से stabilise करता है, और वही intermediate stability slow addition step को तेज़ करती है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो well placed groups गिनो। Compound one में कोई नहीं, compound two में एक para nitro, compound three में दो nitro groups, एक ortho और एक para। Stabilisation, और इसलिए rate, well placed groups की संख्या के साथ बढ़ती है।"
+            },
+            {
+              "seq": 6,
+              "text": "और meta एक सटीक वजह से fail होता है। Resonance structures carbanion का charge उन carbons पर रखते हैं जो point of attack के ortho और para हैं। Meta position वाला nitro group कभी उन charge वाले carbons पर नहीं आता, तो वो charge को अपने oxygen पर delocalise नहीं कर सकता।"
+            },
+            {
+              "seq": 7,
+              "text": "तो rate order one less than two less than three है, क्योंकि ortho और para electron withdrawing groups addition intermediate को resonance से stabilise करते हैं, जबकि meta groups नहीं करते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Advanced तर्क समस्या। तीन क्लोरोबेंज़ीन व्युत्पन्नों को गर्म जलीय सोडियम हाइड्रॉक्साइड से उपचारित करते हैं, और हमें इन्हें nucleophilic substitution की बढ़ती दर में लगाकर औचित्य देना है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड उत्तर को एक चढ़ती सीढ़ी की तरह दिखाता है: कोई सहायक समूह नहीं, फिर एक, फिर दो, दर बाएँ से दाएँ बढ़ती हुई।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले क्रियाविधि निश्चित कीजिए। यह योग फिर विलोपन है। हाइड्रॉक्साइड उस कार्बन पर जुड़ता है जिस पर क्लोरीन है, एक कार्बऋणायन बनाता है जिसका ऋण आवेश वलय में विस्थानित होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "ऑर्थो या पैरा स्थिति पर एक इलेक्ट्रॉन आकर्षी nitro समूह उस आवेश को अपने ऑक्सीजन पर स्वीकार कर सकता है, मध्यवर्ती को नाटकीय रूप से स्थायी करता है, और वही मध्यवर्ती स्थायित्व मंद योग चरण को तेज़ करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो सुस्थित समूह गिनिए। यौगिक एक में कोई नहीं, यौगिक दो में एक para nitro, यौगिक तीन में दो nitro समूह, एक ऑर्थो और एक पैरा। स्थायीकरण, और इसलिए दर, सुस्थित समूहों की संख्या के साथ बढ़ती है।"
+            },
+            {
+              "seq": 6,
+              "text": "और मेटा एक सटीक कारण से विफल होता है। अनुनाद संरचनाएँ कार्बऋणायन का आवेश उन कार्बनों पर रखती हैं जो आक्रमण बिंदु के ऑर्थो और पैरा हैं। मेटा स्थिति वाला nitro समूह कभी उन आवेशित कार्बनों पर नहीं आता, तो वह आवेश को अपने ऑक्सीजन पर विस्थानित नहीं कर सकता।"
+            },
+            {
+              "seq": 7,
+              "text": "तो दर क्रम one less than two less than three है, क्योंकि ऑर्थो और पैरा इलेक्ट्रॉन आकर्षी समूह योग मध्यवर्ती को अनुनाद से स्थायी करते हैं, जबकि मेटा समूह नहीं करते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "tips",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Pitfalls & pro-tips: substrate first, then conditions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The reversals this block is built to punish"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "style": "red-margin",
+          "text": "SN2 → inversion (single product). SN1 → racemisation (50:50). Never swap these; SN2 does NOT racemise."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Reactivity orders point opposite ways: SN1 is 3° > 2° > 1° (cation stability); SN2 is the reverse (steric). Applying the SN1 order to an SN2 question is the #1 slip."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Aryl/vinyl halides do NEITHER SN1 nor SN2 under ordinary conditions — no stable cation, blocked/repelled backside."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "In NAS, only ortho/para EWGs accelerate — a meta-EWG gives no resonance help. And don't confuse aqueous KOH (substitution) with alcoholic KOH + heat (elimination)."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "Pro-tip: read the substrate first — 1° ⇒ SN2, 3° ⇒ SN1/elim, aryl/vinyl ⇒ neither. Let conditions break ties for 2°."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us gather the reversals this block is specifically built to punish, because almost every trap here is a swapped pair."
+            },
+            {
+              "seq": 2,
+              "text": "The biggest one, stereochemistry. S N two gives inversion, a single inverted product. S N one gives racemisation, a fifty fifty pair of enantiomers. Many students reverse these, or wrongly claim S N two racemises. It does not."
+            },
+            {
+              "seq": 3,
+              "text": "Next, the reactivity orders point in opposite directions. S N one follows tertiary greater than secondary greater than primary, tracking carbocation stability, while S N two follows the exact reverse, tracking steric openness. Applying the S N one order to an S N two question is the single most common slip in the whole chapter."
+            },
+            {
+              "seq": 4,
+              "text": "Third, never let an aryl or vinyl halide do S N one or S N two under ordinary conditions. There is no stable aryl or vinyl cation, so no S N one, and the back side is blocked and repelled, so no S N two."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, two condition traps. In nucleophilic aromatic substitution, only ortho and para electron withdrawing groups accelerate, because only they can resonance stabilise the intermediate, a meta group does nothing. And do not confuse aqueous potassium hydroxide, which substitutes, with alcoholic potassium hydroxide and heat, which eliminates."
+            },
+            {
+              "seq": 6,
+              "text": "And the master pro tip. For any which mechanism question, read the substrate class first. Primary means S N two, tertiary means S N one or elimination, aryl or vinyl means neither. Then, only for secondary substrates, let the conditions break the tie: polar protic and a weak nucleophile push S N one, polar aprotic and a strong nucleophile push S N two, and a strong bulky base with heat pushes elimination."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस block के वो reversals इकट्ठा करते हैं जिन्हें ख़ास punish करने के लिए बनाया गया है, क्योंकि यहाँ लगभग हर trap एक swapped pair है।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा, stereochemistry। S N two inversion देता है, single inverted product। S N one racemisation देता है, enantiomers का fifty fifty pair। बहुत students इन्हें उल्टा कर देते हैं, या ग़लत दावा करते हैं कि S N two racemise करता है। नहीं करता।"
+            },
+            {
+              "seq": 3,
+              "text": "फिर, reactivity orders opposite directions में हैं। S N one tertiary greater than secondary greater than primary follow करता है, carbocation stability को track करते हुए, जबकि S N two बिल्कुल reverse follow करता है, steric openness को track करते हुए। S N one order को S N two question पर लगाना पूरे chapter की सबसे common गलती है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, aryl या vinyl halide को ordinary conditions में कभी S N one या S N two मत करने दो। कोई stable aryl या vinyl cation नहीं, तो S N one नहीं, और back side block और repelled है, तो S N two नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, दो condition traps। Nucleophilic aromatic substitution में, सिर्फ़ ortho और para electron withdrawing groups तेज़ करते हैं, क्योंकि सिर्फ़ वही intermediate को resonance stabilise कर सकते हैं, meta group कुछ नहीं करता। और aqueous potassium hydroxide, जो substitute करता है, को alcoholic potassium hydroxide और heat, जो eliminate करता है, से मत confuse करो।"
+            },
+            {
+              "seq": 6,
+              "text": "और master pro tip। किसी भी which mechanism question के लिए, पहले substrate class पढ़ो। Primary मतलब S N two, tertiary मतलब S N one या elimination, aryl या vinyl मतलब कोई नहीं। फिर, सिर्फ़ secondary substrates के लिए, conditions को tie तोड़ने दो: polar protic और weak nucleophile S N one की तरफ़, polar aprotic और strong nucleophile S N two की तरफ़, और strong bulky base heat के साथ elimination की तरफ़।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस खंड के वे उलटफेर इकट्ठा करते हैं जिन्हें ख़ास दंडित करने के लिए बनाया गया है, क्योंकि यहाँ लगभग हर जाल एक अदला बदली युग्म है।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा, त्रिविम रसायन। S N two प्रतिलोमन देता है, एकल प्रतिलोमित उत्पाद। S N one रेसीमीकरण देता है, प्रतिबिंबों का fifty fifty युग्म। बहुत विद्यार्थी इन्हें उल्टा कर देते हैं, या गलत दावा करते हैं कि S N two रेसीमीकृत करता है। नहीं करता।"
+            },
+            {
+              "seq": 3,
+              "text": "फिर, क्रियाशीलता क्रम विपरीत दिशाओं में हैं। S N one तृतीयक greater than द्वितीयक greater than प्राथमिक का अनुसरण करता है, कार्बोकैटायन स्थायित्व का अनुसरण करते हुए, जबकि S N two बिल्कुल उल्टा, त्रिविम खुलेपन का अनुसरण करते हुए। S N one क्रम को S N two प्रश्न पर लगाना पूरे अध्याय की सबसे आम भूल है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, एरिल या वाइनिल हैलाइड को सामान्य परिस्थितियों में कभी S N one या S N two मत करने दीजिए। कोई स्थायी एरिल या वाइनिल कैटायन नहीं, तो S N one नहीं, और पिछला भाग अवरुद्ध और प्रतिकर्षित है, तो S N two नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, दो परिस्थिति जाल। Nucleophilic ऐरोमैटिक प्रतिस्थापन में, केवल ऑर्थो और पैरा इलेक्ट्रॉन आकर्षी समूह तेज़ करते हैं, क्योंकि केवल वही मध्यवर्ती को अनुनाद स्थायी कर सकते हैं, मेटा समूह कुछ नहीं करता। और जलीय पोटैशियम हाइड्रॉक्साइड, जो प्रतिस्थापित करता है, को ऐल्कोहॉलिक पोटैशियम हाइड्रॉक्साइड और ताप, जो विलोपित करता है, से मत भ्रमित कीजिए।"
+            },
+            {
+              "seq": 6,
+              "text": "और मुख्य सुझाव। किसी भी कौन सी क्रियाविधि प्रश्न के लिए, पहले पदार्थ वर्ग पढ़िए। प्राथमिक अर्थात S N two, तृतीयक अर्थात S N one या विलोपन, एरिल या वाइनिल अर्थात कोई नहीं। फिर, केवल द्वितीयक पदार्थों के लिए, परिस्थितियों को निर्णय करने दीजिए: ध्रुवीय प्रोटिक और दुर्बल nucleophile S N one की ओर, ध्रुवीय एप्रोटिक और प्रबल nucleophile S N two की ओर, और प्रबल भारी क्षार ताप के साथ विलोपन की ओर।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chemical Reactions & Mechanisms",
+      "title": "Cheat sheet — reactions & mechanisms",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Quick-recall box: Sub-topic 02"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "SN2: one step, backside attack, rate = k[RX][Nu], inversion; order CH3 > 1° > 2° > 3°. Favoured by strong Nu + polar aprotic."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "SN1: two steps via planar carbocation, rate = k[RX], racemisation; order 3° > 2° > 1°. Favoured by polar protic; allylic/benzylic accelerated."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Leaving group: I > Br > Cl ≫ F. Substitution vs elimination: aqueous KOH (cooler) → substitution; alcoholic KOH + heat → elimination, major alkene by Saytzeff."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Metals: Grignard RMgX (dry ether, moisture-sensitive); Wurtz (R–R); Wurtz–Fittig (alkylarene); Fittig (biaryl)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Haloarenes: very poor at NAS (resonance + sp2 C + no SN1); EWG at o/p accelerates (resonance-stabilised intermediate), meta does not; halogen is deactivating but o/p-directing in EAS."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "\"SN2 = 2, back-door, flips.\" \"SN1 = 1 ionises, flat cation, both faces.\" NAS: nitro helps only ortho/para, never meta."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the quick recall box for the reactions and mechanisms sub topic, your last minute revision sheet."
+            },
+            {
+              "seq": 2,
+              "text": "S N two: one step, backside attack, rate equals k times R X times the nucleophile, and it inverts. The reactivity order is methyl greater than primary greater than secondary greater than tertiary, and it is favoured by a strong nucleophile in a polar aprotic solvent."
+            },
+            {
+              "seq": 3,
+              "text": "S N one: two steps through a planar carbocation, rate equals k times R X, and it racemises. The order is the reverse, tertiary greater than secondary greater than primary, favoured by polar protic solvents, with allylic and benzylic halides accelerated."
+            },
+            {
+              "seq": 4,
+              "text": "Leaving group order: iodide better than bromide better than chloride, far better than fluoride. Substitution versus elimination: aqueous potassium hydroxide, cooler, gives substitution; alcoholic potassium hydroxide with heat gives elimination, and the major alkene is chosen by Saytzeff's rule."
+            },
+            {
+              "seq": 5,
+              "text": "Metals in one breath: Grignard reagent R magnesium X, made in dry ether and very moisture sensitive; Wurtz gives R to R; Wurtz Fittig gives an alkylarene; Fittig gives a biaryl."
+            },
+            {
+              "seq": 6,
+              "text": "Haloarenes: very poor at nucleophilic substitution, because of resonance, the s p two carbon, and no S N one route. An electron withdrawing group at ortho or para accelerates it by stabilising the intermediate, while meta does not; and in electrophilic substitution the halogen is deactivating but still ortho para directing."
+            },
+            {
+              "seq": 7,
+              "text": "Close with the slogans. S N two is two, back door, flips. S N one is one ionises first, flat cation, both faces. And for aromatic substitution, the nitro group helps only when it can see the charge, ortho or para, never meta."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Reactions और mechanisms sub topic का quick recall box यहाँ है, तुम्हारी last minute revision sheet।"
+            },
+            {
+              "seq": 2,
+              "text": "S N two: one step, backside attack, rate equals k times R X times nucleophile, और invert करता है। Reactivity order methyl greater than primary greater than secondary greater than tertiary है, और polar aprotic solvent में strong nucleophile से favour होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "S N one: planar carbocation के through two steps, rate equals k times R X, और racemise करता है। Order reverse है, tertiary greater than secondary greater than primary, polar protic solvents से favour, allylic और benzylic halides accelerated।"
+            },
+            {
+              "seq": 4,
+              "text": "Leaving group order: iodide, bromide से बेहतर, bromide chloride से बेहतर, fluoride से बहुत बेहतर। Substitution versus elimination: aqueous potassium hydroxide, ठंडा, substitution देता है; alcoholic potassium hydroxide heat के साथ elimination देता है, और major alkene Saytzeff's rule से चुना जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Metals एक साँस में: Grignard reagent R magnesium X, dry ether में बना और बहुत moisture sensitive; Wurtz R to R देता है; Wurtz Fittig alkylarene देता है; Fittig biaryl देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Haloarenes: nucleophilic substitution में बहुत ख़राब, resonance, s p two carbon, और कोई S N one route न होने से। Ortho या para पर electron withdrawing group intermediate को stabilise करके तेज़ करता है, जबकि meta नहीं; और electrophilic substitution में halogen deactivating है पर फिर भी ortho para directing।"
+            },
+            {
+              "seq": 7,
+              "text": "Slogans के साथ बंद करो। S N two है दो, back door, flips। S N one है एक पहले ionise, flat cation, both faces। और aromatic substitution के लिए, nitro group तभी मदद करता है जब वो charge को देख सके, ortho या para, कभी meta नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अभिक्रियाओं और क्रियाविधियों उपविषय का त्वरित स्मरण बॉक्स यहाँ है, आपकी अंतिम समय की पुनरावृत्ति शीट।"
+            },
+            {
+              "seq": 2,
+              "text": "S N two: एक चरण, पिछले भाग से आक्रमण, rate equals k times R X times nucleophile, और प्रतिलोमित करता है। क्रियाशीलता क्रम मेथिल greater than प्राथमिक greater than द्वितीयक greater than तृतीयक है, और ध्रुवीय एप्रोटिक विलायक में प्रबल nucleophile से अनुकूलित होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "S N one: समतलीय कार्बोकैटायन के माध्यम से दो चरण, rate equals k times R X, और रेसीमीकृत करता है। क्रम उल्टा है, तृतीयक greater than द्वितीयक greater than प्राथमिक, ध्रुवीय प्रोटिक विलायकों से अनुकूलित, एलिलिक और बेंज़ाइलिक हैलाइड त्वरित।"
+            },
+            {
+              "seq": 4,
+              "text": "त्यागी समूह क्रम: आयोडाइड, ब्रोमाइड से बेहतर, ब्रोमाइड क्लोराइड से बेहतर, फ़्लोराइड से बहुत बेहतर। प्रतिस्थापन बनाम विलोपन: जलीय पोटैशियम हाइड्रॉक्साइड, ठंडा, प्रतिस्थापन देता है; ऐल्कोहॉलिक पोटैशियम हाइड्रॉक्साइड ताप के साथ विलोपन देता है, और मुख्य ऐल्कीन Saytzeff नियम से चुना जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "धातुएँ एक साँस में: Grignard अभिकर्मक R magnesium X, शुष्क ईथर में बना और बहुत नमी संवेदी; Wurtz R to R देता है; Wurtz Fittig ऐल्किलऐरीन देता है; Fittig बाइएरिल देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "एरिल हैलाइड: nucleophilic प्रतिस्थापन में बहुत ख़राब, अनुनाद, s p two कार्बन, और कोई S N one मार्ग न होने से। ऑर्थो या पैरा पर इलेक्ट्रॉन आकर्षी समूह मध्यवर्ती को स्थायी करके तेज़ करता है, जबकि मेटा नहीं; और विद्युतस्नेही प्रतिस्थापन में हैलोजन निष्क्रियकारी है पर फिर भी ऑर्थो पैरा निर्देशक।"
+            },
+            {
+              "seq": 7,
+              "text": "सूत्रों के साथ समाप्त कीजिए। S N two है दो, पिछला द्वार, पलटाव। S N one है एक पहले आयनित, चपटा कैटायन, दोनों फलक। और ऐरोमैटिक प्रतिस्थापन के लिए, nitro समूह तभी सहायता करता है जब वह आवेश को देख सके, ऑर्थो या पैरा, कभी मेटा नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

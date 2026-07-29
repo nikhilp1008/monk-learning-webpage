@@ -1,0 +1,2905 @@
+{
+  "chapter": "Relations and Functions",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 1,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Standard Real Functions and Their Graphs",
+      "title": "Six machines you must recognise on sight",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A toolkit of named functions"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Modulus, the absolute value, strips the sign and reports distance from zero; its graph is a V."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "Signum keeps only the sign, outputting just minus one, zero, or plus one."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Greatest integer, the floor, rounds down to the nearest integer, even for negatives."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 29,
+          "text": "$[-2.3] = -3$, not $-2$: the floor always rounds down, past zero.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Fractional part keeps what the floor leaves, always in zero to one, giving a sawtooth."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Exponential is always positive; logarithm is its mirror, defined only for positive inputs."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "caption": "Atlas: modulus, signum, floor, fractional part, exponential, logarithm",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 660 430\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"330\" y=\"20\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4e79\">Atlas of standard real functions</text><text x=\"115\" y=\"44\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4e79\">|x| modulus</text><line x1=\"30\" y1=\"170\" x2=\"200\" y2=\"170\" stroke=\"#bbb\" stroke-width=\"1\"/><line x1=\"115\" y1=\"55\" x2=\"115\" y2=\"178\" stroke=\"#bbb\" stroke-width=\"1\"/><polyline points=\"45,62 115,168 185,62\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><text x=\"335\" y=\"44\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4e79\">sgn(x) signum</text><line x1=\"250\" y1=\"140\" x2=\"420\" y2=\"140\" stroke=\"#bbb\" stroke-width=\"1\"/><line x1=\"335\" y1=\"70\" x2=\"335\" y2=\"178\" stroke=\"#bbb\" stroke-width=\"1\"/><line x1=\"255\" y1=\"168\" x2=\"330\" y2=\"168\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><line x1=\"340\" y1=\"112\" x2=\"415\" y2=\"112\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><circle cx=\"335\" cy=\"140\" r=\"3.5\" fill=\"#1d4e79\"/><text x=\"560\" y=\"44\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4e79\">[x] greatest integer</text><line x1=\"470\" y1=\"140\" x2=\"650\" y2=\"140\" stroke=\"#bbb\" stroke-width=\"1\"/><line x1=\"560\" y1=\"60\" x2=\"560\" y2=\"178\" stroke=\"#bbb\" stroke-width=\"1\"/><line x1=\"504\" y1=\"176\" x2=\"532\" y2=\"176\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><line x1=\"532\" y1=\"158\" x2=\"560\" y2=\"158\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><line x1=\"560\" y1=\"140\" x2=\"588\" y2=\"140\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><line x1=\"588\" y1=\"122\" x2=\"616\" y2=\"122\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><line x1=\"616\" y1=\"104\" x2=\"644\" y2=\"104\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><text x=\"115\" y=\"228\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4e79\">{x} fractional part</text><line x1=\"30\" y1=\"350\" x2=\"200\" y2=\"350\" stroke=\"#bbb\" stroke-width=\"1\"/><line x1=\"55\" y1=\"300\" x2=\"55\" y2=\"358\" stroke=\"#bbb\" stroke-width=\"1\"/><line x1=\"55\" y1=\"350\" x2=\"95\" y2=\"310\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><line x1=\"95\" y1=\"350\" x2=\"135\" y2=\"310\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><line x1=\"135\" y1=\"350\" x2=\"175\" y2=\"310\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><text x=\"335\" y=\"228\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4e79\">e^x exponential</text><line x1=\"250\" y1=\"350\" x2=\"420\" y2=\"350\" stroke=\"#bbb\" stroke-width=\"1\"/><line x1=\"300\" y1=\"245\" x2=\"300\" y2=\"358\" stroke=\"#bbb\" stroke-width=\"1\"/><polyline points=\"255,348 285,344 310,336 335,320 355,296 375,262 390,250\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><text x=\"560\" y=\"228\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4e79\">ln x logarithm</text><line x1=\"470\" y1=\"320\" x2=\"650\" y2=\"320\" stroke=\"#bbb\" stroke-width=\"1\"/><line x1=\"545\" y1=\"245\" x2=\"545\" y2=\"358\" stroke=\"#bbb\" stroke-width=\"1\"/><polyline points=\"530,352 538,338 545,320 570,306 600,296 645,288\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Before analysing functions, you need a toolkit of named machines you recognise instantly, the way a mechanic knows every tool by its shape."
+            },
+            {
+              "seq": 2,
+              "text": "The modulus, or absolute value, strips the sign and reports distance from zero, so it is never negative. Its graph is a V sitting on the origin."
+            },
+            {
+              "seq": 3,
+              "text": "Signum is the opposite idea. It throws away the size and keeps only the sign, outputting just minus one, zero, or plus one, giving two flat shelves."
+            },
+            {
+              "seq": 4,
+              "text": "The greatest integer, or floor, rounds down to the nearest integer, producing a staircase. Crucially, it rounds down even for negatives."
+            },
+            {
+              "seq": 5,
+              "text": "So floor of minus two point three is minus three, not minus two. The floor always rounds down, moving further from zero, and this single fact costs the most marks."
+            },
+            {
+              "seq": 6,
+              "text": "The fractional part keeps whatever the floor leaves behind, always landing in zero up to but not including one, which produces a repeating sawtooth."
+            },
+            {
+              "seq": 7,
+              "text": "Finally, the exponential is explosive controlled growth, always positive, never touching the x-axis, while the logarithm is the exponential run backwards, defined only for positive inputs."
+            },
+            {
+              "seq": 8,
+              "text": "The atlas shows all six shapes together, and memorising them is like memorising multiplication tables: it makes everything downstream automatic."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Functions को analyse करने से पहले, तुम्हें named machines का toolkit चाहिए जिन्हें तुरंत पहचान सको, जैसे mechanic हर tool को उसकी shape से जानता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Modulus, यानी absolute value, sign हटा देता है और zero से distance बताता है, तो यह कभी negative नहीं। इसका graph origin पर बैठा V है।"
+            },
+            {
+              "seq": 3,
+              "text": "Signum उल्टा idea है। यह size फेंक देता है और सिर्फ़ sign रखता है, बस minus one, zero, या plus one देता है, यानी दो flat shelves।"
+            },
+            {
+              "seq": 4,
+              "text": "Greatest integer, यानी floor, नज़दीकी integer तक down round करता है, एक staircase बनाता है। ख़ास बात, यह negatives के लिए भी down round करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो floor of minus two point three, minus three है, minus two नहीं। Floor हमेशा down round करता है, zero से और दूर, और यही एक fact सबसे ज़्यादा marks खाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Fractional part वो रखता है जो floor छोड़ जाता है, हमेशा zero से लेकर one से ठीक पहले तक, जो एक repeating sawtooth बनाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "आख़िर में, exponential explosive controlled growth है, हमेशा positive, x-axis को कभी नहीं छूता, जबकि logarithm exponential को उल्टा चलाना है, सिर्फ़ positive inputs के लिए defined।"
+            },
+            {
+              "seq": 8,
+              "text": "Atlas छहों shapes एक साथ दिखाता है, और इन्हें याद करना multiplication tables याद करने जैसा है: यह आगे सब कुछ automatic बना देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Standard Real Functions and Their Graphs",
+      "title": "Transformations and the two modulus rules",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Reading graphs by transformation"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Start from a base shape and apply shifts, stretches, and reflections in order."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "f(x - h) + k: \\ \\text{shift right by } h, \\text{ up by } k"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "The two modulus transformations"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "latex": "y = |f(x)|: \\ \\text{flip everything below the x-axis upward}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "y = f(|x|): \\ \\text{keep the right half, mirror it to the left}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 39,
+          "text": "These are different operations giving different graphs — a classic JEE distinction.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "caption": "Left: flip-below-up for |f(x)|. Right: mirror-right-half for f(|x|)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 620 240\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4e79\">y = |f(x)|: flip below-axis up</text><line x1=\"30\" y1=\"140\" x2=\"300\" y2=\"140\" stroke=\"#333\" stroke-width=\"1.2\"/><line x1=\"120\" y1=\"50\" x2=\"120\" y2=\"210\" stroke=\"#333\" stroke-width=\"1.2\"/><line x1=\"40\" y1=\"200\" x2=\"120\" y2=\"140\" stroke=\"#888\" stroke-width=\"1.6\" stroke-dasharray=\"5 4\"/><line x1=\"40\" y1=\"80\" x2=\"120\" y2=\"140\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><line x1=\"120\" y1=\"140\" x2=\"270\" y2=\"60\" stroke=\"#1d4e79\" stroke-width=\"2.2\"/><text x=\"55\" y=\"215\" font-size=\"10\" fill=\"#888\">original dips below</text><text x=\"460\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2e7d32\">y = f(|x|): mirror right half left</text><line x1=\"330\" y1=\"140\" x2=\"600\" y2=\"140\" stroke=\"#333\" stroke-width=\"1.2\"/><line x1=\"465\" y1=\"50\" x2=\"465\" y2=\"210\" stroke=\"#333\" stroke-width=\"1.2\"/><polyline points=\"465,140 500,110 540,80 590,60\" fill=\"none\" stroke=\"#2e7d32\" stroke-width=\"2.2\"/><polyline points=\"465,140 430,110 390,80 340,60\" fill=\"none\" stroke=\"#2e7d32\" stroke-width=\"2.2\"/><text x=\"465\" y=\"205\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2e7d32\">symmetric about y-axis</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A complicated graph is usually just a base shape relocated, so learn to read graphs by transformation."
+            },
+            {
+              "seq": 2,
+              "text": "Start from a base graph and apply, in order, horizontal shifts, vertical shifts, stretches, and reflections. Each operation moves the picture in a predictable, decoupled way."
+            },
+            {
+              "seq": 3,
+              "text": "For example, f of x minus h plus k shifts the base graph right by h and up by k. Replace x by x minus h to slide right, then add k to lift up."
+            },
+            {
+              "seq": 4,
+              "text": "Now a distinction JEE tests again and again: the two modulus transformations, which look similar but do opposite things."
+            },
+            {
+              "seq": 5,
+              "text": "First, y equals the modulus of f of x. Take the graph of f and flip everything below the x-axis upward, because negative outputs become their positive mirror."
+            },
+            {
+              "seq": 6,
+              "text": "Second, y equals f of the modulus of x. Keep the right half where x is non-negative, and mirror it to the left, because the input's sign is erased, making the graph symmetric about the y-axis."
+            },
+            {
+              "seq": 7,
+              "text": "These are genuinely different operations that produce different graphs, and confusing them is a classic error."
+            },
+            {
+              "seq": 8,
+              "text": "The diagram sets them side by side: on the left the below-axis part flips up, on the right the right half is mirrored across the y-axis."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक complicated graph आम तौर पर बस एक base shape को relocate किया हुआ होता है, तो graphs को transformation से पढ़ना सीखो।"
+            },
+            {
+              "seq": 2,
+              "text": "एक base graph से शुरू करो और order में लगाओ horizontal shifts, vertical shifts, stretches, और reflections। हर operation picture को एक predictable, decoupled तरीक़े से हिलाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "उदाहरण के लिए, f of x minus h plus k, base graph को h से दाएँ और k से ऊपर shift करता है। x को x minus h से replace करो दाएँ sliding के लिए, फिर k जोड़ो ऊपर उठाने के लिए।"
+            },
+            {
+              "seq": 4,
+              "text": "अब एक distinction जो JEE बार-बार test करता है: दो modulus transformations, जो similar दिखते हैं पर opposite काम करते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "पहला, y equals modulus of f of x। f का graph लो और x-axis के नीचे सब कुछ ऊपर flip करो, क्योंकि negative outputs अपना positive mirror बन जाते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "दूसरा, y equals f of modulus of x। right half रखो जहाँ x non-negative है, और उसे बाएँ mirror करो, क्योंकि input का sign मिट जाता है, जिससे graph y-axis के about symmetric हो जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "ये सच में अलग operations हैं जो अलग graphs बनाते हैं, और इन्हें confuse करना classic error है।"
+            },
+            {
+              "seq": 8,
+              "text": "Diagram इन्हें साथ-साथ रखता है: बाईं तरफ़ below-axis हिस्सा ऊपर flip होता है, दाईं तरफ़ right half y-axis के across mirror होता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "formulas",
+      "subtopic": "Standard Real Functions and Their Graphs",
+      "title": "Definitions, ranges, and key identities",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The standard-function reference"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "|x|:[0,\\infty); \\ \\ \\mathrm{sgn}(x)\\in\\{-1,0,1\\}; \\ \\ [x]\\in\\mathbb{Z}; \\ \\ \\{x\\}\\in[0,1)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "latex": "e^x:(0,\\infty); \\quad \\log_a x: \\text{domain } (0,\\infty), \\ \\text{range } \\mathbb{R}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "latex": "|x|^2 = x^2, \\quad |xy| = |x|\\,|y|, \\quad \\mathrm{sgn}(x)\\,|x| = x"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "x - 1 < [x] \\le x, \\quad [x + n] = [x] + n \\ \\ (n \\in \\mathbb{Z})"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "latex": "[x] + [-x] = \\begin{cases} 0 & x \\in \\mathbb{Z} \\\\ -1 & x \\notin \\mathbb{Z} \\end{cases}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\{x\\} = x - [x], \\ \\text{period } 1; \\quad \\log_a(xy) = \\log_a x + \\log_a y"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "\\log_a x = \\dfrac{\\log_b x}{\\log_b a}, \\qquad a^{\\log_a x} = x"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the reference block: ranges first, then the identities that turn many problems into one-liners."
+            },
+            {
+              "seq": 2,
+              "text": "The ranges to lock in: modulus gives zero to infinity, signum gives the three values minus one, zero, one, floor gives the integers, and fractional part gives zero up to one."
+            },
+            {
+              "seq": 3,
+              "text": "For the growth pair, e to the x has range the strictly positive reals, while log base a has domain the strictly positive reals and range all the reals."
+            },
+            {
+              "seq": 4,
+              "text": "The modulus identities: the modulus squared equals x squared, the modulus of a product splits into a product of moduli, and signum times modulus rebuilds x itself."
+            },
+            {
+              "seq": 5,
+              "text": "The floor identities: x minus one is less than floor x, which is at most x, and shifting by an integer n moves the floor by exactly n."
+            },
+            {
+              "seq": 6,
+              "text": "A prized one for JEE: floor x plus floor of minus x is zero when x is an integer, and minus one otherwise. That off-by-one is a favourite trap."
+            },
+            {
+              "seq": 7,
+              "text": "The fractional part equals x minus floor x, with period one, and the log turns a product into a sum, the defining behaviour of logarithms."
+            },
+            {
+              "seq": 8,
+              "text": "Finally the change-of-base rule, log base a of x equals log base b of x over log base b of a, and a raised to log base a of x collapses back to x."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा reference block: पहले ranges, फिर वो identities जो कई problems को one-liners बना देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Lock करने वाली ranges: modulus देता है zero to infinity, signum देता है तीन values minus one, zero, one, floor देता है integers, और fractional part देता है zero से one तक।"
+            },
+            {
+              "seq": 3,
+              "text": "Growth pair के लिए, e to the x की range strictly positive reals है, जबकि log base a का domain strictly positive reals और range पूरे reals।"
+            },
+            {
+              "seq": 4,
+              "text": "Modulus identities: modulus squared equals x squared, product का modulus, moduli के product में split होता है, और signum times modulus, x को वापस बना देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Floor identities: x minus one, floor x से छोटा है, जो x से ज़्यादा नहीं, और integer n से shift करना floor को exactly n से हिलाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "JEE के लिए एक prized: floor x plus floor of minus x, zero है जब x integer हो, और बाक़ी सब में minus one। वो off-by-one favourite trap है।"
+            },
+            {
+              "seq": 7,
+              "text": "Fractional part equals x minus floor x, period one के साथ, और log एक product को sum में बदल देता है, logarithms का defining behaviour।"
+            },
+            {
+              "seq": 8,
+              "text": "आख़िर में change-of-base rule, log base a of x equals log base b of x over log base b of a, और a raised to log base a of x वापस x पर collapse हो जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "Standard Real Functions and Their Graphs",
+      "title": "Evaluating and solving with floor and fractional part",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Read the values carefully"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "[2.7] = 2, \\quad [-2.3] = -3, \\quad \\{3.6\\} = 0.6"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "latex": "\\mathrm{sgn}(-5) = -1, \\quad |-4| = 4"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "text": "Now solve floor of x equals three; the answer is an interval, not a single point."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "[x] = 3 \\iff x \\in [3, 4)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "And fractional part equal to zero point five happens half-past every integer."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "\\{x\\} = 0.5 \\iff x = n + 0.5, \\ n \\in \\mathbb{Z}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "text": "Floor equations give intervals: $[x]=3$ is all of $[3,4)$, never just $x=3$.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us evaluate the standard functions carefully, then solve two small equations that hide traps."
+            },
+            {
+              "seq": 2,
+              "text": "Floor of two point seven is two. Floor of minus two point three is minus three, rounding down past zero. And fractional part of three point six is three point six minus three, which is zero point six."
+            },
+            {
+              "seq": 3,
+              "text": "Signum of minus five is minus one, since only the sign survives, and the modulus of minus four is four."
+            },
+            {
+              "seq": 4,
+              "text": "Now solve floor of x equals three. This is not a single value; it asks which inputs floor to three."
+            },
+            {
+              "seq": 5,
+              "text": "The floor equals three for every x from three, inclusive, up to but not including four, so x lies in the interval three to four."
+            },
+            {
+              "seq": 6,
+              "text": "Next, fractional part of x equals zero point five. This holds whenever x is exactly half-past an integer."
+            },
+            {
+              "seq": 7,
+              "text": "So x equals n plus zero point five for any integer n, giving values like minus zero point five, zero point five, one point five, and so on."
+            },
+            {
+              "seq": 8,
+              "text": "Keep the trap in mind: a floor equation gives an interval, so floor of x equals three is all of three to four, never just x equal to three."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो standard functions को carefully evaluate करें, फिर दो छोटी equations solve करें जो traps छिपाती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Floor of two point seven, two है। Floor of minus two point three, minus three है, zero के पार down round करके। और fractional part of three point six, three point six minus three, यानी zero point six।"
+            },
+            {
+              "seq": 3,
+              "text": "Signum of minus five, minus one है, क्योंकि सिर्फ़ sign बचता है, और minus four का modulus, four है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब floor of x equals three solve करो। यह single value नहीं है; यह पूछता है कौन से inputs three पर floor होते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Floor, three के बराबर है हर x के लिए three से, शामिल, लेकर four से ठीक पहले तक, तो x, interval three to four में है।"
+            },
+            {
+              "seq": 6,
+              "text": "अगला, fractional part of x equals zero point five। यह तब holds करता है जब x किसी integer से exactly half-past हो।"
+            },
+            {
+              "seq": 7,
+              "text": "तो x equals n plus zero point five किसी भी integer n के लिए, जिससे values जैसे minus zero point five, zero point five, one point five वग़ैरह।"
+            },
+            {
+              "seq": 8,
+              "text": "Trap याद रखो: floor equation एक interval देती है, तो floor of x equals three पूरा three to four है, कभी सिर्फ़ x equal to three नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Standard Real Functions and Their Graphs",
+      "title": "A range and a nested domain",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Split into cases, then intersect"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) = [x] + \\{-x\\}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "For integer x, floor is x and fractional of minus x is zero, so f equals x."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "For non-integer x the pieces fill each open gap, so the range is all reals."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "g(x) = \\dfrac{1}{\\sqrt{\\{x\\}}} + \\log(1 - [x]) \\ \\text{ on } (-3, 3)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "A root in a denominator needs fractional part strictly positive, so exclude every integer."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "latex": "1 - [x] > 0 \\Rightarrow [x] \\le 0 \\Rightarrow x < 1"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "latex": "\\mathrm{Dom}(g) = (-3,-2)\\cup(-2,-1)\\cup(-1,0)\\cup(0,1)"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two harder items now: a range that needs case-splitting, and a nested domain that combines several standard-function constraints."
+            },
+            {
+              "seq": 2,
+              "text": "Take f of x equals floor of x plus fractional part of minus x. The reliable move is to split into x integer and x non-integer."
+            },
+            {
+              "seq": 3,
+              "text": "For integer x, the floor is x and the fractional part of minus x is zero, so f of x is just x, an integer."
+            },
+            {
+              "seq": 4,
+              "text": "For non-integer x, the two pieces combine to give a value strictly between consecutive integers, so together with the integer case the range is all of the reals."
+            },
+            {
+              "seq": 5,
+              "text": "Now the nested domain: g of x equals one over the square root of the fractional part, plus log of one minus floor x, on the open interval minus three to three."
+            },
+            {
+              "seq": 6,
+              "text": "The first term has a root in the denominator, so it needs the fractional part strictly positive, which fails exactly at the integers. So exclude every integer."
+            },
+            {
+              "seq": 7,
+              "text": "The second term needs one minus floor x strictly positive, so floor x is at most zero, meaning x is less than one."
+            },
+            {
+              "seq": 8,
+              "text": "Combining on minus three to three: x below one with all integers removed leaves four open intervals, from minus three to minus two, and so on up to zero to one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब दो harder items: एक range जिसे case-splitting चाहिए, और एक nested domain जो कई standard-function constraints को combine करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f of x equals floor of x plus fractional part of minus x। Reliable move है x integer और x non-integer में split करना।"
+            },
+            {
+              "seq": 3,
+              "text": "Integer x के लिए, floor, x है और minus x का fractional part zero है, तो f of x बस x है, एक integer।"
+            },
+            {
+              "seq": 4,
+              "text": "Non-integer x के लिए, दोनों pieces मिलकर consecutive integers के बीच strictly एक value देते हैं, तो integer case के साथ मिलाकर range पूरे reals है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब nested domain: g of x equals one over square root of fractional part, plus log of one minus floor x, open interval minus three to three पर।"
+            },
+            {
+              "seq": 6,
+              "text": "पहले term में denominator में root है, तो उसे fractional part strictly positive चाहिए, जो integers पर ही fail होता है। तो हर integer exclude करो।"
+            },
+            {
+              "seq": 7,
+              "text": "दूसरे term को one minus floor x strictly positive चाहिए, तो floor x ज़्यादा से ज़्यादा zero, यानी x, one से कम।"
+            },
+            {
+              "seq": 8,
+              "text": "minus three to three पर combine करो: x, one से कम और सारे integers हटाकर चार open intervals बचते हैं, minus three to minus two से लेकर zero to one तक।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "tips",
+      "subtopic": "Standard Real Functions and Their Graphs",
+      "title": "Pitfalls and pro-tips for standard functions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where standard functions slip"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "text": "Floor of a negative rounds down: $[-2.3] = -3$, the single biggest source of lost marks.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 12,
+          "text": "$|f(x)|$ flips below-axis up; $f(|x|)$ mirrors the right half — never swap them.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "text": "Signum and floor output discrete values, not continuous bands."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Log needs its input above zero; the exponential output is always above zero, never touching it."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Speed pro-tips"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "For any floor or fractional problem, split into integer and non-integer cases immediately."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "For fractional-part-equals-a-line, sketch the sawtooth against the line and count crossings."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us close standard functions with the traps that leak marks, then the reflexes that crack these problems open."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, floor of a negative. Floor of minus two point three is minus three, not minus two. The floor always rounds down, and this is the single biggest source of lost marks here."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, mixing the modulus transforms. The modulus of f of x flips the below-axis part up, while f of the modulus of x mirrors the right half to the left. Never swap them."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, treating discrete ranges as intervals. Signum and floor output specific values or integers, not continuous bands."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, forgetting the growth domains. A log needs its input above zero, and the exponential output is always above zero, never actually equal to zero."
+            },
+            {
+              "seq": 6,
+              "text": "Now the reflexes that make these fast."
+            },
+            {
+              "seq": 7,
+              "text": "For any floor or fractional-part problem, split into x integer and x non-integer immediately. Almost every such problem cracks open that way."
+            },
+            {
+              "seq": 8,
+              "text": "And for a fractional-part-equals-a-line problem, sketch the sawtooth against the line and simply count the crossings."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो standard functions को उन traps से close करें जो marks leak करते हैं, फिर वो reflexes जो इन problems को खोल देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, negative का floor। Floor of minus two point three, minus three है, minus two नहीं। Floor हमेशा down round करता है, और यही यहाँ सबसे बड़ा marks-loss का source है।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, modulus transforms को mix करना। modulus of f of x, below-axis हिस्से को ऊपर flip करता है, जबकि f of modulus of x, right half को बाएँ mirror करता है। कभी swap मत करो।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, discrete ranges को intervals समझना। Signum और floor specific values या integers देते हैं, continuous bands नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, growth domains भूलना। Log को अपना input zero से ऊपर चाहिए, और exponential output हमेशा zero से ऊपर, कभी सच में zero के बराबर नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वो reflexes जो इन्हें fast बनाते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "किसी भी floor या fractional-part problem के लिए, तुरंत x integer और x non-integer में split करो। लगभग हर ऐसी problem उसी तरह खुलती है।"
+            },
+            {
+              "seq": 8,
+              "text": "और fractional-part-equals-a-line problem के लिए, sawtooth को line के against sketch करो और बस crossings count करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "concept",
+      "subtopic": "Even, Odd, and Periodic Functions",
+      "title": "Even and odd: two hidden symmetries",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Symmetry that halves your work"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "An even function has mirror symmetry about the y-axis; picture a parabola."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "\\text{Even: } f(-x) = f(x)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "An odd function has rotational symmetry about the origin; picture x cubed or sine."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "\\text{Odd: } f(-x) = -f(x)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "text": "An odd function defined at $0$ passes through the origin: $f(0) = -f(0) \\Rightarrow f(0) = 0$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Most functions are neither; every function on a symmetric domain splits into an even plus an odd part."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "caption": "Even function mirrors about the y-axis; odd function turns about the origin",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 620 240\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"155\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4e79\">Even: mirror about the y-axis</text><line x1=\"30\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#333\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"45\" x2=\"160\" y2=\"215\" stroke=\"#333\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"45\" x2=\"160\" y2=\"215\" stroke=\"#c0392b\" stroke-width=\"1\" stroke-dasharray=\"4 4\"/><path d=\"M70,70 Q160,250 250,70\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2.3\"/><text x=\"230\" y=\"90\" font-size=\"12\" fill=\"#1d4e79\">y = x²</text><text x=\"465\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2e7d32\">Odd: symmetry about the origin</text><line x1=\"340\" y1=\"130\" x2=\"600\" y2=\"130\" stroke=\"#333\" stroke-width=\"1.2\"/><line x1=\"470\" y1=\"45\" x2=\"470\" y2=\"215\" stroke=\"#333\" stroke-width=\"1.2\"/><path d=\"M400,205 C450,205 450,55 540,55 M400,205 C440,205 460,130 470,130\" fill=\"none\" stroke=\"#2e7d32\" stroke-width=\"2.3\"/><path d=\"M470,130 C480,130 500,55 540,55\" fill=\"none\" stroke=\"#2e7d32\" stroke-width=\"2.3\"/><circle cx=\"470\" cy=\"130\" r=\"4\" fill=\"#2e7d32\"/><text x=\"545\" y=\"70\" font-size=\"12\" fill=\"#2e7d32\">y = x³</text><text x=\"470\" y=\"120\" font-size=\"10\" fill=\"#2e7d32\">f(0)=0</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Some functions carry a hidden symmetry that, once spotted, halves your work. There are two kinds to know."
+            },
+            {
+              "seq": 2,
+              "text": "An even function has mirror symmetry about the y-axis: whatever happens at x happens identically at minus x. Picture a butterfly, or the parabola y equals x squared."
+            },
+            {
+              "seq": 3,
+              "text": "Formally, even means f of minus x equals f of x. Fold the graph along the vertical axis and the two halves coincide exactly."
+            },
+            {
+              "seq": 4,
+              "text": "An odd function has rotational symmetry about the origin: flip it left-right and up-down and it lands on itself. Picture y equals x cubed, or y equals sine x."
+            },
+            {
+              "seq": 5,
+              "text": "Formally, odd means f of minus x equals minus f of x."
+            },
+            {
+              "seq": 6,
+              "text": "A neat consequence: if an odd function is defined at zero, it must pass through the origin, because f of zero equals minus f of zero forces f of zero to be zero."
+            },
+            {
+              "seq": 7,
+              "text": "Most functions are neither even nor odd, and that is fine. In fact, every function on a symmetric domain splits uniquely into an even piece plus an odd piece."
+            },
+            {
+              "seq": 8,
+              "text": "The diagram contrasts the two: the parabola mirrors across the vertical axis, while the cubic rotates onto itself about the origin."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "कुछ functions एक hidden symmetry रखते हैं जो, एक बार दिख जाए, तो तुम्हारा काम आधा कर देती है। जानने के लिए दो तरह हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Even function में y-axis के about mirror symmetry होती है: x पर जो होता है वही minus x पर identically होता है। एक butterfly सोचो, या parabola y equals x squared।"
+            },
+            {
+              "seq": 3,
+              "text": "Formally, even का मतलब f of minus x equals f of x। graph को vertical axis पर fold करो और दोनों halves exactly coincide करती हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Odd function में origin के about rotational symmetry होती है: इसे left-right और up-down flip करो और यह खुद पर लैंड करती है। y equals x cubed सोचो, या y equals sine x।"
+            },
+            {
+              "seq": 5,
+              "text": "Formally, odd का मतलब f of minus x equals minus f of x।"
+            },
+            {
+              "seq": 6,
+              "text": "एक neat consequence: अगर odd function zero पर defined हो, तो उसे origin से गुज़रना ही होगा, क्योंकि f of zero equals minus f of zero, f of zero को zero होने पर force करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "ज़्यादातर functions ना even हैं ना odd, और यह ठीक है। दरअसल, symmetric domain पर हर function uniquely एक even piece plus एक odd piece में split होता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Diagram दोनों को contrast करता है: parabola vertical axis के across mirror करता है, जबकि cubic origin के about खुद पर rotate करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "concept",
+      "subtopic": "Even, Odd, and Periodic Functions",
+      "title": "Periodicity: repetition at fixed intervals",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The pattern that repeats"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "A periodic function repeats at regular intervals, like a heartbeat trace or a tabla rhythm."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 13,
+          "latex": "f(x + T) = f(x) \\ \\forall x; \\ \\text{smallest such } T > 0 \\text{ is the fundamental period}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Symmetry and periodicity are both redundancy: the function repeats its information."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "text": "A constant satisfies $f(x+T)=f(x)$ for every $T$, so it has no fundamental period.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Adding two periodic functions gives a period only if their periods have a rational ratio."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "latex": "|\\sin x| + |\\cos x| \\text{ has fundamental period } \\tfrac{\\pi}{2}"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "caption": "A periodic wave with one fundamental period T marked",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 560 220\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"280\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4e79\">Periodic: the pattern repeats every T</text><line x1=\"30\" y1=\"120\" x2=\"530\" y2=\"120\" stroke=\"#333\" stroke-width=\"1.2\"/><path d=\"M40,120 Q80,50 120,120 Q160,190 200,120 Q240,50 280,120 Q320,190 360,120 Q400,50 440,120 Q480,190 520,120\" fill=\"none\" stroke=\"#1d4e79\" stroke-width=\"2.3\"/><line x1=\"120\" y1=\"60\" x2=\"280\" y2=\"60\" stroke=\"#c0392b\" stroke-width=\"1.4\"/><line x1=\"120\" y1=\"55\" x2=\"120\" y2=\"120\" stroke=\"#c0392b\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"280\" y1=\"55\" x2=\"280\" y2=\"120\" stroke=\"#c0392b\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><text x=\"200\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" fill=\"#c0392b\">one period T</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The second form of redundancy is periodicity, the tendency of a function to repeat itself at fixed intervals."
+            },
+            {
+              "seq": 2,
+              "text": "A function is periodic if its graph repeats at regular intervals, like a heartbeat trace, the seasons, or a tabla rhythm cycling every few beats."
+            },
+            {
+              "seq": 3,
+              "text": "If the pattern repeats every T units, then f of x plus T equals f of x for all x, and the smallest such positive T is called the fundamental period."
+            },
+            {
+              "seq": 4,
+              "text": "Symmetry and periodicity are both forms of redundancy: the function tells you the same thing more than once, and exploiting that is where the speed comes from."
+            },
+            {
+              "seq": 5,
+              "text": "One caution. A constant function satisfies f of x plus T equals f of x for every T, so it is periodic but has no fundamental period, since there is no smallest T."
+            },
+            {
+              "seq": 6,
+              "text": "Another caution for sums. When you add two periodic functions, a common period exists only if their individual periods are commensurable, meaning their ratio is rational."
+            },
+            {
+              "seq": 7,
+              "text": "As a worked instance, the modulus of sine x plus the modulus of cosine x has fundamental period pi over two, because a shift by pi over two swaps the two moduli and leaves the sum unchanged."
+            },
+            {
+              "seq": 8,
+              "text": "The diagram marks one fundamental period T on a repeating wave: understand the function on that one stretch, and every other stretch is a copy."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Redundancy का दूसरा रूप periodicity है, यानी किसी function का fixed intervals पर खुद को दोहराने का गुण।"
+            },
+            {
+              "seq": 2,
+              "text": "एक function periodic है अगर उसका graph regular intervals पर repeat हो, जैसे heartbeat trace, seasons, या कुछ beats में cycle होती tabla rhythm।"
+            },
+            {
+              "seq": 3,
+              "text": "अगर pattern हर T units पर repeat हो, तो f of x plus T equals f of x हर x के लिए, और सबसे छोटा ऐसा positive T, fundamental period कहलाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Symmetry और periodicity दोनों redundancy के रूप हैं: function एक ही बात एक से ज़्यादा बार बताता है, और इसे exploit करना ही speed देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "एक caution। Constant function f of x plus T equals f of x हर T के लिए satisfy करता है, तो यह periodic है पर इसका fundamental period नहीं, क्योंकि कोई सबसे छोटा T नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "Sums के लिए एक और caution। जब तुम दो periodic functions जोड़ते हो, common period तभी exist करता है जब उनके individual periods commensurable हों, यानी उनका ratio rational हो।"
+            },
+            {
+              "seq": 7,
+              "text": "एक worked instance के तौर पर, modulus of sine x plus modulus of cosine x का fundamental period pi over two है, क्योंकि pi over two से एक shift दोनों moduli को swap कर देता है और sum unchanged रहता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Diagram एक repeating wave पर एक fundamental period T mark करता है: उस एक stretch पर function समझो, और हर दूसरा stretch एक copy है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "formulas",
+      "subtopic": "Even, Odd, and Periodic Functions",
+      "title": "Combination rules, decomposition, and periods",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The symmetry and period rulebook"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "\\text{even} \\pm \\text{even} = \\text{even}, \\qquad \\text{odd} \\pm \\text{odd} = \\text{odd}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "latex": "\\text{even} \\times \\text{even} = \\text{even}, \\ \\ \\text{odd} \\times \\text{odd} = \\text{even}, \\ \\ \\text{even} \\times \\text{odd} = \\text{odd}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "latex": "\\text{even part} = \\dfrac{f(x) + f(-x)}{2}, \\qquad \\text{odd part} = \\dfrac{f(x) - f(-x)}{2}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "\\sin x, \\cos x: 2\\pi; \\ \\ \\tan x, \\cot x: \\pi; \\ \\ |\\sin x|, |\\cos x|: \\pi; \\ \\ \\{x\\}: 1"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "latex": "f(ax + b) \\text{ has period } \\dfrac{T}{|a|}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "f \\pm g: \\text{ period } \\mathrm{LCM}(T_1, T_2) \\text{ if } T_1 / T_2 \\text{ is rational}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "Taking absolute value often halves the period, as with sine going from two pi to pi."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the rulebook: first how symmetry combines, then the standard periods and how they scale."
+            },
+            {
+              "seq": 2,
+              "text": "For sums and differences, even combined with even stays even, and odd combined with odd stays odd."
+            },
+            {
+              "seq": 3,
+              "text": "For products, even times even is even, odd times odd is even, and even times odd is odd. Watch that odd times odd flips to even, which surprises people."
+            },
+            {
+              "seq": 4,
+              "text": "The unique decomposition: the even part is f of x plus f of minus x, all over two, and the odd part is f of x minus f of minus x, all over two."
+            },
+            {
+              "seq": 5,
+              "text": "The standard periods to memorise: sine and cosine have period two pi, tangent and cotangent have period pi, the moduli of sine and cosine have period pi, and the fractional part has period one."
+            },
+            {
+              "seq": 6,
+              "text": "For an internal coefficient, f of a x plus b has period T over the absolute value of a, since the coefficient a compresses the cycle."
+            },
+            {
+              "seq": 7,
+              "text": "For a sum or difference, the period is the least common multiple of the two periods, but only when their ratio is rational."
+            },
+            {
+              "seq": 8,
+              "text": "And a handy pattern: taking an absolute value often halves the period, as the modulus of sine goes from two pi down to pi."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा rulebook: पहले symmetry कैसे combine होती है, फिर standard periods और वे कैसे scale करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Sums और differences के लिए, even को even के साथ मिलाओ तो even रहता है, और odd को odd के साथ मिलाओ तो odd रहता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Products के लिए, even times even, even है, odd times odd, even है, और even times odd, odd है। ध्यान दो odd times odd, even में flip हो जाता है, जो लोगों को चौंकाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Unique decomposition: even part है f of x plus f of minus x, बटा two, और odd part है f of x minus f of minus x, बटा two।"
+            },
+            {
+              "seq": 5,
+              "text": "याद करने वाले standard periods: sine और cosine का period two pi, tangent और cotangent का pi, sine तथा cosine के moduli का pi, और fractional part का one।"
+            },
+            {
+              "seq": 6,
+              "text": "Internal coefficient के लिए, f of a x plus b का period T over absolute value of a है, क्योंकि coefficient a cycle को compress करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Sum या difference के लिए, period दोनों periods का least common multiple है, पर तभी जब उनका ratio rational हो।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक handy pattern: absolute value लेना अक्सर period आधा कर देता है, जैसे modulus of sine, two pi से घटकर pi हो जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Even, Odd, and Periodic Functions",
+      "title": "Classifying by symmetry",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Compute f of minus x and compare"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) = x^3 - x \\Rightarrow f(-x) = -f(x): \\ \\text{odd}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "latex": "g(x) = x^2 + \\cos x \\Rightarrow g(-x) = g(x): \\ \\text{even}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "latex": "h(x) = x + x^2: \\ \\text{neither}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Now pick the even one among sine x, x times modulus x, cosine x plus x squared, x cubed."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "text": "$x|x|$ looks even but is odd: odd times even is odd.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "latex": "\\cos x + x^2 \\ \\text{is even (even + even)}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Read polynomials off instantly: only even powers means even, only odd powers means odd."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Classification is a direct substitution: compute f of minus x and compare it with f of x and minus f of x."
+            },
+            {
+              "seq": 2,
+              "text": "Take f of x equals x cubed minus x. Then f of minus x is minus x cubed plus x, which is minus f of x, so f is odd."
+            },
+            {
+              "seq": 3,
+              "text": "Take g of x equals x squared plus cosine x. Then g of minus x equals x squared plus cosine x, unchanged, so g is even."
+            },
+            {
+              "seq": 4,
+              "text": "Take h of x equals x plus x squared. Then h of minus x equals minus x plus x squared, which matches neither h of x nor minus h of x, so h is neither."
+            },
+            {
+              "seq": 5,
+              "text": "Now a speed question: pick the even one among sine x, x times the modulus of x, cosine x plus x squared, and x cubed."
+            },
+            {
+              "seq": 6,
+              "text": "Careful with x times the modulus of x. It looks even because of the modulus, but the lone x factor makes it odd, since odd times even is odd."
+            },
+            {
+              "seq": 7,
+              "text": "Scanning the rest, sine x is odd and x cubed is odd, so the only even function is cosine x plus x squared, an even plus an even."
+            },
+            {
+              "seq": 8,
+              "text": "And the fastest reflex of all: read polynomials off directly. Only even powers means even, only odd powers with no constant means odd."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Classification एक direct substitution है: f of minus x compute करो और उसे f of x तथा minus f of x से compare करो।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f of x equals x cubed minus x। तो f of minus x, minus x cubed plus x है, जो minus f of x है, तो f odd है।"
+            },
+            {
+              "seq": 3,
+              "text": "लो g of x equals x squared plus cosine x। तो g of minus x equals x squared plus cosine x, unchanged, तो g even है।"
+            },
+            {
+              "seq": 4,
+              "text": "लो h of x equals x plus x squared। तो h of minus x equals minus x plus x squared, जो ना h of x से match करता है ना minus h of x से, तो h neither है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब एक speed question: sine x, x times modulus of x, cosine x plus x squared, और x cubed में से even वाला चुनो।"
+            },
+            {
+              "seq": 6,
+              "text": "x times modulus of x के साथ careful। यह modulus की वजह से even दिखता है, पर अकेला x factor इसे odd बना देता है, क्योंकि odd times even, odd है।"
+            },
+            {
+              "seq": 7,
+              "text": "बाक़ी scan करो, sine x odd है और x cubed odd है, तो एकमात्र even function है cosine x plus x squared, एक even plus एक even।"
+            },
+            {
+              "seq": 8,
+              "text": "और सबसे fast reflex: polynomials को सीधे पढ़ो। सिर्फ़ even powers मतलब even, बिना constant के सिर्फ़ odd powers मतलब odd।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Even, Odd, and Periodic Functions",
+      "title": "Periods and the exponential split",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A period and a structural decomposition"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) = \\sin 3x + \\cos 2x"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Sine three x has period two pi over three; cosine two x has period pi."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "\\text{Fundamental period} = 2\\pi"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Now split e to the x into an even part and an odd part."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "\\text{even part} = \\dfrac{e^x + e^{-x}}{2} = \\cosh x"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "\\text{odd part} = \\dfrac{e^x - e^{-x}}{2} = \\sinh x"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "latex": "e^x = \\cosh x + \\sinh x"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two examples here: finding a fundamental period of a sum, then splitting the exponential into its symmetric halves."
+            },
+            {
+              "seq": 2,
+              "text": "Take f of x equals sine three x plus cosine two x, and find its fundamental period."
+            },
+            {
+              "seq": 3,
+              "text": "Sine three x has period two pi over three, and cosine two x has period pi. The overall period is the smallest length that is a whole-number multiple of both."
+            },
+            {
+              "seq": 4,
+              "text": "Testing two pi, it equals three times two pi over three and two times pi, a whole multiple of each, and nothing smaller works, so the fundamental period is two pi."
+            },
+            {
+              "seq": 5,
+              "text": "Now the decomposition: express e to the x as an even part plus an odd part using the standard formula."
+            },
+            {
+              "seq": 6,
+              "text": "The even part is e to the x plus e to the minus x, over two, which is exactly the hyperbolic cosine, cosh x."
+            },
+            {
+              "seq": 7,
+              "text": "The odd part is e to the x minus e to the minus x, over two, which is exactly the hyperbolic sine, sinh x."
+            },
+            {
+              "seq": 8,
+              "text": "So e to the x equals cosh x plus sinh x. This is precisely why the hyperbolic functions are the canonical even and odd halves of the exponential, a fact JEE Advanced likes to probe."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ दो examples: एक sum का fundamental period ढूँढना, फिर exponential को उसके symmetric halves में split करना।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f of x equals sine three x plus cosine two x, और उसका fundamental period ढूँढो।"
+            },
+            {
+              "seq": 3,
+              "text": "Sine three x का period two pi over three है, और cosine two x का period pi। Overall period सबसे छोटी length है जो दोनों का whole-number multiple हो।"
+            },
+            {
+              "seq": 4,
+              "text": "two pi test करो, यह three times two pi over three और two times pi के बराबर है, हर एक का whole multiple, और कुछ छोटा काम नहीं करता, तो fundamental period two pi है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब decomposition: standard formula से e to the x को even part plus odd part के रूप में express करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Even part है e to the x plus e to the minus x, बटा two, जो बिलकुल hyperbolic cosine, cosh x है।"
+            },
+            {
+              "seq": 7,
+              "text": "Odd part है e to the x minus e to the minus x, बटा two, जो बिलकुल hyperbolic sine, sinh x है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो e to the x equals cosh x plus sinh x। यही वजह है कि hyperbolic functions, exponential के canonical even और odd halves हैं, एक fact जिसे JEE Advanced probe करना पसंद करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "tips",
+      "subtopic": "Even, Odd, and Periodic Functions",
+      "title": "Pitfalls and pro-tips for symmetry and periodicity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where symmetry problems slip"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Do not assume a function is even or odd; most are neither, so actually compute f of minus x."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 13,
+          "text": "Products flip: odd times odd is even, not odd — track the sign flips carefully.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "text": "A modulus can shrink the period: $|\\sin x|$ has period $\\pi$, not $2\\pi$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "The LCM rule fails for incommensurable periods: pi and one give no common period."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Speed pro-tips"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Convert sine squared or cosine squared to double angles first, and the period often halves."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Odd functions force f of zero equals zero — a free check you should always use."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us close symmetry and periodicity with the traps, then the reflexes that save time."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, assuming a function is even or odd. Most functions are neither, so always actually compute f of minus x rather than guessing from appearance."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, mishandling products. Odd times odd is even, not odd. Track the sign flips carefully, because two negatives cancel."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, forgetting that a modulus can shrink the period. The modulus of sine x has period pi, not two pi, so always test the half-period after a modulus."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, taking the least common multiple of incommensurable periods. If the ratio is irrational, like pi and one, no common period exists and the sum is not periodic."
+            },
+            {
+              "seq": 6,
+              "text": "Now the reflexes that save real time."
+            },
+            {
+              "seq": 7,
+              "text": "Convert sine squared or cosine squared to double angles first, and the period usually halves, which catches a common mistake."
+            },
+            {
+              "seq": 8,
+              "text": "And remember that odd functions force f of zero to equal zero. It is a free check you should always reach for."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो symmetry और periodicity को traps से close करें, फिर वो reflexes जो time बचाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, function को even या odd मान लेना। ज़्यादातर functions neither हैं, तो appearance से guess करने के बजाय हमेशा f of minus x compute करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, products को mishandle करना। Odd times odd, even है, odd नहीं। Sign flips carefully track करो, क्योंकि दो negatives cancel हो जाते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, यह भूलना कि modulus period shrink कर सकता है। modulus of sine x का period pi है, two pi नहीं, तो modulus के बाद हमेशा half-period test करो।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, incommensurable periods का least common multiple लेना। अगर ratio irrational हो, जैसे pi और one, तो कोई common period नहीं और sum periodic नहीं है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वो reflexes जो सच में time बचाते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Sine squared या cosine squared को पहले double angles में convert करो, और period आम तौर पर आधा हो जाता है, जो एक common mistake पकड़ता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और याद रखो कि odd functions, f of zero को zero के बराबर force करते हैं। यह एक free check है जिसे हमेशा use करना चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "concept",
+      "subtopic": "Algebra of Functions and Functional Equations",
+      "title": "Building and discovering functions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two ways to get a function"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Algebra of functions: add or multiply point by point, evaluating each at x and combining."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "(f + g)(x) = f(x) + g(x), \\ \\ (fg)(x) = f(x)\\,g(x), \\ \\ \\left(\\tfrac{f}{g}\\right)(x) = \\tfrac{f(x)}{g(x)}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "text": "A combination lives only where both are defined, and $f/g$ also needs $g \\ne 0$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Functional equations: reverse-engineering"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "You are handed a rule the function obeys and must deduce which functions fit."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "The detective's tool is clever substitution: plug in special values, then a transformed x."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "With two equations relating f of x and f of something, eliminate like simultaneous equations."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two ideas live in this subtopic, and both are about building or discovering functions."
+            },
+            {
+              "seq": 2,
+              "text": "The algebra of functions is the straightforward part. Just as you add and multiply numbers, you add and multiply functions point by point, evaluating each at x and combining the results."
+            },
+            {
+              "seq": 3,
+              "text": "So f plus g at x is f of x plus g of x, the product is f of x times g of x, and the quotient is f of x over g of x."
+            },
+            {
+              "seq": 4,
+              "text": "The only subtlety is the domain. A combined function is defined only where both ingredients are defined, and for a quotient you also need the divider to be non-zero."
+            },
+            {
+              "seq": 5,
+              "text": "Functional equations are the deeper, more exciting part. Instead of a formula, you are handed a rule the function obeys, and you must deduce which functions could behave that way."
+            },
+            {
+              "seq": 6,
+              "text": "For example, f of x plus y equals f of x plus f of y. It is reverse-engineering: you know how the machine responds, and you deduce the machine."
+            },
+            {
+              "seq": 7,
+              "text": "The detective's main tool is clever substitution. Plug in x and y equal to zero to learn f of zero, then substitute a transformed x to generate a second equation."
+            },
+            {
+              "seq": 8,
+              "text": "With two equations relating f of x and f of something, you eliminate the unwanted term exactly as you solve simultaneous linear equations, and out pops the formula."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic में दो ideas रहते हैं, और दोनों functions बनाने या discover करने के बारे में हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Algebra of functions straightforward हिस्सा है। जैसे तुम numbers को add और multiply करते हो, वैसे ही functions को point by point add और multiply करते हो, हर एक को x पर evaluate करके results combine करते हो।"
+            },
+            {
+              "seq": 3,
+              "text": "तो f plus g at x, f of x plus g of x है, product, f of x times g of x है, और quotient, f of x over g of x है।"
+            },
+            {
+              "seq": 4,
+              "text": "एकमात्र subtlety domain है। Combined function तभी defined है जहाँ दोनों ingredients defined हों, और quotient के लिए divider का non-zero होना भी ज़रूरी है।"
+            },
+            {
+              "seq": 5,
+              "text": "Functional equations deeper, ज़्यादा exciting हिस्सा है। Formula के बजाय, तुम्हें एक rule दिया जाता है जिसे function obey करता है, और तुम्हें deduce करना है कौन से functions ऐसा behave कर सकते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "उदाहरण के लिए, f of x plus y equals f of x plus f of y। यह reverse-engineering है: तुम जानते हो machine कैसे respond करती है, और machine deduce करते हो।"
+            },
+            {
+              "seq": 7,
+              "text": "Detective का main tool clever substitution है। x और y को zero रखकर f of zero जानो, फिर एक transformed x substitute करके दूसरा equation बनाओ।"
+            },
+            {
+              "seq": 8,
+              "text": "f of x और f of something को relate करते दो equations के साथ, unwanted term को वैसे ही eliminate करो जैसे simultaneous linear equations solve करते हो, और formula बाहर आ जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "formulas",
+      "subtopic": "Algebra of Functions and Functional Equations",
+      "title": "The five standard functional equations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Match the structure, read the answer"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "latex": "f(x + y) = f(x) + f(y) \\ \\Rightarrow \\ f(x) = kx \\ \\ \\text{(Cauchy)}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 12,
+          "latex": "f(x + y) = f(x)\\,f(y) \\ \\Rightarrow \\ f(x) = a^x"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 19,
+          "latex": "f(xy) = f(x) + f(y) \\ \\Rightarrow \\ f(x) = k \\log x"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "latex": "f(xy) = f(x)\\,f(y) \\ \\Rightarrow \\ f(x) = x^n"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Useful first moves: set x and y to zero or one, or replace x by one over x, or by one minus x."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "latex": "(f \\pm g), (fg) \\text{ on } D_f \\cap D_g; \\quad \\tfrac{f}{g} \\text{ on } D_f \\cap D_g \\cap \\{g \\ne 0\\}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Sum-to-sum is linear, sum-to-product is exponential, product-to-sum is logarithmic, product-to-product is a power."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The heart of this subtopic is five standard functional equations. Memorise them and their solutions, and many find-f questions become instant."
+            },
+            {
+              "seq": 2,
+              "text": "First, the Cauchy equation. If f of x plus y equals f of x plus f of y, the solution is f of x equals k x, a straight line through the origin."
+            },
+            {
+              "seq": 3,
+              "text": "Second, if f of x plus y equals f of x times f of y, turning a sum into a product, the solution is the exponential, f of x equals a to the x."
+            },
+            {
+              "seq": 4,
+              "text": "Third, if f of x y equals f of x plus f of y, turning a product into a sum, the solution is a logarithm, f of x equals k log x."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, if f of x y equals f of x times f of y, product to product, the solution is a power, f of x equals x to the n."
+            },
+            {
+              "seq": 6,
+              "text": "The useful first moves that crack these: set x and y to zero or one to find anchors, or replace x by one over x, or by one minus x, to generate a partner equation."
+            },
+            {
+              "seq": 7,
+              "text": "For the algebra side, remember the domains: f plus or minus g and f times g live on the intersection of the two domains, while f over g additionally excludes the zeros of g."
+            },
+            {
+              "seq": 8,
+              "text": "The one-line memory hook: sum-to-sum is linear, sum-to-product is exponential, product-to-sum is logarithmic, and product-to-product is a power."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic का दिल पाँच standard functional equations हैं। इन्हें और इनके solutions याद कर लो, और कई find-f questions instant बन जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, Cauchy equation। अगर f of x plus y equals f of x plus f of y, तो solution f of x equals k x है, origin से गुज़रती एक straight line।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, अगर f of x plus y equals f of x times f of y, एक sum को product में बदलते हुए, तो solution exponential है, f of x equals a to the x।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, अगर f of x y equals f of x plus f of y, एक product को sum में बदलते हुए, तो solution logarithm है, f of x equals k log x।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, अगर f of x y equals f of x times f of y, product to product, तो solution एक power है, f of x equals x to the n।"
+            },
+            {
+              "seq": 6,
+              "text": "इन्हें crack करने वाले useful first moves: anchors ढूँढने के लिए x और y को zero या one रखो, या partner equation बनाने के लिए x को one over x या one minus x से replace करो।"
+            },
+            {
+              "seq": 7,
+              "text": "Algebra side के लिए, domains याद रखो: f plus या minus g और f times g, दोनों domains के intersection पर रहते हैं, जबकि f over g additionally g के zeros को exclude करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "One-line memory hook: sum-to-sum linear, sum-to-product exponential, product-to-sum logarithmic, और product-to-product एक power।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Algebra of Functions and Functional Equations",
+      "title": "Combinations and a pattern match",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Combine, then match the structure"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) = x^2, \\quad g(x) = 2x + 1"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "latex": "(f + g)(x) = x^2 + 2x + 1, \\quad (fg)(x) = 2x^3 + x^2"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "latex": "\\left(\\tfrac{f}{g}\\right)(x) = \\dfrac{x^2}{2x + 1}, \\ \\text{domain } \\mathbb{R} \\setminus \\{-\\tfrac{1}{2}\\}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Now a functional equation: f of x plus y equals f of x times f of y, with f of one equal to three."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "latex": "f(x) = a^x, \\ f(1) = 3 \\Rightarrow f(x) = 3^x"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "latex": "f(3) = 3^3 = 27"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Trap: treating it as additive Cauchy gives $3\\,f(1) = 9$ — wrong; the right side is a product.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us do a combination example, then a pattern-match on a functional equation."
+            },
+            {
+              "seq": 2,
+              "text": "Take f of x equals x squared and g of x equals two x plus one, both on the reals."
+            },
+            {
+              "seq": 3,
+              "text": "Their sum is x squared plus two x plus one, and their product is x squared times two x plus one, which expands to two x cubed plus x squared."
+            },
+            {
+              "seq": 4,
+              "text": "The quotient f over g is x squared over two x plus one, and its domain is all reals except minus one half, where the denominator vanishes."
+            },
+            {
+              "seq": 5,
+              "text": "Now a functional equation. A function satisfies f of x plus y equals f of x times f of y, with f of one equal to three. Find f of three."
+            },
+            {
+              "seq": 6,
+              "text": "This is the sum-to-product pattern, so f of x is a to the x. Since f of one is a, and that equals three, we have f of x equals three to the x."
+            },
+            {
+              "seq": 7,
+              "text": "Therefore f of three is three cubed, which is twenty seven. You can also get it directly, since f of three is f of one plus one plus one, equal to f of one cubed."
+            },
+            {
+              "seq": 8,
+              "text": "Watch the trap: treating this like the additive Cauchy equation would give three times f of one, that is nine. That is wrong, because the right side is a product, not a sum."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो एक combination example करें, फिर एक functional equation पर pattern-match।"
+            },
+            {
+              "seq": 2,
+              "text": "लो f of x equals x squared और g of x equals two x plus one, दोनों reals पर।"
+            },
+            {
+              "seq": 3,
+              "text": "इनका sum, x squared plus two x plus one है, और product, x squared times two x plus one, जो expand होकर two x cubed plus x squared बनता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Quotient f over g, x squared over two x plus one है, और उसका domain minus one half को छोड़कर सारे reals है, जहाँ denominator vanish होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब एक functional equation। एक function satisfy करता है f of x plus y equals f of x times f of y, f of one equal to three के साथ। f of three ढूँढो।"
+            },
+            {
+              "seq": 6,
+              "text": "यह sum-to-product pattern है, तो f of x, a to the x है। चूँकि f of one, a है, और वो three के बराबर है, तो f of x equals three to the x।"
+            },
+            {
+              "seq": 7,
+              "text": "इसलिए f of three, three cubed है, यानी twenty seven। इसे सीधे भी पा सकते हो, क्योंकि f of three, f of one plus one plus one है, यानी f of one cubed।"
+            },
+            {
+              "seq": 8,
+              "text": "Trap देखो: इसे additive Cauchy equation की तरह treat करने से three times f of one, यानी nine मिलता। वो ग़लत है, क्योंकि right side एक product है, sum नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Algebra of Functions and Functional Equations",
+      "title": "Substitute, eliminate, and the Cauchy derivation",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The 1 minus x substitution"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "2f(x) + f(1 - x) = x^2 \\quad (i)"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Replace x by one minus x to build a second equation."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "2f(1 - x) + f(x) = (1 - x)^2 \\quad (ii)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "3f(x) = 2x^2 - (1 - x)^2 = x^2 + 2x - 1"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "latex": "f(x) = \\dfrac{x^2 + 2x - 1}{3}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "text": "Why the Cauchy pattern gives a line: anchor f of zero, then scale."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "latex": "f(x + y) = f(x) + f(y), \\ f(0) = 0, \\ k = f(1) \\Rightarrow f(x) = kx"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example shows the substitute-and-eliminate technique, then sketches why the Cauchy equation gives a straight line."
+            },
+            {
+              "seq": 2,
+              "text": "Start with two f of x plus f of one minus x equals x squared. Call this equation one."
+            },
+            {
+              "seq": 3,
+              "text": "The unknown appears as both f of x and f of one minus x, so we need a partner equation. Replace x by one minus x."
+            },
+            {
+              "seq": 4,
+              "text": "That gives two f of one minus x plus f of x equals one minus x squared, which is equation two."
+            },
+            {
+              "seq": 5,
+              "text": "Now eliminate. Multiply equation one by two and subtract equation two, and the f of one minus x terms cancel, leaving three f of x equals two x squared minus one minus x squared."
+            },
+            {
+              "seq": 6,
+              "text": "Simplifying the right side gives x squared plus two x minus one, so f of x equals x squared plus two x minus one, all over three."
+            },
+            {
+              "seq": 7,
+              "text": "Finally, why does the Cauchy equation give a line? Setting x and y to zero forces f of zero to be zero, and letting k be f of one anchors the slope."
+            },
+            {
+              "seq": 8,
+              "text": "Additivity then transfers integer and rational scaling directly onto the function, and assuming continuity extends it to all reals, giving f of x equals k x."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example substitute-and-eliminate technique दिखाता है, फिर sketch करता है कि Cauchy equation क्यों एक straight line देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "two f of x plus f of one minus x equals x squared से शुरू करो। इसे equation one कहो।"
+            },
+            {
+              "seq": 3,
+              "text": "Unknown, f of x और f of one minus x दोनों के रूप में आता है, तो हमें एक partner equation चाहिए। x को one minus x से replace करो।"
+            },
+            {
+              "seq": 4,
+              "text": "इससे मिलता है two f of one minus x plus f of x equals one minus x squared, जो equation two है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब eliminate करो। Equation one को two से multiply करो और equation two घटाओ, तो f of one minus x terms cancel हो जाते हैं, बचता है three f of x equals two x squared minus one minus x squared।"
+            },
+            {
+              "seq": 6,
+              "text": "Right side simplify करने पर मिलता है x squared plus two x minus one, तो f of x equals x squared plus two x minus one, बटा three।"
+            },
+            {
+              "seq": 7,
+              "text": "आख़िर में, Cauchy equation क्यों एक line देता है? x और y को zero रखने से f of zero, zero पर force होता है, और k को f of one रखना slope anchor करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Additivity फिर integer और rational scaling को सीधे function पर transfer कर देती है, और continuity मान लेने पर यह सारे reals तक फैल जाता है, जिससे f of x equals k x।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "Algebra of Functions and Functional Equations",
+      "title": "The one-over-x elimination, verified",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Reciprocal substitution"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "latex": "f(x) + 2f\\!\\left(\\tfrac{1}{x}\\right) = 3x \\quad (i)"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Replace x by one over x to build the partner equation."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "f\\!\\left(\\tfrac{1}{x}\\right) + 2f(x) = \\dfrac{3}{x} \\quad (ii)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Multiply equation two by two and subtract equation one to eliminate f of one over x."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "3f(x) = \\dfrac{6}{x} - 3x \\Rightarrow f(x) = \\dfrac{2}{x} - x"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Verify by substituting back; the original collapses cleanly to three x."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "text": "The partner substitution is almost always $x \\to \\tfrac{1}{x}$ or $x \\to 1 - x$.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the reciprocal version of the elimination trick, finished with a verification you should always do."
+            },
+            {
+              "seq": 2,
+              "text": "Start with f of x plus two f of one over x equals three x. Call this equation one."
+            },
+            {
+              "seq": 3,
+              "text": "Since one over x appears inside f, replace x by one over x to build the partner equation."
+            },
+            {
+              "seq": 4,
+              "text": "That gives f of one over x plus two f of x equals three over x, which is equation two."
+            },
+            {
+              "seq": 5,
+              "text": "Now eliminate f of one over x. Multiply equation two by two, giving two f of one over x plus four f of x equals six over x, then subtract equation one."
+            },
+            {
+              "seq": 6,
+              "text": "The f of one over x terms cancel, leaving three f of x equals six over x minus three x, so f of x equals two over x minus x."
+            },
+            {
+              "seq": 7,
+              "text": "Always verify. Substitute back into the original: f of x plus two f of one over x becomes two over x minus x, plus two times two x minus one over x, which collapses cleanly to three x."
+            },
+            {
+              "seq": 8,
+              "text": "And keep the pattern in mind: the partner substitution is almost always x to one over x when one over x appears, or x to one minus x when one minus x appears."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह elimination trick का reciprocal version है, एक verification के साथ ख़त्म जिसे हमेशा करना चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "f of x plus two f of one over x equals three x से शुरू करो। इसे equation one कहो।"
+            },
+            {
+              "seq": 3,
+              "text": "चूँकि one over x, f के अंदर आता है, x को one over x से replace करके partner equation बनाओ।"
+            },
+            {
+              "seq": 4,
+              "text": "इससे मिलता है f of one over x plus two f of x equals three over x, जो equation two है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब f of one over x eliminate करो। Equation two को two से multiply करो, जिससे two f of one over x plus four f of x equals six over x, फिर equation one घटाओ।"
+            },
+            {
+              "seq": 6,
+              "text": "f of one over x terms cancel हो जाते हैं, बचता है three f of x equals six over x minus three x, तो f of x equals two over x minus x।"
+            },
+            {
+              "seq": 7,
+              "text": "हमेशा verify करो। Original में वापस substitute करो: f of x plus two f of one over x बनता है two over x minus x, plus two times two x minus one over x, जो साफ़-साफ़ three x पर collapse हो जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और pattern याद रखो: partner substitution लगभग हमेशा x to one over x होती है जब one over x आए, या x to one minus x जब one minus x आए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "tips",
+      "subtopic": "Algebra of Functions and Functional Equations",
+      "title": "Pitfalls and pro-tips for algebra and functional equations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where these problems slip"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "text": "Dropping the domain: $f/g$ excludes zeros of $g$ and respects both domains — intersect, then delete.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Match the right pattern: sum-to-sum linear, sum-to-product exponential, product-to-sum logarithmic."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "One equation in f of x and f of something needs a partner; make it by substituting."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "text": "Do not assume uniqueness without continuity: state the regularity assumption, take the continuous solution.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Speed pro-tips"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Memorise the five patterns and their solutions; many find-f questions are then instant."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Always verify the final f by plugging back — it catches sign slips every time."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us close the chapter's final subtopic with the traps, then the reflexes."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, dropping the domain in a combination. The quotient f over g excludes the zeros of g and respects both original domains, so intersect first, then delete the zeros."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, matching the wrong functional-equation pattern. Sum-to-sum is linear, sum-to-product is exponential, product-to-sum is logarithmic, and product-to-product is a power. Read the structure before solving."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, forgetting the second substitution. One equation relating f of x and f of something is not enough; you need a partner equation, generated by substituting a transformed x."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, assuming uniqueness without continuity. State the regularity assumption, and take the standard continuous solution that the substitutions produce."
+            },
+            {
+              "seq": 6,
+              "text": "Now the reflexes that make these quick."
+            },
+            {
+              "seq": 7,
+              "text": "Memorise the five standard patterns and their solutions, because then many find-f questions are recognised instantly with no work at all."
+            },
+            {
+              "seq": 8,
+              "text": "And always verify the final f by plugging it back into the original equation. It catches sign slips every single time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो chapter के आख़िरी subtopic को traps से close करें, फिर reflexes।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, combination में domain छोड़ देना। Quotient f over g, g के zeros को exclude करता है और दोनों original domains को respect करता है, तो पहले intersect करो, फिर zeros delete करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, ग़लत functional-equation pattern match करना। Sum-to-sum linear, sum-to-product exponential, product-to-sum logarithmic, और product-to-product एक power। Solve करने से पहले structure पढ़ो।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, second substitution भूलना। f of x और f of something को relate करता एक equation काफ़ी नहीं; तुम्हें एक partner equation चाहिए, transformed x substitute करके बनाया हुआ।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, continuity के बिना uniqueness मान लेना। Regularity assumption बताओ, और substitutions से मिलने वाला standard continuous solution लो।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वो reflexes जो इन्हें quick बनाते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "पाँच standard patterns और उनके solutions याद कर लो, क्योंकि तब कई find-f questions बिना किसी काम के instantly पहचाने जाते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "और final f को original equation में वापस डालकर हमेशा verify करो। यह हर बार sign slips पकड़ लेता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Close",
+      "title": "Your complete Relations and Functions toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The whole chapter on one board"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 5,
+          "latex": "\\text{Relations: } 2^{n^2}; \\ \\text{reflexive } 2^{n^2 - n}; \\ \\text{symmetric } 2^{n(n+1)/2}; \\ \\text{equivalence } B_n"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 12,
+          "latex": "\\text{Functions: } m^n; \\ \\text{one-one } {}^{m}P_{n}; \\ \\text{bijective } n!; \\ \\text{onto } \\sum_{k=0}^{m}(-1)^k \\binom{m}{k}(m-k)^n"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 19,
+          "latex": "(g \\circ f)(x) = g(f(x)); \\ (g \\circ f)^{-1} = f^{-1} \\circ g^{-1}; \\ \\text{invertible} \\iff \\text{bijective}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "latex": "\\text{Domain jams: } Q(x) \\ne 0, \\ \\sqrt{\\ } \\ge 0, \\ \\log > 0; \\quad \\text{range } \\tfrac{ax+b}{cx+d} = \\mathbb{R} \\setminus \\{a/c\\}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "latex": "|x|:[0,\\infty); \\ \\{x\\}\\in[0,1); \\ e^x:(0,\\infty); \\ [x] + [-x] = -1 \\ (x \\notin \\mathbb{Z}); \\ \\mathrm{sgn}(x)|x| = x"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\text{even } \\tfrac{f(x)+f(-x)}{2}; \\ \\text{odd } \\tfrac{f(x)-f(-x)}{2}; \\ f(ax+b) \\text{ period } \\tfrac{T}{|a|}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "f(x+y) = f(x)+f(y) \\Rightarrow kx; \\quad f(xy) = f(x)f(y) \\Rightarrow x^n"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "text": "This is your complete toolkit restated for revision — one glance before the exam, not new teaching.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is your complete Relations and Functions toolkit, gathered onto one board. This is a restatement for fast revision, not new teaching."
+            },
+            {
+              "seq": 2,
+              "text": "For relations, the four counts: two to the n squared relations overall, two to the n squared minus n reflexive, two to the n times n plus one over two symmetric, and the n-th Bell number for equivalence."
+            },
+            {
+              "seq": 3,
+              "text": "For functions, the four counts: m to the n functions, m permute n one-one, n factorial bijective, and the inclusion-exclusion alternating sum for onto."
+            },
+            {
+              "seq": 4,
+              "text": "For composition and inverse: the composite is g of f of x, the inverse of a composite reverses the order to f inverse ring g inverse, and a function is invertible exactly when it is bijective."
+            },
+            {
+              "seq": 5,
+              "text": "For domain and range: the three jams are denominator non-zero, even root non-negative, and log strictly positive, and the range of a linear-over-linear rational is all reals except a over c."
+            },
+            {
+              "seq": 6,
+              "text": "For the standard functions: modulus gives zero to infinity, fractional part lies in zero to one, the exponential is strictly positive, floor x plus floor of minus x is minus one off the integers, and signum times modulus rebuilds x."
+            },
+            {
+              "seq": 7,
+              "text": "For symmetry: the even and odd parts are the half-sum and half-difference of f of x and f of minus x, and f of a x plus b has period T over the absolute value of a."
+            },
+            {
+              "seq": 8,
+              "text": "And for functional equations: sum-to-sum gives k x, product-to-product gives x to the n, with the exponential and logarithmic patterns in between."
+            },
+            {
+              "seq": 9,
+              "text": "Keep this toolkit for one final glance before the exam. Every formula here was taught in full earlier; this is only the consolidated recall."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा तुम्हारा पूरा Relations and Functions toolkit, एक board पर इकट्ठा। यह fast revision के लिए restatement है, नई teaching नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "Relations के लिए, चार counts: कुल two to the n squared relations, two to the n squared minus n reflexive, two to the n times n plus one over two symmetric, और equivalence के लिए n-th Bell number।"
+            },
+            {
+              "seq": 3,
+              "text": "Functions के लिए, चार counts: m to the n functions, m permute n one-one, n factorial bijective, और onto के लिए inclusion-exclusion alternating sum।"
+            },
+            {
+              "seq": 4,
+              "text": "Composition और inverse के लिए: composite, g of f of x है, composite का inverse order को उल्टा करके f inverse ring g inverse बनता है, और function तभी invertible है जब वो bijective हो।"
+            },
+            {
+              "seq": 5,
+              "text": "Domain और range के लिए: तीन jams हैं denominator non-zero, even root non-negative, और log strictly positive, और linear-over-linear rational का range, a over c को छोड़कर सारे reals है।"
+            },
+            {
+              "seq": 6,
+              "text": "Standard functions के लिए: modulus देता है zero to infinity, fractional part zero से one में है, exponential strictly positive, floor x plus floor of minus x, integers के बाहर minus one, और signum times modulus, x को वापस बनाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Symmetry के लिए: even और odd parts, f of x और f of minus x के half-sum और half-difference हैं, और f of a x plus b का period T over absolute value of a है।"
+            },
+            {
+              "seq": 8,
+              "text": "और functional equations के लिए: sum-to-sum देता है k x, product-to-product देता है x to the n, बीच में exponential और logarithmic patterns के साथ।"
+            },
+            {
+              "seq": 9,
+              "text": "इस toolkit को exam से पहले एक final glance के लिए रखो। यहाँ हर formula पहले पूरी तरह पढ़ाया गया था; यह सिर्फ़ consolidated recall है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 20,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Close",
+      "title": "Quick-recall cheat sheet",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Fast revision, one line each"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 5,
+          "text": "Relations: reflexive is self-loop, symmetric is two-way, transitive is shortcut; all three means equivalence and a partition."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "Functions: one-one means different inputs stay different; onto means nothing left out; both means invertible."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 21,
+          "text": "Type depends on both domain and codomain — change the set, change the answer.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Composition: innermost first, not commutative; inverse: swap-and-solve, reverse the order for a composite."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Domain: root non-negative, log strictly positive, denominator never zero, then intersect."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "text": "Floor rounds down even for negatives; a log base below one flips the inequality.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "text": "Even is a y-axis mirror; odd is origin symmetry forcing f of zero equals zero; a modulus may halve a period."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "text": "Functional equations: sum-to-sum line, sum-to-product exp, product-to-sum log, product-to-product power; always verify."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Finally, the quick-recall cheat sheet, one line per idea, built from the chapter's own recall boxes."
+            },
+            {
+              "seq": 2,
+              "text": "Relations: reflexive is the self-loop, symmetric is the two-way street, transitive is the shortcut, and all three together mean an equivalence relation that partitions the set."
+            },
+            {
+              "seq": 3,
+              "text": "Functions: one-one means different inputs stay different, onto means nothing in the codomain is left out, and both together mean the function is invertible."
+            },
+            {
+              "seq": 4,
+              "text": "The recurring warning across the whole chapter: the type depends on both the domain and the codomain, so change the set and you change the answer."
+            },
+            {
+              "seq": 5,
+              "text": "Composition: read innermost-first and remember it is not commutative. Inverse: use swap-and-solve, and reverse the order when inverting a composite."
+            },
+            {
+              "seq": 6,
+              "text": "Domain: a root needs non-negative content, a log needs strictly positive content, a denominator is never zero, and then you intersect all the conditions."
+            },
+            {
+              "seq": 7,
+              "text": "Two sharp reminders: the floor rounds down even for negatives, and a logarithm with base below one flips the inequality direction."
+            },
+            {
+              "seq": 8,
+              "text": "Symmetry: even is a mirror about the y-axis, odd is symmetry about the origin that forces f of zero to be zero, and a modulus may halve a period."
+            },
+            {
+              "seq": 9,
+              "text": "Functional equations: sum-to-sum is a line, sum-to-product is exponential, product-to-sum is logarithmic, product-to-product is a power, and you always verify at the end."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िर में, quick-recall cheat sheet, हर idea के लिए एक line, chapter के अपने recall boxes से बनी।"
+            },
+            {
+              "seq": 2,
+              "text": "Relations: reflexive self-loop है, symmetric two-way street है, transitive shortcut है, और तीनों मिलकर एक equivalence relation हैं जो set को partition करती है।"
+            },
+            {
+              "seq": 3,
+              "text": "Functions: one-one मतलब अलग inputs अलग रहते हैं, onto मतलब codomain में कुछ छूटता नहीं, और दोनों मिलकर मतलब function invertible है।"
+            },
+            {
+              "seq": 4,
+              "text": "पूरे chapter का recurring warning: type, domain और codomain दोनों पर depend करता है, तो set बदलो और answer बदल जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Composition: innermost-first पढ़ो और याद रखो यह commutative नहीं है। Inverse: swap-and-solve use करो, और composite invert करते समय order reverse करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Domain: root को non-negative content चाहिए, log को strictly positive content, denominator कभी zero नहीं, और फिर सारी conditions intersect करो।"
+            },
+            {
+              "seq": 7,
+              "text": "दो sharp reminders: floor negatives के लिए भी down round करता है, और one से नीचे base वाला logarithm inequality direction flip कर देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Symmetry: even, y-axis के about mirror है, odd, origin के about symmetry है जो f of zero को zero पर force करती है, और modulus period आधा कर सकता है।"
+            },
+            {
+              "seq": 9,
+              "text": "Functional equations: sum-to-sum एक line, sum-to-product exponential, product-to-sum logarithmic, product-to-product एक power, और अंत में हमेशा verify करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

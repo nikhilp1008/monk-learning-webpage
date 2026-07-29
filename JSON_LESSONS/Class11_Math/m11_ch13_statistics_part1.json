@@ -1,0 +1,1940 @@
+{
+  "chapter": "Statistics",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 13,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Why the average can lie: the mandi story",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "Same average, opposite reliability",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Ramesh (₹/kg): 28, 30, 29, 31, 30  →  mean ₹29.6",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Suresh (₹/kg): 14, 46, 12, 48, 30  →  mean ₹29.6",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Identical mean, yet one vendor is reliable and one is a gamble.",
+          "seq": 4,
+          "reveal_at": 24
+        },
+        {
+          "type": "text",
+          "text": "Central tendency = WHERE the data sits. Dispersion = HOW SPREAD OUT it is.",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "diagram",
+          "caption": "Two data sets, one mean, very different spread",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"200\" y=\"16\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\">Same mean, different spread</text><line x1=\"200\" y1=\"34\" x2=\"200\" y2=\"160\" stroke=\"#c0392b\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"205\" y=\"32\" font-size=\"10\" fill=\"#c0392b\">mean</text><line x1=\"40\" y1=\"72\" x2=\"360\" y2=\"72\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"182\" cy=\"72\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"192\" cy=\"72\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"200\" cy=\"72\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"209\" cy=\"72\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"219\" cy=\"72\" r=\"4\" fill=\"#2c3e50\"/><text x=\"40\" y=\"92\" font-size=\"10\" fill=\"#27ae60\">Low dispersion (Ramesh): tight knot</text><line x1=\"40\" y1=\"130\" x2=\"360\" y2=\"130\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"130\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"120\" cy=\"130\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"200\" cy=\"130\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"300\" cy=\"130\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"345\" cy=\"130\" r=\"4\" fill=\"#2c3e50\"/><text x=\"40\" y=\"150\" font-size=\"10\" fill=\"#c0392b\">High dispersion (Suresh): flung wide</text></svg>",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Dispersion asks: how far, on average, do the observations live from the centre?",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Let's open the chapter with a small puzzle from your local vegetable market. Two vendors, Ramesh and Suresh, quote tomato prices over a week."
+            },
+            {
+              "seq": 2,
+              "text": "Ramesh quotes twenty eight, thirty, twenty nine, thirty one, and thirty rupees. Punch these into a calculator and the average comes out to twenty nine point six rupees per kilo."
+            },
+            {
+              "seq": 3,
+              "text": "Now Suresh: fourteen, forty six, twelve, forty eight, and thirty. Add them up, divide, and you get the exact same average, twenty nine point six rupees. Identical on paper."
+            },
+            {
+              "seq": 4,
+              "text": "But nobody would call these two vendors the same. Ramesh is boringly reliable, Suresh is a total gamble. The average has completely hidden the one thing that separates them, how scattered the prices are."
+            },
+            {
+              "seq": 5,
+              "text": "This is the key split. Central tendency, that's your mean, median and mode, tells you where the data sits. Dispersion tells you how tightly or loosely the observations huddle around that centre."
+            },
+            {
+              "seq": 6,
+              "text": "Look at the picture. Both number lines share the same mean, marked by the red dashed line. On top, Ramesh's prices cluster into a tight little knot. Below, Suresh's dots fling themselves to the far corners."
+            },
+            {
+              "seq": 7,
+              "text": "So dispersion is just a fair way of answering one question: how far, on average, do the dots live from home? That single question drives this entire chapter."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Chalo chapter ki shuruaat ek chhote se puzzle se karte hain, aapke local sabzi mandi se. Do vendors hain, Ramesh aur Suresh, jo hafte bhar tomato ke daam batate hain."
+            },
+            {
+              "seq": 2,
+              "text": "Ramesh bolta hai twenty eight, thirty, twenty nine, thirty one, aur thirty rupees. Calculator mein daalo toh average nikalta hai twenty nine point six rupees per kilo."
+            },
+            {
+              "seq": 3,
+              "text": "Ab Suresh: fourteen, forty six, twelve, forty eight, aur thirty. Jod ke divide karo toh bilkul wahi average aata hai, twenty nine point six rupees. Paper pe dono same."
+            },
+            {
+              "seq": 4,
+              "text": "Lekin koi bhi in dono vendors ko ek jaisa nahi kahega. Ramesh reliable hai, Suresh ek gamble hai. Average ne wo cheez chhupa di jo inhe alag karti hai, yaani prices kitni bikhri hui hain."
+            },
+            {
+              "seq": 5,
+              "text": "Yahi main baat hai. Central tendency, matlab mean, median aur mode, batata hai ki data kahaan baitha hai. Dispersion batata hai ki observations us centre ke aas-paas kitni tightly ya loosely jama hain."
+            },
+            {
+              "seq": 6,
+              "text": "Picture dekho. Dono number lines ka mean same hai, red dashed line se marked. Upar Ramesh ki prices ek tight knot mein hain. Neeche Suresh ke dots door door corners mein bikhre hue hain."
+            },
+            {
+              "seq": 7,
+              "text": "Toh dispersion sirf ek fair tareeka hai ye poochhne ka: dots apne ghar se average mein kitni door rehte hain? Yahi ek sawaal poore chapter ko chalata hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "The range: fast but fragile",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "The crudest measure of spread: the range",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{Range} = x_{\\max} - x_{\\min}",
+          "seq": 2,
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Grouped data: (upper boundary of highest class) − (lower boundary of lowest class).",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "text",
+          "text": "Useful first glance: “today's temperature ranged from 22°C to 41°C.”",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Weakness: the range listens ONLY to the two extremes and ignores everything between.",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "latex": "\\text{Coefficient of range} = \\dfrac{x_{\\max}-x_{\\min}}{x_{\\max}+x_{\\min}}",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "The coefficient of range is unit-free, so it compares spread across different scales.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "There's a whole hierarchy of ways to measure spread, and the crudest one is the range. It is simply the gap between the largest and the smallest observation."
+            },
+            {
+              "seq": 2,
+              "text": "In symbols, range equals x maximum minus x minimum. That's it, subtract the smallest value from the largest, and you have an instant sense of the total width of your data."
+            },
+            {
+              "seq": 3,
+              "text": "For grouped or continuous data there's a small tweak. You take the upper boundary of the highest class and subtract the lower boundary of the lowest class."
+            },
+            {
+              "seq": 4,
+              "text": "The range is genuinely useful as a first glance. When a weather report says today's temperature ranged from twenty two to forty one degrees, that number tells you something real about the day."
+            },
+            {
+              "seq": 5,
+              "text": "<chuckle>But the range is a bit of a drama queen. It listens only to the two most extreme values and completely ignores everything in between. One freak observation, and the range lies about the whole set."
+            },
+            {
+              "seq": 6,
+              "text": "To compare spread fairly across data sets of different scales, we use the coefficient of range: x max minus x min, divided by x max plus x min. Same-unit quantities on top and bottom."
+            },
+            {
+              "seq": 7,
+              "text": "Because it divides one same-unit quantity by another, the coefficient of range is a pure number with no units. That lets you compare, say, the spread of rupees against the spread of marks on a level field."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Spread measure karne ke kai tareeke hain ek hierarchy mein, aur sabse crude tareeka hai range. Ye simply largest aur smallest observation ke beech ka gap hai."
+            },
+            {
+              "seq": 2,
+              "text": "Symbols mein, range equals x maximum minus x minimum. Bas itna hi, largest value mein se smallest ghatao, aur aapko data ki total width ka instant idea mil jaata hai."
+            },
+            {
+              "seq": 3,
+              "text": "Grouped ya continuous data ke liye ek chhota sa tweak hai. Highest class ki upper boundary lo aur lowest class ki lower boundary ghatao."
+            },
+            {
+              "seq": 4,
+              "text": "Range ek pehli nazar ke liye genuinely useful hai. Jab weather report bolti hai aaj temperature twenty two se forty one degrees tak raha, wo number din ke baare mein kuch real batata hai."
+            },
+            {
+              "seq": 5,
+              "text": "<chuckle>Lekin range thoda drama queen hai. Ye sirf do sabse extreme values ko sunta hai aur beech ki har cheez ko ignore kar deta hai. Ek freak observation, aur range poore set ke baare mein jhooth bol deta hai."
+            },
+            {
+              "seq": 6,
+              "text": "Alag alag scales ke data sets ko fairly compare karne ke liye hum coefficient of range use karte hain: x max minus x min, divided by x max plus x min. Same-unit quantities upar aur neeche."
+            },
+            {
+              "seq": 7,
+              "text": "Kyunki ye ek same-unit quantity ko doosri se divide karta hai, coefficient of range ek pure number hai, bina kisi unit ke. Isse aap rupees ki spread ko marks ki spread se ek level field pe compare kar sakte ho."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Mean deviation: averaging the distances",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "A smarter idea than the range",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "For every observation, measure how far it sits from a central value, then average those distances.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Key move: use DISTANCE. A value 5 below the centre is as “spread out” as one 5 above.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Drop the signs → take ABSOLUTE values, or the deviations cancel to exactly 0.",
+          "seq": 4,
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "latex": "\\sum_i (x_i-\\bar{x}) = 0 \\quad\\text{always}",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "diagram",
+          "caption": "Distances from a chosen point a",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 170\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"200\" y=\"16\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\">Mean deviation = average length of these arrows</text><line x1=\"30\" y1=\"95\" x2=\"370\" y2=\"95\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"200\" y1=\"55\" x2=\"200\" y2=\"135\" stroke=\"#c0392b\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"188\" y=\"150\" font-size=\"11\" fill=\"#c0392b\">a</text><circle cx=\"90\" cy=\"95\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"150\" cy=\"95\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"255\" cy=\"95\" r=\"4\" fill=\"#2c3e50\"/><circle cx=\"330\" cy=\"95\" r=\"4\" fill=\"#2c3e50\"/><line x1=\"90\" y1=\"78\" x2=\"200\" y2=\"78\" stroke=\"#2980b9\" stroke-width=\"1.5\"/><text x=\"135\" y=\"72\" font-size=\"10\" fill=\"#2980b9\">|x-a|</text><line x1=\"150\" y1=\"112\" x2=\"200\" y2=\"112\" stroke=\"#2980b9\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"78\" x2=\"255\" y2=\"78\" stroke=\"#2980b9\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"112\" x2=\"330\" y2=\"112\" stroke=\"#2980b9\" stroke-width=\"1.5\"/><text x=\"270\" y=\"128\" font-size=\"10\" fill=\"#2980b9\">|x-a|</text></svg>",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Mean deviation = the average of these absolute distances.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The range wastes almost all your data. A smarter idea is this: for every single observation, measure how far it sits from a central value, and then average all those distances."
+            },
+            {
+              "seq": 2,
+              "text": "Now here's the subtle move, and it hinges on one word, distance. A value sitting five units below the mean is just as spread out as one sitting five units above it. Direction shouldn't matter, only how far."
+            },
+            {
+              "seq": 3,
+              "text": "So we deliberately throw away the plus and minus signs. We take the absolute value of each deviation. A gap of minus five and a gap of plus five both count as a distance of five."
+            },
+            {
+              "seq": 4,
+              "text": "<whisper>Here's why this is not optional. The deviations from the mean always, always add up to exactly zero, that's a defining property of the mean itself."
+            },
+            {
+              "seq": 5,
+              "text": "You can see it written on the board: the sum of x i minus x bar is always zero. If we didn't take absolute values, our spread measure would report zero for every data set on earth, completely useless."
+            },
+            {
+              "seq": 6,
+              "text": "Look at the picture. From a chosen central point a, each observation sends out a little arrow whose length is the distance, x i minus a in absolute value."
+            },
+            {
+              "seq": 7,
+              "text": "The mean deviation is nothing more than the average length of all these distance arrows. That's the whole concept in one sentence."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Range aapka lagbhag saara data waste kar deta hai. Ek smarter idea ye hai: har ek observation ke liye measure karo ki wo central value se kitni door hai, aur phir un saari distances ka average le lo."
+            },
+            {
+              "seq": 2,
+              "text": "Ab yahaan ek subtle move hai, aur ye ek word pe tika hai, distance. Ek value jo mean se paanch units neeche hai, utni hi spread out hai jitni ek jo paanch units upar hai. Direction matter nahi karni chahiye, sirf kitni door."
+            },
+            {
+              "seq": 3,
+              "text": "Isliye hum jaan boojh ke plus aur minus signs phenk dete hain. Hum har deviation ki absolute value lete hain. Minus five ka gap aur plus five ka gap, dono paanch ki distance count hote hain."
+            },
+            {
+              "seq": 4,
+              "text": "<whisper>Ye optional kyun nahi hai, suno. Mean se deviations hamesha, hamesha exactly zero mein add up hote hain, ye mean ki khud ki ek defining property hai."
+            },
+            {
+              "seq": 5,
+              "text": "Board pe likha dekh sakte ho: sum of x i minus x bar hamesha zero hai. Agar hum absolute value na lein, toh hamara spread measure duniya ke har data set ke liye zero report karega, bilkul useless."
+            },
+            {
+              "seq": 6,
+              "text": "Picture dekho. Ek chosen central point a se, har observation ek chhota sa arrow bhejta hai jiski length distance hai, x i minus a, absolute value mein."
+            },
+            {
+              "seq": 7,
+              "text": "Mean deviation in saari distance arrows ki average length se zyada kuch nahi hai. Yahi poora concept ek line mein."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Two honest weaknesses of mean deviation",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "Where mean deviation falls short",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Weakness 1: the modulus |x| has a sharp corner at 0 — it won't differentiate cleanly.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "So mean deviation refuses to slot into further algebra and calculus.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "This is exactly why the next subtopic switches to variance, which SQUARES deviations instead.",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "text",
+          "text": "Weakness 2: M.D. depends on the anchor — about the mean vs about the median gives different values.",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\sum_i |x_i - a|\\ \\text{is minimum when } a = \\text{median}",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Deviation is smallest about the MEDIAN — a fact that powers many exam shortcuts.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Mean deviation is a real improvement on the range, but it carries two honest weaknesses you should keep in your head."
+            },
+            {
+              "seq": 2,
+              "text": "The first is mathematical. The absolute-value sign is clumsy. The function mod x has a sharp corner at zero, and you cannot differentiate it cleanly at that point."
+            },
+            {
+              "seq": 3,
+              "text": "Because of that corner, mean deviation simply refuses to slot into further algebra and calculus. It's a dead end if you want to build more theory on top of it."
+            },
+            {
+              "seq": 4,
+              "text": "And that is precisely why the very next subtopic abandons mean deviation in favour of variance and standard deviation, which square the deviations instead of taking absolute values, squaring is smooth everywhere."
+            },
+            {
+              "seq": 5,
+              "text": "The second weakness: mean deviation is only as meaningful as the central value you anchor it to. The same data set has a different mean deviation about its mean than about its median."
+            },
+            {
+              "seq": 6,
+              "text": "And here is the beautiful fact we'll prove later, written on the board: the sum of absolute deviations is smallest when you measure about the median."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>So the deviation is genuinely least about the median, not the mean. That quiet fact powers a lot of clever exam shortcuts, so lock it away now."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Mean deviation range se ek real improvement hai, lekin ye do honest weaknesses ke saath aata hai jo aapko yaad rakhni chahiye."
+            },
+            {
+              "seq": 2,
+              "text": "Pehli mathematical hai. Absolute-value sign clumsy hai. Function mod x ka zero pe ek sharp corner hai, aur us point pe aap use cleanly differentiate nahi kar sakte."
+            },
+            {
+              "seq": 3,
+              "text": "Us corner ki wajah se, mean deviation aage ki algebra aur calculus mein fit hone se mana kar deta hai. Agar aap iske upar aur theory banana chaho toh ye ek dead end hai."
+            },
+            {
+              "seq": 4,
+              "text": "Aur yahi bilkul wajah hai ki agla subtopic mean deviation ko chhod ke variance aur standard deviation ki taraf jaata hai, jo deviations ki absolute value ke bajaye square lete hain, aur squaring har jagah smooth hai."
+            },
+            {
+              "seq": 5,
+              "text": "Doosri weakness: mean deviation utna hi meaningful hai jitna central value jispe aap use anchor karte ho. Same data set ka mean ke baare mein mean deviation, median ke baare mein alag hota hai."
+            },
+            {
+              "seq": 6,
+              "text": "Aur yahaan ek beautiful fact hai jo hum baad mein prove karenge, board pe likha hua: absolute deviations ka sum sabse chhota tab hota hai jab aap median ke baare mein measure karte ho."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Toh deviation genuinely median ke baare mein sabse kam hota hai, mean ke baare mein nahi. Ye quiet fact bahut saare clever exam shortcuts ko power karta hai, toh abhi ise yaad kar lo."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Procedure: mean deviation of ungrouped data",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "M.D. of ungrouped data, step by step",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "About the MEAN — Step 1: find the mean, the anchor all distances are measured from.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "\\bar{x} = \\frac{1}{n}\\sum x_i",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "text",
+          "text": "Step 2: form each |x_i − x̄|.  Step 3: add them.  Step 4: divide by n.",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{M.D.}(\\bar{x}) = \\frac{1}{n}\\sum_{i=1}^{n} |x_i - \\bar{x}|",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "About the MEDIAN: same steps, but Step 1 finds the median (sort, take middle value).",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Why bother with the median? It gives the smallest, most honest mean deviation the data can offer.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Mean deviation is computed, not derived, so let's nail the exact step-by-step procedure for ungrouped data, first about the mean."
+            },
+            {
+              "seq": 2,
+              "text": "Step one, find the mean. This is your anchor, the central value that every distance is going to be measured from. No anchor, no deviation."
+            },
+            {
+              "seq": 3,
+              "text": "The mean is x bar equals one over n times the sum of all the x i. Just add every observation and divide by how many there are."
+            },
+            {
+              "seq": 4,
+              "text": "Step two, form each absolute deviation, mod of x i minus x bar. Step three, add all those absolute deviations together to get the total scatter. Step four, divide by n to turn total scatter into an average."
+            },
+            {
+              "seq": 5,
+              "text": "Putting it together: mean deviation about the mean equals one over n, times the sum of the absolute deviations. Dividing by n is what makes the measure comparable across data sets of different sizes."
+            },
+            {
+              "seq": 6,
+              "text": "Now, about the median, the procedure is identical with one change. In step one, instead of the mean, you find the median: sort the data, take the middle value for odd n, or the average of the two middle values for even n."
+            },
+            {
+              "seq": 7,
+              "text": "Why go to that trouble? Because the median minimises the total absolute deviation. Measuring about it gives you the smallest, most honest mean deviation the data can possibly offer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Mean deviation compute kiya jaata hai, derive nahi, toh chalo ungrouped data ke liye exact step-by-step procedure pakadte hain, pehle mean ke baare mein."
+            },
+            {
+              "seq": 2,
+              "text": "Step one, mean nikalo. Ye aapka anchor hai, wo central value jisse har distance measure hogi. Anchor nahi, toh deviation nahi."
+            },
+            {
+              "seq": 3,
+              "text": "Mean hai x bar equals one over n times sum of all x i. Bas har observation ko jodo aur divide karo unki count se."
+            },
+            {
+              "seq": 4,
+              "text": "Step two, har absolute deviation banao, mod of x i minus x bar. Step three, un saari absolute deviations ko jodo taaki total scatter mile. Step four, n se divide karo taaki total scatter ek average ban jaaye."
+            },
+            {
+              "seq": 5,
+              "text": "Sab jod ke: mean deviation about the mean equals one over n, times sum of the absolute deviations. n se divide karna hi measure ko alag alag sizes ke data sets mein comparable banata hai."
+            },
+            {
+              "seq": 6,
+              "text": "Ab, median ke baare mein, procedure bilkul same hai ek change ke saath. Step one mein, mean ke bajaye, aap median nikaalte ho: data sort karo, odd n ke liye middle value lo, ya even n ke liye do middle values ka average lo."
+            },
+            {
+              "seq": 7,
+              "text": "Itni mehnat kyun? Kyunki median total absolute deviation ko minimise karta hai. Uske baare mein measure karne se aapko sabse chhoti, sabse honest mean deviation milti hai jo data de sakta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Procedure: mean deviation of a frequency distribution",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "When data comes with frequencies",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Continuous data: first replace each class by its mid-point x_i.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "x_i = \\frac{\\text{lower limit} + \\text{upper limit}}{2}",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "text",
+          "text": "Compute the weighted mean, then the column f_i|x_i − x̄|.",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{M.D.}(\\bar{x}) = \\frac{1}{N}\\sum_{i=1}^{n} f_i\\,|x_i - \\bar{x}|,\\quad N=\\sum f_i",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "Divide by N = ∑f_i, NEVER by the number of classes.",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Why the f_i weighting: an observation occurring ten times must contribute its distance ten times.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now suppose the data doesn't come as a plain list, but as a frequency distribution, values with how often each one occurs. The procedure adapts in two small ways."
+            },
+            {
+              "seq": 2,
+              "text": "For a continuous distribution, your first job is to replace each class by a single representative value, its mid-point x i. For discrete data the x i are already given, so you skip this."
+            },
+            {
+              "seq": 3,
+              "text": "The mid-point is simply the lower limit plus the upper limit, all divided by two. It's the value that stands in for every observation inside that class."
+            },
+            {
+              "seq": 4,
+              "text": "Next you compute the weighted mean, then build the column f i times the absolute deviation, f i times mod x i minus x bar. Each distance gets multiplied by how many times its value occurs."
+            },
+            {
+              "seq": 5,
+              "text": "The formula on the board says it all: mean deviation about the mean equals one over N, times the sum of f i times the absolute deviations, where N is the total frequency, the sum of all the f i."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Here is the single biggest trap in this whole subtopic. You divide by N, the total frequency, never by the number of classes or rows. Burn that into your memory."
+            },
+            {
+              "seq": 7,
+              "text": "And the reason for the f i weighting is pure common sense: an observation that occurs ten times must contribute its distance ten times, not once. The frequency is doing the counting for you."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ab maano data ek plain list ki tarah nahi aata, balki ek frequency distribution ki tarah, values ke saath ki har ek kitni baar aati hai. Procedure do chhote tareekon se adapt hota hai."
+            },
+            {
+              "seq": 2,
+              "text": "Ek continuous distribution ke liye, aapka pehla kaam hai har class ko ek single representative value se replace karna, uska mid-point x i. Discrete data ke liye x i pehle se diye hote hain, toh ye skip karo."
+            },
+            {
+              "seq": 3,
+              "text": "Mid-point simply lower limit plus upper limit hai, poora divided by two. Ye wo value hai jo us class ke andar har observation ke liye khadi hoti hai."
+            },
+            {
+              "seq": 4,
+              "text": "Aage aap weighted mean compute karte ho, phir column banate ho f i times the absolute deviation, f i times mod x i minus x bar. Har distance ko multiply kiya jaata hai ki uski value kitni baar aati hai."
+            },
+            {
+              "seq": 5,
+              "text": "Board pe formula sab keh deta hai: mean deviation about the mean equals one over N, times sum of f i times the absolute deviations, jahan N total frequency hai, saare f i ka sum."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Yahaan poore subtopic ka sabse bada trap hai. Aap N se divide karte ho, total frequency se, kabhi bhi classes ya rows ki number se nahi. Ise apni memory mein burn kar do."
+            },
+            {
+              "seq": 7,
+              "text": "Aur f i weighting ki wajah pure common sense hai: ek observation jo das baar aati hai use apni distance das baar contribute karni chahiye, ek baar nahi. Frequency aapke liye counting kar rahi hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "concept",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Procedure: mean deviation about the median of grouped data",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "You can't read the median off a grouped table",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Step 1: build the cumulative frequency (c.f.) column.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "Step 2: the median class is the FIRST class whose c.f. reaches N/2.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "M = \\ell + \\frac{\\frac{N}{2} - C}{f}\\times h",
+          "seq": 4,
+          "reveal_at": 24
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "ℓ = lower boundary of median class, C = c.f. before it, f = its frequency, h = its width.",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "text",
+          "text": "Interpolation assumes observations spread evenly across the median class.",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "text",
+          "text": "Step 3: then proceed as before, using |x_i − M| in place of |x_i − x̄|.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "There's one more case that trips students up: mean deviation about the median when the data is grouped. Here you cannot simply read the median off the table, you have to locate it."
+            },
+            {
+              "seq": 2,
+              "text": "Step one, build the cumulative frequency column, the running total of frequencies as you go down the classes."
+            },
+            {
+              "seq": 3,
+              "text": "Step two, identify the median class. It's the first class whose cumulative frequency reaches N over two, the halfway point of your total frequency."
+            },
+            {
+              "seq": 4,
+              "text": "Step three, compute the median by interpolation using this formula: M equals l, plus the quantity N over two minus C, divided by f, times h."
+            },
+            {
+              "seq": 5,
+              "text": "Let's name the pieces. l is the lower boundary of the median class. C is the cumulative frequency of the class just before it. f is the frequency of the median class itself. And h is its width."
+            },
+            {
+              "seq": 6,
+              "text": "Why interpolate at all? Because we assume the observations are spread evenly across the median class, so we step in proportionally to reach exactly the N over two-th value."
+            },
+            {
+              "seq": 7,
+              "text": "Once you have M, you proceed exactly like the frequency-distribution case, except you use mod x i minus M in place of mod x i minus x bar. The median just replaces the mean as the anchor."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ek aur case hai jo students ko phasa deta hai: mean deviation about the median jab data grouped ho. Yahaan aap median ko simply table se padh nahi sakte, aapko use locate karna padta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Step one, cumulative frequency column banao, frequencies ka running total jaise jaise aap classes mein neeche jaate ho."
+            },
+            {
+              "seq": 3,
+              "text": "Step two, median class identify karo. Ye pehli class hai jiski cumulative frequency N over two tak pahunchti hai, aapki total frequency ka halfway point."
+            },
+            {
+              "seq": 4,
+              "text": "Step three, median ko interpolation se compute karo is formula se: M equals l, plus the quantity N over two minus C, divided by f, times h."
+            },
+            {
+              "seq": 5,
+              "text": "Chalo tukdon ko naam dete hain. l median class ki lower boundary hai. C us class se theek pehle wali class ki cumulative frequency hai. f khud median class ki frequency hai. Aur h uski width hai."
+            },
+            {
+              "seq": 6,
+              "text": "Interpolate kyun karein? Kyunki hum maante hain ki observations median class mein evenly spread hain, toh hum proportionally step-in karte hain taaki exactly N over two-th value tak pahunche."
+            },
+            {
+              "seq": 7,
+              "text": "Jab M mil jaaye, aap bilkul frequency-distribution case ki tarah aage badhte ho, bas mod x i minus x bar ki jagah mod x i minus M use karte ho. Median bas anchor ke roop mein mean ki jagah le leta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "formulas",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "The dispersion toolkit: every formula in one place",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "Subtopic 01 formula toolkit",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{Range}=x_{\\max}-x_{\\min},\\qquad \\text{Coeff. of range}=\\frac{x_{\\max}-x_{\\min}}{x_{\\max}+x_{\\min}}",
+          "seq": 2,
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{M.D.}(a)=\\frac{1}{n}\\sum |x_i-a|\\quad(\\text{ungrouped})",
+          "seq": 3,
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{M.D.}(a)=\\frac{1}{N}\\sum f_i\\,|x_i-a|\\quad(N=\\textstyle\\sum f_i)",
+          "seq": 4,
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "latex": "\\text{Coeff. of M.D.}=\\frac{\\text{M.D.}(a)}{a}\\quad(\\text{dimensionless})",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "latex": "M=\\ell+\\frac{\\frac{N}{2}-C}{f}\\times h\\quad(\\text{grouped median})",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "∑|x_i − a| is least at a = median.  Sanity: M.D. ≤ Range, always.",
+          "seq": 7,
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's pause and lay out every formula from this subtopic in one place. This is your complete toolkit, I'm restating, not re-teaching, so treat this as a quick reference board."
+            },
+            {
+              "seq": 2,
+              "text": "At the top, the range is x max minus x min. And the coefficient of range is that same difference, x max minus x min, over their sum, x max plus x min, a pure number."
+            },
+            {
+              "seq": 3,
+              "text": "For ungrouped data, mean deviation about any central value a is one over n, times the sum of the absolute deviations mod x i minus a."
+            },
+            {
+              "seq": 4,
+              "text": "For a frequency distribution, it's one over N, times the sum of f i times mod x i minus a, where N is the total frequency, the sum of the f i. Same idea, weighted by frequency."
+            },
+            {
+              "seq": 5,
+              "text": "The coefficient of mean deviation is just the mean deviation divided by the central value a. Like the coefficient of range, it's dimensionless, handy for comparing across scales."
+            },
+            {
+              "seq": 6,
+              "text": "And when you need the median of grouped data, use the interpolation formula: M equals l, plus N over two minus C, over f, times h."
+            },
+            {
+              "seq": 7,
+              "text": "Two things to memorise, in red. The sum of absolute deviations is least at the median. And your permanent sanity check: mean deviation can never exceed the range. If it does, you've made an arithmetic slip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo ek pause lete hain aur is subtopic ke saare formulas ek jagah rakhte hain. Ye aapka complete toolkit hai, main restate kar raha hoon, dobara nahi padha raha, toh ise ek quick reference board samjho."
+            },
+            {
+              "seq": 2,
+              "text": "Sabse upar, range hai x max minus x min. Aur coefficient of range wahi difference hai, x max minus x min, unke sum se, x max plus x min, ek pure number."
+            },
+            {
+              "seq": 3,
+              "text": "Ungrouped data ke liye, mean deviation about any central value a one over n hai, times sum of the absolute deviations mod x i minus a."
+            },
+            {
+              "seq": 4,
+              "text": "Ek frequency distribution ke liye, ye one over N hai, times sum of f i times mod x i minus a, jahan N total frequency hai, f i ka sum. Wahi idea, frequency se weighted."
+            },
+            {
+              "seq": 5,
+              "text": "Coefficient of mean deviation bas mean deviation divided by central value a hai. Coefficient of range ki tarah, ye dimensionless hai, alag scales pe compare karne ke liye handy."
+            },
+            {
+              "seq": 6,
+              "text": "Aur jab aapko grouped data ka median chahiye, interpolation formula use karo: M equals l, plus N over two minus C, over f, times h."
+            },
+            {
+              "seq": 7,
+              "text": "Do cheezein yaad rakhni hain, red mein. Absolute deviations ka sum median pe sabse kam hai. Aur aapka permanent sanity check: mean deviation kabhi range se zyada nahi ho sakta. Agar ho jaaye, toh aapse arithmetic slip hui hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Worked example: range and M.D. about the mean (marks)",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "CBSE level: five test marks out of 40",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Marks: 32, 28, 36, 24, 30.  Find the range and the M.D. about the mean.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "\\text{Range}=x_{\\max}-x_{\\min}=36-24=12\\ \\text{marks}",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "latex": "\\bar{x}=\\frac{32+28+36+24+30}{5}=\\frac{150}{5}=30",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "text",
+          "text": "Absolute deviations from 30: 2, 2, 6, 6, 0.",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{M.D.}(\\bar{x})=\\frac{2+2+6+6+0}{5}=\\frac{16}{5}=3.2\\ \\text{marks}",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "Check: answer carries the unit “marks”, and 3.2 ≤ 12 (the range). Consistent.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's ground all that theory in a clean CBSE-level example. A student's marks in five class tests, out of forty, are thirty two, twenty eight, thirty six, twenty four, and thirty. We want the range and the mean deviation about the mean."
+            },
+            {
+              "seq": 2,
+              "text": "Read the problem carefully: two quantities to find, the range and the mean deviation about the mean, for these five marks."
+            },
+            {
+              "seq": 3,
+              "text": "The range comes first and it's instant. The largest mark is thirty six, the smallest is twenty four, so the range is thirty six minus twenty four, which is twelve marks."
+            },
+            {
+              "seq": 4,
+              "text": "Now the mean. Add all five marks, thirty two plus twenty eight plus thirty six plus twenty four plus thirty, that's one hundred fifty. Divide by five and the mean is exactly thirty."
+            },
+            {
+              "seq": 5,
+              "text": "Next, the absolute deviations from thirty. Thirty two is two away, twenty eight is two away, thirty six is six away, twenty four is six away, and thirty is zero away. So: two, two, six, six, zero."
+            },
+            {
+              "seq": 6,
+              "text": "Add those up to get sixteen, then divide by n, which is five. The mean deviation about the mean is sixteen over five, equals three point two marks."
+            },
+            {
+              "seq": 7,
+              "text": "Always finish with the presentation check. The answer carries the unit marks, and three point two is comfortably less than the range of twelve. Both boxes ticked, so the answer is consistent."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo us saari theory ko ek clean CBSE-level example mein ground karte hain. Ek student ke paanch class tests ke marks, forty mein se, hain thirty two, twenty eight, thirty six, twenty four, aur thirty. Humein range aur mean deviation about the mean chahiye."
+            },
+            {
+              "seq": 2,
+              "text": "Problem dhyan se padho: do quantities nikaalni hain, range aur mean deviation about the mean, in paanch marks ke liye."
+            },
+            {
+              "seq": 3,
+              "text": "Range pehle aata hai aur ye instant hai. Sabse bada mark thirty six hai, sabse chhota twenty four, toh range hai thirty six minus twenty four, jo hai twelve marks."
+            },
+            {
+              "seq": 4,
+              "text": "Ab mean. Paanchon marks jodo, thirty two plus twenty eight plus thirty six plus twenty four plus thirty, ye hua one hundred fifty. Five se divide karo aur mean exactly thirty aata hai."
+            },
+            {
+              "seq": 5,
+              "text": "Aage, thirty se absolute deviations. Thirty two do door hai, twenty eight do door, thirty six chhe door, twenty four chhe door, aur thirty zero door. Toh: two, two, six, six, zero."
+            },
+            {
+              "seq": 6,
+              "text": "Inhe jodo taaki sixteen mile, phir n se divide karo, jo five hai. Mean deviation about the mean hai sixteen over five, equals three point two marks."
+            },
+            {
+              "seq": 7,
+              "text": "Hamesha presentation check ke saath khatam karo. Answer marks ki unit rakhta hai, aur three point two range twelve se aaram se kam hai. Dono boxes ticked, toh answer consistent hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Worked example: the divisor trap (goals per match)",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "JEE Main level: M.D. about the mean from a frequency table",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "diagram",
+          "caption": "Goals per match: work the table in one sweep",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 198\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"200.0\" y=\"18\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\">Goals per match</text><rect x=\"10\" y=\"34\" width=\"380\" height=\"22\" fill=\"#2c3e50\"/><text x=\"57.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">x_i</text><text x=\"152.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i</text><text x=\"247.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i*x_i</text><text x=\"342.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i|x_i-1.8|</text><rect x=\"10\" y=\"56\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">0</text><text x=\"152.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">4</text><text x=\"247.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">0</text><text x=\"342.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">7.2</text><rect x=\"10\" y=\"78\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">1</text><text x=\"152.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">6</text><text x=\"247.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">6</text><text x=\"342.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">4.8</text><rect x=\"10\" y=\"100\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">2</text><text x=\"152.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">8</text><text x=\"247.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">16</text><text x=\"342.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">1.6</text><rect x=\"10\" y=\"122\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">3</text><text x=\"152.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">5</text><text x=\"247.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">15</text><text x=\"342.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">6.0</text><rect x=\"10\" y=\"144\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">4</text><text x=\"152.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">2</text><text x=\"247.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">8</text><text x=\"342.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">4.4</text><rect x=\"10\" y=\"166\" width=\"380\" height=\"22\" fill=\"#fbeec1\" stroke=\"#c0392b\"/><text x=\"57.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\"></text><text x=\"152.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">25</text><text x=\"247.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">45</text><text x=\"342.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">24.0</text></svg>",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "N=4+6+8+5+2=25",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "latex": "\\sum f_i x_i = 0+6+16+15+8 = 45 \\ \\Rightarrow\\ \\bar{x}=\\frac{45}{25}=1.8",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "latex": "\\sum f_i|x_i-1.8| = 7.2+4.8+1.6+6.0+4.4 = 24.0",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{M.D.}=\\frac{24.0}{25}=0.96\\ \\text{goals}",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "TRAP: dividing 24.0 by 5 gives 4.8 (wrong). Divide by N = ∑f_i = 25.",
+          "seq": 7,
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This JEE Main example hides the classic trap of the whole subtopic. A striker's goals per match are given as a frequency table, and we want the mean deviation of the number of goals about the mean."
+            },
+            {
+              "seq": 2,
+              "text": "The table on the board is your worksheet: goal counts zero to four, with frequencies four, six, eight, five, two. We'll work the whole thing in one sweep, column by column."
+            },
+            {
+              "seq": 3,
+              "text": "First, the total frequency N. Add the frequency column: four plus six plus eight plus five plus two, that's twenty five. This N is the number of matches, and it will be our divisor later, remember that."
+            },
+            {
+              "seq": 4,
+              "text": "Now the mean. The sum of f i times x i is zero, plus six, plus sixteen, plus fifteen, plus eight, which totals forty five. Divide by twenty five, and the mean is one point eight goals."
+            },
+            {
+              "seq": 5,
+              "text": "Next build the weighted absolute-deviation column, f i times mod x i minus one point eight. Those terms are seven point two, four point eight, one point six, six point zero, four point four. They add to twenty four point zero."
+            },
+            {
+              "seq": 6,
+              "text": "Finally, divide the twenty four by N. Mean deviation is twenty four over twenty five, equals zero point nine six goals."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>And here's the trap that costs marks. Under time pressure, students see five rows and divide twenty four by five, writing four point eight. Wrong. The divisor is N equals twenty five, the total from the frequency column, never the row count."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye JEE Main example poore subtopic ka classic trap chhupa raha hai. Ek striker ke per match goals ek frequency table mein diye hain, aur humein number of goals ka mean deviation about the mean chahiye."
+            },
+            {
+              "seq": 2,
+              "text": "Board pe table aapki worksheet hai: goal counts zero se four, frequencies four, six, eight, five, two ke saath. Hum poori cheez ek sweep mein karenge, column by column."
+            },
+            {
+              "seq": 3,
+              "text": "Pehle, total frequency N. Frequency column jodo: four plus six plus eight plus five plus two, ye hua twenty five. Ye N matches ki number hai, aur ye baad mein hamara divisor banega, yaad rakhna."
+            },
+            {
+              "seq": 4,
+              "text": "Ab mean. Sum of f i times x i hai zero, plus six, plus sixteen, plus fifteen, plus eight, jo total forty five. Twenty five se divide karo, aur mean hai one point eight goals."
+            },
+            {
+              "seq": 5,
+              "text": "Aage weighted absolute-deviation column banao, f i times mod x i minus one point eight. Wo terms hain seven point two, four point eight, one point six, six point zero, four point four. Ye jodke twenty four point zero."
+            },
+            {
+              "seq": 6,
+              "text": "Aakhir mein, twenty four ko N se divide karo. Mean deviation hai twenty four over twenty five, equals zero point nine six goals."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Aur yahaan wo trap hai jo marks kha jaata hai. Time pressure mein, students paanch rows dekhte hain aur twenty four ko five se divide kar dete hain, four point eight likhte hain. Galat. Divisor N equals twenty five hai, frequency column ka total, kabhi row count nahi."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Worked example: how a linear transformation moves spread",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "JEE Main level: y_i = 3x_i − 7 on bills",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Given: range = 40, M.D. about the mean = 12.  Rule: y_i = 3x_i − 7.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "A shift (b = −7) moves every value equally — all gaps untouched — so spread is blind to b.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "text",
+          "text": "A scale (a = 3) stretches every gap by |a|.  Range and M.D. are built purely from gaps.",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{Range}_{\\text{new}}=|3|\\times 40 = 120",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{M.D.}_{\\text{new}}=|3|\\times 12 = 36",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "Even y_i = −3x_i − 7 gives the same answers — only |a| matters.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example connects dispersion with linear transformations, a favourite JEE Main theme. A set of monthly electricity bills has range forty and mean deviation about the mean twelve. The provider revises every bill by the rule y i equals three x i minus seven."
+            },
+            {
+              "seq": 2,
+              "text": "In plain terms, that's a three times tariff hike, then a seven rupee fixed rebate. We want the new range and the new mean deviation after this change."
+            },
+            {
+              "seq": 3,
+              "text": "Think of the rule as two moves: a shift and a scale. The shift is the minus seven, it moves every single bill down by the same amount, so all the gaps between bills stay exactly the same. Spread is completely blind to the shift."
+            },
+            {
+              "seq": 4,
+              "text": "The scale is the three. Multiplying every value by three stretches every gap by a factor of three. And both range and mean deviation are built purely out of gaps, so each one is multiplied by the absolute value of a."
+            },
+            {
+              "seq": 5,
+              "text": "So the new range is the absolute value of three, times the old range forty, which gives one hundred twenty."
+            },
+            {
+              "seq": 6,
+              "text": "And the new mean deviation is the absolute value of three, times the old twelve, which gives thirty six. Notice the minus seven never entered the calculation at all."
+            },
+            {
+              "seq": 7,
+              "text": "One elegant twist: had the rule been minus three x i minus seven, the answers would be identical, because only the absolute value of a matters. Flipping a data set about a point doesn't change how spread out it is."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye example dispersion ko linear transformations se jodta hai, ek favourite JEE Main theme. Monthly electricity bills ke ek set ka range forty aur mean deviation about the mean twelve hai. Provider har bill ko rule y i equals three x i minus seven se revise karta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Simple shabdon mein, ye ek three times tariff hike hai, phir ek seven rupee fixed rebate. Humein is change ke baad naya range aur naya mean deviation chahiye."
+            },
+            {
+              "seq": 3,
+              "text": "Rule ko do moves ki tarah socho: ek shift aur ek scale. Shift hai minus seven, ye har bill ko same amount se neeche move karta hai, toh bills ke beech ke saare gaps bilkul same rehte hain. Spread shift ke liye completely blind hai."
+            },
+            {
+              "seq": 4,
+              "text": "Scale hai three. Har value ko three se multiply karna har gap ko three ke factor se stretch karta hai. Aur range aur mean deviation dono purely gaps se bane hain, toh har ek absolute value of a se multiply hota hai."
+            },
+            {
+              "seq": 5,
+              "text": "Toh naya range hai absolute value of three, times purana range forty, jo deta hai one hundred twenty."
+            },
+            {
+              "seq": 6,
+              "text": "Aur naya mean deviation hai absolute value of three, times purana twelve, jo deta hai thirty six. Dhyan do minus seven calculation mein aaya hi nahi."
+            },
+            {
+              "seq": 7,
+              "text": "Ek elegant twist: agar rule minus three x i minus seven hota, answers identical hote, kyunki sirf absolute value of a matter karti hai. Ek data set ko ek point ke baare mein flip karna uski spread nahi badalta."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Worked example: why the median minimises absolute deviation",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "JEE Advanced: minimise S(a) = ∑|x_i − a|",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Observations 7, 11, 13, 16, 20, 24 (sorted, n = 6, even).",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "diagram",
+          "caption": "Pair from the outside in; each pair's two distances trade off",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 180\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"210\" y=\"16\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\">Outside-in pairing: 7,11,13,16,20,24</text><line x1=\"30\" y1=\"120\" x2=\"400\" y2=\"120\" stroke=\"#333\" stroke-width=\"2\"/><rect x=\"150\" y=\"112\" width=\"90\" height=\"16\" fill=\"#f1c40f\" opacity=\"0.35\"/><text x=\"195\" y=\"145\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c0392b\">median interval [13,16]</text><g font-size=\"11\" fill=\"#2c3e50\" text-anchor=\"middle\"><circle cx=\"50\" cy=\"120\" r=\"4\"/><text x=\"50\" y=\"108\">7</text><circle cx=\"105\" cy=\"120\" r=\"4\"/><text x=\"105\" y=\"108\">11</text><circle cx=\"150\" cy=\"120\" r=\"4\"/><text x=\"150\" y=\"108\">13</text><circle cx=\"240\" cy=\"120\" r=\"4\"/><text x=\"240\" y=\"108\">16</text><circle cx=\"330\" cy=\"120\" r=\"4\"/><text x=\"330\" y=\"108\">20</text><circle cx=\"385\" cy=\"120\" r=\"4\"/><text x=\"385\" y=\"108\">24</text></g><path d=\"M50 95 Q217 55 385 95\" fill=\"none\" stroke=\"#8e44ad\" stroke-width=\"1.3\"/><text x=\"217\" y=\"52\" text-anchor=\"middle\" font-size=\"9\" fill=\"#8e44ad\">pair (7,24): gap 17</text><path d=\"M105 100 Q217 78 330 100\" fill=\"none\" stroke=\"#2980b9\" stroke-width=\"1.3\"/><text x=\"217\" y=\"74\" text-anchor=\"middle\" font-size=\"9\" fill=\"#2980b9\">pair (11,20): gap 9</text></svg>",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "latex": "|a-7|+|24-a| = 17 \\ \\text{for any } a\\in[7,24]\\ \\text{(constant)}",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "S(a)=17+9+3=29 \\quad \\text{for every } a\\in[13,16]",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "text",
+          "text": "Leave [13,16] and the innermost pair stops cancelling → S(a) strictly increases.",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "Minimiser is the whole median interval [13,16]; median 14.5 sits inside. “How many a?” → infinitely many.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a JEE Advanced gem that proves the median fact we promised earlier. For the observations seven, eleven, thirteen, sixteen, twenty, twenty four, define S of a as the sum of the absolute deviations from a. We must find where S is minimised, its minimum value, and every a that achieves it."
+            },
+            {
+              "seq": 2,
+              "text": "The data is already sorted, and n is six, an even number. Keep that evenness in mind, it makes the answer richer than a single point."
+            },
+            {
+              "seq": 3,
+              "text": "Here's the trick, the pairing argument. Pair the observations symmetrically from the outside in: seven with twenty four, eleven with twenty, thirteen with sixteen. Watch what each pair does."
+            },
+            {
+              "seq": 4,
+              "text": "Take the outer pair. For any a sitting between seven and twenty four, the two distances are mod a minus seven plus mod twenty four minus a, and that sum is always seventeen, a constant. Wherever a sits between them, the two distances trade off exactly."
+            },
+            {
+              "seq": 5,
+              "text": "The same holds for every pair, as long as a lies inside all three, which means a inside the innermost pair, the interval thirteen to sixteen. There, S of a is seventeen plus nine plus three, which is twenty nine."
+            },
+            {
+              "seq": 6,
+              "text": "The moment a leaves the interval thirteen to sixteen, it falls outside the innermost pair. That pair's contribution stops cancelling and starts to grow, so S of a strictly increases. Hence the minimum is twenty nine."
+            },
+            {
+              "seq": 7,
+              "text": "And the deep payoff: the minimiser is not a single point but the entire median interval, thirteen to sixteen. The conventional median, fourteen point five, sits right inside it. So if an Advanced problem asks how many values of a minimise S, the answer is infinitely many."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ab ek JEE Advanced gem jo wo median fact prove karta hai jo humne pehle promise kiya tha. Observations seven, eleven, thirteen, sixteen, twenty, twenty four ke liye, S of a ko a se absolute deviations ke sum ki tarah define karo. Humein pata karna hai S kahaan minimise hota hai, uski minimum value, aur har wo a jo use achieve karta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Data pehle se sorted hai, aur n six hai, ek even number. Is evenness ko yaad rakho, ye answer ko ek single point se zyada rich banata hai."
+            },
+            {
+              "seq": 3,
+              "text": "Yahaan trick hai, pairing argument. Observations ko symmetrically outside in pair karo: seven with twenty four, eleven with twenty, thirteen with sixteen. Dekho har pair kya karta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Outer pair lo. Kisi bhi a ke liye jo seven aur twenty four ke beech baitha ho, do distances hain mod a minus seven plus mod twenty four minus a, aur wo sum hamesha seventeen hai, ek constant. Jahaan bhi a unke beech baithe, do distances exactly trade off karti hain."
+            },
+            {
+              "seq": 5,
+              "text": "Yahi har pair ke liye sach hai, jab tak a teenon ke andar ho, matlab a innermost pair ke andar, interval thirteen se sixteen. Wahaan, S of a hai seventeen plus nine plus three, jo hai twenty nine."
+            },
+            {
+              "seq": 6,
+              "text": "Jis pal a interval thirteen se sixteen chhodta hai, wo innermost pair ke bahar gir jaata hai. Us pair ka contribution cancel hona band ho ke badhne lagta hai, toh S of a strictly increase karta hai. Isliye minimum hai twenty nine."
+            },
+            {
+              "seq": 7,
+              "text": "Aur deep payoff: minimiser ek single point nahi balki poora median interval hai, thirteen se sixteen. Conventional median, fourteen point five, iske theek andar baitha hai. Toh agar ek Advanced problem poochhe kitni values of a S ko minimise karti hain, answer hai infinitely many."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Worked example: M.D. about the mean of a continuous distribution",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "CBSE level: daily wages of 40 workers",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "diagram",
+          "caption": "Replace each class by its mid-point, then build the table",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 198\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"200.0\" y=\"18\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\">Daily wages of 40 workers</text><rect x=\"10\" y=\"34\" width=\"380\" height=\"22\" fill=\"#2c3e50\"/><text x=\"57.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">x_i</text><text x=\"152.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i</text><text x=\"247.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i*x_i</text><text x=\"342.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i|x_i-325|</text><rect x=\"10\" y=\"56\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">150</text><text x=\"152.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">6</text><text x=\"247.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">900</text><text x=\"342.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">1050</text><rect x=\"10\" y=\"78\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">250</text><text x=\"152.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">10</text><text x=\"247.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">2500</text><text x=\"342.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">750</text><rect x=\"10\" y=\"100\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">350</text><text x=\"152.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">14</text><text x=\"247.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">4900</text><text x=\"342.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">350</text><rect x=\"10\" y=\"122\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">450</text><text x=\"152.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">8</text><text x=\"247.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">3600</text><text x=\"342.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">1000</text><rect x=\"10\" y=\"144\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">550</text><text x=\"152.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">2</text><text x=\"247.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">1100</text><text x=\"342.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">450</text><rect x=\"10\" y=\"166\" width=\"380\" height=\"22\" fill=\"#fbeec1\" stroke=\"#c0392b\"/><text x=\"57.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\"></text><text x=\"152.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">40</text><text x=\"247.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">13000</text><text x=\"342.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">3600</text></svg>",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "\\bar{x}=\\frac{\\sum f_i x_i}{N}=\\frac{13000}{40}=325",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "latex": "\\sum f_i|x_i-\\bar{x}| = 1050+750+350+1000+450 = 3600",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{M.D.}(\\bar{x})=\\frac{3600}{40}=90",
+          "seq": 5,
+          "reveal_at": 32
+        },
+        {
+          "type": "text",
+          "text": "Mid-points used: 150, 250, 350, 450, 550 (each = lower+upper over 2).",
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "Divisor is N = 40, the total workers — not the 5 wage classes.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's do a full continuous-distribution computation, CBSE style. The daily wages of forty workers are grouped into five wage bands, and we want the mean deviation about the mean."
+            },
+            {
+              "seq": 2,
+              "text": "The table on the board is already set up. The first job on continuous data is to replace each wage class by its mid-point: one fifty, two fifty, three fifty, four fifty, and five fifty. Each mid-point is just the lower plus upper limit over two."
+            },
+            {
+              "seq": 3,
+              "text": "Now the weighted mean. The sum of f i times x i works out to thirteen thousand, and the total frequency N is forty workers. So the mean is thirteen thousand over forty, which is exactly three hundred twenty five."
+            },
+            {
+              "seq": 4,
+              "text": "With the mean in hand, build the f i times absolute-deviation column. The five entries are one thousand fifty, seven fifty, three fifty, one thousand, and four fifty."
+            },
+            {
+              "seq": 5,
+              "text": "Add that column: one thousand fifty plus seven fifty plus three fifty plus one thousand plus four fifty gives three thousand six hundred."
+            },
+            {
+              "seq": 6,
+              "text": "Finally divide by N. The mean deviation about the mean is three thousand six hundred over forty, which is ninety rupees."
+            },
+            {
+              "seq": 7,
+              "text": "And the same trap as before, made explicit: your divisor is N equals forty, the total number of workers, not the five wage classes. Grab N from the frequency total every single time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo ek poora continuous-distribution computation karte hain, CBSE style. Forty workers ke daily wages paanch wage bands mein grouped hain, aur humein mean deviation about the mean chahiye."
+            },
+            {
+              "seq": 2,
+              "text": "Board pe table pehle se set up hai. Continuous data pe pehla kaam hai har wage class ko uske mid-point se replace karna: one fifty, two fifty, three fifty, four fifty, aur five fifty. Har mid-point bas lower plus upper limit over two hai."
+            },
+            {
+              "seq": 3,
+              "text": "Ab weighted mean. Sum of f i times x i nikalta hai thirteen thousand, aur total frequency N hai forty workers. Toh mean hai thirteen thousand over forty, jo exactly three hundred twenty five hai."
+            },
+            {
+              "seq": 4,
+              "text": "Mean haath mein aate hi, f i times absolute-deviation column banao. Paanch entries hain one thousand fifty, seven fifty, three fifty, one thousand, aur four fifty."
+            },
+            {
+              "seq": 5,
+              "text": "Wo column jodo: one thousand fifty plus seven fifty plus three fifty plus one thousand plus four fifty deta hai three thousand six hundred."
+            },
+            {
+              "seq": 6,
+              "text": "Aakhir mein N se divide karo. Mean deviation about the mean hai three thousand six hundred over forty, jo ninety rupees hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aur wahi trap jaisa pehle tha, explicit kar diya: aapka divisor N equals forty hai, workers ki total number, na ki paanch wage classes. N ko frequency total se pakdo har baar."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Worked example: M.D. about the median via interpolation",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "JEE Main: M.D. about the median, grouped marks",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "text",
+          "text": "Marks 0–10..40–50 with f_i = 7, 8, 10, 9, 6.  Cumulative: 7, 15, 25, 34, 40.",
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 8
+        },
+        {
+          "type": "formula",
+          "latex": "\\tfrac{N}{2}=20 \\Rightarrow \\text{first c.f. to reach 20 is 25} \\Rightarrow \\text{median class } 20\\text{--}30",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "M=20+\\frac{20-15}{10}\\times 10 = 20+5 = 25",
+          "seq": 4,
+          "reveal_at": 24
+        },
+        {
+          "type": "diagram",
+          "caption": "M.D. about the median M = 25",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 198\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"200.0\" y=\"18\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\">Marks of 40 students (about median 25)</text><rect x=\"10\" y=\"34\" width=\"380\" height=\"22\" fill=\"#2c3e50\"/><text x=\"57.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">x_i</text><text x=\"152.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i</text><text x=\"247.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">|x_i-25|</text><text x=\"342.5\" y=\"49\" text-anchor=\"middle\" font-size=\"10\" fill=\"#fff\">f_i|x_i-25|</text><rect x=\"10\" y=\"56\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">5</text><text x=\"152.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">7</text><text x=\"247.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">20</text><text x=\"342.5\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">140</text><rect x=\"10\" y=\"78\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">15</text><text x=\"152.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">8</text><text x=\"247.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">10</text><text x=\"342.5\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">80</text><rect x=\"10\" y=\"100\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">25</text><text x=\"152.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">10</text><text x=\"247.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">0</text><text x=\"342.5\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">0</text><rect x=\"10\" y=\"122\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">35</text><text x=\"152.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">9</text><text x=\"247.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">10</text><text x=\"342.5\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">90</text><rect x=\"10\" y=\"144\" width=\"380\" height=\"22\" fill=\"#f7f3e8\" stroke=\"#ccc\"/><text x=\"57.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">45</text><text x=\"152.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">6</text><text x=\"247.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">20</text><text x=\"342.5\" y=\"159\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c3e50\">120</text><rect x=\"10\" y=\"166\" width=\"380\" height=\"22\" fill=\"#fbeec1\" stroke=\"#c0392b\"/><text x=\"57.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\"></text><text x=\"152.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">40</text><text x=\"247.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\"></text><text x=\"342.5\" y=\"181\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c0392b\">430</text></svg>",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "\\text{M.D.}(M)=\\frac{430}{40}=10.75\\ \\text{marks}",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "The median of grouped data is NOT the middle mid-point — it must be interpolated.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The final worked example ties together interpolation and mean deviation about the median, a common JEE Main setup. The marks of forty students are grouped into five bands, and we want the mean deviation about the median."
+            },
+            {
+              "seq": 2,
+              "text": "Start by building the cumulative frequency column from the frequencies seven, eight, ten, nine, six. The running totals are seven, fifteen, twenty five, thirty four, forty."
+            },
+            {
+              "seq": 3,
+              "text": "Now locate the median class. N over two is twenty, and the first cumulative frequency to reach twenty is twenty five. That belongs to the class twenty to thirty, so that is our median class."
+            },
+            {
+              "seq": 4,
+              "text": "Interpolate. With l equals twenty, C equals fifteen the cumulative frequency before, f equals ten, and h equals ten, the median is twenty, plus twenty minus fifteen over ten, times ten, which is twenty plus five, equals twenty five."
+            },
+            {
+              "seq": 5,
+              "text": "With the median fixed at twenty five, build the column f i times mod x i minus twenty five, using the mid-points five, fifteen, twenty five, thirty five, forty five, exactly as the board table shows."
+            },
+            {
+              "seq": 6,
+              "text": "That column totals four hundred thirty. Divide by N, which is forty, and the mean deviation about the median is four hundred thirty over forty, equals ten point seven five marks."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>The watch-out here is fatal if missed: the median of grouped data is not the middle mid-point. You must interpolate it through the median class, or every single downstream number is wrong."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Aakhri worked example interpolation aur mean deviation about the median ko jodta hai, ek common JEE Main setup. Forty students ke marks paanch bands mein grouped hain, aur humein mean deviation about the median chahiye."
+            },
+            {
+              "seq": 2,
+              "text": "Cumulative frequency column banane se shuru karo frequencies seven, eight, ten, nine, six se. Running totals hain seven, fifteen, twenty five, thirty four, forty."
+            },
+            {
+              "seq": 3,
+              "text": "Ab median class locate karo. N over two hai twenty, aur pehli cumulative frequency jo twenty tak pahunchti hai wo twenty five hai. Wo class twenty se thirty ki hai, toh yahi hamari median class hai."
+            },
+            {
+              "seq": 4,
+              "text": "Interpolate karo. l equals twenty, C equals fifteen jo pehle wali cumulative frequency hai, f equals ten, aur h equals ten ke saath, median hai twenty, plus twenty minus fifteen over ten, times ten, jo hai twenty plus five, equals twenty five."
+            },
+            {
+              "seq": 5,
+              "text": "Median twenty five pe fix hote hi, column banao f i times mod x i minus twenty five, mid-points five, fifteen, twenty five, thirty five, forty five use karke, bilkul jaise board table dikhata hai."
+            },
+            {
+              "seq": 6,
+              "text": "Wo column total karta hai four hundred thirty. N se divide karo, jo forty hai, aur mean deviation about the median hai four hundred thirty over forty, equals ten point seven five marks."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Yahaan watch-out fatal hai agar miss ho jaaye: grouped data ka median middle mid-point nahi hai. Aapko use median class ke through interpolate karna hi padega, warna har ek downstream number galat hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "tips",
+      "subtopic": "Measures of Dispersion and Mean Deviation",
+      "title": "Pitfalls and pro-tips: the four ways students lose marks",
+      "board_events": [
+        {
+          "type": "heading",
+          "text": "The four classic slips — and how to dodge them",
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0
+        },
+        {
+          "type": "note",
+          "emphasis": "high",
+          "style": "red-margin",
+          "text": "1. Dropping the modulus → ∑(x_i − x̄) = 0 → falsely “concluding” M.D. = 0.",
+          "seq": 2,
+          "reveal_at": 8
+        },
+        {
+          "type": "text",
+          "text": "2. Wrong divisor: use N = ∑f_i, never the number of rows/classes. #1 cause of lost Board marks.",
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 16
+        },
+        {
+          "type": "text",
+          "text": "3. Using the mean when “least mean deviation” is asked — anchor to the MEDIAN instead.",
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 24
+        },
+        {
+          "type": "text",
+          "text": "4. Believing a shift changes spread — adding a constant changes neither range nor M.D.",
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 32
+        },
+        {
+          "type": "formula",
+          "emphasis": "high",
+          "latex": "x_i \\mapsto a x_i + b:\\quad \\text{Range, M.D.} \\mapsto |a|\\times(\\text{old}),\\ \\ b\\ \\text{ignored}",
+          "seq": 6,
+          "reveal_at": 40
+        },
+        {
+          "type": "note",
+          "style": "red-margin",
+          "text": "Sanity check before committing: M.D. ≤ Range, always.",
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 48
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close Subtopic one with the four classic slips that quietly drain marks, and exactly how to dodge each."
+            },
+            {
+              "seq": 2,
+              "text": "Slip one: dropping the absolute-value sign. If you compute the sum of x i minus x bar without the modulus, you get exactly zero for every data set, because deviations about the mean always cancel. Students then wrongly conclude the mean deviation is zero. The modulus is the whole point."
+            },
+            {
+              "seq": 3,
+              "text": "Slip two, and this is the single biggest source of lost Board marks: the wrong divisor in frequency tables. The divisor is always N, the total frequency, the sum of the f i, never the number of rows or classes."
+            },
+            {
+              "seq": 4,
+              "text": "Slip three: using the mean when the question asks for the least mean deviation. If a question wants the smallest possible mean deviation, you anchor to the median, not the mean. Reading which central value is requested costs two seconds and saves the whole answer."
+            },
+            {
+              "seq": 5,
+              "text": "Slip four: believing a shift changes the spread. Adding or subtracting a constant changes neither the range nor any mean deviation. Only multiplying scales them, and it scales by the absolute value of a."
+            },
+            {
+              "seq": 6,
+              "text": "Lock in the transformation rule on the board: under x i maps to a x i plus b, both range and mean deviation map to the absolute value of a times the old value, and the plus b does nothing. Write it instantly, no recomputation needed."
+            },
+            {
+              "seq": 7,
+              "text": "And one final habit, your permanent sanity check before you commit any answer: the mean deviation must be smaller than the range. If it isn't, you have an arithmetic error upstream, go back and find it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo Subtopic one ko un chaar classic slips ke saath band karte hain jo chupke se marks nikaal lete hain, aur exactly har ek ko kaise dodge karein."
+            },
+            {
+              "seq": 2,
+              "text": "Slip one: absolute-value sign gira dena. Agar aap x i minus x bar ka sum bina modulus ke compute karo, toh har data set ke liye exactly zero milta hai, kyunki mean ke baare mein deviations hamesha cancel hoti hain. Students phir galat conclude karte hain ki mean deviation zero hai. Modulus hi toh poori baat hai."
+            },
+            {
+              "seq": 3,
+              "text": "Slip two, aur ye lost Board marks ka sabse bada single source hai: frequency tables mein galat divisor. Divisor hamesha N hai, total frequency, f i ka sum, kabhi rows ya classes ki number nahi."
+            },
+            {
+              "seq": 4,
+              "text": "Slip three: mean use karna jab question least mean deviation maangta hai. Agar question sabse chhoti mean deviation chahta hai, aap median pe anchor karte ho, mean pe nahi. Ye padhna ki kaunsi central value maangi hai do second leta hai aur poora answer bachaata hai."
+            },
+            {
+              "seq": 5,
+              "text": "Slip four: maanna ki shift spread badalta hai. Ek constant add ya subtract karna na range badalta hai na koi mean deviation. Sirf multiply karna unhe scale karta hai, aur wo absolute value of a se scale karta hai."
+            },
+            {
+              "seq": 6,
+              "text": "Board pe transformation rule lock karo: under x i maps to a x i plus b, range aur mean deviation dono absolute value of a times purani value ban jaate hain, aur plus b kuch nahi karta. Instantly likh do, koi recomputation nahi chahiye."
+            },
+            {
+              "seq": 7,
+              "text": "Aur ek aakhri aadat, aapka permanent sanity check kisi bhi answer ko commit karne se pehle: mean deviation range se chhoti honi chahiye. Agar nahi hai, toh aapse upstream arithmetic error hui hai, wapas jaake use dhoondho."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2080 @@
+{
+  "chapter": "Introduction to Three Dimensional Geometry",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 11,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "The centroid: a triangle's balance point",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The centroid: where a triangle balances"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Cut a triangle from card; the point where it balances on a fingertip is the centroid G."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "caption": "Medians meet at G; each split 2 : 1 from the vertex",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 360 300\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"180,40 60,250 300,250\" fill=\"#eef3f7\" stroke=\"#023047\" stroke-width=\"2\"/><line x1=\"180\" y1=\"40\" x2=\"180\" y2=\"250\" stroke=\"#0a84c2\" stroke-width=\"1.4\"/><line x1=\"60\" y1=\"250\" x2=\"240\" y2=\"145\" stroke=\"#0a84c2\" stroke-width=\"1.4\"/><line x1=\"300\" y1=\"250\" x2=\"120\" y2=\"145\" stroke=\"#0a84c2\" stroke-width=\"1.4\"/><circle cx=\"180\" cy=\"180\" r=\"5\" fill=\"#c1121f\"/><circle cx=\"180\" cy=\"40\" r=\"3.5\" fill=\"#023047\"/><circle cx=\"60\" cy=\"250\" r=\"3.5\" fill=\"#023047\"/><circle cx=\"300\" cy=\"250\" r=\"3.5\" fill=\"#023047\"/><circle cx=\"180\" cy=\"250\" r=\"3\" fill=\"#2a9d8f\"/><text x=\"172\" y=\"32\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">A</text><text x=\"44\" y=\"264\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">B</text><text x=\"306\" y=\"264\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">C</text><text x=\"186\" y=\"266\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#2a9d8f\">D</text><text x=\"190\" y=\"184\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#c1121f\">G</text><text x=\"150\" y=\"115\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#c1121f\">AG</text><text x=\"150\" y=\"222\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#c1121f\">GD</text><text x=\"196\" y=\"150\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#555\">2 : 1</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "G is where the three medians meet."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "text": "Each median is split by G in the ratio $2:1$, measured from the vertex."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 43,
+          "text": "In coordinates, G is simply the average of the three vertices."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "text": "It is an average because each coordinate balances independently — three 1D acts."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 59,
+          "style": "red-margin",
+          "text": "The centroid always exists and is unique; it does not depend on side lengths."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Subtopic three is where the two tools we just built, distance and the section formula, start earning marks. We open with the centroid."
+            },
+            {
+              "seq": 2,
+              "text": "Here is the physical meaning. Cut a triangle out of stiff card and balance it on a single fingertip. There is exactly one point where it sits level, and that point is the centroid, written G."
+            },
+            {
+              "seq": 3,
+              "text": "Geometrically, the centroid is where the three medians of the triangle meet, as shown. A median joins a vertex to the midpoint of the opposite side."
+            },
+            {
+              "seq": 4,
+              "text": "All three medians pass through the one point G. That concurrency is not an accident; it falls out of the coordinate formula we will derive shortly."
+            },
+            {
+              "seq": 5,
+              "text": "And G sits at a very specific spot on each median. It divides every median in the ratio two to one, measured from the vertex, so it is twice as far from the vertex as from the opposite side."
+            },
+            {
+              "seq": 6,
+              "text": "Now the payoff in coordinates, and it is beautifully simple. The centroid is just the average of the three vertices. Add the x coordinates and divide by three, and likewise for y and z."
+            },
+            {
+              "seq": 7,
+              "text": "Why an average and not something messier? Because, as always in this chapter, each coordinate behaves on its own. Balancing in three dimensions is really three separate one-dimensional balancing acts, one per axis."
+            },
+            {
+              "seq": 8,
+              "text": "One clean fact to bank: the centroid always exists and is always unique, and it depends only on the vertices, not on the side lengths. That last point will matter when we meet the incentre, which does weight by side lengths."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Subtopic three वो जगह है जहाँ अभी बनाए दो tools, distance और section formula, marks कमाना शुरू करते हैं। हम centroid से खोलते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "ये रहा physical मतलब। एक triangle stiff card से काटो और एक उँगली पर balance करो। ठीक एक point है जहाँ वो level बैठता है, और वो point है centroid, G लिखा जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Geometrically, centroid वो जगह है जहाँ triangle की तीन medians मिलती हैं, जैसा दिखाया है। एक median एक vertex को opposite side के midpoint से जोड़ती है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीनों medians एक ही point G से गुज़रती हैं। ये concurrency कोई इत्तेफ़ाक़ नहीं; ये उस coordinate formula से निकलती है जो हम जल्द derive करेंगे।"
+            },
+            {
+              "seq": 5,
+              "text": "और G हर median पर एक ख़ास जगह बैठता है। ये हर median को two to one ratio में बाँटता है, vertex से नापा, तो ये vertex से opposite side के मुक़ाबले दोगुना दूर है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब coordinates में payoff, और ये बेहद सरल है। Centroid बस तीन vertices का average है। x coordinates जोड़कर तीन से भाग, और वैसे ही y और z के लिए।"
+            },
+            {
+              "seq": 7,
+              "text": "Average क्यों, कुछ और messy क्यों नहीं? क्योंकि, इस chapter में हमेशा की तरह, हर coordinate अपने आप behave करता है। Three dimensions में balance करना असल में तीन अलग one-dimensional balancing acts हैं, हर axis पर एक।"
+            },
+            {
+              "seq": 8,
+              "text": "एक साफ़ fact याद रखो: centroid हमेशा exist करता है और हमेशा unique है, और ये सिर्फ़ vertices पर निर्भर है, side lengths पर नहीं। ये आख़िरी बात तब मायने रखेगी जब हम incentre मिलेंगे, जो side lengths से weight करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "Collinearity: when the triangle collapses",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Collinearity: three points, one line"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Three points are collinear when they lie on one line — they fail to make a triangle."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "text": "Distance lens: if B lies between A and C, then $AB + BC = AC$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "text": "Section lens: B divides AC in $k:1$ — the SAME k for x, y, and z."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "style": "red-margin",
+          "text": "Three roadside milestones: the middle splits the outer two by one fixed proportion."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "If even one of the three coordinate proportions disagrees, the point is off the line."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Collinear points make the triangle's area zero — a useful sanity flag."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "So collinearity is a statement about all three coordinates locking to one ratio."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Next application: collinearity, the test for whether three points sit on a single straight line."
+            },
+            {
+              "seq": 2,
+              "text": "Three points are collinear when they all lie on one line, which is the same as saying they fail to form a triangle, the triangle has collapsed flat."
+            },
+            {
+              "seq": 3,
+              "text": "There are two honest ways to detect it. The distance lens: if the point B lies between A and C, then the long hop equals the sum of the two short hops. A B plus B C equals A C."
+            },
+            {
+              "seq": 4,
+              "text": "The section lens, which is what JEE rewards: if the points are collinear, then B must divide A C in some real ratio, k to one, and crucially the same k has to work for the x, the y, and the z coordinates all at once."
+            },
+            {
+              "seq": 5,
+              "text": "Picture three milestones along the expressway. If they are truly on the road, the middle one splits the distance between the outer two in one fixed proportion, and that same proportion holds whether you measure easting, northing, or altitude."
+            },
+            {
+              "seq": 6,
+              "text": "But if even one of those three proportions disagrees, the middle milestone is off the road. There is no single straight line through all three."
+            },
+            {
+              "seq": 7,
+              "text": "A handy sanity flag: collinear points make the triangle's area exactly zero. If you ever compute a nonzero area, they were not collinear."
+            },
+            {
+              "seq": 8,
+              "text": "So hold the real meaning. Collinearity is not about one coordinate; it is a statement that all three coordinates lock onto one and the same ratio. Checking only x is the classic false positive."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अगली application: collinearity, ये test कि तीन points एक ही सीधी line पर हैं या नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "तीन points collinear हैं जब वो सब एक line पर हों, जो कहने का वही मतलब है कि वो triangle बनाने में fail होते हैं, triangle flat होकर collapse हो गया।"
+            },
+            {
+              "seq": 3,
+              "text": "इसे पकड़ने के दो ईमानदार तरीक़े हैं। Distance lens: अगर point B, A और C के बीच है, तो लंबी hop दो छोटी hops के sum के बराबर है। A B plus B C equals A C।"
+            },
+            {
+              "seq": 4,
+              "text": "Section lens, जो JEE reward करता है: अगर points collinear हैं, तो B को A C को किसी real ratio, k to one में बाँटना होगा, और ख़ास बात, वही k, x, y, और z coordinates तीनों के लिए एक साथ काम करना चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Expressway पर तीन milestones सोचो। अगर वो सच में road पर हैं, तो बीच वाला बाहर के दोनों के बीच distance को एक fixed proportion में बाँटता है, और वही proportion चलता है चाहे तुम easting नापो, northing, या altitude।"
+            },
+            {
+              "seq": 6,
+              "text": "पर अगर उन तीन proportions में से एक भी असहमत है, तो बीच का milestone road से बाहर है। तीनों से गुज़रती कोई एक सीधी line नहीं है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक काम का sanity flag: collinear points triangle का area ठीक zero बनाते हैं। अगर कभी nonzero area निकले, तो वो collinear नहीं थे।"
+            },
+            {
+              "seq": 8,
+              "text": "तो असली मतलब पकड़ो। Collinearity एक coordinate के बारे में नहीं; ये एक statement है कि तीनों coordinates एक ही ratio पर lock हो जाते हैं। सिर्फ़ x check करना classic false positive है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "Locus: sculpting space with a rule",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Locus: shaping surfaces from a rule"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "A locus is all points obeying a condition; in 3D, distance rules carve surfaces."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "text": "Equidistant from two fixed points → a flat plane (the perpendicular bisector)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "text": "At a fixed distance from one fixed point → a sphere."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "caption": "Sphere: every point at distance r from centre C",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 300 260\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"150\" cy=\"130\" rx=\"95\" ry=\"95\" fill=\"#8ecae6\" opacity=\"0.20\" stroke=\"#0a84c2\" stroke-width=\"2\"/><ellipse cx=\"150\" cy=\"130\" rx=\"95\" ry=\"30\" fill=\"none\" stroke=\"#0a84c2\" stroke-width=\"1\" stroke-dasharray=\"4,4\"/><circle cx=\"150\" cy=\"130\" r=\"4\" fill=\"#c1121f\"/><line x1=\"150\" y1=\"130\" x2=\"245\" y2=\"130\" stroke=\"#e07a00\" stroke-width=\"2\"/><text x=\"138\" y=\"150\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#c1121f\">C(a, b, c)</text><text x=\"192\" y=\"122\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#e07a00\">r</text><text x=\"92\" y=\"36\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#0a84c2\">all points at distance r</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "text": "Like every spot a tethered goat can graze around its peg."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "text": "Sum of distances from two points constant → an ellipsoid (the 3D ellipse)."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 59,
+          "style": "red-margin",
+          "text": "Two points → plane; one point → sphere; constant sum → ellipsoid."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The third application is locus, and it is where three-dimensional geometry gets genuinely three-dimensional, because distance conditions now carve out whole surfaces."
+            },
+            {
+              "seq": 2,
+              "text": "A locus is simply the set of all points that obey a stated condition. On paper such conditions gave curves; in space they give surfaces. Two of them carry this chapter."
+            },
+            {
+              "seq": 3,
+              "text": "First, equidistant from two fixed points. Every such point is equally far from A and from B, and together they form a flat plane, the perpendicular bisector plane, exactly the one we derived in Subtopic two."
+            },
+            {
+              "seq": 4,
+              "text": "Second, at a fixed distance from one fixed point. Every point exactly r away from a centre forms a sphere."
+            },
+            {
+              "seq": 5,
+              "text": "Here it is: a sphere of radius r centred at C. Every point on the surface is the same distance r from the centre, in every direction."
+            },
+            {
+              "seq": 6,
+              "text": "The homely picture is a goat tied to a peg by a rope. The set of all spots it can just reach traces out a sphere, of radius equal to the rope."
+            },
+            {
+              "seq": 7,
+              "text": "And a richer condition: the sum of the distances from two fixed points is held constant. That bends space into an ellipsoid, the three-dimensional cousin of the ellipse you know from the plane."
+            },
+            {
+              "seq": 8,
+              "text": "So carry the family in your head. Equidistant from two points gives a plane. Fixed distance from one point gives a sphere. A constant sum of two distances gives an ellipsoid."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "तीसरी application है locus, और यहीं three-dimensional geometry सच में three-dimensional होती है, क्योंकि distance conditions अब पूरी surfaces काटती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Locus बस उन सभी points का set है जो किसी stated condition को मानते हैं। Paper पर ऐसी conditions curves देती थीं; space में वो surfaces देती हैं। इनमें से दो इस chapter को ढोती हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "पहली, दो fixed points से equidistant। ऐसा हर point A से और B से बराबर दूर है, और मिलकर वो एक flat plane बनाते हैं, perpendicular bisector plane, ठीक वही जो हमने Subtopic two में derive किया।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरी, एक fixed point से fixed distance पर। किसी centre से ठीक r दूर हर point एक sphere बनाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "ये रहा: radius r का sphere, C पर centred। Surface पर हर point centre से वही distance r पर है, हर direction में।"
+            },
+            {
+              "seq": 6,
+              "text": "घरेलू picture है एक बकरी जो रस्सी से खूँटे से बँधी है। जिन सब जगहों तक वो बस पहुँच सकती है, वो एक sphere बनाती हैं, radius रस्सी के बराबर।"
+            },
+            {
+              "seq": 7,
+              "text": "और एक richer condition: दो fixed points से distances का sum constant रखा जाए। वो space को एक ellipsoid में मोड़ देता है, plane वाले ellipse का three-dimensional cousin।"
+            },
+            {
+              "seq": 8,
+              "text": "तो family दिमाग़ में रखो। दो points से equidistant देता है plane। एक point से fixed distance देता है sphere। दो distances का constant sum देता है ellipsoid।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "Edge cases in centroids, collinearity, and locus",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "When these applications degenerate"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "text": "Centroid: always exists, always unique; unlike the incentre, ignores side lengths."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Collinearity makes the triangle's area zero — a degenerate 'triangle'."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "text": "A sphere is real only if its radius-squared is positive."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "style": "red-margin",
+          "text": "Radius-squared zero → a single point; negative → the empty set."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "The ellipsoid is real only if the constant sum exceeds the distance between the points."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "You cannot beat the straight line: the shortest path is the segment itself."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Reading these limits stops you 'finding' a surface that does not exist."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before the formulas, a quick tour of the edge cases, because these applications each have a way of degenerating that examiners like to probe."
+            },
+            {
+              "seq": 2,
+              "text": "The centroid is the well-behaved one. It always exists and is always unique, and it depends only on the vertices. Contrast that with the incentre, which weights the vertices by side lengths and so does care about shape."
+            },
+            {
+              "seq": 3,
+              "text": "Collinearity is really the degenerate case of a triangle: the three points line up and the enclosed area drops to zero. It is a triangle only in name."
+            },
+            {
+              "seq": 4,
+              "text": "For a sphere written in expanded form, reality has a condition. It is a genuine sphere only if the computed radius-squared comes out positive."
+            },
+            {
+              "seq": 5,
+              "text": "If that radius-squared is exactly zero, the locus shrinks to a single point. If it is negative, there are no real points at all, the locus is the empty set. Always check the sign before declaring a sphere."
+            },
+            {
+              "seq": 6,
+              "text": "The ellipsoid has its own reality check. The sum-of-distances ellipsoid exists only if the constant sum is strictly larger than the distance between the two fixed points."
+            },
+            {
+              "seq": 7,
+              "text": "The reason is simple geometry: you cannot beat the straight line. The shortest possible sum of distances to the two points is the straight segment joining them, so a smaller target sum has no solutions."
+            },
+            {
+              "seq": 8,
+              "text": "Reading these limits is not pedantry. It is what stops you from confidently finding a surface in an exam that, in fact, does not exist."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Formulas से पहले, edge cases का एक जल्दी tour, क्योंकि इन applications में से हर एक का degenerate होने का एक तरीक़ा है जिसे examiners probe करना पसंद करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Centroid well-behaved वाला है। ये हमेशा exist करता है और हमेशा unique है, और सिर्फ़ vertices पर निर्भर है। इसके उलट incentre, जो vertices को side lengths से weight करता है और इसलिए shape की परवाह करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Collinearity असल में triangle का degenerate case है: तीन points एक line में आ जाते हैं और घिरा area zero हो जाता है। ये सिर्फ़ नाम का triangle है।"
+            },
+            {
+              "seq": 4,
+              "text": "Expanded form में लिखे sphere के लिए, reality की एक condition है। ये सच्चा sphere तभी है जब निकाला radius-squared positive आए।"
+            },
+            {
+              "seq": 5,
+              "text": "अगर वो radius-squared ठीक zero है, तो locus सिकुड़कर एक single point हो जाता है। अगर negative है, तो कोई real points ही नहीं, locus empty set है। Sphere घोषित करने से पहले हमेशा sign check करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Ellipsoid की अपनी reality check है। Sum-of-distances ellipsoid तभी exist करता है जब constant sum दोनों fixed points के बीच distance से सख़्ती से बड़ा हो।"
+            },
+            {
+              "seq": 7,
+              "text": "वजह सीधी geometry है: तुम straight line को हरा नहीं सकते। दोनों points तक distances का सबसे छोटा संभव sum उन्हें जोड़ता straight segment है, तो उससे छोटा target sum के कोई solutions नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "इन limits को पढ़ना pedantry नहीं है। यही तुम्हें exam में ऐसी surface confidently ढूँढने से रोकता है जो असल में exist ही नहीं करती।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "Derivation: the centroid formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Deriving the centroid (via the section formula)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Take the median from A to the midpoint D of BC."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "D=\\left(\\frac{x_2+x_3}{2},\\ \\frac{y_2+y_3}{2},\\ \\frac{z_2+z_3}{2}\\right)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "text": "G divides AD internally with $AG:GD = 2:1$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "latex": "x_G=\\frac{2\\left(\\frac{x_2+x_3}{2}\\right)+1\\cdot x_1}{2+1}=\\frac{x_1+x_2+x_3}{3}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "By identical work on y and z:"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "G=\\left(\\frac{x_1+x_2+x_3}{3},\\ \\frac{y_1+y_2+y_3}{3},\\ \\frac{z_1+z_2+z_3}{3}\\right)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Medians from B and C give the same G — proving all three are concurrent."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us derive the centroid formula, and notice it needs nothing new: it is the section formula plus one known property of triangles."
+            },
+            {
+              "seq": 2,
+              "text": "Set up the triangle A, B, C and take the median from vertex A to the point D, the midpoint of the opposite side B C."
+            },
+            {
+              "seq": 3,
+              "text": "By the midpoint formula from Subtopic two, D is the average of B and C: each coordinate is B's plus C's, over two."
+            },
+            {
+              "seq": 4,
+              "text": "Now use the one property we borrow from geometry: the centroid divides every median in the ratio two to one from the vertex. So G divides the segment A D internally with A G to G D equal to two to one."
+            },
+            {
+              "seq": 5,
+              "text": "Apply the internal section formula with ratio two to one, A as first point, D as second. For the x coordinate: two times D's x, plus one times A's x, over two plus one. The two cancels the halves inside D, and it collapses to x one plus x two plus x three, over three."
+            },
+            {
+              "seq": 6,
+              "text": "Run the identical algebra for the y and z coordinates. Nothing changes but the letter."
+            },
+            {
+              "seq": 7,
+              "text": "So the centroid is the plain average of all three vertices, coordinate by coordinate. Sum and divide by three."
+            },
+            {
+              "seq": 8,
+              "text": "And here is a bonus. If you had instead started from the median out of B, or out of C, you would land on exactly the same point G. That is a clean proof that all three medians are concurrent, they genuinely meet at one point."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो centroid formula derive करें, और ध्यान दो इसे कुछ नया नहीं चाहिए: ये section formula plus triangles की एक known property है।"
+            },
+            {
+              "seq": 2,
+              "text": "Triangle A, B, C set up करो और vertex A से point D तक median लो, D जो opposite side B C का midpoint है।"
+            },
+            {
+              "seq": 3,
+              "text": "Subtopic two के midpoint formula से, D, B और C का average है: हर coordinate है B का plus C का, over two।"
+            },
+            {
+              "seq": 4,
+              "text": "अब geometry से उधार ली एक property use करो: centroid हर median को vertex से two to one ratio में बाँटता है। तो G, segment A D को internally बाँटता है A G to G D equals two to one के साथ।"
+            },
+            {
+              "seq": 5,
+              "text": "Internal section formula ratio two to one के साथ लगाओ, A को first point और D को second। x coordinate के लिए: two times D का x, plus one times A का x, over two plus one। Two, D के अंदर के halves को cancel कर देता है, और ये सिमटकर x one plus x two plus x three, over three बन जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "y और z coordinates के लिए वही algebra चलाओ। अक्षर के सिवा कुछ नहीं बदलता।"
+            },
+            {
+              "seq": 7,
+              "text": "तो centroid तीनों vertices का plain average है, coordinate by coordinate। जोड़ो और तीन से भाग करो।"
+            },
+            {
+              "seq": 8,
+              "text": "और ये रहा bonus। अगर तुमने इसके बजाय B से निकलती median से शुरू किया होता, या C से, तो ठीक उसी point G पर पहुँचते। ये एक साफ़ proof है कि तीनों medians concurrent हैं, वो सच में एक point पर मिलती हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "Procedure: two ways to test collinearity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Testing collinearity: two methods"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "text": "Method A (distance): collinear iff the largest of AB, BC, CA equals the other two's sum."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "If $AB + BC = AC$, then B lies between A and C."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "text": "Method B (section-ratio): let B divide AC in $k:1$; solve k from the x-coordinate alone."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "latex": "\\frac{kx_3+x_1}{k+1}=x_2\\ \\Rightarrow\\ k"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 38,
+          "text": "Then VERIFY the same k reproduces $y_2$ and $z_2$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "A single coordinate can match by coincidence — checking only x is a false positive."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "All three agree → collinear, and you get the dividing ratio for free."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "There are two clean procedures for testing collinearity. Method A is intuitive; Method B is faster and is what JEE actually rewards."
+            },
+            {
+              "seq": 2,
+              "text": "Method A uses distances. Compute all three pairwise distances, A B, B C, and C A. The points are collinear if and only if the largest of the three equals the sum of the other two."
+            },
+            {
+              "seq": 3,
+              "text": "Concretely, if A B plus B C equals A C, then B sits between A and C on the line. No slack means no bend."
+            },
+            {
+              "seq": 4,
+              "text": "Method B uses the section ratio and is usually quicker. Suppose B divides A C in the ratio k to one, and solve for k using just the x coordinate."
+            },
+            {
+              "seq": 5,
+              "text": "So set k x three plus x one, over k plus one, equal to x two, and solve. That gives a candidate value of k from one equation."
+            },
+            {
+              "seq": 6,
+              "text": "Now the step that is not optional: verify that the very same k also reproduces y two and z two. Plug it back into the y and the z equations."
+            },
+            {
+              "seq": 7,
+              "text": "Why is verification non-negotiable? Because a single coordinate can match by pure coincidence. Solving from x and stopping is the classic false positive that turns a non-collinear trio into a wrong yes."
+            },
+            {
+              "seq": 8,
+              "text": "If all three coordinates agree on that one k, the points are genuinely collinear, and as a bonus you already hold the ratio in which B divides A C."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Collinearity test करने के दो साफ़ procedures हैं। Method A intuitive है; Method B तेज़ है और JEE असल में इसी को reward करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Method A distances use करता है। तीनों pairwise distances निकालो, A B, B C, और C A। Points collinear हैं if and only if तीनों में सबसे बड़ा बाक़ी दोनों के sum के बराबर हो।"
+            },
+            {
+              "seq": 3,
+              "text": "साफ़-साफ़, अगर A B plus B C equals A C, तो B, line पर A और C के बीच बैठता है। कोई slack नहीं मतलब कोई मोड़ नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Method B section ratio use करता है और आमतौर पर तेज़ है। मानो B, A C को ratio k to one में बाँटता है, और सिर्फ़ x coordinate से k solve करो।"
+            },
+            {
+              "seq": 5,
+              "text": "तो k x three plus x one, over k plus one, को x two के बराबर रखो, और solve करो। ये एक equation से k की एक candidate value देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वो step जो optional नहीं: verify करो कि वही k, y two और z two भी reproduce करता है। इसे y और z equations में वापस डालो।"
+            },
+            {
+              "seq": 7,
+              "text": "Verification non-negotiable क्यों? क्योंकि एक single coordinate pure coincidence से match कर सकता है। x से solve करके रुक जाना वो classic false positive है जो non-collinear trio को गलत हाँ बना देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "अगर तीनों coordinates उस एक k पर सहमत हैं, तो points सच में collinear हैं, और bonus में तुम्हारे पास पहले से वो ratio है जिसमें B, A C को बाँटता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "The applications toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Applications toolkit: centroid, collinearity, locus"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "G=\\left(\\frac{x_1+x_2+x_3}{3},\\ \\frac{y_1+y_2+y_3}{3},\\ \\frac{z_1+z_2+z_3}{3}\\right)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "latex": "\\text{collinear}\\iff \\frac{kx_3+x_1}{k+1}=x_2\\ \\text{with the same }k\\ \\text{for }y,z"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 23,
+          "latex": "\\text{sphere: }(x-a)^2+(y-b)^2+(z-c)^2=r^2"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "latex": "\\text{perp. bisector of }AB:\\ PA=PB \\Rightarrow \\text{a plane}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "latex": "\\text{ellipsoid: sum of distances}=2a,\\ \\ b^2=a^2-c^2"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "I=\\left(\\frac{ax_1+bx_2+cx_3}{a+b+c},\\ \\ldots\\right),\\ \\ a=|BC|,\\,b=|CA|,\\,c=|AB|"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 55,
+          "style": "red-margin",
+          "text": "Centroid = plain average; incentre = weighted average. Tetrahedron centroid: denominator 4."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the applications toolkit, gathering every formula from this subtopic, including the two JEE extensions."
+            },
+            {
+              "seq": 2,
+              "text": "The centroid of a triangle is the plain average of its three vertices. Sum each coordinate, divide by three. That is the single most-used formula here."
+            },
+            {
+              "seq": 3,
+              "text": "Collinearity as a formula: the points are collinear exactly when B divides A C in a ratio k to one that solves the x equation and reproduces y and z with the same k. One ratio, all three coordinates."
+            },
+            {
+              "seq": 4,
+              "text": "The sphere: all points at distance r from a centre a, b, c satisfy x minus a squared plus y minus b squared plus z minus c squared equals r squared. Memorise the shape, not the letters."
+            },
+            {
+              "seq": 5,
+              "text": "The perpendicular bisector: the set of points equidistant from A and B, where P A equals P B, is a plane. Linear condition, flat surface."
+            },
+            {
+              "seq": 6,
+              "text": "The ellipsoid: a constant sum of distances equal to two a, with the relation b squared equals a squared minus c squared linking the semi-axes to the half-distance between foci. The spatial ellipse."
+            },
+            {
+              "seq": 7,
+              "text": "And the first JEE extension, the incentre. Unlike the centroid, it is a weighted average, each vertex weighted by the length of the opposite side, a, b, and c, over the perimeter a plus b plus c."
+            },
+            {
+              "seq": 8,
+              "text": "Hold the contrast in one line. The centroid is a plain average; the incentre is a weighted average. And the second extension: a tetrahedron's centroid is the average of its four vertices, dividing by four."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा applications toolkit, इस subtopic की हर formula को इकट्ठा करते, दो JEE extensions समेत।"
+            },
+            {
+              "seq": 2,
+              "text": "Triangle का centroid उसके तीन vertices का plain average है। हर coordinate जोड़ो, तीन से भाग। यहाँ की सबसे ज़्यादा use होने वाली formula।"
+            },
+            {
+              "seq": 3,
+              "text": "Collinearity एक formula के तौर पर: points ठीक तब collinear हैं जब B, A C को ratio k to one में बाँटे जो x equation solve करे और वही k से y और z reproduce करे। एक ratio, तीनों coordinates।"
+            },
+            {
+              "seq": 4,
+              "text": "Sphere: centre a, b, c से distance r पर सारे points मानते हैं x minus a squared plus y minus b squared plus z minus c squared equals r squared। Shape याद करो, अक्षर नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Perpendicular bisector: A और B से equidistant points का set, जहाँ P A equals P B, एक plane है। Linear condition, flat surface।"
+            },
+            {
+              "seq": 6,
+              "text": "Ellipsoid: distances का constant sum equal to two a, relation b squared equals a squared minus c squared के साथ जो semi-axes को foci के बीच की half-distance से जोड़ती है। Spatial ellipse।"
+            },
+            {
+              "seq": 7,
+              "text": "और पहला JEE extension, incentre। Centroid के उलट, ये एक weighted average है, हर vertex opposite side की length से weighted, a, b, और c, over perimeter a plus b plus c।"
+            },
+            {
+              "seq": 8,
+              "text": "Contrast एक line में रखो। Centroid plain average है; incentre weighted average। और दूसरा extension: tetrahedron का centroid उसके चार vertices का average है, चार से भाग करके।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "Worked example: centroid, forward and reverse",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: centroid both ways"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "(a) Centroid of $A(2,-1,4)$, $B(6,3,-2)$, $C(1,4,5)$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "G=\\left(\\frac{2+6+1}{3},\\ \\frac{-1+3+4}{3},\\ \\frac{4-2+5}{3}\\right)=\\left(3,\\ 2,\\ \\tfrac{7}{3}\\right)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "text": "(b) Two vertices $(2,-1,4)$, $(6,3,-2)$; centroid $\\left(3,2,\\tfrac{7}{3}\\right)$. Find the third."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Since G is the average, sum of vertices $= 3G$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "x=3(3)-2-6=1,\\quad y=3(2)-(-1)-3=4,\\quad z=3\\!\\left(\\tfrac{7}{3}\\right)-4-(-2)=5"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "The third vertex is $(1,4,5)$ — consistent with part (a)."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "The reverse problem is just 'sum $= 3\\times$ centroid' — do not forget the factor of 3."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A two-part centroid example, forward and then in reverse, because the reverse version is a favourite and has one classic slip."
+            },
+            {
+              "seq": 2,
+              "text": "Part a is the straightforward direction. Given the three vertices A, B, and C, find the centroid."
+            },
+            {
+              "seq": 3,
+              "text": "Just average each coordinate. The x average is two plus six plus one over three, which is three. The y average is minus one plus three plus four over three, which is two. The z average is four minus two plus five over three, which is seven thirds. So G is three, two, seven thirds."
+            },
+            {
+              "seq": 4,
+              "text": "Part b runs it backwards. Now we are told two of the vertices and the centroid, three, two, seven thirds, and we must recover the missing third vertex."
+            },
+            {
+              "seq": 5,
+              "text": "Use the definition in reverse. Since the centroid is the average, the sum of all three vertices equals three times the centroid. So multiply the centroid through by three."
+            },
+            {
+              "seq": 6,
+              "text": "Solve coordinate by coordinate. For x, three times three is nine, minus the two known x values, two and six, leaves one. For y, three times two is six, minus minus one, minus three, gives four. For z, three times seven thirds is seven, minus four, minus minus two, gives five."
+            },
+            {
+              "seq": 7,
+              "text": "So the third vertex is one, four, five, which is reassuringly the same C we started with in part a. The forward and reverse are consistent."
+            },
+            {
+              "seq": 8,
+              "text": "The one thing that trips students on the reverse problem: the sum of the vertices is three times the centroid, not the centroid itself. Forget that factor of three and every coordinate comes out wrong."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक two-part centroid example, पहले forward फिर reverse, क्योंकि reverse version एक favourite है और इसमें एक classic slip है।"
+            },
+            {
+              "seq": 2,
+              "text": "Part a सीधी direction है। तीन vertices A, B, और C दिए हों, centroid ढूँढो।"
+            },
+            {
+              "seq": 3,
+              "text": "बस हर coordinate का average। x average है two plus six plus one over three, यानी three। y average है minus one plus three plus four over three, यानी two। z average है four minus two plus five over three, यानी seven thirds। तो G है three, two, seven thirds।"
+            },
+            {
+              "seq": 4,
+              "text": "Part b इसे उल्टा चलाता है। अब हमें दो vertices और centroid, three, two, seven thirds, बताए हैं, और हमें गायब तीसरा vertex निकालना है।"
+            },
+            {
+              "seq": 5,
+              "text": "Definition को उल्टा use करो। चूँकि centroid average है, तीनों vertices का sum, centroid के तीन गुना के बराबर है। तो centroid को तीन से गुणा करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Coordinate by coordinate solve करो। x के लिए, three times three is nine, minus दो known x values, two और six, बचता है one। y के लिए, three times two is six, minus minus one, minus three, देता है four। z के लिए, three times seven thirds is seven, minus four, minus minus two, देता है five।"
+            },
+            {
+              "seq": 7,
+              "text": "तो तीसरा vertex है one, four, five, जो सुकून से वही C है जिससे हमने part a में शुरू किया था। Forward और reverse consistent हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "Reverse problem पर students को जो एक चीज़ गिराती है: vertices का sum centroid का तीन गुना है, ख़ुद centroid नहीं। वो factor of three भूलो और हर coordinate गलत आ जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "Speed trap: collinear only if all three agree",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Speed trap: verify collinearity fully"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Are $A(2,1,-1)$, $B(4,4,3)$, $C(8,10,11)$ collinear?"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "text": "Let B divide AC in $k:1$; solve from the x-coordinate only."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "latex": "\\frac{8k+2}{k+1}=4\\ \\Rightarrow\\ 8k+2=4k+4\\ \\Rightarrow\\ k=\\tfrac{1}{2}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "text": "Now the mandatory check with $k=\\tfrac{1}{2}$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "y:\\ \\frac{10\\left(\\tfrac{1}{2}\\right)+1}{\\tfrac{3}{2}}=4=y_B\\ \\checkmark \\qquad z:\\ \\frac{11\\left(\\tfrac{1}{2}\\right)-1}{\\tfrac{3}{2}}=3=z_B\\ \\checkmark"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "All three agree → collinear, with B dividing AC in $1:2$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "If the y- or z-check had failed, the answer flips. One coordinate is never proof."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A JEE-Main speed trap on collinearity. The trap is entirely about the verification step, so watch it closely."
+            },
+            {
+              "seq": 2,
+              "text": "The question: are the three points A, B, and C collinear? Coordinates are on the board."
+            },
+            {
+              "seq": 3,
+              "text": "Use Method B. Suppose B divides A C in the ratio k to one, and solve for k from the x coordinate alone, to get a candidate quickly."
+            },
+            {
+              "seq": 4,
+              "text": "The x equation is eight k plus two, over k plus one, equals four. Clear the denominator: eight k plus two equals four k plus four, so four k equals two, and k is one half."
+            },
+            {
+              "seq": 5,
+              "text": "Now the step you must not skip: check that this k, one half, also works for y and for z. This is where careless students have already declared victory and lost the marks."
+            },
+            {
+              "seq": 6,
+              "text": "For y: ten times one half plus one, over three halves, is six over three halves, which is four, matching B's y. For z: eleven times one half minus one, over three halves, is three and a half over one and a half, which is three, matching B's z. Both check out."
+            },
+            {
+              "seq": 7,
+              "text": "All three coordinates agree on k equals one half, so the points are genuinely collinear, and B divides A C in the ratio one to two."
+            },
+            {
+              "seq": 8,
+              "text": "Here is the whole point of the trap. If the y check or the z check had disagreed, the answer would flip completely to not collinear. A clean k from x alone proves nothing; one coordinate is never proof."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Collinearity पर एक JEE-Main speed trap। Trap पूरी तरह verification step के बारे में है, तो इसे ध्यान से देखो।"
+            },
+            {
+              "seq": 2,
+              "text": "सवाल: तीन points A, B, और C collinear हैं? Coordinates board पर हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Method B use करो। मानो B, A C को ratio k to one में बाँटता है, और सिर्फ़ x coordinate से k solve करो, जल्दी एक candidate पाने के लिए।"
+            },
+            {
+              "seq": 4,
+              "text": "x equation है eight k plus two, over k plus one, equals four। Denominator हटाओ: eight k plus two equals four k plus four, तो four k equals two, और k है one half।"
+            },
+            {
+              "seq": 5,
+              "text": "अब वो step जो छोड़ना नहीं: check करो कि ये k, one half, y और z के लिए भी काम करता है। यहीं लापरवाह students पहले ही जीत घोषित करके marks गँवा चुके होते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "y के लिए: ten times one half plus one, over three halves, है six over three halves, यानी four, B के y से match। z के लिए: eleven times one half minus one, over three halves, है three and a half over one and a half, यानी three, B के z से match। दोनों सही।"
+            },
+            {
+              "seq": 7,
+              "text": "तीनों coordinates k equals one half पर सहमत हैं, तो points सच में collinear हैं, और B, A C को ratio one to two में बाँटता है।"
+            },
+            {
+              "seq": 8,
+              "text": "यही trap का पूरा मक़सद है। अगर y check या z check असहमत होता, तो जवाब पूरी तरह उलटकर not collinear हो जाता। सिर्फ़ x से एक साफ़ k कुछ साबित नहीं करता; एक coordinate कभी proof नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "Worked example: parallelogram, and is it a rectangle?",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: parallelogram or rectangle?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Show $A(1,0,2)$, $B(4,2,3)$, $C(5,7,2)$, $D(2,5,1)$ form a parallelogram ABCD."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "\\vec{AB}=(3,2,1),\\quad \\vec{DC}=C-D=(3,2,1)\\ \\Rightarrow\\ \\vec{AB}=\\vec{DC}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "latex": "\\vec{AD}=(1,5,-1),\\quad \\vec{BC}=C-B=(1,5,-1)\\ \\Rightarrow\\ \\vec{AD}=\\vec{BC}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "text": "Opposite sides equal and parallel → ABCD is a parallelogram."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Rectangle test: are the diagonals equal?"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "|AC|^2=4^2+7^2+0^2=65,\\qquad |BD|^2=(-2)^2+3^2+(-2)^2=17"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "text": "$65 \\ne 17$ → diagonals unequal → NOT a rectangle."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 62,
+          "style": "red-margin",
+          "text": "Equivalently $\\vec{AB}\\cdot\\vec{AD}=12\\ne 0$: adjacent sides not perpendicular."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example classifies a quadrilateral, first proving it is a parallelogram, then testing whether it is a rectangle. The cleanest route is side vectors."
+            },
+            {
+              "seq": 2,
+              "text": "We are given four points A, B, C, D, in order, and must show A B C D is a parallelogram."
+            },
+            {
+              "seq": 3,
+              "text": "A quadrilateral is a parallelogram when both pairs of opposite sides are equal and parallel, which for vectors just means the side vectors are equal. Compute A B as three, two, one; and D C, that is C minus D, also three, two, one. So A B equals D C."
+            },
+            {
+              "seq": 4,
+              "text": "Do the other pair. A D is one, five, minus one; and B C, that is C minus B, is also one, five, minus one. So A D equals B C."
+            },
+            {
+              "seq": 5,
+              "text": "Both pairs of opposite sides are equal and parallel, so A B C D is a parallelogram. That is the first claim settled."
+            },
+            {
+              "seq": 6,
+              "text": "Now, is it a rectangle? A parallelogram is a rectangle exactly when its two diagonals are equal in length, so we compare the squared diagonals A C and B D."
+            },
+            {
+              "seq": 7,
+              "text": "A C squared is four squared plus seven squared plus zero, which is sixty-five. B D squared is minus two squared plus three squared plus minus two squared, which is seventeen."
+            },
+            {
+              "seq": 8,
+              "text": "Sixty-five is not seventeen, so the diagonals have different lengths, and therefore the parallelogram is not a rectangle."
+            },
+            {
+              "seq": 9,
+              "text": "You can confirm it another way: the dot product of A B with A D is three plus ten minus one, which is twelve, not zero. Nonzero dot product means the adjacent sides are not perpendicular, again ruling out a rectangle."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये example एक quadrilateral classify करता है, पहले साबित करते कि ये parallelogram है, फिर test करते कि rectangle है या नहीं। सबसे साफ़ रास्ता side vectors है।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चार points A, B, C, D, order में दिए हैं, और दिखाना है कि A B C D एक parallelogram है।"
+            },
+            {
+              "seq": 3,
+              "text": "एक quadrilateral parallelogram है जब opposite sides की दोनों pairs equal और parallel हों, जो vectors के लिए बस मतलब side vectors बराबर। A B निकालो three, two, one; और D C, यानी C minus D, भी three, two, one। तो A B equals D C।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरी pair करो। A D है one, five, minus one; और B C, यानी C minus B, भी one, five, minus one। तो A D equals B C।"
+            },
+            {
+              "seq": 5,
+              "text": "Opposite sides की दोनों pairs equal और parallel हैं, तो A B C D एक parallelogram है। पहला दावा तय।"
+            },
+            {
+              "seq": 6,
+              "text": "अब, क्या ये rectangle है? एक parallelogram rectangle है ठीक तब जब उसके दोनों diagonals length में बराबर हों, तो हम squared diagonals A C और B D की तुलना करते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "A C squared है four squared plus seven squared plus zero, यानी sixty-five। B D squared है minus two squared plus three squared plus minus two squared, यानी seventeen।"
+            },
+            {
+              "seq": 8,
+              "text": "Sixty-five, seventeen नहीं है, तो diagonals की length अलग है, और इसलिए parallelogram rectangle नहीं है।"
+            },
+            {
+              "seq": 9,
+              "text": "इसे दूसरे तरीक़े से confirm कर सकते हो: A B का A D के साथ dot product है three plus ten minus one, यानी twelve, zero नहीं। Nonzero dot product मतलब adjacent sides perpendicular नहीं, फिर से rectangle को खारिज करता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "Advanced: the sum-of-distances ellipsoid",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Advanced: locus of constant distance-sum"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Find the locus of P with $PA+PB=12$, where $A(5,0,0)$, $B(-5,0,0)$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "\\sqrt{(x-5)^2+y^2+z^2}+\\sqrt{(x+5)^2+y^2+z^2}=12"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "text": "Isolate one radical and square — then isolate and square again."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "latex": "24\\sqrt{(x+5)^2+y^2+z^2}=144+20x"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "36\\left[(x+5)^2+y^2+z^2\\right]=(36+5x)^2"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "\\frac{x^2}{36}+\\frac{y^2}{11}+\\frac{z^2}{11}=1"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "caption": "Prolate spheroid, foci at (±5,0,0), sum of distances 12",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 360 240\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"180\" cy=\"120\" rx=\"140\" ry=\"70\" fill=\"#a7c957\" opacity=\"0.20\" stroke=\"#5a7a2a\" stroke-width=\"2\"/><line x1=\"40\" y1=\"120\" x2=\"320\" y2=\"120\" stroke=\"#bbb\" stroke-width=\"1\"/><circle cx=\"130\" cy=\"120\" r=\"4\" fill=\"#c1121f\"/><circle cx=\"230\" cy=\"120\" r=\"4\" fill=\"#c1121f\"/><circle cx=\"250\" cy=\"70\" r=\"4\" fill=\"#7048e8\"/><line x1=\"250\" y1=\"70\" x2=\"130\" y2=\"120\" stroke=\"#7048e8\" stroke-width=\"1.3\" stroke-dasharray=\"5,4\"/><line x1=\"250\" y1=\"70\" x2=\"230\" y2=\"120\" stroke=\"#7048e8\" stroke-width=\"1.3\" stroke-dasharray=\"5,4\"/><text x=\"110\" y=\"138\" font-size=\"11\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#c1121f\">B(-5,0,0)</text><text x=\"214\" y=\"138\" font-size=\"11\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#c1121f\">A(5,0,0)</text><text x=\"256\" y=\"66\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#7048e8\">P</text><text x=\"150\" y=\"80\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#7048e8\">PA + PB = 12</text><text x=\"298\" y=\"116\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#777\">(6,0,0)</text></svg>"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "Kill the double radical in TWO squaring rounds — one root isolated each time."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We finish the chapter's teaching with a JEE Advanced classic: a locus defined by a constant sum of distances. The whole discipline here is handling two square roots without wrecking the algebra."
+            },
+            {
+              "seq": 2,
+              "text": "The condition is that the point P keeps its distance to A plus its distance to B fixed at twelve, with A and B given on the x-axis at plus and minus five."
+            },
+            {
+              "seq": 3,
+              "text": "Write it out. The square root of x minus five squared plus y squared plus z squared, plus the square root of x plus five squared plus y squared plus z squared, equals twelve. Two radicals in one equation."
+            },
+            {
+              "seq": 4,
+              "text": "You cannot square that in one shot; you would just create a new cross term with a radical still in it. Instead, isolate one radical on its own side, square, then isolate the remaining radical and square a second time."
+            },
+            {
+              "seq": 5,
+              "text": "After the first isolate-and-square, the common x squared plus y squared plus z squared plus twenty-five terms cancel, and tidying leaves twenty-four times the square root of x plus five squared plus y squared plus z squared equals one hundred forty-four plus twenty x."
+            },
+            {
+              "seq": 6,
+              "text": "Divide by four and square the second time. That gives thirty-six times the bracket x plus five squared plus y squared plus z squared equals thirty-six plus five x, all squared."
+            },
+            {
+              "seq": 7,
+              "text": "Expand, and the x-linear terms cancel. Collecting everything gives, after dividing through, x squared over thirty-six plus y squared over eleven plus z squared over eleven equals one."
+            },
+            {
+              "seq": 8,
+              "text": "And there is the surface: an ellipsoid of revolution, a prolate spheroid stretched along the x-axis. Its semi-axis is six along x and root eleven across, the foci sit at plus and minus five, and indeed b squared equals a squared minus c squared, thirty-six minus twenty-five is eleven."
+            },
+            {
+              "seq": 9,
+              "text": "The rigour lesson: the double radical must die in two careful squaring rounds, isolating exactly one root each time. Squaring the whole sum in a single move is the standard wreck on this problem."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हम chapter की teaching एक JEE Advanced classic से खत्म करते हैं: distances के constant sum से define एक locus। यहाँ पूरी discipline है दो square roots को algebra बिगाड़े बिना handle करना।"
+            },
+            {
+              "seq": 2,
+              "text": "Condition ये है कि point P अपनी A तक distance plus अपनी B तक distance को twelve पर fixed रखता है, A और B x-axis पर plus और minus five पर दिए।"
+            },
+            {
+              "seq": 3,
+              "text": "इसे लिखो। Square root of x minus five squared plus y squared plus z squared, plus square root of x plus five squared plus y squared plus z squared, equals twelve। एक equation में दो radicals।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे एक बार में square नहीं कर सकते; तुम बस एक नया cross term बना दोगे जिसमें अभी भी radical होगा। बजाय इसके, एक radical को अकेला एक तरफ़ isolate करो, square करो, फिर बचा radical isolate करके दूसरी बार square करो।"
+            },
+            {
+              "seq": 5,
+              "text": "पहले isolate-and-square के बाद, common x squared plus y squared plus z squared plus twenty-five terms cancel हो जाते हैं, और साफ़ करने पर बचता है twenty-four times square root of x plus five squared plus y squared plus z squared equals one hundred forty-four plus twenty x।"
+            },
+            {
+              "seq": 6,
+              "text": "चार से भाग करो और दूसरी बार square करो। वो देता है thirty-six times bracket x plus five squared plus y squared plus z squared equals thirty-six plus five x, whole squared।"
+            },
+            {
+              "seq": 7,
+              "text": "Expand करो, और x-linear terms cancel हो जाते हैं। सब इकट्ठा करके, भाग करने के बाद, मिलता है x squared over thirty-six plus y squared over eleven plus z squared over eleven equals one।"
+            },
+            {
+              "seq": 8,
+              "text": "और ये रही surface: एक ellipsoid of revolution, x-axis के साथ खिंचा एक prolate spheroid। इसका semi-axis x के साथ six और उस पार root eleven, foci plus और minus five पर बैठते हैं, और सचमुच b squared equals a squared minus c squared, thirty-six minus twenty-five is eleven।"
+            },
+            {
+              "seq": 9,
+              "text": "Rigour का सबक़: double radical को दो careful squaring rounds में मरना होगा, हर बार ठीक एक root isolate करके। पूरे sum को एक move में square करना इस problem पर standard wreck है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "tips",
+      "subtopic": "Applications: Centroid, Collinearity & Locus",
+      "title": "Pitfalls and the pro-move for applications",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Application pitfalls and pro-moves"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "Declaring collinearity from one coordinate is the top error — confirm k across y and z."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 15,
+          "text": "Centroid ÷3 (triangle) or ÷4 (tetrahedron); midpoint ÷2; incentre = weighted."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "text": "Reverse centroid: 'sum of vertices $= 3G$', not $G$ — keep the ×3."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 31,
+          "text": "Two POINTS equidistant is linear (plane); ONE point distance is quadratic (sphere)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "text": "For sum-of-distances, isolate and square one radical at a time."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "style": "red-margin",
+          "text": "Figure type: all sides equal = rhombus; equal diagonals = rectangle; both = square."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "Pro-move: 'collinear / what ratio' → solve k from one coordinate, verify the other two."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us close the chapter's teaching with the pitfalls specific to these applications and the pro-moves that make them fast."
+            },
+            {
+              "seq": 2,
+              "text": "The number one error, already flagged, bears repeating: declaring three points collinear after matching just one coordinate. Always confirm the same k works across y and z before you commit."
+            },
+            {
+              "seq": 3,
+              "text": "Second, keep your averages straight. The centroid divides by three for a triangle, or four for a tetrahedron; the midpoint divides by two; and the incentre is a weighted average, not a plain one. Do not average the incentre."
+            },
+            {
+              "seq": 4,
+              "text": "Third, the reverse centroid slip we saw: the sum of the vertices equals three times the centroid, not the centroid itself. Whenever you go backwards, keep that factor of three."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, know which locus you are in before you compute. Equidistant from two points is a linear condition and gives a plane; a fixed distance from one point is quadratic and gives a sphere. Mixing them up sends you to the wrong surface."
+            },
+            {
+              "seq": 6,
+              "text": "Fifth, for any sum-of-distances locus, isolate and square just one radical at a time. Never square the whole sum at once."
+            },
+            {
+              "seq": 7,
+              "text": "And a handy figure-type shortcut for quadrilaterals: all four sides equal means a rhombus, equal diagonals means a rectangle, and both together means a square. Compute the four sides and two diagonals once and read it off."
+            },
+            {
+              "seq": 8,
+              "text": "Finally the pro-move that ties the subtopic together. For any are-these-collinear or what-ratio question, solve k from a single coordinate, then verify it on the other two. It is faster than three distance computations and hands you the ratio for free."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो chapter की teaching को इन applications की ख़ास pitfalls और उन्हें fast बनाने वाले pro-moves से बंद करें।"
+            },
+            {
+              "seq": 2,
+              "text": "नंबर एक गलती, पहले flag की, दोहराने लायक़ है: सिर्फ़ एक coordinate match करके तीन points को collinear घोषित करना। Commit करने से पहले हमेशा confirm करो कि वही k, y और z के लिए काम करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी, अपने averages सीधे रखो। Centroid triangle के लिए तीन से भाग करता है, या tetrahedron के लिए चार; midpoint दो से; और incentre एक weighted average है, plain नहीं। Incentre को average मत करो।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरी, reverse centroid slip जो हमने देखी: vertices का sum centroid के तीन गुना के बराबर है, ख़ुद centroid नहीं। जब भी उल्टा जाओ, वो factor of three रखो।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथी, compute करने से पहले जानो तुम किस locus में हो। दो points से equidistant एक linear condition है और plane देती है; एक point से fixed distance quadratic है और sphere देती है। इन्हें गड्डमड्ड करना तुम्हें गलत surface पर भेज देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवीं, किसी भी sum-of-distances locus के लिए, एक बार में सिर्फ़ एक radical isolate करके square करो। पूरे sum को एक साथ कभी square मत करो।"
+            },
+            {
+              "seq": 7,
+              "text": "और quadrilaterals के लिए एक काम का figure-type shortcut: चारों sides बराबर मतलब rhombus, equal diagonals मतलब rectangle, और दोनों साथ मतलब square। चारों sides और दोनों diagonals एक बार निकालो और पढ़ लो।"
+            },
+            {
+              "seq": 8,
+              "text": "आख़िर में वो pro-move जो subtopic को जोड़ देती है। किसी भी collinear या what-ratio सवाल के लिए, एक single coordinate से k solve करो, फिर बाक़ी दो पर verify करो। ये तीन distance computations से तेज़ है और ratio मुफ़्त में देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Review",
+      "title": "Complete formula recap — Chapter 11",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Your complete Chapter 11 toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "XY\\!:z=0,\\ \\ YZ\\!:x=0,\\ \\ ZX\\!:y=0 \\qquad \\text{octants}=2^3=8"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "latex": "PQ=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "latex": "\\text{internal }m\\!:\\!n=\\left(\\frac{mx_2+nx_1}{m+n},\\ \\frac{my_2+ny_1}{m+n},\\ \\frac{mz_2+nz_1}{m+n}\\right)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "latex": "\\text{external: } m-n \\text{ denominators};\\quad M=\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2},\\frac{z_1+z_2}{2}\\right)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "latex": "G=\\left(\\frac{x_1+x_2+x_3}{3},\\frac{y_1+y_2+y_3}{3},\\frac{z_1+z_2+z_3}{3}\\right)\\quad(\\text{tetra: }\\div 4)"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "\\text{sphere: }(x-a)^2+(y-b)^2+(z-c)^2=r^2"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "latex": "\\text{ellipsoid: } \\frac{x^2}{a^2}+\\frac{y^2}{b^2}+\\frac{z^2}{b^2}=1,\\ \\ b^2=a^2-c^2"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Reflections: plane 1, axis 2, origin 3. Equidistant: 2 points → plane, 1 point → sphere."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is your complete toolkit for Chapter eleven, everything on one board. This is a recap, so I will restate each item, not re-derive it."
+            },
+            {
+              "seq": 2,
+              "text": "From Subtopic one: the three coordinate planes are z equals zero, x equals zero, and y equals zero, and three perpendicular planes cut space into two cubed, eight octants."
+            },
+            {
+              "seq": 3,
+              "text": "The distance between two points is the square root of the summed squared coordinate differences. Your most-used single formula."
+            },
+            {
+              "seq": 4,
+              "text": "Internal section in m to n: each coordinate is m times the far point plus n times the near point, over m plus n."
+            },
+            {
+              "seq": 5,
+              "text": "External section is the same with m minus n denominators and minus signs; and the midpoint is just the one-to-one case, the average of the endpoints."
+            },
+            {
+              "seq": 6,
+              "text": "The triangle centroid is the plain average of its three vertices; for a tetrahedron, average four and divide by four."
+            },
+            {
+              "seq": 7,
+              "text": "The sphere: points at distance r from a centre a, b, c, in the standard squared form equal to r squared."
+            },
+            {
+              "seq": 8,
+              "text": "And the ellipsoid from a constant sum of distances, with b squared equals a squared minus c squared linking its axes to the foci."
+            },
+            {
+              "seq": 9,
+              "text": "Two quick reminders in the margin. Reflections flip one sign for a plane, two for an axis, three for the origin. And for locus: equidistant from two points is a plane, a fixed distance from one point is a sphere."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा Chapter eleven के लिए तुम्हारा पूरा toolkit, सब एक board पर। ये recap है, तो मैं हर item restate करूँगा, फिर से derive नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "Subtopic one से: तीन coordinate planes हैं z equals zero, x equals zero, और y equals zero, और तीन perpendicular planes space को two cubed, आठ octants में काटते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "दो points के बीच distance है summed squared coordinate differences का square root। तुम्हारी सबसे ज़्यादा use होने वाली single formula।"
+            },
+            {
+              "seq": 4,
+              "text": "Internal section m to n में: हर coordinate है m times far point plus n times near point, over m plus n।"
+            },
+            {
+              "seq": 5,
+              "text": "External section वही है m minus n denominators और minus signs के साथ; और midpoint बस one-to-one case है, endpoints का average।"
+            },
+            {
+              "seq": 6,
+              "text": "Triangle centroid उसके तीन vertices का plain average है; tetrahedron के लिए, चार को average करके चार से भाग।"
+            },
+            {
+              "seq": 7,
+              "text": "Sphere: centre a, b, c से distance r पर points, standard squared form में equal to r squared।"
+            },
+            {
+              "seq": 8,
+              "text": "और distances के constant sum से ellipsoid, b squared equals a squared minus c squared के साथ जो उसकी axes को foci से जोड़ती है।"
+            },
+            {
+              "seq": 9,
+              "text": "Margin में दो जल्दी reminders। Reflections plane के लिए एक sign flip करती हैं, axis के लिए दो, origin के लिए तीन। और locus के लिए: दो points से equidistant एक plane है, एक point से fixed distance एक sphere।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Review",
+      "title": "Chapter 11 cheat sheet",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Chapter 11 quick-recall cheat sheet"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "3 axes, 3 planes, 8 octants. Planes: $XY\\!:z=0$, $YZ\\!:x=0$, $ZX\\!:y=0$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "Coordinates = signed perpendicular distances; distance from a plane $= |x|,|y|,|z|$."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "caption": "Octant signs (NCERT convention)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 170\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"10\" width=\"404\" height=\"32\" fill=\"#023047\" opacity=\"0.9\"/><rect x=\"8\" y=\"42\" width=\"404\" height=\"112\" fill=\"#f5f7fa\" stroke=\"#ccc\"/><text x=\"22\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#023047\">x</text><text x=\"22\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#023047\">y</text><text x=\"22\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#023047\">z</text><text x=\"16\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\">Oct</text><text x=\"70\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">I</text><text x=\"115\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">II</text><text x=\"160\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">III</text><text x=\"205\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">IV</text><text x=\"250\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">V</text><text x=\"295\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">VI</text><text x=\"340\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">VII</text><text x=\"385\" y=\"31\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#ffffff\" text-anchor=\"middle\">VIII</text><text x=\"70\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"70\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"70\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"115\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"115\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"115\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"160\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"160\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"160\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"205\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"205\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"205\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"250\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"250\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"250\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"295\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"295\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"295\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"340\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"340\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"340\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"385\" y=\"75\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">+</text><text x=\"385\" y=\"110\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><text x=\"385\" y=\"145\" font-size=\"14\" font-family=\"system-ui, sans-serif\" text-anchor=\"middle\">&#8722;</text><line x1=\"45\" y1=\"42\" x2=\"45\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"92\" y1=\"42\" x2=\"92\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"137\" y1=\"42\" x2=\"137\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"182\" y1=\"42\" x2=\"182\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"227\" y1=\"42\" x2=\"227\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"272\" y1=\"42\" x2=\"272\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"317\" y1=\"42\" x2=\"317\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/><line x1=\"362\" y1=\"42\" x2=\"362\" y2=\"154\" stroke=\"#ddd\" stroke-width=\"1\"/></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Reflections: plane 1 flip, axis 2, origin 3."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Distance $=\\sqrt{\\Delta x^2+\\Delta y^2+\\Delta z^2}$; section: INT adds, EXT subtracts; use $k:1$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "Centroid = plain average (÷3); tetrahedron ÷4; incentre = weighted average."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "Collinear $\\iff$ one ratio $k:1$ fits x, y, z together, or $AB+BC=AC$."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 68,
+          "style": "red-margin",
+          "text": "Locus: two points → plane; distance r → sphere; constant sum → ellipsoid."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Finally, the one-screen cheat sheet for the whole chapter, the things to glance at the night before the exam."
+            },
+            {
+              "seq": 2,
+              "text": "The frame: three axes, three planes, eight octants. The plane equations are z equals zero, x equals zero, and y equals zero."
+            },
+            {
+              "seq": 3,
+              "text": "Each coordinate is a signed perpendicular distance from a plane, and the actual distance from a plane is the absolute value of that coordinate."
+            },
+            {
+              "seq": 4,
+              "text": "Keep the octant sign table in view; it answers every octant question in one glance."
+            },
+            {
+              "seq": 5,
+              "text": "Reflections by flip count: a plane flips one sign, an axis two, the origin three."
+            },
+            {
+              "seq": 6,
+              "text": "The distance formula is the root of the summed squared differences. For section problems, internal adds and external subtracts, and the k to one form handles every ratio question."
+            },
+            {
+              "seq": 7,
+              "text": "The centroid is a plain average, dividing by three for a triangle or four for a tetrahedron, while the incentre is a weighted average by side lengths."
+            },
+            {
+              "seq": 8,
+              "text": "Collinear means one ratio k to one fits x, y, and z together, or equivalently A B plus B C equals A C."
+            },
+            {
+              "seq": 9,
+              "text": "And the locus family: equidistant from two points gives a plane, a fixed distance from one point gives a sphere, and a constant sum of two distances gives an ellipsoid. That is the whole chapter on one card."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िर में, पूरे chapter की one-screen cheat sheet, exam से एक रात पहले नज़र डालने वाली चीज़ें।"
+            },
+            {
+              "seq": 2,
+              "text": "Frame: तीन axes, तीन planes, आठ octants। Plane equations हैं z equals zero, x equals zero, और y equals zero।"
+            },
+            {
+              "seq": 3,
+              "text": "हर coordinate किसी plane से एक signed perpendicular distance है, और plane से असली distance उस coordinate का absolute value है।"
+            },
+            {
+              "seq": 4,
+              "text": "Octant sign table नज़र में रखो; ये हर octant सवाल एक नज़र में जवाब दे देती है।"
+            },
+            {
+              "seq": 5,
+              "text": "Reflections flip count से: plane एक sign flip करता है, axis दो, origin तीन।"
+            },
+            {
+              "seq": 6,
+              "text": "Distance formula है summed squared differences का root। Section problems के लिए, internal adds और external subtracts, और k to one form हर ratio सवाल संभालता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Centroid एक plain average है, triangle के लिए तीन से भाग या tetrahedron के लिए चार, जबकि incentre side lengths से weighted average है।"
+            },
+            {
+              "seq": 8,
+              "text": "Collinear मतलब एक ratio k to one, x, y, और z तीनों पर fit हो, या समान रूप से A B plus B C equals A C।"
+            },
+            {
+              "seq": 9,
+              "text": "और locus family: दो points से equidistant plane देता है, एक point से fixed distance sphere देता है, और दो distances का constant sum ellipsoid देता है। यही पूरा chapter एक card पर।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

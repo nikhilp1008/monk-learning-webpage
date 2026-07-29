@@ -1,0 +1,2027 @@
+{
+  "chapter": "Sequences and Series",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 8,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "GP - Concept",
+      "title": "A GP is repeated multiplication — the chessboard",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Geometric progression: multiply by a fixed factor, over and over"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "Grains double each square: a GP with a = 1, r = 2",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 150\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"95\" width=\"34\" height=\"34\" fill=\"#fef3c7\" stroke=\"#d97706\"/>\n  <rect x=\"60\" y=\"95\" width=\"34\" height=\"34\" fill=\"#fde68a\" stroke=\"#d97706\"/>\n  <rect x=\"100\" y=\"95\" width=\"34\" height=\"34\" fill=\"#fcd34d\" stroke=\"#d97706\"/>\n  <rect x=\"140\" y=\"95\" width=\"34\" height=\"34\" fill=\"#fbbf24\" stroke=\"#d97706\"/>\n  <rect x=\"180\" y=\"95\" width=\"34\" height=\"34\" fill=\"#f59e0b\" stroke=\"#b45309\"/>\n  <text x=\"37\" y=\"117\" text-anchor=\"middle\" font-size=\"13\" fill=\"#7c2d12\">1</text>\n  <text x=\"77\" y=\"117\" text-anchor=\"middle\" font-size=\"13\" fill=\"#7c2d12\">2</text>\n  <text x=\"117\" y=\"117\" text-anchor=\"middle\" font-size=\"13\" fill=\"#7c2d12\">4</text>\n  <text x=\"157\" y=\"117\" text-anchor=\"middle\" font-size=\"13\" fill=\"#7c2d12\">8</text>\n  <text x=\"197\" y=\"117\" text-anchor=\"middle\" font-size=\"13\" fill=\"#78350f\">16</text>\n  <text x=\"245\" y=\"117\" font-size=\"18\" fill=\"#475569\">→ …</text>\n  <text x=\"290\" y=\"117\" font-size=\"15\" fill=\"#b91c1c\">2⁶³ on square 64</text>\n  <text x=\"20\" y=\"40\" font-size=\"15\" fill=\"#1e293b\">a = 1, r = 2 : doubling detonates</text>\n  <text x=\"20\" y=\"62\" font-size=\"13\" fill=\"#64748b\">total = 2⁶⁴ − 1 ≈ 1.8 × 10¹⁹ grains</text>\n</svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "text": "The defining property: the RATIO between consecutive terms never changes."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 25,
+          "latex": "r = \\frac{a_2}{a_1} = \\frac{a_3}{a_2} = \\cdots = \\frac{a_k}{a_{k-1}}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Compound interest, depreciation, viral spread — all everyday GPs."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "style": "red-margin",
+          "text": "A GP is 'exponential': $\\log a_n$ plots as a straight line."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "$r > 1$: explosive growth. $0 < r < 1$: decay. $r < 0$: alternating signs."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "An infinite AP always diverges; an infinite GP converges iff $|r| < 1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the multiplicative twin of the AP. A geometric progression is the mathematics of repeated multiplication — of things that scale rather than step."
+            },
+            {
+              "seq": 2,
+              "text": "The classic Indian anchor is the chessboard: one grain on the first square, two on the second, four on the third, doubling all the way. That is a GP with first term one and ratio two, and the total exceeds all the wheat that ever existed."
+            },
+            {
+              "seq": 3,
+              "text": "That is the whole intuition — geometric growth feels tiny at the start and detonates at the end. The defining property is that the ratio between consecutive terms never changes."
+            },
+            {
+              "seq": 4,
+              "text": "Written out, r equals a-two over a-one, equals a-three over a-two, and so on. Every consecutive pair is scaled by the same factor r."
+            },
+            {
+              "seq": 5,
+              "text": "These are everywhere: compound interest growing your money, a bike depreciating in value, a rumour spreading through a class. All of them multiply by a fixed factor each period."
+            },
+            {
+              "seq": 6,
+              "text": "The deep idea, mirroring the AP's linearity, is that a GP is exponential. Plot the log of the terms and you get a perfectly straight line — which is exactly why logs turn a GP into an AP."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> The sign of r changes the personality completely. r above one gives explosive growth, r between zero and one gives decay toward zero, and a negative r makes the terms flip sign, alternating up and down."
+            },
+            {
+              "seq": 8,
+              "text": "And here is the single most important structural contrast with the AP: an infinite AP always runs off to infinity, but an infinite GP settles to a finite sum exactly when the size of r is below one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब AP का multiplicative twin। एक geometric progression वही गणित है जिसमें बार-बार multiplication होता है — उन चीज़ों का जो step नहीं, scale करती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "classic Indian anchor है chessboard: पहले square पर एक grain, दूसरे पर दो, तीसरे पर चार, ऐसे ही doubling। यह एक GP है first term one और ratio two के साथ, और total दुनिया के सारे गेहूँ से ज़्यादा हो जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "यही पूरा intuition है — geometric growth शुरू में छोटी लगती है और अंत में detonate करती है। defining property यह है कि consecutive terms के बीच ratio कभी नहीं बदलता।"
+            },
+            {
+              "seq": 4,
+              "text": "लिखने पर, r equals a-two over a-one, equals a-three over a-two, और इसी तरह। हर consecutive pair same factor r से scale होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "ये हर जगह हैं: compound interest तुम्हारे पैसे बढ़ाता, एक bike की value depreciate होती, एक अफ़वाह class में फैलती। सब हर period में एक fixed factor से multiply करते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "deep idea, AP की linearity को mirror करता हुआ, यह है कि GP exponential है। terms का log plot करो और तुम्हें एक बिलकुल straight line मिलती है — यही वजह है कि logs एक GP को AP में बदल देते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> r का sign personality पूरी तरह बदल देता है। r one से ऊपर explosive growth देता है, r zero और one के बीच zero की तरफ़ decay, और negative r terms को sign flip कराता है, ऊपर-नीचे alternate।"
+            },
+            {
+              "seq": 8,
+              "text": "और यह रहा AP से सबसे ज़रूरी structural contrast: infinite AP हमेशा infinity की तरफ़ भागती है, पर infinite GP तभी finite sum पर बैठती है जब r की size one से नीचे हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "GP - Derivations",
+      "title": "nth term and the sum: multiply-by-r and subtract",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two named results: the nth term and the sum of n terms"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Each term is the previous times $r$, so telescoping the products gives:"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 15,
+          "latex": "a_n = a\\,r^{\\,n-1}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "text": "For the sum, write $S_n$, then multiply the whole line by $r$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "latex": "S_n - rS_n = a - a r^{\\,n}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 39,
+          "latex": "S_n = \\frac{a(1 - r^{\\,n})}{1 - r} = \\frac{a(r^{\\,n} - 1)}{r - 1} \\quad (r \\ne 1)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "style": "red-margin",
+          "text": "If $r = 1$ every term is $a$, so $S_n = na$ — never divide by zero."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "Interior terms cancel: only the first of one line and the last of the other survive."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's build the two named GP results, both board-derivable. The nth term first, and it mirrors the AP derivation exactly, just with multiplication instead of addition."
+            },
+            {
+              "seq": 2,
+              "text": "Each term is the previous one times r: a-two is a r, a-three is a r squared, and so on. Telescoping those multiplications collapses everything to a single clean expression."
+            },
+            {
+              "seq": 3,
+              "text": "The result is a sub n equals a times r to the n minus one. That is the workhorse of the whole unit."
+            },
+            {
+              "seq": 4,
+              "text": "For the sum we use the signature trick. Write out S sub n as a plus a r plus a r squared, and so on, then multiply that entire line by r."
+            },
+            {
+              "seq": 5,
+              "text": "Now subtract the multiplied line from the original. Every interior term matches and cancels, leaving only a on one side and a times r to the n on the other, so S sub n minus r S sub n equals a minus a r to the n."
+            },
+            {
+              "seq": 6,
+              "text": "Factor and divide: S sub n equals a times one minus r to the n, over one minus r. Multiplying top and bottom by minus one gives the equivalent r-to-the-n minus one over r minus one form."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> But guard the denominator. If r equals one, that formula divides by zero, and the true answer is simply n times a, since every term is just a."
+            },
+            {
+              "seq": 8,
+              "text": "The elegance is the same as Gauss's reversal: shifting by one position makes the middle vanish, and only the endpoints of the two lines survive."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो दो named GP results बनाएँ, दोनों board-derivable। पहले nth term, और यह AP derivation को बिलकुल mirror करता है, बस addition की जगह multiplication के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "हर term पिछले का r times है: a-two है a r, a-three है a r squared, और इसी तरह। उन multiplications को telescope करने पर सब कुछ एक clean expression में सिमट जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "result है a sub n equals a times r to the n minus one। यही पूरे unit का workhorse है।"
+            },
+            {
+              "seq": 4,
+              "text": "sum के लिए हम signature trick use करते हैं। S sub n को a plus a r plus a r squared, वगैरह लिखो, फिर उस पूरी line को r से multiply करो।"
+            },
+            {
+              "seq": 5,
+              "text": "अब multiplied line को original से subtract करो। हर interior term match होकर cancel हो जाता है, बचता है एक तरफ़ a और दूसरी तरफ़ a times r to the n, तो S sub n minus r S sub n equals a minus a r to the n।"
+            },
+            {
+              "seq": 6,
+              "text": "factor करके divide करो: S sub n equals a times one minus r to the n, over one minus r। ऊपर-नीचे minus one से multiply करने पर equivalent r-to-the-n minus one over r minus one form मिलता है।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> पर denominator को guard करो। अगर r equals one, तो वो formula zero से divide करता है, और असली answer बस n times a है, क्योंकि हर term सिर्फ़ a है।"
+            },
+            {
+              "seq": 8,
+              "text": "elegance वही है जो Gauss की reversal में थी: एक position shift करने से middle गायब हो जाता है, और सिर्फ़ दोनों lines के endpoints बचते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "GP - Derivations",
+      "title": "Sum to infinity, and why AM ≥ GM",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The convergence condition, proved"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "S_n = \\frac{a}{1 - r} - \\frac{a\\,r^{\\,n}}{1 - r}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "text": "When $|r| < 1$, each multiplication shrinks $r^{\\,n}$ toward 0."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "S_\\infty = \\lim_{n\\to\\infty} S_n = \\frac{a}{1 - r} \\quad (|r| < 1)"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "If $|r| \\ge 1$, $r^{\\,n}$ never vanishes — the sum diverges. This IS the proof."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "A second pillar: for positive reals, $(\\sqrt{a} - \\sqrt{b})^2 \\ge 0$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\frac{a + b}{2} \\ge \\sqrt{ab}, \\quad \\text{equality iff } a = b"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "This chains further: AM ≥ GM ≥ HM, with $AM \\times HM = GM^2$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the result that separates a GP from an AP — the sum to infinity, and the proof of exactly when it exists."
+            },
+            {
+              "seq": 2,
+              "text": "Rewrite the finite sum by splitting the fraction: S sub n equals a over one minus r, minus a times r to the n over one minus r. The first piece is fixed; the second carries all the dependence on n."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the whole argument. When the size of r is below one, every extra multiplication shrinks r to the n further, driving that second piece toward zero."
+            },
+            {
+              "seq": 4,
+              "text": "So in the limit, S sub n settles down to just a over one minus r. That is the celebrated sum-to-infinity formula, valid precisely when the size of r is under one."
+            },
+            {
+              "seq": 5,
+              "text": "<whisper> And this is not a side remark — it is the proof. If the size of r is one or more, r to the n never dies away, the limit fails, and the sum genuinely diverges. That is why the condition exists."
+            },
+            {
+              "seq": 6,
+              "text": "Let me also plant a second pillar we'll lean on constantly: the arithmetic-mean geometric-mean inequality. It follows from one clean fact — the square of root a minus root b is never negative."
+            },
+            {
+              "seq": 7,
+              "text": "Expand that square and rearrange, and you get a plus b over two is at least root a b — the arithmetic mean is never below the geometric mean, with equality only when a equals b."
+            },
+            {
+              "seq": 8,
+              "text": "This chain extends all the way: arithmetic mean is at least geometric mean is at least harmonic mean, and beautifully, the arithmetic mean times the harmonic mean equals the geometric mean squared."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब वो result जो GP को AP से अलग करता है — sum to infinity, और उसका proof कि यह exactly कब exist करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "finite sum को fraction split करके फिर से लिखो: S sub n equals a over one minus r, minus a times r to the n over one minus r। पहला piece fixed है; दूसरा n पर पूरी dependence रखता है।"
+            },
+            {
+              "seq": 3,
+              "text": "यह रहा पूरा argument। जब r की size one से नीचे हो, हर extra multiplication r to the n को और छोटा करती है, उस दूसरे piece को zero की तरफ़ धकेलती है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो limit में, S sub n बस a over one minus r पर बैठ जाता है। यही celebrated sum-to-infinity formula है, exactly तब valid जब r की size one से कम हो।"
+            },
+            {
+              "seq": 5,
+              "text": "<whisper> और यह कोई side remark नहीं — यही proof है। अगर r की size one या ज़्यादा हो, r to the n कभी नहीं मरता, limit fail हो जाती है, और sum सच में diverge करता है। इसीलिए यह condition है।"
+            },
+            {
+              "seq": 6,
+              "text": "एक दूसरा pillar भी बो देता हूँ जिस पर हम लगातार टिकेंगे: arithmetic-mean geometric-mean inequality। यह एक clean fact से निकलता है — root a minus root b का square कभी negative नहीं होता।"
+            },
+            {
+              "seq": 7,
+              "text": "उस square को expand करके rearrange करो, और मिलता है a plus b over two कम से कम root a b है — arithmetic mean कभी geometric mean से नीचे नहीं, equality सिर्फ़ तब जब a equals b।"
+            },
+            {
+              "seq": 8,
+              "text": "यह chain पूरी तरह आगे बढ़ती है: arithmetic mean कम से कम geometric mean कम से कम harmonic mean, और खूबसूरती से, arithmetic mean times harmonic mean equals geometric mean squared।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "GP - Core Formulas",
+      "title": "The GP core formula set",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "First term $a \\ne 0$, ratio $r \\ne 0$: the core set"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "a_n = a\\,r^{\\,n-1}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "a'_n = \\frac{l}{r^{\\,n-1}} \\quad (\\text{nth term from the end})"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "S_n = \\frac{a(r^{\\,n} - 1)}{r - 1} = \\frac{a(1 - r^{\\,n})}{1 - r} \\quad (r \\ne 1)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "S_\\infty = \\frac{a}{1 - r} \\quad (|r| < 1)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Never write $S_\\infty = \\tfrac{a}{1-r}$ without checking $|r| < 1$ first."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "No term is ever zero, and $r \\ne 0$: a GP cannot contain 0."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "$r < 0$ ⇒ terms alternate in sign — neither increasing nor decreasing."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the GP formulas you'll reach for constantly. Two standing conditions frame them all: the first term is nonzero, and the ratio is nonzero."
+            },
+            {
+              "seq": 2,
+              "text": "The nth term is a times r to the n minus one — the exponential heartbeat of the whole unit."
+            },
+            {
+              "seq": 3,
+              "text": "Counting from the far end instead, the nth term from the end is the last term l divided by r to the n minus one — the same structure walked backwards."
+            },
+            {
+              "seq": 4,
+              "text": "The sum of n terms is a times r to the n minus one, over r minus one — or equivalently a times one minus r to the n, over one minus r. Pick whichever keeps your denominator positive."
+            },
+            {
+              "seq": 5,
+              "text": "And the crown jewel: the sum to infinity is a over one minus r, but only when the size of r is below one."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> Let me say the deadliest error out loud once. Never write the sum-to-infinity formula without first checking that the size of r is under one. It is the chapter's most punished slip."
+            },
+            {
+              "seq": 7,
+              "text": "Two structural facts to keep close. No term of a GP is ever zero, and the ratio is never zero — if your algebra forces a term to zero, an assumption was wrong."
+            },
+            {
+              "seq": 8,
+              "text": "And when the ratio is negative, the terms flip sign each step, so the sequence is neither increasing nor decreasing. Never silently assume the ratio is positive."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो GP formulas consolidate करें जिन्हें तुम लगातार reach करोगे। दो standing conditions इन सबको frame करती हैं: first term nonzero है, और ratio nonzero है।"
+            },
+            {
+              "seq": 2,
+              "text": "nth term है a times r to the n minus one — पूरे unit की exponential heartbeat।"
+            },
+            {
+              "seq": 3,
+              "text": "far end से गिनने पर, end से nth term है last term l divided by r to the n minus one — same structure, उल्टा चलते हुए।"
+            },
+            {
+              "seq": 4,
+              "text": "n terms का sum है a times r to the n minus one, over r minus one — या equivalently a times one minus r to the n, over one minus r। वो चुनो जो तुम्हारा denominator positive रखे।"
+            },
+            {
+              "seq": 5,
+              "text": "और crown jewel: sum to infinity है a over one minus r, पर सिर्फ़ तब जब r की size one से नीचे हो।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> सबसे deadly error एक बार ज़ोर से कह दूँ। sum-to-infinity formula कभी मत लिखो बिना पहले check किए कि r की size one से कम है। यह chapter का सबसे ज़्यादा punish होने वाला slip है।"
+            },
+            {
+              "seq": 7,
+              "text": "दो structural facts पास रखो। GP का कोई term कभी zero नहीं होता, और ratio कभी zero नहीं — अगर तुम्हारा algebra किसी term को zero पर मजबूर करे, तो कोई assumption गलत थी।"
+            },
+            {
+              "seq": 8,
+              "text": "और जब ratio negative हो, terms हर step sign flip करते हैं, तो sequence न increasing है न decreasing। चुपके से यह मत मानो कि ratio positive है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "formulas",
+      "subtopic": "GP - Means and Inequality",
+      "title": "Geometric mean, inserting GMs, and AM–GM",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The geometric mean and the mean inequalities"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "a,\\,b,\\,c \\text{ in GP} \\iff b^2 = ac \\iff b = \\pm\\sqrt{ac}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "For two positive numbers, the single GM is $\\sqrt{ab}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "n \\text{ GMs between } a,b:\\;\\; r = \\left(\\tfrac{b}{a}\\right)^{1/(n+1)}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\prod_{k=1}^{n} G_k = \\left(\\sqrt{ab}\\,\\right)^n = (\\text{single GM})^n"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\frac{a_1 + \\cdots + a_n}{n} \\ge (a_1 a_2 \\cdots a_n)^{1/n}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "GM sign: $b = \\pm\\sqrt{ac}$ — pick the sign that keeps a genuine GP; need $ac > 0$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Logs turn a GP into an AP: $a,b,c$ in GP ⟺ $\\log a, \\log b, \\log c$ in AP."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the geometric mean and the inequalities that power every optimisation problem in the chapter."
+            },
+            {
+              "seq": 2,
+              "text": "If a, b, c are in GP, the middle term is the geometric mean of the outer two: b squared equals a c, so b is plus or minus the square root of a c."
+            },
+            {
+              "seq": 3,
+              "text": "For two positive numbers there is a single clean geometric mean, the square root of a b."
+            },
+            {
+              "seq": 4,
+              "text": "To insert n geometric means between a and b, the common ratio of the extended GP is b over a, raised to the power one over n plus one."
+            },
+            {
+              "seq": 5,
+              "text": "There is a lovely product rule for those means: the product of all n geometric means equals the single geometric mean raised to the n-th power — the multiplicative echo of the AP's sum-of-means rule."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> And here is the workhorse inequality: for positive reals the arithmetic mean is always at least the geometric mean, with equality only when every number is equal. This one line settles a huge fraction of Advanced optimisation problems."
+            },
+            {
+              "seq": 7,
+              "text": "Handle the geometric-mean sign with care. It is plus or minus the root of a c, and you pick the sign that keeps the three terms a genuine GP — and for a real mean you also need a c positive, meaning same-sign endpoints."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, the bridge you'll use again and again: taking logs turns a GP into an AP, because if a, b, c multiply geometrically, their logs step arithmetically."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब geometric mean और वो inequalities जो chapter के हर optimisation problem को चलाती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "अगर a, b, c GP में हैं, तो middle term outer दोनों का geometric mean है: b squared equals a c, तो b है plus or minus square root of a c।"
+            },
+            {
+              "seq": 3,
+              "text": "दो positive numbers के लिए एक single clean geometric mean है, square root of a b।"
+            },
+            {
+              "seq": 4,
+              "text": "a और b के बीच n geometric means insert करने के लिए, extended GP का common ratio है b over a, को power one over n plus one पर उठाया हुआ।"
+            },
+            {
+              "seq": 5,
+              "text": "उन means के लिए एक प्यारा product rule है: सभी n geometric means का product single geometric mean को n-th power पर उठाने के बराबर है — AP के sum-of-means rule की multiplicative गूँज।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> और यह रही workhorse inequality: positive reals के लिए arithmetic mean हमेशा कम से कम geometric mean होता है, equality सिर्फ़ तब जब हर number बराबर हो। यह एक line Advanced optimisation problems का बड़ा हिस्सा सुलझा देती है।"
+            },
+            {
+              "seq": 7,
+              "text": "geometric-mean sign को ध्यान से handle करो। यह plus or minus root of a c है, और तुम वो sign चुनते हो जो तीनों terms को genuine GP रखे — और real mean के लिए तुम्हें a c positive भी चाहिए, यानी same-sign endpoints।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिर में, वो bridge जिसे तुम बार-बार use करोगे: logs लेने से GP एक AP में बदल जाती है, क्योंकि अगर a, b, c geometrically multiply करते हैं, तो उनके logs arithmetically step करते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "GP - Technique",
+      "title": "Symmetric selection for products",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "When a PRODUCT is given, pick terms symmetrically"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "Three symmetric GP terms multiply to a³ — r cancels",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 460 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"30\" y1=\"75\" x2=\"430\" y2=\"75\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <circle cx=\"95\" cy=\"75\" r=\"5\" fill=\"#4f46e5\"/><circle cx=\"205\" cy=\"75\" r=\"6\" fill=\"#b91c1c\"/><circle cx=\"315\" cy=\"75\" r=\"5\" fill=\"#4f46e5\"/>\n  <text x=\"95\" y=\"60\" text-anchor=\"middle\" font-size=\"15\" fill=\"#3730a3\">a / r</text>\n  <text x=\"205\" y=\"56\" text-anchor=\"middle\" font-size=\"16\" fill=\"#b91c1c\">a</text>\n  <text x=\"315\" y=\"60\" text-anchor=\"middle\" font-size=\"15\" fill=\"#3730a3\">a r</text>\n  <text x=\"150\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" fill=\"#64748b\">× r</text>\n  <text x=\"260\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" fill=\"#64748b\">× r</text>\n  <text x=\"205\" y=\"128\" text-anchor=\"middle\" font-size=\"13\" fill=\"#0f766e\">product = a³  (the r's cancel)</text>\n</svg>"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "3 \\text{ terms: } \\frac{a}{r},\\; a,\\; a r \\quad (\\text{product} = a^3)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "latex": "5 \\text{ terms: } \\frac{a}{r^2},\\, \\frac{a}{r},\\, a,\\, a r,\\, a r^2 \\quad (\\text{product} = a^5)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "latex": "4 \\text{ terms: } \\frac{a}{r^3},\\, \\frac{a}{r},\\, a r,\\, a r^3 \\quad (\\text{ratio} = r^2)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "text": "This collapses two unknowns to one, exactly like the AP's symmetric pick."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Even count uses ratio $r^2$, NOT $r$ — the GP analogue of the AP's '2d' trap."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This technique is the GP twin of the AP's symmetric selection, and it turns product problems into one-line algebra."
+            },
+            {
+              "seq": 2,
+              "text": "The picture on the board says it all: place terms as a over r, a, and a r, and when you multiply, the r in the denominator cancels the r on top, leaving a clean a cubed."
+            },
+            {
+              "seq": 3,
+              "text": "So for three terms in GP, always take a over r, a, a r. Their product is simply a cubed, and one unknown disappears immediately."
+            },
+            {
+              "seq": 4,
+              "text": "For five terms, extend outward with the same idea: a over r squared, a over r, a, a r, a r squared, multiplying to a to the fifth."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> Now the even case, which hides a twist worth memorising. For four terms use a over r cubed, a over r, a r, a r cubed — and notice the ratio between these symmetric terms is r squared, not r."
+            },
+            {
+              "seq": 6,
+              "text": "The payoff mirrors the AP exactly: a two-unknown product problem collapses to a single unknown the moment you switch to symmetric terms."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> And that even-count ratio is precisely where students stumble — the spacing there is r squared, the perfect analogue of the AP's two-d trap. Never carry a bare r into the even case."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह technique AP की symmetric selection की GP twin है, और यह product problems को one-line algebra में बदल देती है।"
+            },
+            {
+              "seq": 2,
+              "text": "board पर picture सब कह देती है: terms को a over r, a, और a r रखो, और जब तुम multiply करते हो, denominator का r ऊपर के r को cancel कर देता है, बचता है clean a cubed।"
+            },
+            {
+              "seq": 3,
+              "text": "तो GP में तीन terms के लिए, हमेशा a over r, a, a r लो। इनका product बस a cubed है, और एक unknown तुरंत गायब हो जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "पाँच terms के लिए, वही idea बाहर बढ़ाओ: a over r squared, a over r, a, a r, a r squared, जिनका product a to the fifth है।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> अब even case, जो memorise करने लायक एक twist छुपाए है। चार terms के लिए use करो a over r cubed, a over r, a r, a r cubed — और ध्यान दो इन symmetric terms के बीच ratio r squared है, r नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "payoff AP को बिलकुल mirror करता है: दो-unknown वाला product problem symmetric terms पर switch करते ही एक unknown में सिमट जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> और वही even-count ratio है जहाँ students लड़खड़ाते हैं — वहाँ spacing r squared है, AP के two-d trap का perfect analogue। even case में कभी bare r मत ले जाओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "GP Worked Examples",
+      "title": "Three numbers in GP from product and pairwise sum",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Product of 3 GP terms is 216; sum of pairwise products is 156. Find them."
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Take the terms symmetrically as $\\tfrac{a}{r}, a, a r$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\frac{a}{r}\\cdot a \\cdot a r = a^3 = 216 \\;\\Rightarrow\\; a = 6"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "a^2\\left(\\tfrac{1}{r} + r + 1\\right) = 156 \\;\\Rightarrow\\; \\tfrac{1}{r} + r = \\tfrac{10}{3}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "3r^2 - 10r + 3 = 0 \\;\\Rightarrow\\; (3r-1)(r-3) = 0"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "$r = 3$ or $r = \\tfrac13$ give the SAME set, just reversed."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Answer: the numbers are 2, 6, 18."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's open the GP examples with a board classic that rewards symmetric selection. The product of three GP terms is two hundred sixteen, and the sum of their pairwise products is one hundred fifty-six."
+            },
+            {
+              "seq": 2,
+              "text": "Immediately take the terms symmetrically as a over r, a, and a r — this is exactly what the technique is for."
+            },
+            {
+              "seq": 3,
+              "text": "The product is clean: a over r times a times a r is a cubed, and setting that to two hundred sixteen gives a equals six. One unknown gone."
+            },
+            {
+              "seq": 4,
+              "text": "For the pairwise products, factoring out a squared leaves a squared times one over r plus r plus one equals one hundred fifty-six, which reduces to one over r plus r equals ten thirds."
+            },
+            {
+              "seq": 5,
+              "text": "Multiply through and you get three r squared minus ten r plus three equals zero, which factors neatly as three r minus one times r minus three."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> So r is either three or one third — but notice these give the very same set of numbers, just listed in reverse order."
+            },
+            {
+              "seq": 7,
+              "text": "Either way, the three numbers are two, six, and eighteen. Symmetric selection turned a two-unknown tangle into one clean quadratic."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो GP examples एक board classic से खोलें जो symmetric selection का इनाम देता है। तीन GP terms का product two hundred sixteen है, और उनके pairwise products का sum one hundred fifty-six।"
+            },
+            {
+              "seq": 2,
+              "text": "तुरंत terms को symmetrically a over r, a, और a r लो — technique इसी के लिए है।"
+            },
+            {
+              "seq": 3,
+              "text": "product clean है: a over r times a times a r है a cubed, और इसे two hundred sixteen रखने पर a equals six मिलता है। एक unknown गया।"
+            },
+            {
+              "seq": 4,
+              "text": "pairwise products के लिए, a squared बाहर निकालने पर बचता है a squared times one over r plus r plus one equals one hundred fifty-six, जो घटकर one over r plus r equals ten thirds बनता है।"
+            },
+            {
+              "seq": 5,
+              "text": "इसे multiply करो और मिलता है three r squared minus ten r plus three equals zero, जो साफ़ factor होता है three r minus one times r minus three।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> तो r या तो three है या one third — पर ध्यान दो ये same set of numbers देते हैं, बस उल्टे order में listed।"
+            },
+            {
+              "seq": 7,
+              "text": "किसी भी तरह, तीन numbers हैं two, six, और eighteen। symmetric selection ने दो-unknown वाली उलझन को एक clean quadratic में बदल दिया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "GP Worked Examples",
+      "title": "A recurring decimal is a convergent GP",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Express 0.3̄ = 0.3333… as a fraction"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Write it as an infinite GP of place-value pieces."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac{3}{10} + \\frac{3}{100} + \\frac{3}{1000} + \\cdots"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "a = \\frac{3}{10}, \\quad r = \\frac{1}{10} \\;\\;(|r| < 1\\;\\checkmark)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "S_\\infty = \\frac{a}{1 - r} = \\frac{3/10}{9/10} = \\frac{1}{3}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "The convergence check $|r| = \\tfrac{1}{10} < 1$ is what LICENSES the formula."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Every recurring decimal is secretly a convergent GP."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example reveals a hidden GP inside something totally familiar — a repeating decimal. We want to write nought point three recurring as an exact fraction."
+            },
+            {
+              "seq": 2,
+              "text": "The trick is to break the decimal into its place-value pieces, which turns out to be an infinite geometric series."
+            },
+            {
+              "seq": 3,
+              "text": "Written out, it is three tenths plus three hundredths plus three thousandths, and so on forever — each piece one tenth of the one before."
+            },
+            {
+              "seq": 4,
+              "text": "So the first term is three tenths and the ratio is one tenth. Crucially, the size of that ratio is well below one, so the infinite sum exists."
+            },
+            {
+              "seq": 5,
+              "text": "Apply the sum-to-infinity formula: three tenths over nine tenths, which simplifies to exactly one third."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> Notice what earned us the right to use the formula — the convergence check. The ratio is one tenth, comfortably under one, and only that check licenses the whole calculation."
+            },
+            {
+              "seq": 7,
+              "text": "The takeaway is worth carrying: every recurring decimal is secretly a convergent GP, so you can always convert one to a fraction this way."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example एक बिलकुल familiar चीज़ के अंदर छुपी GP दिखाता है — एक repeating decimal। हम nought point three recurring को एक exact fraction लिखना चाहते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "trick है decimal को उसके place-value pieces में तोड़ना, जो निकलता है एक infinite geometric series।"
+            },
+            {
+              "seq": 3,
+              "text": "लिखने पर, यह है three tenths plus three hundredths plus three thousandths, और ऐसे ही हमेशा — हर piece पिछले का one tenth।"
+            },
+            {
+              "seq": 4,
+              "text": "तो first term है three tenths और ratio है one tenth। crucially, उस ratio की size one से काफ़ी नीचे है, तो infinite sum exist करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "sum-to-infinity formula apply करो: three tenths over nine tenths, जो घटकर exactly one third बनता है।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> ध्यान दो किसने हमें formula use करने का हक़ दिया — convergence check। ratio one tenth है, आराम से one के नीचे, और सिर्फ़ वही check पूरे calculation को license करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "यह takeaway साथ ले जाने लायक है: हर recurring decimal चुपके से एक convergent GP है, तो तुम हमेशा इसे इस तरह fraction में बदल सकते हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "GP Worked Examples",
+      "title": "Infinite GP: sum 2, cubes sum 24",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Infinite GP has sum 2 and its cubes sum to 24. Find a and r."
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\frac{a}{1 - r} = 2 \\;\\Rightarrow\\; a = 2(1 - r)"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The cubes form a GP with ratio $r^3$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\frac{a^3}{1 - r^3} = 24"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\frac{(1-r)^2}{1 + r + r^2} = 3 \\;\\Rightarrow\\; 2r^2 + 5r + 2 = 0"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "$(2r+1)(r+2)=0$: $|r|<1$ rejects $r = -2$, leaving $r = -\\tfrac12$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "So $r = -\\tfrac12$ and $a = 3$; check: $27 / (9/8) = 24\\;\\checkmark$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here two infinite sums pin down a GP, and the convergence condition does the final selecting. The sum of the GP is two, and the sum of the cubes of its terms is twenty-four."
+            },
+            {
+              "seq": 2,
+              "text": "From the first fact, a over one minus r equals two, so a equals two times one minus r. That is our first relation."
+            },
+            {
+              "seq": 3,
+              "text": "Now the cubes. Cubing every term produces a new GP whose ratio is r cubed, so its sum is a cubed over one minus r cubed."
+            },
+            {
+              "seq": 4,
+              "text": "Setting that equal to twenty-four and substituting a cubed equals eight times one minus r cubed, the eights and a factor of one minus r cancel down nicely."
+            },
+            {
+              "seq": 5,
+              "text": "After simplifying with the difference-of-cubes factorisation, you land on one minus r squared over one plus r plus r squared equals three, which rearranges to two r squared plus five r plus two equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> That factors as two r plus one times r plus two, giving r equals minus one half or minus two. But the convergence condition rejects minus two outright, since its size exceeds one."
+            },
+            {
+              "seq": 7,
+              "text": "So the ratio is minus one half and the first term is three. A quick check confirms it: twenty-seven over nine eighths is indeed twenty-four."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ दो infinite sums एक GP को pin करते हैं, और convergence condition final selection करती है। GP का sum two है, और उसके terms के cubes का sum twenty-four।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले fact से, a over one minus r equals two, तो a equals two times one minus r। यही हमारा पहला relation है।"
+            },
+            {
+              "seq": 3,
+              "text": "अब cubes। हर term को cube करने पर एक नई GP बनती है जिसका ratio r cubed है, तो उसका sum है a cubed over one minus r cubed।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे twenty-four के बराबर रखकर और a cubed equals eight times one minus r cubed substitute करके, eights और एक one minus r factor अच्छे से cancel हो जाते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "difference-of-cubes factorisation से simplify करने पर, तुम one minus r squared over one plus r plus r squared equals three पर पहुँचते हो, जो rearrange होकर two r squared plus five r plus two equals zero बनता है।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> यह factor होता है two r plus one times r plus two, देता है r equals minus one half या minus two। पर convergence condition minus two को सीधे reject करती है, क्योंकि उसकी size one से ज़्यादा है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो ratio है minus one half और first term three। एक quick check इसे confirm करता है: twenty-seven over nine eighths सच में twenty-four है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "GP Worked Examples",
+      "title": "Alternating signs select the ratio",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "First two GP terms sum to 12; third and fourth sum to 48; terms alternate in sign."
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "a + a r = 12, \\qquad a r^2 + a r^3 = 48"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Divide the second equation by the first."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\frac{a r^2(1 + r)}{a(1 + r)} = \\frac{48}{12} \\;\\Rightarrow\\; r^2 = 4"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "'Alternately positive and negative' forces $r < 0$, so $r = -2$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "a(1 + r) = a(-1) = 12 \\;\\Rightarrow\\; a = -4"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Answer: first term $a = -4$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This AIEEE problem shows how a single qualitative phrase can decide everything. The first two terms add to twelve, the third and fourth add to forty-eight, and we are told the terms alternate in sign."
+            },
+            {
+              "seq": 2,
+              "text": "Write both facts algebraically: a plus a r equals twelve, and a r squared plus a r cubed equals forty-eight."
+            },
+            {
+              "seq": 3,
+              "text": "The clean move is to divide the second equation by the first — the common factor of one plus r will cancel."
+            },
+            {
+              "seq": 4,
+              "text": "After cancelling, a r squared times one plus r over a times one plus r reduces to r squared, and the right side is forty-eight over twelve, so r squared equals four, meaning r is plus or minus two."
+            },
+            {
+              "seq": 5,
+              "text": "<whisper> Here the words do the work. Alternately positive and negative forces the ratio to be negative, so we discard plus two and keep minus two."
+            },
+            {
+              "seq": 6,
+              "text": "Now substitute back. With r equals minus two, a times one plus r is a times minus one, which equals twelve, so a is minus four."
+            },
+            {
+              "seq": 7,
+              "text": "So the first term is minus four. That one qualitative phrase — alternating signs — was the entire constraint that picked minus two over plus two."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह AIEEE problem दिखाता है कि एक अकेला qualitative phrase कैसे सब कुछ decide कर सकता है। पहले दो terms twelve में add होते हैं, तीसरा और चौथा forty-eight में, और बताया गया है कि terms sign में alternate करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "दोनों facts algebraically लिखो: a plus a r equals twelve, और a r squared plus a r cubed equals forty-eight।"
+            },
+            {
+              "seq": 3,
+              "text": "clean move है दूसरी equation को पहली से divide करना — one plus r का common factor cancel हो जाएगा।"
+            },
+            {
+              "seq": 4,
+              "text": "cancel करने के बाद, a r squared times one plus r over a times one plus r घटकर r squared बनता है, और right side है forty-eight over twelve, तो r squared equals four, यानी r plus या minus two है।"
+            },
+            {
+              "seq": 5,
+              "text": "<whisper> यहाँ शब्द काम करते हैं। alternately positive and negative ratio को negative होने पर मजबूर करता है, तो हम plus two हटाकर minus two रखते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वापस substitute करो। r equals minus two के साथ, a times one plus r है a times minus one, जो twelve के बराबर है, तो a है minus four।"
+            },
+            {
+              "seq": 7,
+              "text": "तो first term है minus four। वो एक qualitative phrase — alternating signs — पूरा constraint था जिसने plus two के बजाय minus two चुना।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "GP Worked Examples",
+      "title": "Nested squares: infinite figure, finite area",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Square of side 16 cm; join midpoints forever. Sum of all areas?"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "Each inner square has half the area of the one outside it",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 200\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"70\" y=\"30\" width=\"140\" height=\"140\" fill=\"none\" stroke=\"#4f46e5\" stroke-width=\"2\"/>\n  <polygon points=\"140,30 210,100 140,170 70,100\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"2\"/>\n  <polygon points=\"140,65 175,100 140,135 105,100\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"2\"/>\n  <polygon points=\"140,82 158,100 140,118 122,100\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"70\" font-size=\"14\" fill=\"#1e293b\">areas: 256, 128, 64, …</text>\n  <text x=\"250\" y=\"95\" font-size=\"14\" fill=\"#0f766e\">a = 256, r = ½</text>\n  <text x=\"250\" y=\"130\" font-size=\"15\" fill=\"#b91c1c\">total = 256 / (1 − ½) = 512</text>\n  <text x=\"250\" y=\"153\" font-size=\"12\" fill=\"#64748b\">infinite nesting, finite area</text>\n</svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "Joining midpoints halves the area each time."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "latex": "\\text{first area} = 16^2 = 256"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "latex": "256,\\;128,\\;64,\\dots \\;\\Rightarrow\\; a = 256,\\; r = \\tfrac12 \\;(|r|<1\\;\\checkmark)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "latex": "\\text{Total} = \\frac{a}{1 - r} = \\frac{256}{1 - \\tfrac12} = 512"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Infinite nesting, yet a finite total — the signature payoff of $|r| < 1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the geometry problem that makes convergence tangible. Start with a square of side sixteen centimetres, join the midpoints to make a second square inside, then repeat forever."
+            },
+            {
+              "seq": 2,
+              "text": "The board shows the nesting. The key geometric fact is that joining the midpoints of a square produces a new square with exactly half the area."
+            },
+            {
+              "seq": 3,
+              "text": "So the areas form a shrinking sequence, and we recognise it as a GP the moment we compute the first area."
+            },
+            {
+              "seq": 4,
+              "text": "The outer square has area sixteen squared, which is two hundred fifty-six square centimetres — that is our first term."
+            },
+            {
+              "seq": 5,
+              "text": "Each later area is half the one before, giving two hundred fifty-six, one hundred twenty-eight, sixty-four, and so on. So the ratio is one half, comfortably below one."
+            },
+            {
+              "seq": 6,
+              "text": "The total area is then two hundred fifty-six over one minus one half, which comes to five hundred twelve square centimetres."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> Sit with how strange and beautiful that is — you nest squares infinitely many times, yet the areas add up to a perfectly finite number. That is the signature payoff of a convergent GP."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा वो geometry problem जो convergence को tangible बना देता है। sixteen centimetres side के square से शुरू करो, midpoints जोड़कर अंदर दूसरा square बनाओ, फिर हमेशा दोहराओ।"
+            },
+            {
+              "seq": 2,
+              "text": "board nesting दिखा रहा है। key geometric fact यह है कि एक square के midpoints जोड़ने से exactly आधी area वाला नया square बनता है।"
+            },
+            {
+              "seq": 3,
+              "text": "तो areas एक shrinking sequence बनाती हैं, और पहली area compute करते ही हम इसे GP पहचान लेते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "outer square की area है sixteen squared, यानी two hundred fifty-six square centimetres — यही हमारा first term है।"
+            },
+            {
+              "seq": 5,
+              "text": "हर बाद की area पिछले की आधी है, देती है two hundred fifty-six, one hundred twenty-eight, sixty-four, और ऐसे ही। तो ratio है one half, आराम से one के नीचे।"
+            },
+            {
+              "seq": 6,
+              "text": "total area तब है two hundred fifty-six over one minus one half, जो five hundred twelve square centimetres आता है।"
+            },
+            {
+              "seq": 7,
+              "text": "<excited> इसके साथ बैठो कि यह कितना अजीब और खूबसूरत है — तुम squares को infinitely many times nest करते हो, फिर भी areas एक बिलकुल finite number में जुड़ती हैं। यही convergent GP का signature payoff है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "GP Worked Examples",
+      "title": "AM–GM optimisation: multiply two inequalities",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "For positive a, b, c prove $(a+b+c)\\left(\\tfrac1a + \\tfrac1b + \\tfrac1c\\right) \\ge 9$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Apply AM ≥ GM to each triple separately."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "a + b + c \\ge 3(abc)^{1/3}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\frac1a + \\frac1b + \\frac1c \\ge 3(abc)^{-1/3}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "(a+b+c)\\left(\\tfrac1a+\\tfrac1b+\\tfrac1c\\right) \\ge 9\\,(abc)^{1/3}(abc)^{-1/3} = 9"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Multiplying two AM–GMs is one of the highest-yield Advanced moves."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Equality holds iff $a = b = c$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a signature Advanced technique — proving an inequality by multiplying two applications of AM ≥ GM. We must show the product of a-plus-b-plus-c and its reciprocal sum is at least nine."
+            },
+            {
+              "seq": 2,
+              "text": "The plan is to hit each factor with the arithmetic-mean geometric-mean inequality on its own."
+            },
+            {
+              "seq": 3,
+              "text": "For the first factor, a plus b plus c is at least three times the cube root of the product a b c."
+            },
+            {
+              "seq": 4,
+              "text": "For the second factor, one over a plus one over b plus one over c is at least three times the cube root of one over a b c — the same inequality applied to the reciprocals."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> Now multiply the two inequalities, both of whose sides are positive. The cube root of a b c and its reciprocal cancel completely, leaving nine on the right."
+            },
+            {
+              "seq": 6,
+              "text": "So the whole product is at least nine, exactly as required. This multiply-two-AM-GMs move appears again and again in Advanced problems."
+            },
+            {
+              "seq": 7,
+              "text": "And the equality tells you the extreme case: everything is tight precisely when a, b, and c are all equal."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह एक signature Advanced technique है — AM ≥ GM के दो applications को multiply करके inequality prove करना। हमें दिखाना है कि a-plus-b-plus-c और उसके reciprocal sum का product कम से कम nine है।"
+            },
+            {
+              "seq": 2,
+              "text": "plan यह है कि हर factor पर अलग से arithmetic-mean geometric-mean inequality लगाई जाए।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले factor के लिए, a plus b plus c कम से कम three times the cube root of the product a b c है।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरे factor के लिए, one over a plus one over b plus one over c कम से कम three times the cube root of one over a b c है — वही inequality reciprocals पर लगाई गई।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> अब दोनों inequalities को multiply करो, जिनके दोनों sides positive हैं। a b c का cube root और उसका reciprocal पूरी तरह cancel हो जाते हैं, right पर nine बचता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो पूरा product कम से कम nine है, बिलकुल जैसा चाहिए था। यह multiply-two-AM-GMs move Advanced problems में बार-बार आता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और equality तुम्हें extreme case बताती है: सब कुछ tight exactly तब होता है जब a, b, और c सब बराबर हों।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "GP Worked Examples",
+      "title": "Each term equals the sum of the next two",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "In a GP of positive terms, each term = sum of the next two. Find r."
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Write the condition on a single representative term."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "a = a r + a r^2 \\;\\Rightarrow\\; 1 = r + r^2"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "r^2 + r - 1 = 0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "r = \\frac{-1 \\pm \\sqrt{5}}{2}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Positive terms reject the negative root, leaving $r = \\dfrac{\\sqrt{5}-1}{2}$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "This is the reciprocal of the golden ratio."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This AIEEE problem has a wonderfully clean setup: in a GP of positive terms, each term equals the sum of the next two. We want the common ratio."
+            },
+            {
+              "seq": 2,
+              "text": "Because every term obeys the same rule, we can write the condition on just one representative term and its two successors."
+            },
+            {
+              "seq": 3,
+              "text": "That gives a equals a r plus a r squared. Dividing through by a, since a is nonzero, leaves one equals r plus r squared."
+            },
+            {
+              "seq": 4,
+              "text": "Rearranged, this is the quadratic r squared plus r minus one equals zero — short, but loaded."
+            },
+            {
+              "seq": 5,
+              "text": "The quadratic formula gives r equals minus one plus or minus root five, all over two."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> Now the positivity of the terms decides between the roots. The negative root would make terms negative, so we reject it and keep root five minus one over two."
+            },
+            {
+              "seq": 7,
+              "text": "And there is a lovely surprise in the answer: this value is exactly the reciprocal of the golden ratio, the number that shows up throughout nature and art."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस AIEEE problem का setup बेहद clean है: positive terms की एक GP में, हर term अगले दो का sum है। हमें common ratio चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "चूँकि हर term same rule मानता है, हम condition को सिर्फ़ एक representative term और उसके दो successors पर लिख सकते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "इससे मिलता है a equals a r plus a r squared। a से divide करने पर, चूँकि a nonzero है, बचता है one equals r plus r squared।"
+            },
+            {
+              "seq": 4,
+              "text": "rearrange करने पर, यह है quadratic r squared plus r minus one equals zero — छोटी, पर loaded।"
+            },
+            {
+              "seq": 5,
+              "text": "quadratic formula देता है r equals minus one plus or minus root five, over two।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> अब terms की positivity roots के बीच decide करती है। negative root terms को negative बना देता, तो हम इसे reject करके root five minus one over two रखते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "और answer में एक प्यारी surprise है: यह value exactly golden ratio का reciprocal है, वो number जो nature और art में हर जगह दिखता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "GP Worked Examples",
+      "title": "The chessboard grains, in closed form",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "1 grain on square 1, doubling to square 64. Total grains?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The counts form a GP: $a = 1$, $r = 2$, $n = 64$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "1,\\;2,\\;4,\\dots,\\;2^{63}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "S_{64} = \\frac{a(r^n - 1)}{r - 1} = \\frac{1\\cdot(2^{64} - 1)}{2 - 1}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "S_{64} = 2^{64} - 1 \\approx 1.8 \\times 10^{19}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "A concrete demonstration of why $r > 1$ growth 'detonates'."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "More grains than all the wheat ever grown on Earth."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We close the GP examples by returning to the chessboard legend and computing it exactly. One grain on the first square, doubling each square, all the way to the sixty-fourth."
+            },
+            {
+              "seq": 2,
+              "text": "The grain counts form a textbook GP — first term one, ratio two, and sixty-four terms in all."
+            },
+            {
+              "seq": 3,
+              "text": "Written out, the counts are one, two, four, and so on up to two to the sixty-third on the final square."
+            },
+            {
+              "seq": 4,
+              "text": "Apply the sum formula: a times r to the n minus one, over r minus one, which is one times two to the sixty-fourth minus one, all over two minus one."
+            },
+            {
+              "seq": 5,
+              "text": "Since the denominator is just one, the total is two to the sixty-fourth minus one — roughly one point eight times ten to the nineteenth grains."
+            },
+            {
+              "seq": 6,
+              "text": "<excited> That is a staggering number, and it makes the abstract point vivid: growth with a ratio above one truly detonates by the end, no matter how gently it starts."
+            },
+            {
+              "seq": 7,
+              "text": "To put it in perspective, that is more grains of wheat than have ever been grown in all of human history."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हम GP examples को chessboard legend पर लौटकर और उसे exactly compute करके बंद करते हैं। पहले square पर एक grain, हर square पर doubling, ठेठ sixty-fourth तक।"
+            },
+            {
+              "seq": 2,
+              "text": "grain counts एक textbook GP बनाते हैं — first term one, ratio two, और कुल sixty-four terms।"
+            },
+            {
+              "seq": 3,
+              "text": "लिखने पर, counts हैं one, two, four, और ऐसे ही final square पर two to the sixty-third तक।"
+            },
+            {
+              "seq": 4,
+              "text": "sum formula apply करो: a times r to the n minus one, over r minus one, यानी one times two to the sixty-fourth minus one, over two minus one।"
+            },
+            {
+              "seq": 5,
+              "text": "चूँकि denominator बस one है, total है two to the sixty-fourth minus one — लगभग one point eight times ten to the nineteenth grains।"
+            },
+            {
+              "seq": 6,
+              "text": "<excited> यह एक staggering number है, और यह abstract point को vivid बना देता है: one से ऊपर ratio वाली growth अंत तक सच में detonate करती है, चाहे शुरुआत कितनी भी gentle हो।"
+            },
+            {
+              "seq": 7,
+              "text": "perspective में रखें तो, यह पूरे मानव इतिहास में उगाए गए सारे गेहूँ के दानों से भी ज़्यादा है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "tips",
+      "subtopic": "GP",
+      "title": "GP: the trap list and the pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "GP — the traps that cost marks, and the shortcuts that save them"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Convergence: never write $S_\\infty = \\tfrac{a}{1-r}$ without checking $|r| < 1$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Sign of $r$: don't drop the $r < 0$ alternating case."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "GM sign: $b = \\pm\\sqrt{ac}$; a GP cannot contain a zero term."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Even symmetric pick uses ratio $r^2$; and $r = 1$ means $S_n = na$, not division."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Pro-tip: given a PRODUCT, use $\\tfrac{a}{r}, a, a r$; for '$a,b,c$ in GP' use $b^2 = ac$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Take logs to convert a GP problem into the (often easier) AP toolkit."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Every recurring decimal is a convergent GP — recognise it on sight."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's gather the GP traps that quietly cost marks, and the shortcuts that win them back."
+            },
+            {
+              "seq": 2,
+              "text": "The number-one GP error, and the chapter's most punished slip, is writing the sum-to-infinity formula without first checking that the size of r is below one. Make that check a reflex."
+            },
+            {
+              "seq": 3,
+              "text": "Second, respect the sign of r. Dropping the negative-ratio, alternating-sign case loses whole problems, and picking the wrong sign when two roots survive is a classic slip."
+            },
+            {
+              "seq": 4,
+              "text": "Third, the geometric mean is plus or minus the root of a c — choose the sign that keeps a real GP. And never accept a solution that forces a term to zero, because a GP can never contain a zero."
+            },
+            {
+              "seq": 5,
+              "text": "Two more: the even symmetric selection uses ratio r squared, not r, and when r equals one the sum is simply n times a — do not blindly divide by r minus one."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> Now the winning reflexes. Given a product, switch to a over r, a, a r to collapse the unknowns; and for any three-in-GP condition, reach straight for b squared equals a c rather than introducing a and r."
+            },
+            {
+              "seq": 7,
+              "text": "Keep the log bridge handy too — taking logs turns a GP problem into an AP problem, and the AP toolkit is often the easier one to swing."
+            },
+            {
+              "seq": 8,
+              "text": "And carry this recognition into the exam hall: every recurring decimal is a convergent GP in disguise, so you can always convert one to a fraction the instant you spot it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो GP traps इकट्ठा करें जो चुपके से marks खाते हैं, और वो shortcuts जो उन्हें वापस जिताते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "number-one GP error, और chapter का सबसे ज़्यादा punish होने वाला slip, है sum-to-infinity formula लिखना बिना पहले check किए कि r की size one से नीचे है। उस check को reflex बना लो।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, r के sign का सम्मान करो। negative-ratio, alternating-sign case छोड़ देना पूरे problems गँवा देता है, और जब दो roots बचें तो गलत sign चुनना एक classic slip है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, geometric mean है plus या minus root of a c — वो sign चुनो जो एक real GP रखे। और ऐसा कोई solution कभी मत मानो जो किसी term को zero पर मजबूर करे, क्योंकि GP में कभी zero नहीं हो सकता।"
+            },
+            {
+              "seq": 5,
+              "text": "दो और: even symmetric selection ratio r squared use करती है, r नहीं, और जब r equals one हो तो sum बस n times a है — आँख मूँदकर r minus one से divide मत करो।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> अब winning reflexes। product दिया हो, तो a over r, a, a r पर switch करके unknowns collapse करो; और किसी भी three-in-GP condition के लिए, a और r introduce करने के बजाय सीधे b squared equals a c reach करो।"
+            },
+            {
+              "seq": 7,
+              "text": "log bridge भी पास रखो — logs लेने से GP problem एक AP problem बन जाता है, और AP toolkit अक्सर घुमाने में आसान होता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और यह recognition exam hall में ले जाओ: हर recurring decimal disguise में एक convergent GP है, तो जैसे ही spot करो, उसे तुरंत fraction में बदल सकते हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1682 @@
+{
+  "chapter": "Binomial Theorem",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 7,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 28,
+      "section_type": "concept",
+      "subtopic": "Binomial Theorem for Any Index and Approximations",
+      "title": "What could a fractional or negative power expand to?",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Generalising to any index $n$ (JEE extension)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "There is no last term to stop at — you can't choose $r$ things from 'half a thing'."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "\\binom{n}{r}=\\frac{n(n-1)(n-2)\\cdots(n-r+1)}{r!}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "For positive integer $n$ this product hits $(n-n)=0$ and stops. For $n=-3$ or $\\tfrac12$ it never hits zero — the series is infinite."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "Being infinite, it converges to $(1+x)^n$ only when $|x|<1$."
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "caption": "Convergence region for the any-index series",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 460 130\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"140\" y=\"57\" width=\"180\" height=\"26\" fill=\"#cfe8cf\" stroke=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"420\" y2=\"70\" stroke=\"#7a5a2f\" stroke-width=\"2\" marker-start=\"url(#cl)\" marker-end=\"url(#cr)\"/><line x1=\"140\" y1=\"65\" x2=\"140\" y2=\"75\" stroke=\"#7a5a2f\" stroke-width=\"1.5\"/><text x=\"140\" y=\"94\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#3a2b16\">-1</text><line x1=\"230\" y1=\"65\" x2=\"230\" y2=\"75\" stroke=\"#7a5a2f\" stroke-width=\"1.5\"/><text x=\"230\" y=\"94\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#3a2b16\">0</text><line x1=\"320\" y1=\"65\" x2=\"320\" y2=\"75\" stroke=\"#7a5a2f\" stroke-width=\"1.5\"/><text x=\"320\" y=\"94\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><circle cx=\"140\" cy=\"70\" r=\"5\" fill=\"#ffffff\" stroke=\"#2e7d32\" stroke-width=\"2\"/><circle cx=\"320\" cy=\"70\" r=\"5\" fill=\"#ffffff\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"230\" y=\"44\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#2e7d32\">|x| &lt; 1: series converges</text><text x=\"86\" y=\"50\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">diverges</text><text x=\"378\" y=\"50\" font-family=\"system-ui, sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c0392b\">diverges</text><defs><marker id=\"cl\" markerWidth=\"8\" markerHeight=\"8\" refX=\"2\" refY=\"3\" orient=\"auto\"><path d=\"M7 0 L0 3 L7 6 z\" fill=\"#7a5a2f\"/></marker><marker id=\"cr\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0 L7 3 L0 6 z\" fill=\"#7a5a2f\"/></marker></defs></svg>"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "No $\\binom{n}{r}$ symbols here — undefined for non-integer or negative $n$. Arrange so the smaller quantity is $x$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Everything so far needed n to be a positive integer. Now we ask the wild question: what could one plus x to the one half, or to the minus three, possibly expand to? This is a JEE extension, and it changes the rules."
+            },
+            {
+              "seq": 2,
+              "text": "The problem is obvious. For a positive integer power there's a clear last term to stop at. But there's no natural place to stop when the power is a half or a minus three — you can't choose r things out of half a thing. So either the idea breaks, or it continues forever."
+            },
+            {
+              "seq": 3,
+              "text": "Look at the coefficient written the long way. n C r is n, times n minus one, times n minus two, and so on for r factors, all over r factorial. This falling-factorial form is defined for any real n — nothing in it demands that n be a whole number."
+            },
+            {
+              "seq": 4,
+              "text": "And here's the single observation that unlocks everything. For a positive integer n, that product eventually includes the factor n minus n, which is zero, and every later coefficient dies — that's why the series stops at r equals n. But if n is minus three, or one half, the product never hits zero, so the series simply never stops."
+            },
+            {
+              "seq": 5,
+              "text": "Because it's now an infinite series, it only sums to the true value of one plus x to the n when the size of x is less than one. Outside that range the partial sums blow up and the expansion is meaningless. This convergence condition is not a technicality you can wave away."
+            },
+            {
+              "seq": 6,
+              "text": "Picture it on a number line. Between minus one and one, the series converges — that green band is the safe zone. At or beyond one in either direction, it diverges. So before you use the series, always arrange the binomial so the smaller quantity sits in the x slot and stays inside that band."
+            },
+            {
+              "seq": 7,
+              "text": "One firm rule to carry through this subtopic: there are no n C r symbols here, because n C r is undefined when n is negative or fractional. You use the falling-factorial coefficient instead. Anytime you catch yourself writing a combination symbol with a non-integer on top, stop — that's the wrong tool."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Ab tak sab kuch ke liye $n$ ko positive integer hona zaroori tha. Ab hum jungli sawaal poochhte hain: $1+x$ power one-half, ya power minus three, aakhir expand ho sakta hai kya? Yeh JEE extension hai, aur yeh rules badal deta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Problem saaf hai. Positive integer power ke liye ek clear last term hota hai rukne ke liye. Par jab power one-half ya minus three ho toh rukne ki koi natural jagah नahi — aap aadhi cheez mein se $r$ cheezein नahi chun sakte. Toh ya idea toot jaayega, ya hamesha chalta rahega."
+            },
+            {
+              "seq": 3,
+              "text": "Coefficient ko long way mein dekho. $n\\,C\\,r$ hai $n$, into $n-1$, into $n-2$, aise hi $r$ factors tak, poora $r$ factorial ke upar. Yeh falling-factorial form kisi bhi real $n$ ke liye defined hai — isme kuch bhi $n$ ke whole number hone ki maang नahi karta."
+            },
+            {
+              "seq": 4,
+              "text": "Aur yeh raha woh single observation jo sab kuch kholta hai. Positive integer $n$ ke liye, woh product aakhir mein factor $n-n$, jo zero hai, include kar leta hai, aur har baad ka coefficient mar jaata hai — isiliye series $r$ equals $n$ pe rukti hai. Par agar $n$ minus three, ya one-half ho, toh product kabhi zero नahi hota, toh series bas kabhi rukti hi नahi."
+            },
+            {
+              "seq": 5,
+              "text": "Kyunki ab yeh ek infinite series hai, yeh $1+x$ power $n$ ki asli value tabhi banti hai jab $x$ ka size one se kam ho. Us range ke bahar partial sums phat jaate hain aur expansion bemaani hai. Yeh convergence condition koi technicality नahi jise aap tal sako."
+            },
+            {
+              "seq": 6,
+              "text": "Isse number line pe picture karo. Minus one aur one ke beech, series converge karti hai — woh green band safe zone hai. One pe ya usse aage kisi bhi direction mein, yeh diverge karti hai. Toh series use karne se pehle, hamesha binomial ko aise arrange karo ki chhoti quantity $x$ slot mein baithe aur us band ke andar rahe."
+            },
+            {
+              "seq": 7,
+              "text": "Iss subtopic mein le jaane ke liye ek pakka rule: yahan koi $n\\,C\\,r$ symbols नahi, kyunki $n\\,C\\,r$ undefined hai jab $n$ negative ya fractional ho. Aap iske bajaye falling-factorial coefficient use karte ho. Jab bhi aap khud ko combination symbol likhte pakdo jiske upar non-integer ho, ruk jao — woh galat tool hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 29,
+      "section_type": "formulas",
+      "subtopic": "Binomial Theorem for Any Index and Approximations",
+      "title": "The any-index series and the must-know expansions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Series, general term, and the standard four ($|x|<1$)"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "(1+x)^n=1+nx+\\frac{n(n-1)}{2!}x^2+\\frac{n(n-1)(n-2)}{3!}x^3+\\cdots"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "T_{r+1}=\\frac{n(n-1)\\cdots(n-r+1)}{r!}\\,x^r,\\quad r=0,1,2,\\dots"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "(1-x)^{-1}=1+x+x^2+\\cdots,\\qquad(1+x)^{-1}=1-x+x^2-\\cdots"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "latex": "(1-x)^{-2}=1+2x+3x^2+\\cdots,\\qquad(1+x)^{-2}=1-2x+3x^2-\\cdots"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "(1-x)^{-p}=\\sum_{r=0}^{\\infty}\\binom{p+r-1}{r}x^r\\quad(p\\in\\mathbb{N})"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 68,
+          "latex": "\\text{small }|x|:\\quad (1+x)^n\\approx 1+nx"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 78,
+          "style": "red-margin",
+          "text": "$n$ is any rational index; $r$ is now unbounded; all pure numbers."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here's the formula sheet for any index. Everything here lives under the condition that the size of x is less than one — hold that as a permanent footnote on every line."
+            },
+            {
+              "seq": 2,
+              "text": "The general binomial series: one plus x to the n equals one, plus n x, plus n times n minus one over two factorial, x squared, plus n times n minus one times n minus two over three factorial, x cubed, and on forever. It's the same shape as before, just with falling-factorial coefficients that never terminate."
+            },
+            {
+              "seq": 3,
+              "text": "The general term follows the same pattern: T r plus one is n times n minus one, down to n minus r plus one, over r factorial, times x to the r. Now r runs over all non-negative integers, with no upper limit."
+            },
+            {
+              "seq": 4,
+              "text": "Four special expansions are worth memorising outright. One minus x to the minus one is one plus x plus x squared and so on — the geometric series. One plus x to the minus one is the same with alternating signs, one minus x plus x squared minus."
+            },
+            {
+              "seq": 5,
+              "text": "One minus x to the minus two is one plus two x plus three x squared, its general term being r plus one times x to the r. And one plus x to the minus two is the same with alternating signs. These four show up constantly, so know them cold."
+            },
+            {
+              "seq": 6,
+              "text": "For a general negative integer power, one minus x to the minus p equals the sum of p plus r minus one choose r, times x to the r. This clean combination form is the right tool for negative-integer powers — no undefined symbols anywhere."
+            },
+            {
+              "seq": 7,
+              "text": "And the workhorse of the whole applications side: when the size of x is very small, everything beyond the linear term is negligible, so one plus x to the n is approximately one plus n x. That single line powers every estimation problem."
+            },
+            {
+              "seq": 8,
+              "text": "The cast: n is any rational index now, positive, negative, or fractional; r is unbounded because the series is infinite; and as always every quantity is a pure number. Keep the convergence condition attached and these formulas are safe to use."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Yeh raha any-index ka formula sheet. Yahan sab kuch iss condition ke neeche hai ki $x$ ka size one se kam ho — isse har line pe ek permanent footnote ki tarah rakho."
+            },
+            {
+              "seq": 2,
+              "text": "General binomial series: $1+x$ power $n$ equals one, plus $n$ $x$, plus $n$ into $n-1$ upon two factorial, $x$ square, plus $n$ into $n-1$ into $n-2$ upon three factorial, $x$ cube, aur hamesha aage. Yeh pehle jaisa hi shape hai, bas falling-factorial coefficients ke saath jo kabhi terminate नahi hote."
+            },
+            {
+              "seq": 3,
+              "text": "General term wahi pattern follow karta hai: $T$ $r+1$ hai $n$ into $n-1$, neeche $n-r+1$ tak, upon $r$ factorial, into $x$ power $r$. Ab $r$ saare non-negative integers pe chalta hai, koi upper limit नahi."
+            },
+            {
+              "seq": 4,
+              "text": "Chaar special expansions seedha ratt karne layak hain. $1-x$ power minus one hai one plus $x$ plus $x$ square aise hi — geometric series. $1+x$ power minus one wahi hai alternating signs ke saath, one minus $x$ plus $x$ square minus."
+            },
+            {
+              "seq": 5,
+              "text": "$1-x$ power minus two hai one plus two $x$ plus three $x$ square, iska general term hai $r+1$ into $x$ power $r$. Aur $1+x$ power minus two wahi hai alternating signs ke saath. Yeh chaaron baar-baar aate hain, toh inhe pakka yaad rakho."
+            },
+            {
+              "seq": 6,
+              "text": "General negative integer power ke liye, $1-x$ power minus $p$ equals $p+r-1$ choose $r$, into $x$ power $r$, ka sum. Yeh saaf combination form negative-integer powers ke liye sahi tool hai — kahin koi undefined symbol नahi."
+            },
+            {
+              "seq": 7,
+              "text": "Aur poore applications side ka workhorse: jab $x$ ka size bahut chhota ho, linear term ke aage sab negligible hai, toh $1+x$ power $n$ lagbhag $1+nx$ hai. Wahi ek line har estimation problem chalati hai."
+            },
+            {
+              "seq": 8,
+              "text": "Cast: $n$ ab koi rational index hai, positive, negative, ya fractional; $r$ unbounded hai kyunki series infinite hai; aur hamesha ki tarah har quantity pure number hai. Convergence condition attached rakho aur yeh formulas use karne ko safe hain."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 30,
+      "section_type": "concept",
+      "subtopic": "Binomial Theorem for Any Index and Approximations",
+      "title": "Three standard moves: factor, identify, approximate",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Turning the series into technique"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Why it continues: the falling-factorial coefficient is defined for any real $n$; only positive integers hit the $(n-n)$ zero."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Expanding $(a+b)^n$ generally: factor out the dominant term so the bracket leads with 1."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "latex": "(a+b)^n=a^n\\left(1+\\tfrac{b}{a}\\right)^n,\\quad\\left|\\tfrac{b}{a}\\right|<1"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Identifying a numeric series: match its terms to $1,\\ ny,\\ \\tfrac{n(n-1)}{2!}y^2$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "latex": "\\frac{\\text{3rd}}{(\\text{2nd})^2}=\\frac{n-1}{2n}\\ \\Rightarrow\\ \\text{solve }n,\\text{ then }y"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 62,
+          "text": "Approximation: truncate after $1+nx$; keep $\\tfrac{n(n-1)}{2}x^2$ if more precision is needed."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "A full proof uses Taylor's theorem: the coefficient is $\\tfrac{1}{r!}\\tfrac{d^r}{dx^r}(1+x)^n\\big|_{x=0}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's turn the series into three reliable techniques you'll actually use on problems."
+            },
+            {
+              "seq": 2,
+              "text": "First, why the series continues at all. The general term written in falling-factorial form is defined for any real n. The termination we saw for positive integers is just the special case where the factor n minus n kills everything past r equals n. Remove that accident and the series naturally runs forever."
+            },
+            {
+              "seq": 3,
+              "text": "Second technique: expanding a plus b to the n for a general power. You cannot apply the series directly unless the bracket leads with a one, so factor out the dominant term first. Pull a to the n outside, leaving one plus b over a inside."
+            },
+            {
+              "seq": 4,
+              "text": "Concretely, a plus b to the n equals a to the n, times one plus b over a, to the n — and you must choose a as the larger part so that the size of b over a is less than one, keeping you inside the convergence band. Then apply the series to the bracket and multiply the a to the n back in."
+            },
+            {
+              "seq": 5,
+              "text": "Third technique: identifying a numeric series as a binomial expansion. Match the first three terms to the template one, then n y, then n times n minus one over two factorial, y squared. That gives you two equations in the two unknowns n and y."
+            },
+            {
+              "seq": 6,
+              "text": "The slick step is to divide the third equation by the square of the second. All the scaling cancels, leaving n minus one over two n on one side. Solve that single ratio for n, then back out y — and the series sums to one plus y, to the n."
+            },
+            {
+              "seq": 7,
+              "text": "Fourth, approximation. For small x, truncate after the linear term: one plus n x. If the question demands more precision, keep the next term too, n times n minus one over two, x squared. Match the number of terms you keep to the accuracy asked."
+            },
+            {
+              "seq": 8,
+              "text": "And for the curious: the honest proof of the whole series uses Taylor's theorem, where the falling-factorial coefficient turns out to be one over r factorial, times the r-th derivative of one plus x to the n, evaluated at x equals zero. You don't need that for problems, but it's why the pattern is exactly what it is."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo series ko teen bharosemand techniques mein badalte hain jo aap sach mein problems pe use karoge."
+            },
+            {
+              "seq": 2,
+              "text": "Pehla, series aakhir continue kyun hoti hai. Falling-factorial form mein likha general term kisi bhi real $n$ ke liye defined hai. Jo termination humne positive integers ke liye dekha woh bas special case hai jahan factor $n-n$ $r$ equals $n$ ke aage sab kuch maar deta hai. Us ittefaaq ko hatao aur series naturally hamesha chalti hai."
+            },
+            {
+              "seq": 3,
+              "text": "Doosri technique: general power ke liye $a+b$ power $n$ expand karna. Aap series seedha lagā नahi sakte jab tak bracket one se shuru na ho, toh pehle dominant term factor out karo. $a$ power $n$ bahar nikalo, andar chhod ke one plus $b$ upon $a$."
+            },
+            {
+              "seq": 4,
+              "text": "Concrete mein, $a+b$ power $n$ equals $a$ power $n$, into one plus $b$ upon $a$, power $n$ — aur aapko $a$ ko bada part chunna hai taaki $b$ upon $a$ ka size one se kam ho, aapko convergence band ke andar rakhte hue. Phir bracket pe series lagao aur $a$ power $n$ wapas multiply karo."
+            },
+            {
+              "seq": 5,
+              "text": "Teesri technique: ek numeric series ko binomial expansion ke roop mein pehchaanna. Pehle teen terms ko template one, phir $n$ $y$, phir $n$ into $n-1$ upon two factorial, $y$ square se match karo. Isse do unknowns $n$ aur $y$ mein do equations milti hain."
+            },
+            {
+              "seq": 6,
+              "text": "Slick step yeh hai ki teesri equation ko doosri ke square se divide karo. Saara scaling cancel ho jaata hai, ek side pe $n-1$ upon two-$n$ chhod ke. Us single ratio ko $n$ ke liye solve karo, phir $y$ nikaalo — aur series sum hoti hai one plus $y$, power $n$."
+            },
+            {
+              "seq": 7,
+              "text": "Chauthi, approximation. Chhote $x$ ke liye, linear term ke baad truncate karo: one plus $n$ $x$. Agar question zyada precision maange, agla term bhi rakho, $n$ into $n-1$ upon two, $x$ square. Jitne terms rakho woh maangi gayi accuracy se match karo."
+            },
+            {
+              "seq": 8,
+              "text": "Aur jigyaasu ke liye: poori series ka imaandaar proof Taylor's theorem use karta hai, jahan falling-factorial coefficient nikalta hai one upon $r$ factorial, into $1+x$ power $n$ ka $r$-th derivative, $x$ equals zero pe evaluate. Problems ke liye iski zaroorat नahi, par isiliye pattern theek waisa hai jaisa hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 31,
+      "section_type": "worked_examples",
+      "subtopic": "Binomial Theorem for Any Index and Approximations",
+      "title": "Expanding a negative power, and a coefficient by combination",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 [Foundation]: first four terms of $(1+x)^{-2}$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "(1+x)^{-2}=1+(-2)x+\\frac{(-2)(-3)}{2!}x^2+\\frac{(-2)(-3)(-4)}{3!}x^3+\\cdots"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "=1-2x+3x^2-4x^3+\\cdots,\\qquad |x|<1"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Example 2 [JEE Main]: coeff of $x^4$ in $(1-2x)^{-3}$"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Use $(1-y)^{-p}=\\sum\\binom{p+r-1}{r}y^r$ with $p=3,\\ y=2x$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{coeff of }y^4=\\binom{3+4-1}{4}=\\binom{6}{4}=15,\\quad y^4=(2x)^4=16x^4"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "latex": "\\text{coeff of }x^4=15\\cdot16=240"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Trap: writing $\\binom{-3}{4}$ (undefined) or dropping the $2^4$ from $y=2x$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one is a foundation drill: write the first four terms of one plus x to the minus two, and state where it's valid."
+            },
+            {
+              "seq": 2,
+              "text": "Feed n equals minus two into the general series. The terms are one, plus minus two x, plus minus two times minus three over two factorial, x squared, plus minus two times minus three times minus four over three factorial, x cubed. Just be careful with the signs in each falling-factorial product."
+            },
+            {
+              "seq": 3,
+              "text": "Simplify each coefficient and the pattern is beautiful: one minus two x plus three x squared minus four x cubed, and so on, valid for the size of x less than one. Notice the coefficients are just the counting numbers with alternating signs — that's the signature of a minus-two power."
+            },
+            {
+              "seq": 4,
+              "text": "Example two is a JEE Main favourite: find the coefficient of x to the fourth in one minus two x, to the minus three."
+            },
+            {
+              "seq": 5,
+              "text": "For a negative integer power, switch to the clean combination form. One minus y to the minus p equals the sum of p plus r minus one choose r, times y to the r. Here p is three and y is two x. Don't try to force the falling-factorial by hand — use this."
+            },
+            {
+              "seq": 6,
+              "text": "The coefficient of y to the fourth is three plus four minus one choose four, which is six choose four, equal to fifteen. But watch — y is two x, so y to the fourth is two x to the fourth, which is sixteen x to the fourth. The two carries a factor of sixteen."
+            },
+            {
+              "seq": 7,
+              "text": "So the coefficient of x to the fourth is fifteen times sixteen, which is two hundred forty. The combination gave the fifteen; the substituted variable gave the sixteen; multiply them together."
+            },
+            {
+              "seq": 8,
+              "text": "Two traps live here. First, writing minus three choose four — that's undefined, because you can't put a negative on top of a combination. Second, forgetting the two to the fourth from y equals two x. Switch to the p plus r minus one form and keep the coefficient's power, and both traps vanish."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one ek foundation drill hai: $1+x$ power minus two ke pehle chaar terms likho, aur batao yeh kahan valid hai."
+            },
+            {
+              "seq": 2,
+              "text": "$n$ equals minus two ko general series mein daalo. Terms hain one, plus minus two $x$, plus minus two into minus three upon two factorial, $x$ square, plus minus two into minus three into minus four upon three factorial, $x$ cube. Bas har falling-factorial product mein signs ke saath savdhaan raho."
+            },
+            {
+              "seq": 3,
+              "text": "Har coefficient simplify karo aur pattern khoobsurat hai: one minus two $x$ plus three $x$ square minus four $x$ cube, aise hi, valid $x$ ka size one se kam ke liye. Gaur karo coefficients bas counting numbers hain alternating signs ke saath — yeh minus-two power ka pehchaan-chinh hai."
+            },
+            {
+              "seq": 4,
+              "text": "Example two JEE Main favourite hai: $1-2x$, power minus three, mein $x$ power four ka coefficient nikaalo."
+            },
+            {
+              "seq": 5,
+              "text": "Negative integer power ke liye, saaf combination form pe switch karo. $1-y$ power minus $p$ equals $p+r-1$ choose $r$, into $y$ power $r$, ka sum. Yahan $p$ three hai aur $y$ two $x$. Falling-factorial ko haath se force mat karo — yeh use karo."
+            },
+            {
+              "seq": 6,
+              "text": "$y$ power four ka coefficient hai three plus four minus one choose four, jo six choose four, equal to fifteen. Par dhyaan — $y$ two $x$ hai, toh $y$ power four hai two $x$ power four, jo sixteen $x$ power four. Two ek sixteen ka factor carry karta hai."
+            },
+            {
+              "seq": 7,
+              "text": "Toh $x$ power four ka coefficient hai fifteen into sixteen, jo two-hundred-forty. Combination ne fifteen diya; substituted variable ne sixteen diya; dono ko multiply karo."
+            },
+            {
+              "seq": 8,
+              "text": "Do traps yahan rehte hain. Pehla, minus three choose four likhna — woh undefined hai, kyunki aap combination ke upar negative नahi rakh sakte. Doosra, $y$ equals two $x$ se two power four bhoolna. $p+r-1$ form pe switch karo aur coefficient ki power rakho, aur dono traps gayab."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 32,
+      "section_type": "worked_examples",
+      "subtopic": "Binomial Theorem for Any Index and Approximations",
+      "title": "Estimating a root, and summing an infinite series",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 [JEE Main]: estimate $(255)^{1/4}$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "255=256\\left(1-\\tfrac{1}{256}\\right),\\quad 256=4^4"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "(255)^{1/4}=4\\left(1-\\tfrac{1}{256}\\right)^{1/4}\\approx 4\\left(1-\\tfrac14\\cdot\\tfrac{1}{256}\\right)=4-\\tfrac{1}{256}\\approx 3.9961"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "style": "red-margin",
+          "text": "First-order $1+nx$ used; keep the quadratic term for more precision."
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 4 [JEE Adv]: sum $1+\\tfrac34+\\tfrac{3\\cdot5}{4\\cdot8}+\\cdots$"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "ny=\\tfrac34,\\quad \\frac{n(n-1)}{2!}y^2=\\tfrac{15}{32}\\ \\Rightarrow\\ \\frac{n-1}{2n}=\\tfrac56"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "latex": "n=-\\tfrac32,\\ y=-\\tfrac12\\ \\Rightarrow\\ (1-\\tfrac12)^{-3/2}=2^{3/2}=2\\sqrt{2}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three is where the approximation earns its keep: estimate the fourth root of two hundred fifty five, without a calculator."
+            },
+            {
+              "seq": 2,
+              "text": "The move is to sit next to a perfect fourth power. Two hundred fifty five is two hundred fifty six minus one, which is two hundred fifty six times one minus one over two fifty six. And two hundred fifty six is four to the fourth — a clean fourth power we can pull out."
+            },
+            {
+              "seq": 3,
+              "text": "So the fourth root of two fifty five is four times one minus one over two fifty six, to the one quarter. Since one over two fifty six is tiny, apply one plus n x is about one plus n x, with n equal to a quarter. That gives four times one minus a quarter of one over two fifty six, which is four minus one over two fifty six, about three point nine nine six one. Remarkably accurate for one line of work."
+            },
+            {
+              "seq": 4,
+              "text": "Note what we did: we used only the first-order approximation, one plus n x. If the question wanted more decimal places, we'd keep the quadratic term as well. The precision you keep should match the precision you're asked for."
+            },
+            {
+              "seq": 5,
+              "text": "Example four is the Advanced showpiece: sum the infinite series one, plus three quarters, plus three times five over four times eight, and so on. There's no obvious pattern to add — so we identify it as a binomial series."
+            },
+            {
+              "seq": 6,
+              "text": "Match to the template. The second term gives n y equals three quarters. The third term gives n times n minus one over two factorial, y squared, equal to fifteen over thirty two. Now divide the third by the square of the second: all the scaling cancels and you're left with n minus one over two n equals five sixths."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> Solve that ratio: six times n minus one equals ten n, giving n equals minus three halves. Then from n y equals three quarters, y is minus one half. So the series is one minus one half, to the minus three halves — which is one half to the minus three halves, equal to two to the three halves, which is two root two. A wild-looking sum collapses to a clean surd."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three wahan hai jahan approximation apni keemat vasool karti hai: two-hundred-fifty-five ka fourth root estimate karo, bina calculator."
+            },
+            {
+              "seq": 2,
+              "text": "Move yeh hai ki ek perfect fourth power ke bagal mein baitho. Two-fifty-five hai two-fifty-six minus one, jo two-fifty-six into one minus one upon two-fifty-six hai. Aur two-fifty-six hai four power four — ek saaf fourth power jise hum bahar nikaal sakte hain."
+            },
+            {
+              "seq": 3,
+              "text": "Toh two-fifty-five ka fourth root hai four into one minus one upon two-fifty-six, power one-quarter. Kyunki one upon two-fifty-six bahut chhota hai, $1+nx$ approx $1+nx$ lagao, $n$ equals one-quarter ke saath. Isse milta hai four into one minus one-quarter of one upon two-fifty-six, jo four minus one upon two-fifty-six, lagbhag three point nine-nine-six-one. Ek line ke kaam ke liye hairaan karne wali accuracy."
+            },
+            {
+              "seq": 4,
+              "text": "Gaur karo humne kya kiya: humne sirf first-order approximation use ki, one plus $n$ $x$. Agar question zyada decimal places maangta, hum quadratic term bhi rakhte. Jitni precision aap rakhte ho woh maangi gayi precision se match honi chahiye."
+            },
+            {
+              "seq": 5,
+              "text": "Example four Advanced showpiece hai: infinite series one, plus three-quarters, plus three into five upon four into eight, aise hi, sum karo. Add karne ko koi obvious pattern नahi — toh hum isse binomial series ke roop mein pehchaante hain."
+            },
+            {
+              "seq": 6,
+              "text": "Template se match karo. Doosra term deta hai $n$ $y$ equals three-quarters. Teesra term deta hai $n$ into $n-1$ upon two factorial, $y$ square, equal to fifteen upon thirty-two. Ab teesre ko doosre ke square se divide karo: saara scaling cancel aur bachta hai $n-1$ upon two-$n$ equals five-sixths."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> Us ratio ko solve karo: six into $n-1$ equals ten $n$, deta hai $n$ equals minus three-halves. Phir $n$ $y$ equals three-quarters se, $y$ hai minus one-half. Toh series hai one minus one-half, power minus three-halves — jo one-half power minus three-halves, equal to two power three-halves, jo two root two hai. Ek jungli-dikhne wala sum ek saaf surd mein dhah jaata hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 33,
+      "section_type": "tips",
+      "subtopic": "Binomial Theorem for Any Index and Approximations",
+      "title": "Pitfalls and pro-tips for any-index expansions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The four ways this subtopic bites"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Ignoring $|x|<1$: the series is meaningless outside it — always make the smaller part the '$x$'."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "style": "red-margin",
+          "text": "Writing $\\binom{n}{r}$ for non-integer $n$ — undefined. Use the falling factorial or $\\binom{p+r-1}{r}$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Forgetting to factor out the leading term of $(a+b)^n$ before applying the series."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Over-truncating: $1+nx$ is first-order only; keep $\\tfrac{n(n-1)}{2}x^2$ when more precision is needed."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Pro-Tip: to sum a numeric series, use $\\dfrac{\\text{3rd}}{(\\text{2nd})^2}=\\dfrac{n-1}{2n}$ — one ratio gives $n$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Memory aid: non-integer power $\\to$ infinite series, only if $|x|<1$, and never write $\\binom{n}{r}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close any-index with the four ways it bites. These are conceptual, not arithmetic — which is exactly why they cost so many marks."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, ignoring the size of x being less than one. The any-index series is only valid inside that band; applying it outside gives pure nonsense. Always arrange the binomial so the smaller part plays the role of x and stays inside the region of convergence."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, writing n C r when n is non-integer. That symbol is undefined for a negative or fractional n — there's no such combination. Use the falling-factorial general term, or the p plus r minus one choose r form for a negative integer power."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, forgetting to factor out the leading term. For a plus b to the n you must first write it as a to the n, times one plus b over a, to the n. Applying the series directly to a plus b, without that leading one, is simply wrong."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, over-truncating the approximation. One plus n x is first-order only. If the question demands more precision, you must keep the next term, n times n minus one over two, x squared. Match how many terms you keep to the accuracy being asked."
+            },
+            {
+              "seq": 6,
+              "text": "And the pro-tip that makes series identification quick: divide the third term by the square of the second. That single ratio equals n minus one over two n, from which n falls out immediately, and then y follows. One division does the heavy lifting."
+            },
+            {
+              "seq": 7,
+              "text": "Hold one memory line and you'll stay safe: a non-integer power means an infinite series, valid only when the size of x is less than one, and you never write a combination symbol. Say it once and the whole subtopic stays honest."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo any-index ko un chaar tareeko ke saath band karte hain jinse yeh kaatta hai. Yeh conceptual hain, arithmetic नahi — isiliye itne marks le jaate hain."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, $x$ ka size one se kam hone ko ignore karna. Any-index series sirf us band ke andar valid hai; bahar lagane se pure bakwaas milta hai. Hamesha binomial ko aise arrange karo ki chhota part $x$ ka role nibhaye aur region of convergence ke andar rahe."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, $n\\,C\\,r$ likhna jab $n$ non-integer ho. Woh symbol negative ya fractional $n$ ke liye undefined hai — aisi koi combination hai hi नahi. Falling-factorial general term use karo, ya negative integer power ke liye $p+r-1$ choose $r$ form."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, leading term factor out karna bhoolna. $a+b$ power $n$ ke liye pehle isse $a$ power $n$, into one plus $b$ upon $a$, power $n$ likhna hoga. Series ko seedha $a+b$ pe, bina us leading one ke, lagana bas galat hai."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, approximation ko over-truncate karna. One plus $n$ $x$ sirf first-order hai. Agar question zyada precision maange, aapko agla term rakhna hoga, $n$ into $n-1$ upon two, $x$ square. Jitne terms rakho woh maangi gayi accuracy se match karo."
+            },
+            {
+              "seq": 6,
+              "text": "Aur woh pro-tip jo series identification ko jaldi banaata hai: teesre term ko doosre ke square se divide karo. Woh single ratio equals $n-1$ upon two-$n$, jisse $n$ turant nikalta hai, aur phir $y$. Ek division saara bhaari kaam karta hai."
+            },
+            {
+              "seq": 7,
+              "text": "Ek memory line pakdo aur aap safe rahoge: non-integer power ka matlab infinite series, valid sirf jab $x$ ka size one se kam ho, aur aap kabhi combination symbol नahi likhte. Ek baar bolo aur poora subtopic imaandaar rehta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 34,
+      "section_type": "concept",
+      "subtopic": "Applications: Divisibility, Remainders, Last Digits and Integral/Fractional Parts",
+      "title": "Why an expansion finds remainders",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Splitting a number into a clean piece plus a tiny piece"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "To find $7^{103}\\bmod 25$: rewrite the base so it is almost a multiple of the divisor."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "$7^2=49=50-1$, and $50$ is a multiple of $25$. So $7^{103}=7\\,(50-1)^{51}$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "style": "red-margin",
+          "text": "In $(K\\pm1)^n$ all but the last term carry a factor of $K$ — mod $K$ they are invisible."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "caption": "Terms carrying K vanish; only the constant survives",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 160\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"235\" y=\"30\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#3a2b16\">(K + 1)^n  reduced mod K</text><text x=\"45\" y=\"80\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#7a5a2f\">C0·K^n</text><text x=\"95\" y=\"80\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#7a5a2f\">+</text><text x=\"155\" y=\"80\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#7a5a2f\">C1·K^(n-1)</text><text x=\"240\" y=\"80\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#7a5a2f\">+ ··· +</text><text x=\"325\" y=\"80\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#7a5a2f\">C(n-1)·K</text><text x=\"372\" y=\"80\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#7a5a2f\">+</text><text x=\"405\" y=\"80\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#2e7d32\">1</text><line x1=\"18\" y1=\"75\" x2=\"355\" y2=\"75\" stroke=\"#c0392b\" stroke-width=\"2\"/><ellipse cx=\"405\" cy=\"75\" rx=\"20\" ry=\"17\" fill=\"none\" stroke=\"#2e7d32\" stroke-width=\"2\"/><text x=\"235\" y=\"128\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#3a2b16\">every term carrying K vanishes mod K</text><text x=\"405\" y=\"118\" font-family=\"system-ui, sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#2e7d32\">survives</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Parts problems: $(7+4\\sqrt3)^n$ is irrational, but adding the conjugate $(7-4\\sqrt3)^n$ cancels the surds — giving an integer."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "The conjugate is a tiny positive number (below 1), which pins down both the integer and fractional parts."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 76,
+          "style": "red-margin",
+          "text": "Always verify $0<p-\\sqrt{q}<1$ before using the conjugate trick."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Here's a question that seems to have nothing to do with expansions: what's the remainder when seven to the hundred and third is divided by twenty five? There's no x anywhere. Yet the binomial theorem cracks it, because it lets you split a number into a big clean piece plus a tiny piece."
+            },
+            {
+              "seq": 2,
+              "text": "The trick is always the same: rewrite the base so it's almost a multiple of the divisor. We want seven to the hundred three, modulo twenty five. Seven alone isn't near a multiple of twenty five — but a power of seven can be."
+            },
+            {
+              "seq": 3,
+              "text": "Watch. Seven squared is forty nine, which is fifty minus one, and fifty is a multiple of twenty five. So rewrite seven to the hundred three as seven times seven squared, to the fifty first, which is seven times fifty minus one, to the fifty first. Now the divisor is hiding inside the bracket."
+            },
+            {
+              "seq": 4,
+              "text": "And that's the whole engine. When you expand fifty minus one to the fifty first by the binomial theorem, every single term except the last carries a factor of fifty — and fifty is a multiple of twenty five. So modulo twenty five, all of those terms are simply invisible."
+            },
+            {
+              "seq": 5,
+              "text": "Picture the expansion as a sieve. Every term that carries the K — here fifty — gets struck out when you reduce mod K, because it's divisible by the modulus. Only the last term, the bare constant, survives the sieve. So divisibility, remainder, and last-digit questions all reduce to: which one or two terms are left standing?"
+            },
+            {
+              "seq": 6,
+              "text": "The integral and fractional part problems use a sister idea. A number like seven plus four root three, to the n, is irrational. But if you add its conjugate, seven minus four root three, to the n, the irrational parts cancel exactly and you're left with a whole number."
+            },
+            {
+              "seq": 7,
+              "text": "And here's the clever part. That conjugate, seven minus four root three, is a tiny positive number, less than one. So when you know the sum is a whole number and one piece is a small fraction, you can pin down exactly what the integer part and the fractional part must be."
+            },
+            {
+              "seq": 8,
+              "text": "One safety check you must never skip: the conjugate trick only works if the conjugate genuinely lies strictly between zero and one. So before you use it, verify that p minus root q is between zero and one. Skip that and the whole argument can collapse."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Yeh raha ek sawaal jiska expansions se koi lena-dena nahi lagta: seven power one-hundred-three ko twenty-five se divide karne par remainder kya hai? Kahin koi $x$ नahi. Phir bhi binomial theorem isse todta hai, kyunki yeh ek number ko ek bade saaf piece aur ek chhote piece mein baant deta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Trick hamesha wahi hai: base ko aise rewrite karo ki woh divisor ka lagbhag multiple ho. Humein chahiye seven power one-hundred-three, modulo twenty-five. Akela seven twenty-five ke multiple ke paas नahi — par seven ki ek power ho sakti hai."
+            },
+            {
+              "seq": 3,
+              "text": "Dekho. Seven square hai forty-nine, jo fifty minus one hai, aur fifty twenty-five ka multiple hai. Toh seven power one-hundred-three ko rewrite karo seven into seven square, power fifty-one, matlab seven into fifty minus one, power fifty-one. Ab divisor bracket ke andar chhupa hai."
+            },
+            {
+              "seq": 4,
+              "text": "Aur yahi poora engine hai. Jab aap fifty minus one power fifty-one ko binomial theorem se expand karo, aakhri ke alawa har ek term fifty ka factor carry karta hai — aur fifty twenty-five ka multiple hai. Toh modulo twenty-five, un saare terms bas invisible hain."
+            },
+            {
+              "seq": 5,
+              "text": "Expansion ko ek sieve ki tarah picture karo. Har term jo K carry karta hai — yahan fifty — mod K reduce karne pe kat jaata hai, kyunki woh modulus se divisible hai. Sirf aakhri term, khaali constant, sieve se bach jaata hai. Toh divisibility, remainder, aur last-digit sawaal sab isme sikud jaate hain: kaunse ek ya do terms khade reh gaye?"
+            },
+            {
+              "seq": 6,
+              "text": "Integral aur fractional part problems ek sister idea use karte hain. Seven plus four root three, power $n$, jaisa number irrational hai. Par agar aap iska conjugate, seven minus four root three, power $n$, add karo, toh irrational parts theek cancel ho jaate hain aur ek whole number bacha rehta hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aur yeh raha clever part. Woh conjugate, seven minus four root three, ek chhota positive number hai, one se kam. Toh jab aap jaante ho ki sum ek whole number hai aur ek piece chhota fraction hai, aap theek pin kar sakte ho ki integer part aur fractional part kya hone chahiye."
+            },
+            {
+              "seq": 8,
+              "text": "Ek safety check jo kabhi mat chhodo: conjugate trick sirf tab kaam karti hai jab conjugate sach mein strictly zero aur one ke beech ho. Toh use karne se pehle, verify karo ki $p$ minus root $q$ zero aur one ke beech hai. Isse chhodo aur poora argument dhah sakta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 35,
+      "section_type": "formulas",
+      "subtopic": "Applications: Divisibility, Remainders, Last Digits and Integral/Fractional Parts",
+      "title": "Base-splitting and the conjugate identities",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The identities that power every application"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "(K\\pm1)^n=\\sum_{r=0}^{n}\\binom{n}{r}K^r(\\pm1)^{n-r}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Modulo $K$ (or $K^2$), only the lowest-power terms in $K$ survive."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "latex": "(1+K)^n\\equiv 1+nK\\pmod{K^2}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "a^n-1\\ \\text{is divisible by}\\ (a-1);\\qquad a^n-b^n\\ \\text{by}\\ (a-b)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "latex": "(p+\\sqrt q)^n=I+f,\\quad f'=(p-\\sqrt q)^n\\in(0,1),\\quad f'=1-f"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 62,
+          "latex": "(I+f)\\,f'=(p+\\sqrt q)^n(p-\\sqrt q)^n=(p^2-q)^n"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 74,
+          "style": "red-margin",
+          "text": "$n\\in\\mathbb{N}$; $K,a,b,p,q$ integers; $I$ integer part, $f$ fractional part — pure numbers."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here are the identities that power every application in this subtopic. There are really two ideas: base-splitting for divisibility, and the conjugate identity for parts."
+            },
+            {
+              "seq": 2,
+              "text": "The base-splitting identity: K plus or minus one, to the n, equals the sum of n C r, times K to the r, times plus or minus one to the n minus r. You write the base as a multiple of the divisor, K, plus or minus one, and expand."
+            },
+            {
+              "seq": 3,
+              "text": "The point of that form: modulo K, or modulo K squared for last-two-digit work, only the lowest-power terms in K survive. Every term with a high power of K is divisible by the modulus and drops out."
+            },
+            {
+              "seq": 4,
+              "text": "A very useful special case: one plus K, to the n, is congruent to one plus n K, modulo K squared. Only the constant and the linear-in-K term survive when you reduce mod K squared. This handles a huge fraction of remainder problems in one line."
+            },
+            {
+              "seq": 5,
+              "text": "Two divisibility facts worth keeping: a to the n minus one is always divisible by a minus one; and more generally a to the n minus b to the n is divisible by a minus b. Both follow from expanding around the right base."
+            },
+            {
+              "seq": 6,
+              "text": "Now the conjugate identity. Write p plus root q, to the n, as an integer part I plus a fractional part f. Define the conjugate f prime as p minus root q, to the n, which lies strictly between zero and one. Then f prime equals one minus f — the two fractional pieces are complements."
+            },
+            {
+              "seq": 7,
+              "text": "And the key product: I plus f, times f prime, equals p plus root q to the n, times p minus root q to the n. Those conjugates multiply to p squared minus q, all to the n. That single clean product is what lets you evaluate these problems exactly."
+            },
+            {
+              "seq": 8,
+              "text": "The cast: n is a positive integer; K, a, b, p, q are integers; I is the integer part and f the fractional part. As always, pure numbers throughout — no units to track."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Yeh rahi woh identities jo iss subtopic ki har application chalati hain. Asal mein do ideas hain: divisibility ke liye base-splitting, aur parts ke liye conjugate identity."
+            },
+            {
+              "seq": 2,
+              "text": "Base-splitting identity: K plus ya minus one, power $n$, equals $n\\,C\\,r$, into K power $r$, into plus ya minus one power $n-r$, ka sum. Aap base ko divisor ka multiple, K, plus ya minus one likhte ho, aur expand karte ho."
+            },
+            {
+              "seq": 3,
+              "text": "Us form ka point: modulo K, ya last-two-digit ke liye modulo K square, sirf K mein lowest-power terms survive karte hain. K ki high power waala har term modulus se divisible hai aur gir jaata hai."
+            },
+            {
+              "seq": 4,
+              "text": "Ek bahut kaam ka special case: one plus K, power $n$, congruent hai one plus $n$ K ke, modulo K square. Jab aap mod K square reduce karo toh sirf constant aur linear-in-K term survive karte hain. Yeh remainder problems ka bada hissa ek line mein nipta deta hai."
+            },
+            {
+              "seq": 5,
+              "text": "Do divisibility facts rakhne layak: $a$ power $n$ minus one hamesha $a$ minus one se divisible hai; aur general mein $a$ power $n$ minus $b$ power $n$ $a$ minus $b$ se divisible hai. Dono sahi base ke around expand karne se aate hain."
+            },
+            {
+              "seq": 6,
+              "text": "Ab conjugate identity. $p$ plus root $q$, power $n$, ko ek integer part $I$ plus ek fractional part $f$ likho. Conjugate $f$ prime ko $p$ minus root $q$, power $n$, define karo, jo strictly zero aur one ke beech hai. Toh $f$ prime equals one minus $f$ — do fractional pieces complement hain."
+            },
+            {
+              "seq": 7,
+              "text": "Aur key product: $I$ plus $f$, into $f$ prime, equals $p$ plus root $q$ power $n$, into $p$ minus root $q$ power $n$. Woh conjugates multiply hokar $p$ square minus $q$, poora power $n$, ban jaate hain. Wahi ek saaf product aapko in problems ko exactly evaluate karne deta hai."
+            },
+            {
+              "seq": 8,
+              "text": "Cast: $n$ ek positive integer hai; K, $a$, $b$, $p$, $q$ integers hain; $I$ integer part aur $f$ fractional part. Hamesha ki tarah, poore mein pure numbers — koi units track नahi."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 36,
+      "section_type": "concept",
+      "subtopic": "Applications: Divisibility, Remainders, Last Digits and Integral/Fractional Parts",
+      "title": "Four procedures for four question types",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Remainder · last digits · divisibility · parts"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Remainder of $a^n\\bmod m$: express $a$ (or a power of $a$) as $K\\pm1$ with $K$ a multiple of $m$; expand; drop $K$-terms."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Last two digits $=$ value $\\bmod 100$: choose $K$ a multiple of $100$; keep terms until one first becomes divisible by $100$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Divisibility proof: expand as $(K\\pm1)^n$ and show every surviving term carries the factor $m$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Parts: set $I+f=(p+\\sqrt q)^n$, $f'=(p-\\sqrt q)^n$; verify $0<f'<1$; add/subtract to an integer; deduce $f'=1-f$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "(I+f)\\,f'=(p^2-q)^n\\quad\\text{to evaluate}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Negative remainders: shift into $0$ to $m-1$ (e.g. $-7\\equiv 18\\pmod{25}$)."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 76,
+          "style": "red-margin",
+          "text": "Golden move: make the divisor appear inside the bracket, then everything with it disappears."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lay out four procedures, one for each question type. They all share the same base-splitting spine, but the choice of K and the stopping point differ."
+            },
+            {
+              "seq": 2,
+              "text": "Procedure one, the remainder of a to the n modulo m. Express a, or some convenient power of a, as K plus or minus one, where K is a multiple of m. Expand by the binomial theorem, reduce mod m, and drop every term that contains K. What's left is the remainder — adjust it into the range zero to m minus one."
+            },
+            {
+              "seq": 3,
+              "text": "Procedure two, last two digits. Last two digits just means the value modulo one hundred. So choose K to be a multiple of one hundred, expand, and keep terms only up to the one that first becomes divisible by a hundred. Everything past that is invisible mod one hundred."
+            },
+            {
+              "seq": 4,
+              "text": "Procedure three, a divisibility proof. To show m divides some expression, expand the relevant power as K plus or minus one to the n, and show that after cancellation every surviving term still carries the factor m. If every survivor has m in it, the whole thing is divisible by m."
+            },
+            {
+              "seq": 5,
+              "text": "Procedure four, integral and fractional parts. Set I plus f equal to p plus root q, to the n, and define f prime as p minus root q, to the n. Verify that f prime is between zero and one. Then add or subtract the two so the surds cancel to an integer, and deduce that f prime equals one minus f."
+            },
+            {
+              "seq": 6,
+              "text": "Finally, to actually compute, use the product identity: I plus f, times f prime, equals p squared minus q, to the n. That converts a scary irrational expression into an ordinary integer power you can evaluate directly."
+            },
+            {
+              "seq": 7,
+              "text": "One arithmetic reminder that trips people constantly: remainders must be non-negative. Minus seven modulo twenty five is not minus seven — it's eighteen. Always shift your answer into the range zero up to m minus one before you report it."
+            },
+            {
+              "seq": 8,
+              "text": "And the golden move behind all four: make the divisor appear inside the bracket. Once the modulus is sitting in there as K, everything multiplied by it disappears, and only a tiny surviving piece decides the answer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo chaar procedures rakhte hain, har question type ke liye ek. Sabki wahi base-splitting reedh hai, par K ka choice aur rukne ka point alag hai."
+            },
+            {
+              "seq": 2,
+              "text": "Procedure one, $a$ power $n$ modulo $m$ ka remainder. $a$, ya $a$ ki koi convenient power, ko K plus ya minus one express karo, jahan K $m$ ka multiple ho. Binomial theorem se expand karo, mod $m$ reduce karo, aur har woh term drop karo jisme K ho. Jo bache woh remainder hai — usse zero se $m-1$ range mein adjust karo."
+            },
+            {
+              "seq": 3,
+              "text": "Procedure two, last two digits. Last two digits ka matlab bas value modulo one-hundred. Toh K ko one-hundred ka multiple chuno, expand karo, aur terms sirf usi tak rakho jo pehli baar hundred se divisible ho jaaye. Uske aage sab mod one-hundred invisible hai."
+            },
+            {
+              "seq": 4,
+              "text": "Procedure three, divisibility proof. Dikhana ho ki $m$ kisi expression ko divide karta hai, toh relevant power ko K plus ya minus one power $n$ expand karo, aur dikhao ki cancellation ke baad har surviving term abhi bhi factor $m$ carry karta hai. Agar har survivor mein $m$ hai, toh poori cheez $m$ se divisible hai."
+            },
+            {
+              "seq": 5,
+              "text": "Procedure four, integral aur fractional parts. $I$ plus $f$ ko $p$ plus root $q$, power $n$ ke barabar rakho, aur $f$ prime ko $p$ minus root $q$, power $n$ define karo. Verify karo ki $f$ prime zero aur one ke beech hai. Phir dono ko add ya subtract karo taaki surds cancel hokar integer banein, aur nikaalo ki $f$ prime equals one minus $f$."
+            },
+            {
+              "seq": 6,
+              "text": "Aakhir mein, asal mein compute karne ke liye, product identity use karo: $I$ plus $f$, into $f$ prime, equals $p$ square minus $q$, power $n$. Yeh ek daraavni irrational expression ko ek ordinary integer power mein badal deta hai jise aap seedha evaluate kar sakte ho."
+            },
+            {
+              "seq": 7,
+              "text": "Ek arithmetic reminder jo logon ko baar-baar phasata hai: remainders non-negative hone chahiye. Minus seven modulo twenty-five minus seven नahi hai — woh eighteen hai. Report karne se pehle apne answer ko hamesha zero se $m-1$ range mein shift karo."
+            },
+            {
+              "seq": 8,
+              "text": "Aur chaaron ke peeche ka golden move: divisor ko bracket ke andar laao. Jaise hi modulus K ki tarah usme baith jaata hai, usse multiply hui har cheez gayab ho jaati hai, aur sirf ek chhota surviving piece answer tay karta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 37,
+      "section_type": "worked_examples",
+      "subtopic": "Applications: Divisibility, Remainders, Last Digits and Integral/Fractional Parts",
+      "title": "A divisibility proof, and a remainder mod 25",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 [CBSE]: show $8\\mid(9^n-1)$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "9^n=(1+8)^n=1+\\binom{n}{1}8+\\binom{n}{2}8^2+\\cdots+8^n"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "9^n-1=8\\left(\\binom{n}{1}+\\binom{n}{2}8+\\cdots\\right)\\ \\Rightarrow\\ 8\\mid(9^n-1)"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Example 2 [JEE Main]: remainder of $7^{103}$ mod 25"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "7^{103}=7\\,(7^2)^{51}=7\\,(50-1)^{51}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "(50-1)^{51}\\equiv(-1)^{51}=-1\\pmod{25}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 58,
+          "latex": "7^{103}\\equiv 7\\cdot(-1)=-7\\equiv 18\\pmod{25}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 70,
+          "style": "red-margin",
+          "text": "Trap: computing powers of 7 directly. Spot $7^2=50-1$ so the modulus sits inside."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one is a clean divisibility proof: show that eight divides nine to the n minus one, for every positive integer n."
+            },
+            {
+              "seq": 2,
+              "text": "Write nine as one plus eight, so nine to the n is one plus eight, to the n. Expand it: one, plus n C one times eight, plus n C two times eight squared, and so on up to eight to the n. The divisor eight is now sitting inside every term after the first."
+            },
+            {
+              "seq": 3,
+              "text": "Now subtract the one. Nine to the n minus one is n C one times eight, plus n C two times eight squared, and so on — and every single term has a factor of eight. Pull the eight out front and what remains is an integer, so eight divides nine to the n minus one. Proof done, no induction needed."
+            },
+            {
+              "seq": 4,
+              "text": "Example two is the remainder classic we opened the subtopic with: find the remainder when seven to the hundred three is divided by twenty five."
+            },
+            {
+              "seq": 5,
+              "text": "Rewrite the power to expose the modulus. Seven to the hundred three is seven, times seven squared, to the fifty first — and seven squared is forty nine, which is fifty minus one. So it's seven times fifty minus one, to the fifty first, with fifty a multiple of twenty five."
+            },
+            {
+              "seq": 6,
+              "text": "Expand fifty minus one to the fifty first. Every term except the last carries a factor of fifty, hence a factor of twenty five, so they all vanish modulo twenty five. Only the last term, minus one to the fifty first, survives — and that's minus one."
+            },
+            {
+              "seq": 7,
+              "text": "So seven to the hundred three is congruent to seven times minus one, which is minus seven, modulo twenty five. Shift into the proper range: minus seven plus twenty five is eighteen. The remainder is eighteen."
+            },
+            {
+              "seq": 8,
+              "text": "The trap is to start grinding out powers of seven directly — hopeless by hand. The fast move is spotting that seven squared is fifty minus one, so the modulus twenty five appears inside the bracket and the expansion does all the work."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one ek saaf divisibility proof hai: dikhao ki eight nine power $n$ minus one ko divide karta hai, har positive integer $n$ ke liye."
+            },
+            {
+              "seq": 2,
+              "text": "Nine ko one plus eight likho, toh nine power $n$ hai one plus eight, power $n$. Isse expand karo: one, plus $n\\,C\\,1$ into eight, plus $n\\,C\\,2$ into eight square, aise hi eight power $n$ tak. Divisor eight ab pehle ke baad har term mein baitha hai."
+            },
+            {
+              "seq": 3,
+              "text": "Ab one subtract karo. Nine power $n$ minus one hai $n\\,C\\,1$ into eight, plus $n\\,C\\,2$ into eight square, aise hi — aur har ek term mein eight ka factor hai. Eight ko aage nikaalo aur jo bache woh integer hai, toh eight nine power $n$ minus one ko divide karta hai. Proof done, koi induction नahi chahiye."
+            },
+            {
+              "seq": 4,
+              "text": "Example two woh remainder classic hai jisse humne subtopic khola tha: seven power one-hundred-three ko twenty-five se divide karne par remainder nikaalo."
+            },
+            {
+              "seq": 5,
+              "text": "Power ko rewrite karke modulus ko expose karo. Seven power one-hundred-three hai seven, into seven square, power fifty-one — aur seven square hai forty-nine, jo fifty minus one. Toh yeh seven into fifty minus one, power fifty-one, fifty twenty-five ka multiple ke saath."
+            },
+            {
+              "seq": 6,
+              "text": "Fifty minus one power fifty-one expand karo. Aakhri ke alawa har term fifty ka factor carry karta hai, isliye twenty-five ka factor, toh woh sab modulo twenty-five gayab ho jaate hain. Sirf aakhri term, minus one power fifty-one, survive karta hai — aur woh minus one hai."
+            },
+            {
+              "seq": 7,
+              "text": "Toh seven power one-hundred-three congruent hai seven into minus one ke, jo minus seven hai, modulo twenty-five. Sahi range mein shift karo: minus seven plus twenty-five hai eighteen. Remainder hai eighteen."
+            },
+            {
+              "seq": 8,
+              "text": "Trap yeh hai ki seedha seven ki powers ghisna shuru kar do — haath se namumkin. Fast move hai yeh spot karna ki seven square fifty minus one hai, toh modulus twenty-five bracket ke andar aa jaata hai aur expansion saara kaam karti hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 38,
+      "section_type": "worked_examples",
+      "subtopic": "Applications: Divisibility, Remainders, Last Digits and Integral/Fractional Parts",
+      "title": "Last two digits, and an integral/fractional part proof",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 [JEE Main]: last two digits of $3^{400}$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "3^{400}=(3^4)^{100}=81^{100}=(80+1)^{100}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "(80+1)^{100}=1+\\binom{100}{1}80+\\cdots\\equiv 1\\pmod{100}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "style": "red-margin",
+          "text": "$100\\cdot80\\equiv0$ and $80^2=6400\\equiv0$, so every $r\\ge1$ term vanishes — last two digits $=01$."
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 4 [JEE Adv]: $(7+4\\sqrt3)^n=I+f$, prove $(I+f)(1-f)=1$"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "f'=(7-4\\sqrt3)^n,\\quad 7-4\\sqrt3\\approx 0.072\\ \\Rightarrow\\ 0<f'<1"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "latex": "(7+4\\sqrt3)^n+(7-4\\sqrt3)^n=\\text{integer}\\ \\Rightarrow\\ f'=1-f"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 68,
+          "latex": "(I+f)(1-f)=(I+f)f'=(49-48)^n=1"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three is a last-two-digits problem: find the last two digits of three to the four hundred."
+            },
+            {
+              "seq": 2,
+              "text": "Last two digits means the value modulo one hundred, so we want a base near a multiple of one hundred. Group the exponent: three to the four hundred is three to the fourth, all to the hundredth, which is eighty one to the hundred, which is eighty plus one, to the hundred. Now eighty is close to the modulus."
+            },
+            {
+              "seq": 3,
+              "text": "Expand eighty plus one to the hundred. It's one, plus a hundred choose one times eighty, plus higher terms. But look at those terms modulo one hundred: a hundred times eighty is eight thousand, which is zero mod one hundred, and eighty squared is six thousand four hundred, also zero mod one hundred."
+            },
+            {
+              "seq": 4,
+              "text": "So every term with r at least one vanishes modulo one hundred, and only the leading one survives. Three to the four hundred is congruent to one, mod one hundred. So the last two digits are zero one. A four-hundred-digit-scale computation, settled in three lines."
+            },
+            {
+              "seq": 5,
+              "text": "Example four is the Advanced parts classic. If seven plus four root three, to the n, equals an integer part I plus a fractional part f, prove that I plus f, times one minus f, equals one."
+            },
+            {
+              "seq": 6,
+              "text": "Define the conjugate f prime as seven minus four root three, to the n. Now check its size: seven minus four root three is about seven minus six point nine two eight, roughly zero point zero seven two. So f prime lies strictly between zero and one, exactly as the trick requires."
+            },
+            {
+              "seq": 7,
+              "text": "Add the two conjugate expansions. Every term carrying an odd power of root three cancels between them, leaving a whole number. So I plus f, plus f prime, is an integer. Since f is between zero and one and f prime is between zero and one, their sum lies between zero and two and must equal the integer one — so f prime equals one minus f."
+            },
+            {
+              "seq": 8,
+              "text": "<excited> Now finish. I plus f, times one minus f, equals I plus f, times f prime, which is seven plus four root three to the n, times seven minus four root three to the n. That product is forty nine minus forty eight, all to the n, which is one to the n, equal to one. The irrational scaffolding collapses to a perfect one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three ek last-two-digits problem hai: three power four-hundred ke last two digits nikaalo."
+            },
+            {
+              "seq": 2,
+              "text": "Last two digits ka matlab value modulo one-hundred, toh humein one-hundred ke multiple ke paas ek base chahiye. Exponent group karo: three power four-hundred hai three power four, poora power hundred, jo eighty-one power hundred, jo eighty plus one, power hundred. Ab eighty modulus ke kareeb hai."
+            },
+            {
+              "seq": 3,
+              "text": "Eighty plus one power hundred expand karo. Yeh hai one, plus hundred choose one into eighty, plus higher terms. Par un terms ko modulo one-hundred dekho: hundred into eighty hai eight-thousand, jo zero mod one-hundred, aur eighty square hai six-thousand-four-hundred, bhi zero mod one-hundred."
+            },
+            {
+              "seq": 4,
+              "text": "Toh $r$ at least one waala har term modulo one-hundred gayab ho jaata hai, aur sirf leading one survive karta hai. Three power four-hundred congruent hai one ke, mod one-hundred. Toh last two digits hain zero one. Ek four-hundred-digit-scale computation, teen lines mein settle."
+            },
+            {
+              "seq": 5,
+              "text": "Example four Advanced parts classic hai. Agar seven plus four root three, power $n$, equals ek integer part $I$ plus ek fractional part $f$, prove karo ki $I$ plus $f$, into one minus $f$, equals one."
+            },
+            {
+              "seq": 6,
+              "text": "Conjugate $f$ prime ko seven minus four root three, power $n$ define karo. Ab iska size check karo: seven minus four root three lagbhag seven minus six point nine-two-eight, matlab kareeb zero point zero-seven-two. Toh $f$ prime strictly zero aur one ke beech hai, theek jaise trick maangti hai."
+            },
+            {
+              "seq": 7,
+              "text": "Do conjugate expansions add karo. Root three ki odd power carry karne wala har term inke beech cancel ho jaata hai, ek whole number chhod ke. Toh $I$ plus $f$, plus $f$ prime, ek integer hai. Kyunki $f$ zero aur one ke beech hai aur $f$ prime zero aur one ke beech, unka sum zero aur two ke beech hai aur integer one ke barabar hona chahiye — toh $f$ prime equals one minus $f$."
+            },
+            {
+              "seq": 8,
+              "text": "<excited> Ab khatam karo. $I$ plus $f$, into one minus $f$, equals $I$ plus $f$, into $f$ prime, jo seven plus four root three power $n$, into seven minus four root three power $n$. Woh product hai forty-nine minus forty-eight, poora power $n$, jo one power $n$, equal to one. Irrational scaffolding ek perfect one mein dhah jaata hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 39,
+      "section_type": "tips",
+      "subtopic": "Applications: Divisibility, Remainders, Last Digits and Integral/Fractional Parts",
+      "title": "Pitfalls and pro-tips for applications",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where the method breaks if you're careless"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Wrong split: match the bracket to the modulus — mod 25 use 50; last-two-digits use 100."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "style": "red-margin",
+          "text": "Stopping reduction too early: keep reducing until only modulus-free terms remain."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Negative remainders: $-7\\bmod 25$ is $18$, not $-7$ — shift into $0$ to $m-1$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Skipping the $0<f'<1$ check — the conjugate trick needs $0<p-\\sqrt q<1$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Pro-Tip: find the smallest power of the base that is $\\equiv\\pm1$ mod the divisor — it sets a short cycle."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Memory aid: make the divisor appear inside the bracket, then everything with it disappears."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's finish with the traps for the applications subtopic. The method is powerful but unforgiving of a careless setup, so guard these four points."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, choosing the wrong split. Match the bracket to the modulus. For a mod twenty five question, use a multiple of twenty five like fifty. For last-two-digits, use a multiple of one hundred. A split that doesn't expose the modulus wastes the whole method — the terms won't vanish."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, stopping the reduction too early. Keep reducing until only modulus-free terms are left. If a term still has a lingering K in it, there's more cancellation available — you're not done, and a half-reduced answer is usually wrong."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, negative remainders. Minus seven modulo twenty five is eighteen, not minus seven. A remainder must live in the range zero up to m minus one, so always shift a negative result up by the modulus before reporting."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, skipping the conjugate check. The parts trick only works if the conjugate genuinely lies between zero and one. So verify that p minus root q is between zero and one first. If it isn't, the deduction f prime equals one minus f simply doesn't hold."
+            },
+            {
+              "seq": 6,
+              "text": "And a powerful pro-tip: find the smallest power of the base that is congruent to plus or minus one modulo the divisor. That power sets a short cycle, and then you just reduce the exponent modulo that cycle length. For instance two cubed is congruent to one mod seven, so powers of two repeat with period three."
+            },
+            {
+              "seq": 7,
+              "text": "Hold the one-line memory aid and the whole subtopic stays simple: make the divisor appear inside the bracket, and then everything multiplied by it disappears. Every remainder, last-digit, and divisibility problem is just a hunt for the few terms that survive."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo applications subtopic ke traps ke saath khatam karte hain. Method powerful hai par laaparwaah setup ko maaf नahi karta, toh in chaar points ki raksha karo."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, galat split chunna. Bracket ko modulus se match karo. Mod twenty-five sawaal ke liye, twenty-five ka multiple jaise fifty use karo. Last-two-digits ke liye, one-hundred ka multiple. Jo split modulus ko expose नahi karta woh poora method barbaad karta hai — terms gayab नahi honge."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, reduction ko bahut jaldi rok dena. Reduce karte raho jab tak sirf modulus-free terms na bachein. Agar kisi term mein abhi bhi ek lingering K hai, toh aur cancellation available hai — aap done नahi ho, aur aadha-reduced answer aksar galat hota hai."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, negative remainders. Minus seven modulo twenty-five hai eighteen, minus seven नahi. Remainder ko zero se $m-1$ range mein rehna chahiye, toh report karne se pehle negative result ko hamesha modulus se upar shift karo."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, conjugate check chhodna. Parts trick sirf tab kaam karti hai jab conjugate sach mein zero aur one ke beech ho. Toh pehle verify karo ki $p$ minus root $q$ zero aur one ke beech hai. Agar नahi, toh deduction $f$ prime equals one minus $f$ bas nahi tikta."
+            },
+            {
+              "seq": 6,
+              "text": "Aur ek powerful pro-tip: base ki sabse chhoti power dhoondho jo divisor modulo plus ya minus one ke congruent ho. Woh power ek short cycle set karti hai, aur phir aap bas exponent ko us cycle length modulo reduce karte ho. Jaise two cube congruent hai one ke mod seven, toh two ki powers period three ke saath repeat karti hain."
+            },
+            {
+              "seq": 7,
+              "text": "One-line memory aid pakdo aur poora subtopic simple rehta hai: divisor ko bracket ke andar laao, aur phir usse multiply hui har cheez gayab ho jaati hai. Har remainder, last-digit, aur divisibility problem bas un kuch terms ki khoj hai jo survive karte hain."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

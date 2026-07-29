@@ -1,0 +1,2254 @@
+{
+  "chapter": "Integrals",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 7,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Integrals of Special Forms (Quadratic Denominators & Roots)",
+      "title": "Reshape the quadratic to fit a template",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Reshape the quadratic to fit a template"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A whole family of integrals reduces to a few templates whose answers are inverse-trig or log."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The skill isn't memorising dozens of results — it's reshaping any quadratic into a canonical shape."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "$\\sin^{-1}$, $\\tan^{-1}$ and the log-forms are built for $a^2-x^2$, $a^2+x^2$, $x^2-a^2$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "x^2+bx+c = \\left(x+\\tfrac{b}{2}\\right)^2 + \\left(c-\\tfrac{b^2}{4}\\right)"
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "caption": "Completing the square: add the missing corner to form (x + b/2) squared.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"300\" fill=\"#ffffff\"/><rect x=\"40\" y=\"40\" width=\"140\" height=\"140\" fill=\"#ebf8ff\" stroke=\"#2b6cb0\" stroke-width=\"1.5\"/><text x=\"110\" y=\"118\" font-family=\"system-ui, sans-serif\" font-size=\"16\" fill=\"#2b6cb0\" text-anchor=\"middle\">x^2</text><rect x=\"180\" y=\"40\" width=\"50\" height=\"140\" fill=\"#f0fff4\" stroke=\"#2f855a\" stroke-width=\"1.5\"/><text x=\"205\" y=\"115\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#2f855a\" text-anchor=\"middle\">(b/2)x</text><rect x=\"40\" y=\"180\" width=\"140\" height=\"50\" fill=\"#f0fff4\" stroke=\"#2f855a\" stroke-width=\"1.5\"/><text x=\"110\" y=\"210\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#2f855a\" text-anchor=\"middle\">(b/2)x</text><rect x=\"180\" y=\"180\" width=\"50\" height=\"50\" fill=\"#fff5f5\" stroke=\"#e53e3e\" stroke-width=\"1.5\" stroke-dasharray=\"5 3\"/><text x=\"205\" y=\"210\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#e53e3e\" text-anchor=\"middle\">(b/2)^2</text><text x=\"150\" y=\"270\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#333\" text-anchor=\"middle\">add the dashed corner to complete the square</text></svg>"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "In the shifted variable $X=x+\\tfrac{b}{2}$, a messy quadratic becomes a clean $X^2+A^2$ shape."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Linear numerator over a quadratic? Split into (derivative-of-quadratic) + (constant) — two templates."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Here's a whole zoo of integrals that all secretly answer to just a handful of templates."
+            },
+            {
+              "seq": 2,
+              "text": "A large family of integrals, anything with a quadratic in the denominator or under a root, reduces to a few standard templates whose answers are inverse-trig or logarithm functions."
+            },
+            {
+              "seq": 3,
+              "text": "So the skill here is not memorising dozens of results. It's learning to reshape any quadratic into one of a few canonical shapes."
+            },
+            {
+              "seq": 4,
+              "text": "Why reshape? Because arcsine, arctangent, and the log-forms are built for clean expressions like a squared minus x squared, a squared plus x squared, or x squared minus a squared."
+            },
+            {
+              "seq": 5,
+              "text": "A messy x squared plus b x plus c doesn't match any of those, until you complete the square, rewriting it as x plus b over two, squared, plus a constant."
+            },
+            {
+              "seq": 6,
+              "text": "Picture completing the square literally: you've got a square of side x and two thin strips of width b over two; add the missing little corner square and the whole thing becomes one perfect square."
+            },
+            {
+              "seq": 7,
+              "text": "In the shifted variable capital X equals x plus b over two, that messy quadratic is now a clean X squared plus A squared, exactly a template shape."
+            },
+            {
+              "seq": 8,
+              "text": "One more setup: if the numerator is linear over a quadratic, split it into a derivative-of-the-quadratic part plus a constant part. The two parts use different templates."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>यह integrals का एक पूरा चिड़ियाघर है जो असल में बस कुछ ही templates को जवाब देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "एक बड़ा family, denominator में quadratic या root के नीचे कुछ भी, कुछ standard templates में सिमट जाता है, जिनके answers inverse-trig या logarithm functions हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो यहाँ skill दर्ज़नों results रटना नहीं है। यह किसी भी quadratic को कुछ canonical shapes में से एक में reshape करना सीखना है।"
+            },
+            {
+              "seq": 4,
+              "text": "Reshape क्यों? क्योंकि arcsine, arctangent, और log-forms साफ़ expressions के लिए बने हैं जैसे a square minus x square, a square plus x square, या x square minus a square।"
+            },
+            {
+              "seq": 5,
+              "text": "एक messy x square plus b x plus c इनमें से किसी से match नहीं करता, जब तक square complete न करो, उसे x plus b over two, squared, plus एक constant की तरह लिखकर।"
+            },
+            {
+              "seq": 6,
+              "text": "Completing the square को सचमुच देखो: तुम्हारे पास x भुजा का एक square है और b over two चौड़ाई की दो पतली strips; बीच वाला छोटा corner square जोड़ दो और पूरी चीज़ एक perfect square बन जाती है।"
+            },
+            {
+              "seq": 7,
+              "text": "Shifted variable capital X बराबर x plus b over two में, वो messy quadratic अब साफ़ X square plus A square है, बिलकुल एक template shape।"
+            },
+            {
+              "seq": 8,
+              "text": "एक और setup: अगर numerator quadratic के ऊपर linear हो, उसे derivative-of-the-quadratic part plus constant part में split करो। दोनों parts अलग templates इस्तेमाल करते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "formulas",
+      "subtopic": "Integrals of Special Forms (Quadratic Denominators & Roots)",
+      "title": "The core templates",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The templates to recognise"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\int \\frac{dx}{x^2+a^2} = \\frac{1}{a}\\tan^{-1}\\frac{x}{a} + C"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\int \\frac{dx}{x^2-a^2} = \\frac{1}{2a}\\ln\\left|\\frac{x-a}{x+a}\\right| + C"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int \\frac{dx}{\\sqrt{a^2-x^2}} = \\sin^{-1}\\frac{x}{a} + C"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\int \\frac{dx}{\\sqrt{x^2+a^2}} = \\ln\\left|x+\\sqrt{x^2+a^2}\\right| + C \\qquad \\int \\frac{dx}{\\sqrt{x^2-a^2}} = \\ln\\left|x+\\sqrt{x^2-a^2}\\right| + C"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int \\sqrt{a^2-x^2}\\,dx = \\frac{x}{2}\\sqrt{a^2-x^2} + \\frac{a^2}{2}\\sin^{-1}\\frac{x}{a} + C"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\int \\sqrt{x^2+a^2}\\,dx = \\frac{x}{2}\\sqrt{x^2+a^2} + \\frac{a^2}{2}\\ln\\left|x+\\sqrt{x^2+a^2}\\right| + C"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Sign in the denominator picks the function: $+\\to\\tan^{-1}$, $-\\to$ log-of-ratio. And $\\sin^{-1}$ carries no $\\tfrac{1}{a}$."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "For $px+q$ over a quadratic: write $px+q = \\lambda\\,\\tfrac{d}{dx}(\\text{quad}) + \\mu$; the $\\lambda$-part gives log or root, the $\\mu$-part a template."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "These are the templates to burn into memory. Every problem in this subtopic is completing the square, then matching one of these."
+            },
+            {
+              "seq": 2,
+              "text": "First: one over x squared plus a squared integrates to one over a, arctan x over a. The plus sign gives you arctan."
+            },
+            {
+              "seq": 3,
+              "text": "Change that plus to a minus: one over x squared minus a squared integrates to one over two a, log of the ratio x minus a over x plus a."
+            },
+            {
+              "seq": 4,
+              "text": "Under a root: one over root a squared minus x squared is arcsine x over a, and notice, no one-over-a factor out front."
+            },
+            {
+              "seq": 5,
+              "text": "The other two root forms both give a log: one over root x squared plus or minus a squared integrates to log of x plus that same root."
+            },
+            {
+              "seq": 6,
+              "text": "Then the square-root integrals themselves. Root a squared minus x squared integrates to x over two times the root, plus a squared over two times arcsine x over a."
+            },
+            {
+              "seq": 7,
+              "text": "And root x squared plus a squared integrates to x over two times the root, plus a squared over two times the log form. There's a matching result for x squared minus a squared."
+            },
+            {
+              "seq": 8,
+              "text": "The single most important reading: the sign in the denominator picks the function, plus gives arctan, minus gives a log ratio. And remember the arcsine form carries no one-over-a."
+            },
+            {
+              "seq": 9,
+              "text": "Finally, for a linear numerator p x plus q over a quadratic, write it as lambda times the derivative of the quadratic, plus mu. The lambda part gives a log or a root; the mu part is a pure template."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये templates दिमाग में जमा लो। इस subtopic की हर problem है square complete करना, फिर इनमें से किसी से match करना।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला: one over x square plus a square integrate होकर one over a, arctan x over a. Plus sign तुम्हें arctan देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "उस plus को minus कर दो: one over x square minus a square integrate होकर one over two a, log of the ratio x minus a over x plus a।"
+            },
+            {
+              "seq": 4,
+              "text": "Root के नीचे: one over root a square minus x square है arcsine x over a, और ध्यान दो, आगे कोई one-over-a factor नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "बाकी दो root forms दोनों एक log देते हैं: one over root x square plus या minus a square integrate होकर log of x plus वही root।"
+            },
+            {
+              "seq": 6,
+              "text": "फिर square-root integrals खुद। Root a square minus x square integrate होकर x over two times the root, plus a square over two times arcsine x over a।"
+            },
+            {
+              "seq": 7,
+              "text": "और root x square plus a square integrate होकर x over two times the root, plus a square over two times log form। x square minus a square के लिए एक मिलता-जुलता result है।"
+            },
+            {
+              "seq": 8,
+              "text": "सबसे important reading: denominator का sign function चुनता है, plus देता है arctan, minus देता है log ratio। और याद रखो arcsine form में कोई one-over-a नहीं।"
+            },
+            {
+              "seq": 9,
+              "text": "आखिर में, quadratic के ऊपर linear numerator p x plus q के लिए, इसे lambda times the derivative of the quadratic, plus mu लिखो। Lambda part एक log या root देता है; mu part एक pure template है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "worked_examples",
+      "subtopic": "Integrals of Special Forms (Quadratic Denominators & Roots)",
+      "title": "Read the sign: arctan versus log",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1: a direct arctan"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int \\frac{dx}{x^2+9}$. Match $\\int\\frac{dx}{x^2+a^2}$ with $a=3$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\int \\frac{dx}{x^2+9} = \\frac{1}{3}\\tan^{-1}\\frac{x}{3} + C"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Example 2: a direct log ratio"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Evaluate $\\int \\frac{dx}{x^2-16}$. Match $\\int\\frac{dx}{x^2-a^2}$ with $a=4$, so $\\tfrac{1}{2a}=\\tfrac{1}{8}$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int \\frac{dx}{x^2-16} = \\frac{1}{8}\\ln\\left|\\frac{x-4}{x+4}\\right| + C"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Read the sign first: $x^2+a^2$ gives arctan; $x^2-a^2$ gives a log of a ratio."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Same-looking denominators, opposite answers — the plus/minus decides everything."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two lookups first, to lock in reading the sign."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral of one over x squared plus nine. Match the arctan template with a equals three."
+            },
+            {
+              "seq": 3,
+              "text": "So the answer is one-third arctan x over three, plus C. Clean."
+            },
+            {
+              "seq": 4,
+              "text": "Now change one symbol, a minus instead of a plus."
+            },
+            {
+              "seq": 5,
+              "text": "We want one over x squared minus sixteen. Match the log template with a equals four, so one over two a is one-eighth."
+            },
+            {
+              "seq": 6,
+              "text": "The answer is one-eighth log of the ratio x minus four over x plus four, plus C."
+            },
+            {
+              "seq": 7,
+              "text": "The whole game is reading the sign first. A plus in the denominator gives arctan; a minus gives a log of a ratio."
+            },
+            {
+              "seq": 8,
+              "text": "Two denominators that look almost identical produce completely different answers, the plus or minus decides everything, so read it before you write."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पहले दो lookups, sign पढ़ना पक्का करने के लिए।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें integral चाहिए one over x square plus nine का। arctan template को a equals three से match करो।"
+            },
+            {
+              "seq": 3,
+              "text": "तो answer है one-third arctan x over three, plus C. साफ़।"
+            },
+            {
+              "seq": 4,
+              "text": "अब एक symbol बदलो, plus की जगह minus।"
+            },
+            {
+              "seq": 5,
+              "text": "हमें चाहिए one over x square minus sixteen। log template को a equals four से match करो, तो one over two a है one-eighth।"
+            },
+            {
+              "seq": 6,
+              "text": "Answer है one-eighth log of the ratio x minus four over x plus four, plus C।"
+            },
+            {
+              "seq": 7,
+              "text": "पूरा खेल है पहले sign पढ़ना। Denominator में plus देता है arctan; minus देता है log of a ratio।"
+            },
+            {
+              "seq": 8,
+              "text": "दो denominators जो लगभग एक जैसे दिखते हैं, बिलकुल अलग answers देते हैं, plus या minus सब तय करता है, तो लिखने से पहले पढ़ो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "Integrals of Special Forms (Quadratic Denominators & Roots)",
+      "title": "Completing the square; linear over a root",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3: complete the square"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int \\frac{dx}{x^2+4x+13}$. Complete the square: $x^2+4x+13=(x+2)^2+9$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\int \\frac{dX}{X^2+9} = \\frac{1}{3}\\tan^{-1}\\frac{X}{3},\\quad X=x+2"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int \\frac{dx}{x^2+4x+13} = \\frac{1}{3}\\tan^{-1}\\frac{x+2}{3} + C"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 4: a linear numerator over a root"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Evaluate $\\int \\frac{2x+3}{\\sqrt{x^2+4x+8}}\\,dx$. Since $\\tfrac{d}{dx}(x^2+4x+8)=2x+4$, write $2x+3=(2x+4)-1$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\int \\frac{2x+4}{\\sqrt{x^2+4x+8}}\\,dx = 2\\sqrt{x^2+4x+8}\\quad(\\text{the }f'/\\!\\sqrt{f}\\text{ part})"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Leftover: $x^2+4x+8=(x+2)^2+4$, so $\\int\\frac{dx}{\\sqrt{(x+2)^2+4}}=\\ln\\left|(x+2)+\\sqrt{x^2+4x+8}\\right|$."
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "latex": "\\int \\frac{2x+3}{\\sqrt{x^2+4x+8}}\\,dx = 2\\sqrt{x^2+4x+8} - \\ln\\left|(x+2)+\\sqrt{x^2+4x+8}\\right| + C"
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Split a linear numerator into (derivative-part) + (constant-part) — the master key for (linear)/(quadratic)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the real skill: reshaping before matching."
+            },
+            {
+              "seq": 2,
+              "text": "We want one over x squared plus four x plus thirteen. Complete the square: that denominator is x plus two, all squared, plus nine."
+            },
+            {
+              "seq": 3,
+              "text": "With capital X equal to x plus two, it's the arctan template with a equals three, one-third arctan X over three."
+            },
+            {
+              "seq": 4,
+              "text": "Convert back: the answer is one-third arctan of x plus two over three, plus C."
+            },
+            {
+              "seq": 5,
+              "text": "<curious>Now the boss level, a linear numerator sitting over the root of a quadratic."
+            },
+            {
+              "seq": 6,
+              "text": "We want two x plus three, over root x squared plus four x plus eight. The derivative of the inside is two x plus four, so write two x plus three as two x plus four, minus one."
+            },
+            {
+              "seq": 7,
+              "text": "The two x plus four part is exactly the derivative of the inside, so it integrates by the f prime over root f rule to two times the root."
+            },
+            {
+              "seq": 8,
+              "text": "The leftover minus one part: complete the square to x plus two squared plus four, and it becomes log of x plus two, plus the root."
+            },
+            {
+              "seq": 9,
+              "text": "Combine: two times the root, minus log of x plus two plus the root, plus C."
+            },
+            {
+              "seq": 10,
+              "text": "Bank this move, splitting a linear numerator into a derivative part plus a constant part. It's the master key for every linear-over-quadratic integral, root or no root."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब असली skill: match करने से पहले reshape करना।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए one over x square plus four x plus thirteen। Square complete करो: वो denominator है x plus two, पूरा squared, plus nine।"
+            },
+            {
+              "seq": 3,
+              "text": "Capital X बराबर x plus two के साथ, यह arctan template है a equals three के साथ, one-third arctan X over three।"
+            },
+            {
+              "seq": 4,
+              "text": "वापस बदलो: answer है one-third arctan of x plus two over three, plus C।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious>अब boss level, quadratic के root के ऊपर बैठा एक linear numerator।"
+            },
+            {
+              "seq": 6,
+              "text": "हमें चाहिए two x plus three, बटा root x square plus four x plus eight। अंदर का derivative है two x plus four, तो two x plus three को two x plus four, minus one लिखो।"
+            },
+            {
+              "seq": 7,
+              "text": "Two x plus four वाला हिस्सा ठीक अंदर का derivative है, तो यह f prime over root f rule से integrate होकर two times the root बनता है।"
+            },
+            {
+              "seq": 8,
+              "text": "बचा हुआ minus one हिस्सा: square complete करके x plus two squared plus four, और यह बन जाता है log of x plus two, plus the root।"
+            },
+            {
+              "seq": 9,
+              "text": "जोड़ो: two times the root, minus log of x plus two plus the root, plus C।"
+            },
+            {
+              "seq": 10,
+              "text": "यह move जमा लो, linear numerator को derivative part plus constant part में तोड़ना। यह हर linear-over-quadratic integral की master key है, root हो या न हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "tips",
+      "subtopic": "Integrals of Special Forms (Quadratic Denominators & Roots)",
+      "title": "Special-form pitfalls: three binary checks",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Three binary checks pin the template"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "$x^2+a^2$ (arctan) vs $x^2-a^2$ (log): the denominator's sign picks the function. Read it first."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The $\\tfrac{1}{a}$ factor: $\\int\\frac{dx}{x^2+a^2}$ has it; $\\int\\frac{dx}{\\sqrt{a^2-x^2}}=\\sin^{-1}\\tfrac{x}{a}$ has none."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Numerator $x$ vs $1$: numerator $x$ goes to a log via $f'/f$; a constant numerator goes to arctan or arcsin."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Any $x^2+bx+c$ must be reshaped by completing the square before a template applies."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Check one — sign: log or arctan? Check two — root present: arcsin or log-root? Check three — numerator $x$ or $1$?"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{sign}\\ \\to\\ \\text{root?}\\ \\to\\ \\text{numerator?}\\ \\Rightarrow\\ \\text{template fixed}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Three binary checks pin the template before you write a single symbol."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This subtopic rewards a quick triage. Three yes-or-no checks decide the whole answer."
+            },
+            {
+              "seq": 2,
+              "text": "Check the denominator's sign first. x squared plus a squared gives arctan; x squared minus a squared gives a log of a ratio. Same-looking forms, opposite answers."
+            },
+            {
+              "seq": 3,
+              "text": "Watch the one-over-a factor. The arctan template carries a one-over-a out front, but the arcsine template, one over root a squared minus x squared, carries none. Mixing these up is a classic slip."
+            },
+            {
+              "seq": 4,
+              "text": "Look at the numerator. If it's an x, you're heading to a log through the f prime over f pattern. If it's a constant, you're heading to arctan or arcsine. Same denominator, different problems."
+            },
+            {
+              "seq": 5,
+              "text": "And never forget to complete the square. Any x squared plus b x plus c has to be reshaped before any template applies."
+            },
+            {
+              "seq": 6,
+              "text": "So run three checks. One: the sign, log or arctan? Two: is there a root, arcsine or log-root? Three: numerator x or one?"
+            },
+            {
+              "seq": 7,
+              "text": "The board shows the chain: sign, then root, then numerator."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Those three binary checks pin the exact template before you write a single symbol."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह subtopic एक जल्दी triage को reward करता है। तीन हाँ-या-ना checks पूरा answer तय करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले denominator का sign check करो। x square plus a square देता है arctan; x square minus a square देता है log of a ratio। एक जैसे दिखने वाले forms, उल्टे answers।"
+            },
+            {
+              "seq": 3,
+              "text": "One-over-a factor को देखो। arctan template आगे one-over-a रखता है, पर arcsine template, one over root a square minus x square, कोई नहीं रखता। इन्हें मिलाना classic slip है।"
+            },
+            {
+              "seq": 4,
+              "text": "Numerator को देखो। अगर वो x है, तो तुम f prime over f pattern से log की तरफ़ जा रहे हो। अगर constant है, तो arctan या arcsine की तरफ़। Same denominator, अलग problems।"
+            },
+            {
+              "seq": 5,
+              "text": "और square complete करना कभी मत भूलो। किसी भी x square plus b x plus c को template लगाने से पहले reshape करना ज़रूरी है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो तीन checks चलाओ। एक: sign, log या arctan? दो: root है क्या, arcsine या log-root? तीन: numerator x या one?"
+            },
+            {
+              "seq": 7,
+              "text": "Board chain दिखाता है: sign, फिर root, फिर numerator।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>वो तीन binary checks एक भी symbol लिखने से पहले exact template पिन कर देते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Integration by Partial Fractions",
+      "title": "Partial fractions: addition run in reverse",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Partial fractions: addition run in reverse"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Some rationals like $\\frac{1}{(x-1)(x+2)}$ have no direct integral — no single substitution simplifies them."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Break one complicated fraction into a sum of simpler ones, each integrating to a log or arctan."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\frac{1}{(x-1)(x+2)} = \\frac{A}{x-1} + \\frac{B}{x+2}"
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "caption": "One combined fraction, itemised into simple pieces.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"440\" height=\"180\" fill=\"#ffffff\"/><defs><marker id=\"pf\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#444\"/></marker></defs><rect x=\"20\" y=\"65\" width=\"150\" height=\"50\" rx=\"6\" fill=\"#ebf8ff\" stroke=\"#2b6cb0\" stroke-width=\"1.5\"/><text x=\"95\" y=\"95\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#2b6cb0\" text-anchor=\"middle\">1 / ((x-1)(x+2))</text><line x1=\"172\" y1=\"88\" x2=\"255\" y2=\"58\" stroke=\"#444\" stroke-width=\"1.5\" marker-end=\"url(#pf)\"/><line x1=\"172\" y1=\"92\" x2=\"255\" y2=\"122\" stroke=\"#444\" stroke-width=\"1.5\" marker-end=\"url(#pf)\"/><rect x=\"258\" y=\"35\" width=\"150\" height=\"45\" rx=\"6\" fill=\"#f0fff4\" stroke=\"#2f855a\" stroke-width=\"1.5\"/><text x=\"333\" y=\"62\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#2f855a\" text-anchor=\"middle\">A / (x-1)</text><rect x=\"258\" y=\"100\" width=\"150\" height=\"45\" rx=\"6\" fill=\"#f0fff4\" stroke=\"#2f855a\" stroke-width=\"1.5\"/><text x=\"333\" y=\"127\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#2f855a\" text-anchor=\"middle\">B / (x+2)</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Need a proper fraction (numerator degree < denominator degree). If improper, divide first."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The denominator must be factorised; each factor type gets its own partial-fraction template."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "It's literally the addition of fractions, run backwards to recover the unknown numerators."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>What do you do with a fraction that no substitution will simplify?"
+            },
+            {
+              "seq": 2,
+              "text": "Take one over x minus one, times x plus two. There's no single substitution that cracks it, and it's not in any table."
+            },
+            {
+              "seq": 3,
+              "text": "The fix is to break that one complicated fraction into a sum of simpler fractions, each of which integrates cleanly to a log or an arctan."
+            },
+            {
+              "seq": 4,
+              "text": "So we claim it equals A over x minus one, plus B over x plus two, for some constants A and B we'll find."
+            },
+            {
+              "seq": 5,
+              "text": "Think of a restaurant handing your table one combined bill; partial fractions is itemising it, so each diner's share is easy to pay, that is, easy to integrate."
+            },
+            {
+              "seq": 6,
+              "text": "The one precondition: you need a proper fraction, numerator degree below denominator degree. If it's improper, do polynomial long division first."
+            },
+            {
+              "seq": 7,
+              "text": "And the denominator must be fully factorised, because each type of factor gets its own partial-fraction template."
+            },
+            {
+              "seq": 8,
+              "text": "At heart it's just the addition of fractions run in reverse: given the combined fraction, recover the separate numerators."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>ऐसे fraction का क्या करोगे जिसे कोई substitution simplify नहीं करेगा?"
+            },
+            {
+              "seq": 2,
+              "text": "लो one over x minus one, times x plus two। कोई एक substitution इसे नहीं तोड़ता, और यह किसी table में नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "इलाज है उस एक जटिल fraction को simpler fractions के sum में तोड़ना, जिनमें से हर एक साफ़ log या arctan में integrate होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो हम कहते हैं यह बराबर है A over x minus one, plus B over x plus two, कुछ constants A और B के लिए जो हम निकालेंगे।"
+            },
+            {
+              "seq": 5,
+              "text": "सोचो restaurant तुम्हारी table को एक combined bill देता है; partial fractions उसे itemise करना है, ताकि हर diner का हिस्सा pay करना आसान हो, यानी integrate करना आसान।"
+            },
+            {
+              "seq": 6,
+              "text": "एक precondition: proper fraction चाहिए, numerator degree denominator degree से कम। Improper हो, तो पहले polynomial long division करो।"
+            },
+            {
+              "seq": 7,
+              "text": "और denominator पूरी तरह factorise होना चाहिए, क्योंकि हर type के factor को अपना partial-fraction template मिलता है।"
+            },
+            {
+              "seq": 8,
+              "text": "मूल में यह बस fractions का addition उल्टा चलाना है: combined fraction से अलग numerators वापस निकालो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Integration by Partial Fractions",
+      "title": "Templates and the cover-up shortcut",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One term per factor"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\text{Linear } (ax+b):\\quad \\frac{A}{ax+b}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{Repeated } (ax+b)^2:\\quad \\frac{A}{ax+b} + \\frac{B}{(ax+b)^2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{Irreducible quadratic}:\\quad \\frac{Ax+B}{ax^2+bx+c}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Each term then integrates: linear to a log, repeated to a power, quadratic to a log plus an arctan."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int \\frac{dx}{(x-a)^2} = -\\frac{1}{x-a} + C"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Cover-up (distinct linear): to find the numerator over $(x-r)$, delete that factor and set $x=r$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Solve constants by substituting roots (fast) or by comparing coefficients (for repeated/quadratic)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The decomposition follows one rule: one partial fraction per factor, matched to the factor's type."
+            },
+            {
+              "seq": 2,
+              "text": "A plain linear factor a x plus b gets a single constant over it, A over a x plus b."
+            },
+            {
+              "seq": 3,
+              "text": "A repeated linear factor, a x plus b squared, needs two terms: A over the factor, plus B over the factor squared."
+            },
+            {
+              "seq": 4,
+              "text": "An irreducible quadratic factor takes a linear numerator on top: A x plus B, over that quadratic."
+            },
+            {
+              "seq": 5,
+              "text": "Once split, each term integrates predictably: a linear factor gives a log, a repeated factor gives a power, and a quadratic gives a log plus an arctan."
+            },
+            {
+              "seq": 6,
+              "text": "Note the repeated case explicitly: one over x minus a, squared, integrates to minus one over x minus a, a power, not a log."
+            },
+            {
+              "seq": 7,
+              "text": "For distinct linear factors, the fastest trick is cover-up: to get the numerator over x minus r, delete that factor from the original and set x equal to r."
+            },
+            {
+              "seq": 8,
+              "text": "In general, find the constants either by substituting the roots, quick, or by comparing coefficients, which you'll need for repeated or quadratic factors."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Decomposition एक rule मानता है: हर factor पर एक partial fraction, factor के type से match।"
+            },
+            {
+              "seq": 2,
+              "text": "एक plain linear factor a x plus b को उसके ऊपर एक single constant मिलता है, A over a x plus b।"
+            },
+            {
+              "seq": 3,
+              "text": "एक repeated linear factor, a x plus b squared, को दो terms चाहिए: A over the factor, plus B over the factor squared।"
+            },
+            {
+              "seq": 4,
+              "text": "एक irreducible quadratic factor ऊपर linear numerator लेता है: A x plus B, बटा वो quadratic।"
+            },
+            {
+              "seq": 5,
+              "text": "Split होने के बाद, हर term predictable तरीके से integrate होता है: linear factor देता है log, repeated factor देता है power, और quadratic देता है log plus arctan।"
+            },
+            {
+              "seq": 6,
+              "text": "Repeated case को साफ़ नोट करो: one over x minus a, squared, integrate होकर minus one over x minus a, एक power, log नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "Distinct linear factors के लिए सबसे तेज़ trick है cover-up: x minus r के ऊपर numerator पाने के लिए, original से वो factor हटाओ और x को r रखो।"
+            },
+            {
+              "seq": 8,
+              "text": "आम तौर पर, constants या तो roots रखकर निकालो, जल्दी, या coefficients compare करके, जो repeated या quadratic factors के लिए चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Integration by Partial Fractions",
+      "title": "Cover-up on distinct linear factors",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1: two distinct linear factors"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int \\frac{dx}{(x-1)(x+2)}$. Cover-up: $A=\\tfrac{1}{3}$ at $x=1$, $B=-\\tfrac{1}{3}$ at $x=-2$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac{1}{(x-1)(x+2)} = \\frac{1/3}{x-1} - \\frac{1/3}{x+2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int \\frac{dx}{(x-1)(x+2)} = \\frac{1}{3}\\ln\\left|\\frac{x-1}{x+2}\\right| + C"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 2: cover-up with a linear numerator"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Evaluate $\\int \\frac{3x+1}{(x+1)(x-2)}\\,dx$. Over $(x+1)$, $x=-1\\to\\tfrac{2}{3}$; over $(x-2)$, $x=2\\to\\tfrac{7}{3}$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\int \\frac{3x+1}{(x+1)(x-2)}\\,dx = \\frac{2}{3}\\ln|x+1| + \\frac{7}{3}\\ln|x-2| + C"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Cover-up finds each constant in one substitution — no system of equations."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's see the cover-up shortcut in action on two distinct linear factors."
+            },
+            {
+              "seq": 2,
+              "text": "We want one over x minus one, times x plus two. By cover-up: delete x minus one and set x to one, giving A equals one-third; delete x plus two and set x to minus two, giving B equals minus one-third."
+            },
+            {
+              "seq": 3,
+              "text": "So the fraction splits as one-third over x minus one, minus one-third over x plus two."
+            },
+            {
+              "seq": 4,
+              "text": "Each piece is a log, and combining them gives one-third log of the ratio x minus one over x plus two, plus C."
+            },
+            {
+              "seq": 5,
+              "text": "<excited>The same trick handles a linear numerator too, just as fast."
+            },
+            {
+              "seq": 6,
+              "text": "We want three x plus one, over x plus one times x minus two. Cover-up over x plus one: set x to minus one, and the rest gives two-thirds. Over x minus two: set x to two, giving seven-thirds."
+            },
+            {
+              "seq": 7,
+              "text": "So the integral is two-thirds log mod x plus one, plus seven-thirds log mod x minus two, plus C."
+            },
+            {
+              "seq": 8,
+              "text": "The payoff: cover-up finds each constant in a single substitution, with no system of equations to solve."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो cover-up shortcut को दो distinct linear factors पर काम करते देखें।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए one over x minus one, times x plus two। Cover-up से: x minus one हटाओ और x को one रखो, तो A बराबर one-third; x plus two हटाओ और x को minus two रखो, तो B बराबर minus one-third।"
+            },
+            {
+              "seq": 3,
+              "text": "तो fraction split होता है one-third over x minus one, minus one-third over x plus two।"
+            },
+            {
+              "seq": 4,
+              "text": "हर piece एक log है, और इन्हें जोड़ने पर मिलता है one-third log of the ratio x minus one over x plus two, plus C।"
+            },
+            {
+              "seq": 5,
+              "text": "<excited>यही trick एक linear numerator को भी सँभालता है, उतना ही तेज़।"
+            },
+            {
+              "seq": 6,
+              "text": "हमें चाहिए three x plus one, बटा x plus one times x minus two। x plus one पर cover-up: x को minus one रखो, बाकी देता है two-thirds। x minus two पर: x को two रखो, तो seven-thirds।"
+            },
+            {
+              "seq": 7,
+              "text": "तो integral है two-thirds log mod x plus one, plus seven-thirds log mod x minus two, plus C।"
+            },
+            {
+              "seq": 8,
+              "text": "फ़ायदा: cover-up हर constant एक ही substitution में निकाल देता है, कोई system of equations हल नहीं करनी।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Integration by Partial Fractions",
+      "title": "Repeated factors and improper fractions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3: a repeated linear factor"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int \\frac{x}{(x-1)^2(x+1)}\\,dx$. Template: $\\frac{A}{x-1}+\\frac{B}{(x-1)^2}+\\frac{C}{x+1}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Clear denominators; $x=1\\Rightarrow B=\\tfrac{1}{2}$; $x=-1\\Rightarrow C=-\\tfrac{1}{4}$; compare $x^2\\Rightarrow A=\\tfrac{1}{4}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int = \\frac{1}{4}\\ln|x-1| - \\frac{1}{2}\\cdot\\frac{1}{x-1} - \\frac{1}{4}\\ln|x+1| + C"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "= \\frac{1}{4}\\ln\\left|\\frac{x-1}{x+1}\\right| - \\frac{1}{2(x-1)} + C"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 4: an improper fraction"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Evaluate $\\int \\frac{x^3}{x^2+1}\\,dx$. Degree $3\\ge 2$ — divide first: $\\frac{x^3}{x^2+1}=x-\\frac{x}{x^2+1}$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\int\\left(x-\\frac{x}{x^2+1}\\right)dx = \\frac{x^2}{2} - \\frac{1}{2}\\ln(x^2+1) + C"
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "The second piece is an $f'/f$ form — numerator $x$ is half the derivative of $x^2+1$."
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Always test degree first — skipping division on an improper fraction is the top way this goes wrong."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a repeated factor, where the template grows an extra term."
+            },
+            {
+              "seq": 2,
+              "text": "We want x over x minus one squared, times x plus one. Because x minus one is repeated, the template needs A over x minus one, plus B over x minus one squared, plus C over x plus one."
+            },
+            {
+              "seq": 3,
+              "text": "Clear the denominators. Setting x to one gives B equals one-half; setting x to minus one gives C equals minus one-quarter; and comparing the x squared coefficients gives A equals one-quarter."
+            },
+            {
+              "seq": 4,
+              "text": "So the integral is one-quarter log mod x minus one, minus one-half times one over x minus one, minus one-quarter log mod x plus one."
+            },
+            {
+              "seq": 5,
+              "text": "Tidy it up: one-quarter log of the ratio x minus one over x plus one, minus one over two times x minus one, plus C."
+            },
+            {
+              "seq": 6,
+              "text": "<curious>Now the trap that catches everyone, an improper fraction."
+            },
+            {
+              "seq": 7,
+              "text": "We want x cubed over x squared plus one. The numerator's degree, three, is at least the denominator's, so you must divide first: it becomes x minus x over x squared plus one."
+            },
+            {
+              "seq": 8,
+              "text": "Integrate each piece: x squared over two, minus one-half log of x squared plus one, plus C."
+            },
+            {
+              "seq": 9,
+              "text": "That second piece is an f prime over f form, the numerator x is exactly half the derivative of x squared plus one."
+            },
+            {
+              "seq": 10,
+              "text": "The rule: always test the degree first. Skipping the division on an improper fraction is the single most common way this problem goes wrong."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक repeated factor, जहाँ template एक extra term उगाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए x over x minus one squared, times x plus one। चूँकि x minus one repeated है, template को चाहिए A over x minus one, plus B over x minus one squared, plus C over x plus one।"
+            },
+            {
+              "seq": 3,
+              "text": "Denominators clear करो। x को one रखने पर B बराबर one-half; x को minus one रखने पर C बराबर minus one-quarter; और x square coefficients compare करने पर A बराबर one-quarter।"
+            },
+            {
+              "seq": 4,
+              "text": "तो integral है one-quarter log mod x minus one, minus one-half times one over x minus one, minus one-quarter log mod x plus one।"
+            },
+            {
+              "seq": 5,
+              "text": "इसे साफ़ करो: one-quarter log of the ratio x minus one over x plus one, minus one over two times x minus one, plus C।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious>अब वो trap जो सबको पकड़ता है, एक improper fraction।"
+            },
+            {
+              "seq": 7,
+              "text": "हमें चाहिए x cube over x square plus one। Numerator की degree, three, denominator से कम नहीं, तो पहले divide करना ज़रूरी है: यह बनता है x minus x over x square plus one।"
+            },
+            {
+              "seq": 8,
+              "text": "हर piece integrate करो: x square बटा two, minus one-half log of x square plus one, plus C।"
+            },
+            {
+              "seq": 9,
+              "text": "वो दूसरा piece एक f prime over f form है, numerator x ठीक x square plus one के derivative का आधा है।"
+            },
+            {
+              "seq": 10,
+              "text": "Rule: हमेशा पहले degree test करो। Improper fraction पर division छोड़ना इस problem के गलत होने का सबसे common तरीका है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "tips",
+      "subtopic": "Integration by Partial Fractions",
+      "title": "Partial-fraction pitfalls",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Partial-fraction traps"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Numerator degree $\\ge$ denominator degree? Divide first. Forcing partial fractions on an improper fraction gives wrong constants."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "A repeated factor $(x-a)^2$ needs both $\\frac{A}{x-a}$ and $\\frac{B}{(x-a)^2}$ — not just one."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "An irreducible quadratic takes a linear numerator $Ax+B$; a linear factor takes a constant $A$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Combining logs: $\\ln|a|-\\ln|b|=\\ln|a/b|$ — track which factor is on top."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "For distinct linear factors, skip the linear system — use cover-up, one substitution per constant."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{improper} \\to \\text{divide};\\ \\ \\text{factor};\\ \\ \\text{template};\\ \\ \\text{solve};\\ \\ \\text{integrate}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Reserve coefficient-comparison for repeated or quadratic factors, where cover-up alone can't finish."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Partial fractions has four reliable traps. Clear them and the method is mechanical."
+            },
+            {
+              "seq": 2,
+              "text": "First and biggest: if the numerator's degree is at least the denominator's, divide first. Forcing partial fractions onto an improper fraction produces wrong constants every time."
+            },
+            {
+              "seq": 3,
+              "text": "Second: a repeated factor, x minus a squared, needs both terms, A over x minus a, and B over x minus a squared. Writing only one is a guaranteed error."
+            },
+            {
+              "seq": 4,
+              "text": "Third: match the numerator to the factor. An irreducible quadratic takes a linear numerator, A x plus B; a linear factor takes just a constant A."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, a sign check when combining logs: log mod a minus log mod b is log of a over b. Keep track of which factor ends up on top."
+            },
+            {
+              "seq": 6,
+              "text": "The efficiency tip: for distinct linear factors, don't set up a linear system at all, cover-up gives each constant in one substitution."
+            },
+            {
+              "seq": 7,
+              "text": "The board lays out the workflow: improper means divide, then factor, template, solve, integrate."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Save coefficient-comparison for repeated or quadratic factors, where cover-up alone can't finish the job."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Partial fractions के चार भरोसेमंद traps हैं। इन्हें साफ़ कर दो और method mechanical हो जाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला और सबसे बड़ा: अगर numerator की degree denominator से कम नहीं, तो पहले divide करो। Improper fraction पर partial fractions थोपने से हर बार गलत constants आते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा: एक repeated factor, x minus a squared, को दोनों terms चाहिए, A over x minus a, और B over x minus a squared। सिर्फ़ एक लिखना पक्की गलती है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा: numerator को factor से match करो। एक irreducible quadratic linear numerator लेता है, A x plus B; एक linear factor बस एक constant A।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, logs जोड़ते समय sign check: log mod a minus log mod b है log of a over b। ध्यान रखो कौन सा factor ऊपर आता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Efficiency tip: distinct linear factors के लिए linear system बनाओ ही मत, cover-up हर constant एक substitution में देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Board workflow रखता है: improper मतलब divide, फिर factor, template, solve, integrate।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Coefficient-comparison को repeated या quadratic factors के लिए बचाओ, जहाँ अकेला cover-up काम पूरा नहीं करता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Integration by Parts",
+      "title": "Integration by parts: the product rule reversed",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Integration by parts: the product rule reversed"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Substitution needs a function times its own derivative. But what about $x\\cos x$ or $xe^x$?"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Parts is built for products of two unrelated functions — the reverse of the product rule."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\int u\\,dv = uv - \\int v\\,du"
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "caption": "ILATE: the earlier a function appears, the better it is as u.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 360 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"360\" height=\"240\" fill=\"#ffffff\"/><defs><marker id=\"il\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#e53e3e\"/></marker></defs><g font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#2b6cb0\"><rect x=\"95\" y=\"20\" width=\"200\" height=\"34\" rx=\"5\" fill=\"#ebf8ff\" stroke=\"#2b6cb0\"/><text x=\"195\" y=\"42\" text-anchor=\"middle\">I : Inverse-trig</text><rect x=\"95\" y=\"60\" width=\"200\" height=\"34\" rx=\"5\" fill=\"#ebf8ff\" stroke=\"#2b6cb0\"/><text x=\"195\" y=\"82\" text-anchor=\"middle\">L : Logarithm</text><rect x=\"95\" y=\"100\" width=\"200\" height=\"34\" rx=\"5\" fill=\"#ebf8ff\" stroke=\"#2b6cb0\"/><text x=\"195\" y=\"122\" text-anchor=\"middle\">A : Algebraic</text><rect x=\"95\" y=\"140\" width=\"200\" height=\"34\" rx=\"5\" fill=\"#ebf8ff\" stroke=\"#2b6cb0\"/><text x=\"195\" y=\"162\" text-anchor=\"middle\">T : Trigonometric</text><rect x=\"95\" y=\"180\" width=\"200\" height=\"34\" rx=\"5\" fill=\"#ebf8ff\" stroke=\"#2b6cb0\"/><text x=\"195\" y=\"202\" text-anchor=\"middle\">E : Exponential</text></g><line x1=\"55\" y1=\"30\" x2=\"55\" y2=\"205\" stroke=\"#e53e3e\" stroke-width=\"2\" marker-end=\"url(#il)\"/><text x=\"28\" y=\"120\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#e53e3e\" text-anchor=\"middle\" transform=\"rotate(-90 28 120)\">choose u from the top</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Differentiate the 'hard' factor $u$, integrate the 'easy' one — hoping the new integral is simpler."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "A bad choice makes $\\int v\\,du$ harder — then swap your $u$ and $dv$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Some integrals like $\\int e^x\\sin x$ cycle back after two applications — then solve algebraically."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Substitution was for a function tangled up with its own derivative. What do we do with a plain product of two unrelated functions?"
+            },
+            {
+              "seq": 2,
+              "text": "Think of x times cosine x, or x times e to the x. There's no inner function and its derivative to exploit, so substitution has nothing to grab."
+            },
+            {
+              "seq": 3,
+              "text": "Integration by parts is the tool built exactly for products. It's the reverse of the product rule for differentiation."
+            },
+            {
+              "seq": 4,
+              "text": "The formula trades one integral for another: the integral of u d v equals u v, minus the integral of v d u."
+            },
+            {
+              "seq": 5,
+              "text": "Which factor should be u? Use ILATE, Inverse-trig, Logarithm, Algebraic, Trig, Exponential. The earlier a function sits on that ladder, the better it is as u, because differentiating it simplifies things."
+            },
+            {
+              "seq": 6,
+              "text": "The plan is to differentiate the hard factor u down to something simpler, integrate the easy factor, and hope the new integral is easier than the one you started with."
+            },
+            {
+              "seq": 7,
+              "text": "If your choice makes the new integral harder instead, that's the signal to swap: make the other factor u."
+            },
+            {
+              "seq": 8,
+              "text": "And a few integrals, like e to the x times sine x, cycle back to themselves after two rounds of parts, at which point you solve for the integral algebraically."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Substitution उस function के लिए था जो अपने ही derivative में उलझा हो। दो unrelated functions के plain product का क्या करें?"
+            },
+            {
+              "seq": 2,
+              "text": "सोचो x times cosine x, या x times e to the x। यहाँ कोई inner function और उसका derivative नहीं जिसे exploit करें, तो substitution के पास पकड़ने को कुछ नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "Integration by parts ठीक products के लिए बना tool है। यह differentiation के product rule का उल्टा है।"
+            },
+            {
+              "seq": 4,
+              "text": "Formula एक integral को दूसरे से बदल देता है: integral of u d v बराबर u v, minus integral of v d u।"
+            },
+            {
+              "seq": 5,
+              "text": "कौन सा factor u हो? ILATE इस्तेमाल करो, Inverse-trig, Logarithm, Algebraic, Trig, Exponential। जो function इस ladder पर जितना पहले, उतना अच्छा u, क्योंकि उसे differentiate करना चीज़ें simple करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Plan है hard factor u को differentiate करके कुछ simpler बनाना, easy factor को integrate करना, और उम्मीद करना कि नया integral शुरुआत से आसान हो।"
+            },
+            {
+              "seq": 7,
+              "text": "अगर तुम्हारा choice नया integral और मुश्किल बना दे, यही signal है swap का: दूसरे factor को u बनाओ।"
+            },
+            {
+              "seq": 8,
+              "text": "और कुछ integrals, जैसे e to the x times sine x, दो parts के rounds बाद खुद पर लौट आते हैं, तब integral को algebraically हल करते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "formulas",
+      "subtopic": "Integration by Parts",
+      "title": "The parts formula, ILATE, and standard results",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The formula and its two golden results"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\int u\\,dv = uv - \\int v\\,du \\qquad \\int u\\,v'\\,dx = uv - \\int u'\\,v\\,dx"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "ILATE picks u: Inverse-trig, Logarithm, Algebraic, Trigonometric, Exponential — earlier means differentiate it."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\int e^x[f(x)+f'(x)]\\,dx = e^x f(x) + C"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\int e^{ax}\\sin bx\\,dx = \\frac{e^{ax}(a\\sin bx - b\\cos bx)}{a^2+b^2} + C"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int e^{ax}\\cos bx\\,dx = \\frac{e^{ax}(a\\cos bx + b\\sin bx)}{a^2+b^2} + C"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Derivation: integrate the product rule $(uv)'=u'v+uv'$ and rearrange for $\\int uv'\\,dx$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "See $e^x$ times a sum? Check if the second term is the derivative of the first — then jump to $e^x f(x)$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here's the formula and the two high-value results that turn hard problems into one-liners."
+            },
+            {
+              "seq": 2,
+              "text": "The core formula: the integral of u d v equals u v minus the integral of v d u. Equivalently, differentiate u, integrate v prime, and subtract the leftover integral."
+            },
+            {
+              "seq": 3,
+              "text": "To choose u, use ILATE, Inverse-trig, Logarithm, Algebraic, Trigonometric, Exponential. Whichever comes earlier on that list is the one you differentiate."
+            },
+            {
+              "seq": 4,
+              "text": "The golden shortcut: the integral of e to the x times f plus f prime is simply e to the x times f, plus C."
+            },
+            {
+              "seq": 5,
+              "text": "Two cycling results worth memorising: the integral of e to the a x sine b x is e to the a x, times a sine b x minus b cosine b x, all over a squared plus b squared."
+            },
+            {
+              "seq": 6,
+              "text": "And its partner: the integral of e to the a x cosine b x is e to the a x, times a cosine b x plus b sine b x, over a squared plus b squared."
+            },
+            {
+              "seq": 7,
+              "text": "Where does the main formula come from? Just integrate the product rule, u v prime plus u prime v, and rearrange to isolate the integral of u v prime."
+            },
+            {
+              "seq": 8,
+              "text": "Train this reflex: whenever you see e to the x times a sum, check if the second term is the derivative of the first. If so, jump straight to e to the x times f."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा formula और वो दो high-value results जो मुश्किल problems को one-liner बना देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Core formula: integral of u d v बराबर u v minus integral of v d u। यानी u को differentiate करो, v prime को integrate करो, और बचा हुआ integral घटाओ।"
+            },
+            {
+              "seq": 3,
+              "text": "u चुनने के लिए ILATE इस्तेमाल करो, Inverse-trig, Logarithm, Algebraic, Trigonometric, Exponential। इस list में जो पहले आए, उसी को differentiate करो।"
+            },
+            {
+              "seq": 4,
+              "text": "Golden shortcut: integral of e to the x times f plus f prime बस e to the x times f, plus C है।"
+            },
+            {
+              "seq": 5,
+              "text": "याद रखने लायक दो cycling results: integral of e to the a x sine b x है e to the a x, times a sine b x minus b cosine b x, बटा a square plus b square।"
+            },
+            {
+              "seq": 6,
+              "text": "और इसका partner: integral of e to the a x cosine b x है e to the a x, times a cosine b x plus b sine b x, बटा a square plus b square।"
+            },
+            {
+              "seq": 7,
+              "text": "मुख्य formula कहाँ से आता है? बस product rule integrate करो, u v prime plus u prime v, और u v prime के integral को अलग करने के लिए rearrange करो।"
+            },
+            {
+              "seq": 8,
+              "text": "यह reflex जमाओ: जब भी e to the x times a sum दिखे, check करो कि दूसरा term पहले का derivative है क्या। हो, तो सीधे e to the x times f पर कूदो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Integration by Parts",
+      "title": "Parts basics: ILATE and the times-one trick",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1: pick u by ILATE"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int x\\cos x\\,dx$. Algebraic before Trig, so $u=x$, $dv=\\cos x\\,dx$; then $du=dx$, $v=\\sin x$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\int x\\cos x\\,dx = x\\sin x - \\int \\sin x\\,dx = x\\sin x + \\cos x + C"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Example 2: the lone ln x trick"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Evaluate $\\int \\ln x\\,dx$. Treat it as $\\ln x\\cdot 1$: $u=\\ln x$, $dv=1\\,dx$, so $du=\\tfrac{1}{x}dx$, $v=x$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int \\ln x\\,dx = x\\ln x - \\int x\\cdot\\frac{1}{x}\\,dx = x\\ln x - x + C"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "A lone $\\ln x$ or $\\tan^{-1}x$ pairs with an invisible $\\times 1$, then parts applies."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "ILATE: differentiate the earlier function — choosing $u=e^x$ over an algebraic term makes it harder."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's apply parts cleanly. First, a textbook product."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral of x cosine x. On the ILATE ladder, Algebraic comes before Trig, so let u be x and d v be cosine x d x. Then d u is d x, and v is sine x."
+            },
+            {
+              "seq": 3,
+              "text": "Plug into the formula: x sine x, minus the integral of sine x. That's x sine x plus cosine x, plus C."
+            },
+            {
+              "seq": 4,
+              "text": "<curious>Now a favourite trick, integrating a lone logarithm."
+            },
+            {
+              "seq": 5,
+              "text": "We want the integral of log x. There's only one function, so treat it as log x times an invisible one. Then u is log x, d v is one d x, so d u is one over x d x and v is x."
+            },
+            {
+              "seq": 6,
+              "text": "The formula gives x log x, minus the integral of x times one over x, which is just the integral of one. So the answer is x log x, minus x, plus C."
+            },
+            {
+              "seq": 7,
+              "text": "That's the move for any lone log x or arctan x: pair it with a times one, then apply parts."
+            },
+            {
+              "seq": 8,
+              "text": "And the ILATE reminder: always differentiate the earlier function. Choosing e to the x as u over an algebraic term would only make the new integral harder."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो parts साफ़ लगाएँ। पहले, एक textbook product।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें integral चाहिए x cosine x का। ILATE ladder पर Algebraic, Trig से पहले आता है, तो u को x और d v को cosine x d x मानो। तो d u है d x, और v है sine x।"
+            },
+            {
+              "seq": 3,
+              "text": "Formula में रखो: x sine x, minus integral of sine x। यह है x sine x plus cosine x, plus C।"
+            },
+            {
+              "seq": 4,
+              "text": "<curious>अब एक पसंदीदा trick, एक अकेले logarithm को integrate करना।"
+            },
+            {
+              "seq": 5,
+              "text": "हमें integral चाहिए log x का। सिर्फ़ एक function है, तो इसे log x times एक invisible one मानो। तो u है log x, d v है one d x, तो d u है one over x d x और v है x।"
+            },
+            {
+              "seq": 6,
+              "text": "Formula देता है x log x, minus integral of x times one over x, जो बस integral of one है। तो answer है x log x, minus x, plus C।"
+            },
+            {
+              "seq": 7,
+              "text": "यही move है किसी भी अकेले log x या arctan x के लिए: उसे times one के साथ pair करो, फिर parts लगाओ।"
+            },
+            {
+              "seq": 8,
+              "text": "और ILATE reminder: हमेशा पहले वाले function को differentiate करो। e to the x को u चुनना, algebraic term के बजाय, बस नया integral और मुश्किल कर देता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Integration by Parts",
+      "title": "The cycling integral and the e-to-x times (f + f prime) shortcut",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3: an integral that cycles"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $I=\\int e^x\\sin x\\,dx$. Parts gives $I = e^x\\sin x - \\int e^x\\cos x\\,dx$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Parts again on the new integral: $\\int e^x\\cos x\\,dx = e^x\\cos x + I$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "I = e^x\\sin x - (e^x\\cos x + I) \\;\\Rightarrow\\; 2I = e^x(\\sin x - \\cos x)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\int e^x\\sin x\\,dx = \\frac{e^x(\\sin x - \\cos x)}{2} + C"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 4: spot e-to-x times (f + f prime)"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Evaluate $\\int e^x\\left(\\tfrac{1}{x}-\\tfrac{1}{x^2}\\right)dx$. Let $f=\\tfrac{1}{x}$, so $f'=-\\tfrac{1}{x^2}$ — exactly $e^x[f+f']$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\int e^x\\left(\\frac{1}{x}-\\frac{1}{x^2}\\right)dx = e^x\\cdot\\frac{1}{x} + C = \\frac{e^x}{x} + C"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Recognising $e^x[f+f']$ turns a hard-looking integral into a one-line answer — always check for it."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here's an integral that seems to loop forever, until you use the loop to your advantage."
+            },
+            {
+              "seq": 2,
+              "text": "We want capital I, the integral of e to the x sine x. One round of parts gives I equals e to the x sine x, minus the integral of e to the x cosine x."
+            },
+            {
+              "seq": 3,
+              "text": "Apply parts again to that new integral, and it comes out to e to the x cosine x, plus our original I back again."
+            },
+            {
+              "seq": 4,
+              "text": "Substitute: I equals e to the x sine x, minus the quantity e to the x cosine x plus I. Move the I over, and two I equals e to the x times sine x minus cosine x."
+            },
+            {
+              "seq": 5,
+              "text": "Divide by two: the integral is e to the x times sine x minus cosine x, all over two, plus C. We solved for I like an algebraic unknown."
+            },
+            {
+              "seq": 6,
+              "text": "<excited>Now the shortcut that makes a scary integral collapse in one line."
+            },
+            {
+              "seq": 7,
+              "text": "We want the integral of e to the x times one over x minus one over x squared. Let f be one over x; then f prime is minus one over x squared, so the integrand is exactly e to the x times f plus f prime."
+            },
+            {
+              "seq": 8,
+              "text": "By the standard result, the answer is just e to the x times f, that is, e to the x over x, plus C."
+            },
+            {
+              "seq": 9,
+              "text": "So always check for the e to the x times f-plus-f-prime pattern. Recognising it turns a hard-looking integral into a one-line answer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह एक integral है जो हमेशा loop करता लगता है, जब तक तुम उस loop को अपने फ़ायदे में न लगाओ।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए capital I, integral of e to the x sine x। Parts का एक round देता है I बराबर e to the x sine x, minus integral of e to the x cosine x।"
+            },
+            {
+              "seq": 3,
+              "text": "उस नए integral पर फिर parts लगाओ, और वह निकलता है e to the x cosine x, plus हमारा original I फिर से।"
+            },
+            {
+              "seq": 4,
+              "text": "रखो: I बराबर e to the x sine x, minus पूरी quantity e to the x cosine x plus I। I को दूसरी तरफ़ ले जाओ, और two I बराबर e to the x times sine x minus cosine x।"
+            },
+            {
+              "seq": 5,
+              "text": "Two से भाग दो: integral है e to the x times sine x minus cosine x, बटा two, plus C। हमने I को एक algebraic unknown की तरह हल किया।"
+            },
+            {
+              "seq": 6,
+              "text": "<excited>अब वो shortcut जो एक डरावने integral को एक line में समेट देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "हमें चाहिए integral of e to the x times one over x minus one over x square। मान लो f है one over x; तो f prime है minus one over x square, यानी integrand ठीक e to the x times f plus f prime है।"
+            },
+            {
+              "seq": 8,
+              "text": "Standard result से, answer बस e to the x times f है, यानी e to the x over x, plus C।"
+            },
+            {
+              "seq": 9,
+              "text": "तो हमेशा e to the x times f-plus-f-prime pattern check करो। इसे पहचानना एक hard दिखने वाले integral को one-line answer बना देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "tips",
+      "subtopic": "Integration by Parts",
+      "title": "Integration-by-parts pitfalls",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Integration-by-parts traps"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Choose $u$ and $dv$ by ILATE — differentiate the earlier function. The wrong split makes $\\int v\\,du$ harder."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Sign care: $v=\\int\\sin x = -\\cos x$. Carry that minus through both terms of the formula."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "For $\\int e^x\\sin x$, after two applications the original reappears — solve for it, don't loop forever."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "See $e^x$ times a sum? Check whether the second term is the derivative of the first — then use the shortcut."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "A lone $\\ln x$, $\\tan^{-1}x$, or $\\sin^{-1}x$? Pair with an invisible $\\times 1$ and apply parts."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "e^x[f+f']\\ \\Rightarrow\\ e^x f;\\qquad \\text{lone log / inverse-trig}\\ \\Rightarrow\\ \\times 1"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Test the $f+f'$ pattern before grinding through parts — it converts many hard problems into instant answers."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Parts rewards a few habits. Get these right and the method rarely fights back."
+            },
+            {
+              "seq": 2,
+              "text": "First, choose u and d v by ILATE, differentiate the earlier function. The wrong split makes the new integral, v d u, harder than the one you started with."
+            },
+            {
+              "seq": 3,
+              "text": "Second, mind the sign. Integrating sine gives minus cosine, so v is minus cosine x, and you must carry that minus through both terms of the formula."
+            },
+            {
+              "seq": 4,
+              "text": "Third, remember the cycling trick. For e to the x sine x, after two applications the original integral reappears; solve for it algebraically instead of looping forever."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, watch for e to the x times a sum. Check whether the second term is the derivative of the first, if so, the shortcut gives the answer instantly."
+            },
+            {
+              "seq": 6,
+              "text": "And for a lone log x, arctan x, or arcsine x, pair it with an invisible times one, then apply parts as usual."
+            },
+            {
+              "seq": 7,
+              "text": "The board captures the two shortcuts: e to the x times f plus f prime gives e to the x times f; and a lone log or inverse-trig pairs with a times one."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Before grinding through parts on any e to the x integral, test the f plus f prime pattern first, it turns many hard problems into instant answers."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Parts कुछ आदतों को reward करता है। इन्हें सही करो और method शायद ही पलटकर लड़े।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली, u और d v को ILATE से चुनो, पहले वाले function को differentiate करो। गलत split नया integral, v d u, शुरुआत से और मुश्किल बना देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी, sign का ध्यान। Sine integrate होकर minus cosine, तो v है minus cosine x, और वो minus formula के दोनों terms में ले जाना ज़रूरी है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरी, cycling trick याद रखो। e to the x sine x के लिए, दो applications बाद original integral लौट आता है; उसे loop करने के बजाय algebraically हल करो।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथी, e to the x times a sum के लिए सतर्क रहो। Check करो कि दूसरा term पहले का derivative है क्या, हो, तो shortcut तुरंत answer देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "और एक अकेले log x, arctan x, या arcsine x के लिए, उसे invisible times one के साथ pair करो, फिर हमेशा की तरह parts लगाओ।"
+            },
+            {
+              "seq": 7,
+              "text": "Board दोनों shortcuts पकड़ता है: e to the x times f plus f prime देता है e to the x times f; और एक अकेला log या inverse-trig times one के साथ pair होता है।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>किसी भी e to the x integral पर parts में जूझने से पहले, f plus f prime pattern पहले test करो, यह कई hard problems को instant answers बना देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

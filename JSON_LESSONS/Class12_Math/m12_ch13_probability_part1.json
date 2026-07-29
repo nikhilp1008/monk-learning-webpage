@@ -1,0 +1,2005 @@
+{
+  "chapter": "Probability",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 13,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Conditional probability: shrinking the world",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Conditional Probability — Shrinking the World"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "New information doesn't change reality; it changes what we know."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Given $F$ has happened, how likely is $E$ now?"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "$F$ is a fact you're handed — not a second event you hope for."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "P(E \\mid F) = \\dfrac{P(E \\cap F)}{P(F)}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Top: outcomes in both $E$ and $F$. Bottom: the reduced world, just $F$."
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "caption": "Condition on F: keep only what's inside F.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"224\" fill=\"#f4f6fb\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"22\" y=\"32\" font-family=\"system-ui, sans-serif\" font-size=\"15\" fill=\"#334155\">S (whole sample space)</text><circle cx=\"170\" cy=\"138\" r=\"82\" fill=\"#cfe3ff\" fill-opacity=\"0.6\" stroke=\"#2b6cb0\" stroke-width=\"2.5\"/><circle cx=\"262\" cy=\"138\" r=\"72\" fill=\"#ffd9a8\" fill-opacity=\"0.55\" stroke=\"#b7791f\" stroke-width=\"2.5\"/><text x=\"108\" y=\"143\" font-family=\"system-ui, sans-serif\" font-size=\"20\" fill=\"#2b6cb0\">F</text><text x=\"300\" y=\"143\" font-family=\"system-ui, sans-serif\" font-size=\"20\" fill=\"#b7791f\">E</text><text x=\"200\" y=\"134\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#3b0764\">E and F</text><text x=\"198\" y=\"150\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#3b0764\">count here</text></svg>"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Valid only when $P(F) > 0$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Sounds simple, but this hides the whole chapter.</curious> On a Mumbai platform you guess the next train; the board flashes Western Railway and your guess sharpens. The trains didn't change — what you know did."
+            },
+            {
+              "seq": 2,
+              "text": "That's conditional probability. Information doesn't rewrite what's happening; it shrinks the possibilities you reason about down to a smaller, relevant world."
+            },
+            {
+              "seq": 3,
+              "text": "So probability of E given F asks: F has definitely occurred, and given that, how likely is E right now?"
+            },
+            {
+              "seq": 4,
+              "text": "The key shift is this. F isn't a second event you also want. It's handed to you as fact, so you discard every outcome where F didn't happen."
+            },
+            {
+              "seq": 5,
+              "text": "That gives the formula: probability of E given F equals probability of E-and-F, over probability of F."
+            },
+            {
+              "seq": 6,
+              "text": "The top counts outcomes inside both E and F; the bottom is your new universe, just F. You've stopped dividing by the whole sample space."
+            },
+            {
+              "seq": 7,
+              "text": "Picture a Diwali mela. F is the food-court crowd. Told the person is there, you count jalebi-eaters among food-court people only; the rest is irrelevant."
+            },
+            {
+              "seq": 8,
+              "text": "One guard-rail: this needs probability of F above zero. You can never condition on the impossible."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Simple लगता है, पर यहीं पूरा chapter छुपा है।</curious> Mumbai platform पे तुम next train guess करते हो; board पे Western Railway चमकता है और guess sharp हो जाता है। Trains नहीं बदलीं — जो पता है वो बदला।"
+            },
+            {
+              "seq": 2,
+              "text": "यही है conditional probability। Information reality नहीं बदलती; बस possibilities को एक छोटी, relevant दुनिया तक shrink कर देती है।"
+            },
+            {
+              "seq": 3,
+              "text": "तो probability of E given F पूछता है: F हो चुका है, और अब E कितना likely है?"
+            },
+            {
+              "seq": 4,
+              "text": "मुख्य बात ये है। F कोई दूसरा event नहीं जो तुम चाहते हो। वो fact के तौर पे दिया गया है, इसलिए हर वो outcome हटा दो जहाँ F नहीं हुआ।"
+            },
+            {
+              "seq": 5,
+              "text": "इससे formula मिलता है: probability of E given F बराबर probability of E-and-F, बटा probability of F।"
+            },
+            {
+              "seq": 6,
+              "text": "ऊपर वाला E और F दोनों के outcomes गिनता है; नीचे वाला तुम्हारी नई दुनिया है, सिर्फ F। अब पूरे sample space से भाग नहीं दे रहे।"
+            },
+            {
+              "seq": 7,
+              "text": "Diwali mela सोचो। F है food-court की भीड़। पता चला बंदा वहीं है, तो jalebi खाने वाले सिर्फ food-court वालों में गिनो; बाकी mela irrelevant।"
+            },
+            {
+              "seq": 8,
+              "text": "एक guard-rail: probability of F, zero से ऊपर होनी चाहिए। Impossible पे कभी condition नहीं कर सकते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Independence: when knowing changes nothing",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Independence — When Knowing Changes Nothing"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Sometimes new information is completely useless."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Toss a coin, then roll a die: heads tells you nothing about the die."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "latex": "P(E \\mid F) = P(E)"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "style": "red-margin",
+          "text": "$F$ shrank the world, but $E$'s share of it is unchanged."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Colony of 100 families: 30 own a car, 40 own a two-wheeler."
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "caption": "Overlap size decides dependence.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 220\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"26\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#334155\">Among 40 two-wheeler owners, how many own a car?</text><rect x=\"30\" y=\"46\" width=\"180\" height=\"44\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"30\" y=\"46\" width=\"54\" height=\"44\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"46\" y=\"74\" font-family=\"system-ui, sans-serif\" font-size=\"14\" fill=\"#14532d\">12</text><text x=\"222\" y=\"74\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#334155\">12/40 = 0.30</text><text x=\"30\" y=\"108\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#15803d\">independent (info useless)</text><rect x=\"30\" y=\"130\" width=\"180\" height=\"44\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"30\" y=\"130\" width=\"81\" height=\"44\" fill=\"#fca5a5\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"60\" y=\"158\" font-family=\"system-ui, sans-serif\" font-size=\"14\" fill=\"#7f1d1d\">18</text><text x=\"222\" y=\"158\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#334155\">18/40 = 0.45</text><text x=\"30\" y=\"192\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#b91c1c\">dependent (info helps)</text></svg>"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Same machinery, two stories — decided by the overlap."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Conditional probability has a twin idea, and here it is: sometimes the new information simply doesn't matter."
+            },
+            {
+              "seq": 2,
+              "text": "If knowing F leaves E exactly as likely as before, then F told you nothing useful about E. That is independence."
+            },
+            {
+              "seq": 3,
+              "text": "Toss a coin, then roll a die. Knowing the coin showed heads changes nothing about the die; the die doesn't care."
+            },
+            {
+              "seq": 4,
+              "text": "Formally, E and F are independent when probability of E given F equals the plain probability of E. The condition didn't move the number."
+            },
+            {
+              "seq": 5,
+              "text": "Notice what that means geometrically. F did shrink the world, but E's slice of that smaller world is identical to its slice of the big one."
+            },
+            {
+              "seq": 6,
+              "text": "A concrete feel. In a hundred families, thirty own a car and forty own a two-wheeler. Pick one at random and the car chance is thirty percent."
+            },
+            {
+              "seq": 7,
+              "text": "Now say twelve own both. Learn the family owns a two-wheeler: among those forty, twelve own a car, still thirty percent. Change both to eighteen and it jumps to forty-five percent."
+            },
+            {
+              "seq": 8,
+              "text": "Same setup, two different stories, decided entirely by how big the overlap is. Small overlap means independent; a larger overlap means the information starts to matter."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Conditional probability का एक twin idea है, ये रहा: कभी-कभी नई information matter ही नहीं करती।"
+            },
+            {
+              "seq": 2,
+              "text": "अगर F जानने के बाद E पहले जितना ही likely रहे, तो F ने E के बारे में कुछ useful बताया ही नहीं। यही है independence।"
+            },
+            {
+              "seq": 3,
+              "text": "Coin toss करो, फिर die roll। Coin पे heads आया, die के बारे में कुछ नहीं बदलता; die को फ़र्क़ ही नहीं पड़ता।"
+            },
+            {
+              "seq": 4,
+              "text": "Formally, E और F independent हैं जब probability of E given F बराबर हो plain probability of E के। Condition ने number हिलाया ही नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Geometrically देखो। F ने दुनिया shrink तो की, पर उस छोटी दुनिया में E का हिस्सा बड़ी दुनिया वाले हिस्से जितना ही है।"
+            },
+            {
+              "seq": 6,
+              "text": "Concrete feel। सौ families में तीस के पास car, चालीस के पास two-wheeler। एक random pick और car का chance तीस percent।"
+            },
+            {
+              "seq": 7,
+              "text": "अब मानो बारह के पास दोनों हैं। पता चला family के पास two-wheeler है: उन चालीस में बारह के पास car, फिर भी तीस percent। दोनों को अठारह कर दो तो पैंतालीस percent पे कूद जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "वही setup, दो अलग कहानियाँ, पूरी तरह overlap के size से तय। छोटा overlap मतलब independent; बड़ा overlap मतलब information matter करने लगती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Independent is NOT mutually exclusive",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Independent Is NOT Mutually Exclusive"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "The single biggest trap in this whole topic."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Mutually exclusive: $A \\cap B = \\varnothing$ — one happening forbids the other."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "That is the STRONGEST dependence, not independence!"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Century and a duck in the same innings: mutually exclusive, far from independent."
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "caption": "Disjoint is not the same as independent.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 210\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"42\" y=\"26\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#b91c1c\">Mutually exclusive</text><circle cx=\"72\" cy=\"108\" r=\"42\" fill=\"#fca5a5\" fill-opacity=\"0.6\" stroke=\"#b91c1c\" stroke-width=\"2.5\"/><circle cx=\"152\" cy=\"108\" r=\"42\" fill=\"#fca5a5\" fill-opacity=\"0.6\" stroke=\"#b91c1c\" stroke-width=\"2.5\"/><text x=\"64\" y=\"113\" font-family=\"system-ui, sans-serif\" font-size=\"16\" fill=\"#7f1d1d\">A</text><text x=\"144\" y=\"113\" font-family=\"system-ui, sans-serif\" font-size=\"16\" fill=\"#7f1d1d\">B</text><text x=\"70\" y=\"178\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#7f1d1d\">no overlap</text><text x=\"298\" y=\"26\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#15803d\">Independent</text><circle cx=\"300\" cy=\"108\" r=\"48\" fill=\"#86efac\" fill-opacity=\"0.5\" stroke=\"#15803d\" stroke-width=\"2.5\"/><circle cx=\"360\" cy=\"108\" r=\"48\" fill=\"#86efac\" fill-opacity=\"0.5\" stroke=\"#15803d\" stroke-width=\"2.5\"/><text x=\"276\" y=\"113\" font-family=\"system-ui, sans-serif\" font-size=\"16\" fill=\"#14532d\">A</text><text x=\"384\" y=\"113\" font-family=\"system-ui, sans-serif\" font-size=\"16\" fill=\"#14532d\">B</text><text x=\"292\" y=\"178\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#14532d\">overlap = P(A)P(B)</text></svg>"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "With replacement creates independence; without replacement creates dependence."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "latex": "P(E \\cap F) = P(E)\\,P(F)"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "This product form is the safe test — it never divides by zero."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is where almost everyone stumbles, so let's nail it down right now."
+            },
+            {
+              "seq": 2,
+              "text": "Students hear 'independent' and 'mutually exclusive' and blur them together. They are nearly opposite ideas."
+            },
+            {
+              "seq": 3,
+              "text": "Mutually exclusive means the events can't both happen; their intersection is empty. If one occurs, the other is ruled out."
+            },
+            {
+              "seq": 4,
+              "text": "<excited>But that's the strongest possible dependence, not independence!</excited> One event completely controls the other's fate."
+            },
+            {
+              "seq": 5,
+              "text": "A batsman scoring a century and getting a duck in the same innings are mutually exclusive, about as far from independent as two events can get."
+            },
+            {
+              "seq": 6,
+              "text": "Visually, mutually exclusive events are two separate circles that never touch; independent events overlap by exactly the product of their probabilities."
+            },
+            {
+              "seq": 7,
+              "text": "A practical tell for exams: drawing with replacement leaves the box unchanged, so the draws are independent. Without replacement the box changes, and the draws become dependent."
+            },
+            {
+              "seq": 8,
+              "text": "The working definition of independence is the product rule: probability of E-and-F equals probability of E times probability of F."
+            },
+            {
+              "seq": 9,
+              "text": "Prefer this product form as your test. It never divides by anything, so it stays valid even when a probability is zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहीं लगभग सब लड़खड़ाते हैं, तो इसे अभी पक्का कर लेते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Students 'independent' और 'mutually exclusive' को एक कर देते हैं। ये लगभग opposite ideas हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Mutually exclusive मतलब दोनों events एक साथ हो ही नहीं सकते; उनका intersection empty है। एक हुआ तो दूसरा out।"
+            },
+            {
+              "seq": 4,
+              "text": "<excited>पर ये तो सबसे strong dependence है, independence नहीं!</excited> एक event दूसरे की क़िस्मत पूरी तरह control कर रहा है।"
+            },
+            {
+              "seq": 5,
+              "text": "एक ही innings में batsman का century और duck mutually exclusive हैं, independent से जितना दूर हो सकते हैं उतने।"
+            },
+            {
+              "seq": 6,
+              "text": "Visually, mutually exclusive events दो अलग circles हैं जो कभी नहीं छूते; independent events बिल्कुल probabilities के product जितना overlap करते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Exam का practical tell: with replacement में box वैसा ही रहता है, तो draws independent। Without replacement में box बदलता है, और draws dependent हो जाते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "Independence की working definition product rule है: probability of E-and-F बराबर probability of E गुणा probability of F।"
+            },
+            {
+              "seq": 9,
+              "text": "इसी product form को test बनाओ। ये कभी किसी से भाग नहीं देता, इसलिए probability zero होने पर भी valid रहता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Proof: why conditioning shrinks the sample space",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof — Conditioning Shrinks the Sample Space"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Claim: if $P(F) > 0$, then $P(E \\mid F) = \\dfrac{P(E \\cap F)}{P(F)}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Take equally likely outcomes. Knowing $F$ occurred, the effective space is $F$ alone."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(E \\mid F) = \\dfrac{n(E \\cap F)}{n(F)}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Now divide top and bottom by $n(S)$, the total number of outcomes."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "\\dfrac{n(E \\cap F)/n(S)}{n(F)/n(S)} = \\dfrac{P(E \\cap F)}{P(F)}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Dividing by $n(S)$ turns raw counts into probabilities."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "That last step is why the result holds even when outcomes aren't equally likely."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's prove the formula rather than just trust it. The proof is the intuition made exact."
+            },
+            {
+              "seq": 2,
+              "text": "The claim: whenever the probability of F is positive, probability of E given F equals probability of E-and-F over probability of F."
+            },
+            {
+              "seq": 3,
+              "text": "Start with equally likely outcomes. Once you know F occurred, every outcome outside F is ruled out, so your effective sample space is F alone."
+            },
+            {
+              "seq": 4,
+              "text": "Among the outcomes in F, the ones that also make E true are exactly those in E-and-F. So the conditional is the count of E-and-F over the count of F."
+            },
+            {
+              "seq": 5,
+              "text": "Here is the one clever move: divide both the top and the bottom by n of S, the total number of outcomes."
+            },
+            {
+              "seq": 6,
+              "text": "The counts become probabilities: E-and-F over F, each as a fraction of the whole. The n of S cancels, leaving our formula."
+            },
+            {
+              "seq": 7,
+              "text": "That division is the crucial step; it converts raw counts into genuine probabilities."
+            },
+            {
+              "seq": 8,
+              "text": "And because it's now written purely in probabilities, we take it as the definition even when outcomes aren't equally likely. The formula survives."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Formula को सिर्फ मानने के बजाय prove करते हैं। Proof ही intuition का exact रूप है।"
+            },
+            {
+              "seq": 2,
+              "text": "Claim: जब भी probability of F positive हो, probability of E given F बराबर probability of E-and-F बटा probability of F।"
+            },
+            {
+              "seq": 3,
+              "text": "Equally likely outcomes से शुरू करो। जैसे ही पता चला F हुआ, F के बाहर का हर outcome out, तो effective sample space सिर्फ F रह गया।"
+            },
+            {
+              "seq": 4,
+              "text": "F के outcomes में से जो E को भी true करते हैं वो बिल्कुल E-and-F वाले हैं। तो conditional है count of E-and-F बटा count of F।"
+            },
+            {
+              "seq": 5,
+              "text": "यहाँ एक clever move है: ऊपर और नीचे दोनों को n of S से divide करो, यानी total outcomes से।"
+            },
+            {
+              "seq": 6,
+              "text": "Counts अब probabilities बन जाते हैं: E-and-F बटा F, हर एक पूरे का fraction। n of S cancel, और हमारा formula बचा।"
+            },
+            {
+              "seq": 7,
+              "text": "यही division crucial step है; raw counts को genuine probabilities में बदल देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और अब चूँकि ये पूरी तरह probabilities में लिखा है, इसे definition मान लेते हैं, तब भी जब outcomes equally likely न हों। Formula टिका रहता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Proof: independence survives complements",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof — Independence Survives Complements"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "If $A$ and $B$ are independent, so are $A$ and $B'$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Split $A$ by whether $B$ happens or not:"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(A) = P(A \\cap B) + P(A \\cap B')"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(A \\cap B') = P(A) - P(A)\\,P(B)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "latex": "P(A \\cap B') = P(A)\\,[\\,1 - P(B)\\,] = P(A)\\,P(B')"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "So $A$ and $B'$ are independent — a CBSE favourite."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Apply twice: $A'$ with $B$, and $A'$ with $B'$, are independent too."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Independence has a beautiful robustness that exams exploit constantly, so let's prove it."
+            },
+            {
+              "seq": 2,
+              "text": "The claim: if A and B are independent, then A and the complement of B are also independent."
+            },
+            {
+              "seq": 3,
+              "text": "Split A cleanly by whether B happens: the part of A inside B, plus the part of A outside B."
+            },
+            {
+              "seq": 4,
+              "text": "In symbols, probability of A equals probability of A-and-B plus probability of A-and-not-B."
+            },
+            {
+              "seq": 5,
+              "text": "Rearrange, then use independence to replace probability of A-and-B with probability of A times probability of B."
+            },
+            {
+              "seq": 6,
+              "text": "Factor out probability of A, and one minus probability of B is just probability of not-B. So probability of A-and-not-B equals probability of A times probability of not-B."
+            },
+            {
+              "seq": 7,
+              "text": "That is exactly the product rule, so A and not-B are independent. C B S E loves asking this one directly."
+            },
+            {
+              "seq": 8,
+              "text": "Apply the same argument twice and you get more: A-complement with B, and A-complement with B-complement, are independent too. Independence survives every complement combination."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Independence में एक सुंदर robustness है जिसे exams बार-बार use करते हैं, तो इसे prove करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Claim: अगर A और B independent हैं, तो A और B का complement भी independent हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "A को साफ़-साफ़ बाँटो इस आधार पे कि B हुआ या नहीं: A का हिस्सा B के अंदर, और A का हिस्सा B के बाहर।"
+            },
+            {
+              "seq": 4,
+              "text": "Symbols में, probability of A बराबर probability of A-and-B जोड़ probability of A-and-not-B।"
+            },
+            {
+              "seq": 5,
+              "text": "Rearrange करो, फिर independence से probability of A-and-B को बदलो probability of A गुणा probability of B से।"
+            },
+            {
+              "seq": 6,
+              "text": "probability of A बाहर निकालो, और one minus probability of B तो बस probability of not-B है। तो probability of A-and-not-B बराबर probability of A गुणा probability of not-B।"
+            },
+            {
+              "seq": 7,
+              "text": "यही तो product rule है, तो A और not-B independent। C B S E इसे सीधे पूछना पसंद करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "यही argument दो बार लगाओ और और मिलता है: A-complement के साथ B, और A-complement के साथ B-complement, भी independent। Independence हर complement combination में टिकती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "formulas",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Core formulas: conditional, multiplication, chain rule",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Core Formulas — Conditional & Multiplication"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 9,
+          "latex": "P(E \\mid F) = \\dfrac{P(E \\cap F)}{P(F)}, \\quad P(F) \\neq 0"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Rearrange it and you get the multiplication theorem."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "latex": "P(E \\cap F) = P(F)\\,P(E \\mid F) = P(E)\\,P(F \\mid E)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Two ways to build the same intersection — use whichever conditional is easier."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "P(E \\cap F \\cap G) = P(E)\\,P(F \\mid E)\\,P(G \\mid E \\cap F)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Chain rule: condition each new event on all the previous ones."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "latex": "P(E' \\mid F) = 1 - P(E \\mid F)"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "A conditional probability is still a probability: $0 \\le P(E \\mid F) \\le 1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the toolkit for this subtopic. Here is your complete set of core formulas."
+            },
+            {
+              "seq": 2,
+              "text": "First, the definition: probability of E given F is probability of E-and-F over probability of F, valid whenever the probability of F isn't zero."
+            },
+            {
+              "seq": 3,
+              "text": "Multiply both sides by probability of F and the definition turns into something you'll use everywhere, the multiplication theorem."
+            },
+            {
+              "seq": 4,
+              "text": "Probability of E-and-F equals probability of F times probability of E given F; or, conditioning the other way, probability of E times probability of F given E."
+            },
+            {
+              "seq": 5,
+              "text": "Both give the same intersection, so pick the direction whose conditional is easier to find. That choice alone saves time in exams."
+            },
+            {
+              "seq": 6,
+              "text": "For three events, chain them: probability of E-and-F-and-G is probability of E, times F given E, times G given E-and-F."
+            },
+            {
+              "seq": 7,
+              "text": "The pattern is clean: each new event is conditioned on everything that came before it."
+            },
+            {
+              "seq": 8,
+              "text": "One handy property: the complement of E given F is just one minus probability of E given F."
+            },
+            {
+              "seq": 9,
+              "text": "That works because a conditional probability is a genuine probability; it always sits between zero and one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic का toolkit consolidate करते हैं। ये रहा तुम्हारा core formulas का पूरा set।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले definition: probability of E given F बराबर probability of E-and-F बटा probability of F, valid जब तक probability of F zero न हो।"
+            },
+            {
+              "seq": 3,
+              "text": "दोनों तरफ़ probability of F से multiply करो और definition बन जाती है वो चीज़ जो हर जगह काम आएगी, multiplication theorem।"
+            },
+            {
+              "seq": 4,
+              "text": "Probability of E-and-F बराबर probability of F गुणा probability of E given F; या दूसरी तरफ़ condition करके, probability of E गुणा probability of F given E।"
+            },
+            {
+              "seq": 5,
+              "text": "दोनों वही intersection देते हैं, तो वो direction चुनो जिसका conditional आसानी से मिले। यही choice exam में time बचाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "तीन events के लिए chain करो: probability of E-and-F-and-G बराबर probability of E, गुणा F given E, गुणा G given E-and-F।"
+            },
+            {
+              "seq": 7,
+              "text": "Pattern साफ़ है: हर नया event उससे पहले वाले सब पे conditioned होता है।"
+            },
+            {
+              "seq": 8,
+              "text": "एक handy property: complement of E given F बस one minus probability of E given F है।"
+            },
+            {
+              "seq": 9,
+              "text": "ये इसलिए चलता है क्योंकि conditional probability एक genuine probability है; हमेशा zero और one के बीच।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Independence and 'at least one of n'",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Independence & 'At Least One'"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 9,
+          "latex": "P(E \\cap F) = P(E)\\,P(F)"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "The working definition — equivalent to $P(E \\mid F) = P(E)$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "For three events, checking the pairs is NOT enough."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "P(A \\cap B \\cap C) = P(A)\\,P(B)\\,P(C)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "Mutual independence needs the triple product too, not just the pairs."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "'At least one of $n$ independent events' — go through the complement 'none.'"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "latex": "P(\\text{at least one}) = 1 - \\prod_{i=1}^{n}\\bigl(1 - P(A_i)\\bigr)"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Converts an ugly union into a clean product."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the independence formulas, plus the single most-used result in the whole chapter."
+            },
+            {
+              "seq": 2,
+              "text": "The working definition: E and F are independent exactly when probability of E-and-F equals probability of E times probability of F."
+            },
+            {
+              "seq": 3,
+              "text": "This is equivalent to saying probability of E given F equals probability of E, the condition doesn't move the number, but the product form is safer to use."
+            },
+            {
+              "seq": 4,
+              "text": "A warning for three events: verifying that the three pairs are independent is not enough on its own."
+            },
+            {
+              "seq": 5,
+              "text": "You also need the triple product: probability of A-and-B-and-C equal to the product of all three individual probabilities."
+            },
+            {
+              "seq": 6,
+              "text": "Only with all four conditions, the three pairs and the triple, do you have genuine mutual independence. J E E Advanced tests exactly this gap."
+            },
+            {
+              "seq": 7,
+              "text": "Finally, the workhorse. For 'at least one of n independent events,' never expand the union. Go through the complement, 'none of them occurs.'"
+            },
+            {
+              "seq": 8,
+              "text": "So probability of at least one equals one minus the product, over all events, of one minus each event's probability."
+            },
+            {
+              "seq": 9,
+              "text": "That single trick converts an awkward union with many cross-terms into a clean product. Reach for it whenever you see 'at least one.'"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब independence के formulas, और पूरे chapter का सबसे ज़्यादा use होने वाला result।"
+            },
+            {
+              "seq": 2,
+              "text": "Working definition: E और F independent हैं ठीक तब जब probability of E-and-F बराबर हो probability of E गुणा probability of F के।"
+            },
+            {
+              "seq": 3,
+              "text": "ये कहने के बराबर है कि probability of E given F बराबर probability of E, condition number नहीं हिलाता, पर product form use करना safer है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीन events के लिए warning: तीनों pairs का independent होना अकेले काफ़ी नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "triple product भी चाहिए: probability of A-and-B-and-C बराबर तीनों individual probabilities के product के।"
+            },
+            {
+              "seq": 6,
+              "text": "चारों conditions के साथ ही, तीन pairs और triple, genuine mutual independence मिलती है। J E E Advanced यही gap test करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "आख़िर में workhorse। 'At least one of n independent events' के लिए union कभी expand मत करो। Complement से जाओ, 'कोई भी नहीं होता'।"
+            },
+            {
+              "seq": 8,
+              "text": "तो probability of at least one बराबर one minus वो product, सारे events पे, one minus हर event की probability का।"
+            },
+            {
+              "seq": 9,
+              "text": "यही एक trick एक awkward union को, ढेर सारे cross-terms वाले, clean product में बदल देती है। जब भी 'at least one' दिखे, इसे उठाओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Worked example: conditional on a die (CBSE)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Conditional on a Die (CBSE)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "A fair die is rolled twice. $E$: sum is $9$. $F$: first roll exceeds $3$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Total outcomes: $36$. $F$ means first roll in $\\{4,5,6\\}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(F) = \\dfrac{3 \\times 6}{36} = \\dfrac{18}{36}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "$E \\cap F$: sum $9$ with first roll above $3$ — pairs $(4,5),(5,4),(6,3)$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "$(3,6)$ is rejected — a first roll of $3$ is not greater than $3$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "latex": "P(E \\cap F) = \\dfrac{3}{36}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "latex": "P(E \\mid F) = \\dfrac{3/36}{18/36} = \\dfrac{1}{6}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's run a clean Boards-level problem end to end."
+            },
+            {
+              "seq": 2,
+              "text": "A fair die is rolled twice. E is the event that the sum is nine; F is the event that the first roll shows a number greater than three."
+            },
+            {
+              "seq": 3,
+              "text": "There are thirty six equally likely outcomes. F fixes the first roll to four, five, or six."
+            },
+            {
+              "seq": 4,
+              "text": "That's three choices for the first roll and six for the second, so probability of F is eighteen over thirty six."
+            },
+            {
+              "seq": 5,
+              "text": "Now E-and-F: sum nine with the first roll above three. The pairs are four-five, five-four, and six-three."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Watch the trap: three-six is rejected, because a first roll of three is not greater than three.</whisper> That is the mark most students drop."
+            },
+            {
+              "seq": 7,
+              "text": "So there are three good outcomes, giving probability of E-and-F equal to three over thirty six."
+            },
+            {
+              "seq": 8,
+              "text": "Divide: three over thirty six, over eighteen over thirty six, gives one over six. That is your conditional probability."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक साफ़ Boards-level problem पूरा चलाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "एक fair die दो बार roll होती है। E event है कि sum nine हो; F event है कि पहला roll three से बड़ा हो।"
+            },
+            {
+              "seq": 3,
+              "text": "छत्तीस equally likely outcomes हैं। F पहले roll को four, five, या six पे fix कर देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "यानी पहले roll के तीन choices और दूसरे के six, तो probability of F है अठारह बटा छत्तीस।"
+            },
+            {
+              "seq": 5,
+              "text": "अब E-and-F: sum nine और पहला roll three से ऊपर। Pairs हैं four-five, five-four, और six-three।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Trap देखो: three-six reject है, क्योंकि पहला roll three, three से बड़ा नहीं।</whisper> यहीं ज़्यादातर students marks गँवाते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो तीन अच्छे outcomes, probability of E-and-F बराबर तीन बटा छत्तीस।"
+            },
+            {
+              "seq": 8,
+              "text": "Divide करो: तीन बटा छत्तीस, बटा अठारह बटा छत्तीस, बराबर one बटा six। यही तुम्हारी conditional probability।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Worked example: independent or exclusive? (JEE Main)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Independent or Exclusive? (JEE Main)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "$P(A) = 0.5$, $P(B) = 0.4$, $P(A \\cup B) = 0.7$. Classify $A$ and $B$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "style": "red-margin",
+          "text": "Don't guess from the setup — get the intersection first."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(A \\cap B) = P(A) + P(B) - P(A \\cup B)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "P(A \\cap B) = 0.5 + 0.4 - 0.7 = 0.2"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Independence test: $P(A)\\,P(B) = 0.5 \\times 0.4 = 0.2$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "latex": "P(A \\cap B) = P(A)\\,P(B) \\;\\Rightarrow\\; \\text{independent}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Not mutually exclusive: $P(A \\cap B) = 0.2 \\neq 0$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a classic J E E Main speed trap. One line of work saves you from a wrong reflex."
+            },
+            {
+              "seq": 2,
+              "text": "You're given probability of A is zero point five, probability of B is zero point four, and probability of A-or-B is zero point seven. Are they independent, mutually exclusive, both, or neither?"
+            },
+            {
+              "seq": 3,
+              "text": "Don't panic-list cases. The move is to find probability of A-and-B first, in a single line."
+            },
+            {
+              "seq": 4,
+              "text": "Use the addition theorem: probability of A-and-B equals probability of A plus probability of B minus probability of A-or-B."
+            },
+            {
+              "seq": 5,
+              "text": "That is zero point five plus zero point four minus zero point seven, which is zero point two."
+            },
+            {
+              "seq": 6,
+              "text": "Now test independence: probability of A times probability of B is zero point five times zero point four, again zero point two."
+            },
+            {
+              "seq": 7,
+              "text": "Since probability of A-and-B equals the product, A and B are independent."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>And they're not mutually exclusive!</excited> That would need the intersection to be zero, but it's zero point two. The trap is assuming exclusivity from a tidy setup; always compute the intersection first."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये classic J E E Main speed trap है। एक line का काम तुम्हें ग़लत reflex से बचा लेता है।"
+            },
+            {
+              "seq": 2,
+              "text": "दिया है probability of A है zero point five, probability of B है zero point four, और probability of A-or-B है zero point seven। ये independent हैं, mutually exclusive, दोनों, या कोई नहीं?"
+            },
+            {
+              "seq": 3,
+              "text": "Cases मत गिनने लगो। सही move है probability of A-and-B पहले निकालो, एक ही line में।"
+            },
+            {
+              "seq": 4,
+              "text": "Addition theorem use करो: probability of A-and-B बराबर probability of A जोड़ probability of B घटा probability of A-or-B।"
+            },
+            {
+              "seq": 5,
+              "text": "यानी zero point five जोड़ zero point four घटा zero point seven, जो है zero point two।"
+            },
+            {
+              "seq": 6,
+              "text": "अब independence test: probability of A गुणा probability of B है zero point five गुणा zero point four, फिर से zero point two।"
+            },
+            {
+              "seq": 7,
+              "text": "चूँकि probability of A-and-B product के बराबर है, A और B independent हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "<excited>और mutually exclusive नहीं हैं!</excited> उसके लिए intersection zero चाहिए था, पर वो zero point two है। Trap है tidy setup से exclusivity मान लेना; हमेशा intersection पहले निकालो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Worked example: picking without replacement (JEE Main)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Picking Without Replacement (JEE Main)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Panel: $7$ boys, $5$ girls. Pick $3$ one by one, no replacement."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "(i) Given the first two are girls, chance the third is a boy?"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Two girls removed leaves $10$ people, of whom $7$ are boys."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "P(\\text{3rd boy} \\mid \\text{first two girls}) = \\dfrac{7}{10}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "(ii) Chance all three picks are girls — use the chain rule."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "latex": "P(G_1 \\cap G_2 \\cap G_3) = P(G_1)\\,P(G_2 \\mid G_1)\\,P(G_3 \\mid G_1 \\cap G_2)"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "latex": "\\dfrac{5}{12} \\times \\dfrac{4}{11} \\times \\dfrac{3}{10} = \\dfrac{1}{22}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Each factor uses the shrunken pool from the pick before it."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is where the chain rule earns its keep: a without-replacement selection."
+            },
+            {
+              "seq": 2,
+              "text": "A panel has seven boys and five girls. Three members are picked one after another, without replacement."
+            },
+            {
+              "seq": 3,
+              "text": "Part one: given that the first two picked are girls, what's the chance the third pick is a boy?"
+            },
+            {
+              "seq": 4,
+              "text": "Once two girls are gone, ten people remain, and seven of them are boys."
+            },
+            {
+              "seq": 5,
+              "text": "By the reduced-sample-space idea, the chance the third is a boy is simply seven over ten."
+            },
+            {
+              "seq": 6,
+              "text": "Part two asks for the chance all three picks are girls. This is a job for the chain rule."
+            },
+            {
+              "seq": 7,
+              "text": "Probability of girl, then girl, then girl is probability of the first girl, times the second given the first, times the third given the first two."
+            },
+            {
+              "seq": 8,
+              "text": "That is five twelfths times four elevenths times three tenths, which simplifies to one over twenty two."
+            },
+            {
+              "seq": 9,
+              "text": "Notice each factor uses the shrunken pool left by the pick before it; that shrinking is exactly what 'without replacement' means."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ chain rule अपनी क़ीमत वसूल करता है: एक without-replacement selection।"
+            },
+            {
+              "seq": 2,
+              "text": "एक panel में सात boys और पाँच girls हैं। तीन members एक-एक करके चुने जाते हैं, without replacement।"
+            },
+            {
+              "seq": 3,
+              "text": "Part one: दिया कि पहले दो girls हैं, तीसरा pick boy होने का chance क्या है?"
+            },
+            {
+              "seq": 4,
+              "text": "दो girls जाने के बाद दस लोग बचते हैं, और उनमें सात boys हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Reduced-sample-space idea से, तीसरा boy होने का chance बस सात बटा दस।"
+            },
+            {
+              "seq": 6,
+              "text": "Part two पूछता है तीनों picks girls होने का chance। ये chain rule का काम है।"
+            },
+            {
+              "seq": 7,
+              "text": "Probability of girl, फिर girl, फिर girl बराबर पहली girl की probability, गुणा दूसरी first के given, गुणा तीसरी पहली दो के given।"
+            },
+            {
+              "seq": 8,
+              "text": "यानी five twelfths गुणा four elevenths गुणा three tenths, जो simplify होकर one बटा twenty two।"
+            },
+            {
+              "seq": 9,
+              "text": "ध्यान दो हर factor उससे पहले वाले pick से बची छोटी pool use करता है; यही shrinking 'without replacement' का मतलब है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Worked example: both, neither, exactly one (JEE Advanced)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked Example — Both, Neither, Exactly One (JEE Advanced)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "$A$, $B$ independent. $P(\\text{both}) = \\tfrac{1}{8}$, $P(\\text{neither}) = \\tfrac{3}{8}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Let $P(A) = a$, $P(B) = b$. Independence gives $ab = \\tfrac{1}{8}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "P(A' \\cap B') = (1-a)(1-b) = \\dfrac{3}{8}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "1 - (a+b) + ab = \\dfrac{3}{8} \\;\\Rightarrow\\; a+b = \\dfrac{3}{4}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "So $a, b$ are roots of $8t^2 - 6t + 1 = 0$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "t = \\dfrac{6 \\pm 2}{16} \\;\\Rightarrow\\; t = \\dfrac{1}{2}\\ \\text{or}\\ \\dfrac{1}{4}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Exactly one occurs: $P(A) + P(B) - 2P(A \\cap B)$."
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "latex": "\\dfrac{3}{4} - 2 \\cdot \\dfrac{1}{8} = \\dfrac{1}{2}"
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 81,
+          "style": "red-margin",
+          "text": "Check: $\\tfrac{1}{8} + \\tfrac{1}{2} + \\tfrac{3}{8} = 1$ — the three cases exhaust everything."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a full J E E Advanced build; it stitches several ideas together."
+            },
+            {
+              "seq": 2,
+              "text": "A and B are independent. The probability both occur is one eighth, and the probability neither occurs is three eighths. Find the two probabilities and the chance exactly one occurs."
+            },
+            {
+              "seq": 3,
+              "text": "Let probability of A be a and probability of B be b. Independence immediately gives a times b equals one eighth."
+            },
+            {
+              "seq": 4,
+              "text": "For 'neither,' remember the complements are also independent, so probability of neither is one minus a, times one minus b, equal to three eighths."
+            },
+            {
+              "seq": 5,
+              "text": "Expand: one, minus the sum of a and b, plus a-b, equals three eighths. Substitute a-b as one eighth and you get a plus b equals three quarters."
+            },
+            {
+              "seq": 6,
+              "text": "Now a and b are the two roots of the quadratic eight t squared minus six t plus one equals zero."
+            },
+            {
+              "seq": 7,
+              "text": "Solving, t equals six plus or minus two, over sixteen, which is one half or one quarter. So the pair is one half and one quarter."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, 'exactly one occurs' is probability of A plus probability of B minus twice the probability of both."
+            },
+            {
+              "seq": 9,
+              "text": "That is three quarters minus two times one eighth, which is one half."
+            },
+            {
+              "seq": 10,
+              "text": "<whisper>Always run this check:</whisper> both, plus exactly one, plus neither, one eighth, one half, three eighths, sums to one. Those three cases exhaust every possibility, so the answer is consistent."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक पूरा J E E Advanced build; ये कई ideas को जोड़ता है।"
+            },
+            {
+              "seq": 2,
+              "text": "A और B independent हैं। दोनों होने की probability one eighth, और कोई भी न होने की probability three eighths। दोनों probabilities और exactly one होने का chance निकालो।"
+            },
+            {
+              "seq": 3,
+              "text": "मानो probability of A है a और probability of B है b। Independence तुरंत देता है a गुणा b बराबर one eighth।"
+            },
+            {
+              "seq": 4,
+              "text": "'Neither' के लिए याद रखो complements भी independent हैं, तो probability of neither है one minus a, गुणा one minus b, बराबर three eighths।"
+            },
+            {
+              "seq": 5,
+              "text": "Expand करो: one, घटा a और b का sum, जोड़ a-b, बराबर three eighths। a-b को one eighth रखो और मिलता है a जोड़ b बराबर three quarters।"
+            },
+            {
+              "seq": 6,
+              "text": "अब a और b उस quadratic के दो roots हैं: eight t squared minus six t plus one बराबर zero।"
+            },
+            {
+              "seq": 7,
+              "text": "Solve करने पर, t बराबर six plus-or-minus two, बटा sixteen, जो है one half या one quarter। तो pair है one half और one quarter।"
+            },
+            {
+              "seq": 8,
+              "text": "आख़िर में, 'exactly one occurs' है probability of A जोड़ probability of B घटा दो गुना probability of both।"
+            },
+            {
+              "seq": 9,
+              "text": "यानी three quarters घटा दो गुना one eighth, जो है one half।"
+            },
+            {
+              "seq": 10,
+              "text": "<whisper>ये check हमेशा चलाओ:</whisper> both, जोड़ exactly one, जोड़ neither, one eighth, one half, three eighths, का sum one है। ये तीनों cases हर possibility को cover करते हैं, तो answer consistent है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "tips",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Common pitfalls to avoid",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Common Pitfalls — Read Before the Exam"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 9,
+          "style": "red-margin",
+          "text": "Pitfall 1: confusing 'mutually exclusive' with 'independent.'"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Mutually exclusive with positive probabilities means strongly dependent, not independent."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "style": "red-margin",
+          "text": "Pitfall 2: flipping the conditional — $P(A \\mid B) \\neq P(B \\mid A)$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Umbrella given rain is high; rain given umbrella is much lower — same events."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 45,
+          "style": "red-margin",
+          "text": "Pitfall 3: pairwise independence does NOT imply mutual independence."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "For three events, the triple product can still fail even if all pairs pass."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "Pitfall 4: ignoring the given, reverting to the unconditional probability."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "In 'given at least one girl,' using the plain probability throws away the condition."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lock in the four traps that cost the most marks in this subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "Pitfall one, the big one: confusing mutually exclusive with independent."
+            },
+            {
+              "seq": 3,
+              "text": "Mutually exclusive events with positive probabilities are strongly dependent; one happening forbids the other. That is the opposite of independence, not a version of it."
+            },
+            {
+              "seq": 4,
+              "text": "Pitfall two: flipping the conditional. Probability of A given B is generally not probability of B given A; their denominators differ."
+            },
+            {
+              "seq": 5,
+              "text": "Feel it: the chance someone carries an umbrella given it's raining is high, but the chance it's raining given they carry an umbrella is much lower. Same two events, very different numbers."
+            },
+            {
+              "seq": 6,
+              "text": "Pitfall three: assuming pairwise independence gives you mutual independence."
+            },
+            {
+              "seq": 7,
+              "text": "For three events, all three pairs can be independent and yet the triple product condition still fails. Check the triple explicitly."
+            },
+            {
+              "seq": 8,
+              "text": "Pitfall four: ignoring the information you were given, and sliding back to the unconditional probability."
+            },
+            {
+              "seq": 9,
+              "text": "In a problem that says 'given at least one girl,' quoting the plain probability throws away the very condition that defines the question."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic में सबसे ज़्यादा marks खाने वाले चार traps पक्के कर लेते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Pitfall one, सबसे बड़ा: mutually exclusive को independent समझ लेना।"
+            },
+            {
+              "seq": 3,
+              "text": "Positive probabilities वाले mutually exclusive events strongly dependent हैं; एक हुआ तो दूसरा मना। ये independence का opposite है, उसका version नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Pitfall two: conditional flip कर देना। Probability of A given B आम तौर पे probability of B given A नहीं होती; उनके denominators अलग हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Feel करो: बारिश के given कोई umbrella रखता है इसका chance high है, पर umbrella के given बारिश हो रही है ये chance बहुत कम। वही दो events, बहुत अलग numbers।"
+            },
+            {
+              "seq": 6,
+              "text": "Pitfall three: pairwise independence से mutual independence मान लेना।"
+            },
+            {
+              "seq": 7,
+              "text": "तीन events के लिए तीनों pairs independent हो सकते हैं फिर भी triple product condition fail कर सकती है। Triple explicitly check करो।"
+            },
+            {
+              "seq": 8,
+              "text": "Pitfall four: दी गई information ignore करके unconditional probability पे फिसल जाना।"
+            },
+            {
+              "seq": 9,
+              "text": "'Given at least one girl' वाली problem में plain probability बोलना उसी condition को फेंक देता है जो सवाल को define करती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "tips",
+      "subtopic": "Conditional Probability & Independence",
+      "title": "Phrase-to-symbol decoder and the pro-tip",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Phrase-to-Symbol Decoder + Pro-Tip"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "text": "Translate exam English into set notation before touching a formula."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "'given that $F$ has occurred' $\\to$ a conditional $P(\\cdot \\mid F)$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "'both $A$ and $B$' $\\to P(A \\cap B)$; '$A$ or $B$' $\\to P(A \\cup B)$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "'neither $A$ nor $B$' $\\to P(A' \\cap B') = 1 - P(A \\cup B)$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "P(\\text{exactly one of } A, B) = P(A) + P(B) - 2P(A \\cap B)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Pro-tip: compute the intersection first, then run two one-second checks."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Is $P(A \\cap B) = 0$? Is $P(A \\cap B) = P(A)\\,P(B)$?"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "'$= 0$' means mutually exclusive; '$= P(A)P(B)$' means independent."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Close the subtopic with the single most reliable exam habit: decode the words first."
+            },
+            {
+              "seq": 2,
+              "text": "Half the battle in probability is translating exam English into set notation before you reach for any formula."
+            },
+            {
+              "seq": 3,
+              "text": "When you see 'given that F has occurred,' or 'if it is known that F,' that's a conditional; the denominator becomes probability of F."
+            },
+            {
+              "seq": 4,
+              "text": "'Both A and B' is intersection; 'A or B,' or 'at least one of A and B,' is union."
+            },
+            {
+              "seq": 5,
+              "text": "'Neither A nor B' is the intersection of the complements, which equals one minus probability of A-or-B."
+            },
+            {
+              "seq": 6,
+              "text": "And 'exactly one of A and B' is probability of A plus probability of B minus twice their intersection; remember the factor of two."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Here is the pro-tip that resolves almost every classification question:</whisper> compute the intersection first, then run two one-second checks."
+            },
+            {
+              "seq": 8,
+              "text": "Ask: is the intersection zero? And is it equal to probability of A times probability of B?"
+            },
+            {
+              "seq": 9,
+              "text": "If it's zero they're mutually exclusive; if it equals the product they're independent, and they can never both be yes unless a probability is zero. Write the symbols in the margin first and the right formula becomes obvious."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Subtopic को सबसे भरोसेमंद exam habit से बंद करते हैं: पहले words को decode करो।"
+            },
+            {
+              "seq": 2,
+              "text": "Probability में आधी लड़ाई exam English को formula छूने से पहले set notation में translate करने की है।"
+            },
+            {
+              "seq": 3,
+              "text": "जब 'given that F has occurred', या 'if it is known that F' दिखे, वो conditional है; denominator बन जाता है probability of F।"
+            },
+            {
+              "seq": 4,
+              "text": "'Both A and B' intersection है; 'A or B', या 'at least one of A and B', union है।"
+            },
+            {
+              "seq": 5,
+              "text": "'Neither A nor B' complements का intersection है, जो बराबर है one minus probability of A-or-B।"
+            },
+            {
+              "seq": 6,
+              "text": "और 'exactly one of A and B' है probability of A जोड़ probability of B घटा दो गुना उनका intersection; factor of two याद रखो।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>ये रहा pro-tip जो लगभग हर classification question सुलझा देता है:</whisper> intersection पहले निकालो, फिर दो one-second checks चलाओ।"
+            },
+            {
+              "seq": 8,
+              "text": "पूछो: क्या intersection zero है? और क्या ये probability of A गुणा probability of B के बराबर है?"
+            },
+            {
+              "seq": 9,
+              "text": "अगर zero है तो mutually exclusive; अगर product के बराबर है तो independent, और दोनों कभी yes नहीं हो सकते जब तक कोई probability zero न हो। Symbols पहले margin में लिखो और सही formula obvious हो जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

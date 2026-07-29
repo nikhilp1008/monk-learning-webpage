@@ -1,0 +1,3214 @@
+{
+  "chapter": "Permutations and Combinations",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 6,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish",
+    "hindi"
+  ],
+  "sections": [
+    {
+      "section_index": 27,
+      "section_type": "concept",
+      "subtopic": "Total Selections, Grouping & Distribution (Stars and Bars)",
+      "title": "Three new tools, and Tool 1: total selections",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Beyond 'choose exactly r': three broader tools."
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "How many subsets total? How to share identical sweets? How many integer solutions?"
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "caption": "Each object is a 1 (in) or a 0 (out)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 360 110\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" font-size=\"12\" font-family=\"system-ui, sans-serif\">Each object: take (1) or leave (0)</text><rect x=\"20\" y=\"35\" width=\"40\" height=\"40\" fill=\"none\" stroke=\"#333\"/><text x=\"35\" y=\"62\" font-size=\"16\" font-family=\"system-ui, sans-serif\">1</text><rect x=\"70\" y=\"35\" width=\"40\" height=\"40\" fill=\"none\" stroke=\"#333\"/><text x=\"85\" y=\"62\" font-size=\"16\" font-family=\"system-ui, sans-serif\">0</text><rect x=\"120\" y=\"35\" width=\"40\" height=\"40\" fill=\"none\" stroke=\"#333\"/><text x=\"135\" y=\"62\" font-size=\"16\" font-family=\"system-ui, sans-serif\">1</text><rect x=\"170\" y=\"35\" width=\"40\" height=\"40\" fill=\"none\" stroke=\"#333\"/><text x=\"185\" y=\"62\" font-size=\"16\" font-family=\"system-ui, sans-serif\">1</text><text x=\"228\" y=\"63\" font-size=\"18\" font-family=\"system-ui, sans-serif\">...</text><text x=\"10\" y=\"98\" font-size=\"12\" fill=\"#c8102e\" font-family=\"system-ui, sans-serif\">n-bit string &#8594; 2^n subsets (incl. empty)</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "Tool 1: for n distinct objects, decide take-or-leave for each. Two choices each."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "\\text{subsets} = 2^{n}\\;(\\text{incl. empty}); \\quad \\text{at least one} = 2^{n} - 1"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "text": "A selection is just a binary string of length n: a 1 for 'in', a 0 for 'out'."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 51,
+          "style": "red-margin",
+          "text": "Alike objects differ: p identical $\\to$ record how many, 0 to p $\\to$ $p+1$ choices, not $2^p$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "So far you have always chosen exactly r objects. Real problems ask broader questions, and this subtopic builds three tools that answer them."
+            },
+            {
+              "seq": 2,
+              "text": "How many subsets are there altogether? In how many ways can identical sweets be shared? How many integer solutions does an equation have? Three tools, one for each."
+            },
+            {
+              "seq": 3,
+              "text": "Start with the picture on the board. Stand in front of n distinct objects and, for each one, make a decision: take it, or leave it."
+            },
+            {
+              "seq": 4,
+              "text": "That is tool one. Each object independently offers two choices, take or leave, so by the counting principle the number of outcomes is two to the n."
+            },
+            {
+              "seq": 5,
+              "text": "So an n-element set has two to the n subsets, counting the empty one. If you must take at least one object, just drop that empty selection, giving two to the n minus one."
+            },
+            {
+              "seq": 6,
+              "text": "The clean way to see it is that a selection is a binary string of length n: a one wherever an object is in, a zero wherever it is out. There are two to the n such strings."
+            },
+            {
+              "seq": 7,
+              "text": "One honest caution the exam exploits. This picture is for distinct objects. If you have p identical chocolates, a selection only records how many you take, anything from zero to p, which is p plus one choices, not two to the p. Handle alike groups separately."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब तक आपने हमेशा ठीक r objects चुने। असल problems broader सवाल पूछती हैं, और यह subtopic तीन tools बनाता है जो उनका जवाब देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "कुल कितने subsets हैं? Identical sweets कितने तरीक़ों से बाँटी जा सकती हैं? किसी equation के कितने integer solutions हैं? तीन tools, हर एक के लिए एक।"
+            },
+            {
+              "seq": 3,
+              "text": "Board वाली picture से शुरू करो। n distinct objects के सामने खड़े हो और हर एक के लिए एक decision करो: इसे लो, या छोड़ो।"
+            },
+            {
+              "seq": 4,
+              "text": "यही tool one है। हर object independently दो choices देता है, take या leave, तो counting principle से outcomes की संख्या है two to the n।"
+            },
+            {
+              "seq": 5,
+              "text": "तो n-element set के two to the n subsets होते हैं, empty समेत। अगर at least one object लेना ज़रूरी हो, बस वो empty selection हटा दो, यानी two to the n minus one।"
+            },
+            {
+              "seq": 6,
+              "text": "इसे देखने का clean तरीक़ा यह है कि एक selection length n की binary string है: जहाँ object in हो वहाँ one, जहाँ out हो वहाँ zero। ऐसी two to the n strings होती हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "एक honest caution जो exam exploit करता है। यह picture distinct objects के लिए है। अगर आपके पास p identical chocolates हैं, तो selection सिर्फ़ record करती है कितनी लीं, zero से p तक, यानी p plus one choices, two to the p नहीं। Alike groups अलग से handle करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब तक आपने हमेशा ठीक r वस्तुएँ चुनीं। असल प्रश्न व्यापक सवाल पूछते हैं, और यह उपविषय तीन tools बनाता है जो उनका उत्तर देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "कुल कितने subsets हैं? समान मिठाइयाँ कितने तरीक़ों से बाँटी जा सकती हैं? किसी समीकरण के कितने पूर्णांक हल हैं? तीन tools, हर एक के लिए एक।"
+            },
+            {
+              "seq": 3,
+              "text": "बोर्ड वाली तस्वीर से शुरू कीजिए। n भिन्न वस्तुओं के सामने खड़े होइए और हर एक के लिए एक निर्णय कीजिए: इसे लो, या छोड़ो।"
+            },
+            {
+              "seq": 4,
+              "text": "यही tool one है। हर वस्तु स्वतंत्र रूप से दो choices देती है, take या leave, तो counting principle से परिणामों की संख्या है two to the n।"
+            },
+            {
+              "seq": 5,
+              "text": "तो n-अवयव समुच्चय के two to the n subsets होते हैं, रिक्त समेत। यदि कम से कम एक वस्तु लेना ज़रूरी हो, बस वह रिक्त selection हटा दीजिए, यानी two to the n minus one।"
+            },
+            {
+              "seq": 6,
+              "text": "इसे देखने का साफ़ तरीक़ा यह है कि एक selection लंबाई n की binary string है: जहाँ वस्तु in हो वहाँ one, जहाँ out हो वहाँ zero। ऐसी two to the n strings होती हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "एक ईमानदार चेतावनी जो परीक्षा भुनाती है। यह तस्वीर भिन्न वस्तुओं के लिए है। यदि आपके पास p समान chocolates हैं, तो selection केवल दर्ज करती है कितनी लीं, शून्य से p तक, यानी p plus one choices, two to the p नहीं। समान समूह अलग से संभालिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 28,
+      "section_type": "concept",
+      "subtopic": "Total Selections, Grouping & Distribution (Stars and Bars)",
+      "title": "Tool 2 (stars & bars) and Tool 3 (grouping vs distribution)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Tool 2: selection WITH repetition."
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Choose r items from n types, repeats allowed, order ignored. Not ${}^{n}C_r$, not $n^r$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "Model: lay down r identical stars, split into n type-groups by $n-1$ bars."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "text": "Every star/bar arrangement = one valid selection. Choose bar positions among $r+(n-1)$ slots."
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "Tool 3: grouping vs distribution."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "text": "'Divide 12 books into 3 bundles' vs 'give 12 books to 3 children' differ by labelling."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "style": "red-margin",
+          "text": "Unlabelled equal groups force $\\div(\\text{groups})!$; labelled recipients do not."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Tool two handles a case the earlier formulas do not: selection with repetition. You choose r items from n types, repeats are allowed, and order does not matter."
+            },
+            {
+              "seq": 2,
+              "text": "Be clear this is neither of the old formulas. It is not n choose r, because repeats are allowed, and it is not n to the r, because order is ignored. It needs its own model."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the clever model. Lay down r identical stars, one for each item you pick, and separate them into n type-groups using n minus one bars."
+            },
+            {
+              "seq": 4,
+              "text": "Every arrangement of stars and bars is exactly one valid selection: the stars before the first bar are type one, those between the first and second bar are type two, and so on. So you are simply choosing which n minus one of the r plus n minus one positions hold the bars."
+            },
+            {
+              "seq": 5,
+              "text": "Tool three is about a distinction that trips people constantly: grouping versus distribution."
+            },
+            {
+              "seq": 6,
+              "text": "Divide twelve books into three bundles, and give twelve books to three children, sound almost the same, but they differ by whether the groups are labelled."
+            },
+            {
+              "seq": 7,
+              "text": "That single feature drives the arithmetic. Unlabelled equal-size groups force a division by the number of such groups factorial, while labelled recipients, being distinct, do not. Converting between the two is a frequent exam pivot."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Tool two एक case handle करता है जो पहले वाले formulas नहीं करते: selection with repetition। आप r items, n types में से चुनते हो, repeats allowed, और order मायने नहीं रखता।"
+            },
+            {
+              "seq": 2,
+              "text": "साफ़ रहो यह दोनों पुराने formulas में से कोई नहीं। यह n choose r नहीं, क्योंकि repeats allowed हैं, और यह n to the r नहीं, क्योंकि order ignore होता है। इसे अपना model चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Clever model यह है। r identical stars बिछाओ, हर item के लिए एक, और उन्हें n type-groups में n minus one bars से separate करो।"
+            },
+            {
+              "seq": 4,
+              "text": "Stars और bars का हर arrangement ठीक एक valid selection है: पहले bar से पहले वाले stars type one, पहले और दूसरे bar के बीच वाले type two, वग़ैरह। तो आप बस चुन रहे हो कि r plus n minus one positions में से कौन सी n minus one पर bars हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Tool three एक distinction के बारे में है जो लोगों को लगातार trip करती है: grouping versus distribution।"
+            },
+            {
+              "seq": 6,
+              "text": "बारह books को तीन bundles में divide करना, और बारह books तीन children को देना, लगभग एक जैसे लगते हैं, पर फ़र्क़ इसमें है कि groups labelled हैं या नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "यही एक feature arithmetic चलाता है। Unlabelled equal-size groups उतने groups के factorial से division पर मजबूर करते हैं, जबकि labelled recipients, distinct होने से, नहीं। दोनों के बीच convert करना एक frequent exam pivot है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Tool two एक स्थिति संभालता है जो पहले वाले सूत्र नहीं करते: selection with repetition। आप r items, n types में से चुनते हैं, repeats allowed, और क्रम मायने नहीं रखता।"
+            },
+            {
+              "seq": 2,
+              "text": "साफ़ रहिए यह दोनों पुराने सूत्रों में से कोई नहीं। यह n choose r नहीं, क्योंकि repeats allowed हैं, और यह n to the r नहीं, क्योंकि क्रम अनदेखा होता है। इसे अपना model चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "चतुर model यह है। r समान stars बिछाइए, हर item के लिए एक, और उन्हें n type-groups में n minus one bars से अलग कीजिए।"
+            },
+            {
+              "seq": 4,
+              "text": "Stars और bars का हर arrangement ठीक एक valid selection है: पहले bar से पहले वाले stars type one, पहले और दूसरे bar के बीच वाले type two, इत्यादि। तो आप बस चुन रहे हैं कि r plus n minus one positions में से कौन सी n minus one पर bars हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Tool three एक भेद के बारे में है जो लोगों को लगातार गिराता है: grouping versus distribution।"
+            },
+            {
+              "seq": 6,
+              "text": "बारह books को तीन bundles में विभाजित करना, और बारह books तीन बच्चों को देना, लगभग एक जैसे लगते हैं, पर फ़र्क़ इसमें है कि groups labelled हैं या नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "यही एक विशेषता गणित चलाती है। Unlabelled बराबर-आकार groups उतने groups के factorial से भाग पर मजबूर करते हैं, जबकि labelled recipients, भिन्न होने से, नहीं। दोनों के बीच बदलना एक बार-बार आने वाला exam pivot है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 29,
+      "section_type": "formulas",
+      "subtopic": "Total Selections, Grouping & Distribution (Stars and Bars)",
+      "title": "Selections, stars & bars, and distribution formulas",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The counting-toolkit board"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\text{subsets of } n \\text{ distinct}: 2^{n}; \\quad \\text{at least one}: 2^{n} - 1"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{alike } (p, q, \\dots \\text{ plus } d \\text{ distinct}): (p+1)(q+1)\\cdots 2^{d}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\text{choose } r \\text{ from } n \\text{ types (repetition)}: {}^{n+r-1}C_{r} = {}^{n+r-1}C_{n-1}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "x_1+\\cdots+x_k=n:\\;\\; \\text{non-neg } {}^{n+k-1}C_{k-1}, \\;\\; \\text{positive } {}^{n-1}C_{k-1}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\text{divide } n \\text{ into } m_1, m_2, \\dots: \\dfrac{n!}{m_1!\\,m_2!\\cdots}; \\;\\; \\div g! \\text{ per } g \\text{ equal groups}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "n \\text{ distinct objects into } k \\text{ distinct boxes}: k^{n}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "'At least one per box' $\\to$ give one to each first, then non-negative stars & bars."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the full toolkit for this subtopic on one board. Six formulas, and the trick is matching the situation to the right one."
+            },
+            {
+              "seq": 2,
+              "text": "Subsets of n distinct objects: two to the n, including the empty set, or two to the n minus one if you need at least one."
+            },
+            {
+              "seq": 3,
+              "text": "When some objects are alike, with p of one kind, q of another, and d genuinely distinct ones, the total is p plus one, times q plus one, and so on, times two to the d."
+            },
+            {
+              "seq": 4,
+              "text": "Choosing r from n types with repetition, order ignored, is n plus r minus one choose r, which equals n plus r minus one choose n minus one. That is stars and bars."
+            },
+            {
+              "seq": 5,
+              "text": "For integer solutions of x one plus up to x k equals n, the non-negative count is n plus k minus one choose k minus one, and the strictly positive count is n minus one choose k minus one."
+            },
+            {
+              "seq": 6,
+              "text": "To divide n distinct objects into groups of sizes m one, m two, and so on, use n factorial over the product of those factorials, then divide by g factorial for each set of g equal-sized unlabelled groups."
+            },
+            {
+              "seq": 7,
+              "text": "And placing n distinct objects into k distinct boxes with no restriction is simply k to the n."
+            },
+            {
+              "seq": 8,
+              "text": "One master move to store: whenever every box must get at least one, give one to each box first, then solve the leftover as a clean non-negative stars-and-bars problem."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic का पूरा toolkit एक board पर। छह formulas, और trick है situation को सही वाले से match करना।"
+            },
+            {
+              "seq": 2,
+              "text": "n distinct objects के subsets: two to the n, empty set समेत, या two to the n minus one अगर at least one चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "जब कुछ objects alike हों, p एक तरह के, q दूसरे, और d सचमुच distinct, तो total है p plus one, into q plus one, वग़ैरह, into two to the d।"
+            },
+            {
+              "seq": 4,
+              "text": "r को n types में से repetition के साथ, order ignore करके, चुनना है n plus r minus one choose r, जो n plus r minus one choose n minus one के बराबर है। यही stars and bars है।"
+            },
+            {
+              "seq": 5,
+              "text": "x one से x k तक जोड़ बराबर n के integer solutions के लिए, non-negative count है n plus k minus one choose k minus one, और strictly positive count है n minus one choose k minus one।"
+            },
+            {
+              "seq": 6,
+              "text": "n distinct objects को sizes m one, m two, वग़ैरह के groups में divide करने के लिए, n factorial over उन factorials का product use करो, फिर हर g equal-sized unlabelled groups के set के लिए g factorial से divide करो।"
+            },
+            {
+              "seq": 7,
+              "text": "और n distinct objects को k distinct boxes में बिना restriction रखना बस k to the n है।"
+            },
+            {
+              "seq": 8,
+              "text": "एक master move store करो: जब भी हर box को at least one मिलना चाहिए, पहले हर box को एक दो, फिर बचे हुए को clean non-negative stars-and-bars problem की तरह solve करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस उपविषय का पूरा toolkit एक बोर्ड पर। छह सूत्र, और trick है स्थिति को सही वाले से match करना।"
+            },
+            {
+              "seq": 2,
+              "text": "n भिन्न वस्तुओं के subsets: two to the n, रिक्त समुच्चय समेत, या two to the n minus one यदि कम से कम एक चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "जब कुछ वस्तुएँ समान हों, p एक तरह की, q दूसरी, और d सचमुच भिन्न, तो कुल है p plus one, गुना q plus one, इत्यादि, गुना two to the d।"
+            },
+            {
+              "seq": 4,
+              "text": "r को n types में से repetition के साथ, क्रम अनदेखा करके, चुनना है n plus r minus one choose r, जो n plus r minus one choose n minus one के बराबर है। यही stars and bars है।"
+            },
+            {
+              "seq": 5,
+              "text": "x one से x k तक योग बराबर n के पूर्णांक हलों के लिए, non-negative गिनती है n plus k minus one choose k minus one, और पूर्णतः धनात्मक गिनती है n minus one choose k minus one।"
+            },
+            {
+              "seq": 6,
+              "text": "n भिन्न वस्तुओं को आकार m one, m two, इत्यादि के समूहों में विभाजित करने के लिए, n factorial बटा उन factorials का गुणनफल उपयोग कीजिए, फिर हर g बराबर-आकार unlabelled समूहों के सेट के लिए g factorial से भाग दीजिए।"
+            },
+            {
+              "seq": 7,
+              "text": "और n भिन्न वस्तुओं को k भिन्न बक्सों में बिना प्रतिबंध रखना बस k to the n है।"
+            },
+            {
+              "seq": 8,
+              "text": "एक मुख्य चाल संचित कीजिए: जब भी हर बक्से को कम से कम एक मिलना चाहिए, पहले हर बक्से को एक दीजिए, फिर बचे हुए को साफ़ non-negative stars-and-bars प्रश्न की तरह हल कीजिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 30,
+      "section_type": "concept",
+      "subtopic": "Total Selections, Grouping & Distribution (Stars and Bars)",
+      "title": "Why stars & bars works, and the give-one trick",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: combinations with repetition $= {}^{n+r-1}C_{r}$"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "r stars split into n blocks by n-1 bars",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 340 110\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"30\" cy=\"45\" r=\"8\" fill=\"#f4a300\"/><circle cx=\"60\" cy=\"45\" r=\"8\" fill=\"#f4a300\"/><line x1=\"88\" y1=\"25\" x2=\"88\" y2=\"65\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"116\" cy=\"45\" r=\"8\" fill=\"#f4a300\"/><line x1=\"144\" y1=\"25\" x2=\"144\" y2=\"65\" stroke=\"#333\" stroke-width=\"3\"/><line x1=\"172\" y1=\"25\" x2=\"172\" y2=\"65\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"45\" r=\"8\" fill=\"#f4a300\"/><circle cx=\"230\" cy=\"45\" r=\"8\" fill=\"#f4a300\"/><circle cx=\"260\" cy=\"45\" r=\"8\" fill=\"#f4a300\"/><text x=\"12\" y=\"95\" font-size=\"11\" font-family=\"system-ui, sans-serif\">6 stars, 3 bars &#8594; type1=2, type2=1, type3=0, type4=3</text></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Select r from n types = r identical stars, partitioned into n blocks by $n-1$ bars."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Every selection matches one star/bar pattern. Total symbols $r+(n-1)$; choose which $n-1$ are bars."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "latex": "{}^{n+r-1}C_{n-1} = {}^{n+r-1}C_{r}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Same count = placing r identical objects into n distinct boxes = non-neg solutions of $x_1+\\cdots+x_n=r$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "For $x_i \\ge 1$: give one to each first ($y_i = x_i - 1$), reducing to the non-neg case."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The stars-and-bars formula deserves a proper proof, because once you see it, a whole family of hard-looking problems becomes one line."
+            },
+            {
+              "seq": 2,
+              "text": "Look at the board. We are selecting r items from n types, repetition allowed, order irrelevant, and we represent the selection with r identical stars laid in a line."
+            },
+            {
+              "seq": 3,
+              "text": "Now partition those stars into n type-blocks by inserting n minus one bars. The stars before the first bar belong to type one, those between the first and second bar to type two, and so on down the line."
+            },
+            {
+              "seq": 4,
+              "text": "Every distinct selection corresponds to exactly one star-and-bar pattern, and every pattern to one selection. We have r plus n minus one symbols in total, and we simply choose which n minus one of those positions are the bars."
+            },
+            {
+              "seq": 5,
+              "text": "That is n plus r minus one choose n minus one, which by symmetry also equals n plus r minus one choose r. The proof is complete."
+            },
+            {
+              "seq": 6,
+              "text": "And notice the twin reading: choosing r from n types with repetition is identical to placing r identical objects into n distinct boxes, which is the same as counting non-negative integer solutions of x one plus up to x n equals r."
+            },
+            {
+              "seq": 7,
+              "text": "For the strictly positive case, where each variable must be at least one, first hand one unit to every variable by setting y i equals x i minus one. That reduces it straight back to the clean non-negative case, and this give-one-to-everybody trick is the master move for lower bounds."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Stars-and-bars formula एक proper proof deserve करता है, क्योंकि जब आप इसे देख लेते हो, hard दिखने वाली problems का एक पूरा family एक line बन जाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board देखो। हम r items, n types में से select कर रहे हैं, repetition allowed, order irrelevant, और selection को r identical stars से represent करते हैं जो एक line में हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "अब उन stars को n type-blocks में n minus one bars डालकर partition करो। पहले bar से पहले वाले stars type one, पहले और दूसरे bar के बीच वाले type two, और ऐसे ही line भर।"
+            },
+            {
+              "seq": 4,
+              "text": "हर distinct selection ठीक एक star-and-bar pattern से match होती है, और हर pattern एक selection से। कुल r plus n minus one symbols हैं, और हम बस चुनते हैं कि उन positions में से कौन सी n minus one bars हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "यह है n plus r minus one choose n minus one, जो symmetry से n plus r minus one choose r के भी बराबर है। Proof पूरा।"
+            },
+            {
+              "seq": 6,
+              "text": "और twin reading पर ध्यान दो: r को n types में से repetition के साथ चुनना r identical objects को n distinct boxes में रखने के बराबर है, जो x one से x n तक जोड़ बराबर r के non-negative integer solutions गिनने जैसा है।"
+            },
+            {
+              "seq": 7,
+              "text": "Strictly positive case के लिए, जहाँ हर variable at least one हो, पहले हर variable को एक unit दो, y i बराबर x i minus one रखकर। यह इसे सीधे clean non-negative case में reduce कर देता है, और यह give-one-to-everybody trick lower bounds का master move है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Stars-and-bars सूत्र एक उचित प्रमाण का हक़दार है, क्योंकि जब आप इसे देख लेते हैं, कठिन दिखने वाले प्रश्नों का एक पूरा परिवार एक पंक्ति बन जाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड देखिए। हम r items, n types में से select कर रहे हैं, repetition allowed, क्रम अप्रासंगिक, और selection को r समान stars से दर्शाते हैं जो एक पंक्ति में हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "अब उन stars को n type-blocks में n minus one bars डालकर partition कीजिए। पहले bar से पहले वाले stars type one, पहले और दूसरे bar के बीच वाले type two, और ऐसे ही पंक्ति भर।"
+            },
+            {
+              "seq": 4,
+              "text": "हर भिन्न selection ठीक एक star-and-bar pattern से match होती है, और हर pattern एक selection से। कुल r plus n minus one symbols हैं, और हम बस चुनते हैं कि उन positions में से कौन सी n minus one bars हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "यह है n plus r minus one choose n minus one, जो symmetry से n plus r minus one choose r के भी बराबर है। प्रमाण पूरा।"
+            },
+            {
+              "seq": 6,
+              "text": "और जुड़वाँ पठन पर ध्यान दीजिए: r को n types में से repetition के साथ चुनना r समान वस्तुओं को n भिन्न बक्सों में रखने के बराबर है, जो x one से x n तक योग बराबर r के non-negative पूर्णांक हल गिनने जैसा है।"
+            },
+            {
+              "seq": 7,
+              "text": "पूर्णतः धनात्मक स्थिति के लिए, जहाँ हर variable कम से कम one हो, पहले हर variable को एक unit दीजिए, y i बराबर x i minus one रखकर। यह इसे सीधे साफ़ non-negative स्थिति में reduce कर देता है, और यह give-one-to-everybody trick lower bounds की मुख्य चाल है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 31,
+      "section_type": "concept",
+      "subtopic": "Total Selections, Grouping & Distribution (Stars and Bars)",
+      "title": "Total selections derived, and grouping vs distribution",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where $2^n$ and the grouping rule come from"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Each of n distinct objects is independently in or out: $2 \\times 2 \\times \\cdots = 2^n$ (FPC)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "An alike group of size p: a selection is just how many you take, 0 to p $\\to$ $p+1$; groups multiply."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Labelling decides whether you divide by g!",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 150\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"18\" font-size=\"12\" font-weight=\"bold\" font-family=\"system-ui, sans-serif\">DIVIDE (unlabelled)</text><rect x=\"10\" y=\"30\" width=\"80\" height=\"40\" fill=\"#e8f4ea\" stroke=\"#333\"/><rect x=\"100\" y=\"30\" width=\"80\" height=\"40\" fill=\"#e8f4ea\" stroke=\"#333\"/><text x=\"28\" y=\"55\" font-size=\"12\" font-family=\"system-ui, sans-serif\">3 books</text><text x=\"118\" y=\"55\" font-size=\"12\" font-family=\"system-ui, sans-serif\">3 books</text><text x=\"10\" y=\"98\" font-size=\"11\" fill=\"#c8102e\" font-family=\"system-ui, sans-serif\">equal bundles swap &#8594; &#247; 2!</text><text x=\"240\" y=\"18\" font-size=\"12\" font-weight=\"bold\" font-family=\"system-ui, sans-serif\">DISTRIBUTE (labelled)</text><rect x=\"240\" y=\"30\" width=\"80\" height=\"40\" fill=\"#fdeaea\" stroke=\"#333\"/><rect x=\"330\" y=\"30\" width=\"80\" height=\"40\" fill=\"#fdeaea\" stroke=\"#333\"/><text x=\"255\" y=\"55\" font-size=\"12\" font-family=\"system-ui, sans-serif\">Asha: 3</text><text x=\"345\" y=\"55\" font-size=\"12\" font-family=\"system-ui, sans-serif\">Ravi: 3</text><text x=\"240\" y=\"98\" font-size=\"11\" fill=\"#c8102e\" font-family=\"system-ui, sans-serif\">named recipients differ &#8594; no &#247; 2!</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Divide: write $\\dfrac{n!}{\\prod m_i!}$, then $\\div g!$ for each set of g equal unlabelled groups."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Distribute to distinct recipients: the groups become labelled, so the $\\div g!$ disappears."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "Same books, different question: division vs distribution is a constant exam pivot."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us quickly justify the two remaining tools, so they are understanding and not just memory."
+            },
+            {
+              "seq": 2,
+              "text": "For total selections, each of the n distinct objects is independently in or out, two choices each, so the counting principle gives two times two, and so on, which is two to the n. Subtract one to forbid the empty choice."
+            },
+            {
+              "seq": 3,
+              "text": "For an alike group of size p, a selection is fully described by how many you take, anything from zero to p, that is p plus one options. Distinct objects each contribute their own factor of two, and the groups multiply together."
+            },
+            {
+              "seq": 4,
+              "text": "Now the grouping rule, with the picture on the board showing the crucial difference."
+            },
+            {
+              "seq": 5,
+              "text": "To divide n distinct objects, write n factorial over the product of the group-size factorials. Then, for each set of g equal-sized unlabelled groups, divide by g factorial, because relabelling those equal groups produces the same division and would otherwise be over-counted."
+            },
+            {
+              "seq": 6,
+              "text": "But if the groups go to distinct recipients, say named children, the groups are now labelled and genuinely different outcomes, so the divide by g factorial disappears."
+            },
+            {
+              "seq": 7,
+              "text": "So the same six books, asked two different ways, give two different answers. Division into unlabelled groups versus distribution to labelled recipients is a pivot examiners lean on constantly, so read the question carefully."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "बचे हुए दो tools को जल्दी justify करते हैं, ताकि ये understanding हों, सिर्फ़ memory नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "Total selections के लिए, n distinct objects में से हर एक independently in या out है, दो-दो choices, तो counting principle देता है two into two, वग़ैरह, यानी two to the n। Empty choice मना करने के लिए एक subtract करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Size p के alike group के लिए, एक selection पूरी तरह describe होती है इससे कि कितनी लीं, zero से p तक, यानी p plus one options। Distinct objects हर एक अपना two का factor देते हैं, और groups आपस में multiply होते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "अब grouping rule, board पर crucial फ़र्क़ दिखाती picture के साथ।"
+            },
+            {
+              "seq": 5,
+              "text": "n distinct objects को divide करने के लिए, n factorial over group-size factorials का product लिखो। फिर हर g equal-sized unlabelled groups के set के लिए g factorial से divide करो, क्योंकि उन equal groups को relabel करना वही division बनाता है और वरना over-count हो जाता।"
+            },
+            {
+              "seq": 6,
+              "text": "पर अगर groups distinct recipients को जाएँ, जैसे named बच्चे, तो groups अब labelled और सचमुच अलग outcomes हैं, तो divide by g factorial ग़ायब हो जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो वही छह books, दो अलग तरीक़ों से पूछी गईं, दो अलग answers देती हैं। Unlabelled groups में division बनाम labelled recipients को distribution एक pivot है जिस पर examiners लगातार टिकते हैं, तो सवाल ध्यान से पढ़ो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "बचे हुए दो tools को जल्दी justify करते हैं, ताकि ये समझ हों, केवल स्मृति नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "Total selections के लिए, n भिन्न वस्तुओं में से हर एक स्वतंत्र रूप से in या out है, दो-दो choices, तो counting principle देता है two गुना two, इत्यादि, यानी two to the n। रिक्त choice मना करने के लिए एक घटाइए।"
+            },
+            {
+              "seq": 3,
+              "text": "आकार p के समान group के लिए, एक selection पूरी तरह वर्णित होती है इससे कि कितनी लीं, शून्य से p तक, यानी p plus one options। भिन्न वस्तुएँ हर एक अपना two का factor देती हैं, और groups आपस में गुणा होते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "अब grouping नियम, बोर्ड पर महत्वपूर्ण फ़र्क़ दिखाती तस्वीर के साथ।"
+            },
+            {
+              "seq": 5,
+              "text": "n भिन्न वस्तुओं को विभाजित करने के लिए, n factorial बटा group-आकार factorials का गुणनफल लिखिए। फिर हर g बराबर-आकार unlabelled groups के सेट के लिए g factorial से भाग दीजिए, क्योंकि उन बराबर groups को relabel करना वही विभाजन बनाता है और वरना over-count हो जाता।"
+            },
+            {
+              "seq": 6,
+              "text": "पर यदि groups भिन्न recipients को जाएँ, जैसे नामित बच्चे, तो groups अब labelled और सचमुच अलग परिणाम हैं, तो divide by g factorial ग़ायब हो जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो वही छह books, दो अलग तरीक़ों से पूछी गईं, दो अलग उत्तर देती हैं। Unlabelled groups में विभाजन बनाम labelled recipients को वितरण एक pivot है जिस पर परीक्षक लगातार टिकते हैं, तो सवाल ध्यान से पढ़िए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 32,
+      "section_type": "worked_examples",
+      "subtopic": "Total Selections, Grouping & Distribution (Stars and Bars)",
+      "title": "Total selections: distinct vs alike",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 (foundational): 5 distinct keychains, buy at least one"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "2^{5} - 1 = 32 - 1 = 31"
+        },
+        {
+          "seq": 3,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "Example 2 (trap): 3 red + 2 green (identical) + 1 orange, pick at least one"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "Alike groups count by HOW MANY: red 0-3 (4), green 0-2 (3), orange in/out (2)."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "latex": "4 \\times 3 \\times 2 - 1 = 24 - 1 = 23"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "Treating all 6 as distinct gives $2^6 - 1 = 63$ — badly over-counts identical fruit."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two examples on total selections, and the second is the classic distinct-versus-alike trap."
+            },
+            {
+              "seq": 2,
+              "text": "Example one, foundational. A gift shop displays five distinct keychains, and we want the number of ways to buy at least one. Each keychain is independently bought or not, giving two to the five, which is thirty two subsets, including buying nothing. Forbid the empty purchase, and the answer is thirty one."
+            },
+            {
+              "seq": 3,
+              "text": "Example two is the trap. A basket holds three identical red apples, two identical green apples, and one orange, and we pick at least one fruit."
+            },
+            {
+              "seq": 4,
+              "text": "Selections from alike groups are counted by how many you take, not which ones. The red apples give zero, one, two, or three, that is four choices; the green give zero, one, or two, three choices; and the single orange is in or out, two choices."
+            },
+            {
+              "seq": 5,
+              "text": "Multiply: four times three times two is twenty four, including the empty basket, so at least one fruit is twenty four minus one, which is twenty three."
+            },
+            {
+              "seq": 6,
+              "text": "The trap is treating all six fruits as distinct, which would give two to the six minus one, that is sixty three. That badly over-counts, because swapping two identical red apples is not a new selection. Always ask which objects are genuinely interchangeable."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Total selections पर दो examples, और दूसरा classic distinct-versus-alike trap है।"
+            },
+            {
+              "seq": 2,
+              "text": "Example one, foundational। एक gift shop में पाँच distinct keychains हैं, और हमें at least one ख़रीदने के तरीक़े चाहिए। हर keychain independently ख़रीदी या नहीं, यानी two to the five, जो है thirty two subsets, कुछ न ख़रीदना समेत। Empty purchase मना करो, answer thirty one।"
+            },
+            {
+              "seq": 3,
+              "text": "Example two trap है। एक basket में तीन identical red apples, दो identical green apples, और एक orange है, और हम at least one fruit उठाते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Alike groups से selections इससे गिनी जाती हैं कि कितनी लीं, कौन सी नहीं। Red apples देते हैं zero, one, two, या three, यानी four choices; green देते हैं zero, one, या two, three choices; और अकेला orange in या out, two choices।"
+            },
+            {
+              "seq": 5,
+              "text": "Multiply: four into three into two है twenty four, empty basket समेत, तो at least one fruit है twenty four minus one, यानी twenty three।"
+            },
+            {
+              "seq": 6,
+              "text": "Trap है सारे छह fruits को distinct मानना, जो देगा two to the six minus one, यानी sixty three। यह बुरी तरह over-count करता है, क्योंकि दो identical red apples swap करना नई selection नहीं। हमेशा पूछो कौन से objects सच में interchangeable हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Total selections पर दो उदाहरण, और दूसरा classic distinct-versus-alike trap है।"
+            },
+            {
+              "seq": 2,
+              "text": "उदाहरण एक, आधारभूत। एक gift shop में पाँच भिन्न keychains हैं, और हमें कम से कम एक ख़रीदने के तरीक़े चाहिए। हर keychain स्वतंत्र रूप से ख़रीदी या नहीं, यानी two to the five, जो है बत्तीस subsets, कुछ न ख़रीदना समेत। रिक्त ख़रीद मना कीजिए, उत्तर इकतीस।"
+            },
+            {
+              "seq": 3,
+              "text": "उदाहरण दो trap है। एक basket में तीन समान लाल सेब, दो समान हरे सेब, और एक संतरा है, और हम कम से कम एक फल उठाते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "समान groups से selections इससे गिनी जाती हैं कि कितनी लीं, कौन सी नहीं। लाल सेब देते हैं शून्य, एक, दो, या तीन, यानी चार choices; हरे देते हैं शून्य, एक, या दो, तीन choices; और अकेला संतरा in या out, दो choices।"
+            },
+            {
+              "seq": 5,
+              "text": "गुणा: चार गुना तीन गुना दो है चौबीस, रिक्त basket समेत, तो कम से कम एक फल है चौबीस minus one, यानी तेईस।"
+            },
+            {
+              "seq": 6,
+              "text": "Trap है सारे छह फलों को भिन्न मानना, जो देगा two to the six minus one, यानी तिरसठ। यह बुरी तरह over-count करता है, क्योंकि दो समान लाल सेब अदल-बदल करना नई selection नहीं। हमेशा पूछिए कौन सी वस्तुएँ सचमुच interchangeable हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 33,
+      "section_type": "worked_examples",
+      "subtopic": "Total Selections, Grouping & Distribution (Stars and Bars)",
+      "title": "Integer solutions and lower bounds",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 (JEE Main): non-negative solutions of $a+b+c+d=12$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "12 identical units into 4 distinct variables, empty allowed: stars & bars, $n=12$, $k=4$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "{}^{12+4-1}C_{4-1} = {}^{15}C_3 = \\dfrac{15 \\times 14 \\times 13}{6} = 455"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "Example 4 (JEE Adv): 15 identical chocolates to 4 children, each at least 2"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Give each child 2 up front (8 used); distribute the remaining $15-8=7$ freely."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "latex": "{}^{7+4-1}C_{4-1} = {}^{10}C_3 = \\dfrac{10 \\times 9 \\times 8}{6} = 120"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Pre-allocating the minimum turns a bounded problem into the clean non-negative case."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two examples that show stars and bars doing the heavy lifting, first plain, then with a lower bound."
+            },
+            {
+              "seq": 2,
+              "text": "Example three, JEE Main. How many non-negative integer solutions does a plus b plus c plus d equals twelve have? Read it as twelve identical units distributed among four distinct variables, with empty allowed. So n is twelve and k is four."
+            },
+            {
+              "seq": 3,
+              "text": "Stars and bars gives twelve plus four minus one, choose four minus one, which is fifteen choose three. That is fifteen times fourteen times thirteen over six, which works out to four hundred fifty five."
+            },
+            {
+              "seq": 4,
+              "text": "Example four, JEE Advanced. In how many ways can fifteen identical chocolates be distributed among four children so that each child gets at least two?"
+            },
+            {
+              "seq": 5,
+              "text": "Use the give-one, or here give-two, trick. Hand each child two chocolates up front, which uses eight, then freely distribute the remaining seven with no restriction. Let y i be the extra each child receives."
+            },
+            {
+              "seq": 6,
+              "text": "Now y one plus y two plus y three plus y four equals seven, non-negative. Stars and bars gives seven plus four minus one, choose four minus one, which is ten choose three, equal to one hundred twenty."
+            },
+            {
+              "seq": 7,
+              "text": "The move that unlocks it is pre-allocating the guaranteed minimum. Subtracting the two-per-child up front converts the bounded problem into the clean non-negative case, and that single manoeuvre dissolves most distribution constraints."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो examples जो stars and bars को heavy lifting करते दिखाते हैं, पहले plain, फिर lower bound के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "Example three, JEE Main। a plus b plus c plus d बराबर twelve के कितने non-negative integer solutions हैं? इसे पढ़ो बारह identical units जो चार distinct variables में बँटी हैं, empty allowed। तो n है twelve और k है four।"
+            },
+            {
+              "seq": 3,
+              "text": "Stars and bars देता है twelve plus four minus one, choose four minus one, यानी fifteen choose three। यह fifteen into fourteen into thirteen over six है, जो निकलता है four hundred fifty five।"
+            },
+            {
+              "seq": 4,
+              "text": "Example four, JEE Advanced। पंद्रह identical chocolates चार children में कितने तरीक़ों से बाँटी जाएँ ताकि हर child को at least two मिलें?"
+            },
+            {
+              "seq": 5,
+              "text": "Give-one, या यहाँ give-two, trick use करो। हर child को पहले दो chocolates दो, जो eight use करता है, फिर बचे हुए seven बिना restriction बाँटो। y i को हर child की extra मानो।"
+            },
+            {
+              "seq": 6,
+              "text": "अब y one plus y two plus y three plus y four बराबर seven, non-negative। Stars and bars देता है seven plus four minus one, choose four minus one, यानी ten choose three, बराबर one hundred twenty।"
+            },
+            {
+              "seq": 7,
+              "text": "जो move इसे unlock करता है वो है guaranteed minimum को pre-allocate करना। पहले two-per-child घटाना bounded problem को clean non-negative case में बदल देता है, और यह एक manoeuvre ज़्यादातर distribution constraints घोल देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो उदाहरण जो stars and bars को भारी काम करते दिखाते हैं, पहले सादा, फिर lower bound के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "उदाहरण तीन, JEE Main। a plus b plus c plus d बराबर twelve के कितने non-negative पूर्णांक हल हैं? इसे पढ़िए बारह समान units जो चार भिन्न variables में बँटी हैं, empty allowed। तो n है twelve और k है four।"
+            },
+            {
+              "seq": 3,
+              "text": "Stars and bars देता है twelve plus four minus one, choose four minus one, यानी fifteen choose three। यह fifteen गुना fourteen गुना thirteen बटा six है, जो निकलता है चार सौ पचपन।"
+            },
+            {
+              "seq": 4,
+              "text": "उदाहरण चार, JEE Advanced। पंद्रह समान chocolates चार बच्चों में कितने तरीक़ों से बाँटी जाएँ ताकि हर बच्चे को कम से कम दो मिलें?"
+            },
+            {
+              "seq": 5,
+              "text": "Give-one, या यहाँ give-two, trick उपयोग कीजिए। हर बच्चे को पहले दो chocolates दीजिए, जो eight उपयोग करता है, फिर बचे हुए seven बिना प्रतिबंध बाँटिए। y i को हर बच्चे की अतिरिक्त मानिए।"
+            },
+            {
+              "seq": 6,
+              "text": "अब y one plus y two plus y three plus y four बराबर seven, non-negative। Stars and bars देता है seven plus four minus one, choose four minus one, यानी ten choose three, बराबर एक सौ बीस।"
+            },
+            {
+              "seq": 7,
+              "text": "जो चाल इसे unlock करती है वह है guaranteed minimum को pre-allocate करना। पहले two-per-child घटाना bounded प्रश्न को साफ़ non-negative स्थिति में बदल देता है, और यह एक चाल अधिकांश distribution प्रतिबंध घोल देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 34,
+      "section_type": "tips",
+      "subtopic": "Total Selections, Grouping & Distribution (Stars and Bars)",
+      "title": "Pitfalls & pro-tips for selections & distribution",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where these marks leak away"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Distinct vs alike: using $2^n$ for identical objects (use $\\prod(p_i+1)$) or vice versa."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "Wrong repetition model: selecting with repetition is ${}^{n+r-1}C_r$ — not ${}^{n}C_r$, not $n^r$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 23,
+          "style": "red-margin",
+          "text": "Identify 'identical items into distinct boxes' $\\to$ stars & bars."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "Division vs distribution: forgetting $\\div g!$ for equal unlabelled groups, or applying it to labelled recipients."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "text": "Forgetting the empty case: $2^n$ and basic stars & bars both include 'choose nothing'."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "style": "red-margin",
+          "text": "Pro-tip: 'each box at least c' $\\to$ hand out c to every box first, then non-neg stars & bars."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me close this subtopic with the mistakes that leak marks, and the one pro-tip that dissolves most distribution problems."
+            },
+            {
+              "seq": 2,
+              "text": "First, distinct versus alike confusion: using two to the n when the objects are actually identical, where you should use the product of p i plus one, or the reverse. Ask whether swapping two of these objects would create a new selection."
+            },
+            {
+              "seq": 3,
+              "text": "Second, the wrong counting model for repetition. Selecting with repetition is n plus r minus one choose r. It is not n choose r, which forbids repetition, and it is not n to the r, which is ordered placement."
+            },
+            {
+              "seq": 4,
+              "text": "The way to lock it in is to recognise the phrase identical items into distinct boxes. Whenever you see that shape, reach for stars and bars."
+            },
+            {
+              "seq": 5,
+              "text": "Third, division versus distribution. Forgetting the divide by g factorial for equal unlabelled groups, or wrongly applying it when the groups are actually labelled recipients. Read whether the groups are named."
+            },
+            {
+              "seq": 6,
+              "text": "Fourth, forgetting the empty case. Both two to the n and the basic stars-and-bars count include choose nothing, or all in one box. Adjust whenever the problem says at least one."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>And the pro-tip that pays off constantly: for each box at least c, hand out c to every box first, then solve the leftover as a clean non-negative stars-and-bars problem. That one substitution clears almost every lower-bound constraint."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic को उन mistakes के साथ बंद करता हूँ जो marks leak करती हैं, और वो एक pro-tip जो ज़्यादातर distribution problems घोल देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली, distinct versus alike confusion: two to the n use करना जब objects असल में identical हों, जहाँ आपको p i plus one का product use करना चाहिए, या उल्टा। पूछो क्या इन दो objects को swap करना नई selection बनाएगा।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी, repetition का ग़लत counting model। Repetition के साथ selecting है n plus r minus one choose r। यह n choose r नहीं, जो repetition मना करता है, और यह n to the r नहीं, जो ordered placement है।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे lock करने का तरीक़ा है phrase पहचानना: identical items into distinct boxes। जब भी यह shape दिखे, stars and bars की तरफ़ हाथ बढ़ाओ।"
+            },
+            {
+              "seq": 5,
+              "text": "तीसरी, division versus distribution। Equal unlabelled groups के लिए divide by g factorial भूलना, या इसे ग़लत लगाना जब groups असल में labelled recipients हों। पढ़ो कि groups named हैं या नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "चौथी, empty case भूलना। Two to the n और basic stars-and-bars दोनों में choose nothing, या all in one box शामिल है। जब भी problem at least one कहे, adjust करो।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>और वो pro-tip जो लगातार फ़ायदा देता है: each box at least c के लिए, पहले हर box को c दो, फिर बचे हुए को clean non-negative stars-and-bars problem की तरह solve करो। यह एक substitution लगभग हर lower-bound constraint clear कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस उपविषय को उन ग़लतियों के साथ बंद करता हूँ जो अंक रिसाती हैं, और वह एक pro-tip जो अधिकांश distribution प्रश्न घोल देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली, distinct versus alike भ्रम: two to the n उपयोग करना जब वस्तुएँ असल में समान हों, जहाँ आपको p i plus one का गुणनफल उपयोग करना चाहिए, या उल्टा। पूछिए क्या इन दो वस्तुओं को अदल-बदल करना नई selection बनाएगा।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी, repetition का ग़लत counting model। Repetition के साथ selecting है n plus r minus one choose r। यह n choose r नहीं, जो repetition मना करता है, और यह n to the r नहीं, जो ordered placement है।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे lock करने का तरीक़ा है वाक्यांश पहचानना: identical items into distinct boxes। जब भी यह आकार दिखे, stars and bars की ओर हाथ बढ़ाइए।"
+            },
+            {
+              "seq": 5,
+              "text": "तीसरी, division versus distribution। बराबर unlabelled groups के लिए divide by g factorial भूलना, या इसे ग़लत लगाना जब groups असल में labelled recipients हों। पढ़िए कि groups नामित हैं या नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "चौथी, रिक्त स्थिति भूलना। Two to the n और basic stars-and-bars दोनों में choose nothing, या all in one box शामिल है। जब भी प्रश्न कम से कम एक कहे, adjust कीजिए।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>और वह pro-tip जो लगातार फ़ायदा देता है: each box at least c के लिए, पहले हर box को c दीजिए, फिर बचे हुए को साफ़ non-negative stars-and-bars प्रश्न की तरह हल कीजिए। यह एक substitution लगभग हर lower-bound प्रतिबंध clear कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 35,
+      "section_type": "concept",
+      "subtopic": "Counting Applications & Advanced Tools",
+      "title": "Hard problems in costume: geometry as selection",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Most 'hard' P&C is a selection in disguise. See through the costume."
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Through n points (no 3 collinear): a line = choice of 2 points; a triangle = choice of 3."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\text{lines} = {}^{n}C_2, \\quad \\text{triangles} = {}^{n}C_3"
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Collinear points need a correction",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 300 180\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"60\" x2=\"270\" y2=\"60\" stroke=\"#c8102e\" stroke-width=\"1.5\"/><circle cx=\"60\" cy=\"60\" r=\"5\" fill=\"#333\"/><circle cx=\"120\" cy=\"60\" r=\"5\" fill=\"#333\"/><circle cx=\"180\" cy=\"60\" r=\"5\" fill=\"#333\"/><circle cx=\"240\" cy=\"60\" r=\"5\" fill=\"#333\"/><circle cx=\"80\" cy=\"120\" r=\"5\" fill=\"#333\"/><circle cx=\"150\" cy=\"140\" r=\"5\" fill=\"#333\"/><circle cx=\"210\" cy=\"115\" r=\"5\" fill=\"#333\"/><text x=\"8\" y=\"168\" font-size=\"11\" font-family=\"system-ui, sans-serif\">4 collinear: C(4,2)=6 pairs &#8594; 1 line; C(4,3)=4 flat triangles</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "If m points are collinear: their pairs give ONE line, their triples give NO triangle."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "latex": "\\text{lines} = {}^{n}C_2 - {}^{m}C_2 + 1, \\quad \\text{triangles} = {}^{n}C_3 - {}^{m}C_3"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "Counting shapes = counting the vertices that define them."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Most questions that look hard in this chapter are not new mathematics at all. They are familiar selections wearing a costume, and the whole skill is learning to see through it."
+            },
+            {
+              "seq": 2,
+              "text": "Take geometry. Given n points with no three on a line, a straight line is simply a choice of two points, and a triangle is a choice of three points. Nothing more."
+            },
+            {
+              "seq": 3,
+              "text": "So the number of lines is n choose two, and the number of triangles is n choose three. The shape is completely determined by which vertices you select."
+            },
+            {
+              "seq": 4,
+              "text": "The only complication is collinear points, shown on the board: a set of points sitting on one common line."
+            },
+            {
+              "seq": 5,
+              "text": "If m of the points are collinear, then all the pairs among them lie on a single line rather than giving many lines, and any three of them form a flat, zero-area triangle rather than a real one. So we correct."
+            },
+            {
+              "seq": 6,
+              "text": "For lines, subtract the m choose two pairs that collapse, then add back the one real line they share. For triangles, simply subtract m choose three, the degenerate ones."
+            },
+            {
+              "seq": 7,
+              "text": "Hold the one-line idea: counting shapes is really counting the vertices that define them, and the formula follows the moment you name the selection."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>इस chapter में जो सवाल hard लगते हैं वो असल में नई mathematics हैं ही नहीं। वो familiar selections हैं जो costume पहने हुए हैं, और पूरी skill है उसके पार देखना सीखना।"
+            },
+            {
+              "seq": 2,
+              "text": "Geometry लो। n points दिए हों जिनमें कोई तीन एक line पर न हों, तो एक straight line बस दो points का choice है, और एक triangle तीन points का choice। इससे ज़्यादा कुछ नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो lines की संख्या है n choose two, और triangles की संख्या है n choose three। Shape पूरी तरह इससे तय होती है कि आप कौन से vertices select करते हो।"
+            },
+            {
+              "seq": 4,
+              "text": "एकमात्र complication है collinear points, board पर दिखाए: points का एक set जो एक common line पर बैठा है।"
+            },
+            {
+              "seq": 5,
+              "text": "अगर m points collinear हों, तो उनके सारे pairs एक ही line पर होते हैं, कई lines नहीं देते, और उनमें से कोई तीन एक flat, zero-area triangle बनाते हैं, असली नहीं। तो हम correct करते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Lines के लिए, वो m choose two pairs subtract करो जो collapse होती हैं, फिर उनकी share की एक असली line add back करो। Triangles के लिए बस m choose three subtract करो, वो degenerate वाले।"
+            },
+            {
+              "seq": 7,
+              "text": "एक line वाला idea पकड़े रखो: shapes गिनना असल में उन vertices गिनना है जो उन्हें define करते हैं, और formula उसी पल आ जाता है जब आप selection name करते हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>इस अध्याय में जो सवाल कठिन लगते हैं वे असल में नई गणित हैं ही नहीं। वे परिचित selections हैं जो costume पहने हुए हैं, और पूरी skill है उसके पार देखना सीखना।"
+            },
+            {
+              "seq": 2,
+              "text": "Geometry लीजिए। n points दिए हों जिनमें कोई तीन एक रेखा पर न हों, तो एक सीधी रेखा बस दो points का choice है, और एक triangle तीन points का choice। इससे अधिक कुछ नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो lines की संख्या है n choose two, और triangles की संख्या है n choose three। आकार पूरी तरह इससे तय होता है कि आप कौन से vertices select करते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "एकमात्र complication है collinear points, बोर्ड पर दिखाए: points का एक set जो एक common रेखा पर बैठा है।"
+            },
+            {
+              "seq": 5,
+              "text": "यदि m points collinear हों, तो उनके सारे pairs एक ही रेखा पर होते हैं, कई lines नहीं देते, और उनमें से कोई तीन एक चपटा, शून्य-क्षेत्रफल triangle बनाते हैं, असली नहीं। तो हम correct करते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Lines के लिए, वे m choose two pairs घटाइए जो collapse होती हैं, फिर उनकी साझा एक असली रेखा वापस जोड़िए। Triangles के लिए बस m choose three घटाइए, वे degenerate वाले।"
+            },
+            {
+              "seq": 7,
+              "text": "एक पंक्ति वाला विचार पकड़े रखिए: आकार गिनना असल में उन vertices गिनना है जो उन्हें परिभाषित करते हैं, और सूत्र उसी पल आ जाता है जब आप selection name करते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 36,
+      "section_type": "concept",
+      "subtopic": "Counting Applications & Advanced Tools",
+      "title": "Divisors as selection; arrangements in disguise",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two more costumes: divisors and place-value"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Write $N = p_1^{a_1} p_2^{a_2}\\cdots$. A divisor picks an exponent, 0 to $a_i$, for each prime."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Each prime: choose an exponent independently",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 380 150\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" font-size=\"13\" font-family=\"system-ui, sans-serif\">360 = 2^3 &#183; 3^2 &#183; 5^1</text><text x=\"10\" y=\"50\" font-size=\"12\" font-family=\"system-ui, sans-serif\">prime 2: exponent in {0,1,2,3}</text><text x=\"320\" y=\"50\" font-size=\"13\" fill=\"#c8102e\" font-family=\"system-ui, sans-serif\">4</text><text x=\"10\" y=\"75\" font-size=\"12\" font-family=\"system-ui, sans-serif\">prime 3: exponent in {0,1,2}</text><text x=\"320\" y=\"75\" font-size=\"13\" fill=\"#c8102e\" font-family=\"system-ui, sans-serif\">3</text><text x=\"10\" y=\"100\" font-size=\"12\" font-family=\"system-ui, sans-serif\">prime 5: exponent in {0,1}</text><text x=\"320\" y=\"100\" font-size=\"13\" fill=\"#c8102e\" font-family=\"system-ui, sans-serif\">2</text><text x=\"10\" y=\"132\" font-size=\"13\" font-weight=\"bold\" font-family=\"system-ui, sans-serif\">divisors = 4 &#215; 3 &#215; 2 = 24</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "latex": "\\text{number of divisors} = (a_1+1)(a_2+1)\\cdots"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "'Sum of numbers formed' and 'rank of a word' are permutations seen through place-value / dictionary order."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "In a complete set of arrangements, each digit lands in each place equally often."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "Name the underlying selection first; the formula follows."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Divisors wear the same costume. Write a number N as a product of primes, p one to the a one, times p two to the a two, and so on."
+            },
+            {
+              "seq": 2,
+              "text": "Every divisor of N is built by choosing an exponent for each prime, anything from zero up to a i for the prime p i. Those choices are independent."
+            },
+            {
+              "seq": 3,
+              "text": "The board shows it for three hundred sixty: four choices for the power of two, three for the power of three, two for the power of five."
+            },
+            {
+              "seq": 4,
+              "text": "So by the counting principle, the number of divisors is the product a one plus one, times a two plus one, and so on. A divisor is nothing but a selection of exponents."
+            },
+            {
+              "seq": 5,
+              "text": "Two more disguises. Sum of all numbers formed, and rank of a word, are permutation problems viewed through place value and dictionary order respectively."
+            },
+            {
+              "seq": 6,
+              "text": "The key observation for both: in any complete set of arrangements, each digit lands in each place exactly equally often, which lets you total everything without listing a single number."
+            },
+            {
+              "seq": 7,
+              "text": "So the recurring move for this whole subtopic is simple. Name the underlying selection first, points for shapes, exponents for divisors, positions for arrangements, and the formula follows on its own."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Divisors वही costume पहनते हैं। एक number N को primes के product की तरह लिखो, p one to the a one, into p two to the a two, वग़ैरह।"
+            },
+            {
+              "seq": 2,
+              "text": "N का हर divisor हर prime के लिए एक exponent चुनकर बनता है, zero से a i तक prime p i के लिए। ये choices independent हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Board इसे three hundred sixty के लिए दिखाता है: two की power के चार choices, three की power के तीन, five की power के दो।"
+            },
+            {
+              "seq": 4,
+              "text": "तो counting principle से, divisors की संख्या है product a one plus one, into a two plus one, वग़ैरह। एक divisor exponents की एक selection के अलावा कुछ नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "दो और भेस। Sum of all numbers formed, और rank of a word, permutation problems हैं जो क्रमशः place value और dictionary order से देखे जाते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों के लिए key observation: किसी भी complete set of arrangements में, हर digit हर place पर ठीक बराबर बार आता है, जो एक भी number list किए बिना सब total करने देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो पूरे subtopic का recurring move simple है। पहले underlying selection name करो, shapes के लिए points, divisors के लिए exponents, arrangements के लिए positions, और formula ख़ुद आ जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Divisors वही costume पहनते हैं। एक संख्या N को primes के गुणनफल की तरह लिखिए, p one to the a one, गुना p two to the a two, इत्यादि।"
+            },
+            {
+              "seq": 2,
+              "text": "N का हर divisor हर prime के लिए एक exponent चुनकर बनता है, शून्य से a i तक prime p i के लिए। ये choices स्वतंत्र हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "बोर्ड इसे तीन सौ साठ के लिए दिखाता है: two की घात के चार choices, three की घात के तीन, five की घात के दो।"
+            },
+            {
+              "seq": 4,
+              "text": "तो counting principle से, divisors की संख्या है गुणनफल a one plus one, गुना a two plus one, इत्यादि। एक divisor exponents की एक selection के अलावा कुछ नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "दो और भेस। Sum of all numbers formed, और rank of a word, permutation प्रश्न हैं जो क्रमशः place value और dictionary order से देखे जाते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों के लिए मुख्य अवलोकन: किसी भी पूर्ण arrangements समुच्चय में, हर digit हर place पर ठीक बराबर बार आता है, जो एक भी संख्या सूचीबद्ध किए बिना सब total करने देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो पूरे उपविषय की बार-बार आने वाली चाल सरल है। पहले underlying selection name कीजिए, आकारों के लिए points, divisors के लिए exponents, arrangements के लिए positions, और सूत्र स्वयं आ जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 37,
+      "section_type": "concept",
+      "subtopic": "Counting Applications & Advanced Tools",
+      "title": "Derangements and the prime exponent in n!",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two named tools examiners love"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Derangement: a permutation with a FORBIDDEN position for every object (letters into wrong envelopes)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Direct casework is messy; derangements need inclusion-exclusion, not a plain factorial."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "D_n = n!\\left(1 - \\tfrac{1}{1!} + \\tfrac{1}{2!} - \\cdots + \\tfrac{(-1)^n}{n!}\\right)"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Small values: $D_1=0,\\; D_2=1,\\; D_3=2,\\; D_4=9,\\; D_5=44$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Exponent of a prime p in $n!$: count multiples of $p$, then $p^2$, then $p^3$, ... (Legendre)."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "E_p(n!) = \\lfloor n/p\\rfloor + \\lfloor n/p^2\\rfloor + \\lfloor n/p^3\\rfloor + \\cdots"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two more named tools round out this subtopic, and examiners reward students who recognise them on sight."
+            },
+            {
+              "seq": 2,
+              "text": "First, derangements. Sometimes every object has a forbidden position, like placing letters into envelopes so that no letter lands in its own correct envelope."
+            },
+            {
+              "seq": 3,
+              "text": "Counting these directly is messy, because you would juggle the cases of exactly one match, two matches, and so on. Derangements instead need inclusion and exclusion, not a plain factorial."
+            },
+            {
+              "seq": 4,
+              "text": "The formula is n factorial times the alternating series: one, minus one over one factorial, plus one over two factorial, and so on, ending with plus or minus one over n factorial."
+            },
+            {
+              "seq": 5,
+              "text": "Memorise the small values, because they appear constantly: D one is zero, D two is one, D three is two, D four is nine, and D five is forty four."
+            },
+            {
+              "seq": 6,
+              "text": "Second, the exponent of a prime p inside n factorial. You count how many numbers up to n are multiples of p, then how many are multiples of p squared, then p cubed, and keep going."
+            },
+            {
+              "seq": 7,
+              "text": "That is Legendre's neat staircase: floor of n over p, plus floor of n over p squared, plus floor of n over p cubed, and so on. As a special case, the number of trailing zeros of n factorial is just the exponent of five."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो और named tools इस subtopic को पूरा करते हैं, और examiners उन students को reward करते हैं जो इन्हें देखते ही पहचान लें।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, derangements। कभी-कभी हर object की एक forbidden position होती है, जैसे letters को envelopes में रखना ताकि कोई letter अपने सही envelope में न जाए।"
+            },
+            {
+              "seq": 3,
+              "text": "इन्हें directly गिनना messy है, क्योंकि आप exactly one match, two matches, वग़ैरह के cases juggle करते। Derangements को inclusion और exclusion चाहिए, plain factorial नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Formula है n factorial into alternating series: one, minus one over one factorial, plus one over two factorial, वग़ैरह, plus या minus one over n factorial पर ख़त्म।"
+            },
+            {
+              "seq": 5,
+              "text": "Small values याद करो, क्योंकि ये लगातार आते हैं: D one है zero, D two है one, D three है two, D four है nine, और D five है forty four।"
+            },
+            {
+              "seq": 6,
+              "text": "दूसरा, n factorial के अंदर prime p का exponent। तुम गिनते हो n तक कितने numbers p के multiples हैं, फिर कितने p squared के, फिर p cubed, और चलते रहो।"
+            },
+            {
+              "seq": 7,
+              "text": "यही Legendre की neat staircase है: floor of n over p, plus floor of n over p squared, plus floor of n over p cubed, वग़ैरह। एक special case: n factorial के trailing zeros बस five का exponent है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो और named tools इस उपविषय को पूरा करते हैं, और परीक्षक उन विद्यार्थियों को reward करते हैं जो इन्हें देखते ही पहचान लें।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, derangements। कभी-कभी हर object की एक forbidden position होती है, जैसे letters को envelopes में रखना ताकि कोई letter अपने सही envelope में न जाए।"
+            },
+            {
+              "seq": 3,
+              "text": "इन्हें सीधे गिनना messy है, क्योंकि आप exactly one match, two matches, इत्यादि के cases juggle करते। Derangements को inclusion और exclusion चाहिए, सादा factorial नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "सूत्र है n factorial गुना alternating श्रेणी: one, minus one over one factorial, plus one over two factorial, इत्यादि, plus या minus one over n factorial पर ख़त्म।"
+            },
+            {
+              "seq": 5,
+              "text": "छोटे मान याद कीजिए, क्योंकि ये लगातार आते हैं: D one है zero, D two है one, D three है two, D four है nine, और D five है forty four।"
+            },
+            {
+              "seq": 6,
+              "text": "दूसरा, n factorial के भीतर prime p का exponent। आप गिनते हैं n तक कितनी संख्याएँ p के multiples हैं, फिर कितनी p squared के, फिर p cubed, और चलते रहिए।"
+            },
+            {
+              "seq": 7,
+              "text": "यही Legendre की सुंदर सीढ़ी है: floor of n over p, plus floor of n over p squared, plus floor of n over p cubed, इत्यादि। एक विशेष स्थिति: n factorial के trailing zeros बस five का exponent है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 38,
+      "section_type": "formulas",
+      "subtopic": "Counting Applications & Advanced Tools",
+      "title": "The applications formula board",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Every application formula, one board"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\text{lines } {}^{n}C_2,\\; \\text{triangles } {}^{n}C_3;\\;\\; m \\text{ collinear}: {}-{}^{m}C_2{+}1,\\; {-}{}^{m}C_3"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{diagonals of convex } n\\text{-gon} = {}^{n}C_2 - n = \\dfrac{n(n-3)}{2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{rectangles from } a \\text{ horiz., } b \\text{ vert. lines} = {}^{a}C_2 \\cdot {}^{b}C_2"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\text{divisors of } \\textstyle\\prod p_i^{a_i} = \\prod(a_i+1); \\quad \\text{sum} = \\prod \\dfrac{p_i^{a_i+1}-1}{p_i-1}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\text{sum of all numbers (} n \\text{ distinct digits)} = (\\textstyle\\sum d)\\,(n-1)!\\,\\dfrac{10^{n}-1}{9}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "D_n = n!\\textstyle\\sum_{i=0}^{n}\\dfrac{(-1)^i}{i!} = (n-1)(D_{n-1}+D_{n-2})"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "E_p(n!) = \\textstyle\\sum_{k\\ge 1}\\lfloor n/p^k\\rfloor; \\quad \\text{trailing zeros of } n! = E_5(n!)"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Rank of a word: $\\sum(\\text{smaller unused letters})\\times(\\text{remaining})! + 1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is every application formula gathered on one board. Read it as a menu: recognise the problem type, then pick the matching line."
+            },
+            {
+              "seq": 2,
+              "text": "Geometry: from n points, lines are n choose two and triangles are n choose three; if m points are collinear, subtract m choose two and add one for lines, and subtract m choose three for triangles."
+            },
+            {
+              "seq": 3,
+              "text": "The diagonals of a convex n-gon are n choose two minus n, which simplifies to n times n minus three, over two."
+            },
+            {
+              "seq": 4,
+              "text": "Rectangles from a grid of a horizontal and b vertical lines are a choose two times b choose two, since a rectangle is a choice of two horizontals and two verticals."
+            },
+            {
+              "seq": 5,
+              "text": "For a number written as a product of prime powers, the number of divisors is the product of each exponent plus one, and the sum of divisors is the product of p to the a plus one minus one, over p minus one."
+            },
+            {
+              "seq": 6,
+              "text": "The sum of all numbers formed from n distinct digits is the digit sum, times n minus one factorial, times the repunit, which is ten to the n minus one over nine."
+            },
+            {
+              "seq": 7,
+              "text": "Derangements are n factorial times the alternating reciprocal-factorial sum, and equivalently n minus one, times the sum of the previous two derangements."
+            },
+            {
+              "seq": 8,
+              "text": "The exponent of a prime p in n factorial is the sum of the floors of n over p to the k, and the trailing zeros of n factorial are exactly the exponent of five."
+            },
+            {
+              "seq": 9,
+              "text": "And rank of a word: at each position, sum the smaller unused letters times the factorial of the positions to the right, accumulate, then add one for the word itself."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ हर application formula एक board पर इकट्ठा है। इसे menu की तरह पढ़ो: problem type पहचानो, फिर matching line pick करो।"
+            },
+            {
+              "seq": 2,
+              "text": "Geometry: n points से, lines हैं n choose two और triangles हैं n choose three; अगर m points collinear हों, lines के लिए m choose two subtract और one add करो, और triangles के लिए m choose three subtract करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Convex n-gon के diagonals हैं n choose two minus n, जो simplify होकर n into n minus three, over two बनता है।"
+            },
+            {
+              "seq": 4,
+              "text": "a horizontal और b vertical lines के grid से rectangles हैं a choose two into b choose two, क्योंकि एक rectangle दो horizontals और दो verticals का choice है।"
+            },
+            {
+              "seq": 5,
+              "text": "किसी number को prime powers के product की तरह लिखने पर, divisors की संख्या है हर exponent plus one का product, और divisors का sum है p to the a plus one minus one, over p minus one का product।"
+            },
+            {
+              "seq": 6,
+              "text": "n distinct digits से बने सारे numbers का sum है digit sum, into n minus one factorial, into repunit, यानी ten to the n minus one over nine।"
+            },
+            {
+              "seq": 7,
+              "text": "Derangements हैं n factorial into alternating reciprocal-factorial sum, और equivalently n minus one, into पिछले दो derangements का sum।"
+            },
+            {
+              "seq": 8,
+              "text": "n factorial में prime p का exponent है n over p to the k के floors का sum, और n factorial के trailing zeros ठीक five का exponent हैं।"
+            },
+            {
+              "seq": 9,
+              "text": "और rank of a word: हर position पर, current से छोटे unused letters into दाईं positions के factorial का sum लो, accumulate करो, फिर word ख़ुद के लिए one add करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ हर application सूत्र एक बोर्ड पर इकट्ठा है। इसे menu की तरह पढ़िए: problem type पहचानिए, फिर matching line pick कीजिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Geometry: n points से, lines हैं n choose two और triangles हैं n choose three; यदि m points collinear हों, lines के लिए m choose two घटाइए और one जोड़िए, और triangles के लिए m choose three घटाइए।"
+            },
+            {
+              "seq": 3,
+              "text": "Convex n-gon के diagonals हैं n choose two minus n, जो simplify होकर n गुना n minus three, बटा two बनता है।"
+            },
+            {
+              "seq": 4,
+              "text": "a horizontal और b vertical lines के grid से rectangles हैं a choose two गुना b choose two, क्योंकि एक rectangle दो horizontals और दो verticals का choice है।"
+            },
+            {
+              "seq": 5,
+              "text": "किसी संख्या को prime powers के गुणनफल की तरह लिखने पर, divisors की संख्या है हर exponent plus one का गुणनफल, और divisors का sum है p to the a plus one minus one, बटा p minus one का गुणनफल।"
+            },
+            {
+              "seq": 6,
+              "text": "n भिन्न digits से बनी सारी संख्याओं का sum है digit sum, गुना n minus one factorial, गुना repunit, यानी ten to the n minus one बटा nine।"
+            },
+            {
+              "seq": 7,
+              "text": "Derangements हैं n factorial गुना alternating reciprocal-factorial sum, और समतुल्य रूप से n minus one, गुना पिछले दो derangements का sum।"
+            },
+            {
+              "seq": 8,
+              "text": "n factorial में prime p का exponent है n over p to the k के floors का sum, और n factorial के trailing zeros ठीक five का exponent हैं।"
+            },
+            {
+              "seq": 9,
+              "text": "और rank of a word: हर position पर, current से छोटे unused letters गुना दाईं positions के factorial का sum लीजिए, accumulate कीजिए, फिर word स्वयं के लिए one जोड़िए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 39,
+      "section_type": "concept",
+      "subtopic": "Counting Applications & Advanced Tools",
+      "title": "Proofs I: collinear corrections, divisors, sum of numbers",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Why the geometric, divisor and sum formulas hold"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Start as if no 3 collinear: ${}^{n}C_2$ lines. m collinear points would give ${}^{m}C_2$ lines but are really ONE."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{lines} = {}^{n}C_2 - {}^{m}C_2 + 1; \\quad \\text{triangles} = {}^{n}C_3 - {}^{m}C_3"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Divisor $d = p_1^{e_1}\\cdots$ with $0 \\le e_i \\le a_i$: each exponent independent $\\to$ $\\prod(a_i+1)$ (FPC)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Sum of numbers: fix any digit in the units place; the other $n-1$ permute in $(n-1)!$ ways."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "So each digit sits in each place $(n-1)!$ times; summing over places gives the repunit factor."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\text{sum} = (\\textstyle\\sum d)(n-1)!\\,(1 + 10 + \\cdots + 10^{n-1})"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us prove the three most-tested application formulas, because the proofs double as the method for solving the problems."
+            },
+            {
+              "seq": 2,
+              "text": "For geometry, start as if no three points were collinear, giving n choose two lines. Now suppose m points are collinear. Those m points would have contributed m choose two separate lines, but they actually lie on a single line."
+            },
+            {
+              "seq": 3,
+              "text": "So subtract that m choose two and add back one for their shared line. For triangles, any three of the m collinear points make a zero-area triangle, so simply subtract m choose three."
+            },
+            {
+              "seq": 4,
+              "text": "For divisors, a divisor d of N must look like p one to the e one, and so on, with each exponent e i between zero and a i. Choosing each exponent is independent and offers a i plus one values, so by the counting principle the number of divisors is the product of a i plus one."
+            },
+            {
+              "seq": 5,
+              "text": "For the sum of all numbers formed, fix any one digit in the units place. The remaining n minus one digits then permute freely in n minus one factorial ways."
+            },
+            {
+              "seq": 6,
+              "text": "So each digit appears in the units place exactly n minus one factorial times, and by symmetry in every other place too. The contribution to each column is the digit sum times n minus one factorial."
+            },
+            {
+              "seq": 7,
+              "text": "Summing across the columns gives the digit sum, times n minus one factorial, times one plus ten plus up to ten to the n minus one, which is the repunit. That is the whole formula, derived."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "तीन सबसे ज़्यादा tested application formulas prove करते हैं, क्योंकि proofs ही problems solve करने का method बन जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Geometry के लिए, ऐसे शुरू करो जैसे कोई तीन points collinear न हों, यानी n choose two lines। अब मान लो m points collinear हैं। वो m points m choose two अलग lines contribute करते, पर असल में एक ही line पर हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो वो m choose two subtract करो और उनकी shared line के लिए one add back करो। Triangles के लिए, उन m collinear points में से कोई तीन एक zero-area triangle बनाते हैं, तो बस m choose three subtract करो।"
+            },
+            {
+              "seq": 4,
+              "text": "Divisors के लिए, N का एक divisor d ऐसा दिखना चाहिए p one to the e one, वग़ैरह, हर exponent e i zero और a i के बीच। हर exponent चुनना independent है और a i plus one values देता है, तो counting principle से divisors की संख्या है a i plus one का product।"
+            },
+            {
+              "seq": 5,
+              "text": "Sum of all numbers formed के लिए, कोई एक digit units place में fix करो। बाकी n minus one digits फिर freely n minus one factorial ways में permute करते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "तो हर digit units place में ठीक n minus one factorial बार आता है, और symmetry से हर दूसरी place में भी। हर column का contribution है digit sum into n minus one factorial।"
+            },
+            {
+              "seq": 7,
+              "text": "Columns भर sum करने पर मिलता है digit sum, into n minus one factorial, into one plus ten plus ten to the n minus one तक, जो repunit है। यही पूरा formula है, derived।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "तीन सबसे अधिक परखे जाने वाले application सूत्र prove करते हैं, क्योंकि proofs ही problems हल करने की विधि बन जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Geometry के लिए, ऐसे शुरू कीजिए जैसे कोई तीन points collinear न हों, यानी n choose two lines। अब मान लीजिए m points collinear हैं। वे m points m choose two अलग lines contribute करते, पर असल में एक ही रेखा पर हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो वे m choose two घटाइए और उनकी साझा रेखा के लिए one वापस जोड़िए। Triangles के लिए, उन m collinear points में से कोई तीन एक शून्य-क्षेत्रफल triangle बनाते हैं, तो बस m choose three घटाइए।"
+            },
+            {
+              "seq": 4,
+              "text": "Divisors के लिए, N का एक divisor d ऐसा दिखना चाहिए p one to the e one, इत्यादि, हर exponent e i शून्य और a i के बीच। हर exponent चुनना स्वतंत्र है और a i plus one मान देता है, तो counting principle से divisors की संख्या है a i plus one का गुणनफल।"
+            },
+            {
+              "seq": 5,
+              "text": "Sum of all numbers formed के लिए, कोई एक digit units place में fix कीजिए। बाकी n minus one digits फिर स्वतंत्र रूप से n minus one factorial ways में permute करते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "तो हर digit units place में ठीक n minus one factorial बार आता है, और symmetry से हर दूसरी place में भी। हर column का contribution है digit sum गुना n minus one factorial।"
+            },
+            {
+              "seq": 7,
+              "text": "Columns भर sum करने पर मिलता है digit sum, गुना n minus one factorial, गुना one plus ten plus ten to the n minus one तक, जो repunit है। यही पूरा सूत्र है, derived।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 40,
+      "section_type": "concept",
+      "subtopic": "Counting Applications & Advanced Tools",
+      "title": "Proofs II: rank, derangements, Legendre",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Rank, derangements, and the prime staircase"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Rank: scan left to right; (unused letters smaller than current) $\\times$ (positions to the right)!; sum, then $+1$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Derangement: from $n!$ subtract those fixing at least one object, by inclusion-exclusion."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "D_n = \\textstyle\\sum_{i=0}^{n}(-1)^i\\,{}^{n}C_i\\,(n-i)! = n!\\sum_{i=0}^{n}\\dfrac{(-1)^i}{i!}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Legendre: of $1..n$, $\\lfloor n/p\\rfloor$ are multiples of $p$; $\\lfloor n/p^2\\rfloor$ carry a second factor; etc."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "E_p(n!) = \\lfloor n/p\\rfloor + \\lfloor n/p^2\\rfloor + \\cdots"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "'None correct' $\\to$ derangement $\\to$ inclusion-exclusion, never a plain $n!$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the three procedural tools: rank of a word, derangements, and Legendre's exponent."
+            },
+            {
+              "seq": 2,
+              "text": "To rank a word of distinct letters, scan left to right. At each position, count how many unused letters are alphabetically smaller than the current letter, multiply by the factorial of the number of positions still to its right, and accumulate. Add one at the end for the word itself."
+            },
+            {
+              "seq": 3,
+              "text": "For derangements, start from all n factorial permutations and subtract those that fix at least one object, using inclusion and exclusion."
+            },
+            {
+              "seq": 4,
+              "text": "Fixing a chosen set of i objects leaves n minus i factorial arrangements, and there are n choose i such sets. The alternating inclusion-exclusion sum then collapses to n factorial times the sum of minus one to the i over i factorial."
+            },
+            {
+              "seq": 5,
+              "text": "For Legendre, among the numbers one to n, exactly floor of n over p are multiples of p. Of those, floor of n over p squared carry a second factor of p, and so on up the powers."
+            },
+            {
+              "seq": 6,
+              "text": "Summing those counts tallies every factor of p exactly once, giving floor of n over p, plus floor of n over p squared, plus more."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>The exam signal to burn in: whenever you read none correct or no object in its own place, that is a derangement, so reach straight for inclusion-exclusion and never a plain factorial."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब तीन procedural tools: rank of a word, derangements, और Legendre's exponent।"
+            },
+            {
+              "seq": 2,
+              "text": "Distinct letters के word को rank करने के लिए, left से right scan करो। हर position पर, गिनो कितने unused letters current letter से alphabetically छोटे हैं, उसे दाईं तरफ़ बची positions के factorial से multiply करो, और accumulate करो। आख़िर में word ख़ुद के लिए one add करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Derangements के लिए, सारे n factorial permutations से शुरू करो और उन्हें subtract करो जो कम से कम एक object fix करते हैं, inclusion और exclusion से।"
+            },
+            {
+              "seq": 4,
+              "text": "i objects के एक chosen set को fix करना n minus i factorial arrangements छोड़ता है, और ऐसे n choose i sets हैं। Alternating inclusion-exclusion sum फिर n factorial into minus one to the i over i factorial के sum में collapse हो जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Legendre के लिए, numbers one से n में, ठीक floor of n over p, p के multiples हैं। उनमें से floor of n over p squared, p का दूसरा factor रखते हैं, और ऐसे ही powers ऊपर।"
+            },
+            {
+              "seq": 6,
+              "text": "उन counts को sum करना p के हर factor को ठीक एक बार गिनता है, यानी floor of n over p, plus floor of n over p squared, plus और।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Exam signal जो burn करना है: जब भी none correct या no object in its own place पढ़ो, वो derangement है, तो सीधे inclusion-exclusion की तरफ़ जाओ, कभी plain factorial नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब तीन procedural tools: rank of a word, derangements, और Legendre's exponent।"
+            },
+            {
+              "seq": 2,
+              "text": "भिन्न letters के word को rank करने के लिए, बाएँ से दाएँ scan कीजिए। हर position पर, गिनिए कितने unused letters current letter से alphabetically छोटे हैं, उसे दाईं तरफ़ बची positions के factorial से गुणा कीजिए, और accumulate कीजिए। अंत में word स्वयं के लिए one जोड़िए।"
+            },
+            {
+              "seq": 3,
+              "text": "Derangements के लिए, सारे n factorial permutations से शुरू कीजिए और उन्हें घटाइए जो कम से कम एक object fix करते हैं, inclusion और exclusion से।"
+            },
+            {
+              "seq": 4,
+              "text": "i objects के एक chosen set को fix करना n minus i factorial arrangements छोड़ता है, और ऐसे n choose i sets हैं। Alternating inclusion-exclusion sum फिर n factorial गुना minus one to the i over i factorial के sum में collapse हो जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Legendre के लिए, संख्याओं one से n में, ठीक floor of n over p, p के multiples हैं। उनमें से floor of n over p squared, p का दूसरा factor रखते हैं, और ऐसे ही powers ऊपर।"
+            },
+            {
+              "seq": 6,
+              "text": "उन counts को sum करना p के हर factor को ठीक एक बार गिनता है, यानी floor of n over p, plus floor of n over p squared, plus और।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>Exam signal जो burn करना है: जब भी none correct या no object in its own place पढ़िए, वह derangement है, तो सीधे inclusion-exclusion की ओर जाइए, कभी सादा factorial नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 41,
+      "section_type": "worked_examples",
+      "subtopic": "Counting Applications & Advanced Tools",
+      "title": "Divisors, and triangles with collinear points",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 (foundational): number of divisors of 360"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "360 = 2^3 \\times 3^2 \\times 5^1"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "(3+1)(2+1)(1+1) = 4 \\times 3 \\times 2 = 24"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "Example 2 (trap): 10 points, 4 collinear — how many triangles?"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "Unrestricted ${}^{10}C_3 = 120$; the 4 collinear give ${}^{4}C_3 = 4$ flat 'triangles'."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "latex": "120 - 4 = 116"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two examples to make the costumes concrete, starting with divisors."
+            },
+            {
+              "seq": 2,
+              "text": "Example one, foundational. How many positive divisors does three hundred sixty have? First factorise it: three hundred sixty is two cubed, times three squared, times five to the one."
+            },
+            {
+              "seq": 3,
+              "text": "Each divisor chooses an exponent for each prime, so the count is three plus one, times two plus one, times one plus one, which is four times three times two, equal to twenty four divisors."
+            },
+            {
+              "seq": 4,
+              "text": "Example two is the collinear trap. There are ten points in a plane, of which four are collinear, and we count the triangles they form."
+            },
+            {
+              "seq": 5,
+              "text": "Without any restriction, any three points make a triangle, so that is ten choose three, which is one hundred twenty. But the four collinear points yield four choose three, that is four, degenerate flat triangles that must be removed."
+            },
+            {
+              "seq": 6,
+              "text": "So the answer is one hundred twenty minus four, which is one hundred sixteen. The trap is writing one hundred twenty and stopping; three collinear points have zero area and are never a triangle, so always scan for collinear subsets and subtract their m choose three."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Costumes को concrete बनाने के लिए दो examples, divisors से शुरू।"
+            },
+            {
+              "seq": 2,
+              "text": "Example one, foundational। three hundred sixty के कितने positive divisors हैं? पहले factorise करो: three hundred sixty है two cubed, into three squared, into five to the one।"
+            },
+            {
+              "seq": 3,
+              "text": "हर divisor हर prime के लिए एक exponent चुनता है, तो count है three plus one, into two plus one, into one plus one, यानी four into three into two, बराबर twenty four divisors।"
+            },
+            {
+              "seq": 4,
+              "text": "Example two collinear trap है। एक plane में दस points हैं, जिनमें चार collinear हैं, और हम उनसे बनने वाले triangles गिनते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "बिना किसी restriction के, कोई तीन points एक triangle बनाते हैं, तो यह ten choose three है, यानी one hundred twenty। पर चार collinear points four choose three देते हैं, यानी four, degenerate flat triangles जिन्हें हटाना पड़ता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो answer है one hundred twenty minus four, यानी one hundred sixteen। Trap है one hundred twenty लिखकर रुक जाना; तीन collinear points का zero area होता है और वो कभी triangle नहीं, तो हमेशा collinear subsets scan करो और उनका m choose three subtract करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Costumes को ठोस बनाने के लिए दो उदाहरण, divisors से शुरू।"
+            },
+            {
+              "seq": 2,
+              "text": "उदाहरण एक, आधारभूत। तीन सौ साठ के कितने धनात्मक divisors हैं? पहले factorise कीजिए: तीन सौ साठ है two cubed, गुना three squared, गुना five to the one।"
+            },
+            {
+              "seq": 3,
+              "text": "हर divisor हर prime के लिए एक exponent चुनता है, तो count है three plus one, गुना two plus one, गुना one plus one, यानी four गुना three गुना two, बराबर चौबीस divisors।"
+            },
+            {
+              "seq": 4,
+              "text": "उदाहरण दो collinear trap है। एक plane में दस points हैं, जिनमें चार collinear हैं, और हम उनसे बनने वाले triangles गिनते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "बिना किसी प्रतिबंध के, कोई तीन points एक triangle बनाते हैं, तो यह ten choose three है, यानी एक सौ बीस। पर चार collinear points four choose three देते हैं, यानी four, degenerate चपटे triangles जिन्हें हटाना पड़ता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो उत्तर है एक सौ बीस minus four, यानी एक सौ सोलह। Trap है एक सौ बीस लिखकर रुक जाना; तीन collinear points का शून्य क्षेत्रफल होता है और वे कभी triangle नहीं, तो हमेशा collinear subsets scan कीजिए और उनका m choose three घटाइए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 42,
+      "section_type": "worked_examples",
+      "subtopic": "Counting Applications & Advanced Tools",
+      "title": "Sum of all numbers formed, and derangements",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 (JEE Main): sum of all 4-digit numbers from 2,3,4,5 (each once)"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "Each digit visits each place (4-1)! = 6 times",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 380 140\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"30\" y=\"22\" font-size=\"12\" font-family=\"system-ui, sans-serif\">Th</text><text x=\"122\" y=\"22\" font-size=\"12\" font-family=\"system-ui, sans-serif\">H</text><text x=\"212\" y=\"22\" font-size=\"12\" font-family=\"system-ui, sans-serif\">T</text><text x=\"302\" y=\"22\" font-size=\"12\" font-family=\"system-ui, sans-serif\">U</text><rect x=\"15\" y=\"30\" width=\"55\" height=\"42\" fill=\"none\" stroke=\"#333\"/><rect x=\"105\" y=\"30\" width=\"55\" height=\"42\" fill=\"none\" stroke=\"#333\"/><rect x=\"195\" y=\"30\" width=\"55\" height=\"42\" fill=\"none\" stroke=\"#333\"/><rect x=\"285\" y=\"30\" width=\"55\" height=\"42\" fill=\"none\" stroke=\"#333\"/><text x=\"15\" y=\"98\" font-size=\"11\" fill=\"#c8102e\" font-family=\"system-ui, sans-serif\">each digit visits each column (4-1)! = 6 times</text><text x=\"15\" y=\"122\" font-size=\"13\" font-family=\"system-ui, sans-serif\">sum = (&#931; d) &#215; 6 &#215; 1111</text></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Sum of digits $2+3+4+5 = 14$; each digit sits in each place $3! = 6$ times; repunit $1111$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "latex": "14 \\times 6 \\times 1111 = 84 \\times 1111 = 93{,}324"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "text": "Example 4 (JEE Adv): 5 letters into 5 envelopes, none correct"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "latex": "D_5 = 5!\\left(1 - 1 + \\tfrac12 - \\tfrac16 + \\tfrac1{24} - \\tfrac1{120}\\right)"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 53,
+          "latex": "D_5 = 44 \\quad(\\text{check: } 4(D_4+D_3) = 4(9+2) = 44)"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two final examples, one on the sum of numbers and one on derangements."
+            },
+            {
+              "seq": 2,
+              "text": "Example three, JEE Main. Find the sum of all four-digit numbers formed using the digits two, three, four, five exactly once each. The board shows the key idea: each digit visits each place equally."
+            },
+            {
+              "seq": 3,
+              "text": "There are four factorial, that is twenty four, such numbers, and each digit occupies each place four minus one factorial, that is six, times. The sum of the digits is two plus three plus four plus five, which is fourteen, and the place-value repunit is one one one one."
+            },
+            {
+              "seq": 4,
+              "text": "So the sum is fourteen times six times one thousand one hundred eleven. Fourteen times six is eighty four, and eighty four times one one one one is ninety three thousand three hundred twenty four."
+            },
+            {
+              "seq": 5,
+              "text": "Example four, JEE Advanced. Five distinct letters go into five addressed envelopes, one per envelope, so that no letter lands in its correct envelope. This is the derangement count D five."
+            },
+            {
+              "seq": 6,
+              "text": "By the formula, D five is five factorial times one, minus one, plus one half, minus one sixth, plus one twenty fourth, minus one over one hundred twenty. The bracket works out to about zero point three six seven, and one hundred twenty times that is forty four."
+            },
+            {
+              "seq": 7,
+              "text": "Cross-check with the recurrence: D five equals four times D four plus D three, which is four times nine plus two, equal to four times eleven, which is forty four. Both routes agree."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो final examples, एक sum of numbers पर और एक derangements पर।"
+            },
+            {
+              "seq": 2,
+              "text": "Example three, JEE Main। digits two, three, four, five हर एक को ठीक एक बार use करके बने सारे four-digit numbers का sum निकालो। Board key idea दिखाता है: हर digit हर place पर बराबर आता है।"
+            },
+            {
+              "seq": 3,
+              "text": "ऐसे four factorial, यानी twenty four, numbers हैं, और हर digit हर place पर four minus one factorial, यानी six, बार बैठता है। Digits का sum है two plus three plus four plus five, यानी fourteen, और place-value repunit है one one one one।"
+            },
+            {
+              "seq": 4,
+              "text": "तो sum है fourteen into six into one thousand one hundred eleven। Fourteen into six है eighty four, और eighty four into one one one one है ninety three thousand three hundred twenty four।"
+            },
+            {
+              "seq": 5,
+              "text": "Example four, JEE Advanced। पाँच distinct letters पाँच addressed envelopes में जाते हैं, हर envelope में एक, ताकि कोई letter अपने सही envelope में न पहुँचे। यह derangement count D five है।"
+            },
+            {
+              "seq": 6,
+              "text": "Formula से, D five है five factorial into one, minus one, plus one half, minus one sixth, plus one twenty fourth, minus one over one hundred twenty। Bracket लगभग zero point three six seven निकलता है, और one hundred twenty into उतना है forty four।"
+            },
+            {
+              "seq": 7,
+              "text": "Recurrence से cross-check: D five बराबर four into D four plus D three, यानी four into nine plus two, बराबर four into eleven, यानी forty four। दोनों routes agree करते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो अंतिम उदाहरण, एक sum of numbers पर और एक derangements पर।"
+            },
+            {
+              "seq": 2,
+              "text": "उदाहरण तीन, JEE Main। digits two, three, four, five हर एक को ठीक एक बार उपयोग करके बनी सारी four-digit संख्याओं का sum निकालिए। बोर्ड मुख्य विचार दिखाता है: हर digit हर place पर बराबर आता है।"
+            },
+            {
+              "seq": 3,
+              "text": "ऐसी four factorial, यानी चौबीस, संख्याएँ हैं, और हर digit हर place पर four minus one factorial, यानी छह, बार बैठता है। Digits का sum है two plus three plus four plus five, यानी चौदह, और place-value repunit है one one one one।"
+            },
+            {
+              "seq": 4,
+              "text": "तो sum है चौदह गुना छह गुना one thousand one hundred eleven। चौदह गुना छह है चौरासी, और चौरासी गुना one one one one है तिरानवे हज़ार तीन सौ चौबीस।"
+            },
+            {
+              "seq": 5,
+              "text": "उदाहरण चार, JEE Advanced। पाँच भिन्न letters पाँच addressed envelopes में जाते हैं, हर envelope में एक, ताकि कोई letter अपने सही envelope में न पहुँचे। यह derangement count D five है।"
+            },
+            {
+              "seq": 6,
+              "text": "सूत्र से, D five है five factorial गुना one, minus one, plus one half, minus one sixth, plus one twenty fourth, minus one over one hundred twenty। Bracket लगभग zero point three six seven निकलता है, और one hundred twenty गुना उतना है forty four।"
+            },
+            {
+              "seq": 7,
+              "text": "Recurrence से cross-check: D five बराबर four गुना D four plus D three, यानी four गुना nine plus two, बराबर four गुना eleven, यानी forty four। दोनों रास्ते सहमत हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 43,
+      "section_type": "tips",
+      "subtopic": "Counting Applications & Advanced Tools",
+      "title": "Pitfalls & pro-tips for applications",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where application marks leak away"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Ignoring collinear corrections: writing ${}^{n}C_3$ for triangles without subtracting collinear cases."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "Incomplete prime factorisation: a dropped prime silently halves the divisor count."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 23,
+          "style": "red-margin",
+          "text": "Sum of numbers: it's $(n-1)!$ times each digit per place, NOT $n!$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "Derangement as a plain factorial or a single subtraction — it needs the full alternating sum."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "text": "Legendre: don't stop at the first term; $p^2, p^3, \\dots$ each add factors."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "style": "red-margin",
+          "text": "Pro-tip: name the selection — points for shapes, exponents for divisors, positions for arrangements."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me close the whole chapter's content with the application pitfalls, plus the one habit that unlocks the entire subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "First, ignoring collinear corrections: writing n choose three for triangles, or n choose two for lines, without subtracting the collinear cases. Always hunt for points or lines in special position."
+            },
+            {
+              "seq": 3,
+              "text": "Second, an incomplete prime factorisation. The divisor formula needs every prime with its full exponent; a single dropped prime silently halves your answer."
+            },
+            {
+              "seq": 4,
+              "text": "Third, the sum-of-numbers slip. Students multiply by n factorial instead of n minus one factorial. Remember it is n minus one factorial, the number of times each digit sits in a fixed place, not n factorial."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, treating a derangement as a plain factorial or a single subtraction. None-in-place needs the full alternating inclusion-exclusion sum, nothing less."
+            },
+            {
+              "seq": 6,
+              "text": "Fifth, stopping Legendre at the first term. Multiples of p squared, p cubed, and higher each add extra factors, so keep climbing the staircase until the floor is zero."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>And the one habit that unlocks everything here: name the underlying selection first. Points for shapes, exponents for divisors, positions for arrangements. Once you name what is being chosen, the one-line formula follows on its own."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूरे chapter का content application pitfalls के साथ बंद करता हूँ, plus वो एक habit जो पूरे subtopic को unlock करती है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली, collinear corrections ignore करना: triangles के लिए n choose three, या lines के लिए n choose two लिखना बिना collinear cases subtract किए। हमेशा special position वाले points या lines ढूँढो।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी, incomplete prime factorisation। Divisor formula को हर prime अपने full exponent के साथ चाहिए; एक भी छूटा prime चुपचाप आपका answer आधा कर देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरी, sum-of-numbers slip। Students n minus one factorial की जगह n factorial से multiply करते हैं। याद रखो यह n minus one factorial है, कितनी बार हर digit एक fixed place में बैठता है, n factorial नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथी, derangement को plain factorial या single subtraction मानना। None-in-place को full alternating inclusion-exclusion sum चाहिए, इससे कम नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवीं, Legendre को first term पर रोक देना। p squared, p cubed, और ऊपर के multiples हर एक extra factors add करते हैं, तो staircase तब तक चढ़ते रहो जब तक floor zero न हो।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>और वो एक habit जो यहाँ सब unlock करती है: पहले underlying selection name करो। Shapes के लिए points, divisors के लिए exponents, arrangements के लिए positions। जब आप name कर लेते हो कि क्या चुना जा रहा है, one-line formula ख़ुद आ जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूरे अध्याय का content application pitfalls के साथ बंद करता हूँ, plus वह एक आदत जो पूरे उपविषय को unlock करती है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली, collinear corrections अनदेखी करना: triangles के लिए n choose three, या lines के लिए n choose two लिखना बिना collinear cases घटाए। हमेशा special position वाले points या lines ढूँढिए।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी, अधूरी prime factorisation। Divisor सूत्र को हर prime अपने पूरे exponent के साथ चाहिए; एक भी छूटा prime चुपचाप आपका उत्तर आधा कर देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरी, sum-of-numbers चूक। विद्यार्थी n minus one factorial की जगह n factorial से गुणा करते हैं। याद रखिए यह n minus one factorial है, कितनी बार हर digit एक fixed place में बैठता है, n factorial नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथी, derangement को सादा factorial या एकल subtraction मानना। None-in-place को पूरा alternating inclusion-exclusion sum चाहिए, इससे कम नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवीं, Legendre को पहले पद पर रोक देना। p squared, p cubed, और ऊपर के multiples हर एक अतिरिक्त factors जोड़ते हैं, तो सीढ़ी तब तक चढ़ते रहिए जब तक floor शून्य न हो।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>और वह एक आदत जो यहाँ सब unlock करती है: पहले underlying selection name कीजिए। आकारों के लिए points, divisors के लिए exponents, arrangements के लिए positions। जब आप name कर लेते हैं कि क्या चुना जा रहा है, one-line सूत्र स्वयं आ जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 44,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Formula Recap",
+      "title": "Complete formula toolkit for Permutations & Combinations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Chapter 6 — your complete formula toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\begin{gathered} \\text{AND: } m_1\\times\\cdots\\times m_k \\qquad \\text{OR: } m+n \\\\ n! = n(n-1)\\cdots 1,\\; 0!=1,\\; n!=n\\,(n-1)! \\qquad \\text{repetition: } n^{r} \\end{gathered}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\begin{gathered} {}^{n}P_r = \\dfrac{n!}{(n-r)!} \\quad ({}^{n}P_n=n!,\\; {}^{n}P_0=1) \\\\ \\text{alike: } \\dfrac{n!}{p!\\,q!\\cdots} \\qquad \\text{circular: } (n-1)! \\;\\big/\\; \\tfrac{(n-1)!}{2} \\end{gathered}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\begin{gathered} {}^{n}C_r = \\dfrac{n!}{r!\\,(n-r)!} = \\dfrac{{}^{n}P_r}{r!} \\\\ {}^{n}C_r = {}^{n}C_{n-r}, \\qquad {}^{n}C_r + {}^{n}C_{r-1} = {}^{n+1}C_r \\end{gathered}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\begin{gathered} \\text{subsets } 2^{n}\\,(2^{n}-1); \\quad \\text{alike } (p{+}1)(q{+}1)\\cdots 2^{d} \\\\ \\text{repetition } {}^{n+r-1}C_r; \\quad x_1{+}\\cdots{+}x_k{=}n:\\; {}^{n+k-1}C_{k-1}\\,/\\,{}^{n-1}C_{k-1} \\end{gathered}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\begin{gathered} \\text{divide: } \\dfrac{n!}{m_1!\\,m_2!\\cdots}\\;(\\div g! \\text{ per } g \\text{ equal unlabelled}) \\\\ n \\text{ distinct into } k \\text{ distinct boxes: } k^{n} \\end{gathered}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\begin{gathered} \\text{lines } {}^{n}C_2,\\; \\text{triangles } {}^{n}C_3,\\; \\text{diagonals } \\tfrac{n(n-3)}{2} \\\\ \\text{rectangles } {}^{a}C_2\\,{}^{b}C_2; \\quad \\text{divisors } \\textstyle\\prod (a_i+1) \\end{gathered}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\begin{gathered} \\text{sum of numbers} = (\\textstyle\\sum d)\\,(n-1)!\\,\\tfrac{10^{n}-1}{9} \\\\ D_n = n!\\textstyle\\sum \\tfrac{(-1)^i}{i!}; \\qquad E_p(n!) = \\textstyle\\sum_{k}\\lfloor n/p^{k}\\rfloor \\end{gathered}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Recall only — jump back to the section itself to re-learn any derivation."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is your complete toolkit for the whole chapter on one board. This is recall, not re-teaching, so let it jog what you already understand."
+            },
+            {
+              "seq": 2,
+              "text": "From subtopic one: AND means multiply across stages, OR means add across mutually exclusive alternatives, factorial is the falling product with zero factorial equal to one, and repetition gives n to the r."
+            },
+            {
+              "seq": 3,
+              "text": "From permutations: n permute r is n factorial over n minus r factorial, alike objects divide out their repeats, and a circle is n minus one factorial, halved again if it can be flipped."
+            },
+            {
+              "seq": 4,
+              "text": "From combinations: n choose r is n factorial over r factorial times n minus r factorial, with the symmetry and Pascal identities you should now know cold."
+            },
+            {
+              "seq": 5,
+              "text": "From selections and stars and bars: two to the n subsets, the alike-group product, and n plus r minus one choose r for selection with repetition, with the non-negative and positive solution counts."
+            },
+            {
+              "seq": 6,
+              "text": "For grouping and distribution: n factorial over the product of group-size factorials, with a divide by g factorial for each set of equal unlabelled groups, and k to the n for distinct objects into distinct boxes."
+            },
+            {
+              "seq": 7,
+              "text": "For geometry and divisors: lines and triangles as n choose two and three, diagonals as n times n minus three over two, rectangles as the product of two-choices, and divisors as the product of exponents plus one."
+            },
+            {
+              "seq": 8,
+              "text": "And the advanced tools: the sum-of-numbers formula, the derangement series, and Legendre's staircase for the exponent of a prime in a factorial."
+            },
+            {
+              "seq": 9,
+              "text": "If any single line here does not instantly bring back its reasoning, that is your signal: jump back to that section and re-learn the derivation, do not just memorise the symbol."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ पूरे chapter का complete toolkit एक board पर है। यह recall है, re-teaching नहीं, तो इसे जो आप पहले से समझते हो उसे jog करने दो।"
+            },
+            {
+              "seq": 2,
+              "text": "Subtopic one से: AND मतलब stages भर multiply, OR मतलब mutually exclusive alternatives भर add, factorial है falling product जिसमें zero factorial बराबर one, और repetition देता है n to the r।"
+            },
+            {
+              "seq": 3,
+              "text": "Permutations से: n permute r है n factorial over n minus r factorial, alike objects अपने repeats divide out करते हैं, और circle है n minus one factorial, flip हो सके तो फिर आधा।"
+            },
+            {
+              "seq": 4,
+              "text": "Combinations से: n choose r है n factorial over r factorial into n minus r factorial, symmetry और Pascal identities के साथ जो अब आपको पक्की आनी चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Selections और stars and bars से: two to the n subsets, alike-group product, और selection with repetition के लिए n plus r minus one choose r, non-negative और positive solution counts के साथ।"
+            },
+            {
+              "seq": 6,
+              "text": "Grouping और distribution के लिए: n factorial over group-size factorials का product, हर equal unlabelled groups के set के लिए divide by g factorial, और distinct objects को distinct boxes में के लिए k to the n।"
+            },
+            {
+              "seq": 7,
+              "text": "Geometry और divisors के लिए: lines और triangles n choose two और three, diagonals n into n minus three over two, rectangles दो choices का product, और divisors exponents plus one का product।"
+            },
+            {
+              "seq": 8,
+              "text": "और advanced tools: sum-of-numbers formula, derangement series, और factorial में prime के exponent के लिए Legendre की staircase।"
+            },
+            {
+              "seq": 9,
+              "text": "अगर यहाँ कोई एक line instantly अपनी reasoning वापस न लाए, वही आपका signal है: उस section पर वापस जाओ और derivation दोबारा सीखो, बस symbol रट मत लो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ पूरे अध्याय का complete toolkit एक बोर्ड पर है। यह recall है, फिर से पढ़ाना नहीं, तो इसे जो आप पहले से समझते हैं उसे jog करने दीजिए।"
+            },
+            {
+              "seq": 2,
+              "text": "उपविषय एक से: AND यानी stages भर गुणा, OR यानी परस्पर अपवर्जी विकल्पों भर जोड़, factorial है falling product जिसमें zero factorial बराबर one, और repetition देता है n to the r।"
+            },
+            {
+              "seq": 3,
+              "text": "Permutations से: n permute r है n factorial बटा n minus r factorial, समान वस्तुएँ अपने repeats divide out करती हैं, और वृत्त है n minus one factorial, पलटाया जा सके तो फिर आधा।"
+            },
+            {
+              "seq": 4,
+              "text": "Combinations से: n choose r है n factorial बटा r factorial गुना n minus r factorial, symmetry और Pascal सर्वसमिकाओं के साथ जो अब आपको पक्की आनी चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Selections और stars and bars से: two to the n subsets, समान-group गुणनफल, और selection with repetition के लिए n plus r minus one choose r, non-negative और positive हल गिनतियों के साथ।"
+            },
+            {
+              "seq": 6,
+              "text": "Grouping और distribution के लिए: n factorial बटा group-आकार factorials का गुणनफल, हर बराबर unlabelled groups के सेट के लिए divide by g factorial, और भिन्न वस्तुओं को भिन्न बक्सों में के लिए k to the n।"
+            },
+            {
+              "seq": 7,
+              "text": "Geometry और divisors के लिए: lines और triangles n choose two और three, diagonals n गुना n minus three बटा two, rectangles दो choices का गुणनफल, और divisors exponents plus one का गुणनफल।"
+            },
+            {
+              "seq": 8,
+              "text": "और advanced tools: sum-of-numbers सूत्र, derangement श्रेणी, और factorial में prime के exponent के लिए Legendre की सीढ़ी।"
+            },
+            {
+              "seq": 9,
+              "text": "यदि यहाँ कोई एक line तुरंत अपनी reasoning वापस न लाए, वही आपका signal है: उस section पर वापस जाइए और derivation दोबारा सीखिए, बस symbol रटिए मत।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 45,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Cheat Sheet",
+      "title": "Rapid-recall revision sheet for Permutations & Combinations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Rapid recall — translate first, then compute"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "style": "red-margin",
+          "text": "AND $\\to$ multiply; OR (mutually exclusive) $\\to$ add."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "text": "Repetition $\\to$ powers ($n^r$); no repetition $\\to$ falling product / ${}^{n}P_r$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "style": "red-margin",
+          "text": "Order matters $\\to$ Permutation. Just a group $\\to$ Combination."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Repeats among objects? Divide them out. Circle loses one: $(n-1)!$; a flip loses half."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Choose = reject: ${}^{n}C_r = {}^{n}C_{n-r}$. Constraints: include / exclude, or Total $-$ complement."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "style": "red-margin",
+          "text": "Identical items into distinct boxes $\\to$ stars & bars ${}^{n+r-1}C_r$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Equal unlabelled groups $\\to$ divide by (number of groups)!. Lower bounds $\\to$ pre-give the minimum."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Shapes = choosing vertices. Divisor = pick an exponent per prime."
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "'At least one' $\\to$ Total $-$ none. 'None correct' $\\to$ derangement $\\to$ inclusion-exclusion."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Last stop: a rapid-recall sheet for the night before the exam. The golden rule sits on top: translate the words first, then compute."
+            },
+            {
+              "seq": 2,
+              "text": "AND combines stages, so multiply; OR joins mutually exclusive alternatives, so add. Get this right and half the chapter falls into place."
+            },
+            {
+              "seq": 3,
+              "text": "If repetition is allowed, think powers, n to the r; if not, think a falling product or n permute r. That fork is decided by the word 'repetition'."
+            },
+            {
+              "seq": 4,
+              "text": "The master discrimination: if order matters it is a permutation, if you only want a group it is a combination. When unsure, ask whether reshuffling makes a new outcome."
+            },
+            {
+              "seq": 5,
+              "text": "Repeated objects in a word? Divide them out. A round arrangement loses one degree, giving n minus one factorial, and a flippable ring loses another half."
+            },
+            {
+              "seq": 6,
+              "text": "Choosing r to keep equals choosing n minus r to reject, so use symmetry to shrink arithmetic. For constraints, either include or exclude specific objects, or take total minus the complement."
+            },
+            {
+              "seq": 7,
+              "text": "See identical items going into distinct boxes, and reach straight for stars and bars, n plus r minus one choose r."
+            },
+            {
+              "seq": 8,
+              "text": "Splitting into equal unlabelled groups, divide by the number of groups factorial; for lower bounds, pre-give every box its minimum, then count the rest."
+            },
+            {
+              "seq": 9,
+              "text": "For the application types, name the selection: shapes are choices of vertices, and a divisor is one exponent chosen per prime."
+            },
+            {
+              "seq": 10,
+              "text": "<whisper>And keep the two rescue moves ready: at least one becomes total minus none, and none correct becomes a derangement, solved by inclusion and exclusion. Go get those marks."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िरी stop: exam से पहली रात के लिए एक rapid-recall sheet। Golden rule सबसे ऊपर: पहले words translate करो, फिर compute।"
+            },
+            {
+              "seq": 2,
+              "text": "AND stages combine करता है, तो multiply; OR mutually exclusive alternatives जोड़ता है, तो add। यह सही कर लो और आधा chapter जगह पर आ जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "अगर repetition allowed है, powers सोचो, n to the r; नहीं तो falling product या n permute r सोचो। यह fork 'repetition' शब्द से तय होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Master discrimination: अगर order matters तो permutation, अगर बस एक group चाहिए तो combination। Unsure हो तो पूछो reshuffle करने से नया outcome बनता है क्या।"
+            },
+            {
+              "seq": 5,
+              "text": "किसी word में repeated objects? उन्हें divide out करो। Round arrangement एक degree खोता है, यानी n minus one factorial, और flip हो सकने वाला ring एक और आधा।"
+            },
+            {
+              "seq": 6,
+              "text": "r रखने के लिए चुनना बराबर n minus r reject करने के लिए चुनना, तो symmetry से arithmetic छोटी करो। Constraints के लिए, या specific objects include या exclude करो, या total minus complement लो।"
+            },
+            {
+              "seq": 7,
+              "text": "Identical items को distinct boxes में जाते देखो, और सीधे stars and bars की तरफ़ जाओ, n plus r minus one choose r।"
+            },
+            {
+              "seq": 8,
+              "text": "Equal unlabelled groups में बाँटते हो, तो groups की संख्या के factorial से divide करो; lower bounds के लिए, हर box को पहले उसका minimum दो, फिर बाकी गिनो।"
+            },
+            {
+              "seq": 9,
+              "text": "Application types के लिए, selection name करो: shapes vertices के choices हैं, और divisor हर prime के लिए एक exponent चुनना है।"
+            },
+            {
+              "seq": 10,
+              "text": "<whisper>और दो rescue moves तैयार रखो: at least one बनता है total minus none, और none correct बनता है derangement, inclusion और exclusion से solve। जाओ वो marks ले आओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िरी stop: परीक्षा से पहली रात के लिए एक rapid-recall sheet। स्वर्णिम नियम सबसे ऊपर: पहले शब्द translate कीजिए, फिर compute।"
+            },
+            {
+              "seq": 2,
+              "text": "AND stages मिलाता है, तो गुणा; OR परस्पर अपवर्जी विकल्प जोड़ता है, तो जोड़। यह सही कर लीजिए और आधा अध्याय जगह पर आ जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "यदि repetition allowed है, powers सोचिए, n to the r; नहीं तो falling product या n permute r सोचिए। यह fork 'repetition' शब्द से तय होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "मुख्य भेद: यदि order matters तो permutation, यदि बस एक group चाहिए तो combination। Unsure हों तो पूछिए reshuffle करने से नया परिणाम बनता है क्या।"
+            },
+            {
+              "seq": 5,
+              "text": "किसी शब्द में दोहराई वस्तुएँ? उन्हें divide out कीजिए। गोल arrangement एक degree खोता है, यानी n minus one factorial, और पलटाया जा सकने वाला ring एक और आधा।"
+            },
+            {
+              "seq": 6,
+              "text": "r रखने के लिए चुनना बराबर n minus r अस्वीकार करने के लिए चुनना, तो symmetry से गणित छोटी कीजिए। Constraints के लिए, या तो specific objects include या exclude कीजिए, या total minus complement लीजिए।"
+            },
+            {
+              "seq": 7,
+              "text": "Identical items को distinct boxes में जाते देखिए, और सीधे stars and bars की ओर जाइए, n plus r minus one choose r।"
+            },
+            {
+              "seq": 8,
+              "text": "बराबर unlabelled groups में बाँटते हैं, तो groups की संख्या के factorial से भाग दीजिए; lower bounds के लिए, हर box को पहले उसका minimum दीजिए, फिर बाकी गिनिए।"
+            },
+            {
+              "seq": 9,
+              "text": "Application types के लिए, selection name कीजिए: shapes vertices के choices हैं, और divisor हर prime के लिए एक exponent चुनना है।"
+            },
+            {
+              "seq": 10,
+              "text": "<whisper>और दो rescue moves तैयार रखिए: at least one बनता है total minus none, और none correct बनता है derangement, inclusion और exclusion से हल। जाइए वे marks ले आइए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

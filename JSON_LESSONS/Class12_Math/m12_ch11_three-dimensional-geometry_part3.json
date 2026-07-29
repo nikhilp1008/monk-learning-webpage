@@ -1,0 +1,2738 @@
+{
+  "chapter": "Three Dimensional Geometry",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 11,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "The Perpendicular Toolkit — Distances, Feet & Images",
+      "title": "One drawing, three answers: foot, distance, image",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Almost every nearest, foot, or image question is one act"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Three things appear at once: the foot F, the distance PF, and the image P'."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "These are three readings of one drawing, not three separate topics."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "P'=2F-P"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Which of the three a question asks for is almost cosmetic — the work is identical."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Only the way you find the foot differs between the line case and the plane case.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "If P already lies on the line or plane, all three answers degenerate automatically."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Here is a reassuring secret about this whole subtopic</curious> — almost every shortest, nearest, foot, or image question is the same physical act: stand at a point off to one side, and drop a perpendicular onto a line or a plane."
+            },
+            {
+              "seq": 2,
+              "text": "Three things appear the instant you do it. The foot F, where the perpendicular lands; the distance, the length P F of that perpendicular; and the image P dash, the mirror reflection of P."
+            },
+            {
+              "seq": 3,
+              "text": "These are not three separate topics; they are three readings of one drawing. Find the foot and you immediately get the distance, which is the size of P F, and the image."
+            },
+            {
+              "seq": 4,
+              "text": "The image formula is beautifully simple. Because the foot F is the midpoint of P and its reflection, the image is twice the foot minus the point."
+            },
+            {
+              "seq": 5,
+              "text": "So which of the three a question asks for is almost cosmetic. A dozen differently worded problems collapse to one routine, so your practice compounds very quickly."
+            },
+            {
+              "seq": 6,
+              "text": "And the only thing that differs between the line case and the plane case is how you locate the foot. Everything downstream of the foot — distance and image — is identical."
+            },
+            {
+              "seq": 7,
+              "text": "One clean boundary case: if the point already lies on the line or plane, the distance is zero, the foot is the point itself, and the image coincides with it. Every formula returns these degenerate answers automatically, so no special casing is needed."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>इस पूरे subtopic का एक राहत देने वाला राज़ यहाँ है</curious> — लगभग हर shortest, nearest, foot, या image सवाल एक ही physical act है: एक तरफ किसी point पर खड़े होकर, किसी line या plane पर एक perpendicular गिराना।"
+            },
+            {
+              "seq": 2,
+              "text": "जैसे ही आप ये करते हैं, तीन चीज़ें दिखती हैं। foot F, जहाँ perpendicular land करता है; distance, उस perpendicular की length P F; और image P dash, P का mirror reflection।"
+            },
+            {
+              "seq": 3,
+              "text": "ये तीन अलग topics नहीं हैं; ये एक ही drawing के तीन readings हैं। foot ढूँढिए और आपको तुरंत distance मिल जाती है, जो P F का size है, और image।"
+            },
+            {
+              "seq": 4,
+              "text": "Image formula बेहद simple है। चूँकि foot F, P और उसके reflection का midpoint है, image है twice the foot minus the point।"
+            },
+            {
+              "seq": 5,
+              "text": "तो सवाल तीनों में से जो माँगे वो लगभग cosmetic है। एक दर्जन अलग-अलग शब्दों वाली problems एक ही routine में घट जाती हैं, तो आपकी practice बहुत तेज़ी से compound होती है।"
+            },
+            {
+              "seq": 6,
+              "text": "और line case और plane case के बीच सिर्फ एक चीज़ का फर्क है — आप foot कैसे ढूँढते हैं। foot के बाद सब कुछ — distance और image — एक जैसा है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक साफ़ boundary case: अगर point पहले से line या plane पर हो, distance zero है, foot खुद point है, और image उसी से coincide करता है। हर formula ये degenerate answers अपने आप लौटाता है, तो कोई special casing की ज़रूरत नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "The Perpendicular Toolkit — Distances, Feet & Images",
+      "title": "Dropping onto a line: dot for the foot, cross for the gap",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Split the arrow into along-the-line and across-the-line"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 300\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"q1\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#8e44ad\"/></marker></defs>\n<line x1=\"40\" y1=\"220\" x2=\"400\" y2=\"120\" stroke=\"#333\" stroke-width=\"2\"/>\n<text x=\"405\" y=\"120\" font-size=\"12\" font-family=\"system-ui, sans-serif\">line: a + lambda b</text>\n<circle cx=\"120\" cy=\"198\" r=\"4.5\" fill=\"#333\"/><text x=\"98\" y=\"216\" font-size=\"12\" font-family=\"system-ui, sans-serif\">A</text>\n<circle cx=\"255\" cy=\"160\" r=\"4.5\" fill=\"#27ae60\"/><text x=\"262\" y=\"176\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#27ae60\">F (foot)</text>\n<circle cx=\"215\" cy=\"60\" r=\"4.5\" fill=\"#c0392b\"/><text x=\"222\" y=\"56\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">P</text>\n<circle cx=\"295\" cy=\"260\" r=\"4.5\" fill=\"#c0392b\"/><text x=\"302\" y=\"264\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">image P'</text>\n<line x1=\"120\" y1=\"198\" x2=\"215\" y2=\"60\" stroke=\"#8e44ad\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\" marker-end=\"url(#q1)\"/>\n<text x=\"118\" y=\"120\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#8e44ad\">AP</text>\n<line x1=\"215\" y1=\"60\" x2=\"295\" y2=\"260\" stroke=\"#c0392b\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"215\" y1=\"60\" x2=\"255\" y2=\"160\" stroke=\"#c0392b\" stroke-width=\"2\"/>\n<rect x=\"248\" y=\"152\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"#27ae60\" stroke-width=\"1\"/>\n<text x=\"188\" y=\"118\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">distance PF</text>\n<text x=\"60\" y=\"288\" font-size=\"11\" font-family=\"system-ui, sans-serif\">F is the midpoint of P and its image</text>\n</svg>",
+          "caption": "AP splits into an along-b part (to the foot) and a perpendicular part (the distance)"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The dot product gives the shadow along the line — that lands you at the foot."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\lambda_0=\\dfrac{\\vec{AP}\\cdot\\vec b}{|\\vec b|^{2}},\\qquad F=\\vec a+\\lambda_0\\vec b"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "The cross product grabs the perpendicular height above the line."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "PF=\\dfrac{|\\vec{AP}\\times\\vec b|}{|\\vec b|}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Dot for the foot, cross for the gap — two legs of one right triangle.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Take a line, r equals a plus lambda b. From the known point a on the line, draw the arrow A P to your external point. Now split that arrow into two parts."
+            },
+            {
+              "seq": 2,
+              "text": "Here is the decomposition. One part runs along the line, the other sticks straight out perpendicular to it. The along part carries you to the foot; the out part is the distance."
+            },
+            {
+              "seq": 3,
+              "text": "The dot product hands you the shadow along the line. The along piece has length equal to the projection of A P onto the direction, so sliding that far from a lands you exactly at the foot."
+            },
+            {
+              "seq": 4,
+              "text": "So the foot parameter lambda nought is A P dot b over the size of b squared, and the foot is a plus lambda nought times b."
+            },
+            {
+              "seq": 5,
+              "text": "The cross product hands you the height above the line. The cross of A P with b already strips out the along component and keeps only the perpendicular part, scaled by the size of b."
+            },
+            {
+              "seq": 6,
+              "text": "So the perpendicular distance is the size of A P cross b, divided by the size of b — we divide by b just once, because the cross product already carries one factor of it."
+            },
+            {
+              "seq": 7,
+              "text": "So the dot and the cross are not two unrelated formulas. They are the two legs of one right angled decomposition of the arrow A P: the dot product for the foot, the cross product for the gap."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक line लीजिए, r equals a plus lambda b। line पर known point a से, अपने external point तक arrow A P खींचिए। अब उस arrow को दो हिस्सों में बाँटिए।"
+            },
+            {
+              "seq": 2,
+              "text": "यहाँ decomposition है। एक हिस्सा line के साथ चलता है, दूसरा सीधे बाहर perpendicular निकलता है। along वाला हिस्सा आपको foot तक ले जाता है; out वाला हिस्सा distance है।"
+            },
+            {
+              "seq": 3,
+              "text": "Dot product आपको line के साथ shadow देता है। along piece की length A P का direction पर projection के बराबर होती है, तो a से उतना slide करना आपको ठीक foot पर ले जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो foot parameter lambda nought है A P dot b over b के size का square, और foot है a plus lambda nought times b।"
+            },
+            {
+              "seq": 5,
+              "text": "Cross product आपको line के ऊपर की height देता है। A P का b के साथ cross पहले ही along component हटा देता है और सिर्फ perpendicular हिस्सा रखता है, b के size से scaled।"
+            },
+            {
+              "seq": 6,
+              "text": "तो perpendicular distance है A P cross b का size, b के size से divide — हम b से सिर्फ एक बार divide करते हैं, क्योंकि cross product पहले ही उसका एक factor रखता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो dot और cross दो असंबंधित formulas नहीं हैं। वो arrow A P के एक right angled decomposition की दो legs हैं: foot के लिए dot product, gap के लिए cross product।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "The Perpendicular Toolkit — Distances, Feet & Images",
+      "title": "Dropping onto a plane: just count normals",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The normal is the ready-made perpendicular"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 300\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"w1\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#c0392b\"/></marker></defs>\n<polygon points=\"60,175 300,175 380,130 140,130\" fill=\"#eef4fb\" stroke=\"#5b7ea6\" stroke-width=\"1.4\"/>\n<circle cx=\"210\" cy=\"152\" r=\"4.5\" fill=\"#27ae60\"/><text x=\"216\" y=\"168\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#27ae60\">F (foot)</text>\n<circle cx=\"210\" cy=\"55\" r=\"4.5\" fill=\"#c0392b\"/><text x=\"216\" y=\"52\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">P</text>\n<circle cx=\"210\" cy=\"249\" r=\"4.5\" fill=\"#c0392b\"/><text x=\"216\" y=\"253\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">image P'</text>\n<line x1=\"210\" y1=\"55\" x2=\"210\" y2=\"249\" stroke=\"#c0392b\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"210\" y1=\"152\" x2=\"210\" y2=\"60\" stroke=\"#c0392b\" stroke-width=\"2.2\" marker-end=\"url(#w1)\"/>\n<text x=\"216\" y=\"105\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">along normal n</text>\n<rect x=\"200\" y=\"152\" width=\"10\" height=\"-10\" fill=\"none\" stroke=\"#27ae60\" stroke-width=\"1\"/>\n<text x=\"240\" y=\"120\" font-size=\"11\" font-family=\"system-ui, sans-serif\">step t to F, 2t to P'</text>\n<text x=\"70\" y=\"285\" font-size=\"11\" font-family=\"system-ui, sans-serif\">the normal is the ready-made perpendicular direction</text>\n</svg>",
+          "caption": "Step t normals to the foot, 2t to the image"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "t=\\dfrac{ax_1+by_1+cz_1+d}{a^{2}+b^{2}+c^{2}}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "F=P-t\\vec n,\\qquad P'=P-2t\\vec n"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "The distance is $|t|$ times the length of the normal."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Images power a reflection principle: reflect one endpoint to straighten a bent path."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "For a plane you never resolve anything — the plane case is genuinely easier than the line case.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A plane is even friendlier than a line, because the perpendicular direction is handed to you for free — it is the plane's normal. So from the point, you simply step along the normal until you hit the plane."
+            },
+            {
+              "seq": 2,
+              "text": "Here is the picture. There is nothing to decompose and no angle to chase — the whole job is how many normals away is the plane. That count is a single number we call t."
+            },
+            {
+              "seq": 3,
+              "text": "How far to step is fixed by forcing the landing point to satisfy the plane equation, which gives t equal to the plane expression at the point, over the size of the normal squared."
+            },
+            {
+              "seq": 4,
+              "text": "Step t along the normal to reach the foot, and twice as far, two t, to reach the image. Note the minus sign — the correcting step moves the point toward the plane."
+            },
+            {
+              "seq": 5,
+              "text": "And the distance is simply the size of t times the length of the normal, which reduces to the familiar plane expression over the length of the normal."
+            },
+            {
+              "seq": 6,
+              "text": "Images are worth more than they first appear. By a classic reflection principle, the shortest path from A to B that must first touch a surface is found by reflecting one point across it: the straight segment to the image gives the shortest total path."
+            },
+            {
+              "seq": 7,
+              "text": "Recognising this asymmetry up front stops students from over engineering. For a plane you never resolve anything and never chase an angle — you just count normals. The plane case is genuinely easier than the line case."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक plane, line से भी friendly है, क्योंकि perpendicular direction आपको free में मिल जाती है — वो plane का normal है। तो point से, आप बस normal के साथ step करते हैं जब तक plane न टकराए।"
+            },
+            {
+              "seq": 2,
+              "text": "यहाँ picture है। यहाँ decompose करने को कुछ नहीं और कोई angle पीछा करने को नहीं — पूरा काम है plane कितने normals दूर है। वो count एक single number है जिसे हम t कहते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "कितना step करना है ये landing point को plane equation satisfy करवाकर तय होता है, जो t को देता है point पर plane expression, normal के size के square पर।"
+            },
+            {
+              "seq": 4,
+              "text": "Foot तक पहुँचने के लिए normal के साथ t step कीजिए, और image तक पहुँचने के लिए दोगुना, two t। minus sign ध्यान दीजिए — correcting step point को plane की तरफ ले जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "और distance बस t का size times normal की length है, जो जाने-पहचाने plane expression over normal की length में घट जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Images पहली नज़र से ज़्यादा कीमती हैं। एक classic reflection principle से, A से B तक का shortest path जिसे पहले किसी surface को छूना हो, एक point को उस surface के पार reflect करके मिलता है: image तक का straight segment shortest total path देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "इस asymmetry को पहले पहचानना students को over engineering से रोकता है। plane के लिए आप कभी कुछ resolve नहीं करते और कोई angle पीछा नहीं करते — आप बस normals गिनते हैं। plane case सचमुच line case से आसान है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "The Perpendicular Toolkit — Distances, Feet & Images",
+      "title": "The perpendicular toolkit: formulas for line and plane",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two constructions, one board"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\text{Line: }\\ \\lambda_0=\\dfrac{\\vec{AP}\\cdot\\vec b}{|\\vec b|^{2}},\\quad F=\\vec a+\\lambda_0\\vec b"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{Line distance }PF=\\dfrac{|\\vec{AP}\\times\\vec b|}{|\\vec b|},\\qquad P'=2F-P"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\text{Plane: }\\ t=\\dfrac{ax_1+by_1+cz_1+d}{a^{2}+b^{2}+c^{2}}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "F=P-t\\vec n,\\quad P'=P-2t\\vec n,\\quad PF=\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^{2}+b^{2}+c^{2}}}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "$t$ divides by $|\\vec n|^2$; the distance divides by $|\\vec n|$ — never interchange them.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Anchor everything on the foot; the image is always $2F-P$ in both cases."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Rather than memorising eight separate things, anchor on two questions for each case: where does the perpendicular land, and how long is it. The image is then always twice the foot minus the point."
+            },
+            {
+              "seq": 2,
+              "text": "For a line, the foot parameter lambda nought is the projection of A P on b over the size of b squared, and the foot is a plus lambda nought b."
+            },
+            {
+              "seq": 3,
+              "text": "The line distance is the cross product magnitude over the size of b, and the image is twice the foot minus the point."
+            },
+            {
+              "seq": 4,
+              "text": "For a plane, the single number t is the plane expression at the point over the size of the normal squared."
+            },
+            {
+              "seq": 5,
+              "text": "The foot is the point minus t times the normal, the image minus two t times the normal, and the distance is the plane expression over the length of the normal."
+            },
+            {
+              "seq": 6,
+              "text": "Keep one difference sharp: t divides by the size of the normal squared, because it scales the vector to reach the plane, while the distance divides by the size of the normal, because it converts that step into a pure length."
+            },
+            {
+              "seq": 7,
+              "text": "So anchor everything on the foot. Once you have it, the distance is the length from the point to the foot, and the image is twice the foot minus the point — that last identity is the same for a line and a plane."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आठ अलग चीज़ें याद करने के बजाय, हर case के लिए दो सवालों पर टिकिए: perpendicular कहाँ land करता है, और वो कितना लंबा है। image तब हमेशा twice the foot minus the point होता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Line के लिए, foot parameter lambda nought है A P का b पर projection, b के size के square पर, और foot है a plus lambda nought b।"
+            },
+            {
+              "seq": 3,
+              "text": "Line distance है cross product magnitude over b का size, और image है twice the foot minus the point।"
+            },
+            {
+              "seq": 4,
+              "text": "Plane के लिए, single number t है point पर plane expression, normal के size के square पर।"
+            },
+            {
+              "seq": 5,
+              "text": "Foot है point minus t times normal, image minus two t times normal, और distance है plane expression over normal की length।"
+            },
+            {
+              "seq": 6,
+              "text": "एक फर्क तेज़ रखिए: t normal के size के square से divide होता है, क्योंकि ये vector को plane तक पहुँचाने के लिए scale करता है, जबकि distance normal के size से divide होती है, क्योंकि वो उस step को pure length में बदलती है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो सब कुछ foot पर टिकाइए। जैसे ही वो मिल जाए, distance point से foot तक की length है, और image है twice the foot minus the point — वो आखिरी identity line और plane दोनों के लिए एक ही है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "The Perpendicular Toolkit — Distances, Feet & Images",
+      "title": "Worked example: foot, distance, and image on a line",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "$P(2,4,1)$ onto the line $\\vec r=(\\hat i+2\\hat j+3\\hat k)+\\lambda(\\hat i-\\hat j+\\hat k)$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec a=(1,2,3),\\ \\vec b=(1,-1,1),\\ |\\vec b|^{2}=3,\\ \\vec{AP}=(1,2,-2)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\lambda_0=\\dfrac{1-2-2}{3}=-1\\ \\Rightarrow\\ F=\\vec a-\\vec b=(0,3,2)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\vec{AP}\\times\\vec b=(0,-3,-3),\\ \\ PF=\\dfrac{\\sqrt{18}}{\\sqrt3}=\\sqrt6"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "P'=2F-P=(-2,2,3)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Check $\\vec{PF}\\cdot\\vec b=-2+1+1=0$ ✓ — genuinely perpendicular.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Compute $\\lambda_0$ first; distance and image then fall out trivially."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A board level problem asking for all three at once. Drop the point two, four, one onto the given line, and find the foot, the distance and the image."
+            },
+            {
+              "seq": 2,
+              "text": "Read off a as one, two, three and b as one, minus one, one, so the size of b squared is three. The vector A P, point minus a, is one, two, minus two."
+            },
+            {
+              "seq": 3,
+              "text": "The foot parameter is A P dot b over three, that is one minus two minus two over three, which is minus one. So the foot is a minus b, the point zero, three, two."
+            },
+            {
+              "seq": 4,
+              "text": "For the distance, A P cross b is zero, minus three, minus three, with magnitude root eighteen. Dividing by root three gives the distance, root six."
+            },
+            {
+              "seq": 5,
+              "text": "And the image is twice the foot minus the point: minus two, two, three."
+            },
+            {
+              "seq": 6,
+              "text": "Always run the perpendicularity check. The vector P F is minus two, minus one, one, and its dot with b is minus two plus one plus one, which is zero. Genuinely perpendicular — this one line catches almost every slip in lambda nought."
+            },
+            {
+              "seq": 7,
+              "text": "The template for all such problems: compute lambda nought first. It turns the abstract somewhere on the line into the concrete foot, after which the distance and the image are trivial."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक board level problem जो तीनों एक साथ माँगता है। point two, four, one को दी गई line पर गिराइए, और foot, distance और image निकालिए।"
+            },
+            {
+              "seq": 2,
+              "text": "a को one, two, three और b को one, minus one, one पढ़िए, तो b के size का square तीन है। vector A P, point minus a, है one, two, minus two।"
+            },
+            {
+              "seq": 3,
+              "text": "Foot parameter है A P dot b over तीन, यानी one minus two minus two over तीन, जो minus one है। तो foot है a minus b, point zero, three, two।"
+            },
+            {
+              "seq": 4,
+              "text": "Distance के लिए, A P cross b है zero, minus three, minus three, magnitude root अठारह के साथ। root तीन से divide करने पर distance root six मिलती है।"
+            },
+            {
+              "seq": 5,
+              "text": "और image है twice the foot minus the point: minus two, two, three।"
+            },
+            {
+              "seq": 6,
+              "text": "हमेशा perpendicularity check कीजिए। vector P F है minus two, minus one, one, और उसका b के साथ dot है minus two plus one plus one, जो zero है। सचमुच perpendicular — ये एक line lambda nought की लगभग हर गलती पकड़ लेती है।"
+            },
+            {
+              "seq": 7,
+              "text": "ऐसी सभी problems का template: पहले lambda nought निकालिए। ये abstract कहीं line पर को concrete foot में बदल देता है, जिसके बाद distance और image trivial हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "The Perpendicular Toolkit — Distances, Feet & Images",
+      "title": "Worked example: point-to-line distance and its denominator",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Distance of $(1,0,2)$ from the line through $(3,1,1)$, direction $(2,2,1)$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec{AP}=(-2,-1,1),\\qquad \\vec b=(2,2,1)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\vec{AP}\\times\\vec b=(-3,4,-2)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "|\\vec{AP}\\times\\vec b|=\\sqrt{9+16+4}=\\sqrt{29},\\qquad |\\vec b|=3"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\text{Distance}=\\dfrac{\\sqrt{29}}{3}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "The denominator is $|\\vec b|=3$, never $|\\vec b|^2=9$ and never absent.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Dimensionally, cancel exactly one power of $|\\vec b|$ — one division, never two."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A speed trap that hinges entirely on the denominator. Find the distance of the point one, zero, two from the line through three, one, one with direction two, two, one."
+            },
+            {
+              "seq": 2,
+              "text": "The vector A P, point minus the line's point, is minus two, minus one, one, and the direction b is two, two, one."
+            },
+            {
+              "seq": 3,
+              "text": "The cross product A P with b comes out minus three, four, minus two."
+            },
+            {
+              "seq": 4,
+              "text": "Its magnitude is root nine plus sixteen plus four, which is root twenty nine, and the size of b is three."
+            },
+            {
+              "seq": 5,
+              "text": "So the distance is root twenty nine over three."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Here is the trap</whisper> — the denominator is the size of b, three, not b squared, nine, and certainly not missing. The cross product already contains one factor of the size of b, so you divide by exactly one more."
+            },
+            {
+              "seq": 7,
+              "text": "A reliable way to never misremember: dimensionally, the cross product behaves like length times the size of b, so to recover a pure length you cancel exactly one power of the size of b. One division, never two."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक speed trap जो पूरी तरह denominator पर टिका है। point one, zero, two की उस line से distance निकालिए जो three, one, one से गुज़रती है, direction two, two, one के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "Vector A P, point minus line का point, है minus two, minus one, one, और direction b है two, two, one।"
+            },
+            {
+              "seq": 3,
+              "text": "Cross product A P का b के साथ minus three, four, minus two आता है।"
+            },
+            {
+              "seq": 4,
+              "text": "इसका magnitude है root नौ plus सोलह plus चार, यानी root उनतीस, और b का size तीन है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो distance है root उनतीस over तीन।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>यहाँ trap है</whisper> — denominator है b का size, तीन, b का square नौ नहीं, और बिल्कुल गायब नहीं। cross product पहले ही b के size का एक factor रखता है, तो आप बस एक और से divide करते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "कभी न भूलने का reliable तरीका: dimensionally, cross product length times b के size जैसा behave करता है, तो pure length पाने के लिए आप b के size की ठीक एक power cancel करते हैं। एक division, कभी दो नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "The Perpendicular Toolkit — Distances, Feet & Images",
+      "title": "Worked example: foot, distance, and image in a plane",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "$P(4,1,3)$ in the plane $x-2y+2z-5=0$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec n=(1,-2,2),\\qquad |\\vec n|^{2}=9"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "t=\\dfrac{4-2+6-5}{9}=\\dfrac{3}{9}=\\dfrac{1}{3}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "F=P-t\\vec n=\\left(\\tfrac{11}{3},\\tfrac{5}{3},\\tfrac{7}{3}\\right)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "PF=|t|\\,|\\vec n|=\\tfrac{1}{3}\\cdot 3=1\\ \\text{unit}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "P'=P-2t\\vec n=\\left(\\tfrac{10}{3},\\tfrac{7}{3},\\tfrac{5}{3}\\right)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "$t=\\tfrac13>0$ means P is on the positive side; the step $-t\\vec n$ moves it toward the plane.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A multi concept problem, three answers from one number. Find the foot, distance and image of the point four, one, three in the plane x minus two y plus two z minus five equals zero."
+            },
+            {
+              "seq": 2,
+              "text": "The normal is one, minus two, two, so the size of the normal squared is nine."
+            },
+            {
+              "seq": 3,
+              "text": "Compute t: the plane expression at the point is four minus two plus six minus five, which is three, over nine — so t is one third."
+            },
+            {
+              "seq": 4,
+              "text": "The foot is the point minus one third times the normal, which is eleven thirds, five thirds, seven thirds."
+            },
+            {
+              "seq": 5,
+              "text": "The distance is the size of t times the length of the normal, one third times three, which is one unit."
+            },
+            {
+              "seq": 6,
+              "text": "And the image is the point minus two thirds times the normal, which is ten thirds, seven thirds, five thirds. Three answers, all from the single number t."
+            },
+            {
+              "seq": 7,
+              "text": "A neat sign check: t is positive, so the point sits on the positive side of the plane, where the expression is bigger than zero. The correcting step, minus t times the normal, therefore moves the point toward the plane — exactly as it must."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक multi concept problem, एक number से तीन answers। point four, one, three का plane x minus two y plus two z minus five equals zero में foot, distance और image निकालिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Normal है one, minus two, two, तो normal के size का square नौ है।"
+            },
+            {
+              "seq": 3,
+              "text": "t निकालिए: point पर plane expression है four minus two plus six minus five, यानी तीन, over नौ — तो t है one third।"
+            },
+            {
+              "seq": 4,
+              "text": "Foot है point minus one third times normal, यानी eleven thirds, five thirds, seven thirds।"
+            },
+            {
+              "seq": 5,
+              "text": "Distance है t का size times normal की length, one third times तीन, यानी एक unit।"
+            },
+            {
+              "seq": 6,
+              "text": "और image है point minus two thirds times normal, यानी ten thirds, seven thirds, five thirds। तीन answers, सब single number t से।"
+            },
+            {
+              "seq": 7,
+              "text": "एक साफ़ sign check: t positive है, तो point plane के positive side पर बैठा है, जहाँ expression zero से बड़ा है। correcting step, minus t times normal, इसलिए point को plane की तरफ ले जाता है — ठीक जैसा होना चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "The Perpendicular Toolkit — Distances, Feet & Images",
+      "title": "Worked example: image of a point in a line",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Image of $P(1,6,3)$ in $\\vec r=(\\hat j+2\\hat k)+\\lambda(\\hat i+2\\hat j+3\\hat k)$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec a=(0,1,2),\\ \\vec b=(1,2,3),\\ |\\vec b|^{2}=14,\\ \\vec{AP}=(1,5,1)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\lambda_0=\\dfrac{1+10+3}{14}=\\dfrac{14}{14}=1"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "F=\\vec a+\\vec b=(1,3,5)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "P'=2F-P=(1,0,7)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Check: midpoint of $P(1,6,3)$ and $P'(1,0,7)$ is $(1,3,5)=F$ ✓.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "With heavier numbers the method is identical — only the arithmetic changes."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "An advanced problem, but the routine is unchanged. Find the image of the point one, six, three in the given line."
+            },
+            {
+              "seq": 2,
+              "text": "Read a as zero, one, two and b as one, two, three, so the size of b squared is fourteen. The vector A P is one, five, one."
+            },
+            {
+              "seq": 3,
+              "text": "The foot parameter is A P dot b over fourteen, that is one plus ten plus three over fourteen, which is fourteen over fourteen, equal to one."
+            },
+            {
+              "seq": 4,
+              "text": "So the foot is a plus b, the point one, three, five."
+            },
+            {
+              "seq": 5,
+              "text": "And the image is twice the foot minus the point: one, zero, seven."
+            },
+            {
+              "seq": 6,
+              "text": "Verify two ways. The vector P F dotted with b is zero, confirming perpendicularity, and the midpoint of P and P dash is one, three, five, which is exactly the foot. The clean integer lambda nought equal to one is the hallmark of a well posed reflection problem."
+            },
+            {
+              "seq": 7,
+              "text": "That invariance is the point of practising on clean numbers first. When lambda nought is a messy fraction instead of one, the procedure does not change one bit — only the arithmetic does."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक advanced problem, पर routine वही है। दी गई line में point one, six, three का image निकालिए।"
+            },
+            {
+              "seq": 2,
+              "text": "a को zero, one, two और b को one, two, three पढ़िए, तो b के size का square चौदह है। vector A P है one, five, one।"
+            },
+            {
+              "seq": 3,
+              "text": "Foot parameter है A P dot b over चौदह, यानी one plus ten plus three over चौदह, जो fourteen over fourteen है, बराबर one।"
+            },
+            {
+              "seq": 4,
+              "text": "तो foot है a plus b, point one, three, five।"
+            },
+            {
+              "seq": 5,
+              "text": "और image है twice the foot minus the point: one, zero, seven।"
+            },
+            {
+              "seq": 6,
+              "text": "दो तरह से verify कीजिए। vector P F का b के साथ dot zero है, perpendicularity confirm करते हुए, और P और P dash का midpoint है one, three, five, जो ठीक foot है। साफ़ integer lambda nought बराबर one एक well posed reflection problem की पहचान है।"
+            },
+            {
+              "seq": 7,
+              "text": "वही invariance पहले साफ़ numbers पर practice करने की वजह है। जब lambda nought one के बजाय एक messy fraction हो, procedure ज़रा भी नहीं बदलता — सिर्फ arithmetic बदलती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "tips",
+      "subtopic": "The Perpendicular Toolkit — Distances, Feet & Images",
+      "title": "The perpendicular toolkit: pitfalls and pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The slips that cost foot-and-image marks"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "Point-line distance divides by $|\\vec b|$ exactly once, never $|\\vec b|^2$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The image is $2F-P$, not the foot $F$ itself."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "$t$ divides by $|\\vec n|^2$; the distance divides by $|\\vec n|$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Use $F=P-t\\vec n$ with a minus, and $-t\\vec n$ is a vector step, not added to each coordinate."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "One foot, three answers — and always run $\\vec{PF}\\cdot\\vec b=0$ on the line case.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Reflections straighten a bent path: reflect one endpoint, then join by a straight segment."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lock in the traps around feet, distances and images before we move to the final subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "First, the point line distance divides by the size of b exactly once. The cross product already carries one factor of it, so dividing by the size of b squared is the classic over division."
+            },
+            {
+              "seq": 3,
+              "text": "Second, do not report the foot as the image. The image is twice the foot minus the point; the foot is only the midpoint of the point and its image. Memorise it as twice the foot minus the point."
+            },
+            {
+              "seq": 4,
+              "text": "Third, do not confuse t with the distance. The parameter t divides by the size of the normal squared, while the distance divides by the size of the normal. They differ by exactly one factor of the normal's length."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, step the normal the right way — the foot is the point minus t times the normal, with a minus. And that step is a vector scaled by t, not t added to each coordinate separately."
+            },
+            {
+              "seq": 6,
+              "text": "The headline pro tip: never solve a distance, foot and image set separately. Find the foot first; the distance is the size of P F and the image is twice the foot minus the point. And on the line case, always run the one line perpendicularity check — it exposes a wrong foot instantly."
+            },
+            {
+              "seq": 7,
+              "text": "And a powerful pro tip: if a problem asks for the minimum total distance of a path that must touch a surface, reflect one endpoint across it and join to the other with a straight segment. The segment's length is the answer, and its crossing point is the optimal contact."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए आखिरी subtopic पर जाने से पहले feet, distances और images के आसपास के traps पक्का करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, point line distance b के size से ठीक एक बार divide होती है। cross product पहले ही उसका एक factor रखता है, तो b के size के square से divide करना classic over division है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, foot को image मत बताइए। image है twice the foot minus the point; foot सिर्फ point और उसके image का midpoint है। इसे twice the foot minus the point के रूप में याद कीजिए।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, t को distance के साथ मत confuse कीजिए। parameter t normal के size के square से divide होता है, जबकि distance normal के size से। वो ठीक normal की length के एक factor से अलग हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, normal को सही तरफ step कीजिए — foot है point minus t times normal, minus के साथ। और वो step t से scaled एक vector है, हर coordinate में अलग से t जोड़ा हुआ नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "मुख्य pro tip: distance, foot और image वाले set को अलग-अलग कभी मत solve कीजिए। पहले foot ढूँढिए; distance है P F का size और image twice the foot minus the point। और line case पर, हमेशा one line perpendicularity check चलाइए — ये गलत foot तुरंत पकड़ लेती है।"
+            },
+            {
+              "seq": 7,
+              "text": "और एक powerful pro tip: अगर कोई problem किसी path की minimum total distance माँगे जिसे surface छूना हो, एक endpoint को उसके पार reflect कीजिए और दूसरे से straight segment से जोड़िए। segment की length answer है, और उसका crossing point optimal contact।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Line–Plane & Plane–Plane Configurations",
+      "title": "A line and a plane: one dot product classifies everything",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Cross, lie in, or run parallel — the three possibilities"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The line can pierce the plane, lie flat inside it, or run parallel and never touch."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\vec b\\cdot\\vec n\\neq 0\\ \\Rightarrow\\ \\text{the line crosses at one point}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "If $\\vec b\\cdot\\vec n=0$ the line is parallel to the surface — but that is not enough."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "text": "$\\vec b\\cdot\\vec n=0$ is necessary but never sufficient for a line to lie in a plane.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Pick any point of the line: on the plane means contained; off means strictly parallel."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "For a crossing line, substitute the parametric point and solve for $\\lambda$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "By now you can describe lines and planes separately. The real exam questions ask how they fit together, and a line and a plane can do exactly three things."
+            },
+            {
+              "seq": 2,
+              "text": "The line can pierce the plane at a single point — the generic case; it can lie flat inside the plane, every point on it; or it can run parallel and never touch. Recognising which one you face is half the battle."
+            },
+            {
+              "seq": 3,
+              "text": "The deciding quantity is the dot product of the line's direction with the plane's normal. If it is non zero, the line is not perpendicular to the normal, so it must cross — one clean intersection point."
+            },
+            {
+              "seq": 4,
+              "text": "If the dot product is zero, the line is perpendicular to the normal, hence parallel to the surface. But now a second test decides between lies in and merely parallel."
+            },
+            {
+              "seq": 5,
+              "text": "This is the crucial point. The dot product being zero is necessary but never sufficient for a line to lie in a plane. A railway track running alongside a wall is parallel to it, yet clearly not painted on the wall. You must test a point."
+            },
+            {
+              "seq": 6,
+              "text": "So pick any point of the line and check whether it satisfies the plane. On the plane means the whole line lies in it; off the plane means strictly parallel. One condition fixes orientation, the other fixes position."
+            },
+            {
+              "seq": 7,
+              "text": "And when the line does cross, finding the point is mechanical: write the moving parametric point, substitute it into the plane equation, and solve the single linear equation for lambda."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब तक आप lines और planes को अलग-अलग बता सकते हैं। असली exam सवाल पूछते हैं कि वो साथ कैसे बैठते हैं, और एक line और एक plane ठीक तीन चीज़ें कर सकते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Line plane को एक point पर छेद सकती है — generic case; वो plane के अंदर flat पड़ी हो सकती है, उसका हर point; या वो parallel चलकर कभी न छुए। आप किससे सामना कर रहे हैं ये पहचानना आधी लड़ाई है।"
+            },
+            {
+              "seq": 3,
+              "text": "तय करने वाली quantity है line की direction का plane के normal के साथ dot product। अगर ये non zero है, line normal के perpendicular नहीं है, तो उसे cross करना ही पड़ता है — एक साफ़ intersection point।"
+            },
+            {
+              "seq": 4,
+              "text": "अगर dot product zero है, line normal के perpendicular है, इसलिए surface के parallel। पर अब एक दूसरा test तय करता है lies in और सिर्फ parallel के बीच।"
+            },
+            {
+              "seq": 5,
+              "text": "ये crucial point है। dot product का zero होना ज़रूरी है पर line के plane में होने के लिए कभी काफ़ी नहीं। दीवार के साथ-साथ चलती railway track उसके parallel है, फिर भी दीवार पर पुती नहीं। आपको एक point test करना पड़ता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो line का कोई भी point लीजिए और देखिए वो plane satisfy करता है या नहीं। plane पर होने का मतलब पूरी line उसमें है; plane से बाहर का मतलब strictly parallel। एक condition orientation तय करती है, दूसरी position।"
+            },
+            {
+              "seq": 7,
+              "text": "और जब line cross करती है, point ढूँढना mechanical है: moving parametric point लिखिए, उसे plane equation में substitute कीजिए, और lambda के लिए single linear equation solve कीजिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Line–Plane & Plane–Plane Configurations",
+      "title": "Building a plane: two in-plane vectors, one cross product",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Every plane-through-something is a cross product"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 300\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"e1\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#2980b9\"/></marker>\n<marker id=\"e2\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#27ae60\"/></marker>\n<marker id=\"e3\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#c0392b\"/></marker></defs>\n<polygon points=\"55,235 300,235 385,150 140,150\" fill=\"#eef4fb\" stroke=\"#5b7ea6\" stroke-width=\"1.4\"/>\n<circle cx=\"150\" cy=\"205\" r=\"4.5\" fill=\"#333\"/><text x=\"128\" y=\"223\" font-size=\"12\" font-family=\"system-ui, sans-serif\">A</text>\n<line x1=\"150\" y1=\"205\" x2=\"250\" y2=\"187\" stroke=\"#2980b9\" stroke-width=\"2.2\" marker-end=\"url(#e1)\"/>\n<text x=\"200\" y=\"180\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#2980b9\">dir b</text>\n<circle cx=\"290\" cy=\"200\" r=\"4.5\" fill=\"#27ae60\"/><text x=\"296\" y=\"204\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#27ae60\">P</text>\n<line x1=\"150\" y1=\"205\" x2=\"290\" y2=\"200\" stroke=\"#27ae60\" stroke-width=\"2\" marker-end=\"url(#e2)\"/>\n<text x=\"196\" y=\"220\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#27ae60\">P - a</text>\n<line x1=\"150\" y1=\"205\" x2=\"150\" y2=\"90\" stroke=\"#c0392b\" stroke-width=\"2.2\" marker-end=\"url(#e3)\"/>\n<text x=\"156\" y=\"95\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">N = b x (P - a)</text>\n<text x=\"60\" y=\"285\" font-size=\"11\" font-family=\"system-ui, sans-serif\">two in-plane vectors, one cross product</text>\n</svg>",
+          "caption": "A plane from a line and an external point"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\text{Two intersecting lines: }\\ \\vec N=\\vec b_1\\times\\vec b_2"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\text{Line and point }P:\\ \\vec N=\\vec b\\times(P-\\vec a)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{Two parallel lines: }\\ \\vec N=\\vec b\\times(\\vec a_2-\\vec a_1)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "A plane through two lines only exists if they are coplanar (intersecting or parallel).",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Then finish with the point-normal form through any known point."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Often you must produce the plane that contains given data. The recipe is always the same — find the normal, then use a point — and the normal always comes from a cross product."
+            },
+            {
+              "seq": 2,
+              "text": "Here is the idea for a line and an external point. The line's direction and the vector from the line to the point both lie in the plane, so their cross product is the normal."
+            },
+            {
+              "seq": 3,
+              "text": "If you have two intersecting lines, their two directions both lie in the plane, so the normal is their cross product."
+            },
+            {
+              "seq": 4,
+              "text": "If you have a line and an external point, the direction and the vector from the line to the point both lie in the plane, so the normal is their cross product."
+            },
+            {
+              "seq": 5,
+              "text": "And for two parallel lines, the shared direction and the vector joining them lie in the plane, giving the normal as their cross product. Same idea every time."
+            },
+            {
+              "seq": 6,
+              "text": "One limit to respect: a plane through two lines only exists if those lines are coplanar, that is, intersecting or parallel. Skew lines do not lie in any common plane, so there is nothing to find."
+            },
+            {
+              "seq": 7,
+              "text": "Once you have the normal, finish with the point normal form through any one known point. Two in plane vectors, one cross product, then point normal — that is the entire construction."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अक्सर आपको वो plane बनाना पड़ता है जो दिए गए data को contain करे। recipe हमेशा एक ही है — normal ढूँढो, फिर एक point use करो — और normal हमेशा एक cross product से आता है।"
+            },
+            {
+              "seq": 2,
+              "text": "यहाँ एक line और एक external point का idea है। line की direction और line से point तक का vector दोनों plane में हैं, तो उनका cross product normal है।"
+            },
+            {
+              "seq": 3,
+              "text": "अगर आपके पास दो intersecting lines हैं, उनकी दोनों directions plane में हैं, तो normal उनका cross product है।"
+            },
+            {
+              "seq": 4,
+              "text": "अगर आपके पास एक line और एक external point है, direction और line से point तक का vector दोनों plane में हैं, तो normal उनका cross product है।"
+            },
+            {
+              "seq": 5,
+              "text": "और दो parallel lines के लिए, shared direction और उन्हें जोड़ने वाला vector plane में हैं, normal को उनका cross product देते हुए। हर बार वही idea।"
+            },
+            {
+              "seq": 6,
+              "text": "एक limit का सम्मान: दो lines से गुज़रता plane तभी exist करता है जब वो lines coplanar हों, यानी intersecting या parallel। skew lines किसी common plane में नहीं होतीं, तो ढूँढने को कुछ नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "जैसे ही normal मिल जाए, किसी एक known point से point normal form के साथ खत्म कीजिए। दो in plane vectors, एक cross product, फिर point normal — यही पूरा construction है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Line–Plane & Plane–Plane Configurations",
+      "title": "Bisecting the angle between two planes",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The locus of points equidistant from two planes"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 300\" xmlns=\"http://www.w3.org/2000/svg\">\n<line x1=\"60\" y1=\"230\" x2=\"380\" y2=\"70\" stroke=\"#2980b9\" stroke-width=\"2\"/>\n<text x=\"384\" y=\"68\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#2980b9\">P1</text>\n<line x1=\"60\" y1=\"70\" x2=\"380\" y2=\"230\" stroke=\"#c0392b\" stroke-width=\"2\"/>\n<text x=\"384\" y=\"232\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">P2</text>\n<line x1=\"220\" y1=\"30\" x2=\"220\" y2=\"270\" stroke=\"#27ae60\" stroke-width=\"1.8\" stroke-dasharray=\"6 4\"/>\n<line x1=\"70\" y1=\"150\" x2=\"370\" y2=\"150\" stroke=\"#27ae60\" stroke-width=\"1.8\" stroke-dasharray=\"6 4\"/>\n<text x=\"228\" y=\"45\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#27ae60\">bisector 1</text>\n<text x=\"300\" y=\"143\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#27ae60\">bisector 2</text>\n<circle cx=\"220\" cy=\"150\" r=\"4\" fill=\"#333\"/>\n<text x=\"60\" y=\"290\" font-size=\"11\" font-family=\"system-ui, sans-serif\">two bisectors, mutually perpendicular, equidistant from both planes</text>\n</svg>",
+          "caption": "Two bisector planes, mutually perpendicular"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Write each signed distance and set them equal, with a $\\pm$ for the two bisectors."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\dfrac{a_1x+b_1y+c_1z+d_1}{\\sqrt{a_1^{2}+b_1^{2}+c_1^{2}}}=\\pm\\dfrac{a_2x+b_2y+c_2z+d_2}{\\sqrt{a_2^{2}+b_2^{2}+c_2^{2}}}"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "text": "You MUST divide each plane by $|\\vec n|$ before equating — skipping this gives a non-bisector.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "The two bisectors are always mutually perpendicular."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "For the acute-angle bisector, compute both and test which makes the smaller angle."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two intersecting planes make a pair of valley angles, and there are two planes that bisect them — exactly like the two angle bisectors of two crossing lines in the plane."
+            },
+            {
+              "seq": 2,
+              "text": "Here they are in cross section. A point lies on a bisector exactly when it is equidistant from the two planes, and the two bisectors always come out mutually perpendicular."
+            },
+            {
+              "seq": 3,
+              "text": "To get them, write each distance with its sign and set them equal, with a plus or minus for the two bisectors. You normalise each plane by the length of its normal, then equate."
+            },
+            {
+              "seq": 4,
+              "text": "So the bisector planes are the first plane over the size of its normal equals plus or minus the second plane over the size of its normal. Each sign gives one bisector."
+            },
+            {
+              "seq": 5,
+              "text": "The normalisation is what makes the result a genuine angle bisector rather than just some plane through the line of intersection. Dropping the root denominators would still give a plane containing that line, but not one that splits the angle."
+            },
+            {
+              "seq": 6,
+              "text": "And the two bisectors are always perpendicular to each other, because they bisect the two supplementary angles formed by the original planes."
+            },
+            {
+              "seq": 7,
+              "text": "If a problem asks for the bisector of the acute angle, do not guess. Compute both, then test which one makes the smaller angle with either original plane. Never assume the plus sign gives the acute one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो intersecting planes valley angles की एक जोड़ी बनाते हैं, और उन्हें bisect करने वाले दो planes होते हैं — ठीक जैसे plane में दो crossing lines के दो angle bisectors।"
+            },
+            {
+              "seq": 2,
+              "text": "यहाँ वो cross section में हैं। एक point bisector पर ठीक तब होता है जब वो दोनों planes से equidistant हो, और दोनों bisectors हमेशा mutually perpendicular निकलते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "इन्हें पाने के लिए, हर distance को उसके sign के साथ लिखिए और बराबर कीजिए, दोनों bisectors के लिए plus या minus के साथ। आप हर plane को उसके normal की length से normalise करते हैं, फिर बराबर करते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "तो bisector planes हैं पहला plane उसके normal के size पर बराबर plus या minus दूसरा plane उसके normal के size पर। हर sign एक bisector देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "वो normalisation ही result को असली angle bisector बनाती है, न कि बस line of intersection से गुज़रता कोई plane। root denominators गिराना अब भी उस line को contain करता एक plane देगा, पर वो जो angle को बाँटे नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "और दोनों bisectors हमेशा एक-दूसरे के perpendicular होते हैं, क्योंकि वो original planes से बने दो supplementary angles को bisect करते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "अगर कोई problem acute angle का bisector माँगे, अंदाज़ा मत लगाइए। दोनों निकालिए, फिर test कीजिए कौन सा किसी original plane के साथ छोटा angle बनाता है। कभी मत मानिए कि plus sign acute वाला देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "concept",
+      "subtopic": "Line–Plane & Plane–Plane Configurations",
+      "title": "Reflecting and projecting a line: reuse old tools",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "No new formula — just reflect points"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The line-plane intersection point $M$ is already on the mirror, so it is fixed."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Reflect any second point $Q$ of the line to get its image $Q'$; join $M$ and $Q'$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "text": "Reflect actual points — never reflect only the direction.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Projection: intersect the plane with the plane through the line perpendicular to it."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Equivalently, drop perpendicular feet from two points and join them."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Both reflect and project reduce to tools from the perpendicular subtopic."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "To mirror a whole line in a plane, you do not need anything new. You just reflect points, reusing the perpendicular toolkit you already own."
+            },
+            {
+              "seq": 2,
+              "text": "Where the line meets the plane is a fixed point, because it is already on the mirror. Call it M — reflecting it leaves it unchanged."
+            },
+            {
+              "seq": 3,
+              "text": "Now pick any second point Q on the line and find its image Q dash in the plane. The reflected line is simply the line through M and Q dash — two points determine it."
+            },
+            {
+              "seq": 4,
+              "text": "The common error is reflecting only the direction of the line. Do not — reflect actual points: the fixed intersection M and the image of a second point. If the line is parallel to the plane with no M, reflect two points instead."
+            },
+            {
+              "seq": 5,
+              "text": "Projecting a line onto a plane is the shadow it casts along the normal. Construct the plane that contains the line and is perpendicular to the given plane; its normal is the line's direction crossed with the plane's normal. The projected line is the intersection of the two planes."
+            },
+            {
+              "seq": 6,
+              "text": "Equivalently, and often more simply, drop perpendiculars from two points of the line onto the plane using the perpendicular toolkit, and join the two feet."
+            },
+            {
+              "seq": 7,
+              "text": "So both reflecting and projecting reduce to operations you already own. Recognising the reuse turns two intimidating advanced topics into routine applications of the perpendicular toolkit."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "किसी पूरी line को plane में mirror करने के लिए, आपको कुछ नया नहीं चाहिए। आप बस points reflect करते हैं, वही perpendicular toolkit दोबारा use करते हुए जो आपके पास पहले से है।"
+            },
+            {
+              "seq": 2,
+              "text": "जहाँ line plane को मिलती है वो एक fixed point है, क्योंकि वो पहले से mirror पर है। इसे M कहिए — इसे reflect करने पर वो नहीं बदलता।"
+            },
+            {
+              "seq": 3,
+              "text": "अब line पर कोई दूसरा point Q लीजिए और plane में उसका image Q dash निकालिए। reflected line बस M और Q dash से गुज़रती line है — दो points उसे तय कर देते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Common गलती है line की सिर्फ direction reflect करना। मत कीजिए — असली points reflect कीजिए: fixed intersection M और एक दूसरे point का image। अगर line plane के parallel हो और कोई M न हो, तो दो points reflect कीजिए।"
+            },
+            {
+              "seq": 5,
+              "text": "किसी line को plane पर project करना वो shadow है जो वो normal के साथ डालती है। वो plane बनाइए जो line को contain करे और दिए plane के perpendicular हो; उसका normal line की direction का plane के normal के साथ cross है। projected line दोनों planes का intersection है।"
+            },
+            {
+              "seq": 6,
+              "text": "वैकल्पिक रूप से, और अक्सर ज़्यादा आसानी से, perpendicular toolkit से line के दो points से plane पर perpendiculars गिराइए, और दोनों feet को जोड़ दीजिए।"
+            },
+            {
+              "seq": 7,
+              "text": "तो reflecting और projecting दोनों उन operations में घट जाते हैं जो आपके पास पहले से हैं। इस reuse को पहचानना दो डरावने advanced topics को perpendicular toolkit के routine applications में बदल देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "formulas",
+      "subtopic": "Line–Plane & Plane–Plane Configurations",
+      "title": "Configurations: the formula and construction toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Classify, construct, bisect — on one board"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\vec b\\cdot\\vec n\\neq 0\\Rightarrow\\text{crosses};\\quad \\vec b\\cdot\\vec n=0\\Rightarrow\\text{point-test: in vs parallel}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\vec N=\\vec b_1\\times\\vec b_2\\ \\text{or}\\ \\vec b\\times(P-\\vec a)\\ \\text{or}\\ \\vec b\\times(\\vec a_2-\\vec a_1)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\dfrac{P_1}{|\\vec n_1|}=\\pm\\dfrac{P_2}{|\\vec n_2|}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Reflect a line: keep intersection $M$, reflect a second point $Q\\to Q'$, join $M$ and $Q'$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "One dot product, $\\vec b\\cdot\\vec n$, routes the whole line-plane problem.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Reflect and project reuse the perpendicular toolkit — no new formula appears here."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "These constructions look varied, but they are organised by the question, not new theory. Substitute and solve for intersections; build a normal for planes; normalise and equate for bisectors."
+            },
+            {
+              "seq": 2,
+              "text": "Line versus plane: the dot product non zero means it crosses, so solve for lambda; the dot product zero means test a point to separate lies in from parallel."
+            },
+            {
+              "seq": 3,
+              "text": "Building a plane: the normal is the cross of the two directions for intersecting lines, the direction crossed with the vector to the point for a line and point, or the direction crossed with the joining vector for parallel lines."
+            },
+            {
+              "seq": 4,
+              "text": "Bisector planes: the first plane expression over the length of its normal equals plus or minus the second over the length of its normal. Two perpendicular bisectors."
+            },
+            {
+              "seq": 5,
+              "text": "To reflect a line, keep the intersection point M, reflect any second point Q to Q dash, and join M and Q dash. Projection is the intersection of the given plane with the plane through the line perpendicular to it."
+            },
+            {
+              "seq": 6,
+              "text": "The unifying move: before any line plane work, compute b dot n. Non zero and it crosses; zero and you test a point. That single number tells you which of the three configurations you are in and therefore which method to deploy."
+            },
+            {
+              "seq": 7,
+              "text": "And note that reflection and projection add no new formula. They reuse the perpendicular toolkit — a fixed intersection point plus a reflected point, or two perpendicular feet joined into the shadow line."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये constructions varied दिखते हैं, पर ये सवाल के हिसाब से व्यवस्थित हैं, नई theory नहीं। intersections के लिए substitute करके solve; planes के लिए normal बनाओ; bisectors के लिए normalise करके equate।"
+            },
+            {
+              "seq": 2,
+              "text": "Line versus plane: dot product non zero का मतलब वो cross करती है, तो lambda के लिए solve; dot product zero का मतलब lies in को parallel से अलग करने के लिए एक point test।"
+            },
+            {
+              "seq": 3,
+              "text": "Plane बनाना: normal है intersecting lines के लिए दोनों directions का cross, line and point के लिए direction का point तक के vector के साथ cross, या parallel lines के लिए direction का joining vector के साथ cross।"
+            },
+            {
+              "seq": 4,
+              "text": "Bisector planes: पहला plane expression उसके normal की length पर बराबर plus या minus दूसरा उसके normal की length पर। दो perpendicular bisectors।"
+            },
+            {
+              "seq": 5,
+              "text": "किसी line को reflect करने के लिए, intersection point M रखिए, कोई दूसरा point Q को Q dash पर reflect कीजिए, और M और Q dash को जोड़िए। projection दिए plane का उस plane के साथ intersection है जो line से गुज़रे और उसके perpendicular हो।"
+            },
+            {
+              "seq": 6,
+              "text": "एकजुट करने वाला move: किसी भी line plane काम से पहले, b dot n निकालिए। non zero और वो cross करती है; zero और आप एक point test करते हैं। वो single number बता देता है आप तीनों configurations में से किसमें हैं और इसलिए कौन सी method लगानी है।"
+            },
+            {
+              "seq": 7,
+              "text": "और ध्यान दीजिए reflection और projection कोई नया formula नहीं जोड़ते। वो perpendicular toolkit दोबारा use करते हैं — एक fixed intersection point plus एक reflected point, या shadow line में जुड़ी दो perpendicular feet।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Line–Plane & Plane–Plane Configurations",
+      "title": "Worked example: where a line meets a plane",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Line $\\tfrac{x-2}{1}=\\tfrac{y+1}{-1}=\\tfrac{z-3}{2}$ meets $2x+y-z=1$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\text{Parametric point}=(2+\\lambda,\\ -1-\\lambda,\\ 3+2\\lambda)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "2(2+\\lambda)+(-1-\\lambda)-(3+2\\lambda)=1"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "-\\lambda=1\\ \\Rightarrow\\ \\lambda=-1"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\text{Point}=(1,0,1)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Check: $2(1)+0-1=1$ ✓.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Linear plane plus linear point means a single linear equation — at most one solution."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A foundational warm up. Find the point where the given line meets the plane two x plus y minus z equals one."
+            },
+            {
+              "seq": 2,
+              "text": "Write the moving parametric point on the line: two plus lambda, minus one minus lambda, three plus two lambda."
+            },
+            {
+              "seq": 3,
+              "text": "Substitute it into the plane: two times two plus lambda, plus minus one minus lambda, minus three plus two lambda, equals one."
+            },
+            {
+              "seq": 4,
+              "text": "Simplifying collapses everything to minus lambda equals one, so lambda equals minus one."
+            },
+            {
+              "seq": 5,
+              "text": "Put lambda equal to minus one back into the parametric point to get one, zero, one."
+            },
+            {
+              "seq": 6,
+              "text": "Verify: two times one plus zero minus one is one, matching the plane. The whole method is turn the line into one moving point, then ask the plane when that point arrives."
+            },
+            {
+              "seq": 7,
+              "text": "Because the plane equation is linear and the point's coordinates are linear in lambda, the substitution always collapses to a single linear equation. That is why a unique intersection with a clean lambda is the generic outcome."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक foundational warm up। वो point निकालिए जहाँ दी गई line, plane two x plus y minus z equals one को मिलती है।"
+            },
+            {
+              "seq": 2,
+              "text": "Line पर moving parametric point लिखिए: two plus lambda, minus one minus lambda, three plus two lambda।"
+            },
+            {
+              "seq": 3,
+              "text": "इसे plane में substitute कीजिए: two times two plus lambda, plus minus one minus lambda, minus three plus two lambda, बराबर one।"
+            },
+            {
+              "seq": 4,
+              "text": "Simplify करने पर सब कुछ घटकर minus lambda equals one बनता है, तो lambda बराबर minus one।"
+            },
+            {
+              "seq": 5,
+              "text": "Lambda बराबर minus one को parametric point में वापस डालिए तो one, zero, one मिलता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Verify: two times one plus zero minus one is one, plane से match करते हुए। पूरी method है line को एक moving point में बदलो, फिर plane से पूछो वो point कब पहुँचता है।"
+            },
+            {
+              "seq": 7,
+              "text": "चूँकि plane equation linear है और point के coordinates lambda में linear हैं, substitution हमेशा एक single linear equation में घट जाता है। इसीलिए साफ़ lambda के साथ एक unique intersection generic नतीजा है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Line–Plane & Plane–Plane Configurations",
+      "title": "Worked example: parallel versus lies-in (the two-test trap)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Line through $(1,0,2)$, direction $(1,2,1)$, and the plane $x+y-3z+2=0$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec b\\cdot\\vec n=(1)(1)+(2)(1)+(1)(-3)=1+2-3=0"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Now the decisive second test: substitute a point of the line into the plane."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "1+0-6+2=-3\\neq 0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\Rightarrow\\ \\text{strictly parallel (not contained)}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "$\\vec b\\cdot\\vec n=0$ fixes orientation only — never declare lies-in without the point test.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "One test fixes orientation, the other fixes position — you need both."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A speed trap that needs two tests. Does the line through one, zero, two with direction one, two, one lie in, run parallel to, or cross the plane x plus y minus three z plus two equals zero?"
+            },
+            {
+              "seq": 2,
+              "text": "First the dot product of the direction with the normal: one plus two minus three, which is zero. So the line does not cross — it is parallel to the surface."
+            },
+            {
+              "seq": 3,
+              "text": "But the dot product being zero only rules out crossing. The decisive second test is to substitute a point of the line into the plane expression."
+            },
+            {
+              "seq": 4,
+              "text": "At the point one, zero, two, the plane expression is one plus zero minus six plus two, which is minus three, not zero."
+            },
+            {
+              "seq": 5,
+              "text": "The point is off the plane, so the line is strictly parallel and not contained."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Here is the trap</whisper> — stopping at the dot product equals zero and declaring the line lies in the plane. That dot product only fixes the line's orientation; two lines can share the same flat orientation yet sit at different heights. Only a point pins down the height."
+            },
+            {
+              "seq": 7,
+              "text": "So the lesson is a pairing: one test fixes orientation, the other fixes position. Strictly parallel needs both, which is exactly why the second test is never optional."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक speed trap जिसे दो tests चाहिए। क्या one, zero, two से direction one, two, one वाली line, plane x plus y minus three z plus two equals zero में है, parallel है, या cross करती है?"
+            },
+            {
+              "seq": 2,
+              "text": "पहले direction का normal के साथ dot product: one plus two minus three, जो zero है। तो line cross नहीं करती — वो surface के parallel है।"
+            },
+            {
+              "seq": 3,
+              "text": "पर dot product का zero होना सिर्फ crossing को खारिज करता है। निर्णायक दूसरा test है line का एक point plane expression में substitute करना।"
+            },
+            {
+              "seq": 4,
+              "text": "Point one, zero, two पर, plane expression है one plus zero minus six plus two, जो minus three है, zero नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Point plane से बाहर है, तो line strictly parallel है और contained नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>यहाँ trap है</whisper> — dot product बराबर zero पर रुककर घोषित करना कि line plane में है। वो dot product सिर्फ line की orientation तय करता है; दो lines एक ही flat orientation साझा कर सकती हैं फिर भी अलग heights पर बैठें। सिर्फ एक point height तय करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो सबक एक जोड़ी है: एक test orientation तय करता है, दूसरा position। strictly parallel को दोनों चाहिए, यही वजह है कि दूसरा test कभी optional नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "Line–Plane & Plane–Plane Configurations",
+      "title": "Worked example: plane through a line and a point",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Plane containing $\\vec r=(\\hat i-\\hat j+3\\hat k)+\\lambda(2\\hat i+3\\hat j+\\hat k)$ and $(2,1,0)$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec a=(1,-1,3),\\ \\vec b=(2,3,1),\\ P-\\vec a=(1,2,-3)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\vec N=\\vec b\\times(P-\\vec a)=(-11,7,1)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "-11(x-1)+7(y+1)+1(z-3)=0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "11x-7y-z=15"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Check both: at $(1,-1,3)$, $11+7-3=15$ ✓; at $(2,1,0)$, $22-7=15$ ✓.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Two in-plane vectors, one cross product, then point-normal — the whole move."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A multi concept problem — two in plane vectors, one cross product. Find the plane containing the given line and the point two, one, zero."
+            },
+            {
+              "seq": 2,
+              "text": "Read a as one, minus one, three and b as two, three, one. The vector from the line to the point, P minus a, is one, two, minus three."
+            },
+            {
+              "seq": 3,
+              "text": "The normal is b crossed with P minus a. Expanding the cross product gives minus eleven, seven, one."
+            },
+            {
+              "seq": 4,
+              "text": "Apply the point normal form through the point one, minus one, three with this normal."
+            },
+            {
+              "seq": 5,
+              "text": "Expanding and tidying gives the plane eleven x minus seven y minus z equals fifteen."
+            },
+            {
+              "seq": 6,
+              "text": "Verify at both given objects: at the line's point, eleven plus seven minus three is fifteen; at the external point, twenty two minus seven is fifteen. A correct plane must contain every point it was built from, so checking two is a near certain validation."
+            },
+            {
+              "seq": 7,
+              "text": "So the multi concept move is exactly two in plane vectors, one cross product, then point normal. That single pattern handles every plane built from lines and points."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक multi concept problem — दो in plane vectors, एक cross product। दी गई line और point two, one, zero को contain करता plane निकालिए।"
+            },
+            {
+              "seq": 2,
+              "text": "a को one, minus one, three और b को two, three, one पढ़िए। line से point तक का vector, P minus a, है one, two, minus three।"
+            },
+            {
+              "seq": 3,
+              "text": "Normal है b का P minus a के साथ cross। cross product expand करने पर minus eleven, seven, one मिलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Point one, minus one, three से इस normal के साथ point normal form लगाइए।"
+            },
+            {
+              "seq": 5,
+              "text": "Expand करके साफ़ करने पर plane मिलता है eleven x minus seven y minus z equals fifteen।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों दिए objects पर verify कीजिए: line के point पर, eleven plus seven minus three पंद्रह है; external point पर, बाईस minus seven पंद्रह है। एक सही plane को हर उस point को contain करना चाहिए जिससे वो बना, तो दो check करना लगभग पक्की validation है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो multi concept move ठीक दो in plane vectors, एक cross product, फिर point normal है। वो एक pattern lines और points से बने हर plane को संभालता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "worked_examples",
+      "subtopic": "Line–Plane & Plane–Plane Configurations",
+      "title": "Worked example: angle-bisector planes",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Bisectors of $2x-y+2z+3=0$ and $3x-2y+6z-8=0$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "|\\vec n_1|=\\sqrt{4+1+4}=3,\\qquad |\\vec n_2|=\\sqrt{9+4+36}=7"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\dfrac{2x-y+2z+3}{3}=\\pm\\dfrac{3x-2y+6z-8}{7}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "(+):\\ 5x-y-4z+45=0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "(-):\\ 23x-13y+32z-3=0"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Perpendicular check: $(5)(23)+(-1)(-13)+(-4)(32)=0$ ✓.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Bisector means equidistant — normalise each plane, then take $\\pm$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "An advanced problem. Find the planes bisecting the angles between two x minus y plus two z plus three equals zero and three x minus two y plus six z minus eight equals zero."
+            },
+            {
+              "seq": 2,
+              "text": "First the normal lengths: the first is root nine, which is three, and the second is root forty nine, which is seven."
+            },
+            {
+              "seq": 3,
+              "text": "The bisectors satisfy the first plane over three equals plus or minus the second plane over seven. Cross multiplying gives seven times the first equals plus or minus three times the second."
+            },
+            {
+              "seq": 4,
+              "text": "Taking the plus sign and simplifying gives the first bisector: five x minus y minus four z plus forty five equals zero."
+            },
+            {
+              "seq": 5,
+              "text": "Taking the minus sign gives the second bisector: twenty three x minus thirteen y plus thirty two z minus three equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "The two bisectors should be mutually perpendicular. Their normals dot to one hundred fifteen plus thirteen minus one hundred twenty eight, which is zero. Confirmed."
+            },
+            {
+              "seq": 7,
+              "text": "The advanced insight: bisector means equidistant, and equidistance becomes the normalised equation with a plus or minus. The normalisation is exactly what makes it a genuine angle bisector rather than just any plane through the intersection."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक advanced problem। two x minus y plus two z plus three equals zero और three x minus two y plus six z minus eight equals zero के बीच के angles को bisect करते planes निकालिए।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले normal lengths: पहला root नौ है, यानी तीन, और दूसरा root उनचास है, यानी सात।"
+            },
+            {
+              "seq": 3,
+              "text": "Bisectors satisfy करते हैं पहला plane over तीन बराबर plus या minus दूसरा plane over सात। cross multiply करने पर seven times पहला बराबर plus या minus three times दूसरा।"
+            },
+            {
+              "seq": 4,
+              "text": "Plus sign लेकर simplify करने पर पहला bisector मिलता है: five x minus y minus four z plus forty five equals zero।"
+            },
+            {
+              "seq": 5,
+              "text": "Minus sign लेने पर दूसरा bisector मिलता है: twenty three x minus thirteen y plus thirty two z minus three equals zero।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों bisectors mutually perpendicular होने चाहिए। उनके normals का dot है एक सौ पंद्रह plus तेरह minus एक सौ अट्ठाईस, जो zero है। confirm हो गया।"
+            },
+            {
+              "seq": 7,
+              "text": "Advanced insight: bisector का मतलब equidistant, और equidistance plus या minus के साथ normalised equation बन जाती है। normalisation ही वो है जो इसे असली angle bisector बनाती है, न कि intersection से गुज़रता कोई भी plane।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "tips",
+      "subtopic": "Line–Plane & Plane–Plane Configurations",
+      "title": "Configurations: pitfalls and pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The slips that cost configuration marks"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "$\\vec b\\cdot\\vec n=0$ means parallel, not lies-in — always test a point.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Use the right normal: intersecting lines, line+point, and parallel lines each differ."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Normalise before bisecting, and report BOTH bisectors."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "To reflect a line, reflect actual points, not just its direction."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Every plane-through-something is a cross product; one $\\vec b\\cdot\\vec n$ classifies the rest.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Reflect and project reuse the perpendicular toolkit — no new formula needed."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close this subtopic by locking in the configuration traps before the chapter wrap up."
+            },
+            {
+              "seq": 2,
+              "text": "First and biggest: reading the dot product equals zero as the line lies in the plane. It only means parallel. You must test a point to decide between parallel and contained."
+            },
+            {
+              "seq": 3,
+              "text": "Second, use the right normal for plane through lines. Intersecting lines cross the two directions; a line and point cross the direction with the vector to the point; parallel lines cross the direction with the joining vector. Picking the wrong pair gives a wrong normal."
+            },
+            {
+              "seq": 4,
+              "text": "Third, before bisecting, divide each plane by the length of its normal, or the result is just a family member, not a bisector. And the plus or minus yields two perpendicular bisector planes — report both."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, reflect a line by reflecting actual points: the fixed intersection M and the image of a second point. Reflecting only the direction is a common and wrong shortcut."
+            },
+            {
+              "seq": 6,
+              "text": "Two pro tips to finish. Whatever the data, gather two vectors lying in the target plane and cross them for the normal — every plane through something is a cross product. And before any line plane work, compute b dot n; that single number routes the whole problem."
+            },
+            {
+              "seq": 7,
+              "text": "And recognise that reflecting and projecting a line reuse tools you already own — the intersection point plus a reflected point, or two perpendicular feet. No new formula is ever needed; the reuse turns intimidating topics into routine work."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए chapter wrap up से पहले configuration traps पक्का करके इस subtopic को बंद करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला और सबसे बड़ा: dot product बराबर zero को line plane में है पढ़ना। ये सिर्फ parallel का मतलब है। parallel और contained के बीच तय करने के लिए आपको एक point test करना पड़ता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, plane through lines के लिए सही normal use कीजिए। intersecting lines दोनों directions को cross करती हैं; line and point direction को point तक vector के साथ cross करता है; parallel lines direction को joining vector के साथ। गलत जोड़ी लेना गलत normal देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, bisect करने से पहले, हर plane को उसके normal की length से divide कीजिए, वरना result बस एक family member है, bisector नहीं। और plus या minus दो perpendicular bisector planes देता है — दोनों report कीजिए।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, किसी line को असली points reflect करके reflect कीजिए: fixed intersection M और एक दूसरे point का image। सिर्फ direction reflect करना एक common और गलत shortcut है।"
+            },
+            {
+              "seq": 6,
+              "text": "खत्म करने के लिए दो pro tips। data जो भी हो, target plane में पड़े दो vectors इकट्ठा करके normal के लिए उन्हें cross कीजिए — plane through something हमेशा एक cross product है। और किसी भी line plane काम से पहले, b dot n निकालिए; वो single number पूरी problem को route करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और पहचानिए कि किसी line को reflect और project करना उन tools को दोबारा use करता है जो आपके पास पहले से हैं — intersection point plus एक reflected point, या दो perpendicular feet। कभी कोई नया formula नहीं चाहिए; ये reuse डरावने topics को routine काम में बदल देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 20,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Formula Recap",
+      "title": "Your complete Chapter 11 formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Everything you need on one board"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\begin{aligned}PQ&=\\sqrt{\\sum(x_2-x_1)^2}\\\\ R_{m:n}&=\\tfrac{mx_2+nx_1}{m+n}\\ (\\text{ext: }-)\\end{aligned}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "V=\\tfrac16\\left|\\vec{AB}\\cdot(\\vec{AC}\\times\\vec{AD})\\right|,\\quad \\text{Area}=\\tfrac12\\left|\\vec{AB}\\times\\vec{AC}\\right|"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "l^2+m^2+n^2=1,\\qquad l,m,n=\\pm\\tfrac{(a,b,c)}{\\sqrt{a^2+b^2+c^2}}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\vec r=\\vec a+\\lambda\\vec b,\\qquad \\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\cos\\theta=\\tfrac{|\\vec b_1\\cdot\\vec b_2|}{|\\vec b_1||\\vec b_2|},\\qquad d_{\\text{skew}}=\\tfrac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\vec r\\cdot\\vec n=d;\\quad \\cos\\theta=\\tfrac{|\\vec n_1\\cdot\\vec n_2|}{|\\vec n_1||\\vec n_2|};\\quad \\sin\\varphi=\\tfrac{|\\vec b\\cdot\\vec n|}{|\\vec b||\\vec n|}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "D=\\tfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}},\\qquad P_1+\\lambda P_2=0"
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "latex": "\\text{Line: }PF=\\tfrac{|\\vec{AP}\\times\\vec b|}{|\\vec b|};\\quad \\text{Plane: }t=\\tfrac{ax_1+by_1+cz_1+d}{a^2+b^2+c^2},\\ P'=P-2t\\vec n"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is your complete toolkit for the whole chapter — one board that restates every load bearing formula. Nothing new here, just a fast final sweep before the exam."
+            },
+            {
+              "seq": 2,
+              "text": "From the foundations: the distance formula, and the internal section formula with its minus sign variant for external division."
+            },
+            {
+              "seq": 3,
+              "text": "Tetrahedron volume as one sixth of the scalar triple product, and triangle area as half the cross product magnitude."
+            },
+            {
+              "seq": 4,
+              "text": "For direction cosines, the master identity, and the conversion from direction ratios by dividing by their length."
+            },
+            {
+              "seq": 5,
+              "text": "The vector and Cartesian equations of a line — a point plus a direction."
+            },
+            {
+              "seq": 6,
+              "text": "The acute angle between two lines, and the skew shortest distance as volume over base area."
+            },
+            {
+              "seq": 7,
+              "text": "For planes, the point normal equation, the plane to plane angle by cosine of the normals, and the line to plane angle by sine — plane to plane cosine, line to plane sine."
+            },
+            {
+              "seq": 8,
+              "text": "The point to plane distance, and the family of planes through a line of intersection."
+            },
+            {
+              "seq": 9,
+              "text": "And the perpendicular toolkit: the point line distance over the size of b, and for a plane the single number t, with the image two t normals from the point. That is the whole chapter in one board."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ पूरे chapter के लिए आपका complete toolkit है — एक board जो हर load bearing formula दोबारा बताता है। यहाँ कुछ नया नहीं, बस exam से पहले एक तेज़ आखिरी sweep।"
+            },
+            {
+              "seq": 2,
+              "text": "Foundations से: distance formula, और internal section formula अपने minus sign variant के साथ external division के लिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Tetrahedron volume scalar triple product के one sixth के रूप में, और triangle area cross product magnitude के half के रूप में।"
+            },
+            {
+              "seq": 4,
+              "text": "Direction cosines के लिए, master identity, और direction ratios से conversion उनकी length से divide करके।"
+            },
+            {
+              "seq": 5,
+              "text": "किसी line के vector और Cartesian equations — एक point plus एक direction।"
+            },
+            {
+              "seq": 6,
+              "text": "दो lines के बीच acute angle, और skew shortest distance volume over base area के रूप में।"
+            },
+            {
+              "seq": 7,
+              "text": "Planes के लिए, point normal equation, plane to plane angle normals के cosine से, और line to plane angle sine से — plane to plane cosine, line to plane sine।"
+            },
+            {
+              "seq": 8,
+              "text": "Point to plane distance, और line of intersection से गुज़रती planes की family।"
+            },
+            {
+              "seq": 9,
+              "text": "और perpendicular toolkit: point line distance b के size पर, और plane के लिए single number t, image point से two t normals दूर। यही पूरा chapter एक board में।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 21,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Cheat Sheet",
+      "title": "Quick-recall memory aids for Chapter 11",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The one-line reminders that save marks"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "Pythagoras twice; far weight first; negative ratio = outside.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "text": "Axis drops one coordinate; plane keeps one.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Cosines on a unit budget; ratios are the recipe, cosines are the dish; standardise then read."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Cross to bridge, dot to project; acute by modulus; zero volume, they meet."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Plane-to-plane cosine, line-to-plane sine; the normal is everything.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Dot for foot, cross for gap; foot is the midpoint, so image = $2F-P$; dot decides; bisect = normalise then $\\pm$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Finally, the quick recall box — the one line reminders that catch the most common slips under exam pressure. Say each one to yourself before you start a problem."
+            },
+            {
+              "seq": 2,
+              "text": "From the foundations: distance is Pythagoras used twice; in the section formula the far weight rides the first named part; and a negative ratio means external division, outside the segment."
+            },
+            {
+              "seq": 3,
+              "text": "Distance from an axis drops the shared coordinate and keeps two under the root; distance from a plane keeps only the single zeroed coordinate. Never mix these two up."
+            },
+            {
+              "seq": 4,
+              "text": "For directions: direction cosines spend a total of one in squares; ratios are a recipe and cosines are the finished dish, so always normalise; and standardise a Cartesian equation before reading its ratios."
+            },
+            {
+              "seq": 5,
+              "text": "For lines: the cross product bridges skew lines and the dot product projects along it; wrap the angle numerator in a modulus for the acute value; and a zero scalar triple product means the lines are coplanar and meet."
+            },
+            {
+              "seq": 6,
+              "text": "For planes: plane to plane uses cosine, line to plane uses sine — the single most common slip on the topic. And almost every plane question reduces to find the normal; forms, angles and distances all flow from it."
+            },
+            {
+              "seq": 7,
+              "text": "And for the perpendicular toolkit and configurations: dot for the foot, cross for the gap; the foot is the midpoint, so the image is twice the foot minus the point; the dot product b dot n decides cross versus parallel; and to bisect, normalise then take plus or minus. That is your complete quick recall for Chapter eleven."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आखिर में, quick recall box — वो one line reminders जो exam pressure में सबसे common slips पकड़ते हैं। हर problem शुरू करने से पहले हर एक को खुद से बोलिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Foundations से: distance Pythagoras दो बार है; section formula में far weight पहले नामित हिस्से पर बैठता है; और negative ratio का मतलब external division, segment के बाहर।"
+            },
+            {
+              "seq": 3,
+              "text": "किसी axis से distance shared coordinate छोड़ती है और root के नीचे दो रखती है; किसी plane से distance सिर्फ वो एक zero वाला coordinate रखती है। इन दोनों को कभी गड्डमड्ड मत कीजिए।"
+            },
+            {
+              "seq": 4,
+              "text": "Directions के लिए: direction cosines squares में कुल one खर्च करते हैं; ratios एक recipe हैं और cosines तैयार dish, तो हमेशा normalise कीजिए; और Cartesian equation के ratios पढ़ने से पहले उसे standardise कीजिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Lines के लिए: cross product skew lines को bridge करता है और dot product उसके साथ project करता है; acute value के लिए angle numerator को modulus में लपेटिए; और zero scalar triple product का मतलब lines coplanar हैं और मिलती हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Planes के लिए: plane to plane cosine use करता है, line to plane sine — topic की सबसे common गलती। और लगभग हर plane सवाल normal ढूँढो में घट जाता है; forms, angles और distances सब उसी से बहते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "और perpendicular toolkit तथा configurations के लिए: foot के लिए dot, gap के लिए cross; foot midpoint है, तो image है twice the foot minus the point; dot product b dot n cross versus parallel तय करता है; और bisect करने के लिए, normalise करके plus या minus लीजिए। यही chapter eleven के लिए आपका complete quick recall है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

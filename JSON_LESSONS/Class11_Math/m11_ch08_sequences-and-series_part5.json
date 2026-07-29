@@ -1,0 +1,1543 @@
+{
+  "chapter": "Sequences and Series",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 8,
+  "part": 5,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Telescoping - Concept",
+      "title": "The collapsing telescope: only the ends survive",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Telescoping: write each term as a difference of consecutive things"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "Interior terms cancel in pairs; only the first and last remain",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 190\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"70\" width=\"70\" height=\"34\" fill=\"#dcfce7\" stroke=\"#16a34a\"/>\n  <text x=\"65\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" fill=\"#14532d\">V₁</text>\n  <rect x=\"105\" y=\"70\" width=\"70\" height=\"34\" fill=\"#f1f5f9\" stroke=\"#94a3b8\"/>\n  <text x=\"140\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" fill=\"#64748b\">V₂</text>\n  <rect x=\"180\" y=\"70\" width=\"70\" height=\"34\" fill=\"#f1f5f9\" stroke=\"#94a3b8\"/>\n  <text x=\"215\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" fill=\"#64748b\">V₃</text>\n  <text x=\"270\" y=\"92\" font-size=\"16\" fill=\"#94a3b8\">…</text>\n  <rect x=\"300\" y=\"70\" width=\"70\" height=\"34\" fill=\"#f1f5f9\" stroke=\"#94a3b8\"/>\n  <text x=\"335\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" fill=\"#64748b\">Vₙ</text>\n  <rect x=\"375\" y=\"70\" width=\"80\" height=\"34\" fill=\"#fee2e2\" stroke=\"#b91c1c\"/>\n  <text x=\"415\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" fill=\"#7f1d1d\">Vₙ₊₁</text>\n  <text x=\"140\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" fill=\"#16a34a\">+V₂ − V₂ = 0</text>\n  <text x=\"215\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" fill=\"#16a34a\">+V₃ − V₃ = 0</text>\n  <text x=\"235\" y=\"140\" text-anchor=\"middle\" font-size=\"15\" fill=\"#1e293b\">only the ends survive:  Σ = V₁ − Vₙ₊₁</text>\n  <text x=\"235\" y=\"165\" text-anchor=\"middle\" font-size=\"12\" fill=\"#94a3b8\">each term cancels part of the next, like a folding telescope</text>\n</svg>"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "t_r = V_r - V_{r+1} \\;\\Rightarrow\\; \\sum_{r=1}^{n} t_r = V_1 - V_{n+1}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "Like a relay: only the starting baton and the finish-line position matter."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "text": "For fractions, partial fractions produce the difference-form."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "latex": "\\frac{1}{r(r+1)} = \\frac{1}{r} - \\frac{1}{r+1}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "For products of integers, use the $V_n$ method; for surds, rationalise."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 57,
+          "style": "red-margin",
+          "text": "This is the tool for non-polynomial $t_n$ — where Unit 7's formulas fail."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This final unit handles the sums that Unit seven cannot touch — where the general term is not a polynomial. The core idea is telescoping."
+            },
+            {
+              "seq": 2,
+              "text": "The picture says it all. A telescoping sum works like a collapsing telescope: each term cancels part of the next, so when you add everything, only the very first and very last pieces survive."
+            },
+            {
+              "seq": 3,
+              "text": "Formally, if you can write the r-th term as V-r minus V-r-plus-one, then the whole sum from one to n collapses to just V-one minus V-n-plus-one."
+            },
+            {
+              "seq": 4,
+              "text": "Think of a relay race where each runner hands off exactly what they received. Only the starting baton and the finish-line position matter; everything passed in between cancels in the bookkeeping."
+            },
+            {
+              "seq": 5,
+              "text": "The question is how to force a term into that difference-form. For a fraction, the tool is partial fractions."
+            },
+            {
+              "seq": 6,
+              "text": "For instance, one over r times r plus one splits cleanly into one over r minus one over r plus one — a perfect consecutive difference."
+            },
+            {
+              "seq": 7,
+              "text": "For products of consecutive integers, the tool is the V-n method — append a factor and divide. And for a surd in the denominator, you rationalise, which almost always produces a telescoper."
+            },
+            {
+              "seq": 8,
+              "text": "<curious> Keep the big picture: this unit is precisely the tool for non-polynomial general terms, exactly where Unit seven's standard-sum formulas break down."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह आख़िरी unit उन sums को handle करता है जिन्हें Unit seven छू भी नहीं सकता — जहाँ general term एक polynomial नहीं है। core idea है telescoping।"
+            },
+            {
+              "seq": 2,
+              "text": "picture सब कह देती है। एक telescoping sum एक collapsing telescope की तरह काम करती है: हर term अगले का हिस्सा cancel कर देता है, तो जब तुम सब कुछ add करते हो, सिर्फ़ पहला और आख़िरी piece बचता है।"
+            },
+            {
+              "seq": 3,
+              "text": "formally, अगर तुम r-th term को V-r minus V-r-plus-one लिख सको, तो पूरा sum one से n तक बस V-one minus V-n-plus-one में collapse हो जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "एक relay race सोचो जहाँ हर runner exactly वही pass करता है जो उसे मिला। सिर्फ़ starting baton और finish-line position matter करते हैं; बीच में pass हुआ सब कुछ bookkeeping में cancel हो जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "सवाल है कि एक term को उस difference-form में कैसे force करें। एक fraction के लिए, tool है partial fractions।"
+            },
+            {
+              "seq": 6,
+              "text": "उदाहरण के लिए, one over r times r plus one साफ़ split होता है one over r minus one over r plus one में — एक perfect consecutive difference।"
+            },
+            {
+              "seq": 7,
+              "text": "consecutive integers के products के लिए, tool है V-n method — एक factor append करो और divide करो। और denominator में surd के लिए, तुम rationalise करते हो, जो लगभग हमेशा एक telescoper बना देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "<curious> big picture रखो: यह unit ठीक उन non-polynomial general terms का tool है, exactly वहाँ जहाँ Unit seven के standard-sum formulas टूट जाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Telescoping - Derivations",
+      "title": "Five telescopers built from scratch",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Partial fractions, the $V_n$ method, factorials, and surds"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\sum \\frac{1}{r(r+1)} = 1 - \\frac{1}{n+1} = \\frac{n}{n+1}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac{1}{r(r+1)(r+2)} = \\frac12\\left[\\frac{1}{r(r+1)} - \\frac{1}{(r+1)(r+2)}\\right]"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "$V_n$ method: with $V_r = r(r+1)(r+2)$, we get $V_r - V_{r-1} = 3\\,r(r+1)$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\sum r(r+1) = \\frac{1}{3}\\,n(n+1)(n+2)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "r\\cdot r! = (r+1)! - r! \\;\\Rightarrow\\; \\sum r\\cdot r! = (n+1)! - 1"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\frac{1}{\\sqrt{r} + \\sqrt{r+1}} = \\sqrt{r+1} - \\sqrt{r}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Every derivation is the same shape: force a difference, then only ends survive."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's build the standard telescopers, and notice they all share one shape."
+            },
+            {
+              "seq": 2,
+              "text": "First, the workhorse. One over r times r plus one splits into one over r minus one over r plus one, and summing collapses to one minus one over n plus one, which is n over n plus one."
+            },
+            {
+              "seq": 3,
+              "text": "For the triple product, one over r times r plus one times r plus two, split it as one half times the difference of one over r times r plus one and one over r plus one times r plus two. The bracket telescopes."
+            },
+            {
+              "seq": 4,
+              "text": "Now the V-n method for a product. Take V-r as r times r plus one times r plus two. Then V-r minus V-r-minus-one works out to three times r times r plus one."
+            },
+            {
+              "seq": 5,
+              "text": "So r times r plus one is one third of that difference, and the sum telescopes to one third of n times n plus one times n plus two."
+            },
+            {
+              "seq": 6,
+              "text": "For factorials, notice r times r-factorial equals r-plus-one-factorial minus r-factorial. Summing that telescopes cleanly to n-plus-one-factorial minus one."
+            },
+            {
+              "seq": 7,
+              "text": "And for surds, rationalising one over root r plus root r plus one gives root r plus one minus root r — a difference ready to collapse to root n plus one minus one."
+            },
+            {
+              "seq": 8,
+              "text": "<curious> Feel the common thread: every single derivation is the same move — force the term into a difference of consecutive things, and then only the endpoints survive."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो standard telescopers बनाएँ, और ध्यान दो कि ये सब एक ही shape share करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले, workhorse। one over r times r plus one, one over r minus one over r plus one में split होता है, और sum करने पर one minus one over n plus one में collapse होता है, यानी n over n plus one।"
+            },
+            {
+              "seq": 3,
+              "text": "triple product के लिए, one over r times r plus one times r plus two को one half times the difference of one over r times r plus one और one over r plus one times r plus two के रूप में split करो। bracket telescope करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब एक product के लिए V-n method। V-r को r times r plus one times r plus two लो। तब V-r minus V-r-minus-one निकलता है three times r times r plus one।"
+            },
+            {
+              "seq": 5,
+              "text": "तो r times r plus one उस difference का one third है, और sum telescope होकर one third of n times n plus one times n plus two बनता है।"
+            },
+            {
+              "seq": 6,
+              "text": "factorials के लिए, ध्यान दो r times r-factorial equals r-plus-one-factorial minus r-factorial। इसे sum करने पर साफ़ telescope होकर n-plus-one-factorial minus one बनता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और surds के लिए, one over root r plus root r plus one को rationalise करने पर root r plus one minus root r मिलता है — एक difference जो root n plus one minus one में collapse होने को तैयार है।"
+            },
+            {
+              "seq": 8,
+              "text": "<curious> common thread महसूस करो: हर एक derivation वही move है — term को consecutive things के difference में force करो, और फिर सिर्फ़ endpoints बचते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "formulas",
+      "subtopic": "Telescoping - Formulas",
+      "title": "The telescoping toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The principle and the standard results"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "t_r = V_r - V_{r+1} \\;\\Rightarrow\\; \\sum_{r=1}^{n} t_r = V_1 - V_{n+1}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\sum \\frac{1}{r(r+1)} = \\frac{n}{n+1}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\sum \\frac{1}{r(r+1)(r+2)} = \\frac{n(n+3)}{4(n+1)(n+2)}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\sum \\frac{1}{(2r-1)(2r+1)} = \\frac{n}{2n+1}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\sum r(r+1)\\cdots(r+k-1) = \\frac{n(n+1)\\cdots(n+k)}{k+1}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\sum r\\cdot r! = (n+1)! - 1, \\qquad \\sum \\frac{1}{\\sqrt{r} + \\sqrt{r+1}} = \\sqrt{n+1} - 1"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Track the constant multiplier ($\\tfrac12$, $\\tfrac1k$) — dropping it is a classic slip."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the telescoping toolkit — the principle first, then the standard results worth recognising on sight."
+            },
+            {
+              "seq": 2,
+              "text": "The principle is the whole unit in one line: if the r-th term is V-r minus V-r-plus-one, the sum is simply V-one minus V-n-plus-one."
+            },
+            {
+              "seq": 3,
+              "text": "The first standard result: the sum of one over r times r plus one is n over n plus one."
+            },
+            {
+              "seq": 4,
+              "text": "The triple-product sum is n times n plus three, over four times n plus one times n plus two."
+            },
+            {
+              "seq": 5,
+              "text": "For the odd-factor product, the sum of one over two r minus one times two r plus one is n over two n plus one."
+            },
+            {
+              "seq": 6,
+              "text": "The V-n method generalises the whole family: the sum of a product of k consecutive integers is the product of k plus one consecutive integers, divided by k plus one."
+            },
+            {
+              "seq": 7,
+              "text": "And two more to keep close: the sum of r times r-factorial is n-plus-one-factorial minus one, and the surd sum is root n plus one minus one."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper> One warning that catches people out: track the constant multiplier. The triple product carries a one half, the odd-factor split carries a one half too — dropping that constant is a classic, silent slip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो telescoping toolkit consolidate करें — पहले principle, फिर standard results जो देखते ही पहचानने लायक हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "principle पूरा unit एक line में है: अगर r-th term V-r minus V-r-plus-one हो, तो sum बस V-one minus V-n-plus-one है।"
+            },
+            {
+              "seq": 3,
+              "text": "पहला standard result: one over r times r plus one का sum है n over n plus one।"
+            },
+            {
+              "seq": 4,
+              "text": "triple-product sum है n times n plus three, over four times n plus one times n plus two।"
+            },
+            {
+              "seq": 5,
+              "text": "odd-factor product के लिए, one over two r minus one times two r plus one का sum है n over two n plus one।"
+            },
+            {
+              "seq": 6,
+              "text": "V-n method पूरे family को generalise करता है: k consecutive integers के product का sum, k plus one consecutive integers का product है, k plus one से divided।"
+            },
+            {
+              "seq": 7,
+              "text": "और दो और पास रखो: r times r-factorial का sum है n-plus-one-factorial minus one, और surd sum है root n plus one minus one।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper> एक warning जो लोगों को पकड़ती है: constant multiplier track करो। triple product एक one half रखता है, odd-factor split भी एक one half — उस constant को गिरा देना एक classic, silent slip है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "Telescoping Worked Examples",
+      "title": "The basic telescoper and its infinite limit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find Σ 1/[r(r+1)] to n terms, and its value as n → ∞"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\frac{1}{r(r+1)} = \\frac{1}{r} - \\frac{1}{r+1}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\left(1 - \\tfrac12\\right) + \\left(\\tfrac12 - \\tfrac13\\right) + \\cdots + \\left(\\tfrac1n - \\tfrac{1}{n+1}\\right)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Every interior term appears once with $+$ and once with $-$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "S_n = 1 - \\frac{1}{n+1} = \\frac{n}{n+1}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\lim_{n\\to\\infty} S_n = 1"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "So 1/(1·2) + 1/(2·3) + ⋯ = 1 exactly."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's open the telescoping examples with the cleanest case — the sum of one over r times r plus one, and what it approaches as n grows."
+            },
+            {
+              "seq": 2,
+              "text": "The first move is partial fractions: one over r times r plus one splits into one over r minus one over r plus one."
+            },
+            {
+              "seq": 3,
+              "text": "Now write out the sum term by term: one minus one half, plus one half minus one third, and so on to one over n minus one over n plus one."
+            },
+            {
+              "seq": 4,
+              "text": "Look at what happens. Every interior fraction appears once with a plus and once with a minus, so they annihilate in pairs."
+            },
+            {
+              "seq": 5,
+              "text": "Only the outermost survivors remain: the leading one, and the trailing minus one over n plus one. So the sum is one minus one over n plus one, which is n over n plus one."
+            },
+            {
+              "seq": 6,
+              "text": "As n grows without bound, that trailing fraction vanishes and the sum approaches one."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> So the infinite series one over one-times-two, plus one over two-times-three, and onward, equals exactly one — a beautifully clean result straight out of the collapse."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो telescoping examples को सबसे clean case से खोलें — one over r times r plus one का sum, और यह n बढ़ने पर किसकी तरफ़ जाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला move है partial fractions: one over r times r plus one, one over r minus one over r plus one में split होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "अब sum को term by term लिखो: one minus one half, plus one half minus one third, और ऐसे ही one over n minus one over n plus one तक।"
+            },
+            {
+              "seq": 4,
+              "text": "देखो क्या होता है। हर interior fraction एक बार plus के साथ और एक बार minus के साथ आता है, तो वे pairs में एक-दूसरे को खत्म कर देते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "सिर्फ़ बाहरी survivors बचते हैं: शुरू का one, और आख़िरी minus one over n plus one। तो sum है one minus one over n plus one, यानी n over n plus one।"
+            },
+            {
+              "seq": 6,
+              "text": "जैसे-जैसे n बिना सीमा बढ़ता है, वो आख़िरी fraction गायब हो जाता है और sum one की तरफ़ पहुँचता है।"
+            },
+            {
+              "seq": 7,
+              "text": "<excited> तो infinite series one over one-times-two, plus one over two-times-three, और आगे, exactly one के बराबर है — collapse से सीधे निकला एक खूबसूरत clean result।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Telescoping Worked Examples",
+      "title": "A partial-fraction telescoper with a step of 3",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Sum 1/(1·4) + 1/(4·7) + 1/(7·10) + … to n terms"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The factors step by 3: general term is $\\tfrac{1}{(3r-2)(3r+1)}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac{1}{(3r-2)(3r+1)} = \\frac13\\left[\\frac{1}{3r-2} - \\frac{1}{3r+1}\\right]"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The bracket telescopes; the $\\tfrac13$ rides along outside."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "S_n = \\frac13\\left[1 - \\frac{1}{3n+1}\\right]"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_n = \\frac{n}{3n+1}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Keep the $\\tfrac13$ from the split — losing it is the telescope-lost-multiplier trap."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example is the same idea with a twist — the denominators step by three instead of one, and a constant multiplier appears."
+            },
+            {
+              "seq": 2,
+              "text": "Read the pattern in the denominators: one and four, four and seven, seven and ten. So the r-th term is one over three r minus two, times three r plus one."
+            },
+            {
+              "seq": 3,
+              "text": "Partial fractions split this, but watch the constant: it becomes one third times the difference of one over three r minus two and one over three r plus one."
+            },
+            {
+              "seq": 4,
+              "text": "The bracket telescopes exactly as before, while the one third simply rides along on the outside of the whole sum."
+            },
+            {
+              "seq": 5,
+              "text": "After the interior terms cancel, we're left with one third times the quantity one minus one over three n plus one."
+            },
+            {
+              "seq": 6,
+              "text": "Simplifying, that is n over three n plus one."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> The one thing to guard here is that factor of one third from the split. Forgetting it gives a plausible-looking answer that's wrong by a factor of three — the telescope-lost-multiplier trap."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example वही idea है एक twist के साथ — denominators one के बजाय three से step करते हैं, और एक constant multiplier आता है।"
+            },
+            {
+              "seq": 2,
+              "text": "denominators में pattern पढ़ो: one और four, four और seven, seven और ten। तो r-th term है one over three r minus two, times three r plus one।"
+            },
+            {
+              "seq": 3,
+              "text": "partial fractions इसे split करते हैं, पर constant देखो: यह बनता है one third times the difference of one over three r minus two और one over three r plus one।"
+            },
+            {
+              "seq": 4,
+              "text": "bracket exactly पहले जैसा telescope करता है, जबकि one third बस पूरे sum के बाहर साथ चलता है।"
+            },
+            {
+              "seq": 5,
+              "text": "interior terms cancel होने के बाद, हमारे पास बचता है one third times the quantity one minus one over three n plus one।"
+            },
+            {
+              "seq": 6,
+              "text": "simplify करने पर, यह है n over three n plus one।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> यहाँ guard करने वाली एक चीज़ है split से आया वो one third factor। इसे भूलना एक plausible दिखने वाला answer देता है जो three के factor से गलत है — telescope-lost-multiplier trap।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Telescoping Worked Examples",
+      "title": "The Vₙ method on a product of three",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find Σ r(r+1)(r+2) from r = 1 to n"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A product of 3 consecutive integers — use the $V_n$ method."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\sum r(r+1)\\cdots(r+k-1) = \\frac{n(n+1)\\cdots(n+k)}{k+1}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Here $k = 3$: append one more factor, divide by $k + 1 = 4$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\sum r(r+1)(r+2) = \\frac{n(n+1)(n+2)(n+3)}{4}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "n = 1:\\; 1\\cdot 2\\cdot 3 = 6 = \\frac{1\\cdot 2\\cdot 3\\cdot 4}{4} \\;\\checkmark"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Divide by (number of factors + 1) — the $V_n$-method-divisor rule."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example shows the V-n method at its cleanest, on a product of three consecutive integers."
+            },
+            {
+              "seq": 2,
+              "text": "Rather than expand into a cubic and sum term by term, we use the V-n shortcut, which mirrors how integration raises a power."
+            },
+            {
+              "seq": 3,
+              "text": "The general rule: the sum of a product of k consecutive integers equals the product of k plus one consecutive integers, divided by k plus one."
+            },
+            {
+              "seq": 4,
+              "text": "Here k is three. So we append one more factor — n plus three — and divide by k plus one, which is four."
+            },
+            {
+              "seq": 5,
+              "text": "That gives the sum directly as n times n plus one times n plus two times n plus three, over four."
+            },
+            {
+              "seq": 6,
+              "text": "Verify with n equals one: the sum should be one times two times three, which is six, and the formula gives one times two times three times four over four, also six. It checks."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> The one rule to lock in is the divisor: you divide by the number of factors plus one. Using the wrong divisor is the classic V-n-method slip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example V-n method को उसके सबसे clean रूप में दिखाता है, तीन consecutive integers के एक product पर।"
+            },
+            {
+              "seq": 2,
+              "text": "एक cubic में expand करके term by term sum करने के बजाय, हम V-n shortcut use करते हैं, जो mirror करता है कि integration एक power कैसे बढ़ाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "general rule: k consecutive integers के product का sum, k plus one consecutive integers के product के बराबर है, k plus one से divided।"
+            },
+            {
+              "seq": 4,
+              "text": "यहाँ k three है। तो हम एक और factor append करते हैं — n plus three — और k plus one, यानी four से divide करते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "इससे sum सीधे मिलता है n times n plus one times n plus two times n plus three, over four।"
+            },
+            {
+              "seq": 6,
+              "text": "n equals one से verify करो: sum one times two times three, यानी six होना चाहिए, और formula देता है one times two times three times four over four, भी six। यह check हो गया।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> lock करने वाला एक rule है divisor: तुम number of factors plus one से divide करते हो। गलत divisor use करना classic V-n-method slip है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Telescoping Worked Examples",
+      "title": "A factorial telescoper",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Evaluate Σ r/(r+1)! from r = 1 to n"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Rewrite the numerator: $r = (r+1) - 1$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac{r}{(r+1)!} = \\frac{(r+1) - 1}{(r+1)!} = \\frac{1}{r!} - \\frac{1}{(r+1)!}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "This is a difference of consecutive reciprocal factorials."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "S_n = \\frac{1}{1!} - \\frac{1}{(n+1)!} = 1 - \\frac{1}{(n+1)!}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_\\infty = 1"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Look for $t_r = f(r) - f(r+1)$ with $f$ a factorial expression."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example telescopes a factorial series with a small but clever rewrite of the numerator."
+            },
+            {
+              "seq": 2,
+              "text": "The trick is to split the numerator. Write r as r plus one, minus one — a harmless-looking move that unlocks everything."
+            },
+            {
+              "seq": 3,
+              "text": "Now r over r-plus-one-factorial becomes r plus one minus one, over r-plus-one-factorial, which separates into one over r-factorial minus one over r-plus-one-factorial."
+            },
+            {
+              "seq": 4,
+              "text": "And that is exactly a difference of consecutive reciprocal factorials — a telescoper in disguise."
+            },
+            {
+              "seq": 5,
+              "text": "Summing, all the interior terms cancel, leaving one over one-factorial minus one over n-plus-one-factorial, which is one minus one over n-plus-one-factorial."
+            },
+            {
+              "seq": 6,
+              "text": "As n grows, the trailing factorial term races to zero, so the infinite sum is exactly one."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> The habit worth carrying: for factorial sums, look for a way to write the term as f of r minus f of r plus one, where f is some factorial expression. Once you spot it, the collapse is automatic."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example एक factorial series को telescope करता है, numerator के एक छोटे पर clever rewrite के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "trick है numerator को split करना। r को r plus one, minus one लिखो — एक harmless दिखने वाला move जो सब कुछ unlock कर देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "अब r over r-plus-one-factorial बन जाता है r plus one minus one, over r-plus-one-factorial, जो separate होता है one over r-factorial minus one over r-plus-one-factorial में।"
+            },
+            {
+              "seq": 4,
+              "text": "और यह exactly consecutive reciprocal factorials का एक difference है — disguise में एक telescoper।"
+            },
+            {
+              "seq": 5,
+              "text": "sum करने पर, सारे interior terms cancel हो जाते हैं, बचता है one over one-factorial minus one over n-plus-one-factorial, यानी one minus one over n-plus-one-factorial।"
+            },
+            {
+              "seq": 6,
+              "text": "जैसे-जैसे n बढ़ता है, आख़िरी factorial term zero की ओर दौड़ता है, तो infinite sum exactly one है।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> ले जाने लायक habit: factorial sums के लिए, term को f of r minus f of r plus one लिखने का तरीका ढूँढो, जहाँ f कोई factorial expression हो। जैसे ही spot करो, collapse automatic है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Telescoping Worked Examples",
+      "title": "A surd telescoper, evaluated at n = 99",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Sum Σ 1/(√r + √(r+1)), then evaluate for n = 99"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Rationalise the denominator to unlock the difference-form."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac{1}{\\sqrt{r} + \\sqrt{r+1}} = \\frac{\\sqrt{r+1} - \\sqrt{r}}{(\\sqrt{r+1})^2 - (\\sqrt{r})^2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "= \\sqrt{r+1} - \\sqrt{r}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "S_n = \\sqrt{n+1} - 1"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_{99} = \\sqrt{100} - 1 = 9"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Rationalising turns a sum of awkward fractions into a clean telescoper."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This Advanced example telescopes a surd series, and the key move is rationalising the denominator."
+            },
+            {
+              "seq": 2,
+              "text": "Each term looks intimidating — one over root r plus root r plus one — but rationalising tames it completely."
+            },
+            {
+              "seq": 3,
+              "text": "Multiply top and bottom by root r plus one minus root r. The denominator becomes a difference of squares: root r plus one squared minus root r squared, which is just one."
+            },
+            {
+              "seq": 4,
+              "text": "So each term collapses to simply root r plus one minus root r — a clean consecutive difference."
+            },
+            {
+              "seq": 5,
+              "text": "Summing telescopes it: everything cancels except the endpoints, leaving root n plus one minus one."
+            },
+            {
+              "seq": 6,
+              "text": "Now evaluate at n equals ninety-nine: root of one hundred minus one, which is ten minus one, equal to nine."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> That is the whole payoff — rationalising converted a sum of awkward-looking fractions into a clean telescoper, and a hundred-term sum came down to a single, tidy nine."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह Advanced example एक surd series को telescope करता है, और key move है denominator को rationalise करना।"
+            },
+            {
+              "seq": 2,
+              "text": "हर term डरावना दिखता है — one over root r plus root r plus one — पर rationalising इसे पूरी तरह वश में कर लेता है।"
+            },
+            {
+              "seq": 3,
+              "text": "ऊपर-नीचे को root r plus one minus root r से multiply करो। denominator बन जाता है difference of squares: root r plus one squared minus root r squared, यानी बस one।"
+            },
+            {
+              "seq": 4,
+              "text": "तो हर term बस root r plus one minus root r में collapse होता है — एक clean consecutive difference।"
+            },
+            {
+              "seq": 5,
+              "text": "sum करने पर यह telescope होता है: endpoints के अलावा सब cancel, बचता है root n plus one minus one।"
+            },
+            {
+              "seq": 6,
+              "text": "अब n equals ninety-nine पर evaluate करो: root of one hundred minus one, यानी ten minus one, बराबर nine।"
+            },
+            {
+              "seq": 7,
+              "text": "<excited> यही पूरा payoff है — rationalising ने awkward दिखने वाली fractions के sum को एक clean telescoper में बदल दिया, और सौ-term का sum एक अकेले, tidy nine पर आ गया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "tips",
+      "subtopic": "Telescoping",
+      "title": "Telescoping: the traps and the pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Telescoping — the traps, and the fast moves"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "No difference-form: brute-forcing or applying $\\sum n^k$ to a fraction/surd."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Endpoint sign: the answer is $V_1 - V_{n+1}$, not $V_0 - V_n$ — watch off-by-one."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Lost multiplier: keep the $\\tfrac12$ or $\\tfrac1k$ the split carries."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "$V_n$ divisor: divide by (number of factors + 1)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Pro-tip: fraction → partial fractions; product → $V_n$; surd → rationalise."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Factorials → write $t_r = f(r+1) - f(r)$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "After telescoping, the answer is always (first survivor) − (last survivor)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close Unit eight with the telescoping traps and the fast moves that beat them."
+            },
+            {
+              "seq": 2,
+              "text": "The dominant error is failing to reach a difference-form at all — brute-forcing the sum, or trying to apply the polynomial standard-sum formulas to a fraction or a surd, where they simply don't fit."
+            },
+            {
+              "seq": 3,
+              "text": "Second is the endpoint sign. After collapse, the answer is V-one minus V-n-plus-one — not V-nought minus V-n. Off-by-one on the surviving endpoints is the main slip."
+            },
+            {
+              "seq": 4,
+              "text": "Third, don't lose the multiplier. When the split carries a one half or a one over k, that constant must ride all the way through to the final answer."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, in the V-n method, divide by the number of factors plus one — the wrong divisor quietly wrecks the result."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> Now the decision tree. For a fraction, try partial fractions and look for a consecutive-shift difference. For a product of consecutive terms, use the V-n method. For a surd in the denominator, rationalise."
+            },
+            {
+              "seq": 7,
+              "text": "And for factorials, hunt for a way to write the term as f of r plus one minus f of r, with f a factorial expression."
+            },
+            {
+              "seq": 8,
+              "text": "Above all, remember the shape of every telescoping answer: it is always the first surviving term minus the last surviving term. If your answer isn't in that form, you haven't finished collapsing."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो Unit eight को telescoping traps और उन्हें हराने वाले fast moves के साथ बंद करें।"
+            },
+            {
+              "seq": 2,
+              "text": "dominant error है difference-form तक पहुँच ही न पाना — sum को brute-force करना, या एक fraction या surd पर polynomial standard-sum formulas apply करने की कोशिश करना, जहाँ वे fit ही नहीं होते।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा है endpoint sign। collapse के बाद, answer है V-one minus V-n-plus-one — V-nought minus V-n नहीं। surviving endpoints पर off-by-one main slip है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, multiplier मत खोओ। जब split एक one half या one over k रखे, वो constant final answer तक पूरे रास्ते साथ चलना चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, V-n method में, number of factors plus one से divide करो — गलत divisor चुपके से result बर्बाद कर देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> अब decision tree। एक fraction के लिए, partial fractions try करो और एक consecutive-shift difference ढूँढो। consecutive terms के product के लिए, V-n method use करो। denominator में surd के लिए, rationalise करो।"
+            },
+            {
+              "seq": 7,
+              "text": "और factorials के लिए, term को f of r plus one minus f of r लिखने का तरीका ढूँढो, f एक factorial expression के साथ।"
+            },
+            {
+              "seq": 8,
+              "text": "सबसे ऊपर, हर telescoping answer का shape याद रखो: यह हमेशा first surviving term minus last surviving term है। अगर तुम्हारा answer उस form में नहीं, तो तुमने collapse पूरा नहीं किया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Close",
+      "title": "Your complete Sequences & Series toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Every formula from the chapter, in one place"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\textbf{AP:}\\;\\; a_n = a + (n-1)d, \\quad S_n = \\tfrac{n}{2}\\,[2a + (n-1)d] = \\tfrac{n}{2}(a+l)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\textbf{GP:}\\;\\; a_n = a r^{\\,n-1}, \\quad S_n = \\tfrac{a(1 - r^n)}{1 - r}, \\quad S_\\infty = \\tfrac{a}{1-r}\\;(|r|<1)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\textbf{HP:}\\;\\; \\tfrac{1}{a_n}\\text{ in AP}, \\quad H = \\tfrac{2ab}{a+b}, \\quad a_n = \\tfrac{pq}{n}\\;\\text{(for }p\\text{th}=q\\text{)}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\textbf{Means:}\\;\\; A \\ge G \\ge H, \\quad AH = G^2, \\quad a,b = A \\pm \\sqrt{A^2 - G^2}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\textbf{AGP:}\\;\\; t_n = [a+(n-1)d]r^{\\,n-1}, \\quad S_\\infty = \\tfrac{a}{1-r} + \\tfrac{dr}{(1-r)^2}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\textbf{Sums:}\\;\\; \\sum r = \\tfrac{n(n+1)}{2}, \\;\\; \\sum r^2 = \\tfrac{n(n+1)(2n+1)}{6}, \\;\\; \\sum r^3 = (\\sum r)^2"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\textbf{Telescope:}\\;\\; t_r = V_r - V_{r+1} \\Rightarrow \\sum = V_1 - V_{n+1}, \\;\\; \\sum\\tfrac{1}{r(r+1)} = \\tfrac{n}{n+1}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "This is your complete toolkit — every result the chapter rests on, on one board."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is your complete toolkit for the whole chapter, gathered on a single board. This is a recap — we're restating, not re-teaching, so let the formulas trigger the reasoning you already know."
+            },
+            {
+              "seq": 2,
+              "text": "Arithmetic progressions: the n-th term is a plus n minus one d, and the sum is n over two times two a plus n minus one d, or equivalently n over two times a plus last term."
+            },
+            {
+              "seq": 3,
+              "text": "Geometric progressions: the n-th term is a r to the n minus one, the finite sum is a times one minus r to the n over one minus r, and the sum to infinity is a over one minus r when the size of r is below one."
+            },
+            {
+              "seq": 4,
+              "text": "Harmonic progressions: reciprocate to an AP, the harmonic mean is two a b over a plus b, and remember the p-th-equals-q result, n-th term equals p q over n."
+            },
+            {
+              "seq": 5,
+              "text": "The means relationship: arithmetic at least geometric at least harmonic, the identity A H equals G squared, and recovery of the numbers as A plus or minus the root of A squared minus G squared."
+            },
+            {
+              "seq": 6,
+              "text": "Arithmetico-geometric progressions: the general term is a plus n minus one d, times r to the n minus one, with the compact sum to infinity a over one minus r plus d r over one minus r squared."
+            },
+            {
+              "seq": 7,
+              "text": "The special sums: the sum of r, the sum of r squared, and the memorable sum of cubes equals the square of the sum."
+            },
+            {
+              "seq": 8,
+              "text": "And telescoping: t-r equals V-r minus V-r-plus-one collapses to V-one minus V-n-plus-one, with the flagship sum of one over r times r plus one equal to n over n plus one."
+            },
+            {
+              "seq": 9,
+              "text": "<excited> That single board is everything the chapter rests on — carry it into the exam hall and every problem becomes a matter of choosing the right tool."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा पूरे chapter का तुम्हारा complete toolkit, एक ही board पर इकट्ठा। यह एक recap है — हम restate कर रहे हैं, फिर से नहीं पढ़ा रहे, तो formulas को वो reasoning trigger करने दो जो तुम पहले से जानते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "arithmetic progressions: n-th term है a plus n minus one d, और sum है n over two times two a plus n minus one d, या equivalently n over two times a plus last term।"
+            },
+            {
+              "seq": 3,
+              "text": "geometric progressions: n-th term है a r to the n minus one, finite sum है a times one minus r to the n over one minus r, और sum to infinity है a over one minus r जब r की size one से नीचे हो।"
+            },
+            {
+              "seq": 4,
+              "text": "harmonic progressions: AP में reciprocate करो, harmonic mean है two a b over a plus b, और p-th-equals-q result याद रखो, n-th term equals p q over n।"
+            },
+            {
+              "seq": 5,
+              "text": "means relationship: arithmetic कम से कम geometric कम से कम harmonic, identity A H equals G squared, और numbers की recovery A plus or minus root of A squared minus G squared।"
+            },
+            {
+              "seq": 6,
+              "text": "arithmetico-geometric progressions: general term है a plus n minus one d, times r to the n minus one, compact sum to infinity a over one minus r plus d r over one minus r squared के साथ।"
+            },
+            {
+              "seq": 7,
+              "text": "special sums: sum of r, sum of r squared, और वो यादगार sum of cubes equals square of the sum।"
+            },
+            {
+              "seq": 8,
+              "text": "और telescoping: t-r equals V-r minus V-r-plus-one, V-one minus V-n-plus-one में collapse होता है, flagship sum one over r times r plus one equal to n over n plus one के साथ।"
+            },
+            {
+              "seq": 9,
+              "text": "<excited> वो एक board सब कुछ है जिस पर chapter टिका है — इसे exam hall में ले जाओ और हर problem सही tool चुनने की बात बन जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Close",
+      "title": "Quick-recall cheat sheet",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Fast recall: one line per idea"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "AP: $a_n = a + (n-1)d$; test — $a_n$ linear, or $S_n$ quadratic with zero constant."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "text": "GP: $a_n = a r^{n-1}$; $S_\\infty$ needs $|r| < 1$; for '$a,b,c$ in GP' use $b^2 = ac$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "text": "HP: reciprocate → AP; $H = \\tfrac{2ab}{a+b}$; no general sum formula."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "text": "Means: $A \\ge G \\ge H$; $AH = G^2$; recover via $x^2 - 2Ax + G^2 = 0$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "AGP: multiply by $r$, shift, subtract; $S_\\infty = \\tfrac{a}{1-r} + \\tfrac{dr}{(1-r)^2}$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Special sums: find $t_n$ → powers of $n$ → apply; shortcut $\\sum n^3 = (\\sum n)^2$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Telescope: write $t_r$ as a difference; only $V_1 - V_{n+1}$ survives."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Golden habit throughout: position → general term $a_n$ → then list or sum."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Finally, the quick-recall cheat sheet — one line per idea, the kind of thing to skim minutes before an exam."
+            },
+            {
+              "seq": 2,
+              "text": "For arithmetic progressions: the n-th term is a plus n minus one d, and to test whether something is an AP, check that the term is linear in n, or that the sum is quadratic with a zero constant."
+            },
+            {
+              "seq": 3,
+              "text": "For geometric progressions: the n-th term is a r to the n minus one, the infinite sum needs the size of r below one, and for any three-in-GP condition reach straight for b squared equals a c."
+            },
+            {
+              "seq": 4,
+              "text": "For harmonic progressions: reciprocate to an AP, the harmonic mean is two a b over a plus b, and remember there is no general sum formula."
+            },
+            {
+              "seq": 5,
+              "text": "For the means: arithmetic at least geometric at least harmonic, the identity A H equals G squared, and recover two numbers from the quadratic x squared minus two A x plus G squared."
+            },
+            {
+              "seq": 6,
+              "text": "For arithmetico-geometric progressions: multiply the sum by r, shift, and subtract; and the compact infinite sum is a over one minus r plus d r over one minus r squared."
+            },
+            {
+              "seq": 7,
+              "text": "For special sums: find the general term, express it in powers of n, and apply the standard sums, with the shortcut that the sum of cubes is the square of the sum."
+            },
+            {
+              "seq": 8,
+              "text": "For telescoping: write the term as a difference of consecutive things, and only the first and last survivors remain."
+            },
+            {
+              "seq": 9,
+              "text": "<whisper> And carry the golden habit through everything: go from position, to the general term a sub n, and only then decide whether to list or to sum. Get that reflex right and the whole chapter is yours."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िर में, quick-recall cheat sheet — एक idea पर एक line, exam से मिनटों पहले skim करने लायक चीज़।"
+            },
+            {
+              "seq": 2,
+              "text": "arithmetic progressions के लिए: n-th term है a plus n minus one d, और यह test करने के लिए कि कुछ AP है या नहीं, देखो कि term n में linear है, या sum zero constant के साथ quadratic है।"
+            },
+            {
+              "seq": 3,
+              "text": "geometric progressions के लिए: n-th term है a r to the n minus one, infinite sum को r की size one से नीचे चाहिए, और किसी भी three-in-GP condition के लिए सीधे b squared equals a c reach करो।"
+            },
+            {
+              "seq": 4,
+              "text": "harmonic progressions के लिए: AP में reciprocate करो, harmonic mean है two a b over a plus b, और याद रखो कोई general sum formula नहीं है।"
+            },
+            {
+              "seq": 5,
+              "text": "means के लिए: arithmetic कम से कम geometric कम से कम harmonic, identity A H equals G squared, और दो numbers को quadratic x squared minus two A x plus G squared से recover करो।"
+            },
+            {
+              "seq": 6,
+              "text": "arithmetico-geometric progressions के लिए: sum को r से multiply करो, shift करो, और subtract करो; और compact infinite sum है a over one minus r plus d r over one minus r squared।"
+            },
+            {
+              "seq": 7,
+              "text": "special sums के लिए: general term निकालो, इसे n की powers में express करो, और standard sums apply करो, इस shortcut के साथ कि sum of cubes, sum का square है।"
+            },
+            {
+              "seq": 8,
+              "text": "telescoping के लिए: term को consecutive things के difference के रूप में लिखो, और सिर्फ़ पहला और आख़िरी survivor बचते हैं।"
+            },
+            {
+              "seq": 9,
+              "text": "<whisper> और golden habit हर चीज़ में ले जाओ: position से चलो, general term a sub n तक जाओ, और तभी decide करो कि list करना है या sum। वो reflex सही कर लो और पूरा chapter तुम्हारा है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

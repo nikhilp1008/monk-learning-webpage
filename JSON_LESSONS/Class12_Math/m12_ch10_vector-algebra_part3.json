@@ -1,0 +1,2622 @@
+{
+  "chapter": "Vector Algebra",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 10,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "The scalar triple product: a volume",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The scalar triple product: a volume"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Take three vectors a, b, c from one corner; they frame a slanted box (parallelepiped)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "The scalar triple product $[\\vec a\\ \\vec b\\ \\vec c] = \\vec a \\cdot (\\vec b \\times \\vec c)$ measures that box's volume."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "$\\vec b \\times \\vec c$ gives the base area (as a vector); dotting with a adds the height."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "style": "red-margin",
+          "text": "The output is a single number, a scalar, hence 'scalar' triple product."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "If the box is flat, the volume is zero, the three vectors are coplanar."
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "caption": "Three edge vectors a, b, c cage a parallelepiped whose volume is the triple product.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 280\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ahb\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 Z\" fill=\"#333\"/></marker></defs><text x=\"105\" y=\"24\" font-size=\"15\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Volume = mag of [a b c]</text><line x1=\"240\" y1=\"220\" x2=\"290\" y2=\"150\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"240\" y1=\"220\" x2=\"240\" y2=\"110\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"150\" x2=\"160\" y2=\"40\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"110\" y1=\"110\" x2=\"240\" y2=\"110\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"110\" y1=\"110\" x2=\"160\" y2=\"40\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"290\" y1=\"150\" x2=\"290\" y2=\"40\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"240\" y1=\"110\" x2=\"290\" y2=\"40\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"40\" x2=\"290\" y2=\"40\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"110\" y1=\"220\" x2=\"240\" y2=\"220\" stroke=\"#c0392b\" stroke-width=\"2.6\" marker-end=\"url(#ahb)\"/><text x=\"178\" y=\"240\" font-size=\"14\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">a</text><line x1=\"110\" y1=\"220\" x2=\"160\" y2=\"150\" stroke=\"#2c6fbb\" stroke-width=\"2.6\" marker-end=\"url(#ahb)\"/><text x=\"126\" y=\"182\" font-size=\"14\" font-family=\"system-ui, sans-serif\" fill=\"#2c6fbb\">b</text><line x1=\"110\" y1=\"220\" x2=\"110\" y2=\"110\" stroke=\"#1a9850\" stroke-width=\"2.6\" marker-end=\"url(#ahb)\"/><text x=\"84\" y=\"160\" font-size=\"14\" font-family=\"system-ui, sans-serif\" fill=\"#1a9850\">c</text></svg>"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "So one number decides both volume AND whether three vectors share a plane."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>We can multiply two vectors two ways. What happens when we bring in a third? The most useful answer measures a volume."
+            },
+            {
+              "seq": 2,
+              "text": "Take three vectors a, b and c, all drawn from a single corner. Together they frame a slanted box, a parallelepiped."
+            },
+            {
+              "seq": 3,
+              "text": "The scalar triple product, written a b c in a box bracket, is a dotted with the quantity b cross c, and it measures the volume of that box."
+            },
+            {
+              "seq": 4,
+              "text": "The logic is lovely: b cross c gives the area of the base, as a vector pointing perpendicular to it, and dotting with a supplies the height."
+            },
+            {
+              "seq": 5,
+              "text": "And the output is a single number, a scalar, which is exactly why it is called the scalar triple product."
+            },
+            {
+              "seq": 6,
+              "text": "Now the powerful special case: if the box is squashed flat, its volume is zero, and that means the three vectors all lie in one plane, they are coplanar."
+            },
+            {
+              "seq": 7,
+              "text": "On the board the three edge vectors a, b and c spring from one corner and cage a solid box whose volume is that triple product."
+            },
+            {
+              "seq": 8,
+              "text": "So a single number does two jobs at once: it gives the volume, and it tells you whether the three vectors share a plane."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>दो vectors को हम दो तरह से multiply कर सकते हैं। तीसरा लाने पर क्या होता है? सबसे useful जवाब एक volume measure करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "तीन vectors a, b और c लो, सब एक ही corner से खींचे। मिल कर वो एक slanted box, एक parallelepiped, frame करते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Scalar triple product, box bracket में a b c लिखा जाता है, है a dotted with the quantity b cross c, और ये उस box का volume measure करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Logic खूबसूरत है: b cross c base का area देता है, उसके perpendicular pointing एक vector के रूप में, और a से dot करना height supply करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "और output एक single number है, एक scalar, इसीलिए इसे scalar triple product कहते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "अब powerful special case: अगर box चपटा हो जाए, उसका volume zero है, और इसका मतलब तीनों vectors एक ही plane में हैं, वो coplanar हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Board पर तीनों edge vectors a, b और c एक corner से निकलते हैं और एक solid box को घेरते हैं जिसका volume वही triple product है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो एक single number एक साथ दो काम करता है: volume देता है, और बताता है कि तीनों vectors एक plane share करते हैं या नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "The vector triple product: back into the plane",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The vector triple product: back into the plane"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Now multiply so the answer is a VECTOR: $\\vec a \\times (\\vec b \\times \\vec c)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "$\\vec b \\times \\vec c$ pops OUT of the b-c plane; crossing again with a swings the result BACK into it."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "So $\\vec a \\times (\\vec b \\times \\vec c)$ always lies in the plane of b and c."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "style": "red-margin",
+          "text": "It is a blend of b and c, never involving a fresh direction."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "The recipe is the 'back cab' rule: $(\\vec a \\cdot \\vec c)\\vec b - (\\vec a \\cdot \\vec b)\\vec c$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Brackets are everything: $\\vec a \\times (\\vec b \\times \\vec c) \\neq (\\vec a \\times \\vec b) \\times \\vec c$."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "caption": "b x c stands out of the plane; a x (b x c) lies flat inside the b-c plane.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ahv\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 Z\" fill=\"#333\"/></marker></defs><text x=\"80\" y=\"22\" font-size=\"14\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">a x (b x c) lies in the b-c plane</text><polygon points=\"80,200 300,200 370,150 150,150\" fill=\"#eef3fa\" stroke=\"#9bb8d8\" stroke-width=\"1\"/><circle cx=\"150\" cy=\"185\" r=\"3.5\" fill=\"#333\"/><line x1=\"150\" y1=\"185\" x2=\"310\" y2=\"185\" stroke=\"#2c6fbb\" stroke-width=\"2.4\" marker-end=\"url(#ahv)\"/><text x=\"312\" y=\"190\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#2c6fbb\">b</text><line x1=\"150\" y1=\"185\" x2=\"240\" y2=\"158\" stroke=\"#0b8a8a\" stroke-width=\"2.4\" marker-end=\"url(#ahv)\"/><text x=\"243\" y=\"155\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#0b8a8a\">c</text><line x1=\"150\" y1=\"185\" x2=\"150\" y2=\"55\" stroke=\"#1a9850\" stroke-width=\"2\" stroke-dasharray=\"5 4\" marker-end=\"url(#ahv)\"/><text x=\"86\" y=\"58\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#1a9850\">b x c (out of plane)</text><line x1=\"150\" y1=\"185\" x2=\"285\" y2=\"168\" stroke=\"#8e44ad\" stroke-width=\"2.6\" marker-end=\"url(#ahv)\"/><text x=\"216\" y=\"206\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#8e44ad\">a x (b x c)</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The other way to multiply three vectors keeps the answer a vector, and it has a surprising geometry."
+            },
+            {
+              "seq": 2,
+              "text": "This is the vector triple product, a crossed with the quantity b cross c."
+            },
+            {
+              "seq": 3,
+              "text": "Trace the directions: b cross c pops straight out of the plane containing b and c. But then crossing again with a swings the result back down into that very plane."
+            },
+            {
+              "seq": 4,
+              "text": "So here is the key fact, a cross the quantity b cross c always lies in the plane of b and c."
+            },
+            {
+              "seq": 5,
+              "text": "It is a blend, a mixture, of b and c only; it never points off in some fresh third direction."
+            },
+            {
+              "seq": 6,
+              "text": "The exact recipe is the back cab rule: a cross the quantity b cross c equals, a dot c, times b, minus, a dot b, times c."
+            },
+            {
+              "seq": 7,
+              "text": "And brackets are absolutely everything here. a cross the quantity b cross c is not equal to the quantity a cross b, crossed with c, moving the bracket changes the answer."
+            },
+            {
+              "seq": 8,
+              "text": "On the board you can see b cross c standing up out of the plane, while the final vector triple product lies flat inside the b c plane, a combination of the two."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "तीन vectors को multiply करने का दूसरा तरीका answer को vector रखता है, और इसकी geometry surprising है।"
+            },
+            {
+              "seq": 2,
+              "text": "ये है vector triple product, a crossed with the quantity b cross c."
+            },
+            {
+              "seq": 3,
+              "text": "Directions trace करो: b cross c उस plane से सीधा बाहर निकलता है जिसमें b और c हैं। पर फिर a से दोबारा cross करना result को वापस उसी plane में नीचे swing कर देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो यहाँ key fact है, a cross the quantity b cross c हमेशा b और c के plane में रहता है।"
+            },
+            {
+              "seq": 5,
+              "text": "ये सिर्फ b और c का एक blend, एक mixture, है; ये कभी किसी fresh तीसरी direction में नहीं जाता।"
+            },
+            {
+              "seq": 6,
+              "text": "Exact recipe है back cab rule: a cross the quantity b cross c equals, a dot c, times b, minus, a dot b, times c."
+            },
+            {
+              "seq": 7,
+              "text": "और यहाँ brackets बिल्कुल सब कुछ हैं। a cross the quantity b cross c, the quantity a cross b, crossed with c के equal नहीं है, bracket हिलाने से answer बदल जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Board पर देखिए b cross c plane से ऊपर खड़ा है, जबकि final vector triple product b c plane के अंदर flat पड़ा है, दोनों का combination."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Three traps with triple products",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Three traps with triple products"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Scalar vs vector output: $[\\vec a\\ \\vec b\\ \\vec c]$ is a number; $\\vec a \\times (\\vec b \\times \\vec c)$ is a vector."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "The vector triple product is NOT associative, brackets cannot be dropped."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "style": "red-margin",
+          "text": "Never write $\\vec a \\times \\vec b \\times \\vec c$ without brackets, it is undefined."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Coplanarity means $[\\vec a\\ \\vec b\\ \\vec c] = 0$, a flat box, zero volume."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "A repeated vector kills the scalar triple product: $[\\vec a\\ \\vec a\\ \\vec c] = 0$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Cyclic order is safe; a single swap flips the sign."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Most errors here are misplaced brackets or a forgotten sign."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before the formulas, three traps that triple products set for the unwary."
+            },
+            {
+              "seq": 2,
+              "text": "First, keep the outputs straight: the scalar triple product a b c is a number, while the vector triple product a cross the quantity b cross c is a vector."
+            },
+            {
+              "seq": 3,
+              "text": "Second, and this is the big one, the vector triple product is not associative, you cannot simply drop the brackets."
+            },
+            {
+              "seq": 4,
+              "text": "So never write a cross b cross c with no brackets at all; without them the expression is genuinely undefined."
+            },
+            {
+              "seq": 5,
+              "text": "Third, coplanarity has one crisp test: the scalar triple product equals zero, meaning a flat box of zero volume."
+            },
+            {
+              "seq": 6,
+              "text": "A related fact, if any vector is repeated the scalar triple product collapses to zero, because the box has a degenerate, zero-thickness edge."
+            },
+            {
+              "seq": 7,
+              "text": "For the scalar triple product, cyclic order is safe, but a single swap of two vectors flips the sign, so track your swaps."
+            },
+            {
+              "seq": 8,
+              "text": "Truly, most mistakes in this subtopic are just a misplaced bracket or a forgotten sign, guard those two and you are most of the way home."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Formulas से पहले, तीन traps जो triple products लापरवाह के लिए सेट करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, outputs सीधे रखो: scalar triple product a b c एक number है, जबकि vector triple product a cross the quantity b cross c एक vector है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, और ये बड़ा वाला है, vector triple product associative नहीं है, आप बस brackets drop नहीं कर सकते।"
+            },
+            {
+              "seq": 4,
+              "text": "तो a cross b cross c को कभी बिना brackets के मत लिखो; उनके बिना expression सच में undefined है।"
+            },
+            {
+              "seq": 5,
+              "text": "तीसरा, coplanarity का एक crisp test है: scalar triple product equals zero, यानी zero volume का एक flat box।"
+            },
+            {
+              "seq": 6,
+              "text": "एक related fact, अगर कोई vector repeat हो जाए तो scalar triple product zero में collapse हो जाता है, क्योंकि box में एक degenerate, zero-thickness edge होता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Scalar triple product के लिए, cyclic order safe है, पर दो vectors का एक single swap sign flip कर देता है, तो अपने swaps track करो।"
+            },
+            {
+              "seq": 8,
+              "text": "सच में, इस subtopic की ज़्यादातर mistakes बस एक misplaced bracket या एक forgotten sign हैं, इन दोनों को guard करो और आप काम पूरा कर लोगे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Scalar triple product: definition and determinant",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Scalar triple product: definition and determinant"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "[\\vec a\\ \\vec b\\ \\vec c] = \\vec a \\cdot (\\vec b \\times \\vec c)"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "In components, it is a single $3\\times3$ determinant of the rows:"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 21,
+          "latex": "[\\vec a\\ \\vec b\\ \\vec c] = \\begin{vmatrix} a_1 & a_2 & a_3 \\\\ b_1 & b_2 & b_3 \\\\ c_1 & c_2 & c_3 \\end{vmatrix}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "The sign tells orientation; the absolute value is the volume."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "style": "red-margin",
+          "text": "Rows are the three vectors in order, a on top, then b, then c."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "One determinant replaces a cross product followed by a dot product."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "This is the computational heart of the whole subtopic."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us make the scalar triple product precise, and then compress it into a single determinant."
+            },
+            {
+              "seq": 2,
+              "text": "By definition, the scalar triple product a b c is a dotted with the quantity b cross c."
+            },
+            {
+              "seq": 3,
+              "text": "But writing it in components reveals something beautiful, it is just one three by three determinant."
+            },
+            {
+              "seq": 4,
+              "text": "Stack the components of a in the top row, b in the middle row, and c in the bottom row, and evaluate that determinant."
+            },
+            {
+              "seq": 5,
+              "text": "The sign of the result tells you the orientation, right handed or left handed, and its absolute value is the volume of the box."
+            },
+            {
+              "seq": 6,
+              "text": "Keep the row order straight, a on top, then b, then c, because swapping rows flips the sign."
+            },
+            {
+              "seq": 7,
+              "text": "The real convenience is that this one determinant replaces a cross product followed by a dot product, two operations folded into one."
+            },
+            {
+              "seq": 8,
+              "text": "This determinant is the computational heart of everything in this subtopic, so it is worth being fast and accurate with it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Scalar triple product को precise बनाते हैं, और फिर उसे एक single determinant में compress करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Definition से, scalar triple product a b c है a dotted with the quantity b cross c."
+            },
+            {
+              "seq": 3,
+              "text": "पर इसे components में लिखने से कुछ beautiful पता चलता है, ये बस एक three by three determinant है।"
+            },
+            {
+              "seq": 4,
+              "text": "a के components को top row में, b को middle row में, और c को bottom row में रखो, और वो determinant evaluate करो।"
+            },
+            {
+              "seq": 5,
+              "text": "Result का sign orientation बताता है, right handed या left handed, और उसका absolute value box का volume है।"
+            },
+            {
+              "seq": 6,
+              "text": "Row order सीधा रखो, a top पर, फिर b, फिर c, क्योंकि rows swap करने से sign flip होता है।"
+            },
+            {
+              "seq": 7,
+              "text": "असली convenience ये है कि ये एक determinant एक cross product फिर एक dot product को replace कर देता है, दो operations एक में folded।"
+            },
+            {
+              "seq": 8,
+              "text": "ये determinant इस subtopic की हर चीज़ का computational दिल है, तो इसमें fast और accurate होना worth it है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "formulas",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Scalar triple product properties",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Scalar triple product properties"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Cyclic invariance: $[\\vec a\\ \\vec b\\ \\vec c] = [\\vec b\\ \\vec c\\ \\vec a] = [\\vec c\\ \\vec a\\ \\vec b]$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "One swap flips the sign: $[\\vec a\\ \\vec b\\ \\vec c] = -[\\vec b\\ \\vec a\\ \\vec c]$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\vec a \\cdot (\\vec b \\times \\vec c) = (\\vec a \\times \\vec b) \\cdot \\vec c"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "style": "red-margin",
+          "text": "Dot and cross can trade places, as long as the cyclic order holds."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "[\\vec a\\ \\vec b\\ \\vec c] = 0 \\iff \\vec a,\\ \\vec b,\\ \\vec c \\text{ coplanar}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Any repeated vector gives zero: $[\\vec a\\ \\vec a\\ \\vec c] = 0$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "These turn ugly expressions into quick sign-and-swap bookkeeping."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The scalar triple product obeys a handful of properties that make it a joy to work with."
+            },
+            {
+              "seq": 2,
+              "text": "First, cyclic invariance: rotating the three vectors in a cycle leaves it unchanged, a b c equals b c a equals c a b."
+            },
+            {
+              "seq": 3,
+              "text": "But a single swap of two vectors flips the sign, so a b c equals minus b a c."
+            },
+            {
+              "seq": 4,
+              "text": "Second, a remarkable interchange, a dotted with b cross c equals a cross b, dotted with c."
+            },
+            {
+              "seq": 5,
+              "text": "In words, the dot and the cross can trade places freely, as long as the cyclic order of the three vectors is preserved."
+            },
+            {
+              "seq": 6,
+              "text": "Third, and most used, the scalar triple product is zero if and only if the three vectors are coplanar, our flat-box test."
+            },
+            {
+              "seq": 7,
+              "text": "And a quick corollary, if any vector is repeated the whole thing is zero, since two equal rows make a determinant vanish."
+            },
+            {
+              "seq": 8,
+              "text": "Together these properties turn frightening-looking expressions into quick sign-and-swap bookkeeping."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Scalar triple product कुछ properties follow करता है जो इसके साथ काम करना मज़ेदार बना देती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली, cyclic invariance: तीनों vectors को एक cycle में rotate करने पर ये unchanged रहता है, a b c equals b c a equals c a b."
+            },
+            {
+              "seq": 3,
+              "text": "पर दो vectors का एक single swap sign flip करता है, तो a b c equals minus b a c."
+            },
+            {
+              "seq": 4,
+              "text": "दूसरी, एक remarkable interchange, a dotted with b cross c equals a cross b, dotted with c."
+            },
+            {
+              "seq": 5,
+              "text": "शब्दों में, dot और cross आपस में जगह बदल सकते हैं, जब तक तीनों vectors का cyclic order बना रहे।"
+            },
+            {
+              "seq": 6,
+              "text": "तीसरी, और सबसे ज़्यादा use होने वाली, scalar triple product zero है if and only if तीनों vectors coplanar हों, हमारा flat-box test."
+            },
+            {
+              "seq": 7,
+              "text": "और एक quick corollary, अगर कोई vector repeat हो तो पूरी चीज़ zero है, क्योंकि दो equal rows determinant को vanish कर देती हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "मिल कर ये properties डरावने दिखने वाले expressions को quick sign-and-swap bookkeeping में बदल देती हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "formulas",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Volume applications",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Volume applications"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Parallelepiped with edges a, b, c from one vertex:"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "latex": "V_{\\text{parallelepiped}} = |[\\vec a\\ \\vec b\\ \\vec c]|"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "A tetrahedron is one sixth of that same box:"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "latex": "V_{\\text{tetrahedron}} = \\tfrac{1}{6}\\,|[\\vec a\\ \\vec b\\ \\vec c]|"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "style": "red-margin",
+          "text": "Take the absolute value, a volume is never negative."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "For a tetrahedron from four points, use edge vectors from one vertex."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "caption": "A tetrahedron occupies exactly one sixth of its parallelepiped.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 380 300\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"aht\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 Z\" fill=\"#333\"/></marker></defs><text x=\"55\" y=\"26\" font-size=\"15\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Tetrahedron = one sixth of the box</text><line x1=\"290\" y1=\"250\" x2=\"185\" y2=\"200\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"185\" y1=\"200\" x2=\"165\" y2=\"60\" stroke=\"#bbb\" stroke-width=\"1.2\"/><line x1=\"290\" y1=\"250\" x2=\"165\" y2=\"60\" stroke=\"#999\" stroke-width=\"1.4\"/><line x1=\"90\" y1=\"250\" x2=\"290\" y2=\"250\" stroke=\"#c0392b\" stroke-width=\"2.6\" marker-end=\"url(#aht)\"/><text x=\"183\" y=\"270\" font-size=\"14\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">a</text><line x1=\"90\" y1=\"250\" x2=\"185\" y2=\"200\" stroke=\"#2c6fbb\" stroke-width=\"2.6\" marker-end=\"url(#aht)\"/><text x=\"133\" y=\"214\" font-size=\"14\" font-family=\"system-ui, sans-serif\" fill=\"#2c6fbb\">b</text><line x1=\"90\" y1=\"250\" x2=\"165\" y2=\"60\" stroke=\"#1a9850\" stroke-width=\"2.6\" marker-end=\"url(#aht)\"/><text x=\"110\" y=\"150\" font-size=\"14\" font-family=\"system-ui, sans-serif\" fill=\"#1a9850\">c</text><circle cx=\"90\" cy=\"250\" r=\"4\" fill=\"#333\"/><text x=\"70\" y=\"266\" font-size=\"12\" font-family=\"system-ui, sans-serif\">P</text></svg>"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The scalar triple product turns directly into volumes, and this is where most exam marks live."
+            },
+            {
+              "seq": 2,
+              "text": "For a parallelepiped, the slanted box with edges a, b and c meeting at a vertex, the volume is simply the modulus of the scalar triple product."
+            },
+            {
+              "seq": 3,
+              "text": "So the parallelepiped volume is the absolute value of a b c."
+            },
+            {
+              "seq": 4,
+              "text": "A tetrahedron, a triangular pyramid, fits exactly six times inside that same box."
+            },
+            {
+              "seq": 5,
+              "text": "So its volume is one sixth of the absolute value of the scalar triple product."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Always take the absolute value, the raw triple product can come out negative, but a volume never can."
+            },
+            {
+              "seq": 7,
+              "text": "And when a tetrahedron is given by four points, first build three edge vectors from one common vertex, then feed them in."
+            },
+            {
+              "seq": 8,
+              "text": "On the board the tetrahedron sits inside its parallelepiped, occupying exactly one sixth of the volume."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Scalar triple product सीधे volumes में बदल जाता है, और यहीं exam के ज़्यादातर marks रहते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "एक parallelepiped के लिए, वो slanted box जिसकी edges a, b और c एक vertex पर मिलती हैं, volume बस scalar triple product का modulus है।"
+            },
+            {
+              "seq": 3,
+              "text": "तो parallelepiped volume है a b c का absolute value."
+            },
+            {
+              "seq": 4,
+              "text": "एक tetrahedron, एक triangular pyramid, उसी box के अंदर exactly छह बार fit होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो उसका volume scalar triple product के absolute value का one sixth है।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>हमेशा absolute value लो, raw triple product negative आ सकता है, पर volume कभी नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "और जब tetrahedron चार points से दिया हो, पहले एक common vertex से तीन edge vectors बनाओ, फिर उन्हें feed करो।"
+            },
+            {
+              "seq": 8,
+              "text": "Board पर tetrahedron अपने parallelepiped के अंदर बैठा है, volume का exactly one sixth घेरे हुए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Vector triple product: the back cab rule",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Vector triple product: the back cab rule"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "\\vec a \\times (\\vec b \\times \\vec c) = (\\vec a \\cdot \\vec c)\\,\\vec b - (\\vec a \\cdot \\vec b)\\,\\vec c"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Memory hook 'back cab': the middle vector b comes first, with a plus sign."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "The outer vector a is dotted with each of the inner vectors."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "(\\vec a \\times \\vec b) \\times \\vec c = (\\vec a \\cdot \\vec c)\\,\\vec b - (\\vec b \\cdot \\vec c)\\,\\vec a"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "style": "red-margin",
+          "text": "Different brackets, different result, the two are generally NOT equal."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "The result lies in the plane of the two vectors inside the inner bracket."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Every term is a scalar (a dot product) times a vector, dimensions stay clean."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the exact formula for the vector triple product, the single most useful identity in this subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "a cross the quantity b cross c equals, a dot c, times b, minus, a dot b, times c."
+            },
+            {
+              "seq": 3,
+              "text": "The memory hook is back cab: the middle vector b leads, carrying a plus sign, and c follows with a minus."
+            },
+            {
+              "seq": 4,
+              "text": "Notice the pattern, the outer vector a is dotted with each inner vector in turn, producing the two scalar weights."
+            },
+            {
+              "seq": 5,
+              "text": "If instead the bracket sits on the left, the quantity a cross b, then crossed with c, the answer is a dot c times b, minus b dot c times a, a different combination."
+            },
+            {
+              "seq": 6,
+              "text": "So different bracket placements give genuinely different results, the two forms are generally not equal."
+            },
+            {
+              "seq": 7,
+              "text": "In both cases the result lives in the plane of the two vectors inside the inner bracket, exactly as the intuition promised."
+            },
+            {
+              "seq": 8,
+              "text": "And every term is a scalar, a dot product, times a vector, so the dimensions stay perfectly clean throughout."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब vector triple product का exact formula, इस subtopic की सबसे useful identity।"
+            },
+            {
+              "seq": 2,
+              "text": "a cross the quantity b cross c equals, a dot c, times b, minus, a dot b, times c."
+            },
+            {
+              "seq": 3,
+              "text": "Memory hook है back cab: middle vector b आगे रहता है, plus sign के साथ, और c minus के साथ follow करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Pattern notice करो, outer vector a हर inner vector से बारी बारी dot होता है, दो scalar weights बनाते हुए।"
+            },
+            {
+              "seq": 5,
+              "text": "अगर bracket left पर हो, the quantity a cross b, फिर c से crossed, तो answer है a dot c times b, minus b dot c times a, एक अलग combination।"
+            },
+            {
+              "seq": 6,
+              "text": "तो अलग bracket placements सच में अलग results देते हैं, दोनों forms generally equal नहीं हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "दोनों cases में result inner bracket के अंदर के दो vectors के plane में रहता है, ठीक जैसा intuition ने promise किया।"
+            },
+            {
+              "seq": 8,
+              "text": "और हर term एक scalar, एक dot product, times एक vector है, तो dimensions पूरे भर perfectly clean रहते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "formulas",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "More on the vector triple product; reciprocal system",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "More on the vector triple product; reciprocal system"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Non-associative: $\\vec a \\times (\\vec b \\times \\vec c) \\neq (\\vec a \\times \\vec b) \\times \\vec c$ in general."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Jacobi identity: the three cyclic vector triple products sum to zero."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\vec a \\times (\\vec b \\times \\vec c) + \\vec b \\times (\\vec c \\times \\vec a) + \\vec c \\times (\\vec a \\times \\vec b) = \\vec 0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Reciprocal system: for a basis a, b, c with $V = [\\vec a\\ \\vec b\\ \\vec c]$:"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "\\vec a' = \\dfrac{\\vec b \\times \\vec c}{V},\\quad \\vec b' = \\dfrac{\\vec c \\times \\vec a}{V},\\quad \\vec c' = \\dfrac{\\vec a \\times \\vec b}{V}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "Reciprocal vectors satisfy $\\vec a \\cdot \\vec a' = 1$ and $\\vec a \\cdot \\vec b' = 0$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "The reciprocal system exists only when $V \\neq 0$, i.e. a, b, c non-coplanar."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two more ideas round out the vector triple product, its non-associativity in identity form, and the elegant reciprocal system."
+            },
+            {
+              "seq": 2,
+              "text": "We saw the vector triple product is not associative, in general a cross the quantity b cross c differs from the quantity a cross b, crossed with c."
+            },
+            {
+              "seq": 3,
+              "text": "But there is a beautiful order in the disorder, called the Jacobi identity."
+            },
+            {
+              "seq": 4,
+              "text": "It says the three cyclic vector triple products, a with b cross c, plus b with c cross a, plus c with a cross b, add up to exactly the zero vector."
+            },
+            {
+              "seq": 5,
+              "text": "Now the reciprocal system. Given three non-coplanar vectors a, b, c forming a basis, let capital V be their scalar triple product."
+            },
+            {
+              "seq": 6,
+              "text": "Define a-prime as b cross c over V, b-prime as c cross a over V, and c-prime as a cross b over V."
+            },
+            {
+              "seq": 7,
+              "text": "These reciprocal vectors have a clean signature, a dot a-prime is one, while a dot b-prime is zero, each original meets its own partner and ignores the others."
+            },
+            {
+              "seq": 8,
+              "text": "<curious>And the reciprocal system exists only when V is non-zero, that is, only when a, b and c are genuinely non-coplanar and form a real basis."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो और ideas vector triple product को पूरा करते हैं, इसकी non-associativity identity के रूप में, और elegant reciprocal system।"
+            },
+            {
+              "seq": 2,
+              "text": "हमने देखा vector triple product associative नहीं है, generally a cross the quantity b cross c, the quantity a cross b crossed with c से अलग है।"
+            },
+            {
+              "seq": 3,
+              "text": "पर इस disorder में एक beautiful order है, जिसे Jacobi identity कहते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "ये कहती है तीनों cyclic vector triple products, a with b cross c, plus b with c cross a, plus c with a cross b, exactly zero vector में add होते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "अब reciprocal system। तीन non-coplanar vectors a, b, c एक basis बनाते हुए दिए हों, capital V को उनका scalar triple product मानो।"
+            },
+            {
+              "seq": 6,
+              "text": "a-prime को define करो b cross c over V, b-prime को c cross a over V, और c-prime को a cross b over V."
+            },
+            {
+              "seq": 7,
+              "text": "इन reciprocal vectors का एक clean signature है, a dot a-prime है one, जबकि a dot b-prime है zero, हर original अपने ही partner से मिलता है और बाकियों को ignore करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "<curious>और reciprocal system सिर्फ तब exist करता है जब V non-zero हो, यानी सिर्फ तब जब a, b और c सच में non-coplanar हों और एक real basis बनाएँ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Proof: the scalar triple product is a determinant",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: the scalar triple product is a determinant"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Start from $[\\vec a\\ \\vec b\\ \\vec c] = \\vec a \\cdot (\\vec b \\times \\vec c)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Write $\\vec b \\times \\vec c$ as its cofactor (determinant) expansion."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\vec b \\times \\vec c = (b_2 c_3 - b_3 c_2)\\hat i - (b_1 c_3 - b_3 c_1)\\hat j + (b_1 c_2 - b_2 c_1)\\hat k"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Dot with $\\vec a = a_1\\hat i + a_2\\hat j + a_3\\hat k$, picking out matching components."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "[\\vec a\\ \\vec b\\ \\vec c] = a_1(b_2 c_3 - b_3 c_2) - a_2(b_1 c_3 - b_3 c_1) + a_3(b_1 c_2 - b_2 c_1)"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "[\\vec a\\ \\vec b\\ \\vec c] = \\begin{vmatrix} a_1 & a_2 & a_3 \\\\ b_1 & b_2 & b_3 \\\\ c_1 & c_2 & c_3 \\end{vmatrix}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "This is exactly the top-row expansion of the determinant with rows a, b, c."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us prove that the scalar triple product really is that neat determinant, it follows in three honest steps."
+            },
+            {
+              "seq": 2,
+              "text": "Start from the definition, a b c equals a dotted with the quantity b cross c."
+            },
+            {
+              "seq": 3,
+              "text": "Now write b cross c using its cofactor expansion, the determinant form we proved in the last part."
+            },
+            {
+              "seq": 4,
+              "text": "That gives b cross c as b-two c-three minus b-three c-two along i, minus the next bracket along j, plus the last bracket along k."
+            },
+            {
+              "seq": 5,
+              "text": "Dot this with a, which is a-one i-hat plus a-two j-hat plus a-three k-hat; the dot product simply picks out matching components."
+            },
+            {
+              "seq": 6,
+              "text": "So we get a-one times the i bracket, minus a-two times the j bracket, plus a-three times the k bracket."
+            },
+            {
+              "seq": 7,
+              "text": "But that whole expression is precisely the top-row cofactor expansion of the three by three determinant whose rows are a, b and c."
+            },
+            {
+              "seq": 8,
+              "text": "So the scalar triple product and that determinant are literally the same object, written two ways."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Prove करते हैं कि scalar triple product सच में वो neat determinant है, ये तीन honest steps में follow होता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Definition से शुरू करो, a b c equals a dotted with the quantity b cross c."
+            },
+            {
+              "seq": 3,
+              "text": "अब b cross c को उसके cofactor expansion से लिखो, वो determinant form जो हमने पिछले part में prove किया।"
+            },
+            {
+              "seq": 4,
+              "text": "इससे b cross c मिलता है b-two c-three minus b-three c-two along i, minus अगला bracket along j, plus आख़िरी bracket along k."
+            },
+            {
+              "seq": 5,
+              "text": "इसे a से dot करो, जो a-one i-hat plus a-two j-hat plus a-three k-hat है; dot product बस matching components pick कर लेता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो मिलता है a-one times the i bracket, minus a-two times the j bracket, plus a-three times the k bracket."
+            },
+            {
+              "seq": 7,
+              "text": "पर वो पूरा expression ठीक उस three by three determinant का top-row cofactor expansion है जिसकी rows a, b और c हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो scalar triple product और वो determinant literally एक ही object हैं, दो तरह से लिखे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Proof: cyclic property and dot-cross interchange",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: cyclic property and dot-cross interchange"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "A determinant changes sign when two rows are swapped."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "A cyclic rotation of rows equals two swaps, so the sign returns to itself."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "[\\vec a\\ \\vec b\\ \\vec c] = [\\vec b\\ \\vec c\\ \\vec a] = [\\vec c\\ \\vec a\\ \\vec b]"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "One swap gives $[\\vec a\\ \\vec b\\ \\vec c] = -[\\vec b\\ \\vec a\\ \\vec c]$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "For the interchange, both $\\vec a \\cdot (\\vec b \\times \\vec c)$ and $(\\vec a \\times \\vec b) \\cdot \\vec c$ equal the SAME determinant."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\vec a \\cdot (\\vec b \\times \\vec c) = (\\vec a \\times \\vec b) \\cdot \\vec c"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Both compute the identical box volume, so they must be equal."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This proof explains the two friendliest properties of the scalar triple product using one fact about determinants."
+            },
+            {
+              "seq": 2,
+              "text": "The fact is simple: swapping any two rows of a determinant flips its sign."
+            },
+            {
+              "seq": 3,
+              "text": "A cyclic rotation of the three rows is really two swaps back to back, and two sign flips cancel, so the value returns unchanged."
+            },
+            {
+              "seq": 4,
+              "text": "That is exactly the cyclic property, a b c equals b c a equals c a b."
+            },
+            {
+              "seq": 5,
+              "text": "And a single swap, being just one flip, gives a b c equals minus b a c, as claimed."
+            },
+            {
+              "seq": 6,
+              "text": "Now the dot-cross interchange. Compute a dotted with b cross c and it equals the determinant with rows a, b, c. Compute a cross b, dotted with c, and by cyclic rotation it equals the very same determinant."
+            },
+            {
+              "seq": 7,
+              "text": "So a dotted with b cross c equals a cross b, dotted with c."
+            },
+            {
+              "seq": 8,
+              "text": "The deep reason is geometric, both expressions are just two ways of measuring the identical box, so they cannot help but agree."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये proof scalar triple product की दो सबसे friendly properties को determinants के एक fact से explain करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Fact simple है: determinant की किन्हीं दो rows को swap करने पर उसका sign flip होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "तीनों rows का cyclic rotation असल में दो swaps back to back है, और दो sign flips cancel हो जाते हैं, तो value unchanged लौट आती है।"
+            },
+            {
+              "seq": 4,
+              "text": "यही तो cyclic property है, a b c equals b c a equals c a b."
+            },
+            {
+              "seq": 5,
+              "text": "और एक single swap, जो बस एक flip है, देता है a b c equals minus b a c, जैसा claim किया।"
+            },
+            {
+              "seq": 6,
+              "text": "अब dot-cross interchange। a dotted with b cross c compute करो और ये rows a, b, c वाले determinant के equal है। a cross b, dotted with c compute करो, और cyclic rotation से ये उसी same determinant के equal है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो a dotted with b cross c equals a cross b, dotted with c."
+            },
+            {
+              "seq": 8,
+              "text": "Deep reason geometric है, दोनों expressions बस उसी identical box को measure करने के दो तरीके हैं, तो वो agree किए बिना रह ही नहीं सकते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Proof: verifying the back cab rule",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: verifying the back cab rule"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Check $\\vec a \\times (\\vec b \\times \\vec c) = (\\vec a \\cdot \\vec c)\\vec b - (\\vec a \\cdot \\vec b)\\vec c$ on a simple basis case."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Take $\\vec a = \\hat i$, $\\vec b = \\hat i$, $\\vec c = \\hat j$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\vec b \\times \\vec c = \\hat i \\times \\hat j = \\hat k"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "\\vec a \\times (\\vec b \\times \\vec c) = \\hat i \\times \\hat k = -\\hat j"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Right side: $(\\hat i \\cdot \\hat j)\\hat i - (\\hat i \\cdot \\hat i)\\hat j = 0 - \\hat j = -\\hat j$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\vec a \\times (\\vec b \\times \\vec c) = -\\hat j = (\\vec a \\cdot \\vec c)\\vec b - (\\vec a \\cdot \\vec b)\\vec c"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Both sides give $-\\hat j$; the general proof extends this by linearity."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The back cab rule is worth verifying, so you trust it under pressure. We will check it on a clean basis example, and note how the full proof extends."
+            },
+            {
+              "seq": 2,
+              "text": "The identity to confirm is a cross the quantity b cross c equals, a dot c times b, minus a dot b times c."
+            },
+            {
+              "seq": 3,
+              "text": "Take a simple case: a is i-hat, b is i-hat, and c is j-hat."
+            },
+            {
+              "seq": 4,
+              "text": "First the inner cross product, b cross c is i-hat cross j-hat, which is k-hat."
+            },
+            {
+              "seq": 5,
+              "text": "Then the outer cross, a cross that, is i-hat cross k-hat, and by the cyclic rules that is minus j-hat."
+            },
+            {
+              "seq": 6,
+              "text": "Now the right-hand side: a dot c is i-hat dot j-hat, which is zero; a dot b is i-hat dot i-hat, which is one. So we get zero times b, minus one times c, which is minus j-hat."
+            },
+            {
+              "seq": 7,
+              "text": "Both sides land on minus j-hat, so the identity checks out on this case."
+            },
+            {
+              "seq": 8,
+              "text": "The full proof simply repeats this on each basis combination and then extends to all vectors by linearity, since both sides are linear in a, b and c."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Back cab rule verify करने लायक है, ताकि आप pressure में इस पर भरोसा करो। हम इसे एक clean basis example पर check करेंगे, और देखेंगे कि full proof कैसे extend होता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Confirm करने वाली identity है a cross the quantity b cross c equals, a dot c times b, minus a dot b times c."
+            },
+            {
+              "seq": 3,
+              "text": "एक simple case लो: a है i-hat, b है i-hat, और c है j-hat."
+            },
+            {
+              "seq": 4,
+              "text": "पहले inner cross product, b cross c है i-hat cross j-hat, जो k-hat है।"
+            },
+            {
+              "seq": 5,
+              "text": "फिर outer cross, a cross that, है i-hat cross k-hat, और cyclic rules से वो minus j-hat है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब right-hand side: a dot c है i-hat dot j-hat, जो zero है; a dot b है i-hat dot i-hat, जो one है। तो मिलता है zero times b, minus one times c, जो minus j-hat है।"
+            },
+            {
+              "seq": 7,
+              "text": "दोनों sides minus j-hat पर पहुँचते हैं, तो identity इस case पर check हो गई।"
+            },
+            {
+              "seq": 8,
+              "text": "Full proof बस इसे हर basis combination पर repeat करता है और फिर linearity से सारे vectors तक extend करता है, क्योंकि दोनों sides a, b और c में linear हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Example: box product and volume",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example: box product and volume"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$\\vec a = \\hat i + 2\\hat j + 3\\hat k$, $\\vec b = 2\\hat i - \\hat j + \\hat k$, $\\vec c = 3\\hat i + \\hat j - \\hat k$. Find the parallelepiped volume."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "[\\vec a\\ \\vec b\\ \\vec c] = \\begin{vmatrix} 1 & 2 & 3 \\\\ 2 & -1 & 1 \\\\ 3 & 1 & -1 \\end{vmatrix}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Expand along the top row with the alternating signs."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "= 1(1 - 1) - 2(-2 - 3) + 3(2 + 3)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "= 0 + 10 + 15 = 25"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "V = |[\\vec a\\ \\vec b\\ \\vec c]| = 25"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Non-zero, so the three vectors are non-coplanar (a genuine solid box)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us compute an actual volume with the determinant, a bread-and-butter J E E Main problem."
+            },
+            {
+              "seq": 2,
+              "text": "We have a equals i-hat plus two j-hat plus three k-hat, b equals two i-hat minus j-hat plus k-hat, and c equals three i-hat plus j-hat minus k-hat, and we want the volume of the parallelepiped they span."
+            },
+            {
+              "seq": 3,
+              "text": "Set up the determinant with a, b and c as its three rows."
+            },
+            {
+              "seq": 4,
+              "text": "Expand along the top row, remembering the alternating plus, minus, plus signs."
+            },
+            {
+              "seq": 5,
+              "text": "The first minor is one minus one; the second, with its minus sign in front, is minus two minus three; the third is two plus three."
+            },
+            {
+              "seq": 6,
+              "text": "That is one times zero, minus two times minus five, plus three times five, which is zero plus ten plus fifteen, equal to twenty five."
+            },
+            {
+              "seq": 7,
+              "text": "The volume is the absolute value, so twenty five cubic units."
+            },
+            {
+              "seq": 8,
+              "text": "And since the triple product is non-zero, the three vectors are non-coplanar, they really do cage a solid box, not a flat sheet."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Determinant से एक actual volume compute करते हैं, एक bread-and-butter J E E Main problem."
+            },
+            {
+              "seq": 2,
+              "text": "हमारे पास a equals i-hat plus two j-hat plus three k-hat, b equals two i-hat minus j-hat plus k-hat, और c equals three i-hat plus j-hat minus k-hat, और चाहिए उस parallelepiped का volume जो वो span करते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Determinant set up करो a, b और c को उसकी तीन rows बनाते हुए।"
+            },
+            {
+              "seq": 4,
+              "text": "Top row के along expand करो, alternating plus, minus, plus signs याद रखते हुए।"
+            },
+            {
+              "seq": 5,
+              "text": "पहला minor है one minus one; दूसरा, आगे अपने minus sign के साथ, है minus two minus three; तीसरा है two plus three."
+            },
+            {
+              "seq": 6,
+              "text": "यानी one times zero, minus two times minus five, plus three times five, जो zero plus ten plus fifteen है, equal to twenty five."
+            },
+            {
+              "seq": 7,
+              "text": "Volume absolute value है, तो twenty five cubic units."
+            },
+            {
+              "seq": 8,
+              "text": "और चूँकि triple product non-zero है, तीनों vectors non-coplanar हैं, वो सच में एक solid box घेरते हैं, flat sheet नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Example: the coplanarity trap",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example: the coplanarity trap"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Find $\\lambda$ so that $\\vec a = \\hat i + \\hat j + \\hat k$, $\\vec b = 2\\hat i + 3\\hat j + 2\\hat k$, $\\vec c = \\hat i + \\lambda\\hat j + 3\\hat k$ are coplanar."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Coplanarity requires the scalar triple product to vanish:"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\begin{vmatrix} 1 & 1 & 1 \\\\ 2 & 3 & 2 \\\\ 1 & \\lambda & 3 \\end{vmatrix} = 0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "1(9 - 2\\lambda) - 1(6 - 2) + 1(2\\lambda - 3) = 0"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "9 - 2\\lambda - 4 + 2\\lambda - 3 = 2"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "The $\\lambda$ terms cancel, leaving $2 = 0$, which is impossible."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "So NO value of $\\lambda$ makes them coplanar, the honest answer is 'no solution'."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example looks routine but hides a genuine trap, and reading the algebra honestly is the whole point."
+            },
+            {
+              "seq": 2,
+              "text": "We must find lambda so that a equals i-hat plus j-hat plus k-hat, b equals two i-hat plus three j-hat plus two k-hat, and c equals i-hat plus lambda j-hat plus three k-hat are coplanar."
+            },
+            {
+              "seq": 3,
+              "text": "Coplanarity requires the scalar triple product to vanish, so we set the determinant equal to zero."
+            },
+            {
+              "seq": 4,
+              "text": "Write the determinant with the three vectors as rows and expand along the top."
+            },
+            {
+              "seq": 5,
+              "text": "The first term is one times nine minus two lambda; the second, with its minus, is minus the quantity six minus two; the third is two lambda minus three."
+            },
+            {
+              "seq": 6,
+              "text": "Now watch carefully as we simplify: nine minus two lambda, minus four, plus two lambda, minus three. The two-lambda terms cancel, and the constants give two."
+            },
+            {
+              "seq": 7,
+              "text": "<curious>So the equation collapses to two equals zero, which is simply impossible, and notice the lambda vanished entirely."
+            },
+            {
+              "seq": 8,
+              "text": "Therefore no value of lambda can make these vectors coplanar; the honest, correct answer is that there is no solution. A student who forces a number here has fallen straight into the trap."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये example routine दिखती है पर एक genuine trap छुपाती है, और algebra को ईमानदारी से पढ़ना ही पूरी बात है।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें lambda ढूँढना है ताकि a equals i-hat plus j-hat plus k-hat, b equals two i-hat plus three j-hat plus two k-hat, और c equals i-hat plus lambda j-hat plus three k-hat coplanar हों।"
+            },
+            {
+              "seq": 3,
+              "text": "Coplanarity के लिए scalar triple product का vanish होना ज़रूरी है, तो हम determinant को zero के equal रखते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Determinant को तीनों vectors की rows के साथ लिखो और top के along expand करो।"
+            },
+            {
+              "seq": 5,
+              "text": "पहला term है one times nine minus two lambda; दूसरा, अपने minus के साथ, है minus the quantity six minus two; तीसरा है two lambda minus three."
+            },
+            {
+              "seq": 6,
+              "text": "अब ध्यान से देखो जैसे हम simplify करते हैं: nine minus two lambda, minus four, plus two lambda, minus three. Two-lambda terms cancel हो जाते हैं, और constants two देते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious>तो equation two equals zero में collapse हो जाती है, जो बस impossible है, और ध्यान दो lambda पूरी तरह गायब हो गया।"
+            },
+            {
+              "seq": 8,
+              "text": "इसलिए कोई भी lambda इन vectors को coplanar नहीं बना सकता; ईमानदार, सही जवाब है कि कोई solution नहीं है। जो student यहाँ ज़बरदस्ती एक number निकालता है वो सीधा trap में गिर गया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Example: tetrahedron volume from four points",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example: tetrahedron volume from four points"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Vertices $P(1,1,1)$, $Q(2,1,3)$, $R(3,2,1)$, $S(1,3,2)$. Find the tetrahedron's volume."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Build three edge vectors from P:"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\vec{PQ} = \\hat i + 2\\hat k,\\quad \\vec{PR} = 2\\hat i + \\hat j,\\quad \\vec{PS} = 2\\hat j + \\hat k"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "[\\vec{PQ}\\ \\vec{PR}\\ \\vec{PS}] = \\begin{vmatrix} 1 & 0 & 2 \\\\ 2 & 1 & 0 \\\\ 0 & 2 & 1 \\end{vmatrix}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "= 1(1) - 0 + 2(4) = 9"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "V = \\tfrac{1}{6}|9| = \\tfrac{3}{2}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "All three edges must start from the SAME vertex P."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A J E E Main favourite, finding the volume of a tetrahedron given its four corner points."
+            },
+            {
+              "seq": 2,
+              "text": "The vertices are P at one, one, one; Q at two, one, three; R at three, two, one; and S at one, three, two."
+            },
+            {
+              "seq": 3,
+              "text": "The key first move is to build three edge vectors, all starting from the same vertex, say P."
+            },
+            {
+              "seq": 4,
+              "text": "P Q is Q minus P, which is i-hat plus two k-hat; P R is two i-hat plus j-hat; and P S is two j-hat plus k-hat."
+            },
+            {
+              "seq": 5,
+              "text": "Now form the scalar triple product of these three edges as a determinant."
+            },
+            {
+              "seq": 6,
+              "text": "Expanding along the top row: one times the minor one, minus zero, plus two times the minor four, giving one plus eight, which is nine."
+            },
+            {
+              "seq": 7,
+              "text": "The tetrahedron volume is one sixth of the absolute value, so one sixth of nine, which is three halves."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>The one non-negotiable step, all three edge vectors must start from the same vertex; mix your starting points and the volume is meaningless."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Main favourite, चार corner points दिए होने पर tetrahedron का volume निकालना।"
+            },
+            {
+              "seq": 2,
+              "text": "Vertices हैं P at one, one, one; Q at two, one, three; R at three, two, one; और S at one, three, two."
+            },
+            {
+              "seq": 3,
+              "text": "Key पहला move है तीन edge vectors बनाना, सब एक ही vertex से शुरू, मान लो P से।"
+            },
+            {
+              "seq": 4,
+              "text": "P Q है Q minus P, जो i-hat plus two k-hat है; P R है two i-hat plus j-hat; और P S है two j-hat plus k-hat."
+            },
+            {
+              "seq": 5,
+              "text": "अब इन तीनों edges का scalar triple product एक determinant के रूप में बनाओ।"
+            },
+            {
+              "seq": 6,
+              "text": "Top row के along expand करके: one times the minor one, minus zero, plus two times the minor four, यानी one plus eight, जो nine है।"
+            },
+            {
+              "seq": 7,
+              "text": "Tetrahedron volume absolute value का one sixth है, तो nine का one sixth, जो three halves है।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>एक non-negotiable step, तीनों edge vectors एक ही vertex से शुरू होने चाहिए; starting points mix किए तो volume meaningless है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Example: vector triple product with back cab",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example: vector triple product with back cab"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$\\vec a = \\hat i + \\hat j$, $\\vec b = \\hat j + \\hat k$, $\\vec c = \\hat i + \\hat k$. Find $\\vec a \\times (\\vec b \\times \\vec c)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Use the back cab rule, avoid computing the inner cross first."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\vec a \\cdot \\vec c = 1,\\qquad \\vec a \\cdot \\vec b = 1"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "\\vec a \\times (\\vec b \\times \\vec c) = (\\vec a \\cdot \\vec c)\\vec b - (\\vec a \\cdot \\vec b)\\vec c"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 35,
+          "latex": "= 1(\\hat j + \\hat k) - 1(\\hat i + \\hat k) = -\\hat i + \\hat j"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Check: the result has no component along the normal of the b-c plane."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "back cab beats brute force, two dot products instead of two cross products."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Finally, let us see the back cab rule save real time on a vector triple product."
+            },
+            {
+              "seq": 2,
+              "text": "We have a equals i-hat plus j-hat, b equals j-hat plus k-hat, and c equals i-hat plus k-hat, and we want a cross the quantity b cross c."
+            },
+            {
+              "seq": 3,
+              "text": "The lazy but wrong instinct is to compute the inner cross product first; the smart move is to apply the back cab rule directly."
+            },
+            {
+              "seq": 4,
+              "text": "We only need two dot products: a dot c is one, and a dot b is one."
+            },
+            {
+              "seq": 5,
+              "text": "The rule says the answer is, a dot c times b, minus a dot b times c."
+            },
+            {
+              "seq": 6,
+              "text": "So that is one times the quantity j-hat plus k-hat, minus one times the quantity i-hat plus k-hat, and the k-hats cancel, leaving minus i-hat plus j-hat."
+            },
+            {
+              "seq": 7,
+              "text": "A nice consistency check, the result has no component sticking out along the normal to the b c plane, exactly as the geometry demanded."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>See the economy, back cab needed just two dot products, where brute force would have cost two full cross products."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िर में, देखते हैं back cab rule एक vector triple product पर असली time कैसे बचाती है।"
+            },
+            {
+              "seq": 2,
+              "text": "हमारे पास a equals i-hat plus j-hat, b equals j-hat plus k-hat, और c equals i-hat plus k-hat, और चाहिए a cross the quantity b cross c."
+            },
+            {
+              "seq": 3,
+              "text": "Lazy पर ग़लत instinct है पहले inner cross product compute करना; smart move है back cab rule सीधा apply करना।"
+            },
+            {
+              "seq": 4,
+              "text": "हमें सिर्फ दो dot products चाहिए: a dot c है one, और a dot b है one."
+            },
+            {
+              "seq": 5,
+              "text": "Rule कहती है answer है, a dot c times b, minus a dot b times c."
+            },
+            {
+              "seq": 6,
+              "text": "तो वो है one times the quantity j-hat plus k-hat, minus one times the quantity i-hat plus k-hat, और k-hats cancel हो जाते हैं, बचता है minus i-hat plus j-hat."
+            },
+            {
+              "seq": 7,
+              "text": "एक अच्छा consistency check, result का कोई component b c plane के normal के along बाहर नहीं निकलता, ठीक जैसा geometry ने माँगा।"
+            },
+            {
+              "seq": 8,
+              "text": "<excited>Economy देखो, back cab को सिर्फ दो dot products चाहिए थे, जहाँ brute force को दो पूरे cross products लगते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "tips",
+      "subtopic": "Product of Three Vectors & Vector Applications",
+      "title": "Pitfalls and pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pitfalls and pro-tips"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Coplanarity test is $[\\vec a\\ \\vec b\\ \\vec c] = 0$; a non-zero constant means 'no solution'."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "style": "red-margin",
+          "text": "If $\\lambda$ cancels and leaves a false equation, answer honestly: no solution."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Vector triple product: NEVER drop the brackets, and the middle vector leads (back cab)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Tetrahedron volume is $\\tfrac{1}{6}$ of the box; the parallelepiped is the full $|[\\vec a\\ \\vec b\\ \\vec c]|$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Take the absolute value for any volume, a raw triple product may be negative."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Track sign on row swaps; cyclic order keeps the value, one swap flips it."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "Pro-tip: use back cab (two dot products) instead of two cross products, every time."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me close the final subtopic, and the chapter, with the traps that bite and the tricks that save."
+            },
+            {
+              "seq": 2,
+              "text": "The coplanarity test is that the scalar triple product equals zero; if instead it reduces to a non-zero constant, that means no solution exists."
+            },
+            {
+              "seq": 3,
+              "text": "So if lambda cancels and you are left with a false equation like two equals zero, do not panic and do not invent a value, answer honestly that there is no solution."
+            },
+            {
+              "seq": 4,
+              "text": "For the vector triple product, never ever drop the brackets, and remember the middle vector leads in back cab, with a plus sign."
+            },
+            {
+              "seq": 5,
+              "text": "Keep the two volumes distinct, a tetrahedron is one sixth of the box, while the parallelepiped is the full absolute value of the triple product."
+            },
+            {
+              "seq": 6,
+              "text": "Always take the absolute value for a volume, because the raw scalar triple product can come out negative depending on orientation."
+            },
+            {
+              "seq": 7,
+              "text": "And track your signs on row swaps, cyclic order preserves the value, but each single swap flips the sign."
+            },
+            {
+              "seq": 8,
+              "text": "<excited>The headline pro-tip for the whole subtopic, reach for back cab, two cheap dot products, rather than grinding out two full cross products, every single time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िरी subtopic, और chapter, को उन traps के साथ close करते हैं जो काटते हैं और उन tricks के साथ जो बचाती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Coplanarity test ये है कि scalar triple product zero के equal हो; अगर बजाय इसके ये एक non-zero constant में reduce हो, तो मतलब कोई solution exist नहीं करता।"
+            },
+            {
+              "seq": 3,
+              "text": "तो अगर lambda cancel हो जाए और आपके पास एक false equation बचे जैसे two equals zero, घबराओ मत और कोई value मत बनाओ, ईमानदारी से जवाब दो कि कोई solution नहीं है।"
+            },
+            {
+              "seq": 4,
+              "text": "Vector triple product के लिए, brackets कभी मत drop करो, और याद रखो back cab में middle vector आगे रहता है, plus sign के साथ।"
+            },
+            {
+              "seq": 5,
+              "text": "दोनों volumes अलग रखो, tetrahedron box का one sixth है, जबकि parallelepiped triple product का पूरा absolute value है।"
+            },
+            {
+              "seq": 6,
+              "text": "किसी भी volume के लिए हमेशा absolute value लो, क्योंकि raw scalar triple product orientation के हिसाब से negative आ सकता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और row swaps पर अपने signs track करो, cyclic order value preserve करता है, पर हर single swap sign flip करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "<excited>पूरे subtopic के लिए headline pro-tip, back cab उठाओ, दो सस्ते dot products, बजाय दो पूरे cross products पीसने के, हर बार।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Review",
+      "title": "Formula recap: the whole chapter",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Formula recap: the whole chapter"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "|\\vec r| = \\sqrt{x^2+y^2+z^2},\\qquad \\hat a = \\dfrac{\\vec a}{|\\vec a|}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "l^2+m^2+n^2 = 1,\\qquad \\vec{AB} = \\vec b - \\vec a"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "latex": "\\vec{OR} = \\dfrac{m\\vec b + n\\vec a}{m+n}\\ (\\text{internal}),\\qquad \\dfrac{\\vec a + \\vec b}{2}\\ (\\text{midpoint})"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "\\vec a \\cdot \\vec b = |\\vec a||\\vec b|\\cos\\theta = a_1b_1 + a_2b_2 + a_3b_3"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "|\\vec a \\times \\vec b| = |\\vec a||\\vec b|\\sin\\theta = \\text{area of parallelogram}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "[\\vec a\\ \\vec b\\ \\vec c] = \\vec a \\cdot (\\vec b \\times \\vec c),\\qquad V_{\\text{tet}} = \\tfrac{1}{6}|[\\vec a\\ \\vec b\\ \\vec c]|"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "latex": "\\vec a \\times (\\vec b \\times \\vec c) = (\\vec a \\cdot \\vec c)\\vec b - (\\vec a \\cdot \\vec b)\\vec c"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Three anchors: DC-squares sum to 1; dot = 0 is perpendicular; cross = 0 is parallel."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us gather the entire chapter's formulas onto one board, a fast recap you can revise from the night before the exam."
+            },
+            {
+              "seq": 2,
+              "text": "From components: the magnitude is the root of the sum of squares, and the unit vector is the vector over its magnitude."
+            },
+            {
+              "seq": 3,
+              "text": "The direction cosines always square-sum to one, and the vector joining two points is head minus tail, b minus a."
+            },
+            {
+              "seq": 4,
+              "text": "The section formula, internal division gives m b plus n a over m plus n, and the midpoint is simply the average of the two ends."
+            },
+            {
+              "seq": 5,
+              "text": "The dot product, the two magnitudes times cosine theta, equal to the sum of products of components."
+            },
+            {
+              "seq": 6,
+              "text": "The cross product's magnitude, the two magnitudes times sine theta, which is the parallelogram area."
+            },
+            {
+              "seq": 7,
+              "text": "The scalar triple product is a dotted with b cross c, and a tetrahedron is one sixth of that box's absolute value."
+            },
+            {
+              "seq": 8,
+              "text": "And the vector triple product follows back cab, a dot c times b, minus a dot b times c."
+            },
+            {
+              "seq": 9,
+              "text": "Anchor yourself with three facts: direction-cosine squares sum to one, a zero dot product means perpendicular, and a zero cross product means parallel."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूरे chapter के formulas एक board पर इकट्ठा करते हैं, एक fast recap जिससे आप exam की रात पहले revise कर सको।"
+            },
+            {
+              "seq": 2,
+              "text": "Components से: magnitude है squares के sum का root, और unit vector है vector over उसकी magnitude।"
+            },
+            {
+              "seq": 3,
+              "text": "Direction cosines हमेशा square-sum करके one बनते हैं, और दो points को join करने वाला vector है head minus tail, b minus a."
+            },
+            {
+              "seq": 4,
+              "text": "Section formula, internal division देता है m b plus n a over m plus n, और midpoint बस दोनों ends का average है।"
+            },
+            {
+              "seq": 5,
+              "text": "Dot product, दोनों magnitudes times cosine theta, components के products के sum के equal।"
+            },
+            {
+              "seq": 6,
+              "text": "Cross product की magnitude, दोनों magnitudes times sine theta, जो parallelogram area है।"
+            },
+            {
+              "seq": 7,
+              "text": "Scalar triple product है a dotted with b cross c, और tetrahedron उस box के absolute value का one sixth है।"
+            },
+            {
+              "seq": 8,
+              "text": "और vector triple product back cab follow करता है, a dot c times b, minus a dot b times c."
+            },
+            {
+              "seq": 9,
+              "text": "तीन facts से खुद को anchor करो: direction-cosine squares one बनाते हैं, zero dot product मतलब perpendicular, और zero cross product मतलब parallel।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Review",
+      "title": "Cheat sheet: quick decisions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Cheat sheet: quick decisions"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "Need a direction only? Build the unit vector, divide by magnitude."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Point dividing a segment? Section formula; internal adds, external subtracts."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "Angle between vectors? $\\cos\\theta = \\dfrac{\\vec a \\cdot \\vec b}{|\\vec a||\\vec b|}$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Area of triangle? $\\tfrac{1}{2}|\\vec a \\times \\vec b|$. Parallelogram? $|\\vec a \\times \\vec b|$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Perpendicular direction to two vectors? $\\pm(\\vec a \\times \\vec b)/|\\vec a \\times \\vec b|$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Coplanar or volume? Scalar triple product; zero means coplanar."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Simplify $\\vec a \\times (\\vec b \\times \\vec c)$? Apply back cab immediately."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Know what each zero proves: DC-squares, dot-zero, cross-zero, triple-product-zero."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Finally, a decision-style cheat sheet, match the question to the tool in one glance."
+            },
+            {
+              "seq": 2,
+              "text": "If you need only a direction, build the unit vector by dividing the vector by its magnitude."
+            },
+            {
+              "seq": 3,
+              "text": "If a point divides a segment, reach for the section formula, internal division adds, external subtracts."
+            },
+            {
+              "seq": 4,
+              "text": "For the angle between two vectors, cosine theta is a dot b over the product of the magnitudes."
+            },
+            {
+              "seq": 5,
+              "text": "For a triangle's area, take half the magnitude of the cross product; for a parallelogram, the full magnitude."
+            },
+            {
+              "seq": 6,
+              "text": "For a direction perpendicular to two vectors, take plus or minus the cross product over its magnitude."
+            },
+            {
+              "seq": 7,
+              "text": "For coplanarity or a volume, go straight to the scalar triple product; zero means the vectors are coplanar."
+            },
+            {
+              "seq": 8,
+              "text": "And to simplify a cross the quantity b cross c, apply back cab immediately, do not expand the inner cross by hand."
+            },
+            {
+              "seq": 9,
+              "text": "One master check ties it together: know exactly what each zero proves, the direction-cosine squares, a zero dot, a zero cross, and a zero triple product, and you can walk into the exam confident."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िर में, एक decision-style cheat sheet, सवाल को एक नज़र में tool से match करो।"
+            },
+            {
+              "seq": 2,
+              "text": "अगर सिर्फ direction चाहिए, vector को उसकी magnitude से divide करके unit vector बनाओ।"
+            },
+            {
+              "seq": 3,
+              "text": "अगर कोई point segment को divide करता है, section formula उठाओ, internal division adds, external subtracts."
+            },
+            {
+              "seq": 4,
+              "text": "दो vectors के बीच angle के लिए, cosine theta है a dot b over magnitudes का product।"
+            },
+            {
+              "seq": 5,
+              "text": "Triangle के area के लिए, cross product की magnitude का आधा लो; parallelogram के लिए, पूरी magnitude।"
+            },
+            {
+              "seq": 6,
+              "text": "दो vectors के perpendicular direction के लिए, plus or minus cross product over उसकी magnitude लो।"
+            },
+            {
+              "seq": 7,
+              "text": "Coplanarity या volume के लिए, सीधे scalar triple product पर जाओ; zero मतलब vectors coplanar हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "और a cross the quantity b cross c को simplify करने के लिए, तुरंत back cab apply करो, inner cross हाथ से expand मत करो।"
+            },
+            {
+              "seq": 9,
+              "text": "एक master check सब बाँध देता है: पक्का जानो कि हर zero क्या prove करता है, direction-cosine squares, zero dot, zero cross, और zero triple product, और आप exam में confident चल सकते हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

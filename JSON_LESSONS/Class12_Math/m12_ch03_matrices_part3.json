@@ -1,0 +1,1553 @@
+{
+  "chapter": "Matrices",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 3,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Special Square Matrices & Chapter Synthesis",
+      "title": "Four self-referential square matrices",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Four self-referential square matrices"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Idempotent: $A^{2}=A$ — applying it twice changes nothing, so $A^{n}=A$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Involutory: $A^{2}=I$ — its own inverse, $A^{-1}=A$ (a mirror flip)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Nilpotent: $A^{k}=O$ for some $k$; the smallest such $k$ is the index."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\text{Orthogonal: } AA^{T}=A^{T}A=I\\ \\Rightarrow\\ A^{-1}=A^{T}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Idempotent: $I-A$ is also idempotent; the only invertible idempotent is $I$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Involutory: even powers give $I$, odd powers give $A$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Nilpotent matrices are never invertible."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "Orthogonal: rows (and columns) are mutually perpendicular unit vectors — rotations."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Beyond the core operations, a handful of square matrices have a self-referential personality — square them, or multiply by their own transpose, and something remarkably simple comes back. Four types matter for JEE."
+            },
+            {
+              "seq": 2,
+              "text": "First, idempotent: A squared equals A. Such a matrix is absorbed by repetition — apply it once and applying it again changes nothing, so every power A to the n is just A again. Think of a projection: casting a shadow twice gives the same shadow."
+            },
+            {
+              "seq": 3,
+              "text": "Second, involutory: A squared equals I. The matrix is its own inverse, so A inverse equals A. Applying it twice undoes it — like a mirror flip."
+            },
+            {
+              "seq": 4,
+              "text": "Third, nilpotent: some power A to the k equals the zero matrix. The smallest such k is called the index. A nilpotent matrix eventually annihilates everything."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, orthogonal: A times A transpose, and A transpose times A, both equal the identity — which means the inverse is simply the transpose, A inverse equals A transpose."
+            },
+            {
+              "seq": 6,
+              "text": "Each carries a consequence. For an idempotent A, the matrix I minus A is also idempotent, and the only invertible idempotent matrix is the identity itself."
+            },
+            {
+              "seq": 7,
+              "text": "For an involutory matrix, powers alternate cleanly: even powers give the identity, odd powers give A."
+            },
+            {
+              "seq": 8,
+              "text": "A nilpotent matrix can never be invertible — a matrix that eventually sends everything to zero has no undo."
+            },
+            {
+              "seq": 9,
+              "text": "And an orthogonal matrix has rows, and columns, that are mutually perpendicular unit vectors; rotations are the classic example, and its inverse is free to write down."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>core operations से आगे, कुछ square matrices का एक self-referential personality होता है — उन्हें square करो, या अपने ही transpose से multiply करो, और कुछ remarkably simple वापस आता है। JEE के लिए चार types matter करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, idempotent: A squared equals A। ऐसी matrix repetition से absorb हो जाती है — एक बार apply करो और दोबारा apply करने से कुछ नहीं बदलता, तो हर power A to the n बस फिर से A है। एक projection सोचो: shadow दो बार डालो तो वही shadow मिलता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, involutory: A squared equals I। matrix अपना ही inverse है, तो A inverse equals A। इसे दो बार apply करना इसे undo कर देता है — एक mirror flip की तरह।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, nilpotent: कोई power A to the k, zero matrix के बराबर। सबसे छोटा ऐसा k index कहलाता है। एक nilpotent matrix आख़िरकार सब कुछ annihilate कर देती है।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, orthogonal: A times A transpose, और A transpose times A, दोनों identity के बराबर — यानी inverse बस transpose है, A inverse equals A transpose।"
+            },
+            {
+              "seq": 6,
+              "text": "हर एक एक consequence लाता है। idempotent A के लिए, matrix I minus A भी idempotent है, और एकमात्र invertible idempotent matrix खुद identity है।"
+            },
+            {
+              "seq": 7,
+              "text": "involutory matrix के लिए, powers साफ़-साफ़ alternate करती हैं: even powers identity देती हैं, odd powers A देती हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "एक nilpotent matrix कभी invertible नहीं हो सकती — जो matrix आख़िरकार सब कुछ zero भेज देती है उसका कोई undo नहीं।"
+            },
+            {
+              "seq": 9,
+              "text": "और एक orthogonal matrix की rows, और columns, mutually perpendicular unit vectors होती हैं; rotations classic example हैं, और इसका inverse लिखना free है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Special Square Matrices & Chapter Synthesis",
+      "title": "The trace of a square matrix",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The trace of a square matrix"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\operatorname{tr}(A) = \\sum_{i=1}^{n} a_{ii}\\quad(\\text{sum of diagonal entries})"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\operatorname{tr}(A+B) = \\operatorname{tr}(A)+\\operatorname{tr}(B)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\operatorname{tr}(kA) = k\\,\\operatorname{tr}(A),\\qquad \\operatorname{tr}(A^{T}) = \\operatorname{tr}(A)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\operatorname{tr}(AB) = \\operatorname{tr}(BA)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Surprising: $AB\\ne BA$ in general, yet their traces always agree."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "So $\\operatorname{tr}(AB-BA)=0$ always — a favourite JEE one-liner."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Trace is linear: it distributes over sums and pulls out scalars."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "One number captures a lot about a square matrix: its trace."
+            },
+            {
+              "seq": 2,
+              "text": "The trace is simply the sum of the diagonal entries — a one one plus a two two, all the way down."
+            },
+            {
+              "seq": 3,
+              "text": "It behaves linearly. The trace of a sum is the sum of the traces."
+            },
+            {
+              "seq": 4,
+              "text": "A scalar pulls straight out — trace of k A is k times trace of A — and transposing changes nothing, since the diagonal is untouched: trace of A transpose equals trace of A."
+            },
+            {
+              "seq": 5,
+              "text": "And the surprising identity: the trace of A B equals the trace of B A."
+            },
+            {
+              "seq": 6,
+              "text": "That one is a genuine shock, because A B and B A are usually different matrices — yet their diagonals always sum to the same number."
+            },
+            {
+              "seq": 7,
+              "text": "A direct consequence the examiners love: the trace of A B minus B A is always zero. It is a favourite one-line trap."
+            },
+            {
+              "seq": 8,
+              "text": "So hold the trace as a linear gadget: it distributes over sums, pulls out scalars, ignores transposes, and cannot tell A B from B A."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक number एक square matrix के बारे में बहुत कुछ capture करता है: उसका trace।"
+            },
+            {
+              "seq": 2,
+              "text": "trace बस diagonal entries का sum है — a one one plus a two two, नीचे तक।"
+            },
+            {
+              "seq": 3,
+              "text": "ये linearly behave करता है। sum का trace, traces का sum है।"
+            },
+            {
+              "seq": 4,
+              "text": "एक scalar सीधे बाहर निकल आता है — k A का trace, k times trace of A है — और transpose करने से कुछ नहीं बदलता, क्योंकि diagonal अछूता रहता है: A transpose का trace, trace of A के बराबर है।"
+            },
+            {
+              "seq": 5,
+              "text": "और वो surprising identity: A B का trace, B A के trace के बराबर है।"
+            },
+            {
+              "seq": 6,
+              "text": "ये वाला सच में shock है, क्योंकि A B और B A आम तौर पर अलग matrices हैं — फिर भी उनके diagonals हमेशा एक ही number तक sum होते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "एक सीधा consequence जो examiners को पसंद है: A B minus B A का trace हमेशा zero होता है। ये एक favourite one-line trap है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो trace को एक linear gadget की तरह पकड़ो: ये sums पर distribute होता है, scalars बाहर खींचता है, transposes को ignore करता है, और A B को B A से अलग नहीं बता सकता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Special Square Matrices & Chapter Synthesis",
+      "title": "Evaluating a polynomial at a matrix",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Evaluating a polynomial at a matrix"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Replace $x$ by $A$ and the constant $c$ by $cI$ — that is $f(A)$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "f(x)=x^{2}-2x-3\\ \\Rightarrow\\ f(A)=A^{2}-2A-3I"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "A square matrix very often satisfies an equation $f(A)=O$ of its own."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "That single fact unlocks high powers AND the inverse — cheaply."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "For the inverse: rearrange to $A\\,(\\text{poly})=cI$, then divide by $c$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "For high powers: use the relation to reduce $A^{2}$ (or higher) to lower terms."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\text{e.g. } A^{2}=2A+3I\\ \\Rightarrow\\ A^{3}=A\\cdot A^{2}=2A^{2}+3A"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is one of the most powerful ideas in the chapter: you can feed a matrix into a polynomial."
+            },
+            {
+              "seq": 2,
+              "text": "Just replace the variable x by the matrix A, and replace the constant term c by c times the identity. That gives f of A."
+            },
+            {
+              "seq": 3,
+              "text": "For example, if f of x is x squared minus two x minus three, then f of A is A squared minus two A minus three I — the plain three becomes three times the identity."
+            },
+            {
+              "seq": 4,
+              "text": "The remarkable thing is that a square matrix very often satisfies a polynomial equation of its own — some f of A equals the zero matrix."
+            },
+            {
+              "seq": 5,
+              "text": "And that single relation is a master key: it unlocks both high powers of A and the inverse of A, with almost no computation."
+            },
+            {
+              "seq": 6,
+              "text": "For the inverse, rearrange the relation into A times some polynomial equals c times the identity, then divide by that non-zero c — exactly the trick from the last subtopic."
+            },
+            {
+              "seq": 7,
+              "text": "For high powers, use the relation to rewrite A squared, or higher, in terms of lower powers, and cascade downward."
+            },
+            {
+              "seq": 8,
+              "text": "For instance, if A squared equals two A plus three I, then A cubed is A times A squared, which becomes two A squared plus three A — and you keep collapsing, no brute force needed."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ chapter के सबसे powerful ideas में से एक है: तुम एक matrix को polynomial में feed कर सकते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "बस variable x को matrix A से replace करो, और constant term c को c times identity से। इससे f of A मिलता है।"
+            },
+            {
+              "seq": 3,
+              "text": "मिसाल के लिए, अगर f of x है x squared minus two x minus three, तो f of A है A squared minus two A minus three I — plain three, three times identity बन जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "remarkable बात ये है कि एक square matrix अक्सर अपनी ही एक polynomial equation satisfy करती है — कोई f of A, zero matrix के बराबर।"
+            },
+            {
+              "seq": 5,
+              "text": "और वो एक relation एक master key है: ये A की high powers और A का inverse, दोनों unlock कर देती है, लगभग बिना computation।"
+            },
+            {
+              "seq": 6,
+              "text": "inverse के लिए, relation को A times कोई polynomial equals c times identity में rearrange करो, फिर उस non-zero c से divide करो — बिल्कुल पिछले subtopic वाला trick।"
+            },
+            {
+              "seq": 7,
+              "text": "high powers के लिए, relation use करके A squared, या उससे ऊपर, को lower powers में rewrite करो, और नीचे की तरफ cascade करो।"
+            },
+            {
+              "seq": 8,
+              "text": "मिसाल के लिए, अगर A squared equals two A plus three I, तो A cubed है A times A squared, जो बन जाता है two A squared plus three A — और तुम collapse करते जाते हो, कोई brute force नहीं चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "Special Square Matrices & Chapter Synthesis",
+      "title": "Special types, trace, and polynomials — the rulebook",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Special types, trace, polynomials — the rulebook"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\text{idempotent } A^{2}=A;\\quad \\text{involutory } A^{2}=I\\ (A^{-1}=A)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{nilpotent } A^{k}=O\\ (\\text{never invertible});\\quad \\text{orthogonal } AA^{T}=I\\ (A^{-1}=A^{T})"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\operatorname{tr}(A)=\\textstyle\\sum_i a_{ii};\\ \\ \\operatorname{tr}(A+B)=\\operatorname{tr}A+\\operatorname{tr}B;\\ \\ \\operatorname{tr}(kA)=k\\operatorname{tr}A"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\operatorname{tr}(A^{T})=\\operatorname{tr}(A);\\qquad \\operatorname{tr}(AB)=\\operatorname{tr}(BA)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "f(A):\\ \\text{replace } x\\to A,\\ \\ c\\to cI"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "f(A)=O\\ \\Rightarrow\\ A\\,(\\text{poly})=cI\\ \\Rightarrow\\ A^{-1}=\\tfrac{1}{c}(\\text{poly})"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Idempotent: $A^{n}=A$. Involutory: even $\\to I$, odd $\\to A$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The consolidated rulebook for this subtopic — the definitions and identities you actually reach for."
+            },
+            {
+              "seq": 2,
+              "text": "The self-referential types: idempotent means A squared equals A; involutory means A squared equals I, so the matrix is its own inverse."
+            },
+            {
+              "seq": 3,
+              "text": "Nilpotent means some power A to the k is the zero matrix — and such a matrix is never invertible; orthogonal means A times A transpose is the identity, so the inverse is just the transpose."
+            },
+            {
+              "seq": 4,
+              "text": "The trace: the sum of diagonal entries, linear over sums, and it pulls scalars out."
+            },
+            {
+              "seq": 5,
+              "text": "Two more trace facts: it is unchanged by transposing, and the trace of A B equals the trace of B A even when the products differ."
+            },
+            {
+              "seq": 6,
+              "text": "Evaluating a polynomial at a matrix: replace the variable by A, and every constant by that constant times the identity."
+            },
+            {
+              "seq": 7,
+              "text": "And the inverse trick in one line: if f of A is the zero matrix, rearrange to A times a polynomial equals c times I, then A inverse is one over c times that polynomial."
+            },
+            {
+              "seq": 8,
+              "text": "Two power shortcuts to bank: for an idempotent matrix every power is just A; for an involutory matrix, even powers give the identity and odd powers give A."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic के लिए consolidated rulebook — वो definitions और identities जो तुम असल में इस्तेमाल करते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "self-referential types: idempotent का मतलब A squared equals A; involutory का मतलब A squared equals I, तो matrix अपना ही inverse है।"
+            },
+            {
+              "seq": 3,
+              "text": "Nilpotent का मतलब कोई power A to the k, zero matrix है — और ऐसी matrix कभी invertible नहीं; orthogonal का मतलब A times A transpose identity है, तो inverse बस transpose है।"
+            },
+            {
+              "seq": 4,
+              "text": "trace: diagonal entries का sum, sums पर linear, और ये scalars बाहर खींचता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दो और trace facts: transpose करने से ये unchanged रहता है, और A B का trace, B A के trace के बराबर है, भले ही products अलग हों।"
+            },
+            {
+              "seq": 6,
+              "text": "matrix पर polynomial evaluate करना: variable को A से replace करो, और हर constant को उस constant times identity से।"
+            },
+            {
+              "seq": 7,
+              "text": "और inverse trick one line में: अगर f of A zero matrix है, A times a polynomial equals c times I में rearrange करो, फिर A inverse है one over c times वो polynomial।"
+            },
+            {
+              "seq": 8,
+              "text": "बैंक करने लायक दो power shortcuts: idempotent matrix के लिए हर power बस A है; involutory matrix के लिए, even powers identity देती हैं और odd powers A।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Special Square Matrices & Chapter Synthesis",
+      "title": "Verify f(A)=O, then invert",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: verify $f(A)=O$, then invert"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "A = \\begin{bmatrix} 1 & 2\\\\ 2 & 1 \\end{bmatrix},\\quad \\text{show } A^{2}-2A-3I=O,\\ \\text{find } A^{-1}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "A^{2} = \\begin{bmatrix} 1 & 2\\\\ 2 & 1 \\end{bmatrix}\\begin{bmatrix} 1 & 2\\\\ 2 & 1 \\end{bmatrix} = \\begin{bmatrix} 5 & 4\\\\ 4 & 5 \\end{bmatrix}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "2A = \\begin{bmatrix} 2 & 4\\\\ 4 & 2 \\end{bmatrix},\\qquad 3I = \\begin{bmatrix} 3 & 0\\\\ 0 & 3 \\end{bmatrix}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "A^{2}-2A-3I = \\begin{bmatrix} 5-2-3 & 4-4\\\\ 4-4 & 5-2-3 \\end{bmatrix} = O\\ \\checkmark"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Now exploit it: from $A^{2}-2A-3I=O$, isolate a factor of $A$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "A^{2}-2A=3I\\ \\Rightarrow\\ A(A-2I)=3I\\ \\Rightarrow\\ A\\cdot\\tfrac13(A-2I)=I"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "A^{-1} = \\tfrac13(A-2I) = \\begin{bmatrix} -1/3 & 2/3\\\\ 2/3 & -1/3 \\end{bmatrix}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "One identity gives both the verification AND the inverse — no row reduction."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now we put matrix polynomials to work, on a problem that first verifies an identity and then uses it to invert."
+            },
+            {
+              "seq": 2,
+              "text": "The matrix is A equals one, two, two, one, and we must show A squared minus two A minus three I is the zero matrix, then find A inverse."
+            },
+            {
+              "seq": 3,
+              "text": "Square A first. Multiply it by itself: A squared comes out five, four, four, five."
+            },
+            {
+              "seq": 4,
+              "text": "Write the other pieces: two A is two, four, four, two; and three I is three, zero, zero, three."
+            },
+            {
+              "seq": 5,
+              "text": "Now combine entrywise: five minus two minus three is zero on the diagonal, and four minus four is zero off it — the whole thing is the zero matrix. The identity is verified."
+            },
+            {
+              "seq": 6,
+              "text": "Now exploit that relation to invert. Start from A squared minus two A minus three I equals zero, and isolate a factor of A."
+            },
+            {
+              "seq": 7,
+              "text": "Move the three I across: A squared minus two A equals three I. Factor A on the left: A times the quantity A minus two I equals three I. Divide by three: A times one-third of A minus two I equals the identity."
+            },
+            {
+              "seq": 8,
+              "text": "So A inverse is one-third of A minus two I, which works out to minus one-third, two-thirds, two-thirds, minus one-third."
+            },
+            {
+              "seq": 9,
+              "text": "One identity delivered both the verification and the inverse — not a single row operation needed."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब हम matrix polynomials को काम पर लगाते हैं, एक ऐसे problem पर जो पहले एक identity verify करता है और फिर उसे invert करने के लिए इस्तेमाल करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "matrix है A equals one, two, two, one, और हमें दिखाना है कि A squared minus two A minus three I zero matrix है, फिर A inverse निकालना है।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले A square करो। इसे खुद से multiply करो: A squared निकलता है five, four, four, five।"
+            },
+            {
+              "seq": 4,
+              "text": "बाकी pieces लिखो: two A है two, four, four, two; और three I है three, zero, zero, three।"
+            },
+            {
+              "seq": 5,
+              "text": "अब entrywise combine करो: diagonal पर five minus two minus three, zero है, और off-diagonal पर four minus four, zero — पूरी चीज़ zero matrix है। identity verify हो गई।"
+            },
+            {
+              "seq": 6,
+              "text": "अब उस relation को invert करने के लिए exploit करो। A squared minus two A minus three I equals zero से शुरू करो, और A का एक factor isolate करो।"
+            },
+            {
+              "seq": 7,
+              "text": "three I को across ले जाओ: A squared minus two A equals three I। left पर A factor करो: A times the quantity A minus two I equals three I। three से divide करो: A times one-third of A minus two I equals identity।"
+            },
+            {
+              "seq": 8,
+              "text": "तो A inverse है one-third of A minus two I, जो निकलता है minus one-third, two-thirds, two-thirds, minus one-third।"
+            },
+            {
+              "seq": 9,
+              "text": "एक identity ने verification और inverse, दोनों दे दिए — एक भी row operation की ज़रूरत नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Special Square Matrices & Chapter Synthesis",
+      "title": "Simplify using idempotence A^2=A",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: simplify using $A^{2}=A$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "A\\ \\text{idempotent}\\ (A^{2}=A).\\quad \\text{Simplify } (I+A)^{3}-7A."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "Idempotence collapses every power of $A$ back to $A$; $I$ commutes with all."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "(I+A)^{3} = I + 3A + 3A^{2} + A^{3}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "A^{2}=A,\\ A^{3}=A\\ \\Rightarrow\\ (I+A)^{3} = I + 3A + 3A + A = I + 7A"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "(I+A)^{3} - 7A = I + 7A - 7A = I"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The $-7A$ term is engineered to cancel the collapse exactly."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Answer: $I$. No entries, no order given — pure structure."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one shows how a defining property turns a scary expansion into a one-liner. A is idempotent, and we simplify the cube of I plus A, minus seven A."
+            },
+            {
+              "seq": 2,
+              "text": "The setup: A squared equals A. That is the only fact we use."
+            },
+            {
+              "seq": 3,
+              "text": "The key: idempotence collapses every power of A back to A, and the identity commutes with everything, so the binomial expansion behaves exactly like ordinary algebra here."
+            },
+            {
+              "seq": 4,
+              "text": "Expand the cube of I plus A: it is I plus three A plus three A squared plus A cubed."
+            },
+            {
+              "seq": 5,
+              "text": "Now collapse the powers. A squared is A, and A cubed is also A, so three A squared plus A cubed becomes three A plus A, four A in total — the whole cube is I plus seven A."
+            },
+            {
+              "seq": 6,
+              "text": "Subtract the seven A: I plus seven A minus seven A leaves exactly the identity."
+            },
+            {
+              "seq": 7,
+              "text": "Notice the problem was engineered — the minus seven A term is precisely what cancels the collapsed expansion."
+            },
+            {
+              "seq": 8,
+              "text": "The answer is simply I, reached with no entries and no order given at all — pure structure."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये दिखाता है कि एक defining property कैसे एक डरावने expansion को one-liner बना देती है। A idempotent है, और हम I plus A के cube, minus seven A को simplify करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "setup: A squared equals A। बस यही एक fact हम use करते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "key: idempotence, A की हर power को वापस A में collapse कर देती है, और identity हर चीज़ से commute करती है, तो यहाँ binomial expansion बिल्कुल ordinary algebra की तरह behave करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "I plus A के cube को expand करो: ये है I plus three A plus three A squared plus A cubed।"
+            },
+            {
+              "seq": 5,
+              "text": "अब powers collapse करो। A squared, A है, और A cubed भी A है, तो three A squared plus A cubed बन जाता है three A plus A, कुल four A — पूरा cube है I plus seven A।"
+            },
+            {
+              "seq": 6,
+              "text": "seven A subtract करो: I plus seven A minus seven A से exactly identity बचता है।"
+            },
+            {
+              "seq": 7,
+              "text": "गौर करो problem engineered था — minus seven A term ठीक वही है जो collapsed expansion को cancel करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "answer बस I है, बिना किसी entry और बिना कोई order दिए पहुँचा — pure structure।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Special Square Matrices & Chapter Synthesis",
+      "title": "A real sales model",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: a real sales model"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "M = \\begin{bmatrix} 40 & 25 & 30\\\\ 35 & 30 & 20 \\end{bmatrix}\\ (\\text{months} \\times \\text{P,N,E}),\\quad p = \\begin{bmatrix} 50\\\\ 20\\\\ 10 \\end{bmatrix}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "(i) Total units per product = add the two month-rows."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "[\\,40\\ \\ 25\\ \\ 30\\,] + [\\,35\\ \\ 30\\ \\ 20\\,] = [\\,75\\ \\ 55\\ \\ 50\\,]"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "So 75 pens, 55 notebooks, 50 erasers."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "(ii) Revenue per month = $Mp$ (units times prices)."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "Mp = \\begin{bmatrix} 40 & 25 & 30\\\\ 35 & 30 & 20 \\end{bmatrix}\\begin{bmatrix} 50\\\\ 20\\\\ 10 \\end{bmatrix} = \\begin{bmatrix} 2800\\\\ 2550 \\end{bmatrix}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\text{Month 1: Rs.}\\,2800,\\ \\ \\text{Month 2: Rs.}\\,2550,\\ \\ \\text{total Rs.}\\,5350"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Addition gives 'totals'; multiplication gives 'units $\\times$ price' — the operations are the model."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "To close the subtopic, a genuinely applied problem — the kind CBSE asks for four to six marks — showing that the operations are not decorative, they are the model."
+            },
+            {
+              "seq": 2,
+              "text": "A stationery seller records two months of unit sales of three products — pens, notebooks, erasers — as a matrix M, with months as rows and products as columns. The selling prices form a column vector p: fifty, twenty, ten rupees."
+            },
+            {
+              "seq": 3,
+              "text": "Part one asks for the total units sold of each product. Since the two rows are the two months, you just add them."
+            },
+            {
+              "seq": 4,
+              "text": "Add row one and row two entrywise: forty plus thirty-five, twenty-five plus thirty, thirty plus twenty — seventy-five, fifty-five, fifty."
+            },
+            {
+              "seq": 5,
+              "text": "So across both months: seventy-five pens, fifty-five notebooks, fifty erasers."
+            },
+            {
+              "seq": 6,
+              "text": "Part two asks for each month's revenue — that is units times prices, which is the matrix product M times p."
+            },
+            {
+              "seq": 7,
+              "text": "Multiply: month one is forty times fifty, plus twenty-five times twenty, plus thirty times ten — two thousand eight hundred. Month two works out to two thousand five hundred fifty."
+            },
+            {
+              "seq": 8,
+              "text": "So month one earns two thousand eight hundred rupees, month two two thousand five hundred fifty, for a grand total of five thousand three hundred fifty."
+            },
+            {
+              "seq": 9,
+              "text": "Notice the division of labour: addition handled the totals, and multiplication handled units times price. The matrix operations are literally the business model."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "subtopic close करने के लिए, एक सचमुच applied problem — जैसा CBSE चार से छह marks के लिए पूछता है — दिखाता है कि operations decorative नहीं, वो model हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "एक stationery seller तीन products — pens, notebooks, erasers — की दो महीनों की unit sales एक matrix M के रूप में record करता है, months rows में और products columns में। selling prices एक column vector p बनाते हैं: fifty, twenty, ten रुपये।"
+            },
+            {
+              "seq": 3,
+              "text": "Part one हर product की कुल बेची गई units पूछता है। चूँकि दोनों rows दो महीने हैं, तुम बस उन्हें add कर देते हो।"
+            },
+            {
+              "seq": 4,
+              "text": "row one और row two को entrywise add करो: forty plus thirty-five, twenty-five plus thirty, thirty plus twenty — seventy-five, fifty-five, fifty।"
+            },
+            {
+              "seq": 5,
+              "text": "तो दोनों महीनों में: seventy-five pens, fifty-five notebooks, fifty erasers।"
+            },
+            {
+              "seq": 6,
+              "text": "Part two हर महीने का revenue पूछता है — यानी units times prices, जो matrix product M times p है।"
+            },
+            {
+              "seq": 7,
+              "text": "multiply करो: month one है forty times fifty, plus twenty-five times twenty, plus thirty times ten — two thousand eight hundred। month two निकलता है two thousand five hundred fifty।"
+            },
+            {
+              "seq": 8,
+              "text": "तो month one two thousand eight hundred रुपये कमाता है, month two two thousand five hundred fifty, grand total five thousand three hundred fifty।"
+            },
+            {
+              "seq": 9,
+              "text": "division of labour देखो: addition ने totals संभाले, और multiplication ने units times price। matrix operations literally business model हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "tips",
+      "subtopic": "Special Square Matrices & Chapter Synthesis",
+      "title": "Pro-tips for special matrices",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pro-tips for special matrices"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Trace trap: $\\operatorname{tr}(AB)=\\operatorname{tr}(BA)$ even though $AB\\ne BA$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Idempotent collapse: every power is $A$, so $A^{n}=A$ — never expand."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Involutory: even powers $\\to I$, odd $\\to A$; this crushes long power sums."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Nilpotent is always singular; orthogonal gives $A^{-1}=A^{T}$ for free."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Matrix-polynomial: from $f(A)=O$ with non-zero constant, factor out $A$ for $A^{-1}$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Application problems: addition = totals/combine; multiplication = units $\\times$ rate."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Read the property first — it usually replaces all the arithmetic."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A cluster of pro-tips that turn these special matrices into fast marks."
+            },
+            {
+              "seq": 2,
+              "text": "The trace trap: remember that the trace of A B equals the trace of B A, even though A B and B A are usually different matrices. Examiners set this precisely to catch the unwary."
+            },
+            {
+              "seq": 3,
+              "text": "Idempotent collapse: if A squared equals A, then every power of A is just A. Never expand — collapse."
+            },
+            {
+              "seq": 4,
+              "text": "Involutory shortcut: even powers give the identity, odd powers give A. This crushes a long sum of powers into a simple head count of odds and evens."
+            },
+            {
+              "seq": 5,
+              "text": "Two more: a nilpotent matrix is always singular, so it has no inverse; and an orthogonal matrix hands you its inverse for free, since A inverse equals A transpose."
+            },
+            {
+              "seq": 6,
+              "text": "The matrix-polynomial move once more: whenever f of A is the zero matrix and the constant term is non-zero, factor out A and read off the inverse directly."
+            },
+            {
+              "seq": 7,
+              "text": "In application problems, map the operation to the meaning: addition combines or totals, and multiplication pairs units with a rate or price."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>The meta-tip across all of these: read the defining property first. Nine times out of ten it replaces the arithmetic entirely."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "pro-tips का एक cluster जो इन special matrices को fast marks में बदल देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "trace trap: याद रखो कि A B का trace, B A के trace के बराबर है, भले ही A B और B A आम तौर पर अलग matrices हों। examiners इसे ठीक इसीलिए सेट करते हैं ताकि लापरवाह पकड़े जाएँ।"
+            },
+            {
+              "seq": 3,
+              "text": "idempotent collapse: अगर A squared equals A, तो A की हर power बस A है। कभी expand मत करो — collapse करो।"
+            },
+            {
+              "seq": 4,
+              "text": "involutory shortcut: even powers identity देती हैं, odd powers A। ये powers के एक लंबे sum को odds और evens की simple head count में कुचल देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दो और: एक nilpotent matrix हमेशा singular है, तो उसका कोई inverse नहीं; और एक orthogonal matrix अपना inverse free में दे देती है, क्योंकि A inverse equals A transpose।"
+            },
+            {
+              "seq": 6,
+              "text": "matrix-polynomial move एक बार फिर: जब भी f of A zero matrix हो और constant term non-zero हो, A factor out करके inverse सीधे पढ़ लो।"
+            },
+            {
+              "seq": 7,
+              "text": "application problems में, operation को meaning से map करो: addition combine या total करता है, और multiplication units को एक rate या price से pair करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>इन सबके ऊपर meta-tip: पहले defining property पढ़ो। दस में से नौ बार वो arithmetic को पूरी तरह replace कर देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Synthesis",
+      "title": "Complete formula recap for Matrices",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Your complete Matrices toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "a_{ij}=f(i,j);\\quad \\text{orders}=d(N);\\quad \\text{no. of matrices}=k^{mn}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "(A+B)_{ij}=a_{ij}+b_{ij},\\ \\ (kA)_{ij}=k\\,a_{ij},\\ \\ (AB)_{ij}=\\textstyle\\sum_{r} a_{ir}b_{rj}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "$AB\\ne BA$; $\\ IA=AI=A$; $\\ AB=O$ need not give $A=O$ or $B=O$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "(A^{T})^{T}=A,\\ (A+B)^{T}=A^{T}+B^{T},\\ (kA)^{T}=kA^{T},\\ (AB)^{T}=B^{T}A^{T}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "A^{T}=A\\ (\\text{sym}),\\ A^{T}=-A\\ (\\text{skew});\\ \\ A=\\tfrac12(A+A^{T})+\\tfrac12(A-A^{T})"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{distinct entries: sym }\\tfrac{n(n+1)}{2},\\ \\ \\text{skew }\\tfrac{n(n-1)}{2}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\text{idem }A^{2}{=}A,\\ \\text{invol }A^{2}{=}I,\\ \\text{nilp }A^{k}{=}O,\\ \\text{orth }AA^{T}{=}I;\\ \\operatorname{tr}(AB){=}\\operatorname{tr}(BA)"
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "latex": "AA^{-1}=I,\\ (AB)^{-1}=B^{-1}A^{-1},\\ (A^{T})^{-1}=(A^{-1})^{T},\\ [A\\mid I]\\to[I\\mid A^{-1}]"
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Deferred to Ch. 4: the test $|A|\\ne0$ and $A^{-1}=\\frac{1}{|A|}\\,\\mathrm{adj}\\,A$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<whisper>Here is your complete Matrices toolkit — one board that consolidates the whole chapter. Nothing new; just everything in one place for the final revision."
+            },
+            {
+              "seq": 2,
+              "text": "Representation: build entries from the rule a i j equals f of i j; the number of possible orders is the divisor count of N; and the number of matrices over a k-set is k to the m n."
+            },
+            {
+              "seq": 3,
+              "text": "The three operations: addition and scalar multiplication are entrywise; multiplication is the row-times-column sum over the shared index."
+            },
+            {
+              "seq": 4,
+              "text": "The cautions that ride with multiplication: it is not commutative, the identity leaves a matrix unchanged, and a zero product does not force a zero factor."
+            },
+            {
+              "seq": 5,
+              "text": "The transpose laws: transpose of a transpose is A, it distributes over sums, scalars ride through, and — the crucial one — a product's transpose reverses the order."
+            },
+            {
+              "seq": 6,
+              "text": "Symmetric means A transpose equals A, skew means A transpose equals minus A, and every square matrix is the unique sum of half A plus A transpose and half A minus A transpose."
+            },
+            {
+              "seq": 7,
+              "text": "The entry counts: n times n plus one over two for symmetric, and n times n minus one over two for skew."
+            },
+            {
+              "seq": 8,
+              "text": "The special types — idempotent, involutory, nilpotent, orthogonal — and the trace identity that the trace of A B equals the trace of B A."
+            },
+            {
+              "seq": 9,
+              "text": "The inverse: defined by A times A inverse equals I, the product rule reverses the order, transpose and inverse commute, and the row-reduction method takes A beside I to I beside A inverse."
+            },
+            {
+              "seq": 10,
+              "text": "And one deliberate pointer forward: the determinant test for invertibility and the adjoint formula arrive in the next chapter, Determinants."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<whisper>यहाँ तुम्हारा complete Matrices toolkit है — एक board जो पूरे chapter को consolidate करता है। कुछ नया नहीं; बस final revision के लिए सब कुछ एक जगह।"
+            },
+            {
+              "seq": 2,
+              "text": "Representation: entries को rule a i j equals f of i j से बनाओ; possible orders की संख्या N का divisor count है; और k-set के ऊपर matrices की संख्या k to the m n है।"
+            },
+            {
+              "seq": 3,
+              "text": "तीनों operations: addition और scalar multiplication entrywise हैं; multiplication shared index के ऊपर row-times-column sum है।"
+            },
+            {
+              "seq": 4,
+              "text": "multiplication के साथ चलने वाली cautions: ये commutative नहीं है, identity matrix को unchanged छोड़ती है, और zero product किसी factor को zero नहीं बनाता।"
+            },
+            {
+              "seq": 5,
+              "text": "transpose laws: transpose का transpose A है, ये sums पर distribute होता है, scalars साथ चलते हैं, और — crucial वाली — product का transpose order reverse करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Symmetric का मतलब A transpose equals A, skew का मतलब A transpose equals minus A, और हर square matrix, half A plus A transpose और half A minus A transpose का unique sum है।"
+            },
+            {
+              "seq": 7,
+              "text": "entry counts: symmetric के लिए n times n plus one over two, और skew के लिए n times n minus one over two।"
+            },
+            {
+              "seq": 8,
+              "text": "special types — idempotent, involutory, nilpotent, orthogonal — और वो trace identity कि A B का trace, B A के trace के बराबर है।"
+            },
+            {
+              "seq": 9,
+              "text": "inverse: A times A inverse equals I से define, product rule order reverse करता है, transpose और inverse commute करते हैं, और row-reduction method A को I के बगल से I को A inverse के बगल तक ले जाता है।"
+            },
+            {
+              "seq": 10,
+              "text": "और एक जानबूझकर pointer आगे के लिए: invertibility के लिए determinant test और adjoint formula अगले chapter, Determinants, में आते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Synthesis",
+      "title": "Rapid-recall cheat sheet for Matrices",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Rapid-recall cheat sheet"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Construct: row $i$ then column $j$; orders = divisors of $N$; matrices = $k^{mn}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "text": "Multiply: 'inner match, outer survive'; $AB\\ne BA$; never cancel a matrix."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "'Transpose a product, turn it around': $(AB)^{T}=B^{T}A^{T}$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "'Symmetric adds, skew subtracts' (both over 2); skew's diagonal is asleep."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Special: idempotent $A^{2}=A$, involutory $A^{2}=I$, nilpotent $A^{k}=O$, orthogonal $A^{-1}=A^{T}$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Inverse: $[A\\mid I]\\to[I\\mid A^{-1}]$; 'zero row, no go'; $(AB)^{-1}=B^{-1}A^{-1}$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Matrix-polynomial: from $A\\,(\\text{poly})=cI$, divide by $c$ for $A^{-1}$."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "Anchors: 'row before column'; 'inner match, outer survive'; 'zero row, no inverse'."
+        },
+        {
+          "seq": 10,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "text": "Coming in Ch. 4: the $|A|\\ne0$ test and the adjoint inverse."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Finally, the rapid-recall card — the one-glance summary to run through the night before the exam."
+            },
+            {
+              "seq": 2,
+              "text": "Representation in a breath: build each entry with the rule, count possible orders as the divisors of N, and count matrices as k to the m n."
+            },
+            {
+              "seq": 3,
+              "text": "Multiplication: inner match, outer survive; A B is not B A; and you can never cancel a matrix out of an equation."
+            },
+            {
+              "seq": 4,
+              "text": "Transpose a product and turn it around — A B transpose is B transpose A transpose."
+            },
+            {
+              "seq": 5,
+              "text": "Symmetric adds, skew subtracts, both over two; and a skew matrix's diagonal is always asleep, all zeros."
+            },
+            {
+              "seq": 6,
+              "text": "The special types at a glance: idempotent A squared equals A, involutory A squared equals I, nilpotent A to the k equals O, orthogonal A inverse equals A transpose."
+            },
+            {
+              "seq": 7,
+              "text": "Inverses by row operations: reduce A beside I to I beside A inverse; zero row, no go; and the product inverse reverses to B inverse A inverse."
+            },
+            {
+              "seq": 8,
+              "text": "The matrix-polynomial shortcut: from A times a polynomial equals c times I, divide by c to get A inverse."
+            },
+            {
+              "seq": 9,
+              "text": "Three anchors to carry into the hall: row before column; inner match, outer survive; and zero row, no inverse."
+            },
+            {
+              "seq": 10,
+              "text": "And a heads-up: the determinant test for invertibility and the adjoint inverse are the very next chapter."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िर में, rapid-recall card — one-glance summary जो exam से एक रात पहले दौड़ा लो।"
+            },
+            {
+              "seq": 2,
+              "text": "Representation एक साँस में: हर entry rule से बनाओ, possible orders को N के divisors गिनो, और matrices को k to the m n।"
+            },
+            {
+              "seq": 3,
+              "text": "Multiplication: inner match, outer survive; A B, B A नहीं है; और तुम कभी किसी matrix को equation से cancel नहीं कर सकते।"
+            },
+            {
+              "seq": 4,
+              "text": "product को transpose करो और उसे turn around करो — A B transpose है B transpose A transpose।"
+            },
+            {
+              "seq": 5,
+              "text": "Symmetric adds, skew subtracts, दोनों over two; और skew matrix का diagonal हमेशा सोया रहता है, सब zeros।"
+            },
+            {
+              "seq": 6,
+              "text": "special types एक नज़र में: idempotent A squared equals A, involutory A squared equals I, nilpotent A to the k equals O, orthogonal A inverse equals A transpose।"
+            },
+            {
+              "seq": 7,
+              "text": "row operations से inverses: A को I के बगल से I को A inverse के बगल तक reduce करो; zero row, no go; और product inverse reverse होकर B inverse A inverse।"
+            },
+            {
+              "seq": 8,
+              "text": "matrix-polynomial shortcut: A times a polynomial equals c times I से, c से divide करके A inverse पाओ।"
+            },
+            {
+              "seq": 9,
+              "text": "hall में ले जाने के लिए तीन anchors: row before column; inner match, outer survive; और zero row, no inverse।"
+            },
+            {
+              "seq": 10,
+              "text": "और एक heads-up: invertibility के लिए determinant test और adjoint inverse बिल्कुल अगला chapter है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

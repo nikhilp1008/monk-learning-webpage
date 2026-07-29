@@ -1,0 +1,2023 @@
+{
+  "chapter": "Binomial Theorem",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 7,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Binomial Expansion and Pascal's Triangle",
+      "title": "Why the coefficients are just counting",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "What is really happening in $(a+b)^n$?"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "(a+b)(a+b)(a+b)\\cdots(a+b)\\quad(n\\ \\text{brackets})"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Every term is built by walking the $n$ brackets and picking either $a$ or $b$ from each."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "caption": "Pick a or b from each of the n brackets",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 170\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"15\" y=\"30\" width=\"90\" height=\"46\" rx=\"8\" fill=\"none\" stroke=\"#7a5a2f\" stroke-width=\"2\"/><text x=\"60\" y=\"59\" font-family=\"system-ui, sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#3a2b16\">(a + b)</text><rect x=\"120\" y=\"30\" width=\"90\" height=\"46\" rx=\"8\" fill=\"none\" stroke=\"#7a5a2f\" stroke-width=\"2\"/><text x=\"165\" y=\"59\" font-family=\"system-ui, sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#3a2b16\">(a + b)</text><rect x=\"225\" y=\"30\" width=\"90\" height=\"46\" rx=\"8\" fill=\"none\" stroke=\"#7a5a2f\" stroke-width=\"2\"/><text x=\"270\" y=\"59\" font-family=\"system-ui, sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#3a2b16\">(a + b)</text><text x=\"345\" y=\"59\" font-family=\"system-ui, sans-serif\" font-size=\"18\" fill=\"#7a5a2f\">...</text><text x=\"380\" y=\"59\" font-family=\"system-ui, sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3a2b16\">n boxes</text><path d=\"M60 82 L150 120\" stroke=\"#b5651d\" stroke-width=\"2\" fill=\"none\"/><path d=\"M165 82 L165 120\" stroke=\"#b5651d\" stroke-width=\"2\" fill=\"none\"/><path d=\"M270 82 L200 120\" stroke=\"#b5651d\" stroke-width=\"2\" fill=\"none\"/><text x=\"60\" y=\"100\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c0392b\">pick a</text><text x=\"165\" y=\"100\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c0392b\">pick b</text><text x=\"270\" y=\"100\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c0392b\">pick b</text><text x=\"220\" y=\"145\" font-family=\"system-ui, sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#3a2b16\">one product: a to the (n minus r), b to the r</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Pick $b$ from exactly $r$ brackets, $a$ from the other $n-r$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "latex": "\\text{coefficient of } a^{\\,n-r}b^{\\,r}\\;=\\;\\binom{n}{r}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 62,
+          "style": "red-margin",
+          "text": "Coefficients ARE combination counts — that's why they're called binomial coefficients."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Powers always add to $n$: $(n-r)+r=n$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Let's crack open what an expansion actually is, instead of memorising it. Take a plus b, and multiply it by itself n times."
+            },
+            {
+              "seq": 2,
+              "text": "Here it is written the long way — n brackets, each one a copy of a plus b, all multiplied together."
+            },
+            {
+              "seq": 3,
+              "text": "Now think about how you build one term in the final answer. You walk through all n brackets, and from each bracket you grab either the a or the b. Multiply your grabs together and that's one term."
+            },
+            {
+              "seq": 4,
+              "text": "Picture it like this. Imagine n boxes, and from each box you choose one snack, an a or a b. Every different set of choices gives you one product in the expansion."
+            },
+            {
+              "seq": 5,
+              "text": "Suppose you decide to pick b from exactly r of the brackets. Then you're forced to pick a from the remaining n minus r brackets. So this particular product is a to the power n minus r, times b to the power r."
+            },
+            {
+              "seq": 6,
+              "text": "The big question: how many times does that same product appear? It appears once for every way of choosing which r brackets hand you the b. And that count is exactly n C r. So the coefficient of a to the n minus r, b to the r, is n C r."
+            },
+            {
+              "seq": 7,
+              "text": "This is the whole secret. The coefficients are not random numbers you look up — they are literally counting the number of ways a choice can happen. That's why we call them binomial coefficients."
+            },
+            {
+              "seq": 8,
+              "text": "And one fact falls out for free: in every single term the powers of a and b add up to n, because you always made exactly n choices. The expansion is uniform in degree n throughout."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Chalo samajhte hain ki expansion asli mein hota kya hai, ratne ke bajaye. $a+b$ ko apne aap se $n$ baar multiply karo."
+            },
+            {
+              "seq": 2,
+              "text": "Yeh dekho long form mein — $n$ brackets, har ek $a+b$ ki copy, sab multiply ho rahe hain."
+            },
+            {
+              "seq": 3,
+              "text": "Ab socho final answer ka ek term kaise banta hai. Aap saare $n$ brackets se guzarte ho, aur har bracket se ya toh $a$ uthate ho ya $b$. In sabko multiply karo, toh ek term ban gaya."
+            },
+            {
+              "seq": 4,
+              "text": "Aise picture karo. $n$ boxes hain, har box se ek snack chunna hai, $a$ ya $b$. Har alag choice-set ek product deta hai expansion mein."
+            },
+            {
+              "seq": 5,
+              "text": "Maan lo aap exactly $r$ brackets se $b$ chunte ho. Toh baaki $n-r$ brackets se $a$ chunna majboori hai. Iss product ki value hai $a$ power $n-r$, into $b$ power $r$."
+            },
+            {
+              "seq": 6,
+              "text": "Bada sawaal: yeh same product kitni baar aata hai? Jitne तरीके hain yeh choose karne ke ki kaunse $r$ brackets $b$ denge — aur woh count hai theek $n\\,C\\,r$. Toh coefficient of $a$ power $n-r$, $b$ power $r$, hai $n\\,C\\,r$."
+            },
+            {
+              "seq": 7,
+              "text": "Yahi poora राज़ hai. Coefficients koi random numbers नहीं hain — woh literally count kar rahe hain ki ek choice kitne तरीको se ho sakti hai. Isiliye inhe binomial coefficients kehte hain."
+            },
+            {
+              "seq": 8,
+              "text": "Aur ek fact मुफ्त mein milta hai: har term mein $a$ aur $b$ ki powers add hokar $n$ banti hain, kyunki aapne hamesha exactly $n$ choices ki. Poora expansion degree $n$ ka homogeneous hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Binomial Expansion and Pascal's Triangle",
+      "title": "Pascal's triangle and the addition rule",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Reading coefficients off Pascal's triangle"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "Rows n = 0 to 5; each row gives the coefficients of that power",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 310\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"210\" y=\"34\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"410\" y=\"34\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#7a5a2f\">(a+b)^0</text><text x=\"189\" y=\"78\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"231\" y=\"78\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"410\" y=\"78\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#7a5a2f\">(a+b)^1</text><text x=\"168\" y=\"122\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"210\" y=\"122\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">2</text><text x=\"252\" y=\"122\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"410\" y=\"122\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#7a5a2f\">(a+b)^2</text><text x=\"147\" y=\"166\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"189\" y=\"166\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">3</text><text x=\"231\" y=\"166\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">3</text><text x=\"273\" y=\"166\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"410\" y=\"166\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#7a5a2f\">(a+b)^3</text><text x=\"126\" y=\"210\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"168\" y=\"210\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">4</text><text x=\"210\" y=\"210\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">6</text><text x=\"252\" y=\"210\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">4</text><text x=\"294\" y=\"210\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"410\" y=\"210\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#7a5a2f\">(a+b)^4</text><text x=\"105\" y=\"254\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"147\" y=\"254\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">5</text><text x=\"189\" y=\"254\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">10</text><text x=\"231\" y=\"254\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">10</text><text x=\"273\" y=\"254\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">5</text><text x=\"315\" y=\"254\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">1</text><text x=\"410\" y=\"254\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#7a5a2f\">(a+b)^5</text><path d=\"M199 172 L205 202\" stroke=\"#c0392b\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#ah)\"/><path d=\"M241 172 L215 202\" stroke=\"#c0392b\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#ah)\"/><defs><marker id=\"ah\" markerWidth=\"7\" markerHeight=\"7\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0 L6 3 L0 6 z\" fill=\"#c0392b\"/></marker></defs></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "text": "Every row starts and ends with 1; each interior number is the sum of the two diagonally above it."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "latex": "\\binom{n-1}{r-1}+\\binom{n-1}{r}=\\binom{n}{r}\\qquad(\\text{Pascal's rule})"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "It works because a term comes from an $a$ times a term of $(a+b)^{n-1}$, or a $b$ times one — the two parents above."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 58,
+          "style": "red-margin",
+          "text": "Symmetry: $\\binom{n}{r}=\\binom{n}{n-r}$ — the row reads the same both ways."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Row $n$ gives the coefficients of $(a+b)^n$; the triangle's rows start at $n=0$.",
+          "reveal_at": 70
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We just saw the coefficients are combination counts. Pascal's triangle is a lazy, beautiful way to read those counts off without ever computing a factorial."
+            },
+            {
+              "seq": 2,
+              "text": "Look at the triangle. Row zero is a single one, that's a plus b to the power zero. Row one is one, one. Row four is one, four, six, four, one — and those are exactly the coefficients of a plus b to the fourth. Each row hands you a whole expansion."
+            },
+            {
+              "seq": 3,
+              "text": "The building rule is simple. Every row begins and ends with a one. Every number inside is just the sum of the two numbers sitting diagonally above it. Watch the two threes in row three feeding into the six below them."
+            },
+            {
+              "seq": 4,
+              "text": "Written in symbols, that addition rule is Pascal's rule: n minus one C r minus one, plus n minus one C r, equals n C r. This little identity is the algebraic skeleton of the whole triangle."
+            },
+            {
+              "seq": 5,
+              "text": "And here's why it must be true, again by counting. A term in a plus b to the n comes from one of two parents: either you multiplied an a into a term of the smaller expansion, or you multiplied a b into it. Those two parents are exactly the two numbers sitting above."
+            },
+            {
+              "seq": 6,
+              "text": "<excited> One more gift: the coefficients are symmetric. n C r equals n C n minus r, so every row reads the same forwards and backwards. Choosing which r brackets give b is the same as choosing which n minus r give a."
+            },
+            {
+              "seq": 7,
+              "text": "One indexing note to file away: the rows of the triangle start at n equals zero, so the row for a plus b to the n is actually the n plus one-th row down. That little shift is a classic source of slips later."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Humne abhi dekha coefficients combination counts hain. Pascal's triangle ek lazy, khoobsurat तरीका hai in counts ko read karne ka, bina kisi factorial ke."
+            },
+            {
+              "seq": 2,
+              "text": "Triangle dekho. Row zero ek single one hai, matlab $a+b$ power zero. Row one hai one, one. Row four hai one, four, six, four, one — aur yeh theek $(a+b)$ power four ke coefficients hain. Har row ek poora expansion de deti hai."
+            },
+            {
+              "seq": 3,
+              "text": "<excited> Banane ka rule simple hai. Har row ek one se shuru aur ek one pe khatam. Andar ka har number bas upar diagonally baithe do numbers ka sum hai. Row three ke do threes ko dekho, neeche ke six mein feed ho rahe hain."
+            },
+            {
+              "seq": 4,
+              "text": "Symbols mein yeh addition rule Pascal's rule kehlata hai: $n-1\\,C\\,r-1$ plus $n-1\\,C\\,r$ equals $n\\,C\\,r$. Yeh chhoti si identity poore triangle ka algebraic skeleton hai."
+            },
+            {
+              "seq": 5,
+              "text": "Aur yeh sach kyun hai, phir se counting se. $(a+b)$ power $n$ ka ek term do parents mein se ek se aata hai: ya toh aapne chhote expansion ke term mein $a$ multiply kiya, ya $b$. Wahi do parents upar baithe do numbers hain."
+            },
+            {
+              "seq": 6,
+              "text": "Ek aur tohfa: coefficients symmetric hain. $n\\,C\\,r$ equals $n\\,C\\,n-r$, isliye har row aage se aur peeche se same padhti hai. Kaunse $r$ brackets $b$ dete hain yeh choose karna wahi baat hai jaise kaunse $n-r$ brackets $a$ dete hain."
+            },
+            {
+              "seq": 7,
+              "text": "Ek indexing note yaad rakho: triangle ki rows $n$ equals zero se shuru hoti hain, toh $(a+b)$ power $n$ ki row asal mein neeche se $n+1$-th row hai. Woh chhota shift aage galtiyon ka classic source hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "formulas",
+      "subtopic": "Binomial Expansion and Pascal's Triangle",
+      "title": "The Binomial Theorem — the master formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The theorem and its core properties ($n\\in\\mathbb{N}$)"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "(a+b)^n=\\sum_{r=0}^{n}\\binom{n}{r}a^{\\,n-r}b^{\\,r}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "(1+x)^n=1+\\binom{n}{1}x+\\binom{n}{2}x^{2}+\\cdots+\\binom{n}{n}x^{n}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\binom{n}{r}=\\frac{n!}{r!\\,(n-r)!},\\qquad 0\\le r\\le n"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "latex": "T_{r+1}=\\binom{n}{r}a^{\\,n-r}b^{\\,r}\\quad(\\text{general term})"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Number of terms $=n+1$, NOT $n$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "latex": "\\sum_{r=0}^{n}\\binom{n}{r}=2^{n}\\qquad\\sum_{r=0}^{n}(-1)^r\\binom{n}{r}=0\\ (n\\ge 1)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 78,
+          "style": "red-margin",
+          "text": "These are pure numbers — no units, no dimensions."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now let's pin down the exact formulas. Everything in this section is for n a positive integer, so the expansion is finite and clean. This is your toolkit — write it once, use it everywhere."
+            },
+            {
+              "seq": 2,
+              "text": "Here is the theorem itself. a plus b to the n equals the sum, as r runs from zero to n, of n C r times a to the n minus r times b to the r. It is just the counting story from before, written as one compact sum."
+            },
+            {
+              "seq": 3,
+              "text": "The form exams love most puts everything on a single variable x. One plus x to the n equals one, plus n C one x, plus n C two x squared, and so on up to x to the n."
+            },
+            {
+              "seq": 4,
+              "text": "The binomial coefficient itself is n factorial over r factorial times n minus r factorial, valid for r between zero and n. This is the same object written n C r or the bracket notation."
+            },
+            {
+              "seq": 5,
+              "text": "This next one is the workhorse of the whole chapter: the general term. The r plus one-th term is n C r, a to the n minus r, b to the r. Memorise it — almost every question reduces to plugging into this."
+            },
+            {
+              "seq": 6,
+              "text": "Burn in the count: a to the n expansion has n plus one terms, not n. The powers run from zero all the way to n, and that's n plus one values."
+            },
+            {
+              "seq": 7,
+              "text": "Two instant results from setting values. Put a and b both equal to one and all the coefficients add to two to the n. Put a equals one, b equals minus one, and the alternating sum collapses to zero for n at least one."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, a reminder that keeps you sane: every quantity here is a pure number. There are no units or dimensions to track — the only bookkeeping is the domain of n and the range of r."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ab exact formulas pin karte hain. Iss section mein sab kuch $n$ positive integer ke liye hai, toh expansion finite aur saaf hai. Yeh aapki toolkit hai — ek baar likho, har jagah use karo."
+            },
+            {
+              "seq": 2,
+              "text": "Yeh raha theorem khud. $a+b$ power $n$ equals sum, jaise $r$ zero se $n$ tak chalta hai, of $n\\,C\\,r$ into $a$ power $n-r$ into $b$ power $r$. Yeh wahi counting story hai, ek compact sum mein likhi hui."
+            },
+            {
+              "seq": 3,
+              "text": "Jo form exams sabse zyada pasand karte hain woh sab kuch ek variable $x$ pe rakhta hai. $1+x$ power $n$ equals one, plus $n\\,C\\,1$ $x$, plus $n\\,C\\,2$ $x$ squared, aise hi $x$ power $n$ tak."
+            },
+            {
+              "seq": 4,
+              "text": "Binomial coefficient khud hai $n$ factorial upon $r$ factorial into $n-r$ factorial, valid jab $r$ zero aur $n$ ke beech ho. Yeh wahi cheez hai, chahe $n\\,C\\,r$ likho ya bracket notation."
+            },
+            {
+              "seq": 5,
+              "text": "Yeh agla formula poore chapter ka workhorse hai: the general term. $(r+1)$-th term hai $n\\,C\\,r$, $a$ power $n-r$, $b$ power $r$. Isse ratt lo — lagbhag har question isi mein plug karne se ho jaata hai."
+            },
+            {
+              "seq": 6,
+              "text": "Yeh count dimaag mein baitha lo: $a$ power $n$ expansion mein $n+1$ terms hote hain, $n$ नहीं. Powers zero se le kar $n$ tak jaati hain, aur woh $n+1$ values banti hain."
+            },
+            {
+              "seq": 7,
+              "text": "Values daalne se do turant results. $a$ aur $b$ dono ko one rakho toh saare coefficients add hokar two power $n$ ban jaate hain. $a$ equals one, $b$ equals minus one rakho toh alternating sum zero ho jaata hai, $n$ at least one ke liye."
+            },
+            {
+              "seq": 8,
+              "text": "Aakhir mein ek reminder jo aapko sane rakhega: yahan har quantity ek pure number hai. Koi units ya dimensions track नहीं karne — sirf $n$ ka domain aur $r$ ka range dhyaan rakhna hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Binomial Expansion and Pascal's Triangle",
+      "title": "Proving the theorem by induction",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof of the Binomial Theorem (induction on $n$)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Base case $n=1$: RHS $=\\binom{1}{0}a+\\binom{1}{1}b=a+b$. True."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Assume it holds for $n=k$ (the inductive hypothesis)."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "(a+b)^{k+1}=(a+b)\\sum_{r=0}^{k}\\binom{k}{r}a^{\\,k-r}b^{\\,r}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Distribute, then shift the index in the $b$-sum so both carry $a^{\\,k+1-r}b^{\\,r}$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "latex": "\\binom{k}{r}+\\binom{k}{r-1}=\\binom{k+1}{r}\\ \\Rightarrow\\ (a+b)^{k+1}=\\sum_{r=0}^{k+1}\\binom{k+1}{r}a^{\\,k+1-r}b^{\\,r}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Pascal's rule is the one load-bearing step. ■"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's actually prove the theorem, because a proof you understand is a formula you never forget. We use induction on n — show it for the smallest case, then show each case forces the next."
+            },
+            {
+              "seq": 2,
+              "text": "Base case, n equals one. The right side is one C zero times a, plus one C one times b, which is just a plus b. And a plus b to the power one is also a plus b. So the base case checks out."
+            },
+            {
+              "seq": 3,
+              "text": "Now the inductive step. Assume the theorem is already true for n equals k. That is our hypothesis — we're allowed to use the expansion for the k-th power as a known fact."
+            },
+            {
+              "seq": 4,
+              "text": "To reach k plus one, notice that a plus b to the k plus one is simply one more factor of a plus b acting on the k-th expansion. So multiply the whole hypothesis by a plus b."
+            },
+            {
+              "seq": 5,
+              "text": "Distributing gives two sums. In the second sum, shift the index by letting r go to r minus one, so that both sums now carry the same power, a to the k plus one minus r, times b to the r. Now we can collect."
+            },
+            {
+              "seq": 6,
+              "text": "Collecting the coefficient of that power gives k C r plus k C r minus one. By Pascal's rule that equals k plus one C r. So the whole thing becomes the sum with k plus one on top — exactly the theorem for n equals k plus one."
+            },
+            {
+              "seq": 7,
+              "text": "And that closes the induction. Notice the single fact doing all the work was Pascal's rule. That's why it deserves its own proof next — it is the engine underneath everything."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo theorem ko sach mein prove karte hain, kyunki jo proof samajh mein aa jaaye woh formula kabhi nahi bhoolte. Hum $n$ pe induction use karte hain — sabse chhote case ke liye dikhao, phir dikhao ki har case agla case majboor kar deta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Base case, $n$ equals one. Right side hai $1\\,C\\,0$ into $a$, plus $1\\,C\\,1$ into $b$, jo bas $a+b$ hai. Aur $a+b$ power one bhi $a+b$ hi hai. Toh base case sahi hai."
+            },
+            {
+              "seq": 3,
+              "text": "Ab inductive step. Maan lo theorem $n$ equals $k$ ke liye pehle se sach hai. Yeh hamari hypothesis hai — hum $k$-th power ke expansion ko known fact ki tarah use kar sakte hain."
+            },
+            {
+              "seq": 4,
+              "text": "$k+1$ tak pahunchne ke liye, gaur karo ki $a+b$ power $k+1$ bas $a+b$ ka ek aur factor hai jo $k$-th expansion pe act kar raha hai. Toh poori hypothesis ko $a+b$ se multiply karo."
+            },
+            {
+              "seq": 5,
+              "text": "Distribute karne pe do sums aate hain. Doosre sum mein index shift karo, $r$ ko $r-1$ bana ke, taaki dono sums ab same power carry karein, $a$ power $k+1-r$, into $b$ power $r$. Ab collect kar sakte hain."
+            },
+            {
+              "seq": 6,
+              "text": "Us power ka coefficient collect karne pe milta hai $k\\,C\\,r$ plus $k\\,C\\,r-1$. Pascal's rule se yeh equals $k+1\\,C\\,r$. Toh poori cheez ban jaati hai woh sum jiske upar $k+1$ hai — theek theorem for $n$ equals $k+1$."
+            },
+            {
+              "seq": 7,
+              "text": "Aur isse induction band ho gaya. Gaur karo, saara kaam ek hi fact ne kiya — Pascal's rule. Isiliye woh apne alag proof ka haqdaar hai, jo abhi aa raha hai — woh sabke neeche ka engine hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Binomial Expansion and Pascal's Triangle",
+      "title": "Proving Pascal's rule and using the triangle",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pascal's rule from factorials"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\binom{n}{r}+\\binom{n}{r-1}=\\frac{n!}{r!\\,(n-r)!}+\\frac{n!}{(r-1)!\\,(n-r+1)!}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Take the LCM $r!\\,(n-r+1)!$ and combine the numerators."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "=\\frac{n!\\,(n-r+1)+n!\\,r}{r!\\,(n-r+1)!}=\\frac{(n+1)!}{r!\\,(n+1-r)!}=\\binom{n+1}{r}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Read-off: row 4 is 1 4 6 4 1, so attach falling powers of $a$, rising powers of $b$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "latex": "(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "style": "red-margin",
+          "text": "Triangle is fastest for small $n\\ (\\le 6)$; for large $n$ use $\\binom{n}{r}$ directly."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Pascal's rule carried the whole induction, so let's prove it — and this one is pure algebra, no cleverness needed."
+            },
+            {
+              "seq": 2,
+              "text": "Start with the left side: n C r plus n C r minus one. Write both as factorials. The first is n factorial over r factorial times n minus r factorial; the second is n factorial over r minus one factorial times n minus r plus one factorial."
+            },
+            {
+              "seq": 3,
+              "text": "To add fractions you need a common denominator. The lowest common denominator here is r factorial times n minus r plus one factorial. Rewrite both terms over that."
+            },
+            {
+              "seq": 4,
+              "text": "The numerator becomes n factorial times n minus r plus one, plus n factorial times r. Factor out n factorial and the bracket collapses to n plus one. That gives n plus one factorial over r factorial times n plus one minus r factorial — which is exactly n plus one C r. Rule proved."
+            },
+            {
+              "seq": 5,
+              "text": "Now the practical payoff: reading a real expansion off the triangle. Take row four, which is one, four, six, four, one. Attach falling powers of a and rising powers of b as you move across."
+            },
+            {
+              "seq": 6,
+              "text": "So a plus b to the fourth is a to the fourth, plus four a cubed b, plus six a squared b squared, plus four a b cubed, plus b to the fourth. No factorials computed at all — you just read the row."
+            },
+            {
+              "seq": 7,
+              "text": "One judgement call. The triangle is fastest when n is small, say six or under. For a large n, building fifteen rows just to grab one coefficient is a waste — there, compute n C r directly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Pascal's rule ne poora induction uthaya, toh chalo isse prove karte hain — aur yeh wala pure algebra hai, koi chalaki nahi chahiye."
+            },
+            {
+              "seq": 2,
+              "text": "Left side se shuru: $n\\,C\\,r$ plus $n\\,C\\,r-1$. Dono ko factorials mein likho. Pehla hai $n$ factorial upon $r$ factorial into $n-r$ factorial; doosra hai $n$ factorial upon $r-1$ factorial into $n-r+1$ factorial."
+            },
+            {
+              "seq": 3,
+              "text": "Fractions add karne ke liye common denominator chahiye. Yahan sabse chhota common denominator hai $r$ factorial into $n-r+1$ factorial. Dono terms ko uske upar likh do."
+            },
+            {
+              "seq": 4,
+              "text": "Numerator ban jaata hai $n$ factorial into $n-r+1$, plus $n$ factorial into $r$. $n$ factorial ko bahar nikalo aur bracket $n+1$ ban jaata hai. Isse milta hai $n+1$ factorial upon $r$ factorial into $n+1-r$ factorial — jo theek $n+1\\,C\\,r$ hai. Rule proved."
+            },
+            {
+              "seq": 5,
+              "text": "Ab practical faayda: triangle se ek real expansion padhna. Row four lo, jo hai one, four, six, four, one. Aage badhte hue $a$ ki girti powers aur $b$ ki badhti powers attach karo."
+            },
+            {
+              "seq": 6,
+              "text": "Toh $a+b$ power four hai $a$ power four, plus four $a$ cube $b$, plus six $a$ square $b$ square, plus four $a$ $b$ cube, plus $b$ power four. Koi factorial compute नहीं kiya — bas row padhi."
+            },
+            {
+              "seq": 7,
+              "text": "Ek judgement call. Triangle tab fastest hai jab $n$ chhota ho, maan lo six ya usse kam. Bade $n$ ke liye pandrah rows banana sirf ek coefficient ke liye बर्बादी hai — wahan seedha $n\\,C\\,r$ compute karo."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Binomial Expansion and Pascal's Triangle",
+      "title": "Expanding a binomial, and the perfect-square trap",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 [CBSE]: expand $(2x+3)^4$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Here $a=2x,\\ b=3,\\ n=4$; coefficients are row 4: 1 4 6 4 1."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "latex": "(2x+3)^4=\\binom{4}{0}(2x)^4+\\binom{4}{1}(2x)^3(3)+\\binom{4}{2}(2x)^2(3)^2+\\binom{4}{3}(2x)(3)^3+\\binom{4}{4}(3)^4"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "latex": "=16x^4+96x^3+216x^2+216x+81"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "Check $x=1$: LHS $=5^4=625$; RHS $=16+96+216+216+81=625$. ✓"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "Example 2 [JEE Main]: terms in $(1+2x+x^2)^{10}$"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "Trap: reaching for a trinomial count. Instead spot the perfect square."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 70,
+          "latex": "1+2x+x^2=(1+x)^2\\Rightarrow(1+2x+x^2)^{10}=(1+x)^{20}\\ \\Rightarrow\\ 21\\ \\text{terms}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Time to make this concrete. Example one, a clean CBSE-style expansion: expand two x plus three, all to the fourth."
+            },
+            {
+              "seq": 2,
+              "text": "Match the pieces. Here a is two x, b is three, and n is four. The coefficients are just row four of Pascal's triangle: one, four, six, four, one. So we already know the skeleton."
+            },
+            {
+              "seq": 3,
+              "text": "Write out the five terms, and here is the discipline that saves you: raise the whole quantity two x to each power, not just the x. So two x to the fourth is sixteen x to the fourth, not two x to the fourth."
+            },
+            {
+              "seq": 4,
+              "text": "Multiply each term out carefully and you land on sixteen x to the fourth, plus ninety six x cubed, plus two sixteen x squared, plus two sixteen x, plus eighty one."
+            },
+            {
+              "seq": 5,
+              "text": "Now the five-second insurance policy. Put x equals one. The left side is five to the fourth, which is six twenty five. The right side adds to six twenty five as well. They match, so the expansion is correct."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> Example two is a speed trap that catches almost everyone. How many distinct terms are in one plus two x plus x squared, all to the tenth?"
+            },
+            {
+              "seq": 7,
+              "text": "The trap is to treat it as a three-term base and reach for some trinomial term-count formula, or to panic and guess. Don't. Look at the base first."
+            },
+            {
+              "seq": 8,
+              "text": "One plus two x plus x squared is secretly one plus x, squared. So the whole thing is one plus x squared, raised to the tenth, which is one plus x to the twentieth. That has twenty plus one, so twenty one terms. The problem collapses the instant you factor — always check if the base is secretly a perfect power."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ab isse concrete banate hain. Example one, ek saaf CBSE-style expansion: $2x+3$, poora power four, expand karo."
+            },
+            {
+              "seq": 2,
+              "text": "Pieces match karo. Yahan $a$ hai $2x$, $b$ hai three, aur $n$ hai four. Coefficients bas Pascal triangle ki row four hain: one, four, six, four, one. Toh skeleton pehle se pata hai."
+            },
+            {
+              "seq": 3,
+              "text": "Paanch terms likho, aur yahan woh discipline hai jo aapko bachaati hai: poori quantity $2x$ ko har power pe uthao, sirf $x$ ko नहीं. Toh $2x$ power four hai sixteen $x$ power four, na ki two $x$ power four."
+            },
+            {
+              "seq": 4,
+              "text": "Har term dhyaan se multiply karo aur aap pahunchte ho sixteen $x$ power four, plus ninety-six $x$ cube, plus two-hundred-sixteen $x$ square, plus two-hundred-sixteen $x$, plus eighty-one."
+            },
+            {
+              "seq": 5,
+              "text": "Ab paanch second ki insurance policy. $x$ equals one rakho. Left side hai five power four, jo six-twenty-five hai. Right side bhi six-twenty-five banta hai. Match ho gaya, toh expansion sahi hai."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> Example two ek speed trap hai jo lagbhag sabko phasata hai. $1+2x+x^2$, poora power ten, mein kitne distinct terms hain?"
+            },
+            {
+              "seq": 7,
+              "text": "Trap yeh hai ki isse teen-term base maan lo aur koi trinomial count formula uthao, ya ghabra ke guess karo. Mat karo. Pehle base dekho."
+            },
+            {
+              "seq": 8,
+              "text": "$1+2x+x^2$ chupke se $(1+x)$ whole square hai. Toh poori cheez $(1+x)$ square, power ten, matlab $(1+x)$ power twenty. Usme twenty plus one, yaani twenty-one terms hain. Factor karte hi problem dhah jaati hai — hamesha check karo ki base chupke se koi perfect power toh nahi."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Binomial Expansion and Pascal's Triangle",
+      "title": "Coefficients in products, and the consecutive-ratio trick",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 [JEE Main]: coeff of $x^3$ in $(1+x)(1-2x)^5$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "(1+x)(1-2x)^5=(1-2x)^5+x\\,(1-2x)^5"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "So coeff of $x^3$ $=$ [coeff of $x^3$] $+$ [coeff of $x^2$] in $(1-2x)^5$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "T_{r+1}=\\binom{5}{r}(-2)^r x^r\\Rightarrow\\binom{5}{3}(-2)^3=-80,\\ \\binom{5}{2}(-2)^2=40"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\text{coeff of }x^3=-80+40=-40"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Example 4 [JEE Adv]: three consecutive coeffs in ratio $1:3:5$"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "latex": "\\frac{\\binom{n}{r-1}}{\\binom{n}{r}}=\\frac{r}{n-r+1},\\quad\\frac{\\binom{n}{r}}{\\binom{n}{r+1}}=\\frac{r+1}{n-r}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 70,
+          "latex": "\\Rightarrow n=4r-1,\\ 8r+5=3n\\ \\Rightarrow\\ r=2,\\ n=7"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 82,
+          "style": "red-margin",
+          "text": "Verify: $\\binom{7}{1}:\\binom{7}{2}:\\binom{7}{3}=7:21:35=1:3:5$. ✓"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three links two ideas at once: distributing a linear factor, and using the general term. We want the coefficient of x cubed in one plus x, times one minus two x to the fifth."
+            },
+            {
+              "seq": 2,
+              "text": "Split the product. One plus x times the fifth power is just the fifth power, plus x times the fifth power. That extra x is the key — it shifts everything."
+            },
+            {
+              "seq": 3,
+              "text": "So the coefficient of x cubed in the whole thing is the coefficient of x cubed in one minus two x to the fifth, plus the coefficient of x squared in the same expansion. Why x squared? Because the leading x bumps the index down by one."
+            },
+            {
+              "seq": 4,
+              "text": "The general term of one minus two x to the fifth is five C r times minus two to the r, times x to the r. For x cubed, r is three: five C three times minus two cubed is ten times minus eight, so minus eighty. For x squared, r is two: five C two times four is ten times four, so forty."
+            },
+            {
+              "seq": 5,
+              "text": "Add the two contributions: minus eighty plus forty gives minus forty. That's your coefficient. Notice the sign came entirely from keeping track of the minus two."
+            },
+            {
+              "seq": 6,
+              "text": "Example four is an Advanced-level classic. Three consecutive coefficients in one plus x to the n are in the ratio one to three to five. Find n and where the terms sit."
+            },
+            {
+              "seq": 7,
+              "text": "The elegant tool is the ratio of consecutive binomial coefficients, which kills all the factorials. n C r minus one over n C r is r over n minus r plus one; and n C r over n C r plus one is r plus one over n minus r."
+            },
+            {
+              "seq": 8,
+              "text": "Set the first ratio to one third: that gives n equals four r minus one. Set the second to three fifths: that gives eight r plus five equals three n. Substitute the first into the second and you get r equals two, hence n equals seven."
+            },
+            {
+              "seq": 9,
+              "text": "<excited> Always verify. Seven C one, seven C two, seven C three are seven, twenty one, thirty five — which is one to three to five exactly. The answer holds."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three ek saath do ideas jodta hai: ek linear factor distribute karna, aur general term use karna. Humein $x$ cube ka coefficient chahiye $(1+x)$ into $(1-2x)$ power five mein."
+            },
+            {
+              "seq": 2,
+              "text": "Product ko split karo. $(1+x)$ into fifth power bas fifth power hai, plus $x$ into fifth power. Woh extra $x$ hi key hai — woh sab kuch shift kar deta hai."
+            },
+            {
+              "seq": 3,
+              "text": "Toh poori cheez mein $x$ cube ka coefficient hai $(1-2x)$ power five mein $x$ cube ka coefficient, plus usi expansion mein $x$ square ka coefficient. $x$ square kyun? Kyunki aage wala $x$ index ko ek se neeche khiska deta hai."
+            },
+            {
+              "seq": 4,
+              "text": "$(1-2x)$ power five ka general term hai $5\\,C\\,r$ into minus two power $r$, into $x$ power $r$. $x$ cube ke liye $r$ three: $5\\,C\\,3$ into minus two cube, matlab ten into minus eight, toh minus eighty. $x$ square ke liye $r$ two: $5\\,C\\,2$ into four, matlab ten into four, toh forty."
+            },
+            {
+              "seq": 5,
+              "text": "Dono contributions add karo: minus eighty plus forty deta hai minus forty. Yahi aapka coefficient hai. Gaur karo, sign poori tarah minus two ko track karne se aaya."
+            },
+            {
+              "seq": 6,
+              "text": "Example four ek Advanced-level classic hai. $(1+x)$ power $n$ mein teen consecutive coefficients ratio one is to three is to five mein hain. $n$ aur terms ki position nikaalo."
+            },
+            {
+              "seq": 7,
+              "text": "Elegant tool hai consecutive binomial coefficients ka ratio, jo saare factorials maar deta hai. $n\\,C\\,r-1$ upon $n\\,C\\,r$ hai $r$ upon $n-r+1$; aur $n\\,C\\,r$ upon $n\\,C\\,r+1$ hai $r+1$ upon $n-r$."
+            },
+            {
+              "seq": 8,
+              "text": "Pehla ratio one-third rakho: isse milta hai $n$ equals $4r-1$. Doosra three-fifths rakho: isse milta hai $8r+5$ equals $3n$. Pehle ko doosre mein substitute karo aur $r$ equals two, isliye $n$ equals seven."
+            },
+            {
+              "seq": 9,
+              "text": "<excited> Hamesha verify karo. $7\\,C\\,1$, $7\\,C\\,2$, $7\\,C\\,3$ hain seven, twenty-one, thirty-five — jo theek one is to three is to five hai. Answer sahi hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "tips",
+      "subtopic": "Binomial Expansion and Pascal's Triangle",
+      "title": "Pitfalls and pro-tips for expansions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Traps that cost easy marks"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Off-by-one: $(a+b)^n$ has $n+1$ terms (powers $0$ to $n$)."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "style": "red-margin",
+          "text": "Raise the WHOLE bracket: $(2x)^3=8x^3$, never $2x^3$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Signs in $(a-b)^n$ alternate; the $r$-th-from-zero term carries $(-1)^r$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Term vs index: the $(r+1)$-th term uses $\\binom{n}{r}$; “third term” $\\Rightarrow r=2$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Pro-Tip: after any expansion, put $x=1$ — coefficients must sum to $2^n$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Second free check: symmetry $\\binom{n}{r}=\\binom{n}{n-r}$ — the row reads the same both ways.",
+          "reveal_at": 68
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the traps for this subtopic. These are not deep — they're the small slips that quietly cost you marks you'd earned."
+            },
+            {
+              "seq": 2,
+              "text": "First and most common: the off-by-one on term count. a plus b to the n has n plus one terms, not n. The powers run from zero to n, and that's n plus one different values. Burn it in."
+            },
+            {
+              "seq": 3,
+              "text": "Second, the one that silently wrecks coefficient questions: raise the whole bracket. Two x, cubed, is eight x cubed, because you cube both the two and the x. It is never two x cubed. This single error is behind a huge fraction of wrong answers."
+            },
+            {
+              "seq": 4,
+              "text": "Third, signs in a minus b to the n. The signs alternate plus, minus, plus, minus. The r-th term counting from zero carries minus one to the r, so even powers of b stay positive and odd powers go negative."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, term number versus index. The r plus one-th term uses n C r. So the third term means r equals two, not r equals three. The same off-by-one shows up in Pascal rows, which start at n equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "And the pro-tip that ties it all together: after any expansion of a one plus x type, set x to one. The coefficients must add up to two to the n. It takes five seconds and catches almost every arithmetic and off-by-one slip you could make."
+            },
+            {
+              "seq": 7,
+              "text": "And a second free check to stack on top: the coefficients must be symmetric, n C r equals n C n minus r. So your row of coefficients should read the same forwards and backwards. If it doesn't, you've slipped somewhere."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo iss subtopic ke traps consolidate karte hain. Yeh gehre नहीं hain — yeh woh chhoti galtiyan hain jo chupchaap aapke kamaaye hue marks le jaati hain."
+            },
+            {
+              "seq": 2,
+              "text": "Pehli aur sabse common: term count ka off-by-one. $a+b$ power $n$ mein $n+1$ terms hote hain, $n$ नहीं. Powers zero se $n$ tak chalti hain, aur woh $n+1$ alag values hain. Isse pakka kar lo."
+            },
+            {
+              "seq": 3,
+              "text": "Doosri, jo chupke se coefficient questions barbaad kar deti hai: poori bracket ko uthao. $2x$, cube, hai eight $x$ cube, kyunki aap two aur $x$ dono ko cube karte ho. Yeh kabhi two $x$ cube नहीं hota. Yahi ek galti bahut saare wrong answers ke peeche hai."
+            },
+            {
+              "seq": 4,
+              "text": "Teesri, $a-b$ power $n$ mein signs. Signs alternate karte hain plus, minus, plus, minus. Zero se ginte hue $r$-th term minus one power $r$ carry karta hai, toh $b$ ki even powers positive rehti hain aur odd powers negative ho jaati hain."
+            },
+            {
+              "seq": 5,
+              "text": "Chauthi, term number versus index. $(r+1)$-th term $n\\,C\\,r$ use karta hai. Toh third term ka matlab $r$ equals two, na ki $r$ equals three. Wahi off-by-one Pascal rows mein bhi aata hai, jo $n$ equals zero se shuru hoti hain."
+            },
+            {
+              "seq": 6,
+              "text": "Aur woh pro-tip jo sab kuch jodta hai: kisi bhi $1+x$ type expansion ke baad, $x$ ko one rakho. Coefficients add hokar two power $n$ banne chahiye. Paanch second lagte hain aur yeh lagbhag har arithmetic aur off-by-one galti pakad leta hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aur ek doosra free check upar rakhne ke liye: coefficients symmetric hone chahiye, $n\\,C\\,r$ equals $n\\,C\\,n-r$. Toh aapki coefficients ki row aage aur peeche se same padhni chahiye. Agar nahi, toh kahin galti hui hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "concept",
+      "subtopic": "General, Middle and Independent Terms",
+      "title": "The general term as a catalogue lookup",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Jump straight to the term you want"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Exams rarely want the whole expansion — they want ONE term (the 7th, the middle, the constant)."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "T_{r+1}=\\binom{n}{r}a^{\\,n-r}b^{\\,r}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Feed in the right $r$ and this formula hands you that exact term — no full expansion."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Three named terms are just three ways of choosing $r$: given directly, the balance point, or the power that cancels."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "The $m$-th term $\\Rightarrow r=m-1$. “7th term” means $r=6$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "latex": "\\text{6th term}\\Rightarrow r=5;\\qquad \\text{middle }(n\\text{ even})\\Rightarrow r=\\tfrac{n}{2}",
+          "reveal_at": 66
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> In subtopic one we expanded everything. But an exam almost never wants all the terms — it wants one specific term, and writing out fifty terms to find one of them would be madness. So we need a way to jump straight to it."
+            },
+            {
+              "seq": 2,
+              "text": "Think of the questions you actually see: find the seventh term, find the middle term, find the term with no x in it, find the one carrying x to the twelfth. Every one of these is asking for a single entry, not the whole list."
+            },
+            {
+              "seq": 3,
+              "text": "The tool that lets you jump is the general term, T r plus one equals n C r, a to the n minus r, b to the r. You met it in subtopic one; now it becomes your main instrument."
+            },
+            {
+              "seq": 4,
+              "text": "Think of it as the catalogue lookup of the expansion. The index r is like a page number. Feed in the right r, and the formula hands you that exact term — coefficient, powers, everything — without printing the whole catalogue."
+            },
+            {
+              "seq": 5,
+              "text": "And here's the unifying idea. The three famous special terms are really just three different ways of deciding which r to ask for. Sometimes r is handed to you. Sometimes r is the balance point of the row. And sometimes r is whatever makes the power of x vanish."
+            },
+            {
+              "seq": 6,
+              "text": "One warning you will use constantly: the m-th term uses index m minus one. So the seventh term means r equals six, not seven. This off-by-one is the same family as the term-versus-index trap from subtopic one — keep it front of mind."
+            },
+            {
+              "seq": 7,
+              "text": "To make it concrete: asking for the sixth term fixes r at five; asking for the middle term of an even-power expansion fixes r at n over two. Same formula — you just decide the r differently each time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Subtopic one mein humne sab kuch expand kiya. Par exam lagbhag kabhi saare terms नहीं maangta — woh ek specific term maangta hai, aur ek term ke liye pachaas terms likhna paagalpan hoga. Toh humein seedha uss tak jump karne ka तरीका chahiye."
+            },
+            {
+              "seq": 2,
+              "text": "Socho jo questions aap sach mein dekhte ho: seventh term nikaalo, middle term nikaalo, woh term jisme koi $x$ नहीं, ya woh jo $x$ power twelve carry karta hai. In sab mein ek single entry chahiye, poori list नहीं."
+            },
+            {
+              "seq": 3,
+              "text": "Jo tool jump karne deta hai woh hai general term, $T$ $r+1$ equals $n\\,C\\,r$, $a$ power $n-r$, $b$ power $r$. Aap isse subtopic one mein mile the; ab yeh aapka main instrument ban jaata hai."
+            },
+            {
+              "seq": 4,
+              "text": "Isse expansion ka catalogue lookup samjho. Index $r$ ek page number jaisa hai. Sahi $r$ daalo, aur formula wahi exact term de deta hai — coefficient, powers, sab kuch — bina poora catalogue chhaape."
+            },
+            {
+              "seq": 5,
+              "text": "Aur yeh raha unifying idea. Teen famous special terms asal mein teen alag तरीके hain yeh decide karne ke ki kaunsa $r$ maangna hai. Kabhi $r$ aapko seedha diya jaata hai. Kabhi $r$ row ka balance point hota hai. Aur kabhi $r$ woh hai jo $x$ ki power ko gayab kar de."
+            },
+            {
+              "seq": 6,
+              "text": "Ek warning jo aap baar-baar use karoge: $m$-th term index $m-1$ use karta hai. Toh seventh term ka matlab $r$ equals six, na ki seven. Yeh off-by-one wahi family hai jaise subtopic one ka term-versus-index trap — isse dhyaan mein rakho."
+            },
+            {
+              "seq": 7,
+              "text": "Concrete banane ke liye: sixth term maangna $r$ ko five pe fix karta hai; even-power expansion ka middle term maangna $r$ ko $n$ upon two pe fix karta hai. Wahi formula — bas har baar $r$ alag decide karte ho."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "General, Middle and Independent Terms",
+      "title": "Middle term and independent term — the intuition",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where do the middle and constant terms sit?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Middle term = centre seat of $n+1$ terms. $n$ even $\\Rightarrow$ one centre; $n$ odd $\\Rightarrow$ two."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Independent term = the $r$ where the net power of $x$ collapses to zero (a pure number)."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "caption": "Tug-of-war on the exponent of x",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"80\" x2=\"410\" y2=\"80\" stroke=\"#7a5a2f\" stroke-width=\"2\"/><line x1=\"220\" y1=\"55\" x2=\"220\" y2=\"105\" stroke=\"#7a5a2f\" stroke-width=\"2\"/><text x=\"220\" y=\"125\" font-family=\"system-ui, sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#3a2b16\">net power of x = 0</text><path d=\"M225 45 L360 45\" stroke=\"#2e7d32\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ar)\"/><text x=\"300\" y=\"38\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#2e7d32\">x^p pushes UP: + p(n-r)</text><path d=\"M215 115 L80 115\" stroke=\"#c0392b\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ar)\"/><text x=\"150\" y=\"108\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#c0392b\">1/x^q pulls DOWN: - qr</text><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0 L7 3 L0 6 z\" fill=\"#555\"/></marker></defs></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "The solved $r$ MUST be an integer with $0\\le r\\le n$, or the term simply does not exist."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Never round $r$ to force an answer — heavily punished."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "A positive-index expansion need not contain a constant term, nor a term of every power.",
+          "reveal_at": 68
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's build the picture for the two trickier special terms: the middle term and the term independent of x."
+            },
+            {
+              "seq": 2,
+              "text": "For the middle term, imagine the n plus one terms laid out like seats in a row. If n plus one is odd — that is, n even — there is exactly one centre seat, so one middle term. If n plus one is even — n odd — there's no single centre; two seats share the middle, so there are two middle terms. Parity decides everything."
+            },
+            {
+              "seq": 3,
+              "text": "The term independent of x is the constant term — the one with no x left in it. It sits at whatever value of r makes the net power of x collapse to zero."
+            },
+            {
+              "seq": 4,
+              "text": "Picture a tug-of-war on the exponent. A factor like x to the p pulls the power up. A factor like one over x to the q, which is x to the minus q, pulls it down. The independent term is the exact spot where the two pulls cancel and x vanishes, leaving a pure number."
+            },
+            {
+              "seq": 5,
+              "text": "Now the single most important rule in this subtopic. Whatever r you solve for must be a non-negative integer between zero and n. This is a genuine yes-or-no test, not a formality."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> If the exponent equation gives you r equals sixteen fifths, or r equals minus two, then the term you're chasing does not exist. Say so and stop. Do not round r to the nearest integer to force an answer — that is one of the most punished mistakes in the whole topic."
+            },
+            {
+              "seq": 7,
+              "text": "One more truth to internalise: a positive-integer expansion does not have to contain a constant term at all, and it need not contain a term of every power. Absence is a legitimate answer here — sometimes the honest result is that no such term exists."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo do zyada tricky special terms ki picture banate hain: middle term aur term independent of $x$."
+            },
+            {
+              "seq": 2,
+              "text": "Middle term ke liye, socho $n+1$ terms ek row mein seats ki tarah lage hain. Agar $n+1$ odd hai — matlab $n$ even — toh exactly ek centre seat hai, toh ek middle term. Agar $n+1$ even hai — $n$ odd — toh koi single centre नहीं; do seats middle share karti hain, toh do middle terms. Parity sab decide karti hai."
+            },
+            {
+              "seq": 3,
+              "text": "Term independent of $x$ constant term hai — woh jisme koi $x$ bacha hi नहीं. Woh us $r$ pe baithta hai jahan $x$ ki net power zero ho jaaye."
+            },
+            {
+              "seq": 4,
+              "text": "Exponent pe ek tug-of-war picture karo. $x$ power $p$ jaisa factor power ko upar kheenchta hai. $1$ upon $x$ power $q$, yaani $x$ power minus $q$, isse neeche khinchta hai. Independent term wahi exact jagah hai jahan dono khinchav cancel ho jaate hain aur $x$ gayab, ek pure number chhod ke."
+            },
+            {
+              "seq": 5,
+              "text": "Ab iss subtopic ka sabse zaroori rule. Jo bhi $r$ aap solve karo woh ek non-negative integer hona chahiye zero aur $n$ ke beech. Yeh ek sachcha haan-ya-naa test hai, formality नहीं."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> Agar exponent equation aapko $r$ equals sixteen-fifths de, ya $r$ equals minus two, toh jo term aap dhoondh rahe ho woh exist नहीं karta. Bata do aur ruk jao. $r$ ko nearest integer pe round mat karo answer nikaalne ke liye — yeh poore topic ki sabse zyada punish hone waali galti hai."
+            },
+            {
+              "seq": 7,
+              "text": "Ek aur sachchai andar bithao: positive-integer expansion mein zaroori nahi ki constant term ho, ya har power ka term ho. Yahan absence ek legitimate answer hai — kabhi imaandaar result yeh hota hai ki aisa koi term hai hi nahi."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "formulas",
+      "subtopic": "General, Middle and Independent Terms",
+      "title": "The specific-term machinery",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One net-exponent expression runs every question"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "T_{r+1}=\\binom{n}{r}\\left(\\alpha x^{p}\\right)^{n-r}\\left(\\frac{\\beta}{x^{q}}\\right)^{r}=\\binom{n}{r}\\alpha^{\\,n-r}\\beta^{\\,r}\\,x^{\\,p(n-r)-qr}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "latex": "E(r)=p(n-r)-qr\\qquad(\\text{net exponent of }x)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "text": "Term with $x^{k}$: set $E(r)=k$.   Independent term: set $E(r)=0$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "n\\ \\text{even}:\\ T_{\\frac{n}{2}+1}\\qquad n\\ \\text{odd}:\\ T_{\\frac{n+1}{2}}\\ \\text{and}\\ T_{\\frac{n+3}{2}}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "style": "red-margin",
+          "text": "$p$-th term from the end $=(n-p+2)$-th from the beginning."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "text": "Definitions: $\\alpha,\\beta$ are the multipliers; $p,q$ the powers of $x$; $n\\in\\mathbb{N}$; $r\\in\\{0,\\dots,n\\}$ — all pure numbers.",
+          "reveal_at": 70
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the machinery. Almost every specific-term question runs off a single expression, so learn to produce it fast."
+            },
+            {
+              "seq": 2,
+              "text": "Take the standard exam binomial: alpha x to the p, plus beta over x to the q, all to the n. Write its general term. The two parts contribute their coefficients alpha and beta raised to powers, and the powers of x combine into a single exponent."
+            },
+            {
+              "seq": 3,
+              "text": "That combined exponent is the star of the show. Call it E of r: it equals p times n minus r, minus q times r. This one expression powers every question in the subtopic."
+            },
+            {
+              "seq": 4,
+              "text": "Here's how you use it. Want the term with x to the k? Set E of r equal to k and solve. Want the term independent of x? Set E of r equal to zero and solve. Same machine, two settings."
+            },
+            {
+              "seq": 5,
+              "text": "For the middle term, read the position straight off parity. If n is even, there's one middle term, T at n over two plus one. If n is odd, there are two, at n plus one over two, and n plus three over two."
+            },
+            {
+              "seq": 6,
+              "text": "And a handy conversion: the p-th term from the end equals the n minus p plus two-th term from the beginning. So you never have to count backwards — flip it into a forward count and use the same general term."
+            },
+            {
+              "seq": 7,
+              "text": "Finally, fix the vocabulary so the formula reads cleanly: alpha and beta are the numerical multipliers on the two parts, p and q are the powers of x in each part, n is the index, and r is the term index running from zero to n. As always, every one of these is a pure number."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Yeh rahi machinery. Lagbhag har specific-term question ek hi expression pe chalti hai, toh isse jaldi banana seekh lo."
+            },
+            {
+              "seq": 2,
+              "text": "Standard exam binomial lo: alpha $x$ power $p$, plus beta upon $x$ power $q$, poora power $n$. Iska general term likho. Dono parts apne coefficients alpha aur beta ko powers pe uthate hain, aur $x$ ki powers ek single exponent mein mil jaati hain."
+            },
+            {
+              "seq": 3,
+              "text": "Wahi combined exponent show ka star hai. Isse $E$ of $r$ kaho: yeh equals $p$ into $n-r$, minus $q$ into $r$. Yeh ek expression subtopic ki har question chalati hai."
+            },
+            {
+              "seq": 4,
+              "text": "Isse use kaise karte hain. $x$ power $k$ waala term chahiye? $E$ of $r$ ko $k$ ke barabar rakho aur solve karo. Independent term chahiye? $E$ of $r$ ko zero rakho aur solve karo. Wahi machine, do settings."
+            },
+            {
+              "seq": 5,
+              "text": "Middle term ke liye position seedha parity se padho. Agar $n$ even hai, ek middle term hai, $T$ at $n$ upon two plus one. Agar $n$ odd hai, do hain, $n+1$ upon two, aur $n+3$ upon two pe."
+            },
+            {
+              "seq": 6,
+              "text": "Aur ek kaam ka conversion: end se $p$-th term equals beginning se $(n-p+2)$-th term. Toh aapko kabhi ulta ginna नहीं padta — usse forward count mein palto aur wahi general term use karo."
+            },
+            {
+              "seq": 7,
+              "text": "Aakhir mein vocabulary fix karo taaki formula saaf padhe: alpha aur beta do parts ke numerical multipliers hain, $p$ aur $q$ har part mein $x$ ki powers hain, $n$ index hai, aur $r$ term index hai jo zero se $n$ tak chalta hai. Hamesha ki tarah, inme se har ek pure number hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "General, Middle and Independent Terms",
+      "title": "The specific-term algorithm, and why parity gives one or two middles",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The universal “specific term” procedure"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "1) Write $T_{r+1}$, collect $x$ into one power. 2) Read $E(r)$. 3) Impose $E(r)=k$ or $0$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "text": "4) Solve and VALIDATE: is $r$ an integer in $[0,n]$? If not, the term does not exist."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "5) Back-substitute the valid $r$ into $T_{r+1}$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Parity: a list of $n+1$ terms has a unique centre iff $n+1$ is odd, i.e. $n$ even."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "n\\ \\text{even}\\Rightarrow r=\\tfrac{n}{2};\\qquad n\\ \\text{odd}\\Rightarrow r=\\tfrac{n-1}{2},\\ \\tfrac{n+1}{2}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Don't hunt for the middle by expanding — read the position straight off parity.",
+          "reveal_at": 66
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lock in one procedure that answers four different question types at once: find the term with x to the k, find the independent term, find a coefficient, and find a stated term. Same five steps every time."
+            },
+            {
+              "seq": 2,
+              "text": "Step one, write the general term for the given binomial and collect all the x's into a single power. Step two, read off the net exponent, E of r. Step three, impose the condition — E of r equals k for a specific power, or E of r equals zero for the independent term."
+            },
+            {
+              "seq": 3,
+              "text": "Step four is the one people skip, and it's the whole point. Solve for r, then validate: is r an integer, and does it lie between zero and n? If not, the term genuinely does not exist — you say so and you stop. A positive-integer expansion only produces the powers E of zero through E of n; a power outside that set has nothing to compute."
+            },
+            {
+              "seq": 4,
+              "text": "Step five, and only now: back-substitute the valid r into the general term to get the actual term, or just its coefficient if that's all that was asked. Notice you compute the messy part last, after you know r is legitimate."
+            },
+            {
+              "seq": 5,
+              "text": "Now the parity fact, made precise. The terms form a list of length n plus one. A list has a unique middle element exactly when its length is odd. So n plus one odd, meaning n even, gives one middle term; n odd gives two."
+            },
+            {
+              "seq": 6,
+              "text": "In index terms: for even n, the middle sits at r equals n over two. For odd n, the two middles sit at r equals n minus one over two and r equals n plus one over two. Don't hunt for the middle by expanding — read it straight off parity."
+            },
+            {
+              "seq": 7,
+              "text": "And the one habit that saves time: never hunt for the middle term by writing out the expansion and looking for the centre. Check the parity of n, read the position off directly, and apply the general term at that r. Expanding is the slow, error-prone route."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo ek procedure pakka karte hain jo ek saath chaar tarah ke questions ka jawab deta hai: $x$ power $k$ waala term, independent term, coefficient, aur ek stated term. Har baar wahi paanch steps."
+            },
+            {
+              "seq": 2,
+              "text": "Step one, diye gaye binomial ka general term likho aur saare $x$ ko ek single power mein collect karo. Step two, net exponent $E$ of $r$ padho. Step three, condition impose karo — $E$ of $r$ equals $k$ specific power ke liye, ya $E$ of $r$ equals zero independent term ke liye."
+            },
+            {
+              "seq": 3,
+              "text": "Step four woh hai jo log skip karte hain, aur wahi poora point hai. $r$ solve karo, phir validate karo: kya $r$ integer hai, aur kya woh zero aur $n$ ke beech hai? Agar नहीं, toh term sach mein exist नहीं karta — bata do aur ruk jao. Positive-integer expansion sirf powers $E$ of zero se $E$ of $n$ banata hai; uss set ke bahar ki power mein compute karne ko kuch nahi."
+            },
+            {
+              "seq": 4,
+              "text": "Step five, aur ab hi: valid $r$ ko general term mein back-substitute karo, actual term nikaalne ke liye, ya sirf coefficient agar wahi maanga tha. Gaur karo aap messy part sabse aakhir mein compute karte ho, $r$ ke legitimate hone ke baad."
+            },
+            {
+              "seq": 5,
+              "text": "Ab parity fact, precise banaya hua. Terms $n+1$ length ki list banate hain. List ka unique middle element tab hi hota hai jab uski length odd ho. Toh $n+1$ odd, matlab $n$ even, ek middle term deta hai; $n$ odd do deta hai."
+            },
+            {
+              "seq": 6,
+              "text": "Index mein: even $n$ ke liye middle $r$ equals $n$ upon two pe baithta hai. Odd $n$ ke liye do middles $r$ equals $n-1$ upon two aur $r$ equals $n+1$ upon two pe. Middle ko expand karke mat dhoondho — seedha parity se padho."
+            },
+            {
+              "seq": 7,
+              "text": "Aur ek aadat jo time bachaati hai: middle term ko kabhi expansion likh ke, centre dhoondh ke mat nikaalo. $n$ ki parity check karo, position seedha padho, aur us $r$ pe general term lagao. Expand karna slow aur galti-bhara raasta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "General, Middle and Independent Terms",
+      "title": "A stated term, and the independent term",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 [CBSE]: 6th term of $\\left(2x+\\tfrac{3}{x}\\right)^{9}$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "6th term $\\Rightarrow r=5$ (off-by-one)."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "T_6=\\binom{9}{5}(2x)^4\\left(\\tfrac{3}{x}\\right)^5=126\\cdot16x^4\\cdot\\tfrac{243}{x^5}=\\frac{489888}{x}"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Example 2 [JEE Main]: term independent of $x$ in $\\left(x^2-\\tfrac{1}{x}\\right)^{9}$"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "T_{r+1}=\\binom{9}{r}(-1)^r x^{2(9-r)-r}=\\binom{9}{r}(-1)^r x^{18-3r}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "latex": "18-3r=0\\Rightarrow r=6\\ (\\text{valid})\\Rightarrow T_7=\\binom{9}{6}(-1)^6=84"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 62,
+          "style": "red-margin",
+          "text": "Sign trap: the $-1/x$ gives $-r$; writing $+r$ gives $r=18$ (out of range)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one, straight from the CBSE playbook: find the sixth term of two x plus three over x, all to the ninth."
+            },
+            {
+              "seq": 2,
+              "text": "First, the off-by-one. The sixth term is T six, which is T five plus one, so r is five, not six. Mind that gap every single time."
+            },
+            {
+              "seq": 3,
+              "text": "Now plug r equals five into the general term. Nine C five, times two x to the fourth, times three over x to the fifth. Raise the whole two x to the fourth to get sixteen x to the fourth, and three over x to the fifth to get two forty three over x to the fifth. Multiplying, the x to the fourth over x to the fifth leaves one over x, and the numbers give four lakh eighty nine thousand eight hundred eighty eight over x."
+            },
+            {
+              "seq": 4,
+              "text": "Example two is a JEE Main speed trap: find the term independent of x in x squared minus one over x, all to the ninth. Remember — solve for r first, don't compute the term yet."
+            },
+            {
+              "seq": 5,
+              "text": "The general term is nine C r, times minus one to the r, times x to the power two times nine minus r, minus r. Combine the exponent: two times nine minus r is eighteen minus two r, minus another r gives eighteen minus three r. So the exponent of x is eighteen minus three r."
+            },
+            {
+              "seq": 6,
+              "text": "Set it to zero for the independent term: eighteen minus three r equals zero gives r equals six, a valid integer inside zero to nine, so the term exists. Substitute back: T seven is nine C six, times minus one to the sixth, which is eighty four. That's your constant term."
+            },
+            {
+              "seq": 7,
+              "text": "Here's the trap the problem is built around. The minus one over x factor contributes x to the minus r, so the net exponent is two times nine minus r, minus r. Students who wrongly write plus r get eighteen minus r equals zero, so r equals eighteen — out of range — and then either force a wrong term or wrongly declare none exists. Get that minus sign right and it's ten seconds of work."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one, seedha CBSE playbook se: $2x$ plus three upon $x$, poora power nine, ka sixth term nikaalo."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle off-by-one. Sixth term hai $T$ six, jo $T$ five plus one hai, toh $r$ five hai, six नहीं. Yeh gap har baar dhyaan mein rakho."
+            },
+            {
+              "seq": 3,
+              "text": "Ab $r$ equals five general term mein daalo. $9\\,C\\,5$, into $2x$ power four, into three upon $x$ power five. Poore $2x$ ko power four pe uthao toh sixteen $x$ power four, aur three upon $x$ ko power five pe toh two-hundred-forty-three upon $x$ power five. Multiply karne pe $x$ power four upon $x$ power five bacha deta hai one upon $x$, aur numbers dete hain four lakh eighty-nine thousand eight-hundred-eighty-eight upon $x$."
+            },
+            {
+              "seq": 4,
+              "text": "Example two ek JEE Main speed trap hai: $x$ square minus one upon $x$, poora power nine, mein term independent of $x$ nikaalo. Yaad rakho — pehle $r$ solve karo, term abhi compute mat karo."
+            },
+            {
+              "seq": 5,
+              "text": "General term hai $9\\,C\\,r$, into minus one power $r$, into $x$ power two into nine minus $r$, minus $r$. Exponent combine karo: two into nine minus $r$ hai eighteen minus two $r$, ek aur $r$ ghataao toh eighteen minus three $r$. Toh $x$ ka exponent hai eighteen minus three $r$."
+            },
+            {
+              "seq": 6,
+              "text": "Independent term ke liye isse zero rakho: eighteen minus three $r$ equals zero deta hai $r$ equals six, ek valid integer zero se nine ke andar, toh term exist karta hai. Back substitute karo: $T$ seven hai $9\\,C\\,6$, into minus one power six, jo eighty-four hai. Yahi aapka constant term hai."
+            },
+            {
+              "seq": 7,
+              "text": "Yeh raha woh trap jispe problem bani hai. Minus one upon $x$ factor $x$ power minus $r$ deta hai, toh net exponent hai two into nine minus $r$, minus $r$. Jo students galti se plus $r$ likhte hain unhe milta hai eighteen minus $r$ equals zero, toh $r$ equals eighteen — out of range — aur phir ya toh galat term force karte hain ya galat keh dete hain koi nahi hai. Woh minus sign sahi rakho aur yeh das second ka kaam hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "General, Middle and Independent Terms",
+      "title": "The middle term, and matching coefficients across two expansions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 [JEE Main]: middle term of $\\left(\\tfrac{3x}{2}-\\tfrac{1}{3x}\\right)^{6}$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "$n=6$ even $\\Rightarrow$ one middle term $T_4$ ($r=3$)."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "T_4=\\binom{6}{3}\\left(\\tfrac{3x}{2}\\right)^3\\left(-\\tfrac{1}{3x}\\right)^3=20\\cdot\\tfrac{27x^3}{8}\\cdot\\left(-\\tfrac{1}{27x^3}\\right)=-\\tfrac{5}{2}"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Example 4 [JEE Adv]: match coeff of $x^7$ and $x^{-7}$"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "\\left(ax^2+\\tfrac{1}{bx}\\right)^{11}:\\ x^7\\Rightarrow r=5,\\ \\text{coeff}=\\binom{11}{5}a^6b^{-5}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "latex": "\\left(ax-\\tfrac{1}{bx^2}\\right)^{11}:\\ x^{-7}\\Rightarrow k=6,\\ \\text{coeff}=\\binom{11}{6}a^5b^{-6}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 62,
+          "latex": "\\binom{11}{5}=\\binom{11}{6}\\Rightarrow a^6b^{-5}=a^5b^{-6}\\Rightarrow ab=1"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three brings parity, the general term, and fraction handling together: find the middle term of three x over two, minus one over three x, all to the sixth."
+            },
+            {
+              "seq": 2,
+              "text": "Check parity first. n is six, which is even, so there is exactly one middle term. It's T at six over two plus one, that is T four, so r equals three."
+            },
+            {
+              "seq": 3,
+              "text": "Substitute r equals three. Six C three is twenty. Three x over two, cubed, is twenty seven x cubed over eight. Minus one over three x, cubed, is minus one over twenty seven x cubed. The x cubed cancels the x cubed, the twenty seven cancels, and you're left with twenty times minus one eighth, which is minus five halves. Here the middle term happened to also be independent of x — a coincidence of these powers, not a rule."
+            },
+            {
+              "seq": 4,
+              "text": "Example four looks intimidating but collapses beautifully. The coefficient of x to the seventh in one expansion equals the coefficient of x to the minus seventh in another; find the relation between a and b."
+            },
+            {
+              "seq": 5,
+              "text": "First expansion: a x squared plus one over b x, all to the eleventh. Its general term has exponent twenty two minus three r. Set that to seven, you get r equals five, and the coefficient is eleven C five, a to the sixth, b to the minus fifth."
+            },
+            {
+              "seq": 6,
+              "text": "Second expansion: a x minus one over b x squared, to the eleventh. Its exponent is eleven minus three k. Set that to minus seven, you get k equals six, and the coefficient is eleven C six, a to the fifth, b to the minus sixth — the sign works out positive."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> Now the elegant step. By symmetry, eleven C five equals eleven C six, so those binomial coefficients cancel outright. You're left with a to the sixth b to the minus fifth equals a to the fifth b to the minus sixth, which rearranges to a b equals one. The scary problem was really one symmetry away from trivial."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three parity, general term, aur fraction handling ko ek saath laata hai: three $x$ upon two, minus one upon three $x$, poora power six, ka middle term nikaalo."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle parity check karo. $n$ six hai, jo even hai, toh exactly ek middle term hai. Woh hai $T$ at six upon two plus one, yaani $T$ four, toh $r$ equals three."
+            },
+            {
+              "seq": 3,
+              "text": "$r$ equals three substitute karo. $6\\,C\\,3$ hai twenty. Three $x$ upon two, cube, hai twenty-seven $x$ cube upon eight. Minus one upon three $x$, cube, hai minus one upon twenty-seven $x$ cube. $x$ cube $x$ cube ko cancel karta hai, twenty-seven cancel hota hai, aur bachta hai twenty into minus one-eighth, jo hai minus five-by-two. Yahan middle term ittefaaq se independent of $x$ bhi nikla — in powers ka sanyog, koi rule नहीं."
+            },
+            {
+              "seq": 4,
+              "text": "Example four dekhne mein daraavna hai par khoobsurti se dhah jaata hai. Ek expansion mein $x$ power seven ka coefficient doosre mein $x$ power minus seven ke coefficient ke barabar hai; $a$ aur $b$ ka relation nikaalo."
+            },
+            {
+              "seq": 5,
+              "text": "Pehla expansion: $a$ $x$ square plus one upon $b$ $x$, poora power eleven. Iske general term ka exponent hai twenty-two minus three $r$. Isse seven rakho, $r$ equals five milta hai, aur coefficient hai $11\\,C\\,5$, $a$ power six, $b$ power minus five."
+            },
+            {
+              "seq": 6,
+              "text": "Doosra expansion: $a$ $x$ minus one upon $b$ $x$ square, power eleven. Iska exponent hai eleven minus three $k$. Isse minus seven rakho, $k$ equals six milta hai, aur coefficient hai $11\\,C\\,6$, $a$ power five, $b$ power minus six — sign positive nikalta hai."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> Ab elegant step. Symmetry se, $11\\,C\\,5$ equals $11\\,C\\,6$, toh woh binomial coefficients seedha cancel ho jaate hain. Bachta hai $a$ power six $b$ power minus five equals $a$ power five $b$ power minus six, jo rearrange hokar $a$ $b$ equals one ban jaata hai. Woh daraavni problem asal mein ek symmetry door thi trivial hone se."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "tips",
+      "subtopic": "General, Middle and Independent Terms",
+      "title": "Pitfalls and pro-tips for specific terms",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The four recurring traps"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Off-by-one: the $m$-th term means $r=m-1$. “7th term” $\\Rightarrow r=6$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "style": "red-margin",
+          "text": "Odd $n$ has TWO middle terms — “the middle term” is often a deliberate trap."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "A factor $1/x^{q}$ contributes $-qr$; write $E(r)=p(n-r)-qr$ explicitly, sign and all."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Non-integer or out-of-range $r$ $\\Rightarrow$ the term is genuinely absent. Don't round."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Pro-Tip: solve for $r$ first; only substitute once $r$ is validated."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "style": "red-margin",
+          "text": "Memory aid: “Set the power, solve for $r$, check it's whole and in range.”",
+          "reveal_at": 68
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the four traps that show up again and again in specific-term questions. Get these reflexive and this subtopic becomes almost mechanical."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, the off-by-one in position. The r plus one-th term uses n C r, so the m-th term means r equals m minus one. The seventh term is r equals six, never r equals seven. It's the same family as the Pascal-row indexing from subtopic one."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, the forgotten second middle term. When n is odd there are two middle terms. So a question that says the middle term of an odd-power expansion is often a deliberate trap — there are two, and you must give both."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, sign and exponent slips from one over x factors. A factor one over x to the q contributes minus q r to the exponent and may carry a sign, and both get dropped routinely. Always write the net exponent as p times n minus r, minus q r, explicitly, so the minus sign can't escape."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, forcing a term that doesn't exist. If solving the exponent equation gives a non-integer r, or an r outside zero to n, the term is genuinely absent. Do not round to the nearest integer to manufacture an answer."
+            },
+            {
+              "seq": 6,
+              "text": "And the pro-tip that prevents most of these: solve for r first. Never expand, never compute the full term, until you have r and you've validated it. In an objective paper that's the difference between a fifteen-second solve and a two-minute mess — and it instantly catches the no-such-term cases."
+            },
+            {
+              "seq": 7,
+              "text": "Package it into one line you can recall under pressure: set the power, solve for r, check it's whole and in range. If that check fails, the term does not exist — and that itself is the answer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo woh chaar traps consolidate karte hain jo specific-term questions mein baar-baar aate hain. Inhe reflex bana lo aur yeh subtopic lagbhag mechanical ho jaata hai."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, position ka off-by-one. $(r+1)$-th term $n\\,C\\,r$ use karta hai, toh $m$-th term ka matlab $r$ equals $m-1$. Seventh term hai $r$ equals six, kabhi $r$ equals seven नहीं. Yeh wahi family hai jaise subtopic one ki Pascal-row indexing."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, bhula hua doosra middle term. Jab $n$ odd hota hai toh do middle terms hote hain. Toh jo question kahe odd-power expansion ka middle term, woh aksar jaan boojh ke trap hota hai — do hain, aur dono dene padenge."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, one upon $x$ factors se sign aur exponent ki galtiyan. Ek factor one upon $x$ power $q$ exponent mein minus $q$ $r$ deta hai aur sign bhi carry kar sakta hai, aur dono routinely chhoot jaate hain. Hamesha net exponent ko $p$ into $n-r$, minus $q$ $r$, explicitly likho, taaki minus sign bhaag na sake."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, aisa term force karna jo exist hi नहीं karta. Agar exponent equation solve karne pe $r$ non-integer nikle, ya zero se $n$ ke bahar, toh term sach mein absent hai. Answer banane ke liye nearest integer pe round mat karo."
+            },
+            {
+              "seq": 6,
+              "text": "Aur woh pro-tip jo inme se zyaadatar rok deta hai: pehle $r$ solve karo. Kabhi expand mat karo, kabhi poora term compute mat karo, jab tak $r$ na mile aur usse validate na kar lo. Objective paper mein yahi fifteen-second solve aur two-minute gadbad ke beech ka farak hai — aur yeh turant no-such-term cases pakad leta hai."
+            },
+            {
+              "seq": 7,
+              "text": "Isse ek line mein pack karo jo pressure mein yaad aaye: power set karo, $r$ solve karo, check karo ki woh whole aur range mein hai. Agar woh check fail ho, toh term exist nahi karta — aur wahi khud answer hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

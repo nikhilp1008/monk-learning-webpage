@@ -1,0 +1,2235 @@
+{
+  "chapter": "Haloalkanes and Haloarenes",
+  "subject": "chemistry",
+  "class_level": 12,
+  "chapter_order": 6,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish",
+    "hindi"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Polyhalogen compounds: useful and dangerous in the same breath",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "More than one halogen — and always a trade-off"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Polyhalogen = a carbon skeleton carrying two or more halogen atoms."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The workhorses: CH2Cl2 (dichloromethane), CHCl3 (chloroform), CHI3 (iodoform), CCl4 (carbon tetrachloride), CF2Cl2 (a freon), and DDT."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "The theme of this whole section: every one of them is prized for a use AND flagged for a hazard."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Prized because they are excellent solvents, propellants, refrigerants, and were once powerful pesticides."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Flagged because they are toxic, form poisons on standing, deplete the ozone layer, or persist in the environment."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "So learn each compound as a paired card: one side the use, the other side the hazard."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Let me frame this whole section with one idea you can hang everything on.</curious> Polyhalogen compounds are the useful cousins of the family, but every single one of them carries a hidden cost."
+            },
+            {
+              "seq": 2,
+              "text": "First, the definition. A polyhalogen compound is simply a carbon skeleton that carries two or more halogen atoms, rather than the single halogen we studied so far."
+            },
+            {
+              "seq": 3,
+              "text": "The workhorses you must know are dichloromethane, chloroform, iodoform, carbon tetrachloride, the freons, and D D T. Each one is famous for a specific job."
+            },
+            {
+              "seq": 4,
+              "text": "And here is the theme that runs through everything that follows. Every one of these is prized for a use and, in the very same breath, flagged for a hazard."
+            },
+            {
+              "seq": 5,
+              "text": "They are prized because they make excellent solvents, propellants, and refrigerants, and because some of them were once extremely powerful pesticides that saved millions of lives."
+            },
+            {
+              "seq": 6,
+              "text": "But each is also flagged, because they can be toxic, some form deadly poisons simply on standing in air, some tear apart the ozone layer, and some refuse to break down and linger in the environment for decades."
+            },
+            {
+              "seq": 7,
+              "text": "So my advice for this section is simple. Learn each compound as a paired flash card: one side is the use, the other side is the hazard. If you can recite both, you have the section."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>पूरे section को एक idea पर टिका देते हैं जिस पर सब कुछ लटका सकते हो।</curious> Polyhalogen compounds इस family के useful cousins हैं, पर इनमें से हर एक एक छिपी हुई क़ीमत लेकर आता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले definition। Polyhalogen compound बस एक carbon skeleton है जिस पर दो या ज़्यादा halogen atoms हों, न कि अब तक पढ़ा एक अकेला halogen।"
+            },
+            {
+              "seq": 3,
+              "text": "जो workhorses पता होने चाहिए वो हैं dichloromethane, chloroform, iodoform, carbon tetrachloride, freons, और D D T। हर एक किसी ख़ास काम के लिए मशहूर है।"
+            },
+            {
+              "seq": 4,
+              "text": "और यही theme आगे हर चीज़ में चलती है। इनमें से हर एक किसी use के लिए prized है और, उसी साँस में, किसी hazard के लिए flagged है।"
+            },
+            {
+              "seq": 5,
+              "text": "ये prized हैं क्योंकि ये बढ़िया solvents, propellants, और refrigerants बनाते हैं, और इनमें से कुछ कभी बेहद powerful pesticides थे जिन्होंने लाखों जानें बचाईं।"
+            },
+            {
+              "seq": 6,
+              "text": "पर हर एक flagged भी है, क्योंकि ये toxic हो सकते हैं, कुछ सिर्फ़ हवा में खड़े रहकर घातक ज़हर बना लेते हैं, कुछ ozone layer को फाड़ देते हैं, और कुछ टूटने से इनकार करके environment में दशकों तक बने रहते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो इस section के लिए मेरी सलाह simple है। हर compound को एक paired flash card की तरह सीखो: एक तरफ़ use, दूसरी तरफ़ hazard। दोनों बोल सको तो section तुम्हारा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>पूरे खंड को एक विचार पर टिका देते हैं जिस पर सब कुछ लटकाया जा सके।</curious> बहुहैलोजन यौगिक इस परिवार के उपयोगी संबंधी हैं, पर इनमें से हर एक एक छिपी हुई क़ीमत लेकर आता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले परिभाषा। बहुहैलोजन यौगिक बस एक कार्बन ढाँचा है जिस पर दो या अधिक हैलोजन परमाणु हों, न कि अब तक पढ़ा एक अकेला हैलोजन।"
+            },
+            {
+              "seq": 3,
+              "text": "जो प्रमुख यौगिक पता होने चाहिए वे हैं डाइक्लोरोमेथेन, क्लोरोफ़ॉर्म, आयोडोफ़ॉर्म, कार्बन टेट्राक्लोराइड, फ़्रीऑन, और D D T। हर एक किसी ख़ास काम के लिए प्रसिद्ध है।"
+            },
+            {
+              "seq": 4,
+              "text": "और यही विषय आगे हर चीज़ में चलता है। इनमें से हर एक किसी उपयोग के लिए मूल्यवान है और, उसी साँस में, किसी संकट के लिए चिह्नित है।"
+            },
+            {
+              "seq": 5,
+              "text": "ये मूल्यवान हैं क्योंकि ये उत्कृष्ट विलायक, नोदक, और प्रशीतक बनाते हैं, और इनमें से कुछ कभी अत्यंत शक्तिशाली कीटनाशक थे जिन्होंने लाखों जानें बचाईं।"
+            },
+            {
+              "seq": 6,
+              "text": "पर हर एक चिह्नित भी है, क्योंकि ये विषैले हो सकते हैं, कुछ केवल हवा में खड़े रहकर घातक ज़हर बना लेते हैं, कुछ ओज़ोन परत को फाड़ देते हैं, और कुछ टूटने से इनकार करके पर्यावरण में दशकों तक बने रहते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो इस खंड के लिए मेरी सलाह सरल है। हर यौगिक को एक युग्मित कार्ड की तरह सीखिए: एक ओर उपयोग, दूसरी ओर संकट। दोनों बोल सकें तो खंड आपका।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Dichloromethane and chloroform: preparation and character",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The two commonest liquids: CH2Cl2 and CHCl3"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Dichloromethane (CH2Cl2): a widely used solvent — paint remover, degreaser, aerosol propellant, extraction of caffeine."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Its hazard: harms the central nervous system; vapours cause dizziness/numbness; direct contact burns skin and eyes."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Chloroform (CHCl3): once a famous anaesthetic, now mainly a solvent and a lab reagent."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Classic prep: heat ethanol or acetone with bleaching powder (a haloform reaction) — the same chemistry as the iodoform test, but with chlorine."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "A colourless, sweet-smelling, dense, water-insoluble liquid."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "Chloroform's real exam story is not its uses — it's what it turns into on standing. That's next."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Start with the two liquids you meet most often, dichloromethane and chloroform."
+            },
+            {
+              "seq": 2,
+              "text": "Dichloromethane, C H two C l two, is a workhorse solvent. It strips paint, degreases metal, drives aerosol sprays, and is even used to extract caffeine from coffee beans."
+            },
+            {
+              "seq": 3,
+              "text": "Its hazard is that it attacks the central nervous system. Breathing its vapour causes dizziness and numbness, and direct contact burns the skin and the eyes. Useful, but treat with respect."
+            },
+            {
+              "seq": 4,
+              "text": "Chloroform, C H C l three, was once a famous surgical anaesthetic. That use is long gone, and today it serves mainly as a solvent and a laboratory reagent."
+            },
+            {
+              "seq": 5,
+              "text": "The classic preparation is to heat ethanol or acetone with bleaching powder. That is a haloform reaction, and here is a lovely link: it is exactly the same chemistry as the iodoform test we will meet shortly, just run with chlorine instead of iodine."
+            },
+            {
+              "seq": 6,
+              "text": "As a substance, chloroform is a colourless, sweet smelling, dense liquid that does not mix with water, which is why in a separating funnel it settles as the lower layer."
+            },
+            {
+              "seq": 7,
+              "text": "But its real exam story is not its uses at all. It is what chloroform quietly turns into when it is left standing in air and light, and that is exactly where we go next."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "उन दो liquids से शुरू करो जिनसे सबसे ज़्यादा सामना होता है, dichloromethane और chloroform।"
+            },
+            {
+              "seq": 2,
+              "text": "Dichloromethane, C H two C l two, एक workhorse solvent है। ये paint उतारता है, metal degrease करता है, aerosol sprays चलाता है, और coffee beans से caffeine निकालने में भी use होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "इसका hazard ये है कि ये central nervous system पर attack करता है। इसका vapour साँस में लेने से चक्कर और सुन्नपन आता है, और direct contact skin और eyes जला देता है। Useful है, पर सम्मान से handle करो।"
+            },
+            {
+              "seq": 4,
+              "text": "Chloroform, C H C l three, कभी मशहूर surgical anaesthetic था। वो use कब का ख़त्म हो गया, और आज ये मुख्यतः solvent और laboratory reagent के तौर पर काम आता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Classic preparation ये है कि ethanol या acetone को bleaching powder के साथ गरम करो। ये एक haloform reaction है, और यहाँ एक प्यारा link है: ये बिल्कुल वही chemistry है जो जल्द ही आने वाले iodoform test की है, बस iodine के बजाय chlorine के साथ।"
+            },
+            {
+              "seq": 6,
+              "text": "पदार्थ के रूप में chloroform एक colourless, मीठी गंध वाला, dense liquid है जो पानी से नहीं मिलता, इसीलिए separating funnel में ये नीचे वाली layer बनाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "पर इसकी असली exam story इसके uses है ही नहीं। असली बात ये है कि chloroform चुपचाप किसमें बदल जाता है जब उसे हवा और रोशनी में खड़ा छोड़ दो, और ठीक वहीं हम आगे जाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "उन दो द्रवों से शुरू कीजिए जिनसे सबसे अधिक सामना होता है, डाइक्लोरोमेथेन और क्लोरोफ़ॉर्म।"
+            },
+            {
+              "seq": 2,
+              "text": "डाइक्लोरोमेथेन, C H two C l two, एक प्रमुख विलायक है। यह पेंट उतारता है, धातु से चिकनाई हटाता है, एरोसोल स्प्रे चलाता है, और कॉफ़ी बीज से कैफ़ीन निकालने में भी प्रयुक्त होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "इसका संकट यह है कि यह केंद्रीय तंत्रिका तंत्र पर आक्रमण करता है। इसकी वाष्प साँस में लेने से चक्कर और सुन्नपन आता है, और सीधा संपर्क त्वचा और आँखें जला देता है। उपयोगी है, पर सम्मान से संभालिए।"
+            },
+            {
+              "seq": 4,
+              "text": "क्लोरोफ़ॉर्म, C H C l three, कभी प्रसिद्ध शल्य निश्चेतक था। वह उपयोग कब का समाप्त हो गया, और आज यह मुख्यतः विलायक और प्रयोगशाला अभिकर्मक के रूप में काम आता है।"
+            },
+            {
+              "seq": 5,
+              "text": "पारंपरिक निर्माण यह है कि इथेनॉल या ऐसीटोन को विरंजक चूर्ण के साथ गरम कीजिए। यह एक हैलोफ़ॉर्म अभिक्रिया है, और यहाँ एक सुंदर संबंध है: यह बिल्कुल वही रसायन है जो शीघ्र आने वाले आयोडोफ़ॉर्म परीक्षण का है, बस आयोडीन के बजाय क्लोरीन के साथ।"
+            },
+            {
+              "seq": 6,
+              "text": "पदार्थ के रूप में क्लोरोफ़ॉर्म एक रंगहीन, मीठी गंध वाला, सघन द्रव है जो पानी से नहीं मिलता, इसीलिए पृथक्करण कीप में यह नीचे वाली परत बनाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "पर इसकी असली परीक्षा कहानी इसके उपयोग हैं ही नहीं। असली बात यह है कि क्लोरोफ़ॉर्म चुपचाप किसमें बदल जाता है जब उसे हवा और प्रकाश में खड़ा छोड़ दें, और ठीक वहीं हम आगे जाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Chloroform's dangerous secret: phosgene, and how to store it",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Air + light slowly turn CHCl3 into a poison gas"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Slow air-oxidation of chloroform gives phosgene (COCl2)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 150' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><text x='20' y='60' font-size='16' fill='#181818'>CHCl3</text><text x='90' y='45' font-size='12' fill='#EEA31F'>O2, sunlight</text><text x='95' y='78' font-size='11' fill='#55565C'>(slow)</text><path d='M85 55 L175 55' stroke='#181818' stroke-width='2'/><polygon points='175,55 166,51 166,59' fill='#181818'/><text x='185' y='60' font-size='16' fill='#DD4433'>COCl2</text><text x='185' y='80' font-size='12' fill='#DD4433'>phosgene &#8212; poisonous</text><text x='300' y='55' font-size='13' fill='#181818'>+ HCl</text><rect x='40' y='105' width='380' height='30' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='1.5'/><text x='55' y='125' font-size='12' fill='#181818'>skull-and-crossbones: this is a war gas</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Left in air and sunlight, chloroform is slowly oxidised to carbonyl chloride, COCl2 — better known as phosgene, a deadly poison gas."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Storage rule 1: keep it in dark-coloured bottles → light can't drive the oxidation."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Storage rule 2: fill the bottle right to the brim → almost no trapped air (no O2) to react with."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Storage rule 3: add ~1% ethanol → it converts any phosgene formed into harmless diethyl carbonate, and also flags any decomposition."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Every storage rule is an attack on one reactant: remove light, remove air, or mop up the product."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the single most examined fact about chloroform, so let us build it from cause to cure."
+            },
+            {
+              "seq": 2,
+              "text": "The board shows the reaction. Chloroform, left in air and sunlight, is slowly oxidised, and the arrow leads to a molecule you must recognise, C O C l two."
+            },
+            {
+              "seq": 3,
+              "text": "That product is carbonyl chloride, far better known as phosgene. It is a deadly poison gas, notorious as a chemical weapon in the first world war. So a bottle of old, carelessly stored chloroform can quietly generate poison."
+            },
+            {
+              "seq": 4,
+              "text": "Now the storage rules, and the beautiful thing is that each one attacks the reaction. Rule one, keep chloroform in dark coloured bottles, so that light, which drives the oxidation, cannot get in."
+            },
+            {
+              "seq": 5,
+              "text": "Rule two, fill the bottle right up to the brim, so that almost no air is trapped above the liquid. No trapped air means no oxygen, and oxygen is the other reactant."
+            },
+            {
+              "seq": 6,
+              "text": "Rule three, add about one percent ethanol. The ethanol converts any phosgene that does form into harmless diethyl carbonate, and it also acts as an early warning that decomposition has begun."
+            },
+            {
+              "seq": 7,
+              "text": "So notice the elegant logic. Every storage rule is simply an attack on one part of the reaction: remove the light, remove the air, or mop up the product. If you understand the reaction, you never have to memorise the rules."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये chloroform के बारे में सबसे ज़्यादा exam होने वाला fact है, तो इसे cause से cure तक बनाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Board reaction दिखाता है। Chloroform, हवा और धूप में छोड़ा हुआ, धीरे धीरे oxidise होता है, और arrow एक molecule की ओर ले जाता है जिसे तुम्हें पहचानना है, C O C l two।"
+            },
+            {
+              "seq": 3,
+              "text": "वो product carbonyl chloride है, जो phosgene के नाम से कहीं ज़्यादा जाना जाता है। ये एक घातक poison gas है, पहले विश्व युद्ध में chemical weapon के तौर पर कुख्यात। तो पुराने, लापरवाही से रखे chloroform की बोतल चुपचाप ज़हर बना सकती है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब storage rules, और सुंदर बात ये है कि हर एक rule reaction पर attack करता है। Rule one, chloroform को dark coloured bottles में रखो, ताकि light, जो oxidation चलाती है, अंदर न आ सके।"
+            },
+            {
+              "seq": 5,
+              "text": "Rule two, बोतल को बिल्कुल brim तक भरो, ताकि liquid के ऊपर लगभग कोई हवा न फँसे। फँसी हवा नहीं मतलब oxygen नहीं, और oxygen दूसरा reactant है।"
+            },
+            {
+              "seq": 6,
+              "text": "Rule three, लगभग एक percent ethanol डालो। Ethanol जो भी phosgene बने उसे harmless diethyl carbonate में बदल देता है, और ये early warning भी देता है कि decomposition शुरू हो गया।"
+            },
+            {
+              "seq": 7,
+              "text": "तो elegant logic देखो। हर storage rule बस reaction के एक हिस्से पर attack है: light हटाओ, हवा हटाओ, या product को साफ़ कर दो। Reaction समझ लो तो rules कभी रटने नहीं पड़ते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह क्लोरोफ़ॉर्म के बारे में सबसे अधिक जाँचा जाने वाला तथ्य है, तो इसे कारण से उपचार तक बनाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड अभिक्रिया दिखाता है। क्लोरोफ़ॉर्म, हवा और धूप में छोड़ा हुआ, धीरे धीरे ऑक्सीकृत होता है, और तीर एक अणु की ओर ले जाता है जिसे आपको पहचानना है, C O C l two।"
+            },
+            {
+              "seq": 3,
+              "text": "वह उत्पाद कार्बोनिल क्लोराइड है, जो फ़ॉस्जीन के नाम से कहीं अधिक जाना जाता है। यह एक घातक विषैली गैस है, प्रथम विश्व युद्ध में रासायनिक अस्त्र के रूप में कुख्यात। तो पुरानी, लापरवाही से रखी क्लोरोफ़ॉर्म की बोतल चुपचाप ज़हर बना सकती है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब भंडारण नियम, और सुंदर बात यह है कि हर एक नियम अभिक्रिया पर आक्रमण करता है। नियम एक, क्लोरोफ़ॉर्म को गहरे रंग की बोतलों में रखिए, ताकि प्रकाश, जो ऑक्सीकरण चलाता है, अंदर न आ सके।"
+            },
+            {
+              "seq": 5,
+              "text": "नियम दो, बोतल को बिल्कुल किनारे तक भरिए, ताकि द्रव के ऊपर लगभग कोई हवा न फँसे। फँसी हवा नहीं अर्थात ऑक्सीजन नहीं, और ऑक्सीजन दूसरा अभिकारक है।"
+            },
+            {
+              "seq": 6,
+              "text": "नियम तीन, लगभग एक प्रतिशत इथेनॉल डालिए। इथेनॉल जो भी फ़ॉस्जीन बने उसे हानिरहित डाइएथिल कार्बोनेट में बदल देता है, और यह पूर्व चेतावनी भी देता है कि अपघटन शुरू हो गया।"
+            },
+            {
+              "seq": 7,
+              "text": "तो सुरुचिपूर्ण तर्क देखिए। हर भंडारण नियम बस अभिक्रिया के एक भाग पर आक्रमण है: प्रकाश हटाइए, हवा हटाइए, या उत्पाद को साफ़ कर दीजिए। अभिक्रिया समझ लीजिए तो नियम कभी रटने नहीं पड़ते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Dichlorocarbene: the reactive intermediate behind two famous tests",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One intermediate, two named reactions"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": ":CCl2 — an electron-deficient carbene (lone pair + empty orbital)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 160' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><circle cx='200' cy='80' r='16' fill='#181818'/><text x='190' y='86' font-size='16' fill='#FCFAF4'>C</text><line x1='185' y1='72' x2='140' y2='50' stroke='#181818' stroke-width='2'/><text x='120' y='48' font-size='14' fill='#DD4433'>Cl</text><line x1='185' y1='88' x2='140' y2='110' stroke='#181818' stroke-width='2'/><text x='120' y='118' font-size='14' fill='#DD4433'>Cl</text><ellipse cx='240' cy='65' rx='16' ry='8' fill='none' stroke='#55565C' stroke-width='1.5'/><text x='250' y='55' font-size='11' fill='#55565C'>lone pair</text><rect x='224' y='92' width='30' height='16' rx='3' fill='none' stroke='#EEA31F' stroke-width='1.5' stroke-dasharray='3 2'/><text x='250' y='120' font-size='11' fill='#EEA31F'>empty orbital</text><text x='60' y='150' font-size='12' fill='#181818'>only 6 valence electrons &#8594; very reactive</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Chloroform + a strong base loses HCl by α-elimination (both leave the SAME carbon) → dichlorocarbene, :CCl2."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "The carbene carbon has only six valence electrons — a lone pair and an empty orbital — so it is extremely electron-hungry and reactive."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "This same species is the active player in two tests you must know: the carbylamine test and (its cousin) the Reimer–Tiemann reaction."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Remember: α-elimination (same carbon) makes a carbene; β-elimination (adjacent carbons) makes an alkene."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before the famous tests, meet the reactive intermediate that quietly powers them, because understanding it once explains several reactions at a stroke."
+            },
+            {
+              "seq": 2,
+              "text": "The board shows the species: dichlorocarbene, written colon C C l two. That carbon carries two chlorines, plus a lone pair on one side and, crucially, an empty orbital on the other."
+            },
+            {
+              "seq": 3,
+              "text": "How is it made? When chloroform meets a strong base, it loses H C l, but by a special route called alpha elimination, in which both the hydrogen and the chlorine leave from the very same carbon, not from neighbouring carbons."
+            },
+            {
+              "seq": 4,
+              "text": "The result is a carbon with only six valence electrons instead of the usual eight. With that empty orbital gaping open, dichlorocarbene is intensely electron hungry and therefore extremely reactive."
+            },
+            {
+              "seq": 5,
+              "text": "And here is why it matters. This very same dichlorocarbene is the active player in two named reactions the syllabus loves: the carbylamine test, which we do next, and its close cousin the Reimer Tiemann reaction."
+            },
+            {
+              "seq": 6,
+              "text": "One clean contrast to lock away. Alpha elimination, where both groups leave the same carbon, makes a carbene. Beta elimination, where they leave adjacent carbons, makes an alkene. Same word, elimination, two very different products."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "मशहूर tests से पहले उस reactive intermediate से मिलो जो चुपचाप उन्हें चलाता है, क्योंकि इसे एक बार समझना कई reactions एक झटके में समझा देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board species दिखाता है: dichlorocarbene, जिसे colon C C l two लिखते हैं। उस carbon पर दो chlorine हैं, साथ में एक तरफ़ lone pair और, सबसे ज़रूरी, दूसरी तरफ़ एक empty orbital।"
+            },
+            {
+              "seq": 3,
+              "text": "ये बनता कैसे है? जब chloroform strong base से मिलता है, वो H C l खोता है, पर एक ख़ास route से जिसे alpha elimination कहते हैं, जिसमें hydrogen और chlorine दोनों उसी एक carbon से निकलते हैं, पड़ोसी carbons से नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "नतीजा एक carbon है जिस पर सामान्य आठ के बजाय सिर्फ़ छह valence electrons हैं। उस खुले empty orbital के साथ, dichlorocarbene बेहद electron hungry है और इसलिए extremely reactive।"
+            },
+            {
+              "seq": 5,
+              "text": "और यही क्यों मायने रखता है। यही dichlorocarbene दो named reactions में active player है जो syllabus को बहुत पसंद हैं: carbylamine test, जो हम आगे करेंगे, और इसका क़रीबी cousin Reimer Tiemann reaction।"
+            },
+            {
+              "seq": 6,
+              "text": "एक साफ़ contrast पक्का कर लो। Alpha elimination, जहाँ दोनों groups एक ही carbon से निकलें, carbene बनाती है। Beta elimination, जहाँ वो adjacent carbons से निकलें, alkene बनाती है। एक ही शब्द, elimination, दो बहुत अलग products।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "प्रसिद्ध परीक्षणों से पहले उस क्रियाशील मध्यवर्ती से मिलिए जो चुपचाप उन्हें चलाता है, क्योंकि इसे एक बार समझना कई अभिक्रियाएँ एक झटके में समझा देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड स्पीशीज़ दिखाता है: डाइक्लोरोकार्बीन, जिसे colon C C l two लिखते हैं। उस कार्बन पर दो क्लोरीन हैं, साथ में एक ओर एकाकी युग्म और, सबसे ज़रूरी, दूसरी ओर एक रिक्त कक्षक।"
+            },
+            {
+              "seq": 3,
+              "text": "यह बनता कैसे है? जब क्लोरोफ़ॉर्म प्रबल क्षार से मिलता है, वह H C l खोता है, पर एक विशेष मार्ग से जिसे अल्फ़ा विलोपन कहते हैं, जिसमें हाइड्रोजन और क्लोरीन दोनों उसी एक कार्बन से निकलते हैं, पड़ोसी कार्बनों से नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "परिणाम एक कार्बन है जिस पर सामान्य आठ के बजाय केवल छह संयोजी इलेक्ट्रॉन हैं। उस खुले रिक्त कक्षक के साथ, डाइक्लोरोकार्बीन अत्यंत इलेक्ट्रॉन का भूखा है और इसलिए अत्यधिक क्रियाशील।"
+            },
+            {
+              "seq": 5,
+              "text": "और यही क्यों मायने रखता है। यही डाइक्लोरोकार्बीन दो नामित अभिक्रियाओं में सक्रिय खिलाड़ी है जो पाठ्यक्रम को बहुत पसंद हैं: कार्बिलऐमीन परीक्षण, जो हम आगे करेंगे, और इसका निकट संबंधी Reimer Tiemann अभिक्रिया।"
+            },
+            {
+              "seq": 6,
+              "text": "एक स्वच्छ विरोधाभास पक्का कर लीजिए। अल्फ़ा विलोपन, जहाँ दोनों समूह एक ही कार्बन से निकलें, कार्बीन बनाता है। बीटा विलोपन, जहाँ वे निकटवर्ती कार्बनों से निकलें, ऐल्कीन बनाता है। एक ही शब्द, विलोपन, दो बहुत भिन्न उत्पाद।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "The carbylamine test — spotting a primary amine",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A foul smell that means 'primary amine'"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Only a primary amine + CHCl3 + alc. KOH gives the offensive isocyanide",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 150' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><rect x='10' y='40' width='150' height='40' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='20' y='58' fill='#181818'>1&#176; amine R–NH2</text><text x='20' y='74' fill='#55565C'>+ CHCl3 + alc. KOH</text><path d='M165 60 L215 60' stroke='#181818' stroke-width='1.5'/><polygon points='215,60 206,56 206,64' fill='#181818'/><rect x='220' y='40' width='150' height='40' rx='6' fill='#EEA31F' stroke='#181818' stroke-width='2'/><text x='230' y='58' fill='#181818'>R–NC (isocyanide)</text><text x='230' y='74' fill='#DD4433'>vile smell = POSITIVE</text><rect x='10' y='100' width='360' height='30' rx='6' fill='#FCFAF4' stroke='#55565C' stroke-width='1.5'/><text x='20' y='120' fill='#55565C'>2&#176; and 3&#176; amines: no reaction &#8594; NEGATIVE</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Warm a primary amine with chloroform and alcoholic KOH: dichlorocarbene attacks the –NH2 → an isocyanide (carbylamine), R–NC."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Isocyanides have an extremely offensive smell — that foul odour is the positive signal."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Secondary and tertiary amines do NOT react — no smell. So the test cleanly picks out primary amines only."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Both aliphatic and aromatic primary amines respond, so aniline gives it too."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Diagnostic logic: bad smell → primary amine present. It needs an –NH2 with two H's on nitrogen."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the first of chloroform's two signature tests, the carbylamine test, which is a beautifully simple way to detect a primary amine."
+            },
+            {
+              "seq": 2,
+              "text": "The board captures it in one line. A primary amine, warmed with chloroform and alcoholic potassium hydroxide, gives a product with a truly offensive smell, while secondary and tertiary amines simply do nothing."
+            },
+            {
+              "seq": 3,
+              "text": "Mechanistically, the dichlorocarbene we just met attacks the amino group. The product is an isocyanide, also called a carbylamine, written R N C."
+            },
+            {
+              "seq": 4,
+              "text": "Isocyanides are famous for one thing, an extremely foul, unbearable smell. That vile odour is the entire point of the test: if you smell it, the test is positive."
+            },
+            {
+              "seq": 5,
+              "text": "And here is what makes the test so clean. Secondary and tertiary amines do not react at all, so they produce no smell. The stench appears only for a primary amine."
+            },
+            {
+              "seq": 6,
+              "text": "Note also that both aliphatic and aromatic primary amines respond, so aniline gives a positive carbylamine test just as ethylamine does."
+            },
+            {
+              "seq": 7,
+              "text": "So the diagnostic logic is one sentence: a bad smell here means a primary amine is present. The reaction needs an amino group with two hydrogens on the nitrogen, which is exactly what defines a primary amine."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब chloroform के दो signature tests में पहला, carbylamine test, जो primary amine detect करने का बेहद simple तरीक़ा है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board इसे एक line में पकड़ता है। एक primary amine, chloroform और alcoholic potassium hydroxide के साथ गरम, एक ऐसा product देता है जिसकी बेहद बदबू होती है, जबकि secondary और tertiary amines बस कुछ नहीं करते।"
+            },
+            {
+              "seq": 3,
+              "text": "Mechanism में, अभी मिला dichlorocarbene amino group पर attack करता है। Product एक isocyanide है, जिसे carbylamine भी कहते हैं, R N C लिखा जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Isocyanides एक चीज़ के लिए मशहूर हैं, बेहद बुरी, असहनीय बदबू। वही बदबू test का पूरा मक़सद है: अगर सूँघ लो, तो test positive है।"
+            },
+            {
+              "seq": 5,
+              "text": "और यही test को इतना clean बनाता है। Secondary और tertiary amines बिल्कुल react नहीं करते, तो कोई smell नहीं देते। बदबू सिर्फ़ primary amine के लिए आती है।"
+            },
+            {
+              "seq": 6,
+              "text": "ये भी note करो कि aliphatic और aromatic दोनों primary amines respond करते हैं, तो aniline भी positive carbylamine test देता है, जैसे ethylamine देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो diagnostic logic एक वाक्य है: यहाँ बुरी smell मतलब primary amine मौजूद है। Reaction को nitrogen पर दो hydrogen वाला amino group चाहिए, जो बिल्कुल primary amine की परिभाषा है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब क्लोरोफ़ॉर्म के दो विशिष्ट परीक्षणों में पहला, कार्बिलऐमीन परीक्षण, जो प्राथमिक ऐमीन पहचानने का बेहद सरल तरीक़ा है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड इसे एक पंक्ति में पकड़ता है। एक प्राथमिक ऐमीन, क्लोरोफ़ॉर्म और ऐल्कोहॉलिक पोटैशियम हाइड्रॉक्साइड के साथ गरम, एक ऐसा उत्पाद देता है जिसकी अत्यंत दुर्गंध होती है, जबकि द्वितीयक और तृतीयक ऐमीन बस कुछ नहीं करते।"
+            },
+            {
+              "seq": 3,
+              "text": "क्रियाविधि में, अभी मिला डाइक्लोरोकार्बीन ऐमीनो समूह पर आक्रमण करता है। उत्पाद एक आइसोसायनाइड है, जिसे कार्बिलऐमीन भी कहते हैं, R N C लिखा जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "आइसोसायनाइड एक चीज़ के लिए प्रसिद्ध हैं, अत्यंत बुरी, असहनीय दुर्गंध। वही दुर्गंध परीक्षण का पूरा उद्देश्य है: यदि सूँघ लें, तो परीक्षण धनात्मक है।"
+            },
+            {
+              "seq": 5,
+              "text": "और यही परीक्षण को इतना स्वच्छ बनाता है। द्वितीयक और तृतीयक ऐमीन बिल्कुल अभिक्रिया नहीं करते, तो कोई गंध नहीं देते। दुर्गंध केवल प्राथमिक ऐमीन के लिए आती है।"
+            },
+            {
+              "seq": 6,
+              "text": "यह भी ध्यान दीजिए कि वसीय और ऐरोमैटिक दोनों प्राथमिक ऐमीन प्रतिक्रिया करते हैं, तो ऐनिलीन भी धनात्मक कार्बिलऐमीन परीक्षण देता है, जैसे एथिलऐमीन देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो निदान तर्क एक वाक्य है: यहाँ बुरी गंध अर्थात प्राथमिक ऐमीन उपस्थित है। अभिक्रिया को नाइट्रोजन पर दो हाइड्रोजन वाला ऐमीनो समूह चाहिए, जो बिल्कुल प्राथमिक ऐमीन की परिभाषा है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "The iodoform test — the yellow precipitate that names a group",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A yellow solid that flags a specific structure"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Positive test: pale-yellow CHI3 precipitate; negative: stays clear",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 170' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\"><path d='M70 20 L90 20 L86 120 Q80 132 74 120 Z' fill='none' stroke='#181818' stroke-width='2'/><rect x='74' y='90' width='12' height='30' fill='#EEA31F'/><circle cx='77' cy='85' r='2' fill='#EEA31F'/><circle cx='83' cy='78' r='2' fill='#EEA31F'/><text x='40' y='150' font-size='12' fill='#181818' font-weight='bold'>POSITIVE: yellow ppt (CHI3)</text><path d='M280 20 L300 20 L296 120 Q290 132 284 120 Z' fill='none' stroke='#181818' stroke-width='2'/><line x1='285' y1='95' x2='295' y2='95' stroke='#55565C' stroke-width='1'/><text x='265' y='150' font-size='12' fill='#55565C'>NEGATIVE: clear solution</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Reagent: iodine + NaOH (i.e. sodium hypoiodite, NaOI), gently warmed."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Positive result: a pale-yellow precipitate of iodoform, CHI3, with its characteristic smell."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "What gives it: a methyl ketone group (CH3–CO–) OR a group oxidisable to it, i.e. CH3–CH(OH)– (a secondary alcohol with a terminal methyl)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "So ethanol, acetaldehyde, acetone, propan-2-ol → positive. Methanol, propan-1-ol, benzaldehyde → negative."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Memory: look for CH3–CO– or CH3–CH(OH)–. No such group ⇒ no iodoform."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The second signature test is the iodoform test, and it is a favourite because a single yellow solid reveals a very specific structural feature."
+            },
+            {
+              "seq": 2,
+              "text": "The board shows the outcome you look for. On the left, a positive test throws down a pale yellow precipitate. On the right, a negative test leaves the solution clear."
+            },
+            {
+              "seq": 3,
+              "text": "The reagent is iodine together with sodium hydroxide, which together make sodium hypoiodite, and the mixture is gently warmed."
+            },
+            {
+              "seq": 4,
+              "text": "A positive result is that pale yellow precipitate of iodoform, C H I three, which also carries a characteristic smell. That yellow solid is the signal."
+            },
+            {
+              "seq": 5,
+              "text": "Now the crucial part, what actually gives the test. You need either a methyl ketone group, that is C H three carbon double bond O, or a group that can be oxidised into one, which is C H three C H O H, a secondary alcohol carrying a terminal methyl."
+            },
+            {
+              "seq": 6,
+              "text": "So work through examples. Ethanol, acetaldehyde, acetone, and propan two ol all test positive. But methanol, propan one ol, and benzaldehyde test negative, because none of them has that special methyl bearing group."
+            },
+            {
+              "seq": 7,
+              "text": "So the memory rule is precise. Scan the structure for a C H three attached to a carbonyl, or a C H three attached to a C H O H. If neither is present, there is no iodoform, full stop."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दूसरा signature test iodoform test है, और ये favourite है क्योंकि एक अकेला yellow solid एक बहुत specific structural feature बता देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Board वो outcome दिखाता है जो तुम ढूँढते हो। बाईं तरफ़, positive test एक pale yellow precipitate गिराता है। दाईं तरफ़, negative test solution को clear छोड़ देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Reagent iodine के साथ sodium hydroxide है, जो मिलकर sodium hypoiodite बनाते हैं, और mixture को हल्का गरम करते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Positive result वही pale yellow precipitate है, iodoform, C H I three, जिसकी एक characteristic smell भी होती है। वही yellow solid signal है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब सबसे ज़रूरी हिस्सा, ये test देता क्या है। तुम्हें चाहिए या तो एक methyl ketone group, यानी C H three carbon double bond O, या ऐसा group जो इसमें oxidise हो सके, जो C H three C H O H है, एक terminal methyl वाला secondary alcohol।"
+            },
+            {
+              "seq": 6,
+              "text": "तो examples देखो। Ethanol, acetaldehyde, acetone, और propan two ol सब positive आते हैं। पर methanol, propan one ol, और benzaldehyde negative आते हैं, क्योंकि इनमें से किसी के पास वो ख़ास methyl वाला group नहीं है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो memory rule precise है। Structure में C H three को carbonyl से जुड़ा, या C H three को C H O H से जुड़ा scan करो। दोनों में से कोई न हो, तो कोई iodoform नहीं, बस।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दूसरा विशिष्ट परीक्षण आयोडोफ़ॉर्म परीक्षण है, और यह प्रिय है क्योंकि एक अकेला पीला ठोस एक बहुत विशिष्ट संरचनात्मक लक्षण बता देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड वह परिणाम दिखाता है जो आप ढूँढते हैं। बाईं ओर, धनात्मक परीक्षण एक हल्का पीला अवक्षेप गिराता है। दाईं ओर, ऋणात्मक परीक्षण विलयन को स्वच्छ छोड़ देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "अभिकर्मक आयोडीन के साथ सोडियम हाइड्रॉक्साइड है, जो मिलकर सोडियम हाइपोआयोडाइट बनाते हैं, और मिश्रण को हल्का गरम करते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "धनात्मक परिणाम वही हल्का पीला अवक्षेप है, आयोडोफ़ॉर्म, C H I three, जिसकी एक विशिष्ट गंध भी होती है। वही पीला ठोस संकेत है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब सबसे ज़रूरी भाग, यह परीक्षण देता क्या है। आपको चाहिए या तो एक मेथिल कीटोन समूह, अर्थात C H three carbon double bond O, या ऐसा समूह जो इसमें ऑक्सीकृत हो सके, जो C H three C H O H है, एक सिरे वाले मेथिल वाला द्वितीयक ऐल्कोहॉल।"
+            },
+            {
+              "seq": 6,
+              "text": "तो उदाहरण देखिए। इथेनॉल, ऐसीटैल्डिहाइड, ऐसीटोन, और propan two ol सब धनात्मक आते हैं। पर मेथेनॉल, propan one ol, और बेंज़ैल्डिहाइड ऋणात्मक आते हैं, क्योंकि इनमें से किसी के पास वह ख़ास मेथिल वाला समूह नहीं है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो स्मृति नियम सटीक है। संरचना में C H three को कार्बोनिल से जुड़ा, या C H three को C H O H से जुड़ा देखिए। दोनों में से कोई न हो, तो कोई आयोडोफ़ॉर्म नहीं, बस।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "concept",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Carbon tetrachloride and freons: the ozone problem",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Great in the lab, terrible in the stratosphere"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Carbon tetrachloride (CCl4): solvent and once a fire-extinguisher fluid ('Pyrene')."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Hazard: it too forms phosgene when heated in air, harms the liver/nerves, and depletes ozone."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "UV frees a Cl atom that destroys ozone catalytically",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 150' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><rect x='10' y='40' width='90' height='34' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='24' y='62' fill='#181818'>CFC (CF2Cl2)</text><path d='M105 57 L155 57' stroke='#181818' stroke-width='1.5'/><polygon points='155,57 146,53 146,61' fill='#181818'/><text x='108' y='40' fill='#EEA31F'>UV</text><text x='165' y='62' fill='#DD4433'>Cl&#8226;</text><path d='M190 57 L240 57' stroke='#DD4433' stroke-width='1.5'/><polygon points='240,57 231,53 231,61' fill='#DD4433'/><text x='250' y='62' fill='#181818'>Cl&#8226; + O3 &#8594; ClO&#8226; + O2</text><path d='M300 75 Q250 110 175 80' fill='none' stroke='#DD4433' stroke-width='1.5' stroke-dasharray='4 3'/><text x='150' y='130' fill='#DD4433'>Cl regenerated &#8594; destroys many O3 (catalytic)</text></g></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Freons (CFCs), e.g. CF2Cl2: unreactive, non-flammable — ideal refrigerants & propellants."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "That very stability lets them drift up to the stratosphere, where UV frees a chlorine atom that destroys ozone catalytically — one Cl wrecks thousands of O3."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "Irony: the property that made them useful (inertness) is exactly what makes them dangerous (they last long enough to reach the ozone layer)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two more compounds share a single, striking story, they are wonderful in the laboratory and disastrous high up in the atmosphere."
+            },
+            {
+              "seq": 2,
+              "text": "First, carbon tetrachloride. It is a good solvent and was once widely sold as a fire extinguisher fluid under the name Pyrene."
+            },
+            {
+              "seq": 3,
+              "text": "But its hazards stack up. Like chloroform, it forms phosgene when heated in air, it harms the liver and nerves, and it also contributes to depleting the ozone layer."
+            },
+            {
+              "seq": 4,
+              "text": "The board shows the ozone mechanism, which is the heart of the story. High up, ultraviolet light knocks a chlorine atom loose, and that single chlorine atom then attacks ozone."
+            },
+            {
+              "seq": 5,
+              "text": "Now the freons, the chlorofluorocarbons, such as C F two C l two. They are almost completely unreactive and non flammable, which made them the ideal refrigerants and spray propellants."
+            },
+            {
+              "seq": 6,
+              "text": "But that very stability is the trap. Because they do not react down here, they survive long enough to drift up into the stratosphere. There, ultraviolet light frees a chlorine atom, and that atom destroys ozone catalytically, being regenerated again and again, so a single chlorine can wreck thousands of ozone molecules."
+            },
+            {
+              "seq": 7,
+              "text": "So hold the irony, because that is the exam point. The very property that made freons so useful, their inertness, is exactly what makes them so dangerous, because it lets them last long enough to reach and attack the ozone layer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो और compounds एक ही striking story share करते हैं, ये laboratory में शानदार हैं और atmosphere में ऊपर जाकर विनाशकारी।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले carbon tetrachloride। ये एक अच्छा solvent है और कभी Pyrene नाम से fire extinguisher fluid के तौर पर ख़ूब बिकता था।"
+            },
+            {
+              "seq": 3,
+              "text": "पर इसके hazards ढेर हो जाते हैं। Chloroform की तरह, ये हवा में गरम होने पर phosgene बनाता है, liver और nerves को नुक़सान पहुँचाता है, और ozone layer घटाने में भी योगदान देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Board ozone mechanism दिखाता है, जो story का दिल है। ऊपर, ultraviolet light एक chlorine atom को छुड़ा देती है, और वो अकेला chlorine atom फिर ozone पर attack करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब freons, यानी chlorofluorocarbons, जैसे C F two C l two। ये लगभग पूरी तरह unreactive और non flammable हैं, जिसने इन्हें ideal refrigerants और spray propellants बनाया।"
+            },
+            {
+              "seq": 6,
+              "text": "पर वही stability trap है। चूँकि ये यहाँ नीचे react नहीं करते, ये इतनी देर बचे रहते हैं कि stratosphere में ऊपर पहुँच जाएँ। वहाँ ultraviolet light एक chlorine atom छुड़ाती है, और वो atom ozone को catalytically destroy करता है, बार बार regenerate होकर, तो एक अकेला chlorine हज़ारों ozone molecules तबाह कर सकता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो irony पकड़ो, क्योंकि यही exam point है। जिस property ने freons को इतना useful बनाया, इनकी inertness, वही इन्हें इतना dangerous बनाती है, क्योंकि वो इन्हें इतनी देर बचाए रखती है कि ये ozone layer तक पहुँचकर attack कर सकें।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो और यौगिक एक ही उल्लेखनीय कहानी साझा करते हैं, ये प्रयोगशाला में शानदार हैं और वायुमंडल में ऊपर जाकर विनाशकारी।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले कार्बन टेट्राक्लोराइड। यह एक अच्छा विलायक है और कभी Pyrene नाम से अग्निशामक द्रव के रूप में ख़ूब बिकता था।"
+            },
+            {
+              "seq": 3,
+              "text": "पर इसके संकट ढेर हो जाते हैं। क्लोरोफ़ॉर्म की तरह, यह हवा में गरम होने पर फ़ॉस्जीन बनाता है, यकृत और तंत्रिकाओं को हानि पहुँचाता है, और ओज़ोन परत घटाने में भी योगदान देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "बोर्ड ओज़ोन क्रियाविधि दिखाता है, जो कहानी का हृदय है। ऊपर, पराबैंगनी प्रकाश एक क्लोरीन परमाणु को छुड़ा देता है, और वह अकेला क्लोरीन परमाणु फिर ओज़ोन पर आक्रमण करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब फ़्रीऑन, अर्थात क्लोरोफ़्लोरोकार्बन, जैसे C F two C l two। ये लगभग पूरी तरह अक्रियाशील और अज्वलनशील हैं, जिसने इन्हें आदर्श प्रशीतक और स्प्रे नोदक बनाया।"
+            },
+            {
+              "seq": 6,
+              "text": "पर वही स्थायित्व जाल है। चूँकि ये यहाँ नीचे अभिक्रिया नहीं करते, ये इतनी देर बचे रहते हैं कि समतापमंडल में ऊपर पहुँच जाएँ। वहाँ पराबैंगनी प्रकाश एक क्लोरीन परमाणु छुड़ाता है, और वह परमाणु ओज़ोन को उत्प्रेरकीय रूप से नष्ट करता है, बार बार पुनर्जनित होकर, तो एक अकेला क्लोरीन हज़ारों ओज़ोन अणु तबाह कर सकता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो विडंबना पकड़िए, क्योंकि यही परीक्षा बिंदु है। जिस गुण ने फ़्रीऑन को इतना उपयोगी बनाया, इनकी अक्रियाशीलता, वही इन्हें इतना ख़तरनाक बनाती है, क्योंकि वह इन्हें इतनी देर बचाए रखती है कि ये ओज़ोन परत तक पहुँचकर आक्रमण कर सकें।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "concept",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "DDT: the hero that became a hazard",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The perfect illustration of use-vs-hazard"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "DDT: the first modern synthetic insecticide; its insecticidal power won a Nobel Prize (Paul Müller, 1948)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The use: it killed malaria mosquitoes and crop pests cheaply — credited with saving millions of lives."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Hazard 1 — persistence: it barely breaks down, so it lingers in soil and water for years."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Hazard 2 — bioaccumulation: fat-soluble, it builds up along the food chain and reaches toxic levels in higher animals."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Hazard 3 — resistance: insects evolved resistance, so it stopped working while the harm remained."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "Result: banned/heavily restricted in most countries — the textbook case of use-vs-hazard."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We close the section with D D T, because no compound illustrates the use versus hazard theme more perfectly."
+            },
+            {
+              "seq": 2,
+              "text": "D D T was the first modern synthetic insecticide, and its discovery was so important that its inventor, Paul Muller, won the Nobel Prize in nineteen forty eight for it."
+            },
+            {
+              "seq": 3,
+              "text": "The use was genuinely heroic. It killed the mosquitoes that spread malaria and the pests that destroyed crops, and it did so cheaply, so it is credited with saving millions of human lives."
+            },
+            {
+              "seq": 4,
+              "text": "But then came the hazards, and there are three you should remember. The first is persistence. D D T barely breaks down, so once sprayed it lingers in soil and water for years."
+            },
+            {
+              "seq": 5,
+              "text": "The second is bioaccumulation. Because it is fat soluble, it builds up as it moves along the food chain, becoming ever more concentrated, until it reaches toxic levels in higher animals like birds and humans."
+            },
+            {
+              "seq": 6,
+              "text": "The third is resistance. Over time the insects themselves evolved resistance to it, so D D T gradually stopped killing the very pests it targeted, while all its environmental harm stubbornly remained."
+            },
+            {
+              "seq": 7,
+              "text": "The result of that trio is that D D T has been banned or heavily restricted in most countries. So carry it as the textbook case: a compound that was celebrated for its use and then condemned for its hazard, the whole section in one molecule."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Section को D D T से बंद करते हैं, क्योंकि कोई compound use versus hazard theme को इससे बेहतर नहीं दिखाता।"
+            },
+            {
+              "seq": 2,
+              "text": "D D T पहला modern synthetic insecticide था, और इसकी खोज इतनी important थी कि इसके inventor, Paul Muller, को इसके लिए नाइनटीन फ़ोर्टी एट में Nobel Prize मिला।"
+            },
+            {
+              "seq": 3,
+              "text": "इसका use सचमुच heroic था। इसने malaria फैलाने वाले mosquitoes और फ़सल तबाह करने वाले pests को मारा, और वो भी सस्ते में, तो इसे लाखों इंसानी जानें बचाने का श्रेय जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "पर फिर hazards आए, और तीन याद रखने चाहिए। पहला persistence है। D D T मुश्किल से टूटता है, तो एक बार spray होने के बाद ये soil और water में सालों बना रहता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा bioaccumulation है। चूँकि ये fat soluble है, ये food chain में ऊपर जाते हुए जमा होता जाता है, और भी concentrated होता जाता है, जब तक birds और humans जैसे higher animals में toxic levels तक न पहुँच जाए।"
+            },
+            {
+              "seq": 6,
+              "text": "तीसरा resistance है। समय के साथ insects ने ख़ुद इसके ख़िलाफ़ resistance evolve कर ली, तो D D T धीरे धीरे उन्हीं pests को मारना बंद कर गया जिन्हें target करता था, जबकि इसका सारा environmental नुक़सान ज़िद्दी होकर बना रहा।"
+            },
+            {
+              "seq": 7,
+              "text": "उस तिकड़ी का नतीजा ये है कि D D T ज़्यादातर देशों में banned या heavily restricted है। तो इसे textbook case की तरह रखो: एक compound जो अपने use के लिए celebrated हुआ और फिर अपने hazard के लिए condemned, पूरा section एक molecule में।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "खंड को D D T से बंद करते हैं, क्योंकि कोई यौगिक उपयोग बनाम संकट विषय को इससे बेहतर नहीं दिखाता।"
+            },
+            {
+              "seq": 2,
+              "text": "D D T पहला आधुनिक संश्लेषित कीटनाशक था, और इसकी खोज इतनी महत्वपूर्ण थी कि इसके आविष्कारक, Paul Muller, को इसके लिए नाइनटीन फ़ोर्टी एट में नोबेल पुरस्कार मिला।"
+            },
+            {
+              "seq": 3,
+              "text": "इसका उपयोग सचमुच वीरतापूर्ण था। इसने मलेरिया फैलाने वाले मच्छरों और फ़सल तबाह करने वाले कीटों को मारा, और वह भी सस्ते में, तो इसे लाखों मानव जीवन बचाने का श्रेय जाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "पर फिर संकट आए, और तीन याद रखने चाहिए। पहला दीर्घस्थायित्व है। D D T मुश्किल से टूटता है, तो एक बार छिड़काव के बाद यह मिट्टी और पानी में वर्षों बना रहता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा जैव संचयन है। चूँकि यह वसा में घुलनशील है, यह खाद्य श्रृंखला में ऊपर जाते हुए जमा होता जाता है, और भी सांद्र होता जाता है, जब तक पक्षियों और मनुष्यों जैसे उच्च जंतुओं में विषैले स्तर तक न पहुँच जाए।"
+            },
+            {
+              "seq": 6,
+              "text": "तीसरा प्रतिरोध है। समय के साथ कीटों ने स्वयं इसके विरुद्ध प्रतिरोध विकसित कर लिया, तो D D T धीरे धीरे उन्हीं कीटों को मारना बंद कर गया जिन्हें लक्ष्य करता था, जबकि इसकी सारी पर्यावरणीय हानि ज़िद्दी होकर बनी रही।"
+            },
+            {
+              "seq": 7,
+              "text": "उस तिकड़ी का परिणाम यह है कि D D T अधिकांश देशों में प्रतिबंधित या अत्यधिक सीमित है। तो इसे पाठ्यपुस्तक उदाहरण की तरह रखिए: एक यौगिक जो अपने उपयोग के लिए सराहा गया और फिर अपने संकट के लिए निंदित, पूरा खंड एक अणु में।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Worked example — why store chloroform in filled dark bottles? [CBSE]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Explain the storage of chloroform, with the reaction"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The danger: in air and light, chloroform is slowly oxidised to phosgene (COCl2), a poisonous gas."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Each precaution removes one requirement of the reaction",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 150' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><text x='10' y='30' fill='#181818'>Reaction needs:  CHCl3  +  O2  +  light</text><rect x='10' y='45' width='140' height='30' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='18' y='64' fill='#181818'>dark bottle</text><path d='M150 60 L185 60' stroke='#DD4433' stroke-width='1.5'/><text x='195' y='64' fill='#DD4433'>removes light</text><rect x='10' y='82' width='140' height='30' rx='6' fill='#FCFAF4' stroke='#181818' stroke-width='2'/><text x='18' y='101' fill='#181818'>filled to brim</text><path d='M150 97 L185 97' stroke='#DD4433' stroke-width='1.5'/><text x='195' y='101' fill='#DD4433'>removes air (O2)</text><rect x='10' y='118' width='140' height='28' rx='6' fill='#FCFAF4' stroke='#EEA31F' stroke-width='2'/><text x='18' y='137' fill='#181818'>~1% ethanol</text><path d='M150 132 L185 132' stroke='#EEA31F' stroke-width='1.5'/><text x='195' y='136' fill='#EEA31F'>destroys any phosgene formed</text></g></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Dark-coloured bottle → excludes light, which drives the oxidation."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Filled to the brim → excludes air, removing the O2 needed to react."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "~1% ethanol added → converts any phosgene that forms into harmless diethyl carbonate."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "Answer: three precautions, each disabling one part of CHCl3 + O2 + light → COCl2."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A very common C B S E question. Explain why chloroform is stored in dark coloured bottles filled to the brim, and support your answer with the relevant reaction."
+            },
+            {
+              "seq": 2,
+              "text": "Start with the danger, because the whole answer flows from it. In the presence of air and light, chloroform is slowly oxidised to phosgene, C O C l two, which is a poisonous gas. That is the reaction we must prevent."
+            },
+            {
+              "seq": 3,
+              "text": "The board frames the trick. The reaction needs three things: chloroform, oxygen from the air, and light. Each precaution simply removes one of those three."
+            },
+            {
+              "seq": 4,
+              "text": "First, the dark coloured bottle. It keeps out light, and light is what drives the oxidation, so removing it slows the reaction."
+            },
+            {
+              "seq": 5,
+              "text": "Second, filling the bottle to the brim. This leaves almost no air trapped above the liquid, which removes the oxygen that the reaction needs."
+            },
+            {
+              "seq": 6,
+              "text": "Third, a common addition the examiner rewards: about one percent ethanol is added. It mops up any phosgene that does manage to form, converting it into harmless diethyl carbonate."
+            },
+            {
+              "seq": 7,
+              "text": "So the model answer is three linked precautions, each one disabling a different part of the reaction chloroform plus oxygen plus light gives phosgene. Present it that way and you get full marks."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक बहुत common C B S E question। समझाओ कि chloroform को brim तक भरी dark coloured bottles में क्यों रखते हैं, और relevant reaction से answer support करो।"
+            },
+            {
+              "seq": 2,
+              "text": "Danger से शुरू करो, क्योंकि पूरा answer इसी से निकलता है। हवा और light की मौजूदगी में, chloroform धीरे धीरे phosgene, C O C l two, में oxidise होता है, जो एक poisonous gas है। यही reaction रोकनी है।"
+            },
+            {
+              "seq": 3,
+              "text": "Board trick दिखाता है। Reaction को तीन चीज़ें चाहिए: chloroform, हवा से oxygen, और light। हर precaution बस इन तीन में से एक को हटाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "पहला, dark coloured bottle। ये light बाहर रखता है, और light ही oxidation चलाती है, तो इसे हटाना reaction धीमी कर देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा, बोतल को brim तक भरना। इससे liquid के ऊपर लगभग कोई हवा नहीं फँसती, जो reaction को चाहिए oxygen हटा देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तीसरा, एक common addition जिसे examiner reward करता है: लगभग एक percent ethanol डाला जाता है। ये जो भी phosgene बन जाए उसे साफ़ कर देता है, harmless diethyl carbonate में बदलकर।"
+            },
+            {
+              "seq": 7,
+              "text": "तो model answer तीन जुड़े precautions हैं, हर एक reaction chloroform plus oxygen plus light gives phosgene के अलग हिस्से को disable करता है। ऐसे present करो तो full marks।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक बहुत सामान्य C B S E प्रश्न। समझाइए कि क्लोरोफ़ॉर्म को किनारे तक भरी गहरे रंग की बोतलों में क्यों रखते हैं, और प्रासंगिक अभिक्रिया से उत्तर का समर्थन कीजिए।"
+            },
+            {
+              "seq": 2,
+              "text": "संकट से शुरू कीजिए, क्योंकि पूरा उत्तर इसी से निकलता है। हवा और प्रकाश की उपस्थिति में, क्लोरोफ़ॉर्म धीरे धीरे फ़ॉस्जीन, C O C l two, में ऑक्सीकृत होता है, जो एक विषैली गैस है। यही अभिक्रिया रोकनी है।"
+            },
+            {
+              "seq": 3,
+              "text": "बोर्ड युक्ति दिखाता है। अभिक्रिया को तीन चीज़ें चाहिए: क्लोरोफ़ॉर्म, हवा से ऑक्सीजन, और प्रकाश। हर सावधानी बस इन तीन में से एक को हटाती है।"
+            },
+            {
+              "seq": 4,
+              "text": "पहली, गहरे रंग की बोतल। यह प्रकाश बाहर रखती है, और प्रकाश ही ऑक्सीकरण चलाता है, तो इसे हटाना अभिक्रिया धीमी कर देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरी, बोतल को किनारे तक भरना। इससे द्रव के ऊपर लगभग कोई हवा नहीं फँसती, जो अभिक्रिया को चाहिए ऑक्सीजन हटा देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तीसरी, एक सामान्य जोड़ जिसे परीक्षक पुरस्कृत करता है: लगभग एक प्रतिशत इथेनॉल डाला जाता है। यह जो भी फ़ॉस्जीन बन जाए उसे साफ़ कर देता है, हानिरहित डाइएथिल कार्बोनेट में बदलकर।"
+            },
+            {
+              "seq": 7,
+              "text": "तो आदर्श उत्तर तीन जुड़ी सावधानियाँ हैं, हर एक अभिक्रिया क्लोरोफ़ॉर्म जमा ऑक्सीजन जमा प्रकाश देता है फ़ॉस्जीन के अलग भाग को अक्षम करती है। ऐसे प्रस्तुत कीजिए तो पूरे अंक।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Worked example — which give a positive iodoform test? [NEET]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Test: ethanol, methanol, propan-2-ol, acetone, acetaldehyde"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "One rule only: does it contain CH3–CO– or CH3–CH(OH)– ? If yes → positive."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Scan each for the tell-tale methyl group",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 160' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><circle cx='30' cy='30' r='7' fill='#EEA31F'/><text x='45' y='34' fill='#181818'>ethanol CH3CH(OH)H &#8594; YES</text><circle cx='30' cy='58' r='7' fill='none' stroke='#55565C' stroke-width='2'/><text x='45' y='62' fill='#55565C'>methanol CH3OH (no such group) &#8594; NO</text><circle cx='30' cy='86' r='7' fill='#EEA31F'/><text x='45' y='90' fill='#181818'>propan-2-ol CH3CH(OH)CH3 &#8594; YES</text><circle cx='30' cy='114' r='7' fill='#EEA31F'/><text x='45' y='118' fill='#181818'>acetone CH3COCH3 &#8594; YES</text><circle cx='30' cy='142' r='7' fill='#EEA31F'/><text x='45' y='146' fill='#181818'>acetaldehyde CH3CHO &#8594; YES</text></g></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Ethanol: CH3–CH(OH)–H, a methyl carbinol → positive. Methanol: CH3–OH has no CH group next to it → negative."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Propan-2-ol: CH3–CH(OH)– → positive. Acetone: CH3–CO– → positive. Acetaldehyde: CH3–CHO has CH3–CO– → positive."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "Answer: all give iodoform EXCEPT methanol. Methanol is the classic trap — it has no second carbon."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A high frequency N E E T question. From this list, which compounds give a positive iodoform test? Ethanol, methanol, propan two ol, acetone, and acetaldehyde."
+            },
+            {
+              "seq": 2,
+              "text": "You only need one rule. Ask of each molecule, does it contain a methyl group attached to a carbonyl, or a methyl group attached to a C H bearing an O H? If yes, it is positive."
+            },
+            {
+              "seq": 3,
+              "text": "The board scans them one by one, marking each yes or no against that single rule."
+            },
+            {
+              "seq": 4,
+              "text": "Ethanol is C H three C H O H H, which is a methyl carbinol, so it is positive. Methanol is just C H three O H, and it has no second carbon carrying the required group, so it is negative."
+            },
+            {
+              "seq": 5,
+              "text": "Propan two ol has the C H three C H O H unit, so positive. Acetone has the C H three carbonyl unit, so positive. And acetaldehyde, C H three C H O, also contains a methyl attached to a carbonyl, so it too is positive."
+            },
+            {
+              "seq": 6,
+              "text": "So the answer is that every compound on the list gives iodoform except methanol. Methanol is the classic trap the examiner plants, because it looks like a simple alcohol but has no second carbon at all, so it can never form that methyl bearing group."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक high frequency N E E T question। इस list में से कौन से compounds positive iodoform test देते हैं? Ethanol, methanol, propan two ol, acetone, और acetaldehyde।"
+            },
+            {
+              "seq": 2,
+              "text": "तुम्हें सिर्फ़ एक rule चाहिए। हर molecule से पूछो, क्या इसमें carbonyl से जुड़ा methyl group है, या O H वाले C H से जुड़ा methyl group है? हाँ तो positive।"
+            },
+            {
+              "seq": 3,
+              "text": "Board इन्हें एक एक करके scan करता है, उस एक rule के ख़िलाफ़ हर एक को yes या no mark करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Ethanol है C H three C H O H H, जो एक methyl carbinol है, तो positive। Methanol बस C H three O H है, और इसमें required group वाला दूसरा carbon नहीं है, तो negative।"
+            },
+            {
+              "seq": 5,
+              "text": "Propan two ol में C H three C H O H unit है, तो positive। Acetone में C H three carbonyl unit है, तो positive। और acetaldehyde, C H three C H O, में भी carbonyl से जुड़ा methyl है, तो ये भी positive।"
+            },
+            {
+              "seq": 6,
+              "text": "तो answer ये है कि list का हर compound iodoform देता है सिवाय methanol के। Methanol वो classic trap है जो examiner लगाता है, क्योंकि ये simple alcohol जैसा दिखता है पर इसमें दूसरा carbon है ही नहीं, तो ये वो methyl वाला group कभी बना ही नहीं सकता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक उच्च आवृत्ति N E E T प्रश्न। इस सूची में से कौन से यौगिक धनात्मक आयोडोफ़ॉर्म परीक्षण देते हैं? इथेनॉल, मेथेनॉल, propan two ol, ऐसीटोन, और ऐसीटैल्डिहाइड।"
+            },
+            {
+              "seq": 2,
+              "text": "आपको केवल एक नियम चाहिए। हर अणु से पूछिए, क्या इसमें कार्बोनिल से जुड़ा मेथिल समूह है, या O H वाले C H से जुड़ा मेथिल समूह है? हाँ तो धनात्मक।"
+            },
+            {
+              "seq": 3,
+              "text": "बोर्ड इन्हें एक एक करके देखता है, उस एक नियम के विरुद्ध हर एक को हाँ या नहीं अंकित करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "इथेनॉल है C H three C H O H H, जो एक मेथिल कार्बिनॉल है, तो धनात्मक। मेथेनॉल बस C H three O H है, और इसमें आवश्यक समूह वाला दूसरा कार्बन नहीं है, तो ऋणात्मक।"
+            },
+            {
+              "seq": 5,
+              "text": "propan two ol में C H three C H O H इकाई है, तो धनात्मक। ऐसीटोन में C H three कार्बोनिल इकाई है, तो धनात्मक। और ऐसीटैल्डिहाइड, C H three C H O, में भी कार्बोनिल से जुड़ा मेथिल है, तो यह भी धनात्मक।"
+            },
+            {
+              "seq": 6,
+              "text": "तो उत्तर यह है कि सूची का हर यौगिक आयोडोफ़ॉर्म देता है सिवाय मेथेनॉल के। मेथेनॉल वह पारंपरिक जाल है जो परीक्षक लगाता है, क्योंकि यह सरल ऐल्कोहॉल जैसा दिखता है पर इसमें दूसरा कार्बन है ही नहीं, तो यह वह मेथिल वाला समूह कभी बना ही नहीं सकता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Worked example — distinguish three amines in one test [JEE Main]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One reagent to sort ethylamine, diethylamine, triethylamine"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Use the carbylamine test: warm each with CHCl3 + alcoholic KOH."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Only the primary amine produces the foul isocyanide",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 150' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><text x='10' y='30' fill='#181818'>+ CHCl3 + alc. KOH, warm</text><circle cx='30' cy='60' r='7' fill='#EEA31F'/><text x='45' y='64' fill='#181818'>ethylamine (1&#176;) &#8594; foul smell = the odd one out</text><circle cx='30' cy='90' r='7' fill='none' stroke='#55565C' stroke-width='2'/><text x='45' y='94' fill='#55565C'>diethylamine (2&#176;) &#8594; no smell</text><circle cx='30' cy='120' r='7' fill='none' stroke='#55565C' stroke-width='2'/><text x='45' y='124' fill='#55565C'>triethylamine (3&#176;) &#8594; no smell</text></g></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Only ethylamine (primary) gives the offensive-smelling isocyanide — a clear positive."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "Diethylamine (secondary) and triethylamine (tertiary) give no reaction, no smell."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "This identifies the primary amine outright; to separate the 2° from the 3°, a further test (e.g. Hinsberg) would be needed."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 52,
+          "style": "red-margin",
+          "text": "Answer: the carbylamine test flags ethylamine (1°); it alone gives the vile smell."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A neat J E E Main identification. You are handed three amines, ethylamine, diethylamine, and triethylamine, and asked for a single test that picks out one of them."
+            },
+            {
+              "seq": 2,
+              "text": "Reach for the carbylamine test. Warm each amine with chloroform and alcoholic potassium hydroxide, the standard conditions we set up earlier."
+            },
+            {
+              "seq": 3,
+              "text": "The board shows the outcome. Only one of the three lights up, and it is the primary amine."
+            },
+            {
+              "seq": 4,
+              "text": "Ethylamine is the primary amine, so it alone reacts to give the offensive smelling isocyanide. That unmistakable stench is a clear positive result."
+            },
+            {
+              "seq": 5,
+              "text": "Diethylamine is secondary and triethylamine is tertiary, and neither of them reacts, so neither produces any smell at all."
+            },
+            {
+              "seq": 6,
+              "text": "So this one test cleanly identifies the primary amine outright. Do note, though, that it cannot separate the secondary from the tertiary amine, since both are simply silent. To tell those two apart you would need a further test, such as the Hinsberg test."
+            },
+            {
+              "seq": 7,
+              "text": "So the answer is that the carbylamine test flags ethylamine, the primary amine, because it alone gives the vile smelling carbylamine."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक साफ़ J E E Main identification। तुम्हें तीन amines दिए हैं, ethylamine, diethylamine, और triethylamine, और एक single test पूछा है जो इनमें से एक को pick करे।"
+            },
+            {
+              "seq": 2,
+              "text": "Carbylamine test उठाओ। हर amine को chloroform और alcoholic potassium hydroxide के साथ गरम करो, वही standard conditions जो पहले set की थीं।"
+            },
+            {
+              "seq": 3,
+              "text": "Board outcome दिखाता है। तीनों में से सिर्फ़ एक जलता है, और वो primary amine है।"
+            },
+            {
+              "seq": 4,
+              "text": "Ethylamine primary amine है, तो सिर्फ़ यही react करके offensive smelling isocyanide देता है। वो पहचानने लायक़ बदबू एक clear positive result है।"
+            },
+            {
+              "seq": 5,
+              "text": "Diethylamine secondary है और triethylamine tertiary, और इनमें से कोई react नहीं करता, तो कोई smell देता ही नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "तो ये एक test साफ़ तौर पर primary amine को identify कर देता है। पर ध्यान दो, ये secondary को tertiary से अलग नहीं कर सकता, क्योंकि दोनों बस silent हैं। उन दोनों को अलग करने के लिए एक और test चाहिए, जैसे Hinsberg test।"
+            },
+            {
+              "seq": 7,
+              "text": "तो answer ये है कि carbylamine test ethylamine, यानी primary amine, को flag करता है, क्योंकि सिर्फ़ यही बदबूदार carbylamine देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक स्वच्छ J E E Main पहचान। आपको तीन ऐमीन दिए हैं, एथिलऐमीन, डाइएथिलऐमीन, और ट्राइएथिलऐमीन, और एक एकल परीक्षण पूछा है जो इनमें से एक को चुने।"
+            },
+            {
+              "seq": 2,
+              "text": "कार्बिलऐमीन परीक्षण उठाइए। हर ऐमीन को क्लोरोफ़ॉर्म और ऐल्कोहॉलिक पोटैशियम हाइड्रॉक्साइड के साथ गरम कीजिए, वही मानक परिस्थितियाँ जो पहले स्थापित की थीं।"
+            },
+            {
+              "seq": 3,
+              "text": "बोर्ड परिणाम दिखाता है। तीनों में से केवल एक जलता है, और वह प्राथमिक ऐमीन है।"
+            },
+            {
+              "seq": 4,
+              "text": "एथिलऐमीन प्राथमिक ऐमीन है, तो केवल यही अभिक्रिया करके दुर्गंधयुक्त आइसोसायनाइड देता है। वह पहचानने योग्य दुर्गंध एक स्पष्ट धनात्मक परिणाम है।"
+            },
+            {
+              "seq": 5,
+              "text": "डाइएथिलऐमीन द्वितीयक है और ट्राइएथिलऐमीन तृतीयक, और इनमें से कोई अभिक्रिया नहीं करता, तो कोई गंध देता ही नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "तो यह एक परीक्षण स्पष्ट रूप से प्राथमिक ऐमीन को पहचान लेता है। पर ध्यान दीजिए, यह द्वितीयक को तृतीयक से अलग नहीं कर सकता, क्योंकि दोनों बस मौन हैं। उन दोनों को अलग करने के लिए एक और परीक्षण चाहिए, जैसे Hinsberg परीक्षण।"
+            },
+            {
+              "seq": 7,
+              "text": "तो उत्तर यह है कि कार्बिलऐमीन परीक्षण एथिलऐमीन, अर्थात प्राथमिक ऐमीन, को चिह्नित करता है, क्योंकि केवल यही दुर्गंधयुक्त कार्बिलऐमीन देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Worked example — why propan-2-ol tests positive but propan-1-ol does not [JEE Advanced]",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Explain the iodoform result for the two propanols"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "caption": "Only the isomer that oxidises to a methyl ketone can give CHI3",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 160' xmlns='http://www.w3.org/2000/svg'><g font-family=\"system-ui, sans-serif\" font-size='12'><text x='10' y='28' fill='#181818' font-weight='bold'>propan-2-ol  CH3–CH(OH)–CH3</text><path d='M40 36 L40 66' stroke='#181818' stroke-width='1.5'/><polygon points='40,66 36,57 44,57' fill='#181818'/><text x='55' y='54' fill='#55565C'>[O]</text><text x='10' y='84' fill='#EEA31F'>&#8594; CH3–CO–CH3 (acetone) &#8594; CHI3  YES</text><text x='10' y='120' fill='#181818' font-weight='bold'>propan-1-ol  CH3CH2–CH2OH</text><path d='M40 128 L40 152' stroke='#181818' stroke-width='1.5'/><polygon points='40,152 36,143 44,143' fill='#181818'/><text x='55' y='146' fill='#DD4433'>[O] &#8594; propanoic acid (no CH3CO) &#8594; NO</text></g></svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "The test's alkaline hypoiodite first oxidises the alcohol, then cleaves — but only a CH3–CO– product can be cleaved to CHI3."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Propan-2-ol is CH3–CH(OH)–CH3: it has the CH3–CH(OH)– unit, so it oxidises to acetone (CH3–CO–CH3) → positive."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Propan-1-ol is CH3CH2–CH2OH: a primary alcohol, it oxidises to propanoic acid, which has NO methyl-ketone unit → negative."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "It is not about being an alcohol — it is about whether oxidation lands you on a CH3–CO– centre."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Answer: 2-propanol → acetone → positive; 1-propanol → acid → negative. The –OH must sit on a CH3–CH< carbon."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A J E E Advanced reasoning question that goes one level below the memory rule. Explain why propan two ol gives a positive iodoform test while propan one ol, its isomer, does not."
+            },
+            {
+              "seq": 2,
+              "text": "The board splits the two alcohols and follows each through oxidation, which is the real key here."
+            },
+            {
+              "seq": 3,
+              "text": "The reason is mechanistic. The alkaline hypoiodite in the test first oxidises the alcohol and then cleaves it, but only a product that carries a methyl attached to a carbonyl can be cleaved all the way to iodoform."
+            },
+            {
+              "seq": 4,
+              "text": "Take propan two ol, C H three C H O H C H three. It carries the crucial C H three C H O H unit, so on oxidation it becomes acetone, C H three C O C H three, which is a methyl ketone. That can be cleaved to iodoform, so the test is positive."
+            },
+            {
+              "seq": 5,
+              "text": "Now propan one ol, C H three C H two C H two O H. This is a primary alcohol, so it oxidises instead to propanoic acid. That acid has no methyl attached to a carbonyl anywhere, so there is nothing to cleave to iodoform, and the test is negative."
+            },
+            {
+              "seq": 6,
+              "text": "So the deep point, the one the examiner is testing, is that iodoform is not about simply being an alcohol. It is about whether oxidation delivers you onto a methyl carbonyl centre."
+            },
+            {
+              "seq": 7,
+              "text": "So the answer: two propanol oxidises to acetone and tests positive, one propanol oxidises to an acid and tests negative. The hydroxyl must sit on a carbon that also carries a methyl, so that oxidation can produce that essential methyl ketone."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Advanced reasoning question जो memory rule से एक level नीचे जाता है। समझाओ कि propan two ol positive iodoform test क्यों देता है जबकि उसका isomer propan one ol नहीं देता।"
+            },
+            {
+              "seq": 2,
+              "text": "Board दोनों alcohols को अलग करता है और हर एक को oxidation से गुज़ारता है, जो यहाँ असली key है।"
+            },
+            {
+              "seq": 3,
+              "text": "वजह mechanistic है। Test का alkaline hypoiodite पहले alcohol को oxidise करता है फिर cleave करता है, पर सिर्फ़ वो product जिसमें carbonyl से जुड़ा methyl हो iodoform तक cleave हो सकता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Propan two ol लो, C H three C H O H C H three। इसमें ज़रूरी C H three C H O H unit है, तो oxidation पर ये acetone, C H three C O C H three, बन जाता है, जो एक methyl ketone है। वो iodoform तक cleave हो सकता है, तो test positive।"
+            },
+            {
+              "seq": 5,
+              "text": "अब propan one ol, C H three C H two C H two O H। ये primary alcohol है, तो ये इसके बजाय propanoic acid में oxidise होता है। उस acid में कहीं carbonyl से जुड़ा methyl नहीं है, तो iodoform तक cleave करने को कुछ नहीं, और test negative।"
+            },
+            {
+              "seq": 6,
+              "text": "तो deep point, जो examiner test कर रहा है, ये है कि iodoform सिर्फ़ alcohol होने के बारे में नहीं है। ये इस बारे में है कि oxidation तुम्हें methyl carbonyl centre पर पहुँचाता है या नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो answer: two propanol acetone में oxidise होकर positive आता है, one propanol acid में oxidise होकर negative। Hydroxyl को ऐसे carbon पर होना चाहिए जिस पर methyl भी हो, ताकि oxidation वो ज़रूरी methyl ketone बना सके।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक J E E Advanced तर्क प्रश्न जो स्मृति नियम से एक स्तर नीचे जाता है। समझाइए कि propan two ol धनात्मक आयोडोफ़ॉर्म परीक्षण क्यों देता है जबकि उसका समावयवी propan one ol नहीं देता।"
+            },
+            {
+              "seq": 2,
+              "text": "बोर्ड दोनों ऐल्कोहॉल को अलग करता है और हर एक को ऑक्सीकरण से गुज़ारता है, जो यहाँ असली कुंजी है।"
+            },
+            {
+              "seq": 3,
+              "text": "कारण क्रियाविधिक है। परीक्षण का क्षारीय हाइपोआयोडाइट पहले ऐल्कोहॉल को ऑक्सीकृत करता है फिर विदलित करता है, पर केवल वह उत्पाद जिसमें कार्बोनिल से जुड़ा मेथिल हो आयोडोफ़ॉर्म तक विदलित हो सकता है।"
+            },
+            {
+              "seq": 4,
+              "text": "propan two ol लीजिए, C H three C H O H C H three। इसमें ज़रूरी C H three C H O H इकाई है, तो ऑक्सीकरण पर यह ऐसीटोन, C H three C O C H three, बन जाता है, जो एक मेथिल कीटोन है। वह आयोडोफ़ॉर्म तक विदलित हो सकता है, तो परीक्षण धनात्मक।"
+            },
+            {
+              "seq": 5,
+              "text": "अब propan one ol, C H three C H two C H two O H। यह प्राथमिक ऐल्कोहॉल है, तो यह इसके बजाय प्रोपेनोइक अम्ल में ऑक्सीकृत होता है। उस अम्ल में कहीं कार्बोनिल से जुड़ा मेथिल नहीं है, तो आयोडोफ़ॉर्म तक विदलित करने को कुछ नहीं, और परीक्षण ऋणात्मक।"
+            },
+            {
+              "seq": 6,
+              "text": "तो गहरा बिंदु, जो परीक्षक जाँच रहा है, यह है कि आयोडोफ़ॉर्म केवल ऐल्कोहॉल होने के बारे में नहीं है। यह इस बारे में है कि ऑक्सीकरण आपको मेथिल कार्बोनिल केंद्र पर पहुँचाता है या नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो उत्तर: two propanol ऐसीटोन में ऑक्सीकृत होकर धनात्मक आता है, one propanol अम्ल में ऑक्सीकृत होकर ऋणात्मक। हाइड्रॉक्सिल को ऐसे कार्बन पर होना चाहिए जिस पर मेथिल भी हो, ताकि ऑक्सीकरण वह ज़रूरी मेथिल कीटोन बना सके।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "tips",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Pitfalls & pro-tips: tests and their exact conditions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where students lose easy marks here"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "style": "red-margin",
+          "text": "Iodoform: methanol is NEGATIVE (no second C). Higher primary alcohols are negative too — only CH3CH(OH)– / CH3CO– work."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Don't mix the two chloroform tests: carbylamine needs a PRIMARY AMINE (foul smell); iodoform needs a methyl-ketone/methyl-carbinol (yellow ppt). Different substrate, different signal."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Phosgene is COCl2 (carbonyl chloride) — not to be confused with phosphine (PH3) or phosgene's own precursor CHCl3."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "text": "α-elimination (chloroform → carbene) is same-carbon; β-elimination (haloalkane → alkene) is adjacent-carbon. Keep α and β apart."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Freon/DDT irony: their stability is the hazard. State the use AND the hazard — questions want both halves."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us gather the specific places students throw away marks in this section, because almost all of them are avoidable."
+            },
+            {
+              "seq": 2,
+              "text": "The biggest is the iodoform test. Methanol is negative, because it has no second carbon to bear the methyl group. And note that higher straight chain primary alcohols are negative too; only a methyl carbinol or a methyl ketone unit gives the test."
+            },
+            {
+              "seq": 3,
+              "text": "Second, do not blur the two chloroform based tests. The carbylamine test needs a primary amine and signals with a foul smell. The iodoform test needs a methyl ketone or methyl carbinol and signals with a yellow precipitate. Different substrate, different signal, keep them separate."
+            },
+            {
+              "seq": 4,
+              "text": "Third, a naming trap. Phosgene is C O C l two, carbonyl chloride. Do not confuse it with phosphine, which is P H three, nor with its own precursor chloroform. The names sound alike but the molecules are unrelated."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, keep alpha and beta elimination apart. Alpha elimination, as in chloroform to carbene, removes two groups from the same carbon. Beta elimination, as in a haloalkane to an alkene, removes them from adjacent carbons. One makes a carbene, the other makes a double bond."
+            },
+            {
+              "seq": 6,
+              "text": "And finally, the pro tip for freons and D D T. Their very stability is the hazard, so in any answer, state both halves, the use and the hazard. These questions are specifically written to reward the student who gives both sides, not just one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस section में students जहाँ marks फेंक देते हैं वो specific जगहें इकट्ठा करते हैं, क्योंकि लगभग सब avoidable हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा iodoform test है। Methanol negative है, क्योंकि इसमें methyl group रखने को दूसरा carbon नहीं। और note करो कि बड़े straight chain primary alcohols भी negative हैं; सिर्फ़ methyl carbinol या methyl ketone unit test देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, दोनों chloroform वाले tests को धुंधला मत करो। Carbylamine test को primary amine चाहिए और foul smell से signal देता है। Iodoform test को methyl ketone या methyl carbinol चाहिए और yellow precipitate से signal देता है। अलग substrate, अलग signal, इन्हें अलग रखो।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, एक naming trap। Phosgene C O C l two है, carbonyl chloride। इसे phosphine, जो P H three है, से मत confuse करो, न ही इसके अपने precursor chloroform से। नाम मिलते जुलते हैं पर molecules का कोई संबंध नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, alpha और beta elimination अलग रखो। Alpha elimination, जैसे chloroform to carbene, दो groups एक ही carbon से हटाता है। Beta elimination, जैसे haloalkane to alkene, उन्हें adjacent carbons से हटाता है। एक carbene बनाता है, दूसरा double bond।"
+            },
+            {
+              "seq": 6,
+              "text": "और आख़िर में, freons और D D T के लिए pro tip। इनकी stability ही hazard है, तो किसी भी answer में दोनों halves बताओ, use और hazard। ये questions ख़ास तौर पर उस student को reward करने के लिए लिखे जाते हैं जो दोनों sides दे, सिर्फ़ एक नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस खंड में विद्यार्थी जहाँ अंक फेंक देते हैं वे विशिष्ट स्थान इकट्ठा करते हैं, क्योंकि लगभग सब टाले जा सकते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा आयोडोफ़ॉर्म परीक्षण है। मेथेनॉल ऋणात्मक है, क्योंकि इसमें मेथिल समूह रखने को दूसरा कार्बन नहीं। और ध्यान दीजिए कि बड़े सीधी श्रृंखला प्राथमिक ऐल्कोहॉल भी ऋणात्मक हैं; केवल मेथिल कार्बिनॉल या मेथिल कीटोन इकाई परीक्षण देती है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, दोनों क्लोरोफ़ॉर्म वाले परीक्षणों को धुंधला मत कीजिए। कार्बिलऐमीन परीक्षण को प्राथमिक ऐमीन चाहिए और दुर्गंध से संकेत देता है। आयोडोफ़ॉर्म परीक्षण को मेथिल कीटोन या मेथिल कार्बिनॉल चाहिए और पीले अवक्षेप से संकेत देता है। भिन्न पदार्थ, भिन्न संकेत, इन्हें अलग रखिए।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, एक नामकरण जाल। फ़ॉस्जीन C O C l two है, कार्बोनिल क्लोराइड। इसे फ़ॉस्फ़ीन, जो P H three है, से मत भ्रमित कीजिए, न ही इसके अपने पूर्ववर्ती क्लोरोफ़ॉर्म से। नाम मिलते जुलते हैं पर अणुओं का कोई संबंध नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, अल्फ़ा और बीटा विलोपन अलग रखिए। अल्फ़ा विलोपन, जैसे क्लोरोफ़ॉर्म से कार्बीन, दो समूह एक ही कार्बन से हटाता है। बीटा विलोपन, जैसे हैलोऐल्केन से ऐल्कीन, उन्हें निकटवर्ती कार्बनों से हटाता है। एक कार्बीन बनाता है, दूसरा द्विबंध।"
+            },
+            {
+              "seq": 6,
+              "text": "और अंत में, फ़्रीऑन और D D T के लिए सुझाव। इनका स्थायित्व ही संकट है, तो किसी भी उत्तर में दोनों भाग बताइए, उपयोग और संकट। ये प्रश्न ख़ास तौर पर उस विद्यार्थी को पुरस्कृत करने के लिए लिखे जाते हैं जो दोनों पक्ष दे, केवल एक नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "cheat_sheet",
+      "subtopic": "Polyhalogen Compounds",
+      "title": "Cheat sheet — polyhalogen compounds",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Quick-recall box: Sub-topic 03"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "CH2Cl2: solvent (paint remover, caffeine extraction); harms CNS. CHCl3: solvent; air + light → COCl2 (phosgene) — store in dark bottles, filled to brim, +1% ethanol."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Dichlorocarbene :CCl2 = CHCl3 + strong base by α-elimination; drives the carbylamine test & Reimer–Tiemann."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Carbylamine test: 1° amine + CHCl3 + alc. KOH → isocyanide (foul smell). Detects primary amines only; 2°/3° give nothing."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Iodoform test: I2 + NaOH → yellow CHI3 for CH3–CO– or CH3–CH(OH)– groups. Positive: ethanol, acetaldehyde, acetone, propan-2-ol. Negative: methanol, propan-1-ol, benzaldehyde."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "CCl4: solvent/extinguisher; forms phosgene, depletes ozone. Freons (CF2Cl2): refrigerants; inertness lets them reach the stratosphere and destroy ozone catalytically."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "DDT: first synthetic insecticide; persistent + bioaccumulative + resistance → banned. Every compound = one use + one hazard."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the quick recall box for polyhalogen compounds, your last minute revision sheet."
+            },
+            {
+              "seq": 2,
+              "text": "Dichloromethane is a solvent used for paint removal and caffeine extraction, and it harms the central nervous system. Chloroform is a solvent whose key fact is that air and light turn it into phosgene, C O C l two, which is why it is stored in dark bottles, filled to the brim, with about one percent ethanol."
+            },
+            {
+              "seq": 3,
+              "text": "Dichlorocarbene, colon C C l two, forms from chloroform and a strong base by alpha elimination, and it is the active species behind both the carbylamine test and the Reimer Tiemann reaction."
+            },
+            {
+              "seq": 4,
+              "text": "The carbylamine test: a primary amine with chloroform and alcoholic potassium hydroxide gives an isocyanide with a foul smell. It detects primary amines only; secondary and tertiary amines give nothing."
+            },
+            {
+              "seq": 5,
+              "text": "The iodoform test: iodine with sodium hydroxide gives a yellow precipitate of iodoform for any methyl ketone or methyl carbinol group. Positive for ethanol, acetaldehyde, acetone, and propan two ol; negative for methanol, propan one ol, and benzaldehyde."
+            },
+            {
+              "seq": 6,
+              "text": "Carbon tetrachloride is a solvent and old fire extinguisher that forms phosgene and depletes ozone. The freons, such as C F two C l two, are refrigerants whose very inertness lets them reach the stratosphere and destroy ozone catalytically."
+            },
+            {
+              "seq": 7,
+              "text": "And D D T, the first synthetic insecticide, is persistent, bioaccumulative, and lost to resistance, which is why it is now banned. Carry the whole section as one line: every compound here pairs one use with one hazard."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Polyhalogen compounds का quick recall box यहाँ है, तुम्हारी last minute revision sheet।"
+            },
+            {
+              "seq": 2,
+              "text": "Dichloromethane एक solvent है जो paint removal और caffeine extraction में use होता है, और central nervous system को नुक़सान पहुँचाता है। Chloroform एक solvent है जिसका key fact ये है कि हवा और light इसे phosgene, C O C l two, में बदल देते हैं, इसीलिए इसे dark bottles में, brim तक भरकर, लगभग एक percent ethanol के साथ रखते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Dichlorocarbene, colon C C l two, chloroform और strong base से alpha elimination द्वारा बनता है, और ये carbylamine test और Reimer Tiemann reaction दोनों के पीछे active species है।"
+            },
+            {
+              "seq": 4,
+              "text": "Carbylamine test: primary amine chloroform और alcoholic potassium hydroxide के साथ foul smell वाला isocyanide देता है। ये सिर्फ़ primary amines detect करता है; secondary और tertiary amines कुछ नहीं देते।"
+            },
+            {
+              "seq": 5,
+              "text": "Iodoform test: iodine sodium hydroxide के साथ किसी भी methyl ketone या methyl carbinol group के लिए yellow iodoform precipitate देता है। Ethanol, acetaldehyde, acetone, और propan two ol के लिए positive; methanol, propan one ol, और benzaldehyde के लिए negative।"
+            },
+            {
+              "seq": 6,
+              "text": "Carbon tetrachloride एक solvent और पुराना fire extinguisher है जो phosgene बनाता है और ozone घटाता है। Freons, जैसे C F two C l two, refrigerants हैं जिनकी inertness ही इन्हें stratosphere तक पहुँचाकर ozone catalytically destroy करने देती है।"
+            },
+            {
+              "seq": 7,
+              "text": "और D D T, पहला synthetic insecticide, persistent, bioaccumulative, और resistance से हारा हुआ है, इसीलिए अब banned है। पूरे section को एक line में रखो: यहाँ हर compound एक use को एक hazard से जोड़ता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "बहुहैलोजन यौगिकों का त्वरित स्मरण बॉक्स यहाँ है, आपकी अंतिम समय की पुनरावृत्ति शीट।"
+            },
+            {
+              "seq": 2,
+              "text": "डाइक्लोरोमेथेन एक विलायक है जो पेंट हटाने और कैफ़ीन निष्कर्षण में प्रयुक्त होता है, और केंद्रीय तंत्रिका तंत्र को हानि पहुँचाता है। क्लोरोफ़ॉर्म एक विलायक है जिसका मुख्य तथ्य यह है कि हवा और प्रकाश इसे फ़ॉस्जीन, C O C l two, में बदल देते हैं, इसीलिए इसे गहरे रंग की बोतलों में, किनारे तक भरकर, लगभग एक प्रतिशत इथेनॉल के साथ रखते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "डाइक्लोरोकार्बीन, colon C C l two, क्लोरोफ़ॉर्म और प्रबल क्षार से अल्फ़ा विलोपन द्वारा बनता है, और यह कार्बिलऐमीन परीक्षण और Reimer Tiemann अभिक्रिया दोनों के पीछे सक्रिय स्पीशीज़ है।"
+            },
+            {
+              "seq": 4,
+              "text": "कार्बिलऐमीन परीक्षण: प्राथमिक ऐमीन क्लोरोफ़ॉर्म और ऐल्कोहॉलिक पोटैशियम हाइड्रॉक्साइड के साथ दुर्गंधयुक्त आइसोसायनाइड देता है। यह केवल प्राथमिक ऐमीन पहचानता है; द्वितीयक और तृतीयक ऐमीन कुछ नहीं देते।"
+            },
+            {
+              "seq": 5,
+              "text": "आयोडोफ़ॉर्म परीक्षण: आयोडीन सोडियम हाइड्रॉक्साइड के साथ किसी भी मेथिल कीटोन या मेथिल कार्बिनॉल समूह के लिए पीला आयोडोफ़ॉर्म अवक्षेप देता है। इथेनॉल, ऐसीटैल्डिहाइड, ऐसीटोन, और propan two ol के लिए धनात्मक; मेथेनॉल, propan one ol, और बेंज़ैल्डिहाइड के लिए ऋणात्मक।"
+            },
+            {
+              "seq": 6,
+              "text": "कार्बन टेट्राक्लोराइड एक विलायक और पुराना अग्निशामक है जो फ़ॉस्जीन बनाता है और ओज़ोन घटाता है। फ़्रीऑन, जैसे C F two C l two, प्रशीतक हैं जिनकी अक्रियाशीलता ही इन्हें समतापमंडल तक पहुँचाकर ओज़ोन को उत्प्रेरकीय रूप से नष्ट करने देती है।"
+            },
+            {
+              "seq": 7,
+              "text": "और D D T, पहला संश्लेषित कीटनाशक, दीर्घस्थायी, जैव संचयी, और प्रतिरोध से हारा हुआ है, इसीलिए अब प्रतिबंधित है। पूरे खंड को एक पंक्ति में रखिए: यहाँ हर यौगिक एक उपयोग को एक संकट से जोड़ता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

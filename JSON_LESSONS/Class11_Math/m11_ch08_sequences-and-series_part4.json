@@ -1,0 +1,2570 @@
+{
+  "chapter": "Sequences and Series",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 8,
+  "part": 4,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "AGP - Concept",
+      "title": "An AGP is a GP re-weighted by an AP counter",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "AGP: a GP whose terms carry a growing arithmetic label"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "AP part times GP part, term by term, makes the AGP",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 200\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"30\" y=\"40\" font-size=\"13\" fill=\"#4f46e5\">AP part</text>\n  <text x=\"130\" y=\"40\" text-anchor=\"middle\" font-size=\"14\" fill=\"#3730a3\">a</text>\n  <text x=\"210\" y=\"40\" text-anchor=\"middle\" font-size=\"14\" fill=\"#3730a3\">a+d</text>\n  <text x=\"300\" y=\"40\" text-anchor=\"middle\" font-size=\"14\" fill=\"#3730a3\">a+2d</text>\n  <text x=\"390\" y=\"40\" text-anchor=\"middle\" font-size=\"14\" fill=\"#3730a3\">a+3d</text>\n  <text x=\"30\" y=\"95\" font-size=\"13\" fill=\"#0f766e\">GP part</text>\n  <text x=\"130\" y=\"95\" text-anchor=\"middle\" font-size=\"14\" fill=\"#065f46\">1</text>\n  <text x=\"210\" y=\"95\" text-anchor=\"middle\" font-size=\"14\" fill=\"#065f46\">r</text>\n  <text x=\"300\" y=\"95\" text-anchor=\"middle\" font-size=\"14\" fill=\"#065f46\">r²</text>\n  <text x=\"390\" y=\"95\" text-anchor=\"middle\" font-size=\"14\" fill=\"#065f46\">r³</text>\n  <line x1=\"90\" y1=\"115\" x2=\"430\" y2=\"115\" stroke=\"#cbd5e1\"/>\n  <text x=\"30\" y=\"150\" font-size=\"13\" fill=\"#b91c1c\">AGP</text>\n  <text x=\"130\" y=\"150\" text-anchor=\"middle\" font-size=\"14\" fill=\"#7f1d1d\">a</text>\n  <text x=\"210\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" fill=\"#7f1d1d\">(a+d)r</text>\n  <text x=\"300\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" fill=\"#7f1d1d\">(a+2d)r²</text>\n  <text x=\"390\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" fill=\"#7f1d1d\">(a+3d)r³</text>\n  <text x=\"235\" y=\"185\" text-anchor=\"middle\" font-size=\"13\" fill=\"#64748b\">term by term product · sum via multiply-by-r</text>\n</svg>"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "t_n = [\\,a + (n-1)d\\,]\\,r^{\\,n-1}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "Present-value sums in finance are exactly AGP sums."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "text": "Neither the AP nor the GP sum formula works alone — but the GP trick does."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "text": "Multiply the whole sum by $r$, shift by one, subtract: the AP collapses to $d$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 49,
+          "style": "red-margin",
+          "text": "When $|r| < 1$, the AGP converges: geometric decay beats linear growth."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "text": "Recognise an AGP by its shape: (linear in $n$) × ($r^{\\,n-1}$)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a progression that fuses the two we already know. Think of an arithmetico-geometric progression as a GP whose terms are being steadily re-weighted by a growing counter."
+            },
+            {
+              "seq": 2,
+              "text": "The board makes it concrete. Take an AP on top, a GP below, and multiply them term by term — the geometric decay of r to the k multiplied by the linear march of the AP."
+            },
+            {
+              "seq": 3,
+              "text": "So the general term is a plus n minus one times d, all times r to the n minus one — the AP factor and the GP factor multiplied together."
+            },
+            {
+              "seq": 4,
+              "text": "This is not just an abstraction. Present-value and expected-value calculations in finance — steadily growing payments each discounted by a fixed factor — are exactly AGP sums."
+            },
+            {
+              "seq": 5,
+              "text": "Here is the defining challenge for summation: because each term carries both an additive and a multiplicative pattern, neither the AP sum formula nor the GP sum formula works on its own."
+            },
+            {
+              "seq": 6,
+              "text": "But the GP trick still works. Multiply the entire sum by r, line it up shifted by one position, and subtract. The arithmetic part collapses its differences into a single constant d, turning the leftover into an ordinary GP."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> And convergence comes for free when the size of r is below one. Both r to the n and n times r to the n die away, because geometric decay eventually overwhelms the linear growth of the AP label, so the infinite sum is finite."
+            },
+            {
+              "seq": 8,
+              "text": "The recognition skill is everything: spot an AGP by its shape — something linear in n, multiplied by r to the n minus one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक progression जो हमारे पहले से जाने दोनों को fuse करती है। एक arithmetico-geometric progression को एक GP समझो जिसके terms एक growing counter से लगातार re-weight हो रहे हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "board इसे concrete बना देता है। ऊपर एक AP लो, नीचे एक GP, और उन्हें term by term multiply करो — r to the k की geometric decay, AP के linear march से गुणा।"
+            },
+            {
+              "seq": 3,
+              "text": "तो general term है a plus n minus one times d, all times r to the n minus one — AP factor और GP factor एक साथ multiply किए हुए।"
+            },
+            {
+              "seq": 4,
+              "text": "यह सिर्फ़ एक abstraction नहीं है। finance में present-value और expected-value calculations — लगातार बढ़ते payments जिनमें हर एक fixed factor से discount हो — exactly AGP sums हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "यह रही summation की defining challenge: चूँकि हर term additive और multiplicative दोनों pattern रखता है, न AP sum formula अकेले काम करता है न GP sum formula।"
+            },
+            {
+              "seq": 6,
+              "text": "पर GP trick फिर भी काम करता है। पूरे sum को r से multiply करो, एक position shift करके line up करो, और subtract करो। arithmetic part अपने differences को एक single constant d में collapse कर देता है, बचे हुए को एक ordinary GP में बदल देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> और convergence मुफ़्त में आती है जब r की size one से नीचे हो। r to the n और n times r to the n दोनों मर जाते हैं, क्योंकि geometric decay आख़िरकार AP label की linear growth को हरा देती है, तो infinite sum finite है।"
+            },
+            {
+              "seq": 8,
+              "text": "recognition skill ही सब कुछ है: एक AGP को उसके shape से पहचानो — n में कुछ linear, r to the n minus one से गुणा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "AGP - Derivation",
+      "title": "Summing an AGP: multiply by r and subtract",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The one technique that IS this subtopic"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "S_n = a + (a+d)r + (a+2d)r^2 + \\cdots + [a+(n-1)d]r^{\\,n-1}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "rS_n = ar + (a+d)r^2 + \\cdots + [a+(n-1)d]r^{\\,n}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "text": "Subtract: every middle column leaves a clean $d\\,r^k$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "(1-r)S_n = a + d(r + r^2 + \\cdots + r^{\\,n-1}) - [a+(n-1)d]r^{\\,n}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_n = \\frac{a}{1-r} + \\frac{d\\,r(1 - r^{\\,n-1})}{(1-r)^2} - \\frac{[a+(n-1)d]r^{\\,n}}{1-r}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "S_\\infty = \\frac{a}{1-r} + \\frac{d\\,r}{(1-r)^2} \\quad (|r| < 1)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Don't memorise the messy $S_n$ — re-derive with the subtraction every time."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one derivation is the entire subtopic, so let's walk it carefully. It is the GP sum trick applied one level up."
+            },
+            {
+              "seq": 2,
+              "text": "Write out the sum S sub n: a, plus a plus d times r, plus a plus two d times r squared, and so on to the last term."
+            },
+            {
+              "seq": 3,
+              "text": "Now multiply the whole line by r, which shifts every term one position to the right — the same move we used for the plain GP."
+            },
+            {
+              "seq": 4,
+              "text": "Subtract the second line from the first. The first column gives a bare a, and every middle column leaves a clean d times r to the k, because the AP differences collapse to the constant d."
+            },
+            {
+              "seq": 5,
+              "text": "Collecting everything, one minus r times S sub n equals a, plus d times the geometric sum r plus r squared up to r to the n minus one, minus the final leftover term."
+            },
+            {
+              "seq": 6,
+              "text": "That inner bracket is just a GP sum, so dividing through gives the full closed form: a over one minus r, plus d r times one minus r to the n minus one, over one minus r squared, minus the last-term correction."
+            },
+            {
+              "seq": 7,
+              "text": "Letting n go to infinity with the size of r below one kills both the r-to-the-n-minus-one and r-to-the-n pieces, leaving the compact sum to infinity: a over one minus r, plus d r over one minus r squared."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper> One piece of exam wisdom: don't memorise that messy finite formula. Re-derive it with the multiply-by-r subtraction every single time — it is faster and far more error-proof under pressure."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह एक derivation पूरा subtopic है, तो इसे ध्यान से चलते हैं। यह GP sum trick है, एक level ऊपर लगाया हुआ।"
+            },
+            {
+              "seq": 2,
+              "text": "sum S sub n लिखो: a, plus a plus d times r, plus a plus two d times r squared, और ऐसे ही last term तक।"
+            },
+            {
+              "seq": 3,
+              "text": "अब पूरी line को r से multiply करो, जो हर term को एक position दाएँ shift करता है — वही move जो हमने plain GP के लिए use किया था।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरी line को पहली से subtract करो। पहला column एक bare a देता है, और हर middle column एक clean d times r to the k छोड़ता है, क्योंकि AP differences constant d में collapse हो जाते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "सब इकट्ठा करने पर, one minus r times S sub n equals a, plus d times geometric sum r plus r squared से r to the n minus one तक, minus आख़िरी leftover term।"
+            },
+            {
+              "seq": 6,
+              "text": "वो inner bracket बस एक GP sum है, तो divide करने पर पूरा closed form मिलता है: a over one minus r, plus d r times one minus r to the n minus one, over one minus r squared, minus last-term correction।"
+            },
+            {
+              "seq": 7,
+              "text": "n को infinity तक ले जाने पर, r की size one से नीचे के साथ, r-to-the-n-minus-one और r-to-the-n दोनों pieces मर जाते हैं, बचता है compact sum to infinity: a over one minus r, plus d r over one minus r squared।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper> एक exam wisdom: वो messy finite formula मत memorise करो। इसे हर बार multiply-by-r subtraction से re-derive करो — यह fast है और pressure में कहीं ज़्यादा error-proof।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "formulas",
+      "subtopic": "AGP - Formulas",
+      "title": "The AGP formula set and its useful relatives",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "General term, both sums, and two must-know relatives"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "t_n = [\\,a + (n-1)d\\,]\\,r^{\\,n-1}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "S_n = \\frac{a}{1-r} + \\frac{d\\,r(1 - r^{\\,n-1})}{(1-r)^2} - \\frac{[a+(n-1)d]r^{\\,n}}{1-r} \\;\\;(r \\ne 1)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "S_\\infty = \\frac{a}{1-r} + \\frac{d\\,r}{(1-r)^2} \\quad (|r| < 1)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\sum n\\,r^{\\,n} = \\frac{r}{(1-r)^2}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\sum n^2\\,r^{\\,n} = \\frac{r(1+r)}{(1-r)^3}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "If $r = 1$ the AGP is just an AP — sum it with the AP formula, not this one."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "These relatives also follow from differentiating the GP sum."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the AGP formulas, plus two relatives that show up constantly in Advanced problems."
+            },
+            {
+              "seq": 2,
+              "text": "The general term is a plus n minus one d, all times r to the n minus one — the AP factor times the GP factor."
+            },
+            {
+              "seq": 3,
+              "text": "The sum of n terms is the three-piece expression we just derived: a fixed term, a geometric middle term, and a last-term correction. Use it, but be ready to re-derive it if memory wobbles."
+            },
+            {
+              "seq": 4,
+              "text": "The sum to infinity is the clean one worth memorising: a over one minus r, plus d r over one minus r squared, valid only when the size of r is below one."
+            },
+            {
+              "seq": 5,
+              "text": "Now the two relatives. The sum of n times r to the n is r over one minus r squared — the workhorse for polynomial-times-geometric sums."
+            },
+            {
+              "seq": 6,
+              "text": "And the sum of n squared times r to the n is r times one plus r, over one minus r cubed. Together these two handle a huge range of Advanced series."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> Guard the r-equals-one case. When r is one the AGP degenerates into an ordinary AP, so sum it with the AP formula — never plug r equals one into these expressions and divide by zero."
+            },
+            {
+              "seq": 8,
+              "text": "One elegant footnote: both relatives also fall out of differentiating the geometric-series sum, if you prefer the calculus route."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो AGP formulas consolidate करें, साथ में दो relatives जो Advanced problems में लगातार आते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "general term है a plus n minus one d, all times r to the n minus one — AP factor times GP factor।"
+            },
+            {
+              "seq": 3,
+              "text": "n terms का sum वही three-piece expression है जो हमने अभी derive किया: एक fixed term, एक geometric middle term, और एक last-term correction। इसे use करो, पर memory डगमगाए तो re-derive करने को तैयार रहो।"
+            },
+            {
+              "seq": 4,
+              "text": "sum to infinity वो clean है जो memorise करने लायक है: a over one minus r, plus d r over one minus r squared, valid सिर्फ़ तब जब r की size one से नीचे हो।"
+            },
+            {
+              "seq": 5,
+              "text": "अब दो relatives। n times r to the n का sum है r over one minus r squared — polynomial-times-geometric sums का workhorse।"
+            },
+            {
+              "seq": 6,
+              "text": "और n squared times r to the n का sum है r times one plus r, over one minus r cubed। ये दोनों मिलकर Advanced series की बड़ी range handle करते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> r-equals-one case को guard करो। जब r one हो तो AGP एक ordinary AP में बदल जाती है, तो इसे AP formula से sum करो — इन expressions में कभी r equals one डालकर zero से divide मत करो।"
+            },
+            {
+              "seq": 8,
+              "text": "एक elegant footnote: दोनों relatives geometric-series sum को differentiate करने से भी निकलते हैं, अगर तुम्हें calculus route पसंद हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "AGP Worked Examples",
+      "title": "Sum to n terms of 1 + 2x + 3x² + …",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Sum to n terms: 1 + 2x + 3x² + 4x³ + … (x ≠ 1)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Here $a = 1$, $d = 1$, $r = x$. Use multiply-by-$x$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "S_n = 1 + 2x + 3x^2 + \\cdots + nx^{\\,n-1}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "xS_n = x + 2x^2 + \\cdots + nx^{\\,n}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "(1-x)S_n = \\frac{1 - x^{\\,n}}{1 - x} - nx^{\\,n}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_n = \\frac{1 - x^{\\,n}}{(1-x)^2} - \\frac{nx^{\\,n}}{1-x}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The interior GP $1 + x + \\dots + x^{n-1}$ is what survives the subtraction."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's open the AGP examples with the archetype — the sum of one plus two x plus three x squared, and so on to n terms."
+            },
+            {
+              "seq": 2,
+              "text": "Read off the parameters. The arithmetic labels are one, two, three, so a is one and d is one; the geometric factor is x, so r is x. Now apply multiply-by-x."
+            },
+            {
+              "seq": 3,
+              "text": "Write the sum S sub n as one plus two x plus three x squared, up to n times x to the n minus one."
+            },
+            {
+              "seq": 4,
+              "text": "Multiply the whole line by x, shifting each term right: x plus two x squared, and so on to n times x to the n."
+            },
+            {
+              "seq": 5,
+              "text": "Subtracting, the coefficients collapse. What remains is a clean geometric series — one plus x up to x to the n minus one — minus the single leftover n times x to the n. That geometric part sums to one minus x to the n over one minus x."
+            },
+            {
+              "seq": 6,
+              "text": "Dividing through by one minus x gives the closed form: one minus x to the n over one minus x squared, minus n x to the n over one minus x."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> Notice what did all the work — the interior geometric progression is exactly what survives the subtraction, and summing it is the whole game."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो AGP examples को archetype से खोलें — one plus two x plus three x squared का sum, और ऐसे ही n terms तक।"
+            },
+            {
+              "seq": 2,
+              "text": "parameters पढ़ लो। arithmetic labels हैं one, two, three, तो a one है और d one; geometric factor x है, तो r x है। अब multiply-by-x apply करो।"
+            },
+            {
+              "seq": 3,
+              "text": "sum S sub n को one plus two x plus three x squared लिखो, n times x to the n minus one तक।"
+            },
+            {
+              "seq": 4,
+              "text": "पूरी line को x से multiply करो, हर term दाएँ shift करते हुए: x plus two x squared, और ऐसे ही n times x to the n तक।"
+            },
+            {
+              "seq": 5,
+              "text": "subtract करने पर, coefficients collapse हो जाते हैं। जो बचता है वो एक clean geometric series है — one plus x से x to the n minus one तक — minus अकेला leftover n times x to the n। वो geometric part sum होकर one minus x to the n over one minus x बनता है।"
+            },
+            {
+              "seq": 6,
+              "text": "one minus x से divide करने पर closed form मिलता है: one minus x to the n over one minus x squared, minus n x to the n over one minus x।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> ध्यान दो किसने सारा काम किया — interior geometric progression exactly वही है जो subtraction में बचता है, और उसे sum करना ही पूरा खेल है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "AGP Worked Examples",
+      "title": "Sum to infinity using the compact formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Sum to infinity: 1 + 2/3 + 3/3² + 4/3³ + …"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "a = 1, \\quad d = 1, \\quad r = \\tfrac13 \\;\\;(|r| < 1\\;\\checkmark)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "S_\\infty = \\frac{a}{1-r} + \\frac{d\\,r}{(1-r)^2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\frac{1}{1 - \\tfrac13} = \\frac{3}{2}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\frac{\\tfrac13}{\\left(1 - \\tfrac13\\right)^2} = \\frac{\\tfrac13}{\\tfrac49} = \\frac34"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_\\infty = \\frac32 + \\frac34 = \\frac94"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Check $|r| < 1$ first, then plug into the two-term $S_\\infty$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the compact infinite-sum formula in action. We want the total of one plus two thirds plus three over three squared plus four over three cubed, forever."
+            },
+            {
+              "seq": 2,
+              "text": "Read off the parameters: the numerators one, two, three, four give a equals one and d equals one, and the denominators are powers of three, so r is one third. Crucially, its size is below one, so the sum exists."
+            },
+            {
+              "seq": 3,
+              "text": "Apply the two-term sum-to-infinity formula: a over one minus r, plus d r over one minus r squared."
+            },
+            {
+              "seq": 4,
+              "text": "The first piece is one over one minus one third, which is three halves."
+            },
+            {
+              "seq": 5,
+              "text": "The second piece is one third over one minus one third, squared — that is one third over four ninths, which simplifies to three quarters."
+            },
+            {
+              "seq": 6,
+              "text": "Adding them, three halves plus three quarters is nine quarters."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> And the discipline stays the same as with any infinite GP — check the size of r is below one first, then simply plug into the two clean terms. No multiply-by-r grind needed once you trust the formula."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब compact infinite-sum formula action में। हमें one plus two thirds plus three over three squared plus four over three cubed का total चाहिए, हमेशा के लिए।"
+            },
+            {
+              "seq": 2,
+              "text": "parameters पढ़ो: numerators one, two, three, four देते हैं a equals one और d equals one, और denominators three की powers हैं, तो r one third है। crucially, इसकी size one से नीचे है, तो sum exist करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "two-term sum-to-infinity formula apply करो: a over one minus r, plus d r over one minus r squared।"
+            },
+            {
+              "seq": 4,
+              "text": "पहला piece है one over one minus one third, यानी three halves।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा piece है one third over one minus one third, squared — यानी one third over four ninths, जो simplify होकर three quarters बनता है।"
+            },
+            {
+              "seq": 6,
+              "text": "इन्हें add करने पर, three halves plus three quarters है nine quarters।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> और discipline किसी भी infinite GP जैसा ही रहता है — पहले check करो कि r की size one से नीचे है, फिर बस दो clean terms में plug करो। formula पर भरोसा हो तो multiply-by-r की मेहनत नहीं चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "AGP Worked Examples",
+      "title": "Reading off a and d from numerators",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Sum to infinity: 3/1 + 5/2 + 7/4 + 9/8 + …"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Numerators 3, 5, 7, 9 form an AP ($a = 3$, $d = 2$)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Denominators 1, 2, 4, 8 form a GP with $r = \\tfrac12$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "S_\\infty = \\frac{a}{1-r} + \\frac{d\\,r}{(1-r)^2}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\frac{3}{1 - \\tfrac12} = 6, \\qquad \\frac{2 \\cdot \\tfrac12}{\\left(1 - \\tfrac12\\right)^2} = \\frac{1}{\\tfrac14} = 4"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_\\infty = 6 + 4 = 10"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Separate numerator (AP) from denominator (GP) to read $a$, $d$, $r$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example rewards a clean first read — separating the arithmetic and geometric structure before touching the formula."
+            },
+            {
+              "seq": 2,
+              "text": "Look at the numerators three, five, seven, nine. They step up by two each time, so they are an AP with first term three and common difference two."
+            },
+            {
+              "seq": 3,
+              "text": "Now the denominators one, two, four, eight. They double each time, so they are a GP with ratio one half — and its size is safely below one."
+            },
+            {
+              "seq": 4,
+              "text": "So this is a genuine AGP with a equals three, d equals two, r equals one half. Apply the sum-to-infinity formula."
+            },
+            {
+              "seq": 5,
+              "text": "The first piece is three over one minus one half, which is six. The second is two times one half over one minus one half squared, which is one over one quarter, equal to four."
+            },
+            {
+              "seq": 6,
+              "text": "Adding, six plus four gives ten."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> The key habit is that first split — read the numerator as the AP and the denominator as the GP, and the parameters a, d, and r fall out immediately, with no guesswork."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example एक clean पहली read का इनाम देता है — formula छूने से पहले arithmetic और geometric structure को अलग करना।"
+            },
+            {
+              "seq": 2,
+              "text": "numerators three, five, seven, nine देखो। ये हर बार two से बढ़ते हैं, तो ये एक AP हैं first term three और common difference two के साथ।"
+            },
+            {
+              "seq": 3,
+              "text": "अब denominators one, two, four, eight। ये हर बार double होते हैं, तो ये एक GP हैं ratio one half के साथ — और इसकी size सुरक्षित रूप से one से नीचे है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो यह एक genuine AGP है a equals three, d equals two, r equals one half के साथ। sum-to-infinity formula apply करो।"
+            },
+            {
+              "seq": 5,
+              "text": "पहला piece है three over one minus one half, यानी six। दूसरा है two times one half over one minus one half squared, यानी one over one quarter, बराबर four।"
+            },
+            {
+              "seq": 6,
+              "text": "add करने पर, six plus four देता है ten।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> key habit वो पहला split है — numerator को AP की तरह पढ़ो और denominator को GP की तरह, और parameters a, d, और r तुरंत निकल आते हैं, बिना किसी guesswork के।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "AGP Worked Examples",
+      "title": "An AGP with common difference 2",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Sum to n terms: 1 + 3x + 5x² + 7x³ + … (x ≠ 1)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Coefficients 1, 3, 5, 7 give $a = 1$, $d = 2$; $r = x$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "(1-x)S_n = 1 + 2(x + x^2 + \\cdots + x^{\\,n-1}) - (2n-1)x^{\\,n}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "= 1 + \\frac{2x(1 - x^{\\,n-1})}{1 - x} - (2n-1)x^{\\,n}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "S_n = \\frac{1}{1-x} + \\frac{2x(1 - x^{\\,n-1})}{(1-x)^2} - \\frac{(2n-1)x^{\\,n}}{1-x}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "The last coefficient is $a + (n-1)d = 1 + 2(n-1) = 2n-1$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Same method, just $d = 2$ instead of $d = 1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This Advanced example is the same machinery as before, but with a steeper arithmetic label to keep you honest about the constant d."
+            },
+            {
+              "seq": 2,
+              "text": "The coefficients are one, three, five, seven — odd numbers stepping by two — so a is one and d is two, while the geometric factor r is x."
+            },
+            {
+              "seq": 3,
+              "text": "Run the multiply-by-x subtraction. After lining up and subtracting, one minus x times S sub n equals one, plus two times the geometric block x plus x squared up to x to the n minus one, minus the last-term piece."
+            },
+            {
+              "seq": 4,
+              "text": "That geometric block sums to two x times one minus x to the n minus one, over one minus x, so we substitute it in."
+            },
+            {
+              "seq": 5,
+              "text": "Dividing by one minus x gives the closed form: one over one minus x, plus two x times one minus x to the n minus one over one minus x squared, minus two n minus one times x to the n over one minus x."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> Watch the last coefficient carefully. The final AP label is a plus n minus one times d, which is one plus two times n minus one, equal to two n minus one — not just n. Getting that wrong is the classic slip here."
+            },
+            {
+              "seq": 7,
+              "text": "So the method is identical to the archetype; the only change is carrying d equals two instead of d equals one throughout."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह Advanced example पहले जैसी ही machinery है, पर एक steeper arithmetic label के साथ ताकि तुम constant d को लेकर honest रहो।"
+            },
+            {
+              "seq": 2,
+              "text": "coefficients हैं one, three, five, seven — odd numbers two से बढ़ते हुए — तो a one है और d two है, जबकि geometric factor r x है।"
+            },
+            {
+              "seq": 3,
+              "text": "multiply-by-x subtraction चलाओ। line up करके subtract करने के बाद, one minus x times S sub n equals one, plus two times geometric block x plus x squared से x to the n minus one तक, minus last-term piece।"
+            },
+            {
+              "seq": 4,
+              "text": "वो geometric block sum होकर two x times one minus x to the n minus one, over one minus x बनता है, तो हम इसे substitute करते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "one minus x से divide करने पर closed form मिलता है: one over one minus x, plus two x times one minus x to the n minus one over one minus x squared, minus two n minus one times x to the n over one minus x।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> last coefficient ध्यान से देखो। आख़िरी AP label है a plus n minus one times d, यानी one plus two times n minus one, बराबर two n minus one — बस n नहीं। इसे गलत करना यहाँ का classic slip है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो method archetype जैसा ही है; बस बदलाव यह है कि d equals two ले जाओ, d equals one नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "AGP Worked Examples",
+      "title": "n²/2ⁿ: applying the AGP idea twice",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Evaluate Σ n²/2ⁿ from n = 1 to ∞"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Split $n^2 = n(n-1) + n$ to reuse two standard sums."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\sum n(n-1)r^{\\,n} = \\frac{2r^2}{(1-r)^3}, \\qquad \\sum n\\,r^{\\,n} = \\frac{r}{(1-r)^2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\sum n(n-1)\\left(\\tfrac12\\right)^n = \\frac{2\\cdot\\tfrac14}{\\tfrac18} = 4"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\sum n\\left(\\tfrac12\\right)^n = \\frac{\\tfrac12}{\\tfrac14} = 2"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\sum \\frac{n^2}{2^n} = 4 + 2 = 6"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The AGP machinery, iterated, sums 'polynomial × geometric' series."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We close the AGP examples with a sum that looks harder than an AGP but yields to the same idea applied twice. We want the sum of n squared over two to the n, to infinity."
+            },
+            {
+              "seq": 2,
+              "text": "The trick is a clean split: write n squared as n times n minus one, plus n. This turns one awkward sum into two sums we already have formulas for."
+            },
+            {
+              "seq": 3,
+              "text": "The two standard results are: the sum of n times n minus one times r to the n is two r squared over one minus r cubed, and the sum of n times r to the n is r over one minus r squared."
+            },
+            {
+              "seq": 4,
+              "text": "For the first piece with r equal one half, two times one quarter over one eighth gives four."
+            },
+            {
+              "seq": 5,
+              "text": "For the second piece, one half over one quarter gives two."
+            },
+            {
+              "seq": 6,
+              "text": "Adding the two pieces, four plus two is six. So the sum of n squared over two to the n is exactly six."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> That is the real power of the AGP machinery — iterated, it sums any polynomial-times-geometric series. Split the polynomial into building blocks and apply the standard sums one at a time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हम AGP examples को एक ऐसे sum से बंद करते हैं जो AGP से मुश्किल दिखता है पर उसी idea से हल हो जाता है, दो बार लगाकर। हमें n squared over two to the n का sum चाहिए, infinity तक।"
+            },
+            {
+              "seq": 2,
+              "text": "trick एक clean split है: n squared को n times n minus one, plus n लिखो। यह एक awkward sum को दो sums में बदल देता है जिनके formulas हमारे पास पहले से हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "दो standard results हैं: n times n minus one times r to the n का sum है two r squared over one minus r cubed, और n times r to the n का sum है r over one minus r squared।"
+            },
+            {
+              "seq": 4,
+              "text": "पहले piece के लिए r बराबर one half के साथ, two times one quarter over one eighth देता है four।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरे piece के लिए, one half over one quarter देता है two।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों pieces add करने पर, four plus two है six। तो n squared over two to the n का sum exactly six है।"
+            },
+            {
+              "seq": 7,
+              "text": "<excited> यही AGP machinery की असली ताकत है — iterated, यह किसी भी polynomial-times-geometric series को sum कर देती है। polynomial को building blocks में split करो और standard sums एक-एक करके लगाओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "tips",
+      "subtopic": "AGP",
+      "title": "AGP: the trap list and the pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "AGP — the traps, and the fast moves"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Wrong method: trying the AP or GP sum formula alone, or the Σ-polynomial method."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Convergence: write $S_\\infty$ only after checking $|r| < 1$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "$r = 1$ means the AGP is a plain AP — use the AP sum, not division."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Don't swap which factor is the AP part and which is the GP part."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Pro-tip: re-derive $S_n$ with multiply-by-$r$ every time — faster than the formula."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "For $S_\\infty$, memorise the compact $\\tfrac{a}{1-r} + \\tfrac{d\\,r}{(1-r)^2}$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Recognise an AGP by shape: (linear in $n$) × ($r^{\\,n-1}$)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's gather the AGP traps and the fast moves that beat them."
+            },
+            {
+              "seq": 2,
+              "text": "The dominant error is reaching for the wrong tool — trying the AP sum formula alone, or the GP formula alone, or the polynomial-sum method. Each handles only one half of an AGP."
+            },
+            {
+              "seq": 3,
+              "text": "Second, respect convergence: write the sum-to-infinity formula only after confirming the size of r is below one — the same discipline as the plain GP."
+            },
+            {
+              "seq": 4,
+              "text": "Third, mind the degenerate case. When r equals one, the AGP is really just an AP, so sum it with the AP formula and never divide by one minus r."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, don't swap the roles — be clear which factor is the arithmetic part and which is the geometric part, because mixing up d and r derails the whole calculation."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> Now the pro-tips. Don't memorise the messy finite sum — re-derive it with the multiply-by-r subtraction every time. It is faster and far more reliable under exam pressure."
+            },
+            {
+              "seq": 7,
+              "text": "For the infinite sum, do memorise the compact form: a over one minus r, plus d r over one minus r squared. That one is short enough to trust."
+            },
+            {
+              "seq": 8,
+              "text": "And above all, train the recognition: an AGP is anything shaped like something linear in n, multiplied by r to the n minus one. Spot that shape and you know instantly which method to swing."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो AGP traps और उन्हें हराने वाले fast moves इकट्ठा करें।"
+            },
+            {
+              "seq": 2,
+              "text": "dominant error है गलत tool की तरफ़ पहुँचना — AP sum formula अकेले, या GP formula अकेले, या polynomial-sum method try करना। हर एक AGP का सिर्फ़ आधा हिस्सा handle करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, convergence का सम्मान करो: sum-to-infinity formula सिर्फ़ तब लिखो जब confirm कर लो कि r की size one से नीचे है — plain GP जैसा ही discipline।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, degenerate case का ध्यान रखो। जब r equals one हो, तो AGP असल में बस एक AP है, तो इसे AP formula से sum करो और कभी one minus r से divide मत करो।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, roles मत बदलो — साफ़ रहो कि कौन सा factor arithmetic part है और कौन सा geometric, क्योंकि d और r को मिला देना पूरे calculation को पटरी से उतार देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> अब pro-tips। messy finite sum मत memorise करो — इसे हर बार multiply-by-r subtraction से re-derive करो। यह fast है और exam pressure में कहीं ज़्यादा reliable।"
+            },
+            {
+              "seq": 7,
+              "text": "infinite sum के लिए, compact form ज़रूर memorise करो: a over one minus r, plus d r over one minus r squared। वो इतनी छोटी है कि भरोसा किया जा सके।"
+            },
+            {
+              "seq": 8,
+              "text": "और सबसे ऊपर, recognition train करो: एक AGP कुछ भी है जो n में linear किसी चीज़ जैसा दिखे, r to the n minus one से गुणा। उस shape को spot करो और तुम्हें तुरंत पता है कौन सा method चलाना है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Special Series - Concept",
+      "title": "Break a hard sum into sums you already know",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The whole subtopic in one move: reduce to standard sums"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Write $t_n$ as a combination of $n^3, n^2, n, 1$, then use linearity."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "caption": "One telescoping identity generates the whole family of sums",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 200\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"20\" y=\"35\" font-size=\"13\" fill=\"#1e293b\">1³ − 0³ = 3(1)² − 3(1) + 1</text>\n  <text x=\"20\" y=\"62\" font-size=\"13\" fill=\"#1e293b\">2³ − 1³ = 3(2)² − 3(2) + 1</text>\n  <text x=\"20\" y=\"89\" font-size=\"13\" fill=\"#1e293b\">3³ − 2³ = 3(3)² − 3(3) + 1</text>\n  <text x=\"20\" y=\"112\" font-size=\"13\" fill=\"#64748b\">⋮</text>\n  <text x=\"20\" y=\"135\" font-size=\"13\" fill=\"#1e293b\">n³ − (n−1)³ = 3n² − 3n + 1</text>\n  <line x1=\"255\" y1=\"25\" x2=\"255\" y2=\"145\" stroke=\"#b91c1c\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n  <text x=\"300\" y=\"70\" font-size=\"13\" fill=\"#b91c1c\">left side telescopes</text>\n  <text x=\"300\" y=\"90\" font-size=\"15\" fill=\"#b91c1c\">to just n³</text>\n  <text x=\"300\" y=\"120\" font-size=\"13\" fill=\"#0f766e\">solve for Σn²</text>\n  <text x=\"235\" y=\"180\" text-anchor=\"middle\" font-size=\"12\" fill=\"#94a3b8\">one identity, a whole family of sum formulas</text>\n</svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The standard sums come from telescoping $k^3 - (k-1)^3 = 3k^2 - 3k + 1$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "History: Aryabhata gave $\\sum n^2, \\sum n^3$ around 499 CE — 1000+ years early."
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "caption": "The sum of cubes is the square of the sum",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 180\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"40\" y=\"70\" width=\"20\" height=\"20\" fill=\"#c7d2fe\" stroke=\"#4f46e5\"/>\n  <text x=\"50\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" fill=\"#3730a3\">1³</text>\n  <rect x=\"90\" y=\"50\" width=\"40\" height=\"40\" fill=\"#a5b4fc\" stroke=\"#4f46e5\"/>\n  <text x=\"110\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" fill=\"#3730a3\">2³</text>\n  <rect x=\"160\" y=\"30\" width=\"60\" height=\"60\" fill=\"#818cf8\" stroke=\"#4f46e5\"/>\n  <text x=\"190\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" fill=\"#3730a3\">3³</text>\n  <text x=\"250\" y=\"65\" font-size=\"15\" fill=\"#1e293b\">1 + 8 + 27 = 36</text>\n  <text x=\"250\" y=\"92\" font-size=\"15\" fill=\"#b91c1c\">= 6² = (1 + 2 + 3)²</text>\n  <text x=\"250\" y=\"130\" font-size=\"14\" fill=\"#0f766e\">Σn³ = (Σn)²</text>\n</svg>"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\sum_{r=1}^{n} r^3 = \\left(\\sum_{r=1}^{n} r\\right)^2"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Whole game: find $t_n$ → express in powers of $n$ → apply standard sums."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This unit is the computational engine of the chapter, and it rests on one move: break a complicated sum into simple sums you already know."
+            },
+            {
+              "seq": 2,
+              "text": "If you can write the general term as a combination of n cubed, n squared, n, and one, then by the linearity of the summation, the whole series is just the matching combination of the four standard sums."
+            },
+            {
+              "seq": 3,
+              "text": "The standard sums themselves come from a beautiful telescoping trick, shown on the board."
+            },
+            {
+              "seq": 4,
+              "text": "To find the sum of n squared, use the identity k cubed minus k minus one cubed equals three k squared minus three k plus one. Add it up for k from one to n and the left side collapses to just n cubed, leaving an equation you solve for the sum of squares."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> And a point of real pride: the formulas for the sum of squares and the sum of cubes were first given by Aryabhata around four ninety-nine of the common era — over a thousand years before they appeared in European texts. When your students sum squares, they use an Indian result fifteen centuries old."
+            },
+            {
+              "seq": 6,
+              "text": "Here is a second intuition worth installing, also on the board: the sum of the first n cubes equals the square of the sum of the first n naturals."
+            },
+            {
+              "seq": 7,
+              "text": "So one plus eight plus twenty-seven is thirty-six, which is six squared, which is one plus two plus three, all squared. A startling, memorable coincidence."
+            },
+            {
+              "seq": 8,
+              "text": "The whole game is three steps: find the general term, express it in powers of n, and apply the standard sums."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह unit chapter का computational engine है, और यह एक move पर टिका है: एक complicated sum को simple sums में तोड़ो जिन्हें तुम पहले से जानते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "अगर तुम general term को n cubed, n squared, n, और one के combination के रूप में लिख सको, तो summation की linearity से, पूरी series बस उन चार standard sums का matching combination है।"
+            },
+            {
+              "seq": 3,
+              "text": "standard sums खुद एक खूबसूरत telescoping trick से आते हैं, जो board पर दिखाया गया है।"
+            },
+            {
+              "seq": 4,
+              "text": "n squared का sum निकालने के लिए, identity use करो k cubed minus k minus one cubed equals three k squared minus three k plus one। इसे k one से n तक add करो और left side बस n cubed में collapse हो जाता है, एक equation छोड़कर जिसे तुम sum of squares के लिए solve करते हो।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> और असली गर्व की बात: sum of squares और sum of cubes के formulas सबसे पहले Aryabhata ने लगभग common era के four ninety-nine में दिए — यूरोपीय texts में आने से हज़ार साल पहले। जब तुम्हारे students squares sum करते हैं, वे पंद्रह सदी पुराना Indian result use करते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "यह रहा एक दूसरा intuition बिठाने लायक, board पर भी: पहले n cubes का sum, पहले n naturals के sum के square के बराबर है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो one plus eight plus twenty-seven है thirty-six, जो six squared है, जो one plus two plus three, all squared है। एक चौंकाने वाला, याद रहने वाला coincidence।"
+            },
+            {
+              "seq": 8,
+              "text": "पूरा खेल तीन steps है: general term निकालो, इसे n की powers में express करो, और standard sums apply करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Special Series - Derivations",
+      "title": "The telescoping origin and the method of differences",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where the standard sums come from, and how to find $t_n$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "k^3 - (k-1)^3 = 3k^2 - 3k + 1"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Sum for $k = 1..n$: the left telescopes to $n^3$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "n^3 = 3\\sum k^2 - 3\\sum k + n \\;\\Rightarrow\\; \\sum k^2 = \\frac{n(n+1)(2n+1)}{6}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "The same idea with $(k+1)^4 - k^4$ delivers $\\sum n^3$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\sum k^3 = \\left[\\frac{n(n+1)}{2}\\right]^2"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Method of differences: if first differences form an AP, $t_n$ is quadratic."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "3, 7, 13, 21 → differences 4, 6, 8, 10 (AP) → $t_n = n^2 + n + 1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's see exactly where the standard sums come from, and then a technique for recovering an unknown general term."
+            },
+            {
+              "seq": 2,
+              "text": "The engine is the identity k cubed minus k minus one cubed equals three k squared minus three k plus one — a simple algebraic expansion."
+            },
+            {
+              "seq": 3,
+              "text": "Now sum both sides for k from one to n. On the left, everything cancels telescopically except the very last k cubed, so the left side is simply n cubed."
+            },
+            {
+              "seq": 4,
+              "text": "That gives n cubed equals three times the sum of k squared, minus three times the sum of k, plus n. Substituting the known sum of k and solving hands you the sum of squares: n times n plus one times two n plus one, over six."
+            },
+            {
+              "seq": 5,
+              "text": "The very same machinery, using k plus one to the fourth minus k to the fourth, delivers the sum of cubes."
+            },
+            {
+              "seq": 6,
+              "text": "And that sum of cubes is the tidy square: n times n plus one over two, all squared — one identity generating the whole family."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> The second tool is the method of differences, for when you are handed terms but not a formula. If the first differences of the terms form an AP, then the general term is one degree higher — a quadratic."
+            },
+            {
+              "seq": 8,
+              "text": "For example, three, seven, thirteen, twenty-one have first differences four, six, eight, ten, an AP, so the general term is quadratic — solving gives n squared plus n plus one, after which the standard sums apply."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो देखें कि standard sums बिलकुल कहाँ से आते हैं, और फिर एक unknown general term को recover करने की technique।"
+            },
+            {
+              "seq": 2,
+              "text": "engine है identity k cubed minus k minus one cubed equals three k squared minus three k plus one — एक simple algebraic expansion।"
+            },
+            {
+              "seq": 3,
+              "text": "अब दोनों sides को k one से n तक sum करो। left पर, सब कुछ telescopically cancel हो जाता है सिवाय आख़िरी k cubed के, तो left side बस n cubed है।"
+            },
+            {
+              "seq": 4,
+              "text": "इससे मिलता है n cubed equals three times sum of k squared, minus three times sum of k, plus n। known sum of k substitute करके solve करने पर sum of squares मिलता है: n times n plus one times two n plus one, over six।"
+            },
+            {
+              "seq": 5,
+              "text": "वही machinery, k plus one to the fourth minus k to the fourth use करके, sum of cubes देती है।"
+            },
+            {
+              "seq": 6,
+              "text": "और वो sum of cubes tidy square है: n times n plus one over two, all squared — एक identity पूरे family को generate करती है।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> दूसरा tool है method of differences, तब के लिए जब तुम्हें terms दिए जाएँ पर formula नहीं। अगर terms के first differences एक AP बनाएँ, तो general term एक degree ऊँचा है — एक quadratic।"
+            },
+            {
+              "seq": 8,
+              "text": "उदाहरण के लिए, three, seven, thirteen, twenty-one के first differences हैं four, six, eight, ten, एक AP, तो general term quadratic है — solve करने पर n squared plus n plus one मिलता है, जिसके बाद standard sums apply होते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "formulas",
+      "subtopic": "Special Series - Formulas",
+      "title": "The standard sums and the master technique",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The four building-block sums, plus the master method"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\sum_{r=1}^{n} r = \\frac{n(n+1)}{2}, \\qquad \\sum_{r=1}^{n} 1 = n"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\sum_{r=1}^{n} r^2 = \\frac{n(n+1)(2n+1)}{6}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\sum_{r=1}^{n} r^3 = \\left[\\frac{n(n+1)}{2}\\right]^2"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\sum_{r=1}^{n} r^4 = \\frac{n(n+1)(2n+1)(3n^2 + 3n - 1)}{30}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "t_n = an^3 + bn^2 + cn + d \\;\\Rightarrow\\; S_n = a\\!\\sum n^3 + b\\!\\sum n^2 + c\\!\\sum n + dn"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Products like $r(r+1)$ must be EXPANDED to a polynomial before summing."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Partial range: $\\sum_m^n = \\sum_1^n - \\sum_1^{m-1}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the four building-block sums and the master technique that ties them together."
+            },
+            {
+              "seq": 2,
+              "text": "The two simplest: the sum of r is n times n plus one over two, and the sum of one is just n."
+            },
+            {
+              "seq": 3,
+              "text": "The sum of squares is n times n plus one times two n plus one, over six — commit this to memory carefully."
+            },
+            {
+              "seq": 4,
+              "text": "The sum of cubes is n times n plus one over two, all squared — the same numerator as the sum of r, but squared."
+            },
+            {
+              "seq": 5,
+              "text": "The sum of fourth powers is rarely needed and only for Advanced: n times n plus one times two n plus one times three n squared plus three n minus one, over thirty."
+            },
+            {
+              "seq": 6,
+              "text": "Now the master technique. If the general term is a cubic polynomial in n — a n cubed plus b n squared plus c n plus d — then the sum is the matching combination of the standard sums, term by term."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> Here is the condition students forget: the technique only works when the general term is a polynomial. So a product like r times r plus one must be expanded into a polynomial first — never sum it as a product."
+            },
+            {
+              "seq": 8,
+              "text": "And for a sum that does not start at one, use the partial-range trick: the sum from m to n equals the sum up to n minus the sum up to m minus one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो चार building-block sums और उन्हें जोड़ने वाली master technique consolidate करें।"
+            },
+            {
+              "seq": 2,
+              "text": "दो सबसे simple: sum of r है n times n plus one over two, और sum of one बस n है।"
+            },
+            {
+              "seq": 3,
+              "text": "sum of squares है n times n plus one times two n plus one, over six — इसे ध्यान से memory में डालो।"
+            },
+            {
+              "seq": 4,
+              "text": "sum of cubes है n times n plus one over two, all squared — sum of r जैसा ही numerator, पर squared।"
+            },
+            {
+              "seq": 5,
+              "text": "sum of fourth powers शायद ही कभी चाहिए और सिर्फ़ Advanced के लिए: n times n plus one times two n plus one times three n squared plus three n minus one, over thirty।"
+            },
+            {
+              "seq": 6,
+              "text": "अब master technique। अगर general term n में एक cubic polynomial हो — a n cubed plus b n squared plus c n plus d — तो sum standard sums का matching combination है, term by term।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> यह रही वो condition जो students भूल जाते हैं: technique सिर्फ़ तब काम करती है जब general term एक polynomial हो। तो r times r plus one जैसे product को पहले polynomial में expand करना होगा — इसे कभी product की तरह sum मत करो।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक ऐसे sum के लिए जो one से शुरू नहीं होता, partial-range trick use करो: m से n तक sum equals sum up to n minus sum up to m minus one।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Special Series Worked Examples",
+      "title": "Summing 2·4 + 4·6 + 6·8 + …",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find the sum to n terms of 2·4 + 4·6 + 6·8 + …"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "t_r = (2r)(2r+2) = 4r^2 + 4r"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "S_n = 4\\sum r^2 + 4\\sum r"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "= 4\\cdot\\frac{n(n+1)(2n+1)}{6} + 4\\cdot\\frac{n(n+1)}{2}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Factor out $2n(n+1)$ and combine the bracket."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_n = \\frac{4n(n+1)(n+2)}{3}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Expand the product to a polynomial FIRST — then the standard sums apply."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's start the special-series examples with a product series. We want the sum to n terms of two times four, plus four times six, plus six times eight, and so on."
+            },
+            {
+              "seq": 2,
+              "text": "First find the general term. The r-th term is two r times two r plus two, which expands to four r squared plus four r — a clean polynomial."
+            },
+            {
+              "seq": 3,
+              "text": "Now apply linearity: the sum is four times the sum of r squared, plus four times the sum of r."
+            },
+            {
+              "seq": 4,
+              "text": "Substitute the standard sums: four times n times n plus one times two n plus one over six, plus four times n times n plus one over two."
+            },
+            {
+              "seq": 5,
+              "text": "Factor out the common two n times n plus one and combine what's left inside the bracket."
+            },
+            {
+              "seq": 6,
+              "text": "The whole thing tidies beautifully to four n times n plus one times n plus two, over three."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> The one habit to internalise: expand the product into a polynomial first. Never try to sum a product like two r times two r plus two directly — the standard sums only apply once it is in powers of n."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो special-series examples एक product series से शुरू करें। हमें two times four, plus four times six, plus six times eight का n terms तक sum चाहिए, और ऐसे ही।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले general term निकालो। r-th term है two r times two r plus two, जो expand होकर four r squared plus four r बनता है — एक clean polynomial।"
+            },
+            {
+              "seq": 3,
+              "text": "अब linearity apply करो: sum है four times sum of r squared, plus four times sum of r।"
+            },
+            {
+              "seq": 4,
+              "text": "standard sums substitute करो: four times n times n plus one times two n plus one over six, plus four times n times n plus one over two।"
+            },
+            {
+              "seq": 5,
+              "text": "common two n times n plus one बाहर निकालो और bracket के अंदर बचे हुए को combine करो।"
+            },
+            {
+              "seq": 6,
+              "text": "पूरी चीज़ खूबसूरती से four n times n plus one times n plus two, over three में सिमट जाती है।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> internalise करने लायक एक habit: product को पहले polynomial में expand करो। two r times two r plus two जैसे product को कभी सीधे sum मत करो — standard sums तभी apply होते हैं जब यह n की powers में हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Special Series Worked Examples",
+      "title": "Method of differences on 3 + 7 + 13 + 21 + …",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find $S_n$ for 3 + 7 + 13 + 21 + 31 + …"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "First differences 4, 6, 8, 10 form an AP ⇒ $t_n$ is quadratic."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "t_n = n^2 + n + 1 \\quad (\\text{check: } t_4 = 16 + 4 + 1 = 21\\;\\checkmark)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "S_n = \\sum n^2 + \\sum n + \\sum 1"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "= \\frac{n(n+1)(2n+1)}{6} + \\frac{n(n+1)}{2} + n"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_n = \\frac{n(n^2 + 3n + 5)}{3}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Verify: $S_3 = 3+7+13 = 23 = \\tfrac{3(9+9+5)}{3}\\;\\checkmark$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example needs the method of differences, because we're given the terms with no formula in sight. The series is three, seven, thirteen, twenty-one, thirty-one."
+            },
+            {
+              "seq": 2,
+              "text": "Take the first differences: four, six, eight, ten. Those form an arithmetic progression, which is the signal that the general term is quadratic in n."
+            },
+            {
+              "seq": 3,
+              "text": "Fitting a quadratic to the first few terms gives the general term n squared plus n plus one. Check the fourth term: sixteen plus four plus one is twenty-one, which matches."
+            },
+            {
+              "seq": 4,
+              "text": "Now sum term by term using linearity: the sum of n squared, plus the sum of n, plus the sum of one."
+            },
+            {
+              "seq": 5,
+              "text": "Substitute the standard formulas: n times n plus one times two n plus one over six, plus n times n plus one over two, plus n."
+            },
+            {
+              "seq": 6,
+              "text": "Combining over a common factor, everything collapses to n times n squared plus three n plus five, over three."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> And always verify with a small case. The sum of the first three terms should be three plus seven plus thirteen, which is twenty-three — and the formula gives three times nine plus nine plus five over three, also twenty-three. It checks."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस example को method of differences चाहिए, क्योंकि हमें terms दिए गए हैं बिना कोई formula दिखे। series है three, seven, thirteen, twenty-one, thirty-one।"
+            },
+            {
+              "seq": 2,
+              "text": "first differences लो: four, six, eight, ten। ये एक arithmetic progression बनाते हैं, जो संकेत है कि general term n में quadratic है।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले कुछ terms पर एक quadratic fit करने से general term n squared plus n plus one मिलता है। fourth term check करो: sixteen plus four plus one है twenty-one, जो match करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब linearity use करके term by term sum करो: sum of n squared, plus sum of n, plus sum of one।"
+            },
+            {
+              "seq": 5,
+              "text": "standard formulas substitute करो: n times n plus one times two n plus one over six, plus n times n plus one over two, plus n।"
+            },
+            {
+              "seq": 6,
+              "text": "common factor पर combine करने पर, सब कुछ n times n squared plus three n plus five, over three में सिमट जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> और हमेशा एक small case से verify करो। पहले तीन terms का sum three plus seven plus thirteen होना चाहिए, यानी twenty-three — और formula देता है three times nine plus nine plus five over three, भी twenty-three। यह check हो गया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Special Series Worked Examples",
+      "title": "A nested sum of triangular numbers",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Evaluate Σ (1 + 2 + 3 + … + k) for k = 1 to 20"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The inner sum is the triangular number $\\tfrac{k(k+1)}{2}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\sum_{k=1}^{20} \\frac{k(k+1)}{2} = \\frac12\\left(\\sum_{k=1}^{20} k^2 + \\sum_{k=1}^{20} k\\right)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\sum_{k=1}^{20} k^2 = \\frac{20\\cdot 21\\cdot 41}{6} = 2870"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\sum_{k=1}^{20} k = \\frac{20\\cdot 21}{2} = 210"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\frac12(2870 + 210) = 1540"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "JEE Main 2020: resolve the inner sum first, then apply standard sums."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a JEE Main problem that hides a sum inside a sum. We must evaluate the sum, for k from one to twenty, of the quantity one plus two plus three up to k."
+            },
+            {
+              "seq": 2,
+              "text": "The inner sum is a familiar object — the triangular number, k times k plus one over two. So substitute that in place of the inner expression."
+            },
+            {
+              "seq": 3,
+              "text": "The outer sum then becomes one half times the sum of k squared plus the sum of k, both taken from one to twenty."
+            },
+            {
+              "seq": 4,
+              "text": "Compute the sum of squares up to twenty: twenty times twenty-one times forty-one over six, which is two thousand eight hundred seventy."
+            },
+            {
+              "seq": 5,
+              "text": "Compute the sum of the naturals up to twenty: twenty times twenty-one over two, which is two hundred ten."
+            },
+            {
+              "seq": 6,
+              "text": "Adding those and halving: one half of two thousand eight hundred seventy plus two hundred ten is one thousand five hundred forty."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> The lesson from this JEE Main favourite is to resolve the inner sum first — turn it into a clean polynomial in k — and only then bring in the standard sums. Nested sums are just two ordinary sums, one inside the other."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह एक JEE Main problem है जो एक sum के अंदर एक sum छुपाता है। हमें k one से twenty तक, quantity one plus two plus three up to k का sum evaluate करना है।"
+            },
+            {
+              "seq": 2,
+              "text": "inner sum एक familiar object है — triangular number, k times k plus one over two। तो इसे inner expression की जगह substitute करो।"
+            },
+            {
+              "seq": 3,
+              "text": "outer sum तब बन जाता है one half times sum of k squared plus sum of k, दोनों one से twenty तक।"
+            },
+            {
+              "seq": 4,
+              "text": "twenty तक sum of squares compute करो: twenty times twenty-one times forty-one over six, यानी two thousand eight hundred seventy।"
+            },
+            {
+              "seq": 5,
+              "text": "twenty तक naturals का sum compute करो: twenty times twenty-one over two, यानी two hundred ten।"
+            },
+            {
+              "seq": 6,
+              "text": "इन्हें add करके half करो: one half of two thousand eight hundred seventy plus two hundred ten है one thousand five hundred forty।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> इस JEE Main favourite का सबक है inner sum को पहले resolve करना — इसे k में एक clean polynomial में बदलो — और तभी standard sums लाओ। nested sums बस दो ordinary sums हैं, एक दूसरे के अंदर।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Special Series Worked Examples",
+      "title": "The repunit series 5 + 55 + 555 + …",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find $S_n$ for 5 + 55 + 555 + …"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Each term is 5 times a repunit: $t_r = 5\\cdot\\frac{10^r - 1}{9}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "S_n = \\frac{5}{9}\\sum_{r=1}^{n}(10^r - 1)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "= \\frac{5}{9}\\left(\\frac{10(10^n - 1)}{9} - n\\right)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "S_n = \\frac{5}{81}\\left(10^{\\,n+1} - 9n - 10\\right)"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Peel off the GP piece $10^r$ and the constant $-1$ separately."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "A GP-based special series — geometric part summed, constant part is $-n$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example handles a series whose terms are made of repeated digits. We want the sum of five plus fifty-five plus five hundred fifty-five, and so on."
+            },
+            {
+              "seq": 2,
+              "text": "The key trick is rewriting each term. A repunit — a string of ones — equals ten to the r minus one, over nine. So the r-th term is five times ten to the r minus one, over nine."
+            },
+            {
+              "seq": 3,
+              "text": "Pull the constant five ninths outside, and the sum becomes five ninths times the sum of ten to the r minus one, for r from one to n."
+            },
+            {
+              "seq": 4,
+              "text": "Split that inside: the ten-to-the-r piece is a geometric progression summing to ten times ten to the n minus one over nine, and the minus one piece contributes a simple minus n."
+            },
+            {
+              "seq": 5,
+              "text": "Putting it together and simplifying, the sum is five over eighty-one times the quantity ten to the n plus one, minus nine n, minus ten."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> The strategy generalises: when a series is built from repeated digits, peel off the geometric piece ten to the r and the constant separately, sum each on its own, and recombine."
+            },
+            {
+              "seq": 7,
+              "text": "So this is a geometric-based special series — the geometric part is summed with the GP formula, and the constant part simply contributes minus n."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example एक ऐसी series handle करता है जिसके terms repeated digits से बने हैं। हमें five plus fifty-five plus five hundred fifty-five का sum चाहिए, और ऐसे ही।"
+            },
+            {
+              "seq": 2,
+              "text": "key trick है हर term को फिर से लिखना। एक repunit — ones की एक string — equals ten to the r minus one, over nine। तो r-th term है five times ten to the r minus one, over nine।"
+            },
+            {
+              "seq": 3,
+              "text": "constant five ninths बाहर खींचो, और sum बन जाता है five ninths times sum of ten to the r minus one, r one से n तक।"
+            },
+            {
+              "seq": 4,
+              "text": "उसके अंदर split करो: ten-to-the-r piece एक geometric progression है जो sum होकर ten times ten to the n minus one over nine बनता है, और minus one piece एक simple minus n contribute करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "इसे जोड़कर और simplify करके, sum है five over eighty-one times the quantity ten to the n plus one, minus nine n, minus ten।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> strategy generalise होती है: जब कोई series repeated digits से बनी हो, geometric piece ten to the r और constant को अलग-अलग peel off करो, हर एक को अलग sum करो, और recombine करो।"
+            },
+            {
+              "seq": 7,
+              "text": "तो यह एक geometric-based special series है — geometric part GP formula से sum होता है, और constant part बस minus n contribute करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "Special Series Worked Examples",
+      "title": "Sum of squares of an AP's terms",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "If $S_n = cn^2$ for an AP, find the sum of the squares of its terms"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "$S_n = cn^2$ is $An^2 + Bn$ with $B = 0$, so it's an AP."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "a_n = S_n - S_{n-1} = c(2n - 1)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\sum_{n=1}^{N} a_n^2 = c^2\\sum (2n-1)^2 = c^2\\sum(4n^2 - 4n + 1)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "= c^2\\left[4\\cdot\\frac{N(N+1)(2N+1)}{6} - 4\\cdot\\frac{N(N+1)}{2} + N\\right]"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\sum a_n^2 = \\frac{N(4N^2 - 1)c^2}{3}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Recover $a_n$ from $S_n$ via $a_n = S_n - S_{n-1}$, then square and sum."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This JEE Advanced problem links the sum-characterization back to special series. We're told the sum of the first n terms of an AP is c times n squared, and asked for the sum of the squares of those terms."
+            },
+            {
+              "seq": 2,
+              "text": "First, recognise the structure. c n squared is of the form A n squared plus B n with B zero, so this genuinely is an AP."
+            },
+            {
+              "seq": 3,
+              "text": "Recover the general term using the sum difference: a sub n equals S sub n minus S sub n minus one, which is c times n squared minus n minus one squared, giving c times two n minus one."
+            },
+            {
+              "seq": 4,
+              "text": "Now sum the squares: c squared times the sum of two n minus one squared, which expands to c squared times the sum of four n squared minus four n plus one."
+            },
+            {
+              "seq": 5,
+              "text": "Substitute the standard sums: four times the sum of squares, minus four times the sum of n, plus the sum of one, all scaled by c squared."
+            },
+            {
+              "seq": 6,
+              "text": "Simplifying the bracket, everything collapses to N times four N squared minus one, times c squared, over three."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> The reusable move here is the recovery step — whenever you're given the sum but need the terms, take the difference of consecutive sums, and then the special-series machinery finishes the job."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह JEE Advanced problem sum-characterization को वापस special series से जोड़ता है। हमें बताया गया है कि एक AP के पहले n terms का sum c times n squared है, और उन terms के squares का sum पूछा गया है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले, structure पहचानो। c n squared, A n squared plus B n के form का है जिसमें B zero है, तो यह सच में एक AP है।"
+            },
+            {
+              "seq": 3,
+              "text": "sum difference use करके general term recover करो: a sub n equals S sub n minus S sub n minus one, यानी c times n squared minus n minus one squared, देता है c times two n minus one।"
+            },
+            {
+              "seq": 4,
+              "text": "अब squares sum करो: c squared times sum of two n minus one squared, जो expand होकर c squared times sum of four n squared minus four n plus one बनता है।"
+            },
+            {
+              "seq": 5,
+              "text": "standard sums substitute करो: four times sum of squares, minus four times sum of n, plus sum of one, सब c squared से scaled।"
+            },
+            {
+              "seq": 6,
+              "text": "bracket simplify करने पर, सब कुछ N times four N squared minus one, times c squared, over three में सिमट जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> यहाँ reusable move recovery step है — जब भी तुम्हें sum दिया जाए पर terms चाहिए, consecutive sums का difference लो, और फिर special-series machinery काम पूरा कर देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "worked_examples",
+      "subtopic": "Special Series Worked Examples",
+      "title": "Cubes over odd sums collapse to a quadratic",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find $S_n$ for (1³)/1 + (1³+2³)/(1+3) + (1³+2³+3³)/(1+3+5) + …"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Numerator is $\\sum r^3 = \\left[\\tfrac{r(r+1)}{2}\\right]^2$; denominator is $1+3+\\cdots+(2r-1) = r^2$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "t_r = \\frac{[r(r+1)/2]^2}{r^2} = \\frac{(r+1)^2}{4}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "S_n = \\frac14\\sum_{r=1}^{n}(r+1)^2 = \\frac14\\sum(r^2 + 2r + 1)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "= \\frac14\\left[\\frac{n(n+1)(2n+1)}{6} + n(n+1) + n\\right]"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "S_n = \\frac{n(2n^2 + 9n + 13)}{24}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Both standard sums collapse the term to a clean quadratic before summing."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We finish with an Advanced series where two standard sums appear inside a single term. The r-th term is the sum of cubes up to r, divided by the sum of odd numbers up to the r-th odd."
+            },
+            {
+              "seq": 2,
+              "text": "Simplify the two pieces. The numerator is the sum of cubes, which is r times r plus one over two, all squared. The denominator, one plus three up to two r minus one, is exactly r squared."
+            },
+            {
+              "seq": 3,
+              "text": "Dividing, the r squared cancels beautifully and the whole term collapses to r plus one, squared, over four — a clean quadratic."
+            },
+            {
+              "seq": 4,
+              "text": "So the sum is one quarter times the sum of r plus one squared, which we expand as one quarter times the sum of r squared plus two r plus one."
+            },
+            {
+              "seq": 5,
+              "text": "Substitute the standard sums: n times n plus one times two n plus one over six, plus n times n plus one, plus n, all scaled by one quarter."
+            },
+            {
+              "seq": 6,
+              "text": "Simplifying, the result is n times two n squared plus nine n plus thirteen, over twenty-four."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> This is the signature special-series move — two known sums, one in the numerator and one in the denominator, collapse the ugly-looking term into a tidy quadratic, and from there the standard sums finish everything."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हम एक Advanced series से खत्म करते हैं जहाँ एक ही term के अंदर दो standard sums आते हैं। r-th term है r तक cubes का sum, divided by r-th odd तक odd numbers का sum।"
+            },
+            {
+              "seq": 2,
+              "text": "दोनों pieces simplify करो। numerator है sum of cubes, यानी r times r plus one over two, all squared। denominator, one plus three से two r minus one तक, exactly r squared है।"
+            },
+            {
+              "seq": 3,
+              "text": "divide करने पर, r squared खूबसूरती से cancel हो जाता है और पूरा term r plus one, squared, over four में सिमट जाता है — एक clean quadratic।"
+            },
+            {
+              "seq": 4,
+              "text": "तो sum है one quarter times sum of r plus one squared, जिसे हम one quarter times sum of r squared plus two r plus one के रूप में expand करते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "standard sums substitute करो: n times n plus one times two n plus one over six, plus n times n plus one, plus n, सब one quarter से scaled।"
+            },
+            {
+              "seq": 6,
+              "text": "simplify करने पर, result है n times two n squared plus nine n plus thirteen, over twenty-four।"
+            },
+            {
+              "seq": 7,
+              "text": "<excited> यह signature special-series move है — दो known sums, एक numerator में और एक denominator में, ugly दिखने वाले term को एक tidy quadratic में collapse कर देते हैं, और वहाँ से standard sums सब कुछ खत्म कर देते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "tips",
+      "subtopic": "Special Series",
+      "title": "Special Series: the traps and the pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Special series — the traps, and the fast moves"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Formula confusion: swapping $\\sum n^2$ (the $/6$ form) and $\\sum n^3$ (the squared form)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Term recognition: find $t_n$ as a polynomial BEFORE summing (expand products)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Index range: use $\\sum_1^n - \\sum_1^{m-1}$ when a sum doesn't start at 1."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Method of differences: don't mis-degree $t_n$ by checking only first differences."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Pro-tip: find $t_n$ → expand to powers of $n$ → apply standard sums."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Shortcut: $\\sum n^3 = (\\sum n)^2$ — recognise cubes on sight."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Forgot $\\sum n^2$? Re-derive in 4 lines from $k^3 - (k-1)^3$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's gather the special-series traps and the moves that beat them."
+            },
+            {
+              "seq": 2,
+              "text": "The dominant error is formula confusion — swapping the sum of squares, with its over-six form, and the sum of cubes, which is a squared expression. Keep the three standard sums cleanly separated in memory."
+            },
+            {
+              "seq": 3,
+              "text": "Second is term recognition: you must find the general term as a polynomial before summing. A product like r times r plus one has to be expanded first — never summed as a product."
+            },
+            {
+              "seq": 4,
+              "text": "Third, watch the index range. When a sum doesn't start at one, use the partial-range correction: the sum up to n minus the sum up to m minus one."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, in the method of differences, don't mis-degree the term. Checking only the first differences when you should check the second is a common way to treat a quadratic as if it were linear."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> The pro-tip is a single workflow that solves most problems: find the general term, expand it into powers of n, then apply the standard sums. Drill that sequence until it's automatic."
+            },
+            {
+              "seq": 7,
+              "text": "Keep the fastest shortcut ready: the sum of cubes equals the square of the sum. Recognise cubes on sight and you skip a whole computation."
+            },
+            {
+              "seq": 8,
+              "text": "And if you ever blank on the sum of squares, don't panic — re-derive it in four lines from the identity k cubed minus k minus one cubed. The telescoping origin is your safety net."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो special-series traps और उन्हें हराने वाले moves इकट्ठा करें।"
+            },
+            {
+              "seq": 2,
+              "text": "dominant error है formula confusion — sum of squares, अपने over-six form के साथ, और sum of cubes, जो एक squared expression है, को आपस में swap करना। तीनों standard sums को memory में साफ़ अलग रखो।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा है term recognition: तुम्हें sum करने से पहले general term को एक polynomial के रूप में निकालना होगा। r times r plus one जैसे product को पहले expand करना होगा — कभी product की तरह sum मत करो।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, index range देखो। जब sum one से शुरू न हो, partial-range correction use करो: sum up to n minus sum up to m minus one।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, method of differences में, term को mis-degree मत करो। जब second differences check करने चाहिए तब सिर्फ़ first differences check करना एक common तरीका है quadratic को linear मान लेने का।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> pro-tip एक single workflow है जो ज़्यादातर problems solve करता है: general term निकालो, इसे n की powers में expand करो, फिर standard sums apply करो। इस sequence को तब तक drill करो जब तक यह automatic न हो जाए।"
+            },
+            {
+              "seq": 7,
+              "text": "सबसे fast shortcut तैयार रखो: sum of cubes equals square of the sum। cubes को देखते ही पहचानो और तुम एक पूरा computation छोड़ देते हो।"
+            },
+            {
+              "seq": 8,
+              "text": "और अगर तुम कभी sum of squares पर blank हो जाओ, तो घबराओ मत — इसे identity k cubed minus k minus one cubed से चार line में re-derive करो। telescoping origin तुम्हारा safety net है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2583 @@
+{
+  "chapter": "Three Dimensional Geometry",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 11,
+  "part": 1,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Foundations of 3D Coordinate Geometry",
+      "title": "Locating a point in space: axes, octants, projections",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where does a point live in 3D?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Three mutually perpendicular axes x, y, z meet at the origin O; a point is the triple (x, y, z)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Axes in pairs give three planes: xy-plane $(z=0)$, yz-plane $(x=0)$, zx-plane $(y=0)$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "text": "Right-handed system: curl fingers x toward y, thumb points +z.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "The three planes cut space into eight octants; the first has all coordinates positive."
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 300\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#333\"/></marker></defs>\n<line x1=\"70\" y1=\"230\" x2=\"360\" y2=\"230\" stroke=\"#333\" stroke-width=\"1.6\" marker-end=\"url(#ah)\"/>\n<line x1=\"70\" y1=\"230\" x2=\"70\" y2=\"40\" stroke=\"#333\" stroke-width=\"1.6\" marker-end=\"url(#ah)\"/>\n<line x1=\"70\" y1=\"230\" x2=\"180\" y2=\"290\" stroke=\"#333\" stroke-width=\"1.6\" marker-end=\"url(#ah)\"/>\n<text x=\"365\" y=\"234\" font-size=\"14\" font-family=\"system-ui, sans-serif\">x</text>\n<text x=\"60\" y=\"36\" font-size=\"14\" font-family=\"system-ui, sans-serif\">z</text>\n<text x=\"184\" y=\"292\" font-size=\"14\" font-family=\"system-ui, sans-serif\">y</text>\n<text x=\"52\" y=\"244\" font-size=\"13\" font-family=\"system-ui, sans-serif\">O</text>\n<circle cx=\"300\" cy=\"95\" r=\"4\" fill=\"#c0392b\"/>\n<text x=\"308\" y=\"92\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">P(x, y, z)</text>\n<line x1=\"70\" y1=\"230\" x2=\"300\" y2=\"95\" stroke=\"#c0392b\" stroke-width=\"1.6\"/>\n<circle cx=\"300\" cy=\"205\" r=\"3.5\" fill=\"#2980b9\"/>\n<text x=\"306\" y=\"222\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#2980b9\">(x, y, 0)</text>\n<line x1=\"300\" y1=\"95\" x2=\"300\" y2=\"205\" stroke=\"#2980b9\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/>\n<line x1=\"70\" y1=\"230\" x2=\"300\" y2=\"205\" stroke=\"#2980b9\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/>\n<text x=\"150\" y=\"255\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#2980b9\">projection on xy-plane</text>\n</svg>",
+          "caption": "A point P and its shadow on the xy-plane"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Projection onto xy-plane is $(x, y, 0)$; onto the x-axis it is $(x, 0, 0)$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Distance from x-axis $=\\sqrt{y^2+z^2}$; distance from xy-plane $=|z|$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Let's start with the most basic question of the whole chapter</curious> — how do we pin down exactly where a point sits in three dimensional space?"
+            },
+            {
+              "seq": 2,
+              "text": "Picture the corner of a room: three edges meet there at right angles. Call them the x, y and z axes, and the corner the origin. Any point is reached by walking x, then y, then z steps."
+            },
+            {
+              "seq": 3,
+              "text": "Taken in pairs, the axes define three flat walls. The xy-plane is where z equals zero, the yz-plane where x equals zero, and the zx-plane where y equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "We always use the right handed system. Curl the fingers of your right hand from the positive x axis toward positive y, and your thumb points along positive z. Every formula assumes this."
+            },
+            {
+              "seq": 5,
+              "text": "These three planes slice all of space into eight compartments called octants — the three dimensional cousins of the four quadrants. The first octant is the friendly one where all three coordinates are positive."
+            },
+            {
+              "seq": 6,
+              "text": "Here is a point P and its shadow. Drop P straight down onto the floor and it lands at the point with the same x and y but height zero — that is its projection onto the xy plane."
+            },
+            {
+              "seq": 7,
+              "text": "Projecting onto a plane flattens one coordinate to zero. Projecting onto an axis keeps only one coordinate — onto the x axis, the point lands at x, zero, zero."
+            },
+            {
+              "seq": 8,
+              "text": "These projections make distances easy. The distance of a point from the x axis is root y squared plus z squared — a two coordinate Pythagoras. But the distance from the xy plane is just the size of z. Read axis as two coordinates, plane as one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>चलिए पूरे chapter के सबसे basic सवाल से शुरू करते हैं</curious> — three dimensional space में किसी point की exact जगह हम कैसे बताएँ?"
+            },
+            {
+              "seq": 2,
+              "text": "एक कमरे का corner सोचिए: वहाँ तीन edges right angle पर मिलती हैं। इन्हें हम x, y और z axis कहते हैं, और उस corner को origin। किसी भी point तक पहुँचने के लिए x, फिर y, फिर z steps चलते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "जोड़ियों में लेने पर ये axes तीन flat walls बनाते हैं। xy-plane वहाँ है जहाँ z zero है, yz-plane जहाँ x zero है, और zx-plane जहाँ y zero है।"
+            },
+            {
+              "seq": 4,
+              "text": "हम हमेशा right handed system use करते हैं। अपने right hand की fingers को positive x axis से positive y की तरफ मोड़िए, thumb positive z की direction में point करेगा। हर formula यही मानता है।"
+            },
+            {
+              "seq": 5,
+              "text": "ये तीन planes पूरे space को आठ compartments में काटते हैं, जिन्हें octants कहते हैं — ये quadrants के three dimensional cousins हैं। पहला octant वो friendly वाला है जहाँ तीनों coordinates positive होते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "यहाँ एक point P है और उसकी shadow। P को सीधे नीचे floor पर गिराइए तो वो उसी x और y पर, पर height zero के साथ land करता है — यही उसका xy plane पर projection है।"
+            },
+            {
+              "seq": 7,
+              "text": "किसी plane पर project करने से एक coordinate zero हो जाता है। किसी axis पर project करने से सिर्फ एक coordinate बचता है — x axis पर point x, zero, zero पर land करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "इन projections से distances आसान हो जाती हैं। किसी point की x axis से distance है root y squared plus z squared — एक two coordinate Pythagoras। पर xy plane से distance सिर्फ z का size है। axis को two coordinate पढ़िए, plane को one।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Foundations of 3D Coordinate Geometry",
+      "title": "The distance formula: Pythagoras stacked twice",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Distance in 3D is Pythagoras, used twice"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "First the floor distance to $(x, y, 0)$ is the 2D hypotenuse $\\sqrt{x^2+y^2}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Then climb the height $z$ and apply Pythagoras again."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "OP=\\sqrt{x^{2}+y^{2}+z^{2}}"
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 300\" xmlns=\"http://www.w3.org/2000/svg\">\n<polygon points=\"90,210 250,210 300,170 140,170\" fill=\"#eef4fb\" stroke=\"#5b7ea6\" stroke-width=\"1.2\"/>\n<line x1=\"90\" y1=\"210\" x2=\"90\" y2=\"90\" stroke=\"#5b7ea6\" stroke-width=\"1.2\"/>\n<line x1=\"250\" y1=\"210\" x2=\"250\" y2=\"90\" stroke=\"#5b7ea6\" stroke-width=\"1.2\"/>\n<line x1=\"300\" y1=\"170\" x2=\"300\" y2=\"50\" stroke=\"#5b7ea6\" stroke-width=\"1.2\"/>\n<line x1=\"140\" y1=\"170\" x2=\"140\" y2=\"50\" stroke=\"#5b7ea6\" stroke-width=\"1.2\"/>\n<polygon points=\"90,90 250,90 300,50 140,50\" fill=\"none\" stroke=\"#5b7ea6\" stroke-width=\"1.2\"/>\n<line x1=\"90\" y1=\"90\" x2=\"140\" y2=\"50\" stroke=\"#5b7ea6\" stroke-width=\"1.2\"/>\n<line x1=\"250\" y1=\"90\" x2=\"300\" y2=\"50\" stroke=\"#5b7ea6\" stroke-width=\"1.2\"/>\n<circle cx=\"90\" cy=\"210\" r=\"4\" fill=\"#c0392b\"/>\n<text x=\"70\" y=\"228\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">P</text>\n<circle cx=\"300\" cy=\"50\" r=\"4\" fill=\"#c0392b\"/>\n<text x=\"306\" y=\"48\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">Q</text>\n<line x1=\"90\" y1=\"210\" x2=\"300\" y2=\"50\" stroke=\"#c0392b\" stroke-width=\"2\"/>\n<line x1=\"90\" y1=\"210\" x2=\"300\" y2=\"170\" stroke=\"#27ae60\" stroke-width=\"1.6\" stroke-dasharray=\"5 3\"/>\n<text x=\"150\" y=\"205\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#27ae60\">base diagonal</text>\n<text x=\"205\" y=\"120\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">space diagonal PQ</text>\n</svg>",
+          "caption": "PQ as the space diagonal of an axis-aligned box"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "PQ=\\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}+(z_{2}-z_{1})^{2}}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Expand double negatives: $2-(-2)=4$, never $0$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Each difference is squared, so the sign vanishes — the labelling of P and Q does not matter."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the single idea that generates the entire distance formula: in three dimensions, distance is just the Pythagoras theorem applied twice in a row."
+            },
+            {
+              "seq": 2,
+              "text": "To find how far a point is from the origin, first walk across the floor to the point x, y, zero. That flat distance is the ordinary two D hypotenuse, root x squared plus y squared."
+            },
+            {
+              "seq": 3,
+              "text": "Now climb straight up by the height z. The floor distance and this vertical climb form a right triangle, so we apply Pythagoras a second time."
+            },
+            {
+              "seq": 4,
+              "text": "The result is beautifully simple: the distance from the origin is root x squared plus y squared plus z squared. The familiar two term formula just grew a third term."
+            },
+            {
+              "seq": 5,
+              "text": "For two general points, build the box that has P and Q as opposite corners. The base diagonal handles two coordinates, and the space diagonal PQ closes the second right triangle."
+            },
+            {
+              "seq": 6,
+              "text": "So the distance between any two points is the root of the sum of the squared differences in each coordinate. That is the master distance formula."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>One warning that quietly steals marks</whisper> — when a coordinate is negative, expand the double negative carefully. Two minus negative two is four, not zero."
+            },
+            {
+              "seq": 8,
+              "text": "Notice that each difference is squared, so its sign disappears. That means it does not matter which point you call P and which you call Q — the distance comes out the same either way."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ वो एक idea है जो पूरा distance formula बनाता है: three dimensions में distance बस Pythagoras theorem है, जो एक के बाद एक दो बार लगता है।"
+            },
+            {
+              "seq": 2,
+              "text": "किसी point की origin से distance निकालने के लिए, पहले floor पर चलकर point x, y, zero तक जाइए। वो flat distance ordinary two D hypotenuse है, root x squared plus y squared।"
+            },
+            {
+              "seq": 3,
+              "text": "अब सीधे ऊपर height z जितना climb कीजिए। वो floor distance और ये vertical climb एक right triangle बनाते हैं, तो हम Pythagoras दूसरी बार लगाते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Result बेहद simple है: origin से distance है root x squared plus y squared plus z squared। वो जाना-पहचाना two term formula बस एक तीसरा term ले आया।"
+            },
+            {
+              "seq": 5,
+              "text": "दो general points के लिए, वो box बनाइए जिसके opposite corners P और Q हों। base diagonal दो coordinates संभालता है, और space diagonal PQ दूसरा right triangle पूरा करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो किसी भी दो points के बीच distance है हर coordinate के squared difference के sum का root। यही master distance formula है।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper>एक warning जो चुपके से marks चुराती है</whisper> — जब कोई coordinate negative हो, double negative को ध्यान से expand कीजिए। two minus negative two चार है, zero नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "ध्यान दीजिए हर difference square होता है, तो उसका sign गायब हो जाता है। मतलब इससे फर्क नहीं पड़ता आप किसे P कहते हैं और किसे Q — distance दोनों तरह से same आती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Foundations of 3D Coordinate Geometry",
+      "title": "Dividing a segment: the section formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Splitting a segment in the ratio m : n"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "In each coordinate the splitting point is a weighted average — same weights for x, y, z."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "R=\\left(\\dfrac{m x_{2}+n x_{1}}{m+n},\\ \\dfrac{m y_{2}+n y_{1}}{m+n},\\ \\dfrac{m z_{2}+n z_{1}}{m+n}\\right)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The heavier weight rides the endpoint you are nearer to."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "text": "Weight m multiplies the FAR endpoint $x_2$; n multiplies the near $x_1$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "R_{\\text{ext}}=\\left(\\dfrac{m x_{2}-n x_{1}}{m-n},\\ \\dfrac{m y_{2}-n y_{1}}{m-n},\\ \\dfrac{m z_{2}-n z_{1}}{m-n}\\right)"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "M=\\left(\\dfrac{x_{1}+x_{2}}{2},\\ \\dfrac{y_{1}+y_{2}}{2},\\ \\dfrac{z_{1}+z_{2}}{2}\\right)"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The midpoint is the sanity check: equal weights land exactly halfway."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Suppose a rope is stretched between two pegs A and B, and you want the point that splits it in a given ratio, say two to three measured from A. That is what the section formula finds."
+            },
+            {
+              "seq": 2,
+              "text": "In each coordinate separately, the dividing point is a weighted average of the two endpoints. And crucially, the very same weights apply to x, to y and to z all at once."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the internal section formula. The point dividing A B in the ratio m to n, measured from A, is this weighted average in every coordinate, with denominator m plus n."
+            },
+            {
+              "seq": 4,
+              "text": "Why a weighted average? If the point sits closer to B, it should inherit more of B's coordinates, so the heavier weight rides the endpoint you are nearer to. That intuition keeps you from placing weights on the wrong ends."
+            },
+            {
+              "seq": 5,
+              "text": "The safe reading: the weight named after the first part of the ratio, m, multiplies the far endpoint x two, and n multiplies the near endpoint x one."
+            },
+            {
+              "seq": 6,
+              "text": "External division flips a single sign. Replace n by minus n, and both the numerator and the denominator switch from plus to minus. This is used when the dividing point lies outside the segment."
+            },
+            {
+              "seq": 7,
+              "text": "The midpoint is just the simplest case, with equal weights one to one. It reduces to the plain average of the endpoints."
+            },
+            {
+              "seq": 8,
+              "text": "Keep the midpoint as your sanity check. Whenever a section formula answer looks suspicious, ask whether equal weights would land it halfway — if the numbers do not lean the right way, you have swapped a weight."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "मान लीजिए एक rope दो pegs A और B के बीच खिंची है, और आपको वो point चाहिए जो इसे किसी ratio में बाँटे, जैसे A से two to three। section formula यही निकालता है।"
+            },
+            {
+              "seq": 2,
+              "text": "हर coordinate में अलग-अलग, dividing point दोनों endpoints का weighted average है। और सबसे ज़रूरी — वही same weights x, y और z तीनों पर एक साथ लगते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "यहाँ internal section formula है। A B को m to n ratio में, A से नापते हुए, बाँटने वाला point हर coordinate में यही weighted average है, denominator m plus n के साथ।"
+            },
+            {
+              "seq": 4,
+              "text": "weighted average क्यों? अगर point B के करीब बैठा है, तो उसे B के coordinates ज़्यादा मिलने चाहिए, इसलिए भारी weight उस endpoint पर बैठता है जिसके आप करीब हैं। ये intuition weights को गलत ends पर लगाने से बचाती है।"
+            },
+            {
+              "seq": 5,
+              "text": "safe तरीका: ratio के पहले हिस्से वाला weight, m, far endpoint x two को multiply करता है, और n near endpoint x one को।"
+            },
+            {
+              "seq": 6,
+              "text": "External division एक ही sign flip करता है। n की जगह minus n रखिए, और numerator तथा denominator दोनों plus से minus हो जाते हैं। ये तब use होता है जब dividing point segment के बाहर हो।"
+            },
+            {
+              "seq": 7,
+              "text": "Midpoint बस सबसे simple case है, equal weights one to one के साथ। ये endpoints के plain average में बदल जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Midpoint को अपना sanity check बनाइए। जब भी कोई section formula का answer शक पैदा करे, पूछिए कि equal weights इसे बीच में लाते या नहीं — अगर numbers सही तरफ नहीं झुक रहे, तो आपने कोई weight swap कर दिया है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Foundations of 3D Coordinate Geometry",
+      "title": "Balance points and straight-line tests",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Centroid, volume, area, and collinearity"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The centroid is the balance point: equal masses at the vertices balance at G."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "G=\\left(\\dfrac{x_{1}+x_{2}+x_{3}}{3},\\ \\dfrac{y_{1}+y_{2}+y_{3}}{3},\\ \\dfrac{z_{1}+z_{2}+z_{3}}{3}\\right)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "For a tetrahedron the centroid divides the vertex sum by 4."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "V=\\dfrac{1}{6}\\left|\\ \\vec{AB}\\cdot(\\vec{AC}\\times\\vec{AD})\\ \\right|"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\text{Area}=\\dfrac{1}{2}\\left|\\ \\vec{AB}\\times\\vec{AC}\\ \\right|"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Collinear $\\iff$ direction ratios proportional $\\iff$ area $=0$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Centroid cuts each median $2:1$ from the vertex.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The averaging idea extends naturally from two points to three or four, and it quietly powers tests for area, volume and whether points lie on a line."
+            },
+            {
+              "seq": 2,
+              "text": "Physically the centroid is the balance point. Place equal masses at the vertices of a triangle and they balance exactly at the centroid — a plain, unweighted average of the vertices."
+            },
+            {
+              "seq": 3,
+              "text": "For a triangle, the centroid is the average of the three vertices — divide each coordinate sum by three."
+            },
+            {
+              "seq": 4,
+              "text": "For a tetrahedron, the same idea gives the balance point as one quarter of the vertex sum — you simply divide by four instead of three."
+            },
+            {
+              "seq": 5,
+              "text": "The volume of a tetrahedron is one sixth of the scalar triple product of its three edge vectors from one vertex. The triple product is the volume of the slanted box built on those edges."
+            },
+            {
+              "seq": 6,
+              "text": "The area of a triangle is half the magnitude of the cross product of two edge vectors."
+            },
+            {
+              "seq": 7,
+              "text": "That area doubles as a collinearity test. Three points are collinear exactly when the triangle they form has zero area — equivalently, when the direction ratios from one point to the others are proportional."
+            },
+            {
+              "seq": 8,
+              "text": "One clean fact to keep handy: the centroid lies on every median and cuts it in the ratio two to one, measured from the vertex to the midpoint of the opposite side."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Averaging वाला idea दो points से तीन या चार points तक naturally बढ़ता है, और ये चुपचाप area, volume और points के एक line पर होने के tests को चलाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Physically centroid balance point है। एक triangle के vertices पर equal masses रखिए तो वो ठीक centroid पर balance करती हैं — vertices का एक plain, बिना weight वाला average।"
+            },
+            {
+              "seq": 3,
+              "text": "एक triangle के लिए centroid तीनों vertices का average है — हर coordinate के sum को तीन से divide कीजिए।"
+            },
+            {
+              "seq": 4,
+              "text": "एक tetrahedron के लिए, वही idea balance point को vertex sum का one quarter देता है — बस तीन की जगह चार से divide कीजिए।"
+            },
+            {
+              "seq": 5,
+              "text": "एक tetrahedron का volume उसके एक vertex से तीन edge vectors के scalar triple product का one sixth है। triple product उन edges पर बने slanted box का volume है।"
+            },
+            {
+              "seq": 6,
+              "text": "एक triangle का area दो edge vectors के cross product के magnitude का half है।"
+            },
+            {
+              "seq": 7,
+              "text": "वो area एक collinearity test भी है। तीन points ठीक तब collinear हैं जब उनका बनाया triangle zero area का हो — यानी जब एक point से बाकियों तक direction ratios proportional हों।"
+            },
+            {
+              "seq": 8,
+              "text": "एक साफ़ fact याद रखिए: centroid हर median पर होता है और उसे two to one ratio में काटता है, vertex से opposite side के midpoint तक नापते हुए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "formulas",
+      "subtopic": "Foundations of 3D Coordinate Geometry",
+      "title": "Foundations: the complete formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Every foundation formula in one place"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "PQ=\\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}+(z_{2}-z_{1})^{2}}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{Internal }m:n=\\dfrac{m x_{2}+n x_{1}}{m+n}\\quad(\\text{per coordinate})"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{External }m:n=\\dfrac{m x_{2}-n x_{1}}{m-n}\\quad(\\text{per coordinate})"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "M=\\dfrac{x_{1}+x_{2}}{2}\\quad(\\text{and similarly for }y,z)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "G=\\dfrac{x_{1}+x_{2}+x_{3}}{3}\\quad(\\text{triangle; }\\div4\\text{ for tetrahedron})"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "V=\\tfrac{1}{6}\\left|\\vec{AB}\\cdot(\\vec{AC}\\times\\vec{AD})\\right|,\\quad \\text{Area}=\\tfrac{1}{2}\\left|\\vec{AB}\\times\\vec{AC}\\right|"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Distance from x-axis $=\\sqrt{y^2+z^2}$; from yz-plane $=|x|$ (cycle for the rest)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's gather the foundation formulas on one board, so you can see them side by side before we start solving."
+            },
+            {
+              "seq": 2,
+              "text": "The distance between two points — root of the sum of squared coordinate differences."
+            },
+            {
+              "seq": 3,
+              "text": "Internal division in the ratio m to n, applied per coordinate, with a plus in numerator and denominator."
+            },
+            {
+              "seq": 4,
+              "text": "External division — the same shape with a minus, coming from replacing n by minus n."
+            },
+            {
+              "seq": 5,
+              "text": "The midpoint is just the average of the endpoints in each coordinate."
+            },
+            {
+              "seq": 6,
+              "text": "The centroid — average the vertices, dividing by three for a triangle and by four for a tetrahedron."
+            },
+            {
+              "seq": 7,
+              "text": "Volume is one sixth of the scalar triple product; area is half the cross product magnitude. Both carry a modulus because they are sizes."
+            },
+            {
+              "seq": 8,
+              "text": "And the axis and plane distances: from the x axis, root y squared plus z squared; from the y z plane, the size of x. Cycle the coordinates for the others."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए foundation formulas को एक board पर इकट्ठा करते हैं, ताकि solve शुरू करने से पहले आप इन्हें साथ-साथ देख सकें।"
+            },
+            {
+              "seq": 2,
+              "text": "दो points के बीच distance — squared coordinate differences के sum का root।"
+            },
+            {
+              "seq": 3,
+              "text": "m to n ratio में internal division, हर coordinate पर, numerator और denominator में plus के साथ।"
+            },
+            {
+              "seq": 4,
+              "text": "External division — वही shape minus के साथ, जो n की जगह minus n रखने से आता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Midpoint बस हर coordinate में endpoints का average है।"
+            },
+            {
+              "seq": 6,
+              "text": "Centroid — vertices का average, triangle के लिए तीन से और tetrahedron के लिए चार से divide करते हुए।"
+            },
+            {
+              "seq": 7,
+              "text": "Volume scalar triple product का one sixth है; area cross product magnitude का half। दोनों modulus रखते हैं क्योंकि ये sizes हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "और axis तथा plane distances: x axis से root y squared plus z squared; y z plane से x का size। बाकियों के लिए coordinates cycle कर दीजिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations of 3D Coordinate Geometry",
+      "title": "Worked example: distance between two points",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find the distance between $A(1,-2,3)$ and $B(4,2,-1)$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Take coordinate differences $B-A$ inside each bracket."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "AB=\\sqrt{(4-1)^{2}+(2-(-2))^{2}+(-1-3)^{2}}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "=\\sqrt{3^{2}+4^{2}+(-4)^{2}}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "=\\sqrt{9+16+16}=\\sqrt{41}\\ \\text{units}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "$2-(-2)=4$ — expanding the double negative saves a whole term.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The sign of each difference disappears on squaring, so P and Q are interchangeable."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's work a clean distance problem. We want the distance between A, one, minus two, three, and B, four, two, minus one."
+            },
+            {
+              "seq": 2,
+              "text": "We take the difference of coordinates in each bracket, B minus A. The trickiest bracket is the y one, where we compute two minus negative two."
+            },
+            {
+              "seq": 3,
+              "text": "Substituting: root of the quantity four minus one squared, plus two minus negative two squared, plus negative one minus three squared."
+            },
+            {
+              "seq": 4,
+              "text": "Each bracket simplifies to three, four and minus four. Notice the double negative gave a clean four in the middle term."
+            },
+            {
+              "seq": 5,
+              "text": "Squaring and adding gives nine plus sixteen plus sixteen, which is forty one. So the distance is root forty one units."
+            },
+            {
+              "seq": 6,
+              "text": "The single most common error here is writing two minus two equals zero, silently losing a term. Always expand the double negative explicitly."
+            },
+            {
+              "seq": 7,
+              "text": "And because each difference is squared, its sign disappears — so it truly does not matter which point you called A and which B."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए एक साफ़ distance problem करते हैं। हमें A, one, minus two, three, और B, four, two, minus one के बीच distance चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "हम हर bracket में coordinates का difference लेते हैं, B minus A। सबसे tricky bracket y वाला है, जहाँ हम two minus negative two निकालते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Substitute करने पर: root जिसमें four minus one squared, plus two minus negative two squared, plus negative one minus three squared।"
+            },
+            {
+              "seq": 4,
+              "text": "हर bracket तीन, चार और minus four में simplify होता है। ध्यान दीजिए double negative ने बीच वाले term में साफ़ चार दिया।"
+            },
+            {
+              "seq": 5,
+              "text": "Square करके जोड़ने पर नौ plus सोलह plus सोलह मिलता है, यानी इकतालीस। तो distance है root इकतालीस units।"
+            },
+            {
+              "seq": 6,
+              "text": "यहाँ सबसे common गलती है two minus two equals zero लिख देना, जिससे चुपके से एक term खो जाता है। हमेशा double negative को explicitly expand कीजिए।"
+            },
+            {
+              "seq": 7,
+              "text": "और क्योंकि हर difference square होता है, उसका sign गायब हो जाता है — तो सच में फर्क नहीं पड़ता आपने किसे A कहा और किसे B।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations of 3D Coordinate Geometry",
+      "title": "Worked example: dividing a segment in a ratio",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Divide $A(2,-1,4)$ and $B(4,3,2)$ internally in $1:3$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Set $m:n=1:3$; weight $m=1$ rides far endpoint $B$, $n=3$ rides near $A$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "x=\\dfrac{1\\cdot 4+3\\cdot 2}{4}=\\dfrac{10}{4}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "y=\\dfrac{1\\cdot 3+3\\cdot(-1)}{4}=\\dfrac{0}{4}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "z=\\dfrac{1\\cdot 2+3\\cdot 4}{4}=\\dfrac{14}{4}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "R=\\left(\\tfrac{5}{2},\\ 0,\\ \\tfrac{7}{2}\\right)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "$n=3$ is larger, so the point leans toward $A$ — the quick check.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "A $1:3$ split from A landing nearer A confirms the weights were placed correctly."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a section formula problem. We divide the join of A, two, minus one, four, and B, four, three, two, internally in the ratio one to three."
+            },
+            {
+              "seq": 2,
+              "text": "So m is one and n is three. Remember, m rides the far endpoint B, and n rides the near endpoint A. We apply the weighted average in each coordinate."
+            },
+            {
+              "seq": 3,
+              "text": "The x coordinate is one times four plus three times two, all over four — that is ten over four."
+            },
+            {
+              "seq": 4,
+              "text": "The y coordinate is one times three plus three times minus one, over four — the numerator is zero."
+            },
+            {
+              "seq": 5,
+              "text": "And the z coordinate is one times two plus three times four, over four — fourteen over four."
+            },
+            {
+              "seq": 6,
+              "text": "Simplifying, the dividing point is five halves, zero, seven halves."
+            },
+            {
+              "seq": 7,
+              "text": "Here is the geometric sanity check. Because n, the weight on the near endpoint A, is larger, the answer should lean toward A — and it does, sitting closer to A than to B."
+            },
+            {
+              "seq": 8,
+              "text": "A one to three split measured from A landing nearer A confirms the weights sat on the correct endpoints. That one glance catches most weight swapping slips."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक section formula problem। हम A, two, minus one, four, और B, four, three, two के join को one to three ratio में internally बाँटते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "तो m एक है और n तीन। याद रखिए, m far endpoint B पर बैठता है, और n near endpoint A पर। हम हर coordinate में weighted average लगाते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "x coordinate है one times four plus three times two, सब चार पर — यानी ten over four।"
+            },
+            {
+              "seq": 4,
+              "text": "y coordinate है one times three plus three times minus one, चार पर — numerator zero है।"
+            },
+            {
+              "seq": 5,
+              "text": "और z coordinate है one times two plus three times four, चार पर — fourteen over four।"
+            },
+            {
+              "seq": 6,
+              "text": "Simplify करने पर, dividing point है five halves, zero, seven halves।"
+            },
+            {
+              "seq": 7,
+              "text": "यहाँ geometric sanity check है। क्योंकि n, near endpoint A पर का weight, बड़ा है, answer को A की तरफ झुकना चाहिए — और यही होता है, ये B के मुकाबले A के करीब बैठता है।"
+            },
+            {
+              "seq": 8,
+              "text": "A से नापा गया one to three split A के करीब land करना confirm करता है कि weights सही endpoints पर बैठे थे। वो एक नज़र ज़्यादातर weight swapping की गलतियाँ पकड़ लेती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations of 3D Coordinate Geometry",
+      "title": "Worked example: where a plane cuts a segment",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "In what ratio does the yz-plane divide $A(2,4,5)$–$B(3,5,-4)$?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The yz-plane is $x=0$; let the ratio be $k:1$ from A."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "x=\\dfrac{k\\cdot 3+1\\cdot 2}{k+1}=\\dfrac{3k+2}{k+1}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "3k+2=0\\ \\Rightarrow\\ k=-\\tfrac{2}{3}"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "text": "Negative $k$ signals external division — the plane cuts outside the segment.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "The sign carried the geometric meaning — a recurring JEE Main theme."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Both A and B have positive $x$, so they lie on the same side — the cut must be external."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This problem hides a sign lesson. In what ratio does the y z plane divide the segment joining A, two, four, five, and B, three, five, minus four?"
+            },
+            {
+              "seq": 2,
+              "text": "The y z plane is simply the set where x equals zero. Let the unknown ratio, measured from A, be k to one. We only need the x coordinate of the dividing point."
+            },
+            {
+              "seq": 3,
+              "text": "Using the section formula, the x coordinate is k times three plus one times two, over k plus one — that is three k plus two over k plus one."
+            },
+            {
+              "seq": 4,
+              "text": "Set that x coordinate to zero, since the point lies on the plane. Then three k plus two equals zero, giving k equal to minus two thirds."
+            },
+            {
+              "seq": 5,
+              "text": "That negative value is not an error — it is the geometry talking. A negative k signals external division: the plane meets the line outside the segment, dividing it externally in the ratio two to three."
+            },
+            {
+              "seq": 6,
+              "text": "So the sign carried the full geometric meaning, and one calculation gave both the ratio and its type. This idea returns again and again in J E E Main."
+            },
+            {
+              "seq": 7,
+              "text": "Geometrically this makes sense: both A and B have positive x, so they lie on the same side of the y z plane. A plane cannot pass between two points on the same side, so it can only meet their line on an extension — externally."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस problem में एक sign का सबक छिपा है। y z plane, A, two, four, five और B, three, five, minus four को जोड़ने वाले segment को किस ratio में बाँटता है?"
+            },
+            {
+              "seq": 2,
+              "text": "y z plane बस वो set है जहाँ x zero है। मान लीजिए unknown ratio, A से नापा हुआ, k to one है। हमें सिर्फ dividing point का x coordinate चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Section formula से, x coordinate है k times three plus one times two, over k plus one — यानी three k plus two over k plus one।"
+            },
+            {
+              "seq": 4,
+              "text": "उस x coordinate को zero रखिए, क्योंकि point plane पर है। तब three k plus two equals zero, जो k को minus two thirds देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "वो negative value गलती नहीं है — ये geometry बोल रही है। negative k external division का संकेत देता है: plane line को segment के बाहर मिलता है, उसे two to three ratio में externally बाँटते हुए।"
+            },
+            {
+              "seq": 6,
+              "text": "तो sign ने पूरा geometric meaning ढोया, और एक calculation ने ratio और उसका type दोनों दिए। ये idea J E E Main में बार-बार लौटता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Geometrically ये सही बैठता है: A और B दोनों का x positive है, तो वो y z plane के एक ही side पर हैं। plane एक ही side के दो points के बीच से नहीं गुज़र सकता, तो वो उनकी line को सिर्फ एक extension पर मिल सकता है — externally।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Foundations of 3D Coordinate Geometry",
+      "title": "Worked example: volume of a tetrahedron",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Volume of the tetrahedron $A(1,1,1),B(3,2,1),C(2,4,2),D(1,2,5)$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Take the three edge vectors from vertex A."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\vec{AB}=(2,1,0),\\quad \\vec{AC}=(1,3,1),\\quad \\vec{AD}=(0,1,4)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\vec{AC}\\times\\vec{AD}=(11,-4,1)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\vec{AB}\\cdot(11,-4,1)=22-4+0=18"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "V=\\tfrac{1}{6}\\,|18|=3\\ \\text{cubic units}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "The modulus is essential — a volume can never be negative.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "You may use edges from any vertex — the volume is the same, a handy cross-check."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's compute a tetrahedron volume using the scalar triple product. The vertices are A, B, C and D as shown."
+            },
+            {
+              "seq": 2,
+              "text": "First we build the three edge vectors starting from vertex A — that is, subtract A from B, from C and from D."
+            },
+            {
+              "seq": 3,
+              "text": "These give A B equals two, one, zero; A C equals one, three, one; and A D equals zero, one, four."
+            },
+            {
+              "seq": 4,
+              "text": "Now cross A C with A D. Expanding the determinant gives eleven, minus four, one."
+            },
+            {
+              "seq": 5,
+              "text": "Dot that with A B: two times eleven, plus one times minus four, plus zero — that is twenty two minus four, equals eighteen."
+            },
+            {
+              "seq": 6,
+              "text": "The volume is one sixth of the size of eighteen, which is three cubic units."
+            },
+            {
+              "seq": 7,
+              "text": "The absolute value is essential. A negative triple product only means the edges form a left handed set; a volume itself can never be negative."
+            },
+            {
+              "seq": 8,
+              "text": "And you may take the edges from any vertex you like; the volume comes out the same. That is a handy cross check if your first computation ever looks wrong."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए scalar triple product से एक tetrahedron का volume निकालते हैं। Vertices A, B, C और D हैं, जैसा दिखाया गया है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले हम vertex A से शुरू होने वाले तीन edge vectors बनाते हैं — यानी A को B, C और D में से घटाते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "ये देते हैं A B बराबर two, one, zero; A C बराबर one, three, one; और A D बराबर zero, one, four।"
+            },
+            {
+              "seq": 4,
+              "text": "अब A C को A D के साथ cross कीजिए। determinant expand करने पर eleven, minus four, one मिलता है।"
+            },
+            {
+              "seq": 5,
+              "text": "उसे A B के साथ dot कीजिए: two times eleven, plus one times minus four, plus zero — यानी बाईस minus four, बराबर अठारह।"
+            },
+            {
+              "seq": 6,
+              "text": "Volume अठारह के size का one sixth है, यानी तीन cubic units।"
+            },
+            {
+              "seq": 7,
+              "text": "Absolute value ज़रूरी है। negative triple product का मतलब सिर्फ इतना है कि edges एक left handed set बनाते हैं; volume खुद कभी negative नहीं हो सकता।"
+            },
+            {
+              "seq": 8,
+              "text": "और आप edges किसी भी vertex से ले सकते हैं; volume same आता है। ये एक handy cross check है अगर आपकी पहली computation कभी गलत लगे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "tips",
+      "subtopic": "Foundations of 3D Coordinate Geometry",
+      "title": "Foundations: pitfalls and pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Where students lose foundation marks"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "Weight $m$ rides the FAR endpoint $x_2$; swapping puts the point on the wrong side.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "A negative division ratio is not an error — it means external division."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Distance is the root of the sum of squares, never $|\\Delta x|+|\\Delta y|+|\\Delta z|$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "The $AB+BC=AC$ collinearity test needs correct ordering; else use direction ratios."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Axis drops one coordinate; plane keeps only one.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Keep the modulus on area and volume; a centroid must lie inside the triangle."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before we move on, let's lock in the handful of slips that cost the easiest marks in this whole section."
+            },
+            {
+              "seq": 2,
+              "text": "First, the section formula weights. The weight m multiplies the far endpoint, and n the near one. Swapping them places the point on the wrong side entirely."
+            },
+            {
+              "seq": 3,
+              "text": "Second, do not panic at a negative ratio. A negative answer for the ratio is not a mistake; it simply tells you the cut lies outside the segment."
+            },
+            {
+              "seq": 4,
+              "text": "Third, distance is always the root of a sum of squared differences — never the sum of the magnitudes of the differences. Neither the squaring nor the rooting may be skipped."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, the additive distance test for collinearity only works when the middle point genuinely sits between the other two. When the order is unknown, switch to proportional direction ratios, which never depend on ordering."
+            },
+            {
+              "seq": 6,
+              "text": "Fifth, never confuse distance from an axis with distance from a plane. Distance from an axis drops the shared coordinate and keeps two under the root; distance from a plane keeps only the single zeroed coordinate."
+            },
+            {
+              "seq": 7,
+              "text": "Finally, area and volume are magnitudes, so the modulus is non negotiable. And a quick sanity check — a centroid must lie strictly inside its triangle, so a centroid landing beyond a vertex signals an arithmetic slip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आगे बढ़ने से पहले, चलिए उन कुछ गलतियों को पक्का कर लेते हैं जो इस पूरे section में सबसे आसान marks छीनती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, section formula के weights। weight m far endpoint को multiply करता है, और n near वाले को। इन्हें swap करना point को पूरी तरह गलत side पर रख देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, negative ratio पर घबराइए मत। ratio का negative answer गलती नहीं है; ये बस बताता है कि cut segment के बाहर है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, distance हमेशा squared differences के sum का root है — कभी differences के magnitudes का sum नहीं। न squaring छोड़ी जा सकती है, न rooting।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, collinearity का additive distance test सिर्फ तब काम करता है जब middle point सचमुच बाकी दोनों के बीच हो। जब order पता न हो, proportional direction ratios पर switch कीजिए, जो कभी ordering पर निर्भर नहीं करते।"
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ, axis से distance को plane से distance के साथ कभी मत confuse कीजिए। axis से distance shared coordinate छोड़ता है और root के नीचे दो रखता है; plane से distance सिर्फ वो एक zero वाला coordinate रखता है।"
+            },
+            {
+              "seq": 7,
+              "text": "आखिर में, area और volume magnitudes हैं, तो modulus पर कोई समझौता नहीं। और एक quick sanity check — centroid को अपने triangle के अंदर ही होना चाहिए, तो किसी vertex के पार गिरता centroid arithmetic गलती का संकेत है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Direction Cosines, Direction Ratios & Equations of a Line in Space",
+      "title": "Direction cosines: a line's orientation address",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Which way does a line point?"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A line makes angles $\\alpha,\\beta,\\gamma$ with the x, y, z axes."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "l=\\cos\\alpha,\\quad m=\\cos\\beta,\\quad n=\\cos\\gamma"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Think of a fixed total strength of 1 spent across the three axes."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "l^{2}+m^{2}+n^{2}=1"
+        },
+        {
+          "seq": 6,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 300\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"ah2\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#333\"/></marker></defs>\n<line x1=\"90\" y1=\"220\" x2=\"370\" y2=\"220\" stroke=\"#333\" stroke-width=\"1.6\" marker-end=\"url(#ah2)\"/>\n<line x1=\"90\" y1=\"220\" x2=\"90\" y2=\"40\" stroke=\"#333\" stroke-width=\"1.6\" marker-end=\"url(#ah2)\"/>\n<line x1=\"90\" y1=\"220\" x2=\"180\" y2=\"280\" stroke=\"#333\" stroke-width=\"1.6\" marker-end=\"url(#ah2)\"/>\n<text x=\"375\" y=\"224\" font-size=\"14\" font-family=\"system-ui, sans-serif\">x</text>\n<text x=\"80\" y=\"36\" font-size=\"14\" font-family=\"system-ui, sans-serif\">z</text>\n<text x=\"184\" y=\"282\" font-size=\"14\" font-family=\"system-ui, sans-serif\">y</text>\n<text x=\"72\" y=\"234\" font-size=\"13\" font-family=\"system-ui, sans-serif\">O</text>\n<line x1=\"90\" y1=\"220\" x2=\"290\" y2=\"90\" stroke=\"#c0392b\" stroke-width=\"2\"/>\n<circle cx=\"290\" cy=\"90\" r=\"4\" fill=\"#c0392b\"/>\n<text x=\"296\" y=\"88\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">P</text>\n<path d=\"M140,220 A55,55 0 0,0 128,187\" fill=\"none\" stroke=\"#8e44ad\" stroke-width=\"1.4\"/>\n<text x=\"146\" y=\"205\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#8e44ad\">alpha</text>\n<line x1=\"290\" y1=\"90\" x2=\"290\" y2=\"220\" stroke=\"#2980b9\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/>\n<text x=\"294\" y=\"160\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#2980b9\">z = r n</text>\n<text x=\"150\" y=\"250\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#2980b9\">angles beta, gamma with y, z</text>\n</svg>",
+          "caption": "Angles a directed line makes with the three axes"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Direction cosines are the components of the unit vector along the line."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Equally inclined line: $l=m=n=\\pm\\tfrac{1}{\\sqrt3}$.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Here is the single most important question we can ask about a line in space</curious> — not where it is, but which way it points."
+            },
+            {
+              "seq": 2,
+              "text": "In two dimensions one angle was enough. But in space, which way needs to be pinned down against all three axes at once, so we measure the angles alpha, beta and gamma with the x, y and z axes."
+            },
+            {
+              "seq": 3,
+              "text": "Rather than carry three angles, we carry their cosines: l is cos alpha, m is cos beta, n is cos gamma. These three numbers are the direction cosines of the line."
+            },
+            {
+              "seq": 4,
+              "text": "Think of direction cosines like splitting a budget. A direction has a fixed total strength of one, and it must spend that strength across the three axes."
+            },
+            {
+              "seq": 5,
+              "text": "The hidden rule that makes it a budget is the master identity: l squared plus m squared plus n squared equals one. The squares always add to exactly one."
+            },
+            {
+              "seq": 6,
+              "text": "Here is the picture. Take a point P on the line at distance r from the origin; its shadow on each axis is r times the corresponding cosine. So the direction cosines are the fractions of the length spent along each axis."
+            },
+            {
+              "seq": 7,
+              "text": "In one sentence worth memorising: the direction cosines are the components of the unit vector pointing along the line. A single unit step moves you l to the right, m forward and n upward."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>One value worth memorising outright</whisper> — a line equally inclined to all three axes has each direction cosine equal to plus or minus one over root three, because three l squared must equal one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>यहाँ space में किसी line के बारे में सबसे ज़रूरी सवाल है</curious> — वो कहाँ है नहीं, बल्कि किस तरफ point करती है।"
+            },
+            {
+              "seq": 2,
+              "text": "दो dimensions में एक angle काफ़ी था। पर space में, किस तरफ को तीनों axes के against एक साथ pin करना पड़ता है, तो हम x, y और z axes के साथ angles alpha, beta और gamma नापते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "तीन angles ढोने के बजाय, हम उनके cosines ढोते हैं: l है cos alpha, m है cos beta, n है cos gamma। ये तीन numbers line के direction cosines हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Direction cosines को एक budget बाँटने जैसा सोचिए। किसी direction के पास कुल strength one होती है, और उसे वो strength तीनों axes पर खर्च करनी पड़ती है।"
+            },
+            {
+              "seq": 5,
+              "text": "वो छिपा नियम जो इसे budget बनाता है वो है master identity: l squared plus m squared plus n squared equals one। squares हमेशा ठीक one में जुड़ते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "यहाँ picture है। line पर origin से distance r पर एक point P लीजिए; हर axis पर उसकी shadow है r times उस axis का cosine। तो direction cosines हर axis पर खर्च की गई length के fractions हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "एक याद रखने लायक sentence में: direction cosines line के साथ point करने वाले unit vector के components हैं। एक unit step आपको l दाईं ओर, m आगे और n ऊपर ले जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>एक value सीधे याद कर लेने लायक</whisper> — तीनों axes के बराबर झुकी line के हर direction cosine का मान है plus या minus one over root three, क्योंकि three l squared को one के बराबर होना पड़ता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Direction Cosines, Direction Ratios & Equations of a Line in Space",
+      "title": "Direction ratios: the recipe form",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Direction ratios: proportional to the cosines"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Coordinate differences give a natural step, e.g. $(3,6,8)$ for a line through two points."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Any triple proportional to the direction cosines is a set of direction ratios."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "l,m,n=\\pm\\dfrac{(a,b,c)}{\\sqrt{a^{2}+b^{2}+c^{2}}}"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "text": "Direction ratios are never unique; direction cosines are unique up to $\\pm$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Reverse the line and every sign flips: $(l,m,n)\\to(-l,-m,-n)$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The zero triple $(0,0,0)$ has no direction and is meaningless as ratios."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Nobody wants to compute three cosines from scratch every time. Direction ratios are the shortcut, and they are far easier to read off."
+            },
+            {
+              "seq": 2,
+              "text": "If a line passes through the points one, two, three and four, eight, eleven, the natural step along it is three, six, eight — just the coordinate differences."
+            },
+            {
+              "seq": 3,
+              "text": "Those numbers are not the direction cosines — their squares do not sum to one — but they are proportional to them. Any triple proportional to the direction cosines is a set of direction ratios. Think of it like a recipe given as a ratio."
+            },
+            {
+              "seq": 4,
+              "text": "To get the unique unit version, the direction cosines, you divide each ratio by the length root a squared plus b squared plus c squared. The single plus or minus reflects the two directions of the line."
+            },
+            {
+              "seq": 5,
+              "text": "An important asymmetry: direction ratios are never unique — two, three, minus one and four, six, minus two describe the same line. Only the direction cosines are unique, up to that single plus or minus."
+            },
+            {
+              "seq": 6,
+              "text": "Direction cosines belong to a directed line. Reverse the arrow and every sign flips together, which is exactly why the plus or minus keeps appearing."
+            },
+            {
+              "seq": 7,
+              "text": "One boundary case: the zero triple, zero, zero, zero, points nowhere and is meaningless as direction ratios. A valid set is never all zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हर बार तीन cosines scratch से निकालना कोई नहीं चाहता। direction ratios वो shortcut हैं, और इन्हें पढ़ना कहीं आसान है।"
+            },
+            {
+              "seq": 2,
+              "text": "अगर कोई line points one, two, three और four, eight, eleven से गुज़रती है, तो उसके साथ natural step है three, six, eight — बस coordinate differences।"
+            },
+            {
+              "seq": 3,
+              "text": "वो numbers direction cosines नहीं हैं — उनके squares one में नहीं जुड़ते — पर वो उनके proportional हैं। direction cosines के proportional कोई भी triple एक set of direction ratios है। इसे ratio के रूप में दी गई recipe जैसा सोचिए।"
+            },
+            {
+              "seq": 4,
+              "text": "Unique unit version, direction cosines, पाने के लिए, हर ratio को length root a squared plus b squared plus c squared से divide कीजिए। वो एक plus या minus line की दो directions दिखाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "एक ज़रूरी asymmetry: direction ratios कभी unique नहीं होते — two, three, minus one और four, six, minus two एक ही line बताते हैं। सिर्फ direction cosines unique होते हैं, उस एक plus या minus तक।"
+            },
+            {
+              "seq": 6,
+              "text": "Direction cosines एक directed line की होती हैं। arrow उलटिए और हर sign एक साथ flip हो जाता है, यही वजह है कि plus या minus बार-बार आता है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक boundary case: zero triple, zero, zero, zero, कहीं point नहीं करता और direction ratios के रूप में meaningless है। एक valid set कभी पूरा zero नहीं होता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "concept",
+      "subtopic": "Direction Cosines, Direction Ratios & Equations of a Line in Space",
+      "title": "The equation of a line: a point plus a direction",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A point and a direction fix a line"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A line carries two independent pieces: where it is, and which way it goes."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\vec r=\\vec a+\\lambda\\,\\vec b,\\qquad \\lambda\\in\\mathbb{R}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The same direction ratios describe infinitely many parallel lines."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\dfrac{x-x_{1}}{a}=\\dfrac{y-y_{1}}{b}=\\dfrac{z-z_{1}}{c}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\dfrac{x-x_{1}}{x_{2}-x_{1}}=\\dfrac{y-y_{1}}{y_{2}-y_{1}}=\\dfrac{z-z_{1}}{z_{2}-z_{1}}"
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"ah3\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#c0392b\"/></marker></defs>\n<line x1=\"40\" y1=\"200\" x2=\"390\" y2=\"70\" stroke=\"#333\" stroke-width=\"1.6\"/>\n<circle cx=\"150\" cy=\"170\" r=\"4.5\" fill=\"#2980b9\"/>\n<text x=\"128\" y=\"192\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#2980b9\">A (point a)</text>\n<line x1=\"150\" y1=\"170\" x2=\"245\" y2=\"135\" stroke=\"#c0392b\" stroke-width=\"2.2\" marker-end=\"url(#ah3)\"/>\n<text x=\"205\" y=\"128\" font-size=\"13\" font-family=\"system-ui, sans-serif\" fill=\"#c0392b\">direction b</text>\n<circle cx=\"320\" cy=\"97\" r=\"4\" fill=\"#27ae60\"/>\n<text x=\"300\" y=\"88\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#27ae60\">r = a + lambda b</text>\n<text x=\"300\" y=\"215\" font-size=\"11\" font-family=\"system-ui, sans-serif\">one point + one direction fix the line</text>\n</svg>",
+          "caption": "Vector form: start at a, step along b"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "$\\lambda$ is a true length only when $\\vec b$ is a unit vector.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Once you know a single point on a line and its direction, the line is completely determined — like knowing a train's starting station and the exact bearing of the track."
+            },
+            {
+              "seq": 2,
+              "text": "It pays to see how cleanly this separates two ideas. A line carries two completely independent pieces of information: where it is, given by any one point, and which way it goes, given by its direction."
+            },
+            {
+              "seq": 3,
+              "text": "The vector equation captures both. Position vector a supplies the where, direction b supplies the which way, and the parameter lambda slides you up and down the track."
+            },
+            {
+              "seq": 4,
+              "text": "Direction cosines and ratios capture only the which way, which is exactly why the same direction ratios describe infinitely many parallel lines scattered across space. To name one specific line, you must marry a direction to a point."
+            },
+            {
+              "seq": 5,
+              "text": "Eliminating lambda gives the Cartesian symmetric form: x minus x one over a, equals y minus y one over b, equals z minus z one over c. The denominators are the direction ratios; the constants are the point."
+            },
+            {
+              "seq": 6,
+              "text": "For a line through two points, the direction ratios are just the coordinate differences, so the two point form places those differences in the denominators."
+            },
+            {
+              "seq": 7,
+              "text": "Here is the geometry: start at the point a, and step any distance along the direction b. Every point on the line is reached for some value of lambda."
+            },
+            {
+              "seq": 8,
+              "text": "One caution baked into the form: lambda equals true distance from the base point only when b is a unit vector — that is, when its components are the direction cosines themselves. With arbitrary direction ratios, lambda is just a parameter, not a length."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "जैसे ही आप किसी line पर एक point और उसकी direction जान लेते हैं, line पूरी तरह तय हो जाती है — जैसे किसी train का starting station और track का exact bearing जानना।"
+            },
+            {
+              "seq": 2,
+              "text": "ये देखना फायदेमंद है कि ये कितनी साफ़ी से दो ideas अलग करता है। एक line दो पूरी तरह independent जानकारियाँ ढोती है: वो कहाँ है, किसी एक point से, और वो किस तरफ जाती है, अपनी direction से।"
+            },
+            {
+              "seq": 3,
+              "text": "Vector equation दोनों पकड़ता है। position vector a देता है कहाँ, direction b देता है किस तरफ, और parameter lambda आपको track पर आगे-पीछे slide करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Direction cosines और ratios सिर्फ किस तरफ पकड़ते हैं, यही वजह है कि वही direction ratios space में बिखरी अनगिनत parallel lines बताते हैं। किसी एक specific line का नाम लेने के लिए, direction को एक point से जोड़ना पड़ता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Lambda को हटाने पर Cartesian symmetric form मिलता है: x minus x one over a, बराबर y minus y one over b, बराबर z minus z one over c। denominators direction ratios हैं; constants point है।"
+            },
+            {
+              "seq": 6,
+              "text": "दो points से गुज़रती line के लिए, direction ratios बस coordinate differences हैं, तो two point form उन differences को denominators में रखता है।"
+            },
+            {
+              "seq": 7,
+              "text": "यहाँ geometry है: point a से शुरू कीजिए, और direction b के साथ कोई भी distance step कीजिए। line का हर point किसी न किसी lambda के लिए मिल जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Form में बसी एक caution: lambda base point से true distance तभी होता है जब b एक unit vector हो — यानी जब उसके components खुद direction cosines हों। arbitrary direction ratios के साथ, lambda सिर्फ एक parameter है, length नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "formulas",
+      "subtopic": "Direction Cosines, Direction Ratios & Equations of a Line in Space",
+      "title": "Directions and lines: the formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Direction and line formulas in one place"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "l^{2}+m^{2}+n^{2}=1"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\sin^{2}\\alpha+\\sin^{2}\\beta+\\sin^{2}\\gamma=2"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "l,m,n=\\pm\\dfrac{(a,b,c)}{\\sqrt{a^{2}+b^{2}+c^{2}}}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{DRs}=(x_{2}-x_{1},\\,y_{2}-y_{1},\\,z_{2}-z_{1})"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\vec r=\\vec a+\\lambda\\,\\vec b"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\dfrac{x-x_{1}}{a}=\\dfrac{y-y_{1}}{b}=\\dfrac{z-z_{1}}{c}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's collect the formulas for this subtopic before we start solving problems with them."
+            },
+            {
+              "seq": 2,
+              "text": "The master identity — the squares of the direction cosines add to one."
+            },
+            {
+              "seq": 3,
+              "text": "A useful bonus identity that drops straight out: the squares of the sines of the three angles add to two."
+            },
+            {
+              "seq": 4,
+              "text": "To convert direction ratios to direction cosines, divide by the length of the ratio triple, with one shared plus or minus."
+            },
+            {
+              "seq": 5,
+              "text": "For a line through two points, the direction ratios are simply the coordinate differences."
+            },
+            {
+              "seq": 6,
+              "text": "The vector form of a line — a fixed point plus lambda times a direction."
+            },
+            {
+              "seq": 7,
+              "text": "And the Cartesian symmetric form, with direction ratios as denominators and the point as constants."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए इस subtopic के formulas इकट्ठा कर लेते हैं, इससे पहले कि हम इनसे problems solve करें।"
+            },
+            {
+              "seq": 2,
+              "text": "Master identity — direction cosines के squares one में जुड़ते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "एक उपयोगी bonus identity जो सीधे निकलती है: तीनों angles के sines के squares two में जुड़ते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Direction ratios को direction cosines में बदलने के लिए, ratio triple की length से divide कीजिए, एक shared plus या minus के साथ।"
+            },
+            {
+              "seq": 5,
+              "text": "दो points से गुज़रती line के लिए, direction ratios बस coordinate differences हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Line का vector form — एक fixed point plus lambda times direction।"
+            },
+            {
+              "seq": 7,
+              "text": "और Cartesian symmetric form, direction ratios denominators के रूप में और point constants के रूप में।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Direction Cosines, Direction Ratios & Equations of a Line in Space",
+      "title": "Worked example: direction cosines and line equations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "$DR=2,-3,6$; line through $(1,4,-2)$ parallel to it"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\sqrt{a^{2}+b^{2}+c^{2}}=\\sqrt{4+9+36}=\\sqrt{49}=7"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "l=\\tfrac{2}{7},\\quad m=-\\tfrac{3}{7},\\quad n=\\tfrac{6}{7}"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "text": "Check: $\\tfrac{4}{49}+\\tfrac{9}{49}+\\tfrac{36}{49}=1$. ✓",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\vec r=(\\hat i+4\\hat j-2\\hat k)+\\lambda(2\\hat i-3\\hat j+6\\hat k)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\dfrac{x-1}{2}=\\dfrac{y-4}{-3}=\\dfrac{z+2}{6}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The equation is just a direction and a point written side by side."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A clean board level problem. A line has direction ratios two, minus three, six. Find its direction cosines, and write the equations of the line through one, four, minus two parallel to it."
+            },
+            {
+              "seq": 2,
+              "text": "First the length of the direction ratio triple: root of four plus nine plus thirty six, which is root forty nine, equal to seven."
+            },
+            {
+              "seq": 3,
+              "text": "Dividing each ratio by seven gives the direction cosines: two sevenths, minus three sevenths, six sevenths."
+            },
+            {
+              "seq": 4,
+              "text": "Always run the one second check: four over forty nine plus nine over forty nine plus thirty six over forty nine equals one. The normalisation is confirmed."
+            },
+            {
+              "seq": 5,
+              "text": "The vector equation places the point one, four, minus two as a, and the direction ratios two, minus three, six as b."
+            },
+            {
+              "seq": 6,
+              "text": "And the Cartesian equation simply reuses the direction ratios as denominators and the point's coordinates, with signs flipped, as the constants."
+            },
+            {
+              "seq": 7,
+              "text": "Notice the lesson: the equation of a line is, in effect, just its direction and one point written side by side."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक साफ़ board level problem। एक line के direction ratios हैं two, minus three, six। इसके direction cosines निकालिए, और one, four, minus two से गुज़रती इसके parallel line के equations लिखिए।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले direction ratio triple की length: root of चार plus नौ plus छत्तीस, यानी root उनतालीस, बराबर सात।"
+            },
+            {
+              "seq": 3,
+              "text": "हर ratio को सात से divide करने पर direction cosines मिलते हैं: two sevenths, minus three sevenths, six sevenths।"
+            },
+            {
+              "seq": 4,
+              "text": "हमेशा one second का check कीजिए: four over उनतालीस plus नौ over उनतालीस plus छत्तीस over उनतालीस equals one। normalisation confirm हो गई।"
+            },
+            {
+              "seq": 5,
+              "text": "Vector equation point one, four, minus two को a के रूप में, और direction ratios two, minus three, six को b के रूप में रखता है।"
+            },
+            {
+              "seq": 6,
+              "text": "और Cartesian equation बस direction ratios को denominators के रूप में और point के coordinates को, signs flip करके, constants के रूप में दोबारा use करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "सबक ध्यान दीजिए: किसी line का equation असल में बस उसकी direction और एक point साथ-साथ लिखे होते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Direction Cosines, Direction Ratios & Equations of a Line in Space",
+      "title": "Worked example: the angle with the z-axis",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A line makes $60^{\\circ}$ with x and $45^{\\circ}$ with y — find its z-angle"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Use $\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma=1$ directly — no need for full DCs."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\cos^{2}60^{\\circ}+\\cos^{2}45^{\\circ}+\\cos^{2}\\gamma=1"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\tfrac{1}{4}+\\tfrac{1}{2}+\\cos^{2}\\gamma=1\\ \\Rightarrow\\ \\cos^{2}\\gamma=\\tfrac{1}{4}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\cos\\gamma=\\pm\\tfrac{1}{2}\\ \\Rightarrow\\ \\gamma=60^{\\circ}\\ \\text{or}\\ 120^{\\circ}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "$\\cos\\gamma=-\\tfrac12$ is equally valid — write BOTH answers.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Seeing $\\cos^2\\gamma$ alone should trigger the $\\pm$ reflex."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a classic speed trap. A line makes sixty degrees with the x axis and forty five degrees with the y axis. What angle does it make with the z axis?"
+            },
+            {
+              "seq": 2,
+              "text": "We do not need to find all the direction cosines. We can use the identity that the sum of the squared cosines of the three angles equals one, directly."
+            },
+            {
+              "seq": 3,
+              "text": "Substituting the two known angles: cos squared sixty plus cos squared forty five plus cos squared gamma equals one."
+            },
+            {
+              "seq": 4,
+              "text": "Cos squared sixty is one quarter and cos squared forty five is one half. So cos squared gamma is one quarter."
+            },
+            {
+              "seq": 5,
+              "text": "Taking the square root gives cos gamma equal to plus or minus one half. So gamma is sixty degrees or one hundred twenty degrees — both are valid."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>Here is the trap</whisper> — most students stop at sixty degrees and lose the mark. Because cos gamma equals minus one half is equally valid, the line may dip below the plane and make one hundred twenty degrees. The moment you see cos squared alone, write two answers."
+            },
+            {
+              "seq": 7,
+              "text": "So the speed move is simple: the instant a problem hands you cos squared gamma alone, reach for the plus or minus reflex and report both angles."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये एक classic speed trap है। एक line x axis के साथ साठ degrees और y axis के साथ पैंतालीस degrees बनाती है। वो z axis के साथ कौन सा angle बनाती है?"
+            },
+            {
+              "seq": 2,
+              "text": "हमें सारे direction cosines निकालने की ज़रूरत नहीं। हम सीधे वो identity use कर सकते हैं कि तीनों angles के squared cosines का sum one है।"
+            },
+            {
+              "seq": 3,
+              "text": "दोनों known angles substitute करने पर: cos squared साठ plus cos squared पैंतालीस plus cos squared gamma equals one।"
+            },
+            {
+              "seq": 4,
+              "text": "Cos squared साठ है one quarter और cos squared पैंतालीस है one half। तो cos squared gamma है one quarter।"
+            },
+            {
+              "seq": 5,
+              "text": "Square root लेने पर cos gamma बराबर plus या minus one half। तो gamma साठ degrees या एक सौ बीस degrees — दोनों valid हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>यहाँ trap है</whisper> — ज़्यादातर students साठ degrees पर रुककर mark खो देते हैं। क्योंकि cos gamma बराबर minus one half भी equally valid है, line plane के नीचे झुककर एक सौ बीस degrees बना सकती है। जैसे ही cos squared अकेला दिखे, दो answers लिखिए।"
+            },
+            {
+              "seq": 7,
+              "text": "तो speed move simple है: जिस पल कोई problem आपको cos squared gamma अकेला दे, plus या minus reflex उठाइए और दोनों angles report कीजिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "Direction Cosines, Direction Ratios & Equations of a Line in Space",
+      "title": "Worked example: collinearity fixes an unknown coordinate",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "$A(3,-1,2),B(1,3,4),C(5,k,0)$ collinear — find $k$ and the DCs"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\vec{AB}=(-2,4,2),\\qquad \\vec{AC}=(2,\\,k+1,\\,-2)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\dfrac{-2}{2}=\\dfrac{k+1}{4}=\\dfrac{2}{-2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\dfrac{k+1}{4}=-1\\ \\Rightarrow\\ k=-5"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "|\\vec{AB}|=\\sqrt{4+16+4}=\\sqrt{24}=2\\sqrt{6}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "l,m,n=\\left(-\\tfrac{1}{\\sqrt6},\\ \\tfrac{2}{\\sqrt6},\\ \\tfrac{1}{\\sqrt6}\\right)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "text": "Cross-check: $\\tfrac16+\\tfrac46+\\tfrac16=1$ ✓ — normalise only at the last step.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This links two skills. The points A, B and C are collinear. Find the unknown k, and then the direction cosines of the line."
+            },
+            {
+              "seq": 2,
+              "text": "Form the two direction ratio vectors from A. A B is minus two, four, two, and A C is two, k plus one, minus two."
+            },
+            {
+              "seq": 3,
+              "text": "Collinearity means these are proportional. The first and third ratios both equal minus one, which is consistent."
+            },
+            {
+              "seq": 4,
+              "text": "From the middle ratio, k plus one over four equals minus one, so k plus one is minus four, giving k equal to minus five."
+            },
+            {
+              "seq": 5,
+              "text": "Now use A B, which is minus two, four, two, with magnitude root twenty four, equal to two root six."
+            },
+            {
+              "seq": 6,
+              "text": "Dividing each component by two root six and simplifying gives direction cosines minus one over root six, two over root six, one over root six."
+            },
+            {
+              "seq": 7,
+              "text": "The cross check is automatic: one sixth plus four sixths plus one sixth equals one. Note that any scalar multiple would have served as direction ratios; we normalised only at the very last step — the disciplined order that guards against reporting ratios where cosines were asked."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये दो skills जोड़ता है। points A, B और C collinear हैं। unknown k निकालिए, और फिर line के direction cosines।"
+            },
+            {
+              "seq": 2,
+              "text": "A से दो direction ratio vectors बनाइए। A B है minus two, four, two, और A C है two, k plus one, minus two।"
+            },
+            {
+              "seq": 3,
+              "text": "Collinearity का मतलब ये proportional हैं। पहला और तीसरा ratio दोनों minus one के बराबर हैं, जो consistent है।"
+            },
+            {
+              "seq": 4,
+              "text": "बीच वाले ratio से, k plus one over four बराबर minus one, तो k plus one है minus four, जो k को minus five देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब A B use कीजिए, जो minus two, four, two है, magnitude root चौबीस के साथ, बराबर two root six।"
+            },
+            {
+              "seq": 6,
+              "text": "हर component को two root six से divide करके simplify करने पर direction cosines मिलते हैं minus one over root six, two over root six, one over root six।"
+            },
+            {
+              "seq": 7,
+              "text": "Cross check automatic है: one sixth plus four sixths plus one sixth equals one। ध्यान दीजिए कोई भी scalar multiple direction ratios के रूप में काम आता; हमने सिर्फ आखिरी step पर normalise किया — वो disciplined order जो cosines माँगे जाने पर ratios report करने से बचाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "worked_examples",
+      "subtopic": "Direction Cosines, Direction Ratios & Equations of a Line in Space",
+      "title": "Worked example: two lines from two relations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "DCs satisfy $3l+m+5n=0$ and $6mn-2nl+5lm=0$ — find the angle"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "m=-(3l+5n)"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "l^{2}+3ln+2n^{2}=0\\ \\Rightarrow\\ (l+n)(l+2n)=0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "l=-n\\ \\Rightarrow\\ (l,m,n)\\propto(1,2,-1)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "l=-2n\\ \\Rightarrow\\ (l,m,n)\\propto(2,-1,-1)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\cos\\theta=\\dfrac{2-2+1}{\\sqrt6\\cdot\\sqrt6}=\\dfrac{1}{6}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "We never needed the actual direction cosines — the angle formula is scale-free."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "An advanced problem. The direction cosines of two lines satisfy a linear relation, three l plus m plus five n equals zero, and a quadratic relation. Find the acute angle between the two lines."
+            },
+            {
+              "seq": 2,
+              "text": "From the linear relation, solve for m: m equals minus the quantity three l plus five n. Then substitute this into the quadratic."
+            },
+            {
+              "seq": 3,
+              "text": "After substituting and simplifying, the quadratic collapses to l squared plus three l n plus two n squared equals zero, which factors as l plus n times l plus two n."
+            },
+            {
+              "seq": 4,
+              "text": "The first factor gives l equals minus n. Back substituting into the linear relation, the first line has direction ratios proportional to one, two, minus one."
+            },
+            {
+              "seq": 5,
+              "text": "The second factor gives l equals minus two n, and the second line has direction ratios proportional to two, minus one, minus one. Both vectors have magnitude root six."
+            },
+            {
+              "seq": 6,
+              "text": "The cosine of the angle is the dot product over the product of magnitudes: two minus two plus one, over six, which is one sixth. So theta is the inverse cosine of one sixth, about eighty degrees."
+            },
+            {
+              "seq": 7,
+              "text": "Two takeaways: one linear plus one quadratic relation generically carves out two directions, which is why the question refers to two lines. And we never needed the actual direction cosines, because the angle formula is scale free."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक advanced problem। दो lines के direction cosines एक linear relation, three l plus m plus five n equals zero, और एक quadratic relation को satisfy करते हैं। दोनों lines के बीच acute angle निकालिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Linear relation से m के लिए solve कीजिए: m बराबर minus का quantity three l plus five n। फिर इसे quadratic में substitute कीजिए।"
+            },
+            {
+              "seq": 3,
+              "text": "Substitute और simplify करने के बाद, quadratic घटकर l squared plus three l n plus two n squared equals zero बनता है, जो l plus n times l plus two n में factor होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "पहला factor l बराबर minus n देता है। linear relation में वापस substitute करने पर, पहली line के direction ratios one, two, minus one के proportional हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा factor l बराबर minus two n देता है, और दूसरी line के direction ratios two, minus one, minus one के proportional हैं। दोनों vectors का magnitude root six है।"
+            },
+            {
+              "seq": 6,
+              "text": "Angle का cosine है dot product over magnitudes का product: two minus two plus one, over six, यानी one sixth। तो theta है inverse cosine of one sixth, करीब अस्सी degrees।"
+            },
+            {
+              "seq": 7,
+              "text": "दो takeaways: एक linear plus एक quadratic relation आम तौर पर दो directions निकालता है, यही वजह है सवाल दो lines का ज़िक्र करता है। और हमें कभी actual direction cosines की ज़रूरत नहीं पड़ी, क्योंकि angle formula scale free है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "tips",
+      "subtopic": "Direction Cosines, Direction Ratios & Equations of a Line in Space",
+      "title": "Directions and lines: pitfalls and pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Direction-cosine traps to dodge"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "Always normalise: divide by $\\sqrt{a^2+b^2+c^2}$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Never forget the $\\pm$ — an undirected line has two direction-cosine sets."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The angle with an axis and with the perpendicular plane are complementary, not equal."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Standardise a Cartesian equation before reading off direction ratios."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "$\\lambda$ is a length only with a unit direction vector.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "After every DC answer, square them and confirm the sum is 1."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close this subtopic by locking in the traps that examiners set again and again around direction cosines and line equations."
+            },
+            {
+              "seq": 2,
+              "text": "First, the most common blunder — writing direction ratios as the answer without dividing by their length. Whenever cosines are asked, always finish with the normalisation step."
+            },
+            {
+              "seq": 3,
+              "text": "Second, never forget the plus or minus. An undirected line has two opposite direction cosine sets, and problems that reach cos squared of an angle usually have two valid angle answers."
+            },
+            {
+              "seq": 4,
+              "text": "Third, do not confuse the angle a line makes with an axis and the angle it makes with the plane perpendicular to that axis. They are complementary, not equal."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, an equation written with a coefficient on x, y or z, or with a numerator like three minus y, hides its true direction ratios. Spend three seconds forcing it into standard form before reading the ratios — that skipped step is the cheapest mark on the page."
+            },
+            {
+              "seq": 6,
+              "text": "Fifth, do not treat the parameter lambda as a distance. Lambda is a true length only when the direction vector is a unit vector — that is, when you used direction cosines rather than raw ratios."
+            },
+            {
+              "seq": 7,
+              "text": "And a one second habit that saves whole problems: after every direction cosine answer, square the three values and confirm the sum is one. If it is not, you forgot to normalise."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलिए इस subtopic को उन traps पक्का करके बंद करते हैं जो examiners direction cosines और line equations के आसपास बार-बार लगाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, सबसे common blunder — direction ratios को answer लिख देना बिना उनकी length से divide किए। जब भी cosines माँगे जाएँ, हमेशा normalisation step के साथ खत्म कीजिए।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, plus या minus कभी मत भूलिए। एक undirected line के दो opposite direction cosine sets होते हैं, और जो problems किसी angle के cos squared तक पहुँचते हैं उनके आम तौर पर दो valid angle answers होते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, किसी line के axis के साथ angle और उस axis के perpendicular plane के साथ angle को मत confuse कीजिए। वो complementary हैं, equal नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, कोई equation जिसमें x, y या z पर coefficient हो, या numerator जैसे three minus y हो, अपने true direction ratios छिपाता है। ratios पढ़ने से पहले तीन seconds standard form में लाने में लगाइए — वो छूटा step page का सबसे सस्ता mark है।"
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ, parameter lambda को distance मत समझिए। lambda true length तभी है जब direction vector एक unit vector हो — यानी जब आपने raw ratios के बजाय direction cosines use किए हों।"
+            },
+            {
+              "seq": 7,
+              "text": "और एक one second की आदत जो पूरी problems बचाती है: हर direction cosine answer के बाद, तीनों values square कीजिए और confirm कीजिए sum one है। अगर नहीं, तो आप normalise करना भूल गए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

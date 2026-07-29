@@ -1,0 +1,1213 @@
+{
+  "chapter": "Binomial Theorem",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 7,
+  "part": 4,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 40,
+      "section_type": "concept",
+      "subtopic": "The Multinomial Theorem",
+      "title": "From two parts to k parts",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The same counting story, now with $k$ choices per bracket"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Binomial: each of the $n$ brackets donates $a$ or $b$. Multinomial: each bracket offers more than two choices."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "A term of $(a+b+c)^n$ looks like $a^{n_1}b^{n_2}c^{n_3}$ with $n_1+n_2+n_3=n$."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "caption": "Each bracket donates one of a, b, c",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 450 165\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"15\" y=\"26\" width=\"105\" height=\"44\" rx=\"8\" fill=\"none\" stroke=\"#7a5a2f\" stroke-width=\"2\"/><text x=\"67\" y=\"54\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">(a + b + c)</text><rect x=\"135\" y=\"26\" width=\"105\" height=\"44\" rx=\"8\" fill=\"none\" stroke=\"#7a5a2f\" stroke-width=\"2\"/><text x=\"187\" y=\"54\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">(a + b + c)</text><rect x=\"255\" y=\"26\" width=\"105\" height=\"44\" rx=\"8\" fill=\"none\" stroke=\"#7a5a2f\" stroke-width=\"2\"/><text x=\"307\" y=\"54\" font-family=\"system-ui, sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#3a2b16\">(a + b + c)</text><text x=\"378\" y=\"52\" font-family=\"system-ui, sans-serif\" font-size=\"17\" fill=\"#7a5a2f\">...</text><text x=\"405\" y=\"20\" font-family=\"system-ui, sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#3a2b16\">n brackets</text><path d=\"M67 72 L225 108\" stroke=\"#c0392b\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"67\" y=\"90\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#c0392b\">take a</text><path d=\"M187 72 L225 108\" stroke=\"#2e7d32\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"187\" y=\"90\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#2e7d32\">take c</text><path d=\"M307 72 L225 108\" stroke=\"#8a4d16\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"307\" y=\"90\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#8a4d16\">take b</text><text x=\"225\" y=\"132\" font-family=\"system-ui, sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#3a2b16\">one term:  a^(n1) b^(n2) c^(n3)</text><text x=\"225\" y=\"152\" font-family=\"system-ui, sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#7a5a2f\">with  n1 + n2 + n3 = n</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "latex": "\\text{coefficient of }a^{n_1}b^{n_2}c^{n_3}=\\frac{n!}{n_1!\\,n_2!\\,n_3!}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "style": "red-margin",
+          "text": "With two parts this collapses to $\\tfrac{n!}{r!(n-r)!}=\\binom{n}{r}$ — the binomial theorem is the $k=2$ case."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "Counting distinct terms is a P&C question: non-negative solutions of $n_1+\\cdots+n_k=n$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 74,
+          "latex": "\\text{number of distinct terms}=\\binom{n+k-1}{k-1}\\quad(\\text{stars and bars})"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 84,
+          "style": "red-margin",
+          "text": "Assumes independent variables — hidden relations merge terms (recall $(1+2x+x^2)^{10}=(1+x)^{20}$)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> We opened this whole chapter with a counting story: multiply a plus b by itself n times, and each bracket hands you either an a or a b. The multinomial theorem asks the exact same question, but now each bracket offers more than two choices."
+            },
+            {
+              "seq": 2,
+              "text": "So instead of two options per bracket, imagine a plus b plus c, to the n. Each of the n brackets donates an a, a b, or a c. Everything else about the reasoning stays identical — you're still just counting how the choices can be made."
+            },
+            {
+              "seq": 3,
+              "text": "A single term now looks like a to the n one, b to the n two, c to the n three, where n one brackets gave an a, n two gave a b, and n three gave a c. And of course those exponents add to n, because every bracket donated exactly once."
+            },
+            {
+              "seq": 4,
+              "text": "Picture the three brackets, each offering a, b, or c. You walk along and pick one letter from each. The pattern of picks — how many a's, how many b's, how many c's — is exactly what determines which term you land on."
+            },
+            {
+              "seq": 5,
+              "text": "So what's the coefficient? It counts how many ways the n brackets can be split into those groups: n one giving a, n two giving b, n three giving c. That count is the multinomial coefficient, n factorial over n one factorial, n two factorial, n three factorial — the same arrangements-with-repetition idea from Permutations and Combinations."
+            },
+            {
+              "seq": 6,
+              "text": "And here's the beautiful sanity check. With just two parts, that formula collapses to n factorial over r factorial times n minus r factorial, which is exactly n C r. So the binomial theorem you've used all chapter is simply the k equals two case of this bigger theorem."
+            },
+            {
+              "seq": 7,
+              "text": "Counting how many distinct terms appear is also a Permutations and Combinations question in disguise. A term is fixed by its exponent list, n one through n k, adding to n, each at least zero. So you're counting the non-negative integer solutions of that equation."
+            },
+            {
+              "seq": 8,
+              "text": "And that's the classic stars-and-bars count: the number of distinct terms is n plus k minus one, choose k minus one. Distributing n identical units among k slots — the same tool you met in P and C."
+            },
+            {
+              "seq": 9,
+              "text": "One caution. The term count assumes the variables are genuinely independent, with no hidden relations. If there's a secret link — like the base being a perfect power — distinct terms collapse together, exactly as one plus two x plus x squared to the tenth became one plus x to the twentieth back in subtopic two."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious> Humne poora chapter ek counting story se khola tha: $a+b$ ko apne aap se $n$ baar multiply karo, aur har bracket ya toh $a$ deta hai ya $b$. Multinomial theorem bilkul wahi sawaal poochhta hai, par ab har bracket do se zyada choices deta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Toh har bracket mein do options ke bajaye, socho $a+b+c$, power $n$. Har ek $n$ brackets ek $a$, ek $b$, ya ek $c$ deta hai. Reasoning ke baaki sab kuch bilkul same rehta hai — aap abhi bhi bas gin rahe ho ki choices kaise ki ja sakti hain."
+            },
+            {
+              "seq": 3,
+              "text": "Ek single term ab dikhta hai $a$ power $n$ one, $b$ power $n$ two, $c$ power $n$ three, jahan $n$ one brackets ne $a$ diya, $n$ two ne $b$, aur $n$ three ne $c$. Aur zaahir hai yeh exponents add hokar $n$ bante hain, kyunki har bracket ne theek ek baar diya."
+            },
+            {
+              "seq": 4,
+              "text": "Teen brackets picture karo, har ek $a$, $b$, ya $c$ offer karta hai. Aap chalte ho aur har ek se ek letter chunte ho. Picks ka pattern — kitne $a$, kitne $b$, kitne $c$ — theek yahi tay karta hai ki aap kaunse term pe pahunchte ho."
+            },
+            {
+              "seq": 5,
+              "text": "Toh coefficient kya hai? Woh ginta hai ki $n$ brackets un groups mein kitne तरीको se baante ja sakte hain: $n$ one $a$ dete, $n$ two $b$, $n$ three $c$. Woh count multinomial coefficient hai, $n$ factorial upon $n$ one factorial, $n$ two factorial, $n$ three factorial — wahi arrangements-with-repetition idea Permutations and Combinations se."
+            },
+            {
+              "seq": 6,
+              "text": "Aur yeh raha khoobsurat sanity check. Sirf do parts ke saath, woh formula collapse hokar $n$ factorial upon $r$ factorial into $n-r$ factorial ban jaata hai, jo theek $n\\,C\\,r$ hai. Toh jo binomial theorem aapne poore chapter use kiya woh bas iss bade theorem ka $k$ equals two case hai."
+            },
+            {
+              "seq": 7,
+              "text": "Kitne distinct terms aate hain yeh ginna bhi ek Permutations and Combinations sawaal hai bhes badle. Ek term uski exponent list se fix hota hai, $n$ one se $n$ k tak, add hokar $n$, har ek at least zero. Toh aap us equation ke non-negative integer solutions gin rahe ho."
+            },
+            {
+              "seq": 8,
+              "text": "Aur yeh classic stars-and-bars count hai: distinct terms ki sankhya hai $n+k-1$, choose $k-1$. $n$ identical units ko $k$ slots mein baantna — wahi tool jo aap P and C mein mile the."
+            },
+            {
+              "seq": 9,
+              "text": "Ek caution. Term count maanta hai ki variables sach mein independent hain, koi hidden relations नahi. Agar koi chhupa link ho — jaise base ka perfect power hona — distinct terms saath mein collapse ho jaate hain, theek jaise $1+2x+x^2$ power ten subtopic two mein $1+x$ power twenty ban gaya tha."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 41,
+      "section_type": "formulas",
+      "subtopic": "The Multinomial Theorem",
+      "title": "The multinomial theorem and its counts",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Theorem, coefficient, term count, coefficient sum"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "(x_1+x_2+\\cdots+x_k)^n=\\sum\\frac{n!}{n_1!\\,n_2!\\cdots n_k!}\\,x_1^{n_1}x_2^{n_2}\\cdots x_k^{n_k}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "latex": "\\text{multinomial coefficient}=\\frac{n!}{n_1!\\,n_2!\\cdots n_k!},\\quad \\sum n_i=n"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "latex": "\\text{number of distinct terms}=\\binom{n+k-1}{k-1}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "latex": "\\text{trinomial: }\\binom{n+2}{2}=\\frac{(n+1)(n+2)}{2}\\ \\text{terms}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "latex": "\\text{sum of all coefficients}=k^n\\quad(\\text{set every }x_i=1)"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "$k=2$ recovers the ordinary binomial theorem."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 74,
+          "style": "red-margin",
+          "text": "$n$ is the index, $k$ the number of parts, $n_i$ the exponents — all pure numbers."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here's the formula sheet for the multinomial theorem. It's short — four results and two reminders — because it's really one idea generalised."
+            },
+            {
+              "seq": 2,
+              "text": "The theorem itself: x one plus x two, up to x k, all to the n, equals the sum over all valid exponent-lists of n factorial over the product of the n i factorials, times x one to the n one, up to x k to the n k. The sum runs over every list of non-negative exponents adding to n."
+            },
+            {
+              "seq": 3,
+              "text": "The multinomial coefficient is the piece out front: n factorial over n one factorial, n two factorial, and so on to n k factorial — valid whenever the exponents sum to n. That's the count of ways to split the n brackets into the k groups."
+            },
+            {
+              "seq": 4,
+              "text": "The number of distinct terms is n plus k minus one, choose k minus one. That's the stars-and-bars count, and it depends only on n and the number of parts k — not on the coefficients."
+            },
+            {
+              "seq": 5,
+              "text": "For the common case of a trinomial, k equals three, that becomes n plus two choose two, which simplifies to n plus one, times n plus two, over two. Worth memorising, since trinomial term-counts show up a lot."
+            },
+            {
+              "seq": 6,
+              "text": "To get the sum of all the coefficients, just set every variable equal to one. The left side becomes k to the n, so the coefficients sum to k to the n. Notice this is a different quantity from the number of terms — don't confuse them."
+            },
+            {
+              "seq": 7,
+              "text": "And the unifying reminder: setting k equals two recovers the ordinary binomial theorem exactly. Everything you learned in the first six subtopics is the two-part special case of what's on this board."
+            },
+            {
+              "seq": 8,
+              "text": "The cast: n is the index, k is the number of parts, and the n i are the individual exponents. As always through this chapter, every quantity here is a pure number."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Yeh raha multinomial theorem ka formula sheet. Yeh chhota hai — chaar results aur do reminders — kyunki yeh asal mein ek hi idea generalised hai."
+            },
+            {
+              "seq": 2,
+              "text": "Theorem khud: $x$ one plus $x$ two, $x$ k tak, poora power $n$, equals saari valid exponent-lists ke upar sum of $n$ factorial upon $n$ i factorials ke product, into $x$ one power $n$ one, $x$ k power $n$ k tak. Sum har us list pe chalta hai jinke non-negative exponents add hokar $n$ banein."
+            },
+            {
+              "seq": 3,
+              "text": "Multinomial coefficient aage waala piece hai: $n$ factorial upon $n$ one factorial, $n$ two factorial, aise hi $n$ k factorial tak — valid jab exponents add hokar $n$ banein. Yeh $n$ brackets ko $k$ groups mein baantne ke तरीको ka count hai."
+            },
+            {
+              "seq": 4,
+              "text": "Distinct terms ki sankhya hai $n+k-1$, choose $k-1$. Yeh stars-and-bars count hai, aur yeh sirf $n$ aur parts ki sankhya $k$ pe depend karta hai — coefficients pe नahi."
+            },
+            {
+              "seq": 5,
+              "text": "Trinomial ke common case ke liye, $k$ equals three, woh ban jaata hai $n+2$ choose two, jo simplify hokar $n+1$, into $n+2$, upon two. Ratt karne layak, kyunki trinomial term-counts bahut aate hain."
+            },
+            {
+              "seq": 6,
+              "text": "Saare coefficients ka sum paane ke liye, bas har variable ko one ke barabar rakho. Left side $k$ power $n$ ban jaata hai, toh coefficients add hokar $k$ power $n$. Gaur karo yeh terms ki sankhya se alag quantity hai — inhe confuse mat karo."
+            },
+            {
+              "seq": 7,
+              "text": "Aur unifying reminder: $k$ equals two rakhne se ordinary binomial theorem theek wapas mil jaata hai. Jo aapne pehle chhe subtopics mein seekha woh iss board pe jo hai uska two-part special case hai."
+            },
+            {
+              "seq": 8,
+              "text": "Cast: $n$ index hai, $k$ parts ki sankhya, aur $n$ i individual exponents. Iss poore chapter ki tarah, yahan har quantity ek pure number hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 42,
+      "section_type": "concept",
+      "subtopic": "The Multinomial Theorem",
+      "title": "Why the counts hold, and how to extract a coefficient",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two proofs and two techniques"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Coefficient proof: expanding means picking one $x_i$ from each of the $n$ factors."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "\\#\\{\\text{assignments into groups }n_1,\\dots,n_k\\}=\\frac{n!}{n_1!\\,n_2!\\cdots n_k!}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Term-count proof: each term $\\leftrightarrow$ a non-negative solution of $n_1+\\cdots+n_k=n$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\text{stars and bars}\\ \\Rightarrow\\ \\binom{n+k-1}{k-1}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Technique 1 — coeff of $x_1^{a}x_2^{b}\\cdots$: check $a+b+\\cdots=n$ (else 0), then $\\tfrac{n!}{a!\\,b!\\cdots}$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "Technique 2 — coeff of $x^m$ in $(1+x+\\cdots+x^t)^k$: use $\\tfrac{1-x^{t+1}}{1-x}$ with $(1-x)^{-k}$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 70,
+          "style": "red-margin",
+          "text": "“Number of terms” assumes independent variables; related variables collapse the count."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's justify the two counts and then turn them into two working techniques."
+            },
+            {
+              "seq": 2,
+              "text": "First, why the coefficient is that factorial ratio. Expanding x one plus dot dot dot plus x k, to the n, means going through the n factors and picking one variable from each, then multiplying. A given term, x one to the n one up to x k to the n k, arises every time we pick x one from some n one of the factors, x two from n two of them, and so on."
+            },
+            {
+              "seq": 3,
+              "text": "So the coefficient counts the number of ways to assign the n factors into labelled groups of sizes n one through n k. That count is exactly n factorial over the product of the group-size factorials — the arrangements-of-a-multiset formula. Sum over all valid exponent-lists and you have the theorem."
+            },
+            {
+              "seq": 4,
+              "text": "Second, why the term count. Each distinct term corresponds to exactly one non-negative integer solution of n one plus dot dot dot plus n k equals n. So counting terms is counting solutions of that equation."
+            },
+            {
+              "seq": 5,
+              "text": "And that's stars and bars: distributing n identical units among k slots gives n plus k minus one, choose k minus one. Both proofs are pure Permutations and Combinations — the multinomial theorem is really a counting theorem wearing algebra's clothes."
+            },
+            {
+              "seq": 6,
+              "text": "Now technique one, the everyday task: find the coefficient of a specific monomial like x one to the a, x two to the b, and so on. First check that a plus b plus dot dot dot equals n — if it doesn't, the coefficient is simply zero. If it does, the coefficient is n factorial over a factorial, b factorial, and so on."
+            },
+            {
+              "seq": 7,
+              "text": "Technique two handles the trickier shape: the coefficient of x to the m in one plus x plus up to x to the t, all to the k. Rewrite the bracket as one minus x to the t plus one, over one minus x, and pair it with the any-index expansion of one minus x to the minus k from subtopic five. That converts a messy collection into two clean binomial-coefficient lookups."
+            },
+            {
+              "seq": 8,
+              "text": "And carry the caution: the phrase number of terms always assumes independent variables. If the variables are secretly related — a perfect power, a hidden identity — distinct terms merge and the real count drops below the formula. Always check the base isn't hiding structure."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo dono counts justify karte hain aur phir unhe do working techniques mein badalte hain."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle, coefficient woh factorial ratio kyun hai. $x$ one plus dot dot dot plus $x$ k, power $n$, expand karne ka matlab hai $n$ factors mein se guzarna aur har ek se ek variable chunna, phir multiply karna. Ek given term, $x$ one power $n$ one se $x$ k power $n$ k tak, har baar banta hai jab hum $x$ one ko kisi $n$ one factors se chunte hain, $x$ two ko $n$ two se, aise hi."
+            },
+            {
+              "seq": 3,
+              "text": "Toh coefficient ginta hai ki $n$ factors ko labelled groups mein $n$ one se $n$ k sizes ke assign karne ke kitne तरीके hain. Woh count theek $n$ factorial upon group-size factorials ka product hai — arrangements-of-a-multiset formula. Saari valid exponent-lists pe sum karo aur theorem mil gaya."
+            },
+            {
+              "seq": 4,
+              "text": "Doosra, term count kyun. Har distinct term theek ek non-negative integer solution of $n$ one plus dot dot dot plus $n$ k equals $n$ se mel khata hai. Toh terms ginna us equation ke solutions ginna hai."
+            },
+            {
+              "seq": 5,
+              "text": "Aur yeh stars and bars hai: $n$ identical units ko $k$ slots mein baantna deta hai $n+k-1$, choose $k-1$. Dono proofs pure Permutations and Combinations hain — multinomial theorem asal mein ek counting theorem hai algebra ke kapde pehne hue."
+            },
+            {
+              "seq": 6,
+              "text": "Ab technique one, roz ka kaam: ek specific monomial jaise $x$ one power $a$, $x$ two power $b$, aise hi ka coefficient nikaalo. Pehle check karo ki $a$ plus $b$ plus dot dot dot equals $n$ — agar नahi, toh coefficient bas zero hai. Agar haan, toh coefficient hai $n$ factorial upon $a$ factorial, $b$ factorial, aise hi."
+            },
+            {
+              "seq": 7,
+              "text": "Technique two zyada tricky shape sambhalta hai: $1+x+\\cdots+x^t$, poora power $k$ mein $x$ power $m$ ka coefficient. Bracket ko $1-x^{t+1}$ upon $1-x$ rewrite karo, aur isse subtopic five ke $1-x$ power minus $k$ ke any-index expansion se pair karo. Yeh ek messy collection ko do saaf binomial-coefficient lookups mein badal deta hai."
+            },
+            {
+              "seq": 8,
+              "text": "Aur caution le jao: phrase number of terms hamesha independent variables maanta hai. Agar variables chupke se related hain — ek perfect power, ek hidden identity — distinct terms merge ho jaate hain aur asli count formula se neeche gir jaata hai. Hamesha check karo ki base koi structure toh नahi chhupa raha."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 43,
+      "section_type": "worked_examples",
+      "subtopic": "The Multinomial Theorem",
+      "title": "Counting terms, and a three-variable coefficient",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 [CBSE]: distinct terms in $(a+b+c)^{12}$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "n=12,\\ k=3:\\ \\binom{12+3-1}{3-1}=\\binom{14}{2}=\\frac{14\\cdot13}{2}=91"
+        },
+        {
+          "seq": 3,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "Example 2 [JEE Main]: coeff of $x^2y^3z^4$ in $(x+y+z)^9$"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Check the exponents sum to the index: $2+3+4=9=n$. ✓"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 38,
+          "latex": "\\text{coeff}=\\frac{9!}{2!\\,3!\\,4!}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "=\\frac{362880}{2\\cdot6\\cdot24}=\\frac{362880}{288}=1260"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "style": "red-margin",
+          "text": "Trap: using a single $\\binom{9}{2}$. Three variables need the full multinomial $\\tfrac{n!}{a!b!c!}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one is a direct term-count: how many distinct terms are in a plus b plus c, to the twelfth?"
+            },
+            {
+              "seq": 2,
+              "text": "Use the stars-and-bars formula with n equals twelve and k equals three. That's twelve plus three minus one, choose three minus one, which is fourteen choose two. Fourteen times thirteen over two is ninety one. So ninety one distinct terms, and we never had to expand anything."
+            },
+            {
+              "seq": 3,
+              "text": "Example two asks for a specific coefficient: the coefficient of x squared, y cubed, z to the fourth, in x plus y plus z, to the ninth."
+            },
+            {
+              "seq": 4,
+              "text": "Before anything, run the mandatory check: do the exponents add up to the index? Two plus three plus four is nine, which equals n. Good — the term genuinely exists, so its coefficient is non-zero. If they hadn't summed to nine, the coefficient would be zero and we'd stop."
+            },
+            {
+              "seq": 5,
+              "text": "Now apply the multinomial coefficient. It's nine factorial over two factorial, three factorial, four factorial — the factorials of the three exponents. Set it up exactly like that."
+            },
+            {
+              "seq": 6,
+              "text": "Compute. Nine factorial is three hundred sixty two thousand eight hundred eighty. The denominator is two times six times twenty four, which is two hundred eighty eight. Divide, and you get one thousand two hundred sixty."
+            },
+            {
+              "seq": 7,
+              "text": "The trap here is reaching for a single binomial coefficient like nine choose two. That's the two-variable tool, and it's simply wrong with three variables. When there are three or more parts, you must use the full multinomial coefficient, n factorial over the product of the exponent factorials."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one ek direct term-count hai: $a+b+c$, power twelve, mein kitne distinct terms hain?"
+            },
+            {
+              "seq": 2,
+              "text": "Stars-and-bars formula use karo $n$ equals twelve aur $k$ equals three ke saath. Woh hai twelve plus three minus one, choose three minus one, jo fourteen choose two hai. Fourteen into thirteen upon two hai ninety-one. Toh ninety-one distinct terms, aur humein kuch bhi expand नahi karna pada."
+            },
+            {
+              "seq": 3,
+              "text": "Example two ek specific coefficient maangta hai: $x$ square, $y$ cube, $z$ power four ka coefficient, $x+y+z$, power nine, mein."
+            },
+            {
+              "seq": 4,
+              "text": "Kuch bhi karne se pehle, mandatory check chalao: kya exponents index tak add hote hain? Two plus three plus four hai nine, jo $n$ ke barabar hai. Sahi — term sach mein exist karta hai, toh iska coefficient non-zero hai. Agar woh nine tak add na hote, toh coefficient zero hota aur hum ruk jaate."
+            },
+            {
+              "seq": 5,
+              "text": "Ab multinomial coefficient lagao. Yeh hai nine factorial upon two factorial, three factorial, four factorial — teen exponents ke factorials. Bilkul aise set up karo."
+            },
+            {
+              "seq": 6,
+              "text": "Compute karo. Nine factorial hai three-lakh-sixty-two-thousand-eight-hundred-eighty. Denominator hai two into six into twenty-four, jo two-hundred-eighty-eight. Divide karo, aur milta hai one-thousand-two-hundred-sixty."
+            },
+            {
+              "seq": 7,
+              "text": "Yahan trap hai ek single binomial coefficient jaise nine choose two uthana. Woh two-variable tool hai, aur teen variables ke saath bas galat hai. Jab teen ya zyada parts hon, aapko poora multinomial coefficient use karna hoga, $n$ factorial upon exponent factorials ka product."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 44,
+      "section_type": "worked_examples",
+      "subtopic": "The Multinomial Theorem",
+      "title": "A coefficient by cases, and by the geometric-series bridge",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 [JEE Main]: coeff of $x^4$ in $(1+x+x^2)^3$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Need $n_1+n_2+n_3=3$ with $x$-power $n_2+2n_3=4$: $(0,2,1)$ or $(1,0,2)$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "\\frac{3!}{0!\\,2!\\,1!}+\\frac{3!}{1!\\,0!\\,2!}=3+3=6"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "style": "red-margin",
+          "text": "Check: $(1+x+x^2)^3=1+3x+6x^2+7x^3+6x^4+3x^5+x^6$ — palindromic, coeff of $x^4=6$."
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 4 [JEE Adv]: coeff of $x^7$ in $(1+x+x^2+\\cdots)^3$"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "1+x+x^2+\\cdots=(1-x)^{-1}\\ \\Rightarrow\\ (1+x+x^2+\\cdots)^3=(1-x)^{-3}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 58,
+          "latex": "[x^r](1-x)^{-3}=\\binom{r+2}{2}\\ \\xrightarrow{r=7}\\ \\binom{9}{2}=36"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "style": "red-margin",
+          "text": "Also $=$ number of solutions of $n_1+n_2+n_3=7$ — multinomial and stars-and-bars agree."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three finds a coefficient by direct casework: the coefficient of x to the fourth in one plus x plus x squared, all cubed."
+            },
+            {
+              "seq": 2,
+              "text": "Think of it as choosing, from three factors, some ones, some x's, some x squareds. Let n one, n two, n three be how many give each; they must sum to three, and the total x-power n two plus twice n three must equal four. Solving that pair of conditions gives exactly two exponent-lists: zero, two, one, and one, zero, two."
+            },
+            {
+              "seq": 3,
+              "text": "Each list contributes its multinomial coefficient. The first, zero-two-one, gives three factorial over zero factorial, two factorial, one factorial, which is three. The second, one-zero-two, also gives three. Add them: three plus three is six. So the coefficient of x to the fourth is six."
+            },
+            {
+              "seq": 4,
+              "text": "You can sanity-check by actually expanding: one plus x plus x squared, cubed, is one, plus three x, plus six x squared, plus seven x cubed, plus six x to the fourth, plus three x to the fifth, plus x to the sixth. The coefficient of x to the fourth is indeed six — and notice the coefficients are palindromic, reading the same both ways."
+            },
+            {
+              "seq": 5,
+              "text": "Example four looks like a multinomial but has a slicker route. Find the coefficient of x to the seventh in one plus x plus x squared and so on, forever, all cubed."
+            },
+            {
+              "seq": 6,
+              "text": "Recognise the bracket. One plus x plus x squared, continuing forever, is the geometric series, which is one minus x, to the minus one. So the whole expression is one minus x, to the minus three — straight back to the any-index tools from subtopic five."
+            },
+            {
+              "seq": 7,
+              "text": "And we already know that expansion. The coefficient of x to the r in one minus x to the minus three is r plus two choose two. For r equals seven that's nine choose two, which is thirty six. One clean lookup, no casework at all."
+            },
+            {
+              "seq": 8,
+              "text": "<excited> And here's the lovely consistency: that thirty six is also the number of non-negative solutions of n one plus n two plus n three equals seven. The multinomial viewpoint and the stars-and-bars viewpoint give the same answer, because they're the same counting question seen from two directions."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three ek coefficient direct casework se nikaalta hai: $1+x+x^2$, poora cube, mein $x$ power four ka coefficient."
+            },
+            {
+              "seq": 2,
+              "text": "Isse aise socho ki teen factors mein se, kuch ones, kuch $x$, kuch $x$ square chun rahe ho. $n$ one, $n$ two, $n$ three ho kitne har ek dete hain; woh add hokar three banne chahiye, aur total $x$-power $n$ two plus twice $n$ three four ke barabar hona chahiye. Us pair of conditions ko solve karne se theek do exponent-lists milti hain: zero, two, one, aur one, zero, two."
+            },
+            {
+              "seq": 3,
+              "text": "Har list apna multinomial coefficient contribute karti hai. Pehli, zero-two-one, deti hai three factorial upon zero factorial, two factorial, one factorial, jo three hai. Doosri, one-zero-two, bhi three deti hai. Inhe add karo: three plus three hai six. Toh $x$ power four ka coefficient hai six."
+            },
+            {
+              "seq": 4,
+              "text": "Aap sach mein expand karke sanity-check kar sakte ho: $1+x+x^2$, cube, hai one, plus three $x$, plus six $x$ square, plus seven $x$ cube, plus six $x$ power four, plus three $x$ power five, plus $x$ power six. $x$ power four ka coefficient sach mein six hai — aur gaur karo coefficients palindromic hain, dono taraf se same padhte hain."
+            },
+            {
+              "seq": 5,
+              "text": "Example four multinomial jaisa dikhta hai par ek slicker route hai. $1+x+x^2$ aise hi, hamesha, poora cube, mein $x$ power seven ka coefficient nikaalo."
+            },
+            {
+              "seq": 6,
+              "text": "Bracket pehchaano. $1+x+x^2$, hamesha jaari, geometric series hai, jo $1-x$, power minus one hai. Toh poori expression hai $1-x$, power minus three — seedha subtopic five ke any-index tools pe wapas."
+            },
+            {
+              "seq": 7,
+              "text": "Aur hum woh expansion pehle se jaante hain. $1-x$ power minus three mein $x$ power $r$ ka coefficient hai $r+2$ choose two. $r$ equals seven ke liye woh nine choose two, jo thirty-six hai. Ek saaf lookup, koi casework bilkul नahi."
+            },
+            {
+              "seq": 8,
+              "text": "<excited> Aur yeh rahi pyaari consistency: woh thirty-six $n$ one plus $n$ two plus $n$ three equals seven ke non-negative solutions ki sankhya bhi hai. Multinomial viewpoint aur stars-and-bars viewpoint same answer dete hain, kyunki woh do directions se dekha ek hi counting sawaal hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 45,
+      "section_type": "tips",
+      "subtopic": "The Multinomial Theorem",
+      "title": "Pitfalls and pro-tips for the multinomial theorem",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The four ways multinomial questions go wrong"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Using a binomial coefficient for 3+ variables: coeff of $x^ay^bz^c$ is $\\tfrac{n!}{a!b!c!}$, not $\\binom{n}{a}$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "style": "red-margin",
+          "text": "Forgetting the sum-to-$n$ check: a coefficient is 0 unless the exponents add to exactly $n$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Confusing 'number of terms' $\\binom{n+k-1}{k-1}$ with 'sum of coefficients' $k^n$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "style": "red-margin",
+          "text": "Hidden relations merge terms — the term count assumes independent variables."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "text": "Pro-Tip: for $[x^m]$ in $(1+x+\\cdots+x^t)^k$, use $\\tfrac{1-x^{t+1}}{1-x}$ with $(1-x)^{-k}$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Memory aid: spread $n$ choices over $k$ boxes — coefficient is $n!$ over the factorials of the box-sizes."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close the multinomial with its four characteristic traps. They're all about not slipping back into two-variable habits."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, the biggest: using a binomial coefficient when there are three or more variables. The coefficient of x to the a, y to the b, z to the c is n factorial over a factorial, b factorial, c factorial — not n choose a, and not any single combination. Three parts demand the full multinomial coefficient."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, forgetting the sum-to-n check. A monomial's coefficient is zero unless its exponents add up to exactly n. Always verify that first; if they don't sum to n, the term isn't in the expansion at all, and you can stop immediately."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, confusing two different questions. The number of terms is n plus k minus one choose k minus one. The sum of the coefficients is k to the n, found by setting every variable to one. These are different quantities — read carefully which one is being asked."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, hidden relations. The term count assumes the variables are independent. If the bracket is secretly a perfect power, or the variables are linked, distinct terms collapse together and the real count is smaller than the formula. Check the base before trusting the count."
+            },
+            {
+              "seq": 6,
+              "text": "And the pro-tip for the awkward case: to find the coefficient of x to the m in one plus x, up to x to the t, all to the k, convert the bracket to one minus x to the t plus one, over one minus x, and pair it with the any-index expansion of one minus x to the minus k. That turns a messy multinomial into two clean binomial-coefficient lookups."
+            },
+            {
+              "seq": 7,
+              "text": "Hold the one-line picture and the whole theorem stays intuitive: you're spreading n choices over k boxes, and the coefficient is n factorial over the factorials of the box-sizes. Everything else is just that idea, counted carefully."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo multinomial ko iske chaar characteristic traps ke saath band karte hain. Yeh sab two-variable aadaton mein wapas na phisalne ke baare mein hain."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one, sabse bada: binomial coefficient use karna jab teen ya zyada variables hon. $x$ power $a$, $y$ power $b$, $z$ power $c$ ka coefficient hai $n$ factorial upon $a$ factorial, $b$ factorial, $c$ factorial — na ki $n$ choose $a$, aur na koi single combination. Teen parts poore multinomial coefficient ki maang karte hain."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, sum-to-$n$ check bhoolna. Ek monomial ka coefficient zero hota hai jab tak uske exponents add hokar theek $n$ na banein. Hamesha pehle verify karo; agar woh $n$ tak add नahi hote, toh term expansion mein hai hi नahi, aur aap turant ruk sakte ho."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three, do alag questions confuse karna. Terms ki sankhya hai $n+k-1$ choose $k-1$. Coefficients ka sum hai $k$ power $n$, har variable ko one rakh ke nikaala. Yeh alag quantities hain — dhyaan se padho kaunsa maanga ja raha hai."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, hidden relations. Term count maanta hai ki variables independent hain. Agar bracket chupke se perfect power hai, ya variables linked hain, distinct terms saath collapse ho jaate hain aur asli count formula se chhota hai. Count pe bharosa karne se pehle base check karo."
+            },
+            {
+              "seq": 6,
+              "text": "Aur awkward case ka pro-tip: $1+x$, $x$ power $t$ tak, poora power $k$ mein $x$ power $m$ ka coefficient nikaalne ke liye, bracket ko $1-x^{t+1}$ upon $1-x$ mein badlo, aur isse $1-x$ power minus $k$ ke any-index expansion se pair karo. Yeh ek messy multinomial ko do saaf binomial-coefficient lookups mein badal deta hai."
+            },
+            {
+              "seq": 7,
+              "text": "One-line picture pakdo aur poora theorem intuitive rehta hai: aap $n$ choices ko $k$ boxes pe faila rahe ho, aur coefficient hai $n$ factorial upon box-sizes ke factorials. Baaki sab bas wahi idea hai, dhyaan se gina hua."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 46,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Review",
+      "title": "Binomial Theorem — chapter formula recap",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Every essential formula, one screen ($C_r=\\binom{n}{r}$)"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "(a+b)^n=\\sum_{r=0}^{n}\\binom{n}{r}a^{n-r}b^{r},\\qquad T_{r+1}=\\binom{n}{r}a^{n-r}b^{r},\\qquad \\#\\text{terms}=n+1"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 20,
+          "latex": "E(r)=p(n-r)-qr;\\quad n\\text{ even}:T_{\\frac{n}{2}+1};\\quad n\\text{ odd}:T_{\\frac{n+1}{2}},T_{\\frac{n+3}{2}}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\text{greatest coeff}=\\text{middle};\\quad \\frac{n-r+1}{r}\\Big|\\tfrac{b}{a}\\Big|\\ge1;\\quad k=\\frac{(n+1)|x|}{1+|x|}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 44,
+          "latex": "\\sum C_r=2^n,\\quad \\sum(-1)^rC_r=0,\\quad \\sum rC_r=n\\,2^{n-1}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\sum \\frac{C_r}{r+1}=\\frac{2^{n+1}-1}{n+1},\\qquad \\sum C_r^{2}=\\binom{2n}{n}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 68,
+          "latex": "(1+x)^n=1+nx+\\tfrac{n(n-1)}{2!}x^2+\\cdots\\ (|x|<1),\\qquad (1+x)^n\\approx 1+nx"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 80,
+          "latex": "(1+K)^n\\equiv 1+nK\\pmod{K^2},\\qquad (I+f)f'=(p^2-q)^n"
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 92,
+          "latex": "\\text{multinomial coeff}=\\frac{n!}{n_1!\\cdots n_k!},\\ \\ \\#\\text{terms}=\\binom{n+k-1}{k-1},\\ \\ \\sum\\text{coeff}=k^n"
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 104,
+          "style": "red-margin",
+          "text": "Backbone: symmetry $\\binom{n}{r}=\\binom{n}{n-r}$ and Pascal $\\binom{n}{r}+\\binom{n}{r-1}=\\binom{n+1}{r}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's pull the whole chapter onto one screen. Here C r always means n C r, and I'll walk each block in the order we learned them."
+            },
+            {
+              "seq": 2,
+              "text": "The foundation from subtopics one and two: the theorem itself, a plus b to the n as the sum of n C r, a to the n minus r, b to the r; the general term T r plus one, your workhorse; and the term count, n plus one, never n."
+            },
+            {
+              "seq": 3,
+              "text": "The specific-term machinery. The net exponent E of r is p times n minus r, minus q r — set it to k or to zero. And the middle term sits at n over two plus one for even n, or splits into two terms for odd n."
+            },
+            {
+              "seq": 4,
+              "text": "The greatest quantities from subtopic three. The greatest coefficient is always the middle one. The numerically greatest term comes from the ratio n minus r plus one over r, times the size of b over a, at least one — and for one plus x to the n, the shortcut k equals n plus one times the size of x over one plus the size of x."
+            },
+            {
+              "seq": 5,
+              "text": "The coefficient sums from subtopic four, first batch. The coefficients add to two to the n; the alternating sum is zero; and the index-weighted sum, r times C r, is n times two to the n minus one."
+            },
+            {
+              "seq": 6,
+              "text": "The second batch of sums. The integration-weighted sum, C r over r plus one, is two to the n plus one minus one, over n plus one. And the sum of the squares of the coefficients is two n choose n."
+            },
+            {
+              "seq": 7,
+              "text": "The any-index results from subtopic five. One plus x to the n expands as an infinite series, valid only for the size of x less than one; and for small x, it's approximately one plus n x."
+            },
+            {
+              "seq": 8,
+              "text": "The applications from subtopic six. One plus K to the n is congruent to one plus n K modulo K squared — the remainder engine. And the conjugate product, I plus f times f prime, equals p squared minus q, to the n — the parts engine."
+            },
+            {
+              "seq": 9,
+              "text": "The multinomial from subtopic seven. The coefficient is n factorial over the product of exponent factorials; the number of terms is n plus k minus one choose k minus one; and the sum of all coefficients is k to the n."
+            },
+            {
+              "seq": 10,
+              "text": "And under all of it, the backbone: symmetry, n C r equals n C n minus r, and Pascal's rule, n C r plus n C r minus one equals n plus one C r. Master those two and the entire chapter hangs together."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Chalo poore chapter ko ek screen pe le aate hain. Yahan $C$ $r$ hamesha $n\\,C\\,r$ hai, aur main har block ko usi order mein chalunga jaise humne seekha."
+            },
+            {
+              "seq": 2,
+              "text": "Subtopics one aur two se foundation: theorem khud, $a+b$ power $n$ as sum of $n\\,C\\,r$, $a$ power $n-r$, $b$ power $r$; general term $T$ $r+1$, aapka workhorse; aur term count, $n+1$, kabhi $n$ नahi."
+            },
+            {
+              "seq": 3,
+              "text": "Specific-term machinery. Net exponent $E$ of $r$ hai $p$ into $n-r$, minus $q$ $r$ — isse $k$ ya zero rakho. Aur middle term even $n$ ke liye $n$ upon two plus one pe baithta hai, ya odd $n$ ke liye do terms mein split hota hai."
+            },
+            {
+              "seq": 4,
+              "text": "Subtopic three se greatest quantities. Greatest coefficient hamesha middle waala hai. Numerically greatest term ratio $n-r+1$ upon $r$, into $b$ upon $a$ ka size, at least one, se aata hai — aur $1+x$ power $n$ ke liye shortcut $k$ equals $n+1$ into $x$ ka size upon one plus $x$ ka size."
+            },
+            {
+              "seq": 5,
+              "text": "Subtopic four se coefficient sums, pehla batch. Coefficients add hokar two power $n$; alternating sum zero; aur index-weighted sum, $r$ into $C$ $r$, hai $n$ into two power $n-1$."
+            },
+            {
+              "seq": 6,
+              "text": "Sums ka doosra batch. Integration-weighted sum, $C$ $r$ upon $r+1$, hai two power $n+1$ minus one, upon $n+1$. Aur coefficients ke squares ka sum hai two-$n$ choose $n$."
+            },
+            {
+              "seq": 7,
+              "text": "Subtopic five se any-index results. $1+x$ power $n$ ek infinite series ki tarah expand hota hai, valid sirf $x$ ka size one se kam ke liye; aur chhote $x$ ke liye, yeh lagbhag one plus $n$ $x$ hai."
+            },
+            {
+              "seq": 8,
+              "text": "Subtopic six se applications. $1+K$ power $n$ congruent hai one plus $n$ K ke modulo K square — remainder engine. Aur conjugate product, $I$ plus $f$ into $f$ prime, equals $p$ square minus $q$, power $n$ — parts engine."
+            },
+            {
+              "seq": 9,
+              "text": "Subtopic seven se multinomial. Coefficient hai $n$ factorial upon exponent factorials ka product; terms ki sankhya hai $n+k-1$ choose $k-1$; aur saare coefficients ka sum hai $k$ power $n$."
+            },
+            {
+              "seq": 10,
+              "text": "Aur in sabke neeche, reedh: symmetry, $n\\,C\\,r$ equals $n\\,C\\,n-r$, aur Pascal's rule, $n\\,C\\,r$ plus $n\\,C\\,r-1$ equals $n+1\\,C\\,r$. In dono ko master karo aur poora chapter ek saath tik jaata hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 47,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Review",
+      "title": "Binomial Theorem — one-screen cheat sheet",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Grab-and-go: rules, tools, and memory aids"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "$n+1$ terms; powers sum to $n$; symmetry $\\binom{n}{r}=\\binom{n}{n-r}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 18,
+          "latex": "T_{r+1}=\\binom{n}{r}a^{n-r}b^{r};\\qquad m\\text{-th term}\\Rightarrow r=m-1"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 28,
+          "latex": "E(r)=p(n-r)-qr=k\\text{ or }0;\\quad \\text{need }r\\in\\{0,\\dots,n\\}\\ \\text{integer}"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 38,
+          "style": "red-margin",
+          "text": "Greatest coeff $=$ middle; greatest term $=$ where the ratio crosses 1; $k=\\tfrac{(n+1)|x|}{1+|x|}$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\sum C_r=2^n,\\ \\sum rC_r=n2^{n-1},\\ \\sum\\tfrac{C_r}{r+1}=\\tfrac{2^{n+1}-1}{n+1},\\ \\sum C_r^2=\\binom{2n}{n}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "latex": "|x|<1:\\ (1+x)^n=1+nx+\\cdots\\approx 1+nx"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 70,
+          "style": "red-margin",
+          "text": "Remainders: make the divisor $K$ appear inside the bracket; parts: $(I+f)f'=(p^2-q)^n$."
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 80,
+          "latex": "\\text{multinomial: coeff }\\tfrac{n!}{n_1!\\cdots n_k!},\\ \\#\\text{terms }\\binom{n+k-1}{k-1},\\ \\sum k^n"
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 92,
+          "style": "red-margin",
+          "text": "Mantras: raise the whole bracket · solve for $r$ first · read the weights, pick the tool · divisor inside the bracket."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Last stop — the grab-and-go cheat sheet. Everything you need in the last five minutes before an exam, with the mantras that keep you out of trouble."
+            },
+            {
+              "seq": 2,
+              "text": "Bedrock first: an expansion has n plus one terms, the powers in every term sum to n, and the coefficients are symmetric — n C r equals n C n minus r. If a row of coefficients doesn't read the same both ways, you've slipped."
+            },
+            {
+              "seq": 3,
+              "text": "The general term is T r plus one equals n C r, a to the n minus r, b to the r — and remember the m-th term uses r equals m minus one. That one off-by-one causes more lost marks than anything else in the chapter."
+            },
+            {
+              "seq": 4,
+              "text": "For any specific term, form the net exponent E of r, set it equal to k or to zero, and solve — but the answer only counts if r is an integer between zero and n. A non-integer r means the term genuinely doesn't exist."
+            },
+            {
+              "seq": 5,
+              "text": "The two greatests: the greatest coefficient is the middle one, and the greatest term is wherever the consecutive-term ratio crosses one. For one plus x to the n, jump straight to k equals n plus one times the size of x, over one plus the size of x."
+            },
+            {
+              "seq": 6,
+              "text": "The four headline sums: the coefficients add to two to the n; the r-weighted sum is n times two to the n minus one; the integration-weighted sum is two to the n plus one minus one over n plus one; and the sum of squares is two n choose n."
+            },
+            {
+              "seq": 7,
+              "text": "For any index, valid only when the size of x is under one: one plus x to the n is one plus n x plus higher terms, and for small x it's just about one plus n x. That approximation powers every estimate."
+            },
+            {
+              "seq": 8,
+              "text": "For applications, two one-liners: for remainders, make the divisor K appear inside the bracket so every term with it vanishes; for integral and fractional parts, use I plus f times f prime equals p squared minus q, to the n."
+            },
+            {
+              "seq": 9,
+              "text": "And the multinomial: the coefficient is n factorial over the product of exponent factorials, the number of terms is n plus k minus one choose k minus one, and the sum of coefficients is k to the n."
+            },
+            {
+              "seq": 10,
+              "text": "<excited> Finally, the four mantras that carry the whole chapter: raise the whole bracket, solve for r first, read the weights then pick the tool, and make the divisor appear inside the bracket. Keep those four in your head and Binomial Theorem is yours."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Aakhri stop — grab-and-go cheat sheet. Exam se pehle aakhri paanch minute mein jo chahiye woh sab, un mantras ke saath jo aapko museebat se bachate hain."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle bunyaad: ek expansion mein $n+1$ terms hote hain, har term mein powers add hokar $n$ banti hain, aur coefficients symmetric hain — $n\\,C\\,r$ equals $n\\,C\\,n-r$. Agar coefficients ki row dono taraf se same नahi padhti, toh galti hui hai."
+            },
+            {
+              "seq": 3,
+              "text": "General term hai $T$ $r+1$ equals $n\\,C\\,r$, $a$ power $n-r$, $b$ power $r$ — aur yaad rakho $m$-th term $r$ equals $m-1$ use karta hai. Woh ek off-by-one chapter mein sabse zyada marks kho deta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Kisi bhi specific term ke liye, net exponent $E$ of $r$ banao, isse $k$ ya zero ke barabar rakho, aur solve karo — par answer tabhi ginta hai jab $r$ ek integer zero aur $n$ ke beech ho. Non-integer $r$ ka matlab term sach mein exist नahi karta."
+            },
+            {
+              "seq": 5,
+              "text": "Do greatests: greatest coefficient middle waala hai, aur greatest term wahan hai jahan consecutive-term ratio one cross karta hai. $1+x$ power $n$ ke liye, seedha $k$ equals $n+1$ into $x$ ka size, upon one plus $x$ ka size pe jump karo."
+            },
+            {
+              "seq": 6,
+              "text": "Chaar headline sums: coefficients add hokar two power $n$; $r$-weighted sum hai $n$ into two power $n-1$; integration-weighted sum hai two power $n+1$ minus one upon $n+1$; aur squares ka sum hai two-$n$ choose $n$."
+            },
+            {
+              "seq": 7,
+              "text": "Any index ke liye, valid sirf jab $x$ ka size one se kam ho: $1+x$ power $n$ hai one plus $n$ $x$ plus higher terms, aur chhote $x$ ke liye bas lagbhag one plus $n$ $x$. Woh approximation har estimate chalati hai."
+            },
+            {
+              "seq": 8,
+              "text": "Applications ke liye, do one-liners: remainders ke liye, divisor K ko bracket ke andar laao taaki usse waala har term gayab ho jaaye; integral aur fractional parts ke liye, $I$ plus $f$ into $f$ prime equals $p$ square minus $q$, power $n$ use karo."
+            },
+            {
+              "seq": 9,
+              "text": "Aur multinomial: coefficient hai $n$ factorial upon exponent factorials ka product, terms ki sankhya hai $n+k-1$ choose $k-1$, aur coefficients ka sum hai $k$ power $n$."
+            },
+            {
+              "seq": 10,
+              "text": "<excited> Aakhir mein, chaar mantras jo poora chapter uthate hain: poori bracket ko uthao, pehle $r$ solve karo, weights padho phir tool chuno, aur divisor ko bracket ke andar laao. In chaaron ko dimaag mein rakho aur Binomial Theorem aapka hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1654 @@
+{
+  "chapter": "Straight Lines",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 9,
+  "part": 4,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Foot of Perpendicular, Image and Reflection",
+      "title": "Foot, image and reflection",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Foot, Image & Reflection"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Shine a torch straight at a wall: where the beam hits perpendicularly is the foot of the perpendicular."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "The foot Q is the midpoint of P and its image P-prime.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 260\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"60\" x2=\"360\" y2=\"200\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"330\" y=\"196\" font-size=\"11\" fill=\"#059669\">mirror line</text><circle cx=\"180\" cy=\"40\" r=\"4\" fill=\"#c026d3\"/><text x=\"160\" y=\"36\" font-size=\"12\" fill=\"#c026d3\">P</text><circle cx=\"151\" cy=\"102\" r=\"4\" fill=\"#333\"/><text x=\"128\" y=\"100\" font-size=\"11\" fill=\"#333\">Q</text><circle cx=\"122\" cy=\"165\" r=\"4\" fill=\"#1a56db\"/><text x=\"128\" y=\"178\" font-size=\"12\" fill=\"#1a56db\">P′ (image)</text><line x1=\"180\" y1=\"40\" x2=\"122\" y2=\"165\" stroke=\"#c026d3\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><text x=\"188\" y=\"74\" font-size=\"11\" fill=\"#666\">d</text><text x=\"146\" y=\"140\" font-size=\"11\" fill=\"#666\">d</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Walk an equal distance past the wall and you reach the image — as far behind as $P$ is in front."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "So the foot is halfway to the image; the image is twice as far as the foot."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "The line $ax+by+c=0$ has normal direction $(a,b)$; you step from $P$ along it to land on the line."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{step size} \\propto \\frac{ax_1 + by_1 + c}{a^2 + b^2}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "One step reaches the foot; two steps reach the mirror image."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This last subtopic is really one picture, turned into formulas. Let's set the picture up."
+            },
+            {
+              "seq": 2,
+              "text": "Stand at a point P and shine a torch straight at a wall, and let the wall be our line. The spot where the beam hits perpendicularly is the foot of the perpendicular — the closest point on the line to P."
+            },
+            {
+              "seq": 3,
+              "text": "Look at the diagram: P above the line, the foot Q on the line, and the image P-prime on the far side. Notice Q sits exactly halfway between P and P-prime."
+            },
+            {
+              "seq": 4,
+              "text": "Now walk an equal distance past the wall along that same beam, and you reach the image — exactly as far behind the mirror as you stand in front, just like your reflection in glass."
+            },
+            {
+              "seq": 5,
+              "text": "So two facts fall out at once: the foot is halfway to the image, and the image is twice as far as the foot."
+            },
+            {
+              "seq": 6,
+              "text": "How do we get there algebraically? The line has normal direction a comma b, and you step from P straight along that normal until you land on the line."
+            },
+            {
+              "seq": 7,
+              "text": "The size of that step is governed by a x one plus b y one plus c, over a squared plus b squared — the very expression that measured distance earlier, now reused as a step size."
+            },
+            {
+              "seq": 8,
+              "text": "And the whole subtopic is just: take one step to reach the foot, and two steps to reach the mirror image."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह आख़िरी subtopic असल में एक ही picture है, formulas में बदली हुई। picture set करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "एक point P पर खड़े हो और एक wall पर सीधे torch मारो, wall को हमारी line मान लो। जहाँ beam perpendicularly टकराती है वो foot of the perpendicular है — line पर P का सबसे नज़दीकी point।"
+            },
+            {
+              "seq": 3,
+              "text": "Diagram देखो: line के ऊपर P, line पर foot Q, और दूसरी तरफ़ image P-prime। ध्यान दो Q ठीक P और P-prime के बीचोंबीच बैठा है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब उसी beam के साथ wall के पार बराबर distance चलो, और तुम image पर पहुँच जाते हो — mirror के पीछे उतना ही दूर जितना तुम आगे खड़े हो, बिल्कुल glass में reflection की तरह।"
+            },
+            {
+              "seq": 5,
+              "text": "तो दो facts एक साथ निकल आते हैं: foot image तक आधा रास्ता है, और image foot से twice दूर है।"
+            },
+            {
+              "seq": 6,
+              "text": "Algebraically वहाँ कैसे पहुँचें? Line की normal direction a comma b है, और तुम P से उस normal के साथ सीधे step करते हो जब तक line पर न पहुँच जाओ।"
+            },
+            {
+              "seq": 7,
+              "text": "उस step का size a x one plus b y one plus c, over a squared plus b squared से तय होता है — वही expression जो पहले distance नापता था, अब step size की तरह reuse।"
+            },
+            {
+              "seq": 8,
+              "text": "और पूरा subtopic बस इतना है: foot तक एक step, और mirror image तक दो steps।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Foot of Perpendicular, Image and Reflection",
+      "title": "Proof: the foot of the perpendicular",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: Foot of the Perpendicular"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The segment $PQ$ is perpendicular to the line, so it points along the normal $(a,b)$."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Q = P + t(a,b), with t chosen so Q lands on the line.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"180\" x2=\"360\" y2=\"80\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"330\" y=\"76\" font-size=\"11\" fill=\"#059669\">line</text><circle cx=\"150\" cy=\"50\" r=\"4\" fill=\"#c026d3\"/><text x=\"130\" y=\"46\" font-size=\"12\" fill=\"#c026d3\">P</text><circle cx=\"180\" cy=\"140\" r=\"4\" fill=\"#333\"/><text x=\"186\" y=\"140\" font-size=\"11\" fill=\"#333\">Q</text><line x1=\"150\" y1=\"50\" x2=\"180\" y2=\"140\" stroke=\"#c026d3\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><text x=\"188\" y=\"98\" font-size=\"10\" fill=\"#666\">step t (a, b)</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "Q = (x_1 + ta,\\; y_1 + tb)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Since $Q$ lies on the line, substitute and solve for the scalar $t$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "a(x_1 + ta) + b(y_1 + tb) + c = 0"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "t = -\\frac{ax_1 + by_1 + c}{a^2 + b^2}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\frac{x - x_1}{a} = \\frac{y - y_1}{b} = -\\frac{ax_1 + by_1 + c}{a^2 + b^2}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's derive the foot formula — it is a single clean idea about stepping along the normal."
+            },
+            {
+              "seq": 2,
+              "text": "The segment from P to the foot Q is perpendicular to the line, which means it points exactly along the line's normal direction, a comma b."
+            },
+            {
+              "seq": 3,
+              "text": "So Q is reached from P by stepping some scalar amount t along that normal, as the diagram shows."
+            },
+            {
+              "seq": 4,
+              "text": "That is, Q equals x one plus t a, and y one plus t b."
+            },
+            {
+              "seq": 5,
+              "text": "But Q also lies on the line, so plug those coordinates into the line's equation and solve for the one unknown t."
+            },
+            {
+              "seq": 6,
+              "text": "Substituting gives a times x one plus t a, plus b times y one plus t b, plus c, equals zero."
+            },
+            {
+              "seq": 7,
+              "text": "Grouping the t terms and rearranging, t comes out as minus a x one plus b y one plus c, over a squared plus b squared."
+            },
+            {
+              "seq": 8,
+              "text": "Feed that t back in, and the foot satisfies x minus x one over a, equals y minus y one over b, equals that same step — the compact foot formula."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो foot formula derive करें — यह normal के साथ step करने का एक clean idea है।"
+            },
+            {
+              "seq": 2,
+              "text": "P से foot Q तक का segment line के perpendicular है, यानी वो line की normal direction, a comma b, के साथ ठीक point करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "तो Q, P से उस normal के साथ कुछ scalar amount t step करके मिलता है, जैसा diagram दिखाता है।"
+            },
+            {
+              "seq": 4,
+              "text": "यानी Q बराबर x one plus t a, और y one plus t b।"
+            },
+            {
+              "seq": 5,
+              "text": "पर Q line पर भी है, तो वो coordinates line की equation में डालो और एक unknown t के लिए solve करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Substitute करने पर मिलता है a times x one plus t a, plus b times y one plus t b, plus c, बराबर zero।"
+            },
+            {
+              "seq": 7,
+              "text": "t terms group करके rearrange करो, तो t निकलता है minus a x one plus b y one plus c, over a squared plus b squared।"
+            },
+            {
+              "seq": 8,
+              "text": "वो t वापस डालो, और foot satisfy करता है x minus x one over a, बराबर y minus y one over b, बराबर वही step — compact foot formula।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Foot of Perpendicular, Image and Reflection",
+      "title": "Proof: image of a point, and reflecting a line",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Proof: Image of a Point, Reflecting a Line"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "The foot $Q$ is the midpoint of $P$ and its image $P'$, so $P' = 2Q - P$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "P' = 2\\big(P + t(a,b)\\big) - P = P + 2t(a,b)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "So the image uses parameter $2t$ — exactly double the foot's step."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\frac{x' - x_1}{a} = \\frac{y' - y_1}{b} = -\\frac{2(ax_1 + by_1 + c)}{a^2 + b^2}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "To reflect a whole line $m$ in a line $\\ell$: reflect two of its points and rejoin them."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Shortcut: if $m$ and $\\ell$ intersect, the reflection also passes through $m \\cap \\ell$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "So one image point plus that intersection is enough — half the work."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the image formula, which follows from the foot in one step, plus how to reflect a whole line."
+            },
+            {
+              "seq": 2,
+              "text": "The foot Q is the midpoint of P and its image P-prime. So P-prime equals two Q minus P — just the midpoint relation rearranged."
+            },
+            {
+              "seq": 3,
+              "text": "Substitute Q as P plus t times a comma b, and P-prime becomes P plus two t times a comma b."
+            },
+            {
+              "seq": 4,
+              "text": "So the image uses the parameter two t, exactly double the foot's step. That is the only change from the foot formula."
+            },
+            {
+              "seq": 5,
+              "text": "In coordinates, x-prime minus x one over a equals y-prime minus y one over b equals minus two times a x one plus b y one plus c, over a squared plus b squared."
+            },
+            {
+              "seq": 6,
+              "text": "To reflect a whole line m in a mirror line ell, you cannot tweak the equation directly — instead reflect two of its points and join the images."
+            },
+            {
+              "seq": 7,
+              "text": "There is a neat shortcut: if m and the mirror ell actually intersect, the reflected line also passes through their point of intersection."
+            },
+            {
+              "seq": 8,
+              "text": "So one image point, plus that intersection, is enough to fix the reflected line — which halves the work versus reflecting two separate points."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब image formula, जो foot से एक ही step में निकलता है, और साथ में पूरी line reflect करने का तरीक़ा।"
+            },
+            {
+              "seq": 2,
+              "text": "Foot Q, P और उसके image P-prime का midpoint है। तो P-prime बराबर two Q minus P — बस midpoint relation rearrange किया।"
+            },
+            {
+              "seq": 3,
+              "text": "Q को P plus t times a comma b substitute करो, और P-prime बन जाता है P plus two t times a comma b।"
+            },
+            {
+              "seq": 4,
+              "text": "तो image parameter two t use करता है, foot के step का ठीक double। foot formula से बस यही change है।"
+            },
+            {
+              "seq": 5,
+              "text": "Coordinates में, x-prime minus x one over a बराबर y-prime minus y one over b बराबर minus two times a x one plus b y one plus c, over a squared plus b squared।"
+            },
+            {
+              "seq": 6,
+              "text": "किसी mirror line ell में पूरी line m reflect करने के लिए, तुम equation को सीधे tweak नहीं कर सकते — बल्कि उसके दो points reflect करो और images को join करो।"
+            },
+            {
+              "seq": 7,
+              "text": "एक neat shortcut है: अगर m और mirror ell सचमुच intersect करें, तो reflected line उनके intersection point से भी गुज़रती है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो एक image point, plus वो intersection, reflected line fix करने के लिए काफ़ी है — जो दो अलग points reflect करने के मुक़ाबले काम आधा कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "Foot of Perpendicular, Image and Reflection",
+      "title": "Foot, image and reflection: formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Foot, Image & Reflection — Toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\text{Foot: } \\frac{x - x_1}{a} = \\frac{y - y_1}{b} = -\\frac{ax_1 + by_1 + c}{a^2 + b^2}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\text{Image: } \\frac{x' - x_1}{a} = \\frac{y' - y_1}{b} = -\\frac{2(ax_1 + by_1 + c)}{a^2 + b^2}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The foot is the midpoint of the point and its image."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{Mirror } y = x:\\; (x, y) \\to (y, x)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\text{Mirror } x\\text{-axis}:\\; (x, y) \\to (x, -y)"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{Mirror } y\\text{-axis}:\\; (x, y) \\to (-x, y)"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Reflect a line: reflect two of its points, then rejoin."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Denominator here is $a^2 + b^2$ — no square root, unlike the distance formula."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the whole toolkit for feet, images and reflections."
+            },
+            {
+              "seq": 2,
+              "text": "The foot: x minus x one over a equals y minus y one over b equals minus a x one plus b y one plus c, over a squared plus b squared."
+            },
+            {
+              "seq": 3,
+              "text": "The image is the same, with a factor of two on that numerator — twice the step."
+            },
+            {
+              "seq": 4,
+              "text": "And the anchor relating them: the foot is the midpoint of the point and its image."
+            },
+            {
+              "seq": 5,
+              "text": "For the special mirror y equals x, just swap the coordinates."
+            },
+            {
+              "seq": 6,
+              "text": "For the x-axis, negate the y-coordinate."
+            },
+            {
+              "seq": 7,
+              "text": "For the y-axis, negate the x-coordinate."
+            },
+            {
+              "seq": 8,
+              "text": "To reflect a whole line, reflect two of its points and rejoin them."
+            },
+            {
+              "seq": 9,
+              "text": "One thing to burn in: the denominator here is a squared plus b squared, with no square root — unlike the distance formula, which does take the root. Mixing them is a classic slip."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा feet, images और reflections का पूरा toolkit।"
+            },
+            {
+              "seq": 2,
+              "text": "Foot: x minus x one over a बराबर y minus y one over b बराबर minus a x one plus b y one plus c, over a squared plus b squared।"
+            },
+            {
+              "seq": 3,
+              "text": "Image वही है, उस numerator पर factor of two के साथ — twice the step।"
+            },
+            {
+              "seq": 4,
+              "text": "और उन्हें जोड़ने वाला anchor: foot, point और उसके image का midpoint है।"
+            },
+            {
+              "seq": 5,
+              "text": "Special mirror y बराबर x के लिए, बस coordinates swap करो।"
+            },
+            {
+              "seq": 6,
+              "text": "x-axis के लिए, y-coordinate negate करो।"
+            },
+            {
+              "seq": 7,
+              "text": "y-axis के लिए, x-coordinate negate करो।"
+            },
+            {
+              "seq": 8,
+              "text": "पूरी line reflect करने के लिए, उसके दो points reflect करो और rejoin करो।"
+            },
+            {
+              "seq": 9,
+              "text": "एक बात पक्की कर लो: यहाँ denominator है a squared plus b squared, बिना square root के — distance formula के उलट, जो root लेता है। इन्हें mix करना classic slip है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "Foot of Perpendicular, Image and Reflection",
+      "title": "Worked examples: foot, and image in y = x",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Foot & Image in $y = x$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Example 1: foot of the perpendicular from $P(2,3)$ to $x + y - 1 = 0$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "ax_1 + by_1 + c = 2 + 3 - 1 = 4, \\quad a^2 + b^2 = 2, \\quad t = -2"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "Q = (2 - 2,\\; 3 - 2) = (0, 1)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 2: image of $(4,-1)$ in the line $y = x$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "$y = x$ is a special mirror — just swap the coordinates."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "(4, -1) \\to (-1, 4)"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Recognise $y=x$, the $x$-axis, and the $y$-axis on sight, and use swap or negate."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two examples: a foot by the general formula, then an image by the fast special-mirror trick."
+            },
+            {
+              "seq": 2,
+              "text": "Example one: find the foot of the perpendicular from P at two, three to the line x plus y minus one equals zero."
+            },
+            {
+              "seq": 3,
+              "text": "Here a and b are both one, and c is minus one. So a x one plus b y one plus c is two plus three minus one, that is four; a squared plus b squared is two; so the step t is minus two."
+            },
+            {
+              "seq": 4,
+              "text": "Then Q is two plus t times one, and three plus t times one, which is zero comma one — the foot."
+            },
+            {
+              "seq": 5,
+              "text": "Example two: find the image of four comma minus one in the line y equals x."
+            },
+            {
+              "seq": 6,
+              "text": "Do not grind the general formula here — y equals x is a special mirror, so you simply swap the two coordinates."
+            },
+            {
+              "seq": 7,
+              "text": "Swapping gives minus one comma four. Done in one move."
+            },
+            {
+              "seq": 8,
+              "text": "So train your eye: the moment you see y equals x, the x-axis, or the y-axis, reach for swap or negate rather than the full machinery."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो examples: general formula से एक foot, फिर fast special-mirror trick से एक image।"
+            },
+            {
+              "seq": 2,
+              "text": "Example one: P at two, three से line x plus y minus one बराबर zero तक perpendicular का foot ढूँढो।"
+            },
+            {
+              "seq": 3,
+              "text": "यहाँ a और b दोनों one हैं, और c है minus one। तो a x one plus b y one plus c है two plus three minus one, यानी four; a squared plus b squared है two; तो step t है minus two।"
+            },
+            {
+              "seq": 4,
+              "text": "फिर Q है two plus t times one, और three plus t times one, यानी zero comma one — foot।"
+            },
+            {
+              "seq": 5,
+              "text": "Example two: four comma minus one का line y बराबर x में image ढूँढो।"
+            },
+            {
+              "seq": 6,
+              "text": "यहाँ general formula मत घिसो — y बराबर x एक special mirror है, तो बस दोनों coordinates swap कर दो।"
+            },
+            {
+              "seq": 7,
+              "text": "Swap करने पर मिलता है minus one comma four। एक ही move में हो गया।"
+            },
+            {
+              "seq": 8,
+              "text": "तो अपनी नज़र train करो: जैसे ही y बराबर x, x-axis, या y-axis दिखे, पूरी machinery की जगह swap या negate उठाओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Foot of Perpendicular, Image and Reflection",
+      "title": "Worked example: image, and verifying equal distances",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Image & Verifying Equal Distances"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Find the image of $P(1,1)$ in the line $3x - 4y + 5 = 0$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "ax_1 + by_1 + c = 3 - 4 + 5 = 4, \\quad a^2 + b^2 = 25"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{step} = -\\frac{2(4)}{25} = -\\frac{8}{25}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "P' = \\left(1 - \\tfrac{24}{25},\\; 1 + \\tfrac{32}{25}\\right) = \\left(\\tfrac{1}{25},\\, \\tfrac{57}{25}\\right)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Distance of $P$ from the line is $\\tfrac{|4|}{5} = 0.8$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{distance of } P' = \\frac{4}{5} = 0.8"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Equal distances, opposite sides — exactly what a mirror image must satisfy."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example finds an image and then checks it, so you learn to trust your own answer."
+            },
+            {
+              "seq": 2,
+              "text": "Find the image of P at one, one in the line three x minus four y plus five equals zero."
+            },
+            {
+              "seq": 3,
+              "text": "Compute a x one plus b y one plus c: three minus four plus five, which is four; and a squared plus b squared is twenty five."
+            },
+            {
+              "seq": 4,
+              "text": "The image step is minus two times four over twenty five, that is minus eight over twenty five."
+            },
+            {
+              "seq": 5,
+              "text": "So P-prime is one minus twenty four over twenty five, and one plus thirty two over twenty five, which is one over twenty five, comma fifty seven over twenty five."
+            },
+            {
+              "seq": 6,
+              "text": "Now verify. The distance of P from the line is the modulus of four over five, that is zero point eight."
+            },
+            {
+              "seq": 7,
+              "text": "Plug P-prime into the distance formula and it also comes out to four over five, zero point eight."
+            },
+            {
+              "seq": 8,
+              "text": "Equal distances on opposite sides of the line — which is exactly the defining property of a mirror image. The check confirms the answer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example एक image ढूँढता है और फिर उसे check करता है, ताकि तुम अपने answer पर भरोसा करना सीखो।"
+            },
+            {
+              "seq": 2,
+              "text": "P at one, one का line three x minus four y plus five बराबर zero में image ढूँढो।"
+            },
+            {
+              "seq": 3,
+              "text": "a x one plus b y one plus c निकालो: three minus four plus five, यानी four; और a squared plus b squared है twenty five।"
+            },
+            {
+              "seq": 4,
+              "text": "Image step है minus two times four over twenty five, यानी minus eight over twenty five।"
+            },
+            {
+              "seq": 5,
+              "text": "तो P-prime है one minus twenty four over twenty five, और one plus thirty two over twenty five, यानी one over twenty five, comma fifty seven over twenty five।"
+            },
+            {
+              "seq": 6,
+              "text": "अब verify करो। line से P की distance है modulus of four over five, यानी zero point eight।"
+            },
+            {
+              "seq": 7,
+              "text": "P-prime को distance formula में डालो तो वो भी four over five, zero point eight आता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Line के opposite sides पर equal distances — यही तो mirror image की defining property है। Check answer की पुष्टि कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Foot of Perpendicular, Image and Reflection",
+      "title": "Worked example: reflected ray (advanced)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked: Reflected Ray (Advanced)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A ray along $x - 2y + 5 = 0$ strikes the mirror $3x - 4y + 4 = 0$. Find the reflected ray."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Incidence point $I$: solve the two lines together."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "I = \\left(6,\\; \\tfrac{11}{2}\\right)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Take $A(-5,0)$ on the incident ray and reflect it in the mirror."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "aA_x + bA_y + c = -15 + 4 = -11, \\quad \\text{step} = \\tfrac{22}{25}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "A' = \\left(-\\tfrac{59}{25},\\; -\\tfrac{88}{25}\\right)"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\text{Reflected ray through } I \\text{ and } A': \\quad 41x - 38y - 37 = 0"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Here is the Advanced payoff — reflection turns an optics problem into two coordinate computations.</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "A ray of light travelling along x minus two y plus five equals zero strikes the mirror three x minus four y plus four equals zero. Find the reflected ray."
+            },
+            {
+              "seq": 3,
+              "text": "The reflected ray passes through the incidence point, so first find where the incident ray meets the mirror by solving the two lines together."
+            },
+            {
+              "seq": 4,
+              "text": "That intersection is the point I, at six comma eleven halves."
+            },
+            {
+              "seq": 5,
+              "text": "Now take any convenient point on the incident ray — say A at minus five, zero — and reflect it in the mirror using the image formula."
+            },
+            {
+              "seq": 6,
+              "text": "Here a A x plus b A y plus c is minus fifteen plus four, that is minus eleven, and the image step works out to twenty two over twenty five."
+            },
+            {
+              "seq": 7,
+              "text": "That sends A to its image A-prime, at minus fifty nine over twenty five, comma minus eighty eight over twenty five."
+            },
+            {
+              "seq": 8,
+              "text": "The reflected ray is simply the line joining I and A-prime, and working out its equation gives forty one x minus thirty eight y minus thirty seven equals zero. Two coordinate steps, and the optics is done."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>यह रहा Advanced payoff — reflection एक optics problem को दो coordinate computations में बदल देता है।</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "x minus two y plus five बराबर zero के साथ चलती light की एक ray, mirror three x minus four y plus four बराबर zero से टकराती है। Reflected ray ढूँढो।"
+            },
+            {
+              "seq": 3,
+              "text": "Reflected ray incidence point से गुज़रती है, तो पहले incident ray और mirror का मिलना ढूँढो, दोनों lines को साथ solve करके।"
+            },
+            {
+              "seq": 4,
+              "text": "वो intersection है point I, six comma eleven halves पर।"
+            },
+            {
+              "seq": 5,
+              "text": "अब incident ray पर कोई convenient point लो — जैसे A at minus five, zero — और उसे image formula से mirror में reflect करो।"
+            },
+            {
+              "seq": 6,
+              "text": "यहाँ a A x plus b A y plus c है minus fifteen plus four, यानी minus eleven, और image step निकलता है twenty two over twenty five।"
+            },
+            {
+              "seq": 7,
+              "text": "यह A को उसके image A-prime पर भेजता है, minus fifty nine over twenty five, comma minus eighty eight over twenty five।"
+            },
+            {
+              "seq": 8,
+              "text": "Reflected ray बस I और A-prime को जोड़ने वाली line है, और उसकी equation निकालने पर मिलता है forty one x minus thirty eight y minus thirty seven बराबर zero। दो coordinate steps, और optics हो गया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "tips",
+      "subtopic": "Foot of Perpendicular, Image and Reflection",
+      "title": "Pitfalls and pro-tips: foot, image and reflection",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pitfalls: Foot, Image & Reflection"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Foot uses the step $-\\tfrac{ax_1+by_1+c}{a^2+b^2}$; the image uses twice that — do not drop the $2$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "For $y=x$, the $x$-axis, and the $y$-axis, use swap or negate — faster and error-proof."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "You cannot reflect an equation directly (except in $y=x$); reflect points instead."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Denominator here is $a^2+b^2$, no root — contrast with the distance formula's $\\sqrt{a^2+b^2}$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Pro-tip: reflecting a line? One image point plus the mirror intersection is enough."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "That halves the work versus reflecting two separate points."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "One step to the foot, two steps to the mirror — keep the factor of two straight."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close the last subtopic with its four traps."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one: the foot uses the single step, but the image uses twice that step. Drop the factor of two and you land right on the line instead of behind it."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: for the special mirrors — y equals x, the x-axis, and the y-axis — use swap or negate. It is faster and essentially error-proof."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: you cannot reflect an equation by tweaking its coefficients, except for the y equals x case where swapping x and y works. In general, reflect points instead."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: the denominator in these formulas is a squared plus b squared, with no square root, which contrasts with the distance formula's root of a squared plus b squared. Mixing them is common."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>And the pro-tip for reflecting a line: when the line meets the mirror, one image point plus that intersection pins down the reflected line.</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "That halves the work compared with reflecting two separate points and joining them."
+            },
+            {
+              "seq": 8,
+              "text": "Sum it up as one line: one step to the foot, two steps to the mirror — keep that factor of two straight and this subtopic is yours."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आख़िरी subtopic को उसके चार traps के साथ बंद करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one: foot single step use करता है, पर image उसका twice। factor of two छोड़ा तो तुम line के पीछे नहीं, line पर ही आ गिरते हो।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: special mirrors — y बराबर x, x-axis, और y-axis — के लिए swap या negate use करो। यह faster और लगभग error-proof है।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: तुम equation को उसके coefficients tweak करके reflect नहीं कर सकते, सिवाय y बराबर x case के जहाँ x और y swap करना काम करता है। आमतौर पर points reflect करो।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: इन formulas में denominator है a squared plus b squared, बिना square root, जो distance formula के root of a squared plus b squared से उलट है। इन्हें mix करना common है।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper>और line reflect करने का pro-tip: जब line mirror से मिले, तो एक image point plus वो intersection reflected line pin कर देते हैं।</whisper>"
+            },
+            {
+              "seq": 7,
+              "text": "यह दो अलग points reflect करके जोड़ने के मुक़ाबले काम आधा कर देता है।"
+            },
+            {
+              "seq": 8,
+              "text": "इसे एक line में समेटो: foot तक एक step, mirror तक दो steps — वो factor of two सीधा रखो और यह subtopic तुम्हारा है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Wrap-Up: Straight Lines",
+      "title": "Formula recap I: points, slope, equations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Formula Recap I: Points, Slope, Equations"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "AB = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{Section (int.): } \\left(\\tfrac{mx_2+nx_1}{m+n}, \\tfrac{my_2+ny_1}{m+n}\\right);\\ \\text{Centroid: } \\left(\\tfrac{\\sum x}{3}, \\tfrac{\\sum y}{3}\\right)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\Delta = \\tfrac{1}{2}\\left| x_1(y_2-y_3) + x_2(y_3-y_1) + x_3(y_1-y_2) \\right|,\\quad =0 \\Leftrightarrow \\text{collinear}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "m = \\tan\\theta = \\frac{y_2-y_1}{x_2-x_1};\\quad m_1 = m_2 \\text{ (par.)},\\ m_1 m_2 = -1 \\text{ (perp.)}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\tan\\theta = \\left|\\frac{m_2-m_1}{1+m_1 m_2}\\right|"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "y - y_1 = m(x-x_1);\\quad \\frac{x}{a}+\\frac{y}{b}=1;\\quad y = mx+c"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "x\\cos\\omega + y\\sin\\omega = p;\\quad Ax+By+C=0,\\ m = -\\tfrac{A}{B}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Your complete toolkit through Equations of a Line — restated, not re-taught."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We have covered the whole chapter; here is your complete toolkit for the first half, restated in one place."
+            },
+            {
+              "seq": 2,
+              "text": "Distance between two points is the root of the squared coordinate differences."
+            },
+            {
+              "seq": 3,
+              "text": "The internal section point cross-weights the coordinates over m plus n; the centroid averages all three vertices over three."
+            },
+            {
+              "seq": 4,
+              "text": "The triangle area is one half the modulus of that cyclic expression, and it is zero exactly when the points are collinear."
+            },
+            {
+              "seq": 5,
+              "text": "Slope is tan of the inclination, or the two-point ratio; equal slopes mean parallel, and a product of minus one means perpendicular."
+            },
+            {
+              "seq": 6,
+              "text": "The angle between two lines is the inverse tangent of the modulus of that slope expression."
+            },
+            {
+              "seq": 7,
+              "text": "For equations, keep point-slope, intercept form, and slope-intercept ready to hand."
+            },
+            {
+              "seq": 8,
+              "text": "And the normal form and general form round it out, with slope minus A over B from the general form."
+            },
+            {
+              "seq": 9,
+              "text": "That is your complete toolkit through Equations of a Line — restated for quick recall, not taught again."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हमने पूरा chapter cover कर लिया; यह रहा पहले half का पूरा toolkit, एक जगह restated।"
+            },
+            {
+              "seq": 2,
+              "text": "दो points के बीच distance squared coordinate differences का root है।"
+            },
+            {
+              "seq": 3,
+              "text": "Internal section point coordinates को m plus n over cross-weight करता है; centroid तीनों vertices को three over average करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Triangle area उस cyclic expression के modulus का one half है, और zero तभी जब points collinear हों।"
+            },
+            {
+              "seq": 5,
+              "text": "Slope inclination का tan है, या two-point ratio; equal slopes मतलब parallel, और product minus one मतलब perpendicular।"
+            },
+            {
+              "seq": 6,
+              "text": "दो lines के बीच angle उस slope expression के modulus का inverse tangent है।"
+            },
+            {
+              "seq": 7,
+              "text": "Equations के लिए, point-slope, intercept form, और slope-intercept हाथ में रखो।"
+            },
+            {
+              "seq": 8,
+              "text": "और normal form तथा general form इसे पूरा करते हैं, general form से slope minus A over B के साथ।"
+            },
+            {
+              "seq": 9,
+              "text": "यह Equations of a Line तक तुम्हारा पूरा toolkit है — quick recall के लिए restated, फिर से पढ़ाया नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Wrap-Up: Straight Lines",
+      "title": "Formula recap II: distance, family, bisectors, reflection",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Formula Recap II: Distance, Family, Bisectors, Reflection"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "d = \\frac{|Ax_1+By_1+C|}{\\sqrt{A^2+B^2}};\\quad d_{\\text{par.}} = \\frac{|C_1-C_2|}{\\sqrt{A^2+B^2}}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac{x-x_1}{\\cos\\theta} = \\frac{y-y_1}{\\sin\\theta} = r"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "x = \\frac{b_1 c_2 - b_2 c_1}{a_1 b_2 - a_2 b_1},\\quad y = \\frac{c_1 a_2 - c_2 a_1}{a_1 b_2 - a_2 b_1}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\begin{vmatrix} a_1 & b_1 & c_1 \\\\ a_2 & b_2 & c_2 \\\\ a_3 & b_3 & c_3 \\end{vmatrix} = 0;\\quad L_1 + \\lambda L_2 = 0"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\frac{a_1 x + b_1 y + c_1}{\\sqrt{a_1^2+b_1^2}} = \\pm\\frac{a_2 x + b_2 y + c_2}{\\sqrt{a_2^2+b_2^2}}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{Foot: } \\frac{x-x_1}{a} = \\frac{y-y_1}{b} = -\\frac{ax_1+by_1+c}{a^2+b^2}"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\text{Image: same, with } -\\frac{2(ax_1+by_1+c)}{a^2+b^2}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Complete toolkit for the back half — your one-glance revision board."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "And here is the toolkit for the second half of the chapter, all on one board."
+            },
+            {
+              "seq": 2,
+              "text": "Point-to-line distance divides by the root of A squared plus B squared; parallel-line distance is the constant difference over the same root, after normalizing."
+            },
+            {
+              "seq": 3,
+              "text": "The symmetric form gives the signed distance r directly along the inclination theta."
+            },
+            {
+              "seq": 4,
+              "text": "Cramer's rule gives the intersection point of two lines in one shot."
+            },
+            {
+              "seq": 5,
+              "text": "Concurrency is the vanishing three by three determinant, and the family through a junction is L one plus lambda L two equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "The angle bisectors set the two normalized expressions equal, with a plus or minus."
+            },
+            {
+              "seq": 7,
+              "text": "The foot of the perpendicular steps once along the normal, over a squared plus b squared with no root."
+            },
+            {
+              "seq": 8,
+              "text": "And the image steps twice — the same formula with a factor of two on the numerator."
+            },
+            {
+              "seq": 9,
+              "text": "That completes your one-glance revision board for the back half of Straight Lines."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "और यह रहा chapter के दूसरे half का toolkit, सब एक board पर।"
+            },
+            {
+              "seq": 2,
+              "text": "Point-to-line distance root of A squared plus B squared से divide करती है; parallel-line distance normalize करने के बाद उसी root over constant difference है।"
+            },
+            {
+              "seq": 3,
+              "text": "Symmetric form signed distance r को सीधे inclination theta के साथ देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Cramer's rule दो lines का intersection point एक ही बार में देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Concurrency vanishing three by three determinant है, और junction से family L one plus lambda L two बराबर zero।"
+            },
+            {
+              "seq": 6,
+              "text": "Angle bisectors दो normalized expressions को बराबर रखते हैं, plus या minus के साथ।"
+            },
+            {
+              "seq": 7,
+              "text": "Foot of the perpendicular normal के साथ एक बार step करता है, over a squared plus b squared, बिना root।"
+            },
+            {
+              "seq": 8,
+              "text": "और image दो बार step करता है — वही formula numerator पर factor of two के साथ।"
+            },
+            {
+              "seq": 9,
+              "text": "यह Straight Lines के दूसरे half के लिए तुम्हारा one-glance revision board पूरा करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Wrap-Up: Straight Lines",
+      "title": "Cheat sheet: one-line memory aids",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Cheat Sheet: One-Line Memory Aids"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "'Internal adds, external subtracts' — the $m \\pm n$ denominator."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "'Area zero means in a row' — collinearity."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "'Horizontal Zero, Vertical Void' — slope $0$ versus undefined."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "'Flip and Negate' for perpendicular slopes; 'equally inclined $\\Rightarrow \\pm 1$'."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "'Minus A over B' for slope from the general form; '$p$ is positive, period'."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "'Normalize, then subtract' for parallel lines; 'modulus on top, root-sum-squares below'."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "'Both zero $\\Rightarrow$ sum zero' (family); 'determinant dies $\\Rightarrow$ they meet'."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "'Positive constants first, then plus is the origin's side'; 'one step to the foot, two to the mirror'."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>You have reached the end of Straight Lines — here is the whole chapter as a handful of memory hooks.</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "For the section formula: internal adds, external subtracts — that is the m plus or minus n in the denominator."
+            },
+            {
+              "seq": 3,
+              "text": "For collinearity: area zero means in a row."
+            },
+            {
+              "seq": 4,
+              "text": "For slope poles: horizontal zero, vertical void — slope zero for horizontal, undefined for vertical."
+            },
+            {
+              "seq": 5,
+              "text": "For perpendiculars: flip and negate; and a line equally inclined to the axes has slope plus or minus one."
+            },
+            {
+              "seq": 6,
+              "text": "From the general form: minus A over B for the slope; and in the normal form, p is positive, period."
+            },
+            {
+              "seq": 7,
+              "text": "For parallel lines: normalize, then subtract; and remember, modulus on top, root-sum-of-squares below."
+            },
+            {
+              "seq": 8,
+              "text": "For the family trick: both zero implies the sum is zero; and for concurrency, the determinant dies, so they meet."
+            },
+            {
+              "seq": 9,
+              "text": "And for the last two subtopics: positive constants first, then plus is the origin's side; and one step to the foot, two steps to the mirror. That is the entire chapter in your pocket — revise from these anchors."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>तुम Straight Lines के अंत तक पहुँच गए — यह रहा पूरा chapter कुछ memory hooks के रूप में।</excited>"
+            },
+            {
+              "seq": 2,
+              "text": "Section formula के लिए: internal adds, external subtracts — यही denominator में m plus या minus n है।"
+            },
+            {
+              "seq": 3,
+              "text": "Collinearity के लिए: area zero means in a row।"
+            },
+            {
+              "seq": 4,
+              "text": "Slope poles के लिए: horizontal zero, vertical void — horizontal के लिए slope zero, vertical के लिए undefined।"
+            },
+            {
+              "seq": 5,
+              "text": "Perpendiculars के लिए: flip and negate; और axes से equally inclined line की slope plus या minus one।"
+            },
+            {
+              "seq": 6,
+              "text": "General form से: slope के लिए minus A over B; और normal form में, p is positive, period।"
+            },
+            {
+              "seq": 7,
+              "text": "Parallel lines के लिए: normalize, then subtract; और याद रखो, modulus on top, root-sum-of-squares below।"
+            },
+            {
+              "seq": 8,
+              "text": "Family trick के लिए: both zero मतलब sum zero; और concurrency के लिए, determinant dies, तो they meet।"
+            },
+            {
+              "seq": 9,
+              "text": "और आख़िरी दो subtopics के लिए: positive constants first, then plus is the origin's side; और one step to the foot, two steps to the mirror। यह पूरा chapter तुम्हारी जेब में — इन्हीं anchors से revise करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

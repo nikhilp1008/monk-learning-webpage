@@ -1,0 +1,2876 @@
+{
+  "chapter": "Matrices",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 3,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Symmetric & Skew-Symmetric Matrices",
+      "title": "Two mirror-balanced kinds of matrix",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two mirror-balanced matrices"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "A distance chart is mirror-balanced: Delhi–Jaipur equals Jaipur–Delhi, so $a_{ij}=a_{ji}$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Such a square matrix is symmetric: it equals its own reflection across the diagonal."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Fold along the diagonal and the halves match",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 360 330\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"180\" y=\"28\" text-anchor=\"middle\" font-family=\"system-ui, sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#1a1a1a\">Symmetric: a_ij = a_ji</text>\n  <g fill=\"#ececec\">\n    <rect x=\"60\" y=\"50\" width=\"60\" height=\"60\"/>\n    <rect x=\"120\" y=\"110\" width=\"60\" height=\"60\"/>\n    <rect x=\"180\" y=\"170\" width=\"60\" height=\"60\"/>\n    <rect x=\"240\" y=\"230\" width=\"60\" height=\"60\"/>\n  </g>\n  <g fill=\"#ffd4a3\">\n    <rect x=\"180\" y=\"50\" width=\"60\" height=\"60\"/>\n    <rect x=\"60\" y=\"170\" width=\"60\" height=\"60\"/>\n  </g>\n  <g fill=\"#a3d5ff\">\n    <rect x=\"240\" y=\"110\" width=\"60\" height=\"60\"/>\n    <rect x=\"120\" y=\"230\" width=\"60\" height=\"60\"/>\n  </g>\n  <line x1=\"60\" y1=\"50\" x2=\"300\" y2=\"290\" stroke=\"#c0392b\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/>\n  <g stroke=\"#33475b\" stroke-width=\"1.5\" fill=\"none\">\n    <line x1=\"60\" y1=\"50\" x2=\"300\" y2=\"50\"/>\n    <line x1=\"60\" y1=\"110\" x2=\"300\" y2=\"110\"/>\n    <line x1=\"60\" y1=\"170\" x2=\"300\" y2=\"170\"/>\n    <line x1=\"60\" y1=\"230\" x2=\"300\" y2=\"230\"/>\n    <line x1=\"60\" y1=\"290\" x2=\"300\" y2=\"290\"/>\n    <line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"290\"/>\n    <line x1=\"120\" y1=\"50\" x2=\"120\" y2=\"290\"/>\n    <line x1=\"180\" y1=\"50\" x2=\"180\" y2=\"290\"/>\n    <line x1=\"240\" y1=\"50\" x2=\"240\" y2=\"290\"/>\n    <line x1=\"300\" y1=\"50\" x2=\"300\" y2=\"290\"/>\n  </g>\n  <g font-family=\"system-ui, sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#1a1a1a\">\n    <text x=\"210\" y=\"85\">a₁₃</text>\n    <text x=\"90\" y=\"205\">a₃₁</text>\n    <text x=\"270\" y=\"145\">a₂₄</text>\n    <text x=\"150\" y=\"265\">a₄₂</text>\n  </g>\n  <text x=\"180\" y=\"318\" text-anchor=\"middle\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#5b6b7b\">Fold along the diagonal: the two halves match.</text>\n</svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "A 'who owes whom' ledger flips sign across the diagonal: $a_{ij}=-a_{ji}$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "That forces the diagonal to zero: 'how much you owe yourself' is 0."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The transpose $A^{T}$ turns rows into columns — reflection across the diagonal."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "A\\ \\text{symmetric}\\iff A^{T}=A;\\qquad A\\ \\text{skew}\\iff A^{T}=-A"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Every square matrix splits: $\\frac{1}{2}(A+A^{T})$ symmetric $+\\ \\frac{1}{2}(A-A^{T})$ skew."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Two special kinds of square matrix run through this whole topic, and both come from a single idea: what happens when you reflect a matrix across its diagonal?"
+            },
+            {
+              "seq": 2,
+              "text": "Picture a distance chart on the back of a road atlas — cities down the side, the same cities across the top. Delhi to Jaipur reads exactly the same as Jaipur to Delhi. The entry at row i, column j equals the entry at row j, column i."
+            },
+            {
+              "seq": 3,
+              "text": "A square matrix with that perfect balance is called symmetric: it is identical to its own reflection across the main diagonal."
+            },
+            {
+              "seq": 4,
+              "text": "You can see it on the board — fold the grid along the diagonal and the two halves land exactly on top of each other."
+            },
+            {
+              "seq": 5,
+              "text": "Now flip to a who-owes-whom ledger among friends. If Ravi owes Sita five hundred, then from Sita's side it reads minus five hundred. The entry at i, j is the exact negative of the entry at j, i."
+            },
+            {
+              "seq": 6,
+              "text": "And what sits on the diagonal? How much you owe yourself — necessarily zero. So a skew-symmetric matrix is forced to have every diagonal entry zero."
+            },
+            {
+              "seq": 7,
+              "text": "The tool that makes both ideas precise is the transpose, written A with a capital T. It simply turns rows into columns — exactly that reflection across the diagonal."
+            },
+            {
+              "seq": 8,
+              "text": "With it the definitions become crisp: A is symmetric when A transpose equals A; A is skew-symmetric when A transpose equals minus A."
+            },
+            {
+              "seq": 9,
+              "text": "And here is the payoff the exam loves: every square matrix is secretly a blend of the two. Half of A plus A transpose is a symmetric part; half of A minus A transpose is a skew part; and they add back to A exactly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>दो special तरह के square matrix इस पूरे topic में चलते हैं, और दोनों एक ही idea से आते हैं: जब तुम एक matrix को उसके diagonal के across reflect करते हो तो क्या होता है?"
+            },
+            {
+              "seq": 2,
+              "text": "एक road atlas के पीछे छपे distance chart को picture करो — cities side में, वही cities ऊपर। Delhi to Jaipur बिल्कुल वैसा ही पढ़ा जाता है जैसे Jaipur to Delhi। row i, column j की entry, row j, column i की entry के बराबर है।"
+            },
+            {
+              "seq": 3,
+              "text": "उस perfect balance वाले square matrix को symmetric कहते हैं: ये अपने main diagonal के across अपने ही reflection के identical होता है।"
+            },
+            {
+              "seq": 4,
+              "text": "board पर देखो — grid को diagonal के साथ fold करो और दोनों halves बिल्कुल एक-दूसरे के ऊपर आ जाते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "अब एक who-owes-whom ledger पर पलटो। अगर Ravi, Sita को पांच सौ owe करता है, तो Sita की तरफ से ये minus पांच सौ पढ़ा जाता है। i, j की entry, j, i की entry की exact negative है।"
+            },
+            {
+              "seq": 6,
+              "text": "और diagonal पर क्या बैठता है? तुम खुद को कितना owe करते हो — ज़रूरी तौर पर zero। तो skew-symmetric matrix की हर diagonal entry zero होने पर मजबूर है।"
+            },
+            {
+              "seq": 7,
+              "text": "जो tool दोनों ideas को precise बनाता है वो है transpose, जिसे capital T के साथ लिखते हैं। ये बस rows को columns में बदल देता है — बिल्कुल वही diagonal के across reflection।"
+            },
+            {
+              "seq": 8,
+              "text": "इसके साथ definitions crisp हो जाती हैं: A symmetric है जब A transpose equals A; A skew-symmetric है जब A transpose equals minus A।"
+            },
+            {
+              "seq": 9,
+              "text": "और यहाँ वो payoff है जो exam को पसंद है: हर square matrix असल में दोनों का blend है। A plus A transpose का आधा एक symmetric part है; A minus A transpose का आधा एक skew part है; और ये वापस exactly A में जुड़ जाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Symmetric & Skew-Symmetric Matrices",
+      "title": "The property toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The property toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "For any square $A$: $A+A^{T}$ is symmetric and $A-A^{T}$ is skew-symmetric."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "For any matrix $A$ (any order): $AA^{T}$ and $A^{T}A$ are symmetric and square."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Powers of a symmetric matrix stay symmetric."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Powers of skew: even powers symmetric, odd powers skew."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Symmetric $A,B$: $AB+BA$ symmetric, $AB-BA$ skew; $AB$ symmetric iff $AB=BA$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Skew $A,B$: $A\\pm B$ and $AB-BA$ skew; $AB+BA$ symmetric."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "The only matrix both symmetric AND skew is the null matrix $O$."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "Every proof uses one move: transpose, reverse the order, substitute $A^{T}=\\pm A$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before any worked example, stock the toolkit — a handful of facts that turn most questions into one-line answers."
+            },
+            {
+              "seq": 2,
+              "text": "Fact one, the foundation of the big board question: for any square matrix A, the sum A plus A transpose is always symmetric, and the difference A minus A transpose is always skew-symmetric."
+            },
+            {
+              "seq": 3,
+              "text": "Fact two, true even for non-square A: both A times A transpose, and A transpose times A, come out symmetric — and square, whatever the shape of A."
+            },
+            {
+              "seq": 4,
+              "text": "Powers behave well too. Every power of a symmetric matrix is again symmetric."
+            },
+            {
+              "seq": 5,
+              "text": "For a skew-symmetric matrix the parity matters: even powers turn symmetric, odd powers stay skew. So the square of a skew matrix is symmetric, its cube is skew, and so on."
+            },
+            {
+              "seq": 6,
+              "text": "For two symmetric matrices A and B: A B plus B A is symmetric, A B minus B A is skew, and the product A B itself is symmetric only when A and B commute — that is, only when A B equals B A."
+            },
+            {
+              "seq": 7,
+              "text": "For two skew-symmetric matrices: A plus or minus B is skew, A B minus B A is skew, but A B plus B A flips to symmetric."
+            },
+            {
+              "seq": 8,
+              "text": "One striking fact: the only matrix that is both symmetric and skew-symmetric at once is the null matrix, since A transpose equal to both A and minus A forces A to be zero."
+            },
+            {
+              "seq": 9,
+              "text": "Notice every one of these follows from a single move — transpose the expression, reverse the order of the product, and substitute A transpose equals plus or minus A. Master that move and you never memorize the list."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "किसी भी worked example से पहले, toolkit भर लो — कुछ facts जो ज़्यादातर questions को one-line answers में बदल देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Fact one, बड़े board question की नींव: किसी भी square matrix A के लिए, sum A plus A transpose हमेशा symmetric होता है, और difference A minus A transpose हमेशा skew-symmetric।"
+            },
+            {
+              "seq": 3,
+              "text": "Fact two, जो non-square A के लिए भी सच है: A times A transpose, और A transpose times A, दोनों symmetric निकलते हैं — और square, चाहे A का shape कुछ भी हो।"
+            },
+            {
+              "seq": 4,
+              "text": "Powers भी अच्छे से behave करते हैं। symmetric matrix की हर power फिर से symmetric होती है।"
+            },
+            {
+              "seq": 5,
+              "text": "skew-symmetric matrix के लिए parity matter करती है: even powers symmetric हो जाती हैं, odd powers skew रहती हैं। तो skew matrix का square symmetric है, cube skew, वगैरह।"
+            },
+            {
+              "seq": 6,
+              "text": "दो symmetric matrices A और B के लिए: A B plus B A symmetric है, A B minus B A skew है, और product A B खुद तभी symmetric है जब A और B commute करें — यानी तभी जब A B equals B A।"
+            },
+            {
+              "seq": 7,
+              "text": "दो skew-symmetric matrices के लिए: A plus या minus B skew है, A B minus B A skew है, लेकिन A B plus B A symmetric में पलट जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "एक striking fact: एकमात्र matrix जो symmetric और skew-symmetric दोनों एक साथ है, वो null matrix है, क्योंकि A transpose का A और minus A दोनों के बराबर होना A को zero होने पर मजबूर करता है।"
+            },
+            {
+              "seq": 9,
+              "text": "गौर करो, इनमें से हर एक एक ही move से निकलता है — expression को transpose करो, product का order reverse करो, और A transpose equals plus या minus A substitute करो। इस move को master कर लो तो list कभी रटनी नहीं पड़ती।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Symmetric & Skew-Symmetric Matrices",
+      "title": "Derivation: zero diagonal, and counting free entries",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Zero diagonal, and how many free entries"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Skew means $a_{ij}=-a_{ji}$ for all $i,j$. Set $i=j$:"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "a_{ii} = -a_{ii}\\ \\Rightarrow\\ 2a_{ii}=0\\ \\Rightarrow\\ a_{ii}=0"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "Converse fails: a zero diagonal alone does NOT make a matrix skew."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Symmetric $n\\times n$: diagonal ($n$) + strictly-above entries; below is a mirror copy."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "n + \\frac{n(n-1)}{2} = \\frac{n(n+1)}{2}\\quad(\\text{symmetric})"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\frac{n(n-1)}{2}\\quad(\\text{skew: diagonal forced to }0)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "For $n=3$: symmetric 6, skew 3."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two short derivations here score the reasoning marks the board rewards — write the logic, not just the result."
+            },
+            {
+              "seq": 2,
+              "text": "First, why is a skew-symmetric matrix always zero on its diagonal? Start from the definition: a i j equals minus a j i for every pair. Now set i equal to j."
+            },
+            {
+              "seq": 3,
+              "text": "The diagonal entry becomes a i i equals minus a i i. Move it across: two a i i equals zero, so a i i equals zero. Every diagonal entry must vanish."
+            },
+            {
+              "seq": 4,
+              "text": "Careful with the converse — it fails. A matrix can have a zero diagonal without being skew-symmetric; the off-diagonal sign-flip condition still has to hold."
+            },
+            {
+              "seq": 5,
+              "text": "Second, how many independent entries does each type really have? A symmetric matrix of order n is pinned down by its diagonal — n entries — plus the entries strictly above the diagonal; everything below is just a mirror copy."
+            },
+            {
+              "seq": 6,
+              "text": "Count them: n on the diagonal, plus n times n minus one over two above it. That sums to n times n plus one over two — the number of free entries in a symmetric matrix."
+            },
+            {
+              "seq": 7,
+              "text": "For a skew matrix the diagonal is locked at zero, so only the above-diagonal entries are free: n times n minus one over two."
+            },
+            {
+              "seq": 8,
+              "text": "Put n equal to three and you get six independent entries for symmetric, three for skew — a favourite one-mark check."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ दो छोटी derivations वो reasoning marks दिलाती हैं जो board reward करता है — result नहीं, logic लिखो।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, skew-symmetric matrix अपने diagonal पर हमेशा zero क्यों होता है? definition से शुरू करो: हर pair के लिए a i j equals minus a j i। अब i को j के बराबर रखो।"
+            },
+            {
+              "seq": 3,
+              "text": "diagonal entry बन जाती है a i i equals minus a i i। इसे across ले जाओ: two a i i equals zero, तो a i i equals zero। हर diagonal entry ग़ायब होनी चाहिए।"
+            },
+            {
+              "seq": 4,
+              "text": "converse से सावधान — वो fail होता है। एक matrix का diagonal zero हो सकता है बिना skew-symmetric हुए; off-diagonal sign-flip condition अब भी hold करनी चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा, हर type के असल में कितने independent entries होते हैं? order n की symmetric matrix अपने diagonal से pin होती है — n entries — plus strictly above-diagonal की entries; नीचे सब बस mirror copy है।"
+            },
+            {
+              "seq": 6,
+              "text": "इन्हें गिनो: diagonal पर n, plus ऊपर n times n minus one over two। ये sum होता है n times n plus one over two — symmetric matrix में free entries की संख्या।"
+            },
+            {
+              "seq": 7,
+              "text": "skew matrix के लिए diagonal zero पर locked है, तो सिर्फ above-diagonal entries free हैं: n times n minus one over two।"
+            },
+            {
+              "seq": 8,
+              "text": "n को three रखो तो symmetric के लिए छह independent entries मिलती हैं, skew के लिए तीन — एक favourite one-mark check।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Symmetric & Skew-Symmetric Matrices",
+      "title": "Derivation: the unique symmetric + skew split",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The unique symmetric + skew split"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Existence. For any square $A$, define:"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "P = \\tfrac{1}{2}(A+A^{T}),\\qquad Q = \\tfrac{1}{2}(A-A^{T})"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "P^{T} = \\tfrac{1}{2}(A^{T}+A) = P\\quad(\\text{symmetric})"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "Q^{T} = \\tfrac{1}{2}(A^{T}-A) = -Q\\quad(\\text{skew})"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "And $P+Q = \\tfrac12(A+A^{T})+\\tfrac12(A-A^{T}) = A$. So a split exists."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Uniqueness. If $A=P_1+Q_1$ ($P_1$ sym, $Q_1$ skew), transpose: $A^{T}=P_1-Q_1$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\text{Add/subtract: } P_1=\\tfrac12(A+A^{T})=P,\\quad Q_1=\\tfrac12(A-A^{T})=Q"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "The pieces are forced — the decomposition is unique."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Now the crown jewel of this subtopic — the result behind the most-asked board question. Every square matrix splits into a symmetric and a skew-symmetric part, and in exactly one way."
+            },
+            {
+              "seq": 2,
+              "text": "Start with existence. Take any square matrix A and define two matrices directly from it."
+            },
+            {
+              "seq": 3,
+              "text": "Let P be one half of A plus A transpose, and let Q be one half of A minus A transpose."
+            },
+            {
+              "seq": 4,
+              "text": "Check P. Transpose it: one half of A transpose plus A, which is just P again. So P equals its own transpose — P is symmetric."
+            },
+            {
+              "seq": 5,
+              "text": "Check Q. Its transpose is one half of A transpose minus A, which is minus Q. So Q transpose equals minus Q — Q is skew-symmetric."
+            },
+            {
+              "seq": 6,
+              "text": "And do they rebuild A? Add them: one half of A plus A transpose, plus one half of A minus A transpose — the transposes cancel and you are left with exactly A. Existence done."
+            },
+            {
+              "seq": 7,
+              "text": "Now uniqueness. Suppose A also splits some other way, as P-one plus Q-one, with P-one symmetric and Q-one skew. Transpose the whole equation: A transpose equals P-one minus Q-one."
+            },
+            {
+              "seq": 8,
+              "text": "Add those two equations and P-one is forced to be one half of A plus A transpose — our P. Subtract them and Q-one is forced to be one half of A minus A transpose — our Q."
+            },
+            {
+              "seq": 9,
+              "text": "The pieces cannot be anything else. The symmetric-plus-skew decomposition is unique — which is why the answer to that board question is never ambiguous."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>अब इस subtopic का crown jewel — वो result जिसके पीछे सबसे ज़्यादा पूछा जाने वाला board question है। हर square matrix एक symmetric और एक skew-symmetric part में बँटता है, और ठीक एक ही तरीके से।"
+            },
+            {
+              "seq": 2,
+              "text": "existence से शुरू करो। कोई भी square matrix A लो और उसी से दो matrices define करो।"
+            },
+            {
+              "seq": 3,
+              "text": "P को A plus A transpose का आधा रखो, और Q को A minus A transpose का आधा।"
+            },
+            {
+              "seq": 4,
+              "text": "P check करो। इसे transpose करो: A transpose plus A का आधा, जो बस फिर से P है। तो P अपने transpose के बराबर है — P symmetric है।"
+            },
+            {
+              "seq": 5,
+              "text": "Q check करो। इसका transpose है A transpose minus A का आधा, जो minus Q है। तो Q transpose equals minus Q — Q skew-symmetric है।"
+            },
+            {
+              "seq": 6,
+              "text": "और क्या ये A को rebuild करते हैं? इन्हें add करो: A plus A transpose का आधा, plus A minus A transpose का आधा — transposes cancel हो जाते हैं और तुम्हारे पास exactly A बचता है। Existence हो गया।"
+            },
+            {
+              "seq": 7,
+              "text": "अब uniqueness। मान लो A किसी और तरीके से भी बँटता है, P-one plus Q-one के रूप में, P-one symmetric और Q-one skew के साथ। पूरी equation transpose करो: A transpose equals P-one minus Q-one।"
+            },
+            {
+              "seq": 8,
+              "text": "इन दोनों equations को add करो और P-one, A plus A transpose के आधे — यानी हमारे P — होने पर मजबूर है। इन्हें subtract करो और Q-one, A minus A transpose के आधे — हमारे Q — होने पर मजबूर है।"
+            },
+            {
+              "seq": 9,
+              "text": "pieces कुछ और हो ही नहीं सकते। symmetric-plus-skew decomposition unique है — इसीलिए उस board question का answer कभी ambiguous नहीं होता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "formulas",
+      "subtopic": "Symmetric & Skew-Symmetric Matrices",
+      "title": "Transpose laws and the two definitions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Transpose laws and the two definitions"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "(A^{T})^{T}=A,\\quad (A+B)^{T}=A^{T}+B^{T},\\quad (kA)^{T}=kA^{T}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "(AB)^{T} = B^{T}A^{T}\\quad(\\text{order reverses!})"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "The reversal in $(AB)^{T}=B^{T}A^{T}$ is the silent killer in proofs."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{Symmetric: } A^{T}=A\\ \\ (a_{ij}=a_{ji})"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\text{Skew: } A^{T}=-A\\ \\ (a_{ij}=-a_{ji},\\ a_{ii}=0)"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{Free entries: symmetric } \\frac{n(n+1)}{2},\\ \\ \\text{skew } \\frac{n(n-1)}{2}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Both definitions apply to square matrices only."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the formal rulebook — the transpose laws first, because every property in this subtopic is really a transpose calculation in disguise."
+            },
+            {
+              "seq": 2,
+              "text": "The gentle laws: transpose of a transpose gives A back; the transpose of a sum is the sum of the transposes; and a scalar just rides through, k times A transpose."
+            },
+            {
+              "seq": 3,
+              "text": "Then the one that matters most: the transpose of a product reverses the order. A B transpose equals B transpose times A transpose — B first, then A."
+            },
+            {
+              "seq": 4,
+              "text": "Underline that reversal. Writing A transpose times B transpose instead is the single mistake that quietly wrecks almost every proof in this topic."
+            },
+            {
+              "seq": 5,
+              "text": "The definitions in one line each. Symmetric: A transpose equals A, meaning a i j equals a j i — the mirror across the diagonal."
+            },
+            {
+              "seq": 6,
+              "text": "Skew-symmetric: A transpose equals minus A, meaning a i j equals minus a j i, which forces every diagonal entry to zero."
+            },
+            {
+              "seq": 7,
+              "text": "And the counting pair to memorize: a symmetric matrix has n times n plus one over two free entries; a skew matrix has n times n minus one over two."
+            },
+            {
+              "seq": 8,
+              "text": "One condition sits over all of it: both definitions make sense only for square matrices — a non-square matrix can never equal plus or minus its own transpose."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ formal rulebook है — पहले transpose laws, क्योंकि इस subtopic की हर property असल में एक transpose calculation ही है।"
+            },
+            {
+              "seq": 2,
+              "text": "gentle laws: transpose का transpose A वापस देता है; sum का transpose, transposes का sum है; और scalar बस साथ चलता है, k times A transpose।"
+            },
+            {
+              "seq": 3,
+              "text": "फिर वो जो सबसे ज़्यादा matter करती है: product का transpose order reverse करता है। A B transpose equals B transpose times A transpose — पहले B, फिर A।"
+            },
+            {
+              "seq": 4,
+              "text": "उस reversal को underline करो। इसकी जगह A transpose times B transpose लिखना वो एकमात्र गलती है जो इस topic की लगभग हर proof को चुपचाप बर्बाद कर देती है।"
+            },
+            {
+              "seq": 5,
+              "text": "definitions, हर एक one line में। Symmetric: A transpose equals A, यानी a i j equals a j i — diagonal के across mirror।"
+            },
+            {
+              "seq": 6,
+              "text": "Skew-symmetric: A transpose equals minus A, यानी a i j equals minus a j i, जो हर diagonal entry को zero होने पर मजबूर करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और वो counting pair याद करो: symmetric matrix में n times n plus one over two free entries; skew matrix में n times n minus one over two।"
+            },
+            {
+              "seq": 8,
+              "text": "इन सबके ऊपर एक condition है: दोनों definitions सिर्फ square matrices के लिए बनती हैं — एक non-square matrix कभी अपने transpose के plus या minus के बराबर नहीं हो सकता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Symmetric & Skew-Symmetric Matrices",
+      "title": "Split a 3x3 into symmetric + skew",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: split a $3\\times3$ into symmetric + skew"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "A = \\begin{bmatrix} 2 & 4 & -6\\\\ 0 & 1 & 5\\\\ 2 & -3 & 4 \\end{bmatrix},\\quad A^{T} = \\begin{bmatrix} 2 & 0 & 2\\\\ 4 & 1 & -3\\\\ -6 & 5 & 4 \\end{bmatrix}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Symmetric part $P = \\tfrac12(A+A^{T})$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "A+A^{T} = \\begin{bmatrix} 4 & 4 & -4\\\\ 4 & 2 & 2\\\\ -4 & 2 & 8 \\end{bmatrix}\\Rightarrow P = \\begin{bmatrix} 2 & 2 & -2\\\\ 2 & 1 & 1\\\\ -2 & 1 & 4 \\end{bmatrix}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Skew part $Q = \\tfrac12(A-A^{T})$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "A-A^{T} = \\begin{bmatrix} 0 & 4 & -8\\\\ -4 & 0 & 8\\\\ 8 & -8 & 0 \\end{bmatrix}\\Rightarrow Q = \\begin{bmatrix} 0 & 2 & -4\\\\ -2 & 0 & 4\\\\ 4 & -4 & 0 \\end{bmatrix}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Check: $P^{T}=P$, $Q^{T}=-Q$ (zero diagonal), and $P+Q=A$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "A = P + Q"
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "That verification at the end catches almost every arithmetic slip."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the classic board question, worth three or four marks and asked almost every year: express a given matrix as the sum of a symmetric and a skew-symmetric part."
+            },
+            {
+              "seq": 2,
+              "text": "Start by writing down A transpose — just flip rows into columns. So the first row, two, four, minus six, becomes the first column, and so on."
+            },
+            {
+              "seq": 3,
+              "text": "The symmetric part P is one half of A plus A transpose. Add the two matrices entry by entry first."
+            },
+            {
+              "seq": 4,
+              "text": "A plus A transpose comes out four, four, minus four; four, two, two; minus four, two, eight. Halve every entry to get P: two, two, minus two; two, one, one; minus two, one, four."
+            },
+            {
+              "seq": 5,
+              "text": "The skew part Q is one half of A minus A transpose. Subtract A transpose from A entrywise."
+            },
+            {
+              "seq": 6,
+              "text": "A minus A transpose is zero, four, minus eight; minus four, zero, eight; eight, minus eight, zero. Halve it for Q: zero, two, minus four; minus two, zero, four; four, minus four, zero."
+            },
+            {
+              "seq": 7,
+              "text": "Now verify — never skip this. P should equal its transpose; Q should equal minus its transpose, with a dead-zero diagonal; and P plus Q should rebuild A."
+            },
+            {
+              "seq": 8,
+              "text": "All three checks pass, so A equals P plus Q."
+            },
+            {
+              "seq": 9,
+              "text": "That closing verification is your safety net — a single mis-halved entry shows up instantly when Q's diagonal is not all zeros."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब वो classic board question, तीन-चार marks का, जो लगभग हर साल पूछा जाता है: दी गई matrix को एक symmetric और एक skew-symmetric part के sum के रूप में express करो।"
+            },
+            {
+              "seq": 2,
+              "text": "A transpose लिखने से शुरू करो — बस rows को columns में flip करो। तो पहली row, two, four, minus six, पहली column बन जाती है, वगैरह।"
+            },
+            {
+              "seq": 3,
+              "text": "symmetric part P, A plus A transpose का आधा है। पहले दोनों matrices को entry by entry add करो।"
+            },
+            {
+              "seq": 4,
+              "text": "A plus A transpose निकलता है four, four, minus four; four, two, two; minus four, two, eight। हर entry को आधा करो तो P मिलता है: two, two, minus two; two, one, one; minus two, one, four।"
+            },
+            {
+              "seq": 5,
+              "text": "skew part Q, A minus A transpose का आधा है। A में से A transpose entrywise subtract करो।"
+            },
+            {
+              "seq": 6,
+              "text": "A minus A transpose है zero, four, minus eight; minus four, zero, eight; eight, minus eight, zero। इसे Q के लिए आधा करो: zero, two, minus four; minus two, zero, four; four, minus four, zero।"
+            },
+            {
+              "seq": 7,
+              "text": "अब verify करो — इसे कभी skip मत करो। P अपने transpose के बराबर होना चाहिए; Q अपने transpose के minus के बराबर, dead-zero diagonal के साथ; और P plus Q, A को rebuild करना चाहिए।"
+            },
+            {
+              "seq": 8,
+              "text": "तीनों checks pass होते हैं, तो A equals P plus Q।"
+            },
+            {
+              "seq": 9,
+              "text": "वो closing verification तुम्हारा safety net है — एक भी गलत-आधा entry तुरंत दिख जाती है जब Q का diagonal पूरा zero नहीं होता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Symmetric & Skew-Symmetric Matrices",
+      "title": "Classify AB-BA and ABA without computing",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: classify without computing entries"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "$A,B$ symmetric ($A^{T}=A$, $B^{T}=B$). Classify $AB-BA$ and $ABA$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "Transpose the expression, reverse the order, substitute."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "(AB-BA)^{T} = (AB)^{T}-(BA)^{T} = B^{T}A^{T}-A^{T}B^{T}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "= BA - AB = -(AB-BA)\\ \\Rightarrow\\ \\text{skew-symmetric}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "(ABA)^{T} = A^{T}B^{T}A^{T} = ABA\\ \\Rightarrow\\ \\text{symmetric}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "No coordinates, no arithmetic — two lines settle each."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Reflex-computing entries here just burns time and invites slips."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a speed trap. A and B are symmetric, and you are asked to classify two products — without touching a single entry."
+            },
+            {
+              "seq": 2,
+              "text": "The setup: A transpose equals A, and B transpose equals B, because both are symmetric. That is all you need."
+            },
+            {
+              "seq": 3,
+              "text": "The technique is always the same three-step flip: transpose the whole expression, reverse the order of every product, then substitute the symmetric conditions."
+            },
+            {
+              "seq": 4,
+              "text": "Take A B minus B A. Its transpose is A B transpose minus B A transpose, which by the reversal law is B transpose A transpose minus A transpose B transpose."
+            },
+            {
+              "seq": 5,
+              "text": "Substitute: that becomes B A minus A B, which is exactly the negative of A B minus B A. Equal to its own negative means A B minus B A is skew-symmetric."
+            },
+            {
+              "seq": 6,
+              "text": "Now A B A. Its transpose is A transpose B transpose A transpose — note the reversal leaves it in the same A, B, A order — and substituting gives A B A back. Equal to itself means A B A is symmetric."
+            },
+            {
+              "seq": 7,
+              "text": "No coordinates, no arithmetic — two clean lines settle each one."
+            },
+            {
+              "seq": 8,
+              "text": "The trap is instinct: a student who starts expanding A B and B A in numbers burns a full minute and risks a sign slip, when the flip answers it instantly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये एक speed trap है। A और B symmetric हैं, और तुमसे दो products classify करने को कहा गया है — बिना एक भी entry छुए।"
+            },
+            {
+              "seq": 2,
+              "text": "setup: A transpose equals A, और B transpose equals B, क्योंकि दोनों symmetric हैं। बस इतना ही चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "technique हमेशा वही तीन-step flip है: पूरी expression transpose करो, हर product का order reverse करो, फिर symmetric conditions substitute करो।"
+            },
+            {
+              "seq": 4,
+              "text": "A B minus B A लो। इसका transpose है A B transpose minus B A transpose, जो reversal law से B transpose A transpose minus A transpose B transpose है।"
+            },
+            {
+              "seq": 5,
+              "text": "substitute करो: ये बनता है B A minus A B, जो exactly A B minus B A का negative है। अपने ही negative के बराबर होने का मतलब A B minus B A skew-symmetric है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब A B A। इसका transpose है A transpose B transpose A transpose — गौर करो reversal इसे उसी A, B, A order में छोड़ देता है — और substitute करने पर A B A वापस मिलता है। खुद के बराबर होने का मतलब A B A symmetric है।"
+            },
+            {
+              "seq": 7,
+              "text": "कोई coordinates नहीं, कोई arithmetic नहीं — दो साफ़ lines हर एक को settle कर देती हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "trap है instinct: जो student A B और B A को numbers में expand करने लगता है वो पूरा minute जलाता है और sign slip का risk लेता है, जबकि flip इसे तुरंत answer कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Symmetric & Skew-Symmetric Matrices",
+      "title": "Force a matrix to be skew-symmetric",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: force a matrix to be skew"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "A = \\begin{bmatrix} 0 & 2x-3 & 4\\\\ -1 & 0 & y+2\\\\ -4 & -7 & z \\end{bmatrix}\\ \\text{skew-symmetric}"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "Skew needs $a_{ij}=-a_{ji}$ and a zero diagonal."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{Diagonal: } z = 0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "(1,2)\\text{ vs }(2,1):\\ 2x-3 = -(-1) = 1\\ \\Rightarrow\\ x=2"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "(2,3)\\text{ vs }(3,2):\\ y+2 = -(-7) = 7\\ \\Rightarrow\\ y=5"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "(1,3)\\text{ vs }(3,1):\\ 4 = -(-4) = 4\\ \\checkmark\\ (\\text{consistent})"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "x=2,\\ \\ y=5,\\ \\ z=0"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here the definition becomes a set of equations. We are told this matrix is skew-symmetric and asked to find x, y, and z."
+            },
+            {
+              "seq": 2,
+              "text": "The matrix has zero, two x minus three, four across the top; minus one, zero, y plus two; and minus four, minus seven, z."
+            },
+            {
+              "seq": 3,
+              "text": "Skew-symmetric demands two things: every entry equals minus its mirror partner across the diagonal, and the whole diagonal is zero."
+            },
+            {
+              "seq": 4,
+              "text": "The diagonal first. The lone unknown diagonal entry is z, so z must be zero."
+            },
+            {
+              "seq": 5,
+              "text": "Now the mirror pairs. Position one-two must equal minus position two-one: two x minus three equals minus of minus one, which is one. So two x equals four, giving x equals two."
+            },
+            {
+              "seq": 6,
+              "text": "Position two-three equals minus position three-two: y plus two equals minus of minus seven, which is seven. So y equals five."
+            },
+            {
+              "seq": 7,
+              "text": "Finally check the pair that has no unknowns: position one-three should equal minus position three-one — four equals minus of minus four, four equals four. Consistent, so the matrix really is skew."
+            },
+            {
+              "seq": 8,
+              "text": "The answer: x equals two, y equals five, z equals zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ definition equations का set बन जाती है। हमें बताया गया है कि ये matrix skew-symmetric है और x, y, z निकालने को कहा गया है।"
+            },
+            {
+              "seq": 2,
+              "text": "matrix में ऊपर zero, two x minus three, four; minus one, zero, y plus two; और minus four, minus seven, z है।"
+            },
+            {
+              "seq": 3,
+              "text": "skew-symmetric दो चीज़ें माँगता है: हर entry diagonal के across अपने mirror partner के minus के बराबर हो, और पूरा diagonal zero हो।"
+            },
+            {
+              "seq": 4,
+              "text": "पहले diagonal। एकमात्र unknown diagonal entry z है, तो z zero होना चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "अब mirror pairs। position one-two, position two-one के minus के बराबर होनी चाहिए: two x minus three equals minus of minus one, जो one है। तो two x equals four, यानी x equals two।"
+            },
+            {
+              "seq": 6,
+              "text": "position two-three equals minus position three-two: y plus two equals minus of minus seven, जो seven है। तो y equals five।"
+            },
+            {
+              "seq": 7,
+              "text": "आख़िर में वो pair check करो जिसमें कोई unknown नहीं: position one-three, position three-one के minus के बराबर होनी चाहिए — four equals minus of minus four, four equals four। Consistent, तो matrix सच में skew है।"
+            },
+            {
+              "seq": 8,
+              "text": "answer: x equals two, y equals five, z equals zero।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Symmetric & Skew-Symmetric Matrices",
+      "title": "The square of a 2x2 skew matrix",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: the square of a $2\\times2$ skew matrix"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\text{General } 2\\times2\\text{ skew: } A = \\begin{bmatrix} 0 & a\\\\ -a & 0 \\end{bmatrix}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "A^{2} = \\begin{bmatrix} 0 & a\\\\ -a & 0 \\end{bmatrix}\\begin{bmatrix} 0 & a\\\\ -a & 0 \\end{bmatrix} = \\begin{bmatrix} -a^{2} & 0\\\\ 0 & -a^{2} \\end{bmatrix} = -a^{2}I"
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "style": "red-margin",
+          "text": "So every $2\\times2$ skew matrix squares to the scalar matrix $-a^{2}I$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Now impose $A^{2} = -9I$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "-a^{2}I = -9I\\ \\Rightarrow\\ a^{2}=9\\ \\Rightarrow\\ a=\\pm 3"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "A = \\begin{bmatrix} 0 & 3\\\\ -3 & 0 \\end{bmatrix}\\ \\text{ or }\\ A = \\begin{bmatrix} 0 & -3\\\\ 3 & 0 \\end{bmatrix}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Mirrors $(ai)^{2}=-a^{2}$: a $2\\times2$ skew acts like an imaginary unit."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Here is an elegant Advanced-level fact: what happens when you square a two by two skew-symmetric matrix?"
+            },
+            {
+              "seq": 2,
+              "text": "Every two by two skew matrix has a forced shape — zeros on the diagonal, and opposite off-diagonals. So it must look like zero, a on top; minus a, zero below, for some real number a."
+            },
+            {
+              "seq": 3,
+              "text": "Square it. Multiply the matrix by itself and the off-diagonals cancel, leaving minus a squared on both diagonal spots — that is exactly minus a squared times the identity."
+            },
+            {
+              "seq": 4,
+              "text": "So the square of any two by two skew matrix is a scalar matrix, minus a squared times I. That holds for every such matrix, whatever a is."
+            },
+            {
+              "seq": 5,
+              "text": "Now use it to solve a problem: find all such matrices with A squared equal to minus nine I."
+            },
+            {
+              "seq": 6,
+              "text": "Set minus a squared times I equal to minus nine I. Then a squared equals nine, so a is plus or minus three."
+            },
+            {
+              "seq": 7,
+              "text": "Each sign gives one matrix: zero, three, minus three, zero; or zero, minus three, three, zero."
+            },
+            {
+              "seq": 8,
+              "text": "And notice the beauty — this mirrors a i, all squared, equals minus a squared. A two by two skew matrix behaves like an imaginary unit scaled by a."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>यहाँ एक elegant Advanced-level fact है: जब तुम एक two by two skew-symmetric matrix को square करते हो तो क्या होता है?"
+            },
+            {
+              "seq": 2,
+              "text": "हर two by two skew matrix का एक forced shape होता है — diagonal पर zeros, और opposite off-diagonals। तो इसे zero, a ऊपर; minus a, zero नीचे दिखना ही है, किसी real number a के लिए।"
+            },
+            {
+              "seq": 3,
+              "text": "इसे square करो। matrix को खुद से multiply करो और off-diagonals cancel हो जाते हैं, दोनों diagonal spots पर minus a squared छोड़ते हुए — जो exactly minus a squared times identity है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो किसी भी two by two skew matrix का square एक scalar matrix है, minus a squared times I। ये हर ऐसी matrix के लिए hold करता है, a कुछ भी हो।"
+            },
+            {
+              "seq": 5,
+              "text": "अब इससे एक problem solve करो: वो सारी matrices निकालो जिनके लिए A squared equals minus nine I।"
+            },
+            {
+              "seq": 6,
+              "text": "minus a squared times I को minus nine I के बराबर रखो। तो a squared equals nine, यानी a plus या minus three।"
+            },
+            {
+              "seq": 7,
+              "text": "हर sign एक matrix देता है: zero, three, minus three, zero; या zero, minus three, three, zero।"
+            },
+            {
+              "seq": 8,
+              "text": "और beauty देखो — ये a i, all squared, equals minus a squared को mirror करता है। एक two by two skew matrix, a से scaled एक imaginary unit की तरह behave करती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "tips",
+      "subtopic": "Symmetric & Skew-Symmetric Matrices",
+      "title": "Traps in symmetric & skew-symmetric problems",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Traps in symmetric & skew-symmetric problems"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Forgetting the skew diagonal is zero — costs easy 'find x' marks."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Dropping the reversal: it is $(AB)^{T}=B^{T}A^{T}$, never $A^{T}B^{T}$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Product of two symmetric matrices is symmetric ONLY if they commute."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Losing the $\\frac12$ factor, or swapping $P$ and $Q$, breaks $P+Q=A$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Pro-tip: classify by flipping — transpose, reverse, substitute $A^{T}=\\pm A$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Pro-tip: memorize the pair $\\frac{n(n+1)}{2}$ and $\\frac{n(n-1)}{2}$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Sanity check: after a split, glance at $Q$'s diagonal — any nonzero means an error."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Four traps quietly cost marks in this subtopic — name them and they lose their bite."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one: forgetting that a skew-symmetric matrix has a dead-zero diagonal. That one fact hands you the easy find-x marks, and missing it misclassifies matrices."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, the silent killer in proofs: dropping the reversal in the transpose of a product. It is B transpose times A transpose, never A transpose times B transpose."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: assuming the product of two symmetric matrices is symmetric. It is symmetric only when the two commute; otherwise reach for A B plus B A, which is symmetric, and A B minus B A, which is skew."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: in the decomposition, losing the one-half factor, or swapping which piece is P and which is Q, so they no longer add back to A."
+            },
+            {
+              "seq": 6,
+              "text": "First pro-tip: classify any product expression by flipping — transpose it, reverse the order, substitute A transpose equals plus or minus A, and read off symmetric or skew."
+            },
+            {
+              "seq": 7,
+              "text": "Second pro-tip: just memorize the counting pair — n times n plus one over two for symmetric, n times n minus one over two for skew."
+            },
+            {
+              "seq": 8,
+              "text": "And a sanity check that saves you every time: after a split, glance at Q's diagonal. If any entry there is not zero, you have made an arithmetic slip — go back."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic में चार traps चुपचाप marks खा जाते हैं — इन्हें पहचान लो और इनकी धार चली जाती है।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one: भूल जाना कि skew-symmetric matrix का diagonal dead-zero होता है। वो एक fact तुम्हें आसान find-x marks देता है, और इसे miss करना matrices को misclassify कर देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two, proofs में silent killer: product के transpose में reversal drop कर देना। ये B transpose times A transpose है, कभी A transpose times B transpose नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: ये मान लेना कि दो symmetric matrices का product symmetric है। ये तभी symmetric है जब दोनों commute करें; वरना A B plus B A का सहारा लो, जो symmetric है, और A B minus B A, जो skew है।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: decomposition में one-half factor खो देना, या P और Q को swap कर देना, ताकि वो वापस A में न जुड़ें।"
+            },
+            {
+              "seq": 6,
+              "text": "पहला pro-tip: किसी भी product expression को flip करके classify करो — transpose करो, order reverse करो, A transpose equals plus या minus A substitute करो, और symmetric या skew पढ़ लो।"
+            },
+            {
+              "seq": 7,
+              "text": "दूसरा pro-tip: बस counting pair याद कर लो — symmetric के लिए n times n plus one over two, skew के लिए n times n minus one over two।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक sanity check जो हर बार बचाता है: split के बाद Q का diagonal देखो। अगर वहाँ कोई entry zero नहीं है, तो तुमने arithmetic slip किया है — वापस जाओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Invertible Matrices & Row Operations",
+      "title": "A matrix that undoes another",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "A matrix that undoes another"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Dividing by 5 means multiplying by $\\frac15$, the number that undoes it: $5\\cdot\\frac15 = 1$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Matrices have no division, but an inverse $A^{-1}$ undoes $A$:"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "A A^{-1} = A^{-1} A = I"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "A square matrix with such a partner is invertible (non-singular)."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Not every matrix has one — just as 0 has no reciprocal."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "A UPI refund reverses a payment; but merging two accounts destroys the split — no undo."
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "caption": "Reduce [A | I] to [I | A^-1] with row operations",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 600 210\" xmlns=\"http://www.w3.org/2000/svg\">\n  <g font-family=\"system-ui, sans-serif\">\n    <rect x=\"30\" y=\"60\" width=\"220\" height=\"80\" rx=\"8\" fill=\"#eef4ff\" stroke=\"#33475b\" stroke-width=\"2\"/>\n    <line x1=\"140\" y1=\"60\" x2=\"140\" y2=\"140\" stroke=\"#33475b\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>\n    <text x=\"85\" y=\"108\" text-anchor=\"middle\" font-size=\"26\" font-weight=\"bold\" fill=\"#1a1a1a\">A</text>\n    <text x=\"195\" y=\"108\" text-anchor=\"middle\" font-size=\"26\" font-weight=\"bold\" fill=\"#1a1a1a\">I</text>\n    <line x1=\"262\" y1=\"100\" x2=\"336\" y2=\"100\" stroke=\"#c0392b\" stroke-width=\"2.5\"/>\n    <polygon points=\"338,100 326,94 326,106\" fill=\"#c0392b\"/>\n    <text x=\"300\" y=\"82\" text-anchor=\"middle\" font-size=\"12\" fill=\"#c0392b\">same row ops</text>\n    <text x=\"300\" y=\"128\" text-anchor=\"middle\" font-size=\"12\" fill=\"#c0392b\">on both halves</text>\n    <rect x=\"350\" y=\"60\" width=\"220\" height=\"80\" rx=\"8\" fill=\"#eafaf0\" stroke=\"#33475b\" stroke-width=\"2\"/>\n    <line x1=\"460\" y1=\"60\" x2=\"460\" y2=\"140\" stroke=\"#33475b\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>\n    <text x=\"405\" y=\"108\" text-anchor=\"middle\" font-size=\"26\" font-weight=\"bold\" fill=\"#1a1a1a\">I</text>\n    <text x=\"515\" y=\"112\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1a1a1a\">A⁻¹</text>\n    <text x=\"300\" y=\"178\" text-anchor=\"middle\" font-size=\"13\" fill=\"#5b6b7b\">Reduce the left block to I; the right block becomes the inverse.</text>\n  </g>\n</svg>"
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "Three legal row moves: swap, scale by $k\\ne0$, add a multiple of one row to another."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "In ordinary arithmetic, dividing by five really means multiplying by one-fifth — the number that undoes five, because five times one-fifth is one."
+            },
+            {
+              "seq": 2,
+              "text": "Matrices have no division at all, but they have the next best thing: a matrix that undoes another."
+            },
+            {
+              "seq": 3,
+              "text": "If multiplying by A scrambles a vector, then multiplying by its inverse, written A to the minus one, unscrambles it perfectly and lands you back where you started."
+            },
+            {
+              "seq": 4,
+              "text": "The doing-nothing matrix is the identity, so the inverse is defined by exactly this: A times A inverse equals A inverse times A equals I."
+            },
+            {
+              "seq": 5,
+              "text": "A square matrix that has such a partner is called invertible, or non-singular."
+            },
+            {
+              "seq": 6,
+              "text": "But not every matrix has one — just as zero has no reciprocal, some non-zero matrices simply cannot be undone."
+            },
+            {
+              "seq": 7,
+              "text": "Picture a UPI transaction. A refund of the exact amount reverses a payment perfectly — that is the inverse. But a transaction that merges two accounts into one total destroys the information of which rupees came from where, and no single reversal can recover it. That irreversibility is exactly what makes a matrix non-invertible."
+            },
+            {
+              "seq": 8,
+              "text": "To find the inverse with no determinant at all, we use elementary row operations: start from the block A next to I, and reduce the left block to I. Whatever the same operations do to the right block turns it into A inverse."
+            },
+            {
+              "seq": 9,
+              "text": "There are only three legal row moves: swap two rows, scale a row by a non-zero constant, and add a multiple of one row to another."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ordinary arithmetic में, पांच से divide करने का असल मतलब है one-fifth से multiply करना — वो number जो पांच को undo करता है, क्योंकि पांच times one-fifth is one।"
+            },
+            {
+              "seq": 2,
+              "text": "matrices में division होता ही नहीं, लेकिन उनके पास next best thing है: एक matrix जो दूसरी को undo करती है।"
+            },
+            {
+              "seq": 3,
+              "text": "अगर A से multiply करना एक vector को scramble करता है, तो उसके inverse से multiply करना, जिसे A to the minus one लिखते हैं, उसे perfectly unscramble कर देता है और तुम्हें वापस वहीं ले आता है जहाँ तुम थे।"
+            },
+            {
+              "seq": 4,
+              "text": "doing-nothing matrix identity है, तो inverse बिल्कुल इसी से define होता है: A times A inverse equals A inverse times A equals I।"
+            },
+            {
+              "seq": 5,
+              "text": "जिस square matrix के पास ऐसा partner होता है उसे invertible, या non-singular कहते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "लेकिन हर matrix के पास एक नहीं होता — जैसे zero का कोई reciprocal नहीं होता, कुछ non-zero matrices बस undo नहीं की जा सकतीं।"
+            },
+            {
+              "seq": 7,
+              "text": "एक UPI transaction को picture करो। exact amount का refund एक payment को perfectly reverse कर देता है — वही inverse है। लेकिन एक transaction जो दो accounts को एक total में merge कर देती है, ये information नष्ट कर देती है कि कौन से रुपये कहाँ से आए, और कोई single reversal इसे recover नहीं कर सकता। वही irreversibility एक matrix को non-invertible बनाती है।"
+            },
+            {
+              "seq": 8,
+              "text": "बिना किसी determinant के inverse निकालने के लिए, हम elementary row operations use करते हैं: A को I के बगल में रखकर शुरू करो, और left block को I तक reduce करो। वही operations right block के साथ जो करते हैं वो उसे A inverse बना देता है।"
+            },
+            {
+              "seq": 9,
+              "text": "सिर्फ तीन legal row moves हैं: दो rows swap करो, एक row को non-zero constant से scale करो, और एक row का multiple दूसरी में add करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "Invertible Matrices & Row Operations",
+      "title": "Structural properties of the inverse",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Structural properties of the inverse"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Invertible: square $A$ with square $B$ such that $AB=BA=I_n$; then $B=A^{-1}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "(A^{-1})^{-1} = A"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "(AB)^{-1} = B^{-1}A^{-1}\\quad(\\text{reversal!})"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "(ABC\\cdots Z)^{-1} = Z^{-1}\\cdots C^{-1}B^{-1}A^{-1}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "(A^{T})^{-1} = (A^{-1})^{T},\\qquad (A^{k})^{-1} = (A^{-1})^{k}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The inverse, when it exists, is unique."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "None of these need a determinant."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Deferred to Ch. 4: the test $|A|\\ne0$ and $A^{-1}=\\frac{1}{|A|}\\,\\mathrm{adj}\\,A$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before the method, the structural facts — the identities that get tested directly and that make later work fast."
+            },
+            {
+              "seq": 2,
+              "text": "The definition first: a square matrix A is invertible if there is a square matrix B of the same order with A B and B A both equal to the identity. That B is the inverse, A to the minus one."
+            },
+            {
+              "seq": 3,
+              "text": "First identity: the inverse of the inverse is A itself — undoing the undo returns the original."
+            },
+            {
+              "seq": 4,
+              "text": "The big one: the inverse of a product reverses the order. A B, all inverse, equals B inverse times A inverse — B first."
+            },
+            {
+              "seq": 5,
+              "text": "It extends to any chain: the inverse of A B C up to Z is Z inverse, down through C inverse, B inverse, A inverse — the whole order flipped."
+            },
+            {
+              "seq": 6,
+              "text": "Two more: the inverse of the transpose is the transpose of the inverse; and the inverse of A to the k is A inverse to the k."
+            },
+            {
+              "seq": 7,
+              "text": "And an important structural fact underneath all of this: when an inverse exists, it is unique — which is why the notation A to the minus one is unambiguous."
+            },
+            {
+              "seq": 8,
+              "text": "Notice none of these identities need a determinant — they are pure algebra of the defining relation."
+            },
+            {
+              "seq": 9,
+              "text": "One thing we deliberately defer to the determinants chapter: the quick test that A is invertible exactly when its determinant is non-zero, and the adjoint formula. Here we build the method that needs neither."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "method से पहले, structural facts — वो identities जो directly test होती हैं और आगे का काम fast बनाती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले definition: एक square matrix A invertible है अगर same order की एक square matrix B हो जिसके साथ A B और B A दोनों identity के बराबर हों। वही B inverse है, A to the minus one।"
+            },
+            {
+              "seq": 3,
+              "text": "पहली identity: inverse का inverse खुद A है — undo को undo करने पर original वापस आता है।"
+            },
+            {
+              "seq": 4,
+              "text": "बड़ी वाली: product का inverse order reverse करता है। A B, all inverse, equals B inverse times A inverse — पहले B।"
+            },
+            {
+              "seq": 5,
+              "text": "ये किसी भी chain तक फैलती है: A B C से Z तक का inverse है Z inverse, नीचे C inverse, B inverse, A inverse से होते हुए — पूरा order flipped।"
+            },
+            {
+              "seq": 6,
+              "text": "दो और: transpose का inverse, inverse का transpose है; और A to the k का inverse, A inverse to the k है।"
+            },
+            {
+              "seq": 7,
+              "text": "और इन सबके नीचे एक ज़रूरी structural fact: जब inverse exist करता है, वो unique होता है — इसीलिए notation A to the minus one ambiguous नहीं है।"
+            },
+            {
+              "seq": 8,
+              "text": "गौर करो इनमें से किसी identity को determinant नहीं चाहिए — ये defining relation का pure algebra हैं।"
+            },
+            {
+              "seq": 9,
+              "text": "एक चीज़ हम जानबूझकर determinants chapter के लिए defer करते हैं: वो quick test कि A तभी invertible है जब उसका determinant non-zero हो, और adjoint formula। यहाँ हम वो method बनाते हैं जिसे इनमें से कुछ नहीं चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "concept",
+      "subtopic": "Invertible Matrices & Row Operations",
+      "title": "Why the method works, and the procedure",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Why the method works, and the procedure"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Uniqueness: suppose $B$ and $C$ both invert $A$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "B = BI = B(AC) = (BA)C = IC = C"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Each row operation = pre-multiplying by an elementary matrix $E$ (that op applied to $I$)."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "E_k\\cdots E_1 A = I\\ \\Rightarrow\\ E_k\\cdots E_1 = A^{-1}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Apply the same chain to $A=IA$: the prefactor $I$ becomes $A^{-1}$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Procedure: write $[A\\mid I]$; row-reduce the left to $I$; the right becomes $A^{-1}$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "A zero row in the left block means $A$ is singular — no inverse. Stop."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "A zero row means one row is a combination of the others — inputs collapse, no undo."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two pieces of reasoning make the whole method trustworthy: why the inverse is unique, and why reducing A to the identity produces it."
+            },
+            {
+              "seq": 2,
+              "text": "Uniqueness first. Suppose two matrices, B and C, both claim to be the inverse of A — both give the identity on each side."
+            },
+            {
+              "seq": 3,
+              "text": "Then watch the chain: B equals B times I, equals B times A C, which regroups as B A times C, equals I times C, equals C. The two supposed inverses are the same matrix — there is only one."
+            },
+            {
+              "seq": 4,
+              "text": "Now why the row-reduction works. Every elementary row operation is the same as pre-multiplying by an elementary matrix E — the matrix you get by doing that operation to the identity."
+            },
+            {
+              "seq": 5,
+              "text": "So a chain of row operations on A is really E-k down to E-one, times A. We keep going until that product times A equals the identity — which means the product itself is A inverse."
+            },
+            {
+              "seq": 6,
+              "text": "Apply the identical chain to the equation A equals I times A. The left A becomes the identity, and the prefactor I is turned into exactly that product — A inverse."
+            },
+            {
+              "seq": 7,
+              "text": "So the procedure is: write A beside I as one block, use row operations to reduce the left block to the identity, and the right block becomes A inverse."
+            },
+            {
+              "seq": 8,
+              "text": "One stopping rule: if a full row of zeros ever appears in the left block, A can never reduce to the identity — it is singular and has no inverse. Stop there."
+            },
+            {
+              "seq": 9,
+              "text": "The meaning of that zero row: one row was a combination of the others, so the matrix collapses distinct inputs together — the merged-accounts situation — and no undo can exist."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो reasoning के टुकड़े पूरे method को trustworthy बनाते हैं: inverse unique क्यों है, और A को identity तक reduce करना उसे produce क्यों करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले uniqueness। मान लो दो matrices, B और C, दोनों A के inverse होने का दावा करती हैं — दोनों हर side पर identity देती हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "अब chain देखो: B equals B times I, equals B times A C, जो regroup होकर B A times C बनता है, equals I times C, equals C। दोनों supposed inverses same matrix हैं — सिर्फ एक है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब row-reduction काम क्यों करता है। हर elementary row operation एक elementary matrix E से pre-multiply करने के बराबर है — वो matrix जो तुम्हें उस operation को identity पर करके मिलती है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो A पर row operations की एक chain असल में E-k से E-one तक, times A है। हम तब तक चलते हैं जब वो product times A identity के बराबर हो जाए — जिसका मतलब वो product खुद A inverse है।"
+            },
+            {
+              "seq": 6,
+              "text": "उसी chain को equation A equals I times A पर apply करो। बायाँ A identity बन जाता है, और prefactor I उसी product में बदल जाता है — A inverse।"
+            },
+            {
+              "seq": 7,
+              "text": "तो procedure है: A को I के बगल में एक block के रूप में लिखो, row operations से left block को identity तक reduce करो, और right block A inverse बन जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "एक stopping rule: अगर left block में कभी पूरी zeros की row आ जाए, A कभी identity तक reduce नहीं हो सकता — ये singular है और इसका कोई inverse नहीं। वहीं रुक जाओ।"
+            },
+            {
+              "seq": 9,
+              "text": "उस zero row का मतलब: एक row बाकी की combination थी, तो matrix distinct inputs को एक साथ collapse कर देती है — वही merged-accounts वाली situation — और कोई undo exist नहीं कर सकता।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "formulas",
+      "subtopic": "Invertible Matrices & Row Operations",
+      "title": "The inverse rulebook",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The inverse rulebook"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "A A^{-1} = A^{-1} A = I\\quad(\\text{square }A,\\ \\text{unique }A^{-1})"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "R_i \\leftrightarrow R_j,\\quad R_i \\to kR_i\\ (k\\ne0),\\quad R_i \\to R_i + kR_j"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "[A \\mid I]\\ \\xrightarrow{\\text{row ops on both}}\\ [I \\mid A^{-1}]"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "(A^{-1})^{-1}=A,\\quad (AB)^{-1}=B^{-1}A^{-1},\\quad (A^{T})^{-1}=(A^{-1})^{T}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Zero row in the left block means singular — no inverse."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Matrix-polynomial trick: from $A\\,(\\text{poly in }A)=cI$, divide by $c$ to read off $A^{-1}$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Stay in one mode: rows with $A=IA$, or columns with $A=AI$ — never mix."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The consolidated rulebook for inverses — everything you actually reach for in a problem."
+            },
+            {
+              "seq": 2,
+              "text": "The defining relation: for a square matrix A, A times A inverse and A inverse times A both equal the identity, and that inverse is unique."
+            },
+            {
+              "seq": 3,
+              "text": "The three legal row operations: swap two rows; scale a row by a non-zero constant; and add a multiple of one row to another."
+            },
+            {
+              "seq": 4,
+              "text": "The method in one arrow: write A beside I, apply row operations to both halves, and drive the left to the identity — the right becomes A inverse."
+            },
+            {
+              "seq": 5,
+              "text": "The identities to bank: inverse of the inverse is A; the inverse of a product reverses the order to B inverse A inverse; and the inverse of the transpose is the transpose of the inverse."
+            },
+            {
+              "seq": 6,
+              "text": "The stop signal: a zero row in the left block means the matrix is singular and has no inverse."
+            },
+            {
+              "seq": 7,
+              "text": "A powerful shortcut: whenever A satisfies a polynomial equation you can arrange as A times something equals c times I, dividing by that non-zero c reads off A inverse directly — no reduction needed."
+            },
+            {
+              "seq": 8,
+              "text": "And a discipline: pick one mode and stay in it — row operations with A equals I A, or column operations with A equals A I — never mix the two in a single computation."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "inverses के लिए consolidated rulebook — वो सब कुछ जो तुम असल में problem में इस्तेमाल करते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "defining relation: square matrix A के लिए, A times A inverse और A inverse times A दोनों identity के बराबर हैं, और वो inverse unique है।"
+            },
+            {
+              "seq": 3,
+              "text": "तीन legal row operations: दो rows swap करो; एक row को non-zero constant से scale करो; और एक row का multiple दूसरी में add करो।"
+            },
+            {
+              "seq": 4,
+              "text": "method एक arrow में: A को I के बगल में लिखो, दोनों halves पर row operations apply करो, और left को identity तक ले जाओ — right, A inverse बन जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "बैंक करने लायक identities: inverse का inverse A है; product का inverse order reverse करके B inverse A inverse बनता है; और transpose का inverse, inverse का transpose है।"
+            },
+            {
+              "seq": 6,
+              "text": "stop signal: left block में zero row का मतलब matrix singular है और इसका कोई inverse नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "एक powerful shortcut: जब भी A एक polynomial equation satisfy करे जिसे तुम A times something equals c times I के रूप में arrange कर सको, उस non-zero c से divide करना A inverse directly पढ़ देता है — कोई reduction नहीं चाहिए।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक discipline: एक mode चुनो और उसी में रहो — row operations A equals I A के साथ, या column operations A equals A I के साथ — एक computation में दोनों कभी mix मत करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "Invertible Matrices & Row Operations",
+      "title": "2x2 inverse by elementary row operations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: $2\\times2$ inverse by row operations"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "A = \\begin{bmatrix} 2 & 5\\\\ 1 & 3 \\end{bmatrix},\\quad [A\\mid I] = \\left[\\begin{array}{cc|cc} 2 & 5 & 1 & 0\\\\ 1 & 3 & 0 & 1 \\end{array}\\right]"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "R_1 \\leftrightarrow R_2:\\ \\left[\\begin{array}{cc|cc} 1 & 3 & 0 & 1\\\\ 2 & 5 & 1 & 0 \\end{array}\\right]"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "R_2 \\to R_2 - 2R_1:\\ \\left[\\begin{array}{cc|cc} 1 & 3 & 0 & 1\\\\ 0 & -1 & 1 & -2 \\end{array}\\right]"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "R_2 \\to -R_2:\\ \\left[\\begin{array}{cc|cc} 1 & 3 & 0 & 1\\\\ 0 & 1 & -1 & 2 \\end{array}\\right]"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "R_1 \\to R_1 - 3R_2:\\ \\left[\\begin{array}{cc|cc} 1 & 0 & 3 & -5\\\\ 0 & 1 & -1 & 2 \\end{array}\\right]"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "A^{-1} = \\begin{bmatrix} 3 & -5\\\\ -1 & 2 \\end{bmatrix}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Every operation hits BOTH halves of the block."
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "latex": "\\text{Check: } \\begin{bmatrix} 2 & 5\\\\ 1 & 3 \\end{bmatrix}\\begin{bmatrix} 3 & -5\\\\ -1 & 2 \\end{bmatrix} = I"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The standard board question, four marks: find a two by two inverse using only elementary row operations — no determinant."
+            },
+            {
+              "seq": 2,
+              "text": "Set up the augmented block: A, which is two, five, one, three, sitting next to the identity."
+            },
+            {
+              "seq": 3,
+              "text": "First, swap the two rows so the top-left becomes one — it keeps the arithmetic clean. Now the top row is one, three, zero, one, and the bottom is two, five, one, zero."
+            },
+            {
+              "seq": 4,
+              "text": "Clear the two under the leading one: replace row two with row two minus twice row one. The bottom row becomes zero, minus one, one, minus two."
+            },
+            {
+              "seq": 5,
+              "text": "Make that pivot a positive one: multiply row two by minus one. Row two is now zero, one, minus one, two."
+            },
+            {
+              "seq": 6,
+              "text": "Finally clear the three above the pivot: row one becomes row one minus three times row two. The top row turns into one, zero, three, minus five."
+            },
+            {
+              "seq": 7,
+              "text": "The left block is now the identity, so the right block is the inverse: three, minus five; minus one, two."
+            },
+            {
+              "seq": 8,
+              "text": "The rule that keeps this honest: every single operation must be applied to both halves of the block, left and right together."
+            },
+            {
+              "seq": 9,
+              "text": "Always verify: A times that inverse gives the identity, so the answer is confirmed."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "standard board question, चार marks: सिर्फ elementary row operations से एक two by two inverse निकालो — कोई determinant नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "augmented block set up करो: A, जो two, five, one, three है, identity के बगल में।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले, दोनों rows swap करो ताकि top-left one बन जाए — इससे arithmetic clean रहती है। अब top row one, three, zero, one है, और bottom two, five, one, zero।"
+            },
+            {
+              "seq": 4,
+              "text": "leading one के नीचे वाले two को clear करो: row two को row two minus twice row one से replace करो। bottom row बन जाती है zero, minus one, one, minus two।"
+            },
+            {
+              "seq": 5,
+              "text": "उस pivot को positive one बनाओ: row two को minus one से multiply करो। row two अब zero, one, minus one, two है।"
+            },
+            {
+              "seq": 6,
+              "text": "आख़िर में pivot के ऊपर वाले three को clear करो: row one बन जाती है row one minus three times row two। top row बदल जाती है one, zero, three, minus five में।"
+            },
+            {
+              "seq": 7,
+              "text": "left block अब identity है, तो right block inverse है: three, minus five; minus one, two।"
+            },
+            {
+              "seq": 8,
+              "text": "जो rule इसे honest रखता है: हर एक operation block के दोनों halves पर apply होनी चाहिए, left और right साथ में।"
+            },
+            {
+              "seq": 9,
+              "text": "हमेशा verify करो: A times वो inverse identity देता है, तो answer confirmed है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "Invertible Matrices & Row Operations",
+      "title": "Is it invertible? (spotting a singular matrix)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: is it invertible?"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "A = \\begin{bmatrix} 1 & -3\\\\ -2 & 6 \\end{bmatrix}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "[A\\mid I] = \\left[\\begin{array}{cc|cc} 1 & -3 & 1 & 0\\\\ -2 & 6 & 0 & 1 \\end{array}\\right]"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "R_2 \\to R_2 + 2R_1:\\ \\left[\\begin{array}{cc|cc} 1 & -3 & 1 & 0\\\\ 0 & 0 & 2 & 1 \\end{array}\\right]"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "A zero row in the left block means no inverse. Stop."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Speed way: $(-2,6) = -2\\,(1,-3)$ — one row is a multiple of the other."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Proportional rows means singular means no inverse."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "latex": "\\therefore\\ A^{-1}\\ \\text{does not exist}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now a question that tests whether a matrix can be inverted at all. A is one, minus three; minus two, six."
+            },
+            {
+              "seq": 2,
+              "text": "The full-proof way is to start reducing. Write A beside the identity."
+            },
+            {
+              "seq": 3,
+              "text": "There is the augmented block, ready to reduce."
+            },
+            {
+              "seq": 4,
+              "text": "Clear the minus two below the leading one: row two becomes row two plus twice row one. The left half of row two collapses to zero, zero."
+            },
+            {
+              "seq": 5,
+              "text": "That is the signal. A full row of zeros has appeared in the left block, so it can never become the identity — A is not invertible. Stop reducing."
+            },
+            {
+              "seq": 6,
+              "text": "The speed way spots it in one glance: the second row, minus two and six, is exactly minus two times the first row, one and minus three."
+            },
+            {
+              "seq": 7,
+              "text": "Whenever one row is a scalar multiple of another — or more generally a combination of the others — the matrix is singular and has no inverse."
+            },
+            {
+              "seq": 8,
+              "text": "So A inverse simply does not exist. Recognizing proportional rows up front saves the whole reduction."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब एक question जो test करता है कि matrix invert हो भी सकती है या नहीं। A है one, minus three; minus two, six।"
+            },
+            {
+              "seq": 2,
+              "text": "full-proof तरीका है reduce करना शुरू करो। A को identity के बगल में लिखो।"
+            },
+            {
+              "seq": 3,
+              "text": "वहाँ augmented block है, reduce करने को तैयार।"
+            },
+            {
+              "seq": 4,
+              "text": "leading one के नीचे वाले minus two को clear करो: row two बनती है row two plus twice row one। row two का left half zero, zero में collapse हो जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "यही signal है। left block में पूरी zeros की row आ गई, तो ये कभी identity नहीं बन सकती — A invertible नहीं है। reduce करना बंद करो।"
+            },
+            {
+              "seq": 6,
+              "text": "speed तरीका इसे एक नज़र में पकड़ लेता है: दूसरी row, minus two और six, exactly पहली row, one और minus three, की minus two गुना है।"
+            },
+            {
+              "seq": 7,
+              "text": "जब भी एक row दूसरी की scalar multiple हो — या ज़्यादा generally बाकी की combination — matrix singular है और इसका कोई inverse नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "तो A inverse बस exist नहीं करता। proportional rows को पहले ही पहचान लेना पूरी reduction बचा देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "Invertible Matrices & Row Operations",
+      "title": "3x3 inverse, then use the transpose property",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: $3\\times3$ inverse, then use $(A^{T})^{-1}$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "A = \\begin{bmatrix} 1 & 2 & 3\\\\ 0 & 1 & 4\\\\ 0 & 0 & 1 \\end{bmatrix}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Form $[A\\mid I]$ and clear the upper entries from the bottom up."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "R_2 \\to R_2 - 4R_3,\\qquad R_1 \\to R_1 - 3R_3"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "R_1 \\to R_1 - 2R_2\\ \\Rightarrow\\ \\text{left block becomes } I"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "A^{-1} = \\begin{bmatrix} 1 & -2 & 5\\\\ 0 & 1 & -4\\\\ 0 & 0 & 1 \\end{bmatrix}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "For $(A^{T})^{-1}$ don't recompute — use $(A^{T})^{-1}=(A^{-1})^{T}$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "(A^{T})^{-1} = (A^{-1})^{T} = \\begin{bmatrix} 1 & 0 & 0\\\\ -2 & 1 & 0\\\\ 5 & -4 & 1 \\end{bmatrix}"
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "One property turns a second hard computation into a free transpose."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Step up to a three by three — an upper-triangular one, which is the friendly case — and then a property saves us a second computation."
+            },
+            {
+              "seq": 2,
+              "text": "A has ones on the diagonal, two and three in the top row, a four in the middle row, and zeros below the diagonal."
+            },
+            {
+              "seq": 3,
+              "text": "Write A beside the identity and clear the entries above the diagonal, working from the bottom row upward so you never undo your own progress."
+            },
+            {
+              "seq": 4,
+              "text": "First, using the bottom pivot: row two becomes row two minus four times row three, and row one becomes row one minus three times row three."
+            },
+            {
+              "seq": 5,
+              "text": "Then, using the middle pivot: row one becomes row one minus two times row two. The left block is now the identity."
+            },
+            {
+              "seq": 6,
+              "text": "So the inverse is one, minus two, five; zero, one, minus four; zero, zero, one — still upper-triangular, as expected."
+            },
+            {
+              "seq": 7,
+              "text": "Now the second ask: the inverse of A transpose. Do not reduce again — use the property that the inverse of the transpose equals the transpose of the inverse."
+            },
+            {
+              "seq": 8,
+              "text": "So just transpose the answer you already have: one, zero, zero; minus two, one, zero; five, minus four, one."
+            },
+            {
+              "seq": 9,
+              "text": "One identity turned a second full row-reduction into a free transpose — that is the payoff of knowing the structural properties."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक three by three पर आओ — एक upper-triangular वाली, जो friendly case है — और फिर एक property हमें दूसरी computation बचा देती है।"
+            },
+            {
+              "seq": 2,
+              "text": "A के diagonal पर ones हैं, top row में two और three, middle row में एक four, और diagonal के नीचे zeros।"
+            },
+            {
+              "seq": 3,
+              "text": "A को identity के बगल में लिखो और diagonal के ऊपर की entries clear करो, bottom row से ऊपर की तरफ काम करते हुए ताकि तुम अपनी ही progress undo न करो।"
+            },
+            {
+              "seq": 4,
+              "text": "पहले, bottom pivot use करके: row two बनती है row two minus four times row three, और row one बनती है row one minus three times row three।"
+            },
+            {
+              "seq": 5,
+              "text": "फिर, middle pivot use करके: row one बनती है row one minus two times row two। left block अब identity है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो inverse है one, minus two, five; zero, one, minus four; zero, zero, one — अभी भी upper-triangular, जैसा expected था।"
+            },
+            {
+              "seq": 7,
+              "text": "अब दूसरा ask: A transpose का inverse। फिर से reduce मत करो — वो property use करो कि transpose का inverse, inverse का transpose है।"
+            },
+            {
+              "seq": 8,
+              "text": "तो बस जो answer पहले से है उसे transpose करो: one, zero, zero; minus two, one, zero; five, minus four, one।"
+            },
+            {
+              "seq": 9,
+              "text": "एक identity ने दूसरी पूरी row-reduction को एक free transpose में बदल दिया — यही structural properties जानने का payoff है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "worked_examples",
+      "subtopic": "Invertible Matrices & Row Operations",
+      "title": "Inverse from a matrix polynomial equation",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: inverse from a matrix equation"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "A^{3} - 3A + 2I = O\\quad(\\text{given})"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Show $A$ is invertible and express $A^{-1}$ as a polynomial in $A$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "A^{3} - 3A = -2I\\ \\Rightarrow\\ A(A^{2} - 3I) = -2I"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "A\\left[-\\tfrac{1}{2}(A^{2}-3I)\\right] = I"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "For square $A$, $AB=I$ already forces $B=A^{-1}$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "A^{-1} = -\\tfrac{1}{2}(A^{2}-3I) = \\tfrac{1}{2}(3I - A^{2})"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Works whenever the polynomial has a non-zero constant term."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Here is the slickest way to invert a matrix — when it hands you a polynomial equation it satisfies. We are told A cubed minus three A plus two I equals the zero matrix, and asked to show A is invertible and find its inverse."
+            },
+            {
+              "seq": 2,
+              "text": "There is the given relation — a polynomial in A set equal to the zero matrix."
+            },
+            {
+              "seq": 3,
+              "text": "The whole goal: isolate a term and factor out one copy of A, so the equation reads A times something equals a scalar times the identity."
+            },
+            {
+              "seq": 4,
+              "text": "Move the constant across: A cubed minus three A equals minus two I. Now factor A out of the left: A times the quantity A squared minus three I equals minus two I."
+            },
+            {
+              "seq": 5,
+              "text": "Divide through by minus two — a legal scalar step: A times minus one-half of A squared minus three I, equals the identity."
+            },
+            {
+              "seq": 6,
+              "text": "And here is the key fact for square matrices: if A times some matrix B equals the identity, then B is automatically A inverse — the other side follows for free."
+            },
+            {
+              "seq": 7,
+              "text": "So the inverse is minus one-half of A squared minus three I, which we tidy up as one-half of three I minus A squared."
+            },
+            {
+              "seq": 8,
+              "text": "No row reduction, no determinant — the inverse fell straight out of the matrix's own algebra, and this works every time the polynomial has a non-zero constant term."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>यहाँ matrix invert करने का सबसे slick तरीका है — जब वो तुम्हें एक polynomial equation दे जिसे वो satisfy करती है। हमें बताया गया है कि A cubed minus three A plus two I equals zero matrix, और A को invertible दिखाकर उसका inverse निकालने को कहा गया है।"
+            },
+            {
+              "seq": 2,
+              "text": "वहाँ given relation है — A में एक polynomial, zero matrix के बराबर।"
+            },
+            {
+              "seq": 3,
+              "text": "पूरा goal है एक term isolate करके A की एक copy factor out करना, ताकि equation A times something equals scalar times identity जैसी दिखे।"
+            },
+            {
+              "seq": 4,
+              "text": "constant को across ले जाओ: A cubed minus three A equals minus two I। अब left से A factor out करो: A times the quantity A squared minus three I equals minus two I।"
+            },
+            {
+              "seq": 5,
+              "text": "minus two से divide करो — एक legal scalar step: A times minus one-half of A squared minus three I, equals identity।"
+            },
+            {
+              "seq": 6,
+              "text": "और यहाँ square matrices के लिए key fact है: अगर A times कोई matrix B identity के बराबर है, तो B अपने आप A inverse है — दूसरा side free में आ जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो inverse है minus one-half of A squared minus three I, जिसे हम one-half of three I minus A squared के रूप में साफ़ कर देते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "कोई row reduction नहीं, कोई determinant नहीं — inverse सीधे matrix के अपने algebra से निकल आया, और ये हर बार काम करता है जब polynomial में non-zero constant term हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "tips",
+      "subtopic": "Invertible Matrices & Row Operations",
+      "title": "Traps in inverses & row operations",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Traps in inverses & row operations"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Operate on BOTH blocks — touching one alone breaks $A=IA$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Never mix row and column operations in one inverse computation."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Scaling a row by 0 is illegal; proportional rows means singular means no inverse."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "$(AB)^{-1}=B^{-1}A^{-1}$ — don't write $A^{-1}B^{-1}$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Pro-tip: before reducing, scan for a row that is a multiple or sum of others — stop if singular."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Pro-tip: verify with $AA^{-1}=I$; it costs one product and catches sign slips."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Pro-tip: if $A$ satisfies a polynomial with non-zero constant, factor out $A$ for $A^{-1}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Four traps and three time-savers close out this subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one: operating on just one block. Every row operation must hit both the left block and the right — touching one alone silently breaks the equation A equals I A that the whole method rests on."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: mixing row and column operations in a single inverse. Choose one — rows with A equals I A, or columns with A equals A I — and stay with it start to finish."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: scaling a row by zero, which is illegal because it is irreversible; and believing a matrix with proportional rows or columns can still be inverted. Proportional rows mean singular, which means no inverse."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: dropping the reversal in the product rule. The inverse of A B is B inverse times A inverse, not A inverse times B inverse."
+            },
+            {
+              "seq": 6,
+              "text": "First pro-tip: before you reduce anything, scan the rows for one that is a multiple or a sum of the others. If you spot it, stop — the matrix is singular."
+            },
+            {
+              "seq": 7,
+              "text": "Second pro-tip: always verify by multiplying A times your inverse to get the identity. It costs one product and catches sign slips before they cost marks."
+            },
+            {
+              "seq": 8,
+              "text": "Third pro-tip: if the matrix satisfies a polynomial equation with a non-zero constant term, factor out A and read the inverse off directly — far faster than reduction."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चार traps और तीन time-savers इस subtopic को close करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one: सिर्फ एक block पर operate करना। हर row operation left block और right, दोनों पर लगनी चाहिए — किसी एक को अकेले छूना चुपचाप उस equation A equals I A को तोड़ देता है जिस पर पूरा method टिका है।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: एक ही inverse में row और column operations mix करना। एक चुनो — rows A equals I A के साथ, या columns A equals A I के साथ — और शुरू से आख़िर तक उसी में रहो।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: एक row को zero से scale करना, जो illegal है क्योंकि irreversible है; और ये मानना कि proportional rows या columns वाली matrix फिर भी invert हो सकती है। proportional rows का मतलब singular, यानी कोई inverse नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four: product rule में reversal drop कर देना। A B का inverse B inverse times A inverse है, A inverse times B inverse नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "पहला pro-tip: कुछ भी reduce करने से पहले, rows को scan करो कि कोई बाकी की multiple या sum तो नहीं। अगर दिख जाए, रुक जाओ — matrix singular है।"
+            },
+            {
+              "seq": 7,
+              "text": "दूसरा pro-tip: हमेशा A times अपने inverse को multiply करके identity पाकर verify करो। ये एक product खर्च करता है और marks खोने से पहले sign slips पकड़ लेता है।"
+            },
+            {
+              "seq": 8,
+              "text": "तीसरा pro-tip: अगर matrix एक polynomial equation satisfy करती है जिसमें non-zero constant term हो, A factor out करके inverse सीधे पढ़ लो — reduction से कहीं fast।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

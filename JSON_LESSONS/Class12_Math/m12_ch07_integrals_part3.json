@@ -1,0 +1,2602 @@
+{
+  "chapter": "Integrals",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 7,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Definite Integrals: Definition, the Fundamental Theorem & Limit of a Sum",
+      "title": "A definite integral is a single number",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "From a family of curves to one number"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "An indefinite integral is a family of functions; a definite integral $\\int_a^b f\\,dx$ is a single number."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Geometrically it's the signed area between $y=f(x)$ and the $x$-axis from $a$ to $b$."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Signed area: above the axis counts positive, below counts negative.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 260\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"420\" height=\"260\" fill=\"#ffffff\"/><line x1=\"40\" y1=\"150\" x2=\"390\" y2=\"150\" stroke=\"#888\" stroke-width=\"1\"/><line x1=\"40\" y1=\"40\" x2=\"40\" y2=\"230\" stroke=\"#888\" stroke-width=\"1\"/><polygon points=\"40,150 40,110 90,80 140,80 190,110 225,150\" fill=\"#bee3f8\"/><polygon points=\"225,150 280,185 330,190 380,150\" fill=\"#fed7d7\"/><path d=\"M40 110 C 90 70, 140 70, 190 110 C 225 145, 280 195, 380 150\" fill=\"none\" stroke=\"#2b6cb0\" stroke-width=\"2\"/><text x=\"120\" y=\"122\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#2b6cb0\" text-anchor=\"middle\">+ area</text><text x=\"315\" y=\"178\" font-family=\"system-ui, sans-serif\" font-size=\"13\" fill=\"#c53030\" text-anchor=\"middle\">- area</text><text x=\"40\" y=\"246\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">a</text><text x=\"380\" y=\"246\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#333\" text-anchor=\"middle\">b</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Two definitions agree: a limit of a sum (first principles), and $F(b)-F(a)$ via antiderivatives."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "A definite integral has no $+C$ — the constant cancels in $F(b)-F(a)$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\int_a^b f(x)\\,dx = F(b) - F(a),\\quad F'=f"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The Fundamental Theorem is the bridge — it makes integration a lookup, not an infinite sum."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Everything changes when we pin the two ends of an integral down."
+            },
+            {
+              "seq": 2,
+              "text": "An indefinite integral gave us a whole family of functions. A definite integral gives just one thing: a single number, the net accumulation of a quantity between two endpoints."
+            },
+            {
+              "seq": 3,
+              "text": "Geometrically, the integral from a to b of f is the signed area between the curve and the x-axis. Area above the axis counts positive; area below counts negative."
+            },
+            {
+              "seq": 4,
+              "text": "Picture slicing that region into thin rectangles, adding their areas, and letting the strips shrink to zero width. That's the area, built from the bottom up."
+            },
+            {
+              "seq": 5,
+              "text": "There are two ways to define this number, and the deep result of the chapter is that they agree: the limit of a sum from first principles, or simply F of b minus F of a using any antiderivative."
+            },
+            {
+              "seq": 6,
+              "text": "One thing to drop immediately: a definite integral has no plus C. The constant cancels in F of b minus F of a, so it never appears."
+            },
+            {
+              "seq": 7,
+              "text": "That evaluation rule, F of b minus F of a, is the Second Fundamental Theorem, upper limit minus lower limit."
+            },
+            {
+              "seq": 8,
+              "text": "Think of a tank filling from a varying tap. Adding up the inflow second by second is exhausting; the Fundamental Theorem is the water meter, read the start, read the end, subtract. It turns integration into a lookup, not an infinite summing chore."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>सब कुछ बदल जाता है जब हम integral के दोनों सिरे तय कर देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Indefinite integral ने हमें functions का पूरा family दिया। Definite integral बस एक चीज़ देता है: एक अकेला number, दो endpoints के बीच किसी quantity का net accumulation।"
+            },
+            {
+              "seq": 3,
+              "text": "Geometrically, a से b तक f का integral है curve और x-axis के बीच का signed area। Axis के ऊपर का area positive; नीचे का negative।"
+            },
+            {
+              "seq": 4,
+              "text": "उस region को पतले rectangles में slice करो, उनके areas जोड़ो, और strips की width शून्य तक सिकोड़ो। यही area है, नीचे से बनाया हुआ।"
+            },
+            {
+              "seq": 5,
+              "text": "इस number को define करने के दो तरीके हैं, और chapter का गहरा result यह है कि वे agree करते हैं: first principles से limit of a sum, या बस किसी antiderivative से F of b minus F of a।"
+            },
+            {
+              "seq": 6,
+              "text": "एक चीज़ तुरंत छोड़ दो: definite integral में कोई plus C नहीं। Constant F of b minus F of a में cancel हो जाता है, तो कभी दिखता ही नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "वो evaluation rule, F of b minus F of a, Second Fundamental Theorem है, upper limit minus lower limit।"
+            },
+            {
+              "seq": 8,
+              "text": "एक बदलती tap से भरते tank को सोचो। Inflow को second by second जोड़ना थकाऊ है; Fundamental Theorem वो water meter है, शुरू पढ़ो, अंत पढ़ो, घटाओ। यह integration को एक lookup बना देता है, अंतहीन जोड़ का काम नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "formulas",
+      "subtopic": "Definite Integrals: Definition, the Fundamental Theorem & Limit of a Sum",
+      "title": "The definition and the Fundamental Theorem",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Definition, both FTCs, and the structural properties"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\int_a^b f(x)\\,dx = \\lim_{n\\to\\infty} h\\sum_{r=0}^{n-1} f(a+rh),\\quad h=\\frac{b-a}{n}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\int_a^b f(x)\\,dx = [F(x)]_a^b = F(b)-F(a)\\quad(F'=f)"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "First FTC in words: differentiating an integral with respect to its upper limit returns the integrand."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int_a^b f = -\\int_b^a f \\qquad \\int_a^b f = \\int_a^c f + \\int_c^b f"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "A dummy variable: $\\int_a^b f(x)\\,dx = \\int_a^b f(t)\\,dt$ — the variable's name doesn't matter."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\sum_{r=0}^{n-1} r = \\frac{n(n-1)}{2} \\qquad \\sum_{r=0}^{n-1} r^2 = \\frac{(n-1)n(2n-1)}{6}"
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "These power-sums are the engine of nearly every limit-of-a-sum evaluation."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here's the whole toolkit for definite integrals: the definition, both Fundamental Theorems, and the structural properties."
+            },
+            {
+              "seq": 2,
+              "text": "The first-principles definition: the integral from a to b is the limit, as n goes to infinity, of h times the sum of f at the sample points a plus r h, where h is b minus a over n."
+            },
+            {
+              "seq": 3,
+              "text": "The practical rule, the Second Fundamental Theorem: find any antiderivative F, then compute F of b minus F of a. Upper minus lower."
+            },
+            {
+              "seq": 4,
+              "text": "The First Fundamental Theorem looks at the area function: the derivative, with respect to the upper limit x, of the integral from a to x of f, is just f of x."
+            },
+            {
+              "seq": 5,
+              "text": "In words: differentiating an integral with respect to its upper limit hands you back the integrand. That's why antiderivatives compute areas."
+            },
+            {
+              "seq": 6,
+              "text": "Two structural properties: swapping the limits flips the sign; and you can split an integral at any intermediate point c and add the pieces."
+            },
+            {
+              "seq": 7,
+              "text": "And the variable of integration is a dummy, the integral from a to b of f of x is identical to the same integral written in t. The name doesn't matter."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, the two power-sums you must know: the sum of r is n times n minus one over two; the sum of r squared is n minus one, times n, times two n minus one, over six."
+            },
+            {
+              "seq": 9,
+              "text": "These power-sums are the engine of nearly every first-principles evaluation, memorise them."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा definite integrals का पूरा toolkit: definition, दोनों Fundamental Theorems, और structural properties।"
+            },
+            {
+              "seq": 2,
+              "text": "First-principles definition: a से b तक integral है limit, जैसे n infinity तक जाए, h times sum of f at sample points a plus r h का, जहाँ h है b minus a over n।"
+            },
+            {
+              "seq": 3,
+              "text": "Practical rule, Second Fundamental Theorem: कोई भी antiderivative F निकालो, फिर F of b minus F of a निकालो। Upper minus lower।"
+            },
+            {
+              "seq": 4,
+              "text": "First Fundamental Theorem area function को देखता है: upper limit x के respect में, a से x तक f के integral का derivative, बस f of x है।"
+            },
+            {
+              "seq": 5,
+              "text": "शब्दों में: किसी integral को उसके upper limit के respect में differentiate करना integrand वापस दे देता है। इसीलिए antiderivatives areas निकालते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "दो structural properties: limits swap करने पर sign पलटता है; और किसी भी बीच के point c पर integral को split करके pieces जोड़ सकते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "और variable of integration एक dummy है, a से b तक f of x का integral, वही integral t में लिखने के बराबर है। नाम से फ़र्क़ नहीं पड़ता।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिर में, दो power-sums जो आनी चाहिए: sum of r है n times n minus one over two; sum of r square है n minus one, times n, times two n minus one, over six।"
+            },
+            {
+              "seq": 9,
+              "text": "ये power-sums लगभग हर first-principles evaluation का engine हैं, इन्हें रट लो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "worked_examples",
+      "subtopic": "Definite Integrals: Definition, the Fundamental Theorem & Limit of a Sum",
+      "title": "Direct evaluation by the Second FTC",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1: a polynomial"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int_1^2 (3x^2-2x+1)\\,dx$. Antiderivative $F(x)=x^3-x^2+x$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "F(2)-F(1) = (8-4+2)-(1-1+1) = 6-1 = 5"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Example 2: limits chosen to collapse logs"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Evaluate $\\int_1^e \\frac{1}{x}\\,dx = [\\ln x]_1^e = \\ln e - \\ln 1 = 1$."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 3: negative powers"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Evaluate $\\int_1^2 \\left(2x+\\frac{3}{x^2}\\right)dx$. Antiderivative $F(x)=x^2-\\frac{3}{x}$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "F(2)-F(1) = \\left(4-\\tfrac{3}{2}\\right)-(1-3) = \\tfrac{5}{2}-(-2) = \\tfrac{9}{2}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Keep the order: upper minus lower, and never write $+C$ on a definite integral."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's evaluate a few directly with the Second Fundamental Theorem. First, a polynomial."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral from one to two of three x squared minus two x plus one. An antiderivative is x cubed minus x squared plus x."
+            },
+            {
+              "seq": 3,
+              "text": "Evaluate at the limits: F of two is six, F of one is one, so the answer is six minus one, which is five."
+            },
+            {
+              "seq": 4,
+              "text": "<chuckle>Next, an integral where the limits are chosen to make the logs vanish beautifully."
+            },
+            {
+              "seq": 5,
+              "text": "The integral from one to e of one over x is log x evaluated from one to e, that's log e minus log one, which is one minus zero, so simply one."
+            },
+            {
+              "seq": 6,
+              "text": "Now one with a negative power in it."
+            },
+            {
+              "seq": 7,
+              "text": "We want the integral from one to two of two x plus three over x squared. Since three over x squared integrates to minus three over x, the antiderivative is x squared minus three over x."
+            },
+            {
+              "seq": 8,
+              "text": "At the limits: F of two is four minus three-halves; F of one is one minus three, which is minus two. Subtract: five-halves minus minus two, giving nine-halves."
+            },
+            {
+              "seq": 9,
+              "text": "Two reminders throughout: keep the order, upper limit minus lower limit, and never write plus C on a definite integral."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो कुछ को सीधे Second Fundamental Theorem से evaluate करें। पहले, एक polynomial।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए one से two तक three x square minus two x plus one का integral। एक antiderivative है x cube minus x square plus x।"
+            },
+            {
+              "seq": 3,
+              "text": "Limits पर evaluate करो: F of two है six, F of one है one, तो answer है six minus one, यानी five।"
+            },
+            {
+              "seq": 4,
+              "text": "<chuckle>अगला, एक integral जहाँ limits ऐसे चुने हैं कि logs खूबसूरती से गायब हो जाएँ।"
+            },
+            {
+              "seq": 5,
+              "text": "One से e तक one over x का integral है log x, one से e तक, यानी log e minus log one, जो है one minus zero, तो बस one।"
+            },
+            {
+              "seq": 6,
+              "text": "अब एक जिसमें negative power है।"
+            },
+            {
+              "seq": 7,
+              "text": "हमें चाहिए one से two तक two x plus three over x square का integral। चूँकि three over x square integrate होकर minus three over x, antiderivative है x square minus three over x।"
+            },
+            {
+              "seq": 8,
+              "text": "Limits पर: F of two है four minus three-halves; F of one है one minus three, यानी minus two। घटाओ: five-halves minus minus two, तो nine-halves।"
+            },
+            {
+              "seq": 9,
+              "text": "पूरे दौरान दो reminders: order रखो, upper limit minus lower limit, और definite integral पर कभी plus C मत लिखो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "Definite Integrals: Definition, the Fundamental Theorem & Limit of a Sum",
+      "title": "Evaluating from first principles (limit of a sum)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 4: the limit-of-a-sum definition"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int_0^2 (x^2+2x)\\,dx$ from first principles. Here $a=0$, $b=2$, $h=\\tfrac{2}{n}$, $x_r=\\tfrac{2r}{n}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\int_0^2 (x^2+2x)\\,dx = \\lim_{n\\to\\infty}\\frac{2}{n}\\sum_{r=0}^{n-1}\\left[\\frac{4r^2}{n^2}+\\frac{4r}{n}\\right]"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "= \\lim_{n\\to\\infty}\\left[\\frac{8}{n^3}\\sum r^2 + \\frac{8}{n^2}\\sum r\\right]"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "= \\lim_{n\\to\\infty}\\left[\\frac{8}{n^3}\\cdot\\frac{(n-1)n(2n-1)}{6} + \\frac{8}{n^2}\\cdot\\frac{n(n-1)}{2}\\right]"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "As $n\\to\\infty$, the first term $\\to \\tfrac{8}{6}\\cdot 2 = \\tfrac{8}{3}$ and the second $\\to 4$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "\\int_0^2 (x^2+2x)\\,dx = \\frac{8}{3} + 4 = \\frac{20}{3}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Check with the FTC: $\\left[\\tfrac{x^3}{3}+x^2\\right]_0^2 = \\tfrac{8}{3}+4 = \\tfrac{20}{3}$. They agree."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "The limit-of-a-sum defines the integral; the FTC is the shortcut. Boards reward showing they agree."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Now let's earn the integral the hard way, straight from the definition, as a limit of a sum."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral from zero to two of x squared plus two x. Here a is zero, b is two, so h is two over n, and the sample points are two r over n."
+            },
+            {
+              "seq": 3,
+              "text": "Set up the sum: h times the sum over r of the function at those sample points. That's two over n, times the sum of four r squared over n squared, plus four r over n."
+            },
+            {
+              "seq": 4,
+              "text": "Pull the constants out and separate the two sums: eight over n cubed times the sum of r squared, plus eight over n squared times the sum of r."
+            },
+            {
+              "seq": 5,
+              "text": "Now substitute the power-sum formulas: sum of r squared is n minus one, n, two n minus one, over six; sum of r is n times n minus one over two."
+            },
+            {
+              "seq": 6,
+              "text": "Take the limit as n goes to infinity. The first term tends to eight-sixths times two, which is eight-thirds; the second tends to four."
+            },
+            {
+              "seq": 7,
+              "text": "Add them: eight-thirds plus four is twenty-thirds. That's the integral, built purely from the definition."
+            },
+            {
+              "seq": 8,
+              "text": "Now check with the Fundamental Theorem: the antiderivative x cubed over three plus x squared, from zero to two, is eight-thirds plus four, again twenty-thirds. The two methods agree exactly."
+            },
+            {
+              "seq": 9,
+              "text": "That agreement is the whole point. The limit of a sum defines the integral; the Fundamental Theorem is the shortcut. Boards love a solution that shows both give the same number."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>अब integral को मुश्किल तरीके से कमाएँ, सीधे definition से, limit of a sum की तरह।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए zero से two तक x square plus two x का integral। यहाँ a है zero, b है two, तो h है two over n, और sample points हैं two r over n।"
+            },
+            {
+              "seq": 3,
+              "text": "Sum set करो: h times sum over r, उन sample points पर function का। यह है two over n, times sum of four r square over n square, plus four r over n।"
+            },
+            {
+              "seq": 4,
+              "text": "Constants बाहर निकालो और दोनों sums अलग करो: eight over n cube times sum of r square, plus eight over n square times sum of r।"
+            },
+            {
+              "seq": 5,
+              "text": "अब power-sum formulas रखो: sum of r square है n minus one, n, two n minus one, over six; sum of r है n times n minus one over two।"
+            },
+            {
+              "seq": 6,
+              "text": "n को infinity तक ले जाओ। पहला term जाता है eight-sixths times two की तरफ़, यानी eight-thirds; दूसरा जाता है four की तरफ़।"
+            },
+            {
+              "seq": 7,
+              "text": "जोड़ो: eight-thirds plus four है twenty-thirds। यही integral है, पूरी तरह definition से बना।"
+            },
+            {
+              "seq": 8,
+              "text": "अब Fundamental Theorem से check करो: antiderivative x cube over three plus x square, zero से two तक, है eight-thirds plus four, फिर से twenty-thirds। दोनों methods बिलकुल agree करते हैं।"
+            },
+            {
+              "seq": 9,
+              "text": "वो agreement ही पूरी बात है। Limit of a sum integral को define करता है; Fundamental Theorem shortcut है। Boards ऐसा solution पसंद करते हैं जो दिखाए दोनों एक ही number देते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "tips",
+      "subtopic": "Definite Integrals: Definition, the Fundamental Theorem & Limit of a Sum",
+      "title": "Definite-integral pitfalls",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Definite-integral traps"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "A definite integral is a number — never append $+C$; it cancels in $F(b)-F(a)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Keep the FTC order: $F(\\text{upper})-F(\\text{lower})$. Swapping them flips the sign."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int_a^b f = -\\int_b^a f"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "If you ever exchange limits mid-solution, flip the sign to match."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "In a limit of a sum, the factor $h=\\frac{b-a}{n}$ multiplies the whole sum — dropping it scales the answer wrongly."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Signed area: a dip below the axis subtracts. Total geometric area needs $\\int|f|$ — a distinct question."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "For first principles, memorise $\\sum 1$, $\\sum r$, $\\sum r^2$ — almost every Board limit reduces to these."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Four traps specific to definite integrals, clear them and evaluation is safe."
+            },
+            {
+              "seq": 2,
+              "text": "First and most basic: a definite integral is a number, so never append plus C. It cancels in F of b minus F of a, so writing it is simply wrong."
+            },
+            {
+              "seq": 3,
+              "text": "Second: keep the Fundamental Theorem order. It's F of the upper limit minus F of the lower limit. Swapping them flips the sign."
+            },
+            {
+              "seq": 4,
+              "text": "That sign flip is itself a property: the integral from a to b equals minus the integral from b to a."
+            },
+            {
+              "seq": 5,
+              "text": "So if you ever exchange the limits partway through a solution, remember to flip the sign to compensate."
+            },
+            {
+              "seq": 6,
+              "text": "Third, in a limit of a sum, the factor h, that's b minus a over n, multiplies the entire sum. Drop it and your whole answer is scaled wrongly."
+            },
+            {
+              "seq": 7,
+              "text": "Fourth, remember signed area. A dip below the axis subtracts. If a question asks for total geometric area, that needs the integral of the absolute value, a genuinely different question."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>And for first-principles problems, have the three power-sums memorised. Almost every Board limit-of-a-sum reduces to a combination of sum one, sum r, and sum r squared."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Definite integrals के चार खास traps, इन्हें साफ़ करो और evaluation safe है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला और सबसे basic: definite integral एक number है, तो कभी plus C मत जोड़ो। यह F of b minus F of a में cancel हो जाता है, तो इसे लिखना बस गलत है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा: Fundamental Theorem order रखो। यह है F of the upper limit minus F of the lower limit। इन्हें swap करने पर sign पलटता है।"
+            },
+            {
+              "seq": 4,
+              "text": "वो sign flip खुद एक property है: a से b तक integral बराबर है minus b से a तक integral।"
+            },
+            {
+              "seq": 5,
+              "text": "तो अगर solution के बीच में कभी limits exchange करो, तो sign पलटना याद रखो ताकि compensate हो।"
+            },
+            {
+              "seq": 6,
+              "text": "तीसरा, limit of a sum में, factor h, यानी b minus a over n, पूरे sum को multiply करता है। इसे छोड़ा तो पूरा answer गलत scale हो जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "चौथा, signed area याद रखो। Axis के नीचे का dip घटाता है। अगर सवाल total geometric area माँगे, तो उसे absolute value का integral चाहिए, एक सचमुच अलग सवाल।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>और first-principles problems के लिए, तीन power-sums रटे रखो। लगभग हर Board limit-of-a-sum, sum one, sum r, और sum r square के combination में सिमट जाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "Evaluation of Definite Integrals by Substitution",
+      "title": "Definite substitution: the limits move too",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Definite substitution: the limits move too"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "This fuses substitution with definite integrals. The only new idea is what happens to the limits."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\int_a^b f(g(x))\\,g'(x)\\,dx = \\int_{g(a)}^{g(b)} f(u)\\,du"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The limits $x=a,b$ are $x$-values; the new integral is in $u$, so convert them: $g(a)$ and $g(b)$."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "caption": "As x sweeps a to b, u sweeps g(a) to g(b) — the endpoints carry across.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 190\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"420\" height=\"190\" fill=\"#ffffff\"/><defs><marker id=\"xu\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#2f855a\"/></marker></defs><line x1=\"60\" y1=\"55\" x2=\"380\" y2=\"55\" stroke=\"#2b6cb0\" stroke-width=\"2\"/><text x=\"32\" y=\"60\" font-family=\"system-ui, sans-serif\" font-size=\"14\" fill=\"#2b6cb0\">x</text><circle cx=\"120\" cy=\"55\" r=\"4\" fill=\"#2b6cb0\"/><text x=\"120\" y=\"40\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#2b6cb0\" text-anchor=\"middle\">a</text><circle cx=\"330\" cy=\"55\" r=\"4\" fill=\"#2b6cb0\"/><text x=\"330\" y=\"40\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#2b6cb0\" text-anchor=\"middle\">b</text><line x1=\"60\" y1=\"140\" x2=\"380\" y2=\"140\" stroke=\"#2f855a\" stroke-width=\"2\"/><text x=\"32\" y=\"145\" font-family=\"system-ui, sans-serif\" font-size=\"14\" fill=\"#2f855a\">u</text><circle cx=\"95\" cy=\"140\" r=\"4\" fill=\"#2f855a\"/><text x=\"95\" y=\"162\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#2f855a\" text-anchor=\"middle\">g(a)</text><circle cx=\"300\" cy=\"140\" r=\"4\" fill=\"#2f855a\"/><text x=\"300\" y=\"162\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#2f855a\" text-anchor=\"middle\">g(b)</text><line x1=\"120\" y1=\"60\" x2=\"95\" y2=\"134\" stroke=\"#2f855a\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" marker-end=\"url(#xu)\"/><line x1=\"330\" y1=\"60\" x2=\"300\" y2=\"134\" stroke=\"#2f855a\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" marker-end=\"url(#xu)\"/></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Change the limits to $u$-values and you never convert back to $x$ — just evaluate in $u$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Two valid methods: (A) change limits, finish in $u$; (B) keep limits, back-substitute, then evaluate. Never mix."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Watch a non-monotonic $g$ (like $u=x^2$ across $0$) — split the interval first."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>You already know how to substitute, and how definite integrals work. What happens when we combine them?"
+            },
+            {
+              "seq": 2,
+              "text": "This subtopic fuses the two, and there's really just one new idea: what happens to the limits."
+            },
+            {
+              "seq": 3,
+              "text": "The rule: the integral from a to b of f of g times g prime equals the integral, now from g of a to g of b, of f of u."
+            },
+            {
+              "seq": 4,
+              "text": "Here's why the limits change. The old limits, x equals a and x equals b, are x-values. But the new integral lives in u, so you must convert them to u-values: the new lower limit is g of a, the new upper is g of b."
+            },
+            {
+              "seq": 5,
+              "text": "Picture two parallel rulers: as x sweeps from a to b, u equals g of x sweeps from g of a to g of b. The endpoints carry across to the u-ruler."
+            },
+            {
+              "seq": 6,
+              "text": "And the payoff: once you've changed the limits, you never convert back to x. Just evaluate the answer directly in u."
+            },
+            {
+              "seq": 7,
+              "text": "There are two valid methods. Method A: change the limits and finish in u. Method B: keep the old limits, integrate, back-substitute to x, then plug in. Pick one, never mix them."
+            },
+            {
+              "seq": 8,
+              "text": "One caution: if g isn't one-to-one across the interval, say u equals x squared straddling zero, split the interval first, or the mapping misbehaves."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>तुम पहले से जानते हो substitute कैसे करना है, और definite integrals कैसे काम करते हैं। जब इन्हें मिलाएँ तो क्या होता है?"
+            },
+            {
+              "seq": 2,
+              "text": "यह subtopic दोनों को fuse करता है, और असल में बस एक नया idea है: limits का क्या होता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Rule: a से b तक f of g times g prime का integral बराबर है integral, अब g of a से g of b तक, f of u का।"
+            },
+            {
+              "seq": 4,
+              "text": "Limits क्यों बदलते हैं, यह देखो। पुरानी limits, x equals a और x equals b, x-values हैं। पर नया integral u में रहता है, तो इन्हें u-values में बदलना ज़रूरी है: नई lower limit है g of a, नई upper है g of b।"
+            },
+            {
+              "seq": 5,
+              "text": "दो parallel rulers सोचो: जैसे x, a से b तक sweep करता है, u बराबर g of x, g of a से g of b तक sweep करता है। Endpoints u-ruler पर चले जाते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "और फ़ायदा: limits बदलने के बाद, तुम कभी वापस x में नहीं जाते। Answer को सीधे u में evaluate करो।"
+            },
+            {
+              "seq": 7,
+              "text": "दो valid methods हैं। Method A: limits बदलो और u में खत्म करो। Method B: पुरानी limits रखो, integrate करो, x में back-substitute करो, फिर रखो। एक चुनो, कभी मत मिलाओ।"
+            },
+            {
+              "seq": 8,
+              "text": "एक सावधानी: अगर g interval भर one-to-one नहीं है, जैसे u equals x square zero के आर-पार, तो पहले interval को split करो, वरना mapping बिगड़ती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "Evaluation of Definite Integrals by Substitution",
+      "title": "The rule and the two-method choice",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The rule and the two-method choice"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\int_a^b f(g(x))\\,g'(x)\\,dx = \\int_{g(a)}^{g(b)} f(u)\\,du"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "x=a \\;\\Rightarrow\\; u=g(a) \\qquad x=b \\;\\Rightarrow\\; u=g(b)"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Method A (preferred): convert the limits to $u$, evaluate in $u$ — no back-substitution."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Method B: keep the $x$-limits, integrate, return to $x$, then apply the original limits."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Substitution is the engine behind the king and even/odd properties of the next subtopic."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The $du$ scaling (like $x\\,dx=\\tfrac{1}{2}du$) still applies — both integrand and limits transform."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The rule is short, and the strategy comes down to a two-method choice."
+            },
+            {
+              "seq": 2,
+              "text": "The core rule: the integral from a to b of f of g times g prime, equals the integral from g of a to g of b of f of u."
+            },
+            {
+              "seq": 3,
+              "text": "So the limits transform with the variable: x equals a becomes u equals g of a; x equals b becomes u equals g of b."
+            },
+            {
+              "seq": 4,
+              "text": "Method A, the one I'd prefer: convert the limits to u-values and evaluate entirely in u, no back-substitution needed."
+            },
+            {
+              "seq": 5,
+              "text": "Method B: keep the original x-limits, integrate, return to x by back-substituting, and only then apply the x-limits. Both are valid; just never mix them."
+            },
+            {
+              "seq": 6,
+              "text": "One deeper note: this limit-changing mechanism is exactly the engine behind the king and even-odd properties you'll meet in the next subtopic."
+            },
+            {
+              "seq": 7,
+              "text": "And don't forget the d u scaling, a factor like x d x equals one-half d u still applies. Both the integrand and the limits transform together."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Rule छोटा है, और strategy एक two-method choice पर आती है।"
+            },
+            {
+              "seq": 2,
+              "text": "Core rule: a से b तक f of g times g prime का integral, बराबर है g of a से g of b तक f of u का integral।"
+            },
+            {
+              "seq": 3,
+              "text": "तो limits variable के साथ transform होती हैं: x equals a बनता है u equals g of a; x equals b बनता है u equals g of b।"
+            },
+            {
+              "seq": 4,
+              "text": "Method A, जो मैं prefer करूँगा: limits को u-values में बदलो और पूरा u में evaluate करो, कोई back-substitution नहीं चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Method B: original x-limits रखो, integrate करो, back-substitute करके x में लौटो, और तभी x-limits लगाओ। दोनों valid हैं; बस कभी मत मिलाओ।"
+            },
+            {
+              "seq": 6,
+              "text": "एक गहरी बात: यह limit-changing mechanism ठीक वो engine है जो अगले subtopic के king और even-odd properties के पीछे है।"
+            },
+            {
+              "seq": 7,
+              "text": "और d u scaling मत भूलो, x d x equals one-half d u जैसा factor अब भी लगता है। Integrand और limits दोनों साथ transform होते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Evaluation of Definite Integrals by Substitution",
+      "title": "Change the limits, finish in u",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1: convert both limits"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int_0^1 \\frac{x}{x^2+1}\\,dx$. Let $u=x^2+1$, $x\\,dx=\\tfrac{1}{2}du$; limits $0\\to 1$, $1\\to 2$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac{1}{2}\\int_1^2 \\frac{du}{u} = \\frac{1}{2}[\\ln u]_1^2 = \\frac{1}{2}\\ln 2"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Example 2: a trig substitution"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Evaluate $\\int_0^{\\pi/2}\\sin x\\cos x\\,dx$. Let $u=\\sin x$; limits $0\\to 0$, $\\tfrac{\\pi}{2}\\to 1$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int_0^1 u\\,du = \\left[\\frac{u^2}{2}\\right]_0^1 = \\frac{1}{2}"
+        },
+        {
+          "seq": 7,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Example 3: a log substitution"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Evaluate $\\int_1^e \\frac{\\ln x}{x}\\,dx$. Let $u=\\ln x$; limits $1\\to 0$, $e\\to 1$: $\\int_0^1 u\\,du = \\tfrac{1}{2}$."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Once the limits are converted, the answer pops out in $u$ — no return to $x$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's practise Method A: change the limits, then never look back at x."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral from zero to one of x over x squared plus one. Let u be x squared plus one, so x d x is one-half d u. Convert the limits: x zero gives u one, x one gives u two."
+            },
+            {
+              "seq": 3,
+              "text": "The integral becomes one-half, times the integral from one to two of d u over u, which is one-half log u from one to two, that's one-half log two."
+            },
+            {
+              "seq": 4,
+              "text": "Next, a trig substitution, and watch how neatly the limits fall."
+            },
+            {
+              "seq": 5,
+              "text": "We want the integral from zero to pi over two of sine x cosine x. Let u be sine x. Convert: x zero gives u zero, and x pi over two gives u one."
+            },
+            {
+              "seq": 6,
+              "text": "The integral becomes the integral from zero to one of u d u, which is u squared over two, from zero to one, simply one-half."
+            },
+            {
+              "seq": 7,
+              "text": "One more, with a logarithm."
+            },
+            {
+              "seq": 8,
+              "text": "We want the integral from one to e of log x over x. Let u be log x. Convert: x one gives u zero, x e gives u one. Again it's the integral of u from zero to one, which is one-half."
+            },
+            {
+              "seq": 9,
+              "text": "Notice the pattern: once the limits are converted, the answer pops straight out in u, with no return trip to x."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो Method A practise करें: limits बदलो, फिर कभी x की तरफ़ मत देखो।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए zero से one तक x over x square plus one का integral। मान लो u है x square plus one, तो x d x है one-half d u। Limits बदलो: x zero देता है u one, x one देता है u two।"
+            },
+            {
+              "seq": 3,
+              "text": "Integral बन जाता है one-half, times one से two तक d u over u का integral, जो है one-half log u, one से two तक, यानी one-half log two।"
+            },
+            {
+              "seq": 4,
+              "text": "अगला, एक trig substitution, और देखो limits कितनी साफ़ गिरती हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "हमें चाहिए zero से pi over two तक sine x cosine x का integral। मान लो u है sine x। बदलो: x zero देता है u zero, और x pi over two देता है u one।"
+            },
+            {
+              "seq": 6,
+              "text": "Integral बन जाता है zero से one तक u d u का, जो है u square over two, zero से one तक, बस one-half।"
+            },
+            {
+              "seq": 7,
+              "text": "एक और, एक logarithm के साथ।"
+            },
+            {
+              "seq": 8,
+              "text": "हमें चाहिए one से e तक log x over x का integral। मान लो u है log x। बदलो: x one देता है u zero, x e देता है u one। फिर वही, zero से one तक u का integral, जो है one-half।"
+            },
+            {
+              "seq": 9,
+              "text": "Pattern देखो: limits बदलने के बाद, answer सीधे u में निकल आता है, x की वापसी यात्रा के बिना।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Evaluation of Definite Integrals by Substitution",
+      "title": "Substitution meets a property (the king)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 4: substitution plus the king property"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $I=\\int_0^{\\pi/2}\\frac{\\sqrt{\\sin x}}{\\sqrt{\\sin x}+\\sqrt{\\cos x}}\\,dx$. No elementary antiderivative exists."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Apply the king substitution $x\\to\\tfrac{\\pi}{2}-x$, which swaps $\\sin\\leftrightarrow\\cos$ but keeps the limits."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "I = \\int_0^{\\pi/2}\\frac{\\sqrt{\\cos x}}{\\sqrt{\\cos x}+\\sqrt{\\sin x}}\\,dx"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Add the two expressions for $I$: the denominators match, so the numerators sum to the whole."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "2I = \\int_0^{\\pi/2} 1\\,dx = \\frac{\\pi}{2} \\;\\Rightarrow\\; I = \\frac{\\pi}{4}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The king substitution is a limit-preserving change of variable — the cleanest link to the properties."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "When no antiderivative exists, a limit-preserving substitution can still deliver a clean number."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>Here's a showstopper, an integral with no elementary antiderivative that still gives a clean answer in two lines."
+            },
+            {
+              "seq": 2,
+              "text": "We want capital I, the integral from zero to pi over two of root sine x, over root sine x plus root cosine x. Try to find an antiderivative and you'll fail, none exists in elementary form."
+            },
+            {
+              "seq": 3,
+              "text": "Instead, apply the king substitution: replace x with pi over two minus x. On this interval that swaps sine and cosine, while the limits zero and pi over two stay put."
+            },
+            {
+              "seq": 4,
+              "text": "So I also equals the same integral with root cosine on top instead, the companion version."
+            },
+            {
+              "seq": 5,
+              "text": "Now add the two expressions for I. The denominators are identical, so the two numerators simply add to the whole denominator."
+            },
+            {
+              "seq": 6,
+              "text": "That gives two I equals the integral from zero to pi over two of one, which is pi over two. So I is pi over four."
+            },
+            {
+              "seq": 7,
+              "text": "The reason this works: the king substitution is a limit-preserving change of variable. It's the cleanest illustration of how substitution underlies the definite-integral properties."
+            },
+            {
+              "seq": 8,
+              "text": "The lesson: even when no antiderivative exists, a limit-preserving substitution can still hand you a clean number."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<excited>यह रहा एक showstopper, एक integral जिसका कोई elementary antiderivative नहीं, फिर भी दो lines में साफ़ answer देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए capital I, zero से pi over two तक root sine x, बटा root sine x plus root cosine x का integral। Antiderivative ढूँढने की कोशिश करो और fail हो जाओगे, elementary form में कोई नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "इसके बजाय, king substitution लगाओ: x को pi over two minus x से बदलो। इस interval पर यह sine और cosine को swap करता है, जबकि limits zero और pi over two वहीं रहती हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "तो I बराबर है वही integral, अब ऊपर root cosine के साथ, companion version।"
+            },
+            {
+              "seq": 5,
+              "text": "अब I के दोनों expressions जोड़ो। Denominators एक जैसे हैं, तो दोनों numerators बस पूरे denominator में जुड़ जाते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "इससे two I बराबर zero से pi over two तक one का integral, जो है pi over two। तो I है pi over four।"
+            },
+            {
+              "seq": 7,
+              "text": "यह क्यों चलता है: king substitution एक limit-preserving change of variable है। यह सबसे साफ़ मिसाल है कि substitution definite-integral properties के नीचे कैसे है।"
+            },
+            {
+              "seq": 8,
+              "text": "सबक: जब कोई antiderivative न हो तब भी, एक limit-preserving substitution एक साफ़ number दे सकता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "tips",
+      "subtopic": "Evaluation of Definite Integrals by Substitution",
+      "title": "Definite-substitution pitfalls",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Definite-substitution traps"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Switched to $u$? The limits must become $g(a)$ and $g(b)$. Keeping old $x$-limits is the top error."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Never mix methods: either change the limits, or back-substitute — doing both corrupts the bounds."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "The $du$ scaling still applies to the limits-changed integral: e.g. the $\\tfrac{1}{2}$ from $x\\,dx=\\tfrac{1}{2}du$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "Non-monotonic $g$ (e.g. $u=x^2$ across $0$)? Split the interval before substituting."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Prefer Method A — changing the limits removes the back-substitution step and a whole class of errors."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\int_a^b \\;\\to\\; \\int_{g(a)}^{g(b)}\\qquad(\\text{new variable, new limits})"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Write the new $u$-limits right next to the integral sign so you can't forget them."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is where easy marks leak away, four traps, all about the limits."
+            },
+            {
+              "seq": 2,
+              "text": "The single most common error: you switch to u, but forget to change the limits. If you're in u, the limits must become g of a and g of b. Old x-limits on a u-integral is just wrong."
+            },
+            {
+              "seq": 3,
+              "text": "Second: never mix the two methods. Either change the limits, or back-substitute to x, doing both, or neither, corrupts the bounds."
+            },
+            {
+              "seq": 4,
+              "text": "Third: the d u scaling still applies to the limits-changed integral. That one-half from x d x equals one-half d u doesn't disappear; both integrand and limits transform."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth: if g isn't one-to-one across the interval, like u equals x squared straddling zero, split the interval before substituting."
+            },
+            {
+              "seq": 6,
+              "text": "My recommendation: prefer Method A, changing the limits. It removes the back-substitution step entirely, and with it a whole class of sign and limit errors."
+            },
+            {
+              "seq": 7,
+              "text": "The board says it in four words: new variable, new limits."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Write the new u-limits right next to the integral sign the moment you substitute, and you simply can't forget them."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहीं easy marks रिस जाते हैं, चार traps, सब limits के बारे में।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे common error: तुम u में switch करते हो, पर limits बदलना भूल जाते हो। अगर u में हो, तो limits g of a और g of b बननी चाहिए। u-integral पर पुरानी x-limits बस गलत है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा: दोनों methods कभी मत मिलाओ। या तो limits बदलो, या x में back-substitute करो, दोनों करना, या कोई नहीं, bounds बिगाड़ देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा: d u scaling limits-बदले integral पर अब भी लगता है। x d x equals one-half d u वाला one-half गायब नहीं होता; integrand और limits दोनों transform होते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा: अगर g interval भर one-to-one नहीं, जैसे u equals x square zero के आर-पार, तो substitute करने से पहले interval split करो।"
+            },
+            {
+              "seq": 6,
+              "text": "मेरी सलाह: Method A prefer करो, limits बदलना। यह back-substitution step पूरी तरह हटा देता है, और साथ ही sign और limit errors का एक पूरा वर्ग।"
+            },
+            {
+              "seq": 7,
+              "text": "Board इसे चार शब्दों में कहता है: new variable, new limits।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Substitute करते ही नई u-limits integral sign के ठीक बगल में लिख दो, फिर तुम भूल ही नहीं सकते।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Properties of Definite Integrals: The Symmetry Toolkit",
+      "title": "Integrate smarter with symmetry",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Compute without an antiderivative"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Properties let you evaluate an integral by exploiting symmetry — no antiderivative required."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "A definite integral is an accumulated area; area doesn't care which way you sweep or where the origin sits."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "caption": "Even doubles on the symmetric interval; odd cancels to zero.",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"440\" height=\"220\" fill=\"#ffffff\"/><line x1=\"30\" y1=\"130\" x2=\"200\" y2=\"130\" stroke=\"#888\" stroke-width=\"1\"/><line x1=\"115\" y1=\"35\" x2=\"115\" y2=\"175\" stroke=\"#888\" stroke-width=\"1\"/><path d=\"M45 70 Q 115 165 185 70\" fill=\"#bee3f8\" stroke=\"#2b6cb0\" stroke-width=\"2\"/><text x=\"115\" y=\"200\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#2b6cb0\" text-anchor=\"middle\">even: areas add</text><line x1=\"240\" y1=\"130\" x2=\"410\" y2=\"130\" stroke=\"#888\" stroke-width=\"1\"/><line x1=\"325\" y1=\"35\" x2=\"325\" y2=\"175\" stroke=\"#888\" stroke-width=\"1\"/><path d=\"M260 170 Q 325 130 390 90\" fill=\"none\" stroke=\"#805ad5\" stroke-width=\"2\"/><text x=\"365\" y=\"112\" font-family=\"system-ui, sans-serif\" font-size=\"14\" fill=\"#2f855a\">+</text><text x=\"284\" y=\"156\" font-family=\"system-ui, sans-serif\" font-size=\"14\" fill=\"#c53030\">-</text><text x=\"325\" y=\"200\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#805ad5\" text-anchor=\"middle\">odd: cancels to 0</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "\\int_{-a}^{a} f(x)\\,dx = \\begin{cases}2\\int_0^a f(x)\\,dx & f\\text{ even}\\\\ 0 & f\\text{ odd}\\end{cases}"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "King: $\\int_a^b f(x)\\,dx = \\int_a^b f(a+b-x)\\,dx$ — write it two ways, add, solve for $I$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "The signature move: original plus flipped often collapses to $\\int 1$, so $2I=$ something easy."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Read the limits first: symmetric $\\Rightarrow$ parity; $0\\to a$ with trig $\\Rightarrow$ king."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>What if I told you that you can nail some fearsome integrals without ever finding an antiderivative?"
+            },
+            {
+              "seq": 2,
+              "text": "That's the whole spirit here. The properties of definite integrals let you compute a value by exploiting symmetry in the function and the interval, rather than integrating harder."
+            },
+            {
+              "seq": 3,
+              "text": "Why does symmetry help? Because a definite integral is an accumulated area, and area doesn't care which direction you sweep it, or where you place the origin."
+            },
+            {
+              "seq": 4,
+              "text": "Look at the two pictures. An even function is a mirror image about the y-axis, so its area on minus a to a just doubles. An odd function is an upside-down mirror image, so the two halves cancel to zero."
+            },
+            {
+              "seq": 5,
+              "text": "That's the even-odd rule: on symmetric limits minus a to a, an even function gives twice the integral from zero to a, and an odd function gives exactly zero."
+            },
+            {
+              "seq": 6,
+              "text": "The most powerful property is the king: the integral from a to b of f of x equals the integral of f of a plus b minus x. You write the integral two ways, the original and the flipped, and add them."
+            },
+            {
+              "seq": 7,
+              "text": "The signature move: original plus flipped often collapses to the integral of one. So two I equals something trivial, and you solve for I algebraically."
+            },
+            {
+              "seq": 8,
+              "text": "So train one habit: read the limits before the integrand. Symmetric limits point to parity; zero to a with trig points to the king."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>अगर मैं कहूँ कि कुछ भयानक integrals को तुम बिना antiderivative ढूँढे हल कर सकते हो, तो?"
+            },
+            {
+              "seq": 2,
+              "text": "यही यहाँ की पूरी भावना है। Definite integrals की properties तुम्हें function और interval की symmetry का फ़ायदा उठाकर value निकालने देती हैं, ज़्यादा मेहनत से integrate करने के बजाय।"
+            },
+            {
+              "seq": 3,
+              "text": "Symmetry क्यों मदद करती है? क्योंकि definite integral एक accumulated area है, और area को परवाह नहीं कि तुम किस दिशा में sweep करते हो, या origin कहाँ रखते हो।"
+            },
+            {
+              "seq": 4,
+              "text": "दोनों तस्वीरें देखो। एक even function y-axis के बारे में mirror image है, तो minus a to a पर उसका area बस दुगुना हो जाता है। एक odd function उल्टी mirror image है, तो दोनों halves cancel होकर zero।"
+            },
+            {
+              "seq": 5,
+              "text": "यही even-odd rule है: symmetric limits minus a to a पर, even function देता है zero से a तक integral का दुगुना, और odd function देता है ठीक zero।"
+            },
+            {
+              "seq": 6,
+              "text": "सबसे powerful property king है: a से b तक f of x का integral बराबर है f of a plus b minus x का integral। तुम integral को दो तरह लिखते हो, original और flipped, और जोड़ते हो।"
+            },
+            {
+              "seq": 7,
+              "text": "Signature move: original plus flipped अक्सर integral of one में सिमट जाता है। तो two I बराबर कुछ trivial, और तुम I को algebraically हल करते हो।"
+            },
+            {
+              "seq": 8,
+              "text": "तो एक आदत जमाओ: integrand से पहले limits पढ़ो। Symmetric limits parity की तरफ़ इशारा; zero to a trig के साथ king की तरफ़।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "formulas",
+      "subtopic": "Properties of Definite Integrals: The Symmetry Toolkit",
+      "title": "The symmetry toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "King, parity, split, periodic"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "\\int_a^b f(x)\\,dx = \\int_a^b f(a+b-x)\\,dx \\qquad \\int_0^a f(x)\\,dx = \\int_0^a f(a-x)\\,dx"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "\\int_{-a}^{a} f(x)\\,dx = \\begin{cases}2\\int_0^a f\\,dx & f\\text{ even}\\\\ 0 & f\\text{ odd}\\end{cases}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int_0^{2a} f(x)\\,dx = \\int_0^a f(x)\\,dx + \\int_0^a f(2a-x)\\,dx"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\int_0^{2a} f\\,dx = \\begin{cases}2\\int_0^a f\\,dx & f(2a-x)=f(x)\\\\ 0 & f(2a-x)=-f(x)\\end{cases}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "f(x+T)=f(x) \\;\\Rightarrow\\; \\int_0^{nT} f\\,dx = n\\int_0^T f\\,dx"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Parity arithmetic: even times even is even; odd times odd is even; even times odd is odd; a constant is even."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Even/odd needs symmetric limits $[-a,a]$. King needs $f(a+b-x)$ to relate nicely to $f(x)$."
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "For $|\\sin x|$ and $|\\cos x|$, the period is $\\pi$ — the modulus halves it."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here's the symmetry toolkit, the properties that turn hard evaluations into quick ones."
+            },
+            {
+              "seq": 2,
+              "text": "The king property, in two forms: the integral from a to b of f of x equals the integral of f of a plus b minus x. The special case from zero to a replaces x by a minus x."
+            },
+            {
+              "seq": 3,
+              "text": "The even-odd rule on symmetric limits: an even function doubles the half-integral, an odd function gives zero."
+            },
+            {
+              "seq": 4,
+              "text": "The zero-to-two-a split: the integral from zero to two a equals the integral from zero to a of f, plus the integral from zero to a of f of two a minus x."
+            },
+            {
+              "seq": 5,
+              "text": "Its handy corollary: that becomes twice the half-integral if f of two a minus x equals f of x, or zero if it equals minus f of x."
+            },
+            {
+              "seq": 6,
+              "text": "The periodic property: if f repeats with period capital T, then the integral over n whole periods is just n times the integral over one period."
+            },
+            {
+              "seq": 7,
+              "text": "You'll lean on parity arithmetic constantly: even times even is even, odd times odd is even, even times odd is odd, and any constant is even."
+            },
+            {
+              "seq": 8,
+              "text": "Two conditions to respect: even-odd needs symmetric limits, minus a to a. And king only helps when f of a plus b minus x relates nicely to f of x, typically via sine and cosine swapping."
+            },
+            {
+              "seq": 9,
+              "text": "And a specific warning for later: the modulus of sine x, or of cosine x, has period pi, not two pi. The absolute value halves the period."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह रहा symmetry toolkit, वो properties जो मुश्किल evaluations को जल्दी बना देती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "King property, दो रूपों में: a से b तक f of x का integral बराबर f of a plus b minus x का integral। Zero से a तक special case x को a minus x से बदलता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Symmetric limits पर even-odd rule: even function half-integral को दुगुना करता है, odd function zero देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Zero-to-two-a split: zero से two a तक integral बराबर zero से a तक f का integral, plus zero से a तक f of two a minus x का integral।"
+            },
+            {
+              "seq": 5,
+              "text": "इसका काम का corollary: यह बनता है half-integral का दुगुना अगर f of two a minus x बराबर f of x, या zero अगर बराबर minus f of x।"
+            },
+            {
+              "seq": 6,
+              "text": "Periodic property: अगर f period capital T के साथ repeat करता है, तो n पूरे periods पर integral बस n times एक period पर integral है।"
+            },
+            {
+              "seq": 7,
+              "text": "तुम parity arithmetic पर लगातार टिकोगे: even times even है even, odd times odd है even, even times odd है odd, और कोई भी constant even है।"
+            },
+            {
+              "seq": 8,
+              "text": "दो conditions का ध्यान: even-odd को symmetric limits चाहिए, minus a to a। और king तभी मदद करता है जब f of a plus b minus x, f of x से अच्छे से जुड़े, आम तौर पर sine और cosine के swap से।"
+            },
+            {
+              "seq": 9,
+              "text": "और आगे के लिए एक खास चेतावनी: modulus of sine x, या cosine x, का period pi है, two pi नहीं। Absolute value period को आधा कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Properties of Definite Integrals: The Symmetry Toolkit",
+      "title": "Parity and the modulus split",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1: split a modulus with additivity"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $\\int_0^4 |x-2|\\,dx$. Split at $x=2$: $|x-2|=2-x$ for $x<2$, $x-2$ for $x>2$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\int_0^2 (2-x)\\,dx + \\int_2^4 (x-2)\\,dx = 2 + 2 = 4"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Example 2: parity kills terms"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Evaluate $\\int_{-\\pi/2}^{\\pi/2}(x^2\\sin x + x\\cos x + 4)\\,dx$ mentally, using symmetric limits."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Parity: $x^2\\sin x$ is odd (even$\\times$odd), $x\\cos x$ is odd, $4$ is even — only the constant survives."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\int_{-\\pi/2}^{\\pi/2} 4\\,dx = 4[x]_{-\\pi/2}^{\\pi/2} = 4\\pi"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Never integrate $x^2\\sin x$ or $x\\cos x$ here — symmetry deletes them before you start."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "style": "red-margin",
+          "text": "Symmetric limits? Split into even and odd parts; every odd term is instantly zero."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's put the toolkit to work. First, a modulus, handled by splitting."
+            },
+            {
+              "seq": 2,
+              "text": "We want the integral from zero to four of the absolute value of x minus two. The expression inside changes sign at x equals two, so split there."
+            },
+            {
+              "seq": 3,
+              "text": "For x below two, the absolute value is two minus x; above two, it's x minus two. Each piece is a small triangle of area two, so the total is two plus two, which is four."
+            },
+            {
+              "seq": 4,
+              "text": "<excited>Now a problem you can do almost entirely in your head, thanks to symmetry."
+            },
+            {
+              "seq": 5,
+              "text": "We want the integral from minus pi over two to pi over two of x squared sine x, plus x cosine x, plus four. The limits are symmetric, so check the parity of each term."
+            },
+            {
+              "seq": 6,
+              "text": "x squared sine x is even times odd, so it's odd and vanishes. x cosine x is odd times even, also odd and vanishes. Only the constant four, which is even, survives."
+            },
+            {
+              "seq": 7,
+              "text": "So the whole thing reduces to the integral of four across the symmetric interval, which is four times the width pi, that's four pi."
+            },
+            {
+              "seq": 8,
+              "text": "The takeaway: never grind through x squared sine x or x cosine x here. Symmetry deletes both before you write a single step."
+            },
+            {
+              "seq": 9,
+              "text": "Whenever the limits are symmetric, split the integrand into even and odd parts, and every odd term is instantly zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो toolkit को काम पर लगाएँ। पहले, एक modulus, splitting से सँभाला।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए zero से four तक absolute value of x minus two का integral। अंदर का expression x equals two पर sign बदलता है, तो वहीं split करो।"
+            },
+            {
+              "seq": 3,
+              "text": "x, two से कम के लिए, absolute value है two minus x; two से ऊपर, यह x minus two। हर piece area two का एक छोटा triangle है, तो total है two plus two, यानी four।"
+            },
+            {
+              "seq": 4,
+              "text": "<excited>अब एक problem जो तुम लगभग पूरी दिमाग में कर सकते हो, symmetry की बदौलत।"
+            },
+            {
+              "seq": 5,
+              "text": "हमें चाहिए minus pi over two से pi over two तक x square sine x, plus x cosine x, plus four का integral। Limits symmetric हैं, तो हर term की parity check करो।"
+            },
+            {
+              "seq": 6,
+              "text": "x square sine x है even times odd, तो odd और गायब। x cosine x है odd times even, फिर odd और गायब। सिर्फ़ constant four, जो even है, बचता है।"
+            },
+            {
+              "seq": 7,
+              "text": "तो पूरी चीज़ सिमटकर symmetric interval पर four का integral बन जाती है, जो है four times width pi, यानी four pi।"
+            },
+            {
+              "seq": 8,
+              "text": "सीख: यहाँ x square sine x या x cosine x में कभी मत जूझो। Symmetry दोनों को एक step लिखने से पहले मिटा देती है।"
+            },
+            {
+              "seq": 9,
+              "text": "जब भी limits symmetric हों, integrand को even और odd parts में split करो, और हर odd term तुरंत zero है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "Properties of Definite Integrals: The Symmetry Toolkit",
+      "title": "The king trick and the periodic property",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3: king peels off the x"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Evaluate $I=\\int_0^{\\pi} x\\sin^3 x\\,dx$. Apply king with $x\\to\\pi-x$; since $\\sin(\\pi-x)=\\sin x$, only the $x$ changes."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "I = \\int_0^{\\pi}(\\pi-x)\\sin^3 x\\,dx = \\pi\\int_0^{\\pi}\\sin^3 x\\,dx - I"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "So $2I = \\pi\\int_0^{\\pi}\\sin^3 x\\,dx$, and $\\int_0^{\\pi}\\sin^3 x\\,dx = 2\\int_0^{\\pi/2}\\sin^3 x\\,dx = 2\\cdot\\tfrac{2}{3} = \\tfrac{4}{3}$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "2I = \\pi\\cdot\\frac{4}{3} \\;\\Rightarrow\\; I = \\frac{2\\pi}{3}"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Example 4: the periodic property"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Evaluate $\\int_0^{10\\pi}|\\sin x|\\,dx$. Since $|\\sin x|$ has period $\\pi$, there are $10$ full periods."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\int_0^{10\\pi}|\\sin x|\\,dx = 10\\int_0^{\\pi}|\\sin x|\\,dx = 10\\int_0^{\\pi}\\sin x\\,dx"
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "latex": "= 10[-\\cos x]_0^{\\pi} = 10(1+1) = 20"
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "Use the modulus period $\\pi$; pairing period $2\\pi$ with a dropped modulus wrongly gives $0$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the king property, used to peel an awkward x off a trig function."
+            },
+            {
+              "seq": 2,
+              "text": "We want capital I, the integral from zero to pi of x times sine cubed x. Apply king: replace x with pi minus x. Since sine of pi minus x is just sine x, the sine cubed is untouched, only the lone x becomes pi minus x."
+            },
+            {
+              "seq": 3,
+              "text": "So I equals the integral of pi minus x, times sine cubed x. Expanding, that's pi times the integral of sine cubed, minus I itself."
+            },
+            {
+              "seq": 4,
+              "text": "Move the I over: two I equals pi times the integral of sine cubed x from zero to pi. And sine cubed is symmetric about pi over two, so that integral is twice the integral from zero to pi over two, which is two times two-thirds, giving four-thirds."
+            },
+            {
+              "seq": 5,
+              "text": "So two I equals pi times four-thirds, and I is two pi over three. The king folded the awkward x into a constant pi and the integral solved itself."
+            },
+            {
+              "seq": 6,
+              "text": "<curious>Now the periodic property, and a modulus trap to avoid."
+            },
+            {
+              "seq": 7,
+              "text": "We want the integral from zero to ten pi of the absolute value of sine x. The key is the period: the modulus folds the negative humps up, so the absolute value of sine x has period pi. That means ten full periods on this interval."
+            },
+            {
+              "seq": 8,
+              "text": "So it's ten times the integral from zero to pi of the absolute value of sine x, and on zero to pi, sine is non-negative, so that's just ten times the integral of sine x."
+            },
+            {
+              "seq": 9,
+              "text": "The integral of sine x from zero to pi is minus cosine, evaluated, giving one plus one, which is two. So the whole thing is ten times two, which is twenty."
+            },
+            {
+              "seq": 10,
+              "text": "The trap: use the modulus period pi. Students who write period two pi and then forget the modulus let the second hump cancel the first, and wrongly get zero."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब king property, एक अटपटे x को trig function से छीलने के लिए।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें चाहिए capital I, zero से pi तक x times sine cube x का integral। King लगाओ: x को pi minus x से बदलो। चूँकि sine of pi minus x बस sine x है, sine cube अछूता रहता है, सिर्फ़ अकेला x बनता है pi minus x।"
+            },
+            {
+              "seq": 3,
+              "text": "तो I बराबर pi minus x, times sine cube x का integral। Expand करने पर, यह है pi times integral of sine cube, minus खुद I।"
+            },
+            {
+              "seq": 4,
+              "text": "I को दूसरी तरफ़ ले जाओ: two I बराबर pi times zero से pi तक sine cube x का integral। और sine cube, pi over two के बारे में symmetric है, तो वो integral है zero से pi over two तक का दुगुना, यानी two times two-thirds, तो four-thirds।"
+            },
+            {
+              "seq": 5,
+              "text": "तो two I बराबर pi times four-thirds, और I है two pi over three। King ने अटपटे x को एक constant pi में मोड़ दिया और integral खुद हल हो गया।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious>अब periodic property, और एक modulus trap जिससे बचना है।"
+            },
+            {
+              "seq": 7,
+              "text": "हमें चाहिए zero से ten pi तक absolute value of sine x का integral। कुंजी है period: modulus negative humps को ऊपर मोड़ देता है, तो absolute value of sine x का period pi है। मतलब इस interval पर दस पूरे periods।"
+            },
+            {
+              "seq": 8,
+              "text": "तो यह है ten times zero से pi तक absolute value of sine x का integral, और zero से pi पर sine non-negative है, तो यह बस ten times sine x का integral।"
+            },
+            {
+              "seq": 9,
+              "text": "Zero से pi तक sine x का integral है minus cosine, evaluate करने पर, one plus one, यानी two। तो पूरी चीज़ है ten times two, यानी twenty।"
+            },
+            {
+              "seq": 10,
+              "text": "Trap: modulus period pi इस्तेमाल करो। जो students period two pi लिखते हैं और फिर modulus भूल जाते हैं, वे दूसरे hump को पहले से cancel करा देते हैं, और गलती से zero पाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "tips",
+      "subtopic": "Properties of Definite Integrals: The Symmetry Toolkit",
+      "title": "Property pitfalls and the recognition reflex",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Property traps and the recognition reflex"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Even/odd needs limits $[-a,a]$. On $[0,2]$ or $[1,3]$, parity tells you nothing."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "King replaces $x$ by $a+b-x$ — not simply $a-x$ unless the lower limit is $0$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "A modulus or greatest-integer must be split where the inside changes sign — never integrated as one formula."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "style": "red-margin",
+          "text": "For $|\\sin x|,|\\cos x|$ the period is $\\pi$. Pairing period $2\\pi$ with a dropped modulus gives a wrong $0$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "After the king 'add' trick, $2I=$ (easy) — divide by two. Skipping this doubles the answer."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\text{symmetric}\\to\\text{parity};\\ \\ 0\\to a\\ \\text{trig}\\to\\text{king};\\ \\ \\text{modulus}\\to\\text{split};\\ \\ \\text{periods}\\to\\text{collapse}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Read the limits first, integrand second — most 'hard' property problems are pattern recognition."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The properties are powerful, but they punish a few specific slips. Let's name them."
+            },
+            {
+              "seq": 2,
+              "text": "First: even-odd cancellation needs symmetric limits, minus a to a. On zero to two, or one to three, parity tells you nothing, a very common reflex error."
+            },
+            {
+              "seq": 3,
+              "text": "Second: king replaces x by the sum of the limits minus x, that's a plus b minus x. It's only a minus x when the lower limit happens to be zero. Using the wrong replacement silently wrecks the cancellation."
+            },
+            {
+              "seq": 4,
+              "text": "Third: a modulus or greatest-integer must be split at the points where the inside changes sign. Integrating it as a single formula is wrong."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth: for the absolute value of sine or cosine, the period is pi, not two pi. Pairing period two pi with a dropped modulus is the classic double-error that returns zero."
+            },
+            {
+              "seq": 6,
+              "text": "Fifth: after the king add-trick gives you two I equals something easy, divide by two. Skipping that step doubles every king answer."
+            },
+            {
+              "seq": 7,
+              "text": "The board captures the whole decision tree: symmetric means parity, zero to a with trig means king, modulus means split, whole periods means collapse."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>The master habit: read the limits first, the integrand second. Ninety percent of hard property problems are pattern recognition, the algebra is the easy part."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Properties powerful हैं, पर कुछ खास slips को सज़ा देती हैं। चलो इन्हें नाम दें।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला: even-odd cancellation को symmetric limits चाहिए, minus a to a। Zero to two, या one to three पर, parity कुछ नहीं बताती, एक बहुत common reflex error।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा: king x को limits के sum minus x से बदलता है, यानी a plus b minus x। यह सिर्फ़ a minus x तब है जब lower limit zero हो। गलत replacement चुपचाप cancellation बिगाड़ देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा: एक modulus या greatest-integer को उन points पर split करना ज़रूरी है जहाँ अंदर sign बदलता है। इसे एक single formula की तरह integrate करना गलत है।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा: absolute value of sine या cosine के लिए, period pi है, two pi नहीं। Period two pi को dropped modulus के साथ pair करना वो classic double-error है जो zero देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "पाँचवाँ: king add-trick के बाद जब two I बराबर कुछ easy मिले, two से भाग दो। यह step छोड़ना हर king answer को दुगुना कर देता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Board पूरा decision tree पकड़ता है: symmetric मतलब parity, zero to a trig के साथ मतलब king, modulus मतलब split, whole periods मतलब collapse।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Master आदत: पहले limits पढ़ो, integrand बाद में। नब्बे प्रतिशत hard property problems pattern recognition हैं, algebra आसान हिस्सा है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Close: Integrals",
+      "title": "Your complete integration toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Your complete integration toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\int x^n\\,dx = \\frac{x^{n+1}}{n+1}+C\\ (n\\neq -1) \\qquad \\int \\frac{1}{x}\\,dx = \\ln|x|+C"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\int e^x dx = e^x+C \\quad \\int \\sin x\\,dx = -\\cos x+C \\quad \\int \\cos x\\,dx = \\sin x+C"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\int \\tan x\\,dx = \\ln|\\sec x|+C \\quad \\int \\sec x\\,dx = \\ln|\\sec x+\\tan x|+C"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\int \\frac{f'(x)}{f(x)}\\,dx = \\ln|f(x)|+C \\qquad \\int [f]^n f'\\,dx = \\frac{[f]^{n+1}}{n+1}+C"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\int \\frac{dx}{x^2+a^2} = \\frac{1}{a}\\tan^{-1}\\frac{x}{a} \\qquad \\int \\frac{dx}{\\sqrt{a^2-x^2}} = \\sin^{-1}\\frac{x}{a}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "latex": "\\int \\frac{dx}{x^2-a^2} = \\frac{1}{2a}\\ln\\left|\\frac{x-a}{x+a}\\right| \\qquad \\int \\frac{dx}{\\sqrt{x^2\\pm a^2}} = \\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\int u\\,dv = uv-\\int v\\,du \\qquad \\int e^x[f+f']\\,dx = e^x f + C"
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "latex": "\\int_a^b f = F(b)-F(a) \\qquad \\int_{-a}^{a} f = 2\\int_0^a f\\ (\\text{even}),\\ \\ 0\\ (\\text{odd})"
+        },
+        {
+          "seq": 10,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "style": "red-margin",
+          "text": "One toolkit, five methods: standard forms, substitution, special forms, partial fractions, and parts."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's bring the whole chapter together, this is your complete integration toolkit, not a re-teach, just the whole arsenal in one place."
+            },
+            {
+              "seq": 2,
+              "text": "The bedrock standard forms: the power rule, valid except at n equals minus one, and its lone exception, one over x integrating to log mod x."
+            },
+            {
+              "seq": 3,
+              "text": "The exponential and the core trig integrals, e to the x to itself, sine to minus cosine, cosine to plus sine."
+            },
+            {
+              "seq": 4,
+              "text": "The substitution-derived trig results: tan x to log mod sec x, and sec x to log mod sec x plus tan x."
+            },
+            {
+              "seq": 5,
+              "text": "The two substitution patterns: f prime over f gives a log, and f to the n times f prime follows the power rule."
+            },
+            {
+              "seq": 6,
+              "text": "The special quadratic forms: x squared plus a squared gives arctan, and root a squared minus x squared gives arcsine."
+            },
+            {
+              "seq": 7,
+              "text": "Their partners: x squared minus a squared gives a log ratio, and the root forms with x squared plus or minus a squared give log of x plus the root."
+            },
+            {
+              "seq": 8,
+              "text": "Integration by parts, and its golden shortcut: e to the x times f plus f prime integrates to e to the x times f."
+            },
+            {
+              "seq": 9,
+              "text": "And for definite integrals: F of b minus F of a, plus the even-odd rule, even doubles, odd vanishes."
+            },
+            {
+              "seq": 10,
+              "text": "That's the whole toolkit: five methods, standard forms, substitution, special forms, partial fractions, and parts, plus the definite-integral machinery on top."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो पूरे chapter को एक साथ लाएँ, यह तुम्हारा complete integration toolkit है, फिर से पढ़ाना नहीं, बस पूरा arsenal एक जगह।"
+            },
+            {
+              "seq": 2,
+              "text": "बुनियादी standard forms: power rule, n equals minus one को छोड़कर valid, और उसका अकेला exception, one over x का log mod x में integrate होना।"
+            },
+            {
+              "seq": 3,
+              "text": "Exponential और core trig integrals, e to the x खुद में, sine को minus cosine, cosine को plus sine।"
+            },
+            {
+              "seq": 4,
+              "text": "Substitution से निकले trig results: tan x को log mod sec x, और sec x को log mod sec x plus tan x।"
+            },
+            {
+              "seq": 5,
+              "text": "दो substitution patterns: f prime over f देता है log, और f to the n times f prime power rule मानता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Special quadratic forms: x square plus a square देता है arctan, और root a square minus x square देता है arcsine।"
+            },
+            {
+              "seq": 7,
+              "text": "इनके partners: x square minus a square देता है log ratio, और x square plus या minus a square वाले root forms देते हैं log of x plus the root।"
+            },
+            {
+              "seq": 8,
+              "text": "Integration by parts, और उसका golden shortcut: e to the x times f plus f prime, e to the x times f में integrate होता है।"
+            },
+            {
+              "seq": 9,
+              "text": "और definite integrals के लिए: F of b minus F of a, plus even-odd rule, even दुगुना, odd गायब।"
+            },
+            {
+              "seq": 10,
+              "text": "यही पूरा toolkit है: पाँच methods, standard forms, substitution, special forms, partial fractions, और parts, plus ऊपर से definite-integral machinery।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Close: Integrals",
+      "title": "Integrals — quick recall",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Integrals — quick recall"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Always add $+C$ for indefinite integrals; a definite integral is a number with no $+C$."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "'Co goes positive': $\\int\\cos = +\\sin$; the plain sine integral carries the minus."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "'One over x is the lonely log': $\\frac{1}{x}$ never obeys the power rule — it integrates to $\\ln|x|$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Substitution reflex: numerator = derivative of denominator $\\Rightarrow$ a log. 'Convert there, convert back.'"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Special forms: 'Plus is arctan, minus is log'; 'arcsin has no $\\tfrac{1}{a}$.'"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Partial fractions: 'Improper? Divide before you decide'; 'repeated factor gives repeated terms.'"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Parts: ILATE picks $u$; '$e^x(f+f')=e^x f$'; king — 'solve for $I$, then halve.'"
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "text": "Definite: 'upper minus lower, no C'; 'odd dies on a mirror'; 'modulus halves the period.'"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Finally, a rapid-fire cheat sheet, the one-liners and memory hooks to carry into the exam hall."
+            },
+            {
+              "seq": 2,
+              "text": "Rule zero: indefinite integrals always take a plus C; a definite integral is a number, with no plus C at all."
+            },
+            {
+              "seq": 3,
+              "text": "For the trig signs, remember co goes positive, cosine integrates to plus sine, and the plain sine integral is the one that carries the minus."
+            },
+            {
+              "seq": 4,
+              "text": "One over x is the lonely log, it never obeys the power rule; it always integrates to log mod x."
+            },
+            {
+              "seq": 5,
+              "text": "The substitution reflex: if the numerator is the derivative of the denominator, the answer is a log. And convert there, convert back, never leave your answer in u."
+            },
+            {
+              "seq": 6,
+              "text": "For special forms: plus is arctan, minus is log, and remember, the arcsine form carries no one-over-a."
+            },
+            {
+              "seq": 7,
+              "text": "For partial fractions: improper? Divide before you decide. And a repeated factor means repeated terms in the template."
+            },
+            {
+              "seq": 8,
+              "text": "For parts: ILATE picks u; e to the x times f plus f-prime collapses to e to the x times f; and after the king trick, solve for I, then halve."
+            },
+            {
+              "seq": 9,
+              "text": "For definite integrals: upper minus lower, no C; odd dies on a mirror; and the modulus halves the period. Carry these in, and integration becomes recognition."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "आखिर में, एक rapid-fire cheat sheet, exam hall में ले जाने वाले one-liners और memory hooks।"
+            },
+            {
+              "seq": 2,
+              "text": "Rule zero: indefinite integrals हमेशा plus C लेते हैं; definite integral एक number है, बिलकुल कोई plus C नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "Trig signs के लिए याद रखो co goes positive, cosine integrate होकर plus sine, और plain sine integral वो है जो minus रखता है।"
+            },
+            {
+              "seq": 4,
+              "text": "One over x is the lonely log, यह कभी power rule नहीं मानता; हमेशा log mod x में integrate होता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Substitution reflex: अगर numerator denominator का derivative है, answer एक log है। और convert there, convert back, answer कभी u में मत छोड़ो।"
+            },
+            {
+              "seq": 6,
+              "text": "Special forms के लिए: plus is arctan, minus is log, और याद रखो, arcsine form में कोई one-over-a नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "Partial fractions के लिए: improper? Divide before you decide। और repeated factor मतलब template में repeated terms।"
+            },
+            {
+              "seq": 8,
+              "text": "Parts के लिए: ILATE u चुनता है; e to the x times f plus f-prime सिमटकर e to the x times f; और king trick के बाद, solve for I, फिर halve करो।"
+            },
+            {
+              "seq": 9,
+              "text": "Definite integrals के लिए: upper minus lower, no C; odd dies on a mirror; और modulus period को आधा करता है। इन्हें साथ ले जाओ, और integration recognition बन जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

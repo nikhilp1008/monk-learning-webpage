@@ -1,0 +1,4006 @@
+{
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 4,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish",
+    "hindi"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "The Argand plane: distance and direction",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Complex numbers as points and arrows"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$z=x+iy$ is the point $(x,y)$, or the arrow from the origin to it."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The horizontal axis is real, the vertical axis is imaginary."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "caption": "Modulus is the length; argument is the angle",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 300' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='240' x2='410' y2='240' stroke='#555' stroke-width='1.5'/><line x1='80' y1='30' x2='80' y2='280' stroke='#555' stroke-width='1.5'/><text x='398' y='258' font-size='13' fill='#555'>Re</text><text x='88' y='42' font-size='13' fill='#555'>Im</text><line x1='80' y1='240' x2='320' y2='90' stroke='#1f6feb' stroke-width='2.5'/><circle cx='320' cy='90' r='4' fill='#1f6feb'/><text x='328' y='88' font-size='13' fill='#1f6feb'>P(x, y)</text><line x1='320' y1='90' x2='320' y2='240' stroke='#999' stroke-width='1' stroke-dasharray='4 3'/><line x1='80' y1='240' x2='320' y2='240' stroke='#2ea043' stroke-width='2'/><text x='180' y='258' font-size='12' fill='#2ea043'>x = r cos(theta)</text><text x='326' y='170' font-size='12' fill='#999'>y = r sin(theta)</text><text x='150' y='150' font-size='13' fill='#1f6feb'>|z| = r</text><path d='M 130 240 A 50 50 0 0 0 111 205' fill='none' stroke='#d29922' stroke-width='1.5'/><text x='120' y='228' font-size='12' fill='#d29922'>theta</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "text": "Modulus $|z|=r$ is how far (distance); argument $\\arg z=\\theta$ is which way (bearing)."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "latex": "x=r\\cos\\theta,\\qquad y=r\\sin\\theta"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "text": "Same point, two descriptions: Cartesian '$x$ east, $y$ north' or polar '$r$ at angle $\\theta$'."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 69,
+          "style": "red-margin",
+          "text": "Multiplying by $i$ ($r=1$, $\\theta=90^{\\circ}$) is a pure quarter-turn."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>So far complex numbers were algebra. Now let's see them.</curious> On the Argand plane they become points and arrows."
+            },
+            {
+              "seq": 2,
+              "text": "z equals x plus i y is simply the point with coordinates x comma y, or equivalently the arrow from the origin out to that point."
+            },
+            {
+              "seq": 3,
+              "text": "The horizontal axis carries the real part, and the vertical axis carries the imaginary part. That's the whole picture."
+            },
+            {
+              "seq": 4,
+              "text": "Think of flying a kite from a rooftop. Two numbers fix the kite: the length of string, and the angle the string makes with the horizon."
+            },
+            {
+              "seq": 5,
+              "text": "Those two numbers are exactly the modulus and the argument. The modulus r tells you how far the point is; the argument theta tells you which direction, like a compass bearing."
+            },
+            {
+              "seq": 6,
+              "text": "The two pictures connect through simple trigonometry: x equals r cosine theta, and y equals r sine theta."
+            },
+            {
+              "seq": 7,
+              "text": "So it's one point with two descriptions. Cartesian says go x east and y north. Polar says go distance r at angle theta. An auto-rickshaw direction and a straight-line bearing for the same destination."
+            },
+            {
+              "seq": 8,
+              "text": "And here's the payoff coming: multiplying by i, which has modulus one and angle ninety degrees, is a pure quarter-turn, exactly the rotation picture from the first subtopic, now made precise."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Ab tak complex numbers algebra the. Ab inhe dekhte hain.</curious> Argand plane par ye points aur arrows ban jaate hain."
+            },
+            {
+              "seq": 2,
+              "text": "z equals x plus i y bas wo point hai jiske coordinates hain x comma y, ya equivalently origin se us point tak jaata arrow."
+            },
+            {
+              "seq": 3,
+              "text": "Horizontal axis real part rakhti hai, aur vertical axis imaginary part. Bas yehi poori picture hai."
+            },
+            {
+              "seq": 4,
+              "text": "Socho chhat se patang uda rahe ho. Do numbers patang ko fix karte hain: dhaage ki length, aur dhaaga horizon se jo angle banata hai."
+            },
+            {
+              "seq": 5,
+              "text": "Wo do numbers bilkul modulus aur argument hain. Modulus r batata hai point kitna door hai; argument theta batata hai kaunsi direction, jaise compass bearing."
+            },
+            {
+              "seq": 6,
+              "text": "Dono pictures simple trigonometry se judti hain: x equals r cosine theta, aur y equals r sine theta."
+            },
+            {
+              "seq": 7,
+              "text": "To ek hi point, do descriptions. Cartesian kehta hai x east aur y north jao. Polar kehta hai distance r, angle theta par jao. Ek hi destination ke liye do raaste bataana."
+            },
+            {
+              "seq": 8,
+              "text": "Aur ye raha aane wala payoff: i se multiply karna, jiska modulus one aur angle ninety degrees hai, ek pure quarter-turn hai, bilkul pehle subtopic wali rotation picture, ab precise."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>अब तक complex numbers algebra थे। अब इन्हें देखते हैं।</curious> Argand plane पर ये points और arrows बन जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "z बराबर x plus i y बस वो point है जिसके coordinates हैं x comma y, या origin से उस point तक जाता arrow।"
+            },
+            {
+              "seq": 3,
+              "text": "Horizontal axis real part रखती है, और vertical axis imaginary part। बस यही पूरी picture है।"
+            },
+            {
+              "seq": 4,
+              "text": "सोचो छत से पतंग उड़ा रहे हो। दो numbers पतंग को fix करते हैं: धागे की length, और धागा horizon से जो angle बनाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "वो दो numbers बिलकुल modulus और argument हैं। Modulus r बताता है point कितना दूर है; argument theta बताता है कौनसी direction, जैसे compass bearing।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों pictures simple trigonometry से जुड़ती हैं: x बराबर r cosine theta, और y बराबर r sine theta।"
+            },
+            {
+              "seq": 7,
+              "text": "तो एक ही point, दो descriptions। Cartesian कहता है x east और y north जाओ। Polar कहता है distance r, angle theta पर जाओ। एक ही destination के लिए दो रास्ते।"
+            },
+            {
+              "seq": 8,
+              "text": "और ये रहा आने वाला payoff: i से multiply करना, जिसका modulus one और angle ninety degrees है, एक pure quarter-turn है, बिलकुल पहले subtopic वाली rotation picture, अब precise।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "The argument, and its principal value",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Argument: the angle, made unique"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "\\tan\\theta=\\frac{y}{x}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The argument is many-valued: if $\\theta$ works, so does $\\theta+2n\\pi$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "The principal value $\\arg z$ is the unique angle with $-\\pi<\\theta\\le\\pi$."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "style": "red-margin",
+          "text": "$\\arg(0)$ is undefined — the origin has no direction."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "A calculator's $\\tan^{-1}(y/x)$ lives only in $(-\\tfrac{\\pi}{2},\\tfrac{\\pi}{2})$ — you must correct by quadrant."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "A value outside $(-\\pi,\\pi]$ is not the principal argument."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "Reduce any stray angle by adding or subtracting $2\\pi$ until it lands in range."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The modulus was easy — just a distance. The argument, the angle, is where care is needed, because an angle is not unique."
+            },
+            {
+              "seq": 2,
+              "text": "The basic relation is tangent of theta equals y over x, coming straight from the right triangle on the plane."
+            },
+            {
+              "seq": 3,
+              "text": "But the argument is many-valued: if theta names the direction, so does theta plus any whole number of full turns. Two arguments always differ by a multiple of two pi."
+            },
+            {
+              "seq": 4,
+              "text": "To make it single-valued we pick the principal value, written arg z, defined as the unique angle strictly greater than minus pi and up to and including pi."
+            },
+            {
+              "seq": 5,
+              "text": "One important exception: the argument of zero is undefined. The origin has a modulus of zero but simply no direction to point in."
+            },
+            {
+              "seq": 6,
+              "text": "Now the practical trap. When you type inverse tangent of y over x, the calculator only ever returns an angle between minus pi over two and pi over two. That covers only two quadrants, so you must correct by hand for the actual quadrant."
+            },
+            {
+              "seq": 7,
+              "text": "And remember the range rule: any answer outside the interval minus pi to pi is not the principal argument, even if it's a correct direction."
+            },
+            {
+              "seq": 8,
+              "text": "If you land outside, just add or subtract two pi until the angle falls into that principal range. Same direction, correct representative."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Modulus aasan tha — bas ek distance. Argument, yaani angle, wahan care chahiye, kyunki angle unique nahi hota."
+            },
+            {
+              "seq": 2,
+              "text": "Basic relation hai tangent of theta equals y over x, jo plane ke right triangle se seedha aata hai."
+            },
+            {
+              "seq": 3,
+              "text": "Par argument many-valued hai: agar theta direction batata hai, to theta plus koi bhi poora number of full turns bhi. Do arguments hamesha two pi ke multiple se differ karte hain."
+            },
+            {
+              "seq": 4,
+              "text": "Ise single-valued banane ke liye hum principal value chunte hain, likha arg z, defined as wo unique angle jo minus pi se strictly bada aur pi tak, pi included, ho."
+            },
+            {
+              "seq": 5,
+              "text": "Ek important exception: zero ka argument undefined hai. Origin ka modulus zero hai par point karne ke liye koi direction hi nahi."
+            },
+            {
+              "seq": 6,
+              "text": "Ab practical trap. Jab aap inverse tangent of y over x type karte ho, calculator sirf minus pi over two aur pi over two ke beech ka angle deta hai. Ye sirf do quadrants cover karta hai, to aapko actual quadrant ke liye khud correct karna padta hai."
+            },
+            {
+              "seq": 7,
+              "text": "Aur range rule yaad rakho: minus pi se pi ke interval ke bahar ka koi bhi answer principal argument nahi hai, chahe direction sahi ho."
+            },
+            {
+              "seq": 8,
+              "text": "Agar bahar land karo, bas two pi add ya subtract karo jab tak angle us principal range mein na aa jaaye. Same direction, sahi representative."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Modulus आसान था — बस एक distance। Argument, यानी angle, वहां care चाहिए, क्योंकि angle unique नहीं होता।"
+            },
+            {
+              "seq": 2,
+              "text": "Basic relation है tangent of theta बराबर y over x, जो plane के right triangle से सीधा आता है।"
+            },
+            {
+              "seq": 3,
+              "text": "पर argument many-valued है: अगर theta direction बताता है, तो theta plus कोई भी पूरा number of full turns भी। दो arguments हमेशा two pi के multiple से differ करते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे single-valued बनाने के लिए हम principal value चुनते हैं, लिखा arg z, वो unique angle जो minus pi से strictly बड़ा और pi तक, pi included, हो।"
+            },
+            {
+              "seq": 5,
+              "text": "एक important exception: zero का argument undefined है। Origin का modulus zero है पर point करने के लिए कोई direction ही नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "अब practical trap। जब आप inverse tangent of y over x type करते हो, calculator सिर्फ minus pi over two और pi over two के बीच का angle देता है। ये सिर्फ दो quadrants cover करता है, तो आपको actual quadrant के लिए खुद correct करना पड़ता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और range rule याद रखो: minus pi से pi के interval के बाहर का कोई भी answer principal argument नहीं है, चाहे direction सही हो।"
+            },
+            {
+              "seq": 8,
+              "text": "अगर बाहर land करो, बस two pi add या subtract करो जब तक angle उस principal range में न आ जाए। Same direction, सही representative।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "Finding the principal argument by quadrant",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Fix the quadrant, then the angle"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Let $\\alpha=\\tan^{-1}\\left|\\dfrac{y}{x}\\right|$ be the acute reference angle."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "caption": "Reference angle -> principal argument, by quadrant",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 300' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='150' x2='410' y2='150' stroke='#555' stroke-width='1.5'/><line x1='220' y1='20' x2='220' y2='280' stroke='#555' stroke-width='1.5'/><text x='398' y='168' font-size='12' fill='#555'>Re</text><text x='228' y='32' font-size='12' fill='#555'>Im</text><text x='300' y='90' font-size='14' fill='#1f6feb'>I: alpha</text><text x='90' y='90' font-size='14' fill='#2ea043'>II: pi - alpha</text><text x='90' y='215' font-size='14' fill='#d29922'>III: alpha - pi</text><text x='300' y='215' font-size='14' fill='#8957e5'>IV: -alpha</text><text x='120' y='265' font-size='11' fill='#777'>alpha = arctan |y/x| (acute)</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "latex": "\\text{I}:\\alpha \\quad \\text{II}:\\pi-\\alpha \\quad \\text{III}:\\alpha-\\pi \\quad \\text{IV}:-\\alpha"
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Signature trap: returning $\\tan^{-1}(y/x)$ without fixing the quadrant."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Axis cases: $\\arg z=0$ if real $>0$; $\\pi$ if real $<0$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "Purely imaginary: $\\arg z=\\tfrac{\\pi}{2}$ if $y>0$, and $-\\tfrac{\\pi}{2}$ if $y<0$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "text": "Habit: sketch the point first — the quadrant, and the angle, become obvious."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the single most important skill of the subtopic, and the cleanest test of real understanding: getting the principal argument right by quadrant."
+            },
+            {
+              "seq": 2,
+              "text": "Start with the reference angle alpha. It's the acute angle whose tangent is the size of y over x, always taken positive, so alpha is always between zero and ninety degrees."
+            },
+            {
+              "seq": 3,
+              "text": "Now place that reference angle into the correct quadrant of the plane. The quadrant decides how alpha becomes the actual argument."
+            },
+            {
+              "seq": 4,
+              "text": "In quadrant one the argument is just alpha. In quadrant two it's pi minus alpha. In quadrant three it's alpha minus pi. In quadrant four it's minus alpha. Learn this table cold."
+            },
+            {
+              "seq": 5,
+              "text": "The signature trap of the whole chapter is right here: blindly reporting inverse tangent of y over x without fixing the quadrant. That's how marks vanish."
+            },
+            {
+              "seq": 6,
+              "text": "Handle the axis cases separately. If z is a positive real, the argument is zero. If z is a negative real, the argument is pi."
+            },
+            {
+              "seq": 7,
+              "text": "If z is purely imaginary, the argument is pi over two when y is positive, and minus pi over two when y is negative."
+            },
+            {
+              "seq": 8,
+              "text": "The habit that saves you every time: sketch the point first. Once you see which quadrant it's in, the sign and the formula for the argument almost write themselves."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye subtopic ki sabse important skill hai, aur real understanding ka sabse clean test: principal argument ko quadrant se sahi nikaalna."
+            },
+            {
+              "seq": 2,
+              "text": "Reference angle alpha se shuru karo. Ye wo acute angle hai jiska tangent y over x ka size hai, hamesha positive liya, to alpha hamesha zero aur ninety degrees ke beech."
+            },
+            {
+              "seq": 3,
+              "text": "Ab us reference angle ko plane ke sahi quadrant mein rakho. Quadrant decide karta hai ki alpha kaise actual argument banta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Quadrant one mein argument bas alpha hai. Quadrant two mein pi minus alpha. Quadrant three mein alpha minus pi. Quadrant four mein minus alpha. Is table ko pakka yaad karo."
+            },
+            {
+              "seq": 5,
+              "text": "Poore chapter ka signature trap yahin hai: bina quadrant fix kiye inverse tangent of y over x report kar dena. Isi tarah marks gayab hote hain."
+            },
+            {
+              "seq": 6,
+              "text": "Axis cases alag handle karo. Agar z positive real hai, argument zero hai. Agar z negative real hai, argument pi hai."
+            },
+            {
+              "seq": 7,
+              "text": "Agar z purely imaginary hai, argument pi over two hai jab y positive ho, aur minus pi over two jab y negative ho."
+            },
+            {
+              "seq": 8,
+              "text": "Wo aadat jo har baar bachati hai: pehle point sketch karo. Jaise hi dikhe kis quadrant mein hai, argument ka sign aur formula khud likh jaate hain."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये subtopic की सबसे important skill है, और real understanding का सबसे clean test: principal argument को quadrant से सही निकालना।"
+            },
+            {
+              "seq": 2,
+              "text": "Reference angle alpha से शुरू करो। ये वो acute angle है जिसका tangent y over x का size है, हमेशा positive लिया, तो alpha हमेशा zero और ninety degrees के बीच।"
+            },
+            {
+              "seq": 3,
+              "text": "अब उस reference angle को plane के सही quadrant में रखो। Quadrant decide करता है कि alpha कैसे actual argument बनता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Quadrant one में argument बस alpha है। Quadrant two में pi minus alpha। Quadrant three में alpha minus pi। Quadrant four में minus alpha। इस table को पक्का याद करो।"
+            },
+            {
+              "seq": 5,
+              "text": "पूरे chapter का signature trap यहीं है: बिना quadrant fix किए inverse tangent of y over x report कर देना। इसी तरह marks गायब होते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Axis cases अलग handle करो। अगर z positive real है, argument zero। अगर z negative real है, argument pi।"
+            },
+            {
+              "seq": 7,
+              "text": "अगर z purely imaginary है, argument pi over two है जब y positive हो, और minus pi over two जब y negative हो।"
+            },
+            {
+              "seq": 8,
+              "text": "वो आदत जो हर बार बचाती है: पहले point sketch करो। जैसे ही दिखे किस quadrant में है, argument का sign और formula खुद लिख जाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "Polar (trigonometric) form",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Writing z as r(cos + i sin)"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "z=r(\\cos\\theta+i\\sin\\theta)=r\\,\\mathrm{cis}\\,\\theta"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "With $r=|z|$ and $\\theta=\\arg z$; and $x=r\\cos\\theta$, $y=r\\sin\\theta$ to go back."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "Standard polar uses a $+$ between cosine and sine."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "$r(\\cos\\theta-i\\sin\\theta)$ is NOT standard — rewrite as $r(\\cos(-\\theta)+i\\sin(-\\theta))$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Method: (1) find $r$, (2) find $\\alpha=\\tan^{-1}|y/x|$, (3) place $\\theta$ by quadrant, (4) write it out."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\bar z=r\\big(\\cos(-\\theta)+i\\sin(-\\theta)\\big)=r\\angle(-\\theta)"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "The conjugate keeps the same modulus and negates the argument."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "With modulus and argument in hand, we can write any nonzero complex number in polar form, the launchpad for rotation and powers."
+            },
+            {
+              "seq": 2,
+              "text": "Polar form is z equals r times, in brackets, cosine theta plus i sine theta. This is sometimes abbreviated r cis theta."
+            },
+            {
+              "seq": 3,
+              "text": "Here r is the modulus and theta is the argument. And to convert back to Cartesian, just use x equals r cosine theta and y equals r sine theta."
+            },
+            {
+              "seq": 4,
+              "text": "A formatting rule that examiners love to test: standard polar form uses a plus sign between the cosine and the sine terms."
+            },
+            {
+              "seq": 5,
+              "text": "So r times cosine theta minus i sine theta is not standard polar form. If you meet it, rewrite it using cosine of minus theta plus i sine of minus theta, which restores the plus."
+            },
+            {
+              "seq": 6,
+              "text": "The conversion method is four clean steps. One, compute r. Two, compute the reference angle alpha. Three, place theta in the correct quadrant. Four, write out r times cosine theta plus i sine theta. Step three is where most marks are lost."
+            },
+            {
+              "seq": 7,
+              "text": "The conjugate in polar form is elegant: it keeps the same modulus r but flips the sign of the angle, giving r at angle minus theta."
+            },
+            {
+              "seq": 8,
+              "text": "That matches the reflection picture from before: reflecting across the real axis leaves the distance unchanged and simply negates the direction."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Modulus aur argument haath mein hone se, hum kisi bhi nonzero complex number ko polar form mein likh sakte hain, jo rotation aur powers ka launchpad hai."
+            },
+            {
+              "seq": 2,
+              "text": "Polar form hai z equals r times, brackets mein, cosine theta plus i sine theta. Ise kabhi kabhi r cis theta likha jaata hai."
+            },
+            {
+              "seq": 3,
+              "text": "Yahan r modulus hai aur theta argument. Aur Cartesian mein wapas jaane ke liye bas x equals r cosine theta aur y equals r sine theta use karo."
+            },
+            {
+              "seq": 4,
+              "text": "Ek formatting rule jise examiners test karna pasand karte hain: standard polar form cosine aur sine terms ke beech plus sign use karta hai."
+            },
+            {
+              "seq": 5,
+              "text": "To r times cosine theta minus i sine theta standard polar form nahi hai. Agar mile, to ise cosine of minus theta plus i sine of minus theta se rewrite karo, jo plus wapas laata hai."
+            },
+            {
+              "seq": 6,
+              "text": "Conversion method chaar clean steps hai. Ek, r nikaalo. Do, reference angle alpha nikaalo. Teen, theta ko sahi quadrant mein rakho. Chaar, r times cosine theta plus i sine theta likho. Step teen mein sabse zyada marks jaate hain."
+            },
+            {
+              "seq": 7,
+              "text": "Polar form mein conjugate elegant hai: ye same modulus r rakhta hai par angle ka sign flip karta hai, deta hai r at angle minus theta."
+            },
+            {
+              "seq": 8,
+              "text": "Ye pehle wali reflection picture se match karta hai: real axis par reflect karne se distance same rehti hai aur bas direction negate ho jaati hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Modulus और argument हाथ में होने से, हम किसी भी nonzero complex number को polar form में लिख सकते हैं, जो rotation और powers का launchpad है।"
+            },
+            {
+              "seq": 2,
+              "text": "Polar form है z बराबर r times, brackets में, cosine theta plus i sine theta। इसे कभी कभी r cis theta लिखा जाता है।"
+            },
+            {
+              "seq": 3,
+              "text": "यहां r modulus है और theta argument। और Cartesian में वापस जाने के लिए बस x बराबर r cosine theta और y बराबर r sine theta use करो।"
+            },
+            {
+              "seq": 4,
+              "text": "एक formatting rule जिसे examiners test करना पसंद करते हैं: standard polar form cosine और sine terms के बीच plus sign use करता है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो r times cosine theta minus i sine theta standard polar form नहीं है। अगर मिले, तो इसे cosine of minus theta plus i sine of minus theta से rewrite करो, जो plus वापस लाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Conversion method चार clean steps है। एक, r निकालो। दो, reference angle alpha निकालो। तीन, theta को सही quadrant में रखो। चार, r times cosine theta plus i sine theta लिखो। Step तीन में सबसे ज़्यादा marks जाते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "Polar form में conjugate elegant है: ये same modulus r रखता है पर angle का sign flip करता है, देता है r at angle minus theta।"
+            },
+            {
+              "seq": 8,
+              "text": "ये पहले वाली reflection picture से match करता है: real axis पर reflect करने से distance same रहती है और बस direction negate हो जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "Multiplication is rotation and scaling",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Multiply: moduli multiply, arguments add"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "z_1 z_2=r_1 r_2\\big(\\cos(\\theta_1+\\theta_2)+i\\sin(\\theta_1+\\theta_2)\\big)"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Multiplying by a number of modulus $r$ and argument $\\phi$ scales by $r$ and rotates by $\\phi$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "The angle-sum identities for $\\cos$ and $\\sin$ are exactly why the arguments add."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "\\arg(z_1 z_2)=\\arg z_1+\\arg z_2,\\quad \\arg\\!\\left(\\tfrac{z_1}{z_2}\\right)=\\arg z_1-\\arg z_2"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "\\arg(\\bar z)=-\\arg z"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "These hold up to a multiple of $2\\pi$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "Use this instead of expanding: division subtracts arguments and divides moduli."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the idea that powers the entire second half of the chapter: in polar form, multiplication is rotation combined with scaling."
+            },
+            {
+              "seq": 2,
+              "text": "When you multiply two numbers, the moduli multiply and the arguments add. So z one times z two has modulus r one times r two, and argument theta one plus theta two."
+            },
+            {
+              "seq": 3,
+              "text": "Say that as an action: multiplying by a number of modulus r and argument phi scales the picture by r and rotates it by phi. Multiplying by i, modulus one and angle ninety degrees, is a pure quarter-turn, no stretching."
+            },
+            {
+              "seq": 4,
+              "text": "And this isn't magic. Multiply the two polar forms out, and the cosine and sine angle-sum identities appear on their own, delivering cosine of theta one plus theta two and sine of theta one plus theta two."
+            },
+            {
+              "seq": 5,
+              "text": "So the argument obeys clean algebra. The argument of a product is the sum of the arguments, and the argument of a quotient is the difference of the arguments."
+            },
+            {
+              "seq": 6,
+              "text": "And the argument of a conjugate is minus the argument, matching the reflection we saw."
+            },
+            {
+              "seq": 7,
+              "text": "One caution: all these argument equalities hold only up to a whole multiple of two pi, since the argument is many-valued. If an answer strays out of range, reduce it."
+            },
+            {
+              "seq": 8,
+              "text": "The practical upshot: whenever you multiply or divide complex numbers, add or subtract the arguments and multiply or divide the moduli, instead of grinding through the algebra."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye raha wo idea jo poore chapter ke doosre half ko power deta hai: polar form mein, multiplication rotation aur scaling ka combination hai."
+            },
+            {
+              "seq": 2,
+              "text": "Jab aap do numbers multiply karte ho, moduli multiply hote hain aur arguments add hote hain. To z one times z two ka modulus hai r one times r two, aur argument theta one plus theta two."
+            },
+            {
+              "seq": 3,
+              "text": "Ise ek action ki tarah bolo: modulus r aur argument phi wale number se multiply karna picture ko r se scale karta hai aur phi se rotate karta hai. i se multiply, modulus one aur angle ninety degrees, ek pure quarter-turn hai, bina khinchaav."
+            },
+            {
+              "seq": 4,
+              "text": "Aur ye magic nahi hai. Dono polar forms ko multiply karo, to cosine aur sine ki angle-sum identities khud aa jaati hain, deti hain cosine of theta one plus theta two aur sine of theta one plus theta two."
+            },
+            {
+              "seq": 5,
+              "text": "To argument clean algebra follow karta hai. Product ka argument hai arguments ka sum, aur quotient ka argument hai arguments ka difference."
+            },
+            {
+              "seq": 6,
+              "text": "Aur conjugate ka argument hai minus argument, jo dekhi hui reflection se match karta hai."
+            },
+            {
+              "seq": 7,
+              "text": "Ek caution: ye saari argument equalities sirf two pi ke poore multiple tak hoti hain, kyunki argument many-valued hai. Agar answer range se bahar jaaye, reduce karo."
+            },
+            {
+              "seq": 8,
+              "text": "Practical upshot: jab bhi complex numbers multiply ya divide karo, arguments add ya subtract karo aur moduli multiply ya divide karo, algebra grind karne ke bajaay."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा वो idea जो पूरे chapter के दूसरे half को power देता है: polar form में, multiplication rotation और scaling का combination है।"
+            },
+            {
+              "seq": 2,
+              "text": "जब आप दो numbers multiply करते हो, moduli multiply होते हैं और arguments add होते हैं। तो z one times z two का modulus है r one times r two, और argument theta one plus theta two।"
+            },
+            {
+              "seq": 3,
+              "text": "इसे एक action की तरह बोलो: modulus r और argument phi वाले number से multiply करना picture को r से scale करता है और phi से rotate करता है। i से multiply, modulus one और angle ninety degrees, एक pure quarter-turn है, बिना खिंचाव।"
+            },
+            {
+              "seq": 4,
+              "text": "और ये magic नहीं है। दोनों polar forms को multiply करो, तो cosine और sine की angle-sum identities खुद आ जाती हैं, देती हैं cosine of theta one plus theta two और sine of theta one plus theta two।"
+            },
+            {
+              "seq": 5,
+              "text": "तो argument clean algebra follow करता है। Product का argument है arguments का sum, और quotient का argument है arguments का difference।"
+            },
+            {
+              "seq": 6,
+              "text": "और conjugate का argument है minus argument, जो देखी हुई reflection से match करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक caution: ये सारी argument equalities सिर्फ two pi के पूरे multiple तक होती हैं, क्योंकि argument many-valued है। अगर answer range से बाहर जाए, reduce करो।"
+            },
+            {
+              "seq": 8,
+              "text": "Practical upshot: जब भी complex numbers multiply या divide करो, arguments add या subtract करो और moduli multiply या divide करो, algebra grind करने के बजाय।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "concept",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "De Moivre's theorem and cube roots of unity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Powers by angle-multiplication"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "(\\cos\\theta+i\\sin\\theta)^{n}=\\cos n\\theta+i\\sin n\\theta"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "So $z^{n}=r^{n}(\\cos n\\theta+i\\sin n\\theta)$ for integer $n$ — raise the modulus, multiply the angle."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "This makes powers trivial: far faster than the binomial theorem."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "caption": "Cube roots of unity: an equilateral triangle",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 320 300' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='150' x2='300' y2='150' stroke='#555' stroke-width='1.2'/><line x1='150' y1='30' x2='150' y2='270' stroke='#555' stroke-width='1.2'/><circle cx='150' cy='150' r='90' fill='none' stroke='#bbb' stroke-width='1.2'/><polygon points='240,150 105,72 105,228' fill='none' stroke='#8957e5' stroke-width='1.5'/><circle cx='240' cy='150' r='4' fill='#1f6feb'/><text x='248' y='150' font-size='13' fill='#1f6feb'>1</text><circle cx='105' cy='72' r='4' fill='#2ea043'/><text x='78' y='66' font-size='13' fill='#2ea043'>omega</text><circle cx='105' cy='228' r='4' fill='#d29922'/><text x='60' y='240' font-size='13' fill='#d29922'>omega^2</text><text x='60' y='290' font-size='11' fill='#777'>spacing 2pi/3 on unit circle</text></svg>"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "latex": "\\omega=\\cos\\tfrac{2\\pi}{3}+i\\sin\\tfrac{2\\pi}{3}=-\\tfrac{1}{2}+\\tfrac{\\sqrt3}{2}i"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 60,
+          "latex": "\\omega^{3}=1,\\qquad 1+\\omega+\\omega^{2}=0"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "text": "The roots of $z^{3}=1$ sit equally spaced on the unit circle, one vertex at $1$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Once multiplication adds arguments, repeated multiplication is just repeated adding, and that gives De Moivre's theorem."
+            },
+            {
+              "seq": 2,
+              "text": "De Moivre says: cosine theta plus i sine theta, all to the power n, equals cosine n theta plus i sine n theta, for any integer n."
+            },
+            {
+              "seq": 3,
+              "text": "So for a general number, z to the n equals r to the n times cosine n theta plus i sine n theta. You raise the modulus to the power and simply multiply the angle by n."
+            },
+            {
+              "seq": 4,
+              "text": "This turns hard powers into one line. Raising a complex number to the tenth or twentieth power by the binomial theorem is painful; in polar form it's immediate."
+            },
+            {
+              "seq": 5,
+              "text": "A beautiful application is the cube roots of unity: the three solutions of z cubed equals one, which sit as an equilateral triangle on the unit circle."
+            },
+            {
+              "seq": 6,
+              "text": "The non-real one, called omega, is cosine two pi over three plus i sine two pi over three, which equals minus one half plus root three over two, times i."
+            },
+            {
+              "seq": 7,
+              "text": "Two facts you'll use constantly: omega cubed is one, and one plus omega plus omega squared is zero."
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically that zero-sum is obvious: three equally spaced arrows on the unit circle, one hundred twenty degrees apart, cancel out perfectly. One vertex sits at one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Jaise hi multiplication arguments add karta hai, repeated multiplication bas repeated adding hai, aur ye deta hai De Moivre's theorem."
+            },
+            {
+              "seq": 2,
+              "text": "De Moivre kehta hai: cosine theta plus i sine theta, poora to the power n, barabar cosine n theta plus i sine n theta, kisi bhi integer n ke liye."
+            },
+            {
+              "seq": 3,
+              "text": "To general number ke liye, z to the n barabar r to the n times cosine n theta plus i sine n theta. Modulus ko power tak raise karo aur angle ko bas n se multiply karo."
+            },
+            {
+              "seq": 4,
+              "text": "Ye mushkil powers ko ek line bana deta hai. Complex number ko tenth ya twentieth power tak binomial theorem se raise karna painful hai; polar form mein turant."
+            },
+            {
+              "seq": 5,
+              "text": "Ek khoobsurat application hai cube roots of unity: z cubed equals one ke teen solutions, jo unit circle par equilateral triangle ki tarah baithte hain."
+            },
+            {
+              "seq": 6,
+              "text": "Non-real wala, jise omega kehte hain, hai cosine two pi over three plus i sine two pi over three, jo barabar minus one half plus root three over two, times i."
+            },
+            {
+              "seq": 7,
+              "text": "Do facts jo aap lagataar use karoge: omega cubed one hai, aur one plus omega plus omega squared zero hai."
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically ye zero-sum obvious hai: unit circle par teen equally spaced arrows, one hundred twenty degrees apart, perfectly cancel ho jaate hain. Ek vertex one par baithta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "जैसे ही multiplication arguments add करता है, repeated multiplication बस repeated adding है, और ये देता है De Moivre's theorem।"
+            },
+            {
+              "seq": 2,
+              "text": "De Moivre कहता है: cosine theta plus i sine theta, पूरा to the power n, बराबर cosine n theta plus i sine n theta, किसी भी integer n के लिए।"
+            },
+            {
+              "seq": 3,
+              "text": "तो general number के लिए, z to the n बराबर r to the n times cosine n theta plus i sine n theta। Modulus को power तक raise करो और angle को बस n से multiply करो।"
+            },
+            {
+              "seq": 4,
+              "text": "ये मुश्किल powers को एक line बना देता है। Complex number को tenth या twentieth power तक binomial theorem से raise करना painful है; polar form में तुरंत।"
+            },
+            {
+              "seq": 5,
+              "text": "एक खूबसूरत application है cube roots of unity: z cubed equals one के तीन solutions, जो unit circle पर equilateral triangle की तरह बैठते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Non-real वाला, जिसे omega कहते हैं, है cosine two pi over three plus i sine two pi over three, जो बराबर minus one half plus root three over two, times i।"
+            },
+            {
+              "seq": 7,
+              "text": "दो facts जो आप लगातार use करोगे: omega cubed one है, और one plus omega plus omega squared zero है।"
+            },
+            {
+              "seq": 8,
+              "text": "Geometrically ये zero-sum obvious है: unit circle पर तीन equally spaced arrows, one hundred twenty degrees apart, perfectly cancel हो जाते हैं। एक vertex one पर बैठता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "formulas",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "Argument, polar and De Moivre toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Consolidated: polar-form toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "|z|=r=\\sqrt{x^{2}+y^{2}},\\qquad \\arg z=\\theta\\in(-\\pi,\\pi]"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "latex": "\\text{ref }\\alpha=\\tan^{-1}\\left|\\tfrac{y}{x}\\right|:\\ \\text{I}\\!\\to\\!\\alpha,\\ \\text{II}\\!\\to\\!\\pi-\\alpha,\\ \\text{III}\\!\\to\\!\\alpha-\\pi,\\ \\text{IV}\\!\\to\\!-\\alpha"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "latex": "z=r(\\cos\\theta+i\\sin\\theta)=r\\,\\mathrm{cis}\\,\\theta"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "latex": "\\arg(z_1 z_2)=\\arg z_1+\\arg z_2,\\quad \\arg(z_1/z_2)=\\arg z_1-\\arg z_2,\\quad \\arg\\bar z=-\\arg z"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "latex": "z^{n}=r^{n}(\\cos n\\theta+i\\sin n\\theta)\\quad(n\\in\\mathbb{Z})"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "latex": "1,\\ \\omega,\\ \\omega^{2};\\quad \\omega^{3}=1;\\quad 1+\\omega+\\omega^{2}=0"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "Memorize: $1+i=\\sqrt2\\,\\angle\\tfrac{\\pi}{4}$, $1+i\\sqrt3=2\\,\\angle\\tfrac{\\pi}{3}$, $\\sqrt3+i=2\\,\\angle\\tfrac{\\pi}{6}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the polar toolkit on a single board, your quick reference for everything in this subtopic."
+            },
+            {
+              "seq": 2,
+              "text": "The modulus r is root x squared plus y squared, and the principal argument theta lives in the interval minus pi to pi, with pi included."
+            },
+            {
+              "seq": 3,
+              "text": "Find the reference angle as inverse tangent of the size of y over x, then place it: quadrant one gives alpha, quadrant two gives pi minus alpha, quadrant three gives alpha minus pi, quadrant four gives minus alpha."
+            },
+            {
+              "seq": 4,
+              "text": "Polar form itself: z equals r times cosine theta plus i sine theta, also written r cis theta."
+            },
+            {
+              "seq": 5,
+              "text": "The argument algebra: product adds arguments, quotient subtracts them, and conjugation negates the argument."
+            },
+            {
+              "seq": 6,
+              "text": "De Moivre for powers: z to the n equals r to the n times cosine n theta plus i sine n theta, for any integer n."
+            },
+            {
+              "seq": 7,
+              "text": "The cube roots of unity: one, omega, and omega squared, with omega cubed equal to one and their sum equal to zero."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>And three angles worth memorizing outright:</whisper> one plus i is root two at forty five degrees, one plus i root three is two at sixty degrees, and root three plus i is two at thirty degrees. They recur constantly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye raha polar toolkit ek single board par, is subtopic ki har cheez ke liye aapka quick reference."
+            },
+            {
+              "seq": 2,
+              "text": "Modulus r hai root x square plus y square, aur principal argument theta interval minus pi se pi mein rehta hai, pi included."
+            },
+            {
+              "seq": 3,
+              "text": "Reference angle nikaalo inverse tangent of the size of y over x, phir use place karo: quadrant one deta hai alpha, quadrant two deta hai pi minus alpha, quadrant three deta hai alpha minus pi, quadrant four deta hai minus alpha."
+            },
+            {
+              "seq": 4,
+              "text": "Polar form khud: z equals r times cosine theta plus i sine theta, jise r cis theta bhi likha jaata hai."
+            },
+            {
+              "seq": 5,
+              "text": "Argument algebra: product arguments add karta hai, quotient subtract karta hai, aur conjugation argument negate karta hai."
+            },
+            {
+              "seq": 6,
+              "text": "Powers ke liye De Moivre: z to the n barabar r to the n times cosine n theta plus i sine n theta, kisi bhi integer n ke liye."
+            },
+            {
+              "seq": 7,
+              "text": "Cube roots of unity: one, omega, aur omega squared, omega cubed barabar one aur unka sum barabar zero."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Aur teen angles seedhe yaad karne layak:</whisper> one plus i hai root two at forty five degrees, one plus i root three hai two at sixty degrees, aur root three plus i hai two at thirty degrees. Ye lagataar aate hain."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा polar toolkit एक single board पर, इस subtopic की हर चीज़ के लिए आपका quick reference।"
+            },
+            {
+              "seq": 2,
+              "text": "Modulus r है root x square plus y square, और principal argument theta interval minus pi से pi में रहता है, pi included।"
+            },
+            {
+              "seq": 3,
+              "text": "Reference angle निकालो inverse tangent of the size of y over x, फिर उसे place करो: quadrant one देता है alpha, quadrant two देता है pi minus alpha, quadrant three देता है alpha minus pi, quadrant four देता है minus alpha।"
+            },
+            {
+              "seq": 4,
+              "text": "Polar form खुद: z बराबर r times cosine theta plus i sine theta, जिसे r cis theta भी लिखा जाता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Argument algebra: product arguments add करता है, quotient subtract करता है, और conjugation argument negate करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Powers के लिए De Moivre: z to the n बराबर r to the n times cosine n theta plus i sine n theta, किसी भी integer n के लिए।"
+            },
+            {
+              "seq": 7,
+              "text": "Cube roots of unity: one, omega, और omega squared, omega cubed बराबर one और उनका sum बराबर zero।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>और तीन angles सीधे याद करने लायक:</whisper> one plus i है root two at forty five degrees, one plus i root three है two at sixty degrees, और root three plus i है two at thirty degrees। ये लगातार आते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "Worked: polar form in Q1 and Q2",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Modulus, principal argument, polar form"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$z=1+i$: point in quadrant I."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "r=\\sqrt{1^{2}+1^{2}}=\\sqrt2,\\qquad \\alpha=\\tan^{-1}1=\\tfrac{\\pi}{4}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "z=\\sqrt2\\left(\\cos\\tfrac{\\pi}{4}+i\\sin\\tfrac{\\pi}{4}\\right)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "$z=-1+i$: point in quadrant II, so $\\arg z=\\pi-\\alpha$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "r=\\sqrt2,\\quad \\alpha=\\tfrac{\\pi}{4}\\ \\Rightarrow\\ \\arg z=\\pi-\\tfrac{\\pi}{4}=\\tfrac{3\\pi}{4}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "z=\\sqrt2\\left(\\cos\\tfrac{3\\pi}{4}+i\\sin\\tfrac{3\\pi}{4}\\right)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Same $r$, same $\\alpha$ — the quadrant alone changes the argument."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's convert two numbers to polar form and watch the quadrant do its job."
+            },
+            {
+              "seq": 2,
+              "text": "First, z equals one plus i. Both parts are positive, so the point sits in quadrant one."
+            },
+            {
+              "seq": 3,
+              "text": "The modulus is root of one squared plus one squared, which is root two. The reference angle is inverse tangent of one, which is pi over four."
+            },
+            {
+              "seq": 4,
+              "text": "In quadrant one the argument is just the reference angle, so the polar form is root two times cosine pi over four plus i sine pi over four."
+            },
+            {
+              "seq": 5,
+              "text": "Now change one sign: z equals minus one plus i. The real part is negative, the imaginary part positive, so the point is in quadrant two, and the argument is pi minus alpha."
+            },
+            {
+              "seq": 6,
+              "text": "The modulus is still root two and the reference angle is still pi over four, but now the argument is pi minus pi over four, which is three pi over four."
+            },
+            {
+              "seq": 7,
+              "text": "So the polar form is root two times cosine three pi over four plus i sine three pi over four."
+            },
+            {
+              "seq": 8,
+              "text": "Notice the lesson: the modulus and the reference angle were identical in both problems. Only the quadrant changed, and that alone shifted the argument. That is exactly why the quadrant step matters."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Do numbers ko polar form mein convert karte hain aur dekhte hain quadrant apna kaam kaise karta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Pehle, z equals one plus i. Dono parts positive hain, to point quadrant one mein baithta hai."
+            },
+            {
+              "seq": 3,
+              "text": "Modulus hai one square plus one square ka root, jo hai root two. Reference angle hai inverse tangent of one, jo hai pi over four."
+            },
+            {
+              "seq": 4,
+              "text": "Quadrant one mein argument bas reference angle hai, to polar form hai root two times cosine pi over four plus i sine pi over four."
+            },
+            {
+              "seq": 5,
+              "text": "Ab ek sign badlo: z equals minus one plus i. Real part negative, imaginary part positive, to point quadrant two mein hai, aur argument hai pi minus alpha."
+            },
+            {
+              "seq": 6,
+              "text": "Modulus abhi bhi root two aur reference angle abhi bhi pi over four, par ab argument hai pi minus pi over four, jo hai three pi over four."
+            },
+            {
+              "seq": 7,
+              "text": "To polar form hai root two times cosine three pi over four plus i sine three pi over four."
+            },
+            {
+              "seq": 8,
+              "text": "Sabak dekho: modulus aur reference angle dono problems mein identical the. Sirf quadrant badla, aur usi ne argument shift kar diya. Yehi hai kyun quadrant step matter karta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो numbers को polar form में convert करते हैं और देखते हैं quadrant अपना काम कैसे करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले, z बराबर one plus i। दोनों parts positive हैं, तो point quadrant one में बैठता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Modulus है one square plus one square का root, जो है root two। Reference angle है inverse tangent of one, जो है pi over four।"
+            },
+            {
+              "seq": 4,
+              "text": "Quadrant one में argument बस reference angle है, तो polar form है root two times cosine pi over four plus i sine pi over four।"
+            },
+            {
+              "seq": 5,
+              "text": "अब एक sign बदलो: z बराबर minus one plus i। Real part negative, imaginary part positive, तो point quadrant two में है, और argument है pi minus alpha।"
+            },
+            {
+              "seq": 6,
+              "text": "Modulus अभी भी root two और reference angle अभी भी pi over four, पर अब argument है pi minus pi over four, जो है three pi over four।"
+            },
+            {
+              "seq": 7,
+              "text": "तो polar form है root two times cosine three pi over four plus i sine three pi over four।"
+            },
+            {
+              "seq": 8,
+              "text": "सबक देखो: modulus और reference angle दोनों problems में identical थे। सिर्फ quadrant बदला, और उसी ने argument shift कर दिया। यही है क्यों quadrant step matter करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "Worked: all four quadrants at once",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One example, every quadrant"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Find modulus and principal argument of each of $\\pm 1\\pm i\\sqrt3$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "r=\\sqrt{1+3}=2,\\qquad \\alpha=\\tan^{-1}\\sqrt3=\\tfrac{\\pi}{3}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "\\arg(1+i\\sqrt3)=\\tfrac{\\pi}{3},\\qquad \\arg(-1+i\\sqrt3)=\\tfrac{2\\pi}{3}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "\\arg(-1-i\\sqrt3)=-\\tfrac{2\\pi}{3},\\qquad \\arg(1-i\\sqrt3)=-\\tfrac{\\pi}{3}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "All four share $r=2$ and reference angle $\\tfrac{\\pi}{3}$; only the quadrant differs."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Quadrants III and IV give negative principal arguments."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "This single problem drills every row of the quadrant table."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This one example exercises the entire quadrant table at once, so it's worth doing carefully."
+            },
+            {
+              "seq": 2,
+              "text": "Find the modulus and principal argument of all four numbers plus or minus one, plus or minus i root three."
+            },
+            {
+              "seq": 3,
+              "text": "Every one of them has the same modulus: root of one plus three, which is two. And every one has the same reference angle: inverse tangent of root three, which is pi over three."
+            },
+            {
+              "seq": 4,
+              "text": "Now the quadrants. One plus i root three is in quadrant one, so its argument is pi over three. Minus one plus i root three is in quadrant two, so its argument is pi minus pi over three, which is two pi over three."
+            },
+            {
+              "seq": 5,
+              "text": "Minus one minus i root three is in quadrant three, giving alpha minus pi, that is minus two pi over three. And one minus i root three is in quadrant four, giving minus alpha, which is minus pi over three."
+            },
+            {
+              "seq": 6,
+              "text": "So all four have modulus two and reference angle pi over three. The only thing that changed across the four was the quadrant."
+            },
+            {
+              "seq": 7,
+              "text": "Notice that quadrants three and four produce negative principal arguments, because the point sits below the real axis, and the principal range dips into the negatives there."
+            },
+            {
+              "seq": 8,
+              "text": "If you can do this one problem cleanly, you have effectively drilled every row of the quadrant table in a single stroke."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye ek example poore quadrant table ko ek saath exercise karta hai, to ise dhyaan se karna worth hai."
+            },
+            {
+              "seq": 2,
+              "text": "Chaaron numbers plus or minus one, plus or minus i root three ke modulus aur principal argument nikaalo."
+            },
+            {
+              "seq": 3,
+              "text": "In sab ka modulus same hai: root of one plus three, jo hai two. Aur sab ka reference angle same hai: inverse tangent of root three, jo hai pi over three."
+            },
+            {
+              "seq": 4,
+              "text": "Ab quadrants. One plus i root three quadrant one mein hai, to iska argument pi over three. Minus one plus i root three quadrant two mein hai, to iska argument pi minus pi over three, jo hai two pi over three."
+            },
+            {
+              "seq": 5,
+              "text": "Minus one minus i root three quadrant three mein hai, deta hai alpha minus pi, yaani minus two pi over three. Aur one minus i root three quadrant four mein hai, deta hai minus alpha, jo hai minus pi over three."
+            },
+            {
+              "seq": 6,
+              "text": "To chaaron ka modulus two aur reference angle pi over three. Chaaron mein sirf quadrant badla."
+            },
+            {
+              "seq": 7,
+              "text": "Dhyaan do ki quadrant three aur four negative principal arguments dete hain, kyunki point real axis ke neeche baithta hai, aur principal range wahan negatives mein dip karti hai."
+            },
+            {
+              "seq": 8,
+              "text": "Agar aap ye ek problem cleanly kar lo, to aapne effectively poore quadrant table ki har row ek hi stroke mein drill kar li."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये एक example पूरे quadrant table को एक साथ exercise करता है, तो इसे ध्यान से करना worth है।"
+            },
+            {
+              "seq": 2,
+              "text": "चारों numbers plus or minus one, plus or minus i root three के modulus और principal argument निकालो।"
+            },
+            {
+              "seq": 3,
+              "text": "इन सब का modulus same है: root of one plus three, जो है two। और सब का reference angle same है: inverse tangent of root three, जो है pi over three।"
+            },
+            {
+              "seq": 4,
+              "text": "अब quadrants। One plus i root three quadrant one में है, तो इसका argument pi over three। Minus one plus i root three quadrant two में है, तो इसका argument pi minus pi over three, जो है two pi over three।"
+            },
+            {
+              "seq": 5,
+              "text": "Minus one minus i root three quadrant three में है, देता है alpha minus pi, यानी minus two pi over three। और one minus i root three quadrant four में है, देता है minus alpha, जो है minus pi over three।"
+            },
+            {
+              "seq": 6,
+              "text": "तो चारों का modulus two और reference angle pi over three। चारों में सिर्फ quadrant बदला।"
+            },
+            {
+              "seq": 7,
+              "text": "ध्यान दो कि quadrant three और four negative principal arguments देते हैं, क्योंकि point real axis के नीचे बैठता है, और principal range वहां negatives में dip करती है।"
+            },
+            {
+              "seq": 8,
+              "text": "अगर आप ये एक problem cleanly कर लो, तो आपने effectively पूरे quadrant table की हर row एक ही stroke में drill कर ली।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "Worked: powers via De Moivre",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Big powers become one line"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Write $z=-\\sqrt3+i$ in polar form, then find $z^{6}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "r=\\sqrt{3+1}=2,\\ \\alpha=\\tfrac{\\pi}{6}\\ (\\text{Q II})\\Rightarrow \\arg z=\\tfrac{5\\pi}{6}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "z^{6}=2^{6}\\left(\\cos 6\\cdot\\tfrac{5\\pi}{6}+i\\sin 6\\cdot\\tfrac{5\\pi}{6}\\right)=64(\\cos 5\\pi+i\\sin 5\\pi)"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "$\\cos 5\\pi=-1$, $\\sin 5\\pi=0$, so $z^{6}=-64$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "(1+i)^{20}=(\\sqrt2)^{20}\\left(\\cos\\tfrac{20\\pi}{4}+i\\sin\\tfrac{20\\pi}{4}\\right)"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "$=2^{10}(\\cos 5\\pi+i\\sin 5\\pi)=1024\\cdot(-1)=-1024$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Polar + De Moivre beats the binomial theorem every time."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is where polar form pays off dramatically: high powers that would be brutal by hand become a single line."
+            },
+            {
+              "seq": 2,
+              "text": "Write z equals minus root three plus i in polar form, then compute z to the sixth."
+            },
+            {
+              "seq": 3,
+              "text": "The modulus is root of three plus one, which is two. The point is in quadrant two with reference angle pi over six, so the argument is pi minus pi over six, which is five pi over six."
+            },
+            {
+              "seq": 4,
+              "text": "By De Moivre, z to the sixth is two to the sixth times cosine of six times five pi over six, plus i sine of the same. That's sixty four times cosine five pi plus i sine five pi."
+            },
+            {
+              "seq": 5,
+              "text": "Now cosine five pi is minus one and sine five pi is zero, so z to the sixth is sixty four times minus one, which is minus sixty four."
+            },
+            {
+              "seq": 6,
+              "text": "Second example: one plus i, to the twentieth. One plus i is root two at angle pi over four, so by De Moivre we get root two to the twentieth times cosine twenty pi over four plus i sine twenty pi over four."
+            },
+            {
+              "seq": 7,
+              "text": "Root two to the twentieth is two to the tenth, one thousand twenty four. And twenty pi over four is five pi, whose cosine is minus one. So the answer is one thousand twenty four times minus one, minus one thousand twenty four."
+            },
+            {
+              "seq": 8,
+              "text": "The takeaway is blunt: for any integer power, go to polar form and use De Moivre. It beats the binomial theorem every single time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye wahan hai jahan polar form dramatically pay off karta hai: high powers jo haath se brutal hote, ek single line ban jaate hain."
+            },
+            {
+              "seq": 2,
+              "text": "z equals minus root three plus i ko polar form mein likho, phir z to the sixth compute karo."
+            },
+            {
+              "seq": 3,
+              "text": "Modulus hai root of three plus one, jo hai two. Point quadrant two mein hai reference angle pi over six ke saath, to argument hai pi minus pi over six, jo hai five pi over six."
+            },
+            {
+              "seq": 4,
+              "text": "De Moivre se, z to the sixth hai two to the sixth times cosine of six times five pi over six, plus i sine of the same. Wo hai sixty four times cosine five pi plus i sine five pi."
+            },
+            {
+              "seq": 5,
+              "text": "Ab cosine five pi hai minus one aur sine five pi hai zero, to z to the sixth hai sixty four times minus one, jo hai minus sixty four."
+            },
+            {
+              "seq": 6,
+              "text": "Doosra example: one plus i, to the twentieth. One plus i hai root two at angle pi over four, to De Moivre se milta hai root two to the twentieth times cosine twenty pi over four plus i sine twenty pi over four."
+            },
+            {
+              "seq": 7,
+              "text": "Root two to the twentieth hai two to the tenth, one thousand twenty four. Aur twenty pi over four hai five pi, jiska cosine minus one hai. To answer hai one thousand twenty four times minus one, minus one thousand twenty four."
+            },
+            {
+              "seq": 8,
+              "text": "Takeaway blunt hai: kisi bhi integer power ke liye polar form mein jaao aur De Moivre use karo. Ye har baar binomial theorem ko beat karta hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये वहां है जहां polar form dramatically pay off करता है: high powers जो हाथ से brutal होते, एक single line बन जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "z बराबर minus root three plus i को polar form में लिखो, फिर z to the sixth compute करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Modulus है root of three plus one, जो है two। Point quadrant two में है reference angle pi over six के साथ, तो argument है pi minus pi over six, जो है five pi over six।"
+            },
+            {
+              "seq": 4,
+              "text": "De Moivre से, z to the sixth है two to the sixth times cosine of six times five pi over six, plus i sine of the same। वो है sixty four times cosine five pi plus i sine five pi।"
+            },
+            {
+              "seq": 5,
+              "text": "अब cosine five pi है minus one और sine five pi है zero, तो z to the sixth है sixty four times minus one, जो है minus sixty four।"
+            },
+            {
+              "seq": 6,
+              "text": "दूसरा example: one plus i, to the twentieth। One plus i है root two at angle pi over four, तो De Moivre से मिलता है root two to the twentieth times cosine twenty pi over four plus i sine twenty pi over four।"
+            },
+            {
+              "seq": 7,
+              "text": "Root two to the twentieth है two to the tenth, one thousand twenty four। और twenty pi over four है five pi, जिसका cosine minus one है। तो answer है one thousand twenty four times minus one, minus one thousand twenty four।"
+            },
+            {
+              "seq": 8,
+              "text": "Takeaway blunt है: किसी भी integer power के लिए polar form में जाओ और De Moivre use करो। ये हर बार binomial theorem को beat करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "worked_examples",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "Worked: cube roots of unity",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Working with 1, omega, omega^2"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "z^{3}-1=(z-1)(z^{2}+z+1)=0"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "So the roots are $1$ and the two roots of $z^{2}+z+1=0$, namely $\\omega,\\omega^{2}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "\\omega+\\omega^{2}=-1\\ \\Rightarrow\\ 1+\\omega+\\omega^{2}=0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Now simplify $(1+\\omega)^{3}$ using $1+\\omega=-\\omega^{2}$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "(1+\\omega)^{3}=(-\\omega^{2})^{3}=-\\omega^{6}=-(\\omega^{3})^{2}=-1"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Reduce every $\\omega$ exponent mod 3: $\\omega^{6}=(\\omega^{3})^{2}=1$."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "These identities turn ugly $\\omega$-expressions into single numbers."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The cube roots of unity are a workhorse for the harder problems, so let's practise handling them."
+            },
+            {
+              "seq": 2,
+              "text": "Start by factoring z cubed minus one as z minus one, times z squared plus z plus one."
+            },
+            {
+              "seq": 3,
+              "text": "So one root is z equals one, and the other two roots come from z squared plus z plus one equals zero. Those two are exactly omega and omega squared."
+            },
+            {
+              "seq": 4,
+              "text": "From the sum of roots of z squared plus z plus one, omega plus omega squared is minus one. Add one to both sides and you get one plus omega plus omega squared equals zero, the identity we'll lean on."
+            },
+            {
+              "seq": 5,
+              "text": "Now simplify one plus omega, cubed. The key move: since the three sum to zero, one plus omega equals minus omega squared."
+            },
+            {
+              "seq": 6,
+              "text": "So one plus omega cubed is minus omega squared, cubed, which is minus omega to the sixth, which is minus omega cubed squared, and since omega cubed is one, that's minus one."
+            },
+            {
+              "seq": 7,
+              "text": "The habit that makes all of this fast: reduce every exponent of omega modulo three. Omega to the sixth is omega cubed squared, which is one squared, one."
+            },
+            {
+              "seq": 8,
+              "text": "With these two identities, ugly-looking omega expressions collapse into single numbers almost instantly. Reach for them whenever omega appears."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Cube roots of unity harder problems ke liye workhorse hain, to inhe handle karna practise karte hain."
+            },
+            {
+              "seq": 2,
+              "text": "z cubed minus one ko factor karke shuru karo: z minus one, times z squared plus z plus one."
+            },
+            {
+              "seq": 3,
+              "text": "To ek root hai z equals one, aur baaki do roots z squared plus z plus one equals zero se aati hain. Wo do bilkul omega aur omega squared hain."
+            },
+            {
+              "seq": 4,
+              "text": "z squared plus z plus one ke sum of roots se, omega plus omega squared hai minus one. Dono taraf one add karo to milta hai one plus omega plus omega squared equals zero, wahi identity jis par tikenge."
+            },
+            {
+              "seq": 5,
+              "text": "Ab one plus omega, cubed simplify karo. Key move: kyunki teenon ka sum zero hai, one plus omega barabar minus omega squared."
+            },
+            {
+              "seq": 6,
+              "text": "To one plus omega cubed hai minus omega squared, cubed, jo hai minus omega to the sixth, jo hai minus omega cubed squared, aur kyunki omega cubed one hai, wo hai minus one."
+            },
+            {
+              "seq": 7,
+              "text": "Wo aadat jo ye sab fast banati hai: omega ke har exponent ko modulo three reduce karo. Omega to the sixth hai omega cubed squared, jo hai one squared, one."
+            },
+            {
+              "seq": 8,
+              "text": "In do identities ke saath, ugly-looking omega expressions single numbers mein lagbhag turant collapse ho jaati hain. Jab bhi omega dikhe, inhe use karo."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Cube roots of unity harder problems के लिए workhorse हैं, तो इन्हें handle करना practise करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "z cubed minus one को factor करके शुरू करो: z minus one, times z squared plus z plus one।"
+            },
+            {
+              "seq": 3,
+              "text": "तो एक root है z equals one, और बाकी दो roots z squared plus z plus one equals zero से आती हैं। वो दो बिलकुल omega और omega squared हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "z squared plus z plus one के sum of roots से, omega plus omega squared है minus one। दोनों तरफ one add करो तो मिलता है one plus omega plus omega squared equals zero, वही identity जिस पर टिकेंगे।"
+            },
+            {
+              "seq": 5,
+              "text": "अब one plus omega, cubed simplify करो। Key move: क्योंकि तीनों का sum zero है, one plus omega बराबर minus omega squared।"
+            },
+            {
+              "seq": 6,
+              "text": "तो one plus omega cubed है minus omega squared, cubed, जो है minus omega to the sixth, जो है minus omega cubed squared, और क्योंकि omega cubed one है, वो है minus one।"
+            },
+            {
+              "seq": 7,
+              "text": "वो आदत जो ये सब fast बनाती है: omega के हर exponent को modulo three reduce करो। Omega to the sixth है omega cubed squared, जो है one squared, one।"
+            },
+            {
+              "seq": 8,
+              "text": "इन दो identities के साथ, ugly-looking omega expressions single numbers में लगभग तुरंत collapse हो जाती हैं। जब भी omega दिखे, इन्हें use करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "tips",
+      "subtopic": "The Argand Plane and Polar Representation",
+      "title": "Pitfalls & pro-tips: Argand plane and polar form",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Argument traps, polar shortcuts"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "Never report $\\tan^{-1}(y/x)$ without fixing the quadrant."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "The calculator value lives in $(-\\tfrac{\\pi}{2},\\tfrac{\\pi}{2})$; always place $\\theta$ by quadrant."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "Keep the principal value in $(-\\pi,\\pi]$; $\\arg(0)$ is undefined."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "$r(\\cos\\theta-i\\sin\\theta)$ is not polar form — convert via $\\cos(-\\theta),\\sin(-\\theta)$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Don't mix degrees and radians inside De Moivre."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Pro-tip: sketch first; multiplication adds arguments, division subtracts — use it, don't expand."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "For any integer power, go polar and apply De Moivre."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's lock in the traps and shortcuts for the Argand plane and polar form."
+            },
+            {
+              "seq": 2,
+              "text": "The number-one trap, and it defines this subtopic: never report inverse tangent of y over x as the argument without fixing the quadrant."
+            },
+            {
+              "seq": 3,
+              "text": "Remember why: the calculator only returns values between minus pi over two and pi over two, covering two quadrants. You must always place theta into the actual quadrant by hand."
+            },
+            {
+              "seq": 4,
+              "text": "Second: keep the principal value inside the interval minus pi to pi, with pi included. And never assign an argument to zero, because the argument of zero is undefined."
+            },
+            {
+              "seq": 5,
+              "text": "Third: r times cosine theta minus i sine theta is not polar form. Convert it using cosine of minus theta and sine of minus theta to restore the required plus sign."
+            },
+            {
+              "seq": 6,
+              "text": "Fourth: do not mix degrees and radians inside De Moivre. Pick one convention and stay in it for the whole calculation."
+            },
+            {
+              "seq": 7,
+              "text": "Now the pro-tips. Always sketch the point first, so the quadrant is obvious. And remember multiplication adds arguments while division subtracts them, so use that instead of expanding brackets."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>And the one rule that saves the most time:</whisper> for any integer power, go to polar form and apply De Moivre. Never reach for the binomial theorem on a power problem."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Argand plane aur polar form ke traps aur shortcuts lock kar lete hain."
+            },
+            {
+              "seq": 2,
+              "text": "Number-one trap, aur ye is subtopic ko define karta hai: quadrant fix kiye bina inverse tangent of y over x ko argument mat report karo."
+            },
+            {
+              "seq": 3,
+              "text": "Kyun yaad rakho: calculator sirf minus pi over two aur pi over two ke beech values deta hai, do quadrants cover karke. Aapko hamesha theta ko actual quadrant mein khud rakhna padta hai."
+            },
+            {
+              "seq": 4,
+              "text": "Doosra: principal value ko interval minus pi se pi mein rakho, pi included. Aur zero ko kabhi argument mat do, kyunki zero ka argument undefined hai."
+            },
+            {
+              "seq": 5,
+              "text": "Teesra: r times cosine theta minus i sine theta polar form nahi hai. Ise cosine of minus theta aur sine of minus theta se convert karo taaki zaroori plus sign wapas aaye."
+            },
+            {
+              "seq": 6,
+              "text": "Chautha: De Moivre ke andar degrees aur radians mix mat karo. Ek convention chuno aur poore calculation mein usi mein raho."
+            },
+            {
+              "seq": 7,
+              "text": "Ab pro-tips. Hamesha point pehle sketch karo, taaki quadrant obvious ho. Aur yaad rakho multiplication arguments add karta hai jabki division subtract karta hai, to usse use karo, brackets expand karne ke bajaay."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>Aur wo ek rule jo sabse zyada time bachata hai:</whisper> kisi bhi integer power ke liye polar form mein jaao aur De Moivre apply karo. Power problem par kabhi binomial theorem mat uthao."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Argand plane और polar form के traps और shortcuts lock कर लेते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Number-one trap, और ये इस subtopic को define करता है: quadrant fix किए बिना inverse tangent of y over x को argument मत report करो।"
+            },
+            {
+              "seq": 3,
+              "text": "क्यों याद रखो: calculator सिर्फ minus pi over two और pi over two के बीच values देता है, दो quadrants cover करके। आपको हमेशा theta को actual quadrant में खुद रखना पड़ता है।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा: principal value को interval minus pi से pi में रखो, pi included। और zero को कभी argument मत दो, क्योंकि zero का argument undefined है।"
+            },
+            {
+              "seq": 5,
+              "text": "तीसरा: r times cosine theta minus i sine theta polar form नहीं है। इसे cosine of minus theta और sine of minus theta से convert करो ताकि जरूरी plus sign वापस आए।"
+            },
+            {
+              "seq": 6,
+              "text": "चौथा: De Moivre के अंदर degrees और radians mix मत करो। एक convention चुनो और पूरे calculation में उसी में रहो।"
+            },
+            {
+              "seq": 7,
+              "text": "अब pro-tips। हमेशा point पहले sketch करो, ताकि quadrant obvious हो। और याद रखो multiplication arguments add करता है जबकि division subtract करता है, तो उससे use करो, brackets expand करने के बजाय।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper>और वो एक rule जो सबसे ज़्यादा time बचाता है:</whisper> किसी भी integer power के लिए polar form में जाओ और De Moivre apply करो। Power problem पर कभी binomial theorem मत उठाओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "concept",
+      "subtopic": "Quadratic Equations with Complex Roots",
+      "title": "Every quadratic now has two roots",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The discriminant is a weather forecast"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Over $\\mathbb{R}$, $x^{2}+1=0$ had no roots; over $\\mathbb{C}$ it has two, $\\pm i$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "x=\\frac{-b\\pm\\sqrt{D}}{2a},\\qquad D=b^{2}-4ac"
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "caption": "What the discriminant predicts (real coefficients)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 640 220' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='120' x2='200' y2='120' stroke='#555' stroke-width='1.2'/><line x1='110' y1='40' x2='110' y2='200' stroke='#555' stroke-width='1.2'/><circle cx='70' cy='120' r='5' fill='#2ea043'/><circle cx='160' cy='120' r='5' fill='#2ea043'/><text x='60' y='30' font-size='13' fill='#2ea043'>D &gt; 0: two real</text><line x1='230' y1='120' x2='410' y2='120' stroke='#555' stroke-width='1.2'/><line x1='320' y1='40' x2='320' y2='200' stroke='#555' stroke-width='1.2'/><circle cx='360' cy='120' r='6' fill='#d29922'/><text x='250' y='30' font-size='13' fill='#d29922'>D = 0: one repeated</text><line x1='440' y1='120' x2='620' y2='120' stroke='#555' stroke-width='1.2'/><line x1='530' y1='40' x2='530' y2='200' stroke='#555' stroke-width='1.2'/><circle cx='575' cy='80' r='5' fill='#1f6feb'/><circle cx='575' cy='160' r='5' fill='#1f6feb'/><line x1='575' y1='80' x2='575' y2='160' stroke='#bbb' stroke-width='1' stroke-dasharray='3 3'/><text x='460' y='30' font-size='13' fill='#1f6feb'>D &lt; 0: conjugate pair</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "$D>0$: two distinct real roots. $D=0$: one repeated real root."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "style": "red-margin",
+          "text": "$D<0$: two complex-conjugate roots — they have left the real line."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "This table assumes REAL coefficients."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "style": "red-margin",
+          "text": "If $a,b,c$ are complex, the '$D<0$' classification is meaningless."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This subtopic is where the whole chapter pays off. The quadratic formula that used to fail now always succeeds — the missing roots were complex all along."
+            },
+            {
+              "seq": 2,
+              "text": "Over the reals, x squared plus one equals zero had no solution. Over the complex numbers it has exactly two, plus i and minus i. This is the first glimpse of a deep fact: a degree-n polynomial has exactly n roots once you allow complex numbers."
+            },
+            {
+              "seq": 3,
+              "text": "The formula is the familiar one: x equals minus b plus or minus root D, all over two a, where D, the discriminant, is b squared minus four a c."
+            },
+            {
+              "seq": 4,
+              "text": "Think of D as a weather forecast. Before you solve anything, D tells you what kind of roots to expect, the way a monsoon forecast tells you whether to carry an umbrella."
+            },
+            {
+              "seq": 5,
+              "text": "If D is positive, you get two distinct real roots, both sitting on the number line. If D is zero, you get one repeated real root, right at minus b over two a."
+            },
+            {
+              "seq": 6,
+              "text": "And if D is negative, you get two complex-conjugate roots. The roots have left the real line and moved off into the plane, as a mirror-image pair."
+            },
+            {
+              "seq": 7,
+              "text": "One crucial caveat: this whole forecast table assumes the coefficients a, b, c are real numbers."
+            },
+            {
+              "seq": 8,
+              "text": "If the coefficients are themselves complex, the idea of D being negative doesn't even make sense, and the roots need not be conjugates. Keep that boundary firmly in mind."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye subtopic wahan hai jahan poora chapter pay off karta hai. Wo quadratic formula jo pehle fail hoti thi, ab hamesha succeed karti hai — missing roots hamesha se complex the."
+            },
+            {
+              "seq": 2,
+              "text": "Reals par, x squared plus one equals zero ka koi solution nahi tha. Complex numbers par iske theek do hain, plus i aur minus i. Ye ek deep fact ki pehli jhalak hai: degree-n polynomial ke theek n roots hote hain jab aap complex numbers allow karo."
+            },
+            {
+              "seq": 3,
+              "text": "Formula wahi familiar hai: x equals minus b plus or minus root D, poora over two a, jahan D, discriminant, hai b squared minus four a c."
+            },
+            {
+              "seq": 4,
+              "text": "D ko ek weather forecast samjho. Kuch bhi solve karne se pehle, D batata hai kis tarah ke roots expect karne hain, jaise monsoon forecast batata hai umbrella le jaana hai ya nahi."
+            },
+            {
+              "seq": 5,
+              "text": "Agar D positive hai, do distinct real roots milte hain, dono number line par. Agar D zero hai, ek repeated real root milta hai, theek minus b over two a par."
+            },
+            {
+              "seq": 6,
+              "text": "Aur agar D negative hai, do complex-conjugate roots milte hain. Roots real line chhodke plane mein chale gaye, ek mirror-image pair ki tarah."
+            },
+            {
+              "seq": 7,
+              "text": "Ek crucial caveat: ye poora forecast table maanta hai ki coefficients a, b, c real numbers hain."
+            },
+            {
+              "seq": 8,
+              "text": "Agar coefficients khud complex hain, to D ke negative hone ka idea sense hi nahi banata, aur roots conjugates hone zaroori nahi. Is boundary ko pakka dhyaan mein rakho."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये subtopic वहां है जहां पूरा chapter pay off करता है। वो quadratic formula जो पहले fail होती थी, अब हमेशा succeed करती है — missing roots हमेशा से complex थे।"
+            },
+            {
+              "seq": 2,
+              "text": "Reals पर, x squared plus one equals zero का कोई solution नहीं था। Complex numbers पर इसके ठीक दो हैं, plus i और minus i। ये एक deep fact की पहली झलक है: degree-n polynomial के ठीक n roots होते हैं जब आप complex numbers allow करो।"
+            },
+            {
+              "seq": 3,
+              "text": "Formula वही familiar है: x बराबर minus b plus or minus root D, पूरा over two a, जहां D, discriminant, है b squared minus four a c।"
+            },
+            {
+              "seq": 4,
+              "text": "D को एक weather forecast समझो। कुछ भी solve करने से पहले, D बताता है किस तरह के roots expect करने हैं, जैसे monsoon forecast बताता है umbrella ले जाना है या नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "अगर D positive है, दो distinct real roots मिलते हैं, दोनों number line पर। अगर D zero है, एक repeated real root मिलता है, ठीक minus b over two a पर।"
+            },
+            {
+              "seq": 6,
+              "text": "और अगर D negative है, दो complex-conjugate roots मिलते हैं। Roots real line छोड़के plane में चले गए, एक mirror-image pair की तरह।"
+            },
+            {
+              "seq": 7,
+              "text": "एक crucial caveat: ये पूरा forecast table मानता है कि coefficients a, b, c real numbers हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "अगर coefficients खुद complex हैं, तो D के negative होने का idea sense ही नहीं बनाता, और roots conjugates होने जरूरी नहीं। इस boundary को पक्का ध्यान में रखो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "concept",
+      "subtopic": "Quadratic Equations with Complex Roots",
+      "title": "Complex roots when D < 0",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Solving with a negative discriminant"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "When $D<0$ (real coeff), write $\\sqrt{D}=i\\sqrt{|D|}$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\sqrt{D}=\\sqrt{-(4ac-b^{2})}=i\\sqrt{4ac-b^{2}}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "latex": "x=\\frac{-b\\pm i\\sqrt{4ac-b^{2}}}{2a}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "The two roots share the real part $-\\tfrac{b}{2a}$ and opposite imaginary parts."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "So they are conjugates of each other — a mirror-image pair."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Forgetting $\\sqrt{D}=i\\sqrt{|D|}$ is the recurring $i^2$ sign-flip error."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "Example: $x^{2}+x+1=0$ gives $x=\\dfrac{-1\\pm i\\sqrt3}{2}$ — exactly $\\omega,\\omega^{2}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's see exactly how the quadratic formula produces complex roots when the discriminant is negative and the coefficients are real."
+            },
+            {
+              "seq": 2,
+              "text": "The only new step is handling the square root of a negative discriminant: write root D as i times root of the size of D."
+            },
+            {
+              "seq": 3,
+              "text": "Concretely, when D is negative, root D equals root of minus the quantity four a c minus b squared, which is i times root of four a c minus b squared."
+            },
+            {
+              "seq": 4,
+              "text": "Substituting into the formula, the roots become minus b plus or minus i root of four a c minus b squared, all over two a."
+            },
+            {
+              "seq": 5,
+              "text": "Look at the structure. Both roots share the same real part, minus b over two a, and they carry opposite imaginary parts because of the plus-or-minus."
+            },
+            {
+              "seq": 6,
+              "text": "So the two roots are conjugates of each other, a mirror-image pair across the real axis, exactly what the discriminant forecast predicted."
+            },
+            {
+              "seq": 7,
+              "text": "The recurring slip here is forgetting that root D equals i times root of the size of D. That's the same i-squared sign-flip error from the very first subtopic, coming back to bite."
+            },
+            {
+              "seq": 8,
+              "text": "A familiar example: x squared plus x plus one equals zero has D equals minus three, giving roots minus one plus or minus i root three, over two — which are exactly omega and omega squared, the cube roots of unity."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Dekhte hain ki quadratic formula exactly kaise complex roots deta hai jab discriminant negative ho aur coefficients real hon."
+            },
+            {
+              "seq": 2,
+              "text": "Ek hi naya step hai negative discriminant ka square root handle karna: root D ko likho i times root of the size of D."
+            },
+            {
+              "seq": 3,
+              "text": "Concretely, jab D negative hai, root D barabar root of minus the quantity four a c minus b squared, jo hai i times root of four a c minus b squared."
+            },
+            {
+              "seq": 4,
+              "text": "Formula mein substitute karo, to roots ban jaate hain minus b plus or minus i root of four a c minus b squared, poora over two a."
+            },
+            {
+              "seq": 5,
+              "text": "Structure dekho. Dono roots ka same real part hai, minus b over two a, aur unke imaginary parts opposite hain plus-or-minus ki wajah se."
+            },
+            {
+              "seq": 6,
+              "text": "To dono roots ek doosre ke conjugates hain, real axis par ek mirror-image pair, bilkul jaise discriminant forecast ne predict kiya."
+            },
+            {
+              "seq": 7,
+              "text": "Yahan recurring slip hai ye bhoolna ki root D barabar i times root of the size of D. Ye wahi i-squared sign-flip error hai pehle subtopic se, wapas aakar bite karne ke liye."
+            },
+            {
+              "seq": 8,
+              "text": "Ek familiar example: x squared plus x plus one equals zero ka D barabar minus three, deta hai roots minus one plus or minus i root three, over two — jo bilkul omega aur omega squared hain, cube roots of unity."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "देखते हैं कि quadratic formula exactly कैसे complex roots देता है जब discriminant negative हो और coefficients real हों।"
+            },
+            {
+              "seq": 2,
+              "text": "एक ही नया step है negative discriminant का square root handle करना: root D को लिखो i times root of the size of D।"
+            },
+            {
+              "seq": 3,
+              "text": "Concretely, जब D negative है, root D बराबर root of minus the quantity four a c minus b squared, जो है i times root of four a c minus b squared।"
+            },
+            {
+              "seq": 4,
+              "text": "Formula में substitute करो, तो roots बन जाते हैं minus b plus or minus i root of four a c minus b squared, पूरा over two a।"
+            },
+            {
+              "seq": 5,
+              "text": "Structure देखो। दोनों roots का same real part है, minus b over two a, और उनके imaginary parts opposite हैं plus-or-minus की वजह से।"
+            },
+            {
+              "seq": 6,
+              "text": "तो दोनों roots एक दूसरे के conjugates हैं, real axis पर एक mirror-image pair, बिलकुल जैसे discriminant forecast ने predict किया।"
+            },
+            {
+              "seq": 7,
+              "text": "यहां recurring slip है ये भूलना कि root D बराबर i times root of the size of D। ये वही i-squared sign-flip error है पहले subtopic से, वापस आकर bite करने के लिए।"
+            },
+            {
+              "seq": 8,
+              "text": "एक familiar example: x squared plus x plus one equals zero का D बराबर minus three, देता है roots minus one plus or minus i root three, over two — जो बिलकुल omega और omega squared हैं, cube roots of unity।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "concept",
+      "subtopic": "Quadratic Equations with Complex Roots",
+      "title": "The conjugate-root theorem (real coefficients only)",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Complex roots travel in mirror-image pairs"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "If a polynomial has real coefficients and $p+iq$ ($q\\neq0$) is a root, so is $p-iq$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "a\\bar z^{2}+b\\bar z+c=\\overline{az^{2}+bz+c}=\\bar 0=0"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "The proof conjugates the whole equation; $\\bar a=a$ etc. because the coefficients are real."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 36,
+          "style": "red-margin",
+          "text": "Holds ONLY for real coefficients — with complex ones it fails."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "So with real coefficients you only ever find one complex root; the other is its conjugate."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Change to complex coefficients and the symmetry breaks: roots can be any two numbers."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Assuming conjugate pairs with complex coefficients is the classic conceptual error."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The conjugate-root theorem is the most conceptually important idea in this subtopic, and its condition is easy to forget."
+            },
+            {
+              "seq": 2,
+              "text": "It says: if a quadratic, indeed any polynomial, has real coefficients, and p plus i q is a root with q nonzero, then its mirror image p minus i q is forced to be a root too."
+            },
+            {
+              "seq": 3,
+              "text": "Here's why. Suppose a z squared plus b z plus c is zero at some root. Take the conjugate of the entire equation."
+            },
+            {
+              "seq": 4,
+              "text": "Conjugation distributes over sums and products, and because the coefficients are real, a bar equals a, b bar equals b, c bar equals c. So the conjugated equation reads a z bar squared plus b z bar plus c equals zero, meaning z bar is also a root."
+            },
+            {
+              "seq": 5,
+              "text": "And this is the whole point: the proof used a bar equals a, which is exactly where real coefficients are required. With complex coefficients the theorem simply fails."
+            },
+            {
+              "seq": 6,
+              "text": "The practical upside for real coefficients is lovely: you only ever need to find one complex root. The other one is automatically its conjugate, for free."
+            },
+            {
+              "seq": 7,
+              "text": "But change the coefficients to complex and that symmetry breaks completely. The two roots can be any two complex numbers, with no mirror relationship at all."
+            },
+            {
+              "seq": 8,
+              "text": "So the classic conceptual error, and a favourite exam trap, is assuming roots come in conjugate pairs even when the coefficients are not real. Always check the coefficients first."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Conjugate-root theorem is subtopic ka sabse conceptually important idea hai, aur iski condition bhoolna aasan hai."
+            },
+            {
+              "seq": 2,
+              "text": "Ye kehta hai: agar ek quadratic, dar-asal koi bhi polynomial, ke real coefficients hon, aur p plus i q ek root ho with q nonzero, to iska mirror image p minus i q bhi root hone par majboor hai."
+            },
+            {
+              "seq": 3,
+              "text": "Kyun. Maano a z squared plus b z plus c kisi root par zero hai. Poori equation ka conjugate lo."
+            },
+            {
+              "seq": 4,
+              "text": "Conjugation sums aur products par distribute karti hai, aur kyunki coefficients real hain, a bar barabar a, b bar barabar b, c bar barabar c. To conjugated equation banti hai a z bar squared plus b z bar plus c equals zero, matlab z bar bhi ek root hai."
+            },
+            {
+              "seq": 5,
+              "text": "Aur yehi poora point hai: proof ne a bar barabar a use kiya, jo bilkul wahi jagah hai jahan real coefficients zaroori hain. Complex coefficients ke saath theorem bas fail ho jaata hai."
+            },
+            {
+              "seq": 6,
+              "text": "Real coefficients ke liye practical faayda pyaara hai: aapko sirf ek complex root nikaalna hota hai. Doosra apne aap uska conjugate hai, muft mein."
+            },
+            {
+              "seq": 7,
+              "text": "Par coefficients ko complex banao aur wo symmetry poori tarah toot jaati hai. Do roots koi bhi do complex numbers ho sakte hain, bina kisi mirror relationship ke."
+            },
+            {
+              "seq": 8,
+              "text": "To classic conceptual error, aur favourite exam trap, ye maan lena hai ki roots conjugate pairs mein aate hain chahe coefficients real na hon. Hamesha pehle coefficients check karo."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Conjugate-root theorem इस subtopic का सबसे conceptually important idea है, और इसकी condition भूलना आसान है।"
+            },
+            {
+              "seq": 2,
+              "text": "ये कहता है: अगर एक quadratic, दर-असल कोई भी polynomial, के real coefficients हों, और p plus i q एक root हो with q nonzero, तो इसका mirror image p minus i q भी root होने पर मजबूर है।"
+            },
+            {
+              "seq": 3,
+              "text": "क्यों। मानो a z squared plus b z plus c किसी root पर zero है। पूरी equation का conjugate लो।"
+            },
+            {
+              "seq": 4,
+              "text": "Conjugation sums और products पर distribute करती है, और क्योंकि coefficients real हैं, a bar बराबर a, b bar बराबर b, c bar बराबर c। तो conjugated equation बनती है a z bar squared plus b z bar plus c equals zero, मतलब z bar भी एक root है।"
+            },
+            {
+              "seq": 5,
+              "text": "और यही पूरा point है: proof ने a bar बराबर a use किया, जो बिलकुल वही जगह है जहां real coefficients जरूरी हैं। Complex coefficients के साथ theorem बस fail हो जाता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Real coefficients के लिए practical फायदा प्यारा है: आपको सिर्फ एक complex root निकालना होता है। दूसरा अपने आप उसका conjugate है, मुफ्त में।"
+            },
+            {
+              "seq": 7,
+              "text": "पर coefficients को complex बनाओ और वो symmetry पूरी तरह टूट जाती है। दो roots कोई भी दो complex numbers हो सकते हैं, बिना किसी mirror relationship के।"
+            },
+            {
+              "seq": 8,
+              "text": "तो classic conceptual error, और favourite exam trap, ये मान लेना है कि roots conjugate pairs में आते हैं चाहे coefficients real ना हों। हमेशा पहले coefficients check करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "concept",
+      "subtopic": "Quadratic Equations with Complex Roots",
+      "title": "Vieta's relations and building a quadratic",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Roots and coefficients: Vieta"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "\\alpha+\\beta=-\\frac{b}{a},\\qquad \\alpha\\beta=\\frac{c}{a}"
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "style": "red-margin",
+          "text": "Mind the minus sign on the sum: $\\alpha+\\beta=-b/a$, not $+b/a$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "x^{2}-(\\alpha+\\beta)x+\\alpha\\beta=0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "To build a quadratic: $x^{2}-(\\text{sum})x+(\\text{product})=0$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "From a real quadratic's complex root $p+iq$: the other is $p-iq$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "\\text{sum}=2p,\\quad \\text{product}=p^{2}+q^{2}\\ \\Rightarrow\\ x^{2}-2px+(p^{2}+q^{2})=0"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "A neat, fully real quadratic falls straight out of a single complex root."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Vieta's relations connect the roots of a quadratic directly to its coefficients, and they're the backbone of most root-manipulation problems."
+            },
+            {
+              "seq": 2,
+              "text": "If alpha and beta are the roots of a x squared plus b x plus c equals zero, then their sum is minus b over a, and their product is c over a."
+            },
+            {
+              "seq": 3,
+              "text": "Watch the sign carefully. The sum of the roots is minus b over a, with a minus sign. Dropping that minus is a common and costly slip."
+            },
+            {
+              "seq": 4,
+              "text": "Reverse the idea to build a quadratic from known roots: x squared minus the sum times x, plus the product, equals zero."
+            },
+            {
+              "seq": 5,
+              "text": "In words, that's x squared, minus the sum of the roots times x, plus the product of the roots. Two numbers, and the quadratic writes itself."
+            },
+            {
+              "seq": 6,
+              "text": "Now combine this with the conjugate-root theorem. If you want a real quadratic with a complex root p plus i q, the other root must be p minus i q."
+            },
+            {
+              "seq": 7,
+              "text": "Their sum is two p, and their product is p squared plus q squared. So the quadratic is x squared minus two p x, plus p squared plus q squared, equals zero."
+            },
+            {
+              "seq": 8,
+              "text": "Notice the result is fully real, as it must be, and it fell straight out of a single complex root. That's the standard route in exam problems."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Vieta's relations quadratic ke roots ko seedhe uske coefficients se jodti hain, aur ye zyaadatar root-manipulation problems ki backbone hain."
+            },
+            {
+              "seq": 2,
+              "text": "Agar alpha aur beta a x squared plus b x plus c equals zero ke roots hain, to unka sum hai minus b over a, aur unka product hai c over a."
+            },
+            {
+              "seq": 3,
+              "text": "Sign dhyaan se dekho. Roots ka sum hai minus b over a, minus sign ke saath. Wo minus chhodna ek common aur mehenga slip hai."
+            },
+            {
+              "seq": 4,
+              "text": "Idea ulta karo known roots se quadratic banane ke liye: x squared minus sum times x, plus product, equals zero."
+            },
+            {
+              "seq": 5,
+              "text": "Shabdon mein, wo hai x squared, minus roots ke sum times x, plus roots ka product. Do numbers, aur quadratic khud likh jaati hai."
+            },
+            {
+              "seq": 6,
+              "text": "Ab ise conjugate-root theorem ke saath combine karo. Agar aapko p plus i q complex root wali real quadratic chahiye, to doosra root p minus i q hona chahiye."
+            },
+            {
+              "seq": 7,
+              "text": "Unka sum hai two p, aur product hai p squared plus q squared. To quadratic hai x squared minus two p x, plus p squared plus q squared, equals zero."
+            },
+            {
+              "seq": 8,
+              "text": "Dhyaan do result poori tarah real hai, jaisa hona chahiye, aur ye ek single complex root se seedha nikal aaya. Ye exam problems mein standard route hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Vieta's relations quadratic के roots को सीधे उसके coefficients से जोड़ती हैं, और ये ज़्यादातर root-manipulation problems की backbone हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "अगर alpha और beta a x squared plus b x plus c equals zero के roots हैं, तो उनका sum है minus b over a, और उनका product है c over a।"
+            },
+            {
+              "seq": 3,
+              "text": "Sign ध्यान से देखो। Roots का sum है minus b over a, minus sign के साथ। वो minus छोड़ना एक common और महेंगा slip है।"
+            },
+            {
+              "seq": 4,
+              "text": "Idea उलटा करो known roots से quadratic बनाने के लिए: x squared minus sum times x, plus product, equals zero।"
+            },
+            {
+              "seq": 5,
+              "text": "शब्दों में, वो है x squared, minus roots के sum times x, plus roots का product। दो numbers, और quadratic खुद लिख जाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब इसे conjugate-root theorem के साथ combine करो। अगर आपको p plus i q complex root वाली real quadratic चाहिए, तो दूसरा root p minus i q होना चाहिए।"
+            },
+            {
+              "seq": 7,
+              "text": "उनका sum है two p, और product है p squared plus q squared। तो quadratic है x squared minus two p x, plus p squared plus q squared, equals zero।"
+            },
+            {
+              "seq": 8,
+              "text": "ध्यान दो result पूरी तरह real है, जैसा होना चाहिए, और ये एक single complex root से सीधा निकल आया। ये exam problems में standard route है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "concept",
+      "subtopic": "Quadratic Equations with Complex Roots",
+      "title": "The square root of a complex number",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Finding root(a + ib) directly"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Set $\\sqrt{a+ib}=x+iy$, square, and equate real and imaginary parts."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "x^{2}-y^{2}=a,\\qquad 2xy=b"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "latex": "x^{2}=\\frac{|z|+a}{2},\\qquad y^{2}=\\frac{|z|-a}{2},\\quad |z|=\\sqrt{a^{2}+b^{2}}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Then fix the sign so that the sign of $xy$ matches the sign of $b$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "There are always TWO square roots, $\\pm(x+iy)$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "This is what makes the quadratic formula usable even when $D$ is complex."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "Example: $\\sqrt{3+4i}$: $|z|=5$, so $x^{2}=4,\\,y^{2}=1$, and $xy>0\\Rightarrow\\pm(2+i)$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "To handle quadratics with complex discriminants, we need one more tool: the square root of a complex number, found directly."
+            },
+            {
+              "seq": 2,
+              "text": "The method is Method B in disguise. Set root of a plus i b equal to x plus i y, square both sides, and equate real and imaginary parts."
+            },
+            {
+              "seq": 3,
+              "text": "Squaring x plus i y gives x squared minus y squared plus two i x y. Matching parts: x squared minus y squared equals a, and two x y equals b."
+            },
+            {
+              "seq": 4,
+              "text": "Combined with the modulus, these solve neatly: x squared is the modulus plus a, over two, and y squared is the modulus minus a, over two, where the modulus is root of a squared plus b squared."
+            },
+            {
+              "seq": 5,
+              "text": "That gives the sizes of x and y, but you still must fix their signs. The rule is: choose signs so that the sign of the product x y matches the sign of b."
+            },
+            {
+              "seq": 6,
+              "text": "And there are always exactly two square roots, plus or minus the whole thing x plus i y, just as every positive real has two square roots."
+            },
+            {
+              "seq": 7,
+              "text": "This is precisely the tool that makes the quadratic formula work even when the discriminant itself is complex — you can now take the root of any complex number."
+            },
+            {
+              "seq": 8,
+              "text": "For example, root of three plus four i. The modulus is five, so x squared is four and y squared is one. Since b is positive, x y is positive, giving plus or minus two plus i."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Complex discriminants wali quadratics handle karne ke liye, humein ek aur tool chahiye: complex number ka square root, seedha nikaala hua."
+            },
+            {
+              "seq": 2,
+              "text": "Method Method B ka bhes badla roop hai. Root of a plus i b ko x plus i y ke barabar set karo, dono taraf square karo, aur real aur imaginary parts equate karo."
+            },
+            {
+              "seq": 3,
+              "text": "x plus i y ko square karne se milta hai x squared minus y squared plus two i x y. Parts match karo: x squared minus y squared barabar a, aur two x y barabar b."
+            },
+            {
+              "seq": 4,
+              "text": "Modulus ke saath, ye neatly solve hote hain: x squared hai modulus plus a, over two, aur y squared hai modulus minus a, over two, jahan modulus hai a squared plus b squared ka root."
+            },
+            {
+              "seq": 5,
+              "text": "Ye x aur y ke sizes deta hai, par aapko abhi unke signs fix karne hain. Rule hai: signs aise chuno ki product x y ka sign b ke sign se match kare."
+            },
+            {
+              "seq": 6,
+              "text": "Aur hamesha theek do square roots hote hain, plus or minus poora x plus i y, bilkul jaise har positive real ke do square roots hote hain."
+            },
+            {
+              "seq": 7,
+              "text": "Ye bilkul wahi tool hai jo quadratic formula ko tab bhi kaam karwaata hai jab discriminant khud complex ho — aap ab kisi bhi complex number ka root le sakte ho."
+            },
+            {
+              "seq": 8,
+              "text": "Misaal ke liye, root of three plus four i. Modulus hai five, to x squared hai four aur y squared hai one. Kyunki b positive hai, x y positive hai, deta hai plus or minus two plus i."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Complex discriminants वाली quadratics handle करने के लिए, हमें एक और tool चाहिए: complex number का square root, सीधा निकाला हुआ।"
+            },
+            {
+              "seq": 2,
+              "text": "Method, Method B का भेस बदला रूप है। Root of a plus i b को x plus i y के बराबर set करो, दोनों तरफ square करो, और real और imaginary parts equate करो।"
+            },
+            {
+              "seq": 3,
+              "text": "x plus i y को square करने से मिलता है x squared minus y squared plus two i x y। Parts match करो: x squared minus y squared बराबर a, और two x y बराबर b।"
+            },
+            {
+              "seq": 4,
+              "text": "Modulus के साथ, ये neatly solve होते हैं: x squared है modulus plus a, over two, और y squared है modulus minus a, over two, जहां modulus है a squared plus b squared का root।"
+            },
+            {
+              "seq": 5,
+              "text": "ये x और y के sizes देता है, पर आपको अभी उनके signs fix करने हैं। Rule है: signs ऐसे चुनो कि product x y का sign b के sign से match करे।"
+            },
+            {
+              "seq": 6,
+              "text": "और हमेशा ठीक दो square roots होते हैं, plus or minus पूरा x plus i y, बिलकुल जैसे हर positive real के दो square roots होते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "ये बिलकुल वही tool है जो quadratic formula को तब भी काम करवाता है जब discriminant खुद complex हो — आप अब किसी भी complex number का root ले सकते हो।"
+            },
+            {
+              "seq": 8,
+              "text": "मिसाल के लिए, root of three plus four i। Modulus है five, तो x squared है four और y squared है one। क्योंकि b positive है, x y positive है, देता है plus or minus two plus i।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "formulas",
+      "subtopic": "Quadratic Equations with Complex Roots",
+      "title": "Quadratic-roots toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Consolidated: quadratics over C"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "x=\\frac{-b\\pm\\sqrt{D}}{2a},\\qquad D=b^{2}-4ac"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "latex": "\\text{real coeff: } D>0\\ \\text{distinct},\\ D=0\\ \\text{equal},\\ D<0\\ \\text{conjugate pair}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "D<0:\\quad x=\\frac{-b\\pm i\\sqrt{4ac-b^{2}}}{2a}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "latex": "\\alpha+\\beta=-\\frac{b}{a},\\qquad \\alpha\\beta=\\frac{c}{a}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "latex": "x^{2}-(\\alpha+\\beta)x+\\alpha\\beta=0;\\quad \\text{real from }p+iq:\\ x^{2}-2px+(p^{2}+q^{2})=0"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 57,
+          "latex": "\\sqrt{a+ib}=\\pm(x+iy):\\ x^{2}=\\tfrac{|z|+a}{2},\\ y^{2}=\\tfrac{|z|-a}{2},\\ \\operatorname{sgn}(xy)=\\operatorname{sgn}(b)"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "The conjugate-root theorem applies to real coefficients only."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the complete quadratic-roots toolkit for the whole subtopic on one board."
+            },
+            {
+              "seq": 2,
+              "text": "The formula: x equals minus b plus or minus root D, over two a, where D is b squared minus four a c."
+            },
+            {
+              "seq": 3,
+              "text": "For real coefficients, the discriminant forecasts the roots: positive means two distinct real, zero means one repeated real, negative means a complex-conjugate pair."
+            },
+            {
+              "seq": 4,
+              "text": "When D is negative, the roots are minus b plus or minus i root of four a c minus b squared, all over two a."
+            },
+            {
+              "seq": 5,
+              "text": "Vieta's relations: the sum of the roots is minus b over a, and the product is c over a."
+            },
+            {
+              "seq": 6,
+              "text": "To build a quadratic from roots, use x squared minus the sum times x plus the product. And for a real quadratic from a complex root p plus i q, it's x squared minus two p x plus p squared plus q squared."
+            },
+            {
+              "seq": 7,
+              "text": "The square root of a complex number: root of a plus i b is plus or minus x plus i y, where x squared is the modulus plus a over two, y squared is the modulus minus a over two, and the sign of the product x y matches the sign of b."
+            },
+            {
+              "seq": 8,
+              "text": "And the boundary line to never forget: the conjugate-root theorem applies to real coefficients only."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Ye raha poore subtopic ka complete quadratic-roots toolkit ek board par."
+            },
+            {
+              "seq": 2,
+              "text": "Formula: x equals minus b plus or minus root D, over two a, jahan D hai b squared minus four a c."
+            },
+            {
+              "seq": 3,
+              "text": "Real coefficients ke liye, discriminant roots forecast karta hai: positive matlab do distinct real, zero matlab ek repeated real, negative matlab ek complex-conjugate pair."
+            },
+            {
+              "seq": 4,
+              "text": "Jab D negative hai, roots hain minus b plus or minus i root of four a c minus b squared, poora over two a."
+            },
+            {
+              "seq": 5,
+              "text": "Vieta's relations: roots ka sum hai minus b over a, aur product hai c over a."
+            },
+            {
+              "seq": 6,
+              "text": "Roots se quadratic banane ke liye x squared minus sum times x plus product. Aur complex root p plus i q se real quadratic ke liye, wo hai x squared minus two p x plus p squared plus q squared."
+            },
+            {
+              "seq": 7,
+              "text": "Complex number ka square root: root of a plus i b hai plus or minus x plus i y, jahan x squared hai modulus plus a over two, y squared hai modulus minus a over two, aur product x y ka sign b ke sign se match karta hai."
+            },
+            {
+              "seq": 8,
+              "text": "Aur wo boundary line jo kabhi mat bhoolo: conjugate-root theorem sirf real coefficients par apply hota hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा पूरे subtopic का complete quadratic-roots toolkit एक board पर।"
+            },
+            {
+              "seq": 2,
+              "text": "Formula: x बराबर minus b plus or minus root D, over two a, जहां D है b squared minus four a c।"
+            },
+            {
+              "seq": 3,
+              "text": "Real coefficients के लिए, discriminant roots forecast करता है: positive मतलब दो distinct real, zero मतलब एक repeated real, negative मतलब एक complex-conjugate pair।"
+            },
+            {
+              "seq": 4,
+              "text": "जब D negative है, roots हैं minus b plus or minus i root of four a c minus b squared, पूरा over two a।"
+            },
+            {
+              "seq": 5,
+              "text": "Vieta's relations: roots का sum है minus b over a, और product है c over a।"
+            },
+            {
+              "seq": 6,
+              "text": "Roots से quadratic बनाने के लिए x squared minus sum times x plus product। और complex root p plus i q से real quadratic के लिए, वो है x squared minus two p x plus p squared plus q squared।"
+            },
+            {
+              "seq": 7,
+              "text": "Complex number का square root: root of a plus i b है plus or minus x plus i y, जहां x squared है modulus plus a over two, y squared है modulus minus a over two, और product x y का sign b के sign से match करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और वो boundary line जो कभी मत भूलो: conjugate-root theorem सिर्फ real coefficients पर apply होता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "worked_examples",
+      "subtopic": "Quadratic Equations with Complex Roots",
+      "title": "Worked: solving real quadratics with D < 0",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Real coefficients, negative discriminant"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "$x^{2}+1=0\\Rightarrow x^{2}=-1\\Rightarrow x=\\pm i$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "$x^{2}+x+1=0$: $D=1-4=-3<0$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "latex": "x=\\frac{-1\\pm i\\sqrt3}{2}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "These are the complex cube roots of unity, $\\omega$ and $\\omega^{2}$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "text": "Now $\\sqrt2\\,x^{2}+x+\\sqrt2=0$: $D=1-4(\\sqrt2)(\\sqrt2)=1-8=-7$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "x=\\frac{-1\\pm i\\sqrt7}{2\\sqrt2}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "Both are conjugate pairs — as guaranteed by real coefficients."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's solve a few real-coefficient quadratics where the discriminant turns out negative."
+            },
+            {
+              "seq": 2,
+              "text": "Start with the simplest, x squared plus one equals zero. That gives x squared equals minus one, so x is plus or minus i. The two roots that used to be missing."
+            },
+            {
+              "seq": 3,
+              "text": "Now x squared plus x plus one equals zero. Compute the discriminant: one minus four, which is minus three, negative."
+            },
+            {
+              "seq": 4,
+              "text": "So the roots are minus one plus or minus i root three, all over two."
+            },
+            {
+              "seq": 5,
+              "text": "These two numbers are exactly the complex cube roots of unity, omega and omega squared, tying this subtopic back to the polar work."
+            },
+            {
+              "seq": 6,
+              "text": "One more, with irrational coefficients: root two x squared plus x plus root two equals zero. The discriminant is one minus four times root two times root two, which is one minus eight, minus seven."
+            },
+            {
+              "seq": 7,
+              "text": "So the roots are minus one plus or minus i root seven, all over two root two."
+            },
+            {
+              "seq": 8,
+              "text": "In both problems the roots came out as conjugate pairs, exactly as the conjugate-root theorem guarantees whenever the coefficients are real."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Kuch real-coefficient quadratics solve karte hain jahan discriminant negative nikalta hai."
+            },
+            {
+              "seq": 2,
+              "text": "Sabse simple se shuru karo, x squared plus one equals zero. Ye deta hai x squared barabar minus one, to x hai plus or minus i. Wahi do roots jo pehle missing the."
+            },
+            {
+              "seq": 3,
+              "text": "Ab x squared plus x plus one equals zero. Discriminant compute karo: one minus four, jo hai minus three, negative."
+            },
+            {
+              "seq": 4,
+              "text": "To roots hain minus one plus or minus i root three, poora over two."
+            },
+            {
+              "seq": 5,
+              "text": "Ye do numbers bilkul complex cube roots of unity hain, omega aur omega squared, is subtopic ko polar work se jodte hue."
+            },
+            {
+              "seq": 6,
+              "text": "Ek aur, irrational coefficients ke saath: root two x squared plus x plus root two equals zero. Discriminant hai one minus four times root two times root two, jo hai one minus eight, minus seven."
+            },
+            {
+              "seq": 7,
+              "text": "To roots hain minus one plus or minus i root seven, poora over two root two."
+            },
+            {
+              "seq": 8,
+              "text": "Dono problems mein roots conjugate pairs nikle, bilkul jaisa conjugate-root theorem guarantee karta hai jab bhi coefficients real hon."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "कुछ real-coefficient quadratics solve करते हैं जहां discriminant negative निकलता है।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे simple से शुरू करो, x squared plus one equals zero। ये देता है x squared बराबर minus one, तो x है plus or minus i। वही दो roots जो पहले missing थे।"
+            },
+            {
+              "seq": 3,
+              "text": "अब x squared plus x plus one equals zero। Discriminant compute करो: one minus four, जो है minus three, negative।"
+            },
+            {
+              "seq": 4,
+              "text": "तो roots हैं minus one plus or minus i root three, पूरा over two।"
+            },
+            {
+              "seq": 5,
+              "text": "ये दो numbers बिलकुल complex cube roots of unity हैं, omega और omega squared, इस subtopic को polar work से जोड़ते हुए।"
+            },
+            {
+              "seq": 6,
+              "text": "एक और, irrational coefficients के साथ: root two x squared plus x plus root two equals zero। Discriminant है one minus four times root two times root two, जो है one minus eight, minus seven।"
+            },
+            {
+              "seq": 7,
+              "text": "तो roots हैं minus one plus or minus i root seven, पूरा over two root two।"
+            },
+            {
+              "seq": 8,
+              "text": "दोनों problems में roots conjugate pairs निकले, बिलकुल जैसा conjugate-root theorem guarantee करता है जब भी coefficients real हों।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 20,
+      "section_type": "worked_examples",
+      "subtopic": "Quadratic Equations with Complex Roots",
+      "title": "Worked: build a quadratic, and a complex square root",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "From a root, and root of a complex number"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Real quadratic with one root $2-3i$: the other is $2+3i$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\text{sum}=4,\\quad \\text{product}=(2-3i)(2+3i)=4+9=13"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 26,
+          "latex": "x^{2}-4x+13=0"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "Now find $\\sqrt{-15-8i}$. Set it $=x+iy$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "x^{2}-y^{2}=-15,\\ \\ 2xy=-8,\\ \\ |z|=\\sqrt{225+64}=17"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "x^{2}=\\tfrac{17-15}{2}=1,\\ \\ y^{2}=\\tfrac{17+15}{2}=16,\\ \\ xy<0"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "style": "red-margin",
+          "text": "So $\\sqrt{-15-8i}=\\pm(1-4i)$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two staple techniques: building a real quadratic from a complex root, and extracting a complex square root."
+            },
+            {
+              "seq": 2,
+              "text": "Suppose a quadratic has real coefficients and one root is two minus three i. By the conjugate-root theorem, the other root must be two plus three i."
+            },
+            {
+              "seq": 3,
+              "text": "Their sum is four, and their product is two minus three i times two plus three i, which is four plus nine, thirteen."
+            },
+            {
+              "seq": 4,
+              "text": "So the quadratic is x squared minus four x plus thirteen equals zero. Fully real, as it must be."
+            },
+            {
+              "seq": 5,
+              "text": "Now a square root: find root of minus fifteen minus eight i. Set it equal to x plus i y and square."
+            },
+            {
+              "seq": 6,
+              "text": "Equating parts gives x squared minus y squared equals minus fifteen, and two x y equals minus eight. The modulus is root of two hundred twenty five plus sixty four, which is seventeen."
+            },
+            {
+              "seq": 7,
+              "text": "So x squared is seventeen minus fifteen, over two, which is one; and y squared is seventeen plus fifteen, over two, which is sixteen. Since two x y is negative, x y is negative."
+            },
+            {
+              "seq": 8,
+              "text": "With x squared one and y squared sixteen and x y negative, the square roots are plus or minus the quantity one minus four i."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Do staple techniques: complex root se real quadratic banana, aur complex square root nikaalna."
+            },
+            {
+              "seq": 2,
+              "text": "Maano ek quadratic ke real coefficients hain aur ek root two minus three i hai. Conjugate-root theorem se, doosra root two plus three i hona chahiye."
+            },
+            {
+              "seq": 3,
+              "text": "Unka sum hai four, aur product hai two minus three i times two plus three i, jo hai four plus nine, thirteen."
+            },
+            {
+              "seq": 4,
+              "text": "To quadratic hai x squared minus four x plus thirteen equals zero. Poori tarah real, jaisa hona chahiye."
+            },
+            {
+              "seq": 5,
+              "text": "Ab ek square root: root of minus fifteen minus eight i nikaalo. Ise x plus i y ke barabar set karo aur square karo."
+            },
+            {
+              "seq": 6,
+              "text": "Parts equate karne se milta hai x squared minus y squared barabar minus fifteen, aur two x y barabar minus eight. Modulus hai two hundred twenty five plus sixty four ka root, jo hai seventeen."
+            },
+            {
+              "seq": 7,
+              "text": "To x squared hai seventeen minus fifteen, over two, jo hai one; aur y squared hai seventeen plus fifteen, over two, jo hai sixteen. Kyunki two x y negative hai, x y negative hai."
+            },
+            {
+              "seq": 8,
+              "text": "x squared one aur y squared sixteen aur x y negative ke saath, square roots hain plus or minus the quantity one minus four i."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो staple techniques: complex root से real quadratic बनाना, और complex square root निकालना।"
+            },
+            {
+              "seq": 2,
+              "text": "मानो एक quadratic के real coefficients हैं और एक root two minus three i है। Conjugate-root theorem से, दूसरा root two plus three i होना चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "उनका sum है four, और product है two minus three i times two plus three i, जो है four plus nine, thirteen।"
+            },
+            {
+              "seq": 4,
+              "text": "तो quadratic है x squared minus four x plus thirteen equals zero। पूरी तरह real, जैसा होना चाहिए।"
+            },
+            {
+              "seq": 5,
+              "text": "अब एक square root: root of minus fifteen minus eight i निकालो। इसे x plus i y के बराबर set करो और square करो।"
+            },
+            {
+              "seq": 6,
+              "text": "Parts equate करने से मिलता है x squared minus y squared बराबर minus fifteen, और two x y बराबर minus eight। Modulus है two hundred twenty five plus sixty four का root, जो है seventeen।"
+            },
+            {
+              "seq": 7,
+              "text": "तो x squared है seventeen minus fifteen, over two, जो है one; और y squared है seventeen plus fifteen, over two, जो है sixteen। क्योंकि two x y negative है, x y negative है।"
+            },
+            {
+              "seq": 8,
+              "text": "x squared one और y squared sixteen और x y negative के साथ, square roots हैं plus or minus the quantity one minus four i।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 21,
+      "section_type": "worked_examples",
+      "subtopic": "Quadratic Equations with Complex Roots",
+      "title": "Worked (JEE Advanced): complex coefficients, no conjugate pair",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "When roots are NOT conjugates"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Solve $x^{2}-(3+i)x+(2+i)=0$ (complex coefficients)."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "D=(3+i)^{2}-4(2+i)=(8+6i)-(8+4i)=2i"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "text": "Find $\\sqrt{2i}$: $x^{2}-y^{2}=0,\\ 2xy=2,\\ |2i|=2\\Rightarrow x^{2}=y^{2}=1,\\ xy>0$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "latex": "\\sqrt{2i}=\\pm(1+i)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "x=\\frac{(3+i)\\pm(1+i)}{2}\\ \\Rightarrow\\ x=2+i\\ \\text{or}\\ x=1"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "$2+i$ and $1$ are NOT conjugates — the coefficients are complex."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "Check: sum $=3+i$, product $=2+i$. Consistent with Vieta."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Now the Advanced case that breaks the comfortable pattern: a quadratic with complex coefficients.</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "Solve x squared minus three plus i, times x, plus two plus i, equals zero. Notice the coefficients themselves are complex."
+            },
+            {
+              "seq": 3,
+              "text": "Compute the discriminant. Three plus i, squared, is eight plus six i. Four times two plus i is eight plus four i. Subtracting gives two i."
+            },
+            {
+              "seq": 4,
+              "text": "So we need the square root of two i. Set it equal to x plus i y: x squared minus y squared is zero, two x y is two, and the modulus of two i is two. That gives x squared and y squared both one, with x y positive."
+            },
+            {
+              "seq": 5,
+              "text": "So root of two i is plus or minus one plus i."
+            },
+            {
+              "seq": 6,
+              "text": "Substitute into the formula: x equals three plus i, plus or minus one plus i, all over two. The plus branch gives two plus i; the minus branch gives one."
+            },
+            {
+              "seq": 7,
+              "text": "Here's the punchline: the two roots, two plus i and one, are not conjugates of each other. And that is completely fine, because the coefficients were complex, so the conjugate-root theorem simply does not apply."
+            },
+            {
+              "seq": 8,
+              "text": "Quick check with Vieta: the sum is three plus i and the product is two plus i, both matching the coefficients. Everything is consistent."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>Ab wo Advanced case jo comfortable pattern todta hai: complex coefficients wali quadratic.</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "Solve karo x squared minus three plus i, times x, plus two plus i, equals zero. Dhyaan do coefficients khud complex hain."
+            },
+            {
+              "seq": 3,
+              "text": "Discriminant compute karo. Three plus i, squared, hai eight plus six i. Four times two plus i hai eight plus four i. Subtract karne se milta hai two i."
+            },
+            {
+              "seq": 4,
+              "text": "To humein two i ka square root chahiye. Ise x plus i y ke barabar set karo: x squared minus y squared zero hai, two x y two hai, aur two i ka modulus two hai. Ye deta hai x squared aur y squared dono one, with x y positive."
+            },
+            {
+              "seq": 5,
+              "text": "To root of two i hai plus or minus one plus i."
+            },
+            {
+              "seq": 6,
+              "text": "Formula mein substitute karo: x equals three plus i, plus or minus one plus i, poora over two. Plus branch deta hai two plus i; minus branch deta hai one."
+            },
+            {
+              "seq": 7,
+              "text": "Ye raha punchline: do roots, two plus i aur one, ek doosre ke conjugates nahi hain. Aur ye bilkul theek hai, kyunki coefficients complex the, to conjugate-root theorem bas apply hi nahi hota."
+            },
+            {
+              "seq": 8,
+              "text": "Vieta se quick check: sum hai three plus i aur product hai two plus i, dono coefficients se match. Sab consistent hai."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>अब वो Advanced case जो comfortable pattern तोड़ता है: complex coefficients वाली quadratic।</curious>"
+            },
+            {
+              "seq": 2,
+              "text": "Solve करो x squared minus three plus i, times x, plus two plus i, equals zero। ध्यान दो coefficients खुद complex हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Discriminant compute करो। Three plus i, squared, है eight plus six i। Four times two plus i है eight plus four i। Subtract करने से मिलता है two i।"
+            },
+            {
+              "seq": 4,
+              "text": "तो हमें two i का square root चाहिए। इसे x plus i y के बराबर set करो: x squared minus y squared zero है, two x y two है, और two i का modulus two है। ये देता है x squared और y squared दोनों one, with x y positive।"
+            },
+            {
+              "seq": 5,
+              "text": "तो root of two i है plus or minus one plus i।"
+            },
+            {
+              "seq": 6,
+              "text": "Formula में substitute करो: x बराबर three plus i, plus or minus one plus i, पूरा over two। Plus branch देता है two plus i; minus branch देता है one।"
+            },
+            {
+              "seq": 7,
+              "text": "ये रहा punchline: दो roots, two plus i और one, एक दूसरे के conjugates नहीं हैं। और ये बिलकुल ठीक है, क्योंकि coefficients complex थे, तो conjugate-root theorem बस apply ही नहीं होता।"
+            },
+            {
+              "seq": 8,
+              "text": "Vieta से quick check: sum है three plus i और product है two plus i, दोनों coefficients से match। सब consistent है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 22,
+      "section_type": "tips",
+      "subtopic": "Quadratic Equations with Complex Roots",
+      "title": "Pitfalls & pro-tips: quadratics with complex roots",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Traps to avoid, shortcuts to keep"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "$D<0$ never means 'no roots' — over $\\mathbb{C}$ there are always two."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Apply the conjugate-root theorem ONLY when coefficients are real."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "style": "red-margin",
+          "text": "Don't forget $\\sqrt{D}=i\\sqrt{|D|}$ when $D<0$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 36,
+          "text": "A complex number has two square roots; fix the branch by $\\operatorname{sgn}(xy)=\\operatorname{sgn}(b)$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "Vieta's sum is $-b/a$, not $b/a$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Pro-tip: check $D$ first — it names the root type before any computation."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "Real quadratic from root $p+iq$: $x^{2}-2px+(p^{2}+q^{2})=0$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close the subtopic with the traps that cost marks and the shortcuts that save them."
+            },
+            {
+              "seq": 2,
+              "text": "The biggest trap: a negative discriminant never means no roots. Over the complex numbers a quadratic always has exactly two roots. Declaring no solution when D is negative is simply wrong now."
+            },
+            {
+              "seq": 3,
+              "text": "Second: apply the conjugate-root theorem only when the coefficients are real. With complex coefficients the roots need not be conjugates, as we just saw."
+            },
+            {
+              "seq": 4,
+              "text": "Third: when D is negative, remember root D equals i times root of the size of D. Dropping that i is the recurring sign-flip error."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth: a complex number always has two square roots. Get the branch right by making the sign of the product x y match the sign of b."
+            },
+            {
+              "seq": 6,
+              "text": "Fifth: Vieta's sum of roots is minus b over a, not plus b over a. That stray minus sign trips people up constantly."
+            },
+            {
+              "seq": 7,
+              "text": "Now the pro-tips. Always check the discriminant first; it names the type of roots before you compute anything, and with real coefficients you only need to find one complex root."
+            },
+            {
+              "seq": 8,
+              "text": "And keep this shortcut ready: to build a real quadratic from a complex root p plus i q, write x squared minus two p x plus p squared plus q squared equals zero. Sum is two p, product is p squared plus q squared."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Subtopic ko band karte hain un traps ke saath jo marks le jaate hain aur un shortcuts ke saath jo bachate hain."
+            },
+            {
+              "seq": 2,
+              "text": "Sabse bada trap: negative discriminant ka matlab kabhi no roots nahi hota. Complex numbers par quadratic ke hamesha theek do roots hote hain. D negative hone par no solution kehna ab bas galat hai."
+            },
+            {
+              "seq": 3,
+              "text": "Doosra: conjugate-root theorem sirf tab apply karo jab coefficients real hon. Complex coefficients ke saath roots conjugates hone zaroori nahi, jaisa abhi dekha."
+            },
+            {
+              "seq": 4,
+              "text": "Teesra: jab D negative ho, yaad rakho root D barabar i times root of the size of D. Wo i chhodna recurring sign-flip error hai."
+            },
+            {
+              "seq": 5,
+              "text": "Chautha: complex number ke hamesha do square roots hote hain. Branch sahi karo product x y ka sign b ke sign se match karke."
+            },
+            {
+              "seq": 6,
+              "text": "Paanchva: Vieta ka sum of roots hai minus b over a, plus b over a nahi. Wo bhatka minus sign logon ko lagataar phansaata hai."
+            },
+            {
+              "seq": 7,
+              "text": "Ab pro-tips. Hamesha discriminant pehle check karo; ye kuch bhi compute karne se pehle root type bata deta hai, aur real coefficients ke saath aapko sirf ek complex root nikaalna hota hai."
+            },
+            {
+              "seq": 8,
+              "text": "Aur ye shortcut ready rakho: complex root p plus i q se real quadratic banane ke liye likho x squared minus two p x plus p squared plus q squared equals zero. Sum hai two p, product hai p squared plus q squared."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hindi": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Subtopic को बंद करते हैं उन traps के साथ जो marks ले जाते हैं और उन shortcuts के साथ जो बचाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ा trap: negative discriminant का मतलब कभी no roots नहीं होता। Complex numbers पर quadratic के हमेशा ठीक दो roots होते हैं। D negative होने पर no solution कहना अब बस गलत है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा: conjugate-root theorem सिर्फ तब apply करो जब coefficients real हों। Complex coefficients के साथ roots conjugates होने जरूरी नहीं, जैसा अभी देखा।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा: जब D negative हो, याद रखो root D बराबर i times root of the size of D। वो i छोड़ना recurring sign-flip error है।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा: complex number के हमेशा दो square roots होते हैं। Branch सही करो product x y का sign b के sign से match करके।"
+            },
+            {
+              "seq": 6,
+              "text": "पांचवा: Vieta का sum of roots है minus b over a, plus b over a नहीं। वो भटका minus sign लोगों को लगातार फंसाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "अब pro-tips। हमेशा discriminant पहले check करो; ये कुछ भी compute करने से पहले root type बता देता है, और real coefficients के साथ आपको सिर्फ एक complex root निकालना होता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और ये shortcut ready रखो: complex root p plus i q से real quadratic बनाने के लिए लिखो x squared minus two p x plus p squared plus q squared equals zero। Sum है two p, product है p squared plus q squared।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

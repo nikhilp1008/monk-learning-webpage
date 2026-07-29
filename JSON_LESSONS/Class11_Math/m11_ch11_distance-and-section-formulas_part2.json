@@ -1,0 +1,1680 @@
+{
+  "chapter": "Introduction to Three Dimensional Geometry",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 11,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "Distance in space: Pythagoras used twice",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Distance in 3D: Pythagoras, applied twice"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "On paper, the gap is $\\sqrt{(\\Delta x)^2+(\\Delta y)^2}$ — a right-triangle hypotenuse."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Space adds a third perpendicular direction, so we apply the same idea once more."
+        },
+        {
+          "seq": 4,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "caption": "Space diagonal = hypotenuse of (floor leg, height leg)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 300\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"80,220 230,220 300,175 150,175\" fill=\"#eef3f7\" stroke=\"#bbb\" stroke-width=\"1\"/><polygon points=\"80,110 230,110 300,65 150,65\" fill=\"none\" stroke=\"#ccc\" stroke-width=\"1\"/><line x1=\"80\" y1=\"220\" x2=\"80\" y2=\"110\" stroke=\"#ccc\" stroke-width=\"1\"/><line x1=\"230\" y1=\"220\" x2=\"230\" y2=\"110\" stroke=\"#ccc\" stroke-width=\"1\"/><line x1=\"300\" y1=\"175\" x2=\"300\" y2=\"65\" stroke=\"#ccc\" stroke-width=\"1\"/><line x1=\"150\" y1=\"175\" x2=\"150\" y2=\"65\" stroke=\"#ccc\" stroke-width=\"1\"/><line x1=\"80\" y1=\"220\" x2=\"300\" y2=\"175\" stroke=\"#0a84c2\" stroke-width=\"2.2\" stroke-dasharray=\"6,4\"/><line x1=\"300\" y1=\"175\" x2=\"300\" y2=\"65\" stroke=\"#e07a00\" stroke-width=\"2.4\"/><line x1=\"80\" y1=\"220\" x2=\"300\" y2=\"65\" stroke=\"#c1121f\" stroke-width=\"3\"/><rect x=\"290\" y=\"165\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#555\" stroke-width=\"1\"/><circle cx=\"80\" cy=\"220\" r=\"4\" fill=\"#023047\"/><circle cx=\"300\" cy=\"65\" r=\"4\" fill=\"#023047\"/><text x=\"60\" y=\"234\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">P</text><text x=\"306\" y=\"60\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Q</text><text x=\"146\" y=\"150\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#c1121f\">space diagonal PQ</text><text x=\"150\" y=\"212\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#0a84c2\">floor leg</text><text x=\"306\" y=\"125\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#e07a00\">height leg</text></svg>"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 34,
+          "text": "Walk across the floor first, then rise straight up by $\\Delta z$."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "\\text{distance}^2 = \\underbrace{(\\Delta x)^2+(\\Delta y)^2}_{\\text{floor leg}} + \\underbrace{(\\Delta z)^2}_{\\text{height leg}}"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "text": "That single picture is the entire 3D distance formula."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 58,
+          "style": "red-margin",
+          "text": "It is why the longest rod fitting a room is its space-diagonal."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We can name points in space now. This subtopic is about measuring with them, and the first tool is distance. <curious>The good news?</curious> You already know the hard part."
+            },
+            {
+              "seq": 2,
+              "text": "On flat paper, the distance between two points is the square root of delta x squared plus delta y squared. That is nothing but the hypotenuse of a right triangle whose legs are the horizontal and vertical gaps."
+            },
+            {
+              "seq": 3,
+              "text": "Space just adds one more perpendicular direction, the z direction. So we do not learn a new idea; we apply Pythagoras a second time, stacked on the first."
+            },
+            {
+              "seq": 4,
+              "text": "Picture a drone hovering in a room. Here is the box it sits in, with the two corner points at opposite ends of the space diagonal."
+            },
+            {
+              "seq": 5,
+              "text": "To reach the drone from the corner, first walk across the floor to the spot directly beneath it, that is an ordinary two-dimensional distance, then rise straight up by delta z."
+            },
+            {
+              "seq": 6,
+              "text": "So the true straight-line distance is the hypotenuse of a right triangle whose two legs are the floor distance and the height. Squaring: distance squared equals delta x squared plus delta y squared, the floor leg, plus delta z squared, the height leg."
+            },
+            {
+              "seq": 7,
+              "text": "Collapse those two Pythagoras steps into one and you have written the entire three-dimensional distance formula. No memorisation, just the picture."
+            },
+            {
+              "seq": 8,
+              "text": "And this is exactly why the longest rod you can fit into a room lies along the space-diagonal of the box. Same triangle, read the other way."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब हम space में points name कर सकते हैं। ये subtopic उनसे measure करने के बारे में है, और पहला tool है distance। <curious>अच्छी खबर?</curious> मुश्किल हिस्सा तुम्हें पहले से आता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Flat paper पर दो points के बीच distance है square root of delta x squared plus delta y squared। ये और कुछ नहीं, एक right triangle का hypotenuse है जिसके legs horizontal और vertical gaps हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Space बस एक और perpendicular direction जोड़ता है, z direction। तो हम नया idea नहीं सीखते; हम Pythagoras दूसरी बार लगाते हैं, पहले के ऊपर।"
+            },
+            {
+              "seq": 4,
+              "text": "एक drone सोचो जो room में hover कर रहा है। ये रहा वो box जिसमें वो बैठा है, दोनों corner points space diagonal के opposite सिरों पर।"
+            },
+            {
+              "seq": 5,
+              "text": "Corner से drone तक पहुँचने के लिए, पहले floor पर उस जगह तक चलो जो ठीक उसके नीचे है, वो एक ordinary two-dimensional distance है, फिर सीधा ऊपर delta z उठो।"
+            },
+            {
+              "seq": 6,
+              "text": "तो असली straight-line distance एक right triangle का hypotenuse है जिसके दो legs floor distance और height हैं। Square करो: distance squared equals delta x squared plus delta y squared, floor leg, plus delta z squared, height leg।"
+            },
+            {
+              "seq": 7,
+              "text": "इन दो Pythagoras steps को एक में समेट दो और तुमने पूरा three-dimensional distance formula लिख दिया। कोई रटना नहीं, बस picture।"
+            },
+            {
+              "seq": 8,
+              "text": "और ठीक इसीलिए room में fit होने वाला सबसे लंबा rod box के space-diagonal के साथ होता है। वही triangle, दूसरी तरफ़ से पढ़ा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "Section division: three 1D splits at once",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Dividing a segment: three splits in one"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "A point R splits segment PQ in a ratio; find R's coordinates."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 13,
+          "text": "A coordinate is a projection onto an axis, and projection preserves ratios."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "So one 3D division becomes three identical 1D divisions — one per axis."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 29,
+          "style": "red-margin",
+          "text": "Milestone on a road: easting, northing, altitude all split in the same ratio."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 37,
+          "text": "Internal: R lies between P and Q. External: R is on line PQ but outside it."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "text": "Internally the ratio parts add; externally they subtract — the whole sign difference."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "text": "A negative ratio is simply external division in disguise."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The second tool is the section formula: given two points and a ratio, find the point that splits the segment between them. It looks like it should be messy in three dimensions. It is not."
+            },
+            {
+              "seq": 2,
+              "text": "Set the scene. A point R sits on the segment from P to Q and divides it in some given ratio, and we want R's coordinates, all three of them."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the secret that makes it easy. Each coordinate is really just a projection of the point onto an axis, and a fundamental fact of parallel projection is that it preserves ratios."
+            },
+            {
+              "seq": 4,
+              "text": "So a single division happening in three-dimensional space quietly becomes three separate, identical one-dimensional divisions, one along each axis. You solve the same little problem three times."
+            },
+            {
+              "seq": 5,
+              "text": "Think of a toll booth on the Mumbai to Pune expressway dividing the route two to three. Then its easting, its northing, and its altitude are each the same two-to-three split of the endpoints. One ratio, three coordinates."
+            },
+            {
+              "seq": 6,
+              "text": "Now the two flavours. If R lies between P and Q, the division is internal, like a booth on the road. If R lies on the line through P and Q but outside the segment, beyond either end, it is external, an extrapolation."
+            },
+            {
+              "seq": 7,
+              "text": "The only real difference shows up in the arithmetic. Internally the two parts of the ratio add in the denominator; externally they subtract. That single plus-versus-minus is the entire gap between the two formulas."
+            },
+            {
+              "seq": 8,
+              "text": "And one clean unification: a negative ratio is just external division wearing a disguise. Dividing in m to n externally is the same as dividing in m to minus n internally. Watch the signs, not the words."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दूसरा tool है section formula: दो points और एक ratio दिए हों, तो वो point ढूँढो जो उनके बीच segment को बाँटता है। लगता है three dimensions में messy होगा। है नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "Scene set करो। एक point R, P से Q तक के segment पर बैठा है और उसे किसी दिए ratio में बाँटता है, और हमें R के coordinates चाहिए, तीनों।"
+            },
+            {
+              "seq": 3,
+              "text": "यहाँ वो राज़ है जो इसे आसान बनाता है। हर coordinate असल में point का किसी axis पर projection है, और parallel projection का एक बुनियादी fact ये है कि वो ratios preserve करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तो three-dimensional space में हो रहा एक single division चुपचाप तीन अलग, identical one-dimensional divisions बन जाता है, हर axis के साथ एक। वही छोटा problem तीन बार हल करो।"
+            },
+            {
+              "seq": 5,
+              "text": "Mumbai से Pune expressway पर एक toll booth सोचो जो route को two to three बाँटता है। तो उसकी easting, northing, और altitude, हर एक endpoints का वही two-to-three split है। एक ratio, तीन coordinates।"
+            },
+            {
+              "seq": 6,
+              "text": "अब दो flavours। अगर R, P और Q के बीच है, division internal है, road पर booth जैसा। अगर R, P और Q से गुज़रती line पर है पर segment के बाहर, किसी सिरे के पार, तो वो external है, एक extrapolation।"
+            },
+            {
+              "seq": 7,
+              "text": "असली फ़र्क़ सिर्फ़ arithmetic में दिखता है। Internally ratio के दो parts denominator में जुड़ते हैं; externally घटते हैं। वही plus-versus-minus दोनों formulas के बीच का पूरा फ़र्क़ है।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक साफ़ unification: negative ratio बस external division एक भेस में है। m to n externally बाँटना वही है जो m to minus n internally। signs देखो, words नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "Edge cases: midpoint, m = n, and non-negative distance",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Edge cases that examiners exploit"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "The section formula assumes R is collinear with P and Q — a point on line PQ only."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "text": "Midpoint is simply the $1:1$ internal case."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "text": "External division is undefined when $m = n$: the denominator $m - n$ vanishes."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "style": "red-margin",
+          "text": "Equal external parts push R off to infinity (parallel, never meeting)."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "A negative ratio $m:(-n)$ is external division in disguise."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "text": "Distance is always $\\ge 0$, even though coordinate differences can be negative."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "The squares erase the signs, so direction never affects distance."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before we list formulas, let us lock down the edge cases. These are exactly where the questions are designed to trip you."
+            },
+            {
+              "seq": 2,
+              "text": "First, an assumption baked into the section formula: it only ever produces a point on the line through P and Q. It divides that line; it cannot give you a point floating off to the side."
+            },
+            {
+              "seq": 3,
+              "text": "The midpoint is not a separate formula to memorise. It is just the section formula with the ratio one to one, internal. Averaging the coordinates falls straight out of that."
+            },
+            {
+              "seq": 4,
+              "text": "Now a genuine breakdown. External division is undefined when m equals n, because the external denominator is m minus n, and that becomes zero. Division by zero, no answer."
+            },
+            {
+              "seq": 5,
+              "text": "And the geometry agrees with the algebra. Equal external parts push the dividing point infinitely far away, off to infinity, the way two parallel lines never meet. So the formula rightly refuses to give a finite point."
+            },
+            {
+              "seq": 6,
+              "text": "Remember the disguise from a moment ago: a negative ratio, m to minus n, is exactly external division written another way. If a problem hands you a negative k, read it as external."
+            },
+            {
+              "seq": 7,
+              "text": "Finally, distance. Distance is always greater than or equal to zero. That is true even though the coordinate differences inside the formula, delta x, delta y, delta z, can each be negative."
+            },
+            {
+              "seq": 8,
+              "text": "The reason is the squaring. Every difference gets squared, which erases its sign, so the direction you measure in never changes the distance. Going from P to Q or Q to P gives the same number."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Formulas list करने से पहले, edge cases pakka कर लें। ठीक यहीं सवाल तुम्हें गिराने के लिए design होते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला, section formula में बसी एक assumption: ये हमेशा सिर्फ़ P और Q से गुज़रती line पर एक point देता है। वो उस line को बाँटता है; किनारे तैरता हुआ point नहीं दे सकता।"
+            },
+            {
+              "seq": 3,
+              "text": "Midpoint कोई अलग formula नहीं जो रटना हो। ये बस section formula है ratio one to one, internal के साथ। Coordinates का average सीधा इसी से निकलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब एक असली breakdown। External division तब undefined है जब m equals n, क्योंकि external denominator है m minus n, और वो zero हो जाता है। Zero से division, कोई जवाब नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "और geometry, algebra से सहमत है। बराबर external parts dividing point को अनंत दूर धकेल देते हैं, infinity तक, जैसे दो parallel lines कभी नहीं मिलतीं। तो formula ठीक ही कोई finite point देने से मना कर देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "थोड़ी देर पहले वाला भेस याद रखो: negative ratio, m to minus n, ठीक external division है दूसरे तरीक़े से लिखा। अगर problem negative k दे, तो उसे external पढ़ो।"
+            },
+            {
+              "seq": 7,
+              "text": "आख़िर में, distance। Distance हमेशा zero से बड़ी या बराबर होती है। ये तब भी सच है जब formula के अंदर coordinate differences, delta x, delta y, delta z, हर एक negative हो सकता है।"
+            },
+            {
+              "seq": 8,
+              "text": "वजह है squaring। हर difference square होता है, जो उसका sign मिटा देता है, तो जिस direction में तुम नापो distance नहीं बदलती। P से Q या Q से P, वही number।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "Derivation: the distance formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Deriving the distance formula (box method)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Box in P and Q with planes parallel to the coordinate planes; PQ is the space diagonal."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "caption": "Right triangles PAQ (at A) and PNA (at N)",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 300\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"80,220 230,220 300,175 150,175\" fill=\"#eef3f7\" stroke=\"#ccc\" stroke-width=\"1\"/><line x1=\"300\" y1=\"175\" x2=\"300\" y2=\"65\" stroke=\"#ccc\" stroke-width=\"1\"/><line x1=\"80\" y1=\"220\" x2=\"230\" y2=\"220\" stroke=\"#0a84c2\" stroke-width=\"2.2\"/><line x1=\"230\" y1=\"220\" x2=\"300\" y2=\"175\" stroke=\"#2a9d8f\" stroke-width=\"2.2\"/><line x1=\"80\" y1=\"220\" x2=\"300\" y2=\"175\" stroke=\"#7048e8\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><line x1=\"300\" y1=\"175\" x2=\"300\" y2=\"65\" stroke=\"#e07a00\" stroke-width=\"2.4\"/><line x1=\"80\" y1=\"220\" x2=\"300\" y2=\"65\" stroke=\"#c1121f\" stroke-width=\"3\"/><rect x=\"290\" y=\"165\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#555\" stroke-width=\"1\"/><rect x=\"220\" y=\"210\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#555\" stroke-width=\"1\"/><circle cx=\"80\" cy=\"220\" r=\"4\" fill=\"#023047\"/><circle cx=\"300\" cy=\"65\" r=\"4\" fill=\"#023047\"/><circle cx=\"300\" cy=\"175\" r=\"3.5\" fill=\"#e07a00\"/><circle cx=\"230\" cy=\"220\" r=\"3.5\" fill=\"#0a84c2\"/><text x=\"62\" y=\"234\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">P</text><text x=\"306\" y=\"60\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Q</text><text x=\"306\" y=\"182\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#e07a00\">A</text><text x=\"232\" y=\"236\" font-size=\"12\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#0a84c2\">N</text><text x=\"132\" y=\"234\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#0a84c2\">PN = |x2 - x1|</text><text x=\"250\" y=\"205\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#2a9d8f\">NA</text><text x=\"306\" y=\"125\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#e07a00\">AQ = |z2 - z1|</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "text": "Split off the height: triangle PAQ is right-angled at A."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "PQ^2 = PA^2 + AQ^2"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "text": "Resolve the horizontal leg: triangle PNA is right-angled at N."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "latex": "PA^2 = PN^2 + NA^2"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "latex": "PN=|x_2-x_1|,\\ \\ NA=|y_2-y_1|,\\ \\ AQ=|z_2-z_1|"
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "latex": "PQ=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us actually derive the distance formula the way the boards want it, using a rectangular box. Once you see the two right triangles hiding inside, it is unforgettable."
+            },
+            {
+              "seq": 2,
+              "text": "Setup. Through P and through Q, draw planes parallel to the three coordinate planes. Those six planes box in a rectangular parallelepiped, and P and Q are the two ends of its space diagonal, with every edge parallel to an axis."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the box with the key points marked. A is the vertex at P's height sitting directly below Q, and N is the vertex that completes the floor triangle from P."
+            },
+            {
+              "seq": 4,
+              "text": "First, split off the height. The edge A to Q runs purely vertically, along z, while P to A lies flat in a horizontal plane, so they meet at a right angle. Triangle P A Q is right-angled at A."
+            },
+            {
+              "seq": 5,
+              "text": "Pythagoras there gives P Q squared equals P A squared plus A Q squared. That peels the vertical part away from the horizontal part."
+            },
+            {
+              "seq": 6,
+              "text": "Now resolve that horizontal leg P A. It sits in a flat plane and is itself the hypotenuse of a right triangle P N A, with legs running along the x and y directions and the right angle at N."
+            },
+            {
+              "seq": 7,
+              "text": "So P A squared equals P N squared plus N A squared. We have now broken the whole diagonal into three axis-aligned pieces."
+            },
+            {
+              "seq": 8,
+              "text": "And because every edge is parallel to an axis, each length is just the gap in that coordinate. P N is the absolute value of x two minus x one, N A the absolute value of y two minus y one, and A Q the absolute value of z two minus z one."
+            },
+            {
+              "seq": 9,
+              "text": "Substitute the second equation into the first, and the squares wipe out the absolute values. P Q equals the square root of delta x squared plus delta y squared plus delta z squared. That is the distance formula, fully earned."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो distance formula को असल में वैसे derive करें जैसे boards चाहते हैं, एक rectangular box से। एक बार अंदर छिपे दो right triangles दिख गए, तो कभी नहीं भूलोगे।"
+            },
+            {
+              "seq": 2,
+              "text": "Setup। P से और Q से, तीन coordinate planes के parallel planes खींचो। वो छह planes एक rectangular parallelepiped बना देते हैं, और P और Q उसके space diagonal के दो सिरे हैं, हर edge किसी axis के parallel।"
+            },
+            {
+              "seq": 3,
+              "text": "ये रहा box, key points marked के साथ। A वो vertex है जो P की height पर ठीक Q के नीचे है, और N वो vertex है जो P से floor triangle पूरा करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "पहले, height अलग करो। Edge A से Q पूरी तरह vertical चलता है, z के साथ, जबकि P से A एक horizontal plane में flat है, तो वो right angle पर मिलते हैं। Triangle P A Q, A पर right-angled।"
+            },
+            {
+              "seq": 5,
+              "text": "वहाँ Pythagoras देता है P Q squared equals P A squared plus A Q squared। ये vertical हिस्से को horizontal हिस्से से अलग कर देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब उस horizontal leg P A को resolve करो। वो एक flat plane में है और ख़ुद एक right triangle P N A का hypotenuse है, legs x और y directions के साथ और right angle N पर।"
+            },
+            {
+              "seq": 7,
+              "text": "तो P A squared equals P N squared plus N A squared। अब हमने पूरे diagonal को तीन axis-aligned टुकड़ों में तोड़ दिया।"
+            },
+            {
+              "seq": 8,
+              "text": "और चूँकि हर edge किसी axis के parallel है, हर length बस उस coordinate का gap है। P N है absolute value of x two minus x one, N A है absolute value of y two minus y one, और A Q है absolute value of z two minus z one।"
+            },
+            {
+              "seq": 9,
+              "text": "दूसरी equation को पहली में डालो, और squares absolute values मिटा देते हैं। P Q equals square root of delta x squared plus delta y squared plus delta z squared। यही है distance formula, पूरी तरह कमाया हुआ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "Derivation: the section formula",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Deriving the section formula (projection)"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Let R divide PQ internally so that $PR:RQ = m:n$."
+        },
+        {
+          "seq": 3,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "caption": "Parallel projection: N divides LM in the same m:n",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 300\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,250 360,250 390,205 100,205\" fill=\"#8ecae6\" opacity=\"0.22\" stroke=\"#9cc\" stroke-width=\"1\"/><text x=\"104\" y=\"222\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#0a6\">XY-plane</text><line x1=\"110\" y1=\"110\" x2=\"110\" y2=\"240\" stroke=\"#999\" stroke-width=\"1.4\" stroke-dasharray=\"5,4\"/><line x1=\"257\" y1=\"77\" x2=\"257\" y2=\"223\" stroke=\"#999\" stroke-width=\"1.4\" stroke-dasharray=\"5,4\"/><line x1=\"330\" y1=\"60\" x2=\"330\" y2=\"215\" stroke=\"#999\" stroke-width=\"1.4\" stroke-dasharray=\"5,4\"/><line x1=\"110\" y1=\"110\" x2=\"330\" y2=\"60\" stroke=\"#023047\" stroke-width=\"2.4\"/><circle cx=\"110\" cy=\"110\" r=\"4\" fill=\"#c1121f\"/><circle cx=\"257\" cy=\"77\" r=\"4\" fill=\"#e07a00\"/><circle cx=\"330\" cy=\"60\" r=\"4\" fill=\"#c1121f\"/><circle cx=\"110\" cy=\"240\" r=\"3.5\" fill=\"#0a84c2\"/><circle cx=\"257\" cy=\"223\" r=\"3.5\" fill=\"#0a84c2\"/><circle cx=\"330\" cy=\"215\" r=\"3.5\" fill=\"#0a84c2\"/><text x=\"98\" y=\"106\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">P</text><text x=\"260\" y=\"72\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\" fill=\"#e07a00\">R</text><text x=\"336\" y=\"58\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">Q</text><text x=\"96\" y=\"256\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#0a84c2\">L</text><text x=\"250\" y=\"240\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#0a84c2\">N</text><text x=\"334\" y=\"230\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#0a84c2\">M</text><text x=\"172\" y=\"82\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#e07a00\">m</text><text x=\"292\" y=\"60\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#e07a00\">n</text></svg>"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 27,
+          "text": "Drop perpendiculars from P, R, Q onto the XY-plane at L, N, M."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "text": "Parallel projection preserves the ratio: N divides LM as $m:n$ too."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "latex": "\\frac{PR}{RQ}=\\frac{z-z_1}{z_2-z}=\\frac{m}{n}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "latex": "n(z-z_1)=m(z_2-z)\\ \\Rightarrow\\ z=\\frac{mz_2+nz_1}{m+n}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "text": "Repeat onto the YZ- and ZX-planes to get x and y by symmetry."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "For external division, replace $n$ by $-n$: denominator becomes $m - n$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the section formula. The whole derivation rides on one idea we already met: parallel projection preserves ratios. Let us make it concrete for the z coordinate, then get the others for free."
+            },
+            {
+              "seq": 2,
+              "text": "Setup. Let R divide the segment P Q internally, so the ratio P R to R Q is m to n. We want R's coordinates."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the picture. Three parallel perpendiculars drop from P, R, and Q straight down to the X Y plane, landing at L, N, and M."
+            },
+            {
+              "seq": 4,
+              "text": "Because all three perpendiculars are parallel, dropping to the same plane, they carry the division faithfully. Whatever ratio R makes on the top line, its shadow N makes on the bottom line."
+            },
+            {
+              "seq": 5,
+              "text": "That is the key fact stated plainly. If R divides P Q in m to n, then N divides L M in the same m to n. Projection does not distort the ratio."
+            },
+            {
+              "seq": 6,
+              "text": "Track the heights, the z coordinates, through similar triangles. The ratio P R to R Q equals z minus z one, over z two minus z, and that equals m over n."
+            },
+            {
+              "seq": 7,
+              "text": "Cross-multiply: n times z minus z one equals m times z two minus z. Collect the z terms and you get z equals m z two plus n z one, all over m plus n."
+            },
+            {
+              "seq": 8,
+              "text": "Now the payoff. Run the identical construction projecting onto the Y Z plane and the Z X plane, and by pure symmetry you get x and y in exactly the same shape. Three coordinates, one derivation."
+            },
+            {
+              "seq": 9,
+              "text": "And external division needs no new work. Just replace n by minus n throughout, and the denominator turns from m plus n into m minus n. That is where the external formula's minus signs come from."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब section formula। पूरा derivation एक idea पर टिका है जो हम मिल चुके: parallel projection ratios preserve करता है। इसे z coordinate के लिए concrete कर लें, फिर बाक़ी मुफ़्त में।"
+            },
+            {
+              "seq": 2,
+              "text": "Setup। R को segment P Q internally बाँटने दो, तो ratio P R to R Q है m to n। हमें R के coordinates चाहिए।"
+            },
+            {
+              "seq": 3,
+              "text": "ये रही picture। तीन parallel perpendiculars P, R, और Q से सीधे नीचे X Y plane पर गिरते हैं, L, N, और M पर।"
+            },
+            {
+              "seq": 4,
+              "text": "चूँकि तीनों perpendiculars parallel हैं, एक ही plane पर गिरते, वो division को faithfully ले जाते हैं। ऊपर की line पर R जो भी ratio बनाता है, उसकी shadow N नीचे की line पर वही बनाती है।"
+            },
+            {
+              "seq": 5,
+              "text": "यही key fact साफ़-साफ़: अगर R, P Q को m to n बाँटता है, तो N, L M को वही m to n बाँटता है। Projection ratio को distort नहीं करता।"
+            },
+            {
+              "seq": 6,
+              "text": "Heights track करो, z coordinates, similar triangles से। Ratio P R to R Q equals z minus z one, over z two minus z, और वो equals m over n।"
+            },
+            {
+              "seq": 7,
+              "text": "Cross-multiply: n times z minus z one equals m times z two minus z। z terms इकट्ठा करो तो मिलता है z equals m z two plus n z one, over m plus n।"
+            },
+            {
+              "seq": 8,
+              "text": "अब payoff। वही construction Y Z plane और Z X plane पर project करके चलाओ, और pure symmetry से x और y बिल्कुल उसी shape में मिलते हैं। तीन coordinates, एक derivation।"
+            },
+            {
+              "seq": 9,
+              "text": "और external division को कोई नया काम नहीं चाहिए। बस n को हर जगह minus n से बदल दो, और denominator m plus n से m minus n बन जाता है। External formula के minus signs यहीं से आते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "formulas",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "The distance and section toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The distance and section toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "latex": "PQ=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "latex": "OP=\\sqrt{x_1^2+y_1^2+z_1^2}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 23,
+          "latex": "\\text{internal }m:n=\\left(\\frac{mx_2+nx_1}{m+n},\\ \\frac{my_2+ny_1}{m+n},\\ \\frac{mz_2+nz_1}{m+n}\\right)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "latex": "\\text{external }m:n=\\left(\\frac{mx_2-nx_1}{m-n},\\ \\frac{my_2-ny_1}{m-n},\\ \\frac{mz_2-nz_1}{m-n}\\right)"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "latex": "M=\\left(\\frac{x_1+x_2}{2},\\ \\frac{y_1+y_2}{2},\\ \\frac{z_1+z_2}{2}\\right)"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "latex": "k\\!:\\!1=\\left(\\frac{kx_2+x_1}{k+1},\\ \\frac{ky_2+y_1}{k+1},\\ \\frac{kz_2+z_1}{k+1}\\right)"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "latex": "G=\\left(\\frac{x_1+x_2+x_3}{3},\\ \\frac{y_1+y_2+y_3}{3},\\ \\frac{z_1+z_2+z_3}{3}\\right)"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 63,
+          "style": "red-margin",
+          "text": "$k \\gt 0$ internal, $k \\lt 0$ external. Tetrahedron centroid: denominator 4."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the complete formula toolkit for this subtopic, all on one board. Learn the shapes, not just the symbols."
+            },
+            {
+              "seq": 2,
+              "text": "The distance between P and Q is the square root of the sum of the three squared coordinate differences. Delta x squared, plus delta y squared, plus delta z squared, all under one root."
+            },
+            {
+              "seq": 3,
+              "text": "Distance from the origin is the same formula with P at the origin, so it is just the square root of x squared plus y squared plus z squared. The length of the position, effectively."
+            },
+            {
+              "seq": 4,
+              "text": "Internal section in ratio m to n. Each coordinate is m times the far point plus n times the near point, over m plus n. Same recipe for x, y, and z; only the coordinate changes."
+            },
+            {
+              "seq": 5,
+              "text": "External section is the twin with two sign changes: minus in each numerator and m minus n in the denominator. Internal adds, external subtracts. Hold those side by side."
+            },
+            {
+              "seq": 6,
+              "text": "The midpoint is the friendly special case: just average each pair of coordinates. It is internal one to one, and the m plus n becomes two."
+            },
+            {
+              "seq": 7,
+              "text": "The workhorse is the k to one form. Set the ratio as k to one and a general point on the line is k times the far point plus the near point, over k plus one. One unknown does everything."
+            },
+            {
+              "seq": 8,
+              "text": "The centroid of a triangle is the plain average of its three vertices, each coordinate summed and divided by three. Balance point of the triangle, coordinate by coordinate."
+            },
+            {
+              "seq": 9,
+              "text": "Two flags to keep. In the k to one form, a positive k means internal and a negative k means external, so the sign hands you the case for free. And a tetrahedron's centroid is the same average of its four vertices, divided by four instead of three."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये रहा इस subtopic का पूरा formula toolkit, सब एक board पर। Shapes सीखो, सिर्फ़ symbols नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "P और Q के बीच distance है तीन squared coordinate differences के sum का square root। Delta x squared, plus delta y squared, plus delta z squared, सब एक root के नीचे।"
+            },
+            {
+              "seq": 3,
+              "text": "Origin से distance वही formula है P को origin पर रखकर, तो बस square root of x squared plus y squared plus z squared। असल में position की length।"
+            },
+            {
+              "seq": 4,
+              "text": "Internal section, ratio m to n में। हर coordinate है m times far point plus n times near point, over m plus n। x, y, z के लिए वही recipe; सिर्फ़ coordinate बदलता है।"
+            },
+            {
+              "seq": 5,
+              "text": "External section उसका twin है दो sign changes के साथ: हर numerator में minus और denominator में m minus n। Internal adds, external subtracts। इन्हें साथ-साथ रखो।"
+            },
+            {
+              "seq": 6,
+              "text": "Midpoint एक friendly special case है: बस हर coordinate pair का average। ये internal one to one है, और m plus n बन जाता है two।"
+            },
+            {
+              "seq": 7,
+              "text": "Workhorse है k to one form। Ratio को k to one रखो और line पर general point है k times far point plus near point, over k plus one। एक unknown सब कुछ करता है।"
+            },
+            {
+              "seq": 8,
+              "text": "Triangle का centroid उसके तीन vertices का plain average है, हर coordinate जोड़कर तीन से भाग। Triangle का balance point, coordinate by coordinate।"
+            },
+            {
+              "seq": 9,
+              "text": "दो flags याद रखो। k to one form में, positive k मतलब internal और negative k मतलब external, तो sign मुफ़्त में case बता देता है। और tetrahedron का centroid उसके चार vertices का वही average है, तीन के बजाय चार से भाग।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "Worked example: a right-angled isosceles triangle",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: classify the triangle"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Show $A(0,7,10)$, $B(-1,6,6)$, $C(-4,9,6)$ form a right-angled isosceles triangle."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "latex": "AB^2=(-1)^2+(-1)^2+(-4)^2=18"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "latex": "BC^2=(-3)^2+(3)^2+(0)^2=18"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "latex": "CA^2=(4)^2+(-2)^2+(4)^2=36"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 38,
+          "text": "$AB^2=BC^2$ → two sides equal → isosceles."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "AB^2+BC^2=18+18=36=CA^2"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "text": "Converse of Pythagoras → right angle at B."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 62,
+          "style": "red-margin",
+          "text": "Work with squared lengths; take roots only if asked."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "A classic boards example: prove a triangle has a specific shape. The whole trick is to work with squared side lengths and never rush to a square root."
+            },
+            {
+              "seq": 2,
+              "text": "The vertices are A, B, and C on the board, and we must show the triangle they form is both right-angled and isosceles. So we compute the three squared side lengths."
+            },
+            {
+              "seq": 3,
+              "text": "A B squared. The differences from A to B are minus one, minus one, minus four. Square and add: one plus one plus sixteen, which is eighteen."
+            },
+            {
+              "seq": 4,
+              "text": "B C squared. Differences minus three, three, zero. Squares nine, nine, zero, summing to eighteen again."
+            },
+            {
+              "seq": 5,
+              "text": "C A squared. Differences four, minus two, four. Squares sixteen, four, sixteen, giving thirty-six."
+            },
+            {
+              "seq": 6,
+              "text": "Now read the results. A B squared equals B C squared, both eighteen. Equal squared lengths mean equal lengths, so two sides match and the triangle is isosceles."
+            },
+            {
+              "seq": 7,
+              "text": "For the right angle, test Pythagoras on the squares. A B squared plus B C squared is eighteen plus eighteen, thirty-six, which is exactly C A squared."
+            },
+            {
+              "seq": 8,
+              "text": "By the converse of Pythagoras, that equality forces a right angle, and it sits at B, the vertex shared by the two shorter equal sides. So the triangle is right-angled and isosceles, as claimed."
+            },
+            {
+              "seq": 9,
+              "text": "One habit that keeps this clean: stay in squared lengths the whole time. The Pythagoras check is exact with squares, and you only take a square root if the question actually asks for a length."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक classic boards example: साबित करो कि triangle की एक ख़ास shape है। पूरा trick है squared side lengths के साथ काम करना और square root की जल्दबाज़ी कभी न करना।"
+            },
+            {
+              "seq": 2,
+              "text": "Vertices A, B, और C board पर हैं, और हमें दिखाना है कि इनसे बना triangle right-angled भी है और isosceles भी। तो हम तीन squared side lengths निकालते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "A B squared। A से B तक differences हैं minus one, minus one, minus four। Square करके जोड़ो: one plus one plus sixteen, यानी eighteen।"
+            },
+            {
+              "seq": 4,
+              "text": "B C squared। Differences minus three, three, zero। Squares nine, nine, zero, फिर से जुड़कर eighteen।"
+            },
+            {
+              "seq": 5,
+              "text": "C A squared। Differences four, minus two, four। Squares sixteen, four, sixteen, यानी thirty-six।"
+            },
+            {
+              "seq": 6,
+              "text": "अब results पढ़ो। A B squared equals B C squared, दोनों eighteen। बराबर squared lengths मतलब बराबर lengths, तो दो sides match करते हैं और triangle isosceles है।"
+            },
+            {
+              "seq": 7,
+              "text": "Right angle के लिए, squares पर Pythagoras test करो। A B squared plus B C squared है eighteen plus eighteen, thirty-six, जो ठीक C A squared है।"
+            },
+            {
+              "seq": 8,
+              "text": "Converse of Pythagoras से, वो equality एक right angle मजबूर करती है, और वो B पर बैठता है, दोनों छोटी बराबर sides का साझा vertex। तो triangle right-angled और isosceles है, जैसा दावा था।"
+            },
+            {
+              "seq": 9,
+              "text": "एक आदत जो इसे साफ़ रखती है: पूरे समय squared lengths में रहो। Squares के साथ Pythagoras check exact है, और square root तभी लो जब सवाल सच में length माँगे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "Speed trap: where the XY-plane cuts a segment",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Speed trap: ratio at which a plane cuts a segment"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "In what ratio does the XY-plane divide the join of $P(2,-3,5)$ and $Q(4,6,-10)$?"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "text": "XY-plane is $z = 0$ — force only the z-coordinate to zero."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "latex": "\\frac{k(-10)+5}{k+1}=0"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "latex": "-10k+5=0\\ \\Rightarrow\\ k=\\tfrac{1}{2}"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 38,
+          "text": "$k \\gt 0$ → internal; ratio $k:1 = 1:2$."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 46,
+          "style": "red-margin",
+          "text": "The sign of k already tells you internal vs external — no separate check."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "Ignore x and y entirely: for a plane $z = 0$, only the z-equation matters."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Another speed trap. When a coordinate plane cuts a segment, the fast solvers touch only one coordinate. Let us see why."
+            },
+            {
+              "seq": 2,
+              "text": "The question: in what ratio does the X Y plane divide the segment from P to Q. Coordinates are on the board."
+            },
+            {
+              "seq": 3,
+              "text": "First translate the plane into an equation. The X Y plane is z equals zero. So we only need the point of division to have z equal to zero; the x and y values are irrelevant to the question."
+            },
+            {
+              "seq": 4,
+              "text": "Use the k to one form and write just the z coordinate. It is k times minus ten, the z of Q, plus five, the z of P, all over k plus one, and we set that equal to zero."
+            },
+            {
+              "seq": 5,
+              "text": "The denominator cannot be zero, so the numerator must vanish. Minus ten k plus five equals zero, giving k equals one half."
+            },
+            {
+              "seq": 6,
+              "text": "Since k came out positive, the division is internal. And k to one is one half to one, which clears to one to two. So the X Y plane cuts the segment one to two, internally."
+            },
+            {
+              "seq": 7,
+              "text": "Notice what we did not do: no separate internal-versus-external analysis. The sign of k settled that automatically, positive meaning internal. That is the whole point of the k to one form."
+            },
+            {
+              "seq": 8,
+              "text": "The lesson is efficiency. For a plane like z equals zero, only the z equation matters. Setting up all three coordinates and hunting for the actual point is a minute wasted on information the question never asked for."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक और speed trap। जब कोई coordinate plane किसी segment को काटता है, तो fast solvers सिर्फ़ एक coordinate छूते हैं। चलो देखें क्यों।"
+            },
+            {
+              "seq": 2,
+              "text": "सवाल: X Y plane, P से Q तक segment को किस ratio में बाँटता है। Coordinates board पर हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले plane को equation में बदलो। X Y plane है z equals zero। तो हमें बस division वाले point का z zero चाहिए; x और y values सवाल के लिए irrelevant हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "k to one form use करो और सिर्फ़ z coordinate लिखो। ये है k times minus ten, Q का z, plus five, P का z, over k plus one, और उसे zero के बराबर रखो।"
+            },
+            {
+              "seq": 5,
+              "text": "Denominator zero नहीं हो सकता, तो numerator को खत्म होना होगा। Minus ten k plus five equals zero, यानी k equals one half।"
+            },
+            {
+              "seq": 6,
+              "text": "चूँकि k positive निकला, division internal है। और k to one है one half to one, जो साफ़ होकर one to two बनता है। तो X Y plane segment को one to two, internally काटता है।"
+            },
+            {
+              "seq": 7,
+              "text": "ध्यान दो हमने क्या नहीं किया: कोई अलग internal-versus-external analysis नहीं। k के sign ने वो अपने आप तय कर दिया, positive मतलब internal। यही k to one form का पूरा मक़सद है।"
+            },
+            {
+              "seq": 8,
+              "text": "सबक़ है efficiency। z equals zero जैसे plane के लिए, सिर्फ़ z equation मायने रखती है। तीनों coordinates set up करके असली point ढूँढना उस information पर एक minute बर्बाद करना है जो सवाल ने माँगी ही नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "Worked example: an equidistant point on the y-axis",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Worked example: equidistant point on the y-axis"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Find the point on the y-axis equidistant from $A(3,1,2)$ and $B(-1,5,-4)$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "text": "A point on the y-axis has the form $R(0, y, 0)$ — three unknowns collapse to one."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "text": "Impose $RA^2 = RB^2$."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "latex": "9+(y-1)^2+4 = 1+(y-5)^2+16"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "y^2-2y+14 = y^2-10y+42"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "8y=28\\ \\Rightarrow\\ y=\\tfrac{7}{2}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 54,
+          "text": "The point is $\\left(0,\\ \\tfrac{7}{2},\\ 0\\right)$."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 62,
+          "style": "red-margin",
+          "text": "The $y^2$ terms cancel — an 'equidistant' condition is always linear."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example links the last subtopic to this one: we use the standard form for a point on an axis together with the distance formula."
+            },
+            {
+              "seq": 2,
+              "text": "We want the point on the y-axis that is equally far from A and from B, with A and B given on the board."
+            },
+            {
+              "seq": 3,
+              "text": "Start with the single most useful move. Any point on the y-axis looks like zero, y, zero, from the previous subtopic. That one fact collapses three unknown coordinates down to just one, the value y."
+            },
+            {
+              "seq": 4,
+              "text": "Equidistant means R A equals R B, and it is cleaner to square both sides and impose R A squared equals R B squared, avoiding roots entirely."
+            },
+            {
+              "seq": 5,
+              "text": "Write both squared distances from R equals zero, y, zero. On the left, nine from the x-gap, plus y minus one squared, plus four from the z-gap. On the right, one, plus y minus five squared, plus sixteen."
+            },
+            {
+              "seq": 6,
+              "text": "Expand and tidy. The left becomes y squared minus two y plus fourteen; the right becomes y squared minus ten y plus forty-two."
+            },
+            {
+              "seq": 7,
+              "text": "Now the y squared terms cancel on both sides, which is the whole reason this stays easy. What is left is linear: eight y equals twenty-eight, so y is seven halves."
+            },
+            {
+              "seq": 8,
+              "text": "Put that back into the y-axis form and the required point is zero, seven halves, zero. Just one coordinate to find, exactly as the setup promised."
+            },
+            {
+              "seq": 9,
+              "text": "And note the structural hint. Whenever a condition says equidistant from two points, the squared terms cancel and you are left with a linear equation, never a quadratic. If you see a y squared surviving, check your algebra."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये example पिछले subtopic को इससे जोड़ता है: हम axis पर point का standard form distance formula के साथ use करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "हमें y-axis पर वो point चाहिए जो A से और B से बराबर दूर है, A और B board पर दिए हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "सबसे useful move से शुरू करो। y-axis पर कोई भी point दिखता है zero, y, zero, पिछले subtopic से। वो एक fact तीन unknown coordinates को सिर्फ़ एक तक समेट देता है, value y।"
+            },
+            {
+              "seq": 4,
+              "text": "Equidistant मतलब R A equals R B, और दोनों तरफ़ square करके R A squared equals R B squared लगाना साफ़ है, roots से पूरी तरह बचकर।"
+            },
+            {
+              "seq": 5,
+              "text": "R equals zero, y, zero से दोनों squared distances लिखो। बाईं ओर, x-gap से nine, plus y minus one squared, plus z-gap से four। दाईं ओर, one, plus y minus five squared, plus sixteen।"
+            },
+            {
+              "seq": 6,
+              "text": "Expand और साफ़ करो। बाईं ओर बनता है y squared minus two y plus fourteen; दाईं ओर y squared minus ten y plus forty-two।"
+            },
+            {
+              "seq": 7,
+              "text": "अब y squared terms दोनों तरफ़ cancel हो जाते हैं, यही पूरी वजह है कि ये आसान रहता है। बचता है linear: eight y equals twenty-eight, तो y है seven halves।"
+            },
+            {
+              "seq": 8,
+              "text": "इसे y-axis form में वापस डालो और ज़रूरी point है zero, seven halves, zero। सिर्फ़ एक coordinate ढूँढना था, ठीक जैसा setup ने वादा किया।"
+            },
+            {
+              "seq": 9,
+              "text": "और structural hint देखो। जब भी condition कहे दो points से equidistant, squared terms cancel हो जाते हैं और बचती है linear equation, कभी quadratic नहीं। अगर y squared बचता दिखे, तो अपनी algebra check करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "worked_examples",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "Advanced: the perpendicular bisector plane",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Advanced: locus equidistant from two points"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Find all points equidistant from $A(1,2,3)$ and $B(3,2,-1)$; describe the surface."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "Take $P(x,y,z)$ with $PA^2 = PB^2$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "latex": "(x-1)^2+(y-2)^2+(z-3)^2=(x-3)^2+(y-2)^2+(z+1)^2"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 30,
+          "text": "The $(y-2)^2$ terms cancel; all squared terms cancel."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "latex": "-2x-6z+10=-6x+2z+10"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "latex": "4x-8z=0\\ \\Rightarrow\\ x-2z=0"
+        },
+        {
+          "seq": 8,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "caption": "Perpendicular bisector plane of AB: x - 2z = 0",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 280\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"160,55 255,85 255,250 160,220\" fill=\"#a7c957\" opacity=\"0.28\" stroke=\"#8ab04a\" stroke-width=\"1\"/><line x1=\"90\" y1=\"150\" x2=\"330\" y2=\"150\" stroke=\"#023047\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"150\" r=\"4\" fill=\"#c1121f\"/><circle cx=\"330\" cy=\"150\" r=\"4\" fill=\"#c1121f\"/><circle cx=\"207\" cy=\"150\" r=\"3.5\" fill=\"#555\"/><circle cx=\"250\" cy=\"110\" r=\"3.5\" fill=\"#7048e8\"/><line x1=\"250\" y1=\"110\" x2=\"90\" y2=\"150\" stroke=\"#7048e8\" stroke-width=\"1.4\" stroke-dasharray=\"5,4\"/><line x1=\"250\" y1=\"110\" x2=\"330\" y2=\"150\" stroke=\"#7048e8\" stroke-width=\"1.4\" stroke-dasharray=\"5,4\"/><text x=\"76\" y=\"146\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">A</text><text x=\"334\" y=\"146\" font-size=\"13\" font-family=\"system-ui, sans-serif\" font-weight=\"bold\">B</text><text x=\"192\" y=\"168\" font-size=\"10\" font-family=\"system-ui, sans-serif\" fill=\"#555\">midpoint</text><text x=\"256\" y=\"108\" font-size=\"12\" font-family=\"system-ui, sans-serif\" fill=\"#7048e8\">P</text><text x=\"150\" y=\"270\" font-size=\"11\" font-family=\"system-ui, sans-serif\" fill=\"#5a7a2a\">plane x - 2z = 0</text><text x=\"158\" y=\"128\" font-size=\"9\" font-family=\"system-ui, sans-serif\" fill=\"#7048e8\">PA</text><text x=\"286\" y=\"126\" font-size=\"9\" font-family=\"system-ui, sans-serif\" fill=\"#7048e8\">PB (= PA)</text></svg>"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 67,
+          "style": "red-margin",
+          "text": "Equidistant from two POINTS → a single plane (the perpendicular bisector)."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We close the subtopic with a JEE Advanced favourite, and it pairs beautifully with the two-planes locus from Subtopic one."
+            },
+            {
+              "seq": 2,
+              "text": "The task: find every point in space that is equidistant from the two fixed points A and B, and then say what surface those points form."
+            },
+            {
+              "seq": 3,
+              "text": "Let P equal x, y, z be a general such point. Equidistant means P A equals P B, so we impose P A squared equals P B squared and expand."
+            },
+            {
+              "seq": 4,
+              "text": "Write both squared distances. On the left, x minus one squared plus y minus two squared plus z minus three squared; on the right, x minus three squared plus y minus two squared plus z plus one squared."
+            },
+            {
+              "seq": 5,
+              "text": "Look before expanding fully. The y minus two squared appears identically on both sides and cancels. And once you expand, every squared term, x squared, y squared, z squared, cancels too. That is the signature of an equidistant-from-two-points condition."
+            },
+            {
+              "seq": 6,
+              "text": "What survives is linear. Collecting the leftovers gives minus two x minus six z plus ten on the left equals minus six x plus two z plus ten on the right."
+            },
+            {
+              "seq": 7,
+              "text": "Simplify: four x minus eight z equals zero, which divides down to x minus two z equals zero. A single linear equation."
+            },
+            {
+              "seq": 8,
+              "text": "A single linear equation in space is a plane, and here it is: the perpendicular bisector plane of segment A B. Every point on it is joined to A and to B by equal-length segments, and it slices space exactly halfway between them, at right angles to A B."
+            },
+            {
+              "seq": 9,
+              "text": "Keep the contrast sharp. Equidistant from two planes, back in Subtopic one, gave a pair of planes. Equidistant from two points gives a single plane. Recognise the pattern and you skip a page of algebra."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हम subtopic को एक JEE Advanced favourite से बंद करते हैं, और ये Subtopic one के two-planes locus के साथ ख़ूबसूरती से मेल खाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "काम: space में हर वो point ढूँढो जो दो fixed points A और B से equidistant है, फिर बताओ वो points कौन सा surface बनाते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "P equals x, y, z को एक ऐसा general point मानो। Equidistant मतलब P A equals P B, तो हम P A squared equals P B squared लगाकर expand करते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "दोनों squared distances लिखो। बाईं ओर, x minus one squared plus y minus two squared plus z minus three squared; दाईं ओर, x minus three squared plus y minus two squared plus z plus one squared।"
+            },
+            {
+              "seq": 5,
+              "text": "पूरा expand करने से पहले देखो। y minus two squared दोनों तरफ़ बिल्कुल एक जैसा है और cancel हो जाता है। और expand करते ही हर squared term, x squared, y squared, z squared, भी cancel। यही equidistant-from-two-points condition की पहचान है।"
+            },
+            {
+              "seq": 6,
+              "text": "जो बचता है वो linear है। बचे हुए इकट्ठा करो तो बाईं ओर minus two x minus six z plus ten equals दाईं ओर minus six x plus two z plus ten।"
+            },
+            {
+              "seq": 7,
+              "text": "Simplify: four x minus eight z equals zero, जो भाग होकर x minus two z equals zero बनता है। एक single linear equation।"
+            },
+            {
+              "seq": 8,
+              "text": "Space में एक single linear equation एक plane है, और ये रहा: segment A B का perpendicular bisector plane। इस पर हर point A और B से बराबर-length segments से जुड़ा है, और ये space को ठीक बीचोंबीच काटता है, A B के right angle पर।"
+            },
+            {
+              "seq": 9,
+              "text": "Contrast तेज़ रखो। दो planes से equidistant, Subtopic one में, planes की एक pair देता था। दो points से equidistant एक single plane देता है। Pattern पहचानो और तुम एक page की algebra छोड़ देते हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "tips",
+      "subtopic": "Distance and Section Formulas in 3D",
+      "title": "Common pitfalls and the k:1 pro-move",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Pitfalls and the k:1 pro-move"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 7,
+          "style": "red-margin",
+          "text": "INT ⇒ add ($m+n$); EXT ⇒ subtract ($m-n$). Do not mix them."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 15,
+          "text": "Ratio order: $m:n$ means $PR:RQ$, so $m$ pairs with the far point $x_2$."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "text": "Reversing which point is P silently inverts your ratio (the $3:5$ vs $5:3$ trap)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "Square the coordinate differences, and root the sum at the end — skip neither."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 39,
+          "text": "Three points may be collinear — always test before claiming a triangle."
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "style": "red-margin",
+          "text": "Pro-move: for any 'find the ratio' question, jump straight to the $k:1$ form."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "text": "One unknown, and the sign of $k$ gives internal ($k \\gt 0$) vs external ($k \\lt 0$) free."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us close Subtopic two with the errors that quietly cost marks and the one move that makes ratio questions trivial."
+            },
+            {
+              "seq": 2,
+              "text": "First and commonest: mixing up internal and external. Internal uses m plus n in the denominator with a plus in the numerator; external uses m minus n with a minus. Write INT adds, EXT subtracts in your margin before you substitute."
+            },
+            {
+              "seq": 3,
+              "text": "Second, ratio order. m to n means P R to R Q, so m is the part next to Q and it pairs with the far point, x two, in the numerator. Keep that pairing fixed."
+            },
+            {
+              "seq": 4,
+              "text": "If you quietly swap which point you called P and which you called Q, your ratio flips. That is the classic three to five versus five to three mistake, and it turns a correct method into a wrong answer."
+            },
+            {
+              "seq": 5,
+              "text": "Third, the mechanical slips. You must square each coordinate difference inside the formula, and you must root the whole sum at the very end. Skip either step and the answer is simply wrong."
+            },
+            {
+              "seq": 6,
+              "text": "Fourth, do not assume three given points make a triangle. They might be collinear. Always test first, with the distance sum, the section ratio, or by checking a midpoint, before you start calling it a triangle."
+            },
+            {
+              "seq": 7,
+              "text": "Now the pro-move that ties the ratio work together. For any question that asks for a ratio, or where a plane cuts a segment, go straight to the k to one form."
+            },
+            {
+              "seq": 8,
+              "text": "It uses a single unknown instead of two, and the sign of k hands you the case for free: positive k is internal, negative k is external. No separate case analysis, and you get the dividing ratio as a bonus."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो Subtopic two को उन गलतियों से बंद करें जो चुपचाप marks खाती हैं और उस एक move से जो ratio सवालों को trivial बना देती है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली और सबसे common: internal और external गड्डमड्ड करना। Internal denominator में m plus n और numerator में plus use करता है; external m minus n और minus। Substitute करने से पहले margin में लिखो INT adds, EXT subtracts।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरी, ratio order। m to n मतलब P R to R Q, तो m वो part है जो Q के पास है और numerator में far point, x two के साथ जुड़ता है। वो pairing fixed रखो।"
+            },
+            {
+              "seq": 4,
+              "text": "अगर तुम चुपके से बदल दो कि किसे P कहा और किसे Q, तो तुम्हारा ratio उलट जाता है। यही classic three to five versus five to three गलती है, और ये सही method को गलत जवाब बना देती है।"
+            },
+            {
+              "seq": 5,
+              "text": "तीसरी, mechanical slips। तुम्हें formula के अंदर हर coordinate difference square करना है, और आख़िर में पूरे sum का root लेना है। कोई भी step छोड़ो और जवाब बस गलत।"
+            },
+            {
+              "seq": 6,
+              "text": "चौथी, ये मत मान लो कि तीन दिए points एक triangle बनाते हैं। वो collinear हो सकते हैं। हमेशा पहले test करो, distance sum से, section ratio से, या midpoint check करके, इससे पहले कि उसे triangle कहना शुरू करो।"
+            },
+            {
+              "seq": 7,
+              "text": "अब वो pro-move जो ratio का सारा काम जोड़ देती है। किसी भी सवाल के लिए जो ratio माँगे, या जहाँ plane segment को काटे, सीधे k to one form पर जाओ।"
+            },
+            {
+              "seq": 8,
+              "text": "ये दो के बजाय एक unknown use करता है, और k का sign case मुफ़्त में दे देता है: positive k internal, negative k external। कोई अलग case analysis नहीं, और dividing ratio bonus में मिलता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2111 @@
+{
+  "chapter": "Conic Sections",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 10,
+  "part": 2,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "The Parabola",
+      "title": "The parabola: mirror of one focus",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Parabola: equidistant from a focus and a directrix"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "A parabola is every point equally far from a fixed point (focus) and a fixed line (directrix)."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "That balance is exactly eccentricity $e = 1$: (distance to focus) = (distance to directrix)."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 31,
+          "text": "Focus and directrix are the two ingredients; the vertex sits midway between them.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Rays parallel to the axis all reflect through the focus."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "text": "This is why headlights, dish antennas and solar cookers are parabolic."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "text": "One axis of symmetry runs through focus and vertex, perpendicular to the directrix."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 77,
+          "text": "Unlike ellipse or hyperbola, a parabola has ONE focus and ONE directrix.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>The parabola is the conic with a split personality: one focus, one directrix, perfectly balanced between them."
+            },
+            {
+              "seq": 2,
+              "text": "Formally, a parabola is the set of all points that are exactly as far from a fixed point, the focus, as they are from a fixed line, the directrix."
+            },
+            {
+              "seq": 3,
+              "text": "That perfect balance is precisely eccentricity equal to one: the distance to the focus always equals the distance to the directrix, never more, never less."
+            },
+            {
+              "seq": 4,
+              "text": "The two ingredients are the focus and the directrix, and the vertex is simply the midpoint between them, the closest the curve comes to either."
+            },
+            {
+              "seq": 5,
+              "text": "Here is the property that makes the parabola an engineer's favourite: every ray coming in parallel to the axis reflects off the curve and passes through the focus."
+            },
+            {
+              "seq": 6,
+              "text": "Reverse it and a source at the focus sends out a parallel beam. That single fact is why headlights, dish antennas, and solar cookers are all parabolic."
+            },
+            {
+              "seq": 7,
+              "text": "The whole shape is symmetric about one line, the axis, which runs through the focus and vertex and meets the directrix at a right angle."
+            },
+            {
+              "seq": 8,
+              "text": "And note the contrast with what is coming: an ellipse and a hyperbola each have two foci, but a parabola has just one focus and one directrix."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>parabola वो conic है जिसकी split personality है: एक focus, एक directrix, दोनों के बीच perfectly balanced।"
+            },
+            {
+              "seq": 2,
+              "text": "Formally, parabola उन सभी points का set है जो एक fixed point, focus, से उतने ही दूर हैं जितने एक fixed line, directrix, से।"
+            },
+            {
+              "seq": 3,
+              "text": "यही perfect balance है eccentricity बराबर one: focus से distance हमेशा directrix से distance के बराबर, न ज़्यादा, न कम।"
+            },
+            {
+              "seq": 4,
+              "text": "दो ingredients हैं focus और directrix, और vertex बस उन दोनों के बीच का midpoint है, curve किसी के भी सबसे पास यहीं आता है।"
+            },
+            {
+              "seq": 5,
+              "text": "यही वो property है जो parabola को engineers का favourite बनाती है: axis के parallel आने वाली हर ray curve से reflect होकर focus से गुज़रती है।"
+            },
+            {
+              "seq": 6,
+              "text": "इसे उल्टा करो तो focus पर रखा source एक parallel beam भेजता है। यही एक fact है जिससे headlights, dish antennas, और solar cookers सब parabolic होते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "पूरा shape एक line, axis, के बारे में symmetric है, जो focus और vertex से गुज़रती है और directrix से right angle पर मिलती है।"
+            },
+            {
+              "seq": 8,
+              "text": "और ध्यान दो आगे आने वाले से contrast: ellipse और hyperbola में दो-दो foci होते हैं, पर parabola में सिर्फ एक focus और एक directrix।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "The Parabola",
+      "title": "Deriving y-squared equals four a x",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Set up: focus $(a,0)$, directrix $x = -a$, vertex at the origin"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "Let $P(x,y)$ lie on the parabola. Distance to focus = distance to directrix."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\sqrt{(x-a)^2 + y^2} = x + a"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "(x-a)^2 + y^2 = (x+a)^2"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "latex": "y^2 = 4ax"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 62,
+          "text": "Vertex $(0,0)$; focus $(a,0)$; directrix $x = -a$; axis is the x-axis."
+        },
+        {
+          "seq": 7,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 75,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 360 260\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"130\" x2=\"345\" y2=\"130\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"70\" y1=\"25\" x2=\"70\" y2=\"235\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"40\" y1=\"35\" x2=\"40\" y2=\"225\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"14\" y=\"248\" font-size=\"11\" fill=\"#dc2626\">x = -a</text><path d=\"M 250 45 Q -110 130 250 215\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"100\" y1=\"70\" x2=\"100\" y2=\"190\" stroke=\"#16a34a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"106\" y=\"66\" font-size=\"11\" fill=\"#16a34a\">latus rectum = 4a</text><circle cx=\"70\" cy=\"130\" r=\"3\" fill=\"#1e293b\"/><text x=\"52\" y=\"150\" font-size=\"11\" fill=\"#1e293b\">vertex</text><circle cx=\"100\" cy=\"130\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"98\" y=\"152\" font-size=\"11\" fill=\"#dc2626\">focus (a,0)</text><text x=\"305\" y=\"126\" font-size=\"11\" fill=\"#475569\">axis</text></svg>",
+          "caption": "y² = 4ax: vertex, focus, directrix and latus rectum"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 89,
+          "latex": "\\text{latus rectum length} = 4a"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 100,
+          "text": "$a > 0$ is the focal distance; a larger $a$ means a wider parabola.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me derive the standard parabola so the formula never feels arbitrary. Place the focus at a, zero and the directrix as the vertical line x equals minus a, with the vertex at the origin exactly halfway between."
+            },
+            {
+              "seq": 2,
+              "text": "Take any point P at x, y on the curve. The defining rule says its distance to the focus equals its distance to the directrix."
+            },
+            {
+              "seq": 3,
+              "text": "Distance to the focus is the root of x minus a squared plus y squared. Distance to the vertical directrix is simply x plus a. Set them equal."
+            },
+            {
+              "seq": 4,
+              "text": "Square both sides, which is safe since both are non-negative, and you get x minus a squared plus y squared equals x plus a squared."
+            },
+            {
+              "seq": 5,
+              "text": "Expand, the x squared and a squared terms cancel, the cross terms combine, and everything collapses to the clean standard form, y squared equals four a x."
+            },
+            {
+              "seq": 6,
+              "text": "Read the geometry straight off: the vertex is the origin, the focus is a, zero, the directrix is x equals minus a, and the axis is the x-axis itself."
+            },
+            {
+              "seq": 7,
+              "text": "Here is the full picture: vertex at the tip, focus inside the curve, directrix the same distance out on the other side, and the latus rectum as the chord through the focus."
+            },
+            {
+              "seq": 8,
+              "text": "That latus rectum, the focal chord perpendicular to the axis, always has length four a. It is the quickest measure of how wide the parabola is."
+            },
+            {
+              "seq": 9,
+              "text": "And a itself is the focal distance from the vertex; a larger a pushes the focus out and opens the parabola wider."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "standard parabola derive कर देता हूँ ताकि formula कभी arbitrary न लगे। focus को a, zero पर रखो और directrix को vertical line x बराबर minus a, vertex origin पर बिल्कुल बीचोंबीच।"
+            },
+            {
+              "seq": 2,
+              "text": "curve पर कोई भी point P को x, y पर लो। defining rule कहती है इसका focus से distance directrix से distance के बराबर है।"
+            },
+            {
+              "seq": 3,
+              "text": "focus से distance है root of x minus a squared plus y squared। vertical directrix से distance बस x plus a है। दोनों बराबर रखो।"
+            },
+            {
+              "seq": 4,
+              "text": "दोनों sides square करो, जो safe है क्योंकि दोनों non-negative हैं, तो मिलता है x minus a squared plus y squared बराबर x plus a squared।"
+            },
+            {
+              "seq": 5,
+              "text": "expand करो, x squared और a squared terms cancel हो जाते हैं, cross terms जुड़ते हैं, और सब कुछ clean standard form में सिमट जाता है, y squared बराबर four a x।"
+            },
+            {
+              "seq": 6,
+              "text": "geometry सीधे पढ़ो: vertex है origin, focus है a, zero, directrix है x बराबर minus a, और axis खुद x-axis है।"
+            },
+            {
+              "seq": 7,
+              "text": "पूरी picture यहाँ है: tip पर vertex, curve के अंदर focus, दूसरी तरफ उतनी ही दूर directrix, और focus से गुज़रता chord latus rectum।"
+            },
+            {
+              "seq": 8,
+              "text": "वो latus rectum, axis के perpendicular focal chord, हमेशा four a length का होता है। ये सबसे तेज़ measure है कि parabola कितना चौड़ा है।"
+            },
+            {
+              "seq": 9,
+              "text": "और a खुद vertex से focal distance है; बड़ा a focus को बाहर धकेलता है और parabola को ज़्यादा चौड़ा खोलता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "The Parabola",
+      "title": "Reading orientation from the equation",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Four parabolas, one rule: the squared variable is trapped"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 440 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"85\" x2=\"160\" y2=\"85\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"100\" y1=\"45\" x2=\"100\" y2=\"125\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><path d=\"M 140 50 Q 78 85 140 120\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><circle cx=\"100\" cy=\"85\" r=\"2.5\" fill=\"#dc2626\"/><text x=\"56\" y=\"142\" font-size=\"11\" fill=\"#1e293b\">opens right: y² = 4ax</text><line x1=\"280\" y1=\"85\" x2=\"380\" y2=\"85\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"330\" y1=\"45\" x2=\"330\" y2=\"125\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><path d=\"M 290 50 Q 352 85 290 120\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><circle cx=\"330\" cy=\"85\" r=\"2.5\" fill=\"#dc2626\"/><text x=\"282\" y=\"142\" font-size=\"11\" fill=\"#1e293b\">opens left: y² = -4ax</text><line x1=\"60\" y1=\"230\" x2=\"160\" y2=\"230\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"100\" y1=\"190\" x2=\"100\" y2=\"270\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><path d=\"M 68 198 Q 100 262 132 198\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"1.8\"/><circle cx=\"100\" cy=\"230\" r=\"2.5\" fill=\"#dc2626\"/><text x=\"58\" y=\"287\" font-size=\"11\" fill=\"#1e293b\">opens up: x² = 4ay</text><line x1=\"280\" y1=\"230\" x2=\"380\" y2=\"230\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"330\" y1=\"190\" x2=\"330\" y2=\"270\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><path d=\"M 298 262 Q 330 198 362 262\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"1.8\"/><circle cx=\"330\" cy=\"230\" r=\"2.5\" fill=\"#dc2626\"/><text x=\"280\" y=\"287\" font-size=\"11\" fill=\"#1e293b\">opens down: x² = -4ay</text></svg>",
+          "caption": "The four standard parabolas and their equations"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "text": "$y^2 = 4ax$: opens RIGHT (toward $+x$). $y^2 = -4ax$: opens LEFT."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "text": "$x^2 = 4ay$: opens UP. $x^2 = -4ay$: opens DOWN."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 38,
+          "text": "The SQUARED variable is the axis; the sign points the opening.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "text": "If $y$ is squared, the axis is the x-axis; if $x$ is squared, the axis is the y-axis."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 65,
+          "text": "In every case $|4a|$ is the latus rectum, and the focus sits $a$ from the vertex along the axis."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 77,
+          "text": "No linear term of the squared variable means the vertex is the origin.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "There are four standard parabolas, but you never memorise four separate things. One rule reads all of them."
+            },
+            {
+              "seq": 2,
+              "text": "Look at the grid: right-opening, left-opening, up-opening, down-opening, each with its own equation."
+            },
+            {
+              "seq": 3,
+              "text": "y squared equals four a x opens to the right, toward positive x; put a minus sign, y squared equals minus four a x, and it opens to the left."
+            },
+            {
+              "seq": 4,
+              "text": "Swap the roles: x squared equals four a y opens upward, and with a minus sign, x squared equals minus four a y, it opens downward."
+            },
+            {
+              "seq": 5,
+              "text": "Here is the rule that generates all four: the variable that is squared tells you the axis, and the sign on the other side tells you which way it opens."
+            },
+            {
+              "seq": 6,
+              "text": "So if y is the squared variable, the axis is the x-axis; if x is squared, the axis is the y-axis. The parabola always opens along the axis of the squared variable."
+            },
+            {
+              "seq": 7,
+              "text": "And the numbers transfer unchanged: the size of four a is always the latus rectum, and the focus always sits a distance a from the vertex along that axis."
+            },
+            {
+              "seq": 8,
+              "text": "One more reading: because there is no linear term in the squared variable, the vertex sits at the origin. Shifted parabolas just move that vertex elsewhere."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चार standard parabolas हैं, पर तुम कभी चार अलग चीज़ें याद नहीं करते। एक ही rule सबको पढ़ लेती है।"
+            },
+            {
+              "seq": 2,
+              "text": "grid देखो: right-opening, left-opening, up-opening, down-opening, हर एक की अपनी equation।"
+            },
+            {
+              "seq": 3,
+              "text": "y squared बराबर four a x दाईं ओर खुलता है, positive x की तरफ; minus sign लगाओ, y squared बराबर minus four a x, तो बाईं ओर खुलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "roles बदलो: x squared बराबर four a y ऊपर खुलता है, और minus sign के साथ, x squared बराबर minus four a y, नीचे खुलता है।"
+            },
+            {
+              "seq": 5,
+              "text": "यही rule चारों बनाती है: जो variable squared है वो axis बताता है, और दूसरी side का sign बताता है किस तरफ खुलता है।"
+            },
+            {
+              "seq": 6,
+              "text": "तो अगर y squared variable है, axis है x-axis; अगर x squared है, axis है y-axis। parabola हमेशा squared variable के axis के साथ खुलता है।"
+            },
+            {
+              "seq": 7,
+              "text": "और numbers ज्यों के त्यों transfer होते हैं: four a का size हमेशा latus rectum है, और focus हमेशा उस axis पर vertex से distance a पर बैठता है।"
+            },
+            {
+              "seq": 8,
+              "text": "एक और reading: चूँकि squared variable में कोई linear term नहीं, vertex origin पर बैठता है। shifted parabolas बस उस vertex को कहीं और खिसका देते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "The Parabola",
+      "title": "Parabola: the four-form toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "All four standard parabolas at a glance"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 4,
+          "latex": "y^2 = 4ax \\ \\text{(right)}, \\qquad y^2 = -4ax \\ \\text{(left)}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "x^2 = 4ay \\ \\text{(up)}, \\qquad x^2 = -4ay \\ \\text{(down)}"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "text": "For $y^2 = 4ax$ (the reference case)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "latex": "\\text{focus } (a,0), \\quad \\text{directrix } x = -a"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "latex": "\\text{vertex } (0,0), \\quad \\text{axis: } y = 0"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 50,
+          "latex": "\\text{latus rectum} = 4a, \\quad \\text{ends } (a, \\pm 2a)"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "For the other three, swap the roles of $x,y$ and flip signs to match the opening."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 71,
+          "text": "Compare your equation to $4a$, not to $a$: read $4a$ first, then halve twice for $a$.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the whole parabola toolkit in one board."
+            },
+            {
+              "seq": 2,
+              "text": "The two horizontal-axis parabolas: y squared equals four a x opening right, and y squared equals minus four a x opening left."
+            },
+            {
+              "seq": 3,
+              "text": "The two vertical-axis parabolas: x squared equals four a y opening up, and x squared equals minus four a y opening down."
+            },
+            {
+              "seq": 4,
+              "text": "Let me give every element for the reference case, y squared equals four a x, and you adapt the rest by symmetry."
+            },
+            {
+              "seq": 5,
+              "text": "The focus is a, zero, and the directrix is the line x equals minus a, the same distance on the far side of the vertex."
+            },
+            {
+              "seq": 6,
+              "text": "The vertex is the origin and the axis is the line y equals zero, the x-axis."
+            },
+            {
+              "seq": 7,
+              "text": "The latus rectum has length four a, with its endpoints at a, plus and minus two a, straight above and below the focus."
+            },
+            {
+              "seq": 8,
+              "text": "For the other three forms, simply swap the roles of x and y and flip the sign to match the direction the curve opens."
+            },
+            {
+              "seq": 9,
+              "text": "And the number-one habit: read four a as a single block first. Match your equation to four a, then halve twice to get a. That alone kills most parabola errors."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "पूरा parabola toolkit एक board में।"
+            },
+            {
+              "seq": 2,
+              "text": "दो horizontal-axis parabolas: y squared बराबर four a x दाईं ओर खुलता, और y squared बराबर minus four a x बाईं ओर।"
+            },
+            {
+              "seq": 3,
+              "text": "दो vertical-axis parabolas: x squared बराबर four a y ऊपर खुलता, और x squared बराबर minus four a y नीचे।"
+            },
+            {
+              "seq": 4,
+              "text": "reference case, y squared बराबर four a x, के हर element दे देता हूँ, बाकी symmetry से adapt कर लेना।"
+            },
+            {
+              "seq": 5,
+              "text": "focus है a, zero, और directrix है line x बराबर minus a, vertex के दूसरी तरफ उतनी ही दूर।"
+            },
+            {
+              "seq": 6,
+              "text": "vertex है origin और axis है line y बराबर zero, यानी x-axis।"
+            },
+            {
+              "seq": 7,
+              "text": "latus rectum की length four a है, इसके endpoints a, plus और minus two a पर, focus के ठीक ऊपर और नीचे।"
+            },
+            {
+              "seq": 8,
+              "text": "बाकी तीन forms के लिए बस x और y के roles बदलो और curve जिस तरफ खुलता है उसके हिसाब से sign flip करो।"
+            },
+            {
+              "seq": 9,
+              "text": "और number-one आदत: four a को पहले single block की तरह पढ़ो। equation को four a से match करो, फिर a पाने के लिए दो बार आधा करो। यही अकेले ज़्यादातर parabola errors खत्म कर देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "The Parabola",
+      "title": "Parabola worked examples I",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 (CBSE): read elements from the equation"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "latex": "y^2 = 12x"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "text": "Match $4a = 12$, so $a = 3$; $y$ is squared and the sign is $+$, so it opens right."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "\\text{focus } (3,0), \\ \\text{directrix } x = -3, \\ \\text{LR} = 12"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Example 2 (JEE Main): build the equation from focus and directrix"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "text": "Focus $(0,-2)$, directrix $y = 2$. The vertex is midway: the origin."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "$x$ is squared (axis is the y-axis), it opens DOWN, and $a = 2$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 64,
+          "latex": "x^2 = -8y"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one, CBSE, is the bread-and-butter task: read every element off a given parabola."
+            },
+            {
+              "seq": 2,
+              "text": "The equation is y squared equals twelve x."
+            },
+            {
+              "seq": 3,
+              "text": "Match four a to twelve, so a is three. Since y is squared and the right side is positive, the parabola opens to the right."
+            },
+            {
+              "seq": 4,
+              "text": "That immediately gives the focus at three, zero, the directrix x equals minus three, and a latus rectum of twelve. Done, with no calculation beyond one division."
+            },
+            {
+              "seq": 5,
+              "text": "Example two, JEE Main, runs the other way: you are given the focus and directrix and must build the equation."
+            },
+            {
+              "seq": 6,
+              "text": "The focus is zero, minus two and the directrix is the line y equals two. The vertex sits midway between them, which is the origin."
+            },
+            {
+              "seq": 7,
+              "text": "The focus is directly below the vertex, so the axis is the y-axis, x is the squared variable, and the curve opens downward. The focal distance a is two."
+            },
+            {
+              "seq": 8,
+              "text": "So the form is x squared equals minus four a y, with a equal to two, giving x squared equals minus eight y. The minus sign encodes the downward opening."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one, CBSE, bread-and-butter task है: दी गई parabola से हर element पढ़ना।"
+            },
+            {
+              "seq": 2,
+              "text": "equation है y squared बराबर twelve x।"
+            },
+            {
+              "seq": 3,
+              "text": "four a को twelve से match करो, तो a है three। चूँकि y squared है और right side positive, parabola दाईं ओर खुलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "इससे तुरंत मिलता है focus three, zero पर, directrix x बराबर minus three, और latus rectum twelve। हो गया, एक division से ज़्यादा कुछ नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Example two, JEE Main, उल्टा चलता है: तुम्हें focus और directrix दिए हैं और equation बनानी है।"
+            },
+            {
+              "seq": 6,
+              "text": "focus है zero, minus two और directrix है line y बराबर two। vertex उन दोनों के बीचोंबीच है, यानी origin।"
+            },
+            {
+              "seq": 7,
+              "text": "focus vertex के ठीक नीचे है, तो axis है y-axis, x है squared variable, और curve नीचे खुलता है। focal distance a है two।"
+            },
+            {
+              "seq": 8,
+              "text": "तो form है x squared बराबर minus four a y, a बराबर two के साथ, जो देता है x squared बराबर minus eight y। minus sign नीचे खुलने को encode करता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "The Parabola",
+      "title": "Parabola worked examples II",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 (JEE Main): equation from vertex and focus"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 6,
+          "text": "Vertex $(0,0)$, focus $(5,0)$: focus on $+x$-axis, so it opens right, $a = 5$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "latex": "y^2 = 20x"
+        },
+        {
+          "seq": 4,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "text": "Example 4 (JEE Adv): a parabolic reflector"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "text": "A dish is $20$ cm across and $5$ cm deep. Vertex at origin, opening up: $x^2 = 4ay$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "The rim point $(10, 5)$ lies on the curve (half-width $10$, depth $5$)."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 61,
+          "latex": "10^2 = 4a(5) \\ \\Rightarrow \\ 100 = 20a \\ \\Rightarrow \\ a = 5"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 70,
+          "latex": "x^2 = 20y, \\quad \\text{focus } (0,5)"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 79,
+          "text": "The receiver sits at the focus, $5$ cm above the vertex: the reflector property at work.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three, JEE Main, gives the vertex and focus and asks for the equation."
+            },
+            {
+              "seq": 2,
+              "text": "The vertex is the origin and the focus is five, zero, sitting on the positive x-axis. So the parabola opens to the right with focal distance a equal to five."
+            },
+            {
+              "seq": 3,
+              "text": "Plug a equals five into y squared equals four a x and you get y squared equals twenty x. Two facts in, one equation out."
+            },
+            {
+              "seq": 4,
+              "text": "Example four is the Advanced application, a real parabolic dish, and it shows why the vertex-at-origin trick is so powerful."
+            },
+            {
+              "seq": 5,
+              "text": "The dish is twenty centimetres across and five centimetres deep. Put the vertex at the origin with the dish opening upward, so the form is x squared equals four a y."
+            },
+            {
+              "seq": 6,
+              "text": "The rim is ten centimetres out on each side and five deep, so the point ten, five lies on the parabola."
+            },
+            {
+              "seq": 7,
+              "text": "Substitute: ten squared is four a times five, that is a hundred equals twenty a, so a equals five."
+            },
+            {
+              "seq": 8,
+              "text": "The dish is x squared equals twenty y, and the focus is at zero, five, five centimetres straight up from the vertex."
+            },
+            {
+              "seq": 9,
+              "text": "That focus is exactly where you mount the receiver, because every incoming parallel signal reflects straight to it. The abstract property becomes a design instruction."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three, JEE Main, vertex और focus देकर equation माँगता है।"
+            },
+            {
+              "seq": 2,
+              "text": "vertex है origin और focus है five, zero, positive x-axis पर बैठा। तो parabola दाईं ओर खुलता है, focal distance a बराबर five।"
+            },
+            {
+              "seq": 3,
+              "text": "a बराबर five को y squared बराबर four a x में डालो तो मिलता है y squared बराबर twenty x। दो facts अंदर, एक equation बाहर।"
+            },
+            {
+              "seq": 4,
+              "text": "Example four Advanced application है, एक असली parabolic dish, और ये दिखाता है कि vertex-at-origin trick इतना powerful क्यों है।"
+            },
+            {
+              "seq": 5,
+              "text": "dish twenty centimetres चौड़ा और five centimetres गहरा है। vertex origin पर रखो, dish ऊपर खुलती हुई, तो form है x squared बराबर four a y।"
+            },
+            {
+              "seq": 6,
+              "text": "rim हर तरफ ten centimetres बाहर और five गहरा है, तो point ten, five parabola पर है।"
+            },
+            {
+              "seq": 7,
+              "text": "substitute करो: ten squared है four a into five, यानी one hundred बराबर twenty a, तो a बराबर five।"
+            },
+            {
+              "seq": 8,
+              "text": "dish है x squared बराबर twenty y, और focus है zero, five पर, vertex से पाँच centimetre सीधे ऊपर।"
+            },
+            {
+              "seq": 9,
+              "text": "वही focus है जहाँ तुम receiver लगाते हो, क्योंकि हर incoming parallel signal सीधे उसी पर reflect होता है। abstract property एक design instruction बन जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "tips",
+      "subtopic": "The Parabola",
+      "title": "Pitfalls and pro-tips: the parabola",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Parabola traps"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "text": "Read $4a$ as one block. $y^2 = 12x$ gives $4a = 12$, so $a = 3$, NOT $a = 12$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "text": "The squared variable names the axis; the sign of the other side names the direction."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "The focus is INSIDE the curve; the directrix is OUTSIDE, the same distance $a$ from the vertex."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "A parabola has ONE focus and ONE directrix, and eccentricity is exactly $1$."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The read-in-one-pass reflex"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "Spot the squared variable and the sign, match $4a$, then place the focus at $a$ and directrix at $-a$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 73,
+          "text": "Latus-rectum ends are $(a, \\pm 2a)$ for $y^2 = 4ax$: handy for a quick sketch.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me close the parabola with the mistakes that cost the most marks."
+            },
+            {
+              "seq": 2,
+              "text": "The single biggest one: read four a as a single block. In y squared equals twelve x, four a is twelve, so a is three. Students who set a equal to twelve get the focus and directrix wrong every time."
+            },
+            {
+              "seq": 3,
+              "text": "Second, keep the orientation rule straight: the squared variable names the axis, and the sign of the other side names the direction it opens."
+            },
+            {
+              "seq": 4,
+              "text": "Third, do not swap focus and directrix. The focus lies inside the curve; the directrix is a line outside it, the same distance a from the vertex on the opposite side."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, remember what makes it a parabola at all: exactly one focus, one directrix, and eccentricity precisely one, never a range."
+            },
+            {
+              "seq": 6,
+              "text": "Here is the one-pass reflex for any standard parabola."
+            },
+            {
+              "seq": 7,
+              "text": "Spot which variable is squared and the sign, match the coefficient to four a, then place the focus at distance a and the directrix at minus a along the axis."
+            },
+            {
+              "seq": 8,
+              "text": "And keep the latus-rectum endpoints handy, a, plus and minus two a for y squared equals four a x. Three points and a direction give you a clean sketch in seconds."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "parabola को उन गलतियों के साथ बंद करते हैं जो सबसे ज़्यादा marks लेती हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे बड़ी एक: four a को single block पढ़ो। y squared बराबर twelve x में, four a है twelve, तो a है three। जो a को twelve रख देते हैं उनका focus और directrix हर बार गलत आता है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, orientation rule साफ रखो: squared variable axis बताता है, और दूसरी side का sign बताता है किस तरफ खुलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, focus और directrix मत बदलो। focus curve के अंदर होता है; directrix बाहर की एक line है, vertex से उतनी ही दूर a पर, उल्टी तरफ।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, याद रखो इसे parabola क्या बनाता है: बिल्कुल एक focus, एक directrix, और eccentricity ठीक one, कभी range नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "किसी भी standard parabola के लिए one-pass reflex यहाँ है।"
+            },
+            {
+              "seq": 7,
+              "text": "पहचानो कौन-सा variable squared है और sign, coefficient को four a से match करो, फिर axis पर focus को distance a पर और directrix को minus a पर रखो।"
+            },
+            {
+              "seq": 8,
+              "text": "और latus-rectum endpoints handy रखो, y squared बराबर four a x के लिए a, plus और minus two a। तीन points और एक direction seconds में clean sketch दे देते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "concept",
+      "subtopic": "The Ellipse",
+      "title": "The ellipse: two pins and a string",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Ellipse: constant total distance to TWO foci"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Pin a loop of string over two tacks and trace it taut: the path is an ellipse."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "text": "For every point, (distance to $F_1$) + (distance to $F_2$) = constant = $2a$."
+        },
+        {
+          "seq": 4,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "text": "The two tacks are the foci; the string length fixes $2a$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Eccentricity lives strictly between $0$ and $1$: a squashed, closed curve."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 52,
+          "text": "As the foci merge, $e \\to 0$ and the ellipse becomes a circle."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "As the foci spread toward the ends, $e \\to 1$ and it grows long and thin."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "text": "A circle is just the ellipse with both foci at the centre.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>The ellipse has a beautifully physical definition you can build with two tacks and a loop of string."
+            },
+            {
+              "seq": 2,
+              "text": "Pin the loop over two tacks, pull it taut with a pencil, and drag the pencil all the way round. The closed oval it traces is an ellipse."
+            },
+            {
+              "seq": 3,
+              "text": "Why does that work? For every point on the curve, the sum of the distances to the two fixed points, the foci, stays constant. We call that constant two a."
+            },
+            {
+              "seq": 4,
+              "text": "The two tacks are the foci, and the length of your string fixes two a. Change the string and you change the size and shape."
+            },
+            {
+              "seq": 5,
+              "text": "In eccentricity terms the ellipse lives strictly between zero and one, a closed curve that is a squashed circle."
+            },
+            {
+              "seq": 6,
+              "text": "Push the two foci together and the sum condition forces equal radii in all directions, so e goes to zero and the ellipse becomes a circle."
+            },
+            {
+              "seq": 7,
+              "text": "Pull the foci apart toward the far ends and e climbs toward one, stretching the ellipse long and thin."
+            },
+            {
+              "seq": 8,
+              "text": "So the circle is not separate from the ellipse; it is the special ellipse with both foci sitting on top of each other at the centre."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>ellipse की एक बहुत ही physical definition है जिसे तुम दो tacks और string के loop से बना सकते हो।"
+            },
+            {
+              "seq": 2,
+              "text": "loop को दो tacks पर pin करो, pencil से tight खींचो, और pencil को पूरा घुमाओ। जो बंद oval बनता है वो ellipse है।"
+            },
+            {
+              "seq": 3,
+              "text": "ये काम क्यों करता है? curve के हर point के लिए, दो fixed points, foci, तक distances का sum constant रहता है। उसी constant को हम two a कहते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "दो tacks foci हैं, और तुम्हारी string की length two a fix करती है। string बदलो तो size और shape बदल जाते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "eccentricity के हिसाब से ellipse strictly zero और one के बीच रहता है, एक बंद curve जो squashed circle है।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों foci को पास लाओ तो sum condition हर direction में equal radii force करती है, तो e zero की तरफ जाता है और ellipse circle बन जाता है।"
+            },
+            {
+              "seq": 7,
+              "text": "foci को दूर के ends की तरफ खींचो तो e one की तरफ चढ़ता है, ellipse को long और thin खींचते हुए।"
+            },
+            {
+              "seq": 8,
+              "text": "तो circle ellipse से अलग नहीं है; ये वो special ellipse है जिसके दोनों foci centre पर एक-दूसरे के ऊपर बैठे हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "concept",
+      "subtopic": "The Ellipse",
+      "title": "Deriving the ellipse and the b-squared relation",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Foci $(\\pm c, 0)$, string length $2a$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "For $P(x,y)$: $PF_1 + PF_2 = 2a$, with $a > c > 0$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "latex": "\\sqrt{(x+c)^2 + y^2} + \\sqrt{(x-c)^2 + y^2} = 2a"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Isolate one root, square, simplify, then square again."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "latex": "\\frac{x^2}{a^2} + \\frac{y^2}{a^2 - c^2} = 1"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 70,
+          "latex": "b^2 = a^2 - c^2 \\ \\Rightarrow \\ \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 83,
+          "text": "Here $a$ = semi-major axis, $b$ = semi-minor axis, and $a > b$."
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 97,
+          "latex": "c = ae, \\quad e = \\frac{c}{a}, \\quad 0 < e < 1"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 112,
+          "text": "$b^2 = a^2 - c^2$ is the master link: it ties axis lengths to focal distance.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me derive the ellipse, because the derivation hands you the single most useful relationship in the topic. Put the foci at plus and minus c on the x-axis, and let the string length be two a."
+            },
+            {
+              "seq": 2,
+              "text": "For any point P on the curve, the distance to the first focus plus the distance to the second equals two a, and physically the string must reach across, so a is bigger than c."
+            },
+            {
+              "seq": 3,
+              "text": "Written out, that is the root of x plus c squared plus y squared, plus the root of x minus c squared plus y squared, equals two a. Two square roots is awkward, so we clear them in stages."
+            },
+            {
+              "seq": 4,
+              "text": "Move one root to the other side, square once to kill it, simplify, isolate the remaining root, and square a second time. It is algebra-heavy but completely mechanical."
+            },
+            {
+              "seq": 5,
+              "text": "When the dust settles you get x squared over a squared plus y squared over a squared minus c squared equals one."
+            },
+            {
+              "seq": 6,
+              "text": "Now define b squared as a squared minus c squared, and the equation becomes the clean standard form, x squared over a squared plus y squared over b squared equals one."
+            },
+            {
+              "seq": 7,
+              "text": "Here a is the semi-major axis, the longer half-width, and b is the semi-minor axis, the shorter one, so a is greater than b whenever the foci are on the x-axis."
+            },
+            {
+              "seq": 8,
+              "text": "The focal distance c relates to size through c equals a e, so the eccentricity e is c over a, and because c is less than a, e always sits strictly between zero and one."
+            },
+            {
+              "seq": 9,
+              "text": "Commit b squared equals a squared minus c squared to memory. It is the master link tying the two axis lengths to the focal distance, and almost every ellipse problem uses it."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ellipse derive कर देता हूँ, क्योंकि derivation तुम्हें topic का सबसे useful relationship देती है। foci को x-axis पर plus और minus c पर रखो, और string length two a।"
+            },
+            {
+              "seq": 2,
+              "text": "curve के किसी भी point P के लिए, पहले focus से distance plus दूसरे से distance बराबर two a, और physically string को पार पहुँचना है, तो a, c से बड़ा है।"
+            },
+            {
+              "seq": 3,
+              "text": "लिखो तो ये है root of x plus c squared plus y squared, plus root of x minus c squared plus y squared, बराबर two a। दो square roots awkward हैं, तो हम इन्हें stages में clear करते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "एक root को दूसरी side ले जाओ, एक बार square करके उसे खत्म करो, simplify करो, बची root को isolate करो, और दूसरी बार square करो। algebra-heavy है पर पूरी तरह mechanical।"
+            },
+            {
+              "seq": 5,
+              "text": "जब धूल बैठती है तो मिलता है x squared over a squared plus y squared over a squared minus c squared बराबर one।"
+            },
+            {
+              "seq": 6,
+              "text": "अब b squared को define करो a squared minus c squared, और equation बन जाती है clean standard form, x squared over a squared plus y squared over b squared बराबर one।"
+            },
+            {
+              "seq": 7,
+              "text": "यहाँ a है semi-major axis, लंबा half-width, और b है semi-minor axis, छोटा वाला, तो जब foci x-axis पर हों तो a, b से बड़ा है।"
+            },
+            {
+              "seq": 8,
+              "text": "focal distance c size से जुड़ता है c बराबर a e के ज़रिए, तो eccentricity e है c over a, और चूँकि c, a से छोटा है, e हमेशा strictly zero और one के बीच रहता है।"
+            },
+            {
+              "seq": 9,
+              "text": "b squared बराबर a squared minus c squared याद कर लो। ये master link है जो दोनों axis lengths को focal distance से जोड़ता है, और लगभग हर ellipse problem इसे use करती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "The Ellipse",
+      "title": "Anatomy: horizontal versus vertical major axis",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Which axis is major? The larger denominator wins"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 260\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"200\" cy=\"130\" rx=\"150\" ry=\"90\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"130\" x2=\"360\" y2=\"130\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"230\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><circle cx=\"200\" cy=\"130\" r=\"2.5\" fill=\"#334155\"/><text x=\"205\" y=\"146\" font-size=\"11\" fill=\"#334155\">C</text><circle cx=\"50\" cy=\"130\" r=\"3\" fill=\"#dc2626\"/><text x=\"28\" y=\"124\" font-size=\"11\" fill=\"#dc2626\">(-a,0)</text><circle cx=\"350\" cy=\"130\" r=\"3\" fill=\"#dc2626\"/><text x=\"330\" y=\"124\" font-size=\"11\" fill=\"#dc2626\">(a,0)</text><circle cx=\"80\" cy=\"130\" r=\"3.5\" fill=\"#2563eb\"/><text x=\"60\" y=\"154\" font-size=\"11\" fill=\"#2563eb\">F1(-c,0)</text><circle cx=\"320\" cy=\"130\" r=\"3.5\" fill=\"#2563eb\"/><text x=\"300\" y=\"154\" font-size=\"11\" fill=\"#2563eb\">F2(c,0)</text><circle cx=\"200\" cy=\"40\" r=\"3\" fill=\"#16a34a\"/><text x=\"206\" y=\"44\" font-size=\"11\" fill=\"#16a34a\">(0,b)</text></svg>",
+          "caption": "Horizontal ellipse: centre, vertices, foci and semi-axes"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 21,
+          "text": "$\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$ with $a > b$: major axis along the x-axis."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "text": "$\\dfrac{x^2}{b^2} + \\dfrac{y^2}{a^2} = 1$ with $a > b$: major axis along the y-axis."
+        },
+        {
+          "seq": 5,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "text": "$a^2$ is ALWAYS the larger denominator; it sits under the major axis's variable.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 61,
+          "text": "Vertices are $2a$ apart on the major axis; the minor axis has length $2b$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 71,
+          "text": "Foci lie ON the major axis, at distance $c = \\sqrt{a^2 - b^2}$ from the centre."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 83,
+          "text": "Directrices are the lines perpendicular to the major axis at $x = \\pm a/e$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The one decision that trips people is which way the ellipse is oriented, so let me make it mechanical."
+            },
+            {
+              "seq": 2,
+              "text": "Here is a horizontal ellipse fully labelled: the centre, the two vertices at the ends of the long axis, the two foci inside, and the semi-axes a and b."
+            },
+            {
+              "seq": 3,
+              "text": "If the equation is x squared over a squared plus y squared over b squared equals one, with a greater than b, the major axis runs along the x-axis."
+            },
+            {
+              "seq": 4,
+              "text": "If instead a squared sits under y squared, so x squared over b squared plus y squared over a squared, the major axis runs along the y-axis. Nothing else changes."
+            },
+            {
+              "seq": 5,
+              "text": "The rule that decides it: a squared is always the larger denominator, and it sits under the variable of the major axis. Find the bigger denominator and you have found the long direction."
+            },
+            {
+              "seq": 6,
+              "text": "The two vertices are two a apart along the major axis, and the minor axis has total length two b across the short direction."
+            },
+            {
+              "seq": 7,
+              "text": "The foci always lie on the major axis, each a distance c from the centre, where c is the root of a squared minus b squared."
+            },
+            {
+              "seq": 8,
+              "text": "And the directrices are the two lines perpendicular to the major axis at plus and minus a over e, mirroring the focus-directrix idea from the parabola."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "एक decision जिस पर लोग फँसते हैं वो है ellipse किस तरफ oriented है, तो इसे mechanical बना देता हूँ।"
+            },
+            {
+              "seq": 2,
+              "text": "यहाँ एक horizontal ellipse पूरी तरह labelled है: centre, long axis के ends पर दो vertices, अंदर दो foci, और semi-axes a और b।"
+            },
+            {
+              "seq": 3,
+              "text": "अगर equation है x squared over a squared plus y squared over b squared बराबर one, a greater than b के साथ, तो major axis x-axis के साथ चलती है।"
+            },
+            {
+              "seq": 4,
+              "text": "और अगर a squared, y squared के नीचे बैठे, यानी x squared over b squared plus y squared over a squared, तो major axis y-axis के साथ चलती है। और कुछ नहीं बदलता।"
+            },
+            {
+              "seq": 5,
+              "text": "जो rule decide करती है: a squared हमेशा बड़ा denominator है, और वो major axis के variable के नीचे बैठता है। बड़ा denominator ढूँढो और long direction मिल गया।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों vertices major axis के साथ two a दूर हैं, और minor axis की total length short direction में two b है।"
+            },
+            {
+              "seq": 7,
+              "text": "foci हमेशा major axis पर होते हैं, हर एक centre से distance c पर, जहाँ c है root of a squared minus b squared।"
+            },
+            {
+              "seq": 8,
+              "text": "और directrices वो दो lines हैं जो major axis के perpendicular plus और minus a over e पर हैं, parabola वाले focus-directrix idea को दोहराते हुए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "formulas",
+      "subtopic": "The Ellipse",
+      "title": "Ellipse: the formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Ellipse essentials (major axis on x-axis, $a > b$)"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "b^2 = a^2 - c^2, \\quad e = \\frac{c}{a} = \\sqrt{1 - \\frac{b^2}{a^2}}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "latex": "\\text{vertices } (\\pm a, 0), \\quad \\text{foci } (\\pm c, 0)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "latex": "\\text{major axis} = 2a, \\quad \\text{minor axis} = 2b"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "latex": "\\text{latus rectum} = \\frac{2b^2}{a}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "latex": "\\text{directrices: } x = \\pm \\frac{a}{e}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "For a vertical major axis, swap $a^2,b^2$ and read the foci as $(0, \\pm c)$."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 74,
+          "text": "Identify $a^2$ (bigger) and $b^2$ (smaller) FIRST; every formula follows.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the full ellipse toolkit for the standard case with the major axis on the x-axis."
+            },
+            {
+              "seq": 2,
+              "text": "The equation is x squared over a squared plus y squared over b squared equals one, with a bigger than b."
+            },
+            {
+              "seq": 3,
+              "text": "The core relations: b squared equals a squared minus c squared, and eccentricity is c over a, which also equals the root of one minus b squared over a squared. That last form lets you get e straight from the equation."
+            },
+            {
+              "seq": 4,
+              "text": "The vertices are at plus and minus a, zero, and the foci at plus and minus c, zero, all on the x-axis."
+            },
+            {
+              "seq": 5,
+              "text": "The major axis has length two a, and the minor axis two b."
+            },
+            {
+              "seq": 6,
+              "text": "The latus rectum, the focal chord across the ellipse, has length two b squared over a."
+            },
+            {
+              "seq": 7,
+              "text": "The directrices are the vertical lines x equals plus and minus a over e."
+            },
+            {
+              "seq": 8,
+              "text": "If the major axis is vertical instead, just swap a squared and b squared in the equation and read the foci as zero, plus and minus c."
+            },
+            {
+              "seq": 9,
+              "text": "The one habit that makes all of this automatic: identify a squared as the larger denominator and b squared as the smaller one first. Once you know which is which, every formula falls straight out."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ पूरा ellipse toolkit है standard case के लिए, major axis x-axis पर।"
+            },
+            {
+              "seq": 2,
+              "text": "equation है x squared over a squared plus y squared over b squared बराबर one, a, b से बड़ा।"
+            },
+            {
+              "seq": 3,
+              "text": "core relations: b squared बराबर a squared minus c squared, और eccentricity है c over a, जो root of one minus b squared over a squared के भी बराबर है। वो आखिरी form तुम्हें e सीधे equation से देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "vertices हैं plus और minus a, zero पर, और foci plus और minus c, zero पर, सब x-axis पर।"
+            },
+            {
+              "seq": 5,
+              "text": "major axis की length two a है, और minor axis two b।"
+            },
+            {
+              "seq": 6,
+              "text": "latus rectum, ellipse के आर-पार focal chord, की length two b squared over a है।"
+            },
+            {
+              "seq": 7,
+              "text": "directrices वो vertical lines हैं x बराबर plus और minus a over e।"
+            },
+            {
+              "seq": 8,
+              "text": "अगर major axis vertical हो, तो बस equation में a squared और b squared swap करो और foci को zero, plus और minus c पढ़ो।"
+            },
+            {
+              "seq": 9,
+              "text": "एक आदत जो ये सब automatic कर देती है: पहले a squared को बड़ा denominator और b squared को छोटा पहचानो। एक बार पता चल गया कौन कौन है, हर formula सीधे निकल आता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "The Ellipse",
+      "title": "Ellipse worked examples I",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 (CBSE): all elements from the equation"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 3,
+          "latex": "\\frac{x^2}{25} + \\frac{y^2}{9} = 1"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "text": "Larger denom $25$ under $x^2$: $a^2 = 25,\\ b^2 = 9$, so $a = 5,\\ b = 3$; major axis on x."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "c = \\sqrt{25 - 9} = 4, \\quad e = \\tfrac{4}{5} = 0.8"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "latex": "\\text{vertices } (\\pm 5,0), \\ \\text{foci } (\\pm 4,0), \\ \\text{LR} = \\tfrac{2(9)}{5} = 3.6"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "Example 2 (JEE Main): watch the orientation"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "latex": "\\frac{x^2}{9} + \\frac{y^2}{25} = 1"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 61,
+          "text": "Now $25$ is under $y^2$: major axis on y, foci $(0,\\pm 4)$, vertices $(0,\\pm 5)$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one, CBSE, is the standard read-off task."
+            },
+            {
+              "seq": 2,
+              "text": "The ellipse is x squared over twenty-five plus y squared over nine equals one."
+            },
+            {
+              "seq": 3,
+              "text": "The larger denominator, twenty-five, sits under x squared, so a squared is twenty-five and b squared is nine, giving a equals five and b equals three, with the major axis on the x-axis."
+            },
+            {
+              "seq": 4,
+              "text": "Then c is the root of twenty-five minus nine, which is four, and the eccentricity is c over a, four over five, zero point eight."
+            },
+            {
+              "seq": 5,
+              "text": "So the vertices are plus and minus five, zero, the foci plus and minus four, zero, and the latus rectum is two times nine over five, three point six."
+            },
+            {
+              "seq": 6,
+              "text": "Example two, JEE Main, looks almost identical but flips the orientation, and that is the whole point."
+            },
+            {
+              "seq": 7,
+              "text": "Now the ellipse is x squared over nine plus y squared over twenty-five equals one."
+            },
+            {
+              "seq": 8,
+              "text": "This time twenty-five sits under y squared, so the major axis is vertical. The foci move to zero, plus and minus four, and the vertices to zero, plus and minus five. Same numbers, rotated ninety degrees, because the bigger denominator moved."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one, CBSE, standard read-off task है।"
+            },
+            {
+              "seq": 2,
+              "text": "ellipse है x squared over twenty-five plus y squared over nine बराबर one।"
+            },
+            {
+              "seq": 3,
+              "text": "बड़ा denominator, twenty-five, x squared के नीचे बैठा है, तो a squared है twenty-five और b squared है nine, जो देता है a बराबर five और b बराबर three, major axis x-axis पर।"
+            },
+            {
+              "seq": 4,
+              "text": "फिर c है root of twenty-five minus nine, यानी four, और eccentricity है c over a, four over five, zero point eight।"
+            },
+            {
+              "seq": 5,
+              "text": "तो vertices हैं plus और minus five, zero, foci plus और minus four, zero, और latus rectum है two into nine over five, three point six।"
+            },
+            {
+              "seq": 6,
+              "text": "Example two, JEE Main, लगभग identical दिखता है पर orientation flip करता है, और यही पूरा point है।"
+            },
+            {
+              "seq": 7,
+              "text": "अब ellipse है x squared over nine plus y squared over twenty-five बराबर one।"
+            },
+            {
+              "seq": 8,
+              "text": "इस बार twenty-five, y squared के नीचे बैठा है, तो major axis vertical है। foci चले जाते हैं zero, plus और minus four पर, और vertices zero, plus और minus five पर। वही numbers, ninety degrees घूमे हुए, क्योंकि बड़ा denominator हिल गया।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "The Ellipse",
+      "title": "Ellipse worked examples II",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 (JEE Main): build from foci and vertices"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Vertices $(\\pm 6,0)$, foci $(\\pm 4,0)$: so $a = 6,\\ c = 4$, major axis on x."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "b^2 = a^2 - c^2 = 36 - 16 = 20"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "latex": "\\frac{x^2}{36} + \\frac{y^2}{20} = 1"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 38,
+          "text": "Example 4 (JEE Adv): from eccentricity and a length"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "Foci on x-axis, $e = \\tfrac{1}{2}$, major axis length $10$, so $a = 5$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "latex": "c = ae = 5 \\cdot \\tfrac{1}{2} = 2.5, \\quad b^2 = 25 - 6.25 = 18.75"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 70,
+          "latex": "\\frac{x^2}{25} + \\frac{y^2}{18.75} = 1"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 77,
+          "text": "Half the major axis is $a$; never plug the full length $2a$ into a formula.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three, JEE Main, gives you the vertices and foci and asks for the equation."
+            },
+            {
+              "seq": 2,
+              "text": "The vertices are plus and minus six, zero and the foci plus and minus four, zero, so a is six, c is four, and the major axis is on the x-axis."
+            },
+            {
+              "seq": 3,
+              "text": "Use the master relation: b squared equals a squared minus c squared, thirty-six minus sixteen, which is twenty."
+            },
+            {
+              "seq": 4,
+              "text": "So the ellipse is x squared over thirty-six plus y squared over twenty equals one. Two points of data straight into one equation."
+            },
+            {
+              "seq": 5,
+              "text": "Example four, Advanced, gives the eccentricity and a length instead, which is a favourite twist."
+            },
+            {
+              "seq": 6,
+              "text": "The foci are on the x-axis, e is one half, and the major axis has length ten. Halve that length to get a equals five, not ten."
+            },
+            {
+              "seq": 7,
+              "text": "Then c is a e, five times one half, two point five; and b squared is a squared minus c squared, twenty-five minus six point two five, eighteen point seven five."
+            },
+            {
+              "seq": 8,
+              "text": "So the ellipse is x squared over twenty-five plus y squared over eighteen point seven five equals one."
+            },
+            {
+              "seq": 9,
+              "text": "And note the trap that snares half the class: the a in every formula is the semi-major axis, half the full length. Plugging in the whole two a instead of a doubles your answer and loses the marks."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three, JEE Main, vertices और foci देकर equation माँगता है।"
+            },
+            {
+              "seq": 2,
+              "text": "vertices हैं plus और minus six, zero और foci plus और minus four, zero, तो a है six, c है four, और major axis x-axis पर।"
+            },
+            {
+              "seq": 3,
+              "text": "master relation use करो: b squared बराबर a squared minus c squared, thirty-six minus sixteen, यानी twenty।"
+            },
+            {
+              "seq": 4,
+              "text": "तो ellipse है x squared over thirty-six plus y squared over twenty बराबर one। दो data points सीधे एक equation में।"
+            },
+            {
+              "seq": 5,
+              "text": "Example four, Advanced, इसके बजाय eccentricity और एक length देता है, जो एक favourite twist है।"
+            },
+            {
+              "seq": 6,
+              "text": "foci x-axis पर हैं, e है one half, और major axis की length ten है। उस length को आधा करके a बराबर five पाओ, ten नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "फिर c है a e, five into one half, two point five; और b squared है a squared minus c squared, twenty-five minus six point two five, eighteen point seven five।"
+            },
+            {
+              "seq": 8,
+              "text": "तो ellipse है x squared over twenty-five plus y squared over eighteen point seven five बराबर one।"
+            },
+            {
+              "seq": 9,
+              "text": "और वो trap देखो जो आधी class को फँसाती है: हर formula में a है semi-major axis, पूरी length का आधा। a की जगह पूरा two a डालने से answer double हो जाता है और marks चले जाते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "tips",
+      "subtopic": "The Ellipse",
+      "title": "Pitfalls and pro-tips: the ellipse",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Ellipse traps"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 6,
+          "text": "$a^2$ is the BIGGER denominator. Its variable marks the major axis.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "text": "Foci lie on the MAJOR axis, never the minor one; check orientation before placing them."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 28,
+          "text": "Use $b^2 = a^2 - c^2$ (subtract); do not mis-remember it as $a^2 = b^2 - c^2$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "In formulas $a,b$ are SEMI-axes; halve any full axis length first."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "The identify-first reflex"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "text": "Step 1: bigger denom is $a^2$, so that variable's axis is major. Step 2: $c = \\sqrt{a^2 - b^2}$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 72,
+          "text": "Then $e = c/a$, foci on the major axis, and LR $= 2b^2/a$ all follow.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me close the ellipse with the traps examiners set again and again."
+            },
+            {
+              "seq": 2,
+              "text": "First and biggest: a squared is the larger denominator, and the variable above it marks the major axis. Get this backwards and every element lands in the wrong place."
+            },
+            {
+              "seq": 3,
+              "text": "Second, the foci always sit on the major axis, never the minor one. So decide the orientation before you place a single focus."
+            },
+            {
+              "seq": 4,
+              "text": "Third, use the relation the right way round: b squared equals a squared minus c squared, a subtraction. Students who mangle it into a squared equals b squared minus c squared get negative lengths and panic."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, in every formula a and b are the semi-axes, the half-lengths. If a question gives you a full axis length, halve it before it touches a formula."
+            },
+            {
+              "seq": 6,
+              "text": "Here is the reflex that keeps you safe."
+            },
+            {
+              "seq": 7,
+              "text": "Step one: the bigger denominator is a squared, and its variable's axis is the major one. Step two: get c from the root of a squared minus b squared."
+            },
+            {
+              "seq": 8,
+              "text": "After that everything cascades: e is c over a, the foci go on the major axis at distance c, and the latus rectum is two b squared over a. Identify first, and the formulas run themselves."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ellipse को उन traps के साथ बंद करते हैं जो examiners बार-बार लगाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली और सबसे बड़ी: a squared बड़ा denominator है, और उसके ऊपर वाला variable major axis marks करता है। इसे उल्टा किया तो हर element गलत जगह गिरेगा।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, foci हमेशा major axis पर बैठते हैं, minor पर कभी नहीं। तो एक भी focus रखने से पहले orientation तय करो।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, relation सही तरीके से use करो: b squared बराबर a squared minus c squared, एक subtraction। जो इसे a squared बराबर b squared minus c squared बना देते हैं उन्हें negative lengths मिलती हैं और panic।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, हर formula में a और b semi-axes हैं, half-lengths। अगर question पूरी axis length दे, तो formula को छूने से पहले उसे आधा करो।"
+            },
+            {
+              "seq": 6,
+              "text": "वो reflex यहाँ है जो तुम्हें safe रखता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Step one: बड़ा denominator a squared है, और उसके variable का axis major है। Step two: c को root of a squared minus b squared से निकालो।"
+            },
+            {
+              "seq": 8,
+              "text": "उसके बाद सब cascade होता है: e है c over a, foci major axis पर distance c पर जाते हैं, और latus rectum है two b squared over a। पहले identify करो, और formulas खुद चल पड़ते हैं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

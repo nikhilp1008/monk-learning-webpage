@@ -1,0 +1,3168 @@
+{
+  "chapter": "Differential Equations",
+  "subject": "maths",
+  "class_level": 12,
+  "chapter_order": 9,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "part": 1,
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "Order, Degree & Solutions",
+      "title": "What a differential equation actually says",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "A rule about CHANGE, not a value"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "type": "text",
+          "text": "Hot chai cooling in Shimla: hard to state its exact temperature at 9:47 a.m. — easy to state that it cools faster when it is hotter than the room."
+        },
+        {
+          "seq": 3,
+          "emphasis": "high",
+          "reveal_at": 33,
+          "type": "text",
+          "text": "A differential equation is any equation containing a derivative of an unknown function."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "type": "formula",
+          "latex": "\\frac{d\\theta}{dt} = -k(\\theta - \\theta_s)"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 65,
+          "type": "text",
+          "text": "It hands you the RULE of change; solving means undoing the rule to recover the function itself."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 80,
+          "type": "text",
+          "text": "ODE: derivatives with respect to ONE independent variable — all of Class 12."
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 95,
+          "type": "text",
+          "text": "PDE: partial derivatives with respect to several variables — engineering, not here."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 108,
+          "type": "note",
+          "style": "red-margin",
+          "text": "This subtopic: READ, CLASSIFY, VERIFY. We are not solving yet."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>What if I told you the most powerful equations in mathematics never tell you the answer directly?</curious> They only tell you how the answer changes. Welcome to differential equations."
+            },
+            {
+              "seq": 2,
+              "text": "Picture a cup of hot chai cooling on a winter morning in Shimla. Writing a formula for its exact temperature at any given minute is hard. But one simpler statement is completely true: the rate at which the chai cools is proportional to how much hotter it is than the room."
+            },
+            {
+              "seq": 3,
+              "text": "That sentence is the soul of this chapter. A differential equation is simply any equation that contains a derivative of an unknown function. Instead of the function, you are handed a rule about how the function changes."
+            },
+            {
+              "seq": 4,
+              "text": "Here is that chai sentence written in symbols. The rate of change of temperature theta with time equals minus k times the gap between theta and the surrounding temperature theta s. A statement about a rate, not about a value."
+            },
+            {
+              "seq": 5,
+              "text": "The equation gives you the rule of change. Later in the chapter, solving will mean undoing that rule to recover the original function. Think of it as learning to read the scoreboard before you play the match."
+            },
+            {
+              "seq": 6,
+              "text": "Two classifications first. If the unknown function depends on one independent variable, say everything is a function of x, the equation is an ordinary differential equation, an O D E. All of Class twelve lives here."
+            },
+            {
+              "seq": 7,
+              "text": "If the equation involves partial derivatives with respect to several independent variables, it is a partial differential equation, a P D E. You will meet those in engineering, not in this course."
+            },
+            {
+              "seq": 8,
+              "text": "In this first subtopic we are not solving anything. Our job is to read these equations, classify them by order and degree, and verify proposed solutions. Master the vocabulary, and the rest of the chapter opens up."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>अगर मैं कहूँ कि mathematics की सबसे powerful equations कभी direct answer नहीं देतीं?</curious> वो सिर्फ ये बताती हैं कि answer कैसे change होता है। यही है differential equations की दुनिया।"
+            },
+            {
+              "seq": 2,
+              "text": "सोचिए Shimla की सर्दियों में एक गरम chai की cup ठंडी हो रही है। किसी भी minute पर उसका exact temperature बताने वाला formula लिखना मुश्किल है। लेकिन एक simple बात बिलकुल सच है: chai जितनी room से ज़्यादा गरम है, उतनी ही तेज़ी से ठंडी होती है।"
+            },
+            {
+              "seq": 3,
+              "text": "यही sentence इस chapter की आत्मा है। Differential equation का मतलब है कोई भी ऐसी equation जिसमें किसी unknown function का derivative शामिल हो। Function directly नहीं मिलता, मिलता है उसके change होने का rule."
+            },
+            {
+              "seq": 4,
+              "text": "Board पर वही chai वाली बात symbols में लिखी है। Temperature theta का rate of change, time के साथ, equal है minus k times theta और surrounding temperature theta s का difference. यह value के बारे में नहीं, rate के बारे में statement है।"
+            },
+            {
+              "seq": 5,
+              "text": "Equation आपको change का rule देती है। आगे chapter में solving का मतलब होगा उस rule को undo करके original function वापस पाना। समझिए, match खेलने से पहले scoreboard पढ़ना सीख रहे हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "पहले दो classifications. अगर unknown function सिर्फ एक independent variable पर depend करती है, मान लीजिए सब कुछ x का function है, तो वह ordinary differential equation है, O D E. पूरी Class twelve यहीं रहती है।"
+            },
+            {
+              "seq": 7,
+              "text": "अगर equation में कई independent variables के respect में partial derivatives हों, तो वह partial differential equation है, P D E. वो engineering में मिलेंगी, इस course में नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "इस पहले subtopic में हम कुछ solve नहीं कर रहे। हमारा काम है इन equations को पढ़ना, order और degree से classify करना, और proposed solutions को verify करना। Vocabulary पक्की कीजिए, पूरा chapter खुल जाएगा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "Order, Degree & Solutions",
+      "title": "Order and degree: the two fingerprints",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Two numbers fingerprint every DE"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 9,
+          "type": "text",
+          "text": "ORDER = the order of the highest derivative appearing in the equation."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "type": "text",
+          "text": "If the deepest derivative you can spot is $\\frac{d^2y}{dx^2}$, the order is 2 — no matter how many lower derivatives crowd around it."
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 36,
+          "type": "text",
+          "text": "DEGREE = the power of that highest-order derivative, AFTER the equation is written as a polynomial in its derivatives."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "type": "text",
+          "text": "Cricket analogy: order is the rank of your top-order batsman; degree is the runs that exact batsman scores once the innings is cleaned up."
+        },
+        {
+          "seq": 6,
+          "emphasis": "high",
+          "reveal_at": 72,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Degree exists ONLY in polynomial form. A derivative inside sin, log or $e^{(\\cdot)}$ means degree NOT DEFINED."
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 91,
+          "type": "text",
+          "text": "Clear radicals and fractional powers before reading degree. Order is unaffected by this tidying; degree absolutely is."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 106,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Degree, when it exists, is always a positive integer — never a fraction, never negative."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Every differential equation carries two identifying fingerprints. Read both at a glance and a family of guaranteed exam questions becomes free marks."
+            },
+            {
+              "seq": 2,
+              "text": "The first fingerprint is order. Order is simply the order of the highest derivative appearing anywhere in the equation. It answers: what is the deepest level of change this equation talks about?"
+            },
+            {
+              "seq": 3,
+              "text": "If the deepest derivative you can spot is the second derivative, the order is two, no matter how many lower derivatives crowd around it or what powers appear. Powers are not an order question."
+            },
+            {
+              "seq": 4,
+              "text": "The second fingerprint, degree, is subtler. First the equation must be written as a polynomial in its derivatives: no roots over derivatives, no fractions, no derivative trapped inside a sine or an exponential. Only then, the degree is the power of the highest order derivative."
+            },
+            {
+              "seq": 5,
+              "text": "Cricket picture: order is the rank of your top order batsman, the highest one who walks out. Degree is how many runs that exact batsman scores, once the innings is cleaned up. Never read a degree off a messy scorecard."
+            },
+            {
+              "seq": 6,
+              "text": "Now the rule that traps thousands every year: the moment a derivative sits inside a transcendental function, sine, exponential or log of a derivative, the degree is not defined. Expanding such a function gives an infinite series of powers, so no single highest power exists."
+            },
+            {
+              "seq": 7,
+              "text": "And before reading the degree you must clear every radical and fractional power, usually by raising both sides to a suitable integer power. This tidying never changes the order, but it absolutely changes the readable degree."
+            },
+            {
+              "seq": 8,
+              "text": "One final property: whenever the degree exists, it is a positive integer. Never a fraction, never negative. If your answer is degree three by two, you stopped cleaning too early."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हर differential equation के साथ दो identifying fingerprints आते हैं। एक नज़र में दोनों पढ़ना आ गया, तो exams के guaranteed questions free marks बन जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहला fingerprint है order. Order का मतलब है equation में जो highest derivative present है, उसका order. यह बताता है: यह equation change के कितने गहरे level की बात कर रही है?"
+            },
+            {
+              "seq": 3,
+              "text": "सबसे गहरा derivative second derivative दिखे, तो order two, चाहे आसपास कितने ही lower derivatives हों या कोई भी powers लगी हों। Powers order का सवाल ही नहीं हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "दूसरा fingerprint, degree, थोड़ा subtle है। पहले equation को अपने derivatives में polynomial की form में लिखना ज़रूरी है: derivative पर कोई root नहीं, कोई fraction नहीं, कोई derivative sine या exponential के अंदर बंद नहीं। तभी degree है highest order derivative की power."
+            },
+            {
+              "seq": 5,
+              "text": "Cricket picture: order है top order batsman की rank, जो सबसे ऊँचा उतरता है। Degree है वही batsman के runs, innings clean होने के बाद। Messy scorecard से degree कभी मत पढ़िए।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वह rule जो हर साल हज़ारों को फँसाता है: derivative किसी transcendental function, sine, exponential या log, के अंदर बैठा हो, तो degree not defined. Expand करने पर powers की infinite series बनती है, कोई single highest power बचती ही नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "और degree पढ़ने से पहले हर radical और fractional power को clear करना ज़रूरी है, usually दोनों sides को suitable integer power तक raise करके। इस सफ़ाई से order कभी नहीं बदलता, लेकिन readable degree बिलकुल बदल जाती है।"
+            },
+            {
+              "seq": 8,
+              "text": "एक आख़िरी property: जब भी degree exist करती है, वह positive integer होती है। कभी fraction नहीं, कभी negative नहीं। अगर आपका answer degree three by two आ रहा है, तो सफ़ाई अधूरी रह गई है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "Order, Degree & Solutions",
+      "title": "Solutions: general, particular, and the constant count",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "What counts as a SOLUTION?"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "type": "formula",
+          "latex": "F\\!\\left(x,\\; y,\\; \\frac{dy}{dx},\\; \\frac{d^2y}{dx^2},\\; \\ldots,\\; \\frac{d^ny}{dx^n}\\right) = 0"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "type": "text",
+          "text": "A solution: any relation between $x$ and $y$, free of derivatives, that satisfies the equation."
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 46,
+          "type": "text",
+          "text": "GENERAL solution: contains exactly as many independent arbitrary constants as the ORDER of the equation."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 62,
+          "type": "text",
+          "text": "PARTICULAR solution: constants pinned down by initial or boundary conditions — no arbitrary constants remain."
+        },
+        {
+          "seq": 6,
+          "emphasis": "high",
+          "reveal_at": 76,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Order = number of INDEPENDENT arbitrary constants in the general solution."
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 91,
+          "type": "text",
+          "text": "Degree need not equal order: $\\left(\\frac{d^2y}{dx^2}\\right)^4 + \\frac{dy}{dx} = 0$ has order 2 but degree 4."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 109,
+          "type": "text",
+          "text": "Notation: $y$ dependent, $x$ independent, constants $A, B, C, c_1, c_2, \\ldots$"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We can classify equations now. Next question: what does it mean to solve one? Let us pin down the vocabulary of solutions, because two of these definitions carry guaranteed marks."
+            },
+            {
+              "seq": 2,
+              "text": "First, the general shape. Any differential equation of order n can be written abstractly as some relation F of x, y, and the derivatives of y up to the n-th derivative, all set equal to zero. This is the object we are trying to crack."
+            },
+            {
+              "seq": 3,
+              "text": "A solution is any relation between x and y, completely free of derivatives, that satisfies the differential equation when substituted in. The derivative-free part is essential: a solution is a curve, not another rule of change."
+            },
+            {
+              "seq": 4,
+              "text": "The general solution is the full family: a solution containing exactly as many independent arbitrary constants as the order of the equation. An order three equation has a general solution carrying exactly three free constants, no more, no fewer."
+            },
+            {
+              "seq": 5,
+              "text": "A particular solution is just the general solution with its dials fixed. Initial or boundary conditions, like y equals two when x equals zero, pin down every constant, and no arbitrary constant survives."
+            },
+            {
+              "seq": 6,
+              "text": "Circle this: the order of a differential equation equals the number of independent arbitrary constants in its general solution. This single link powers the whole next subtopic on forming equations, and it is an exam favourite."
+            },
+            {
+              "seq": 7,
+              "text": "One caution: degree and order are independent fingerprints. The equation on the board, second derivative raised to the fourth power plus first derivative equals zero, has order two, because the deepest derivative is the second, but degree four, the power on that deepest derivative."
+            },
+            {
+              "seq": 8,
+              "text": "Notation for the whole chapter: y is the dependent variable, x is the independent variable, and arbitrary constants will be written as capital A, B, C or as c one, c two, and so on."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Equations classify करना आ गया। अगला सवाल: solve करने का मतलब क्या है? Solutions की vocabulary पक्की कर लेते हैं, क्योंकि इनमें से दो definitions पर guaranteed marks मिलते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले general shape. Order n की कोई भी differential equation abstract रूप में लिखी जा सकती है: कोई relation F, जिसमें x, y और y के derivatives n-th derivative तक हों, सब equal to zero. यही वह object है जिसे हमें crack करना है।"
+            },
+            {
+              "seq": 3,
+              "text": "Solution का मतलब है x और y के बीच कोई भी relation, जो derivatives से पूरी तरह free हो, और substitute करने पर differential equation को satisfy करे। Derivative-free होना essential है: solution एक curve है, change का एक और rule नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "General solution पूरी family है: ऐसा solution जिसमें उतने ही independent arbitrary constants हों जितनी equation की order है। Order three की equation का general solution ठीक तीन free constants carry करता है, न ज़्यादा, न कम।"
+            },
+            {
+              "seq": 5,
+              "text": "Particular solution वही general solution है जिसके dials fix कर दिए गए हैं। Initial या boundary conditions, जैसे y equals two जब x equals zero, हर constant को pin कर देती हैं, और कोई arbitrary constant नहीं बचता।"
+            },
+            {
+              "seq": 6,
+              "text": "इसे circle कर लीजिए: differential equation की order equal होती है उसके general solution के independent arbitrary constants की संख्या के। यही एक link अगले पूरे subtopic, formation, को चलाती है, और exams की favourite है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक caution: degree और order independent fingerprints हैं। Board वाली equation, second derivative की fourth power plus first derivative equals zero, की order two है, क्योंकि deepest derivative second है, लेकिन degree four है, उसी deepest derivative पर लगी power."
+            },
+            {
+              "seq": 8,
+              "text": "पूरे chapter का notation: y dependent variable है, x independent variable, और arbitrary constants लिखेंगे capital A, B, C या c one, c two, इस तरह।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "concept",
+      "subtopic": "Order, Degree & Solutions",
+      "title": "Finding order and degree: the gate, then the clean-up",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Procedure A: order in two moves"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "type": "text",
+          "text": "Scan every derivative present; the deepest $\\frac{d^ky}{dx^k}$ sets order $= k$. Ignore powers entirely."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "type": "heading",
+          "text": "Procedure B: degree in three moves"
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 40,
+          "type": "text",
+          "text": "GATE first: is every derivative free of transcendental wrappers (sin, cos, log, $e^{(\\cdot)}$, $\\tan^{-1}$)? If no — STOP: degree not defined."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "type": "text",
+          "text": "CLEAN: clear all radicals, fractional powers and denominators, so the equation is a genuine polynomial in the derivatives."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 73,
+          "type": "text",
+          "text": "READ: the power of the highest-order derivative in the cleaned form is the degree."
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 85,
+          "type": "formula",
+          "latex": "\\frac{d^2y}{dx^2} + e^{\\,dy/dx} = 0 \\;\\;\\Rightarrow\\;\\; e^{\\,dy/dx} = 1 + \\frac{dy}{dx} + \\frac{1}{2!}\\left(\\frac{dy}{dx}\\right)^2 + \\cdots"
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 104,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Infinite chain of powers ⇒ no highest power ⇒ degree NOT defined. Order is still comfortably 2."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This subtopic is procedural: there is no proof to memorise, only routines to drill until they are reflexes. Here are the first two, for reading order and degree off any equation."
+            },
+            {
+              "seq": 2,
+              "text": "Procedure A, finding the order, takes two moves. Scan the equation for every derivative present, then identify the deepest one, d k y by d x k. That k is the order. Ignore powers entirely, because powers are a degree question, not an order question."
+            },
+            {
+              "seq": 3,
+              "text": "Procedure B, finding the degree, has three moves, and the first one is a gate that most students crash through."
+            },
+            {
+              "seq": 4,
+              "text": "The gate: check whether every derivative is free of transcendental wrappers. Sine, cosine, log, e raised to something, inverse tan. If any derivative is trapped inside one of these, stop immediately. The degree is not defined, and that is a complete, correct answer."
+            },
+            {
+              "seq": 5,
+              "text": "If the gate is passed, clean the equation. Clear all radicals and fractional powers, usually by raising both sides to a suitable integer power, and clear denominators, until the equation is a genuine polynomial in its derivatives."
+            },
+            {
+              "seq": 6,
+              "text": "Only now do you read. The power sitting on the highest order derivative in this cleaned form is the degree. Reading it any earlier is reading a messy scorecard."
+            },
+            {
+              "seq": 7,
+              "text": "Watch the gate in action. In the equation on the board, the term e raised to d y by d x expands as one, plus d y by d x, plus one over two factorial times d y by d x squared, and so on forever."
+            },
+            {
+              "seq": 8,
+              "text": "An infinite chain of powers of the derivative means there is no highest power to point to, so the degree is not defined, even though the order is comfortably two. <whisper>In the exam, writing not defined here is the winning answer, not a cop-out.</whisper>"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह subtopic procedural है: कोई proof याद नहीं करना, सिर्फ routines drill करनी हैं जब तक वे reflex न बन जाएँ। पहली दो routines, किसी भी equation से order और degree पढ़ने के लिए।"
+            },
+            {
+              "seq": 2,
+              "text": "Procedure A, order निकालना, दो moves में। Equation में मौजूद हर derivative को scan कीजिए, फिर सबसे गहरा वाला पहचानिए, d k y by d x k. वही k order है। Powers को पूरी तरह ignore कीजिए, क्योंकि powers degree का सवाल हैं, order का नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "Procedure B, degree निकालना, तीन moves में है, और पहला move एक gate है जिससे ज़्यादातर students टकरा जाते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Gate: check कीजिए कि हर derivative transcendental wrappers से free है या नहीं। Sine, cosine, log, e raised to something, inverse tan. अगर कोई derivative इनमें से किसी के अंदर बंद है, तुरंत रुक जाइए। Degree not defined, और यही complete, correct answer है।"
+            },
+            {
+              "seq": 5,
+              "text": "Gate pass हो गया, तो equation को clean कीजिए। सारे radicals और fractional powers हटाइए, usually दोनों sides को suitable integer power तक raise करके, और denominators clear कीजिए, जब तक equation derivatives में genuine polynomial न बन जाए।"
+            },
+            {
+              "seq": 6,
+              "text": "अब जाकर पढ़िए। इस cleaned form में highest order derivative पर जो power बैठी है, वही degree है। इससे पहले पढ़ना matlab messy scorecard पढ़ना।"
+            },
+            {
+              "seq": 7,
+              "text": "Gate को action में देखिए। Board की equation में, e raised to d y by d x expand होता है: one, plus d y by d x, plus one over two factorial times d y by d x squared, और आगे infinite तक।"
+            },
+            {
+              "seq": 8,
+              "text": "Derivative की powers की infinite chain का मतलब कोई highest power point करने को है ही नहीं, इसलिए degree not defined, जबकि order आराम से two है। <whisper>Exam में यहाँ not defined लिखना ही winning answer है, बहाना नहीं।</whisper>"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "concept",
+      "subtopic": "Order, Degree & Solutions",
+      "title": "Counting constants and verifying solutions",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Procedure C: constants → order"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 11,
+          "type": "text",
+          "text": "Write the family of curves, count the INDEPENDENT arbitrary constants — that count is the order of the DE the family satisfies."
+        },
+        {
+          "seq": 3,
+          "emphasis": "high",
+          "reveal_at": 31,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Constants disguise themselves: in $y = Ax + A^3$ both terms come from ONE constant $A$ ⇒ order 1, not 2."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "type": "text",
+          "text": "Likewise $c_1 + c_2$ behaves as a single constant. Always ask: can these be merged?"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "type": "heading",
+          "text": "Procedure D: verifying a proposed solution"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 69,
+          "type": "text",
+          "text": "From the candidate $y$, compute every derivative the equation needs."
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 79,
+          "type": "text",
+          "text": "Substitute $y$ and its derivatives into the LHS and simplify."
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 88,
+          "type": "text",
+          "text": "If the LHS reduces identically to the RHS for ALL $x$, it is a genuine solution; otherwise it is not."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two more routines complete your toolkit for this subtopic: turning a family of curves into an order count, and checking whether a claimed solution actually works."
+            },
+            {
+              "seq": 2,
+              "text": "Procedure C. Write down the family of solutions or curves, then count its independent arbitrary constants, the ones that cannot be merged into one another. That count is the order of the differential equation the family satisfies. This is our earlier constants equal order rule, read backwards."
+            },
+            {
+              "seq": 3,
+              "text": "But constants disguise themselves, and this is where the traps live. In y equals A x plus A cubed, both terms come from the single constant A. One independent constant, so order one, not two, however tempting the two terms look."
+            },
+            {
+              "seq": 4,
+              "text": "Likewise c one plus c two behaves as a single constant, because you could rename the sum as one new letter. Before counting, always ask: can any of these be combined? Simplify first, count second."
+            },
+            {
+              "seq": 5,
+              "text": "Procedure D is verification, the honest check that a proposed y really solves the equation."
+            },
+            {
+              "seq": 6,
+              "text": "Step one: from the candidate y, compute every derivative the equation needs. If the equation involves the second derivative, you must differentiate twice, carefully."
+            },
+            {
+              "seq": 7,
+              "text": "Step two: substitute y and all its derivatives into the left hand side of the equation, and simplify with ordinary algebra."
+            },
+            {
+              "seq": 8,
+              "text": "The verdict: if the left hand side reduces identically to the right hand side, for all x, not just at some special point, the candidate is a genuine solution. If any x breaks the equality, it is not. This routine also settles multiple choice questions instantly, as we will see."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो और routines इस subtopic की toolkit पूरी करती हैं: curves की family से order count निकालना, और यह जाँचना कि claimed solution सच में काम करता है या नहीं।"
+            },
+            {
+              "seq": 2,
+              "text": "Procedure C. Solutions या curves की family लिखिए, फिर उसके independent arbitrary constants गिनिए, वो जो आपस में merge नहीं हो सकते। वही count उस differential equation की order है जिसे यह family satisfy करती है। यह हमारा पुराना constants equal order rule ही है, उल्टा पढ़ा हुआ।"
+            },
+            {
+              "seq": 3,
+              "text": "लेकिन constants भेस बदलते हैं, और traps यहीं रहते हैं। y equals A x plus A cubed में दोनों terms एक ही constant A से आती हैं। एक independent constant, इसलिए order one, two नहीं, चाहे दो terms देखकर कितना ही मन ललचाए।"
+            },
+            {
+              "seq": 4,
+              "text": "इसी तरह c one plus c two एक single constant की तरह behave करता है, क्योंकि पूरे sum को एक नया letter नाम दिया जा सकता है। गिनने से पहले हमेशा पूछिए: क्या इनमें से कोई combine हो सकते हैं? पहले simplify, फिर count."
+            },
+            {
+              "seq": 5,
+              "text": "Procedure D है verification, ईमानदार जाँच कि proposed y सचमुच equation को solve करता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Step one: candidate y से वे सारे derivatives compute कीजिए जो equation माँगती है। अगर equation में second derivative है, तो दो बार differentiate करना होगा, ध्यान से।"
+            },
+            {
+              "seq": 7,
+              "text": "Step two: y और उसके सारे derivatives equation की left hand side में substitute कीजिए, और simple algebra से simplify कीजिए।"
+            },
+            {
+              "seq": 8,
+              "text": "फ़ैसला: अगर left hand side identically right hand side बन जाए, हर x के लिए, सिर्फ किसी special point पर नहीं, तो candidate genuine solution है। कोई भी x equality तोड़ दे, तो नहीं है। यही routine multiple choice questions भी seconds में settle कर देती है, जैसा आगे देखेंगे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "Order, Degree & Solutions",
+      "title": "Order and degree in action: board staple and speed trap",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 1 — CBSE staple"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "type": "formula",
+          "latex": "\\frac{d^3y}{dx^3} + 5\\left(\\frac{d^2y}{dx^2}\\right)^2 - 7\\frac{dy}{dx} + 4y = \\cos x"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "type": "text",
+          "text": "Highest derivative: $\\frac{d^3y}{dx^3}$ ⇒ order 3. Gate passes ($\\cos x$ involves $x$, not a derivative). Its power is 1 ⇒ degree 1."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 45,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Exam presentation: write the labelled pair — Order = 3, Degree = 1."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "type": "heading",
+          "text": "Example 2 — fifteen-second traps"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "type": "formula",
+          "latex": "(i)\\;\\; \\frac{d^2y}{dx^2} = \\sin\\!\\left(\\frac{dy}{dx}\\right) \\qquad (ii)\\;\\; \\sqrt{1 + \\left(\\frac{dy}{dx}\\right)^2} = \\frac{d^2y}{dx^2}"
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 86,
+          "type": "formula",
+          "latex": "(ii) \\;\\Rightarrow\\; 1 + \\left(\\frac{dy}{dx}\\right)^2 = \\left(\\frac{d^2y}{dx^2}\\right)^2"
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 104,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Speed rule: root over a derivative → SQUARE. Transcendental wrapper → STOP, not defined."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Time to run the routines on real exam questions. Example one is the classic C B S E one mark staple: find the order and degree of this equation."
+            },
+            {
+              "seq": 2,
+              "text": "Here it is: third derivative, plus five times the second derivative squared, minus seven times the first derivative, plus four y, equals cos x."
+            },
+            {
+              "seq": 3,
+              "text": "Highest derivative present is the third derivative, so order three. Now the gate: every derivative appears as a plain polynomial term. The cos x on the right involves x itself, not a derivative, so it does not break the gate. Degree is defined, and the power on the third derivative is one, so degree one."
+            },
+            {
+              "seq": 4,
+              "text": "Presentation tip: always write the two as a labelled pair, order equals three, degree equals one. Examiners award the mark on the explicit statement, not on numbers floating in your working."
+            },
+            {
+              "seq": 5,
+              "text": "Example two is a speed trap pair. Your target: state the degree of each in under fifteen seconds."
+            },
+            {
+              "seq": 6,
+              "text": "Look at part one. The derivative d y by d x is trapped inside a sine. Trip the gate immediately: transcendental function of a derivative means degree not defined. Do not compute anything. Part two has a square root over a derivative expression, so it is not yet polynomial."
+            },
+            {
+              "seq": 7,
+              "text": "For part two, square both sides. One plus d y by d x squared equals the second derivative, squared. Now it is polynomial: the highest order derivative is the second, and its power is two. Degree two, and the order is two."
+            },
+            {
+              "seq": 8,
+              "text": "The trap: students square part one as well and invent a degree, or they read degree one off part two without squaring. Lock in the speed rule: see a root over a derivative, square it. See a transcendental wrapper, stop, degree not defined."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब routines को असली exam questions पर चलाते हैं। Example one classic C B S E का one mark staple है: इस equation की order और degree निकालिए।"
+            },
+            {
+              "seq": 2,
+              "text": "यह रही: third derivative, plus five times second derivative का square, minus seven times first derivative, plus four y, equals cos x."
+            },
+            {
+              "seq": 3,
+              "text": "Highest derivative है third derivative, तो order three. अब gate: हर derivative plain polynomial term की तरह है। Right side का cos x खुद x को involve करता है, किसी derivative को नहीं, तो gate नहीं टूटता। Degree defined है, और third derivative पर power one है, इसलिए degree one."
+            },
+            {
+              "seq": 4,
+              "text": "Presentation tip: दोनों को हमेशा labelled pair में लिखिए, order equals three, degree equals one. Examiner mark explicit statement पर देते हैं, working में तैरते numbers पर नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "Example two एक speed trap pair है। Target: हर एक की degree fifteen seconds के अंदर बताइए।"
+            },
+            {
+              "seq": 6,
+              "text": "Part one देखिए। Derivative d y by d x एक sine के अंदर बंद है। Gate तुरंत trip कीजिए: derivative का transcendental function मतलब degree not defined. कुछ भी compute मत कीजिए। Part two में derivative expression पर square root है, यानी अभी polynomial नहीं है।"
+            },
+            {
+              "seq": 7,
+              "text": "Part two के लिए दोनों sides को square कीजिए। One plus d y by d x squared equals second derivative का square. अब polynomial है: highest order derivative second है, और उसकी power two. Degree two, और order two."
+            },
+            {
+              "seq": 8,
+              "text": "Trap यह है: students part one को भी square करके कोई degree invent कर देते हैं, या part two की degree बिना square किए one पढ़ लेते हैं। Speed rule lock कीजिए: derivative पर root दिखे, square कीजिए। Transcendental wrapper दिखे, रुक जाइए, degree not defined."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "Order, Degree & Solutions",
+      "title": "Formation preview and the great constant collapse",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 3 — form, then read order & degree"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "type": "formula",
+          "latex": "y = a\\,e^{2x} + b\\,e^{-2x}"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "type": "formula",
+          "latex": "\\frac{d^2y}{dx^2} = 4a e^{2x} + 4b e^{-2x} = 4y \\;\\;\\Rightarrow\\;\\; \\frac{d^2y}{dx^2} - 4y = 0"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "type": "text",
+          "text": "Two independent constants ⇒ expected order 2 ✓. Polynomial, power 1 ⇒ degree 1. Constant count matches order — built-in sanity check."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "type": "heading",
+          "text": "Example 4 — JEE Advanced: how many constants really?"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "type": "formula",
+          "latex": "y = (c_1 + c_2)\\,e^{\\,x + c_3} + c_4 \\sin(x + c_5)"
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 77,
+          "type": "formula",
+          "latex": "(c_1+c_2)e^{c_3}\\cdot e^{x} = A e^{x}, \\qquad c_4\\sin(x+c_5) = (c_4\\cos c_5)\\sin x + (c_4\\sin c_5)\\cos x"
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 105,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Independent count = 1 + 2 = 3 ⇒ ORDER 3. The naive answer 5 is the trap."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two heavier examples now, both built on the constants equal order principle. Example three, J E E Main level, links formation with order reading."
+            },
+            {
+              "seq": 2,
+              "text": "The family: y equals a e to the two x, plus b e to the minus two x. Two independent constants, a and b, so we differentiate twice and eliminate both."
+            },
+            {
+              "seq": 3,
+              "text": "Differentiate twice: the second derivative is four a e to the two x plus four b e to the minus two x, exactly four times the original y. So the equation is: second derivative minus four y equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "Read it: two constants predicted order two, and indeed the highest derivative is the second; polynomial with power one, degree one. Count matching order is a built in sanity check on the formation."
+            },
+            {
+              "seq": 5,
+              "text": "Example four is J E E Advanced flavour: find the order of the equation whose general solution carries five written constants, c one through c five. The naive answer five is exactly the trap."
+            },
+            {
+              "seq": 6,
+              "text": "Here is the family. Order equals the number of independent constants, so we must check which of the five genuinely cannot be merged."
+            },
+            {
+              "seq": 7,
+              "text": "Term by term: the first term splits as c one plus c two, times e to the c three, times e to the x, and that entire prefactor collapses into one new constant A. Three written constants became one. Next, c four sine of x plus c five expands by the addition formula into two genuinely independent constants, the coefficients of sine x and cos x."
+            },
+            {
+              "seq": 8,
+              "text": "Independent count: one plus two equals three, so the order is three, not five. <excited>The deep lesson: constants are independent only if no algebraic identity can fuse them.</excited> Sums inside one coefficient, and constants hiding inside exponents, almost always collapse. Simplify before you count."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब दो heavier examples, दोनों constants equal order principle पर बने। Example three, J E E Main level, formation को order reading से जोड़ता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Family: y equals a e to the two x, plus b e to the minus two x. दो independent constants, a और b, इसलिए दो बार differentiate करके दोनों eliminate करेंगे।"
+            },
+            {
+              "seq": 3,
+              "text": "दो बार differentiate कीजिए: second derivative है four a e to the two x plus four b e to the minus two x, exactly original y का four times. तो equation है: second derivative minus four y equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "पढ़िए: दो constants ने order two predict की, और सचमुच highest derivative second है; polynomial, power one, degree one. Count का order से match होना formation का built in sanity check है।"
+            },
+            {
+              "seq": 5,
+              "text": "Example four J E E Advanced flavour का है: उस equation की order निकालिए जिसके general solution में पाँच लिखे हुए constants हैं, c one से c five तक। Naive answer five ही असली trap है।"
+            },
+            {
+              "seq": 6,
+              "text": "यह रही family. Order equals independent constants की संख्या, इसलिए check करना होगा कि पाँच में से कौन से सचमुच merge नहीं हो सकते।"
+            },
+            {
+              "seq": 7,
+              "text": "Term by term: पहली term टूटती है c one plus c two, times e to the c three, times e to the x में, और पूरा prefactor एक नए constant A में collapse. तीन written constants एक बन गए। आगे, c four sine of x plus c five addition formula से दो genuinely independent constants देता है, sine x और cos x के coefficients."
+            },
+            {
+              "seq": 8,
+              "text": "Independent count: one plus two equals three, तो order three है, five नहीं। <excited>गहरी सीख: constants तभी independent हैं जब कोई algebraic identity उन्हें fuse न कर सके।</excited> एक ही coefficient के अंदर के sums, और exponents में छिपे constants, लगभग हमेशा collapse होते हैं। गिनने से पहले simplify कीजिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "tips",
+      "subtopic": "Order, Degree & Solutions",
+      "title": "Pitfalls: the four ways students lose this easy mark",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Four traps, one reflex"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 10,
+          "type": "text",
+          "text": "Trap 1: reading degree off a messy equation. Reach polynomial-in-derivatives form FIRST — clear radicals, fractional powers, denominators."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "type": "text",
+          "text": "Trap 2: forcing a degree onto a non-polynomial equation. Derivative inside sin / log / $e^{(\\cdot)}$ / $\\tan^{-1}$ ⇒ the honest, complete answer is NOT DEFINED."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "type": "text",
+          "text": "Trap 3: taking the power of the wrong derivative. In $\\left(\\frac{dy}{dx}\\right)^5 + \\frac{d^2y}{dx^2} = 0$ the degree is 1 — the power of $\\frac{d^2y}{dx^2}$ — even though a 5 is staring at you."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 66,
+          "type": "text",
+          "text": "Trap 4: counting written constants instead of independent ones. $c_1 + c_2$, $c_1 c_2$, constants in exponents — collapse, then count."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 81,
+          "type": "heading",
+          "text": "The two-second gate"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 87,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Ask: is any derivative inside sin / log / exp, or under a root? Transcendental → undefined, done. Root → square, then read. Neither → read the top derivative's power directly."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 106,
+          "type": "text",
+          "text": "This one reflex prevents three of the four traps above."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before we leave this subtopic, let us name the four ways students throw away what should be the easiest mark on the paper."
+            },
+            {
+              "seq": 2,
+              "text": "Trap one: announcing the degree off a messy equation. Radicals, fractional powers and denominators must all be cleared first, so the equation is a genuine polynomial in its derivatives. Only the cleaned form has a readable degree."
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: forcing a degree onto an equation that has none. If a derivative hides inside a sine, a log, an exponential or an inverse tan, the honest answer is not defined, and that is a complete, correct, full marks answer, not a cop out."
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: taking the power of the wrong derivative. Degree uses the power of the highest order derivative, not the largest power anywhere. In the equation on the board, the degree is one, the power on the second derivative, even though a five is staring at you from the first derivative term."
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, from the constant counting side: counting written constants instead of independent ones. c one plus c two, products like c one c two, and constants buried in exponents all collapse. Simplify, then count."
+            },
+            {
+              "seq": 6,
+              "text": "Now the antidote, a reflex that takes two seconds on every order and degree question."
+            },
+            {
+              "seq": 7,
+              "text": "Ask one question: is any derivative sitting inside a sine, log or exponential, or under a root? If inside a transcendental, write degree not defined and move on. If under a root, square, then read. If neither, read the power of the top derivative directly."
+            },
+            {
+              "seq": 8,
+              "text": "That single reflex prevents three of the four traps above. Drill it until it fires before your pen touches the paper."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस subtopic से निकलने से पहले, वे चार तरीक़े नाम लेकर समझ लीजिए जिनसे students paper का सबसे आसान mark गँवा देते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Trap one: messy equation से degree announce कर देना। पहले radicals, fractional powers और denominators सब clear होने चाहिए, ताकि equation derivatives में genuine polynomial बने। सिर्फ cleaned form की degree readable होती है।"
+            },
+            {
+              "seq": 3,
+              "text": "Trap two: ऐसी equation पर degree थोपना जिसकी degree है ही नहीं। अगर derivative किसी sine, log, exponential या inverse tan के अंदर छिपा है, तो ईमानदार answer है not defined, और यही complete, correct, full marks answer है, बहाना नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Trap three: ग़लत derivative की power उठा लेना। Degree में highest order derivative की power आती है, कहीं की भी सबसे बड़ी power नहीं। Board की equation में degree one है, second derivative की power, जबकि first derivative की term से five आपको घूर रहा है।"
+            },
+            {
+              "seq": 5,
+              "text": "Trap four, constant counting की तरफ़ से: independent की जगह written constants गिन लेना। c one plus c two, products जैसे c one c two, और exponents में दबे constants, सब collapse होते हैं। पहले simplify, फिर count."
+            },
+            {
+              "seq": 6,
+              "text": "अब antidote, एक reflex जो हर order और degree question पर सिर्फ two seconds लेता है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक सवाल पूछिए: क्या कोई derivative sine, log या exponential के अंदर है, या किसी root के नीचे? Transcendental के अंदर है, तो degree not defined लिखकर आगे बढ़िए। Root के नीचे है, तो square कीजिए, फिर पढ़िए। दोनों नहीं, तो top derivative की power सीधे पढ़ लीजिए।"
+            },
+            {
+              "seq": 8,
+              "text": "यही एक reflex ऊपर के चार में से तीन traps रोक देता है। इसे तब तक drill कीजिए जब तक pen paper छूने से पहले यह fire न हो जाए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "concept",
+      "subtopic": "Formation of Differential Equations",
+      "title": "From a family of curves to its DNA",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Formation = solving, run in reverse"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "type": "text",
+          "text": "Solving a DE takes you FROM a differential equation TO a family of curves. Formation starts from the family and hunts for the single DE every member obeys."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "type": "text",
+          "text": "Family of all lines through the origin: $y = mx$. Turn the dial $m$ and you get a different line — but every one shares one property."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "type": "diagram",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"120\" x2=\"380\" y2=\"120\" stroke=\"#555\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"10\" x2=\"200\" y2=\"230\" stroke=\"#555\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"220\" x2=\"360\" y2=\"20\" stroke=\"#1f77b4\" stroke-width=\"2\"/><line x1=\"80\" y1=\"230\" x2=\"320\" y2=\"10\" stroke=\"#2ca02c\" stroke-width=\"2\"/><line x1=\"20\" y1=\"180\" x2=\"380\" y2=\"60\" stroke=\"#d62728\" stroke-width=\"2\"/><line x1=\"20\" y1=\"150\" x2=\"380\" y2=\"90\" stroke=\"#9467bd\" stroke-width=\"2\"/><text x=\"330\" y=\"35\" font-size=\"13\" fill=\"#2ca02c\">m = 2</text><text x=\"330\" y=\"75\" font-size=\"13\" fill=\"#d62728\">m = 0.5</text><text x=\"335\" y=\"108\" font-size=\"13\" fill=\"#9467bd\">m = 0.25</text><text x=\"300\" y=\"215\" font-size=\"13\" fill=\"#1f77b4\">m = 1 (approx)</text><text x=\"208\" y=\"24\" font-size=\"13\" fill=\"#555\">y</text><text x=\"370\" y=\"136\" font-size=\"13\" fill=\"#555\">x</text><text x=\"30\" y=\"30\" font-size=\"14\" fill=\"#333\">Family y = m x : every member obeys dy/dx = y/x</text></svg>",
+          "caption": "One rule, many members: at every point the slope equals y/x"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 55,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} = \\frac{y}{x}"
+        },
+        {
+          "seq": 6,
+          "emphasis": "high",
+          "reveal_at": 67,
+          "type": "text",
+          "text": "The arbitrary constant is ELIMINATED; what remains is the family's DNA."
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 78,
+          "type": "text",
+          "text": "Biscuit-cutter picture: different tray positions (the constants), identical shape (the rule). Formation reverse-engineers the cutter from the biscuits."
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 99,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Master fact: number of INDEPENDENT arbitrary constants = ORDER of the resulting DE."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Everything so far ran in one direction: a differential equation produces a family of curves. Formation is the same road driven in reverse."
+            },
+            {
+              "seq": 2,
+              "text": "You start with a whole family of curves, described by an equation carrying one or more arbitrary constants, and you hunt for the single differential equation that every member of that family obeys."
+            },
+            {
+              "seq": 3,
+              "text": "Take the family of all straight lines through the origin, y equals m x. The constant m is a dial: turn it and you get a different line. But look at what all of them share."
+            },
+            {
+              "seq": 4,
+              "text": "Here is the family drawn out. Pick any point on any member: the slope there is exactly y over x, the ratio of coordinates. Steep line, gentle line, does not matter, the property holds for every single one."
+            },
+            {
+              "seq": 5,
+              "text": "Write that shared property with derivatives and the dial m is gone: d y by d x equals y over x. This is the differential equation of the family."
+            },
+            {
+              "seq": 6,
+              "text": "The arbitrary constant has been eliminated. What remains is the family's D N A, the one rule that identifies membership without caring which member you hold."
+            },
+            {
+              "seq": 7,
+              "text": "A homely picture: a family of curves is a batch of biscuits from one cutter. Different positions on the tray are the arbitrary constants; the identical shape is the underlying rule. Formation is reverse engineering the cutter from the biscuits: differentiate to expose the rule, then erase the position information."
+            },
+            {
+              "seq": 8,
+              "text": "And the master fact that controls this whole subtopic: the number of independent arbitrary constants equals the order of the resulting differential equation. One constant, differentiate once, order one. Two constants, differentiate twice, order two. Keep it in front of you for everything that follows."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब तक सब एक ही direction में चला: differential equation से curves की family निकलती है। Formation वही सड़क उल्टी दिशा में चलाना है।"
+            },
+            {
+              "seq": 2,
+              "text": "आप शुरू करते हैं पूरी family of curves से, जिसकी equation में एक या ज़्यादा arbitrary constants हैं, और ढूँढते हैं वह single differential equation जिसे family का हर member obey करता है।"
+            },
+            {
+              "seq": 3,
+              "text": "Origin से गुज़रने वाली सारी straight lines की family लीजिए, y equals m x. Constant m एक dial है: घुमाइए और नई line मिल जाती है। लेकिन देखिए सब में common क्या है।"
+            },
+            {
+              "seq": 4,
+              "text": "यह रही family. किसी भी member पर कोई भी point चुनिए: वहाँ slope exactly y over x है, coordinates का ratio. Steep line हो या gentle, फ़र्क़ नहीं पड़ता, property हर एक पर hold करती है।"
+            },
+            {
+              "seq": 5,
+              "text": "वही shared property derivatives में लिखिए और dial m ग़ायब: d y by d x equals y over x. यही family की differential equation है।"
+            },
+            {
+              "seq": 6,
+              "text": "Arbitrary constant eliminate हो गया। जो बचा वह family का D N A है, वह एक rule जो membership पहचानता है, बिना यह पूछे कि हाथ में कौन सा member है।"
+            },
+            {
+              "seq": 7,
+              "text": "एक घरेलू picture: curves की family एक ही cutter से बने biscuits का batch है। Tray पर अलग अलग positions arbitrary constants हैं; identical shape underlying rule है। Formation यानी biscuits से cutter का reverse engineering: differentiate करके rule expose कीजिए, फिर position की information मिटा दीजिए।"
+            },
+            {
+              "seq": 8,
+              "text": "और वह master fact जो पूरा subtopic control करता है: independent arbitrary constants की संख्या equals बनने वाली differential equation की order. एक constant, एक बार differentiate, order one. दो constants, दो बार differentiate, order two. आगे की हर चीज़ के लिए इसे सामने रखिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "concept",
+      "subtopic": "Formation of Differential Equations",
+      "title": "Constants set the order — and geometry hides the count",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "The formal frame"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "type": "formula",
+          "latex": "F(x, y, a_1, a_2, \\ldots, a_n) = 0 \\;\\;\\longrightarrow\\;\\; \\Phi\\!\\left(x, y, \\frac{dy}{dx}, \\ldots, \\frac{d^ny}{dx^n}\\right) = 0"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "type": "text",
+          "text": "$n$ independent constants in, an order-$n$ DE out — free of every constant."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 34,
+          "type": "text",
+          "text": "Why $n$ differentiations: the original + $n$ derivative equations = $n+1$ relations — exactly enough to eliminate $n$ unknown constants and keep one constant-free equation."
+        },
+        {
+          "seq": 5,
+          "emphasis": "high",
+          "reveal_at": 54,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Count independent constants, not written ones: $c_1 + c_2$ and constants inside exponents like $e^{c}$ merge into one."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 69,
+          "type": "text",
+          "text": "Geometric families hide their count: circles of radius $r$ with centre on the $x$-axis → ONE free parameter ⇒ order 1."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 85,
+          "type": "text",
+          "text": "ALL circles in the plane: $x^2 + y^2 + 2gx + 2fy + c = 0$ → THREE constants $(g, f, c)$ ⇒ order 3. Classic exam fact."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 99,
+          "type": "note",
+          "style": "red-margin",
+          "text": "The final DE contains only $x$, $y$ and derivatives — never an arbitrary constant, never a new one."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let us frame formation precisely, because the structure itself answers half the exam questions on this topic."
+            },
+            {
+              "seq": 2,
+              "text": "A family with n independent arbitrary constants is written as F of x, y, a one through a n, equals zero. Its differential equation is what you get by eliminating all n constants: a relation phi involving only x, y and derivatives up to the n-th."
+            },
+            {
+              "seq": 3,
+              "text": "n independent constants in, an order n differential equation out, free of every constant. That is the contract."
+            },
+            {
+              "seq": 4,
+              "text": "Why exactly n differentiations? Each differentiation manufactures one new equation. The original plus n derivative equations gives n plus one relations, exactly enough to solve for and cancel n unknown constants while keeping one constant free equation. Stop early and a constant is stranded in your answer."
+            },
+            {
+              "seq": 5,
+              "text": "Count independent constants, not written ones: c one plus c two merges, and a constant inside an exponent, like e to the c, merges with any coefficient in front. Miscount here and the entire order is wrong."
+            },
+            {
+              "seq": 6,
+              "text": "Geometric families hide their count behind words, so translate geometry into parameters first. All circles of a fixed radius with centre on the x axis: the only freedom is where the centre sits, one parameter, so order one."
+            },
+            {
+              "seq": 7,
+              "text": "But the family of all circles in the plane carries three independent constants, g, f and c, so its differential equation has order three. A classic exam fact, quoted directly in multiple choice questions."
+            },
+            {
+              "seq": 8,
+              "text": "One final requirement on the finished product: the formed equation must contain only x, y and derivatives. Never one of the original arbitrary constants, and never a brand new constant introduced along the way. A surviving constant means the job is not done."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Formation को precisely frame कर लेते हैं, क्योंकि यह structure ही इस topic के आधे exam questions का answer है।"
+            },
+            {
+              "seq": 2,
+              "text": "n independent arbitrary constants वाली family लिखी जाती है: F of x, y, a one से a n तक, equals zero. उसकी differential equation वह है जो सारे n constants eliminate करने पर मिलती है: एक relation phi जिसमें सिर्फ x, y और n-th तक के derivatives हों।"
+            },
+            {
+              "seq": 3,
+              "text": "n independent constants अंदर, order n की differential equation बाहर, हर constant से free. यही contract है।"
+            },
+            {
+              "seq": 4,
+              "text": "Exactly n differentiations क्यों? हर differentiation एक नई equation बनाती है। Original plus n derivative equations, total n plus one relations, ठीक उतनी जितनी n unknown constants को solve करके cancel करने के लिए चाहिए, और एक constant free equation बचती है। जल्दी रुके तो answer में constant फँसा रह जाएगा।"
+            },
+            {
+              "seq": 5,
+              "text": "Independent constants गिनिए, written नहीं: c one plus c two merge हो जाता है, और exponent के अंदर बैठा constant, जैसे e to the c, सामने के coefficient में merge हो जाता है। यहाँ ग़लती हुई तो पूरी order ग़लत।"
+            },
+            {
+              "seq": 6,
+              "text": "Geometric families अपना count शब्दों के पीछे छिपाती हैं, इसलिए पहले geometry को parameters में translate कीजिए। Fixed radius के सारे circles जिनका centre x axis पर है: आज़ादी सिर्फ यह है कि centre कहाँ बैठे, एक parameter, इसलिए order one."
+            },
+            {
+              "seq": 7,
+              "text": "लेकिन plane के सारे circles की family में तीन independent constants हैं, g, f और c, तो उसकी differential equation की order three. Classic exam fact, multiple choice में सीधे quote होता है।"
+            },
+            {
+              "seq": 8,
+              "text": "तैयार product पर एक आख़िरी requirement: formed equation में सिर्फ x, y और derivatives हों। न original arbitrary constants में से कोई, न रास्ते में introduce हुआ कोई नया constant. Constant बच गया मतलब काम अधूरा है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "Formation of Differential Equations",
+      "title": "The elimination procedure: count, differentiate, eliminate, check",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "The four-step routine"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 9,
+          "type": "text",
+          "text": "Step 1 — COUNT the independent arbitrary constants $n$. Merge any that collapse: sums in one coefficient, constants inside exponents."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "type": "text",
+          "text": "Step 2 — DIFFERENTIATE the given equation $n$ times with respect to $x$. Each differentiation yields a new equation."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 35,
+          "type": "text",
+          "text": "Step 3 — ELIMINATE the $n$ constants using the original equation plus the $n$ derivative equations — by substitution, or as simultaneous equations in the constants."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "type": "text",
+          "text": "Step 4 — WRITE the result purely in $x$, $y$ and derivatives. Confirm no arbitrary constant survives."
+        },
+        {
+          "seq": 6,
+          "emphasis": "high",
+          "reveal_at": 61,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Predict, then verify: before differentiating, write down the expected order from the constant count. A mismatch at the end flags a missed collapse or a skipped differentiation."
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 85,
+          "type": "text",
+          "text": "Each constant is one degree of freedom; each differentiation buys one relation to spend against it."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 100,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Going further than needed is unnecessary but harmless — if a lower-order DE already came out constant-free, you were done."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Formation is a procedure, not a proof. Here is the four step routine, with the reasoning that makes each step non negotiable."
+            },
+            {
+              "seq": 2,
+              "text": "Step one: count the independent arbitrary constants, and call the count n. Merge anything that collapses first, sums sitting inside a single coefficient, constants hiding inside exponents. This count is the plan for everything else."
+            },
+            {
+              "seq": 3,
+              "text": "Step two: differentiate the given equation n times with respect to x. Each differentiation produces one new equation, and you will need every one of them."
+            },
+            {
+              "seq": 4,
+              "text": "Step three: eliminate the n constants, using the original equation together with the n derivative equations. Sometimes one clean substitution does it; sometimes you treat the relations as simultaneous equations in the constants and solve them out."
+            },
+            {
+              "seq": 5,
+              "text": "Step four: write the result purely in x, y and derivatives, and actually confirm that no arbitrary constant survives. That confirmation is your proof of completion."
+            },
+            {
+              "seq": 6,
+              "text": "Now the habit that catches errors before they cost marks: predict, then verify. Before differentiating, glance at the family and write down the expected order from the constant count. If the final equation's order does not match, you either missed a collapse or skipped a differentiation, and you know instantly, far faster than rechecking algebra line by line."
+            },
+            {
+              "seq": 7,
+              "text": "Why the count controls the differentiations: each independent constant is one degree of freedom, and each differentiation buys you exactly one new relation to spend against it. Stop one short and a constant is stranded."
+            },
+            {
+              "seq": 8,
+              "text": "And if you accidentally differentiate more than needed? Unnecessary but harmless. If a lower order equation already came out constant free, you were done there."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Formation एक procedure है, proof नहीं। यह रही four step routine, उस reasoning के साथ जो हर step को non negotiable बनाती है।"
+            },
+            {
+              "seq": 2,
+              "text": "Step one: independent arbitrary constants गिनिए, और count को n कहिए। पहले जो कुछ collapse होता है उसे merge कीजिए, एक coefficient के अंदर के sums, exponents में छिपे constants. यही count बाक़ी सब का plan है।"
+            },
+            {
+              "seq": 3,
+              "text": "Step two: दी गई equation को x के respect में n बार differentiate कीजिए। हर differentiation एक नई equation देती है, और हर एक की ज़रूरत पड़ेगी।"
+            },
+            {
+              "seq": 4,
+              "text": "Step three: n constants को eliminate कीजिए, original equation और n derivative equations को साथ लेकर। कभी एक clean substitution काफ़ी होता है; कभी relations को constants में simultaneous equations मानकर solve करना पड़ता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Step four: result को purely x, y और derivatives में लिखिए, और सचमुच confirm कीजिए कि कोई arbitrary constant नहीं बचा। यही confirmation आपके काम पूरा होने का proof है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वह habit जो marks कटने से पहले errors पकड़ती है: predict, then verify. Differentiate करने से पहले family पर नज़र डालकर constant count से expected order लिख लीजिए। Final equation की order match न हो, तो या collapse छूटा है या एक differentiation, और यह आपको instantly पता चल जाता है, algebra line by line दोबारा जाँचने से कहीं तेज़।"
+            },
+            {
+              "seq": 7,
+              "text": "Count differentiations को क्यों control करता है: हर independent constant एक degree of freedom है, और हर differentiation exactly एक नया relation ख़रीदती है जो उसके against ख़र्च होता है। एक कम रुके तो constant फँस जाता है।"
+            },
+            {
+              "seq": 8,
+              "text": "और अगर ग़लती से ज़रूरत से ज़्यादा differentiate कर दिया? Unnecessary लेकिन harmless. अगर lower order की equation पहले ही constant free निकल आई थी, तो काम वहीं पूरा था।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "worked_examples",
+      "subtopic": "Formation of Differential Equations",
+      "title": "Parabolas and sinusoids: one constant, then two",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 1 — CBSE: one dial"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 12,
+          "type": "formula",
+          "latex": "y^2 = 4ax \\;\\;\\xrightarrow{\\;d/dx\\;}\\;\\; 2y\\frac{dy}{dx} = 4a"
+        },
+        {
+          "seq": 3,
+          "emphasis": "high",
+          "reveal_at": 26,
+          "type": "formula",
+          "latex": "y^2 = \\left(2y\\frac{dy}{dx}\\right)x \\;\\;\\Rightarrow\\;\\; 2x\\frac{dy}{dx} - y = 0"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 46,
+          "type": "note",
+          "style": "red-margin",
+          "text": "State the constant count and expected order up front — examiners reward the reasoning, and it catches mistakes early."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "type": "heading",
+          "text": "Example 2 — the sinusoid family (speed recognition)"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "type": "formula",
+          "latex": "y = A\\cos x + B\\sin x \\;\\Rightarrow\\; \\frac{d^2y}{dx^2} = -(A\\cos x + B\\sin x) = -y"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 85,
+          "type": "formula",
+          "latex": "\\frac{d^2y}{dx^2} + y = 0"
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 103,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Trap: differentiating only ONCE — $A$ and $B$ won't cancel. Two constants ALWAYS need two differentiations."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Routine into practice. Example one, C B S E level: form the differential equation of the family of parabolas y squared equals four a x, where a is arbitrary."
+            },
+            {
+              "seq": 2,
+              "text": "Count first: just one constant a, so one differentiation, and we expect an order one equation. Differentiate: two y d y by d x equals four a. That has isolated four a for us."
+            },
+            {
+              "seq": 3,
+              "text": "Eliminate: substitute four a back into the original. y squared equals two y d y by d x, times x. Cancel one factor of y, tidy up, and the answer is two x d y by d x minus y equals zero. Order one, degree one, exactly as predicted."
+            },
+            {
+              "seq": 4,
+              "text": "Presentation tip for boards: state the constant count and the expected order up front, before any differentiation. Examiners reward the visible reasoning, and the prediction catches your own mistakes early."
+            },
+            {
+              "seq": 5,
+              "text": "Example two is a speed recognition question: form the differential equation of y equals A cos x plus B sine x."
+            },
+            {
+              "seq": 6,
+              "text": "Two independent constants, so differentiate twice, expecting order two. First derivative: minus A sine x plus B cos x. Second derivative: minus A cos x minus B sine x, which is exactly minus the original y. Both constants vanish in one stroke."
+            },
+            {
+              "seq": 7,
+              "text": "So the differential equation is: second derivative plus y equals zero. The speed move is recognising the family: A cos x plus B sine x is the general sinusoid, whose equation is the simple harmonic one. With practice you write this on sight."
+            },
+            {
+              "seq": 8,
+              "text": "The trap: students differentiate only once, then panic when A and B refuse to cancel, and leave constants in the so called answer. Two constants always need two differentiations, no shortcuts on the count."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Routine को practice में उतारते हैं। Example one, C B S E level: parabolas की family y squared equals four a x की differential equation form कीजिए, जहाँ a arbitrary है।"
+            },
+            {
+              "seq": 2,
+              "text": "पहले count: सिर्फ एक constant a, तो एक differentiation, और order one की equation expect करते हैं। Differentiate कीजिए: two y d y by d x equals four a. इसने four a हमारे लिए isolate कर दिया।"
+            },
+            {
+              "seq": 3,
+              "text": "Eliminate: four a को वापस original में substitute कीजिए। y squared equals two y d y by d x, times x. एक y का factor cancel कीजिए, tidy कीजिए, और answer है two x d y by d x minus y equals zero. Order one, degree one, बिलकुल prediction जैसा।"
+            },
+            {
+              "seq": 4,
+              "text": "Boards के लिए presentation tip: differentiate करने से पहले ही constant count और expected order लिख दीजिए। Examiner दिखती हुई reasoning को reward करते हैं, और prediction आपकी अपनी ग़लतियाँ जल्दी पकड़ लेती है।"
+            },
+            {
+              "seq": 5,
+              "text": "Example two speed recognition का सवाल है: y equals A cos x plus B sine x की differential equation form कीजिए।"
+            },
+            {
+              "seq": 6,
+              "text": "दो independent constants, इसलिए दो बार differentiate, order two expect करते हुए। First derivative: minus A sine x plus B cos x. Second derivative: minus A cos x minus B sine x, जो exactly original y का minus है। दोनों constants एक ही वार में ग़ायब।"
+            },
+            {
+              "seq": 7,
+              "text": "तो differential equation है: second derivative plus y equals zero. Speed move है family को पहचानना: A cos x plus B sine x general sinusoid है, जिसकी equation simple harmonic वाली है। Practice के साथ यह देखते ही लिख दी जाती है।"
+            },
+            {
+              "seq": 8,
+              "text": "Trap: students सिर्फ एक बार differentiate करते हैं, फिर घबराते हैं जब A और B cancel नहीं होते, और तथाकथित answer में constants छोड़ देते हैं। दो constants को हमेशा दो differentiations चाहिए, count में कोई shortcut नहीं।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "worked_examples",
+      "subtopic": "Formation of Differential Equations",
+      "title": "Product rule under pressure, and the circle family",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 3 — JEE Main: product rule + double elimination"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 11,
+          "type": "formula",
+          "latex": "y = e^{x}(A\\cos x + B\\sin x)"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} = y + w, \\quad w = e^{x}(-A\\sin x + B\\cos x), \\quad w' = w - y"
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 45,
+          "type": "formula",
+          "latex": "\\frac{d^2y}{dx^2} - 2\\frac{dy}{dx} + 2y = 0"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "type": "heading",
+          "text": "Example 4 — JEE Advanced: circles through the origin, centres on the x-axis"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 72,
+          "type": "formula",
+          "latex": "x^2 + y^2 = 2ax \\;\\;\\Rightarrow\\;\\; a = x + y\\frac{dy}{dx}"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 88,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} = \\frac{y^2 - x^2}{2xy}"
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 104,
+          "type": "note",
+          "style": "red-margin",
+          "text": "The RHS depends only on $y/x$ — a HOMOGENEOUS equation. Formation lands you on a type you already know how to solve. And remember: ALL circles ⇒ order 3."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two heavier formations, the kind J E E actually sets. Example three: y equals e to the x, times A cos x plus B sine x."
+            },
+            {
+              "seq": 2,
+              "text": "Two constants, so order two, but the exponential in front means every differentiation triggers the product rule. Watch the bookkeeping."
+            },
+            {
+              "seq": 3,
+              "text": "First derivative, by the product rule: the original y back, plus a new piece; name it w, so d y by d x equals y plus w. Differentiate again: the second derivative is d y by d x plus w prime, and computing w prime the same way gives w minus y. And w itself equals d y by d x minus y."
+            },
+            {
+              "seq": 4,
+              "text": "Substitute through and the constants are gone: second derivative minus two d y by d x plus two y equals zero. Multi concept because the product rule fires twice and an intermediate w rides through two eliminations."
+            },
+            {
+              "seq": 5,
+              "text": "Example four is a geometric family: all circles passing through the origin with centres on the x axis, written x squared plus y squared equals two a x."
+            },
+            {
+              "seq": 6,
+              "text": "One free parameter a, centre at a comma zero, radius a, so order one. Differentiate: two x plus two y d y by d x equals two a, isolating a as x plus y d y by d x."
+            },
+            {
+              "seq": 7,
+              "text": "Substitute back into the family and simplify: y squared minus x squared equals two x y d y by d x, in other words d y by d x equals y squared minus x squared, over two x y."
+            },
+            {
+              "seq": 8,
+              "text": "<curious>Look closely at that right hand side: it depends only on the ratio y over x.</curious> A homogeneous equation, the very type the next subtopic solves. Companion fact to file: all circles in the plane means three constants, order three."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दो heavier formations, जैसी J E E सचमुच पूछता है। Example three: y equals e to the x, times A cos x plus B sine x."
+            },
+            {
+              "seq": 2,
+              "text": "दो constants, तो order two, लेकिन सामने बैठा exponential मतलब हर differentiation पर product rule fire होगा। Bookkeeping ध्यान से देखिए।"
+            },
+            {
+              "seq": 3,
+              "text": "First derivative, product rule से: original y वापस, plus एक नया piece; उसे w नाम दीजिए, तो d y by d x equals y plus w. दोबारा differentiate कीजिए: second derivative है d y by d x plus w prime, और w prime उसी तरह compute करने पर w minus y. और w ख़ुद equals d y by d x minus y."
+            },
+            {
+              "seq": 4,
+              "text": "Substitute कीजिए और constants ग़ायब: second derivative minus two d y by d x plus two y equals zero. Multi concept इसलिए कि product rule दो बार चलता है और intermediate w दो eliminations से गुज़रता है।"
+            },
+            {
+              "seq": 5,
+              "text": "Example four एक geometric family है: origin से गुज़रने वाले सारे circles जिनके centres x axis पर हैं, लिखा हुआ x squared plus y squared equals two a x."
+            },
+            {
+              "seq": 6,
+              "text": "एक free parameter a, centre a comma zero पर, radius a, इसलिए order one. Differentiate कीजिए: two x plus two y d y by d x equals two a, जिससे a isolate: x plus y d y by d x."
+            },
+            {
+              "seq": 7,
+              "text": "Family में वापस substitute करके simplify कीजिए: y squared minus x squared equals two x y d y by d x, यानी d y by d x equals y squared minus x squared, over two x y."
+            },
+            {
+              "seq": 8,
+              "text": "<curious>उस right hand side को ग़ौर से देखिए: वह सिर्फ ratio y over x पर depend करती है।</curious> Homogeneous equation, ठीक वही type जो अगला subtopic solve करता है। साथ में fact: सारे circles matlab तीन constants, order three."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "tips",
+      "subtopic": "Formation of Differential Equations",
+      "title": "Pitfalls: stranded constants and miscounted dials",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Where formation marks leak"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 11,
+          "type": "text",
+          "text": "Counting dependent constants as independent: $c_1 + c_2$, $c_1 c_2$, constants inside exponents — simplify BEFORE counting."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 26,
+          "type": "text",
+          "text": "Under-differentiating: $n$ constants need $n$ differentiations. Stopping early strands a constant in the answer."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "type": "text",
+          "text": "Leaving an arbitrary constant in the final DE: the formed equation must contain only $x$, $y$ and derivatives. A surviving $a, m, A$ means the elimination is incomplete."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 51,
+          "type": "text",
+          "text": "Miscounting geometric families: translate geometry to a parameter count first. Circles on the $x$-axis through the origin → one parameter; ALL circles → three."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 68,
+          "type": "heading",
+          "text": "The pro habit"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 72,
+          "type": "note",
+          "style": "red-margin",
+          "text": "PREDICT, then VERIFY: write the expected order before differentiating; check the final order matches. A mismatch instantly flags a missed collapse or a skipped differentiation."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 92,
+          "type": "text",
+          "text": "Memory hooks: count the dials = count the order; differentiate once per constant; no constant may survive the answer."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Formation questions are generous with marks, and equally generous with ways to leak them. Here are the four leaks and the one habit that seals them."
+            },
+            {
+              "seq": 2,
+              "text": "Leak one: counting dependent constants as independent. Sums like c one plus c two, products like c one c two, and constants tucked inside exponents all collapse into fewer dials. Simplify before counting, every single time."
+            },
+            {
+              "seq": 3,
+              "text": "Leak two: under differentiating. n constants need n differentiations, full stop. Stop early and a constant is stranded in your answer, and a stranded constant scores zero."
+            },
+            {
+              "seq": 4,
+              "text": "Leak three: the finished equation itself. It must contain only x, y and derivatives. If an a, an m or a capital A survives anywhere, the elimination is incomplete, however tidy the rest looks."
+            },
+            {
+              "seq": 5,
+              "text": "Leak four: geometric families. Words hide the parameter count, so translate the geometry first. Circles on the x axis through the origin carry one parameter. All circles in the plane carry three. Get the count, and the order follows for free."
+            },
+            {
+              "seq": 6,
+              "text": "Now the habit that seals all four leaks at once."
+            },
+            {
+              "seq": 7,
+              "text": "Predict, then verify. Before differentiating, count the independent constants and write down the expected order. After eliminating, check the order of your final equation against that prediction. A mismatch instantly flags a collapse you missed or a differentiation you skipped, far faster than rechecking algebra line by line."
+            },
+            {
+              "seq": 8,
+              "text": "And three memory hooks to carry into the exam hall: count the dials equals count the order. Differentiate once per constant. No constant may survive the answer."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Formation के questions marks देने में generous हैं, और marks leak कराने में भी। यह रहे चार leaks और वह एक habit जो सबको seal कर देती है।"
+            },
+            {
+              "seq": 2,
+              "text": "Leak one: dependent constants को independent गिन लेना। c one plus c two जैसे sums, c one c two जैसे products, और exponents में दबे constants, सब कम dials में collapse होते हैं। हर बार, गिनने से पहले simplify."
+            },
+            {
+              "seq": 3,
+              "text": "Leak two: under differentiating. n constants को n differentiations चाहिए, बस। जल्दी रुके तो answer में constant फँस जाता है, और फँसा हुआ constant zero score करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Leak three: ख़ुद finished equation. उसमें सिर्फ x, y और derivatives होने चाहिए। कहीं भी कोई a, m या capital A बच गया, तो elimination अधूरी है, बाक़ी सब चाहे कितना भी tidy दिखे।"
+            },
+            {
+              "seq": 5,
+              "text": "Leak four: geometric families. शब्द parameter count छिपा लेते हैं, इसलिए पहले geometry को translate कीजिए। x axis पर centre वाले, origin से गुज़रने वाले circles में एक parameter है। Plane के सारे circles में तीन। Count मिल गया, तो order मुफ़्त में मिल जाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वह habit जो चारों leaks एक साथ seal करती है।"
+            },
+            {
+              "seq": 7,
+              "text": "Predict, then verify. Differentiate करने से पहले independent constants गिनकर expected order लिख लीजिए। Eliminate करने के बाद final equation की order उस prediction से मिलाइए। Mismatch तुरंत बता देता है कि कोई collapse छूटा या कोई differentiation skip हुई, algebra दोबारा जाँचने से कहीं तेज़।"
+            },
+            {
+              "seq": 8,
+              "text": "और exam hall ले जाने के लिए तीन memory hooks: dials गिनो matlab order गिनो। हर constant पर एक differentiation. Answer में कोई constant ज़िंदा नहीं बचना चाहिए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "concept",
+      "subtopic": "Separable & Homogeneous Equations",
+      "title": "Sort the laundry: variables separable",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Diagnosis before technique"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 18,
+          "type": "text",
+          "text": "No single trick cracks every DE. We keep a toolbox — and the first job on any equation is always: WHAT TYPE is this?"
+        },
+        {
+          "seq": 3,
+          "emphasis": "high",
+          "reveal_at": 33,
+          "type": "text",
+          "text": "Separable: the rate splits cleanly as $\\frac{dy}{dx} = (\\text{something in } x) \\times (\\text{something in } y)$."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 41,
+          "type": "diagram",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"150\" y=\"16\" width=\"120\" height=\"38\" rx=\"6\" fill=\"none\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"210\" y=\"40\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">dy/dx = g(x) h(y)</text><line x1=\"185\" y1=\"54\" x2=\"95\" y2=\"110\" stroke=\"#1f77b4\" stroke-width=\"2\"/><line x1=\"235\" y1=\"54\" x2=\"325\" y2=\"110\" stroke=\"#d62728\" stroke-width=\"2\"/><rect x=\"30\" y=\"112\" width=\"140\" height=\"44\" rx=\"8\" fill=\"#eaf3fb\" stroke=\"#1f77b4\" stroke-width=\"1.5\"/><text x=\"100\" y=\"132\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1f77b4\">y-basket</text><text x=\"100\" y=\"149\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1f77b4\">dy / h(y)</text><rect x=\"250\" y=\"112\" width=\"140\" height=\"44\" rx=\"8\" fill=\"#fdecea\" stroke=\"#d62728\" stroke-width=\"1.5\"/><text x=\"320\" y=\"132\" font-size=\"13\" text-anchor=\"middle\" fill=\"#d62728\">x-basket</text><text x=\"320\" y=\"149\" font-size=\"13\" text-anchor=\"middle\" fill=\"#d62728\">g(x) dx</text><line x1=\"100\" y1=\"156\" x2=\"100\" y2=\"192\" stroke=\"#555\" stroke-width=\"1.5\"/><line x1=\"320\" y1=\"156\" x2=\"320\" y2=\"192\" stroke=\"#555\" stroke-width=\"1.5\"/><text x=\"210\" y=\"215\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">integrate each basket, add ONE constant C</text></svg>",
+          "caption": "Separation of variables: sort, then integrate each side on its own"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 57,
+          "type": "text",
+          "text": "Move every $y$ (and $dy$) left, every $x$ (and $dx$) right — like sorting mixed laundry into two baskets — then integrate each side."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 77,
+          "type": "text",
+          "text": "Auto-fare picture: as long as your expenses and your friend's never tangle, each of you totals your own column."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 90,
+          "type": "note",
+          "style": "red-margin",
+          "text": "DANGER: dividing by $h(y)$ silently assumes $h(y) \\neq 0$. The constant function with $h(y)=0$ is often ALSO a solution — check for it at the end."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 110,
+          "type": "text",
+          "text": "If the variables separate, two ordinary integrals finish the job. The difficulty is purely the integration."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We can now read equations and form them. Time to solve. And the honest truth first: there is no magic trick that cracks every differential equation. We keep a toolbox, and the first job on any equation is always diagnosis. What type is this?"
+            },
+            {
+              "seq": 2,
+              "text": "The first and friendliest type: variables separable. It applies whenever the rate of change splits cleanly into an x part times a y part, d y by d x equals something in x, times something in y."
+            },
+            {
+              "seq": 3,
+              "text": "Here is the whole method in one picture: the mixed equation at the top, sorted into two baskets below."
+            },
+            {
+              "seq": 4,
+              "text": "Physically move every y, along with its d y, to the left side, and every x, along with d x, to the right, like sorting mixed laundry into two baskets. Then integrate each side entirely on its own."
+            },
+            {
+              "seq": 5,
+              "text": "If a picture helps, think of splitting a shared auto fare. As long as your expenses and your friend's expenses never get tangled together, each of you just totals up your own column. Separation works the moment the x costs and the y costs do not mix."
+            },
+            {
+              "seq": 6,
+              "text": "One warning deserves red ink before we go further. To separate, you usually divide both sides by some h of y, and that division silently assumes h of y is not zero."
+            },
+            {
+              "seq": 7,
+              "text": "But the constant function where h of y equals zero is often also a perfectly good solution of the original equation, and your division just threw it away. These lost singular solutions must be checked for and restored at the end. It is a favourite examiner trick."
+            },
+            {
+              "seq": 8,
+              "text": "That caution aside, the promise of this method is beautiful: if the variables separate, two ordinary integrals from Chapter seven finish the job. All the difficulty is in the integration itself."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Equations पढ़ना और form करना आ गया। अब solve करने की बारी। और पहले सच्ची बात: कोई magic trick नहीं है जो हर differential equation को crack कर दे। हम एक toolbox रखते हैं, और किसी भी equation पर पहला काम हमेशा diagnosis है। यह किस type की है?"
+            },
+            {
+              "seq": 2,
+              "text": "पहला और सबसे friendly type: variables separable. यह तब लागू होता है जब rate of change साफ़ साफ़ split हो जाए, एक x वाला part times एक y वाला part, यानी d y by d x equals something in x, times something in y."
+            },
+            {
+              "seq": 3,
+              "text": "पूरा method एक picture में: ऊपर mixed equation, नीचे दो baskets में sorted."
+            },
+            {
+              "seq": 4,
+              "text": "हर y को, उसके d y समेत, left side ले जाइए, और हर x को, d x समेत, right side, जैसे mixed laundry दो baskets में sort की जाती है। फिर हर side को बिलकुल अलग अलग integrate कीजिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Picture से मदद मिलती हो तो shared auto का किराया बाँटना सोचिए। जब तक आपके ख़र्चे और आपके दोस्त के ख़र्चे आपस में उलझते नहीं, हर कोई बस अपना column total करता है। Separation उसी moment काम करता है जब x के costs और y के costs mix नहीं होते।"
+            },
+            {
+              "seq": 6,
+              "text": "आगे बढ़ने से पहले एक warning लाल स्याही में। Separate करने के लिए usually दोनों sides को किसी h of y से divide करते हैं, और वह division चुपचाप मान लेता है कि h of y zero नहीं है।"
+            },
+            {
+              "seq": 7,
+              "text": "लेकिन वह constant function जहाँ h of y equals zero होता है, अक्सर original equation का बिलकुल valid solution भी होता है, और आपके division ने उसे फेंक दिया। इन lost singular solutions को end में check करके restore करना ज़रूरी है। यह examiners की favourite trick है।"
+            },
+            {
+              "seq": 8,
+              "text": "इस caution के बाद इस method का promise बहुत सुंदर है: variables separate हो गए, तो Chapter seven वाले दो ordinary integrals काम ख़त्म कर देते हैं। सारी difficulty सिर्फ integration में है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "concept",
+      "subtopic": "Separable & Homogeneous Equations",
+      "title": "Switch to ratios: the homogeneous idea",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "When x and y refuse to separate"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} = \\frac{x^2 + y^2}{2xy}"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "type": "text",
+          "text": "This won't separate — but the RHS doesn't care about the SIZES of $x$ and $y$, only their RATIO $y/x$. Divide top and bottom by $x^2$ to see it."
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 43,
+          "type": "text",
+          "text": "Homogeneous DE: the RHS is a function of $v = y/x$ alone — equivalently, homogeneous of degree ZERO: $F(\\lambda x, \\lambda y) = F(x,y)$."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "type": "text",
+          "text": "Scale-invariance is the signature you hunt for. Fast proxy: in $M\\,dx + N\\,dy = 0$, homogeneous iff $M$ and $N$ have the SAME degree."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 80,
+          "type": "text",
+          "text": "The substitution $y = vx$ forces the unknown to wear the ratio explicitly — and untangles the equation back into a separable one."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 95,
+          "type": "note",
+          "style": "red-margin",
+          "text": "$\\frac{x+y}{x-y}$ is homogeneous; $\\frac{x+y+1}{x-y}$ is NOT — the lone $+1$ breaks scale-invariance. Those need an origin shift, not $y = vx$."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 115,
+          "type": "note",
+          "style": "red-margin",
+          "text": "When $x$ is the heavier variable, the mirror substitution $x = vy$ is cleaner."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Many equations refuse to separate, because x and y are knotted together. The second tool handles a huge class of these."
+            },
+            {
+              "seq": 2,
+              "text": "Look at this equation: d y by d x equals x squared plus y squared, over two x y. Try to sort it into baskets and you will fail, the variables are genuinely tangled."
+            },
+            {
+              "seq": 3,
+              "text": "But look closer. Divide the top and the bottom by x squared, and the right hand side becomes one plus y over x squared, over two times y over x. It does not care about the sizes of x and y at all, only about their ratio."
+            },
+            {
+              "seq": 4,
+              "text": "The definition: a first order equation is homogeneous when its right hand side is a function of v equals y over x alone; equivalently, homogeneous of degree zero, scale x and y by the same lambda and the expression is unchanged."
+            },
+            {
+              "seq": 5,
+              "text": "Scale invariance is the signature you hunt for. And here is a fast proxy for the differential form: if the equation is written as M d x plus N d y equals zero, it is homogeneous exactly when M and N are homogeneous of the same degree."
+            },
+            {
+              "seq": 6,
+              "text": "Once diagnosed, the cure is y equals v x: it forces the unknown to wear the ratio explicitly and untangles the equation back into a separable one. Homogeneous problems are really recognise, substitute, then separate."
+            },
+            {
+              "seq": 7,
+              "text": "One red flag: x plus y over x minus y is homogeneous, but x plus y plus one, over x minus y, is not, that lone plus one breaks scale invariance. Forcing y equals v x there produces nonsense; those need an origin shift, coming in a worked example."
+            },
+            {
+              "seq": 8,
+              "text": "And a small elegance saver: when x is the heavier, messier variable, the mirror substitution x equals v y runs the same logic with less algebra."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "कई equations separate होने से इनकार कर देती हैं, क्योंकि x और y आपस में गुँथे होते हैं। दूसरा tool इनकी एक बड़ी class सँभालता है।"
+            },
+            {
+              "seq": 2,
+              "text": "यह equation देखिए: d y by d x equals x squared plus y squared, over two x y. Baskets में sort करने की कोशिश कीजिए, नहीं होगा, variables सचमुच उलझे हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "लेकिन ग़ौर से देखिए। ऊपर और नीचे x squared से divide कीजिए, right hand side बन जाती है one plus y over x का square, over two times y over x. उसे x और y के sizes की परवाह ही नहीं, सिर्फ उनके ratio की है।"
+            },
+            {
+              "seq": 4,
+              "text": "Definition: first order equation homogeneous है जब right hand side सिर्फ v equals y over x का function हो; equivalently, degree zero की homogeneous, x और y को same lambda से scale कीजिए और expression unchanged."
+            },
+            {
+              "seq": 5,
+              "text": "Scale invariance ही वह signature है जिसे आप ढूँढते हैं। और differential form के लिए एक fast proxy: equation M d x plus N d y equals zero लिखी हो, तो वह homogeneous exactly तब है जब M और N same degree की homogeneous हों।"
+            },
+            {
+              "seq": 6,
+              "text": "Diagnosis हो गई, तो इलाज है y equals v x: यह unknown को ratio explicitly पहनाती है और equation को वापस separable में खोल देती है। Homogeneous problems असल में हैं: पहचानो, substitute करो, फिर separate करो।"
+            },
+            {
+              "seq": 7,
+              "text": "एक red flag: x plus y over x minus y homogeneous है, लेकिन x plus y plus one, over x minus y, नहीं, वह अकेला plus one scale invariance तोड़ देता है। वहाँ y equals v x थोपने से nonsense; उन्हें origin shift चाहिए, जो एक worked example में आ रहा है।"
+            },
+            {
+              "seq": 8,
+              "text": "और एक छोटा elegance saver: जब x ज़्यादा भारी, messy variable हो, तो mirror substitution x equals v y वही logic कम algebra में चला देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "concept",
+      "subtopic": "Separable & Homogeneous Equations",
+      "title": "The two procedures, with their danger steps",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Procedure A — separable, five steps"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 9,
+          "type": "text",
+          "text": "1. SEPARATE into $\\frac{dy}{h(y)} = g(x)\\,dx$. 2. FLAG the danger: note every value making $h(y) = 0$ — possible singular solutions you are about to lose."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 29,
+          "type": "text",
+          "text": "3. INTEGRATE both sides, adding a SINGLE constant $C$. 4. SIMPLIFY (combine logs, exponentiate); apply any initial condition. 5. RESTORE flagged solutions that genuinely satisfy the original."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Why one constant: the two integrals each carry one, but their difference is just one new arbitrary constant. Writing two is redundant."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 62,
+          "type": "heading",
+          "text": "Procedure B — homogeneous, five steps"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 69,
+          "type": "text",
+          "text": "1. CONFIRM the type (scale test / same-degree $M, N$). 2. REWRITE the RHS as $\\phi(v)$, $v = y/x$. 3. SUBSTITUTE $y = vx$, $\\frac{dy}{dx} = v + x\\frac{dv}{dx}$."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 92,
+          "type": "formula",
+          "latex": "v + x\\frac{dv}{dx} = \\phi(v) \\;\\;\\Rightarrow\\;\\; \\frac{dv}{\\phi(v) - v} = \\frac{dx}{x}"
+        },
+        {
+          "seq": 8,
+          "emphasis": "high",
+          "reveal_at": 106,
+          "type": "text",
+          "text": "4. Solve the separable equation in $v$ and $x$. 5. BACK-SUBSTITUTE $v = y/x$. An answer left in $v$ scores ZERO."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Both methods now become drills. Here they are as numbered procedures, with the danger steps built in where students bleed marks."
+            },
+            {
+              "seq": 2,
+              "text": "Procedure A, separable. One, separate: manipulate into d y over h of y equals g of x d x, y content left, x content right. Two, flag the danger before dividing: note every value making h of y zero, possible singular solutions you are about to lose."
+            },
+            {
+              "seq": 3,
+              "text": "Three, integrate both sides, adding a single arbitrary constant C. Four, simplify, combine logs, exponentiate where helpful, and if an initial condition is given, solve for C. Five, return to your flags and restore any lost solution that genuinely satisfies the original equation."
+            },
+            {
+              "seq": 4,
+              "text": "Why only one constant in step three: each indefinite integral carries its own constant, but their difference is just one new arbitrary constant. Writing two is redundant and a common source of confusion. Combine them immediately."
+            },
+            {
+              "seq": 5,
+              "text": "Procedure B, homogeneous, also five steps, and the first is the one people skip at their peril."
+            },
+            {
+              "seq": 6,
+              "text": "One, confirm the type by the scale test or the same degree check on M and N; a stray constant breaking homogeneity means stop. Two, rewrite the right hand side as phi of v. Three, substitute y equals v x, so d y by d x becomes v plus x d v by d x."
+            },
+            {
+              "seq": 7,
+              "text": "The equation collapses to the board: d v over phi of v minus v, equals d x over x. That right hand side is pure x, the substitution has manufactured a separable equation."
+            },
+            {
+              "seq": 8,
+              "text": "Four, solve that separable equation in v and x. Five, back substitute v equals y over x to return to the original variables. This last step is not decoration: an answer left in v scores zero. Came in as y, must leave as y."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब दोनों methods drills बन जाते हैं। यह रहीं numbered procedures, उन danger steps के साथ जहाँ students के marks बहते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Procedure A, separable. One, separate: equation को d y over h of y equals g of x d x में लाइए, y content left, x content right. Two, divide से पहले danger flag कीजिए: हर वह value note कीजिए जो h of y को zero बनाती है, possible singular solutions जो खोने वाले हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "Three, दोनों sides integrate कीजिए, एक single arbitrary constant C जोड़ते हुए। Four, simplify कीजिए, logs combine कीजिए, जहाँ मदद मिले exponentiate कीजिए, और initial condition दी हो तो C solve कीजिए। Five, अपने flags पर लौटिए और हर वह lost solution restore कीजिए जो original equation को सचमुच satisfy करता है।"
+            },
+            {
+              "seq": 4,
+              "text": "Step three में सिर्फ एक constant क्यों: हर indefinite integral अपना constant लाता है, लेकिन उनका difference बस एक नया arbitrary constant है। दो लिखना redundant है और confusion का common source. तुरंत combine कीजिए।"
+            },
+            {
+              "seq": 5,
+              "text": "Procedure B, homogeneous, भी पाँच steps, और पहला वही है जिसे skip करना ख़तरनाक है।"
+            },
+            {
+              "seq": 6,
+              "text": "One, type confirm कीजिए, scale test या same degree check से; stray constant homogeneity तोड़े तो रुकिए। Two, right hand side को phi of v लिखिए। Three, y equals v x substitute कीजिए, तो d y by d x बनता है v plus x d v by d x."
+            },
+            {
+              "seq": 7,
+              "text": "Equation board वाली बन जाती है: d v over phi of v minus v, equals d x over x. वह right hand side pure x है, substitution ने separable equation manufacture कर दी।"
+            },
+            {
+              "seq": 8,
+              "text": "Four, उस separable equation को v और x में solve कीजिए। Five, back substitute कीजिए v equals y over x, original variables में लौटने के लिए। यह आख़िरी step सजावट नहीं है: v में छोड़ा गया answer zero score करता है। y बनकर आए थे, y बनकर ही जाना है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "formulas",
+      "subtopic": "Separable & Homogeneous Equations",
+      "title": "The two method templates",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Templates to write from memory"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 9,
+          "type": "formula",
+          "latex": "\\text{Separable:}\\quad \\frac{dy}{dx} = g(x)\\,h(y) \\;\\;\\Longleftrightarrow\\;\\; \\frac{dy}{h(y)} = g(x)\\,dx"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "type": "formula",
+          "latex": "\\int \\frac{dy}{h(y)} = \\int g(x)\\,dx + C"
+        },
+        {
+          "seq": 4,
+          "emphasis": "high",
+          "reveal_at": 42,
+          "type": "formula",
+          "latex": "\\text{Homogeneous:}\\quad \\frac{dy}{dx} = \\phi\\!\\left(\\frac{y}{x}\\right), \\qquad F(\\lambda x, \\lambda y) = \\lambda^{0} F(x, y)"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 60,
+          "type": "formula",
+          "latex": "y = vx \\;\\Rightarrow\\; \\frac{dy}{dx} = v + x\\frac{dv}{dx} \\;\\Rightarrow\\; \\frac{dv}{\\phi(v) - v} = \\frac{dx}{x}"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 78,
+          "type": "text",
+          "text": "Mirror: when $x$ dominates, put $x = vy$ and run the same reduction with roles swapped."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 92,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Integral shortcut worth marks: numerator ∝ derivative of denominator ⇒ the integral is a single logarithm — no partial fractions."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 114,
+          "type": "text",
+          "text": "Both templates end in Chapter-7 integration. Diagnosis is the new skill; integration is the old one."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Freeze both methods into templates you can write from memory. These four lines are the working capital of the whole chapter."
+            },
+            {
+              "seq": 2,
+              "text": "Template one, separable. The type test and the sort in one line: d y by d x equals g of x times h of y, if and only if d y over h of y equals g of x d x. If you cannot reach the right hand form, the equation is not separable."
+            },
+            {
+              "seq": 3,
+              "text": "Its solution is the pair of integrals: integral of d y over h of y equals integral of g of x d x, plus one constant C."
+            },
+            {
+              "seq": 4,
+              "text": "Template two, homogeneous. The type in two equivalent statements: the right hand side is a function phi of y over x alone, or equivalently, F of lambda x lambda y equals lambda to the zero times F of x y, perfect scale invariance."
+            },
+            {
+              "seq": 5,
+              "text": "And its reduction: put y equals v x, so d y by d x equals v plus x d v by d x, and the equation rearranges to d v over phi of v minus v, equals d x over x. Separable, guaranteed."
+            },
+            {
+              "seq": 6,
+              "text": "The mirror template: when x is the dominant, messier variable, put x equals v y instead and run the same reduction with the roles of x and y swapped. Same logic, less algebra."
+            },
+            {
+              "seq": 7,
+              "text": "Now a shortcut worth real marks. Inside any separation integral, scan whether the numerator is proportional to the derivative of the denominator. If yes, the integral is a single logarithm, log of the denominator, and you skip partial fractions entirely. You will see it save two minutes in the next worked example."
+            },
+            {
+              "seq": 8,
+              "text": "Notice where both templates end: in Chapter seven integration. Diagnosis is the only new skill here; the integration muscle you already have."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "दोनों methods को templates में freeze कर लीजिए जो memory से लिखे जा सकें। यही चार lines पूरे chapter की working capital हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Template one, separable. Type test और sorting एक ही line में: d y by d x equals g of x times h of y, if and only if d y over h of y equals g of x d x. Right hand वाली form तक न पहुँच पाएँ, तो equation separable नहीं है।"
+            },
+            {
+              "seq": 3,
+              "text": "उसका solution integrals का pair है: integral of d y over h of y equals integral of g of x d x, plus एक constant C."
+            },
+            {
+              "seq": 4,
+              "text": "Template two, homogeneous. Type दो equivalent statements में: right hand side सिर्फ y over x का function phi है, या equivalently, F of lambda x lambda y equals lambda to the zero times F of x y, perfect scale invariance."
+            },
+            {
+              "seq": 5,
+              "text": "और उसकी reduction: y equals v x रखिए, तो d y by d x equals v plus x d v by d x, और equation rearrange होकर बनती है d v over phi of v minus v, equals d x over x. Separable, guaranteed."
+            },
+            {
+              "seq": 6,
+              "text": "Mirror template: जब x dominant, messy variable हो, तो x equals v y रखिए और वही reduction x और y के roles बदलकर चलाइए। Same logic, कम algebra."
+            },
+            {
+              "seq": 7,
+              "text": "अब एक shortcut जो असली marks दिलाता है। किसी भी separation integral के अंदर scan कीजिए कि numerator, denominator के derivative का proportional तो नहीं। है, तो integral एक single logarithm है, log of the denominator, और partial fractions पूरी तरह skip. अगले worked example में यह two minutes बचाता दिखेगा।"
+            },
+            {
+              "seq": 8,
+              "text": "ध्यान दीजिए दोनों templates कहाँ ख़त्म होते हैं: Chapter seven की integration पर। नई skill सिर्फ diagnosis है; integration की muscle आपके पास पहले से है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 19,
+      "section_type": "worked_examples",
+      "subtopic": "Separable & Homogeneous Equations",
+      "title": "Separable warm-up, then the log shortcut",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 1 — CBSE: clean separation"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} = (4x^3 + 2)\\,e^{-y} \\;\\;\\Rightarrow\\;\\; e^{y}\\,dy = (4x^3 + 2)\\,dx"
+        },
+        {
+          "seq": 3,
+          "emphasis": "high",
+          "reveal_at": 32,
+          "type": "formula",
+          "latex": "e^{y} = x^4 + 2x + C \\;\\;\\Rightarrow\\;\\; y = \\log(x^4 + 2x + C)"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "type": "heading",
+          "text": "Example 2 — JEE Main: homogeneous + shortcut"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} = \\frac{x - y}{x + y} \\;\\;\\xrightarrow{\\,y = vx\\,}\\;\\; \\frac{1 + v}{1 - 2v - v^2}\\,dv = \\frac{dx}{x}"
+        },
+        {
+          "seq": 6,
+          "emphasis": "high",
+          "reveal_at": 74,
+          "type": "text",
+          "text": "Spot it: $\\frac{d}{dv}(1 - 2v - v^2) = -2(1 + v)$ — numerator ∝ derivative of denominator ⇒ instant log, NO partial fractions."
+        },
+        {
+          "seq": 7,
+          "emphasis": "normal",
+          "reveal_at": 90,
+          "type": "formula",
+          "latex": "-\\tfrac{1}{2}\\log\\left|1 - 2v - v^2\\right| = \\log|x| + C \\;\\;\\Rightarrow\\;\\; x^2 - 2xy - y^2 = C"
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 110,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Trap: reflex partial fractions burn two minutes. Scan for the derivative pattern FIRST."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Two solves now, one from each method. Example one, C B S E level: solve d y by d x equals four x cubed plus two, times e to the minus y."
+            },
+            {
+              "seq": 2,
+              "text": "Separate by multiplying across by e to the y: e to the y d y equals four x cubed plus two, d x. Note the danger check: e to the minus y is never zero, so no solution can be lost here. Integrate both sides."
+            },
+            {
+              "seq": 3,
+              "text": "The general solution: e to the y equals x to the fourth plus two x plus C, or taking logs, y equals log of that expression. Show the separation step explicitly and carry exactly one constant, examiners look for both."
+            },
+            {
+              "seq": 4,
+              "text": "Example two is homogeneous with a beautiful shortcut inside. Solve d y by d x equals x minus y, over x plus y."
+            },
+            {
+              "seq": 5,
+              "text": "Numerator and denominator are both degree one, ratio degree zero: homogeneous. Substitute y equals v x and separate: one plus v, over one minus two v minus v squared, d v, equals d x over x."
+            },
+            {
+              "seq": 6,
+              "text": "The moment that separates fast from slow: the derivative of the denominator is minus two minus two v, minus two times one plus v, exactly proportional to the numerator. This integral is an instant logarithm, no partial fractions needed."
+            },
+            {
+              "seq": 7,
+              "text": "Integrating: minus half log of the absolute value of one minus two v minus v squared, equals log x plus C. Exponentiate, restore v equals y over x, multiply through by x squared, and the family lands as x squared minus two x y minus y squared equals C."
+            },
+            {
+              "seq": 8,
+              "text": "The trap, named: students reflexively split into partial fractions and burn two minutes on a one line integral. Train the scan: numerator proportional to derivative of denominator, first, every time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब दो solves, हर method से एक। Example one, C B S E level: solve कीजिए d y by d x equals four x cubed plus two, times e to the minus y."
+            },
+            {
+              "seq": 2,
+              "text": "e to the y से multiply करके separate कीजिए: e to the y d y equals four x cubed plus two, d x. Danger check note कीजिए: e to the minus y कभी zero नहीं होता, तो यहाँ कोई solution lost नहीं हो सकता। दोनों sides integrate कीजिए।"
+            },
+            {
+              "seq": 3,
+              "text": "General solution: e to the y equals x to the fourth plus two x plus C, या log लेकर, y equals log of वही expression. Separation step explicitly दिखाइए और exactly एक constant carry कीजिए, examiner दोनों देखते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "Example two homogeneous है, अंदर एक ख़ूबसूरत shortcut के साथ। Solve कीजिए d y by d x equals x minus y, over x plus y."
+            },
+            {
+              "seq": 5,
+              "text": "Numerator और denominator दोनों degree one, ratio degree zero: homogeneous. y equals v x substitute करके separate कीजिए: one plus v, over one minus two v minus v squared, d v, equals d x over x."
+            },
+            {
+              "seq": 6,
+              "text": "वह moment जो fast को slow से अलग करता है: denominator का derivative है minus two minus two v, यानी minus two times one plus v, बिलकुल numerator का proportional. यह integral instant logarithm है, partial fractions की ज़रूरत नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "Integrate करने पर: minus half log of one minus two v minus v squared का absolute value, equals log x plus C. Exponentiate कीजिए, v equals y over x restore कीजिए, x squared से multiply कीजिए, और family बनती है x squared minus two x y minus y squared equals C."
+            },
+            {
+              "seq": 8,
+              "text": "Trap, नाम लेकर: students reflex में partial fractions तोड़ते हैं और one line के integral पर two minutes जला देते हैं। Scan की आदत डालिए: numerator proportional to derivative of denominator, पहले, हर बार।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 20,
+      "section_type": "worked_examples",
+      "subtopic": "Separable & Homogeneous Equations",
+      "title": "A curve through a point: homogeneous with a trig integral",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 3 — JEE Main: three skills in one"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "type": "text",
+          "text": "A curve passes through $(1, \\pi/6)$ and its slope satisfies the equation below. Find the curve."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} = \\frac{y}{x} + \\tan\\!\\left(\\frac{y}{x}\\right)"
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "type": "formula",
+          "latex": "y = vx:\\;\\; v + x\\frac{dv}{dx} = v + \\tan v \\;\\;\\Rightarrow\\;\\; \\cot v\\,dv = \\frac{dx}{x}"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 54,
+          "type": "formula",
+          "latex": "\\log|\\sin v| = \\log|x| + \\log C \\;\\;\\Rightarrow\\;\\; \\sin v = Cx"
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 75,
+          "type": "text",
+          "text": "Back-substitute $v = y/x$: $\\sin(y/x) = Cx$. Apply $(1, \\pi/6)$: $\\sin(\\pi/6) = C$ ⇒ $C = 1/2$."
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 94,
+          "type": "formula",
+          "latex": "\\sin\\!\\left(\\frac{y}{x}\\right) = \\frac{x}{2}"
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 100,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Three separate skills: diagnose homogeneity, recall $\\int \\cot v \\, dv = \\log|\\sin v|$, pin $C$ with the point."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three is J E E Main's favourite packaging: an initial value problem wrapped around a homogeneous equation, with a trig integral hiding inside."
+            },
+            {
+              "seq": 2,
+              "text": "The setup: a curve passes through the point one comma pi by six, and at every point its slope satisfies the equation on the board. Find the curve."
+            },
+            {
+              "seq": 3,
+              "text": "Diagnose first. The right hand side is y over x plus tan of y over x, a pure function of the ratio. Homogeneous, no doubt about it."
+            },
+            {
+              "seq": 4,
+              "text": "Substitute y equals v x. The left becomes v plus x d v by d x; the right is v plus tan v. The v on each side cancels, leaving x d v by d x equals tan v, which separates into cot v d v equals d x over x."
+            },
+            {
+              "seq": 5,
+              "text": "Integrating needs one recall from Chapter seven: the integral of cot v is log of sine v. So log sine v equals log x plus log C, and combining the logs, sine v equals C x. Writing the constant as log C is what lets the logs merge so cleanly."
+            },
+            {
+              "seq": 6,
+              "text": "Back substitute v equals y over x: sine of y over x equals C x. Now pin the constant with the given point. At x equals one, y equals pi by six: sine of pi by six equals C times one, so C equals one half."
+            },
+            {
+              "seq": 7,
+              "text": "The curve, final and boxed: sine of y over x equals x over two."
+            },
+            {
+              "seq": 8,
+              "text": "Why this counts as multi concept: you diagnosed homogeneity, recalled a non obvious trig antiderivative, and pinned the constant with an initial condition. Three separate skills, one question, and every one of them individually cheap."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three J E E Main की favourite packaging है: homogeneous equation के चारों ओर लिपटा initial value problem, अंदर छिपे एक trig integral के साथ।"
+            },
+            {
+              "seq": 2,
+              "text": "Setup: एक curve point one comma pi by six से गुज़रता है, और हर point पर उसका slope board वाली equation को satisfy करता है। Curve निकालिए।"
+            },
+            {
+              "seq": 3,
+              "text": "पहले diagnose. Right hand side है y over x plus tan of y over x, ratio का pure function. Homogeneous, कोई शक नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "y equals v x substitute कीजिए। Left बनता है v plus x d v by d x; right है v plus tan v. दोनों तरफ़ का v cancel, बचता है x d v by d x equals tan v, जो separate होकर बनता है cot v d v equals d x over x."
+            },
+            {
+              "seq": 5,
+              "text": "Integration के लिए Chapter seven की एक recall चाहिए: cot v का integral है log of sine v. तो log sine v equals log x plus log C, और logs combine करके, sine v equals C x. Constant को log C लिखना ही वह चाल है जिससे logs इतनी सफ़ाई से merge होते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "Back substitute कीजिए v equals y over x: sine of y over x equals C x. अब दिए हुए point से constant pin कीजिए। x equals one पर, y equals pi by six: sine of pi by six equals C times one, तो C equals one half."
+            },
+            {
+              "seq": 7,
+              "text": "Curve, final और boxed: sine of y over x equals x over two."
+            },
+            {
+              "seq": 8,
+              "text": "यह multi concept इसलिए है: आपने homogeneity diagnose की, एक non obvious trig antiderivative recall किया, और initial condition से constant pin किया। तीन अलग skills, एक question, और हर एक अकेले में आसान।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 21,
+      "section_type": "worked_examples",
+      "subtopic": "Separable & Homogeneous Equations",
+      "title": "Origin shift: when a stray constant blocks the ratio trick",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Example 4 — JEE Advanced: reducible to homogeneous"
+        },
+        {
+          "seq": 2,
+          "emphasis": "normal",
+          "reveal_at": 11,
+          "type": "formula",
+          "latex": "\\frac{dy}{dx} = \\frac{x - y + 3}{x + y - 1}"
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 19,
+          "type": "text",
+          "text": "The $+3$ and $-1$ break homogeneity — $y = vx$ fails. FIX: shift the origin to where BOTH lines vanish."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "type": "formula",
+          "latex": "x - y + 3 = 0,\\;\\; x + y - 1 = 0 \\;\\Rightarrow\\; (-1, 2). \\quad X = x + 1,\\; Y = y - 2"
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "type": "formula",
+          "latex": "\\frac{dY}{dX} = \\frac{X - Y}{X + Y} \\;\\;\\text{(Example 2, in capitals!)} \\;\\Rightarrow\\; X^2 - 2XY - Y^2 = C"
+        },
+        {
+          "seq": 6,
+          "emphasis": "high",
+          "reveal_at": 75,
+          "type": "formula",
+          "latex": "(x+1)^2 - 2(x+1)(y-2) - (y-2)^2 = C"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 92,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Works only when the two lines INTERSECT. Parallel lines (proportional coefficients) ⇒ substitute $t = x + y$ instead → separable."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 111,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Origin-shift reducibility is a JEE extension beyond the strict NCERT core."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The final worked example of this part is J E E Advanced territory: an equation that is almost homogeneous, and the surgical fix that makes it so."
+            },
+            {
+              "seq": 2,
+              "text": "Solve d y by d x equals x minus y plus three, over x plus y minus one."
+            },
+            {
+              "seq": 3,
+              "text": "Run the scale test and it fails: the lone plus three and minus one break homogeneity, so y equals v x will not work directly. But those constants are the only obstruction, and there is a fix: shift the origin to the point where both lines vanish, killing the constants."
+            },
+            {
+              "seq": 4,
+              "text": "Solve the two lines simultaneously: adding gives x equals minus one, then y equals two. Define capital X equals x plus one, capital Y equals y minus two; the differentials are unchanged."
+            },
+            {
+              "seq": 5,
+              "text": "Substituting, the numerator becomes X minus Y, the denominator X plus Y, and the equation reads d Y by d X equals X minus Y over X plus Y. <chuckle>Look familiar? It is exactly Example two, wearing capital letters.</chuckle> Borrowing that finished result: X squared minus two X Y minus Y squared equals C."
+            },
+            {
+              "seq": 6,
+              "text": "Restore the shift, X equals x plus one and Y equals y minus two, and the final answer is: x plus one squared, minus two times x plus one times y minus two, minus y minus two squared, equals C."
+            },
+            {
+              "seq": 7,
+              "text": "One structural warning: this origin shift works only when the two lines intersect. If they were parallel, coefficients proportional, you would instead substitute t equals x plus y, the common linear combination, and the equation reduces to separable. Keep that sub case in your back pocket."
+            },
+            {
+              "seq": 8,
+              "text": "And for honest bookkeeping: origin shift reducibility is a J E E extension beyond the strict N C E R T core. Boards will not demand it; J E E Advanced happily will."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "इस part का आख़िरी worked example J E E Advanced की ज़मीन है: एक equation जो almost homogeneous है, और वह surgical fix जो उसे बना देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "Solve कीजिए d y by d x equals x minus y plus three, over x plus y minus one."
+            },
+            {
+              "seq": 3,
+              "text": "Scale test चलाइए, fail होता है: अकेले plus three और minus one homogeneity तोड़ते हैं, तो y equals v x directly काम नहीं करेगा। लेकिन रुकावट सिर्फ यही constants हैं, और fix मौजूद है: origin को उस point पर shift कीजिए जहाँ दोनों lines vanish होती हैं, constants वहीं मर जाते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "दोनों lines को simultaneously solve कीजिए: जोड़ने पर x equals minus one, फिर y equals two. Define कीजिए capital X equals x plus one, capital Y equals y minus two; differentials unchanged हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "Substitute करने पर numerator बनता है X minus Y, denominator X plus Y, और equation पढ़ी जाती है d Y by d X equals X minus Y over X plus Y. <chuckle>जाना पहचाना लगा? यह exactly Example two है, capital letters पहनकर।</chuckle> उसका finished result उधार लीजिए: X squared minus two X Y minus Y squared equals C."
+            },
+            {
+              "seq": 6,
+              "text": "Shift restore कीजिए, X equals x plus one और Y equals y minus two, और final answer है: x plus one का square, minus two times x plus one times y minus two, minus y minus two का square, equals C."
+            },
+            {
+              "seq": 7,
+              "text": "एक structural warning: यह origin shift तभी काम करता है जब दोनों lines intersect करें। Parallel होतीं, coefficients proportional, तो बजाय इसके t equals x plus y substitute करते, common linear combination, और equation separable बन जाती। यह sub case अपनी back pocket में रखिए।"
+            },
+            {
+              "seq": 8,
+              "text": "और ईमानदार bookkeeping के लिए: origin shift reducibility strict N C E R T core से आगे की J E E extension है। Boards इसे नहीं माँगेंगे; J E E Advanced ख़ुशी ख़ुशी माँगेगा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 22,
+      "section_type": "tips",
+      "subtopic": "Separable & Homogeneous Equations",
+      "title": "Pitfalls: lost solutions, forced substitutions, leftover v",
+      "board_events": [
+        {
+          "seq": 1,
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "type": "heading",
+          "text": "Four leaks in solving"
+        },
+        {
+          "seq": 2,
+          "emphasis": "high",
+          "reveal_at": 8,
+          "type": "text",
+          "text": "Losing the constant solution: dividing by $h(y)$ can erase a valid solution $h(y) = 0$. Note it BEFORE dividing; check it at the end."
+        },
+        {
+          "seq": 3,
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "type": "text",
+          "text": "Forcing $y = vx$ onto a non-homogeneous equation: a stray constant means it isn't homogeneous — shift the origin (or use a linear substitution) instead."
+        },
+        {
+          "seq": 4,
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "type": "text",
+          "text": "Leaving the answer in $v$: after solving in $v$ and $x$, back-substitute $v = y/x$. An answer containing $v$ scores zero."
+        },
+        {
+          "seq": 5,
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "type": "text",
+          "text": "Double constants / messy logs: carry exactly ONE arbitrary constant, and write log-constants as $\\log C$ so they combine cleanly."
+        },
+        {
+          "seq": 6,
+          "emphasis": "normal",
+          "reveal_at": 74,
+          "type": "heading",
+          "text": "The pro reflex"
+        },
+        {
+          "seq": 7,
+          "emphasis": "high",
+          "reveal_at": 78,
+          "type": "note",
+          "style": "red-margin",
+          "text": "Diagnosis first: do the variables separate as-is? If not, is the RHS a pure function of $y/x$? Then — inside any integral — scan for numerator ∝ derivative of denominator."
+        },
+        {
+          "seq": 8,
+          "emphasis": "normal",
+          "reveal_at": 105,
+          "type": "text",
+          "text": "Memory hooks: separate the laundry, integrate each basket; if it only sees the ratio, let $y = vx$; divide and you might lose a root; came in as $y$, must leave as $y$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Before the toolbox grows again in Part two, seal the four leaks that drain marks from separable and homogeneous problems."
+            },
+            {
+              "seq": 2,
+              "text": "Leak one: losing the constant solution. Dividing by h of y to separate can erase the perfectly valid solution where h of y equals zero. Note the danger before dividing, and check the candidate at the end. Examiners love asking exactly which solution was lost."
+            },
+            {
+              "seq": 3,
+              "text": "Leak two: forcing y equals v x onto an equation that is not homogeneous. One stray constant in the numerator or denominator kills the type. The cure there is the origin shift, or a linear substitution, never brute force."
+            },
+            {
+              "seq": 4,
+              "text": "Leak three: leaving the answer in v. After solving in v and x, back substitution to v equals y over x is mandatory. An answer containing v scores zero, no matter how correct the calculus inside was."
+            },
+            {
+              "seq": 5,
+              "text": "Leak four: constant hygiene. Carry exactly one arbitrary constant, and when logs appear, write the constant as log C so everything combines into a single clean logarithm. Two floating constants and mismatched logs are where sign errors breed."
+            },
+            {
+              "seq": 6,
+              "text": "Now the reflex that organises every solve."
+            },
+            {
+              "seq": 7,
+              "text": "Diagnosis before algebra. Ask in order: do the variables separate as the equation stands? If not, is the right hand side a pure function of y over x? And once you are inside any integral, scan whether the numerator is proportional to the derivative of the denominator, the single log shortcut. <whisper>That one scan is the quiet difference between finishing the paper and not.</whisper>"
+            },
+            {
+              "seq": 8,
+              "text": "Four memory hooks to close: separate the laundry, integrate each basket. If it only sees the ratio, let y equal v x. Divide and you might lose a root. And, came in as y, must leave as y."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Part two में toolbox और बढ़े, उससे पहले वे चार leaks seal कर लीजिए जो separable और homogeneous problems से marks बहा ले जाते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "Leak one: constant solution खो देना। Separate करने के लिए h of y से divide करना उस बिलकुल valid solution को मिटा सकता है जहाँ h of y equals zero. Divide करने से पहले danger note कीजिए, और end में candidate check कीजिए। Examiners को यही पूछना पसंद है कि कौन सा solution lost हुआ।"
+            },
+            {
+              "seq": 3,
+              "text": "Leak two: non homogeneous equation पर y equals v x थोपना। Numerator या denominator में एक stray constant type को ख़त्म कर देता है। वहाँ इलाज है origin shift, या कोई linear substitution, कभी brute force नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "Leak three: answer को v में छोड़ देना। v और x में solve करने के बाद back substitution, v equals y over x, mandatory है। v वाला answer zero score करता है, अंदर की calculus चाहे कितनी सही हो।"
+            },
+            {
+              "seq": 5,
+              "text": "Leak four: constant hygiene. Exactly एक arbitrary constant carry कीजिए, और logs आएँ तो constant को log C लिखिए ताकि सब कुछ एक clean logarithm में combine हो। दो तैरते constants और बेमेल logs, यहीं sign errors पनपते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "अब वह reflex जो हर solve को organise करता है।"
+            },
+            {
+              "seq": 7,
+              "text": "Algebra से पहले diagnosis. क्रम से पूछिए: जैसी equation है, क्या variables separate होते हैं? नहीं, तो क्या right hand side सिर्फ y over x का function है? और किसी भी integral के अंदर घुसते ही scan कीजिए कि numerator, denominator के derivative का proportional तो नहीं, single log shortcut. <whisper>यही एक scan paper पूरा होने और न होने का ख़ामोश फ़र्क़ है।</whisper>"
+            },
+            {
+              "seq": 8,
+              "text": "बंद करने के लिए चार memory hooks: laundry अलग करो, हर basket को integrate करो। सिर्फ ratio दिखे, तो y equals v x. Divide किया तो root खो सकते हो। और, y बनकर आए थे, y बनकर ही जाना है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

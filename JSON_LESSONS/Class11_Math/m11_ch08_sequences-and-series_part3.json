@@ -1,0 +1,2443 @@
+{
+  "chapter": "Sequences and Series",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 8,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "HP - Concept",
+      "title": "An HP is an AP upside-down — reciprocate first",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Harmonic progression: reciprocals form an AP"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "Flip HP terms and you get an AP",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 160\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"110\" y=\"45\" text-anchor=\"middle\" font-size=\"15\" fill=\"#b45309\">HP</text>\n  <text x=\"110\" y=\"72\" text-anchor=\"middle\" font-size=\"15\" fill=\"#7c2d12\">a₁, a₂, a₃, …</text>\n  <text x=\"110\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" fill=\"#94a3b8\">(hard to sum directly)</text>\n  <line x1=\"185\" y1=\"70\" x2=\"290\" y2=\"70\" stroke=\"#4f46e5\" stroke-width=\"2\" marker-end=\"url(#a4)\"/>\n  <text x=\"237\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"#4f46e5\">reciprocate</text>\n  <text x=\"380\" y=\"45\" text-anchor=\"middle\" font-size=\"15\" fill=\"#3730a3\">AP</text>\n  <text x=\"380\" y=\"72\" text-anchor=\"middle\" font-size=\"15\" fill=\"#1e3a8a\">1/a₁, 1/a₂, 1/a₃, …</text>\n  <text x=\"380\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" fill=\"#16a34a\">(full AP toolkit works)</text>\n  <text x=\"235\" y=\"140\" text-anchor=\"middle\" font-size=\"13\" fill=\"#64748b\">flip → solve as an AP → flip back</text>\n  <defs><marker id=\"a4\" markerWidth=\"9\" markerHeight=\"9\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#4f46e5\"/></marker></defs>\n</svg>"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 17,
+          "latex": "a_1, a_2, a_3, \\dots \\text{ in HP} \\iff \\frac{1}{a_1}, \\frac{1}{a_2}, \\frac{1}{a_3}, \\dots \\text{ in AP}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "text": "It is the maths of rates over a fixed task — where 'average' stops meaning AM."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "caption": "Round trip: average speed is the HM, not the AM",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 180\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"60\" y=\"40\" width=\"60\" height=\"26\" rx=\"5\" fill=\"#e0e7ff\" stroke=\"#4f46e5\"/>\n  <text x=\"90\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1e293b\">home</text>\n  <rect x=\"350\" y=\"40\" width=\"60\" height=\"26\" rx=\"5\" fill=\"#dcfce7\" stroke=\"#16a34a\"/>\n  <text x=\"380\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"#14532d\">town</text>\n  <line x1=\"120\" y1=\"45\" x2=\"350\" y2=\"45\" stroke=\"#b91c1c\" stroke-width=\"2\" marker-end=\"url(#a3)\"/>\n  <text x=\"235\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" fill=\"#b91c1c\">40 km/h</text>\n  <line x1=\"350\" y1=\"62\" x2=\"120\" y2=\"62\" stroke=\"#0f766e\" stroke-width=\"2\" marker-end=\"url(#a3)\"/>\n  <text x=\"235\" y=\"80\" text-anchor=\"middle\" font-size=\"13\" fill=\"#0f766e\">60 km/h</text>\n  <text x=\"235\" y=\"125\" text-anchor=\"middle\" font-size=\"16\" fill=\"#1e293b\">average speed = HM = 48</text>\n  <text x=\"235\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" fill=\"#94a3b8\">not the arithmetic 50 — equal distance, so rates combine harmonically</text>\n  <defs><marker id=\"a3\" markerWidth=\"9\" markerHeight=\"9\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#475569\"/></marker></defs>\n</svg>"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 42,
+          "style": "red-margin",
+          "text": "HP has NO general closed-form sum — this is a feature, not a gap."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "The three means line up forever: $A \\ge G \\ge H$, equal only when all equal."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 58,
+          "text": "So every HP question becomes an AP question the instant you flip the terms."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Now the third classical progression, and it is really just the AP viewed upside-down. A sequence is in harmonic progression exactly when the reciprocals of its terms form an arithmetic progression."
+            },
+            {
+              "seq": 2,
+              "text": "The board shows the whole trick: flip every HP term over, and out comes a clean AP that you already know how to handle."
+            },
+            {
+              "seq": 3,
+              "text": "Written formally, a-one, a-two, a-three are in HP if and only if one over a-one, one over a-two, one over a-three are in AP."
+            },
+            {
+              "seq": 4,
+              "text": "Conceptually, the HP is the mathematics of rates over a fixed task — the place where the honest average stops being the arithmetic mean."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> The classic anchor is a round trip. Drive out at forty and back at sixty over the same distance, and your average speed is not fifty but forty-eight — the harmonic mean, because equal distances make the rates combine harmonically."
+            },
+            {
+              "seq": 6,
+              "text": "Now a structural warning that surprises students. Unlike the AP and GP, the HP has no general formula for the sum of its terms. That is a genuine feature of the topic, not a hole in your memory."
+            },
+            {
+              "seq": 7,
+              "text": "One more fact to plant: the three means always line up in the same order — arithmetic at least geometric at least harmonic — coinciding only when all the numbers are equal."
+            },
+            {
+              "seq": 8,
+              "text": "Hold the master move above everything else: every HP question becomes an AP question the very instant you flip the terms over."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "अब तीसरी classical progression, और यह असल में AP को उल्टा देखने जैसा है। एक sequence harmonic progression में तभी है जब उसके terms के reciprocals एक arithmetic progression बनाएँ।"
+            },
+            {
+              "seq": 2,
+              "text": "board पूरी trick दिखा रहा है: हर HP term को flip करो, और बाहर आती है एक clean AP जिसे तुम पहले से handle करना जानते हो।"
+            },
+            {
+              "seq": 3,
+              "text": "formally लिखने पर, a-one, a-two, a-three HP में हैं if and only if one over a-one, one over a-two, one over a-three AP में हों।"
+            },
+            {
+              "seq": 4,
+              "text": "conceptually, HP fixed task पर rates की गणित है — वो जगह जहाँ honest average arithmetic mean होना बंद कर देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> classic anchor एक round trip है। एक ही distance पर forty से जाओ और sixty से लौटो, और तुम्हारी average speed fifty नहीं बल्कि forty-eight है — harmonic mean, क्योंकि equal distances rates को harmonically combine कराते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "अब एक structural warning जो students को चौंकाती है। AP और GP के उलट, HP के terms के sum का कोई general formula नहीं है। यह topic का genuine feature है, तुम्हारी memory का छेद नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "एक और fact बो दो: तीनों means हमेशा same order में line up होते हैं — arithmetic कम से कम geometric कम से कम harmonic — coincide सिर्फ़ तब जब सारे numbers बराबर हों।"
+            },
+            {
+              "seq": 8,
+              "text": "सबसे ऊपर master move रखो: हर HP question एक AP question बन जाता है, ठीक उसी पल जब तुम terms को flip करते हो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "HP - Derivations",
+      "title": "The HM formula and the p-q reciprocal trick",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two results that flow from reciprocating"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "If $a, H, b$ are in HP, then $\\tfrac1a, \\tfrac1H, \\tfrac1b$ are in AP."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "latex": "\\frac{1}{H} = \\frac{1}{2}\\left(\\frac{1}{a} + \\frac{1}{b}\\right) = \\frac{a+b}{2ab}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 23,
+          "latex": "H = \\frac{2ab}{a+b}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "For 'pth term $=q$, qth term $=p$', work in the reciprocal AP."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "latex": "(p-q)d = \\frac1q - \\frac1p = \\frac{p-q}{pq} \\;\\Rightarrow\\; d = \\frac{1}{pq}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 47,
+          "latex": "a_n = \\frac{pq}{n}, \\qquad a_{p+q} = \\frac{pq}{p+q}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 55,
+          "style": "red-margin",
+          "text": "The reciprocate-first habit turns messy HP algebra into one line of AP work."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's derive the two HP results you'll lean on, and both fall straight out of reciprocating."
+            },
+            {
+              "seq": 2,
+              "text": "Take three numbers a, H, b in harmonic progression. By definition their reciprocals — one over a, one over H, one over b — are in arithmetic progression."
+            },
+            {
+              "seq": 3,
+              "text": "So one over H is just the arithmetic mean of one over a and one over b, which tidies to a plus b over two a b."
+            },
+            {
+              "seq": 4,
+              "text": "Flip that over and you have the harmonic mean of two numbers: H equals two a b over a plus b. Notice the two in the numerator — that is where students most often slip."
+            },
+            {
+              "seq": 5,
+              "text": "The second result is the famous set-up where the p-th term is q and the q-th term is p. The move is to work entirely in the reciprocal AP, never the HP itself."
+            },
+            {
+              "seq": 6,
+              "text": "Subtracting the two reciprocal-AP equations gives p minus q times d equals one over q minus one over p, which is p minus q over p q — so the common difference d is one over p q."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> Back-substituting, the n-th reciprocal is n over p q, so the n-th HP term is p q over n. In particular, the p-plus-q-th term is p q over p plus q — a beautifully clean result."
+            },
+            {
+              "seq": 8,
+              "text": "The lesson beneath both derivations is one habit: reciprocate first. It turns messy HP algebra into a single line of routine AP work."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो दो HP results derive करें, और दोनों reciprocating से सीधे निकलते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "तीन numbers a, H, b को harmonic progression में लो। definition से इनके reciprocals — one over a, one over H, one over b — arithmetic progression में हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो one over H बस one over a और one over b का arithmetic mean है, जो साफ़ होकर a plus b over two a b बनता है।"
+            },
+            {
+              "seq": 4,
+              "text": "इसे flip करो और तुम्हें दो numbers का harmonic mean मिल जाता है: H equals two a b over a plus b। numerator में two पर ध्यान दो — यहीं students सबसे ज़्यादा फिसलते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "दूसरा result वो famous set-up है जहाँ p-th term q है और q-th term p। move यह है कि पूरा काम reciprocal AP में करो, कभी HP में नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों reciprocal-AP equations को subtract करने पर मिलता है p minus q times d equals one over q minus one over p, यानी p minus q over p q — तो common difference d है one over p q।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> वापस substitute करने पर, n-th reciprocal है n over p q, तो n-th HP term है p q over n। ख़ासकर, p-plus-q-th term है p q over p plus q — एक बेहद clean result।"
+            },
+            {
+              "seq": 8,
+              "text": "दोनों derivations के नीचे एक ही habit है: reciprocate first। यह messy HP algebra को routine AP काम की एक line में बदल देती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "formulas",
+      "subtopic": "HP - Formulas",
+      "title": "The HP formula set",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Definition, nth term, means — all via the reciprocal AP"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "a_n \\text{ in HP} \\iff \\frac{1}{a_n} \\text{ in AP} \\;\\;(\\text{no zero terms})"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "a_n = \\frac{1}{\\frac{1}{a} + (n-1)d} \\quad (d = \\text{CD of reciprocal AP})"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "H = \\frac{2ab}{a+b} \\qquad (\\text{two numbers})"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{HM of } a_1,\\dots,a_n = \\frac{n}{\\frac{1}{a_1} + \\cdots + \\frac{1}{a_n}}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "\\text{Insert } n \\text{ HMs: } \\frac{1}{H_k} = \\frac{1}{a} + kD, \\;\\; D = \\frac{a - b}{(n+1)ab}"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "AH = G^2, \\qquad A \\ge G \\ge H"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "HM uses $\\tfrac{2ab}{a+b}$ — the '2' is essential; and there is NO sum formula."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the HP toolkit. Every formula here is really an AP formula seen through the reciprocal."
+            },
+            {
+              "seq": 2,
+              "text": "The definition anchors it all: a sequence is in HP exactly when the reciprocals of its terms are in AP — and, crucially, no term may be zero, since you cannot reciprocate zero."
+            },
+            {
+              "seq": 3,
+              "text": "The n-th term is one over the quantity one over a plus n minus one times d, where d is the common difference of that reciprocal AP."
+            },
+            {
+              "seq": 4,
+              "text": "For two numbers, the harmonic mean is two a b over a plus b — the single most-used HP formula."
+            },
+            {
+              "seq": 5,
+              "text": "For a whole list, the harmonic mean is n divided by the sum of the reciprocals — the reciprocal of the average of the reciprocals."
+            },
+            {
+              "seq": 6,
+              "text": "To insert n harmonic means, insert n arithmetic means between the reciprocals of a and b, so one over H-k equals one over a plus k times D, with D the reciprocal-AP step."
+            },
+            {
+              "seq": 7,
+              "text": "And the bridge to the next unit: the arithmetic mean times the harmonic mean equals the geometric mean squared, with the means ordered A at least G at least H."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper> Two warnings to carry. The harmonic mean has a two on top — forget it and you get a wrong answer that looks plausible. And there is no sum formula for an HP; never invent one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो HP toolkit consolidate करें। यहाँ हर formula असल में reciprocal से देखा गया एक AP formula है।"
+            },
+            {
+              "seq": 2,
+              "text": "definition सबको anchor करती है: एक sequence HP में तभी है जब उसके terms के reciprocals AP में हों — और crucially, कोई term zero नहीं हो सकता, क्योंकि zero को reciprocate नहीं कर सकते।"
+            },
+            {
+              "seq": 3,
+              "text": "n-th term है one over the quantity one over a plus n minus one times d, जहाँ d उस reciprocal AP का common difference है।"
+            },
+            {
+              "seq": 4,
+              "text": "दो numbers के लिए, harmonic mean है two a b over a plus b — सबसे ज़्यादा use होने वाला HP formula।"
+            },
+            {
+              "seq": 5,
+              "text": "पूरी list के लिए, harmonic mean है n divided by reciprocals का sum — reciprocals के average का reciprocal।"
+            },
+            {
+              "seq": 6,
+              "text": "n harmonic means insert करने के लिए, a और b के reciprocals के बीच n arithmetic means insert करो, तो one over H-k equals one over a plus k times D, जिसमें D reciprocal-AP step है।"
+            },
+            {
+              "seq": 7,
+              "text": "और अगले unit का bridge: arithmetic mean times harmonic mean equals geometric mean squared, means के order A कम से कम G कम से कम H के साथ।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper> दो warnings साथ ले जाओ। harmonic mean के ऊपर एक two है — इसे भूलो और तुम्हें एक गलत answer मिलता है जो plausible दिखता है। और HP के लिए कोई sum formula नहीं है; इसे कभी मत बनाओ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "worked_examples",
+      "subtopic": "HP Worked Examples",
+      "title": "HM of 4 and 12, and verifying AH = G²",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Find the HM of 4 and 12, and verify $AH = G^2$"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "H = \\frac{2\\cdot 4 \\cdot 12}{4 + 12} = \\frac{96}{16} = 6"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Now compute the arithmetic and geometric means too."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "A = \\frac{4 + 12}{2} = 8, \\qquad G = \\sqrt{48} = 4\\sqrt{3}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "AH = 8 \\times 6 = 48"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "G^2 = (4\\sqrt{3})^2 = 48 \\;\\checkmark"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The identity $AH = G^2$ holds exactly — a fast self-check on any means problem."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's start the HP examples with a clean computation that also verifies the key identity. We want the harmonic mean of four and twelve."
+            },
+            {
+              "seq": 2,
+              "text": "Apply the formula directly: two times four times twelve over four plus twelve, which is ninety-six over sixteen, giving six."
+            },
+            {
+              "seq": 3,
+              "text": "Now, to test the identity, let's also find the other two means of the same pair."
+            },
+            {
+              "seq": 4,
+              "text": "The arithmetic mean is four plus twelve over two, which is eight. The geometric mean is the square root of forty-eight, or four root three."
+            },
+            {
+              "seq": 5,
+              "text": "The identity claims the product of the arithmetic and harmonic means equals the geometric mean squared. So check the left side: eight times six is forty-eight."
+            },
+            {
+              "seq": 6,
+              "text": "And the right side: four root three, squared, is also forty-eight. The two match perfectly."
+            },
+            {
+              "seq": 7,
+              "text": "<curious> So the identity holds exactly, and that is worth keeping as a lightning self-check — any time you compute A, G, and H, confirm that A times H equals G squared."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो HP examples एक clean computation से शुरू करें जो key identity भी verify करता है। हमें four और twelve का harmonic mean चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "formula सीधे apply करो: two times four times twelve over four plus twelve, यानी ninety-six over sixteen, जो six देता है।"
+            },
+            {
+              "seq": 3,
+              "text": "अब, identity test करने के लिए, चलो उसी pair के बाकी दो means भी निकालें।"
+            },
+            {
+              "seq": 4,
+              "text": "arithmetic mean है four plus twelve over two, यानी eight। geometric mean है square root of forty-eight, या four root three।"
+            },
+            {
+              "seq": 5,
+              "text": "identity कहती है कि arithmetic और harmonic means का product geometric mean squared के बराबर है। तो left side check करो: eight times six है forty-eight।"
+            },
+            {
+              "seq": 6,
+              "text": "और right side: four root three, squared, भी forty-eight है। दोनों perfectly match करते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "<curious> तो identity exactly hold करती है, और इसे एक lightning self-check की तरह रखना worth है — जब भी तुम A, G, और H compute करो, confirm करो कि A times H equals G squared।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "HP Worked Examples",
+      "title": "Finding the 10th term from two given terms",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "3rd term of an HP is ⅐, 7th term is 1⁄15. Find the 10th term."
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Reciprocate: the reciprocals form an AP."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "a'_3 = 7, \\qquad a'_7 = 15"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "d = \\frac{15 - 7}{7 - 3} = \\frac{8}{4} = 2"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "a'_1 = 7 - 2(2) = 3 \\;\\Rightarrow\\; a'_{10} = 3 + 9(2) = 21"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "Flip back at the very end: the 10th HP term is $\\tfrac{1}{21}$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Answer: the 10th term is 1⁄21."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example is the reciprocate-first habit in pure form. We are given the third term of an HP as one seventh and the seventh term as one fifteenth."
+            },
+            {
+              "seq": 2,
+              "text": "The move is automatic: flip everything over, because the reciprocals of an HP form an arithmetic progression that we can attack directly."
+            },
+            {
+              "seq": 3,
+              "text": "So in the reciprocal AP, the third term is seven and the seventh term is fifteen."
+            },
+            {
+              "seq": 4,
+              "text": "The common difference is the change in value over the change in position: fifteen minus seven over seven minus three, which is eight over four, equal to two."
+            },
+            {
+              "seq": 5,
+              "text": "Now find the first reciprocal term: seven minus two times two is three. Then the tenth reciprocal is three plus nine times two, which is twenty-one."
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> Here is the step students forget — flip back. We were working with reciprocals, so the tenth HP term is one over twenty-one, not twenty-one itself."
+            },
+            {
+              "seq": 7,
+              "text": "So the tenth term of the harmonic progression is one over twenty-one."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example reciprocate-first habit का pure रूप है। हमें एक HP का third term one seventh और seventh term one fifteenth दिया गया है।"
+            },
+            {
+              "seq": 2,
+              "text": "move automatic है: सब कुछ flip करो, क्योंकि एक HP के reciprocals एक arithmetic progression बनाते हैं जिस पर हम सीधे हमला कर सकते हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो reciprocal AP में, third term है seven और seventh term है fifteen।"
+            },
+            {
+              "seq": 4,
+              "text": "common difference है value के change over position के change: fifteen minus seven over seven minus three, यानी eight over four, बराबर two।"
+            },
+            {
+              "seq": 5,
+              "text": "अब first reciprocal term निकालो: seven minus two times two है three। फिर tenth reciprocal है three plus nine times two, यानी twenty-one।"
+            },
+            {
+              "seq": 6,
+              "text": "<whisper> यह रहा वो step जो students भूल जाते हैं — flip back। हम reciprocals के साथ काम कर रहे थे, तो tenth HP term है one over twenty-one, twenty-one खुद नहीं।"
+            },
+            {
+              "seq": 7,
+              "text": "तो harmonic progression का tenth term है one over twenty-one।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "HP Worked Examples",
+      "title": "The p-th term is q, the q-th term is p",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "pth term of an HP is q, qth term is p. Find the (p+q)th and nth terms."
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Reciprocate to an AP with first term $A_0$, common difference $d$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "A_0 + (p-1)d = \\frac1q, \\qquad A_0 + (q-1)d = \\frac1p"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "d = \\frac{1}{pq}, \\qquad A_0 = \\frac{1}{pq}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\frac{1}{a_n} = \\frac{1}{pq} + (n-1)\\frac{1}{pq} = \\frac{n}{pq}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "a_n = \\frac{pq}{n}, \\qquad a_{p+q} = \\frac{pq}{p+q}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "A result worth memorising outright — it recurs across JEE Main."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is a JEE Main staple, and the reciprocate-first habit makes it almost trivial. The p-th term of an HP is q, and the q-th term is p."
+            },
+            {
+              "seq": 2,
+              "text": "As always, drop into the reciprocal AP. Call its first term A-nought and its common difference d."
+            },
+            {
+              "seq": 3,
+              "text": "The two facts become two clean AP equations: A-nought plus p minus one times d is one over q, and A-nought plus q minus one times d is one over p."
+            },
+            {
+              "seq": 4,
+              "text": "Subtract them and the d falls out beautifully — you find the common difference is one over p q, and the same value drops out for the first term A-nought."
+            },
+            {
+              "seq": 5,
+              "text": "So the n-th reciprocal is one over p q plus n minus one times one over p q, which collapses neatly to n over p q."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> Flipping back, the n-th HP term is p q over n. And so the p-plus-q-th term is simply p q over p plus q — the whole messy problem in one line of AP algebra."
+            },
+            {
+              "seq": 7,
+              "text": "This answer is worth memorising outright. The p-th-equals-q, q-th-equals-p pattern recurs across JEE Main, and the clean formula a-n equals p q over n saves real time."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह JEE Main का staple है, और reciprocate-first habit इसे लगभग trivial बना देती है। एक HP का p-th term q है, और q-th term p।"
+            },
+            {
+              "seq": 2,
+              "text": "हमेशा की तरह, reciprocal AP में उतरो। इसका first term A-nought और common difference d कहो।"
+            },
+            {
+              "seq": 3,
+              "text": "दोनों facts दो clean AP equations बन जाते हैं: A-nought plus p minus one times d है one over q, और A-nought plus q minus one times d है one over p।"
+            },
+            {
+              "seq": 4,
+              "text": "इन्हें subtract करो और d खूबसूरती से निकल जाता है — तुम पाते हो common difference one over p q है, और वही value first term A-nought के लिए भी निकलती है।"
+            },
+            {
+              "seq": 5,
+              "text": "तो n-th reciprocal है one over p q plus n minus one times one over p q, जो साफ़ होकर n over p q बनता है।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> flip back करने पर, n-th HP term है p q over n। और इसलिए p-plus-q-th term बस p q over p plus q है — पूरा messy problem AP algebra की एक line में।"
+            },
+            {
+              "seq": 7,
+              "text": "यह answer सीधे memorise करने लायक है। p-th-equals-q, q-th-equals-p pattern JEE Main में बार-बार आता है, और clean formula a-n equals p q over n असली time बचाता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "worked_examples",
+      "subtopic": "HP Worked Examples",
+      "title": "Inserting four harmonic means",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Insert 4 harmonic means between 1 and 1⁄6"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Insert 4 AMs between the reciprocals $\\tfrac11 = 1$ and $\\tfrac{1}{1/6} = 6$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "D = \\frac{6 - 1}{4 + 1} = 1"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "\\text{Reciprocal AP: } 1,\\,2,\\,3,\\,4,\\,5,\\,6"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "The HMs are the reciprocals of the interior AP terms."
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\frac12,\\; \\frac13,\\; \\frac14,\\; \\frac15"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Always work the means in the reciprocal AP, then flip back."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Inserting harmonic means is pure reciprocate-first. We must place four harmonic means between one and one sixth."
+            },
+            {
+              "seq": 2,
+              "text": "So we swing over to the reciprocal AP and instead insert four arithmetic means between the reciprocals — one over one, which is one, and one over one sixth, which is six."
+            },
+            {
+              "seq": 3,
+              "text": "The common difference of that reciprocal AP is six minus one over four plus one, which is exactly one — very clean."
+            },
+            {
+              "seq": 4,
+              "text": "So the reciprocal AP reads one, two, three, four, five, six, with the four inserted means sitting neatly in the middle."
+            },
+            {
+              "seq": 5,
+              "text": "Now flip back: the harmonic means we actually want are the reciprocals of those interior AP terms."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> That gives one half, one third, one quarter, and one fifth — a satisfyingly tidy set of harmonic means."
+            },
+            {
+              "seq": 7,
+              "text": "The whole technique is the same every time: do all the mean-inserting in the reciprocal AP, then reciprocate the interior terms back at the end."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "harmonic means insert करना pure reciprocate-first है। हमें one और one sixth के बीच चार harmonic means रखने हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "तो हम reciprocal AP की तरफ़ मुड़ते हैं और इसके बजाय reciprocals के बीच चार arithmetic means insert करते हैं — one over one, यानी one, और one over one sixth, यानी six।"
+            },
+            {
+              "seq": 3,
+              "text": "उस reciprocal AP का common difference है six minus one over four plus one, जो exactly one है — बहुत clean।"
+            },
+            {
+              "seq": 4,
+              "text": "तो reciprocal AP पढ़ता है one, two, three, four, five, six, जिसमें चार inserted means बीच में करीने से बैठे हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "अब flip back: हमें असल में जो harmonic means चाहिए वो उन interior AP terms के reciprocals हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> इससे मिलता है one half, one third, one quarter, और one fifth — harmonic means का एक संतोषजनक साफ़ set।"
+            },
+            {
+              "seq": 7,
+              "text": "पूरी technique हर बार same है: सारा mean-inserting reciprocal AP में करो, फिर अंत में interior terms को वापस reciprocate करो।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "worked_examples",
+      "subtopic": "HP Worked Examples",
+      "title": "Recovering numbers from AM and HM",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The AM of two numbers is 9 and their HM is 4. Find the numbers."
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Use $AH = G^2$ to get the geometric mean first."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "G^2 = AH = 9 \\times 4 = 36 \\;\\Rightarrow\\; G = 6"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "latex": "a + b = 2A = 18, \\qquad ab = G^2 = 36"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "latex": "x^2 - 18x + 36 = 0"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "x = 9 \\pm \\sqrt{81 - 36} = 9 \\pm 3\\sqrt{5}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "The means triad pins the numbers without ever solving the HM equation directly."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example shows the three means working together as a team. We are told the arithmetic mean of two numbers is nine and their harmonic mean is four."
+            },
+            {
+              "seq": 2,
+              "text": "The clever first step is to route through the identity. The geometric mean squared equals the arithmetic mean times the harmonic mean."
+            },
+            {
+              "seq": 3,
+              "text": "So G squared is nine times four, which is thirty-six, meaning the geometric mean is six. We now have all three means without touching the messy harmonic-mean equation."
+            },
+            {
+              "seq": 4,
+              "text": "The two means we care about give us a sum and a product: a plus b is twice the arithmetic mean, eighteen, and a times b is the geometric mean squared, thirty-six."
+            },
+            {
+              "seq": 5,
+              "text": "A sum and a product mean the numbers are roots of a quadratic: x squared minus eighteen x plus thirty-six equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "Solving, x equals nine plus or minus the root of eighty-one minus thirty-six, which is nine plus or minus three root five."
+            },
+            {
+              "seq": 7,
+              "text": "<excited> Notice the elegance — the triad of means pinned the two numbers down without our ever having to solve the awkward harmonic-mean equation directly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example तीनों means को एक team की तरह काम करते हुए दिखाता है। हमें बताया गया है कि दो numbers का arithmetic mean nine है और उनका harmonic mean four।"
+            },
+            {
+              "seq": 2,
+              "text": "clever पहला step है identity के रास्ते जाना। geometric mean squared equals arithmetic mean times harmonic mean।"
+            },
+            {
+              "seq": 3,
+              "text": "तो G squared है nine times four, यानी thirty-six, मतलब geometric mean six है। अब हमारे पास तीनों means हैं, बिना messy harmonic-mean equation को छुए।"
+            },
+            {
+              "seq": 4,
+              "text": "जो दो means हमें चाहिए वो एक sum और एक product देते हैं: a plus b है twice the arithmetic mean, eighteen, और a times b है geometric mean squared, thirty-six।"
+            },
+            {
+              "seq": 5,
+              "text": "एक sum और एक product का मतलब numbers एक quadratic के roots हैं: x squared minus eighteen x plus thirty-six equals zero।"
+            },
+            {
+              "seq": 6,
+              "text": "solve करने पर, x equals nine plus or minus root of eighty-one minus thirty-six, यानी nine plus or minus three root five।"
+            },
+            {
+              "seq": 7,
+              "text": "<excited> elegance पर ध्यान दो — means की triad ने दोनों numbers को pin कर दिया, बिना हमें awkward harmonic-mean equation सीधे solve किए।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "worked_examples",
+      "subtopic": "HP Worked Examples",
+      "title": "A reciprocate-and-manipulate HP proof",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "If a, b, c are in HP, prove a/(b+c), b/(c+a), c/(a+b) are in HP"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Start from the definition: reciprocals are in AP."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "latex": "\\frac1a, \\frac1b, \\frac1c \\text{ in AP}"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Multiply through by the constant $(a+b+c)$ — still an AP."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\frac{a+b+c}{a}, \\frac{a+b+c}{b}, \\frac{a+b+c}{c} \\text{ in AP}"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "\\frac{b+c}{a}, \\frac{c+a}{b}, \\frac{a+b}{c} \\text{ in AP (subtract 1)}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Reciprocate that AP ⇒ $\\tfrac{a}{b+c}, \\tfrac{b}{c+a}, \\tfrac{c}{a+b}$ are in HP. ∎"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "We finish the HP examples with a proof that showcases the signature reciprocate-and-manipulate chain. We must show that if a, b, c are in HP, then a over b plus c, b over c plus a, and c over a plus b are also in HP."
+            },
+            {
+              "seq": 2,
+              "text": "Begin from the definition. Because a, b, c are in HP, their reciprocals — one over a, one over b, one over c — are in AP."
+            },
+            {
+              "seq": 3,
+              "text": "Now the manipulation. Multiplying an AP by a nonzero constant keeps it an AP, so multiply through by a plus b plus c."
+            },
+            {
+              "seq": 4,
+              "text": "That gives a plus b plus c over a, over b, and over c — still an arithmetic progression."
+            },
+            {
+              "seq": 5,
+              "text": "Next, subtract one from each term. Subtracting the same constant from every term of an AP leaves an AP, and each term becomes b plus c over a, c plus a over b, a plus b over c."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> Now reciprocate that AP one final time. The reciprocals of an AP form an HP, and those reciprocals are exactly a over b plus c, b over c plus a, and c over a plus b — which is what we wanted to prove."
+            },
+            {
+              "seq": 7,
+              "text": "That reciprocate-and-manipulate sequence is the signature HP proof technique: flip to an AP, scale and shift freely, then flip back."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "हम HP examples को एक proof से खत्म करते हैं जो signature reciprocate-and-manipulate chain दिखाता है। हमें दिखाना है कि अगर a, b, c HP में हैं, तो a over b plus c, b over c plus a, और c over a plus b भी HP में हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "definition से शुरू करो। चूँकि a, b, c HP में हैं, उनके reciprocals — one over a, one over b, one over c — AP में हैं।"
+            },
+            {
+              "seq": 3,
+              "text": "अब manipulation। एक AP को nonzero constant से multiply करना उसे AP ही रखता है, तो a plus b plus c से multiply करो।"
+            },
+            {
+              "seq": 4,
+              "text": "इससे मिलता है a plus b plus c over a, over b, और over c — अभी भी एक arithmetic progression।"
+            },
+            {
+              "seq": 5,
+              "text": "अगला, हर term से one घटाओ। AP के हर term से same constant घटाना AP ही छोड़ता है, और हर term बन जाता है b plus c over a, c plus a over b, a plus b over c।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> अब उस AP को एक आखिरी बार reciprocate करो। एक AP के reciprocals एक HP बनाते हैं, और वो reciprocals exactly a over b plus c, b over c plus a, और c over a plus b हैं — जो हमें prove करना था।"
+            },
+            {
+              "seq": 7,
+              "text": "वो reciprocate-and-manipulate sequence signature HP proof technique है: AP में flip करो, आज़ादी से scale और shift करो, फिर flip back।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 10,
+      "section_type": "tips",
+      "subtopic": "HP",
+      "title": "HP: the trap list and the pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "HP — the traps that cost marks, and the shortcuts that save them"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Signature trap: attacking HP terms directly instead of reciprocating."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Missing '2': writing $\\tfrac{ab}{a+b}$ instead of $\\tfrac{2ab}{a+b}$ for the HM."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Never invent a sum formula for an HP — there is none in general."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "No zero terms allowed; reversing $A \\ge G \\ge H$ is a shared trap with Unit 5."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "text": "Pro-tip: reciprocate first, use the AP toolkit, flip back at the end."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "For 'pth $=q$, qth $=p$', the answer is $a_n = \\tfrac{pq}{n}$ — memorise it."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Remember HM ≤ GM ≤ AM: the HM is always the smallest, pulled toward the smaller number."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's gather the HP traps that quietly cost marks, then the shortcuts that win them back."
+            },
+            {
+              "seq": 2,
+              "text": "The signature HP error is attacking the terms directly instead of reciprocating. If you find yourself grinding on the HP terms themselves, stop and flip."
+            },
+            {
+              "seq": 3,
+              "text": "The second trap is dropping the two: writing a b over a plus b for the harmonic mean instead of two a b over a plus b. That missing factor of two is a silent, plausible-looking mistake."
+            },
+            {
+              "seq": 4,
+              "text": "Third, never invent a closed-form sum for an HP. There genuinely isn't one, so if a question needs the sum, telescope it or sum termwise — we'll see that in Unit eight."
+            },
+            {
+              "seq": 5,
+              "text": "Two more: no term of an HP may be zero, and reversing the mean chain — writing H at least G at least A — is a trap shared with the next unit."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> Now the winning reflex, and it is the whole subtopic: reciprocate first, run the full AP toolkit, and flip back only at the very end."
+            },
+            {
+              "seq": 7,
+              "text": "And memorise the p-q result outright — when the p-th term is q and the q-th is p, the n-th term is p q over n. It appears often enough to be worth instant recall."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, keep the ordering in muscle memory: harmonic is at most geometric is at most arithmetic. The harmonic mean is always the smallest, pulled toward the smaller of the two numbers."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो HP traps इकट्ठा करें जो चुपके से marks खाते हैं, फिर वो shortcuts जो उन्हें वापस जिताते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "signature HP error है terms पर सीधे हमला करना, reciprocate करने के बजाय। अगर तुम खुद को HP terms पर ही घिसते पाओ, तो रुको और flip करो।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा trap है two गिरा देना: harmonic mean के लिए a b over a plus b लिखना, two a b over a plus b के बजाय। वो missing factor of two एक silent, plausible दिखने वाली गलती है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, HP के लिए कभी closed-form sum मत बनाओ। सच में कोई नहीं है, तो अगर कोई question sum माँगे, तो उसे telescope करो या termwise sum करो — यह हम Unit eight में देखेंगे।"
+            },
+            {
+              "seq": 5,
+              "text": "दो और: HP का कोई term zero नहीं हो सकता, और mean chain को उल्टा करना — H कम से कम G कम से कम A लिखना — अगले unit के साथ shared trap है।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> अब winning reflex, और यही पूरा subtopic है: reciprocate first, पूरा AP toolkit चलाओ, और flip back सिर्फ़ एकदम अंत में।"
+            },
+            {
+              "seq": 7,
+              "text": "और p-q result सीधे memorise करो — जब p-th term q हो और q-th p हो, तो n-th term p q over n है। यह इतनी बार आता है कि instant recall के लायक है।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिर में, ordering muscle memory में रखो: harmonic ज़्यादा से ज़्यादा geometric ज़्यादा से ज़्यादा arithmetic। harmonic mean हमेशा सबसे छोटा होता है, दोनों में से छोटे number की तरफ़ खिंचा हुआ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 11,
+      "section_type": "concept",
+      "subtopic": "AM-GM-HM - Concept",
+      "title": "Three means for three different questions",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "One number, three honest averages"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "AM = $\\tfrac{a+b}{2}$ — the average when quantities ADD."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 15,
+          "text": "GM = $\\sqrt{ab}$ — the average when quantities MULTIPLY (growth, CAGR)."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "text": "HM = $\\tfrac{2ab}{a+b}$ — the average of RATES over a fixed task."
+        },
+        {
+          "seq": 5,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "caption": "H, G, A always sit in this order between a and b",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 470 150\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"80\" x2=\"430\" y2=\"80\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <circle cx=\"60\" cy=\"80\" r=\"5\" fill=\"#334155\"/><text x=\"60\" y=\"105\" text-anchor=\"middle\" font-size=\"13\" fill=\"#334155\">a</text>\n  <circle cx=\"410\" cy=\"80\" r=\"5\" fill=\"#334155\"/><text x=\"410\" y=\"105\" text-anchor=\"middle\" font-size=\"13\" fill=\"#334155\">b</text>\n  <circle cx=\"150\" cy=\"80\" r=\"6\" fill=\"#b91c1c\"/><text x=\"150\" y=\"66\" text-anchor=\"middle\" font-size=\"14\" fill=\"#b91c1c\">H</text>\n  <circle cx=\"215\" cy=\"80\" r=\"6\" fill=\"#0f766e\"/><text x=\"215\" y=\"66\" text-anchor=\"middle\" font-size=\"14\" fill=\"#0f766e\">G</text>\n  <circle cx=\"290\" cy=\"80\" r=\"6\" fill=\"#4f46e5\"/><text x=\"290\" y=\"66\" text-anchor=\"middle\" font-size=\"14\" fill=\"#4f46e5\">A</text>\n  <text x=\"235\" y=\"135\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e293b\">A ≥ G ≥ H   (equal only when a = b)</text>\n</svg>"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "latex": "A \\ge G \\ge H, \\quad \\text{equality iff } a = b"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "AH = G^2 \\;\\Rightarrow\\; A, G, H \\text{ form a GP}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "$G$ is the GM of the original pair AND of the pair $(A, H)$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This unit ties the three classical means together. The key realisation is that there is more than one honest way to average two positive numbers, and each mean answers a different question."
+            },
+            {
+              "seq": 2,
+              "text": "The arithmetic mean, a plus b over two, is the right average when quantities add — marks, costs, distances."
+            },
+            {
+              "seq": 3,
+              "text": "The geometric mean, root a b, is the right average when quantities multiply. The average yearly return that turns one rupee into the same final corpus is the geometric mean, never the arithmetic one."
+            },
+            {
+              "seq": 4,
+              "text": "The harmonic mean, two a b over a plus b, is the right average of rates over a fixed task — the round-trip speed we met in the last unit."
+            },
+            {
+              "seq": 5,
+              "text": "The board shows the deep result: for two distinct positive numbers, these three always sit in the same order between a and b, with the harmonic nearest the smaller, the arithmetic nearest the larger, and the geometric in between."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> So the ordering is fixed and strict: arithmetic above geometric above harmonic, collapsing to a single point only when the two numbers are equal."
+            },
+            {
+              "seq": 7,
+              "text": "And they are locked together by one identity: the arithmetic mean times the harmonic mean equals the geometric mean squared — which means the three means themselves form a geometric progression."
+            },
+            {
+              "seq": 8,
+              "text": "There is a lovely consequence hiding in that identity: the geometric mean is simultaneously the GM of the original pair and the GM of the arithmetic-and-harmonic pair."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह unit तीनों classical means को आपस में जोड़ता है। key realisation यह है कि दो positive numbers को average करने के एक से ज़्यादा honest तरीके हैं, और हर mean एक अलग सवाल का जवाब देता है।"
+            },
+            {
+              "seq": 2,
+              "text": "arithmetic mean, a plus b over two, सही average है जब quantities add करती हैं — marks, costs, distances।"
+            },
+            {
+              "seq": 3,
+              "text": "geometric mean, root a b, सही average है जब quantities multiply करती हैं। वो average yearly return जो एक rupee को same final corpus में बदलता है, geometric mean है, कभी arithmetic नहीं।"
+            },
+            {
+              "seq": 4,
+              "text": "harmonic mean, two a b over a plus b, fixed task पर rates का सही average है — वही round-trip speed जो हम पिछले unit में मिले।"
+            },
+            {
+              "seq": 5,
+              "text": "board deep result दिखा रहा है: दो distinct positive numbers के लिए, ये तीनों हमेशा a और b के बीच same order में बैठते हैं, harmonic छोटे के पास, arithmetic बड़े के पास, और geometric बीच में।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> तो ordering fixed और strict है: arithmetic ऊपर geometric ऊपर harmonic, एक single point पर सिमटता है सिर्फ़ तब जब दोनों numbers बराबर हों।"
+            },
+            {
+              "seq": 7,
+              "text": "और वे एक identity से आपस में locked हैं: arithmetic mean times harmonic mean equals geometric mean squared — जिसका मतलब है तीनों means खुद एक geometric progression बनाते हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "उस identity में एक प्यारा consequence छुपा है: geometric mean एक साथ original pair का GM है और arithmetic-and-harmonic pair का भी GM।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 12,
+      "section_type": "concept",
+      "subtopic": "AM-GM-HM - Derivations",
+      "title": "Proving the chain and recovering the numbers",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Four short proofs that hold the unit together"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "AH = \\frac{a+b}{2}\\cdot\\frac{2ab}{a+b} = ab = G^2"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "So $\\tfrac{A}{G} = \\tfrac{G}{H}$: the means form a GP."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "(\\sqrt{a} - \\sqrt{b})^2 \\ge 0 \\;\\Rightarrow\\; \\frac{a+b}{2} \\ge \\sqrt{ab} \\;\\;(A \\ge G)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "H = \\frac{G^2}{A} \\le \\frac{G^2}{G} = G \\;\\;(G \\ge H)"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Recover the numbers: $a + b = 2A$ and $ab = G^2$, so by Vieta:"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "latex": "x^2 - 2Ax + G^2 = 0 \\;\\Rightarrow\\; a, b = A \\pm \\sqrt{A^2 - G^2}"
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Real (and positive) iff $A \\ge G$ — the discriminant IS the mean inequality."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Four short proofs hold this whole unit together, and none takes more than a line or two."
+            },
+            {
+              "seq": 2,
+              "text": "Start with the central identity. The arithmetic mean times the harmonic mean is a plus b over two, times two a b over a plus b — the a plus b factors cancel, leaving a b, which is the geometric mean squared."
+            },
+            {
+              "seq": 3,
+              "text": "Rearranged, that says A over G equals G over H, so the three means are in geometric progression with G as their middle term."
+            },
+            {
+              "seq": 4,
+              "text": "For the inequality, use the fact we planted earlier: the square of root a minus root b is never negative. Expand it and you immediately get a plus b over two is at least root a b — the arithmetic mean beats the geometric."
+            },
+            {
+              "seq": 5,
+              "text": "Now chain to the harmonic. Since H equals G squared over A, and A is at least G, dividing gives G squared over A at most G squared over G, which is G. So G is at least H, completing the chain A at least G at least H."
+            },
+            {
+              "seq": 6,
+              "text": "The fourth result recovers the original numbers from their means. We know a plus b is twice the arithmetic mean and a times b is the geometric mean squared."
+            },
+            {
+              "seq": 7,
+              "text": "By Vieta's formulas the numbers are roots of x squared minus two A x plus G squared, giving a and b equal to A plus or minus the root of A squared minus G squared."
+            },
+            {
+              "seq": 8,
+              "text": "<whisper> And here is the elegant twist. Those roots are real and positive exactly when A is at least G — so the discriminant condition is nothing other than the mean inequality itself."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चार short proofs इस पूरे unit को जोड़े रखते हैं, और कोई भी एक-दो line से ज़्यादा नहीं लेता।"
+            },
+            {
+              "seq": 2,
+              "text": "central identity से शुरू करो। arithmetic mean times harmonic mean है a plus b over two, times two a b over a plus b — a plus b factors cancel हो जाते हैं, बचता है a b, जो geometric mean squared है।"
+            },
+            {
+              "seq": 3,
+              "text": "rearrange करने पर, यह कहता है A over G equals G over H, तो तीनों means geometric progression में हैं, G उनके middle term के रूप में।"
+            },
+            {
+              "seq": 4,
+              "text": "inequality के लिए, वो fact use करो जो हमने पहले बोया था: root a minus root b का square कभी negative नहीं। इसे expand करो और तुम्हें तुरंत मिलता है a plus b over two कम से कम root a b — arithmetic mean geometric को हरा देता है।"
+            },
+            {
+              "seq": 5,
+              "text": "अब harmonic तक chain करो। चूँकि H equals G squared over A, और A कम से कम G है, divide करने पर G squared over A ज़्यादा से ज़्यादा G squared over G, यानी G। तो G कम से कम H है, chain A कम से कम G कम से कम H पूरी।"
+            },
+            {
+              "seq": 6,
+              "text": "चौथा result original numbers को उनके means से recover करता है। हम जानते हैं a plus b twice the arithmetic mean है और a times b geometric mean squared।"
+            },
+            {
+              "seq": 7,
+              "text": "Vieta के formulas से numbers हैं x squared minus two A x plus G squared के roots, देते हैं a और b बराबर A plus or minus root of A squared minus G squared।"
+            },
+            {
+              "seq": 8,
+              "text": "<whisper> और यह रहा elegant twist। वो roots real और positive exactly तब हैं जब A कम से कम G हो — तो discriminant condition mean inequality के अलावा और कुछ नहीं है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 13,
+      "section_type": "formulas",
+      "subtopic": "AM-GM-HM - Formulas",
+      "title": "The means, the identity, and the recovery quadratic",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Everything for two positive reals a, b"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "A = \\frac{a+b}{2}, \\quad G = \\sqrt{ab}, \\quad H = \\frac{2ab}{a+b}"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "AH = G^2 \\iff A, G, H \\text{ in GP}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "A \\ge G \\ge H, \\quad \\text{equality iff } a = b"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{Numbers from means: } x^2 - 2Ax + G^2 = 0"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "latex": "a, b = A \\pm \\sqrt{A^2 - G^2}"
+        },
+        {
+          "seq": 7,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 48,
+          "style": "red-margin",
+          "text": "Reality condition: real numbers exist iff $A \\ge G$. If $A < G$, none do."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "For $n$ numbers: AM ≥ GM ≥ HM, equality iff all are equal."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's consolidate the compact formula set for two positive reals. Keep these together — they interlock."
+            },
+            {
+              "seq": 2,
+              "text": "The three means: arithmetic is a plus b over two, geometric is root a b, and harmonic is two a b over a plus b."
+            },
+            {
+              "seq": 3,
+              "text": "The core identity binds them: the arithmetic mean times the harmonic mean equals the geometric mean squared, which is the same as saying the three means form a geometric progression."
+            },
+            {
+              "seq": 4,
+              "text": "The ordering is fixed: arithmetic is at least geometric is at least harmonic, with equality throughout only when the two numbers are equal."
+            },
+            {
+              "seq": 5,
+              "text": "To recover the numbers from their means, centre a quadratic on the arithmetic mean: x squared minus two A x plus G squared equals zero."
+            },
+            {
+              "seq": 6,
+              "text": "Its roots are a and b equal to the arithmetic mean plus or minus the root of the arithmetic mean squared minus the geometric mean squared."
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> And carry the reality condition: real numbers exist exactly when the arithmetic mean is at least the geometric mean. If a problem hands you A below G, no such real pair exists."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, everything generalises to n numbers: arithmetic mean is at least geometric mean is at least harmonic mean, with equality only when all the numbers are equal."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो दो positive reals के लिए compact formula set consolidate करें। इन्हें साथ रखो — ये आपस में interlock करते हैं।"
+            },
+            {
+              "seq": 2,
+              "text": "तीनों means: arithmetic है a plus b over two, geometric है root a b, और harmonic है two a b over a plus b।"
+            },
+            {
+              "seq": 3,
+              "text": "core identity इन्हें बाँधती है: arithmetic mean times harmonic mean equals geometric mean squared, जो यही कहने जैसा है कि तीनों means एक geometric progression बनाते हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "ordering fixed है: arithmetic कम से कम geometric कम से कम harmonic, equality पूरी तरह सिर्फ़ तब जब दोनों numbers बराबर हों।"
+            },
+            {
+              "seq": 5,
+              "text": "means से numbers recover करने के लिए, एक quadratic को arithmetic mean पर centre करो: x squared minus two A x plus G squared equals zero।"
+            },
+            {
+              "seq": 6,
+              "text": "इसके roots हैं a और b बराबर arithmetic mean plus or minus root of arithmetic mean squared minus geometric mean squared।"
+            },
+            {
+              "seq": 7,
+              "text": "<whisper> और reality condition ले जाओ: real numbers exactly तब exist करते हैं जब arithmetic mean कम से कम geometric mean हो। अगर कोई problem तुम्हें A, G से नीचे दे, तो ऐसा कोई real pair मौजूद नहीं।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिर में, सब कुछ n numbers तक generalise होता है: arithmetic mean कम से कम geometric mean कम से कम harmonic mean, equality सिर्फ़ तब जब सारे numbers बराबर हों।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 14,
+      "section_type": "worked_examples",
+      "subtopic": "AM-GM-HM Worked Examples",
+      "title": "Recovering the numbers from AM and GM",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The AM of two positive numbers is 10 and their GM is 8. Find them."
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "a + b = 2A = 20, \\qquad ab = G^2 = 64"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "x^2 - 20x + 64 = 0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "(x - 4)(x - 16) = 0 \\;\\Rightarrow\\; a = 4,\\; b = 16"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Equivalently $a, b = 10 \\pm \\sqrt{100 - 64} = 10 \\pm 6$."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "$A = 10 > G = 8$, so real roots exist — the check is automatic."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Answer: the numbers are 4 and 16."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the signature board question for the unit — recovering two numbers from their arithmetic and geometric means. Here the arithmetic mean is ten and the geometric mean is eight."
+            },
+            {
+              "seq": 2,
+              "text": "Translate the means into a sum and a product. The sum a plus b is twice the arithmetic mean, so twenty; the product a b is the geometric mean squared, so sixty-four."
+            },
+            {
+              "seq": 3,
+              "text": "A sum and a product mean the two numbers are roots of a quadratic: x squared minus twenty x plus sixty-four equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "This factors cleanly as x minus four times x minus sixteen, so the numbers are four and sixteen."
+            },
+            {
+              "seq": 5,
+              "text": "You can also read them straight off the recovery formula: ten plus or minus the root of one hundred minus sixty-four, which is ten plus or minus six."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> And notice the reality check took care of itself — the arithmetic mean, ten, is comfortably larger than the geometric mean, eight, so real roots were guaranteed from the start."
+            },
+            {
+              "seq": 7,
+              "text": "So the two numbers are four and sixteen."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह unit का signature board question है — दो numbers को उनके arithmetic और geometric means से recover करना। यहाँ arithmetic mean ten है और geometric mean eight।"
+            },
+            {
+              "seq": 2,
+              "text": "means को एक sum और एक product में translate करो। sum a plus b है twice the arithmetic mean, तो twenty; product a b है geometric mean squared, तो sixty-four।"
+            },
+            {
+              "seq": 3,
+              "text": "एक sum और एक product का मतलब दोनों numbers एक quadratic के roots हैं: x squared minus twenty x plus sixty-four equals zero।"
+            },
+            {
+              "seq": 4,
+              "text": "यह साफ़ factor होता है x minus four times x minus sixteen, तो numbers हैं four और sixteen।"
+            },
+            {
+              "seq": 5,
+              "text": "तुम इन्हें recovery formula से सीधे भी पढ़ सकते हो: ten plus or minus root of one hundred minus sixty-four, यानी ten plus or minus six।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> और ध्यान दो reality check खुद ही संभल गया — arithmetic mean, ten, geometric mean, eight, से आराम से बड़ा है, तो real roots शुरू से guaranteed थे।"
+            },
+            {
+              "seq": 7,
+              "text": "तो दोनों numbers हैं four और sixteen।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 15,
+      "section_type": "worked_examples",
+      "subtopic": "AM-GM-HM Worked Examples",
+      "title": "AM–GM finds a minimum in one line",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "For $x > 0$, find the minimum value of $x + \\tfrac{9}{x}$"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "caption": "The curve dips to a single minimum at x = 3",
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 210\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"45\" y1=\"175\" x2=\"45\" y2=\"25\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <line x1=\"45\" y1=\"175\" x2=\"360\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <path d=\"M70,60 C110,150 150,155 175,155 C220,155 260,120 320,55\" fill=\"none\" stroke=\"#4f46e5\" stroke-width=\"2.5\"/>\n  <line x1=\"175\" y1=\"155\" x2=\"175\" y2=\"175\" stroke=\"#b91c1c\" stroke-dasharray=\"3 3\"/>\n  <circle cx=\"175\" cy=\"155\" r=\"4\" fill=\"#b91c1c\"/>\n  <text x=\"175\" y=\"192\" text-anchor=\"middle\" font-size=\"12\" fill=\"#b91c1c\">x = 3</text>\n  <text x=\"150\" y=\"145\" text-anchor=\"end\" font-size=\"12\" fill=\"#b91c1c\">min = 6</text>\n  <text x=\"20\" y=\"100\" font-size=\"12\" fill=\"#64748b\">y</text>\n  <text x=\"355\" y=\"195\" font-size=\"12\" fill=\"#64748b\">x</text>\n  <text x=\"230\" y=\"45\" font-size=\"13\" fill=\"#4f46e5\">y = x + 9/x</text>\n</svg>"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 17,
+          "text": "Apply AM ≥ GM to the two positive numbers $x$ and $\\tfrac{9}{x}$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 25,
+          "latex": "\\frac{x + \\frac{9}{x}}{2} \\ge \\sqrt{x \\cdot \\frac{9}{x}} = 3"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 33,
+          "latex": "x + \\frac{9}{x} \\ge 6"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 41,
+          "style": "red-margin",
+          "text": "Equality at $x = \\tfrac{9}{x}$, i.e. $x = 3$ — the minimiser is the equality point."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 49,
+          "text": "Minimum value is 6."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This shows why AM ≥ GM is the fastest optimisation tool in the chapter — no calculus required. We want the smallest value of x plus nine over x for positive x."
+            },
+            {
+              "seq": 2,
+              "text": "The curve on the board tells the story: it sweeps down to a single lowest point and back up, and we'll pin that point exactly with one inequality."
+            },
+            {
+              "seq": 3,
+              "text": "Apply the arithmetic-mean geometric-mean inequality to the two positive quantities x and nine over x."
+            },
+            {
+              "seq": 4,
+              "text": "Their arithmetic mean is at least their geometric mean, and the geometric mean is the root of x times nine over x, where the x's cancel to leave just three."
+            },
+            {
+              "seq": 5,
+              "text": "Multiplying across by two, the expression x plus nine over x is at least six. We have the bound instantly."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> And the equality condition hands us the minimiser for free. Equality in AM ≥ GM holds when the two quantities are equal, so x equals nine over x, giving x equals three."
+            },
+            {
+              "seq": 7,
+              "text": "So the minimum value is six, attained exactly at x equals three — no derivatives, just the mean inequality."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह दिखाता है कि AM ≥ GM chapter का सबसे fast optimisation tool क्यों है — कोई calculus नहीं चाहिए। हमें positive x के लिए x plus nine over x की सबसे छोटी value चाहिए।"
+            },
+            {
+              "seq": 2,
+              "text": "board पर curve कहानी बताता है: यह एक अकेले lowest point तक नीचे झुकता है और वापस ऊपर, और हम उस point को एक inequality से exactly pin करेंगे।"
+            },
+            {
+              "seq": 3,
+              "text": "arithmetic-mean geometric-mean inequality को दो positive quantities x और nine over x पर लगाओ।"
+            },
+            {
+              "seq": 4,
+              "text": "इनका arithmetic mean कम से कम इनके geometric mean है, और geometric mean है root of x times nine over x, जहाँ x's cancel होकर बस three बचता है।"
+            },
+            {
+              "seq": 5,
+              "text": "दोनों तरफ़ two से multiply करने पर, expression x plus nine over x कम से कम six है। bound तुरंत मिल गया।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> और equality condition minimiser मुफ़्त में दे देती है। AM ≥ GM में equality तब होती है जब दोनों quantities बराबर हों, तो x equals nine over x, देता है x equals three।"
+            },
+            {
+              "seq": 7,
+              "text": "तो minimum value six है, exactly x equals three पर attained — कोई derivatives नहीं, बस mean inequality।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 16,
+      "section_type": "worked_examples",
+      "subtopic": "AM-GM-HM Worked Examples",
+      "title": "Ordering the means and spotting the GP",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "For two distinct positive numbers, order A, G, H and name the GP"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "Distinct positives ⇒ the inequality is strict."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 16,
+          "latex": "A > G > H"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "From $AH = G^2$, the triple $A, G, H$ is a GP."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "latex": "\\text{common ratio } = \\frac{G}{A} = \\frac{H}{G} < 1"
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "So $A, G, H$ is a DECREASING GP whose middle term (GM) is $G$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "That $G$ is the very same GM of the original two numbers."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This example locks in both the ordering and the hidden progression among the means, for two distinct positive numbers."
+            },
+            {
+              "seq": 2,
+              "text": "Because the numbers are distinct, the mean inequality is strict — no ties are possible."
+            },
+            {
+              "seq": 3,
+              "text": "So the ordering is a clean, strict chain: the arithmetic mean is greater than the geometric, which is greater than the harmonic."
+            },
+            {
+              "seq": 4,
+              "text": "Now the structure. From the identity that A times H equals G squared, the three means themselves form a geometric progression."
+            },
+            {
+              "seq": 5,
+              "text": "Its common ratio is G over A, which also equals H over G, and since A is the largest, that ratio is below one."
+            },
+            {
+              "seq": 6,
+              "text": "<curious> So the means form a decreasing geometric progression, and its middle term — the geometric mean of A and H — is exactly G."
+            },
+            {
+              "seq": 7,
+              "text": "And here is the satisfying closure: that G in the middle is the very same geometric mean of the original two numbers we started with. The whole picture folds together neatly."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह example दो distinct positive numbers के लिए means के बीच ordering और छुपी progression दोनों को lock करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "चूँकि numbers distinct हैं, mean inequality strict है — कोई ties संभव नहीं।"
+            },
+            {
+              "seq": 3,
+              "text": "तो ordering एक clean, strict chain है: arithmetic mean geometric से बड़ा है, जो harmonic से बड़ा है।"
+            },
+            {
+              "seq": 4,
+              "text": "अब structure। उस identity से कि A times H equals G squared, तीनों means खुद एक geometric progression बनाते हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "इसका common ratio है G over A, जो H over G के भी बराबर है, और चूँकि A सबसे बड़ा है, वो ratio one से नीचे है।"
+            },
+            {
+              "seq": 6,
+              "text": "<curious> तो means एक decreasing geometric progression बनाते हैं, और इसका middle term — A और H का geometric mean — exactly G है।"
+            },
+            {
+              "seq": 7,
+              "text": "और यह रहा संतोषजनक closure: वो बीच वाला G उन्हीं दो original numbers का geometric mean है जिनसे हमने शुरू किया था। पूरी picture करीने से एक साथ मुड़ जाती है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 17,
+      "section_type": "worked_examples",
+      "subtopic": "AM-GM-HM Worked Examples",
+      "title": "The numbers and their ratio from A and G",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Two positives have AM = A and GM = G. Express them and find their ratio."
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "latex": "a, b = A \\pm \\sqrt{A^2 - G^2}"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "This comes straight from the recovery quadratic."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 24,
+          "latex": "\\frac{a}{b} = \\frac{A + \\sqrt{A^2 - G^2}}{A - \\sqrt{A^2 - G^2}}"
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "The ratio depends only on $A/G$, not on $A$ and $G$ separately."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 40,
+          "style": "red-margin",
+          "text": "The numbers are real iff $A \\ge G$ — the same reality condition again."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "A common Advanced form writes $A : G = (m+n) : 2\\sqrt{mn}$."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This Advanced example generalises the recovery, expressing the two numbers and their ratio purely in terms of their arithmetic and geometric means."
+            },
+            {
+              "seq": 2,
+              "text": "The numbers come straight from the recovery quadratic: a and b equal the arithmetic mean plus or minus the root of the arithmetic mean squared minus the geometric mean squared."
+            },
+            {
+              "seq": 3,
+              "text": "There is nothing new to derive here — it is exactly the roots of x squared minus two A x plus G squared, read off directly."
+            },
+            {
+              "seq": 4,
+              "text": "Their ratio is then the larger root over the smaller: A plus the root of A squared minus G squared, all over A minus that same root."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> And here is the structural insight. If you divide top and bottom by A, the ratio depends only on the single quantity A over G — not on A and G separately. The shape of the pair is set entirely by how far apart the two means are."
+            },
+            {
+              "seq": 6,
+              "text": "Keep the reality condition in view: the numbers are real exactly when the arithmetic mean is at least the geometric mean — the same discriminant condition once more."
+            },
+            {
+              "seq": 7,
+              "text": "A common Advanced form writes the ratio of A to G as m plus n to two root m n, which is just this same relationship dressed in a substitution."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यह Advanced example recovery को generalise करता है, दोनों numbers और उनके ratio को पूरी तरह उनके arithmetic और geometric means के terms में express करता है।"
+            },
+            {
+              "seq": 2,
+              "text": "numbers recovery quadratic से सीधे आते हैं: a और b बराबर arithmetic mean plus or minus root of arithmetic mean squared minus geometric mean squared।"
+            },
+            {
+              "seq": 3,
+              "text": "यहाँ derive करने को कुछ नया नहीं — यह exactly x squared minus two A x plus G squared के roots हैं, सीधे पढ़े गए।"
+            },
+            {
+              "seq": 4,
+              "text": "इनका ratio तब है larger root over smaller: A plus root of A squared minus G squared, over A minus वही root।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> और यह रहा structural insight। अगर तुम ऊपर-नीचे को A से divide करो, ratio सिर्फ़ एक quantity A over G पर depend करता है — A और G पर अलग-अलग नहीं। pair का shape पूरी तरह इस बात से तय होता है कि दोनों means कितने दूर हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "reality condition नज़र में रखो: numbers real exactly तब हैं जब arithmetic mean कम से कम geometric mean हो — वही discriminant condition एक बार फिर।"
+            },
+            {
+              "seq": 7,
+              "text": "एक common Advanced form A to G के ratio को m plus n to two root m n लिखता है, जो बस यही relationship एक substitution में सजा हुआ है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 18,
+      "section_type": "tips",
+      "subtopic": "AM-GM-HM",
+      "title": "AM/GM/HM: the traps and the pro-tips",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Means relationship — the traps, and the fast moves"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "style": "red-margin",
+          "text": "Direction trap: writing the chain backwards as $H \\ge G \\ge A$."
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "Reality: $A \\ge G$ is exactly the real-roots condition for the board quadratic."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Centre the recovery quadratic on $A$, not on $G$."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "high",
+          "reveal_at": 32,
+          "text": "Pro-tip: to find two numbers from means, jump to $x^2 - 2Ax + G^2 = 0$."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "For min/max of $x + \\tfrac{k}{x}$-type expressions, AM ≥ GM gives it in one line."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 48,
+          "text": "Equality $a = b$ always locates the optimiser."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "style": "red-margin",
+          "text": "Sanity check: $G$ is the middle term of the GP $A, G, H$ — a fast ordering test."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let's close with the traps and the fast moves for the means relationship."
+            },
+            {
+              "seq": 2,
+              "text": "The single most common error is writing the chain backwards — harmonic at least geometric at least arithmetic. Fix the true direction in memory: arithmetic is the biggest."
+            },
+            {
+              "seq": 3,
+              "text": "Second, connect the reality condition to quadratics: A at least G is exactly the condition for the recovery quadratic to have real roots, because the discriminant is four times A squared minus G squared."
+            },
+            {
+              "seq": 4,
+              "text": "Third, centre that recovery quadratic on the arithmetic mean, not the geometric. The coefficient of x is minus two A, and the constant is G squared — mixing these up is a classic slip."
+            },
+            {
+              "seq": 5,
+              "text": "<curious> Now the pro-tips. To find two numbers from their means, jump straight to x squared minus two A x plus G squared equals zero — no need to reconstruct anything."
+            },
+            {
+              "seq": 6,
+              "text": "For minimum or maximum of x-plus-k-over-x type expressions, the arithmetic-mean geometric-mean inequality gives the answer in a single line, far faster than calculus."
+            },
+            {
+              "seq": 7,
+              "text": "And the equality case always locates the optimiser: the extreme is reached exactly when the two quantities are equal."
+            },
+            {
+              "seq": 8,
+              "text": "Finally, a fast sanity check on any ordering: the geometric mean must be the middle term of the geometric progression A, G, H. If it is not sitting in the middle, you have the order wrong."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "चलो means relationship के traps और fast moves के साथ बंद करें।"
+            },
+            {
+              "seq": 2,
+              "text": "सबसे common error है chain को उल्टा लिखना — harmonic कम से कम geometric कम से कम arithmetic। सही direction memory में fix करो: arithmetic सबसे बड़ा है।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, reality condition को quadratics से जोड़ो: A कम से कम G exactly वो condition है जिससे recovery quadratic के real roots हों, क्योंकि discriminant four times A squared minus G squared है।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, उस recovery quadratic को arithmetic mean पर centre करो, geometric पर नहीं। x का coefficient minus two A है, और constant G squared — इन्हें मिला देना एक classic slip है।"
+            },
+            {
+              "seq": 5,
+              "text": "<curious> अब pro-tips। दो numbers को उनके means से निकालने के लिए, सीधे x squared minus two A x plus G squared equals zero पर कूदो — कुछ भी reconstruct करने की ज़रूरत नहीं।"
+            },
+            {
+              "seq": 6,
+              "text": "x-plus-k-over-x type expressions के minimum या maximum के लिए, arithmetic-mean geometric-mean inequality एक ही line में answer देती है, calculus से कहीं fast।"
+            },
+            {
+              "seq": 7,
+              "text": "और equality case हमेशा optimiser locate करती है: extreme exactly तब पहुँचता है जब दोनों quantities बराबर हों।"
+            },
+            {
+              "seq": 8,
+              "text": "आखिर में, किसी भी ordering का fast sanity check: geometric mean को geometric progression A, G, H का middle term होना चाहिए। अगर यह बीच में नहीं बैठा, तो तुम्हारा order गलत है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}

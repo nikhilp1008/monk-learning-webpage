@@ -1,0 +1,1392 @@
+{
+  "chapter": "Conic Sections",
+  "subject": "maths",
+  "class_level": 11,
+  "chapter_order": 10,
+  "part": 3,
+  "language_set": [
+    "english",
+    "hinglish"
+  ],
+  "sections": [
+    {
+      "section_index": 1,
+      "section_type": "concept",
+      "subtopic": "The Hyperbola",
+      "title": "The hyperbola: a constant difference",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Hyperbola: constant DIFFERENCE of distances to two foci"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "text": "For every point, $|PF_1 - PF_2|$ = constant = $2a$. Difference, not sum."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "text": "Ellipse adds the two distances; hyperbola subtracts them.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 31,
+          "text": "Eccentricity is greater than $1$: the curve is open, with two branches."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "text": "Each branch hugs a pair of straight lines called asymptotes but never touches them."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "text": "Used in navigation (LORAN), cooling towers, and the orbits of fast comets."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 65,
+          "text": "The transverse axis joins the two vertices; the conjugate axis is perpendicular to it."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 74,
+          "text": "Foci sit OUTSIDE the vertices: $c > a$, unlike the ellipse where $a > c$.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>The hyperbola is the ellipse's mirror twin: swap one word in the definition and the whole shape flips open."
+            },
+            {
+              "seq": 2,
+              "text": "Instead of the sum of the two focal distances, the hyperbola keeps their difference constant. For every point, the absolute difference of the distances to the two foci equals two a."
+            },
+            {
+              "seq": 3,
+              "text": "That one change, subtract instead of add, is the whole story. An ellipse adds and closes; a hyperbola subtracts and opens."
+            },
+            {
+              "seq": 4,
+              "text": "Its eccentricity is always greater than one, and because of that the curve never closes: it breaks into two separate branches facing away from each other."
+            },
+            {
+              "seq": 5,
+              "text": "Each branch runs alongside a pair of straight lines called asymptotes, getting ever closer but never quite touching, like rails vanishing to the horizon."
+            },
+            {
+              "seq": 6,
+              "text": "This shape is everywhere in engineering: the LORAN navigation system, the curved profile of cooling towers, and the paths of comets that swing past the sun once and leave."
+            },
+            {
+              "seq": 7,
+              "text": "The line joining the two vertices is the transverse axis, and the perpendicular one through the centre is the conjugate axis."
+            },
+            {
+              "seq": 8,
+              "text": "And here is the key contrast to hold onto: the foci lie outside the vertices, so c is greater than a. In the ellipse it was the other way round, a greater than c."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "<curious>hyperbola ellipse का mirror twin है: definition में एक word बदलो और पूरा shape खुलकर पलट जाता है।"
+            },
+            {
+              "seq": 2,
+              "text": "दो focal distances के sum की जगह, hyperbola उनका difference constant रखता है। हर point के लिए, दोनों foci तक distances का absolute difference बराबर two a।"
+            },
+            {
+              "seq": 3,
+              "text": "यही एक बदलाव, add की जगह subtract, पूरी कहानी है। ellipse add करके बंद होता है; hyperbola subtract करके खुलता है।"
+            },
+            {
+              "seq": 4,
+              "text": "इसका eccentricity हमेशा one से बड़ा होता है, और इसीलिए curve कभी बंद नहीं होता: ये दो अलग branches में टूट जाता है जो एक-दूसरे से दूर मुँह किए होती हैं।"
+            },
+            {
+              "seq": 5,
+              "text": "हर branch straight lines के एक pair के साथ-साथ चलती है जिन्हें asymptotes कहते हैं, उनके और करीब आते हुए पर कभी छूते नहीं, जैसे rails horizon पर गायब होती हुई।"
+            },
+            {
+              "seq": 6,
+              "text": "ये shape engineering में हर जगह है: LORAN navigation system, cooling towers की curved profile, और उन comets के paths जो sun के पास से एक बार गुज़रकर चले जाते हैं।"
+            },
+            {
+              "seq": 7,
+              "text": "दोनों vertices को जोड़ने वाली line transverse axis है, और centre से गुज़रती perpendicular वाली conjugate axis।"
+            },
+            {
+              "seq": 8,
+              "text": "और यहाँ है वो key contrast जो पकड़े रखना: foci vertices के बाहर होते हैं, तो c, a से बड़ा है। ellipse में उल्टा था, a, c से बड़ा।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 2,
+      "section_type": "concept",
+      "subtopic": "The Hyperbola",
+      "title": "Deriving x-squared over a-squared minus y-squared over b-squared",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Foci $(\\pm c, 0)$, constant difference $2a$, with $c > a$"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 16,
+          "text": "For $P(x,y)$: $|PF_1 - PF_2| = 2a$."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 23,
+          "latex": "\\sqrt{(x+c)^2 + y^2} - \\sqrt{(x-c)^2 + y^2} = \\pm 2a"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 40,
+          "text": "Isolate a root, square, simplify, then square again (as for the ellipse)."
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "latex": "\\frac{x^2}{a^2} + \\frac{y^2}{a^2 - c^2} = 1"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 62,
+          "text": "Now $c > a$, so $a^2 - c^2 < 0$. Write $b^2 = c^2 - a^2 > 0$."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 86,
+          "latex": "\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 97,
+          "latex": "c^2 = a^2 + b^2, \\quad e = \\frac{c}{a} > 1"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 116,
+          "text": "Same algebra as the ellipse, but $c > a$ flips a sign: PLUS becomes MINUS.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Let me derive the hyperbola right after the ellipse, because the algebra is almost identical and the one difference is deeply instructive. Put the foci at plus and minus c, but now c is bigger than a."
+            },
+            {
+              "seq": 2,
+              "text": "The defining condition is that the absolute difference of the two focal distances equals two a."
+            },
+            {
+              "seq": 3,
+              "text": "Written out, the root of x plus c squared plus y squared minus the root of x minus c squared plus y squared equals plus or minus two a, the sign depending on which branch you are on."
+            },
+            {
+              "seq": 4,
+              "text": "The clearing of roots is the same routine as the ellipse: isolate one root, square, simplify, isolate the other, square again. Nothing new to learn."
+            },
+            {
+              "seq": 5,
+              "text": "You land on exactly the same intermediate form as the ellipse: x squared over a squared plus y squared over a squared minus c squared equals one."
+            },
+            {
+              "seq": 6,
+              "text": "But here is where the two conics part ways. For the ellipse c was smaller than a, so a squared minus c squared was positive. For the hyperbola c is bigger than a, so that quantity is negative, and we define b squared as c squared minus a squared, which is now the positive one."
+            },
+            {
+              "seq": 7,
+              "text": "Substituting flips the plus to a minus, giving the standard hyperbola: x squared over a squared minus y squared over b squared equals one."
+            },
+            {
+              "seq": 8,
+              "text": "And the focal relation flips with it: instead of b squared equals a squared minus c squared, we now have c squared equals a squared plus b squared, so c is the largest of the three and the eccentricity c over a is above one."
+            },
+            {
+              "seq": 9,
+              "text": "So do not memorise the hyperbola as a fresh formula. It is the ellipse derivation with c bigger than a, and that single fact turns the plus sign into a minus."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "hyperbola को ellipse के तुरंत बाद derive करता हूँ, क्योंकि algebra लगभग identical है और एक फ़र्क बहुत कुछ सिखाता है। foci को plus और minus c पर रखो, पर अब c, a से बड़ा है।"
+            },
+            {
+              "seq": 2,
+              "text": "defining condition ये है कि दोनों focal distances का absolute difference बराबर two a।"
+            },
+            {
+              "seq": 3,
+              "text": "लिखो तो root of x plus c squared plus y squared minus root of x minus c squared plus y squared बराबर plus या minus two a, sign इस पर कि तुम किस branch पर हो।"
+            },
+            {
+              "seq": 4,
+              "text": "roots clear करना वही routine है जो ellipse में था: एक root isolate करो, square करो, simplify करो, दूसरी isolate करो, फिर square। कुछ नया सीखने को नहीं।"
+            },
+            {
+              "seq": 5,
+              "text": "तुम बिल्कुल वही intermediate form पर पहुँचते हो जो ellipse में थी: x squared over a squared plus y squared over a squared minus c squared बराबर one।"
+            },
+            {
+              "seq": 6,
+              "text": "पर यहीं दोनों conics अलग होते हैं। ellipse में c, a से छोटा था, तो a squared minus c squared positive था। hyperbola में c, a से बड़ा है, तो वो quantity negative है, और हम b squared को define करते हैं c squared minus a squared, जो अब positive वाला है।"
+            },
+            {
+              "seq": 7,
+              "text": "substitute करने पर plus, minus में बदल जाता है, और मिलता है standard hyperbola: x squared over a squared minus y squared over b squared बराबर one।"
+            },
+            {
+              "seq": 8,
+              "text": "और focal relation भी इसके साथ पलटता है: b squared बराबर a squared minus c squared की जगह, अब है c squared बराबर a squared plus b squared, तो c तीनों में सबसे बड़ा है और eccentricity c over a, one से ऊपर।"
+            },
+            {
+              "seq": 9,
+              "text": "तो hyperbola को एक नई formula की तरह मत रटो। ये ellipse की derivation है c को a से बड़ा रखकर, और यही एक fact plus sign को minus में बदल देता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 3,
+      "section_type": "concept",
+      "subtopic": "The Hyperbola",
+      "title": "Asymptotes, orientation, and the rectangular case",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "The asymptotes are the hyperbola's skeleton"
+        },
+        {
+          "seq": 2,
+          "type": "diagram",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"140\" x2=\"370\" y2=\"140\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"260\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"60\" y1=\"20\" x2=\"340\" y2=\"260\" stroke=\"#f59e0b\" stroke-width=\"1.2\" stroke-dasharray=\"5 4\"/><line x1=\"60\" y1=\"260\" x2=\"340\" y2=\"20\" stroke=\"#f59e0b\" stroke-width=\"1.2\" stroke-dasharray=\"5 4\"/><path d=\"M 335 45 Q 165 140 335 235\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><path d=\"M 65 45 Q 235 140 65 235\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><circle cx=\"150\" cy=\"140\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"250\" cy=\"140\" r=\"3\" fill=\"#dc2626\"/><text x=\"243\" y=\"132\" font-size=\"11\" fill=\"#dc2626\">(a,0)</text><circle cx=\"136\" cy=\"140\" r=\"3.5\" fill=\"#7c3aed\"/><circle cx=\"264\" cy=\"140\" r=\"3.5\" fill=\"#7c3aed\"/><text x=\"258\" y=\"160\" font-size=\"11\" fill=\"#7c3aed\">(c,0)</text><text x=\"298\" y=\"58\" font-size=\"11\" fill=\"#b45309\">asymptote</text><text x=\"205\" y=\"34\" font-size=\"11\" fill=\"#475569\">conjugate</text></svg>",
+          "caption": "Hyperbola: vertices, foci, transverse axis and asymptotes"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 22,
+          "latex": "\\text{asymptotes of } \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1: \\quad y = \\pm \\frac{b}{a}x"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "text": "The POSITIVE term marks the transverse axis. $x^2$ positive: opens left-right."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "text": "$\\dfrac{y^2}{a^2} - \\dfrac{x^2}{b^2} = 1$ has the $y^2$ term positive: opens up-down."
+        },
+        {
+          "seq": 6,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 67,
+          "text": "For a hyperbola the SIGN decides orientation, NOT the larger denominator.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 80,
+          "text": "Rectangular (equilateral) hyperbola: $a = b$, so $e = \\sqrt{2}$ and asymptotes are perpendicular."
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 93,
+          "text": "$xy = c^2$ is the same rectangular hyperbola with the axes as its asymptotes."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "The single most important feature of a hyperbola is its pair of asymptotes, because they are the skeleton the whole curve is draped over."
+            },
+            {
+              "seq": 2,
+              "text": "In the picture, the two dashed diagonals are the asymptotes. Each branch sweeps out from its vertex and presses closer and closer to them without ever meeting."
+            },
+            {
+              "seq": 3,
+              "text": "For x squared over a squared minus y squared over b squared equals one, the asymptotes are simply y equals plus and minus b over a times x. Sketch those two lines first and the branches almost draw themselves."
+            },
+            {
+              "seq": 4,
+              "text": "Now orientation, and this is where the hyperbola differs sharply from the ellipse. The variable with the positive term marks the transverse axis. With x squared positive, the hyperbola opens left and right."
+            },
+            {
+              "seq": 5,
+              "text": "Flip the signs, y squared over a squared minus x squared over b squared equals one, and now the y squared term is positive, so the hyperbola opens up and down instead."
+            },
+            {
+              "seq": 6,
+              "text": "Burn this in: for a hyperbola it is the sign that decides orientation, not the larger denominator. That rule was for the ellipse; do not carry it over."
+            },
+            {
+              "seq": 7,
+              "text": "One special case shows up often: the rectangular or equilateral hyperbola, where a equals b. Then the eccentricity is exactly root two and the two asymptotes meet at right angles."
+            },
+            {
+              "seq": 8,
+              "text": "And the familiar curve x y equals c squared is just that same rectangular hyperbola, rotated so that the coordinate axes themselves are its asymptotes."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "hyperbola का सबसे important feature इसके asymptotes का pair है, क्योंकि यही वो skeleton है जिस पर पूरा curve टँगा होता है।"
+            },
+            {
+              "seq": 2,
+              "text": "picture में, दोनों dashed diagonals asymptotes हैं। हर branch अपने vertex से बाहर निकलती है और उनके और करीब दबती जाती है, कभी मिले बिना।"
+            },
+            {
+              "seq": 3,
+              "text": "x squared over a squared minus y squared over b squared बराबर one के लिए, asymptotes बस y बराबर plus और minus b over a into x हैं। पहले वो दो lines खींचो और branches लगभग खुद बन जाती हैं।"
+            },
+            {
+              "seq": 4,
+              "text": "अब orientation, और यहीं hyperbola ellipse से तेज़ी से अलग होता है। जिस variable का term positive है वो transverse axis marks करता है। x squared positive होने पर, hyperbola बाएँ-दाएँ खुलता है।"
+            },
+            {
+              "seq": 5,
+              "text": "signs पलटो, y squared over a squared minus x squared over b squared बराबर one, और अब y squared term positive है, तो hyperbola ऊपर-नीचे खुलता है।"
+            },
+            {
+              "seq": 6,
+              "text": "ये पक्का कर लो: hyperbola में sign orientation decide करता है, बड़ा denominator नहीं। वो rule ellipse के लिए था; इसे यहाँ मत ले आओ।"
+            },
+            {
+              "seq": 7,
+              "text": "एक special case अक्सर आता है: rectangular या equilateral hyperbola, जहाँ a बराबर b। तब eccentricity ठीक root two है और दोनों asymptotes right angles पर मिलती हैं।"
+            },
+            {
+              "seq": 8,
+              "text": "और जानी-पहचानी curve x y बराबर c squared बस वही rectangular hyperbola है, इतना घुमाया हुआ कि coordinate axes खुद इसके asymptotes बन जाएँ।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 4,
+      "section_type": "formulas",
+      "subtopic": "The Hyperbola",
+      "title": "Hyperbola: the formula toolkit",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Hyperbola essentials (transverse axis on x-axis)"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "latex": "\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 14,
+          "latex": "c^2 = a^2 + b^2, \\quad e = \\frac{c}{a} = \\sqrt{1 + \\frac{b^2}{a^2}}"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 33,
+          "latex": "\\text{vertices } (\\pm a, 0), \\quad \\text{foci } (\\pm c, 0)"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 42,
+          "latex": "\\text{transverse axis} = 2a, \\quad \\text{conjugate axis} = 2b"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "latex": "\\text{asymptotes: } y = \\pm \\frac{b}{a}x"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "latex": "\\text{latus rectum} = \\frac{2b^2}{a}, \\quad \\text{directrices } x = \\pm \\frac{a}{e}"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 71,
+          "text": "Transverse axis on the y-axis: $\\dfrac{y^2}{a^2} - \\dfrac{x^2}{b^2} = 1$, foci $(0, \\pm c)$."
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 85,
+          "text": "Ellipse: $c^2 = a^2 - b^2$. Hyperbola: $c^2 = a^2 + b^2$. Only the sign differs.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Here is the full hyperbola toolkit for the standard case with the transverse axis on the x-axis."
+            },
+            {
+              "seq": 2,
+              "text": "The equation is x squared over a squared minus y squared over b squared equals one."
+            },
+            {
+              "seq": 3,
+              "text": "The core relations: c squared equals a squared plus b squared, and eccentricity is c over a, which also equals the root of one plus b squared over a squared. Note it is a plus inside the root, always giving a value above one."
+            },
+            {
+              "seq": 4,
+              "text": "The vertices are at plus and minus a, zero, and the foci at plus and minus c, zero, further out."
+            },
+            {
+              "seq": 5,
+              "text": "The transverse axis, between the vertices, has length two a, and the conjugate axis has length two b."
+            },
+            {
+              "seq": 6,
+              "text": "The asymptotes are the lines y equals plus and minus b over a times x, the frame you sketch first."
+            },
+            {
+              "seq": 7,
+              "text": "The latus rectum has length two b squared over a, and the directrices are the lines x equals plus and minus a over e, just as for the ellipse."
+            },
+            {
+              "seq": 8,
+              "text": "If the transverse axis is vertical, the y squared term is positive: y squared over a squared minus x squared over b squared, with the foci at zero, plus and minus c."
+            },
+            {
+              "seq": 9,
+              "text": "And keep the one contrast with the ellipse crystal clear. The ellipse uses c squared equals a squared minus b squared; the hyperbola uses c squared equals a squared plus b squared. Same letters, one sign apart."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "यहाँ पूरा hyperbola toolkit है standard case के लिए, transverse axis x-axis पर।"
+            },
+            {
+              "seq": 2,
+              "text": "equation है x squared over a squared minus y squared over b squared बराबर one।"
+            },
+            {
+              "seq": 3,
+              "text": "core relations: c squared बराबर a squared plus b squared, और eccentricity है c over a, जो root of one plus b squared over a squared के भी बराबर है। ध्यान दो root के अंदर plus है, जो हमेशा one से ऊपर value देता है।"
+            },
+            {
+              "seq": 4,
+              "text": "vertices हैं plus और minus a, zero पर, और foci plus और minus c, zero पर, और बाहर।"
+            },
+            {
+              "seq": 5,
+              "text": "transverse axis, vertices के बीच, की length two a है, और conjugate axis की length two b।"
+            },
+            {
+              "seq": 6,
+              "text": "asymptotes वो lines हैं y बराबर plus और minus b over a into x, वो frame जो तुम पहले खींचते हो।"
+            },
+            {
+              "seq": 7,
+              "text": "latus rectum की length two b squared over a है, और directrices वो lines हैं x बराबर plus और minus a over e, ठीक ellipse जैसी।"
+            },
+            {
+              "seq": 8,
+              "text": "अगर transverse axis vertical हो, तो y squared term positive है: y squared over a squared minus x squared over b squared, foci zero, plus और minus c पर।"
+            },
+            {
+              "seq": 9,
+              "text": "और ellipse से वो एक contrast बिल्कुल साफ रखो। ellipse use करता है c squared बराबर a squared minus b squared; hyperbola use करता है c squared बराबर a squared plus b squared। वही letters, एक sign का फ़र्क।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 5,
+      "section_type": "worked_examples",
+      "subtopic": "The Hyperbola",
+      "title": "Hyperbola worked examples I",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 1 (CBSE): all elements from the equation"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 8,
+          "latex": "\\frac{x^2}{16} - \\frac{y^2}{9} = 1"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 14,
+          "text": "$x^2$ term positive: opens left-right. $a^2 = 16,\\ b^2 = 9$, so $a = 4,\\ b = 3$."
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 30,
+          "latex": "c = \\sqrt{16 + 9} = 5, \\quad e = \\tfrac{5}{4} = 1.25"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "latex": "\\text{vertices } (\\pm 4,0), \\ \\text{foci } (\\pm 5,0), \\ \\text{asymptotes } y = \\pm \\tfrac{3}{4}x"
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Example 2 (JEE Main): a larger denominator under the negative term"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 69,
+          "latex": "\\frac{y^2}{9} - \\frac{x^2}{25} = 1"
+        },
+        {
+          "seq": 8,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 81,
+          "text": "$y^2$ positive, so opens UP-DOWN: $a^2 = 9$ (transverse), $b^2 = 25$; note $b > a$ is fine."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one, CBSE, is the standard element read-off, and the very first thing to check is the sign."
+            },
+            {
+              "seq": 2,
+              "text": "The hyperbola is x squared over sixteen minus y squared over nine equals one."
+            },
+            {
+              "seq": 3,
+              "text": "The x squared term is positive, so it opens left and right. Since the positive term fixes the transverse axis, a squared is sixteen and b squared is nine, giving a equals four and b equals three."
+            },
+            {
+              "seq": 4,
+              "text": "Now use the plus relation: c is the root of sixteen plus nine, which is five, and the eccentricity is c over a, five over four, one point two five, comfortably above one."
+            },
+            {
+              "seq": 5,
+              "text": "So the vertices are plus and minus four, zero, the foci plus and minus five, zero, and the asymptotes are y equals plus and minus three-quarters x."
+            },
+            {
+              "seq": 6,
+              "text": "Example two, JEE Main, is designed to catch the student who imported the ellipse rule. The equation is y squared over nine minus x squared over twenty-five equals one."
+            },
+            {
+              "seq": 7,
+              "text": "Read the sign, not the size. The y squared term is positive, so this hyperbola opens up and down, and a squared is nine, sitting under the transverse variable."
+            },
+            {
+              "seq": 8,
+              "text": "Here b squared is twenty-five, bigger than a squared. For a hyperbola that is perfectly normal, because orientation follows the sign, not which denominator is larger. Do not let a smaller denominator on the positive term fool you."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example one, CBSE, standard element read-off है, और सबसे पहली चीज़ जो check करनी है वो है sign।"
+            },
+            {
+              "seq": 2,
+              "text": "hyperbola है x squared over sixteen minus y squared over nine बराबर one।"
+            },
+            {
+              "seq": 3,
+              "text": "x squared term positive है, तो ये बाएँ-दाएँ खुलता है। चूँकि positive term transverse axis fix करता है, a squared है sixteen और b squared है nine, जो देता है a बराबर four और b बराबर three।"
+            },
+            {
+              "seq": 4,
+              "text": "अब plus relation use करो: c है root of sixteen plus nine, यानी five, और eccentricity है c over a, five over four, one point two five, आराम से one से ऊपर।"
+            },
+            {
+              "seq": 5,
+              "text": "तो vertices हैं plus और minus four, zero, foci plus और minus five, zero, और asymptotes हैं y बराबर plus और minus three-quarters x।"
+            },
+            {
+              "seq": 6,
+              "text": "Example two, JEE Main, उस student को पकड़ने के लिए बना है जिसने ellipse rule import कर लिया। equation है y squared over nine minus x squared over twenty-five बराबर one।"
+            },
+            {
+              "seq": 7,
+              "text": "sign पढ़ो, size नहीं। y squared term positive है, तो ये hyperbola ऊपर-नीचे खुलता है, और a squared है nine, transverse variable के नीचे।"
+            },
+            {
+              "seq": 8,
+              "text": "यहाँ b squared है twenty-five, a squared से बड़ा। hyperbola के लिए ये बिल्कुल normal है, क्योंकि orientation sign follow करता है, ये नहीं कि कौन-सा denominator बड़ा है। positive term पर छोटा denominator तुम्हें धोखा न दे।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 6,
+      "section_type": "worked_examples",
+      "subtopic": "The Hyperbola",
+      "title": "Hyperbola worked examples II",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Example 3 (JEE Main): build from vertices and foci"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 7,
+          "text": "Vertices $(\\pm 3,0)$, foci $(\\pm 5,0)$: so $a = 3,\\ c = 5$, opens left-right."
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 20,
+          "latex": "b^2 = c^2 - a^2 = 25 - 9 = 16"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 29,
+          "latex": "\\frac{x^2}{9} - \\frac{y^2}{16} = 1"
+        },
+        {
+          "seq": 5,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 37,
+          "text": "Example 4 (JEE Adv): from eccentricity and latus rectum"
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 44,
+          "text": "$e = 2$ and latus rectum $= 12$, foci on the x-axis."
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 53,
+          "latex": "e^2 = 1 + \\tfrac{b^2}{a^2} \\Rightarrow \\tfrac{b^2}{a^2} = 3; \\quad \\tfrac{2b^2}{a} = 12"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 67,
+          "latex": "b^2 = 3a^2 \\Rightarrow \\tfrac{2(3a^2)}{a} = 6a = 12 \\Rightarrow a = 2,\\ b^2 = 12"
+        },
+        {
+          "seq": 9,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 84,
+          "latex": "\\frac{x^2}{4} - \\frac{y^2}{12} = 1"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three, JEE Main, hands you the vertices and foci and asks for the equation."
+            },
+            {
+              "seq": 2,
+              "text": "The vertices are plus and minus three, zero and the foci plus and minus five, zero, so a is three, c is five, and the curve opens left and right."
+            },
+            {
+              "seq": 3,
+              "text": "Use the plus relation solved for b: b squared equals c squared minus a squared, twenty-five minus nine, which is sixteen."
+            },
+            {
+              "seq": 4,
+              "text": "So the hyperbola is x squared over nine minus y squared over sixteen equals one. Two data points, one equation."
+            },
+            {
+              "seq": 5,
+              "text": "Example four, Advanced, combines the eccentricity with the latus rectum, so you solve two relations together."
+            },
+            {
+              "seq": 6,
+              "text": "You are told the eccentricity is two and the latus rectum is twelve, with the foci on the x-axis."
+            },
+            {
+              "seq": 7,
+              "text": "From e squared equals one plus b squared over a squared, with e equal to two, b squared over a squared is three. And the latus rectum, two b squared over a, equals twelve."
+            },
+            {
+              "seq": 8,
+              "text": "Substitute b squared equals three a squared into the latus-rectum equation: two times three a squared over a is six a, set equal to twelve, so a is two, and then b squared is three times four, twelve."
+            },
+            {
+              "seq": 9,
+              "text": "So the hyperbola is x squared over four minus y squared over twelve equals one. Two conditions, two unknowns, cleanly solved."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Example three, JEE Main, vertices और foci देकर equation माँगता है।"
+            },
+            {
+              "seq": 2,
+              "text": "vertices हैं plus और minus three, zero और foci plus और minus five, zero, तो a है three, c है five, और curve बाएँ-दाएँ खुलता है।"
+            },
+            {
+              "seq": 3,
+              "text": "b के लिए solve की गई plus relation use करो: b squared बराबर c squared minus a squared, twenty-five minus nine, यानी sixteen।"
+            },
+            {
+              "seq": 4,
+              "text": "तो hyperbola है x squared over nine minus y squared over sixteen बराबर one। दो data points, एक equation।"
+            },
+            {
+              "seq": 5,
+              "text": "Example four, Advanced, eccentricity को latus rectum के साथ मिलाता है, तो तुम दो relations साथ solve करते हो।"
+            },
+            {
+              "seq": 6,
+              "text": "तुम्हें बताया है eccentricity two है और latus rectum twelve, foci x-axis पर।"
+            },
+            {
+              "seq": 7,
+              "text": "e squared बराबर one plus b squared over a squared से, e बराबर two के साथ, b squared over a squared है three। और latus rectum, two b squared over a, बराबर twelve।"
+            },
+            {
+              "seq": 8,
+              "text": "b squared बराबर three a squared को latus-rectum equation में डालो: two into three a squared over a है six a, twelve के बराबर रखो, तो a है two, और फिर b squared है three into four, twelve।"
+            },
+            {
+              "seq": 9,
+              "text": "तो hyperbola है x squared over four minus y squared over twelve बराबर one। दो conditions, दो unknowns, साफ-साफ solved।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 7,
+      "section_type": "tips",
+      "subtopic": "The Hyperbola",
+      "title": "Pitfalls and pro-tips: the hyperbola",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Hyperbola traps (mostly ellipse habits leaking in)"
+        },
+        {
+          "seq": 2,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 8,
+          "text": "Sign, not size: the POSITIVE term marks the transverse axis. $b > a$ is allowed.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 3,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 24,
+          "text": "Use $c^2 = a^2 + b^2$ (add). $c$ is the LARGEST; foci lie outside the vertices."
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 39,
+          "text": "Eccentricity is always $> 1$; $e = \\sqrt{2}$ is the rectangular case ($a = b$)."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 50,
+          "text": "Always sketch the asymptotes $y = \\pm (b/a)x$ first; the branches follow."
+        },
+        {
+          "seq": 6,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 63,
+          "text": "Ellipse versus hyperbola at a glance"
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "text": "Ellipse: PLUS sign, $c^2 = a^2 - b^2$, $e < 1$, closed. Hyperbola: MINUS sign, $c^2 = a^2 + b^2$, $e > 1$, open."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 88,
+          "text": "Same read-off skills; the sign between the terms flips every conclusion.",
+          "style": "red-margin"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "Almost every hyperbola mistake is really an ellipse habit that leaked across, so let me line them up."
+            },
+            {
+              "seq": 2,
+              "text": "First and biggest: sign, not size. The positive term marks the transverse axis, and it is completely fine for b to be bigger than a. Do not pick the axis by the larger denominator; that was the ellipse."
+            },
+            {
+              "seq": 3,
+              "text": "Second, the focal relation adds: c squared equals a squared plus b squared. So c is the largest of the three and the foci sit outside the vertices, the reverse of the ellipse."
+            },
+            {
+              "seq": 4,
+              "text": "Third, the eccentricity is always greater than one, and the neat special value e equals root two is exactly the rectangular case where a equals b."
+            },
+            {
+              "seq": 5,
+              "text": "Fourth, a practical one: always draw the asymptotes y equals plus and minus b over a x before the curve. With the frame in place, each branch almost sketches itself."
+            },
+            {
+              "seq": 6,
+              "text": "Let me put the two conics side by side so the contrast is impossible to forget."
+            },
+            {
+              "seq": 7,
+              "text": "The ellipse has a plus sign, c squared equals a squared minus b squared, eccentricity below one, and it is closed. The hyperbola has a minus sign, c squared equals a squared plus b squared, eccentricity above one, and it is open."
+            },
+            {
+              "seq": 8,
+              "text": "The read-off skills are identical; it is the single sign between the two terms that flips every conclusion, from orientation to the focal relation to the shape."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "लगभग हर hyperbola गलती दरअसल एक ellipse आदत है जो पार आ गई, तो उन्हें line-up कर देता हूँ।"
+            },
+            {
+              "seq": 2,
+              "text": "पहली और सबसे बड़ी: sign, size नहीं। positive term transverse axis marks करता है, और b का a से बड़ा होना बिल्कुल ठीक है। axis को बड़े denominator से मत चुनो; वो ellipse था।"
+            },
+            {
+              "seq": 3,
+              "text": "दूसरा, focal relation add करती है: c squared बराबर a squared plus b squared। तो c तीनों में सबसे बड़ा है और foci vertices के बाहर बैठते हैं, ellipse का उल्टा।"
+            },
+            {
+              "seq": 4,
+              "text": "तीसरा, eccentricity हमेशा one से बड़ा होता है, और वो सुंदर special value e बराबर root two ठीक rectangular case है जहाँ a बराबर b।"
+            },
+            {
+              "seq": 5,
+              "text": "चौथा, एक practical: curve से पहले हमेशा asymptotes y बराबर plus और minus b over a x खींचो। frame लग जाने पर, हर branch लगभग खुद बन जाती है।"
+            },
+            {
+              "seq": 6,
+              "text": "दोनों conics को अगल-बगल रख देता हूँ ताकि contrast भूलना नामुमकिन हो जाए।"
+            },
+            {
+              "seq": 7,
+              "text": "ellipse में plus sign, c squared बराबर a squared minus b squared, eccentricity one से नीचे, और वो closed है। hyperbola में minus sign, c squared बराबर a squared plus b squared, eccentricity one से ऊपर, और वो open है।"
+            },
+            {
+              "seq": 8,
+              "text": "read-off skills identical हैं; बस दोनों terms के बीच का एक sign हर conclusion पलट देता है, orientation से लेकर focal relation तक shape तक।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 8,
+      "section_type": "formula_recap",
+      "subtopic": "Chapter Wrap-up",
+      "title": "Complete formula toolkit for Conic Sections",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Your complete conic-sections toolkit"
+        },
+        {
+          "seq": 2,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 13,
+          "latex": "\\text{Classify: } \\Delta = B^2 - 4AC \\ (<0\\ \\text{ellipse},\\ =0\\ \\text{parabola},\\ >0\\ \\text{hyperbola})"
+        },
+        {
+          "seq": 3,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 27,
+          "latex": "\\text{Circle: } (x-h)^2 + (y-k)^2 = r^2; \\ \\text{general } x^2+y^2+2gx+2fy+c=0"
+        },
+        {
+          "seq": 4,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 43,
+          "latex": "\\text{Circle centre } (-g,-f), \\ r = \\sqrt{g^2+f^2-c}, \\ \\text{tangent length } \\sqrt{S_1}"
+        },
+        {
+          "seq": 5,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 59,
+          "latex": "\\text{Parabola: } y^2 = 4ax; \\ \\text{focus } (a,0), \\ \\text{directrix } x=-a, \\ \\text{LR}=4a"
+        },
+        {
+          "seq": 6,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 73,
+          "latex": "\\text{Ellipse: } \\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1\\ (a>b), \\ b^2=a^2-c^2, \\ e<1"
+        },
+        {
+          "seq": 7,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 89,
+          "latex": "\\text{Hyperbola: } \\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1, \\ c^2=a^2+b^2, \\ e>1, \\ y=\\pm\\tfrac{b}{a}x"
+        },
+        {
+          "seq": 8,
+          "type": "formula",
+          "emphasis": "high",
+          "reveal_at": 106,
+          "latex": "\\text{Ellipse and hyperbola: } e=\\frac{c}{a}, \\ \\text{LR}=\\frac{2b^2}{a}, \\ \\text{directrix } x=\\pm\\frac{a}{e}"
+        },
+        {
+          "seq": 9,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 120,
+          "text": "Eccentricity ladder: circle $0$, ellipse $0$ to $1$, parabola $1$, hyperbola $> 1$.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 10,
+          "type": "formula",
+          "emphasis": "normal",
+          "reveal_at": 134,
+          "latex": "\\text{Focal signs: ellipse } a^2-b^2, \\ \\text{hyperbola } a^2+b^2 \\ (\\text{only the sign changes})"
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "This is the consolidation section: your complete toolkit for the whole chapter, all in one place. I am not re-teaching here, just handing you the full reference to revise from."
+            },
+            {
+              "seq": 2,
+              "text": "Start with classification. Given any general second-degree equation, the discriminant B squared minus four A C names the conic: negative for an ellipse, zero for a parabola, positive for a hyperbola."
+            },
+            {
+              "seq": 3,
+              "text": "The circle: standard form x minus h squared plus y minus k squared equals r squared, and the general form x squared plus y squared plus two g x plus two f y plus c equals zero."
+            },
+            {
+              "seq": 4,
+              "text": "From that general form, the centre is minus g, minus f, the radius is the root of g squared plus f squared minus c, and the tangent length from an outside point is the root of S-one."
+            },
+            {
+              "seq": 5,
+              "text": "The parabola, reference form y squared equals four a x: focus at a, zero, directrix x equals minus a, and latus rectum four a. The other three forms just swap variables and flip signs."
+            },
+            {
+              "seq": 6,
+              "text": "The ellipse: x squared over a squared plus y squared over b squared equals one with a bigger than b, the focal relation b squared equals a squared minus c squared, and eccentricity below one."
+            },
+            {
+              "seq": 7,
+              "text": "The hyperbola: x squared over a squared minus y squared over b squared equals one, the focal relation c squared equals a squared plus b squared, eccentricity above one, and asymptotes y equals plus and minus b over a x."
+            },
+            {
+              "seq": 8,
+              "text": "Ellipse and hyperbola share three formulas: eccentricity is c over a, the latus rectum is two b squared over a, and the directrices are x equals plus and minus a over e."
+            },
+            {
+              "seq": 9,
+              "text": "And the thread through the entire chapter is the eccentricity ladder: zero for a circle, between zero and one for an ellipse, exactly one for a parabola, and above one for a hyperbola."
+            },
+            {
+              "seq": 10,
+              "text": "Finally, the one contrast worth its own line: the ellipse focal relation uses a squared minus b squared, the hyperbola uses a squared plus b squared. Everything else about reading them is the same; only that sign changes."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "ये consolidation section है: पूरे chapter का complete toolkit, सब एक जगह। यहाँ मैं दोबारा नहीं पढ़ा रहा, बस revise करने के लिए पूरा reference दे रहा हूँ।"
+            },
+            {
+              "seq": 2,
+              "text": "classification से शुरू। किसी भी general second-degree equation के लिए, discriminant B squared minus four A C conic name करता है: ellipse के लिए negative, parabola के लिए zero, hyperbola के लिए positive।"
+            },
+            {
+              "seq": 3,
+              "text": "circle: standard form x minus h squared plus y minus k squared बराबर r squared, और general form x squared plus y squared plus two g x plus two f y plus c बराबर zero।"
+            },
+            {
+              "seq": 4,
+              "text": "उस general form से, centre है minus g, minus f, radius है root of g squared plus f squared minus c, और outside point से tangent length है root of S-one।"
+            },
+            {
+              "seq": 5,
+              "text": "parabola, reference form y squared बराबर four a x: focus a, zero पर, directrix x बराबर minus a, और latus rectum four a। बाकी तीन forms बस variables बदलते और signs flip करते हैं।"
+            },
+            {
+              "seq": 6,
+              "text": "ellipse: x squared over a squared plus y squared over b squared बराबर one, a, b से बड़ा, focal relation b squared बराबर a squared minus c squared, और eccentricity one से नीचे।"
+            },
+            {
+              "seq": 7,
+              "text": "hyperbola: x squared over a squared minus y squared over b squared बराबर one, focal relation c squared बराबर a squared plus b squared, eccentricity one से ऊपर, और asymptotes y बराबर plus और minus b over a x।"
+            },
+            {
+              "seq": 8,
+              "text": "ellipse और hyperbola तीन formulas share करते हैं: eccentricity है c over a, latus rectum है two b squared over a, और directrices हैं x बराबर plus और minus a over e।"
+            },
+            {
+              "seq": 9,
+              "text": "और पूरे chapter का धागा है eccentricity ladder: circle के लिए zero, ellipse के लिए zero और one के बीच, parabola के लिए ठीक one, और hyperbola के लिए one से ऊपर।"
+            },
+            {
+              "seq": 10,
+              "text": "आखिर में, वो एक contrast जो अपनी अलग line का हक़दार है: ellipse focal relation a squared minus b squared use करती है, hyperbola a squared plus b squared। इन्हें पढ़ने का बाकी सब same है; बस वो sign बदलता है।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    },
+    {
+      "section_index": 9,
+      "section_type": "cheat_sheet",
+      "subtopic": "Chapter Wrap-up",
+      "title": "Conic Sections in 60 seconds",
+      "board_events": [
+        {
+          "seq": 1,
+          "type": "heading",
+          "emphasis": "normal",
+          "reveal_at": 0,
+          "text": "Conic Sections in 60 seconds"
+        },
+        {
+          "seq": 2,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 10,
+          "text": "Classifier: same sign closes (circle/ellipse), opposite signs open (hyperbola); a missing square means a parabola."
+        },
+        {
+          "seq": 3,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 22,
+          "text": "Eccentricity: $0$ circle, $0$ to $1$ ellipse, $1$ parabola, $> 1$ hyperbola.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 4,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 32,
+          "text": "Circle: centre $(-g,-f)$, $r = \\sqrt{g^2+f^2-c}$; $S_1$ sign locates a point, $\\sqrt{S_1}$ is the tangent."
+        },
+        {
+          "seq": 5,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 47,
+          "text": "Parabola: read $4a$ as a block; the squared variable is the axis, its sign is the opening direction."
+        },
+        {
+          "seq": 6,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 56,
+          "text": "Ellipse: bigger denominator is $a^2$; $b^2 = a^2-c^2$; foci on the major axis; LR $= 2b^2/a$."
+        },
+        {
+          "seq": 7,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 70,
+          "text": "Hyperbola: positive term is the transverse axis; $c^2 = a^2+b^2$; asymptotes $y = \\pm (b/a)x$."
+        },
+        {
+          "seq": 8,
+          "type": "note",
+          "emphasis": "high",
+          "reveal_at": 82,
+          "text": "Semi, not full: $a,b$ are always half-lengths; halve any given axis length first.",
+          "style": "red-margin"
+        },
+        {
+          "seq": 9,
+          "type": "text",
+          "emphasis": "normal",
+          "reveal_at": 93,
+          "text": "One-line diameter form for circles; $c = ae$ links focus to eccentricity for ellipse and hyperbola."
+        }
+      ],
+      "narration": {
+        "english": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "And to finish, a sixty-second sweep of the whole chapter, the kind of thing to run through on the morning of the exam."
+            },
+            {
+              "seq": 2,
+              "text": "Classifying: same-sign squared terms close the curve into an ellipse or circle; opposite signs open it into a hyperbola; and a missing square term means a parabola."
+            },
+            {
+              "seq": 3,
+              "text": "The eccentricity ladder anchors it all: zero is a circle, between zero and one an ellipse, exactly one a parabola, above one a hyperbola."
+            },
+            {
+              "seq": 4,
+              "text": "Circle: centre is minus g, minus f, radius the root of g squared plus f squared minus c; the sign of S-one locates a point and its square root is the tangent length."
+            },
+            {
+              "seq": 5,
+              "text": "Parabola: read four a as one block, the squared variable is the axis, and its sign gives the direction of opening."
+            },
+            {
+              "seq": 6,
+              "text": "Ellipse: the bigger denominator is a squared, b squared equals a squared minus c squared, the foci sit on the major axis, and the latus rectum is two b squared over a."
+            },
+            {
+              "seq": 7,
+              "text": "Hyperbola: the positive term marks the transverse axis, c squared equals a squared plus b squared, and the asymptotes are y equals plus and minus b over a x."
+            },
+            {
+              "seq": 8,
+              "text": "A warning that spans every conic: a and b are always semi-lengths, so halve any full axis length before it goes into a formula."
+            },
+            {
+              "seq": 9,
+              "text": "And two handy shortcuts: the one-line diameter form for circles, and c equals a e, which links the focal distance to the eccentricity for both the ellipse and the hyperbola. That is the whole chapter on a single card."
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        },
+        "hinglish": {
+          "segments": [
+            {
+              "seq": 1,
+              "text": "और अंत में, पूरे chapter का sixty-second sweep, वो चीज़ जो exam की सुबह दौड़ा लो।"
+            },
+            {
+              "seq": 2,
+              "text": "Classifying: same-sign squared terms curve को ellipse या circle में बंद करते हैं; opposite signs इसे hyperbola में खोलते हैं; और एक square term गायब हो तो parabola।"
+            },
+            {
+              "seq": 3,
+              "text": "eccentricity ladder सब anchor करती है: zero circle, zero और one के बीच ellipse, ठीक one parabola, one से ऊपर hyperbola।"
+            },
+            {
+              "seq": 4,
+              "text": "Circle: centre है minus g, minus f, radius root of g squared plus f squared minus c; S-one का sign point locate करता है और इसका square root tangent length है।"
+            },
+            {
+              "seq": 5,
+              "text": "Parabola: four a को एक block पढ़ो, squared variable axis है, और इसका sign खुलने की direction देता है।"
+            },
+            {
+              "seq": 6,
+              "text": "Ellipse: बड़ा denominator a squared है, b squared बराबर a squared minus c squared, foci major axis पर, और latus rectum two b squared over a।"
+            },
+            {
+              "seq": 7,
+              "text": "Hyperbola: positive term transverse axis marks करता है, c squared बराबर a squared plus b squared, और asymptotes y बराबर plus और minus b over a x।"
+            },
+            {
+              "seq": 8,
+              "text": "एक warning जो हर conic पर लागू: a और b हमेशा semi-lengths हैं, तो कोई भी full axis length formula में जाने से पहले आधी करो।"
+            },
+            {
+              "seq": 9,
+              "text": "और दो handy shortcuts: circles के लिए one-line diameter form, और c बराबर a e, जो ellipse और hyperbola दोनों के लिए focal distance को eccentricity से जोड़ता है। यही पूरा chapter एक ही card पर।"
+            }
+          ],
+          "audio_url": "",
+          "duration_sec": 0
+        }
+      }
+    }
+  ]
+}
