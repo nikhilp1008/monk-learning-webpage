@@ -6,7 +6,8 @@ import { useEffect, useState, useRef, useMemo, useCallback } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Header } from "@/components/Header";
-import { BoardEvent, BoardEventData } from "@/components/BoardEvent";
+import type { BoardEventData } from "@/components/BoardEvent";
+import { PremiumBoardEvent } from "@/components/PremiumBoardEvent";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 
@@ -62,8 +63,16 @@ export default function LessonPlayerPage() {
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const boardContainerRef = useRef<HTMLDivElement | null>(null);
+  const debugSeekRef = useRef<number | null>(null);
 
   const currentSection = sections[activeIndex] ?? null;
+
+  // Dev/deep-link: ?t=SECONDS jumps the first section to that time (paused),
+  // so any board state can be inspected or shared directly.
+  useEffect(() => {
+    const t = new URLSearchParams(window.location.search).get("t");
+    if (t && !isNaN(parseFloat(t))) debugSeekRef.current = parseFloat(t);
+  }, []);
 
   // Load user profile preference for teaching_language
   useEffect(() => {
@@ -130,6 +139,36 @@ export default function LessonPlayerPage() {
     return count;
   }, [boardEvents.length, revealTimestamps, currentTime]);
 
+  // Narration segments align 1:1 with board events, so the reveal timestamps
+  // double as caption timings — this drives the live-caption strip.
+  const captionSegments = useMemo<string[]>(() => {
+    if (!currentSection) return [];
+    const json =
+      language === "english"
+        ? currentSection.segments_english
+        : currentSection.segments_hinglish;
+    if (!Array.isArray(json)) return [];
+    return (json as { text?: string }[]).map((s) =>
+      (s?.text || "").replace(/<[^>]+>/g, "").trim()
+    );
+  }, [currentSection, language]);
+
+  const activeCaption =
+    revealedEventsCount > 0 ? captionSegments[revealedEventsCount - 1] || "" : "";
+
+  // "Drona is writing…" while the newest event's entrance is still running.
+  const lastRevealAt =
+    revealedEventsCount > 0 ? revealTimestamps[revealedEventsCount - 1] ?? 0 : 0;
+  const isWriting =
+    isPlaying && revealedEventsCount > 0 && currentTime - lastRevealAt < 2.8;
+
+  // Keep the newest writing in view.
+  useEffect(() => {
+    const el = boardContainerRef.current;
+    if (!el) return;
+    el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+  }, [revealedEventsCount, activeIndex]);
+
   const subtopicGroups = useMemo<SubtopicGroup[]>(() => {
     if (sections.length === 0) return [];
     const map = new Map<string, { section: SectionRow; originalIndex: number }[]>();
@@ -174,7 +213,12 @@ export default function LessonPlayerPage() {
         if (isMounted) {
           setChapter(chRes.data || null);
           setSections(secRes.data || []);
-          setActiveIndex(0);
+          // Deep-link: ?sec=N opens section N (1-based position).
+          const secParam = new URLSearchParams(window.location.search).get("sec");
+          const secIdx = secParam ? parseInt(secParam, 10) - 1 : 0;
+          setActiveIndex(
+            secIdx > 0 && secIdx < (secRes.data || []).length ? secIdx : 0
+          );
         }
       } catch (err) {
         console.error("Unexpected error loading lesson player data:", err);
@@ -199,6 +243,12 @@ export default function LessonPlayerPage() {
     if (audioRef.current) {
       setDuration(audioRef.current.duration || 0);
       setIsBuffering(false);
+      if (debugSeekRef.current != null) {
+        const t = debugSeekRef.current;
+        debugSeekRef.current = null;
+        audioRef.current.currentTime = t;
+        setCurrentTime(t);
+      }
     }
   }, []);
 
@@ -440,12 +490,19 @@ export default function LessonPlayerPage() {
                     The board · {currentSection?.title || `Part ${activeIndex + 1}`}
                   </span>
 
-                  {isBuffering && (
+                  {isBuffering ? (
                     <span className="inline-flex items-center gap-1.5 text-xs text-orange font-semibold bg-orange/10 px-2.5 py-0.5 rounded-full">
                       <div className="w-3 h-3 border-2 border-orange border-t-transparent rounded-full animate-ml-spin" />
                       Buffering audio...
                     </span>
-                  )}
+                  ) : isWriting ? (
+                    <span className="inline-flex items-center gap-2 flex-none">
+                      <span className="w-[7px] h-[13px] bg-orange rounded-[2px] pb-caret" />
+                      <span className="font-script text-[0.82rem] text-ink-muted">
+                        Drona is writing…
+                      </span>
+                    </span>
+                  ) : null}
 
                   <button
                     onClick={() => setIsFullScreen(!isFullScreen)}
@@ -499,8 +556,11 @@ export default function LessonPlayerPage() {
                     </div>
                   ) : (
                     boardEvents.slice(0, revealedEventsCount).map((event, idx) => (
-                      <div key={idx} className="animate-ml-rise">
-                        <BoardEvent event={event} />
+                      <div key={idx}>
+                        <PremiumBoardEvent
+                          event={event}
+                          animate={idx === revealedEventsCount - 1}
+                        />
                       </div>
                     ))
                   )}
@@ -610,12 +670,13 @@ export default function LessonPlayerPage() {
                   {language === "english" ? "English narration" : "Hinglish narration"}
                 </span>
               </div>
-              <div className="font-devanagari text-sm md:text-base leading-relaxed text-[#EFEBDD]">
-                {currentSection?.subtopic
-                  ? `${currentSection.subtopic} — ${currentSection.title}`
-                  : currentSection?.title || "Listening..."}
+              <div className="font-devanagari text-sm md:text-base leading-relaxed text-[#EFEBDD] whitespace-nowrap overflow-hidden text-ellipsis">
+                {activeCaption ||
+                  (currentSection?.subtopic
+                    ? `${currentSection.subtopic} — ${currentSection.title}`
+                    : currentSection?.title || "Listening...")}
                 {isPlaying && (
-                  <span className="inline-block w-1.5 h-3 bg-orange ml-1.5 align-middle animate-ml-blink" />
+                  <span className="inline-block w-1.5 h-3 bg-orange ml-1.5 align-middle pb-caret" />
                 )}
               </div>
             </div>

@@ -138,3 +138,41 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
+
+/* ── Premium board: chalk-write reveals ─────────────────────────── */
+@keyframes pb-write {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 -2% 0 0); }
+}
+.pb-write {
+  animation-name: pb-write;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.35, 1);
+  animation-fill-mode: both;
+}
+@keyframes pb-chalk {
+  0%   { left: 0%;   opacity: 1; }
+  92%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+.pb-chalk {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-orange);
+  box-shadow: 0 0 0 5px rgba(238, 163, 31, 0.2);
+  animation-name: pb-chalk;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.35, 1);
+  animation-fill-mode: both;
+  pointer-events: none;
+}
+@keyframes pb-underline {
+  from { stroke-dashoffset: 100; }
+  to   { stroke-dashoffset: 0; }
+}
+.pb-underline {
+  stroke-dasharray: 100;
+  animation: pb-underline 0.9s 1.2s cubic-bezier(0.25, 0.1, 0.35, 1) both;
+}
+@keyframes pb-caret { 50% { opacity: 0.15; } }
+.pb-caret { animation: pb-caret 1s steps(1) infinite; }
