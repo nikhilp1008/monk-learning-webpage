@@ -47,6 +47,7 @@ Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷
 - [x] Sec 22 — WE4 2D shell: per-axis accounts, 5√13, CM sails on
 - [x] Sec 23 — Tips: 4 pitfalls, e=√(h/h), v_cm error-checker. SUBTOPIC 2 DONE (23/92)
 - [x] Sec 24 — Equilibrium intro: signboard, ΣF=0, triangle law, torque caution
+- [x] Sec 25 — Resolution: F cos/sin panels, tilted axes pro-tip, equilibrant
 
 ## Current
-Subtopic 3 (Concurrent Forces and Equilibrium, secs 24-35). Next: Sec 25.
+Subtopic 3 (Concurrent Forces and Equilibrium, secs 24-35). Next: Sec 26.
