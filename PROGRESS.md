@@ -39,9 +39,10 @@ Total sections: 76
 - Sec 23 — Work worked example: F/d arrows, identification line, 6+12 → W=18 J box, scalar shape check, auto-projection note.
 - Sec 24 — NEET torque trap: options + ring on (B) 0.87, spanner split diagram, τ=0.5 N·m box, sin/cos family cues.
 - Sec 25 — JEE Main angle/proj/perp: base quantities, 67.6°, 8/7 proj, A-split diagram, √377/7, Pythagoras closes to |A|=3.
+- Sec 26 — JEE Adv triple products: single determinant → −10, parallelepiped box, V=10 not-coplanar chip, BAC−CAB → 9î−2ĵ+5k̂.
 
 ## Current
-Sec 26 — next.
+Sec 27 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
