@@ -70,9 +70,10 @@ Total sections: 76
 - Sec 54 — Boat & rain panels: banks + v-sum diagram, rain strokes + walker + slanted frame arrows, one-subtraction verdict.
 - Sec 55 — Subtraction rule origin: rA/rB/rAB diagram, d/dt chain, v(AB) box, a(AB), zero-relative-a → straight lines.
 - Sec 56 — Toolkit: core rule box, same/opposite train arrows, angle formula with MINUS warning, frame conversion.
+- Sec 57 — Toolkit 2 boat/rain solved: shortest-time vs shortest-path columns, tanφ box, never-conflate bar.
 
 ## Current
-Sec 57 — next.
+Sec 58 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
