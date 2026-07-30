@@ -180,6 +180,7 @@ import Ch05Sec5 from "./Ch05Sec5";
 import Ch05Sec6 from "./Ch05Sec6";
 import Ch05Sec7 from "./Ch05Sec7";
 import Ch05Sec8 from "./Ch05Sec8";
+import Ch05Sec9 from "./Ch05Sec9";
 // ── end Ch05 imports ──
 
 const CH01 = "8d7ccfaa-af16-53e4-9f28-823c8ea923d1"; // Class 11 · Units & Measurements
@@ -361,6 +362,7 @@ const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH05}:6`]: Ch05Sec6,
   [`${CH05}:7`]: Ch05Sec7,
   [`${CH05}:8`]: Ch05Sec8,
+  [`${CH05}:9`]: Ch05Sec9,
   // ── end Ch05 registry ──
 };
 
