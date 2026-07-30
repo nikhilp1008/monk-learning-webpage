@@ -18,9 +18,10 @@ Total sections: 76
 - Sec 2 — Triangle & parallelogram laws: two-diagram row + rickshaw push demo (aligned vs side) + tail-to-tail θ glyph.
 - Sec 3 — Resolution: F→Fx+Fy axes diagram + sledge rope demo (drag vs lift) + choose-axes verdict.
 - Sec 4 — Parallelogram-law derivation pt1: OPQS construction + formula stack → R = √(A²+B²+2ABcosθ) hero box.
+- Sec 5 — Derivation pt2: tan α triangle + three special-case rows + |A−B| ≤ R ≤ A+B band hero.
 
 ## Current
-Sec 5 — next.
+Sec 6 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
