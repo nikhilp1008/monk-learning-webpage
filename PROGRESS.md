@@ -1,0 +1,111 @@
+# Ch05 · Work, Energy & Power — scene progress
+
+Branch `premium-board-ch5` · chapter_id `a88de5d2-84e4-5489-878a-f17a195e3267` · port 3005.
+Total sections: **66** (from JSON + Supabase, both agree).
+
+Reveals cache: `scratchpad/ch05-reveals.json` (re-fetch: Supabase `lesson_sections`,
+columns `board_reveal_at_english` / `board_reveal_at_hinglish`; creds in `.env.local`).
+Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-scene.mjs <sec> '<en>' '<hi>' ./shots/sec<M>`.
+
+## Subtopics
+
+| # | Subtopic | Sections | Status |
+|---|----------|----------|--------|
+| 1 | Foundations: The Scalar (Dot) Product | 1–7 | DONE |
+| 2 | Work and the Work-Energy Theorem | 8–17 | DONE |
+| 3 | Mechanical Energy: Kinetic and Potential | 18–26 | DONE |
+| 4 | Conservative and Non-Conservative Forces | 27–34 | DONE |
+| 5 | Various Forms of Energy & Conservation of Energy | 35–41 | DONE |
+| 6 | Power | 42–49 | DONE |
+| 7 | Collisions | 50–57 | DONE |
+| 8 | Application: Motion in a Vertical Circle | 58–64 | next |
+| 9 | Chapter Recap | 65–66 | — |
+
+## Done
+
+- **Sec 1** — "Two vectors in, one number out": dot machine, trolley push demo,
+  A·B = AB cos θ with measured underlines, alignment meter, W/P chips, scalar verdict.
+  Audits [] both langs; eye-checked.
+- **Sec 2** — "The shadow picture": sun + projection demo, A cos θ chip, shadow×ground,
+  three θ case cards (0/90/180), sign-story verdict. Audits [] both langs; eye-checked.
+  (hi beats 4→5 only 1s apart — beat-4 delays kept ≤0.8.)
+- **Sec 3** — properties + angle-finding drill flowchart + sign-check panel.
+- **Sec 4** — toolkit: six formula cards (2×3 grid) + inherited-dimensions verdict.
+  (en beats 3/4 last ~1s → `en ? tiny : normal` delays — reusable pattern.)
+- **Sec 5** — Ex1 substitution (10 units) + Ex2 NEET zero-dot shortcut with mini plot.
+- **Sec 6** — Ex3 find-λ inversion + Ex4 cube body-diagonal 54.7° & projection 5/3.
+- **Sec 7** — four pitfalls (crossed vector-answer, sign survival, dot-vs-cross panels,
+  zero-dot≠zero-vector) + reflex band. Subtopic 1 (1–7) COMPLETE.
+- **Sec 8** — holding a bag = zero work: figure demo, F×0, two-question test, hook wall.
+- **Sec 9** — angle writes the sign: auto push + three-panel +/−/0 demo, W = FS cos θ.
+- **Sec 10** — suitcase decomposition (F cos θ / F sin θ), work IS a dot product, K, W=ΔK.
+- **Sec 11** — CBSE derivation: 5-move flowchart, amber chain-rule box, NET warning.
+- **Sec 12** — area under F-x: piecewise curve, signed regions, dW strip proof.
+- **Sec 13** — key formulas sheet: 5 cards + units + conversions (eV, kWh trap) + sign rule.
+- **Sec 14** — tilted pull (1000 J) + porter staircase (horizontal distance = bait).
+- **Sec 15** — JEE Main variable force: graph + ∫(3x²+2x)dx = 80 J → v = 4√5.
+- **Sec 16** — JEE Advanced frames: ground +36 J vs train 0 J, both verified, never mix.
+- **Sec 17** — four pitfalls + sign-first reflex + SAD-angles chips.
+  Subtopic 2 (8–17) COMPLETE — 17/66.
+- **Sec 18** — two flavours split board (K | U) with cricket-ball + hidden-PE icons.
+- **Sec 19** — rechargeable-battery picture (rooftop tank) + book-on-table reference trap.
+- **Sec 20** — PE of a system, mgh vs −Gm₁m₂/r regimes, E = K + U pendulum bars.
+- **Sec 21** — spring PE derivation: Hooke line, triangle, difference-of-squares warning.
+- **Sec 22** — PE-curve reading: −slope force, equilibria, E-line turning points.
+- **Sec 23** — formula sheet: KE faces, ΔU = −∫F·dr, standard PEs, units, K = p²/2m.
+- **Sec 24** — shelf PE 150 J vs 90 J + p ∝ √K NEET trap.
+- **Sec 25** — U(x) drill (−2 N, x=2 stable) + cubic trapping well (JEE Advanced).
+- **Sec 26** — five pitfalls + three-box PE-curve drill.
+  Subtopic 3 (18–26) COMPLETE — 26/66.
+- **Sec 27** — two shopkeepers (honest/skimmer) split board.
+- **Sec 28** — three tests: home→market routes, round trip, three-test panel.
+- **Sec 29** — E = K + U constant, ideal vs dying pendulum, converted-not-lost.
+- **Sec 30** — conservation derivation (3 lines) + W_nc = ΔE friction version.
+- **Sec 31** — formula sheet (6 cards) + sign-of-U attractive/repulsive note.
+- **Sec 32** — clean drop (10 m/s) + round-trip (0, negative) NEET trap.
+- **Sec 33** — two-regime ramp (4.5 m) + 2-D force toolkit (U = −xy).
+- **Sec 34** — five pitfalls + friction-or-drag decision diagram.
+  Subtopic 4 (27–34) COMPLETE — 34/66. (commit-heal.sh handles iCloud-evicted objects.)
+- **Sec 35** — seven-costume card grid (Card helper component).
+- **Sec 36** — deepest law: currency, dam chain, 1 cal = 4.186 J. (en b0/b1 last 1s.)
+- **Sec 37** — E = mc² hero board, 9×10¹⁶ multiplier, mass-energy law.
+- **Sec 38** — formula sheet: law chip, constants row, power-plant chain, two anchors.
+- **Sec 39** — crate 125 J heat + gram-vs-kg trap (9×10¹³ J).
+- **Sec 40** — 0.02 u → 18.63 MeV + Sun losing 4.2×10⁹ kg/s.
+- **Sec 41** — four pitfalls + JOULES/MeV anchor panels + three memory aids.
+  Subtopic 5 (35–41) COMPLETE — 41/66.
+- **Sec 42** — power = rate: bricks scene, taps, 100 W vs 2000 W.
+- **Sec 43** — P_avg vs P_inst, P = Fv derivation, weightlifter, F = P/v.
+- **Sec 44** — negative power (braking), 746 W horse, P-t area / W-t slope graphs.
+- **Sec 45** — constant power: K = Pt, v ∝ √t curve vs const-force dash, x ∝ t^(3/2).
+- **Sec 46** — power formula sheet + P_avg = ½P_final + km/h habit.
+- **Sec 47** — crane 1 kW + 72 km/h planted-answer trap (16 kW).
+- **Sec 48** — incline 30 kW + constant-power kinematics numeric (6 m/s, 12 m).
+- **Sec 49** — five pitfalls + reflex panel + pump/hose/gun trick.
+  Subtopic 6 (42–49) COMPLETE — 49/66.
+- **Sec 50** — momentum survives: Newton-III balls, hero equation, internal/external.
+- **Sec 51** — elastic vs inelastic: steel/dough, anchors, equation count.
+- **Sec 52** — restitution meter 0→1 + head-on vs oblique geometry.
+- **Sec 53** — elastic shortcut u₁−u₂ = v₂−v₁ + three special cases.
+- **Sec 54** — collisions formula sheet + strategy sentence.
+- **Sec 55** — sticking clay (V = 2, 24 J) + equal-mass swap in 3 s.
+- **Sec 56** — bounce series D = h(1+e²)/(1−e²) + 90° dot-product proof.
+- **Sec 57** — five pitfalls + two-step reflex.
+  Subtopic 7 (50–57) COMPLETE — 57/66.
+  NOTE: lesson JSON + reveals cached at scratchpad (ch05-lesson.json / ch05-reveals.json)
+  because the repo copy keeps going iCloud-dataless. Dev server occasionally dies /
+  crawls when iCloud thrashes — restart with npm run dev -- -p 3005 and curl-warm.
+
+## Notes / gotchas
+
+- `Draw` with `fill=CREAM` renders its fill before the beat (dash anim only hides the
+  stroke) — wrap filled Draws in a beat-gated `Fade`.
+- Measure exact glyph x-extents with `svgText.getStartPositionOfChar(i)` (viewBox units)
+  when underlining/pointing at substrings — estimates are off by ~20px at size 22.
+- Hinglish narration is Devanagari-heavy but board labels follow the Ch01/Ch02
+  convention: romanized Hinglish, Kalam script font.
+- No combining vector-arrow glyphs (U+20D7) anywhere in Ch01/Ch02 — write plain A·B, F·d.
+- The repo lives on iCloud-synced Desktop: files (incl. .git pack files!) can go
+  "dataless" and read as empty/truncated. If git errors with "pack ... far too short":
+  the pack content is fine — copy the pack/idx/rev out, `git verify-pack` the copy,
+  then atomically mv the verified copies back over the originals. Push often.

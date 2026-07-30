@@ -171,9 +171,74 @@ import Ch02Sec70 from "./Ch02Sec70";
 import Ch02Sec71 from "./Ch02Sec71";
 import Ch02Sec72 from "./Ch02Sec72";
 import Ch02Sec73 from "./Ch02Sec73";
+// ── Ch05 imports (Work, Energy & Power) — session branch premium-board-ch5 ──
+import Ch05Sec1 from "./Ch05Sec1";
+import Ch05Sec2 from "./Ch05Sec2";
+import Ch05Sec3 from "./Ch05Sec3";
+import Ch05Sec4 from "./Ch05Sec4";
+import Ch05Sec5 from "./Ch05Sec5";
+import Ch05Sec6 from "./Ch05Sec6";
+import Ch05Sec7 from "./Ch05Sec7";
+import Ch05Sec8 from "./Ch05Sec8";
+import Ch05Sec9 from "./Ch05Sec9";
+import Ch05Sec10 from "./Ch05Sec10";
+import Ch05Sec11 from "./Ch05Sec11";
+import Ch05Sec12 from "./Ch05Sec12";
+import Ch05Sec13 from "./Ch05Sec13";
+import Ch05Sec14 from "./Ch05Sec14";
+import Ch05Sec15 from "./Ch05Sec15";
+import Ch05Sec16 from "./Ch05Sec16";
+import Ch05Sec17 from "./Ch05Sec17";
+import Ch05Sec18 from "./Ch05Sec18";
+import Ch05Sec19 from "./Ch05Sec19";
+import Ch05Sec20 from "./Ch05Sec20";
+import Ch05Sec21 from "./Ch05Sec21";
+import Ch05Sec22 from "./Ch05Sec22";
+import Ch05Sec23 from "./Ch05Sec23";
+import Ch05Sec24 from "./Ch05Sec24";
+import Ch05Sec25 from "./Ch05Sec25";
+import Ch05Sec26 from "./Ch05Sec26";
+import Ch05Sec27 from "./Ch05Sec27";
+import Ch05Sec28 from "./Ch05Sec28";
+import Ch05Sec29 from "./Ch05Sec29";
+import Ch05Sec30 from "./Ch05Sec30";
+import Ch05Sec31 from "./Ch05Sec31";
+import Ch05Sec32 from "./Ch05Sec32";
+import Ch05Sec33 from "./Ch05Sec33";
+import Ch05Sec34 from "./Ch05Sec34";
+import Ch05Sec35 from "./Ch05Sec35";
+import Ch05Sec36 from "./Ch05Sec36";
+import Ch05Sec37 from "./Ch05Sec37";
+import Ch05Sec38 from "./Ch05Sec38";
+import Ch05Sec39 from "./Ch05Sec39";
+import Ch05Sec40 from "./Ch05Sec40";
+import Ch05Sec41 from "./Ch05Sec41";
+import Ch05Sec42 from "./Ch05Sec42";
+import Ch05Sec43 from "./Ch05Sec43";
+import Ch05Sec44 from "./Ch05Sec44";
+import Ch05Sec45 from "./Ch05Sec45";
+import Ch05Sec46 from "./Ch05Sec46";
+import Ch05Sec47 from "./Ch05Sec47";
+import Ch05Sec48 from "./Ch05Sec48";
+import Ch05Sec49 from "./Ch05Sec49";
+import Ch05Sec50 from "./Ch05Sec50";
+import Ch05Sec51 from "./Ch05Sec51";
+import Ch05Sec52 from "./Ch05Sec52";
+import Ch05Sec53 from "./Ch05Sec53";
+import Ch05Sec54 from "./Ch05Sec54";
+import Ch05Sec55 from "./Ch05Sec55";
+import Ch05Sec56 from "./Ch05Sec56";
+import Ch05Sec57 from "./Ch05Sec57";
+import Ch05Sec58 from "./Ch05Sec58";
+import Ch05Sec59 from "./Ch05Sec59";
+import Ch05Sec60 from "./Ch05Sec60";
+import Ch05Sec61 from "./Ch05Sec61";
+import Ch05Sec62 from "./Ch05Sec62";
+// ── end Ch05 imports ──
 
 const CH01 = "8d7ccfaa-af16-53e4-9f28-823c8ea923d1"; // Class 11 · Units & Measurements
 const CH02 = "563ae2b1-3427-537a-afde-f7fbc193731f"; // Class 11 · Motion in a Straight Line
+const CH05 = "a88de5d2-84e4-5489-878a-f17a195e3267"; // Class 11 · Work, Energy & Power
 
 const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH01}:1`]: Ch01Sec1,
@@ -341,6 +406,70 @@ const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH02}:71`]: Ch02Sec71,
   [`${CH02}:72`]: Ch02Sec72,
   [`${CH02}:73`]: Ch02Sec73,
+  // ── Ch05 registry (Work, Energy & Power) — session branch premium-board-ch5 ──
+  [`${CH05}:1`]: Ch05Sec1,
+  [`${CH05}:2`]: Ch05Sec2,
+  [`${CH05}:3`]: Ch05Sec3,
+  [`${CH05}:4`]: Ch05Sec4,
+  [`${CH05}:5`]: Ch05Sec5,
+  [`${CH05}:6`]: Ch05Sec6,
+  [`${CH05}:7`]: Ch05Sec7,
+  [`${CH05}:8`]: Ch05Sec8,
+  [`${CH05}:9`]: Ch05Sec9,
+  [`${CH05}:10`]: Ch05Sec10,
+  [`${CH05}:11`]: Ch05Sec11,
+  [`${CH05}:12`]: Ch05Sec12,
+  [`${CH05}:13`]: Ch05Sec13,
+  [`${CH05}:14`]: Ch05Sec14,
+  [`${CH05}:15`]: Ch05Sec15,
+  [`${CH05}:16`]: Ch05Sec16,
+  [`${CH05}:17`]: Ch05Sec17,
+  [`${CH05}:18`]: Ch05Sec18,
+  [`${CH05}:19`]: Ch05Sec19,
+  [`${CH05}:20`]: Ch05Sec20,
+  [`${CH05}:21`]: Ch05Sec21,
+  [`${CH05}:22`]: Ch05Sec22,
+  [`${CH05}:23`]: Ch05Sec23,
+  [`${CH05}:24`]: Ch05Sec24,
+  [`${CH05}:25`]: Ch05Sec25,
+  [`${CH05}:26`]: Ch05Sec26,
+  [`${CH05}:27`]: Ch05Sec27,
+  [`${CH05}:28`]: Ch05Sec28,
+  [`${CH05}:29`]: Ch05Sec29,
+  [`${CH05}:30`]: Ch05Sec30,
+  [`${CH05}:31`]: Ch05Sec31,
+  [`${CH05}:32`]: Ch05Sec32,
+  [`${CH05}:33`]: Ch05Sec33,
+  [`${CH05}:34`]: Ch05Sec34,
+  [`${CH05}:35`]: Ch05Sec35,
+  [`${CH05}:36`]: Ch05Sec36,
+  [`${CH05}:37`]: Ch05Sec37,
+  [`${CH05}:38`]: Ch05Sec38,
+  [`${CH05}:39`]: Ch05Sec39,
+  [`${CH05}:40`]: Ch05Sec40,
+  [`${CH05}:41`]: Ch05Sec41,
+  [`${CH05}:42`]: Ch05Sec42,
+  [`${CH05}:43`]: Ch05Sec43,
+  [`${CH05}:44`]: Ch05Sec44,
+  [`${CH05}:45`]: Ch05Sec45,
+  [`${CH05}:46`]: Ch05Sec46,
+  [`${CH05}:47`]: Ch05Sec47,
+  [`${CH05}:48`]: Ch05Sec48,
+  [`${CH05}:49`]: Ch05Sec49,
+  [`${CH05}:50`]: Ch05Sec50,
+  [`${CH05}:51`]: Ch05Sec51,
+  [`${CH05}:52`]: Ch05Sec52,
+  [`${CH05}:53`]: Ch05Sec53,
+  [`${CH05}:54`]: Ch05Sec54,
+  [`${CH05}:55`]: Ch05Sec55,
+  [`${CH05}:56`]: Ch05Sec56,
+  [`${CH05}:57`]: Ch05Sec57,
+  [`${CH05}:58`]: Ch05Sec58,
+  [`${CH05}:59`]: Ch05Sec59,
+  [`${CH05}:60`]: Ch05Sec60,
+  [`${CH05}:61`]: Ch05Sec61,
+  [`${CH05}:62`]: Ch05Sec62,
+  // ── end Ch05 registry ──
 };
 
 export function getScene(
