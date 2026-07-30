@@ -8,6 +8,7 @@ import { useParams } from "next/navigation";
 import { Header } from "@/components/Header";
 import type { BoardEventData } from "@/components/BoardEvent";
 import { PremiumBoardEvent } from "@/components/PremiumBoardEvent";
+import { getScene } from "@/components/scenes";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 
@@ -66,6 +67,12 @@ export default function LessonPlayerPage() {
   const debugSeekRef = useRef<number | null>(null);
 
   const currentSection = sections[activeIndex] ?? null;
+
+  // Hand-choreographed scene for this section, if one is registered.
+  const SceneComp = getScene(
+    chapterId,
+    currentSection?.position ?? activeIndex + 1
+  );
 
   // Dev/deep-link: ?t=SECONDS jumps the first section to that time (paused),
   // so any board state can be inspected or shared directly.
@@ -162,12 +169,13 @@ export default function LessonPlayerPage() {
   const isWriting =
     isPlaying && revealedEventsCount > 0 && currentTime - lastRevealAt < 2.8;
 
-  // Keep the newest writing in view.
+  // Keep the newest writing in view (event mode only — scenes are one stage).
   useEffect(() => {
+    if (SceneComp) return;
     const el = boardContainerRef.current;
     if (!el) return;
     el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
-  }, [revealedEventsCount, activeIndex]);
+  }, [revealedEventsCount, activeIndex, SceneComp]);
 
   const subtopicGroups = useMemo<SubtopicGroup[]>(() => {
     if (sections.length === 0) return [];
@@ -544,9 +552,17 @@ export default function LessonPlayerPage() {
 
                 <div
                   ref={boardContainerRef}
-                  className="flex-1 min-h-0 overflow-y-auto pl-4 pr-2 space-y-3 z-10"
+                  className={`flex-1 min-h-0 pl-4 pr-2 z-10 ${
+                    SceneComp ? "overflow-hidden" : "overflow-y-auto space-y-3"
+                  }`}
                 >
-                  {boardEvents.length === 0 ? (
+                  {SceneComp ? (
+                    <SceneComp
+                      currentTime={currentTime}
+                      reveals={revealTimestamps}
+                      language={language}
+                    />
+                  ) : boardEvents.length === 0 ? (
                     <div className="py-12 text-center text-ink-muted text-sm italic">
                       No board content available for this section.
                     </div>
@@ -565,6 +581,7 @@ export default function LessonPlayerPage() {
                     ))
                   )}
                 </div>
+
 
                 <div className="mt-4 pt-3 border-t border-border-subtle flex items-center gap-3 z-10 flex-none">
                   <span className="text-xs font-mono text-ink-muted font-medium w-10">

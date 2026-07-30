@@ -176,3 +176,23 @@ body {
 }
 @keyframes pb-caret { 50% { opacity: 0.15; } }
 .pb-caret { animation: pb-caret 1s steps(1) infinite; }
+
+/* ── Scene kit ──────────────────────────────────────────────────── */
+.sc-fade { transition: opacity .5s ease, transform .5s ease; }
+@keyframes sc-stick {
+  0%, 14%  { transform: translateX(0); }
+  24%, 38% { transform: translateX(160px); }
+  48%, 62% { transform: translateX(320px); }
+  74%, 100%{ transform: translateX(480px); }
+}
+.sc-stick-go { animation: sc-stick 3.8s ease-in-out both; }
+.sc-dim-later { animation: sc-dim 0.8s 6s ease both; }
+@keyframes sc-dim { to { opacity: 0.25; } }
+@keyframes sc-wob { 0%,100% { transform: rotate(-1.6deg); } 50% { transform: rotate(1.8deg); } }
+.sc-wob { transform-box: fill-box; transform-origin: center; animation: sc-wob 1.1s ease-in-out infinite; }
+@keyframes sc-dust {
+  0% { transform: translateY(-5px); opacity: 0; }
+  30% { opacity: .8; }
+  100% { transform: translateY(24px); opacity: 0; }
+}
+.sc-dust { animation: sc-dust 1.6s ease-in infinite; }
