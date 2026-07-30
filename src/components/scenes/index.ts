@@ -352,3 +352,19 @@ export function getScene(
 }
 
 export type { SceneProps };
+
+/* ================================================================== */
+/* Ch03 — Motion in a Plane (branch premium-board-ch3)                 */
+/* Registered via Object.assign so this block stays self-contained     */
+/* at the end of the file; do not edit blocks above.                   */
+/* ================================================================== */
+import Ch03Sec1 from "./Ch03Sec1";
+
+const CH03 = "a5970ed6-3b48-55f9-9b80-8abdd3d4c336"; // Class 11 · Motion in a Plane
+
+Object.assign(REGISTRY, {
+  [`${CH03}:1`]: Ch03Sec1,
+});
+/* ================================================================== */
+/* end Ch03 block                                                      */
+/* ================================================================== */
