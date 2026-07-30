@@ -698,3 +698,93 @@ Object.assign(REGISTRY, {
   [`${CH04}:41`]: Ch04Sec41,
 });
 /* =============================== end Ch04 ==================================== */
+/* ─────────────────────────────────────────────────────────────────────
+ * Ch06 · System of Particles & Rotational Motion (Class 11)
+ * Single block appended by the ch6 worktree session — keep all Ch06
+ * imports and registrations inside this block only.
+ * ──────────────────────────────────────────────────────────────────── */
+import Ch06Sec1 from "./Ch06Sec1";
+import Ch06Sec2 from "./Ch06Sec2";
+import Ch06Sec3 from "./Ch06Sec3";
+import Ch06Sec4 from "./Ch06Sec4";
+import Ch06Sec5 from "./Ch06Sec5";
+import Ch06Sec6 from "./Ch06Sec6";
+import Ch06Sec7 from "./Ch06Sec7";
+import Ch06Sec8 from "./Ch06Sec8";
+import Ch06Sec9 from "./Ch06Sec9";
+import Ch06Sec10 from "./Ch06Sec10";
+import Ch06Sec11 from "./Ch06Sec11";
+import Ch06Sec12 from "./Ch06Sec12";
+import Ch06Sec13 from "./Ch06Sec13";
+import Ch06Sec14 from "./Ch06Sec14";
+import Ch06Sec15 from "./Ch06Sec15";
+import Ch06Sec16 from "./Ch06Sec16";
+import Ch06Sec17 from "./Ch06Sec17";
+import Ch06Sec18 from "./Ch06Sec18";
+import Ch06Sec19 from "./Ch06Sec19";
+import Ch06Sec20 from "./Ch06Sec20";
+import Ch06Sec21 from "./Ch06Sec21";
+import Ch06Sec22 from "./Ch06Sec22";
+import Ch06Sec23 from "./Ch06Sec23";
+import Ch06Sec24 from "./Ch06Sec24";
+import Ch06Sec25 from "./Ch06Sec25";
+import Ch06Sec26 from "./Ch06Sec26";
+import Ch06Sec27 from "./Ch06Sec27";
+import Ch06Sec28 from "./Ch06Sec28";
+import Ch06Sec29 from "./Ch06Sec29";
+import Ch06Sec30 from "./Ch06Sec30";
+import Ch06Sec31 from "./Ch06Sec31";
+import Ch06Sec32 from "./Ch06Sec32";
+import Ch06Sec33 from "./Ch06Sec33";
+import Ch06Sec34 from "./Ch06Sec34";
+import Ch06Sec35 from "./Ch06Sec35";
+import Ch06Sec36 from "./Ch06Sec36";
+import Ch06Sec37 from "./Ch06Sec37";
+import Ch06Sec38 from "./Ch06Sec38";
+import Ch06Sec39 from "./Ch06Sec39";
+import Ch06Sec40 from "./Ch06Sec40";
+
+const CH06 = "262da95c-2f3a-56da-905e-003fa8f0e4dc"; // Class 11 · System of Particles & Rotational Motion
+
+Object.assign(REGISTRY, {
+  [`${CH06}:1`]: Ch06Sec1,
+  [`${CH06}:2`]: Ch06Sec2,
+  [`${CH06}:3`]: Ch06Sec3,
+  [`${CH06}:4`]: Ch06Sec4,
+  [`${CH06}:5`]: Ch06Sec5,
+  [`${CH06}:6`]: Ch06Sec6,
+  [`${CH06}:7`]: Ch06Sec7,
+  [`${CH06}:8`]: Ch06Sec8,
+  [`${CH06}:9`]: Ch06Sec9,
+  [`${CH06}:10`]: Ch06Sec10,
+  [`${CH06}:11`]: Ch06Sec11,
+  [`${CH06}:12`]: Ch06Sec12,
+  [`${CH06}:13`]: Ch06Sec13,
+  [`${CH06}:14`]: Ch06Sec14,
+  [`${CH06}:15`]: Ch06Sec15,
+  [`${CH06}:16`]: Ch06Sec16,
+  [`${CH06}:17`]: Ch06Sec17,
+  [`${CH06}:18`]: Ch06Sec18,
+  [`${CH06}:19`]: Ch06Sec19,
+  [`${CH06}:20`]: Ch06Sec20,
+  [`${CH06}:21`]: Ch06Sec21,
+  [`${CH06}:22`]: Ch06Sec22,
+  [`${CH06}:23`]: Ch06Sec23,
+  [`${CH06}:24`]: Ch06Sec24,
+  [`${CH06}:25`]: Ch06Sec25,
+  [`${CH06}:26`]: Ch06Sec26,
+  [`${CH06}:27`]: Ch06Sec27,
+  [`${CH06}:28`]: Ch06Sec28,
+  [`${CH06}:29`]: Ch06Sec29,
+  [`${CH06}:30`]: Ch06Sec30,
+  [`${CH06}:31`]: Ch06Sec31,
+  [`${CH06}:32`]: Ch06Sec32,
+  [`${CH06}:33`]: Ch06Sec33,
+  [`${CH06}:34`]: Ch06Sec34,
+  [`${CH06}:35`]: Ch06Sec35,
+  [`${CH06}:36`]: Ch06Sec36,
+  [`${CH06}:37`]: Ch06Sec37,
+  [`${CH06}:38`]: Ch06Sec38,
+  [`${CH06}:39`]: Ch06Sec39,
+  [`${CH06}:40`]: Ch06Sec40,
+});
