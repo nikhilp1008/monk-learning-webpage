@@ -72,9 +72,10 @@ Total sections: 76
 - Sec 56 — Toolkit: core rule box, same/opposite train arrows, angle formula with MINUS warning, frame conversion.
 - Sec 57 — Toolkit 2 boat/rain solved: shortest-time vs shortest-path columns, tanφ box, never-conflate bar.
 - Sec 58 — Board river example: 4/3/5 river diagram with width bar, 25 s / 75 m / 5 m/s answer box.
+- Sec 59 — NEET umbrella-direction trap: subtract-by-adding-negative diagram, apparent-rain arrow, walker+tilt sketch, 45° EAST box.
 
 ## Current
-Sec 59 — next.
+Sec 60 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
