@@ -67,9 +67,10 @@ Total sections: 76
 - Sec 51 — Five projectile pitfalls checklist.
 - Sec 52 — Pro-tip closer: channel chips + formulas, workflow line, shortcuts, mnemonic hero. ✅ SUBTOPIC 4 (41–52) COMPLETE.
 - Sec 53 — Relative velocity intro: train line, vA/vB/vAB head-join diagram, v(AB)=vA−vB box, swap-flips note.
+- Sec 54 — Boat & rain panels: banks + v-sum diagram, rain strokes + walker + slanted frame arrows, one-subtraction verdict.
 
 ## Current
-Sec 54 — next.
+Sec 55 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
