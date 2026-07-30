@@ -352,3 +352,13 @@ export function getScene(
 }
 
 export type { SceneProps };
+
+/* ================================================================== */
+/* Ch07 · Gravitation — scene block (branch premium-board-ch7)         */
+/* ================================================================== */
+import Ch07Sec1 from "./Ch07Sec1";
+
+const CH07 = "29b5be47-3b75-550d-9636-ad45a901d4dd"; // Class 11 · Gravitation
+
+REGISTRY[`${CH07}:1`] = Ch07Sec1;
+/* ============================ end Ch07 ============================ */
