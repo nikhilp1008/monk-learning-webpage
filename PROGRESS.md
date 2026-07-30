@@ -16,9 +16,10 @@ Total sections: 76
 ## Done
 - Sec 1 — Scalars vs vectors: scalar chips / which-way arrows / 3-4-5 walk demo / vector cast / contrast verdict.
 - Sec 2 — Triangle & parallelogram laws: two-diagram row + rickshaw push demo (aligned vs side) + tail-to-tail θ glyph.
+- Sec 3 — Resolution: F→Fx+Fy axes diagram + sledge rope demo (drag vs lift) + choose-axes verdict.
 
 ## Current
-Sec 3 — next.
+Sec 4 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
