@@ -59,9 +59,10 @@ Total sections: 76
 - Sec 43 — T & H derivation: labelled parabola (apex/H/R), y=0 condition, T and H hero boxes, no-cosθ note.
 - Sec 44 — Range & trajectory: R = u²sin2θ/g and Rmax boxes, eliminate-t, y = xtanθ−gx²/2u²cos²θ box, parabola form.
 - Sec 45 — Toolkit 1: ux/uy, velocity & position columns, trajectory box, apex speed fact.
+- Sec 46 — Toolkit 2: T/H/R boxes, Rmax=4Hmax, handy relations, horizontal-projectile column, sin²θ-vs-sin2θ warning.
 
 ## Current
-Sec 46 — next.
+Sec 47 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
