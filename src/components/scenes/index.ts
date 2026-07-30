@@ -381,6 +381,7 @@ import Ch04Sec23 from "./Ch04Sec23";
 import Ch04Sec24 from "./Ch04Sec24";
 import Ch04Sec25 from "./Ch04Sec25";
 import Ch04Sec26 from "./Ch04Sec26";
+import Ch04Sec27 from "./Ch04Sec27";
 
 const CH04 = "50ae6550-951b-599c-b352-1d6e5f84bc3b"; // Class 11 · Laws of Motion
 Object.assign(REGISTRY, {
@@ -410,5 +411,6 @@ Object.assign(REGISTRY, {
   [`${CH04}:24`]: Ch04Sec24,
   [`${CH04}:25`]: Ch04Sec25,
   [`${CH04}:26`]: Ch04Sec26,
+  [`${CH04}:27`]: Ch04Sec27,
 });
 /* =============================== end Ch04 ==================================== */
