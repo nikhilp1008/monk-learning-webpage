@@ -82,9 +82,10 @@ Total sections: 76
 - Sec 66 — a=v²/r derivation: similar-triangle diagram (position Δ + velocity Δ, same δθ), a=v²/r box, a=ω²r box.
 - Sec 67 — Rotational toolkit: θ/ω/α defs, T/f formulas, v=ωr/a=αr box, constant-α mirrored equations, symbol-swap mapping row.
 - Sec 68 — Forces toolkit: Fc box, not-a-new-force note, non-uniform ar/at split, net-a box, banked-road N/mg/θ diagram, tanθ=v²/rg box.
+- Sec 69 — Whirling-stone worked example: circle+string+tension diagram, ω/v/a_c/T derivation chain, answer box, tension-IS-Fc conceptual note.
 
 ## Current
-Sec 69 — next.
+Sec 70 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
