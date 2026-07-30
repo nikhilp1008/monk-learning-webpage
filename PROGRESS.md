@@ -63,9 +63,10 @@ Total sections: 76
 - Sec 47 — Board worked example: trig chips, T=2/H=5/R≈34.6 columns, answer box, squaring warning.
 - Sec 48 — NEET apex-speed trap: ring on (A) 0, arc + apex u cosθ arrow, 10√3 box, never-zero cue.
 - Sec 49 — JEE Main t=1s: trig chips, component tracking, √180 speed + 26.6°, y=11 m box, gentler-climb verdict.
+- Sec 50 — JEE Adv complementary: sin2θ equality, two arcs same range, 5+15=20 ✓ box, sin²+cos²=1 proof.
 
 ## Current
-Sec 50 — next.
+Sec 51 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
