@@ -64,9 +64,10 @@ Total sections: 76
 - Sec 48 — NEET apex-speed trap: ring on (A) 0, arc + apex u cosθ arrow, 10√3 box, never-zero cue.
 - Sec 49 — JEE Main t=1s: trig chips, component tracking, √180 speed + 26.6°, y=11 m box, gentler-climb verdict.
 - Sec 50 — JEE Adv complementary: sin2θ equality, two arcs same range, 5+15=20 ✓ box, sin²+cos²=1 proof.
+- Sec 51 — Five projectile pitfalls checklist.
 
 ## Current
-Sec 51 — next.
+Sec 52 — next (last of subtopic 4).
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
