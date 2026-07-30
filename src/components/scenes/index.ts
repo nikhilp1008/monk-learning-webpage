@@ -36,6 +36,8 @@ import Ch01Sec27 from "./Ch01Sec27";
 import Ch01Sec28 from "./Ch01Sec28";
 import Ch01Sec29 from "./Ch01Sec29";
 import Ch01Sec30 from "./Ch01Sec30";
+import Ch01Sec31 from "./Ch01Sec31";
+import Ch01Sec32 from "./Ch01Sec32";
 
 const CH01 = "8d7ccfaa-af16-53e4-9f28-823c8ea923d1"; // Class 11 · Units & Measurements
 
@@ -70,6 +72,8 @@ const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH01}:28`]: Ch01Sec28,
   [`${CH01}:29`]: Ch01Sec29,
   [`${CH01}:30`]: Ch01Sec30,
+  [`${CH01}:31`]: Ch01Sec31,
+  [`${CH01}:32`]: Ch01Sec32,
 };
 
 export function getScene(
