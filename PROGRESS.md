@@ -25,6 +25,7 @@ All audit lines must be []. Register scenes ONLY in the delimited Ch04 block at 
 - [x] Sec 1 — Inertia: Mumbai local jerk demo (8 beats, verified both langs, audits clean)
 - [x] Sec 2 — Momentum p=mv, truck vs bike, F=dp/dt, impulse intro
 - [x] Sec 3 — Third Law: bat-ball pair, never cancels, F=ma limits
+- [x] Sec 4 — Derivation ladder: F=dp/dt → assume m const → F=ma
 
 ## Current
-Subtopic 1 (Newton's Laws and Impulse). Next: Sec 4.
+Subtopic 1 (Newton's Laws and Impulse). Next: Sec 5.
