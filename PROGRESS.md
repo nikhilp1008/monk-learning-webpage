@@ -41,6 +41,7 @@ Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷
 - [x] Sec 16 — 1-D elastic derivation: divide trick, approach=separation, swap
 - [x] Sec 17 — Rocket thrust: bookkeeping figure, thrust box, rocket equation
 - [x] Sec 18 — Formula set: 5 bands (master, recoil, collisions, e, cm/thrust)
+- [x] Sec 19 — WE1 coupling wagons: classification sentence, v=0.8, KE check
 
 ## Current
-Subtopic 2 (Momentum Conservation, secs 13-23). Next: Sec 19.
+Subtopic 2 (Momentum Conservation, secs 13-23). Next: Sec 20.
