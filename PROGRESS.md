@@ -29,9 +29,10 @@ Total sections: 76
 - Sec 13 — Five pitfalls checklist: numbered red circles, cross-out on |A+B|=A+B, FROM-axis rule, scalar/vector species, anticommutativity, unitless û.
 - Sec 14 — Pro-tips closer: RESOLVE hero box, two sanity-check boxes, DOT-along/CROSS-across split. ✅ SUBTOPIC 1 (1–14) COMPLETE.
 - Sec 15 — Dot vs cross intro: two-panel shadow/normal diagrams, scalar-vs-vector red note, mirror rows, physics-question verdict.
+- Sec 16 — Dot product deep-dive: thela push F/Fx/Fy split, AB cosθ box, projection line, number-not-vector, ⊥→0 bag example.
 
 ## Current
-Sec 16 — next.
+Sec 17 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
