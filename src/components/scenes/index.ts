@@ -375,6 +375,7 @@ import Ch06Sec14 from "./Ch06Sec14";
 import Ch06Sec15 from "./Ch06Sec15";
 import Ch06Sec16 from "./Ch06Sec16";
 import Ch06Sec17 from "./Ch06Sec17";
+import Ch06Sec18 from "./Ch06Sec18";
 
 const CH06 = "262da95c-2f3a-56da-905e-003fa8f0e4dc"; // Class 11 · System of Particles & Rotational Motion
 
@@ -396,4 +397,5 @@ Object.assign(REGISTRY, {
   [`${CH06}:15`]: Ch06Sec15,
   [`${CH06}:16`]: Ch06Sec16,
   [`${CH06}:17`]: Ch06Sec17,
+  [`${CH06}:18`]: Ch06Sec18,
 });
