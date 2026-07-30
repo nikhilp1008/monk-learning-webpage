@@ -76,6 +76,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 45 — WE4 dragging crate: 75N vs 60N, λ=37° (3-4-5 triple), trolley insight
 - [x] Sec 46 — Tips: 4 pitfalls, repose shortcut, tanθ-vs-μ habit. SUBTOPIC 4 DONE (46/92 — HALFWAY)
 - [x] Sec 47 — Circular motion intro: v tangent circle, a_c inward, centripetal = role not force
+- [x] Sec 48 — Four panels: friction/tension/gravity/normal, no double-counting
 
 ## Current
-Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 48.
+Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 49.
