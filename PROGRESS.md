@@ -22,9 +22,10 @@ Total sections: 76
 - Sec 6 — Toolkit 1: Â=A/|A| box, îĵk̂ chips, component form, Ax/Ay, reverse trip, from-axis warning + axes glyph.
 - Sec 7 — Toolkit 2: parallelogram R + tan α boxes, range band, Rx/Ry, 2-vs-3+ verdict.
 - Sec 8 — CBSE worked example: toy-cart figure (F at 60°, Fx/Fy), given chips, Fx=10/Fy≈17.3, answer box, √400 check.
+- Sec 9 — NEET speed trap: option chips + bait ring on (B) 5, number-line band [1,7], ✓✓✓/✗ tests, (D) 8 N answer.
 
 ## Current
-Sec 9 — next.
+Sec 10 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
