@@ -11,8 +11,8 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 
 | # | Subtopic | Sections | Status |
 |---|----------|----------|--------|
-| 1 | Foundations: The Scalar (Dot) Product | 1–7 | in progress |
-| 2 | Work and the Work-Energy Theorem | 8–17 | — |
+| 1 | Foundations: The Scalar (Dot) Product | 1–7 | DONE |
+| 2 | Work and the Work-Energy Theorem | 8–17 | next |
 | 3 | Mechanical Energy: Kinetic and Potential | 18–26 | — |
 | 4 | Conservative and Non-Conservative Forces | 27–34 | — |
 | 5 | Various Forms of Energy & Conservation of Energy | 35–41 | — |
@@ -29,6 +29,13 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 - **Sec 2** — "The shadow picture": sun + projection demo, A cos θ chip, shadow×ground,
   three θ case cards (0/90/180), sign-story verdict. Audits [] both langs; eye-checked.
   (hi beats 4→5 only 1s apart — beat-4 delays kept ≤0.8.)
+- **Sec 3** — properties + angle-finding drill flowchart + sign-check panel.
+- **Sec 4** — toolkit: six formula cards (2×3 grid) + inherited-dimensions verdict.
+  (en beats 3/4 last ~1s → `en ? tiny : normal` delays — reusable pattern.)
+- **Sec 5** — Ex1 substitution (10 units) + Ex2 NEET zero-dot shortcut with mini plot.
+- **Sec 6** — Ex3 find-λ inversion + Ex4 cube body-diagonal 54.7° & projection 5/3.
+- **Sec 7** — four pitfalls (crossed vector-answer, sign survival, dot-vs-cross panels,
+  zero-dot≠zero-vector) + reflex band. Subtopic 1 (1–7) COMPLETE.
 
 ## Notes / gotchas
 
