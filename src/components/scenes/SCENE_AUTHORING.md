@@ -233,40 +233,33 @@ Non-negotiable engine rules (all provided by the kit):
    the chapter). Unregistered sections fall back to standard board-event
    rendering, so scenes are purely additive.
 2. `npx tsc --noEmit` must pass.
-3. **Screenshot every beat, both languages** — not a sample. Using the debug
-   params `?sec=N&t=S`, shoot at `reveals[k] + 1s` for every beat k, plus
-   the final settled frame and one mid-demo frame per animated beat:
+3. **Run the verdict verifier** — it drives both languages at `reveals[k]+1s`
+   for every beat plus the settled final frame, and prints a text verdict
+   instead of a wall of screenshots:
    ```
-   chrome --headless --hide-scrollbars --window-size=1440,960 \
-     --virtual-time-budget=30000 --screenshot=out.png \
-     "http://localhost:3000/lessons/<chapterId>?sec=3&t=130"
+   PORT=<port> CHAPTER_ID=<uuid> node verify-scene.mjs <sec> \
+     '<reveals_en json>' '<reveals_hi json>' ./shots/sec<N>
    ```
-4. **Automated text-collision audit** at the final frame (and any crowded
-   beat), via playwright against the dev server — this catches what tired
-   eyes miss. Boxes may not intersect (2px tolerance):
-   ```js
-   const hits = await page.evaluate(() => {
-     const vis = [...document.querySelectorAll("svg text")].filter((el) => {
-       const g = el.closest("g.sc-fade");
-       return !g || parseFloat(getComputedStyle(g).opacity) > 0.5;
-     });
-     const boxes = vis.map((el) => ({ t: el.textContent, r: el.getBoundingClientRect() }));
-     const out = [];
-     for (let i = 0; i < boxes.length; i++)
-       for (let j = i + 1; j < boxes.length; j++) {
-         const a = boxes[i].r, b = boxes[j].r;
-         if (a.left < b.right - 2 && b.left < a.right - 2 &&
-             a.top < b.bottom - 2 && b.top < a.bottom - 2)
-           out.push(`${boxes[i].t}  ×  ${boxes[j].t}`);
-       }
-     return out;
-   });
-   ```
-   The audit must return `[]`. (Text-vs-stroke and arrow-tip accuracy are
-   verified by eye on the screenshots — zoom in on every ring, every arrow
-   tip, every label near an outline.)
-5. Fix every collision / straddle / stray arrow found, update the layout
-   plan comment, and re-shoot until clean.
+   It asserts three gating checks, per frame, in viewBox units:
+   - **overlap** — two visible text boxes intersect (text-vs-text only).
+   - **overflow** — any visible element (text OR stroke: arrowhead, ring,
+     chip, rule) leaves the safe area x∈[36,1044] y∈[30,596].
+   - **empty** — a reveal frame renders nothing (a dropped beat).
+   It also prints an advisory **stall** (a beat that added no new group vs the
+   previous — usually a legitimate superseded/`dim` beat; eyeball only if
+   unexpected). The section is not done until the final line reads
+   `VERDICT sec=<N>: PASS`. Exit code is 0 on pass, 1 on fail.
+4. **Only open a PNG when a frame is listed under `SHOTS:`** — the verifier
+   writes screenshots *only* for frames that failed a check, so a clean scene
+   costs zero images to review. Set `FORCE_SHOTS=1` to write every frame when
+   you want to spot-check a passing section by eye (recommended at least once
+   per subtopic, since assertions catch geometry, not meaning — a wrong arrow
+   target or awkward Hindi placement still needs an eye).
+   Text-vs-stroke clearance and arrow-tip accuracy remain eye-checks on the
+   frames you do open — zoom in on every ring, every arrow tip, every label
+   near an outline.
+5. Fix every overlap / overflow / straddle / stray arrow found, update the
+   layout plan comment, and re-run until `VERDICT … PASS`.
 
 ### Definition of done
 
@@ -278,7 +271,8 @@ Non-negotiable engine rules (all provided by the kit):
   overlaps, no label touches an outline, every arrow tip lands 5px off its
   exact target, everything inside 1080×620's safe area.
 - The layout-plan comment in the file matches what's rendered.
-- Both languages verified beat-by-beat; the collision audit returns `[]`.
+- Both languages verified beat-by-beat; `verify-scene.mjs` prints
+  `VERDICT sec=<N>: PASS`.
 
 ---
 
