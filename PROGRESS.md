@@ -54,9 +54,10 @@ Total sections: 76
 - Sec 38 — JEE Adv radius of curvature: R=v²/a⊥ box, 10√2 speed, g-split diagram at 45°, R=20√2≈28.3 m.
 - Sec 39 — Five 2D-kinematics pitfalls checklist (numbered circles rows).
 - Sec 40 — Pro-tip closer: two-1D-problems hero, procedure lines, two equation boxes, mnemonic hero. ✅ SUBTOPIC 3 (29–40) COMPLETE.
+- Sec 41 — Projectile intro: arch + g arrows, channel lines, two-bullet drop demo, land-together chip.
 
 ## Current
-Sec 41 — next (start of subtopic 4: Projectile Motion).
+Sec 42 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
