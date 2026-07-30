@@ -60,9 +60,10 @@ Total sections: 76
 - Sec 44 — Range & trajectory: R = u²sin2θ/g and Rmax boxes, eliminate-t, y = xtanθ−gx²/2u²cos²θ box, parabola form.
 - Sec 45 — Toolkit 1: ux/uy, velocity & position columns, trajectory box, apex speed fact.
 - Sec 46 — Toolkit 2: T/H/R boxes, Rmax=4Hmax, handy relations, horizontal-projectile column, sin²θ-vs-sin2θ warning.
+- Sec 47 — Board worked example: trig chips, T=2/H=5/R≈34.6 columns, answer box, squaring warning.
 
 ## Current
-Sec 47 — next.
+Sec 48 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
