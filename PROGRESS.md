@@ -44,6 +44,7 @@ Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷
 - [x] Sec 19 — WE1 coupling wagons: classification sentence, v=0.8, KE check
 - [x] Sec 20 — WE2 carrom striker: exchange shortcut, 3 elastic special cases
 - [x] Sec 21 — WE3 bullet-block-spring: two stages, v=1, x=5cm, slogan chip
+- [x] Sec 22 — WE4 2D shell: per-axis accounts, 5√13, CM sails on
 
 ## Current
-Subtopic 2 (Momentum Conservation, secs 13-23). Next: Sec 22.
+Subtopic 2 (Momentum Conservation, secs 13-23). Next: Sec 23.
