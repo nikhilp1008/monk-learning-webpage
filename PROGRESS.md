@@ -42,6 +42,8 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 Subtopics 1–3 COMPLETE (21/70). Next: Subtopic 4 — Torque and Angular Momentum, Sec 22.
 
 ## Workflow notes
+- 2026-07-30 PM: node_modules suffered NUL-file corruption (iCloud eviction on Desktop). Layout is now `node_modules -> node_modules.nosync` (symlink). Type-check with `npx tsc --noEmit -p tsconfig.check.json` (untracked local config that also excludes node_modules.nosync); plain `npx tsc --noEmit` scans node_modules.nosync and fails.
+- Dev server occasionally wedges after many verify runs — restart: kill port 3006, `nohup npm run dev -- -p 3006 > <scratch>/dev.log 2>&1 & disown`, wait for READY (cold start can take 2–5 min under load).
 - Reveal data cached: scratchpad/ch6_reveals.json (re-fetch via Supabase REST, cols `board_reveal_at_english/_hinglish`).
 - Section dump helper: scratchpad/dump-sec.mjs (`SP=<scratchpad> node dump-sec.mjs <N>` → per-beat EN/HI narration + board events).
 - Registration: single Ch06 block appended at END of src/components/scenes/index.ts (imports hoisted; `Object.assign(REGISTRY, {...})`).
