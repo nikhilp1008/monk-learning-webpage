@@ -25,9 +25,10 @@ Total sections: 76
 - Sec 9 — NEET speed trap: option chips + bait ring on (B) 5, number-line band [1,7], ✓✓✓/✗ tests, (D) 8 N answer.
 - Sec 10 — JEE Main two-ways: 6m+8m@60° walk diagram + Method-1 component stack + Method-2 parallelogram check + verdict.
 - Sec 11 — JEE Adv pt1: matching-components dot product → −3 box, sign⇒obtuse note, √14·√6 magnitudes, θ≈109° hero.
+- Sec 12 — JEE Adv pt2: determinant array, cofactors, 5î−5ĵ−5k̂ box, ĵ-minus warning, normal-out-of-plane diagram, n̂ + area + ABsinθ check.
 
 ## Current
-Sec 12 — next.
+Sec 13 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
