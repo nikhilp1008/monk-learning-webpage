@@ -9,6 +9,7 @@ import type { SceneProps } from "./kit";
 import Ch01Sec1 from "./Ch01Sec1";
 import Ch01Sec2 from "./Ch01Sec2";
 import Ch01Sec3 from "./Ch01Sec3";
+import Ch01Sec4 from "./Ch01Sec4";
 
 const CH01 = "8d7ccfaa-af16-53e4-9f28-823c8ea923d1"; // Class 11 · Units & Measurements
 
@@ -16,6 +17,7 @@ const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH01}:1`]: Ch01Sec1,
   [`${CH01}:2`]: Ch01Sec2,
   [`${CH01}:3`]: Ch01Sec3,
+  [`${CH01}:4`]: Ch01Sec4,
 };
 
 export function getScene(
