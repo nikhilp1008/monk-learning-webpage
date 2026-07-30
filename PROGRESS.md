@@ -17,8 +17,8 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 | 4 | Conservative and Non-Conservative Forces | 27–34 | DONE |
 | 5 | Various Forms of Energy & Conservation of Energy | 35–41 | DONE |
 | 6 | Power | 42–49 | DONE |
-| 7 | Collisions | 50–57 | next |
-| 8 | Application: Motion in a Vertical Circle | 58–64 | — |
+| 7 | Collisions | 50–57 | DONE |
+| 8 | Application: Motion in a Vertical Circle | 58–64 | next |
 | 9 | Chapter Recap | 65–66 | — |
 
 ## Done
@@ -83,6 +83,15 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 - **Sec 48** — incline 30 kW + constant-power kinematics numeric (6 m/s, 12 m).
 - **Sec 49** — five pitfalls + reflex panel + pump/hose/gun trick.
   Subtopic 6 (42–49) COMPLETE — 49/66.
+- **Sec 50** — momentum survives: Newton-III balls, hero equation, internal/external.
+- **Sec 51** — elastic vs inelastic: steel/dough, anchors, equation count.
+- **Sec 52** — restitution meter 0→1 + head-on vs oblique geometry.
+- **Sec 53** — elastic shortcut u₁−u₂ = v₂−v₁ + three special cases.
+- **Sec 54** — collisions formula sheet + strategy sentence.
+- **Sec 55** — sticking clay (V = 2, 24 J) + equal-mass swap in 3 s.
+- **Sec 56** — bounce series D = h(1+e²)/(1−e²) + 90° dot-product proof.
+- **Sec 57** — five pitfalls + two-step reflex.
+  Subtopic 7 (50–57) COMPLETE — 57/66.
   NOTE: lesson JSON + reveals cached at scratchpad (ch05-lesson.json / ch05-reveals.json)
   because the repo copy keeps going iCloud-dataless. Dev server occasionally dies /
   crawls when iCloud thrashes — restart with npm run dev -- -p 3005 and curl-warm.
