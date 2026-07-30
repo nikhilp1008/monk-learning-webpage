@@ -361,6 +361,7 @@ export type { SceneProps };
 import Ch06Sec1 from "./Ch06Sec1";
 import Ch06Sec2 from "./Ch06Sec2";
 import Ch06Sec3 from "./Ch06Sec3";
+import Ch06Sec4 from "./Ch06Sec4";
 
 const CH06 = "262da95c-2f3a-56da-905e-003fa8f0e4dc"; // Class 11 · System of Particles & Rotational Motion
 
@@ -368,4 +369,5 @@ Object.assign(REGISTRY, {
   [`${CH06}:1`]: Ch06Sec1,
   [`${CH06}:2`]: Ch06Sec2,
   [`${CH06}:3`]: Ch06Sec3,
+  [`${CH06}:4`]: Ch06Sec4,
 });
