@@ -27,9 +27,10 @@ Total sections: 76
 - Sec 11 — JEE Adv pt1: matching-components dot product → −3 box, sign⇒obtuse note, √14·√6 magnitudes, θ≈109° hero.
 - Sec 12 — JEE Adv pt2: determinant array, cofactors, 5î−5ĵ−5k̂ box, ĵ-minus warning, normal-out-of-plane diagram, n̂ + area + ABsinθ check.
 - Sec 13 — Five pitfalls checklist: numbered red circles, cross-out on |A+B|=A+B, FROM-axis rule, scalar/vector species, anticommutativity, unitless û.
+- Sec 14 — Pro-tips closer: RESOLVE hero box, two sanity-check boxes, DOT-along/CROSS-across split. ✅ SUBTOPIC 1 (1–14) COMPLETE.
 
 ## Current
-Sec 14 — next (last of subtopic 1).
+Sec 15 — next (start of subtopic 2: Vector Products).
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
