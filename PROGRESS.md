@@ -26,9 +26,10 @@ Total sections: 76
 - Sec 10 — JEE Main two-ways: 6m+8m@60° walk diagram + Method-1 component stack + Method-2 parallelogram check + verdict.
 - Sec 11 — JEE Adv pt1: matching-components dot product → −3 box, sign⇒obtuse note, √14·√6 magnitudes, θ≈109° hero.
 - Sec 12 — JEE Adv pt2: determinant array, cofactors, 5î−5ĵ−5k̂ box, ĵ-minus warning, normal-out-of-plane diagram, n̂ + area + ABsinθ check.
+- Sec 13 — Five pitfalls checklist: numbered red circles, cross-out on |A+B|=A+B, FROM-axis rule, scalar/vector species, anticommutativity, unitless û.
 
 ## Current
-Sec 13 — next.
+Sec 14 — next (last of subtopic 1).
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
