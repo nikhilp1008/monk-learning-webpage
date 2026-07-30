@@ -11,7 +11,11 @@ Verify per section:
 All audit lines must be []. Register scenes ONLY in the delimited Ch04 block at END of index.ts.
 Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷' or spaces.
 Gotcha: if a final shot shows the KaTeX fallback board instead of the scene, the dev
-server served a stale bundle — restart it (kill port 3004, npm run dev -- -p 3004) and re-verify.
+server served a stale bundle — restart it and re-verify.
+Dev-server recovery (it wedges after many compiles): pkill -f monk-scenes-ch4; rm -rf .next;
+then `nohup ./node_modules/.bin/next dev -p 3004 > dev.log 2>&1 & disown` (double-fork if it
+dies), wait for 'Ready in' in the log, then curl the lessons page once to warm the cold
+compile (first hit can take >30s, longer than playwright's goto timeout) before verifying.
 
 ## Subtopics
 1. Newton's Laws and Impulse — secs 1–12
@@ -66,6 +70,7 @@ server served a stale bundle — restart it (kill port 3004, npm run dev -- -p 3
 - [x] Sec 39 — Repose derivation: verge, mg cancels, mass-independent
 - [x] Sec 40 — Best drag angle: competing effects, F=μmg/(cosθ+μsinθ), F_min=mg sinλ
 - [x] Sec 41 — Friction formula set: 4 bands + compute-μsN-first rule
+- [x] Sec 42 — WE1 three pushes: threshold 8 N, f = 5 / 8 / 6, the drop
 
 ## Current
-Subtopic 4 (Friction, secs 36-46). Next: Sec 42.
+Subtopic 4 (Friction, secs 36-46). Next: Sec 43.
