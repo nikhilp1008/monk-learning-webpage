@@ -79,9 +79,10 @@ Total sections: 76
 - Sec 63 — Pro-tip closer: freeze-one-body hero, two-checks boxes, core-rule reprise, mnemonic hero. ✅ SUBTOPIC 5 (53–63) COMPLETE.
 - Sec 64 — Circular motion paradox: four-cardinal tangent-velocity circle, centripetal arrow, cut-string mini-diagram.
 - Sec 65 — Angular quantities: r/θ/s circle diagram, s=rθ box, ω=dθ/dt & α=dω/dt, v=ωr/a=αr green box, fan-blade same-ω-bigger-r demo.
+- Sec 66 — a=v²/r derivation: similar-triangle diagram (position Δ + velocity Δ, same δθ), a=v²/r box, a=ω²r box.
 
 ## Current
-Sec 66 — next.
+Sec 67 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
