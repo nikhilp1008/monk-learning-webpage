@@ -77,9 +77,10 @@ Total sections: 76
 - Sec 61 — JEE Adv closest approach: sit-on-B trick, v(AB)=(-10,10) computed, drift line + ⊥ diagram, 14.1 km after 1h box.
 - Sec 62 — Five relative-velocity pitfalls checklist (numbered circles).
 - Sec 63 — Pro-tip closer: freeze-one-body hero, two-checks boxes, core-rule reprise, mnemonic hero. ✅ SUBTOPIC 5 (53–63) COMPLETE.
+- Sec 64 — Circular motion paradox: four-cardinal tangent-velocity circle, centripetal arrow, cut-string mini-diagram.
 
 ## Current
-Sec 64 — next (start of subtopic 6: Circular Motion).
+Sec 65 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
