@@ -124,6 +124,7 @@ import Ch02Sec23 from "./Ch02Sec23";
 import Ch02Sec24 from "./Ch02Sec24";
 import Ch02Sec25 from "./Ch02Sec25";
 import Ch02Sec26 from "./Ch02Sec26";
+import Ch02Sec27 from "./Ch02Sec27";
 
 const CH01 = "8d7ccfaa-af16-53e4-9f28-823c8ea923d1"; // Class 11 · Units & Measurements
 const CH02 = "563ae2b1-3427-537a-afde-f7fbc193731f"; // Class 11 · Motion in a Straight Line
@@ -247,6 +248,7 @@ const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH02}:24`]: Ch02Sec24,
   [`${CH02}:25`]: Ch02Sec25,
   [`${CH02}:26`]: Ch02Sec26,
+  [`${CH02}:27`]: Ch02Sec27,
 };
 
 export function getScene(
