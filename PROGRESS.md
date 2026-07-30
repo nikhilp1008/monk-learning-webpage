@@ -76,9 +76,10 @@ Total sections: 76
 - Sec 60 — JEE Main shortest-path: upstream-angle diagram, 4sinθ=2 → θ=30°, t=200/2√3≈57.7s box, vs 50s trade-off.
 - Sec 61 — JEE Adv closest approach: sit-on-B trick, v(AB)=(-10,10) computed, drift line + ⊥ diagram, 14.1 km after 1h box.
 - Sec 62 — Five relative-velocity pitfalls checklist (numbered circles).
+- Sec 63 — Pro-tip closer: freeze-one-body hero, two-checks boxes, core-rule reprise, mnemonic hero. ✅ SUBTOPIC 5 (53–63) COMPLETE.
 
 ## Current
-Sec 63 — next (last of subtopic 5).
+Sec 64 — next (start of subtopic 6: Circular Motion).
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
