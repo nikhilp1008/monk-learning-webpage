@@ -81,9 +81,10 @@ Total sections: 76
 - Sec 65 — Angular quantities: r/θ/s circle diagram, s=rθ box, ω=dθ/dt & α=dω/dt, v=ωr/a=αr green box, fan-blade same-ω-bigger-r demo.
 - Sec 66 — a=v²/r derivation: similar-triangle diagram (position Δ + velocity Δ, same δθ), a=v²/r box, a=ω²r box.
 - Sec 67 — Rotational toolkit: θ/ω/α defs, T/f formulas, v=ωr/a=αr box, constant-α mirrored equations, symbol-swap mapping row.
+- Sec 68 — Forces toolkit: Fc box, not-a-new-force note, non-uniform ar/at split, net-a box, banked-road N/mg/θ diagram, tanθ=v²/rg box.
 
 ## Current
-Sec 68 — next.
+Sec 69 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
