@@ -19,9 +19,10 @@ Total sections: 76
 - Sec 3 — Resolution: F→Fx+Fy axes diagram + sledge rope demo (drag vs lift) + choose-axes verdict.
 - Sec 4 — Parallelogram-law derivation pt1: OPQS construction + formula stack → R = √(A²+B²+2ABcosθ) hero box.
 - Sec 5 — Derivation pt2: tan α triangle + three special-case rows + |A−B| ≤ R ≤ A+B band hero.
+- Sec 6 — Toolkit 1: Â=A/|A| box, îĵk̂ chips, component form, Ax/Ay, reverse trip, from-axis warning + axes glyph.
 
 ## Current
-Sec 6 — next.
+Sec 7 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
