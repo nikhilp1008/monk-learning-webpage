@@ -65,6 +65,7 @@ server served a stale bundle — restart it (kill port 3004, npm run dev -- -p 3
 - [x] Sec 38 — Two angles: tan λ=μ, tan θr=μs, θr=λ, sand cone
 - [x] Sec 39 — Repose derivation: verge, mg cancels, mass-independent
 - [x] Sec 40 — Best drag angle: competing effects, F=μmg/(cosθ+μsinθ), F_min=mg sinλ
+- [x] Sec 41 — Friction formula set: 4 bands + compute-μsN-first rule
 
 ## Current
-Subtopic 4 (Friction, secs 36-46). Next: Sec 41.
+Subtopic 4 (Friction, secs 36-46). Next: Sec 42.
