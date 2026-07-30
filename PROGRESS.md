@@ -53,9 +53,10 @@ Total sections: 76
 - Sec 37 — JEE Main vy=0: condition line, component tracking, t=2/speed=2 box, velocity-sweep glyph, top-of-arc analogy.
 - Sec 38 — JEE Adv radius of curvature: R=v²/a⊥ box, 10√2 speed, g-split diagram at 45°, R=20√2≈28.3 m.
 - Sec 39 — Five 2D-kinematics pitfalls checklist (numbered circles rows).
+- Sec 40 — Pro-tip closer: two-1D-problems hero, procedure lines, two equation boxes, mnemonic hero. ✅ SUBTOPIC 3 (29–40) COMPLETE.
 
 ## Current
-Sec 40 — next (last of subtopic 3).
+Sec 41 — next (start of subtopic 4: Projectile Motion).
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
