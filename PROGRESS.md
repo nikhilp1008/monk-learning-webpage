@@ -84,6 +84,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 53 — Formula set: 5 bands, mass-cancels-everywhere alarm
 - [x] Sec 54 — WE1 banking highway: tanθ=0.2, θ≈11.3°, mass-free full-marks tips
 - [x] Sec 55 — WE2 flat curve: mass-drag trap + sqrt trap, v_max=10 m/s
+- [x] Sec 56 — WE3 banking+friction: bracket=4/3, v_max≈34.6, vs design speed 21.2
 
 ## Current
-Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 56.
+Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 57.
