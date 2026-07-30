@@ -75,6 +75,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 44 — WE3 table+pulley+hanging block: does-it-move check, a=2.8, T=14.4
 - [x] Sec 45 — WE4 dragging crate: 75N vs 60N, λ=37° (3-4-5 triple), trolley insight
 - [x] Sec 46 — Tips: 4 pitfalls, repose shortcut, tanθ-vs-μ habit. SUBTOPIC 4 DONE (46/92 — HALFWAY)
+- [x] Sec 47 — Circular motion intro: v tangent circle, a_c inward, centripetal = role not force
 
 ## Current
-Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 47.
+Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 48.
