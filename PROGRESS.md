@@ -50,8 +50,18 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 - Sec 30 — bullet in pivoted rod [JEE Adv] (zero-arm trick, ω = 3mv/L(M+3m))
 - Sec 31 — τ & L pitfalls (4 traps + τ_A ≠ τ_B mini + pivot pro-tip)
 
+- Sec 32 — two equilibrium conditions (toppling cupboard, ΣF=0 & Στ=0)
+- Sec 33 — balance, levers, CG (seesaw moments, support-under-CG demo)
+- Sec 34 — equilibrium toolkit (valley/hill/flat, moments card)
+- Sec 35 — moments derivation + 4-step solving recipe
+- Sec 36 — metre stick [CBSE] (0.40 m)
+- Sec 37 — seesaw [NEET] (g-cancels trap, 1.0 m)
+- Sec 38 — beam on two supports [JEE Main] (N_B = 133.3 N, N_A = 66.7 N)
+- Sec 39 — ladder vs smooth wall [JEE Adv] (foot torques, μ = ½cotθ)
+- Sec 40 — equilibrium pitfalls (4 traps + pivot-choice pro-tip)
+
 ## Current
-Subtopics 1–4 COMPLETE (31/70). Next: Subtopic 5 — Equilibrium of a Rigid Body, Sec 32.
+Subtopics 1–5 COMPLETE (40/70). Next: Subtopic 6 — Moment of Inertia, Sec 41.
 
 ## Workflow notes
 - 2026-07-30 PM: node_modules suffered NUL-file corruption (iCloud eviction on Desktop). Layout is now `node_modules -> node_modules.nosync` (symlink). Type-check with `npx tsc --noEmit -p tsconfig.check.json` (untracked local config that also excludes node_modules.nosync); plain `npx tsc --noEmit` scans node_modules.nosync and fails.
