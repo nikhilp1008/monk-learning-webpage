@@ -57,9 +57,10 @@ Total sections: 76
 - Sec 41 — Projectile intro: arch + g arrows, channel lines, two-bullet drop demo, land-together chip.
 - Sec 42 — Resolve the launch: u→ucosθ/usinθ diagram, channel tools, PARABOLA hero, T/H/R, assumptions + fine-print bars.
 - Sec 43 — T & H derivation: labelled parabola (apex/H/R), y=0 condition, T and H hero boxes, no-cosθ note.
+- Sec 44 — Range & trajectory: R = u²sin2θ/g and Rmax boxes, eliminate-t, y = xtanθ−gx²/2u²cos²θ box, parabola form.
 
 ## Current
-Sec 44 — next.
+Sec 45 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
