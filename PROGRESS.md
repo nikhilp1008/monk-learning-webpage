@@ -71,6 +71,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 40 — Best drag angle: competing effects, F=μmg/(cosθ+μsinθ), F_min=mg sinλ
 - [x] Sec 41 — Friction formula set: 4 bands + compute-μsN-first rule
 - [x] Sec 42 — WE1 three pushes: threshold 8 N, f = 5 / 8 / 6, the drop
+- [x] Sec 43 — WE2 coin on book: 'just slides' = θr, μ = tan30, distractors
 
 ## Current
-Subtopic 4 (Friction, secs 36-46). Next: Sec 43.
+Subtopic 4 (Friction, secs 36-46). Next: Sec 44.
