@@ -44,9 +44,10 @@ Total sections: 76
 - Sec 28 — Pro-tip closer: family chips, two instant-check boxes, pocket-seesaw line, 'Dot agrees · Cross turns' hero. ✅ SUBTOPIC 2 (15–28) COMPLETE.
 - Sec 29 — Independence big idea: carrom glide+drift diagram, x/y-story lines, clock chip+glyph, independence verdict.
 - Sec 30 — Vector upgrade: two formula boxes, x-set/y-set split, projectile+circular previews, averages subtlety.
+- Sec 31 — Integration derivation: a=dv/dt → v=v₀+at box, v=dr/dt → r-equation box, constant-a warning.
 
 ## Current
-Sec 31 — next.
+Sec 32 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
