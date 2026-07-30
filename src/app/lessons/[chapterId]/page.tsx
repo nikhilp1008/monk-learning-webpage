@@ -19,6 +19,12 @@ type Language = "english" | "hinglish";
 
 const TEACHER = "Drona";
 
+const SPEEDS = [0.75, 1, 1.25, 1.5] as const;
+
+function formatSpeed(rate: number): string {
+  return `${rate}×`;
+}
+
 interface SubtopicGroup {
   name: string;
   sections: { section: SectionRow; originalIndex: number }[];
@@ -69,11 +75,17 @@ export default function LessonPlayerPage() {
   const [duration, setDuration] = useState<number>(0);
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
   const [isScrubbing, setIsScrubbing] = useState<boolean>(false);
+  const [playbackRate, setPlaybackRate] = useState<number>(1);
+  const [speedOpen, setSpeedOpen] = useState<boolean>(false);
+  const [openGroup, setOpenGroup] = useState<number>(0);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const boardShellRef = useRef<HTMLDivElement | null>(null);
   const boardContainerRef = useRef<HTMLDivElement | null>(null);
   const scrubRef = useRef<HTMLDivElement | null>(null);
+  const speedMenuRef = useRef<HTMLSpanElement | null>(null);
   const debugSeekRef = useRef<number | null>(null);
+  const playbackRateRef = useRef<number>(1);
 
   const currentSection = sections[activeIndex] ?? null;
 
@@ -90,13 +102,22 @@ export default function LessonPlayerPage() {
     if (t && !isNaN(parseFloat(t))) debugSeekRef.current = parseFloat(t);
   }, []);
 
-  // Esc leaves the full-screen board.
+  // Real browser fullscreen: Esc / system UI exits land here, so state
+  // always mirrors what's actually on screen.
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsFullScreen(false);
+    const onFsChange = () => {
+      const fsEl =
+        document.fullscreenElement ??
+        (document as Document & { webkitFullscreenElement?: Element })
+          .webkitFullscreenElement;
+      setIsFullScreen(Boolean(fsEl));
     };
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    document.addEventListener("fullscreenchange", onFsChange);
+    document.addEventListener("webkitfullscreenchange", onFsChange);
+    return () => {
+      document.removeEventListener("fullscreenchange", onFsChange);
+      document.removeEventListener("webkitfullscreenchange", onFsChange);
+    };
   }, []);
 
   // Load user profile preference for teaching_language
@@ -263,6 +284,8 @@ export default function LessonPlayerPage() {
     if (audioRef.current) {
       setDuration(audioRef.current.duration || 0);
       setIsBuffering(false);
+      // A fresh src resets playbackRate in some browsers — re-apply the choice.
+      audioRef.current.playbackRate = playbackRateRef.current;
       if (debugSeekRef.current != null) {
         const t = debugSeekRef.current;
         debugSeekRef.current = null;
@@ -335,24 +358,114 @@ export default function LessonPlayerPage() {
     };
   }, []);
 
-  const togglePlayPause = () => {
+  const togglePlayPause = useCallback(() => {
     const audioEl = audioRef.current;
     if (!audioEl || !audioUrl) return;
 
-    if (isPlaying) {
-      audioEl.pause();
-    } else {
+    if (audioEl.paused) {
       audioEl.play().catch((err) => {
         console.error("Audio play error:", err);
       });
+    } else {
+      audioEl.pause();
     }
-  };
+  }, [audioUrl]);
+
+  // One control drives both flavours of fullscreen: the native API where the
+  // browser allows it (board fills the physical screen — no tabs, no chrome),
+  // with the fixed-overlay CSS as the fallback.
+  const toggleFullScreen = useCallback(() => {
+    const el = boardShellRef.current as
+      | (HTMLDivElement & { webkitRequestFullscreen?: () => Promise<void> })
+      | null;
+    const doc = document as Document & {
+      webkitFullscreenElement?: Element;
+      webkitExitFullscreen?: () => Promise<void>;
+    };
+
+    if (!isFullScreen) {
+      setIsFullScreen(true);
+      const request = el?.requestFullscreen ?? el?.webkitRequestFullscreen;
+      if (el && request) {
+        try {
+          const p = request.call(el);
+          if (p && typeof p.catch === "function") p.catch(() => {});
+        } catch {
+          /* CSS overlay still applies */
+        }
+      }
+    } else {
+      setIsFullScreen(false);
+      if (doc.fullscreenElement ?? doc.webkitFullscreenElement) {
+        const exit = doc.exitFullscreen ?? doc.webkitExitFullscreen;
+        try {
+          const p = exit?.call(document);
+          if (p && typeof p.catch === "function") p.catch(() => {});
+        } catch {
+          /* already out */
+        }
+      }
+    }
+  }, [isFullScreen]);
+
+  // Esc leaves the CSS-fallback fullscreen; Space toggles play while the
+  // board owns the whole screen.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isFullScreen) {
+        toggleFullScreen();
+      }
+      if (e.code === "Space" && isFullScreen) {
+        e.preventDefault();
+        togglePlayPause();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [isFullScreen, toggleFullScreen, togglePlayPause]);
+
+  // Apply the chosen speed live and remember it across section changes.
+  useEffect(() => {
+    playbackRateRef.current = playbackRate;
+    if (audioRef.current) {
+      audioRef.current.playbackRate = playbackRate;
+    }
+  }, [playbackRate]);
+
+  // Speed menu dismisses on any tap outside it.
+  useEffect(() => {
+    if (!speedOpen) return;
+    const onDown = (e: PointerEvent) => {
+      if (
+        speedMenuRef.current &&
+        !speedMenuRef.current.contains(e.target as Node)
+      ) {
+        setSpeedOpen(false);
+      }
+    };
+    document.addEventListener("pointerdown", onDown);
+    return () => document.removeEventListener("pointerdown", onDown);
+  }, [speedOpen]);
 
   const handleSelectSection = (idx: number) => {
     if (idx === activeIndex) return;
     setActiveIndex(idx);
     setCurrentTime(0);
   };
+
+  // The sidebar follows the lesson: whichever subtopic holds the playing
+  // part unfolds on its own.
+  const activeGroupIdx = useMemo(
+    () =>
+      subtopicGroups.findIndex((g) =>
+        g.sections.some((s) => s.originalIndex === activeIndex)
+      ),
+    [subtopicGroups, activeIndex]
+  );
+
+  useEffect(() => {
+    if (activeGroupIdx >= 0) setOpenGroup(activeGroupIdx);
+  }, [activeGroupIdx]);
 
   // Reels-style scrub: drag anywhere along the board's baseline to seek.
   const seekFromClientX = useCallback(
@@ -487,9 +600,10 @@ export default function LessonPlayerPage() {
             <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-[minmax(0,3.4fr)_minmax(0,1fr)] gap-5 items-stretch">
               {/* The Board */}
               <div
+                ref={boardShellRef}
                 className={`flex flex-col min-h-0 bg-ruled-board border-[1.5px] border-ink ${
                   isFullScreen
-                    ? "fixed inset-0 z-[80] rounded-none p-[26px_40px_28px_60px]"
+                    ? "fixed inset-0 z-[80] w-full h-full rounded-none p-[26px_40px_28px_60px]"
                     : "relative rounded-2xl p-[20px_26px_22px_52px] shadow-ref-board"
                 }`}
               >
@@ -505,49 +619,129 @@ export default function LessonPlayerPage() {
                     The board · {currentSection?.title || `Part ${activeIndex + 1}`}
                   </span>
 
-                  <button
-                    onClick={() => setIsFullScreen(!isFullScreen)}
-                    title={
-                      isFullScreen
-                        ? "Back to the normal view (Esc works too)"
-                        : "Watch the board full screen"
-                    }
-                    className="ml-auto flex-none inline-flex items-center gap-1.5 font-semibold text-[0.76rem] px-3 py-1.5 rounded-full border border-[rgba(28,26,22,0.12)] bg-white text-ink-light hover:border-ink hover:text-ink transition-colors cursor-pointer"
-                  >
-                    {isFullScreen ? (
-                      <>
-                        <svg
-                          viewBox="0 0 24 24"
-                          width={12}
-                          height={12}
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7" />
-                        </svg>
-                        Exit full screen
-                      </>
-                    ) : (
-                      <>
-                        <svg
-                          viewBox="0 0 24 24"
-                          width={12}
-                          height={12}
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-                        </svg>
-                        Full screen
-                      </>
+                  <div className="ml-auto flex-none flex items-center gap-2">
+                    {/* In fullscreen the top bar is gone, so the board
+                        carries its own play/pause. */}
+                    {isFullScreen && (
+                      <button
+                        onClick={togglePlayPause}
+                        disabled={!audioUrl}
+                        title={isPlaying ? "Pause (Space)" : "Play (Space)"}
+                        className="flex-none inline-flex items-center gap-1.5 font-semibold text-[0.76rem] pl-2.5 pr-3.5 py-1.5 rounded-full bg-ink text-cream-light shadow-[0_6px_14px_-8px_rgba(28,26,22,0.7)] hover:-translate-y-px transition-transform cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {isBuffering && isPlaying ? (
+                          <span className="w-3 h-3 border-2 border-cream-light border-t-transparent rounded-full animate-ml-spin" />
+                        ) : isPlaying ? (
+                          <svg
+                            viewBox="0 0 24 24"
+                            width={12}
+                            height={12}
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2.4"
+                            strokeLinecap="round"
+                          >
+                            <path d="M9 5v14M15 5v14" />
+                          </svg>
+                        ) : (
+                          <svg
+                            viewBox="0 0 24 24"
+                            width={12}
+                            height={12}
+                            fill="currentColor"
+                          >
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        )}
+                        {isPlaying ? "Pause" : "Play"}
+                      </button>
                     )}
-                  </button>
+
+                    {/* Playback speed — a quiet chip; taps open the choices */}
+                    <span ref={speedMenuRef} className="relative flex-none">
+                      <button
+                        onClick={() => setSpeedOpen((v) => !v)}
+                        title="Playback speed"
+                        className={`inline-flex items-center gap-1 font-bold text-[0.76rem] tracking-[0.01em] px-3 py-1.5 rounded-full border bg-white transition-colors cursor-pointer tabular-nums ${
+                          speedOpen || playbackRate !== 1
+                            ? "border-ink text-ink"
+                            : "border-[rgba(28,26,22,0.12)] text-ink-light hover:border-ink hover:text-ink"
+                        }`}
+                      >
+                        {formatSpeed(playbackRate)}
+                      </button>
+                      {speedOpen && (
+                        <div className="absolute right-0 top-[calc(100%+7px)] z-[90] min-w-[104px] bg-white border border-border-subtle rounded-[14px] shadow-ref-board p-1 animate-ml-rise">
+                          {SPEEDS.map((s) => {
+                            const on = playbackRate === s;
+                            return (
+                              <button
+                                key={s}
+                                onClick={() => {
+                                  setPlaybackRate(s);
+                                  setSpeedOpen(false);
+                                }}
+                                className={`w-full text-left flex items-center justify-between gap-3 px-3 py-[7px] rounded-[10px] text-[0.8rem] tabular-nums transition-colors cursor-pointer ${
+                                  on
+                                    ? "font-bold text-ink bg-cream-card"
+                                    : "font-semibold text-ink-light hover:bg-cream-card hover:text-ink"
+                                }`}
+                              >
+                                {formatSpeed(s)}
+                                {on && (
+                                  <span className="w-[7px] h-[7px] rounded-full bg-orange flex-none" />
+                                )}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </span>
+
+                    <button
+                      onClick={toggleFullScreen}
+                      title={
+                        isFullScreen
+                          ? "Back to the normal view (Esc works too)"
+                          : "Watch the board full screen"
+                      }
+                      className="flex-none inline-flex items-center gap-1.5 font-semibold text-[0.76rem] px-3 py-1.5 rounded-full border border-[rgba(28,26,22,0.12)] bg-white text-ink-light hover:border-ink hover:text-ink transition-colors cursor-pointer"
+                    >
+                      {isFullScreen ? (
+                        <>
+                          <svg
+                            viewBox="0 0 24 24"
+                            width={12}
+                            height={12}
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7" />
+                          </svg>
+                          Exit full screen
+                        </>
+                      ) : (
+                        <>
+                          <svg
+                            viewBox="0 0 24 24"
+                            width={12}
+                            height={12}
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                          </svg>
+                          Full screen
+                        </>
+                      )}
+                    </button>
+                  </div>
 
                   {/* Monk mark — spins while the lesson plays */}
                   <span className="flex-none inline-flex">
@@ -660,71 +854,145 @@ export default function LessonPlayerPage() {
                 </div>
               </div>
 
-              {/* Sidebar — In this chapter */}
-              <div className="min-h-0 max-h-full self-start overflow-y-auto bg-white border border-border-subtle rounded-[18px] p-[18px_14px] shadow-ref-stat">
-                <span className="block font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted mx-2 mb-2.5">
+              {/* Sidebar — In this chapter. No card, no chrome: a quiet
+                  notebook index that lives on the ruled page. One subtopic
+                  open at a time; the one being taught unfolds on its own. */}
+              <div className="min-h-0 max-h-full self-start overflow-y-auto px-1">
+                <span className="block font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted mb-1.5 px-0.5">
                   In this chapter
                 </span>
 
-                {subtopicGroups.map((group, gIdx) => (
-                  <div key={gIdx} className={gIdx > 0 ? "mt-4" : ""}>
-                    {/* Subtopic module header */}
-                    <div className="flex items-baseline justify-between gap-2 mx-2 mb-1 pb-1.5 border-b border-dashed border-[rgba(28,26,22,0.12)]">
-                      <span className="min-w-0 font-bold text-[0.78rem] text-ink leading-snug">
-                        <span className="font-script font-bold text-[0.78rem] text-ink-dim mr-1.5">
+                {subtopicGroups.map((group, gIdx) => {
+                  const open = openGroup === gIdx;
+                  const total = group.sections.length;
+                  const doneCount = group.sections.filter(
+                    ({ originalIndex }) => originalIndex < activeIndex
+                  ).length;
+                  const hasCurrent = gIdx === activeGroupIdx;
+                  const allDone = doneCount === total;
+                  const started = hasCurrent || doneCount > 0;
+
+                  return (
+                    <div
+                      key={gIdx}
+                      className="border-b border-dashed border-[rgba(28,26,22,0.12)]"
+                    >
+                      {/* Subtopic row — the whole line is the toggle */}
+                      <button
+                        onClick={() => setOpenGroup(open ? -1 : gIdx)}
+                        className="w-full text-left flex items-center gap-2.5 py-3 px-0.5 cursor-pointer group/topic"
+                      >
+                        <span className="font-script font-bold text-[0.84rem] text-ink-dim w-[18px] flex-none">
                           {gIdx + 1}
                         </span>
-                        {group.name}
-                      </span>
-                      <span className="flex-none text-[0.62rem] font-bold text-ink-muted">
-                        {group.sections.length} parts
-                      </span>
-                    </div>
-
-                    <div className="flex flex-col gap-0.5">
-                      {group.sections.map(({ section, originalIndex }) => {
-                        const isDone = originalIndex < activeIndex;
-                        const isCurrent = originalIndex === activeIndex;
-                        const posNum = section.position ?? originalIndex + 1;
-
-                        return (
-                          <button
-                            key={section.id}
-                            onClick={() => handleSelectSection(originalIndex)}
-                            className="w-full text-left flex items-center gap-[11px] p-[9px_12px] rounded-[11px] cursor-pointer hover:bg-cream-card transition-colors"
+                        <span
+                          className={`flex-1 min-w-0 text-[0.94rem] leading-snug transition-colors ${
+                            hasCurrent
+                              ? "font-bold text-ink"
+                              : "font-semibold text-ink-light group-hover/topic:text-ink"
+                          }`}
+                        >
+                          {group.name}
+                        </span>
+                        <span className="flex-none inline-flex items-center gap-2">
+                          {allDone ? (
+                            <svg
+                              viewBox="0 0 16 16"
+                              width={13}
+                              height={13}
+                              fill="none"
+                              stroke="#1C9B57"
+                              strokeWidth="2.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <path d="M2.5 8.5 6 12l7.5-8" />
+                            </svg>
+                          ) : (
+                            <span
+                              className={`text-[0.66rem] font-bold tabular-nums ${
+                                started ? "text-orange-dark" : "text-ink-dim"
+                              }`}
+                            >
+                              {started ? `${doneCount}/${total}` : total}
+                            </span>
+                          )}
+                          <svg
+                            viewBox="0 0 16 16"
+                            width={11}
+                            height={11}
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className={`text-ink-dim group-hover/topic:text-ink-light transition-transform duration-300 ${
+                              open ? "rotate-180" : ""
+                            }`}
                           >
-                            <span
-                              className={`w-[22px] h-[22px] rounded-full flex-none grid place-items-center font-bold text-[0.68rem] transition-colors ${
-                                isDone
-                                  ? "border-[1.5px] border-transparent"
-                                  : isCurrent
-                                  ? "bg-white border-[1.5px] border-orange text-orange-dark"
-                                  : "bg-white border-[1.5px] border-[rgba(28,26,22,0.16)] text-ink-muted"
-                              }`}
-                            >
-                              {isDone ? (
-                                <span className="w-2 h-2 rounded-full bg-green-badge" />
-                              ) : (
-                                posNum
-                              )}
-                            </span>
-                            <span
-                              className={`flex-1 min-w-0 transition-all ${
-                                isCurrent
-                                  ? "text-[0.98rem] font-bold text-ink"
-                                  : "text-[0.88rem] font-semibold text-ink-light"
-                              }`}
-                            >
-                              {section.title || `Part ${posNum}`}
-                            </span>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))}
+                            <path d="M3.5 6 8 10.5 12.5 6" />
+                          </svg>
+                        </span>
+                      </button>
 
-                <p className="text-[0.76rem] text-ink-muted mt-2.5 mx-2">
+                      {/* Parts — smooth unfold, threaded on a hairline rail */}
+                      <div
+                        className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                        }`}
+                      >
+                        <div className="overflow-hidden min-h-0">
+                          <div className="relative ml-[7px] pl-[18px] pb-3">
+                            <span
+                              aria-hidden="true"
+                              className="absolute left-0 top-1 bottom-2 w-px bg-[rgba(28,26,22,0.12)]"
+                            />
+                            {group.sections.map(({ section, originalIndex }) => {
+                              const isDone = originalIndex < activeIndex;
+                              const isCurrent = originalIndex === activeIndex;
+                              const posNum =
+                                section.position ?? originalIndex + 1;
+
+                              return (
+                                <button
+                                  key={section.id}
+                                  onClick={() =>
+                                    handleSelectSection(originalIndex)
+                                  }
+                                  className="relative w-full text-left flex items-center py-[6px] pr-1 cursor-pointer group/part"
+                                >
+                                  <span
+                                    aria-hidden="true"
+                                    className={`absolute left-[-18px] top-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full transition-all ${
+                                      isCurrent
+                                        ? "w-[9px] h-[9px] bg-orange ring-[3px] ring-orange/20"
+                                        : isDone
+                                        ? "w-[7px] h-[7px] bg-green-badge"
+                                        : "w-[7px] h-[7px] bg-cream-light border border-[rgba(28,26,22,0.3)] group-hover/part:border-ink"
+                                    }`}
+                                  />
+                                  <span
+                                    className={`flex-1 min-w-0 leading-snug transition-colors ${
+                                      isCurrent
+                                        ? "text-[0.9rem] font-bold text-ink"
+                                        : isDone
+                                        ? "text-[0.84rem] font-medium text-ink-muted group-hover/part:text-ink"
+                                        : "text-[0.84rem] font-semibold text-ink-light group-hover/part:text-ink"
+                                    }`}
+                                  >
+                                    {section.title || `Part ${posNum}`}
+                                  </span>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+
+                <p className="text-[0.74rem] text-ink-muted mt-3 px-0.5">
                   Pick any part and {TEACHER} jumps straight there.
                 </p>
               </div>
