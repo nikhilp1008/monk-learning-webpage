@@ -52,9 +52,10 @@ Total sections: 76
 - Sec 36 — NEET Pythagoras trap: options + ring on (B) 14, 6-8-10 triangle, √100 box, wrong-option anatomy, triangle families.
 - Sec 37 — JEE Main vy=0: condition line, component tracking, t=2/speed=2 box, velocity-sweep glyph, top-of-arc analogy.
 - Sec 38 — JEE Adv radius of curvature: R=v²/a⊥ box, 10√2 speed, g-split diagram at 45°, R=20√2≈28.3 m.
+- Sec 39 — Five 2D-kinematics pitfalls checklist (numbered circles rows).
 
 ## Current
-Sec 39 — next.
+Sec 40 — next (last of subtopic 3).
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
