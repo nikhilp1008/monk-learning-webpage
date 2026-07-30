@@ -33,6 +33,7 @@ Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷
 - [x] Sec 8 — WE1 cricket ball: sign convention, J=11.2 N·s, F=1120 N, 1.6 trap
 - [x] Sec 9 — WE2 rifle recoil: before/after, conservation reflex, v=2 m/s
 - [x] Sec 10 — WE3 floor bounce: heights→speeds, J = 8 N·s upward
+- [x] Sec 11 — WE4 sand on belt: variable mass, 6 N / 6 W / 12 W, half to heat
 
 ## Current
-Subtopic 1 (Newton's Laws and Impulse). Next: Sec 11.
+Subtopic 1 (Newton's Laws and Impulse). Next: Sec 12.
