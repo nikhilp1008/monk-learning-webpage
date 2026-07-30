@@ -15,10 +15,11 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 9. Chapter Wrap-Up — secs 69–70
 
 ## Done
-(none yet)
+- Sec 1 — rigid body (point-mass limits, welded swarm, frozen geometry)
+- Sec 2 — three types of motion (3-panel: translation/rotation/rolling + master strategy)
 
 ## Current
-Subtopic 1 — working on Sec 1.
+Subtopic 1 COMPLETE (2/2). Next: Subtopic 2 — Center of Mass, Sec 3.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch6_reveals.json (re-fetch via Supabase REST, cols `board_reveal_at_english/_hinglish`).
