@@ -45,9 +45,10 @@ Total sections: 76
 - Sec 29 — Independence big idea: carrom glide+drift diagram, x/y-story lines, clock chip+glyph, independence verdict.
 - Sec 30 — Vector upgrade: two formula boxes, x-set/y-set split, projectile+circular previews, averages subtlety.
 - Sec 31 — Integration derivation: a=dv/dt → v=v₀+at box, v=dr/dt → r-equation box, constant-a warning.
+- Sec 32 — Components prove independence: trajectory + projections diagram, î/ĵ sets, neither-mentions-other note, shared-t recipe.
 
 ## Current
-Sec 32 — next.
+Sec 33 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
