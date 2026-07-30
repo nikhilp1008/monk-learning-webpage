@@ -352,3 +352,16 @@ export function getScene(
 }
 
 export type { SceneProps };
+
+/* ─────────────────────────────────────────────────────────────────────
+ * Ch06 · System of Particles & Rotational Motion (Class 11)
+ * Single block appended by the ch6 worktree session — keep all Ch06
+ * imports and registrations inside this block only.
+ * ──────────────────────────────────────────────────────────────────── */
+import Ch06Sec1 from "./Ch06Sec1";
+
+const CH06 = "262da95c-2f3a-56da-905e-003fa8f0e4dc"; // Class 11 · System of Particles & Rotational Motion
+
+Object.assign(REGISTRY, {
+  [`${CH06}:1`]: Ch06Sec1,
+});
