@@ -356,9 +356,11 @@ export type { SceneProps };
 /* ================= Ch04 · Laws of Motion (premium-board-ch4) ================= */
 /* Single appended block — keep ALL Ch04 imports + registrations here.          */
 import Ch04Sec1 from "./Ch04Sec1";
+import Ch04Sec2 from "./Ch04Sec2";
 
 const CH04 = "50ae6550-951b-599c-b352-1d6e5f84bc3b"; // Class 11 · Laws of Motion
 Object.assign(REGISTRY, {
   [`${CH04}:1`]: Ch04Sec1,
+  [`${CH04}:2`]: Ch04Sec2,
 });
 /* =============================== end Ch04 ==================================== */

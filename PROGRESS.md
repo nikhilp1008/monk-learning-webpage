@@ -23,6 +23,7 @@ All audit lines must be []. Register scenes ONLY in the delimited Ch04 block at 
 
 ## Done
 - [x] Sec 1 — Inertia: Mumbai local jerk demo (8 beats, verified both langs, audits clean)
+- [x] Sec 2 — Momentum p=mv, truck vs bike, F=dp/dt, impulse intro
 
 ## Current
-Subtopic 1 (Newton's Laws and Impulse). Next: Sec 2.
+Subtopic 1 (Newton's Laws and Impulse). Next: Sec 3.
