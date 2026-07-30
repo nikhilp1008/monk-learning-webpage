@@ -78,6 +78,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 47 — Circular motion intro: v tangent circle, a_c inward, centripetal = role not force
 - [x] Sec 48 — Four panels: friction/tension/gravity/normal, no double-counting
 - [x] Sec 49 — Centrifugal: ground vs rotating frame, pseudo-force, not action-reaction
+- [x] Sec 50 — Three ways to turn: flat/friction, banked/N alone, both, design speed
 
 ## Current
-Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 50.
+Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 51.
