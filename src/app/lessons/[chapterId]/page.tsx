@@ -17,10 +17,7 @@ type SectionRow = Database["public"]["Tables"]["lesson_sections"]["Row"];
 
 type Language = "english" | "hinglish";
 
-interface SubtopicGroup {
-  name: string;
-  sections: { section: SectionRow; originalIndex: number }[];
-}
+const TEACHER = "Drona";
 
 function parseBoardContent(json: unknown): BoardEventData[] {
   if (Array.isArray(json)) {
@@ -46,6 +43,11 @@ function parseRevealTimestamps(json: unknown, eventCount: number): number[] {
   return new Array(eventCount).fill(0);
 }
 
+function titleCase(s: string | null | undefined): string {
+  if (!s) return "Lesson";
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
 export default function LessonPlayerPage() {
   const params = useParams();
   const chapterId = params?.chapterId as string;
@@ -59,7 +61,6 @@ export default function LessonPlayerPage() {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isBuffering, setIsBuffering] = useState<boolean>(false);
   const [currentTime, setCurrentTime] = useState<number>(0);
-  const [duration, setDuration] = useState<number>(0);
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -79,6 +80,15 @@ export default function LessonPlayerPage() {
   useEffect(() => {
     const t = new URLSearchParams(window.location.search).get("t");
     if (t && !isNaN(parseFloat(t))) debugSeekRef.current = parseFloat(t);
+  }, []);
+
+  // Esc leaves the full-screen board.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsFullScreen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
   }, []);
 
   // Load user profile preference for teaching_language
@@ -163,12 +173,6 @@ export default function LessonPlayerPage() {
   const activeCaption =
     revealedEventsCount > 0 ? captionSegments[revealedEventsCount - 1] || "" : "";
 
-  // "Drona is writing…" while the newest event's entrance is still running.
-  const lastRevealAt =
-    revealedEventsCount > 0 ? revealTimestamps[revealedEventsCount - 1] ?? 0 : 0;
-  const isWriting =
-    isPlaying && revealedEventsCount > 0 && currentTime - lastRevealAt < 2.8;
-
   // Keep the newest writing in view (event mode only — scenes are one stage).
   useEffect(() => {
     if (SceneComp) return;
@@ -176,25 +180,6 @@ export default function LessonPlayerPage() {
     if (!el) return;
     el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
   }, [revealedEventsCount, activeIndex, SceneComp]);
-
-  const subtopicGroups = useMemo<SubtopicGroup[]>(() => {
-    if (sections.length === 0) return [];
-    const map = new Map<string, { section: SectionRow; originalIndex: number }[]>();
-
-    sections.forEach((sec, idx) => {
-      const name = (sec.subtopic && sec.subtopic.trim()) || "Overview & Main Topics";
-      if (!map.has(name)) {
-        map.set(name, []);
-      }
-      map.get(name)!.push({ section: sec, originalIndex: idx });
-    });
-
-    const groups: SubtopicGroup[] = [];
-    map.forEach((items, name) => {
-      groups.push({ name, sections: items });
-    });
-    return groups;
-  }, [sections]);
 
   useEffect(() => {
     let isMounted = true;
@@ -249,7 +234,6 @@ export default function LessonPlayerPage() {
 
   const handleLoadedMetadata = useCallback(() => {
     if (audioRef.current) {
-      setDuration(audioRef.current.duration || 0);
       setIsBuffering(false);
       if (debugSeekRef.current != null) {
         const t = debugSeekRef.current;
@@ -341,13 +325,6 @@ export default function LessonPlayerPage() {
     setCurrentTime(0);
   };
 
-  const formatTime = (secs: number) => {
-    if (isNaN(secs) || secs < 0) return "0:00";
-    const m = Math.floor(secs / 60);
-    const s = Math.floor(secs % 60);
-    return `${m}:${s < 10 ? "0" : ""}${s}`;
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
       <Header />
@@ -364,7 +341,7 @@ export default function LessonPlayerPage() {
         onEnded={handleEnded}
       />
 
-      <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-6 flex flex-col animate-ml-rise">
+      <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 pt-[30px] pb-16 flex flex-col animate-ml-rise">
         {loading ? (
           <div className="py-24 flex flex-col items-center justify-center gap-3 text-ink-muted flex-1">
             <div className="w-8 h-8 border-3 border-orange border-t-transparent rounded-full animate-ml-spin" />
@@ -384,69 +361,61 @@ export default function LessonPlayerPage() {
             </Link>
           </div>
         ) : (
-          <>
+          <div style={{ margin: "0 calc(50% - 50vw + 36px)" }}>
             {/* Top Bar Controls */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
+            <div className="flex items-center justify-between gap-3.5 flex-wrap mb-[18px]">
               <div className="flex items-center gap-3.5">
                 <Link
                   href="/lessons"
-                  className="font-semibold text-sm px-3.5 py-2 rounded-full text-ink-light hover:text-ink hover:bg-white/60 transition-colors"
+                  className="font-semibold text-[0.86rem] px-3.5 py-2 rounded-full text-ink-light hover:text-ink transition-colors"
                 >
                   ← All lessons
                 </Link>
-                <span className="w-px h-5 bg-border-subtle" />
+                <span className="w-px h-[22px] bg-[rgba(28,26,22,0.14)]" />
                 <div>
-                  <h1 className="font-bold text-lg md:text-xl text-ink leading-tight">
+                  <b className="font-bold text-[1.15rem] tracking-[-0.01em] text-ink">
                     {chapter.name}
-                  </h1>
-                  <span className="text-xs text-ink-muted font-semibold">
-                    Class {chapter.class_level} ·{" "}
-                    {chapter.subject ? chapter.subject.toUpperCase() : "LESSON"}{" "}
-                    ·{" "}
-                    {subtopicGroups.length > 1
-                      ? `${subtopicGroups.length} topic modules (${sections.length} parts)`
-                      : `${sections.length} sections`}
+                  </b>
+                  <span className="block text-[0.76rem] text-ink-muted font-semibold">
+                    {titleCase(chapter.subject)} · Class {chapter.class_level}
                   </span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                {/* Language Toggle Switch */}
-                <div className="inline-flex gap-[3px] p-[3px] bg-[rgba(28,26,22,0.055)] rounded-full">
-                  <button
-                    onClick={() => setLanguage("english")}
-                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
-                      language === "english"
-                        ? "bg-white text-ink shadow-xs"
-                        : "text-ink-light hover:text-ink"
-                    }`}
-                  >
-                    English
-                  </button>
-                  <button
-                    onClick={() => setLanguage("hinglish")}
-                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
-                      language === "hinglish"
-                        ? "bg-white text-ink shadow-xs"
-                        : "text-ink-light hover:text-ink"
-                    }`}
-                  >
-                    Hinglish
-                  </button>
-                </div>
+              <div className="flex items-center gap-3.5">
+                {/* Language toggle (app feature — styled with the design's mini pills) */}
+                <span className="inline-flex gap-[3px] p-[3px] bg-[rgba(28,26,22,0.055)] rounded-full">
+                  {(["english", "hinglish"] as Language[]).map((lang) => {
+                    const on = language === lang;
+                    return (
+                      <button
+                        key={lang}
+                        onClick={() => setLanguage(lang)}
+                        className={`text-[0.82rem] px-3.5 py-1.5 rounded-full transition-colors cursor-pointer ${
+                          on
+                            ? "font-bold bg-ink text-cream-light shadow-[0_6px_14px_-8px_rgba(28,26,22,0.7)]"
+                            : "font-semibold text-ink-light"
+                        }`}
+                      >
+                        {lang === "english" ? "English" : "Hinglish"}
+                      </button>
+                    );
+                  })}
+                </span>
 
                 {/* Play / Pause Main Button */}
                 <button
                   onClick={togglePlayPause}
                   disabled={!audioUrl}
-                  className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 rounded-full text-dark-card bg-orange shadow-ref-pill hover:-translate-y-0.5 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center gap-[9px] font-semibold text-[0.9rem] px-5 py-[11px] rounded-full text-cream-light bg-ink shadow-[0_10px_24px_-12px_rgba(28,26,22,0.7)] hover:-translate-y-0.5 transition-transform cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isBuffering ? (
-                    <div className="w-4 h-4 border-2 border-dark-card border-t-transparent rounded-full animate-ml-spin" />
+                  {isBuffering && isPlaying ? (
+                    <div className="w-[15px] h-[15px] border-2 border-cream-light border-t-transparent rounded-full animate-ml-spin" />
                   ) : isPlaying ? (
                     <svg
                       viewBox="0 0 24 24"
-                      className="w-4 h-4"
+                      width={15}
+                      height={15}
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2.4"
@@ -455,72 +424,52 @@ export default function LessonPlayerPage() {
                       <path d="M9 5v14M15 5v14" />
                     </svg>
                   ) : (
-                    <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+                    <svg viewBox="0 0 24 24" width={15} height={15} fill="currentColor">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   )}
-                  {isBuffering
-                    ? "Loading..."
-                    : isPlaying
-                    ? "Pause"
-                    : "Play lesson"}
+                  {isPlaying ? "Pause" : "Play lesson"}
                 </button>
               </div>
             </div>
 
-            {/* Main Board Player + Sidebar Grid */}
-            <div
-              className={`grid grid-cols-1 lg:grid-cols-[minmax(0,3.4fr)_minmax(0,1fr)] gap-5 items-stretch transition-all ${
-                isFullScreen
-                  ? "fixed inset-0 z-50 p-6 bg-cream-light"
-                  : "h-[calc(100vh-320px)] min-h-[460px]"
-              }`}
-            >
-              {/* Board Area */}
+            {/* Board + Sidebar Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,3.4fr)_minmax(0,1fr)] gap-5 items-stretch h-[calc(100vh-320px)] min-h-[460px]">
+              {/* The Board */}
               <div
-                className={`relative flex flex-col bg-ruled-board border-[1.5px] border-ink rounded-[18px] p-[24px_28px_24px_54px] shadow-ref-board overflow-hidden ${
-                  isFullScreen ? "h-full" : ""
+                className={`flex flex-col min-h-0 bg-ruled-board border-[1.5px] border-ink ${
+                  isFullScreen
+                    ? "fixed inset-0 z-[80] rounded-none p-[26px_40px_28px_60px]"
+                    : "relative rounded-2xl p-[20px_26px_22px_52px] shadow-ref-board"
                 }`}
               >
                 {/* Red Margin Line */}
                 <span
                   aria-hidden="true"
-                  className="absolute top-5 bottom-5 left-[36px] w-[1.4px] bg-red-note/35 pointer-events-none"
+                  className="absolute top-5 bottom-5 left-9 w-[1.4px] bg-red-note/35 pointer-events-none"
                 />
 
-                <div className="flex items-center gap-3 mb-4 flex-none z-10">
-                  <span
-                    className={`w-2.5 h-2.5 rounded-full bg-orange flex-none ${
-                      isPlaying ? "animate-ml-blink" : ""
-                    }`}
-                  />
-                  <span className="font-bold text-sm text-ink truncate flex-1 min-w-0">
+                <div className="flex items-center gap-2.5 mb-4 flex-none">
+                  <span className="w-2 h-2 rounded-full bg-orange flex-none animate-ml-blink" />
+                  <span className="font-bold text-[0.88rem] tracking-[-0.01em] min-w-0 whitespace-nowrap overflow-hidden text-ellipsis">
                     The board · {currentSection?.title || `Part ${activeIndex + 1}`}
                   </span>
 
-                  {isBuffering ? (
-                    <span className="inline-flex items-center gap-1.5 text-xs text-orange font-semibold bg-orange/10 px-2.5 py-0.5 rounded-full">
-                      <div className="w-3 h-3 border-2 border-orange border-t-transparent rounded-full animate-ml-spin" />
-                      Buffering audio...
-                    </span>
-                  ) : isWriting ? (
-                    <span className="inline-flex items-center gap-2 flex-none">
-                      <span className="w-[7px] h-[13px] bg-orange rounded-[2px] pb-caret" />
-                      <span className="font-script text-[0.82rem] text-ink-muted">
-                        Drona is writing…
-                      </span>
-                    </span>
-                  ) : null}
-
                   <button
                     onClick={() => setIsFullScreen(!isFullScreen)}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-border-subtle bg-white text-ink-light hover:text-ink hover:border-ink transition-colors"
+                    title={
+                      isFullScreen
+                        ? "Back to the normal view (Esc works too)"
+                        : "Watch the board full screen"
+                    }
+                    className="ml-auto flex-none inline-flex items-center gap-1.5 font-semibold text-[0.76rem] px-3 py-1.5 rounded-full border border-[rgba(28,26,22,0.12)] bg-white text-ink-light hover:border-ink hover:text-ink transition-colors cursor-pointer"
                   >
                     {isFullScreen ? (
                       <>
                         <svg
                           viewBox="0 0 24 24"
-                          className="w-3 h-3"
+                          width={12}
+                          height={12}
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="2"
@@ -535,7 +484,8 @@ export default function LessonPlayerPage() {
                       <>
                         <svg
                           viewBox="0 0 24 24"
-                          className="w-3 h-3"
+                          width={12}
+                          height={12}
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="2"
@@ -548,12 +498,49 @@ export default function LessonPlayerPage() {
                       </>
                     )}
                   </button>
+
+                  {/* Monk mark — spins while the lesson plays */}
+                  <span className="flex-none inline-flex">
+                    <svg
+                      viewBox="0 0 120 120"
+                      width={26}
+                      height={26}
+                      fill="none"
+                      style={{
+                        display: "block",
+                        transformOrigin: "center",
+                        animation: isPlaying ? "mlSpin 7s linear infinite" : undefined,
+                      }}
+                    >
+                      <circle
+                        cx={60}
+                        cy={60}
+                        r={36}
+                        stroke="#1C1A16"
+                        strokeWidth={11}
+                        strokeLinecap="round"
+                        strokeDasharray="52 23.4"
+                        transform="rotate(-90 60 60)"
+                      />
+                      <circle
+                        cx={60}
+                        cy={60}
+                        r={19}
+                        stroke="#1C1A16"
+                        strokeWidth={9}
+                        strokeLinecap="round"
+                        strokeDasharray="21.8 18"
+                        transform="rotate(-30 60 60)"
+                      />
+                      <circle cx={60} cy={60} r={6} fill="#EEA31F" />
+                    </svg>
+                  </span>
                 </div>
 
                 <div
                   ref={boardContainerRef}
-                  className={`flex-1 min-h-0 pl-4 pr-2 z-10 ${
-                    SceneComp ? "overflow-hidden" : "overflow-y-auto space-y-3"
+                  className={`flex-1 min-h-0 ${
+                    SceneComp ? "overflow-hidden" : "overflow-y-auto pr-1.5"
                   }`}
                 >
                   {SceneComp ? (
@@ -568,7 +555,7 @@ export default function LessonPlayerPage() {
                     </div>
                   ) : revealedEventsCount === 0 ? (
                     <div className="py-12 text-center text-ink-muted text-sm font-medium animate-pulse">
-                      Press Play to reveal board content as Monk speaks...
+                      Press Play and {TEACHER} starts writing on the board...
                     </div>
                   ) : (
                     boardEvents.slice(0, revealedEventsCount).map((event, idx) => (
@@ -581,123 +568,83 @@ export default function LessonPlayerPage() {
                     ))
                   )}
                 </div>
-
-
-                <div className="mt-4 pt-3 border-t border-border-subtle flex items-center gap-3 z-10 flex-none">
-                  <span className="text-xs font-mono text-ink-muted font-medium w-10">
-                    {formatTime(currentTime)}
-                  </span>
-                  <input
-                    type="range"
-                    min={0}
-                    max={duration || 100}
-                    value={currentTime}
-                    onChange={(e) => {
-                      const newTime = Number(e.target.value);
-                      setCurrentTime(newTime);
-                      if (audioRef.current) {
-                        audioRef.current.currentTime = newTime;
-                      }
-                    }}
-                    className="flex-1 accent-orange h-1.5 bg-ink/10 rounded-lg cursor-pointer"
-                  />
-                  <span className="text-xs font-mono text-ink-muted font-medium w-10 text-right">
-                    {formatTime(duration)}
-                  </span>
-                </div>
               </div>
 
-              {/* Sidebar */}
-              <div className="flex flex-col bg-white border border-border-subtle rounded-[18px] p-[18px_14px] shadow-ref-stat overflow-hidden h-full">
-                <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted mb-3 block">
-                  Curriculum Modules
+              {/* Sidebar — In this chapter */}
+              <div className="min-h-0 max-h-full self-start overflow-y-auto bg-white border border-border-subtle rounded-[18px] p-[18px_14px] shadow-ref-stat">
+                <span className="block font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted mx-2 mb-2.5">
+                  In this chapter
                 </span>
 
-                <div className="flex-1 min-h-0 overflow-y-auto space-y-3 pr-1">
-                  {subtopicGroups.map((group, gIdx) => {
-                    const hasActiveSection = group.sections.some(
-                      (item) => item.originalIndex === activeIndex
-                    );
+                <div className="flex flex-col gap-0.5">
+                  {sections.map((section, idx) => {
+                    const isDone = idx < activeIndex;
+                    const isCurrent = idx === activeIndex;
+                    const posNum = section.position ?? idx + 1;
 
                     return (
-                      <div
-                        key={gIdx}
-                        className={`rounded-xl border p-2.5 transition-colors ${
-                          hasActiveSection
-                            ? "border-orange/40 bg-cream/30"
-                            : "border-border-subtle/60 bg-white"
-                        }`}
+                      <button
+                        key={section.id}
+                        onClick={() => handleSelectSection(idx)}
+                        className="w-full text-left flex items-center gap-[11px] p-[11px_12px] rounded-[11px] cursor-pointer hover:bg-cream-card transition-colors"
                       >
-                        <div className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-border-subtle/40">
-                          <span className="font-bold text-xs text-ink truncate">
-                            {gIdx + 1}. {group.name}
-                          </span>
-                          <span className="text-[0.62rem] font-bold text-ink-muted bg-ink/5 px-2 py-0.5 rounded-full flex-none">
-                            {group.sections.length} parts
-                          </span>
-                        </div>
-
-                        <div className="space-y-1">
-                          {group.sections.map(({ section, originalIndex }) => {
-                            const isActive = originalIndex === activeIndex;
-                            const posNum = section.position ?? originalIndex + 1;
-
-                            return (
-                              <button
-                                key={section.id}
-                                onClick={() => handleSelectSection(originalIndex)}
-                                className={`w-full text-left flex items-center gap-2 p-1.5 rounded-lg transition-all ${
-                                  isActive
-                                    ? "bg-orange text-dark-card font-bold shadow-xs"
-                                    : "hover:bg-cream/50 text-ink-light font-medium"
-                                }`}
-                              >
-                                <span
-                                  className={`w-4 h-4 rounded-full flex items-center justify-center text-[0.65rem] flex-none ${
-                                    isActive
-                                      ? "bg-dark-card text-cream-light font-extrabold"
-                                      : "bg-ink/10 text-ink-muted font-bold"
-                                  }`}
-                                >
-                                  {posNum}
-                                </span>
-                                <span className="text-xs truncate leading-snug">
-                                  {section.title || `Part ${posNum}`}
-                                </span>
-                              </button>
-                            );
-                          })}
-                        </div>
-                      </div>
+                        <span
+                          className={`w-[22px] h-[22px] rounded-full flex-none grid place-items-center font-bold text-[0.68rem] transition-colors ${
+                            isDone
+                              ? "border-[1.5px] border-transparent"
+                              : isCurrent
+                              ? "bg-white border-[1.5px] border-orange text-orange-dark"
+                              : "bg-white border-[1.5px] border-[rgba(28,26,22,0.16)] text-ink-muted"
+                          }`}
+                        >
+                          {isDone ? (
+                            <span className="w-2 h-2 rounded-full bg-green-badge" />
+                          ) : (
+                            posNum
+                          )}
+                        </span>
+                        <span
+                          className={`flex-1 min-w-0 transition-all ${
+                            isCurrent
+                              ? "text-[1.02rem] font-bold text-ink"
+                              : "text-[0.9rem] font-semibold text-ink-light"
+                          }`}
+                        >
+                          {section.title || `Part ${posNum}`}
+                        </span>
+                      </button>
                     );
                   })}
                 </div>
 
-                <p className="text-xs text-ink-muted mt-3 pt-3 border-t border-border-subtle">
-                  Pick any module or section to jump straight there.
+                <p className="text-[0.76rem] text-ink-muted mt-2.5 mx-2">
+                  Pick any part and {TEACHER} jumps straight there.
                 </p>
               </div>
             </div>
 
-            {/* Bottom Live Captions Banner */}
-            <div className="bg-dark-bg text-[#EFEBDD] rounded-xl p-[13px_18px] mt-4 shadow-sm flex flex-col gap-1">
-              <div className="flex items-center justify-between text-[0.62rem] font-extrabold tracking-widest uppercase text-orange">
-                <span>Monk · Live board sync</span>
-                <span className="text-[#C7C1B3] normal-case font-medium">
-                  {language === "english" ? "English narration" : "Hinglish narration"}
-                </span>
+            {/* Live Captions */}
+            <div className="bg-dark-bg text-[#EFEBDD] rounded-[14px] p-[13px_18px] mt-4">
+              <div className="flex justify-between font-bold text-[0.56rem] tracking-[0.12em] uppercase text-orange mb-[5px]">
+                <span>{TEACHER} · live captions</span>
+                <em className="not-italic text-[#938d80] tracking-[0.02em] normal-case">
+                  {language === "english" ? "English" : "Hinglish"}
+                </em>
               </div>
-              <div className="font-devanagari text-sm md:text-base leading-relaxed text-[#EFEBDD] whitespace-nowrap overflow-hidden text-ellipsis">
+              <div className="font-devanagari text-[0.92rem] leading-[1.45]">
                 {activeCaption ||
                   (currentSection?.subtopic
                     ? `${currentSection.subtopic} — ${currentSection.title}`
                     : currentSection?.title || "Listening...")}
                 {isPlaying && (
-                  <span className="inline-block w-1.5 h-3 bg-orange ml-1.5 align-middle pb-caret" />
+                  <span
+                    className="inline-block w-[5px] h-3 bg-orange ml-[3px] align-[-1px]"
+                    style={{ animation: "mlBlink 1s infinite" }}
+                  />
                 )}
               </div>
             </div>
-          </>
+          </div>
         )}
       </main>
     </div>

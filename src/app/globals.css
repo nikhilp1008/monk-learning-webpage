@@ -94,8 +94,8 @@
 .bg-ruled-board {
   background-color: #ffffff;
   background-image: repeating-linear-gradient(
-    transparent 0 33px,
-    rgba(28, 26, 22, 0.055) 33px 34px
+    transparent 0 28px,
+    rgba(28, 26, 22, 0.055) 28px 29px
   );
 }
 
@@ -121,7 +121,7 @@
 }
 
 .shadow-ref-board {
-  box-shadow: 0 24px 50px -30px rgba(28, 26, 22, 0.5);
+  box-shadow: 0 20px 44px -28px rgba(28, 26, 22, 0.5);
 }
 
 .shadow-ref-pill {

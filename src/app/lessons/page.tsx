@@ -14,10 +14,11 @@ const SUBJECTS = [
   { id: "physics", label: "Physics" },
   { id: "chemistry", label: "Chemistry" },
   { id: "mathematics", label: "Maths" },
-  { id: "biology", label: "Biology" },
 ];
 
 const CLASSES = [11, 12];
+
+const TEACHER = "Drona";
 
 interface ChapterMeta {
   sectionCount: number;
@@ -141,21 +142,22 @@ export default function LessonsPage() {
     <div className="min-h-screen flex flex-col bg-ruled-body">
       <Header />
 
-      <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
+      <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 pt-[30px] pb-16 animate-ml-rise">
         {/* Title Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+        <div className="flex items-end justify-between gap-4 flex-wrap mb-[22px]">
           <div>
             <h1 className="text-[2.3rem] leading-[1.05] tracking-[-0.025em] font-medium text-ink">
-              Every chapter, taught by Monk.
+              Every chapter, taught by {TEACHER}.
             </h1>
-            <p className="text-ink-light text-base mt-2 max-w-2xl">
-              Press play on any chapter and Monk teaches it end to end on the board, at your own pace.
+            <p className="text-ink-light text-base mt-[7px] max-w-[46rem]">
+              Press play on any chapter and {TEACHER} teaches it end to end on the board, at your own pace.
             </p>
           </div>
-          <span className="inline-flex items-center gap-1.5 font-bold text-xs text-ink-light border border-border-subtle rounded-full px-3.5 py-1.5 bg-white self-start md:self-auto shadow-2xs">
+          <span className="inline-flex items-center gap-[7px] font-bold text-[0.74rem] text-ink-light border border-[rgba(28,26,22,0.12)] rounded-full px-3.5 py-[7px] bg-white">
             <svg
               viewBox="0 0 24 24"
-              className="w-3.5 h-3.5"
+              width={13}
+              height={13}
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
@@ -164,57 +166,57 @@ export default function LessonsPage() {
               <rect x="5" y="11" width="14" height="9" rx="2" />
               <path d="M8 11V8a4 4 0 0 1 8 0v3" />
             </svg>
-            JEE Main &amp; NEET
+            JEE Main
           </span>
         </div>
 
         {/* Card Container */}
         <div className="bg-white border border-border-subtle rounded-[20px] p-[22px_24px_8px] shadow-ref-card">
           {/* Controls Bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <div className="flex items-center justify-between gap-3 mb-1.5">
             <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
               All chapters
             </span>
 
-            <div className="flex items-center gap-3">
-              <span className="text-xs text-ink-muted font-semibold">
-                {chapters.length} chapters
+            <div className="flex items-center gap-3.5">
+              <span className="text-[0.74rem] text-ink-muted font-semibold">
+                {chapters.length} chapters · taught by {TEACHER}
               </span>
 
               {/* Class Toggle */}
-              <div className="inline-flex gap-[3px] p-[3px] bg-[rgba(28,26,22,0.055)] rounded-full">
+              <span className="inline-flex gap-[3px] p-[3px] bg-[rgba(28,26,22,0.055)] rounded-full">
                 {CLASSES.map((cls) => {
                   const isActive = selectedClass === cls;
                   return (
                     <button
                       key={cls}
                       onClick={() => setSelectedClass(cls)}
-                      className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
+                      className={`text-[0.82rem] px-3.5 py-1.5 rounded-full transition-colors cursor-pointer ${
                         isActive
-                          ? "bg-white text-ink shadow-xs"
-                          : "text-ink-light hover:text-ink"
+                          ? "font-bold bg-ink text-cream-light shadow-[0_6px_14px_-8px_rgba(28,26,22,0.7)]"
+                          : "font-semibold text-ink-light"
                       }`}
                     >
                       Class {cls}
                     </button>
                   );
                 })}
-              </div>
+              </span>
             </div>
           </div>
 
           {/* Subject Tabs */}
-          <div className="grid grid-cols-4 border-b border-border-subtle mb-3">
+          <div className="grid grid-cols-3 shadow-[inset_0_-1px_rgba(28,26,22,0.1)] mb-1">
             {SUBJECTS.map((subj) => {
               const isActive = selectedSubject === subj.id;
               return (
                 <button
                   key={subj.id}
                   onClick={() => setSelectedSubject(subj.id)}
-                  className={`py-2.5 text-center font-bold text-xs md:text-sm transition-all border-b-2 ${
+                  className={`flex items-center justify-center gap-2 text-[0.95rem] py-[13px] px-1 border-b-[2.5px] transition-colors cursor-pointer ${
                     isActive
-                      ? "border-ink text-ink font-extrabold"
-                      : "border-transparent text-ink-light hover:text-ink"
+                      ? "font-bold text-ink border-orange"
+                      : "font-semibold text-ink-muted border-transparent"
                   }`}
                 >
                   {subj.label}
@@ -235,73 +237,62 @@ export default function LessonsPage() {
               {SUBJECTS.find((s) => s.id === selectedSubject)?.label}.
             </div>
           ) : (
-            <div className="max-h-[60vh] overflow-y-auto space-y-1 pr-1">
-              {chapters.map((chapter) => {
+            <div className="max-h-[56vh] overflow-y-auto overscroll-contain">
+              {chapters.map((chapter, i) => {
                 const meta = chapterMetas[chapter.id] || {
                   sectionCount: 0,
                   subtopicCount: 0,
                 };
                 const isClickable = meta.sectionCount > 0;
-                const isReady = chapter.status === "ready";
-                const numStr = String(chapter.chapter_order || 1).padStart(
-                  2,
-                  "0"
-                );
+                const numStr = String(
+                  chapter.chapter_order || i + 1
+                ).padStart(2, "0");
 
-                const labelText =
+                const subtopics =
                   meta.subtopicCount > 0
-                    ? `${meta.subtopicCount} topics · ${meta.sectionCount} sections`
-                    : meta.sectionCount > 0
-                    ? `${meta.sectionCount} sections`
-                    : "0 sections";
+                    ? meta.subtopicCount
+                    : meta.sectionCount;
 
                 const cardContent = (
                   <div
-                    className={`flex items-center gap-3 md:gap-4 py-[15px] px-2 border-b border-dashed border-[rgba(28,26,22,0.1)] rounded-[10px] transition-colors ${
+                    className={`flex items-center gap-3.5 py-[15px] px-2 border-b border-dashed border-[rgba(28,26,22,0.1)] rounded-[10px] transition-colors ${
                       isClickable
                         ? "hover:bg-[rgba(252,244,224,0.5)] cursor-pointer"
-                        : "bg-ink/[0.02] opacity-60 cursor-not-allowed"
+                        : "opacity-60 cursor-not-allowed"
                     }`}
                   >
-                    <span className="font-script font-bold text-[0.86rem] text-ink-dim w-7 flex-none">
+                    <span className="font-script font-bold text-[0.86rem] text-ink-dim flex-none w-[26px]">
                       {numStr}
                     </span>
 
-                    <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-                      <b className="font-bold text-sm md:text-base text-ink truncate">
+                    <span className="flex-1 min-w-0 flex items-baseline gap-2.5">
+                      <b className="font-bold text-[0.98rem] text-ink whitespace-nowrap overflow-hidden text-ellipsis">
                         {chapter.name}
                       </b>
-                      <span className="text-xs text-ink-muted font-semibold flex-none">
-                        {labelText}
+                      <span className="flex-none text-[0.76rem] text-ink-muted font-semibold">
+                        {subtopics} subtopics
                       </span>
-                    </div>
+                    </span>
 
-                    <div className="flex items-center gap-2 flex-none">
-                      {isReady && isClickable ? (
-                        <span className="font-extrabold text-[0.62rem] tracking-wider uppercase text-green-badge bg-green-badge/10 border border-green-badge/30 px-2.5 py-0.5 rounded-full">
-                          READY
-                        </span>
-                      ) : !isClickable ? (
-                        <span className="font-extrabold text-[0.62rem] tracking-wider uppercase text-ink-muted bg-ink/5 px-2.5 py-0.5 rounded-full">
-                          COMING SOON
-                        </span>
-                      ) : null}
+                    <span className="flex-none font-bold text-[0.7rem] tracking-[0.02em] px-[11px] py-[5px] rounded-full bg-ink/5 text-ink-muted">
+                      {isClickable ? "Not started" : "Coming soon"}
+                    </span>
 
-                      <svg
-                        viewBox="0 0 16 16"
-                        className={`w-3.5 h-3.5 flex-none ${
-                          isClickable ? "stroke-ink-dim" : "stroke-ink-muted/40"
-                        }`}
-                        fill="none"
-                      >
-                        <path
-                          d="M2 8h11M9 3.5 13.5 8 9 12.5"
-                          strokeWidth="1.9"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
+                    <svg
+                      viewBox="0 0 16 16"
+                      width={14}
+                      height={14}
+                      fill="none"
+                      className="flex-none"
+                    >
+                      <path
+                        d="M2 8h11M9 3.5 13.5 8 9 12.5"
+                        stroke="#C2BCAF"
+                        strokeWidth="1.9"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </div>
                 );
 
