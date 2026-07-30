@@ -48,9 +48,10 @@ Total sections: 76
 - Sec 32 — Components prove independence: trajectory + projections diagram, î/ĵ sets, neither-mentions-other note, shared-t recipe.
 - Sec 33 — Toolkit: r→v→a derivative chain with d/dt arrows, Pythagoras magnitudes, averages, chain-rule warning.
 - Sec 34 — Toolkit 2: per-axis equations, v² relations, projectile/circular chips, R = v²/a⊥ box.
+- Sec 35 — Board worked example: v₀/a mini axes, v=4î+6ĵ, √52, r=8î+6ĵ, answer box, recipe verdict.
 
 ## Current
-Sec 35 — next.
+Sec 36 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
