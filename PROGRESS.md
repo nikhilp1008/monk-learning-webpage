@@ -9,6 +9,7 @@ see secdata.py pattern: dump narration+reveals per section).
 Verify per section:
 `PORT=3004 CHAPTER_ID=50ae6550-951b-599c-b352-1d6e5f84bc3b node verify-scene.mjs <sec> '<rev_en>' '<rev_hi>' ./shots/sec<M>`
 All audit lines must be []. Register scenes ONLY in the delimited Ch04 block at END of index.ts.
+Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷' or spaces.
 
 ## Subtopics
 1. Newton's Laws and Impulse — secs 1–12
@@ -29,6 +30,7 @@ All audit lines must be []. Register scenes ONLY in the delimited Ch04 block at 
 - [x] Sec 5 — Impulse-momentum theorem, F-t area graph, same-area curves
 - [x] Sec 6 — Momentum conservation from Third Law, isolated A/B system
 - [x] Sec 7 — Formula set: four bands + N·s ≡ kg·m/s free-mark note
+- [x] Sec 8 — WE1 cricket ball: sign convention, J=11.2 N·s, F=1120 N, 1.6 trap
 
 ## Current
-Subtopic 1 (Newton's Laws and Impulse). Next: Sec 8.
+Subtopic 1 (Newton's Laws and Impulse). Next: Sec 9.
