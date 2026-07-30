@@ -362,6 +362,7 @@ import Ch07Sec3 from "./Ch07Sec3";
 import Ch07Sec4 from "./Ch07Sec4";
 import Ch07Sec5 from "./Ch07Sec5";
 import Ch07Sec6 from "./Ch07Sec6";
+import Ch07Sec7 from "./Ch07Sec7";
 
 const CH07 = "29b5be47-3b75-550d-9636-ad45a901d4dd"; // Class 11 · Gravitation
 
@@ -371,4 +372,5 @@ REGISTRY[`${CH07}:3`] = Ch07Sec3;
 REGISTRY[`${CH07}:4`] = Ch07Sec4;
 REGISTRY[`${CH07}:5`] = Ch07Sec5;
 REGISTRY[`${CH07}:6`] = Ch07Sec6;
+REGISTRY[`${CH07}:7`] = Ch07Sec7;
 /* ============================ end Ch07 ============================ */
