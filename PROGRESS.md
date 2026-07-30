@@ -87,6 +87,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 56 — WE3 banking+friction: bracket=4/3, v_max≈34.6, vs design speed 21.2
 - [x] Sec 57 — WE4 well of death: roles swapped, v_min=√(gr/μ)≈7.07, speed=safety
 - [x] Sec 58 — Tips: 4 pitfalls, design-speed straddle check, 3 memory aids. SUBTOPIC 5 DONE (58/92)
+- [x] Sec 59 — Force menu: 5 chips, electromagnetic origin, 6-step FBD method
 
 ## Current
-Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 59.
+Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 60.
