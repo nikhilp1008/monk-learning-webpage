@@ -12,8 +12,8 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 | # | Subtopic | Sections | Status |
 |---|----------|----------|--------|
 | 1 | Foundations: The Scalar (Dot) Product | 1–7 | DONE |
-| 2 | Work and the Work-Energy Theorem | 8–17 | next |
-| 3 | Mechanical Energy: Kinetic and Potential | 18–26 | — |
+| 2 | Work and the Work-Energy Theorem | 8–17 | DONE |
+| 3 | Mechanical Energy: Kinetic and Potential | 18–26 | next |
 | 4 | Conservative and Non-Conservative Forces | 27–34 | — |
 | 5 | Various Forms of Energy & Conservation of Energy | 35–41 | — |
 | 6 | Power | 42–49 | — |
@@ -36,6 +36,17 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 - **Sec 6** — Ex3 find-λ inversion + Ex4 cube body-diagonal 54.7° & projection 5/3.
 - **Sec 7** — four pitfalls (crossed vector-answer, sign survival, dot-vs-cross panels,
   zero-dot≠zero-vector) + reflex band. Subtopic 1 (1–7) COMPLETE.
+- **Sec 8** — holding a bag = zero work: figure demo, F×0, two-question test, hook wall.
+- **Sec 9** — angle writes the sign: auto push + three-panel +/−/0 demo, W = FS cos θ.
+- **Sec 10** — suitcase decomposition (F cos θ / F sin θ), work IS a dot product, K, W=ΔK.
+- **Sec 11** — CBSE derivation: 5-move flowchart, amber chain-rule box, NET warning.
+- **Sec 12** — area under F-x: piecewise curve, signed regions, dW strip proof.
+- **Sec 13** — key formulas sheet: 5 cards + units + conversions (eV, kWh trap) + sign rule.
+- **Sec 14** — tilted pull (1000 J) + porter staircase (horizontal distance = bait).
+- **Sec 15** — JEE Main variable force: graph + ∫(3x²+2x)dx = 80 J → v = 4√5.
+- **Sec 16** — JEE Advanced frames: ground +36 J vs train 0 J, both verified, never mix.
+- **Sec 17** — four pitfalls + sign-first reflex + SAD-angles chips.
+  Subtopic 2 (8–17) COMPLETE — 17/66.
 
 ## Notes / gotchas
 
