@@ -73,6 +73,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 42 — WE1 three pushes: threshold 8 N, f = 5 / 8 / 6, the drop
 - [x] Sec 43 — WE2 coin on book: 'just slides' = θr, μ = tan30, distractors
 - [x] Sec 44 — WE3 table+pulley+hanging block: does-it-move check, a=2.8, T=14.4
+- [x] Sec 45 — WE4 dragging crate: 75N vs 60N, λ=37° (3-4-5 triple), trolley insight
 
 ## Current
-Subtopic 4 (Friction, secs 36-46). Next: Sec 45.
+Subtopic 4 (Friction, secs 36-46). Next: Sec 46.

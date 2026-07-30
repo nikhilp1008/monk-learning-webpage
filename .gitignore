@@ -42,3 +42,4 @@ next-env.d.ts
 
 # scene verify output
 /shots/
+/shots.nosync/
