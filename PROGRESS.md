@@ -16,8 +16,8 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 | 3 | Mechanical Energy: Kinetic and Potential | 18–26 | DONE |
 | 4 | Conservative and Non-Conservative Forces | 27–34 | DONE |
 | 5 | Various Forms of Energy & Conservation of Energy | 35–41 | DONE |
-| 6 | Power | 42–49 | next |
-| 7 | Collisions | 50–57 | — |
+| 6 | Power | 42–49 | DONE |
+| 7 | Collisions | 50–57 | next |
 | 8 | Application: Motion in a Vertical Circle | 58–64 | — |
 | 9 | Chapter Recap | 65–66 | — |
 
@@ -74,6 +74,15 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 - **Sec 40** — 0.02 u → 18.63 MeV + Sun losing 4.2×10⁹ kg/s.
 - **Sec 41** — four pitfalls + JOULES/MeV anchor panels + three memory aids.
   Subtopic 5 (35–41) COMPLETE — 41/66.
+- **Sec 42** — power = rate: bricks scene, taps, 100 W vs 2000 W.
+- **Sec 43** — P_avg vs P_inst, P = Fv derivation, weightlifter, F = P/v.
+- **Sec 44** — negative power (braking), 746 W horse, P-t area / W-t slope graphs.
+- **Sec 45** — constant power: K = Pt, v ∝ √t curve vs const-force dash, x ∝ t^(3/2).
+- **Sec 46** — power formula sheet + P_avg = ½P_final + km/h habit.
+- **Sec 47** — crane 1 kW + 72 km/h planted-answer trap (16 kW).
+- **Sec 48** — incline 30 kW + constant-power kinematics numeric (6 m/s, 12 m).
+- **Sec 49** — five pitfalls + reflex panel + pump/hose/gun trick.
+  Subtopic 6 (42–49) COMPLETE — 49/66.
   NOTE: lesson JSON + reveals cached at scratchpad (ch05-lesson.json / ch05-reveals.json)
   because the repo copy keeps going iCloud-dataless. Dev server occasionally dies /
   crawls when iCloud thrashes — restart with npm run dev -- -p 3005 and curl-warm.
