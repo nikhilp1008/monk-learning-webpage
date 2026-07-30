@@ -74,9 +74,10 @@ Total sections: 76
 - Sec 58 — Board river example: 4/3/5 river diagram with width bar, 25 s / 75 m / 5 m/s answer box.
 - Sec 59 — NEET umbrella-direction trap: subtract-by-adding-negative diagram, apparent-rain arrow, walker+tilt sketch, 45° EAST box.
 - Sec 60 — JEE Main shortest-path: upstream-angle diagram, 4sinθ=2 → θ=30°, t=200/2√3≈57.7s box, vs 50s trade-off.
+- Sec 61 — JEE Adv closest approach: sit-on-B trick, v(AB)=(-10,10) computed, drift line + ⊥ diagram, 14.1 km after 1h box.
 
 ## Current
-Sec 61 — next.
+Sec 62 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
