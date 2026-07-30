@@ -44,8 +44,14 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 - Sec 25 — τ = dL/dt derivation (product rule, v×mv cross-out, corollary)
 - Sec 26 — determinant for τ and L (planar k-term, −13 N·m, sign chips)
 
+- Sec 27 — torque on bolt [CBSE] (spanner figure, rF sinθ, 5 N·m)
+- Sec 28 — dancer energy ratio [NEET] (trade cards, only-L trap, ×2.5)
+- Sec 29 — projectile L [JEE Main] (parabola, H marker, mu³sin²θcosθ/2g)
+- Sec 30 — bullet in pivoted rod [JEE Adv] (zero-arm trick, ω = 3mv/L(M+3m))
+- Sec 31 — τ & L pitfalls (4 traps + τ_A ≠ τ_B mini + pivot pro-tip)
+
 ## Current
-26/70 done. Subtopic 4 in progress — next Sec 27 (torque on a bolt [CBSE]).
+Subtopics 1–4 COMPLETE (31/70). Next: Subtopic 5 — Equilibrium of a Rigid Body, Sec 32.
 
 ## Workflow notes
 - 2026-07-30 PM: node_modules suffered NUL-file corruption (iCloud eviction on Desktop). Layout is now `node_modules -> node_modules.nosync` (symlink). Type-check with `npx tsc --noEmit -p tsconfig.check.json` (untracked local config that also excludes node_modules.nosync); plain `npx tsc --noEmit` scans node_modules.nosync and fails.
