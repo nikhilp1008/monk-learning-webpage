@@ -169,6 +169,8 @@ import Ch02Sec68 from "./Ch02Sec68";
 import Ch02Sec69 from "./Ch02Sec69";
 import Ch02Sec70 from "./Ch02Sec70";
 import Ch02Sec71 from "./Ch02Sec71";
+import Ch02Sec72 from "./Ch02Sec72";
+import Ch02Sec73 from "./Ch02Sec73";
 
 const CH01 = "8d7ccfaa-af16-53e4-9f28-823c8ea923d1"; // Class 11 · Units & Measurements
 const CH02 = "563ae2b1-3427-537a-afde-f7fbc193731f"; // Class 11 · Motion in a Straight Line
@@ -337,6 +339,8 @@ const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH02}:69`]: Ch02Sec69,
   [`${CH02}:70`]: Ch02Sec70,
   [`${CH02}:71`]: Ch02Sec71,
+  [`${CH02}:72`]: Ch02Sec72,
+  [`${CH02}:73`]: Ch02Sec73,
 };
 
 export function getScene(
