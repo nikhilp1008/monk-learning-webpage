@@ -69,9 +69,10 @@ Total sections: 76
 - Sec 53 — Relative velocity intro: train line, vA/vB/vAB head-join diagram, v(AB)=vA−vB box, swap-flips note.
 - Sec 54 — Boat & rain panels: banks + v-sum diagram, rain strokes + walker + slanted frame arrows, one-subtraction verdict.
 - Sec 55 — Subtraction rule origin: rA/rB/rAB diagram, d/dt chain, v(AB) box, a(AB), zero-relative-a → straight lines.
+- Sec 56 — Toolkit: core rule box, same/opposite train arrows, angle formula with MINUS warning, frame conversion.
 
 ## Current
-Sec 56 — next.
+Sec 57 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
