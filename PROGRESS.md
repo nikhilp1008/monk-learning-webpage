@@ -60,6 +60,7 @@ server served a stale bundle — restart it (kill port 3004, npm run dev -- -p 3
 - [x] Sec 33 — WE3 horizontal string: N from vertical, N=57.7, T=28.9, pair banked
 - [x] Sec 34 — WE4 bob in truck: both frames agree, T=25, a=7.5, g_eff route
 - [x] Sec 35 — Tips: 4 pitfall rows, smart axes, Lami reflex, memory aids. SUBTOPIC 3 DONE (35/92)
+- [x] Sec 36 — Friction graph: almirah, self-adjusting static, ceiling, kinetic drop
 
 ## Current
-Subtopic 4 (Friction, secs 36-46). Next: Sec 36.
+Subtopic 4 (Friction, secs 36-46). Next: Sec 37.
