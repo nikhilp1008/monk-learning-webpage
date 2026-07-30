@@ -14,10 +14,10 @@ Branch: `premium-board-ch7` · Port: **3007** · chapter_id: `29b5be47-3b75-550d
 7. Chapter 7 — Master Revision — sec 75–76
 
 ## Done
-Sec 1–25 (subtopic 1: Newton's Law · subtopic 2: Gravitational Field Intensity) — all verified (audits `[]`, finals eye-checked both languages) and committed.
+Sec 1–37 (subtopics 1–3: Newton's Law · Gravitational Field Intensity · Acceleration due to Gravity) — all verified (audits `[]`, finals eye-checked both languages) and committed.
 
 ## Current
-Subtopic 3 (Acceleration due to Gravity) · next: sec 26.
+Subtopic 4 (Gravitational Potential and Energy) · next: sec 38.
 
 ## Incident log
 - 2026-07-30: the shared object store (`monk-learning-webpage/.git`) had a truncated packfile (`pack-a44415a65…`, "far too short to be a packfile", SIGBUS on reads) blocking all commits. Fix: renamed its `.idx` to `corrupt-backup-pack-a44415a65.idx-bak` (pack kept on disk), bare-cloned origin into scratchpad, `git unpack-objects` restored all 270 pack objects as loose. `git fsck` still reports stale cache-tree pointers in some worktree indexes — benign, clears when each index is rewritten. Affects/benefits all chapter worktrees.
