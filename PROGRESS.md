@@ -28,6 +28,7 @@ All audit lines must be []. Register scenes ONLY in the delimited Ch04 block at 
 - [x] Sec 4 — Derivation ladder: F=dp/dt → assume m const → F=ma
 - [x] Sec 5 — Impulse-momentum theorem, F-t area graph, same-area curves
 - [x] Sec 6 — Momentum conservation from Third Law, isolated A/B system
+- [x] Sec 7 — Formula set: four bands + N·s ≡ kg·m/s free-mark note
 
 ## Current
-Subtopic 1 (Newton's Laws and Impulse). Next: Sec 7.
+Subtopic 1 (Newton's Laws and Impulse). Next: Sec 8.
