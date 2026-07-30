@@ -480,3 +480,92 @@ Object.assign(REGISTRY, {
 /* ================================================================== */
 /* end Ch03 block                                                      */
 /* ================================================================== */
+/* ================= Ch04 · Laws of Motion (premium-board-ch4) ================= */
+/* Single appended block — keep ALL Ch04 imports + registrations here.          */
+import Ch04Sec1 from "./Ch04Sec1";
+import Ch04Sec2 from "./Ch04Sec2";
+import Ch04Sec3 from "./Ch04Sec3";
+import Ch04Sec4 from "./Ch04Sec4";
+import Ch04Sec5 from "./Ch04Sec5";
+import Ch04Sec6 from "./Ch04Sec6";
+import Ch04Sec7 from "./Ch04Sec7";
+import Ch04Sec8 from "./Ch04Sec8";
+import Ch04Sec9 from "./Ch04Sec9";
+import Ch04Sec10 from "./Ch04Sec10";
+import Ch04Sec11 from "./Ch04Sec11";
+import Ch04Sec12 from "./Ch04Sec12";
+import Ch04Sec13 from "./Ch04Sec13";
+import Ch04Sec14 from "./Ch04Sec14";
+import Ch04Sec15 from "./Ch04Sec15";
+import Ch04Sec16 from "./Ch04Sec16";
+import Ch04Sec17 from "./Ch04Sec17";
+import Ch04Sec18 from "./Ch04Sec18";
+import Ch04Sec19 from "./Ch04Sec19";
+import Ch04Sec20 from "./Ch04Sec20";
+import Ch04Sec21 from "./Ch04Sec21";
+import Ch04Sec22 from "./Ch04Sec22";
+import Ch04Sec23 from "./Ch04Sec23";
+import Ch04Sec24 from "./Ch04Sec24";
+import Ch04Sec25 from "./Ch04Sec25";
+import Ch04Sec26 from "./Ch04Sec26";
+import Ch04Sec27 from "./Ch04Sec27";
+import Ch04Sec28 from "./Ch04Sec28";
+import Ch04Sec29 from "./Ch04Sec29";
+import Ch04Sec30 from "./Ch04Sec30";
+import Ch04Sec31 from "./Ch04Sec31";
+import Ch04Sec32 from "./Ch04Sec32";
+import Ch04Sec33 from "./Ch04Sec33";
+import Ch04Sec34 from "./Ch04Sec34";
+import Ch04Sec35 from "./Ch04Sec35";
+import Ch04Sec36 from "./Ch04Sec36";
+import Ch04Sec37 from "./Ch04Sec37";
+import Ch04Sec38 from "./Ch04Sec38";
+import Ch04Sec39 from "./Ch04Sec39";
+import Ch04Sec40 from "./Ch04Sec40";
+import Ch04Sec41 from "./Ch04Sec41";
+
+const CH04 = "50ae6550-951b-599c-b352-1d6e5f84bc3b"; // Class 11 · Laws of Motion
+Object.assign(REGISTRY, {
+  [`${CH04}:1`]: Ch04Sec1,
+  [`${CH04}:2`]: Ch04Sec2,
+  [`${CH04}:3`]: Ch04Sec3,
+  [`${CH04}:4`]: Ch04Sec4,
+  [`${CH04}:5`]: Ch04Sec5,
+  [`${CH04}:6`]: Ch04Sec6,
+  [`${CH04}:7`]: Ch04Sec7,
+  [`${CH04}:8`]: Ch04Sec8,
+  [`${CH04}:9`]: Ch04Sec9,
+  [`${CH04}:10`]: Ch04Sec10,
+  [`${CH04}:11`]: Ch04Sec11,
+  [`${CH04}:12`]: Ch04Sec12,
+  [`${CH04}:13`]: Ch04Sec13,
+  [`${CH04}:14`]: Ch04Sec14,
+  [`${CH04}:15`]: Ch04Sec15,
+  [`${CH04}:16`]: Ch04Sec16,
+  [`${CH04}:17`]: Ch04Sec17,
+  [`${CH04}:18`]: Ch04Sec18,
+  [`${CH04}:19`]: Ch04Sec19,
+  [`${CH04}:20`]: Ch04Sec20,
+  [`${CH04}:21`]: Ch04Sec21,
+  [`${CH04}:22`]: Ch04Sec22,
+  [`${CH04}:23`]: Ch04Sec23,
+  [`${CH04}:24`]: Ch04Sec24,
+  [`${CH04}:25`]: Ch04Sec25,
+  [`${CH04}:26`]: Ch04Sec26,
+  [`${CH04}:27`]: Ch04Sec27,
+  [`${CH04}:28`]: Ch04Sec28,
+  [`${CH04}:29`]: Ch04Sec29,
+  [`${CH04}:30`]: Ch04Sec30,
+  [`${CH04}:31`]: Ch04Sec31,
+  [`${CH04}:32`]: Ch04Sec32,
+  [`${CH04}:33`]: Ch04Sec33,
+  [`${CH04}:34`]: Ch04Sec34,
+  [`${CH04}:35`]: Ch04Sec35,
+  [`${CH04}:36`]: Ch04Sec36,
+  [`${CH04}:37`]: Ch04Sec37,
+  [`${CH04}:38`]: Ch04Sec38,
+  [`${CH04}:39`]: Ch04Sec39,
+  [`${CH04}:40`]: Ch04Sec40,
+  [`${CH04}:41`]: Ch04Sec41,
+});
+/* =============================== end Ch04 ==================================== */
