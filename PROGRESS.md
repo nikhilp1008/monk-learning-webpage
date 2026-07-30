@@ -38,9 +38,10 @@ Total sections: 76
 - Sec 22 — Cross toolkit: AB sinθ n̂ box, properties, mini determinant, parallelogram-area glyph, triple products, τ/L/qv×B rows.
 - Sec 23 — Work worked example: F/d arrows, identification line, 6+12 → W=18 J box, scalar shape check, auto-projection note.
 - Sec 24 — NEET torque trap: options + ring on (B) 0.87, spanner split diagram, τ=0.5 N·m box, sin/cos family cues.
+- Sec 25 — JEE Main angle/proj/perp: base quantities, 67.6°, 8/7 proj, A-split diagram, √377/7, Pythagoras closes to |A|=3.
 
 ## Current
-Sec 25 — next.
+Sec 26 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
