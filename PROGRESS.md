@@ -43,9 +43,10 @@ Total sections: 76
 - Sec 27 — Five product pitfalls checklist: cos/sin, species, anticommutativity, ĵ-minus, side-by-side zero-condition chips.
 - Sec 28 — Pro-tip closer: family chips, two instant-check boxes, pocket-seesaw line, 'Dot agrees · Cross turns' hero. ✅ SUBTOPIC 2 (15–28) COMPLETE.
 - Sec 29 — Independence big idea: carrom glide+drift diagram, x/y-story lines, clock chip+glyph, independence verdict.
+- Sec 30 — Vector upgrade: two formula boxes, x-set/y-set split, projectile+circular previews, averages subtlety.
 
 ## Current
-Sec 30 — next.
+Sec 31 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
