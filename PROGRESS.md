@@ -15,8 +15,8 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 | 2 | Work and the Work-Energy Theorem | 8–17 | DONE |
 | 3 | Mechanical Energy: Kinetic and Potential | 18–26 | DONE |
 | 4 | Conservative and Non-Conservative Forces | 27–34 | DONE |
-| 5 | Various Forms of Energy & Conservation of Energy | 35–41 | next |
-| 6 | Power | 42–49 | — |
+| 5 | Various Forms of Energy & Conservation of Energy | 35–41 | DONE |
+| 6 | Power | 42–49 | next |
 | 7 | Collisions | 50–57 | — |
 | 8 | Application: Motion in a Vertical Circle | 58–64 | — |
 | 9 | Chapter Recap | 65–66 | — |
@@ -66,6 +66,17 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 - **Sec 33** — two-regime ramp (4.5 m) + 2-D force toolkit (U = −xy).
 - **Sec 34** — five pitfalls + friction-or-drag decision diagram.
   Subtopic 4 (27–34) COMPLETE — 34/66. (commit-heal.sh handles iCloud-evicted objects.)
+- **Sec 35** — seven-costume card grid (Card helper component).
+- **Sec 36** — deepest law: currency, dam chain, 1 cal = 4.186 J. (en b0/b1 last 1s.)
+- **Sec 37** — E = mc² hero board, 9×10¹⁶ multiplier, mass-energy law.
+- **Sec 38** — formula sheet: law chip, constants row, power-plant chain, two anchors.
+- **Sec 39** — crate 125 J heat + gram-vs-kg trap (9×10¹³ J).
+- **Sec 40** — 0.02 u → 18.63 MeV + Sun losing 4.2×10⁹ kg/s.
+- **Sec 41** — four pitfalls + JOULES/MeV anchor panels + three memory aids.
+  Subtopic 5 (35–41) COMPLETE — 41/66.
+  NOTE: lesson JSON + reveals cached at scratchpad (ch05-lesson.json / ch05-reveals.json)
+  because the repo copy keeps going iCloud-dataless. Dev server occasionally dies /
+  crawls when iCloud thrashes — restart with npm run dev -- -p 3005 and curl-warm.
 
 ## Notes / gotchas
 
