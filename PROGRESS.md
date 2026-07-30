@@ -81,6 +81,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 50 — Three ways to turn: flat/friction, banked/N alone, both, design speed
 - [x] Sec 51 — Banking derivation: N cosθ=mg, N sinθ=mv²/r, tanθ=v²/rg, mass-free
 - [x] Sec 52 — v_max/v_min with friction: mirror sign flip, μ=0 sanity check
+- [x] Sec 53 — Formula set: 5 bands, mass-cancels-everywhere alarm
 
 ## Current
-Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 53.
+Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 54.
