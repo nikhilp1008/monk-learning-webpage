@@ -51,6 +51,7 @@ Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷
 - [x] Sec 26 — Lami's theorem: P/Q/R figure, opposite-angle rule, fine print
 - [x] Sec 27 — Lifts + pseudo-force: 4 panels, R=m(g±a), tilted bob, discipline
 - [x] Sec 28 — Lami derivation: star→closed triangle, 180°−α flip, sine rule
+- [x] Sec 29 — Smooth incline: tilted axes, T=mg sinθ, N=mg cosθ, sanity checks
 
 ## Current
-Subtopic 3 (Concurrent Forces and Equilibrium, secs 24-35). Next: Sec 29.
+Subtopic 3 (Concurrent Forces and Equilibrium, secs 24-35). Next: Sec 30.
