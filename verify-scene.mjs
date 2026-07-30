@@ -9,6 +9,7 @@ const REV_EN = JSON.parse(process.argv[3]);
 const REV_HI = JSON.parse(process.argv[4]);
 const OUT = process.argv[5] || `./shots/sec${SEC}`;
 const CHAPTER = process.env.CHAPTER_ID || "8d7ccfaa-af16-53e4-9f28-823c8ea923d1";
+const PORT = process.env.PORT || "3000";
 fs.mkdirSync(OUT, { recursive: true });
 
 const browser = await chromium.launch({
@@ -16,7 +17,7 @@ const browser = await chromium.launch({
     "/Users/nikhi/Library/Caches/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-mac-arm64/chrome-headless-shell",
 });
 const page = await browser.newPage({ viewport: { width: 1440, height: 960 } });
-await page.goto(`http://localhost:3000/lessons/${CHAPTER}?sec=${SEC}&t=0`, {
+await page.goto(`http://localhost:${PORT}/lessons/${CHAPTER}?sec=${SEC}&t=0`, {
   waitUntil: "networkidle",
 });
 await page.waitForTimeout(2500);
