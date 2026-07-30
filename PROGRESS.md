@@ -27,3 +27,4 @@ Subtopic 1 COMPLETE (2/2). Next: Subtopic 2 — Center of Mass, Sec 3.
 - Registration: single Ch06 block appended at END of src/components/scenes/index.ts (imports hoisted; `Object.assign(REGISTRY, {...})`).
 - Verify: `PORT=3006 CHAPTER_ID=262da95c-2f3a-56da-905e-003fa8f0e4dc node verify-scene.mjs <sec> '<rev_en>' '<rev_hi>' ./shots/sec<N>` — all audit lines must be [].
 - Hinglish board text written in Latin script (house style, per Ch01/Ch02 exemplars), even though JSON narration is Devanagari.
+- Combining vector arrow U+20D7 renders as tofu in the board fonts — write vectors as plain letters (F_ext = M a_cm via tspan subscripts). Subscript digits (₁₂) and ᵢ are fine; so are Σ ∫ λ σ ρ ω ² ³ ⇒ ⟺.
