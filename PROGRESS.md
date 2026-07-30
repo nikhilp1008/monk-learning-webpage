@@ -35,9 +35,10 @@ Total sections: 76
 - Sec 19 — Dot component derivation: bracket expansion, unit products, 3×3 grid with green diagonal + crossed red zeros, AxBx+AyBy+AzBz hero.
 - Sec 20 — Cross determinant derivation: î-ĵ-k̂ cycle wheel (green arcs), collected components, determinant array, +−+ WHY.
 - Sec 21 — Dot toolkit: definition box, properties col, cosθ finder box, projection line, W/P/Φ application rows.
+- Sec 22 — Cross toolkit: AB sinθ n̂ box, properties, mini determinant, parallelogram-area glyph, triple products, τ/L/qv×B rows.
 
 ## Current
-Sec 22 — next.
+Sec 23 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
