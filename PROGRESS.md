@@ -57,3 +57,7 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 - Hinglish narration is Devanagari-heavy but board labels follow the Ch01/Ch02
   convention: romanized Hinglish, Kalam script font.
 - No combining vector-arrow glyphs (U+20D7) anywhere in Ch01/Ch02 — write plain A·B, F·d.
+- The repo lives on iCloud-synced Desktop: files (incl. .git pack files!) can go
+  "dataless" and read as empty/truncated. If git errors with "pack ... far too short":
+  the pack content is fine — copy the pack/idx/rev out, `git verify-pack` the copy,
+  then atomically mv the verified copies back over the originals. Push often.
