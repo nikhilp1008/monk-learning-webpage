@@ -41,9 +41,10 @@ Total sections: 76
 - Sec 25 — JEE Main angle/proj/perp: base quantities, 67.6°, 8/7 proj, A-split diagram, √377/7, Pythagoras closes to |A|=3.
 - Sec 26 — JEE Adv triple products: single determinant → −10, parallelepiped box, V=10 not-coplanar chip, BAC−CAB → 9î−2ĵ+5k̂.
 - Sec 27 — Five product pitfalls checklist: cos/sin, species, anticommutativity, ĵ-minus, side-by-side zero-condition chips.
+- Sec 28 — Pro-tip closer: family chips, two instant-check boxes, pocket-seesaw line, 'Dot agrees · Cross turns' hero. ✅ SUBTOPIC 2 (15–28) COMPLETE.
 
 ## Current
-Sec 28 — next (last of subtopic 2).
+Sec 29 — next (start of subtopic 3: Two-Dimensional Kinematics).
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
