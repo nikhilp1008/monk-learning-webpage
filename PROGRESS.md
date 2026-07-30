@@ -14,10 +14,10 @@ Branch: `premium-board-ch7` · Port: **3007** · chapter_id: `29b5be47-3b75-550d
 7. Chapter 7 — Master Revision — sec 75–76
 
 ## Done
-(none yet)
+Sec 1–13 (subtopic 1: Newton's Law of Gravitation) — all verified (audits `[]`, finals eye-checked both languages) and committed.
 
 ## Current
-Subtopic 1 · starting sec 1.
+Subtopic 2 (Gravitational Field Intensity) · next: sec 14.
 
 ## Working notes
 - Per-section narration+reveals dumped to scratchpad `sections/secN.txt` by a python script that zips JSON sections with Supabase rows (script inline in session; re-derivable: fetch `lesson_sections?chapter_id=eq.<id>&order=position`, zip with JSON `sections` array, titles assert-match).
