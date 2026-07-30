@@ -20,12 +20,19 @@ Total sections: 76
 - Sec 4 — Parallelogram-law derivation pt1: OPQS construction + formula stack → R = √(A²+B²+2ABcosθ) hero box.
 - Sec 5 — Derivation pt2: tan α triangle + three special-case rows + |A−B| ≤ R ≤ A+B band hero.
 - Sec 6 — Toolkit 1: Â=A/|A| box, îĵk̂ chips, component form, Ax/Ay, reverse trip, from-axis warning + axes glyph.
+- Sec 7 — Toolkit 2: parallelogram R + tan α boxes, range band, Rx/Ry, 2-vs-3+ verdict.
+- Sec 8 — CBSE worked example: toy-cart figure (F at 60°, Fx/Fy), given chips, Fx=10/Fy≈17.3, answer box, √400 check.
 
 ## Current
-Sec 7 — next.
+Sec 9 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
   (board_reveal_at_english / board_reveal_at_hinglish per position).
 - Verify: `PORT=3003 CHAPTER_ID=a5970ed6-3b48-55f9-9b80-8abdd3d4c336 node verify-scene.mjs <sec> '<rev_en>' '<rev_hi>' ./shots/sec<M>`
 - Kit changes: none needed so far.
+- ENV WARNING (2026-07-30): Desktop is iCloud-synced; macOS evicted file contents (dataless flag)
+  under disk pressure (97% full) — tsc blocked forever in read(). Remedies: `brctl download <dir>`
+  for src/JSON; for node_modules just `npm ci` (6s from cache). node_modules and .next MUST be real
+  dirs inside the worktree — symlinking them into /private/tmp breaks Node module resolution
+  (realpath has no `node_modules`-named ancestor) and Turbopack rejects out-of-root symlinks.
