@@ -17,7 +17,10 @@ Branch: `premium-board-ch7` · Port: **3007** · chapter_id: `29b5be47-3b75-550d
 Sec 1–13 (subtopic 1: Newton's Law of Gravitation) — all verified (audits `[]`, finals eye-checked both languages) and committed.
 
 ## Current
-Subtopic 2 (Gravitational Field Intensity) · next: sec 14.
+Subtopic 3 (Acceleration due to Gravity) · next: sec 26.
+
+## Incident log
+- 2026-07-30: the shared object store (`monk-learning-webpage/.git`) had a truncated packfile (`pack-a44415a65…`, "far too short to be a packfile", SIGBUS on reads) blocking all commits. Fix: renamed its `.idx` to `corrupt-backup-pack-a44415a65.idx-bak` (pack kept on disk), bare-cloned origin into scratchpad, `git unpack-objects` restored all 270 pack objects as loose. `git fsck` still reports stale cache-tree pointers in some worktree indexes — benign, clears when each index is rewritten. Affects/benefits all chapter worktrees.
 
 ## Working notes
 - Per-section narration+reveals dumped to scratchpad `sections/secN.txt` by a python script that zips JSON sections with Supabase rows (script inline in session; re-derivable: fetch `lesson_sections?chapter_id=eq.<id>&order=position`, zip with JSON `sections` array, titles assert-match).
