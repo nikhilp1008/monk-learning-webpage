@@ -75,6 +75,7 @@ import Ch01Sec66 from "./Ch01Sec66";
 import Ch01Sec67 from "./Ch01Sec67";
 import Ch01Sec68 from "./Ch01Sec68";
 import Ch01Sec69 from "./Ch01Sec69";
+import Ch01Sec70 from "./Ch01Sec70";
 
 const CH01 = "8d7ccfaa-af16-53e4-9f28-823c8ea923d1"; // Class 11 · Units & Measurements
 
@@ -148,6 +149,7 @@ const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH01}:67`]: Ch01Sec67,
   [`${CH01}:68`]: Ch01Sec68,
   [`${CH01}:69`]: Ch01Sec69,
+  [`${CH01}:70`]: Ch01Sec70,
 };
 
 export function getScene(
