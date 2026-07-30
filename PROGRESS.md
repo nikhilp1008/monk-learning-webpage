@@ -32,9 +32,14 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 - Sec 14 — ground rules (up/down figure, anti-commutative, sinθ=0)
 - Sec 15 — cross toolkit (cyclic ring, determinant box, geometry chips, identity)
 - Sec 16 — perpendicularity proof (six-term cancel pairs, procedure, xy shortcut)
+- Sec 17 — compute A×B [CBSE] (numeric grid, zero check)
+- Sec 18 — angle from |A×B| [NEET] (magnitude card, half-of-max bar, 30°)
+- Sec 19 — triangle area + perpendicular [JEE Main] (shaded triangle, 5.5, k)
+- Sec 20 — find vector X [JEE Adv] (dot+cross system, labour chips)
+- Sec 21 — cross pitfalls (4 traps, hinge no-torque mini, dot-check pro-tip)
 
 ## Current
-16/70 done. Subtopic 3 in progress — next Sec 17 (compute A×B [CBSE]).
+Subtopics 1–3 COMPLETE (21/70). Next: Subtopic 4 — Torque and Angular Momentum, Sec 22.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch6_reveals.json (re-fetch via Supabase REST, cols `board_reveal_at_english/_hinglish`).
