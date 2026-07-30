@@ -49,9 +49,10 @@ Total sections: 76
 - Sec 33 — Toolkit: r→v→a derivative chain with d/dt arrows, Pythagoras magnitudes, averages, chain-rule warning.
 - Sec 34 — Toolkit 2: per-axis equations, v² relations, projectile/circular chips, R = v²/a⊥ box.
 - Sec 35 — Board worked example: v₀/a mini axes, v=4î+6ĵ, √52, r=8î+6ĵ, answer box, recipe verdict.
+- Sec 36 — NEET Pythagoras trap: options + ring on (B) 14, 6-8-10 triangle, √100 box, wrong-option anatomy, triangle families.
 
 ## Current
-Sec 36 — next.
+Sec 37 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
