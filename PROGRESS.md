@@ -18,8 +18,8 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 | 5 | Various Forms of Energy & Conservation of Energy | 35–41 | DONE |
 | 6 | Power | 42–49 | DONE |
 | 7 | Collisions | 50–57 | DONE |
-| 8 | Application: Motion in a Vertical Circle | 58–64 | next |
-| 9 | Chapter Recap | 65–66 | — |
+| 8 | Application: Motion in a Vertical Circle | 58–64 | DONE |
+| 9 | Chapter Recap | 65–66 | next |
 
 ## Done
 
@@ -95,6 +95,21 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
   NOTE: lesson JSON + reveals cached at scratchpad (ch05-lesson.json / ch05-reveals.json)
   because the repo copy keeps going iCloud-dataless. Dev server occasionally dies /
   crawls when iCloud thrashes — restart with npm run dev -- -p 3005 and curl-warm.
+- **Sec 58** — "Why the bucket of water stays in": fair-trick framing, top-of-circle
+  free-body circle drawing, T + mg = mv²/R, string-can-only-pull → slack argument.
+- **Sec 59** — critical speeds trio on one circle (√gR top, √3gR side, √5gR bottom),
+  T_bottom − T_top = 6mg gift, three-regime classification, rod footnote (2√gR).
+- **Sec 60** — full derivation: 3-step flowchart (top condition → T=0 → energy to
+  bottom) → v_top,min = √(gR) → v_bottom,min = √(5gR) → T_bottom = 6mg born.
+- **Sec 61** — key-formulas sheet: master tension eqn, energy relation, critical-speed
+  chips (√gR/√3gR/√5gR), 6mg gift, three regimes, rod vs string contrast.
+- **Sec 62** — worked example: completion check (v_top=4 vs √5≈2.24) THEN T=164N at
+  bottom — ordering rule (completion before tension) introduced here.
+- **Sec 63** — JEE Advanced closer: u=√(3gR) slack-angle problem, combining
+  v²=gR(1+2cosθ) with slack condition v²=−gR cosθ → cos θ = −1/3, θ ≈ 109.5°.
+- **Sec 64** — five pitfalls (non-constant speed, string-only-pulls, wrong min speed,
+  centripetal direction, tension-before-completion) + 3-step master method recap.
+  Subtopic 8 (58–64) COMPLETE — 64/66.
 
 ## Notes / gotchas
 
@@ -109,3 +124,12 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
   "dataless" and read as empty/truncated. If git errors with "pack ... far too short":
   the pack content is fine — copy the pack/idx/rev out, `git verify-pack` the copy,
   then atomically mv the verified copies back over the originals. Push often.
+- Dev server can go from "slow" to fully hung (TCP accepts, zero bytes ever sent back,
+  0% CPU) once `.next/dev/cache/turbopack` grows large (hundreds of MB) — Next.js's own
+  "Slow filesystem detected" benchmark confirms iCloud is the bottleneck, and a hung
+  PostCSS worker (globals.css) then panics with "timeout while receiving message from
+  process". Fix: `pkill -9 -f "next dev"`, `rm -rf .next`, restart, and expect the first
+  request after a cache wipe to take 1–3 min (cold Turbopack compile) — don't hammer it
+  with concurrent curls, issue ONE patient request with a long `--max-time`. This is
+  worse with 4 sibling worktree sessions' dev servers all running concurrently on the
+  same iCloud volume (ports 3003/3004/3006/3007 also live) — expect contention.
