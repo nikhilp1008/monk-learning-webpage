@@ -28,8 +28,13 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 - Sec 11 — varying-density rod [JEE Adv] (tapered hatch, 5L/9)
 - Sec 12 — pitfalls & pro-tips (4 traps + wire/disc chips + pro-tip box)
 
+- Sec 13 — cross product intro (parallelogram figure, door demo, RHR, area)
+- Sec 14 — ground rules (up/down figure, anti-commutative, sinθ=0)
+- Sec 15 — cross toolkit (cyclic ring, determinant box, geometry chips, identity)
+- Sec 16 — perpendicularity proof (six-term cancel pairs, procedure, xy shortcut)
+
 ## Current
-Subtopics 1–2 COMPLETE (12/70). Next: Subtopic 3 — Vector Product, Sec 13.
+16/70 done. Subtopic 3 in progress — next Sec 17 (compute A×B [CBSE]).
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch6_reveals.json (re-fetch via Supabase REST, cols `board_reveal_at_english/_hinglish`).
