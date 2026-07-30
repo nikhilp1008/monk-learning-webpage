@@ -47,9 +47,10 @@ Total sections: 76
 - Sec 31 — Integration derivation: a=dv/dt → v=v₀+at box, v=dr/dt → r-equation box, constant-a warning.
 - Sec 32 — Components prove independence: trajectory + projections diagram, î/ĵ sets, neither-mentions-other note, shared-t recipe.
 - Sec 33 — Toolkit: r→v→a derivative chain with d/dt arrows, Pythagoras magnitudes, averages, chain-rule warning.
+- Sec 34 — Toolkit 2: per-axis equations, v² relations, projectile/circular chips, R = v²/a⊥ box.
 
 ## Current
-Sec 34 — next.
+Sec 35 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
