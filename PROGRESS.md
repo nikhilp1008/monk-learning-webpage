@@ -34,6 +34,7 @@ Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷
 - [x] Sec 9 — WE2 rifle recoil: before/after, conservation reflex, v=2 m/s
 - [x] Sec 10 — WE3 floor bounce: heights→speeds, J = 8 N·s upward
 - [x] Sec 11 — WE4 sand on belt: variable mass, 6 N / 6 W / 12 W, half to heat
+- [x] Sec 12 — Tips: 4 pitfall rows + units sanity check. SUBTOPIC 1 DONE (12/92)
 
 ## Current
-Subtopic 1 (Newton's Laws and Impulse). Next: Sec 12.
+Subtopic 2 (Momentum Conservation, secs 13-23). Next: Sec 13.
