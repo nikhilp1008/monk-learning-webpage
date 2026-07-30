@@ -55,15 +55,17 @@ Total sections: 76
 - Sec 39 — Five 2D-kinematics pitfalls checklist (numbered circles rows).
 - Sec 40 — Pro-tip closer: two-1D-problems hero, procedure lines, two equation boxes, mnemonic hero. ✅ SUBTOPIC 3 (29–40) COMPLETE.
 - Sec 41 — Projectile intro: arch + g arrows, channel lines, two-bullet drop demo, land-together chip.
+- Sec 42 — Resolve the launch: u→ucosθ/usinθ diagram, channel tools, PARABOLA hero, T/H/R, assumptions + fine-print bars.
 
 ## Current
-Sec 42 — next.
+Sec 43 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
   (board_reveal_at_english / board_reveal_at_hinglish per position).
 - Verify: `PORT=3003 CHAPTER_ID=a5970ed6-3b48-55f9-9b80-8abdd3d4c336 node verify-scene.mjs <sec> '<rev_en>' '<rev_hi>' ./shots/sec<M>`
 - Kit changes: none needed so far.
+- Helper: scratchpad/ensure-dev.sh restarts the 3003 dev server if it died (machine OOM-kills it periodically). Chain it before each verify.
 - ENV WARNING (2026-07-30): Desktop is iCloud-synced; macOS evicted file contents (dataless flag)
   under disk pressure (97% full) — tsc blocked forever in read(). Remedies: `brctl download <dir>`
   for src/JSON; for node_modules just `npm ci` (6s from cache). node_modules and .next MUST be real
