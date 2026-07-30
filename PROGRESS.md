@@ -56,6 +56,7 @@ server served a stale bundle — restart it (kill port 3004, npm run dev -- -p 3
 - [x] Sec 29 — Smooth incline: tilted axes, T=mg sinθ, N=mg cosθ, sanity checks
 - [x] Sec 30 — Formula set: 5 bands incl. horizontal-string switch, pseudo set
 - [x] Sec 31 — WE1 lamp on two ropes: FBD, 2T sin30=W, T=100 N surprise
+- [x] Sec 32 — WE2 five and twelve: Pythagoras 13 N, equilibrant opposite, triples
 
 ## Current
-Subtopic 3 (Concurrent Forces and Equilibrium, secs 24-35). Next: Sec 32.
+Subtopic 3 (Concurrent Forces and Equilibrium, secs 24-35). Next: Sec 33.
