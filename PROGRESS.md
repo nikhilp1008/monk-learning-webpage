@@ -45,6 +45,7 @@ Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷
 - [x] Sec 20 — WE2 carrom striker: exchange shortcut, 3 elastic special cases
 - [x] Sec 21 — WE3 bullet-block-spring: two stages, v=1, x=5cm, slogan chip
 - [x] Sec 22 — WE4 2D shell: per-axis accounts, 5√13, CM sails on
+- [x] Sec 23 — Tips: 4 pitfalls, e=√(h/h), v_cm error-checker. SUBTOPIC 2 DONE (23/92)
 
 ## Current
-Subtopic 2 (Momentum Conservation, secs 13-23). Next: Sec 23.
+Subtopic 3 (Concurrent Forces and Equilibrium, secs 24-35). Next: Sec 24.
