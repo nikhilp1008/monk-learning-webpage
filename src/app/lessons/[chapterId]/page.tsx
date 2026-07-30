@@ -19,6 +19,11 @@ type Language = "english" | "hinglish";
 
 const TEACHER = "Drona";
 
+interface SubtopicGroup {
+  name: string;
+  sections: { section: SectionRow; originalIndex: number }[];
+}
+
 function parseBoardContent(json: unknown): BoardEventData[] {
   if (Array.isArray(json)) {
     return json as BoardEventData[];
@@ -61,10 +66,13 @@ export default function LessonPlayerPage() {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isBuffering, setIsBuffering] = useState<boolean>(false);
   const [currentTime, setCurrentTime] = useState<number>(0);
+  const [duration, setDuration] = useState<number>(0);
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
+  const [isScrubbing, setIsScrubbing] = useState<boolean>(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const boardContainerRef = useRef<HTMLDivElement | null>(null);
+  const scrubRef = useRef<HTMLDivElement | null>(null);
   const debugSeekRef = useRef<number | null>(null);
 
   const currentSection = sections[activeIndex] ?? null;
@@ -173,6 +181,25 @@ export default function LessonPlayerPage() {
   const activeCaption =
     revealedEventsCount > 0 ? captionSegments[revealedEventsCount - 1] || "" : "";
 
+  // Sections grouped under their subtopic, mirroring how the chapter's audio
+  // was authored (one module -> many parts).
+  const subtopicGroups = useMemo<SubtopicGroup[]>(() => {
+    if (sections.length === 0) return [];
+    const map = new Map<string, { section: SectionRow; originalIndex: number }[]>();
+    sections.forEach((sec, idx) => {
+      const name = (sec.subtopic && sec.subtopic.trim()) || "Overview & Main Topics";
+      if (!map.has(name)) {
+        map.set(name, []);
+      }
+      map.get(name)!.push({ section: sec, originalIndex: idx });
+    });
+    const groups: SubtopicGroup[] = [];
+    map.forEach((items, name) => {
+      groups.push({ name, sections: items });
+    });
+    return groups;
+  }, [sections]);
+
   // Keep the newest writing in view (event mode only — scenes are one stage).
   useEffect(() => {
     if (SceneComp) return;
@@ -234,6 +261,7 @@ export default function LessonPlayerPage() {
 
   const handleLoadedMetadata = useCallback(() => {
     if (audioRef.current) {
+      setDuration(audioRef.current.duration || 0);
       setIsBuffering(false);
       if (debugSeekRef.current != null) {
         const t = debugSeekRef.current;
@@ -278,6 +306,7 @@ export default function LessonPlayerPage() {
     audioEl.pause();
     audioEl.currentTime = 0;
     setCurrentTime(0);
+    setDuration(0);
     setIsBuffering(true);
 
     if (audioUrl) {
@@ -325,8 +354,26 @@ export default function LessonPlayerPage() {
     setCurrentTime(0);
   };
 
+  // Reels-style scrub: drag anywhere along the board's baseline to seek.
+  const seekFromClientX = useCallback(
+    (clientX: number) => {
+      const el = scrubRef.current;
+      const audioEl = audioRef.current;
+      if (!el || !audioEl || !duration) return;
+      const rect = el.getBoundingClientRect();
+      const frac = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+      const t = frac * duration;
+      audioEl.currentTime = t;
+      setCurrentTime(t);
+    },
+    [duration]
+  );
+
+  const progressFrac =
+    duration > 0 ? Math.min(1, Math.max(0, currentTime / duration)) : 0;
+
   return (
-    <div className="min-h-screen flex flex-col bg-ruled-body">
+    <div className="h-screen overflow-hidden flex flex-col bg-ruled-body">
       <Header />
 
       <audio
@@ -341,7 +388,7 @@ export default function LessonPlayerPage() {
         onEnded={handleEnded}
       />
 
-      <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 pt-[30px] pb-16 flex flex-col animate-ml-rise">
+      <main className="flex-1 min-h-0 max-w-[1180px] w-full mx-auto px-6 md:px-11 pt-5 pb-5 flex flex-col animate-ml-rise">
         {loading ? (
           <div className="py-24 flex flex-col items-center justify-center gap-3 text-ink-muted flex-1">
             <div className="w-8 h-8 border-3 border-orange border-t-transparent rounded-full animate-ml-spin" />
@@ -361,9 +408,12 @@ export default function LessonPlayerPage() {
             </Link>
           </div>
         ) : (
-          <div style={{ margin: "0 calc(50% - 50vw + 36px)" }}>
+          <div
+            className="flex-1 min-h-0 flex flex-col"
+            style={{ margin: "0 calc(50% - 50vw + 36px)" }}
+          >
             {/* Top Bar Controls */}
-            <div className="flex items-center justify-between gap-3.5 flex-wrap mb-[18px]">
+            <div className="flex-none flex items-center justify-between gap-3.5 flex-wrap mb-3.5">
               <div className="flex items-center gap-3.5">
                 <Link
                   href="/lessons"
@@ -433,8 +483,8 @@ export default function LessonPlayerPage() {
               </div>
             </div>
 
-            {/* Board + Sidebar Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,3.4fr)_minmax(0,1fr)] gap-5 items-stretch h-[calc(100vh-320px)] min-h-[460px]">
+            {/* Board + Sidebar Grid — fills the rest of the viewport */}
+            <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-[minmax(0,3.4fr)_minmax(0,1fr)] gap-5 items-stretch">
               {/* The Board */}
               <div
                 className={`flex flex-col min-h-0 bg-ruled-board border-[1.5px] border-ink ${
@@ -568,6 +618,46 @@ export default function LessonPlayerPage() {
                     ))
                   )}
                 </div>
+
+                {/* Baseline scrub — the board's bottom rule doubles as the
+                    progress line; drag anywhere along it to move through
+                    the lesson (reels-style, no external controls). */}
+                <div
+                  ref={scrubRef}
+                  onPointerDown={(e) => {
+                    e.currentTarget.setPointerCapture(e.pointerId);
+                    setIsScrubbing(true);
+                    seekFromClientX(e.clientX);
+                  }}
+                  onPointerMove={(e) => {
+                    if (isScrubbing) seekFromClientX(e.clientX);
+                  }}
+                  onPointerUp={() => setIsScrubbing(false)}
+                  onPointerCancel={() => setIsScrubbing(false)}
+                  className={`group absolute h-[18px] flex items-end cursor-pointer select-none ${
+                    isFullScreen
+                      ? "left-[60px] right-10 bottom-[7px]"
+                      : "left-[52px] right-[26px] bottom-[5px]"
+                  } ${duration > 0 ? "" : "pointer-events-none opacity-0"}`}
+                  style={{ touchAction: "none" }}
+                >
+                  <div
+                    className={`relative w-full rounded-full bg-ink/8 transition-all ${
+                      isScrubbing ? "h-[5px]" : "h-[2.5px] group-hover:h-[5px]"
+                    }`}
+                  >
+                    <div
+                      className="absolute inset-y-0 left-0 rounded-full bg-orange"
+                      style={{ width: `${progressFrac * 100}%` }}
+                    />
+                    <span
+                      className={`absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-[11px] h-[11px] rounded-full bg-orange border-2 border-white shadow-sm transition-opacity ${
+                        isScrubbing ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                      }`}
+                      style={{ left: `${progressFrac * 100}%` }}
+                    />
+                  </div>
+                </div>
               </div>
 
               {/* Sidebar — In this chapter */}
@@ -576,46 +666,63 @@ export default function LessonPlayerPage() {
                   In this chapter
                 </span>
 
-                <div className="flex flex-col gap-0.5">
-                  {sections.map((section, idx) => {
-                    const isDone = idx < activeIndex;
-                    const isCurrent = idx === activeIndex;
-                    const posNum = section.position ?? idx + 1;
+                {subtopicGroups.map((group, gIdx) => (
+                  <div key={gIdx} className={gIdx > 0 ? "mt-4" : ""}>
+                    {/* Subtopic module header */}
+                    <div className="flex items-baseline justify-between gap-2 mx-2 mb-1 pb-1.5 border-b border-dashed border-[rgba(28,26,22,0.12)]">
+                      <span className="min-w-0 font-bold text-[0.78rem] text-ink leading-snug">
+                        <span className="font-script font-bold text-[0.78rem] text-ink-dim mr-1.5">
+                          {gIdx + 1}
+                        </span>
+                        {group.name}
+                      </span>
+                      <span className="flex-none text-[0.62rem] font-bold text-ink-muted">
+                        {group.sections.length} parts
+                      </span>
+                    </div>
 
-                    return (
-                      <button
-                        key={section.id}
-                        onClick={() => handleSelectSection(idx)}
-                        className="w-full text-left flex items-center gap-[11px] p-[11px_12px] rounded-[11px] cursor-pointer hover:bg-cream-card transition-colors"
-                      >
-                        <span
-                          className={`w-[22px] h-[22px] rounded-full flex-none grid place-items-center font-bold text-[0.68rem] transition-colors ${
-                            isDone
-                              ? "border-[1.5px] border-transparent"
-                              : isCurrent
-                              ? "bg-white border-[1.5px] border-orange text-orange-dark"
-                              : "bg-white border-[1.5px] border-[rgba(28,26,22,0.16)] text-ink-muted"
-                          }`}
-                        >
-                          {isDone ? (
-                            <span className="w-2 h-2 rounded-full bg-green-badge" />
-                          ) : (
-                            posNum
-                          )}
-                        </span>
-                        <span
-                          className={`flex-1 min-w-0 transition-all ${
-                            isCurrent
-                              ? "text-[1.02rem] font-bold text-ink"
-                              : "text-[0.9rem] font-semibold text-ink-light"
-                          }`}
-                        >
-                          {section.title || `Part ${posNum}`}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
+                    <div className="flex flex-col gap-0.5">
+                      {group.sections.map(({ section, originalIndex }) => {
+                        const isDone = originalIndex < activeIndex;
+                        const isCurrent = originalIndex === activeIndex;
+                        const posNum = section.position ?? originalIndex + 1;
+
+                        return (
+                          <button
+                            key={section.id}
+                            onClick={() => handleSelectSection(originalIndex)}
+                            className="w-full text-left flex items-center gap-[11px] p-[9px_12px] rounded-[11px] cursor-pointer hover:bg-cream-card transition-colors"
+                          >
+                            <span
+                              className={`w-[22px] h-[22px] rounded-full flex-none grid place-items-center font-bold text-[0.68rem] transition-colors ${
+                                isDone
+                                  ? "border-[1.5px] border-transparent"
+                                  : isCurrent
+                                  ? "bg-white border-[1.5px] border-orange text-orange-dark"
+                                  : "bg-white border-[1.5px] border-[rgba(28,26,22,0.16)] text-ink-muted"
+                              }`}
+                            >
+                              {isDone ? (
+                                <span className="w-2 h-2 rounded-full bg-green-badge" />
+                              ) : (
+                                posNum
+                              )}
+                            </span>
+                            <span
+                              className={`flex-1 min-w-0 transition-all ${
+                                isCurrent
+                                  ? "text-[0.98rem] font-bold text-ink"
+                                  : "text-[0.88rem] font-semibold text-ink-light"
+                              }`}
+                            >
+                              {section.title || `Part ${posNum}`}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
 
                 <p className="text-[0.76rem] text-ink-muted mt-2.5 mx-2">
                   Pick any part and {TEACHER} jumps straight there.
@@ -624,7 +731,7 @@ export default function LessonPlayerPage() {
             </div>
 
             {/* Live Captions */}
-            <div className="bg-dark-bg text-[#EFEBDD] rounded-[14px] p-[13px_18px] mt-4">
+            <div className="flex-none bg-dark-bg text-[#EFEBDD] rounded-[14px] p-[13px_18px] mt-4">
               <div className="flex justify-between font-bold text-[0.56rem] tracking-[0.12em] uppercase text-orange mb-[5px]">
                 <span>{TEACHER} · live captions</span>
                 <em className="not-italic text-[#938d80] tracking-[0.02em] normal-case">

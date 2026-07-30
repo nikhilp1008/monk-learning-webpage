@@ -80,8 +80,8 @@ export function Header() {
 
   return (
     <header className="flex flex-col flex-none w-full z-40">
-      {/* Night Band */}
-      <div className="relative bg-[#16130E] text-[#EFEBDD] px-6 md:px-11 py-4.5 overflow-hidden">
+      {/* Night Band — full width, logo pinned top-left */}
+      <div className="relative bg-[#16130E] text-[#EFEBDD] px-6 md:px-9 py-4.5 overflow-hidden">
         <span
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -89,7 +89,7 @@ export function Header() {
               "radial-gradient(90% 120% at 30% -20%, rgba(238,163,31,0.1), transparent 60%)",
           }}
         />
-        <div className="relative max-w-[1180px] w-full mx-auto flex items-center justify-between gap-6">
+        <div className="relative w-full flex items-center justify-between gap-6">
           <Link href="/dashboard" className="flex items-center gap-1.5 flex-none">
             <svg viewBox="0 0 120 120" className="w-[44px] h-[44px]" fill="none">
               <circle
@@ -142,9 +142,9 @@ export function Header() {
         </div>
       </div>
 
-      {/* Sticky Nav Row */}
-      <div className="sticky top-0 bg-white/70 backdrop-blur-md border-b border-border-subtle px-6 md:px-11 py-2.5 z-30">
-        <div className="max-w-[1180px] w-full mx-auto flex items-center justify-between gap-2 overflow-x-auto">
+      {/* Nav Row — full width, links pinned left */}
+      <div className="bg-white/70 backdrop-blur-md border-b border-border-subtle px-6 md:px-9 py-2.5 z-30">
+        <div className="w-full flex items-center justify-between gap-2 overflow-x-auto">
           <nav className="flex items-center gap-1.5 flex-nowrap">
             {navItems.map((item) => {
               const isActive =
