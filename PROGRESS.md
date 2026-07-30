@@ -58,9 +58,10 @@ Total sections: 76
 - Sec 42 — Resolve the launch: u→ucosθ/usinθ diagram, channel tools, PARABOLA hero, T/H/R, assumptions + fine-print bars.
 - Sec 43 — T & H derivation: labelled parabola (apex/H/R), y=0 condition, T and H hero boxes, no-cosθ note.
 - Sec 44 — Range & trajectory: R = u²sin2θ/g and Rmax boxes, eliminate-t, y = xtanθ−gx²/2u²cos²θ box, parabola form.
+- Sec 45 — Toolkit 1: ux/uy, velocity & position columns, trajectory box, apex speed fact.
 
 ## Current
-Sec 45 — next.
+Sec 46 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
