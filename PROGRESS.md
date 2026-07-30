@@ -24,9 +24,10 @@ Total sections: 76
 - Sec 8 — CBSE worked example: toy-cart figure (F at 60°, Fx/Fy), given chips, Fx=10/Fy≈17.3, answer box, √400 check.
 - Sec 9 — NEET speed trap: option chips + bait ring on (B) 5, number-line band [1,7], ✓✓✓/✗ tests, (D) 8 N answer.
 - Sec 10 — JEE Main two-ways: 6m+8m@60° walk diagram + Method-1 component stack + Method-2 parallelogram check + verdict.
+- Sec 11 — JEE Adv pt1: matching-components dot product → −3 box, sign⇒obtuse note, √14·√6 magnitudes, θ≈109° hero.
 
 ## Current
-Sec 11 — next.
+Sec 12 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
