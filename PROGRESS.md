@@ -13,8 +13,8 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 |---|----------|----------|--------|
 | 1 | Foundations: The Scalar (Dot) Product | 1–7 | DONE |
 | 2 | Work and the Work-Energy Theorem | 8–17 | DONE |
-| 3 | Mechanical Energy: Kinetic and Potential | 18–26 | next |
-| 4 | Conservative and Non-Conservative Forces | 27–34 | — |
+| 3 | Mechanical Energy: Kinetic and Potential | 18–26 | DONE |
+| 4 | Conservative and Non-Conservative Forces | 27–34 | next |
 | 5 | Various Forms of Energy & Conservation of Energy | 35–41 | — |
 | 6 | Power | 42–49 | — |
 | 7 | Collisions | 50–57 | — |
@@ -47,6 +47,16 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 - **Sec 16** — JEE Advanced frames: ground +36 J vs train 0 J, both verified, never mix.
 - **Sec 17** — four pitfalls + sign-first reflex + SAD-angles chips.
   Subtopic 2 (8–17) COMPLETE — 17/66.
+- **Sec 18** — two flavours split board (K | U) with cricket-ball + hidden-PE icons.
+- **Sec 19** — rechargeable-battery picture (rooftop tank) + book-on-table reference trap.
+- **Sec 20** — PE of a system, mgh vs −Gm₁m₂/r regimes, E = K + U pendulum bars.
+- **Sec 21** — spring PE derivation: Hooke line, triangle, difference-of-squares warning.
+- **Sec 22** — PE-curve reading: −slope force, equilibria, E-line turning points.
+- **Sec 23** — formula sheet: KE faces, ΔU = −∫F·dr, standard PEs, units, K = p²/2m.
+- **Sec 24** — shelf PE 150 J vs 90 J + p ∝ √K NEET trap.
+- **Sec 25** — U(x) drill (−2 N, x=2 stable) + cubic trapping well (JEE Advanced).
+- **Sec 26** — five pitfalls + three-box PE-curve drill.
+  Subtopic 3 (18–26) COMPLETE — 26/66.
 
 ## Notes / gotchas
 
