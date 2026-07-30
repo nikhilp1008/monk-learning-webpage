@@ -34,9 +34,10 @@ Total sections: 76
 - Sec 18 — Seesaw: cos/sin sweep curves 0–180°, ∥/⊥ markers, tail-to-tail + 3D fine print, dot-0-⊥ vs cross-0-∥ trap.
 - Sec 19 — Dot component derivation: bracket expansion, unit products, 3×3 grid with green diagonal + crossed red zeros, AxBx+AyBy+AzBz hero.
 - Sec 20 — Cross determinant derivation: î-ĵ-k̂ cycle wheel (green arcs), collected components, determinant array, +−+ WHY.
+- Sec 21 — Dot toolkit: definition box, properties col, cosθ finder box, projection line, W/P/Φ application rows.
 
 ## Current
-Sec 21 — next.
+Sec 22 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
