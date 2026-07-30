@@ -788,3 +788,67 @@ Object.assign(REGISTRY, {
   [`${CH06}:39`]: Ch06Sec39,
   [`${CH06}:40`]: Ch06Sec40,
 });
+/* Ch07 · Gravitation — scene block (branch premium-board-ch7)         */
+/* ================================================================== */
+import Ch07Sec1 from "./Ch07Sec1";
+import Ch07Sec2 from "./Ch07Sec2";
+import Ch07Sec3 from "./Ch07Sec3";
+import Ch07Sec4 from "./Ch07Sec4";
+import Ch07Sec5 from "./Ch07Sec5";
+import Ch07Sec6 from "./Ch07Sec6";
+import Ch07Sec7 from "./Ch07Sec7";
+import Ch07Sec8 from "./Ch07Sec8";
+import Ch07Sec9 from "./Ch07Sec9";
+import Ch07Sec10 from "./Ch07Sec10";
+import Ch07Sec11 from "./Ch07Sec11";
+import Ch07Sec12 from "./Ch07Sec12";
+import Ch07Sec13 from "./Ch07Sec13";
+import Ch07Sec14 from "./Ch07Sec14";
+import Ch07Sec15 from "./Ch07Sec15";
+import Ch07Sec16 from "./Ch07Sec16";
+import Ch07Sec17 from "./Ch07Sec17";
+import Ch07Sec18 from "./Ch07Sec18";
+import Ch07Sec19 from "./Ch07Sec19";
+import Ch07Sec20 from "./Ch07Sec20";
+import Ch07Sec21 from "./Ch07Sec21";
+import Ch07Sec22 from "./Ch07Sec22";
+import Ch07Sec23 from "./Ch07Sec23";
+import Ch07Sec24 from "./Ch07Sec24";
+import Ch07Sec25 from "./Ch07Sec25";
+import Ch07Sec26 from "./Ch07Sec26";
+import Ch07Sec27 from "./Ch07Sec27";
+import Ch07Sec28 from "./Ch07Sec28";
+import Ch07Sec29 from "./Ch07Sec29";
+
+const CH07 = "29b5be47-3b75-550d-9636-ad45a901d4dd"; // Class 11 · Gravitation
+
+REGISTRY[`${CH07}:1`] = Ch07Sec1;
+REGISTRY[`${CH07}:2`] = Ch07Sec2;
+REGISTRY[`${CH07}:3`] = Ch07Sec3;
+REGISTRY[`${CH07}:4`] = Ch07Sec4;
+REGISTRY[`${CH07}:5`] = Ch07Sec5;
+REGISTRY[`${CH07}:6`] = Ch07Sec6;
+REGISTRY[`${CH07}:7`] = Ch07Sec7;
+REGISTRY[`${CH07}:8`] = Ch07Sec8;
+REGISTRY[`${CH07}:9`] = Ch07Sec9;
+REGISTRY[`${CH07}:10`] = Ch07Sec10;
+REGISTRY[`${CH07}:11`] = Ch07Sec11;
+REGISTRY[`${CH07}:12`] = Ch07Sec12;
+REGISTRY[`${CH07}:13`] = Ch07Sec13;
+REGISTRY[`${CH07}:14`] = Ch07Sec14;
+REGISTRY[`${CH07}:15`] = Ch07Sec15;
+REGISTRY[`${CH07}:16`] = Ch07Sec16;
+REGISTRY[`${CH07}:17`] = Ch07Sec17;
+REGISTRY[`${CH07}:18`] = Ch07Sec18;
+REGISTRY[`${CH07}:19`] = Ch07Sec19;
+REGISTRY[`${CH07}:20`] = Ch07Sec20;
+REGISTRY[`${CH07}:21`] = Ch07Sec21;
+REGISTRY[`${CH07}:22`] = Ch07Sec22;
+REGISTRY[`${CH07}:23`] = Ch07Sec23;
+REGISTRY[`${CH07}:24`] = Ch07Sec24;
+REGISTRY[`${CH07}:25`] = Ch07Sec25;
+REGISTRY[`${CH07}:26`] = Ch07Sec26;
+REGISTRY[`${CH07}:27`] = Ch07Sec27;
+REGISTRY[`${CH07}:28`] = Ch07Sec28;
+REGISTRY[`${CH07}:29`] = Ch07Sec29;
+/* ============================ end Ch07 ============================ */
