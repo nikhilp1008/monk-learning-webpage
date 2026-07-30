@@ -359,10 +359,12 @@ export type { SceneProps };
 import Ch07Sec1 from "./Ch07Sec1";
 import Ch07Sec2 from "./Ch07Sec2";
 import Ch07Sec3 from "./Ch07Sec3";
+import Ch07Sec4 from "./Ch07Sec4";
 
 const CH07 = "29b5be47-3b75-550d-9636-ad45a901d4dd"; // Class 11 · Gravitation
 
 REGISTRY[`${CH07}:1`] = Ch07Sec1;
 REGISTRY[`${CH07}:2`] = Ch07Sec2;
 REGISTRY[`${CH07}:3`] = Ch07Sec3;
+REGISTRY[`${CH07}:4`] = Ch07Sec4;
 /* ============================ end Ch07 ============================ */
