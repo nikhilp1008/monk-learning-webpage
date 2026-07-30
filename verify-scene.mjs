@@ -58,6 +58,22 @@ async function runLang(lang, revs) {
   for (let k = 0; k < times.length; k++) {
     await seek(times[k]);
     const label = k < revs.length ? `b${k}` : "final";
+    if (label === "final") {
+      // last-beat staggers play in real time even after seek — flush them so
+      // the audit sees the fully settled board
+      await page.evaluate(() => {
+        document.querySelectorAll("g.sc-fade").forEach((g) => {
+          if (g.style.opacity !== "0") {
+            g.style.transition = "none";
+            g.style.transform = "none";
+          }
+        });
+        document.querySelectorAll("svg path").forEach((p) => {
+          if (p.style.strokeDashoffset === "0") p.style.transition = "none";
+        });
+      });
+      await page.waitForTimeout(300);
+    }
     await page.screenshot({ path: `${OUT}/${lang}-${label}.png` });
     const hits = await audit();
     console.log(`AUDIT ${lang} ${label} t=${times[k].toFixed(1)}: ${JSON.stringify(hits)}`);
