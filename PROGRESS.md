@@ -42,9 +42,10 @@ Total sections: 76
 - Sec 26 — JEE Adv triple products: single determinant → −10, parallelepiped box, V=10 not-coplanar chip, BAC−CAB → 9î−2ĵ+5k̂.
 - Sec 27 — Five product pitfalls checklist: cos/sin, species, anticommutativity, ĵ-minus, side-by-side zero-condition chips.
 - Sec 28 — Pro-tip closer: family chips, two instant-check boxes, pocket-seesaw line, 'Dot agrees · Cross turns' hero. ✅ SUBTOPIC 2 (15–28) COMPLETE.
+- Sec 29 — Independence big idea: carrom glide+drift diagram, x/y-story lines, clock chip+glyph, independence verdict.
 
 ## Current
-Sec 29 — next (start of subtopic 3: Two-Dimensional Kinematics).
+Sec 30 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
