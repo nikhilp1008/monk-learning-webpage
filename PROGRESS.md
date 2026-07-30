@@ -26,6 +26,7 @@ All audit lines must be []. Register scenes ONLY in the delimited Ch04 block at 
 - [x] Sec 2 — Momentum p=mv, truck vs bike, F=dp/dt, impulse intro
 - [x] Sec 3 — Third Law: bat-ball pair, never cancels, F=ma limits
 - [x] Sec 4 — Derivation ladder: F=dp/dt → assume m const → F=ma
+- [x] Sec 5 — Impulse-momentum theorem, F-t area graph, same-area curves
 
 ## Current
-Subtopic 1 (Newton's Laws and Impulse). Next: Sec 5.
+Subtopic 1 (Newton's Laws and Impulse). Next: Sec 6.
