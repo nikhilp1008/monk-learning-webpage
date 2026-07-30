@@ -71,8 +71,12 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 - Sec 49 — solid sphere by integration [JEE Adv] (sliced discs, I=(2/5)MR²)
 - Sec 50 — MOI pitfalls (4 traps + parallel/perpendicular pro-tip)
 
+- Sec 51 — rotation mirrors linear motion (wheel θ/ω/α figure, symbol-swap chips)
+- Sec 52 — rotational second law + energy (5-row analogy table, τ=Iα, K_rot, v=ωr)
+- Sec 53 — rotational motion toolkit (v=ωr figure, 3 kinematic eqs, 7 formula chips)
+
 ## Current
-Subtopics 1–6 COMPLETE (50/70). Next: Subtopic 7 — Rotational Kinematics and Dynamics, Sec 51.
+53/70 done. Subtopic 7 in progress — next Sec 54 (deriving the rotational equations of motion).
 
 ## Workflow notes
 - 2026-07-30 PM: node_modules suffered NUL-file corruption (iCloud eviction on Desktop). Layout is now `node_modules -> node_modules.nosync` (symlink). Type-check with `npx tsc --noEmit -p tsconfig.check.json` (untracked local config that also excludes node_modules.nosync); plain `npx tsc --noEmit` scans node_modules.nosync and fails.
@@ -91,3 +95,13 @@ The :3006 dev server is now run by the COORDINATOR session as a persistent backg
   process group when the call ends. If you must own the server, launch it with Bash run_in_background: true
   (the command being ONLY the server, no wait-loop in the same call), then poll in a separate call.
 - node_modules and shots are now *.nosync symlinks (iCloud corruption fix) — this is intentional, don't "repair" them.
+
+## 2026-07-30 ~18:30 — live iCloud Desktop-sync instability
+Mid-Sec53, the shell cwd briefly reported `/Users/nikhi/Desktop/monk-scenes-ch6` as deleted, and
+`ls ~/Desktop` returned wildly different (near-empty) listings across consecutive calls within seconds —
+this is iCloud Desktop & Documents sync doing a live reconciliation pass (two `Desktop - Nikhil's
+MacBook Pro[- 1]` conflict folders are present under `~/Desktop`), not anything this session did.
+Everything reappeared intact within ~10s (git history, working tree, all sibling worktrees). No data
+was lost. If this recurs: don't panic-fix, just re-run `pwd`/`ls`/`git status` a couple of times a few
+seconds apart — it self-resolves. The port-3006 server did die in the same window (separate from the
+coordinator's) and needed a manual kill+relaunch (see SERVER NOTE above).
