@@ -56,9 +56,10 @@ Total sections: 76
 - Sec 40 — Pro-tip closer: two-1D-problems hero, procedure lines, two equation boxes, mnemonic hero. ✅ SUBTOPIC 3 (29–40) COMPLETE.
 - Sec 41 — Projectile intro: arch + g arrows, channel lines, two-bullet drop demo, land-together chip.
 - Sec 42 — Resolve the launch: u→ucosθ/usinθ diagram, channel tools, PARABOLA hero, T/H/R, assumptions + fine-print bars.
+- Sec 43 — T & H derivation: labelled parabola (apex/H/R), y=0 condition, T and H hero boxes, no-cosθ note.
 
 ## Current
-Sec 43 — next.
+Sec 44 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
