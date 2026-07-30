@@ -31,6 +31,7 @@ Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷
 - [x] Sec 6 — Momentum conservation from Third Law, isolated A/B system
 - [x] Sec 7 — Formula set: four bands + N·s ≡ kg·m/s free-mark note
 - [x] Sec 8 — WE1 cricket ball: sign convention, J=11.2 N·s, F=1120 N, 1.6 trap
+- [x] Sec 9 — WE2 rifle recoil: before/after, conservation reflex, v=2 m/s
 
 ## Current
-Subtopic 1 (Newton's Laws and Impulse). Next: Sec 9.
+Subtopic 1 (Newton's Laws and Impulse). Next: Sec 10.
