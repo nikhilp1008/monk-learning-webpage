@@ -10,6 +10,8 @@ Verify per section:
 `PORT=3004 CHAPTER_ID=50ae6550-951b-599c-b352-1d6e5f84bc3b node verify-scene.mjs <sec> '<rev_en>' '<rev_hi>' ./shots/sec<M>`
 All audit lines must be []. Register scenes ONLY in the delimited Ch04 block at END of index.ts.
 Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷' or spaces.
+Gotcha: if a final shot shows the KaTeX fallback board instead of the scene, the dev
+server served a stale bundle — restart it (kill port 3004, npm run dev -- -p 3004) and re-verify.
 
 ## Subtopics
 1. Newton's Laws and Impulse — secs 1–12
@@ -52,6 +54,7 @@ Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷
 - [x] Sec 27 — Lifts + pseudo-force: 4 panels, R=m(g±a), tilted bob, discipline
 - [x] Sec 28 — Lami derivation: star→closed triangle, 180°−α flip, sine rule
 - [x] Sec 29 — Smooth incline: tilted axes, T=mg sinθ, N=mg cosθ, sanity checks
+- [x] Sec 30 — Formula set: 5 bands incl. horizontal-string switch, pseudo set
 
 ## Current
-Subtopic 3 (Concurrent Forces and Equilibrium, secs 24-35). Next: Sec 30.
+Subtopic 3 (Concurrent Forces and Equilibrium, secs 24-35). Next: Sec 31.
