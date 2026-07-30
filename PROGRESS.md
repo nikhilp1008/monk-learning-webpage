@@ -62,9 +62,10 @@ Total sections: 76
 - Sec 46 — Toolkit 2: T/H/R boxes, Rmax=4Hmax, handy relations, horizontal-projectile column, sin²θ-vs-sin2θ warning.
 - Sec 47 — Board worked example: trig chips, T=2/H=5/R≈34.6 columns, answer box, squaring warning.
 - Sec 48 — NEET apex-speed trap: ring on (A) 0, arc + apex u cosθ arrow, 10√3 box, never-zero cue.
+- Sec 49 — JEE Main t=1s: trig chips, component tracking, √180 speed + 26.6°, y=11 m box, gentler-climb verdict.
 
 ## Current
-Sec 49 — next.
+Sec 50 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
