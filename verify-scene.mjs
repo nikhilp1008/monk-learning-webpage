@@ -8,7 +8,7 @@ const SEC = process.argv[2];
 const REV_EN = JSON.parse(process.argv[3]);
 const REV_HI = JSON.parse(process.argv[4]);
 const OUT = process.argv[5] || `./shots/sec${SEC}`;
-const CHAPTER = "8d7ccfaa-af16-53e4-9f28-823c8ea923d1";
+const CHAPTER = process.env.CHAPTER_ID || "8d7ccfaa-af16-53e4-9f28-823c8ea923d1";
 fs.mkdirSync(OUT, { recursive: true });
 
 const browser = await chromium.launch({
