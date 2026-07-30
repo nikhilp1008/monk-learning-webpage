@@ -62,6 +62,7 @@ server served a stale bundle — restart it (kill port 3004, npm run dev -- -p 3
 - [x] Sec 35 — Tips: 4 pitfall rows, smart axes, Lami reflex, memory aids. SUBTOPIC 3 DONE (35/92)
 - [x] Sec 36 — Friction graph: almirah, self-adjusting static, ceiling, kinetic drop
 - [x] Sec 37 — Why friction exists: zoom panel welds, mu=f/N, empirical honesty
+- [x] Sec 38 — Two angles: tan λ=μ, tan θr=μs, θr=λ, sand cone
 
 ## Current
-Subtopic 4 (Friction, secs 36-46). Next: Sec 38.
+Subtopic 4 (Friction, secs 36-46). Next: Sec 39.
