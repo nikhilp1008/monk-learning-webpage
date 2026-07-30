@@ -30,9 +30,10 @@ Total sections: 76
 - Sec 14 — Pro-tips closer: RESOLVE hero box, two sanity-check boxes, DOT-along/CROSS-across split. ✅ SUBTOPIC 1 (1–14) COMPLETE.
 - Sec 15 — Dot vs cross intro: two-panel shadow/normal diagrams, scalar-vs-vector red note, mirror rows, physics-question verdict.
 - Sec 16 — Dot product deep-dive: thela push F/Fx/Fy split, AB cosθ box, projection line, number-not-vector, ⊥→0 bag example.
+- Sec 17 — Cross product: spanner+bolt demo (along vs across pushes, τ out of plane), AB sinθ n̂ box, right-hand rule, vector-answer note, ∥→0.
 
 ## Current
-Sec 17 — next.
+Sec 18 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
