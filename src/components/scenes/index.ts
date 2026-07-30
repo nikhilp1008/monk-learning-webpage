@@ -171,9 +171,13 @@ import Ch02Sec70 from "./Ch02Sec70";
 import Ch02Sec71 from "./Ch02Sec71";
 import Ch02Sec72 from "./Ch02Sec72";
 import Ch02Sec73 from "./Ch02Sec73";
+// ── Ch05 imports (Work, Energy & Power) — session branch premium-board-ch5 ──
+import Ch05Sec1 from "./Ch05Sec1";
+// ── end Ch05 imports ──
 
 const CH01 = "8d7ccfaa-af16-53e4-9f28-823c8ea923d1"; // Class 11 · Units & Measurements
 const CH02 = "563ae2b1-3427-537a-afde-f7fbc193731f"; // Class 11 · Motion in a Straight Line
+const CH05 = "a88de5d2-84e4-5489-878a-f17a195e3267"; // Class 11 · Work, Energy & Power
 
 const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH01}:1`]: Ch01Sec1,
@@ -341,6 +345,9 @@ const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH02}:71`]: Ch02Sec71,
   [`${CH02}:72`]: Ch02Sec72,
   [`${CH02}:73`]: Ch02Sec73,
+  // ── Ch05 registry (Work, Energy & Power) — session branch premium-board-ch5 ──
+  [`${CH05}:1`]: Ch05Sec1,
+  // ── end Ch05 registry ──
 };
 
 export function getScene(
