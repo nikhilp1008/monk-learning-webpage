@@ -36,9 +36,10 @@ Total sections: 76
 - Sec 20 — Cross determinant derivation: î-ĵ-k̂ cycle wheel (green arcs), collected components, determinant array, +−+ WHY.
 - Sec 21 — Dot toolkit: definition box, properties col, cosθ finder box, projection line, W/P/Φ application rows.
 - Sec 22 — Cross toolkit: AB sinθ n̂ box, properties, mini determinant, parallelogram-area glyph, triple products, τ/L/qv×B rows.
+- Sec 23 — Work worked example: F/d arrows, identification line, 6+12 → W=18 J box, scalar shape check, auto-projection note.
 
 ## Current
-Sec 23 — next.
+Sec 24 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
