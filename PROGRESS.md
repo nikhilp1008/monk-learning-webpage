@@ -14,8 +14,8 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 | 1 | Foundations: The Scalar (Dot) Product | 1–7 | DONE |
 | 2 | Work and the Work-Energy Theorem | 8–17 | DONE |
 | 3 | Mechanical Energy: Kinetic and Potential | 18–26 | DONE |
-| 4 | Conservative and Non-Conservative Forces | 27–34 | next |
-| 5 | Various Forms of Energy & Conservation of Energy | 35–41 | — |
+| 4 | Conservative and Non-Conservative Forces | 27–34 | DONE |
+| 5 | Various Forms of Energy & Conservation of Energy | 35–41 | next |
 | 6 | Power | 42–49 | — |
 | 7 | Collisions | 50–57 | — |
 | 8 | Application: Motion in a Vertical Circle | 58–64 | — |
@@ -57,6 +57,15 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 - **Sec 25** — U(x) drill (−2 N, x=2 stable) + cubic trapping well (JEE Advanced).
 - **Sec 26** — five pitfalls + three-box PE-curve drill.
   Subtopic 3 (18–26) COMPLETE — 26/66.
+- **Sec 27** — two shopkeepers (honest/skimmer) split board.
+- **Sec 28** — three tests: home→market routes, round trip, three-test panel.
+- **Sec 29** — E = K + U constant, ideal vs dying pendulum, converted-not-lost.
+- **Sec 30** — conservation derivation (3 lines) + W_nc = ΔE friction version.
+- **Sec 31** — formula sheet (6 cards) + sign-of-U attractive/repulsive note.
+- **Sec 32** — clean drop (10 m/s) + round-trip (0, negative) NEET trap.
+- **Sec 33** — two-regime ramp (4.5 m) + 2-D force toolkit (U = −xy).
+- **Sec 34** — five pitfalls + friction-or-drag decision diagram.
+  Subtopic 4 (27–34) COMPLETE — 34/66. (commit-heal.sh handles iCloud-evicted objects.)
 
 ## Notes / gotchas
 
