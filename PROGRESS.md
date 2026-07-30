@@ -32,9 +32,10 @@ Total sections: 76
 - Sec 16 — Dot product deep-dive: thela push F/Fx/Fy split, AB cosθ box, projection line, number-not-vector, ⊥→0 bag example.
 - Sec 17 — Cross product: spanner+bolt demo (along vs across pushes, τ out of plane), AB sinθ n̂ box, right-hand rule, vector-answer note, ∥→0.
 - Sec 18 — Seesaw: cos/sin sweep curves 0–180°, ∥/⊥ markers, tail-to-tail + 3D fine print, dot-0-⊥ vs cross-0-∥ trap.
+- Sec 19 — Dot component derivation: bracket expansion, unit products, 3×3 grid with green diagonal + crossed red zeros, AxBx+AyBy+AzBz hero.
 
 ## Current
-Sec 19 — next.
+Sec 20 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`

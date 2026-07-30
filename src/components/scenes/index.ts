@@ -376,6 +376,7 @@ import Ch03Sec15 from "./Ch03Sec15";
 import Ch03Sec16 from "./Ch03Sec16";
 import Ch03Sec17 from "./Ch03Sec17";
 import Ch03Sec18 from "./Ch03Sec18";
+import Ch03Sec19 from "./Ch03Sec19";
 
 const CH03 = "a5970ed6-3b48-55f9-9b80-8abdd3d4c336"; // Class 11 · Motion in a Plane
 
@@ -398,6 +399,7 @@ Object.assign(REGISTRY, {
   [`${CH03}:16`]: Ch03Sec16,
   [`${CH03}:17`]: Ch03Sec17,
   [`${CH03}:18`]: Ch03Sec18,
+  [`${CH03}:19`]: Ch03Sec19,
 });
 /* ================================================================== */
 /* end Ch03 block                                                      */
