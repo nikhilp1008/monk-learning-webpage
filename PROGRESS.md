@@ -14,7 +14,7 @@ Branch: `premium-board-ch7` · Port: **3007** · chapter_id: `29b5be47-3b75-550d
 7. Chapter 7 — Master Revision — sec 75–76
 
 ## Done
-Sec 1–13 (subtopic 1: Newton's Law of Gravitation) — all verified (audits `[]`, finals eye-checked both languages) and committed.
+Sec 1–25 (subtopic 1: Newton's Law · subtopic 2: Gravitational Field Intensity) — all verified (audits `[]`, finals eye-checked both languages) and committed.
 
 ## Current
 Subtopic 3 (Acceleration due to Gravity) · next: sec 26.
