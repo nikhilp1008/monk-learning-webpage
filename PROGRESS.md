@@ -78,9 +78,10 @@ Total sections: 76
 - Sec 62 — Five relative-velocity pitfalls checklist (numbered circles).
 - Sec 63 — Pro-tip closer: freeze-one-body hero, two-checks boxes, core-rule reprise, mnemonic hero. ✅ SUBTOPIC 5 (53–63) COMPLETE.
 - Sec 64 — Circular motion paradox: four-cardinal tangent-velocity circle, centripetal arrow, cut-string mini-diagram.
+- Sec 65 — Angular quantities: r/θ/s circle diagram, s=rθ box, ω=dθ/dt & α=dω/dt, v=ωr/a=αr green box, fan-blade same-ω-bigger-r demo.
 
 ## Current
-Sec 65 — next.
+Sec 66 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
