@@ -173,6 +173,7 @@ import Ch02Sec72 from "./Ch02Sec72";
 import Ch02Sec73 from "./Ch02Sec73";
 // ── Ch05 imports (Work, Energy & Power) — session branch premium-board-ch5 ──
 import Ch05Sec1 from "./Ch05Sec1";
+import Ch05Sec2 from "./Ch05Sec2";
 // ── end Ch05 imports ──
 
 const CH01 = "8d7ccfaa-af16-53e4-9f28-823c8ea923d1"; // Class 11 · Units & Measurements
@@ -347,6 +348,7 @@ const REGISTRY: Record<string, React.ComponentType<SceneProps>> = {
   [`${CH02}:73`]: Ch02Sec73,
   // ── Ch05 registry (Work, Energy & Power) — session branch premium-board-ch5 ──
   [`${CH05}:1`]: Ch05Sec1,
+  [`${CH05}:2`]: Ch05Sec2,
   // ── end Ch05 registry ──
 };
 

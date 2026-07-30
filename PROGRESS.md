@@ -26,6 +26,9 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 - **Sec 1** — "Two vectors in, one number out": dot machine, trolley push demo,
   A·B = AB cos θ with measured underlines, alignment meter, W/P chips, scalar verdict.
   Audits [] both langs; eye-checked.
+- **Sec 2** — "The shadow picture": sun + projection demo, A cos θ chip, shadow×ground,
+  three θ case cards (0/90/180), sign-story verdict. Audits [] both langs; eye-checked.
+  (hi beats 4→5 only 1s apart — beat-4 delays kept ≤0.8.)
 
 ## Notes / gotchas
 
