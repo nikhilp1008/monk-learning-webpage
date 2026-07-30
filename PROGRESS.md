@@ -17,9 +17,19 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 ## Done
 - Sec 1 — rigid body (point-mass limits, welded swarm, frozen geometry)
 - Sec 2 — three types of motion (3-panel: translation/rotation/rolling + master strategy)
+- Sec 3 — CoM intro (tumbling bat parabola, chaos loop, see-saw, swarm→particle)
+- Sec 4 — surprises (ring empty centre, axes invariance, CG drift tower, exam secret)
+- Sec 5 — CoM toolkit (formula ledger, fraction bars, F=Ma hero, density chips)
+- Sec 6 — derivation F_ext = M a_cm (bomb parabola, 4 steps, N3L pair cancel)
+- Sec 7 — semicircular wire integration (setup figure, 2R/π, empty space)
+- Sec 8 — three point masses [CBSE] (figure + rings + (1.2,1.5))
+- Sec 9 — man on boat [NEET] (before/after hulls, pinned CoM line, 3 m)
+- Sec 10 — disc with hole [JEE Main] (negative mass, −R/6, fill it back)
+- Sec 11 — varying-density rod [JEE Adv] (tapered hatch, 5L/9)
+- Sec 12 — pitfalls & pro-tips (4 traps + wire/disc chips + pro-tip box)
 
 ## Current
-Subtopic 1 COMPLETE (2/2). Next: Subtopic 2 — Center of Mass, Sec 3.
+Subtopics 1–2 COMPLETE (12/70). Next: Subtopic 3 — Vector Product, Sec 13.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch6_reveals.json (re-fetch via Supabase REST, cols `board_reveal_at_english/_hinglish`).
