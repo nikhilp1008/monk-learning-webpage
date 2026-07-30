@@ -38,6 +38,7 @@ Gotcha: never put U+2044 '⁄' between digits (auto-fraction glyphs) — use '÷
 - [x] Sec 13 — Diwali rocket: before/after p=0, principle box, everyday chips
 - [x] Sec 14 — Three families cards + elastic/inelastic spectrum lines
 - [x] Sec 15 — 'No doors': sealed room, component-wise parabola, instant-only
+- [x] Sec 16 — 1-D elastic derivation: divide trick, approach=separation, swap
 
 ## Current
-Subtopic 2 (Momentum Conservation, secs 13-23). Next: Sec 16.
+Subtopic 2 (Momentum Conservation, secs 13-23). Next: Sec 17.
