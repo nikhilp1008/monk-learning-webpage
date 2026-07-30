@@ -54,7 +54,12 @@ export function Fade({
   children: React.ReactNode;
 }) {
   return (
+    // Keyed by delay: CSS transitions capture their delay when they start, so
+    // merely updating transition-delay cannot cancel a pending stagger. When
+    // the beat moves on and delayFor collapses the delay, the key change
+    // remounts the group, which lands in its settled state instantly.
     <g
+      key={`d${delay}`}
       className="sc-fade"
       style={{
         opacity: on ? (dim ? 0.14 : 1) : 0,
@@ -89,7 +94,9 @@ export function Draw({
   fill?: string;
 }) {
   return (
+    // Same remount-on-settle trick as Fade — see the comment there.
     <path
+      key={`d${delay}`}
       d={d}
       pathLength={100}
       fill={fill}

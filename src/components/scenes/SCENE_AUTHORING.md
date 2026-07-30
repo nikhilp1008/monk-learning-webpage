@@ -104,14 +104,22 @@ beat 3 | stick numeral   | T mid | cx450 baseline y354 → box x438..462 y336..3
 Rules for the plan:
 
 - **Every element gets an explicit box** (x-range × y-range). Estimate text
-  boxes before rendering:
-  - width ≈ `0.60 × size × chars` (sans) / `0.62 × size × chars` (Kalam) —
+  boxes before rendering — these ratios were **measured** on the real fonts
+  (Chromium `getBoundingClientRect`, converted to viewBox units):
+  - width ≈ `0.50 × size × chars` (Anek sans) / `0.55 × size × chars`
+    (Kalam latin; Devanagari syllables count as ~0.75 × size each) —
     over-estimate, never under. Longest of the two languages counts.
-  - height: a `<text>`'s `y` is the **baseline**. Its box is roughly
-    `y − 0.75×size` (top) to `y + 0.25×size` (bottom). Its vertical center
-    is `y − 0.26×size`. Getting this wrong is the #1 cause of labels
-    "sitting on" outlines — do the baseline math every time.
+  - height: a `<text>`'s `y` is the **baseline**. The real ink box is much
+    taller than one em: **Kalam** spans `y − 1.3×size` (top) to
+    `y + 0.5×size` (bottom); **Anek sans** spans `y − 0.78×size` to
+    `y + 0.31×size`. Planning with a shallower box is the #1 cause of
+    row collisions and labels "sitting on" outlines — use these numbers.
+  - vertical optical center: `y − 0.4×size` (Kalam) / `y − 0.24×size` (sans).
   - anchor matters: `middle` → box is `x ± w/2`; `start` → `x .. x+w`.
+  - After the first render, **measure the real boxes** (evaluate
+    `getBoundingClientRect` on every `svg text`, divided by the svg scale)
+    and re-check every clearance against reality — estimates only get you
+    to the first screenshot.
 - **No two boxes may intersect**, across ALL beats that are simultaneously
   visible — a beat-6 ring drawn over a beat-2 zone must be planned against
   the beat-2 boxes. (Deliberate annotation overlaps — ring around, cross-out
