@@ -79,6 +79,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 48 — Four panels: friction/tension/gravity/normal, no double-counting
 - [x] Sec 49 — Centrifugal: ground vs rotating frame, pseudo-force, not action-reaction
 - [x] Sec 50 — Three ways to turn: flat/friction, banked/N alone, both, design speed
+- [x] Sec 51 — Banking derivation: N cosθ=mg, N sinθ=mv²/r, tanθ=v²/rg, mass-free
 
 ## Current
-Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 51.
+Subtopic 5 (Circular Motion Dynamics / Banking, secs 47-58). Next: Sec 52.
