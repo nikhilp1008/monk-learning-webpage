@@ -60,8 +60,19 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 - Sec 39 — ladder vs smooth wall [JEE Adv] (foot torques, μ = ½cotθ)
 - Sec 40 — equilibrium pitfalls (4 traps + pivot-choice pro-tip)
 
+- Sec 41 — moment of inertia intro (ring vs disc, Σmr², flywheel/diver chips)
+- Sec 42 — fine print + radius of gyration (sweep-to-K figure, 3 caveats, I=MK²)
+- Sec 43 — MOI toolkit (two axis theorems figure, definitions, 7 standard values)
+- Sec 44 — rod MOI derivation + perpendicular-axis theorem (two-column layout)
+- Sec 45 — chaining ring→disc + rod-end parallel-axis check (master technique)
+- Sec 46 — four masses on a square [CBSE] (diagonal-r figure, I=4 kg·m²)
+- Sec 47 — radius of gyration ring vs disc [NEET] (K=R vs K=R/√2)
+- Sec 48 — disc about a tangent [JEE Main] (⊥ then ∥ axis chain)
+- Sec 49 — solid sphere by integration [JEE Adv] (sliced discs, I=(2/5)MR²)
+- Sec 50 — MOI pitfalls (4 traps + parallel/perpendicular pro-tip)
+
 ## Current
-Subtopics 1–5 COMPLETE (40/70). Next: Subtopic 6 — Moment of Inertia, Sec 41.
+Subtopics 1–6 COMPLETE (50/70). Next: Subtopic 7 — Rotational Kinematics and Dynamics, Sec 51.
 
 ## Workflow notes
 - 2026-07-30 PM: node_modules suffered NUL-file corruption (iCloud eviction on Desktop). Layout is now `node_modules -> node_modules.nosync` (symlink). Type-check with `npx tsc --noEmit -p tsconfig.check.json` (untracked local config that also excludes node_modules.nosync); plain `npx tsc --noEmit` scans node_modules.nosync and fails.
