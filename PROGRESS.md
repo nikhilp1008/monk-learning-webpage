@@ -19,7 +19,9 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 | 6 | Power | 42–49 | DONE |
 | 7 | Collisions | 50–57 | DONE |
 | 8 | Application: Motion in a Vertical Circle | 58–64 | DONE |
-| 9 | Chapter Recap | 65–66 | next |
+| 9 | Chapter Recap | 65–66 | DONE |
+
+**ALL 66/66 SECTIONS COMPLETE.**
 
 ## Done
 
@@ -110,6 +112,11 @@ Verify: `PORT=3005 CHAPTER_ID=a88de5d2-84e4-5489-878a-f17a195e3267 node verify-s
 - **Sec 64** — five pitfalls (non-constant speed, string-only-pulls, wrong min speed,
   centripetal direction, tension-before-completion) + 3-step master method recap.
   Subtopic 8 (58–64) COMPLETE — 64/66.
+- **Sec 65** — formula recap: four colour-coded bands (work&energy / conservation&power /
+  collisions / vertical circle), six formula lines, closing "one idea per line" note.
+- **Sec 66** — rapid-revision cheat sheet: eight one-line memory hooks + closing box
+  (vertical-circle hook + "you know this chapter now — go and show it").
+  Subtopic 9 (65–66) COMPLETE — 66/66. CHAPTER COMPLETE.
 
 ## Notes / gotchas
 
