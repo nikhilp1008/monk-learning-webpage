@@ -75,8 +75,15 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 - Sec 52 — rotational second law + energy (5-row analogy table, τ=Iα, K_rot, v=ωr)
 - Sec 53 — rotational motion toolkit (v=ωr figure, 3 kinematic eqs, 7 formula chips)
 
+- Sec 54 — rotational equations derivation (ω-t trapezium, 3 equations, work-energy)
+- Sec 55 — wheel spinning up from rest [CBSE] (ω=10 rad/s, θ=25 rad, ≈3.98 rev)
+- Sec 56 — flywheel under torque [NEET] (two-stage dynamics→kinematics, ω=80 rad/s)
+- Sec 57 — braking spinning disc [JEE Main] (timeless eq, α≈-0.318, τ≈0.64 N·m)
+- Sec 58 — mass on string over pulley [JEE Adv] (non-slip a=αR, a=2mg/(2m+M))
+- Sec 59 — rotational-motion pitfalls (4 traps + analogy-table pro-tip)
+
 ## Current
-53/70 done. Subtopic 7 in progress — next Sec 54 (deriving the rotational equations of motion).
+Subtopics 1–7 COMPLETE (59/70). Next: Subtopic 8 — Rolling Motion, Sec 60.
 
 ## Workflow notes
 - 2026-07-30 PM: node_modules suffered NUL-file corruption (iCloud eviction on Desktop). Layout is now `node_modules -> node_modules.nosync` (symlink). Type-check with `npx tsc --noEmit -p tsconfig.check.json` (untracked local config that also excludes node_modules.nosync); plain `npx tsc --noEmit` scans node_modules.nosync and fails.
