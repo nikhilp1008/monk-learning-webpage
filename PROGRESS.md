@@ -82,8 +82,18 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 - Sec 58 — mass on string over pulley [JEE Adv] (non-slip a=αR, a=2mg/(2m+M))
 - Sec 59 — rotational-motion pitfalls (4 traps + analogy-table pro-tip)
 
+- Sec 60 — rolling two motions at once (0/v/2v velocity figure, non-slip lock)
+- Sec 61 — rolling energy + friction (moving+spinning icons, no-friction-no-rolling)
+- Sec 62 — rolling toolkit (incline figure, star formula, shape-factor chips)
+- Sec 63 — rolling energy derivation (Mgh→K figure, mass cancels, force method agrees)
+- Sec 64 — fraction of energy in spin [CBSE] (ring/disc/sphere figure, disc=⅓)
+- Sec 65 — race down incline [NEET] (ring/disc/sphere on slope, sphere wins)
+- Sec 66 — sphere on 30° incline [JEE Main] (a=(5/7)gsinθ≈3.57 m/s²)
+- Sec 67 — minimum friction to roll [JEE Adv] (μ_min=(2/7)tanθ)
+- Sec 68 — rolling pitfalls (4 traps + energy-conservation pro-tip + shape factors)
+
 ## Current
-Subtopics 1–7 COMPLETE (59/70). Next: Subtopic 8 — Rolling Motion, Sec 60.
+Subtopics 1–8 COMPLETE (68/70). Next: Subtopic 9 — Chapter Wrap-Up, Sec 69–70 (final two sections).
 
 ## Workflow notes
 - 2026-07-30 PM: node_modules suffered NUL-file corruption (iCloud eviction on Desktop). Layout is now `node_modules -> node_modules.nosync` (symlink). Type-check with `npx tsc --noEmit -p tsconfig.check.json` (untracked local config that also excludes node_modules.nosync); plain `npx tsc --noEmit` scans node_modules.nosync and fails.
