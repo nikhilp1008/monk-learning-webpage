@@ -206,6 +206,14 @@ Non-negotiable engine rules (all provided by the kit):
   state that depends on how you got here.** Pause, seek forward/back,
   language switch must all land on a correct board.
 - `useBeat(currentTime, reveals)` gives the current beat index.
+- **The blank-board contract**: at `currentTime === 0` (paused, before the
+  student presses play) `useBeat` returns `-1`, so NOTHING beat-gated is drawn —
+  the board starts empty and every element draws/writes/marks in step with the
+  narration once play begins, never before it. Do NOT defeat this by rendering
+  foundational structure ungated; give even axes/frames a beat so they draw on
+  cue. The ONE exception is the section **title**: author it always-on
+  (`<Fade on={true}>`) so the heading is visible on the otherwise-blank board.
+  A scene that shows its diagram/answer at `t=0` before play is a failed scene.
 - Every element declares its beat: `<Fade on={beat >= k} delay={dl(k, 1.5)}>`.
 - **The settle rule**: wrap every delay in `dl = (k, d) => delayFor(beat, k, d)`.
   Delays only play while `k` is the *current* beat; once narration moves
@@ -267,6 +275,8 @@ Non-negotiable engine rules (all provided by the kit):
   every beat has an action, one thing happens at a time, in step with the
   voice.
 - Seek anywhere → board is exactly what it should be at that second.
+- At `t=0` before play the board is blank except the title; press play and every
+  element draws in step with the narration (nothing pre-drawn).
 - Final frame is a clean, complete "notes photo" of the section: nothing
   overlaps, no label touches an outline, every arrow tip lands 5px off its
   exact target, everything inside 1080×620's safe area.
