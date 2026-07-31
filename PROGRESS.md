@@ -113,5 +113,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 ## SUBTOPIC 4 COMPLETE (secs 39-50/12)
 
+- Sec 51 — atomic origin of Hooke's law (U(r) potential well, r₀ minimum, local-parabola overlay, U≈U(r₀)+½κ(r-r₀)² ⇒ F≈-κ(r-r₀), summed bonds → σ=Yε, Y large/small by bond stiffness, small-strain limit)
+
 ## Current
-Starting Sec 51
+Starting Sec 52
