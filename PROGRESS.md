@@ -97,6 +97,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 66 — WE2 NEET angled push: N=mg+Fsin30=25N trap, ADD/SUBTRACT reflex, red herring
 - [x] Sec 67 — WE3 JEE contact force: system-then-isolate, a=2, Nc=6N, push-which-block trap
 - [x] Sec 68 — WE4 JEE Advanced spring: a=2, kx=m2a, x=1.5cm, spring = visible contact force
+- [x] Sec 69 — Tips: 5 pitfalls, FBD-first pro-tip, 2 memory aids. SUBTOPIC 6 DONE (69/92)
 
 ## Current
-Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 69.
+Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 70.
