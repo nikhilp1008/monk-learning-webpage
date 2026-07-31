@@ -898,6 +898,7 @@ import Ch08Sec35 from "./Ch08Sec35";
 import Ch08Sec36 from "./Ch08Sec36";
 import Ch08Sec37 from "./Ch08Sec37";
 import Ch08Sec38 from "./Ch08Sec38";
+import Ch08Sec39 from "./Ch08Sec39";
 
 const CH08 = "39bfe6d1-bd93-5157-a29c-b8ee68c3676b"; // Class 11 · Mechanical Properties of Solids
 
@@ -939,4 +940,5 @@ REGISTRY[`${CH08}:35`] = Ch08Sec35;
 REGISTRY[`${CH08}:36`] = Ch08Sec36;
 REGISTRY[`${CH08}:37`] = Ch08Sec37;
 REGISTRY[`${CH08}:38`] = Ch08Sec38;
+REGISTRY[`${CH08}:39`] = Ch08Sec39;
 /* ============================ end Ch08 ============================ */
