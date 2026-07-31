@@ -43,7 +43,7 @@ export default function P12Ch04Sec21({ currentTime, reveals, language }: ScenePr
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">FORCES ON OPPOSITE SIDES FORM COUPLE</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 6}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
@@ -60,7 +60,7 @@ export default function P12Ch04Sec21({ currentTime, reveals, language }: ScenePr
       <Badge n={2} cx={540} cy={140} on={beat >= 6} delay={dl(6, 0.4)} />
       <Fade on={beat >= 6} delay={dl(6, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">TORQUE FORMULA DERIVATION</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 6} dim={beat >= 8}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
@@ -77,12 +77,12 @@ export default function P12Ch04Sec21({ currentTime, reveals, language }: ScenePr
       <Badge n={3} cx={52} cy={270} on={beat >= 8} delay={dl(8, 0.4)} />
       <Fade on={beat >= 8} delay={dl(8, 0.8)}>
         <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">VECTOR FORM & MAGNETIC MOMENT m = N I A</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 8}>
         <g transform="translate(60, 290)">
           <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
           <T x={480} y={35} anchor="middle" size={18} fill={GREEN} weight={800}>
-            \boldsymbol{\tau} = \vec{m} \times \vec{B}   [where Magnetic Moment \vec{m} = N I \vec{A}]
+            boldsymbol(τ) = m × B   [where Magnetic Moment m = N I A]
           </T>
         </g>
       </Fade>

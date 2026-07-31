@@ -43,7 +43,7 @@ export default function P12Ch04Sec15({ currentTime, reveals, language }: ScenePr
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">JEE MAIN: COAXIAL CABLE FIELD</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 7}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
@@ -60,15 +60,15 @@ export default function P12Ch04Sec15({ currentTime, reveals, language }: ScenePr
       <Badge n={2} cx={540} cy={140} on={beat >= 7} delay={dl(7, 0.4)} />
       <Fade on={beat >= 7} delay={dl(7, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">JEE ADVANCED: UNIFORM FIELD IN DRILLED CAVITY</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 7} dim={beat >= 14}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
           <T x={240} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            \vec{B} = (μ₀/2) \vec{J} × \vec{r}₁ + (μ₀/2) (−\vec{J}) × \vec{r}₂
+            B = (μ₀/2) J × r₁ + (μ₀/2) (−J) × r₂
           </T>
           <T x={240} y={52} anchor="middle" size={17} fill={GREEN} weight={800}>
-            ⇒  \vec{B}_{\text{cavity}} = (μ₀ / 2) \vec{J} × \vec{d}  (PERFECTLY UNIFORM!)
+            ⇒  B_cavity = (μ₀ / 2) J × d  (PERFECTLY UNIFORM!)
           </T>
         </g>
       </Fade>

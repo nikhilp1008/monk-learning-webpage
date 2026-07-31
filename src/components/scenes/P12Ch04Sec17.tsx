@@ -43,12 +43,12 @@ export default function P12Ch04Sec17({ currentTime, reveals, language }: ScenePr
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">MAGNETIC FORCE F = q(v × B)</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 5}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
           <T x={225} y={35} anchor="middle" size={18} fill={INK} weight={800}>
-            \vec{F} = q (\vec{v} \times \vec{B})   [|\vec{F}| = q v B \sin\theta]
+            F = q (v × B)   [|F| = q v B sinθ]
           </T>
         </g>
       </Fade>
@@ -57,7 +57,7 @@ export default function P12Ch04Sec17({ currentTime, reveals, language }: ScenePr
       <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
       <Fade on={beat >= 5} delay={dl(5, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">ZERO WORK & STEERING WHEEL</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 5} dim={beat >= 7}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
@@ -74,7 +74,7 @@ export default function P12Ch04Sec17({ currentTime, reveals, language }: ScenePr
       <Badge n={3} cx={52} cy={270} on={beat >= 7} delay={dl(7, 0.4)} />
       <Fade on={beat >= 7} delay={dl(7, 0.8)}>
         <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">APPLICATIONS: VELOCITY SELECTOR & CYCLOTRON</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 7}>
         <g transform="translate(60, 290)">
           <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />

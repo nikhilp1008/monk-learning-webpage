@@ -43,15 +43,15 @@ export default function P12Ch04Sec23({ currentTime, reveals, language }: ScenePr
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">CBSE LEVEL: ANGLE TRAP (PLANE 30° ⇒ NORMAL 60°)</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 7}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
           <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            \theta = 90° − 30° = 60°
+            θ = 90° − 30° = 60°
           </T>
           <T x={225} y={52} anchor="middle" size={16} fill={GREEN} weight={800}>
-            \tau = N I A B \sin 60° \approx 0.29\ \text{N m}
+            τ = N I A B sin 60° ≈ 0.29 N m
           </T>
         </g>
       </Fade>
@@ -60,15 +60,15 @@ export default function P12Ch04Sec23({ currentTime, reveals, language }: ScenePr
       <Badge n={2} cx={540} cy={140} on={beat >= 7} delay={dl(7, 0.4)} />
       <Fade on={beat >= 7} delay={dl(7, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">NEET SPEED TRAP: SAME VOLTAGE (qV = ½ mv²)</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 7} dim={beat >= 11}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
           <T x={240} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            r = \frac{\sqrt{2 m V / q}}{B} \propto \sqrt{\frac{m}{q}}
+            r = frac(sqrt(2 m V / q))(B) ∝ sqrt((m)/(q))
           </T>
           <T x={240} y={52} anchor="middle" size={17} fill={GREEN} weight={800}>
-            \frac{r_\alpha}{r_p} = \sqrt{\frac{4/2}{1/1}} = \sqrt{2}
+            (r_α)/(r_p) = sqrt((4/2)/(1/1)) = sqrt(2)
           </T>
         </g>
       </Fade>

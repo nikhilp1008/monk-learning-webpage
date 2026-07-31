@@ -43,7 +43,7 @@ export default function P12Ch04Sec6({ currentTime, reveals, language }: ScenePro
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">CBSE LEVEL: N-TURN COIL AT CENTRE</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 5}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
@@ -60,7 +60,7 @@ export default function P12Ch04Sec6({ currentTime, reveals, language }: ScenePro
       <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
       <Fade on={beat >= 5} delay={dl(5, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">NEET SPEED TRAP: 240° ARC & RADIAL LEADS</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 5} dim={beat >= 11}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />

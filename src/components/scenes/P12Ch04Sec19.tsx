@@ -43,12 +43,12 @@ export default function P12Ch04Sec19({ currentTime, reveals, language }: ScenePr
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">LORENTZ FORCE & VELOCITY SELECTOR</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 5}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
           <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            \vec{F} = q (\vec{E} + \vec{v} \times \vec{B})   [Selector v = E/B]
+            F = q (E + v × B)   [Selector v = E/B]
           </T>
           <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
             (Electric does work, Magnetic steers without work!)
@@ -60,7 +60,7 @@ export default function P12Ch04Sec19({ currentTime, reveals, language }: ScenePr
       <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
       <Fade on={beat >= 5} delay={dl(5, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">CYCLOTRON MOTION & MAX ENERGY</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 5} dim={beat >= 11}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
@@ -77,12 +77,12 @@ export default function P12Ch04Sec19({ currentTime, reveals, language }: ScenePr
       <Badge n={3} cx={52} cy={270} on={beat >= 11} delay={dl(11, 0.4)} />
       <Fade on={beat >= 11} delay={dl(11, 0.8)}>
         <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">WIRE FORCE & LOOP TORQUE FORMULAS</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 11}>
         <g transform="translate(60, 290)">
           <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
           <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            F/L = μ₀I₁I₂ / (2πd)   |   \boldsymbol{\tau} = \vec{m} \times \vec{B}   (m = N I A,  τ = N I A B sin θ)
+            F/L = μ₀I₁I₂ / (2πd)   |   boldsymbol(τ) = m × B   (m = N I A,  τ = N I A B sin θ)
           </T>
         </g>
       </Fade>

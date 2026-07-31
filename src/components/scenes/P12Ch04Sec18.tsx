@@ -43,12 +43,12 @@ export default function P12Ch04Sec18({ currentTime, reveals, language }: ScenePr
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">PARALLEL WIRES: LIKE CURRENTS ATTRACT</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 6}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
           <T x={225} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            \vec{F} = I (\vec{L} \times \vec{B})   [F/L = μ₀ I₁ I₂ / (2πd)]
+            F = I (L × B)   [F/L = μ₀ I₁ I₂ / (2πd)]
           </T>
           <T x={225} y={52} anchor="middle" size={14} fill={GREEN} weight={800}>
             (Like currents ATTRACT; Unlike currents REPEL!)
@@ -60,7 +60,7 @@ export default function P12Ch04Sec18({ currentTime, reveals, language }: ScenePr
       <Badge n={2} cx={540} cy={140} on={beat >= 6} delay={dl(6, 0.4)} />
       <Fade on={beat >= 6} delay={dl(6, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">CURRENT LOOP IN UNIFORM B: NET TORQUE</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 6} dim={beat >= 7}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
@@ -68,7 +68,7 @@ export default function P12Ch04Sec18({ currentTime, reveals, language }: ScenePr
             Net Force F_net = 0! (Equal & opposite side forces)
           </T>
           <T x={240} y={52} anchor="middle" size={16} fill={GREEN} weight={800}>
-            Net Torque \boldsymbol{\tau} = \vec{M} \times \vec{B}  (Loop TWISTS!)
+            Net Torque boldsymbol(τ) = M × B  (Loop TWISTS!)
           </T>
         </g>
       </Fade>

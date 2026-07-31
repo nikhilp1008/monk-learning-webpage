@@ -43,12 +43,12 @@ export default function P12Ch04Sec12({ currentTime, reveals, language }: ScenePr
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">RECTANGULAR AMPERIAN LOOP LINE INTEGRAL</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 8}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
           <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            ∮ \vec{B} \cdot d\vec{l} = \int_a^b + \int_b^c + \int_c^d + \int_d^a
+            ∮ B · dl = int_a^b + int_b^c + int_c^d + int_d^a
           </T>
           <T x={225} y={52} anchor="middle" size={15} fill={GREEN} weight={800}>
             = B L + 0 + 0 + 0 = B L
@@ -60,7 +60,7 @@ export default function P12Ch04Sec12({ currentTime, reveals, language }: ScenePr
       <Badge n={2} cx={540} cy={140} on={beat >= 8} delay={dl(8, 0.4)} />
       <Fade on={beat >= 8} delay={dl(8, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">ENCLOSED CURRENT & FIELD FORMULA</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 8} dim={beat >= 12}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
@@ -77,7 +77,7 @@ export default function P12Ch04Sec12({ currentTime, reveals, language }: ScenePr
       <Badge n={3} cx={52} cy={270} on={beat >= 12} delay={dl(12, 0.4)} />
       <Fade on={beat >= 12} delay={dl(12, 0.8)}>
         <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">OPEN END FIELD DROP</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 12}>
         <g transform="translate(60, 290)">
           <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />

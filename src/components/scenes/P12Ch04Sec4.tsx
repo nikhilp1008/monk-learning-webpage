@@ -43,7 +43,7 @@ export default function P12Ch04Sec4({ currentTime, reveals, language }: ScenePro
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">ELEMENT FIELD dB & TRANSVERSE CANCELLATION</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 7}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
@@ -60,7 +60,7 @@ export default function P12Ch04Sec4({ currentTime, reveals, language }: ScenePro
       <Badge n={2} cx={540} cy={140} on={beat >= 7} delay={dl(7, 0.4)} />
       <Fade on={beat >= 7} delay={dl(7, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">AXIAL COMPONENT INTEGRATION</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 7} dim={beat >= 12}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
@@ -77,7 +77,7 @@ export default function P12Ch04Sec4({ currentTime, reveals, language }: ScenePro
       <Badge n={3} cx={52} cy={270} on={beat >= 12} delay={dl(12, 0.4)} />
       <Fade on={beat >= 12} delay={dl(12, 0.8)}>
         <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">SPECIAL CASE: FIELD AT LOOP CENTRE (x = 0)</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 12}>
         <g transform="translate(60, 290)">
           <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />

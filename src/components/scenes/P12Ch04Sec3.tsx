@@ -43,12 +43,12 @@ export default function P12Ch04Sec3({ currentTime, reveals, language }: ScenePro
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">BIOT-SAVART LAW FORMULA</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 4}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
           <T x={225} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            d\vec{B} = (\mu₀ / 4π) (I d\vec{l} × \hat{r}) / r²
+            dB = (μ₀ / 4π) (I dl × r̂) / r²
           </T>
           <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
             |dB| = (μ₀ / 4π) (I dl sin θ / r²)   [μ₀/4π = 10⁻⁷]
@@ -60,7 +60,7 @@ export default function P12Ch04Sec3({ currentTime, reveals, language }: ScenePro
       <Badge n={2} cx={540} cy={140} on={beat >= 4} delay={dl(4, 0.4)} />
       <Fade on={beat >= 4} delay={dl(4, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">WIRE & LOOP STANDARD FIELD RESULTS</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 4} dim={beat >= 10}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
@@ -77,7 +77,7 @@ export default function P12Ch04Sec3({ currentTime, reveals, language }: ScenePro
       <Badge n={3} cx={52} cy={270} on={beat >= 10} delay={dl(10, 0.4)} />
       <Fade on={beat >= 10} delay={dl(10, 0.8)}>
         <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">ON-AXIS CIRCULAR LOOP FIELD</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 10}>
         <g transform="translate(60, 290)">
           <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
