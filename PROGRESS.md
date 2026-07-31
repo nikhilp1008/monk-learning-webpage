@@ -113,6 +113,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 82 — String vs rod: connector's push ability, v_top,min=0 & v_bottom,min=2√gr for rod
 - [x] Sec 83 — Critical-speed derivation: v_top,min=√gr, v_bottom,min=√5gr, 6mg bonus check
 - [x] Sec 84 — Rod-loop derivation: mg−N=mv²/r, v_top=0, v_bottom,min=2√gr, string vs rod contrast
+- [x] Sec 85 — Formula set: 7 bands (tensions, general angle, energy link, critical speeds, 6mg, sphere)
 
 ## Current
-Subtopic 8 (Vertical Circular Motion, secs 80-90). Next: Sec 85.
+Subtopic 8 (Vertical Circular Motion, secs 80-90). Next: Sec 86.
