@@ -103,5 +103,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 46 — CBSE worked example: modulus of resilience (σy=3.0e8, Y=2.0e11 Pa → boxed hero u=2.25e5 J/m³, safe elastic budget note, size-independent note)
 
+- Sec 47 — NEET trap: stiffness vs ductility (P=steep/snaps-early vs Q=gentler/long-reach curves, slope→Y vs reach→ductility, eliminate-bundling rule, independent properties)
+
 ## Current
-Starting Sec 47
+Starting Sec 48
