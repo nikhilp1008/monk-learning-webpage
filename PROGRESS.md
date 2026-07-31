@@ -121,7 +121,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 54 — thermal stress in a clamped rod (walls+rod+outward-push diagram, ΔL=LαΔT free-rod strain, clamped→walls supply equal&opposite αΔT, boxed hero σ=YαΔT/F=YAαΔT, no-L-term note, rail-gaps/roller-bridges/expansion-loops payoff)
 
-- Sec 55 — torsion of a solid cylinder [Opus tier, integral derivation] — in progress via background agent
+- Sec 55 — torsion of a solid cylinder [Opus tier, integral derivation] (clamped-cylinder diagram: wall, R/L dims, generator tilt φ, twist arc θ, φ=xθ/L → dC=τ(2πx dx)x → boxed hero C=(2πηθ/L)∫x³dx=πηR⁴θ/2L, R⁴ punchline, torsional rigidity)
 
 - Sec 56 — Searle's experiment for Young's modulus (twin-wire apparatus diagram: reference+experimental wires, frame+spirit-level+micrometer, boxed hero Y=MgL/πr²ΔL, reference-wire-cancels-errors note, radius-care warning Y∝1/r²)
 
@@ -131,5 +131,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 59 — NEET trap: length-free thermal stress (steel rod clamped ΔT=40°C, boxed hero σ=YαΔT=9.6e7 Pa, independent-of-length note, eliminate-length-dependent-options rule, clamping-cancels-expansion explanation)
 
+- Sec 60 — JEE Main worked example: cantilever depression (wall+beam+200N-load+L/b/d-dims diagram, Ig=bd³/12=7.2e-7, boxed hero δ≈4.6e-4m=0.46mm, swap-b/d→2.25×-rise note)
+
 ## Current
-Starting Sec 60 (Sec55 pending background agent completion)
+Starting Sec 61
