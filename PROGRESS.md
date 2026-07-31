@@ -96,6 +96,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 65 — WE1 spring in lift: x1=10cm ground, x2=12cm accelerating, spring-scale insight
 - [x] Sec 66 — WE2 NEET angled push: N=mg+Fsin30=25N trap, ADD/SUBTRACT reflex, red herring
 - [x] Sec 67 — WE3 JEE contact force: system-then-isolate, a=2, Nc=6N, push-which-block trap
+- [x] Sec 68 — WE4 JEE Advanced spring: a=2, kx=m2a, x=1.5cm, spring = visible contact force
 
 ## Current
-Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 68.
+Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 69.
