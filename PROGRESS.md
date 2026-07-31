@@ -135,5 +135,9 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 61 — JEE Advanced: torque and the r⁴ law (small-shaft-vs-2r-shaft C→16C diagram, boxed hero C≈5.0e3 N·m, double-radius→×16 torque, why-axles-are-fat note)
 
+- Sec 62 — subtopic 5 wrap-up: 4 pitfall cards (thermal stress no-length, Ig=area-moment≠rotational, depth³ vs breadth¹, stiffness+torsion both r⁴) + power-law-ratio pro-tip
+
+## SUBTOPIC 5 COMPLETE (secs 51-62/12)
+
 ## Current
-Starting Sec 62
+Starting Sec 63
