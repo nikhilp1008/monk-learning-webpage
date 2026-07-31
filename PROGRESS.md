@@ -121,5 +121,9 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 54 — thermal stress in a clamped rod (walls+rod+outward-push diagram, ΔL=LαΔT free-rod strain, clamped→walls supply equal&opposite αΔT, boxed hero σ=YαΔT/F=YAαΔT, no-L-term note, rail-gaps/roller-bridges/expansion-loops payoff)
 
+- Sec 55 — torsion of a solid cylinder [Opus tier, integral derivation] — in progress via background agent
+
+- Sec 56 — Searle's experiment for Young's modulus (twin-wire apparatus diagram: reference+experimental wires, frame+spirit-level+micrometer, boxed hero Y=MgL/πr²ΔL, reference-wire-cancels-errors note, radius-care warning Y∝1/r²)
+
 ## Current
-Starting Sec 55
+Starting Sec 57 (Sec55 pending background agent completion)
