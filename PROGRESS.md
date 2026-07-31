@@ -89,8 +89,10 @@ Total sections: 76
 - Sec 73 — Five circular-motion pitfalls checklist (numbered circles).
 - Sec 74 — Pro-tip closer: identify-the-centripetal-force-first hero, name-it note, two-moves boxes (uniform/non-uniform, banking), core formulas box, mnemonic hero. ✅ SUBTOPIC 6 (64–74) COMPLETE.
 
+- Sec 75 — Formula recap board: six numbered rows (one per subtopic) with accent-circle marker, label, and single-line formula; green hero-box closer on the shared thread.
+
 ## Current
-Sec 75 — next (start of subtopic 7: Formula Recap and Cheat Sheet).
+Sec 76 — next (last section of the chapter, 76/76).
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
