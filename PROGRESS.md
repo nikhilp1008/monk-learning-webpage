@@ -85,9 +85,10 @@ Total sections: 76
 - Sec 69 — Whirling-stone worked example: circle+string+tension diagram, ω/v/a_c/T derivation chain, answer box, tension-IS-Fc conceptual note.
 - Sec 70 — NEET KE-constant trap: 4-chip options, ring+eliminate A/B/D (vectors), KE=½mv² scalar note, ring+answer on (C), scalar-vs-vector rule.
 - Sec 71 — JEE Main banking derivation: N/mg/θ diagram, Nsinθ/Ncosθ equations, tanθ=v²/rg box, 21.8° answer, mass-cancels note.
+- Sec 72 — JEE Adv net acceleration: a_r/a_t/a_net vector triangle at P on the path circle, Pythagorean-sum box, √73≈8.54 answer.
 
 ## Current
-Sec 72 — next.
+Sec 73 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
