@@ -87,9 +87,10 @@ Total sections: 76
 - Sec 71 — JEE Main banking derivation: N/mg/θ diagram, Nsinθ/Ncosθ equations, tanθ=v²/rg box, 21.8° answer, mass-cancels note.
 - Sec 72 — JEE Adv net acceleration: a_r/a_t/a_net vector triangle at P on the path circle, Pythagorean-sum box, √73≈8.54 answer.
 - Sec 73 — Five circular-motion pitfalls checklist (numbered circles).
+- Sec 74 — Pro-tip closer: identify-the-centripetal-force-first hero, name-it note, two-moves boxes (uniform/non-uniform, banking), core formulas box, mnemonic hero. ✅ SUBTOPIC 6 (64–74) COMPLETE.
 
 ## Current
-Sec 74 — next (last of subtopic 6).
+Sec 75 — next (start of subtopic 7: Formula Recap and Cheat Sheet).
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
