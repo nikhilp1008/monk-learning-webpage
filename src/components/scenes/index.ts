@@ -856,3 +856,13 @@ REGISTRY[`${CH07}:27`] = Ch07Sec27;
 REGISTRY[`${CH07}:28`] = Ch07Sec28;
 REGISTRY[`${CH07}:29`] = Ch07Sec29;
 /* ============================ end Ch07 ============================ */
+
+/* ==================================================================== */
+/* Ch08 · Mechanical Properties of Solids — scene block (branch premium-board-ch8) */
+/* ==================================================================== */
+import Ch08Sec1 from "./Ch08Sec1";
+
+const CH08 = "39bfe6d1-bd93-5157-a29c-b8ee68c3676b"; // Class 11 · Mechanical Properties of Solids
+
+REGISTRY[`${CH08}:1`] = Ch08Sec1;
+/* ============================ end Ch08 ============================ */
