@@ -125,5 +125,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 56 — Searle's experiment for Young's modulus (twin-wire apparatus diagram: reference+experimental wires, frame+spirit-level+micrometer, boxed hero Y=MgL/πr²ΔL, reference-wire-cancels-errors note, radius-care warning Y∝1/r²)
 
+- Sec 57 — applications toolkit recap (two-column formula list: beam depression cantilever/supported, Ig rect/circle, mountain h_max, thermal σ=YαΔT, torsion C+Searle Y, reference Y values steel/copper/aluminium/rubber)
+
 ## Current
-Starting Sec 57 (Sec55 pending background agent completion)
+Starting Sec 58 (Sec55 pending background agent completion)
