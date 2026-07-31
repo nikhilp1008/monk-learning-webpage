@@ -110,6 +110,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 79 — Tips: 5 pitfalls, add-the-equations pro-tip, 2 memory aids. SUBTOPIC 7 DONE (79/92)
 - [x] Sec 80 — Vertical circle intro: gravity in-plane, T-mg=mv²/r bottom, T+mg=mv²/r top, v²b=v²t+4gr
 - [x] Sec 81 — Critical speed: T=0 at top, v_top,min=√gr, v_bottom,min=√5gr, bucket of water
+- [x] Sec 82 — String vs rod: connector's push ability, v_top,min=0 & v_bottom,min=2√gr for rod
 
 ## Current
-Subtopic 8 (Vertical Circular Motion, secs 80-90). Next: Sec 82.
+Subtopic 8 (Vertical Circular Motion, secs 80-90). Next: Sec 83.
