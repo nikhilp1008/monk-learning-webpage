@@ -95,6 +95,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 64 — Reference set: 5 bands, self-adjusting N/T, negative-answer signal
 - [x] Sec 65 — WE1 spring in lift: x1=10cm ground, x2=12cm accelerating, spring-scale insight
 - [x] Sec 66 — WE2 NEET angled push: N=mg+Fsin30=25N trap, ADD/SUBTRACT reflex, red herring
+- [x] Sec 67 — WE3 JEE contact force: system-then-isolate, a=2, Nc=6N, push-which-block trap
 
 ## Current
-Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 67.
+Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 68.
