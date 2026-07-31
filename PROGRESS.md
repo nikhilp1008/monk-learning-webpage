@@ -105,6 +105,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 74 — Formula set: 7 bands (master, contact, Atwood, table, incline, constraints, g_eff)
 - [x] Sec 75 — WE1 CBSE Atwood: a=2.5, T=37.5N, sanity check, Atwood's g-measurement history
 - [x] Sec 76 — WE2 NEET chain trap: cut principle, a=2, T=6N, far-side-mass×a rule
+- [x] Sec 77 — WE3 JEE incline+hanging: direction check, a=10/7, T=180/7≈25.7N
 
 ## Current
-Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 77.
+Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 78.
