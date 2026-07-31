@@ -98,6 +98,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 67 — WE3 JEE contact force: system-then-isolate, a=2, Nc=6N, push-which-block trap
 - [x] Sec 68 — WE4 JEE Advanced spring: a=2, kx=m2a, x=1.5cm, spring = visible contact force
 - [x] Sec 69 — Tips: 5 pitfalls, FBD-first pro-tip, 2 memory aids. SUBTOPIC 6 DONE (69/92)
+- [x] Sec 70 — Constraint intro: fixed-pulley diagram, a1=a2=a, universal 5-step recipe
 
 ## Current
-Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 70.
+Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 71.
