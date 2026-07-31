@@ -127,5 +127,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 57 — applications toolkit recap (two-column formula list: beam depression cantilever/supported, Ig rect/circle, mountain h_max, thermal σ=YαΔT, torsion C+Searle Y, reference Y values steel/copper/aluminium/rubber)
 
+- Sec 58 — CBSE worked example: maximum height of a mountain (σ_max=3.0e8, ρ=2.5e3, g=10 → boxed hero h_max=1.2e4 m=12km, Earth's-tallest-mountains check, gravity-vs-height/Olympus-Mons note)
+
 ## Current
-Starting Sec 58 (Sec55 pending background agent completion)
+Starting Sec 59 (Sec55 pending background agent completion)
