@@ -133,5 +133,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 60 — JEE Main worked example: cantilever depression (wall+beam+200N-load+L/b/d-dims diagram, Ig=bd³/12=7.2e-7, boxed hero δ≈4.6e-4m=0.46mm, swap-b/d→2.25×-rise note)
 
+- Sec 61 — JEE Advanced: torque and the r⁴ law (small-shaft-vs-2r-shaft C→16C diagram, boxed hero C≈5.0e3 N·m, double-radius→×16 torque, why-axles-are-fat note)
+
 ## Current
-Starting Sec 61
+Starting Sec 62
