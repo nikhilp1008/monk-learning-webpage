@@ -119,5 +119,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 53 — why mountains have a maximum height (mountain-triangle diagram with height h, σ_base=ρgh, base-limited-by-breaking-stress note, boxed hero h_max=σ_max/ρg, rock≈10km→Everest-sized note)
 
+- Sec 54 — thermal stress in a clamped rod (walls+rod+outward-push diagram, ΔL=LαΔT free-rod strain, clamped→walls supply equal&opposite αΔT, boxed hero σ=YαΔT/F=YAαΔT, no-L-term note, rail-gaps/roller-bridges/expansion-loops payoff)
+
 ## Current
-Starting Sec 54
+Starting Sec 55
