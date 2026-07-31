@@ -107,5 +107,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 48 — JEE Main worked example: lift cable diameter (ceiling+cable+2000kg load diagram, F=mg=2.0e4N, σ_work=σy/5=5.0e7Pa, A=4.0e-4m², boxed hero d≈2.3cm, safety-factor note)
 
+- Sec 49 — JEE Advanced: strong/stiff/tough are independent (A=steep/high/brittle vs B=gentler/long-plateau curves, slope→Y, height→strength, reach→ductility, area→toughness, glass-vs-steel takeaway)
+
 ## Current
-Starting Sec 49
+Starting Sec 50
