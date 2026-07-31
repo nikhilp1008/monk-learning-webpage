@@ -107,6 +107,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 76 — WE2 NEET chain trap: cut principle, a=2, T=6N, far-side-mass×a rule
 - [x] Sec 77 — WE3 JEE incline+hanging: direction check, a=10/7, T=180/7≈25.7N
 - [x] Sec 78 — WE4 JEE Advanced Atwood-in-lift: g_eff=g±a0, a_rel=6, T=18N, free-fall weightless
+- [x] Sec 79 — Tips: 5 pitfalls, add-the-equations pro-tip, 2 memory aids. SUBTOPIC 7 DONE (79/92)
 
 ## Current
-Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 79.
+Subtopic 8 (Vertical Circular Motion, secs 80-90). Next: Sec 80.
