@@ -86,9 +86,10 @@ Total sections: 76
 - Sec 70 — NEET KE-constant trap: 4-chip options, ring+eliminate A/B/D (vectors), KE=½mv² scalar note, ring+answer on (C), scalar-vs-vector rule.
 - Sec 71 — JEE Main banking derivation: N/mg/θ diagram, Nsinθ/Ncosθ equations, tanθ=v²/rg box, 21.8° answer, mass-cancels note.
 - Sec 72 — JEE Adv net acceleration: a_r/a_t/a_net vector triangle at P on the path circle, Pythagorean-sum box, √73≈8.54 answer.
+- Sec 73 — Five circular-motion pitfalls checklist (numbered circles).
 
 ## Current
-Sec 73 — next.
+Sec 74 — next (last of subtopic 6).
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
