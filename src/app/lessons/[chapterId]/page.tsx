@@ -34,6 +34,9 @@ function parseBoardContent(json: unknown): BoardEventData[] {
   if (Array.isArray(json)) {
     return json as BoardEventData[];
   }
+  if (json && typeof json === "object" && "events" in json && Array.isArray((json as { events: unknown }).events)) {
+    return (json as { events: BoardEventData[] }).events;
+  }
   return [];
 }
 
@@ -189,14 +192,23 @@ export default function LessonPlayerPage() {
   // double as caption timings — this drives the live-caption strip.
   const captionSegments = useMemo<string[]>(() => {
     if (!currentSection) return [];
-    const json =
+    const raw =
       language === "english"
         ? currentSection.segments_english
         : currentSection.segments_hinglish;
-    if (!Array.isArray(json)) return [];
-    return (json as { text?: string }[]).map((s) =>
-      (s?.text || "").replace(/<[^>]+>/g, "").trim()
-    );
+    let list: unknown[] = [];
+    if (Array.isArray(raw)) {
+      list = raw;
+    } else if (raw && typeof raw === "object" && "segments" in raw && Array.isArray((raw as { segments: unknown }).segments)) {
+      list = (raw as { segments: unknown[] }).segments;
+    }
+    return list.map((s) => {
+      if (typeof s === "string") return s.replace(/<[^>]+>/g, "").trim();
+      if (s && typeof s === "object" && "text" in s && typeof (s as { text: unknown }).text === "string") {
+        return (s as { text: string }).text.replace(/<[^>]+>/g, "").trim();
+      }
+      return "";
+    });
   }, [currentSection, language]);
 
   const activeCaption =

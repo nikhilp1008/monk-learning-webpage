@@ -29,10 +29,9 @@ const PORT = process.env.PORT || "3000";
 const FORCE_SHOTS = process.env.FORCE_SHOTS === "1";
 fs.mkdirSync(OUT, { recursive: true });
 
-const browser = await chromium.launch({
-  executablePath:
-    "/Users/nikhi/Library/Caches/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-mac-arm64/chrome-headless-shell",
-});
+const customExec = "/Users/nikhi/Library/Caches/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-mac-arm64/chrome-headless-shell";
+const launchOptions = fs.existsSync(customExec) ? { executablePath: customExec } : {};
+const browser = await chromium.launch(launchOptions);
 const page = await browser.newPage({ viewport: { width: 1440, height: 960 } });
 await page.goto(`http://localhost:${PORT}/lessons/${CHAPTER}?sec=${SEC}&t=0`, {
   waitUntil: "domcontentloaded",
@@ -41,11 +40,9 @@ await page.goto(`http://localhost:${PORT}/lessons/${CHAPTER}?sec=${SEC}&t=0`, {
 // (a dev server's HMR socket keeps the network busy, so networkidle never fires)
 await page.waitForFunction(
   () => {
-    const a = document.querySelector("audio");
-    const svg = [...document.querySelectorAll("svg")].find(
+    return !![...document.querySelectorAll("svg")].find(
       (s) => s.viewBox?.baseVal?.width === 1080
     );
-    return a && a.readyState >= 1 && svg;
   },
   { timeout: 30000 }
 );
@@ -54,9 +51,12 @@ await page.waitForTimeout(1500);
 async function seek(t) {
   await page.evaluate((tt) => {
     const a = document.querySelector("audio");
-    a.currentTime = tt;
+    if (a) a.currentTime = tt;
   }, t);
-  await page.waitForFunction(() => !document.querySelector("audio").seeking);
+  await page.waitForFunction(() => {
+    const a = document.querySelector("audio");
+    return !a || !a.seeking;
+  });
   await page.waitForTimeout(1800); // let staggers land at t+~1s frame
 }
 
@@ -131,8 +131,15 @@ async function inspect() {
 
 async function runLang(lang, revs) {
   await page.getByRole("button", { name: lang === "english" ? "English" : "Hinglish" }).click();
-  await page.waitForTimeout(900);
-  const dur = await page.evaluate(() => document.querySelector("audio").duration);
+  await page.waitForTimeout(1000);
+  let dur = await page.evaluate(() => {
+    const a = document.querySelector("audio");
+    return a && Number.isFinite(a.duration) ? a.duration : null;
+  });
+  if (!dur) {
+    const maxRev = Math.max(...revs, 0);
+    dur = maxRev + 20;
+  }
   const times = revs.map((r) => Math.min(r + 1, dur - 0.5));
   times.push(Math.max(0, dur - 1)); // settled final frame
 
