@@ -115,5 +115,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 51 — atomic origin of Hooke's law (U(r) potential well, r₀ minimum, local-parabola overlay, U≈U(r₀)+½κ(r-r₀)² ⇒ F≈-κ(r-r₀), summed bonds → σ=Yε, Y large/small by bond stiffness, small-strain limit)
 
+- Sec 52 — beams, neutral layer, I-girder (bent-beam diagram: top compress/bottom stretch/neutral layer, δ=WL³/3YIg cantilever vs /48YIg supported, I-section flanges-far-from-axis diagram, scoop-the-middle insight, Ig=bd³/12 depth-beats-breadth)
+
 ## Current
-Starting Sec 52
+Starting Sec 53
