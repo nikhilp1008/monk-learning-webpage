@@ -90,9 +90,10 @@ Total sections: 76
 - Sec 74 — Pro-tip closer: identify-the-centripetal-force-first hero, name-it note, two-moves boxes (uniform/non-uniform, banking), core formulas box, mnemonic hero. ✅ SUBTOPIC 6 (64–74) COMPLETE.
 
 - Sec 75 — Formula recap board: six numbered rows (one per subtopic) with accent-circle marker, label, and single-line formula; green hero-box closer on the shared thread.
+- Sec 76 — Cheat sheet closer: THE MASTER MOVE hero box, six accent-bar rows (one per subtopic, plain-language mental model), RESOLVE—SOLVE EACH AXIS—RECOMBINE mnemonic hero. ✅ SUBTOPIC 7 (75–76) COMPLETE. ✅ ALL 76/76 SECTIONS SCENE-RENDERED — CHAPTER 3 COMPLETE.
 
 ## Current
-Sec 76 — next (last section of the chapter, 76/76).
+Chapter complete (76/76). Nothing pending.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
