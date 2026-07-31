@@ -92,6 +92,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 61 — Tension/spring: puller vs pusher, F=-kx, negative-N/T diagnostic, rolling
 - [x] Sec 62 — Springs series/parallel: 1/k_eq sum, k_eq sum, physical sanity check
 - [x] Sec 63 — Three N cases from one principle: lift, pulled-up, pushed-down
+- [x] Sec 64 — Reference set: 5 bands, self-adjusting N/T, negative-answer signal
 
 ## Current
-Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 64.
+Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 65.
