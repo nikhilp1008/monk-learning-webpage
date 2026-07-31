@@ -84,9 +84,10 @@ Total sections: 76
 - Sec 68 — Forces toolkit: Fc box, not-a-new-force note, non-uniform ar/at split, net-a box, banked-road N/mg/θ diagram, tanθ=v²/rg box.
 - Sec 69 — Whirling-stone worked example: circle+string+tension diagram, ω/v/a_c/T derivation chain, answer box, tension-IS-Fc conceptual note.
 - Sec 70 — NEET KE-constant trap: 4-chip options, ring+eliminate A/B/D (vectors), KE=½mv² scalar note, ring+answer on (C), scalar-vs-vector rule.
+- Sec 71 — JEE Main banking derivation: N/mg/θ diagram, Nsinθ/Ncosθ equations, tanθ=v²/rg box, 21.8° answer, mass-cancels note.
 
 ## Current
-Sec 71 — next.
+Sec 72 — next.
 
 ## Notes
 - Reveals cache: fetch from Supabase `lesson_sections`
