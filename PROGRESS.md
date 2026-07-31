@@ -120,6 +120,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 89 — WE4 JEE Advanced leaving a sphere: cosθ=2/3, θ≈48.2°, N=0+energy master key
 - [x] Sec 90 — Tips: 5 pitfalls, two-equation pro-tip, 2 memory aids. SUBTOPIC 8 DONE (90/92)
 - [x] Sec 91 — Formula recap: 7 bands, all 8 subtopics' governing relations in one frame
+- [x] Sec 92 — Master cheat sheet: 6 bands + 4-phrase memory chain. SUBTOPIC 9 DONE. **CHAPTER 4 COMPLETE (92/92)**
 
 ## Current
-Subtopic 9 (Recap + cheat sheet, secs 91-92). Next: Sec 92 (final section).
+CHAPTER COMPLETE. All 92 sections rendered, verified (tsc + audit clean, both languages eye-checked), committed, and pushed through Sec90. Sec91-92 committed; final push to origin still pending as of this entry — run `git push origin premium-board-ch4` to sync.
