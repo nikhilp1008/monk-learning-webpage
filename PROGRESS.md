@@ -105,5 +105,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 47 — NEET trap: stiffness vs ductility (P=steep/snaps-early vs Q=gentler/long-reach curves, slope→Y vs reach→ductility, eliminate-bundling rule, independent properties)
 
+- Sec 48 — JEE Main worked example: lift cable diameter (ceiling+cable+2000kg load diagram, F=mg=2.0e4N, σ_work=σy/5=5.0e7Pa, A=4.0e-4m², boxed hero d≈2.3cm, safety-factor note)
+
 ## Current
-Starting Sec 48
+Starting Sec 49
