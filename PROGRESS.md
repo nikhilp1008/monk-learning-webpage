@@ -94,6 +94,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 63 — Three N cases from one principle: lift, pulled-up, pushed-down
 - [x] Sec 64 — Reference set: 5 bands, self-adjusting N/T, negative-answer signal
 - [x] Sec 65 — WE1 spring in lift: x1=10cm ground, x2=12cm accelerating, spring-scale insight
+- [x] Sec 66 — WE2 NEET angled push: N=mg+Fsin30=25N trap, ADD/SUBTRACT reflex, red herring
 
 ## Current
-Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 66.
+Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 67.
