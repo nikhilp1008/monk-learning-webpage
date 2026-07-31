@@ -28,8 +28,28 @@ Subtopic 1 (Fluid Pressure and Pascal's Law), Sec 1–11 — ALL PASS both langu
 - Sec 10 — "Mercury U-tube: the factor of two": U-tube diagram, water column, mercury drop/rise, 2x bracket, derivation to x=0.5cm. Eyeballed clean.
 - Sec 11 — "Pitfalls and pro-tips": 6-row red/amber tips list.
 
+- Sec 12 — "Where buoyancy comes from": submerged cube, small top-push/big bottom-push arrows, P=P0+ρgh, F_B net arrow.
+
+## Drafted but UNVERIFIED (blocking issue below)
+- Sec 13 — "Archimedes' principle by fluid replacement": two tanks (real solid body vs dashed fluid-blob), "≡" equivalence, F_B=ρf·Vsub·g, centroid arrow. Written, registered in index.ts, passes `npx tsc --noEmit`. NOT verified — see incident below.
+
 ## Current
-Starting Sec 12 — subtopic 2, Buoyancy and Floatation
+Blocked on missing audio for sec 13 onward (see incident). Resume by: re-checking
+`curl -s -o /dev/null -w "%{http_code}" https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/english_sec_13.mp3`
+until it returns 200, then verify sec 13 and continue sec 14+.
+
+## Incident log
+- 2026-07-31: `verify-scene.mjs` timed out waiting for the audio element on sec 13
+  (`page.waitForFunction` 30s timeout). Diagnosed with a throwaway Playwright script
+  (console/pageerror/requestfailed listeners): the scene SVG renders fine (1080×620
+  found, no pageerror), but the `<audio>` src
+  `https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/hinglish_sec_13.mp3`
+  fails `net::ERR_BLOCKED_BY_ORB`. Root cause: **404** from the CDN. Scanned English
+  audio for all 86 sections via curl — sec 1–12 return 200, sec 13–86 ALL return 404.
+  This is an audio-pipeline/content gap upstream of this worktree (URLs come from
+  Supabase `lesson_sections.audio_url_english/hinglish`, not something this session
+  writes) — not a bug in any `Ch09Sec*.tsx` or `index.ts`. Not fixable from here;
+  flagged to the user rather than worked around.
 
 ## Working notes
 - Reveal arrays cached from Supabase REST at session start to scratchpad
