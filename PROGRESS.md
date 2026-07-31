@@ -139,5 +139,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 ## SUBTOPIC 5 COMPLETE (secs 51-62/12)
 
+- Sec 63 — chapter 8 formula recap (7-row whole-chapter sweep: foundations, 4 elastic constants, moduli-at-work, gas+constant-relations, Poisson+energy, material-budget+self-weight, applications)
+
 ## Current
-Starting Sec 63
+Starting Sec 64
