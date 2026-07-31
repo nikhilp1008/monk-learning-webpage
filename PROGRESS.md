@@ -99,6 +99,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 68 — WE4 JEE Advanced spring: a=2, kx=m2a, x=1.5cm, spring = visible contact force
 - [x] Sec 69 — Tips: 5 pitfalls, FBD-first pro-tip, 2 memory aids. SUBTOPIC 6 DONE (69/92)
 - [x] Sec 70 — Constraint intro: fixed-pulley diagram, a1=a2=a, universal 5-step recipe
+- [x] Sec 71 — Three configs: contact/Atwood/table+hanging panels, movable-pulley factor of two
 
 ## Current
-Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 71.
+Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 72.
