@@ -117,5 +117,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 52 — beams, neutral layer, I-girder (bent-beam diagram: top compress/bottom stretch/neutral layer, δ=WL³/3YIg cantilever vs /48YIg supported, I-section flanges-far-from-axis diagram, scoop-the-middle insight, Ig=bd³/12 depth-beats-breadth)
 
+- Sec 53 — why mountains have a maximum height (mountain-triangle diagram with height h, σ_base=ρgh, base-limited-by-breaking-stress note, boxed hero h_max=σ_max/ρg, rock≈10km→Everest-sized note)
+
 ## Current
-Starting Sec 53
+Starting Sec 54
