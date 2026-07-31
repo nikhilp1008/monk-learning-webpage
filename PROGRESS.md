@@ -109,5 +109,9 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 49 — JEE Advanced: strong/stiff/tough are independent (A=steep/high/brittle vs B=gentler/long-plateau curves, slope→Y, height→strength, reach→ductility, area→toughness, glass-vs-steel takeaway)
 
+- Sec 50 — subtopic 4 wrap-up: 4 pitfall cards (ductility≠malleability≠elasticity, rubber>steel loose talk, slope=Y/areas=energies, yielding≠breaking) + read-in-order pro-tip (slope→stiff, height→strong, reach→ductile, area→tough)
+
+## SUBTOPIC 4 COMPLETE (secs 39-50/12)
+
 ## Current
-Starting Sec 50
+Starting Sec 51
