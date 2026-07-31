@@ -15,10 +15,10 @@ Worktree: branch `premium-board-ch9` · port 3009 only · chapter_id `33795397-f
 8. Mechanical Properties of Fluids: Recap — secs 85–86
 
 ## Done
-(none yet)
+- Sec 1 — "Pressure: the all-directions squeeze": packed-train hook (dims) → tank+droplet demo with 4-arrow normal-push diagram → flat-surface mini-diagram (perpendicular survives, sideways crossed out) → formula P=F⊥/A (tank dims) → vector-vs-scalar note → closing insight. PASS both languages, eyeballed clean.
 
 ## Current
-Starting Sec 1 — "Pressure: the all-directions squeeze"
+Starting Sec 2 — "Why pressure deepens with depth"
 
 ## Working notes
 - Reveal arrays cached from Supabase REST at session start to scratchpad
