@@ -141,5 +141,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 63 — chapter 8 formula recap (7-row whole-chapter sweep: foundations, 4 elastic constants, moduli-at-work, gas+constant-relations, Poisson+energy, material-budget+self-weight, applications)
 
-## Current
-Starting Sec 64
+- Sec 64 — chapter 8 rapid-recall cheat sheet (7 punchy lines: golden rule Y=elastic, wire=spring k=YA/L, gas B, Poisson+energy+sudden-loading, slope/area/length/loop curve-reading, depth³/breadth¹/heat/twist-r⁴/mountains applications quartet, PEYUF milestone mnemonic)
+
+## CHAPTER 8 COMPLETE (64/64 sections)
+All sections authored, registered, typechecked, and verify-scene PASS (both languages) as of this line.
