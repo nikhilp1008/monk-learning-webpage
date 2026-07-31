@@ -101,5 +101,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 45 — the anchoring quantities (yield strength σy, u_resilience=½σyεy=σy²/2Y boxed hero, toughness=total area, ductility-graphical, permanent set)
 
+- Sec 46 — CBSE worked example: modulus of resilience (σy=3.0e8, Y=2.0e11 Pa → boxed hero u=2.25e5 J/m³, safe elastic budget note, size-independent note)
+
 ## Current
-Starting Sec 46
+Starting Sec 47
