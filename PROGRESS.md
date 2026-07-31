@@ -45,5 +45,61 @@ delay={0}>...</Fade>`. **Going forward: never pass a non-"none" `fill` to
 `Draw` without wrapping it in a `Fade` with the same `on` condition** — or
 just use `fill="none"` (outline only) when a solid fill isn't essential.
 
+- Sec 20 — which modulus? decision guide (4 icons: length→Y, shape→η, volume→B, fluid→B only, gas caveat)
+
+- Sec 21 — elastic-moduli toolkit recap (two-column formula list: k=YA/L, series/parallel, Yeq, compressibility, gas B, 4-constant relations)
+
+- Sec 22 — CBSE worked example: copper cube (squeezed-cube icon, ΔV=-ΔP·V/B → -0.50 cm³, incompressible note)
+
+- Sec 23 — NEET trap: gas bulk modulus (no fixed B, slow=isothermal B=P vs sudden=adiabatic B=γP, exam radar)
+
+- Sec 24 — JEE Main series wires + energy (thin R / thick 2R wire, ΔL_total=0.80mm, thin wire stores 4x energy, weakest-link note)
+
+- Sec 25 — JEE Advanced verification (Y,ν→B=8.0e10,η=4.8e10 Pa; verify 9/Y=1/B+3/η, two routes match ✓)
+
+- Sec 26 — subtopic 2 wrap-up: 4 pitfall cards (avg series Y, gas B, 2-of-4, k≠Y) + spring-picture pro-tip
+
+## SUBTOPIC 2 COMPLETE (secs 15-26/12)
+
+- Sec 27 — Poisson's ratio intro (dashed-original vs stretched/necked rod, ν=-(Δr/r)/(ΔL/L), rubber/cork/metals values)
+
+- Sec 28 — why ν≤0.5 (number line ν=0..0.5, ΔV/V=(1-2ν)(ΔL/L), forbidden zone extension + ✗ past 0.5)
+
+- Sec 29 — deriving the volume relation [Opus tier, log-diff] (cylinder V=πr²L, ln-differentiation, Poisson sub → ΔV/V=(1-2ν)(ΔL/L), callback to Sec28)
+
+- Sec 30 — elastic energy intro (F-vs-extension triangle graph, shaded area, U=½FΔL, "force not constant" note)
+
+- Sec 31 — deriving elastic energy [Opus tier, integral] (stress-strain triangle, W=∫F(l)dl proves U=½FΔL, energy density u=½σε=½Yε²=σ²/2Y)
+
+- Sec 32 — reading energy off the curve (shaded area under σ-ε curve = density not total, F-ext vs σ-ε distinction, resilience/toughness preview)
+
+- Sec 33 — Poisson+energy toolkit recap (two-column formula list: ν, ΔV/V, U 3-forms, u, loading contrast)
+
+- Sec 34 — CBSE worked example: steel wire energy (F=100N, U=0.05J, u=2.5e4 J/m³, cross-check via ½σε ✓)
+
+- Sec 35 — NEET trap: area is density (U=u×V=0.4J, 8e4 J option is the trap, unit J/m³ tell)
+
+- Sec 36 — JEE Main chained example (rod under σ, ε=σ/Y, lateral strain=-νε, ΔV/V=4.0e-4, volume grows note)
+
+- Sec 37 — sudden loading, factor of two (wire+block diagram, energy balance mgx=½(YA/L)x² → x_max=2x_static=0.40mm)
+
+- Sec 38 — subtopic 3 wrap-up: 4 pitfall cards (½, area=density, ν=0.5, ν≤0.5) + sudden-loading pro-tip (x_max=2x_static)
+
+## SUBTOPIC 3 COMPLETE (secs 27-38/12)
+
+- Sec 39 — subtopic 4 kickoff: past yield (elastic/plastic bands, unload point, dashed return line ∥ elastic, permanent-set bracket)
+
+- Sec 40 — three material families (ductile plateau, brittle snap, elastomer curve overlaid; tension=ductile/wires vs compression=malleable/sheets)
+
+- Sec 41 — rubber hysteresis (loading/unloading loop shaded, steel-wins-by-modulus, loop=heat, tyres/shock-absorbers application)
+
+- Sec 42 — what shifts behaviour (heat/sudden-load/many-cycles icons, fatigue note, aircraft/railway retirement schedules)
+
+- Sec 43 — journey along the curve (P/E, yield, plastic/permanent-set, ultimate+necking, fracture=breaking stress)
+
+- Sec 44 — resilience vs toughness (nested green wedge=resilience inside amber wash=toughness, springs vs crash barriers)
+
+- Sec 45 — the anchoring quantities (yield strength σy, u_resilience=½σyεy=σy²/2Y boxed hero, toughness=total area, ductility-graphical, permanent set)
+
 ## Current
-Starting Sec 20
+Starting Sec 46
