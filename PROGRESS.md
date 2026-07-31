@@ -90,6 +90,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 59 — Force menu: 5 chips, electromagnetic origin, 6-step FBD method
 - [x] Sec 60 — N not always mg: 4 panels (flat/incline/lift/pulled), self-adjusting
 - [x] Sec 61 — Tension/spring: puller vs pusher, F=-kx, negative-N/T diagnostic, rolling
+- [x] Sec 62 — Springs series/parallel: 1/k_eq sum, k_eq sum, physical sanity check
 
 ## Current
-Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 62.
+Subtopic 6 (Common Forces in Mechanics and FBDs, secs 59-69). Next: Sec 63.
