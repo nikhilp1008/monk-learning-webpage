@@ -349,7 +349,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
 
               {/* Subject Tabs */}
               <div className="flex items-center gap-1 overflow-x-auto py-0.5">
-                {["Physics", "Chemistry", "Maths", "Biology"].map((subj) => {
+                {["Physics", "Chemistry", "Math", "Biology"].map((subj) => {
                   const isActive = subject === subj;
                   return (
                     <button

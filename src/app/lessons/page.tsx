@@ -14,6 +14,7 @@ const SUBJECTS = [
   { id: "physics", label: "Physics" },
   { id: "chemistry", label: "Chemistry" },
   { id: "mathematics", label: "Maths" },
+  { id: "biology", label: "Biology" },
 ];
 
 const CLASSES = [11, 12];
