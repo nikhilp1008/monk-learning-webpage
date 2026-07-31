@@ -92,8 +92,13 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 - Sec 67 — minimum friction to roll [JEE Adv] (μ_min=(2/7)tanθ)
 - Sec 68 — rolling pitfalls (4 traps + energy-conservation pro-tip + shape factors)
 
+- Sec 69 — chapter formula recap (9-line two-column cheat sheet, all subtopics)
+- Sec 70 — chapter cheat sheet (exam-hall traps + golden habit, closing tagline)
+
 ## Current
-Subtopics 1–8 COMPLETE (68/70). Next: Subtopic 9 — Chapter Wrap-Up, Sec 69–70 (final two sections).
+ALL 70/70 SECTIONS COMPLETE. Chapter 6 — System of Particles & Rotational Motion — fully scene-rendered,
+both languages, every section type-checked and collision-audit clean ([] on every beat). Nothing left to do
+in this worktree unless the user requests revisions.
 
 ## Workflow notes
 - 2026-07-30 PM: node_modules suffered NUL-file corruption (iCloud eviction on Desktop). Layout is now `node_modules -> node_modules.nosync` (symlink). Type-check with `npx tsc --noEmit -p tsconfig.check.json` (untracked local config that also excludes node_modules.nosync); plain `npx tsc --noEmit` scans node_modules.nosync and fails.
