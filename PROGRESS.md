@@ -101,6 +101,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 70 — Constraint intro: fixed-pulley diagram, a1=a2=a, universal 5-step recipe
 - [x] Sec 71 — Three configs: contact/Atwood/table+hanging panels, movable-pulley factor of two
 - [x] Sec 72 — Atwood derivation: add-the-equations, a=(m1-m2)g/(m1+m2), T=2m1m2g/(m1+m2)
+- [x] Sec 73 — Contact force derivation: Nc=m2F/(m1+m2), push-light-vs-heavy exam trap
 
 ## Current
-Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 73.
+Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 74.
