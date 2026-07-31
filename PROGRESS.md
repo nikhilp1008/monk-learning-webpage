@@ -116,6 +116,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 85 — Formula set: 7 bands (tensions, general angle, energy link, critical speeds, 6mg, sphere)
 - [x] Sec 86 — WE1 CBSE stone loop: v_top=3.16, v_bottom=7.07, T_bottom=30N, 6mg check
 - [x] Sec 87 — WE2 NEET ratio trap: v_bottom/v_top=√5≈2.24, memorize trio 1:√3:√5
+- [x] Sec 88 — WE3 JEE rod vs string: 10 m/s vs 11.18 m/s, connector's push is the whole difference
 
 ## Current
-Subtopic 8 (Vertical Circular Motion, secs 80-90). Next: Sec 88.
+Subtopic 8 (Vertical Circular Motion, secs 80-90). Next: Sec 89.
