@@ -113,15 +113,17 @@ export default function Ch08Sec6({ currentTime, reveals, language }: SceneProps)
         sw={2.4}
         dur={1.1}
       />
-      <Draw
-        on={beat >= 0}
-        delay={dl(0, 1.6)}
-        d="M228 106 h44 v20 h-44 z"
-        stroke={INK}
-        sw={2.4}
-        dur={0.5}
-        fill={CREAM}
-      />
+      <Fade on={beat >= 0} delay={0}>
+        <Draw
+          on={beat >= 0}
+          delay={dl(0, 1.6)}
+          d="M228 106 h44 v20 h-44 z"
+          stroke={INK}
+          sw={2.4}
+          dur={0.5}
+          fill={CREAM}
+        />
+      </Fade>
       <Fade on={beat >= 0} delay={dl(0, 2.4)}>
         <T x={760} y={116} size={16} fill={MUTED} script>
           {t(
@@ -132,15 +134,17 @@ export default function Ch08Sec6({ currentTime, reveals, language }: SceneProps)
       </Fade>
 
       {/* beat 1 — the arrangement: wire of length L, radius r, mass M */}
-      <Draw
-        on={beat >= 1}
-        delay={dl(1, 0.1)}
-        d="M238 126 h24 v196 h-24 z"
-        stroke={INK}
-        sw={2.4}
-        dur={0.7}
-        fill={CREAM}
-      />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw
+          on={beat >= 1}
+          delay={dl(1, 0.1)}
+          d="M238 126 h24 v196 h-24 z"
+          stroke={INK}
+          sw={2.4}
+          dur={0.7}
+          fill={CREAM}
+        />
+      </Fade>
       <Draw
         on={beat >= 1}
         delay={dl(1, 0.5)}
@@ -154,15 +158,17 @@ export default function Ch08Sec6({ currentTime, reveals, language }: SceneProps)
           L
         </T>
       </Fade>
-      <Draw
-        on={beat >= 1}
-        delay={dl(1, 0.85)}
-        d="M204 322 h92 v48 h-92 z"
-        stroke={INK}
-        sw={2.4}
-        dur={0.5}
-        fill={CREAM}
-      />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw
+          on={beat >= 1}
+          delay={dl(1, 0.85)}
+          d="M204 322 h92 v48 h-92 z"
+          stroke={INK}
+          sw={2.4}
+          dur={0.5}
+          fill={CREAM}
+        />
+      </Fade>
       <Fade on={beat >= 1} delay={dl(1, 1.05)}>
         <T x={250} y={354} size={24} fill={INK} weight={800}>
           M

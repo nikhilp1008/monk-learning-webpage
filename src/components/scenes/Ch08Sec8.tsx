@@ -129,7 +129,9 @@ export default function Ch08Sec8({ currentTime, reveals, language }: SceneProps)
       </Fade>
 
       {/* beat 3 — E: elastic limit */}
-      <Draw on={beat >= 3} delay={dl(3, 0.2)} d="M281 290 A4 4 0 1 1 280.9 290" stroke={AMBER_DARK} sw={1.8} dur={0.3} fill={AMBER_DARK} />
+      <Fade on={beat >= 3} delay={0}>
+        <Draw on={beat >= 3} delay={dl(3, 0.2)} d="M281 290 A4 4 0 1 1 280.9 290" stroke={AMBER_DARK} sw={1.8} dur={0.3} fill={AMBER_DARK} />
+      </Fade>
       <Fade on={beat >= 3} delay={dl(3, 0.6)}>
         <T x={295} y={270} size={11} fill={AMBER_DARK} weight={700} anchor="start">
           {t("E: elastic limit", "E: elastic limit")}
@@ -137,7 +139,9 @@ export default function Ch08Sec8({ currentTime, reveals, language }: SceneProps)
       </Fade>
 
       {/* beat 4 — Yield: permanent deformation begins */}
-      <Draw on={beat >= 4} delay={dl(4, 0.2)} d="M330 260 A4 4 0 1 1 329.9 260" stroke={RED} sw={1.8} dur={0.3} fill={RED} />
+      <Fade on={beat >= 4} delay={0}>
+        <Draw on={beat >= 4} delay={dl(4, 0.2)} d="M330 260 A4 4 0 1 1 329.9 260" stroke={RED} sw={1.8} dur={0.3} fill={RED} />
+      </Fade>
       <Fade on={beat >= 4} delay={dl(4, 0.6)}>
         <T x={345} y={245} size={11} fill={RED} weight={700} anchor="start">
           {t("Yield: strain jumps", "Yield: strain jump")}
@@ -145,7 +149,9 @@ export default function Ch08Sec8({ currentTime, reveals, language }: SceneProps)
       </Fade>
 
       {/* beat 5 — Ultimate strength, then fracture */}
-      <Draw on={beat >= 5} delay={dl(5, 0.2)} d="M650 220 A4 4 0 1 1 649.9 220" stroke={RED} sw={1.8} dur={0.3} fill={RED} />
+      <Fade on={beat >= 5} delay={0}>
+        <Draw on={beat >= 5} delay={dl(5, 0.2)} d="M650 220 A4 4 0 1 1 649.9 220" stroke={RED} sw={1.8} dur={0.3} fill={RED} />
+      </Fade>
       <Fade on={beat >= 5} delay={dl(5, 0.5)}>
         <T x={650} y={200} size={11} fill={RED} weight={700}>
           {t("Ultimate", "Ultimate")}

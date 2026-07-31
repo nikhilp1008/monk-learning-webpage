@@ -76,20 +76,26 @@ export default function Ch08Sec17({ currentTime, reveals, language }: SceneProps
       <Draw on={beat >= 0} delay={dl(0, 0.3)} d="M480 90 C520 86, 560 93, 600 89" stroke={RED} sw={2} dur={0.4} />
 
       {/* beat 1 — two rods joined into one */}
-      <Draw on={beat >= 1} delay={dl(1, 0.1)} d="M140 140 h24 v65 h-24 z" stroke={INK} sw={2.2} dur={0.3} fill={CREAM} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 0.1)} d="M140 140 h24 v65 h-24 z" stroke={INK} sw={2.2} dur={0.3} fill={CREAM} />
+      </Fade>
       <Fade on={beat >= 1} delay={dl(1, 0.4)}>
         <T x={175} y={175} size={12} fill={INK} anchor="start">
           Y₁, L, A
         </T>
       </Fade>
-      <Draw on={beat >= 1} delay={dl(1, 0.6)} d="M140 205 h24 v65 h-24 z" stroke={AMBER_DARK} sw={2.2} dur={0.3} fill={CREAM} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 0.6)} d="M140 205 h24 v65 h-24 z" stroke={AMBER_DARK} sw={2.2} dur={0.3} fill={CREAM} />
+      </Fade>
       <Fade on={beat >= 1} delay={dl(1, 0.9)}>
         <T x={175} y={240} size={12} fill={AMBER_DARK} anchor="start">
           Y₂, L, A
         </T>
       </Fade>
       <Draw on={beat >= 1} delay={dl(1, 1.2)} d={arrowD(260, 207, 310, 207)} stroke={GREEN} sw={2.4} dur={0.3} />
-      <Draw on={beat >= 1} delay={dl(1, 1.5)} d="M360 140 h28 v130 h-28 z" stroke={INK} sw={2.4} dur={0.4} fill={CREAM} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 1.5)} d="M360 140 h28 v130 h-28 z" stroke={INK} sw={2.4} dur={0.4} fill={CREAM} />
+      </Fade>
       <Fade on={beat >= 1} delay={dl(1, 1.9)}>
         <T x={400} y={205} size={13} fill={GREEN} anchor="start">
           Y_eq, 2L, A

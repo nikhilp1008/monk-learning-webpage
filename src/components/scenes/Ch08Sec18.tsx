@@ -76,7 +76,9 @@ export default function Ch08Sec18({ currentTime, reveals, language }: SceneProps
       <Draw on={beat >= 0} delay={dl(0, 0.3)} d="M480 90 C520 86, 560 93, 600 89" stroke={RED} sw={2} dur={0.4} />
 
       {/* beat 1 — slow vs sudden compression */}
-      <Draw on={beat >= 1} delay={dl(1, 0.2)} d="M80 160 h90 v110 h-90 z" stroke={INK} sw={2.2} dur={0.4} fill={CREAM} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 0.2)} d="M80 160 h90 v110 h-90 z" stroke={INK} sw={2.2} dur={0.4} fill={CREAM} />
+      </Fade>
       <Fade on={beat >= 1} delay={dl(1, 0.7)}>
         <rect x={80} y={160} width={90} height={16} fill={GREEN} />
       </Fade>
@@ -103,7 +105,9 @@ export default function Ch08Sec18({ currentTime, reveals, language }: SceneProps
         </T>
       </Fade>
 
-      <Draw on={beat >= 1} delay={dl(1, 2.7)} d="M330 160 h90 v110 h-90 z" stroke={INK} sw={2.2} dur={0.4} fill={CREAM} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 2.7)} d="M330 160 h90 v110 h-90 z" stroke={INK} sw={2.2} dur={0.4} fill={CREAM} />
+      </Fade>
       <Fade on={beat >= 1} delay={dl(1, 3.2)}>
         <rect x={330} y={160} width={90} height={16} fill={RED} />
       </Fade>

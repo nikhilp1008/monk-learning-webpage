@@ -77,7 +77,9 @@ export default function Ch08Sec3({ currentTime, reveals, language }: SceneProps)
       </Fade>
 
       {/* beat 0 — a rod under tension */}
-      <Draw on={beat >= 0} delay={dl(0, 0.3)} d="M350 145 h380 v16 h-380 z" stroke={INK} sw={2.2} dur={0.7} fill={CREAM} />
+      <Fade on={beat >= 0} delay={0}>
+        <Draw on={beat >= 0} delay={dl(0, 0.3)} d="M350 145 h380 v16 h-380 z" stroke={INK} sw={2.2} dur={0.7} fill={CREAM} />
+      </Fade>
       <Draw on={beat >= 0} delay={dl(0, 1.3)} d={arrowD(345, 153, 300, 153)} stroke={INK} sw={2.4} dur={0.4} />
       <Fade on={beat >= 0} delay={dl(0, 1.9)}>
         <T x={280} y={157} size={14} fill={INK} weight={800} anchor="end">
@@ -92,7 +94,9 @@ export default function Ch08Sec3({ currentTime, reveals, language }: SceneProps)
       </Fade>
 
       {/* beat 1 — same force, two different areas: cable vs wire */}
-      <Draw on={beat >= 1} delay={dl(1, 0.3)} d="M350 192 h300 v18 h-300 z" stroke={INK} sw={2.2} dur={0.6} fill={CREAM} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 0.3)} d="M350 192 h300 v18 h-300 z" stroke={INK} sw={2.2} dur={0.6} fill={CREAM} />
+      </Fade>
       <Draw on={beat >= 1} delay={dl(1, 1.1)} d={arrowD(345, 201, 320, 201)} stroke={INK} sw={2} dur={0.3} />
       <Draw on={beat >= 1} delay={dl(1, 1.5)} d={arrowD(650, 201, 675, 201)} stroke={INK} sw={2} dur={0.3} />
       <Fade on={beat >= 1} delay={dl(1, 2)}>
@@ -100,7 +104,9 @@ export default function Ch08Sec3({ currentTime, reveals, language }: SceneProps)
           {t("cable", "cable")}
         </T>
       </Fade>
-      <Draw on={beat >= 1} delay={dl(1, 2.6)} d="M350 232 h300 v8 h-300 z" stroke={INK} sw={1.6} dur={0.5} fill={CREAM} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 2.6)} d="M350 232 h300 v8 h-300 z" stroke={INK} sw={1.6} dur={0.5} fill={CREAM} />
+      </Fade>
       <Draw on={beat >= 1} delay={dl(1, 3.3)} d={arrowD(345, 236, 320, 236)} stroke={INK} sw={1.8} dur={0.3} />
       <Draw on={beat >= 1} delay={dl(1, 3.7)} d={arrowD(650, 236, 675, 236)} stroke={INK} sw={1.8} dur={0.3} />
       <Fade on={beat >= 1} delay={dl(1, 4.2)}>
@@ -150,7 +156,9 @@ export default function Ch08Sec3({ currentTime, reveals, language }: SceneProps)
       </Fade>
 
       {/* beat 4 — three ways a solid feels stress */}
-      <Draw on={beat >= 4} delay={dl(4, 0.3)} d="M185 400 h50 v50 h-50 z" stroke={INK} sw={2.2} dur={0.5} fill={CREAM} />
+      <Fade on={beat >= 4} delay={0}>
+        <Draw on={beat >= 4} delay={dl(4, 0.3)} d="M185 400 h50 v50 h-50 z" stroke={INK} sw={2.2} dur={0.5} fill={CREAM} />
+      </Fade>
       <Draw
         on={beat >= 4}
         delay={dl(4, 1)}
@@ -159,7 +167,9 @@ export default function Ch08Sec3({ currentTime, reveals, language }: SceneProps)
         sw={2.2}
         dur={0.4}
       />
-      <Draw on={beat >= 4} delay={dl(4, 1.8)} d="M510 395 h60 v60 h-60 z" stroke={AMBER_DARK} sw={2.2} dur={0.6} fill={CREAM} />
+      <Fade on={beat >= 4} delay={0}>
+        <Draw on={beat >= 4} delay={dl(4, 1.8)} d="M510 395 h60 v60 h-60 z" stroke={AMBER_DARK} sw={2.2} dur={0.6} fill={CREAM} />
+      </Fade>
       <Draw
         on={beat >= 4}
         delay={dl(4, 2.8)}
@@ -168,15 +178,17 @@ export default function Ch08Sec3({ currentTime, reveals, language }: SceneProps)
         sw={2}
         dur={0.5}
       />
-      <Draw
-        on={beat >= 4}
-        delay={dl(4, 3.9)}
-        d="M840 445 L840 420 L860 405 L920 405 L920 430 L900 445 Z"
-        stroke={RED}
-        sw={2.2}
-        dur={0.6}
-        fill={CREAM}
-      />
+      <Fade on={beat >= 4} delay={0}>
+        <Draw
+          on={beat >= 4}
+          delay={dl(4, 3.9)}
+          d="M840 445 L840 420 L860 405 L920 405 L920 430 L900 445 Z"
+          stroke={RED}
+          sw={2.2}
+          dur={0.6}
+          fill={CREAM}
+        />
+      </Fade>
       <Draw on={beat >= 4} delay={dl(4, 4.7)} d={arrowD(858, 390, 908, 390)} stroke={RED} sw={2.2} dur={0.4} />
 
       {/* beat 5 — name and describe each */}

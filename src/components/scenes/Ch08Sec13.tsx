@@ -127,15 +127,17 @@ export default function Ch08Sec13({ currentTime, reveals, language }: SceneProps
         sw={2}
         dur={0.5}
       />
-      <Draw
-        on={beat >= 0}
-        delay={dl(0, 0.9)}
-        d="M128 155 h360 v26 h-360 z"
-        stroke={INK}
-        sw={2.4}
-        dur={0.9}
-        fill={CREAM}
-      />
+      <Fade on={beat >= 0} delay={0}>
+        <Draw
+          on={beat >= 0}
+          delay={dl(0, 0.9)}
+          d="M128 155 h360 v26 h-360 z"
+          stroke={INK}
+          sw={2.4}
+          dur={0.9}
+          fill={CREAM}
+        />
+      </Fade>
       {/* pivot pin drawn AFTER the rod so it sits on top of the bar's fill */}
       <Fade on={beat >= 0} delay={dl(0, 2.0)}>
         <circle cx={128} cy={168} r={10} fill={CREAM} stroke={INK} strokeWidth={2.4} />

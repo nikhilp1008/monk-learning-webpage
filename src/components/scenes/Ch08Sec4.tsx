@@ -89,15 +89,19 @@ export default function Ch08Sec4({ currentTime, reveals, language }: SceneProps)
       </Fade>
 
       {/* beat 1 — the point: same 1 cm stretch, very different fractions */}
-      <Draw on={beat >= 1} delay={dl(1, 0.3)} d="M100 205 h600 v12 h-600 z" stroke={INK} sw={2} dur={0.5} fill={CREAM} />
-      <Draw on={beat >= 1} delay={dl(1, 1.1)} d="M700 205 h14 v12 h-14 z" stroke={GREEN} sw={1.6} dur={0.3} fill={GREEN} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 0.3)} d="M100 205 h600 v12 h-600 z" stroke={INK} sw={2} dur={0.5} fill={CREAM} />
+        <Draw on={beat >= 1} delay={dl(1, 1.1)} d="M700 205 h14 v12 h-14 z" stroke={GREEN} sw={1.6} dur={0.3} fill={GREEN} />
+      </Fade>
       <Fade on={beat >= 1} delay={dl(1, 1.6)}>
         <T x={400} y={248} size={12} fill={GREEN} script>
           {t("10 m + 1 cm → tiny strain", "10 m + 1 cm → strain chota")}
         </T>
       </Fade>
-      <Draw on={beat >= 1} delay={dl(1, 2.4)} d="M100 275 h60 v12 h-60 z" stroke={INK} sw={2} dur={0.4} fill={CREAM} />
-      <Draw on={beat >= 1} delay={dl(1, 3)} d="M160 275 h14 v12 h-14 z" stroke={RED} sw={1.6} dur={0.3} fill={RED} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 2.4)} d="M100 275 h60 v12 h-60 z" stroke={INK} sw={2} dur={0.4} fill={CREAM} />
+        <Draw on={beat >= 1} delay={dl(1, 3)} d="M160 275 h14 v12 h-14 z" stroke={RED} sw={1.6} dur={0.3} fill={RED} />
+      </Fade>
       <Fade on={beat >= 1} delay={dl(1, 3.4)}>
         <T x={300} y={318} size={12} fill={RED} script>
           {t("10 cm + 1 cm → HUGE strain", "10 cm + 1 cm → BADA strain")}
@@ -130,7 +134,9 @@ export default function Ch08Sec4({ currentTime, reveals, language }: SceneProps)
       <Fade on={beat >= 4} delay={dl(4, 0.05)}>
         <rect x={195} y={467} width={30} height={35} fill="none" stroke={MUTED} strokeWidth={1.6} strokeDasharray="3 3" />
       </Fade>
-      <Draw on={beat >= 4} delay={dl(4, 0.15)} d="M195 452 h30 v50 h-30 z" stroke={GREEN} sw={2} dur={0.4} fill={CREAM} />
+      <Fade on={beat >= 4} delay={0}>
+        <Draw on={beat >= 4} delay={dl(4, 0.15)} d="M195 452 h30 v50 h-30 z" stroke={GREEN} sw={2} dur={0.4} fill={CREAM} />
+      </Fade>
       <Fade on={beat >= 4} delay={dl(4, 0.25)}>
         <T x={232} y={460} size={10} fill={GREEN} anchor="start">
           ΔL
@@ -139,19 +145,23 @@ export default function Ch08Sec4({ currentTime, reveals, language }: SceneProps)
       <Fade on={beat >= 4} delay={dl(4, 0.35)}>
         <rect x={515} y={452} width={50} height={50} fill="none" stroke={MUTED} strokeWidth={1.6} strokeDasharray="3 3" />
       </Fade>
-      <Draw on={beat >= 4} delay={dl(4, 0.45)} d="M521 458 h38 v38 h-38 z" stroke={AMBER_DARK} sw={2} dur={0.4} fill={CREAM} />
+      <Fade on={beat >= 4} delay={0}>
+        <Draw on={beat >= 4} delay={dl(4, 0.45)} d="M521 458 h38 v38 h-38 z" stroke={AMBER_DARK} sw={2} dur={0.4} fill={CREAM} />
+      </Fade>
       <Fade on={beat >= 4} delay={dl(4, 0.55)}>
         <rect x={840} y={462} width={60} height={40} fill="none" stroke={MUTED} strokeWidth={1.6} strokeDasharray="3 3" />
       </Fade>
-      <Draw
-        on={beat >= 4}
-        delay={dl(4, 0.65)}
-        d="M840 502 L840 472 L860 462 L920 462 L920 492 L900 502 Z"
-        stroke={RED}
-        sw={2}
-        dur={0.4}
-        fill={CREAM}
-      />
+      <Fade on={beat >= 4} delay={0}>
+        <Draw
+          on={beat >= 4}
+          delay={dl(4, 0.65)}
+          d="M840 502 L840 472 L860 462 L920 462 L920 492 L900 502 Z"
+          stroke={RED}
+          sw={2}
+          dur={0.4}
+          fill={CREAM}
+        />
+      </Fade>
       <Fade on={beat >= 4} delay={dl(4, 0.75)}>
         <T x={926} y={466} size={10} fill={RED} anchor="start">
           x

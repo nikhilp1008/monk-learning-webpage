@@ -117,15 +117,17 @@ export default function Ch08Sec1({ currentTime, reveals, language }: SceneProps)
       />
 
       {/* beat 2 — the opposite: plasticity (clay stays bent) */}
-      <Draw
-        on={beat >= 2}
-        delay={dl(2, 0.4)}
-        d="M720 205 Q730 188 770 191 Q810 188 820 205 Q812 218 770 216 Q728 219 720 205 Z"
-        stroke={AMBER_DARK}
-        sw={2.2}
-        dur={0.8}
-        fill={CREAM}
-      />
+      <Fade on={beat >= 2} delay={0}>
+        <Draw
+          on={beat >= 2}
+          delay={dl(2, 0.4)}
+          d="M720 205 Q730 188 770 191 Q810 188 820 205 Q812 218 770 216 Q728 219 720 205 Z"
+          stroke={AMBER_DARK}
+          sw={2.2}
+          dur={0.8}
+          fill={CREAM}
+        />
+      </Fade>
       <Fade on={beat >= 2} delay={dl(2, 1.6)}>
         <T x={770} y={246} size={13} fill={MUTED} script>
           {t("clay / dough", "clay / atta")}

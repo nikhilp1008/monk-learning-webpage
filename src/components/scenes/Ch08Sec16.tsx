@@ -83,7 +83,9 @@ export default function Ch08Sec16({ currentTime, reveals, language }: SceneProps
       </Fade>
       <Draw on={beat >= 1} delay={dl(1, 0.4)} d="M150 140 h150" stroke={INK} sw={3} dur={0.3} />
       <Draw on={beat >= 1} delay={dl(1, 0.8)} d="M225 140 L225 210" stroke={GREEN} sw={2.6} dur={0.3} />
-      <Draw on={beat >= 1} delay={dl(1, 1.2)} d="M221 210 A4 4 0 1 1 220.9 210" stroke={INK} sw={1.6} dur={0.2} fill={INK} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 1.2)} d="M221 210 A4 4 0 1 1 220.9 210" stroke={INK} sw={1.6} dur={0.2} fill={INK} />
+      </Fade>
       <Draw on={beat >= 1} delay={dl(1, 1.5)} d="M225 210 L225 280" stroke={GREEN} sw={2.6} dur={0.3} />
       <Fade on={beat >= 1} delay={dl(1, 1.9)}>
         <Chip x={209} y={280} w={32} h={24} fill={CREAM} stroke={INK} textFill={INK} size={12} script={false}>
@@ -99,7 +101,9 @@ export default function Ch08Sec16({ currentTime, reveals, language }: SceneProps
       <Draw on={beat >= 1} delay={dl(1, 2.6)} d="M600 140 h200" stroke={INK} sw={3} dur={0.3} />
       <Draw on={beat >= 1} delay={dl(1, 3)} d="M650 140 L650 240" stroke={AMBER_DARK} sw={2.6} dur={0.3} />
       <Draw on={beat >= 1} delay={dl(1, 3.4)} d="M750 140 L750 240" stroke={AMBER_DARK} sw={2.6} dur={0.3} />
-      <Draw on={beat >= 1} delay={dl(1, 3.8)} d="M630 240 h140 v16 h-140 z" stroke={INK} sw={2} dur={0.3} fill={CREAM} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 3.8)} d="M630 240 h140 v16 h-140 z" stroke={INK} sw={2} dur={0.3} fill={CREAM} />
+      </Fade>
       <Draw on={beat >= 1} delay={dl(1, 4.2)} d="M700 256 L700 280" stroke={INK} sw={2.2} dur={0.2} />
       <Fade on={beat >= 1} delay={dl(1, 4.5)}>
         <Chip x={684} y={280} w={32} h={24} fill={CREAM} stroke={INK} textFill={INK} size={12} script={false}>

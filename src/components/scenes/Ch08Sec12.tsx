@@ -91,7 +91,9 @@ export default function Ch08Sec12({ currentTime, reveals, language }: SceneProps
           L, A, Yₛ
         </T>
       </Fade>
-      <Draw on={beat >= 1} delay={dl(1, 1.8)} d="M206 260 A4 4 0 1 1 205.9 260" stroke={INK} sw={1.8} dur={0.2} fill={INK} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 1.8)} d="M206 260 A4 4 0 1 1 205.9 260" stroke={INK} sw={1.8} dur={0.2} fill={INK} />
+      </Fade>
       <Draw on={beat >= 1} delay={dl(1, 2.1)} d="M210 260 L210 380" stroke={AMBER_DARK} sw={2.6} dur={0.4} />
       <Fade on={beat >= 1} delay={dl(1, 2.6)}>
         <T x={230} y={320} size={13} fill={AMBER_DARK} weight={700} anchor="start">
@@ -103,7 +105,9 @@ export default function Ch08Sec12({ currentTime, reveals, language }: SceneProps
           L, 2A, Y_c
         </T>
       </Fade>
-      <Draw on={beat >= 1} delay={dl(1, 3.3)} d="M190 380 h40 v28 h-40 z" stroke={INK} sw={2} dur={0.3} fill={CREAM} />
+      <Fade on={beat >= 1} delay={0}>
+        <Draw on={beat >= 1} delay={dl(1, 3.3)} d="M190 380 h40 v28 h-40 z" stroke={INK} sw={2} dur={0.3} fill={CREAM} />
+      </Fade>
       <Fade on={beat >= 1} delay={dl(1, 3.7)}>
         <T x={210} y={398} size={11} fill={INK}>
           {t("10 kg", "10 kg")}

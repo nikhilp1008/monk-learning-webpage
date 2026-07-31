@@ -116,15 +116,17 @@ export default function Ch08Sec2({ currentTime, reveals, language }: SceneProps)
       <Fade on={beat >= 0} delay={dl(0, 0.2)}>
         <circle cx={540} cy={180} r={32} fill="none" stroke={MUTED} strokeWidth={1.6} strokeDasharray="4 5" />
       </Fade>
-      <Draw
-        on={beat >= 0}
-        delay={dl(0, 0.6)}
-        d="M524 180 A16 16 0 1 1 523.9 180"
-        stroke={INK}
-        sw={2.2}
-        dur={0.8}
-        fill={AMBER}
-      />
+      <Fade on={beat >= 0} delay={0}>
+        <Draw
+          on={beat >= 0}
+          delay={dl(0, 0.6)}
+          d="M524 180 A16 16 0 1 1 523.9 180"
+          stroke={INK}
+          sw={2.2}
+          dur={0.8}
+          fill={AMBER}
+        />
+      </Fade>
       <Fade on={beat >= 0} delay={dl(0, 2.2)}>
         <T x={540} y={240} size={13} fill={MUTED} script>
           {t("one atom", "ek atom")}
