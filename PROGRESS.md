@@ -103,6 +103,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 72 — Atwood derivation: add-the-equations, a=(m1-m2)g/(m1+m2), T=2m1m2g/(m1+m2)
 - [x] Sec 73 — Contact force derivation: Nc=m2F/(m1+m2), push-light-vs-heavy exam trap
 - [x] Sec 74 — Formula set: 7 bands (master, contact, Atwood, table, incline, constraints, g_eff)
+- [x] Sec 75 — WE1 CBSE Atwood: a=2.5, T=37.5N, sanity check, Atwood's g-measurement history
 
 ## Current
-Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 75.
+Subtopic 7 (Connected Bodies, Pulleys and Constraint Relations, secs 70-79). Next: Sec 76.
