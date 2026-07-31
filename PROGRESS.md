@@ -129,5 +129,7 @@ just use `fill="none"` (outline only) when a solid fill isn't essential.
 
 - Sec 58 — CBSE worked example: maximum height of a mountain (σ_max=3.0e8, ρ=2.5e3, g=10 → boxed hero h_max=1.2e4 m=12km, Earth's-tallest-mountains check, gravity-vs-height/Olympus-Mons note)
 
+- Sec 59 — NEET trap: length-free thermal stress (steel rod clamped ΔT=40°C, boxed hero σ=YαΔT=9.6e7 Pa, independent-of-length note, eliminate-length-dependent-options rule, clamping-cancels-expansion explanation)
+
 ## Current
-Starting Sec 59 (Sec55 pending background agent completion)
+Starting Sec 60 (Sec55 pending background agent completion)
