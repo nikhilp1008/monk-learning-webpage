@@ -118,6 +118,7 @@ compile (first hit can take >30s, longer than playwright's goto timeout) before 
 - [x] Sec 87 — WE2 NEET ratio trap: v_bottom/v_top=√5≈2.24, memorize trio 1:√3:√5
 - [x] Sec 88 — WE3 JEE rod vs string: 10 m/s vs 11.18 m/s, connector's push is the whole difference
 - [x] Sec 89 — WE4 JEE Advanced leaving a sphere: cosθ=2/3, θ≈48.2°, N=0+energy master key
+- [x] Sec 90 — Tips: 5 pitfalls, two-equation pro-tip, 2 memory aids. SUBTOPIC 8 DONE (90/92)
 
 ## Current
-Subtopic 8 (Vertical Circular Motion, secs 80-90). Next: Sec 90.
+Subtopic 9 (Recap + cheat sheet, secs 91-92). Next: Sec 91.
