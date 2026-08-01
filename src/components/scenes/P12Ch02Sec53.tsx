@@ -73,7 +73,7 @@ export default function P12Ch02Sec53({ currentTime, reveals, language }: ScenePr
           <rect x={170} y={100} width={60} height={10} fill="#10b981" />
           <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 200 110 L 200 150" stroke={INK} sw={2} />
           <T x={150} y={95} size={14} fill={INK} weight={700}>C₂</T>
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 200 150 L 200 250" stroke={INK} sw={2} strokeDasharray="4 4" />
+          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 200 150 L 200 250" stroke={INK} sw={2} />
 
           {/* C3 */}
           <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 300 50 L 300 80" stroke={INK} sw={2} />

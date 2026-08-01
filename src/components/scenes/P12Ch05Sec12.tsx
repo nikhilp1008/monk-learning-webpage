@@ -69,10 +69,10 @@ export default function P12Ch05Sec12({ currentTime, reveals, language }: ScenePr
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
           <T x={240} y={30} anchor="middle" size={16} fill={GREEN} weight={800}>
-            \vec{B}_axial = + (μ₀/4π) (2\vec{m} / d³)
+            B_axial = + (μ₀/4π) (2m / d³)
           </T>
           <T x={240} y={52} anchor="middle" size={16} fill={INK} weight={800}>
-            \vec{B}_eq = − (μ₀/4π) (\vec{m} / d³)
+            B_eq = − (μ₀/4π) (m / d³)
           </T>
         </g>
       </Fade>
