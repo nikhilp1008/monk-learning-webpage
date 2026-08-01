@@ -36,7 +36,7 @@ export default function P12Ch02Sec33({ currentTime, reveals, language }: ScenePr
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Charge transfer animation
-  const chargePos = (currentTime * 0.8) % 1;
+  const chargePos = Math.min(1, currentTime * 0.32);
   const dqY = 240 - chargePos * 140;
 
   return (

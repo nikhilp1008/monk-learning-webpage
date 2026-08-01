@@ -36,7 +36,7 @@ export default function P12Ch02Sec4({ currentTime, reveals, language }: ScenePro
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Electron acceleration trajectory animation
-  const eVPos = (currentTime * 1.2) % 1;
+  const eVPos = Math.min(1, currentTime * 0.48);
   const ex = 80 + eVPos * 300;
 
   return (

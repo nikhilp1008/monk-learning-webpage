@@ -36,7 +36,7 @@ export default function P12Ch02Sec7({ currentTime, reveals, language }: ScenePro
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Moving charge animation between planes
-  const animDr = (currentTime * 1.2) % 1;
+  const animDr = Math.min(1, currentTime * 0.48);
   const qy = 120 + animDr * 140;
 
   return (

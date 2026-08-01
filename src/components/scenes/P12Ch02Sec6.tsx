@@ -36,7 +36,7 @@ export default function P12Ch02Sec6({ currentTime, reveals, language }: ScenePro
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Moving charge animation from infinity towards P
-  const animPos = (currentTime * 0.7) % 1;
+  const animPos = Math.min(1, currentTime * 0.28);
   const qx = 440 - animPos * 240;
 
   return (

@@ -37,7 +37,7 @@ export default function P12Ch02Sec39({ currentTime, reveals, language }: ScenePr
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Electron drift animation inside conductor
-  const driftX = (currentTime * 40) % 60;
+  const driftX = Math.min(60, currentTime * 20);
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">

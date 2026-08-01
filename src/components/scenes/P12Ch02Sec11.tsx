@@ -37,7 +37,7 @@ export default function P12Ch02Sec11({ currentTime, reveals, language }: ScenePr
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Rotating element on ring
-  const rotAngle = (currentTime * 1.5) % (2 * Math.PI);
+  const rotAngle = Math.min(Math.PI * 1.5, currentTime * 0.8);
   const dqX = 120 + 20 * Math.cos(rotAngle);
   const dqY = 180 - 65 * Math.sin(rotAngle);
 

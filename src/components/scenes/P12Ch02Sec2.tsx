@@ -35,7 +35,7 @@ export default function P12Ch02Sec2({ currentTime, reveals, language }: ScenePro
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Dynamic pulsing effect for target point P
-  const pulseR = 8 + Math.sin(currentTime * 4) * 2;
+  const pulseR = 8 + Math.sin(Math.min(Math.PI, currentTime * 1.5)) * 2;
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">

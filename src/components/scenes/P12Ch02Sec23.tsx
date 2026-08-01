@@ -37,7 +37,7 @@ export default function P12Ch02Sec23({ currentTime, reveals, language }: ScenePr
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Accelerated charge motion from r1 to r2
-  const animR = (currentTime * 0.9) % 1;
+  const animR = Math.min(1, currentTime * 0.36);
   const q2X = 180 + animR * 200;
 
   return (

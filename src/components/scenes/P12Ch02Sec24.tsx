@@ -36,7 +36,7 @@ export default function P12Ch02Sec24({ currentTime, reveals, language }: ScenePr
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Rotating dipole animation
-  const rotAngle = Math.cos(currentTime * 2.5) * (Math.PI / 2);
+  const rotAngle = Math.cos(Math.min(Math.PI, currentTime * 0.8)) * (Math.PI / 2);
   const px = 200 + Math.cos(rotAngle) * 75;
   const py = 180 - Math.sin(rotAngle) * 75;
 

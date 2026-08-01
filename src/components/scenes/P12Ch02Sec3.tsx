@@ -37,7 +37,7 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Motion along equipotential circle
-  const orbitAngle = (currentTime * 1.5) % (2 * Math.PI);
+  const orbitAngle = Math.min(Math.PI * 1.5, currentTime * 0.8);
   const rOrbit = 110;
   const qx = 220 + rOrbit * Math.cos(orbitAngle);
   const qy = 200 - rOrbit * Math.sin(orbitAngle);

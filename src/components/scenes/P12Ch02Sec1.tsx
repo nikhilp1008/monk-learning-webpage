@@ -34,8 +34,8 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
-  // Charge motion along potential hill
-  const flowPos = (currentTime * 0.8) % 1;
+  // Charge motion along potential hill (plays once and stays)
+  const flowPos = Math.min(1, currentTime * 0.4);
   const qx = 60 + flowPos * 340;
   const qy = 310 - Math.sin(flowPos * Math.PI) * 140;
 
@@ -128,7 +128,7 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
       </g>
 
       {/* BOTTOM SECTION: SPACIOUS UNCONTAINED FORMULA MATRIX */}
-      <g transform="translate(40, 490)">
+      <g transform="translate(40, 440)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -137,11 +137,11 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={500} y={30} anchor="middle" size={18} fill={GREEN} weight={800}>
-            1 Volt = 1 Joule / Coulomb (1 V = 1 J/C)   |   Scalar Quantity   |   Reference V(∞) = 0
+          <T x={45} y={52} size={14} fill={GREEN} weight={800} anchor="start">
+            {t("• 1 Volt = 1 Joule / Coulomb (1 V = 1 J/C)   |   • Scalar Quantity   |   • Reference V(∞) = 0 V", "• 1 Volt = 1 Joule / Coulomb (1 V = 1 J/C)   |   • Scalar Quantity   |   • Reference V(∞) = 0 V")}
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={AMBER_DARK} weight={700}>
-            Work Done in moving test charge: W_ext = q₀ (V_final − V_initial)
+          <T x={45} y={76} size={13} fill={AMBER_DARK} weight={700} anchor="start">
+            {t("• Work Done in moving test charge: W_ext = q₀ (V_final − V_initial)", "• Work Done in moving test charge: W_ext = q₀ (V_final − V_initial)")}
           </T>
         </Fade>
       </g>

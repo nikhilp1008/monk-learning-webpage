@@ -37,7 +37,7 @@ export default function P12Ch02Sec9({ currentTime, reveals, language }: ScenePro
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Moving test charge from A to B
-  const animAB = (currentTime * 0.8) % 1;
+  const animAB = Math.min(1, currentTime * 0.32);
   const qx = 180 + animAB * 160;
 
   return (

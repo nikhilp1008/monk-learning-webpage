@@ -37,7 +37,7 @@ export default function P12Ch02Sec54({ currentTime, reveals, language }: ScenePr
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Moving belt animation
-  const beltY = (currentTime * 60) % 180;
+  const beltY = Math.min(180, currentTime * 30);
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">

@@ -36,7 +36,7 @@ export default function P12Ch02Sec26({ currentTime, reveals, language }: ScenePr
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Live water level / charge animation
-  const waterH = 40 + Math.sin(currentTime * 2) * 10;
+  const waterH = 40 + Math.sin(Math.min(Math.PI / 2, currentTime * 0.8)) * 15;
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
