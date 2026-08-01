@@ -48,9 +48,9 @@ export default function P12Ch02Sec14({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: STEP-BY-STEP ASSEMBLY DIAGRAM */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={25} cy={22} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={26} size={15} fill={RED} weight={800} anchor="start">
             {t("ASSEMBLING CHARGES ONE-BY-ONE FROM ∞", "ASSEMBLING CHARGES ONE-BY-ONE FROM ∞")}
           </T>
         </Fade>
@@ -58,31 +58,31 @@ export default function P12Ch02Sec14({ currentTime, reveals, language }: ScenePr
         {/* Assembly Triangle */}
         <Fade on={beat >= 2}>
           {/* Charge 1 */}
-          <circle cx={200} cy={90} r={20} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
-          <T x={200} y={96} size={16} fill={RED} weight={800}>+q₁</T>
+          <circle cx={200} cy={75} r={18} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={200} y={80} size={15} fill={RED} weight={800}>+q₁</T>
 
           {/* Charge 2 */}
-          <circle cx={80} cy={280} r={20} fill="#dcfce7" stroke={GREEN} strokeWidth={2} />
-          <T x={80} y={286} size={18} fill={GREEN} weight={800}>-q₂</T>
+          <circle cx={80} cy={230} r={18} fill="#dcfce7" stroke={GREEN} strokeWidth={2} />
+          <T x={80} y={235} size={16} fill={GREEN} weight={800}>-q₂</T>
 
           {/* Charge 3 */}
-          <circle cx={340} cy={280} r={20} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
-          <T x={340} y={286} size={16} fill={RED} weight={800}>+q₃</T>
+          <circle cx={340} cy={230} r={18} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={340} y={235} size={15} fill={RED} weight={800}>+q₃</T>
 
           {/* Pair distance lines */}
-          <line x1="185" y1="105" x2="95" y2="265" stroke={AMBER_DARK} strokeWidth={2} strokeDasharray="4 4" />
-          <T x={125} y={175} size={13} fill={AMBER_DARK} weight={800}>r₁₂</T>
+          <line x1="185" y1="90" x2="95" y2="215" stroke={AMBER_DARK} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={125} y={155} size={12} fill={AMBER_DARK} weight={800}>r₁₂</T>
 
-          <line x1="100" y1="280" x2="320" y2="280" stroke={GREEN} strokeWidth={2} strokeDasharray="4 4" />
-          <T x={210} y={300} size={13} fill={GREEN} weight={800}>r₂₃</T>
+          <line x1="100" y1="230" x2="320" y2="230" stroke={GREEN} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={210} y={248} size={12} fill={GREEN} weight={800}>r₂₃</T>
 
-          <line x1="215" y1="105" x2="325" y2="265" stroke={RED} strokeWidth={2} strokeDasharray="4 4" />
-          <T x={290} y={175} size={13} fill={RED} weight={800}>r₁₃</T>
+          <line x1="215" y1="90" x2="325" y2="215" stroke={RED} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={290} y={155} size={12} fill={RED} weight={800}>r₁₃</T>
         </Fade>
 
         {/* Free Floating Formula (Spacious, No Box) */}
         <Fade on={beat >= 4}>
-          <T x={210} y={305} anchor="middle" size={16} fill={INK} weight={800}>
+          <T x={210} y={305} anchor="middle" size={15} fill={INK} weight={800}>
             Total Energy U = W₁ + W₂ + W₃ (Stored in configuration field!)
           </T>
         </Fade>
@@ -90,44 +90,44 @@ export default function P12Ch02Sec14({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: WORK COMPUTATION BREAKDOWN */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Badge n={2} cx={25} cy={22} on={beat >= 3} delay={dl(3, 0.2)} />
         <Fade on={beat >= 3} delay={dl(3, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={26} size={15} fill={RED} weight={800} anchor="start">
             {t("WORK COST PER CHARGE STEP", "WORK COST PER CHARGE STEP")}
           </T>
         </Fade>
 
         {/* Floating Work Steps (No Card Boxes) */}
         <Fade on={beat >= 3}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={75} size={15} fill={AMBER_DARK} weight={800} anchor="start">
             1. Bring q₁ from ∞: W₁ = 0  (No existing field!)
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={15} fill={GREEN} weight={800} anchor="start">
             2. Bring q₂ into q₁ field: W₂ = q₂ V₁(r₁₂) = k q₁ q₂ / r₁₂
           </T>
 
-          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={175} size={15} fill={RED} weight={800} anchor="start">
             3. Bring q₃ into (q₁+q₂) fields: W₃ = k q₁q₃/r₁₃ + k q₂q₃/r₂₃
           </T>
 
-          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 200 L 450 200" stroke={INK} sw={2} />
 
-          <T x={50} y={285} size={20} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={240} size={18} fill={GREEN} weight={800} anchor="start">
             4. U_total = Σ_pairs (k q_i q_j / r_ij)
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
+          <T x={240} y={285} anchor="middle" size={13} fill={GREEN} weight={800}>
             Independent of the order in which charges are brought together!
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -136,11 +136,11 @@ export default function P12Ch02Sec14({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
-            U represents work done by external agent without acceleration from initial infinite separation!
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            {t("U represents work done by external agent without acceleration from initial infinite separation!", "U represents work done by external agent without acceleration from initial infinite separation!")}
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
-            Pair counting formula: N(N-1)/2 total pairs for N charges!
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            {t("Pair counting formula: N(N-1)/2 total pairs for N charges!", "Pair counting formula: N(N-1)/2 total pairs for N charges!")}
           </T>
         </Fade>
       </g>

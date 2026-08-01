@@ -50,66 +50,68 @@ export default function P12Ch02Sec66({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: SUBTOPICS 1, 2 & 3 MASTERY CHECKLIST */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SUBTOPICS 1, 2 & 3 MASTERY CHECKLIST", "SUBTOPICS 1, 2 & 3 MASTERY CHECKLIST")}
           </T>
         </Fade>
 
-        {/* Floating Checklist Items (No Card Boxes) */}
+        {/* Floating Checklist Items */}
         <Fade on={beat >= 1}>
-          <T x={40} y={80} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={GREEN} weight={800} anchor="start">
             ✓ Subtopic 1 (Sec 1-13): V = kq/r, Equipotentials & E = −∇V Gradient
           </T>
 
-          <T x={40} y={145} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             ✓ Subtopic 2 (Sec 14-25): U = kq₁q₂/r & Dipole U(θ) = −pE cosθ
           </T>
 
-          <T x={40} y={210} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             ✓ Subtopic 3 (Sec 26-38): C = ε₀A/d, Dielectric K & Battery Fork
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 3}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (All electrostatics fundamentals 100% verified)
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: SUBTOPICS 4 & 5 MASTERY CHECKLIST */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 2} delay={dl(2, 0.2)} />
         <Fade on={beat >= 2} delay={dl(2, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SUBTOPICS 4 & 5 MASTERY CHECKLIST", "SUBTOPICS 4 & 5 MASTERY CHECKLIST")}
           </T>
         </Fade>
 
-        {/* Floating Checklist Items (No Card Boxes) */}
+        {/* Floating Checklist Items */}
         <Fade on={beat >= 2}>
-          <T x={40} y={80} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={GREEN} weight={800} anchor="start">
             ✓ Subtopic 4 (Sec 39-51): Conductor E=0, Cavities & Shielding
           </T>
 
-          <T x={40} y={145} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             ✓ Subtopic 5 (Sec 52-66): Series/Parallel, Heat Loss & Van de Graaff
           </T>
 
-          <T x={40} y={210} size={15} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             ★ All 66 Sections Authored to 11th-Grade Masterclass Standard!
           </T>
         </Fade>
-      </g>
 
-      {/* MIDDLE BRIDGE LINE */}
-      <g transform="translate(40, 340)">
-        <Fade on={beat >= 4}>
-          <line x1="20" y1="10" x2="1000" y2="10" stroke={INK} strokeWidth={2} />
-          <T x={510} y={45} anchor="middle" size={18} fill={GREEN} weight={900}>
-            CBSE BOARD, NEET & JEE ADVANCED EXAM READINESS: 100% COMPLETE!
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (CBSE Board, NEET & JEE Advanced Exam Readiness: 100% Complete)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: GRAND VERDICT */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -118,8 +120,11 @@ export default function P12Ch02Sec66({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
-            Zero container card boxes! Open chalkboard vector diagrams, beat choreography & rigorous derivations across all 66 scenes!
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Zero card box containers! Open chalkboard vector diagrams, beat choreography & rigorous derivations across all 66 scenes!
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Class 12 Chapter 2 (Electrostatic Potential & Capacitance) is 100% complete and pristine!
           </T>
         </Fade>
       </g>

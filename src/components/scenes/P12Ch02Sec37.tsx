@@ -47,7 +47,7 @@ export default function P12Ch02Sec37({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: STACKED SLABS IN SERIES (t1, t2) */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("STACKED SLABS IN SERIES (THICKNESS t₁, t₂)", "STACKED SLABS IN SERIES (THICKNESS t₁, t₂)")}
@@ -56,21 +56,21 @@ export default function P12Ch02Sec37({ currentTime, reveals, language }: ScenePr
 
         {/* Stacked Slab Diagram */}
         <Fade on={beat >= 1}>
-          <line x1="60" y1="80" x2="420" y2="80" stroke={RED} strokeWidth={4} />
-          <line x1="60" y1="260" x2="420" y2="260" stroke={GREEN} strokeWidth={4} />
+          <line x1="45" y1="80" x2="380" y2="80" stroke={RED} strokeWidth={4} />
+          <line x1="45" y1="230" x2="380" y2="230" stroke={GREEN} strokeWidth={4} />
 
           {/* Slab 1 (K1, t1) */}
-          <rect x="70" y="90" width="340" height="75" fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={240} y={135} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Slab 1 (K₁, t₁)</T>
+          <rect x="55" y="85" width="315" height="65" fill="none" stroke={AMBER_DARK} strokeWidth={1.8} strokeDasharray="6 4" />
+          <T x={212} y={122} size={14} fill={AMBER_DARK} weight={900} anchor="middle">Slab 1 (K₁, t₁)</T>
 
           {/* Slab 2 (K2, t2) */}
-          <rect x="70" y="170" width="340" height="80" fill="#0284c7" opacity={0.2} stroke="#0284c7" strokeWidth={1.5} />
-          <T x={240} y={215} size={15} fill="#0369a1" weight={900} anchor="middle">Slab 2 (K₂, t₂)</T>
+          <rect x="55" y="155" width="315" height="70" fill="none" stroke="#0284c7" strokeWidth={1.8} strokeDasharray="6 4" />
+          <T x={212} y={195} size={14} fill="#0369a1" weight={900} anchor="middle">Slab 2 (K₂, t₂)</T>
         </Fade>
 
-        {/* Free Floating Series Formula (Spacious, No Box) */}
+        {/* Free Floating Series Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={18} fill={GREEN} weight={900}>
+          <T x={45} y={268} anchor="start" size={14} fill={GREEN} weight={900}>
             C_eq = ε₀ A / [ (t₁ / K₁) + (t₂ / K₂) ]
           </T>
         </Fade>
@@ -78,7 +78,7 @@ export default function P12Ch02Sec37({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: SIDE-BY-SIDE SLABS IN PARALLEL (A1, A2) */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SIDE-BY-SIDE SLABS IN PARALLEL (AREA A₁, A₂)", "SIDE-BY-SIDE SLABS IN PARALLEL (AREA A₁, A₂)")}
@@ -87,28 +87,28 @@ export default function P12Ch02Sec37({ currentTime, reveals, language }: ScenePr
 
         {/* Side-by-Side Slab Diagram */}
         <Fade on={beat >= 4}>
-          <line x1="60" y1="80" x2="420" y2="80" stroke={RED} strokeWidth={4} />
-          <line x1="60" y1="260" x2="420" y2="260" stroke={GREEN} strokeWidth={4} />
+          <line x1="45" y1="80" x2="380" y2="80" stroke={RED} strokeWidth={4} />
+          <line x1="45" y1="230" x2="380" y2="230" stroke={GREEN} strokeWidth={4} />
 
           {/* Slab 1 (K1, A1) */}
-          <rect x="70" y="90" width="165" height="160" fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={152} y={175} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Slab 1 (K₁, A₁)</T>
+          <rect x="55" y="85" width="150" height="140" fill="none" stroke={AMBER_DARK} strokeWidth={1.8} strokeDasharray="6 4" />
+          <T x={130} y={160} size={14} fill={AMBER_DARK} weight={900} anchor="middle">Slab 1 (K₁, A₁)</T>
 
           {/* Slab 2 (K2, A2) */}
-          <rect x="245" y="90" width="165" height="160" fill="#0284c7" opacity={0.2} stroke="#0284c7" strokeWidth={1.5} />
-          <T x={327} y={175} size={15} fill="#0369a1" weight={900} anchor="middle">Slab 2 (K₂, A₂)</T>
+          <rect x="220" y="85" width="150" height="140" fill="none" stroke="#0284c7" strokeWidth={1.8} strokeDasharray="6 4" />
+          <T x={295} y={160} size={14} fill="#0369a1" weight={900} anchor="middle">Slab 2 (K₂, A₂)</T>
         </Fade>
 
-        {/* Free Floating Parallel Formula (Spacious, No Box) */}
+        {/* Free Floating Parallel Formula */}
         <Fade on={beat >= 5}>
-          <T x={250} y={305} anchor="middle" size={18} fill={GREEN} weight={900}>
+          <T x={45} y={268} anchor="start" size={14} fill={GREEN} weight={900}>
             C_eq = (ε₀ / d) [ A₁ K₁ + A₂ K₂ ]
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -117,10 +117,10 @@ export default function P12Ch02Sec37({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             For continuously varying K(x): 1/C_eq = (1/ε₀A) ∫₀^d dx / K(x) !
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Split perpendicular to E field lines = Series; Split parallel to E field lines = Parallel!
           </T>
         </Fade>

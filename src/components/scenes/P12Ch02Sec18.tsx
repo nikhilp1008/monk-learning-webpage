@@ -53,7 +53,7 @@ export default function P12Ch02Sec18({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: DIPOLE TORQUE IN UNIFORM FIELD */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("DIPOLE p AT ANGLE θ IN UNIFORM FIELD E", "DIPOLE p AT ANGLE θ IN UNIFORM FIELD E")}
@@ -70,16 +70,16 @@ export default function P12Ch02Sec18({ currentTime, reveals, language }: ScenePr
           {/* Dipole Vector p */}
           <line x1="180" y1="180" x2={px} y2={py} stroke={GREEN} strokeWidth={4} />
           <circle cx={px} cy={py} r={7} fill={GREEN} />
-          <T x={px + 15} y={py} size={14} fill={GREEN} weight={800}>p (Dipole)</T>
+          <T x={px + 12} y={py - 8} size={14} fill={GREEN} weight={800} anchor="start">p (Dipole)</T>
 
           {/* Angle θ arc */}
           <path d="M 230 180 A 50 50 0 0 0 220 150" stroke={AMBER_DARK} strokeWidth={2} fill="none" />
           <T x={245} y={160} size={13} fill={AMBER_DARK} weight={800}>Angle θ</T>
         </Fade>
 
-        {/* Free Floating Torque Formula (Spacious, No Box) */}
+        {/* Free Floating Torque Formula */}
         <Fade on={beat >= 3}>
-          <T x={230} y={305} anchor="middle" size={18} fill={RED} weight={800}>
+          <T x={230} y={278} anchor="middle" size={16} fill={RED} weight={800}>
             Torque Vector τ = p × E   (Magnitude τ = p E sinθ)
           </T>
         </Fade>
@@ -87,42 +87,42 @@ export default function P12Ch02Sec18({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: POTENTIAL ENERGY U(θ) & ROTATIONAL WORK */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("POTENTIAL ENERGY U(θ) & WORK TO ROTATE", "POTENTIAL ENERGY U(θ) & WORK TO ROTATE")}
           </T>
         </Fade>
 
-        {/* Floating Energy Formulas (No Card Boxes) */}
+        {/* Floating Energy Formulas */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={17} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={80} size={15} fill={GREEN} weight={800} anchor="start">
             1. Potential Energy: U(θ) = − p · E = − p E cosθ
           </T>
 
-          <T x={50} y={150} size={17} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={15} fill={AMBER_DARK} weight={800} anchor="start">
             2. Work to Rotate θ₁ → θ₂: W_ext = p E (cosθ₁ − cosθ₂)
           </T>
 
-          <T x={50} y={210} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={INK} weight={800} anchor="start">
             3. Stable Equilibrium (θ = 0°): τ = 0, U_min = − p E
           </T>
 
-          <T x={50} y={260} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={215} size={14} fill={RED} weight={800} anchor="start">
             4. Unstable Equilibrium (θ = 180°): τ = 0, U_max = + p E
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
+          <T x={45} y={265} anchor="start" size={13} fill={GREEN} weight={800}>
             Work to rotate from stable (0°) to unstable (180°) = 2 p E !
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -131,10 +131,10 @@ export default function P12Ch02Sec18({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Stable: θ = 0° (Aligned with E, U = −pE)   |   Unstable: θ = 180° (Anti-aligned, U = +pE)
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Maximum torque occurs at θ = 90° (τ_max = pE, U = 0 V)!
           </T>
         </Fade>

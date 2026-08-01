@@ -46,70 +46,70 @@ export default function P12Ch02Sec57({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: PARALLEL COMBINATION PROOF */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("PARALLEL PROOF (Q_total = Q₁ + Q₂)", "PARALLEL PROOF (Q_total = Q₁ + Q₂)")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 1}>
-          <T x={40} y={85} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={INK} weight={800} anchor="start">
             1. Total Charge: Q = Q₁ + Q₂
           </T>
 
-          <T x={40} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             2. Substitute Q_i = C_i V: C_eq V = C₁ V + C₂ V
           </T>
 
-          <T x={40} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             3. Divide by V: C_eq = C₁ + C₂  (Q.E.D.)
           </T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={230} y={305} anchor="middle" size={17} fill={GREEN} weight={900}>
-            Parallel plates combine areas: A_eff = A₁ + A₂ !
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Parallel plates combine effective area: A_eff = A₁ + A₂)
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: SERIES COMBINATION PROOF */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SERIES PROOF (V_total = V₁ + V₂)", "SERIES PROOF (V_total = V₁ + V₂)")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={INK} weight={800} anchor="start">
             1. Total Voltage: V = V₁ + V₂
           </T>
 
-          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             2. Substitute V_i = Q / C_i: Q / C_eq = Q / C₁ + Q / C₂
           </T>
 
-          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             3. Divide by Q: 1 / C_eq = 1 / C₁ + 1 / C₂  (Q.E.D.)
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Series spacing combines gaps: d_eff = d₁ + d₂ !
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Series plates combine effective spacing: d_eff = d₁ + d₂)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -118,10 +118,10 @@ export default function P12Ch02Sec57({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Parallel plates act like a single larger plate of area (A₁ + A₂), boosting capacitance!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Series plates act like a single capacitor with wider spacing (d₁ + d₂), reducing capacitance!
           </T>
         </Fade>

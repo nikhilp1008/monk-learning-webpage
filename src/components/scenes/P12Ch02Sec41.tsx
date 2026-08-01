@@ -47,7 +47,7 @@ export default function P12Ch02Sec41({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: SURFACE FIELD E = σ / ε₀ */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SURFACE FIELD E IS ALWAYS PERPENDICULAR ⊥", "SURFACE FIELD E IS ALWAYS PERPENDICULAR ⊥")}
@@ -56,24 +56,24 @@ export default function P12Ch02Sec41({ currentTime, reveals, language }: ScenePr
 
         {/* Conductor surface and field vector */}
         <Fade on={beat >= 1}>
-          <path d="M 60 260 Q 240 220, 420 260" stroke={INK} strokeWidth={4} fill="none" />
-          <T x={240} y={285} size={14} fill={INK} weight={800} anchor="middle">Conductor Surface (σ)</T>
+          <path d="M 60 230 Q 240 190, 420 230" stroke={INK} strokeWidth={3} fill="none" />
+          <T x={240} y={250} size={13} fill={INK} weight={800} anchor="middle">Conductor Surface (σ)</T>
 
           {/* Perpendicular field arrows E */}
-          <path d={arrowD(150, 245, 150, 100)} stroke={RED} strokeWidth={3} />
-          <path d={arrowD(240, 235, 240, 90)} stroke={RED} strokeWidth={3} />
-          <path d={arrowD(330, 245, 330, 100)} stroke={RED} strokeWidth={3} />
+          <path d={arrowD(150, 215, 150, 95)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(240, 205, 240, 85)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(330, 215, 330, 95)} stroke={RED} strokeWidth={2.5} />
 
-          <T x={240} y={75} size={16} fill={RED} weight={900} anchor="middle">E = (σ / ε₀) n^</T>
+          <T x={240} y={70} size={15} fill={RED} weight={900} anchor="middle">E = (σ / ε₀) n^</T>
 
           {/* 90 degree symbol */}
-          <path d="M 240 225 L 252 225 L 252 235" stroke="#000000" strokeWidth={1.5} fill="none" />
-          <T x={265} y={220} size={12} fill={INK} weight={800}>90° ⊥</T>
+          <path d="M 240 195 L 252 195 L 252 205" stroke={INK} strokeWidth={1.5} fill="none" />
+          <T x={265} y={190} size={12} fill={INK} weight={800}>90° ⊥</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={17} fill={INK} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
             If field had a tangential component, surface charges would move!
           </T>
         </Fade>
@@ -81,39 +81,38 @@ export default function P12Ch02Sec41({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: FARADAY CAGE HOLLOW CAVITY SHIELDING */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("FARADAY CAGE: HOLLOW CAVITY SHIELDING", "FARADAY CAGE: HOLLOW CAVITY SHIELDING")}
           </T>
         </Fade>
 
-        {/* Hollow Metallic Shell Diagram */}
+        {/* Hollow Metallic Shell Diagram (Open Chalkboard) */}
         <Fade on={beat >= 4}>
           {/* Outer Field Arrows E0 */}
-          <path d={arrowD(30, 180, 80, 180)} stroke={RED} strokeWidth={2.5} />
-          <path d={arrowD(420, 180, 470, 180)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(20, 150, 70, 150)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(370, 150, 420, 150)} stroke={RED} strokeWidth={2.5} />
 
           {/* Metal Shell Ring */}
-          <circle cx={250} cy={180} r={110} stroke={AMBER_DARK} strokeWidth={15} fill="none" />
-          <T x={250} y={55} size={14} fill={AMBER_DARK} weight={900} anchor="middle">Metallic Shell / Car Body</T>
+          <circle cx={220} cy={150} r={75} stroke={AMBER_DARK} strokeWidth={8} fill="none" />
+          <T x={220} y={55} size={13} fill={AMBER_DARK} weight={900} anchor="middle">Metallic Shell / Car Body</T>
 
           {/* Interior Hollow Cavity */}
-          <circle cx={250} cy={180} r={102} fill="#ffffff" />
-          <T x={250} y={170} size={18} fill={GREEN} weight={900} anchor="middle">Hollow Cavity E = 0</T>
-          <T x={250} y={200} size={14} fill={GREEN} weight={800} anchor="middle">100% Shielded!</T>
+          <T x={220} y={142} size={15} fill={GREEN} weight={900} anchor="middle">Hollow Cavity E = 0</T>
+          <T x={220} y={168} size={13} fill={GREEN} weight={800} anchor="middle">100% Shielded!</T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Lightning strikes outer shell and flows safely to ground — interior remains 100% safe!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Lightning strikes outer shell; flows safely to ground)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -122,10 +121,10 @@ export default function P12Ch02Sec41({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             1. Car in a thunderstorm   |   2. Coaxial cable shielding   |   3. Sensitive instrument enclosures!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Surface field magnitude E = σ / ε₀ (Twice as strong as single infinite sheet field σ / 2ε₀)!
           </T>
         </Fade>

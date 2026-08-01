@@ -51,7 +51,7 @@ export default function P12Ch02Sec39({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: CONDUCTOR INDUCED CHARGE DRIFT */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("FREE ELECTRON DRIFT & INDUCED OPPOSING FIELD", "FREE ELECTRON DRIFT & INDUCED OPPOSING FIELD")}
@@ -61,26 +61,26 @@ export default function P12Ch02Sec39({ currentTime, reveals, language }: ScenePr
         {/* Conductor Body */}
         <Fade on={beat >= 1}>
           {/* External Field Arrows E0 */}
-          <path d={arrowD(20, 110, 440, 110)} stroke={RED} strokeWidth={2.5} />
-          <path d={arrowD(20, 190, 440, 190)} stroke={RED} strokeWidth={2.5} />
-          <path d={arrowD(20, 270, 440, 270)} stroke={RED} strokeWidth={2.5} />
-          <T x={445} y={195} size={13} fill={RED} weight={800} anchor="start">E₀ External</T>
+          <path d={arrowD(20, 95, 380, 95)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(20, 155, 380, 155)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(20, 215, 380, 215)} stroke={RED} strokeWidth={2.5} />
+          <T x={395} y={159} size={13} fill={RED} weight={800} anchor="start">E₀ External</T>
 
-          {/* Solid Conductor Block */}
-          <rect x="120" y="80" width="220" height="220" rx={15} fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={2.5} />
+          {/* Conductor Block Outline (Open Chalkboard) */}
+          <rect x="110" y="80" width="220" height="150" rx={12} fill="none" stroke={INK} strokeWidth={1.8} strokeDasharray="6 4" />
 
           {/* Induced Charges on Boundaries */}
-          <T x={135} y={195} size={22} fill={GREEN} weight={900} anchor="middle">− − − −</T>
-          <T x={325} y={195} size={22} fill={RED} weight={900} anchor="middle">+ + + +</T>
+          <T x={125} y={145} size={18} fill={GREEN} weight={900} anchor="middle">− − − −</T>
+          <T x={315} y={145} size={18} fill={RED} weight={900} anchor="middle">+ + + +</T>
 
           {/* Opposing Internal Field E_ind */}
-          <path d={arrowD(310, 190, 150, 190)} stroke={GREEN} strokeWidth={3} />
-          <T x={230} y={170} size={15} fill={GREEN} weight={900} anchor="middle">E_ind (Opposes E₀)</T>
+          <path d={arrowD(300, 175, 140, 175)} stroke={GREEN} strokeWidth={2.5} />
+          <T x={220} y={195} size={13} fill={GREEN} weight={900} anchor="middle">E_ind (Opposes E₀)</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={230} y={305} anchor="middle" size={17} fill={INK} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
             Net Internal Field E_inside = E₀ − E_ind = 0 N/C !
           </T>
         </Fade>
@@ -88,44 +88,44 @@ export default function P12Ch02Sec39({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: EQUILIBRIUM MECHANISM STEPS */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("EQUILIBRIUM MECHANISM IN ~10⁻¹⁴ SECONDS", "EQUILIBRIUM MECHANISM IN ~10⁻¹⁴ SECONDS")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             1. External field E₀ exerts force F = −e E₀ on free electrons.
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             2. Electrons drift left, creating surface charge density ±σ_ind.
           </T>
 
-          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
             3. E_ind grows until E_ind = E₀ exactly canceling E₀.
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={20} fill={GREEN} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
             4. If E ≠ 0 inside, charge would flow (Not Static)!
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Electrostatic equilibrium means ALL internal charge motion has ceased!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Equilibrium means ALL internal charge motion has ceased)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -134,10 +134,10 @@ export default function P12Ch02Sec39({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Inside any conductor in electrostatic equilibrium (solid or hollow), E_inside = 0 N/C!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             This holds regardless of external charge configuration or shape!
           </T>
         </Fade>

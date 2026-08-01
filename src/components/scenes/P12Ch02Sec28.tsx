@@ -47,7 +47,7 @@ export default function P12Ch02Sec28({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: DIELECTRIC POLARIZATION SCHEMATIC */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("POLARIZATION OF DIELECTRIC MEDIUM", "POLARIZATION OF DIELECTRIC MEDIUM")}
@@ -57,32 +57,32 @@ export default function P12Ch02Sec28({ currentTime, reveals, language }: ScenePr
         {/* Dielectric Slab Diagram */}
         <Fade on={beat >= 1}>
           {/* Top Free Charge Plate +Q */}
-          <line x1="60" y1="80" x2="420" y2="80" stroke={RED} strokeWidth={4} />
-          <T x={435} y={85} size={14} fill={RED} weight={900}>+Q Free</T>
+          <line x1="45" y1="80" x2="380" y2="80" stroke={RED} strokeWidth={4} />
+          <T x={395} y={84} size={14} fill={RED} weight={900} anchor="start">+Q Free</T>
 
           {/* Bottom Free Charge Plate -Q */}
-          <line x1="60" y1="260" x2="420" y2="260" stroke={GREEN} strokeWidth={4} />
-          <T x={435} y={265} size={14} fill={GREEN} weight={900}>−Q Free</T>
+          <line x1="45" y1="230" x2="380" y2="230" stroke={GREEN} strokeWidth={4} />
+          <T x={395} y={234} size={14} fill={GREEN} weight={900} anchor="start">−Q Free</T>
 
-          {/* Dielectric Slab Fill */}
-          <rect x="70" y="100" width="340" height="140" fill={AMBER_DARK} opacity={0.15} stroke={AMBER_DARK} strokeWidth={2} />
-          <T x={240} y={170} size={16} fill={AMBER_DARK} weight={900} anchor="middle">Dielectric Slab (K &gt; 1)</T>
+          {/* Dielectric Slab Outline (Open Chalkboard, No backdrop rect) */}
+          <rect x="60" y="95" width="310" height="120" fill="none" stroke={AMBER_DARK} strokeWidth={1.8} strokeDasharray="6 4" />
+          <T x={215} y={160} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Dielectric Slab (K &gt; 1)</T>
 
           {/* Bound Surface Charges -Qp (Top of slab), +Qp (Bottom of slab) */}
-          <T x={240} y={115} size={13} fill={GREEN} weight={800} anchor="middle">− Bound Surface Charge −Q_p</T>
-          <T x={240} y={225} size={13} fill={RED} weight={800} anchor="middle">+ Bound Surface Charge +Q_p</T>
+          <T x={215} y={112} size={12} fill={GREEN} weight={800} anchor="middle">− Bound Surface Charge −Q_p</T>
+          <T x={215} y={205} size={12} fill={RED} weight={800} anchor="middle">+ Bound Surface Charge +Q_p</T>
 
-          {/* External Field E0 and Internal Field E */}
-          <path d={arrowD(120, 85, 120, 255)} stroke={RED} strokeWidth={2.5} />
-          <T x={100} y={170} size={13} fill={RED} weight={800} anchor="end">E₀</T>
+          {/* External Field E0 and Internal Field Ep */}
+          <path d={arrowD(85, 85, 85, 225)} stroke={RED} strokeWidth={2.5} />
+          <T x={75} y={160} size={13} fill={RED} weight={800} anchor="end">E₀</T>
 
-          <path d={arrowD(360, 235, 360, 105)} stroke={GREEN} strokeWidth={2} />
-          <T x={380} y={170} size={13} fill={GREEN} weight={800} anchor="start">E_p</T>
+          <path d={arrowD(345, 210, 345, 100)} stroke={GREEN} strokeWidth={2} />
+          <T x={358} y={160} size={13} fill={GREEN} weight={800} anchor="start">E_p</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={17} fill={INK} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
             Net Internal Field E = E₀ − E_p = E₀ / K
           </T>
         </Fade>
@@ -90,44 +90,44 @@ export default function P12Ch02Sec28({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: VOLTAGE REDUCTION & CAPACITANCE MULTIPLICATION */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("VOLTAGE REDUCTION & CAPACITANCE BOOST", "VOLTAGE REDUCTION & CAPACITANCE BOOST")}
           </T>
         </Fade>
 
-        {/* Floating Proof Steps (No Card Boxes) */}
+        {/* Floating Proof Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             1. Net Electric Field: E = E₀ / K
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             2. Potential Difference: V = E d = (E₀ d) / K = V₀ / K
           </T>
 
-          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
             3. New Capacitance: C = Q / V = Q / (V₀ / K)
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={22} fill={GREEN} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
             4. C = K C₀ = K (ε₀ A / d)
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Dielectric Constant K = ε_r = C / C₀ &gt; 1 (Insulator boosts capacity!)
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Dielectric Constant K = ε_r = C / C₀ &gt; 1)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -136,10 +136,10 @@ export default function P12Ch02Sec28({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Bound Surface Charge: Q_p = Q (1 − 1/K)   |   Polarization Vector P = ε₀ (K − 1) E!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Dielectrics increase capacitance WITHOUT electrical breakdown!
           </T>
         </Fade>

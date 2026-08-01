@@ -48,31 +48,31 @@ export default function P12Ch02Sec48({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: CAVITY INDUCTION DIAGRAM */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("POINT CHARGE +q INSIDE CONDUCTOR CAVITY", "POINT CHARGE +q INSIDE CONDUCTOR CAVITY")}
           </T>
         </Fade>
 
-        {/* Cavity Diagram */}
+        {/* Cavity Diagram (Open Chalkboard) */}
         <Fade on={beat >= 1}>
           {/* Outer Conductor Shell */}
-          <circle cx={240} cy={180} r={110} stroke={AMBER_DARK} strokeWidth={4} fill={AMBER_DARK} fillOpacity={0.15} />
-          <T x={240} y={55} size={13} fill={RED} weight={900} anchor="middle">+q Induced Outer Surface</T>
+          <circle cx={212} cy={155} r={85} stroke={AMBER_DARK} strokeWidth={1.8} fill="none" strokeDasharray="6 4" />
+          <T x={212} y={55} size={12} fill={RED} weight={900} anchor="middle">+q Induced Outer Surface</T>
 
           {/* Inner Cavity Boundary */}
-          <circle cx={220} cy={180} r={50} stroke={GREEN} strokeWidth={2.5} fill="#ffffff" strokeDasharray="4 4" />
-          <T x={220} y={115} size={12} fill={GREEN} weight={900} anchor="middle">−q Induced Cavity Wall</T>
+          <circle cx={212} cy={155} r={40} stroke={GREEN} strokeWidth={1.8} fill="none" strokeDasharray="4 4" />
+          <T x={212} y={105} size={12} fill={GREEN} weight={900} anchor="middle">−q Induced Cavity Wall</T>
 
           {/* Central Point Charge +q */}
-          <circle cx={220} cy={180} r={12} fill={RED} />
-          <T x={220} y={185} size={13} fill="#ffffff" weight={900}>+q</T>
+          <circle cx={212} cy={155} r={10} fill={RED} />
+          <T x={212} y={159} size={12} fill="#ffffff" weight={900} anchor="middle">+q</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={16} fill={INK} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
             Gauss Law: ∮ E_metal · dA = (q + q_cavity) / ε₀ = 0  ⇒  q_cavity = −q !
           </T>
         </Fade>
@@ -80,44 +80,44 @@ export default function P12Ch02Sec48({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: FIELD REGION ANALYSIS */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("FIELD REGION BREAKDOWN", "FIELD REGION BREAKDOWN")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={RED} weight={800} anchor="start">
             1. Cavity Interior: E_cavity = k q / r² ≠ 0
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             2. Metal Body: E_metal = 0 N/C  (Exact Cancellation!)
           </T>
 
-          <T x={50} y={205} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             3. Exterior Region: E_outside = k q / r²  (As if +q at center)
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={19} fill={GREEN} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
             4. Net Conductor Charge = (−q) + (+q) = 0
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Moving +q inside cavity changes outer charge distribution UNLESS outer surface is grounded!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Grounding conductor drains outer +q charge to zero)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -126,10 +126,10 @@ export default function P12Ch02Sec48({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Inner cavity wall receives −q; Outer conductor surface receives +q (or Q + q if conductor had initial charge Q)!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Grounding the conductor drains the outer +q charge to zero, making E_outside = 0!
           </T>
         </Fade>

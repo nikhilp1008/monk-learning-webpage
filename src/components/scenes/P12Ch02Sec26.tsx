@@ -43,14 +43,14 @@ export default function P12Ch02Sec26({ currentTime, reveals, language }: ScenePr
       {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
         <T x={540} y={48} size={25} fill={RED} script>
-          {t("Capacitance C = Q/V: The Electrical Tank for Storing Charge", "Capacitance C = Q/V: The Electrical Tank for Storing Charge")}
+          {t("Capacitance C = Q / V — The Electrical Tank for Storing Charge", "Capacitance C = Q / V — The Electrical Tank for Storing Charge")}
         </T>
       </Fade>
       <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
       {/* LEFT SECTION: WATER TANK ANALOGY DIAGRAM */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("THE WATER TANK ANALOGY FOR CAPACITANCE", "THE WATER TANK ANALOGY FOR CAPACITANCE")}
@@ -60,22 +60,22 @@ export default function P12Ch02Sec26({ currentTime, reveals, language }: ScenePr
         {/* Water Tank SVG Drawing */}
         <Fade on={beat >= 1}>
           {/* Tank Outer Walls */}
-          <line x1="100" y1="90" x2="100" y2="270" stroke={INK} strokeWidth={3} />
-          <line x1="340" y1="90" x2="340" y2="270" stroke={INK} strokeWidth={3} />
-          <line x1="100" y1="270" x2="340" y2="270" stroke={INK} strokeWidth={3} />
+          <line x1="100" y1="80" x2="100" y2="230" stroke={INK} strokeWidth={3} />
+          <line x1="340" y1="80" x2="340" y2="230" stroke={INK} strokeWidth={3} />
+          <line x1="100" y1="230" x2="340" y2="230" stroke={INK} strokeWidth={3} />
 
           {/* Water Fill */}
-          <rect x="102" y={270 - waterH} width="236" height={waterH} fill="#0284c7" opacity={0.4} />
+          <rect x="102" y={230 - waterH} width="236" height={waterH} fill="#0284c7" opacity={0.4} />
 
           {/* Labels */}
-          <T x={220} y={270 - waterH - 10} size={14} fill="#0284c7" weight={800} anchor="middle">Water Level = Potential (V)</T>
-          <T x={220} y={270 - waterH / 2} size={14} fill="#0369a1" weight={900} anchor="middle">Volume = Charge (Q)</T>
-          <T x={220} y={295} size={15} fill={RED} weight={800} anchor="middle">Base Area = Capacitance (C)</T>
+          <T x={220} y={230 - waterH - 10} size={13} fill="#0284c7" weight={800} anchor="middle">Water Level = Potential (V)</T>
+          <T x={220} y={230 - waterH / 2 + 4} size={13} fill="#0369a1" weight={900} anchor="middle">Volume = Charge (Q)</T>
+          <T x={220} y={248} size={13} fill={RED} weight={800} anchor="middle">Base Area = Capacitance (C)</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={220} y={305} anchor="middle" size={17} fill={INK} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
             Larger base area C holds MORE charge Q for the SAME voltage V!
           </T>
         </Fade>
@@ -83,7 +83,7 @@ export default function P12Ch02Sec26({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: PARALLEL PLATE CAPACITOR */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("PARALLEL PLATE CAPACITOR SCHEMATIC", "PARALLEL PLATE CAPACITOR SCHEMATIC")}
@@ -93,34 +93,34 @@ export default function P12Ch02Sec26({ currentTime, reveals, language }: ScenePr
         {/* Parallel Plates Drawing */}
         <Fade on={beat >= 4}>
           {/* Top Plate (+Q) */}
-          <line x1="80" y1="100" x2="420" y2="100" stroke={RED} strokeWidth={4} />
-          <T x={435} y={105} size={15} fill={RED} weight={900} anchor="start">+Q Plate</T>
+          <line x1="80" y1="90" x2="380" y2="90" stroke={RED} strokeWidth={4} />
+          <T x={395} y={94} size={14} fill={RED} weight={900} anchor="start">+Q Plate</T>
 
           {/* Bottom Plate (-Q) */}
-          <line x1="80" y1="240" x2="420" y2="240" stroke={GREEN} strokeWidth={4} />
-          <T x={435} y={245} size={15} fill={GREEN} weight={900} anchor="start">−Q Plate</T>
+          <line x1="80" y1="210" x2="380" y2="210" stroke={GREEN} strokeWidth={4} />
+          <T x={395} y={214} size={14} fill={GREEN} weight={900} anchor="start">−Q Plate</T>
 
           {/* Uniform Electric Field Lines E */}
-          {[120, 180, 240, 300, 360].map((x) => (
-            <path key={x} d={arrowD(x, 105, x, 235)} stroke={AMBER_DARK} strokeWidth={2} />
+          {[110, 170, 230, 290, 350].map((x) => (
+            <path key={x} d={arrowD(x, 95, x, 205)} stroke={AMBER_DARK} strokeWidth={2} />
           ))}
-          <T x={250} y={175} size={15} fill={AMBER_DARK} weight={900} anchor="middle">E Field (Uniform)</T>
+          <T x={395} y={154} size={13} fill={AMBER_DARK} weight={900} anchor="start">Field E</T>
 
           {/* Distance d & Voltage V */}
-          <line x1="60" y1="100" x2="60" y2="240" stroke={INK} strokeWidth={2} strokeDasharray="4 4" />
-          <T x={45} y={175} size={14} fill={INK} weight={800} anchor="end">Gap d</T>
+          <line x1="60" y1="90" x2="60" y2="210" stroke={INK} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={45} y={154} size={13} fill={INK} weight={800} anchor="end">Gap d</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 5}>
-          <T x={250} y={305} anchor="middle" size={20} fill={GREEN} weight={800}>
+          <T x={45} y={268} anchor="start" size={14} fill={GREEN} weight={800}>
             C = Q / V   [1 Farad = 1 Coulomb / Volt]
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -129,10 +129,10 @@ export default function P12Ch02Sec26({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             1 Farad is HUGE! Practical laboratory capacitors use µF (10⁻⁶ F), nF (10⁻⁹ F), or pF (10⁻¹² F).
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Capacitance depends ONLY on physical geometry (shape, area, spacing) and medium!
           </T>
         </Fade>
@@ -142,8 +142,8 @@ export default function P12Ch02Sec26({ currentTime, reveals, language }: ScenePr
       <Fade on={beat >= 7}>
         <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
-            "★ Capacitance Fundamentals Mastered: C = Q/V (Measured in Farads = C/V) stores electrical energy in field E! ✓",
-            "★ Capacitance Fundamentals Mastered: C = Q/V (Measured in Farads = C/V) stores electrical energy in field E! ✓"
+            "★ Capacitance Fundamentals Mastered: C = Q / V (Measured in Farads = C / V) stores electrical energy in field E! ✓",
+            "★ Capacitance Fundamentals Mastered: C = Q / V (Measured in Farads = C / V) stores electrical energy in field E! ✓"
           )}
         </Chip>
       </Fade>

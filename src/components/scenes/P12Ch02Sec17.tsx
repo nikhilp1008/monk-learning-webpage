@@ -47,7 +47,7 @@ export default function P12Ch02Sec17({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: ISOLATED N-CHARGE SYSTEMS */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("ISOLATED SYSTEMS (NO EXTERNAL FIELD)", "ISOLATED SYSTEMS (NO EXTERNAL FIELD)")}
@@ -56,61 +56,67 @@ export default function P12Ch02Sec17({ currentTime, reveals, language }: ScenePr
 
         {/* Floating Formulas (No Card Boxes) */}
         <Fade on={beat >= 1}>
-          <T x={40} y={85} size={15} fill={INK} weight={800} anchor="start">
+          <T x={45} y={85} size={15} fill={INK} weight={800} anchor="start">
             1. Two Charges: U = k q₁ q₂ / r₁₂
           </T>
 
-          <T x={40} y={150} size={15} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={130} size={15} fill={AMBER_DARK} weight={800} anchor="start">
             2. Three Charges: U = k ( q₁q₂/r₁₂ + q₂q₃/r₂₃ + q₁q₃/r₁₃ )
           </T>
 
-          <T x={40} y={215} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={175} size={15} fill={GREEN} weight={800} anchor="start">
             3. N-Charge General: U = ½ Σ (k q_i q_j / r_ij)
           </T>
         </Fade>
 
-        {/* Free Floating Rule (Spacious, No Box) */}
+        {/* Free Floating Rule */}
         <Fade on={beat >= 3}>
-          <T x={230} y={305} anchor="middle" size={15} fill={RED} weight={800}>
-            Number of interaction pairs for N charges = N(N − 1) / 2 !
+          <T x={45} y={240} anchor="start" size={14} fill={RED} weight={800}>
+            Pair count for N charges = N(N − 1) / 2
+          </T>
+          <T x={45} y={265} anchor="start" size={13} fill={MUTED} weight={700}>
+            (Count every unique interaction pair once)
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: CHARGES IN EXTERNAL POTENTIAL V(r) */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CHARGES IN EXTERNAL FIELD V(r)", "CHARGES IN EXTERNAL FIELD V(r)")}
           </T>
         </Fade>
 
-        {/* Floating External Field Formulas (No Card Boxes) */}
+        {/* Floating External Field Formulas */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={85} size={15} fill={RED} weight={800} anchor="start">
             1. Single Charge q in V(r): U = q V(r)
           </T>
 
-          <T x={50} y={150} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={130} size={15} fill={GREEN} weight={800} anchor="start">
             2. Two Charges in V(r):
           </T>
 
-          <T x={70} y={190} size={18} fill={GREEN} weight={900} anchor="start">
-            U_total = q₁ V(r₁) + q₂ V(r₂) + (k q₁ q₂ / r₁₂)
+          <T x={45} y={170} size={16} fill={GREEN} weight={900} anchor="start">
+            U_total = q₁ V(r₁) + q₂ V(r₂) + k q₁ q₂ / r₁₂
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Includes BOTH interaction with external field AND mutual charge-charge interaction!
+          <T x={45} y={240} anchor="start" size={14} fill={GREEN} weight={800}>
+            Includes BOTH interaction with external field
+          </T>
+          <T x={45} y={265} anchor="start" size={13} fill={GREEN} weight={800}>
+            AND mutual charge-charge interaction!
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -119,10 +125,10 @@ export default function P12Ch02Sec17({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Always count: 1. External Field Energy (q V) + 2. Pairwise Mutual Energies (k q_i q_j / r_ij)!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Never double-count pairs! Use N(N-1)/2 formula to check total term count.
           </T>
         </Fade>

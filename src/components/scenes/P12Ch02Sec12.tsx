@@ -47,32 +47,32 @@ export default function P12Ch02Sec12({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: 3D GRADIENT CONCEPT & FORMULAS */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={25} cy={22} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={26} size={15} fill={RED} weight={800} anchor="start">
             {t("3D PARTIAL DERIVATIVE GRADIENT COMPONENTS", "3D PARTIAL DERIVATIVE GRADIENT COMPONENTS")}
           </T>
         </Fade>
 
         {/* 3D Coordinate Axis drawing */}
         <Fade on={beat >= 1}>
-          <line x1="200" y1="200" x2="380" y2="200" stroke={INK} strokeWidth={2.5} />
-          <T x={395} y={205} size={14} fill={INK} weight={800}>X axis</T>
+          <line x1="200" y1="180" x2="380" y2="180" stroke={INK} strokeWidth={2.5} />
+          <T x={395} y={185} size={13} fill={INK} weight={800}>X axis</T>
 
-          <line x1="200" y1="200" x2="200" y2="60" stroke={INK} strokeWidth={2.5} />
-          <T x={200} y={45} size={14} fill={INK} weight={800}>Y axis</T>
+          <line x1="200" y1="180" x2="200" y2="60" stroke={INK} strokeWidth={2.5} />
+          <T x={200} y={48} size={13} fill={INK} weight={800}>Y axis</T>
 
-          <line x1="200" y1="200" x2="110" y2="280" stroke={INK} strokeWidth={2.5} />
-          <T x={95} y={295} size={14} fill={INK} weight={800}>Z axis</T>
+          <line x1="200" y1="180" x2="115" y2="245" stroke={INK} strokeWidth={2.5} />
+          <T x={95} y={258} size={13} fill={INK} weight={800}>Z axis</T>
 
           {/* Resultant Electric Field Vector E */}
-          <path d={arrowD(200, 200, 310, 100)} stroke={RED} strokeWidth={4} />
-          <T x={325} y={95} size={16} fill={RED} weight={900}>E = −∇V</T>
+          <path d={arrowD(200, 180, 310, 90)} stroke={RED} strokeWidth={4} />
+          <T x={325} y={85} size={15} fill={RED} weight={900}>E = −∇V</T>
         </Fade>
 
         {/* Free Floating Partial Derivatives (Spacious, No Box) */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={17} fill={GREEN} weight={800}>
+          <T x={220} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
             E_x = − ∂V / ∂x   |   E_y = − ∂V / ∂y   |   E_z = − ∂V / ∂z
           </T>
         </Fade>
@@ -80,44 +80,44 @@ export default function P12Ch02Sec12({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: JEE ADVANCED WORKED PROBLEM */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={25} cy={22} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={26} size={15} fill={RED} weight={800} anchor="start">
             {t("WORKED PROBLEM: V(x,y,z) = 3x²y − y³z AT (1,1,1)", "WORKED PROBLEM: V(x,y,z) = 3x²y − y³z AT (1,1,1)")}
           </T>
         </Fade>
 
         {/* Floating Problem Steps (No Card Boxes) */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={75} size={15} fill={AMBER_DARK} weight={800} anchor="start">
             1. E_x = − ∂/∂x (3x²y − y³z) = − 6xy = − 6
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={15} fill={GREEN} weight={800} anchor="start">
             2. E_y = − ∂/∂y (3x²y − y³z) = − (3x² − 3y²z) = 0
           </T>
 
-          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={175} size={15} fill={RED} weight={800} anchor="start">
             3. E_z = − ∂/∂z (3x²y − y³z) = − (− y³) = + 1
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 200 L 450 200" stroke={INK} sw={2} />
 
-          <T x={50} y={285} size={20} fill={RED} weight={800} anchor="start">
+          <T x={45} y={240} size={18} fill={RED} weight={800} anchor="start">
             4. E_vector = − 6 i^ + 1 k^   ⇒   |E| = √(36 + 1) = √37 N/C
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
+          <T x={240} y={285} anchor="middle" size={13} fill={GREEN} weight={800}>
             Partial derivative ∂/∂x treats y and z as constant parameters!
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -126,11 +126,11 @@ export default function P12Ch02Sec12({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
-            Reverse Operation: V(B) − V(A) = − ∫_A^B E_vector · d r_vector = − ∫ (E_x dx + E_y dy + E_z dz)!
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            {t("Reverse Operation: V(B) − V(A) = − ∫_A^B E_vector · d r_vector = − ∫ (E_x dx + E_y dy + E_z dz)!", "Reverse Operation: V(B) − V(A) = − ∫_A^B E_vector · d r_vector = − ∫ (E_x dx + E_y dy + E_z dz)!")}
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
-            If E is uniform: ΔV = − E_vector · Δr_vector = − E d cosθ!
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            {t("If E is uniform: ΔV = − E_vector · Δr_vector = − E d cosθ!", "If E is uniform: ΔV = − E_vector · Δr_vector = − E d cosθ!")}
           </T>
         </Fade>
       </g>

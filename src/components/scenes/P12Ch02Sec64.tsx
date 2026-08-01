@@ -51,74 +51,76 @@ export default function P12Ch02Sec64({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: POTENTIAL & ENERGY PILLARS */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("POTENTIAL, ENERGY & EQUIVALENT FIELD GRADIENTS", "POTENTIAL, ENERGY & EQUIVALENT FIELD GRADIENTS")}
           </T>
         </Fade>
 
-        {/* Floating Pillars (No Card Boxes) */}
+        {/* Floating Pillars */}
         <Fade on={beat >= 1}>
-          <T x={40} y={80} size={15} fill={INK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={INK} weight={800} anchor="start">
             1. Point Potential: V(r) = k Q / r  (Scalar, 1/r decay)
           </T>
 
-          <T x={40} y={130} size={15} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             2. System Energy: U = Σ k q_i q_j / r_ij  (N(N−1)/2 pairs)
           </T>
 
-          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             3. Field Gradient: E = − dV/dr  (Field points high V → low V)
           </T>
 
-          <T x={40} y={230} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={215} size={14} fill={RED} weight={800} anchor="start">
             4. Dipole Energy: U(θ) = − p · E = − p E cosθ
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 3}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Work done by conservative electrostatic force W = −ΔU)
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: CAPACITANCE & DIELECTRIC PILLARS */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 2} delay={dl(2, 0.2)} />
         <Fade on={beat >= 2} delay={dl(2, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CAPACITANCE, DIELECTRICS & BATTERY STATES", "CAPACITANCE, DIELECTRICS & BATTERY STATES")}
           </T>
         </Fade>
 
-        {/* Floating Pillars (No Card Boxes) */}
+        {/* Floating Pillars */}
         <Fade on={beat >= 2}>
-          <T x={40} y={80} size={15} fill={GREEN} weight={800} anchor="start">
-            5. Parallel Plate: C = ε₀ A / d  (Geometry dependent!)
+          <T x={45} y={80} size={14} fill={GREEN} weight={800} anchor="start">
+            5. Parallel Plate: C = ε₀ A / d  (Geometry dependent)
           </T>
 
-          <T x={40} y={130} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             6. Dielectric Slab: C = K C₀ = K ε₀ A / d
           </T>
 
-          <T x={40} y={180} size={15} fill={AMBER_DARK} weight={800} anchor="start">
-            7. Battery Connected: V = V₀ constant  ⇒  U = ½ C V² (↑)
+          <T x={45} y={170} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            7. Battery Connected: V = V₀ constant  ⇒  U = ½ C V² (boosts)
           </T>
 
-          <T x={40} y={230} size={15} fill={RED} weight={800} anchor="start">
-            8. Battery Disconnected: Q = Q₀ constant  ⇒  U = Q²/(2C) (↓)
+          <T x={45} y={215} size={14} fill={RED} weight={800} anchor="start">
+            8. Battery Disconnected: Q = Q₀ constant  ⇒  U = Q²/(2C) (drops)
           </T>
         </Fade>
-      </g>
 
-      {/* MIDDLE BRIDGE LINE */}
-      <g transform="translate(40, 340)">
-        <Fade on={beat >= 4}>
-          <line x1="20" y1="10" x2="1000" y2="10" stroke={INK} strokeWidth={2} />
-          <T x={510} y={45} anchor="middle" size={18} fill={AMBER_DARK} weight={800}>
-            CONDUCTORS & CAVITIES: E_inside = 0 N/C, V = Const everywhere, E_surface = σ/ε₀, 100% Faraday Shielding!
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Dielectric constant K &gt; 1 ALWAYS increases capacitance C)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: GRAND SYNTHESIS MATRIX */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -127,8 +129,11 @@ export default function P12Ch02Sec64({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
-            Series 1/C_eq = Σ(1/C_i)   |   Parallel C_eq = Σ C_i   |   V_com = (C₁V₁+C₂V₂)/(C₁+C₂)   |   ΔU = ½[C₁C₂/(C₁+C₂)](V₁−V₂)² !
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Series 1/C_eq = Σ(1/C_i)   |   Parallel C_eq = Σ C_i   |   V_com = (C₁V₁+C₂V₂)/(C₁+C₂)
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Conductors: E_inside = 0, V = Const everywhere, E_surface = σ/ε₀, 100% Faraday Shielding!
           </T>
         </Fade>
       </g>

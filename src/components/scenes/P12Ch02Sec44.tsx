@@ -47,74 +47,74 @@ export default function P12Ch02Sec44({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: GAUSSIAN SURFACE INSIDE CONDUCTOR */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("GAUSSIAN SURFACE INSIDE CONDUCTOR MATERIAL", "GAUSSIAN SURFACE INSIDE CONDUCTOR MATERIAL")}
           </T>
         </Fade>
 
-        {/* Conductor & Gaussian Surface */}
+        {/* Conductor & Gaussian Surface (Open Chalkboard) */}
         <Fade on={beat >= 1}>
           {/* Conductor Body */}
-          <path d="M 100 180 C 100 90, 280 70, 370 130 C 430 180, 390 280, 270 280 C 150 280, 100 240, 100 180 Z"
-            fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={3} />
-          <T x={380} y={90} size={14} fill={AMBER_DARK} weight={800}>Outer Surface</T>
+          <path d="M 100 160 C 100 90, 260 70, 330 120 C 380 160, 350 230, 240 230 C 150 230, 100 200, 100 160 Z"
+            fill="none" stroke={AMBER_DARK} strokeWidth={1.8} strokeDasharray="6 4" />
+          <T x={345} y={95} size={13} fill={AMBER_DARK} weight={800}>Outer Surface</T>
 
           {/* Interior Gaussian Surface S */}
-          <path d="M 140 180 C 140 120, 260 110, 320 150 C 360 180, 330 240, 250 240 C 170 240, 140 220, 140 180 Z"
-            stroke={RED} strokeWidth={2} strokeDasharray="5 5" fill="none" />
-          <T x={240} y={185} size={15} fill={RED} weight={900} anchor="middle">Gaussian Surface S (E = 0)</T>
+          <path d="M 130 160 C 130 110, 240 100, 300 135 C 330 160, 310 205, 230 205 C 160 205, 130 190, 130 160 Z"
+            stroke={RED} strokeWidth={1.8} strokeDasharray="4 4" fill="none" />
+          <T x={220} y={160} size={13} fill={RED} weight={900} anchor="middle">Gaussian Surface S (E = 0)</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={17} fill={INK} weight={800}>
-            Since E = 0 everywhere on surface S, Flux Φ_E = ∮ E · dA = 0 !
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            Since E = 0 everywhere on S, Flux Φ_E = ∮ E · dA = 0 !
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: CALCULUS PROOF STEPS */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("GAUSS LAW CALCULUS PROOF", "GAUSS LAW CALCULUS PROOF")}
           </T>
         </Fade>
 
-        {/* Floating Derivation Steps (No Card Boxes) */}
+        {/* Floating Derivation Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={INK} weight={800} anchor="start">
             1. Gauss's Law: ∮_S E · dA = Q_enclosed / ε₀
           </T>
 
-          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             2. Substitute E = 0 inside: 0 = Q_enclosed / ε₀
           </T>
 
-          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             3. Q_enclosed = 0 inside ANY interior volume!
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={20} fill={RED} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
             4. All excess charge Q is pushed to outer boundary!
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Mutual electrostatic repulsion forces all like charges as far apart as possible!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Mutual electrostatic repulsion forces like charges apart)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -123,10 +123,10 @@ export default function P12Ch02Sec44({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Interior charge density ρ = 0 for any conductor in static equilibrium!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Charges sit exclusively in a thin surface layer ~1 atomic thickness!
           </T>
         </Fade>

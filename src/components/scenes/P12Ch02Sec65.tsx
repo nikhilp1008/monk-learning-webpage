@@ -50,78 +50,75 @@ export default function P12Ch02Sec65({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: PHYSICAL PROBLEM DIAGRAM */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("HALF-FILLED DIELECTRIC SLAB (K = 3, DISCONNECTED)", "HALF-FILLED DIELECTRIC SLAB (K = 3, DISCONNECTED)")}
           </T>
         </Fade>
 
-        {/* Capacitor Diagram */}
+        {/* Capacitor Diagram (Open Chalkboard) */}
         <Fade on={beat >= 1}>
-          <line x1="60" y1="90" x2="420" y2="90" stroke={RED} strokeWidth={4} />
-          <T x={435} y={95} size={14} fill={RED} weight={800}>+Q₀ Trapped</T>
-
-          <line x1="60" y1="250" x2="420" y2="250" stroke={GREEN} strokeWidth={4} />
-          <T x={435} y={255} size={14} fill={GREEN} weight={800}>−Q₀ Trapped</T>
+          <line x1="45" y1="90" x2="380" y2="90" stroke={RED} strokeWidth={3} />
+          <line x1="45" y1="210" x2="380" y2="210" stroke={GREEN} strokeWidth={3} />
 
           {/* Left half: Air (A/2) */}
-          <rect x="70" y="100" width="165" height="140" fill="none" stroke={MUTED} strokeDasharray="4 4" />
-          <T x={152} y={170} size={14} fill={INK} weight={800} anchor="middle">Air (A/2)</T>
+          <rect x="45" y="95" width="160" height="110" fill="none" stroke={INK} strokeDasharray="4 4" />
+          <T x={125} y={155} size={13} fill={INK} weight={800} anchor="middle">Air (A/2)</T>
 
           {/* Right half: Dielectric K=3 (A/2) */}
-          <rect x="245" y="100" width="165" height="140" fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={2} />
-          <T x={327} y={170} size={14} fill={AMBER_DARK} weight={900} anchor="middle">Slab K = 3 (A/2)</T>
+          <rect x="215" y="95" width="165" height="110" fill="none" stroke={AMBER_DARK} strokeWidth={1.8} />
+          <T x={297} y={155} size={13} fill={AMBER_DARK} weight={900} anchor="middle">Slab K = 3 (A/2)</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={16} fill={INK} weight={800}>
-            Parallel Split: C_new = (ε₀/d) (A/2) + K (ε₀/d) (A/2) = ½ C₀ (1 + K) !
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Parallel Split: C_new = (ε₀/d) (A/2) + K (ε₀/d) (A/2) = ½ C₀ (1 + K))
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: MULTI-STEP SOLUTION ACCOUNTING */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("STEP-BY-STEP MATHEMATICAL SOLUTION", "STEP-BY-STEP MATHEMATICAL SOLUTION")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             1. C_new = ½ C₀ (1 + 3) = 2 C₀
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             2. V_new = Q₀ / (2 C₀) = V₀ / 2
           </T>
 
-          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             3. U_new = Q₀² / (2 × 2 C₀) = U₀ / 2
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={20} fill={RED} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
             4. W_suction = U₀ − U_new = ½ U₀
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Exactly 50% of initial stored energy is spent by the field doing work pulling the slab in!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (50% of initial stored energy is spent by the field pulling the slab in)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -130,10 +127,10 @@ export default function P12Ch02Sec65({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Step 1: Identify battery state (Disconnected → Q is fixed)! Step 2: Split geometry into parallel C₁ & C₂!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Step 3: Compute C_new, then V_new = Q/C_new, then U_new = Q²/(2 C_new)!
           </T>
         </Fade>

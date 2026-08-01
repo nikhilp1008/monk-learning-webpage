@@ -46,78 +46,78 @@ export default function P12Ch02Sec55({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: SERIES VOLTAGE DIVISION TOOLKIT */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SERIES TOOLKIT & VOLTAGE DIVISION", "SERIES TOOLKIT & VOLTAGE DIVISION")}
           </T>
         </Fade>
 
-        {/* Floating Formulas (No Card Boxes) */}
+        {/* Floating Formulas */}
         <Fade on={beat >= 1}>
-          <T x={40} y={80} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={INK} weight={800} anchor="start">
             1. Equivalent: C_eq = (C₁ C₂) / (C₁ + C₂)
           </T>
 
-          <T x={40} y={135} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             2. n Identical in Series: C_eq = C / n
           </T>
 
-          <T x={40} y={190} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             3. Voltage Division: V₁ = V [ C₂ / (C₁ + C₂) ]
           </T>
 
-          <T x={40} y={245} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={215} size={14} fill={GREEN} weight={800} anchor="start">
             4. Voltage Division: V₂ = V [ C₁ / (C₁ + C₂) ]
           </T>
         </Fade>
 
-        {/* Free Floating Rule (Spacious, No Box) */}
+        {/* Free Floating Rule */}
         <Fade on={beat >= 3}>
-          <T x={230} y={305} anchor="middle" size={16} fill={RED} weight={800}>
-            Smaller capacitor takes LARGER share of total voltage!
+          <T x={45} y={268} anchor="start" size={13} fill={RED} weight={800}>
+            (Smaller capacitor takes LARGER share of total voltage)
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: PARALLEL CHARGE DIVISION TOOLKIT */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("PARALLEL TOOLKIT & CHARGE DIVISION", "PARALLEL TOOLKIT & CHARGE DIVISION")}
           </T>
         </Fade>
 
-        {/* Floating Formulas (No Card Boxes) */}
+        {/* Floating Formulas */}
         <Fade on={beat >= 4}>
-          <T x={50} y={80} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={INK} weight={800} anchor="start">
             1. Equivalent: C_eq = C₁ + C₂
           </T>
 
-          <T x={50} y={135} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             2. n Identical in Parallel: C_eq = n C
           </T>
 
-          <T x={50} y={190} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             3. Charge Division: Q₁ = Q [ C₁ / (C₁ + C₂) ]
           </T>
 
-          <T x={50} y={245} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={215} size={14} fill={GREEN} weight={800} anchor="start">
             4. Charge Division: Q₂ = Q [ C₂ / (C₁ + C₂) ]
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Larger capacitor draws LARGER share of total charge Q!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Larger capacitor draws LARGER share of total charge Q)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -126,10 +126,10 @@ export default function P12Ch02Sec55({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Series: V₁ / V₂ = C₂ / C₁ (Inverse Ratio)   |   Parallel: Q₁ / Q₂ = C₁ / C₂ (Direct Ratio)!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Ratio of n identical capacitors in parallel vs series C_parallel / C_series = n²!
           </T>
         </Fade>

@@ -47,74 +47,74 @@ export default function P12Ch02Sec38({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: THREE MAJOR PITFALLS IN CAPACITORS */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("THE 3 CLASSIC CAPACITOR PITFALLS", "THE 3 CLASSIC CAPACITOR PITFALLS")}
           </T>
         </Fade>
 
-        {/* Floating Pitfalls (No Card Boxes) */}
+        {/* Floating Pitfalls */}
         <Fade on={beat >= 1}>
-          <T x={40} y={80} size={15} fill={RED} weight={800} anchor="start">
-            1. Battery Check Trap: Forgetting to verify whether battery is connected!
+          <T x={45} y={80} size={14} fill={RED} weight={800} anchor="start">
+            1. Battery Check: Verify whether battery is connected!
           </T>
 
-          <T x={40} y={130} size={15} fill={AMBER_DARK} weight={800} anchor="start">
-            2. Energy Formula Mismatch: Using ½CV² when Q is constant, or Q²/(2C) when V is constant!
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Formula Choice: Use ½CV² (V const) or Q²/(2C) (Q const)!
           </T>
 
-          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
-            3. Dielectric Constant Slips: C increases by K, but V and E decrease by 1/K (if disconnected)!
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Dielectric Slips: C ↑ by K; V, E ↓ by 1/K (disconnected)!
           </T>
 
-          <T x={40} y={230} size={15} fill={INK} weight={800} anchor="start">
-            4. Battery Charging Loss: W_battery = Q V = 2 × U_stored (50% heat loss)!
+          <T x={45} y={215} size={14} fill={INK} weight={800} anchor="start">
+            4. Charging Loss: W_batt = Q V = 2 × U_stored (50% heat)!
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: MASTER FORMULA MATRIX */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 2} delay={dl(2, 0.2)} />
         <Fade on={beat >= 2} delay={dl(2, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CAPACITOR MASTER FORMULA MATRIX", "CAPACITOR MASTER FORMULA MATRIX")}
           </T>
         </Fade>
 
-        {/* Floating Matrix Features (No Card Boxes) */}
+        {/* Floating Matrix Features */}
         <Fade on={beat >= 2}>
-          <T x={40} y={80} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={GREEN} weight={800} anchor="start">
             • Parallel Plate: C = ε₀ A / d  (Vacuum)
           </T>
 
-          <T x={40} y={130} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             • With Dielectric Slab: C = K C₀ = K ε₀ A / d
           </T>
 
-          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             • Partial Slab (t &lt; d): C = ε₀ A / [ d − t + (t/K) ]
           </T>
 
-          <T x={40} y={230} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={215} size={14} fill={GREEN} weight={800} anchor="start">
             • Energy Density: u_E = ½ ε₀ E²  (J/m³)
           </T>
         </Fade>
       </g>
 
       {/* MIDDLE BRIDGE LINE */}
-      <g transform="translate(40, 340)">
+      <g transform="translate(40, 325)">
         <Fade on={beat >= 4}>
-          <line x1="20" y1="10" x2="1000" y2="10" stroke={INK} strokeWidth={2} />
-          <T x={510} y={45} anchor="middle" size={18} fill={AMBER_DARK} weight={800}>
+          <line x1="20" y1="10" x2="980" y2="10" stroke={INK} strokeWidth={1.8} />
+          <T x={500} y={38} anchor="middle" size={16} fill={AMBER_DARK} weight={800}>
             GOLDEN RULE: Capacitance depends ONLY on Geometry (A, d) and Medium (K) — NOT on Q or V!
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: SUBTOPIC 3 MASTER CHECKLIST */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -123,7 +123,7 @@ export default function P12Ch02Sec38({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             ✓ C = Q/V   ✓ C = ε₀A/d   ✓ C = KC₀   ✓ Connected V const   ✓ Disconnected Q const   ✓ u_E = ½ε₀E²!
           </T>
         </Fade>

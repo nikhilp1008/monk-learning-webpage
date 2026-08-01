@@ -48,7 +48,7 @@ export default function P12Ch02Sec59({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: CIRCUIT DIAGRAM & VALUES */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("THREE CAPACITOR VALUES: 2 µF, 3 µF, 6 µF", "THREE CAPACITOR VALUES: 2 µF, 3 µF, 6 µF")}
@@ -57,14 +57,14 @@ export default function P12Ch02Sec59({ currentTime, reveals, language }: ScenePr
 
         {/* Values Diagram */}
         <Fade on={beat >= 1}>
-          <T x={80} y={110} size={18} fill={RED} weight={900} anchor="start">C₁ = 2 µF</T>
-          <T x={80} y={170} size={18} fill={AMBER_DARK} weight={900} anchor="start">C₂ = 3 µF</T>
-          <T x={80} y={230} size={18} fill={GREEN} weight={900} anchor="start">C₃ = 6 µF</T>
+          <T x={45} y={80} size={16} fill={RED} weight={900} anchor="start">C₁ = 2 µF</T>
+          <T x={45} y={125} size={16} fill={AMBER_DARK} weight={900} anchor="start">C₂ = 3 µF</T>
+          <T x={45} y={170} size={16} fill={GREEN} weight={900} anchor="start">C₃ = 6 µF</T>
         </Fade>
 
-        {/* Free Floating Question (Spacious, No Box) */}
+        {/* Free Floating Question */}
         <Fade on={beat >= 2}>
-          <T x={230} y={305} anchor="middle" size={16} fill={INK} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
             Find C_series, C_parallel, and their ratio C_p / C_s !
           </T>
         </Fade>
@@ -72,44 +72,44 @@ export default function P12Ch02Sec59({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: NUMERICAL CALCULATION STEPS */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 3} delay={dl(3, 0.2)} />
         <Fade on={beat >= 3} delay={dl(3, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("STEP-BY-STEP CALCULATION", "STEP-BY-STEP CALCULATION")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 3}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             1. Series: 1/C_s = 1/2 + 1/3 + 1/6 = (3+2+1)/6 = 6/6 = 1
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             2. C_series = 1 µF
           </T>
 
-          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
             3. Parallel: C_p = 2 + 3 + 6 = 11 µF
           </T>
 
-          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={20} fill={GREEN} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
             4. Ratio C_parallel / C_series = 11 / 1 = 11
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Notice how 2 µF, 3 µF, and 6 µF combine into a clean integer 1 µF in series!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Notice how 2 µF, 3 µF, 6 µF combine into a clean integer 1 µF in series)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -118,10 +118,10 @@ export default function P12Ch02Sec59({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Always show LCM steps explicitly when adding fractions in series combinations!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Never forget to invert 1/C_s at the end to get final C_s!
           </T>
         </Fade>

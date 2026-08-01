@@ -48,31 +48,31 @@ export default function P12Ch02Sec53({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: CONNECTED SPHERES DIAGRAM */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CONNECTING CONDUCTORS VIA WIRE", "CONNECTING CONDUCTORS VIA WIRE")}
           </T>
         </Fade>
 
-        {/* Conductors Diagram */}
+        {/* Conductors Diagram (Open Chalkboard) */}
         <Fade on={beat >= 1}>
           {/* Sphere 1 */}
-          <circle cx={110} cy={180} r={55} fill="#ffe4e6" stroke={RED} strokeWidth={3} opacity={0.4} />
-          <T x={110} y={185} size={14} fill={RED} weight={900} anchor="middle">Sphere 1 (C₁, V₁)</T>
+          <circle cx={100} cy={155} r={45} stroke={RED} strokeWidth={1.8} fill="none" />
+          <T x={100} y={160} size={12} fill={RED} weight={900} anchor="middle">Sphere 1 (C₁, V₁)</T>
 
           {/* Wire */}
-          <line x1="165" y1="180" x2="315" y2="180" stroke={INK} strokeWidth={3} />
-          <T x={240} y={165} size={13} fill={INK} weight={800} anchor="middle">Connecting Wire</T>
+          <line x1="145" y1="155" x2="280" y2="155" stroke={INK} strokeWidth={1.8} />
+          <T x={212} y={145} size={12} fill={INK} weight={800} anchor="middle">Connecting Wire</T>
 
           {/* Sphere 2 */}
-          <circle cx={370} cy={180} r={55} fill="#dcfce7" stroke={GREEN} strokeWidth={3} opacity={0.4} />
-          <T x={370} y={185} size={14} fill={GREEN} weight={900} anchor="middle">Sphere 2 (C₂, V₂)</T>
+          <circle cx={325} cy={155} r={45} stroke={GREEN} strokeWidth={1.8} fill="none" />
+          <T x={325} y={160} size={12} fill={GREEN} weight={900} anchor="middle">Sphere 2 (C₂, V₂)</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={17} fill={AMBER_DARK} weight={900}>
+          <T x={45} y={268} anchor="start" size={13} fill={AMBER_DARK} weight={900}>
             Common Potential V_com = (C₁ V₁ + C₂ V₂) / (C₁ + C₂)
           </T>
         </Fade>
@@ -80,44 +80,44 @@ export default function P12Ch02Sec53({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: ENERGY LOSS & CHARGE RATIO */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("ENERGY DISSIPATION & FINAL CHARGES", "ENERGY DISSIPATION & FINAL CHARGES")}
           </T>
         </Fade>
 
-        {/* Floating Derivation Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={INK} weight={800} anchor="start">
             1. Final Charge Ratio: q₁' / q₂' = C₁ / C₂
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             2. For Spheres: q₁' / q₂' = R₁ / R₂
           </T>
 
-          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
             3. Energy Loss ΔU = U_initial − U_final
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={19} fill={RED} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
             4. ΔU = ½ [ (C₁ C₂) / (C₁ + C₂) ] (V₁ − V₂)²
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            ΔU is ALWAYS positive (Energy is lost as heat I²R & spark electromagnetic waves)!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (ΔU &gt; 0 ALWAYS: Energy is lost as heat and light spark)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -126,10 +126,10 @@ export default function P12Ch02Sec53({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Charge flows from HIGHER potential to LOWER potential until potentials equalize (V₁ = V₂ = V_com)!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             If opposite polarities are connected: V_com = (C₁ V₁ − C₂ V₂) / (C₁ + C₂)!
           </T>
         </Fade>

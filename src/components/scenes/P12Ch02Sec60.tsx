@@ -48,89 +48,89 @@ export default function P12Ch02Sec60({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: WIRE BRIDGE CIRCUIT SCHEMATIC */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CIRCUIT WITH TWO CROSSOVER WIRE BRIDGES", "CIRCUIT WITH TWO CROSSOVER WIRE BRIDGES")}
           </T>
         </Fade>
 
-        {/* Crossover Circuit Diagram */}
+        {/* Crossover Circuit Diagram (Open Chalkboard) */}
         <Fade on={beat >= 1}>
-          <line x1="40" y1="180" x2="120" y2="180" stroke={INK} strokeWidth={3} />
+          <line x1="45" y1="170" x2="110" y2="170" stroke={INK} strokeWidth={2} />
 
           {/* C1 */}
-          <line x1="120" y1="150" x2="120" y2="210" stroke={RED} strokeWidth={4} />
-          <line x1="140" y1="150" x2="140" y2="210" stroke={RED} strokeWidth={4} />
-          <line x1="140" y1="180" x2="220" y2="180" stroke={INK} strokeWidth={3} />
+          <line x1="110" y1="140" x2="110" y2="200" stroke={RED} strokeWidth={3} />
+          <line x1="130" y1="140" x2="130" y2="200" stroke={RED} strokeWidth={3} />
+          <line x1="130" y1="170" x2="200" y2="170" stroke={INK} strokeWidth={2} />
 
           {/* C2 */}
-          <line x1="220" y1="150" x2="220" y2="210" stroke={GREEN} strokeWidth={4} />
-          <line x1="240" y1="150" x2="240" y2="210" stroke={GREEN} strokeWidth={4} />
-          <line x1="240" y1="180" x2="320" y2="180" stroke={INK} strokeWidth={3} />
+          <line x1="200" y1="140" x2="200" y2="200" stroke={GREEN} strokeWidth={3} />
+          <line x1="220" y1="140" x2="220" y2="200" stroke={GREEN} strokeWidth={3} />
+          <line x1="220" y1="170" x2="290" y2="170" stroke={INK} strokeWidth={2} />
 
           {/* C3 */}
-          <line x1="320" y1="150" x2="320" y2="210" stroke={AMBER_DARK} strokeWidth={4} />
-          <line x1="340" y1="150" x2="340" y2="210" stroke={AMBER_DARK} strokeWidth={4} />
-          <line x1="340" y1="180" x2="420" y2="180" stroke={INK} strokeWidth={3} />
+          <line x1="290" y1="140" x2="290" y2="200" stroke={AMBER_DARK} strokeWidth={3} />
+          <line x1="310" y1="140" x2="310" y2="200" stroke={AMBER_DARK} strokeWidth={3} />
+          <line x1="310" y1="170" x2="380" y2="170" stroke={INK} strokeWidth={2} />
 
-          {/* Wire Bridge 1: Node A (40) to Node between C2 & C3 (280) */}
-          <path d="M 80 180 Q 180 90, 280 180" stroke={RED} strokeWidth={2.5} fill="none" />
-          <T x={180} y={115} size={12} fill={RED} weight={800} anchor="middle">Wire Bridge 1 (Node A)</T>
+          {/* Wire Bridge 1 */}
+          <path d="M 80 170 Q 165 95, 255 170" stroke={RED} strokeWidth={2} fill="none" />
+          <T x={165} y={115} size={11} fill={RED} weight={800} anchor="middle">Wire Bridge 1 (Node A)</T>
 
-          {/* Wire Bridge 2: Node between C1 & C2 (180) to Node B (380) */}
-          <path d="M 180 180 Q 280 270, 380 180" stroke={GREEN} strokeWidth={2.5} fill="none" />
-          <T x={280} y={260} size={12} fill={GREEN} weight={800} anchor="middle">Wire Bridge 2 (Node B)</T>
+          {/* Wire Bridge 2 */}
+          <path d="M 165 170 Q 255 245, 345 170" stroke={GREEN} strokeWidth={2} fill="none" />
+          <T x={255} y={240} size={11} fill={GREEN} weight={800} anchor="middle">Wire Bridge 2 (Node B)</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={230} y={305} anchor="middle" size={16} fill={RED} weight={800}>
-            Looks like Series (C/3)? NO! Crossover wires short-circuit nodes into Parallel!
+          <T x={45} y={268} anchor="start" size={13} fill={RED} weight={800}>
+            (Trap: Looks like C/3 in series, but bridges force C_eq = 3C!)
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: NODE LABELING ANALYSIS */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("NODE-BY-NODE REDRAWING PROOF", "NODE-BY-NODE REDRAWING PROOF")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             1. Label all wires connected to Node A with Potential V_A.
           </T>
 
-          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             2. Label all wires connected to Node B with Potential V_B.
           </T>
 
-          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
-            3. C₁, C₂, and C₃ are ALL connected between V_A and V_B!
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. C₁, C₂, C₃ are ALL connected between V_A and V_B!
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={22} fill={GREEN} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
             4. C_eq = C + C + C = 3 C !
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Always re-draw circuits by labeling node potentials (V_A, V_B) before calculating C_eq!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Always re-draw circuits by labeling node potentials before calculating)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -139,10 +139,10 @@ export default function P12Ch02Sec60({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Option (A) C/3 is the classic distractor! Correct answer is Option (D) 3C!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Zero resistance wires collapse node potentials V_1 = V_3 and V_2 = V_4!
           </T>
         </Fade>

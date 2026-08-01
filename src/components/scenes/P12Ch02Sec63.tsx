@@ -47,74 +47,76 @@ export default function P12Ch02Sec63({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: THREE MAJOR CIRCUIT PITFALLS */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("THE 3 CLASSIC CIRCUIT & SHARING PITFALLS", "THE 3 CLASSIC CIRCUIT & SHARING PITFALLS")}
           </T>
         </Fade>
 
-        {/* Floating Pitfalls (No Card Boxes) */}
+        {/* Floating Pitfalls */}
         <Fade on={beat >= 1}>
-          <T x={40} y={80} size={15} fill={RED} weight={800} anchor="start">
-            1. Inversion Slip: Forgetting to invert 1/C_eq at the end of series calculations!
+          <T x={45} y={80} size={14} fill={RED} weight={800} anchor="start">
+            1. Inversion Slip: Forgetting to invert 1/C_eq at the end of series!
           </T>
 
-          <T x={40} y={130} size={15} fill={AMBER_DARK} weight={800} anchor="start">
-            2. Polarity Neglect: Connecting opposite plates (+ to −) uses ΔU ∝ (V₁ + V₂)² !
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Polarity Neglect: Connecting opposite plates uses ΔU ∝ (V₁ + V₂)² !
           </T>
 
-          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             3. Inverse Voltage Ratio: V₁ = V [ C₂ / (C₁ + C₂) ] (Smaller C gets LARGER V)!
           </T>
 
-          <T x={40} y={230} size={15} fill={INK} weight={800} anchor="start">
-            4. Wire Bridge Illusion: Wire bridges convert series chains into parallel circuits!
+          <T x={45} y={215} size={14} fill={INK} weight={800} anchor="start">
+            4. Wire Bridge Illusion: Wire bridges convert series into parallel circuits!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 3}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Always double-check formulas against physical boundary limits)
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: MASTER FORMULA MATRIX */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 2} delay={dl(2, 0.2)} />
         <Fade on={beat >= 2} delay={dl(2, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CIRCUIT & SHARING MASTER MATRIX", "CIRCUIT & SHARING MASTER MATRIX")}
           </T>
         </Fade>
 
-        {/* Floating Matrix Features (No Card Boxes) */}
+        {/* Floating Matrix Features */}
         <Fade on={beat >= 2}>
-          <T x={40} y={80} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={GREEN} weight={800} anchor="start">
             • Series 2-Capacitor: C_eq = C₁ C₂ / (C₁ + C₂)
           </T>
 
-          <T x={40} y={130} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             • Charge Sharing: V_com = (C₁ V₁ + C₂ V₂) / (C₁ + C₂)
           </T>
 
-          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             • Infinite Ladder: C_eq = C (1 + √5) / 2
           </T>
 
-          <T x={40} y={230} size={15} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={215} size={14} fill={GREEN} weight={800} anchor="start">
             • Balanced Wheatstone: Remove central C₅ (C_eq = C)
           </T>
         </Fade>
-      </g>
 
-      {/* MIDDLE BRIDGE LINE */}
-      <g transform="translate(40, 340)">
-        <Fade on={beat >= 4}>
-          <line x1="20" y1="10" x2="1000" y2="10" stroke={INK} strokeWidth={2} />
-          <T x={510} y={45} anchor="middle" size={18} fill={AMBER_DARK} weight={800}>
-            GOLDEN RULE: Label nodes (V_A, V_B, V_C) to simplify any complex capacitor network!
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Label node potentials V_A, V_B to simplify complex 3D networks)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: SUBTOPIC 5 MASTER CHECKLIST */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -123,8 +125,11 @@ export default function P12Ch02Sec63({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             ✓ Series/Parallel   ✓ V-Division   ✓ Q-Division   ✓ V_com   ✓ Heat Loss ΔU   ✓ Wheatstone Bridge!
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            All circuit reduction methods and charge sharing energy loss principles 100% verified!
           </T>
         </Fade>
       </g>

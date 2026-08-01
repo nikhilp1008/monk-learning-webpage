@@ -48,7 +48,7 @@ export default function P12Ch02Sec35({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: DISCONNECTED BATTERY SLAB DRAWING */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("DIELECTRIC (K = 5) INSERTION (DISCONNECTED)", "DIELECTRIC (K = 5) INSERTION (DISCONNECTED)")}
@@ -57,24 +57,24 @@ export default function P12Ch02Sec35({ currentTime, reveals, language }: ScenePr
 
         {/* Capacitor Diagram */}
         <Fade on={beat >= 1}>
-          <line x1="60" y1="90" x2="420" y2="90" stroke={RED} strokeWidth={4} />
-          <T x={435} y={95} size={14} fill={RED} weight={800}>+Q₀ Trapped</T>
+          <line x1="45" y1="80" x2="380" y2="80" stroke={RED} strokeWidth={4} />
+          <T x={395} y={84} size={13} fill={RED} weight={800} anchor="start">+Q₀ Trapped</T>
 
-          <line x1="60" y1="230" x2="420" y2="230" stroke={GREEN} strokeWidth={4} />
-          <T x={435} y={235} size={14} fill={GREEN} weight={800}>−Q₀ Trapped</T>
+          <line x1="45" y1="230" x2="380" y2="230" stroke={GREEN} strokeWidth={4} />
+          <T x={395} y={234} size={13} fill={GREEN} weight={800} anchor="start">−Q₀ Trapped</T>
 
-          {/* Dielectric Slab inserted */}
-          <rect x="120" y="100" width="240" height="120" fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={2} />
-          <T x={240} y={160} size={16} fill={AMBER_DARK} weight={900} anchor="middle">Dielectric K = 5</T>
+          {/* Dielectric Slab inserted (Open Chalkboard style) */}
+          <rect x="110" y="95" width="230" height="120" fill="none" stroke={AMBER_DARK} strokeWidth={1.8} strokeDasharray="6 4" />
+          <T x={225} y={160} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Dielectric K = 5</T>
 
           {/* Suction Force Arrow pulling slab into capacitor */}
-          <path d={arrowD(60, 160, 110, 160)} stroke={GREEN} strokeWidth={3} />
-          <T x={40} y={190} size={12} fill={GREEN} weight={800}>Field Suction Force F_pull</T>
+          <path d={arrowD(50, 155, 100, 155)} stroke={GREEN} strokeWidth={3} />
+          <T x={45} y={180} size={12} fill={GREEN} weight={800} anchor="start">Field Suction Force F_pull</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={16} fill={INK} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
             Trapped Charge: Q = Q₀  ⇒  Voltage V = Q₀ / (5 C₀) = V₀ / 5 !
           </T>
         </Fade>
@@ -82,44 +82,44 @@ export default function P12Ch02Sec35({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: ENERGY DISSIPATION ACCOUNTING */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("WHERE DID THE 80% MISSING ENERGY GO?", "WHERE DID THE 80% MISSING ENERGY GO?")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             1. Initial Energy U₀ = Q₀² / (2 C₀)
           </T>
 
-          <T x={50} y={145} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={RED} weight={800} anchor="start">
             2. Final Energy U = Q₀² / (2 × 5 C₀) = U₀ / 5 = 0.20 U₀
           </T>
 
-          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             3. Energy Loss ΔU = U₀ − U = 0.80 U₀ (80% Lost!)
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={20} fill={GREEN} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
             4. W_field = +0.80 U₀ (Work done pulling slab!)
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Field sucks slab inward — energy converts into kinetic energy of slab or mechanical work!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Field sucks slab inward — converts into mechanical work)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -128,10 +128,10 @@ export default function P12Ch02Sec35({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Disconnected Battery → Q is constant! Never use U = ½ C V² (since V changes)!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Always use U = Q² / (2C) when battery is disconnected!
           </T>
         </Fade>

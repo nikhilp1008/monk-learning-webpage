@@ -51,7 +51,7 @@ export default function P12Ch02Sec19({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: INTEGRATION AXIS & FORCE VECTORS */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("BRINGING q₂ FROM ∞ TO DISTANCE r₁₂ FROM q₁", "BRINGING q₂ FROM ∞ TO DISTANCE r₁₂ FROM q₁")}
@@ -67,8 +67,8 @@ export default function P12Ch02Sec19({ currentTime, reveals, language }: ScenePr
           <line x1="102" y1="180" x2="460" y2="180" stroke={INK} strokeWidth={2.5} />
 
           {/* Target distance r12 */}
-          <line x1="240" y1="165" x2="240" y2="195" stroke={GREEN} strokeWidth={3} />
-          <T x={240} y={150} size={15} fill={GREEN} weight={800}>Final Position (r₁₂)</T>
+          <line x1="240" y1="150" x2="240" y2="210" stroke={GREEN} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={240} y={135} size={14} fill={GREEN} weight={800}>Final Position (r₁₂)</T>
 
           {/* Moving charge q2 */}
           <circle cx={q2X} cy={180} r={12} fill={GREEN} />
@@ -76,15 +76,15 @@ export default function P12Ch02Sec19({ currentTime, reveals, language }: ScenePr
 
           {/* Force Vectors F_E and F_ext */}
           <path d={arrowD(q2X, 180, q2X + 45, 180)} stroke={RED} strokeWidth={2.5} />
-          <T x={q2X + 25} y={165} size={11} fill={RED} weight={800}>F_E</T>
+          <T x={q2X + 25} y={162} size={12} fill={RED} weight={800}>F_E</T>
 
           <path d={arrowD(q2X, 180, q2X - 45, 180)} stroke={GREEN} strokeWidth={2.5} />
-          <T x={q2X - 35} y={165} size={11} fill={GREEN} weight={800}>F_ext</T>
+          <T x={q2X - 35} y={162} size={12} fill={GREEN} weight={800}>F_ext</T>
         </Fade>
 
-        {/* Free Floating Differential Work (Spacious, No Box) */}
+        {/* Free Floating Differential Work */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={17} fill={INK} weight={800}>
+          <T x={240} y={278} anchor="middle" size={16} fill={INK} weight={800}>
             dW = F_ext · dx = − F_E dx = − (k q₁ q₂ / x²) dx
           </T>
         </Fade>
@@ -92,44 +92,44 @@ export default function P12Ch02Sec19({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: CALCULUS PROOF STEPS */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("STEP-BY-STEP INTEGRAL DERIVATION", "STEP-BY-STEP INTEGRAL DERIVATION")}
           </T>
         </Fade>
 
-        {/* Floating Calculus Equations (No Card Boxes) */}
+        {/* Floating Calculus Equations */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={80} size={15} fill={INK} weight={800} anchor="start">
             1. Total Work W = ∫_∞^r₁₂ dW = − ∫_∞^r₁₂ (k q₁ q₂ / x²) dx
           </T>
 
-          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={15} fill={AMBER_DARK} weight={800} anchor="start">
             2. Integrate: W = − k q₁ q₂ [ − 1 / x ]_∞^r₁₂
           </T>
 
-          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={15} fill={GREEN} weight={800} anchor="start">
             3. Apply Limits: W = k q₁ q₂ ( 1/r₁₂ − 1/∞ ) = k q₁ q₂ / r₁₂
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={20} fill={RED} weight={800} anchor="start">
+          <T x={45} y={235} size={17} fill={RED} weight={800} anchor="start">
             4. U = W_ext = k q₁ q₂ / r₁₂  (Q.E.D.)
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Valid for both positive and negative charges — include proper signs (+ / -)!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            Valid for both positive & negative charges — include proper signs (+ / −)!
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -138,10 +138,10 @@ export default function P12Ch02Sec19({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Electrostatic potential energy is stored in the electric field surrounding the pair!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Reference zero at infinite separation: U(∞) = 0 J!
           </T>
         </Fade>

@@ -47,31 +47,31 @@ export default function P12Ch02Sec49({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: CONCENTRIC SHELLS DIAGRAM */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CONCENTRIC CONDUCTING SHELLS (A, B)", "CONCENTRIC CONDUCTING SHELLS (A, B)")}
           </T>
         </Fade>
 
-        {/* Concentric Shells */}
+        {/* Concentric Shells (Open Chalkboard) */}
         <Fade on={beat >= 1}>
           {/* Inner Shell A */}
-          <circle cx={240} cy={180} r={50} stroke={RED} strokeWidth={3} fill="#ffe4e6" opacity={0.3} />
-          <T x={240} y={185} size={14} fill={RED} weight={900} anchor="middle">Shell A (a, q₁)</T>
+          <circle cx={212} cy={155} r={40} stroke={RED} strokeWidth={1.8} fill="none" />
+          <T x={212} y={160} size={13} fill={RED} weight={900} anchor="middle">Shell A (a, q₁)</T>
 
           {/* Outer Shell B */}
-          <circle cx={240} cy={180} r={105} stroke={GREEN} strokeWidth={3} fill="none" />
-          <T x={240} y={65} size={14} fill={GREEN} weight={900} anchor="middle">Shell B (b, q₂)</T>
+          <circle cx={212} cy={155} r={80} stroke={GREEN} strokeWidth={1.8} fill="none" />
+          <T x={212} y={60} size={13} fill={GREEN} weight={900} anchor="middle">Shell B (b, q₂)</T>
 
           {/* Connecting Switch Wire */}
-          <line x1="240" y1="130" x2="240" y2="75" stroke={AMBER_DARK} strokeWidth={2.5} strokeDasharray="3 3" />
-          <T x={255} y={105} size={12} fill={AMBER_DARK} weight={800}>Switch S</T>
+          <line x1="212" y1="115" x2="212" y2="75" stroke={AMBER_DARK} strokeWidth={1.8} strokeDasharray="3 3" />
+          <T x={225} y={98} size={12} fill={AMBER_DARK} weight={800} anchor="start">Switch S</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={17} fill={INK} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
             V_A = k q₁/a + k q₂/b   |   V_B = k (q₁ + q₂)/b
           </T>
         </Fade>
@@ -79,44 +79,44 @@ export default function P12Ch02Sec49({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: POTENTIAL DIFFERENCE & CHARGE FLOW */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("INDEPENDENT ΔV & CHARGE FLOW PROOF", "INDEPENDENT ΔV & CHARGE FLOW PROOF")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             1. ΔV = V_A − V_B = k q₁ ( 1/a − 1/b )
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             2. Notice: ΔV is 100% INDEPENDENT of outer charge q₂!
           </T>
 
-          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
             3. Since a &lt; b, V_A &gt; V_B for positive q₁!
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={19} fill={GREEN} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
             4. Closing Switch S → 100% of q₁ flows to Outer Shell B!
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Fundamental principle behind the Van de Graaff Generator high-voltage accumulator!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Fundamental principle behind Van de Graaff generator)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -125,10 +125,10 @@ export default function P12Ch02Sec49({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Inner charge q₁ ALWAYS creates a higher potential on inner shell A than outer shell B (V_A &gt; V_B)!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Connecting a wire forces all charge from inner shell to outer shell until V_A = V_B!
           </T>
         </Fade>

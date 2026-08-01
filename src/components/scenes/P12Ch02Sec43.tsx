@@ -47,24 +47,24 @@ export default function P12Ch02Sec43({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: ISOLATED SPHERICAL CONDUCTOR */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("ISOLATED SPHERICAL CONDUCTOR (RADIUS R)", "ISOLATED SPHERICAL CONDUCTOR (RADIUS R)")}
           </T>
         </Fade>
 
-        {/* Sphere Diagram */}
+        {/* Sphere Diagram (Open Chalkboard) */}
         <Fade on={beat >= 1}>
-          <circle cx={220} cy={180} r={75} stroke={RED} strokeWidth={3} fill="#ffe4e6" opacity={0.3} />
-          <T x={220} y={185} size={16} fill={RED} weight={900} anchor="middle">Sphere (R, Q)</T>
-          <line x1="220" y1="180" x2="295" y2="180" stroke={INK} strokeWidth={2} />
-          <T x={260} y={170} size={13} fill={INK} weight={800}>Radius R</T>
+          <circle cx={212} cy={155} r={65} stroke={RED} strokeWidth={1.8} fill="none" />
+          <line x1="212" y1="155" x2="277" y2="155" stroke={INK} strokeWidth={1.8} />
+          <T x={245} y={148} size={12} fill={INK} weight={800} anchor="middle">Radius R</T>
+          <T x={212} y={185} size={14} fill={RED} weight={900} anchor="middle">Sphere (+Q)</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={220} y={305} anchor="middle" size={19} fill={GREEN} weight={900}>
+          <T x={45} y={268} anchor="start" size={14} fill={GREEN} weight={900}>
             C = 4π ε₀ R   (Earth R = 6400 km → C ≈ 711 µF!)
           </T>
         </Fade>
@@ -72,34 +72,34 @@ export default function P12Ch02Sec43({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: CONCENTRIC SPHERICAL CAPACITOR (a, b) */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CONCENTRIC SPHERICAL CAPACITOR (a, b)", "CONCENTRIC SPHERICAL CAPACITOR (a, b)")}
           </T>
         </Fade>
 
-        {/* Concentric Shells Diagram */}
+        {/* Concentric Shells Diagram (Open Chalkboard) */}
         <Fade on={beat >= 4}>
           {/* Inner Shell a */}
-          <circle cx={240} cy={180} r={45} stroke={RED} strokeWidth={2.5} fill="#ffe4e6" opacity={0.3} />
-          <T x={240} y={185} size={13} fill={RED} weight={900} anchor="middle">+Q (a)</T>
+          <circle cx={212} cy={155} r={40} stroke={RED} strokeWidth={1.8} fill="none" />
+          <T x={212} y={160} size={13} fill={RED} weight={900} anchor="middle">+Q (a)</T>
 
           {/* Outer Shell b */}
-          <circle cx={240} cy={180} r={95} stroke={GREEN} strokeWidth={2.5} fill="none" strokeDasharray="5 5" />
-          <T x={240} y={75} size={13} fill={GREEN} weight={900} anchor="middle">−Q Outer Shell (b, Grounded)</T>
+          <circle cx={212} cy={155} r={80} stroke={GREEN} strokeWidth={1.8} fill="none" strokeDasharray="5 5" />
+          <T x={212} y={55} size={13} fill={GREEN} weight={900} anchor="middle">−Q Outer Shell (b, Grounded)</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 5}>
-          <T x={240} y={305} anchor="middle" size={20} fill={GREEN} weight={900}>
+          <T x={45} y={268} anchor="start" size={14} fill={GREEN} weight={900}>
             C = 4π ε₀ [ (a b) / (b − a) ]
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -108,10 +108,10 @@ export default function P12Ch02Sec43({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Inner Shell Potential: V_inner = k q₁/a + k q₂/b   |   Outer Shell Potential: V_outer = k(q₁ + q₂)/b !
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Potential difference ΔV = V_inner − V_outer = k q₁ (1/a − 1/b) depends ONLY on inner charge q₁!
           </T>
         </Fade>

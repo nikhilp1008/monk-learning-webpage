@@ -47,7 +47,7 @@ export default function P12Ch02Sec47({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: ELECTRIC FIELD PROFILE GRAPH E(r) */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("ELECTRIC FIELD PROFILE E(r)", "ELECTRIC FIELD PROFILE E(r)")}
@@ -56,26 +56,26 @@ export default function P12Ch02Sec47({ currentTime, reveals, language }: ScenePr
 
         {/* E(r) Graph */}
         <Fade on={beat >= 1}>
-          <line x1="50" y1="270" x2="450" y2="270" stroke={INK} strokeWidth={2} />
-          <line x1="50" y1="270" x2="50" y2="70" stroke={INK} strokeWidth={2} />
+          <line x1="45" y1="230" x2="440" y2="230" stroke={INK} strokeWidth={1.8} />
+          <line x1="45" y1="230" x2="45" y2="60" stroke={INK} strokeWidth={1.8} />
 
-          <line x1="180" y1="270" x2="180" y2="70" stroke={MUTED} strokeWidth={1.5} strokeDasharray="4 4" />
-          <T x={180} y={290} size={13} fill={INK} weight={800} anchor="middle">r = R</T>
+          <line x1="165" y1="230" x2="165" y2="60" stroke={MUTED} strokeWidth={1.2} strokeDasharray="4 4" />
+          <T x={165} y={248} size={12} fill={INK} weight={800} anchor="middle">r = R</T>
 
           {/* E = 0 inside */}
-          <line x1="50" y1="270" x2="180" y2="270" stroke={RED} strokeWidth={4} />
+          <line x1="45" y1="230" x2="165" y2="230" stroke={RED} strokeWidth={3} />
 
           {/* Jump to kQ/R² and 1/r² decay */}
-          <circle cx={180} cy={100} r={5} fill={RED} />
-          <Draw on={beat >= 1} delay={dl(1, 0.6)} d="M 180 100 Q 240 220, 440 260" stroke={RED} sw={3.5} />
+          <circle cx={165} cy={85} r={4} fill={RED} />
+          <Draw on={beat >= 1} delay={dl(1, 0.6)} d="M 165 85 Q 220 180, 420 220" stroke={RED} sw={2.5} />
 
-          <T x={220} y={90} size={13} fill={RED} weight={800}>E_max = kQ/R²</T>
-          <T x={340} y={210} size={13} fill={RED} weight={800}>E ∝ 1/r²</T>
+          <T x={200} y={75} size={12} fill={RED} weight={800}>E_max = kQ/R²</T>
+          <T x={330} y={175} size={12} fill={RED} weight={800}>E ∝ 1/r²</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={16} fill={RED} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={RED} weight={800}>
             E(r &lt; R) = 0 N/C   |   E(r ≥ R) = k Q / r²
           </T>
         </Fade>
@@ -83,7 +83,7 @@ export default function P12Ch02Sec47({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: POTENTIAL PROFILE GRAPH V(r) */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("ELECTROSTATIC POTENTIAL PROFILE V(r)", "ELECTROSTATIC POTENTIAL PROFILE V(r)")}
@@ -92,32 +92,32 @@ export default function P12Ch02Sec47({ currentTime, reveals, language }: ScenePr
 
         {/* V(r) Graph */}
         <Fade on={beat >= 4}>
-          <line x1="50" y1="270" x2="450" y2="270" stroke={INK} strokeWidth={2} />
-          <line x1="50" y1="270" x2="50" y2="70" stroke={INK} strokeWidth={2} />
+          <line x1="45" y1="230" x2="440" y2="230" stroke={INK} strokeWidth={1.8} />
+          <line x1="45" y1="230" x2="45" y2="60" stroke={INK} strokeWidth={1.8} />
 
-          <line x1="180" y1="270" x2="180" y2="70" stroke={MUTED} strokeWidth={1.5} strokeDasharray="4 4" />
-          <T x={180} y={290} size={13} fill={INK} weight={800} anchor="middle">r = R</T>
+          <line x1="165" y1="230" x2="165" y2="60" stroke={MUTED} strokeWidth={1.2} strokeDasharray="4 4" />
+          <T x={165} y={248} size={12} fill={INK} weight={800} anchor="middle">r = R</T>
 
           {/* V = constant inside */}
-          <line x1="50" y1="100" x2="180" y2="100" stroke={GREEN} strokeWidth={4} />
+          <line x1="45" y1="85" x2="165" y2="85" stroke={GREEN} strokeWidth={3} />
 
           {/* 1/r decay outside */}
-          <Draw on={beat >= 4} delay={dl(4, 0.6)} d="M 180 100 Q 260 210, 440 250" stroke={GREEN} sw={3.5} />
+          <Draw on={beat >= 4} delay={dl(4, 0.6)} d="M 165 85 Q 240 170, 420 210" stroke={GREEN} sw={2.5} />
 
-          <T x={115} y={85} size={13} fill={GREEN} weight={800} anchor="middle">V = kQ/R (Const)</T>
-          <T x={340} y={200} size={13} fill={GREEN} weight={800}>V ∝ 1/r</T>
+          <T x={105} y={72} size={12} fill={GREEN} weight={800} anchor="middle">V = kQ/R (Const)</T>
+          <T x={330} y={165} size={12} fill={GREEN} weight={800}>V ∝ 1/r</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={16} fill={GREEN} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
             V(r ≤ R) = k Q / R   |   V(r &gt; R) = k Q / r
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -126,10 +126,10 @@ export default function P12Ch02Sec47({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             E(r) has a jump discontinuity at r = R (0 to kQ/R²), whereas V(r) is continuous everywhere!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             At the center r = 0: E = 0 N/C, but V = kQ/R (Non-zero potential)!
           </T>
         </Fade>

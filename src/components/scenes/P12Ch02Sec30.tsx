@@ -48,70 +48,70 @@ export default function P12Ch02Sec30({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: VACUUM & FULL DIELECTRIC FORMULAS */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("VACUUM & FULL DIELECTRIC FORMULAS", "VACUUM & FULL DIELECTRIC FORMULAS")}
           </T>
         </Fade>
 
-        {/* Floating Formulas (No Card Boxes) */}
+        {/* Floating Formulas */}
         <Fade on={beat >= 1}>
-          <T x={40} y={85} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={80} size={15} fill={INK} weight={800} anchor="start">
             1. Air/Vacuum Capacitor: C₀ = ε₀ A / d
           </T>
 
-          <T x={40} y={150} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={15} fill={AMBER_DARK} weight={800} anchor="start">
             2. Fully Filled Medium (Constant K): C = K C₀ = K (ε₀ A / d)
           </T>
 
-          <T x={40} y={215} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={15} fill={GREEN} weight={800} anchor="start">
             3. Plate Field E = σ / ε₀ = Q / (ε₀ A)
           </T>
         </Fade>
 
-        {/* Free Floating Rule (Spacious, No Box) */}
+        {/* Free Floating Rule */}
         <Fade on={beat >= 3}>
-          <T x={230} y={305} anchor="middle" size={16} fill={RED} weight={800}>
-            Electric Field E inside air gap is UNIFORM (E = V/d)!
+          <T x={45} y={268} anchor="start" size={13} fill={RED} weight={800}>
+            Electric Field E inside air gap is UNIFORM (E = V / d)!
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: PARTIAL DIELECTRIC SLAB (THICKNESS t < d) */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("PARTIAL DIELECTRIC SLAB FORMULA (t < d)", "PARTIAL DIELECTRIC SLAB FORMULA (t < d)")}
           </T>
         </Fade>
 
-        {/* Floating Partial Slab Formulas (No Card Boxes) */}
+        {/* Floating Partial Slab Formulas */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={80} size={15} fill={RED} weight={800} anchor="start">
             4. Partial Slab (Thickness t):
           </T>
 
-          <T x={70} y={145} size={19} fill={GREEN} weight={900} anchor="start">
+          <T x={65} y={125} size={17} fill={GREEN} weight={900} anchor="start">
             C = ε₀ A / [ d − t + (t / K) ]
           </T>
 
-          <T x={50} y={215} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={170} size={15} fill={AMBER_DARK} weight={800} anchor="start">
             5. Conducting Slab (K → ∞): C = ε₀ A / (d − t)
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            A conducting slab of thickness t reduces effective plate separation to (d − t)!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Conducting slab of thickness t reduces plate gap to d − t)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -120,10 +120,10 @@ export default function P12Ch02Sec30({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Full Slab (t = d) → C = K C₀   |   Conducting Slab (K = ∞) → C = ε₀ A / (d − t)!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Permittivity of free space ε₀ = 8.854 × 10⁻¹² F/m!
           </T>
         </Fade>

@@ -47,7 +47,7 @@ export default function P12Ch02Sec21({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: PROBLEM GEOMETRY */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CHARGE SYSTEM DIAGRAM (r = 18 cm)", "CHARGE SYSTEM DIAGRAM (r = 18 cm)")}
@@ -56,68 +56,71 @@ export default function P12Ch02Sec21({ currentTime, reveals, language }: ScenePr
 
         <Fade on={beat >= 1}>
           {/* Charge q1 = +7 uC */}
-          <circle cx={100} cy={180} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2.5} />
-          <T x={100} y={187} size={16} fill={RED} weight={900}>+7 µC</T>
-          <T x={100} y={140} size={13} fill={RED} weight={800}>Charge q₁</T>
+          <circle cx={100} cy={165} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2.5} />
+          <T x={100} y={172} size={16} fill={RED} weight={900}>+7 µC</T>
+          <T x={100} y={128} size={13} fill={RED} weight={800}>Charge q₁</T>
 
           {/* Separation line */}
-          <line x1="122" y1="180" x2="338" y2="180" stroke={INK} strokeWidth={2.5} strokeDasharray="5 5" />
-          <T x={230} y={160} size={15} fill={INK} weight={800} anchor="middle">r = 18 cm = 0.18 m</T>
+          <line x1="122" y1="165" x2="338" y2="165" stroke={INK} strokeWidth={2.5} strokeDasharray="5 5" />
+          <T x={230} y={145} size={14} fill={INK} weight={800} anchor="middle">r = 18 cm = 0.18 m</T>
 
           {/* Charge q2 = -2 uC */}
-          <circle cx={360} cy={180} r={22} fill="#dcfce7" stroke={GREEN} strokeWidth={2.5} />
-          <T x={360} y={187} size={18} fill={GREEN} weight={900}>-2 µC</T>
-          <T x={360} y={140} size={13} fill={GREEN} weight={800}>Charge q₂</T>
+          <circle cx={360} cy={165} r={22} fill="#dcfce7" stroke={GREEN} strokeWidth={2.5} />
+          <T x={360} y={172} size={18} fill={GREEN} weight={900}>-2 µC</T>
+          <T x={360} y={128} size={13} fill={GREEN} weight={800}>Charge q₂</T>
         </Fade>
 
-        {/* Free Floating Question (Spacious, No Box) */}
+        {/* Free Floating Question */}
         <Fade on={beat >= 2}>
-          <T x={230} y={305} anchor="middle" size={16} fill={INK} weight={800}>
-            (a) Find U of system  |  (b) Work to separate charges infinitely far apart!
+          <T x={45} y={240} anchor="start" size={14} fill={RED} weight={800}>
+            (a) Find initial potential energy U of system
+          </T>
+          <T x={45} y={265} anchor="start" size={14} fill={INK} weight={800}>
+            (b) Work to separate charges infinitely far apart
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: NUMERICAL CALCULATION STEPS */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 3} delay={dl(3, 0.2)} />
         <Fade on={beat >= 3} delay={dl(3, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("STEP-BY-STEP CALCULATION", "STEP-BY-STEP CALCULATION")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 3}>
-          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={80} size={15} fill={INK} weight={800} anchor="start">
             1. Formula: U = k q₁ q₂ / r
           </T>
 
-          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={125} size={15} fill={AMBER_DARK} weight={800} anchor="start">
             2. U = (9×10⁹ × 7×10⁻⁶ × −2×10⁻⁶) / 0.18
           </T>
 
-          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={15} fill={GREEN} weight={800} anchor="start">
             3. U = − 0.126 / 0.18 = − 0.7 Joules
           </T>
 
-          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={20} fill={RED} weight={800} anchor="start">
-            4. W_sep = U(∞) − U(initial) = 0 − (−0.7) = + 0.7 J
+          <T x={45} y={235} size={16} fill={RED} weight={800} anchor="start">
+            4. W_sep = U(∞) − U_initial = 0 − (−0.7) = + 0.7 J
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            +0.7 J of external work is required to overcome electrostatic attraction!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (+0.7 J work needed against electrostatic attraction)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -126,10 +129,10 @@ export default function P12Ch02Sec21({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Always convert distance from cm to m (18 cm = 0.18 m) to get answer directly in Joules!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Negative potential energy U = −0.7 J confirms attractive bound state!
           </T>
         </Fade>

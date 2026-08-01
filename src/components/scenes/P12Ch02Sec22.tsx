@@ -47,7 +47,7 @@ export default function P12Ch02Sec22({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: 1/r VS 1/r² DECAY GRAPH */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("GRAPH: 1/r DECAY vs 1/r² DECAY RATE", "GRAPH: 1/r DECAY vs 1/r² DECAY RATE")}
@@ -56,69 +56,69 @@ export default function P12Ch02Sec22({ currentTime, reveals, language }: ScenePr
 
         <Fade on={beat >= 1}>
           {/* Open Axes */}
-          <line x1="50" y1="270" x2="450" y2="270" stroke={INK} strokeWidth={2} />
-          <line x1="50" y1="270" x2="50" y2="70" stroke={INK} strokeWidth={2} />
+          <line x1="50" y1="240" x2="450" y2="240" stroke={INK} strokeWidth={2} />
+          <line x1="50" y1="240" x2="50" y2="65" stroke={INK} strokeWidth={2} />
 
-          <T x={450} y={290} size={12} fill={INK} anchor="end">Distance r →</T>
-          <T x={40} y={65} size={12} fill={INK} anchor="start">Value →</T>
+          <T x={450} y={258} size={12} fill={INK} anchor="end">Distance r →</T>
+          <T x={40} y={60} size={12} fill={INK} anchor="start">Value →</T>
 
           {/* 1/r Curve (Slower Decay - GREEN) */}
           <Draw on={beat >= 1} delay={dl(1, 0.6)}
-            d="M 65 85 Q 120 200, 440 250" stroke={GREEN} sw={3.5} />
-          <T x={340} y={225} size={14} fill={GREEN} weight={800}>U, V ∝ 1/r</T>
+            d="M 65 80 Q 120 170, 440 220" stroke={GREEN} sw={3} />
+          <T x={310} y={185} size={14} fill={GREEN} weight={800}>U, V ∝ 1/r</T>
 
           {/* 1/r² Curve (Faster Decay - RED) */}
           <Draw on={beat >= 1} delay={dl(1, 1.2)}
-            d="M 65 75 Q 85 245, 440 265" stroke={RED} sw={3.5} />
-          <T x={220} y={235} size={14} fill={RED} weight={800}>F, E ∝ 1/r²</T>
+            d="M 65 70 Q 85 220, 440 238" stroke={RED} sw={3} />
+          <T x={180} y={222} size={14} fill={RED} weight={800}>F, E ∝ 1/r²</T>
         </Fade>
 
-        {/* Free Floating Rule (Spacious, No Box) */}
+        {/* Free Floating Rule */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={16} fill={RED} weight={800}>
-            ★ Energy U and Potential V depend on 1/r (Distance is NOT squared!)
+          <T x={45} y={268} anchor="start" size={13} fill={RED} weight={800}>
+            ★ Energy U & Potential V depend on 1/r (Distance is NOT squared!)
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: NEET SPEED TRAP MATRIX */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("NEET MCQ DISTRACTOR MATRIX", "NEET MCQ DISTRACTOR MATRIX")}
           </T>
         </Fade>
 
-        {/* Floating Matrix Features (No Card Boxes) */}
+        {/* Floating Matrix Features */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={80} size={15} fill={RED} weight={800} anchor="start">
             • FORCE F = k q₁ q₂ / r²  (Vector, 1/r²)
           </T>
 
-          <T x={50} y={145} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={125} size={15} fill={RED} weight={800} anchor="start">
             • FIELD E = k Q / r²  (Vector, 1/r²)
           </T>
 
-          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={15} fill={GREEN} weight={800} anchor="start">
             • POTENTIAL V = k Q / r  (Scalar, 1/r)
           </T>
 
-          <T x={50} y={265} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={215} size={15} fill={GREEN} weight={800} anchor="start">
             • ENERGY U = k q₁ q₂ / r  (Scalar, 1/r)
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Common distractor option in NEET: squaring r in potential energy formula!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Common NEET distractor: squaring r in energy formula!)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -127,10 +127,10 @@ export default function P12Ch02Sec22({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Work = Force × distance → (1/r²) × r = 1/r! Integration reduces power of r by 1!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Doubling distance r → Force becomes 1/4th, but Potential Energy becomes 1/2!
           </T>
         </Fade>

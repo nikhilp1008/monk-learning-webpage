@@ -50,7 +50,7 @@ export default function P12Ch02Sec36({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: CONNECTED BATTERY SCHEMATIC */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("DIELECTRIC (K = 4) INSERTION (BATTERY CONNECTED)", "DIELECTRIC (K = 4) INSERTION (BATTERY CONNECTED)")}
@@ -59,24 +59,24 @@ export default function P12Ch02Sec36({ currentTime, reveals, language }: ScenePr
 
         {/* Battery & Capacitor Diagram */}
         <Fade on={beat >= 1}>
-          <line x1="60" y1="90" x2="420" y2="90" stroke={RED} strokeWidth={4} />
-          <T x={435} y={95} size={14} fill={RED} weight={800}>+4 Q₀ Charge</T>
+          <line x1="45" y1="80" x2="380" y2="80" stroke={RED} strokeWidth={4} />
+          <T x={395} y={84} size={13} fill={RED} weight={800} anchor="start">+4 Q₀ Charge</T>
 
-          <line x1="60" y1="230" x2="420" y2="230" stroke={GREEN} strokeWidth={4} />
-          <T x={435} y={235} size={14} fill={GREEN} weight={800}>−4 Q₀ Charge</T>
+          <line x1="45" y1="200" x2="380" y2="200" stroke={GREEN} strokeWidth={4} />
+          <T x={395} y={204} size={13} fill={GREEN} weight={800} anchor="start">−4 Q₀ Charge</T>
 
           {/* Battery V0 Connection */}
-          <line x1="240" y1="230" x2="240" y2="280" stroke={INK} strokeWidth={2} />
-          <T x={240} y={300} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Battery V = V₀ (Fixed)</T>
+          <line x1="215" y1="200" x2="215" y2="238" stroke={INK} strokeWidth={1.8} />
+          <T x={215} y={252} size={13} fill={AMBER_DARK} weight={900} anchor="middle">Battery V = V₀ (Fixed)</T>
 
           {/* Charge Pumping Arrow from battery */}
-          <path d={arrowD(200, 290, 200, 100)} stroke={GREEN} strokeWidth={3} />
-          <T x={180} y={200} size={12} fill={GREEN} weight={900} anchor="end">Extra ΔQ = 3 Q₀ Pumped!</T>
+          <path d={arrowD(160, 240, 160, 95)} stroke={GREEN} strokeWidth={3} />
+          <T x={145} y={160} size={12} fill={GREEN} weight={900} anchor="end">Extra ΔQ = 3 Q₀ Pumped!</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={16} fill={INK} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
             Fixed Voltage V = V₀  ⇒  New Charge Q = 4 Q₀  (4× Increase!)
           </T>
         </Fade>
@@ -84,44 +84,44 @@ export default function P12Ch02Sec36({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: BATTERY WORK VS CAPACITOR STORED ENERGY */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("BATTERY WORK ACCOUNTING (W_battery = 6 U₀)", "BATTERY WORK ACCOUNTING (W_battery = 6 U₀)")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps (No Card Boxes) */}
+        {/* Floating Solution Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             1. Initial Energy U₀ = ½ C₀ V₀²
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
             2. Final Energy U = ½ (4 C₀) V₀² = 4 U₀  (ΔU = + 3 U₀)
           </T>
 
-          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
             3. Battery Work W_batt = ΔQ V₀ = (3 Q₀) V₀ = 6 U₀
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={20} fill={GREEN} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
             4. W_batt (6 U₀) = ΔU (3 U₀) + W_mech (3 U₀)
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            50% of battery work goes into stored capacitor energy; 50% into mechanical work pulling slab!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (50% work → stored energy, 50% → mechanical work pulling slab)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -130,10 +130,10 @@ export default function P12Ch02Sec36({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Battery Connected → V = V₀ constant, C = KC₀, Q = KQ₀, U = KU₀, E = E₀ constant!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Always use U = ½ C V² when battery remains connected!
           </T>
         </Fade>

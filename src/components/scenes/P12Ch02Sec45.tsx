@@ -48,35 +48,34 @@ export default function P12Ch02Sec45({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: PILLBOX SCHEMATIC */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("GAUSSIAN PILLBOX CROSSING CONDUCTOR SURFACE", "GAUSSIAN PILLBOX CROSSING CONDUCTOR SURFACE")}
           </T>
         </Fade>
 
-        {/* Conductor surface and pillbox */}
+        {/* Conductor surface and pillbox (Open Chalkboard) */}
         <Fade on={beat >= 1}>
           {/* Conductor Boundary Line */}
-          <line x1="60" y1="180" x2="420" y2="180" stroke={INK} strokeWidth={4} />
-          <T x={435} y={185} size={14} fill={INK} weight={800}>Conductor Surface (σ)</T>
+          <line x1="45" y1="170" x2="380" y2="170" stroke={INK} strokeWidth={3} />
+          <T x={395} y={174} size={13} fill={INK} weight={800} anchor="start">Conductor Surface (σ)</T>
 
-          {/* Shaded Conductor Interior below line */}
-          <rect x="60" y="182" width="360" height="100" fill={AMBER_DARK} opacity={0.15} />
-          <T x={240} y={230} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Inside Conductor (E = 0)</T>
+          {/* Conductor Interior note */}
+          <T x={212} y={215} size={14} fill={AMBER_DARK} weight={900} anchor="middle">Inside Conductor (E = 0)</T>
 
           {/* Gaussian Pillbox Cylinder */}
-          <rect x="180" y="110" width="80" height="140" stroke={RED} strokeWidth={2} strokeDasharray="4 4" fill="none" />
-          <T x={220} y={95} size={12} fill={RED} weight={800} anchor="middle">Pillbox Area A</T>
+          <rect x="170" y="110" width="80" height="120" stroke={RED} strokeWidth={1.8} strokeDasharray="4 4" fill="none" />
+          <T x={210} y={100} size={12} fill={RED} weight={800} anchor="middle">Pillbox Area A</T>
 
           {/* Emerging Field Vector E */}
-          <path d={arrowD(220, 180, 220, 70)} stroke={RED} strokeWidth={3} />
-          <T x={235} y={75} size={15} fill={RED} weight={900}>E = σ/ε₀</T>
+          <path d={arrowD(210, 170, 210, 50)} stroke={RED} strokeWidth={2.5} />
+          <T x={225} y={45} size={14} fill={RED} weight={900} anchor="start">E = σ/ε₀</T>
         </Fade>
 
-        {/* Free Floating Formula (Spacious, No Box) */}
+        {/* Free Floating Formula */}
         <Fade on={beat >= 3}>
-          <T x={240} y={305} anchor="middle" size={17} fill={INK} weight={800}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
             Enclosed Charge: Q_enclosed = σ A
           </T>
         </Fade>
@@ -84,44 +83,44 @@ export default function P12Ch02Sec45({ currentTime, reveals, language }: ScenePr
 
       {/* RIGHT SECTION: FLUX INTEGRAL BREAKDOWN */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("FLUX INTEGRAL BREAKDOWN FOR 3 SURFACES", "FLUX INTEGRAL BREAKDOWN FOR 3 SURFACES")}
           </T>
         </Fade>
 
-        {/* Floating Derivation Steps (No Card Boxes) */}
+        {/* Floating Derivation Steps */}
         <Fade on={beat >= 4}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
             1. Inside Cap Flux: Φ_inside = 0  (since E_inside = 0)
           </T>
 
-          <T x={50} y={145} size={16} fill={INK} weight={800} anchor="start">
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
             2. Curved Sides Flux: Φ_sides = 0  (since E ⊥ n^)
           </T>
 
-          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
             3. Outside Cap Flux: Φ_outside = E A
           </T>
 
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
 
-          <T x={50} y={285} size={20} fill={RED} weight={900} anchor="start">
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
             4. E A = σ A / ε₀  ⇒  E = σ / ε₀  (Q.E.D.)
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Valid for ANY arbitrary conductor shape in electrostatic equilibrium!
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Valid for ANY arbitrary conductor shape in equilibrium)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -130,10 +129,10 @@ export default function P12Ch02Sec45({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             Single Infinite Non-conducting Sheet: E = σ / 2ε₀   |   Conductor Surface: E = σ / ε₀ !
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             Conductor surface field is TWICE as large because field lines only emerge on ONE side (E_inside = 0)!
           </T>
         </Fade>

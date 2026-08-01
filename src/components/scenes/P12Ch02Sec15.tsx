@@ -46,7 +46,7 @@ export default function P12Ch02Sec15({ currentTime, reveals, language }: ScenePr
 
       {/* LEFT SECTION: LIKE CHARGES (+q, +q) -> U > 0 */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("LIKE CHARGES (+q, +q): U > 0 (REPULSIVE)", "LIKE CHARGES (+q, +q): U > 0 (REPULSIVE)")}
@@ -55,31 +55,34 @@ export default function P12Ch02Sec15({ currentTime, reveals, language }: ScenePr
 
         {/* Sphere pair & repulsion arrows */}
         <Fade on={beat >= 1}>
-          <circle cx={140} cy={180} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
-          <T x={140} y={187} size={18} fill={RED} weight={800}>+q₁</T>
+          <circle cx={140} cy={165} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={140} y={172} size={18} fill={RED} weight={800}>+q₁</T>
 
-          <circle cx={320} cy={180} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
-          <T x={320} y={187} size={18} fill={RED} weight={800}>+q₂</T>
+          <circle cx={320} cy={165} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={320} y={172} size={18} fill={RED} weight={800}>+q₂</T>
 
           {/* Repulsive force arrows pointing outward ← → */}
-          <path d={arrowD(110, 180, 50, 180)} stroke={RED} strokeWidth={3} />
-          <path d={arrowD(350, 180, 410, 180)} stroke={RED} strokeWidth={3} />
+          <path d={arrowD(110, 165, 50, 165)} stroke={RED} strokeWidth={3} />
+          <path d={arrowD(350, 165, 410, 165)} stroke={RED} strokeWidth={3} />
 
-          <T x={230} y={145} size={14} fill={RED} weight={800} anchor="middle">Force Repels ← →</T>
-          <T x={230} y={220} size={18} fill={RED} weight={900} anchor="middle">U = + k q₁q₂ / r &gt; 0</T>
+          <T x={230} y={130} size={14} fill={RED} weight={800} anchor="middle">Force Repels ← →</T>
+          <T x={230} y={210} size={18} fill={RED} weight={900} anchor="middle">U = + k q₁q₂ / r &gt; 0</T>
         </Fade>
 
-        {/* Free Floating Meaning (Spacious, No Box) */}
+        {/* Free Floating Meaning (Spacious, 2-line centered, No collision) */}
         <Fade on={beat >= 3}>
-          <T x={230} y={305} anchor="middle" size={15} fill={INK} weight={800}>
-            Work must be done by external force to push them together against repulsion!
+          <T x={230} y={268} anchor="middle" size={14} fill={INK} weight={800}>
+            Work must be done by external force
+          </T>
+          <T x={230} y={290} anchor="middle" size={14} fill={INK} weight={800}>
+            to push them together against repulsion!
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: UNLIKE CHARGES (+q, -q) -> U < 0 */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("UNLIKE CHARGES (+q, −q): U < 0 (BOUND SYSTEM)", "UNLIKE CHARGES (+q, −q): U < 0 (BOUND SYSTEM)")}
@@ -88,30 +91,33 @@ export default function P12Ch02Sec15({ currentTime, reveals, language }: ScenePr
 
         {/* Sphere pair & attraction arrows */}
         <Fade on={beat >= 4}>
-          <circle cx={140} cy={180} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
-          <T x={140} y={187} size={18} fill={RED} weight={800}>+q₁</T>
+          <circle cx={140} cy={165} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={140} y={172} size={18} fill={RED} weight={800}>+q₁</T>
 
-          <circle cx={320} cy={180} r={22} fill="#dcfce7" stroke={GREEN} strokeWidth={2} />
-          <T x={320} y={187} size={20} fill={GREEN} weight={800}>-q₂</T>
+          <circle cx={320} cy={165} r={22} fill="#dcfce7" stroke={GREEN} strokeWidth={2} />
+          <T x={320} y={172} size={20} fill={GREEN} weight={800}>-q₂</T>
 
           {/* Attraction force arrows pointing inward → ← */}
-          <path d={arrowD(170, 180, 215, 180)} stroke={GREEN} strokeWidth={3} />
-          <path d={arrowD(290, 180, 245, 180)} stroke={GREEN} strokeWidth={3} />
+          <path d={arrowD(170, 165, 215, 165)} stroke={GREEN} strokeWidth={3} />
+          <path d={arrowD(290, 165, 245, 165)} stroke={GREEN} strokeWidth={3} />
 
-          <T x={230} y={145} size={14} fill={GREEN} weight={800} anchor="middle">Force Attracts → ←</T>
-          <T x={230} y={220} size={18} fill={GREEN} weight={900} anchor="middle">U = − k q₁q₂ / r &lt; 0</T>
+          <T x={230} y={130} size={14} fill={GREEN} weight={800} anchor="middle">Force Attracts → ←</T>
+          <T x={230} y={210} size={18} fill={GREEN} weight={900} anchor="middle">U = − k q₁q₂ / r &lt; 0</T>
         </Fade>
 
-        {/* Free Floating Meaning (Spacious, No Box) */}
+        {/* Free Floating Meaning (Spacious, 2-line centered, No collision) */}
         <Fade on={beat >= 6}>
-          <T x={230} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Energy released as they attract — system is BOUND (like electron & proton in atom)!
+          <T x={230} y={268} anchor="middle" size={14} fill={GREEN} weight={800}>
+            Energy released as they attract —
+          </T>
+          <T x={230} y={290} anchor="middle" size={14} fill={GREEN} weight={800}>
+            System is BOUND (like e⁻ & p⁺ in atom)!
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -120,10 +126,10 @@ export default function P12Ch02Sec15({ currentTime, reveals, language }: ScenePr
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             U &lt; 0 means Bound System (Requires external work to separate to infinity U(∞) = 0)!
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
             U &gt; 0 means Unbound System (Releases kinetic energy if released from rest)!
           </T>
         </Fade>
