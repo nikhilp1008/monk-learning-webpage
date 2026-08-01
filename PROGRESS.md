@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 34 done. Starting Sec 35.
+Sec 35 done. Starting Sec 36.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -199,3 +199,7 @@ tightening delays, not by ignoring the warning.
   "double r ⇒ double A" reflex (crossed out) vs H∝A/L=r²/L fast way,
   boxed new-rate=8H answer, r²-reflex takeaway. tsc clean, VERDICT PASS,
   stalls=6/6 (audio gap).
+- Sec 35 — Worked example: copper and steel joined in series — Cu/steel
+  rod-pair with junction dot (100°C→0°C), R_Cu/R_steel/R_eq values,
+  boxed H≈3.56W, boxed T_junction≈88.9°C, "junction hugs hot end"
+  takeaway. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
