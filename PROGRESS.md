@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 8 done. Starting Sec 9.
+Sec 9 done. Starting Sec 10.
 
 ## Note
 Ch10's reveal timestamps often have 1s-tight middle beats. Keep any beat's
@@ -51,3 +51,7 @@ tightening delays, not by ignoring the warning.
   formula + growing-container/same-dots visual (left), clamped-rod
   σ=YαΔT with hatched walls + short/long-rod-same-stress (right).
   VERDICT PASS (eyeballed, clean).
+- Sec 9 — Deriving the 1-2-3: why gamma = 3 alpha — isometric cube (left)
+  building L₀→V₀→L(1+αΔT)→V(1+αΔT)³, binomial expansion with negligible
+  terms crossed out, γ=3α reveal, β=2α bonus (right). The key derivation
+  of the subtopic — extra care taken. VERDICT PASS (eyeballed, clean).
