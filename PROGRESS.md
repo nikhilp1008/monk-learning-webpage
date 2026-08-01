@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 9 done. Starting Sec 10.
+Sec 10 done. Starting Sec 11.
 
 ## Note
 Ch10's reveal timestamps often have 1s-tight middle beats. Keep any beat's
@@ -55,3 +55,6 @@ tightening delays, not by ignoring the warning.
   building L₀→V₀→L(1+αΔT)→V(1+αΔT)³, binomial expansion with negligible
   terms crossed out, γ=3α reveal, β=2α bonus (right). The key derivation
   of the subtopic — extra care taken. VERDICT PASS (eyeballed, clean).
+- Sec 10 — Worked example: a railway rail in the afternoon sun — sun +
+  rail-bar setup (18°C→48°C), givens, ΔL=αL₀ΔT formula, substitution,
+  boxed answer 4.32mm, Indian Railways takeaway. VERDICT PASS (eyeballed).
