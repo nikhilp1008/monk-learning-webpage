@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 30 done. Starting Sec 31.
+Sec 31 done. Starting Sec 32.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -183,3 +183,7 @@ tightening delays, not by ignoring the warning.
   H=KA(T₁−T₂)/L, H/gradient/K definitions with units, dimensional
   formula [MLT⁻³θ⁻¹], boxed K-values (Cu≈400, Al≈235 vs insulators),
   steady-state reminder. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 31 — Thermal resistance, series and parallel — series rod diagram
+  (R_eq=R₁+R₂), parallel rod diagram with connectors (1/R_eq=1/R₁+1/R₂),
+  equal-rods K_eff=(K₁+K₂)/2 special case. tsc clean, VERDICT PASS,
+  stalls=6/6 (audio gap).
