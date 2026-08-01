@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 3 done. Starting Sec 4.
+Sec 4 done. Starting Sec 5.
 
 ## Note
 Ch10's reveal timestamps often have 1s-tight middle beats. Keep any beat's
@@ -35,3 +35,6 @@ tightening delays, not by ignoring the warning.
 - Sec 3 — Thermal expansion: why heated things grow — cold/hot lattice
   boxes, railway-gap diagram, bridge rollers + sagging wire, uniform-
   scaling square, verdict. VERDICT PASS (eyeballed, clean).
+- Sec 4 — When the formulas hold, and water's rebellion — 3 numbered
+  assumption chips, water density-vs-temperature graph peaking at 4°C,
+  fish-under-ice + mnemonic. VERDICT PASS (eyeballed, clean).
