@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 23 done. Starting Sec 24.
+Sec 24 done. Starting Sec 25 (last of Subtopic 2).
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -150,3 +150,7 @@ tightening delays, not by ignoring the warning.
   setup, "just begins to melt" = reach mp + complete fusion, cΔT+L_f
   formula, substitution to 63400 J/kg, boxed v≈503.6 m/s, mass-cancels
   takeaway. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 24 — Worked example: ice and steam in one box — cold-side budget
+  (2550cal needed) vs hot-side budget (3200cal available), the test
+  (2700>2550 ⇒ both phases complete), boxed balance T≈18.6°C, sanity
+  confirm. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
