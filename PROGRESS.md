@@ -15,8 +15,43 @@
 - 62–72 Phase Transitions
 - 73–74 Wrap-Up
 
-## Current
-Sec 43 done. Starting Sec 44.
+## Current — PAUSED (2026-07-31, ~10:40pm) pending machine memory recovery
+Sec 43 is the last VERIFIED-and-committed section (tsc clean, verify
+PASS). Sec 44 and Sec 45 are AUTHORED and registered in index.ts but
+**NOT YET VERIFIED** — the machine hit severe memory pressure (13.5GB/
+14.3GB swap in use, ~850MB free) almost certainly from several
+concurrent chapter-authoring sessions each running their own Next dev
+server + tsserver (ch9/ch11/ch12 dev servers visible alongside ch10's).
+A single `npx tsc --noEmit` ran ~50 minutes and made almost no progress
+(CPU-starved/swap-thrashing, not a code bug — confirmed via `ps`/
+`vm_stat`/`sysctl vm.swapusage`). User chose to pause chapter work here
+rather than keep retrying or skip verification, so other sessions/apps
+can be closed to free memory first.
+
+Committing Sec44/45 as WIP (not the normal "Ch10 SecN: ..." pattern) so
+the authored work isn't lost per the Ch7 lesson (38 sections nearly lost
+by staying uncommitted) — but they are NOT done until re-verified.
+
+**To resume**: 
+1. Check machine load is sane again: `uptime` (want load avg well under
+   core count) and `sysctl vm.swapusage` (want meaningful free swap).
+2. Confirm the ch10 dev server on port 3010 is still up:
+   `curl -s -o /dev/null -w '%{http_code}' http://localhost:3010` — if
+   `000`, restart it: kill the stale `next dev -p 3010` PID, then
+   `cd ~/Desktop/monk-scenes-ch10 && nohup npm run dev -- -p 3010 >
+   /tmp/dev-ch10.log 2>&1 & disown`.
+3. Run `npx tsc --noEmit` — must be clean.
+4. Verify Sec44:
+   `PORT=3010 CHAPTER_ID=087ea53b-681c-51a2-92ef-5ea77f6bdf8b node
+   verify-scene.mjs 44 '[0,1,2,3,13.58,25.95,38.67]'
+   '[0,7.25,18.18,26.88,35.07,36.07,37.07]' ./shots/sec44`
+5. Verify Sec45:
+   `PORT=3010 CHAPTER_ID=087ea53b-681c-51a2-92ef-5ea77f6bdf8b node
+   verify-scene.mjs 45 '[0,1,2,14.12,29.39,38.69,48.25]'
+   '[0,3.67,14.59,25.6,39.94,40.94,41.94]' ./shots/sec45`
+6. Fix anything flagged, then amend the WIP commit message (or create a
+   normal `Ch10 Sec44: ...` / `Ch10 Sec45: ...` follow-up commit) and
+   resume the per-section loop at Sec 46.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
