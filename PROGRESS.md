@@ -16,7 +16,41 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 11 done. Starting Sec 12.
+Sec 12 done. Starting Sec 13.
+
+## IMPORTANT: audio pipeline gap from Sec 12 onward
+Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
+Ch10 sections 1-11 only; sections 12+ all return 404 (checked up to 74,
+plus a full 12-25 sweep — clean boundary at 11, not random gaps). This is
+an external pipeline issue, not a scene bug: verify-scene.mjs's seek()
+sets `audio.currentTime` directly, but the page's `currentTime` React
+state only updates via the `<audio>` element's native `timeupdate` event
+(src: src/app/lessons/[chapterId]/page.tsx `handleTimeUpdate`, no rAF
+fallback) — with no audio source the element errors
+(networkState=NO_SOURCE, MEDIA_ERR_SRC_NOT_SUPPORTED) and never fires
+`timeupdate`, so `currentTime` stays 0 and `beat` stays -1 forever. Every
+probed frame beyond t=0 then just shows the blank board + title, which
+still trivially satisfies the overlap/overflow/empty gates (title text
+never overlaps/overflows anything) — so verify-scene.mjs prints VERDICT
+PASS even though it could not actually exercise per-beat geometry.
+
+**Diagnostic signal**: this shows up as a stall on EVERY beat (e.g.
+Sec12: stalls=6 out of 6 beats checked). Contrast with a real pacing bug,
+which stalls only SOME beats while others still show progress (as fixed
+in Sec3/Sec4/Sec5's isolated 1-stall cases). Full-stall = audio missing,
+not a code problem — confirmed by inspecting Sec12 directly with a
+Playwright script that reads the `<audio>` element's `networkState`/
+`error` and by checking that all 13 expected `g.sc-fade`/`Draw` elements
+exist in the DOM with correct beat-gated opacity logic.
+
+**What this means going forward**: for Sec12+, `npx tsc --noEmit` and
+`verify-scene.mjs`'s blank-board-at-t=0 check remain meaningful, but the
+per-beat overlap/overflow/empty checks are NOT exercised until audio
+exists. Compensating by leaning harder on manual layout-plan box math
+(SCENE_AUTHORING.md Step 3) before writing JSX, and keeping the same
+short-delay discipline. Re-run `verify-scene.mjs` (or FORCE_SHOTS eyeball)
+on Sec12+ once their audio files appear — do not treat "stalls = beat
+count" PASS as a substitute for that re-check.
 
 ## Note
 Ch10's reveal timestamps often have 1s-tight middle beats. Keep any beat's
@@ -63,3 +97,9 @@ tightening delays, not by ignoring the warning.
   remember-box (ΔK=ΔC, never add 32). VERDICT PASS (all beats 0-4 exactly
   1s apart — every delay kept ≤0.2s to stay within the verifier's settle
   window; still passed clean).
+- Sec 12 — Worked example: thermal stress in a clamped copper rod —
+  hatched-wall clamped-rod setup, given Y/α, logic note, strain calc,
+  boxed σ=9.35×10⁷Pa answer, length-independence takeaway. tsc clean,
+  VERDICT PASS but stalls=6/6 — first section hitting the missing-audio
+  gap (see note above); geometry not independently re-verified by eye,
+  code inspected and matches the working Sec8/Sec10 pattern.
