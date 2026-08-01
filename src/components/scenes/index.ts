@@ -861,8 +861,10 @@ REGISTRY[`${CH07}:29`] = Ch07Sec29;
 /* Ch12 · Kinetic Theory — scene block (branch premium-board-ch12)     */
 /* ================================================================== */
 import Ch12Sec1 from "./Ch12Sec1";
+import Ch12Sec2 from "./Ch12Sec2";
 
 const CH12 = "8300dbf9-d9f7-505b-82c6-ad8d236eaff1"; // Class 11 · Kinetic Theory
 
 REGISTRY[`${CH12}:1`] = Ch12Sec1;
+REGISTRY[`${CH12}:2`] = Ch12Sec2;
 /* ============================ end Ch12 ============================ */
