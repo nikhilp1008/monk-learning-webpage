@@ -1420,3 +1420,29 @@ REGISTRY[`${P12CH04}:41`] = P12Ch04Sec41;
 REGISTRY[`${P12CH04}:42`] = P12Ch04Sec42;
 REGISTRY[`${P12CH04}:43`] = P12Ch04Sec43;
 /* ============================ end P12Ch04 ============================ */
+
+/* ============================ start P12Ch05 ============================ */
+import P12Ch05Sec1 from "./P12Ch05Sec1";
+import P12Ch05Sec2 from "./P12Ch05Sec2";
+import P12Ch05Sec3 from "./P12Ch05Sec3";
+import P12Ch05Sec4 from "./P12Ch05Sec4";
+import P12Ch05Sec5 from "./P12Ch05Sec5";
+import P12Ch05Sec6 from "./P12Ch05Sec6";
+import P12Ch05Sec7 from "./P12Ch05Sec7";
+import P12Ch05Sec8 from "./P12Ch05Sec8";
+import P12Ch05Sec9 from "./P12Ch05Sec9";
+import P12Ch05Sec10 from "./P12Ch05Sec10";
+
+const P12CH05 = "cf5d01e5-1a4b-538b-9e72-4d7074b2f61d"; // Class 12 · Magnetism and Matter
+
+REGISTRY[`${P12CH05}:1`] = P12Ch05Sec1;
+REGISTRY[`${P12CH05}:2`] = P12Ch05Sec2;
+REGISTRY[`${P12CH05}:3`] = P12Ch05Sec3;
+REGISTRY[`${P12CH05}:4`] = P12Ch05Sec4;
+REGISTRY[`${P12CH05}:5`] = P12Ch05Sec5;
+REGISTRY[`${P12CH05}:6`] = P12Ch05Sec6;
+REGISTRY[`${P12CH05}:7`] = P12Ch05Sec7;
+REGISTRY[`${P12CH05}:8`] = P12Ch05Sec8;
+REGISTRY[`${P12CH05}:9`] = P12Ch05Sec9;
+REGISTRY[`${P12CH05}:10`] = P12Ch05Sec10;
+/* ============================ end P12Ch05 ============================ */
