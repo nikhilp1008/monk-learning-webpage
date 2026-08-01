@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 20 done. Starting Sec 21.
+Sec 21 done. Starting Sec 22.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -138,3 +138,7 @@ tightening delays, not by ignoring the warning.
   Q=mL with L_f/L_v, master balance Σlost=Σgained, memorize-table (cal
   units: c_water=1, c_ice=0.5, L_fusion=80, L_vap=540), SI-units box.
   tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 21 — Worked example: heating a vessel and its water — vessel+water
+  icon (25°C→75°C), givens, Q=(m_w c_w+m_Al c_Al)ΔT formula, substitution,
+  boxed 4.41×10⁵J answer, "container matters" takeaway. tsc clean,
+  VERDICT PASS, stalls=6/6 (audio gap).
