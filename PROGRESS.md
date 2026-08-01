@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 39 done. Starting Sec 40.
+Sec 40 done. Starting Sec 41.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -221,3 +221,8 @@ tightening delays, not by ignoring the warning.
   "double T ⇒ power ×16" reveal, P∝T⁴ explanation, iron-rod colour
   progression (dull red→orange→yellow→white circles), wavelength-shift
   note, Wien's law. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 40 — Kirchhoff, the black body, and the thermos — shiny-vs-black
+  can (black cools faster), "good absorbers=good emitters" insight,
+  boxed e=α (Kirchhoff's law), black-body definition, cavity-hole
+  approximation, thermos-defeats-all-3-modes takeaway. tsc clean,
+  VERDICT PASS, stalls=6/6 (audio gap).
