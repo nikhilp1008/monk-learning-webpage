@@ -34,8 +34,26 @@ Worktree: branch `premium-board-ch12` · port 3012 only · chapter_id `8300dbf9-
 - Sec 17 — JEE Advanced worked example: two connected bulbs, moles conserved, P=8P0/7
 - Sec 18 — pitfalls & pro-tips (4 traps + skip-n pro-tip box + bridge to Subtopic 3)
 
+- Sec 19 — pressure as collision drumbeat (ball-machine/wall analogy, heat/squeeze, Clausius-Maxwell-Boltzmann)
+- Sec 20 — the 5 postulates (random-motion box, elastic bounce, break-one-it-fails examples)
+- Sec 21 — CBSE derivation of P=⅓ρv²rms (cube figure with vx/vy/vz, full 9-step derivation)
+- Sec 22 — kinetic equation formula sheet + pressure-energy bridge (KE=3/2 PV)
+- Sec 23 — CBSE worked example: vrms from P,ρ for O2 (~480 m/s vs speed of sound bars)
+- Sec 24 — NEET worked example: scaling rms speed, square-the-factor trap (9× not 3×)
+- Sec 25 — JEE Main worked example: total KE from P,V directly (450J, no T or M needed)
+- Sec 26 — JEE Advanced worked example: directed 1D gas vs isotropic gas, meaning of 1/3
+- Sec 27 — pitfalls & pro-tips (5 traps + E=3/2 PV pro-tip box)
+
 ## Current
-Subtopic 2 (Ideal Gas and Gas Laws, secs 10-18) COMPLETE. Next: Subtopic 3 — Kinetic Theory and Gas Pressure, Sec 19.
+Subtopic 3 (Kinetic Theory and Gas Pressure, secs 19-27) COMPLETE. Next: Subtopic 4 — RMS Speed and Maxwell Distribution, Sec 28.
+
+## Bug caught and fixed
+- Sec23 initially used `Draw` with a solid `fill` for two comparison bars — `Draw`'s fill is NOT
+  gated by the stroke-dash reveal animation, so a filled bar renders immediately at t=0 regardless
+  of beat, violating the blank-board contract. verify-scene.mjs does NOT test t=0 so this class of
+  bug is invisible to it. Fixed by using `Fade`-wrapped `<rect>` instead (the established pattern
+  everywhere else). Audited all other sections for the same `<Draw ... fill={non-none}>` pattern —
+  none found. Lesson: never pass a non-"none" fill to `Draw`; use `Fade` + a plain shape instead.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch12_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 48 positions, lengths match narration segment counts for every section).
