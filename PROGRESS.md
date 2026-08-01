@@ -12,10 +12,17 @@ Worktree: branch `premium-board-ch12` · port 3012 only · chapter_id `8300dbf9-
 6. Summary — secs 47–48
 
 ## Done
-(none yet)
+- Sec 1 — atoms in motion (thinkers timeline, Dalton's 3 claims, solid/liquid/gas dot-grid demo, Feynman quote)
+- Sec 2 — force vs separation (attract/repel pairs, F/U vs r graph, r0, restoring force, heat chain solid→liquid→gas)
+
+- Sec 3 — how we know molecules move (Brownian jiggle path, bombardment, calm/wild comparison, diffusion ink/perfume, oil-film, 4 windows)
+- Sec 4 — how empty a gas is (number density, 3-bar scale ladder size/spacing/MFP, spacing≠MFP, fraction-filled container)
+- Sec 5 — CBSE worked example: fraction of O2 volume that's molecules (near-empty container picture, formula chain, ≈3.8×10⁻⁴)
+- Sec 6 — NEET worked example: 2:1:2 reacting volumes (box-ratio diagram, O2=1.5L/H2O=3L, conservation trap struck out)
+- Sec 7 — JEE Main worked example: mean separation ≈33.4Å ≈11 diameters (tick-mark gap diagram)
 
 ## Current
-Starting Sec 1.
+Subtopic 1 in progress. Next: Sec 8.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch12_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 48 positions, lengths match narration segment counts for every section).
