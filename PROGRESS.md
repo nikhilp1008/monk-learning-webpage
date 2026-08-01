@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 31 done. Starting Sec 32.
+Sec 32 done. Starting Sec 33.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -187,3 +187,7 @@ tightening delays, not by ignoring the warning.
   (R_eq=R₁+R₂), parallel rod diagram with connectors (1/R_eq=1/R₁+1/R₂),
   equal-rods K_eff=(K₁+K₂)/2 special case. tsc clean, VERDICT PASS,
   stalls=6/6 (audio gap).
+- Sec 32 — Building the series and parallel rules — junction diagram
+  (T₁→T₂→T₃) deriving R_eq=R₁+R₂ from steady-state H-continuity, parallel
+  rods sharing ΔT deriving 1/R_eq=1/R₁+1/R₂, weighted-junction shortcut.
+  tsc clean, VERDICT PASS, stalls=7/7 (audio gap).
