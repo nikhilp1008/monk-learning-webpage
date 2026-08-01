@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 26 done. Starting Sec 27.
+Sec 27 done. Starting Sec 28.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -165,3 +165,7 @@ tightening delays, not by ignoring the warning.
   your skin). Opens Subtopic 3 (Heat Transfer). tsc clean, VERDICT PASS,
   stalls=6/6 (audio gap). Caught/fixed one Devanagari-in-Hinglish typo
   before commit — double-check Hinglish strings stay pure Latin script.
+- Sec 27 — Fourier's law by feel: four sensible factors — rod (T₁ hot,
+  T₂ cold, L bracket), growing list of 4 factors (bigger A/ΔT ⇒ faster,
+  bigger L ⇒ slower, K copper-vs-wool), wool-throttles-heat takeaway.
+  tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
