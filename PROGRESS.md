@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 18 done. Starting Sec 19.
+Sec 19 done. Starting Sec 20.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -130,3 +130,7 @@ tightening delays, not by ignoring the warning.
   rule/leg-splitting notes, 5-segment ice→steam curve (extends Sec17's
   motif), ringed plateaus with the mcΔT-mistake warning, budget method,
   sanity-check note. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 19 — Heat: per degree, per body, per mole — Q=mcΔT workhorse,
+  c definition, C=mc whole-body heat capacity, C-vs-c distinction,
+  molar heat capacity Mc=Q/(nΔT), amber caveat box (c not fixed, can be
+  negative). tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
