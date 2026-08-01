@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 16 done. Starting Sec 17.
+Sec 17 done. Starting Sec 18.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -122,3 +122,7 @@ tightening delays, not by ignoring the warning.
   boxed principle (heat lost=heat gained), the calorimeter-participates
   catch, water equivalent w=mc, heat-bank money analogy. tsc clean,
   VERDICT PASS, stalls=7/7 (audio gap).
+- Sec 17 — Latent heat: heat that hides during a phase change — classic
+  temp-vs-heat-added plateau graph (rise-flat-rise), ringed plateau with
+  "temp holds steady" callout, Q=mL, melt/boil cal-per-gram comparison
+  box, steam-burn warning. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
