@@ -2,59 +2,27 @@
 
 /**
  * P12Ch02 · Section 1 — "Electrostatic potential — the electrical altitude"
- * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md & SCENE_PLAYBOOK.md.
- *
- * OBJECT-RICH OPEN CHALKBOARD DESIGN (NO HEAVY CONTAINERS):
- *  - Electrostatic potential V is work done per unit positive charge in bringing it from infinity to point P without acceleration.
- *  - Analogy: Electrical altitude (high potential = high peak, low potential = valley).
- *  - Positive charges naturally flow from higher potential to lower potential.
- *  - Negative charges flow from lower potential to higher potential!
- *  - Formula: V = W_ext / q₀ = k Q / r  [Volts = J / C]
- *
- * Beats (en [0, 18, 31, 46, 62, 75, 86, 98, 108]):
- *  0 Title "electrostatic potential — the electrical altitude" + drawn underline
- *  1 Hook note: work done per unit test charge moving from infinity to a point!
- *  2 Badge 1 & Definition: V = W_ext / q₀  [J/C = Volt]
- *  3 Badge 2 & Point Charge Potential: V(r) = k Q / r  (Inverse distance 1/r!)
- *  4 Badge 3 & Natural Charge Flow: Positive charge flows down-hill (high V → low V)
- *  5 Negative charge flow: Negative charge flows up-hill (low V → high V)!
- *  6 Reference level at infinity: V(∞) = 0
- *  7 Grand Verdict: V = W_ext / q₀ = k Q / r  (Electrical Altitude in Volts)!
+ * Canvas 1080×620 · Safe region x36–1044, y30–596.
+ * OPEN CHALKBOARD DESIGN (ZERO CONTAINER BOXES):
+ *  - Fully open, spacious layout with wide breathing room
+ *  - SVG Vector Diagrams: Potential Mountain Contour & V(r) ∝ 1/r Hyperbolic Curve
+ *  - Free-floating typography with drawn accent underlines
  */
 
 import React from "react";
 import {
-  SceneProps,
-  useBeat,
-  delayFor,
-  Fade,
-  Draw,
-  T,
-  Chip,
-  ringD,
-  INK,
-  MUTED,
-  AMBER_DARK,
-  GREEN,
-  RED,
-  CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip,
+  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
   return (
     <g>
-      <Draw
-        on={on}
-        delay={delay}
+      <Draw on={on} delay={delay}
         d={`M ${cx - 13} ${cy} A 13 13 0 1 1 ${cx + 13} ${cy} A 13 13 0 1 1 ${cx - 13} ${cy}`}
-        stroke={RED}
-        sw={2.2}
-        dur={0.4}
-      />
+        stroke={RED} sw={2.2} dur={0.4} />
       <Fade on={on} delay={delay + 0.3}>
-        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>
-          {n}
-        </T>
+        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>{n}</T>
       </Fade>
     </g>
   );
@@ -66,94 +34,124 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Charge motion along potential hill
+  const flowPos = (currentTime * 0.8) % 1;
+  const qx = 60 + flowPos * 340;
+  const qy = 310 - Math.sin(flowPos * Math.PI) * 140;
+
   return (
-    <svg
-      viewBox="0 0 1080 620"
-      preserveAspectRatio="xMidYMin meet"
-      className="w-full h-full select-none"
-    >
-      {/* ── BEAT 0: Title ── */}
+    <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t(
-            "electrostatic potential — the electrical altitude",
-            "electrostatic potential — electrical altitude"
-          )}
+        <T x={540} y={50} size={25} fill={RED} script>
+          {t("Electrostatic Potential: Electrical Altitude V = W_ext / q₀ = kQ/r", "Electrostatic Potential: Electrical Altitude V = W_ext / q₀ = kQ/r")}
         </T>
       </Fade>
-      <Draw
-        on={beat >= 0}
-        delay={dl(0, 2.5)}
-        d="M 180 70 C 440 66, 640 74, 900 69"
-        stroke={RED}
-        sw={2.4}
-        dur={0.7}
-      />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 62 C 420 58, 660 66, 960 61" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* ── BEAT 1: Hook Note ── */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={110} size={15} fill={MUTED} script anchor="start">
-          {t(
-            "work done per unit test charge moving from infinity to a point!",
-            "test charge ko infinity se point tak laane me kiya gaya work!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 2: Badge 1 & Definition ── */}
-      <Badge n={1} cx={52} cy={165} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 1)}>
-        <T x={74} y={170} size={14} fill={RED} weight={700} anchor="start">
-          {t("DEFINITION: POTENTIAL V = W_ext / q₀", "DEFINITION: POTENTIAL V = W_ext / q₀")}
-        </T>
-      </Fade>
-
-      <Fade on={beat >= 2} dim={beat >= 5}>
-        <g transform="translate(60, 185)">
-          <rect x={0} y={10} width={430} height={85} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={215} y={48} anchor="middle" size={20} fill={INK} weight={800}>
-            V = W_ext / q₀  [Volt = J / C]
+      {/* LEFT SECTION: OPEN MOUNTAIN CONTOUR DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ELECTRICAL ALTITUDE ANALOGY", "ELECTRICAL ALTITUDE ANALOGY")}
           </T>
-          <T x={215} y={78} anchor="middle" size={13} fill={AMBER_DARK} script>
-            {t("Scalar quantity! Zero reference at infinity V(∞) = 0", "Scalar quantity! Infinity par reference zero V(∞) = 0")}
+        </Fade>
+
+        {/* Mountain Contour Path standing open on canvas */}
+        <Fade on={beat >= 1}>
+          {/* Ground Reference Line */}
+          <line x1="20" y1="320" x2="460" y2="320" stroke={MUTED} strokeWidth={2} strokeDasharray="5 5" />
+          <T x={450} y={342} size={12} fill={MUTED} anchor="end">Infinity Reference V(∞) = 0 V</T>
+
+          {/* Potential Hill Contour V(r) */}
+          <path d="M 20 320 C 120 320, 200 300, 260 140 C 290 70, 330 70, 360 140 C 420 300, 440 320, 460 320 Z"
+            fill={AMBER_DARK} opacity={0.15} />
+          <Draw on={beat >= 1} delay={dl(1, 0.6)}
+            d="M 20 320 C 120 320, 200 300, 260 140 C 290 70, 330 70, 360 140 C 420 300, 440 320, 460 320"
+            stroke={AMBER_DARK} sw={3.5} />
+
+          {/* Source Charge +Q at Peak */}
+          <circle cx={310} cy={80} r={20} fill={RED} />
+          <T x={310} y={86} size={16} fill="#ffffff" weight={900}>+Q</T>
+          <T x={310} y={50} size={14} fill={RED} weight={800}>Peak (High Potential)</T>
+
+          {/* Test Charge +q0 Rolling Downhill */}
+          <circle cx={qx} cy={qy} r={12} fill={GREEN} />
+          <T x={qx} y={qy + 5} size={12} fill="#ffffff" weight={900}>+q₀</T>
+          <T x={qx} y={qy - 18} size={12} fill={GREEN} weight={800}>Downhill Drift</T>
+        </Fade>
+
+        {/* Free Floating Formula & Text (Spacious, No Box) */}
+        <Fade on={beat >= 1}>
+          <T x={240} y={395} anchor="middle" size={16} fill={INK} weight={800}>
+            Positive charges (+q₀) flow spontaneously downhill (High V → Low V)
           </T>
-          <Draw on={beat >= 2} delay={dl(2, 1.6)} d="M 100 56 h 230 M 100 60 h 230" stroke={AMBER_DARK} sw={1.5} />
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* ── BEAT 3: Badge 2 & Point Charge Potential ── */}
-      <Badge n={3} cx={540} cy={165} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 1)}>
-        <T x={562} y={170} size={14} fill={RED} weight={700} anchor="start">
-          {t("POINT CHARGE POTENTIAL V = k Q / r", "POINT CHARGE POTENTIAL V = k Q / r")}
-        </T>
-      </Fade>
+      {/* RIGHT SECTION: OPEN V(r) ∝ 1/r DECAY GRAPH */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("POINT CHARGE POTENTIAL DECAY GRAPH", "POINT CHARGE POTENTIAL DECAY GRAPH")}
+          </T>
+        </Fade>
 
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(540, 185)">
-          <T x={0} y={25} anchor="start" size={14} fill={INK} weight={700}>
+        <Fade on={beat >= 5}>
+          {/* Open Axes */}
+          <line x1="50" y1="320" x2="470" y2="320" stroke={INK} strokeWidth={2.5} />
+          <line x1="50" y1="320" x2="50" y2="70" stroke={INK} strokeWidth={2.5} />
+
+          <T x={470} y={345} size={13} fill={INK} weight={700} anchor="end">Distance (r) →</T>
+          <T x={40} y={65} size={13} fill={INK} weight={700} anchor="start">Potential V(r) →</T>
+
+          {/* Hyperbolic 1/r Curve */}
+          <Draw on={beat >= 5} delay={dl(5, 0.6)}
+            d="M 65 85 Q 95 240, 450 310" stroke={GREEN} sw={4} />
+
+          <circle cx={120} cy={205} r={6} fill={GREEN} />
+          <T x={135} y={198} size={14} fill={GREEN} weight={800}>V(r) ∝ 1/r</T>
+
+          <circle cx={290} cy={280} r={6} fill={AMBER_DARK} />
+          <T x={305} y={273} size={13} fill={AMBER_DARK} weight={700}>V → 0 as r → ∞</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 5}>
+          <T x={250} y={395} anchor="middle" size={20} fill={GREEN} weight={800}>
             V(r) = (1 / 4πε₀) (Q / r)
           </T>
-          <T x={0} y={65} anchor="start" size={24} fill={RED} weight={800}>
-            V ∝ 1 / r  (Inverse distance decay!)
-          </T>
-        </g>
-      </Fade>
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 120 405 L 380 405" stroke={GREEN} sw={1.8} />
+        </Fade>
+      </g>
 
-      {/* ── BEAT 7: Grand Verdict Chip ── */}
+      {/* BOTTOM SECTION: SPACIOUS UNCONTAINED FORMULA MATRIX */}
+      <g transform="translate(40, 490)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("KEY FORMULATION & SI UNITS", "KEY FORMULATION & SI UNITS")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={18} fill={GREEN} weight={800}>
+            1 Volt = 1 Joule / Coulomb (1 V = 1 J/C)   |   Scalar Quantity   |   Reference V(∞) = 0
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={AMBER_DARK} weight={700}>
+            Work Done in moving test charge: W_ext = q₀ (V_final − V_initial)
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without enclosing box cards) */}
       <Fade on={beat >= 7}>
-        <Chip
-          x={100}
-          y={536}
-          w={880}
-          h={44}
-          fill={GREEN}
-          textFill="#ffffff"
-          size={18}
-        >
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ VERDICT: V = W_ext / q₀ = k Q / r  (Electrical Altitude in Volts)!",
-            "★ VERDICT: V = W_ext / q₀ = k Q / r  (Electrical Altitude in Volts)!"
+            "★ Electrostatic Potential V = W_ext / q₀ = kQ/r represents Electrical Altitude measured in Volts! ✓",
+            "★ Electrostatic Potential V = W_ext / q₀ = kQ/r represents Electrical Altitude measured in Volts! ✓"
           )}
         </Chip>
       </Fade>

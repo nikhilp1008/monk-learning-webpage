@@ -3,11 +3,14 @@
 /**
  * P12Ch07 · Section 02 — "Why the average fails and RMS is born"
  * Subtopic: AC Fundamentals, Peak, RMS & Mean Values
+ * OPEN CHALKBOARD DESIGN (ZERO CONTAINER BOXES):
+ *  - Spacious open layout with linear I(t) cancellation vs squared I²(t) heating curves
+ *  - Zero enclosing box cards around formulas/text
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,73 +35,106 @@ export default function P12Ch07Sec2({ currentTime, reveals, language }: ScenePro
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Failure of Full-Cycle Average & The Birth of RMS Current", "Failure of Full-Cycle Average & The Birth of RMS Current")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Why Full-Cycle Average Fails: The Genesis of Root-Mean-Square (RMS)", "Why Full-Cycle Average Fails: The Genesis of Root-Mean-Square (RMS)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 3: Full Cycle Average = 0 */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("FULL CYCLE AVERAGE IS ZERO: ⟨I⟩_full = 0", "FULL CYCLE AVERAGE IS ZERO: ⟨I⟩_full = 0")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            ⟨I⟩_full = (1/T) ∫₀^T I₀ sin(ωt) dt = 0
+      {/* LEFT SECTION: OPEN I(t) SINE WAVE & AREA CANCELLATION */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("LINEAR CURRENT I(t): FULL-CYCLE AVERAGE = 0", "LINEAR CURRENT I(t): FULL-CYCLE AVERAGE = 0")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            Positive and negative half-cycles cancel out completely!
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Heating Effect & RMS Definition */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("RMS CURRENT DEFINITION: I_rms = I₀ / √2 ≈ 0.707 I₀", "RMS CURRENT DEFINITION: I_rms = I₀ / √2 ≈ 0.707 I₀")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={18} fill={GREEN} weight={800}>
-            I_rms = I₀ / √2  |  V_rms = V₀ / √2
-          </T>
-          <T x={240} y={52} anchor="middle" size={14} fill={INK} weight={700}>
-            {t("Directly produces the same Joule heating power P = I_rms² R as steady DC!", "Steady DC ki tarah same Joule heating power P = I_rms² R produce karta hai!")}
-          </T>
-        </g>
-      </Fade>
+        <Fade on={beat >= 1}>
+          {/* Open Axes */}
+          <line x1="20" y1="170" x2="470" y2="170" stroke={INK} strokeWidth={2} />
+          <line x1="20" y1="270" x2="20" y2="70" stroke={INK} strokeWidth={2} />
 
-      {/* BEAT 7: Virtual / Effective Value Summary */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          {t("EFFECTIVE / VIRTUAL VALUE RECAP", "EFFECTIVE / VIRTUAL VALUE RECAP")}
-        </T>
-      </Fade>
+          {/* Shaded Areas: +Q green, -Q red */}
+          <path d="M 20 170 Q 132.5 50, 245 170 Z" fill={GREEN} opacity={0.2} />
+          <path d="M 245 170 Q 357.5 290, 470 170 Z" fill={RED} opacity={0.2} />
+
+          {/* Sine Path */}
+          <Draw on={beat >= 1} delay={dl(1, 0.6)} d="M 20 170 Q 132.5 50, 245 170 Q 357.5 290, 470 170" stroke={AMBER_DARK} sw={3.5} />
+
+          <T x={132.5} y={130} size={15} fill={GREEN} weight={800}>+ Area (+Q)</T>
+          <T x={357.5} y={210} size={15} fill={RED} weight={800}>− Area (−Q)</T>
+          <T x={470} y={160} size={12} fill={INK} anchor="end">Net ⟨I⟩ = 0 A</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 1}>
+          <T x={245} y={340} anchor="middle" size={16} fill={INK} weight={800}>
+            ⟨I⟩_full = (1/T) ∫₀^T I₀ sin(ωt) dt = 0  (Averages out to ZERO!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: OPEN I²(t) SQUARED WAVE & RMS HEATING EFFECT */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.8)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SQUARED CURRENT I²(t): JOULE HEATING POWER", "SQUARED CURRENT I²(t): JOULE HEATING POWER")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          {/* Open Axes */}
+          <line x1="20" y1="270" x2="470" y2="270" stroke={INK} strokeWidth={2} />
+          <line x1="20" y1="270" x2="20" y2="70" stroke={INK} strokeWidth={2} />
+
+          {/* I²(t) path (all positive peaks up to I₀²) */}
+          <Draw on={beat >= 5} delay={dl(5, 0.6)}
+            d="M 20 270 Q 132.5 70, 245 270 Q 357.5 70, 470 270" stroke={GREEN} sw={3.5} />
+
+          {/* Mean I² line at 50% height */}
+          <line x1="20" y1="170" x2="470" y2="170" stroke={RED} strokeWidth={2.5} strokeDasharray="6 4" />
+          <T x={465} y={160} size={14} fill={RED} weight={800} anchor="end">⟨I²⟩ = I₀² / 2</T>
+
+          <T x={132.5} y={90} size={13} fill={GREEN} weight={800}>Peak I₀²</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 5}>
+          <T x={245} y={340} anchor="middle" size={18} fill={GREEN} weight={800}>
+            I_rms = √( ⟨I²⟩ ) = √(I₀² / 2) = I₀ / √2 ≈ 0.707 I₀
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS JOULE HEATING RECAP */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("JOULE HEATING EQUIVALENCE DEFINITION", "JOULE HEATING EQUIVALENCE DEFINITION")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            RMS current I_rms is the steady DC current that generates the EXACT SAME Joule heating energy in resistor R as AC!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={AMBER_DARK} weight={700}>
+            Heating Energy H = ∫₀^T I(t)² R dt = I_rms² R T  ⇒  I_rms = I₀ / √2 = 0.707 I₀ !
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            RMS value is also called Effective Current (I_eff) or Virtual Current (I_v) because it determines true electrical power!
-          </T>
-        </g>
-      </Fade>
-
-      {/* Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={490} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ RMS Value I_rms = I₀ / √2 is defined by Joule heating equivalence (P = I_rms² R), avoiding zero full-cycle cancellation! ✓",
-            "★ RMS Value I_rms = I₀ / √2 Joule heating equivalence (P = I_rms² R) se define hota hai, avoiding zero average! ✓"
+            "★ RMS Origin: Full-cycle average fails (⟨I⟩=0), but RMS current I_rms = I₀ / √2 matches real Joule heating power P = I_rms² R! ✓",
+            "★ RMS Origin: Full-cycle average ⟨I⟩=0 cancel hota hai, but RMS current I_rms = I₀ / √2 real Joule heating power P = I_rms² R se match karta hai! ✓"
           )}
         </Chip>
       </Fade>
