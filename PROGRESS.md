@@ -16,9 +16,12 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 1 done. Starting Sec 2.
+Sec 2 done. Starting Sec 3.
 
 ## Done
 - Sec 1 — Temperature versus heat: level and flow — chai-tumbler hook,
   cup/pot same-temperature diagram, hot/cold heat-flow blocks, "contains
   heat" wrong/right line, Mumbai-local crowd analogy. VERDICT PASS.
+- Sec 2 — Thermal equilibrium and the Zeroth Law — A/B flow-then-settle
+  blocks, A≡C/B≡C triangle diagram, C-as-thermometer icon, two-patients
+  37°C analogy, verdict line. VERDICT PASS.
