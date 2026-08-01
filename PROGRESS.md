@@ -62,8 +62,25 @@ registered in `index.ts`) but UNVERIFIED — see incident below.
 Subtopic 3 (Fluids in Accelerated and Rotating Frames, sec 23–34) fully DRAFTED (tsc clean,
 registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13/35/60/86).
 
+- Sec 35 — "Streamline versus turbulent flow": 5 parallel streamlines vs 2 chaotic paths.
+- Sec 36 — "The equation of continuity": tapered pipe, slow/fast arrows, A1v1=A2v2.
+- Sec 37 — "Bernoulli energy conservation": tapered pipe + tall/short pressure gauges, P+½ρv²+ρgh=const.
+- Sec 38 — "Bernoulli everywhere": airfoil + compressed/spread streamlines + LIFT arrow.
+- Sec 39 — "Deriving continuity": pipe + two equal-volume slugs (short/wide vs long/narrow).
+- Sec 40 — "Deriving Bernoulli by work and energy": inclined pipe, rising slug (solid→dashed), full derivation.
+- Sec 41 — "Torricelli's efflux": tank, H bracket, hole, jet arc, v=√(2g(H−h)).
+- Sec 42 — "Flow toolkit": 7-row colour-coded formula recap list.
+- Sec 43 — "Narrowing pipe worked example": tapered pipe, d1/d2 labels, v2=18m/s.
+- Sec 44 — "Efflux from a side hole worked example": tank with low hole, v≈17.3m/s.
+- Sec 45 — "Continuity then Bernoulli worked example": tapered pipe + pressure gauges, P2=1.325e5Pa.
+- Sec 46 — "Tank draining time worked example": tank + falling-level arrow + low hole, t≈2.8 hours.
+- Sec 47 — "Pitfalls and pro-tips: flow and Bernoulli": 6-row red/amber tips list.
+
+Subtopic 4 (Fluid Dynamics and Bernoulli's Theorem, sec 35–47) fully DRAFTED (tsc clean,
+registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13/47/70/86).
+
 ## Current
-Continuing to draft sec 35+ (Fluid Dynamics and Bernoulli's Theorem) per user direction
+Continuing to draft sec 48+ (Viscosity and Terminal Velocity) per user direction
 (keep drafting, verify later). Resume verification by: re-checking
 `curl -s -o /dev/null -w "%{http_code}" https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/english_sec_13.mp3`
 until it returns 200, then running `verify-scene.mjs` over sec 13 onward in order, fixing
