@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 27 done. Starting Sec 28.
+Sec 28 done. Starting Sec 29.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -169,3 +169,8 @@ tightening delays, not by ignoring the warning.
   T₂ cold, L bracket), growing list of 4 factors (bigger A/ΔT ⇒ faster,
   bigger L ⇒ slower, K copper-vs-wool), wool-throttles-heat takeaway.
   tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 28 — The circuit analogy: thermal resistance — pipe-pressure/flow
+  analogy, R=L/(KA) & H=ΔT/R formulas, Ohm's-law mapping, zigzag-resistor
+  icon + "rod=resistor" note, circuit-arithmetic takeaway. en reveals all
+  exactly 1s apart — every delay kept ≤0.2s. tsc clean, VERDICT PASS,
+  stalls=6/6 (audio gap).
