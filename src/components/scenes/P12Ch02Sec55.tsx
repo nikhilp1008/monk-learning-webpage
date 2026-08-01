@@ -45,7 +45,7 @@ export default function P12Ch02Sec55({ currentTime, reveals, language }: ScenePr
       <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
       {/* LEFT SECTION: SERIES VOLTAGE DIVISION TOOLKIT */}
-      <g transform="translate(40, 85)">
+      <g transform="translate(40, 75)">
         <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -74,14 +74,14 @@ export default function P12Ch02Sec55({ currentTime, reveals, language }: ScenePr
 
         {/* Free Floating Rule (Spacious, No Box) */}
         <Fade on={beat >= 3}>
-          <T x={230} y={350} anchor="middle" size={16} fill={RED} weight={800}>
+          <T x={230} y={305} anchor="middle" size={16} fill={RED} weight={800}>
             Smaller capacitor takes LARGER share of total voltage!
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: PARALLEL CHARGE DIVISION TOOLKIT */}
-      <g transform="translate(540, 85)">
+      <g transform="translate(540, 75)">
         <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -110,14 +110,14 @@ export default function P12Ch02Sec55({ currentTime, reveals, language }: ScenePr
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 6}>
-          <T x={250} y={350} anchor="middle" size={15} fill={GREEN} weight={800}>
+          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
             Larger capacitor draws LARGER share of total charge Q!
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 440)">
+      <g transform="translate(40, 420)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">

@@ -50,7 +50,7 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
       <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 62 C 420 58, 660 66, 960 61" stroke={RED} sw={2.4} dur={0.7} />
 
       {/* LEFT SECTION: OPEN MOUNTAIN CONTOUR DIAGRAM */}
-      <g transform="translate(40, 85)">
+      <g transform="translate(40, 75)">
         <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -62,7 +62,7 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
         <Fade on={beat >= 1}>
           {/* Ground Reference Line */}
           <line x1="20" y1="320" x2="460" y2="320" stroke={MUTED} strokeWidth={2} strokeDasharray="5 5" />
-          <T x={450} y={342} size={12} fill={MUTED} anchor="end">Infinity Reference V(∞) = 0 V</T>
+          <T x={450} y={305} size={12} fill={MUTED} anchor="end">Infinity Reference V(∞) = 0 V</T>
 
           {/* Potential Hill Contour V(r) */}
           <path d="M 20 320 C 120 320, 200 300, 260 140 C 290 70, 330 70, 360 140 C 420 300, 440 320, 460 320 Z"
@@ -91,7 +91,7 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
       </g>
 
       {/* RIGHT SECTION: OPEN V(r) ∝ 1/r DECAY GRAPH */}
-      <g transform="translate(540, 85)">
+      <g transform="translate(540, 75)">
         <Badge n={2} cx={25} cy={25} on={beat >= 5} delay={dl(5, 0.2)} />
         <Fade on={beat >= 5} delay={dl(5, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -104,7 +104,7 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
           <line x1="50" y1="320" x2="470" y2="320" stroke={INK} strokeWidth={2.5} />
           <line x1="50" y1="320" x2="50" y2="70" stroke={INK} strokeWidth={2.5} />
 
-          <T x={470} y={345} size={13} fill={INK} weight={700} anchor="end">Distance (r) →</T>
+          <T x={470} y={305} size={13} fill={INK} weight={700} anchor="end">Distance (r) →</T>
           <T x={40} y={65} size={13} fill={INK} weight={700} anchor="start">Potential V(r) →</T>
 
           {/* Hyperbolic 1/r Curve */}
@@ -128,7 +128,7 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
       </g>
 
       {/* BOTTOM SECTION: SPACIOUS UNCONTAINED FORMULA MATRIX */}
-      <g transform="translate(40, 440)">
+      <g transform="translate(40, 420)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">

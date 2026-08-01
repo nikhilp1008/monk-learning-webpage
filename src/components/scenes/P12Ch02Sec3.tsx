@@ -53,7 +53,7 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
       <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
       {/* LEFT SECTION: CONCENTRIC EQUIPOTENTIAL SPHERES & ZERO WORK */}
-      <g transform="translate(40, 85)">
+      <g transform="translate(40, 75)">
         <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -89,14 +89,14 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
 
         {/* Free Floating Formula (Spacious, No Box) */}
         <Fade on={beat >= 2}>
-          <T x={220} y={390} anchor="middle" size={16} fill={GREEN} weight={800}>
+          <T x={220} y={305} anchor="middle" size={16} fill={GREEN} weight={800}>
             W_AB = q₀ (V_B − V_A) = 0   (Zero work along equipotential path!)
           </T>
         </Fade>
       </g>
 
       {/* RIGHT SECTION: UNIFORM FIELD PARALLEL PLANES & E ⊥ SURFACE */}
-      <g transform="translate(540, 85)">
+      <g transform="translate(540, 75)">
         <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
         <Fade on={beat >= 3} delay={dl(3, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
