@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 42 done. Starting Sec 43.
+Sec 43 done. Starting Sec 44.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -234,3 +234,19 @@ tightening delays, not by ignoring the warning.
   e/σ constants, black-body σT⁴, Wien's λ_mT=b with b's value, boxed
   RED "always absolute kelvin" golden rule. tsc clean, VERDICT PASS,
   stalls=6/6 (audio gap).
+- Sec 43 — Kirchhoff, Newton's cooling, and the black body — formal
+  Kirchhoff statement, e=α practical reading, Newton's law −dT/dt=k(T−T₀),
+  boxed practical average form (T₁−T₂)/t=k(T̄−T₀), black-body α=1 recap.
+  tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+
+## Note (2026-07-31, ~9:35pm): dev server wedge
+Port 3010's Next dev server died silently mid-session (port unbound,
+curl got connection refused) under heavy system-wide load — NOT caused
+by leaked Playwright/chrome-headless-shell processes (checked, none
+found; the earlier high process count was the user's normal Chrome/
+VSCode/Adobe usage, unrelated). Fix: killed the stale wrapper PID,
+relaunched with the same `nohup npm run dev -- -p 3010 > /tmp/dev-ch10.log
+2>&1 &` command, confirmed ready via curl. If `verify-scene.mjs` or
+`npx tsc` hangs past ~2min again, check `curl -s -o /dev/null -w '%{http_code}'
+http://localhost:3010` first — a `000` means the server needs restarting,
+not that the scene code is broken.
