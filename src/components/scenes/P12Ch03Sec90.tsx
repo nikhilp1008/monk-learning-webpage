@@ -43,7 +43,7 @@ export default function P12Ch03Sec90({ currentTime, reveals, language }: ScenePr
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">THE METER BRIDGE (SLIDING JOCKEY)</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 3}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
@@ -60,7 +60,7 @@ export default function P12Ch03Sec90({ currentTime, reveals, language }: ScenePr
       <Badge n={2} cx={540} cy={140} on={beat >= 3} delay={dl(3, 0.4)} />
       <Fade on={beat >= 3} delay={dl(3, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">POTENTIOMETER POTENTIAL RAMP</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 3} dim={beat >= 6}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
@@ -77,7 +77,7 @@ export default function P12Ch03Sec90({ currentTime, reveals, language }: ScenePr
       <Badge n={3} cx={52} cy={270} on={beat >= 6} delay={dl(6, 0.4)} />
       <Fade on={beat >= 6} delay={dl(6, 0.8)}>
         <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">MEASURES TRUE EMF WITHOUT SAG</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 6}>
         <g transform="translate(60, 290)">
           <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />

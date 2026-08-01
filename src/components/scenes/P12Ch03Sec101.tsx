@@ -43,7 +43,7 @@ export default function P12Ch03Sec101({ currentTime, reveals, language }: SceneP
       <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
       <Fade on={beat >= 1} delay={dl(1, 0.8)}>
         <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">FORMULA FLIPPING & DRIVER TRAPS</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 1} dim={beat >= 4}>
         <g transform="translate(60, 160)">
           <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
@@ -60,7 +60,7 @@ export default function P12Ch03Sec101({ currentTime, reveals, language }: SceneP
       <Badge n={2} cx={540} cy={140} on={beat >= 4} delay={dl(4, 0.4)} />
       <Fade on={beat >= 4} delay={dl(4, 0.8)}>
         <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">GRADIENT CANCELLATION PRO-TIP</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 4} dim={beat >= 6}>
         <g transform="translate(540, 160)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />

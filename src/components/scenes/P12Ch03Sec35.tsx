@@ -67,7 +67,7 @@ export default function P12Ch03Sec35({ currentTime, reveals, language }: ScenePr
       <Badge n={2} cx={540} cy={160} on={beat >= 4} delay={dl(4, 0.4)} />
       <Fade on={beat >= 4} delay={dl(4, 0.8)}>
         <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">PARALLEL CALCULATION</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 4} dim={beat >= 6}>
         <g transform="translate(540, 180)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />

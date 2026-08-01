@@ -1626,6 +1626,13 @@ import P12Ch06Sec55 from "./P12Ch06Sec55";
 import P12Ch06Sec56 from "./P12Ch06Sec56";
 import P12Ch06Sec57 from "./P12Ch06Sec57";
 import P12Ch06Sec58 from "./P12Ch06Sec58";
+import P12Ch06Sec59 from "./P12Ch06Sec59";
+import P12Ch06Sec60 from "./P12Ch06Sec60";
+import P12Ch06Sec61 from "./P12Ch06Sec61";
+import P12Ch06Sec62 from "./P12Ch06Sec62";
+import P12Ch06Sec63 from "./P12Ch06Sec63";
+import P12Ch06Sec64 from "./P12Ch06Sec64";
+import P12Ch06Sec65 from "./P12Ch06Sec65";
 
 const P12CH06 = "b8223a22-15d4-5760-886f-53750c7dc9e8"; // Class 12 · Electromagnetic Induction
 
@@ -1687,4 +1694,11 @@ REGISTRY[`${P12CH06}:55`] = P12Ch06Sec55;
 REGISTRY[`${P12CH06}:56`] = P12Ch06Sec56;
 REGISTRY[`${P12CH06}:57`] = P12Ch06Sec57;
 REGISTRY[`${P12CH06}:58`] = P12Ch06Sec58;
+REGISTRY[`${P12CH06}:59`] = P12Ch06Sec59;
+REGISTRY[`${P12CH06}:60`] = P12Ch06Sec60;
+REGISTRY[`${P12CH06}:61`] = P12Ch06Sec61;
+REGISTRY[`${P12CH06}:62`] = P12Ch06Sec62;
+REGISTRY[`${P12CH06}:63`] = P12Ch06Sec63;
+REGISTRY[`${P12CH06}:64`] = P12Ch06Sec64;
+REGISTRY[`${P12CH06}:65`] = P12Ch06Sec65;
 /* ============================ end P12Ch06 ============================ */

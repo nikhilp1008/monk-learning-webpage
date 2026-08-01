@@ -53,7 +53,7 @@ export default function P12Ch03Sec77({ currentTime, reveals, language }: ScenePr
       <Badge n={1} cx={52} cy={160} on={beat >= 4} delay={dl(4, 0.4)} />
       <Fade on={beat >= 4} delay={dl(4, 0.8)}>
         <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">THE LOOP RULE (CONSERVATION OF ENERGY)</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 4} dim={beat >= 5}>
         <g transform="translate(60, 180)">
           <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
@@ -67,7 +67,7 @@ export default function P12Ch03Sec77({ currentTime, reveals, language }: ScenePr
       <Badge n={2} cx={540} cy={160} on={beat >= 5} delay={dl(5, 0.4)} />
       <Fade on={beat >= 5} delay={dl(5, 0.8)}>
         <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">CONTOUR MAP ANALOGY</T>
-      </Badge>
+      </Fade>
       <Fade on={beat >= 5}>
         <g transform="translate(540, 180)">
           <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
