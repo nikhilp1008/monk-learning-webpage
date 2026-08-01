@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 32 done. Starting Sec 33.
+Sec 33 done. Starting Sec 34.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -191,3 +191,7 @@ tightening delays, not by ignoring the warning.
   (T₁→T₂→T₃) deriving R_eq=R₁+R₂ from steady-state H-continuity, parallel
   rods sharing ΔT deriving 1/R_eq=1/R₁+1/R₂, weighted-junction shortcut.
   tsc clean, VERDICT PASS, stalls=7/7 (audio gap).
+- Sec 33 — Worked example: heat lost through a windowpane — pane icon
+  (inside 22°C/outside 8°C), givens, H=KAΔT/L formula, substitution,
+  boxed 4.2kW answer, double-glazing takeaway. tsc clean, VERDICT PASS,
+  stalls=6/6 (audio gap).
