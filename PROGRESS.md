@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 15 done. Starting Sec 16.
+Sec 16 done. Starting Sec 17.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -117,3 +117,8 @@ tightening delays, not by ignoring the warning.
   boxed c_water=4186 J/(kg·K) value, real-world consequences, "thermal
   shock-absorber" verdict. tsc clean, VERDICT PASS, stalls=6/6 (audio
   gap). Opens Subtopic 2 (Calorimetry and Specific Heat).
+- Sec 16 — The principle of calorimetry: a heat bank — insulated box
+  hot/cold bodies + flow arrow, calorimeter icon, energy-conserved note,
+  boxed principle (heat lost=heat gained), the calorimeter-participates
+  catch, water equivalent w=mc, heat-bank money analogy. tsc clean,
+  VERDICT PASS, stalls=7/7 (audio gap).
