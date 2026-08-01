@@ -1702,3 +1702,35 @@ REGISTRY[`${P12CH06}:63`] = P12Ch06Sec63;
 REGISTRY[`${P12CH06}:64`] = P12Ch06Sec64;
 REGISTRY[`${P12CH06}:65`] = P12Ch06Sec65;
 /* ============================ end P12Ch06 ============================ */
+
+/* ============================ start P12Ch07 ============================ */
+import P12Ch07Sec1 from "./P12Ch07Sec1";
+import P12Ch07Sec2 from "./P12Ch07Sec2";
+import P12Ch07Sec3 from "./P12Ch07Sec3";
+import P12Ch07Sec4 from "./P12Ch07Sec4";
+import P12Ch07Sec5 from "./P12Ch07Sec5";
+import P12Ch07Sec6 from "./P12Ch07Sec6";
+import P12Ch07Sec7 from "./P12Ch07Sec7";
+import P12Ch07Sec8 from "./P12Ch07Sec8";
+import P12Ch07Sec9 from "./P12Ch07Sec9";
+import P12Ch07Sec10 from "./P12Ch07Sec10";
+import P12Ch07Sec11 from "./P12Ch07Sec11";
+import P12Ch07Sec12 from "./P12Ch07Sec12";
+import P12Ch07Sec13 from "./P12Ch07Sec13";
+
+const P12CH07 = "69dbf2ca-bc1d-514e-a033-de1eefec09c9"; // Class 12 · Alternating Current
+
+REGISTRY[`${P12CH07}:1`] = P12Ch07Sec1;
+REGISTRY[`${P12CH07}:2`] = P12Ch07Sec2;
+REGISTRY[`${P12CH07}:3`] = P12Ch07Sec3;
+REGISTRY[`${P12CH07}:4`] = P12Ch07Sec4;
+REGISTRY[`${P12CH07}:5`] = P12Ch07Sec5;
+REGISTRY[`${P12CH07}:6`] = P12Ch07Sec6;
+REGISTRY[`${P12CH07}:7`] = P12Ch07Sec7;
+REGISTRY[`${P12CH07}:8`] = P12Ch07Sec8;
+REGISTRY[`${P12CH07}:9`] = P12Ch07Sec9;
+REGISTRY[`${P12CH07}:10`] = P12Ch07Sec10;
+REGISTRY[`${P12CH07}:11`] = P12Ch07Sec11;
+REGISTRY[`${P12CH07}:12`] = P12Ch07Sec12;
+REGISTRY[`${P12CH07}:13`] = P12Ch07Sec13;
+/* ============================ end P12Ch07 ============================ */
