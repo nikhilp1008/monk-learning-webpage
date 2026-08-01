@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 19 done. Starting Sec 20.
+Sec 20 done. Starting Sec 21.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -134,3 +134,7 @@ tightening delays, not by ignoring the warning.
   c definition, C=mc whole-body heat capacity, C-vs-c distinction,
   molar heat capacity Mc=Q/(nΔT), amber caveat box (c not fixed, can be
   negative). tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 20 — Latent heat, water equivalent, and the key numbers — w=mc,
+  Q=mL with L_f/L_v, master balance Σlost=Σgained, memorize-table (cal
+  units: c_water=1, c_ice=0.5, L_fusion=80, L_vap=540), SI-units box.
+  tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
