@@ -16,7 +16,9 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 36 done. Starting Sec 37 (last of Subtopic 3).
+Sec 37 done — Subtopic 3 (Heat Transfer: Conduction, Convection) 100%
+COMPLETE (12/12, sections 26-37). Starting Sec 38 (Subtopic 4:
+Radiation/Cooling, sections 38-49).
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -207,3 +209,8 @@ tightening delays, not by ignoring the warning.
   the integration (ρL_f A dx/dt=KAθ/x ⇒ x dx=(Kθ/ρL_f)dt, integrate 4→6cm),
   boxed t≈1.41×10⁴s≈3.9h, "time ∝ x²" insight. Hardest worked example in
   the subtopic. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 37 — Pitfalls and pro-tips for heat transfer — numbered-badge closer
+  (4 pitfalls: A~r², series-vs-parallel, ΔT not equal in series, steady-
+  state only) + amber DC-circuit pro-tip box + "solids conduct, fluids
+  convect, vacuum radiates" mnemonic. tsc clean, VERDICT PASS, stalls=6/6
+  (audio gap). SUBTOPIC 3 COMPLETE (12/12).
