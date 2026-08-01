@@ -16,7 +16,14 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 2 done. Starting Sec 3.
+Sec 3 done. Starting Sec 4.
+
+## Note
+Ch10's reveal timestamps often have 1s-tight middle beats. Keep any beat's
+Fade delay ≤ ~1.3s (verifier's per-beat settle check is a discrete seek +
+1.8s real-time wait, not proportional to the beat's narration length) —
+longer delays risk an advisory "stall" (no new visible group). Fix by
+tightening delays, not by ignoring the warning.
 
 ## Done
 - Sec 1 — Temperature versus heat: level and flow — chai-tumbler hook,
@@ -25,3 +32,6 @@ Sec 2 done. Starting Sec 3.
 - Sec 2 — Thermal equilibrium and the Zeroth Law — A/B flow-then-settle
   blocks, A≡C/B≡C triangle diagram, C-as-thermometer icon, two-patients
   37°C analogy, verdict line. VERDICT PASS.
+- Sec 3 — Thermal expansion: why heated things grow — cold/hot lattice
+  boxes, railway-gap diagram, bridge rollers + sagging wire, uniform-
+  scaling square, verdict. VERDICT PASS (eyeballed, clean).
