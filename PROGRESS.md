@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 17 done. Starting Sec 18.
+Sec 18 done. Starting Sec 19.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -126,3 +126,7 @@ tightening delays, not by ignoring the warning.
   temp-vs-heat-added plateau graph (rise-flat-rise), ringed plateau with
   "temp holds steady" callout, Q=mL, melt/boil cal-per-gram comparison
   box, steam-burn warning. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 18 — The reliable framework: never assume the final state — golden
+  rule/leg-splitting notes, 5-segment ice→steam curve (extends Sec17's
+  motif), ringed plateaus with the mcΔT-mistake warning, budget method,
+  sanity-check note. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
