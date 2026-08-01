@@ -54,8 +54,31 @@ Worktree: branch `premium-board-ch12` · port 3012 only · chapter_id `8300dbf9-
 - Sec 35 — JEE Advanced worked example: vrms>vavg with 5-speed bar chart, squaring weights fast tail
 - Sec 36 — pitfalls & pro-tips (5 traps + v-proportional pro-tip; Subtopic 4 complete)
 
+- Sec 37 — degrees of freedom (coin analogy, monatomic/diatomic/polyatomic panels, defaults)
+- Sec 38 — equipartition of energy (5 equal bars, U=(f/2)nRT master key)
+- Sec 39 — deriving Cv, Cp, gamma (4-step chain, mono/di/poly table, handy inverses)
+- Sec 40 — mean free path (zig-zag path with lambda segment, cylinder-sweep derivation)
+- Sec 41 — toolkit formula sheet (equipartition, Cv/Cp/gamma, benchmarks, lambda, Dulong-Petit)
+- Sec 42 — CBSE worked example: U of diatomic gas, f=5 vs f=7 decision (1.87e4 J)
+- Sec 43 — NEET worked example: gamma to atomicity, f=2/(gamma-1) trap
+- Sec 44 — JEE Main worked example: lambda of N2 (68nm, ~200 diameters, 7e9 collisions/sec)
+- Sec 45 — JEE Advanced worked example: gamma of He/O2 mixture (average Cv not gamma, ~1.48)
+- Sec 46 — pitfalls & pro-tips (4 traps + pro-tip + 3 closing memory phrases; Subtopic 5 complete)
+
 ## Current
-Subtopic 4 (RMS Speed and Maxwell Distribution, secs 28-36) COMPLETE. Next: Subtopic 5 — Degrees of Freedom and Mean Free Path, Sec 37.
+Subtopic 5 (Degrees of Freedom and Mean Free Path, secs 37-46) COMPLETE. Next: Subtopic 6 — Chapter Summary, Sec 47 (final 2 sections).
+
+## Second issue caught
+- Dev server on port 3012 wedged twice during authoring (secs 40, 45) — Playwright's page.goto
+  timed out after 30s even though the TCP port accepted connections. Root cause both times was
+  Turbopack cold-compiling the large `/lessons/[chapterId]` route (which now imports 46+ scene
+  components) taking 1.5–2+ minutes on a fresh server start, longer than verify-scene.mjs's fixed
+  30s navigation timeout. Fix: `lsof -ti:3012 | xargs kill -9`, restart with
+  `nohup npm run dev -- -p 3012 &`, then manually warm the specific lesson route with a
+  long-timeout curl (100s+) before re-running verify-scene.mjs. A one-off "pack … far too short"
+  git error also appeared on push (shared object store with the sibling monk-learning-webpage
+  checkout, iCloud-related per Ch6's documented gotcha) but did not block the push — verified via
+  `git ls-remote` that the commit landed regardless.
 
 ## Bug caught and fixed
 - Sec23 initially used `Draw` with a solid `fill` for two comparison bars — `Draw`'s fill is NOT
