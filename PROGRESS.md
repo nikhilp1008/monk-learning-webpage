@@ -44,8 +44,18 @@ Worktree: branch `premium-board-ch12` · port 3012 only · chapter_id `8300dbf9-
 - Sec 26 — JEE Advanced worked example: directed 1D gas vs isotropic gas, meaning of 1/3
 - Sec 27 — pitfalls & pro-tips (5 traps + E=3/2 PV pro-tip box)
 
+- Sec 28 — temperature = avg KE (cool/hot arrow panels, Maxwell bell curve, escape speed, vector/scalar trap)
+- Sec 29 — Maxwell distribution curve (base/heated/heavier overlays, area-reading rule, O2/H2 anchors)
+- Sec 30 — deriving kinetic meaning of T (equate PV expressions, vrms and vp formulas)
+- Sec 31 — speed formulas toolkit (3 speeds, RAM mnemonic, scaling, distribution, unit warnings)
+- Sec 32 — CBSE worked example: vrms of N2 (517 m/s), kg/mol trap, ratio bars
+- Sec 33 — NEET worked example: H2 vs O2 speed ratio (4x), skip-root and invert traps
+- Sec 34 — JEE Main worked example: match vrms He vs N2, T_He=50K bar comparison
+- Sec 35 — JEE Advanced worked example: vrms>vavg with 5-speed bar chart, squaring weights fast tail
+- Sec 36 — pitfalls & pro-tips (5 traps + v-proportional pro-tip; Subtopic 4 complete)
+
 ## Current
-Subtopic 3 (Kinetic Theory and Gas Pressure, secs 19-27) COMPLETE. Next: Subtopic 4 — RMS Speed and Maxwell Distribution, Sec 28.
+Subtopic 4 (RMS Speed and Maxwell Distribution, secs 28-36) COMPLETE. Next: Subtopic 5 — Degrees of Freedom and Mean Free Path, Sec 37.
 
 ## Bug caught and fixed
 - Sec23 initially used `Draw` with a solid `fill` for two comparison bars — `Draw`'s fill is NOT
