@@ -53,7 +53,7 @@ export default function P12Ch02Sec39({ currentTime, reveals, language }: ScenePr
       <g transform="translate(40, 85)">
         <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("FREE ELECTRON DRIFT & INDUCED OPPOSING FIELD", "FREE ELECTRON DRIFT & INDUCED OPPOSING FIELD")}
           </T>
         </Fade>
@@ -90,7 +90,7 @@ export default function P12Ch02Sec39({ currentTime, reveals, language }: ScenePr
       <g transform="translate(540, 85)">
         <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("EQUILIBRIUM MECHANISM IN ~10⁻¹⁴ SECONDS", "EQUILIBRIUM MECHANISM IN ~10⁻¹⁴ SECONDS")}
           </T>
         </Fade>
@@ -125,19 +125,19 @@ export default function P12Ch02Sec39({ currentTime, reveals, language }: ScenePr
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 470)">
-        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+      <g transform="translate(40, 440)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("FOUNDATIONAL CONDUCTOR RULE", "FOUNDATIONAL CONDUCTOR RULE")}
           </T>
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
             Inside any conductor in electrostatic equilibrium (solid or hollow), E_inside = 0 N/C!
           </T>
-          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
             This holds regardless of external charge configuration or shape!
           </T>
         </Fade>
@@ -145,7 +145,7 @@ export default function P12Ch02Sec39({ currentTime, reveals, language }: ScenePr
 
       {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Conductor Rule 1 Mastered: Internal electric field E_inside = 0 N/C in electrostatic equilibrium! ✓",
             "★ Conductor Rule 1 Mastered: Internal electric field E_inside = 0 N/C in electrostatic equilibrium! ✓"

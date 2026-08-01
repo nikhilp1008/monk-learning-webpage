@@ -55,7 +55,7 @@ export default function P12Ch02Sec11({ currentTime, reveals, language }: ScenePr
       <g transform="translate(40, 85)">
         <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CHARGED RING (Q, R) AND AXIAL POINT P(x)", "CHARGED RING (Q, R) AND AXIAL POINT P(x)")}
           </T>
         </Fade>
@@ -94,7 +94,7 @@ export default function P12Ch02Sec11({ currentTime, reveals, language }: ScenePr
       <g transform="translate(540, 85)">
         <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SPECIAL LIMITS & V(x) PROFILE GRAPH", "SPECIAL LIMITS & V(x) PROFILE GRAPH")}
           </T>
         </Fade>
@@ -125,19 +125,19 @@ export default function P12Ch02Sec11({ currentTime, reveals, language }: ScenePr
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 470)">
-        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+      <g transform="translate(40, 440)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("JEE MAIN TRAP: ELECTRIC FIELD DERIVATION FROM V(x)", "JEE MAIN TRAP: ELECTRIC FIELD DERIVATION FROM V(x)")}
           </T>
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
             Differentiating V(x): E_x = − dV/dx = k Q x / (R² + x²)^(3/2) !
           </T>
-          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
             At center x = 0, E = 0 N/C (due to symmetry), but Potential V = kQ/R is MAXIMUM!
           </T>
         </Fade>
@@ -145,7 +145,7 @@ export default function P12Ch02Sec11({ currentTime, reveals, language }: ScenePr
 
       {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Ring Potential Mastered: V(x) = kQ/√(R²+x²) with maximum V_max = kQ/R at the ring center x = 0! ✓",
             "★ Ring Potential Mastered: V(x) = kQ/√(R²+x²) with maximum V_max = kQ/R at the ring center x = 0! ✓"

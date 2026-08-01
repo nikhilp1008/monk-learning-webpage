@@ -54,7 +54,7 @@ export default function P12Ch02Sec5({ currentTime, reveals, language }: ScenePro
       <g transform="translate(40, 85)">
         <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("ELECTRIC DIPOLE AT ANGLE θ", "ELECTRIC DIPOLE AT ANGLE θ")}
           </T>
         </Fade>
@@ -95,7 +95,7 @@ export default function P12Ch02Sec5({ currentTime, reveals, language }: ScenePro
       <g transform="translate(540, 85)">
         <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
         <Fade on={beat >= 3} delay={dl(3, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("FIELD-POTENTIAL GRADIENT: E = − dV/dr", "FIELD-POTENTIAL GRADIENT: E = − dV/dr")}
           </T>
         </Fade>
@@ -126,27 +126,27 @@ export default function P12Ch02Sec5({ currentTime, reveals, language }: ScenePro
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 470)">
-        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+      <g transform="translate(40, 440)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SPECIAL CASES & POTENTIAL DECISION MATRIX", "SPECIAL CASES & POTENTIAL DECISION MATRIX")}
           </T>
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
-            Axial Line (θ = 0°): V = kp/r²   |   Equatorial Line (θ = 90°): V = 0 V (Zero Potential Line!)
+          <T x={45} y={52} size={14} fill={GREEN} weight={800} anchor="start">
+            {t("• Axial Line (θ = 0°): V = kp/r²   |   • Equatorial Line (θ = 90°): V = 0 V (Zero Potential Line!)", "• Axial Line (θ = 0°): V = kp/r²   |   • Equatorial Line (θ = 90°): V = 0 V (Zero Potential Line!)")}
           </T>
-          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
-            Point charge V ∝ 1/r (spherical decay); Dipole V ∝ 1/r² (faster quadrupole-like angular decay)!
+          <T x={45} y={76} size={13} fill={INK} weight={700} anchor="start">
+            {t("• Point charge V ∝ 1/r (spherical decay); Dipole V ∝ 1/r² (faster quadrupole-like angular decay)!", "• Point charge V ∝ 1/r (spherical decay); Dipole V ∝ 1/r² (faster quadrupole-like angular decay)!")}
           </T>
         </Fade>
       </g>
 
       {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Dipole Verdict: V(r, θ) = (kp cosθ)/r² and Electric Field points in direction of steepest potential drop E = −dV/dr! ✓",
             "★ Dipole Verdict: V(r, θ) = (kp cosθ)/r² and Electric Field points in direction of steepest potential drop E = −dV/dr! ✓"

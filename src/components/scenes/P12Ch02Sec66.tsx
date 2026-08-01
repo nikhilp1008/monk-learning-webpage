@@ -52,7 +52,7 @@ export default function P12Ch02Sec66({ currentTime, reveals, language }: ScenePr
       <g transform="translate(40, 85)">
         <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SUBTOPICS 1, 2 & 3 MASTERY CHECKLIST", "SUBTOPICS 1, 2 & 3 MASTERY CHECKLIST")}
           </T>
         </Fade>
@@ -77,7 +77,7 @@ export default function P12Ch02Sec66({ currentTime, reveals, language }: ScenePr
       <g transform="translate(540, 85)">
         <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
         <Fade on={beat >= 2} delay={dl(2, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SUBTOPICS 4 & 5 MASTERY CHECKLIST", "SUBTOPICS 4 & 5 MASTERY CHECKLIST")}
           </T>
         </Fade>
@@ -110,15 +110,15 @@ export default function P12Ch02Sec66({ currentTime, reveals, language }: ScenePr
 
       {/* LOWER SECTION: GRAND VERDICT */}
       <g transform="translate(40, 465)">
-        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("CHAPTER 2 COMPLETE MASTERED STATUS", "CHAPTER 2 COMPLETE MASTERED STATUS")}
           </T>
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
             Zero container card boxes! Open chalkboard vector diagrams, beat choreography & rigorous derivations across all 66 scenes!
           </T>
         </Fade>
@@ -126,7 +126,7 @@ export default function P12Ch02Sec66({ currentTime, reveals, language }: ScenePr
 
       {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Class 12 Physics Chapter 2 (66/66 Sections): 100% COMPLETE to 11th-Grade Masterclass Standard! ✓",
             "★ Class 12 Physics Chapter 2 (66/66 Sections): 100% COMPLETE to 11th-Grade Masterclass Standard! ✓"

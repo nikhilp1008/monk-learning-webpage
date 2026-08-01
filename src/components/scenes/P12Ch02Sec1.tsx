@@ -53,7 +53,7 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
       <g transform="translate(40, 85)">
         <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("ELECTRICAL ALTITUDE ANALOGY", "ELECTRICAL ALTITUDE ANALOGY")}
           </T>
         </Fade>
@@ -94,7 +94,7 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
       <g transform="translate(540, 85)">
         <Badge n={2} cx={25} cy={25} on={beat >= 5} delay={dl(5, 0.2)} />
         <Fade on={beat >= 5} delay={dl(5, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("POINT CHARGE POTENTIAL DECAY GRAPH", "POINT CHARGE POTENTIAL DECAY GRAPH")}
           </T>
         </Fade>
@@ -129,9 +129,9 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
 
       {/* BOTTOM SECTION: SPACIOUS UNCONTAINED FORMULA MATRIX */}
       <g transform="translate(40, 490)">
-        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("KEY FORMULATION & SI UNITS", "KEY FORMULATION & SI UNITS")}
           </T>
         </Fade>
@@ -140,7 +140,7 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
           <T x={500} y={30} anchor="middle" size={18} fill={GREEN} weight={800}>
             1 Volt = 1 Joule / Coulomb (1 V = 1 J/C)   |   Scalar Quantity   |   Reference V(∞) = 0
           </T>
-          <T x={500} y={65} anchor="middle" size={15} fill={AMBER_DARK} weight={700}>
+          <T x={45} y={76} size={13} anchor="start" fill={AMBER_DARK} weight={700}>
             Work Done in moving test charge: W_ext = q₀ (V_final − V_initial)
           </T>
         </Fade>
@@ -148,7 +148,7 @@ export default function P12Ch02Sec1({ currentTime, reveals, language }: ScenePro
 
       {/* Footer Summary Chip (Floating without enclosing box cards) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Electrostatic Potential V = W_ext / q₀ = kQ/r represents Electrical Altitude measured in Volts! ✓",
             "★ Electrostatic Potential V = W_ext / q₀ = kQ/r represents Electrical Altitude measured in Volts! ✓"

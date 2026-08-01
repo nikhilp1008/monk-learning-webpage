@@ -49,7 +49,7 @@ export default function P12Ch02Sec8({ currentTime, reveals, language }: ScenePro
       <g transform="translate(40, 85)">
         <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SHORT DIPOLE GEOMETRY (r >> a)", "SHORT DIPOLE GEOMETRY (r >> a)")}
           </T>
         </Fade>
@@ -95,7 +95,7 @@ export default function P12Ch02Sec8({ currentTime, reveals, language }: ScenePro
       <g transform="translate(540, 85)">
         <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
         <Fade on={beat >= 4} delay={dl(4, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("STEP-BY-STEP ALGEBRAIC PROOF", "STEP-BY-STEP ALGEBRAIC PROOF")}
           </T>
         </Fade>
@@ -130,19 +130,19 @@ export default function P12Ch02Sec8({ currentTime, reveals, language }: ScenePro
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 470)">
-        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+      <g transform="translate(40, 440)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("SPECIAL ORIENTATIONS", "SPECIAL ORIENTATIONS")}
           </T>
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
             θ = 0° (Axial Point): V = +kp/r²   |   θ = 180°: V = −kp/r²   |   θ = 90° (Equatorial): V = 0 V!
           </T>
-          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
             On the broadside equatorial line (θ = 90°), +q and -q potentials cancel completely at all points!
           </T>
         </Fade>
@@ -150,7 +150,7 @@ export default function P12Ch02Sec8({ currentTime, reveals, language }: ScenePro
 
       {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Proof Completed: Dipole Potential V = (1/4πε₀) (p cosθ / r²) with 1/r² decay profile! ✓",
             "★ Proof Completed: Dipole Potential V = (1/4πε₀) (p cosθ / r²) with 1/r² decay profile! ✓"

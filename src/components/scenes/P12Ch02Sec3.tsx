@@ -56,7 +56,7 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
       <g transform="translate(40, 85)">
         <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("POINT CHARGE EQUIPOTENTIAL SPHERES", "POINT CHARGE EQUIPOTENTIAL SPHERES")}
           </T>
         </Fade>
@@ -99,7 +99,7 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
       <g transform="translate(540, 85)">
         <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
         <Fade on={beat >= 3} delay={dl(3, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("UNIFORM FIELD: E ⊥ PARALLEL PLANES", "UNIFORM FIELD: E ⊥ PARALLEL PLANES")}
           </T>
         </Fade>
@@ -135,15 +135,15 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
 
       {/* LOWER SECTION: OPEN SPACIOUS CORE RULES */}
       <g transform="translate(40, 475)">
-        <Badge n={3} cx={25} cy={25} on={beat >= 6} delay={dl(6, 0.2)} />
+        <Badge n={3} cx={20} cy={18} on={beat >= 6} delay={dl(6, 0.2)} />
         <Fade on={beat >= 6} delay={dl(6, 0.5)}>
-          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("THE 4 CORE EQUIPOTENTIAL RULES", "THE 4 CORE EQUIPOTENTIAL RULES")}
           </T>
         </Fade>
 
         <Fade on={beat >= 6}>
-          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
             1. W = 0 on surface   |   2. E is ALWAYS ⊥ to surface   |   3. Points towards decreasing V   |   4. Never intersect!
           </T>
         </Fade>
@@ -151,7 +151,7 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
 
       {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 6}>
-        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Equipotential Verdict: Work W = 0 along surface, Electric field E ⊥ Surface, pointing towards decreasing V! ✓",
             "★ Equipotential Verdict: Work W = 0 along surface, Electric field E ⊥ Surface, pointing towards decreasing V! ✓"
