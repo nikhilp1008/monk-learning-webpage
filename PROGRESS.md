@@ -16,7 +16,9 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 24 done. Starting Sec 25 (last of Subtopic 2).
+Sec 25 done — Subtopic 2 (Calorimetry and Specific Heat) 100% COMPLETE
+(11/11, sections 15-25). Starting Sec 26 (Subtopic 3: Conduction/
+Convection, sections 26-37).
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -154,3 +156,8 @@ tightening delays, not by ignoring the warning.
   (2550cal needed) vs hot-side budget (3200cal available), the test
   (2700>2550 ⇒ both phases complete), boxed balance T≈18.6°C, sanity
   confirm. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 25 — Pitfalls and pro-tips for calorimetry — numbered-badge closer
+  (4 pitfalls: skip latent step, assume final state, drop calorimeter,
+  unit collisions) + amber running-heat-budget pro-tip box + 5-legs
+  mnemonic. tsc clean, VERDICT PASS, stalls=6/6 (audio gap). SUBTOPIC 2
+  COMPLETE (11/11).
