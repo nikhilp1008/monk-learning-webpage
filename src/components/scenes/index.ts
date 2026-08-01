@@ -862,6 +862,7 @@ import Ch11Sec2 from "./Ch11Sec2";
 import Ch11Sec3 from "./Ch11Sec3";
 import Ch11Sec4 from "./Ch11Sec4";
 import Ch11Sec5 from "./Ch11Sec5";
+import Ch11Sec6 from "./Ch11Sec6";
 
 const CH11 = "58c19132-676f-5dfb-b84e-e3a34b34a48e"; // Class 11 · Thermodynamics
 
@@ -870,4 +871,5 @@ REGISTRY[`${CH11}:2`] = Ch11Sec2;
 REGISTRY[`${CH11}:3`] = Ch11Sec3;
 REGISTRY[`${CH11}:4`] = Ch11Sec4;
 REGISTRY[`${CH11}:5`] = Ch11Sec5;
+REGISTRY[`${CH11}:6`] = Ch11Sec6;
 /* ============================ end Ch11 ============================ */
