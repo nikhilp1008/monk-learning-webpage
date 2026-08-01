@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 41 done. Starting Sec 42.
+Sec 42 done. Starting Sec 43.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -230,3 +230,7 @@ tightening delays, not by ignoring the warning.
   approximation — E=σT⁴ pure form, P=eσAT⁴ real-surface, boxed
   P_net=eσA(T⁴−T₀⁴), Newton's-law-is-an-approximation note, Stefan's-T⁴-
   in-disguise closer. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 42 — Stefan-Boltzmann and Wien — P=eσAT⁴ & P_net=eσA(T⁴−T₀⁴),
+  e/σ constants, black-body σT⁴, Wien's λ_mT=b with b's value, boxed
+  RED "always absolute kelvin" golden rule. tsc clean, VERDICT PASS,
+  stalls=6/6 (audio gap).
