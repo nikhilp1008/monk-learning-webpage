@@ -108,8 +108,28 @@ registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13).
 Subtopic 6 (Poiseuille's Law and Viscous Flow Resistance, sec 58–68) fully DRAFTED
 (tsc clean, registered) but UNVERIFIED — audio still 404 for sec 13+.
 
+- Sec 69 — "Surface tension: the stretched skin": interior (balanced) vs surface (net pull) molecules.
+- Sec 70 — "Two faces: force/length = energy/area": U-frame, sliding bar, F=S·L.
+- Sec 71 — "Excess pressure in drops and bubbles": single vs double circle, 2S/r vs 4S/r.
+- Sec 72 — "Angle of contact": concave water tube vs convex mercury tube.
+- Sec 73 — "Capillarity: the third consequence": water-rise tube vs mercury-depression tube.
+- Sec 74 — "Surface tension = surface energy": U-frame wire pulled out by x, S=E derivation.
+- Sec 75 — "Excess pressure in a soap bubble": hemisphere cut, tension vs pressure arrows, ΔP=4S/R.
+- Sec 76 — "Capillary rise: Jurin's law": tube+r/θ/h geometry, h=2Scosθ/rρg derivation.
+- Sec 77 — "Surface tension toolkit": 7-row colour-coded formula recap list.
+- Sec 78 — "Work to blow a soap bubble worked example": double-ring bubble, W=6.8e-4J.
+- Sec 79 — "Bubble beats drop 2:1 worked example": drop vs bubble circles, ratio=2.
+- Sec 80 — "Capillary rise and Jurin scaling worked example": tube, h=5.76cm→h'=11.52cm.
+- Sec 81 — "Coalescing droplets heat up worked example": droplet cluster→big drop, ΔT≈5.1e-4K.
+- Sec 82 — "Capillary tube cut too short worked example": short tube, flat meniscus, R'=1.6r.
+- Sec 83 — "Parallel plates and double bubble worked example": plates+meniscus, two-part derivation.
+- Sec 84 — "Pitfalls and pro-tips: surface tension": 6-row red/amber tips list.
+
+Subtopic 7 (Surface Tension and Capillarity, sec 69–84) fully DRAFTED (tsc clean,
+registered) but UNVERIFIED — audio still 404 for sec 13+.
+
 ## Current
-Continuing to draft sec 69+ (Surface Tension and Capillarity) per user direction
+Continuing to draft sec 85-86 (Chapter Recap, final subtopic) per user direction
 (keep drafting, verify later). Resume verification by: re-checking
 `curl -s -o /dev/null -w "%{http_code}" https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/english_sec_13.mp3`
 until it returns 200, then running `verify-scene.mjs` over sec 13 onward in order, fixing
