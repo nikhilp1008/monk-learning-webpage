@@ -93,8 +93,23 @@ registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13/47/
 Subtopic 5 (Viscosity and Terminal Velocity, sec 48–57) fully DRAFTED (tsc clean,
 registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13).
 
+- Sec 58 — "Poiseuille: flow through a thin tube": tube+P1/P2+L/r brackets, r^4 dependence.
+- Sec 59 — "Why radius to the fourth": cross-section circle + parabolic velocity arrows.
+- Sec 60 — "The parabolic velocity profile": tube + symmetric profile arrows, v_avg=v_max/2.
+- Sec 61 — "Fluid resistance Ohm's law analogy": series/parallel tube-resistor icons, R=8ηl/πr⁴.
+- Sec 62 — "Deriving the profile and pi/8": concentric circles (r,s), Q=πΔPr⁴/8ηl derivation.
+- Sec 63 — "Poiseuille toolkit": 7-row colour-coded formula recap list.
+- Sec 64 — "Capillary flow rate worked example": tube+L/r brackets, Q≈1.23e-7≈0.12mL/s.
+- Sec 65 — "Halving radius drops flow 16x worked example": two tubes (r vs r/2), Q'=Q/16.
+- Sec 66 — "Tubes in series worked example": narrow+wide tubes joined, ΔP1≈0.94ΔP.
+- Sec 67 — "Mean versus max velocity worked example": concentric circles, s≈0.71r.
+- Sec 68 — "Pitfalls and pro-tips: Poiseuille flow": 6-row red/amber tips list.
+
+Subtopic 6 (Poiseuille's Law and Viscous Flow Resistance, sec 58–68) fully DRAFTED
+(tsc clean, registered) but UNVERIFIED — audio still 404 for sec 13+.
+
 ## Current
-Continuing to draft sec 58+ (Poiseuille's Law) per user direction
+Continuing to draft sec 69+ (Surface Tension and Capillarity) per user direction
 (keep drafting, verify later). Resume verification by: re-checking
 `curl -s -o /dev/null -w "%{http_code}" https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/english_sec_13.mp3`
 until it returns 200, then running `verify-scene.mjs` over sec 13 onward in order, fixing
