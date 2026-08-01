@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 12 done. Starting Sec 13.
+Sec 13 done. Starting Sec 14 (last of Subtopic 1).
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -103,3 +103,7 @@ tightening delays, not by ignoring the warning.
   VERDICT PASS but stalls=6/6 — first section hitting the missing-audio
   gap (see note above); geometry not independently re-verified by eye,
   code inspected and matches the working Sec8/Sec10 pattern.
+- Sec 13 — Worked example: a pendulum clock in a Rajasthan summer —
+  pendulum icon, T=2π√(L/g) formula, log-differential ΔT/T=½αΔθ, the
+  "runs SLOW" conceptual core (red), substitution, boxed ≈13s/day answer.
+  tsc clean, VERDICT PASS, stalls=6/6 (audio gap, expected).
