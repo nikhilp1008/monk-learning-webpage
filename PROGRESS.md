@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 21 done. Starting Sec 22.
+Sec 22 done. Starting Sec 23.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -142,3 +142,7 @@ tightening delays, not by ignoring the warning.
   icon (25°C→75°C), givens, Q=(m_w c_w+m_Al c_Al)ΔT formula, substitution,
   boxed 4.41×10⁵J answer, "container matters" takeaway. tsc clean,
   VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 22 — Worked example: ice into warm water, mind the melt — wrong
+  "mix two waters" reflex (24°C, crossed out) vs budget method (water
+  gives 600cal, melt needs 400cal, surplus 200cal warms all → T=8°C),
+  "melt first" rule. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
