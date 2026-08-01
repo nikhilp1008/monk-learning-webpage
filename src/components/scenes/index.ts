@@ -928,6 +928,7 @@ import Ch09Sec67 from "./Ch09Sec67";
 import Ch09Sec68 from "./Ch09Sec68";
 import Ch09Sec69 from "./Ch09Sec69";
 import Ch09Sec70 from "./Ch09Sec70";
+import Ch09Sec71 from "./Ch09Sec71";
 
 const CH09 = "33795397-f8fe-5ef6-ba2d-64549905ecd3"; // Class 11 · Mechanical Properties of Fluids
 
@@ -1001,4 +1002,5 @@ REGISTRY[`${CH09}:67`] = Ch09Sec67;
 REGISTRY[`${CH09}:68`] = Ch09Sec68;
 REGISTRY[`${CH09}:69`] = Ch09Sec69;
 REGISTRY[`${CH09}:70`] = Ch09Sec70;
+REGISTRY[`${CH09}:71`] = Ch09Sec71;
 /* ============================ end Ch09 ============================ */
