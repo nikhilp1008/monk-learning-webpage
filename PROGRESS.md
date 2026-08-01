@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 28 done. Starting Sec 29.
+Sec 29 done. Starting Sec 30.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -174,3 +174,8 @@ tightening delays, not by ignoring the warning.
   icon + "rod=resistor" note, circuit-arithmetic takeaway. en reveals all
   exactly 1s apart — every delay kept ≤0.2s. tsc clean, VERDICT PASS,
   stalls=6/6 (audio gap).
+- Sec 29 — Convection, and when the conduction law holds — pot with
+  rising-warm/sinking-cool circulation arrows, everyday examples (sea
+  breeze, room heater), needs-a-fluid note, natural-vs-forced, boxed
+  caution on conduction law's steady-state assumptions. tsc clean,
+  VERDICT PASS, stalls=6/6 (audio gap).
