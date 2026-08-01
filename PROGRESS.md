@@ -16,9 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 25 done — Subtopic 2 (Calorimetry and Specific Heat) 100% COMPLETE
-(11/11, sections 15-25). Starting Sec 26 (Subtopic 3: Conduction/
-Convection, sections 26-37).
+Sec 26 done. Starting Sec 27.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -161,3 +159,9 @@ tightening delays, not by ignoring the warning.
   unit collisions) + amber running-heat-budget pro-tip box + 5-legs
   mnemonic. tsc clean, VERDICT PASS, stalls=6/6 (audio gap). SUBTOPIC 2
   COMPLETE (11/11).
+- Sec 26 — Conduction: the particle relay — spoon-in-chai hook, rod with
+  jostling-atom dots + vibration ticks, whispered-message analogy, free-
+  electrons note, metal-vs-wood handle puzzle + resolution (you sense
+  your skin). Opens Subtopic 3 (Heat Transfer). tsc clean, VERDICT PASS,
+  stalls=6/6 (audio gap). Caught/fixed one Devanagari-in-Hinglish typo
+  before commit — double-check Hinglish strings stay pure Latin script.
