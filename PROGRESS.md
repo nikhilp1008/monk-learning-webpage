@@ -128,9 +128,19 @@ Subtopic 6 (Poiseuille's Law and Viscous Flow Resistance, sec 58–68) fully DRA
 Subtopic 7 (Surface Tension and Capillarity, sec 69–84) fully DRAFTED (tsc clean,
 registered) but UNVERIFIED — audio still 404 for sec 13+.
 
+- Sec 85 — "Chapter formula recap": 7-row amber-bar formula list, one row per subtopic (1–8, viscosity/Poiseuille/surface-tension rows combined into 7).
+- Sec 86 — "Chapter cheat sheet": 7-row red-bar one-line takeaway per subtopic.
+
+Subtopic 8 (Recap, sec 85–86) fully DRAFTED (tsc clean, registered) but UNVERIFIED.
+
+## Chapter status
+**All 86 sections authored, registered in `index.ts`, and `npx tsc --noEmit` clean.**
+Sec 1–12 fully verified (`verify-scene.mjs` PASS both languages). Sec 13–86 drafted but
+UNVERIFIED — blocked on upstream audio (see Incident log).
+
 ## Current
-Continuing to draft sec 85-86 (Chapter Recap, final subtopic) per user direction
-(keep drafting, verify later). Resume verification by: re-checking
+Chapter authoring is complete. Remaining work is entirely the deferred verify sweep.
+Resume by: re-checking
 `curl -s -o /dev/null -w "%{http_code}" https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/english_sec_13.mp3`
 until it returns 200, then running `verify-scene.mjs` over sec 13 onward in order, fixing
 any real overlap/overflow found (the layouts were authored carefully but without the
