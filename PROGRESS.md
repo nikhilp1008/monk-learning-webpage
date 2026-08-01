@@ -33,10 +33,27 @@ Subtopic 1 (Fluid Pressure and Pascal's Law), Sec 1–11 — ALL PASS both langu
 ## Drafted but UNVERIFIED (blocking issue below)
 - Sec 13 — "Archimedes' principle by fluid replacement": two tanks (real solid body vs dashed fluid-blob), "≡" equivalence, F_B=ρf·Vsub·g, centroid arrow. Written, registered in index.ts, passes `npx tsc --noEmit`. NOT verified — see incident below.
 
+- Sec 14 — "Float, sink, or hover": tank with 3 objects (sink/hover/float), density-comparison labels.
+- Sec 15 — "Fraction submerged and the iceberg": iceberg polygon straddling waterline (~10/90 split), Vsub/V=ρb/ρf.
+- Sec 16 — "Buoyancy in accelerating frames": lift cabin, floating object, accel arrow, F_B=ρf Vsub g_eff.
+- Sec 17 — "Your buoyancy toolkit": 7-row colour-coded formula recap list.
+- Sec 18 — "Submerged iron block worked example": tank+block, weight/buoyancy arrows, W=39N, F_B=5N, Wapp=34N.
+- Sec 19 — "Wooden block in two liquids worked example": two waterlines, block at 75% then 62.5% (dim/resolve pattern).
+- Sec 20 — "Cube at oil-water interface worked example": two-layer container, 50/50 split cube, f=0.5.
+- Sec 21 — "Tethered cork in accelerating lift worked example": cork+string+3 forces, T=1.125N.
+- Sec 22 — "Pitfalls and pro-tips: buoyancy": 6-row red/amber tips list.
+
+All of sec 13–22 (subtopic 2, Buoyancy and Floatation) are DRAFTED (pass `npx tsc --noEmit`,
+registered in `index.ts`) but UNVERIFIED — see incident below.
+
 ## Current
-Blocked on missing audio for sec 13 onward (see incident). Resume by: re-checking
+Blocked on missing audio for sec 13 onward (re-checked at sec 13/20/30/50/86, still all 404
+as of this commit). Continuing to draft sections 23+ per user direction (keep drafting,
+verify later). Resume verification by: re-checking
 `curl -s -o /dev/null -w "%{http_code}" https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/english_sec_13.mp3`
-until it returns 200, then verify sec 13 and continue sec 14+.
+until it returns 200, then running `verify-scene.mjs` over sec 13 onward in order, fixing
+any real overlap/overflow found (the layouts were authored carefully but without the
+automated safety net, so budget more fix time than usual), committing each as it passes.
 
 ## Incident log
 - 2026-07-31: `verify-scene.mjs` timed out waiting for the audio element on sec 13
