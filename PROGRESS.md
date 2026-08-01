@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 29 done. Starting Sec 30.
+Sec 30 done. Starting Sec 31.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -179,3 +179,7 @@ tightening delays, not by ignoring the warning.
   breeze, room heater), needs-a-fluid note, natural-vs-forced, boxed
   caution on conduction law's steady-state assumptions. tsc clean,
   VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 30 — Fourier's law and thermal conductivity — hero formula
+  H=KA(T₁−T₂)/L, H/gradient/K definitions with units, dimensional
+  formula [MLT⁻³θ⁻¹], boxed K-values (Cu≈400, Al≈235 vs insulators),
+  steady-state reminder. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
