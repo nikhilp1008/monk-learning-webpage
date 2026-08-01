@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 33 done. Starting Sec 34.
+Sec 34 done. Starting Sec 35.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -194,4 +194,8 @@ tightening delays, not by ignoring the warning.
 - Sec 33 — Worked example: heat lost through a windowpane — pane icon
   (inside 22°C/outside 8°C), givens, H=KAΔT/L formula, substitution,
   boxed 4.2kW answer, double-glazing takeaway. tsc clean, VERDICT PASS,
+  stalls=6/6 (audio gap).
+- Sec 34 — Worked example: halve the length, double the radius — wrong
+  "double r ⇒ double A" reflex (crossed out) vs H∝A/L=r²/L fast way,
+  boxed new-rate=8H answer, r²-reflex takeaway. tsc clean, VERDICT PASS,
   stalls=6/6 (audio gap).
