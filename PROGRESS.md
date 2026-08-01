@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 4 done. Starting Sec 5.
+Sec 5 done. Starting Sec 6.
 
 ## Note
 Ch10's reveal timestamps often have 1s-tight middle beats. Keep any beat's
@@ -38,3 +38,6 @@ tightening delays, not by ignoring the warning.
 - Sec 4 — When the formulas hold, and water's rebellion — 3 numbered
   assumption chips, water density-vs-temperature graph peaking at 4°C,
   fish-under-ice + mnemonic. VERDICT PASS (eyeballed, clean).
+- Sec 5 — Temperature scales: one conversion identity — master-identity
+  formula card, F/K derived formulas, Kelvin SI note, ice/steam fixed-
+  point table, exam-secret delta box. VERDICT PASS (eyeballed, clean).
