@@ -16,9 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 37 done — Subtopic 3 (Heat Transfer: Conduction, Convection) 100%
-COMPLETE (12/12, sections 26-37). Starting Sec 38 (Subtopic 4:
-Radiation/Cooling, sections 38-49).
+Sec 38 done. Starting Sec 39.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -214,3 +212,8 @@ tightening delays, not by ignoring the warning.
   state only) + amber DC-circuit pro-tip box + "solids conduct, fluids
   convect, vacuum radiates" mnemonic. tsc clean, VERDICT PASS, stalls=6/6
   (audio gap). SUBTOPIC 3 COMPLETE (12/12).
+- Sec 38 — Radiation: heat across empty space, and Prevost's exchange —
+  sun+rays hook (crosses vacuum), radiation=EM-waves note, "everyone
+  radiates" note, Prevost body icon with in/out arrows (absorb/emit),
+  net-balance note, equilibrium note. Opens Subtopic 4 (Radiation and
+  Cooling Laws). tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
