@@ -1478,6 +1478,20 @@ import P12Ch05Sec53 from "./P12Ch05Sec53";
 import P12Ch05Sec54 from "./P12Ch05Sec54";
 import P12Ch05Sec55 from "./P12Ch05Sec55";
 import P12Ch05Sec56 from "./P12Ch05Sec56";
+import P12Ch05Sec57 from "./P12Ch05Sec57";
+import P12Ch05Sec58 from "./P12Ch05Sec58";
+import P12Ch05Sec59 from "./P12Ch05Sec59";
+import P12Ch05Sec60 from "./P12Ch05Sec60";
+import P12Ch05Sec61 from "./P12Ch05Sec61";
+import P12Ch05Sec62 from "./P12Ch05Sec62";
+import P12Ch05Sec63 from "./P12Ch05Sec63";
+import P12Ch05Sec64 from "./P12Ch05Sec64";
+import P12Ch05Sec65 from "./P12Ch05Sec65";
+import P12Ch05Sec66 from "./P12Ch05Sec66";
+import P12Ch05Sec67 from "./P12Ch05Sec67";
+import P12Ch05Sec68 from "./P12Ch05Sec68";
+import P12Ch05Sec69 from "./P12Ch05Sec69";
+import P12Ch05Sec70 from "./P12Ch05Sec70";
 
 const P12CH05 = "cf5d01e5-1a4b-538b-9e72-4d7074b2f61d"; // Class 12 · Magnetism and Matter
 
@@ -1537,4 +1551,18 @@ REGISTRY[`${P12CH05}:53`] = P12Ch05Sec53;
 REGISTRY[`${P12CH05}:54`] = P12Ch05Sec54;
 REGISTRY[`${P12CH05}:55`] = P12Ch05Sec55;
 REGISTRY[`${P12CH05}:56`] = P12Ch05Sec56;
+REGISTRY[`${P12CH05}:57`] = P12Ch05Sec57;
+REGISTRY[`${P12CH05}:58`] = P12Ch05Sec58;
+REGISTRY[`${P12CH05}:59`] = P12Ch05Sec59;
+REGISTRY[`${P12CH05}:60`] = P12Ch05Sec60;
+REGISTRY[`${P12CH05}:61`] = P12Ch05Sec61;
+REGISTRY[`${P12CH05}:62`] = P12Ch05Sec62;
+REGISTRY[`${P12CH05}:63`] = P12Ch05Sec63;
+REGISTRY[`${P12CH05}:64`] = P12Ch05Sec64;
+REGISTRY[`${P12CH05}:65`] = P12Ch05Sec65;
+REGISTRY[`${P12CH05}:66`] = P12Ch05Sec66;
+REGISTRY[`${P12CH05}:67`] = P12Ch05Sec67;
+REGISTRY[`${P12CH05}:68`] = P12Ch05Sec68;
+REGISTRY[`${P12CH05}:69`] = P12Ch05Sec69;
+REGISTRY[`${P12CH05}:70`] = P12Ch05Sec70;
 /* ============================ end P12Ch05 ============================ */
