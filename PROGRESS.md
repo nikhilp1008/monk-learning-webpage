@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 38 done. Starting Sec 39.
+Sec 39 done. Starting Sec 40.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -217,3 +217,7 @@ tightening delays, not by ignoring the warning.
   radiates" note, Prevost body icon with in/out arrows (absorb/emit),
   net-balance note, equilibrium note. Opens Subtopic 4 (Radiation and
   Cooling Laws). tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 39 — The fierce T-to-the-fourth law and Wien's colour of glow —
+  "double T ⇒ power ×16" reveal, P∝T⁴ explanation, iron-rod colour
+  progression (dull red→orange→yellow→white circles), wavelength-shift
+  note, Wien's law. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
