@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 10 done. Starting Sec 11.
+Sec 11 done. Starting Sec 12.
 
 ## Note
 Ch10's reveal timestamps often have 1s-tight middle beats. Keep any beat's
@@ -58,3 +58,8 @@ tightening delays, not by ignoring the warning.
 - Sec 10 — Worked example: a railway rail in the afternoon sun — sun +
   rail-bar setup (18°C→48°C), givens, ΔL=αL₀ΔT formula, substitution,
   boxed answer 4.32mm, Indian Railways takeaway. VERDICT PASS (eyeballed).
+- Sec 11 — Speed trap: a fever on the Fahrenheit scale — wrong-reflex box
+  (37.4°F, crossed out) vs correct ΔF=9/5ΔC=5.4°F (green box+check),
+  remember-box (ΔK=ΔC, never add 32). VERDICT PASS (all beats 0-4 exactly
+  1s apart — every delay kept ≤0.2s to stay within the verifier's settle
+  window; still passed clean).
