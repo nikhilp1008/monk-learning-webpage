@@ -16,7 +16,8 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 13 done. Starting Sec 14 (last of Subtopic 1).
+Sec 14 done — Subtopic 1 (Temperature, Heat and Expansion) 100% COMPLETE
+(14/14). Starting Sec 15 (Subtopic 2: Calorimetry, sections 15-25).
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -107,3 +108,8 @@ tightening delays, not by ignoring the warning.
   pendulum icon, T=2π√(L/g) formula, log-differential ΔT/T=½αΔθ, the
   "runs SLOW" conceptual core (red), substitution, boxed ≈13s/day answer.
   tsc clean, VERDICT PASS, stalls=6/6 (audio gap, expected).
+- Sec 14 — Pitfalls and pro-tips for expansion — numbered-badge closer
+  (4 pitfalls: never add 32 to ΔT, use L₀ not final L, hole expands too,
+  apparent expansion for liquids) + amber sanity-check box (1mm/m/100°C).
+  Matches the Ch01Sec90 house motif. tsc clean, VERDICT PASS, stalls=6/6
+  (audio gap, expected). SUBTOPIC 1 COMPLETE (14/14).
