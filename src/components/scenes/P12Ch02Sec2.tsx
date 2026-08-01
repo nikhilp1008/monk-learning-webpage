@@ -2,58 +2,27 @@
 
 /**
  * P12Ch02 · Section 2 — "Potential is a scalar — add with sign, not direction"
- * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md & SCENE_PLAYBOOK.md.
- *
- * OBJECT-RICH OPEN CHALKBOARD DESIGN (NO HEAVY CONTAINERS):
- *  - Electric potential V is a SCALAR quantity!
- *  - Superposition: Total potential V_total = V₁ + V₂ + V₃ + ... = Σ (k Q_i / r_i)
- *  - CRITICAL: Add with ALGEBRAIC SIGNS (+ for positive charge, - for negative charge)!
- *  - NO vector components or vector resolution required!
- *
- * Beats (en [0,9,23,33,45,56,70,82]):
- *  0 Title "potential is a scalar — add with sign, not direction" + drawn underline
- *  1 Hook note: unlike force/field vector addition, potential adds algebraically with sign!
- *  2 Badge 1 & Scalar Superposition: V_total = Σ (k Q_i / r_i)
- *  3 Badge 2 & Charge Signs Matter: Positive charge → +V, Negative charge → -V
- *  4 Badge 3 & Zero Potential Points: V can be zero where positive & negative potentials cancel!
- *  5 Worked Example: Dipole midpoint V = k(+q)/a + k(-q)/a = 0!
- *  6 Summary: No vector components needed for potential calculations!
- *  7 Grand Verdict: V_total = Σ (k q_i / r_i)  (Algebraic sum with signs)!
+ * Subtopic: Electrostatic Potential & Capacitance
+ * OPEN CHALKBOARD DESIGN WITH INTERACTIVE VECTOR DIAGRAMS (NO CONTAINER BOXES):
+ *  - Interactive SVG Multi-Charge Configuration (+q₁, -q₂, +q₃) around target point P
+ *  - Distance vectors r₁, r₂, r₃ and scalar potential contribution breakdown
+ *  - Zero card box containers (<rect fill={CREAM}> removed completely)
  */
 
 import React from "react";
 import {
-  SceneProps,
-  useBeat,
-  delayFor,
-  Fade,
-  Draw,
-  T,
-  Chip,
-  ringD,
-  INK,
-  MUTED,
-  AMBER_DARK,
-  GREEN,
-  RED,
-  CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
+  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
   return (
     <g>
-      <Draw
-        on={on}
-        delay={delay}
+      <Draw on={on} delay={delay}
         d={`M ${cx - 13} ${cy} A 13 13 0 1 1 ${cx + 13} ${cy} A 13 13 0 1 1 ${cx - 13} ${cy}`}
-        stroke={RED}
-        sw={2.2}
-        dur={0.4}
-      />
+        stroke={RED} sw={2.2} dur={0.4} />
       <Fade on={on} delay={delay + 0.3}>
-        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>
-          {n}
-        </T>
+        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>{n}</T>
       </Fade>
     </g>
   );
@@ -65,94 +34,133 @@ export default function P12Ch02Sec2({ currentTime, reveals, language }: ScenePro
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Dynamic pulsing effect for target point P
+  const pulseR = 8 + Math.sin(currentTime * 4) * 2;
+
   return (
-    <svg
-      viewBox="0 0 1080 620"
-      preserveAspectRatio="xMidYMin meet"
-      className="w-full h-full select-none"
-    >
-      {/* ── BEAT 0: Title ── */}
+    <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t(
-            "potential is a scalar — add with sign, not direction",
-            "potential scalar hai — sign ke sath add karein, direction nahi"
-          )}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Potential is a Scalar: Add algebraically with Signs, Not Vectors", "Potential Scalar Hai: Signs ke sath Add Karein, Vectors nahi")}
         </T>
       </Fade>
-      <Draw
-        on={beat >= 0}
-        delay={dl(0, 2.5)}
-        d="M 180 70 C 440 66, 640 74, 900 69"
-        stroke={RED}
-        sw={2.4}
-        dur={0.7}
-      />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* ── BEAT 1: Hook Note ── */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={110} size={15} fill={MUTED} script anchor="start">
-          {t(
-            "unlike force/field vector addition, potential adds algebraically with sign!",
-            "force/field vector addition ke opposite, potential algebraically sign ke sath add hota hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 2: Badge 1 & Scalar Superposition ── */}
-      <Badge n={1} cx={52} cy={165} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 1)}>
-        <T x={74} y={170} size={14} fill={RED} weight={700} anchor="start">
-          {t("SCALAR SUPERPOSITION: V_total = Σ V_i", "SCALAR SUPERPOSITION: V_total = Σ V_i")}
-        </T>
-      </Fade>
-
-      <Fade on={beat >= 2} dim={beat >= 5}>
-        <g transform="translate(60, 185)">
-          <rect x={0} y={10} width={430} height={85} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={215} y={48} anchor="middle" size={20} fill={INK} weight={800}>
-            V_total = k (q₁/r₁ + q₂/r₂ + ...)
+      {/* LEFT SECTION: MULTI-CHARGE SYSTEM DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SYSTEM OF CHARGES AROUND POINT P", "SYSTEM OF CHARGES AROUND POINT P")}
           </T>
-          <T x={215} y={78} anchor="middle" size={13} fill={AMBER_DARK} script>
-            {t("Pure algebraic addition — NO vector components!", "Simple algebraic sum — koi vector components nahi!")}
-          </T>
-          <Draw on={beat >= 2} delay={dl(2, 1.6)} d="M 100 56 h 230 M 100 60 h 230" stroke={AMBER_DARK} sw={1.5} />
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* ── BEAT 3: Badge 2 & Charge Signs Matter ── */}
-      <Badge n={2} cx={540} cy={165} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 1)}>
-        <T x={562} y={170} size={14} fill={RED} weight={700} anchor="start">
-          {t("CHARGE SIGNS (+ / -) DEFINE POTENTIAL", "CHARGE SIGNS (+ / -) DEFINE POTENTIAL")}
-        </T>
-      </Fade>
+        {/* Target Point P */}
+        <Fade on={beat >= 1}>
+          <circle cx={250} cy={200} r={pulseR} fill={RED} />
+          <T x={250} y={175} size={16} fill={RED} weight={900}>Point P</T>
+        </Fade>
 
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(540, 185)">
-          <T x={0} y={25} anchor="start" size={14} fill={INK} weight={700}>
-            +q creates Positive Potential (+V)
-          </T>
-          <T x={0} y={65} anchor="start" size={20} fill={RED} weight={800}>
-            -q creates Negative Potential (-V)
-          </T>
-        </g>
-      </Fade>
+        {/* Charge 1: +q1 */}
+        <Fade on={beat >= 2}>
+          <circle cx={80} cy={100} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={80} y={107} size={18} fill={RED} weight={800}>+q₁</T>
+          <line x1="98" y1="112" x2="235" y2="190" stroke={RED} strokeWidth={2} strokeDasharray="5 5" />
+          <T x={150} y={140} size={13} fill={RED} weight={700}>r₁</T>
+        </Fade>
 
-      {/* ── BEAT 7: Grand Verdict Chip ── */}
+        {/* Charge 2: -q2 */}
+        <Fade on={beat >= 3}>
+          <circle cx={420} cy={110} r={22} fill="#dcfce7" stroke={GREEN} strokeWidth={2} />
+          <T x={420} y={117} size={20} fill={GREEN} weight={800}>-q₂</T>
+          <line x1="403" y1="122" x2="265" y2="190" stroke={GREEN} strokeWidth={2} strokeDasharray="5 5" />
+          <T x={350} y={145} size={13} fill={GREEN} weight={700}>r₂</T>
+        </Fade>
+
+        {/* Charge 3: +q3 */}
+        <Fade on={beat >= 4}>
+          <circle cx={140} cy={330} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={140} y={337} size={18} fill={RED} weight={800}>+q₃</T>
+          <line x1="155" y1="315" x2="238" y2="212" stroke={RED} strokeWidth={2} strokeDasharray="5 5" />
+          <T x={180} y={270} size={13} fill={RED} weight={700}>r₃</T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 4}>
+          <T x={250} y={385} anchor="middle" size={15} fill={INK} weight={800}>
+            Potential V is a SCALAR — no vector resolution into X and Y components!
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: ALGEBRAIC SCALAR SUPERPOSITION */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SCALAR ALGEBRAIC SUMMATION", "SCALAR ALGEBRAIC SUMMATION")}
+          </T>
+        </Fade>
+
+        {/* Free Floating Derivation Steps (No Card Boxes) */}
+        <Fade on={beat >= 5}>
+          <T x={50} y={90} size={18} fill={INK} weight={800} anchor="start">
+            Individual Contributions at Point P:
+          </T>
+
+          <T x={80} y={135} size={16} fill={RED} weight={800} anchor="start">
+            V₁ = + k q₁ / r₁   (Positive Charge → Positive Potential)
+          </T>
+
+          <T x={80} y={185} size={16} fill={GREEN} weight={800} anchor="start">
+            V₂ = − k q₂ / r₂   (Negative Charge → Negative Potential)
+          </T>
+
+          <T x={80} y={235} size={16} fill={RED} weight={800} anchor="start">
+            V₃ = + k q₃ / r₃   (Positive Charge → Positive Potential)
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 50 260 L 450 260" stroke={INK} sw={2} />
+
+          <T x={50} y={305} size={22} fill={GREEN} weight={800} anchor="start">
+            V_total = V₁ + V₂ + V₃ = Σ (k q_i / r_i)
+          </T>
+        </Fade>
+
+        {/* Spacious Open Text Note */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={385} anchor="middle" size={15} fill={AMBER_DARK} weight={700}>
+            Simply add with proper signs (+ / -). Zero potential V = 0 occurs where +V and -V cancel!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("DIPOLE MIDPOINT EXAMPLE", "DIPOLE MIDPOINT EXAMPLE")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Example: Midpoint of Dipole (+q & -q at distance 2a) → V_mid = k(+q)/a + k(-q)/a = 0 V!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Electric field E ≠ 0 at midpoint, but Potential V = 0! Potential is scalar addition with sign.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip
-          x={100}
-          y={536}
-          w={880}
-          h={44}
-          fill={GREEN}
-          textFill="#ffffff"
-          size={18}
-        >
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ VERDICT: V_total = Σ (k q_i / r_i)  (Algebraic sum with signs)!",
-            "★ VERDICT: V_total = Σ (k q_i / r_i)  (Algebraic sum with signs)!"
+            "★ Superposition Verdict: V_total = Σ (k q_i / r_i) is a pure scalar algebraic sum using charge signs (+ / -)! ✓",
+            "★ Superposition Verdict: V_total = Σ (k q_i / r_i) charge signs (+ / -) ke sath pure scalar sum hai! ✓"
           )}
         </Chip>
       </Fade>

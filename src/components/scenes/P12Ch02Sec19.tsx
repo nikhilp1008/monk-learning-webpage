@@ -2,13 +2,17 @@
 
 /**
  * P12Ch02 · Section 19 — "Deriving the potential energy of a two-charge system"
- * Beats (en [0,5,16,29,42,49,65,75]): 8 beats
- * FIXED: removed inner label overlap in result box by combining into single text.
+ * Subtopic: Potential Energy & External Fields
+ * OPEN CHALKBOARD DESIGN WITH TWO-CHARGE INTEGRAL PROOF (NO CONTAINER BOXES):
+ *  - Bringing q₂ from ∞ to distance r₁₂ from q₁
+ *  - Coulomb force F_E = k q₁ q₂ / x²
+ *  - Calculus integration: U = W_ext = - ∫_∞^r₁₂ F_E dx = k q₁ q₂ / r₁₂
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -31,93 +35,124 @@ export default function P12Ch02Sec19({ currentTime, reveals, language }: ScenePr
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Moving charge q2 from infinity towards q1
+  const animPos = (currentTime * 0.7) % 1;
+  const q2X = 440 - animPos * 200;
+
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("derivation: PE of two point charges", "derivation: do point charges ki PE")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Derivation: Two-Charge System Potential Energy U = kq₁q₂/r₁₂", "Derivation: Two-Charge System Potential Energy U = kq₁q₂/r₁₂")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 240 70 C 440 66, 640 74, 840 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Assembly setup */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={110} size={14} fill={MUTED} anchor="start" script>
-          {t(
-            "Start: empty stage, U = 0 when charges infinitely apart",
-            "Start: khaali stage, U = 0 jab charges infinite door hain"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 2: Step 1 — bring q₁ */}
-      <Badge n={1} cx={52} cy={155} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={160} size={14} fill={RED} weight={700} anchor="start">STEP 1: BRING q₁ TO POSITION</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <g transform="translate(74, 175)">
-          <rect x={0} y={5} width={500} height={45} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={250} y={34} anchor="middle" size={16} fill={INK} weight={800}>
-            Stage empty → no force → W₁ = 0
+      {/* LEFT SECTION: INTEGRATION AXIS & FORCE VECTORS */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("BRINGING q₂ FROM ∞ TO DISTANCE r₁₂ FROM q₁", "BRINGING q₂ FROM ∞ TO DISTANCE r₁₂ FROM q₁")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: V₁ at q₂'s location */}
-      <Fade on={beat >= 3} delay={dl(3, 0.5)}>
-        <g transform="translate(600, 155)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            V₁ = (1/4πε₀) · q₁ / r₁₂
+        <Fade on={beat >= 1}>
+          {/* Station Charge q1 */}
+          <circle cx={80} cy={180} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2.5} />
+          <T x={80} y={187} size={18} fill={RED} weight={900}>+q₁</T>
+
+          {/* Integration axis */}
+          <line x1="102" y1="180" x2="460" y2="180" stroke={INK} strokeWidth={2.5} />
+
+          {/* Target distance r12 */}
+          <line x1="240" y1="165" x2="240" y2="195" stroke={GREEN} strokeWidth={3} />
+          <T x={240} y={150} size={15} fill={GREEN} weight={800}>Final Position (r₁₂)</T>
+
+          {/* Moving charge q2 */}
+          <circle cx={q2X} cy={180} r={12} fill={GREEN} />
+          <T x={q2X} y={185} size={13} fill="#ffffff" weight={900}>+q₂</T>
+
+          {/* Force Vectors F_E and F_ext */}
+          <path d={arrowD(q2X, 180, q2X + 45, 180)} stroke={RED} strokeWidth={2.5} />
+          <T x={q2X + 25} y={165} size={11} fill={RED} weight={800}>F_E</T>
+
+          <path d={arrowD(q2X, 180, q2X - 45, 180)} stroke={GREEN} strokeWidth={2.5} />
+          <T x={q2X - 35} y={165} size={11} fill={GREEN} weight={800}>F_ext</T>
+        </Fade>
+
+        {/* Free Floating Differential Work (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            dW = F_ext · dx = − F_E dx = − (k q₁ q₂ / x²) dx
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 4: Step 2 — bring q₂ */}
-      <Badge n={2} cx={52} cy={260} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={265} size={14} fill={RED} weight={700} anchor="start">STEP 2: BRING q₂ INTO q₁'s FIELD</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 7}>
-        <T x={74} y={290} size={13} fill={INK} anchor="start" script>
-          {t(
-            "q₂ moves into the potential V₁ already created by q₁",
-            "q₂ us potential V₁ mein jaata hai jo q₁ ne already banaya hai"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 5: Final result — single box, no overlapping labels */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">TOTAL PE = W₁ + W₂ = 0 + q₂V₁</T>
-      </Fade>
-      <Fade on={beat >= 5}>
-        <g transform="translate(60, 365)">
-          <rect x={0} y={0} width={540} height={55} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={270} y={36} anchor="middle" size={24} fill={RED} weight={800}>
-            U = (1/4πε₀) · q₁q₂ / r₁₂
+      {/* RIGHT SECTION: CALCULUS PROOF STEPS */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("STEP-BY-STEP INTEGRAL DERIVATION", "STEP-BY-STEP INTEGRAL DERIVATION")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 6: Explanation */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={60} y={445} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "W₂ = q₂V₁ by definition of potential. Total U = W₁ + W₂ = 0 + q₂V₁",
-            "W₂ = q₂V₁ potential ki definition se. Total U = W₁ + W₂ = 0 + q₂V₁"
-          )}
-        </T>
-      </Fade>
+        {/* Floating Calculus Equations (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. Total Work W = ∫_∞^r₁₂ dW = − ∫_∞^r₁₂ (k q₁ q₂ / x²) dx
+          </T>
 
-      {/* BEAT 7: Order independence */}
+          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Integrate: W = − k q₁ q₂ [ − 1 / x ]_∞^r₁₂
+          </T>
+
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Apply Limits: W = k q₁ q₂ ( 1/r₁₂ − 1/∞ ) = k q₁ q₂ / r₁₂
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={800} anchor="start">
+            4. U = W_ext = k q₁ q₂ / r₁₂  (Q.E.D.)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Valid for both positive and negative charges — include proper signs (+ / -)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("DERIVATION VERDICT & SYSTEM RECAP", "DERIVATION VERDICT & SYSTEM RECAP")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Electrostatic potential energy is stored in the electric field surrounding the pair!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Reference zero at infinite separation: U(∞) = 0 J!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Bring q₂ first instead → SAME answer! Order never matters (conservative force) ✓",
-            "★ q₂ pehle laao → SAME answer! Order matter nahi karta (conservative force) ✓"
+            "★ Proof Completed: Potential energy of two point charges U = k q₁ q₂ / r₁₂ via calculus integration! ✓",
+            "★ Proof Completed: Potential energy of two point charges U = k q₁ q₂ / r₁₂ via calculus integration! ✓"
           )}
         </Chip>
       </Fade>

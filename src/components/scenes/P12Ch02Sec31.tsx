@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 31 — "Formula toolkit: stored energy and energy density"
- * Beats (en [0,5,17,27,41,55,62,75]): 8 beats
+ * Subtopic: Capacitance, Dielectrics & Stored Energy
+ * OPEN CHALKBOARD DESIGN WITH STORED ENERGY FORMULAS (NO CONTAINER BOXES):
+ *  - 1. Stored Energy: U = ½ C V² = ½ Q V = Q² / (2C)
+ *  - 2. Energy Density: u_E = U / Volume = ½ ε₀ E²  [Joules / m³]
+ *  - 3. Energy in Dielectric Medium: u_E = ½ K ε₀ E²
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,95 +37,107 @@ export default function P12Ch02Sec31({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("energy stored in a capacitor", "capacitor mein stored energy")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Formula Toolkit: Stored Energy U = ½CV² & Energy Density u_E = ½ε₀E²", "Formula Toolkit: Stored Energy U = ½CV² & Energy Density u_E = ½ε₀E²")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 320 70 C 440 66, 640 74, 760 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Three formulas */}
-      <Badge n={1} cx={52} cy={120} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 1)}>
-        <T x={74} y={125} size={14} fill={RED} weight={700} anchor="start">TOTAL ENERGY (U)</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 140)">
-          <rect x={0} y={5} width={600} height={55} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={300} y={40} anchor="middle" size={24} fill={RED} weight={800}>
-            U = ½CV² = Q²/(2C) = ½QV
+      {/* LEFT SECTION: THREE EQUIVALENT ENERGY FORMULAS */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("TOTAL STORED ENERGY U FORMULAS", "TOTAL STORED ENERGY U FORMULAS")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: Identical algebraically */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={60} y={225} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Algebraically identical — but choosing the right one saves your life in dielectric problems!",
-            "Algebraically identical — lekin dielectric problems mein sahi form chunna life bachata hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: How to choose */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <g transform="translate(60, 255)">
-          <rect x={0} y={0} width={400} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={26} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            {t("Q IS FIXED (Disconnected)", "Q FIXED HAI (Disconnected)")}
+        {/* Floating Formulas (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={85} size={16} fill={GREEN} weight={900} anchor="start">
+            U = ½ C V²   (Best when Voltage V is constant!)
           </T>
-          <T x={200} y={48} anchor="middle" size={18} fill={INK} weight={800}>Use: U = Q²/(2C)</T>
-        </g>
-        <g transform="translate(500, 255)">
-          <rect x={0} y={0} width={400} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={200} y={26} anchor="middle" size={14} fill={GREEN} weight={700}>
-            {t("V IS FIXED (Connected)", "V FIXED HAI (Connected)")}
+
+          <T x={40} y={150} size={16} fill={AMBER_DARK} weight={900} anchor="start">
+            U = ½ Q V   (Average Potential Work)
           </T>
-          <T x={200} y={48} anchor="middle" size={18} fill={INK} weight={800}>Use: U = ½CV²</T>
-        </g>
-      </Fade>
 
-      {/* BEAT 4: Consequence of choosing well */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <T x={60} y={345} size={13} fill={INK} anchor="start" script>
-          {t(
-            "Pick the form matching your fixed quantity → scaling by K falls out cleanly!",
-            "Fixed quantity wala form chuno → K scaling easily dikh jayegi!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 5: Energy density */}
-      <Badge n={2} cx={52} cy={395} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 1)}>
-        <T x={74} y={400} size={14} fill={RED} weight={700} anchor="start">ENERGY DENSITY (u = U/Volume)</T>
-      </Fade>
-      <Fade on={beat >= 5}>
-        <g transform="translate(60, 415)">
-          <rect x={0} y={5} width={400} height={55} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={40} anchor="middle" size={24} fill={INK} weight={800}>
-            u = ½ε₀E²
+          <T x={40} y={215} size={16} fill={RED} weight={900} anchor="start">
+            U = Q² / (2C)   (Best when Charge Q is constant!)
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 6: Physical meaning */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={60} y={500} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Deep physics: energy isn't on the plates — it's stored in the FIELD itself!",
-            "Deep physics: energy plates pe nahi hai — FIELD mein store hoti hai!"
-          )}
-        </T>
-      </Fade>
+        {/* Free Floating Rule (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={16} fill={RED} weight={800}>
+            Energy is stored IN THE ELECTRIC FIELD between the plates!
+          </T>
+        </Fade>
+      </g>
 
-      {/* BEAT 7: Battery heat note */}
+      {/* RIGHT SECTION: ELECTRIC ENERGY DENSITY u_E */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ENERGY DENSITY u_E (ENERGY PER UNIT VOLUME)", "ENERGY DENSITY u_E (ENERGY PER UNIT VOLUME)")}
+          </T>
+        </Fade>
+
+        {/* Floating Energy Density Formulas (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. Vacuum Energy Density:
+          </T>
+
+          <T x={70} y={135} size={19} fill={GREEN} weight={900} anchor="start">
+            u_E = ½ ε₀ E²   [Joules / m³]
+          </T>
+
+          <T x={50} y={205} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Dielectric Medium (Constant K):
+          </T>
+
+          <T x={70} y={255} size={19} fill={GREEN} weight={900} anchor="start">
+            u_E = ½ K ε₀ E²   [Joules / m³]
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={350} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Universal formula — holds for ANY electric field configuration in space!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CAPACITOR ENERGY RECAP", "CAPACITOR ENERGY RECAP")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Total Energy U = u_E × (Plate Area A × Spacing d) = (½ ε₀ E²) (A d)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Half of battery work W_battery = Q V is lost as heat during charging (U_capacitor = ½ Q V)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Battery does work QV. Capacitor stores ½QV. The other ½QV is lost as HEAT! ✓",
-            "★ Battery QV work karti. Capacitor ½QV store karta. Baaki ½QV HEAT mein loss! ✓"
+            "★ Stored Energy Mastered: U = ½CV² = ½QV = Q²/(2C) and Energy Density u_E = ½ε₀E² (J/m³)! ✓",
+            "★ Stored Energy Mastered: U = ½CV² = ½QV = Q²/(2C) and Energy Density u_E = ½ε₀E² (J/m³)! ✓"
           )}
         </Chip>
       </Fade>

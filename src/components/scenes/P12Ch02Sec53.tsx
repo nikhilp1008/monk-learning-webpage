@@ -1,13 +1,19 @@
 "use client";
 
 /**
- * P12Ch02 · Section 53 — "Parallel — side by side, sharing voltage"
- * Beats (en [0,5,13,26,38,49,59]): 7 beats
+ * P12Ch02 · Section 53 — "Charge redistribution — connecting two charged spheres"
+ * Subtopic: Series & Parallel Combinations & Charge Sharing
+ * OPEN CHALKBOARD DESIGN WITH CHARGE REDISTRIBUTION DIAGRAM (NO CONTAINER BOXES):
+ *  - Spheres (C₁, V₁) and (C₂, V₂) connected by thin conducting wire
+ *  - Common Potential V_common = (C₁ V₁ + C₂ V₂) / (C₁ + C₂)
+ *  - Final Charge Ratio: q₁' / q₂' = C₁ / C₂
+ *  - Energy Loss ΔU = ½ [C₁ C₂ / (C₁ + C₂)] (V₁ - V₂)²  (Dissipated as heat!)
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,119 +38,109 @@ export default function P12Ch02Sec53({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Parallel: capacitors side by side", "Parallel: capacitors ek doosre ke side by side")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Charge Redistribution: Common Potential V_com & Energy Loss ΔU = ½[C₁C₂/(C₁+C₂)](V₁−V₂)²", "Charge Redistribution: Common Potential V_com & Energy Loss ΔU = ½[C₁C₂/(C₁+C₂)](V₁−V₂)²")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 320 70 C 440 66, 640 74, 760 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — Parallel capacitors */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 5}>
-        <g transform="translate(300, 100)">
-          {/* Main wires */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M -100 150 L 0 150 L 0 50" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 500 150 L 400 150 L 400 50" stroke={INK} sw={2} />
-          {/* Top rail */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 0 50 L 400 50" stroke={INK} sw={2} />
-          {/* Bottom rail */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 0 250 L 400 250" stroke={INK} sw={2} />
-          {/* Verticals */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 0 150 L 0 250" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 400 150 L 400 250" stroke={INK} sw={2} />
-          
-          {/* Battery symbol */}
-          <line x1={180} y1={250} x2={220} y2={250} stroke={INK} strokeWidth={3} />
-          <line x1={190} y1={240} x2={190} y2={260} stroke={INK} strokeWidth={3} />
-          <line x1={210} y1={230} x2={210} y2={270} stroke={INK} strokeWidth={5} />
-          <T x={200} y={290} size={16} fill={INK} weight={700}>Total V</T>
-
-          {/* C1 */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 100 50 L 100 80" stroke={INK} sw={2} />
-          <rect x={70} y={80} width={60} height={10} fill="#3b82f6" />
-          <rect x={70} y={100} width={60} height={10} fill="#3b82f6" />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 100 110 L 100 150" stroke={INK} sw={2} />
-          <T x={50} y={95} size={14} fill={INK} weight={700}>C₁</T>
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 100 150 L 100 250" stroke={INK} sw={2} />
-
-          {/* C2 */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 200 50 L 200 80" stroke={INK} sw={2} />
-          <rect x={170} y={80} width={60} height={10} fill="#10b981" />
-          <rect x={170} y={100} width={60} height={10} fill="#10b981" />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 200 110 L 200 150" stroke={INK} sw={2} />
-          <T x={150} y={95} size={14} fill={INK} weight={700}>C₂</T>
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 200 150 L 200 250" stroke={INK} sw={2} />
-
-          {/* C3 */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 300 50 L 300 80" stroke={INK} sw={2} />
-          <rect x={270} y={80} width={60} height={10} fill="#f59e0b" />
-          <rect x={270} y={100} width={60} height={10} fill="#f59e0b" />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 300 110 L 300 150" stroke={INK} sw={2} />
-          <T x={250} y={95} size={14} fill={INK} weight={700}>C₃</T>
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 300 150 L 300 250" stroke={INK} sw={2} />
-
-          {/* Charges */}
-          <Fade on={beat >= 3} delay={dl(3, 0.5)}>
-            <T x={100} y={70} size={14} fill={RED} weight={700}>Q₁</T>
-            <T x={200} y={70} size={14} fill={RED} weight={700}>Q₂</T>
-            <T x={300} y={70} size={14} fill={RED} weight={700}>Q₃</T>
-          </Fade>
-        </g>
-      </Fade>
-
-      {/* BEAT 2: Voltage is same */}
-      <Badge n={1} cx={52} cy={420} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={425} size={14} fill={RED} weight={700} anchor="start">VOLTAGE V IS SAME FOR ALL</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 5}>
-        <T x={74} y={450} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Clipped to the same two rails, so they all see the identical voltage V.",
-            "Same do rails pe jude hain, toh sabhi ko same voltage V milta hai."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Charges add up */}
-      <Badge n={2} cx={52} cy={490} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={495} size={14} fill={RED} weight={700} anchor="start">CHARGES ADD UP</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 6}>
-        <g transform="translate(60, 510)">
-          <rect x={0} y={5} width={400} height={40} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={32} anchor="middle" size={16} fill={INK} weight={800}>
-            Total Q = Q₁ + Q₂ + Q₃
+      {/* LEFT SECTION: CONNECTED SPHERES DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CONNECTING CONDUCTORS VIA WIRE", "CONNECTING CONDUCTORS VIA WIRE")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: More area */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <T x={500} y={450} size={13} fill={AMBER_DARK} anchor="start" script>
+        {/* Conductors Diagram */}
+        <Fade on={beat >= 1}>
+          {/* Sphere 1 */}
+          <circle cx={110} cy={180} r={55} fill="#ffe4e6" stroke={RED} strokeWidth={3} opacity={0.4} />
+          <T x={110} y={185} size={14} fill={RED} weight={900} anchor="middle">Sphere 1 (C₁, V₁)</T>
+
+          {/* Wire */}
+          <line x1="165" y1="180" x2="315" y2="180" stroke={INK} strokeWidth={3} />
+          <T x={240} y={165} size={13} fill={INK} weight={800} anchor="middle">Connecting Wire</T>
+
+          {/* Sphere 2 */}
+          <circle cx={370} cy={180} r={55} fill="#dcfce7" stroke={GREEN} strokeWidth={3} opacity={0.4} />
+          <T x={370} y={185} size={14} fill={GREEN} weight={900} anchor="middle">Sphere 2 (C₂, V₂)</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={AMBER_DARK} weight={900}>
+            Common Potential V_com = (C₁ V₁ + C₂ V₂) / (C₁ + C₂)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: ENERGY LOSS & CHARGE RATIO */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ENERGY DISSIPATION & FINAL CHARGES", "ENERGY DISSIPATION & FINAL CHARGES")}
+          </T>
+        </Fade>
+
+        {/* Floating Derivation Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. Final Charge Ratio: q₁' / q₂' = C₁ / C₂
+          </T>
+
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. For Spheres: q₁' / q₂' = R₁ / R₂
+          </T>
+
+          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+            3. Energy Loss ΔU = U_initial − U_final
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={19} fill={RED} weight={900} anchor="start">
+            4. ΔU = ½ [ (C₁ C₂) / (C₁ + C₂) ] (V₁ − V₂)²
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            ΔU is ALWAYS positive (Energy is lost as heat I²R & spark electromagnetic waves)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CHARGE SHARING RECAP", "CHARGE SHARING RECAP")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Charge flows from HIGHER potential to LOWER potential until potentials equalize (V₁ = V₂ = V_com)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            If opposite polarities are connected: V_com = (C₁ V₁ − C₂ V₂) / (C₁ + C₂)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "More capacitors in parallel means more total plate area. Capacitance INCREASES.",
-            "Parallel mein aur capacitors lagane ka matlab hai zyada plate area. Capacitance BADHTI hai."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 5: Big capacitor */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <g transform="translate(750, 150)">
-          <rect x={0} y={0} width={200} height={10} fill="#6ee7b7" />
-          <rect x={0} y={20} width={200} height={10} fill="#6ee7b7" />
-          <T x={100} y={-10} size={16} fill={GREEN} weight={800}>BIG EQUIVALENT</T>
-        </g>
-      </Fade>
-
-      {/* BEAT 6: Series vs Parallel summary */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
-          {t(
-            "★ Series: shares charge (smaller C). Parallel: shares voltage (larger C). ✓",
-            "★ Series: charge share karta hai (C kam). Parallel: voltage share karta hai (C zyada). ✓"
+            "★ Charge Sharing Mastered: V_com = (C₁V₁+C₂V₂)/(C₁+C₂) and Heat Loss ΔU = ½[C₁C₂/(C₁+C₂)](V₁−V₂)²! ✓",
+            "★ Charge Sharing Mastered: V_com = (C₁V₁+C₂V₂)/(C₁+C₂) and Heat Loss ΔU = ½[C₁C₂/(C₁+C₂)](V₁−V₂)²! ✓"
           )}
         </Chip>
       </Fade>

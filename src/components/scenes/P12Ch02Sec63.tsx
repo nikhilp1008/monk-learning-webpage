@@ -1,13 +1,18 @@
 "use client";
 
 /**
- * P12Ch02 · Section 63 — "JEE Advanced: common potential and energy lost"
- * Beats (en [0,5,16,26,39,49,59,68]): 8 beats
+ * P12Ch02 · Section 63 — "Pitfalls: charge sharing, delta U, and series voltage division"
+ * Subtopic: Series & Parallel Combinations & Charge Sharing
+ * OPEN CHALKBOARD DESIGN WITH SUBTOPIC 5 RECAP & PITFALL CHECKLIST (NO CONTAINER BOXES):
+ *  - Pitfall 1: Series vs Parallel Rule Confusion -> Series 1/C_eq = Σ(1/C_i), Parallel C_eq = Σ C_i!
+ *  - Pitfall 2: Polarity Sign Error in Charge Sharing -> Same polarity (+ to +) vs Opposite (+ to -)!
+ *  - Pitfall 3: Inverse Voltage Division -> Smaller capacitor takes LARGER voltage V₁ = V C₂/(C₁+C₂)!
+ *  - Subtopic 5 Master Checklist (Sec 52 – 63)
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,97 +37,104 @@ export default function P12Ch02Sec63({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("JEE Advanced: reconnection, common potential, energy lost", "JEE Advanced: reconnection, common potential, energy lost")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Subtopic 5 Pitfalls & Master Checklist: Combinations & Charge Sharing", "Subtopic 5 Pitfalls & Master Checklist: Combinations & Charge Sharing")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Setup */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={120} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "4 µF capacitor (100V) connected + to + with a 6 µF capacitor (50V).",
-            "4 µF capacitor (100V) ko 6 µF capacitor (50V) ke saath + se + joda gaya."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 2: Common potential */}
-      <Badge n={1} cx={52} cy={160} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">COMMON POTENTIAL</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 3}>
-        <g transform="translate(60, 180)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            V_c = [ (4)(100) + (6)(50) ] / (4 + 6)
+      {/* LEFT SECTION: THREE MAJOR CIRCUIT PITFALLS */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("THE 3 CLASSIC CIRCUIT & SHARING PITFALLS", "THE 3 CLASSIC CIRCUIT & SHARING PITFALLS")}
           </T>
-          <T x={225} y={55} anchor="middle" size={16} fill={INK} weight={800}>
-            = (400 + 300) / 10 = 70 V
+        </Fade>
+
+        {/* Floating Pitfalls (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={80} size={15} fill={RED} weight={800} anchor="start">
+            1. Inversion Slip: Forgetting to invert 1/C_eq at the end of series calculations!
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 3: Weighted average logic */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={60} y={260} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t("70V sits exactly between 50V and 100V,", "70V exactly 50V aur 100V ke beech mein hai,")}
-        </T>
-        <T x={60} y={280} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t("weighted by their capacitances.", "unki capacitances ke weight ke hisaab se.")}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Final charges */}
-      <Badge n={2} cx={540} cy={160} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">FINAL CHARGES</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 5}>
-        <g transform="translate(540, 180)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            Q₁' = (4)(70) = 280 µC
+          <T x={40} y={130} size={15} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Polarity Neglect: Connecting opposite plates (+ to −) uses ΔU ∝ (V₁ + V₂)² !
           </T>
-          <T x={240} y={55} anchor="middle" size={16} fill={INK} weight={800}>
-            Q₂' = (6)(70) = 420 µC
+
+          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+            3. Inverse Voltage Ratio: V₁ = V [ C₂ / (C₁ + C₂) ] (Smaller C gets LARGER V)!
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5: Check total charge */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={540} y={260} size={13} fill={MUTED} anchor="start" script>
-          {t("Check: 280 + 420 = 700 µC.", "Check: 280 + 420 = 700 µC.")}
-        </T>
-        <T x={540} y={280} size={13} fill={MUTED} anchor="start" script>
-          {t("Matches initial (400+300 = 700).", "Yeh initial (400+300 = 700) se match karta hai.")}
-        </T>
-      </Fade>
-
-      {/* BEAT 6: Energy lost */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">ENERGY LOST</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            ΔU = ½ × [ (4×6)/10 ] × 10⁻⁶ × (50)² = 3 × 10⁻³ J
+          <T x={40} y={230} size={15} fill={INK} weight={800} anchor="start">
+            4. Wire Bridge Illusion: Wire bridges convert series chains into parallel circuits!
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 7: 3mJ heat */}
+      {/* RIGHT SECTION: MASTER FORMULA MATRIX */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Fade on={beat >= 2} delay={dl(2, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CIRCUIT & SHARING MASTER MATRIX", "CIRCUIT & SHARING MASTER MATRIX")}
+          </T>
+        </Fade>
+
+        {/* Floating Matrix Features (No Card Boxes) */}
+        <Fade on={beat >= 2}>
+          <T x={40} y={80} size={15} fill={GREEN} weight={800} anchor="start">
+            • Series 2-Capacitor: C_eq = C₁ C₂ / (C₁ + C₂)
+          </T>
+
+          <T x={40} y={130} size={15} fill={GREEN} weight={800} anchor="start">
+            • Charge Sharing: V_com = (C₁ V₁ + C₂ V₂) / (C₁ + C₂)
+          </T>
+
+          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+            • Infinite Ladder: C_eq = C (1 + √5) / 2
+          </T>
+
+          <T x={40} y={230} size={15} fill={GREEN} weight={800} anchor="start">
+            • Balanced Wheatstone: Remove central C₅ (C_eq = C)
+          </T>
+        </Fade>
+      </g>
+
+      {/* MIDDLE BRIDGE LINE */}
+      <g transform="translate(40, 340)">
+        <Fade on={beat >= 4}>
+          <line x1="20" y1="10" x2="1000" y2="10" stroke={INK} strokeWidth={2} />
+          <T x={510} y={45} anchor="middle" size={18} fill={AMBER_DARK} weight={800}>
+            GOLDEN RULE: Label nodes (V_A, V_B, V_C) to simplify any complex capacitor network!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: SUBTOPIC 5 MASTER CHECKLIST */}
+      <g transform="translate(40, 465)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SUBTOPIC 5 MASTER CHECKLIST (SECTIONS 52 – 63)", "SUBTOPIC 5 MASTER CHECKLIST (SECTIONS 52 – 63)")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            ✓ Series/Parallel   ✓ V-Division   ✓ Q-Division   ✓ V_com   ✓ Heat Loss ΔU   ✓ Wheatstone Bridge!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ 3 mJ went to heat: charge is conserved, energy is not. ✓",
-            "★ 3 mJ heat mein gaya: charge conserve rehta hai, energy nahi. ✓"
+            "★ Subtopic 5 Complete (Sec 52–63): Circuits, Charge Sharing & Energy Loss 100% Mastered! ✓",
+            "★ Subtopic 5 Complete (Sec 52–63): Circuits, Charge Sharing & Energy Loss 100% Mastered! ✓"
           )}
         </Chip>
       </Fade>

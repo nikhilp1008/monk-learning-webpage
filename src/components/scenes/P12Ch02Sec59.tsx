@@ -1,13 +1,19 @@
 "use client";
 
 /**
- * P12Ch02 · Section 59 — "Deriving the common potential and the energy loss"
- * Beats (en [0,5,18,27,33,42,50,60]): 8 beats
+ * P12Ch02 · Section 59 — "CBSE level: three capacitors in series and parallel"
+ * Subtopic: Series & Parallel Combinations & Charge Sharing
+ * OPEN CHALKBOARD DESIGN WITH CBSE WORKED NUMERICAL (NO CONTAINER BOXES):
+ *  - C₁ = 2 µF, C₂ = 3 µF, C₃ = 6 µF
+ *  - Step 1: Series 1/C_s = 1/2 + 1/3 + 1/6 = 6/6 = 1  =>  C_s = 1 µF
+ *  - Step 2: Parallel C_p = 2 + 3 + 6 = 11 µF
+ *  - Step 3: Ratio C_p / C_s = 11 / 1 = 11 !
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,95 +38,101 @@ export default function P12Ch02Sec59({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Derivation: common potential and energy loss", "Derivation: common potential aur energy loss")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("CBSE Worked Problem: Three Capacitors (2 µF, 3 µF, 6 µF) Series & Parallel Ratio", "CBSE Worked Problem: Three Capacitors (2 µF, 3 µF, 6 µF) Series & Parallel Ratio")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 280 70 C 440 66, 640 74, 800 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Setup */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={120} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Two capacitors with Q₁ = C₁V₁ and Q₂ = C₂V₂ are connected (like plate to like plate).",
-            "Do capacitors Q₁ = C₁V₁ aur Q₂ = C₂V₂ ko joda gaya hai (like plate to like plate)."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 2: Common potential */}
-      <Badge n={1} cx={52} cy={160} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">CONSERVE TOTAL CHARGE</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 3}>
-        <g transform="translate(60, 180)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            V_c = (Q₁ + Q₂) / (C₁ + C₂) = (C₁V₁ + C₂V₂) / (C₁ + C₂)
+      {/* LEFT SECTION: CIRCUIT DIAGRAM & VALUES */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("THREE CAPACITOR VALUES: 2 µF, 3 µF, 6 µF", "THREE CAPACITOR VALUES: 2 µF, 3 µF, 6 µF")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: Initial energy */}
-      <Badge n={2} cx={540} cy={160} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">INITIAL TOTAL ENERGY</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(540, 180)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            U_before = ½ C₁V₁² + ½ C₂V₂²
+        {/* Values Diagram */}
+        <Fade on={beat >= 1}>
+          <T x={80} y={110} size={18} fill={RED} weight={900} anchor="start">C₁ = 2 µF</T>
+          <T x={80} y={170} size={18} fill={AMBER_DARK} weight={900} anchor="start">C₂ = 3 µF</T>
+          <T x={80} y={230} size={18} fill={GREEN} weight={900} anchor="start">C₃ = 6 µF</T>
+        </Fade>
+
+        {/* Free Floating Question (Spacious, No Box) */}
+        <Fade on={beat >= 2}>
+          <T x={230} y={350} anchor="middle" size={16} fill={INK} weight={800}>
+            Find C_series, C_parallel, and their ratio C_p / C_s !
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 4: Final energy */}
-      <Badge n={3} cx={540} cy={260} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={265} size={14} fill={RED} weight={700} anchor="start">FINAL TOTAL ENERGY (COMMON V_c)</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 5}>
-        <g transform="translate(540, 280)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            U_after = ½ (C₁ + C₂) V_c²
+      {/* RIGHT SECTION: NUMERICAL CALCULATION STEPS */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Fade on={beat >= 3} delay={dl(3, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("STEP-BY-STEP CALCULATION", "STEP-BY-STEP CALCULATION")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Difference */}
-      <Badge n={4} cx={52} cy={350} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={355} size={14} fill={RED} weight={700} anchor="start">DIFFERENCE: U_before - U_after</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(60, 370)">
-          <rect x={0} y={5} width={960} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={43} anchor="middle" size={20} fill={INK} weight={800}>
-            ΔU_lost = ½ [ (C₁C₂) / (C₁ + C₂) ] (V₁ − V₂)²  ≥  0
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 3}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Series: 1/C_s = 1/2 + 1/3 + 1/6 = (3+2+1)/6 = 6/6 = 1
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 6: Always positive */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={60} y={465} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "The squared difference (V₁ − V₂)² guarantees the loss is never negative.",
-            "Squared difference (V₁ − V₂)² ki wajah se loss kabhi negative nahi ho sakta."
-          )}
-        </T>
-      </Fade>
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. C_series = 1 µF
+          </T>
 
-      {/* BEAT 7: Vanishes only if V1=V2 */}
+          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+            3. Parallel: C_p = 2 + 3 + 6 = 11 µF
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={GREEN} weight={900} anchor="start">
+            4. Ratio C_parallel / C_series = 11 / 1 = 11
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Notice how 2 µF, 3 µF, and 6 µF combine into a clean integer 1 µF in series!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CBSE BOARD MARKS CHECKLIST", "CBSE BOARD MARKS CHECKLIST")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Always show LCM steps explicitly when adding fractions in series combinations!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Never forget to invert 1/C_s at the end to get final C_s!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={520} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Loss is unavoidable (heat/sparks) and vanishes ONLY if V₁ = V₂ initially! ✓",
-            "★ Loss unavoidable hai (heat/sparks) aur SIRF tab zero hoga agar initially V₁ = V₂ ho! ✓"
+            "★ CBSE Problem Mastered: C_series = 1 µF, C_parallel = 11 µF, and Ratio C_p/C_s = 11! ✓",
+            "★ CBSE Problem Mastered: C_series = 1 µF, C_parallel = 11 µF, and Ratio C_p/C_s = 11! ✓"
           )}
         </Chip>
       </Fade>

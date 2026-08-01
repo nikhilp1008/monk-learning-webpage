@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 41 — "The surface field, and the Faraday cage"
- * Beats (en [0,7,20,32,46,61,71,83]): 8 beats
+ * Subtopic: Conductors & Spherical Capacitors
+ * OPEN CHALKBOARD DESIGN WITH FARADAY CAGE SCHEMATIC (NO CONTAINER BOXES):
+ *  - Surface Field E = σ / ε₀ (perpendicular ⊥ to conductor surface)
+ *  - Faraday Cage Shielding: Metallic cavity shielded 100% from external electric fields (E_cavity = 0)
+ *  - Practical applications: Lightning protection in cars, sensitive coaxial cables, electrostatic shielding
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,91 +37,106 @@ export default function P12Ch02Sec41({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("just outside: perpendicular field & Faraday cage", "just outside: perpendicular field & Faraday cage")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Surface Field E = σ/ε₀ & Electrostatic Shielding (The Faraday Cage)", "Surface Field E = σ/ε₀ & Electrostatic Shielding (The Faraday Cage)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 220 70 C 440 66, 640 74, 860 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Sideways field drags charge */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={110} size={14} fill={MUTED} anchor="start" script>
-          {t(
-            "Any sideways (tangential) field would drag surface charges along the surface!",
-            "Koi bhi sideways field surface charges ko surface ke along drag karegi!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 2: Perpendicular E formula */}
-      <Badge n={1} cx={52} cy={165} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={170} size={14} fill={RED} weight={700} anchor="start">FIELD MUST BE PERPENDICULAR</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <g transform="translate(60, 185)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            E = σ / ε₀ (perpendicular)
+      {/* LEFT SECTION: SURFACE FIELD E = σ / ε₀ */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SURFACE FIELD E IS ALWAYS PERPENDICULAR ⊥", "SURFACE FIELD E IS ALWAYS PERPENDICULAR ⊥")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: Double the sheet */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={60} y={265} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "This is DOUBLE the field of an isolated sheet (σ/2ε₀) because inside is zero!",
-            "Yeh isolated sheet se DOUBLE (σ/2ε₀) hai kyunki andar field zero hai!"
-          )}
-        </T>
-      </Fade>
+        {/* Conductor surface and field vector */}
+        <Fade on={beat >= 1}>
+          <path d="M 60 260 Q 240 220, 420 260" stroke={INK} strokeWidth={4} fill="none" />
+          <T x={240} y={285} size={14} fill={INK} weight={800} anchor="middle">Conductor Surface (σ)</T>
 
-      {/* BEAT 4: Diagram — Faraday cage */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)} dim={beat >= 7}>
-        <g transform="translate(560, 120)">
-          {/* Cavity in a blob */}
-          <path d="M 50 100 Q 80 0 200 50 T 350 100 Q 400 200 300 250 T 50 100 Z" fill="#e2e8f0" stroke={INK} strokeWidth={2} />
-          <path d="M 120 120 Q 150 80 200 100 T 260 150 Q 280 200 220 220 T 120 120 Z" fill="#ffffff" stroke={INK} strokeWidth={1.5} />
-          <T x={200} y={60} size={14} fill={INK} weight={700}>METAL BLOB</T>
-          <T x={200} y={160} size={14} fill={INK} weight={700}>CAVITY (E=0)</T>
-          {/* External lightning */}
-          <path d="M 0 -20 L 40 40 L 20 60 L 80 120" fill="none" stroke={RED} strokeWidth={3} />
-          <path d="M 400 -30 L 360 30 L 380 50 L 320 110" fill="none" stroke={RED} strokeWidth={3} />
-        </g>
-      </Fade>
+          {/* Perpendicular field arrows E */}
+          <path d={arrowD(150, 245, 150, 100)} stroke={RED} strokeWidth={3} />
+          <path d={arrowD(240, 235, 240, 90)} stroke={RED} strokeWidth={3} />
+          <path d={arrowD(330, 245, 330, 100)} stroke={RED} strokeWidth={3} />
 
-      {/* BEAT 5: Electrostatic shielding */}
-      <Badge n={2} cx={52} cy={335} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={340} size={14} fill={RED} weight={700} anchor="start">THE FARADAY CAGE</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(60, 355)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={38} anchor="middle" size={16} fill={INK} weight={800}>
-            Surface charges rearrange to cancel E inside
+          <T x={240} y={75} size={16} fill={RED} weight={900} anchor="middle">E = (σ / ε₀) n^</T>
+
+          {/* 90 degree symbol */}
+          <path d="M 240 225 L 252 225 L 252 235" stroke="#000000" strokeWidth={1.5} fill="none" />
+          <T x={265} y={220} size={12} fill={INK} weight={800}>90° ⊥</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            If field had a tangential component, surface charges would move!
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 6: Safety */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={60} y={440} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "This is why you are safe inside a car during a lightning storm!",
-            "Isi wajah se lightning storm mein car ke andar safe rehte ho!"
-          )}
-        </T>
-      </Fade>
+      {/* RIGHT SECTION: FARADAY CAGE HOLLOW CAVITY SHIELDING */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("FARADAY CAGE: HOLLOW CAVITY SHIELDING", "FARADAY CAGE: HOLLOW CAVITY SHIELDING")}
+          </T>
+        </Fade>
 
-      {/* BEAT 7: One-way shielding */}
+        {/* Hollow Metallic Shell Diagram */}
+        <Fade on={beat >= 4}>
+          {/* Outer Field Arrows E0 */}
+          <path d={arrowD(30, 180, 80, 180)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(420, 180, 470, 180)} stroke={RED} strokeWidth={2.5} />
+
+          {/* Metal Shell Ring */}
+          <circle cx={250} cy={180} r={110} stroke={AMBER_DARK} strokeWidth={15} fill="none" />
+          <T x={250} y={55} size={14} fill={AMBER_DARK} weight={900} anchor="middle">Metallic Shell / Car Body</T>
+
+          {/* Interior Hollow Cavity */}
+          <circle cx={250} cy={180} r={102} fill="#ffffff" />
+          <T x={250} y={170} size={18} fill={GREEN} weight={900} anchor="middle">Hollow Cavity E = 0</T>
+          <T x={250} y={200} size={14} fill={GREEN} weight={800} anchor="middle">100% Shielded!</T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={350} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Lightning strikes outer shell and flows safely to ground — interior remains 100% safe!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("FARADAY CAGE PRACTICAL APPLICATIONS", "FARADAY CAGE PRACTICAL APPLICATIONS")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            1. Car in a thunderstorm   |   2. Coaxial cable shielding   |   3. Sensitive instrument enclosures!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Surface field magnitude E = σ / ε₀ (Twice as strong as single infinite sheet field σ / 2ε₀)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Shielding is ONE-WAY: protects inside from outside, but NOT outside from inside! ✓",
-            "★ Shielding ek-tarfa hai: bahar se andar ko bachata hai, par andar se bahar ko nahi! ✓"
+            "★ Electrostatic Shielding Mastered: E = σ/ε₀ normal to surface & E_cavity = 0 inside any hollow metallic enclosure! ✓",
+            "★ Electrostatic Shielding Mastered: E = σ/ε₀ normal to surface & E_cavity = 0 inside any hollow metallic enclosure! ✓"
           )}
         </Chip>
       </Fade>

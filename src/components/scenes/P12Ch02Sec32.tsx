@@ -2,12 +2,18 @@
 
 /**
  * P12Ch02 · Section 32 — "Deriving the parallel plate capacitance formula"
- * Beats (en [0,4,19,30,48,66,78,87,96]): 9 beats
+ * Subtopic: Capacitance Derivations
+ * OPEN CHALKBOARD DESIGN WITH GAUSSIAN PILLBOX DERIVATION (NO CONTAINER BOXES):
+ *  - Parallel plates of area A and separation d
+ *  - Surface charge density σ = Q / A
+ *  - Electric field via Gauss Law: E = σ / ε₀ = Q / (ε₀ A)
+ *  - Potential difference V = E d = Q d / (ε₀ A)
+ *  - Result: C = Q / V = ε₀ A / d
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,111 +38,116 @@ export default function P12Ch02Sec32({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("derivation: parallel plate capacitance", "derivation: parallel plate capacitance")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Derivation: Parallel Plate Capacitance C = ε₀ A / d via Gauss's Law", "Derivation: Parallel Plate Capacitance C = ε₀ A / d via Gauss's Law")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 320 70 C 440 66, 640 74, 760 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 6}>
-        {/* Plates */}
-        <rect x={180} y={120} width={10} height={200} rx={2} fill={RED} />
-        <rect x={320} y={120} width={10} height={200} rx={2} fill="#3b82f6" />
-        <T x={170} y={150} size={14} fill={RED} weight={800} anchor="end">+Q, A</T>
-        <T x={340} y={150} size={14} fill="#3b82f6" weight={800} anchor="start">−Q, A</T>
-        {/* d label */}
-        <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 190 340 h 130" stroke={INK} sw={1.5} dur={0.4} />
-        <T x={255} y={358} size={14} fill={INK} weight={700}>d</T>
-        {/* Uniform field inside */}
-        {[170, 220, 270].map(y => (
-          <g key={y}>
-            <Draw on={beat >= 1} delay={dl(1, 0.7)} d={`M 195 ${y} h 120`} stroke={AMBER_DARK} sw={1.5} />
-            <polygon points={`317,${y} 307,${y-4} 307,${y+4}`} fill={AMBER_DARK} />
-          </g>
-        ))}
-        <T x={255} y={290} size={14} fill={AMBER_DARK} weight={700}>Ē</T>
-      </Fade>
-
-      {/* BEAT 2: Tiny d assumption */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={400} y={120} size={14} fill={MUTED} anchor="start" script>
-          {t(
-            "Assume d is tiny compared to plate size → field is perfectly uniform inside!",
-            "Maan lo d plate size se bahut chota hai → field andar perfectly uniform hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Field E formula */}
-      <Badge n={1} cx={400} cy={165} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={422} y={170} size={14} fill={RED} weight={700} anchor="start">STEP 1: FIELD E</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 6}>
-        <g transform="translate(400, 185)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            E = σ/ε₀ = Q / (ε₀A)
+      {/* LEFT SECTION: GAUSSIAN PILLBOX DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("PARALLEL PLATES AND GAUSSIAN SURFACE", "PARALLEL PLATES AND GAUSSIAN SURFACE")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: Add inside */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <T x={400} y={260} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Inside: + sheet pushes, − sheet pulls → both fields add up! (σ/2ε₀ + σ/2ε₀ = σ/ε₀)",
-            "Andar: + sheet push karti, − pull karti → dono field add hoti hain!"
-          )}
-        </T>
-      </Fade>
+        {/* Plate Diagram */}
+        <Fade on={beat >= 1}>
+          {/* Top Plate +Q */}
+          <line x1="60" y1="90" x2="420" y2="90" stroke={RED} strokeWidth={4} />
+          <T x={435} y={95} size={14} fill={RED} weight={900}>+Q (σ = Q/A)</T>
 
-      {/* BEAT 5: Cancel outside */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={400} y={285} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Outside: fields point oppositely and cancel. E = 0 outside!",
-            "Bahar: fields opposite point karti aur cancel. E = 0 bahar!"
-          )}
-        </T>
-      </Fade>
+          {/* Bottom Plate -Q */}
+          <line x1="60" y1="250" x2="420" y2="250" stroke={GREEN} strokeWidth={4} />
+          <T x={435} y={255} size={14} fill={GREEN} weight={900}>−Q (σ = −Q/A)</T>
 
-      {/* BEAT 6: Potential V */}
-      <Badge n={2} cx={52} cy={400} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={405} size={14} fill={RED} weight={700} anchor="start">STEP 2: POTENTIAL V</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 8}>
-        <g transform="translate(60, 420)">
-          <rect x={0} y={5} width={380} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={190} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            V = Ed = Qd / (ε₀A)
+          {/* Gaussian Pillbox */}
+          <rect x="180" y="70" width="80" height="120" stroke={AMBER_DARK} strokeWidth={2} strokeDasharray="4 4" fill="none" />
+          <T x={220} y={60} size={12} fill={AMBER_DARK} weight={800} anchor="middle">Pillbox</T>
+
+          {/* Field Vector E */}
+          <path d={arrowD(220, 95, 220, 245)} stroke={AMBER_DARK} strokeWidth={3} />
+          <T x={235} y={170} size={15} fill={AMBER_DARK} weight={900}>E</T>
+
+          <line x1="45" y1="90" x2="45" y2="250" stroke={INK} strokeWidth={2} strokeDasharray="3 3" />
+          <T x={30} y={175} size={13} fill={INK} weight={800} anchor="end">Spacing d</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            Gauss Law: ∮ E · dA = Q_enclosed / ε₀  ⇒  E A_box = σ A_box / ε₀
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 7: Capacitance C */}
-      <Badge n={3} cx={500} cy={400} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={522} y={405} size={14} fill={RED} weight={700} anchor="start">STEP 3: CAPACITANCE C</T>
-      </Fade>
+      {/* RIGHT SECTION: CALCULUS PROOF STEPS */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("STEP-BY-STEP PROOF", "STEP-BY-STEP PROOF")}
+          </T>
+        </Fade>
+
+        {/* Floating Derivation Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. Surface Charge Density: σ = Q / A
+          </T>
+
+          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Electric Field: E = σ / ε₀ = Q / (ε₀ A)
+          </T>
+
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Potential Difference: V = E d = Q d / (ε₀ A)
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={900} anchor="start">
+            4. Capacitance C = Q / V = ε₀ A / d  (Q.E.D.)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Fringe field effects at edges are ignored assuming plate dimensions &gt;&gt; spacing d!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("DERIVATION VERDICT", "DERIVATION VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            C = ε₀ A / d proves capacitance is 100% determined by geometrical area A and gap d!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Independent of charge Q and potential V!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(500, 420)">
-          <rect x={0} y={5} width={500} height={55} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={250} y={40} anchor="middle" size={20} fill={RED} weight={800}>
-            C₀ = Q / V = (ε₀A) / d
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 8: Q cancelled */}
-      <Fade on={beat >= 8}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Notice Q cancelled out entirely — C depends ONLY on geometry (A, d)! ✓",
-            "★ Dhyan do Q poora cancel ho gaya — C SIRF geometry (A, d) pe depend karta hai! ✓"
+            "★ Proof Completed: C = Q/V = ε₀ A / d derived rigorously from Gauss's Law and V = E d! ✓",
+            "★ Proof Completed: C = Q/V = ε₀ A / d derived rigorously from Gauss's Law and V = E d! ✓"
           )}
         </Chip>
       </Fade>

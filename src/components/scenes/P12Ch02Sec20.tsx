@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 20 — "Deriving the potential energy of a dipole in a uniform field"
- * Beats (en [0,7,18,30,34,47,59,72,91]): 9 beats
+ * Subtopic: Potential Energy & External Fields
+ * OPEN CHALKBOARD DESIGN WITH DIPOLE ROTATIONAL INTEGRAL PROOF (NO CONTAINER BOXES):
+ *  - Dipole rotated by dθ against restoring torque τ = p E sinθ
+ *  - Reference state: θ = 90° (π/2) where U(90°) = 0
+ *  - Integration: U(θ) = ∫_90°^θ p E sinθ dθ = - p E cosθ = - p · E
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,110 +37,115 @@ export default function P12Ch02Sec20({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("derivation: dipole PE in a uniform field", "derivation: uniform field mein dipole ki PE")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Derivation: Dipole Potential Energy U(θ) = −pE cosθ = −p · E", "Derivation: Dipole Potential Energy U(θ) = −pE cosθ = −p · E")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — dipole at angle θ in uniform E */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        {/* E field arrows */}
-        {[140, 220, 300, 380].map(y => (
-          <g key={y}>
-            <Draw on={beat >= 1} delay={dl(1, 0.3)} d={`M 80 ${y} h 100`} stroke={AMBER_DARK} sw={1.5} />
-            <polygon points={`182,${y} 172,${y-4} 172,${y+4}`} fill={AMBER_DARK} />
-          </g>
-        ))}
-        <T x={100} y={400} size={13} fill={AMBER_DARK} weight={700}>Ē (uniform)</T>
-
-        {/* Dipole tilted at angle */}
-        <Draw on={beat >= 1} delay={dl(1, 0.6)} d="M 280 300 L 380 180" stroke={INK} sw={2} dur={0.5} />
-        <circle cx={280} cy={300} r={10} fill="#3b82f6" stroke={INK} strokeWidth={1.5} />
-        <T x={280} y={304} size={11} fill="#fff" weight={800}>−</T>
-        <circle cx={380} cy={180} r={10} fill={RED} stroke={INK} strokeWidth={1.5} />
-        <T x={380} y={184} size={11} fill="#fff" weight={800}>+</T>
-        <T x={345} y={260} size={14} fill={INK} weight={700}>p̄</T>
-
-        {/* θ arc */}
-        <Draw on={beat >= 1} delay={dl(1, 0.9)} d="M 350 240 A 30 30 0 0 1 360 220" stroke={AMBER_DARK} sw={1.5} dur={0.3} />
-        <T x={370} y={240} size={13} fill={AMBER_DARK} weight={700}>θ</T>
-      </Fade>
-
-      {/* BEAT 2: Net force = 0, pure torque */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={440} y={130} size={14} fill={INK} anchor="start" script>
-          {t(
-            "Uniform field: forces on ±q cancel → net force = 0, only TORQUE!",
-            "Uniform field: ±q pe forces cancel → net force = 0, sirf TORQUE!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Torque = pE sin θ */}
-      <Badge n={1} cx={440} cy={170} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 1)}>
-        <T x={462} y={175} size={14} fill={RED} weight={700} anchor="start">TORQUE EXPRESSION</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 7}>
-        <g transform="translate(440, 188)">
-          <rect x={0} y={5} width={380} height={45} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={190} y={35} anchor="middle" size={20} fill={INK} weight={800}>τ = pE sin θ</T>
-        </g>
-      </Fade>
-
-      {/* BEAT 4: Quasi-static rotation */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <T x={440} y={265} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "External agent rotates dipole quasi-statically (no angular acceleration!)",
-            "External agent dipole ko quasi-statically rotate karta (angular acceleration nahi!)"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 5: Work integral */}
-      <Badge n={2} cx={440} cy={300} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 1)}>
-        <T x={462} y={305} size={14} fill={RED} weight={700} anchor="start">WORK INTEGRAL</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(440, 318)">
-          <rect x={0} y={5} width={500} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={250} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            W_ext = ∫ τ dθ = pE(cos θ₀ − cos θ₁)
+      {/* LEFT SECTION: ROTATIONAL TORQUE GEOMETRY */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ROTATING DIPOLE AGAINST RESTORING TORQUE", "ROTATING DIPOLE AGAINST RESTORING TORQUE")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 6: Rotational analogue */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={440} y={398} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "τ dθ = rotational analogue of F dx (force × distance)!",
-            "τ dθ = F dx ka rotational analogue (force × distance)!"
-          )}
-        </T>
-      </Fade>
+        <Fade on={beat >= 1}>
+          {/* Uniform E field lines */}
+          <path d={arrowD(40, 110, 420, 110)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(40, 190, 420, 190)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(40, 270, 420, 270)} stroke={RED} strokeWidth={2.5} />
+          <T x={435} y={195} size={14} fill={RED} weight={800} anchor="start">Field E</T>
 
-      {/* BEAT 7: Final result */}
-      <Badge n={3} cx={52} cy={430} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <g transform="translate(72, 415)">
-          <rect x={0} y={0} width={520} height={60} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={260} y={40} anchor="middle" size={24} fill={RED} weight={800}>
-            U(θ) = −pE cos θ = −p̄ · Ē
+          {/* Reference position (90°) */}
+          <line x1="220" y1="190" x2="220" y2="90" stroke={MUTED} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={220} y={75} size={12} fill={MUTED} weight={800} anchor="middle">Ref θ = 90° (U = 0)</T>
+
+          {/* Rotated Dipole Vector p */}
+          <line x1="220" y1="190" x2="310" y2="120" stroke={GREEN} strokeWidth={4} />
+          <circle cx={310} cy={120} r={7} fill={GREEN} />
+          <T x={325} y={115} size={14} fill={GREEN} weight={800}>p (Dipole)</T>
+
+          {/* Rotational Torque Arrow τ */}
+          <path d="M 270 190 A 50 50 0 0 0 250 160" stroke={AMBER_DARK} strokeWidth={2.5} fill="none" />
+          <T x={280} y={170} size={13} fill={AMBER_DARK} weight={800}>dθ</T>
+        </Fade>
+
+        {/* Free Floating Differential Work (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            dW = τ_ext dθ = p E sinθ dθ  (Work against torque!)
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 8: Reference choice */}
-      <Fade on={beat >= 8}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+      {/* RIGHT SECTION: CALCULUS PROOF STEPS */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("STEP-BY-STEP INTEGRATION FROM 90° TO θ", "STEP-BY-STEP INTEGRATION FROM 90° TO θ")}
+          </T>
+        </Fade>
+
+        {/* Floating Calculus Equations (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. U(θ) = ∫ (p E sinθ) dθ from 90° to θ
+          </T>
+
+          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Integrate: U(θ) = p E [ − cosθ ] evaluated from 90° to θ
+          </T>
+
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Apply Limits: U(θ) = − p E ( cosθ − cos 90° ) = − p E cosθ
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={800} anchor="start">
+            4. U(θ) = − p · E  (Vector Dot Product!)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Reference U = 0 chosen at θ = 90° where torque is maximum but field projection is zero!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("WORK REQUIRED FOR ORIENTATION CHANGE", "WORK REQUIRED FOR ORIENTATION CHANGE")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Work done in turning dipole from θ₁ to θ₂: W_ext = U(θ₂) − U(θ₁) = p E (cosθ₁ − cosθ₂)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            To rotate from 0° (stable) to 180° (unstable): W_ext = pE(1 - (-1)) = +2 pE!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Reference: θ₀ = 90° (U = 0 when dipole ⊥ field) — natural choice! ✓",
-            "★ Reference: θ₀ = 90° (U = 0 jab dipole ⊥ field) — natural choice! ✓"
+            "★ Dipole Derivation Mastered: U(θ) = −pE cosθ = −p · E derived via angular torque integration! ✓",
+            "★ Dipole Derivation Mastered: U(θ) = −pE cosθ = −p · E derived via angular torque integration! ✓"
           )}
         </Chip>
       </Fade>

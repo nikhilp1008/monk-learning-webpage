@@ -2,58 +2,29 @@
 
 /**
  * P12Ch02 · Section 3 — "Equipotential surfaces — walking the contour lines"
- * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md & SCENE_PLAYBOOK.md.
- *
- * OBJECT-RICH OPEN CHALKBOARD DESIGN (NO HEAVY CONTAINERS):
- *  - Equipotential Surface: A surface where potential V is constant at every point!
- *  - Work done W = q (V_B - V_A) = 0 for moving charge along an equipotential surface!
- *  - Electric field Ē is ALWAYS PERPENDICULAR (⊥) to an equipotential surface!
- *  - Concentric spheres for point charge, parallel planes for uniform field!
- *  - Equipotential surfaces NEVER intersect!
- *
- * Beats (en [0,5,18,31,41,52,66]):
- *  0 Title "equipotential surfaces — walking the contour lines" + drawn underline
- *  1 Hook note: visualising constant-potential surfaces and 4 core rules!
- *  2 Badge 1 & Zero Work: W = q ΔV = 0 along equipotential surface!
- *  3 Badge 2 & Perpendicular Field: Electric field Ē is ALWAYS ⊥ to surface!
- *  4 Badge 3 & Shape Rules: Concentric spheres (point charge), Parallel planes (uniform field)
- *  5 Non-Intersection Rule: Two equipotential surfaces NEVER intersect!
- *  6 Grand Verdict: W = 0 along equipotential  |  Ē ⊥ Equipotential  |  Never Intersect!
+ * Subtopic: Electrostatic Potential & Capacitance
+ * OPEN CHALKBOARD DESIGN WITH RICH SVG EQUIPOTENTIAL DIAGRAMS (NO CONTAINER BOXES):
+ *  - Concentric Equipotential Spheres (V₁ = 100V, V₂ = 75V, V₃ = 50V) around source charge +Q
+ *  - Radial Electric Field Vectors E ⊥ Equipotential Surfaces (90° perpendicularity symbols)
+ *  - Path of charge moving on surface showing Zero Work W_AB = 0
+ *  - Parallel Planes for uniform electric field E
+ *  - Zero card box containers (<rect fill={CREAM}> removed completely)
  */
 
 import React from "react";
 import {
-  SceneProps,
-  useBeat,
-  delayFor,
-  Fade,
-  Draw,
-  T,
-  Chip,
-  ringD,
-  INK,
-  MUTED,
-  AMBER_DARK,
-  GREEN,
-  RED,
-  CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
+  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
   return (
     <g>
-      <Draw
-        on={on}
-        delay={delay}
+      <Draw on={on} delay={delay}
         d={`M ${cx - 13} ${cy} A 13 13 0 1 1 ${cx + 13} ${cy} A 13 13 0 1 1 ${cx - 13} ${cy}`}
-        stroke={RED}
-        sw={2.2}
-        dur={0.4}
-      />
+        stroke={RED} sw={2.2} dur={0.4} />
       <Fade on={on} delay={delay + 0.3}>
-        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>
-          {n}
-        </T>
+        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>{n}</T>
       </Fade>
     </g>
   );
@@ -65,94 +36,125 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Motion along equipotential circle
+  const orbitAngle = (currentTime * 1.5) % (2 * Math.PI);
+  const rOrbit = 110;
+  const qx = 220 + rOrbit * Math.cos(orbitAngle);
+  const qy = 200 - rOrbit * Math.sin(orbitAngle);
+
   return (
-    <svg
-      viewBox="0 0 1080 620"
-      preserveAspectRatio="xMidYMin meet"
-      className="w-full h-full select-none"
-    >
-      {/* ── BEAT 0: Title ── */}
+    <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t(
-            "equipotential surfaces — walking the contour lines",
-            "equipotential surfaces — contour lines par chalna"
-          )}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Equipotential Surfaces: Walking Constant Potential Contour Lines", "Equipotential Surfaces: Constant Potential Contour Lines")}
         </T>
       </Fade>
-      <Draw
-        on={beat >= 0}
-        delay={dl(0, 2.5)}
-        d="M 180 70 C 440 66, 640 74, 900 69"
-        stroke={RED}
-        sw={2.4}
-        dur={0.7}
-      />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* ── BEAT 1: Hook Note ── */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={110} size={15} fill={MUTED} script anchor="start">
-          {t(
-            "visualising constant-potential surfaces and 4 core rules!",
-            "constant-potential surfaces aur 4 core rules ko visualise karna!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 2: Badge 1 & Zero Work ── */}
-      <Badge n={1} cx={52} cy={165} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 1)}>
-        <T x={74} y={170} size={14} fill={RED} weight={700} anchor="start">
-          {t("ZERO WORK: W = q (V_B - V_A) = 0", "ZERO WORK: W = q (V_B - V_A) = 0")}
-        </T>
-      </Fade>
-
-      <Fade on={beat >= 2} dim={beat >= 5}>
-        <g transform="translate(60, 185)">
-          <rect x={0} y={10} width={430} height={85} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={215} y={48} anchor="middle" size={20} fill={INK} weight={800}>
-            W_AB = 0  (Since V_A = V_B)
+      {/* LEFT SECTION: CONCENTRIC EQUIPOTENTIAL SPHERES & ZERO WORK */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("POINT CHARGE EQUIPOTENTIAL SPHERES", "POINT CHARGE EQUIPOTENTIAL SPHERES")}
           </T>
-          <T x={215} y={78} anchor="middle" size={13} fill={AMBER_DARK} script>
-            {t("Moving a charge on equipotential requires ZERO net work!", "Equipotential par charge move karne me ZERO net work lagta hai!")}
-          </T>
-          <Draw on={beat >= 2} delay={dl(2, 1.6)} d="M 100 56 h 230 M 100 60 h 230" stroke={AMBER_DARK} sw={1.5} />
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* ── BEAT 3: Badge 2 & Perpendicular Field ── */}
-      <Badge n={2} cx={540} cy={165} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 1)}>
-        <T x={562} y={170} size={14} fill={RED} weight={700} anchor="start">
-          {t("ELECTRIC FIELD IS ALWAYS PERPENDICULAR ⊥", "ELECTRIC FIELD IS ALWAYS PERPENDICULAR ⊥")}
-        </T>
-      </Fade>
+        <Fade on={beat >= 1}>
+          {/* Central Charge +Q */}
+          <circle cx={220} cy={200} r={18} fill={RED} />
+          <T x={220} y={206} size={14} fill="#ffffff" weight={900}>+Q</T>
 
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(540, 185)">
-          <T x={0} y={25} anchor="start" size={14} fill={INK} weight={700}>
-            Ē · d̄r = 0  ⇒  Ē ⊥ Equipotential Surface!
-          </T>
-          <T x={0} y={65} anchor="start" size={20} fill={RED} weight={800}>
-            Points in direction of steepest potential drop!
-          </T>
-        </g>
-      </Fade>
+          {/* Concentric Spheres V1, V2, V3 */}
+          <circle cx={220} cy={200} r={60} stroke={AMBER_DARK} strokeWidth={2} fill="none" strokeDasharray="4 4" />
+          <T x={220} y={132} size={12} fill={AMBER_DARK} weight={800}>V₁ = 100V</T>
 
-      {/* ── BEAT 6: Grand Verdict Chip ── */}
+          <circle cx={220} cy={200} r={110} stroke={GREEN} strokeWidth={2.5} fill="none" strokeDasharray="5 5" />
+          <T x={220} y={82} size={12} fill={GREEN} weight={800}>V₂ = 75V (Equipotential)</T>
+
+          <circle cx={220} cy={200} r={155} stroke={RED} strokeWidth={2} fill="none" strokeDasharray="4 4" />
+          <T x={220} y={37} size={12} fill={RED} weight={800}>V₃ = 50V</T>
+
+          {/* Radial E-Field Vectors Perpendicular to Surfaces */}
+          <path d={arrowD(220, 90, 220, 30)} stroke={RED} strokeWidth={2} />
+          <path d={arrowD(220, 310, 220, 370)} stroke={RED} strokeWidth={2} />
+          <path d={arrowD(90, 200, 30, 200)} stroke={RED} strokeWidth={2} />
+          <path d={arrowD(350, 200, 410, 200)} stroke={RED} strokeWidth={2} />
+
+          {/* Moving Charge on Equipotential V2 */}
+          <circle cx={qx} cy={qy} r={9} fill={GREEN} />
+          <T x={qx} y={qy - 12} size={11} fill={GREEN} weight={800}>+q₀ (W = 0)</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 2}>
+          <T x={220} y={390} anchor="middle" size={16} fill={GREEN} weight={800}>
+            W_AB = q₀ (V_B − V_A) = 0   (Zero work along equipotential path!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: UNIFORM FIELD PARALLEL PLANES & E ⊥ SURFACE */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Fade on={beat >= 3} delay={dl(3, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("UNIFORM FIELD: E ⊥ PARALLEL PLANES", "UNIFORM FIELD: E ⊥ PARALLEL PLANES")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 3}>
+          {/* Parallel Equipotential Planes */}
+          <line x1="80" y1="80" x2="80" y2="330" stroke={AMBER_DARK} strokeWidth={3} strokeDasharray="6 4" />
+          <T x={80} y={65} size={13} fill={AMBER_DARK} weight={800} anchor="middle">V = 60V</T>
+
+          <line x1="220" y1="80" x2="220" y2="330" stroke={GREEN} strokeWidth={3} strokeDasharray="6 4" />
+          <T x={220} y={65} size={13} fill={GREEN} weight={800} anchor="middle">V = 40V</T>
+
+          <line x1="360" y1="80" x2="360" y2="330" stroke={RED} strokeWidth={3} strokeDasharray="6 4" />
+          <T x={360} y={65} size={13} fill={RED} weight={800} anchor="middle">V = 20V</T>
+
+          {/* Electric Field E Vector Arrows pointing Right (perpendicular ⊥) */}
+          <path d={arrowD(40, 140, 420, 140)} stroke={RED} strokeWidth={3} />
+          <path d={arrowD(40, 260, 420, 260)} stroke={RED} strokeWidth={3} />
+          <T x={435} y={145} size={14} fill={RED} weight={800} anchor="start">E Vector</T>
+
+          {/* 90° Perpendicular Symbols */}
+          <path d="M 220 150 L 230 150 L 230 140" stroke="#000000" strokeWidth={1.5} fill="none" />
+          <T x={240} y={160} size={12} fill={INK} weight={800}>90° (E ⊥ Surface)</T>
+        </Fade>
+
+        {/* Free Floating Rule (Spacious, No Box) */}
+        <Fade on={beat >= 5}>
+          <T x={240} y={390} anchor="middle" size={16} fill={RED} weight={800}>
+            Equipotential surfaces NEVER intersect! (Otherwise E would have 2 directions!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS CORE RULES */}
+      <g transform="translate(40, 475)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 6} delay={dl(6, 0.2)} />
+        <Fade on={beat >= 6} delay={dl(6, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("THE 4 CORE EQUIPOTENTIAL RULES", "THE 4 CORE EQUIPOTENTIAL RULES")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            1. W = 0 on surface   |   2. E is ALWAYS ⊥ to surface   |   3. Points towards decreasing V   |   4. Never intersect!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 6}>
-        <Chip
-          x={100}
-          y={536}
-          w={880}
-          h={44}
-          fill={GREEN}
-          textFill="#ffffff"
-          size={18}
-        >
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ VERDICT: W = 0 along equipotential  |  Ē ⊥ Equipotential  |  Never Intersect!",
-            "★ VERDICT: W = 0 along equipotential  |  Ē ⊥ Equipotential  |  Never Intersect!"
+            "★ Equipotential Verdict: Work W = 0 along surface, Electric field E ⊥ Surface, pointing towards decreasing V! ✓",
+            "★ Equipotential Verdict: Work W = 0 along surface, Electric field E ⊥ Surface, pointing towards decreasing V! ✓"
           )}
         </Chip>
       </Fade>

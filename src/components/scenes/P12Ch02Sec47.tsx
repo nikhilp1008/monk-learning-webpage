@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 47 — "CBSE level: potential and field of a solid conducting sphere"
- * Beats (en [0,4,18,26,38,50,60,69]): 8 beats
+ * Subtopic: Conductors & Spherical Capacitors
+ * OPEN CHALKBOARD DESIGN WITH E(r) AND V(r) DUAL GRAPH PROFILES (NO CONTAINER BOXES):
+ *  - Solid Conducting Sphere of radius R and charge Q
+ *  - Electric Field Profile E(r): E = 0 for r < R; E = kQ/R² at surface; E = kQ/r² for r > R
+ *  - Potential Profile V(r): V = kQ/R Constant for r ≤ R; V = kQ/r for r > R
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,97 +37,110 @@ export default function P12Ch02Sec47({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("CBSE level: solid conducting sphere", "CBSE level: solid conducting sphere")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("CBSE Profile Analysis: Electric Field E(r) & Potential V(r) of Conducting Sphere", "CBSE Profile Analysis: Electric Field E(r) & Potential V(r) of Conducting Sphere")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 320 70 C 440 66, 640 74, 760 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem setup */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <g transform="translate(60, 90)">
-          <rect x={0} y={5} width={960} height={55} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={20} y={25} size={14} fill={INK} weight={700} anchor="start">GIVEN:</T>
-          <T x={20} y={48} size={14} fill={INK} anchor="start" script>
-            {t(
-              "Solid conducting sphere: R = 0.10 m, Q = +2 μC (2×10⁻⁶ C).",
-              "Solid conducting sphere: R = 0.10 m, Q = +2 μC (2×10⁻⁶ C)."
-            )}
+      {/* LEFT SECTION: ELECTRIC FIELD PROFILE GRAPH E(r) */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ELECTRIC FIELD PROFILE E(r)", "ELECTRIC FIELD PROFILE E(r)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: Surface Potential */}
-      <Badge n={1} cx={52} cy={180} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={185} size={14} fill={RED} weight={700} anchor="start">POTENTIAL V</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <g transform="translate(60, 200)">
-          <rect x={0} y={5} width={460} height={70} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={230} y={35} anchor="middle" size={16} fill={MUTED}>V = kQ / R = (9×10⁹)(2×10⁻⁶) / 0.10</T>
-          <T x={230} y={60} anchor="middle" size={20} fill={INK} weight={800}>
-            V = 1.8 × 10⁵ V
+        {/* E(r) Graph */}
+        <Fade on={beat >= 1}>
+          <line x1="50" y1="270" x2="450" y2="270" stroke={INK} strokeWidth={2} />
+          <line x1="50" y1="270" x2="50" y2="70" stroke={INK} strokeWidth={2} />
+
+          <line x1="180" y1="270" x2="180" y2="70" stroke={MUTED} strokeWidth={1.5} strokeDasharray="4 4" />
+          <T x={180} y={290} size={13} fill={INK} weight={800} anchor="middle">r = R</T>
+
+          {/* E = 0 inside */}
+          <line x1="50" y1="270" x2="180" y2="270" stroke={RED} strokeWidth={4} />
+
+          {/* Jump to kQ/R² and 1/r² decay */}
+          <circle cx={180} cy={100} r={5} fill={RED} />
+          <Draw on={beat >= 1} delay={dl(1, 0.6)} d="M 180 100 Q 240 220, 440 260" stroke={RED} sw={3.5} />
+
+          <T x={220} y={90} size={13} fill={RED} weight={800}>E_max = kQ/R²</T>
+          <T x={340} y={210} size={13} fill={RED} weight={800}>E ∝ 1/r²</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={16} fill={RED} weight={800}>
+            E(r &lt; R) = 0 N/C   |   E(r ≥ R) = k Q / r²
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 3: Equipotential everywhere */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={60} y={300} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "That's the potential of the WHOLE sphere (surface AND centre). Conductor is equipotential!",
-            "Yeh PURE sphere (surface AUR centre) ka potential hai. Conductor equipotential hota hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Field at surface */}
-      <Badge n={2} cx={540} cy={180} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={185} size={14} fill={RED} weight={700} anchor="start">FIELD E AT SURFACE</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(540, 200)">
-          <rect x={0} y={5} width={480} height={70} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={35} anchor="middle" size={16} fill={MUTED}>E = kQ / R² = (9×10⁹)(2×10⁻⁶) / (0.10)²</T>
-          <T x={240} y={60} anchor="middle" size={20} fill={INK} weight={800}>
-            E = 1.8 × 10⁶ V/m
+      {/* RIGHT SECTION: POTENTIAL PROFILE GRAPH V(r) */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ELECTROSTATIC POTENTIAL PROFILE V(r)", "ELECTROSTATIC POTENTIAL PROFILE V(r)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Field is sigma/epsilon_0 */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={540} y={320} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Equivalently, that same number is σ / ε₀ using local surface charge density.",
-            "Wahi same number σ / ε₀ se bhi aata hai (local surface charge density)."
-          )}
-        </T>
-      </Fade>
+        {/* V(r) Graph */}
+        <Fade on={beat >= 4}>
+          <line x1="50" y1="270" x2="450" y2="270" stroke={INK} strokeWidth={2} />
+          <line x1="50" y1="270" x2="50" y2="70" stroke={INK} strokeWidth={2} />
 
-      {/* BEAT 6: Field at centre */}
-      <Badge n={3} cx={52} cy={350} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={355} size={14} fill={RED} weight={700} anchor="start">FIELD E AT CENTRE</T>
-      </Fade>
-      <Fade on={beat >= 6}>
-        <g transform="translate(60, 370)">
-          <rect x={0} y={5} width={460} height={50} rx={8} fill="#fef2f2" stroke={RED} strokeWidth={1.8} />
-          <T x={230} y={38} anchor="middle" size={20} fill={RED} weight={800}>
-            E_centre = 0
+          <line x1="180" y1="270" x2="180" y2="70" stroke={MUTED} strokeWidth={1.5} strokeDasharray="4 4" />
+          <T x={180} y={290} size={13} fill={INK} weight={800} anchor="middle">r = R</T>
+
+          {/* V = constant inside */}
+          <line x1="50" y1="100" x2="180" y2="100" stroke={GREEN} strokeWidth={4} />
+
+          {/* 1/r decay outside */}
+          <Draw on={beat >= 4} delay={dl(4, 0.6)} d="M 180 100 Q 260 210, 440 250" stroke={GREEN} sw={3.5} />
+
+          <T x={115} y={85} size={13} fill={GREEN} weight={800} anchor="middle">V = kQ/R (Const)</T>
+          <T x={340} y={200} size={13} fill={GREEN} weight={800}>V ∝ 1/r</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={350} anchor="middle" size={16} fill={GREEN} weight={800}>
+            V(r ≤ R) = k Q / R   |   V(r &gt; R) = k Q / r
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 7: V vs E paradox */}
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CBSE BOARD EXAM GRAPH RULES", "CBSE BOARD EXAM GRAPH RULES")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            E(r) has a jump discontinuity at r = R (0 to kQ/R²), whereas V(r) is continuous everywhere!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            At the center r = 0: E = 0 N/C, but V = kQ/R (Non-zero potential)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Notice V is huge at centre while E is zero! V is 'height', E is 'slope'. ✓",
-            "★ Notice karo centre pe V bahut bada hai jabki E zero hai! V 'height' hai, E 'slope'. ✓"
+            "★ CBSE Profiles Mastered: E(r) jumps from 0 to kQ/R² at surface, while V(r) remains constant kQ/R inside! ✓",
+            "★ CBSE Profiles Mastered: E(r) jumps from 0 to kQ/R² at surface, while V(r) remains constant kQ/R inside! ✓"
           )}
         </Chip>
       </Fade>

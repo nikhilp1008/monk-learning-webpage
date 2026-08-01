@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 51 — "Pitfalls: sigma over epsilon zero, cavities, and one-way shielding"
- * Beats (en [0,4,13,25,36,53,65,80]): 8 beats
+ * Subtopic: Conductors & Spherical Capacitors
+ * OPEN CHALKBOARD DESIGN WITH SUBTOPIC 4 RECAP & PITFALL CHECKLIST (NO CONTAINER BOXES):
+ *  - Pitfall 1: Confusing Conductor Surface Field E = σ/ε₀ with Sheet Field E = σ/2ε₀!
+ *  - Pitfall 2: One-Way Shielding Fallacy -> Cavity shields from OUTSIDE fields, BUT internal charge inside cavity STILL affects outside!
+ *  - Pitfall 3: Outer Shell Charge Fallacy -> Outer charge q₂ NEVER affects potential difference ΔV = V_A - V_B!
+ *  - Subtopic 4 Master Checklist (Sec 39 – 51)
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,110 +37,104 @@ export default function P12Ch02Sec51({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Common pitfalls in electrostatics of conductors", "Electrostatics of conductors mein common pitfalls")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Subtopic 4 Pitfalls & Master Checklist: Conductors, Cavities & Shielding", "Subtopic 4 Pitfalls & Master Checklist: Conductors, Cavities & Shielding")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 250 70 C 440 66, 640 74, 830 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: E outside conductor */}
-      <Badge n={1} cx={52} cy={120} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={125} size={14} fill={RED} weight={700} anchor="start">FIELD JUST OUTSIDE A CONDUCTOR</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 140)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            E = σ / ε₀ (NOT σ / 2ε₀)
+      {/* LEFT SECTION: THREE MAJOR CONDUCTOR PITFALLS */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("THE 3 CLASSIC CONDUCTOR PITFALLS", "THE 3 CLASSIC CONDUCTOR PITFALLS")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: Why double? */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={60} y={225} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Conductor is DOUBLE the isolated sheet, because field inside is zero (all flux goes one way).",
-            "Conductor isolated sheet ka DOUBLE hai, kyunki andar E=0 hai (saari flux ek hi taraf jati hai)."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Field inside */}
-      <Badge n={2} cx={52} cy={270} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">FIELD INSIDE</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={480} y={36} anchor="middle" size={16} fill={INK} weight={800} script>
-            {t(
-              "Thinking field just 'weakens' inside? NO! In equilibrium, E is EXACTLY ZERO.",
-              "Lagta hai field andar bas 'weaken' hoti hai? NAHI! Equilibrium mein, E EXACTLY ZERO hoti hai."
-            )}
+        {/* Floating Pitfalls (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={80} size={15} fill={RED} weight={800} anchor="start">
+            1. Field Formula Slip: Conductor surface E = σ/ε₀ (NOT σ/2ε₀)!
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 4: Cavities */}
-      <Badge n={3} cx={52} cy={375} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={380} size={14} fill={RED} weight={700} anchor="start">CAVITIES</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(60, 395)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={480} y={36} anchor="middle" size={16} fill={INK} weight={800} script>
-            {t(
-              "Forgetting induced charge (−q inside, +q outside) corrupts ALL downstream calculations!",
-              "Induced charge (−q andar, +q bahar) bhoolne se aage ki SAARI calculations galat ho jati hain!"
-            )}
+          <T x={40} y={130} size={15} fill={AMBER_DARK} weight={800} anchor="start">
+            2. One-Way Shielding Trap: Cavity shields from OUTSIDE charges, BUT internal cavity charge DOES induce outer field!
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5: Faraday cage */}
-      <Badge n={4} cx={540} cy={120} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={125} size={14} fill={RED} weight={700} anchor="start">ONE-WAY SHIELDING</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 140)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={20} anchor="middle" size={14} fill={INK} weight={800} script>
-            {t(
-              "Cage shields INSIDE from OUTSIDE fields...",
-              "Cage ANDAR ko BAHAR ki fields se bachata hai..."
-            )}
+          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+            3. Concentric Shell Trap: Potential difference ΔV depends ONLY on inner charge q₁!
           </T>
-          <T x={240} y={42} anchor="middle" size={14} fill={INK} weight={800} script>
-            {t(
-              "but NOT outside from inside!",
-              "par BAHAR ko andar se NAHI!"
-            )}
+
+          <T x={40} y={230} size={15} fill={INK} weight={800} anchor="start">
+            4. Potential Misconception: E = 0 inside does NOT mean V = 0! V = V_surface = Constant!
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 6: Pro tip */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
-          {t(
-            "★ Pro-tip: Treat any charged conductor as ONE equipotential blob! ✓",
-            "★ Pro-tip: Kisi bhi charged conductor ko EK equipotential blob maano! ✓"
-          )}
-        </Chip>
-      </Fade>
+      {/* RIGHT SECTION: MASTER FORMULA MATRIX */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Fade on={beat >= 2} delay={dl(2, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CONDUCTOR & SPHERICAL CAPACITOR MATRIX", "CONDUCTOR & SPHERICAL CAPACITOR MATRIX")}
+          </T>
+        </Fade>
 
-      {/* BEAT 7: Shell principle */}
+        {/* Floating Matrix Features (No Card Boxes) */}
+        <Fade on={beat >= 2}>
+          <T x={40} y={80} size={15} fill={GREEN} weight={800} anchor="start">
+            • Isolated Sphere: C = 4π ε₀ R
+          </T>
+
+          <T x={40} y={130} size={15} fill={GREEN} weight={800} anchor="start">
+            • Concentric Spherical Capacitor: C = 4π ε₀ [ (a b) / (b − a) ]
+          </T>
+
+          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+            • Shell Potential Difference: ΔV = k q₁ (1/a − 1/b)
+          </T>
+
+          <T x={40} y={230} size={15} fill={GREEN} weight={800} anchor="start">
+            • Cavity Induction: q_cavity_wall = −q_inside
+          </T>
+        </Fade>
+      </g>
+
+      {/* MIDDLE BRIDGE LINE */}
+      <g transform="translate(40, 340)">
+        <Fade on={beat >= 4}>
+          <line x1="20" y1="10" x2="1000" y2="10" stroke={INK} strokeWidth={2} />
+          <T x={510} y={45} anchor="middle" size={18} fill={AMBER_DARK} weight={800}>
+            FARADAY CAGE PRINCIPLE: Cavity is 100% shielded from external fields, but outer shell needs grounding to block internal fields!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: SUBTOPIC 4 MASTER CHECKLIST */}
+      <g transform="translate(40, 465)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SUBTOPIC 4 MASTER CHECKLIST (SECTIONS 39 – 51)", "SUBTOPIC 4 MASTER CHECKLIST (SECTIONS 39 – 51)")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            ✓ E_in = 0   ✓ V = Const   ✓ E_surf = σ/ε₀   ✓ C = 4πε₀R   ✓ Spherical Capacitor   ✓ Shell ΔV!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={540} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Concentric shells: Shell contributes kQ/R inside itself, and kQ/r outside! ✓",
-            "★ Concentric shells: Shell apne andar kQ/R deti hai, aur bahar kQ/r! ✓"
+            "★ Subtopic 4 Complete (Sec 39–51): Conductors, Cavities & Spherical Capacitors 100% Mastered! ✓",
+            "★ Subtopic 4 Complete (Sec 39–51): Conductors, Cavities & Spherical Capacitors 100% Mastered! ✓"
           )}
         </Chip>
       </Fade>

@@ -2,12 +2,18 @@
 
 /**
  * P12Ch02 · Section 29 — "The battery fork — is the battery still connected?"
- * Beats (en [0,10,18,31,42,57,70]): 7 beats
+ * Subtopic: Capacitance, Dielectrics & Stored Energy
+ * OPEN CHALKBOARD DESIGN WITH BATTERY FORK DECISION MATRIX (NO CONTAINER BOXES):
+ *  - Branch 1: Battery CONNECTED -> Voltage V = V₀ Constant!
+ *      C -> K C₀ (↑), Q -> K Q₀ (↑), E -> E₀ (=), U -> K U₀ (↑)
+ *  - Branch 2: Battery DISCONNECTED -> Charge Q = Q₀ Constant!
+ *      C -> K C₀ (↑), V -> V₀/K (↓), E -> E₀/K (↓), U -> U₀/K (↓)
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,82 +38,115 @@ export default function P12Ch02Sec29({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("the single most important question: is the battery connected?", "sabse zaroori sawaal: kya battery connected hai?")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("The Battery Fork: Battery Connected (V Constant) vs Disconnected (Q Constant)", "The Battery Fork: Battery Connected (V Constant) vs Disconnected (Q Constant)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 70 C 400 66, 680 74, 960 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — The Fork */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 4}>
-        <T x={540} y={120} size={16} fill={INK} weight={800} anchor="middle">
-          DIELECTRIC INSERTED (C rises to KC₀)
-        </T>
-        <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 540 140 v 20 L 300 190" stroke={AMBER_DARK} sw={2} />
-        <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 540 140 v 20 L 780 190" stroke={GREEN} sw={2} />
-      </Fade>
+      {/* LEFT SECTION: BRANCH 1 — BATTERY STILL CONNECTED */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("BRANCH A: BATTERY CONNECTED (V = V₀)", "BRANCH A: BATTERY CONNECTED (V = V₀)")}
+          </T>
+        </Fade>
 
-      {/* BEAT 2: Disconnected branch — Q is king */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <rect x={100} y={200} width={400} height={200} rx={10} fill={CREAM} stroke={AMBER_DARK} strokeWidth={2} />
-        <T x={300} y={230} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-          BATTERY DISCONNECTED
-        </T>
-        <T x={300} y={260} anchor="middle" size={18} fill={INK} weight={800}>
-          Q IS KING (Stays Constant)
-        </T>
-        <T x={120} y={300} size={13} fill={MUTED} anchor="start" script>
+        {/* Floating Matrix Features (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={80} size={15} fill={AMBER_DARK} weight={800} anchor="start">
+            • Voltage: V = V₀  (Constant, fixed by battery!)
+          </T>
+
+          <T x={40} y={130} size={15} fill={GREEN} weight={800} anchor="start">
+            • Capacitance: C = K C₀  (Increases by K)
+          </T>
+
+          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+            • Charge: Q = K Q₀  (Increases — Battery pumps charge!)
+          </T>
+
+          <T x={40} y={230} size={15} fill={INK} weight={800} anchor="start">
+            • Field: E = E₀  (Constant)
+          </T>
+
+          <T x={40} y={280} size={15} fill={GREEN} weight={800} anchor="start">
+            • Stored Energy: U = ½ C V² = K U₀  (Increases!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: BRANCH 2 — BATTERY DISCONNECTED */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Fade on={beat >= 2} delay={dl(2, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("BRANCH B: BATTERY DISCONNECTED (Q = Q₀)", "BRANCH B: BATTERY DISCONNECTED (Q = Q₀)")}
+          </T>
+        </Fade>
+
+        {/* Floating Matrix Features (No Card Boxes) */}
+        <Fade on={beat >= 2}>
+          <T x={40} y={80} size={15} fill={AMBER_DARK} weight={800} anchor="start">
+            • Charge: Q = Q₀  (Constant — Charge is trapped!)
+          </T>
+
+          <T x={40} y={130} size={15} fill={GREEN} weight={800} anchor="start">
+            • Capacitance: C = K C₀  (Increases by K)
+          </T>
+
+          <T x={40} y={180} size={15} fill={RED} weight={800} anchor="start">
+            • Voltage: V = V₀ / K  (Decreases by 1/K)
+          </T>
+
+          <T x={40} y={230} size={15} fill={RED} weight={800} anchor="start">
+            • Field: E = E₀ / K  (Decreases by 1/K)
+          </T>
+
+          <T x={40} y={280} size={15} fill={RED} weight={800} anchor="start">
+            • Stored Energy: U = Q² / (2C) = U₀ / K  (Decreases!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* MIDDLE BRIDGE FORK */}
+      <g transform="translate(40, 390)">
+        <Fade on={beat >= 4}>
+          <line x1="20" y1="10" x2="1000" y2="10" stroke={INK} strokeWidth={2} />
+          <T x={510} y={40} anchor="middle" size={18} fill={RED} weight={800}>
+            THE #1 EXAM FORK RULE: Identify battery state BEFORE choosing formula!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("FORMULA SELECTION GUIDE", "FORMULA SELECTION GUIDE")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Battery Connected → Use U = ½ C V² (since V is constant)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Battery Disconnected → Use U = Q² / (2C) (since Q is constant)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "Charge is trapped with nowhere to go!",
-            "Charge fass gaya hai, kahin nahi ja sakta!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Disconnected consequences */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={120} y={340} size={14} fill={INK} anchor="start" script>
-          {t("C ↑ by K", "C ↑ by K")}
-        </T>
-        <T x={120} y={365} size={14} fill={RED} anchor="start" script>
-          {t("V, E, U all ↓ by K", "V, E, U sab ↓ by K")}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Connected branch — V is king */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <rect x={580} y={200} width={400} height={200} rx={10} fill={CREAM} stroke={GREEN} strokeWidth={2} />
-        <T x={780} y={230} anchor="middle" size={14} fill={GREEN} weight={700}>
-          BATTERY CONNECTED
-        </T>
-        <T x={780} y={260} anchor="middle" size={18} fill={INK} weight={800}>
-          V IS KING (Stays Constant)
-        </T>
-        <T x={600} y={300} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Battery clamps voltage at its EMF!",
-            "Battery voltage ko apne EMF pe clamp karti hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 5: Connected consequences */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={600} y={340} size={14} fill={INK} anchor="start" script>
-          {t("C ↑ by K", "C ↑ by K")}
-        </T>
-        <T x={600} y={365} size={14} fill={GREEN} anchor="start" script>
-          {t("Q, U both ↑ by K  |  E stays constant", "Q, U dono ↑ by K  |  E constant")}
-        </T>
-      </Fade>
-
-      {/* BEAT 6: The rule */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={536} w={880} h={44} fill={RED} textFill="#ffffff" size={18}>
-          {t(
-            "★ Decide this fork first, EVERY SINGLE TIME, before touching a formula! ✓",
-            "★ Formula chhune se pehle hamesha yeh decide karo ki konsa fork hai! ✓"
+            "★ Battery Fork Mastered: Connected -> V constant & U increases; Disconnected -> Q constant & U decreases! ✓",
+            "★ Battery Fork Mastered: Connected -> V constant & U increases; Disconnected -> Q constant & U decreases! ✓"
           )}
         </Chip>
       </Fade>

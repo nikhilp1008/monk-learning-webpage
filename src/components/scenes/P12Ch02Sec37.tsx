@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 37 — "JEE Advanced: composite dielectric, two stacked slabs"
- * Beats (en [0,7,22,33,50,66,77,93]): 8 beats
+ * Subtopic: Capacitance, Dielectrics & Stored Energy
+ * OPEN CHALKBOARD DESIGN WITH COMPOSITE DIELECTRIC SCHEMATIC (NO CONTAINER BOXES):
+ *  - Case 1: Series Slabs (thicknesses t₁, t₂ stacked vertically) -> 1/C_eq = t₁/(ε₀A K₁) + t₂/(ε₀A K₂)
+ *  - Case 2: Parallel Slabs (areas A₁, A₂ side-by-side) -> C_eq = ε₀A₁K₁/d + ε₀A₂K₂/d
+ *  - General Integral formula for non-uniform dielectric K(x)
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,97 +37,101 @@ export default function P12Ch02Sec37({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("JEE Advanced: composite dielectric, two stacked slabs", "JEE Advanced: composite dielectric, two stacked slabs")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("JEE Advanced: Composite Dielectric Slabs (Series Stacked vs Parallel Split)", "JEE Advanced: Composite Dielectric Slabs (Series Stacked vs Parallel Split)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 220 70 C 440 66, 640 74, 860 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — Stacked slabs */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 5}>
-        <rect x={180} y={120} width={8} height={200} rx={2} fill={RED} />
-        <rect x={380} y={120} width={8} height={200} rx={2} fill="#3b82f6" />
-        <T x={170} y={150} size={14} fill={RED} weight={800} anchor="end">+Q, A</T>
-        <T x={400} y={150} size={14} fill="#3b82f6" weight={800} anchor="start">−Q, A</T>
-        {/* Slab 1 */}
-        <rect x={200} y={130} width={80} height={180} rx={4} fill="#fef3c7" stroke={AMBER_DARK} strokeWidth={1.5} />
-        <T x={240} y={225} size={14} fill={AMBER_DARK} weight={800}>K₁</T>
-        <T x={240} y={335} size={12} fill={AMBER_DARK} weight={700}>d/2</T>
-        {/* Slab 2 */}
-        <rect x={290} y={130} width={80} height={180} rx={4} fill="#dcfce7" stroke={GREEN} strokeWidth={1.5} />
-        <T x={330} y={225} size={14} fill={GREEN} weight={800}>K₂</T>
-        <T x={330} y={335} size={12} fill={GREEN} weight={700}>d/2</T>
-      </Fade>
-
-      {/* BEAT 2: Q is same, σ is same */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={460} y={130} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Same charge Q → same density σ threads through both slabs!",
-            "Same charge Q → same density σ dono slabs se pass karti hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: E and V in each slab */}
-      <Badge n={1} cx={460} cy={180} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={482} y={185} size={14} fill={RED} weight={700} anchor="start">FIELD AND POTENTIAL IN EACH SLAB</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(460, 200)">
-          <rect x={0} y={5} width={500} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={250} y={38} anchor="middle" size={16} fill={INK} weight={800}>
-            E_i = σ / (K_i ε₀)    |    V_i = E_i · (d/2)
+      {/* LEFT SECTION: STACKED SLABS IN SERIES (t1, t2) */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("STACKED SLABS IN SERIES (THICKNESS t₁, t₂)", "STACKED SLABS IN SERIES (THICKNESS t₁, t₂)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: Total V */}
-      <Badge n={2} cx={52} cy={350} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={355} size={14} fill={RED} weight={700} anchor="start">TOTAL POTENTIAL V</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(60, 370)">
-          <rect x={0} y={5} width={420} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={210} y={38} anchor="middle" size={16} fill={INK} weight={800}>
-            V = V₁ + V₂ = (Qd / 2ε₀A) [1/K₁ + 1/K₂]
+        {/* Stacked Slab Diagram */}
+        <Fade on={beat >= 1}>
+          <line x1="60" y1="80" x2="420" y2="80" stroke={RED} strokeWidth={4} />
+          <line x1="60" y1="260" x2="420" y2="260" stroke={GREEN} strokeWidth={4} />
+
+          {/* Slab 1 (K1, t1) */}
+          <rect x="70" y="90" width="340" height="75" fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={1.5} />
+          <T x={240} y={135} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Slab 1 (K₁, t₁)</T>
+
+          {/* Slab 2 (K2, t2) */}
+          <rect x="70" y="170" width="340" height="80" fill="#0284c7" opacity={0.2} stroke="#0284c7" strokeWidth={1.5} />
+          <T x={240} y={215} size={15} fill="#0369a1" weight={900} anchor="middle">Slab 2 (K₂, t₂)</T>
+        </Fade>
+
+        {/* Free Floating Series Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={18} fill={GREEN} weight={900}>
+            C_eq = ε₀ A / [ (t₁ / K₁) + (t₂ / K₂) ]
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 5: Equivalent C */}
-      <Badge n={3} cx={500} cy={350} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={522} y={355} size={14} fill={RED} weight={700} anchor="start">EQUIVALENT CAPACITANCE</T>
-      </Fade>
-      <Fade on={beat >= 5}>
-        <g transform="translate(500, 370)">
-          <rect x={0} y={5} width={460} height={50} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={230} y={38} anchor="middle" size={18} fill={RED} weight={800}>
-            C = Q/V = (2ε₀A / d) · [K₁K₂ / (K₁ + K₂)]
+      {/* RIGHT SECTION: SIDE-BY-SIDE SLABS IN PARALLEL (A1, A2) */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SIDE-BY-SIDE SLABS IN PARALLEL (AREA A₁, A₂)", "SIDE-BY-SIDE SLABS IN PARALLEL (AREA A₁, A₂)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 6: Numerical plugging */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={60} y={450} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Just plug in A, d, K₁, K₂ in SI units into the derived formula.",
-            "Bas A, d, K₁, K₂ ko SI units mein derived formula mein daal do."
-          )}
-        </T>
-      </Fade>
+        {/* Side-by-Side Slab Diagram */}
+        <Fade on={beat >= 4}>
+          <line x1="60" y1="80" x2="420" y2="80" stroke={RED} strokeWidth={4} />
+          <line x1="60" y1="260" x2="420" y2="260" stroke={GREEN} strokeWidth={4} />
 
-      {/* BEAT 7: Series connection structure */}
+          {/* Slab 1 (K1, A1) */}
+          <rect x="70" y="90" width="165" height="160" fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={1.5} />
+          <T x={152} y={175} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Slab 1 (K₁, A₁)</T>
+
+          {/* Slab 2 (K2, A2) */}
+          <rect x="245" y="90" width="165" height="160" fill="#0284c7" opacity={0.2} stroke="#0284c7" strokeWidth={1.5} />
+          <T x={327} y={175} size={15} fill="#0369a1" weight={900} anchor="middle">Slab 2 (K₂, A₂)</T>
+        </Fade>
+
+        {/* Free Floating Parallel Formula (Spacious, No Box) */}
+        <Fade on={beat >= 5}>
+          <T x={250} y={350} anchor="middle" size={18} fill={GREEN} weight={900}>
+            C_eq = (ε₀ / d) [ A₁ K₁ + A₂ K₂ ]
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("JEE ADVANCED NON-UNIFORM K(x) INTEGRATION", "JEE ADVANCED NON-UNIFORM K(x) INTEGRATION")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            For continuously varying K(x): 1/C_eq = (1/ε₀A) ∫₀^d dx / K(x) !
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Split perpendicular to E field lines = Series; Split parallel to E field lines = Parallel!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Stacked slabs SHARE charge Q and SPLIT voltage V → exact behaviour of SERIES capacitors! ✓",
-            "★ Stacked slabs charge Q share karti aur V split karti → yeh exactly SERIES connection hai! ✓"
+            "★ Composite Dielectric Mastered: Series Stacked C_eq = ε₀A / Σ(t_i/K_i) vs Parallel Split C_eq = (ε₀/d) Σ(A_i K_i)! ✓",
+            "★ Composite Dielectric Mastered: Series Stacked C_eq = ε₀A / Σ(t_i/K_i) vs Parallel Split C_eq = (ε₀/d) Σ(A_i K_i)! ✓"
           )}
         </Chip>
       </Fade>

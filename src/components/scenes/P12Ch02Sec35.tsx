@@ -2,12 +2,18 @@
 
 /**
  * P12Ch02 · Section 35 — "NEET speed trap: dielectric with the battery disconnected"
- * Beats (en [0,6,20,32,44,55,66,83]): 8 beats
+ * Subtopic: Capacitance, Dielectrics & Stored Energy
+ * OPEN CHALKBOARD DESIGN WITH DISCONNECTED BATTERY ANALYSIS (NO CONTAINER BOXES):
+ *  - Dielectric K = 5 inserted after battery is DISCONNECTED
+ *  - Charge Q = Q₀ (Constant, trapped!)
+ *  - Voltage V = V₀ / 5 (Drops to 20%)
+ *  - Stored Energy U = U₀ / 5 (Drops to 20%)
+ *  - Where did the missing 80% energy go? Electrostatic field pulls slab in (Work done by field W = 0.8 U₀)!
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,95 +38,111 @@ export default function P12Ch02Sec35({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("NEET speed trap: dielectric with battery disconnected", "NEET speed trap: dielectric with battery disconnected")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("NEET Speed Trap: Dielectric with Battery Disconnected (Where Did Energy Go?)", "NEET Speed Trap: Dielectric with Battery Disconnected (Where Did Energy Go?)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem setup */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <g transform="translate(60, 90)">
-          <rect x={0} y={5} width={960} height={55} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={20} y={25} size={14} fill={INK} weight={700} anchor="start">GIVEN:</T>
-          <T x={20} y={48} size={14} fill={INK} anchor="start" script>
-            {t(
-              "C₀ = 5 μF, V₀ = 100 V. Battery DISCONNECTED. Then dielectric K = 4 inserted.",
-              "C₀ = 5 μF, V₀ = 100 V. Battery DISCONNECTED. Phir dielectric K = 4 dala."
-            )}
+      {/* LEFT SECTION: DISCONNECTED BATTERY SLAB DRAWING */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("DIELECTRIC (K = 5) INSERTION (DISCONNECTED)", "DIELECTRIC (K = 5) INSERTION (DISCONNECTED)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: The Trap */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={0} width={450} height={40} rx={6} fill="#fef2f2" stroke={RED} strokeWidth={2} />
-          <T x={225} y={26} anchor="middle" size={14} fill={RED} weight={800}>
-            {t("⚠ TRAP: Assuming V stays at 100 V!", "⚠ TRAP: Maan lena ki V 100 V hi rahega!")}
+        {/* Capacitor Diagram */}
+        <Fade on={beat >= 1}>
+          <line x1="60" y1="90" x2="420" y2="90" stroke={RED} strokeWidth={4} />
+          <T x={435} y={95} size={14} fill={RED} weight={800}>+Q₀ Trapped</T>
+
+          <line x1="60" y1="230" x2="420" y2="230" stroke={GREEN} strokeWidth={4} />
+          <T x={435} y={235} size={14} fill={GREEN} weight={800}>−Q₀ Trapped</T>
+
+          {/* Dielectric Slab inserted */}
+          <rect x="120" y="100" width="240" height="120" fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={2} />
+          <T x={240} y={160} size={16} fill={AMBER_DARK} weight={900} anchor="middle">Dielectric K = 5</T>
+
+          {/* Suction Force Arrow pulling slab into capacitor */}
+          <path d={arrowD(60, 160, 110, 160)} stroke={GREEN} strokeWidth={3} />
+          <T x={40} y={190} size={12} fill={GREEN} weight={800}>Field Suction Force F_pull</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={16} fill={INK} weight={800}>
+            Trapped Charge: Q = Q₀  ⇒  Voltage V = Q₀ / (5 C₀) = V₀ / 5 !
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 3: Disconnected → Q locked */}
-      <Badge n={1} cx={52} cy={220} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={225} size={14} fill={RED} weight={700} anchor="start">Q IS LOCKED (DISCONNECTED)</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(60, 240)">
-          <rect x={0} y={5} width={600} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={300} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            Q = C₀V₀ = (5μF)(100V) = 500 μC (fixed!)
+      {/* RIGHT SECTION: ENERGY DISSIPATION ACCOUNTING */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("WHERE DID THE 80% MISSING ENERGY GO?", "WHERE DID THE 80% MISSING ENERGY GO?")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: V drops */}
-      <Badge n={2} cx={52} cy={315} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={320} size={14} fill={RED} weight={700} anchor="start">NEW CAPACITANCE & VOLTAGE</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(60, 335)">
-          <rect x={0} y={5} width={800} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={400} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            C = KC₀ = 20 μF    |    V = Q/C = 500/20 = 25 V
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Initial Energy U₀ = Q₀² / (2 C₀)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5: V/K meaning */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={60} y={415} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Voltage fell from 100V to 25V (divided by K=4) exactly as theory says!",
-            "Voltage 100V se 25V gir gaya (K=4 se divide hua) exactly theory ke mutabiq!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 6: Energy drops */}
-      <Badge n={3} cx={52} cy={445} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={450} size={14} fill={RED} weight={700} anchor="start">ENERGY DROPS (U = Q²/2C)</T>
-      </Fade>
-      <Fade on={beat >= 6}>
-        <g transform="translate(60, 465)">
-          <rect x={0} y={5} width={900} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={450} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            U₀ = Q²/(2C₀) = 2.5×10⁻² J    |    U = Q²/(2C) = U₀/4 = 0.625×10⁻² J
+          <T x={50} y={145} size={16} fill={RED} weight={800} anchor="start">
+            2. Final Energy U = Q₀² / (2 × 5 C₀) = U₀ / 5 = 0.20 U₀
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Speed Rule */}
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Energy Loss ΔU = U₀ − U = 0.80 U₀ (80% Lost!)
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={GREEN} weight={900} anchor="start">
+            4. W_field = +0.80 U₀ (Work done pulling slab!)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Field sucks slab inward — energy converts into kinetic energy of slab or mechanical work!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("NEET MCQ SPEED TRAP WARNING", "NEET MCQ SPEED TRAP WARNING")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Disconnected Battery → Q is constant! Never use U = ½ C V² (since V changes)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Always use U = Q² / (2C) when battery is disconnected!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ SPEED RULE: Disconnected → Q fixed → V, E, and U all divide by K! ✓",
-            "★ SPEED RULE: Disconnected → Q fixed → V, E, aur U sab K se divide hote hain! ✓"
+            "★ NEET Trap Neutralized: Battery Disconnected -> Q constant, U = U₀/K (80% energy converted into mechanical suction work)! ✓",
+            "★ NEET Trap Neutralized: Battery Disconnected -> Q constant, U = U₀/K (80% energy converted into mechanical suction work)! ✓"
           )}
         </Chip>
       </Fade>

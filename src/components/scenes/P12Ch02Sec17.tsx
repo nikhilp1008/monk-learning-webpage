@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 17 — "Formula toolkit: potential energy of charge systems"
- * Beats (en [0,4,13,26,34,45,55,64,74]): 9 beats
+ * Subtopic: Potential Energy & External Fields
+ * OPEN CHALKBOARD DESIGN WITH FORMULA MATRIX (NO CONTAINER BOXES):
+ *  - 1. Two-charge isolated system: U = k q₁ q₂ / r
+ *  - 2. Three-charge system: U = k (q₁q₂/r₁₂ + q₂q₃/r₂₃ + q₁q₃/r₁₃)
+ *  - 3. Two charges in external field V(r): U = q₁ V(r₁) + q₂ V(r₂) + k q₁ q₂ / r₁₂
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,102 +37,103 @@ export default function P12Ch02Sec17({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("formula toolkit: potential energy", "formula toolkit: potential energy")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Formula Toolkit: Potential Energy of Isolated & External Field Charge Systems", "Formula Toolkit: Potential Energy of Isolated & External Field Charge Systems")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 260 70 C 440 66, 640 74, 820 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Two-charge PE */}
-      <Badge n={1} cx={52} cy={120} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 1)}>
-        <T x={74} y={125} size={14} fill={RED} weight={700} anchor="start">TWO-CHARGE PE</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 140)">
-          <rect x={0} y={5} width={460} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={230} y={38} anchor="middle" size={20} fill={INK} weight={800}>
-            U = (1/4πε₀) · q₁q₂ / r₁₂
+      {/* LEFT SECTION: ISOLATED N-CHARGE SYSTEMS */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ISOLATED SYSTEMS (NO EXTERNAL FIELD)", "ISOLATED SYSTEMS (NO EXTERNAL FIELD)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: n-charge system */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={60} y={220} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "For n charges: sum over all distinct pairs, factor ½ if double-counting",
-            "n charges ke liye: sab distinct pairs ka sum, ½ factor agar double-count ho"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Pairwise sum */}
-      <Badge n={2} cx={52} cy={260} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 1)}>
-        <T x={74} y={265} size={14} fill={RED} weight={700} anchor="start">n-CHARGE SYSTEM</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(60, 280)">
-          <rect x={0} y={5} width={500} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={250} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            U = (1/4πε₀) Σ_{"{i<j}"} qᵢqⱼ / rᵢⱼ
+        {/* Floating Formulas (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={85} size={15} fill={INK} weight={800} anchor="start">
+            1. Two Charges: U = k q₁ q₂ / r₁₂
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 4: Number of pairs */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <T x={60} y={360} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Number of distinct pairs = n(n−1)/2. For 3 charges: 3 pairs. For 4: 6 pairs!",
-            "Distinct pairs ki sankhya = n(n−1)/2. 3 charges: 3 pairs. 4 charges: 6 pairs!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 5: Bridge U = qV */}
-      <Badge n={3} cx={540} cy={120} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 1)}>
-        <T x={562} y={125} size={14} fill={RED} weight={700} anchor="start">BRIDGE: U = qV</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 140)">
-          <rect x={0} y={5} width={300} height={55} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={150} y={40} anchor="middle" size={28} fill={RED} weight={800}>U = qV</T>
-        </g>
-      </Fade>
-
-      {/* BEAT 6: Bridge meaning */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={540} y={225} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "U (joules) = charge+field system | V (volts) = field property only!",
-            "U (joules) = charge+field system | V (volts) = sirf field ki property!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 7: External field formula */}
-      <Fade on={beat >= 7} delay={dl(7, 0.5)}>
-        <g transform="translate(540, 260)">
-          <rect x={0} y={5} width={460} height={65} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={230} y={30} anchor="middle" size={14} fill={INK} weight={800}>
-            Charges in external field:
+          <T x={40} y={150} size={15} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Three Charges: U = k ( q₁q₂/r₁₂ + q₂q₃/r₂₃ + q₁q₃/r₁₃ )
           </T>
-          <T x={230} y={58} anchor="middle" size={16} fill={INK} weight={800}>
-            U = q₁V(r₁) + q₂V(r₂) + kq₁q₂/r₁₂
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 8: Takeaway */}
-      <Fade on={beat >= 8}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+          <T x={40} y={215} size={15} fill={GREEN} weight={800} anchor="start">
+            3. N-Charge General: U = ½ Σ (k q_i q_j / r_ij)
+          </T>
+        </Fade>
+
+        {/* Free Floating Rule (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={15} fill={RED} weight={800}>
+            Number of interaction pairs for N charges = N(N − 1) / 2 !
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: CHARGES IN EXTERNAL POTENTIAL V(r) */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CHARGES IN EXTERNAL FIELD V(r)", "CHARGES IN EXTERNAL FIELD V(r)")}
+          </T>
+        </Fade>
+
+        {/* Floating External Field Formulas (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={15} fill={RED} weight={800} anchor="start">
+            1. Single Charge q in V(r): U = q V(r)
+          </T>
+
+          <T x={50} y={150} size={15} fill={GREEN} weight={800} anchor="start">
+            2. Two Charges in V(r):
+          </T>
+
+          <T x={70} y={190} size={18} fill={GREEN} weight={900} anchor="start">
+            U_total = q₁ V(r₁) + q₂ V(r₂) + (k q₁ q₂ / r₁₂)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={350} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Includes BOTH interaction with external field AND mutual charge-charge interaction!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SYSTEM POTENTIAL ENERGY MASTER RULE", "SYSTEM POTENTIAL ENERGY MASTER RULE")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Always count: 1. External Field Energy (q V) + 2. Pairwise Mutual Energies (k q_i q_j / r_ij)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Never double-count pairs! Use N(N-1)/2 formula to check total term count.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ 3 pieces: each charge × external V + mutual pair interaction ✓",
-            "★ 3 pieces: har charge × external V + mutual pair interaction ✓"
+            "★ Toolkit Mastered: U_ext = q₁V(r₁) + q₂V(r₂) + k q₁ q₂ / r₁₂ (External field + Mutual interaction)! ✓",
+            "★ Toolkit Mastered: U_ext = q₁V(r₁) + q₂V(r₂) + k q₁ q₂ / r₁₂ (External field + Mutual interaction)! ✓"
           )}
         </Chip>
       </Fade>

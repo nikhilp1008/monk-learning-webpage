@@ -1,13 +1,17 @@
 "use client";
 
 /**
- * P12Ch02 · Section 57 — "Deriving the series combination formula"
- * Beats (en [0,5,13,29,36,46,61,74]): 8 beats
+ * P12Ch02 · Section 57 — "Deriving the equivalent capacitance for series and parallel"
+ * Subtopic: Series & Parallel Combinations Derivations
+ * OPEN CHALKBOARD DESIGN WITH DERIVATION PROOFS (NO CONTAINER BOXES):
+ *  - Parallel Derivation: Total Charge Q = Q₁ + Q₂  =>  C_eq V = C₁ V + C₂ V  =>  C_eq = C₁ + C₂
+ *  - Series Derivation: Total Voltage V = V₁ + V₂  =>  Q/C_eq = Q/C₁ + Q/C₂  =>  1/C_eq = 1/C₁ + 1/C₂
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,130 +36,105 @@ export default function P12Ch02Sec57({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Derivation: capacitors in series", "Derivation: capacitors in series")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Derivation: Rigorous Proof of Series & Parallel Equivalent Capacitance Formulae", "Derivation: Rigorous Proof of Series & Parallel Equivalent Capacitance Formulae")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 370 70 C 440 66, 640 74, 710 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Connect them */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 7}>
-        <g transform="translate(300, 150)">
-          {/* C1 */}
-          <rect x={100} y={20} width={10} height={60} fill="#3b82f6" />
-          <rect x={140} y={20} width={10} height={60} fill="#3b82f6" />
-          <T x={125} y={15} size={14} fill={INK} weight={700}>C₁</T>
-
-          {/* Wire C1 to C2 */}
-          <line x1={150} y1={50} x2={250} y2={50} stroke={INK} strokeWidth={2} />
-          
-          {/* C2 */}
-          <rect x={250} y={20} width={10} height={60} fill="#10b981" />
-          <rect x={290} y={20} width={10} height={60} fill="#10b981" />
-          <T x={275} y={15} size={14} fill={INK} weight={700}>C₂</T>
-
-          {/* Wire C2 to C3 */}
-          <line x1={300} y1={50} x2={400} y2={50} stroke={INK} strokeWidth={2} />
-
-          {/* C3 */}
-          <rect x={400} y={20} width={10} height={60} fill="#f59e0b" />
-          <rect x={440} y={20} width={10} height={60} fill="#f59e0b" />
-          <T x={425} y={15} size={14} fill={INK} weight={700}>C₃</T>
-
-          {/* Source wires */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 0 150 L 0 50 L 100 50" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 550 150 L 550 50 L 450 50" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 0 150 L 260 150" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 290 150 L 550 150" stroke={INK} sw={2} />
-          
-          {/* Source V */}
-          <line x1={260} y1={130} x2={260} y2={170} stroke={INK} strokeWidth={3} />
-          <line x1={290} y1={140} x2={290} y2={160} stroke={INK} strokeWidth={5} />
-          <T x={275} y={190} size={16} fill={INK} weight={700}>V</T>
-
-          {/* Charge Q */}
-          <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-            <T x={90} y={55} size={16} fill={RED} weight={800}>+Q</T>
-            <T x={165} y={55} size={16} fill={RED} weight={800}>−Q</T>
-            <T x={240} y={55} size={16} fill={RED} weight={800}>+Q</T>
-            <T x={315} y={55} size={16} fill={RED} weight={800}>−Q</T>
-            <T x={390} y={55} size={16} fill={RED} weight={800}>+Q</T>
-            <T x={465} y={55} size={16} fill={RED} weight={800}>−Q</T>
-          </Fade>
-        </g>
-      </Fade>
-
-      {/* BEAT 2: Common Q */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={60} y={350} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Battery deposits +Q and −Q at ends. By induction, every capacitor gets charge Q.",
-            "Battery ends pe +Q aur −Q deti hai. Induction se, har capacitor ko charge Q milta hai."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Voltage sum */}
-      <Badge n={1} cx={52} cy={400} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={405} size={14} fill={RED} weight={700} anchor="start">VOLTAGES ADD</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(60, 420)">
-          <rect x={0} y={5} width={450} height={40} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={32} anchor="middle" size={16} fill={INK} weight={800}>
-            V = V₁ + V₂ + V₃
+      {/* LEFT SECTION: PARALLEL COMBINATION PROOF */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("PARALLEL PROOF (Q_total = Q₁ + Q₂)", "PARALLEL PROOF (Q_total = Q₁ + Q₂)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: Substitute V = Q/C */}
-      <Badge n={2} cx={540} cy={400} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={405} size={14} fill={RED} weight={700} anchor="start">SUBSTITUTE V = Q/C</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(540, 420)">
-          <rect x={0} y={5} width={480} height={40} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={32} anchor="middle" size={16} fill={INK} weight={800}>
-            V = Q/C₁ + Q/C₂ + Q/C₃ = Q (1/C₁ + 1/C₂ + 1/C₃)
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. Total Charge: Q = Q₁ + Q₂
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5: Factor out Q */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={540} y={485} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Q factors out cleanly precisely because it is identical for every capacitor.",
-            "Q aaram se factor out hota hai kyunki wo har capacitor ke liye identical hai."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 6: Final formula */}
-      <Badge n={3} cx={52} cy={490} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={495} size={14} fill={RED} weight={700} anchor="start">DIVIDE BY Q TO GET 1/C_series</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 7}>
-        <g transform="translate(60, 510)">
-          <rect x={0} y={5} width={450} height={40} rx={8} fill="#ecfdf5" stroke={GREEN} strokeWidth={1.8} />
-          <T x={225} y={32} anchor="middle" size={16} fill={INK} weight={800}>
-            1/C_series = 1/C₁ + 1/C₂ + 1/C₃
+          <T x={40} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Substitute Q_i = C_i V: C_eq V = C₁ V + C₂ V
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Always smaller */}
-      <Fade on={beat >= 7} delay={dl(7, 0.3)}>
-        <T x={60} y={575} size={13} fill={AMBER_DARK} anchor="start" script>
+          <T x={40} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Divide by V: C_eq = C₁ + C₂  (Q.E.D.)
+          </T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={17} fill={GREEN} weight={900}>
+            Parallel plates combine areas: A_eff = A₁ + A₂ !
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: SERIES COMBINATION PROOF */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SERIES PROOF (V_total = V₁ + V₂)", "SERIES PROOF (V_total = V₁ + V₂)")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. Total Voltage: V = V₁ + V₂
+          </T>
+
+          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Substitute V_i = Q / C_i: Q / C_eq = Q / C₁ + Q / C₂
+          </T>
+
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Divide by Q: 1 / C_eq = 1 / C₁ + 1 / C₂  (Q.E.D.)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={350} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Series spacing combines gaps: d_eff = d₁ + d₂ !
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("PHYSICAL INTERPRETATION OF PROOF", "PHYSICAL INTERPRETATION OF PROOF")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Parallel plates act like a single larger plate of area (A₁ + A₂), boosting capacitance!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Series plates act like a single capacitor with wider spacing (d₁ + d₂), reducing capacitance!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "Because we add reciprocals, C_series is ALWAYS smaller than the smallest member.",
-            "Kyunki hum reciprocals add karte hain, C_series HAMESHA smallest member se chota hoga."
+            "★ Proof Completed: C_eq = C₁+C₂ (Area Addition) and 1/C_eq = 1/C₁+1/C₂ (Gap Addition) proven! ✓",
+            "★ Proof Completed: C_eq = C₁+C₂ (Area Addition) and 1/C_eq = 1/C₁+1/C₂ (Gap Addition) proven! ✓"
           )}
-        </T>
+        </Chip>
       </Fade>
     </svg>
   );

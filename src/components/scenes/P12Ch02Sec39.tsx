@@ -2,12 +2,18 @@
 
 /**
  * P12Ch02 · Section 39 — "Why the field inside a conductor is exactly zero"
- * Beats (en [0,11,21,33,44,57,67]): 7 beats
+ * Subtopic: Conductors & Spherical Capacitors
+ * OPEN CHALKBOARD DESIGN WITH CONDUCTOR DRIFT DIAGRAM (NO CONTAINER BOXES):
+ *  - Solid Conductor placed in External Field E₀
+ *  - Free electron drift to left boundary (-σ_ind), leaving positive ions on right (+σ_ind)
+ *  - Internal induced field E_ind opposes E₀
+ *  - Equilibrium reached in ~10⁻¹⁴ seconds when E_ind = E₀  =>  E_inside = 0 N/C!
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -30,96 +36,119 @@ export default function P12Ch02Sec39({ currentTime, reveals, language }: ScenePr
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Electron drift animation inside conductor
+  const driftX = (currentTime * 40) % 60;
+
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("inside a conductor, the field is exactly zero", "conductor ke andar, field exactly zero hoti hai")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Why Electrostatic Field Inside a Conductor is EXACTLY Zero (E_inside = 0)", "Why Electrostatic Field Inside a Conductor is EXACTLY Zero (E_inside = 0)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 220 70 C 440 66, 640 74, 860 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — Conductor in external field */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 5}>
-        <ellipse cx={200} cy={200} rx={120} ry={80} fill="#f1f5f9" stroke={INK} strokeWidth={2} />
-        {/* External E field */}
-        {[140, 170, 200, 230, 260].map((y, i) => (
-          <g key={y}>
-            <Draw on={beat >= 1} delay={dl(1, 0.5)} d={`M 20 ${y} h 50`} stroke={AMBER_DARK} sw={1.5} />
-            <polygon points={`72,${y} 62,${y-4} 62,${y+4}`} fill={AMBER_DARK} />
-            <Draw on={beat >= 1} delay={dl(1, 0.5)} d={`M 330 ${y} h 50`} stroke={AMBER_DARK} sw={1.5} />
-            <polygon points={`382,${y} 372,${y-4} 372,${y+4}`} fill={AMBER_DARK} />
-          </g>
-        ))}
-        <T x={60} y={120} size={14} fill={AMBER_DARK} weight={700}>E_ext</T>
-        {/* Induced charges (on surfaces) */}
-        <Fade on={beat >= 2} delay={dl(2, 0.5)}>
-          <T x={90} y={205} size={18} fill="#3b82f6" weight={800}>− − −</T>
-          <T x={290} y={205} size={18} fill={RED} weight={800}>+ + +</T>
-          {/* Induced E field */}
-          <Draw on={beat >= 2} delay={dl(2, 1)} d="M 280 200 h -170" stroke={RED} sw={1.5} />
-          <polygon points={`108,200 118,196 118,204`} fill={RED} />
-          <T x={190} y={185} size={14} fill={RED} weight={700}>E_ind</T>
+      {/* LEFT SECTION: CONDUCTOR INDUCED CHARGE DRIFT */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("FREE ELECTRON DRIFT & INDUCED OPPOSING FIELD", "FREE ELECTRON DRIFT & INDUCED OPPOSING FIELD")}
+          </T>
         </Fade>
-      </Fade>
 
-      {/* BEAT 2: Electrons shuffle */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={440} y={120} size={14} fill={MUTED} anchor="start" script>
-          {t(
-            "External field appears → electrons shuffle → create own opposing field E_ind!",
-            "External field aayi → electrons shift hue → apni opposing field E_ind banayi!"
-          )}
-        </T>
-      </Fade>
+        {/* Conductor Body */}
+        <Fade on={beat >= 1}>
+          {/* External Field Arrows E0 */}
+          <path d={arrowD(20, 110, 440, 110)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(20, 190, 440, 190)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(20, 270, 440, 270)} stroke={RED} strokeWidth={2.5} />
+          <T x={445} y={195} size={13} fill={RED} weight={800} anchor="start">E₀ External</T>
 
-      {/* BEAT 3: Exactly zero */}
-      <Badge n={1} cx={440} cy={175} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={462} y={180} size={14} fill={RED} weight={700} anchor="start">NET FIELD IS ZERO</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(440, 195)">
-          <rect x={0} y={5} width={420} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={210} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            E_net = E_ext − E_ind = 0
+          {/* Solid Conductor Block */}
+          <rect x="120" y="80" width="220" height="220" rx={15} fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={2.5} />
+
+          {/* Induced Charges on Boundaries */}
+          <T x={135} y={195} size={22} fill={GREEN} weight={900} anchor="middle">− − − −</T>
+          <T x={325} y={195} size={22} fill={RED} weight={900} anchor="middle">+ + + +</T>
+
+          {/* Opposing Internal Field E_ind */}
+          <path d={arrowD(310, 190, 150, 190)} stroke={GREEN} strokeWidth={3} />
+          <T x={230} y={170} size={15} fill={GREEN} weight={900} anchor="middle">E_ind (Opposes E₀)</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            Net Internal Field E_inside = E₀ − E_ind = 0 N/C !
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 4: Why zero? */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <T x={440} y={285} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "If E_net ≠ 0, free charges would STILL feel force (F=qE) and move!",
-            "Agar E_net ≠ 0 hota, free charges pe AB BHI force lagta aur wo move karte!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 5: Equilibrium */}
-      <Badge n={2} cx={52} cy={355} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={360} size={14} fill={RED} weight={700} anchor="start">ELECTROSTATIC EQUILIBRIUM</T>
-      </Fade>
-      <Fade on={beat >= 5}>
-        <g transform="translate(60, 375)">
-          <rect x={0} y={0} width={900} height={45} rx={6} fill="#fef2f2" stroke={RED} strokeWidth={2} />
-          <T x={450} y={28} anchor="middle" size={14} fill={RED} weight={800}>
-            {t(
-              "The crowd ONLY settles once NOBODY is being pushed. Equilibrium means E=0 inside.",
-              "Bheed TABHI shant hoti hai jab KISI KO dhakka na lage. Equilibrium means andar E=0."
-            )}
+      {/* RIGHT SECTION: EQUILIBRIUM MECHANISM STEPS */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("EQUILIBRIUM MECHANISM IN ~10⁻¹⁴ SECONDS", "EQUILIBRIUM MECHANISM IN ~10⁻¹⁴ SECONDS")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 6: Important caveat */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. External field E₀ exerts force F = −e E₀ on free electrons.
+          </T>
+
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. Electrons drift left, creating surface charge density ±σ_ind.
+          </T>
+
+          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+            3. E_ind grows until E_ind = E₀ exactly canceling E₀.
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={GREEN} weight={900} anchor="start">
+            4. If E ≠ 0 inside, charge would flow (Not Static)!
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Electrostatic equilibrium means ALL internal charge motion has ceased!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("FOUNDATIONAL CONDUCTOR RULE", "FOUNDATIONAL CONDUCTOR RULE")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Inside any conductor in electrostatic equilibrium (solid or hollow), E_inside = 0 N/C!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            This holds regardless of external charge configuration or shape!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ This holds ONLY in electrostatics. When current flows (batteries), E ≠ 0 inside! ✓",
-            "★ Yeh SIRF electrostatics mein hota hai. Jab current behta hai, andar E ≠ 0! ✓"
+            "★ Conductor Rule 1 Mastered: Internal electric field E_inside = 0 N/C in electrostatic equilibrium! ✓",
+            "★ Conductor Rule 1 Mastered: Internal electric field E_inside = 0 N/C in electrostatic equilibrium! ✓"
           )}
         </Chip>
       </Fade>

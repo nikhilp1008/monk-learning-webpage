@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 33 — "Deriving the energy stored in a capacitor"
- * Beats (en [0,6,16,30,44,56,72,82,97]): 9 beats
+ * Subtopic: Capacitance Derivations
+ * OPEN CHALKBOARD DESIGN WITH INTEGRAL CHARGING WORK PROOF (NO CONTAINER BOXES):
+ *  - Charging process: Transferring charge dq from one plate to another at instant potential v = q / C
+ *  - Differential work: dW = v dq = (q / C) dq
+ *  - Calculus integration: U = ∫₀^Q (q / C) dq = Q² / (2C) = ½ C V²
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -30,107 +35,119 @@ export default function P12Ch02Sec33({ currentTime, reveals, language }: ScenePr
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Charge transfer animation
+  const chargePos = (currentTime * 0.8) % 1;
+  const dqY = 240 - chargePos * 140;
+
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("derivation: energy stored in a capacitor", "derivation: capacitor ki stored energy")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Derivation: Capacitor Stored Energy U = ½CV² = Q²/(2C) via Integral Work", "Derivation: Capacitor Stored Energy U = ½CV² = Q²/(2C) via Integral Work")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 300 70 C 440 66, 640 74, 780 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Conceptual */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={110} size={14} fill={MUTED} anchor="start" script>
-          {t(
-            "Ferrying charge across gets harder as more charge piles up!",
-            "Charge ko idhar se udhar le jana mushkil hota jata hai jaise charge badhta hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 2: dW step */}
-      <Badge n={1} cx={52} cy={165} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={170} size={14} fill={RED} weight={700} anchor="start">STEP 1: WORK FOR dq</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <T x={74} y={195} size={13} fill={INK} anchor="start" script>
-          {t(
-            "Extra charge dq must cross existing potential V' = q/C",
-            "Extra charge dq ko already built potential V' = q/C cross karna padta hai"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: dW formula */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)} dim={beat >= 4}>
-        <g transform="translate(60, 215)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            dW = V' dq = (q/C) dq
+      {/* LEFT SECTION: CHARGE TRANSFER SCHEMATIC */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("TRANSFERRING dq AT INSTANT POTENTIAL v = q/C", "TRANSFERRING dq AT INSTANT POTENTIAL v = q/C")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: Integration */}
-      <Badge n={2} cx={520} cy={165} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={542} y={170} size={14} fill={RED} weight={700} anchor="start">STEP 2: INTEGRATE 0 TO Q</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(520, 195)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={42} anchor="middle" size={20} fill={INK} weight={800}>
-            W = ∫ (q/C) dq = Q² / (2C)
+        {/* Plates and charge transfer */}
+        <Fade on={beat >= 1}>
+          {/* Top Plate +q */}
+          <line x1="60" y1="90" x2="420" y2="90" stroke={RED} strokeWidth={4} />
+          <T x={435} y={95} size={14} fill={RED} weight={900}>+q Instant</T>
+
+          {/* Bottom Plate -q */}
+          <line x1="60" y1="250" x2="420" y2="250" stroke={GREEN} strokeWidth={4} />
+          <T x={435} y={255} size={14} fill={GREEN} weight={900}>−q Instant</T>
+
+          {/* Transferring dq charge element */}
+          <circle cx={240} cy={dqY} r={9} fill={AMBER_DARK} />
+          <T x={240} y={dqY - 12} size={11} fill={AMBER_DARK} weight={900}>+dq</T>
+
+          {/* Transfer Arrow */}
+          <path d={arrowD(240, 240, 240, 100)} stroke={AMBER_DARK} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={255} y={170} size={13} fill={AMBER_DARK} weight={800}>Work dW = v dq</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            Instant Potential: v(q) = q / C  (Increases linearly with charge!)
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 5: The factor of 1/2 */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={542} y={285} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Factor of ½ comes from integral — it's the average voltage (½V)!",
-            "Integral se ½ factor aata hai — yeh average voltage hai (½V)!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 6: Final U forms */}
-      <Badge n={3} cx={52} cy={345} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={350} size={14} fill={RED} weight={700} anchor="start">TOTAL STORED ENERGY</T>
-      </Fade>
-      <Fade on={beat >= 6}>
-        <g transform="translate(60, 370)">
-          <rect x={0} y={0} width={480} height={60} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={240} y={40} anchor="middle" size={22} fill={RED} weight={800}>
-            U = Q²/(2C) = ½CV² = ½QV
+      {/* RIGHT SECTION: CALCULUS PROOF STEPS */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("STEP-BY-STEP INTEGRAL DERIVATION", "STEP-BY-STEP INTEGRAL DERIVATION")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 7: Energy density derivation */}
-      <Badge n={4} cx={580} cy={345} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={602} y={350} size={14} fill={RED} weight={700} anchor="start">ENERGY DENSITY u</T>
-      </Fade>
+        {/* Floating Calculus Equations (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. dW = v dq = (q / C) dq
+          </T>
+
+          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. U = ∫₀^Q (q / C) dq = (1 / C) [ q² / 2 ]₀^Q
+          </T>
+
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. U = Q² / (2C)
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={900} anchor="start">
+            4. Substitute Q = C V  ⇒  U = ½ C V² = ½ Q V
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Matches area under linear v-q graph (triangle area = ½ Base × Height)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("BATTERY ENERGY LOSS RECAP", "BATTERY ENERGY LOSS RECAP")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Battery supplies energy W_battery = Q V = C V², BUT capacitor only stores U = ½ C V²!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Exactly 50% of total energy supplied by battery is dissipated as heat in connecting wires!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(580, 370)">
-          <rect x={0} y={0} width={420} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={210} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            u = U / (Ad) = ½ε₀E²
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 8: Energy lives in field */}
-      <Fade on={beat >= 8}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Deep physics: energy lives in the FIELD itself, not on the plates! ✓",
-            "★ Deep physics: energy plates pe nahi, FIELD mein hoti hai! ✓"
+            "★ Proof Completed: U = ∫ (q/C)dq = Q²/(2C) = ½CV² (50% battery energy stored, 50% lost to heat)! ✓",
+            "★ Proof Completed: U = ∫ (q/C)dq = Q²/(2C) = ½CV² (50% battery energy stored, 50% lost to heat)! ✓"
           )}
         </Chip>
       </Fade>

@@ -2,60 +2,28 @@
 
 /**
  * P12Ch02 · Section 7 — "Deriving E equals minus dV by dr from equipotential surfaces"
- * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md & SCENE_PLAYBOOK.md.
- *
- * OBJECT-RICH OPEN CHALKBOARD DESIGN (NO HEAVY CONTAINERS):
- *  - Two equipotential surfaces A (at V) and B (at V + δV), separated by δl
- *  - Work done W = |E| δl to move unit charge perpendicularly between surfaces
- *  - Work also equals potential drop: W = V_A − V_B = −δV
- *  - Combine: |E| δl = −δV  →  E = −dV/dr
- *  - Where surfaces crowd together, field is STRONGEST!
- *
- * Beats (en [0,5,12,24,32,42,51,61,74]):
- *  0 Title "derivation: E = −dV/dr" + drawn underline
- *  1 Diagram: two equipotential surfaces A and B
- *  2 Setup: surfaces A at V, B at V+δV, separated by δl
- *  3 Field direction: E points perpendicular between surfaces
- *  4 Work formula: W = |E| δl
- *  5 Potential drop: same work = V_A − V_B = −δV
- *  6 Combine: |E| δl = −δV
- *  7 Final: E = −dV/dr  (field is negative gradient of potential!)
- *  8 Rule: crowded equipotentials → strong field!
+ * Subtopic: Electrostatic Potential Derivations
+ * OPEN CHALKBOARD DESIGN WITH TWO ADJACENT EQUIPOTENTIAL PLANES (NO CONTAINER BOXES):
+ *  - Two parallel equipotential surfaces A and B separated by perpendicular distance dr
+ *  - Potential V on surface A, V + dV on surface B
+ *  - Work done in moving charge q₀ by dr: dW = q₀ dV = - q₀ E dr
+ *  - Derivation E = - dV/dr (Electric field is magnitude of potential gradient)
  */
 
 import React from "react";
 import {
-  SceneProps,
-  useBeat,
-  delayFor,
-  Fade,
-  Draw,
-  T,
-  Chip,
-  ringD,
-  INK,
-  MUTED,
-  AMBER_DARK,
-  GREEN,
-  RED,
-  CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
+  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
   return (
     <g>
-      <Draw
-        on={on}
-        delay={delay}
+      <Draw on={on} delay={delay}
         d={`M ${cx - 13} ${cy} A 13 13 0 1 1 ${cx + 13} ${cy} A 13 13 0 1 1 ${cx - 13} ${cy}`}
-        stroke={RED}
-        sw={2.2}
-        dur={0.4}
-      />
+        stroke={RED} sw={2.2} dur={0.4} />
       <Fade on={on} delay={delay + 0.3}>
-        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>
-          {n}
-        </T>
+        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>{n}</T>
       </Fade>
     </g>
   );
@@ -67,150 +35,122 @@ export default function P12Ch02Sec7({ currentTime, reveals, language }: ScenePro
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Moving charge animation between planes
+  const animDr = (currentTime * 1.2) % 1;
+  const qy = 120 + animDr * 140;
+
   return (
-    <svg
-      viewBox="0 0 1080 620"
-      preserveAspectRatio="xMidYMin meet"
-      className="w-full h-full select-none"
-    >
-      {/* ── BEAT 0: Title ── */}
+    <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t(
-            "derivation: E = −dV / dr from equipotential surfaces",
-            "derivation: equipotential surfaces se E = −dV / dr nikalna"
-          )}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Derivation: Field-Potential Relation E = − dV/dr from Equipotentials", "Derivation: Field-Potential Relation E = − dV/dr from Equipotentials")}
         </T>
       </Fade>
-      <Draw
-        on={beat >= 0}
-        delay={dl(0, 2.5)}
-        d="M 180 70 C 440 66, 640 74, 900 69"
-        stroke={RED}
-        sw={2.4}
-        dur={0.7}
-      />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* ── BEAT 1: Diagram — Two Equipotential Surfaces ── */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        {/* Surface A */}
-        <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 250 120 C 260 200, 240 320, 250 420" stroke={AMBER_DARK} sw={2.5} dur={0.6} />
-        <T x={230} y={115} size={13} fill={AMBER_DARK} weight={700}>A</T>
-        <T x={220} y={440} size={12} fill={AMBER_DARK} script>V</T>
-
-        {/* Surface B */}
-        <Draw on={beat >= 1} delay={dl(1, 0.8)} d="M 420 120 C 430 200, 410 320, 420 420" stroke={AMBER_DARK} sw={2.5} dur={0.6} />
-        <T x={440} y={115} size={13} fill={AMBER_DARK} weight={700}>B</T>
-        <T x={440} y={440} size={12} fill={AMBER_DARK} script>V + δV</T>
-
-        {/* δl arrow between */}
-        <Draw on={beat >= 1} delay={dl(1, 1.2)} d="M 260 270 h 150" stroke={INK} sw={1.5} />
-        <Fade on={beat >= 1} delay={dl(1, 1.4)}>
-          <polygon points="408,270 398,265 398,275" fill={INK} />
-          <T x={335} y={262} size={13} fill={INK} weight={700}>δl</T>
+      {/* LEFT SECTION: TWO ADJACENT EQUIPOTENTIAL SURFACES */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SURFACES A AND B SEPARATED BY dr", "SURFACES A AND B SEPARATED BY dr")}
+          </T>
         </Fade>
 
-        {/* E arrow */}
-        <Draw on={beat >= 1} delay={dl(1, 1.6)} d="M 280 310 h 110" stroke={RED} sw={2} />
-        <Fade on={beat >= 1} delay={dl(1, 1.8)}>
-          <polygon points="392,310 380,305 380,315" fill={RED} />
-          <T x={340} y={335} size={14} fill={RED} weight={800}>Ē</T>
+        <Fade on={beat >= 1}>
+          {/* Surface B (higher potential V + dV) */}
+          <line x1="60" y1="120" x2="420" y2="120" stroke={AMBER_DARK} strokeWidth={3} />
+          <T x={435} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">Surface B (V + dV)</T>
+
+          {/* Surface A (potential V) */}
+          <line x1="60" y1="260" x2="420" y2="260" stroke={GREEN} strokeWidth={3} />
+          <T x={435} y={265} size={14} fill={GREEN} weight={800} anchor="start">Surface A (V)</T>
+
+          {/* Perpendicular displacement dr line */}
+          <line x1="140" y1="120" x2="140" y2="260" stroke={INK} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={120} y={195} size={14} fill={INK} weight={800} anchor="end">dr (⊥ distance)</T>
+
+          {/* Electric Field Vector E pointing downwards */}
+          <path d={arrowD(300, 120, 300, 255)} stroke={RED} strokeWidth={3.5} />
+          <T x={315} y={195} size={16} fill={RED} weight={900}>E (Vector)</T>
+
+          {/* Moving charge +q0 */}
+          <circle cx={140} cy={qy} r={9} fill={GREEN} />
+          <T x={140} y={qy - 12} size={11} fill={GREEN} weight={800}>+q₀</T>
         </Fade>
-      </Fade>
 
-      {/* ── BEAT 2: Setup Text ── */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={520} y={140} size={14} fill={INK} anchor="start" script>
-          {t(
-            "Surface A at potential V, surface B at V + δV",
-            "Surface A pe potential V, surface B pe V + δV"
-          )}
-        </T>
-        <T x={520} y={165} size={14} fill={INK} anchor="start" script>
-          {t(
-            "Perpendicular separation = δl between them",
-            "Perpendicular separation = δl dono ke beech"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 3: Field Direction ── */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={520} y={205} size={14} fill={MUTED} anchor="start" script>
-          {t(
-            "Field must point along perpendicular (no work along surface!)",
-            "Field perpendicular direction mein honi chahiye (surface par work zero!)"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 4: Badge 1 — Work formula W = |E| δl ── */}
-      <Badge n={1} cx={510} cy={250} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 1)}>
-        <T x={534} y={255} size={14} fill={RED} weight={700} anchor="start">
-          WORK = FORCE × DISTANCE
-        </T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 7}>
-        <g transform="translate(520, 268)">
-          <rect x={0} y={5} width={380} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={190} y={38} anchor="middle" size={22} fill={INK} weight={800}>
-            W = |Ē| · δl
+        {/* Free Floating Work Equation (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            Work done by field: dW = F_E · dr = q₀ E dr
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* ── BEAT 5: Potential drop equivalence ── */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={520} y={348} size={14} fill={MUTED} anchor="start" script>
-          {t(
-            "Same work = potential drop for unit charge:",
-            "Same work = unit charge ke liye potential drop:"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 6: Badge 2 — Combined formula |E| δl = −δV ── */}
-      <Badge n={2} cx={510} cy={388} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 1)}>
-        <T x={534} y={393} size={14} fill={RED} weight={700} anchor="start">
-          EQUATING WORK & POTENTIAL DROP
-        </T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 7}>
-        <g transform="translate(520, 406)">
-          <rect x={0} y={5} width={420} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={210} y={38} anchor="middle" size={22} fill={INK} weight={800}>
-            |Ē| δl = V_A − V_B = −δV
+      {/* RIGHT SECTION: CALCULUS PROOF & TWO CONCLUSION RULES */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CALCULUS PROOF OF E = − dV/dr", "CALCULUS PROOF OF E = − dV/dr")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* ── BEAT 7: Badge 3 — Final E = −dV/dr ── */}
-      <Badge n={3} cx={65} cy={478} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <g transform="translate(85, 462)">
-          <rect x={0} y={0} width={460} height={60} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={230} y={40} anchor="middle" size={28} fill={RED} weight={800}>
-            E = − dV / dr    [V/m]
+        {/* Floating Derivation Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={90} size={17} fill={INK} weight={800} anchor="start">
+            1. Potential Difference: V_A − V_B = V − (V + dV) = − dV
           </T>
-        </g>
-      </Fade>
 
-      {/* ── BEAT 8: Rule Chip ── */}
-      <Fade on={beat >= 8}>
-        <Chip
-          x={100}
-          y={536}
-          w={880}
-          h={44}
-          fill={GREEN}
-          textFill="#ffffff"
-          size={18}
-        >
+          <T x={50} y={150} size={17} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Work per unit charge: W / q₀ = E dr
+          </T>
+
+          <T x={50} y={210} size={17} fill={GREEN} weight={800} anchor="start">
+            3. Equate Work to − dV: q₀ E dr = − q₀ dV
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 245 L 450 245" stroke={INK} sw={2} />
+
+          <T x={50} y={295} size={22} fill={RED} weight={800} anchor="start">
+            4. E = − dV / dr  (Negative Gradient!)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={365} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Electric field E equals magnitude of potential drop per unit perpendicular distance!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("TWO CRITICAL CONSEQUENCES FOR EXAMS", "TWO CRITICAL CONSEQUENCES FOR EXAMS")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            1. E points in direction where potential decreases steepest!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            2. E magnitude is given by change in potential per unit displacement normal to equipotential!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ RULE: Crowded equipotentials → STRONG field!  E = −dV/dr ✓",
-            "★ RULE: Crowded equipotentials → STRONG field!  E = −dV/dr ✓"
+            "★ Proof Completed: E = − dV/dr (Electric field is negative radial gradient of potential)! ✓",
+            "★ Proof Completed: E = − dV/dr (Electric field is negative radial gradient of potential)! ✓"
           )}
         </Chip>
       </Fade>

@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 24 — "JEE Advanced: dipole released, rotational energy conservation"
- * Beats (en [0,6,24,37,51,67,78,83]): 8 beats
+ * Subtopic: Potential Energy & External Fields
+ * OPEN CHALKBOARD DESIGN WITH ROTATIONAL DIPOLE OSCILLATION (NO CONTAINER BOXES):
+ *  - Dipole (moment p, moment of inertia I) released from rest at θ₁ = 90° in uniform field E
+ *  - Rotational Energy Conservation: ½ I ω² + U(θ) = const
+ *  - At θ₂ = 0°: ½ I ω² - p E = 0  =>  ω = √ (2 p E / I)
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -30,110 +35,114 @@ export default function P12Ch02Sec24({ currentTime, reveals, language }: ScenePr
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Rotating dipole animation
+  const rotAngle = Math.cos(currentTime * 2.5) * (Math.PI / 2);
+  const px = 200 + Math.cos(rotAngle) * 75;
+  const py = 180 - Math.sin(rotAngle) * 75;
+
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("JEE Advanced: dipole released, rotational energy", "JEE Advanced: dipole chhoda, rotational energy")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("JEE Advanced: Dipole Rotational Speed ω = √(2pE/I) via Rotational Energy Conservation", "JEE Advanced: Dipole Rotational Speed ω = √(2pE/I) via Rotational Energy Conservation")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 180 70 C 400 66, 660 74, 900 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — dipole at 90° in E field */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 4}>
-        {/* E field arrows */}
-        {[160, 220, 280].map(y => (
-          <g key={y}>
-            <Draw on={beat >= 1} delay={dl(1, 0.3)} d={`M 80 ${y} h 80`} stroke={AMBER_DARK} sw={1.5} />
-            <polygon points={`162,${y} 152,${y-4} 152,${y+4}`} fill={AMBER_DARK} />
-          </g>
-        ))}
-        <T x={95} y={310} size={12} fill={AMBER_DARK} weight={700}>Ē</T>
-
-        {/* Dipole perpendicular to E (at 90°) */}
-        <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 230 160 v 120" stroke={INK} sw={2} dur={0.4} />
-        <circle cx={230} cy={160} r={8} fill={RED} stroke={INK} strokeWidth={1} />
-        <T x={230} y={163} size={10} fill="#fff" weight={800}>+</T>
-        <circle cx={230} cy={280} r={8} fill="#3b82f6" stroke={INK} strokeWidth={1} />
-        <T x={230} y={283} size={10} fill="#fff" weight={800}>−</T>
-        <T x={252} y={225} size={13} fill={INK} weight={700}>p̄ (90°)</T>
-
-        {/* Arrow showing rotation toward E */}
-        <Draw on={beat >= 1} delay={dl(1, 0.8)} d="M 270 180 C 310 170, 320 200, 300 220" stroke={RED} sw={1.5} dur={0.4} />
-        <T x={325} y={200} size={12} fill={RED} script>→ 0°</T>
-      </Fade>
-
-      {/* BEAT 2: Problem text */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <g transform="translate(380, 115)">
-          <rect x={0} y={5} width={600} height={55} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={300} y={28} anchor="middle" size={13} fill={INK} script>
-            {t(
-              "p = 4×10⁻⁹ C·m, I = 1×10⁻⁶ kg·m², E = 2×10⁴ V/m",
-              "p = 4×10⁻⁹ C·m, I = 1×10⁻⁶ kg·m², E = 2×10⁴ V/m"
-            )}
+      {/* LEFT SECTION: ROTATING DIPOLE GEOMETRY */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("DIPOLE RELEASED FROM REST AT 90°", "DIPOLE RELEASED FROM REST AT 90°")}
           </T>
-          <T x={300} y={50} anchor="middle" size={13} fill={INK} script>
-            {t("Released from 90°, find ω at 0°", "90° se chhoda, 0° pe ω nikalo")}
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: Rotational energy conservation */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={380} y={200} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Only field torque does work → rotational mechanical energy conserved!",
-            "Sirf field torque work karta → rotational mechanical energy conserve!"
-          )}
-        </T>
-      </Fade>
+        <Fade on={beat >= 1}>
+          {/* Uniform E field lines */}
+          <path d={arrowD(40, 100, 420, 100)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(40, 180, 420, 180)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(40, 260, 420, 260)} stroke={RED} strokeWidth={2.5} />
+          <T x={435} y={185} size={14} fill={RED} weight={800} anchor="start">Field E</T>
 
-      {/* BEAT 4: U values */}
-      <Badge n={1} cx={52} cy={350} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 1)}>
-        <T x={74} y={355} size={14} fill={RED} weight={700} anchor="start">PE AT 90° AND 0°</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(60, 370)">
-          <rect x={0} y={5} width={500} height={55} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={250} y={28} anchor="middle" size={16} fill={INK} weight={800}>
-            U₉₀ = 0,    U₀ = −pE = −8×10⁻⁵ J
-          </T>
-          <T x={250} y={50} anchor="middle" size={13} fill={MUTED} script>
-            ΔU = U₉₀ − U₀ = 8×10⁻⁵ J (converts to KE!)
-          </T>
-        </g>
-      </Fade>
+          {/* Rotating Dipole vector */}
+          <line x1="200" y1="180" x2={px} y2={py} stroke={GREEN} strokeWidth={4} />
+          <circle cx={px} cy={py} r={8} fill={GREEN} />
+          <T x={px + 15} y={py} size={14} fill={GREEN} weight={800}>Dipole (p, I)</T>
+        </Fade>
 
-      {/* BEAT 5: ½Iω² = ΔU */}
-      <Badge n={2} cx={580} cy={350} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <g transform="translate(580, 370)">
-          <rect x={0} y={5} width={400} height={48} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            ½Iω² = 8×10⁻⁵ J
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            Rotational Kinetic Energy K_rot = ½ I ω²
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 6: Final ω */}
-      <Badge n={3} cx={52} cy={458} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <g transform="translate(72, 443)">
-          <rect x={0} y={0} width={520} height={55} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={260} y={35} anchor="middle" size={22} fill={RED} weight={800}>
-            ω = √(2×8×10⁻⁵ / 10⁻⁶) ≈ 12.6 rad/s
+      {/* RIGHT SECTION: DERIVATION OF ANGULAR SPEED ω */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ROTATIONAL ENERGY CONSERVATION PROOF", "ROTATIONAL ENERGY CONSERVATION PROOF")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 7: Takeaway */}
+        {/* Floating Derivation Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. Initial Energy (θ = 90°, ω = 0): E_i = 0 − pE cos 90° = 0
+          </T>
+
+          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Final Energy (θ = 0°, max ω): E_f = ½ I ω² − pE cos 0°
+          </T>
+
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Equate: ½ I ω² − p E = 0   ⇒   ½ I ω² = p E
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={800} anchor="start">
+            4. Angular Speed ω = √ ( 2 p E / I )
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Dipole executes Simple Harmonic Oscillation for small angles with frequency f = (1/2π) √(pE/I)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("JEE ADVANCED SHM COMPARISON", "JEE ADVANCED SHM COMPARISON")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Restoring Torque for small angles θ: τ = − p E sinθ ≈ − (pE) θ   (Analogous to C = pE)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Time Period T = 2π √ (I / pE) !
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Dipole swings to alignment like a pendulum — U → ½Iω² directly ✓",
-            "★ Dipole alignment ki taraf swing karta jaise pendulum — U → ½Iω² directly ✓"
+            "★ Rotational Energy Mastered: Maximum angular speed ω = √(2pE/I) and SHM period T = 2π√(I/pE)! ✓",
+            "★ Rotational Energy Mastered: Maximum angular speed ω = √(2pE/I) and SHM period T = 2π√(I/pE)! ✓"
           )}
         </Chip>
       </Fade>

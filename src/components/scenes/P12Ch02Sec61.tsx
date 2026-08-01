@@ -1,13 +1,19 @@
 "use client";
 
 /**
- * P12Ch02 · Section 61 — "NEET speed trap: four identical capacitors"
- * Beats (en [0,7,17,28,39,45,58]): 7 beats
+ * P12Ch02 · Section 61 — "JEE Main: infinite ladder of capacitors"
+ * Subtopic: Series & Parallel Combinations & Charge Sharing
+ * OPEN CHALKBOARD DESIGN WITH RECURSIVE INFINITE LADDER (NO CONTAINER BOXES):
+ *  - Infinite repeating network of capacitors C
+ *  - Self-Similarity Principle: Truncating 1 unit leaves remaining infinite chain with capacitance C_eq!
+ *  - Quadratic Equation: C_eq = C + (C C_eq) / (C + C_eq)  =>  C_eq² - C C_eq - C² = 0
+ *  - Golden Ratio Solution: C_eq = C (1 + √5) / 2 ≈ 1.618 C !
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,81 +38,118 @@ export default function P12Ch02Sec61({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("NEET speed trap: n equal capacitors", "NEET speed trap: n equal capacitors")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("JEE Main: Infinite Ladder Network & Golden Ratio Solution C_eq = C(1+√5)/2", "JEE Main: Infinite Ladder Network & Golden Ratio Solution C_eq = C(1+√5)/2")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 330 70 C 440 66, 640 74, 750 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Setup */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={120} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Four identical capacitors (4 µF each) connected in series, then in parallel.",
-            "Chaar identical capacitors (har ek 4 µF ka) pehle series mein jode gaye, phir parallel mein."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 2: The trap */}
-      <Badge n={1} cx={52} cy={160} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">THE TRAP</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 3}>
-        <g transform="translate(60, 180)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill="#fef2f2" stroke={RED} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={15} fill={RED} weight={800}>
-            Adding series values directly! (16 µF is wrong for series)
+      {/* LEFT SECTION: RECURSIVE INFINITE LADDER SCHEMATIC */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("INFINITE REPEATING LADDER NETWORK", "INFINITE REPEATING LADDER NETWORK")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: Series */}
-      <Badge n={2} cx={52} cy={270} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">CORRECT SERIES (C / n)</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={225} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            C_series = C / n = 4 / 4 = 1 µF
+        {/* Infinite Ladder Circuit Drawing */}
+        <Fade on={beat >= 1}>
+          {/* Unit 1 */}
+          <line x1="40" y1="100" x2="140" y2="100" stroke={INK} strokeWidth={3} />
+          <line x1="140" y1="75" x2="140" y2="125" stroke={RED} strokeWidth={4} />
+          <line x1="160" y1="75" x2="160" y2="125" stroke={RED} strokeWidth={4} />
+          <line x1="160" y1="100" x2="260" y2="100" stroke={INK} strokeWidth={3} />
+
+          <line x1="260" y1="100" x2="260" y2="180" stroke={INK} strokeWidth={3} />
+          <line x1="235" y1="180" x2="285" y2="180" stroke={GREEN} strokeWidth={4} />
+          <line x1="235" y1="200" x2="285" y2="200" stroke={GREEN} strokeWidth={4} />
+          <line x1="260" y1="200" x2="260" y2="260" stroke={INK} strokeWidth={3} />
+
+          {/* Unit 2 repeating to infinity */}
+          <line x1="260" y1="100" x2="360" y2="100" stroke={INK} strokeWidth={3} />
+          <line x1="360" y1="75" x2="360" y2="125" stroke={RED} strokeWidth={3} />
+          <line x1="375" y1="75" x2="375" y2="125" stroke={RED} strokeWidth={3} />
+          <line x1="375" y1="100" x2="430" y2="100" stroke={INK} strokeWidth={2} strokeDasharray="4 4" />
+
+          <T x={440} y={105} size={18} fill={AMBER_DARK} weight={900}>...</T>
+
+          <line x1="40" y1="260" x2="430" y2="260" stroke={INK} strokeWidth={3} />
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={16} fill={INK} weight={800}>
+            Truncating 1 repeating unit leaves the rest with capacitance C_eq!
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 4: Parallel */}
-      <Badge n={3} cx={540} cy={270} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={275} size={14} fill={RED} weight={700} anchor="start">CORRECT PARALLEL (nC)</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 5}>
-        <g transform="translate(540, 290)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            C_parallel = nC = 4 × 4 = 16 µF
+      {/* RIGHT SECTION: QUADRATIC DERIVATION */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("QUADRATIC EQUATION PROOF", "QUADRATIC EQUATION PROOF")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Difference factor */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={60} y={380} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "The two answers differ by a factor of exactly 16 (which is n²).",
-            "Dono answers mein exact 16 (jo n² hai) ka factor hai."
-          )}
-        </T>
-      </Fade>
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. C_eq = C + [ (C C_eq) / (C + C_eq) ]
+          </T>
 
-      {/* BEAT 6: Rule */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Multiply by (C + C_eq): C_eq² + C C_eq = C² + 2 C C_eq
+          </T>
+
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Quadratic Form: C_eq² − C C_eq − C² = 0
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={900} anchor="start">
+            4. C_eq = C [ (1 + √5) / 2 ] ≈ 1.618 C (Golden Ratio ϕ!)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Discard negative root C (1 − √5)/2 since capacitance MUST be strictly positive!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("JEE MAIN RECURSION TRICK", "JEE MAIN RECURSION TRICK")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Infinite series/parallel circuits always reduce to a simple 1-variable quadratic equation!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Golden Ratio ϕ = (1 + √5)/2 ≈ 1.61803... governs infinite capacitor networks!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Speed rule: n equal capacitors give C/n in series and nC in parallel. ✓",
-            "★ Speed rule: n equal capacitors series mein C/n aur parallel mein nC dete hain. ✓"
+            "★ JEE Main Mastered: Infinite ladder C_eq² − C C_eq − C² = 0 yields Golden Ratio solution C_eq = 1.618 C! ✓",
+            "★ JEE Main Mastered: Infinite ladder C_eq² − C C_eq − C² = 0 yields Golden Ratio solution C_eq = 1.618 C! ✓"
           )}
         </Chip>
       </Fade>

@@ -1,13 +1,21 @@
 "use client";
 
 /**
- * P12Ch02 · Section 56 — "Formula toolkit: common potential and energy lost"
- * Beats (en [0,5,21,31,43,55,66,79]): 8 beats
+ * P12Ch02 · Section 56 — "Formula toolkit: charge redistribution and energy loss"
+ * Subtopic: Series & Parallel Combinations & Charge Sharing
+ * OPEN CHALKBOARD DESIGN WITH CHARGE SHARING MASTER FORMULA TOOLKIT (NO CONTAINER BOXES):
+ *  - 1. Like Polarity (+ to +, - to -):
+ *      V_com = (C₁ V₁ + C₂ V₂) / (C₁ + C₂)
+ *      ΔU = ½ [ C₁ C₂ / (C₁ + C₂) ] (V₁ - V₂)²
+ *  - 2. Opposite Polarity (+ to -, - to +):
+ *      V_com = |C₁ V₁ - C₂ V₂| / (C₁ + C₂)
+ *      ΔU = ½ [ C₁ C₂ / (C₁ + C₂) ] (V₁ + V₂)²
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,93 +40,97 @@ export default function P12Ch02Sec56({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Common potential and the energy lost on reconnection", "Common potential and energy lost on reconnection")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Formula Toolkit: Charge Sharing & Polarity-Dependent Heat Loss ΔU", "Formula Toolkit: Charge Sharing & Polarity-Dependent Heat Loss ΔU")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 150 70 C 440 66, 640 74, 930 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Common potential formula */}
-      <Badge n={1} cx={52} cy={120} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={125} size={14} fill={RED} weight={700} anchor="start">COMMON POTENTIAL V_c</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 140)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={43} anchor="middle" size={20} fill={INK} weight={800}>
-            V_c = (C₁V₁ + C₂V₂) / (C₁ + C₂)
+      {/* LEFT SECTION: SAME POLARITY CONNECTION (+ TO +) */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SAME POLARITY CONNECTION (+ TO +, − TO −)", "SAME POLARITY CONNECTION (+ TO +, − TO −)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: Charge conservation */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={60} y={235} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "This is just charge conservation! (Q₁ + Q₂) / (C₁ + C₂)",
-            "Yeh bas charge conservation hai! (Q₁ + Q₂) / (C₁ + C₂)"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Energy lost formula */}
-      <Badge n={2} cx={540} cy={120} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={562} y={125} size={14} fill={RED} weight={700} anchor="start">ENERGY LOST (HEAT)</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(540, 140)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={43} anchor="middle" size={18} fill={INK} weight={800}>
-            ΔU_lost = ½ [ (C₁C₂) / (C₁ + C₂) ] (V₁ − V₂)²
+        {/* Floating Formulas (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={85} size={16} fill={GREEN} weight={800} anchor="start">
+            1. V_com = (C₁ V₁ + C₂ V₂) / (C₁ + C₂)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 4: Squared term meaning */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <T x={540} y={235} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Because of (V₁ − V₂)², it is ALWAYS positive or zero. Energy CANNOT increase.",
-            "Kyunki (V₁ − V₂)² hai, yeh HAMESHA positive ya zero hoga. Energy badh NAHI sakti."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 5: When does it vanish? */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={540} y={260} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Vanishes ONLY when V₁ = V₂ (no charge flows at all).",
-            "Zero SIRF tab hoga jab V₁ = V₂ ho (charge bilkul flow na kare)."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 6: Total initial energy */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">TOTAL ENERGY OF A SYSTEM</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={225} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            U_total = ½ C₁ V₁² + ½ C₂ V₂² + ...
+          <T x={40} y={150} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Heat Loss ΔU = ½ [ (C₁ C₂) / (C₁ + C₂) ] (V₁ − V₂)²
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 7: Warning about V */}
-      <Fade on={beat >= 7} delay={dl(7, 0.3)}>
-        <T x={60} y={445} size={13} fill={AMBER_DARK} anchor="start" script>
+        {/* Free Floating Rule (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={16} fill={INK} weight={800}>
+            Charges add constructively Q_total = Q₁ + Q₂ !
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: OPPOSITE POLARITY CONNECTION (+ TO −) */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("OPPOSITE POLARITY CONNECTION (+ TO −)", "OPPOSITE POLARITY CONNECTION (+ TO −)")}
+          </T>
+        </Fade>
+
+        {/* Floating Formulas (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={RED} weight={800} anchor="start">
+            1. V_com = |C₁ V₁ − C₂ V₂| / (C₁ + C₂)
+          </T>
+
+          <T x={50} y={150} size={16} fill={RED} weight={800} anchor="start">
+            2. Heat Loss ΔU = ½ [ (C₁ C₂) / (C₁ + C₂) ] (V₁ + V₂)²
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={350} anchor="middle" size={15} fill={RED} weight={800}>
+            Opposite charges partially neutralize each other — much higher energy loss (V₁ + V₂)²!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("EXAM REASONING CHECK", "EXAM REASONING CHECK")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Notice: If V₁ = V₂, ΔU = 0 for same polarity connection (no charge flow happens)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Heat loss ΔU is completely independent of wire resistance R (resistance only controls decay rate)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "WARNING: Use each capacitor's OWN voltage. Don't plug the total series voltage in!",
-            "WARNING: Har capacitor ka APNA voltage use karo. Total series voltage mat daal dena!"
+            "★ Redistribution Toolkit Mastered: Same polarity ΔU ∝ (V₁−V₂)² vs Opposite polarity ΔU ∝ (V₁+V₂)²! ✓",
+            "★ Redistribution Toolkit Mastered: Same polarity ΔU ∝ (V₁−V₂)² vs Opposite polarity ΔU ∝ (V₁+V₂)²! ✓"
           )}
-        </T>
+        </Chip>
       </Fade>
     </svg>
   );

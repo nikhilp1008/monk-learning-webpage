@@ -1,13 +1,19 @@
 "use client";
 
 /**
- * P12Ch02 · Section 54 — "Reconnecting charged capacitors — energy always leaks away"
- * Beats (en [0,7,14,24,34,47,62]): 7 beats
+ * P12Ch02 · Section 54 — "The Van de Graaff generator — mechanical charge transfer to a giant shell"
+ * Subtopic: Series & Parallel Combinations & Charge Sharing
+ * OPEN CHALKBOARD DESIGN WITH VAN DE GRAAFF SCHEMATIC (NO CONTAINER BOXES):
+ *  - Large hollow spherical metal dome of radius R (Charge Q)
+ *  - Small inner sphere of radius r (Charge q) connected to endless insulating belt
+ *  - Potential Difference: V_r - V_R = (q / 4π ε₀) (1/r - 1/R) > 0
+ *  - Since V_r > V_R always, charge continuously streams from belt to outer dome!
+ *  - Accumulates mega-volt potentials up to 10⁷ Volts (limited by air breakdown)!
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -30,114 +36,118 @@ export default function P12Ch02Sec54({ currentTime, reveals, language }: ScenePr
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Moving belt animation
+  const beltY = (currentTime * 60) % 180;
+
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Reconnecting two already-charged capacitors", "Do already-charged capacitors ko reconnect karna")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("The Van de Graaff Generator: Accumulating Mega-Volts (10⁷ V) via Shell Transfer", "The Van de Graaff Generator: Accumulating Mega-Volts (10⁷ V) via Shell Transfer")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 220 70 C 440 66, 640 74, 860 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — Reconnection */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 6}>
-        <g transform="translate(180, 160)">
-          {/* Main wires */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 100 50 L 300 50" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 100 150 L 300 150" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 100 50 L 100 150" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 300 50 L 300 150" stroke={INK} sw={2} />
-
-          {/* Switch top */}
-          <line x1={180} y1={50} x2={220} y2={20} stroke={RED} strokeWidth={3} />
-          {/* Switch bottom */}
-          <line x1={180} y1={150} x2={220} y2={120} stroke={RED} strokeWidth={3} />
-
-          {/* C1 */}
-          <rect x={70} y={95} width={60} height={10} fill="#3b82f6" />
-          <rect x={70} y={115} width={60} height={10} fill="#3b82f6" />
-          <T x={40} y={110} size={14} fill={INK} weight={700}>C₁</T>
-          <T x={140} y={100} size={12} fill="#3b82f6" weight={700}>V₁</T>
-
-          {/* C2 */}
-          <rect x={270} y={95} width={60} height={10} fill="#10b981" />
-          <rect x={270} y={115} width={60} height={10} fill="#10b981" />
-          <T x={340} y={110} size={14} fill={INK} weight={700}>C₂</T>
-          <T x={250} y={100} size={12} fill="#10b981" weight={700}>V₂</T>
-
-          {/* Charge flow */}
-          <Fade on={beat >= 2} delay={dl(2, 0.5)}>
-            <Draw on={beat >= 2} delay={dl(2, 0.8)} d="M 190 20 L 210 20" stroke={RED} sw={2} />
-            <polygon points="210,20 202,16 202,24" fill={RED} />
-            <T x={200} y={10} size={12} fill={RED} weight={700}>charge sloshes</T>
-          </Fade>
-        </g>
-      </Fade>
-
-      {/* BEAT 2: Common potential */}
-      <Badge n={1} cx={520} cy={120} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={542} y={125} size={14} fill={RED} weight={700} anchor="start">CHARGE SLOSHES TO V_common</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <T x={542} y={150} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Flows from higher V to lower V",
-            "Higher V se lower V ki taraf flow karta hai"
-          )}
-        </T>
-        <T x={542} y={170} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "until they settle at a single common voltage.",
-            "jab tak ek common voltage pe settle na ho."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Charge conserved */}
-      <Badge n={2} cx={520} cy={200} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={542} y={205} size={14} fill={RED} weight={700} anchor="start">TOTAL CHARGE CONSERVED</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(520, 220)">
-          <rect x={0} y={5} width={450} height={40} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={225} y={32} anchor="middle" size={16} fill={INK} weight={800}>
-            Q_total = Q₁ + Q₂ (constant)
+      {/* LEFT SECTION: GENERATOR SCHEMATIC DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("MECHANICAL BELT & HIGH VOLTAGE DOME", "MECHANICAL BELT & HIGH VOLTAGE DOME")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: Energy NOT conserved */}
-      <Badge n={3} cx={52} cy={350} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={355} size={14} fill={RED} weight={700} anchor="start">ENERGY IS LOST!</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <T x={74} y={380} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Some energy is ALWAYS lost as heat/sparks in the wires.",
-            "Kuch energy wires mein heat/sparks ke form mein HAMESHA lose hoti hai."
-          )}
-        </T>
-      </Fade>
+        {/* Van de Graaff Diagram */}
+        <Fade on={beat >= 1}>
+          {/* Outer Conducting Dome R */}
+          <path d="M 120 200 A 120 120 0 1 1 360 200 Z" fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={3} />
+          <T x={240} y={110} size={16} fill={RED} weight={900} anchor="middle">Outer Dome (R, Q)</T>
 
-      {/* BEAT 5: When is it 0? */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={74} y={420} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Loss is unavoidable, vanishes ONLY if V₁ = V₂ originally (no flow needed).",
-            "Loss unavoid hai, SIRF tab zero hota hai jab initially V₁ = V₂ ho (koi flow na ho)."
-          )}
-        </T>
-      </Fade>
+          {/* Insulating Belt */}
+          <line x1="220" y1="130" x2="220" y2="310" stroke={INK} strokeWidth={2.5} strokeDasharray="6 6" />
+          <line x1="260" y1="130" x2="260" y2="310" stroke={INK} strokeWidth={2.5} strokeDasharray="6 6" />
 
-      {/* BEAT 6: Like to like */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+          {/* Moving charge dots on belt */}
+          <circle cx={220} cy={310 - beltY} r={5} fill={RED} />
+          <circle cx={220} cy={250 - beltY} r={5} fill={RED} />
+
+          {/* Collector Comb */}
+          <path d="M 190 140 L 220 140" stroke={GREEN} strokeWidth={3} />
+          <T x={180} y={145} size={12} fill={GREEN} weight={800} anchor="end">Collector Comb</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={16} fill={INK} weight={800}>
+            ΔV = V_r − V_R = (q / 4π ε₀) (1/r − 1/R) &gt; 0 !
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: WORKING PRINCIPLE & LIMITATIONS */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("WORKING PRINCIPLE & AIR BREAKDOWN LIMIT", "WORKING PRINCIPLE & AIR BREAKDOWN LIMIT")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Spray comb sprays +q charge onto moving insulating belt.
+          </T>
+
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. Belt carries +q inside dome to collector comb.
+          </T>
+
+          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+            3. Since V_inner &gt; V_outer, 100% of charge transfers to outer dome!
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={19} fill={GREEN} weight={900} anchor="start">
+            4. Max Potential V_max = R × E_breakdown ≈ 10⁷ Volts!
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Enclosing dome in high-pressure gas (SF₆ at 15 atm) prevents corona discharge spark leakage!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("VAN DE GRAAFF APPLICATIONS", "VAN DE GRAAFF APPLICATIONS")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Used to accelerate charged particles (protons, alpha particles) to high kinetic energies for nuclear physics research!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Transfer occurs regardless of how high the dome potential V_R already is!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ This assumes + plate to + plate. If reversed, total charge is |Q₁ - Q₂|! ✓",
-            "★ Yeh tab hai jab + plate ko + se joda ho. Agar ulta joda, toh total charge |Q₁ - Q₂| hoga! ✓"
+            "★ Van de Graaff Mastered: Inner potential V_r > V_R forces continuous charge transfer to outer dome up to 10⁷ V! ✓",
+            "★ Van de Graaff Mastered: Inner potential V_r > V_R forces continuous charge transfer to outer dome up to 10⁷ V! ✓"
           )}
         </Chip>
       </Fade>

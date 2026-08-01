@@ -2,58 +2,28 @@
 
 /**
  * P12Ch02 · Section 6 — "Deriving V equals kQ over r for a point charge"
- * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md & SCENE_PLAYBOOK.md.
- *
- * OBJECT-RICH OPEN CHALKBOARD DESIGN (NO HEAVY CONTAINERS):
- *  - Derivation of V(r) = k Q / r from first principles:
- *    1. Work done to bring test charge q₀ from ∞ to distance r against radial electric field E = k Q / x²:
- *    2. W_ext = - ∫_∞ʳ F_elec dx = - ∫_∞ʳ (k Q q₀ / x²) dx
- *    3. Integration: W_ext = - k Q q₀ [ - 1 / x ]_∞ʳ = k Q q₀ / r
- *    4. Potential V(r) = W_ext / q₀ = k Q / r !
- *
- * Beats (en [0,6,21,31,44,56,68,80,89]):
- *  0 Title "derivation: potential V = k Q / r for a point charge" + drawn underline
- *  1 Hook note: integrating electrostatic force work from infinity to point P!
- *  2 Badge 1 & Integration Setup: W_ext = - ∫_∞ʳ (k Q q₀ / x²) dx
- *  3 Badge 2 & Integral Evaluation: [ -1/x ]_∞ʳ = (1/r - 0) = 1/r
- *  4 Badge 3 & Final Potential Result: V(r) = W_ext / q₀ = k Q / r
- *  5 Distance graph: V decays as 1/r (vs E decaying as 1/r²)!
- *  6 Grand Verdict: V(r) = ∫ E dx = k Q / r  (Point charge potential derivation complete)!
+ * Subtopic: Electrostatic Potential Derivations
+ * OPEN CHALKBOARD DESIGN WITH STEP-BY-STEP INTEGRAL DERIVATION (NO CONTAINER BOXES):
+ *  - Visual trajectory of test charge q₀ moving from infinity (∞) to point P at distance r from +Q
+ *  - Radial force vector F_ext and field force F_E = k Q q₀ / x²
+ *  - Step-by-step calculus integration: W = -∫_∞^r (k Q q₀ / x²) dx = k Q q₀ / r
+ *  - Definition V = W / q₀ = k Q / r
  */
 
 import React from "react";
 import {
-  SceneProps,
-  useBeat,
-  delayFor,
-  Fade,
-  Draw,
-  T,
-  Chip,
-  ringD,
-  INK,
-  MUTED,
-  AMBER_DARK,
-  GREEN,
-  RED,
-  CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
+  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
   return (
     <g>
-      <Draw
-        on={on}
-        delay={delay}
+      <Draw on={on} delay={delay}
         d={`M ${cx - 13} ${cy} A 13 13 0 1 1 ${cx + 13} ${cy} A 13 13 0 1 1 ${cx - 13} ${cy}`}
-        stroke={RED}
-        sw={2.2}
-        dur={0.4}
-      />
+        stroke={RED} sw={2.2} dur={0.4} />
       <Fade on={on} delay={delay + 0.3}>
-        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>
-          {n}
-        </T>
+        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>{n}</T>
       </Fade>
     </g>
   );
@@ -65,94 +35,133 @@ export default function P12Ch02Sec6({ currentTime, reveals, language }: ScenePro
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Moving charge animation from infinity towards P
+  const animPos = (currentTime * 0.7) % 1;
+  const qx = 440 - animPos * 240;
+
   return (
-    <svg
-      viewBox="0 0 1080 620"
-      preserveAspectRatio="xMidYMin meet"
-      className="w-full h-full select-none"
-    >
-      {/* ── BEAT 0: Title ── */}
+    <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Derivation: Electrostatic Potential V(r) = kQ/r via Calculus Integration", "Derivation: Electrostatic Potential V(r) = kQ/r via Calculus Integration")}
+        </T>
+      </Fade>
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
+
+      {/* LEFT SECTION: INTEGRATION PATH & FORCE VECTORS */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CHARGE TRAJECTORY FROM ∞ TO POINT P", "CHARGE TRAJECTORY FROM ∞ TO POINT P")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 1}>
+          {/* Source Charge +Q */}
+          <circle cx={80} cy={180} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2.5} />
+          <T x={80} y={187} size={18} fill={RED} weight={900}>+Q</T>
+          <T x={80} y={145} size={13} fill={RED} weight={700}>Origin (x = 0)</T>
+
+          {/* Integration axis */}
+          <line x1="102" y1="180" x2="460" y2="180" stroke={INK} strokeWidth={2.5} />
+
+          {/* Target Point P at distance r */}
+          <line x1="200" y1="165" x2="200" y2="195" stroke={GREEN} strokeWidth={3} />
+          <T x={200} y={150} size={15} fill={GREEN} weight={800}>Point P (r)</T>
+
+          {/* Distance r dimension line */}
+          <line x1="80" y1="220" x2="200" y2="220" stroke={GREEN} strokeWidth={2} />
+          <T x={140} y={240} size={13} fill={GREEN} weight={800}>Distance r</T>
+
+          {/* Infinity reference */}
+          <T x={450} y={150} size={16} fill={MUTED} weight={800}>Infinity (∞)</T>
+
+          {/* Moving test charge +q0 */}
+          <circle cx={qx} cy={180} r={10} fill={AMBER_DARK} />
+          <T x={qx} y={184} size={11} fill="#ffffff" weight={900}>+q₀</T>
+          <T x={qx} y={205} size={12} fill={AMBER_DARK} weight={800}>Position x</T>
+
+          {/* Repulsive Field Force F_E and External Force F_ext */}
+          <path d={arrowD(qx, 180, qx + 45, 180)} stroke={RED} strokeWidth={2.5} />
+          <T x={qx + 25} y={165} size={11} fill={RED} weight={800}>F_E</T>
+
+          <path d={arrowD(qx, 180, qx - 45, 180)} stroke={GREEN} strokeWidth={2.5} />
+          <T x={qx - 35} y={165} size={11} fill={GREEN} weight={800}>F_ext</T>
+        </Fade>
+
+        {/* Free Floating Differential Work Equation (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            Differential Work: dW = F_ext · dx = − F_E dx = − (k Q q₀ / x²) dx
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: STEP-BY-STEP CALCULUS PROOF */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("STEP-BY-STEP CALCULUS PROOF", "STEP-BY-STEP CALCULUS PROOF")}
+          </T>
+        </Fade>
+
+        {/* Floating Calculus Equations (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={90} size={17} fill={INK} weight={800} anchor="start">
+            1. Total Work W = ∫_∞^r dW = − ∫_∞^r (k Q q₀ / x²) dx
+          </T>
+
+          <T x={50} y={150} size={17} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Integration: W = − k Q q₀ [ − 1 / x ]_∞^r
+          </T>
+
+          <T x={50} y={210} size={17} fill={GREEN} weight={800} anchor="start">
+            3. Apply Limits: W = k Q q₀ ( 1/r − 1/∞ ) = k Q q₀ / r
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 245 L 450 245" stroke={INK} sw={2} />
+
+          <T x={50} y={295} size={22} fill={RED} weight={800} anchor="start">
+            4. Potential V(r) = W / q₀ = k Q / r  (Q.E.D.)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={365} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Independent of path taken — depends strictly on initial & final limits (∞ to r)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("PROFILES & PHYSICAL INTUITION", "PROFILES & PHYSICAL INTUITION")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Electric Field E = kQ/r² (decay as 1/r²)  vs  Potential V = kQ/r (decay as 1/r)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Potential V is scalar work per unit charge; zero reference at infinity V(∞) = 0 V!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "derivation: potential V = k Q / r for a point charge",
-            "derivation: point charge ka potential V = k Q / r"
-          )}
-        </T>
-      </Fade>
-      <Draw
-        on={beat >= 0}
-        delay={dl(0, 2.5)}
-        d="M 180 70 C 440 66, 640 74, 900 69"
-        stroke={RED}
-        sw={2.4}
-        dur={0.7}
-      />
-
-      {/* ── BEAT 1: Hook Note ── */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={110} size={15} fill={MUTED} script anchor="start">
-          {t(
-            "integrating electrostatic force work from infinity to point P!",
-            "infinity se point P tak electrostatic force work integrate karna!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 2: Badge 1 & Integration Setup ── */}
-      <Badge n={1} cx={52} cy={165} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 1)}>
-        <T x={74} y={170} size={14} fill={RED} weight={700} anchor="start">
-          {t("WORK INTEGRAL SETUP FROM INFINITY", "WORK INTEGRAL SETUP FROM INFINITY")}
-        </T>
-      </Fade>
-
-      <Fade on={beat >= 2} dim={beat >= 5}>
-        <g transform="translate(60, 185)">
-          <rect x={0} y={10} width={430} height={85} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={215} y={48} anchor="middle" size={20} fill={INK} weight={800}>
-            W_ext = - ∫_∞ʳ (k Q q₀ / x²) dx
-          </T>
-          <T x={215} y={78} anchor="middle" size={13} fill={AMBER_DARK} script>
-            {t("External force balances electrostatic repulsion!", "External force electrostatic repulsion ko balance karti hai!")}
-          </T>
-          <Draw on={beat >= 2} delay={dl(2, 1.6)} d="M 100 56 h 230 M 100 60 h 230" stroke={AMBER_DARK} sw={1.5} />
-        </g>
-      </Fade>
-
-      {/* ── BEAT 4: Badge 3 & Final Potential Result ── */}
-      <Badge n={3} cx={540} cy={165} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 1)}>
-        <T x={562} y={170} size={14} fill={RED} weight={700} anchor="start">
-          {t("FINAL POTENTIAL RESULT V = k Q / r", "FINAL POTENTIAL RESULT V = k Q / r")}
-        </T>
-      </Fade>
-
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(540, 185)">
-          <T x={0} y={25} anchor="start" size={14} fill={INK} weight={700}>
-            Divide work by test charge q₀:
-          </T>
-          <T x={0} y={65} anchor="start" size={24} fill={RED} weight={800}>
-            V(r) = k Q / r  (Inverse r dependency!)
-          </T>
-        </g>
-      </Fade>
-
-      {/* ── BEAT 6: Grand Verdict Chip ── */}
-      <Fade on={beat >= 6}>
-        <Chip
-          x={100}
-          y={536}
-          w={880}
-          h={44}
-          fill={GREEN}
-          textFill="#ffffff"
-          size={18}
-        >
-          {t(
-            "★ VERDICT: V(r) = ∫ E dx = k Q / r  (Point charge potential derivation complete)!",
-            "★ VERDICT: V(r) = ∫ E dx = k Q / r  (Point charge potential derivation complete)!"
+            "★ Proof Completed: V(r) = W/q₀ = −∫_∞^r E dx = kQ/r (Scalar inverse-distance potential)! ✓",
+            "★ Proof Completed: V(r) = W/q₀ = −∫_∞^r E dx = kQ/r (Scalar inverse-distance potential)! ✓"
           )}
         </Chip>
       </Fade>

@@ -2,36 +2,18 @@
 
 /**
  * P12Ch02 · Section 13 — "Pitfalls: V and E ask different questions"
- * Canvas 1080×620 · safe x36–1044, y30–596.
- *
- * Beats (en [0,7,19,32,42,54,64,74,84]):
- *  0 Title
- *  1 Pitfall 1: V=0 ≠ E=0 and vice versa
- *  2 Examples: midpoint cases
- *  3 Pitfall 2: forgetting V is scalar
- *  4 Fix: just add kq_i/r_i with signs
- *  5 Pitfall 3: dropping minus sign in E = −dV/dr
- *  6 Sign tells field points downhill
- *  7 Pitfall 4: equipotential → zero work (always!)
- *  8 Pro-tip: ratio + sign check
+ * Subtopic: Electrostatic Potential & Equipotentials
+ * OPEN CHALKBOARD DESIGN WITH PITFALLS MATRIX & VECTOR VS SCALAR COMPARISON (NO CONTAINER BOXES):
+ *  - Pitfall 1: Vector Addition (Field E) vs Algebraic Sum with Sign (Potential V)
+ *  - Pitfall 2: Confusing Field Magnitude with Potential Value (Slope vs Altitude)
+ *  - Pitfall 3: Reference Level Misconceptions (V(∞) = 0 vs E(∞) = 0)
+ *  - Subtopic 1 Summary & Checklist
  */
 
 import React from "react";
 import {
-  SceneProps,
-  useBeat,
-  delayFor,
-  Fade,
-  Draw,
-  T,
-  Chip,
-  ringD,
-  INK,
-  MUTED,
-  AMBER_DARK,
-  GREEN,
-  RED,
-  CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
+  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
@@ -55,120 +37,104 @@ export default function P12Ch02Sec13({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
-      {/* ── BEAT 0: Title ── */}
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("common pitfalls in potential & equipotential surfaces", "potential & equipotential surfaces ke common pitfalls")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Subtopic 1 Pitfalls & Master Checklist: Electric Field E vs Potential V", "Subtopic 1 Pitfalls & Master Checklist: Electric Field E vs Potential V")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 140 70 C 400 66, 640 74, 940 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* ── BEAT 1: Pitfall 1 — V=0 ≠ E=0 ── */}
-      <Badge n={1} cx={52} cy={120} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={125} size={14} fill={RED} weight={700} anchor="start">
-          PITFALL: V = 0 ∴ E = 0? WRONG!
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <T x={74} y={150} size={13} fill={INK} anchor="start" script>
-          {t(
-            "V=0 does NOT mean E=0, and E=0 does NOT mean V=0 — evaluate each separately!",
-            "V=0 ka matlab E=0 NAHI, aur E=0 ka matlab V=0 NAHI — dono alag evaluate karo!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 2: Examples ── */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <g transform="translate(74, 165)">
-          <rect x={0} y={5} width={900} height={50} rx={6} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={450} y={24} anchor="middle" size={13} fill={INK} weight={700}>
-            {t(
-              "Opposite charges midpoint: V = 0, E ≠ 0  |  Like charges midpoint: E = 0, V ≠ 0",
-              "Opposite charges midpoint: V = 0, E ≠ 0  |  Like charges midpoint: E = 0, V ≠ 0"
-            )}
+      {/* LEFT SECTION: FIELD E VS POTENTIAL V MATRIX */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ELECTRIC FIELD E (VECTOR)", "ELECTRIC FIELD E (VECTOR)")}
           </T>
-          <T x={450} y={46} anchor="middle" size={12} fill={MUTED} script>
-            {t("Evaluate scalar (V) and vector (E) independently!", "Scalar (V) aur vector (E) independently evaluate karo!")}
+        </Fade>
+
+        {/* Floating Field Features (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={80} size={15} fill={INK} weight={800} anchor="start">
+            • VECTOR Quantity: Has magnitude & direction (i^, j^, k^)
           </T>
-        </g>
-      </Fade>
 
-      {/* ── BEAT 3: Pitfall 2 — V is scalar ── */}
-      <Badge n={2} cx={52} cy={255} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={260} size={14} fill={RED} weight={700} anchor="start">
-          PITFALL: Treating V like a vector (adding angles/components)
-        </T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <T x={74} y={285} size={13} fill={INK} anchor="start" script>
-          {t(
-            "V is a scalar — students wrongly drag in angles & components as if adding fields!",
-            "V scalar hai — students galat mein angles & components lagate hain jaise field add kar rahe ho!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 4: Fix ── */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <g transform="translate(74, 300)">
-          <rect x={0} y={5} width={500} height={40} rx={6} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={250} y={32} anchor="middle" size={15} fill={GREEN} weight={700}>
-            FIX: Just add Σ kqᵢ / rᵢ with signs — one-line sum!
+          <T x={40} y={130} size={15} fill={INK} weight={800} anchor="start">
+            • Point Charge: E(r) = k Q / r²  (Decays as 1/r²)
           </T>
-        </g>
-      </Fade>
 
-      {/* ── BEAT 5: Pitfall 3 — minus sign ── */}
-      <Badge n={3} cx={52} cy={380} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={385} size={14} fill={RED} weight={700} anchor="start">
-          PITFALL: Dropping the minus in E = −dV/dr
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <T x={74} y={410} size={13} fill={INK} anchor="start" script>
-          {t(
-            "Dropping minus sign flips field direction entirely!",
-            "Minus sign drop karne se field direction completely ulta ho jaata hai!"
-          )}
-        </T>
-      </Fade>
+          <T x={40} y={180} size={15} fill={INK} weight={800} anchor="start">
+            • Dipole: E_axial = 2kp/r³, E_equatorial = kp/r³  (Decays as 1/r³)
+          </T>
 
-      {/* ── BEAT 6: Sign meaning ── */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={74} y={435} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "The sign tells you: field points DOWNHILL toward lower potential!",
-            "Sign batata hai: field DOWNHILL jaata hai lower potential ki taraf!"
-          )}
-        </T>
-      </Fade>
+          <T x={40} y={230} size={15} fill={RED} weight={800} anchor="start">
+            • Superposition: VECTOR Addition with components & angles!
+          </T>
+        </Fade>
+      </g>
 
-      {/* ── BEAT 7: Pitfall 4 — Equipotential work ── */}
-      <Badge n={4} cx={540} cy={380} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={562} y={385} size={14} fill={RED} weight={700} anchor="start">
-          RULE: Equipotential → ZERO work (always!)
-        </T>
-      </Fade>
+      {/* RIGHT SECTION: POTENTIAL V MATRIX */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Fade on={beat >= 2} delay={dl(2, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ELECTROSTATIC POTENTIAL V (SCALAR)", "ELECTROSTATIC POTENTIAL V (SCALAR)")}
+          </T>
+        </Fade>
+
+        {/* Floating Potential Features (No Card Boxes) */}
+        <Fade on={beat >= 2}>
+          <T x={40} y={80} size={15} fill={GREEN} weight={800} anchor="start">
+            • SCALAR Quantity: Single number with Volt units (J/C)
+          </T>
+
+          <T x={40} y={130} size={15} fill={GREEN} weight={800} anchor="start">
+            • Point Charge: V(r) = k Q / r  (Decays as 1/r)
+          </T>
+
+          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+            • Dipole: V(r, θ) = (k p cosθ) / r²  (Decays as 1/r²)
+          </T>
+
+          <T x={40} y={230} size={15} fill={GREEN} weight={800} anchor="start">
+            • Superposition: PURE ALGEBRAIC Sum with charge signs (+ / -)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* MIDDLE BRIDGE: E = - dV/dr RELATION */}
+      <g transform="translate(40, 340)">
+        <Fade on={beat >= 4}>
+          <line x1="20" y1="10" x2="1000" y2="10" stroke={INK} strokeWidth={2} />
+          <T x={510} y={45} anchor="middle" size={18} fill={AMBER_DARK} weight={800}>
+            BRIDGE RELATION: Electric Field E is the Negative Slope/Gradient of Potential! E = − dV/dr = − ∇V
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: SUBTOPIC 1 COMPLETION CHECKLIST */}
+      <g transform="translate(40, 465)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SUBTOPIC 1 MASTER CHECKLIST (SECTIONS 1 – 13)", "SUBTOPIC 1 MASTER CHECKLIST (SECTIONS 1 – 13)")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            ✓ V = W_ext/q₀ = kQ/r   ✓ Equipotentials E ⊥ Surface   ✓ Dipole V = kp cosθ/r²   ✓ Ring V = kQ/√(R²+x²)   ✓ E = −∇V!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(560, 400)">
-          <rect x={0} y={5} width={420} height={40} rx={6} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={210} y={32} anchor="middle" size={14} fill={GREEN} weight={700}>
-            {t("Path along equipotential: W = 0, no exceptions!", "Equipotential par path: W = 0, koi exception nahi!")}
-          </T>
-        </g>
-      </Fade>
-
-      {/* ── BEAT 8: Pro-tip ── */}
-      <Fade on={beat >= 8}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ PRO-TIP: Compare distances with ratio + run sign check ✓",
-            "★ PRO-TIP: Distances ka ratio compare karo + sign check karo ✓"
+            "★ Subtopic 1 Complete (Sec 1–13): Electrostatic Potential & Equipotential Surface Foundations 100% Mastered! ✓",
+            "★ Subtopic 1 Complete (Sec 1–13): Electrostatic Potential & Equipotential Surface Foundations 100% Mastered! ✓"
           )}
         </Chip>
       </Fade>

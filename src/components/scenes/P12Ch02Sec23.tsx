@@ -2,12 +2,18 @@
 
 /**
  * P12Ch02 · Section 23 — "JEE Main: released charge, conservation of energy"
- * Beats (en [0,6,19,29,40,53,66,76]): 8 beats
+ * Subtopic: Potential Energy & External Fields
+ * OPEN CHALKBOARD DESIGN WITH ACCELERATING CHARGE TRAJECTORY (NO CONTAINER BOXES):
+ *  - Fixed charge +q₁ at origin
+ *  - Charge +q₂ (mass m) released from rest at distance r₁
+ *  - Accelerates outward to distance r₂ under Coulomb repulsion
+ *  - Conservation of energy: 0 + k q₁ q₂ / r₁ = ½ m v² + k q₁ q₂ / r₂
+ *  - Velocity formula: v = √[ (2 k q₁ q₂ / m) (1/r₁ - 1/r₂) ]
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -30,96 +36,126 @@ export default function P12Ch02Sec23({ currentTime, reveals, language }: ScenePr
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Accelerated charge motion from r1 to r2
+  const animR = (currentTime * 0.9) % 1;
+  const q2X = 180 + animR * 200;
+
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("JEE Main: released charge, energy conservation", "JEE Main: charge chhoda, energy conservation")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("JEE Main: Released Charge Speed via Energy Conservation v = √[(2k q₁ q₂ / m)(1/r₁ − 1/r₂)]", "JEE Main: Released Charge Speed via Energy Conservation v = √[(2k q₁ q₂ / m)(1/r₁ − 1/r₂)]")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 180 70 C 400 66, 660 74, 900 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <g transform="translate(60, 90)">
-          <rect x={0} y={5} width={960} height={55} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={20} y={28} size={13} fill={INK} anchor="start" script>
-            {t(
-              "q₁ = +5μC (fixed), q₂ = +2μC (m = 5g), initially r = 0.10m, released from rest.",
-              "q₁ = +5μC (fixed), q₂ = +2μC (m = 5g), shuru mein r = 0.10m, rest se chhoda."
-            )}
+      {/* LEFT SECTION: PHYSICAL CHARGE MOTION DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CHARGE RELEASED FROM REST (r₁ → r₂)", "CHARGE RELEASED FROM REST (r₁ → r₂)")}
           </T>
-          <T x={20} y={50} size={13} fill={INK} anchor="start" script>
-            {t("Find speed of q₂ at infinity.", "q₂ ki speed infinity pe nikalo.")}
+        </Fade>
+
+        <Fade on={beat >= 1}>
+          {/* Fixed charge +q1 */}
+          <circle cx={80} cy={180} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2.5} />
+          <T x={80} y={187} size={16} fill={RED} weight={900}>+q₁</T>
+          <T x={80} y={140} size={13} fill={RED} weight={800}>Fixed Origin</T>
+
+          {/* Motion axis */}
+          <line x1="102" y1="180" x2="450" y2="180" stroke={INK} strokeWidth={2} />
+
+          {/* Initial position r1 */}
+          <line x1="180" y1="165" x2="180" y2="195" stroke={AMBER_DARK} strokeWidth={2.5} />
+          <T x={180} y={150} size={13} fill={AMBER_DARK} weight={800}>r₁ (v = 0)</T>
+
+          {/* Final position r2 */}
+          <line x1="380" y1="165" x2="380" y2="195" stroke={GREEN} strokeWidth={2.5} />
+          <T x={380} y={150} size={13} fill={GREEN} weight={800}>r₂ (Speed v)</T>
+
+          {/* Accelerating charge +q2 */}
+          <circle cx={q2X} cy={180} r={11} fill={GREEN} />
+          <T x={q2X} y={184} size={11} fill="#ffffff" weight={900}>+q₂</T>
+
+          {/* Velocity arrow */}
+          <path d={arrowD(q2X, 180, q2X + 45, 180)} stroke={GREEN} strokeWidth={3} />
+          <T x={q2X + 25} y={165} size={13} fill={GREEN} weight={900}>v(x)</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={16} fill={INK} weight={800}>
+            Electrostatic Repulsion converts ΔU into Kinetic Energy K = ½ m v² !
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 2: Physical picture */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={60} y={178} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Like charges repel → q₂ accelerates outward → U converts to K!",
-            "Like charges repel → q₂ bahar jaata → U se K banta hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Conservation equation */}
-      <Badge n={1} cx={52} cy={215} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 1)}>
-        <T x={74} y={220} size={14} fill={RED} weight={700} anchor="start">ENERGY CONSERVATION</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 6}>
-        <g transform="translate(60, 235)">
-          <rect x={0} y={5} width={400} height={50} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={200} y={38} anchor="middle" size={22} fill={RED} weight={800}>
-            U_i + K_i = U_f + K_f
+      {/* RIGHT SECTION: ENERGY CONSERVATION EQUATION STEPS */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ENERGY CONSERVATION PROOF", "ENERGY CONSERVATION PROOF")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: U_i */}
-      <Badge n={2} cx={52} cy={320} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 1)}>
-        <T x={74} y={325} size={14} fill={RED} weight={700} anchor="start">INITIAL PE</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(60, 340)">
-          <rect x={0} y={5} width={560} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={280} y={38} anchor="middle" size={17} fill={INK} weight={800}>
-            U_i = (9×10⁹)(5×10⁻⁶)(2×10⁻⁶) / 0.10 = 0.90 J
+        {/* Floating Derivation Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. E_initial = 0 + k q₁ q₂ / r₁
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5: Simplification */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={60} y={420} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "At ∞: U_f = 0. From rest: K_i = 0. So K_f = U_i = 0.90 J",
-            "∞ pe: U_f = 0. Rest se: K_i = 0. So K_f = U_i = 0.90 J"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 6: Final speed */}
-      <Badge n={3} cx={52} cy={458} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <g transform="translate(72, 443)">
-          <rect x={0} y={0} width={520} height={55} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={260} y={35} anchor="middle" size={22} fill={RED} weight={800}>
-            v = √(2K/m) = √(2×0.90/0.005) ≈ 19 m/s
+          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. E_final = ½ m v² + k q₁ q₂ / r₂
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Takeaway */}
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. ½ m v² = k q₁ q₂ ( 1/r₁ − 1/r₂ )
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={800} anchor="start">
+            4. v = √ [ (2 k q₁ q₂ / m) ( 1/r₁ − 1/r₂ ) ]
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            If released to infinity (r₂ → ∞): v_escape = √ (2 k q₁ q₂ / m r₁) !
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("JEE MAIN EXAM TRICK", "JEE MAIN EXAM TRICK")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            If BOTH charges are free to move: Use Reduced Mass µ = m₁ m₂ / (m₁ + m₂)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Relative separation velocity v_rel = √ [ (2 k q₁ q₂ / µ) (1/r₁ − 1/r₂) ]!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Skip forces! U = kq₁q₂/r + energy conservation → speed directly ✓",
-            "★ Forces chhodo! U = kq₁q₂/r + energy conservation → sidha speed ✓"
+            "★ JEE Main Formula Mastered: Speed v = √[(2k q₁ q₂ / m)(1/r₁ − 1/r₂)] via Conservation of Energy! ✓",
+            "★ JEE Main Formula Mastered: Speed v = √[(2k q₁ q₂ / m)(1/r₁ − 1/r₂)] via Conservation of Energy! ✓"
           )}
         </Chip>
       </Fade>

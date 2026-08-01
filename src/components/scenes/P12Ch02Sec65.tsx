@@ -1,13 +1,21 @@
 "use client";
 
 /**
- * P12Ch02 · Section 65 — "Quick summary of capacitor combinations"
- * Beats (en [0,5,15,22,34,44,52,65]): 8 beats
+ * P12Ch02 · Section 65 — "Chapter 2 Synthesis Part 2 — Advanced multi-concept problem walkthrough"
+ * Subtopic: Synthesis & Exam Readiness
+ * OPEN CHALKBOARD DESIGN WITH MULTI-CONCEPT WALKTHROUGH (NO CONTAINER BOXES):
+ *  - Problem: Air capacitor C₀ charged to V₀ (Q₀ = C₀V₀, U₀ = ½C₀V₀²). Battery DISCONNECTED.
+ *  - Dielectric slab K = 3 inserted to fill HALF plate length (Parallel split area A/2!).
+ *  - Step 1: New Capacitance C_new = C₀/2 + K C₀/2 = 2 C₀
+ *  - Step 2: New Voltage V_new = Q₀ / (2 C₀) = V₀ / 2
+ *  - Step 3: New Energy U_new = Q₀² / (4 C₀) = U₀ / 2
+ *  - Step 4: Mechanical Work W_field = U₀ - U_new = ½ U₀ !
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,102 +40,113 @@ export default function P12Ch02Sec65({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Summary: Capacitor Combinations", "Summary: Capacitor Combinations")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Chapter 2 Synthesis Part 2: Multi-Concept Advanced Masterclass Walkthrough", "Chapter 2 Synthesis Part 2: Multi-Concept Advanced Masterclass Walkthrough")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 370 70 C 440 66, 640 74, 710 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Series setup */}
-      <Badge n={1} cx={52} cy={120} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={125} size={14} fill={RED} weight={700} anchor="start">SERIES = COMMON Q</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 140)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={38} anchor="middle" size={16} fill={INK} weight={800} script>
-            {t(
-              "Charge Q is shared equally. Voltages V add up.",
-              "Charge Q sabme same hai. Voltages V add hote hain."
-            )}
+      {/* LEFT SECTION: PHYSICAL PROBLEM DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("HALF-FILLED DIELECTRIC SLAB (K = 3, DISCONNECTED)", "HALF-FILLED DIELECTRIC SLAB (K = 3, DISCONNECTED)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: Series formula */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)} dim={beat >= 3}>
-        <g transform="translate(60, 210)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={38} anchor="middle" size={16} fill={INK} weight={800}>
-            1/C_s = 1/C₁ + 1/C₂ + ...
+        {/* Capacitor Diagram */}
+        <Fade on={beat >= 1}>
+          <line x1="60" y1="90" x2="420" y2="90" stroke={RED} strokeWidth={4} />
+          <T x={435} y={95} size={14} fill={RED} weight={800}>+Q₀ Trapped</T>
+
+          <line x1="60" y1="250" x2="420" y2="250" stroke={GREEN} strokeWidth={4} />
+          <T x={435} y={255} size={14} fill={GREEN} weight={800}>−Q₀ Trapped</T>
+
+          {/* Left half: Air (A/2) */}
+          <rect x="70" y="100" width="165" height="140" fill="none" stroke={MUTED} strokeDasharray="4 4" />
+          <T x={152} y={170} size={14} fill={INK} weight={800} anchor="middle">Air (A/2)</T>
+
+          {/* Right half: Dielectric K=3 (A/2) */}
+          <rect x="245" y="100" width="165" height="140" fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={2} />
+          <T x={327} y={170} size={14} fill={AMBER_DARK} weight={900} anchor="middle">Slab K = 3 (A/2)</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={16} fill={INK} weight={800}>
+            Parallel Split: C_new = (ε₀/d) (A/2) + K (ε₀/d) (A/2) = ½ C₀ (1 + K) !
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 3: Series C decreases */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={60} y={310} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "C_s is smaller than the smallest capacitor.",
-            "C_s sabse chote capacitor se bhi chota hota hai."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Parallel setup */}
-      <Badge n={2} cx={540} cy={120} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={125} size={14} fill={RED} weight={700} anchor="start">PARALLEL = COMMON V</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(540, 140)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={36} anchor="middle" size={16} fill={INK} weight={800} script>
-            {t(
-              "Voltage V is shared equally. Charges Q add up.",
-              "Voltage V sabme same hai. Charges Q add hote hain."
-            )}
+      {/* RIGHT SECTION: MULTI-STEP SOLUTION ACCOUNTING */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("STEP-BY-STEP MATHEMATICAL SOLUTION", "STEP-BY-STEP MATHEMATICAL SOLUTION")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Parallel formula */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)} dim={beat >= 6}>
-        <g transform="translate(540, 210)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={38} anchor="middle" size={16} fill={INK} weight={800}>
-            C_p = C₁ + C₂ + ...
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. C_new = ½ C₀ (1 + 3) = 2 C₀
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 6: Parallel C increases */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={540} y={310} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "C_p is larger than the largest capacitor.",
-            "C_p sabse bade capacitor se bhi bada hota hai."
-          )}
-        </T>
-      </Fade>
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. V_new = Q₀ / (2 C₀) = V₀ / 2
+          </T>
 
-      {/* BEAT 7: Shared connection loss */}
-      <Badge n={3} cx={52} cy={380} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={385} size={14} fill={RED} weight={700} anchor="start">CONNECTING CHARGED CAPACITORS</T>
-      </Fade>
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. U_new = Q₀² / (2 × 2 C₀) = U₀ / 2
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={900} anchor="start">
+            4. W_suction = U₀ − U_new = ½ U₀
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Exactly 50% of initial stored energy is spent by the field doing work pulling the slab in!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("JEE ADVANCED STRATEGY RECAP", "JEE ADVANCED STRATEGY RECAP")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Step 1: Identify battery state (Disconnected → Q is fixed)! Step 2: Split geometry into parallel C₁ & C₂!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Step 3: Compute C_new, then V_new = Q/C_new, then U_new = Q²/(2 C_new)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 400)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill="#fef2f2" stroke={RED} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={RED} weight={800} script>
-            {t(
-              "Charge redistributes until V is common. Energy is LOST to heat/sparks.",
-              "Charge redistribute hota hai jab tak V common na ho jaye. Energy heat/sparks mein LOST hoti hai."
-            )}
-          </T>
-        </g>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
+          {t(
+            "★ Synthesis Part 2 Mastered: Multi-concept problem solved (C_new = 2C₀, V_new = V₀/2, U_new = U₀/2, W = U₀/2)! ✓",
+            "★ Synthesis Part 2 Mastered: Multi-concept problem solved (C_new = 2C₀, V_new = V₀/2, U_new = U₀/2, W = U₀/2)! ✓"
+          )}
+        </Chip>
       </Fade>
     </svg>
   );

@@ -2,12 +2,18 @@
 
 /**
  * P12Ch02 · Section 30 — "Formula toolkit: capacitance and the parallel plate"
- * Beats (en [0,4,15,24,35,47,54,65]): 8 beats
+ * Subtopic: Capacitance, Dielectrics & Stored Energy
+ * OPEN CHALKBOARD DESIGN WITH MASTER PARALLEL PLATE FORMULAS (NO CONTAINER BOXES):
+ *  - 1. Vacuum Capacitor: C₀ = ε₀ A / d
+ *  - 2. Full Dielectric Slab: C = K C₀ = K ε₀ A / d
+ *  - 3. Partial Dielectric Slab (thickness t < d): C = ε₀ A / (d - t + t/K)
+ *  - 4. Field & Charge Density: E = σ / ε₀ = Q / (ε₀ A)
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,95 +38,103 @@ export default function P12Ch02Sec30({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("formula toolkit: capacitance and parallel plates", "formula toolkit: capacitance and parallel plates")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Formula Toolkit: Parallel Plate Capacitance & Partial Dielectric Slabs", "Formula Toolkit: Parallel Plate Capacitance & Partial Dielectric Slabs")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 220 70 C 440 66, 640 74, 860 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Definition */}
-      <Badge n={1} cx={52} cy={120} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 1)}>
-        <T x={74} y={125} size={14} fill={RED} weight={700} anchor="start">DEFINITION</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 140)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={20} fill={INK} weight={800}>
-            C = Q / V
+      {/* LEFT SECTION: VACUUM & FULL DIELECTRIC FORMULAS */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("VACUUM & FULL DIELECTRIC FORMULAS", "VACUUM & FULL DIELECTRIC FORMULAS")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: Dimensions */}
-      <Badge n={2} cx={540} cy={120} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 1)}>
-        <T x={562} y={125} size={14} fill={RED} weight={700} anchor="start">DIMENSIONS</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 3}>
-        <g transform="translate(540, 140)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            [C] = [M⁻¹ L⁻² T⁴ A²]
+        {/* Floating Formulas (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. Air/Vacuum Capacitor: C₀ = ε₀ A / d
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 3: Plate fields */}
-      <Badge n={3} cx={52} cy={230} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 1)}>
-        <T x={74} y={235} size={14} fill={RED} weight={700} anchor="start">BETWEEN PLATES</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(60, 250)">
-          <rect x={0} y={5} width={500} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={250} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            E = σ/ε₀ = Q / (ε₀A)    |    V = Ed
+          <T x={40} y={150} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Fully Filled Medium (Constant K): C = K C₀ = K (ε₀ A / d)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 4: Uniform field note */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <T x={60} y={335} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "V = Ed holds because field E is uniform between the plates!",
-            "V = Ed holds kyunki plates ke beech field E uniform hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 5: Free space C */}
-      <Badge n={4} cx={52} cy={380} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 1)}>
-        <T x={74} y={385} size={14} fill={RED} weight={700} anchor="start">PARALLEL PLATE CAPACITANCE</T>
-      </Fade>
-      <Fade on={beat >= 5}>
-        <g transform="translate(60, 400)">
-          <rect x={0} y={5} width={380} height={50} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={190} y={38} anchor="middle" size={20} fill={RED} weight={800}>
-            C₀ = ε₀A / d
+          <T x={40} y={215} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Plate Field E = σ / ε₀ = Q / (ε₀ A)
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 6: With dielectric */}
-      <Fade on={beat >= 6} delay={dl(6, 0.5)}>
-        <g transform="translate(460, 400)">
-          <rect x={0} y={5} width={380} height={50} rx={10} fill={CREAM} stroke={GREEN} strokeWidth={2.5} />
-          <T x={190} y={38} anchor="middle" size={20} fill={GREEN} weight={800}>
-            C = Kε₀A / d = KC₀
+        {/* Free Floating Rule (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={16} fill={RED} weight={800}>
+            Electric Field E inside air gap is UNIFORM (E = V/d)!
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 7: Geometry note */}
+      {/* RIGHT SECTION: PARTIAL DIELECTRIC SLAB (THICKNESS t < d) */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("PARTIAL DIELECTRIC SLAB FORMULA (t < d)", "PARTIAL DIELECTRIC SLAB FORMULA (t < d)")}
+          </T>
+        </Fade>
+
+        {/* Floating Partial Slab Formulas (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={RED} weight={800} anchor="start">
+            4. Partial Slab (Thickness t):
+          </T>
+
+          <T x={70} y={145} size={19} fill={GREEN} weight={900} anchor="start">
+            C = ε₀ A / [ d − t + (t / K) ]
+          </T>
+
+          <T x={50} y={215} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            5. Conducting Slab (K → ∞): C = ε₀ A / (d − t)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={350} anchor="middle" size={15} fill={GREEN} weight={800}>
+            A conducting slab of thickness t reduces effective plate separation to (d − t)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("PARALLEL PLATE TOOLKIT SUMMARY", "PARALLEL PLATE TOOLKIT SUMMARY")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Full Slab (t = d) → C = K C₀   |   Conducting Slab (K = ∞) → C = ε₀ A / (d − t)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Permittivity of free space ε₀ = 8.854 × 10⁻¹² F/m!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Area A (m²), gap d (m), dielectric K (dimensionless). Pure geometry! ✓",
-            "★ Area A (m²), gap d (m), dielectric K (dimensionless). Pure geometry! ✓"
+            "★ Parallel Plate Toolkit Mastered: C = ε₀A / [d − t + (t/K)] for any partial dielectric slab of thickness t! ✓",
+            "★ Parallel Plate Toolkit Mastered: C = ε₀A / [d − t + (t/K)] for any partial dielectric slab of thickness t! ✓"
           )}
         </Chip>
       </Fade>

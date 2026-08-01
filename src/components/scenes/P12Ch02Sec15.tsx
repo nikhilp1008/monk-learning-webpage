@@ -2,34 +2,17 @@
 
 /**
  * P12Ch02 · Section 15 — "The sign of U tells the story of the system"
- * Canvas 1080×620 · safe x36–1044, y30–596.
- *
- * Beats (en [0,11,21,32,41,53,63]):
- *  0 Title "the sign of U tells the story"
- *  1 Diagram: like charges vs unlike charges
- *  2 U > 0: like charges → push against repulsion → wound up spring
- *  3 Wound up → eager to fly apart
- *  4 U < 0: unlike charges → attraction does work → bound state
- *  5 Bound = fixed deposit: invest energy to break apart
- *  6 Why every bound system in nature has negative PE
+ * Subtopic: Potential Energy & External Fields
+ * OPEN CHALKBOARD DESIGN WITH FORCE ARROW DIAGRAMS (NO CONTAINER BOXES):
+ *  - Case 1: Like Charges (+q, +q) -> Repulsive Force (← →), Positive Energy U > 0 (Unbound/Work Expended)
+ *  - Case 2: Unlike Charges (+q, -q) -> Attractive Force (→ ←), Negative Energy U < 0 (Bound System/Energy Released)
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps,
-  useBeat,
-  delayFor,
-  Fade,
-  Draw,
-  T,
-  Chip,
-  ringD,
-  INK,
-  MUTED,
-  AMBER_DARK,
-  GREEN,
-  RED,
-  CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
+  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
@@ -53,103 +36,105 @@ export default function P12Ch02Sec15({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
-      {/* ── BEAT 0: Title ── */}
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("the sign of U tells the story of the system", "U ka sign system ki kahani batata hai")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("The Sign of Potential Energy U: Positive (Repulsive) vs Negative (Bound)", "The Sign of Potential Energy U: Positive (Repulsive) vs Negative (Bound)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* ── BEAT 1: Diagram — Like vs Unlike ── */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        {/* Like charges panel */}
-        <rect x={60} y={100} width={440} height={180} rx={10} fill="none" stroke={RED} strokeWidth={1.5} strokeDasharray="6 3" />
-        <T x={280} y={120} size={14} fill={RED} weight={700}>LIKE CHARGES (+ +)</T>
-        <circle cx={180} cy={200} r={20} fill={RED} stroke={INK} strokeWidth={1.5} />
-        <T x={180} y={205} size={14} fill="#fff" weight={800}>+</T>
-        <circle cx={360} cy={200} r={20} fill={RED} stroke={INK} strokeWidth={1.5} />
-        <T x={360} y={205} size={14} fill="#fff" weight={800}>+</T>
-        {/* Repulsion arrows */}
-        <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 202 200 h 50" stroke={RED} sw={2} />
-        <polygon points="254,200 244,195 244,205" fill={RED} />
-        <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 338 200 h -50" stroke={RED} sw={2} />
-        <polygon points="286,200 296,195 296,205" fill={RED} />
-        <T x={280} y={258} size={15} fill={RED} weight={800}>U &gt; 0</T>
+      {/* LEFT SECTION: LIKE CHARGES (+q, +q) -> U > 0 */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("LIKE CHARGES (+q, +q): U > 0 (REPULSIVE)", "LIKE CHARGES (+q, +q): U > 0 (REPULSIVE)")}
+          </T>
+        </Fade>
 
-        {/* Unlike charges panel */}
-        <rect x={560} y={100} width={440} height={180} rx={10} fill="none" stroke="#3b82f6" strokeWidth={1.5} strokeDasharray="6 3" />
-        <T x={780} y={120} size={14} fill="#3b82f6" weight={700}>UNLIKE CHARGES (+ −)</T>
-        <circle cx={680} cy={200} r={20} fill={RED} stroke={INK} strokeWidth={1.5} />
-        <T x={680} y={205} size={14} fill="#fff" weight={800}>+</T>
-        <circle cx={860} cy={200} r={20} fill="#3b82f6" stroke={INK} strokeWidth={1.5} />
-        <T x={860} y={205} size={14} fill="#fff" weight={800}>−</T>
-        {/* Attraction arrows */}
-        <Draw on={beat >= 1} delay={dl(1, 0.8)} d="M 702 200 h 50" stroke={GREEN} sw={2} />
-        <polygon points="754,200 744,195 744,205" fill={GREEN} />
-        <Draw on={beat >= 1} delay={dl(1, 0.8)} d="M 838 200 h -50" stroke={GREEN} sw={2} />
-        <polygon points="786,200 796,195 796,205" fill={GREEN} />
-        <T x={780} y={258} size={15} fill="#3b82f6" weight={800}>U &lt; 0</T>
-      </Fade>
+        {/* Sphere pair & repulsion arrows */}
+        <Fade on={beat >= 1}>
+          <circle cx={140} cy={180} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={140} y={187} size={18} fill={RED} weight={800}>+q₁</T>
 
-      {/* ── BEAT 2: U > 0 explanation ── */}
-      <Badge n={1} cx={52} cy={320} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={325} size={14} fill={RED} weight={700} anchor="start">
-          U &gt; 0: REPULSION → POSITIVE WORK TO ASSEMBLE
-        </T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <T x={74} y={350} size={13} fill={INK} anchor="start" script>
+          <circle cx={320} cy={180} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={320} y={187} size={18} fill={RED} weight={800}>+q₂</T>
+
+          {/* Repulsive force arrows pointing outward ← → */}
+          <path d={arrowD(110, 180, 50, 180)} stroke={RED} strokeWidth={3} />
+          <path d={arrowD(350, 180, 410, 180)} stroke={RED} strokeWidth={3} />
+
+          <T x={230} y={145} size={14} fill={RED} weight={800} anchor="middle">Force Repels ← →</T>
+          <T x={230} y={220} size={18} fill={RED} weight={900} anchor="middle">U = + k q₁q₂ / r &gt; 0</T>
+        </Fade>
+
+        {/* Free Floating Meaning (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={15} fill={INK} weight={800}>
+            Work must be done by external force to push them together against repulsion!
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: UNLIKE CHARGES (+q, -q) -> U < 0 */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("UNLIKE CHARGES (+q, −q): U < 0 (BOUND SYSTEM)", "UNLIKE CHARGES (+q, −q): U < 0 (BOUND SYSTEM)")}
+          </T>
+        </Fade>
+
+        {/* Sphere pair & attraction arrows */}
+        <Fade on={beat >= 4}>
+          <circle cx={140} cy={180} r={22} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={140} y={187} size={18} fill={RED} weight={800}>+q₁</T>
+
+          <circle cx={320} cy={180} r={22} fill="#dcfce7" stroke={GREEN} strokeWidth={2} />
+          <T x={320} y={187} size={20} fill={GREEN} weight={800}>-q₂</T>
+
+          {/* Attraction force arrows pointing inward → ← */}
+          <path d={arrowD(170, 180, 215, 180)} stroke={GREEN} strokeWidth={3} />
+          <path d={arrowD(290, 180, 245, 180)} stroke={GREEN} strokeWidth={3} />
+
+          <T x={230} y={145} size={14} fill={GREEN} weight={800} anchor="middle">Force Attracts → ←</T>
+          <T x={230} y={220} size={18} fill={GREEN} weight={900} anchor="middle">U = − k q₁q₂ / r &lt; 0</T>
+        </Fade>
+
+        {/* Free Floating Meaning (Spacious, No Box) */}
+        <Fade on={beat >= 6}>
+          <T x={230} y={350} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Energy released as they attract — system is BOUND (like electron & proton in atom)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ENERGY SIGN CONVENTION RULES", "ENERGY SIGN CONVENTION RULES")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            U &lt; 0 means Bound System (Requires external work to separate to infinity U(∞) = 0)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            U &gt; 0 means Unbound System (Releases kinetic energy if released from rest)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "Push against repulsion → external agent does positive work → energy stored!",
-            "Repulsion ke against push karo → external agent positive work karta → energy store!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 3: Wound up spring ── */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={74} y={378} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "System wound up like a compressed spring — eager to fly apart the instant you let go!",
-            "System compressed spring jaisa wound up hai — chodte hi udna chahta hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 4: U < 0 explanation ── */}
-      <Badge n={2} cx={52} cy={420} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={425} size={14} fill="#3b82f6" weight={700} anchor="start">
-          U &lt; 0: ATTRACTION → NEGATIVE WORK → BOUND STATE
-        </T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <T x={74} y={450} size={13} fill={INK} anchor="start" script>
-          {t(
-            "Attraction does work FOR you → external agent does negative work → system is BOUND!",
-            "Attraction apne aap work karta hai → external agent negative work → system BOUND hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 5: Fixed deposit analogy ── */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={74} y={478} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Bound = fixed deposit: you must INVEST energy to break it apart!",
-            "Bound = fixed deposit: todne ke liye energy INVEST karna padega!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 6: Takeaway ── */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
-          {t(
-            "★ Every bound system in nature (atom, planet) has NEGATIVE PE ✓",
-            "★ Nature mein har bound system (atom, planet) ka PE NEGATIVE hota hai ✓"
+            "★ Sign Convention Mastered: Positive U = Repulsive/Unbound; Negative U = Attractive/Bound System! ✓",
+            "★ Sign Convention Mastered: Positive U = Repulsive/Unbound; Negative U = Attractive/Bound System! ✓"
           )}
         </Chip>
       </Fade>

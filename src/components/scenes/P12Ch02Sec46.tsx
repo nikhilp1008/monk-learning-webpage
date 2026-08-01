@@ -2,12 +2,18 @@
 
 /**
  * P12Ch02 · Section 46 — "Deriving the capacitance of an isolated spherical conductor"
- * Beats (en [0,6,19,28,38,47,57]): 7 beats
+ * Subtopic: Conductors & Spherical Capacitors Derivations
+ * OPEN CHALKBOARD DESIGN WITH ISOLATED SPHERE PROOF (NO CONTAINER BOXES):
+ *  - Isolated spherical conductor of radius R carrying charge Q
+ *  - Surface Potential V = k Q / R = Q / (4π ε₀ R)
+ *  - Capacitance definition C = Q / V = 4π ε₀ R
+ *  - Worked Example for Planet Earth (R = 6400 km -> C = 711 µF)
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,81 +38,102 @@ export default function P12Ch02Sec46({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("derivation: capacitance of an isolated sphere", "derivation: isolated sphere ki capacitance")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Derivation: Isolated Spherical Conductor Capacitance C = 4πε₀R", "Derivation: Isolated Spherical Conductor Capacitance C = 4πε₀R")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 280 70 C 440 66, 640 74, 800 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Sphere behaves like point charge */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 3}>
-        <circle cx={200} cy={200} r={90} fill="#fef2f2" stroke={RED} strokeWidth={2} />
-        <T x={200} y={200} size={14} fill={RED} weight={700}>+Q</T>
-        <Draw on={beat >= 1} delay={dl(1, 0.6)} d="M 200 200 L 290 200" stroke={INK} sw={2} />
-        <T x={245} y={190} size={14} fill={INK} weight={700}>R</T>
-        <T x={320} y={200} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Behaves exactly like a point charge +Q at the centre for external points.",
-            "Bahar ke points ke liye, centre pe rakhe +Q point charge ki tarah behave karta hai."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 2: Surface Potential V */}
-      <Badge n={1} cx={52} cy={305} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={310} size={14} fill={RED} weight={700} anchor="start">POTENTIAL V AT SURFACE</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <g transform="translate(60, 325)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            V = Q / (4πε₀ R)
+      {/* LEFT SECTION: ISOLATED SPHERE GEOMETRY */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ISOLATED CONDUCTING SPHERE (RADIUS R, CHARGE Q)", "ISOLATED CONDUCTING SPHERE (RADIUS R, CHARGE Q)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: Equipotential note */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={60} y={405} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Since conductor is ONE equipotential, this is the potential of the ENTIRE sphere!",
-            "Kyunki conductor EK equipotential hai, yeh PURE sphere ka potential hai!"
-          )}
-        </T>
-      </Fade>
+        {/* Sphere Diagram */}
+        <Fade on={beat >= 1}>
+          <circle cx={220} cy={180} r={80} fill="#ffe4e6" stroke={RED} strokeWidth={3} opacity={0.3} />
+          <T x={220} y={185} size={16} fill={RED} weight={900} anchor="middle">Sphere (R, Q)</T>
+          <line x1="220" y1="180" x2="300" y2="180" stroke={INK} strokeWidth={2} />
+          <T x={260} y={170} size={13} fill={INK} weight={800}>Radius R</T>
+        </Fade>
 
-      {/* BEAT 4: Finding C */}
-      <Badge n={2} cx={520} cy={305} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={542} y={310} size={14} fill={RED} weight={700} anchor="start">CAPACITANCE C = Q/V</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(520, 325)">
-          <rect x={0} y={5} width={500} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={250} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            C = Q / [Q / (4πε₀ R)] = 4πε₀ R
+        {/* Free Floating Surface Potential Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={220} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            Surface Potential: V = k Q / R = Q / (4π ε₀ R)
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 5: Depends only on R */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={520} y={435} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "C depends ONLY on radius R — pure geometry!",
-            "C SIRF radius R pe depend karta hai — pure geometry!"
-          )}
-        </T>
-      </Fade>
+      {/* RIGHT SECTION: PROOF & PLANET EARTH CALCULATION */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CAPACITANCE PROOF & EARTH EXAMPLE", "CAPACITANCE PROOF & EARTH EXAMPLE")}
+          </T>
+        </Fade>
 
-      {/* BEAT 6: Q cancels */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        {/* Floating Derivation Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={INK} weight={800} anchor="start">
+            1. Definition: C = Q / V
+          </T>
+
+          <T x={50} y={145} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Substitute V: C = Q / [ Q / (4π ε₀ R) ]
+          </T>
+
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Result: C = 4π ε₀ R  (Directly proportional to radius!)
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={19} fill={RED} weight={900} anchor="start">
+            4. Earth (R = 6400 km): C = 6.4×10⁶ / (9×10⁹) = 711 µF
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Even a planet as massive as Earth has a capacitance of only 711 microfarads!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("DERIVATION VERDICT", "DERIVATION VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Isolated sphere capacitance C = 4πε₀R can be viewed as a spherical capacitor with outer shell at ∞!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Stored energy U = ½ C V² = Q² / (8π ε₀ R)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Notice how Q cancelled out completely! Capacitance is purely geometrical. ✓",
-            "★ Dekha, Q puri tarah cancel ho gaya! Capacitance sirf geometrical property hai. ✓"
+            "★ Proof Completed: C = 4πε₀R derived for isolated sphere (Earth capacitance C = 711 µF)! ✓",
+            "★ Proof Completed: C = 4πε₀R derived for isolated sphere (Earth capacitance C = 711 µF)! ✓"
           )}
         </Chip>
       </Fade>

@@ -1,13 +1,19 @@
 "use client";
 
 /**
- * P12Ch02 · Section 45 — "Derivation: E equals sigma over epsilon zero with a Gaussian pillbox"
- * Beats (en [0,6,17,26,36,45,59,72]): 8 beats
+ * P12Ch02 · Section 45 — "Deriving E equals sigma over epsilon zero with a Gaussian pillbox"
+ * Subtopic: Conductors & Spherical Capacitors Derivations
+ * OPEN CHALKBOARD DESIGN WITH GAUSSIAN PILLBOX SLAB PROOF (NO CONTAINER BOXES):
+ *  - Small cylindrical Gaussian pillbox half inside conductor, half outside
+ *  - Inside face flux = 0 (since E_inside = 0)
+ *  - Cylindrical wall flux = 0 (since E is normal to surface)
+ *  - Outside face flux = E A = Q_enclosed / ε₀ = (σ A) / ε₀
+ *  - Result: E = σ / ε₀ n^
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,110 +38,113 @@ export default function P12Ch02Sec45({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("derivation: field just outside a charged conductor", "derivation: charged conductor ke theek bahar ki field")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Derivation: Surface Field E = σ/ε₀ via Gaussian Pillbox Integration", "Derivation: Surface Field E = σ/ε₀ via Gaussian Pillbox Integration")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — Gaussian Pillbox */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 6}>
-        <g transform="translate(150, 180)">
-          {/* Conductor surface (vertical line, left is inside, right is outside) */}
-          <rect x={-80} y={-100} width={80} height={200} fill="#e2e8f0" />
-          <line x1={0} y1={-100} x2={0} y2={100} stroke={INK} strokeWidth={3} />
-          <T x={-40} y={0} size={14} fill={INK} weight={700}>CONDUCTOR (E=0)</T>
-          <T x={120} y={-80} size={14} fill={INK} weight={700}>OUTSIDE</T>
-          <T x={15} y={-20} size={16} fill={RED} weight={800}>+</T>
-          <T x={15} y={20} size={16} fill={RED} weight={800}>+</T>
-          <T x={15} y={60} size={16} fill={RED} weight={800}>+</T>
-          <T x={15} y={-60} size={16} fill={RED} weight={800}>+</T>
-
-          {/* Pillbox */}
-          <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-            <rect x={-40} y={-30} width={80} height={60} fill="none" stroke={AMBER_DARK} strokeWidth={2} strokeDasharray="4 4" />
-            <T x={-5} y={-40} size={12} fill={AMBER_DARK} weight={700} anchor="end">Inner face</T>
-            <T x={5} y={-40} size={12} fill={AMBER_DARK} weight={700} anchor="start">Outer face ΔS</T>
-          </Fade>
-
-          {/* E vector */}
-          <Fade on={beat >= 3} delay={dl(3, 0.5)}>
-            <line x1={40} y1={0} x2={120} y2={0} stroke={RED} strokeWidth={2} />
-            <polygon points="128,0 118,-4 118,4" fill={RED} />
-            <T x={80} y={-10} size={14} fill={RED} weight={700}>E</T>
-          </Fade>
-        </g>
-      </Fade>
-
-      {/* BEAT 2: Inner face flux */}
-      <Badge n={1} cx={480} cy={120} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={502} y={125} size={14} fill={RED} weight={700} anchor="start">INNER FACE FLUX = 0</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <T x={502} y={150} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Inside the conductor E=0, so the inner face contributes zero flux.",
-            "Andar E=0 hai, isliye inner face se koi flux nahi aati."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Outer face flux */}
-      <Badge n={2} cx={480} cy={200} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={502} y={205} size={14} fill={RED} weight={700} anchor="start">OUTER FACE FLUX</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <T x={502} y={230} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Just outside, E is perpendicular to surface. Only outer flat face ΔS contributes.",
-            "Bahar E surface ke perpendicular hai. Sirf outer face ΔS flux deta hai."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Total Flux */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)} dim={beat >= 6}>
-        <g transform="translate(480, 260)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            ∮ E·dA = E × ΔS
+      {/* LEFT SECTION: PILLBOX SCHEMATIC */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("GAUSSIAN PILLBOX CROSSING CONDUCTOR SURFACE", "GAUSSIAN PILLBOX CROSSING CONDUCTOR SURFACE")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Equating to q/ε₀ */}
-      <Badge n={3} cx={52} cy={350} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={355} size={14} fill={RED} weight={700} anchor="start">APPLYING GAUSS'S LAW</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 6}>
-        <g transform="translate(60, 370)">
-          <rect x={0} y={5} width={600} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={300} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            E × ΔS = (σ × ΔS) / ε₀   →   E = σ / ε₀
+        {/* Conductor surface and pillbox */}
+        <Fade on={beat >= 1}>
+          {/* Conductor Boundary Line */}
+          <line x1="60" y1="180" x2="420" y2="180" stroke={INK} strokeWidth={4} />
+          <T x={435} y={185} size={14} fill={INK} weight={800}>Conductor Surface (σ)</T>
+
+          {/* Shaded Conductor Interior below line */}
+          <rect x="60" y="182" width="360" height="100" fill={AMBER_DARK} opacity={0.15} />
+          <T x={240} y={230} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Inside Conductor (E = 0)</T>
+
+          {/* Gaussian Pillbox Cylinder */}
+          <rect x="180" y="110" width="80" height="140" stroke={RED} strokeWidth={2} strokeDasharray="4 4" fill="none" />
+          <T x={220} y={95} size={12} fill={RED} weight={800} anchor="middle">Pillbox Area A</T>
+
+          {/* Emerging Field Vector E */}
+          <path d={arrowD(220, 180, 220, 70)} stroke={RED} strokeWidth={3} />
+          <T x={235} y={75} size={15} fill={RED} weight={900}>E = σ/ε₀</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            Enclosed Charge: Q_enclosed = σ A
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 6: Why double? */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={60} y={450} size={14} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Why double the isolated sheet (σ/2ε₀)? For a sheet, flux escapes BOTH faces.",
-            "Isolated sheet (σ/2ε₀) ka double kyun? Sheet mein flux DONO faces se nikalta hai."
-          )}
-        </T>
-      </Fade>
+      {/* RIGHT SECTION: FLUX INTEGRAL BREAKDOWN */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("FLUX INTEGRAL BREAKDOWN FOR 3 SURFACES", "FLUX INTEGRAL BREAKDOWN FOR 3 SURFACES")}
+          </T>
+        </Fade>
 
-      {/* BEAT 7: Conclusion */}
+        {/* Floating Derivation Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Inside Cap Flux: Φ_inside = 0  (since E_inside = 0)
+          </T>
+
+          <T x={50} y={145} size={16} fill={INK} weight={800} anchor="start">
+            2. Curved Sides Flux: Φ_sides = 0  (since E ⊥ n^)
+          </T>
+
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Outside Cap Flux: Φ_outside = E A
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={900} anchor="start">
+            4. E A = σ A / ε₀  ⇒  E = σ / ε₀  (Q.E.D.)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Valid for ANY arbitrary conductor shape in electrostatic equilibrium!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SHEET FIELD VS CONDUCTOR SURFACE FIELD", "SHEET FIELD VS CONDUCTOR SURFACE FIELD")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Single Infinite Non-conducting Sheet: E = σ / 2ε₀   |   Conductor Surface: E = σ / ε₀ !
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Conductor surface field is TWICE as large because field lines only emerge on ONE side (E_inside = 0)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Here the inside face is dead (E=0), so ALL flux is forced out ONE face → doubling the result! ✓",
-            "★ Yahan andar ka face dead hai (E=0), toh SAARI flux EK face se nikalti hai → result double! ✓"
+            "★ Derivation Completed: Surface Field E = σ/ε₀ proven via 3-part Gaussian pillbox flux integration! ✓",
+            "★ Derivation Completed: Surface Field E = σ/ε₀ proven via 3-part Gaussian pillbox flux integration! ✓"
           )}
         </Chip>
       </Fade>

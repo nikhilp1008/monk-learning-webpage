@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 38 — "Pitfalls: the battery check and the right energy formula"
- * Beats (en [0,4,14,26,40,57,70,90]): 8 beats
+ * Subtopic: Capacitance, Dielectrics & Stored Energy
+ * OPEN CHALKBOARD DESIGN WITH SUBTOPIC 3 RECAP & PITFALL CHECKLIST (NO CONTAINER BOXES):
+ *  - Pitfall 1: Battery Check Failure -> Always test connection before choosing formula!
+ *  - Pitfall 2: Wrong Energy Formula -> Use ½CV² for V constant, Q²/(2C) for Q constant!
+ *  - Pitfall 3: Ignoring 50% Battery Charging Energy Loss
+ *  - Subtopic 3 Master Checklist (Sec 26 – 38)
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,98 +37,107 @@ export default function P12Ch02Sec38({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("common pitfalls in capacitance and dielectrics", "capacitance aur dielectrics ke common pitfalls")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Subtopic 3 Pitfalls & Master Checklist: Capacitors, Dielectrics & Energy", "Subtopic 3 Pitfalls & Master Checklist: Capacitors, Dielectrics & Energy")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 220 70 C 440 66, 640 74, 860 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Pitfall 1 — C depends on Q or V */}
-      <Badge n={1} cx={52} cy={115} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={120} size={14} fill={RED} weight={700} anchor="start">
-          PITFALL 1: Believing C depends on Q or V
-        </T>
-      </Fade>
-
-      {/* BEAT 2: Geometry only */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={74} y={145} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "It does NOT! C is geometry and dielectric ONLY (A, d, K).",
-            "Nahi! C sirf geometry aur dielectric pe depend karta hai (A, d, K)."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Pitfall 2 — Skipping battery check */}
-      <Badge n={2} cx={52} cy={205} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={210} size={14} fill={RED} weight={700} anchor="start">
-          PITFALL 2: Skipping the battery check
-        </T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 6}>
-        <g transform="translate(74, 225)">
-          <rect x={0} y={0} width={600} height={40} rx={6} fill="#fef2f2" stroke={RED} strokeWidth={2} />
-          <T x={300} y={26} anchor="middle" size={14} fill={RED} weight={800}>
-            {t("⚠ Number ONE error in this subtopic!", "⚠ Is subtopic ki sabse BADI galti!")}
+      {/* LEFT SECTION: THREE MAJOR PITFALLS IN CAPACITORS */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("THE 3 CLASSIC CAPACITOR PITFALLS", "THE 3 CLASSIC CAPACITOR PITFALLS")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: Wrong energy formula */}
-      <Badge n={3} cx={52} cy={305} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={310} size={14} fill={RED} weight={700} anchor="start">
-          PITFALL 3: Picking the wrong energy formula
-        </T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <T x={74} y={335} size={13} fill={INK} anchor="start" script>
+        {/* Floating Pitfalls (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={80} size={15} fill={RED} weight={800} anchor="start">
+            1. Battery Check Trap: Forgetting to verify whether battery is connected!
+          </T>
+
+          <T x={40} y={130} size={15} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Energy Formula Mismatch: Using ½CV² when Q is constant, or Q²/(2C) when V is constant!
+          </T>
+
+          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+            3. Dielectric Constant Slips: C increases by K, but V and E decrease by 1/K (if disconnected)!
+          </T>
+
+          <T x={40} y={230} size={15} fill={INK} weight={800} anchor="start">
+            4. Battery Charging Loss: W_battery = Q V = 2 × U_stored (50% heat loss)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: MASTER FORMULA MATRIX */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Fade on={beat >= 2} delay={dl(2, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CAPACITOR MASTER FORMULA MATRIX", "CAPACITOR MASTER FORMULA MATRIX")}
+          </T>
+        </Fade>
+
+        {/* Floating Matrix Features (No Card Boxes) */}
+        <Fade on={beat >= 2}>
+          <T x={40} y={80} size={15} fill={GREEN} weight={800} anchor="start">
+            • Parallel Plate: C = ε₀ A / d  (Vacuum)
+          </T>
+
+          <T x={40} y={130} size={15} fill={GREEN} weight={800} anchor="start">
+            • With Dielectric Slab: C = K C₀ = K ε₀ A / d
+          </T>
+
+          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+            • Partial Slab (t &lt; d): C = ε₀ A / [ d − t + (t/K) ]
+          </T>
+
+          <T x={40} y={230} size={15} fill={GREEN} weight={800} anchor="start">
+            • Energy Density: u_E = ½ ε₀ E²  (J/m³)
+          </T>
+        </Fade>
+      </g>
+
+      {/* MIDDLE BRIDGE LINE */}
+      <g transform="translate(40, 340)">
+        <Fade on={beat >= 4}>
+          <line x1="20" y1="10" x2="1000" y2="10" stroke={INK} strokeWidth={2} />
+          <T x={510} y={45} anchor="middle" size={18} fill={AMBER_DARK} weight={800}>
+            GOLDEN RULE: Capacitance depends ONLY on Geometry (A, d) and Medium (K) — NOT on Q or V!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: SUBTOPIC 3 MASTER CHECKLIST */}
+      <g transform="translate(40, 465)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SUBTOPIC 3 MASTER CHECKLIST (SECTIONS 26 – 38)", "SUBTOPIC 3 MASTER CHECKLIST (SECTIONS 26 – 38)")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            ✓ C = Q/V   ✓ C = ε₀A/d   ✓ C = KC₀   ✓ Connected V const   ✓ Disconnected Q const   ✓ u_E = ½ε₀E²!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "Wrong formula buries K-scaling under unnecessary algebra.",
-            "Galat formula K-scaling ko unnecessary algebra mein daba deta hai."
+            "★ Subtopic 3 Complete (Sec 26–38): Parallel Plate Capacitors, Dielectrics & Stored Energy 100% Mastered! ✓",
+            "★ Subtopic 3 Complete (Sec 26–38): Parallel Plate Capacitors, Dielectrics & Stored Energy 100% Mastered! ✓"
           )}
-        </T>
+        </Chip>
       </Fade>
-
-      {/* BEAT 5: Energy squared / heat */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={74} y={360} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Remember: U scales with V² (not V), and charging ALWAYS wastes half energy as heat!",
-            "Yaad rakho: U scale karta V² (not V) se, aur charging HAMESHA half energy heat mein waste karti hai!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 6: Reflex 1 — Disconnected */}
-      <Badge n={4} cx={52} cy={430} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={435} size={14} fill={RED} weight={700} anchor="start">
-          PRO-TIP: BUILD THE TWO-BRANCH REFLEX
-        </T>
-      </Fade>
-      <Fade on={beat >= 6}>
-        <g transform="translate(74, 450)">
-          <rect x={0} y={0} width={420} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={210} y={22} anchor="middle" size={13} fill={AMBER_DARK} weight={700}>DISCONNECTED?</T>
-          <T x={210} y={40} anchor="middle" size={14} fill={INK} weight={700}>Write Q = constant! Use U = Q²/(2C)</T>
-        </g>
-      </Fade>
-
-      {/* BEAT 7: Reflex 2 — Connected */}
-      <Fade on={beat >= 7} delay={dl(7, 0.3)}>
-        <g transform="translate(520, 450)">
-          <rect x={0} y={0} width={420} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={210} y={22} anchor="middle" size={13} fill={GREEN} weight={700}>CONNECTED?</T>
-          <T x={210} y={40} anchor="middle" size={14} fill={INK} weight={700}>Write V = constant! Use U = ½CV²</T>
-        </g>
-      </Fade>
-
-      {/* BEAT 8: Done */}
     </svg>
   );
 }

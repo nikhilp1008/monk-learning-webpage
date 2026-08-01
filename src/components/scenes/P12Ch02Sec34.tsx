@@ -2,12 +2,18 @@
 
 /**
  * P12Ch02 · Section 34 — "CBSE level: capacitance and charge of an air capacitor"
- * Beats (en [0,4,15,28,44,54,63,71]): 8 beats
+ * Subtopic: Capacitance, Dielectrics & Stored Energy
+ * OPEN CHALKBOARD DESIGN WITH CBSE WORKED NUMERICAL (NO CONTAINER BOXES):
+ *  - Area A = 90 cm² (9×10⁻³ m²), spacing d = 2.5 mm (2.5×10⁻³ m), V = 400 V
+ *  - Step 1: Calculate C₀ = ε₀ A / d = 31.9 pF
+ *  - Step 2: Calculate Charge Q₀ = C₀ V = 12.75 nC
+ *  - Step 3: Calculate Stored Energy U₀ = ½ C₀ V² = 2.55 µJ
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,101 +38,108 @@ export default function P12Ch02Sec34({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("CBSE level: capacitance and charge of an air capacitor", "CBSE level: air capacitor ki capacitance aur charge")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("CBSE Worked Problem: Air Capacitor (A = 90 cm², d = 2.5 mm, V = 400 V)", "CBSE Worked Problem: Air Capacitor (A = 90 cm², d = 2.5 mm, V = 400 V)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 70 C 440 66, 640 74, 960 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem statement */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <g transform="translate(60, 90)">
-          <rect x={0} y={5} width={960} height={55} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={20} y={25} size={14} fill={INK} weight={700} anchor="start">GIVEN:</T>
-          <T x={20} y={48} size={14} fill={INK} anchor="start" script>
-            {t(
-              "Area A = 200 cm², gap d = 1.0 mm, air filled. Voltage V = 50 V. Find C₀ and Q.",
-              "Area A = 200 cm², gap d = 1.0 mm, air. Voltage V = 50 V. C₀ aur Q nikalo."
-            )}
+      {/* LEFT SECTION: PHYSICAL SETUP DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("PARALLEL PLATE AIR CAPACITOR SETUP", "PARALLEL PLATE AIR CAPACITOR SETUP")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: SI conversion */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={60} y={170} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "First convert to SI: A = 2.0 × 10⁻² m², d = 1.0 × 10⁻³ m",
-            "Pehle SI mein convert: A = 2.0 × 10⁻² m², d = 1.0 × 10⁻³ m"
-          )}
-        </T>
-      </Fade>
+        {/* Capacitor Diagram */}
+        <Fade on={beat >= 1}>
+          <line x1="60" y1="90" x2="420" y2="90" stroke={RED} strokeWidth={4} />
+          <T x={435} y={95} size={14} fill={RED} weight={800}>Area A = 90 cm²</T>
 
-      {/* BEAT 3: Substitution */}
-      <Badge n={1} cx={52} cy={220} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={225} size={14} fill={RED} weight={700} anchor="start">FIND CAPACITANCE C₀</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(60, 240)">
-          <rect x={0} y={5} width={600} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={300} y={38} anchor="middle" size={16} fill={INK} weight={800}>
-            C₀ = (8.85×10⁻¹²)(2.0×10⁻²) / (1.0×10⁻³)
+          <line x1="60" y1="230" x2="420" y2="230" stroke={GREEN} strokeWidth={4} />
+          <T x={435} y={235} size={14} fill={GREEN} weight={800}>Gap d = 2.5 mm</T>
+
+          {/* Battery 400V connection */}
+          <line x1="240" y1="90" x2="240" y2="40" stroke={INK} strokeWidth={2} />
+          <line x1="240" y1="230" x2="240" y2="280" stroke={INK} strokeWidth={2} />
+          <T x={240} y={300} size={15} fill={AMBER_DARK} weight={900} anchor="middle">DC Battery V = 400 V</T>
+        </Fade>
+
+        {/* Free Floating Question (Spacious, No Box) */}
+        <Fade on={beat >= 2}>
+          <T x={240} y={350} anchor="middle" size={16} fill={INK} weight={800}>
+            Calculate Capacitance C₀, Charge Q₀, and Stored Energy U₀!
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 4: C₀ Result */}
-      <Fade on={beat >= 4} delay={dl(4, 0.5)}>
-        <g transform="translate(680, 240)">
-          <rect x={0} y={5} width={340} height={50} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={170} y={38} anchor="middle" size={20} fill={RED} weight={800}>
-            C₀ = 1.77×10⁻¹⁰ F = 177 pF
+      {/* RIGHT SECTION: NUMERICAL CALCULATION STEPS */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Fade on={beat >= 3} delay={dl(3, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("STEP-BY-STEP CALCULATION", "STEP-BY-STEP CALCULATION")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Picofarads note */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={680} y={320} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "177 pF: Farad is enormous, so everyday values are tiny!",
-            "177 pF: Farad bohot bada hai, practical values tiny hoti hain!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 6: Find Q */}
-      <Badge n={2} cx={52} cy={350} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={355} size={14} fill={RED} weight={700} anchor="start">FIND CHARGE Q</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 8}>
-        <g transform="translate(60, 370)">
-          <rect x={0} y={5} width={600} height={55} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={300} y={40} anchor="middle" size={20} fill={INK} weight={800}>
-            Q = C₀V = (1.77×10⁻¹⁰)(50) = 8.85 nC
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 3}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. C₀ = (8.854×10⁻¹² × 9×10⁻³) / (2.5×10⁻³) = 31.9 pF
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Plates interpretation */}
-      <Fade on={beat >= 7} delay={dl(7, 0.3)}>
-        <T x={60} y={455} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Both plates carry 8.85 nC: one is positive, one is negative.",
-            "Dono plates pe 8.85 nC: ek positive, ek negative."
-          )}
-        </T>
-      </Fade>
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. Q₀ = C₀ V = 31.9×10⁻¹² × 400 = 12.75 nC
+          </T>
 
-      {/* BEAT 8: Takeaway */}
-      <Fade on={beat >= 8}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+            3. U₀ = ½ C₀ V² = ½ (31.9×10⁻¹²) (400)² = 2.55 µJ
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={GREEN} weight={900} anchor="start">
+            4. C₀ = 31.9 pF, Q₀ = 12.75 nC, U₀ = 2.55 µJ
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Always convert cm² to m² (90 cm² = 90 × 10⁻⁴ m² = 9 × 10⁻³ m²)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CBSE BOARD MARKS CHECKLIST", "CBSE BOARD MARKS CHECKLIST")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Always state final answers with correct prefix units (pF = 10⁻¹² F, nC = 10⁻⁹ C, µJ = 10⁻⁶ J)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Electric field E = V/d = 400 / 2.5×10⁻³ = 1.6 × 10⁵ V/m!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Always convert cm² → 10⁻⁴ m² and mm → 10⁻³ m before plugging in! ✓",
-            "★ Formulas mein daalne se pehle hamesha SI units (m², m) mein convert karo! ✓"
+            "★ CBSE Problem Mastered: C₀ = 31.9 pF, Charge Q₀ = 12.75 nC, and Stored Energy U₀ = 2.55 µJ! ✓",
+            "★ CBSE Problem Mastered: C₀ = 31.9 pF, Charge Q₀ = 12.75 nC, and Stored Energy U₀ = 2.55 µJ! ✓"
           )}
         </Chip>
       </Fade>

@@ -2,35 +2,18 @@
 
 /**
  * P12Ch02 · Section 12 — "JEE Advanced: field from a potential function"
- * Canvas 1080×620 · safe x36–1044, y30–596.
- *
- * Beats (en [0,9,25,31,44,55,71,86]):
- *  0 Title
- *  1 Diagram: equipotential contours for V = x²−y²
- *  2 Study shapes before algebra
- *  3 Gradient: E_x = −∂V/∂x, E_y = −∂V/∂y
- *  4 Gradient relation explanation
- *  5 Numerical: |E| at (2,1)
- *  6 Equipotential family description
- *  7 Field vanishes at origin where V = 0
+ * Subtopic: Electrostatic Potential & Equipotentials
+ * OPEN CHALKBOARD DESIGN WITH 3D GRADIENT VECTOR FIELD (NO CONTAINER BOXES):
+ *  - Partial derivatives: E_x = -∂V/∂x, E_y = -∂V/∂y, E_z = -∂V/∂z
+ *  - 3D Gradient Vector E_vector = - ∇ V
+ *  - JEE Advanced Worked Problem: V(x,y,z) = 3x²y - y³z at (1, 1, 1)
+ *  - Step-by-step partial differentiation & magnitude calculation E = √37 N/C
  */
 
 import React from "react";
 import {
-  SceneProps,
-  useBeat,
-  delayFor,
-  Fade,
-  Draw,
-  T,
-  Chip,
-  ringD,
-  INK,
-  MUTED,
-  AMBER_DARK,
-  GREEN,
-  RED,
-  CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
+  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
@@ -54,104 +37,110 @@ export default function P12Ch02Sec12({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
-      {/* ── BEAT 0: Title ── */}
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("JEE Advanced: field from a potential function", "JEE Advanced: potential function se field nikalo")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("JEE Advanced: 3D Gradient Vector Field E = −∇V = −(∂V/∂x i + ∂V/∂y j + ∂V/∂z k)", "JEE Advanced: 3D Gradient Vector Field E = −∇V = −(∂V/∂x i + ∂V/∂y j + ∂V/∂z k)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* ── BEAT 1: Diagram — Equipotential contours ── */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        {/* Axes */}
-        <Draw on={beat >= 1} delay={dl(1, 0.3)} d="M 100 350 h 300" stroke={INK} sw={1.5} />
-        <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 250 450 v -250" stroke={INK} sw={1.5} />
-        <T x={405} y={348} size={12} fill={INK} weight={700}>x</T>
-        <T x={254} y={192} size={12} fill={INK} weight={700}>y</T>
-        {/* Hyperbolic contours (simplified) */}
-        <Draw on={beat >= 1} delay={dl(1, 0.7)} d="M 310 210 Q 340 350, 400 350" stroke={AMBER_DARK} sw={1.5} dur={0.5} />
-        <Draw on={beat >= 1} delay={dl(1, 0.9)} d="M 190 210 Q 160 350, 100 350" stroke={AMBER_DARK} sw={1.5} dur={0.5} />
-        <T x={385} y={310} size={11} fill={AMBER_DARK} script>V = +C</T>
-        <T x={115} y={310} size={11} fill={AMBER_DARK} script>V = −C</T>
-        {/* Function label */}
-        <T x={250} y={470} size={15} fill={INK} weight={700}>V(x,y) = x² − y²</T>
-      </Fade>
-
-      {/* ── BEAT 2: Study shapes note ── */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={480} y={140} size={14} fill={MUTED} anchor="start" script>
-          {t(
-            "Study the shape of contours before touching algebra!",
-            "Algebra se pehle contours ki shape study karo!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 3: Badge 1 — Gradient Components ── */}
-      <Badge n={1} cx={480} cy={180} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 1)}>
-        <T x={502} y={185} size={14} fill={RED} weight={700} anchor="start">
-          GRADIENT COMPONENTS
-        </T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(480, 198)">
-          <rect x={0} y={5} width={460} height={70} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={230} y={30} anchor="middle" size={18} fill={INK} weight={800}>
-            E_x = −∂V/∂x = −2x
+      {/* LEFT SECTION: 3D GRADIENT CONCEPT & FORMULAS */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("3D PARTIAL DERIVATIVE GRADIENT COMPONENTS", "3D PARTIAL DERIVATIVE GRADIENT COMPONENTS")}
           </T>
-          <T x={230} y={58} anchor="middle" size={18} fill={INK} weight={800}>
-            E_y = −∂V/∂y = +2y
+        </Fade>
+
+        {/* 3D Coordinate Axis drawing */}
+        <Fade on={beat >= 1}>
+          <line x1="200" y1="200" x2="380" y2="200" stroke={INK} strokeWidth={2.5} />
+          <T x={395} y={205} size={14} fill={INK} weight={800}>X axis</T>
+
+          <line x1="200" y1="200" x2="200" y2="60" stroke={INK} strokeWidth={2.5} />
+          <T x={200} y={45} size={14} fill={INK} weight={800}>Y axis</T>
+
+          <line x1="200" y1="200" x2="110" y2="280" stroke={INK} strokeWidth={2.5} />
+          <T x={95} y={295} size={14} fill={INK} weight={800}>Z axis</T>
+
+          {/* Resultant Electric Field Vector E */}
+          <path d={arrowD(200, 200, 310, 100)} stroke={RED} strokeWidth={4} />
+          <T x={325} y={95} size={16} fill={RED} weight={900}>E = −∇V</T>
+        </Fade>
+
+        {/* Free Floating Partial Derivatives (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={GREEN} weight={800}>
+            E_x = − ∂V / ∂x   |   E_y = − ∂V / ∂y   |   E_z = − ∂V / ∂z
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* ── BEAT 4: Gradient explanation ── */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <T x={480} y={298} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Same E = −dV/dr idea, applied component-wise in 2D!",
-            "Wahi E = −dV/dr concept, 2D mein component-wise apply!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 5: Badge 2 — Numerical at (2,1) ── */}
-      <Badge n={2} cx={480} cy={340} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 1)}>
-        <T x={502} y={345} size={14} fill={RED} weight={700} anchor="start">
-          |Ē| AT POINT (2, 1)
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(480, 358)">
-          <rect x={0} y={5} width={480} height={70} rx={8} fill={CREAM} stroke={RED} strokeWidth={2} />
-          <T x={240} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            E_x = −4,  E_y = +2
+      {/* RIGHT SECTION: JEE ADVANCED WORKED PROBLEM */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("WORKED PROBLEM: V(x,y,z) = 3x²y − y³z AT (1,1,1)", "WORKED PROBLEM: V(x,y,z) = 3x²y − y³z AT (1,1,1)")}
           </T>
-          <T x={240} y={58} anchor="middle" size={18} fill={RED} weight={800}>
-            |Ē| = √(16 + 4) = √20 = 2√5 V/m
+        </Fade>
+
+        {/* Floating Problem Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. E_x = − ∂/∂x (3x²y − y³z) = − 6xy = − 6
           </T>
-        </g>
-      </Fade>
 
-      {/* ── BEAT 6: Equipotential family ── */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={60} y={500} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Equipotentials: x²−y² = C → family of rectangular hyperbolas!",
-            "Equipotentials: x²−y² = C → rectangular hyperbolas ki family!"
-          )}
-        </T>
-      </Fade>
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. E_y = − ∂/∂y (3x²y − y³z) = − (3x² − 3y²z) = 0
+          </T>
 
-      {/* ── BEAT 7: Takeaway ── */}
+          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+            3. E_z = − ∂/∂z (3x²y − y³z) = − (− y³) = + 1
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={800} anchor="start">
+            4. E_vector = − 6 i^ + 1 k^   ⇒   |E| = √(36 + 1) = √37 N/C
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Partial derivative ∂/∂x treats y and z as constant parameters!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("JEE ADVANCED STRATEGY: INTEGRATION IN REVERSE", "JEE ADVANCED STRATEGY: INTEGRATION IN REVERSE")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Reverse Operation: V(B) − V(A) = − ∫_A^B E_vector · d r_vector = − ∫ (E_x dx + E_y dy + E_z dz)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            If E is uniform: ΔV = − E_vector · Δr_vector = − E d cosθ!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ E vanishes only at origin (both components zero) where V = 0 ✓",
-            "★ E sirf origin pe zero hota hai (dono components zero) jahaan V = 0 ✓"
+            "★ Gradient Method Solved: E_vector = −∇V gives E_vector = −6 i^ + 1 k^ with magnitude |E| = √37 N/C! ✓",
+            "★ Gradient Method Solved: E_vector = −∇V gives E_vector = −6 i^ + 1 k^ with magnitude |E| = √37 N/C! ✓"
           )}
         </Chip>
       </Fade>

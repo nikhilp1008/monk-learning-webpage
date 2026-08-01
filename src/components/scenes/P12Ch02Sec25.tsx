@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 25 — "Pitfalls: one over r, sign slips, and pair-counting"
- * Beats (en [0,4,20,28,35,50,69,82,98]): 9 beats
+ * Subtopic: Potential Energy & External Fields
+ * OPEN CHALKBOARD DESIGN WITH SUBTOPIC 2 RECAP & PITFALL CHECKLIST (NO CONTAINER BOXES):
+ *  - Pitfall 1: Pair Counting Error -> Use N(N-1)/2 formula!
+ *  - Pitfall 2: Sign Slips -> Always carry + / - charge signs into U formulas!
+ *  - Pitfall 3: Distancing Error -> 1/r for potential energy, 1/r² for forces!
+ *  - Subtopic 2 Master Checklist (Sec 14 – 25)
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,97 +37,104 @@ export default function P12Ch02Sec25({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("common pitfalls in potential energy", "potential energy ke common pitfalls")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Subtopic 2 Pitfalls & Master Checklist: Potential Energy & External Fields", "Subtopic 2 Pitfalls & Master Checklist: Potential Energy & External Fields")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 240 70 C 440 66, 640 74, 840 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Pitfall 1 — 1/r² vs 1/r */}
-      <Badge n={1} cx={52} cy={115} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={120} size={14} fill={RED} weight={700} anchor="start">
-          PITFALL: Using 1/r² (force) instead of 1/r (energy)
-        </T>
-      </Fade>
-
-      {/* BEAT 2: Tattoo it */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={74} y={148} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Tattoo this: F,E ∝ 1/r² but U,V ∝ 1/r — most common arithmetic disaster!",
-            "Yaad rakho: F,E ∝ 1/r² lekin U,V ∝ 1/r — sabse common arithmetic disaster!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Pitfall 2 — Sign slips */}
-      <Badge n={2} cx={52} cy={190} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={195} size={14} fill={RED} weight={700} anchor="start">
-          PITFALL: Sign slips — always plug charges with their OWN signs
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Sanity check */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <g transform="translate(74, 210)">
-          <rect x={0} y={5} width={600} height={40} rx={6} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={300} y={32} anchor="middle" size={14} fill={GREEN} weight={700}>
-            {t("CHECK: like charges → U > 0  |  unlike → U < 0", "CHECK: like charges → U > 0  |  unlike → U < 0")}
+      {/* LEFT SECTION: THREE MAJOR PITFALLS */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("THE 3 CLASSIC PITFALLS IN POTENTIAL ENERGY", "THE 3 CLASSIC PITFALLS IN POTENTIAL ENERGY")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Confusing U, V, E */}
-      <Badge n={3} cx={52} cy={290} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={295} size={14} fill={RED} weight={700} anchor="start">
-          PITFALL: Confusing U, V, and E
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <T x={74} y={320} size={13} fill={INK} anchor="start" script>
-          {t(
-            "E = force/charge (vector) | V = energy/charge at point (scalar) | U = system energy (scalar, J)",
-            "E = force/charge (vector) | V = energy/charge at point (scalar) | U = system energy (scalar, J)"
-          )}
-        </T>
-      </Fade>
+        {/* Floating Pitfalls (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={80} size={15} fill={RED} weight={800} anchor="start">
+            1. Pair Counting Slips: For N charges, total unique pairs = N(N−1)/2 !
+          </T>
 
-      {/* BEAT 6: Pair counting */}
-      <Badge n={4} cx={52} cy={365} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={370} size={14} fill={RED} weight={700} anchor="start">
-          PITFALL: Pair-counting errors in multi-charge systems
-        </T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 8}>
-        <T x={74} y={395} size={13} fill={INK} anchor="start" script>
-          {t(
-            "n charges → n(n−1)/2 pairs. 3 charges: 3 pairs. 4 charges: 6 pairs!",
-            "n charges → n(n−1)/2 pairs. 3 charges: 3 pairs. 4 charges: 6 pairs!"
-          )}
-        </T>
-      </Fade>
+          <T x={40} y={130} size={15} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Charge Sign Omission: Always include + and − signs in U = k q₁ q₂ / r !
+          </T>
 
-      {/* BEAT 7: Dipole confusion */}
-      <Fade on={beat >= 7} delay={dl(7, 0.3)}>
-        <T x={74} y={435} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Dipole: stable at θ=0 (U_min = −pE), unstable at θ=180° (U_max = +pE)",
-            "Dipole: stable θ=0 pe (U_min = −pE), unstable θ=180° pe (U_max = +pE)"
-          )}
-        </T>
-      </Fade>
+          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+            3. Distancing Mistake: Energy U ∝ 1/r (Do NOT square r!)
+          </T>
 
-      {/* BEAT 8: Pro-tip */}
-      <Fade on={beat >= 8}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+          <T x={40} y={230} size={15} fill={INK} weight={800} anchor="start">
+            4. External Field Confusion: U_ext = q₁ V(r₁) + q₂ V(r₂) + k q₁ q₂ / r₁₂
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: DIPOLE & WORK SUMMARY */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Fade on={beat >= 2} delay={dl(2, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("DIPOLE IN FIELD & CONSERVATION SUMMARY", "DIPOLE IN FIELD & CONSERVATION SUMMARY")}
+          </T>
+        </Fade>
+
+        {/* Floating Dipole Summary (No Card Boxes) */}
+        <Fade on={beat >= 2}>
+          <T x={40} y={80} size={15} fill={GREEN} weight={800} anchor="start">
+            • Torque: τ = p × E  (τ = p E sinθ)
+          </T>
+
+          <T x={40} y={130} size={15} fill={GREEN} weight={800} anchor="start">
+            • Potential Energy: U(θ) = − p · E = − p E cosθ
+          </T>
+
+          <T x={40} y={180} size={15} fill={GREEN} weight={800} anchor="start">
+            • Rotation Work: W_ext = p E (cosθ₁ − cosθ₂)
+          </T>
+
+          <T x={40} y={230} size={15} fill={GREEN} weight={800} anchor="start">
+            • Angular Speed: ω = √ (2 p E / I) at θ = 0°
+          </T>
+        </Fade>
+      </g>
+
+      {/* MIDDLE BRIDGE LINE */}
+      <g transform="translate(40, 340)">
+        <Fade on={beat >= 4}>
+          <line x1="20" y1="10" x2="1000" y2="10" stroke={INK} strokeWidth={2} />
+          <T x={510} y={45} anchor="middle" size={18} fill={AMBER_DARK} weight={800}>
+            WORK-ENERGY EQUIVALENCE: W_ext = + ΔU  while  W_field = − ΔU = ΔK
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: SUBTOPIC 2 MASTER CHECKLIST */}
+      <g transform="translate(40, 465)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SUBTOPIC 2 MASTER CHECKLIST (SECTIONS 14 – 25)", "SUBTOPIC 2 MASTER CHECKLIST (SECTIONS 14 – 25)")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            ✓ Assembly U = Σ kq_i q_j/r_ij   ✓ U &lt; 0 Bound   ✓ W_ext = qΔV   ✓ Dipole U = −pE cosθ   ✓ Energy Conservation!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ PRO-TIP: Released from rest? Skip forces → go straight to ΔU = ΔK ✓",
-            "★ PRO-TIP: Rest se chhoda? Forces chhodo → sidha ΔU = ΔK use karo ✓"
+            "★ Subtopic 2 Complete (Sec 14–25): Potential Energy & External Field Dipole Dynamics 100% Mastered! ✓",
+            "★ Subtopic 2 Complete (Sec 14–25): Potential Energy & External Field Dipole Dynamics 100% Mastered! ✓"
           )}
         </Chip>
       </Fade>

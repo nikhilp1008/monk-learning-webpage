@@ -2,34 +2,19 @@
 
 /**
  * P12Ch02 · Section 14 — "Potential energy — the cost of assembling a configuration"
- * Canvas 1080×620 · safe x36–1044, y30–596.
- *
- * Beats (en [0,7,20,29,41,53,63]):
- *  0 Title "potential energy: the assembly bill"
- *  1 Analogy: seating quarrelsome family — push enemies apart costs work
- *  2 Inseparable relatives: pulling apart costs work
- *  3 Total tension depends only on final arrangement, not order
- *  4 Formula: U = work to assemble from infinity
- *  5 Conservative force: path-independent
- *  6 Path independence makes U a meaningful single number
+ * Subtopic: Potential Energy & External Fields
+ * OPEN CHALKBOARD DESIGN WITH CHARGE ASSEMBLY ANIMATION (NO CONTAINER BOXES):
+ *  - Assembly of 3 charges q₁, q₂, q₃ brought from infinity one by one
+ *  - Work W₁ = 0 to bring first charge q₁ (no pre-existing field)
+ *  - Work W₂ = k q₁ q₂ / r₁₂ to bring q₂ into q₁'s field
+ *  - Work W₃ = k (q₁q₃/r₁₃ + q₂q₃/r₂₃) to bring q₃ into combined fields
+ *  - Total stored potential energy U = W₁ + W₂ + W₃
  */
 
 import React from "react";
 import {
-  SceneProps,
-  useBeat,
-  delayFor,
-  Fade,
-  Draw,
-  T,
-  Chip,
-  ringD,
-  INK,
-  MUTED,
-  AMBER_DARK,
-  GREEN,
-  RED,
-  CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
+  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
@@ -53,100 +38,119 @@ export default function P12Ch02Sec14({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
-      {/* ── BEAT 0: Title ── */}
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("potential energy: the assembly bill", "potential energy: assembly ka bill")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Electrostatic Potential Energy: The Work Cost of Assembling Charges", "Electrostatic Potential Energy: The Work Cost of Assembling Charges")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 240 70 C 440 66, 640 74, 840 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* ── BEAT 1: Analogy — quarrelsome family ── */}
-      <Badge n={1} cx={52} cy={120} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={125} size={14} fill={RED} weight={700} anchor="start">
-          ANALOGY: SEATING A QUARRELSOME FAMILY
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 4}>
-        <g transform="translate(74, 140)">
-          <rect x={0} y={5} width={900} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={450} y={28} anchor="middle" size={14} fill={INK} script>
-            {t(
-              "Push two who dislike each other close together → costs WORK (positive energy stored!)",
-              "Do log jo ek doosre ko pasand nahi → paas baithao → WORK lagta hai (positive energy stored!)"
-            )}
+      {/* LEFT SECTION: STEP-BY-STEP ASSEMBLY DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ASSEMBLING CHARGES ONE-BY-ONE FROM ∞", "ASSEMBLING CHARGES ONE-BY-ONE FROM ∞")}
           </T>
-          <T x={450} y={52} anchor="middle" size={14} fill={INK} script>
-            {t(
-              "Like charges repel → pushing them together stores positive U!",
-              "Like charges repel karte hain → paas laane mein positive U store hota hai!"
-            )}
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* ── BEAT 2: Inseparable relatives ── */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <g transform="translate(74, 215)">
-          <rect x={0} y={5} width={900} height={45} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={450} y={34} anchor="middle" size={14} fill={INK} script>
-            {t(
-              "Inseparable relatives WANT to sit together — pulling apart costs work → negative U (bound state!)",
-              "Inseparable relatives SAATH baithna chahte hain — alag karne mein work lagta → negative U (bound state!)"
-            )}
-          </T>
-        </g>
-      </Fade>
+        {/* Assembly Triangle */}
+        <Fade on={beat >= 2}>
+          {/* Charge 1 */}
+          <circle cx={200} cy={90} r={20} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={200} y={96} size={16} fill={RED} weight={800}>+q₁</T>
 
-      {/* ── BEAT 3: Order doesn't matter ── */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={74} y={295} size={14} fill={AMBER_DARK} anchor="start" script>
+          {/* Charge 2 */}
+          <circle cx={80} cy={280} r={20} fill="#dcfce7" stroke={GREEN} strokeWidth={2} />
+          <T x={80} y={286} size={18} fill={GREEN} weight={800}>-q₂</T>
+
+          {/* Charge 3 */}
+          <circle cx={340} cy={280} r={20} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={340} y={286} size={16} fill={RED} weight={800}>+q₃</T>
+
+          {/* Pair distance lines */}
+          <line x1="185" y1="105" x2="95" y2="265" stroke={AMBER_DARK} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={125} y={175} size={13} fill={AMBER_DARK} weight={800}>r₁₂</T>
+
+          <line x1="100" y1="280" x2="320" y2="280" stroke={GREEN} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={210} y={300} size={13} fill={GREEN} weight={800}>r₂₃</T>
+
+          <line x1="215" y1="105" x2="325" y2="265" stroke={RED} strokeWidth={2} strokeDasharray="4 4" />
+          <T x={290} y={175} size={13} fill={RED} weight={800}>r₁₃</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 4}>
+          <T x={210} y={355} anchor="middle" size={16} fill={INK} weight={800}>
+            Total Energy U = W₁ + W₂ + W₃ (Stored in configuration field!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: WORK COMPUTATION BREAKDOWN */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Fade on={beat >= 3} delay={dl(3, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("WORK COST PER CHARGE STEP", "WORK COST PER CHARGE STEP")}
+          </T>
+        </Fade>
+
+        {/* Floating Work Steps (No Card Boxes) */}
+        <Fade on={beat >= 3}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Bring q₁ from ∞: W₁ = 0  (No existing field!)
+          </T>
+
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. Bring q₂ into q₁ field: W₂ = q₂ V₁(r₁₂) = k q₁ q₂ / r₁₂
+          </T>
+
+          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+            3. Bring q₃ into (q₁+q₂) fields: W₃ = k q₁q₃/r₁₃ + k q₂q₃/r₂₃
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={GREEN} weight={800} anchor="start">
+            4. U_total = Σ_pairs (k q_i q_j / r_ij)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Independent of the order in which charges are brought together!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("PHYSICAL MEANING OF POTENTIAL ENERGY", "PHYSICAL MEANING OF POTENTIAL ENERGY")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            U represents work done by external agent without acceleration from initial infinite separation!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Pair counting formula: N(N-1)/2 total pairs for N charges!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "Total tension depends ONLY on who ends up where — never on the order they sat down!",
-            "Total tension SIRF is pe depend karta hai ki kaun kahaan hai — order matter nahi karta!"
-          )}
-        </T>
-      </Fade>
-
-      {/* ── BEAT 4: Badge 2 — Formula ── */}
-      <Badge n={2} cx={52} cy={340} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 1)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          DEFINITION OF POTENTIAL ENERGY U
-        </T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(60, 358)">
-          <rect x={0} y={5} width={500} height={55} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={250} y={40} anchor="middle" size={22} fill={RED} weight={800}>
-            U = W_ext (∞ → final config)
-          </T>
-        </g>
-      </Fade>
-
-      {/* ── BEAT 5: Conservative force ── */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <g transform="translate(580, 340)">
-          <rect x={0} y={5} width={420} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={210} y={24} anchor="middle" size={14} fill={GREEN} weight={700}>
-            {t("CONSERVATIVE FORCE!", "CONSERVATIVE FORCE!")}
-          </T>
-          <T x={210} y={46} anchor="middle" size={13} fill={INK} script>
-            {t(
-              "Work depends only on final arrangement, never on path taken!",
-              "Work sirf final arrangement pe depend karta, path pe nahi!"
-            )}
-          </T>
-        </g>
-      </Fade>
-
-      {/* ── BEAT 6: Takeaway ── */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
-          {t(
-            "★ Path independence → U is a meaningful single number for any configuration ✓",
-            "★ Path independence → U kisi bhi configuration ka ek meaningful number hai ✓"
+            "★ Potential Energy Assembly Mastered: U = Σ k q_i q_j / r_ij equals total work done in bringing charges from ∞! ✓",
+            "★ Potential Energy Assembly Mastered: U = Σ k q_i q_j / r_ij equals total work done in bringing charges from ∞! ✓"
           )}
         </Chip>
       </Fade>

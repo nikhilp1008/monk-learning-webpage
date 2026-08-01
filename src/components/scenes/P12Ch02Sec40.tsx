@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 40 — "Charge on the surface, and one big equipotential blob"
- * Beats (en [0,7,18,32,44,56,66]): 7 beats
+ * Subtopic: Conductors & Spherical Capacitors
+ * OPEN CHALKBOARD DESIGN WITH EQUIPOTENTIAL CONDUCTOR DIAGRAM (NO CONTAINER BOXES):
+ *  - 1. Excess charge resides 100% on outer surface (ρ_inside = 0)
+ *  - 2. Conductor interior and surface form one single EQUIPOTENTIAL VOLUME (V = const)
+ *  - Potential gradient: E = - dV/dr = 0  =>  V_inside = V_surface everywhere!
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,87 +37,112 @@ export default function P12Ch02Sec40({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("all excess charge sits on the surface", "saara excess charge surface pe hota hai")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Charge Resides on Outer Surface & Conductor is an Equipotential Volume", "Charge Resides on Outer Surface & Conductor is an Equipotential Volume")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 320 70 C 440 66, 640 74, 760 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — Blob with Gaussian surface */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 3}>
-        <path d="M 120 220 Q 150 120 220 160 T 320 220 Q 300 320 200 280 T 120 220 Z" fill="#e2e8f0" stroke={INK} strokeWidth={2} />
-        <T x={220} y={220} size={14} fill={INK} weight={700}>CONDUCTOR</T>
-        {/* Gaussian surface inside */}
-        <Fade on={beat >= 1} delay={dl(1, 1)}>
-          <path d="M 130 220 Q 160 135 220 170 T 305 220 Q 285 305 200 270 T 130 220 Z" fill="none" stroke={AMBER_DARK} strokeWidth={2} strokeDasharray="6 4" />
-          <T x={220} y={245} size={12} fill={AMBER_DARK} weight={700}>Gaussian Surface</T>
+      {/* LEFT SECTION: SURFACE CHARGE DISTRIBUTION DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SURFACE CHARGE DISTRIBUTION (ρ_inside = 0)", "SURFACE CHARGE DISTRIBUTION (ρ_inside = 0)")}
+          </T>
         </Fade>
-      </Fade>
 
-      {/* BEAT 2: Gauss's Law logic */}
-      <Badge n={1} cx={400} cy={145} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={422} y={150} size={14} fill={RED} weight={700} anchor="start">GAUSS'S LAW INSIDE</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <g transform="translate(400, 165)">
-          <rect x={0} y={5} width={560} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={280} y={38} anchor="middle" size={16} fill={INK} weight={800}>
-            E = 0 inside  →  Flux Φ = 0  →  q_enclosed = 0
+        {/* Irregular Conductor Shape */}
+        <Fade on={beat >= 1}>
+          <path d="M 120 180 C 120 100, 280 80, 360 140 C 420 180, 380 280, 260 280 C 160 280, 120 240, 120 180 Z"
+            fill={AMBER_DARK} opacity={0.2} stroke={AMBER_DARK} strokeWidth={3} />
+
+          {/* Plus signs along outer boundary */}
+          <T x={110} y={180} size={20} fill={RED} weight={900}>+</T>
+          <T x={160} y={95} size={20} fill={RED} weight={900}>+</T>
+          <T x={280} y={90} size={20} fill={RED} weight={900}>+</T>
+          <T x={375} y={140} size={20} fill={RED} weight={900}>+</T>
+          <T x={380} y={220} size={20} fill={RED} weight={900}>+</T>
+          <T x={260} y={295} size={20} fill={RED} weight={900}>+</T>
+          <T x={150} y={270} size={20} fill={RED} weight={900}>+</T>
+
+          {/* Inside zero charge label */}
+          <T x={240} y={185} size={16} fill={GREEN} weight={900} anchor="middle">Inside ρ = 0 & E = 0</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            Gauss's Law: ∮ E · dA = Q_enclosed / ε₀ = 0  ⇒  No interior charge!
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 3: Conclusion on charge */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={400} y={260} size={13} fill={RED} anchor="start" script>
-          {t(
-            "Shrink surface down to nothing → NO charge anywhere inside!",
-            "Surface choti karte jao → andar KAHIN BHI charge nahi!"
-          )}
-        </T>
-        <T x={400} y={285} size={13} fill={INK} anchor="start" script>
-          {t(
-            "The only place left for excess charge is the OUTER SURFACE.",
-            "Excess charge ke liye sirf ek jagah bachi hai: OUTER SURFACE."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: V logic */}
-      <Badge n={2} cx={52} cy={355} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={360} size={14} fill={RED} weight={700} anchor="start">EQUIPOTENTIAL BLOB</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(60, 375)">
-          <rect x={0} y={5} width={900} height={45} rx={6} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={450} y={34} anchor="middle" size={14} fill={INK} weight={800}>
-            {t(
-              "E = 0 everywhere inside → no 'downhill' → moving charge costs ZERO work (W = 0).",
-              "Andar E = 0 → koi 'slope' nahi → charge move karne mein ZERO work lagta hai (W = 0)."
-            )}
+      {/* RIGHT SECTION: EQUIPOTENTIAL VOLUME PROOF */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("EQUIPOTENTIAL VOLUME PROOF (V = CONSTANT)", "EQUIPOTENTIAL VOLUME PROOF (V = CONSTANT)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Equipotential */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={60} y={450} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Since ΔV = −W/q = 0, every point inside and on surface is at SAME POTENTIAL V!",
-            "Kyunki ΔV = −W/q = 0, andar aur surface ka har point SAME POTENTIAL V pe hai!"
-          )}
-        </T>
-      </Fade>
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Field-Potential Relation: E = − dV / dr
+          </T>
 
-      {/* BEAT 6: The rule */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. Since E = 0 inside: dV / dr = 0
+          </T>
+
+          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+            3. Integrating: V(r) = Constant everywhere inside!
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={GREEN} weight={900} anchor="start">
+            4. V_inside = V_surface  (Zero Work to move inside!)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Moving a charge anywhere inside a conductor requires ZERO net work!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CONDUCTOR RULE 2 & 3 RECAP", "CONDUCTOR RULE 2 & 3 RECAP")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            All excess charge resides 100% on the outer surface; interior charge density ρ = 0!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            The entire conductor (surface + interior) is at the exact same potential V!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ A charged conductor is one big equipotential blob. V_inside = V_surface! ✓",
-            "★ Charged conductor ek bada equipotential blob hota hai. V_inside = V_surface! ✓"
+            "★ Conductor Rule 2 & 3 Mastered: Charge resides entirely on outer surface and V_inside = V_surface = Const! ✓",
+            "★ Conductor Rule 2 & 3 Mastered: Charge resides entirely on outer surface and V_inside = V_surface = Const! ✓"
           )}
         </Chip>
       </Fade>

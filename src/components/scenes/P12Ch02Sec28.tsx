@@ -2,12 +2,17 @@
 
 /**
  * P12Ch02 · Section 28 — "The dielectric — why an insulator boosts capacitance"
- * Beats (en [0,6,18,30,40,53,64,77]): 8 beats
+ * Subtopic: Capacitance, Dielectrics & Stored Energy
+ * OPEN CHALKBOARD DESIGN WITH POLARIZED DIELECTRIC SLAB (NO CONTAINER BOXES):
+ *  - Parallel plate capacitor with dielectric slab of constant K inserted
+ *  - Atomic Dipole Polarization: Induced bound surface charges ±Q_p
+ *  - Induced opposing field E_p reduces net internal field E = E₀ - E_p = E₀ / K
+ *  - Potential drop V = V₀ / K  =>  Capacitance boost C = K C₀ !
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,94 +37,120 @@ export default function P12Ch02Sec28({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("the dielectric: polarisation boosts capacitance", "dielectric: polarisation se capacitance badhta hai")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("The Dielectric: Polarization Boosts Capacitance to C = K C₀", "The Dielectric: Polarization Boosts Capacitance to C = K C₀")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 160 70 C 400 66, 660 74, 920 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — polarised dielectric between plates */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 4}>
-        {/* Plates */}
-        <rect x={140} y={120} width={8} height={200} rx={2} fill={RED} />
-        <rect x={420} y={120} width={8} height={200} rx={2} fill="#3b82f6" />
-        {/* Dielectric slab */}
-        <rect x={180} y={130} width={210} height={180} rx={4} fill="#fef3c7" stroke={AMBER_DARK} strokeWidth={1.5} />
-        <T x={285} y={325} size={12} fill={AMBER_DARK} weight={700}>dielectric (K)</T>
-        {/* Tiny dipoles inside */}
-        {[160, 200, 240, 280].map(y => (
-          <g key={y}>
-            <Draw on={beat >= 1} delay={dl(1, 0.5)} d={`M 220 ${y} h 50`} stroke={MUTED} sw={1} />
-            <circle cx={220} cy={y} r={3} fill="#3b82f6" />
-            <circle cx={270} cy={y} r={3} fill={RED} />
-          </g>
-        ))}
-        {/* E₀ and E labels */}
-        <T x={500} y={200} size={13} fill={AMBER_DARK} weight={700} anchor="start">E₀ (free space)</T>
-        <T x={500} y={230} size={13} fill={GREEN} weight={700} anchor="start">E = E₀/K (reduced!)</T>
-      </Fade>
-
-      {/* BEAT 2: Molecules line up */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={500} y={140} size={13} fill={INK} anchor="start" script>
-          {t(
-            "Molecules line up like tiny compass needles, all same way!",
-            "Molecules choti compass needles jaisi line up hoti hain!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Opposing field */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={500} y={270} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Aligned charges create opposing field → net field REDUCED!",
-            "Aligned charges opposing field create karte → net field REDUCE!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Formulas */}
-      <Badge n={1} cx={52} cy={370} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 1)}>
-        <T x={74} y={375} size={14} fill={RED} weight={700} anchor="start">DIELECTRIC FORMULAS</T>
-      </Fade>
-      <Fade on={beat >= 4}>
-        <g transform="translate(60, 390)">
-          <rect x={0} y={0} width={500} height={55} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={250} y={35} anchor="middle" size={22} fill={RED} weight={800}>
-            E = E₀/K,    C = KC₀
+      {/* LEFT SECTION: DIELECTRIC POLARIZATION SCHEMATIC */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("POLARIZATION OF DIELECTRIC MEDIUM", "POLARIZATION OF DIELECTRIC MEDIUM")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: K ≥ 1 */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <g transform="translate(580, 390)">
-          <rect x={0} y={0} width={400} height={40} rx={6} fill="#fef2f2" stroke={RED} strokeWidth={1.8} />
-          <T x={200} y={26} anchor="middle" size={14} fill={RED} weight={800}>
-            {t("K ≥ 1 always! Dielectric can ONLY increase C!", "K ≥ 1 hamesha! Dielectric SIRF C badhata hai!")}
+        {/* Dielectric Slab Diagram */}
+        <Fade on={beat >= 1}>
+          {/* Top Free Charge Plate +Q */}
+          <line x1="60" y1="80" x2="420" y2="80" stroke={RED} strokeWidth={4} />
+          <T x={435} y={85} size={14} fill={RED} weight={900}>+Q Free</T>
+
+          {/* Bottom Free Charge Plate -Q */}
+          <line x1="60" y1="260" x2="420" y2="260" stroke={GREEN} strokeWidth={4} />
+          <T x={435} y={265} size={14} fill={GREEN} weight={900}>−Q Free</T>
+
+          {/* Dielectric Slab Fill */}
+          <rect x="70" y="100" width="340" height="140" fill={AMBER_DARK} opacity={0.15} stroke={AMBER_DARK} strokeWidth={2} />
+          <T x={240} y={170} size={16} fill={AMBER_DARK} weight={900} anchor="middle">Dielectric Slab (K &gt; 1)</T>
+
+          {/* Bound Surface Charges -Qp (Top of slab), +Qp (Bottom of slab) */}
+          <T x={240} y={115} size={13} fill={GREEN} weight={800} anchor="middle">− Bound Surface Charge −Q_p</T>
+          <T x={240} y={225} size={13} fill={RED} weight={800} anchor="middle">+ Bound Surface Charge +Q_p</T>
+
+          {/* External Field E0 and Internal Field E */}
+          <path d={arrowD(120, 85, 120, 255)} stroke={RED} strokeWidth={2.5} />
+          <T x={100} y={170} size={13} fill={RED} weight={800} anchor="end">E₀</T>
+
+          <path d={arrowD(360, 235, 360, 105)} stroke={GREEN} strokeWidth={2} />
+          <T x={380} y={170} size={13} fill={GREEN} weight={800} anchor="start">E_p</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            Net Internal Field E = E₀ − E_p = E₀ / K
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 6: Caution — full fill */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={60} y={470} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "E = E₀/K assumes dielectric completely fills the gap!",
-            "E = E₀/K tab valid hai jab dielectric poora gap bharta ho!"
-          )}
-        </T>
-      </Fade>
+      {/* RIGHT SECTION: VOLTAGE REDUCTION & CAPACITANCE MULTIPLICATION */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("VOLTAGE REDUCTION & CAPACITANCE BOOST", "VOLTAGE REDUCTION & CAPACITANCE BOOST")}
+          </T>
+        </Fade>
 
-      {/* BEAT 7: Dielectric strength */}
+        {/* Floating Proof Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Net Electric Field: E = E₀ / K
+          </T>
+
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. Potential Difference: V = E d = (E₀ d) / K = V₀ / K
+          </T>
+
+          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+            3. New Capacitance: C = Q / V = Q / (V₀ / K)
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={22} fill={GREEN} weight={900} anchor="start">
+            4. C = K C₀ = K (ε₀ A / d)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Dielectric Constant K = ε_r = C / C₀ &gt; 1 (Insulator boosts capacity!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SUMMARY OF DIELECTRIC EFFECTS", "SUMMARY OF DIELECTRIC EFFECTS")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Bound Surface Charge: Q_p = Q (1 − 1/K)   |   Polarization Vector P = ε₀ (K − 1) E!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Dielectrics increase capacitance WITHOUT electrical breakdown!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Every dielectric has a breakdown strength — max E before it conducts! ✓",
-            "★ Har dielectric ka breakdown strength hai — max E jiske baad conduct karta! ✓"
+            "★ Dielectric Mastered: C = K C₀ because induced polarization weakens internal field to E = E₀/K! ✓",
+            "★ Dielectric Mastered: C = K C₀ because induced polarization weakens internal field to E = E₀/K! ✓"
           )}
         </Chip>
       </Fade>

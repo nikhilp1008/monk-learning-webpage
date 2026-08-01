@@ -2,12 +2,20 @@
 
 /**
  * P12Ch02 · Section 36 — "JEE Main: dielectric with the battery still connected"
- * Beats (en [0,6,19,29,42,51,63,78]): 8 beats
+ * Subtopic: Capacitance, Dielectrics & Stored Energy
+ * OPEN CHALKBOARD DESIGN WITH CONNECTED BATTERY ANALYSIS (NO CONTAINER BOXES):
+ *  - Dielectric K = 4 inserted while battery remains CONNECTED
+ *  - Voltage V = V₀ (Constant!)
+ *  - Capacitance C = 4 C₀
+ *  - Charge Q = 4 Q₀ (Battery pumps ΔQ = 3 Q₀ extra charge)
+ *  - Energy U = 4 U₀ (ΔU = 3 U₀)
+ *  - Battery Work W_battery = ΔQ V₀ = 3 Q₀ V₀ = 6 U₀
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,101 +40,111 @@ export default function P12Ch02Sec36({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("JEE Main: battery connected, dielectric inserted", "JEE Main: battery connected, dielectric inserted")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("JEE Main: Dielectric with Battery Still Connected (Energy & Charge Pumped)", "JEE Main: Dielectric with Battery Still Connected (Energy & Charge Pumped)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 220 70 C 440 66, 640 74, 860 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem statement */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <g transform="translate(60, 90)">
-          <rect x={0} y={5} width={960} height={55} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.5} />
-          <T x={20} y={25} size={14} fill={INK} weight={700} anchor="start">GIVEN:</T>
-          <T x={20} y={48} size={14} fill={INK} anchor="start" script>
-            {t(
-              "C₀ = 10 μF, V = 200 V. Battery KEPT CONNECTED. Then dielectric K = 5 inserted.",
-              "C₀ = 10 μF, V = 200 V. Battery CONNECTED hai. Phir dielectric K = 5 dala."
-            )}
+      {/* LEFT SECTION: CONNECTED BATTERY SCHEMATIC */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("DIELECTRIC (K = 4) INSERTION (BATTERY CONNECTED)", "DIELECTRIC (K = 4) INSERTION (BATTERY CONNECTED)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: V is king */}
-      <Badge n={1} cx={52} cy={175} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={180} size={14} fill={GREEN} weight={700} anchor="start">BATTERY CONNECTED → V IS KING</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 3}>
-        <g transform="translate(60, 195)">
-          <rect x={0} y={5} width={460} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={230} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            V = 200 V (Fixed!)  |  C = KC₀ = 50 μF
+        {/* Battery & Capacitor Diagram */}
+        <Fade on={beat >= 1}>
+          <line x1="60" y1="90" x2="420" y2="90" stroke={RED} strokeWidth={4} />
+          <T x={435} y={95} size={14} fill={RED} weight={800}>+4 Q₀ Charge</T>
+
+          <line x1="60" y1="230" x2="420" y2="230" stroke={GREEN} strokeWidth={4} />
+          <T x={435} y={235} size={14} fill={GREEN} weight={800}>−4 Q₀ Charge</T>
+
+          {/* Battery V0 Connection */}
+          <line x1="240" y1="230" x2="240" y2="280" stroke={INK} strokeWidth={2} />
+          <T x={240} y={300} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Battery V = V₀ (Fixed)</T>
+
+          {/* Charge Pumping Arrow from battery */}
+          <path d={arrowD(200, 290, 200, 100)} stroke={GREEN} strokeWidth={3} />
+          <T x={180} y={200} size={12} fill={GREEN} weight={900} anchor="end">Extra ΔQ = 3 Q₀ Pumped!</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={16} fill={INK} weight={800}>
+            Fixed Voltage V = V₀  ⇒  New Charge Q = 4 Q₀  (4× Increase!)
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 3: Charge flows */}
-      <Badge n={2} cx={540} cy={175} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={562} y={180} size={14} fill={RED} weight={700} anchor="start">CHARGE Q INCREASES</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(540, 195)">
-          <rect x={0} y={5} width={480} height={70} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={35} anchor="middle" size={16} fill={MUTED}>Initial: Q₀ = C₀V = 2000 μC</T>
-          <T x={240} y={60} anchor="middle" size={20} fill={INK} weight={800}>
-            Final: Q = CV = 10000 μC
+      {/* RIGHT SECTION: BATTERY WORK VS CAPACITOR STORED ENERGY */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("BATTERY WORK ACCOUNTING (W_battery = 6 U₀)", "BATTERY WORK ACCOUNTING (W_battery = 6 U₀)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: Delta Q */}
-      <Badge n={3} cx={52} cy={290} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={295} size={14} fill={RED} weight={700} anchor="start">EXTRA CHARGE FLOWED IN</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(60, 310)">
-          <rect x={0} y={5} width={460} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={230} y={38} anchor="middle" size={20} fill={INK} weight={800}>
-            ΔQ = 10000 − 2000 = 8000 μC
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Initial Energy U₀ = ½ C₀ V₀²
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5: Extra charge flowed from battery */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={60} y={400} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "That extra charge physically flowed from the battery! (Can't happen if disconnected)",
-            "Yeh extra charge literally battery se flow hua! (Disconnected hota toh nahi hota)"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 6: Energy U */}
-      <Badge n={4} cx={540} cy={290} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={562} y={295} size={14} fill={RED} weight={700} anchor="start">STORED ENERGY U INCREASES</T>
-      </Fade>
-      <Fade on={beat >= 6}>
-        <g transform="translate(540, 310)">
-          <rect x={0} y={5} width={480} height={70} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={35} anchor="middle" size={16} fill={MUTED}>U₀ = ½C₀V² = 0.20 J</T>
-          <T x={240} y={60} anchor="middle" size={20} fill={INK} weight={800}>
-            U = ½CV² = 1.0 J  (Rose by 5x!)
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. Final Energy U = ½ (4 C₀) V₀² = 4 U₀  (ΔU = + 3 U₀)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Battery work note */}
+          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+            3. Battery Work W_batt = ΔQ V₀ = (3 Q₀) V₀ = 6 U₀
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={GREEN} weight={900} anchor="start">
+            4. W_batt (6 U₀) = ΔU (3 U₀) + W_mech (3 U₀)
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            50% of battery work goes into stored capacitor energy; 50% into mechanical work pulling slab!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("JEE MAIN CONNECTED BATTERY SUMMARY", "JEE MAIN CONNECTED BATTERY SUMMARY")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Battery Connected → V = V₀ constant, C = KC₀, Q = KQ₀, U = KU₀, E = E₀ constant!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Always use U = ½ C V² when battery remains connected!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Battery did Work = ΔQ·V = 1.6 J. Stored energy rose by 0.8 J. Rest is heat! ✓",
-            "★ Battery ne ΔQ·V = 1.6 J work kiya. Stored energy 0.8 J badhi. Baaki heat mein lost! ✓"
+            "★ JEE Main Mastered: Battery Connected -> V & E constant, Q & U increase by factor K (W_battery = 2 ΔU)! ✓",
+            "★ JEE Main Mastered: Battery Connected -> V & E constant, Q & U increase by factor K (W_battery = 2 ΔU)! ✓"
           )}
         </Chip>
       </Fade>

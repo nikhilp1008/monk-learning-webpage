@@ -1,13 +1,17 @@
 "use client";
 
 /**
- * P12Ch02 · Section 52 — "Series: capacitors in a single-file queue"
- * Beats (en [0,12,20,42,51,61,76]): 7 beats
+ * P12Ch02 · Section 52 — "Series and parallel — two ways to hook up capacitors"
+ * Subtopic: Series & Parallel Combinations & Charge Sharing
+ * OPEN CHALKBOARD DESIGN WITH CIRCUIT SCHEMATICS (NO CONTAINER BOXES):
+ *  - Series Combination (Head-to-tail): Charge Q is SAME; V = V₁ + V₂  =>  1/C_eq = 1/C₁ + 1/C₂
+ *  - Parallel Combination (Side-by-side): Voltage V is SAME; Q = Q₁ + Q₂  =>  C_eq = C₁ + C₂
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,121 +36,115 @@ export default function P12Ch02Sec52({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Series: capacitors in a single-file queue", "Series: capacitors ek single-file queue mein")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Series Combination (Same Charge Q) vs Parallel Combination (Same Voltage V)", "Series Combination (Same Charge Q) vs Parallel Combination (Same Voltage V)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 300 70 C 440 66, 640 74, 780 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — Series capacitors */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 6}>
-        <g transform="translate(180, 160)">
-          {/* Wire and battery */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 0 150 L 0 50 L 100 50" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 600 150 L 600 50 L 500 50" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 0 150 L 280 150" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 320 150 L 600 150" stroke={INK} sw={2} />
-          {/* Battery symbol */}
-          <line x1={280} y1={130} x2={280} y2={170} stroke={INK} strokeWidth={3} />
-          <line x1={320} y1={140} x2={320} y2={160} stroke={INK} strokeWidth={5} />
-          <T x={300} y={190} size={16} fill={INK} weight={700}>Total V</T>
-
-          {/* C1 */}
-          <rect x={100} y={20} width={10} height={60} fill="#3b82f6" />
-          <rect x={140} y={20} width={10} height={60} fill="#3b82f6" />
-          <T x={125} y={15} size={14} fill={INK} weight={700}>C₁</T>
-
-          {/* Wire C1 to C2 */}
-          <line x1={150} y1={50} x2={250} y2={50} stroke={INK} strokeWidth={2} />
-          
-          {/* C2 */}
-          <rect x={250} y={20} width={10} height={60} fill="#10b981" />
-          <rect x={290} y={20} width={10} height={60} fill="#10b981" />
-          <T x={275} y={15} size={14} fill={INK} weight={700}>C₂</T>
-
-          {/* Wire C2 to C3 */}
-          <line x1={300} y1={50} x2={400} y2={50} stroke={INK} strokeWidth={2} />
-
-          {/* C3 */}
-          <rect x={400} y={20} width={10} height={60} fill="#f59e0b" />
-          <rect x={440} y={20} width={10} height={60} fill="#f59e0b" />
-          <T x={425} y={15} size={14} fill={INK} weight={700}>C₃</T>
-
-          {/* Wire C3 to end */}
-          <line x1={450} y1={50} x2={500} y2={50} stroke={INK} strokeWidth={2} />
-
-          {/* Charges showing up */}
-          <Fade on={beat >= 2} delay={dl(2, 0.5)}>
-            <T x={90} y={55} size={16} fill={RED} weight={800}>+Q</T>
-            <T x={165} y={55} size={16} fill={RED} weight={800}>−Q</T>
-            <T x={240} y={55} size={16} fill={RED} weight={800}>+Q</T>
-            <T x={315} y={55} size={16} fill={RED} weight={800}>−Q</T>
-            <T x={390} y={55} size={16} fill={RED} weight={800}>+Q</T>
-            <T x={465} y={55} size={16} fill={RED} weight={800}>−Q</T>
-          </Fade>
-          
-          {/* Voltage drops */}
-          <Fade on={beat >= 4} delay={dl(4, 0.5)}>
-            <T x={125} y={100} size={14} fill="#3b82f6" weight={700}>V₁</T>
-            <T x={275} y={100} size={14} fill="#10b981" weight={700}>V₂</T>
-            <T x={425} y={100} size={14} fill="#f59e0b" weight={700}>V₃</T>
-          </Fade>
-        </g>
-      </Fade>
-
-      {/* BEAT 2: Induction mechanism */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)}>
-        <T x={60} y={400} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Battery pushes +Q on first plate, inducing −Q on facing plate, pushing +Q to next...",
-            "Battery first plate pe +Q push karti hai, facing plate pe −Q induce hota hai, next pe +Q push hota hai..."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Charge is identical */}
-      <Badge n={1} cx={52} cy={450} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={455} size={14} fill={RED} weight={700} anchor="start">CHARGE Q IS SAME FOR ALL</T>
-      </Fade>
-
-      {/* BEAT 4: Voltages split */}
-      <Badge n={2} cx={450} cy={450} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={472} y={455} size={14} fill={RED} weight={700} anchor="start">VOLTAGES ADD UP</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(450, 470)">
-          <rect x={0} y={5} width={400} height={40} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={32} anchor="middle" size={16} fill={INK} weight={800}>
-            V = V₁ + V₂ + V₃
+      {/* LEFT SECTION: SERIES CIRCUIT SCHEMATIC */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SERIES COMBINATION (CHARGE Q IS SAME)", "SERIES COMBINATION (CHARGE Q IS SAME)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Smaller fraction of V */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={60} y={490} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Each capacitor holds full Q, but only feels a fraction of V.",
-            "Har capacitor poora Q hold karta hai, par bas V ka ek fraction mehsoos karta hai."
-          )}
-        </T>
-        <T x={60} y={510} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "So total capacity is LOWER.",
-            "Toh total capacity KAM ho jati hai."
-          )}
-        </T>
-      </Fade>
+        {/* Series Circuit Drawing */}
+        <Fade on={beat >= 1}>
+          <line x1="40" y1="180" x2="140" y2="180" stroke={INK} strokeWidth={3} />
+          {/* C1 */}
+          <line x1="140" y1="150" x2="140" y2="210" stroke={RED} strokeWidth={4} />
+          <line x1="160" y1="150" x2="160" y2="210" stroke={RED} strokeWidth={4} />
+          <T x={150} y={135} size={14} fill={RED} weight={900} anchor="middle">C₁</T>
 
-      {/* BEAT 6: Series C is smaller */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+          <line x1="160" y1="180" x2="300" y2="180" stroke={INK} strokeWidth={3} />
+          {/* C2 */}
+          <line x1="300" y1="150" x2="300" y2="210" stroke={GREEN} strokeWidth={4} />
+          <line x1="320" y1="150" x2="320" y2="210" stroke={GREEN} strokeWidth={4} />
+          <T x={310} y={135} size={14} fill={GREEN} weight={900} anchor="middle">C₂</T>
+
+          <line x1="320" y1="180" x2="420" y2="180" stroke={INK} strokeWidth={3} />
+
+          <T x={230} y={230} size={15} fill={AMBER_DARK} weight={900} anchor="middle">Total V = V₁ + V₂</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={18} fill={GREEN} weight={900}>
+            1/C_eq = 1/C₁ + 1/C₂   ⇒   C_eq = (C₁ C₂) / (C₁ + C₂)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: PARALLEL CIRCUIT SCHEMATIC */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("PARALLEL COMBINATION (VOLTAGE V IS SAME)", "PARALLEL COMBINATION (VOLTAGE V IS SAME)")}
+          </T>
+        </Fade>
+
+        {/* Parallel Circuit Drawing */}
+        <Fade on={beat >= 4}>
+          <line x1="40" y1="180" x2="120" y2="180" stroke={INK} strokeWidth={3} />
+          <line x1="120" y1="110" x2="120" y2="250" stroke={INK} strokeWidth={3} />
+
+          {/* Top Branch C1 */}
+          <line x1="120" y1="110" x2="220" y2="110" stroke={INK} strokeWidth={3} />
+          <line x1="220" y1="85" x2="220" y2="135" stroke={RED} strokeWidth={4} />
+          <line x1="240" y1="85" x2="240" y2="135" stroke={RED} strokeWidth={4} />
+          <T x={230} y={70} size={14} fill={RED} weight={900} anchor="middle">C₁</T>
+          <line x1="240" y1="110" x2="340" y2="110" stroke={INK} strokeWidth={3} />
+
+          {/* Bottom Branch C2 */}
+          <line x1="120" y1="250" x2="220" y2="250" stroke={INK} strokeWidth={3} />
+          <line x1="220" y1="225" x2="220" y2="275" stroke={GREEN} strokeWidth={4} />
+          <line x1="240" y1="225" x2="240" y2="275" stroke={GREEN} strokeWidth={4} />
+          <T x={230} y={210} size={14} fill={GREEN} weight={900} anchor="middle">C₂</T>
+          <line x1="240" y1="250" x2="340" y2="250" stroke={INK} strokeWidth={3} />
+
+          <line x1="340" y1="110" x2="340" y2="250" stroke={INK} strokeWidth={3} />
+          <line x1="340" y1="180" x2="420" y2="180" stroke={INK} strokeWidth={3} />
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 5}>
+          <T x={240} y={350} anchor="middle" size={19} fill={GREEN} weight={900}>
+            C_eq = C₁ + C₂   (Direct Addition!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("EQUIVALENT CAPACITANCE RULES", "EQUIVALENT CAPACITANCE RULES")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Series: C_eq is ALWAYS smaller than the smallest individual capacitor!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Parallel: C_eq is ALWAYS larger than the largest individual capacitor!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Series capacitance is ALWAYS smaller than the smallest member! ✓",
-            "★ Series capacitance HAMESHA sabse chote capacitor se bhi choti hoti hai! ✓"
+            "★ Combinations Mastered: Series 1/C_eq = Σ(1/C_i) (Same Q) vs Parallel C_eq = Σ C_i (Same V)! ✓",
+            "★ Combinations Mastered: Series 1/C_eq = Σ(1/C_i) (Same Q) vs Parallel C_eq = Σ C_i (Same V)! ✓"
           )}
         </Chip>
       </Fade>

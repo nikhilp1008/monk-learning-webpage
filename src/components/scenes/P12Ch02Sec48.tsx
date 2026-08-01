@@ -2,12 +2,18 @@
 
 /**
  * P12Ch02 · Section 48 — "NEET speed trap: induced charges on a cavity"
- * Beats (en [0,5,18,30,43,53,63,76]): 8 beats
+ * Subtopic: Conductors & Spherical Capacitors
+ * OPEN CHALKBOARD DESIGN WITH CAVITY CHARGE INDUCTION DIAGRAM (NO CONTAINER BOXES):
+ *  - Uncharged conductor with cavity holding point charge +q
+ *  - Induced inner cavity surface charge = -q
+ *  - Induced outer conductor surface charge = +q
+ *  - Field inside cavity E_cavity ≠ 0; Field inside metal E_metal = 0; Outer field E_outside = kq/r²
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,125 +38,109 @@ export default function P12Ch02Sec48({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("NEET speed trap: charge inside a cavity", "NEET speed trap: charge inside a cavity")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("NEET Speed Trap: Charge Induction on Cavity Walls (−q_inner & +q_outer)", "NEET Speed Trap: Charge Induction on Cavity Walls (−q_inner & +q_outer)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 300 70 C 440 66, 640 74, 780 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram — Cavity in neutral conductor */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 7}>
-        <g transform="translate(140, 160)">
-          {/* Outer blob */}
-          <path d="M 50 100 Q 80 0 200 50 T 350 100 Q 400 200 300 250 T 50 100 Z" fill="#e2e8f0" stroke={INK} strokeWidth={2} />
-          {/* Cavity */}
-          <circle cx={200} cy={140} r={50} fill="#ffffff" stroke={INK} strokeWidth={1.5} />
-          <T x={120} y={60} size={14} fill={INK} weight={700}>NEUTRAL METAL</T>
-          {/* Charge inside cavity */}
-          <circle cx={200} cy={140} r={6} fill={RED} />
-          <T x={200} y={160} size={14} fill={RED} weight={800}>+5 nC</T>
-          
-          {/* Induced inner charge */}
-          <Fade on={beat >= 4} delay={dl(4, 0.5)}>
-            <T x={200} y={80} size={14} fill="#3b82f6" weight={800}>−5 nC</T>
-            <T x={155} y={145} size={14} fill="#3b82f6" weight={800}>−</T>
-            <T x={245} y={145} size={14} fill="#3b82f6" weight={800}>−</T>
-            <T x={200} y={205} size={14} fill="#3b82f6" weight={800}>−</T>
-          </Fade>
-          {/* Induced outer charge */}
-          <Fade on={beat >= 5} delay={dl(5, 0.5)}>
-            <T x={200} y={30} size={14} fill={RED} weight={800}>+5 nC</T>
-            <T x={30} y={105} size={14} fill={RED} weight={800}>+</T>
-            <T x={370} y={150} size={14} fill={RED} weight={800}>+</T>
-            <T x={280} y={260} size={14} fill={RED} weight={800}>+</T>
-            <T x={100} y={240} size={14} fill={RED} weight={800}>+</T>
-          </Fade>
-          {/* Gaussian surface */}
-          <Fade on={beat >= 3} delay={dl(3, 0.5)}>
-            <circle cx={200} cy={140} r={65} fill="none" stroke={AMBER_DARK} strokeWidth={2} strokeDasharray="6 4" />
-            <T x={280} y={190} size={12} fill={AMBER_DARK} weight={700}>Gaussian Surface</T>
-          </Fade>
-        </g>
-      </Fade>
-
-      {/* BEAT 2: The Trap */}
-      <Badge n={1} cx={580} cy={120} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={602} y={125} size={14} fill={RED} weight={700} anchor="start">THE TRAP</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 7}>
-        <g transform="translate(580, 140)">
-          <rect x={0} y={0} width={450} height={50} rx={6} fill="#fef2f2" stroke={RED} strokeWidth={2} />
-          <T x={225} y={18} anchor="middle" size={13} fill={RED} weight={700} script>
-            {t(
-              "Students forget neutral conductors REARRANGE charge",
-              "Students bhool jate hain neutral conductor charge REARRANGE karta hai"
-            )}
+      {/* LEFT SECTION: CAVITY INDUCTION DIAGRAM */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("POINT CHARGE +q INSIDE CONDUCTOR CAVITY", "POINT CHARGE +q INSIDE CONDUCTOR CAVITY")}
           </T>
-          <T x={225} y={42} anchor="middle" size={13} fill={RED} weight={700} script>
-            {t(
-              "to keep internal E=0 when a +5nC charge is inside!",
-              "taki andar E=0 rahe jab +5nC charge cavity mein ho!"
-            )}
+        </Fade>
+
+        {/* Cavity Diagram */}
+        <Fade on={beat >= 1}>
+          {/* Outer Conductor Shell */}
+          <circle cx={240} cy={180} r={110} stroke={AMBER_DARK} strokeWidth={4} fill={AMBER_DARK} fillOpacity={0.15} />
+          <T x={240} y={55} size={13} fill={RED} weight={900} anchor="middle">+q Induced Outer Surface</T>
+
+          {/* Inner Cavity Boundary */}
+          <circle cx={220} cy={180} r={50} stroke={GREEN} strokeWidth={2.5} fill="#ffffff" strokeDasharray="4 4" />
+          <T x={220} y={115} size={12} fill={GREEN} weight={900} anchor="middle">−q Induced Cavity Wall</T>
+
+          {/* Central Point Charge +q */}
+          <circle cx={220} cy={180} r={12} fill={RED} />
+          <T x={220} y={185} size={13} fill="#ffffff" weight={900}>+q</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={240} y={350} anchor="middle" size={16} fill={INK} weight={800}>
+            Gauss Law: ∮ E_metal · dA = (q + q_cavity) / ε₀ = 0  ⇒  q_cavity = −q !
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 3: Gaussian surface reasoning */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={580} y={220} size={13} fill={INK} anchor="start" script>
-          {t(
-            "Draw Gaussian surface inside metal. Since E=0, total q_enclosed = 0.",
-            "Metal ke andar Gaussian surface draw karo. Kyunki E=0, total q_enclosed = 0."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Inner charge */}
-      <Badge n={2} cx={580} cy={250} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={602} y={255} size={14} fill={RED} weight={700} anchor="start">INNER SURFACE CHARGE</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 7}>
-        <g transform="translate(580, 270)">
-          <rect x={0} y={5} width={450} height={40} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={32} anchor="middle" size={18} fill={INK} weight={800}>
-            q_inner = −5 nC
+      {/* RIGHT SECTION: FIELD REGION ANALYSIS */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("FIELD REGION BREAKDOWN", "FIELD REGION BREAKDOWN")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Outer charge */}
-      <Badge n={3} cx={580} cy={340} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={602} y={345} size={14} fill={RED} weight={700} anchor="start">OUTER SURFACE CHARGE</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(580, 360)">
-          <rect x={0} y={5} width={450} height={40} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={32} anchor="middle" size={18} fill={INK} weight={800}>
-            q_outer = +5 nC  (since total=0)
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={RED} weight={800} anchor="start">
+            1. Cavity Interior: E_cavity = k q / r² ≠ 0
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 6: Field outside */}
-      <Fade on={beat >= 6} delay={dl(6, 0.3)}>
-        <T x={580} y={430} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "From outside, it looks exactly like a +5 nC point charge!",
-            "Bahar se, yeh exactly +5 nC point charge jaisa dikhta hai!"
-          )}
-        </T>
-      </Fade>
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. Metal Body: E_metal = 0 N/C  (Exact Cancellation!)
+          </T>
 
-      {/* BEAT 7: Speed rule */}
+          <T x={50} y={205} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            3. Exterior Region: E_outside = k q / r²  (As if +q at center)
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={19} fill={GREEN} weight={900} anchor="start">
+            4. Net Conductor Charge = (−q) + (+q) = 0
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Moving +q inside cavity changes outer charge distribution UNLESS outer surface is grounded!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("NEET CAVITY REASONING TRICK", "NEET CAVITY REASONING TRICK")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Inner cavity wall receives −q; Outer conductor surface receives +q (or Q + q if conductor had initial charge Q)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Grounding the conductor drains the outer +q charge to zero, making E_outside = 0!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ RULE: Enclosed charge q gives inner surface −q, outer surface +q (for neutral blob)! ✓",
-            "★ RULE: Enclosed charge q gives inner surface −q, outer surface +q (neutral blob pe)! ✓"
+            "★ NEET Trap Neutralized: Charge +q in cavity induces −q on cavity wall and +q on outer conductor surface! ✓",
+            "★ NEET Trap Neutralized: Charge +q in cavity induces −q on cavity wall and +q on outer conductor surface! ✓"
           )}
         </Chip>
       </Fade>

@@ -2,12 +2,18 @@
 
 /**
  * P12Ch02 · Section 18 — "Dipole torque and potential energy in a uniform field — formulas"
- * Beats (en [0,7,17,25,33,43,58,71]): 8 beats
+ * Subtopic: Potential Energy & External Fields
+ * OPEN CHALKBOARD DESIGN WITH DIPOLE TORQUE DIAGRAM (NO CONTAINER BOXES):
+ *  - Electric Dipole p at angle θ to Uniform Field E
+ *  - Torque vector τ = p × E  (τ = p E sinθ)
+ *  - Potential Energy U(θ) = - p · E = - p E cosθ
+ *  - Work to rotate from θ₁ to θ₂: W_ext = p E (cosθ₁ - cosθ₂)
+ *  - Stable Equilibrium (θ = 0°, U = -pE) vs Unstable Equilibrium (θ = 180°, U = +pE)
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -30,98 +36,116 @@ export default function P12Ch02Sec18({ currentTime, reveals, language }: ScenePr
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
+  // Rotating dipole angle animation
+  const angle = Math.sin(currentTime * 1.5) * 0.4 + 0.5;
+  const px = 180 + Math.cos(angle) * 70;
+  const py = 180 - Math.sin(angle) * 70;
+
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("dipole in a uniform field: torque & energy", "uniform field mein dipole: torque & energy")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Dipole in Uniform Field: Torque τ = pE sinθ & Potential Energy U = −pE cosθ", "Dipole in Uniform Field: Torque τ = pE sinθ & Potential Energy U = −pE cosθ")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 220 70 C 440 66, 640 74, 860 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Torque formula */}
-      <Badge n={1} cx={52} cy={120} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 1)}>
-        <T x={74} y={125} size={14} fill={RED} weight={700} anchor="start">TORQUE ON DIPOLE</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 140)">
-          <rect x={0} y={5} width={480} height={55} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={240} y={40} anchor="middle" size={22} fill={RED} weight={800}>
-            τ̄ = p̄ × Ē,    τ = pE sin θ
+      {/* LEFT SECTION: DIPOLE TORQUE IN UNIFORM FIELD */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("DIPOLE p AT ANGLE θ IN UNIFORM FIELD E", "DIPOLE p AT ANGLE θ IN UNIFORM FIELD E")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: PE formula */}
-      <Badge n={2} cx={560} cy={120} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 1)}>
-        <T x={582} y={125} size={14} fill={RED} weight={700} anchor="start">POTENTIAL ENERGY</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 5}>
-        <g transform="translate(560, 140)">
-          <rect x={0} y={5} width={440} height={55} rx={10} fill={CREAM} stroke={RED} strokeWidth={2.5} />
-          <T x={220} y={40} anchor="middle" size={22} fill={RED} weight={800}>
-            U(θ) = −p̄ · Ē = −pE cos θ
-          </T>
-        </g>
-      </Fade>
+        <Fade on={beat >= 1}>
+          {/* Uniform Field Lines E pointing Right */}
+          <path d={arrowD(40, 100, 420, 100)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(40, 180, 420, 180)} stroke={RED} strokeWidth={2.5} />
+          <path d={arrowD(40, 260, 420, 260)} stroke={RED} strokeWidth={2.5} />
+          <T x={435} y={185} size={14} fill={RED} weight={800} anchor="start">Field E</T>
 
-      {/* BEAT 3: θ definition */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={60} y={230} size={14} fill={INK} anchor="start" script>
-          {t(
-            "θ = angle between dipole moment p̄ and field Ē",
-            "θ = dipole moment p̄ aur field Ē ke beech ka angle"
-          )}
-        </T>
-      </Fade>
+          {/* Dipole Vector p */}
+          <line x1="180" y1="180" x2={px} y2={py} stroke={GREEN} strokeWidth={4} />
+          <circle cx={px} cy={py} r={7} fill={GREEN} />
+          <T x={px + 15} y={py} size={14} fill={GREEN} weight={800}>p (Dipole)</T>
 
-      {/* BEAT 4: Stable equilibrium */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
-        <g transform="translate(60, 260)">
-          <rect x={0} y={0} width={440} height={65} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={2} />
-          <T x={220} y={22} anchor="middle" size={14} fill={GREEN} weight={700}>
-            STABLE EQUILIBRIUM: θ = 0°
-          </T>
-          <T x={220} y={48} anchor="middle" size={18} fill={INK} weight={800}>
-            U_min = −pE  (lowest energy!)
-          </T>
-        </g>
-      </Fade>
+          {/* Angle θ arc */}
+          <path d="M 230 180 A 50 50 0 0 0 220 150" stroke={AMBER_DARK} strokeWidth={2} fill="none" />
+          <T x={245} y={160} size={13} fill={AMBER_DARK} weight={800}>Angle θ</T>
+        </Fade>
 
-      {/* BEAT 5: Unstable equilibrium */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <g transform="translate(540, 260)">
-          <rect x={0} y={0} width={440} height={65} rx={8} fill="#fef2f2" stroke={RED} strokeWidth={2} />
-          <T x={220} y={22} anchor="middle" size={14} fill={RED} weight={700}>
-            UNSTABLE EQUILIBRIUM: θ = 180°
+        {/* Free Floating Torque Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={18} fill={RED} weight={800}>
+            Torque Vector τ = p × E   (Magnitude τ = p E sinθ)
           </T>
-          <T x={220} y={48} anchor="middle" size={18} fill={INK} weight={800}>
-            U_max = +pE  (highest energy!)
-          </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 6: Work formulas */}
-      <Fade on={beat >= 6} delay={dl(6, 0.5)}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={500} height={55} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={250} y={28} anchor="middle" size={16} fill={INK} weight={800}>
-            W_field = −ΔU,    W_ext = +ΔU
+      {/* RIGHT SECTION: POTENTIAL ENERGY U(θ) & ROTATIONAL WORK */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("POTENTIAL ENERGY U(θ) & WORK TO ROTATE", "POTENTIAL ENERGY U(θ) & WORK TO ROTATE")}
           </T>
-          <T x={250} y={50} anchor="middle" size={13} fill={MUTED} script>
-            {t("Same energy bookkeeping as linear motion!", "Linear motion jaisa hi energy bookkeeping!")}
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 7: eV note */}
+        {/* Floating Energy Formulas (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={17} fill={GREEN} weight={800} anchor="start">
+            1. Potential Energy: U(θ) = − p · E = − p E cosθ
+          </T>
+
+          <T x={50} y={150} size={17} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Work to Rotate θ₁ → θ₂: W_ext = p E (cosθ₁ − cosθ₂)
+          </T>
+
+          <T x={50} y={210} size={16} fill={INK} weight={800} anchor="start">
+            3. Stable Equilibrium (θ = 0°): τ = 0, U_min = − p E
+          </T>
+
+          <T x={50} y={260} size={16} fill={RED} weight={800} anchor="start">
+            4. Unstable Equilibrium (θ = 180°): τ = 0, U_max = + p E
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Work to rotate from stable (0°) to unstable (180°) = 2 p E !
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("DIPOLE STABILITY MATRIX", "DIPOLE STABILITY MATRIX")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Stable: θ = 0° (Aligned with E, U = −pE)   |   Unstable: θ = 180° (Anti-aligned, U = +pE)
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Maximum torque occurs at θ = 90° (τ_max = pE, U = 0 V)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ 1 eV = 1.6 × 10⁻¹⁹ J — energy gained by 1e through 1V potential ✓",
-            "★ 1 eV = 1.6 × 10⁻¹⁹ J — 1 electron ka 1V potential se energy gain ✓"
+            "★ Dipole Dynamics Mastered: τ = pE sinθ, U = −pE cosθ, and W(θ₁→θ₂) = pE(cosθ₁ − cosθ₂)! ✓",
+            "★ Dipole Dynamics Mastered: τ = pE sinθ, U = −pE cosθ, and W(θ₁→θ₂) = pE(cosθ₁ − cosθ₂)! ✓"
           )}
         </Chip>
       </Fade>

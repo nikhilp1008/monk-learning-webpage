@@ -2,12 +2,16 @@
 
 /**
  * P12Ch02 · Section 55 — "Formula toolkit: series and parallel combinations"
- * Beats (en [0,4,11,21,35,42,55,70]): 8 beats
+ * Subtopic: Series & Parallel Combinations & Charge Sharing
+ * OPEN CHALKBOARD DESIGN WITH MASTER CIRCUIT DIVISION FORMULAS (NO CONTAINER BOXES):
+ *  - Series: 1/C_eq = Σ(1/C_i)  |  n identical C_eq = C/n  |  Voltage Division: V₁ = V C₂/(C₁+C₂)
+ *  - Parallel: C_eq = Σ C_i  |  n identical C_eq = n C  |  Charge Division: Q₁ = Q C₁/(C₁+C₂)
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,100 +36,111 @@ export default function P12Ch02Sec55({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Formula toolkit: series and parallel", "Formula toolkit: series and parallel")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Formula Toolkit: Series Voltage Division & Parallel Charge Division Rules", "Formula Toolkit: Series Voltage Division & Parallel Charge Division Rules")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 350 70 C 440 66, 640 74, 730 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Series formula */}
-      <Badge n={1} cx={52} cy={120} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={125} size={14} fill={RED} weight={700} anchor="start">SERIES FORMULA</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 140)">
-          <rect x={0} y={5} width={420} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={210} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            1/C_eq = 1/C₁ + 1/C₂ + ... + 1/C_n
+      {/* LEFT SECTION: SERIES VOLTAGE DIVISION TOOLKIT */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SERIES TOOLKIT & VOLTAGE DIVISION", "SERIES TOOLKIT & VOLTAGE DIVISION")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: Special cases (two caps, n equal) */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)} dim={beat >= 3}>
-        <g transform="translate(60, 200)">
-          <rect x={0} y={5} width={420} height={70} rx={8} fill="#fef2f2" stroke={RED} strokeWidth={1.5} />
-          <T x={210} y={30} anchor="middle" size={15} fill={INK} weight={700}>Two only: C_eq = (C₁C₂) / (C₁ + C₂)</T>
-          <T x={210} y={55} anchor="middle" size={15} fill={INK} weight={700}>n equal: C_eq = C / n</T>
-        </g>
-      </Fade>
-
-      {/* BEAT 3: Series logic */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={60} y={305} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Charge is common: Q = C₁V₁ = C₂V₂. Voltages add: V = V₁ + V₂.",
-            "Charge common hai: Q = C₁V₁ = C₂V₂. Voltages add hote hain: V = V₁ + V₂."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Parallel formula */}
-      <Badge n={2} cx={520} cy={120} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={542} y={125} size={14} fill={RED} weight={700} anchor="start">PARALLEL FORMULA</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(520, 140)">
-          <rect x={0} y={5} width={420} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={210} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            C_eq = C₁ + C₂ + ... + C_n
+        {/* Floating Formulas (No Card Boxes) */}
+        <Fade on={beat >= 1}>
+          <T x={40} y={80} size={16} fill={INK} weight={800} anchor="start">
+            1. Equivalent: C_eq = (C₁ C₂) / (C₁ + C₂)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5: Parallel logic */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)} dim={beat >= 6}>
-        <g transform="translate(520, 200)">
-          <rect x={0} y={5} width={420} height={40} rx={8} fill="#ecfdf5" stroke={GREEN} strokeWidth={1.5} />
-          <T x={210} y={32} anchor="middle" size={15} fill={INK} weight={700}>n equal: C_eq = nC</T>
-        </g>
-        <T x={520} y={280} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Voltage is common. Charges add: Q = Q₁ + Q₂.",
-            "Voltage common hai. Charges add hote hain: Q = Q₁ + Q₂."
-          )}
-        </T>
-      </Fade>
+          <T x={40} y={135} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. n Identical in Series: C_eq = C / n
+          </T>
 
-      {/* BEAT 6: Sanity checks */}
-      <Badge n={3} cx={52} cy={380} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={385} size={14} fill={RED} weight={700} anchor="start">SANITY CHECKS</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 7}>
-        <T x={74} y={415} size={14} fill={INK} anchor="start" script>
-          {t(
-            "Series result MUST be less than the smallest C in the group.",
-            "Series result hamesha group ke sabse chote C se bhi kam hoga."
-          )}
-        </T>
-        <T x={74} y={445} size={14} fill={INK} anchor="start" script>
-          {t(
-            "Parallel result MUST be greater than the largest C in the group.",
-            "Parallel result hamesha group ke sabse bade C se bada hoga."
-          )}
-        </T>
-      </Fade>
+          <T x={40} y={190} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Voltage Division: V₁ = V [ C₂ / (C₁ + C₂) ]
+          </T>
 
-      {/* BEAT 7: Ratio n^2 */}
+          <T x={40} y={245} size={16} fill={GREEN} weight={800} anchor="start">
+            4. Voltage Division: V₂ = V [ C₁ / (C₁ + C₂) ]
+          </T>
+        </Fade>
+
+        {/* Free Floating Rule (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={16} fill={RED} weight={800}>
+            Smaller capacitor takes LARGER share of total voltage!
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: PARALLEL CHARGE DIVISION TOOLKIT */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("PARALLEL TOOLKIT & CHARGE DIVISION", "PARALLEL TOOLKIT & CHARGE DIVISION")}
+          </T>
+        </Fade>
+
+        {/* Floating Formulas (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={80} size={16} fill={INK} weight={800} anchor="start">
+            1. Equivalent: C_eq = C₁ + C₂
+          </T>
+
+          <T x={50} y={135} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            2. n Identical in Parallel: C_eq = n C
+          </T>
+
+          <T x={50} y={190} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Charge Division: Q₁ = Q [ C₁ / (C₁ + C₂) ]
+          </T>
+
+          <T x={50} y={245} size={16} fill={GREEN} weight={800} anchor="start">
+            4. Charge Division: Q₂ = Q [ C₂ / (C₁ + C₂) ]
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={350} anchor="middle" size={15} fill={GREEN} weight={800}>
+            Larger capacitor draws LARGER share of total charge Q!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("RATIO COMPARISON RULE", "RATIO COMPARISON RULE")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Series: V₁ / V₂ = C₂ / C₁ (Inverse Ratio)   |   Parallel: Q₁ / Q₂ = C₁ / C₂ (Direct Ratio)!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Ratio of n identical capacitors in parallel vs series C_parallel / C_series = n²!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={AMBER_DARK} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ For n equal capacitors: C_parallel / C_series = (nC) / (C/n) = n² ! ✓",
-            "★ n equal capacitors ke liye: C_parallel / C_series = (nC) / (C/n) = n² ! ✓"
+            "★ Combinations Toolkit Mastered: Series V inverse ratio V₁/V₂=C₂/C₁ vs Parallel Q direct ratio Q₁/Q₂=C₁/C₂! ✓",
+            "★ Combinations Toolkit Mastered: Series V inverse ratio V₁/V₂=C₂/C₁ vs Parallel Q direct ratio Q₁/Q₂=C₁/C₂! ✓"
           )}
         </Chip>
       </Fade>

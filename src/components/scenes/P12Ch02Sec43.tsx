@@ -1,13 +1,18 @@
 "use client";
 
 /**
- * P12Ch02 · Section 43 — "Spherical conductors and the spherical capacitor"
- * Beats (en [0,5,15,25,38,51,64,79]): 8 beats
+ * P12Ch02 · Section 43 — "Formula toolkit: spherical conductors and capacitors"
+ * Subtopic: Conductors & Spherical Capacitors
+ * OPEN CHALKBOARD DESIGN WITH SPHERICAL CAPACITOR SCHEMATICS (NO CONTAINER BOXES):
+ *  - 1. Isolated Spherical Conductor: C = 4π ε₀ R  (Earth C ≈ 711 µF)
+ *  - 2. Concentric Spherical Capacitor (Inner radius a, Outer radius b): C = 4π ε₀ (a b / (b - a))
+ *  - 3. Concentric Shell Potentials: V_inner = k q₁/a + k q₂/b
+ *  - Zero card box containers
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,94 +37,92 @@ export default function P12Ch02Sec43({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("spherical conductors and the spherical capacitor", "spherical conductors aur spherical capacitor")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Formula Toolkit: Isolated Spheres C = 4πε₀R & Spherical Capacitors C = 4πε₀(ab/(b−a))", "Formula Toolkit: Isolated Spheres C = 4πε₀R & Spherical Capacitors C = 4πε₀(ab/(b−a))")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 280 70 C 440 66, 640 74, 800 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Solid sphere V */}
-      <Badge n={1} cx={52} cy={110} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 1)}>
-        <T x={74} y={115} size={14} fill={RED} weight={700} anchor="start">ISOLATED SPHERICAL CONDUCTOR (Radius R)</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 130)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            V = (1/4πε₀) · Q / R
+      {/* LEFT SECTION: ISOLATED SPHERICAL CONDUCTOR */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("ISOLATED SPHERICAL CONDUCTOR (RADIUS R)", "ISOLATED SPHERICAL CONDUCTOR (RADIUS R)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: Isolated C */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)} dim={beat >= 3}>
-        <g transform="translate(480, 130)">
-          <rect x={0} y={5} width={400} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={200} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            C = Q/V = 4πε₀ R
+        {/* Sphere Diagram */}
+        <Fade on={beat >= 1}>
+          <circle cx={220} cy={180} r={75} stroke={RED} strokeWidth={3} fill="#ffe4e6" opacity={0.3} />
+          <T x={220} y={185} size={16} fill={RED} weight={900} anchor="middle">Sphere (R, Q)</T>
+          <line x1="220" y1="180" x2="295" y2="180" stroke={INK} strokeWidth={2} />
+          <T x={260} y={170} size={13} fill={INK} weight={800}>Radius R</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={220} y={350} anchor="middle" size={19} fill={GREEN} weight={900}>
+            C = 4π ε₀ R   (Earth R = 6400 km → C ≈ 711 µF!)
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 3: E inside and outside */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)}>
-        <T x={60} y={215} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Inside E = 0. Outside, it acts as if all charge sits exactly at the centre point!",
-            "Andar E = 0. Bahar aisa lagta hai jaise saara charge bilkul centre pe baitha ho!"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Spherical capacitor (inner a, outer b) */}
-      <Badge n={2} cx={52} cy={275} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 1)}>
-        <T x={74} y={280} size={14} fill={RED} weight={700} anchor="start">SPHERICAL CAPACITOR (Shells a and b)</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(60, 295)">
-          <rect x={0} y={5} width={500} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={250} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            C = 4πε₀ · [ (ab) / (b − a) ]
+      {/* RIGHT SECTION: CONCENTRIC SPHERICAL CAPACITOR (a, b) */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("CONCENTRIC SPHERICAL CAPACITOR (a, b)", "CONCENTRIC SPHERICAL CAPACITOR (a, b)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5: Small gap logic */}
-      <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-        <T x={60} y={380} size={13} fill={AMBER_DARK} anchor="start" script>
-          {t(
-            "Notice (b−a) in denominator: a small gap gives a LARGE capacitance (just like small d)!",
-            "Notice karo denominator mein (b−a) hai: chota gap C bada dega (just like chota d)!"
-          )}
-        </T>
-      </Fade>
+        {/* Concentric Shells Diagram */}
+        <Fade on={beat >= 4}>
+          {/* Inner Shell a */}
+          <circle cx={240} cy={180} r={45} stroke={RED} strokeWidth={2.5} fill="#ffe4e6" opacity={0.3} />
+          <T x={240} y={185} size={13} fill={RED} weight={900} anchor="middle">+Q (a)</T>
 
-      {/* BEAT 6: Shell potential rule */}
-      <Badge n={3} cx={52} cy={430} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 1)}>
-        <T x={74} y={435} size={14} fill={RED} weight={700} anchor="start">GOLDEN RULE FOR CONCENTRIC SHELLS</T>
-      </Fade>
-      <Fade on={beat >= 6}>
-        <g transform="translate(60, 450)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={RED} strokeWidth={2} />
-          <T x={480} y={36} anchor="middle" size={15} fill={RED} weight={800}>
-            {t(
-              "A shell contributes (kQ/R) everywhere INSIDE itself, and (kQ/r) OUTSIDE itself.",
-              "Shell (kQ/R) V deti hai apne andar KAHIN BHI, aur (kQ/r) apne BAHAR."
-            )}
+          {/* Outer Shell b */}
+          <circle cx={240} cy={180} r={95} stroke={GREEN} strokeWidth={2.5} fill="none" strokeDasharray="5 5" />
+          <T x={240} y={75} size={13} fill={GREEN} weight={900} anchor="middle">−Q Outer Shell (b, Grounded)</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 5}>
+          <T x={240} y={350} anchor="middle" size={20} fill={GREEN} weight={900}>
+            C = 4π ε₀ [ (a b) / (b − a) ]
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 7: Mechanical problems */}
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("SPHERICAL SHELL POTENTIAL SUPERPOSITION", "SPHERICAL SHELL POTENTIAL SUPERPOSITION")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Inner Shell Potential: V_inner = k q₁/a + k q₂/b   |   Outer Shell Potential: V_outer = k(q₁ + q₂)/b !
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            Potential difference ΔV = V_inner − V_outer = k q₁ (1/a − 1/b) depends ONLY on inner charge q₁!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ That single rule makes 3-shell potential problems purely mechanical to solve! ✓",
-            "★ Yeh ek rule 3-shell potential problems ko purely mechanical bana deta hai! ✓"
+            "★ Spherical Toolkit Mastered: Isolated Sphere C = 4πε₀R vs Spherical Capacitor C = 4πε₀ ab/(b−a)! ✓",
+            "★ Spherical Toolkit Mastered: Isolated Sphere C = 4πε₀R vs Spherical Capacitor C = 4πε₀ ab/(b−a)! ✓"
           )}
         </Chip>
       </Fade>

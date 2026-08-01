@@ -1,13 +1,19 @@
 "use client";
 
 /**
- * P12Ch02 · Section 62 — "JEE Main: reducing a mixed network"
- * Beats (en [0,5,21,30,40,51,67]): 7 beats
+ * P12Ch02 · Section 62 — "JEE Advanced: Wheatstone bridge of capacitors and symmetry"
+ * Subtopic: Series & Parallel Combinations & Charge Sharing
+ * OPEN CHALKBOARD DESIGN WITH WHEATSTONE BRIDGE SYMMETRY (NO CONTAINER BOXES):
+ *  - 5 Capacitors arranged in Wheatstone diamond layout (C₁, C₂, C₃, C₄, and central C₅)
+ *  - Balanced Condition: C₁ / C₂ = C₃ / C₄  =>  V_C = V_D !
+ *  - Zero charge on central capacitor C₅ (Q₅ = 0)  =>  Remove C₅ completely!
+ *  - Equivalent Capacitance C_eq = (C₁ C₂) / (C₁ + C₂) + (C₃ C₄) / (C₃ + C₄)
+ *  - For 5 identical capacitors C: C_eq = C !
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
   INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
 } from "./kit";
 
@@ -32,140 +38,117 @@ export default function P12Ch02Sec62({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("JEE Main: network reduction with per-capacitor values", "JEE Main: network reduction and per-capacitor values")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("JEE Advanced: Balanced Wheatstone Bridge (C₁/C₂ = C₃/C₄ ⇒ Central C₅ Removed)", "JEE Advanced: Balanced Wheatstone Bridge (C₁/C₂ = C₃/C₄ ⇒ Central C₅ Removed)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 230 70 C 440 66, 640 74, 850 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Diagram */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <g transform="translate(100, 150)">
-          {/* Circuit */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 50 150 L 50 50 L 150 50" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 250 150 L 250 50 L 150 50" stroke={INK} sw={2} />
-          
-          {/* Parallel branch */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 150 50 L 150 20 L 250 20 L 250 50" stroke={INK} sw={2} />
-          
-          <rect x={190} y={15} width={10} height={40} fill="#3b82f6" transform="rotate(90 195 35)" />
-          <rect x={190} y={35} width={10} height={40} fill="#3b82f6" transform="rotate(90 195 55)" />
-          <T x={200} y={10} size={14} fill={INK} weight={700}>C₁ (3 µF)</T>
-
-          <rect x={190} y={65} width={10} height={40} fill="#10b981" transform="rotate(90 195 85)" />
-          <rect x={190} y={85} width={10} height={40} fill="#10b981" transform="rotate(90 195 105)" />
-          <T x={200} y={120} size={14} fill={INK} weight={700}>C₂ (6 µF)</T>
-          
-          {/* Oh wait, the prompt says C1 and C2 in series? 
-              "C12 = 3*6 / (3+6) = 2". Yes, C1 and C2 are in series, 
-              and C3 (4 µF) is parallel to them! 
-              Let's fix the drawing to match series + parallel correctly.
-          */}
-        </g>
-      </Fade>
-      
-      {/* Redraw diagram for series branch || C3 */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <g transform="translate(150, 150)">
-          {/* Main battery loop */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 0 150 L 0 50 L 50 50" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 300 150 L 300 50 L 250 50" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 0 150 L 120 150" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 180 150 L 300 150" stroke={INK} sw={2} />
-          <line x1={120} y1={130} x2={120} y2={170} stroke={INK} strokeWidth={3} />
-          <line x1={140} y1={140} x2={140} y2={160} stroke={INK} strokeWidth={5} />
-          <line x1={160} y1={130} x2={160} y2={170} stroke={INK} strokeWidth={3} />
-          <line x1={180} y1={140} x2={180} y2={160} stroke={INK} strokeWidth={5} />
-          <T x={150} y={200} size={16} fill={INK} weight={700}>12 V</T>
-
-          {/* Top branch (Series C1, C2) */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 50 50 L 50 0 L 100 0" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 250 50 L 250 0 L 200 0" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 120 0 L 180 0" stroke={INK} sw={2} />
-          
-          <rect x={100} y={-20} width={10} height={40} fill="#3b82f6" />
-          <rect x={120} y={-20} width={10} height={40} fill="#3b82f6" />
-          <T x={110} y={-30} size={14} fill={INK} weight={700}>C₁ = 3 µF</T>
-
-          <rect x={180} y={-20} width={10} height={40} fill="#10b981" />
-          <rect x={200} y={-20} width={10} height={40} fill="#10b981" />
-          <T x={190} y={-30} size={14} fill={INK} weight={700}>C₂ = 6 µF</T>
-
-          {/* Middle branch (C3) */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 50 50 L 140 50" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 160 50 L 250 50" stroke={INK} sw={2} />
-          <rect x={140} y={30} width={10} height={40} fill="#f59e0b" />
-          <rect x={160} y={30} width={10} height={40} fill="#f59e0b" />
-          <T x={150} y={90} size={14} fill={INK} weight={700}>C₃ = 4 µF</T>
-        </g>
-      </Fade>
-
-      {/* BEAT 2: C12 Series */}
-      <Badge n={1} cx={580} cy={140} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={602} y={145} size={14} fill={RED} weight={700} anchor="start">TOP BRANCH SERIES</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 3}>
-        <g transform="translate(580, 160)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            C₁₂ = (3 × 6) / (3 + 6) = 2 µF
+      {/* LEFT SECTION: WHEATSTONE DIAMOND SCHEMATIC */}
+      <g transform="translate(40, 85)">
+        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("WHEATSTONE CAPACITOR BRIDGE SCHEMATIC", "WHEATSTONE CAPACITOR BRIDGE SCHEMATIC")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: Ceq Parallel */}
-      <Badge n={2} cx={580} cy={240} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={602} y={245} size={14} fill={RED} weight={700} anchor="start">TOTAL EQUIVALENT</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(580, 260)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            C_eq = C₁₂ + C₃ = 2 + 4 = 6 µF
-          </T>
-        </g>
-      </Fade>
+        {/* Diamond Bridge Diagram */}
+        <Fade on={beat >= 1}>
+          {/* Node A (40, 180) to Node C (230, 90) -> C1 */}
+          <line x1="40" y1="180" x2="230" y2="90" stroke={RED} strokeWidth={3} />
+          <T x={125} y={125} size={14} fill={RED} weight={900}>C₁</T>
 
-      {/* BEAT 4: Q3 */}
-      <Badge n={3} cx={52} cy={400} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={405} size={14} fill={RED} weight={700} anchor="start">CHARGE ON C₃ (DIRECTLY ON BATTERY)</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 5}>
-        <g transform="translate(60, 420)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={38} anchor="middle" size={18} fill={INK} weight={800}>
-            Q₃ = C₃ V = (4 µF)(12 V) = 48 µC
-          </T>
-        </g>
-      </Fade>
+          {/* Node C (230, 90) to Node B (420, 180) -> C2 */}
+          <line x1="230" y1="90" x2="420" y2="180" stroke={RED} strokeWidth={3} />
+          <T x={335} y={125} size={14} fill={RED} weight={900}>C₂</T>
 
-      {/* BEAT 5: Q12 and individual V */}
-      <Badge n={4} cx={540} cy={400} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={405} size={14} fill={RED} weight={700} anchor="start">SERIES BRANCH VOLTAGES</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 6}>
-        <g transform="translate(540, 420)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={28} anchor="middle" size={16} fill={INK} weight={800}>
-            Q₁₂ = C₁₂ V = 24 µC
-          </T>
-          <T x={240} y={50} anchor="middle" size={16} fill={INK} weight={800}>
-            V₁ = 24/3 = 8 V,   V₂ = 24/6 = 4 V
-          </T>
-        </g>
-      </Fade>
+          {/* Node A (40, 180) to Node D (230, 270) -> C3 */}
+          <line x1="40" y1="180" x2="230" y2="270" stroke={GREEN} strokeWidth={3} />
+          <T x={125} y={245} size={14} fill={GREEN} weight={900}>C₃</T>
 
-      {/* BEAT 6: Check */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={536} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+          {/* Node D (230, 270) to Node B (420, 180) -> C4 */}
+          <line x1="230" y1="270" x2="420" y2="180" stroke={GREEN} strokeWidth={3} />
+          <T x={335} y={245} size={14} fill={GREEN} weight={900}>C₄</T>
+
+          {/* Central Bridge C5 from C (230, 90) to D (230, 270) */}
+          <line x1="230" y1="90" x2="230" y2="270" stroke={AMBER_DARK} strokeWidth={4} strokeDasharray="5 5" />
+          <T x={245} y={180} size={14} fill={AMBER_DARK} weight={900}>C₅ (Q₅ = 0!)</T>
+        </Fade>
+
+        {/* Free Floating Formula (Spacious, No Box) */}
+        <Fade on={beat >= 3}>
+          <T x={230} y={350} anchor="middle" size={17} fill={INK} weight={800}>
+            If C₁ / C₂ = C₃ / C₄  ⇒  V_C = V_D  ⇒  C₅ carries ZERO charge!
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: EQUIVALENT CAPACITANCE CALCULATION */}
+      <g transform="translate(540, 85)">
+        <Badge n={2} cx={25} cy={25} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("BALANCED BRIDGE REDUCTION PROOF", "BALANCED BRIDGE REDUCTION PROOF")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps (No Card Boxes) */}
+        <Fade on={beat >= 4}>
+          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Remove C₅ (Open Circuit since V_C − V_D = 0).
+          </T>
+
+          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+            2. Top Branch: C₁ and C₂ in Series  ⇒  C_top = (C₁ C₂) / (C₁ + C₂)
+          </T>
+
+          <T x={50} y={205} size={16} fill={GREEN} weight={800} anchor="start">
+            3. Bottom Branch: C₃ and C₄ in Series  ⇒  C_bot = (C₃ C₄) / (C₃ + C₄)
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+
+          <T x={50} y={285} size={20} fill={RED} weight={900} anchor="start">
+            4. If all 5 capacitors are identical C  ⇒  C_eq = C/2 + C/2 = C !
+          </T>
+        </Fade>
+
+        {/* Open Text Explanation */}
+        <Fade on={beat >= 6}>
+          <T x={250} y={360} anchor="middle" size={15} fill={GREEN} weight={800}>
+            For 5 identical capacitors in a Wheatstone bridge, C_equivalent = C exactly!
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 470)">
+        <Badge n={3} cx={25} cy={25} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={48} y={30} size={16} fill={RED} weight={800} anchor="start">
+            {t("JEE ADVANCED SYMMETRY PRINCIPLE", "JEE ADVANCED SYMMETRY PRINCIPLE")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={500} y={30} anchor="middle" size={17} fill={GREEN} weight={800}>
+            Use Mirror Symmetry (Equipotential plane) and Perpendicular Axis Symmetry to simplify complex 3D cube networks!
+          </T>
+          <T x={500} y={65} anchor="middle" size={15} fill={INK} weight={700}>
+            If Wheatstone bridge is UNBALANCED: Use Kirchhoff's Voltage/Current Laws (KVL/KCL)!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
+      <Fade on={beat >= 7}>
+        <Chip x={100} y={570} w={880} h={42} fill={GREEN} textFill="#ffffff" size={18}>
           {t(
-            "★ Check: 8 V + 4 V = 12 V, matching the battery exactly! ✓",
-            "★ Check: 8 V + 4 V = 12 V, jo battery se exact match karta hai! ✓"
+            "★ JEE Advanced Mastered: Balanced Wheatstone Bridge C₁/C₂ = C₃/C₄ allows removing central C₅ (C_eq = C for 5 identical C)! ✓",
+            "★ JEE Advanced Mastered: Balanced Wheatstone Bridge C₁/C₂ = C₃/C₄ allows removing central C₅ (C_eq = C for 5 identical C)! ✓"
           )}
         </Chip>
       </Fade>
