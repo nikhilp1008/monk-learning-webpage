@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 6 done. Starting Sec 7.
+Sec 7 done. Starting Sec 8.
 
 ## Note
 Ch10's reveal timestamps often have 1s-tight middle beats. Keep any beat's
@@ -44,3 +44,6 @@ tightening delays, not by ignoring the warning.
 - Sec 6 — Heat, specific heat, and the calorie — hero equation Q=mcΔT,
   recipe metaphor, variable legend, calorie chip, precise cal definition,
   mechanical-equivalent J box. VERDICT PASS (eyeballed, clean).
+- Sec 7 — Linear, areal, volumetric expansion: the 1-2-3 rule — three-
+  column line/square/cube diagrams with their ΔL/ΔA/ΔV formulas, the
+  β=2α,γ=3α payoff, powers-of-length note. VERDICT PASS (eyeballed, clean).
