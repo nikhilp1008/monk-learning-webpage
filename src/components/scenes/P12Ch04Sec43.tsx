@@ -32,67 +32,113 @@ export default function P12Ch04Sec43({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Chapter Cheat Sheet & Exam Memory Aids", "Chapter Cheat Sheet & Exam Memory Aids")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1, 3 & 5: Subtopics 1 - 3 Memory Aids */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">SUBTOPICS 1 – 3 MEMORY AIDS</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 7}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={14} fill={INK} weight={800}>
-            Straight bits aimed at point contribute ZERO!
+      {/* LEFT SECTION: SUBTOPICS 1 – 3 MEMORY AIDS */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SUBTOPICS 1 – 3 MEMORY AIDS", "SUBTOPICS 1 – 3 MEMORY AIDS")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            (Force ONLY steers (W=0); Like currents ATTRACT!)
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 7 & 9: Subtopics 4 - 5 Memory Aids */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">SUBTOPICS 4 – 5 MEMORY AIDS</T>
-      </Fade>
-      <Fade on={beat >= 7} dim={beat >= 11}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={14} fill={INK} weight={800}>
-            Shunt is small, Multiplier is mighty!
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Zero Field Rule: Straight wires pointing at point give B = 0.
           </T>
-          <T x={240} y={52} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Loop is a baby bar magnet; B_axial : B_eq = 2 : 1!
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 11: Final Exam Checklist */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 11} delay={dl(11, 0.4)} />
-      <Fade on={beat >= 11} delay={dl(11, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">FINAL EXAM CHECKLIST</T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Magnetic Work: Magnetic force ONLY steers, doing ZERO work (W = 0).
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Parallel Wires: Same currents ATTRACT; opposite REPEL.
+          </T>
+
+          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Right-Hand Rule: Thumb along current I, fingers curl with B!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Essential memory rules for Biot-Savart, Lorentz Force, and Ampere's Law)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: SUBTOPICS 4 – 5 MEMORY AIDS */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SUBTOPICS 4 – 5 MEMORY AIDS", "SUBTOPICS 4 – 5 MEMORY AIDS")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 7}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Meter Conversion: Shunt S is SMALL; Multiplier R is HIGH!
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Dipole Equivalence: Every current loop is a tiny bar magnet.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Ratio Rule: Axial to equatorial field ratio B_ax : B_eq = 2 : 1.
+          </T>
+
+          <Draw on={beat >= 11} delay={dl(11, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Bohr Magneton: Electron μ_l/L = e/2m; μ_B = 9.27×10^-24 A m²!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 11}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Core principles for Galvanometer conversion and Dipole Magnetism)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 11} delay={dl(11, 0.2)} />
+        <Fade on={beat >= 11} delay={dl(11, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("FINAL EXAM CHECKLIST", "FINAL EXAM CHECKLIST")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 11}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Unit Conversions: Always convert cm -&gt; m, mm -&gt; m, and mA -&gt; A before substituting into formulas!
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Vector Superposition: Magnetic fields add vectorially; resolve perpendicular components carefully!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 11}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            Convert lengths to meters first! Use vector addition for B fields! Check held constants!
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 11: Summary Chip */}
-      <Fade on={beat >= 11}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={13}>
           {t(
             "★ Class 12 Physics Chapter 4 Moving Charges and Magnetism 100% COMPLETE! All 43 Sections Authored & Registered! 🎉",
-            "★ Class 12 Physics Chapter 4 Moving Charges and Magnetism 100% COMPLETE! Tamam 43 Sections Mukammal! 🎉"
+            "★ Class 12 Physics Chapter 4 Moving Charges and Magnetism 100% COMPLETE! All 43 Sections Authored & Registered! 🎉"
           )}
         </Chip>
       </Fade>

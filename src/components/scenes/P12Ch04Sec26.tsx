@@ -32,64 +32,113 @@ export default function P12Ch04Sec26({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Subtopic Four: Why a Raw Galvanometer Cannot Be Used Directly", "Subtopic Four: Why a Raw Galvanometer Cannot Be Used Directly")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 2: Linear Deflection Formula */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">GALVANOMETER LINEAR DEFLECTION</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={18} fill={INK} weight={800}>
-            φ = ((NAB)/(k)) I   [Linear Scale]
+      {/* LEFT SECTION: GALVANOMETER LINEAR DEFLECTION */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("GALVANOMETER LINEAR DEFLECTION", "GALVANOMETER LINEAR DEFLECTION")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3 & 4: Two Major Problems */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">THE TWO LIMITING PROBLEMS</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={14} fill={INK} weight={800}>
-            1. Hypersensitive (FSD at μA – mA; large I destroys coil!)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Radial Field Torque: Deflecting torque τ_def = N I A B.
           </T>
-          <T x={240} y={52} anchor="middle" size={14} fill={GREEN} weight={800}>
-            2. High Coil Resistance G alters circuit current being measured!
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5 & 7: The Solution (Resistor Conversions) */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">THE ENGINEERING SOLUTION: SINGLE RESISTOR CONVERSIONS</T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Spring Restoring Torque: τ_res = k φ.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Deflection Equation: φ = (N A B / k) I  [Deflection angle φ ∝ I].
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. High Sensitivity: Full-scale deflection achieved at tiny I_g (μA - mA)!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 3}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Linear scale is ideal for meters, but raw coil is extremely delicate)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: THE TWO LIMITING PRACTICAL PROBLEMS */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Fade on={beat >= 3} delay={dl(3, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("THE TWO LIMITING PRACTICAL PROBLEMS", "THE TWO LIMITING PRACTICAL PROBLEMS")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 3}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Extreme Delicacy: Large current I &gt; I_g burns fine coil windings.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. High Internal Resistance G: Connecting in series alters total circuit R.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Loading Effect: Severe measurement error when inserted into active circuit.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Conversion Necessity: Modify impedance before measuring I or V!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Raw galvanometer alone cannot function as standard circuit ammeter/voltmeter)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("THE ENGINEERING RESISTOR SOLUTIONS", "THE ENGINEERING RESISTOR SOLUTIONS")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Ammeter Conversion: Connect low Shunt resistor S in PARALLEL with coil G to bypass excess current.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Voltmeter Conversion: Connect high Multiplier resistor R in SERIES with coil G to drop excess voltage.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 5}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            Ammeter: Low Shunt S in parallel | Voltmeter: High Multiplier R in series!
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 7: Summary Chip */}
-      <Fade on={beat >= 5}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Raw galvanometer is too delicate and intrusive; convert using parallel Shunt S or series Multiplier R! ✓",
-            "★ Raw galvanometer delicate aur intrusive hai; parallel Shunt S ya series Multiplier R se convert karein! ✓"
+            "★ Raw galvanometer is too delicate and intrusive; convert using parallel Shunt S or series Multiplier R! ✓"
           )}
         </Chip>
       </Fade>

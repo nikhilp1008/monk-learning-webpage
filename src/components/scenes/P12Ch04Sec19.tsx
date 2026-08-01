@@ -32,64 +32,110 @@ export default function P12Ch04Sec19({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Key Formulas: Lorentz Force, Cyclotron & Torque", "Key Formulas: Lorentz Force, Cyclotron & Torque")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 2: Lorentz Force & Velocity Selector */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">LORENTZ FORCE & VELOCITY SELECTOR</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            F = q (E + v × B)   [Selector v = E/B]
+      {/* LEFT SECTION: LORENTZ FORCE & VELOCITY SELECTOR */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("LORENTZ FORCE & VELOCITY SELECTOR", "LORENTZ FORCE & VELOCITY SELECTOR")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            (Electric does work, Magnetic steers without work!)
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 8: Cyclotron Motion & Energy */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">CYCLOTRON MOTION & MAX ENERGY</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 11}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            r = mv / (qB)   |   T = 2πm / (qB)  (Speed independent!)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Total Lorentz Force: F = q (E + v × B).
           </T>
-          <T x={240} y={52} anchor="middle" size={15} fill={GREEN} weight={800}>
-            K_max = (q² B² R²) / (2m)
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 11, 13 & 14: Conductor Force & Torque */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 11} delay={dl(11, 0.4)} />
-      <Fade on={beat >= 11} delay={dl(11, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">WIRE FORCE & LOOP TORQUE FORMULAS</T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Undeflected Beam Condition: F_electric = F_magnetic =&gt; q E = q v B.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Velocity Selector Speed: v = E / B (independent of mass and charge).
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Key Distinction: Electric does work; Magnetic steers only!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Essential filter for J.J. Thomson e/m and mass spectrometers)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: CYCLOTRON MOTION & MAX KINETIC ENERGY */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CYCLOTRON MOTION & MAX KINETIC ENERGY", "CYCLOTRON MOTION & MAX KINETIC ENERGY")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Orbit Radius: r = (m v) / (q B)  [Linear dependence on momentum p].
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Period of Revolution: T = (2π m) / (q B)  (SPEED INDEPENDENT!).
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Cyclotron Frequency: f = (q B) / (2π m).
+          </T>
+
+          <Draw on={beat >= 11} delay={dl(11, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Maximum Kinetic Energy: K_max = (q² B² R_dee²) / (2 m)!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 11}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Maximum energy depends only on outer Dee radius R_dee)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 11} delay={dl(11, 0.2)} />
+        <Fade on={beat >= 11} delay={dl(11, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("WIRE FORCE & LOOP TORQUE MASTER FORMULAS", "WIRE FORCE & LOOP TORQUE MASTER FORMULAS")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 11}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Force between parallel conductors: F/L = μ₀ I₁ I₂ / (2π d).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Magnetic dipole moment M = N I A; Torque on loop in uniform B is τ = M × B = N I A B sin θ.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 11}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            F/L = μ₀I₁I₂ / (2πd)   |   boldsymbol(τ) = m × B   (m = N I A,  τ = N I A B sin θ)
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 14: Summary Chip */}
-      <Fade on={beat >= 11}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Master formulas: r = mv/qB | T = 2πm/qB | K_max = q²B²R²/2m | τ = NIAB sin θ! ✓",
             "★ Master formulas: r = mv/qB | T = 2πm/qB | K_max = q²B²R²/2m | τ = NIAB sin θ! ✓"

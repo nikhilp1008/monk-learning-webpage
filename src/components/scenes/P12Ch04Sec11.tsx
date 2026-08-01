@@ -32,64 +32,110 @@ export default function P12Ch04Sec11({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Key Formulas: Solenoid, Toroid & Thick Conductors", "Key Formulas: Solenoid, Toroid & Thick Conductors")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 7: Solenoid & Toroid Formulas */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">IDEAL SOLENOID & TOROID FIELD FORMULAS</T>
-      </Fade>
-      <Fade on={beat >= 7} dim={beat >= 8}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            Solenoid (Inside): B = μ₀ n I   [n = N/L, Outside = 0]
+      {/* LEFT SECTION: SOLENOID & TOROID FORMULAS */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("IDEAL SOLENOID & TOROID FIELD FORMULAS", "IDEAL SOLENOID & TOROID FIELD FORMULAS")}
           </T>
-          <T x={225} y={52} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Toroid (Inside): B = (μ₀ N I) / (2πr)
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 8 & 9: Solenoid Edge & Thick Wire Results */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 8} delay={dl(8, 0.4)} />
-      <Fade on={beat >= 8} delay={dl(8, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">SOLENOID END FIELD & THICK WIRE</T>
-      </Fade>
-      <Fade on={beat >= 8} dim={beat >= 10}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            Solenoid End: B_end = ½ μ₀ n I
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 7}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Ideal Solenoid (Interior): B = μ₀ n I  (where n = N / L turns/meter).
           </T>
-          <T x={240} y={52} anchor="middle" size={14} fill={GREEN} weight={800}>
-            Thick Wire: Inside B = (μ₀ I r)/(2πR²) | Outside B = μ₀ I/(2πr)
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 10: Biot-Savart & Ampere Consistency */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 10} delay={dl(10, 0.4)} />
-      <Fade on={beat >= 10} delay={dl(10, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">BIOT-SAVART & AMPERE CONSISTENCY</T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Solenoid (Exterior): B = 0 outside ideal infinite solenoid.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Toroid (Inside Windings): B = (μ₀ N I) / (2π r).
+          </T>
+
+          <Draw on={beat >= 8} delay={dl(8, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Uniform Field: B is completely uniform inside solenoid/toroid!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 8}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Toroid is simply a circular solenoid with no free ends)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: SOLENOID END & THICK CONDUCTOR */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 8} delay={dl(8, 0.2)} />
+        <Fade on={beat >= 8} delay={dl(8, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SOLENOID END FIELD & THICK CONDUCTOR", "SOLENOID END FIELD & THICK CONDUCTOR")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 8}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Solenoid Open End: Field drops to exactly half: B_end = ½ μ₀ n I.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Thick Wire Inside (r &lt; R): B_in = (μ₀ I r) / (2π R²)  [∝ r].
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Thick Wire Outside (r ≥ R): B_out = (μ₀ I) / (2π r)  [∝ 1/r].
+          </T>
+
+          <Draw on={beat >= 10} delay={dl(10, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Surface Peak: B reaches maximum value B_max at surface r = R!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 10}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Ampere and Biot-Savart methods produce identical results for infinite wire)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 10} delay={dl(10, 0.2)} />
+        <Fade on={beat >= 10} delay={dl(10, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("AMPERIAN KEY FORMULAS VERDICT", "AMPERIAN KEY FORMULAS VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 10}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Inside solenoid B = μ₀ n I, inside toroid B = μ₀ N I / (2π r), and at solenoid end B = ½ μ₀ n I.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            For thick cylindrical wire, field grows linearly inside B ∝ r, reaches peak at surface, and drops as 1/r outside.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 10}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            Ampere's law B = μ0 I / (2πa) matches Biot-Savart infinite-wire limit exactly! ✓
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 10: Summary Chip */}
-      <Fade on={beat >= 10}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Solenoid B = μ0nI | Toroid B = μ0NI/2πr | End B = ½μ0nI | Thick wire B_in ∝ r, B_out ∝ 1/r! ✓",
             "★ Solenoid B = μ0nI | Toroid B = μ0NI/2πr | End B = ½μ0nI | Thick wire B_in ∝ r, B_out ∝ 1/r! ✓"

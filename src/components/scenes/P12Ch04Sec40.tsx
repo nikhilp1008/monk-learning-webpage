@@ -32,50 +32,110 @@ export default function P12Ch04Sec40({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("JEE Main & Advanced: Dipole Far Field & Vibration Magnetometer SHM", "JEE Main & Advanced: Dipole Far Field & Vibration Magnetometer SHM")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 4: JEE Main Dipole Axial Field */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">JEE MAIN: DIPOLE AXIAL FIELD NUMERICAL</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            B_axial = (10⁻⁷)[2(0.188) / (0.50)³]
+      {/* LEFT SECTION: JEE MAIN DIPOLE AXIAL FIELD */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("JEE MAIN: DIPOLE AXIAL FIELD NUMERICAL", "JEE MAIN: DIPOLE AXIAL FIELD NUMERICAL")}
           </T>
-          <T x={225} y={52} anchor="middle" size={16} fill={GREEN} weight={800}>
-            B_axial = 3.0 × 10⁻⁷ T
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 6, 8, 9, 10 & 11: JEE Advanced Vibration Magnetometer SHM */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">JEE ADVANCED: DIPOLE SHM OSCILLATIONS</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 11}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            τ = −mB θ  ⇒  I d²θ/dt² = −mB θ  ⇒  ω² = mB / I
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 4}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Given Parameters: Dipole moment m = 0.188 A m², distance x = 0.50 m.
           </T>
-          <T x={240} y={52} anchor="middle" size={17} fill={GREEN} weight={800}>
-            T = 2π √(I / mB) = 2π √(2.0×10⁻⁴ / 0.02) = 0.63 s
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 11: Summary Chip */}
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Far-Field Axial Formula: B_axial = (μ_0 / 4π) (2m / x³).
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Calculation: B_axial = (10^-7) × [2(0.188) / (0.50)³].
+          </T>
+
+          <Draw on={beat >= 6} delay={dl(6, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Calculated Field: B_axial = 3.0 × 10^-7 T!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (At same distance, equatorial field B_eq = 1.5 × 10^-7 T)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: JEE ADVANCED DIPOLE SHM OSCILLATIONS */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 6} delay={dl(6, 0.2)} />
+        <Fade on={beat >= 6} delay={dl(6, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("JEE ADVANCED: DIPOLE SHM OSCILLATIONS", "JEE ADVANCED: DIPOLE SHM OSCILLATIONS")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 6}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Restoring Torque: τ = -m B sin θ ≈ -m B θ for small angle θ.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Differential Equation: I (d²θ/dt²) = -m B θ  =&gt;  d²θ/dt² = - (m B / I) θ.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. SHM Period: ω = √(m B / I)  =&gt;  T = 2π √(I / m B).
+          </T>
+
+          <Draw on={beat >= 11} delay={dl(11, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Numerical Period: T = 2π √(2.0×10^-4 / 0.02) = 0.63 s!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 11}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Foundation principle of the Vibration Magnetometer)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 11} delay={dl(11, 0.2)} />
+        <Fade on={beat >= 11} delay={dl(11, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SUMMARY OF DIPOLE FIELD & OSCILLATIONS", "SUMMARY OF DIPOLE FIELD & OSCILLATIONS")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 11}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Axial Field: B_axial = 3.0 × 10^-7 T drops off inversely with the cube of distance x^3.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Magnetometer SHM: Period T = 2π √(I / mB) allows precise measurement of unknown B or m.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 11}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ B_axial = 3.0 × 10⁻⁷ T | Vibration Magnetometer SHM period T = 2π √(I / mB) = 0.63 s! ✓",
             "★ B_axial = 3.0 × 10⁻⁷ T | Vibration Magnetometer SHM period T = 2π √(I / mB) = 0.63 s! ✓"

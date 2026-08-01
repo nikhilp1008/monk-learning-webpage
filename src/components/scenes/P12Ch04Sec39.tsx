@@ -32,53 +32,113 @@ export default function P12Ch04Sec39({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Worked Examples: Coil Torque & Ground-State Bohr Magneton", "Worked Examples: Coil Torque & Ground-State Bohr Magneton")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1, 2 & 3: CBSE Coil Moment & Torque */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">CBSE LEVEL: COIL MOMENT & TORQUE</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            m = N I A = 100(0.40)π(0.05)² = 0.314 A m²
+      {/* LEFT SECTION: CBSE COIL MOMENT & TORQUE */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CBSE LEVEL: COIL MOMENT & TORQUE", "CBSE LEVEL: COIL MOMENT & TORQUE")}
           </T>
-          <T x={225} y={52} anchor="middle" size={16} fill={GREEN} weight={800}>
-            τ = m B sin 30° = (0.314)(0.50)(0.5) = 0.0785 N m
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5, 6 & 8, 9, 10: NEET Ground State Bohr Magneton */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">NEET SPEED TRAP: GROUND STATE MOMENT</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 10}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            μ_l = (e/2m) L = (e/2m)(h/2π) = eh / (4π m)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Given Parameters: N = 100 turns, I = 0.40 A, r = 0.05 m, B = 0.50 T.
           </T>
-          <T x={240} y={52} anchor="middle" size={17} fill={GREEN} weight={800}>
-            μ_l = μ_B ≈ 9.27 × 10^-24 A m^2
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 10: Summary Chip */}
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Dipole Moment: m = N I (π r²) = 100 × 0.40 × π(0.05)² = 0.314 A m².
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Torque Formula: τ = m B sin θ (θ = 30° with field vector).
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Calculated Torque: τ = 0.314 × 0.50 × sin 30° = 0.0785 N m!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Torque is maximum at θ = 90° and zero when dipole aligns at θ = 0°)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: NEET SPEED TRAP: GROUND STATE MOMENT */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("NEET SPEED TRAP: GROUND STATE MOMENT", "NEET SPEED TRAP: GROUND STATE MOMENT")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Hydrogen Ground State: Principle quantum number n = 1 in Bohr atom.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Angular Momentum: L_1 = 1 × h / (2π).
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Substitution into Moment Ratio: μ_1 = (e / 2 m_e) L_1 = (e h) / (4π m_e).
+          </T>
+
+          <Draw on={beat >= 10} delay={dl(10, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Calculated Value: μ_1 = μ_B = 9.27 × 10^-24 A m²!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 10}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (NEET speed trap: ground-state orbital dipole moment IS 1 Bohr Magneton)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 10} delay={dl(10, 0.2)} />
+        <Fade on={beat >= 10} delay={dl(10, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("MACRO VS MICRO DIPOLE COMPARISON", "MACRO VS MICRO DIPOLE COMPARISON")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 10}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Macroscopic Coil: Moment m = 0.314 A m² produces noticeable mechanical torque τ = 0.0785 N m.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Microscopic Atomic Loop: Hydrogen ground state electron moment is quantized at 1 μ_B = 9.27 × 10^-24 A m².
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 10}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Result: Coil torque τ = 0.0785 N m | Ground-state orbital moment is exactly 1 Bohr Magneton μ_B! ✓",
-            "★ Result: Coil torque τ = 0.0785 N m | Ground-state orbital moment bilkul 1 Bohr Magneton μ_B hai! ✓"
+            "★ Result: Coil torque τ = 0.0785 N m | Ground-state orbital moment is exactly 1 Bohr Magneton μ_B! ✓"
           )}
         </Chip>
       </Fade>

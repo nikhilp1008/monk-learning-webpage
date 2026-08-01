@@ -32,67 +32,113 @@ export default function P12Ch04Sec25({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Common Pitfalls & Pro-Tips for Forces & Galvanometer", "Common Pitfalls & Pro-Tips for Forces & Galvanometer")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1, 2 & 3: Speed, Parallel & Angle Traps */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">SPEED, PARALLEL & ANGLE TRAPS</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={14} fill={INK} weight={800}>
-            Magnetic force NEVER changes speed or KE!
+      {/* LEFT SECTION: SPEED, PARALLEL & ANGLE TRAPS */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SPEED, PARALLEL & ANGLE TRAPS", "SPEED, PARALLEL & ANGLE TRAPS")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            (v || B ⇒ F = 0; Torque uses angle to NORMAL θ = 90° − α!)
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6, 7: Galvanometer Sine & Ratio Pro-Tip */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">GALVANOMETER SINE & CONSTANT CONTEXT PRO-TIP</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 8}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={14} fill={INK} weight={800}>
-            Radial field makes sin θ = 1 permanently!
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Zero Work Trap: Magnetic force F = q(v × B) is strictly ⊥ to v =&gt; W = 0!
           </T>
-          <T x={240} y={52} anchor="middle" size={15} fill={GREEN} weight={800}>
-            Same Voltage ⇒ r ∝ √(m/q) | Same Momentum ⇒ r ∝ 1/q!
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 8: Master Summary */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 8} delay={dl(8, 0.4)} />
-      <Fade on={beat >= 8} delay={dl(8, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">THE SINGLE UNDERLYING LAW</T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Parallel Motion Trap: If v || B or I || B, sin 0° = 0 =&gt; F = 0.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Angle Trap in Torque: θ is angle with NORMAL to loop (θ = 90° - α).
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Parallel Wires Trap: Parallel currents ATTRACT; anti-parallel REPEL!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Opposite of electrostatic charges: like currents attract each other)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: GALVANOMETER SINE & RATIO PRO-TIPS */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("GALVANOMETER SINE & RATIO PRO-TIPS", "GALVANOMETER SINE & RATIO PRO-TIPS")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Radial Field Advantage: Soft iron core ensures θ = 90° &amp; sin 90° = 1.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Same Speed Ratio: Orbit radius r = m v / (q B) ∝ m / q.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Same Voltage Ratio: Orbit radius r = √(2 m V / q) / B ∝ √(m / q).
+          </T>
+
+          <Draw on={beat >= 8} delay={dl(8, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Sensitivity Pro-Tip: Doubling N doubles S_I, leaves S_V constant!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 8}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Because coil resistance R also doubles when turns N are doubled)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 8} delay={dl(8, 0.2)} />
+        <Fade on={beat >= 8} delay={dl(8, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("THE SINGLE UNIFYING LORENTZ LAW", "THE SINGLE UNIFYING LORENTZ LAW")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 8}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            All phenomena (cyclotron, wire force, loop torque, galvanometer) originate from fundamental Lorentz force F = q (v × B).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Always check problem setup: constant speed vs constant voltage, plane angle vs normal angle, parallel vs antiparallel.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 8}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            All results (cyclotron, wire force, loop torque, galvanometer) flow from F = q(v × B)!
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 8: Summary Chip */}
-      <Fade on={beat >= 8}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Check constant context (voltage vs speed), use normal angle, and remember like currents attract! ✓",
-            "★ Constant context check karein (voltage vs speed), normal angle lein, aur like currents attract yaad rakhein! ✓"
+            "★ Check constant context (voltage vs speed), use normal angle, and remember like currents attract! ✓"
           )}
         </Chip>
       </Fade>

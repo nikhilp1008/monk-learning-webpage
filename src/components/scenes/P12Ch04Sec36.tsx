@@ -32,64 +32,110 @@ export default function P12Ch04Sec36({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Key Formulas: Dipole Fields, Energy & Bohr Magneton", "Key Formulas: Dipole Fields, Energy & Bohr Magneton")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 2: Torque, Energy & Rotation Work */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">TORQUE, POTENTIAL ENERGY & WORK FORMULAS</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 4}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            τ = m × B   |   U = −m · B = −mB cos θ
+      {/* LEFT SECTION: TORQUE, POTENTIAL ENERGY & WORK FORMULAS */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("TORQUE, POTENTIAL ENERGY & WORK FORMULAS", "TORQUE, POTENTIAL ENERGY & WORK FORMULAS")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            (W = mB(cos θ₁ − cos θ₂))
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4 & 6: Far Fields of Dipole (Axial vs Equatorial) */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">FAR DIPOLE FIELDS & ELECTRIC ANALOGY</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 8}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            B_axial = (μ₀/4π)(2m / x³)   |   B_eq = (μ₀/4π)(m / x³)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Magnetic Torque: τ = m × B  =&gt;  |τ| = m B sin θ.
           </T>
-          <T x={240} y={52} anchor="middle" size={14} fill={GREEN} weight={800}>
-            (Replace p → m, 1/4πε₀ → μ₀/4π for instant conversions!)
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 8 & 10: Revolving Electron & Bohr Magneton */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 8} delay={dl(8, 0.4)} />
-      <Fade on={beat >= 8} delay={dl(8, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">GYROMAGNETIC RATIO & BOHR MAGNETON</T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Potential Energy: U = -m · B = -m B cos θ.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Rotational Work: W = ΔU = m B (cos θ_1 - cos θ_2).
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Stable Equilibrium: θ = 0° (U_min = -mB); Unstable at θ = 180°!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Torque aligns magnetic moment m parallel to external field B)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: FAR DIPOLE FIELDS & ELECTRIC ANALOGY */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("FAR DIPOLE FIELDS & ELECTRIC ANALOGY", "FAR DIPOLE FIELDS & ELECTRIC ANALOGY")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 4}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Axial Field (End-on): B_axial = (μ_0 / 4π) (2m / x³).
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Equatorial Field (Broadside): B_eq = (μ_0 / 4π) (m / x³).
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Field Ratio: B_axial = 2 B_equatorial at equal distance x.
+          </T>
+
+          <Draw on={beat >= 8} delay={dl(8, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Electrostatic Mapping: Replace p -&gt; m and 1/4πε_0 -&gt; μ_0/4π!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 8}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Allows instant translation between electric &amp; magnetic dipole formulas)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 8} delay={dl(8, 0.2)} />
+        <Fade on={beat >= 8} delay={dl(8, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("GYROMAGNETIC RATIO & BOHR MAGNETON", "GYROMAGNETIC RATIO & BOHR MAGNETON")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 8}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Gyromagnetic Ratio: μ_l / L = e / (2m_e) = 8.8 × 10^10 C/kg (universal constant for electron).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Bohr Magneton: Minimum quantum magnetic dipole moment μ_B = (e h) / (4π m_e) = 9.27 × 10^-24 A m².
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 8}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            μ_l/L = e / (2m) ≈ 8.8 × 10¹⁰ C kg⁻¹   |   Bohr Magneton μ_B = eh / (4πm) ≈ 9.27 × 10⁻²⁴ A m²!
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 10: Summary Chip */}
-      <Fade on={beat >= 8}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Dipole fields B_ax = 2B_eq = (μ0/4π)(2m/x³); Gyromagnetic ratio e/2m & Bohr Magneton μ_B = eh/4πm! ✓",
             "★ Dipole fields B_ax = 2B_eq = (μ0/4π)(2m/x³); Gyromagnetic ratio e/2m & Bohr Magneton μ_B = eh/4πm! ✓"

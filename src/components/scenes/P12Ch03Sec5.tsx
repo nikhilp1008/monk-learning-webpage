@@ -58,7 +58,7 @@ export default function P12Ch03Sec5({ currentTime, reveals, language }: ScenePro
             <T x={45} y={38} size={13} fill={INK} weight={800}>I</T>
 
             {/* Ohmic Straight Reference Line */}
-            <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 45 200 L 220 50" stroke={MUTED} sw={1.5} strokeDasharray="4 3" />
+            <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 45 200 L 220 50" stroke={MUTED} sw={1.5} />
             <T x={160} y={65} size={11} fill={MUTED} weight={700}>Ohmic (Straight)</T>
 
             {/* Filament Bending Curve */}

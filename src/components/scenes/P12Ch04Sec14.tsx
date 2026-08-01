@@ -32,53 +32,113 @@ export default function P12Ch04Sec14({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Worked Examples: Solenoid Field & NEET Thick-Wire Speed Trap", "Worked Examples: Solenoid Field & NEET Thick-Wire Speed Trap")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1, 2 & 3: CBSE Solenoid Example */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">CBSE LEVEL: SOLENOID FIELD NUMERICAL</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            n = N/L = 1500 / 0.50 = 3000 m⁻¹
+      {/* LEFT SECTION: CBSE SOLENOID EXAMPLE */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CBSE LEVEL: SOLENOID FIELD NUMERICAL", "CBSE LEVEL: SOLENOID FIELD NUMERICAL")}
           </T>
-          <T x={225} y={52} anchor="middle" size={16} fill={GREEN} weight={800}>
-            B = μ₀ n I = 1.5 × 10⁻² T = 15 mT
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5, 6, 9 & 10: NEET Speed Trap: Thick Wire */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">NEET SPEED TRAP: THICK WIRE (r = R/2 vs r = 2R)</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 11}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={14} fill={INK} weight={800}>
-            B_in(R/2) = (μ₀ I R/2)/(2πR²) = μ₀ I / (4πR)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Turn Density: n = N / L = 1500 turns / 0.50 m = 3000 turns/m.
           </T>
-          <T x={240} y={52} anchor="middle" size={16} fill={GREEN} weight={800}>
-            B_out(2R) = μ₀ I / (2π · 2R) = μ₀ I / (4πR)  [Ratio = 1.0!]
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 11: Summary Chip */}
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Given Current: I = 4.0 A.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Solenoid Core Formula: B = μ₀ n I = (4π×10⁻⁷) × 3000 × 4.0.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Numerical Output: B = 1.51 × 10⁻² T = 15.1 mT !
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Standard 2-mark CBSE numerical calculation)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: NEET SPEED TRAP THICK WIRE */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("NEET SPEED TRAP: THICK WIRE (r = R/2 vs r = 2R)", "NEET SPEED TRAP: THICK WIRE (r = R/2 vs r = 2R)")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Inside Field at r = R/2: B_in = [μ₀ I (R/2)] / (2π R²) = μ₀ I / (4π R).
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Outside Field at r = 2R: B_out = μ₀ I / [2π (2R)] = μ₀ I / (4π R).
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Ratio Comparison: B_in(R/2) / B_out(2R) = 1.0.
+          </T>
+
+          <Draw on={beat >= 11} delay={dl(11, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Unexpected Result: Fields at R/2 and 2R are EXACTLY equal!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 11}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Frequent NEET trick question based on 1:1 ratio symmetry)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 11} delay={dl(11, 0.2)} />
+        <Fade on={beat >= 11} delay={dl(11, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SOLENOID & THICK WIRE WORKED EXAMPLES VERDICT", "SOLENOID & THICK WIRE WORKED EXAMPLES VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 11}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Solenoid core field evaluates directly via B = μ₀ n I = 15.1 mT.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            For thick wire of radius R, magnetic field at interior point r = R/2 exactly matches exterior point r = 2R (Ratio = 1.0).
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 11}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Result: Solenoid B = 15 mT | Thick wire B at R/2 equals B at 2R (Ratio = 1.0 exactly)! ✓",
-            "★ Result: Solenoid B = 15 mT | Thick wire B(R/2) aur B(2R) barabar hain (Ratio = 1.0)! ✓"
+            "★ Result: Solenoid B = 15 mT | Thick wire B at R/2 equals B at 2R (Ratio = 1.0 exactly)! ✓"
           )}
         </Chip>
       </Fade>
