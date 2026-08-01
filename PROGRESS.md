@@ -24,8 +24,18 @@ Worktree: branch `premium-board-ch12` · port 3012 only · chapter_id `8300dbf9-
 - Sec 8 — JEE Advanced worked example: liquid N2 spacing ≈3.9Å (touching) vs gas ≈33Å (far apart), ~8-9× closer
 - Sec 9 — pitfalls & pro-tips (5 traps checklist + scale-ladder pro-tip box)
 
+- Sec 10 — what an ideal gas is (packed/empty Mumbai-local train analogy, 6 assumptions, payoff)
+- Sec 11 — when real gas behaves ideally (far-apart-&-fast IDEAL vs squeezed-&-chilled condenses panels, 3 failure zones, PV=nRT)
+- Sec 12 — deriving PV=nRT (3-node flow: state1→Boyle→intermediate→Charles→state2, Avogadro, R universal)
+- Sec 13 — gas laws formula sheet (Boyle/Charles/Gay-Lussac/Avogadro, combined+equivalent forms, Dalton/Graham, constants)
+- Sec 14 — CBSE worked example: compress+heat sealed gas, combined law, P2≈5.3atm
+- Sec 15 — NEET worked example: identify gas from density (M=22.4×ρ shortcut, +273 trap, pro-tip)
+- Sec 16 — JEE Main worked example: O2/He mixture, Dalton's law, total & partial pressure (He dominates)
+- Sec 17 — JEE Advanced worked example: two connected bulbs, moles conserved, P=8P0/7
+- Sec 18 — pitfalls & pro-tips (4 traps + skip-n pro-tip box + bridge to Subtopic 3)
+
 ## Current
-Subtopic 1 (Molecular Nature of Matter, secs 1-9) COMPLETE. Next: Subtopic 2 — Ideal Gas and Gas Laws, Sec 10.
+Subtopic 2 (Ideal Gas and Gas Laws, secs 10-18) COMPLETE. Next: Subtopic 3 — Kinetic Theory and Gas Pressure, Sec 19.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch12_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 48 positions, lengths match narration segment counts for every section).
