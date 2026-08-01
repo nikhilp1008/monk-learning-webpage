@@ -21,8 +21,11 @@ Worktree: branch `premium-board-ch12` · port 3012 only · chapter_id `8300dbf9-
 - Sec 6 — NEET worked example: 2:1:2 reacting volumes (box-ratio diagram, O2=1.5L/H2O=3L, conservation trap struck out)
 - Sec 7 — JEE Main worked example: mean separation ≈33.4Å ≈11 diameters (tick-mark gap diagram)
 
+- Sec 8 — JEE Advanced worked example: liquid N2 spacing ≈3.9Å (touching) vs gas ≈33Å (far apart), ~8-9× closer
+- Sec 9 — pitfalls & pro-tips (5 traps checklist + scale-ladder pro-tip box)
+
 ## Current
-Subtopic 1 in progress. Next: Sec 8.
+Subtopic 1 (Molecular Nature of Matter, secs 1-9) COMPLETE. Next: Subtopic 2 — Ideal Gas and Gas Laws, Sec 10.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch12_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 48 positions, lengths match narration segment counts for every section).
