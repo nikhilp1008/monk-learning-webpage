@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 22 done. Starting Sec 23.
+Sec 23 done. Starting Sec 24.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -146,3 +146,7 @@ tightening delays, not by ignoring the warning.
   "mix two waters" reflex (24°C, crossed out) vs budget method (water
   gives 600cal, melt needs 400cal, surplus 200cal warms all → T=8°C),
   "melt first" rule. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
+- Sec 23 — Worked example: a lead pellet just begins to melt — KE→heat
+  setup, "just begins to melt" = reach mp + complete fusion, cΔT+L_f
+  formula, substitution to 63400 J/kg, boxed v≈503.6 m/s, mass-cancels
+  takeaway. tsc clean, VERDICT PASS, stalls=6/6 (audio gap).
