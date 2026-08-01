@@ -897,6 +897,7 @@ import Ch12Sec34 from "./Ch12Sec34";
 import Ch12Sec35 from "./Ch12Sec35";
 import Ch12Sec36 from "./Ch12Sec36";
 import Ch12Sec37 from "./Ch12Sec37";
+import Ch12Sec38 from "./Ch12Sec38";
 
 const CH12 = "8300dbf9-d9f7-505b-82c6-ad8d236eaff1"; // Class 11 · Kinetic Theory
 
@@ -937,4 +938,5 @@ REGISTRY[`${CH12}:34`] = Ch12Sec34;
 REGISTRY[`${CH12}:35`] = Ch12Sec35;
 REGISTRY[`${CH12}:36`] = Ch12Sec36;
 REGISTRY[`${CH12}:37`] = Ch12Sec37;
+REGISTRY[`${CH12}:38`] = Ch12Sec38;
 /* ============================ end Ch12 ============================ */
