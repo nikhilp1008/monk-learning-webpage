@@ -79,8 +79,22 @@ registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13/35/
 Subtopic 4 (Fluid Dynamics and Bernoulli's Theorem, sec 35–47) fully DRAFTED (tsc clean,
 registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13/47/70/86).
 
+- Sec 48 — "Viscosity: fluid friction": plates + growing-length velocity arrows, F=-ηA(dv/dx).
+- Sec 49 — "Temperature: liquids down, gases up": two mini η-vs-T graphs (falling/rising).
+- Sec 50 — "Terminal velocity": sphere + W (down)/F_B (up small)/F_v (up growing) arrows.
+- Sec 51 — "Deriving terminal velocity": reuses sec50 diagram, full derivation to v_t formula.
+- Sec 52 — "Viscosity toolkit": 7-row colour-coded formula recap list.
+- Sec 53 — "Dragging a plate over glycerine worked example": plates + 3 velocity arrows, F=37.5N.
+- Sec 54 — "Raindrop splitting into 8 worked example": big drop → 8 small drops grid, v'=v/4.
+- Sec 55 — "Glass sphere in glycerine worked example": reuses sphere+3-force diagram, drag=W_app.
+- Sec 56 — "Power dissipated as r^5 worked example": small/large sphere with heat-burst ticks.
+- Sec 57 — "Pitfalls and pro-tips: viscosity": 6-row red/amber tips list.
+
+Subtopic 5 (Viscosity and Terminal Velocity, sec 48–57) fully DRAFTED (tsc clean,
+registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13).
+
 ## Current
-Continuing to draft sec 48+ (Viscosity and Terminal Velocity) per user direction
+Continuing to draft sec 58+ (Poiseuille's Law) per user direction
 (keep drafting, verify later). Resume verification by: re-checking
 `curl -s -o /dev/null -w "%{http_code}" https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/english_sec_13.mp3`
 until it returns 200, then running `verify-scene.mjs` over sec 13 onward in order, fixing
