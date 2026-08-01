@@ -1702,3 +1702,10 @@ REGISTRY[`${P12CH06}:63`] = P12Ch06Sec63;
 REGISTRY[`${P12CH06}:64`] = P12Ch06Sec64;
 REGISTRY[`${P12CH06}:65`] = P12Ch06Sec65;
 /* ============================ end P12Ch06 ============================ */
+
+import Ch10Sec1 from "./Ch10Sec1";
+
+const CH10 = "087ea53b-681c-51a2-92ef-5ea77f6bdf8b"; // Class 11 · Thermal Properties of Matter
+
+REGISTRY[`${CH10}:1`] = Ch10Sec1;
+/* ============================ end Ch10 ============================ */
