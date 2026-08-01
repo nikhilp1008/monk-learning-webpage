@@ -43,5 +43,21 @@
 
 **Subtopic 1 (State/Zeroth Law, Sec 1-8) complete.**
 
+9. The two doors: heat, work, and the first law — piston-cylinder diagram, Q from below (stove), W pushing piston, ΔQ=ΔU+ΔW ringed, bank-account analogy, blind-spot teaser.
+10. Why internal energy is a state function — bank analogy recap, 3-path i→f diagram (classic path-independence figure), closed-cycle loop, ΔU=0 corollary.
+11. Master equation, signs, four shortcuts — ΔQ=ΔU+ΔW both forms, sign-convention chips, W=∫PdV with shaded P-V curve icon, ΔU=nCvΔT, chemistry sign-flip warning, 4-process preview row, dimension check.
+
+## BLOCKED at Section 12 (2026-08-01)
+Audio files for Sec 12–61 all 404 on `https://audio.monklearning.com/11/Physics/p11_ch11_thermodynamics/{lang}_sec_{N}.mp3`
+(spot-checked 12,13,...,61 — all missing; Sec 1–11 audio all present and working).
+`verify-scene.mjs` blocks on `document.querySelector("audio").readyState >= 1` before it will
+inspect any frame, so the verdict gate cannot run at all for these sections yet — not a
+choreography bug, a missing-asset issue upstream. board_reveal_at_english/hinglish timestamps
+ARE already fetched for all 61 sections (cached during this session) and section/beat counts
+were confirmed to match narration segment counts for all 61 — that data is fine and ready to
+use once audio exists.
+Paused authoring past Sec 11 rather than ship un-verified scenes. User is checking on the
+audio pipeline. Resume with Sec 12 once `english_sec_12.mp3` (etc.) returns 200.
+
 ## Current
-Starting Section 9 (Subtopic 2: First Law).
+Paused after Section 11 — blocked on missing audio for Sec 12+ (see above). Sec 1-11 committed and pushed.
