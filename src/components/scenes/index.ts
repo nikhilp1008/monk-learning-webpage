@@ -856,3 +856,10 @@ REGISTRY[`${CH07}:27`] = Ch07Sec27;
 REGISTRY[`${CH07}:28`] = Ch07Sec28;
 REGISTRY[`${CH07}:29`] = Ch07Sec29;
 /* ============================ end Ch07 ============================ */
+
+import Ch11Sec1 from "./Ch11Sec1";
+
+const CH11 = "58c19132-676f-5dfb-b84e-e3a34b34a48e"; // Class 11 · Thermodynamics
+
+REGISTRY[`${CH11}:1`] = Ch11Sec1;
+/* ============================ end Ch11 ============================ */
