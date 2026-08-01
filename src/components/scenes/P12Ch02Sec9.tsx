@@ -36,7 +36,7 @@ export default function P12Ch02Sec9({ currentTime, reveals, language }: ScenePro
   const t = (e: string, h: string) => (en ? e : h);
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
-  // Moving test charge from A to B
+  // Moving test charge from A to B (clamped)
   const animAB = Math.min(1, currentTime * 0.32);
   const qx = 180 + animAB * 160;
 
@@ -52,42 +52,42 @@ export default function P12Ch02Sec9({ currentTime, reveals, language }: ScenePro
 
       {/* LEFT SECTION: PHYSICAL SETUP DIAGRAM */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={25} cy={22} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={26} size={15} fill={RED} weight={800} anchor="start">
             {t("PHYSICAL SETUP: CHARGED SPHERE & POINTS A, B", "PHYSICAL SETUP: CHARGED SPHERE & POINTS A, B")}
           </T>
         </Fade>
 
         <Fade on={beat >= 1}>
           {/* Charged Sphere Q */}
-          <circle cx={80} cy={180} r={30} fill="#ffe4e6" stroke={RED} strokeWidth={2.5} />
-          <T x={80} y={187} size={16} fill={RED} weight={900}>+10 µC</T>
-          <T x={80} y={135} size={13} fill={RED} weight={700}>Sphere (Q)</T>
+          <circle cx={80} cy={165} r={28} fill="#ffe4e6" stroke={RED} strokeWidth={2.5} />
+          <T x={80} y={171} size={15} fill={RED} weight={900}>+10 µC</T>
+          <T x={80} y={125} size={12} fill={RED} weight={700}>Sphere (Q)</T>
 
           {/* Radial axis */}
-          <line x1="110" y1="180" x2="440" y2="180" stroke={INK} strokeWidth={2} />
+          <line x1="108" y1="165" x2="440" y2="165" stroke={INK} strokeWidth={2} />
 
           {/* Point A at r_A = 0.1 m */}
-          <circle cx={180} cy={180} r={7} fill={AMBER_DARK} />
-          <T x={180} y={160} size={14} fill={AMBER_DARK} weight={800}>A (0.1 m)</T>
+          <circle cx={180} cy={165} r={7} fill={AMBER_DARK} />
+          <T x={180} y={145} size={13} fill={AMBER_DARK} weight={800}>A (0.1 m)</T>
 
           {/* Point B at r_B = 0.2 m */}
-          <circle cx={340} cy={180} r={7} fill={GREEN} />
-          <T x={340} y={160} size={14} fill={GREEN} weight={800}>B (0.2 m)</T>
+          <circle cx={340} cy={165} r={7} fill={GREEN} />
+          <T x={340} y={145} size={13} fill={GREEN} weight={800}>B (0.2 m)</T>
 
           {/* Moving test charge q0 = +20 nC */}
-          <circle cx={qx} cy={180} r={9} fill={GREEN} />
-          <T x={qx} y={205} size={12} fill={GREEN} weight={800}>+20 nC</T>
+          <circle cx={qx} cy={165} r={9} fill={GREEN} />
+          <T x={qx} y={188} size={11} fill={GREEN} weight={800}>+20 nC</T>
 
           {/* Arrow showing path A -> B */}
-          <path d={arrowD(195, 220, 325, 220)} stroke={GREEN} strokeWidth={2.5} />
-          <T x={260} y={245} size={13} fill={GREEN} weight={800}>Displacement A → B</T>
+          <path d={arrowD(195, 205, 325, 205)} stroke={GREEN} strokeWidth={2.5} />
+          <T x={260} y={225} size={12} fill={GREEN} weight={800}>Displacement A → B</T>
         </Fade>
 
         {/* Free Floating Problem Statement (Spacious, No Box) */}
         <Fade on={beat >= 2}>
-          <T x={240} y={305} anchor="middle" size={16} fill={INK} weight={800}>
+          <T x={220} y={305} anchor="middle" size={14} fill={INK} weight={800}>
             Calculate V_A, V_B, and external work W_ext to move q₀ = +20 nC from A to B!
           </T>
         </Fade>
@@ -95,44 +95,44 @@ export default function P12Ch02Sec9({ currentTime, reveals, language }: ScenePro
 
       {/* RIGHT SECTION: STEP-BY-STEP NUMERICAL SOLUTION */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Badge n={2} cx={25} cy={22} on={beat >= 3} delay={dl(3, 0.2)} />
         <Fade on={beat >= 3} delay={dl(3, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={26} size={15} fill={RED} weight={800} anchor="start">
             {t("STEP-BY-STEP NUMERICAL SOLUTION", "STEP-BY-STEP NUMERICAL SOLUTION")}
           </T>
         </Fade>
 
         {/* Floating Solution Steps (No Card Boxes) */}
         <Fade on={beat >= 3}>
-          <T x={50} y={85} size={16} fill={AMBER_DARK} weight={800} anchor="start">
+          <T x={45} y={75} size={15} fill={AMBER_DARK} weight={800} anchor="start">
             1. V_A = (9×10⁹ × 10⁻⁵) / 0.1 = 9.0 × 10⁵ V  (900 kV)
           </T>
 
-          <T x={50} y={145} size={16} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={125} size={15} fill={GREEN} weight={800} anchor="start">
             2. V_B = (9×10⁹ × 10⁻⁵) / 0.2 = 4.5 × 10⁵ V  (450 kV)
           </T>
 
-          <T x={50} y={205} size={16} fill={RED} weight={800} anchor="start">
+          <T x={45} y={175} size={15} fill={RED} weight={800} anchor="start">
             3. ΔV = V_B − V_A = 4.5×10⁵ − 9.0×10⁵ = −4.5 × 10⁵ V
           </T>
 
-          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 50 235 L 450 235" stroke={INK} sw={2} />
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 200 L 450 200" stroke={INK} sw={2} />
 
-          <T x={50} y={285} size={20} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={240} size={18} fill={GREEN} weight={800} anchor="start">
             4. W_ext = q₀ ΔV = (20×10⁻⁹) (−4.5×10⁵) = −9.0 mJ
           </T>
         </Fade>
 
         {/* Open Text Explanation */}
         <Fade on={beat >= 5}>
-          <T x={250} y={305} anchor="middle" size={15} fill={GREEN} weight={800}>
+          <T x={240} y={285} anchor="middle" size={13} fill={GREEN} weight={800}>
             Negative work means field repels charge outwards — system releases potential energy!
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -141,11 +141,11 @@ export default function P12Ch02Sec9({ currentTime, reveals, language }: ScenePro
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
-            Always calculate ΔV = V_final − V_initial (Order matters for work sign W_ext = q ΔV)!
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            {t("Always calculate ΔV = V_final − V_initial (Order matters for work sign W_ext = q ΔV)!", "Always calculate ΔV = V_final − V_initial (Order matters for work sign W_ext = q ΔV)!")}
           </T>
-          <T x={45} y={76} size={13} anchor="start" fill={INK} weight={700}>
-            Work done by electrostatic field W_field = − W_ext = +9.0 mJ!
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            {t("Work done by electrostatic field W_field = − W_ext = +9.0 mJ!", "Work done by electrostatic field W_field = − W_ext = +9.0 mJ!")}
           </T>
         </Fade>
       </g>

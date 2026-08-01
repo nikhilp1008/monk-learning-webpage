@@ -38,9 +38,9 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
 
   // Motion along equipotential circle
   const orbitAngle = Math.min(Math.PI * 1.5, currentTime * 0.8);
-  const rOrbit = 110;
+  const rOrbit = 80;
   const qx = 220 + rOrbit * Math.cos(orbitAngle);
-  const qy = 200 - rOrbit * Math.sin(orbitAngle);
+  const qy = 160 - rOrbit * Math.sin(orbitAngle);
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
@@ -54,33 +54,33 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
 
       {/* LEFT SECTION: CONCENTRIC EQUIPOTENTIAL SPHERES & ZERO WORK */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={25} cy={22} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={26} size={15} fill={RED} weight={800} anchor="start">
             {t("POINT CHARGE EQUIPOTENTIAL SPHERES", "POINT CHARGE EQUIPOTENTIAL SPHERES")}
           </T>
         </Fade>
 
         <Fade on={beat >= 1}>
           {/* Central Charge +Q */}
-          <circle cx={220} cy={200} r={18} fill={RED} />
-          <T x={220} y={206} size={14} fill="#ffffff" weight={900}>+Q</T>
+          <circle cx={220} cy={160} r={16} fill={RED} />
+          <T x={220} y={165} size={14} fill="#ffffff" weight={900}>+Q</T>
 
           {/* Concentric Spheres V1, V2, V3 */}
-          <circle cx={220} cy={200} r={60} stroke={AMBER_DARK} strokeWidth={2} fill="none" strokeDasharray="4 4" />
-          <T x={220} y={132} size={12} fill={AMBER_DARK} weight={800}>V₁ = 100V</T>
+          <circle cx={220} cy={170} r={40} stroke={AMBER_DARK} strokeWidth={2} fill="none" strokeDasharray="4 4" />
+          <T x={220} y={122} size={11} fill={AMBER_DARK} weight={800}>V₁ = 100V</T>
 
-          <circle cx={220} cy={200} r={110} stroke={GREEN} strokeWidth={2.5} fill="none" strokeDasharray="5 5" />
-          <T x={220} y={82} size={12} fill={GREEN} weight={800}>V₂ = 75V (Equipotential)</T>
+          <circle cx={220} cy={170} r={75} stroke={GREEN} strokeWidth={2.5} fill="none" strokeDasharray="5 5" />
+          <T x={220} y={87} size={11} fill={GREEN} weight={800}>V₂ = 75V (Equipotential)</T>
 
-          <circle cx={220} cy={200} r={155} stroke={RED} strokeWidth={2} fill="none" strokeDasharray="4 4" />
-          <T x={220} y={37} size={12} fill={RED} weight={800}>V₃ = 50V</T>
+          <circle cx={220} cy={170} r={110} stroke={RED} strokeWidth={2} fill="none" strokeDasharray="4 4" />
+          <T x={220} y={52} size={11} fill={RED} weight={800}>V₃ = 50V</T>
 
-          {/* Radial E-Field Vectors Perpendicular to Surfaces */}
-          <path d={arrowD(220, 90, 220, 30)} stroke={RED} strokeWidth={2} />
-          <path d={arrowD(220, 310, 220, 370)} stroke={RED} strokeWidth={2} />
-          <path d={arrowD(90, 200, 30, 200)} stroke={RED} strokeWidth={2} />
-          <path d={arrowD(350, 200, 410, 200)} stroke={RED} strokeWidth={2} />
+          {/* Radial E-Field Vectors Perpendicular to Surfaces (Diagonal & Horizontal) */}
+          <path d={arrowD(100, 170, 45, 170)} stroke={RED} strokeWidth={2} />
+          <path d={arrowD(340, 170, 395, 170)} stroke={RED} strokeWidth={2} />
+          <path d={arrowD(275, 115, 315, 75)} stroke={RED} strokeWidth={2} />
+          <path d={arrowD(275, 225, 315, 265)} stroke={RED} strokeWidth={2} />
 
           {/* Moving Charge on Equipotential V2 */}
           <circle cx={qx} cy={qy} r={9} fill={GREEN} />
@@ -89,7 +89,7 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
 
         {/* Free Floating Formula (Spacious, No Box) */}
         <Fade on={beat >= 2}>
-          <T x={220} y={305} anchor="middle" size={16} fill={GREEN} weight={800}>
+          <T x={220} y={310} anchor="middle" size={14} fill={GREEN} weight={800}>
             W_AB = q₀ (V_B − V_A) = 0   (Zero work along equipotential path!)
           </T>
         </Fade>
@@ -97,44 +97,44 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
 
       {/* RIGHT SECTION: UNIFORM FIELD PARALLEL PLANES & E ⊥ SURFACE */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Badge n={2} cx={25} cy={22} on={beat >= 3} delay={dl(3, 0.2)} />
         <Fade on={beat >= 3} delay={dl(3, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={26} size={15} fill={RED} weight={800} anchor="start">
             {t("UNIFORM FIELD: E ⊥ PARALLEL PLANES", "UNIFORM FIELD: E ⊥ PARALLEL PLANES")}
           </T>
         </Fade>
 
         <Fade on={beat >= 3}>
           {/* Parallel Equipotential Planes */}
-          <line x1="80" y1="80" x2="80" y2="330" stroke={AMBER_DARK} strokeWidth={3} strokeDasharray="6 4" />
-          <T x={80} y={65} size={13} fill={AMBER_DARK} weight={800} anchor="middle">V = 60V</T>
+          <line x1="80" y1="65" x2="80" y2="275" stroke={AMBER_DARK} strokeWidth={3} strokeDasharray="6 4" />
+          <T x={80} y={50} size={12} fill={AMBER_DARK} weight={800} anchor="middle">V = 60V</T>
 
-          <line x1="220" y1="80" x2="220" y2="330" stroke={GREEN} strokeWidth={3} strokeDasharray="6 4" />
-          <T x={220} y={65} size={13} fill={GREEN} weight={800} anchor="middle">V = 40V</T>
+          <line x1="220" y1="65" x2="220" y2="275" stroke={GREEN} strokeWidth={3} strokeDasharray="6 4" />
+          <T x={220} y={50} size={12} fill={GREEN} weight={800} anchor="middle">V = 40V</T>
 
-          <line x1="360" y1="80" x2="360" y2="330" stroke={RED} strokeWidth={3} strokeDasharray="6 4" />
-          <T x={360} y={65} size={13} fill={RED} weight={800} anchor="middle">V = 20V</T>
+          <line x1="360" y1="65" x2="360" y2="275" stroke={RED} strokeWidth={3} strokeDasharray="6 4" />
+          <T x={360} y={50} size={12} fill={RED} weight={800} anchor="middle">V = 20V</T>
 
           {/* Electric Field E Vector Arrows pointing Right (perpendicular ⊥) */}
-          <path d={arrowD(40, 140, 420, 140)} stroke={RED} strokeWidth={3} />
-          <path d={arrowD(40, 260, 420, 260)} stroke={RED} strokeWidth={3} />
-          <T x={435} y={145} size={14} fill={RED} weight={800} anchor="start">E Vector</T>
+          <path d={arrowD(40, 115, 420, 115)} stroke={RED} strokeWidth={3} />
+          <path d={arrowD(40, 220, 420, 220)} stroke={RED} strokeWidth={3} />
+          <T x={435} y={120} size={13} fill={RED} weight={800} anchor="start">E Vector</T>
 
           {/* 90° Perpendicular Symbols */}
-          <path d="M 220 150 L 230 150 L 230 140" stroke="#000000" strokeWidth={1.5} fill="none" />
-          <T x={240} y={160} size={12} fill={INK} weight={800}>90° (E ⊥ Surface)</T>
+          <path d="M 220 125 L 230 125 L 230 115" stroke="#000000" strokeWidth={1.5} fill="none" />
+          <T x={240} y={135} size={12} fill={INK} weight={800}>90° (E ⊥ Surface)</T>
         </Fade>
 
         {/* Free Floating Rule (Spacious, No Box) */}
         <Fade on={beat >= 5}>
-          <T x={240} y={390} anchor="middle" size={16} fill={RED} weight={800}>
+          <T x={240} y={310} anchor="middle" size={14} fill={RED} weight={800}>
             Equipotential surfaces NEVER intersect! (Otherwise E would have 2 directions!)
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS CORE RULES */}
-      <g transform="translate(40, 475)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 6} delay={dl(6, 0.2)} />
         <Fade on={beat >= 6} delay={dl(6, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -143,8 +143,8 @@ export default function P12Ch02Sec3({ currentTime, reveals, language }: ScenePro
         </Fade>
 
         <Fade on={beat >= 6}>
-          <T x={45} y={52} size={14} anchor="start" fill={GREEN} weight={800}>
-            1. W = 0 on surface   |   2. E is ALWAYS ⊥ to surface   |   3. Points towards decreasing V   |   4. Never intersect!
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            {t("1. W = 0 on surface   |   2. E is ALWAYS ⊥ to surface   |   3. Points towards decreasing V   |   4. Never intersect!", "1. W = 0 on surface   |   2. E is ALWAYS ⊥ to surface   |   3. Points towards decreasing V   |   4. Never intersect!")}
           </T>
         </Fade>
       </g>

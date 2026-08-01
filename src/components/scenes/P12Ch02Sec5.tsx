@@ -36,9 +36,9 @@ export default function P12Ch02Sec5({ currentTime, reveals, language }: ScenePro
   const dl = (k: number, d: number) => delayFor(beat, k, d);
 
   // Rotating dipole angle animation
-  const rotAngle = Math.sin(Math.min(Math.PI / 2, currentTime * 0.8)) * 0.3;
-  const dx = Math.cos(rotAngle) * 60;
-  const dy = Math.sin(rotAngle) * 60;
+  const rotAngle = Math.sin(Math.min(Math.PI / 2, currentTime * 0.8)) * 0.25;
+  const dx = Math.cos(rotAngle) * 55;
+  const dy = Math.sin(rotAngle) * 55;
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
@@ -52,9 +52,9 @@ export default function P12Ch02Sec5({ currentTime, reveals, language }: ScenePro
 
       {/* LEFT SECTION: DIPOLE VECTOR & OBSERVATION POINT P */}
       <g transform="translate(40, 75)">
-        <Badge n={1} cx={25} cy={25} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Badge n={1} cx={25} cy={22} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={26} size={15} fill={RED} weight={800} anchor="start">
             {t("ELECTRIC DIPOLE AT ANGLE θ", "ELECTRIC DIPOLE AT ANGLE θ")}
           </T>
         </Fade>
@@ -62,30 +62,30 @@ export default function P12Ch02Sec5({ currentTime, reveals, language }: ScenePro
         {/* Dipole Charges +q and -q */}
         <Fade on={beat >= 1}>
           {/* Dipole axis line */}
-          <line x1={200 - dx} y1={240 - dy} x2={200 + dx} y2={240 + dy} stroke={INK} strokeWidth={3} />
+          <line x1={180 - dx} y1={220 - dy} x2={180 + dx} y2={220 + dy} stroke={INK} strokeWidth={3} />
 
           {/* -q Charge */}
-          <circle cx={200 - dx} cy={240 - dy} r={18} fill="#dcfce7" stroke={GREEN} strokeWidth={2} />
-          <T x={200 - dx} y={246 - dy} size={16} fill={GREEN} weight={800}>-q</T>
+          <circle cx={180 - dx} cy={220 - dy} r={17} fill="#dcfce7" stroke={GREEN} strokeWidth={2} />
+          <T x={180 - dx} y={225 - dy} size={15} fill={GREEN} weight={800}>-q</T>
 
           {/* +q Charge */}
-          <circle cx={200 + dx} cy={240 + dy} r={18} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
-          <T x={200 + dx} y={246 + dy} size={16} fill={RED} weight={800}>+q</T>
+          <circle cx={180 + dx} cy={220 + dy} r={17} fill="#ffe4e6" stroke={RED} strokeWidth={2} />
+          <T x={180 + dx} y={225 + dy} size={15} fill={RED} weight={800}>+q</T>
 
           {/* Dipole moment vector p */}
-          <path d={arrowD(200 - dx, 240 - dy, 200 + dx + 15, 240 + dy + 15)} stroke={AMBER_DARK} strokeWidth={2.5} />
-          <T x={200 + dx + 30} y={240 + dy + 20} size={14} fill={AMBER_DARK} weight={800}>p = 2aq</T>
+          <path d={arrowD(180 - dx, 260 - dy, 180 + dx + 20, 260 + dy)} stroke={AMBER_DARK} strokeWidth={2.5} />
+          <T x={180 + dx + 45} y={265 + dy} size={13} fill={AMBER_DARK} weight={800}>p = 2aq</T>
 
           {/* Position vector r to Point P */}
-          <line x1="200" y1="240" x2="380" y2="90" stroke={RED} strokeWidth={2.5} strokeDasharray="5 5" />
-          <circle cx={380} cy={90} r={6} fill={RED} />
-          <T x={400} y={85} size={15} fill={RED} weight={800}>Point P (r, θ)</T>
-          <T x={290} y={150} size={13} fill={RED} weight={700}>r</T>
+          <line x1="180" y1="220" x2="380" y2="75" stroke={RED} strokeWidth={2.5} strokeDasharray="5 5" />
+          <circle cx={380} cy={75} r={6} fill={RED} />
+          <T x={395} y={72} size={14} fill={RED} weight={800}>Point P (r, θ)</T>
+          <T x={290} y={135} size={13} fill={RED} weight={700}>r</T>
         </Fade>
 
         {/* Free Floating Formula (Spacious, No Box) */}
         <Fade on={beat >= 2}>
-          <T x={240} y={305} anchor="middle" size={19} fill={GREEN} weight={800}>
+          <T x={220} y={305} anchor="middle" size={17} fill={GREEN} weight={800}>
             V(r, θ) = (1 / 4πε₀) (p cosθ / r²)   [Decays as 1/r² !]
           </T>
         </Fade>
@@ -93,9 +93,9 @@ export default function P12Ch02Sec5({ currentTime, reveals, language }: ScenePro
 
       {/* RIGHT SECTION: FIELD-POTENTIAL GRADIENT RELATION E = - dV/dr */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={25} cy={25} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Badge n={2} cx={25} cy={22} on={beat >= 3} delay={dl(3, 0.2)} />
         <Fade on={beat >= 3} delay={dl(3, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+          <T x={45} y={26} size={15} fill={RED} weight={800} anchor="start">
             {t("FIELD-POTENTIAL GRADIENT: E = − dV/dr", "FIELD-POTENTIAL GRADIENT: E = − dV/dr")}
           </T>
         </Fade>
@@ -103,30 +103,30 @@ export default function P12Ch02Sec5({ currentTime, reveals, language }: ScenePro
         {/* Steepest Drop Visual Diagram */}
         <Fade on={beat >= 3}>
           {/* Equipotential Lines V1 = 100V, V2 = 80V, V3 = 60V */}
-          <line x1="60" y1="80" x2="420" y2="80" stroke={AMBER_DARK} strokeWidth={2.5} strokeDasharray="6 4" />
-          <T x={435} y={85} size={13} fill={AMBER_DARK} weight={800} anchor="start">V₁ = 100V</T>
+          <line x1="60" y1="75" x2="420" y2="75" stroke={AMBER_DARK} strokeWidth={2.5} strokeDasharray="6 4" />
+          <T x={435} y={80} size={13} fill={AMBER_DARK} weight={800} anchor="start">V₁ = 100V</T>
 
-          <line x1="60" y1="180" x2="420" y2="180" stroke={GREEN} strokeWidth={2.5} strokeDasharray="6 4" />
-          <T x={435} y={185} size={13} fill={GREEN} weight={800} anchor="start">V₂ = 80V</T>
+          <line x1="60" y1="165" x2="420" y2="165" stroke={GREEN} strokeWidth={2.5} strokeDasharray="6 4" />
+          <T x={435} y={170} size={13} fill={GREEN} weight={800} anchor="start">V₂ = 80V</T>
 
-          <line x1="60" y1="280" x2="420" y2="280" stroke={RED} strokeWidth={2.5} strokeDasharray="6 4" />
-          <T x={435} y={285} size={13} fill={RED} weight={800} anchor="start">V₃ = 60V</T>
+          <line x1="60" y1="255" x2="420" y2="255" stroke={RED} strokeWidth={2.5} strokeDasharray="6 4" />
+          <T x={435} y={260} size={13} fill={RED} weight={800} anchor="start">V₃ = 60V</T>
 
           {/* Electric Field E vector pointing DOWNWARD towards decreasing potential */}
-          <path d={arrowD(240, 80, 240, 275)} stroke={RED} strokeWidth={4} />
-          <T x={255} y={180} size={16} fill={RED} weight={900}>E = − dV/dr (Steepest Drop)</T>
+          <path d={arrowD(150, 75, 150, 250)} stroke={RED} strokeWidth={3.5} />
+          <T x={170} y={120} size={14} fill={RED} weight={900} anchor="start">E = − dV/dr (Steepest Drop)</T>
         </Fade>
 
         {/* Free Floating Formula (Spacious, No Box) */}
         <Fade on={beat >= 5}>
-          <T x={240} y={305} anchor="middle" size={20} fill={RED} weight={800}>
+          <T x={240} y={305} anchor="middle" size={17} fill={RED} weight={800}>
             E = − dV / dr   or   E_vector = − ∇ V
           </T>
         </Fade>
       </g>
 
       {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 420)">
+      <g transform="translate(40, 415)">
         <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
         <Fade on={beat >= 7} delay={dl(7, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
@@ -135,10 +135,10 @@ export default function P12Ch02Sec5({ currentTime, reveals, language }: ScenePro
         </Fade>
 
         <Fade on={beat >= 7}>
-          <T x={45} y={52} size={14} fill={GREEN} weight={800} anchor="start">
+          <T x={45} y={50} size={14} fill={GREEN} weight={800} anchor="start">
             {t("• Axial Line (θ = 0°): V = kp/r²   |   • Equatorial Line (θ = 90°): V = 0 V (Zero Potential Line!)", "• Axial Line (θ = 0°): V = kp/r²   |   • Equatorial Line (θ = 90°): V = 0 V (Zero Potential Line!)")}
           </T>
-          <T x={45} y={76} size={13} fill={INK} weight={700} anchor="start">
+          <T x={45} y={72} size={13} fill={INK} weight={700} anchor="start">
             {t("• Point charge V ∝ 1/r (spherical decay); Dipole V ∝ 1/r² (faster quadrupole-like angular decay)!", "• Point charge V ∝ 1/r (spherical decay); Dipole V ∝ 1/r² (faster quadrupole-like angular decay)!")}
           </T>
         </Fade>
