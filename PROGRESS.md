@@ -16,7 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 5 done. Starting Sec 6.
+Sec 6 done. Starting Sec 7.
 
 ## Note
 Ch10's reveal timestamps often have 1s-tight middle beats. Keep any beat's
@@ -41,3 +41,6 @@ tightening delays, not by ignoring the warning.
 - Sec 5 — Temperature scales: one conversion identity — master-identity
   formula card, F/K derived formulas, Kelvin SI note, ice/steam fixed-
   point table, exam-secret delta box. VERDICT PASS (eyeballed, clean).
+- Sec 6 — Heat, specific heat, and the calorie — hero equation Q=mcΔT,
+  recipe metaphor, variable legend, calorie chip, precise cal definition,
+  mechanical-equivalent J box. VERDICT PASS (eyeballed, clean).
