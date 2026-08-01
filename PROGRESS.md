@@ -16,8 +16,7 @@
 - 73–74 Wrap-Up
 
 ## Current
-Sec 14 done — Subtopic 1 (Temperature, Heat and Expansion) 100% COMPLETE
-(14/14). Starting Sec 15 (Subtopic 2: Calorimetry, sections 15-25).
+Sec 15 done. Starting Sec 16.
 
 ## IMPORTANT: audio pipeline gap from Sec 12 onward
 Confirmed via curl: audio.monklearning.com has generated mp3s (200) for
@@ -113,3 +112,8 @@ tightening delays, not by ignoring the warning.
   apparent expansion for liquids) + amber sanity-check box (1mm/m/100°C).
   Matches the Ch01Sec90 house motif. tsc clean, VERDICT PASS, stalls=6/6
   (audio gap, expected). SUBTOPIC 1 COMPLETE (14/14).
+- Sec 15 — Specific heat: the stubbornness of water — ladle+mug/flame
+  hook, scorch-vs-warm, water/steel ΔT bar comparison, c definition,
+  boxed c_water=4186 J/(kg·K) value, real-world consequences, "thermal
+  shock-absorber" verdict. tsc clean, VERDICT PASS, stalls=6/6 (audio
+  gap). Opens Subtopic 2 (Calorimetry and Specific Heat).
