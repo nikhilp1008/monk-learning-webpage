@@ -46,10 +46,25 @@ Subtopic 1 (Fluid Pressure and Pascal's Law), Sec 1–11 — ALL PASS both langu
 All of sec 13–22 (subtopic 2, Buoyancy and Floatation) are DRAFTED (pass `npx tsc --noEmit`,
 registered in `index.ts`) but UNVERIFIED — see incident below.
 
+- Sec 23 — "Effective gravity": g/a/g_eff vector triangle, g_eff=√(a²+g²).
+- Sec 24 — "Horizontal acceleration tilts the surface": tank, tilted line, Δh bracket, θ, tanθ=a/g.
+- Sec 25 — "Vertical acceleration and free fall": two tanks (g+a up / g−a down), free-fall note.
+- Sec 26 — "Spin makes a paraboloid": rotating container, paraboloid curve, ω loop, inward arrows.
+- Sec 27 — "Deriving the tilt angle": mg/ma/net vector triangle + perpendicular-surface tick.
+- Sec 28 — "Deriving the paraboloid surface": axis+paraboloid+radius bracket+growing dP/dr arrows.
+- Sec 29 — "Accelerated and rotating toolkit": 7-row colour-coded formula recap list.
+- Sec 30 — "Diesel tanker tilt worked example": tanker+tilted line, θ≈16.7°.
+- Sec 31 — "45° means a=g worked example": right triangle (g=a legs, 45° hypotenuse).
+- Sec 32 — "Accelerating tank height gap worked example": tank, pivot-about-centre tilt, spill check.
+- Sec 33 — "Rotating cylinder exposing the bottom": paraboloid touching base, rim at 2H.
+- Sec 34 — "Pitfalls and pro-tips: accelerated/rotating fluids": 6-row red/amber tips list.
+
+Subtopic 3 (Fluids in Accelerated and Rotating Frames, sec 23–34) fully DRAFTED (tsc clean,
+registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13/35/60/86).
+
 ## Current
-Blocked on missing audio for sec 13 onward (re-checked at sec 13/20/30/50/86, still all 404
-as of this commit). Continuing to draft sections 23+ per user direction (keep drafting,
-verify later). Resume verification by: re-checking
+Continuing to draft sec 35+ (Fluid Dynamics and Bernoulli's Theorem) per user direction
+(keep drafting, verify later). Resume verification by: re-checking
 `curl -s -o /dev/null -w "%{http_code}" https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/english_sec_13.mp3`
 until it returns 200, then running `verify-scene.mjs` over sec 13 onward in order, fixing
 any real overlap/overflow found (the layouts were authored carefully but without the
