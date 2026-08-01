@@ -32,70 +32,113 @@ export default function P12Ch03Sec17({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Pitfalls & Pro-Tips: Current & Drift Velocity", "Pitfalls & Pro-Tips: Current & Drift Velocity")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 230 70 C 440 66, 640 74, 850 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Pitfall 1 - I vs J */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">CURRENT vs CURRENT DENSITY</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Current I is SCALAR (A); Current Density J is VECTOR (A/m²).",
-              "Current I SCALAR hai (A); Current Density J VECTOR hai (A/m²)."
-            )}
+      {/* LEFT SECTION: SCALAR CURRENT VS VECTOR DENSITY */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SCALAR CURRENT VS VECTOR DENSITY", "SCALAR CURRENT VS VECTOR DENSITY")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: Pitfall 2 - Drift vs Signal */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">DRIFT SPEED vs SIGNAL SPEED</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Never confuse v_d (~10⁻⁴ m/s) with E-field signal (~c)!",
-              "v_d (~10⁻⁴ m/s) ko E-field signal (~c) se kabhi confuse mat karna!"
-            )}
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Current I is a SCALAR: Charges add algebraically (dot product I = ∫ J · dA).
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5: Unit conversion & Stretching */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">STRETCHING & UNIT CONVERSIONS</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "1 mm² = 10⁻⁶ m² | Stretch Rule: R ∝ L² at constant volume | ρ is constant!",
-              "1 mm² = 10⁻⁶ m² | Stretch Rule: R ∝ L² constant volume pe | ρ constant rehta hai!"
-            )}
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Current Density J is a VECTOR: Points in direction of local E field.
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Summary Chip */}
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Junction Law: Σ I_in = Σ I_out follows charge conservation.
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Vector Trap: Never treat circuit current I as a vector!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Current has direction but obeys scalar addition rules)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: DRIFT SPEED VS E-FIELD SIGNAL SPEED */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("DRIFT SPEED VS E-FIELD SIGNAL SPEED", "DRIFT SPEED VS E-FIELD SIGNAL SPEED")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Electron Drift Speed v_d: Tiny crawl velocity (~10⁻⁴ m/s or ~0.1 mm/s)
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Signal Propagation Speed: E-field setup travels near speed of light c!
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Instant Bulb On: Field sets all electrons drifting simultaneously!
+          </T>
+
+          <Draw on={beat >= 6} delay={dl(6, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Stretch Law: R ∝ L² for constant volume wire!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Resistivity ρ is a material constant independent of wire geometry)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("EXAM PRO-TIPS VERDICT", "EXAM PRO-TIPS VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Always double-check order of magnitude: v_d ~ 10⁻⁴ m/s, relaxation time τ ~ 10⁻¹⁴ s.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Remember that stretching changes resistance R (R ∝ L²), but resistivity ρ remains constant.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Sanity Checks: v_d ~ 10⁻⁴ m/s, τ ~ 10⁻¹⁴ s. R changes on stretching, ρ does not! ✓",
-            "★ Sanity Checks: v_d ~ 10⁻⁴ m/s, τ ~ 10⁻¹⁴ s. Stretch karne pe R badalta hai, ρ nahi! ✓"
+            "★ Sanity Checks: v_d ~ 10⁻⁴ m/s, τ ~ 10⁻¹⁴ s. R changes on stretching, ρ does not! ✓"
           )}
         </Chip>
       </Fade>

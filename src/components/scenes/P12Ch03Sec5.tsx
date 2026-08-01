@@ -32,79 +32,108 @@ export default function P12Ch03Sec5({ currentTime, reveals, language }: ScenePro
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("When Ohm's law fails: non-linear & one-way devices", "Jab Ohm's law fail hota hai: non-linear aur one-way devices")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("When Ohm's law fails: non-linear & one-way devices", "When Ohm's law fails: non-linear & one-way devices")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 230 70 C 440 66, 640 74, 850 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 2: V-I Non-linear Graph (Filament Bulb) */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 6}>
-        <g transform="translate(80, 130)">
-          <T x={150} y={0} size={15} fill={RED} weight={800}>1. Non-Linearity (Filament Bulb)</T>
-
-          {/* Axes */}
-          <Draw on={beat >= 1} delay={dl(1, 0.4)} d="M 30 180 L 260 180" stroke={INK} sw={2} />
-          <Draw on={beat >= 1} delay={dl(1, 0.4)} d="M 30 180 L 30 20" stroke={INK} sw={2} />
-          <T x={270} y={185} size={13} fill={INK} weight={700}>V</T>
-          <T x={30} y={10} size={13} fill={INK} weight={700}>I</T>
-
-          {/* Ohmic Straight Line */}
-          <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 30 180 L 220 30" stroke={MUTED} sw={1.5} />
-          <T x={180} y={40} size={12} fill={MUTED} weight={700}>Ohmic (Straight)</T>
-
-          {/* Filament Lamp Bending Curve */}
-          <Draw on={beat >= 2} delay={dl(2, 0.4)} d="M 30 180 Q 150 70 240 60" stroke={RED} sw={2.5} />
-          <T x={200} y={80} size={12} fill={RED} weight={800}>Filament (Heats up)</T>
-        </g>
-      </Fade>
-
-      {/* BEAT 4 & 5: Diode V-I Characteristics */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)} dim={beat >= 6}>
-        <g transform="translate(560, 130)">
-          <T x={200} y={-20} size={15} fill={RED} weight={800}>2. Direction Dependent (Diode)</T>
-
-          {/* Axes centered */}
-          <Draw on={beat >= 4} delay={dl(4, 0.4)} d="M 40 100 L 360 100" stroke={INK} sw={2} />
-          <Draw on={beat >= 4} delay={dl(4, 0.4)} d="M 200 190 L 200 10" stroke={INK} sw={2} />
-          <T x={370} y={105} size={13} fill={INK} weight={700}>+V</T>
-          <T x={30} y={105} size={13} fill={INK} weight={700}>-V</T>
-          <T x={205} y={10} size={13} fill={INK} weight={700}>+I</T>
-
-          {/* Forward Bias Curve */}
-          <Draw on={beat >= 5} delay={dl(5, 0.4)} d="M 200 100 L 260 100 Q 300 95 320 20" stroke={GREEN} sw={2.5} />
-          <T x={290} y={40} size={12} fill={GREEN} weight={800}>Forward Bias</T>
-
-          {/* Reverse Bias Line */}
-          <Draw on={beat >= 5} delay={dl(5, 0.4)} d="M 200 100 L 60 102" stroke={RED} sw={2} />
-          <T x={100} y={125} size={12} fill={RED} weight={800}>Reverse Bias (Blocked)</T>
-        </g>
-      </Fade>
-
-      {/* BEAT 6: Explanation */}
-      <Badge n={1} cx={52} cy={370} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={375} size={14} fill={RED} weight={700} anchor="start">WHY OHM'S LAW FAILS</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 7}>
-        <g transform="translate(60, 390)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Heating reduces relaxation time τ, increasing R. Diodes act as one-way valves!",
-              "Garmi se relaxation time τ ghatta hai aur R badhta hai. Diodes one-way valve ki tarah kaam karte hain!"
-            )}
+      {/* LEFT SECTION: FILAMENT LAMP NON-LINEARITY */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("NON-OHMIC BEHAVIOR: FILAMENT LAMP", "NON-OHMIC BEHAVIOR: FILAMENT LAMP")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 7: Summary Chip */}
+        {/* Filament V-I Graph (Open Chalkboard) */}
+        <Fade on={beat >= 1}>
+          <g transform="translate(0, 10)">
+            <Draw on={beat >= 1} delay={dl(1, 0.4)} d="M 45 200 L 260 200" stroke={INK} sw={2} />
+            <Draw on={beat >= 1} delay={dl(1, 0.4)} d="M 45 200 L 45 50" stroke={INK} sw={2} />
+            <T x={270} y={205} size={13} fill={INK} weight={800}>V</T>
+            <T x={45} y={38} size={13} fill={INK} weight={800}>I</T>
+
+            {/* Ohmic Straight Reference Line */}
+            <Draw on={beat >= 1} delay={dl(1, 0.5)} d="M 45 200 L 220 50" stroke={MUTED} sw={1.5} strokeDasharray="4 3" />
+            <T x={160} y={65} size={11} fill={MUTED} weight={700}>Ohmic (Straight)</T>
+
+            {/* Filament Bending Curve */}
+            <Draw on={beat >= 2} delay={dl(2, 0.4)} d="M 45 200 Q 150 90 240 80" stroke={RED} sw={2.5} />
+            <T x={170} y={100} size={12} fill={RED} weight={800}>Filament (R rises)</T>
+          </g>
+        </Fade>
+
+        <Fade on={beat >= 3}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (As V increases, filament heats up, τ decreases, and R rises non-linearly)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: DIRECTION-DEPENDENT DEVICE (DIODE) */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("DIRECTION-DEPENDENT DEVICE: DIODE", "DIRECTION-DEPENDENT DEVICE: DIODE")}
+          </T>
+        </Fade>
+
+        {/* Diode V-I Graph (Open Chalkboard) */}
+        <Fade on={beat >= 4}>
+          <g transform="translate(0, 10)">
+            <Draw on={beat >= 4} delay={dl(4, 0.4)} d="M 45 130 L 450 130" stroke={INK} sw={2} />
+            <Draw on={beat >= 4} delay={dl(4, 0.4)} d="M 245 200 L 245 40" stroke={INK} sw={2} />
+            <T x={465} y={135} size={13} fill={INK} weight={800}>+V</T>
+            <T x={25} y={135} size={13} fill={INK} weight={800}>-V</T>
+            <T x={245} y={28} size={13} fill={INK} weight={800}>+I</T>
+
+            {/* Forward Bias Curve */}
+            <Draw on={beat >= 5} delay={dl(5, 0.4)} d="M 245 130 L 305 130 Q 360 125 390 50" stroke={GREEN} sw={2.5} />
+            <T x={340} y={70} size={12} fill={GREEN} weight={800}>Forward (Conducts)</T>
+
+            {/* Reverse Bias Line */}
+            <Draw on={beat >= 5} delay={dl(5, 0.4)} d="M 245 130 L 90 132" stroke={RED} sw={2} />
+            <T x={100} y={155} size={12} fill={RED} weight={800}>Reverse (Blocked)</T>
+          </g>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={12} fill={GREEN} weight={800}>
+            (Diodes conduct in ONE direction only, violating V=IR symmetry)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("NON-OHMIC VERDICT", "NON-OHMIC VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Ohm's law V = IR is an empirical rule for good metallic conductors at constant temperature, NOT a universal law.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Filament lamps, P-N junction diodes, transistors, and electrolytes are non-Ohmic materials!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Ohm's law is NOT a universal law! Non-Ohmic: Filament lamps, Diodes, Transistors. ✓",
-            "★ Ohm's law universal law NAHI hai! Non-Ohmic: Filament lamps, Diodes, Transistors. ✓"
+            "★ Ohm's law is NOT a universal law! Non-Ohmic: Filament lamps, Diodes, Transistors. ✓"
           )}
         </Chip>
       </Fade>

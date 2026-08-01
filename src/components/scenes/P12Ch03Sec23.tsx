@@ -32,77 +32,113 @@ export default function P12Ch03Sec23({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("CBSE Level: Reading a Four-Band Resistor", "CBSE Level: Reading a Four-Band Resistor")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 230 70 C 440 66, 640 74, 850 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem statement */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={120} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Bands in order: Brown, Black, Red, Gold. Find Resistance and Tolerance.",
-            "Bands in order: Brown, Black, Red, Gold. Resistance aur Tolerance nikaalein."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Decoding bands */}
-      <Badge n={1} cx={52} cy={160} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">DECODE COLOUR BANDS</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(60, 180)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={15} fill={INK} weight={800}>
-            Brown = 1,  Black = 0,  Red = 10²,  Gold = ±5%
+      {/* LEFT SECTION: DECODING COLOUR BANDS */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("DECODING 4-BAND RESISTOR COLOURS", "DECODING 4-BAND RESISTOR COLOURS")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4 & 5: Value Calculation */}
-      <Badge n={2} cx={540} cy={160} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">CALCULATE VALUE & RANGE</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(540, 180)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            R = (10) × 10² = 1000 Ω = 1 kΩ ± 5%
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Band 1 (Brown): 1st significant digit = 1.
           </T>
-          <T x={240} y={52} anchor="middle" size={14} fill={GREEN} weight={800}>
-            True Range: 950 Ω to 1050 Ω
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 6: Warning */}
-      <Badge n={3} cx={52} cy={290} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={295} size={14} fill={RED} weight={700} anchor="start">PRO-TIP: RIGHT ORIENTATION</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 7}>
-        <g transform="translate(60, 310)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Always place Gold/Silver band on the RIGHT before reading digits!",
-              "Hamesha Gold/Silver band ko RIGHT taraf rakh kar hi digits padhein!"
-            )}
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Band 2 (Black): 2nd significant digit = 0.
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Summary Chip */}
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Band 3 (Red): Multiplier = 10² = 100.
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Band 4 (Gold): Tolerance = ± 5%!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Given sequence: Brown, Black, Red, Gold)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: RESISTANCE COMPUTATION */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("RESISTANCE & TOLERANCE COMPUTATION", "RESISTANCE & TOLERANCE COMPUTATION")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 4}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Nominal Resistance: R = (10) × 10² = 1000 Ω = 1.0 kΩ.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Tolerance Value: ΔR = 5% of 1000 Ω = ± 50 Ω.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Expected Resistance Range: 950 Ω ≤ R ≤ 1050 Ω.
+          </T>
+
+          <Draw on={beat >= 6} delay={dl(6, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Final Rating: 1.0 kΩ ± 5% (950 Ω to 1050 Ω)!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Any measured value between 950 Ω and 1050 Ω passes quality inspection)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("RESISTOR READING VERDICT", "RESISTOR READING VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            First two bands give digits (10), 3rd band gives multiplier 10², resulting in 1000 Ω (1 kΩ).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Gold 4th band specifies ±5% tolerance (±50 Ω deviation from nominal value).
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Result: R = 1 kΩ ± 5% (Range: 950 Ω – 1050 Ω). Perfect 4-band read! ✓",
-            "★ Result: R = 1 kΩ ± 5% (Range: 950 Ω – 1050 Ω). bilkul sahi calculation! ✓"
+            "★ Result: R = 1 kΩ ± 5% (Range: 950 Ω – 1050 Ω). Perfect 4-band read! ✓"
           )}
         </Chip>
       </Fade>

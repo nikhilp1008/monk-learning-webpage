@@ -32,67 +32,113 @@ export default function P12Ch03Sec45({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Board Derivation: Power & Joule's Law", "Board Derivation: Power & Joule's Law")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 2 & 3: Work Rate */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">WORK RATE DERIVATION</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            dW = V dq = V (I dt)  ⇒  P = dW/dt = V I
+      {/* LEFT SECTION: WORK & POWER DERIVATION */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Fade on={beat >= 2} delay={dl(2, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("WORK & POWER DERIVATION (P = dW/dt)", "WORK & POWER DERIVATION (P = dW/dt)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4 & 5: Joule Heating Forms */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">JOULE HEATING FORMS</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            P = (I R) I = I² R = V² / R
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 2}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Infinitesimal Work: dW = dq × V (work done pushing charge dq across V).
           </T>
-          <T x={240} y={52} anchor="middle" size={16} fill={GREEN} weight={800}>
-            H = P t = I² R t
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 6: I² Quadrupling Effect */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">KEY INSIGHT: I² DEPENDENCE</T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Express Charge Flow: dq = I dt  =&gt;  dW = (I dt) V = V I dt.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Rate of Work (Power): P = dW / dt = V I (Watts).
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Fundamental Power Law: P = V I (Electrical energy rate)!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Valid for any electrical component: resistor, battery, motor)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: JOULE HEATING DERIVATION */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("JOULE HEATING DERIVATION (H = I² R t)", "JOULE HEATING DERIVATION (H = I² R t)")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 4}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Ohm's Substitution: Replace V = I R into P = V I.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Power Forms: P = (I R) I = I² R = V² / R.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Total Heat Energy: H = P × t = I² R t (steady current).
+          </T>
+
+          <Draw on={beat >= 6} delay={dl(6, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Joule's Law: H = I² R t (100% Board Exam Ready)!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Notice I² dependence: 2x current yields 4x heat output)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 6} delay={dl(6, 0.2)} />
+        <Fade on={beat >= 6} delay={dl(6, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("BOARD DERIVATION SUMMARY VERDICT", "BOARD DERIVATION SUMMARY VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Work dW = V dq = VI dt leads to power P = VI. Substituting V = IR gives P = I² R = V² / R.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Integrating power over time t yields Joule's Law of heating H = I² R t (Joules).
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 6}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Doubling current I QUADRUPLES heating (2² = 4)! This is why heavy loads need thick cables.",
-              "Current I double karne par heating 4 GU NA (2² = 4) ho jaati hai! Heavy loads ke liye naye thick cables."
-            )}
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 7: Summary Chip */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Derived! P = VI = I²R = V²/R and Joule's Law H = I²Rt. 100% board ready! ✓",
-            "★ Derived! P = VI = I²R = V²/R aur Joule's Law H = I²Rt. 100% board ready! ✓"
+            "★ Derived! P = VI = I²R = V²/R and Joule's Law H = I²Rt. 100% board ready! ✓"
           )}
         </Chip>
       </Fade>

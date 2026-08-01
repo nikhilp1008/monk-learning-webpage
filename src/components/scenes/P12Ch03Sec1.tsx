@@ -32,118 +32,131 @@ export default function P12Ch03Sec1({ currentTime, reveals, language }: ScenePro
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Random motion and the birth of drift", "Random motion aur drift velocity ki shuruat")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Random motion and the birth of drift", "Random motion and the birth of drift")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 330 70 C 440 66, 640 74, 750 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* Wire conductor illustration */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)} dim={beat >= 7}>
-        <g transform="translate(100, 120)">
-          {/* Conductor body */}
-          <rect x={0} y={0} width={400} height={180} rx={12} fill="#f8fafc" stroke={INK} strokeWidth={2} />
-          <ellipse cx={0} cy={90} rx={15} ry={90} fill="#e2e8f0" stroke={INK} strokeWidth={2} />
-          <ellipse cx={400} cy={90} rx={15} ry={90} fill="#f1f5f9" stroke={INK} strokeWidth={2} />
-
-          {/* Fixed Lattice Ions */}
-          {[
-            { x: 80, y: 45 }, { x: 200, y: 45 }, { x: 320, y: 45 },
-            { x: 80, y: 135 }, { x: 200, y: 135 }, { x: 320, y: 135 },
-          ].map((ion, idx) => (
-            <g key={idx}>
-              <circle cx={ion.x} cy={ion.y} r={14} fill="#fee2e2" stroke={RED} strokeWidth={1.5} />
-              <T x={ion.x} y={ion.y + 4} size={12} fill={RED} weight={800}>+</T>
-            </g>
-          ))}
-
-          {/* Field OFF (Beats 2, 3, 4): Random Zig-Zag Path */}
-          <Fade on={beat >= 2 && beat < 5} delay={dl(2, 0.3)}>
-            {/* Electron starting at (140, 90), colliding randomly */}
-            <path d="M 140 90 L 180 55 L 210 120 L 160 140 L 140 90" fill="none" stroke="#3b82f6" strokeWidth={2} strokeDasharray="4 3" />
-            <circle cx={140} cy={90} r={6} fill="#3b82f6" />
-            <T x={140} y={75} size={12} fill="#3b82f6" weight={700}>e⁻</T>
-            {/* Random velocity vectors */}
-            <Draw on={beat >= 2} delay={dl(2, 0.5)} d="M 140 90 L 170 65" stroke="#3b82f6" sw={2} />
-            <T x={250} y={160} size={13} fill="#3b82f6" weight={700}>
-              {t("Thermal speed ~ 10⁵ m/s (Random)", "Thermal speed ~ 10⁵ m/s (Random)")}
-            </T>
-          </Fade>
-
-          {/* Field ON (Beats 5, 6): Tilted Path with Net Drift */}
-          <Fade on={beat >= 5} delay={dl(5, 0.3)}>
-            {/* E-field arrow */}
-            <Draw on={beat >= 5} delay={dl(5, 0.5)} d="M 50 -20 L 350 -20" stroke={RED} sw={2.5} />
-            <path d="M 340 -26 L 355 -20 L 340 -14" fill={RED} />
-            <T x={200} y={-30} size={14} fill={RED} weight={800}>Electric Field E →</T>
-
-            {/* Force on electron */}
-            <T x={200} y={-8} size={12} fill={AMBER_DARK} weight={700}>Force F = -eE (← Leftward)</T>
-
-            {/* Tilted Path towards left */}
-            <path d="M 140 90 L 175 57 L 200 123 L 145 142 L 115 92" fill="none" stroke={GREEN} strokeWidth={2.2} />
-            <circle cx={115} cy={92} r={6} fill={GREEN} />
-            <Draw on={beat >= 6} delay={dl(6, 0.4)} d="M 140 90 L 115 92" stroke={RED} sw={3} />
-            <T x={125} y={115} size={13} fill={RED} weight={800}>Net Drift v_d ←</T>
-          </Fade>
-        </g>
-      </Fade>
-
-      {/* BEAT 2: Thermal randomness */}
-      <Badge n={1} cx={580} cy={140} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={602} y={145} size={14} fill={RED} weight={700} anchor="start">THERMAL CHAOS (FIELD OFF)</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <g transform="translate(580, 160)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Electrons move at ~10⁵ m/s, but in random directions.",
-              "Electrons ~10⁵ m/s se randomly har taraf bhaagte hain."
-            )}
+      {/* LEFT SECTION: WIRE CONDUCTOR & DRIFT ILLUSTRATION */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CONDUCTOR LATTICE & DRIFT MOTION", "CONDUCTOR LATTICE & DRIFT MOTION")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: Zero net current */}
-      <Badge n={2} cx={580} cy={240} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={602} y={245} size={14} fill={RED} weight={700} anchor="start">AVERAGE DISPLACEMENT = ZERO</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 5}>
-        <g transform="translate(580, 260)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Equal charges cross left & right: Net Current I = 0.",
-              "Dono taraf barabar charge jata hai: Net Current I = 0."
-            )}
+        {/* Conductor Wireframe Diagram (Open Chalkboard) */}
+        <Fade on={beat >= 1}>
+          <g transform="translate(20, 75)">
+            {/* Conductor body */}
+            <rect x={0} y={0} width={400} height={145} rx={12} fill="none" stroke={INK} strokeWidth={2} />
+            <ellipse cx={0} cy={72} rx={15} ry={72} fill="none" stroke={INK} strokeWidth={2} />
+            <ellipse cx={400} cy={72} rx={15} ry={72} fill="none" stroke={INK} strokeWidth={2} />
+
+            {/* Fixed Lattice Ions */}
+            {[
+              { x: 80, y: 35 }, { x: 200, y: 35 }, { x: 320, y: 35 },
+              { x: 80, y: 110 }, { x: 200, y: 110 }, { x: 320, y: 110 },
+            ].map((ion, idx) => (
+              <g key={idx}>
+                <circle cx={ion.x} cy={ion.y} r={13} fill="none" stroke={RED} strokeWidth={1.8} />
+                <T x={ion.x} y={ion.y + 4} size={12} fill={RED} weight={800}>+</T>
+              </g>
+            ))}
+
+            {/* Field OFF: Random Zig-Zag Path */}
+            <Fade on={beat >= 2 && beat < 5}>
+              <path d="M 140 72 L 180 40 L 210 100 L 160 120 L 140 72" fill="none" stroke={INK} strokeWidth={1.8} strokeDasharray="4 3" />
+              <circle cx={140} cy={72} r={5} fill={INK} />
+              <T x={140} y={58} size={12} fill={INK} weight={700}>e⁻</T>
+            </Fade>
+
+            {/* Field ON: Tilted Path with Net Drift */}
+            <Fade on={beat >= 5}>
+              <Draw on={beat >= 5} delay={dl(5, 0.3)} d="M 50 -18 L 350 -18" stroke={RED} sw={2.2} />
+              <path d="M 340 -24 L 355 -18 L 340 -12" fill={RED} />
+              <T x={200} y={-26} size={12} fill={RED} weight={800}>Electric Field E →</T>
+
+              {/* Tilted Path towards left */}
+              <path d="M 140 72 L 175 42 L 200 103 L 145 122 L 115 74" fill="none" stroke={GREEN} strokeWidth={2} />
+              <circle cx={115} cy={74} r={5} fill={GREEN} />
+              <Draw on={beat >= 6} delay={dl(6, 0.4)} d="M 140 72 L 115 74" stroke={RED} sw={2.5} />
+              <T x={125} y={95} size={12} fill={RED} weight={800}>Net Drift v_d ←</T>
+            </Fade>
+          </g>
+        </Fade>
+
+        {/* Free Floating Formula */}
+        <Fade on={beat >= 3}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Thermal velocity ~ 10⁵ m/s is random, resulting in zero net current)
           </T>
-        </g>
-      </Fade>
+        </Fade>
+      </g>
 
-      {/* BEAT 5: Field ON & Force */}
-      <Badge n={3} cx={580} cy={340} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={602} y={345} size={14} fill={RED} weight={700} anchor="start">ELECTRIC FIELD APPLIED</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(580, 360)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Field E exerts force F = -eE opposite to field direction.",
-              "Field E, field ke opposite direction mein force F = -eE lagata hai."
-            )}
+      {/* RIGHT SECTION: DRIFT VELOCITY MECHANICS */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Fade on={beat >= 2} delay={dl(2, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("DRIFT VELOCITY MECHANICS", "DRIFT VELOCITY MECHANICS")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 7: Definition of Drift Velocity */}
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 2}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Thermal Chaos: Electrons move at ~10⁵ m/s in random directions.
+          </T>
+
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Zero Current: Equal charges cross left & right (Net I = 0).
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Field Applied: Force F = −eE drives net drift opposite to field.
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Net Drift v_d: Small average speed superimposed on chaos!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Drift velocity v_d is typically ~ 10⁻⁴ m/s, very slow compared to thermal speed!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("KEY CONCEPT VERDICT", "KEY CONCEPT VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Without an electric field, net electron displacement is zero.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            When E is applied, electric force F = −eE causes a slow, steady drift v_d opposite to E!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Drift velocity (v_d): Small net average velocity superimposed on thermal chaos! ✓",
             "★ Drift velocity (v_d): Thermal chaos ke upar choti si net average velocity! ✓"

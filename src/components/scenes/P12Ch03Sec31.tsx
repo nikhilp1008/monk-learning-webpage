@@ -32,61 +32,113 @@ export default function P12Ch03Sec31({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("The Series & Parallel Master Formulas", "The Series & Parallel Master Formulas")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 230 70 C 440 66, 640 74, 850 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 2: Series Formula */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">SERIES FORMULA (R_s)</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            R_s = R₁ + R₂ + ... + R_n  (V = V₁ + V₂ + ...)
+      {/* LEFT SECTION: SERIES MASTER FORMULA */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SERIES MASTER FORMULA & PROOF", "SERIES MASTER FORMULA & PROOF")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3 & 4: Parallel Formula */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">PARALLEL FORMULA (R_p)</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 5}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            1/R_p = 1/R₁ + 1/R₂ + ... + 1/R_n  (I = I₁ + I₂ + ...)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Single Loop: Current I is identical through all n resistors.
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5 & 6: Two-resistor shortcut */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">TWO RESISTORS SHORTCUT</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={18} fill={GREEN} weight={800}>
-            R_p = (R₁ R₂) / (R₁ + R₂)   [ Product Over Sum ]
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Additive Voltages: Total V = V₁ + V₂ + ... + V_n.
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Summary Chip */}
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Substitute Ohm's Law: I R_s = I R₁ + I R₂ + ... + I R_n.
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Series Result: R_s = ∑ R_i = R₁ + R₂ + ... + R_n !
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Equivalent resistance increases linearly with number of elements)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: PARALLEL MASTER FORMULA */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Fade on={beat >= 3} delay={dl(3, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("PARALLEL MASTER FORMULA & PROOF", "PARALLEL MASTER FORMULA & PROOF")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 3}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Common Potential: Voltage V is identical across all branches.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Additive Currents: Total I = I₁ + I₂ + ... + I_n.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Substitute Ohm's Law: V / R_p = V / R₁ + V / R₂ + ... + V / R_n.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Parallel Result: 1 / R_p = ∑ (1 / R_i) !
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Product-over-sum shortcut for 2 resistors: R_p = R₁ R₂ / (R₁ + R₂))
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("MASTER FORMULA VERDICT", "MASTER FORMULA VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Series resistance adds directly; Parallel conductance (reciprocal of resistance) adds directly.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Common exam trap: Never forget to take the reciprocal (invert) at the very end when calculating R_p.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Remember: Always invert at the end when solving 1/R_p! ✓",
-            "★ Yaad rakhein: 1/R_p nikaalne ke baad end mein reciprocal (R_p) lena mat bhoolna! ✓"
+            "★ Remember: Always invert at the end when solving 1/R_p! ✓"
           )}
         </Chip>
       </Fade>

@@ -32,80 +32,113 @@ export default function P12Ch03Sec24({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("NEET Speed Trap: A Heated Metal Wire", "NEET Speed Trap: A Heated Metal Wire")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 230 70 C 440 66, 640 74, 850 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem Statement */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={120} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Metal wire: R₀ = 100 Ω at 0°C, α = 4.0×10⁻³ °C⁻¹. Find R at T = 50°C.",
-            "Metal wire: R₀ = 100 Ω at 0°C, α = 4.0×10⁻³ °C⁻¹. Find R at T = 50°C."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: The Trap */}
-      <Badge n={1} cx={52} cy={160} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">THE TRAP</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(60, 180)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill="#fef2f2" stroke={RED} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={15} fill={RED} weight={800} script>
-            {t(
-              "WRONG: Reporting ΔR = 20 Ω (Forgetting to add R₀ = 100 Ω!)",
-              "WRONG: ΔR = 20 Ω bolna (R₀ = 100 Ω add karna bhool jana!)"
-            )}
+      {/* LEFT SECTION: COMMON NEET TRAP */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("COMMON NEET TRAP: MISREADING ΔR FOR R_T", "COMMON NEET TRAP: MISREADING ΔR FOR R_T")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4 & 5: Calculation */}
-      <Badge n={2} cx={540} cy={160} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">CORRECT CALCULATION</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(540, 180)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            R_T = R_0 [1 + α ΔT] = 100 [1 + (4×10⁻³)(50)]
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={RED} weight={800} anchor="start">
+            1. Common Student Trap: Calculating ΔR = R₀ α ΔT = 20 Ω and stopping!
           </T>
-          <T x={240} y={52} anchor="middle" size={16} fill={INK} weight={800}>
-            R_T = 100 [1 + 0.20] = 120 Ω
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Direction check */}
-      <Badge n={3} cx={52} cy={290} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={295} size={14} fill={RED} weight={700} anchor="start">SANITY DIRECTION CHECK</T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Why Wrong: 20 Ω is only the INCREASE in resistance, not final resistance.
+          </T>
+
+          <T x={45} y={170} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            3. Question asks for R_T at 50°C, requiring total R_T = R₀ + ΔR.
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Trap Alert: 20 Ω is always Option A in multiple-choice exams!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Always check whether question asks for total resistance or change in resistance)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: CORRECT CALCULATION */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CORRECT 1-LINE RATIO CALCULATION", "CORRECT 1-LINE RATIO CALCULATION")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 4}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Identify Given: R₀ = 100 Ω, α = 4.0×10⁻³ °C⁻¹, ΔT = 50°C.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Product α ΔT = (4×10⁻³)(50) = 0.20 (20% fractional increase).
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Total Resistance: R_T = 100 × (1 + 0.20) = 120 Ω.
+          </T>
+
+          <Draw on={beat >= 6} delay={dl(6, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Correct Result: R(50°C) = 120 Ω !
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Sanity Check: Heating metal MUST increase R above initial 100 Ω)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("HEATED WIRE NUMERICAL VERDICT", "HEATED WIRE NUMERICAL VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Heating the metal wire by 50°C increases its resistance by 20% from 100 Ω to 120 Ω.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Always write R_T = R₀(1 + α ΔT) directly to prevent accidentally reporting ΔR as final answer.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 310)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Metal wire heated ⇒ Resistance MUST increase above 100 Ω!",
-              "Metal wire garam hone pe Resistance 100 Ω se UPAR hi aana chahiye!"
-            )}
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 8: Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Result: R_T = 120 Ω. Always use R_T = R_0(1 + αΔT) to avoid missing R_0! ✓",
-            "★ Result: R_T = 120 Ω. Hamesha R_T = R_0(1 + αΔT) use karein! ✓"
+            "★ Result: R_T = 120 Ω. Always use R_T = R_0(1 + αΔT) to avoid missing R_0! ✓"
           )}
         </Chip>
       </Fade>

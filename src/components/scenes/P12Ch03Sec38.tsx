@@ -32,77 +32,113 @@ export default function P12Ch03Sec38({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("JEE Advanced: The Infinite Ladder Network", "JEE Advanced: The Infinite Ladder Network")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem Statement */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={120} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Infinite ladder of identical resistors R. Find equivalent resistance X across input terminals.",
-            "Infinite ladder of identical resistors R. Input terminals ke across equivalent resistance X nikaalein."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Self-similarity trick */}
-      <Badge n={1} cx={52} cy={160} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">SELF-SIMILARITY TRICK</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(60, 180)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            X = R + (R X) / (R + X)
+      {/* LEFT SECTION: SELF SIMILARITY TRICK */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SELF-SIMILARITY RECURSIVE TRICK", "SELF-SIMILARITY RECURSIVE TRICK")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4 & 5: Quadratic Equation */}
-      <Badge n={2} cx={540} cy={160} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">FORM QUADRATIC EQUATION</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(540, 180)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            X (R + X) = R (R + X) + R X
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Infinite Property: Truncating 1 unit cell leaves ladder unchanged.
           </T>
-          <T x={240} y={52} anchor="middle" size={16} fill={INK} weight={800}>
-            X² − R X − R² = 0
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 6: Solve Quadratic (Golden Ratio) */}
-      <Badge n={3} cx={52} cy={290} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={295} size={14} fill={RED} weight={700} anchor="start">SOLVE FOR POSITIVE ROOT</T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Equivalent Circuit: R in series with parallel combination (R || X).
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Recursive Equation: X = R + [ (R × X) / (R + X) ].
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Key Concept: Self-similarity turns infinite network into 1 equation!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Classic physics trick for infinite repeating structures)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: QUADRATIC DERIVATION */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("QUADRATIC DERIVATION & GOLDEN RATIO", "QUADRATIC DERIVATION & GOLDEN RATIO")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 4}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Clear Denominator: X(R + X) = R(R + X) + R X  =&gt;  X² - R X - R² = 0.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Quadratic Formula: X = [ R ± √(R² + 4 R²) ] / 2.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Select Positive Root: X = R [ (1 + √5) / 2 ].
+          </T>
+
+          <Draw on={beat >= 6} delay={dl(6, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Golden Ratio Result: X = 1.618 R (Golden Ratio Φ × R) !
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Negative root discarded because physical resistance &gt; 0)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 6} delay={dl(6, 0.2)} />
+        <Fade on={beat >= 6} delay={dl(6, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("INFINITE LADDER WORKED EXAMPLE VERDICT", "INFINITE LADDER WORKED EXAMPLE VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Equivalent input resistance of an infinite identical resistor ladder is exactly Φ × R ≈ 1.618 R.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            The golden ratio Φ = (1 + √5) / 2 emerges naturally from the quadratic self-similarity equation.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 6}>
-        <g transform="translate(60, 310)">
-          <rect x={0} y={5} width={960} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            X = [ R + √(R² + 4R²) ] / 2 = R (1 + √5) / 2
-          </T>
-          <T x={480} y={52} anchor="middle" size={18} fill={GREEN} weight={800}>
-            X ≈ 1.618 R   (The Golden Ratio Φ × R!)
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 7: Summary Chip */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Result: X = 1.618 R (Golden Ratio). Discard negative root since R cannot be negative! ✓",
-            "★ Result: X = 1.618 R (Golden Ratio). Resistance negative nahi ho sakti isliye negative root drop! ✓"
+            "★ Result: X = 1.618 R (Golden Ratio). Discard negative root since R cannot be negative! ✓"
           )}
         </Chip>
       </Fade>

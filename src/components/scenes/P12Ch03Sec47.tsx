@@ -32,71 +32,113 @@ export default function P12Ch03Sec47({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("CBSE Level: Resistance & Current of a Rated Bulb (60W, 240V)", "CBSE Level: Resistance & Current of a Rated Bulb (60W, 240V)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem Statement */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={120} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Bulb rated 60 W at 240 V. Find operating resistance R and operating current I.",
-            "Bulb rated 60 W at 240 V. Operating resistance R aur operating current I nikaalein."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 2 & 3: Resistance Calculation */}
-      <Badge n={1} cx={52} cy={160} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">RESISTANCE R = V² / P</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <g transform="translate(60, 180)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            R = (240)² / 60 = 57600 / 60 = 960 Ω
+      {/* LEFT SECTION: RESISTANCE CALCULATION */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 2} delay={dl(2, 0.2)} />
+        <Fade on={beat >= 2} delay={dl(2, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("OPERATING RESISTANCE CALCULATION", "OPERATING RESISTANCE CALCULATION")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4: Current Calculation */}
-      <Badge n={2} cx={540} cy={160} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">CURRENT I = P / V</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 5}>
-        <g transform="translate(540, 180)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            I = 60 / 240 = 0.25 A
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 2}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Given Appliance Rating: Power P = 60 W, Voltage V = 240 V.
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5 & 6: Cross-check */}
-      <Badge n={3} cx={52} cy={290} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={295} size={14} fill={RED} weight={700} anchor="start">CROSS-CHECK VIA I² R</T>
-      </Fade>
-      <Fade on={beat >= 5}>
-        <g transform="translate(60, 310)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            I² R = (0.25)² × 960 = 0.0625 × 960 = 60 W  (Matches rated power perfectly! ✓)
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Apply Power Formula: P = V² / R  =&gt;  R = V² / P.
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Summary Chip */}
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Substitute Values: R = (240)² / 60 = 57,600 / 60.
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Hot Filament Resistance: R = 960 Ω !
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Operating resistance at normal white-hot glowing temperature)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: CURRENT & VERIFICATION */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("OPERATING CURRENT & VERIFICATION", "OPERATING CURRENT & VERIFICATION")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 4}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Calculate Rated Current: I = P / V = 60 W / 240 V = 0.25 A.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Verification via Ohm's Law: I = V / R = 240 / 960 = 0.25 A.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Power Check via I² R: P = (0.25)² × 960 = 0.0625 × 960 = 60 W.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Rated Current: I = 0.25 A (Cross-checked via I² R)!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (All three power formulas yield identical 60 W output)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("RATED BULB WORKED EXAMPLE VERDICT", "RATED BULB WORKED EXAMPLE VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            For a 60 W, 240 V bulb: Operating resistance is R = V² / P = 960 Ω; Operating current is I = 0.25 A.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Check: Power P = I² R = (0.25)² × 960 = 60 W, confirming 100% mathematical consistency.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 6}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Result: R = 960 Ω, I = 0.25 A. Cross-checked and 100% consistent! ✓",
-            "★ Result: R = 960 Ω, I = 0.25 A. Cross-check se 100% verified! ✓"
+            "★ Result: R = 960 Ω, I = 0.25 A. Cross-checked and 100% consistent! ✓"
           )}
         </Chip>
       </Fade>

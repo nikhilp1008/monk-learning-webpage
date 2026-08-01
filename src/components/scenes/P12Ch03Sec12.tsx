@@ -32,77 +32,113 @@ export default function P12Ch03Sec12({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("CBSE Level: Resistance & Current Density Numerical", "CBSE Level: Resistance & Current Density Numerical")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 230 70 C 440 66, 640 74, 850 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem Statement */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={120} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Wire: Length L = 2 m, Radius r = 1 mm, ρ = 1.7×10⁻⁸ Ω·m, Voltage V = 3.4 V.",
-            "Wire: Length L = 2 m, Radius r = 1 mm, ρ = 1.7×10⁻⁸ Ω·m, Voltage V = 3.4 V."
-          )}
-        </T>
-      </Fade>
+      {/* LEFT SECTION: MACROSCOPIC METHOD */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("MACROSCOPIC SOLUTION METHOD (V/R)", "MACROSCOPIC SOLUTION METHOD (V/R)")}
+          </T>
+        </Fade>
 
-      {/* BEAT 2: Step 1 - Area & Resistance */}
-      <Badge n={1} cx={52} cy={160} on={beat >= 2} delay={dl(2, 0.4)} />
-      <Fade on={beat >= 2} delay={dl(2, 0.8)}>
-        <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">CALCULATE RESISTANCE (R)</T>
-      </Fade>
-      <Fade on={beat >= 2} dim={beat >= 4}>
-        <g transform="translate(60, 180)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            A = π r² = 3.14 × (10⁻³)² = 3.14 × 10⁻⁶ m²
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Area: A = π r² = 3.14 × (10⁻³)² = 3.14 × 10⁻⁶ m²
           </T>
-          <T x={225} y={52} anchor="middle" size={15} fill={INK} weight={800}>
-            R = (ρ L) / A = 0.0108 Ω
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 4: Step 2 - Current & Current Density */}
-      <Badge n={2} cx={540} cy={160} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">CURRENT & CURRENT DENSITY</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(540, 180)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            I = V / R = 3.4 / 0.0108 ≈ 315 A
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Resistance R = (ρ L) / A = (1.7×10⁻⁸ × 2) / 3.14×10⁻⁶ = 0.0108 Ω.
           </T>
-          <T x={240} y={52} anchor="middle" size={15} fill={INK} weight={800}>
-            J = I / A = 1.0 × 10⁸ A/m²
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 6: Microscopic check */}
-      <Badge n={3} cx={52} cy={290} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={295} size={14} fill={RED} weight={700} anchor="start">CHECK VIA MICROSCOPIC FORM (J = E / ρ)</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 7}>
-        <g transform="translate(60, 310)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            E = V/L = 1.7 V/m  ⇒  J = E / ρ = 1.7 / (1.7×10⁻⁸) = 1.0 × 10⁸ A/m²  (Exact Match!)
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Current: I = V / R = 3.4 / 0.0108 ≈ 315 A.
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Summary Chip */}
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Macroscopic J = I / A = 315 / 3.14×10⁻⁶ = 1.0 × 10⁸ A/m²
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Given: L = 2 m, r = 1 mm, ρ = 1.7×10⁻⁸ Ω·m, V = 3.4 V)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: MICROSCOPIC METHOD */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("MICROSCOPIC VERIFICATION METHOD (E/ρ)", "MICROSCOPIC VERIFICATION METHOD (E/ρ)")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Electric Field: E = V / L = 3.4 V / 2 m = 1.7 V/m
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Ohm's Vector Form: J = σ E = E / ρ
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Substitute: J = 1.7 / (1.7 × 10⁻⁸) = 1.0 × 10⁸ A/m².
+          </T>
+
+          <Draw on={beat >= 6} delay={dl(6, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Verdict: Exact 100% Match with Macroscopic result!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Direct J calculation via E/ρ avoids intermediate R & I rounding)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("NUMERICAL DUAL-METHOD VERDICT", "NUMERICAL DUAL-METHOD VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Calculating J via total current (J = I/A = 1.0×10⁸ A/m²) matches local field method (J = E/ρ = 1.0×10⁸ A/m²).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Both macroscopic V=IR and microscopic J=σE frameworks give flawless consistency.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Both macroscopic (V/R) and microscopic (E/ρ) methods give identical J! ✓",
-            "★ Macroscopic (V/R) aur microscopic (E/ρ) dono tarike exact same J dete hain! ✓"
+            "★ Both macroscopic (V/R) and microscopic (E/ρ) methods give identical J! ✓"
           )}
         </Chip>
       </Fade>

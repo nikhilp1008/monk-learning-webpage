@@ -32,67 +32,113 @@ export default function P12Ch03Sec9({ currentTime, reveals, language }: ScenePro
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Resistance, resistivity and conductivity", "Resistance, resistivity aur conductivity")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Resistance, resistivity and conductivity", "Resistance, resistivity and conductivity")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 260 70 C 440 66, 640 74, 820 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Resistance & Geometry */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">RESISTANCE & GEOMETRY</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={18} fill={INK} weight={800}>
-            R = (ρ L) / A   [Unit: Ω,  Dim: M L² T⁻³ A⁻²]
+      {/* LEFT SECTION: MACROSCOPIC RESISTANCE & GEOMETRY */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("MACROSCOPIC RESISTANCE R = ρ L / A", "MACROSCOPIC RESISTANCE R = ρ L / A")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: Microscopic Resistivity */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">MICROSCOPIC RESISTIVITY (ρ)</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 6}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={35} anchor="middle" size={18} fill={INK} weight={800}>
-            ρ = 1/σ = m / (n e² τ)   (Material Property!)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Geometry Dependence: Resistance R = (ρ L) / A (Proportional to length L)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 6: Temperature Dependence */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">TEMPERATURE DEPENDENCE (α)</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 7}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={480} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            R_T = R_0 [ 1 + α (T − T_0) ]
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Cross-Section Area: Inversely proportional to area A.
           </T>
-          <T x={480} y={52} anchor="middle" size={14} fill={INK} weight={800} script>
-            {t(
-              "Metals: α > 0 (R increases with T)  |  Semiconductors: α < 0 (R decreases with T)",
-              "Metals: α > 0 (T ke sath R badhta hai)  |  Semiconductors: α < 0 (T ke sath R ghatta hai)"
-            )}
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Summary Chip */}
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. SI Unit & Dimensions: Ohm [Ω] with dimensions [M L² T⁻³ A⁻²].
+          </T>
+
+          <Draw on={beat >= 2} delay={dl(2, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Extrinsic Property: R changes when wire is stretched or cut!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 3}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Stretching a wire n times increases its resistance n² times!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: MICROSCOPIC RESISTIVITY & CONDUCTIVITY */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Fade on={beat >= 3} delay={dl(3, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("MICROSCOPIC RESISTIVITY ρ & CONDUCTIVITY σ", "MICROSCOPIC RESISTIVITY ρ & CONDUCTIVITY σ")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 3}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Microscopic Expression: ρ = m / (n e² τ) (Material Intrinsic property)
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Conductivity σ: Inverse of resistivity σ = 1 / ρ = (n e² τ) / m.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Temp Coeff α: R_T = R_0 [ 1 + α (T − T_0) ].
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Metals: α &gt; 0 (R rises with T); Semiconductors: α &lt; 0!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Resistivity ρ is independent of shape and depends only on material & T)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("PROPERTY SUMMARY VERDICT", "PROPERTY SUMMARY VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Resistance R depends on object shape (L, A); resistivity ρ depends ONLY on material (n, τ) & temperature.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            For metals α &gt; 0 (ρ increases with T), while for semiconductors α &lt; 0 (ρ decreases with T).
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ R depends on shape (L, A); ρ depends ONLY on material (n, τ) & Temperature! ✓",
-            "★ R shape (L, A) pe depend karta hai; ρ SIRF material (n, τ) & Temperature pe! ✓"
+            "★ R depends on shape (L, A); ρ depends ONLY on material (n, τ) & Temperature! ✓"
           )}
         </Chip>
       </Fade>

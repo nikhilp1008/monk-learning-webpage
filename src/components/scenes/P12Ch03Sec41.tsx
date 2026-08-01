@@ -32,67 +32,113 @@ export default function P12Ch03Sec41({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("The Three Faces of Power & Formula Selection", "The Three Faces of Power & Formula Selection")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Master Equation */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">POWER FORMULAS</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={18} fill={INK} weight={800}>
-            P = V I = I² R = V² / R
+      {/* LEFT SECTION: SERIES CHOICE */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SERIES FORMULA CHOICE (SAME CURRENT I)", "SERIES FORMULA CHOICE (SAME CURRENT I)")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: Series Choice (I shared) */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">SERIES (SAME CURRENT I)</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            P = I² R  ⇒  P ∝ R
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Fixed Parameter: Current I is identical through all series elements.
           </T>
-          <T x={240} y={52} anchor="middle" size={13} fill={GREEN} weight={700}>
-            {t("Bigger R dissipates MORE power in series!", "Series mein bada R ZYADA power dissipate karta hai!")}
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 4: Parallel Choice (V shared) */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">PARALLEL (SAME VOLTAGE V)</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 5}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={480} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            P = V² / R  ⇒  P ∝ 1 / R
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Select Formula: Use P = I² R (since I is constant).
           </T>
-          <T x={480} y={52} anchor="middle" size={13} fill={AMBER_DARK} weight={700}>
-            {t("Smaller R dissipates MORE power in parallel!", "Parallel mein chota R ZYADA power dissipate karta hai!")}
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5: Summary Chip */}
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Proportionality: Power dissipation is directly proportional to R (P ∝ R).
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Series Rule: Bigger resistor dissipates MORE power in series!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 3}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Example: 100 Ω bulb glows brighter than 40 Ω bulb in series)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: PARALLEL CHOICE */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Fade on={beat >= 3} delay={dl(3, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("PARALLEL FORMULA CHOICE (SAME VOLTAGE V)", "PARALLEL FORMULA CHOICE (SAME VOLTAGE V)")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 3}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Fixed Parameter: Potential V is identical across all parallel branches.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Select Formula: Use P = V² / R (since V is constant).
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Inverted Proportionality: Power dissipation is inversely proportional to R.
+          </T>
+
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Parallel Rule: Smaller resistor dissipates MORE power in parallel!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Example: 100 W domestic bulb has SMALLER filament resistance than 40 W)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("POWER FORMULA SELECTION VERDICT", "POWER FORMULA SELECTION VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Never pick a power formula at random! Identify the constant variable first.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Series circuits keep current I constant (P = I² R); Parallel circuits keep voltage V constant (P = V² / R).
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 5}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Always check what is shared: Series uses P = I²R; Parallel uses P = V²/R! ✓",
-            "★ Pehle check karein kya shared hai: Series ke liye P = I²R; Parallel ke liye P = V²/R! ✓"
+            "★ Always check what is shared: Series uses P = I²R; Parallel uses P = V²/R! ✓"
           )}
         </Chip>
       </Fade>

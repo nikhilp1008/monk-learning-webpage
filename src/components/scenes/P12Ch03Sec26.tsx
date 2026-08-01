@@ -32,77 +32,113 @@ export default function P12Ch03Sec26({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("JEE Advanced: Temperature-Proof Resistor Pair", "JEE Advanced: Temperature-Proof Resistor Pair")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 230 70 C 440 66, 640 74, 850 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Problem Statement */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={120} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Metal (α₁ = +4.0×10⁻³ K⁻¹) in series with Carbon (α₂ = -5.0×10⁻⁴ K⁻¹). Find R₁ : R₂ ratio.",
-            "Metal (α₁ = +4.0×10⁻³ K⁻¹) in series with Carbon (α₂ = -5.0×10⁻⁴ K⁻¹). R₁ : R₂ ratio nikaalein."
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 3: Zero Net Change Condition */}
-      <Badge n={1} cx={52} cy={160} on={beat >= 3} delay={dl(3, 0.4)} />
-      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
-        <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">CANCELLATION CONDITION</T>
-      </Fade>
-      <Fade on={beat >= 3} dim={beat >= 4}>
-        <g transform="translate(60, 180)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            ΔR = (R₁ α₁ + R₂ α₂) ΔT = 0
+      {/* LEFT SECTION: ZERO DRIFT CONDITION */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("ZERO NET TEMPERATURE DRIFT CONDITION", "ZERO NET TEMPERATURE DRIFT CONDITION")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 4 & 5: Ratio Solution */}
-      <Badge n={2} cx={540} cy={160} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">SOLVE FOR RATIO</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 6}>
-        <g transform="translate(540, 180)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            R₁ / R₂ = −α₂ / α₁ = (5.0×10⁻⁴) / (4.0×10⁻³)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Series Pair: Equivalent resistance R_eq = R₁ + R₂.
           </T>
-          <T x={240} y={52} anchor="middle" size={18} fill={GREEN} weight={800}>
-            R₁ : R₂ = 1 : 8
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 6: Physical Intuition */}
-      <Badge n={3} cx={52} cy={290} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={295} size={14} fill={RED} weight={700} anchor="start">PRECISION RESISTOR PRINCIPLE</T>
-      </Fade>
-      <Fade on={beat >= 6}>
-        <g transform="translate(60, 310)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Metal rise (+1) is cancelled by 8x Carbon fall (-1). Total resistance stays constant!",
-              "Metal ka rise (+1) 8x Carbon ke fall (-1) se cancel hota hai. Total R constant rehta hai!"
-            )}
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Total Thermal Change: ΔR_eq = (R₁ α₁ + R₂ α₂) ΔT.
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Summary Chip */}
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Temperature Invariance: For ΔR_eq = 0, R₁ α₁ + R₂ α₂ = 0.
+          </T>
+
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Ratio Master Formula: R₁ / R₂ = − α₂ / α₁ !
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Requires one component to have positive α and the other negative α)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: CALCULATING RATIO */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CALCULATING METAL TO CARBON RATIO", "CALCULATING METAL TO CARBON RATIO")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 4}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Given Values: α₁ = +4.0×10⁻³ K⁻¹ (Metal), α₂ = −5.0×10⁻⁴ K⁻¹ (Carbon).
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Plug into Ratio: R₁ / R₂ = −(−5.0×10⁻⁴) / (4.0×10⁻³) = 5 / 40.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Simplify Fraction: R₁ / R₂ = 1 / 8.
+          </T>
+
+          <Draw on={beat >= 6} delay={dl(6, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Final Ratio Result: R₁ : R₂ = 1 : 8 !
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Since metal α is 8x larger in magnitude, carbon resistance must be 8x larger)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("ZERO-DRIFT PRECISION RESISTOR VERDICT", "ZERO-DRIFT PRECISION RESISTOR VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Metal resistance increase (+1 unit) is perfectly balanced by Carbon resistance decrease (-1 unit).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Precision lab standard resistors use this exact positive/negative α cancellation principle.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Result: R₁ : R₂ = 1 : 8. Precision zero-drift resistors use this exact cancellation principle! ✓",
-            "★ Result: R₁ : R₂ = 1 : 8. Precision zero-drift resistors yahi cancellation rule use karte hain! ✓"
+            "★ Result: R₁ : R₂ = 1 : 8. Precision zero-drift resistors use this exact cancellation principle! ✓"
           )}
         </Chip>
       </Fade>

@@ -32,98 +32,120 @@ export default function P12Ch03Sec2({ currentTime, reveals, language }: ScenePro
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Slow carriers, fast signal", "Slow carriers, fast signal")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 380 70 C 440 66, 640 74, 700 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Slow speed of electrons */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">DRIFT SPEED IS EXTREMELY SLOW</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 4}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            v_d ≈ 10⁻⁴ m/s = 0.1 mm/s (Slower than a snail!)
+      {/* LEFT SECTION: PARADOX & DRIFT VS SIGNAL SPEED */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("DRIFT SPEED VS SIGNAL SPEED PARADOX", "DRIFT SPEED VS SIGNAL SPEED PARADOX")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 3: The paradox */}
-      <Fade on={beat >= 3} delay={dl(3, 0.3)} dim={beat >= 4}>
-        <T x={60} y={235} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "Paradox: If electrons crawl at 0.1 mm/s, why does bulb light instantly?",
-            "Sawaal: Agar electrons 0.1 mm/s pe reengte hain, toh bulb turant kyun jalta hai?"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Pipe Analogy Diagram */}
-      <Fade on={beat >= 4} delay={dl(4, 0.3)} dim={beat >= 7}>
-        <g transform="translate(140, 270)">
-          {/* Water Pipe Filled with Marbles */}
-          <rect x={0} y={0} width={800} height={50} rx={8} fill="#f1f5f9" stroke={INK} strokeWidth={2} />
-          <T x={400} y={-10} size={13} fill={INK} weight={700} anchor="middle">
-            {t("Water Pipe Full of Marbles (Or wire full of free electrons)", "Water Pipe Full of Marbles (Puri wire mein pehle se electrons hain)")}
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Carrier Speed: v_d ≈ 10⁻⁴ m/s = 0.1 mm/s (Slower than a snail!)
           </T>
 
-          {/* Marbles inside pipe */}
-          {[40, 110, 180, 250, 320, 390, 460, 530, 600, 670, 750].map((x, idx) => (
-            <circle key={idx} cx={x} cy={25} r={14} fill={idx === 0 ? RED : (idx === 10 ? GREEN : "#3b82f6")} />
-          ))}
-
-          {/* Push arrow on left */}
-          <Draw on={beat >= 5} delay={dl(5, 0.4)} d="M -30 25 L 20 25" stroke={RED} sw={3} />
-          <T x={-20} y={-5} size={13} fill={RED} weight={800} anchor="middle">Push</T>
-
-          {/* Pop arrow on right */}
-          <Draw on={beat >= 5} delay={dl(5, 0.4)} d="M 780 25 L 830 25" stroke={GREEN} sw={3} />
-          <T x={820} y={-5} size={13} fill={GREEN} weight={800} anchor="middle">Instant Output!</T>
-        </g>
-      </Fade>
-
-      {/* BEAT 5: Electric field signal speed */}
-      <Badge n={2} cx={52} cy={370} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={74} y={375} size={14} fill={RED} weight={700} anchor="start">ELECTRIC FIELD SIGNAL SPEED</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(60, 390)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={16} fill={INK} weight={800}>
-            v_signal ≈ c ≈ 3 × 10⁸ m/s (Speed of Light)
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Signal Speed: v_signal ≈ c ≈ 3 × 10⁸ m/s (Speed of Light!)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 6: Filament local movement */}
-      <Badge n={3} cx={540} cy={370} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={562} y={375} size={14} fill={RED} weight={700} anchor="start">EVERY ELECTRON DRIFTS TOGETHER</T>
-      </Fade>
-      <Fade on={beat >= 6} dim={beat >= 7}>
-        <g transform="translate(540, 390)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Electrons already inside bulb filament move immediately!",
-              "Bulb ke andar ke electrons turant hi chalne lagte hain!"
-            )}
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Paradox Solved: Electric field travels at ~c, pushing ALL electrons together!
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Summary Chip */}
+          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Bulb Glows Instantly because filament electrons move immediately!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Electrons do NOT need to travel from switch to bulb; they are already everywhere!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: MARBLE PIPE ANALOGY */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("MARBLE PIPE PHYSICAL ANALOGY", "MARBLE PIPE PHYSICAL ANALOGY")}
+          </T>
+        </Fade>
+
+        {/* Pipe Diagram (Open Chalkboard) */}
+        <Fade on={beat >= 4}>
+          <g transform="translate(0, 15)">
+            <T x={250} y={55} size={12} fill={INK} weight={800} anchor="middle">Pipe Packed Full of Marbles (Free Electron Sea)</T>
+            <rect x={45} y={80} width={410} height={45} rx={8} fill="none" stroke={INK} strokeWidth={2} />
+
+            {[75, 115, 155, 195, 235, 275, 315, 355, 395, 425].map((x, idx) => (
+              <circle key={idx} cx={x} cy={102} r={12} fill="none" stroke={idx === 0 ? RED : (idx === 9 ? GREEN : INK)} strokeWidth={1.8} />
+            ))}
+
+            {/* Push arrow on left */}
+            <Draw on={beat >= 5} delay={dl(5, 0.4)} d="M 10 102 L 40 102" stroke={RED} sw={2.2} />
+            <T x={25} y={72} size={11} fill={RED} weight={800}>Push</T>
+
+            {/* Pop arrow on right */}
+            <Draw on={beat >= 5} delay={dl(5, 0.4)} d="M 460 102 L 490 102" stroke={GREEN} sw={2.2} />
+            <T x={475} y={72} size={11} fill={GREEN} weight={800}>Instant!</T>
+          </g>
+
+          <T x={45} y={170} size={14} fill={INK} weight={800} anchor="start">
+            • Pushing 1 marble on left instantly pops 1 marble out on right!
+          </T>
+
+          <T x={45} y={215} size={14} fill={INK} weight={800} anchor="start">
+            • Individual marbles move slowly, but pressure wave travels at ~c!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Electric field acts as the instantaneous pressure wave across the circuit!)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SUMMARY VERDICT", "SUMMARY VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Drift velocity v_d is extremely slow (~10⁻⁴ m/s), but electric field signal propagates at light speed (~3×10⁸ m/s).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Bulb filament electrons drift immediately upon closing switch without waiting for battery electrons!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Signal is fast (~c), carriers are slow (~10⁻⁴ m/s). Bulb glows instantly! ✓",
-            "★ Signal tez hai (~c), carriers dheeme (~10⁻⁴ m/s). Bulb turant jalta hai! ✓"
+            "★ Signal is fast (~c), carriers are slow (~10⁻⁴ m/s). Bulb glows instantly! ✓"
           )}
         </Chip>
       </Fade>

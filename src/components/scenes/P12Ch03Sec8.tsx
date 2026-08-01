@@ -32,71 +32,113 @@ export default function P12Ch03Sec8({ currentTime, reveals, language }: ScenePro
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Mobility, and Ohm's law in two forms", "Mobility, aur Ohm's law ke do forms")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Mobility, and Ohm's law in two forms", "Mobility, and Ohm's law in two forms")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 280 70 C 440 66, 640 74, 800 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1: Mobility Definition */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">ELECTRON MOBILITY (μ)</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 4}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={18} fill={INK} weight={800}>
-            μ = |v_d| / E = (e τ) / m
+      {/* LEFT SECTION: CHARGE CARRIER MOBILITY */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CHARGE CARRIER MOBILITY μ", "CHARGE CARRIER MOBILITY μ")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 2: Mobility Units & Dimensions */}
-      <Fade on={beat >= 2} delay={dl(2, 0.3)} dim={beat >= 4}>
-        <T x={60} y={235} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "SI Unit: m² / (V·s)  |  Dimensions: [M⁻¹ T² A]",
-            "SI Unit: m² / (V·s)  |  Dimensions: [M⁻¹ T² A]"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Macroscopic Form */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">MACROSCOPIC OHM'S LAW</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 5}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={240} y={35} anchor="middle" size={18} fill={INK} weight={800}>
-            V = I R   (Whole Conductor Object)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Mobility Definition: μ = |v_d| / E (Drift velocity per unit field)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 5: Microscopic Form */}
-      <Badge n={3} cx={540} cy={270} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={275} size={14} fill={RED} weight={700} anchor="start">MICROSCOPIC OHM'S LAW</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 290)">
-          <rect x={0} y={5} width={480} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={35} anchor="middle" size={18} fill={INK} weight={800}>
-            J = σ E   or   E = ρ J   (Point-by-point)
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Microscopic Formula: μ = (e τ) / m (Inversely proportional to mass m)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Key distinction */}
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Hole vs Electron: Electrons are more mobile than holes (m_e* &lt; m_h*).
+          </T>
+
+          <Draw on={beat >= 2} delay={dl(2, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. SI Unit & Dimensions: m²/(V·s) with dimensions [M⁻¹ T² A]
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 3}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Higher mobility means higher conductivity σ = n e μ)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: OHM'S LAW MACROSCOPIC VS MICROSCOPIC */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("OHM'S LAW: MACROSCOPIC VS MICROSCOPIC", "OHM'S LAW: MACROSCOPIC VS MICROSCOPIC")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 4}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Macroscopic Form: V = I R (Applies to entire conductor device)
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Microscopic Form: J = σ E or E = ρ J (Applies locally point-by-point)
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Equivalence: V = EL, I = JA  ⇒  V = (J/σ)L = I(L/σA) = IR!
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Field Representation: J = σ E is a true vector field relation!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Microscopic form is valid even in non-uniform geometry conductors)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("TWO FORMS SUMMARY VERDICT", "TWO FORMS SUMMARY VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Macroscopic V = IR measures total circuit variables (Voltage V and Current I).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Microscopic J = σE describes local field vectors at every point inside the conductor.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Macroscopic V=IR describes total device; Microscopic J=σE holds point-by-point! ✓",
-            "★ Macroscopic V=IR pure device ko batata hai; Microscopic J=σE har point pe hold karta hai! ✓"
+            "★ Macroscopic V=IR describes total device; Microscopic J=σE holds point-by-point! ✓"
           )}
         </Chip>
       </Fade>

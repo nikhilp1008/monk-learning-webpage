@@ -32,77 +32,113 @@ export default function P12Ch03Sec48({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("NEET Speed Trap: Which Bulb Glows Brighter in Series?", "NEET Speed Trap: Which Bulb Glows Brighter in Series?")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 2: The Trap */}
-      <Fade on={beat >= 1} delay={dl(1, 0.3)}>
-        <T x={60} y={120} size={13} fill={MUTED} anchor="start" script>
-          {t(
-            "100W bulb and 40W bulb (both 240V rated) in SERIES across 240V. Which is brighter?",
-            "100W bulb aur 40W bulb (dono 240V) SERIES mein 240V par jude hain. Konsa tez chamkega?"
-          )}
-        </T>
-      </Fade>
-
-      {/* BEAT 4: Calculate Resistances */}
-      <Badge n={1} cx={52} cy={160} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={74} y={165} size={14} fill={RED} weight={700} anchor="start">CALCULATE BULB RESISTANCES</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 5}>
-        <g transform="translate(60, 180)">
-          <rect x={0} y={5} width={450} height={50} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={35} anchor="middle" size={15} fill={INK} weight={800}>
-            R₁₀₀ = 240²/100 = 576 Ω   |   R₄₀ = 240²/40 = 1440 Ω
+      {/* LEFT SECTION: RESISTANCE COMPARISON */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("BULB RESISTANCE COMPARISON", "BULB RESISTANCE COMPARISON")}
           </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Series Rule Application */}
-      <Badge n={2} cx={540} cy={160} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={165} size={14} fill={RED} weight={700} anchor="start">SERIES P = I² R RULE</T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 6}>
-        <g transform="translate(540, 180)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            In Series, I is common  ⇒  P_actual = I² R
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 4}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Given Ratings: 100 W and 40 W bulbs both rated for V = 240 V.
           </T>
-          <T x={240} y={52} anchor="middle" size={16} fill={GREEN} weight={800}>
-            R₄₀ (1440 Ω) &gt; R₁₀₀ (576 Ω)  ⇒  40W Bulb is BRIGHTER!
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Golden Rule Memory Hook */}
-      <Badge n={3} cx={52} cy={290} on={beat >= 6} delay={dl(6, 0.4)} />
-      <Fade on={beat >= 6} delay={dl(6, 0.8)}>
-        <T x={74} y={295} size={14} fill={RED} weight={700} anchor="start">GOLDEN MEMORY HOOK</T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. 100 W Bulb Resistance: R₁₀₀ = (240)² / 100 = 576 Ω.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. 40 W Bulb Resistance: R₄₀ = (240)² / 40 = 1440 Ω.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Resistance Verdict: R₄₀ (1440 Ω) &gt; R₁₀₀ (576 Ω) !
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Lower power rating ALWAYS means higher filament resistance)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: SERIES BRIGHTNESS ANALYSIS */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("SERIES BRIGHTNESS ANALYSIS (P = I² R)", "SERIES BRIGHTNESS ANALYSIS (P = I² R)")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Series Constraint: Current I is identical through both bulbs.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Power Dissipation Rule: P_actual = I² R  =&gt;  P_actual ∝ R.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Actual Power Ratio: P₄₀ / P₁₀₀ = R₄₀ / R₁₀₀ = 1440 / 576 = 2.5.
+          </T>
+
+          <Draw on={beat >= 6} delay={dl(6, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Winner: 40 W bulb dissipates 2.5× MORE power in series!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (In series, the lower-rated bulb glows much brighter)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 6} delay={dl(6, 0.2)} />
+        <Fade on={beat >= 6} delay={dl(6, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("NEET SPEED TRAP BRIGHTNESS VERDICT", "NEET SPEED TRAP BRIGHTNESS VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 6}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Series connection forces same current I: P = I² R  =&gt;  40 W bulb (R = 1440 Ω) glows BRIGHTER than 100 W (R = 576 Ω).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Golden Rule: In SERIES, lower rated wattage wins; In PARALLEL, higher rated wattage wins!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 6}>
-        <g transform="translate(60, 310)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Series: WEAKER rated bulb wins (40W > 100W)! Parallel: STRONGER rated bulb wins (100W > 40W)!",
-              "Series: WEAKER rated bulb jeet ti hai (40W > 100W)! Parallel: STRONGER rated bulb jeet ti hai!"
-            )}
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 8: Summary Chip */}
-      <Fade on={beat >= 6}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Result: 40W bulb glows brighter in series! Higher resistance R₄₀ = 1440 Ω wins P = I²R! ✓",
-            "★ Result: 40W bulb series mein tez chamkega! Higher resistance R₄₀ = 1440 Ω jeetta hai! ✓"
+            "★ Result: 40W bulb glows brighter in series! Higher resistance R₄₀ = 1440 Ω wins P = I²R! ✓"
           )}
         </Chip>
       </Fade>

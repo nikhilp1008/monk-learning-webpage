@@ -32,83 +32,121 @@ export default function P12Ch03Sec22({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Resistivity ranges and resistor colour code", "Resistivity ranges aur resistor colour code")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Resistivity ranges and resistor colour code", "Resistivity ranges and resistor colour code")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 230 70 C 440 66, 640 74, 850 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 2: Resistivity Ranges */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">RESISTIVITY RANGES</T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 4}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={70} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={28} anchor="middle" size={14} fill={INK} weight={800}>
-            Conductors: 10⁻⁸ to 10⁻⁶ Ω·m
+      {/* LEFT SECTION: MATERIAL RESISTIVITY RANGES */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("MATERIAL RESISTIVITY RANGES", "MATERIAL RESISTIVITY RANGES")}
           </T>
-          <T x={225} y={48} anchor="middle" size={14} fill={INK} weight={800}>
-            Semiconductors: 10⁻⁵ to 10² Ω·m
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={GREEN} weight={800} anchor="start">
+            1. Conductors (Metals): Low ρ ~ 10⁻⁸ to 10⁻⁶ Ω·m (Copper, Silver)
           </T>
-          <T x={225} y={68} anchor="middle" size={14} fill={INK} weight={800}>
-            Insulators: 10⁸ to 10¹⁶ Ω·m
+
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Semiconductors: Medium ρ ~ 10⁻⁵ to 10² Ω·m (Silicon, Germanium)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 4 & 5: Resistor Colour Code Diagram */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 4} delay={dl(4, 0.4)} />
-      <Fade on={beat >= 4} delay={dl(4, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">4-BAND COLOUR CODE</T>
-      </Fade>
-      <Fade on={beat >= 4} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          {/* Carbon Resistor Body */}
-          <rect x={40} y={15} width={400} height={50} rx={10} fill="#fbbf24" stroke={INK} strokeWidth={2} />
-          {/* Wire Leads */}
-          <Draw on={beat >= 4} delay={dl(4, 0.4)} d="M 0 40 L 40 40 M 440 40 L 480 40" stroke={INK} sw={3} />
-
-          {/* Color Bands */}
-          <rect x={100} y={15} width={20} height={50} fill="#92400e" /> {/* Band 1: Brown */}
-          <rect x={160} y={15} width={20} height={50} fill="#000000" /> {/* Band 2: Black */}
-          <rect x={220} y={15} width={20} height={50} fill="#ef4444" /> {/* Band 3: Red */}
-          <rect x={340} y={15} width={20} height={50} fill="#eab308" /> {/* Band 4: Gold */}
-
-          <T x={240} y={85} anchor="middle" size={15} fill={INK} weight={800}>
-            R = (Digit 1 Digit 2) × 10ᵐ ± Tolerance
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Insulators: High ρ ~ 10⁸ to 10¹⁶ Ω·m (Glass, Rubber)
           </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Mnemonic & Tolerance */}
-      <Badge n={3} cx={52} cy={270} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={275} size={14} fill={RED} weight={700} anchor="start">MNEMONIC & TOLERANCE</T>
-      </Fade>
+          <Draw on={beat >= 3} delay={dl(3, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Wide Spectrum: 24 orders of magnitude variation across materials!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 4}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Carbon resistors are manufactured to precise resistance values)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: 4-BAND RESISTOR COLOUR CODE */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
+        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("4-BAND CARBON RESISTOR COLOUR CODE", "4-BAND CARBON RESISTOR COLOUR CODE")}
+          </T>
+        </Fade>
+
+        {/* Resistor Open Diagram */}
+        <Fade on={beat >= 4}>
+          <g transform="translate(45, 45)">
+            <Draw on={beat >= 4} delay={dl(4, 0.4)} d="M 0 35 L 50 35 M 370 35 L 420 35" stroke={INK} sw={3} />
+            <rect x={50} y={10} width={320} height={50} rx={10} fill="#fef3c7" stroke={INK} strokeWidth={2} />
+            <rect x={100} y={10} width={16} height={50} fill="#92400e" />
+            <rect x={150} y={10} width={16} height={50} fill="#000000" />
+            <rect x={200} y={10} width={16} height={50} fill="#ef4444" />
+            <rect x={300} y={10} width={16} height={50} fill="#eab308" />
+          </g>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={135} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Band 1 &amp; 2: First two significant digits of resistance.
+          </T>
+
+          <T x={45} y={175} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Band 3: Decimal multiplier 10ᵐ.
+          </T>
+
+          <Draw on={beat >= 6} delay={dl(6, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            3. Formula: R = (Digit 1 Digit 2) × 10ᵐ ± Tolerance!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Tolerance: Gold = ±5%, Silver = ±10%, No band = ±20%)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("MNEMONIC & READING RULE VERDICT", "MNEMONIC & READING RULE VERDICT")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Mnemonic: "B B ROY of Great Britain had a Very Good Wife" (Black 0, Brown 1, Red 2, Orange 3, Yellow 4, Green 5, Blue 6, Violet 7, Grey 8, White 9).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Always position the tolerance band (Gold/Silver) on the RIGHT before reading the colour bands left-to-right.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 290)">
-          <rect x={0} y={5} width={960} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={30} anchor="middle" size={15} fill={INK} weight={800} script>
-            {t(
-              "Mnemonic: B B ROY of Great Britain had a Very Good Wife (0 to 9)",
-              "Mnemonic: B B ROY of Great Britain had a Very Good Wife (0 se 9)"
-            )}
-          </T>
-          <T x={480} y={52} anchor="middle" size={14} fill={GREEN} weight={800}>
-            Gold = ±5%  |  Silver = ±10%  |  No band = ±20%
-          </T>
-        </g>
-      </Fade>
-
-      {/* BEAT 8: Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={480} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Keep tolerance band on RIGHT before reading bands left to right! ✓",
-            "★ Color bands padhne se pehle tolerance band ko RIGHT taraf rakhein! ✓"
+            "★ Keep tolerance band on RIGHT before reading bands left to right! ✓"
           )}
         </Chip>
       </Fade>
