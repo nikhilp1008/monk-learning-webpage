@@ -64,9 +64,15 @@ Worktree: branch `premium-board-ch12` · port 3012 only · chapter_id `8300dbf9-
 - Sec 44 — JEE Main worked example: lambda of N2 (68nm, ~200 diameters, 7e9 collisions/sec)
 - Sec 45 — JEE Advanced worked example: gamma of He/O2 mixture (average Cv not gamma, ~1.48)
 - Sec 46 — pitfalls & pro-tips (4 traps + pro-tip + 3 closing memory phrases; Subtopic 5 complete)
+- Sec 47 — golden thread + master formula sheet (4-box chain PV=nRT=NkT→P=⅓ρv²rms→T↔KE→U=(f/2)nRT, 3-row master sheet)
 
 ## Current
-Subtopic 5 (Degrees of Freedom and Mean Free Path, secs 37-46) COMPLETE. Next: Subtopic 6 — Chapter Summary, Sec 47 (final 2 sections).
+Subtopic 5 complete. Sec 47 authored, verified (`VERDICT sec=47: PASS` both languages), committed, pushed.
+Sec 48 (whole-chapter cheat sheet, final section): code authored, `tsc --noEmit` clean, registered in
+index.ts — **but NOT yet verified**. 25 automated attempts to boot the dev server and run
+`verify-scene.mjs 48` all failed (see "Third issue" below). Next session should retry verification
+once the local dev server can stay up; do not mark Sec 48 done in this log until an actual
+`VERDICT sec=48: PASS` is observed for both languages.
 
 ## Second issue caught
 - Dev server on port 3012 wedged twice during authoring (secs 40, 45) — Playwright's page.goto
@@ -87,6 +93,30 @@ Subtopic 5 (Degrees of Freedom and Mean Free Path, secs 37-46) COMPLETE. Next: S
   bug is invisible to it. Fixed by using `Fade`-wrapped `<rect>` instead (the established pattern
   everywhere else). Audited all other sections for the same `<Draw ... fill={non-none}>` pattern —
   none found. Lesson: never pass a non-"none" fill to `Draw`; use `Fade` + a plain shape instead.
+
+## Third issue caught — Sec 48 verification blocked, and an unexplained external commit
+- While authoring Sec 48, the dev server on port 3012 became unable to complete a boot+first-request
+  cycle at all: across ~25 kill/restart attempts (some with `.next` cleared, some with a fully
+  materialized node_modules), the process crashed with a DIFFERENT "named export is undefined /
+  not a function" TypeError almost every time (seen in: `next-test.js`'s SUPPORTED_TEST_RUNNERS_LIST,
+  `patch-error-inspect.js`'s patchErrorInspectNodeJS, `@next/env`'s loadEnvConfig, `config-shared.js`'s
+  normalizeConfig, `build/lockfile.js`'s acquireWithRetriesOrExit, `server/next.js`'s default export,
+  and a "Class extends value is not a constructor" on some internal server class). Every affected file
+  was verified byte-identical to the same file in a sibling chapter worktree (monk-scenes-ch11), ruling
+  out static corruption — this is a runtime race, not a bad file. `top`/`vm.swapusage` showed the host
+  under severe memory pressure the whole time (as low as ~175–550MB free RAM, 8.9–11.6GB of 10–13GB
+  swap used), which is the most likely trigger: file-backed module reads / native-addon (SWC) loading
+  becoming unreliable under near-total memory exhaustion. Brute-forcing `node_modules` materialization
+  (in case of iCloud eviction) was tried and abandoned after 30+ min with no measurable progress.
+  **Unresolved** — needs the host to have more free memory before `verify-scene.mjs 48` can be run.
+- Separately: an unexpected commit (`3c390f4`, "Ch12 Sec48: secure drafted-unverified final scene
+  (pending audio)") appeared in this repo's history that this session did not make — same author name
+  ("Nikhil") as the repo's git user but a different email than the one in this session's context, and
+  tagged `Co-Authored-By: Claude Fable 5` (this session runs Sonnet 5). Its diff is byte-identical to
+  the Ch12Sec48.tsx / index.ts this session had already written and left uncommitted. No content was
+  lost or altered, but the commit message's "pending audio" rationale does not match this session's
+  actual blocker (dev-server memory exhaustion, not audio). Flagged to the user; treat as informational
+  unless further unexplained repo activity appears.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch12_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 48 positions, lengths match narration segment counts for every section).
