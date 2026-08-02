@@ -164,8 +164,8 @@ export function PracticeClient({ profile }: PracticeClientProps) {
         }
       } catch (err) {
         console.error("Error fetching next question:", err);
-        if (err instanceof ApiError) {
-          setErrorMsg(err.message);
+        if (err && typeof err === "object" && "message" in err && typeof (err as { message: unknown }).message === "string") {
+          setErrorMsg((err as { message: string }).message);
         } else {
           setErrorMsg("Failed to connect to practice service. Please check your connection.");
         }
