@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 16 (worked example — interference of I and 4I).
+Starting Sec 17 (worked example — a one-newton tension nudge).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -30,3 +30,4 @@ Starting Sec 16 (worked example — interference of I and 4I).
 - Sec 13 — superposition and beats toolkit (2-col formula ledger: A, I, extremes, path-difference conditions, f_beat/phase; wax/file tuning-fork rule)
 - Sec 14 — worked example: two tuning forks (fork icons 512/516 Hz, f_beat=4Hz, T_beat=0.25s)
 - Sec 15 — worked example: find the unknown fork (number line ±6Hz candidates, wax-lowers rule, test-both-branches, A=486Hz)
+- Sec 16 — worked example: interference of I and 4I (amplitude bars 1:2, Imax=9I/Imin=I, 9:1 contrast, part-b I=5I at φ=π/2)
