@@ -37,8 +37,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 13 — two consequences (K/U/E vs x graph, E∝A², double-frequency blink, caveat, U-reference convention)
 
+- Sec 14 — energy formulas toolkit (K/U/E formulas, 4-bar K/U split chart, ratios, K=U at A/√2, 2f note)
+
 ## Current
-Subtopic 2 (SHM Energy) in progress. Next: Sec 14.
+Subtopic 2 (SHM Energy) in progress. Next: Sec 15.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
