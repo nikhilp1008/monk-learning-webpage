@@ -321,3 +321,8 @@ plan box math used throughout Sec12-49 (while verify-scene.mjs could
 only confirm the blank-board-at-t=0 state due to the then-real audio
 gap) held up perfectly under full real-audio playback. Chapter quality
 bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
+- Sec 50 — Reading temperature through a property — thermometric-property
+  intro, mercury-in-glass icon, gas/platinum/thermocouple icon row,
+  radiation pyrometer (no-contact), bimetallic strip (geyser), "hotness
+  to number" takeaway. Opens Subtopic 5 (Thermometry/Ideal-Gas). VERDICT
+  PASS (real audio), eyeballed clean.
