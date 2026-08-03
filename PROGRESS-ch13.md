@@ -113,8 +113,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 51 — universal recipe on 3 systems (U-tube/float/tunnel icons w/ red push-arrows, 3 stacked formulas, tunnel high-emphasis, "one method every system" hero)
 
+- Sec 52 — worked example CBSE (3-4-5 phasor right triangle, δ=π/2⇒cosδ=0, A=5cm hero, tanφ=4/3⇒φ≈53°, Pythagoras closer)
+
 ## Current
-Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 52.
+Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 53.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
