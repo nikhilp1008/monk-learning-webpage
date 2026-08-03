@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 8 (worked example — pulse up a hanging rope).
+Starting Sec 9 (pitfalls and pro-tips — subtopic 1 recap).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -22,3 +22,4 @@ Starting Sec 8 (worked example — pulse up a hanging rope).
 - Sec 5 — worked example: sitar string (string+T+μ+f picture, 2-column step solve, v=30 m/s, λ=0.6 m) — establishes the worked-example template: picture → given ledger → 2-col steps → takeaway+recap chips
 - Sec 6 — worked example: two-string speed trap (fat/thin string picture, naive √4=2 crossed out, μ∝d² fix, v_A:v_B=1:1)
 - Sec 7 — worked example: decode a wave equation (snapshot graph, pattern-match to standard form, A/f/λ/v, v_particle≠v_wave)
+- Sec 8 — worked example: pulse up a hanging rope (rope+block diagram, T(x) varies with height, integral t=∫dx/v → 0.4 s)
