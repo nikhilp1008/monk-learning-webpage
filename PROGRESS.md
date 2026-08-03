@@ -346,3 +346,7 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   recap line, boxed P₁V₁/T₁=P₂V₂/T₂ combined identity, PV=nRT=Nk_BT,
   R/k_B constants, expansion-coefficient note, triple-point-of-water
   definition. VERDICT PASS (real audio).
+- Sec 56 — Deriving absolute zero from a gas thermometer — full board
+  derivation: P(t)=P₀(1+γt), boxed 0=P₀(1+t/273.15)⇒t=-273.15°C (red),
+  same-intercept note, origin shift, boxed T=273.16×(P/P_tr) (green).
+  Key derivation of the subtopic. VERDICT PASS (real audio), eyeballed.

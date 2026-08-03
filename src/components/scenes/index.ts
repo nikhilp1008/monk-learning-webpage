@@ -1758,6 +1758,7 @@ import Ch10Sec52 from "./Ch10Sec52";
 import Ch10Sec53 from "./Ch10Sec53";
 import Ch10Sec54 from "./Ch10Sec54";
 import Ch10Sec55 from "./Ch10Sec55";
+import Ch10Sec56 from "./Ch10Sec56";
 
 const CH10 = "087ea53b-681c-51a2-92ef-5ea77f6bdf8b"; // Class 11 · Thermal Properties of Matter
 
@@ -1816,4 +1817,5 @@ REGISTRY[`${CH10}:52`] = Ch10Sec52;
 REGISTRY[`${CH10}:53`] = Ch10Sec53;
 REGISTRY[`${CH10}:54`] = Ch10Sec54;
 REGISTRY[`${CH10}:55`] = Ch10Sec55;
+REGISTRY[`${CH10}:56`] = Ch10Sec56;
 /* ============================ end Ch10 ============================ */
