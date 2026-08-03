@@ -115,8 +115,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 52 — worked example CBSE (3-4-5 phasor right triangle, δ=π/2⇒cosδ=0, A=5cm hero, tanφ=4/3⇒φ≈53°, Pythagoras closer)
 
+- Sec 53 — worked example NEET floating cylinder (text-only, no-mass-needed trap hero, T=2π√(h/g)≈0.80s hero, pendulum-twin closer)
+
 ## Current
-Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 53.
+Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 54.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
