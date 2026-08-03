@@ -149,9 +149,46 @@ eyeballing it with FORCE_SHOTS the moment audio exists, before anything else.
 58. Irreversible cooling (2kg block 400K→300K in lake: ΔS_block≈−230, ΔS_lake≈+267, universe≈+37) + reversible Carnot check (net=0) — two-column.
 59. Entropy pitfalls — EXACT reuse of Sec8/15/24/32/38/45/53's 2×2 grid layout, new content.
 
+## Sec 60-61 — AUTHORED BUT UNVERIFIED (Subtopic 9: Recap, complete — CHAPTER DRAFT DONE)
+60. The whole chapter on one page — 6-row consolidated formula sheet (foundation, 4 processes,
+    capacities, engines, Carnot, entropy) + golden-thread verdict box (1st law=bookkeeping,
+    2nd law=direction).
+61. Rapid recap and memory aids (FINAL SECTION) — 7-line numbered one-idea-per-subtopic recap
+    + THE exam reflex, boxed in red for emphasis: name process → choose law → kelvin → signs
+    before substituting.
+
+## ALL 61 SECTIONS NOW DRAFTED (100%) — typecheck clean end to end as of last check.
+Only Sec 1-11 carry a real `VERDICT sec=N: PASS` from verify-scene.mjs. Sec 12-61 (50
+sections, 82% of the chapter) are unverified — audio 404 on the CDN for every section
+from 12 through 61 as of every check made throughout this session (checked repeatedly,
+most recently right after Sec 61). Do NOT report this chapter as "done" until Sec 12-61
+are run through the verdict gate and any failures fixed.
+
+## MANDATORY NEXT STEPS (in order) once audio exists for Sec 12+
+1. Re-check the CDN: `curl -sI https://audio.monklearning.com/11/Physics/p11_ch11_thermodynamics/english_sec_12.mp3`
+   — confirm 200, then spot-check a few more (30, 61) since sections may land unevenly.
+2. Run `PORT=3011 CHAPTER_ID=58c19132-676f-5dfb-b84e-e3a34b34a48e node verify-scene.mjs <N> '<reveals_en>' '<reveals_hi>' ./shots/sec<N>`
+   for every section 12 through 61, using the reveal arrays already cached in this
+   session's transcript (or re-fetch fresh from Supabase — they may have changed once
+   real audio/alignment landed; the placeholder-looking 1-second-apart clusters seen
+   during drafting might resolve to smoother timings).
+3. Fix any overlap/overflow/empty failures reported, prioritizing in this order (highest
+   risk / most load-bearing first):
+   - Sec 47 (Carnot cycle P-V loop) — the most important diagram in the chapter
+   - Sec 33/34 (heat engine / fridge 3-box diagrams) — reused conceptually everywhere after
+   - Sec 42 (equivalence-proof composite-device diagram)
+   - Sec 16 (four-process P-V diagram, anchors the Processes subtopic)
+   - Sec 8/15/24/32/38/45/53/59 — all share ONE exact 2×2 grid layout; if one passes,
+     the geometry is likely sound for all, but still verify each (content differs).
+   - Everything else, in order.
+4. FORCE_SHOTS eyeball at least one section per subtopic (as required by SCENE_AUTHORING.md
+   Step 7) — geometry checks catch overlap/overflow, not meaning, arrow-target accuracy, or
+   Hindi phrasing quality.
+5. Update this file's "Done" log and commit per section as each one passes, exactly as
+   Sec 1-11 were handled at the start of this session.
+
 ## Current
-Authoring paused at end of Subtopic 8 (Entropy, Sec 54-59) pending audio.
-Sec 1-11 fully verified (VERDICT PASS). Sec 12-59 drafted, typecheck-clean, unverified.
-59/61 sections drafted (97%). Only Sec 60-61 (Subtopic 9: Recap) remain. Next: author
-Sec 60-61 to complete the full draft, OR re-verify Sec 12-59 first if audio becomes
-available before the last 2 sections are drafted.
+ALL 61 sections drafted, registered in index.ts, and typecheck-clean. Sec 1-11 verified
+(PASS). Sec 12-61 blocked on audio — see MANDATORY NEXT STEPS above. This is the
+correct place to resume: do not start new sections, resume by re-checking audio and
+then working through the verify list top to bottom.
