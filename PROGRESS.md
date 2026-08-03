@@ -342,3 +342,7 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   linear relation t=[(X_t-X₀)/(X₁₀₀-X₀)]×100°C, X-definition note,
   T=273.16×(P/P_tr) gas-thermometer formula, single-fixed-point note,
   0K=-273.15°C, extrapolated-limit reminder. VERDICT PASS (real audio).
+- Sec 55 — The gas laws combined and the ideal-gas equation — 3-laws
+  recap line, boxed P₁V₁/T₁=P₂V₂/T₂ combined identity, PV=nRT=Nk_BT,
+  R/k_B constants, expansion-coefficient note, triple-point-of-water
+  definition. VERDICT PASS (real audio).
