@@ -15,8 +15,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 - Sec 1 — what makes motion SHM (jhula, periodic vs oscillation, -A/O/+A line, F=-kx, fastest/frozen, verdict)
 - Sec 2 — the ID card of SHM (F=-kx→F=ma, ID card a=-ω²x, a-x graph, pitfalls: Hooke/small-angle, damping/frequency)
 
+- Sec 3 — kinematics toolkit (x(t)/v(t)/a(t)/ω bridge, vmax/amax hero box, phase-diagram waves, 2 shortcuts)
+
 ## Current
-Subtopic 1 in progress. Next: Sec 3.
+Subtopic 1 in progress. Next: Sec 4.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
