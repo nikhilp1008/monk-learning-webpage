@@ -77,8 +77,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 33 — pitfalls & pro-tips (5 red traps, 1 green pro-tip, "pendulum feels g_eff; spring feels only k" stamp)
 
+- Sec 34 — three storylines (tabla/jhula examples, free/damped/forced 3-row wave diagram w/ envelope+transient)
+
 ## Current
-Subtopic 3 COMPLETE (12/12). Next: Subtopic 4 — Damped and Forced Oscillations, Sec 34.
+Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 35.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
