@@ -29,8 +29,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 9 — worked example JEE Main two speeds (v-x curve w/ 2 points, square+subtract, ω=4, A=5cm T=π/2s)
 
+- Sec 10 — worked example JEE Advanced (reference circle, rotating radius+shadow, 2 green safe-arcs, Δθ=2π/3, fraction=1/3) — 9 beats (this section has 9 board_events, not 8)
+
 ## Current
-Subtopic 1 in progress. Next: Sec 10.
+Subtopic 1 in progress. Next: Sec 11 (last of subtopic 1).
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
