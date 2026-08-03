@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 32 (worked example — train toward a listener).
+Starting Sec 33 (worked example — source-moving vs observer-moving).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -46,3 +46,4 @@ Starting Sec 32 (worked example — train toward a listener).
 - Sec 29 — the asymmetry examiners love (2-col tick comparison: source-moving compresses air's λ vs observer-moving keeps λ fixed/changes effective speed; medium note, Doppler-everywhere, 3 limits)
 - Sec 30 — board derivation: the two Doppler cases (Case A source→observer f'=fv/(v-vs); Case B observer→source f'=f(v+vo)/v; compare + general formula)
 - Sec 31 — Doppler effect toolkit (master formula, sign rule, special cases, both-approach, wind, light shift, blueshift/redshift color code)
+- Sec 32 — worked example: train toward a listener (train+listener icon, f'=fv/(v-vs)=550Hz, sanity check)
