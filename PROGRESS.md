@@ -103,8 +103,20 @@ Just re-run and wait it out (use a background+monitor pattern, don't block synch
 last check). Same reuse-proven-patterns discipline as Sec 12-24 applied throughout:
 Sec29 mirrors Sec5/12/21's two-column divider; Sec32 is an exact copy of Sec8/15/24's grid.
 
+## Sec 33-38 — AUTHORED BUT UNVERIFIED (Subtopic 5: Heat Engines/Refrigerators, complete)
+33. The heat engine — canonical hot-reservoir/engine/cold-reservoir 3-box diagram (Q1 in, W out, Q2 out), η=1−Q2/Q1, salary analogy.
+34. Refrigerators and heat pumps — Sec33's 3-box footprint reused with REVERSED arrows ("movie backwards"), COP=Q2/W (fridge) and Q1/W (pump).
+35. Formula sheet: Q1=Q2+W, η, both COPs, COP_pump=COP_fridge+1, Carnot limits, Kelvin-Planck/Clausius preview.
+36. An engine (Q1=1000,Q2=600⇒η=40%) + fridge-COP trap (COP=Q2/W=4, NOT Q2/Q1) — two-column.
+37. Reverse-efficiency (η=25%,W=500⇒Q1=2000,Q2=1500) + Carnot leverage (COP_fridge=5,COP_pump=6, 200J moves 1000J) — two-column.
+38. Heat-engine pitfalls — EXACT reuse of Sec8/15/24/32's 2×2 grid layout, new content.
+
+**Sec 33/34 are the most structurally important unverified diagrams** — they establish the
+hot/engine/cold visual language reused conceptually through Carnot (Sec 46-53). Prioritize
+eyeballing these with FORCE_SHOTS once audio exists, even before the mechanical PASS check.
+
 ## Current
-Authoring paused at end of Subtopic 4 (Specific Heats & Mayer, Sec 25-32) pending audio.
-Sec 1-11 fully verified (VERDICT PASS). Sec 12-32 drafted, typecheck-clean, unverified.
-Next: Sec 33 (Subtopic 5: Heat Engines/Refrigerators) once resumed, OR re-verify Sec 12-32
+Authoring paused at end of Subtopic 5 (Heat Engines/Refrigerators, Sec 33-38) pending audio.
+Sec 1-11 fully verified (VERDICT PASS). Sec 12-38 drafted, typecheck-clean, unverified.
+Next: Sec 39 (Subtopic 6: Second Law/Reversibility) once resumed, OR re-verify Sec 12-38
 first if audio becomes available before more sections are drafted.
