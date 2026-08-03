@@ -34,10 +34,10 @@ trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
 ## Current
-Sec 61 done — Subtopic 5 (Thermometry/Ideal-Gas, 50-61) COMPLETE
-(12/12). Starting Sec 62 (Subtopic 6: Phase Transitions, sections
-62-72). Audio works chapter-wide — normal verify-scene.mjs + spot-
-eyeball workflow per section.
+Sec 64 done — Subtopic 6 (Phase Transitions, 62-72) in progress
+(3/11). Working through Sec 65-74 (Subtopic 6 remainder + Wrap-Up).
+Audio works chapter-wide — normal verify-scene.mjs + spot-eyeball
+workflow per section.
 
 ## Stale pause note (2026-07-31, kept for history only)
 Sec 43 is the last VERIFIED-and-committed section (tsc clean, verify
@@ -379,3 +379,10 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   substances-rises vs water-rebel-falls notes, regelation wire-through-
   ice icon, refreeze note, SVP=external-P boiling condition, pressure-
   cooker vs mountain icons. VERDICT PASS (real audio).
+- Sec 64 — The phase diagram: triple point and critical point — P-T
+  axes with fusion/vaporization/sublimation curves meeting at a red
+  triple-point dot (solid/liquid/gas region labels), water's triple-
+  point values (273.16K, 611.7 Pa), amber critical-point dot ending
+  the vaporization curve (647K, 22.1 MPa), no-liquid-gas-distinction
+  closer. VERDICT PASS (real audio, 2 advisory stalls each lang from
+  1s-tight beats — expected, non-blocking).
