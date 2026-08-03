@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 12 (board derivation — why beats equal the difference).
+Starting Sec 13 (superposition and beats toolkit).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -26,3 +26,4 @@ Starting Sec 12 (board derivation — why beats equal the difference).
 - Sec 9 — pitfalls and pro-tips subtopic 1 recap (4 trap chips grid + pro-tip shortcut + closing) — establishes the recap template reused at secs 18/27/36
 - Sec 10 — principle of superposition (pond hook, in-step/out-of-step sine overlays with constructive/destructive resultants, general formula + extremes)
 - Sec 11 — beats: a note that throbs (carrier+envelope beat waveform with loud/soft rings, f_beat=|f1-f2|, tuning-by-ear, 7Hz limit)
+- Sec 12 — board derivation: why beats equal the difference (sum-to-product, envelope-vs-note factors, factor-of-2 cosine peaks proof)
