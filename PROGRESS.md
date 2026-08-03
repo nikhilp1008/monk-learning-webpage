@@ -34,8 +34,8 @@ trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
 ## Current
-Sec 71 done — Subtopic 6 (Phase Transitions, 62-72) in progress
-(10/11). Working through Sec 72-74 (Subtopic 6 close + Wrap-Up).
+Sec 72 done — Subtopic 6 (Phase Transitions, 62-72) COMPLETE (11/11).
+Starting Sec 73-74 (Wrap-Up, final two sections of the chapter).
 Audio works chapter-wide — normal verify-scene.mjs + spot-eyeball
 workflow per section. Spot-eyeballed Sec64/66/70 with FORCE_SHOTS —
 clean, advisory stalls confirmed harmless (final-frame content always
@@ -435,3 +435,11 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   ~−0.0074°C/atm), closing insight (negative sign ← ice less dense).
   VERDICT PASS (real audio; en beats 3-6 exactly 1s apart, advisory
   stalls expected).
+- Sec 72 — Pitfalls and pro-tips for change of state — 5 red numbered
+  badges (Sec61 pattern): water's melting-point exception, regelation
+  ≠ cutting, triple point ≠ ice/boiling point, gas can't always be
+  liquefied above critical T, evaporation ≠ boiling; amber pro-tip
+  box (sketch the P-T map, mark triple/critical points, slide along
+  constant-P/T). Closes Subtopic 6 AND the whole chapter's traps.
+  VERDICT PASS (real audio; hi beats 1-6 exactly 1s apart, advisory
+  stalls expected). SUBTOPIC 6 COMPLETE (11/11).
