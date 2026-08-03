@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 27 (pitfalls and pro-tips — subtopic 3 recap).
+Subtopic 3 (Standing Waves and Acoustics, secs 19-27) DONE. Starting Sec 28 (Doppler effect: why pitch changes).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -41,3 +41,4 @@ Starting Sec 27 (pitfalls and pro-tips — subtopic 3 recap).
 - Sec 24 — worked example: closed pipe first overtone (3-pipe comparison, forbidden 2f1 crossed out, correct 3f1=600Hz)
 - Sec 25 — worked example: three successive resonances (spectrum 250/350/450Hz, open-hypothesis ruled out, closed confirmed, f1=50Hz, L=1.7m)
 - Sec 26 — worked example: the resonance tube (tube+2 levels diagram, l+e=λ/4 & 3λ/4, subtract kills e, v=336m/s, e=0.5cm)
+- Sec 27 — pitfalls and pro-tips subtopic 3 recap (overtone trap, end-correction+dodge, spacing, displacement≠pressure; 5-sec pipe-ID pro-tip)
