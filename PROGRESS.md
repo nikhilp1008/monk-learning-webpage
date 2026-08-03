@@ -34,12 +34,13 @@ trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
 ## Current
-Sec 73 done — Chapter Wrap-Up (1/2). One section left: Sec 74
-(one-screen chapter revision) — the FINAL section of Chapter 10.
-Audio works chapter-wide — normal verify-scene.mjs + spot-eyeball
-workflow per section. Spot-eyeballed Sec64/66/70/73 with
-FORCE_SHOTS — clean, advisory stalls confirmed harmless (final-frame
-content always complete).
+CHAPTER COMPLETE — ALL 74/74 SECTIONS DONE!
+Sec 74 (One-screen chapter revision) done — Chapter Wrap-Up COMPLETE
+(2/2). Every section 1-74 is authored, registered, tsc-clean,
+verify-scene.mjs VERDICT PASS (real audio, both languages), and
+committed. Spot-eyeballed Sec64/66/70/73/74 with FORCE_SHOTS — all
+clean, no overlap/overflow/empty; advisory stalls confirmed harmless
+throughout (final-frame content always complete).
 
 ## Stale pause note (2026-07-31, kept for history only)
 Sec 43 is the last VERIFIED-and-committed section (tsc clean, verify
@@ -450,3 +451,14 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   (1/2). VERDICT PASS (real audio; en beats 5-7 exactly 1s apart,
   advisory stalls expected). Eyeballed clean — all six boxes readable,
   no overlaps despite density.
+- Sec 74 — One-screen chapter revision (FINAL section) — companion
+  2×3 grid to Sec73, one 2-line takeaway box per subtopic (heat≠temp/
+  γ=3α/densest@4°C; 5-legs calorimetry/budget heat; DC-circuit
+  conduction/ice-time∝thickness²; P∝T⁴/blackbody; dilute-gas standard/
+  abs-zero unreachable; squeeze-ice-melts/triple point/evap vs boil),
+  closing amber-bordered GRAND MNEMONIC box (solids conduct · fluids
+  convect · vacuum only radiates). Closes Chapter Wrap-Up (2/2).
+  VERDICT PASS (real audio; en beats 2-7 exactly 1s apart, advisory
+  stalls expected). Eyeballed clean — a satisfying, complete capstone.
+  *** CHAPTER 10 (THERMAL PROPERTIES OF MATTER) — ALL 74/74 SECTIONS
+  DONE. ***
