@@ -51,8 +51,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 20 — worked example JEE Advanced (⟨K⟩_t=E/2 vs ⟨K⟩_x=2E/3, K(x) parabola w/ 2 reference levels)
 
+- Sec 21 — pitfalls & pro-tips (4 red traps, 1 green pro-tip, "Lock in: K=U at A/√2, E∝A²" memory-hook stamp)
+
 ## Current
-Subtopic 2 (SHM Energy) in progress. Next: Sec 21 (last of subtopic 2).
+Subtopic 2 COMPLETE (10/10). Next: Subtopic 3 — Pendulums and Mass-Spring Systems, Sec 22.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
