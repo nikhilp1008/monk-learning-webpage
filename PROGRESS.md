@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Subtopic 1 (Wave Characteristics and Speed, secs 1-9) DONE. Starting Sec 10 (principle of superposition).
+Starting Sec 11 (beats — a note that throbs).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -24,3 +24,4 @@ Subtopic 1 (Wave Characteristics and Speed, secs 1-9) DONE. Starting Sec 10 (pri
 - Sec 7 — worked example: decode a wave equation (snapshot graph, pattern-match to standard form, A/f/λ/v, v_particle≠v_wave)
 - Sec 8 — worked example: pulse up a hanging rope (rope+block diagram, T(x) varies with height, integral t=∫dx/v → 0.4 s)
 - Sec 9 — pitfalls and pro-tips subtopic 1 recap (4 trap chips grid + pro-tip shortcut + closing) — establishes the recap template reused at secs 18/27/36
+- Sec 10 — principle of superposition (pond hook, in-step/out-of-step sine overlays with constructive/destructive resultants, general formula + extremes)
