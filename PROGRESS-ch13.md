@@ -43,8 +43,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 16 — derivation double-frequency (power-reduction, K/U=E/2±E/2cos2ωt, x(t) 1-cycle vs K(t) 2-cycle diagram)
 
+- Sec 17 — worked example CBSE (m=0.5kg,k=200N/m,A=4cm; E=0.16J, Kmax=Umax=E, vmax=0.8m/s)
+
 ## Current
-Subtopic 2 (SHM Energy) in progress. Next: Sec 17.
+Subtopic 2 (SHM Energy) in progress. Next: Sec 18.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
