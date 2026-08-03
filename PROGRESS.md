@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Subtopic 2 (Superposition and Beats, secs 10-18) DONE. Starting Sec 19 (standing waves: a pattern that goes nowhere).
+Starting Sec 20 (harmonics, resonance, and pipes).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -33,3 +33,4 @@ Subtopic 2 (Superposition and Beats, secs 10-18) DONE. Starting Sec 19 (standing
 - Sec 16 — worked example: interference of I and 4I (amplitude bars 1:2, Imax=9I/Imin=I, 9:1 contrast, part-b I=5I at φ=π/2)
 - Sec 17 — worked example: one-newton tension nudge (2 wires 400Hz unison, f∝√T differential, Δf=2Hz, sanity check)
 - Sec 18 — pitfalls and pro-tips subtopic 2 recap (4 trap chips: full-diff beat, wax/file, coherent interference term, beats≠interference; toward/away pro-tip)
+- Sec 19 — standing waves: a pattern that goes nowhere (2-loop envelope with N/A dots, ringed node/antinode, reflection mechanism, skipping-rope analogy, λ/2 & λ/4 spacing)
