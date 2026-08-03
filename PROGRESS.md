@@ -34,10 +34,10 @@ trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
 ## Current
-Sec 69 done — Subtopic 6 (Phase Transitions, 62-72) in progress
-(8/11). Working through Sec 70-74 (Subtopic 6 remainder + Wrap-Up).
+Sec 70 done — Subtopic 6 (Phase Transitions, 62-72) in progress
+(9/11). Working through Sec 71-74 (Subtopic 6 remainder + Wrap-Up).
 Audio works chapter-wide — normal verify-scene.mjs + spot-eyeball
-workflow per section. Spot-eyeballed Sec64/66 with FORCE_SHOTS —
+workflow per section. Spot-eyeballed Sec64/66/70 with FORCE_SHOTS —
 clean, advisory stalls confirmed harmless (final-frame content always
 complete).
 
@@ -421,3 +421,11 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   (releases latent heat), outcome note, REGELATION name badge +
   closing (only because ice's MP falls with P). VERDICT PASS (real
   audio; hi beats 2-6 exactly 1s apart, advisory stalls expected).
+- Sec 70 — Worked example: why dry ice sublimes — full CO₂ phase
+  diagram (triple point at 5.1atm, fusion/vaporization/sublimation
+  curves, solid/liquid/gas regions) with a dashed 1atm reference line
+  crossing only the sublimation curve at a marked dot, conclusion +
+  generalized rule (water's triple point is far below 1atm, so it
+  melts). VERDICT PASS (real audio; en beats 4-6 and hi beats 0-2
+  exactly 1s apart, advisory stalls expected). Eyeballed clean —
+  best diagram of the batch, no overlaps.
