@@ -23,8 +23,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 6 — derivation ω from force law (spring-block, ma=-kx, ω=√(k/m), intuition, 3-step recipe, closing verdict)
 
+- Sec 7 — worked example CBSE (given x=0.05sin(20πt), A/T graph, read off A/ω/φ, T/f/vmax/amax, method verdict)
+
 ## Current
-Subtopic 1 in progress. Next: Sec 7.
+Subtopic 1 in progress. Next: Sec 8.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
