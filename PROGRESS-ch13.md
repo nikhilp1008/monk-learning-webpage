@@ -19,8 +19,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 4 — derivation v,a from x(t) (differentiate twice, x/v phase waves, consistency check, verdict)
 
+- Sec 5 — derivation v(x) ellipse (divide by A/Aω, sin²+cos²=1, v=±ω√(A²-x²), v-x ellipse w/ 4 landmarks, ± note)
+
 ## Current
-Subtopic 1 in progress. Next: Sec 5.
+Subtopic 1 in progress. Next: Sec 6.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
