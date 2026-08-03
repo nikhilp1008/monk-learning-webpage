@@ -34,8 +34,8 @@ trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
 ## Current
-Sec 64 done — Subtopic 6 (Phase Transitions, 62-72) in progress
-(3/11). Working through Sec 65-74 (Subtopic 6 remainder + Wrap-Up).
+Sec 65 done — Subtopic 6 (Phase Transitions, 62-72) in progress
+(4/11). Working through Sec 66-74 (Subtopic 6 remainder + Wrap-Up).
 Audio works chapter-wide — normal verify-scene.mjs + spot-eyeball
 workflow per section.
 
@@ -386,3 +386,10 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   the vaporization curve (647K, 22.1 MPa), no-liquid-gas-distinction
   closer. VERDICT PASS (real audio, 2 advisory stalls each lang from
   1s-tight beats — expected, non-blocking).
+- Sec 65 — Evaporation versus boiling — two-column BOILING (bulk, at
+  BP) vs EVAPORATION (surface, any T) comparison, fastest-molecules-
+  escape note, sweat/matka cooling chips, desert-cooler note, 4-chip
+  row of speed-up factors (T, area, dry air, wind), red caution note
+  on impurities shifting transition temps. VERDICT PASS (real audio;
+  en beats 1-6 are exactly 1s apart so several advisory stalls are
+  expected/non-blocking).
