@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 38 (cheat sheet — final section of the chapter!).
+CHAPTER COMPLETE — all 38 sections authored, registered, typechecked, and verified PASS (both languages).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -52,3 +52,4 @@ Starting Sec 38 (cheat sheet — final section of the chapter!).
 - Sec 35 — worked example: car, wall, and echo (double-Doppler 2-step: wall receives 340Hz, echo=360Hz, beat=40Hz)
 - Sec 36 — pitfalls and pro-tips subtopic 4 recap (sign chaos, source≠observer, wind both terms, line-of-sight only/no shift at closest approach; wall-echo shortcut formulas)
 - Sec 37 — formula recap: complete Waves toolkit (dense one-board reference, all 4 subtopics: wave basics, superposition, beats, standing waves, resonance tube, Doppler)
+- Sec 38 — cheat sheet: Waves quick recall (7 punchy mnemonic chips + Doppler + closing line) — FINAL SECTION, chapter complete
