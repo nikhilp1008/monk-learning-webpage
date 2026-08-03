@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Subtopic 4 (Doppler Effect, secs 28-36) DONE. Starting Sec 37 (formula recap: complete Waves toolkit).
+Starting Sec 38 (cheat sheet — final section of the chapter!).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -51,3 +51,4 @@ Subtopic 4 (Doppler Effect, secs 28-36) DONE. Starting Sec 37 (formula recap: co
 - Sec 34 — worked example: both approaching (ambulance+rider icons, general formula both terms push up, f'=720Hz)
 - Sec 35 — worked example: car, wall, and echo (double-Doppler 2-step: wall receives 340Hz, echo=360Hz, beat=40Hz)
 - Sec 36 — pitfalls and pro-tips subtopic 4 recap (sign chaos, source≠observer, wind both terms, line-of-sight only/no shift at closest approach; wall-echo shortcut formulas)
+- Sec 37 — formula recap: complete Waves toolkit (dense one-board reference, all 4 subtopics: wave basics, superposition, beats, standing waves, resonance tube, Doppler)
