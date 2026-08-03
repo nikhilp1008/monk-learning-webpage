@@ -17,8 +17,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 3 — kinematics toolkit (x(t)/v(t)/a(t)/ω bridge, vmax/amax hero box, phase-diagram waves, 2 shortcuts)
 
+- Sec 4 — derivation v,a from x(t) (differentiate twice, x/v phase waves, consistency check, verdict)
+
 ## Current
-Subtopic 1 in progress. Next: Sec 4.
+Subtopic 1 in progress. Next: Sec 5.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
