@@ -111,8 +111,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 50 — derivation the phasor method (triangle-law vector diagram A₁,A₂,δ,resultant A,φ; law-of-cosines hero, tanφ formula, geometry-not-trig closer)
 
+- Sec 51 — universal recipe on 3 systems (U-tube/float/tunnel icons w/ red push-arrows, 3 stacked formulas, tunnel high-emphasis, "one method every system" hero)
+
 ## Current
-Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 51.
+Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 52.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
