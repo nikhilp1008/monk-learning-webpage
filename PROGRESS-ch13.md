@@ -105,8 +105,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 47 — formula board projections/superposition (x/v/a, ẍ+ω²x=0, collinear A formula, 3 phase cases, line/ellipse/circle icons)
 
+- Sec 48 — formula board standard systems (U-tube/float/Earth-tunnel icons, period-twins √(L/g)√(h/g)√(R/g), corrections)
+
 ## Current
-Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 48.
+Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 49.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
