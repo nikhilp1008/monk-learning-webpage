@@ -79,8 +79,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 34 — three storylines (tabla/jhula examples, free/damped/forced 3-row wave diagram w/ envelope+transient)
 
+- Sec 35 — resonance & damping force (F=-bv, growing-swing diagram w/ 3 amplitudes+push arrow, RESONANCE hero, infinite-amplitude caveat)
+
 ## Current
-Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 35.
+Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 36.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
