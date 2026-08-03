@@ -34,12 +34,12 @@ trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
 ## Current
-Sec 72 done — Subtopic 6 (Phase Transitions, 62-72) COMPLETE (11/11).
-Starting Sec 73-74 (Wrap-Up, final two sections of the chapter).
+Sec 73 done — Chapter Wrap-Up (1/2). One section left: Sec 74
+(one-screen chapter revision) — the FINAL section of Chapter 10.
 Audio works chapter-wide — normal verify-scene.mjs + spot-eyeball
-workflow per section. Spot-eyeballed Sec64/66/70 with FORCE_SHOTS —
-clean, advisory stalls confirmed harmless (final-frame content always
-complete).
+workflow per section. Spot-eyeballed Sec64/66/70/73 with
+FORCE_SHOTS — clean, advisory stalls confirmed harmless (final-frame
+content always complete).
 
 ## Stale pause note (2026-07-31, kept for history only)
 Sec 43 is the last VERIFIED-and-committed section (tsc clean, verify
@@ -443,3 +443,10 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   constant-P/T). Closes Subtopic 6 AND the whole chapter's traps.
   VERDICT PASS (real audio; hi beats 1-6 exactly 1s apart, advisory
   stalls expected). SUBTOPIC 6 COMPLETE (11/11).
+- Sec 73 — Your complete formula toolkit — 2×3 grid, one bordered box
+  per subtopic (Expansion, Calorimetry, Conduction, Radiation, Gases,
+  Change of State) each with its headline formula(s), closing "one
+  habit" note (kelvin, budget heat, ratios). Opens Chapter Wrap-Up
+  (1/2). VERDICT PASS (real audio; en beats 5-7 exactly 1s apart,
+  advisory stalls expected). Eyeballed clean — all six boxes readable,
+  no overlaps despite density.
