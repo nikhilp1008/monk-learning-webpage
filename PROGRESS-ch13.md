@@ -107,8 +107,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 48 — formula board standard systems (U-tube/float/Earth-tunnel icons, period-twins √(L/g)√(h/g)√(R/g), corrections)
 
+- Sec 49 — derivation SHM is the projection of UCM (circle w/ both x,y dashed projections, x=Acosθ/y=Asinθ, ẍ=-ω²x hero, centripetal↔SHM accel note, 90° out of phase closer)
+
 ## Current
-Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 49.
+Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 50.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
