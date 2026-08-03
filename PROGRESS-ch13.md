@@ -91,8 +91,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 40 — worked example CBSE (m=0.2kg,b=0.04; t½=6.93s, equal-interval property of exponential decay)
 
+- Sec 41 — worked example NEET (f₀=5Hz conceptual, don't-grind trap, fdrive≈f₀, max amplitude never at multiple, resonance)
+
 ## Current
-Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 41.
+Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 42.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
