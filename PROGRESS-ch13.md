@@ -53,8 +53,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 21 — pitfalls & pro-tips (4 red traps, 1 green pro-tip, "Lock in: K=U at A/√2, E∝A²" memory-hook stamp)
 
+- Sec 22 — two workhorses (pendulum+spring side-by-side, mgsinθ, T=2π√(L/g), isochronism/Galileo)
+
 ## Current
-Subtopic 2 COMPLETE (10/10). Next: Subtopic 3 — Pendulums and Mass-Spring Systems, Sec 22.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 23.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
