@@ -71,8 +71,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 30 — worked example NEET descending lift (g_eff decreases trap, g_eff=g/4, T'=4s, free-fall sanity check)
 
+- Sec 31 — worked example JEE Main (m=2kg,k1=6,k2=3; Tseries=2π≈6.28s, Tparallel≈2.96s, never-average note)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 31.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 32.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
