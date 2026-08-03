@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 36 (pitfalls and pro-tips — subtopic 4 recap).
+Subtopic 4 (Doppler Effect, secs 28-36) DONE. Starting Sec 37 (formula recap: complete Waves toolkit).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -50,3 +50,4 @@ Starting Sec 36 (pitfalls and pro-tips — subtopic 4 recap).
 - Sec 33 — worked example: source-moving vs observer-moving (same speed=30 both cases: source→330Hz vs observer→327.3Hz, NOT equal, confirms asymmetry with numbers)
 - Sec 34 — worked example: both approaching (ambulance+rider icons, general formula both terms push up, f'=720Hz)
 - Sec 35 — worked example: car, wall, and echo (double-Doppler 2-step: wall receives 340Hz, echo=360Hz, beat=40Hz)
+- Sec 36 — pitfalls and pro-tips subtopic 4 recap (sign chaos, source≠observer, wind both terms, line-of-sight only/no shift at closest approach; wall-echo shortcut formulas)
