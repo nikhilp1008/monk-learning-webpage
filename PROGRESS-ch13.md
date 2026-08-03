@@ -63,8 +63,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 26 — derivation pendulum T (gravity vector triangle: mg, mgcosθ, mgsinθ; small-angle; ω²=g/L; mass cancels)
 
+- Sec 27 — derivation vertical spring (natural length/x₀/y diagram, Fnet=-ky, T=2π√(m/k) vertical=horizontal)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 27.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 28.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
