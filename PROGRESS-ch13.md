@@ -57,8 +57,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 23 — why mass cancels for pendulum but not spring (Moon comparison, T=2π√(m/k), small-angle caution)
 
+- Sec 24 — formula board pt1 (pendulum/spring/shortcut formulas, series vs parallel spring diagram, cut-n-pieces hero)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 24.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 25.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
