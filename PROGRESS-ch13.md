@@ -41,8 +41,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 15 — derivation E=½kA² (K=cos² U=sin² formulas, complementary hump waves+flat E, Pythagorean identity, hero)
 
+- Sec 16 — derivation double-frequency (power-reduction, K/U=E/2±E/2cos2ωt, x(t) 1-cycle vs K(t) 2-cycle diagram)
+
 ## Current
-Subtopic 2 (SHM Energy) in progress. Next: Sec 16.
+Subtopic 2 (SHM Energy) in progress. Next: Sec 17.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
