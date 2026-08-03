@@ -67,8 +67,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 28 — derivation series/parallel k (parallel=same x icon, series=same F icon, keff formulas, resistor-opposite warning)
 
+- Sec 29 — worked example CBSE seconds pendulum (L=1m,g=π²⇒T=2s; L→4L⇒T'=4s; T∝√L)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 29.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 30.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
