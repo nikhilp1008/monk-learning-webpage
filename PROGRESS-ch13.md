@@ -61,8 +61,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 25 — formula board pt2 (g_eff lift up/down/car, physical pendulum, torsional pendulum, free-fall limit)
 
+- Sec 26 — derivation pendulum T (gravity vector triangle: mg, mgcosθ, mgsinθ; small-angle; ω²=g/L; mass cancels)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 26.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 27.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
