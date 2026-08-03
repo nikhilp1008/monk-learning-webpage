@@ -65,8 +65,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 27 — derivation vertical spring (natural length/x₀/y diagram, Fnet=-ky, T=2π√(m/k) vertical=horizontal)
 
+- Sec 28 — derivation series/parallel k (parallel=same x icon, series=same F icon, keff formulas, resistor-opposite warning)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 28.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 29.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
