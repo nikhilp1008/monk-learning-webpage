@@ -361,3 +361,7 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   vessel/Gay-Lussac setup, Kelvin conversion (300K/400K), boxed
   P₂=1×400/300≈1.33atm, "100° sounds big but only 33%" insight, reason-
   in-Kelvin takeaway. VERDICT PASS (real audio).
+- Sec 60 — Worked example: absolute zero from two readings — P=a+bt
+  linear model from 2 pressure readings, a/b computation, boxed
+  t₀=-a/b≈-273.2°C, historical-method insight, 1.366=373.15/273.15
+  fingerprint. VERDICT PASS (real audio).
