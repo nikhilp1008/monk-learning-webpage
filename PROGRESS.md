@@ -141,8 +141,17 @@ composite-device proof reused conceptually in Sec44. Eyeball with FORCE_SHOTS fi
 canonical Carnot cycle P-V loop that Sec 48-53 all refer back to conceptually. Prioritize
 eyeballing it with FORCE_SHOTS the moment audio exists, before anything else.
 
+## Sec 54-59 — AUTHORED BUT UNVERIFIED (Subtopic 8: Entropy, complete)
+54. Entropy: the universe's odometer — dS=Q/T, ΔS_universe≥0 boxed, shuffled-deck callback, freezer example.
+55. Why reversible heat, why S is a state function — dS=dQ_rev/T boxed, irreversible⇒use any reversible path.
+56. Formula sheet: dS=dQrev/T, 2nd law form, Clausius inequality, 4 standard cases, general ideal-gas ΔS, irreversible recipe.
+57. Expanding gas (2mol,400K,V→2V⇒ΔS≈11.5J/K, universe=0) + melting ice (0.5kg⇒ΔS≈612J/K) — two-column.
+58. Irreversible cooling (2kg block 400K→300K in lake: ΔS_block≈−230, ΔS_lake≈+267, universe≈+37) + reversible Carnot check (net=0) — two-column.
+59. Entropy pitfalls — EXACT reuse of Sec8/15/24/32/38/45/53's 2×2 grid layout, new content.
+
 ## Current
-Authoring paused at end of Subtopic 7 (Carnot, Sec 46-53) pending audio.
-Sec 1-11 fully verified (VERDICT PASS). Sec 12-53 drafted, typecheck-clean, unverified.
-53/61 sections drafted (87%). Next: Sec 54 (Subtopic 8: Entropy) once resumed, OR
-re-verify Sec 12-53 first if audio becomes available before more sections are drafted.
+Authoring paused at end of Subtopic 8 (Entropy, Sec 54-59) pending audio.
+Sec 1-11 fully verified (VERDICT PASS). Sec 12-59 drafted, typecheck-clean, unverified.
+59/61 sections drafted (97%). Only Sec 60-61 (Subtopic 9: Recap) remain. Next: author
+Sec 60-61 to complete the full draft, OR re-verify Sec 12-59 first if audio becomes
+available before the last 2 sections are drafted.
