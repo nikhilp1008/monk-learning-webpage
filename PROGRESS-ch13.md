@@ -81,8 +81,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 35 — resonance & damping force (F=-bv, growing-swing diagram w/ 3 amplitudes+push arrow, RESONANCE hero, infinite-amplitude caveat)
 
+- Sec 36 — formula board damped motion (x(t)/ω'/A(t)/E(t), 3-regime return-to-eq diagram, bc=2√(mk))
+
 ## Current
-Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 36.
+Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 37.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
