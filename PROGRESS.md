@@ -89,8 +89,22 @@ dev servers/tsc runs — this resolved on its own each time without needing the 
 symlink workaround; deleting a stale `tsconfig.tsbuildinfo` did not change the pattern either.
 Just re-run and wait it out (use a background+monitor pattern, don't block synchronously).
 
+## Sec 25-32 — AUTHORED BUT UNVERIFIED (Subtopic 4: Specific Heats & Mayer, complete)
+25. Heat capacity, why a gas needs two — twin cylinders (sealed rigid vs free piston), leaky-bucket analogy (Cv=plugged, Cp=leaky).
+26. Degrees of freedom and equipartition — dot (monoatomic, 3 DOF) vs dumbbell (diatomic, +2 rotation=5 DOF) icons, Cv=(f/2)R.
+27. Formula sheet: Q=msΔT/nCΔT, Mayer boxed, Cv/Cp/γ from f, reflex identities, polytropic C, benchmarks.
+28. Board derivation: Mayer's relation — const-V vs const-P heating compared, Cp−Cv=R (boxed).
+29. Identify the gas (Cv=20.8⇒diatomic,γ=1.40) + work-fraction trap (monoatomic wins, 40%) — two-column.
+30. Constant V vs constant P — Q_V/Q_P stamps, difference=nRΔT≈work, ties back to Mayer's R.
+31. Gamma of a gas mixture — mole-weighted Cv/Cp, γ_mix=19/13≈1.46, general recipe.
+32. Specific-heats pitfalls — EXACT reuse of Sec8/15/24's 2×2 grid layout, new content.
+
+**All of Sec 12-32 typecheck clean, still unverified** (audio 404 through sec 32 as of
+last check). Same reuse-proven-patterns discipline as Sec 12-24 applied throughout:
+Sec29 mirrors Sec5/12/21's two-column divider; Sec32 is an exact copy of Sec8/15/24's grid.
+
 ## Current
-Authoring paused at end of Subtopic 3 (Processes, Sec 16-24) pending audio for Sec 12+.
-Sec 1-11 fully verified (VERDICT PASS). Sec 12-24 drafted, typecheck-clean, unverified.
-Next: Sec 25 (Subtopic 4: Specific Heats & Mayer) once resumed, OR re-verify Sec 12-24
+Authoring paused at end of Subtopic 4 (Specific Heats & Mayer, Sec 25-32) pending audio.
+Sec 1-11 fully verified (VERDICT PASS). Sec 12-32 drafted, typecheck-clean, unverified.
+Next: Sec 33 (Subtopic 5: Heat Engines/Refrigerators) once resumed, OR re-verify Sec 12-32
 first if audio becomes available before more sections are drafted.
