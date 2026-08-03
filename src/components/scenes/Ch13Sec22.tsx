@@ -82,7 +82,7 @@ export default function Ch13Sec22({ currentTime, reveals, language }: SceneProps
         <Draw
           on={beat >= 2}
           delay={dl(2, 1.1)}
-          d="M 280 234 A 14 14 0 1 1 279.9 234"
+          d="M 280 206 A 14 14 0 1 1 279.9 206"
           stroke={INK}
           sw={1.8}
           dur={0.4}

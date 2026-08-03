@@ -55,8 +55,19 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 22 — two workhorses (pendulum+spring side-by-side, mgsinθ, T=2π√(L/g), isochronism/Galileo)
 
+- Sec 23 — why mass cancels for pendulum but not spring (Moon comparison, T=2π√(m/k), small-angle caution)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 23.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 24.
+
+## Fixed bug (2026-08-03)
+Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
+`M {x} {y} A {r} {r} 0 1 1 {x-0.1} {y}` render with the START point as the
+circle's TOP (extending downward by 2r), not the bottom as I'd assumed. Any
+such path must use `y = cy - r`, not `cy + r`. Fixed in Sec1 (bob), Sec2
+(photo circle), Sec22 (bob), Sec23 (bob) — Sec1:114 (clock), Sec8:77
+(stopwatch), Sec10:81 (reference circle) already happened to use the correct
+convention. Re-verified all four fixes mechanically + visually; all clean.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
