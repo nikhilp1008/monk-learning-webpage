@@ -326,3 +326,7 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   radiation pyrometer (no-contact), bimetallic strip (geyser), "hotness
   to number" takeaway. Opens Subtopic 5 (Thermometry/Ideal-Gas). VERDICT
   PASS (real audio), eyeballed clean.
+- Sec 51 — Calibration and the universal gas thermometer — ice/steam
+  fixed points, 100-division Celsius note, mercury-vs-alcohol two-
+  thermometer divergence-at-50° visual, dilute-gas universality, ideal-
+  gas-standard takeaway. VERDICT PASS (real audio).
