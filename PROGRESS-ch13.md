@@ -27,8 +27,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 8 — worked example NEET ratio shortcut (stopwatch, crossed-out trap, ω=amax/vmax, T, A=4cm, lock-in)
 
+- Sec 9 — worked example JEE Main two speeds (v-x curve w/ 2 points, square+subtract, ω=4, A=5cm T=π/2s)
+
 ## Current
-Subtopic 1 in progress. Next: Sec 9.
+Subtopic 1 in progress. Next: Sec 10.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
