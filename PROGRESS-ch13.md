@@ -21,8 +21,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 5 — derivation v(x) ellipse (divide by A/Aω, sin²+cos²=1, v=±ω√(A²-x²), v-x ellipse w/ 4 landmarks, ± note)
 
+- Sec 6 — derivation ω from force law (spring-block, ma=-kx, ω=√(k/m), intuition, 3-step recipe, closing verdict)
+
 ## Current
-Subtopic 1 in progress. Next: Sec 6.
+Subtopic 1 in progress. Next: Sec 7.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
