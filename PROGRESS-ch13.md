@@ -101,8 +101,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 45 — reference circle (bead+phasor+shadow diagram, identity not analogy, phasor, ẍ=-ω²x⟺SHM hero)
 
+- Sec 46 — universal SHM test + superposition (recipe hero, collinear-add vs perpendicular-2D-path panels, cautions)
+
 ## Current
-Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 46.
+Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 47.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
