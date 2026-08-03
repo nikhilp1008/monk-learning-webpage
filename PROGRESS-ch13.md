@@ -97,8 +97,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 43 — worked example JEE Advanced (ω₀=200,Q=100; b/m=2, t=0.5s, many-cycle diagram, N=Q/2π≈16)
 
+- Sec 44 — pitfalls & pro-tips (5 red traps, 1 green pro-tip, "Q=2π/(fractional E lost), N≈Q/2π" stamp)
+
 ## Current
-Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 44 (last of subtopic 4).
+Subtopic 4 COMPLETE (11/11). Next: Subtopic 5 — Reference Circle, Superposition and More SHM Systems, Sec 45.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
