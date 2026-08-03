@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 31 (Doppler effect toolkit).
+Starting Sec 32 (worked example — train toward a listener).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -45,3 +45,4 @@ Starting Sec 31 (Doppler effect toolkit).
 - Sec 28 — Doppler effect: why pitch changes (tick-mark wavefront axis — compressed ahead/spread behind a moving source; gut-check TOWARD=up/AWAY=down). Note: first draft used overlapping wavefront circles that read as concentric — switched to a simple axis + tick-mark row (constant spacing each side), which is the clearer pattern for showing Doppler compression/stretching; reuse this over circles in later Doppler sections.
 - Sec 29 — the asymmetry examiners love (2-col tick comparison: source-moving compresses air's λ vs observer-moving keeps λ fixed/changes effective speed; medium note, Doppler-everywhere, 3 limits)
 - Sec 30 — board derivation: the two Doppler cases (Case A source→observer f'=fv/(v-vs); Case B observer→source f'=f(v+vo)/v; compare + general formula)
+- Sec 31 — Doppler effect toolkit (master formula, sign rule, special cases, both-approach, wind, light shift, blueshift/redshift color code)
