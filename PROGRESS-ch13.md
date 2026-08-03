@@ -85,8 +85,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 37 — formula board forced/resonance (A formula, sharp/broad resonance curves, ωr, limits, Q=mω₀/b, ringing)
 
+- Sec 38 — framework damped oscillator (mẍ+bẋ+kx=0, cosine-in-envelope diagram, x(t) solution, E(t) hero)
+
 ## Current
-Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 38.
+Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 39.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
