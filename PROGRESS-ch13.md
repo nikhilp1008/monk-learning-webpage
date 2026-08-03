@@ -69,8 +69,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 29 — worked example CBSE seconds pendulum (L=1m,g=π²⇒T=2s; L→4L⇒T'=4s; T∝√L)
 
+- Sec 30 — worked example NEET descending lift (g_eff decreases trap, g_eff=g/4, T'=4s, free-fall sanity check)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 30.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 31.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
