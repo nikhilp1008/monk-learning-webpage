@@ -50,13 +50,9 @@ interface PracticeClientProps {
 }
 
 export function PracticeClient({ profile }: PracticeClientProps) {
-  // Controls state
-  const [classLevel, setClassLevel] = useState<number>(
-    profile.enrolled_class === 12 ? 12 : 11
-  );
-  const [subject, setSubject] = useState<string>("Physics");
-  const [chapterId, setChapterId] = useState<string>("");
-  const [chapters, setChapters] = useState<ChapterOption[]>([]);
+  // GATE 8 Selection Controls state (Session-scoped)
+  const [exam, setExam] = useState<string>("both"); // "jee", "neet", "both"
+  const [classLevelStr, setClassLevelStr] = useState<string>("both"); // "11", "12", "both"
   const [questionIndex, setQuestionIndex] = useState<number>(1);
 
   // Question & Session state
@@ -99,43 +95,9 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     loadStats();
   }, []);
 
-  // Fetch Chapters when Subject or Class changes
-  useEffect(() => {
-    let isMounted = true;
-
-    async function loadChapters() {
-      try {
-        const { data, error } = await supabase
-          .from("chapters")
-          .select("id, name")
-          .eq("subject", subject)
-          .eq("class_level", classLevel)
-          .order("name", { ascending: true });
-
-        if (error) throw error;
-
-        if (isMounted && data) {
-          const mapped = data
-            .filter((c): c is { id: string; name: string } => Boolean(c.name))
-            .map((c) => ({ id: c.id, name: c.name }));
-          setChapters(mapped);
-        }
-      } catch (err) {
-        console.error("Error fetching chapters:", err);
-        if (isMounted) setChapters([]);
-      }
-    }
-
-    loadChapters();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [subject, classLevel]);
-
   // Fetch Next Question
   const fetchNextQuestion = useCallback(
-    async (overrideChapterId?: string) => {
+    async () => {
       setLoading(true);
       setErrorMsg(null);
       setExhausted(false);
@@ -144,16 +106,12 @@ export function PracticeClient({ profile }: PracticeClientProps) {
       setNumericalValue("");
       setExplainBanner(null);
 
-      const targetChapter =
-        overrideChapterId !== undefined ? overrideChapterId : chapterId;
-
       try {
         const payload = await apiFetch<QuestionPayload>("/practice/next", {
           method: "POST",
           body: JSON.stringify({
-            subject,
-            class_level: String(classLevel),
-            chapter_id: targetChapter || undefined,
+            exam,
+            class_level: classLevelStr,
           }),
         });
 
@@ -174,13 +132,13 @@ export function PracticeClient({ profile }: PracticeClientProps) {
         setLoading(false);
       }
     },
-    [subject, classLevel, chapterId]
+    [exam, classLevelStr]
   );
 
-  // Trigger initial fetch when subject, classLevel, or chapterId changes
+  // Trigger initial fetch when exam or classLevelStr changes
   useEffect(() => {
     fetchNextQuestion();
-  }, [fetchNextQuestion]);
+  }, [exam, classLevelStr, fetchNextQuestion]);
 
   // Submit Answer
   const handleRevealAnswer = async () => {
@@ -321,82 +279,70 @@ export function PracticeClient({ profile }: PracticeClientProps) {
             </div>
           </div>
 
-          {/* Secondary Controls Bar: Class Toggle, Subject Tabs, Chapter Selector */}
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-4 shadow-ref-stat">
-            <div className="flex flex-wrap items-center gap-3">
-              {/* Class Toggle */}
+          {/* GATE 8 Selection Controls Bar: Exam & Class Controls */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-4 shadow-ref-stat">
+            {/* Exam Selector */}
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-bold text-ink-muted uppercase tracking-wider flex-none">
+                Exam:
+              </span>
               <div className="inline-flex gap-1 p-1 bg-[rgba(28,26,22,0.05)] rounded-full border border-border-subtle">
-                {[11, 12].map((cls) => (
+                {[
+                  { id: "jee", label: "JEE" },
+                  { id: "neet", label: "NEET" },
+                  { id: "both", label: "Both" },
+                ].map((item) => (
                   <button
-                    key={cls}
+                    key={item.id}
                     type="button"
                     onClick={() => {
-                      if (classLevel !== cls) {
-                        setClassLevel(cls);
-                        setChapterId("");
+                      if (exam !== item.id) {
+                        setExam(item.id);
                         setQuestionIndex(1);
                       }
                     }}
-                    className={`px-3.5 py-1 rounded-full text-xs font-bold transition-all ${
-                      classLevel === cls
-                        ? "bg-white text-ink shadow-xs"
+                    className={`px-4 py-1 rounded-full text-xs font-bold transition-all ${
+                      exam === item.id
+                        ? "bg-orange text-dark-card shadow-xs"
                         : "text-ink-light hover:text-ink"
                     }`}
                   >
-                    Class {cls}
+                    {item.label}
                   </button>
                 ))}
               </div>
-
-              {/* Subject Tabs */}
-              <div className="flex items-center gap-1 overflow-x-auto py-0.5">
-                {["Physics", "Chemistry", "Math", "Biology"].map((subj) => {
-                  const isActive = subject === subj;
-                  return (
-                    <button
-                      key={subj}
-                      type="button"
-                      onClick={() => {
-                        if (subject !== subj) {
-                          setSubject(subj);
-                          setChapterId("");
-                          setQuestionIndex(1);
-                        }
-                      }}
-                      className={`px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-colors ${
-                        isActive
-                          ? "bg-orange text-dark-card shadow-xs"
-                          : "text-ink-light hover:bg-ink/5"
-                      }`}
-                    >
-                      {subj}
-                    </button>
-                  );
-                })}
-              </div>
             </div>
 
-            {/* Chapter Selector Dropdown */}
+            {/* Class Selector */}
             <div className="flex items-center gap-2">
-              <label htmlFor="chapter-select" className="text-xs font-bold text-ink-muted flex-none">
-                Chapter:
-              </label>
-              <select
-                id="chapter-select"
-                value={chapterId}
-                onChange={(e) => {
-                  setChapterId(e.target.value);
-                  setQuestionIndex(1);
-                }}
-                className="w-full sm:w-64 px-3 py-1.5 rounded-xl border border-border-subtle bg-cream-light text-xs font-bold text-ink focus:outline-none focus:border-orange transition-colors truncate"
-              >
-                <option value="">All chapters</option>
-                {chapters.map((ch) => (
-                  <option key={ch.id} value={ch.id}>
-                    {ch.name}
-                  </option>
+              <span className="text-xs font-bold text-ink-muted uppercase tracking-wider flex-none">
+                Class:
+              </span>
+              <div className="inline-flex gap-1 p-1 bg-[rgba(28,26,22,0.05)] rounded-full border border-border-subtle">
+                {[
+                  { id: "11", label: "Class 11" },
+                  { id: "12", label: "Class 12" },
+                  { id: "both", label: "Both" },
+                ].map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => {
+                      if (classLevelStr !== item.id) {
+                        setClassLevelStr(item.id);
+                        setQuestionIndex(1);
+                      }
+                    }}
+                    className={`px-4 py-1 rounded-full text-xs font-bold transition-all ${
+                      classLevelStr === item.id
+                        ? "bg-ink text-white shadow-xs"
+                        : "text-ink-light hover:text-ink"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
                 ))}
-              </select>
+              </div>
             </div>
           </div>
         </div>
@@ -407,7 +353,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
           <div className="space-y-4">
             <div className="flex items-center justify-between px-1">
               <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
-                {subject} · Class {classLevel}
+                {question?.chapter_name ? `${question.chapter_name} · ` : ""}{exam.toUpperCase()} Mode
               </span>
               <span className="font-script font-bold text-orange text-[1.1rem] -rotate-0.5">
                 Q {questionIndex} of ∞
@@ -455,14 +401,14 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                     You&apos;ve completed every question in this set!
                   </h3>
                   <p className="text-xs text-ink-light mt-1.5 max-w-md mx-auto leading-relaxed">
-                    Great work! You have attempted all available questions for {subject} under your current filter. Try selecting another chapter or subject.
+                    You have attempted all available questions under your current filter. Try selecting &quot;Both&quot; or switching exam modes.
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
                   <button
                     type="button"
                     onClick={() => {
-                      setChapterId("");
+                      setExam("both");
                       setQuestionIndex(1);
                     }}
                     className="px-5 py-2.5 rounded-full bg-orange text-dark-card font-bold text-xs shadow-xs hover:bg-orange-light transition-colors"
@@ -472,8 +418,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                   <button
                     type="button"
                     onClick={() => {
-                      setSubject(subject === "Physics" ? "Chemistry" : "Physics");
-                      setChapterId("");
+                      setClassLevelStr("both");
                       setQuestionIndex(1);
                     }}
                     className="px-5 py-2.5 rounded-full border border-border-subtle bg-white text-ink font-bold text-xs hover:border-ink transition-colors"
