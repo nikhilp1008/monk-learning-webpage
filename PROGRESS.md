@@ -334,3 +334,7 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   Charles's balloon, Gay-Lussac's sealed gauge-container) each with its
   formula, "different variable fixed" discipline note, road-to-absolute-
   temperature takeaway. VERDICT PASS (real audio), eyeballed clean.
+- Sec 53 — Extrapolating to absolute zero and the Kelvin scale — P-vs-T
+  graph with real (solid) + extrapolated (muted) segments meeting at a
+  red dot at -273.15°C, absolute-zero declaration, Kelvin-scale note,
+  boxed PV=nRT with cautions. VERDICT PASS (real audio), eyeballed clean.
