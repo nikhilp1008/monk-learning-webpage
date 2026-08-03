@@ -15,7 +15,25 @@
 - 62–72 Phase Transitions
 - 73–74 Wrap-Up
 
-## Current — PAUSED (2026-07-31, ~10:40pm) pending machine memory recovery
+## UPDATE (2026-08-03): audio pipeline gap is RESOLVED — old docs below are stale
+Resumed and found the machine's memory pressure had eased. While re-
+verifying Sec44, the FINAL frame rendered fully (not blank+title), which
+contradicted the "audio missing" diagnosis. Investigated with a real
+Playwright check (`document.querySelector('audio').currentSrc`) instead
+of a manual curl guess, and found the app now constructs audio URLs
+under a DIFFERENT path: `.../11/Physics/p11_ch10/p1/<lang>_sec_<n>.mp3`
+— not the full-slug path (`p11_ch10_thermal-properties-of-matter/...`)
+used for sections 1-11 and assumed (via stale manual curl checks against
+that old pattern) for the rest. Checked the new pattern directly:
+sections 12, 20, 30, 40, 44, 50, 60, 70, 74 all return 200. **Audio is
+now available for effectively the whole chapter** — the "audio gap" was
+real on 2026-07-31 (confirmed then with a live Playwright check on the
+old pattern) but the backend has since caught up and/or changed its URL
+scheme. Re-verifying Sec12-43 now that this is meaningful again; do not
+trust the "stalls=N/N, audio gap" notes below without a fresh check —
+they reflect state as of 2026-07-31, not now.
+
+## Current — PAUSED (2026-07-31, ~10:40pm) pending machine memory recovery [STALE, see UPDATE above]
 Sec 43 is the last VERIFIED-and-committed section (tsc clean, verify
 PASS). Sec 44 and Sec 45 are AUTHORED and registered in index.ts but
 **NOT YET VERIFIED** — the machine hit severe memory pressure (13.5GB/
@@ -285,3 +303,15 @@ relaunched with the same `nohup npm run dev -- -p 3010 > /tmp/dev-ch10.log
 `npx tsc` hangs past ~2min again, check `curl -s -o /dev/null -w '%{http_code}'
 http://localhost:3010` first — a `000` means the server needs restarting,
 not that the scene code is broken.
+
+## RE-VERIFICATION COMPLETE (2026-08-03): Sec12-49 all confirmed PASS with real audio
+Re-ran verify-scene.mjs for every section 12-43 (32 sections) now that
+audio genuinely works (see UPDATE note above) — ALL PASS with ZERO
+overlap/overflow/empty across every one. Sec44-49 (authored during the
+pause) also confirmed PASS the same way. Spot-eyeballed Sec18 (5-segment
+ice→steam curve) and Sec32 (series/parallel junction derivation) final
+frames — both render exactly as designed, no defects. The manual layout-
+plan box math used throughout Sec12-49 (while verify-scene.mjs could
+only confirm the blank-board-at-t=0 state due to the then-real audio
+gap) held up perfectly under full real-audio playback. Chapter quality
+bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
