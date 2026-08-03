@@ -93,8 +93,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 41 — worked example NEET (f₀=5Hz conceptual, don't-grind trap, fdrive≈f₀, max amplitude never at multiple, resonance)
 
+- Sec 42 — worked example JEE Main (m=0.5,k=50,b=0.1; ω₀=10,ω'≈10.0, t=10s, E=0.135E₀, cross-check)
+
 ## Current
-Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 42.
+Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 43.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
