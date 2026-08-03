@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 34 (worked example — both approaching).
+Starting Sec 35 (worked example — car, wall, and echo).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -48,3 +48,4 @@ Starting Sec 34 (worked example — both approaching).
 - Sec 31 — Doppler effect toolkit (master formula, sign rule, special cases, both-approach, wind, light shift, blueshift/redshift color code)
 - Sec 32 — worked example: train toward a listener (train+listener icon, f'=fv/(v-vs)=550Hz, sanity check)
 - Sec 33 — worked example: source-moving vs observer-moving (same speed=30 both cases: source→330Hz vs observer→327.3Hz, NOT equal, confirms asymmetry with numbers)
+- Sec 34 — worked example: both approaching (ambulance+rider icons, general formula both terms push up, f'=720Hz)

@@ -893,6 +893,7 @@ import Ch14Sec30 from "./Ch14Sec30";
 import Ch14Sec31 from "./Ch14Sec31";
 import Ch14Sec32 from "./Ch14Sec32";
 import Ch14Sec33 from "./Ch14Sec33";
+import Ch14Sec34 from "./Ch14Sec34";
 
 const CH14 = "7dca7b5a-e77c-530d-bbe8-01a3518dc5d0"; // Class 11 · Waves
 
@@ -929,4 +930,5 @@ REGISTRY[`${CH14}:30`] = Ch14Sec30;
 REGISTRY[`${CH14}:31`] = Ch14Sec31;
 REGISTRY[`${CH14}:32`] = Ch14Sec32;
 REGISTRY[`${CH14}:33`] = Ch14Sec33;
+REGISTRY[`${CH14}:34`] = Ch14Sec34;
 /* ============================ end Ch14 ============================ */
