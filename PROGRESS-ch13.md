@@ -109,8 +109,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 49 — derivation SHM is the projection of UCM (circle w/ both x,y dashed projections, x=Acosθ/y=Asinθ, ẍ=-ω²x hero, centripetal↔SHM accel note, 90° out of phase closer)
 
+- Sec 50 — derivation the phasor method (triangle-law vector diagram A₁,A₂,δ,resultant A,φ; law-of-cosines hero, tanφ formula, geometry-not-trig closer)
+
 ## Current
-Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 50.
+Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 51.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form

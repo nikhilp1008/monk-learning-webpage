@@ -906,6 +906,7 @@ import Ch13Sec46 from "./Ch13Sec46";
 import Ch13Sec47 from "./Ch13Sec47";
 import Ch13Sec48 from "./Ch13Sec48";
 import Ch13Sec49 from "./Ch13Sec49";
+import Ch13Sec50 from "./Ch13Sec50";
 
 const CH13 = "c1bc937e-5ff5-5ecb-a67b-89053c386c23"; // Class 11 · Oscillations
 
@@ -958,4 +959,5 @@ REGISTRY[`${CH13}:46`] = Ch13Sec46;
 REGISTRY[`${CH13}:47`] = Ch13Sec47;
 REGISTRY[`${CH13}:48`] = Ch13Sec48;
 REGISTRY[`${CH13}:49`] = Ch13Sec49;
+REGISTRY[`${CH13}:50`] = Ch13Sec50;
 /* ============================ end Ch13 ============================ */
