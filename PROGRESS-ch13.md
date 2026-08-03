@@ -75,8 +75,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 32 — worked example JEE Advanced (rod pendulum, I=ML²/3, d=L/2, T=2π√(2L/3g), Leq=2L/3<L)
 
+- Sec 33 — pitfalls & pro-tips (5 red traps, 1 green pro-tip, "pendulum feels g_eff; spring feels only k" stamp)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 33 (last of subtopic 3).
+Subtopic 3 COMPLETE (12/12). Next: Subtopic 4 — Damped and Forced Oscillations, Sec 34.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
