@@ -32,70 +32,110 @@ export default function P12Ch06Sec64({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Master Revision: The 12 Essential Formulas of EMI", "Master Revision: The 12 Essential Formulas of EMI")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 3: Formulas 1 to 6 */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("FORMULAS 1 - 6: FLUX, FARADAY, MOTIONAL & ROTATING EMF", "FORMULAS 1 - 6: FLUX, FARADAY, MOTIONAL & ROTATING EMF")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={14} fill={INK} weight={800}>
-            1. Φ = BA cosθ | 2. ε = −N dΦ/dt | 3. ΔQ = (N/R)ΔΦ
+      {/* LEFT SECTION: FORMULAS 1 - 6: FLUX, FARADAY, MOTIONAL & ROTATING EMF */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("FORMULAS 1 - 6: FLUX, FARADAY, MOTIONAL & ROTATING EMF", "FORMULAS 1 - 6: FLUX, FARADAY, MOTIONAL & ROTATING EMF")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            4. ε = Blv | 5. P = B²l²v²/R | 6. ε_rot = ½ B ω L²
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Formulas 7 to 12 */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("FORMULAS 7 - 12: INDUCTANCE, ENERGY & GENERATORS", "FORMULAS 7 - 12: INDUCTANCE, ENERGY & GENERATORS")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={14} fill={GREEN} weight={800}>
-            7. L = μ₀N²A/l | 8. M = μ₀N₁N₂A_in/l | 9. U_B = ½ LI²
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Magnetic Flux: Φ_B = B · A = B A cos θ.
           </T>
-          <T x={240} y={52} anchor="middle" size={14} fill={INK} weight={800}>
-            10. u_B = B²/(2μ₀) | 11. ε₀ = NBAω | 12. I_d = ε₀(dΦ_E/dt)
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Full Chapter Formula Master Shield */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          {t("CHAPTER 6 COMPLETE FORMULA MASTER SHIELD", "CHAPTER 6 COMPLETE FORMULA MASTER SHIELD")}
-        </T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Faraday-Lenz Law: ε = -N (dΦ_B / dt), Induced Charge ΔQ = N ΔΦ_B / R.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Linear Motional EMF: ε = B l v, Dissipated Power P = B² l² v² / R.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Rotational EMF: Sliding rod rotation ε_rot = ½ B ω L²!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Formulas 1-6 cover basic flux, induction, and mechanical motion)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: FORMULAS 7 - 12: INDUCTANCE, ENERGY & GENERATORS */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("FORMULAS 7 - 12: INDUCTANCE, ENERGY & GENERATORS", "FORMULAS 7 - 12: INDUCTANCE, ENERGY & GENERATORS")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Solenoid Inductance: L = μ_0 n² A l = μ_0 N² A / l.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Mutual Inductance: M = μ_0 N₁ N₂ A_inner / l, M = k √(L₁ L₂).
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Field Energy & Density: U_B = ½ L I², Energy Density u_B = B² / (2 μ_0).
+          </T>
+
+          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Generator & Maxwell: Peak ε_0 = NBAω, I_d = ε_0 (dΦ_E / dt)!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Formulas 7-12 cover inductance, field energy, AC generators, and Maxwell)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CHAPTER 6 COMPLETE FORMULA MASTER SHIELD", "CHAPTER 6 COMPLETE FORMULA MASTER SHIELD")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            12 Core Formulas: 1. Φ=BAcosθ → 2. ε=-NdΦ/dt → 3. ΔQ=NΔΦ/R → 4. ε=Blv → 5. P=B²l²v²/R → 6. ε_rot=½BωL².
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            7. L=μ₀N²A/l → 8. M=μ₀N₁N₂A/l → 9. U_B=½LI² → 10. u_B=B²/(2μ₀) → 11. ε₀=NBAω → 12. I_d=ε₀(dΦ_E/dt).
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            All 12 Core EMI Formulas Mastered: Ready for CBSE, NEET, JEE Main, and JEE Advanced!
-          </T>
-        </g>
-      </Fade>
-
-      {/* Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={490} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Master Revision Complete: All 12 fundamental equations of Electromagnetic Induction summarized for quick review! ✓",
             "★ Master Revision Complete: All 12 fundamental equations of Electromagnetic Induction summarized for quick review! ✓"

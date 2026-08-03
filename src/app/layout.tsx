@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anek_Latin, Anek_Devanagari, Kalam } from "next/font/google";
+import "katex/dist/katex.min.css";
 import "./globals.css";
 
 const anekLatin = Anek_Latin({

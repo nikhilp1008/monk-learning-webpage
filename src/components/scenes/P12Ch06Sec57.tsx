@@ -32,70 +32,110 @@ export default function P12Ch06Sec57({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("JEE Main: Retarding Torque τ(t) & Mechanical Power in AC Generator", "JEE Main: Retarding Torque τ(t) & Mechanical Power in AC Generator")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 3: Instantaneous Retarding Torque */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("INSTANTANEOUS TORQUE: τ(t) = [ε₀² / (ω R)] sin²(ωt)", "INSTANTANEOUS TORQUE: τ(t) = [ε₀² / (ω R)] sin²(ωt)")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            τ(t) = m(t) B sin(ωt) = [ ε₀² / (ω R) ] sin²(ωt)
+      {/* LEFT SECTION: INSTANTANEOUS TORQUE: τ(t) = [ε₀² / (ω R)] sin²(ωt) */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("INSTANTANEOUS TORQUE: τ(t) = [ε₀² / (ω R)] sin²(ωt)", "INSTANTANEOUS TORQUE: τ(t) = [ε₀² / (ω R)] sin²(ωt)")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            Opposing torque produced by magnetic force on armature current!
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Average Torque & Power Balance */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("AVERAGE TORQUE: ⟨τ⟩ = ε₀² / (2 ω R) ⇒ ⟨P_mech⟩ = ⟨P_elec⟩", "AVERAGE TORQUE: ⟨τ⟩ = ε₀² / (2 ω R) ⇒ ⟨P_mech⟩ = ⟨P_elec⟩")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={GREEN} weight={800}>
-            ⟨τ⟩ = ε₀² / (2 ω R)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Dipole Moment: m(t) = N I(t) A = N [ (ε_0 sin ωt) / R ] A.
           </T>
-          <T x={240} y={52} anchor="middle" size={16} fill={INK} weight={800}>
-            ⟨P_mech⟩ = ⟨τ⟩ ω = ε₀² / (2 R) = ⟨P_elec⟩!
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Master Exam Formula */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          {t("JEE MAIN GENERATOR TORQUE RECAP", "JEE MAIN GENERATOR TORQUE RECAP")}
-        </T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Magnetic Torque: τ(t) = m(t) B sin(ωt) = [ N B A ε_0 / R ] sin²(ωt).
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Substitute N B A = ε_0 / ω: τ(t) = [ ε_0² / (ω R) ] sin²(ωt).
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Retarding Nature: Torque opposes rotation per Lenz's Law!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (External prime mover must supply matching forward torque)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: AVERAGE TORQUE: ⟨τ⟩ = ε₀² / (2 ω R) ⇒ ⟨P_mech⟩ = ⟨P_elec⟩ */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("AVERAGE TORQUE: ⟨τ⟩ = ε₀² / (2 ω R) ⇒ ⟨P_mech⟩ = ⟨P_elec⟩", "AVERAGE TORQUE: ⟨τ⟩ = ε₀² / (2 ω R) ⇒ ⟨P_mech⟩ = ⟨P_elec⟩")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Average sin²(ωt): ⟨sin²(ωt)⟩ = ½ over one complete cycle.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Average Torque: ⟨τ⟩ = [ ε_0² / (ω R) ] × ½ = ε_0² / (2 ω R).
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Mechanical Input Power: ⟨P_mech⟩ = ⟨τ⟩ ω = [ ε_0² / (2 ω R) ] × ω.
+          </T>
+
+          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Energy Balance: ⟨P_mech⟩ = ε_0² / (2 R) = ⟨P_elec⟩!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (100% mechanical input power converts into electrical output power)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("JEE MAIN GENERATOR TORQUE RECAP", "JEE MAIN GENERATOR TORQUE RECAP")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Torque-Power Relation: Average mechanical retarding torque is simply ⟨τ⟩ = ⟨P_elec⟩ / ω.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            No Load Condition: If R → ∞ (open circuit), I = 0 → zero retarding torque required!
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            Average retarding torque required to drive AC generator under load R is ⟨τ⟩ = ε₀² / (2 ω R) = ⟨P⟩ / ω!
-          </T>
-        </g>
-      </Fade>
-
-      {/* Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={490} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ JEE Main Result: AC Generator Average Retarding Torque ⟨τ⟩ = ε₀² / (2 ω R), ensuring ⟨P_mech⟩ = ⟨τ⟩ ω = ⟨P_elec⟩! ✓",
             "★ JEE Main Result: AC Generator Average Retarding Torque ⟨τ⟩ = ε₀² / (2 ω R), ensuring ⟨P_mech⟩ = ⟨τ⟩ ω = ⟨P_elec⟩! ✓"

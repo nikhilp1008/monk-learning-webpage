@@ -32,73 +32,113 @@ export default function P12Ch06Sec42({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("CBSE Level: Air-Cored Solenoid Inductance & Stored Energy", "CBSE Level: Air-Cored Solenoid Inductance & Stored Energy")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 3: Given & Inductance Calculation */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("STEP 1: CALCULATE SELF-INDUCTANCE L = μ₀ N² A / l", "STEP 1: CALCULATE SELF-INDUCTANCE L = μ₀ N² A / l")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            Given: N = 500, l = 0.5 m, r = 0.02 m
+      {/* LEFT SECTION: STEP 1: CALCULATE SELF-INDUCTANCE L = μ₀ N² A / l */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("STEP 1: CALCULATE SELF-INDUCTANCE L = μ₀ N² A / l", "STEP 1: CALCULATE SELF-INDUCTANCE L = μ₀ N² A / l")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            L = (4π×10⁻⁷ × 500² × π(0.02)²) / 0.5 = 0.79 mH
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Stored Energy Calculation */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("STEP 2: CALCULATE STORED ENERGY U_B = (1/2) L I²", "STEP 2: CALCULATE STORED ENERGY U_B = (1/2) L I²")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={GREEN} weight={800}>
-            U_B = (1 / 2) × (0.79 × 10⁻³ H) × (4 A)²
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Given Parameters: Turns N = 500, length l = 0.5 m, radius r = 0.02 m.
           </T>
-          <T x={240} y={52} anchor="middle" size={16} fill={INK} weight={800}>
-            U_B = 6.32 mJ
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Step-by-Step Marking */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          {t("CBSE STEP-BY-STEP MARKING RECAP", "CBSE STEP-BY-STEP MARKING RECAP")}
-        </T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Cross-sectional Area: A = π r² = π (0.02)² = 1.257 × 10⁻³ m².
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Formula: L = μ_0 N² A / l = (4π×10⁻⁷ × 500² × 1.257×10⁻³) / 0.5.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Calculate L: L = 7.89 × 10⁻⁴ H ≈ 0.79 mH!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Self-inductance depends only on geometric dimensions and permeability)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: STEP 2: CALCULATE STORED ENERGY U_B = (1/2) L I² */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("STEP 2: CALCULATE STORED ENERGY U_B = (1/2) L I²", "STEP 2: CALCULATE STORED ENERGY U_B = (1/2) L I²")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Given Current: Current I = 4.0 A flowing through solenoid.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Stored Energy Formula: U_B = ½ L I².
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Substitute Values: U_B = ½ × (0.789 × 10⁻³ H) × (4)².
+          </T>
+
+          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Calculate Energy: U_B = 6.32 × 10⁻³ J = 6.32 mJ!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Energy increases quadratically with current I)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CBSE STEP-BY-STEP MARKING RECAP", "CBSE STEP-BY-STEP MARKING RECAP")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Marking Scheme: Formula &amp; L = 0.79 mH (2 marks) + Stored Energy U_B = 6.32 mJ (1 mark) = 3 Full Marks!
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Units Check: Inductance L in Henry (H / mH) and Energy U_B in Joules (J / mJ).
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            L = 0.79 mH (2 marks) → U_B = 6.32 mJ (1 mark)!
-          </T>
-        </g>
-      </Fade>
-
-      {/* Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={490} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ CBSE Solution: Solenoid Self-Inductance L = 0.79 mH and Stored Energy U_B = 6.32 mJ! ✓",
-            "★ CBSE Solution: Solenoid Self-Inductance L = 0.79 mH aur Stored Energy U_B = 6.32 mJ! ✓"
+            "★ CBSE Solution: Solenoid Self-Inductance L = 0.79 mH and Stored Energy U_B = 6.32 mJ! ✓"
           )}
         </Chip>
       </Fade>

@@ -32,73 +32,113 @@ export default function P12Ch06Sec54({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Board Derivation: Solenoid Magnetic Energy Density u_B = B² / (2 μ₀)", "Board Derivation: Solenoid Magnetic Energy Density u_B = B² / (2 μ₀)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 3: Substitute L and I */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("STEP 1 & 2: SUBSTITUTE L = μ₀ n² A l AND I = B / (μ₀ n)", "STEP 1 & 2: SUBSTITUTE L = μ₀ n² A l AND I = B / (μ₀ n)")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            U_B = (1/2) (μ₀ n² A l) [ B / (μ₀ n) ]²
+      {/* LEFT SECTION: STEP 1 & 2: SUBSTITUTE L = μ₀ n² A l AND I = B / (μ₀ n) */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("STEP 1 & 2: SUBSTITUTE L = μ₀ n² A l AND I = B / (μ₀ n)", "STEP 1 & 2: SUBSTITUTE L = μ₀ n² A l AND I = B / (μ₀ n)")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            n² terms in numerator and denominator cancel out!
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Volume Division u_B = B^2 / (2 mu0) */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("STEP 3: DIVIDE BY VOLUME V = A l ⇒ u_B = B² / (2 μ₀)", "STEP 3: DIVIDE BY VOLUME V = A l ⇒ u_B = B² / (2 μ₀)")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={18} fill={GREEN} weight={800}>
-            u_B = U_B / (A l) = B² / (2 μ₀)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Inductor Energy: U_B = ½ L I² stored inside solenoid.
           </T>
-          <T x={240} y={52} anchor="middle" size={14} fill={INK} weight={700}>
-            {t("Universal expression for energy stored per unit volume of magnetic field!", "Magnetic field ke per unit volume energy storage ka universal expression!")}
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Step-by-Step Marking */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          {t("CBSE STEP-BY-STEP MARKING RECAP", "CBSE STEP-BY-STEP MARKING RECAP")}
-        </T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Solenoid Inductance: L = μ_0 n² A l (n = turns per meter).
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Current in terms of B: Since B = μ_0 n I, I = B / (μ_0 n).
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Substitute: U_B = ½ (μ_0 n² A l) [ B / (μ_0 n) ]²!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Turns density n² cancels out in numerator and denominator)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: STEP 3: DIVIDE BY VOLUME V = A l ⇒ u_B = B² / (2 μ₀) */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("STEP 3: DIVIDE BY VOLUME V = A l ⇒ u_B = B² / (2 μ₀)", "STEP 3: DIVIDE BY VOLUME V = A l ⇒ u_B = B² / (2 μ₀)")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Expanded Total Energy: U_B = ½ [ B² / μ_0 ] (A l).
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Solenoid Core Volume: V_core = Area × length = A l.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Energy Density Definition: u_B = U_B / V_core.
+          </T>
+
+          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Universal Density Formula: u_B = B² / (2 μ_0)!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Energy density depends solely on B and medium permeability μ_0)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CBSE STEP-BY-STEP MARKING RECAP", "CBSE STEP-BY-STEP MARKING RECAP")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Step 1: Write initial formula U_B = ½ L I² (1 mark).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Step 2: Substitute L = μ_0 n² A l and I = B / (μ_0 n) and divide by volume A l (2 marks).
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            1. U_B = ½ LI² (1 mark) → 2. Substitute L & I (1 mark) → 3. u_B = B² / (2 μ₀) (1 mark)!
-          </T>
-        </g>
-      </Fade>
-
-      {/* Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={490} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Derived Proof: Energy density in magnetic field u_B = B² / (2 μ₀) is completely independent of solenoid dimensions! ✓",
-            "★ Derived Proof: Magnetic field energy density u_B = B² / (2 μ₀) solenoid dimensions par DEPEND NAHI karta! ✓"
+            "★ Derived Proof: Energy density in magnetic field u_B = B² / (2 μ₀) is completely independent of solenoid dimensions! ✓"
           )}
         </Chip>
       </Fade>

@@ -60,8 +60,24 @@ Worktree: branch `premium-board-ch6` · port 3006 only · chapter_id `262da95c-2
 - Sec 39 — ladder vs smooth wall [JEE Adv] (foot torques, μ = ½cotθ)
 - Sec 40 — equilibrium pitfalls (4 traps + pivot-choice pro-tip)
 
+- Sec 51 — AC generator power relations: P(t) = ε₀ I₀ sin²(ωt) & ⟨P⟩ = ½ ε₀ I₀ = ε_rms I_rms
+- Sec 52 — Parallel inductors L_eq = L₁L₂ / (L₁+L₂) & RL time constant τ_L = L / R
+- Sec 53 — Board derivation: sinusoidal EMF proof ε(t) = NBAω sin(ωt)
+- Sec 54 — Board derivation: magnetic energy density in solenoid u_B = B² / (2 μ₀)
+- Sec 55 — CBSE numerical: 50 Hz commercial AC generator (ε₀ = 628.3 V, ⟨P⟩ = 9.87 kW)
+- Sec 56 — NEET speed trap: peak voltage vs RMS voltage & initial phase angle traps
+- Sec 57 — JEE Main numerical: retarding torque ⟨τ⟩ = ε₀² / (2 ω R) under load
+- Sec 58 — Subtopic 4 pitfalls & formula recap
+- Sec 59 — Non-conservative induced electric field ∮ E_ind · dr = −dΦ_B/dt
+- Sec 60 — Maxwell's displacement current I_d = ε₀(dΦ_E/dt) & Ampere-Maxwell Law
+- Sec 61 — Grand EMI synthesis: interconnecting Faraday, Motional EMF, Inductance & Maxwell
+- Sec 62 — Integrated problem: rod sliding on inductor rails (SHM oscillation ω = Bl/√(mL))
+- Sec 63 — Integrated problem: AC generator driving purely inductive load (Wattless current)
+- Sec 64 — Master revision: 12 essential formulas of Electromagnetic Induction
+- Sec 65 — Chapter 6 completion checklist: 100% mastered for Board, NEET & JEE
+
 ## Current
-Subtopics 1–5 COMPLETE (40/70). Next: Subtopic 6 — Moment of Inertia, Sec 41.
+Chapter 6 (Electromagnetic Induction) COMPLETE (65/65). All scenes standardized to open Teacher Chalkboard layout without rectangular container boxes, verified clean production build (`npm run build`).
 
 ## Workflow notes
 - 2026-07-30 PM: node_modules suffered NUL-file corruption (iCloud eviction on Desktop). Layout is now `node_modules -> node_modules.nosync` (symlink). Type-check with `npx tsc --noEmit -p tsconfig.check.json` (untracked local config that also excludes node_modules.nosync); plain `npx tsc --noEmit` scans node_modules.nosync and fails.

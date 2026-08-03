@@ -32,73 +32,113 @@ export default function P12Ch05Sec12({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Speed Trap: Axial to Equatorial in Ten Seconds", "Speed Trap: Axial se Equatorial 10 Seconds Mein")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Speed Trap: Axial to Equatorial in Ten Seconds", "Speed Trap: Axial to Equatorial in Ten Seconds")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 3: The 2:1 Ratio Shortcut */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("THE 2:1 AXIAL-TO-EQUATORIAL SHORTCUT", "THE 2:1 AXIAL-TO-EQUATORIAL SHORTCUT")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            B_axial = (μ₀ / 4π) (2m / d³) = 2 B_eq
+      {/* LEFT SECTION: THE 2:1 AXIAL-TO-EQUATORIAL SHORTCUT */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("THE 2:1 AXIAL-TO-EQUATORIAL SHORTCUT", "THE 2:1 AXIAL-TO-EQUATORIAL SHORTCUT")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            {t("At equal far distance d: B_eq = B_axial / 2!", "Equal far distance d par: B_eq = B_axial / 2!")}
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Vector Direction Trap */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("THE DIRECTION TRAP (B_eq IS OPPOSITE TO m)", "DIRECTION TRAP (B_eq IS OPPOSITE TO m)")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={GREEN} weight={800}>
-            B_axial = + (μ₀/4π) (2m / d³)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Axial Field Formula: B_axial = (μ_0 / 4π) · (2m / d³).
           </T>
-          <T x={240} y={52} anchor="middle" size={16} fill={INK} weight={800}>
-            B_eq = − (μ₀/4π) (m / d³)
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Summary Shortcut */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          {t("INSTANT EXAM RULE", "INSTANT EXAM RULE")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={18} fill={GREEN} weight={800}>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Equatorial Field Formula: B_eq = (μ_0 / 4π) · (m / d³).
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Ratio Relation: B_axial = 2 B_eq at equal distance d.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. 10-Second Calculation: B_eq = B_axial / 2!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Valid for far-field points where observation distance d ≫ l)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: THE DIRECTION TRAP (B_eq IS OPPOSITE TO m) */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("THE DIRECTION TRAP (B_eq IS OPPOSITE TO m)", "THE DIRECTION TRAP (B_eq IS OPPOSITE TO m)")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Axial Field Direction: Vector B_axial points ALONG moment m.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Equatorial Field Direction: Vector B_eq points OPPOSITE to m.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Vector Form: B_axial = + (μ_0/4π)(2m/d³) ; B_eq = - (μ_0/4π)(m/d³).
+          </T>
+
+          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Exam Trap: Don't forget opposite direction for B_eq!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Identical vector direction relationship as in electrostatics)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("INSTANT EXAM RULE", "INSTANT EXAM RULE")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
             If B_axial = 0.4 T at distance d ⇒ B_eq = 0.2 T (pointing OPPOSITE to dipole moment m)!
           </T>
-        </g>
-      </Fade>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Save time in exams by using B_eq = B_axial / 2 directly without recalculating constants!
+          </T>
+        </Fade>
+      </g>
 
-      {/* Summary Chip */}
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <Chip x={100} y={490} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ B_axial is twice B_eq at equal distance, but B_eq points opposite to m! ✓",
-            "★ Equal distance par B_axial B_eq ka double hota hai, lekin B_eq m ke opposite hota hai! ✓"
+            "★ B_axial is twice B_eq at equal distance, but B_eq points opposite to m! ✓"
           )}
         </Chip>
       </Fade>

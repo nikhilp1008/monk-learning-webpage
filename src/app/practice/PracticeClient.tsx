@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
+import { MathText } from "@/components/MathText";
 import { supabase } from "@/lib/supabase";
 import { apiFetch, ApiError } from "@/lib/api";
 import type { Database } from "@/lib/database.types";
@@ -502,7 +503,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
 
                 {/* Question Text */}
                 <div className="text-base md:text-lg text-ink font-medium leading-relaxed">
-                  {question.question_text}
+                  <MathText content={question.question_text} />
                 </div>
 
                 {/* Question Inputs: MCQ vs Numerical */}
@@ -575,7 +576,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                             {opt.key}
                           </span>
                           <span className="text-sm md:text-base leading-snug pt-0.5">
-                            {opt.text}
+                            <MathText content={opt.text} />
                           </span>
                         </button>
                       );
@@ -612,9 +613,9 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                         Step-by-Step Solution
                       </b>
                       {answerResult.solution ? (
-                        <p className="text-sm text-ink-light leading-relaxed whitespace-pre-line">
-                          {answerResult.solution}
-                        </p>
+                        <div className="text-sm text-ink-light leading-relaxed whitespace-pre-line">
+                          <MathText content={answerResult.solution} />
+                        </div>
                       ) : (
                         <p className="text-xs text-ink-muted italic">
                           No detailed solution text provided for this question yet.

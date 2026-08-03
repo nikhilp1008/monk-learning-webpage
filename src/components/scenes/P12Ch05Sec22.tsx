@@ -32,73 +32,113 @@ export default function P12Ch05Sec22({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("Derivation: Two Apparent Dips to Find True Dip", "Derivation: Do Apparent Dips se True Dip nikalna")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("Derivation: Two Apparent Dips to Find True Dip", "Derivation: Two Apparent Dips to Find True Dip")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 3: Two Perpendicular Planes */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("STEP 1: APPARENT DIPS IN PERPENDICULAR PLANES", "STEP 1: PERPENDICULAR PLANES MEIN APPARENT DIPS")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            cot δ₁ = cot δ cos α  |  cot δ₂ = cot δ sin α
+      {/* LEFT SECTION: STEP 1: APPARENT DIPS IN PERPENDICULAR PLANES */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("STEP 1: APPARENT DIPS IN PERPENDICULAR PLANES", "STEP 1: APPARENT DIPS IN PERPENDICULAR PLANES")}
           </T>
-          <T x={225} y={52} anchor="middle" size={13} fill={AMBER_DARK} weight={700}>
-            {t("Planes are at angle α and (90° − α) to magnetic meridian!", "Planes magnetic meridian se α aur (90° − α) angle par hain!")}
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Squaring and Adding */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("STEP 2: SQUARE AND ADD BOTH EQUATIONS", "STEP 2: DONO EQUATIONS KO SQUARE AUR ADD KAREIN")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={GREEN} weight={800}>
-            cot² δ₁ + cot² δ₂ = cot² δ (cos² α + sin² α)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Apparent Dip Plane 1: tan δ₁ = tan δ / cos α ⇒ cot δ₁ = cot δ cos α.
           </T>
-          <T x={240} y={52} anchor="middle" size={14} fill={INK} weight={700}>
-            {t("Since cos² α + sin² α = 1, angle α drops out completely!", "cos² α + sin² α = 1 hone se angle α poori tarah hatt jaata hai!")}
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Master Derived Relation */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          {t("MASTER TWO-APPARENT-DIPS FORMULA", "MASTER TWO-APPARENT-DIPS FORMULA")}
-        </T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Plane 2 (at 90° - α): tan δ₂ = tan δ / cos(90° - α).
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Second Relation: tan δ₂ = tan δ / sin α.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Cotangent Form: cot δ₂ = cot δ sin α!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Note that dip circle is turned by 90° between two measurements)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: STEP 2: SQUARE AND ADD BOTH EQUATIONS */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("STEP 2: SQUARE AND ADD BOTH EQUATIONS", "STEP 2: SQUARE AND ADD BOTH EQUATIONS")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Square First Equation: cot² δ₁ = cot² δ cos² α.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Square Second Equation: cot² δ₂ = cot² δ sin² α.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Add Equations: cot² δ₁ + cot² δ₂ = cot² δ (cos² α + sin² α).
+          </T>
+
+          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Apply Identity: cos² α + sin² α = 1!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Eliminates unknown meridian offset angle α completely)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("MASTER TWO-APPARENT-DIPS FORMULA", "MASTER TWO-APPARENT-DIPS FORMULA")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Master Formula: cot² δ = cot² δ₁ + cot² δ₂.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Practical Exam Shortcut: Measure dip in any two mutually perpendicular vertical planes to get TRUE dip δ.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={18} fill={GREEN} weight={800}>
-            cot² δ = cot² δ₁ + cot² δ₂
-          </T>
-        </g>
-      </Fade>
-
-      {/* Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={490} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Master Formula: cot² δ = cot² δ₁ + cot² δ₂ finds true dip δ without knowing meridian angle α! ✓",
-            "★ Master Formula: cot² δ = cot² δ₁ + cot² δ₂ se bina α jaane true dip δ nikal aata hai! ✓"
+            "★ Master Formula: cot² δ = cot² δ₁ + cot² δ₂ finds true dip δ without knowing meridian angle α! ✓"
           )}
         </Chip>
       </Fade>

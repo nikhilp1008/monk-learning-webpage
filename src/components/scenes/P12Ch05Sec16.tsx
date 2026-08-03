@@ -32,73 +32,113 @@ export default function P12Ch05Sec16({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("The Earth as One Colossal Bar Magnet", "Dharti: Ek Bada Bar Magnet")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("The Earth as One Colossal Bar Magnet", "The Earth as One Colossal Bar Magnet")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 3: Tilted Axis Concept */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("GEOGRAPHIC AXIS VS MAGNETIC AXIS (11.3° TILT)", "GEOGRAPHIC AXIS VS MAGNETIC AXIS (11.3° TILT)")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            Magnetic Axis Tilted by ~11.3° to Rotation Axis
+      {/* LEFT SECTION: GEOGRAPHIC AXIS VS MAGNETIC AXIS (11.3° TILT) */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("GEOGRAPHIC AXIS VS MAGNETIC AXIS (11.3° TILT)", "GEOGRAPHIC AXIS VS MAGNETIC AXIS (11.3° TILT)")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            {t("Magnetic South Pole is near Geographic North Pole!", "Magnetic South Pole Geographic North Pole ke paas hai!")}
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Dynamo Effect Origin */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("ORIGIN: THE GEODYNAMO EFFECT", "ORIGIN: GEODYNAMO EFFECT")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            Convection currents in molten iron outer core!
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Rotation Axis: Geographic N-S axis defined by Earth's spin.
           </T>
-          <T x={240} y={52} anchor="middle" size={14} fill={GREEN} weight={800}>
-            {t("Earth's rotation generates circulating currents ⇒ B ≈ 10⁻⁴ T!", "Earth ki rotation se circulating currents ⇒ B ≈ 10⁻⁴ T!")}
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Pole Nomenclature Rule */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          {t("CRITICAL POLE NAMING CONVENTION", "CRITICAL POLE NAMING CONVENTION")}
-        </T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Magnetic Tilt: Dipole axis tilted by ~11.3° to rotation axis.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Dipole Orientation: Dipole moment vector points S to N.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Pole Trap: Geographic North holds a MAGNETIC SOUTH pole!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (That's why N-pole of compass needle is attracted to Geographic North)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: ORIGIN: THE GEODYNAMO EFFECT */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("ORIGIN: THE GEODYNAMO EFFECT", "ORIGIN: THE GEODYNAMO EFFECT")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Molten Core: Convection currents of liquid metallic iron &amp; nickel.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Circulation: Earth's rotation creates giant circulating charge loops.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Dynamo Action: Circulating electric currents generate field B.
+          </T>
+
+          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Surface Field: B ≈ 10⁻⁴ T (0.1 to 0.6 Gauss at surface)!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Earth is not a permanent magnet; heat prevents permanent ferromagnetism)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CRITICAL POLE NAMING CONVENTION", "CRITICAL POLE NAMING CONVENTION")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Compass Behavior: North-seeking pole of compass points Geographic North.
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Magnetic Identity: Geographic North Pole contains Magnetic South Pole (Nm ≈ 79.7° N, 108° W).
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            North-seeking pole of compass points Geographic North because Earth's NORTH holds a MAGNETIC SOUTH pole!
-          </T>
-        </g>
-      </Fade>
-
-      {/* Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={490} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Earth's magnetic dipole axis is tilted 11.3°, driven by core geodynamo circulation! ✓",
-            "★ Earth ka magnetic dipole axis 11.3° tilted hai, jo core geodynamo circulation se chalta hai! ✓"
+            "★ Earth's magnetic dipole axis is tilted 11.3°, driven by core geodynamo circulation! ✓"
           )}
         </Chip>
       </Fade>

@@ -32,73 +32,113 @@ export default function P12Ch05Sec17({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
-          {t("The Three Magnetic Elements of the Earth", "Earth ke Teeno Magnetic Elements")}
+        <T x={540} y={48} size={25} fill={RED} script>
+          {t("The Three Magnetic Elements of the Earth", "The Three Magnetic Elements of the Earth")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 3: Declination and Inclination */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("1. DECLINATION (D) & 2. INCLINATION / DIP (I)", "1. DECLINATION (D) & 2. INCLINATION / DIP (I)")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={14} fill={INK} weight={800}>
-            Declination D: Angle between Geo & Mag Meridians
+      {/* LEFT SECTION: 1. DECLINATION (D) & 2. INCLINATION / DIP (I) */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("1. DECLINATION (D) & 2. INCLINATION / DIP (I)", "1. DECLINATION (D) & 2. INCLINATION / DIP (I)")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            Dip I: Angle made by B_E vector with horizontal!
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Horizontal and Vertical Components */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("3. HORIZONTAL COMPONENT (B_H)", "3. HORIZONTAL COMPONENT (B_H)")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={16} fill={INK} weight={800}>
-            B_H = B_E cos I  |  B_V = B_E sin I
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Declination (D): Angle between Geo &amp; Mag Meridians.
           </T>
-          <T x={240} y={52} anchor="middle" size={16} fill={GREEN} weight={800}>
-            tan I = B_V / B_H  |  B_E = √(B_H² + B_V²)
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Summary Principle */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          {t("COMPLETE EARTH FIELD SPECIFICATION", "COMPLETE EARTH FIELD SPECIFICATION")}
-        </T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Geographic Meridian: Vertical plane with spin axis.
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Magnetic Meridian: Vertical plane with dipole axis.
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Dip Angle (I): Angle made by total field B_E with horizontal!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Dip needle turns in magnetic meridian plane to point along B_E)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: 3. HORIZONTAL & VERTICAL COMPONENTS */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("3. HORIZONTAL & VERTICAL COMPONENTS", "3. HORIZONTAL & VERTICAL COMPONENTS")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Horizontal Component: B_H = B_E cos I.
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Vertical Component: B_V = B_E sin I.
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Tangent Dip Relation: tan I = B_V / B_H.
+          </T>
+
+          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Resultant Field Magnitude: B_E = √(B_H² + B_V²)!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (At equator: I = 0°, B_H = B_E, B_V = 0 ; At poles: I = 90°, B_H = 0, B_V = B_E)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("COMPLETE EARTH FIELD SPECIFICATION", "COMPLETE EARTH FIELD SPECIFICATION")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Three Magnetic Elements: Declination (D), Dip Angle (I), and Horizontal Component (B_H).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Complete Determination: These 3 independent parameters uniquely specify vector B_E anywhere on Earth.
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            Knowing Declination D, Dip I, and Horizontal Component B_H completely defines B_E at any location!
-          </T>
-        </g>
-      </Fade>
-
-      {/* Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={490} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ 3 Elements of Earth's field: Declination D, Dip I, and Horizontal Component B_H! ✓",
-            "★ Earth ke field ke 3 Elements: Declination D, Dip I, aur Horizontal Component B_H! ✓"
+            "★ 3 Elements of Earth's field: Declination D, Dip I, and Horizontal Component B_H! ✓"
           )}
         </Chip>
       </Fade>

@@ -32,70 +32,110 @@ export default function P12Ch06Sec53({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
+      {/* Title */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={58} size={24} fill={RED} script>
+        <T x={540} y={48} size={25} fill={RED} script>
           {t("Board Derivation: AC Generator Sinusoidal EMF ε(t) = NBAω sin(ωt)", "Board Derivation: AC Generator Sinusoidal EMF ε(t) = NBAω sin(ωt)")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 200 70 C 440 66, 640 74, 880 69" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* BEAT 1 & 3: Step 1 & Step 2 */}
-      <Badge n={1} cx={52} cy={140} on={beat >= 1} delay={dl(1, 0.4)} />
-      <Fade on={beat >= 1} delay={dl(1, 0.8)}>
-        <T x={74} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("STEP 1 & 2: FLUX N Φ_B(t) & FARADAY DIFFERENTIATION", "STEP 1 & 2: FLUX N Φ_B(t) & FARADAY DIFFERENTIATION")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 1} dim={beat >= 5}>
-        <g transform="translate(60, 160)">
-          <rect x={0} y={5} width={450} height={60} rx={8} fill={CREAM} stroke={AMBER_DARK} strokeWidth={1.8} />
-          <T x={225} y={30} anchor="middle" size={15} fill={INK} weight={800}>
-            N Φ_B(t) = N B A cos(ωt)
+      {/* LEFT SECTION: STEP 1 & 2: FLUX N Φ_B(t) & FARADAY DIFFERENTIATION */}
+      <g transform="translate(40, 75)">
+        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
+        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("STEP 1 & 2: FLUX N Φ_B(t) & FARADAY DIFFERENTIATION", "STEP 1 & 2: FLUX N Φ_B(t) & FARADAY DIFFERENTIATION")}
           </T>
-          <T x={225} y={52} anchor="middle" size={14} fill={AMBER_DARK} weight={700}>
-            ε(t) = − d/dt [ N B A cos(ωt) ]
-          </T>
-        </g>
-      </Fade>
+        </Fade>
 
-      {/* BEAT 5 & 6: Calculus Result */}
-      <Badge n={2} cx={540} cy={140} on={beat >= 5} delay={dl(5, 0.4)} />
-      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
-        <T x={562} y={145} size={14} fill={RED} weight={700} anchor="start">
-          {t("STEP 3 & 4: ε(t) = N B A ω sin(ωt) = ε₀ sin(ωt)", "STEP 3 & 4: ε(t) = N B A ω sin(ωt) = ε₀ sin(ωt)")}
-        </T>
-      </Fade>
-      <Fade on={beat >= 5} dim={beat >= 7}>
-        <g transform="translate(540, 160)">
-          <rect x={0} y={5} width={480} height={60} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={240} y={30} anchor="middle" size={18} fill={GREEN} weight={800}>
-            ε(t) = ε₀ sin(ωt)
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 1}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Armature Orientation: Coil rotates at angular velocity ω (θ = ωt).
           </T>
-          <T x={240} y={52} anchor="middle" size={14} fill={INK} weight={700}>
-            {t("Peak voltage amplitude ε₀ = N B A ω (where ω = 2πf)!", "Peak voltage amplitude ε₀ = N B A ω (where ω = 2πf)!")}
-          </T>
-        </g>
-      </Fade>
 
-      {/* BEAT 7: Step-by-Step Marking */}
-      <Badge n={3} cx={52} cy={340} on={beat >= 7} delay={dl(7, 0.4)} />
-      <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={74} y={345} size={14} fill={RED} weight={700} anchor="start">
-          {t("CBSE STEP-BY-STEP MARKING RECAP", "CBSE STEP-BY-STEP MARKING RECAP")}
-        </T>
-      </Fade>
+          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
+            2. Total Linked Flux: N Φ_B(t) = N (B · A) = N B A cos(ωt).
+          </T>
+
+          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
+            3. Faraday-Lenz Derivative: ε(t) = -d/dt [ N B A cos(ωt) ].
+          </T>
+
+          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
+            4. Chain Rule: d/dt [cos(ωt)] = -ω sin(ωt).
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 5}>
+          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
+            (Minus sign from Lenz's law combines with calculus minus sign)
+          </T>
+        </Fade>
+      </g>
+
+      {/* RIGHT SECTION: STEP 3 & 4: ε(t) = N B A ω sin(ωt) = ε₀ sin(ωt) */}
+      <g transform="translate(540, 75)">
+        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("STEP 3 & 4: ε(t) = N B A ω sin(ωt) = ε₀ sin(ωt)", "STEP 3 & 4: ε(t) = N B A ω sin(ωt) = ε₀ sin(ωt)")}
+          </T>
+        </Fade>
+
+        {/* Floating Solution Steps */}
+        <Fade on={beat >= 5}>
+          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            1. Exact Derivative Result: ε(t) = N B A ω sin(ωt).
+          </T>
+
+          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
+            2. Peak EMF Definition: Let ε_0 = N B A ω = N B A (2πf).
+          </T>
+
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Final Equation: ε(t) = ε_0 sin(ωt).
+          </T>
+
+          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
+
+          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Sinusoidal AC Output: Alternating EMF with frequency f!
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
+            (Peak EMF ε_0 is proportional to N, B, A, and spin frequency f)
+          </T>
+        </Fade>
+      </g>
+
+      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
+      <g transform="translate(40, 415)">
+        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
+        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
+            {t("CBSE STEP-BY-STEP MARKING RECAP", "CBSE STEP-BY-STEP MARKING RECAP")}
+          </T>
+        </Fade>
+
+        <Fade on={beat >= 7}>
+          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
+            Step 1: Write flux equation Φ = B A cos(ωt) (1 mark).
+          </T>
+          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
+            Step 2: Differentiate via Faraday's Law ε = -N (dΦ/dt) → ε = N B A ω sin(ωt) = ε_0 sin(ωt) (2 marks).
+          </T>
+        </Fade>
+      </g>
+
+      {/* Footer Summary Chip (Floating without card boxes) */}
       <Fade on={beat >= 7}>
-        <g transform="translate(60, 360)">
-          <rect x={0} y={5} width={960} height={50} rx={8} fill={CREAM} stroke={GREEN} strokeWidth={1.8} />
-          <T x={480} y={35} anchor="middle" size={16} fill={GREEN} weight={800}>
-            1. Φ = BA cos(ωt) (1 mark) → 2. ε = −d(NΦ)/dt (1 mark) → 3. ε = NBAω sin(ωt) = ε₀ sin(ωt) (1 mark)!
-          </T>
-        </g>
-      </Fade>
-
-      {/* Summary Chip */}
-      <Fade on={beat >= 7}>
-        <Chip x={100} y={490} w={880} h={44} fill={GREEN} textFill="#ffffff" size={18}>
+        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
             "★ Derived Proof: AC Generator EMF ε(t) = NBAω sin(ωt) with Peak amplitude ε₀ = NBAω! ✓",
             "★ Derived Proof: AC Generator EMF ε(t) = NBAω sin(ωt) with Peak amplitude ε₀ = NBAω! ✓"
