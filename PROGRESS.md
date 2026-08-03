@@ -370,3 +370,8 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   triple-point-vs-ice-point, thermometer-range) + amber pro-tip box
   (P₁V₁/T₁=P₂V₂/T₂). VERDICT PASS (real audio), eyeballed clean.
   SUBTOPIC 5 COMPLETE (12/12).
+- Sec 62 — Three states, three transitions — solid/liquid/gas triangle
+  diagram with 3 colored edges (melting/freezing, vaporization/
+  condensation, sublimation), fixed-T-for-given-P note, same-Q=mL +
+  new-question closer. Opens Subtopic 6 (Phase Transitions). VERDICT
+  PASS (real audio), eyeballed clean.
