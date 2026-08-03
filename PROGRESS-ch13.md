@@ -31,8 +31,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 10 — worked example JEE Advanced (reference circle, rotating radius+shadow, 2 green safe-arcs, Δθ=2π/3, fraction=1/3) — 9 beats (this section has 9 board_events, not 8)
 
+- Sec 11 — pitfalls & pro-tips (4 red traps, 2 green pro-tips, "MAX at MEAN" memory-hook stamp)
+
 ## Current
-Subtopic 1 in progress. Next: Sec 11 (last of subtopic 1).
+Subtopic 1 COMPLETE (11/11). Next: Subtopic 2 — SHM Energy, Sec 12.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
