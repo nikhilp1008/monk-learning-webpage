@@ -83,8 +83,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 36 — formula board damped motion (x(t)/ω'/A(t)/E(t), 3-regime return-to-eq diagram, bc=2√(mk))
 
+- Sec 37 — formula board forced/resonance (A formula, sharp/broad resonance curves, ωr, limits, Q=mω₀/b, ringing)
+
 ## Current
-Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 37.
+Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 38.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
