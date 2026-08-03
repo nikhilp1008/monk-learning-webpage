@@ -34,8 +34,8 @@ trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
 ## Current
-Sec 70 done — Subtopic 6 (Phase Transitions, 62-72) in progress
-(9/11). Working through Sec 71-74 (Subtopic 6 remainder + Wrap-Up).
+Sec 71 done — Subtopic 6 (Phase Transitions, 62-72) in progress
+(10/11). Working through Sec 72-74 (Subtopic 6 close + Wrap-Up).
 Audio works chapter-wide — normal verify-scene.mjs + spot-eyeball
 workflow per section. Spot-eyeballed Sec64/66/70 with FORCE_SHOTS —
 clean, advisory stalls confirmed harmless (final-frame content always
@@ -429,3 +429,9 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   melts). VERDICT PASS (real audio; en beats 4-6 and hi beats 0-2
   exactly 1s apart, advisory stalls expected). Eyeballed clean —
   best diagram of the batch, no overlaps.
+- Sec 71 — Worked example: the melting-point shift of ice — numeric
+  Clausius-Clapeyron computation: ΔV/kg = −9.05×10⁻⁵ m³/kg, inverted
+  dT/dP ≈ −7.35×10⁻⁸ K/Pa, ×1atm, green answer box (ΔT ≈ −7.4×10⁻³ K,
+  ~−0.0074°C/atm), closing insight (negative sign ← ice less dense).
+  VERDICT PASS (real audio; en beats 3-6 exactly 1s apart, advisory
+  stalls expected).
