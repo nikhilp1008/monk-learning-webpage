@@ -375,3 +375,7 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   condensation, sublimation), fixed-T-for-given-P note, same-Q=mL +
   new-question closer. Opens Subtopic 6 (Phase Transitions). VERDICT
   PASS (real audio), eyeballed clean.
+- Sec 63 — Melting and boiling points shift with pressure — most-
+  substances-rises vs water-rebel-falls notes, regelation wire-through-
+  ice icon, refreeze note, SVP=external-P boiling condition, pressure-
+  cooker vs mountain icons. VERDICT PASS (real audio).
