@@ -35,8 +35,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 12 — energy changes costume (marble-in-bowl, K/U labels, E=K+U=½kA², endpoints, savings analogy)
 
+- Sec 13 — two consequences (K/U/E vs x graph, E∝A², double-frequency blink, caveat, U-reference convention)
+
 ## Current
-Subtopic 2 (SHM Energy) in progress. Next: Sec 13.
+Subtopic 2 (SHM Energy) in progress. Next: Sec 14.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
