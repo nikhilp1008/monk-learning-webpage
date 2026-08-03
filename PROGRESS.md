@@ -357,3 +357,7 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   "double 27→54°C" reflex (crossed out) vs Kelvin conversion, boxed
   T₂=2×300=600K=327°C, "convert to Kelvin first" rule, doubling-Celsius
   #1-error takeaway. VERDICT PASS (real audio).
+- Sec 59 — Worked example: pressure in a sealed rigid vessel — rigid-
+  vessel/Gay-Lussac setup, Kelvin conversion (300K/400K), boxed
+  P₂=1×400/300≈1.33atm, "100° sounds big but only 33%" insight, reason-
+  in-Kelvin takeaway. VERDICT PASS (real audio).
