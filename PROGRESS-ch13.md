@@ -45,8 +45,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 17 — worked example CBSE (m=0.5kg,k=200N/m,A=4cm; E=0.16J, Kmax=Umax=E, vmax=0.8m/s)
 
+- Sec 18 — worked example NEET K=U (A/2 trap crossed out, K/U crossing diagram at x=A/√2 height E/2, cousins)
+
 ## Current
-Subtopic 2 (SHM Energy) in progress. Next: Sec 18.
+Subtopic 2 (SHM Energy) in progress. Next: Sec 19.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
