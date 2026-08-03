@@ -34,8 +34,8 @@ trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
 ## Current
-Sec 67 done — Subtopic 6 (Phase Transitions, 62-72) in progress
-(6/11). Working through Sec 68-74 (Subtopic 6 remainder + Wrap-Up).
+Sec 68 done — Subtopic 6 (Phase Transitions, 62-72) in progress
+(7/11). Working through Sec 69-74 (Subtopic 6 remainder + Wrap-Up).
 Audio works chapter-wide — normal verify-scene.mjs + spot-eyeball
 workflow per section.
 
@@ -406,3 +406,10 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   normal-substance ΔV>0/positive-slope in green), closing "read the
   sign" note. VERDICT PASS (real audio; en beats 3-6 and hi beats 0-1
   are exactly 1s apart so a few advisory stalls are expected).
+- Sec 68 — Worked example: cooker fast, mountain slow — explain-with-
+  reason question, SVP=surrounding-P principle, amber cooker box
+  (trapped steam → BP>100°C → faster) vs green hill-station box
+  (lower P → BP<100°C → slower), controlling-variable note, green
+  chain-answer box (higher P → higher BP → faster cooking). VERDICT
+  PASS (real audio; en beats 2-6 exactly 1s apart, advisory stalls
+  expected).
