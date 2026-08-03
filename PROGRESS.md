@@ -353,3 +353,7 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
 - Sec 57 — Worked example: reading a gas thermometer — 80mmHg/100mmHg
   setup, P∝T ratio idea, boxed T=273.16×(100/80)=341.45K, Celsius
   conversion, single-fixed-point takeaway. VERDICT PASS (real audio).
+- Sec 58 — Worked example: volume doubles at constant pressure — wrong
+  "double 27→54°C" reflex (crossed out) vs Kelvin conversion, boxed
+  T₂=2×300=600K=327°C, "convert to Kelvin first" rule, doubling-Celsius
+  #1-error takeaway. VERDICT PASS (real audio).
