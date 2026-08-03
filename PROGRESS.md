@@ -12,7 +12,11 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 1.
+Starting Sec 6 (worked example — two-string speed trap).
 
 ## Done
-(none yet)
+- Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
+- Sec 2 — classifying waves (3-cut taxonomy slots, transverse/longitudinal diagram, 5-characteristics chip row)
+- Sec 3 — board derivation v=√(T/μ) (crest element, R/θ/Δl construction, tension→centripetal force balance ladder)
+- Sec 4 — wave toolkit (master relation, ω/k bridges, wave equation, sign-flip trap, particle vs wave velocity, verdict)
+- Sec 5 — worked example: sitar string (string+T+μ+f picture, 2-column step solve, v=30 m/s, λ=0.6 m) — establishes the worked-example template: picture → given ledger → 2-col steps → takeaway+recap chips
