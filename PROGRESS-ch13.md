@@ -125,8 +125,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 57 — formula recap (7-line whole-chapter formula board: kinematics/energy/pendulum-spring/damping/resonance/phasor/standard-systems)
 
+- Sec 58 — cheat sheet (5 color-coded memory-hook chips: MAX at MEAN/SQUARE THE SWING/ALLEGIANCES/DAMPING TRIO/ONE TEST RULES ALL, period-twins, closing hero) — closes Chapter Review and the chapter
+
 ## Current
-Subtopic 5 (Reference Circle & Superposition) COMPLETE (secs 45-56). Subtopic 6 (Chapter Review) in progress. Next: Sec 58 (final section).
+ALL 58 SECTIONS COMPLETE. Chapter 13 (Oscillations) fully authored, verified, and committed.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
