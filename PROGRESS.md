@@ -33,7 +33,13 @@ scheme. Re-verifying Sec12-43 now that this is meaningful again; do not
 trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
-## Current — PAUSED (2026-07-31, ~10:40pm) pending machine memory recovery [STALE, see UPDATE above]
+## Current [supersedes the stale PAUSED note directly below]
+Sec 49 done and RE-VERIFIED (see re-verification note above). Subtopic 4
+(Radiation/Cooling, 38-49) COMPLETE. Starting Sec 50 (Subtopic 5:
+Thermometry/Ideal-Gas, sections 50-61). Audio now works chapter-wide —
+back to full verify-scene.mjs + spot-eyeball workflow per section.
+
+## Stale pause note (2026-07-31, kept for history only)
 Sec 43 is the last VERIFIED-and-committed section (tsc clean, verify
 PASS). Sec 44 and Sec 45 are AUTHORED and registered in index.ts but
 **NOT YET VERIFIED** — the machine hit severe memory pressure (13.5GB/
