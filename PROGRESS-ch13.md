@@ -119,8 +119,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 54 — worked example JEE Main mercury U-tube (text-only, T≈1.42s hero, TOTAL-length trap hero, density-cancels explanation, closing hero)
 
+- Sec 55 — worked example JEE Advanced pendulum clock (text-only, direction-first reasoning, Δt≈10.4s/day hero, warm=slow sign-rule hero, temp-compensated rods note)
+
 ## Current
-Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 55.
+Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 56 (closes subtopic 5 — pitfalls & pro-tips).
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
