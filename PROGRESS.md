@@ -127,8 +127,22 @@ eyeballing these with FORCE_SHOTS once audio exists, even before the mechanical 
 **Sec 42 is the second most important unverified diagram** (after Sec33/34) — the
 composite-device proof reused conceptually in Sec44. Eyeball with FORCE_SHOTS first.
 
+## Sec 46-53 — AUTHORED BUT UNVERIFIED (Subtopic 7: Carnot, complete)
+46. Carnot's question — 1824 hook, η_Carnot=1−T2/T1 boxed+ringed (the headline formula), isothermal+adiabatic chips, real-plant tie-back.
+47. Four strokes of the Carnot cycle — THE canonical A→B→C→D P-V loop (isothermal/adiabatic alternating), legend kept spatially separate (x800+) from the curve to avoid label/curve collision risk while unverified.
+48. Formula sheet: Q1/Q2 on isotherms, key ratio, η boxed, reversed COPs, Carnot's theorem (2 parts), consequence.
+49. Board derivation of the heat ratio — step sequence ⇒ VB/VA=VC/VD ⇒ Q2/Q1=T2/T1 ⇒ η=1−T2/T1 crown result, all boxed.
+50. Carnot's theorem proof by contradiction — assume X beats R, run R backwards, Clausius violation ⇒ η_X≤η_R; two reversible engines tie.
+51. Clean efficiency (500K,300K⇒40%) + raising it (invert T1=T2/(1-η): 600K→750K, rise=150K) — two-column.
+52. Full numbers (400K,300K,1200J⇒η=25%,W=300J,Q2=900J) + Carnot ceiling (600K,300K⇒50%; 60% impossible, 45% possible-but-irreversible) — two-column.
+53. Carnot pitfalls — EXACT reuse of Sec8/15/24/32/38/45's 2×2 grid layout, new content.
+
+**Sec 47 is the single most important unverified diagram in the whole chapter** — the
+canonical Carnot cycle P-V loop that Sec 48-53 all refer back to conceptually. Prioritize
+eyeballing it with FORCE_SHOTS the moment audio exists, before anything else.
+
 ## Current
-Authoring paused at end of Subtopic 6 (Second Law/Reversibility, Sec 39-45) pending audio.
-Sec 1-11 fully verified (VERDICT PASS). Sec 12-45 drafted, typecheck-clean, unverified.
-45/61 sections drafted. Next: Sec 46 (Subtopic 7: Carnot) once resumed, OR re-verify Sec
-12-45 first if audio becomes available before more sections are drafted.
+Authoring paused at end of Subtopic 7 (Carnot, Sec 46-53) pending audio.
+Sec 1-11 fully verified (VERDICT PASS). Sec 12-53 drafted, typecheck-clean, unverified.
+53/61 sections drafted (87%). Next: Sec 54 (Subtopic 8: Entropy) once resumed, OR
+re-verify Sec 12-53 first if audio becomes available before more sections are drafted.
