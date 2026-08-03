@@ -330,3 +330,7 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   fixed points, 100-division Celsius note, mercury-vs-alcohol two-
   thermometer divergence-at-50° visual, dilute-gas universality, ideal-
   gas-standard takeaway. VERDICT PASS (real audio).
+- Sec 52 — The three gas laws — three-column icons (Boyle's piston,
+  Charles's balloon, Gay-Lussac's sealed gauge-container) each with its
+  formula, "different variable fixed" discipline note, road-to-absolute-
+  temperature takeaway. VERDICT PASS (real audio), eyeballed clean.
