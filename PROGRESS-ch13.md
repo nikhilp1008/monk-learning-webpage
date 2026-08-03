@@ -39,8 +39,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 14 — energy formulas toolkit (K/U/E formulas, 4-bar K/U split chart, ratios, K=U at A/√2, 2f note)
 
+- Sec 15 — derivation E=½kA² (K=cos² U=sin² formulas, complementary hump waves+flat E, Pythagorean identity, hero)
+
 ## Current
-Subtopic 2 (SHM Energy) in progress. Next: Sec 15.
+Subtopic 2 (SHM Energy) in progress. Next: Sec 16.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
