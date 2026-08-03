@@ -47,8 +47,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 18 — worked example NEET K=U (A/2 trap crossed out, K/U crossing diagram at x=A/√2 height E/2, cousins)
 
+- Sec 19 — worked example JEE Main (m=0.1kg,A=10cm,ω=10; E=0.05J, U=0.018J, K=0.032J, ratio cross-check)
+
 ## Current
-Subtopic 2 (SHM Energy) in progress. Next: Sec 19.
+Subtopic 2 (SHM Energy) in progress. Next: Sec 20.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
