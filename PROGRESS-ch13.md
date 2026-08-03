@@ -59,8 +59,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 24 — formula board pt1 (pendulum/spring/shortcut formulas, series vs parallel spring diagram, cut-n-pieces hero)
 
+- Sec 25 — formula board pt2 (g_eff lift up/down/car, physical pendulum, torsional pendulum, free-fall limit)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 25.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 26.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
