@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 24 (worked example — closed pipe first overtone).
+Starting Sec 25 (worked example — three successive resonances).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -38,3 +38,4 @@ Starting Sec 24 (worked example — closed pipe first overtone).
 - Sec 21 — board derivation: standing wave & string harmonics (y1+y2=2a sin(kx)cos(wt), node/antinode conditions, boundary→f_n=nv/2L→sonometer formula)
 - Sec 22 — standing waves and acoustics toolkit (2-col ledger: standing wave eq, spacing, open/closed pipe f_n, end correction, resonance-tube formulas, overtone map)
 - Sec 23 — worked example: a stretched wire (1/2/3-loop mode diagrams, f1=200Hz, overtones 400/600Hz, all-harmonics rule)
+- Sec 24 — worked example: closed pipe first overtone (3-pipe comparison, forbidden 2f1 crossed out, correct 3f1=600Hz)
