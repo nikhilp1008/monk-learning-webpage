@@ -89,8 +89,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 39 — framework forced oscillation (mẍ+bẋ+kx=F₀cosωt, A formula, annotated resonance curve w/ F₀/k & capped markers)
 
+- Sec 40 — worked example CBSE (m=0.2kg,b=0.04; t½=6.93s, equal-interval property of exponential decay)
+
 ## Current
-Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 40.
+Subtopic 4 (Damped & Forced Oscillations) in progress. Next: Sec 41.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
