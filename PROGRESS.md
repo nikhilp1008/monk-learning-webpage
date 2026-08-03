@@ -59,5 +59,38 @@ use once audio exists.
 Paused authoring past Sec 11 rather than ship un-verified scenes. User is checking on the
 audio pipeline. Resume with Sec 12 once `english_sec_12.mp3` (etc.) returns 200.
 
+## Sec 12-24 — AUTHORED BUT UNVERIFIED (audio still missing as of last check)
+12. Unit-care numerical + sign trap — two-column (250cal→1045J→+545J; compressed/released signs→+50J).
+13. Two-path state-function trick — i/f 2-path diagram, ΔU=80J reused across paths, Q₂=+140J.
+14. Latent heat of boiling — liquid→vapour box diagram (huge V jump), Q=4000J, W≈310J, ΔU≈3690J (92%).
+15. First Law pitfalls — EXACT reuse of Sec8's 2×2 grid layout, new content.
+16. Four ways to move the same gas — the anchor P-V diagram: 4 curves (isochoric/isobaric/isothermal/adiabatic) from one common point.
+17. Work = area under P-V curve — shaded single-curve icon, 2nd path (path-dependence), closed-loop icon (cycle work), free-expansion exception.
+18. Formula sheet: 4-process table + 3 adiabatic forms + polytropic master + slopes-at-a-point diagram.
+19. Board derivation: isothermal work (step-by-step, boxed result W=nRT·ln(Vf/Vi)).
+20. Board derivation: adiabatic law (5-step derivation ⇒ PV^γ=const, boxed) + work-comparison mini-diagram.
+21. Isothermal triple + adiabatic squeeze — two-column worked examples (mirrors Sec5/12 layout).
+22. Isobaric diatomic gas — GIVEN + 3-stamp row (W/ΔU/Q) + first-law verify + Cp:Cv ratio.
+23. Isothermal vs adiabatic work — single-column math derivation, ratio≈1.25, ranking verdict.
+24. Processes pitfalls — EXACT reuse of Sec8/15's 2×2 grid layout, new content.
+
+**All of Sec 12-24 (First Law tail + all of Processes subtopic) typecheck clean** (`npx tsc --noEmit`
+passes with 0 errors as of each incremental addition) but have **NOT** been run through
+`verify-scene.mjs` — audio still 404 for sec 12+ as of last check. Geometry was designed
+conservatively, reusing patterns from already-PASS-verified sections (Sec1-11) wherever
+possible (esp. Sec8's 2×2 pitfall grid, reused verbatim in Sec15 and Sec24; Sec5/12's
+two-column worked-example divider layout, reused in Sec21). **MUST re-run verify-scene.mjs
+on every one of Sec 12-24 once audio exists, and fix any reported overlap/overflow before
+considering them done.**
+
+Node note: `npx tsc --noEmit` intermittently takes 1-3+ minutes (sometimes appearing to hang
+with near-zero CPU usage for 5-10+ min) under load from the other parallel chapter worktrees'
+dev servers/tsc runs — this resolved on its own each time without needing the node_modules.nosync
+symlink workaround; deleting a stale `tsconfig.tsbuildinfo` did not change the pattern either.
+Just re-run and wait it out (use a background+monitor pattern, don't block synchronously).
+
 ## Current
-Paused after Section 11 — blocked on missing audio for Sec 12+ (see above). Sec 1-11 committed and pushed.
+Authoring paused at end of Subtopic 3 (Processes, Sec 16-24) pending audio for Sec 12+.
+Sec 1-11 fully verified (VERDICT PASS). Sec 12-24 drafted, typecheck-clean, unverified.
+Next: Sec 25 (Subtopic 4: Specific Heats & Mayer) once resumed, OR re-verify Sec 12-24
+first if audio becomes available before more sections are drafted.
