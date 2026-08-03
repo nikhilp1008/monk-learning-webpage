@@ -73,8 +73,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 31 — worked example JEE Main (m=2kg,k1=6,k2=3; Tseries=2π≈6.28s, Tparallel≈2.96s, never-average note)
 
+- Sec 32 — worked example JEE Advanced (rod pendulum, I=ML²/3, d=L/2, T=2π√(2L/3g), Leq=2L/3<L)
+
 ## Current
-Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 32.
+Subtopic 3 (Pendulums & Mass-Spring) in progress. Next: Sec 33 (last of subtopic 3).
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
