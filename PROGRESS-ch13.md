@@ -99,8 +99,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 44 — pitfalls & pro-tips (5 red traps, 1 green pro-tip, "Q=2π/(fractional E lost), N≈Q/2π" stamp)
 
+- Sec 45 — reference circle (bead+phasor+shadow diagram, identity not analogy, phasor, ẍ=-ω²x⟺SHM hero)
+
 ## Current
-Subtopic 4 COMPLETE (11/11). Next: Subtopic 5 — Reference Circle, Superposition and More SHM Systems, Sec 45.
+Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 46.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
