@@ -34,8 +34,8 @@ trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
 ## Current
-Sec 65 done — Subtopic 6 (Phase Transitions, 62-72) in progress
-(4/11). Working through Sec 66-74 (Subtopic 6 remainder + Wrap-Up).
+Sec 66 done — Subtopic 6 (Phase Transitions, 62-72) in progress
+(5/11). Working through Sec 67-74 (Subtopic 6 remainder + Wrap-Up).
 Audio works chapter-wide — normal verify-scene.mjs + spot-eyeball
 workflow per section.
 
@@ -393,3 +393,10 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   on impurities shifting transition temps. VERDICT PASS (real audio;
   en beats 1-6 are exactly 1s apart so several advisory stalls are
   expected/non-blocking).
+- Sec 66 — The change-of-state facts and constants — formula-card
+  recap: Q=mL chip (Lf=80, Lv=540 cal/g), melting-pt-vs-P (water
+  decreases, most rise), boiling-pt-vs-P (cooker rises, mountain
+  falls), water's triple point (273.16K/611.7Pa) and critical point
+  (647K/22.1MPa), sublimation rule (ambient P < triple-point P).
+  VERDICT PASS (real audio; hi beats 3-6 are exactly 1s apart so a
+  few advisory stalls are expected/non-blocking).
