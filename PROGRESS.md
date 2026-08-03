@@ -34,10 +34,12 @@ trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
 ## Current
-Sec 68 done — Subtopic 6 (Phase Transitions, 62-72) in progress
-(7/11). Working through Sec 69-74 (Subtopic 6 remainder + Wrap-Up).
+Sec 69 done — Subtopic 6 (Phase Transitions, 62-72) in progress
+(8/11). Working through Sec 70-74 (Subtopic 6 remainder + Wrap-Up).
 Audio works chapter-wide — normal verify-scene.mjs + spot-eyeball
-workflow per section.
+workflow per section. Spot-eyeballed Sec64/66 with FORCE_SHOTS —
+clean, advisory stalls confirmed harmless (final-frame content always
+complete).
 
 ## Stale pause note (2026-07-31, kept for history only)
 Sec 43 is the last VERIFIED-and-committed section (tsc clean, verify
@@ -413,3 +415,9 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   chain-answer box (higher P → higher BP → faster cooking). VERDICT
   PASS (real audio; en beats 2-6 exactly 1s apart, advisory stalls
   expected).
+- Sec 69 — Worked example: the wire that passes through ice — NEET
+  hook + setup, "not cut — melted and refroze" trap, ice-block-and-
+  wire diagram (P under wire lowers MP → sinks), refreeze-above note
+  (releases latent heat), outcome note, REGELATION name badge +
+  closing (only because ice's MP falls with P). VERDICT PASS (real
+  audio; hi beats 2-6 exactly 1s apart, advisory stalls expected).
