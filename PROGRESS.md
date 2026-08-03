@@ -33,11 +33,11 @@ scheme. Re-verifying Sec12-43 now that this is meaningful again; do not
 trust the "stalls=N/N, audio gap" notes below without a fresh check —
 they reflect state as of 2026-07-31, not now.
 
-## Current [supersedes the stale PAUSED note directly below]
-Sec 49 done and RE-VERIFIED (see re-verification note above). Subtopic 4
-(Radiation/Cooling, 38-49) COMPLETE. Starting Sec 50 (Subtopic 5:
-Thermometry/Ideal-Gas, sections 50-61). Audio now works chapter-wide —
-back to full verify-scene.mjs + spot-eyeball workflow per section.
+## Current
+Sec 61 done — Subtopic 5 (Thermometry/Ideal-Gas, 50-61) COMPLETE
+(12/12). Starting Sec 62 (Subtopic 6: Phase Transitions, sections
+62-72). Audio works chapter-wide — normal verify-scene.mjs + spot-
+eyeball workflow per section.
 
 ## Stale pause note (2026-07-31, kept for history only)
 Sec 43 is the last VERIFIED-and-committed section (tsc clean, verify
@@ -365,3 +365,8 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   linear model from 2 pressure readings, a/b computation, boxed
   t₀=-a/b≈-273.2°C, historical-method insight, 1.366=373.15/273.15
   fingerprint. VERDICT PASS (real audio).
+- Sec 61 — Pitfalls and pro-tips for thermometry — 5-badge closer
+  (Celsius-in-gas-law, absolute-zero-unattainable, 3-laws confusion,
+  triple-point-vs-ice-point, thermometer-range) + amber pro-tip box
+  (P₁V₁/T₁=P₂V₂/T₂). VERDICT PASS (real audio), eyeballed clean.
+  SUBTOPIC 5 COMPLETE (12/12).
