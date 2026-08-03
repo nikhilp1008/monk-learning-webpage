@@ -338,3 +338,7 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   graph with real (solid) + extrapolated (muted) segments meeting at a
   red dot at -273.15°C, absolute-zero declaration, Kelvin-scale note,
   boxed PV=nRT with cautions. VERDICT PASS (real audio), eyeballed clean.
+- Sec 54 — Thermometric relation, gas thermometer, absolute zero — boxed
+  linear relation t=[(X_t-X₀)/(X₁₀₀-X₀)]×100°C, X-definition note,
+  T=273.16×(P/P_tr) gas-thermometer formula, single-fixed-point note,
+  0K=-273.15°C, extrapolated-limit reminder. VERDICT PASS (real audio).
