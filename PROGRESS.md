@@ -12,7 +12,7 @@ languages for all 38 — confirmed via REST query).
 5. Chapter Recap — secs 37–38
 
 ## Current
-Starting Sec 22 (standing waves and acoustics toolkit).
+Starting Sec 23 (worked example — a stretched wire).
 
 ## Done
 - Sec 1 — what a wave is (particle row + live ripple, ring on centre dot, pond/twig cameo, 3 dim-swap verdict chips)
@@ -36,3 +36,4 @@ Starting Sec 22 (standing waves and acoustics toolkit).
 - Sec 19 — standing waves: a pattern that goes nowhere (2-loop envelope with N/A dots, ringed node/antinode, reflection mechanism, skipping-rope analogy, λ/2 & λ/4 spacing)
 - Sec 20 — harmonics, resonance, and pipes (open pipe: antinode-node-antinode all harmonics; closed pipe: node-antinode odd harmonics only, 1 octave lower)
 - Sec 21 — board derivation: standing wave & string harmonics (y1+y2=2a sin(kx)cos(wt), node/antinode conditions, boundary→f_n=nv/2L→sonometer formula)
+- Sec 22 — standing waves and acoustics toolkit (2-col ledger: standing wave eq, spacing, open/closed pipe f_n, end correction, resonance-tube formulas, overtone map)
