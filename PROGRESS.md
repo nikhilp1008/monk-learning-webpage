@@ -65,14 +65,14 @@ Worktree: branch `premium-board-ch12` · port 3012 only · chapter_id `8300dbf9-
 - Sec 45 — JEE Advanced worked example: gamma of He/O2 mixture (average Cv not gamma, ~1.48)
 - Sec 46 — pitfalls & pro-tips (4 traps + pro-tip + 3 closing memory phrases; Subtopic 5 complete)
 - Sec 47 — golden thread + master formula sheet (4-box chain PV=nRT=NkT→P=⅓ρv²rms→T↔KE→U=(f/2)nRT, 3-row master sheet)
+- Sec 48 — whole-chapter cheat sheet (2×3 grid of subtopic recall cards, 6-things-never-forget strip, closing "one seed" line; Subtopic 6 complete)
 
-## Current
-Subtopic 5 complete. Sec 47 authored, verified (`VERDICT sec=47: PASS` both languages), committed, pushed.
-Sec 48 (whole-chapter cheat sheet, final section): code authored, `tsc --noEmit` clean, registered in
-index.ts — **but NOT yet verified**. 25 automated attempts to boot the dev server and run
-`verify-scene.mjs 48` all failed (see "Third issue" below). Next session should retry verification
-once the local dev server can stay up; do not mark Sec 48 done in this log until an actual
-`VERDICT sec=48: PASS` is observed for both languages.
+## ALL 48/48 SECTIONS DONE — CHAPTER 12 (KINETIC THEORY) COMPLETE
+Every section 1–48 has an actual `VERDICT sec=N: PASS` for both English and Hinglish, is committed,
+and is pushed to `origin/premium-board-ch12`. Sec 48 needed several sessions to verify — see "Third
+issue" below for the full story — but eventually passed cleanly (frames=10, overlaps=0, overflow=0,
+empty=0 for both languages) once host memory pressure eased enough for the dev server to survive a
+boot+first-request cycle. No further work pending on this chapter.
 
 ## Second issue caught
 - Dev server on port 3012 wedged twice during authoring (secs 40, 45) — Playwright's page.goto
@@ -94,7 +94,7 @@ once the local dev server can stay up; do not mark Sec 48 done in this log until
   everywhere else). Audited all other sections for the same `<Draw ... fill={non-none}>` pattern —
   none found. Lesson: never pass a non-"none" fill to `Draw`; use `Fade` + a plain shape instead.
 
-## Third issue caught — Sec 48 verification blocked, and an unexplained external commit
+## Third issue caught — Sec 48 verification blocked (RESOLVED), and an unexplained external commit
 - While authoring Sec 48, the dev server on port 3012 became unable to complete a boot+first-request
   cycle at all: across ~25 kill/restart attempts (some with `.next` cleared, some with a fully
   materialized node_modules), the process crashed with a DIFFERENT "named export is undefined /
@@ -108,7 +108,13 @@ once the local dev server can stay up; do not mark Sec 48 done in this log until
   swap used), which is the most likely trigger: file-backed module reads / native-addon (SWC) loading
   becoming unreliable under near-total memory exhaustion. Brute-forcing `node_modules` materialization
   (in case of iCloud eviction) was tried and abandoned after 30+ min with no measurable progress.
-  **Unresolved** — needs the host to have more free memory before `verify-scene.mjs 48` can be run.
+  **RESOLVED** two sessions later: memory pressure never fully cleared (still ~350-1000MB free RAM,
+  85%+ swap used), but an automated retry loop (kill+restart+boot-check+grace-window+warmup, up to 25
+  attempts per run) eventually caught a clean boot on the 2nd attempt of a fresh run and
+  `verify-scene.mjs 48` returned `VERDICT sec=48: PASS` for both languages (frames=10, overlaps=0,
+  overflow=0, empty=0). Lesson for future chapters: this class of failure is a probabilistic race tied
+  to host memory pressure, not a deterministic bug — an automated multi-attempt retry script (not manual
+  one-off restarts) is the correct tool, since success can arrive on any attempt once conditions allow.
 - Separately: an unexpected commit (`3c390f4`, "Ch12 Sec48: secure drafted-unverified final scene
   (pending audio)") appeared in this repo's history that this session did not make — same author name
   ("Nikhil") as the repo's git user but a different email than the one in this session's context, and
