@@ -33,8 +33,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 11 — pitfalls & pro-tips (4 red traps, 2 green pro-tips, "MAX at MEAN" memory-hook stamp)
 
+- Sec 12 — energy changes costume (marble-in-bowl, K/U labels, E=K+U=½kA², endpoints, savings analogy)
+
 ## Current
-Subtopic 1 COMPLETE (11/11). Next: Subtopic 2 — SHM Energy, Sec 12.
+Subtopic 2 (SHM Energy) in progress. Next: Sec 13.
 
 ## Workflow notes
 - Reveal data cached: scratchpad/ch13_reveals.json (Supabase REST, cols `board_reveal_at_english/_hinglish`, all 58 rows fetched at once).
