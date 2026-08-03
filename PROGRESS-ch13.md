@@ -121,8 +121,10 @@ Worktree: branch `premium-board-ch13` · port 3013 only · chapter_id `c1bc937e-
 
 - Sec 55 — worked example JEE Advanced pendulum clock (text-only, direction-first reasoning, Δt≈10.4s/day hero, warm=slow sign-rule hero, temp-compensated rods note)
 
+- Sec 56 — pitfalls & pro-tips (5 red traps, 1 green pro-tip, "period-twins" formula hero) — closes subtopic 5
+
 ## Current
-Subtopic 5 (Reference Circle & Superposition) in progress. Next: Sec 56 (closes subtopic 5 — pitfalls & pro-tips).
+Subtopic 5 (Reference Circle & Superposition) COMPLETE (secs 45-56). Subtopic 6 (Chapter Review) next: Sec 57.
 
 ## Fixed bug (2026-08-03)
 Found & fixed a systematic geometry bug: filled-circle Draw paths of the form
