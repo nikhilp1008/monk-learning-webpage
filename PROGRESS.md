@@ -350,3 +350,6 @@ bar for sections 1-49 is now genuinely confirmed, not just tsc-clean.
   derivation: P(t)=P₀(1+γt), boxed 0=P₀(1+t/273.15)⇒t=-273.15°C (red),
   same-intercept note, origin shift, boxed T=273.16×(P/P_tr) (green).
   Key derivation of the subtopic. VERDICT PASS (real audio), eyeballed.
+- Sec 57 — Worked example: reading a gas thermometer — 80mmHg/100mmHg
+  setup, P∝T ratio idea, boxed T=273.16×(100/80)=341.45K, Celsius
+  conversion, single-fixed-point takeaway. VERDICT PASS (real audio).
