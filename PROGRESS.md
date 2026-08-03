@@ -115,8 +115,20 @@ Sec29 mirrors Sec5/12/21's two-column divider; Sec32 is an exact copy of Sec8/15
 hot/engine/cold visual language reused conceptually through Carnot (Sec 46-53). Prioritize
 eyeballing these with FORCE_SHOTS once audio exists, even before the mechanical PASS check.
 
+## Sec 39-45 — AUTHORED BUT UNVERIFIED (Subtopic 6: Second Law/Reversibility, complete)
+39. Second law is about direction — 3 one-way-example chips (heat/ink/pendulum), deck-shuffle analogy (1 order : many disorders), entropy teaser.
+40. Two faces of one law — Kelvin-Planck / Clausius statement cards, "≡" equivalence symbol, reversible/irreversible definitions.
+41. Key statements and definitions — formal KP/Clausius statement boxes, irreversibility sources list, "sole effect" nuance.
+42. Equivalence proof — the classic composite-device diagram (engine + magic Device C sharing hot/cold reservoirs, arrows showing net-zero cold-reservoir cancellation) ⇒ Kelvin-Planck violation.
+43. Stating the law + spotting reversibility — two-column (KP/Clausius + tea example; 4-option reversibility trap, only frictionless q-static isothermal qualifies).
+44. Forbidden engine (500J→500J,0 rejected: 1st law OK, 2nd law VIOLATES) + numeric equivalence (100J device + 250J engine ⇒ 150J KP violation) — two-column.
+45. Second-law pitfalls — EXACT reuse of Sec8/15/24/32/38's 2×2 grid layout, new content.
+
+**Sec 42 is the second most important unverified diagram** (after Sec33/34) — the
+composite-device proof reused conceptually in Sec44. Eyeball with FORCE_SHOTS first.
+
 ## Current
-Authoring paused at end of Subtopic 5 (Heat Engines/Refrigerators, Sec 33-38) pending audio.
-Sec 1-11 fully verified (VERDICT PASS). Sec 12-38 drafted, typecheck-clean, unverified.
-Next: Sec 39 (Subtopic 6: Second Law/Reversibility) once resumed, OR re-verify Sec 12-38
-first if audio becomes available before more sections are drafted.
+Authoring paused at end of Subtopic 6 (Second Law/Reversibility, Sec 39-45) pending audio.
+Sec 1-11 fully verified (VERDICT PASS). Sec 12-45 drafted, typecheck-clean, unverified.
+45/61 sections drafted. Next: Sec 46 (Subtopic 7: Carnot) once resumed, OR re-verify Sec
+12-45 first if audio becomes available before more sections are drafted.
