@@ -274,5 +274,62 @@ revisit these together with Sec 4/19–23 above as one batch.
   answer → guardrail (Z² scaling, never recompute from scratch). PASS both
   languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 39: Worked example (JEE Main): standing wave in the n=2 orbit — given
+  (n=2, v₁=2.18×10⁶m/s) → v₂ chip → λ=h/mv₂ chip → r₂,2πr₂ chip → ratio
+  2πr₂/λ≈2=n boxed green → a real 2-hump standing wave drawn wrapped around
+  a reference circle (reused/fixed the Sec33 arc-drawing technique) →
+  guardrail (exactly TWO wavelengths fit) → direct-confirmation closer.
+  PASS both languages, FORCE_SHOTS eyeballed clean. Also fixed a latent bug
+  found while building this: Sec33's beat-5 reference circle used a
+  degenerate single-arc SVG path (start/end ~1px apart, undefined per spec);
+  split into two proper semicircle arcs — re-verified Sec33 PASS clean.
+
+- Sec 40: Worked example (JEE Advanced): line count to shortest wavelength —
+  given (6 lines from ground state) → n(n−1)/2=6⇒n=4 boxed green →
+  E₁,E₄ (He⁺,Z=2) chip → ΔE=51.0eV boxed green + a two-level energy ladder
+  diagram (n=4/n=1 lines, red absorption arrow up, green emission arrow
+  down — same gap, opposite direction) → explain (shortest λ = largest
+  emission gap = same 51.0eV) → λmin=24.3nm boxed green → guardrail chain
+  chip (line count → n → energy levels → photon wavelength). PASS both
+  languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 41: Pitfalls and pro-tips: Bohr and duality — 4 numbered red-circle
+  pitfalls (wrong scaling power, miscounting lines n(n−1)/2, Bohr only for
+  one-electron species, dropping the negative sign on Eₙ), a sign-convention
+  sub-note, a red-bordered pro-tip (same transition/different ion ⇒
+  λ∝1/Z², E∝Z²), closing on the series-order + n₁ rule recap. PASS both
+  languages, FORCE_SHOTS eyeballed clean.
+
+**Subtopic 3 (Bohr's Model & Wave-Particle Duality, Sec 28-41; 24-30
+deferred, see known-issue) complete.**
+
+- Sec 42: From orbit to orbital: Schrödinger's probability cloud — anchor
+  (Bohr in ruins) → explain (sharp orbit needs a definite path, now
+  fiction) → Schrödinger (1926) wave-equation chip → ψ²=probability chip
+  (red, high-emphasis per source's red-margin/high note) → "an ORBITAL"
+  land (green) → a real 4-ring concentric probability-cloud diagram (denser
+  near a red nucleus dot, amber rings of increasing opacity toward center)
+  → spinning-fan-blade analogy → guardrail (region of likely presence,
+  NEVER a path). PASS both languages, FORCE_SHOTS eyeballed clean. First
+  section of subtopic 4 (Quantum Model, Orbitals & Electron Configurations).
+
+- Sec 43: The electron's postal address: quantum numbers and orbital shapes
+  — fan-disc anchor → explain (numbers fall out of Schrödinger's equation)
+  → 4-chip postal-address row (n=city/l=street/mₗ=house/mₛ=seat, written
+  plain "ml"/"ms" — no subscript-letter glyphs risked) → Pauli guardrail
+  chip (no two electrons share the same full address) → shape-fixed-by-l
+  explain → three real hand-drawn orbital shapes (s sphere, p 2-lobe
+  dumbbell, d 4-lobe cloverleaf, each in a distinct warm tone) → 2l+1
+  pattern explain → closing (house numbers mₗ is allowed to take). PASS
+  both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 44: Seating the electrons: Aufbau, Pauli, Hund — wedding-guests
+  anchor → 3 numbered rules (Aufbau=cheapest seats first, Pauli=no
+  identical address, Hund=own seat before doubling up — Hund's row in
+  green per its high-emphasis source note) → explain (rules generate every
+  configuration) → explain (and the periodic table's structure) → red
+  teaser closer (seat order comes from the (n+l) rule, next). PASS both
+  languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 39: "Worked example (JEE Main): standing wave in the n=2 orbit" — starting.
+Sec 45: "Ordering energies: the (n+l) rule and shielding" — starting.
