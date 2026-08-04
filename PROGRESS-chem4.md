@@ -63,7 +63,23 @@ Verify per section:
   bonds land), green "octets ✓" note, formal-charge arithmetic for C and O
   (both = 0), green verdict chip.
 
-## Blocked — truncated audio (9 sections, skip and continue past)
+## Blocked — truncated audio (UPDATED, 14 sections, skip and continue past)
+Re-audited more reliably after finding more casualties by comparing
+`duration_sec_english` vs `duration_sec_hinglish` directly (ratio < 0.6 flags
+it) plus a check for placeholder reveal arrays (3+ early beats spaced exactly
+~1.0s apart, e.g. `[0,1,2,3,...]`) — the original byte-length-vs-own-metadata
+check missed cases where the short recording's bytes matched ITS OWN (also
+wrong) declared duration. Full corrected list, English audio only unless
+noted:
+- **Sec 6 — BOTH languages** truncated (~19.5s real vs 68s claimed).
+- **Sec 20, 21, 22, 23, 24, 26, 27, 28** (subtopic 3) — English only.
+- **Sec 29, 30, 33, 35, 36** (subtopic 4) — English only, newly found.
+- Hinglish is clean everywhere except Sec 6. Sec 25, 31, 32, 34, 37, 38 and
+  all of subtopics 1-2 are confirmed OK (EN/HI duration ratio 0.95-1.09).
+14 of 38 sections blocked. Same policy as before: skip, render everything
+else, come back once real English audio is uploaded for these.
+
+## Blocked — original notes (superseded by the corrected list above)
 Audited all 38 sections' hosted mp3s (Content-Length vs declared duration, using
 the ~8025 B/s rate established from known-good files). Nine sections have a
 placeholder `duration_sec = 68.0` in Supabase and a REAL audio file 30-70%
@@ -169,8 +185,13 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   the left, with config text / bonding-antibonding count / BO=2 / PARAMAGNETIC
   / green answer chip on the right. The signature MOT worked example.
 
+- Sec 31 — Bent's rule, Drago's rule, bond-angle framework: Bent's rule
+  statement → NH₃ 107° vs NF₃ 102° → Drago's rule statement → PH₃/H₂S/AsH₃
+  ~90° → 6-factor priority chain → fast diagnostic (same centre→Bent's, same
+  substituent+heavier centre→Drago's) → 3c-2e bond intro + red chip
+  (diborane, Al₂Cl₆).
+
 ## Current
 Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 DONE (9/9). Subtopic 3:
-only Sec 25 unblocked (done) — 20-24, 26-28 remain blocked on audio (see
-Blocked section). Moving to Subtopic 4 (Sec 29-36) next, then Subtopic 5
-(Sec 37-38).
+only Sec 25 done (1/9, rest blocked). Subtopic 4: Sec 31 done, only 32/34
+remain unblocked (29,30,33,35,36 blocked). Next: Sec 32.
