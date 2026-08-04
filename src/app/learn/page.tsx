@@ -383,13 +383,9 @@ export default function LearnPage() {
 
   /* ─── Free text "Talk to teacher" ─── */
   const handleFreeText = useCallback(async () => {
-    const q = freeTextInput.trim();
-    if (!q) return;
+    const q = freeTextInput.trim() || "Thermodynamics and key physics concepts";
     setFreeTextLoading(true);
-    // For now: start a session with mode=free_text via the first matching chapter
-    // The backend may decline and suggest chapters
     try {
-      // Use a placeholder chapter_id — the backend handles free_text routing
       const res = await startSession("free_text", "hinglish");
       setSessionId(res.session_id);
       setScopingSpeech(res.speech);
@@ -637,8 +633,8 @@ export default function LearnPage() {
             />
             <button
               type="submit"
-              disabled={freeTextLoading || !freeTextInput.trim()}
-              className="inline-flex items-center gap-[9px] font-bold text-[0.9rem] py-[11px] px-[20px] rounded-full bg-[#EEA31F] text-[#241a08] disabled:opacity-50 cursor-pointer"
+              disabled={freeTextLoading}
+              className="inline-flex items-center gap-[9px] font-bold text-[0.9rem] py-[11px] px-[20px] rounded-full bg-[#EEA31F] text-[#241a08] disabled:opacity-50 cursor-pointer hover:bg-[#F2B238] transition-colors"
               style={{ boxShadow: "0 8px 18px -10px rgba(238,163,31,0.7)" }}
             >
               <span>Talk to {teacher}</span>
