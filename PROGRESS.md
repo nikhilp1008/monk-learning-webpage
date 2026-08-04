@@ -207,5 +207,13 @@ an existing physics section (fallback board_content path unchanged).
   clean. (House palette has no blue — LEGO bricks rendered as A=red/B=amber,
   captioned "A:B" rather than "red:blue".)
 
+- Sec 23: Conservation of mass and definite proportions — Lavoisier's
+  conservation of mass (mass(reactants)=mass(products)) with the closed-system
+  guardrail (candle-in-open-air trap) and the E=mc² deeper note; Proust's
+  definite proportions (Ganga water = lab water) with the callback that this
+  IS the compound definition from Subtopic 1, exceptions (non-stoichiometric,
+  isotopes), and the exam reading-skill contrast (one reaction vs one compound
+  from multiple sources). PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 23 next.
+Sec 24 next.
