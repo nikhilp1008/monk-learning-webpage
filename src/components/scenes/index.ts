@@ -2912,7 +2912,9 @@ REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:38`] = Ch14Sec38;
 /* block so this stays self-contained at the end of the file.          */
 /* ================================================================== */
 import C11Ch02Sec1 from "./C11Ch02Sec1";
+import C11Ch02Sec2 from "./C11Ch02Sec2";
 
 const C11CH02 = "16bf043d-bc59-5ebb-93ad-7b0fddf484c9"; // Class 11 Chemistry · Structure of Atom
 
 REGISTRY[`${C11CH02}:1`] = C11Ch02Sec1;
+REGISTRY[`${C11CH02}:2`] = C11Ch02Sec2;

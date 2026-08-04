@@ -30,5 +30,13 @@
   text-vs-text checker doesn't catch text-vs-shape occlusion, so eyeball the
   final frame every time two groups share a row).
 
+- Sec 2: From one negative particle to the whole cast — neutrality equation
+  (atom = e⁻ + ?unknown) → perforated-cathode tube with anode/positive rays
+  punching through the holes and glowing beyond the cathode → guardrail chip
+  pair (cathode rays universal vs anode rays gas-dependent) → mass-accounting
+  gap → lands the neutron (Chadwick 1932) → discovery timeline (electron →
+  proton → neutron) → cast-complete summary. PASS both languages first try,
+  FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 2: "From one negative particle to the whole cast" — starting.
+Sec 3: "Two rival blueprints: plum-pudding vs nuclear" — starting.
