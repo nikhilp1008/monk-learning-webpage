@@ -67,5 +67,12 @@ Done only on VERDICT PASS (both languages, overlaps=0 overflow=0 empty=0).
       sign-case grid (spontaneous-all-T/low-T/high-T/never).
 - [x] Sec 22 — Entropy/Gibbs/equilibrium formula toolkit (accumulating board).
 
+- [x] Sec 23 — WE1 (CBSE ΔG at 298K=-33.3kJ/mol, spontaneous) + WE2 (NEET crossover T=300K).
+- [x] Sec 24 — WE3 (JEE Main total entropy=+338.6J/K, spontaneous) + WE4 (JEE Advanced K≈0.32,
+      T where K=1 => 314K).
+- [x] Sec 25 — Tips: 4 red traps (kJ/J clash, surroundings sign, spontaneity≠rate, third-law
+      pure-crystals) + diamond/graphite example + green pro-tip. SUBTOPIC 3 DONE (8/8).
+
 ## Current
-Subtopic 3 (Entropy/Gibbs/Spontaneity, secs 18-25) in progress, secs 18-22 done. Next: Sec 23.
+Subtopic 3 (Entropy/Gibbs/Spontaneity/2nd&3rd Laws) complete, secs 18-25 pushed. Next: Sec 26
+(Calorimetry/Processes subtopic, secs 26-33).
