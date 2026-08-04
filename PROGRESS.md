@@ -199,5 +199,11 @@ shorter beat schedules.
   dimensions note → never-mix-units guardrail. **STALE AUDIO** (English
   short; verified clean via Hinglish). PASS.
 
+- Sec 22: The photoelectric toolkit (`formulas`) — p=h/λ=E/c → guardrail
+  (photon: zero rest mass, real momentum) → hν=W₀+KEmax⇒KEmax=h(ν−ν₀) boxed
+  green → work-function note → eV₀=h(ν−ν₀) → guardrail (V₀ volts = KEmax eV
+  numerically) → N=Pt/hν=Ptλ/hc. **STALE AUDIO** (English short; verified
+  clean via Hinglish). PASS.
+
 ## Current
-Sec 22: "The photoelectric toolkit" — starting.
+Sec 23: "Worked example (CBSE): FM radio photon" — starting.
