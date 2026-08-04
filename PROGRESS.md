@@ -11,6 +11,23 @@
 - Fetch helper: `node scratch/get-sec.mjs <position>` prints the Supabase row
   (no arg lists all 57 titles).
 
+## ⚠ KNOWN ISSUE: stale audio on 20/57 sections
+Sections **4, 19–30, 34–36, 49–51, 55–57** (20 of 57) use an older audio path
+(`.../c11_ch02_structure-of-atom/p1/...` vs the normal `.../c11_ch02/p1/...`)
+and carry suspiciously round `duration_sec_english`/`_hinglish` values (68 or
+84) in Supabase. Checked against real hosted files (`node scratch/check-audio-lang.mjs <sec>`):
+the actual audio is much shorter than the `board_reveal_at_*` timestamps need
+(e.g. Sec 4: English 14s / Hinglish 26s, but reveals run to 56–68s; Sec 20:
+English 23s vs a real 94s Hinglish). For most of the 20, only **English** is
+stale filler audio (Hinglish is real and matches); for **Sec 4, 34, 55** BOTH
+languages are short/stale. This is a backend audio-pipeline problem, not a
+scene bug — confirmed by re-checking scene logic against working sections.
+Decision (user, 2026-08-04): author all 57 scenes against the given
+`board_reveal_at_*` timestamps regardless, verify whatever the current audio
+can actually reach, and flag each affected section below — the scenes will
+already be correct once fresh audio is uploaded. Do not "fix" by inventing
+shorter beat schedules.
+
 ## Subtopic map
 - 1–14  Subatomic Particles & Early Atomic Models
 - 15–27 EM Radiation / Planck / Photoelectric Effect
@@ -46,5 +63,15 @@
   space; explains scattering but fails stability/spectra) → teaser into Bohr.
   PASS both languages first try, FORCE_SHOTS eyeballed clean.
 
+- Sec 4: The iso-family: same or different? — the four confusing names →
+  live-built 3-column table (name/held constant/example) with proper isotope
+  notation (¹H/²H/³H, ⁴⁰Ar/⁴⁰K/⁴⁰Ca, ¹⁴C&¹⁵N, Na⁺/Mg²⁺) filling in row by row →
+  toP/Bar/toN mnemonic guardrail → land. **STALE AUDIO** (see known-issue note
+  above): English 14s / Hinglish 26s vs intended 56–68s of reveals, so only
+  beats 0–1 (English) / 0–2ish (Hinglish) are actually reachable today; code
+  verified correct by inspection (identical Fade/beat pattern as Sec 1–3) and
+  tsc-clean. VERDICT PASS on what's reachable; re-verify fully once audio is
+  reuploaded.
+
 ## Current
-Sec 4: "The iso-family: same or different?" — starting.
+Sec 5: "How Thomson and Millikan cornered the electron" — starting.
