@@ -142,5 +142,12 @@ an existing physics section (fallback board_content path unchanged).
   languages, eyeballed clean. First section written directly with the new
   never-dim-and-overlay pattern.
 
+- Sec 14: Pitfalls and unit-tracking as an error detector — 4 pitfall rows
+  (forgetting to cube/square, flipped factor, wrong offset/negative K,
+  mass-vs-weight confusion), boxed pro-tip (unit tracking = free error
+  detector), 3 memory aids, forward-looking close into Uncertainty &
+  Significant Figures. PASS both languages, 0 stalls, eyeballed clean.
+  **Subtopic 2 (Measurement & SI Units, Sec 8-14) complete.**
+
 ## Current
-Sec 14 next.
+Sec 15 next (starts subtopic 3: Uncertainty & Significant Figures).
