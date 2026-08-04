@@ -2905,3 +2905,8 @@ REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:35`] = Ch14Sec35;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:36`] = Ch14Sec36;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:37`] = Ch14Sec37;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:38`] = Ch14Sec38;
+
+import C11Ch05Sec1 from "./C11Ch05Sec1";
+
+const C11CH05 = "a6961d73-9ca9-5716-8e0c-61c69c5e343f";
+REGISTRY[`${C11CH05}:1`] = C11Ch05Sec1;
