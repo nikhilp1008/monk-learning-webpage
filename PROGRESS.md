@@ -112,5 +112,11 @@ shorter beat schedules.
   z₁=2 for α note → average atomic mass Ā=ΣaᵢAᵢ/100 fraction → abundance
   note. PASS both languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 10: Worked example (CBSE): identify the ion — given (M³⁺, 23e⁻, 30n) →
+  step 1 charge-adjustment (23+3=26 electrons) → Z=26 boxed → guardrail (the
+  step-mark line examiners want) → step 2 identifies iron → A=56 → lands in
+  a green box with the full ⁵⁶₂₆Fe³⁺ notation (superscript mass, subscript
+  Z, charge). PASS both languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 10: "Worked example (CBSE): identify the ion" — starting.
+Sec 11: "Worked example (NEET): highest specific charge" — starting.
