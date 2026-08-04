@@ -157,6 +157,13 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   electronegativity argument (2 lines) → s-character argument → green order
   chip (H₂O>H₂S>H₂Se, same hybridisation ≠ same angle).
 
+- Sec 19 — Pitfalls and pro-tips (closes subtopic 2): 4 red-margin pitfall
+  rows (e-pair geometry≠shape, never drop LPs from SN, same hybridisation≠
+  same angle, don't muddle σ/π) → pro-tip (SN in one glance) → pro-tip (2
+  shrinking forces: more LPs, less EN centre) + green chip. SUBTOPIC 2 DONE
+  (9/9, all real audio, no blocks).
+
 ## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 19
-(closes subtopic 2).
+Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 DONE (9/9). Starting
+Subtopic 3 (MOT & H-Bonding, secs 20-28) — only sec 25 has real audio; 20-24
+and 26-28 are blocked (see Blocked section above). Next: Sec 25.
