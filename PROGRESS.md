@@ -149,5 +149,12 @@ an existing physics section (fallback board_content path unchanged).
   Significant Figures. PASS both languages, 0 stalls, eyeballed clean.
   **Subtopic 2 (Measurement & SI Units, Sec 8-14) complete.**
 
+- Sec 15: Uncertainty and the meaning of a measured digit — ruler-reading
+  anchor (≈2.5 cm, last digit is an estimate), scientific notation
+  (0.000...166 g ⇒ 1.66×10⁻²⁴ g), sig-fig contrast (12.5 g meaningful vs
+  12.50000 g false precision), last-digit-uncertain (12.5±0.1 cm), counts/
+  defined relations are exact (∞ sig figs). PASS both languages, 0 stalls,
+  eyeballed clean.
+
 ## Current
-Sec 15 next (starts subtopic 3: Uncertainty & Significant Figures).
+Sec 16 next.

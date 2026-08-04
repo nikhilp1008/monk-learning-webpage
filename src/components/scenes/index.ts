@@ -2925,6 +2925,7 @@ import C11Ch01Sec11 from "./C11Ch01Sec11";
 import C11Ch01Sec12 from "./C11Ch01Sec12";
 import C11Ch01Sec13 from "./C11Ch01Sec13";
 import C11Ch01Sec14 from "./C11Ch01Sec14";
+import C11Ch01Sec15 from "./C11Ch01Sec15";
 
 const C11CH01 = "fa37da68-46a0-562f-9c75-2967215b8893"; // Class 11 Chemistry · Some Basic Concepts of Chemistry
 
@@ -2942,3 +2943,4 @@ REGISTRY[`${C11CH01}:11`] = C11Ch01Sec11;
 REGISTRY[`${C11CH01}:12`] = C11Ch01Sec12;
 REGISTRY[`${C11CH01}:13`] = C11Ch01Sec13;
 REGISTRY[`${C11CH01}:14`] = C11Ch01Sec14;
+REGISTRY[`${C11CH01}:15`] = C11Ch01Sec15;
