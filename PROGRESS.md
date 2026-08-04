@@ -186,5 +186,12 @@ shorter beat schedules.
   — verified clean via Hinglish, English shows expected stalls b4-7 matching
   the known-issue pattern). PASS.
 
+- Sec 20: Method and meaning: photoelectric effect and its four laws —
+  method caption → KEmax=hν−W₀ boxed green → guardrails for Law 1
+  (threshold) and Law 2 (instantaneous) → Law 3+4 combined line → V₀-vs-ν
+  graph built live (axes, line from threshold dot, slope=h/e label) →
+  guardrail landing both graphs in eV₀=hν−W₀. **STALE AUDIO** (English
+  short; Hinglish real/full — verified clean via Hinglish). PASS.
+
 ## Current
-Sec 20: "Method and meaning: the photoelectric effect and its four laws" — starting.
+Sec 21: "Wave and Planck relations" — starting.
