@@ -193,5 +193,11 @@ shorter beat schedules.
   guardrail landing both graphs in eV₀=hν−W₀. **STALE AUDIO** (English
   short; Hinglish real/full — verified clean via Hinglish). PASS.
 
+- Sec 21: Wave and Planck relations (`formulas`) — stacked toolkit cards:
+  c=νλ,ν̄=1/λ boxed green → wavenumber note → E=hν=hc/λ=hcν̄ boxed green →
+  Etotal=nhν → shortcut E(eV)=1240/λ(nm) boxed red (guardrail) → h's
+  dimensions note → never-mix-units guardrail. **STALE AUDIO** (English
+  short; verified clean via Hinglish). PASS.
+
 ## Current
-Sec 21: "Wave and Planck relations" — starting.
+Sec 22: "The photoelectric toolkit" — starting.
