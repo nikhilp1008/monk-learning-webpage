@@ -16,7 +16,7 @@ export interface VoiceClientState {
   isMuted: boolean;
   isPaused: boolean;
   isListening: boolean;
-  isSpeaking: boolean; // Drona is speaking
+  isSpeaking: boolean;
   tutorStatusLabel: string;
   dronaCaption: string;
   sessionCap: string;
@@ -29,6 +29,10 @@ export class DronaVoiceClient {
   private audioCtx: AudioContext | null = null;
   private micStream: MediaStream | null = null;
   private scriptProcessor: ScriptProcessorNode | null = null;
+
+  // Web Audio Playback Context & Queue
+  private playbackCtx: AudioContext | null = null;
+  private nextAudioStartTime: number = 0;
 
   // Telemetry & Control Flags
   private isMuted: boolean = false;
@@ -102,6 +106,10 @@ export class DronaVoiceClient {
         this.isDronaSpeaking = true;
         this.currentSpeechText = msg.speech || "";
         this.options.onSpeechText?.(this.currentSpeechText, false);
+
+        if (msg.audio) {
+          this.playAudioChunk(msg.audio);
+        }
         this.notifyState();
       } else if (type === "meta") {
         this.options.onMetaUpdate?.(msg);
@@ -113,6 +121,41 @@ export class DronaVoiceClient {
       }
     } catch (e) {
       console.error("Failed to parse WS message:", e);
+    }
+  }
+
+  private playAudioChunk(base64Pcm: string): void {
+    if (!base64Pcm || typeof window === "undefined") return;
+    try {
+      const binary = atob(base64Pcm);
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) {
+        bytes[i] = binary.charCodeAt(i);
+      }
+
+      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+      if (!this.playbackCtx) {
+        this.playbackCtx = new AudioCtx({ sampleRate: 24000 });
+      }
+
+      const int16 = new Int16Array(bytes.buffer);
+      const float32 = new Float32Array(int16.length);
+      for (let i = 0; i < int16.length; i++) {
+        float32[i] = int16[i] / 32768.0;
+      }
+
+      const buffer = this.playbackCtx.createBuffer(1, float32.length, 24000);
+      buffer.getChannelData(0).set(float32);
+
+      const source = this.playbackCtx.createBufferSource();
+      source.buffer = buffer;
+      source.connect(this.playbackCtx.destination);
+
+      const startTime = Math.max(this.playbackCtx.currentTime, this.nextAudioStartTime);
+      source.start(startTime);
+      this.nextAudioStartTime = startTime + buffer.duration;
+    } catch (err) {
+      console.warn("Audio playback error:", err);
     }
   }
 
@@ -139,22 +182,19 @@ export class DronaVoiceClient {
         }
 
         const inputData = e.inputBuffer.getChannelData(0);
-        
-        // Compute RMS for VAD (Voice Activity Detection)
+
         let sum = 0;
         for (let i = 0; i < inputData.length; i++) {
           sum += inputData[i] * inputData[i];
         }
         const rms = Math.sqrt(sum / inputData.length);
 
-        // Convert Float32 to Int16 PCM
         const pcm16 = new Int16Array(inputData.length);
         for (let i = 0; i < inputData.length; i++) {
           const s = Math.max(-1, Math.min(1, inputData[i]));
           pcm16[i] = s < 0 ? s * 0x8000 : s * 0x7fff;
         }
 
-        // Buffer audio locally while listening (never while Drona speaks)
         if (!this.isDronaSpeaking) {
           this.pcmRingBuffer.push(pcm16);
           if (this.pcmRingBuffer.length > this.maxRingBufferChunks) {
@@ -162,7 +202,6 @@ export class DronaVoiceClient {
           }
         }
 
-        // VAD gating: upload only if speech energy > threshold (0.015)
         if (rms > 0.015 && !this.isDronaSpeaking) {
           this.ws.send(pcm16.buffer);
         }
@@ -183,19 +222,22 @@ export class DronaVoiceClient {
   }
 
   public interrupt(): void {
-    if (this.isDronaSpeaking) {
-      this.isDronaSpeaking = false;
-      if (this.ws && this.ws.readyState === WebSocket.OPEN) {
-        this.ws.send(
-          JSON.stringify({
-            type: "interrupt",
-            playback_position: this.currentPlaybackPos,
-            cutoff_text: this.currentSpeechText.slice(0, this.currentPlaybackPos),
-          })
-        );
-      }
-      this.notifyState();
+    this.isDronaSpeaking = false;
+    this.nextAudioStartTime = 0;
+    if (this.playbackCtx) {
+      this.playbackCtx.suspend();
+      this.playbackCtx = null;
     }
+    if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+      this.ws.send(
+        JSON.stringify({
+          type: "interrupt",
+          playback_position: this.currentPlaybackPos,
+          cutoff_text: this.currentSpeechText.slice(0, this.currentPlaybackPos),
+        })
+      );
+    }
+    this.notifyState();
   }
 
   public togglePause(): void {
@@ -222,6 +264,10 @@ export class DronaVoiceClient {
       this.audioCtx.close();
       this.audioCtx = null;
     }
+    if (this.playbackCtx) {
+      this.playbackCtx.close();
+      this.playbackCtx = null;
+    }
     if (this.ws) {
       this.ws.close();
       this.ws = null;
@@ -229,19 +275,24 @@ export class DronaVoiceClient {
   }
 
   private notifyState(): void {
+    const isConn = this.ws?.readyState === WebSocket.OPEN;
+    const statusLabel = !isConn
+      ? "Connecting..."
+      : this.isDronaSpeaking
+      ? "Explaining concept"
+      : this.isMuted
+      ? "Muted"
+      : this.isPaused
+      ? "Paused"
+      : "Listening";
+
     const state: VoiceClientState = {
-      isConnected: this.ws?.readyState === WebSocket.OPEN,
+      isConnected: isConn,
       isMuted: this.isMuted,
       isPaused: this.isPaused,
-      isListening: !this.isDronaSpeaking && !this.isMuted && !this.isPaused,
+      isListening: isConn && !this.isDronaSpeaking && !this.isMuted && !this.isPaused,
       isSpeaking: this.isDronaSpeaking,
-      tutorStatusLabel: this.isDronaSpeaking
-        ? "Explaining concept"
-        : this.isMuted
-        ? "Muted"
-        : this.isPaused
-        ? "Paused"
-        : "Listening",
+      tutorStatusLabel: statusLabel,
       dronaCaption: this.currentSpeechText,
       sessionCap: this.currentSpeechText,
       dronaCapColor: this.isDronaSpeaking ? "#EEA31F" : "#1C9B57",
