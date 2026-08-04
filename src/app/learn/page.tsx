@@ -239,6 +239,12 @@ export default function LearnPage() {
     if (!sid) return;
     setIsStreaming(true);
 
+    if (voiceClientRef.current) {
+      console.log("[TEACHING TURN] Sending initial turn over WebSocket voice client");
+      voiceClientRef.current.sendUtterance("Begin lesson segment");
+      return;
+    }
+
     await streamTurn(
       sid,
       { utterance: null, turn_type: "no_response", playback_cutoff_point: null },
@@ -336,6 +342,12 @@ export default function LearnPage() {
     }]);
     setIsStreaming(true);
 
+    if (voiceClientRef.current) {
+      console.log("[STUDENT TURN] Sending student turn over WebSocket voice client");
+      voiceClientRef.current.sendUtterance(utterance);
+      return;
+    }
+
     await streamTurn(
       sessionId,
       { utterance, turn_type: "answer", playback_cutoff_point: null },
@@ -366,7 +378,7 @@ export default function LearnPage() {
           }
         },
         onError: (err) => {
-          console.error("Stream error:", err);
+          console.error("Turn stream error:", err);
           setIsStreaming(false);
         },
         onDone: () => setIsStreaming(false),

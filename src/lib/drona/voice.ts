@@ -88,6 +88,15 @@ export class DronaVoiceClient {
     });
   }
 
+  public sendUtterance(text: string): void {
+    if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+      console.log("[WS OUTGOING] Sending utterance over WebSocket:", text);
+      this.ws.send(JSON.stringify({ type: "utterance", text }));
+    } else {
+      console.warn("WebSocket is not open. readyState:", this.ws ? this.ws.readyState : "null");
+    }
+  }
+
   private handleMessage(data: any): void {
     try {
       const msg = typeof data === "string" ? JSON.parse(data) : data;
@@ -103,6 +112,7 @@ export class DronaVoiceClient {
       } else if (type === "board") {
         this.options.onBoardUpdate?.(msg.board || "");
       } else if (type === "audio_chunk") {
+        console.log("audio_chunk", msg.audio ? msg.audio.length : 0);
         this.isDronaSpeaking = true;
         this.currentSpeechText = msg.speech || "";
         this.options.onSpeechText?.(this.currentSpeechText, false);
@@ -128,6 +138,8 @@ export class DronaVoiceClient {
     if (!base64Pcm || typeof window === "undefined") return;
     try {
       const binary = atob(base64Pcm);
+      console.log("base64 decode length:", binary.length);
+
       const bytes = new Uint8Array(binary.length);
       for (let i = 0; i < binary.length; i++) {
         bytes[i] = binary.charCodeAt(i);
@@ -138,7 +150,16 @@ export class DronaVoiceClient {
         this.playbackCtx = new AudioCtx({ sampleRate: 24000 });
       }
 
-      const int16 = new Int16Array(bytes.buffer);
+      console.log("AudioContext state:", this.playbackCtx.state, "sampleRate:", this.playbackCtx.sampleRate);
+
+      if (this.playbackCtx.state === "suspended") {
+        console.warn("AudioContext is suspended by browser autoplay policy! Resuming...");
+        this.playbackCtx.resume();
+      }
+
+      const int16 = new Int16Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 2);
+      console.log("Int16Array length:", int16.length);
+
       const float32 = new Float32Array(int16.length);
       for (let i = 0; i < int16.length; i++) {
         float32[i] = int16[i] / 32768.0;
@@ -146,6 +167,7 @@ export class DronaVoiceClient {
 
       const buffer = this.playbackCtx.createBuffer(1, float32.length, 24000);
       buffer.getChannelData(0).set(float32);
+      console.log("AudioBuffer duration:", buffer.duration);
 
       const source = this.playbackCtx.createBufferSource();
       source.buffer = buffer;
@@ -153,9 +175,10 @@ export class DronaVoiceClient {
 
       const startTime = Math.max(this.playbackCtx.currentTime, this.nextAudioStartTime);
       source.start(startTime);
+      console.log("source.start() called at startTime:", startTime);
       this.nextAudioStartTime = startTime + buffer.duration;
     } catch (err) {
-      console.warn("Audio playback error:", err);
+      console.error("Audio playback error:", err);
     }
   }
 
