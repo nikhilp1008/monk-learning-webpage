@@ -511,5 +511,23 @@ an existing physics section (fallback board_content path unchanged).
   density-always-needed closer. PASS both languages, 0 stalls, eyeballed
   clean despite the density.
 
-## Current
-Sec 59 next (final section — closes the chapter).
+- Sec 59: Chapter cheat sheet (FINAL section of the chapter, section_type:
+  cheat_sheet, new type this session) — the entire 59-section chapter
+  compressed onto one page: the 6-item spine, then Parts 1-4 each with a
+  bold-red header and 2 tightly-packed bullet lines (matter/measurement,
+  uncertainty/laws, mole/formulas, stoichiometry/concentration), a
+  reference to the master trap list (18 mistakes), and a closing green-
+  bordered box with the three habits to carry through every problem
+  (moles first, carry units, name the weakest link). Fixed an initial
+  title/anchor overlap (gap was too tight for the size-17 title) by
+  shifting the whole layout down ~8-10px. PASS both languages, 0 stalls,
+  0 overflow, eyeballed clean at multiple beats.
+
+## Chapter complete
+All 59 sections of Class 11 Chemistry Chapter 1 ("Some Basic Concepts of
+Chemistry") are authored, verified (PASS both languages), and committed.
+Subtopics 1-9 all done: Nature of Matter, Measurement & SI Units,
+Uncertainty & Significant Figures, Laws of Chemical Combination & Atomic
+Theory, Atomic/Molecular Masses & Mole Concept, Percentage Composition/
+Empirical & Molecular Formula, Stoichiometry & Limiting Reagent,
+Concentration Terms, and Chapter Close: Master Revision.
