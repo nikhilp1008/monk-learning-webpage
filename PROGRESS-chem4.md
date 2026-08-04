@@ -49,5 +49,11 @@ Verify per section:
   card (d=r_A+r_B, 1Å=100pm) → bond-enthalpy card (kJ/mol, mean for identical
   bonds) → lattice-enthalpy card (charge↑/size↓ ⇒ lattice enthalpy↑).
 
+- Sec 4 — Dipole moment and % ionic character (formulas): dipole-moment card
+  (μ=q·d, vector + → −, SI unit C·m too large → debye, 1 D=3.336×10⁻³⁰ C·m
+  conversion) → net-dipole card (Σ bond dipoles, ties back to symmetry) →
+  red "no bond is 100% ionic or covalent" → %-ionic-character card (formula,
+  μ_ionic=e·d, green speed-trick e×100pm≈4.8 D).
+
 ## Current
-Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Next: Sec 4.
+Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Next: Sec 5.
