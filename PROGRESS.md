@@ -440,5 +440,16 @@ an existing physics section (fallback board_content path unchanged).
   temperature work, mole fraction for particle proportions). PASS both
   languages, 0 stalls, eyeballed clean.
 
+- Sec 52: Temperature dependence and interconversion — Mumbai local train
+  analogy (passengers per coach/volume=molarity vs per tonne/mass=
+  molality; heat expands the coach, per-volume drifts, per-tonne never
+  does) sets up a two-column rule (VOLUME-based: molarity/normality/
+  formality → drifts; MASS/MOLES-based: molality/mole fraction/mass% →
+  steady), the physical reason (liquids expand, molarity falls with
+  nothing added/removed), a boxed speed tip (scan the denominator), the
+  molarity≠molality caution, and the absolute closing rule that
+  interconversion requires density. PASS both languages, 0 stalls,
+  eyeballed clean.
+
 ## Current
-Sec 52 next.
+Sec 53 next.
