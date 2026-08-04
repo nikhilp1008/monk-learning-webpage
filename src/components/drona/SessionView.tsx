@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { KaTeXRenderer } from "@/components/KaTeXRenderer";
 import { TranscriptEntry } from "@/lib/drona/types";
+import { getTutorName } from "@/lib/drona/tutor";
 
 interface SessionViewProps {
   boardLatex: string;
@@ -25,6 +26,7 @@ export function SessionView({
 }: SessionViewProps) {
   const [inputText, setInputText] = useState<string>("");
   const transcriptEndRef = useRef<HTMLDivElement>(null);
+  const teacher = getTutorName("male");
 
   useEffect(() => {
     transcriptEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -38,129 +40,161 @@ export function SessionView({
     }
   };
 
-  const getPhaseLabel = () => {
-    switch (phase) {
-      case "awaiting_answer":
-        return "Your turn to answer";
-      case "wrapup":
-        return "Wrapping up";
-      case "complete":
-        return "Complete";
-      default:
-        return "Teaching";
-    }
-  };
-
-  const getPlaceholder = () => {
-    if (phase === "awaiting_answer") {
-      return "Your answer...";
-    }
-    return "Ask something...";
-  };
+  // Extract latest speech text for captions bar
+  const latestSpeech = [...transcript].reverse().find(t => t.sender === "drona")?.text || `${teacher} is presenting the lesson...`;
 
   return (
-    <div className="w-full h-full flex flex-col lg:flex-row bg-gray-50 dark:bg-gray-950 overflow-hidden">
-      {/* Header bar for mobile & desktop */}
-      <div className="lg:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 py-2.5 flex items-center justify-between">
-        <span className="text-xs font-semibold text-gray-700 dark:text-gray-300">
-          Part {segmentIndex} of {totalSegments}
-        </span>
-        <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-800 dark:text-indigo-300">
-          {getPhaseLabel()}
-        </span>
-      </div>
+    <div className="flex flex-col h-[calc(100vh-96px)] min-h-[560px] animate-ml-rise">
+      {/* ─── Whiteboard Area (Ruled Paper Background) ─── */}
+      <div className="relative flex-1 min-h-0 flex flex-col mb-3">
+        <div
+          className="relative flex flex-col flex-1 min-h-0 bg-white border-[1.5px] border-ink rounded-[16px] p-5 pl-13 shadow-[0_20px_44px_-28px_rgba(28,26,22,0.5)]"
+          style={{
+            backgroundImage: "repeating-linear-gradient(transparent 0 28px, rgba(28,26,22,0.055) 28px 29px)",
+          }}
+        >
+          {/* Red margin line */}
+          <span className="absolute top-5 bottom-5 left-9 w-[1.4px] bg-[rgba(221,68,51,0.35)]" />
 
-      {/* Pane 1: Whiteboard (Left on Desktop / Top on Mobile) */}
-      <div className="w-full lg:w-1/2 h-64 lg:h-full bg-slate-900 text-white p-4 md:p-6 flex flex-col border-b lg:border-b-0 lg:border-r border-slate-800 overflow-hidden">
-        <div className="hidden lg:flex items-center justify-between pb-3 border-b border-slate-800">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-xs font-bold text-slate-300 uppercase tracking-wider">
-              Drona Interactive Whiteboard
+          {/* Board Header */}
+          <div className="flex items-center gap-2.5 mb-3.5 flex-none">
+            <span className="w-2 h-2 rounded-full bg-[#EEA31F] flex-none animate-pulse" />
+            <span className="font-bold text-[0.88rem] tracking-[-0.01em] text-ink truncate">
+              The board · Part {segmentIndex} of {totalSegments}
             </span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-slate-400 font-medium">
-              Part {segmentIndex} of {totalSegments}
-            </span>
-            <span className="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 font-medium">
-              {getPhaseLabel()}
-            </span>
-          </div>
-        </div>
 
-        {/* Board Content (F3: Replaces board state, F5: KaTeXRenderer) */}
-        <div className="flex-1 overflow-x-auto overflow-y-auto pt-4 max-w-full">
-          {boardLatex ? (
-            <div className="overflow-x-auto py-2">
-              <KaTeXRenderer
-                latex={boardLatex}
-                displayMode={true}
-                className="text-white text-base md:text-xl font-mono leading-relaxed"
-              />
-            </div>
-          ) : (
-            <div className="h-full flex items-center justify-center text-slate-500 text-xs italic">
-              Whiteboard empty for current segment
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Pane 2: Transcript & Composer (Right on Desktop / Bottom on Mobile) */}
-      <div className="w-full lg:w-1/2 flex-1 flex flex-col bg-white dark:bg-gray-900 overflow-hidden">
-        {/* Transcript Message Scroll Area */}
-        <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-4">
-          {transcript.map((entry) => (
-            <div
-              key={entry.id}
-              className={`flex ${
-                entry.sender === "student" ? "justify-end" : "justify-start"
-              }`}
-            >
-              <div
-                className={`max-w-[85%] rounded-xl px-4 py-3 text-sm leading-relaxed ${
-                  entry.sender === "student"
-                    ? "bg-indigo-600 text-white rounded-br-none"
-                    : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-bl-none border border-gray-200 dark:border-gray-700"
-                }`}
-              >
-                {entry.sender === "drona" && (
-                  <div className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 mb-1">
-                    DRONA
-                  </div>
-                )}
-                <div className="whitespace-pre-wrap">{entry.text}</div>
+          {/* Board Content (KaTeX & Text) */}
+          <div className="flex-1 min-h-0 overflow-y-auto pr-1 space-y-4">
+            {boardLatex ? (
+              <div className="py-2">
+                <KaTeXRenderer
+                  latex={boardLatex}
+                  displayMode={true}
+                  className="text-ink text-lg font-mono leading-relaxed"
+                />
               </div>
-            </div>
-          ))}
-          <div ref={transcriptEndRef} />
+            ) : (
+              <div className="h-full flex items-center justify-center text-[#9C988C] text-xs font-script font-bold">
+                {teacher} is preparing the board…
+              </div>
+            )}
+
+            {/* Transcript lines on board */}
+            {transcript.map((ln) => (
+              <div key={ln.id} className="animate-ml-rise">
+                <p className={`text-[0.94rem] leading-relaxed ${ln.sender === "student" ? "font-bold text-[#DD4433]" : "text-ink font-semibold"}`}>
+                  {ln.sender === "student" ? "You: " : `${teacher}: `}{ln.text}
+                </p>
+              </div>
+            ))}
+
+            {isStreaming && (
+              <div className="flex items-center gap-2 mt-2">
+                <span className="w-2.5 h-4 bg-[#EEA31F] rounded-sm animate-pulse" />
+                <span className="font-script font-bold text-[0.84rem] text-[#9C988C]">
+                  {teacher} is writing…
+                </span>
+              </div>
+            )}
+            <div ref={transcriptEndRef} />
+          </div>
         </div>
 
-        {/* Composer Bar */}
-        <div className="p-3 md:p-4 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
-          <form onSubmit={handleSubmit} className="flex gap-2">
+        {/* ─── Ask Sheet (Checkpoint Overlay when awaiting answer) ─── */}
+        {phase === "awaiting_answer" && (
+          <div className="absolute top-0 right-0 bottom-0 w-[min(380px,85%)] z-10 flex flex-col bg-white border-[1.5px] border-ink rounded-[16px] p-5 shadow-[-28px_0_48px_-34px_rgba(28,26,22,0.5)] overflow-y-auto animate-ml-rise">
+            <div className="flex items-center gap-2 mb-3 flex-none">
+              <span className="w-2 h-2 rounded-full bg-[#EEA31F] flex-none" />
+              <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-[#9A6A12]">
+                {teacher} asks you
+              </span>
+            </div>
+            <p className="text-[1rem] leading-snug font-semibold mb-3.5 flex-none text-ink">
+              Check point question — what is your answer?
+            </p>
+
+            <form onSubmit={handleSubmit} className="flex gap-2 mt-3 flex-none">
+              <input
+                value={inputText}
+                onChange={(e) => setInputText(e.target.value)}
+                placeholder="Type your answer…"
+                className="flex-1 min-w-0 bg-white border-[1.4px] border-[rgba(28,26,22,0.14)] rounded-full py-2.5 px-4 text-[0.86rem] text-ink outline-none focus:border-[#EEA31F]"
+              />
+              <button
+                type="submit"
+                disabled={!inputText.trim() || isStreaming}
+                className="w-9 h-9 flex-none rounded-full bg-ink flex items-center justify-center cursor-pointer disabled:opacity-50"
+              >
+                <svg viewBox="0 0 16 16" width={14} height={14} fill="none">
+                  <path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="#FCFAF4" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </form>
+
+            <span className="flex-1" />
+            <p className="font-script font-bold text-[0.9rem] text-[#9C988C] text-center mt-3.5 flex-none">
+              guessing is allowed — that&apos;s how we learn
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* ─── Captions Bar (Dark Background) ─── */}
+      <div className="flex items-center gap-3.5 bg-[#211C15] text-[#EFEBDD] border border-[#2a2419] rounded-[14px] py-3 px-5 flex-none mb-2.5 overflow-hidden">
+        <span className="font-extrabold text-[0.6rem] tracking-[0.14em] uppercase text-[#EEA31F] flex-none">
+          Live Speech
+        </span>
+        <span className="min-w-0 flex-1 whitespace-nowrap overflow-hidden text-ellipsis text-[1.06rem] leading-normal font-medium">
+          {latestSpeech}
+          {isStreaming && (
+            <span className="inline-block w-0.5 h-[1.05em] bg-[#EEA31F] ml-0.5 align-middle animate-pulse" />
+          )}
+        </span>
+      </div>
+
+      {/* ─── Command Dock ─── */}
+      <div className="flex items-center gap-3.5 bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] py-2.5 px-4 flex-none shadow-[0_10px_24px_-20px_rgba(28,26,22,0.4)]">
+        <div className="flex items-center gap-3 flex-none min-w-0">
+          <span className="w-[46px] h-[46px] flex-none rounded-[12px] bg-[#F4EFE3] border border-[rgba(28,26,22,0.08)] grid place-items-center">
+            <svg viewBox="0 0 120 120" width={28} height={28} fill="none">
+              <circle cx={60} cy={60} r={36} stroke="#1C1A16" strokeWidth={11} strokeLinecap="round" strokeDasharray="52 23.4" transform="rotate(-90 60 60)" />
+              <circle cx={60} cy={60} r={19} stroke="#1C1A16" strokeWidth={9} strokeLinecap="round" strokeDasharray="21.8 18" transform="rotate(-30 60 60)" />
+              <circle cx={60} cy={60} r={6} fill="#EEA31F" />
+            </svg>
+          </span>
+          <span className="min-w-0">
+            <span className="block font-extrabold text-[0.56rem] tracking-[0.16em] uppercase text-[#9C988C]">
+              {teacher} is
+            </span>
+            <span className="block font-extrabold text-[1.04rem] tracking-[-0.01em] text-ink leading-tight whitespace-nowrap">
+              {isStreaming ? "Explaining concept" : phase === "awaiting_answer" ? "Waiting for your answer" : "Listening"}
+            </span>
+          </span>
+        </div>
+
+        <span className="flex-1" />
+        <span className="w-px self-stretch bg-[rgba(28,26,22,0.1)] flex-none" />
+
+        {/* Regular turn input form when not in checkpoint mode */}
+        {phase !== "awaiting_answer" && (
+          <form onSubmit={handleSubmit} className="flex gap-2 flex-1 max-w-md">
             <input
-              type="text"
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
               disabled={isStreaming}
-              placeholder={getPlaceholder()}
-              className="flex-1 px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:opacity-50"
+              placeholder={`Ask ${teacher} something…`}
+              className="flex-1 min-w-0 bg-[#FBF8EF] border border-[rgba(28,26,22,0.12)] rounded-full py-2 px-4 text-xs text-ink outline-none focus:border-[#EEA31F]"
             />
             <button
               type="submit"
               disabled={!inputText.trim() || isStreaming}
-              className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white font-medium text-sm rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 flex items-center justify-center min-w-[70px]"
+              className="py-2 px-4 bg-ink text-white text-xs font-bold rounded-full disabled:opacity-50 cursor-pointer"
             >
-              {isStreaming ? (
-                <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              ) : (
-                "Send"
-              )}
+              Send
             </button>
           </form>
-        </div>
+        )}
       </div>
     </div>
   );
