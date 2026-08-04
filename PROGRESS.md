@@ -169,9 +169,23 @@ All verified PASS both languages, spot-checked by eye. Pushed through Sec 39.
 
 All verified PASS both languages, spot-checked by eye. Pushed through Sec 41.
 
+- Sec 42 — Position = picture of configuration (opens subtopic 4):
+  housing-colony metaphor, 4 stacked floors widening (s → s,p → s,p,d)
+  as periods increase, showing the table literally grows with blocks.
+- Sec 43 — The corridor, four blocks: countable "door" rectangles (2 s,
+  10 d, 6 p, 14 f-annexe below) making subshell capacity concrete.
+- Sec 44 — Four blocks' character: 2×2 card grid (s/p top, d/f bottom)
+  with group/config headers and trait lists for each block.
+- Sec 45 — Four types of elements: 4 numbered definition rows +
+  red-bordered exam-trap callout (Zn/Cd/Hg d¹⁰ NOT true transition).
+- Sec 46 — Atomic number to period/block/group: the workhorse 4-step
+  card chain, red-bordered group-rules card (s=ns, p=10+ns+np,
+  d=(n-1)d+ns) colour-coded per block.
+
+All verified PASS both languages, spot-checked by eye. Pushed through Sec 46.
+
 ## Current
-Sec 42 — next (subtopic 4: Electronic Configuration & the s, p, d, f
-Blocks, secs 42–54 — final subtopic of the chapter).
+Sec 47 — next.
 
 ## Notes
 - **CRITICAL FONT BUG (found in Sec 8, fixed in Sec 4 + 8): capital "Z" in the
