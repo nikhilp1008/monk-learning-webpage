@@ -239,6 +239,13 @@ Sec 24, 25, 26, 27, 28, 29, 30, 34, 35, 36, 49, 50, 51, 55, 56, 57 — not yet
 started. Do not begin until the audio pipeline is confirmed fixed; then
 revisit these together with Sec 4/19–23 above as one batch.
 
+- Sec 31: Energy of the orbit: the KE and PE split — KE=½mv²=Ze²/8πε₀r and
+  PE=−Ze²/4πε₀r chips → energy-well diagram (E=0 line, a drawn dip, electron
+  dot sitting below it labelled "E<0") with the guardrail that PE is
+  negative → Eₙ=KE+PE combines → Eₙ=−13.6Z²/n² eV boxed green → guardrail
+  (memorise PE=−2KE, E=−KE) → staircase callback. PASS both languages,
+  FORCE_SHOTS eyeballed clean. First section of subtopic 3 (Bohr Model &
+  Wave-Particle Duality) actually authored (24–30 deferred, see known-issue).
+
 ## Current
-Sec 31: "Energy of the orbit: the KE and PE split" — starting (skipping ahead
-past the deferred 24–30 block to the next real-audio section).
+Sec 32: "The hydrogen spectrum and the Rydberg equation" — starting.
