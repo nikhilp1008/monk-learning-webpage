@@ -50,5 +50,13 @@ Done only on VERDICT PASS (both languages, overlaps=0 overflow=0 empty=0).
 - [x] Sec 14 — Master formulas: ΔrH from formation/bond enthalpies (opposite direction red note),
       ΔsubH, full Born-Haber formula.
 
+- [x] Sec 15 — WE1 (CBSE ethene hydrogenation, ΔrH°=-137.0kJ/mol) + WE2 (NEET Hess combo,
+      ΔH=-110.5kJ, sign-flip trap on subtracting eq ii).
+- [x] Sec 16 — WE3 (JEE Main methane combustion bond tally, ΔrH=-798kJ/mol) + WE4 (JEE Advanced
+      KCl Born-Haber loop solved, lattice=-718kJ/mol).
+- [x] Sec 17 — Tips: five red trap chips (reverse sign, extensive scaling, bond-enthalpy
+      direction, elements ΔfH=0, Born-Haber sign chaos) + green pro-tip. SUBTOPIC 2 DONE (8/8).
+
 ## Current
-Subtopic 2 (Thermochemistry/Hess's Law, secs 10-17) in progress, secs 10-14 done. Next: Sec 15.
+Subtopic 2 (Thermochemistry/Hess's Law) complete, secs 10-17 pushed. Next: Sec 18
+(Entropy/Gibbs/Spontaneity subtopic, secs 18-25).
