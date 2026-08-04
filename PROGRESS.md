@@ -171,5 +171,12 @@ shorter beat schedules.
   boxed green → closing note (frequency not brightness, instant emission).
   PASS both languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 18: Line spectra: the fingerprint that says quantised — three stacked
+  strips built live: continuous (unbroken 5-color band), emission (bright
+  lines on dark), absorption (dark lines on bright, at the SAME x-positions
+  as emission — visually proving the mirror-image relationship) → guardrail
+  (sharp fixed lines ⇒ energy is QUANTISED) → launch-pad for Bohr. PASS both
+  languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 18: "Line spectra: the fingerprint that says quantised" — starting.
+Sec 19: "Method: turning a wavelength into a photon energy" — starting.
