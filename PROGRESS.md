@@ -99,5 +99,11 @@ shorter beat schedules.
   final proportionality r₀∝1/KE. PASS both languages, FORCE_SHOTS eyeballed
   clean — first math-heavy derivation section, fractions read cleanly.
 
+- Sec 8: Specific charge and the electron's mass (`section_type: formulas`) —
+  single stacked reference-card column: e/m boxed (amber, high emphasis) →
+  guardrail (universal ratio) → q=ne card → "combine them" → mₑ boxed GREEN
+  (the landed result) → guardrail (1/1837 of hydrogen) → proton/neutron mass
+  chips. PASS both languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 8: "Specific charge and the electron's mass" — starting.
+Sec 9: "Counting the atom: A, Z, N and closest approach" — starting.
