@@ -207,7 +207,17 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   MO ordering comparison line (≤N₂ vs >N₂) → anchor numbers (debye constant,
   H₂ well, ideal angles 180/120/109.5/90°).
 
-## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 DONE (9/9). Subtopic 3:
-only Sec 25 done (1/9, rest blocked). Subtopic 4 DONE for all unblocked
-sections (31,32,34). Subtopic 5: Sec 37 done. Next: Sec 38 (final section).
+- Sec 38 — Chapter cheat sheet (FINAL SECTION): row A 4 cards (octet, formal
+  charge, dipole moment, VSEPR) → row B 6-column shapes-by-(bonds,LP) mini
+  table (pyramidal/bent/see-saw/T-shaped/linear/sq.planar) → row C 3 cards
+  (MOT with real bond orders, H-bond, refinements) → row D 5-line mnemonics
+  roundup (SPSPDP, F-O-N, SHaPe, "bent eNegative gets P", "Drago down to
+  90"). Clean PASS first try — the whole chapter distilled onto one card.
+
+## Current — CHAPTER COMPLETE for all sections with real audio
+Subtopic 1: 9/10 (sec 6 blocked). Subtopic 2: 9/9 DONE. Subtopic 3: 1/9 (only
+sec 25; 20-24,26-28 blocked). Subtopic 4: 3/8 (31,32,34; 29,30,33,35,36
+blocked). Subtopic 5: 2/2 DONE (37,38 — chapter close). Total: 25/38 sections
+registered and verified. 14 sections remain blocked on truncated placeholder
+English audio (see Blocked section) — author + verify these once real audio
+is uploaded, following the same per-section workflow.
