@@ -334,5 +334,11 @@ an existing physics section (fallback board_content path unchanged).
   difference (+why), shortcut when M is known. PASS both languages, 0 stalls,
   eyeballed clean.
 
+- Sec 40: Composition, EFM and the multiplier n — mass% formula, EFM
+  definition (CH₂O=30), boxed n=molecular mass/EFM, M-from-VD guardrail
+  (forgetting ×2), combustion relations recap, boxed direct method
+  (atoms of X=(%/100)×M/atomic mass), why it saves time + whole-number check.
+  PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 40 next.
+Sec 41 next.
