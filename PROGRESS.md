@@ -44,5 +44,12 @@ an existing physics section (fallback board_content path unchanged).
   gas/solid-solution note, thali analogy (dal vs chana+puri), guardrail that
   salt is a compound not a mixture. PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 3: Properties, and physical versus chemical change — two-column
+  physical(green)/chemical(red) comparison (properties then changes), THE TEST
+  central callout (was a new substance formed?), salt-dissolve-then-evaporate
+  worked mini-case via ReactionArrow (= physical change), fine print on "pure"
+  and scale-dependent homogeneous/heterogeneous (milk = colloid). PASS both
+  languages, eyeballed clean.
+
 ## Current
-Sec 3 next.
+Sec 4 next.
