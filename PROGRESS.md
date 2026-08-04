@@ -105,5 +105,11 @@ an existing physics section (fallback board_content path unchanged).
   (foreshadows Concentration Terms). PASS both languages, 0 stalls, eyeballed
   clean (fixed a stray non-Latin typo in Hinglish text before verifying).
 
+- Sec 11: Density, volume and temperature relations — formula reference
+  sheet: boxed master relation (quantity=value×unit), 2-column grid (ρ=m/V ·
+  volume chain 1L=1000mL=1000cm³=10⁻³m³ · 1g/cm³=1000kg/m³ · W=mg · K=°C+273.15
+  · °F→°C→K), factor-label discipline banner. PASS both languages, 0 stalls,
+  eyeballed clean.
+
 ## Current
-Sec 11 next.
+Sec 12 next.
