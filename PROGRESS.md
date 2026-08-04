@@ -270,5 +270,13 @@ an existing physics section (fallback board_content path unchanged).
   (invisible atoms ↔ visible balance), mustard-seed shopkeeper analogy (weigh,
   don't count). PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 31: The carbon-12 standard and average atomic mass — boxed definition
+  (1 amu = (1/12)mass(¹²C) = 1/Nₐ gram, not coincidence — Nₐ chosen to make it
+  true), why chlorine's atomic mass is 35.5 (Cl-35:Cl-37≈3:1 weighted average,
+  batting-average analogy), limiting condition (natural abundance assumed),
+  guardrail that average atomic mass describes a population not an individual
+  atom. PASS both languages, 0 stalls, eyeballed clean (fixed a stray
+  zero-width-space typo in Hinglish text before verifying).
+
 ## Current
-Sec 31 next.
+Sec 32 next.
