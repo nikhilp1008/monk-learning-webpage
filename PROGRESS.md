@@ -191,5 +191,12 @@ an existing physics section (fallback board_content path unchanged).
   (4.5×10⁴+2.3×10³, align exponents first → 4.7×10⁴). PASS both languages,
   eyeballed clean.
 
+- Sec 21: Pitfalls and the weakest-link habit — 4 pitfall rows (mishandling
+  zeros, always-round-5-up, mixing calc rules, manufacturing precision),
+  boxed pro-tip (round only once at the end, carry guard digits, ask which
+  input is weakest), 3 memory aids, forward-looking close into Laws of
+  Chemical Combination & Atomic Theory. PASS both languages, 0 stalls,
+  eyeballed clean. **Subtopic 3 (Uncertainty & Sig Figs, Sec 15-21) complete.**
+
 ## Current
-Sec 21 next.
+Sec 22 next (starts subtopic 4: Laws of Chemical Combination & Atomic Theory).
