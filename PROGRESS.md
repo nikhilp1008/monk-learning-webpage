@@ -408,5 +408,15 @@ an existing physics section (fallback board_content path unchanged).
   1 advisory stall (expected at the erase-and-rewrite beat), eyeballed
   clean.
 
+- Sec 49: Worked examples: excess reactant and yield — JEE Main N₂+H₂→NH₃
+  (28g N₂ + 9g H₂: N₂ is limiting despite being less by mass, NH₃=34g,
+  3g H₂ left unreacted) fully fades to free the board for a JEE Advanced
+  variant of the SAME reaction with different amounts (50g N₂ + 10g H₂,
+  actual yield 40g) where H₂ turns out limiting instead — the deliberate
+  reversal driving home "recompute, don't remember" — ending in the
+  theoretical yield (56.7g) and %yield (70.6%) calculation with the
+  LR-before-yield rigor. PASS both languages, 1 advisory stall (expected
+  at the erase-and-rewrite beat), eyeballed clean.
+
 ## Current
-Sec 49 next.
+Sec 50 next (closes subtopic 7: Stoichiometry & Limiting Reagent).
