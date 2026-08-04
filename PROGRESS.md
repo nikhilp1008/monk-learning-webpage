@@ -254,5 +254,14 @@ an existing physics section (fallback board_content path unchanged).
   predicted C:O=3.00:8.01 matches direct CO₂ test). PASS both languages,
   eyeballed clean.
 
+- Sec 29: Pitfalls and the five-second classification — 4 pitfall rows (open
+  system mistaken for broken law, wrong quantities in multiple proportions,
+  gas volumes treated as masses, over-applying Dalton), boxed pro-tip (the
+  5-second classification: count compounds/elements first), 3 memory aids
+  (discoverer date order, same-recipe=definite, volumes-are-votes=Avogadro),
+  forward-looking close into the Mole Concept. PASS both languages, 0 stalls,
+  eyeballed clean. **Subtopic 4 (Laws of Chemical Combination & Atomic
+  Theory, Sec 22-29) complete.**
+
 ## Current
-Sec 29 next (closes subtopic 4).
+Sec 30 next (starts subtopic 5: Atomic/Molecular Masses & Mole Concept).
