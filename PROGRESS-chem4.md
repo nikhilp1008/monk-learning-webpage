@@ -109,6 +109,13 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   pro-tip (sketch for a centre of symmetry, never calculate) → green
   speed-trick chip (e×100pm≈4.8D). SUBTOPIC 1 DONE (9/10, sec 6 blocked).
 
+- Sec 11 — VSEPR intro: anchor (Lewis is flat) → VSEPR name chip → 3 electron-
+  pair arrangement icons (2→linear spokes, 3→trigonal spokes, 4→tetrahedral
+  with wedge+hash) → lift-analogy caption → H2O built with oversized "suitcase"
+  lone pairs + inward squeeze arrows → repulsion-order chips (LP-LP>LP-BP>
+  BP-BP) → 104.5° stamp lands → closing (shape only, not why/strength) +
+  green VBT-teaser chip.
+
 ## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Starting Subtopic 2 (VSEPR/VBT/
-Hybridization, secs 11-19). Next: Sec 11.
+Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 (VSEPR/VBT/Hybridization,
+secs 11-19) in progress. Next: Sec 12.
