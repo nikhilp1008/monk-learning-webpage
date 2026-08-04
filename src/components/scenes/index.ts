@@ -2910,9 +2910,11 @@ import C11Ch04Sec1 from "./C11Ch04Sec1";
 import C11Ch04Sec2 from "./C11Ch04Sec2";
 import C11Ch04Sec3 from "./C11Ch04Sec3";
 import C11Ch04Sec4 from "./C11Ch04Sec4";
+import C11Ch04Sec5 from "./C11Ch04Sec5";
 
 const C11CH04 = "862ab5f0-4fa8-5e6f-98d5-74fe5b10ab8e";
 REGISTRY[`${C11CH04}:1`] = C11Ch04Sec1;
 REGISTRY[`${C11CH04}:2`] = C11Ch04Sec2;
 REGISTRY[`${C11CH04}:3`] = C11Ch04Sec3;
 REGISTRY[`${C11CH04}:4`] = C11Ch04Sec4;
+REGISTRY[`${C11CH04}:5`] = C11Ch04Sec5;

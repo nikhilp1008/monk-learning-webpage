@@ -55,5 +55,13 @@ Verify per section:
   red "no bond is 100% ionic or covalent" → %-ionic-character card (formula,
   μ_ionic=e·d, green speed-trick e×100pm≈4.8 D).
 
+- Sec 5 — The 5-step Lewis-structure recipe: 5 step cards appear one per beat
+  (count e⁻ / central atom / bonds+fill octets / multiple bonds / verify)
+  while a LIVE CO₂ build runs underneath in lockstep — atoms placed, C ringed
+  as central, single bonds + 3 lone pairs per O with a red "C is short" flag,
+  then red curved arrows push a lone pair from each O into its bond (double
+  bonds land), green "octets ✓" note, formal-charge arithmetic for C and O
+  (both = 0), green verdict chip.
+
 ## Current
-Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Next: Sec 5.
+Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Next: Sec 6.
