@@ -21,6 +21,20 @@
 - 51–57 Concentration Terms
 - 58–59 Master Revision
 
+## Rule update: never dim-and-overlay (2026-08-04)
+`verify-scene.mjs` now counts `dim`med elements as "present" and FAILs an
+overlap onto them (`"new"(dimmed)`). SCENE_AUTHORING.md updated to match:
+dimming lowers opacity, it does NOT free the space. New content must land in
+free board space (below/beside); only when the board is genuinely full do you
+fully REMOVE the old group (gate `on` off so it fades to opacity 0 and vacates
+its box) — never dim-and-overlay. No scrolling.
+Practical pattern for "two worked examples, second reuses the first's screen
+space": replace `dim={beat >= K}` with `on={beat >= j && beat < K}` (drop the
+`dim` prop) on every Fade belonging to the first example, so it's fully gone
+(not just faint) before the second example's content lands in the same spot.
+Retrofitted into Sec5, Sec6, Sec12 (Sec6 was the one caught failing); applied
+from Sec13 onward as the default for this pattern.
+
 ## Engine fix (applies to whole chapter, already committed)
 `src/app/lessons/[chapterId]/page.tsx`: `revealTimestamps` was clamped/padded to
 legacy `board_content`'s event count before being passed to a registered Scene.
@@ -60,19 +74,21 @@ an existing physics section (fallback board_content path unchanged).
   languages, eyeballed clean.
 
 - Sec 5: Worked examples: classifying matter — CBSE example (brass/ozone/
-  baking soda/sea water, one verdict row at a time) dims to free the board for
-  a NEET speed-trap example (air/gasoline/diamond/bronze → diamond), guardrail
-  that appearance is the trap, count substance-types not looks. PASS both
-  languages, eyeballed clean.
+  baking soda/sea water, one verdict row at a time) fully fades out to free
+  the board for a NEET speed-trap example (air/gasoline/diamond/bronze →
+  diamond), guardrail that appearance is the trap, count substance-types not
+  looks. PASS both languages, eyeballed clean. (Retrofitted from dim to
+  full-removal per the rule update below.)
 
 - Sec 6: Worked examples: changes and the edge case — JEE Main 4-row
-  classification (camphor/milk/sugar/digestion) dims to free the board for the
-  JEE Advanced CuSO₄-vs-NaCl edge case: NaCl crystal → ions disperse → fully
-  recovered (physical ✓) alongside CuSO₄ white→"BLUE" (hydrated, + heat,
-  chemically distinct — house palette has no blue so the colour fact is
-  carried by the text label, not literal hue). Guardrail that colour change +
-  heat are chemical-interaction warning signs. PASS both languages, eyeballed
-  clean (verified the two verdict chips don't actually overlap despite sitting
+  classification (camphor/milk/sugar/digestion) fully fades out to free the
+  board for the JEE Advanced CuSO₄-vs-NaCl edge case: NaCl crystal → ions
+  disperse → fully recovered (physical ✓) alongside CuSO₄ white→"BLUE"
+  (hydrated, + heat, chemically distinct — house palette has no blue so the
+  colour fact is carried by the text label, not literal hue). Guardrail that
+  colour change + heat are chemical-interaction warning signs. PASS both
+  languages, eyeballed clean (verified the two verdict chips don't actually
+  overlap despite sitting
   close together).
 
 - Sec 7: Pitfalls and the two-question filter — 4 pitfall rows (mistake ✗ red
@@ -112,11 +128,19 @@ an existing physics section (fallback board_content path unchanged).
   eyeballed clean.
 
 - Sec 12: Worked examples: temperature and prefixes — CBSE example (37°C →
-  310.15 K → 98.6°F) dims to free its given-slot for a NEET speed-trap
-  (arrange nm/μm/pm/mm by increasing length): compare exponents lands the
-  order pm<nm<μm<mm, guardrail that the trap is vocabulary not magnitude,
-  bonus payoff that the prefix signals physical scale (molecular/atomic/
-  visible). PASS both languages, eyeballed clean.
+  310.15 K → 98.6°F) fully fades out to free its given-slot for a NEET
+  speed-trap (arrange nm/μm/pm/mm by increasing length): compare exponents
+  lands the order pm<nm<μm<mm, guardrail that the trap is vocabulary not
+  magnitude, bonus payoff that the prefix signals physical scale (molecular/
+  atomic/visible). PASS both languages, eyeballed clean. (Retrofitted from
+  dim to full-removal per the rule update above.)
+
+- Sec 13: Worked examples: density conversion and -40 — JEE Main mercury
+  density unit conversion (13.6 g/cm³ → 13,600 kg/m³, cube-factor trap) + mass
+  shortcut (3.4 kg), fully faded out (not dimmed) to free the board for a JEE
+  Advanced example (same-reading °C=°F ⇒ x=-40), verified. PASS both
+  languages, eyeballed clean. First section written directly with the new
+  never-dim-and-overlay pattern.
 
 ## Current
-Sec 13 next.
+Sec 14 next.
