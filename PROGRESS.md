@@ -451,5 +451,14 @@ an existing physics section (fallback board_content path unchanged).
   interconversion requires density. PASS both languages, 0 stalls,
   eyeballed clean.
 
+- Sec 53: Parts per million, mole fraction and normality — ppm formula and
+  why it beats tiny percentages, the water-quality real-world context
+  (fluoride/hardness/sulphate/nitrate), mole fraction with the
+  forgetting-the-solute trap (1/10 vs 1/9), normality=molarity×n-factor
+  with the H₂SO₄ basicity=2 worked instance, a boxed dilution/mixing
+  relation (M₁V₁=M₂V₂, moles add & volume adds), and the closing warning
+  that water added ≠ final volume. PASS both languages, 0 stalls,
+  eyeballed clean.
+
 ## Current
-Sec 53 next.
+Sec 54 next.
