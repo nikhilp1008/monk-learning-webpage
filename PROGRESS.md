@@ -118,5 +118,13 @@ shorter beat schedules.
   a green box with the full ⁵⁶₂₆Fe³⁺ notation (superscript mass, subscript
   Z, charge). PASS both languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 11: Worked example (NEET): highest specific charge — 4-column
+  comparison table (proton/deuteron/α/electron) built live: guardrail ring
+  flags the electron column early ("don't forget it"), charge/mass/ratio
+  rows fill in for the 3 ions (proton wins among them), then the electron's
+  cells land (mass ≈1/1837, ratio ≈1837) with the (e/m)e≫(e/m)p formula,
+  and the ring swaps red→green to crown the winner. PASS both languages,
+  FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 11: "Worked example (NEET): highest specific charge" — starting.
+Sec 12: "Worked example (JEE Main): combine Millikan and Thomson" — starting.
