@@ -428,5 +428,17 @@ an existing physics section (fallback board_content path unchanged).
   stalls, eyeballed clean. **Subtopic 7 (Stoichiometry & Limiting Reagent,
   Sec 44-50) complete.**
 
+- Sec 51: What concentration measures, and the denominators — opens
+  Subtopic 8. Nimbu paani analogy (2 spoons vs 6 sugar, same drink,
+  different strength) anchors concentration as "how crowded" the solute
+  is, then a hub-and-spoke diagram (moles of solute fanning out to 4
+  denominators: ÷volume=Molarity, ÷solvent mass=Molality, ÷total
+  moles=Mole fraction, ÷total mass×100=Mass%) makes the denominator-is-
+  identity insight concrete, followed by the molality-vs-mass%
+  solvent/solution mass mixup warning, the ppm/dilute-solutions note, and
+  each measure's real-world moment (molarity for reactions, molality for
+  temperature work, mole fraction for particle proportions). PASS both
+  languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 51 next (starts subtopic 8: Concentration Terms).
+Sec 52 next.
