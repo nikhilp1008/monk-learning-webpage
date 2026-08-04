@@ -97,5 +97,13 @@ an existing physics section (fallback board_content path unchanged).
   practical cancel-check + flip rule. PASS both languages, 0 stalls, eyeballed
   clean.
 
+- Sec 10: Mass versus weight, and temperature scales — mass(green,constant)
+  vs weight(amber,variable) columns, chemistry-uses-mass landing, three
+  temperature scales (Celsius/Kelvin/Fahrenheit), same-step-different-offset
+  explanation, two guardrails (offset EXACTLY 273.15; kelvin never negative =
+  cheapest error detector), fine print that density depends on temperature
+  (foreshadows Concentration Terms). PASS both languages, 0 stalls, eyeballed
+  clean (fixed a stray non-Latin typo in Hinglish text before verifying).
+
 ## Current
-Sec 10 next.
+Sec 11 next.
