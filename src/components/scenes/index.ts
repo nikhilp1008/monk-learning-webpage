@@ -2905,3 +2905,9 @@ REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:35`] = Ch14Sec35;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:36`] = Ch14Sec36;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:37`] = Ch14Sec37;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:38`] = Ch14Sec38;
+
+// ---- Class 11 Chemistry · Chapter 3 "Classification of Elements" ----
+import C11Ch03Sec1 from "./C11Ch03Sec1";
+
+const C11CH03 = "aac04619-0e94-5a09-99bb-abdc2b688290";
+REGISTRY[`${C11CH03}:1`] = C11Ch03Sec1;
