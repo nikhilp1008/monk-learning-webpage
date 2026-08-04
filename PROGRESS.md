@@ -75,5 +75,13 @@ an existing physics section (fallback board_content path unchanged).
   clean (verified the two verdict chips don't actually overlap despite sitting
   close together).
 
+- Sec 7: Pitfalls and the two-question filter — 4 pitfall rows (mistake ✗ red
+  vs correct rule ✓ green): homogeneous-mixture-vs-compound, classify-by-looks,
+  dissolving-isn't-always-physical exceptions, dramatic-isn't-chemical. Boxed
+  pro-tip (the two-question filter: fixed/variable? one substance or many?),
+  two memory aids, forward-looking close into Measurement & SI Units. PASS
+  both languages, 0 stalls, eyeballed clean. **Subtopic 1 (Nature of Matter,
+  Sec 1-7) complete.**
+
 ## Current
-Sec 7 next.
+Sec 8 next (starts subtopic 2: Measurement & SI Units).
