@@ -133,5 +133,12 @@ shorter beat schedules.
   neither experiment alone gives the mass. PASS both languages, FORCE_SHOTS
   eyeballed clean.
 
+- Sec 13: Worked example (JEE Advanced): closest approach on gold — given
+  (5.0 MeV α, gold Z=79) → KE→J conversion → general r₀ fraction → plug-in
+  boxed green (r₀≈4.5×10⁻¹⁴m) → guardrail with a to-scale bar comparison
+  (short red 7fm nucleus vs long amber 45fm r₀) making the "never touches"
+  conclusion visually obvious → point-charge-approximation guardrail.
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 13: "Worked example (JEE Advanced): closest approach on gold" — starting.
+Sec 14: "Pitfalls and pro-tips: early atomic models" — starting.
