@@ -163,5 +163,12 @@ an existing physics section (fallback board_content path unchanged).
   accurate-avg-not-precise / both) as concentric rings + dot clusters. PASS
   both languages, 0 stalls, eyeballed clean.
 
+- Sec 17: Rounding and the round-to-even rule — easy rule (>5 up, <5 down),
+  the tricky =5 case (round-to-even: odd climbs, even stays), worked pair
+  (2.745→2.74, 2.735→2.74, same answer different routes), the bias-
+  cancellation reason, guardrail that reflexive round-5-up is wrong half the
+  time, discipline to carry guard digits and round only once at the end.
+  PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 17 next.
+Sec 18 next.
