@@ -191,7 +191,12 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   substituent+heavier centre→Drago's) → 3c-2e bond intro + red chip
   (diborane, Al₂Cl₆).
 
+- Sec 32 — Definitions to state precisely (formulas): 5 red-margin definition
+  rows (coordinate/dative bond, back bonding, Bent's rule, Drago's rule,
+  3c-2e bond) with 2 standalone fact lines between them (BX₃ Lewis acidity
+  order, diborane electron-deficiency count).
+
 ## Current
 Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 DONE (9/9). Subtopic 3:
-only Sec 25 done (1/9, rest blocked). Subtopic 4: Sec 31 done, only 32/34
-remain unblocked (29,30,33,35,36 blocked). Next: Sec 32.
+only Sec 25 done (1/9, rest blocked). Subtopic 4: Sec 31, 32 done, only 34
+remains unblocked (29,30,33,35,36 blocked). Next: Sec 34.

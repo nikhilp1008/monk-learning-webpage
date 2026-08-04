@@ -2936,6 +2936,7 @@ import C11Ch04Sec25 from "./C11Ch04Sec25";
 // Secs 29, 30, 33, 35, 36 skipped — English audio truncated (placeholder
 // reveals). Sec 31 has real audio and is registered.
 import C11Ch04Sec31 from "./C11Ch04Sec31";
+import C11Ch04Sec32 from "./C11Ch04Sec32";
 
 const C11CH04 = "862ab5f0-4fa8-5e6f-98d5-74fe5b10ab8e";
 REGISTRY[`${C11CH04}:1`] = C11Ch04Sec1;
@@ -2958,3 +2959,4 @@ REGISTRY[`${C11CH04}:18`] = C11Ch04Sec18;
 REGISTRY[`${C11CH04}:19`] = C11Ch04Sec19;
 REGISTRY[`${C11CH04}:25`] = C11Ch04Sec25;
 REGISTRY[`${C11CH04}:31`] = C11Ch04Sec31;
+REGISTRY[`${C11CH04}:32`] = C11Ch04Sec32;
