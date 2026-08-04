@@ -11,22 +11,44 @@
 - Fetch helper: `node scratch/get-sec.mjs <position>` prints the Supabase row
   (no arg lists all 57 titles).
 
-## ⚠ KNOWN ISSUE: stale audio on 20/57 sections
-Sections **4, 19–30, 34–36, 49–51, 55–57** (20 of 57) use an older audio path
-(`.../c11_ch02_structure-of-atom/p1/...` vs the normal `.../c11_ch02/p1/...`)
-and carry suspiciously round `duration_sec_english`/`_hinglish` values (68 or
-84) in Supabase. Checked against real hosted files (`node scratch/check-audio-lang.mjs <sec>`):
-the actual audio is much shorter than the `board_reveal_at_*` timestamps need
-(e.g. Sec 4: English 14s / Hinglish 26s, but reveals run to 56–68s; Sec 20:
-English 23s vs a real 94s Hinglish). For most of the 20, only **English** is
-stale filler audio (Hinglish is real and matches); for **Sec 4, 34, 55** BOTH
-languages are short/stale. This is a backend audio-pipeline problem, not a
-scene bug — confirmed by re-checking scene logic against working sections.
-Decision (user, 2026-08-04): author all 57 scenes against the given
-`board_reveal_at_*` timestamps regardless, verify whatever the current audio
-can actually reach, and flag each affected section below — the scenes will
+## ⚠ KNOWN ISSUE: placeholder audio + reveal timing on 22/57 sections
+Sections **4, 19–30, 34–36, 49–51, 55–57** (22 of 57) use an older audio path
+(`.../c11_ch02_structure-of-atom/p1/...` vs the normal `.../c11_ch02/p1/...`),
+carry suspiciously round `duration_sec_english`/`_hinglish` values (68 or 84),
+and — the key finding — their **English `board_reveal_at_english` is a
+placeholder**: uniform 8-second-apart values (`[0,8,16,24,32,40,48,56]`),
+not real audio-derived timestamps. Hinglish reveals for most of these 22 are
+real/varied (matching a real, full-length Hinglish audio file); Sec 4, 34, 55
+have placeholder-looking data on **both** languages.
+
+**Revised decision (user correction, 2026-08-04, supersedes the earlier one
+below): STOP authoring sections on this list.** Placeholder reveals mean the
+narration/segment breakdown behind them may not be final either — authoring
+choreography now risks being rebuilt from scratch once real audio + real
+reveals land, not just re-timed. Skip all 22 for now; author + verify only
+the sections with real audio. Revisit the whole list together once the audio
+pipeline is fixed.
+
+**Already authored before this correction (Sec 4, 19, 20, 21, 22, 23) —
+PROVISIONAL, not to be treated as finished:** each PASSed verification against
+today's placeholder/short-audio data and the code is a reasonable beat-indexed
+implementation (not hardcoded to specific seconds), but per the correction
+above these must be re-checked against the real segments/reveals once audio is
+regenerated — the beat count, content split, or pacing may need to change, not
+just the timestamps. Treat their "Done" entries below as drafts.
+
+**Untouched, deferred (do not start until audio is fixed): Sec 24, 25, 26, 27,
+28, 29, 30, 34, 35, 36, 49, 50, 51, 55, 56, 57.**
+
+<details><summary>Superseded original note (author-anyway decision) — kept for history</summary>
+
+Decision (user, 2026-08-04, now superseded): author all 57 scenes against the
+given `board_reveal_at_*` timestamps regardless, verify whatever the current
+audio can actually reach, and flag each affected section — the scenes will
 already be correct once fresh audio is uploaded. Do not "fix" by inventing
 shorter beat schedules.
+
+</details>
 
 ## Subtopic map
 - 1–14  Subatomic Particles & Early Atomic Models
@@ -63,15 +85,15 @@ shorter beat schedules.
   space; explains scattering but fails stability/spectra) → teaser into Bohr.
   PASS both languages first try, FORCE_SHOTS eyeballed clean.
 
-- Sec 4: The iso-family: same or different? — the four confusing names →
-  live-built 3-column table (name/held constant/example) with proper isotope
-  notation (¹H/²H/³H, ⁴⁰Ar/⁴⁰K/⁴⁰Ca, ¹⁴C&¹⁵N, Na⁺/Mg²⁺) filling in row by row →
-  toP/Bar/toN mnemonic guardrail → land. **STALE AUDIO** (see known-issue note
-  above): English 14s / Hinglish 26s vs intended 56–68s of reveals, so only
-  beats 0–1 (English) / 0–2ish (Hinglish) are actually reachable today; code
-  verified correct by inspection (identical Fade/beat pattern as Sec 1–3) and
-  tsc-clean. VERDICT PASS on what's reachable; re-verify fully once audio is
-  reuploaded.
+- **[PROVISIONAL — placeholder audio, see known-issue]** Sec 4: The
+  iso-family: same or different? — the four confusing names → live-built
+  3-column table (name/held constant/example) with proper isotope notation
+  (¹H/²H/³H, ⁴⁰Ar/⁴⁰K/⁴⁰Ca, ¹⁴C&¹⁵N, Na⁺/Mg²⁺) filling in row by row →
+  toP/Bar/toN mnemonic guardrail → land. Both English (14s) and Hinglish (26s)
+  audio are short/placeholder against 56–68s of (also placeholder) reveals;
+  code verified correct by inspection and tsc-clean, VERDICT PASS on what's
+  reachable, but **do not treat as final** — re-author against real
+  segments/reveals once audio is regenerated.
 
 - Sec 5: How Thomson and Millikan cornered the electron — two-column build
   (Thomson | Millikan, divided by a vertical rule): Thomson's crossed E/B
@@ -178,37 +200,45 @@ shorter beat schedules.
   (sharp fixed lines ⇒ energy is QUANTISED) → launch-pad for Bohr. PASS both
   languages, FORCE_SHOTS eyeballed clean.
 
-- Sec 19: Method: turning a wavelength into a photon energy — 4 numbered
-  steps (identify given quantity → pick matching form → guardrail on units
-  → photons/sec from power) → why-the-shortcut-works caption → hc=1.986e-25
-  J·m⇒1240 eV·nm boxed green → guardrail (memorise 1240/λ(nm)). **STALE
-  AUDIO** (English 68s claimed vs short real file; Hinglish is real and full
-  — verified clean via Hinglish, English shows expected stalls b4-7 matching
-  the known-issue pattern). PASS.
+- **[PROVISIONAL]** Sec 19: Method: turning a wavelength into a photon
+  energy — 4 numbered steps (identify given quantity → pick matching form →
+  guardrail on units → photons/sec from power) → why-the-shortcut-works
+  caption → hc=1.986e-25 J·m⇒1240 eV·nm boxed green → guardrail (memorise
+  1240/λ(nm)). English reveals are placeholder (uniform 8s); verified clean
+  via Hinglish's real audio. Re-author once real English data lands.
 
-- Sec 20: Method and meaning: photoelectric effect and its four laws —
-  method caption → KEmax=hν−W₀ boxed green → guardrails for Law 1
+- **[PROVISIONAL]** Sec 20: Method and meaning: photoelectric effect and its
+  four laws — method caption → KEmax=hν−W₀ boxed green → guardrails for Law 1
   (threshold) and Law 2 (instantaneous) → Law 3+4 combined line → V₀-vs-ν
   graph built live (axes, line from threshold dot, slope=h/e label) →
-  guardrail landing both graphs in eV₀=hν−W₀. **STALE AUDIO** (English
-  short; Hinglish real/full — verified clean via Hinglish). PASS.
+  guardrail landing both graphs in eV₀=hν−W₀. English reveals placeholder;
+  verified clean via Hinglish. Re-author once real English data lands.
 
-- Sec 21: Wave and Planck relations (`formulas`) — stacked toolkit cards:
-  c=νλ,ν̄=1/λ boxed green → wavenumber note → E=hν=hc/λ=hcν̄ boxed green →
-  Etotal=nhν → shortcut E(eV)=1240/λ(nm) boxed red (guardrail) → h's
-  dimensions note → never-mix-units guardrail. **STALE AUDIO** (English
-  short; verified clean via Hinglish). PASS.
+- **[PROVISIONAL]** Sec 21: Wave and Planck relations (`formulas`) — stacked
+  toolkit cards: c=νλ,ν̄=1/λ boxed green → wavenumber note → E=hν=hc/λ=hcν̄
+  boxed green → Etotal=nhν → shortcut E(eV)=1240/λ(nm) boxed red (guardrail)
+  → h's dimensions note → never-mix-units guardrail. English reveals
+  placeholder; verified clean via Hinglish. Re-author once real English data
+  lands.
 
-- Sec 22: The photoelectric toolkit (`formulas`) — p=h/λ=E/c → guardrail
-  (photon: zero rest mass, real momentum) → hν=W₀+KEmax⇒KEmax=h(ν−ν₀) boxed
-  green → work-function note → eV₀=h(ν−ν₀) → guardrail (V₀ volts = KEmax eV
-  numerically) → N=Pt/hν=Ptλ/hc. **STALE AUDIO** (English short; verified
-  clean via Hinglish). PASS.
+- **[PROVISIONAL]** Sec 22: The photoelectric toolkit (`formulas`) —
+  p=h/λ=E/c → guardrail (photon: zero rest mass, real momentum) →
+  hν=W₀+KEmax⇒KEmax=h(ν−ν₀) boxed green → work-function note → eV₀=h(ν−ν₀) →
+  guardrail (V₀ volts = KEmax eV numerically) → N=Pt/hν=Ptλ/hc. English
+  reveals placeholder; verified clean via Hinglish. Re-author once real
+  English data lands.
 
-- Sec 23: Worked example (CBSE): FM radio photon — given (95.0 MHz FM) →
-  λ=c/ν=3.16m → E=hν setup → E=6.29×10⁻²⁶J boxed green → answer stated →
-  guardrail (tiny photon energy = why radio is harmless) → reusable
-  template. **STALE AUDIO** (verified clean via Hinglish). PASS.
+- **[PROVISIONAL]** Sec 23: Worked example (CBSE): FM radio photon — given
+  (95.0 MHz FM) → λ=c/ν=3.16m → E=hν setup → E=6.29×10⁻²⁶J boxed green →
+  answer stated → guardrail (tiny photon energy = why radio is harmless) →
+  reusable template. English reveals placeholder; verified clean via
+  Hinglish. Re-author once real English data lands.
+
+## Skipped for now (placeholder audio/reveals — see known-issue)
+Sec 24, 25, 26, 27, 28, 29, 30, 34, 35, 36, 49, 50, 51, 55, 56, 57 — not yet
+started. Do not begin until the audio pipeline is confirmed fixed; then
+revisit these together with Sec 4/19–23 above as one batch.
 
 ## Current
-Sec 24: "Worked example (NEET): will it eject electrons?" — starting.
+Sec 31: "Energy of the orbit: the KE and PE split" — starting (skipping ahead
+past the deferred 24–30 block to the next real-audio section).
