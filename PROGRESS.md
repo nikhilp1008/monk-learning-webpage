@@ -500,5 +500,16 @@ an existing physics section (fallback board_content path unchanged).
   eyeballed clean. **Subtopic 8 (Concentration Terms, Sec 51-57)
   complete.**
 
+- Sec 58: Formula recap: every relation of the chapter — the whole-chapter
+  cheat sheet (section_type: formula_recap, new type this session), 14
+  tightly-packed lines covering all four parts: measurement conversions,
+  uncertainty/sig-fig rules, the conservation laws, the mole triangle
+  (highlighted as the spine) with Avogadro's number and the STP-only
+  caveat on 22.4L, average atomic mass and M=2×VD, empirical/molecular
+  formula relations, the stoichiometry mole-ratio-bridge/%yield/limiting-
+  reagent trio, and the concentration terms with the dilution/normality/
+  density-always-needed closer. PASS both languages, 0 stalls, eyeballed
+  clean despite the density.
+
 ## Current
-Sec 58 next (Master Revision, closes the chapter).
+Sec 59 next (final section — closes the chapter).
