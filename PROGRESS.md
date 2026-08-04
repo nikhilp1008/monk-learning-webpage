@@ -148,6 +148,13 @@ shorter beat schedules.
 
 **Subtopic 1 (Subatomic Particles & Early Atomic Models, Sec 1-14) complete.**
 
+- Sec 15: Light as a wave: Maxwell and c = νλ — Maxwell's EM wave drawn as
+  real sine curves (red E field, amber B field, drawn together along the
+  propagation axis) with "no medium needed" note → c=νλ=3×10⁸m/s boxed green
+  → the EM spectrum as 7 colored bands (radio→gamma) with an increasing-
+  frequency arrow → guardrail teasing the two brick walls ahead. PASS both
+  languages, FORCE_SHOTS eyeballed clean. First section of subtopic 2 (EM
+  Radiation/Planck/Photoelectric Effect).
+
 ## Current
-Sec 15: "Light as a wave: Maxwell and c = nu lambda" — starting (subtopic 2:
-EM Radiation / Planck / Photoelectric Effect).
+Sec 16: "Planck's coins: quanta and the ultraviolet catastrophe" — starting.
