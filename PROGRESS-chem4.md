@@ -63,5 +63,25 @@ Verify per section:
   bonds land), green "octets ✓" note, formal-charge arithmetic for C and O
   (both = 0), green verdict chip.
 
+## Blocked — truncated audio (9 sections, skip and continue past)
+Audited all 38 sections' hosted mp3s (Content-Length vs declared duration, using
+the ~8025 B/s rate established from known-good files). Nine sections have a
+placeholder `duration_sec = 68.0` in Supabase and a REAL audio file 30-70%
+shorter than that — meaning `board_reveal_at` for these is synthetic/placeholder,
+not derived from final audio. Confirmed via verify: Sec 6 silently seek-clamps
+at ~19.7s (only 2 of 8 beats ever exercised) yet still printed `VERDICT: PASS`,
+a false positive — the audio itself can't be seeked past its real (short) length.
+- Sec 6 — BOTH languages truncated (~19.5s real vs 68s claimed).
+- Sec 20, 21, 22, 23, 24, 26, 27, 28 — ENGLISH truncated (~23-38s real vs 68s
+  claimed); Hinglish is fine for all of these.
+- Sec 25 and all of 1-5, 7-19, 29-38 verified OK (real duration matches DB).
+Per user decision: skip these 9 for now, render everything else in order, come
+back to author+verify them once real audio is uploaded. `C11Ch04Sec6.tsx` is
+already authored (Born-Haber cycle, 8-beat) but deliberately left UNREGISTERED
+in index.ts (see comment there) since its timestamps are placeholder — re-verify
+against real audio before registering, and expect the beat count/timing to
+change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
+
 ## Current
-Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Next: Sec 6.
+Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Sec 6 blocked
+(see above) — skipping to Sec 7.

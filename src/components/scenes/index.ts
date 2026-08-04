@@ -2911,6 +2911,11 @@ import C11Ch04Sec2 from "./C11Ch04Sec2";
 import C11Ch04Sec3 from "./C11Ch04Sec3";
 import C11Ch04Sec4 from "./C11Ch04Sec4";
 import C11Ch04Sec5 from "./C11Ch04Sec5";
+// Sec 6 authored (C11Ch04Sec6.tsx) but NOT registered — its Supabase audio
+// (both languages) is truncated to ~20s against a placeholder 68s/8-beat
+// duration; the timestamps here are synthetic, not real. Re-register once
+// real audio lands and the section is re-choreographed against it. See
+// PROGRESS-chem4.md "Blocked" section.
 
 const C11CH04 = "862ab5f0-4fa8-5e6f-98d5-74fe5b10ab8e";
 REGISTRY[`${C11CH04}:1`] = C11Ch04Sec1;
