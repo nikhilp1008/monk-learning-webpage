@@ -2905,3 +2905,14 @@ REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:35`] = Ch14Sec35;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:36`] = Ch14Sec36;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:37`] = Ch14Sec37;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:38`] = Ch14Sec38;
+
+/* ================================================================== */
+/* C11 Ch01 (Chemistry) — Some Basic Concepts of Chemistry             */
+/* (branch premium-board-chem1). Registered via Object.assign-style    */
+/* block so this stays self-contained at the end of the file.          */
+/* ================================================================== */
+import C11Ch01Sec1 from "./C11Ch01Sec1";
+
+const C11CH01 = "fa37da68-46a0-562f-9c75-2967215b8893"; // Class 11 Chemistry · Some Basic Concepts of Chemistry
+
+REGISTRY[`${C11CH01}:1`] = C11Ch01Sec1;
