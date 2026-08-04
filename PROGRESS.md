@@ -298,5 +298,11 @@ an existing physics section (fallback board_content path unchanged).
   fractions instead of full values since Nₐ cancels. PASS both languages,
   eyeballed clean.
 
+- Sec 35: Worked examples: isotopes and gas mixtures — JEE Main isotope-X
+  problem (62.93/64.93u avg 63.55 → x=0.69 → 69%/31% abundance → 4.16×10²²
+  lighter atoms in 6.355g) fully fades to free the board for a JEE Advanced
+  CH₄/C₂H₆ mixture problem (avg M=20.0 → mole fraction 5/7 → split moles →
+  1.143mol H atoms → 6.88×10²³ atoms). PASS both languages, eyeballed clean.
+
 ## Current
-Sec 35 next.
+Sec 36 next (closes subtopic 5).
