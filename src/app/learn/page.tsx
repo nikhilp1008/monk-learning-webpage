@@ -114,6 +114,8 @@ export default function LearnPage() {
   /* ─── Free text state ─── */
   const [freeTextInput, setFreeTextInput] = useState("");
   const [freeTextLoading, setFreeTextLoading] = useState(false);
+  const [loadingChapterId, setLoadingChapterId] = useState<string | null>(null);
+  const [loadingSubtopic, setLoadingSubtopic] = useState<string | null>(null);
 
   /* ─── Load user's enrolled_class ─── */
   useEffect(() => {
@@ -203,9 +205,9 @@ export default function LearnPage() {
 
   /* ─── Pick a chapter → start session ─── */
   const handlePickChapter = useCallback(async (chapter: Chapter) => {
+    setLoadingChapterId(chapter.id);
     setSelectedChapterId(chapter.id);
     setSessionTopic(chapter.name);
-    setFlowState("scoping");
     setScopingSpeech("");
     setScopingOptions([]);
     setScopingPlanReady(false);
@@ -221,10 +223,13 @@ export default function LearnPage() {
         .map((s: Subtopic) => s.name);
       setScopingOptions(availableSubtopics);
       setScopingPlanReady(true);
+      setFlowState("scoping");
     } catch (err) {
       console.error("Failed to start session:", err);
       setError("Failed to start session. Please try again.");
       setFlowState("picker");
+    } finally {
+      setLoadingChapterId(null);
     }
   }, [setSessionId]);
 
@@ -283,6 +288,8 @@ export default function LearnPage() {
       console.error("handleSendScope aborted: sessionId is null");
       return;
     }
+    setLoadingSubtopic(utterance);
+    setScopingPlanReady(false);
     try {
       const res = await scopeSession(sid, utterance);
       setSessionTopic(res.subtopic || utterance);
@@ -313,6 +320,8 @@ export default function LearnPage() {
     } catch (err) {
       console.error("Scoping failed:", err);
       setScopingPlanReady(true);
+    } finally {
+      setLoadingSubtopic(null);
     }
   }, [fireTeachingTurn]);
 
@@ -556,15 +565,26 @@ export default function LearnPage() {
           {/* Subtopic options */}
           {scopingOptions.length > 0 && (
             <div className="flex flex-wrap gap-[7px] mb-5">
-              {scopingOptions.map((opt) => (
-                <button
-                  key={opt}
-                  onClick={() => handleSendScope(opt)}
-                  className="py-[10px] px-4 bg-white border border-[rgba(28,26,22,0.12)] rounded-[10px] text-[0.88rem] font-semibold text-ink hover:bg-[#EEA31F] hover:text-[#241a08] transition-colors cursor-pointer shadow-xs"
-                >
-                  {opt}
-                </button>
-              ))}
+              {scopingOptions.map((opt) => {
+                const isSubLoading = loadingSubtopic === opt;
+                return (
+                  <button
+                    key={opt}
+                    onClick={() => handleSendScope(opt)}
+                    disabled={loadingSubtopic !== null}
+                    className={`inline-flex items-center gap-2 py-[10px] px-4 border rounded-[10px] text-[0.88rem] font-semibold transition-colors cursor-pointer shadow-xs ${
+                      isSubLoading
+                        ? "bg-[#EEA31F] border-[#EEA31F] text-[#241a08]"
+                        : "bg-white border-[rgba(28,26,22,0.12)] text-ink hover:bg-[#EEA31F] hover:text-[#241a08]"
+                    }`}
+                  >
+                    {isSubLoading && (
+                      <div className="w-3.5 h-3.5 border-2 border-[#241a08] border-t-transparent rounded-full animate-spin flex-none" />
+                    )}
+                    <span>{isSubLoading ? "Assembling lesson…" : opt}</span>
+                  </button>
+                );
+              })}
             </div>
           )}
 
@@ -739,29 +759,37 @@ export default function LearnPage() {
                 {filteredChapters.map((chapter, i) => {
                   const numStr = String(i + 1).padStart(2, "0");
                   const isSelected = selectedChapterId === chapter.id;
+                  const isChapLoading = loadingChapterId === chapter.id;
                   const availableSubs = chapter.subtopics.filter(s => s.grounding_status !== "unavailable");
                   return (
                     <button
                       key={chapter.id}
                       onClick={() => handlePickChapter(chapter)}
+                      disabled={loadingChapterId !== null}
                       className={`flex items-center gap-[10px] py-[11px] px-[13px] rounded-[10px] text-left transition-colors cursor-pointer border ${
-                        isSelected
+                        isChapLoading
+                          ? "bg-[#FCF4E0] border-[#EEA31F] shadow-xs"
+                          : isSelected
                           ? "bg-[#FCF4E0] border-[rgba(238,163,31,0.45)]"
                           : "bg-white border-transparent hover:bg-[rgba(252,244,224,0.5)]"
                       }`}
                     >
                       <span className="font-script font-bold text-[0.86rem] text-[#9C988C] flex-none w-[22px]">{numStr}</span>
                       <span className="flex-1 min-w-0 flex flex-col">
-                        <b className="font-bold text-[0.84rem] text-ink overflow-hidden text-ellipsis" style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>{chapter.name}</b>
+                        <b className="font-bold text-[0.84rem] text-ink overflow-hidden text-ellipsis" style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>
+                          {isChapLoading ? "Initializing session…" : chapter.name}
+                        </b>
                         {availableSubs.length > 0 && (
                           <span className="text-[0.68rem] text-[#9C988C] font-semibold mt-0.5">{availableSubs.length} subtopics</span>
                         )}
                       </span>
-                      {isSelected && (
+                      {isChapLoading ? (
+                        <div className="w-4 h-4 border-2 border-[#EEA31F] border-t-transparent rounded-full animate-spin flex-none" />
+                      ) : isSelected ? (
                         <svg viewBox="0 0 24 24" width={14} height={14} fill="none" stroke="#9A6A12" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" className="flex-none">
                           <path d="M5 13l4 4L19 7" />
                         </svg>
-                      )}
+                      ) : null}
                     </button>
                   );
                 })}
