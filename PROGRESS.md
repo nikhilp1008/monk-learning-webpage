@@ -372,5 +372,15 @@ an existing physics section (fallback board_content path unchanged).
   to convert to moles before ratioing. PASS both languages, 0 stalls,
   eyeballed clean.
 
+- Sec 45: The limiting reagent and percentage yield — dhaba analogy (10 roti
+  outline circles + 3 dal filled dots, recipe 2 roti:1 dal→1 thali, only 3
+  thalis possible, 4 roti left over shown in red) names dal=LIMITING REAGENT
+  / roti=EXCESS, then the whole analogy zone fades to free the board for
+  the procedure (moles→÷coefficient→smallest=limiting reagent, never
+  compare raw moles), why dividing works, excess-reactant subtraction rule,
+  a boxed theoretical-vs-actual-yield + %yield formula, and the
+  order-is-fixed closing rule. PASS both languages, eyeballed clean
+  (advisory stall at the erase-and-rewrite beat, expected/harmless).
+
 ## Current
-Sec 45 next.
+Sec 46 next.
