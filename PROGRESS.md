@@ -82,5 +82,13 @@ shorter beat schedules.
   full-width chip combines both into the electron's mass. PASS both
   languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 6: Rutherford's gold foil: reading the ricochets — α source + gold foil
+  built, then three trajectories fired live (green straight-through majority,
+  amber slight deflection, red sharp bounce-back near the foil) each landing
+  a conclusion chip (mostly empty space / concentrated + lump / guardrail:
+  tiny dense nucleus) → scale comparison (nucleus vs atom, 5 orders of
+  magnitude) → cricket-ball-at-the-pitch analogy. PASS both languages,
+  FORCE_SHOTS eyeballed clean — the clearest diagram yet.
+
 ## Current
-Sec 6: "Rutherford's gold foil: reading the ricochets" — starting.
+Sec 7: "Distance of closest approach: the energy argument" — starting.
