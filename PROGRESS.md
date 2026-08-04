@@ -215,5 +215,13 @@ an existing physics section (fallback board_content path unchanged).
   isotopes), and the exam reading-skill contrast (one reaction vs one compound
   from multiple sources). PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 24: Multiple and reciprocal proportions — Dalton's multiple proportions
+  (normalize shared element first, then reduce to lowest terms) and Richter's
+  reciprocal proportions (build a bridge through common element C), landing on
+  the 5-second classification skill: count compounds/elements before touching
+  numbers (1 compound multi-source=definite, 2 compounds same 2 elements=
+  multiple, 3 elements via 1 common=reciprocal, gases+volumes=combining
+  volumes). PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 24 next.
+Sec 25 next.
