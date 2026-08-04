@@ -111,5 +111,12 @@ an existing physics section (fallback board_content path unchanged).
   · °F→°C→K), factor-label discipline banner. PASS both languages, 0 stalls,
   eyeballed clean.
 
+- Sec 12: Worked examples: temperature and prefixes — CBSE example (37°C →
+  310.15 K → 98.6°F) dims to free its given-slot for a NEET speed-trap
+  (arrange nm/μm/pm/mm by increasing length): compare exponents lands the
+  order pm<nm<μm<mm, guardrail that the trap is vocabulary not magnitude,
+  bonus payoff that the prefix signals physical scale (molecular/atomic/
+  visible). PASS both languages, eyeballed clean.
+
 ## Current
-Sec 12 next.
+Sec 13 next.
