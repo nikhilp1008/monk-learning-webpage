@@ -263,5 +263,12 @@ an existing physics section (fallback board_content path unchanged).
   eyeballed clean. **Subtopic 4 (Laws of Chemical Combination & Atomic
   Theory, Sec 22-29) complete.**
 
+- Sec 30: The mole: chemistry's counting unit — dozen/quintal counting-unit
+  anchor, atoms-to-extreme grain-of-sand scale, boxed Nₐ=6.022×10²³, same-count
+  wildly-different-scale contrast (marbles vs water molecules), the genius
+  that mass of 1 mole (g) = relative atomic mass numerically, the bridge
+  (invisible atoms ↔ visible balance), mustard-seed shopkeeper analogy (weigh,
+  don't count). PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 30 next (starts subtopic 5: Atomic/Molecular Masses & Mole Concept).
+Sec 31 next.
