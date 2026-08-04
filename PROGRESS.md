@@ -84,8 +84,26 @@ All 14 verified PASS both languages, clean (no overlaps/overflow after
 fixes), spot-checked by eye (FORCE_SHOTS on final + a couple of mid-beats
 each). Pushed to origin through Sec 14.
 
+- Sec 15 — The master engine (Zeff): train-compartment metaphor drawn
+  literally (compartment, ticket-checker=nucleus +Z, inner e⁻ blocking,
+  valence e⁻ far away), red-margin Zeff, boxed formula Zeff = Z − σ.
+- Sec 16 — The mandi walk (atomic size): 4 shrinking circles (across
+  period) beside 4 growing circles (down group), cascade into IE/EGE/EN,
+  boxed master-line summary.
+- Sec 17 — Measuring atomic radius three ways: dimensioned covalent-bond
+  diagram (drafting-style d(A-A) and rcov lines), vdW definition,
+  red-margin size order, two real data chip-rows (period-2 shrinking,
+  group-1 growing).
+- Sec 18 — Ionic radius: symmetric Na→Na⁺ shrink / F→F⁻ swell circle
+  pairs, red-margin isoelectronic rule, green closing stamp.
+- Sec 19 — Ionisation enthalpy: compact definition/equation/rules block,
+  then a real 19-point IE-vs-Z sawtooth curve (H→K) with green rings on
+  noble-gas peaks and red rings on alkali-metal troughs.
+
+All verified PASS both languages, spot-checked by eye. Pushed through Sec 19.
+
 ## Current
-Sec 15 — next (subtopic 2: Periodic Trends in Physical Properties, secs 15–29).
+Sec 20 — next.
 
 ## Notes
 - **CRITICAL FONT BUG (found in Sec 8, fixed in Sec 4 + 8): capital "Z" in the
