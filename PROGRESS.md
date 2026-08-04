@@ -38,5 +38,13 @@
   proton → neutron) → cast-complete summary. PASS both languages first try,
   FORCE_SHOTS eyeballed clean.
 
+- Sec 3: Two rival blueprints: plum-pudding vs nuclear — recap of the 3 known
+  parts scattered with a "?" → two empty dashed slots divided by "VS" → left
+  slot fills with Thomson's smeared-charge plum-pudding (embedded electron
+  seeds) → right slot fills with Rutherford's tiny nucleus + far orbit →
+  ringed annotation "almost all mass+charge here" → guardrail (mostly empty
+  space; explains scattering but fails stability/spectra) → teaser into Bohr.
+  PASS both languages first try, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 3: "Two rival blueprints: plum-pudding vs nuclear" — starting.
+Sec 4: "The iso-family: same or different?" — starting.
