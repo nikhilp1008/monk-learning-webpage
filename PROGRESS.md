@@ -239,5 +239,12 @@ an existing physics section (fallback board_content path unchanged).
   foundation of the mole concept), dimensional note that these are
   dimensionless ratios. PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 27: Worked examples: identifying the law — CBSE sealed-container Fe+S
+  example (mass=sum=8.8g → conservation of mass) fully fades to free the board
+  for a NEET sulphur-oxides example (16g S fixed both sides, O ratio 16:24=2:3
+  → multiple proportions), guardrail on two traps (adding masses tells
+  nothing; hunting for an already-equalized element). PASS both languages,
+  eyeballed clean.
+
 ## Current
-Sec 27 next.
+Sec 28 next.
