@@ -83,6 +83,13 @@ Done only on VERDICT PASS (both languages, overlaps=0 overflow=0 empty=0).
       Trouton/Kirchhoff enrichments.
 - [x] Sec 30 — Calorimetry/processes/Poisson formula toolkit (accumulating board).
 
+- [x] Sec 31 — WE1 (CBSE bomb calorimeter => -19.7 kJ/g) + WE2 (NEET NaCl ΔsolH=+4kJ/mol,
+      mildly endothermic).
+- [x] Sec 32 — WE3 (JEE Main adiabatic cooling, ΔU=-2494J, ΔH=-4157J) + WE4 (JEE Advanced
+      Poisson relation, T2=172.3K).
+- [x] Sec 33 — Tips: 5 rows (bomb/cup conversion, adiabatic!=isothermal, sign-swap, lattice sign,
+      free expansion) + green freeze-the-variable pro-tip. SUBTOPIC 4 DONE (8/8).
+
 ## Current
-Subtopic 4 (Calorimetry/Processes/Additional Enthalpy Changes, secs 26-33) in progress,
-secs 26-30 done. Next: Sec 31.
+Subtopic 4 (Calorimetry/Processes/Additional Enthalpy Changes) complete, secs 26-33 pushed.
+Next: Sec 34 (Chapter Formula Recap), Sec 35 (Chapter Cheat Sheet) — FINAL TWO SECTIONS.
