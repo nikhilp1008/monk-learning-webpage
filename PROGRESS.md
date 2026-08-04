@@ -170,5 +170,11 @@ an existing physics section (fallback board_content path unchanged).
   time, discipline to carry guard digits and round only once at the end.
   PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 18: Scientific notation and the calculation rules — formula reference
+  sheet: boxed N×10ⁿ notation, counting-rules one-liner, two-column
+  calculation rules (+/− keeps fewest decimals, ×/÷ keeps fewest sig figs)
+  with their reasons, boxed weakest-link principle, crisp accuracy/precision
+  recap. PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 18 next.
+Sec 19 next.
