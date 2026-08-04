@@ -246,5 +246,13 @@ an existing physics section (fallback board_content path unchanged).
   nothing; hunting for an already-equalized element). PASS both languages,
   eyeballed clean.
 
+- Sec 28: Worked examples: combining volumes and reciprocal — JEE Main
+  hydrocarbon combustion (1vol CxHy+5vol O₂→3vol CO₂+4vol H₂O) deduces C₃H₈
+  via Gay-Lussac+Avogadro volume-as-molecule-ratio, with an O-balance sanity
+  check; fully fades to free the board for a JEE Advanced reciprocal-
+  proportions verification (H as bridge element between CH₄ and H₂O,
+  predicted C:O=3.00:8.01 matches direct CO₂ test). PASS both languages,
+  eyeballed clean.
+
 ## Current
-Sec 28 next.
+Sec 29 next (closes subtopic 4).
