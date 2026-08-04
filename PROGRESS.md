@@ -205,8 +205,27 @@ All verified PASS both languages, spot-checked by eye. Pushed through Sec 46.
 
 All verified PASS both languages, spot-checked by eye. Pushed through Sec 51.
 
+- Sec 52 — Common pitfalls and pro-tips (subtopic 4 closer): 4 red-ringed
+  pitfalls (period from wrong shell, group-count error, strict transition
+  exclusion, He's property-over-config placement), red-margin pro-tip box
+  (block = last subshell filled), group quick-map line, closing staircase
+  + Cr/Cu reflex stamp. ✅ SUBTOPIC 4 (secs 42–54, Electronic Configuration
+  & the s,p,d,f Blocks) COMPLETE.
+- Sec 53 — Chapter formula recap: two-column reference sheet gathering
+  every formula from all four subtopics (triad rule, Zeff, radius
+  relations, IE/EGE definitions, 3 EN scales, valence/OS rule, d-block
+  group formulas); red borders mark red-margin "high" formulas.
+- Sec 54 — Chapter cheat sheet (FINAL section): one-screen recap as 7
+  labelled rows (laws, long form, master arrow, exception flags,
+  chemistry, period-2 anomaly, blocks); red bars mark the 3 red-margin
+  "high" rows.
+
+All verified PASS both languages, spot-checked by eye. Pushed through Sec 54.
+
 ## Current
-Sec 52 — next (Common pitfalls and pro-tips, subtopic 4 closer).
+✅ CHAPTER COMPLETE — all 54 sections of C11 Chemistry Ch03
+"Classification of Elements" authored, verified PASS (both languages),
+spot-checked, committed, and registered in `src/components/scenes/index.ts`.
 
 ## Notes
 - **CRITICAL FONT BUG (found in Sec 8, fixed in Sec 4 + 8): capital "Z" in the
