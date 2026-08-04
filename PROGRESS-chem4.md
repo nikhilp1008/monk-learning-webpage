@@ -88,6 +88,14 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   (central +1, double-bonded terminal 0, single-bonded terminal −1) → red sum
   line (+1+0−1=0) → green verdict chip. Clean PASS, no stalls (real audio).
 
+- Sec 8 — Two worked examples: Part A (NEET symmetry trap) 4 molecule chips
+  (CCl₄/BF₃/CHCl₃/CO₂), green ✓ reasons under 3 that cancel by symmetry, red
+  ring on CHCl₃ as the polar answer + trap line — then fully ERASES (opacity
+  0, reclaiming the space, not dim-and-overlay) → Part B (JEE % ionic calc)
+  builds fresh in the same region: setup, 3 calc steps, green sanity-check
+  chip. Benign "stall" at the erase beat confirmed via screenshot (Part B
+  genuinely renders, unlike Sec 6's real bug).
+
 ## Current
 Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Sec 6 blocked
-(see above). Next: Sec 8.
+(see above). Next: Sec 9.
