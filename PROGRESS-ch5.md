@@ -57,6 +57,15 @@ Done only on VERDICT PASS (both languages, overlaps=0 overflow=0 empty=0).
 - [x] Sec 17 — Tips: five red trap chips (reverse sign, extensive scaling, bond-enthalpy
       direction, elements ΔfH=0, Born-Haber sign chaos) + green pro-tip. SUBTOPIC 2 DONE (8/8).
 
+- [x] Sec 18 — Spontaneity: 3 examples, hypothesis "spontaneous=exothermic?" crossed out red,
+      two counter-examples (ice melting, NH4Cl), green disorder conclusion.
+- [x] Sec 19 — Entropy: microstates, ranking note, second law ΔSuniv>0/=0, solid/liquid/gas
+      particle-box diagram (the visual proof).
+- [x] Sec 20 — Gibbs G=H-TS, ΔG<0 spontaneous, max useful work; third law perfect crystal S=0,
+      absolute entropies note.
+- [x] Sec 21 — Derivation of ΔG<0, four ΔH/ΔS cases with T as referee, ΔG-to-K link, classic 2x2
+      sign-case grid (spontaneous-all-T/low-T/high-T/never).
+- [x] Sec 22 — Entropy/Gibbs/equilibrium formula toolkit (accumulating board).
+
 ## Current
-Subtopic 2 (Thermochemistry/Hess's Law) complete, secs 10-17 pushed. Next: Sec 18
-(Entropy/Gibbs/Spontaneity subtopic, secs 18-25).
+Subtopic 3 (Entropy/Gibbs/Spontaneity, secs 18-25) in progress, secs 18-22 done. Next: Sec 23.
