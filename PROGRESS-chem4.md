@@ -123,5 +123,11 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   red limitations chip (diborane, O₂ paramagnetism → MOT) → muted caution
   line (bookkeeping, not physical).
 
+- Sec 13 — The geometry table (formulas): SN definition + H=½(V+M−C+A) formula
+  → 4-column × 5-row table built column-by-column (SN|Hybridisation revealed
+  first, then Geometry|Ideal angle in the same rows) covering SN 2-6 → %
+  s-character line → σ/π bond-counting line. The master reference table for
+  the rest of the subtopic.
+
 ## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 13.
+Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 14.
