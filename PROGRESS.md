@@ -469,5 +469,15 @@ an existing physics section (fallback board_content path unchanged).
   relation) each with a one-line "why" underneath. PASS both languages, 0
   stalls, eyeballed clean.
 
+- Sec 55: Worked examples: molarity and temperature terms — CBSE NaCl
+  molarity calculation (5.85g/58.5g/mol=0.100mol, 500mL→0.200 mol/L)
+  fully fades to free the board for a NEET speed trap (which of molarity/
+  molality/normality/formality is temperature-independent), applying the
+  volume-vs-mass rule to answer molality, noting mole fraction/mass%
+  would also qualify, and closing with the whisper that the trap is
+  phonetic (molarity/molality sound like twins) — scan the denominator,
+  never the name. PASS both languages, 1 advisory stall (expected at the
+  erase-and-rewrite beat), eyeballed clean.
+
 ## Current
-Sec 55 next.
+Sec 56 next.
