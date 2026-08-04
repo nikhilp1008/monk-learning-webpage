@@ -2905,3 +2905,14 @@ REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:35`] = Ch14Sec35;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:36`] = Ch14Sec36;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:37`] = Ch14Sec37;
 REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:38`] = Ch14Sec38;
+
+/* ================================================================== */
+/* C11 Ch02 (Chemistry) — Structure of Atom                            */
+/* (branch premium-board-chem2). Registered via Object.assign-style    */
+/* block so this stays self-contained at the end of the file.          */
+/* ================================================================== */
+import C11Ch02Sec1 from "./C11Ch02Sec1";
+
+const C11CH02 = "16bf043d-bc59-5ebb-93ad-7b0fddf484c9"; // Class 11 Chemistry · Structure of Atom
+
+REGISTRY[`${C11CH02}:1`] = C11Ch02Sec1;

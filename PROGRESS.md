@@ -19,7 +19,16 @@
 - 56–57 Recap
 
 ## Done
-(none yet — starting Sec 1)
+- Sec 1: Seeing the unseeable, how we probe the atom — tiffin-box anchor →
+  "atom never seen directly" → Dalton's solid indivisible atom (persists) →
+  cathode-ray tube built piece by piece (cathode/anode, straight beam) → beam
+  bends toward the + deflecting plate (negative charge) → same bend for
+  H₂/He/air (universal particle) → lands "the electron" (green) → guardrail:
+  Dalton's circle crossed out in red, "atom has parts". PASS both languages,
+  FORCE_SHOTS eyeballed clean (fixed one bug: a beat-5 evidence chip's opaque
+  fill was painting over the tail of the beat-2 Dalton label — the automated
+  text-vs-text checker doesn't catch text-vs-shape occlusion, so eyeball the
+  final frame every time two groups share a row).
 
 ## Current
-Sec 1: "Seeing the unseeable: how we probe the atom" — authoring.
+Sec 2: "From one negative particle to the whole cast" — starting.
