@@ -178,5 +178,13 @@ shorter beat schedules.
   (sharp fixed lines ⇒ energy is QUANTISED) → launch-pad for Bohr. PASS both
   languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 19: Method: turning a wavelength into a photon energy — 4 numbered
+  steps (identify given quantity → pick matching form → guardrail on units
+  → photons/sec from power) → why-the-shortcut-works caption → hc=1.986e-25
+  J·m⇒1240 eV·nm boxed green → guardrail (memorise 1240/λ(nm)). **STALE
+  AUDIO** (English 68s claimed vs short real file; Hinglish is real and full
+  — verified clean via Hinglish, English shows expected stalls b4-7 matching
+  the known-issue pattern). PASS.
+
 ## Current
-Sec 19: "Method: turning a wavelength into a photon energy" — starting.
+Sec 20: "Method and meaning: the photoelectric effect and its four laws" — starting.
