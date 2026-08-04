@@ -51,5 +51,13 @@ an existing physics section (fallback board_content path unchanged).
   and scale-dependent homogeneous/heterogeneous (milk = colloid). PASS both
   languages, eyeballed clean.
 
+- Sec 4: The classification routine and separations — decision flowchart
+  (fixed composition? → mixture/pure substance → uniform?/splits further? →
+  hetero/homo, element/compound), parallel change-type checklist → CHEMICAL
+  change verdict, separation-technique↔property table, guardrail that the
+  logic runs backward too. Caught + fixed a chip-vs-chip visual overlap the
+  verifier's text-only overlap check didn't flag (eyeball needed). PASS both
+  languages, eyeballed clean.
+
 ## Current
-Sec 4 next.
+Sec 5 next.
