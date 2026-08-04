@@ -340,5 +340,12 @@ an existing physics section (fallback board_content path unchanged).
   (atoms of X=(%/100)×M/atomic mass), why it saves time + whole-number check.
   PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 41: Worked examples: composition and fertilisers — CBSE urea
+  %composition (M=60→C20.0%/O26.7%/N46.7%/H6.7%, sums to ~100%, high-N%
+  fertiliser insight) fully fades to free the board for a NEET fertiliser
+  comparison (urea/NH₄NO₃/(NH₄)₂SO₄/Ca(NO₃)₂, all with numerator 28, urea's
+  smallest M wins at 46.7% N), guardrail that the trap is time not concept.
+  PASS both languages, eyeballed clean.
+
 ## Current
-Sec 41 next.
+Sec 42 next.
