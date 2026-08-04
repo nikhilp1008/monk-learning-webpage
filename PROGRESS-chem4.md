@@ -43,5 +43,11 @@ Verify per section:
   deficient / expanded octet / odd-electron) → green closing chip (Lewis =
   connectivity map, not geometry).
 
+- Sec 3 — Bond-parameter toolkit (formulas): formal-charge card (FC=V−L−B/2,
+  definitions, red ΣFC=overall-charge check) → bond-order card (N₂/CO/NO⁺=3)
+  with a trend block (BO↑ ⇒ enthalpy↑, length↓) between it and → bond-length
+  card (d=r_A+r_B, 1Å=100pm) → bond-enthalpy card (kJ/mol, mean for identical
+  bonds) → lattice-enthalpy card (charge↑/size↓ ⇒ lattice enthalpy↑).
+
 ## Current
-Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Next: Sec 3.
+Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Next: Sec 4.
