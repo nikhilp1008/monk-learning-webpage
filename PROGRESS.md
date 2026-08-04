@@ -285,5 +285,11 @@ an existing physics section (fallback board_content path unchanged).
   limits (gas+STP only), old-vs-IUPAC STP caution, vapour density (M=2×VD).
   PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 33: The mole triangle and related relations — boxed master mole
+  triangle (n=mass/M=N/Nₐ=V/Vm), molecular vs formula mass, elemental gas
+  M=atomicity×atomic mass, average atomic mass formula, gas mixture weighted
+  average, vapour density M=2×VD, units/dimensions, boxed procedural rule
+  (identify→moles→target). PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 33 next.
+Sec 34 next.
