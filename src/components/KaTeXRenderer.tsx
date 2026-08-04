@@ -44,8 +44,15 @@ export function KaTeXRenderer({
           }
         }
 
+        // If line contains bare LaTeX commands (\text, \frac, \vec, etc.) but no delimiters, wrap bare commands
+        let processedLine = trimmed.replace(/\\\s*bullet/g, "•");
+        const hasBareLatex = /\\(text|frac|vec|alpha|beta|theta|sigma|Delta|bullet|cdot|approx|sim|sqrt)\b/.test(processedLine) && !processedLine.includes("$");
+        if (hasBareLatex) {
+          processedLine = processedLine.replace(/\\(text|frac|vec|alpha|beta|theta|sigma|Delta|bullet|cdot|approx|sim|sqrt)(\{[^}]*\})?/g, (m) => `$${m}$`);
+        }
+
         // Inline math ($ ... $) or Plain Text
-        const parts = line.split(/(\$[^\$]+\$)/g);
+        const parts = processedLine.split(/(\$[^\$]+\$)/g);
 
         return (
           <div key={idx} className="whitespace-pre-wrap break-words">

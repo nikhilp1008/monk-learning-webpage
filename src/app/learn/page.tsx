@@ -283,10 +283,17 @@ export default function LearnPage() {
       console.error("handleSendScope aborted: sessionId is null");
       return;
     }
-    setScopingPlanReady(false);
     try {
       const res = await scopeSession(sid, utterance);
       setSessionTopic(res.subtopic || utterance);
+
+      const opts = (res as any).subtopic_options || (res as any).options || [];
+      if (opts.length > 0) {
+        setScopingOptions(opts);
+        setScopingSpeech(res.speech);
+        setScopingPlanReady(true);
+        return;
+      }
 
       // Transition to session
       setFlowState("session");
@@ -553,8 +560,7 @@ export default function LearnPage() {
                 <button
                   key={opt}
                   onClick={() => handleSendScope(opt)}
-                  disabled={!scopingPlanReady}
-                  className="py-[10px] px-4 bg-white border border-[rgba(28,26,22,0.12)] rounded-[10px] text-[0.88rem] font-semibold text-ink hover:bg-[rgba(252,244,224,0.5)] transition-colors cursor-pointer disabled:opacity-50"
+                  className="py-[10px] px-4 bg-white border border-[rgba(28,26,22,0.12)] rounded-[10px] text-[0.88rem] font-semibold text-ink hover:bg-[#EEA31F] hover:text-[#241a08] transition-colors cursor-pointer shadow-xs"
                 >
                   {opt}
                 </button>

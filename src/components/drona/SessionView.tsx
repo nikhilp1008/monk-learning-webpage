@@ -149,26 +149,6 @@ export function SessionView({
               </div>
             )}
 
-            {/* Transcript lines (B1: Clean Speech Text Only) */}
-            {transcript.map((ln) => {
-              let tText = ln.text;
-              if (tText.startsWith("{") && tText.includes('"speech"')) {
-                try {
-                  const p = JSON.parse(tText);
-                  tText = p.speech || tText;
-                } catch {
-                  // ignore
-                }
-              }
-              return (
-                <div key={ln.id} className="animate-ml-rise max-w-full overflow-hidden">
-                  <p className={`text-[0.92rem] leading-relaxed whitespace-pre-wrap break-words ${ln.sender === "student" ? "font-bold text-[#DD4433]" : "text-ink font-semibold"}`}>
-                    {ln.sender === "student" ? "You: " : `${teacher}: `}{tText}
-                  </p>
-                </div>
-              );
-            })}
-
             {isDronaSpeaking && (
               <div className="flex items-center gap-2 mt-2">
                 <span className="w-2.25 h-3.75 bg-[#EEA31F] rounded-sm animate-pulse flex-none" />
