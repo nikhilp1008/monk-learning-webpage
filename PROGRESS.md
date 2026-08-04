@@ -105,5 +105,12 @@ shorter beat schedules.
   (the landed result) → guardrail (1/1837 of hydrogen) → proton/neutron mass
   chips. PASS both languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 9: Counting the atom: A, Z, N and closest approach (`formulas`) —
+  A=Z+N card → hand-built ᴬZX isotope notation (proper superscript-A/
+  subscript-Z to the left of X, each labelled) → guardrail on ion electron
+  counting (subtract cation, add anion) → general r₀=z₁Ze²/4πε₀KE fraction →
+  z₁=2 for α note → average atomic mass Ā=ΣaᵢAᵢ/100 fraction → abundance
+  note. PASS both languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 9: "Counting the atom: A, Z, N and closest approach" — starting.
+Sec 10: "Worked example (CBSE): identify the ion" — starting.
