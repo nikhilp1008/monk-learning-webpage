@@ -319,5 +319,12 @@ an existing physics section (fallback board_content path unchanged).
   mass, callback that atoms combining in whole-number ratios = definite
   proportions at atomic scale. PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 38: Why the molar mass is indispensable — formaldehyde-vs-glucose
+  contrast (same empirical CH₂O, M=30 vs M=180), the limitation (need molar
+  mass beyond %composition), n=1 cases (water/CO₂/NH₃), ionic compounds have
+  ONLY a formula unit (lattice explanation, never molecular), pure-compound
+  assumption, boxed slogan (empirical=recipe, molecular=batch, n=batch size).
+  PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 38 next.
+Sec 39 next.
