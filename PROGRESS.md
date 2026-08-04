@@ -144,8 +144,22 @@ All verified PASS both languages, spot-checked by eye. Pushed through Sec 29.
 
 All verified PASS both languages, spot-checked by eye. Pushed through Sec 34.
 
+- Sec 35 — Diagonal relationship: Li/Be/B (period 2) drawn staggered
+  above Mg/Al/Si (period 3), offset one column so "down one, right one"
+  is spatially visible, green diagonal arrows connecting each pair.
+- Sec 36 — Why period-2 breaks rules: N (2s/2p only, NCl5 crossed
+  impossible) vs P (has 3d, PCl5 exists ✓); F only -1; Cl reaches +7.
+- Sec 37 — Worked example (CBSE): formula from group positions — literal
+  criss-cross X pattern between X²⁺/Y³⁻ landing on green X₃Y₂ stamp.
+- Sec 38 — Worked example (NEET): spot the diagonal pair — 4-row
+  elimination (Na-Mg/Be-Al/Li-Na/B-C) with strike-throughs + tags.
+- Sec 39 — Worked example (JEE Main): configuration to oxide character —
+  4-card pipeline ns²np⁴→Group16→(−2 to +6, red)→ZO₃ ACIDIC (green).
+
+All verified PASS both languages, spot-checked by eye. Pushed through Sec 39.
+
 ## Current
-Sec 35 — next.
+Sec 40 — next.
 
 ## Notes
 - **CRITICAL FONT BUG (found in Sec 8, fixed in Sec 4 + 8): capital "Z" in the
