@@ -103,6 +103,12 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   bond order = 2 → closing insight (identical bond lengths, blended not
   flickering) + green chip.
 
+- Sec 10 — Pitfalls and pro-tips (closes subtopic 1): 4 red-margin pitfall rows
+  (FC≠oxidation number, don't drop the ½ on bonding term, many polar bonds ≠
+  polar molecule, don't invert Fajans) → Fajans SHaPe mnemonic → polarity
+  pro-tip (sketch for a centre of symmetry, never calculate) → green
+  speed-trick chip (e×100pm≈4.8D). SUBTOPIC 1 DONE (9/10, sec 6 blocked).
+
 ## Current
-Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Sec 6 blocked
-(see above). Next: Sec 10 (closes subtopic 1).
+Subtopic 1 done (9/10 — sec 6 blocked). Starting Subtopic 2 (VSEPR/VBT/
+Hybridization, secs 11-19). Next: Sec 11.
