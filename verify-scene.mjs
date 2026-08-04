@@ -77,31 +77,43 @@ async function inspect() {
       const b = new DOMPoint(r.right, r.bottom).matrixTransform(inv);
       return { x1: a.x, y1: a.y, x2: b.x, y2: b.y };
     };
-    const shown = (el) => {
+    const opacityOf = (el) => {
       const g = el.closest("g.sc-fade");
-      if (g && parseFloat(getComputedStyle(g).opacity) <= 0.5) return false;
+      return g ? parseFloat(getComputedStyle(g).opacity) : 1;
+    };
+    // "present" = anything actually on the board, INCLUDING dimmed/superseded
+    // content (opacity ~0.14). Only fully-removed content (opacity ~0) is absent.
+    // New content must never be drawn over dimmed content — that reads as overlap
+    // to a student, so dimmed elements are checked just like full-opacity ones.
+    const shown = (el) => {
+      if (opacityOf(el) <= 0.05) return false;
       const r = el.getBoundingClientRect();
       return r.width > 0.5 && r.height > 0.5;
     };
 
-    // visible text boxes (for overlap + overflow + emptiness)
+    // text boxes (for overlap + overflow + emptiness); dimmed counts as present
     const texts = [...svg.querySelectorAll("text")].filter(shown).map((el) => ({
       t: (el.textContent || "").trim().slice(0, 24),
+      dim: opacityOf(el) < 0.6,
       b: toUser(el.getBoundingClientRect()),
     }));
 
-    // visible strokes/marks (for overflow: arrowheads, rings, chips, rules)
+    // strokes/marks (for overflow: arrowheads, rings, chips, rules)
     const marks = [...svg.querySelectorAll("path,rect,circle,ellipse,line,polygon,polyline")]
       .filter(shown)
       .map((el) => ({ t: el.tagName, b: toUser(el.getBoundingClientRect()) }));
 
-    // text-vs-text overlap (>2px in screen space ≈ tolerance handled in user units)
+    // text-vs-text overlap (includes drawing over dimmed/superseded content).
+    // A dimmed element is flagged so the author sees it's a "drew over old content"
+    // case — the fix is to use free board space or fully remove the old content.
     const overlaps = [];
     for (let i = 0; i < texts.length; i++)
       for (let j = i + 1; j < texts.length; j++) {
         const a = texts[i].b, b = texts[j].b;
-        if (a.x1 < b.x2 - 1.5 && b.x1 < a.x2 - 1.5 && a.y1 < b.y2 - 1.5 && b.y1 < a.y2 - 1.5)
-          overlaps.push(`"${texts[i].t}" × "${texts[j].t}"`);
+        if (a.x1 < b.x2 - 1.5 && b.x1 < a.x2 - 1.5 && a.y1 < b.y2 - 1.5 && b.y1 < a.y2 - 1.5) {
+          const tag = (x) => (x.dim ? `"${x.t}"(dimmed)` : `"${x.t}"`);
+          overlaps.push(`${tag(texts[i])} × ${tag(texts[j])}`);
+        }
       }
 
     // safe-area overflow across text + marks
