@@ -116,6 +116,12 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   BP-BP) → 104.5° stamp lands → closing (shape only, not why/strength) +
   green VBT-teaser chip.
 
+- Sec 12 — VBT and the need for hybridisation: two circles overlapping (amber
+  lens) → sigma (head-on ellipses) vs pi (sidewise ellipses) → mismatch text
+  (raw VBT 90° vs CH₄ 109.5°) → hybridisation chip → OrbitalBox row: 1s+3p
+  (single-electron boxes) → arrow → 4× sp³ boxes, tetrahedral CH₄ caption →
+  red limitations chip (diborane, O₂ paramagnetism → MOT) → muted caution
+  line (bookkeeping, not physical).
+
 ## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 (VSEPR/VBT/Hybridization,
-secs 11-19) in progress. Next: Sec 12.
+Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 13.
