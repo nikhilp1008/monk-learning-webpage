@@ -38,5 +38,11 @@ an existing physics section (fallback board_content path unchanged).
   heat arrows between boxes (ice→water→steam), green guardrail line (steam is
   still water). PASS both languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 2: Pure substances versus mixtures — classification tree built live
+  (matter → pure substance/mixture → element/compound, homogeneous/
+  heterogeneous), law-of-definite-proportions callout, solute/solvent +
+  gas/solid-solution note, thali analogy (dal vs chana+puri), guardrail that
+  salt is a compound not a mixture. PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 2 next.
+Sec 3 next.

@@ -2912,7 +2912,9 @@ REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:38`] = Ch14Sec38;
 /* block so this stays self-contained at the end of the file.          */
 /* ================================================================== */
 import C11Ch01Sec1 from "./C11Ch01Sec1";
+import C11Ch01Sec2 from "./C11Ch01Sec2";
 
 const C11CH01 = "fa37da68-46a0-562f-9c75-2967215b8893"; // Class 11 Chemistry · Some Basic Concepts of Chemistry
 
 REGISTRY[`${C11CH01}:1`] = C11Ch01Sec1;
+REGISTRY[`${C11CH01}:2`] = C11Ch01Sec2;
