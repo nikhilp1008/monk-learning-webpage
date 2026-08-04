@@ -127,9 +127,25 @@ each). Pushed to origin through Sec 14.
 
 All verified PASS both languages, spot-checked by eye. Pushed through Sec 29.
 
+- Sec 30 — Chemistry is electronic configuration in disguise (opens
+  subtopic 3): cash-drawer metaphor — generic drawer establishes
+  "valence = deals this cash can fund", then Group 1 (near-empty,
+  hands over) vs Group 17 (near-full, grabs one) fill-bar drawers.
+- Sec 31 — Reactivity peaks at both ends: real valley-shaped curve
+  (Na..Cl) with rings on Na/Si/Cl, metallic-metalloid-nonmetallic
+  gradient bar, 3 real oxide examples.
+- Sec 32 — Valence, N or 8-N rule: two parallel bar charts — O-scale
+  staircase (1→7, Na₂O..Cl₂O₇) and H-scale tent (1,2,3,4,3,2,1, NaH..HCl).
+- Sec 33 — Oxidation state, signed charge: Na₂O (O=-2) vs OF₂ (O=+2) —
+  same oxygen flips sign; halogen-family OS ladder; inert-pair effect.
+- Sec 34 — Across period 3: the definitive reference strip — 8 colour-
+  coded cells (Na..Ar) with oxide formulas and reducing/oxidising
+  arrows, consolidating Sec 31's ideas into one figure.
+
+All verified PASS both languages, spot-checked by eye. Pushed through Sec 34.
+
 ## Current
-Sec 30 — next (subtopic 3: Periodic Trends in Chemical Properties &
-Anomalous Behaviour, secs 30–41).
+Sec 35 — next.
 
 ## Notes
 - **CRITICAL FONT BUG (found in Sec 8, fixed in Sec 4 + 8): capital "Z" in the
