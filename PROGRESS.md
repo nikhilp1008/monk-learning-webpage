@@ -247,5 +247,12 @@ revisit these together with Sec 4/19–23 above as one batch.
   FORCE_SHOTS eyeballed clean. First section of subtopic 3 (Bohr Model &
   Wave-Particle Duality) actually authored (24–30 deferred, see known-issue).
 
+- Sec 32: The hydrogen spectrum and the Rydberg equation — ΔE=hν=hc/λ setup
+  → hc/λ formula → ν̄=R_H(1/n₁²−1/n₂²) boxed green → guardrail (R_H from
+  fundamentals) → full 4-level energy diagram (n=1..4) with color-coded
+  Lyman (red, UV), Balmer (green, visible), Paschen (amber, IR) transition
+  arrows → named-series explanation → Bohr's climax closer. PASS both
+  languages, FORCE_SHOTS eyeballed clean — best diagram yet.
+
 ## Current
-Sec 32: "The hydrogen spectrum and the Rydberg equation" — starting.
+Sec 33: "de Broglie derives Bohr's quantisation" — starting.
