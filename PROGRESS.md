@@ -73,5 +73,14 @@ shorter beat schedules.
   tsc-clean. VERDICT PASS on what's reachable; re-verify fully once audio is
   reuploaded.
 
+- Sec 5: How Thomson and Millikan cornered the electron — two-column build
+  (Thomson | Millikan, divided by a vertical rule): Thomson's crossed E/B
+  field tube built plate by plate with B-field marks, beam tuned straight →
+  "e/m only" chip → guardrail (1 equation, 2 unknowns); Millikan's oil-drop
+  apparatus with gravity/electric-pull arrows balancing the drop → guardrail
+  (charge is quantised, q=n×1.602e-19 C) → lands "smallest unit = e"; final
+  full-width chip combines both into the electron's mass. PASS both
+  languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 5: "How Thomson and Millikan cornered the electron" — starting.
+Sec 6: "Rutherford's gold foil: reading the ricochets" — starting.
