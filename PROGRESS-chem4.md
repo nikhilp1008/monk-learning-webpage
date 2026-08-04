@@ -129,5 +129,10 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   s-character line → σ/π bond-counting line. The master reference table for
   the rest of the subtopic.
 
+- Sec 14 — Predicting shape step by step: 4 step cards (Lewis+SN / e-pair
+  geometry / − lone pairs → shape / adjust angle) → NH₃ worked (1 LP,
+  trigonal pyramidal, 107°) and H₂O worked (2 LP, bent, 104.5°) built
+  side-by-side for direct comparison of how more lone pairs squeeze further.
+
 ## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 14.
+Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 15.
