@@ -490,5 +490,15 @@ an existing physics section (fallback board_content path unchanged).
   in one pass. PASS both languages, 1 advisory stall (expected at the
   erase-and-rewrite beat), eyeballed clean.
 
+- Sec 57: Pitfalls and the anchoring trick — 4 pitfall rows (confusing
+  solvent/solution mass, assuming molarity=molality, the dilution volume
+  trap, forgetting the n-factor), boxed anchoring trick (fix 1000g
+  solvent for molality problems or 100g solution for mass% problems,
+  everything else follows by one multiplication/division), 4 memory
+  aids (volume drifts/mass sticks, watch the denominator, no density no
+  interconversion, added=final−initial). PASS both languages, 0 stalls,
+  eyeballed clean. **Subtopic 8 (Concentration Terms, Sec 51-57)
+  complete.**
+
 ## Current
-Sec 57 next (closes subtopic 8: Concentration Terms).
+Sec 58 next (Master Revision, closes the chapter).
