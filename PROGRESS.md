@@ -126,5 +126,12 @@ shorter beat schedules.
   and the ring swaps red→green to crown the winner. PASS both languages,
   FORCE_SHOTS eyeballed clean.
 
+- Sec 12: Worked example (JEE Main): combine Millikan and Thomson — 4
+  droplet-charge chips divide down to whole-number multiples (3e/4e/5e/2e)
+  landing on e=1.6×10⁻¹⁹C boxed green, then Thomson's e/m ratio chip joins
+  in to produce mₑ=9.1×10⁻³¹kg boxed green, capped by the guardrail that
+  neither experiment alone gives the mass. PASS both languages, FORCE_SHOTS
+  eyeballed clean.
+
 ## Current
-Sec 12: "Worked example (JEE Main): combine Millikan and Thomson" — starting.
+Sec 13: "Worked example (JEE Advanced): closest approach on gold" — starting.
