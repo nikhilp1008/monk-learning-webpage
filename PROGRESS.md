@@ -100,10 +100,36 @@ each). Pushed to origin through Sec 14.
   then a real 19-point IE-vs-Z sawtooth curve (H→K) with green rings on
   noble-gas peaks and red rings on alkali-metal troughs.
 
-All verified PASS both languages, spot-checked by eye. Pushed through Sec 19.
+- Sec 20 — Two celebrated IE reversals: first use of chem-kit's
+  `OrbitalBox` — Be(2s², filled) vs B(2p¹) on the left, N(2p³, Hund's-rule
+  three singles) vs O(2p⁴, one forced pair) on the right.
+- Sec 21 — EGE F vs Cl surprise: size-contrast circle pair (F small/red
+  repulsion arrow, Cl big/green smooth arrow) with real EGE values.
+- Sec 22 — Electronegativity, 3 scales: Pauling/Mulliken/Allred-Rochow
+  formula cards; kept "Zeff" out of script text (Kalam "Z" gotcha).
+- Sec 23 — d/f-screening anomaly (subtopic 2 sub-closer): 5 circles at
+  real relative covalent radii (B,Al,Ga,In,Tl) make the Ga<Al kink
+  visually obvious, red-ringed.
+- Sec 24 — Physical-property toolkit: 2-column bordered-box formula
+  reference sheet (Zeff, radius, IE, EGE, EN×3).
+- Sec 25 — Worked example (CBSE): order isoelectronic species — 5 chips
+  + 5 increasing-size circles confirm Al³⁺<Mg²⁺<Na⁺<F⁻<O²⁻.
+- Sec 26 — Worked example (NEET): most negative EGE — ring on the
+  tempting-wrong F option, then F(crossed)/Cl(checkmark badge) circles.
+- Sec 27 — Worked example (JEE Main): real bar chart of Q's 4 IE values
+  makes the 5x jump dramatically visible; parts (a)/(b)/(c) → group 2, QO.
+- Sec 28 — Worked example (JEE Advanced): parallel period-2/period-3
+  chip rows with matching brackets prove the IE reversals are structural.
+- Sec 29 — Common pitfalls and pro-tips (subtopic 2 CLOSER): 4 numbered
+  pitfalls, red-margin master-arrow box, 4 exception-flag chips, closing
+  successive-IE trick. ✅ SUBTOPIC 2 (secs 15–29, Periodic Trends
+  Physical) COMPLETE.
+
+All verified PASS both languages, spot-checked by eye. Pushed through Sec 29.
 
 ## Current
-Sec 20 — next.
+Sec 30 — next (subtopic 3: Periodic Trends in Chemical Properties &
+Anomalous Behaviour, secs 30–41).
 
 ## Notes
 - **CRITICAL FONT BUG (found in Sec 8, fixed in Sec 4 + 8): capital "Z" in the
