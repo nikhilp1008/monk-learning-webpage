@@ -262,6 +262,11 @@ revisit these together with Sec 4/19–23 above as one batch.
   guardrail (Bohr assumed it, de Broglie DERIVED it) → n-count closer.
   PASS both languages, FORCE_SHOTS eyeballed clean — striking diagram.
 
+- Sec 37: Worked example (CBSE): radius and energy of He+ (n=3) — given
+  (Z=2, n=3, a₀=0.529Å) → r₃=2.38Å boxed green → E₃=−6.04eV boxed green →
+  guardrail (scaling forms directly, no rebuild) → bound-electron note →
+  answer stated → guardrail (entire method = plug n,Z into the two ratios).
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 37: "Worked example (CBSE): radius and energy of He+ (n=3)" — starting
-(skipping deferred 34–36, placeholder audio).
+Sec 38: "Worked example (NEET): same transition, different ion" — starting.
