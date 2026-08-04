@@ -304,5 +304,13 @@ an existing physics section (fallback board_content path unchanged).
   CH₄/C₂H₆ mixture problem (avg M=20.0 → mole fraction 5/7 → split moles →
   1.143mol H atoms → 6.88×10²³ atoms). PASS both languages, eyeballed clean.
 
+- Sec 36: Pitfalls and the particle-comparison shortcut — 4 pitfall rows
+  (confusing molecules/atoms, skipping the mole hub, average-mass-as-single-
+  atom, misapplying molar volume), boxed pro-tip (compare fractions, Nₐ
+  cancels), 4 memory aids. Caught + fixed a real Hinglish text-overflow bug
+  (pitfall-3 rule ran past the safe area) before verifying clean. PASS both
+  languages, eyeballed clean. **Subtopic 5 (Atomic/Molecular Masses & Mole
+  Concept, Sec 30-36) complete.**
+
 ## Current
-Sec 36 next (closes subtopic 5).
+Sec 37 next (starts subtopic 6: Percentage Composition / Empirical & Molecular Formula).
