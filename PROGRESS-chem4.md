@@ -34,5 +34,14 @@ Verify per section:
   pairing up → dashed electrostatic-attraction line → green verdict chip
   (ionic = a sale · covalent = a joint venture).
 
+- Sec 2 — Polar bonds and dipole moment: H–Cl bond with the shared pair drawn
+  asymmetric (pulled toward Cl) → δ⁺/δ⁻ + crossed-tail dipole arrow + "polar
+  bond · μ" chip → small vector icon ("pulls are vectors") → BF3 trigonal
+  3-arrow cancellation (net μ = 0) → CO2 (linear, cancels) vs H2O (bent,
+  doesn't) mini diagrams side by side → red-margin "octet rule is a guide not
+  a law" → 3 empty boxes filled with the exception families (electron-
+  deficient / expanded octet / odd-electron) → green closing chip (Lewis =
+  connectivity map, not geometry).
+
 ## Current
-Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Next: Sec 2.
+Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Next: Sec 3.
