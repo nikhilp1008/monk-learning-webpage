@@ -232,5 +232,12 @@ an existing physics section (fallback board_content path unchanged).
   is gases-only. First use of chem-kit's bondD/ReactionArrow in this chapter.
   PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 26: The laws written as relations — all 5 laws compactly as relations
+  (conservation, definite proportions, multiple proportions, reciprocal
+  proportions, Avogadro's V∝n), why gas problems work in litres without
+  moles, boxed relative-atomic-mass definition (mass(atom)÷[(1/12)mass(¹²C)],
+  foundation of the mole concept), dimensional note that these are
+  dimensionless ratios. PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 26 next.
+Sec 27 next.
