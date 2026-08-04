@@ -347,5 +347,12 @@ an existing physics section (fallback board_content path unchanged).
   smallest M wins at 46.7% N), guardrail that the trap is time not concept.
   PASS both languages, eyeballed clean.
 
+- Sec 42: Worked examples: combustion and hydrates — JEE Main combustion
+  analysis (0.60g organic → CO₂/H₂O masses → C:H:O=1:2:1 → empirical CH₂O →
+  n=2 → molecular C₂H₄O₂ acetic acid) fully fades to free the board for a
+  JEE Advanced hydrate problem (MgSO₄·xH₂O loses 51.2% mass as water →
+  18x/(120+18x)=0.512 → x≈7 → Epsom salt, verified). PASS both languages,
+  eyeballed clean.
+
 ## Current
-Sec 42 next.
+Sec 43 next (closes subtopic 6).
