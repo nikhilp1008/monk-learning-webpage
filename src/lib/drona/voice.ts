@@ -88,15 +88,6 @@ export class DronaVoiceClient {
     });
   }
 
-  public sendUtterance(text: string): void {
-    if (this.ws && this.ws.readyState === WebSocket.OPEN) {
-      console.log("[WS OUTGOING] Sending utterance over WebSocket:", text);
-      this.ws.send(JSON.stringify({ type: "utterance", text }));
-    } else {
-      console.warn("WebSocket is not open. readyState:", this.ws ? this.ws.readyState : "null");
-    }
-  }
-
   private handleMessage(data: any): void {
     try {
       const msg = typeof data === "string" ? JSON.parse(data) : data;
@@ -270,7 +261,10 @@ export class DronaVoiceClient {
 
   public sendUtterance(text: string): void {
     if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+      console.log("[WS OUTGOING] Sending utterance over WebSocket:", text);
       this.ws.send(JSON.stringify({ type: "utterance", text }));
+    } else {
+      console.warn("WebSocket is not open. readyState:", this.ws ? this.ws.readyState : "null");
     }
   }
 
