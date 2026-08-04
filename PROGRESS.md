@@ -53,6 +53,23 @@ Pushed to origin through Sec 5.
 Sec 6 — next.
 
 ## Notes
+- **CRITICAL FONT BUG (found in Sec 8, fixed in Sec 4 + 8): capital "Z" in the
+  Kalam script font renders visually as "2".** Verified by injecting raw SVG
+  text at both fonts and screenshotting — Anek Latin (sans) "Z" is fine; Kalam
+  (`script`/`script={true}`, incl. `Chip`'s default `script=true`) renders "Z"
+  indistinguishable from "2". This chapter uses bare "Z" for atomic number
+  constantly (and will explode in secs 42-54, electron configuration). RULE:
+  any text containing "Z" MUST be `script={false}` (or plain `<T>` with no
+  `script` prop, which already defaults false) — never bare `script`/
+  `script={true}`, never an unqualified `<Chip>` (defaults script=true).
+  Same font test also showed weaker collisions worth avoiding in script text:
+  digit "1"/lowercase "l"/capital "I" all render as a bare vertical stroke,
+  and "0"/"O" look near-identical — prefer non-script for anything mixing
+  letters and digits (quantum numbers n/l/m/s, Zeff, orbital counts). Kalam
+  script should stay reserved for prose captions/quotes/verdicts with no
+  bare single-letter symbols or digits in them. ALWAYS eyeball-check any new
+  script text containing Z, 1, l, I, 0, O, S, or 5 in a screenshot before
+  moving on — the geometry verifier cannot catch this class of bug at all.
 - Kit changes: none needed so far. `curvedArrowD` from chem-kit works well for
   non-mechanism uses too (e.g. Sec 3's "repeats" arc under the octave row).
 - Space-management pattern A (Sec 1): a beat's group gated `on={beat === k}`
@@ -66,6 +83,13 @@ Sec 6 — next.
   (`beat === k` for the old value, `beat >= k+1` for the new) instead of
   stacking two rows — zero risk of overlap since they never coexist, and it
   reads as the teacher correcting the same line rather than adding a new one.
+- **`Draw` with a non-"none" `fill` shows that fill at t=0 regardless of `on`**
+  (found + fixed in Sec 8's nucleus circles): `Draw`'s `on` prop only animates
+  `strokeDashoffset` — the `fill` attribute is static and renders immediately
+  since the `<path>` is always mounted. A filled `Draw` (e.g. a nucleus
+  circle, any chem-kit `wedgeD`) MUST be wrapped in its own `<Fade on={beat>=k}>`
+  so opacity actually gates visibility; `Draw`'s own `on` only makes the
+  outline stroke progressively — never rely on it alone to hide a fill.
 - Two-line cell gotcha (Sec 3): a symbol+subtext pair inside one cell needs
   ≥21px between baselines at size22/13 to clear Kalam/Anek ink-box math —
   first draft undershot and both b1 and b3 frames failed with text-vs-text

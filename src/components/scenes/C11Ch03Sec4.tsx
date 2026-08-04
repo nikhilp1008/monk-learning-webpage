@@ -169,7 +169,7 @@ export default function C11Ch03Sec4({ currentTime, reveals, language }: ScenePro
 
       {/* beat 8 — closing insight */}
       <Fade on={beat >= 8} delay={dl(8, 0.3)}>
-        <Chip x={160} y={446} w={760} h={40} fill={GREEN} textFill="#fff" size={15} script>
+        <Chip x={160} y={446} w={760} h={40} fill={GREEN} textFill="#fff" size={15} script={false}>
           {t("electron count is fixed by Z ⇒ Z is the honest ruler", "electron count Z se fix hota hai ⇒ Z hi honest ruler hai")}
         </Chip>
       </Fade>
