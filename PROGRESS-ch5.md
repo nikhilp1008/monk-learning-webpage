@@ -90,6 +90,17 @@ Done only on VERDICT PASS (both languages, overlaps=0 overflow=0 empty=0).
 - [x] Sec 33 — Tips: 5 rows (bomb/cup conversion, adiabatic!=isothermal, sign-swap, lattice sign,
       free expansion) + green freeze-the-variable pro-tip. SUBTOPIC 4 DONE (8/8).
 
-## Current
-Subtopic 4 (Calorimetry/Processes/Additional Enthalpy Changes) complete, secs 26-33 pushed.
-Next: Sec 34 (Chapter Formula Recap), Sec 35 (Chapter Cheat Sheet) — FINAL TWO SECTIONS.
+- [x] Sec 34 — Chapter formula recap: four-quadrant board, one per subtopic, every major
+      formula in the chapter in one reference.
+- [x] Sec 35 — Quick-recall cheat sheet: seven mnemonic rows spanning the whole chapter
+      (signs, state-vs-path, R/Δngas, formation-vs-bond direction, Gibbs four cases,
+      surroundings sign + rate, bomb/cup + adiabatic/isothermal). FINAL SECTION.
+
+## CHAPTER COMPLETE — 35/35 sections done, verified (both languages), committed, pushed.
+
+All 4 subtopics + formula recap + cheat sheet done:
+1. Thermodynamic Terms, First Law, Internal Energy & Enthalpy (1-9)
+2. Thermochemistry, Enthalpy of Reactions & Hess's Law (10-17)
+3. Entropy, Gibbs Free Energy, Spontaneity & the Second/Third Laws (18-25)
+4. Calorimetry, Thermodynamic Processes & Additional Enthalpy Changes (26-33)
+5. Recap (34) + Cheat Sheet (35)
