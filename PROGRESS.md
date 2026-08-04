@@ -399,5 +399,14 @@ an existing physics section (fallback board_content path unchanged).
   ratio→convert back, name your step). PASS both languages, 0 stalls,
   eyeballed clean.
 
+- Sec 48: Worked examples: mass-to-mass and limiting reagent — CBSE
+  CaCO₃→CO₂ mass-to-mass (M=100→0.50mol→1:1 ratio→22g CO₂) fully fades to
+  free the board for a NEET limiting-reagent speed trap (2mol H₂+1.5mol
+  O₂→2H₂O: ÷coefficient gives H₂=1<O₂=1.5 so H₂ limiting, water fixed at
+  2mol by the 2:2 ratio), closing on the classic trap of comparing raw
+  moles instead of dividing by the coefficient first. PASS both languages,
+  1 advisory stall (expected at the erase-and-rewrite beat), eyeballed
+  clean.
+
 ## Current
-Sec 48 next.
+Sec 49 next.
