@@ -65,5 +65,15 @@ an existing physics section (fallback board_content path unchanged).
   that appearance is the trap, count substance-types not looks. PASS both
   languages, eyeballed clean.
 
+- Sec 6: Worked examples: changes and the edge case — JEE Main 4-row
+  classification (camphor/milk/sugar/digestion) dims to free the board for the
+  JEE Advanced CuSO₄-vs-NaCl edge case: NaCl crystal → ions disperse → fully
+  recovered (physical ✓) alongside CuSO₄ white→"BLUE" (hydrated, + heat,
+  chemically distinct — house palette has no blue so the colour fact is
+  carried by the text label, not literal hue). Guardrail that colour change +
+  heat are chemical-interaction warning signs. PASS both languages, eyeballed
+  clean (verified the two verdict chips don't actually overlap despite sitting
+  close together).
+
 ## Current
-Sec 6 next.
+Sec 7 next.
