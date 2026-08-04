@@ -151,5 +151,12 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   equatorial F, big LP) → asymmetric→POLAR (vs symmetric SF₆) → green answer
   chip (sp³d · see-saw · POLAR).
 
+- Sec 18 — Worked example bond angle order H₂O/H₂S/H₂Se: 3 bent structures
+  built side-by-side (O/S/Se, 2H, 2LP each) with color-coded angle stamps
+  (104.5° green, 92° amber, 91° red) → "SN=4,sp³,bent yet angles differ" →
+  electronegativity argument (2 lines) → s-character argument → green order
+  chip (H₂O>H₂S>H₂Se, same hybridisation ≠ same angle).
+
 ## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 18.
+Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 19
+(closes subtopic 2).
