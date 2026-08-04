@@ -460,5 +460,14 @@ an existing physics section (fallback board_content path unchanged).
   that water added ≠ final volume. PASS both languages, 0 stalls,
   eyeballed clean.
 
+- Sec 54: Every concentration relation in one place — the master formulas
+  sheet: molarity/molality one-liners with their temp-dependence tags,
+  mole fraction, mass%/ppm/ppb as the same fraction with different
+  multipliers, normality=n-factor×molarity and strength=molarity×molar
+  mass, the dilution/mixing relation, then two boxed hard-interconversion
+  formulas (mass%→molarity via density; the exact molarity→molality
+  relation) each with a one-line "why" underneath. PASS both languages, 0
+  stalls, eyeballed clean.
+
 ## Current
-Sec 54 next.
+Sec 55 next.
