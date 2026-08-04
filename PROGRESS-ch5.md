@@ -41,6 +41,14 @@ Done only on VERDICT PASS (both languages, overlaps=0 overflow=0 empty=0).
 - [x] Sec 9 — Tips: four red trap chips (sign of work, wrong R, Δngas counting, q/w not state
       functions) + green isothermal-reflex pro-tip. SUBTOPIC 1 DONE (9/9).
 
+- [x] Sec 10 — Enthalpy of reaction: side-by-side exo (green)/endo (red) enthalpy-level diagrams.
+- [x] Sec 11 — Hess's law: A-D-B triangle cycle (direct = step1+step2), formation table datum.
+- [x] Sec 12 — Family of enthalpy changes: 3x2 card grid (formation/combustion/neutralisation/
+      phase transitions/bond/lattice enthalpy).
+- [x] Sec 13 — Three engines: Hess algebra legal moves, bond-enthalpy method, Born-Haber loop
+      order + sign discipline.
+- [x] Sec 14 — Master formulas: ΔrH from formation/bond enthalpies (opposite direction red note),
+      ΔsubH, full Born-Haber formula.
+
 ## Current
-Subtopic 1 (Thermo Terms/First Law) complete, secs 1-9 pushed. Next: Sec 10
-(Thermochemistry/Hess's Law subtopic, secs 10-17).
+Subtopic 2 (Thermochemistry/Hess's Law, secs 10-17) in progress, secs 10-14 done. Next: Sec 15.
