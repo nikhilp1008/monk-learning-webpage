@@ -2929,6 +2929,10 @@ import C11Ch04Sec16 from "./C11Ch04Sec16";
 import C11Ch04Sec17 from "./C11Ch04Sec17";
 import C11Ch04Sec18 from "./C11Ch04Sec18";
 import C11Ch04Sec19 from "./C11Ch04Sec19";
+// Secs 20-24, 26-28 authored later — their English audio (Hinglish for 20-24,
+// 26-28) is truncated to a placeholder 68s/8-beat duration in Supabase. See
+// PROGRESS-chem4.md "Blocked" section. Sec 25 has real audio and is registered.
+import C11Ch04Sec25 from "./C11Ch04Sec25";
 
 const C11CH04 = "862ab5f0-4fa8-5e6f-98d5-74fe5b10ab8e";
 REGISTRY[`${C11CH04}:1`] = C11Ch04Sec1;
@@ -2949,3 +2953,4 @@ REGISTRY[`${C11CH04}:16`] = C11Ch04Sec16;
 REGISTRY[`${C11CH04}:17`] = C11Ch04Sec17;
 REGISTRY[`${C11CH04}:18`] = C11Ch04Sec18;
 REGISTRY[`${C11CH04}:19`] = C11Ch04Sec19;
+REGISTRY[`${C11CH04}:25`] = C11Ch04Sec25;

@@ -163,7 +163,14 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   shrinking forces: more LPs, less EN centre) + green chip. SUBTOPIC 2 DONE
   (9/9, all real audio, no blocks).
 
+- Sec 25 — Worked example O₂ MO configuration: full 7-level MO energy diagram
+  built bottom-to-top by Aufbau order (σ1s, σ*1s, σ2s, σ*2s, σ2pz, degenerate
+  π2px/π2py, degenerate π*2px/π*2py with single red ↑'s for Hund's rule) on
+  the left, with config text / bonding-antibonding count / BO=2 / PARAMAGNETIC
+  / green answer chip on the right. The signature MOT worked example.
+
 ## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 DONE (9/9). Starting
-Subtopic 3 (MOT & H-Bonding, secs 20-28) — only sec 25 has real audio; 20-24
-and 26-28 are blocked (see Blocked section above). Next: Sec 25.
+Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 DONE (9/9). Subtopic 3:
+only Sec 25 unblocked (done) — 20-24, 26-28 remain blocked on audio (see
+Blocked section). Moving to Subtopic 4 (Sec 29-36) next, then Subtopic 5
+(Sec 37-38).
