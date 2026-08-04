@@ -354,5 +354,14 @@ an existing physics section (fallback board_content path unchanged).
   18x/(120+18x)=0.512 → x≈7 → Epsom salt, verified). PASS both languages,
   eyeballed clean.
 
+- Sec 43: Pitfalls and the 100 gram trick — 4 pitfall rows (mass ratios
+  instead of moles, rounding away genuine fractions, stopping at empirical
+  formula, measuring combustion O directly), boxed pro-tip (100g sample
+  trick + sanity check that masses sum to total), 4 memory aids,
+  forward-looking close into Part 4 (Stoichiometry & Concentration Terms).
+  Fixed a stray apostrophe typo before verifying. PASS both languages, 0
+  stalls, eyeballed clean. **Subtopic 6 (Percentage Composition, Empirical &
+  Molecular Formula, Sec 37-43) complete.**
+
 ## Current
-Sec 43 next (closes subtopic 6).
+Sec 44 next (starts subtopic 7: Stoichiometry & Limiting Reagent).
