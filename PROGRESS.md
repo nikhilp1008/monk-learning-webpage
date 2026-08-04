@@ -254,5 +254,14 @@ revisit these together with Sec 4/19–23 above as one batch.
   arrows → named-series explanation → Bohr's climax closer. PASS both
   languages, FORCE_SHOTS eyeballed clean — best diagram yet.
 
+- Sec 33: de Broglie derives Bohr's quantisation — standing-wave analogy
+  caption → guardrail (whole number of wavelengths) → 2πr=nλ chip →
+  λ=h/mv⇒mvr=nh/2π boxed green → a real parametrically-generated wavy closed
+  loop (8 humps) wrapped around a reference circle with the nucleus at
+  center, visually proving "a whole number of wavelengths fits the orbit" →
+  guardrail (Bohr assumed it, de Broglie DERIVED it) → n-count closer.
+  PASS both languages, FORCE_SHOTS eyeballed clean — striking diagram.
+
 ## Current
-Sec 33: "de Broglie derives Bohr's quantisation" — starting.
+Sec 37: "Worked example (CBSE): radius and energy of He+ (n=3)" — starting
+(skipping deferred 34–36, placeholder audio).
