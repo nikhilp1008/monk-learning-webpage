@@ -21,6 +21,7 @@ import type {
 } from "@/lib/drona/types";
 import { SessionView } from "@/components/drona/SessionView";
 import { EndStatesView } from "@/components/drona/EndStatesView";
+import { DronaVoiceClient, VoiceClientState } from "@/lib/drona/voice";
 
 /* ─── Subject icon SVGs (ported from design-reference/index.html) ─── */
 function PhysicsIcon() {
@@ -403,46 +404,73 @@ export default function LearnPage() {
     }
   }, [freeTextInput]);
 
+  /* ─── Drona Voice Client Lifecycle ─── */
+  const voiceClientRef = useRef<DronaVoiceClient | null>(null);
+  const [voiceState, setVoiceState] = useState<VoiceClientState | undefined>();
+
+  useEffect(() => {
+    if (flowState === "session" && sessionId) {
+      const client = new DronaVoiceClient({
+        sessionId,
+        onStateChange: (st) => setVoiceState(st),
+        onSpeechText: (text, isFinal) => {
+          if (text) {
+            setTranscript((prev) => {
+              const last = prev[prev.length - 1];
+              if (last && last.sender === "drona" && last.id.startsWith("voice-")) {
+                return [...prev.slice(0, -1), { ...last, text }];
+              }
+              return [
+                ...prev,
+                {
+                  id: "voice-" + Date.now(),
+                  sender: "drona",
+                  text,
+                  timestamp: new Date(),
+                },
+              ];
+            });
+          }
+        },
+        onBoardUpdate: (latex) => {
+          if (latex) setBoardLatex(latex);
+        },
+        onSessionEnded: () => {
+          handleEndSession();
+        },
+      });
+
+      client.connect().catch((err) => console.warn("Voice WS connect failed:", err));
+      voiceClientRef.current = client;
+
+      return () => {
+        client.disconnect();
+        voiceClientRef.current = null;
+      };
+    }
+  }, [flowState, sessionId]);
+
   /* ─── RENDER: Session View ─── */
   if (flowState === "session") {
     return (
       <div className="min-h-screen flex flex-col bg-ruled-body">
         <Header />
         <main className="flex-1 max-w-[1180px] w-full mx-auto px-0 md:px-6 animate-ml-rise" style={{ paddingTop: 0 }}>
-          {/* Session header bar */}
-          <div className="flex items-center justify-between gap-3 flex-wrap px-6 md:px-0 py-3">
-            <div className="flex items-center gap-2.5">
-              <span className="inline-flex items-center gap-2 font-bold text-[0.84rem] border border-[rgba(28,26,22,0.12)] rounded-full py-[7px] px-[14px] bg-white">
-                <span className="w-[7px] h-[7px] rounded-full bg-[#EEA31F]" />
-                {sessionTopic}
-              </span>
-              <span className="inline-flex items-center gap-[7px] font-extrabold text-[0.7rem] tracking-[0.12em] uppercase text-[#157A45]">
-                <span className="w-[7px] h-[7px] rounded-full bg-[#1C9B57] animate-pulse" />
-                Live
-              </span>
-            </div>
-            <div className="flex items-center gap-3">
-              <button
-                onClick={handleEndSession}
-                className="inline-flex items-center gap-2 font-bold text-[0.86rem] py-[9px] px-[18px] rounded-full border-[1.4px] border-[rgba(221,68,51,0.4)] bg-[rgba(221,68,51,0.05)] text-[#C53A2B] cursor-pointer hover:bg-[#DD4433] hover:border-[#DD4433] hover:text-white transition-all"
-              >
-                <svg viewBox="0 0 24 24" width={11} height={11} fill="currentColor">
-                  <rect x={5} y={5} width={14} height={14} rx={2.5} />
-                </svg>
-                End class
-              </button>
-            </div>
-          </div>
-
-          {/* Board + Transcript */}
+          {/* Board + Transcript + Command Dock */}
           <SessionView
+            sessionTopic={sessionTopic}
             boardLatex={boardLatex}
             transcript={transcript}
             segmentIndex={segmentIndex}
             totalSegments={totalSegments}
             phase={sessionPhase}
             isStreaming={isStreaming}
+            voiceState={voiceState}
             onSendTurn={handleSendTurn}
+            onEndSession={handleEndSession}
+            onToggleMute={() => voiceClientRef.current?.toggleMute()}
+            onInterrupt={() => voiceClientRef.current?.interrupt()}
+            onTogglePause={() => voiceClientRef.current?.togglePause()}
           />
         </main>
       </div>
