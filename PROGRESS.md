@@ -326,5 +326,13 @@ an existing physics section (fallback board_content path unchanged).
   assumption, boxed slogan (empirical=recipe, molecular=batch, n=batch size).
   PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 39: The empirical routine and combustion analysis — the 5-step
+  algorithm (assume 100g→%=grams, ÷atomic mass→moles, ÷smallest, clear
+  fractions, write as subscripts) with step② flagged as the whole game
+  (number ratios not mass ratios), fraction-clearing rules, genuine-fraction-
+  vs-rounding-noise guardrail, combustion variant (C→CO₂, H→H₂O), oxygen by
+  difference (+why), shortcut when M is known. PASS both languages, 0 stalls,
+  eyeballed clean.
+
 ## Current
-Sec 39 next.
+Sec 40 next.
