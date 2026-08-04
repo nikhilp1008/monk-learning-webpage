@@ -391,5 +391,13 @@ an existing physics section (fallback board_content path unchanged).
   method with a quicker first conversion. PASS both languages, 0 stalls,
   eyeballed clean.
 
+- Sec 47: The mole ratio bridge and yield relations — formulas reference
+  sheet. Boxed master relation (mol(A)/coeff(A)=mol(B)/coeff(B)), limiting
+  reagent rule, excess-remaining formula, boxed-style %yield formula, the
+  two on-ramp conversions (STP gas V/22.4, solute M×V), the POAC relation
+  with the KClO₃ example, and the closing spine recap (balance→moles→
+  ratio→convert back, name your step). PASS both languages, 0 stalls,
+  eyeballed clean.
+
 ## Current
-Sec 47 next.
+Sec 48 next.
