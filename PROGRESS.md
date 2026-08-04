@@ -223,5 +223,14 @@ an existing physics section (fallback board_content path unchanged).
   multiple, 3 elements via 1 common=reciprocal, gases+volumes=combining
   volumes). PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 25: Gay-Lussac, Avogadro and the diatomic gases — Gay-Lussac's combining
+  volumes law conflicts with Dalton's indivisible-atom bricks; HCl evidence
+  drawn bond-by-bond (H₂+Cl₂ → 2 HCl via ReactionArrow, atoms as bonded
+  circles) proves molecules split, landing diatomicity. Avogadro's resolution,
+  atom/molecule/atomicity definitions, backwards deduction (O,N diatomic;
+  noble gases monoatomic; ozone triatomic), guardrail that combining volumes
+  is gases-only. First use of chem-kit's bondD/ReactionArrow in this chapter.
+  PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 25 next.
+Sec 26 next.
