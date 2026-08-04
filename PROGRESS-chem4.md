@@ -202,8 +202,12 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   RULE, P resists hybridisation), each landing a colored answer chip, closed
   by a shared "spot what changed" insight line.
 
+- Sec 37 — Chapter formula recap: 4-card row (formal charge, dipole moment, %
+  ionic character, bond length+trend) → 2-card row (SN/H, MOT bond order) →
+  MO ordering comparison line (≤N₂ vs >N₂) → anchor numbers (debye constant,
+  H₂ well, ideal angles 180/120/109.5/90°).
+
 ## Current
 Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 DONE (9/9). Subtopic 3:
 only Sec 25 done (1/9, rest blocked). Subtopic 4 DONE for all unblocked
-sections (31,32,34 — 29,30,33,35,36 blocked). Moving to Subtopic 5 (Sec
-37-38, fully ready).
+sections (31,32,34). Subtopic 5: Sec 37 done. Next: Sec 38 (final section).
