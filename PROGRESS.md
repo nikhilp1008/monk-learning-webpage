@@ -83,5 +83,12 @@ an existing physics section (fallback board_content path unchanged).
   both languages, 0 stalls, eyeballed clean. **Subtopic 1 (Nature of Matter,
   Sec 1-7) complete.**
 
+- Sec 8: Quantity, unit, and the seven SI base units — shopkeeper anchor
+  ("five sugar — five WHAT?"), quantity=number×unit landing, 7-card grid built
+  together (length/mass/time/current/temp/amount/luminous → metre/kg/s/A/K/
+  mol/cd), mole ringed as "the engine of this chapter", derived units (area,
+  volume, speed, density, pressure, energy) as closing recognise-only notes.
+  PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 8 next (starts subtopic 2: Measurement & SI Units).
+Sec 9 next.
