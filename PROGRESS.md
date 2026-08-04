@@ -312,5 +312,12 @@ an existing physics section (fallback board_content path unchanged).
   languages, eyeballed clean. **Subtopic 5 (Atomic/Molecular Masses & Mole
   Concept, Sec 30-36) complete.**
 
+- Sec 37: Percentage composition and the two formula layers — kaju katli
+  %composition anchor, chai-recipe layer-1 analogy → empirical formula
+  (glucose=CH₂O), layer-2 → molecular formula (glucose=C₆H₁₂O₆=6×CH₂O),
+  cricket-squad analogy for the multiplier n, n=molar mass/empirical formula
+  mass, callback that atoms combining in whole-number ratios = definite
+  proportions at atomic scale. PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 37 next (starts subtopic 6: Percentage Composition / Empirical & Molecular Formula).
+Sec 38 next.
