@@ -268,5 +268,11 @@ revisit these together with Sec 4/19–23 above as one batch.
   answer stated → guardrail (entire method = plug n,Z into the two ratios).
   PASS both languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 38: Worked example (NEET): same transition, different ion — given (H
+  Lyman 1216Å) → guardrail (the trap: relaunching full Rydberg calc) →
+  Z²-scaling explain → ratio 1/4 boxed green → 304Å boxed green → fast
+  answer → guardrail (Z² scaling, never recompute from scratch). PASS both
+  languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 38: "Worked example (NEET): same transition, different ion" — starting.
+Sec 39: "Worked example (JEE Main): standing wave in the n=2 orbit" — starting.
