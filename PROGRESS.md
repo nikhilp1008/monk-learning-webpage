@@ -176,5 +176,12 @@ an existing physics section (fallback board_content path unchanged).
   with their reasons, boxed weakest-link principle, crisp accuracy/precision
   recap. PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 19: Worked examples: counting and rounding — CBSE example counts sig
+  figs in 5 numbers (0.00250→3, 1.004→4, 50000→1, 6.022×10²³→4, 100.0→4,
+  with the 50000-vs-100.0 decimal-point contrast), fully fades to free the
+  board for a NEET example rounding 3 numbers to 3 sig figs (2.745→2.74 even
+  stays, 2.735→2.74 odd climbs, 0.023456→0.0235), guardrail on the reflexive
+  round-up trap. PASS both languages, eyeballed clean.
+
 ## Current
-Sec 19 next.
+Sec 20 next.
