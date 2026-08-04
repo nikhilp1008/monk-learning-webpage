@@ -479,5 +479,16 @@ an existing physics section (fallback board_content path unchanged).
   never the name. PASS both languages, 1 advisory stall (expected at the
   erase-and-rewrite beat), eyeballed clean.
 
+- Sec 56: Worked examples: density, mixing and dilution — JEE Main
+  molality→density→molarity chain (2.0 molal, M=50g/mol, d=1.05g/mL:
+  mass solute=100g, mass solution=1100g, volume=1.0476L, M=1.91mol/L)
+  fully fades to free the board for a JEE Advanced mixing+dilution
+  problem (two H₂SO₄ solutions mixed then diluted to 500mL: moles
+  conserved at 0.080mol total, M=0.16mol/L catching the trap that
+  dilution uses the FINAL volume not the mixed-volume sum, then
+  N=0.32N via basicity=2) chaining mixing, dilution, and M→N conversion
+  in one pass. PASS both languages, 1 advisory stall (expected at the
+  erase-and-rewrite beat), eyeballed clean.
+
 ## Current
-Sec 56 next.
+Sec 57 next (closes subtopic 8: Concentration Terms).
