@@ -134,5 +134,11 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   trigonal pyramidal, 107°) and H₂O worked (2 LP, bent, 104.5°) built
   side-by-side for direct comparison of how more lone pairs squeeze further.
 
+- Sec 15 — Ethane-ethene-ethyne ladder: H₂ energy-well curve (74pm, 435.8
+  kJ/mol) → carbon promotion line → 3-row ladder (H₃C–CH₃ sp³ single/154pm/
+  free rotation, H₂C=CH₂ sp² double σ+π/134pm/locked, HC≡CH sp triple σ+2π/
+  ~120pm/shortest) built with single/double/triple bond lines → trend
+  (s-character↑, length↓, strength↑) + green chip.
+
 ## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 15.
+Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 16.
