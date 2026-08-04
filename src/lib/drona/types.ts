@@ -7,6 +7,7 @@ export interface Subtopic {
 export interface Chapter {
   id: string;
   name: string;
+  class_level?: number;
   subtopics: Subtopic[];
 }
 

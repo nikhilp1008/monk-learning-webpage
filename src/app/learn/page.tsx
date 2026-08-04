@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo, useCallback } from "react";
+import { useEffect, useState, useMemo, useCallback, useRef } from "react";
 import { Header } from "@/components/Header";
 import { supabase } from "@/lib/supabase";
 import { getTutorName } from "@/lib/drona/tutor";
@@ -96,7 +96,6 @@ export default function LearnPage() {
   const [flowState, setFlowState] = useState<FlowState>("picker");
 
   /* ─── Session state ─── */
-  const [sessionId, setSessionId] = useState<string | null>(null);
   const [sessionTopic, setSessionTopic] = useState("");
   const [scopingSpeech, setScopingSpeech] = useState("");
   const [scopingOptions, setScopingOptions] = useState<string[]>([]);
@@ -169,26 +168,37 @@ export default function LearnPage() {
     return catalogue.map(g => g.subject);
   }, [catalogue]);
 
-  /* ─── Derived: filtered chapters ─── */
-  const filteredChapters = useMemo(() => {
+  /* ─── Session ID Ref (prevents stale closures in async callbacks) ─── */
+  const [sessionId, setSessionIdState] = useState<string | null>(null);
+  const sessionIdRef = useRef<string | null>(null);
+
+  const setSessionId = useCallback((id: string | null) => {
+    sessionIdRef.current = id;
+    setSessionIdState(id);
+  }, []);
+
+  /* ─── Derived: chapters for selected subject & class ─── */
+  const allSubjectChapters = useMemo(() => {
     const group = catalogue.find(g => g.subject === selectedSubject);
-    if (!group) return [];
-    // Filter by class_level — chapters don't have class_level in SubjectGroup,
-    // so we show all from the catalogue for the selected subject.
-    // The API should already filter by class, but if not we show all.
-    let chapters = group.chapters;
+    return group ? group.chapters : [];
+  }, [catalogue, selectedSubject]);
+
+  const filteredChapters = useMemo(() => {
+    let chapters = allSubjectChapters;
+    // Filter on class_level (B4)
+    chapters = chapters.filter(c => c.class_level === undefined || c.class_level === selectedClass);
     if (searchTerm.trim()) {
       const q = searchTerm.toLowerCase();
       chapters = chapters.filter(c => c.name.toLowerCase().includes(q));
     }
     return chapters;
-  }, [catalogue, selectedSubject, searchTerm]);
+  }, [allSubjectChapters, selectedClass, searchTerm]);
 
   /* ─── Chapter count label ─── */
   const chapterCountLabel = useMemo(() => {
-    const total = filteredChapters.length;
-    return `${total} of ${total} chapters`;
-  }, [filteredChapters]);
+    const classTotal = allSubjectChapters.filter(c => c.class_level === undefined || c.class_level === selectedClass).length;
+    return `${filteredChapters.length} of ${classTotal} chapters`;
+  }, [filteredChapters, allSubjectChapters, selectedClass]);
 
   /* ─── Pick a chapter → start session ─── */
   const handlePickChapter = useCallback(async (chapter: Chapter) => {
@@ -215,44 +225,16 @@ export default function LearnPage() {
       setError("Failed to start session. Please try again.");
       setFlowState("picker");
     }
-  }, []);
-
-  /* ─── Scoping → teaching ─── */
-  const handleSendScope = useCallback(async (utterance: string) => {
-    if (!sessionId) return;
-    setScopingPlanReady(false);
-    try {
-      const res = await scopeSession(sessionId, utterance);
-      setSessionTopic(res.subtopic || utterance);
-
-      // Transition to session
-      setFlowState("session");
-      setBoardLatex("");
-      setTranscript([{
-        id: "scoping-" + Date.now(),
-        sender: "drona",
-        text: res.speech,
-        timestamp: new Date(),
-      }]);
-      setSegmentIndex(1);
-      setTotalSegments(1);
-      setSessionPhase("teaching");
-
-      // Fire first turn
-      fireTeachingTurn();
-    } catch (err) {
-      console.error("Scoping failed:", err);
-      setScopingPlanReady(true);
-    }
-  }, [sessionId]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [setSessionId]);
 
   /* ─── Fire a teaching turn ─── */
-  const fireTeachingTurn = useCallback(async () => {
-    if (!sessionId) return;
+  const fireTeachingTurn = useCallback(async (activeSessionId?: string) => {
+    const sid = activeSessionId || sessionIdRef.current;
+    if (!sid) return;
     setIsStreaming(true);
 
     await streamTurn(
-      sessionId,
+      sid,
       { utterance: null, turn_type: "no_response", playback_cutoff_point: null },
       {
         onSpeech: (delta) => {
@@ -291,7 +273,40 @@ export default function LearnPage() {
         },
       }
     );
-  }, [sessionId]);
+  }, []);
+
+  /* ─── Scoping → teaching (B2 fix) ─── */
+  const handleSendScope = useCallback(async (utterance: string) => {
+    const sid = sessionIdRef.current;
+    if (!sid) {
+      console.error("handleSendScope aborted: sessionId is null");
+      return;
+    }
+    setScopingPlanReady(false);
+    try {
+      const res = await scopeSession(sid, utterance);
+      setSessionTopic(res.subtopic || utterance);
+
+      // Transition to session
+      setFlowState("session");
+      setBoardLatex("");
+      setTranscript([{
+        id: "scoping-" + Date.now(),
+        sender: "drona",
+        text: res.speech,
+        timestamp: new Date(),
+      }]);
+      setSegmentIndex(1);
+      setTotalSegments(1);
+      setSessionPhase("teaching");
+
+      // Fire first turn with explicit session ID
+      fireTeachingTurn(sid);
+    } catch (err) {
+      console.error("Scoping failed:", err);
+      setScopingPlanReady(true);
+    }
+  }, [fireTeachingTurn]);
 
   /* ─── Send student turn ─── */
   const handleSendTurn = useCallback(async (utterance: string) => {
@@ -722,6 +737,21 @@ export default function LearnPage() {
                 })}
               </div>
             )}
+
+            {/* Start learning button */}
+            <button
+              onClick={() => {
+                const targetChapter = filteredChapters.find(c => c.id === selectedChapterId) || filteredChapters[0];
+                if (targetChapter) handlePickChapter(targetChapter);
+              }}
+              disabled={filteredChapters.length === 0}
+              className="flex items-center justify-center gap-[9px] w-full font-semibold text-[0.95rem] py-[14px] rounded-full border-none text-[#FCFAF4] bg-ink shadow-[0_10px_24px_-12px_rgba(28,26,22,0.7)] cursor-pointer hover:-translate-y-[2px] transition-transform disabled:opacity-50 mt-2"
+            >
+              Start learning
+              <svg viewBox="0 0 16 16" width={14} height={14} fill="none">
+                <path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
           </div>
 
           {/* ─── RIGHT: sidebar cards ─── */}
