@@ -291,5 +291,12 @@ an existing physics section (fallback board_content path unchanged).
   average, vapour density M=2×VD, units/dimensions, boxed procedural rule
   (identify→moles→target). PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 34: Worked examples: moles, atoms and atomicity — CBSE Al example
+  (13.5g/27=0.5mol → 3.011×10²³ atoms) fully fades to free the board for a
+  NEET "max atoms" comparison (4g H₂→4mol atoms wins vs 16g O₂→1mol, 23g Na→
+  1mol, 4g He→1mol), guardrail on forgetting diatomicity, speed tip to compare
+  fractions instead of full values since Nₐ cancels. PASS both languages,
+  eyeballed clean.
+
 ## Current
-Sec 34 next.
+Sec 35 next.
