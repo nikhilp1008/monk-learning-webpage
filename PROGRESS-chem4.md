@@ -96,6 +96,13 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   chip. Benign "stall" at the erase beat confirmed via screenshot (Part B
   genuinely renders, unlike Sec 6's real bug).
 
+- Sec 9 — Worked example: azide ion resonance: electron count (16) → bracketed
+  [N=N=N]⁻ structure built bond-by-bond (2 double bonds, lone pairs on
+  terminals only, charge superscript) → central/terminal FC calc lines (+1,
+  −1 each, sum −1 ✓) → resonance notation N≡N−N ↔ N=N=N ↔ N−N≡N → average
+  bond order = 2 → closing insight (identical bond lengths, blended not
+  flickering) + green chip.
+
 ## Current
 Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Sec 6 blocked
-(see above). Next: Sec 9.
+(see above). Next: Sec 10 (closes subtopic 1).

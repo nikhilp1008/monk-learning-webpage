@@ -2918,6 +2918,7 @@ import C11Ch04Sec5 from "./C11Ch04Sec5";
 // PROGRESS-chem4.md "Blocked" section.
 import C11Ch04Sec7 from "./C11Ch04Sec7";
 import C11Ch04Sec8 from "./C11Ch04Sec8";
+import C11Ch04Sec9 from "./C11Ch04Sec9";
 
 const C11CH04 = "862ab5f0-4fa8-5e6f-98d5-74fe5b10ab8e";
 REGISTRY[`${C11CH04}:1`] = C11Ch04Sec1;
@@ -2927,3 +2928,4 @@ REGISTRY[`${C11CH04}:4`] = C11Ch04Sec4;
 REGISTRY[`${C11CH04}:5`] = C11Ch04Sec5;
 REGISTRY[`${C11CH04}:7`] = C11Ch04Sec7;
 REGISTRY[`${C11CH04}:8`] = C11Ch04Sec8;
+REGISTRY[`${C11CH04}:9`] = C11Ch04Sec9;
