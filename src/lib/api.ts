@@ -16,9 +16,10 @@ export async function apiFetch<T>(
   endpoint: string,
   options: RequestInit = {}
 ): Promise<T> {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_API_URL ||
-    "https://monk-learning-api-production.up.railway.app";
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
+  if (!baseUrl) {
+    throw new Error("NEXT_PUBLIC_API_URL environment variable is not defined");
+  }
 
   const {
     data: { session },
