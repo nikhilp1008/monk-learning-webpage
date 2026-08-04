@@ -183,5 +183,13 @@ an existing physics section (fallback board_content path unchanged).
   stays, 2.735→2.74 odd climbs, 0.023456→0.0235), guardrail on the reflexive
   round-up trap. PASS both languages, eyeballed clean.
 
+- Sec 20: Worked examples: both rules in one problem — JEE Main sheet
+  (2.1×3.46 cm) shows addition rule governing the perimeter sum (5.6, exact
+  ×2 → 11.2 cm) vs multiplication rule governing area (7.3 cm², from 2.1's
+  2 sf), landing that decimals govern sums while sig figs govern products;
+  fully fades to free the board for a JEE Advanced sci-notation addition
+  (4.5×10⁴+2.3×10³, align exponents first → 4.7×10⁴). PASS both languages,
+  eyeballed clean.
+
 ## Current
-Sec 20 next.
+Sec 21 next.
