@@ -418,5 +418,15 @@ an existing physics section (fallback board_content path unchanged).
   LR-before-yield rigor. PASS both languages, 1 advisory stall (expected
   at the erase-and-rewrite beat), eyeballed clean.
 
+- Sec 50: Pitfalls and the coefficient-division habit — 4 pitfall rows
+  (skipping balancing, ratios of grams instead of moles, comparing raw
+  moles for the limiting reagent, anchoring product on the wrong
+  reactant), boxed speed trick (write moles above each coefficient, read
+  the ratio in one glance), 3 memory aids (the four-step spine, ÷ by
+  coefficient, anchor on the limiter). Shortened two rule lines that
+  initially overflowed past the safe boundary. PASS both languages, 0
+  stalls, eyeballed clean. **Subtopic 7 (Stoichiometry & Limiting Reagent,
+  Sec 44-50) complete.**
+
 ## Current
-Sec 50 next (closes subtopic 7: Stoichiometry & Limiting Reagent).
+Sec 51 next (starts subtopic 8: Concentration Terms).
