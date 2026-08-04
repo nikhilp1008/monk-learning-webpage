@@ -382,5 +382,14 @@ an existing physics section (fallback board_content path unchanged).
   order-is-fixed closing rule. PASS both languages, eyeballed clean
   (advisory stall at the erase-and-rewrite beat, expected/harmless).
 
+- Sec 46: Four routes into a stoichiometry problem — a 2×2 grid of dashed
+  amber boxes (Route A general mole method's 4-step spine; Route B POAC
+  atom-conservation with the KClO₃ example plus why it's faster for messy
+  equations; Route C gas volumes at same T,P via Gay-Lussac/Avogadro with
+  the N₂+3H₂→2NH₃ litres example; Route D solutions via molarity×volume)
+  closing with the unifying insight that all four are the ordinary mole
+  method with a quicker first conversion. PASS both languages, 0 stalls,
+  eyeballed clean.
+
 ## Current
-Sec 46 next.
+Sec 47 next.
