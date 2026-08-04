@@ -45,12 +45,47 @@ free space or fully remove old content; no scrolling), then `chem-kit.tsx`.
   icon) → period-capacity ladder (2,8,8,18,18,32,32 chips) → subshells behind
   each number (1s; 2s2p; …; 7s5f6d7p) → "not coincidence" red-margin closer.
 
-All five verified PASS both languages, clean (no overlaps/overflow), and
-spot-checked by eye (FORCE_SHOTS on final + a couple of mid-beats each).
-Pushed to origin through Sec 5.
+- Sec 6 — Mendeleev's crystal ball (eka-elements): real Al/Si cells with
+  dashed eka-Al/eka-Si gap cells below → prediction card (EO₂, ECl₄) →
+  red-margin germanium-matches-exactly moment → gaps fill into Ga/Ge with
+  green rings → closing known-predicted-known smooth-trend curve.
+- Sec 7 — Naming elements beyond Z=100: number-line anchor → 10 IUPAC roots
+  (2×5 chips) → 4-step procedure → symbol rule → worked Z=124 build (digit
+  boxes → root boxes → green "unbiquadium (Ubq)" stamp) → red-margin sanity
+  check → JEE Main closer.
+- Sec 8 — Reasoning chain, weight to number: 4-step card chain (anomalies →
+  deeper variable → Moseley's evidence → order by Z) → K/Ar nucleus-size
+  comparison (neutron-rich explanation) → takeaway stamp. (Fixed the Kalam
+  "Z"→"2" bug here — see Notes.)
+- Sec 9 — Building and reading the long form: 3 rule lines (row=period,
+  subshell=block, valence=group) → THE textbook s/p/d/f block-shape
+  schematic (proportional regions, d starting at period 4, f pulled out
+  below) with red group-range labels and a staircase through the p-block.
+- Sec 10 — Worked example: strontium's mass by the triad rule (CBSE): given
+  Ca/Sr(?)/Ba cells → formula → substitution → green 88.7u answer → red-
+  margin compare to accepted value (87.6u) → verdict → exam-lesson closer.
+- Sec 11 — Worked example: spotting false universals (NEET): 3 numbered
+  statement rows → eliminate-don't-compute strategy → strike-throughs +
+  FALSE/FALSE/TRUE tags with reasons → green "exactly 1 correct" stamp.
+- Sec 12 — Worked example: name and block for Z=124 (JEE Main): compact
+  digit→root→name flow for Part (a) → Part (b) anchors on Og(118)'s full
+  configuration → red-margin predicts the g-block → JEE-favourite closer.
+- Sec 13 — Worked example: argon before potassium (JEE Advanced): given/
+  Part(a) weight-order problem/red-margin Z-resolves-it/Part(b) neutron-rich
+  nucleus comparison/weight-vs-Z fundamentality closer — the JEE Advanced
+  capstone tying the whole subtopic together.
+- Sec 14 — Common pitfalls and pro-tips (subtopic 1 CLOSER): 4 numbered
+  red-ring pitfalls (law-basis swap emphasized) → 5-node chronology chain
+  (Doebereiner→Newlands→Chancourtois/Meyer→Mendeleev→Moseley) with one
+  keyword per link → nomenclature sanity-check closer.
+  ✅ SUBTOPIC 1 (secs 1–14, Development of the Periodic Table) COMPLETE.
+
+All 14 verified PASS both languages, clean (no overlaps/overflow after
+fixes), spot-checked by eye (FORCE_SHOTS on final + a couple of mid-beats
+each). Pushed to origin through Sec 14.
 
 ## Current
-Sec 6 — next.
+Sec 15 — next (subtopic 2: Periodic Trends in Physical Properties, secs 15–29).
 
 ## Notes
 - **CRITICAL FONT BUG (found in Sec 8, fixed in Sec 4 + 8): capital "Z" in the
