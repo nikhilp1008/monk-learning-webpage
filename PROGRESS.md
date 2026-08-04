@@ -363,5 +363,14 @@ an existing physics section (fallback board_content path unchanged).
   stalls, eyeballed clean. **Subtopic 6 (Percentage Composition, Empirical &
   Molecular Formula, Sec 37-43) complete.**
 
+- Sec 44: The balanced equation as a recipe in moles — opens Subtopic 7.
+  Anchors 2H₂+O₂→2H₂O against a flour+sugar→cakes recipe analogy, defines
+  stoichiometry as reading the coefficient ratio, stresses the recipe
+  speaks in MOLES not grams, the conversion channel (given→moles→ratio→
+  moles wanted→convert back), the balanced-first guardrail, a boxed master
+  relation (mol/coefficient same for every species), and the closing rule
+  to convert to moles before ratioing. PASS both languages, 0 stalls,
+  eyeballed clean.
+
 ## Current
-Sec 44 next (starts subtopic 7: Stoichiometry & Limiting Reagent).
+Sec 45 next.
