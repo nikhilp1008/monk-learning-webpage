@@ -106,7 +106,14 @@ export default function C11Ch02Sec33({ currentTime, reveals, language }: ScenePr
       </Fade>
 
       {/* beat 5 — represent: the standing wave wrapped around the orbit */}
-      <Draw on={beat >= 5} delay={dl(5, 0.2)} d="M 635 370 A 95 95 0 1 1 634 370" stroke={MUTED} sw={1.4} dur={0.8} />
+      <Draw
+        on={beat >= 5}
+        delay={dl(5, 0.2)}
+        d="M 445 370 A 95 95 0 1 1 635 370 A 95 95 0 1 1 445 370"
+        stroke={MUTED}
+        sw={1.4}
+        dur={0.8}
+      />
       <Draw on={beat >= 5} delay={dl(5, 1)} d={WAVE_D} stroke={RED} sw={2.2} dur={1.2} />
       <Fade on={beat >= 5} delay={dl(5, 2.3)}>
         <circle cx={540} cy={370} r={6} fill={RED} />
