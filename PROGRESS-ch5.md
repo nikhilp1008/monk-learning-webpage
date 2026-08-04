@@ -34,6 +34,13 @@ Done only on VERDICT PASS (both languages, overlaps=0 overflow=0 empty=0).
       curve (bigger area), free-expansion side panel, cyclic row, formula q(cycle)=-w(cycle).
 - [x] Sec 5 — Formula toolkit: accumulating formula board (master law, irreversible/reversible
       work formulas, R-value caution, free-expansion closer).
+- [x] Sec 6 — Enthalpy H=U+PV, derive ΔH=ΔU+Δngas·RT, red Δngas-counting note, qV/qP pair, Cp-Cv=R.
+- [x] Sec 7 — WE1 (CBSE flask ΔU=+170J) + WE2 (NEET Δngas bridge ΔH≈14.5kJ), red trap note.
+- [x] Sec 8 — WE3 (JEE Main isothermal reversible, ΔU=ΔH=0, q=+6.92kJ) + WE4 (JEE Advanced
+      w(rev) vs w(irr) same states, reversible extracts more work).
+- [x] Sec 9 — Tips: four red trap chips (sign of work, wrong R, Δngas counting, q/w not state
+      functions) + green isothermal-reflex pro-tip. SUBTOPIC 1 DONE (9/9).
 
 ## Current
-Subtopic 1 (Thermo Terms/First Law, secs 1-9). Sections 1-5 pushed. Next: Sec 6.
+Subtopic 1 (Thermo Terms/First Law) complete, secs 1-9 pushed. Next: Sec 10
+(Thermochemistry/Hess's Law subtopic, secs 10-17).
