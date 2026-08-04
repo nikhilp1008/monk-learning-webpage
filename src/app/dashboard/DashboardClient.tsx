@@ -118,7 +118,7 @@ export function DashboardClient({
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr] gap-[18px]">
           {/* Action Card 1: Learn with Monk */}
           <Link
-            href="/lessons"
+            href="/learn"
             className="relative overflow-hidden flex flex-col p-[24px] rounded-[22px] bg-[#16130E] text-[#EFEBDD] border border-[#2a2419] shadow-ref-hero hover:-translate-y-1 transition-transform group"
           >
             <span
