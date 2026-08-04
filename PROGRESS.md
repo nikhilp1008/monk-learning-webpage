@@ -156,5 +156,13 @@ shorter beat schedules.
   languages, FORCE_SHOTS eyeballed clean. First section of subtopic 2 (EM
   Radiation/Planck/Photoelectric Effect).
 
+- Sec 16: Planck's coins: quanta and the ultraviolet catastrophe — rupee
+  coins (₹10/₹20/₹30) vs a crossed-out fractional "₹10.47" makes the
+  indivisible-energy analogy concrete → black-body graph with the wave
+  theory's diverging (wrong, red) curve labelled "ultraviolet catastrophe!"
+  contrasted against Planck's finite-peak (green) curve → E=hν boxed green
+  → guardrail (whole coins of size hν, birth of quantum theory) → Nhν note.
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 16: "Planck's coins: quanta and the ultraviolet catastrophe" — starting.
+Sec 17: "Einstein's photons and the photoelectric puzzle" — starting.
