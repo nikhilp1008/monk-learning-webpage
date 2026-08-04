@@ -184,8 +184,29 @@ All verified PASS both languages, spot-checked by eye. Pushed through Sec 41.
 
 All verified PASS both languages, spot-checked by eye. Pushed through Sec 46.
 
+- Sec 47 — The predictable exceptions (Cr, Cu, He, H): real OrbitalBox
+  diagrams for Cr (3d⁵4s¹) and Cu (3d¹⁰4s¹) with curved shift arrows
+  showing the 4s→3d electron promotion, plus He (group 18 despite 1s²)
+  and H (group 1 by convenience, resembles both alkali and halogen).
+- Sec 48 — Worked example: place the element with Z=38 — full
+  placement procedure (config → period from max n → block/group from
+  last e⁻) revealing an element cell (38, Sr) for strontium.
+- Sec 49 — Worked example: which is a representative element? — four
+  candidate cards (Z=24,12,26,29) resolve to Mg (s-block ✓) vs the
+  three 3d-series transition-metal distractors (Cr, Fe, Cu ✗).
+- Sec 50 — Worked example: full placement for Z=25 — config
+  [Ar]3d⁵4s², period 4, d-block, group-7 arithmetic, an oxidation-
+  state chip row (+2..+7), element cell reveal for manganese.
+- Sec 51 — Worked example: identify X from [Ar]3d⁵4s¹ (closes
+  subtopic 4's worked examples) — naive-vs-actual config reveals X as
+  chromium, full placement (period 4, d-block, group 6), strict
+  transition-element classification, and a Cr-vs-Zn contrast card
+  pair showing why zinc fails the strict d-subshell rule.
+
+All verified PASS both languages, spot-checked by eye. Pushed through Sec 51.
+
 ## Current
-Sec 47 — next.
+Sec 52 — next (Common pitfalls and pro-tips, subtopic 4 closer).
 
 ## Notes
 - **CRITICAL FONT BUG (found in Sec 8, fixed in Sec 4 + 8): capital "Z" in the
