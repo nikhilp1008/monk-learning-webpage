@@ -164,5 +164,12 @@ shorter beat schedules.
   → guardrail (whole coins of size hν, birth of quantum theory) → Nhν note.
   PASS both languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 17: Einstein's photons and the photoelectric puzzle — a photon (hν)
+  drawn striking a metal plate, ejecting an electron (with impact arrow +
+  dot) → guardrail on wave theory's 3 failed predictions (crossed, one
+  line) → guardrail on the real threshold-frequency behavior → hν=W₀+KE
+  boxed green → closing note (frequency not brightness, instant emission).
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+
 ## Current
-Sec 17: "Einstein's photons and the photoelectric puzzle" — starting.
+Sec 18: "Line spectra: the fingerprint that says quantised" — starting.
