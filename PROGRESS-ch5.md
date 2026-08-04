@@ -73,6 +73,16 @@ Done only on VERDICT PASS (both languages, overlaps=0 overflow=0 empty=0).
 - [x] Sec 25 — Tips: 4 red traps (kJ/J clash, surroundings sign, spontaneity≠rate, third-law
       pure-crystals) + diamond/graphite example + green pro-tip. SUBTOPIC 3 DONE (8/8).
 
+- [x] Sec 26 — Calorimetry opens subtopic 4: sealed bomb icon (const V, ΔU) vs open coffee-cup
+      icon (const P, ΔH), red recall note, ΔH=ΔU+Δngas.RT conversion.
+- [x] Sec 27 — Four idealised processes: single P-V diagram, four paths (isothermal/adiabatic/
+      isobaric/isochoric) fanning from one common state.
+- [x] Sec 28 — Enthalpy of solution: lattice(+,red,up)/hydration(-,green,down) Hess cycle,
+      cold-pack vs hand-warmer outcome chips.
+- [x] Sec 29 — Three derivations: adiabatic work (q=0=>ΔU=w=nCvΔT), bomb-calorimeter procedure,
+      Trouton/Kirchhoff enrichments.
+- [x] Sec 30 — Calorimetry/processes/Poisson formula toolkit (accumulating board).
+
 ## Current
-Subtopic 3 (Entropy/Gibbs/Spontaneity/2nd&3rd Laws) complete, secs 18-25 pushed. Next: Sec 26
-(Calorimetry/Processes subtopic, secs 26-33).
+Subtopic 4 (Calorimetry/Processes/Additional Enthalpy Changes, secs 26-33) in progress,
+secs 26-30 done. Next: Sec 31.
