@@ -82,6 +82,12 @@ in index.ts (see comment there) since its timestamps are placeholder — re-veri
 against real audio before registering, and expect the beat count/timing to
 change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
 
+- Sec 7 — Worked example: ozone (O₃) formal charges: task + electron count (18
+  e⁻) → build the bent O=O-O structure (double bond one side, single the
+  other, 1/2/3 lone pairs) → FC setup note (V=6 for all) → three calc lines
+  (central +1, double-bonded terminal 0, single-bonded terminal −1) → red sum
+  line (+1+0−1=0) → green verdict chip. Clean PASS, no stalls (real audio).
+
 ## Current
 Subtopic 1 (Kossel-Lewis/Ionic & Covalent/Dipole, secs 1-10). Sec 6 blocked
-(see above) — skipping to Sec 7.
+(see above). Next: Sec 8.

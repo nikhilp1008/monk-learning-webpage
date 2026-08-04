@@ -2916,6 +2916,7 @@ import C11Ch04Sec5 from "./C11Ch04Sec5";
 // duration; the timestamps here are synthetic, not real. Re-register once
 // real audio lands and the section is re-choreographed against it. See
 // PROGRESS-chem4.md "Blocked" section.
+import C11Ch04Sec7 from "./C11Ch04Sec7";
 
 const C11CH04 = "862ab5f0-4fa8-5e6f-98d5-74fe5b10ab8e";
 REGISTRY[`${C11CH04}:1`] = C11Ch04Sec1;
@@ -2923,3 +2924,4 @@ REGISTRY[`${C11CH04}:2`] = C11Ch04Sec2;
 REGISTRY[`${C11CH04}:3`] = C11Ch04Sec3;
 REGISTRY[`${C11CH04}:4`] = C11Ch04Sec4;
 REGISTRY[`${C11CH04}:5`] = C11Ch04Sec5;
+REGISTRY[`${C11CH04}:7`] = C11Ch04Sec7;
