@@ -140,5 +140,14 @@ shorter beat schedules.
   conclusion visually obvious → point-charge-approximation guardrail.
   PASS both languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 14: Pitfalls and pro-tips: early atomic models — 4 numbered red-circle
+  pitfalls (iso-family scrambling, e⁻=Z for ions, swapping ray properties,
+  matching the wrong observation), an MCQ sub-note, a green boxed pro-tip
+  (compare charge/mass as fractions, never compute), closing on "electron
+  almost always wins". PASS both languages, FORCE_SHOTS eyeballed clean.
+
+**Subtopic 1 (Subatomic Particles & Early Atomic Models, Sec 1-14) complete.**
+
 ## Current
-Sec 14: "Pitfalls and pro-tips: early atomic models" — starting.
+Sec 15: "Light as a wave: Maxwell and c = nu lambda" — starting (subtopic 2:
+EM Radiation / Planck / Photoelectric Effect).
