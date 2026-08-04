@@ -26,6 +26,14 @@ Done only on VERDICT PASS (both languages, overlaps=0 overflow=0 empty=0).
 ## Done
 - [x] Sec 1 — System/surroundings: boundary circle (SYSTEM/SURROUNDINGS), real-vs-imaginary
       note, OPEN/CLOSED/ISOLATED boxes color-coded green/amber/red by what crosses, verdict chip.
+- [x] Sec 2 — State vs path functions: hill-climb graph, winding road (state) vs steep steps
+      (path), comment row erases/rewrites per beat, final stamp.
+- [x] Sec 3 — First law + sign convention: system box, q/w arrows enter, ΔU lands, hero formula,
+      sign-convention rows for q and w accumulate, caution stamp on process-vs-state.
+- [x] Sec 4 — Reversible/irreversible work: P-V diagram, irreversible rectangle then reversible
+      curve (bigger area), free-expansion side panel, cyclic row, formula q(cycle)=-w(cycle).
+- [x] Sec 5 — Formula toolkit: accumulating formula board (master law, irreversible/reversible
+      work formulas, R-value caution, free-expansion closer).
 
 ## Current
-Subtopic 1 (Thermo Terms/First Law, secs 1-9). Next: Sec 2.
+Subtopic 1 (Thermo Terms/First Law, secs 1-9). Sections 1-5 pushed. Next: Sec 6.
