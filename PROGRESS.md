@@ -198,5 +198,14 @@ an existing physics section (fallback board_content path unchanged).
   Chemical Combination & Atomic Theory. PASS both languages, 0 stalls,
   eyeballed clean. **Subtopic 3 (Uncertainty & Sig Figs, Sec 15-21) complete.**
 
+- Sec 22: The five laws and Dalton's atomic theory — masala-ratio anchor,
+  the five laws listed then fully faded to make room for a LEGO-brick analogy
+  (wall A at 2:1 ratio = definite proportions, wall B at 1:1 = multiple
+  proportions + mass conservation), Dalton's 4 postulates, guardrail on where
+  the theory breaks (isotopes/divisibility/isobars-allotropes) vs what
+  survives (conservation of atoms). PASS both languages, 0 stalls, eyeballed
+  clean. (House palette has no blue — LEGO bricks rendered as A=red/B=amber,
+  captioned "A:B" rather than "red:blue".)
+
 ## Current
-Sec 22 next (starts subtopic 4: Laws of Chemical Combination & Atomic Theory).
+Sec 23 next.
