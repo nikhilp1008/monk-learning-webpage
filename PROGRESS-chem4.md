@@ -140,5 +140,10 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   ~120pm/shortest) built with single/double/triple bond lines → trend
   (s-character↑, length↓, strength↑) + green chip.
 
+- Sec 16 — Worked examples PCl₃ + XeF₂: Part A builds PCl₃ (P + 3 Cl trigonal-
+  pyramidal, 1 lone pair, SN=4, shape trigonal pyramidal ~100°) → erases →
+  Part B builds XeF₂ (H=½(8+2)=5→sp³d, linear F–Xe–F with 3 equatorial lone
+  pairs) → red trap chip (2 bonds ≠ sp, lone pairs count too).
+
 ## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 16.
+Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 17.
