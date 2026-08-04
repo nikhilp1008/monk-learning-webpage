@@ -205,5 +205,10 @@ shorter beat schedules.
   numerically) → N=Pt/hν=Ptλ/hc. **STALE AUDIO** (English short; verified
   clean via Hinglish). PASS.
 
+- Sec 23: Worked example (CBSE): FM radio photon — given (95.0 MHz FM) →
+  λ=c/ν=3.16m → E=hν setup → E=6.29×10⁻²⁶J boxed green → answer stated →
+  guardrail (tiny photon energy = why radio is harmless) → reusable
+  template. **STALE AUDIO** (verified clean via Hinglish). PASS.
+
 ## Current
-Sec 23: "Worked example (CBSE): FM radio photon" — starting.
+Sec 24: "Worked example (NEET): will it eject electrons?" — starting.
