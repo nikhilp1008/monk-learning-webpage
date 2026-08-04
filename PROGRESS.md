@@ -278,5 +278,12 @@ an existing physics section (fallback board_content path unchanged).
   atom. PASS both languages, 0 stalls, eyeballed clean (fixed a stray
   zero-width-space typo in Hinglish text before verifying).
 
+- Sec 32: The mole as a universal hub — hub-and-spokes diagram (MASS/NUMBER/
+  VOLUME each connect to a central MOLES node via ÷M, ÷Nₐ, ÷22.4-STP spokes),
+  guardrail never to jump mass→number directly, the atoms-of-an-element trap
+  (H₂O: 1mol→3mol atoms total), forgotten-formula-count step, molar volume
+  limits (gas+STP only), old-vs-IUPAC STP caution, vapour density (M=2×VD).
+  PASS both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 32 next.
+Sec 33 next.
