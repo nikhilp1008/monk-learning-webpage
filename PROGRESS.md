@@ -90,5 +90,14 @@ shorter beat schedules.
   magnitude) → cricket-ball-at-the-pitch analogy. PASS both languages,
   FORCE_SHOTS eyeballed clean — the clearest diagram yet.
 
+- Sec 7: Distance of closest approach: the energy argument — α approaches a
+  fixed nucleus along a guide line, Coulomb repulsion converts KE→PE, a red
+  dot marks the turning point r₀ (guardrail: momentarily at rest, all KE
+  spent) → derivation built as real stacked fractions (numerator/bar/
+  denominator) for KE = (2e)(Ze)/4πε₀r₀, then boxed-green landed result
+  r₀ = 2Ze²/(4πε₀·KE) → guardrails (recoil ignored; energy not force) →
+  final proportionality r₀∝1/KE. PASS both languages, FORCE_SHOTS eyeballed
+  clean — first math-heavy derivation section, fractions read cleanly.
+
 ## Current
-Sec 7: "Distance of closest approach: the energy argument" — starting.
+Sec 8: "Specific charge and the electron's mass" — starting.
