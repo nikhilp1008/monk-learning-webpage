@@ -158,8 +158,20 @@ All verified PASS both languages, spot-checked by eye. Pushed through Sec 34.
 
 All verified PASS both languages, spot-checked by eye. Pushed through Sec 39.
 
+- Sec 40 — Worked example (JEE Advanced): why PCl5 exists, NCl5 doesn't —
+  P shown with 5 real orbital boxes (3s,3p×3,3d) vs N with only 4 boxes
+  + a dashed red-crossed blocked 5th slot; extends to N's covalency
+  ceiling and O's +2 max.
+- Sec 41 — Common pitfalls and pro-tips (subtopic 3 CLOSER): 4 numbered
+  red-ring pitfalls, red-margin Reflex 1 box (left gives/right grabs),
+  Reflex 2 (period-2 no-d flag), closing diagonal-shape tip.
+  ✅ SUBTOPIC 3 (secs 30–41, Periodic Trends Chemical) COMPLETE.
+
+All verified PASS both languages, spot-checked by eye. Pushed through Sec 41.
+
 ## Current
-Sec 40 — next.
+Sec 42 — next (subtopic 4: Electronic Configuration & the s, p, d, f
+Blocks, secs 42–54 — final subtopic of the chapter).
 
 ## Notes
 - **CRITICAL FONT BUG (found in Sec 8, fixed in Sec 4 + 8): capital "Z" in the
