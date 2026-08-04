@@ -196,7 +196,14 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   3c-2e bond) with 2 standalone fact lines between them (BX₃ Lewis acidity
   order, diborane electron-deficiency count).
 
+- Sec 34 — Worked example Bent's vs Drago's diagnostic: side-by-side panels —
+  LEFT (NH₃ 107° vs NF₃ 102°, substituent changed → BENT'S RULE, F pulls
+  p-character) and RIGHT (NH₃ 107° vs PH₃ 93.5°, centre changed → DRAGO'S
+  RULE, P resists hybridisation), each landing a colored answer chip, closed
+  by a shared "spot what changed" insight line.
+
 ## Current
 Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 DONE (9/9). Subtopic 3:
-only Sec 25 done (1/9, rest blocked). Subtopic 4: Sec 31, 32 done, only 34
-remains unblocked (29,30,33,35,36 blocked). Next: Sec 34.
+only Sec 25 done (1/9, rest blocked). Subtopic 4 DONE for all unblocked
+sections (31,32,34 — 29,30,33,35,36 blocked). Moving to Subtopic 5 (Sec
+37-38, fully ready).
