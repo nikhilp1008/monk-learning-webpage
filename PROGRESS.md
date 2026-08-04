@@ -90,5 +90,12 @@ an existing physics section (fallback board_content path unchanged).
   volume, speed, density, pressure, energy) as closing recognise-only notes.
   PASS both languages, 0 stalls, eyeballed clean.
 
+- Sec 9: Prefixes and the factor-label method — prefix ladder as a number
+  line ordered by exponent (pico→nano→micro→milli→centi→base→kilo), guardrail
+  to rank by exponent not name, currency analogy, factor-label worked mini-eq
+  (5g→kg), why it can't fail (factor=1), the cubic trap (1m³=10⁶cm³ not 100),
+  practical cancel-check + flip rule. PASS both languages, 0 stalls, eyeballed
+  clean.
+
 ## Current
-Sec 9 next.
+Sec 10 next.
