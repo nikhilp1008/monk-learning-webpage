@@ -156,5 +156,12 @@ an existing physics section (fallback board_content path unchanged).
   defined relations are exact (∞ sig figs). PASS both languages, 0 stalls,
   eyeballed clean.
 
+- Sec 16: Counting significant figures; accuracy vs precision — counting
+  rules with examples (345→3sf, 1.004→4sf, 0.0025→2sf, trailing-zero trap
+  100→1sf vs 1.00×10²/2.50→3sf), why sci notation removes ambiguity, accuracy/
+  precision definitions, three archer targets (precise-not-accurate /
+  accurate-avg-not-precise / both) as concentric rings + dot clusters. PASS
+  both languages, 0 stalls, eyeballed clean.
+
 ## Current
-Sec 16 next.
+Sec 17 next.
