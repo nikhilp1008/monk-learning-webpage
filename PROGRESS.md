@@ -59,5 +59,11 @@ an existing physics section (fallback board_content path unchanged).
   verifier's text-only overlap check didn't flag (eyeball needed). PASS both
   languages, eyeballed clean.
 
+- Sec 5: Worked examples: classifying matter — CBSE example (brass/ozone/
+  baking soda/sea water, one verdict row at a time) dims to free the board for
+  a NEET speed-trap example (air/gasoline/diamond/bronze → diamond), guardrail
+  that appearance is the trap, count substance-types not looks. PASS both
+  languages, eyeballed clean.
+
 ## Current
-Sec 5 next.
+Sec 6 next.
