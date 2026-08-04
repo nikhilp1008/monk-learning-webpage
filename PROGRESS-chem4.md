@@ -145,5 +145,11 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   Part B builds XeF₂ (H=½(8+2)=5→sp³d, linear F–Xe–F with 3 equatorial lone
   pairs) → red trap chip (2 bonds ≠ sp, lone pairs count too).
 
+- Sec 17 — Worked example SF₄: H=½(6+4)=5→sp³d → e-pair geometry (TBP, 3
+  equatorial+2 axial) → red reasoning line (LP→equatorial, fewer 90°
+  neighbors) → see-saw structure built (2 axial F bent away from the LP, 2
+  equatorial F, big LP) → asymmetric→POLAR (vs symmetric SF₆) → green answer
+  chip (sp³d · see-saw · POLAR).
+
 ## Current
-Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 17.
+Subtopic 1 done (9/10 — sec 6 blocked). Subtopic 2 in progress. Next: Sec 18.
