@@ -58,8 +58,9 @@ export default function C11Ch01Sec12({ currentTime, reveals, language }: ScenePr
         </T>
       </Fade>
 
-      {/* beat 0 — Example 1 given (CBSE) */}
-      <Fade on={beat >= 0} dim={beat >= 3} delay={dl(0, 0.4)}>
+      {/* beat 0 — Example 1 given (CBSE); fully removed (not dimmed) once
+          Example 2 takes over the board at beat 3, freeing real space for it */}
+      <Fade on={beat >= 0 && beat < 3} delay={dl(0, 0.4)}>
         <T x={540} y={92} size={14} fill={INK} script>
           {t(
             "Example 1 (CBSE): 37°C body temp → convert to K and °F",
@@ -69,24 +70,24 @@ export default function C11Ch01Sec12({ currentTime, reveals, language }: ScenePr
       </Fade>
 
       {/* beat 1 — kelvin conversion */}
-      <Fade on={beat >= 1} dim={beat >= 3} delay={dl(1, 0.4)}>
+      <Fade on={beat >= 1 && beat < 3} delay={dl(1, 0.4)}>
         <T x={540} y={130} size={16} fill={INK} weight={700} script={false}>
           K = 37 + 273.15 = 310.15 K
         </T>
       </Fade>
-      <Fade on={beat >= 1} dim={beat >= 3} delay={dl(1, 1.4)}>
+      <Fade on={beat >= 1 && beat < 3} delay={dl(1, 1.4)}>
         <T x={540} y={150} size={12} fill={MUTED} script>
           {t("no ° symbol with K", "K ke saath ° symbol nahi")}
         </T>
       </Fade>
 
       {/* beat 2 — fahrenheit conversion */}
-      <Fade on={beat >= 2} dim={beat >= 3} delay={dl(2, 0.4)}>
+      <Fade on={beat >= 2 && beat < 3} delay={dl(2, 0.4)}>
         <T x={540} y={185} size={16} fill={INK} weight={700} script={false}>
           °F = (9/5)(37) + 32 = 98.6 °F
         </T>
       </Fade>
-      <Fade on={beat >= 2} dim={beat >= 3} delay={dl(2, 1.4)}>
+      <Fade on={beat >= 2 && beat < 3} delay={dl(2, 1.4)}>
         <T x={540} y={205} size={12} fill={MUTED} script>
           {t("the familiar thermometer reading!", "thermometer wala jana-pehchana reading!")}
         </T>

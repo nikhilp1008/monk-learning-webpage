@@ -125,6 +125,14 @@ Rules for the plan:
   the beat-2 boxes. (Deliberate annotation overlaps — ring around, cross-out
   through — target exactly one element and are computed from its box; see
   Step 4.)
+- **Dimmed/superseded content still occupies its box** — you may NOT draw new
+  content over a `dim`med earlier group. Dimming lowers opacity; it does not
+  free the space. The board is wide and tall — lay later beats in the FREE
+  region (the empty bands below/beside), not on top of faded earlier work.
+  If you have genuinely run out of room, fully REMOVE the old group (gate it
+  off so it fades to opacity 0 and vacates its box) — never dim-and-overlay.
+  The verifier now counts dimmed elements as present, so an overlap onto faded
+  content is a FAIL, reported as `"new"(dimmed)`.
 - **Minimum clearances** (between boxes, after the annotation exception):
   - text ↔ text: ≥ 14px, and unrelated stacked lines ≥ 1.6 × size between
     baselines.
@@ -230,7 +238,14 @@ Non-negotiable engine rules (all provided by the kit):
   choreography, different words and different `reveals` — and the **layout
   plan must hold for the longer of the two strings**.
 - When an old idea is superseded, `dim` it rather than removing it — the
-  board accumulates like a real class.
+  board accumulates like a real class. BUT accumulation is **spatial**: the
+  dimmed idea stays in its own box and the new idea goes in fresh space beside
+  or below it. Dimming is NOT permission to write on top — a faded group under
+  new text reads as a messy overlap, not a teacher's board. If the board is
+  full, a real teacher ERASES: gate the old group fully off (opacity 0) so it
+  vacates its box, then use that space. Never dim-and-overlay. (Do not reach for
+  scrolling — the board is a fixed, audio-synced canvas; manage space by erasing,
+  not scrolling.)
 - House palette only: INK `#1C1A16`, AMBER `#EEA31F`, AMBER_DARK `#9A6A12`,
   GREEN `#1C9B57`, RED `#DD4433`, CREAM `#FCF4E0`, MUTED `#9C988C`.
 

@@ -77,8 +77,9 @@ export default function C11Ch01Sec6({ currentTime, reveals, language }: ScenePro
         </T>
       </Fade>
 
-      {/* beat 0 — Example 3 given (JEE Main) */}
-      <Fade on={beat >= 0} dim={beat >= 5} delay={dl(0, 0.4)}>
+      {/* beat 0 — Example 3 given (JEE Main); fully removed (not dimmed) once
+          Example 4 takes over the board at beat 5, freeing real space for it */}
+      <Fade on={beat >= 0 && beat < 5} delay={dl(0, 0.4)}>
         <T x={90} y={90} size={14} fill={INK} script anchor="start">
           {t(
             "Example 3 (JEE Main): physical or chemical? — camphor, milk souring, sugar in tea, digestion",
@@ -93,17 +94,17 @@ export default function C11Ch01Sec6({ currentTime, reveals, language }: ScenePro
         const color = kind === "physical" ? GREEN : RED;
         return (
           <React.Fragment key={label}>
-            <Fade on={beat >= k} dim={beat >= 5} delay={dl(k, 0.3)}>
+            <Fade on={beat >= k && beat < 5} delay={dl(k, 0.3)}>
               <T x={90} y={rowY} size={17} fill={INK} weight={700} anchor="start">
                 {label}
               </T>
             </Fade>
-            <Fade on={beat >= k} dim={beat >= 5} delay={dl(k, 1)}>
+            <Fade on={beat >= k && beat < 5} delay={dl(k, 1)}>
               <Chip x={380} y={rowY - 25} w={160} h={34} fill={CREAM} stroke={color} textFill={INK} size={15} script={false}>
                 {verdictEn}
               </Chip>
             </Fade>
-            <Fade on={beat >= k} dim={beat >= 5} delay={dl(k, 1.8)}>
+            <Fade on={beat >= k && beat < 5} delay={dl(k, 1.8)}>
               <T x={90} y={rowY + 24} size={12} fill={MUTED} script anchor="start">
                 {t(reasonEn, reasonHi)}
               </T>

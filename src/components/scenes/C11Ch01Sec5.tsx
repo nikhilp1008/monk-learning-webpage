@@ -72,8 +72,10 @@ export default function C11Ch01Sec5({ currentTime, reveals, language }: ScenePro
         </T>
       </Fade>
 
-      {/* beat 0 — Example 1 given (CBSE) */}
-      <Fade on={beat >= 0} dim={beat >= 5} delay={dl(0, 0.4)}>
+      {/* beat 0 — Example 1 given (CBSE); fully removed (not dimmed) once
+          Example 2 takes over the board at beat 5, so beat 5+ has genuinely
+          free space rather than new content sitting over faded-but-present text */}
+      <Fade on={beat >= 0 && beat < 5} delay={dl(0, 0.4)}>
         <T x={90} y={90} size={16} fill={INK} script anchor="start">
           {t(
             "Example 1 (CBSE): classify — brass · ozone · baking soda · sea water",
@@ -88,12 +90,12 @@ export default function C11Ch01Sec5({ currentTime, reveals, language }: ScenePro
         const rowY = [130, 195, 260, 325][i];
         return (
           <React.Fragment key={label}>
-            <Fade on={beat >= k} dim={beat >= 5} delay={dl(k, 0.3)}>
+            <Fade on={beat >= k && beat < 5} delay={dl(k, 0.3)}>
               <T x={90} y={rowY} size={17} fill={INK} weight={700} anchor="start">
                 {label}
               </T>
             </Fade>
-            <Fade on={beat >= k} dim={beat >= 5} delay={dl(k, 1)}>
+            <Fade on={beat >= k && beat < 5} delay={dl(k, 1)}>
               <Chip
                 x={380}
                 y={rowY - 25}
@@ -108,7 +110,7 @@ export default function C11Ch01Sec5({ currentTime, reveals, language }: ScenePro
                 {verdict}
               </Chip>
             </Fade>
-            <Fade on={beat >= k} dim={beat >= 5} delay={dl(k, 1.8)}>
+            <Fade on={beat >= k && beat < 5} delay={dl(k, 1.8)}>
               <T x={90} y={rowY + 24} size={12} fill={MUTED} script anchor="start">
                 {t(reasonEn, reasonHi)}
               </T>
