@@ -40,8 +40,11 @@ match across narration/board_events/reveals before starting.
   H₂SO₅ calc gives S=+8 (crossed out, impossible), correct 3×O(−2)+2×O(−1 peroxide) gives
   S=+6 (ringed green) — "the rule never failed, the assumption did."
 
+- Sec 6 — Formula-sheet recap: Σ(O.N.)=net charge boxed hero, neutral/ion sub-note, reference
+  value chips (Group1/2, Al, F), H and O exception lines, red-margin "O.N. is dimensionless" note.
+
 ## Current
-Sec 6 — next.
+Sec 7 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
