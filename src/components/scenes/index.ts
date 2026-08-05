@@ -2328,6 +2328,9 @@ import Ch14Sec37 from "./Ch14Sec37";
 import Ch14Sec38 from "./Ch14Sec38";
 import C11Ch09Sec1 from "./C11Ch09Sec1";
 import C11Ch09Sec2 from "./C11Ch09Sec2";
+import C11Ch09Sec3 from "./C11Ch09Sec3";
+import C11Ch09Sec4 from "./C11Ch09Sec4";
+import C11Ch09Sec5 from "./C11Ch09Sec5";
 
 REGISTRY[`a5970ed6-3b48-55f9-9b80-8abdd3d4c336:59`] = Ch03Sec59;
 REGISTRY[`a5970ed6-3b48-55f9-9b80-8abdd3d4c336:60`] = Ch03Sec60;
@@ -2912,3 +2915,6 @@ REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:38`] = Ch14Sec38;
 const C11CH09 = "388fccf5-9390-50aa-b678-5800a9e4fffa";
 REGISTRY[`${C11CH09}:1`] = C11Ch09Sec1;
 REGISTRY[`${C11CH09}:2`] = C11Ch09Sec2;
+REGISTRY[`${C11CH09}:3`] = C11Ch09Sec3;
+REGISTRY[`${C11CH09}:4`] = C11Ch09Sec4;
+REGISTRY[`${C11CH09}:5`] = C11Ch09Sec5;
