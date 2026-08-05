@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 22.
+Starting Sec 23.
 
 ## Done
 - Sec 1 — what makes a collection a set (team-sheet well-defined demo, tall-students guardrail, roster A={2,3,5,7} + ∈/∉, repetition/order irrelevance, ∅)
@@ -41,3 +41,4 @@ Starting Sec 22.
 - Sec 19 — five set operations as membership questions (6-cell grid of real VennShade diagrams: union/intersection/difference/complement/symmetric-difference/disjoint, each drawn+shaded+labeled; note VennShade needs explicit tight x/y/w/h bounds per cell or its default full-canvas rect trips the overflow check even though the visible shading is correctly clipped)
 - Sec 20 — four Venn regions: shading not memorising (one big U/A/B diagram with only-A/A∩B/only-B/neither shaded+labeled, then a 4-icon "recipe row" showing which regions each operation shades: ∪/∩/−/′, landing on you-never-memorise-you-just-shade)
 - Sec 21 — De Morgan's laws (visual proof: diagram1 shades outside-both = (A∪B)′=A′∩B′, diagram2 shades everything-but-the-lens = (A∩B)′=A′∪B′ via 3 disjoint VennShade regions, element-chase line, flip guardrail, illustrates-vs-proves closing)
+- Sec 22 — algebra of sets, two-set cardinality formula (5-group law toolkit: commutative/associative, distributive, identity/domination, complement, De Morgan recap; boxed landing on n(A∪B)=n(A)+n(B)-n(A∩B))
