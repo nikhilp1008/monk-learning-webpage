@@ -105,6 +105,10 @@ already).
 - Sec 43: s-character sets the acidity — 3-column sp3/sp2/sp comparison (¼/⅓/½ s-character), red "more s-character = more acidic" most-tested note, metal acetylide payoff — PASS [mocked-audio]
 - Sec 44: Key definitions and formulae (alkyne fact-sheet) — CnH2n-2 chip, linear geometry, triple-bond composition, bond energies/lengths, red acidity order, HC≡CH+Na equation, Markovnikov/Br2 test — PASS [mocked-audio]
 
+- Sec 45: The orbital picture of ethyne — linear H-C≡C-H skeleton with two perpendicular π systems (amber up/down lobes + green encompassing ellipse), red "electron-rich cylinder, room to add twice" — PASS [mocked-audio]
+- Sec 46: Naming and isomerism — common vs IUPAC naming, ethyne/propyne (single structure) vs but-1-yne/but-2-yne (position isomers), C5H8 chain-isomer set, red exam-speed note — PASS [mocked-audio]
+- Sec 48: Preparing alkynes: two routes — (a) 4-arrow CaCO3→CaO→CaC2→C2H2 industrial chain, (b) two-elimination row (dihalide→alc.KOH→vinyl halide→NaNH2→triple bond), red "match base to difficulty" note — PASS [mocked-audio]
+
 ## Current
-Sec 1-44 done (Sec 11 skipped). Classification + Alkanes + Alkenes all
-complete. Alkynes subtopic underway (Sec 42-58, skipping 47 and 53).
+Sec 1-46, 48 done (Sec 11, 47 skipped so far). Classification + Alkanes +
+Alkenes complete. Alkynes subtopic underway (Sec 42-58, skipping 47 and 53).
