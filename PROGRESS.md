@@ -37,5 +37,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   membership test, n-fold product + n(A^m), n-tuples/R³ caption, boxed 2^pq subsets,
   bridge note (subset→relation), distributivity + boxed star identity. PASS.
 
+- Sec 5 "Proof that n(A×B)=mn — the slicing argument" — vertical stack of "slice"
+  bands (a₁×B, a₂×B muted, aᵢ×B highlighted with actual pair-list), two-step
+  reasoning chips, disjointness formula, boxed mn conclusion, multiplication-
+  principle insight. Eye-checked incl. mid-beat frame. PASS.
+
 ## Current
-Starting Sec 5 (Proof that n(A×B)=mn — the slicing argument — PROOF-flagged).
+Starting Sec 6 (Proof of distributivity + recovering A and B from A×B — PROOF-flagged).

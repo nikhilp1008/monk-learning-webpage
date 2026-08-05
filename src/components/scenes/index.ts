@@ -3693,9 +3693,11 @@ import M11Ch02Sec1 from "./M11Ch02Sec1";
 import M11Ch02Sec2 from "./M11Ch02Sec2";
 import M11Ch02Sec3 from "./M11Ch02Sec3";
 import M11Ch02Sec4 from "./M11Ch02Sec4";
+import M11Ch02Sec5 from "./M11Ch02Sec5";
 
 const M11CH02 = "e38cf062-e572-52f4-9099-eaf6ee0f7b27";
 REGISTRY[`${M11CH02}:1`] = M11Ch02Sec1;
 REGISTRY[`${M11CH02}:2`] = M11Ch02Sec2;
 REGISTRY[`${M11CH02}:3`] = M11Ch02Sec3;
 REGISTRY[`${M11CH02}:4`] = M11Ch02Sec4;
+REGISTRY[`${M11CH02}:5`] = M11Ch02Sec5;
