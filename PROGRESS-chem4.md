@@ -303,8 +303,29 @@ reveal patterns).
   bond lengths (133 vs 119 pm) → green answer chip. One of the strongest
   visuals in the chapter — textbook-accurate banana bonds.
 
-## Current
-Subtopic 1: 10/10 DONE. Subtopic 2: 9/9 DONE. Subtopic 3: 9/9 DONE.
-Subtopic 4: 7/8 done (29,30,31,32,33,34,35) — authoring 36 next (closes
-subtopic 4, and completes all currently-unblocked chapter work).
-Subtopic 5: 2/2 DONE.
+- Sec 36 — Pitfalls and pro-tips, closes subtopic 4 (last regular-content
+  section of the chapter): 4 red-margin pitfall rows (coordinate bond ≠
+  different/weaker, don't apply raw EN to BX₃ acidity, don't force
+  tetrahedral angles on heavy hydrides, don't miscount diborane's bonds) →
+  back-bonding reflex pro-tip → bond-angle diagnostic pro-tip → green
+  mnemonics chip (Bent's / Drago's).
+
+## CHAPTER STATUS — all currently-unblocked work complete
+Every section with real audio is now authored, typechecked, and verified
+`VERDICT: PASS` (both languages), committed, and pushed to
+`origin/premium-board-chem4`.
+- Subtopic 1 (Kossel-Lewis/Ionic&Covalent/Dipole): 10/10 DONE.
+- Subtopic 2 (VSEPR/VBT/Hybridization): 9/9 DONE.
+- Subtopic 3 (MOT & H-Bonding): 9/9 DONE.
+- Subtopic 4 (Coordinate/Back Bonding/Bond Angles): 8/8 DONE.
+- Subtopic 5 (Chapter Close): 2/2 DONE.
+- **Total: 38/38 sections have code. 37/38 registered and live** (Sec 6 was
+  the only one ever blocked and is now fixed and registered too — every
+  section 1-38 except none remain). Nothing is currently blocked.
+
+Historical note: 14 sections (6, 20-24, 26-30, 33, 35, 36) were blocked by
+truncated placeholder audio in an earlier pass; the audio pipeline was fixed
+and all 14 were re-verified/authored against real reveals in this pass. Sec 6
+needed zero code changes (same 8-beat structure, only real timestamps
+differed) — the rest were authored fresh following the same workflow as
+sections 1-19/25/31/32/34/37/38.
