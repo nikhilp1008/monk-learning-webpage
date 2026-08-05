@@ -136,5 +136,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   not-range guardrail (7); Ex2 boxed q^p=4^3=64 with all three named wrong
   reflexes (2^12, 3^4 swap, 3×4). PASS.
 
+- Sec 24 "Worked: natural domain √(x-2)/(x-5), algebra of f,g" — Ex3 real number
+  line (closed dot at 2, open dot at 5, verified correct) landing boxed
+  [2,5)∪(5,∞), x=2-stays subtlety; Ex4 Dom(f)=R/Dom(g)=[-2,2] then boxed
+  Dom(f/g)=(-2,2) both-endpoints-punched. PASS.
+
 ## Current
-Starting Sec 24 (Worked: natural domain of √(x-2)/(x-5), and algebra of f and g).
+Starting Sec 25 (Worked: graph reading with f(x) = |x-2| — GRAPH).
