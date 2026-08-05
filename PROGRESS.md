@@ -59,8 +59,14 @@ match across narration/board_events/reveals before starting.
   S–S–S–S structure (terminal S with 3×O each), equal-split rule, central S=0 / terminal S=+5
   annotated on structure, verify calc confirms average, green answer stamp.
 
+- Sec 11 — Pitfalls & pro-tips closer: 4 numbered pitfalls (sign slips, O/H exceptions,
+  fractional O.N. read as real, agent↔effect confusion), PRO-TIP derive-don't-memorise,
+  3-second exception sweep, red-margin ceiling check. ✅ SUBTOPIC 1 (secs 1–11) COMPLETE.
+  Fixed: beat-0 heading and pitfall-1 row initially sat only 10px apart (read as one run-on
+  line despite passing the overlap check since anchors differed) — pushed row1 down 30px.
+
 ## Current
-Sec 11 — next (closes Subtopic 1, secs 1-11).
+Subtopic 2 (Balancing Redox, secs 12-20). Sec 12 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
