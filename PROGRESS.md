@@ -41,6 +41,12 @@
 8. The Kp–Kc bridge, and the units of K — derivation + unit chips. PASS.
 9. The four-rule toolkit for combining equilibria — reference cards. PASS.
 10. Worked example — Kc from an equilibrium mixture (CBSE) — full worked example. PASS.
+11. Worked example — the Δn = 0 shortcut (NEET speed trap) — crossed-out panic path. PASS.
+12. Worked example — PCl5 dissociation, Kp in α and P (JEE Main) — built ICE table. PASS.
+13. Worked example — stacking equilibria with the toolkit (JEE Advanced). PASS.
+14. Pitfalls and pro-tips for Kc and Kp — closes subtopic 1. PASS.
+
+**Subtopic 1 (Sec 1-14, Physical & Chemical Equilibrium / Kc-Kp) — COMPLETE.**
 
 ## Current
-Sec 11 — next up
+Sec 15 — next up (subtopic 2: Equilibrium Constant / Q / Gibbs, Sec 15-25)
