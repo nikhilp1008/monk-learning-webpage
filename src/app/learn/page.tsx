@@ -263,6 +263,11 @@ export default function LearnPage() {
             }];
           });
         },
+        onAudioChunk: (audioB64) => {
+          if (audioB64 && voiceClientRef.current) {
+            voiceClientRef.current.playAudioChunk(audioB64);
+          }
+        },
         onBoard: (latex) => {
           setBoardLatex(latex);
         },
@@ -287,13 +292,16 @@ export default function LearnPage() {
     );
   }, []);
 
+  const scopingInFlightRef = useRef<boolean>(false);
+
   /* ─── Scoping → teaching (B2 fix) ─── */
   const handleSendScope = useCallback(async (utterance: string) => {
     const sid = sessionIdRef.current;
-    if (!sid) {
-      console.error("handleSendScope aborted: sessionId is null");
+    if (!sid || scopingInFlightRef.current) {
+      console.log("handleSendScope blocked: session is null or scope request already in-flight");
       return;
     }
+    scopingInFlightRef.current = true;
     setLoadingSubtopic(utterance);
     setScopingPlanReady(false);
     try {
@@ -327,6 +335,7 @@ export default function LearnPage() {
       console.error("Scoping failed:", err);
       setScopingPlanReady(true);
     } finally {
+      scopingInFlightRef.current = false;
       setLoadingSubtopic(null);
     }
   }, [fireTeachingTurn]);

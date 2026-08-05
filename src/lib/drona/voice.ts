@@ -125,7 +125,7 @@ export class DronaVoiceClient {
     }
   }
 
-  private playAudioChunk(base64Pcm: string): void {
+  public playAudioChunk(base64Pcm: string): void {
     if (!base64Pcm || typeof window === "undefined") return;
     try {
       const binary = atob(base64Pcm);

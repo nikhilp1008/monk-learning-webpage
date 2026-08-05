@@ -93,6 +93,7 @@ export interface TurnStreamCallbacks {
   onBoard: (latex: string) => void;
   onMeta: (meta: SSEEventMeta) => void;
   onState: (state: SSEEventState) => void;
+  onAudioChunk?: (audio: string, speech: string) => void;
   onError: (error: Error) => void;
   onDone: () => void;
 }
@@ -172,6 +173,8 @@ export async function streamTurn(
 
             if (currentEvent === "speech") {
               callbacks.onSpeech((data as SSEEventSpeech).delta || "");
+            } else if (currentEvent === "audio_chunk") {
+              callbacks.onAudioChunk?.(data.audio || "", data.speech || "");
             } else if (currentEvent === "board") {
               callbacks.onBoard((data as SSEEventBoard).latex || "");
             } else if (currentEvent === "meta") {
