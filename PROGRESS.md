@@ -98,6 +98,9 @@ already).
 - Sec 38: Which alkene shows geometrical isomerism? (NEET worked) — 3-candidate gate-check table with ✗/✓ marks, green "only (B) pent-2-ene" answer, trap note — PASS [mocked-audio]
 - Sec 39: Ozonolysis: identify the alkene (JEE Main worked) — reverse-ozonolysis stitch (propanal+ethanal→pent-2-ene), green C5H10 confirmation, red "peroxide reverses only with clear 1°-vs-2°" teaching point — PASS [mocked-audio]
 
+- Sec 40: Carbocation rearrangement (JEE Advanced worked) — 2° cation + curved arrow "1,2-H shift" → 3° cation, green result, red "real Markovnikov rule" driving-force note — PASS [mocked-audio]
+- Sec 41: Alkene pitfalls and pro-tips (closes Alkenes subtopic) — 4 traps (cis-trans without checking substituents, peroxide on HCl/HI, forgetting rearrangement, ozonolysis reconstruction) with amber/red guardrails — PASS [mocked-audio]
+
 ## Current
-Sec 1-39 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
-subtopic underway (Sec 22-41).
+Sec 1-41 done (Sec 11 skipped). Classification + Alkanes + Alkenes all
+complete. Moving to Alkynes (Sec 42-58, skipping 47 and 53).
