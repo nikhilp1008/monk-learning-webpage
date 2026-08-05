@@ -159,8 +159,12 @@ match across narration/board_events/reveals before starting.
   disproportionation with general forms + examples, red comproportionation (2H₂S+SO₂→3S+2H₂O),
   intramolecular redox (2 different elements), qualitative-classification closer.
 
+- Sec 35 — Reactivity series (K>Na>Ca>Mg>Al>Zn>Fe>Pb>(H)>Cu>Hg>Ag>Au chain, correct order),
+  red-margin displacement/H₂-liberation rule, halogen order F₂>Cl₂>Br₂>I₂, Stock notation
+  rules, red-margin Fe₃O₄ mixed-oxide example.
+
 ## Current
-Sec 35 — next.
+Sec 36 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
