@@ -121,5 +121,8 @@
 65. Precipitation criterion and salt-hydrolysis pH. PASS.
 66. Worked example — pH of a basic buffer (CBSE). PASS.
 
+67. Worked example — solubility of silver chromate (NEET speed trap). PASS.
+68. Worked example — pH of a hydrolysing salt (JEE Main). PASS.
+
 ## Current
-Sec 67 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
+Sec 69 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
