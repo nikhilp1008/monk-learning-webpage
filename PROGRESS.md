@@ -69,8 +69,12 @@ match across narration/board_events/reveals before starting.
   rule, drawn electron see-saw (level beam, 2 e⁻ each side), two bookkeeping systems preview
   (oxidation-number method vs half-reaction method).
 
+- Sec 13 — Limiting conditions & definitions: 3 conditions (medium matters, assumes ionic,
+  product changes with medium — MnO₄⁻ example) + 3 definitions (half-reaction, skeletal eqn/
+  spectator ions, n=e⁻ transferred forward-ref to n-factor), 6-badge ladder.
+
 ## Current
-Sec 13 — next.
+Sec 14 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled

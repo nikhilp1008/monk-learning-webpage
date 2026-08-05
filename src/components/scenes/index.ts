@@ -2919,6 +2919,7 @@ import C11Ch07Sec9 from "./C11Ch07Sec9";
 import C11Ch07Sec10 from "./C11Ch07Sec10";
 import C11Ch07Sec11 from "./C11Ch07Sec11";
 import C11Ch07Sec12 from "./C11Ch07Sec12";
+import C11Ch07Sec13 from "./C11Ch07Sec13";
 
 const C11CH07 = "c6da3467-e267-576e-9999-a2687ffe9200"; // Class 11 · Redox Reactions (Chemistry)
 
@@ -2934,3 +2935,4 @@ REGISTRY[`${C11CH07}:9`] = C11Ch07Sec9;
 REGISTRY[`${C11CH07}:10`] = C11Ch07Sec10;
 REGISTRY[`${C11CH07}:11`] = C11Ch07Sec11;
 REGISTRY[`${C11CH07}:12`] = C11Ch07Sec12;
+REGISTRY[`${C11CH07}:13`] = C11Ch07Sec13;
