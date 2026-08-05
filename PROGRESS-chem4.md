@@ -229,8 +229,13 @@ reveal patterns).
   FORCE_SHOTS check confirming the full 8-beat diagram (previously it only
   ever reached beat 2 due to the truncated audio clamping seeks). DONE.
 
+- Sec 20 — When VBT meets oxygen: O₂ + field arrows ("sticks to magnet →
+  paramagnetic") → red "Lewis/VBT pairs all e⁻, wrong magnetism" → MOT intro
+  → 2 AOs fork into ANTIBONDING (2 circles + red node tick, higher energy)
+  and BONDING (2 overlapping circles + green density lens, lower energy) →
+  fill-consequence line → σ/π mini icons → O₂ 2 unpaired e⁻ + green chip.
+
 ## Current
-Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 1/9
-done (sec 25) — authoring 20,21,22,23,24,26,27,28 now. Subtopic 4: 3/8 done
-(31,32,34) — authoring 29,30,33,35,36 now. Subtopic 5: 2/2 DONE. Working
-through the 13 remaining sections in position order next.
+Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 2/9
+done (25, 20) — authoring 21,22,23,24,26,27,28 now. Subtopic 4: 3/8 done
+(31,32,34) — authoring 29,30,33,35,36 next. Subtopic 5: 2/2 DONE.
