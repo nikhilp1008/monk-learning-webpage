@@ -52,5 +52,11 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   verification; Ex2 JEE speed trap stages "0?" crossed out before landing the star-
   identity boxed answer 4; guardrail on unequal-products-can-still-overlap. PASS.
 
+- Sec 8 "Worked: recovering A from A×A, divisibility counting" — Ex3 deduces
+  n(A)=4 then A={1,2,3,4} from two given pairs, boxed 2^15 subset-count with
+  "always in" explanation; Ex4 floor-sum divisibility count (⌊6/x⌋ terms, native
+  fallback glyphs) landing 14, then inclusion-exclusion to 22 with diagonal-
+  overlap reasoning. PASS.
+
 ## Current
-Starting Sec 8 (Worked: recovering A from A×A, and divisibility counting).
+Starting Sec 9 (Tips: pitfalls and speed moves — Cartesian product).
