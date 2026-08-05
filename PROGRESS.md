@@ -148,7 +148,10 @@ already).
 - Sec 77: Chlorobenzene: slow yet ortho/para (JEE Advanced worked) — two-column −I(red, rate)/+R(green, position) comparison resolving the apparent contradiction, red "no real contradiction" resolution — PASS [mocked-audio]
 - Sec 78: Aromatic pitfalls and pro-tips (closes Aromatic Hydrocarbons) — 4 traps (expecting Br2-decolourisation, calling halogens activating, blind (4n+2) without structure check, naming reagent not electrophile) with guardrails — PASS [mocked-audio]
 
+- Sec 79: Hydrocarbons: formula recap — dense fact-sheet list (alkane/cycloalkane/alkene/alkyne general formulas, combustion, bond enthalpies, acidity order, arene formula + RE, Huckel's rule), red "anchors the chapter" note — PASS [mocked-audio]
+- Sec 80: Hydrocarbons: chapter cheat sheet (closes the chapter) — one-glance per-family summary (alkanes/alkenes/alkynes/arenes), red directive-influence one-liner, halogen-reactivity + H-replacement orders, red closing mnemonics ("Staggered=Spread=Stable", "Br Breaks the Rule", "Aromatic Substitutes never Adds") — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48-52, 54-78 done (Sec 11, 47, 53 skipped). Classification +
-Alkanes + Alkenes + Alkynes + Aromatic Hydrocarbons all complete.
-Only Chapter Recap (Sec 79-80) remains.
+ALL 77 TARGET SECTIONS COMPLETE (Sec 1-80, minus skipped 11/47/53).
+Classification + Alkanes + Alkenes + Alkynes + Aromatic Hydrocarbons +
+Chapter Recap all done. Chapter finished.
