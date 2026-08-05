@@ -36,8 +36,12 @@ match across narration/board_events/reveals before starting.
   fluorine always −1, oxygen exceptions, hydrogen exceptions, master Σ(O.N.)=net charge in
   red-margin), green verdict stamp closes it.
 
+- Sec 5 — Master 5-step O.N. procedure (erases), then the peroxo trap worked example: naive
+  H₂SO₅ calc gives S=+8 (crossed out, impossible), correct 3×O(−2)+2×O(−1 peroxide) gives
+  S=+6 (ringed green) — "the rule never failed, the assumption did."
+
 ## Current
-Sec 5 — next.
+Sec 6 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
