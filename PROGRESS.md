@@ -13,7 +13,10 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 23.
+Starting Sec 24.
+
+## Gotcha log
+- **Beat-index off-by-one (found in Sec 23, fixed):** `reveals` has N entries (indices 0..N-1); beat index0 is always the title/heading (no separate content gate needed), so content beats must be gated `beat >= 1` through `beat >= N-1` — exactly N-1 gates, one per remaining `board_content` seq item. Never invent an extra beat (e.g. a standalone "draw the diagram" step) that doesn't correspond to a real reveal index — it shifts every later beat's content diagram+text late relative to the narration and silently drops the last beat's content entirely (since `beat` can never exceed N-1). The verifier can't catch this — it only checks geometry at whatever timestamps you pass it, and if the component's own gating is shifted, it'll still "pass" while being out of sync. Sanity check before verifying: count `board_content` seq items = count of `board_reveal_at_*` entries = (number of `beat >= k` gates used) + 1.
 
 ## Done
 - Sec 1 — what makes a collection a set (team-sheet well-defined demo, tall-students guardrail, roster A={2,3,5,7} + ∈/∉, repetition/order irrelevance, ∅)
@@ -42,3 +45,4 @@ Starting Sec 23.
 - Sec 20 — four Venn regions: shading not memorising (one big U/A/B diagram with only-A/A∩B/only-B/neither shaded+labeled, then a 4-icon "recipe row" showing which regions each operation shades: ∪/∩/−/′, landing on you-never-memorise-you-just-shade)
 - Sec 21 — De Morgan's laws (visual proof: diagram1 shades outside-both = (A∪B)′=A′∩B′, diagram2 shades everything-but-the-lens = (A∩B)′=A′∪B′ via 3 disjoint VennShade regions, element-chase line, flip guardrail, illustrates-vs-proves closing)
 - Sec 22 — algebra of sets, two-set cardinality formula (5-group law toolkit: commutative/associative, distributive, identity/domination, complement, De Morgan recap; boxed landing on n(A∪B)=n(A)+n(B)-n(A∩B))
+- Sec 23 — compute every operation over U={1..10} (one Venn diagram with actual numbers filled per region as computed: lens{2,4}, only-A{6,8}, neither{7,9,10}, only-B{1,3,5}; crescents recolor green for A△B; caught+fixed an off-by-one beat-mapping bug here — see note below)
