@@ -134,8 +134,12 @@ match across narration/board_events/reveals before starting.
   (strongest oxidant=Ag⁺, strongest reductant=Zn), arced gap bracket showing 1.56V > 1.10V,
   red-margin trap (positive E° ≠ best reducer), green answer box.
 
+- Sec 29 — JEE Main Zn-Ag cell: given/reaction/E°cell calc, red-margin n=2 warning, compact cell
+  diagram (beakers+wire+salt bridge+1.56V), ΔG°=−nFE°cell computed to −301 kJ (verified), green
+  spontaneous answer.
+
 ## Current
-Sec 29 — next.
+Sec 30 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
