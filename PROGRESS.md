@@ -104,5 +104,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   from-a ringed) making both promises visually falsifiable, boxed formal
   definition, dabbawala analogy, function⊂relation guardrail. Eye-checked. PASS.
 
+- Sec 18 "y=f(x) and the vertical line test" — real dual-graph demo: parabola
+  y=x² (green test line meets once → function) vs circle x²+y²=25 (red test
+  line meets twice at correct symmetric points → not function), companions
+  sharpened for functions, guardrail. Eye-checked geometry. PASS.
+
 ## Current
-Starting Sec 18 (Notation y=f(x), the three companions, and the vertical line test — GRAPH).
+Starting Sec 19 (Fine print: single-valued roots, natural domain, equality of functions).
