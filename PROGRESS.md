@@ -145,5 +145,11 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   verified at (2,0)), f(5)=3 and x=-1 marked as green dots exactly where the
   red y=3 line crosses each arm — algebra and picture agree visually. PASS.
 
+- Sec 26 "Pitfalls and speed moves — functions" — inputs-not-outputs guardrail,
+  many-to-one/one-to-many reminder, counting-swap trap, strict/non-strict domain
+  conditions, boxed quotient-domain formula, signum-vs-modulus range guardrail. PASS.
+
+**Subtopic 3 (Functions, Sec 17-26) — COMPLETE.**
+
 ## Current
-Starting Sec 26 (Tips: pitfalls and speed moves — functions, closing subtopic 3).
+Starting Sec 27 (Formula recap: the complete chapter toolkit — no segments, use board_content).
