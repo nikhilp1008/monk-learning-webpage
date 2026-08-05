@@ -252,7 +252,14 @@ reveal patterns).
   doesn't exist, Li₂ BO=1, Be₂ BO=0, B₂ BO=1 paramagnetic) → closing
   (what VBT can't explain) + green chip.
 
+- Sec 24 — Ionisation strengthening a bond + H-bond classification: logic
+  line (pull e⁻ from antibonding → Na↓ → BO↑) → NO(2.5) vs NO⁺(3, stronger)
+  → H-bond donor/acceptor check → intermolecular vs intramolecular
+  side-by-side panels (↑bp/mp/visc/solub. vs ↓bp/solub.) → water bp + ice
+  floats consequences → biology (DNA, protein folding) + green chip.
+
 ## Current
-Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 5/9
-done (25, 20, 21, 22, 23) — authoring 24,26,27,28 now. Subtopic 4: 3/8 done
-(31,32,34) — authoring 29,30,33,35,36 next. Subtopic 5: 2/2 DONE.
+Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 6/9
+done (25, 20, 21, 22, 23, 24) — authoring 26,27,28 next (closes subtopic 3).
+Subtopic 4: 3/8 done (31,32,34) — authoring 29,30,33,35,36 after that.
+Subtopic 5: 2/2 DONE.
