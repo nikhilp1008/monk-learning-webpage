@@ -32,8 +32,12 @@ match across narration/board_events/reveals before starting.
   itself" rule, oxidising-agent & reducing-agent cards with examples, REDOX definition stamp,
   DISPROPORTIONATION caution. Full vocabulary ladder stays on screen — no erasing needed.
 
+- Sec 4 — Six O.N. assignment rules as a numbered badge ladder (free element=0, monatomic ion,
+  fluorine always −1, oxygen exceptions, hydrogen exceptions, master Σ(O.N.)=net charge in
+  red-margin), green verdict stamp closes it.
+
 ## Current
-Sec 4 — next.
+Sec 5 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
