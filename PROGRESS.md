@@ -78,6 +78,10 @@ already).
 - Sec 23: Two kinds of glue: sigma and pi — thick σ bond line vs dashed π cloud arc (bolt vs rubber band), bond-energy numbers, red "electrophile trades π for 2 new σ" payoff — PASS [mocked-audio]
 - Sec 24: cis and trans: a plank, not a swivel — drawn cis-/trans-but-2-ene structures (green same-side vs red opposite-side CH3), dipole comparison, red "needs 2 different groups" gate — PASS [mocked-audio]
 
+- Sec 25: Key definitions and formulae (alkene fact-sheet) — CnH2n chip, σ/π/C=C bond energies, lengths, cis/trans polarity, red Markovnikov note, HX reactivity, unsaturation tests — PASS [mocked-audio]
+- Sec 26: The orbital picture of ethene — drawn ethene skeleton framed by top/bottom dashed π-lobe arcs (sp2 σ framework in-plane, π cloud out-of-plane), red "reactivity hangs on this weak π cloud" — PASS [mocked-audio]
+- Sec 27: Naming alkenes and dienes — 3-step IUPAC rule list, but-1-ene/but-2-ene examples, diene/triene extension, red isoprene/natural-rubber note — PASS [mocked-audio]
+
 ## Current
-Sec 1-24 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
+Sec 1-27 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
 subtopic underway (Sec 22-41).
