@@ -331,5 +331,76 @@ deferred, see known-issue) complete.**
   teaser closer (seat order comes from the (n+l) rule, next). PASS both
   languages, FORCE_SHOTS eyeballed clean.
 
+- Sec 45: Assigning quantum numbers and counting nodes — explain (work
+  outward: l=0..(n−1), mₗ=−l..+l, then spin, written plain "ml"/"ms") →
+  guardrail (order matters, house number before street) → radial=n−l−1,
+  angular=l, total=n−1 boxed green → wiggle-room explain → 3p worked check
+  (angular=1, radial=1, total=2=n−1) → self-check guardrail (radial+angular
+  =n−1) → node definition + a real hand-built radial-probability curve
+  (two humps meeting the r-axis at exactly one point, red node dot+label).
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 46: Ordering energies: the (n+l) rule and shielding — explain
+  ((n+l), ties by lower n) → 4s(n+l=4)<3d(n+l=5) boxed green → a two-level
+  diagram (3d drawn above 4s, 4s in green) with the famous-ordering
+  guardrail → why-physically explain (higher l, poorly shielded) → a
+  penetration row (nucleus dot + s/p/d/f dots at increasing distance,
+  "penetration & tightness decrease →") → guardrail (Zeff decreases as l
+  increases) → one-electron-species caveat closer. PASS both languages,
+  FORCE_SHOTS eyeballed clean.
+
+- Sec 47: Writing configurations: anomalies and ions — fill-order chip →
+  capacities chip (s=2,p=6,d=10,f=14) → Cr/Cu guardrail + a real
+  OrbitalBox diagram (5 singly-occupied 3d boxes + 1 singly-occupied 4s
+  box, chem-kit's ↑/↓ component, visually proving the half-filled-d⁵
+  stability) → Cr/Cu formula line (green) → ion rule explain (remove
+  highest n first) → Fe:[Ar]3d⁶4s²⇒Fe²⁺=[Ar]3d⁶ boxed green → "last in,
+  not last out" explain → guardrail (never [Ar]3d⁴4s² — classic error).
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 48: Orbital shapes and the meaning of nodes — s/p node explain →
+  a real two-panel diagram (left: p-orbital dumbbell with a dashed RED
+  nodal PLANE through the waist; right: s-orbital sphere with a dashed
+  RED nodal circle = radial shell, nucleus dot at center) labelled
+  "angular node: a plane" / "radial node: a spherical shell" → d-orbital
+  explain (5 members, cloverleaf+dz²) → guardrail (angular=l carves
+  shape, radial=n−l−1 are shells) → L=√(l(l+1))·h/2π formula chip →
+  closer (nodes total n−1, higher shells = larger structured cloud).
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+
+**Subtopic 4 core concepts (Sec 42-48) complete — Sec 49-51 skipped,
+placeholder audio, see known-issue.**
+
+- Sec 52: Worked example (NEET): nodes of a 4d orbital — given (n=4,l=2)
+  → trap guardrail (n−1 is NOT the radial count) → radial=n−l−1=1 boxed
+  green → angular=l=2, total=n−1=3 boxed green → self-check guardrail
+  (1+2=3=n−1 ✓) → a 1+2=3 dot tally (amber/red/green dot groups labelled
+  radial/angular/total) → closing guardrail (recheck if they don't sum).
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 53: Worked example (JEE Main): 3d subshell and Fe2+ — L=√6·h/2π
+  (l=2) boxed green → orbitals=2l+1=5, max electrons=4l+2=10 chip →
+  radial nodes of 3d=n−l−1=0 chip → neutral Fe=[Ar]3d⁶4s² chip →
+  guardrail (highest-n first, the 4s pair) → Fe²⁺=[Ar]3d⁶ boxed green →
+  closer (4s leaves before 3d, even though filled first). PASS both
+  languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 54: Worked example (JEE Advanced): a universe with three spin
+  values — given (spin=−½,0,+½; find n=3 capacity & Z=10 config) →
+  guardrail (orbital count comes from n,l NOT spin) → n=3:n²=9 orbitals
+  chip → max electrons=3×9=27 boxed green → new capacities (s=3,p=9,
+  d=15) chip → Z=10:1s³2s³2p⁴ boxed green → guardrail (capacity=orbital
+  count×spin values — the whole trick). PASS both languages, FORCE_SHOTS
+  eyeballed clean.
+
+## Skipped for now (placeholder audio/reveals — see known-issue)
+Sec 49, 50, 51 (subtopic 4 continuation) and Sec 55, 56, 57 (recap) — not
+yet started, in addition to the earlier-listed Sec 24-30, 34-36. Revisit
+this whole list together once the audio pipeline is confirmed fixed.
+
 ## Current
-Sec 45: "Ordering energies: the (n+l) rule and shielding" — starting.
+Sections 39-48 and 52-54 (13 sections) authored and pushed this session.
+Remaining REAL sections to author: none from the originally assigned list
+(39-48, 52-54) — all done. Sections 49-51 and 55-57 remain deferred
+(placeholder audio). Next up whenever audio lands: revisit the full
+deferred list (4, 19-23, 24-30, 34-36, 49-51, 55-57) as one batch.
