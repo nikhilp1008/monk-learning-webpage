@@ -90,6 +90,10 @@ already).
 - Sec 32: HX addition and Markovnikov's rule — propene skeleton with two curved mechanism arrows (π→H⁺ forming the carbocation, Br⁻→C2 closing it), green "2° beats 1°", red restated-Markovnikov note — PASS [mocked-audio]
 - Sec 33: The peroxide (Kharasch) effect — propene skeleton with a single-barb (radical) curved arrow for Br• addition to the terminal carbon, red HBr-only bond-strength explanation, "Br Breaks the Rule" memory hook — PASS [mocked-audio]
 
+- Sec 34: Adding sulphuric acid and water — two Markovnikov addition rows (cold H2SO4 → alkyl hydrogen sulphate; H2O/H2SO4 → alcohol), same carbocation logic as HX, red "standard lab route" note — PASS [mocked-audio]
+- Sec 35: Oxidation: Baeyer's test and cleavage — mild (cold dil. KMnO4 → vicinal glycol) vs forcing (hot KMnO4/K2Cr2O7 cleaves to 2 CH3COOH) oxidation, red "=CH→COOH, 2-alkyl C→ketone" reading rule — PASS [mocked-audio]
+- Sec 36: Ozonolysis and polymerisation — alkene→(i)O3→ozonide(pentagon)→(ii)Zn/H2O→two carbonyls scheme, red "2 alkyls⇒ketone, 1H⇒aldehyde" rule, polythene addition-polymerisation line — PASS [mocked-audio]
+
 ## Current
-Sec 1-33 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
+Sec 1-36 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
 subtopic underway (Sec 22-41).
