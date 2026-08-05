@@ -28,8 +28,12 @@ match across narration/board_events/reveals before starting.
   (ox=↑O.N./red=↓O.N.), three numbered cautions (≠charge/≠valency, S–S split-zero, fractional
   O.N. = average only).
 
+- Sec 3 — Core definitions: OXIDATION/REDUCTION 4-way chip rows, "agent does the OPPOSITE to
+  itself" rule, oxidising-agent & reducing-agent cards with examples, REDOX definition stamp,
+  DISPROPORTIONATION caution. Full vocabulary ladder stays on screen — no erasing needed.
+
 ## Current
-Sec 3 — next.
+Sec 4 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
