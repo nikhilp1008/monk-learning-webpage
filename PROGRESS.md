@@ -89,8 +89,12 @@ match across narration/board_events/reveals before starting.
   full balanced eqn (verified mass+charge), O-counting shortcut to H⁺=16, traps called out
   (5→10 CO₂, 1e⁻ vs 2e⁻ donor), red-margin habit closer.
 
+- Sec 18 — JEE Main worked example: MnO₄⁻+I⁻→MnO₂+I₂ in BASIC medium, reduction half (3e⁻,
+  H₂O/OH⁻ not H⁺), oxidation half, LCM=6, combined boxed green (verified balanced), red-margin
+  lesson: MnO₄⁻ took only 3e⁻ here (not 5) because medium set the product.
+
 ## Current
-Sec 18 — next.
+Sec 19 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
