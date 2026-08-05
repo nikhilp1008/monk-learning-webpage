@@ -107,8 +107,12 @@ match across narration/board_events/reveals before starting.
   initially sat inside the FACE-2 chip's box (checker only catches text-vs-text, not
   text/stroke-vs-shape) — moved wire+label down 40px clear of the chip.
 
+- Sec 22 — Key definitions: electrode potential E/E° (IUPAC reduction convention), cell
+  notation, 3 limiting conditions (sharp endpoint+medium red-margin, E°cell>0 spontaneity,
+  standard-state assumptions → Nernst forward-ref), green closer.
+
 ## Current
-Sec 22 — next.
+Sec 23 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
