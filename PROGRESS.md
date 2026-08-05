@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 20.
+Starting Sec 21.
 
 ## Done
 - Sec 1 — what makes a collection a set (team-sheet well-defined demo, tall-students guardrail, roster A={2,3,5,7} + ∈/∉, repetition/order irrelevance, ∅)
@@ -39,3 +39,4 @@ Starting Sec 20.
 
 **Subtopic 3 (Venn Diagrams and Set Operations):**
 - Sec 19 — five set operations as membership questions (6-cell grid of real VennShade diagrams: union/intersection/difference/complement/symmetric-difference/disjoint, each drawn+shaded+labeled; note VennShade needs explicit tight x/y/w/h bounds per cell or its default full-canvas rect trips the overflow check even though the visible shading is correctly clipped)
+- Sec 20 — four Venn regions: shading not memorising (one big U/A/B diagram with only-A/A∩B/only-B/neither shaded+labeled, then a 4-icon "recipe row" showing which regions each operation shades: ∪/∩/−/′, landing on you-never-memorise-you-just-shade)
