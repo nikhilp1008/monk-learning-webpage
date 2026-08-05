@@ -167,8 +167,12 @@ match across narration/board_events/reveals before starting.
   predict displacement (locate in series, Cu rod in ZnSO₄ example), honest limits of O.N.
   (hypothetical charge, fractional averages, organic ambiguity, red-margin O.N.≠valency).
 
+- Sec 37 — Redox in action: 6 real-world applications (corrosion, combustion/respiration,
+  electrochemical cells, metallurgy, bleaching/disinfection, photography/electroplating) as
+  category+description rows (tspan highlighting), red-margin unification closer.
+
 ## Current
-Sec 37 — next.
+Sec 38 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
