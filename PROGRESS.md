@@ -124,5 +124,10 @@
 67. Worked example — solubility of silver chromate (NEET speed trap). PASS.
 68. Worked example — pH of a hydrolysing salt (JEE Main). PASS.
 
+69. Worked example — common-ion suppression of solubility (JEE Advanced). PASS.
+70. Traps and pro-tips for buffers, Ksp and hydrolysis — closes subtopic 5. PASS.
+
+**Subtopic 5 (Sec 56-70, Buffers/Ksp/Salt Hydrolysis) — COMPLETE.**
+
 ## Current
-Sec 69 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
+Sec 71 — next up (final subtopic: Recap, Sec 71-72)
