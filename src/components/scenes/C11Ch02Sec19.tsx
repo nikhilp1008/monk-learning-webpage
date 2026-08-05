@@ -5,11 +5,10 @@
  * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md +
  * SCENE_AUTHORING_CHEMISTRY.md.
  *
- * NOTE: stale audio (see PROGRESS.md known-issue) — English metadata claims
- * 68s but the real file is short; Hinglish reveals (used here too) are real.
- * Scene authored against the full 8-beat reveal data regardless.
+ * Re-verified against real audio/reveals (en [0,7.25,19.2,31.66,43.61,
+ * 53.67,65.45,76.37]) — content/beat mapping unchanged, VERDICT PASS.
  *
- * Beats (en [0,8,16,24,32,40,48,56], hi [0,7.25,18.26,31.32,43.78,53.85,65.54,76.98]):
+ * Beats:
  *  0 anchor: "turning λ into an energy in one step"
  *  1 step ① identify what's given: ν, λ, or ν̄
  *  2 step ② pick the matching form: hν, hc/λ, hcν̄

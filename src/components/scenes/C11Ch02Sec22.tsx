@@ -5,10 +5,10 @@
  * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md +
  * SCENE_AUTHORING_CHEMISTRY.md. `section_type: formulas` — toolkit recap.
  *
- * NOTE: stale audio (see PROGRESS.md known-issue) — English metadata claims
- * 68s but the real file is short; Hinglish is real and full-length.
+ * Re-verified against real audio/reveals (en [0,8.79,16.38,26.97,41.05,
+ * 51.71,64.85,73.98]) — content/beat mapping unchanged, VERDICT PASS.
  *
- * Beats (en [0,8,16,24,32,40,48,56], hi [0,8.53,15.7,26.97,40.28,52.48,66.82,76.04]):
+ * Beats:
  *  0 anchor: "everything the photoelectric effect needs"
  *  1 formula: p = h/λ = E/c
  *  2 guardrail: photon — zero rest mass, real momentum

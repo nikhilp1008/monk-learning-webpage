@@ -5,7 +5,10 @@
  * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md +
  * SCENE_AUTHORING_CHEMISTRY.md.
  *
- * Beats (en/hi both [0,8,16,24,32,40,48,56], 8s apart):
+ * Re-verified against real audio/reveals (en [0,7.42,15.96,27.82,41.13,
+ * 47.96,56.49,67.41]) — content/beat mapping unchanged, VERDICT PASS.
+ *
+ * Beats:
  *  0 anchor: the four confusing names, one question
  *  1 the trick: anchor each name to what stays CONSTANT — draw the empty grid
  *  2 represent: Isotopes row — same Z (¹H/²H/³H)

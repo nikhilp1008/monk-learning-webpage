@@ -5,10 +5,10 @@
  * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md +
  * SCENE_AUTHORING_CHEMISTRY.md. `section_type: formulas` — toolkit recap.
  *
- * NOTE: stale audio (see PROGRESS.md known-issue) — English metadata claims
- * 68s but the real file is short; Hinglish is real and full-length.
+ * Re-verified against real audio/reveals (en [0,7.77,15.53,25.77,38.74,
+ * 47.19,56.92,68.86]) — content/beat mapping unchanged, VERDICT PASS.
  *
- * Beats (en [0,8,16,24,32,40,48,56], hi [0,7.51,16.3,27.82,43.18,49.92,60.34,73.05]):
+ * Beats:
  *  0 anchor: "the wave-and-quantum toolkit"
  *  1 formula (high): c = νλ, ν̄ = 1/λ
  *  2 explain: ν̄ = wavenumber, waves per unit length (m⁻¹)

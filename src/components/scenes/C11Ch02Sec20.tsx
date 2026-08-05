@@ -5,10 +5,10 @@
  * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md +
  * SCENE_AUTHORING_CHEMISTRY.md.
  *
- * NOTE: stale audio (see PROGRESS.md known-issue) — English metadata claims
- * 68s but the real file is short; Hinglish is real and full-length.
+ * Re-verified against real audio/reveals (en [0,8.79,21.67,29.35,37.97,
+ * 48.04,64.09,76.97]) — content/beat mapping unchanged, VERDICT PASS.
  *
- * Beats (en [0,8,16,24,32,40,48,56], hi [0,9.13,20.31,28.16,39,49.16,65.63,80.73]):
+ * Beats:
  *  0 anchor: "solving — and understanding — photoemission"
  *  1 method: find hν → compare with W₀; if hν<W₀, no emission
  *  2 formula (high, GREEN): KEmax = hν − W₀

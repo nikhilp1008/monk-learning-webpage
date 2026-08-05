@@ -5,10 +5,10 @@
  * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md +
  * SCENE_AUTHORING_CHEMISTRY.md. `section_type: worked_examples`.
  *
- * NOTE: stale audio (see PROGRESS.md known-issue) — English metadata claims
- * 68s but the real file is short; Hinglish is real and full-length.
+ * Re-verified against real audio/reveals (en [0,6.83,17.24,29.44,38.06,
+ * 45.31,55.72,66.9]) — content/beat mapping unchanged, VERDICT PASS.
  *
- * Beats (en [0,8,16,24,32,40,48,56], hi [0,6.66,16.98,28.76,36.27,43.61,53.94,64.69]):
+ * Beats:
  *  0 anchor: a friendly warm-up problem
  *  1 given: FM station at 95.0 MHz — find λ and E(photon)
  *  2 formula: λ = c/ν = 3×10⁸/95.0×10⁶ = 3.16 m
