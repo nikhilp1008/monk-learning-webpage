@@ -78,5 +78,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   codomain=B always, boxed headline count 2^pq, on-A/non-empty corollaries,
   power-of-two chant insight. PASS.
 
+- Sec 13 "Procedures: rule↔roster, why 2^pq" — three divided procedure blocks:
+  Rule→Roster (filter+guardrail+domain/range readout), Roster→Set-builder
+  (pattern-spot+verify-both-ways), Why 2^pq (boxed 2×2×...×2, factors label
+  substituting for underbrace per notation spec, independent-choice insight). PASS.
+
 ## Current
-Starting Sec 13 (Procedures: rule ↔ roster, and why relations count as 2^pq).
+Starting Sec 14 (Worked: roster form of y=x+2, and counting relations).
