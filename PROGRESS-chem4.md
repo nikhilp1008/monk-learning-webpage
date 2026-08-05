@@ -271,8 +271,14 @@ reveal patterns).
   high mp/not volatile → green lesson chip (intramolecular lowers what
   intermolecular raises).
 
+- Sec 28 — Pitfalls and pro-tips MOT/H-bonding (closes subtopic 3): 4
+  red-margin pitfall rows (one MO ordering ≠ everything, don't drop the ½,
+  ionisation doesn't always weaken, don't flip intra/intermolecular) →
+  O-family ion shortcut pro-tip → H-bond first-check pro-tip → green chip
+  (key bond orders: N₂=3, O₂=2, F₂=1, NO=2.5, NO⁺=3, He₂=0).
+  SUBTOPIC 3 DONE (9/9).
+
 ## Current
-Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 8/9
-done (25, 20, 21, 22, 23, 24, 26, 27) — authoring 28 next (closes subtopic
-3). Subtopic 4: 3/8 done (31,32,34) — authoring 29,30,33,35,36 after that.
+Subtopic 1: 10/10 DONE. Subtopic 2: 9/9 DONE. Subtopic 3: 9/9 DONE.
+Subtopic 4: 3/8 done (31,32,34) — authoring 29,30,33,35,36 now.
 Subtopic 5: 2/2 DONE.
