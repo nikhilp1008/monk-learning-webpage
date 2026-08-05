@@ -58,6 +58,9 @@ already).
 - Sec 3: How cycloalkanes react: strain decides — strained-ring lane (triangle + H2/catalyst → CH3CH2CH3, "mimics unsaturation") vs strain-free lane (pentagon + hν,X2 → R–X substitution), red rule banner — PASS [mocked-audio]
 - Sec 4: Ordering cycloalkanes by stability (worked example) — 4-row table (icon/name/angle/deviation) for all four rings, green answer chain "cyclohexane > cyclopentane > cyclobutane > cyclopropane", red reactivity-is-reverse note — PASS [mocked-audio]
 - Sec 5: Two classic cycloalkane traps (tips) — TRAP 1 (CnH2n chip shared with alkenes, red "≠ double bond", cyclopropane-adds-from-strain aside) and TRAP 2 (assuming flat, red "cyclohexane is puckered" + chair icon), amber pro-tip banner — PASS [mocked-audio]
+- Sec 6: Saturated hydrocarbons: the paraffins — 4-bond methane-like icon (every valency filled), double bond drawn then crossed out (none waiting to react), paraffins/parum affinis etymology, CnH2n+2 chip, CH₄/C₂H₆ examples, red "unreactive toward acids/bases, not oxygen" caveat — PASS [mocked-audio]
+- Sec 7: The homologous series — drawn 5-step ascending staircase with CH₄→C₅H₁₂ landing on each tread, green rising arrow for "boiling point rises smoothly", red payoff banner — PASS [mocked-audio]
+- Sec 8: sp3 geometry and free rotation — tetrahedral tent icon, drawn zigzag carbon backbone with 109.5° angle arc (never a straight rod), steering-wheel icon for σ-bond rotation, red "not perfectly free" note — PASS [mocked-audio]
 
 ## Current
 Sec 1-5 done — Classification of Hydrocarbons subtopic complete. Moving to
