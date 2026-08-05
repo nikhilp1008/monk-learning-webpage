@@ -109,5 +109,8 @@
 57. Solubility product: 'insoluble' is never truly zero — Ksp, AgCl. PASS.
 58. Salt hydrolysis: the solution takes the side of the stronger parent. PASS.
 
+59. How a buffer holds steady — two-reservoir tanks, capacity peak. PASS.
+60. Linking Ksp to molar solubility: coefficient enters twice — Ag2CrO4. PASS.
+
 ## Current
-Sec 59 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
+Sec 61 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
