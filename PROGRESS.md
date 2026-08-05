@@ -118,5 +118,8 @@
 63. Buffers: the Henderson equation, capacity and range. PASS.
 64. Solubility product and the Ksp-to-solubility table — AB/A2B/AB3 types. PASS.
 
+65. Precipitation criterion and salt-hydrolysis pH. PASS.
+66. Worked example — pH of a basic buffer (CBSE). PASS.
+
 ## Current
-Sec 65 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
+Sec 67 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
