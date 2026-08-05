@@ -125,5 +125,11 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   rational-function domain caveat, fingerprint guardrail. Eye-checked all 4
   shapes distinct and correct. PASS.
 
+- Sec 22 "Standard functions II: signum, greatest integer" — StepFunction-based
+  signum (open/open at 0, closed dot at origin, verified 3-piece jump) and
+  greatest-integer 5-step staircase (every step correctly closed-left/open-
+  right, ascending bottom-left to top-right), rounding-toward-−∞ guardrail,
+  general graph-reading skill, JEE fractional-part note. Eye-checked all dots. PASS.
+
 ## Current
-Starting Sec 22 (Standard functions II: signum, greatest integer, graph reading — GRAPH, flagged).
+Starting Sec 23 (Worked: is it a function? — and counting functions).
