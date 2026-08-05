@@ -67,5 +67,10 @@
 27. The five levers, and the only one that changes K — lever roadmap. PASS.
 28. Concentration: consume, replenish, drive to completion. PASS.
 
+29. Pressure and volume: the side with fewer gas moles wins — compression demo. PASS.
+30. The inert-gas trap: constant volume vs constant pressure — the chapter's key trap. PASS.
+31. Temperature: treat heat as a participant — heat in the equation. PASS.
+32. Catalyst: speed, not yield — energy-profile diagram. PASS.
+
 ## Current
-Sec 29 — next up (subtopic 3: Le Chatelier's Principle & Factors, Sec 26-39, 14 sections)
+Sec 33 — next up (subtopic 3: Le Chatelier's Principle & Factors, Sec 26-39, 14 sections)
