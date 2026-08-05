@@ -258,8 +258,14 @@ reveal patterns).
   side-by-side panels (↑bp/mp/visc/solub. vs ↓bp/solub.) → water bp + ice
   floats consequences → biology (DNA, protein folding) + green chip.
 
+- Sec 26 — Worked examples bp trap + NO→NO⁺: Part A (mass-trend trap for
+  H₂O/H₂S/H₂Se, red flag → key flag O small+high-EN → green answer chip
+  H₂O≫H₂Se>H₂S) → erases → Part B (NO 15e⁻→BO=2.5 paramagnetic, NO⁺ loses
+  π*→BO=3 diamagnetic, stronger/shorter conclusion + green chip). Benign
+  erase-stall at b5, confirmed via screenshot.
+
 ## Current
-Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 6/9
-done (25, 20, 21, 22, 23, 24) — authoring 26,27,28 next (closes subtopic 3).
+Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 7/9
+done (25, 20, 21, 22, 23, 24, 26) — authoring 27,28 next (closes subtopic 3).
 Subtopic 4: 3/8 done (31,32,34) — authoring 29,30,33,35,36 after that.
 Subtopic 5: 2/2 DONE.
