@@ -73,8 +73,12 @@ match across narration/board_events/reveals before starting.
   product changes with medium — MnO₄⁻ example) + 3 definitions (half-reaction, skeletal eqn/
   spectator ions, n=e⁻ transferred forward-ref to n-factor), 6-badge ladder.
 
+- Sec 14 — Oxidation-number method, 5 steps: assign O.N./ID changes, find Δ per atom→molecule,
+  make total ↑=↓ (red, core move + "electron-balance in disguise" insight), balance remaining
+  atoms leaving H/O last, balance O/H via medium then verify charge (red closer).
+
 ## Current
-Sec 14 — next.
+Sec 15 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
