@@ -187,8 +187,13 @@ match across narration/board_events/reveals before starting.
   oxidised, Cr:+6→+3 reduced, red-margin intramolecular redox classification (2 different
   elements, sub-class of decomposition), distinguished from disproportionation.
 
+- Sec 42 — Pitfalls & pro-tips closer: 4 traps (all combinations/decompositions=redox assumption,
+  displacement direction backwards, disproportionation vs intramolecular confusion, Stock-notation
+  slips), PRO-TIP count-first-confirm-with-ON, red-margin disproportionation fingerprint.
+  ✅ SUBTOPIC 4 (secs 32-42) COMPLETE.
+
 ## Current
-Sec 42 — next (closes Subtopic 4, secs 32-42).
+Subtopic 5 (Consolidation, secs 43-44). Sec 43 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
