@@ -83,5 +83,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   (pattern-spot+verify-both-ways), Why 2^pq (boxed 2×2×...×2, factors label
   substituting for underbrace per notation spec, independent-choice insight). PASS.
 
+- Sec 14 "Worked: roster form y=x+2, counting relations" — Ex1 six filter chips
+  (4 green kept, 2 red discarded for escaping A) building the boxed roster,
+  domain/range/codomain, "in A but not domain" guardrail; Ex2 JEE speed trap
+  boxed 2^12=4096/4095 with both wrong reflexes named. PASS.
+
 ## Current
-Starting Sec 14 (Worked: roster form of y=x+2, and counting relations).
+Starting Sec 15 (Worked: lattice points on a circle, and forced-pair counting — GRAPH geometry, flagged).
