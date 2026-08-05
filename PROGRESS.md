@@ -137,7 +137,11 @@ already).
 - Sec 69: Five substitutions II: sulphonation and Friedel-Crafts — (a) reversible sulphonation, (b) FC alkylation (electrophile R⁺), (c) FC acylation (electrophile RCO⁺), red formula + "cleaner than alkylation, no rearrangement" note — PASS [mocked-audio]
 - Sec 70: Addition and combustion: breaking aromaticity — (a) hydrogenation (C6H12) and UV chlorination (BHC/lindane) needing vigorous conditions, (b) combustion equation + sooty flame, red "addition always breaks aromaticity" punchline — PASS [mocked-audio]
 
+- Sec 71: Directive influence: where does the next group go? — ring with G substituent and colored o/m/p vertex labels, green donor-favors-o/p reasoning vs amber withdrawer-favors-meta reasoning, red "always draw the resonance structures" guardrail — PASS [mocked-audio]
+- Sec 72: Activating, deactivating, and the halogen exception — green activating-group list vs amber deactivating-group list two-column comparison, red "halogens are the exception" callout (deactivating yet o/p-directing), rule-of-thumb + Friedel-Crafts-fails-on-deactivated-rings footnotes — PASS [mocked-audio]
+- Sec 73: Carcinogenicity and toxicity — 4-box reaction-chain diagram (incomplete combustion → PAH → metabolised → red DNA-damaging species), sources caption, benzene-itself-toxic line, red "real-world reason it matters" closing note — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48-52, 54-70 done (Sec 11, 47, 53 skipped). Classification +
+Sec 1-46, 48-52, 54-73 done (Sec 11, 47, 53 skipped). Classification +
 Alkanes + Alkenes + Alkynes complete. Aromatic Hydrocarbons subtopic
-underway (Sec 59-78, currently at Sec 70).
+underway (Sec 59-78, currently at Sec 73).
