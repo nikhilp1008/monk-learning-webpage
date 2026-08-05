@@ -99,5 +99,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
 
 **Subtopic 2 (Relations, Sec 10-16) — COMPLETE.**
 
+- Sec 17 "A function is a relation with two promises" — first Functions section,
+  three side-by-side arrow diagrams (valid / dead-button ringed / two-arrows-
+  from-a ringed) making both promises visually falsifiable, boxed formal
+  definition, dabbawala analogy, function⊂relation guardrail. Eye-checked. PASS.
+
 ## Current
-Starting Sec 17 (A function is a relation with two promises — start of Functions subtopic).
+Starting Sec 18 (Notation y=f(x), the three companions, and the vertical line test — GRAPH).
