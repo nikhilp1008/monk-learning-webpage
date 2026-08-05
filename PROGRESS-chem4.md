@@ -296,7 +296,15 @@ reveal patterns).
   green answer chip BF₃<BCl₃<BBr₃<BI₃). Benign erase-stall at b4 (validated
   pattern, 4th confirmed instance).
 
+- Sec 35 — Worked example diborane bonding: electron-deficiency setup (14
+  needed vs 12 available) → full B₂H₆ structure built (2 B, 4 terminal H via
+  straight bonds, 2 bridging H via red curved "banana" 3c-2e bonds) → electron
+  count (4 terminal=8e⁻, 2 bridging=4e⁻, sum=12 ✓ green) → sp³ geometry +
+  bond lengths (133 vs 119 pm) → green answer chip. One of the strongest
+  visuals in the chapter — textbook-accurate banana bonds.
+
 ## Current
 Subtopic 1: 10/10 DONE. Subtopic 2: 9/9 DONE. Subtopic 3: 9/9 DONE.
-Subtopic 4: 6/8 done (29,30,31,32,33,34) — authoring 35,36 now.
+Subtopic 4: 7/8 done (29,30,31,32,33,34,35) — authoring 36 next (closes
+subtopic 4, and completes all currently-unblocked chapter work).
 Subtopic 5: 2/2 DONE.
