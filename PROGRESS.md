@@ -125,7 +125,11 @@ already).
 - Sec 60: The delocalised doughnut and resonance energy — hexagon built up into hexagon+inner-circle (the aromatic "doughnut"), resonance energy ≈150 kJ/mol, red "all arene chemistry flows from this" — PASS [mocked-audio]
 - Sec 61: Kekule to resonance hybrid — two hand-drawn Kekule structures (alternating double bonds, opposite phase) ↔ resonance arrow ↔ = ↔ hexagon+circle hybrid, red "hexagon-with-circle is the honest picture" — PASS [mocked-audio]
 
+- Sec 62: Huckel's rule: what makes a ring aromatic — benzene ring + green checklist (cyclic/planar/conjugated) + amber (4n+2)π ring-highlight, red "ordinary tests FAIL for arenes" diagnostic — PASS [mocked-audio]
+- Sec 63: Key definitions and formulae (arene fact-sheet) — CnH2n-6 series, planar hexagon facts, resonance energy, EAS, red activating/deactivating directing-group lists — PASS [mocked-audio]
+- Sec 64: Naming benzene derivatives — drawn ring with numbered 1/2/3/4 positions labeled ortho/meta/para, phenyl vs benzyl vs aryl, xylene isomers, red o/m/p-recognition note — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48-52, 54-61 done (Sec 11, 47, 53 skipped). Classification +
+Sec 1-46, 48-52, 54-64 done (Sec 11, 47, 53 skipped). Classification +
 Alkanes + Alkenes + Alkynes complete. Aromatic Hydrocarbons subtopic
 underway (Sec 59-78).
