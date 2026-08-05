@@ -111,8 +111,12 @@ match across narration/board_events/reveals before starting.
   notation, 3 limiting conditions (sharp endpoint+medium red-margin, E°cell>0 spontaneity,
   standard-state assumptions → Nernst forward-ref), green closer.
 
+- Sec 23 — Procedure A (redox titration): drawn burette+flask diagram (right column), 4-step
+  left column (n-factor from medium, red-margin meq balance M₁n₁V₁=M₂n₂V₂, why-equivalents
+  insight, substitute/solve, sanity-check by n-factor), green closer.
+
 ## Current
-Sec 23 — next.
+Sec 24 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
