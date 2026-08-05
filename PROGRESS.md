@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Subtopic 4 (secs 28-35) complete. Starting Sec 36 (Formula Recap).
+Starting Sec 37 (final section — Cheat Sheet).
 
 ## Gotcha log
 - **Beat-index off-by-one (found in Sec 23, fixed):** `reveals` has N entries (indices 0..N-1); beat index0 is always the title/heading (no separate content gate needed), so content beats must be gated `beat >= 1` through `beat >= N-1` — exactly N-1 gates, one per remaining `board_content` seq item. Never invent an extra beat (e.g. a standalone "draw the diagram" step) that doesn't correspond to a real reveal index — it shifts every later beat's content diagram+text late relative to the narration and silently drops the last beat's content entirely (since `beat` can never exceed N-1). The verifier can't catch this — it only checks geometry at whatever timestamps you pass it, and if the component's own gating is shifted, it'll still "pass" while being out of sync. Sanity check before verifying: count `board_content` seq items = count of `board_reveal_at_*` entries = (number of `beat >= k` gates used) + 1.
@@ -60,3 +60,6 @@ Subtopic 4 (secs 28-35) complete. Starting Sec 36 (Formula Recap).
 - Sec 33 — three-set survey: at least one, exactly two, none (full 3-circle Venn with all 7 regions + none numerically filled — 50/25/20 singles, 20/10/15 pairwise, 20 triple, 40 none, summing to 200 — alongside at-least-one=160/exactly-two=45/no-sport=40 formulas, coefficient guardrail, fill-centre-first pro-tip)
 - Sec 34 — advanced: solve for the triple overlap via partition identities (deliberately NO diagram, per the section's own point — pure algebra: two partition-identity equations stacked with a drawn subtraction line eliminating E₁, landing E₃=25, verified by a check box E₁=100⇒union=150)
 - Sec 35 — pitfalls & pro-tips: cardinality word problems (5 traps — forgetting to subtract overlap, only-A vs A, mis-signing the triple term, exactly-two≠at-least-two, skipping the sanity check — then draw-Venn-fill-centre-first pro-tip, closes subtopic 4)
+
+**Chapter recap (secs 36-37):**
+- Sec 36 — complete formula toolkit (2×4 grid of 8 boxed formula cards revealed in taught order: power set, intervals, difference/symdiff, De Morgan, 2-set/3-set union, exactly-two, partition identities — "notes page" recap, no new teaching)
