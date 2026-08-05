@@ -133,7 +133,11 @@ already).
 - Sec 66: Physical properties and the evidence for resonance — sooty/luminous flame + toxicity notes, three-bar heat-of-hydrogenation comparison (cyclohexene ~120, predicted "cyclohexatriene" ~360, benzene actual much lower), red shortfall≈150=resonance-energy bracket — PASS [mocked-audio]
 - Sec 67: The master reaction: electrophilic aromatic substitution — 3-ring EAS scheme (benzene+E⁺ → red arenium ion with curved arrow and + charge, aromaticity lost → green product ring, aromaticity restored), red rate-determining note, red punchline "pays in step 2, recovers in step 3" — PASS [mocked-audio]
 
+- Sec 68: Five substitutions I: nitration and halogenation — (a) HNO3+2H2SO4⇌NO2⁺ electrophile-forming equilibrium then net nitration equation, (b) Cl2/FeCl3 halogenation equation, red "always name the electrophile" note — PASS [mocked-audio]
+- Sec 69: Five substitutions II: sulphonation and Friedel-Crafts — (a) reversible sulphonation, (b) FC alkylation (electrophile R⁺), (c) FC acylation (electrophile RCO⁺), red formula + "cleaner than alkylation, no rearrangement" note — PASS [mocked-audio]
+- Sec 70: Addition and combustion: breaking aromaticity — (a) hydrogenation (C6H12) and UV chlorination (BHC/lindane) needing vigorous conditions, (b) combustion equation + sooty flame, red "addition always breaks aromaticity" punchline — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48-52, 54-67 done (Sec 11, 47, 53 skipped). Classification +
+Sec 1-46, 48-52, 54-70 done (Sec 11, 47, 53 skipped). Classification +
 Alkanes + Alkenes + Alkynes complete. Aromatic Hydrocarbons subtopic
-underway (Sec 59-78, currently at Sec 67).
+underway (Sec 59-78, currently at Sec 70).
