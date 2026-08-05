@@ -130,8 +130,12 @@ match across narration/board_events/reveals before starting.
 - Sec 27 — CBSE titration worked example: oxalic acid vs KMnO₄, n-factors (2 and 5), red-margin
   endpoint formula, substitute/simplify (verified: 0.10V=4.0), boxed green answer V=40.0 mL.
 
+- Sec 28 — NEET speed trap: proportional E° number line (Zn/Cu/Ag⁺), ringed extremes
+  (strongest oxidant=Ag⁺, strongest reductant=Zn), arced gap bracket showing 1.56V > 1.10V,
+  red-margin trap (positive E° ≠ best reducer), green answer box.
+
 ## Current
-Sec 28 — next.
+Sec 29 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
