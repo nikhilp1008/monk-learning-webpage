@@ -175,8 +175,12 @@ match across narration/board_events/reveals before starting.
   redox, (ii) CaO+CO₂→CaCO₃ combination NOT redox, (iii) Fe+CuSO₄→FeSO₄+Cu metal-displacement
   redox — all O.N. tracking verified correct, red-margin answer summary.
 
+- Sec 39 — NEET speed trap MCQ: 4 metal+salt option chips, red-margin activity-series-direction
+  rule, 3 crossed out (Cu<Zn, Ag<Cu, Cu<Al) + 1 ringed green correct (Zn>Fe), equation shown,
+  trap note about "looking reactive" vs direction.
+
 ## Current
-Sec 39 — next.
+Sec 40 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
