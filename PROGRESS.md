@@ -81,8 +81,12 @@ match across narration/board_events/reveals before starting.
   acidic → add OH⁻ per H⁺ → H₂O), back-to-molecular rule, red-margin worked example
   H₂S+2Fe³⁺ ionic → H₂S+2FeCl₃ molecular (verified balanced).
 
+- Sec 16 — CBSE worked example: Cr₂O₇²⁻+Sn²⁺ in acid via ion-electron method, reduction half
+  (6e⁻) + oxidation half (2e⁻) equalised via LCM=6, combined boxed green, charge check
+  −2+14+6=+18=+6+12 ✓.
+
 ## Current
-Sec 16 — next.
+Sec 17 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
