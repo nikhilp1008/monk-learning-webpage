@@ -264,8 +264,15 @@ reveal patterns).
   π*→BO=3 diamagnetic, stronger/shorter conclusion + green chip). Benign
   erase-stall at b5, confirmed via screenshot.
 
+- Sec 27 — Worked example ortho vs para nitrophenol: two benzene ring
+  skeletons (ringD) side by side, OH+NO₂ substituents built bond-by-bond —
+  ortho shows a dashed intramolecular H-bond loop (adjacent, chelate) → low
+  mp/steam-volatile; para shows OH/NO₂ at opposite vertices with no link →
+  high mp/not volatile → green lesson chip (intramolecular lowers what
+  intermolecular raises).
+
 ## Current
-Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 7/9
-done (25, 20, 21, 22, 23, 24, 26) — authoring 27,28 next (closes subtopic 3).
-Subtopic 4: 3/8 done (31,32,34) — authoring 29,30,33,35,36 after that.
+Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 8/9
+done (25, 20, 21, 22, 23, 24, 26, 27) — authoring 28 next (closes subtopic
+3). Subtopic 4: 3/8 done (31,32,34) — authoring 29,30,33,35,36 after that.
 Subtopic 5: 2/2 DONE.
