@@ -171,8 +171,17 @@ export default function LessonPlayerPage() {
       language === "english"
         ? currentSection.board_reveal_at_english
         : currentSection.board_reveal_at_hinglish;
+    // Hand-choreographed scenes drive their own beats straight off the raw
+    // reveal array and don't read board_content at all — so for a registered
+    // scene, don't clamp/pad reveals to legacy board_content's event count
+    // (which is empty for scene-only chapters and would zero this out).
+    if (SceneComp) {
+      return Array.isArray(json)
+        ? json.map((v) => (typeof v === "number" && !isNaN(v) ? Number(v) : 0))
+        : [];
+    }
     return parseRevealTimestamps(json, boardEvents.length);
-  }, [currentSection, language, boardEvents.length]);
+  }, [currentSection, language, boardEvents.length, SceneComp]);
 
   const revealedEventsCount = useMemo(() => {
     if (boardEvents.length === 0) return 0;
