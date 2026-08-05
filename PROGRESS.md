@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 15.
+Starting Sec 16.
 
 ## Done
 - Sec 1 — what makes a collection a set (team-sheet well-defined demo, tall-students guardrail, roster A={2,3,5,7} + ∈/∉, repetition/order irrelevance, ∅)
@@ -32,3 +32,4 @@ Starting Sec 15.
 - Sec 12 — power set and coin-flip intuition (A={a,b} sub-selections listed, P(A) formula, binary coin-flip tree a:out/in → b:out/in → 4 leaves ∅/{b}/{a}/{a,b} = 2×2=4, ∈ vs ⊆ landing with P({1,2}))
 - Sec 13 — subset counting formulas, why 2ⁿ (2-column toolkit: n[P(A)]=2ⁿ headline, proper/non-empty=2ⁿ-1, non-empty-proper=2ⁿ-2, C(n,r); live-built product derivation 2×2×⋯×2=2ⁿ; binomial cross-check C(n,0)+⋯+C(n,n)=(1+1)ⁿ=2ⁿ)
 - Sec 14 — power set of {p,q,r} listed by size (full power-set lattice built bottom-up: ∅ → 3 singletons → 3 pairs → {p,q,r}, all 12 covering edges drawn, then flattened to roster + n[P(A)]=2³=8 count check)
+- Sec 15 — speed trap: n[P(A)]=256 → n(A) and proper subsets (256=2⁸ recognition, two-column derivation n(A)=8 / proper=255, dual traps staged-crossed-corrected: n(A)=256✗ and proper=254✗)
