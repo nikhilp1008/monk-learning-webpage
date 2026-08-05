@@ -113,6 +113,10 @@ already).
 - Sec 50: Electrophilic addition I: hydrogen and halogens — two 2-arrow reaction chains (H2/Ni,Pd,Pt: alkyne→alkene→alkane; Br2: alkyne→dihaloalkene→tetrahalide), red "why twice" note — PASS [mocked-audio]
 - Sec 51: Electrophilic addition II: hydrogen halides — HC≡CH+2HBr→CH3CHBr2 gem-dihalide, propyne example, gem-vs-vicinal distinction, red "track the reagent" memory rule — PASS [mocked-audio]
 
+- Sec 52: Kucherov hydration — HC≡CH+H2O --HgSO4,333K--> [enol] --tautomerise--> CH3CHO chain, red "higher alkynes → ketone, never stop at enol" — PASS [mocked-audio]
+- Sec 54: Propyne with sodamide and water (CBSE worked) — (i) NaNH2→sodium propynide; (ii) Markovnikov hydration→propanone (acetone) — PASS [mocked-audio]
+- Sec 55: Which liberates hydrogen with sodium? (NEET worked) — 3-candidate gate-check (but-2-yne✗/but-1-yne✓/but-2-ene✗), green "only (B)" answer, trap note — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48-51 done (Sec 11, 47 skipped so far). Classification + Alkanes +
-Alkenes complete. Alkynes subtopic underway (Sec 42-58, skipping 47 and 53).
+Sec 1-46, 48-52, 54-55 done (Sec 11, 47, 53 skipped). Classification +
+Alkanes + Alkenes complete. Alkynes subtopic underway (Sec 42-58).
