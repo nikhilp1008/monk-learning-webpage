@@ -64,6 +64,9 @@ already).
 - Sec 9: Key definitions and formulae (fact-sheet) — CnH2n+2 chip, boxed combustion equation (high emphasis), geometry/alkyl/degree facts, red halogen/hydrogen reactivity orders, torsional strain note — PASS [mocked-audio]
 - Sec 10: Preparing alkanes I: hydrogenation and reduction — two reaction rows (CH2=CH2+H2 --Pt/Pd/Ni--> CH3-CH3; R-X+2[H] --Zn,dil.HCl--> R-H+HX), red "not the fluoride" note — PASS [mocked-audio]
 - Sec 12: Preparing alkanes III: from carboxylic acids — decarboxylation (CH3COONa+NaOH --CaO,Δ--> CH4+Na2CO3, drops a carbon) vs Kolbe's electrolytic (couples fragments, even carbons), red "Kolbe doubles / decarboxylation drops one" mnemonic — PASS [mocked-audio]
+- Sec 13: Free-radical halogenation: the three-step chain — Cl-Cl bond with single-barb curved (radical) arrows for homolysis, hν reaction arrow, two propagation equations, loop icon for chain regeneration, termination equation, red 3°>2°>1° selectivity — PASS [mocked-audio]
+- Sec 14: Conformational analysis of ethane — drawn Newman projections (staggered vs eclipsed spokes), energy bars (short green/tall red) with dashed gap connector, ΔE≈12.5 kJ/mol, red "conformers can't be isolated" note — PASS [mocked-audio]
+- Sec 15: Physical properties of alkanes — 3-segment phase bar (C1-C4 gas/C5-C17 liquid/C18+ solid), green rising arrow for boiling-point trend, red "like dissolves like" solubility note — PASS [mocked-audio]
 
 ## Current
 Sec 1-5 done — Classification of Hydrocarbons subtopic complete. Moving to
