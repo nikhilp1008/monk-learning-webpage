@@ -129,5 +129,10 @@
 
 **Subtopic 5 (Sec 56-70, Buffers/Ksp/Salt Hydrolysis) — COMPLETE.**
 
+71. Formula recap — the whole chapter at a glance — two-column cheat sheet, 9 formulas (Kc, Kp-Kc, Gibbs, van't Hoff, dissociation, Kw/pH, weak acid, Henderson, Ksp). PASS.
+72. Cheat sheet — quick rules and memory aids — 7 numbered one-glance rules + "chapter complete" closing stamp. PASS.
+
+**Subtopic 6 (Sec 71-72, Recap) — COMPLETE.**
+
 ## Current
-Sec 71 — next up (final subtopic: Recap, Sec 71-72)
+**ALL 72 SECTIONS COMPLETE.** Chapter fully authored, verified (PASS in both languages), committed and pushed.
