@@ -83,5 +83,11 @@
 
 **Subtopic 3 (Sec 26-39, Le Chatelier's Principle & Factors) — COMPLETE.**
 
+40. Strong versus weak: complete versus partial ionization — Mumbai local metaphor. PASS.
+41. Three lenses on acid and base: Arrhenius to Lewis — widening bars. PASS.
+42. Conjugate pairs and amphoteric water. PASS.
+43. Strength is not concentration. PASS.
+44. Water's self-ionization: the origin of the pH scale — pH number-line. PASS.
+
 ## Current
-Sec 40 — next up (subtopic 4: Ionic Equilibrium / Acid-Base / pH / Common-Ion, Sec 40-55)
+Sec 45 — next up (subtopic 4: Ionic Equilibrium / Acid-Base / pH / Common-Ion, Sec 40-55, 16 sections)
