@@ -97,8 +97,12 @@ match across narration/board_events/reveals before starting.
   0→+1 oxidised), electron bookkeeping (1P per 3P), drawn branching diagram (P₄ box → reduction/
   oxidation boxes), full balanced eqn (verified O/H/charge all match).
 
+- Sec 20 — Pitfalls & pro-tips closer: 4 traps (charge forgotten, wrong medium ions, halves not
+  equalised, fixed-product assumption), PRO-TIP coefficient shortcut, red-margin basic-via-acid
+  habit. ✅ SUBTOPIC 2 (secs 12-20) COMPLETE.
+
 ## Current
-Sec 20 — next (closes Subtopic 2, secs 12-20).
+Subtopic 3 (Redox Titrations & Electrochemical Cells, secs 21-31). Sec 21 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
