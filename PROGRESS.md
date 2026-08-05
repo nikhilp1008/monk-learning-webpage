@@ -85,8 +85,12 @@ match across narration/board_events/reveals before starting.
   (6e⁻) + oxidation half (2e⁻) equalised via LCM=6, combined boxed green, charge check
   −2+14+6=+18=+6+12 ✓.
 
+- Sec 17 — NEET speed trap: MnO₄⁻+C₂O₄²⁻ coefficient-only strategy, e⁻ count (5 vs 2, LCM=10),
+  full balanced eqn (verified mass+charge), O-counting shortcut to H⁺=16, traps called out
+  (5→10 CO₂, 1e⁻ vs 2e⁻ donor), red-margin habit closer.
+
 ## Current
-Sec 17 — next.
+Sec 18 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
