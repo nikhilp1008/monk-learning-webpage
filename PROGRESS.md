@@ -47,5 +47,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   visually forking then landing green), divider + second sub-heading, 3-step
   recovery procedure with boxed sanity-check formula. Eye-checked. PASS.
 
+- Sec 7 "Worked: writing A×B, common-pairs speed trick" — Ex1 lists A×B/B×A with
+  first pair color-highlighted (amber/green) to show the shape flip + witness-pair
+  verification; Ex2 JEE speed trap stages "0?" crossed out before landing the star-
+  identity boxed answer 4; guardrail on unequal-products-can-still-overlap. PASS.
+
 ## Current
-Starting Sec 7 (Worked: writing A×B, and the common-pairs speed trick).
+Starting Sec 8 (Worked: recovering A from A×A, and divisibility counting).
