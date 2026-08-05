@@ -70,7 +70,10 @@ already).
 - Sec 16: The rest of the reaction map — boxed combustion equation (ΔcH=-890) plus 6 concise one-line reactions (incomplete combustion, controlled oxidation, KMnO4, isomerisation, aromatization, steam+pyrolysis) — PASS [mocked-audio]
 - Sec 17: CO2 volume from combustion of propane (CBSE worked example) — given→step1 moles→boxed balanced equation→step3 ratio→step4 volume→green answer chip "3.36 L CO2 at STP" — PASS [mocked-audio]
 - Sec 18: Counting monochloro products (NEET worked example) — drawn 2-methylbutane skeleton with 4 color-coded H-environment rings (red×2 equivalent methyls, amber tertiary H, green×2 methylene/methyl), green "4 products" answer, red over-counting trap — PASS [mocked-audio]
+- Sec 19: Wurtz product and its monochloro count (JEE Main worked example) — isobutyl bromide + boxed Wurtz equation → 2,5-dimethylhexane, red "3 types ⇒ 3 monochloro products" — PASS [mocked-audio]
+- Sec 20: Tetramethylbutane: m.p., chlorination, conformers (JEE Advanced, 3-parter) — drawn symmetric "bowtie" structure (two tert-butyl halves), packing/m.p. argument, red "3°>2°>1° irrelevant" note, conformer aside — PASS [mocked-audio]
+- Sec 21: Alkane pitfalls and pro-tips (closes Alkanes subtopic) — 4 traps (miscounting monochloro products, eclipsed/staggered swap, Wurtz misuse, confusing reactivity orders) each with amber/red guardrails — PASS [mocked-audio]
 
 ## Current
-Sec 1-5 done — Classification of Hydrocarbons subtopic complete. Moving to
-Alkanes (Sec 6-21, skipping Sec 11).
+Sec 1-21 done (Sec 11 skipped) — Classification + Alkanes subtopics complete.
+Moving to Alkenes (Sec 22-41).
