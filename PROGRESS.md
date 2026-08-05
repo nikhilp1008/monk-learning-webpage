@@ -127,8 +127,11 @@ match across narration/board_events/reveals before starting.
 - Sec 26 — Electrochemical-cell formula sheet: E°cell, cell notation, ΔG°=−nFE°cell (F=96500),
   logK=nE°cell/0.0591, Nernst equation, red-margin n-factor warning (Zn+2Ag⁺ example), units.
 
+- Sec 27 — CBSE titration worked example: oxalic acid vs KMnO₄, n-factors (2 and 5), red-margin
+  endpoint formula, substitute/simplify (verified: 0.10V=4.0), boxed green answer V=40.0 mL.
+
 ## Current
-Sec 27 — next.
+Sec 28 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
