@@ -51,8 +51,12 @@ match across narration/board_events/reveals before starting.
   4 quick derivations (HCl/HClO/HClO₃/HClO₄), proportionally-spaced number line (−1→+7) with
   species ticks, final inequality chain.
 
+- Sec 9 — JEE Main CrO₅ trap: naive x=+10 crossed out (Cr max +6), drawn butterfly structure
+  (terminal oxo Cr=O + 2 peroxo O−O links highlighted amber), correct x=+6 recalculation, redox
+  prediction (Cr at ceiling → only reduced), green answer box.
+
 ## Current
-Sec 9 — next.
+Sec 10 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
