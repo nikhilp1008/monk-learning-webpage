@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Subtopic 2 (secs 10-18) complete. Starting Sec 19 (Subtopic 3: Venn Diagrams and Set Operations).
+Starting Sec 20.
 
 ## Done
 - Sec 1 — what makes a collection a set (team-sheet well-defined demo, tall-students guardrail, roster A={2,3,5,7} + ∈/∉, repetition/order irrelevance, ∅)
@@ -36,3 +36,6 @@ Subtopic 2 (secs 10-18) complete. Starting Sec 19 (Subtopic 3: Venn Diagrams and
 - Sec 16 — quadratic inequality over Z, power-set count (factor (x-3)(x+2)≤0⇒-2≤x≤3 on a number line, continuous span + 6 integer dots overlaid, n(A)=6, n[P(A)]=2⁶=64, guardrail recolors the span red for the over-R-infinite contrast)
 - Sec 17 — advanced: odd-only subsets, complement principle (A={1..7} split into O(n=4)/E(n=3), two-column divider layout: (a) 2⁴=16 odd-only subsets incl. ∅, (b) complement 2⁷-2⁴=128-16=112 at-least-one-even)
 - Sec 18 — pitfalls & pro-tips: subsets/power sets (4 traps — ∈vs⊆ three-symbol trio, forgetting ∅/A itself, proper=2ⁿ-1 not 2ⁿ-2, n[P(A)]≠n(A) — then memorise-the-powers-of-two pro-tip ladder 2→4→...→1024)
+
+**Subtopic 3 (Venn Diagrams and Set Operations):**
+- Sec 19 — five set operations as membership questions (6-cell grid of real VennShade diagrams: union/intersection/difference/complement/symmetric-difference/disjoint, each drawn+shaded+labeled; note VennShade needs explicit tight x/y/w/h bounds per cell or its default full-canvas rect trips the overflow check even though the visible shading is correctly clipped)
