@@ -22,7 +22,19 @@ SCENE_AUTHORING_CHEMISTRY.md.
 6. Chapter Review & Cheat Sheet — secs 51–52
 
 ## Done
-(updated as sections are verified PASS)
+- Sec 1 — why carbon owns a branch (Wohler urea synthesis drawn, tetravalent-C icon
+  erasing into chain/branch/ring gaining a double bond + heteroatom tags, 3 skills,
+  inorganic-exception caveat)
+- Sec 2 — four pillars (tetravalence/catenation/π-bonds/isomerism 4-column cards + icons)
+- Sec 3 — one molecule, four drawings (propan-1-ol: Lewis/condensed/bond-line/wedge-dash)
+- Sec 4 — classify by skeleton then group (acyclic/cyclic decision tree, 4 anchors)
+- Sec 5 — functional groups (7 group cards) & homologous series (alkane/ene/yne cards)
+- Sec 6 — worked example: draw 2-methylbutane (CBSE) — condensed + bond-line + check
+- Sec 7 — worked example: classify three rings (NEET) — pyridine/cyclohexane/naphthalene
+- Sec 8 — worked example: ketone family (JEE Main) — propanone→butanone→pentan-2-one
+- Sec 9 — worked example: read a bond-line ring (JEE Advanced) — cyclohexenol, C6H10O
+- Sec 10 — pitfalls & pro-tips (Foundations) — 2x2 trap grid + speed pro-tip
+- **Subtopic 1 (Foundations: Structure & Classification, Sec 1-10) COMPLETE**
 
 ## Notes / gotchas
 - No pre-existing chemistry scene files in this worktree — chem-kit.tsx primitives (bondD,
@@ -31,3 +43,17 @@ SCENE_AUTHORING_CHEMISTRY.md.
   + SCENE_AUTHORING.md directly since there's no local exemplar to copy from.
 - Ch08Sec*.tsx already exist in index.ts but belong to a DIFFERENT chapter_id
   (`39bfe6d1-bd93-5157-a29c-b8ee68c3676b`) — hence the `C11Ch08SecM` naming to avoid collision.
+- Never nest a `<Draw>` inside a `<Fade>` with a shorter delay than the Draw's own —
+  the stroke pops in fully-drawn instead of animating. Give `Draw` its own delay
+  directly; only wrap it in `Fade` when the Fade's delay ≤ the Draw's delay.
+- For an "aromatic ring" inscribed circle, do NOT fake a circle with a single SVG
+  arc path (`M cx cy+r A r r 0 1 1 cx-0.1 cy+r`) fed to `Draw` — the two-points
+  solution is ambiguous and rendered off-center in practice (Sec 7 caught this).
+  Use a plain `<circle>` wrapped in `<Fade>` instead (no draw-on animation needed
+  for a decorative ring).
+- Both `kit.tsx` and `chem-kit.tsx` export a function named `ringD` (ellipse-circle
+  vs. hexagon-skeleton) — import chem-kit's as `{ ringD as hexRingD }` to avoid
+  a collision/shadowing bug.
+- Chapter's Hinglish convention: write ROMANIZED Hinglish (Latin script, teacher's
+  paraphrase) for board captions, not the verbatim Devanagari `segments_hinglish`
+  text (that's TTS narration script, not meant to be pasted onto the board).
