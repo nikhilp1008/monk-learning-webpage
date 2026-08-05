@@ -141,5 +141,9 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   [2,5)∪(5,∞), x=2-stays subtlety; Ex4 Dom(f)=R/Dom(g)=[-2,2] then boxed
   Dom(f/g)=(-2,2) both-endpoints-punched. PASS.
 
+- Sec 25 "Worked: graph reading f(x)=|x-2|" — real shifted-V graph (vertex
+  verified at (2,0)), f(5)=3 and x=-1 marked as green dots exactly where the
+  red y=3 line crosses each arm — algebra and picture agree visually. PASS.
+
 ## Current
-Starting Sec 25 (Worked: graph reading with f(x) = |x-2| — GRAPH).
+Starting Sec 26 (Tips: pitfalls and speed moves — functions, closing subtopic 3).
