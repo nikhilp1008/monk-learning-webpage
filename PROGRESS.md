@@ -120,8 +120,12 @@ match across narration/board_events/reveals before starting.
   titration: E°cell>0 condition, MnO₄⁻/Cr₂O₇²⁻ workhorse values vs Fe²⁺, HCl problem resolved
   via Cl₂/Cl⁻ potential (all standard values verified accurate).
 
+- Sec 25 — Titration formula sheet: n-factor definition, equivalents/normality, meq formula,
+  red-margin endpoint condition, 2×2 n-factor table (MnO₄⁻=5, Cr₂O₇²⁻=6, C₂O₄²⁻=2, Fe²⁺=1),
+  red-margin medium-changes-n note, units closer.
+
 ## Current
-Sec 25 — next.
+Sec 26 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
