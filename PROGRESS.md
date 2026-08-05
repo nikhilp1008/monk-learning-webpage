@@ -43,8 +43,12 @@ match across narration/board_events/reveals before starting.
 - Sec 6 — Formula-sheet recap: Σ(O.N.)=net charge boxed hero, neutral/ion sub-note, reference
   value chips (Group1/2, Al, F), H and O exception lines, red-margin "O.N. is dimensionless" note.
 
+- Sec 7 — CBSE worked example: 4Al+3MnO₂→2Al₂O₃+3Mn, O.N. derivations (x+2(−2)=0 etc.), ox
+  numbers above every atom, Al 0→+3 oxidised, Mn +4→0 reduced, agent naming (Al=reductant,
+  MnO₂=oxidant), green answer box.
+
 ## Current
-Sec 7 — next.
+Sec 8 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
