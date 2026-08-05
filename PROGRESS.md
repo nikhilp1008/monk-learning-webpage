@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 12.
+Starting Sec 13.
 
 ## Done
 - Sec 1 — what makes a collection a set (team-sheet well-defined demo, tall-students guardrail, roster A={2,3,5,7} + ∈/∉, repetition/order irrelevance, ∅)
@@ -29,3 +29,4 @@ Starting Sec 12.
 **Subtopic 2 (Subsets, Power Set, Universal Set):**
 - Sec 10 — subsets, proper subsets, supersets (nested boxes B={1..5}⊃A={1,2} with "extras" callout, boundary-case dashed card A⊆A/∅⊆B, proper-subset and superset lines annotate the same diagram, equality-test landing)
 - Sec 11 — ∈ vs ⊆, universal set, intervals (∈/⊆ side-by-side comparison + category-error guardrail, universal-set box U containing A/B, interval definition, number-line [2,5) with correct closed/open dots, infinite-despite-small guardrail)
+- Sec 12 — power set and coin-flip intuition (A={a,b} sub-selections listed, P(A) formula, binary coin-flip tree a:out/in → b:out/in → 4 leaves ∅/{b}/{a}/{a,b} = 2×2=4, ∈ vs ⊆ landing with P({1,2}))
