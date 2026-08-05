@@ -94,5 +94,10 @@
 47. What makes one acid stronger than another — periodic trends. PASS.
 48. The water constant, pH and pOH — Kw, pH+pOH=14. PASS.
 
+49. Ka, Kb and Ostwald's dilution law. PASS.
+50. Linking conjugate pairs, and the buffer equation — Henderson-Hasselbalch. PASS.
+51. Worked example — pH of a strong diprotic acid (CBSE). PASS.
+52. Worked example — the very dilute acid trap (NEET). PASS.
+
 ## Current
-Sec 49 — next up (subtopic 4: Ionic Equilibrium / Acid-Base / pH / Common-Ion, Sec 40-55, 16 sections)
+Sec 53 — next up (subtopic 4: Ionic Equilibrium / Acid-Base / pH / Common-Ion, Sec 40-55, 16 sections)
