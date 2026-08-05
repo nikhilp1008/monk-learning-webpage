@@ -142,8 +142,13 @@ match across narration/board_events/reveals before starting.
   Cu⁺/Cu, anode Cu²⁺/Cu⁺), E°cell=+0.36V, red-margin spontaneity, log K≈6.09 ⇒ K≈1.2×10⁶
   (verified), green closer explaining why cuprous salts are rare.
 
+- Sec 31 — Pitfalls & pro-tips closer: 4 traps (moles vs equivalents, wrong n-factor for medium,
+  mis-counting n in cell EMF, sign/electron-path errors), PRO-TIP MnV-both-sides shortcut,
+  red-margin E°-ranking shortcut with negative-gap-means-backwards tip.
+  ✅ SUBTOPIC 3 (secs 21-31) COMPLETE.
+
 ## Current
-Sec 31 — next (closes Subtopic 3, secs 21-31).
+Subtopic 4 (Types of Redox & Redox in Action, secs 32-42). Sec 32 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
