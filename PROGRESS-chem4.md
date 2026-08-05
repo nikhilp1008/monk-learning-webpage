@@ -235,7 +235,13 @@ reveal patterns).
   and BONDING (2 overlapping circles + green density lens, lower energy) →
   fill-consequence line → σ/π mini icons → O₂ 2 unpaired e⁻ + green chip.
 
+- Sec 21 — The hydrogen bond intro: two H₂O molecules built bond-by-bond with
+  δ⁺/δ⁻ labels, linked by a manually-dashed (tick-segment) H-bond from the
+  δ⁺ H to the second O's lone pair → strength note (~1/10 covalent, >vdW) →
+  linked-arms analogy → water liquid/ice floats → DNA base pairing → red
+  guardrail (needs small+high-EN+lone pair, NOT Cl).
+
 ## Current
-Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 2/9
-done (25, 20) — authoring 21,22,23,24,26,27,28 now. Subtopic 4: 3/8 done
+Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 3/9
+done (25, 20, 21) — authoring 22,23,24,26,27,28 now. Subtopic 4: 3/8 done
 (31,32,34) — authoring 29,30,33,35,36 next. Subtopic 5: 2/2 DONE.
