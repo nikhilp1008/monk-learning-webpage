@@ -93,8 +93,12 @@ match across narration/board_events/reveals before starting.
   H₂O/OH⁻ not H⁺), oxidation half, LCM=6, combined boxed green (verified balanced), red-margin
   lesson: MnO₄⁻ took only 3e⁻ here (not 5) because medium set the product.
 
+- Sec 19 — JEE Advanced disproportionation: P₄+OH⁻→PH₃+H₂PO₂⁻, classify (0→−3 reduced,
+  0→+1 oxidised), electron bookkeeping (1P per 3P), drawn branching diagram (P₄ box → reduction/
+  oxidation boxes), full balanced eqn (verified O/H/charge all match).
+
 ## Current
-Sec 19 — next.
+Sec 20 — next (closes Subtopic 2, secs 12-20).
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
