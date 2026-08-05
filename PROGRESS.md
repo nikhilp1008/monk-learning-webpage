@@ -192,8 +192,12 @@ match across narration/board_events/reveals before starting.
   slips), PRO-TIP count-first-confirm-with-ON, red-margin disproportionation fingerprint.
   ✅ SUBTOPIC 4 (secs 32-42) COMPLETE.
 
+- Sec 43 — Formula recap opens Subtopic 5: Σ(O.N.)=net charge (7.1), electrons lost=gained
+  (7.2), titration M₁n₁V₁=M₂n₂V₂/N=M×n (7.3), E°cell, ΔG°=−nFE°cell, logK & Nernst, red-margin
+  n-factor memory table, unity closer.
+
 ## Current
-Subtopic 5 (Consolidation, secs 43-44). Sec 43 — next.
+Sec 44 — next (closes chapter, secs 43-44).
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
