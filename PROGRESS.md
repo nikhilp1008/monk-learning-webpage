@@ -31,7 +31,11 @@
 6. Commit. Push every ~5 sections.
 
 ## Done
-(none yet — starting Sec 1)
+1. Dynamic equilibrium: still outside, busy inside — Rajdhani coach metaphor + rate-vs-time graph. PASS.
+2. Physical equilibria all around us — bottle/ice/sugar/Thums-Up four-panel board. PASS.
+3. Reversible reactions reach one destination — H2+I2⇌2HI vessel + converging-curve graph. PASS.
+4. The conditions equilibrium needs — numbered checklist + activities caveat. PASS.
+5. Heterogeneous equilibria: the pure-phase rule — lump demo + crossed-out Kc fraction. PASS.
 
 ## Current
-Sec 1 — "Dynamic equilibrium: still outside, busy inside"
+Sec 6 — next up
