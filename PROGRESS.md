@@ -109,6 +109,10 @@ already).
 - Sec 46: Naming and isomerism — common vs IUPAC naming, ethyne/propyne (single structure) vs but-1-yne/but-2-yne (position isomers), C5H8 chain-isomer set, red exam-speed note — PASS [mocked-audio]
 - Sec 48: Preparing alkynes: two routes — (a) 4-arrow CaCO3→CaO→CaC2→C2H2 industrial chain, (b) two-elimination row (dihalide→alc.KOH→vinyl halide→NaNH2→triple bond), red "match base to difficulty" note — PASS [mocked-audio]
 
+- Sec 49: The signature reaction: acidity and acetylides — Na/NaNH2 deprotonation equations, disodium ethynide, red acidity order HC≡CH>CH3C≡CH>CH3C≡CCH3 — PASS [mocked-audio]
+- Sec 50: Electrophilic addition I: hydrogen and halogens — two 2-arrow reaction chains (H2/Ni,Pd,Pt: alkyne→alkene→alkane; Br2: alkyne→dihaloalkene→tetrahalide), red "why twice" note — PASS [mocked-audio]
+- Sec 51: Electrophilic addition II: hydrogen halides — HC≡CH+2HBr→CH3CHBr2 gem-dihalide, propyne example, gem-vs-vicinal distinction, red "track the reagent" memory rule — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48 done (Sec 11, 47 skipped so far). Classification + Alkanes +
+Sec 1-46, 48-51 done (Sec 11, 47 skipped so far). Classification + Alkanes +
 Alkenes complete. Alkynes subtopic underway (Sec 42-58, skipping 47 and 53).
