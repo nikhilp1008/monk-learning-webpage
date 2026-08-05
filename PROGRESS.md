@@ -23,10 +23,20 @@ match across narration/board_events/reveals before starting.
   (2Mg+O₂→2MgO, O₂ highlighted, oxidised✓ callout, guardrail), electronic lens (Zn+Cu²⁺→Zn²⁺+Cu
   with oxidation numbers above every atom + red curved 2e⁻ transfer arrow), OIL RIG stamp.
 
+- Sec 2 — The oxidation-number lens: "electronic lens has a limit" hook, CO₂ Lewis structure
+  (double bonds + 4 lone pairs, "who lost/gained?"), O.N. definition card, red-margin rule
+  (ox=↑O.N./red=↓O.N.), three numbered cautions (≠charge/≠valency, S–S split-zero, fractional
+  O.N. = average only).
+
 ## Current
-Sec 2 — next.
+Sec 3 — next.
 
 ## Notes
+- GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
+  `<Draw fill={CREAM} .../>` shows its fill immediately regardless of `on`/delay, since fill
+  isn't affected by strokeDasharray. For any filled background box/card, use
+  `<Fade on={...} delay={...}><rect fill=... stroke=.../></Fade>` instead (mirrors how Chip is
+  always Fade-wrapped). Reserve bare `<Draw>` for stroke-only paths (fill="none", the default).
 - Verify: `PORT=3026 CHAPTER_ID=c6da3467-e267-576e-9999-a2687ffe9200 node verify-scene.mjs <sec> '<rev_en>' '<rev_hi>' ./shots/sec<N>`
 - Register ONLY in a dedicated C11CH07 block appended at END of index.ts (imports, then
   `const C11CH07 = "c6da3467-e267-576e-9999-a2687ffe9200";`, then `REGISTRY[...] = ...` lines).
