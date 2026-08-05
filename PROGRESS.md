@@ -115,5 +115,8 @@
 61. Common-ion effect on solubility — AgCl, washing precipitates. PASS.
 62. Selective precipitation: the smaller Ksp goes first — threshold number-line. PASS.
 
+63. Buffers: the Henderson equation, capacity and range. PASS.
+64. Solubility product and the Ksp-to-solubility table — AB/A2B/AB3 types. PASS.
+
 ## Current
-Sec 63 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
+Sec 65 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
