@@ -82,6 +82,10 @@ already).
 - Sec 26: The orbital picture of ethene — drawn ethene skeleton framed by top/bottom dashed π-lobe arcs (sp2 σ framework in-plane, π cloud out-of-plane), red "reactivity hangs on this weak π cloud" — PASS [mocked-audio]
 - Sec 27: Naming alkenes and dienes — 3-step IUPAC rule list, but-1-ene/but-2-ene examples, diene/triene extension, red isoprene/natural-rubber note — PASS [mocked-audio]
 
+- Sec 28: Physical properties of alkenes — phase bar (first 3 gas/next ~14 liquid/higher solid), green rising BP-trend arrow, red "straight chain boils higher than branched" note — PASS [mocked-audio]
+- Sec 29: Making alkenes I: from alkynes (geometry control) — two reaction lanes (Lindlar's poisoned Pd → green cis-alkene; Na/liq.NH3 → red trans-alkene), concrete CH3-C≡C-CH3 example, red "reducing system SETS geometry" exam hook — PASS [mocked-audio]
+- Sec 30: Making alkenes II: three eliminations — (b) dehydrohalogenation, (c) dehalogenation (CH2BrCH2Br+Zn→CH2=CH2+ZnBr2 reaction arrow), (d) dehydration, red "all four routes unveil C=C" closer — PASS [mocked-audio]
+
 ## Current
-Sec 1-27 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
+Sec 1-30 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
 subtopic underway (Sec 22-41).
