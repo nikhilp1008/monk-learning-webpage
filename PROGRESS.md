@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 37 (final section — Cheat Sheet).
+ALL 37 SECTIONS COMPLETE. Chapter done — every section authored, typechecked, VERDICT PASS in both languages, and eyeballed.
 
 ## Gotcha log
 - **Beat-index off-by-one (found in Sec 23, fixed):** `reveals` has N entries (indices 0..N-1); beat index0 is always the title/heading (no separate content gate needed), so content beats must be gated `beat >= 1` through `beat >= N-1` — exactly N-1 gates, one per remaining `board_content` seq item. Never invent an extra beat (e.g. a standalone "draw the diagram" step) that doesn't correspond to a real reveal index — it shifts every later beat's content diagram+text late relative to the narration and silently drops the last beat's content entirely (since `beat` can never exceed N-1). The verifier can't catch this — it only checks geometry at whatever timestamps you pass it, and if the component's own gating is shifted, it'll still "pass" while being out of sync. Sanity check before verifying: count `board_content` seq items = count of `board_reveal_at_*` entries = (number of `beat >= k` gates used) + 1.
@@ -63,3 +63,4 @@ Starting Sec 37 (final section — Cheat Sheet).
 
 **Chapter recap (secs 36-37):**
 - Sec 36 — complete formula toolkit (2×4 grid of 8 boxed formula cards revealed in taught order: power set, intervals, difference/symdiff, De Morgan, 2-set/3-set union, exactly-two, partition identities — "notes page" recap, no new teaching)
+- Sec 37 — Sets, one-screen revision (2×3 grid of 6 topic cards spanning all four subtopics — sets/{0}≠∅, roster/builder, number nesting, ∈vs⊆/power set, operations/De Morgan, cardinality — plus a memory-hooks banner. FINAL SECTION — chapter complete.)
