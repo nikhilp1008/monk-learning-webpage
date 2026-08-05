@@ -61,6 +61,9 @@ already).
 - Sec 6: Saturated hydrocarbons: the paraffins — 4-bond methane-like icon (every valency filled), double bond drawn then crossed out (none waiting to react), paraffins/parum affinis etymology, CnH2n+2 chip, CH₄/C₂H₆ examples, red "unreactive toward acids/bases, not oxygen" caveat — PASS [mocked-audio]
 - Sec 7: The homologous series — drawn 5-step ascending staircase with CH₄→C₅H₁₂ landing on each tread, green rising arrow for "boiling point rises smoothly", red payoff banner — PASS [mocked-audio]
 - Sec 8: sp3 geometry and free rotation — tetrahedral tent icon, drawn zigzag carbon backbone with 109.5° angle arc (never a straight rod), steering-wheel icon for σ-bond rotation, red "not perfectly free" note — PASS [mocked-audio]
+- Sec 9: Key definitions and formulae (fact-sheet) — CnH2n+2 chip, boxed combustion equation (high emphasis), geometry/alkyl/degree facts, red halogen/hydrogen reactivity orders, torsional strain note — PASS [mocked-audio]
+- Sec 10: Preparing alkanes I: hydrogenation and reduction — two reaction rows (CH2=CH2+H2 --Pt/Pd/Ni--> CH3-CH3; R-X+2[H] --Zn,dil.HCl--> R-H+HX), red "not the fluoride" note — PASS [mocked-audio]
+- Sec 12: Preparing alkanes III: from carboxylic acids — decarboxylation (CH3COONa+NaOH --CaO,Δ--> CH4+Na2CO3, drops a carbon) vs Kolbe's electrolytic (couples fragments, even carbons), red "Kolbe doubles / decarboxylation drops one" mnemonic — PASS [mocked-audio]
 
 ## Current
 Sec 1-5 done — Classification of Hydrocarbons subtopic complete. Moving to
