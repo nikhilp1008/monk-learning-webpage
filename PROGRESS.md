@@ -79,6 +79,14 @@ SCENE_AUTHORING_CHEMISTRY.md.
 - Sec 49 — worked ex: Dumas N estimation (JEE Advanced) — 5-step calc chain
 - Sec 50 — pitfalls & pro-tips (Purification & Analysis) — 5-card grid + pro-tip
 - **Subtopic 5 (Purification, Qualitative & Quantitative Analysis, Sec 41-50) COMPLETE**
+- Sec 51 — formula recap — two-column formula sheet (homologous/counting + quantitative)
+- Sec 52 — cheat sheet — 2x3 grid of all 6 subtopics + 5 exam memory anchors (FINAL)
+- **Subtopic 6 (Chapter Review & Cheat Sheet, Sec 51-52) COMPLETE**
+
+## CHAPTER COMPLETE — all 52 sections authored & verified (VERDICT PASS, both languages)
+
+Final sanity check passed: `npx tsc --noEmit` clean, all 52 sections registered exactly
+once in index.ts (no duplicates/gaps), 52 `C11Ch08Sec*.tsx` files present.
 
 ## Notes / gotchas
 - No pre-existing chemistry scene files in this worktree — chem-kit.tsx primitives (bondD,
