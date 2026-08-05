@@ -74,6 +74,10 @@ already).
 - Sec 20: Tetramethylbutane: m.p., chlorination, conformers (JEE Advanced, 3-parter) — drawn symmetric "bowtie" structure (two tert-butyl halves), packing/m.p. argument, red "3°>2°>1° irrelevant" note, conformer aside — PASS [mocked-audio]
 - Sec 21: Alkane pitfalls and pro-tips (closes Alkanes subtopic) — 4 traps (miscounting monochloro products, eclipsed/staggered swap, Wurtz misuse, confusing reactivity orders) each with amber/red guardrails — PASS [mocked-audio]
 
+- Sec 22: The double bond is the whole personality — drawn ethene structure (C=C+4H), CnH2n chip, amber ring on the double bond, dashed π-cloud arc, red "add electrophiles across C=C" theme — PASS [mocked-audio]
+- Sec 23: Two kinds of glue: sigma and pi — thick σ bond line vs dashed π cloud arc (bolt vs rubber band), bond-energy numbers, red "electrophile trades π for 2 new σ" payoff — PASS [mocked-audio]
+- Sec 24: cis and trans: a plank, not a swivel — drawn cis-/trans-but-2-ene structures (green same-side vs red opposite-side CH3), dipole comparison, red "needs 2 different groups" gate — PASS [mocked-audio]
+
 ## Current
-Sec 1-21 done (Sec 11 skipped) — Classification + Alkanes subtopics complete.
-Moving to Alkenes (Sec 22-41).
+Sec 1-24 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
+subtopic underway (Sec 22-41).
