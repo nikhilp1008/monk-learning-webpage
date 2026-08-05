@@ -94,6 +94,10 @@ already).
 - Sec 35: Oxidation: Baeyer's test and cleavage — mild (cold dil. KMnO4 → vicinal glycol) vs forcing (hot KMnO4/K2Cr2O7 cleaves to 2 CH3COOH) oxidation, red "=CH→COOH, 2-alkyl C→ketone" reading rule — PASS [mocked-audio]
 - Sec 36: Ozonolysis and polymerisation — alkene→(i)O3→ozonide(pentagon)→(ii)Zn/H2O→two carbonyls scheme, red "2 alkyls⇒ketone, 1H⇒aldehyde" rule, polythene addition-polymerisation line — PASS [mocked-audio]
 
+- Sec 37: but-1-ene + HBr, with and without peroxide (CBSE worked) — (i) without peroxide→2-bromobutane (Markovnikov, green); (ii) with peroxide→1-bromobutane (red, anti-Markovnikov) — PASS [mocked-audio]
+- Sec 38: Which alkene shows geometrical isomerism? (NEET worked) — 3-candidate gate-check table with ✗/✓ marks, green "only (B) pent-2-ene" answer, trap note — PASS [mocked-audio]
+- Sec 39: Ozonolysis: identify the alkene (JEE Main worked) — reverse-ozonolysis stitch (propanal+ethanal→pent-2-ene), green C5H10 confirmation, red "peroxide reverses only with clear 1°-vs-2°" teaching point — PASS [mocked-audio]
+
 ## Current
-Sec 1-36 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
+Sec 1-39 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
 subtopic underway (Sec 22-41).
