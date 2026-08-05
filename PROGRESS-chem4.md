@@ -278,7 +278,13 @@ reveal patterns).
   (key bond orders: N₂=3, O₂=2, F₂=1, NO=2.5, NO⁺=3, He₂=0).
   SUBTOPIC 3 DONE (9/9).
 
+- Sec 29 — Coordinate (dative) bonds: shop analogy → erasure rule (red) →
+  live NH₃ build (3 bonds + 1 LP) → H⁺ approaches, red curved arrow from LP
+  → LP becomes the 4th N–H bond, "+" charge lands, "4 bonds all IDENTICAL"
+  green note → other examples list → donor/acceptor requirement + arrow
+  notation.
+
 ## Current
 Subtopic 1: 10/10 DONE. Subtopic 2: 9/9 DONE. Subtopic 3: 9/9 DONE.
-Subtopic 4: 3/8 done (31,32,34) — authoring 29,30,33,35,36 now.
+Subtopic 4: 4/8 done (29,31,32,34) — authoring 30,33,35,36 now.
 Subtopic 5: 2/2 DONE.
