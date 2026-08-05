@@ -77,5 +77,11 @@
 35. Worked example — three disturbances on ammonia synthesis (CBSE). PASS.
 36. Worked example — inert gas on PCl5 dissociation (NEET speed trap). PASS.
 
+37. Worked example — maximising SO3 yield (JEE Main). PASS.
+38. Worked example — dissociation falls as pressure rises (JEE Advanced). PASS.
+39. Traps and pro-tips for Le Chatelier — closes subtopic 3. PASS.
+
+**Subtopic 3 (Sec 26-39, Le Chatelier's Principle & Factors) — COMPLETE.**
+
 ## Current
-Sec 37 — next up (subtopic 3: Le Chatelier's Principle & Factors, Sec 26-39, 14 sections)
+Sec 40 — next up (subtopic 4: Ionic Equilibrium / Acid-Base / pH / Common-Ion, Sec 40-55)
