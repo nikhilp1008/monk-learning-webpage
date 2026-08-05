@@ -65,5 +65,9 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
 
 **Subtopic 1 (Cartesian Product of Sets, Sec 1-9) — COMPLETE.**
 
+- Sec 10 "A relation is a highlighted slice of A×B" — first Relations section,
+  introduces the arrow-diagram representation (circleD sets + arrowD mapped
+  pairs): A={Riya,Aman,Sara}→B={101,102,103}, 3 of 9 pairs chosen = R. PASS.
+
 ## Current
-Starting Sec 10 (A relation is a highlighted slice of A×B — start of Relations subtopic).
+Starting Sec 11 (Domain, range, codomain — and the three ways to write a relation).
