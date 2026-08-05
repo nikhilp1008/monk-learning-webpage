@@ -28,5 +28,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   term, hand-placed 3×2 grid (A up the side, B along the bottom, 6 green meeting
   points labelled), A×B vs B×A contrast, guardrail, R×R=plane. Eye-checked. PASS.
 
+- Sec 3 "Boundary rules: empty sets, infinity, and when A×B=B×A" — A×B=∅ iff
+  formula, shelf analogy (empty shelf → 0 pairs), mini R×R axes with scattered
+  points (uncountable), duplicate-element strip-before-counting, A×B=B×A iff A=B,
+  subset-not-enough guardrail. Eye-checked. PASS.
+
 ## Current
-Starting Sec 3 (boundary rules: empty sets, infinity, A×B=B×A special case).
+Starting Sec 4 (counting toolkit: cardinality, tuples, subsets, identities — formulas type).
