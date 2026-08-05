@@ -179,8 +179,12 @@ match across narration/board_events/reveals before starting.
   rule, 3 crossed out (Cu<Zn, Ag<Cu, Cu<Al) + 1 ringed green correct (Zn>Fe), equation shown,
   trap note about "looking reactive" vs direction.
 
+- Sec 40 — JEE Main worked example: 3Cl₂+6NaOH→5NaCl+NaClO₃+3H₂O disproportionation (Cl 0→−1
+  and 0→+5, red-margin fingerprint), electron check balanced (5e⁻=5e⁻), reverse comproportionation
+  5Cl⁻+ClO₃⁻+6H⁺→3Cl₂+3H₂O (both equations verified balanced).
+
 ## Current
-Sec 40 — next.
+Sec 41 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
