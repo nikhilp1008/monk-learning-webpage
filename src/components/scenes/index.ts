@@ -2909,7 +2909,9 @@ REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:38`] = Ch14Sec38;
 /* ---- C11 Ch08 · Organic Chemistry — Basic Principles & Techniques ---- */
 import C11Ch08Sec1 from "./C11Ch08Sec1";
 import C11Ch08Sec2 from "./C11Ch08Sec2";
+import C11Ch08Sec3 from "./C11Ch08Sec3";
 
 const C11CH08 = "15bf6c7a-ff09-5741-93b8-e48e8a915273";
 REGISTRY[`${C11CH08}:1`] = C11Ch08Sec1;
 REGISTRY[`${C11CH08}:2`] = C11Ch08Sec2;
+REGISTRY[`${C11CH08}:3`] = C11Ch08Sec3;
