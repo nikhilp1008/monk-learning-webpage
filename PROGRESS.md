@@ -57,6 +57,17 @@ SCENE_AUTHORING_CHEMISTRY.md.
 - Sec 29 — worked ex: count stereoisomers (JEE Advanced) — (R,R)/(S,S)/(R,S) meso
 - Sec 30 — pitfalls & pro-tips (Isomerism) — 2x2 grid + 2 pro-tip banners
 - **Subtopic 3 (Isomerism, Sec 21-30) COMPLETE**
+- Sec 31 — who keeps the electrons — auto-rickshaw analogy, fishhook vs double-barb arrows
+- Sec 32 — two ways a bond breaks — Cl-Cl homolytic vs CH3-Br heterolytic, arrow grammar
+- Sec 33 — reactive intermediates — cation/anion/radical/carbene icons + stat stacks
+- Sec 34 — reagents & electronic effects — nuc/electrophile lists, I/M/E 3-col table
+- Sec 35 — stability orders & 4 reaction types — cation/radical/carbanion orders, 4 cards
+- Sec 36 — worked ex: fission of CH3-Br (CBSE) — both paths with curved arrows
+- Sec 37 — worked ex: most stable carbocation (NEET) — benzyl ring wins via resonance
+- Sec 38 — worked ex: nucleophile or electrophile? (JEE Main) — CN-/BF3/H2O/NO2+
+- Sec 39 — worked ex: rank benzylic cations (JEE Advanced) — 3 rings, para substituents
+- Sec 40 — pitfalls & pro-tips (Reaction Mechanisms) — 5-card grid + checklist banner
+- **Subtopic 4 (Reaction Mechanisms — Fundamental Concepts, Sec 31-40) COMPLETE**
 
 ## Notes / gotchas
 - No pre-existing chemistry scene files in this worktree — chem-kit.tsx primitives (bondD,
