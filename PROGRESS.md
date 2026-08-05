@@ -36,6 +36,11 @@
 3. Reversible reactions reach one destination — H2+I2⇌2HI vessel + converging-curve graph. PASS.
 4. The conditions equilibrium needs — numbered checklist + activities caveat. PASS.
 5. Heterogeneous equilibria: the pure-phase rule — lump demo + crossed-out Kc fraction. PASS.
+6. Sizing up a reaction: K for extent, Q for direction — number-line + Q vs K rows. PASS.
+7. Law of mass action: writing Kc and Kp — fractions with tspan exponents. PASS.
+8. The Kp–Kc bridge, and the units of K — derivation + unit chips. PASS.
+9. The four-rule toolkit for combining equilibria — reference cards. PASS.
+10. Worked example — Kc from an equilibrium mixture (CBSE) — full worked example. PASS.
 
 ## Current
-Sec 6 — next up
+Sec 11 — next up
