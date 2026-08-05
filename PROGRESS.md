@@ -141,7 +141,11 @@ already).
 - Sec 72: Activating, deactivating, and the halogen exception — green activating-group list vs amber deactivating-group list two-column comparison, red "halogens are the exception" callout (deactivating yet o/p-directing), rule-of-thumb + Friedel-Crafts-fails-on-deactivated-rings footnotes — PASS [mocked-audio]
 - Sec 73: Carcinogenicity and toxicity — 4-box reaction-chain diagram (incomplete combustion → PAH → metabolised → red DNA-damaging species), sources caption, benzene-itself-toxic line, red "real-world reason it matters" closing note — PASS [mocked-audio]
 
+- Sec 74: Nitration of benzene (CBSE worked) — conditions, NO2⁺ electrophile, equilibrium formula, net reaction, mechanism note, red "product: nitrobenzene" — PASS [mocked-audio]
+- Sec 75: Nitration of toluene (NEET worked) — alkyl=donating/activating/o-p-directing reasoning, red "o/p products predominate, more reactive than benzene" answer, amber "don't lump every group together" trap — PASS [mocked-audio]
+- Sec 76: Second nitration of nitrobenzene (JEE Main worked) — –NO2 meta-directing reasoning, 1,3-dinitrobenzene formula, slower-than-benzene rate, red "deactivating + meta-directing = EWG signature" — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48-52, 54-73 done (Sec 11, 47, 53 skipped). Classification +
+Sec 1-46, 48-52, 54-76 done (Sec 11, 47, 53 skipped). Classification +
 Alkanes + Alkenes + Alkynes complete. Aromatic Hydrocarbons subtopic
-underway (Sec 59-78, currently at Sec 73).
+underway (Sec 59-78, currently at Sec 76).
