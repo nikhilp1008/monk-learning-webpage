@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 7.
+Starting Sec 8.
 
 ## Done
 - Sec 1 — what makes a collection a set (team-sheet well-defined demo, tall-students guardrail, roster A={2,3,5,7} + ∈/∉, repetition/order irrelevance, ∅)
@@ -22,3 +22,4 @@ Starting Sec 7.
 - Sec 4 — standard number sets and nesting (N,W,Z,Q,R,T defs built, N⊂W⊂Z⊂Q⊂R chain token-built, NestedSets 5-ring diagram with staggered draw [extended math-kit's NestedSets with a `delays` array for per-ring stagger], irrationals R−Q band annotated with √2/π, universe-decides-the-answer guardrail)
 - Sec 5 — worked: two-digit numbers digit-sum 8 (set-up t+u=8, two-column table build t=1..4 / t=5..8, ring on "80" for the drop-the-zero trap, roster answer boxed)
 - Sec 6 — speed trap: which set is empty (4 options staged, (a)/(d) stamped EMPTY, decoys (b)/(c) staged as tempting "EMPTY?" then crossed out and corrected to NOT-empty, check-the-universe-first verdict)
+- Sec 7 — |x|≤2 vs x³=x cardinality/equality (one shared number line: A's 5 dots, factoring derivation x³=x⇒x(x-1)(x+1)=0, B's 3 members ringed green on the same line, -2/2 recolored red at the end as the A≠B evidence, B⊂A landing)
