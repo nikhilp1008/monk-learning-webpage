@@ -101,8 +101,14 @@ match across narration/board_events/reveals before starting.
   equalised, fixed-product assumption), PRO-TIP coefficient shortcut, red-margin basic-via-acid
   habit. ✅ SUBTOPIC 2 (secs 12-20) COMPLETE.
 
+- Sec 21 — Two faces of redox opens Subtopic 3: FACE 1 titration (KMnO₄ self-indicating,
+  endpoint), FACE 2 galvanic cell (drawn 2-beaker diagram, electrodes, external wire with e⁻
+  flow, ANODE/CATHODE, An Ox·Red Cat mnemonic, salt bridge arc). Fixed: e⁻ label + wire
+  initially sat inside the FACE-2 chip's box (checker only catches text-vs-text, not
+  text/stroke-vs-shape) — moved wire+label down 40px clear of the chip.
+
 ## Current
-Subtopic 3 (Redox Titrations & Electrochemical Cells, secs 21-31). Sec 21 — next.
+Sec 22 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
