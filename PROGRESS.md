@@ -35,6 +35,17 @@ SCENE_AUTHORING_CHEMISTRY.md.
 - Sec 9 — worked example: read a bond-line ring (JEE Advanced) — cyclohexenol, C6H10O
 - Sec 10 — pitfalls & pro-tips (Foundations) — 2x2 trap grid + speed pro-tip
 - **Subtopic 1 (Foundations: Structure & Classification, Sec 1-10) COMPLETE**
+- Sec 11 — hybridization why-not-on-paper — sabziwala bags analogy + 3-col progressive table
+- Sec 12 — three hybridizations, three geometries — tetrahedral/trigonal/linear icons + stats
+- Sec 13 — assign hybridization: count sigma bonds — SN lookup + propyne mini-example
+- Sec 14 — nomenclature PIN-code — "3-hydroxybutanal" split into 5 colored slots
+- Sec 15 — building a name: lock suffix first — seniority ladder + 5-step procedure
+- Sec 16 — worked ex: name & hybridize (CBSE) — builds 3-hydroxybutanal from Sec 14
+- Sec 17 — worked ex: count sp2 carbons (NEET) — but-3-en-2-one, forgotten-carbonyl trap
+- Sec 18 — worked ex: name + property (JEE Main) — 2-methylbut-3-enoic acid, C2=sp3
+- Sec 19 — worked ex: alkyne trap (JEE Advanced) — collinear H-C≡C drawn, wrong-end trap
+- Sec 20 — pitfalls & pro-tips (Hybridization & Naming) — 5-card grid + 2 pro-tip banners
+- **Subtopic 2 (Hybridization & IUPAC Nomenclature, Sec 11-20) COMPLETE**
 
 ## Notes / gotchas
 - No pre-existing chemistry scene files in this worktree — chem-kit.tsx primitives (bondD,
