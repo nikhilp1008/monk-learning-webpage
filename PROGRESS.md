@@ -115,5 +115,9 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   boxed f=g equality formula, same-rule-different-domain guardrail,
   real-valued vs real-function distinction. PASS.
 
+- Sec 20 "Counting functions (q^p) and algebra of real functions" — boxed q^p
+  count with contrast-to-2^pq note, pointwise algebra (f±g, fg, αf), quotient
+  with g(x)≠0 caveat, boxed domain-bookkeeping formula, base-exponent chant. PASS.
+
 ## Current
-Starting Sec 20 (Counting functions q^p, and the algebra of real functions — formulas type).
+Starting Sec 21 (Standard functions I: identity, constant, modulus, polynomial — GRAPH, flagged).
