@@ -163,8 +163,12 @@ match across narration/board_events/reveals before starting.
   red-margin displacement/H₂-liberation rule, halogen order F₂>Cl₂>Br₂>I₂, Stock notation
   rules, red-margin Fe₃O₄ mixed-oxide example.
 
+- Sec 36 — Three erase-phases: classify procedure (assign O.N./confirm redox/read family),
+  predict displacement (locate in series, Cu rod in ZnSO₄ example), honest limits of O.N.
+  (hypothetical charge, fractional averages, organic ambiguity, red-margin O.N.≠valency).
+
 ## Current
-Sec 36 — next.
+Sec 37 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
