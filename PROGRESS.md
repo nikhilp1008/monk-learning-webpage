@@ -109,5 +109,11 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   line meets twice at correct symmetric points → not function), companions
   sharpened for functions, guardrail. Eye-checked geometry. PASS.
 
+- Sec 19 "Fine print: single-valued roots, natural domain, equality" — √x
+  non-negative-only with ± crossed out (fixed a spacing bug where the cross-out
+  ran into the next word), many-to-one/one-to-many line, natural domain R−{0},
+  boxed f=g equality formula, same-rule-different-domain guardrail,
+  real-valued vs real-function distinction. PASS.
+
 ## Current
-Starting Sec 19 (Fine print: single-valued roots, natural domain, equality of functions).
+Starting Sec 20 (Counting functions q^p, and the algebra of real functions — formulas type).
