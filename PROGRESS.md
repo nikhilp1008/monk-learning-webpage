@@ -48,5 +48,11 @@
 
 **Subtopic 1 (Sec 1-14, Physical & Chemical Equilibrium / Kc-Kp) — COMPLETE.**
 
+15. Why equilibrium stops where it does: the Gibbs valley — ball rolls downhill. PASS.
+16. ΔG versus ΔG°: the slope now vs the fixed landscape — two-column comparison. PASS.
+17. One story in two languages: Q-vs-K and the sign of ΔG — derivation. PASS.
+18. Conditions behind ΔG° = −RT ln K — numbered checklist. PASS.
+19. From ΔG=ΔG°+RTlnQ to ΔG°=−RTlnK — master derivation, sign map. PASS.
+
 ## Current
-Sec 15 — next up (subtopic 2: Equilibrium Constant / Q / Gibbs, Sec 15-25)
+Sec 20 — next up (subtopic 2: Equilibrium Constant / Q / Gibbs, Sec 15-25, 11 sections)
