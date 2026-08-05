@@ -124,8 +124,11 @@ match across narration/board_events/reveals before starting.
   red-margin endpoint condition, 2×2 n-factor table (MnO₄⁻=5, Cr₂O₇²⁻=6, C₂O₄²⁻=2, Fe²⁺=1),
   red-margin medium-changes-n note, units closer.
 
+- Sec 26 — Electrochemical-cell formula sheet: E°cell, cell notation, ΔG°=−nFE°cell (F=96500),
+  logK=nE°cell/0.0591, Nernst equation, red-margin n-factor warning (Zn+2Ag⁺ example), units.
+
 ## Current
-Sec 26 — next.
+Sec 27 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
