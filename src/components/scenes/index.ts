@@ -2328,6 +2328,7 @@ import Ch14Sec37 from "./Ch14Sec37";
 import Ch14Sec38 from "./Ch14Sec38";
 // ── C11 Ch06 (Equilibrium) imports ──
 import C11Ch06Sec1 from "./C11Ch06Sec1";
+import C11Ch06Sec2 from "./C11Ch06Sec2";
 
 REGISTRY[`a5970ed6-3b48-55f9-9b80-8abdd3d4c336:59`] = Ch03Sec59;
 REGISTRY[`a5970ed6-3b48-55f9-9b80-8abdd3d4c336:60`] = Ch03Sec60;
@@ -2911,3 +2912,4 @@ REGISTRY[`7dca7b5a-e77c-530d-bbe8-01a3518dc5d0:38`] = Ch14Sec38;
 // ── C11 Ch06 · Equilibrium ──
 const C11CH06 = "f111ba16-c07d-5237-b2dd-eab22645f161";
 REGISTRY[`${C11CH06}:1`] = C11Ch06Sec1;
+REGISTRY[`${C11CH06}:2`] = C11Ch06Sec2;
