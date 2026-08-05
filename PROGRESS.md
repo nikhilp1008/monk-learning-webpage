@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 32.
+Starting Sec 33.
 
 ## Gotcha log
 - **Beat-index off-by-one (found in Sec 23, fixed):** `reveals` has N entries (indices 0..N-1); beat index0 is always the title/heading (no separate content gate needed), so content beats must be gated `beat >= 1` through `beat >= N-1` — exactly N-1 gates, one per remaining `board_content` seq item. Never invent an extra beat (e.g. a standalone "draw the diagram" step) that doesn't correspond to a real reveal index — it shifts every later beat's content diagram+text late relative to the narration and silently drops the last beat's content entirely (since `beat` can never exceed N-1). The verifier can't catch this — it only checks geometry at whatever timestamps you pass it, and if the component's own gating is shifted, it'll still "pass" while being out of sync. Sanity check before verifying: count `board_content` seq items = count of `board_reveal_at_*` entries = (number of `beat >= k` gates used) + 1.
@@ -56,3 +56,4 @@ Starting Sec 32.
 - Sec 29 — three sets, include-exclude-include pattern (3-circle Venn A/B/C with 7 region labels, dynamic center tally crossfading 3→0→1 tracking the inclusion-exclusion build-up, full 3-set formula, "none" 8th region, signs-alternate guardrail)
 - Sec 30 — inclusion-exclusion and partition identities (6-formula toolkit: 2-set/3-set union, exactly-one, exactly-two, at-least-two, boxed partition identities n(union)=E₁+E₂+E₃ and Σn(A)=E₁+2E₂+3E₃)
 - Sec 31 — two subjects: at least one, only Physics, neither (fully numeric Venn: n(U)=120, P=70, C=50, lens=30 given; union shaded amber for n(P∪C)=90; all 4 regions filled 40/30/20/30 summing to 120; only-P/neither guardrail)
+- Sec 32 — speed trap: 'at least one' hands you the union (boxed KEY insight "at least one ⇒ union=total=80", n(both)=60+35-80=15, decoy tension 60+35=95>80 staged WITHOUT crossing out since it's not an error, reframed as 95-80=15=same overlap — "don't panic, embrace it")
