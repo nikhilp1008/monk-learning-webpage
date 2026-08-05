@@ -74,5 +74,9 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   reached-vs-allowed guardrail, three-forms/extremes/relation-on-A recap lines.
   Eye-checked geometry against the math (range={3,4,5,6} exactly). PASS.
 
+- Sec 12 "Relation formulas" (formulas type) — Dom(R)/Range(R) set-builder defs,
+  codomain=B always, boxed headline count 2^pq, on-A/non-empty corollaries,
+  power-of-two chant insight. PASS.
+
 ## Current
-Starting Sec 12 (Relation formulas: domain, range, and the 2^pq count — formulas type).
+Starting Sec 13 (Procedures: rule ↔ roster, and why relations count as 2^pq).
