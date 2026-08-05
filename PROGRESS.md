@@ -99,5 +99,11 @@
 51. Worked example — pH of a strong diprotic acid (CBSE). PASS.
 52. Worked example — the very dilute acid trap (NEET). PASS.
 
+53. Worked example — degree of ionization and pH of acetic acid (JEE Main). PASS.
+54. Worked example — common-ion suppression in a buffer (JEE Advanced). PASS.
+55. Traps and pro-tips for pH and ionization — closes subtopic 4. PASS.
+
+**Subtopic 4 (Sec 40-55, Ionic Equilibrium / Acid-Base / pH / Common-Ion) — COMPLETE.**
+
 ## Current
-Sec 53 — next up (subtopic 4: Ionic Equilibrium / Acid-Base / pH / Common-Ion, Sec 40-55, 16 sections)
+Sec 56 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70)
