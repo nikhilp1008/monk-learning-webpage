@@ -68,6 +68,17 @@ SCENE_AUTHORING_CHEMISTRY.md.
 - Sec 39 — worked ex: rank benzylic cations (JEE Advanced) — 3 rings, para substituents
 - Sec 40 — pitfalls & pro-tips (Reaction Mechanisms) — 5-card grid + checklist banner
 - **Subtopic 4 (Reaction Mechanisms — Fundamental Concepts, Sec 31-40) COMPLETE**
+- Sec 41 — three steps: purify, detect, measure — flow diagram + mixed-grains analogy
+- Sec 42 — one method per property difference — property/method reference table
+- Sec 43 — qualitative analysis — C&H test, Lassaigne's, N/S/halogen color table
+- Sec 44 — quantitative analysis — Liebig/Dumas/Kjeldahl/Carius method table
+- Sec 45 — core estimation formulae — %C, %H, %N, %X, Rf, oxygen-by-difference
+- Sec 46 — worked ex: purify aniline (CBSE) — steam-distillation apparatus sketch
+- Sec 47 — worked ex: read a Lassaigne colour (NEET) — blood-red → N&S
+- Sec 48 — worked ex: Liebig C&H estimation (JEE Main) — boxed calc steps
+- Sec 49 — worked ex: Dumas N estimation (JEE Advanced) — 5-step calc chain
+- Sec 50 — pitfalls & pro-tips (Purification & Analysis) — 5-card grid + pro-tip
+- **Subtopic 5 (Purification, Qualitative & Quantitative Analysis, Sec 41-50) COMPLETE**
 
 ## Notes / gotchas
 - No pre-existing chemistry scene files in this worktree — chem-kit.tsx primitives (bondD,
