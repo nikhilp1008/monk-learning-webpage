@@ -72,5 +72,10 @@
 31. Temperature: treat heat as a participant — heat in the equation. PASS.
 32. Catalyst: speed, not yield — energy-profile diagram. PASS.
 
+33. Industry in action: the Haber and Contact processes. PASS.
+34. Putting numbers on the levers: Δn_gas and the α–P relation. PASS.
+35. Worked example — three disturbances on ammonia synthesis (CBSE). PASS.
+36. Worked example — inert gas on PCl5 dissociation (NEET speed trap). PASS.
+
 ## Current
-Sec 33 — next up (subtopic 3: Le Chatelier's Principle & Factors, Sec 26-39, 14 sections)
+Sec 37 — next up (subtopic 3: Le Chatelier's Principle & Factors, Sec 26-39, 14 sections)
