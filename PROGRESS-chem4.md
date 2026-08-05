@@ -290,7 +290,13 @@ reveal patterns).
   types (pπ-pπ, pπ-dπ) → (SiH₃)₃N flat vs (CH₃)₃N pyramidal (green/ink
   contrast) → broader impact list → honest note on the d-orbital model.
 
+- Sec 33 — Worked examples NH₄⁺ identity + BX₃ acidity: Part A (NH₄⁺=NH₃+H⁺
+  dissection, mechanism, green answer chip: all 4 bonds equal) → erases →
+  Part B (order BX₃ by acidity, red EN trap, back-bonding deciding factor,
+  green answer chip BF₃<BCl₃<BBr₃<BI₃). Benign erase-stall at b4 (validated
+  pattern, 4th confirmed instance).
+
 ## Current
 Subtopic 1: 10/10 DONE. Subtopic 2: 9/9 DONE. Subtopic 3: 9/9 DONE.
-Subtopic 4: 5/8 done (29,30,31,32,34) — authoring 33,35,36 now.
+Subtopic 4: 6/8 done (29,30,31,32,33,34) — authoring 35,36 now.
 Subtopic 5: 2/2 DONE.
