@@ -88,5 +88,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   domain/range/codomain, "in A but not domain" guardrail; Ex2 JEE speed trap
   boxed 2^12=4096/4095 with both wrong reflexes named. PASS.
 
+- Sec 15 "Worked: lattice points on a circle, forced-pair counting" — Ex3 real
+  CartesianAxes+circleD graph of x²+y²=25 with all 12 lattice points plotted
+  exactly on the circle (verified geometry: (0,±5),(±5,0),(±3,±4),(±4,±3));
+  Ex4 complement-counting to 448 with forced-pair guardrail. Eye-checked. PASS.
+
 ## Current
-Starting Sec 15 (Worked: lattice points on a circle, and forced-pair counting — GRAPH geometry, flagged).
+Starting Sec 16 (Tips: pitfalls and speed moves — relations, closing subtopic 2).
