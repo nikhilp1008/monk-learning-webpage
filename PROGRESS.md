@@ -69,5 +69,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   introduces the arrow-diagram representation (circleD sets + arrowD mapped
   pairs): A={Riya,Aman,Sara}→B={101,102,103}, 3 of 9 pairs chosen = R. PASS.
 
+- Sec 11 "Domain, range, codomain" — arrow diagram A={1,2,3,4}→B={3,4,5,6,7} via
+  y=x+2 (4 correct arrows, "7" ringed red as unreached codomain element),
+  reached-vs-allowed guardrail, three-forms/extremes/relation-on-A recap lines.
+  Eye-checked geometry against the math (range={3,4,5,6} exactly). PASS.
+
 ## Current
-Starting Sec 11 (Domain, range, codomain — and the three ways to write a relation).
+Starting Sec 12 (Relation formulas: domain, range, and the 2^pq count — formulas type).
