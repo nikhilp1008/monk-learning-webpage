@@ -138,8 +138,12 @@ match across narration/board_events/reveals before starting.
   diagram (beakers+wire+salt bridge+1.56V), ΔG°=−nFE°cell computed to −301 kJ (verified), green
   spontaneous answer.
 
+- Sec 30 — JEE Advanced Cu⁺ disproportionation: two couples given, set up as a cell (cathode
+  Cu⁺/Cu, anode Cu²⁺/Cu⁺), E°cell=+0.36V, red-margin spontaneity, log K≈6.09 ⇒ K≈1.2×10⁶
+  (verified), green closer explaining why cuprous salts are rare.
+
 ## Current
-Sec 30 — next.
+Sec 31 — next (closes Subtopic 3, secs 21-31).
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
