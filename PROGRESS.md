@@ -93,5 +93,11 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   exactly on the circle (verified geometry: (0,±5),(±5,0),(±3,±4),(±4,±3));
   Ex4 complement-counting to 448 with forced-pair guardrail. Eye-checked. PASS.
 
+- Sec 16 "Pitfalls and speed moves — relations" — D-L/R-R swap guardrail,
+  codomain-vs-range amber chip, pq-vs-2^pq + phantom-pairs line, boxed forced-
+  pair formula, complement speed move, closing mantra. PASS.
+
+**Subtopic 2 (Relations, Sec 10-16) — COMPLETE.**
+
 ## Current
-Starting Sec 16 (Tips: pitfalls and speed moves — relations, closing subtopic 2).
+Starting Sec 17 (A function is a relation with two promises — start of Functions subtopic).
