@@ -46,6 +46,17 @@ SCENE_AUTHORING_CHEMISTRY.md.
 - Sec 19 — worked ex: alkyne trap (JEE Advanced) — collinear H-C≡C drawn, wrong-end trap
 - Sec 20 — pitfalls & pro-tips (Hybridization & Naming) — 5-card grid + 2 pro-tip banners
 - **Subtopic 2 (Hybridization & IUPAC Nomenclature, Sec 11-20) COMPLETE**
+- Sec 21 — isomers same formula — ethanol vs dimethyl ether, master-split Q1/Q2 tree
+- Sec 22 — structural isomerism six types — 3x2 card grid (chain..tautomerism)
+- Sec 23 — geometrical isomerism — cis/trans but-2-ene drawn, E/Z CIP rule
+- Sec 24 — optical isomerism — true mirror-image chiral-C pair, racemic vs meso
+- Sec 25 — counting tools — DoU formula + 2^n formula, boxed, two-column
+- Sec 26 — worked ex: chain isomers of C5H12 (CBSE) — DoU=0, 3 skeletons drawn
+- Sec 27 — worked ex: which shows geometrical isomerism? (NEET) — 3 X2C=CY2 schematics
+- Sec 28 — worked ex: assign E/Z (JEE Main) — Br-CH=CH-Cl, CIP priorities
+- Sec 29 — worked ex: count stereoisomers (JEE Advanced) — (R,R)/(S,S)/(R,S) meso
+- Sec 30 — pitfalls & pro-tips (Isomerism) — 2x2 grid + 2 pro-tip banners
+- **Subtopic 3 (Isomerism, Sec 21-30) COMPLETE**
 
 ## Notes / gotchas
 - No pre-existing chemistry scene files in this worktree — chem-kit.tsx primitives (bondD,
