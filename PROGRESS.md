@@ -183,8 +183,12 @@ match across narration/board_events/reveals before starting.
   and 0→+5, red-margin fingerprint), electron check balanced (5e⁻=5e⁻), reverse comproportionation
   5Cl⁻+ClO₃⁻+6H⁺→3Cl₂+3H₂O (both equations verified balanced).
 
+- Sec 41 — JEE Advanced worked example: (NH₄)₂Cr₂O₇→N₂+Cr₂O₃+4H₂O (verified balanced), N:−3→0
+  oxidised, Cr:+6→+3 reduced, red-margin intramolecular redox classification (2 different
+  elements, sub-class of decomposition), distinguished from disproportionation.
+
 ## Current
-Sec 41 — next.
+Sec 42 — next (closes Subtopic 4, secs 32-42).
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
