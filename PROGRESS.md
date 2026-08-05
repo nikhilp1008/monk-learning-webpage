@@ -54,5 +54,14 @@
 18. Conditions behind ΔG° = −RT ln K — numbered checklist. PASS.
 19. From ΔG=ΔG°+RTlnQ to ΔG°=−RTlnK — master derivation, sign map. PASS.
 
+20. Temperature dependence: van't Hoff and the ΔH°, ΔS° split — derivation. PASS.
+21. Worked example — from ΔG° to K (CBSE). PASS.
+22. Worked example — ranking K by the sign of ΔG° (NEET). PASS.
+23. Worked example — from K to ΔG° (JEE Main). PASS.
+24. Worked example — van't Hoff, finding ΔH° (JEE Advanced). PASS.
+25. Pitfalls and pro-tips for Gibbs energy and K — closes subtopic 2. PASS.
+
+**Subtopic 2 (Sec 15-25, Equilibrium Constant/Q/Gibbs Energy) — COMPLETE.**
+
 ## Current
-Sec 20 — next up (subtopic 2: Equilibrium Constant / Q / Gibbs, Sec 15-25, 11 sections)
+Sec 26 — next up (subtopic 3: Le Chatelier's Principle & Factors, Sec 26-39)
