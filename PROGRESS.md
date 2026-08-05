@@ -63,5 +63,9 @@
 
 **Subtopic 2 (Sec 15-25, Equilibrium Constant/Q/Gibbs Energy) — COMPLETE.**
 
+26. Le Chatelier: the system fights the change — vegetable mandi metaphor. PASS.
+27. The five levers, and the only one that changes K — lever roadmap. PASS.
+28. Concentration: consume, replenish, drive to completion. PASS.
+
 ## Current
-Sec 26 — next up (subtopic 3: Le Chatelier's Principle & Factors, Sec 26-39)
+Sec 29 — next up (subtopic 3: Le Chatelier's Principle & Factors, Sec 26-39, 14 sections)
