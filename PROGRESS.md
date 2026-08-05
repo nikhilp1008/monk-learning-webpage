@@ -89,5 +89,10 @@
 43. Strength is not concentration. PASS.
 44. Water's self-ionization: the origin of the pH scale — pH number-line. PASS.
 
+45. The common-ion effect and how a buffer resists change — bar chart. PASS.
+46. Polyprotic acids: why each step is harder — Ka cliff. PASS.
+47. What makes one acid stronger than another — periodic trends. PASS.
+48. The water constant, pH and pOH — Kw, pH+pOH=14. PASS.
+
 ## Current
-Sec 45 — next up (subtopic 4: Ionic Equilibrium / Acid-Base / pH / Common-Ion, Sec 40-55, 16 sections)
+Sec 49 — next up (subtopic 4: Ionic Equilibrium / Acid-Base / pH / Common-Ion, Sec 40-55, 16 sections)
