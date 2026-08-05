@@ -58,5 +58,12 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   fallback glyphs) landing 14, then inclusion-exclusion to 22 with diagonal-
   overlap reasoning. PASS.
 
+- Sec 9 "Pitfalls and speed moves — Cartesian product" — sum-vs-product trap
+  (crossed), every-with-every green confirm, (a,b) vs (b,a) amber tip, subset-
+  formula green box with the two common wrong forms noted, two-stage habit +
+  empty-set shortcut, and the two red speed-move formulas. PASS.
+
+**Subtopic 1 (Cartesian Product of Sets, Sec 1-9) — COMPLETE.**
+
 ## Current
-Starting Sec 9 (Tips: pitfalls and speed moves — Cartesian product).
+Starting Sec 10 (A relation is a highlighted slice of A×B — start of Relations subtopic).
