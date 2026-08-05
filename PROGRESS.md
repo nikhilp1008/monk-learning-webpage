@@ -112,5 +112,8 @@
 59. How a buffer holds steady — two-reservoir tanks, capacity peak. PASS.
 60. Linking Ksp to molar solubility: coefficient enters twice — Ag2CrO4. PASS.
 
+61. Common-ion effect on solubility — AgCl, washing precipitates. PASS.
+62. Selective precipitation: the smaller Ksp goes first — threshold number-line. PASS.
+
 ## Current
-Sec 61 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
+Sec 63 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
