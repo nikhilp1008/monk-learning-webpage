@@ -101,6 +101,10 @@ already).
 - Sec 40: Carbocation rearrangement (JEE Advanced worked) — 2° cation + curved arrow "1,2-H shift" → 3° cation, green result, red "real Markovnikov rule" driving-force note — PASS [mocked-audio]
 - Sec 41: Alkene pitfalls and pro-tips (closes Alkenes subtopic) — 4 traps (cis-trans without checking substituents, peroxide on HCl/HI, forgetting rearrangement, ozonolysis reconstruction) with amber/red guardrails — PASS [mocked-audio]
 
+- Sec 42: Pull the carbons closer, add a third bond — drawn H-C≡C-H ethyne structure with a dashed two-lobe π-cylinder, CnH2n-2 chip, red "two π bonds ⇒ can add two molecules" theme — PASS [mocked-audio]
+- Sec 43: s-character sets the acidity — 3-column sp3/sp2/sp comparison (¼/⅓/½ s-character), red "more s-character = more acidic" most-tested note, metal acetylide payoff — PASS [mocked-audio]
+- Sec 44: Key definitions and formulae (alkyne fact-sheet) — CnH2n-2 chip, linear geometry, triple-bond composition, bond energies/lengths, red acidity order, HC≡CH+Na equation, Markovnikov/Br2 test — PASS [mocked-audio]
+
 ## Current
-Sec 1-41 done (Sec 11 skipped). Classification + Alkanes + Alkenes all
-complete. Moving to Alkynes (Sec 42-58, skipping 47 and 53).
+Sec 1-44 done (Sec 11 skipped). Classification + Alkanes + Alkenes all
+complete. Alkynes subtopic underway (Sec 42-58, skipping 47 and 53).
