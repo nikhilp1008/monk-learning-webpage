@@ -214,10 +214,23 @@ change once real reveals replace the synthetic evenly-spaced [0,8,16,...56].
   roundup (SPSPDP, F-O-N, SHaPe, "bent eNegative gets P", "Drago down to
   90"). Clean PASS first try — the whole chapter distilled onto one card.
 
-## Current — CHAPTER COMPLETE for all sections with real audio
-Subtopic 1: 9/10 (sec 6 blocked). Subtopic 2: 9/9 DONE. Subtopic 3: 1/9 (only
-sec 25; 20-24,26-28 blocked). Subtopic 4: 3/8 (31,32,34; 29,30,33,35,36
-blocked). Subtopic 5: 2/2 DONE (37,38 — chapter close). Total: 25/38 sections
-registered and verified. 14 sections remain blocked on truncated placeholder
-English audio (see Blocked section) — author + verify these once real audio
-is uploaded, following the same per-section workflow.
+## Audio pipeline fixed — resuming the 14 blocked sections
+Real audio + reveals are now in Supabase for all 14 previously-blocked
+sections (6, 20-24, 26-30, 33, 35, 36) — confirmed via the same EN/HI
+duration-ratio check (all now 0.9-1.1, no more placeholder `[0,1,2,3...]`
+reveal patterns).
+
+- Sec 6 re-verified — the original Born-Haber cycle scene (8 beats) needed
+  ZERO code changes: real reveals are still 8 beats (same narration segments,
+  same beat count), just with real decimal timestamps `[0,12.12,31.06,...]`
+  instead of the synthetic `[0,8,16,...56]`. The `on={beat>=k}`/`dl(k,d)`
+  gating is beat-index-based, not timestamp-value-based, so it carried over
+  unchanged. Re-registered in index.ts, re-verified `VERDICT: PASS` with a
+  FORCE_SHOTS check confirming the full 8-beat diagram (previously it only
+  ever reached beat 2 due to the truncated audio clamping seeks). DONE.
+
+## Current
+Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 1/9
+done (sec 25) — authoring 20,21,22,23,24,26,27,28 now. Subtopic 4: 3/8 done
+(31,32,34) — authoring 29,30,33,35,36 now. Subtopic 5: 2/2 DONE. Working
+through the 13 remaining sections in position order next.
