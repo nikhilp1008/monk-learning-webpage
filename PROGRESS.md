@@ -117,6 +117,11 @@ already).
 - Sec 54: Propyne with sodamide and water (CBSE worked) — (i) NaNH2→sodium propynide; (ii) Markovnikov hydration→propanone (acetone) — PASS [mocked-audio]
 - Sec 55: Which liberates hydrogen with sodium? (NEET worked) — 3-candidate gate-check (but-2-yne✗/but-1-yne✓/but-2-ene✗), green "only (B)" answer, trap note — PASS [mocked-audio]
 
+- Sec 56: Hydration regiochemistry and iodoform (JEE Main worked) — why ethyne→aldehyde vs higher alkynes→ketone, but-1-yne→butan-2-one, red positive-iodoform-test note — PASS [mocked-audio]
+- Sec 57: pKa and choosing a base (JEE Advanced worked) — given pKa values, acidity order, green NaNH2-CAN vs red NaOH-CANNOT conjugate-acid reasoning, red "never hydroxide" rule — PASS [mocked-audio]
+- Sec 58: Alkyne pitfalls and pro-tips (closes Alkynes subtopic) — 4 traps (calling all alkynes acidic, alcohol-not-carbonyl hydration mistake, gem/vicinal confusion, NaOH too weak) with guardrails — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48-52, 54-55 done (Sec 11, 47, 53 skipped). Classification +
-Alkanes + Alkenes complete. Alkynes subtopic underway (Sec 42-58).
+Sec 1-46, 48-52, 54-58 done (Sec 11, 47, 53 skipped). Classification +
+Alkanes + Alkenes + Alkynes all complete. Moving to Aromatic Hydrocarbons
+(Sec 59-78).
