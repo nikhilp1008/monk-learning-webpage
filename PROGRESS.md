@@ -86,6 +86,10 @@ already).
 - Sec 29: Making alkenes I: from alkynes (geometry control) — two reaction lanes (Lindlar's poisoned Pd → green cis-alkene; Na/liq.NH3 → red trans-alkene), concrete CH3-C≡C-CH3 example, red "reducing system SETS geometry" exam hook — PASS [mocked-audio]
 - Sec 30: Making alkenes II: three eliminations — (b) dehydrohalogenation, (c) dehalogenation (CH2BrCH2Br+Zn→CH2=CH2+ZnBr2 reaction arrow), (d) dehydration, red "all four routes unveil C=C" closer — PASS [mocked-audio]
 
+- Sec 31: Electrophilic addition: hydrogen and halogens — H2/Ni,Pd,Pt reaction row, Br2/Cl2 vicinal-dihalide equation, iodine exception, Br2/CCl4 test, red "electron-rich, π cloud" theme — PASS [mocked-audio]
+- Sec 32: HX addition and Markovnikov's rule — propene skeleton with two curved mechanism arrows (π→H⁺ forming the carbocation, Br⁻→C2 closing it), green "2° beats 1°", red restated-Markovnikov note — PASS [mocked-audio]
+- Sec 33: The peroxide (Kharasch) effect — propene skeleton with a single-barb (radical) curved arrow for Br• addition to the terminal carbon, red HBr-only bond-strength explanation, "Br Breaks the Rule" memory hook — PASS [mocked-audio]
+
 ## Current
-Sec 1-30 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
+Sec 1-33 done (Sec 11 skipped). Classification + Alkanes complete; Alkenes
 subtopic underway (Sec 22-41).
