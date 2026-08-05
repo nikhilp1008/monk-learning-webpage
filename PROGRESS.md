@@ -42,5 +42,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   reasoning chips, disjointness formula, boxed mn conclusion, multiplication-
   principle insight. Eye-checked incl. mid-beat frame. PASS.
 
+- Sec 6 "Proof of distributivity + recovering A,B from A×B" — biconditional-chain
+  proof drawn as a branch-and-converge tree (duplicate x∈A onto both branches,
+  visually forking then landing green), divider + second sub-heading, 3-step
+  recovery procedure with boxed sanity-check formula. Eye-checked. PASS.
+
 ## Current
-Starting Sec 6 (Proof of distributivity + recovering A and B from A×B — PROOF-flagged).
+Starting Sec 7 (Worked: writing A×B, and the common-pairs speed trick).
