@@ -105,5 +105,9 @@
 
 **Subtopic 4 (Sec 40-55, Ionic Equilibrium / Acid-Base / pH / Common-Ion) — COMPLETE.**
 
+56. Three practical questions, and buffers as shock absorbers — opens subtopic 5. PASS.
+57. Solubility product: 'insoluble' is never truly zero — Ksp, AgCl. PASS.
+58. Salt hydrolysis: the solution takes the side of the stronger parent. PASS.
+
 ## Current
-Sec 56 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70)
+Sec 59 — next up (subtopic 5: Buffers / Ksp / Salt Hydrolysis, Sec 56-70, 15 sections)
