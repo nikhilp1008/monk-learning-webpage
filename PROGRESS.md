@@ -55,8 +55,12 @@ match across narration/board_events/reveals before starting.
   (terminal oxo Cr=O + 2 peroxo O−O links highlighted amber), correct x=+6 recalculation, redox
   prediction (Cr at ceiling → only reduced), green answer box.
 
+- Sec 10 — JEE Advanced tetrathionate: naive average x=+2.5 flagged as WARNING, drawn linear
+  S–S–S–S structure (terminal S with 3×O each), equal-split rule, central S=0 / terminal S=+5
+  annotated on structure, verify calc confirms average, green answer stamp.
+
 ## Current
-Sec 10 — next.
+Sec 11 — next (closes Subtopic 1, secs 1-11).
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
