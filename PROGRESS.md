@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 17.
+Starting Sec 18.
 
 ## Done
 - Sec 1 — what makes a collection a set (team-sheet well-defined demo, tall-students guardrail, roster A={2,3,5,7} + ∈/∉, repetition/order irrelevance, ∅)
@@ -34,3 +34,4 @@ Starting Sec 17.
 - Sec 14 — power set of {p,q,r} listed by size (full power-set lattice built bottom-up: ∅ → 3 singletons → 3 pairs → {p,q,r}, all 12 covering edges drawn, then flattened to roster + n[P(A)]=2³=8 count check)
 - Sec 15 — speed trap: n[P(A)]=256 → n(A) and proper subsets (256=2⁸ recognition, two-column derivation n(A)=8 / proper=255, dual traps staged-crossed-corrected: n(A)=256✗ and proper=254✗)
 - Sec 16 — quadratic inequality over Z, power-set count (factor (x-3)(x+2)≤0⇒-2≤x≤3 on a number line, continuous span + 6 integer dots overlaid, n(A)=6, n[P(A)]=2⁶=64, guardrail recolors the span red for the over-R-infinite contrast)
+- Sec 17 — advanced: odd-only subsets, complement principle (A={1..7} split into O(n=4)/E(n=3), two-column divider layout: (a) 2⁴=16 odd-only subsets incl. ∅, (b) complement 2⁷-2⁴=128-16=112 at-least-one-even)
