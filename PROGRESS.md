@@ -121,7 +121,11 @@ already).
 - Sec 57: pKa and choosing a base (JEE Advanced worked) — given pKa values, acidity order, green NaNH2-CAN vs red NaOH-CANNOT conjugate-acid reasoning, red "never hydroxide" rule — PASS [mocked-audio]
 - Sec 58: Alkyne pitfalls and pro-tips (closes Alkynes subtopic) — 4 traps (calling all alkynes acidic, alcohol-not-carbonyl hydration mistake, gem/vicinal confusion, NaOH too weak) with guardrails — PASS [mocked-audio]
 
+- Sec 59: The stubborn stability of benzene — drawn hexagon ring + C6H6 chip, crossed-out "+Br2" (refuses addition), red "something is protecting the ring" mystery hook — PASS [mocked-audio]
+- Sec 60: The delocalised doughnut and resonance energy — hexagon built up into hexagon+inner-circle (the aromatic "doughnut"), resonance energy ≈150 kJ/mol, red "all arene chemistry flows from this" — PASS [mocked-audio]
+- Sec 61: Kekule to resonance hybrid — two hand-drawn Kekule structures (alternating double bonds, opposite phase) ↔ resonance arrow ↔ = ↔ hexagon+circle hybrid, red "hexagon-with-circle is the honest picture" — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48-52, 54-58 done (Sec 11, 47, 53 skipped). Classification +
-Alkanes + Alkenes + Alkynes all complete. Moving to Aromatic Hydrocarbons
-(Sec 59-78).
+Sec 1-46, 48-52, 54-61 done (Sec 11, 47, 53 skipped). Classification +
+Alkanes + Alkenes + Alkynes complete. Aromatic Hydrocarbons subtopic
+underway (Sec 59-78).
