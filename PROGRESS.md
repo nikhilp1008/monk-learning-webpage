@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 26.
+Starting Sec 27.
 
 ## Gotcha log
 - **Beat-index off-by-one (found in Sec 23, fixed):** `reveals` has N entries (indices 0..N-1); beat index0 is always the title/heading (no separate content gate needed), so content beats must be gated `beat >= 1` through `beat >= N-1` — exactly N-1 gates, one per remaining `board_content` seq item. Never invent an extra beat (e.g. a standalone "draw the diagram" step) that doesn't correspond to a real reveal index — it shifts every later beat's content diagram+text late relative to the narration and silently drops the last beat's content entirely (since `beat` can never exceed N-1). The verifier can't catch this — it only checks geometry at whatever timestamps you pass it, and if the component's own gating is shifted, it'll still "pass" while being out of sync. Sanity check before verifying: count `board_content` seq items = count of `board_reveal_at_*` entries = (number of `beat >= k` gates used) + 1.
@@ -48,3 +48,4 @@ Starting Sec 26.
 - Sec 23 — compute every operation over U={1..10} (one Venn diagram with actual numbers filled per region as computed: lens{2,4}, only-A{6,8}, neither{7,9,10}, only-B{1,3,5}; crescents recolor green for A△B; caught+fixed an off-by-one beat-mapping bug here — see note below)
 - Sec 24 — speed trap: simplify (A−B)∪(A∩B) (single VennShade include:[A] fills the whole crescent+lens = A instantly, algebraic confirmation A−B=A∩B′⇒A∩(B′∪B)=A∩U=A, trap: both over-shaded A∪B and under-shaded A∩B mini-Venns staged and crossed out)
 - Sec 25 — operations on intervals A=[-2,5), B=(1,8] (two-row number line, A closed@-2/open@5, B open@1/closed@8, all 4 dot styles verified correct; A∩B=(1,5) tighter/stricter, A∪B=[-2,8] looser, A−B=[-2,1]; shaded overlap band exactly (1,5))
+- Sec 26 — advanced: two definitions of A△B agree (claim (A∪B)-(A∩B)=(A-B)∪(B-A) + mini-Venn visual anchor with both crescents shaded, full element-chase proof x∈LHS⇔in-exactly-one⇔(x∈A,x∉B)OR(x∈B,x∉A)⇔x∈RHS, iff-chain guardrail landing; fixed a second stray ⟺ (unconfirmed glyph) → ⇔)
