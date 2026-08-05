@@ -119,5 +119,11 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   count with contrast-to-2^pq note, pointwise algebra (f±g, fg, αf), quotient
   with g(x)≠0 caveat, boxed domain-bookkeeping formula, base-exponent chant. PASS.
 
+- Sec 21 "Standard functions I" — four real mini-graphs in one row (identity 45°
+  line, constant horizontal line, modulus sharp V, polynomial rounded parabola),
+  each with domain/range read off by inspection, projection-trick caption,
+  rational-function domain caveat, fingerprint guardrail. Eye-checked all 4
+  shapes distinct and correct. PASS.
+
 ## Current
-Starting Sec 21 (Standard functions I: identity, constant, modulus, polynomial — GRAPH, flagged).
+Starting Sec 22 (Standard functions II: signum, greatest integer, graph reading — GRAPH, flagged).
