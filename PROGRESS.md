@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 29.
+Starting Sec 30.
 
 ## Gotcha log
 - **Beat-index off-by-one (found in Sec 23, fixed):** `reveals` has N entries (indices 0..N-1); beat index0 is always the title/heading (no separate content gate needed), so content beats must be gated `beat >= 1` through `beat >= N-1` — exactly N-1 gates, one per remaining `board_content` seq item. Never invent an extra beat (e.g. a standalone "draw the diagram" step) that doesn't correspond to a real reveal index — it shifts every later beat's content diagram+text late relative to the narration and silently drops the last beat's content entirely (since `beat` can never exceed N-1). The verifier can't catch this — it only checks geometry at whatever timestamps you pass it, and if the component's own gating is shifted, it'll still "pass" while being out of sync. Sanity check before verifying: count `board_content` seq items = count of `board_reveal_at_*` entries = (number of `beat >= k` gates used) + 1.
@@ -53,3 +53,4 @@ Starting Sec 29.
 
 **Subtopic 4 (Cardinality of Unions and Practical Problems):**
 - Sec 28 — why adding two sets double-counts (Physics-70/Chemistry-50 circles, tempting "120?" crossed out, ring on the lens labeled "counted TWICE", n(A∪B)=n(A)+n(B)-n(A∩B), disjoint collapse, or/and/only-A dictionary, at-least-one vs none)
+- Sec 29 — three sets, include-exclude-include pattern (3-circle Venn A/B/C with 7 region labels, dynamic center tally crossfading 3→0→1 tracking the inclusion-exclusion build-up, full 3-set formula, "none" 8th region, signs-alternate guardrail)
