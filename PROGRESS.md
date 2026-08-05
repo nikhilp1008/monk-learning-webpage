@@ -151,8 +151,12 @@ match across narration/board_events/reveals before starting.
   Decomposition 2KClO₃→2KCl+3O₂, Displacement Zn+CuSO₄→ZnSO₄+Cu, Disproportionation), red-margin
   payoff, cricket-shots analogy closer.
 
+- Sec 33 — Competitive electron transfer: Zn/CuSO₄ tug-of-war, reactivity series concept,
+  halogen displacement (Cl₂ frees Br₂), two red-margin cautions (not every combination/
+  decomposition is redox; disproportionation needs intermediate O.N.), max/min limit note.
+
 ## Current
-Sec 33 — next.
+Sec 34 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
