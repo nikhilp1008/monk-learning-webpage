@@ -241,7 +241,12 @@ reveal patterns).
   linked-arms analogy → water liquid/ice floats → DNA base pairing → red
   guardrail (needs small+high-EN+lone pair, NOT Cl).
 
+- Sec 22 — Bond order, MO orderings, H-bond defined (formulas): BO=½(Nb−Na)
+  card → consequences line → ordering 1 (≤N₂: π<σ2pz) → ordering 2 (>N₂ O,F:
+  σ2pz<π, red crossover emphasis) → magnetism line → LCAO conditions card →
+  hydrogen-bond precise-definition card (strength 10−40 kJ/mol, 2 types).
+
 ## Current
-Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 3/9
-done (25, 20, 21) — authoring 22,23,24,26,27,28 now. Subtopic 4: 3/8 done
+Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 4/9
+done (25, 20, 21, 22) — authoring 23,24,26,27,28 now. Subtopic 4: 3/8 done
 (31,32,34) — authoring 29,30,33,35,36 next. Subtopic 5: 2/2 DONE.
