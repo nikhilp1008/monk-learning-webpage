@@ -145,7 +145,10 @@ already).
 - Sec 75: Nitration of toluene (NEET worked) — alkyl=donating/activating/o-p-directing reasoning, red "o/p products predominate, more reactive than benzene" answer, amber "don't lump every group together" trap — PASS [mocked-audio]
 - Sec 76: Second nitration of nitrobenzene (JEE Main worked) — –NO2 meta-directing reasoning, 1,3-dinitrobenzene formula, slower-than-benzene rate, red "deactivating + meta-directing = EWG signature" — PASS [mocked-audio]
 
+- Sec 77: Chlorobenzene: slow yet ortho/para (JEE Advanced worked) — two-column −I(red, rate)/+R(green, position) comparison resolving the apparent contradiction, red "no real contradiction" resolution — PASS [mocked-audio]
+- Sec 78: Aromatic pitfalls and pro-tips (closes Aromatic Hydrocarbons) — 4 traps (expecting Br2-decolourisation, calling halogens activating, blind (4n+2) without structure check, naming reagent not electrophile) with guardrails — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48-52, 54-76 done (Sec 11, 47, 53 skipped). Classification +
-Alkanes + Alkenes + Alkynes complete. Aromatic Hydrocarbons subtopic
-underway (Sec 59-78, currently at Sec 76).
+Sec 1-46, 48-52, 54-78 done (Sec 11, 47, 53 skipped). Classification +
+Alkanes + Alkenes + Alkynes + Aromatic Hydrocarbons all complete.
+Only Chapter Recap (Sec 79-80) remains.
