@@ -284,7 +284,13 @@ reveal patterns).
   green note → other examples list → donor/acceptor requirement + arrow
   notation.
 
+- Sec 30 — Back bonding: A-B schematic (dashed vacant orbital + lone pair +
+  red curved donation arrow) → consequences (shorter bonds, flattens) →
+  BF₃<BCl₃<BBr₃<BI₃ Lewis-acidity fingerprint (backwards from EN) → two
+  types (pπ-pπ, pπ-dπ) → (SiH₃)₃N flat vs (CH₃)₃N pyramidal (green/ink
+  contrast) → broader impact list → honest note on the d-orbital model.
+
 ## Current
 Subtopic 1: 10/10 DONE. Subtopic 2: 9/9 DONE. Subtopic 3: 9/9 DONE.
-Subtopic 4: 4/8 done (29,31,32,34) — authoring 30,33,35,36 now.
+Subtopic 4: 5/8 done (29,30,31,32,34) — authoring 33,35,36 now.
 Subtopic 5: 2/2 DONE.
