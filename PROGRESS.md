@@ -33,5 +33,9 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   points (uncountable), duplicate-element strip-before-counting, A×B=B×A iff A=B,
   subset-not-enough guardrail. Eye-checked. PASS.
 
+- Sec 4 "The counting toolkit" (formulas type) — growing formula sheet: n(A×B)=pq,
+  membership test, n-fold product + n(A^m), n-tuples/R³ caption, boxed 2^pq subsets,
+  bridge note (subset→relation), distributivity + boxed star identity. PASS.
+
 ## Current
-Starting Sec 4 (counting toolkit: cardinality, tuples, subsets, identities — formulas type).
+Starting Sec 5 (Proof that n(A×B)=mn — the slicing argument — PROOF-flagged).
