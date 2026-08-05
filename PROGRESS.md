@@ -11,44 +11,48 @@
 - Fetch helper: `node scratch/get-sec.mjs <position>` prints the Supabase row
   (no arg lists all 57 titles).
 
-## ⚠ KNOWN ISSUE: placeholder audio + reveal timing on 22/57 sections
-Sections **4, 19–30, 34–36, 49–51, 55–57** (22 of 57) use an older audio path
-(`.../c11_ch02_structure-of-atom/p1/...` vs the normal `.../c11_ch02/p1/...`),
-carry suspiciously round `duration_sec_english`/`_hinglish` values (68 or 84),
-and — the key finding — their **English `board_reveal_at_english` is a
-placeholder**: uniform 8-second-apart values (`[0,8,16,24,32,40,48,56]`),
-not real audio-derived timestamps. Hinglish reveals for most of these 22 are
-real/varied (matching a real, full-length Hinglish audio file); Sec 4, 34, 55
-have placeholder-looking data on **both** languages.
+## ✅ RESOLVED: placeholder audio + reveal timing (was: 22/57 sections)
+As of 2026-08-05 the audio pipeline was fixed for the sections that were
+previously skipped/provisional: **4, 19–30, 34–36, 49–51, 55** all now carry
+real per-audio `board_reveal_at_*` timestamps on the normal
+`audio.monklearning.com/.../c02/p<N>/...` host. Sec 4 and 19–23 (authored
+earlier on placeholder timing) were diffed against the new Supabase rows —
+board_content/segments are unchanged in structure and count, so no
+choreography rewrite was needed, just re-verification against the new
+timestamps (all PASS, see entries below). Sec 24–30, 34–36, 49–51, 55 were
+authored fresh against the real data. **This chapter's 22-section backlog
+from the old issue is now fully cleared** except Sec 56–57, which hit a new,
+different problem — see below.
 
-**Revised decision (user correction, 2026-08-04, supersedes the earlier one
-below): STOP authoring sections on this list.** Placeholder reveals mean the
-narration/segment breakdown behind them may not be final either — authoring
-choreography now risks being rebuilt from scratch once real audio + real
-reveals land, not just re-timed. Skip all 22 for now; author + verify only
-the sections with real audio. Revisit the whole list together once the audio
-pipeline is fixed.
+## ⚠ NEW KNOWN ISSUE: Sec 56–57 audio hosted on a broken CDN bucket
+Sec 56 ("Complete formula toolkit") and Sec 57 ("Chapter cheat sheet: quick
+recall") — the two "Chapter Close: Formula Recap & Cheat Sheet" sections —
+have real, sensible `board_reveal_at_*` arrays (10 entries each, not 8) and
+real segment scripts, but their `audio_url_english`/`_hinglish` point to
+`https://pub-bada3b1295adc1752795143056d59921.r2.dev/chemistry/class_11/
+ch_02/sec_5{6,7}_{english,hinglish}.mp3` — a **different CDN** (Cloudflare R2
+public bucket) than every other section's `audio.monklearning.com` host.
+That bucket returns **401 Unauthorized** on all four files (confirmed via
+curl with headers, and re-checked a few seconds later — not transient/rate
+limiting, a real access-control misconfiguration on the bucket).
 
-**Already authored before this correction (Sec 4, 19, 20, 21, 22, 23) —
-PROVISIONAL, not to be treated as finished:** each PASSed verification against
-today's placeholder/short-audio data and the code is a reasonable beat-indexed
-implementation (not hardcoded to specific seconds), but per the correction
-above these must be re-checked against the real segments/reveals once audio is
-regenerated — the beat count, content split, or pacing may need to change, not
-just the timestamps. Treat their "Done" entries below as drafts.
+Consequence: the app's board playback is driven entirely by the real
+`<audio>` element's `timeupdate` events. With the file failing to load
+(`readyState` stays `0`, `duration` stays `null`), the player can never
+advance past `currentTime=0` — confirmed by seeking the DOM audio element
+directly in a standalone Playwright script (`a.currentTime = 20` "succeeds"
+per the attribute, but the app's own currentTime state never follows, since
+it never gets a `timeupdate`). So `verify-scene.mjs` "PASSes" on these two
+sections, but it's a **false positive**: the board never leaves its blank
+t=0 state, so there's trivially nothing to overlap/overflow.
 
-**Untouched, deferred (do not start until audio is fixed): Sec 24, 25, 26, 27,
-28, 29, 30, 34, 35, 36, 49, 50, 51, 55, 56, 57.**
-
-<details><summary>Superseded original note (author-anyway decision) — kept for history</summary>
-
-Decision (user, 2026-08-04, now superseded): author all 57 scenes against the
-given `board_reveal_at_*` timestamps regardless, verify whatever the current
-audio can actually reach, and flag each affected section — the scenes will
-already be correct once fresh audio is uploaded. Do not "fix" by inventing
-shorter beat schedules.
-
-</details>
+Both scenes were authored anyway (real reveals, real content, tsc-clean) and
+manually confirmed correct via a direct DOM inspection that bypasses the
+broken player (checked the SVG's actual text content and each card's
+position — everything present and positioned as designed). They're
+committed but **not** claimed as VERDICT PASS. Once the r2.dev bucket's
+public access is fixed, these just need a normal `verify-scene.mjs` run —
+no rewrite expected.
 
 ## Subtopic map
 - 1–14  Subatomic Particles & Early Atomic Models
@@ -393,14 +397,118 @@ placeholder audio, see known-issue.**
   count×spin values — the whole trick). PASS both languages, FORCE_SHOTS
   eyeballed clean.
 
-## Skipped for now (placeholder audio/reveals — see known-issue)
-Sec 49, 50, 51 (subtopic 4 continuation) and Sec 55, 56, 57 (recap) — not
-yet started, in addition to the earlier-listed Sec 24-30, 34-36. Revisit
-this whole list together once the audio pipeline is confirmed fixed.
+## Session 2026-08-05 — audio fixed, cleared the deferred backlog
+
+**Re-verified against real audio (no code changes needed — reveals are
+runtime props, and board_content/segments matched the earlier placeholder-
+timed authoring in structure and count):**
+- Sec 4: The iso-family — PASS.
+- Sec 19: Method — turning a wavelength into a photon energy — PASS.
+- Sec 20: Method and meaning — the photoelectric effect and its four laws
+  — PASS.
+- Sec 21: Wave and Planck relations — PASS.
+- Sec 22: The photoelectric toolkit — PASS.
+- Sec 23: Worked example (CBSE): FM radio photon — PASS.
+(Stale "NOTE: stale audio" header comments removed from all six files.)
+
+**Newly authored against real audio:**
+
+- Sec 24: Worked example (NEET): will it eject electrons? — threshold
+  check, E=1240/700=1.77eV boxed green, compare vs W₀=2.0eV, guardrail
+  (single photon can't pay the exit fee, regardless of intensity). PASS
+  both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 25: Worked example (JEE Main): photons per second from a laser —
+  He-Ne laser given → E=1.96eV chip → N=P/E setup → N=1.59×10¹⁶ photons/s
+  boxed green → guardrail template (wavelength→energy, then power/energy).
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 26: Worked example (JEE Advanced): two stopping potentials — the
+  "subtract to kill W₀" signature move, four formula chips chaining to
+  1.03eV boxed green then W₀=2.28eV boxed green. PASS both languages,
+  FORCE_SHOTS eyeballed clean.
+
+- Sec 27: Pitfalls and pro-tips: radiation and the photoelectric effect —
+  4 numbered pitfalls (intensity-vs-frequency, threshold, unit slips,
+  wavenumber-vs-frequency), pro-tip chip (1240/λ shortcut), closing note.
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+  **Closes subtopic 2 (Electromagnetic Radiation, Sec 15-27) — fully done.**
+
+- Sec 28: The crisis and the staircase clue — opens subtopic 3. A real
+  hand-drawn ramp-vs-staircase diagram (continuous diagonal line with one
+  red dot vs a 4-step green staircase with a red dot on each tread)
+  visually proving "sharp lines ⇒ a staircase of allowed energies." PASS
+  both languages, FORCE_SHOTS eyeballed clean — striking diagram.
+
+- Sec 29: Bohr's bold rules and a preview of what breaks them — stationary
+  orbits explain, mvr=nh/2π chip, "spectacular success" green line, the
+  de Broglie/Heisenberg patch explain, one-electron-species guardrail,
+  cricket-ball closer. PASS both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 30: Deriving the Bohr radius — the derivation hub: force-balance
+  chip → electrostatic explain → rearranged chip → Bohr's rule (RED) →
+  rₙ=0.529n²/Z Å boxed green → scaling guardrail (r∝n²/Z, n=1,Z=1⇒0.529Å)
+  → derivation-summary closer. PASS both languages, FORCE_SHOTS eyeballed
+  clean.
+
+- Sec 34: Why Bohr's model still fails — 4 numbered cracks (one-electron
+  only, can't predict helium, can't explain Zeeman/Stark, can't explain
+  bonding) → guardrail on the deepest failure (definite orbit violates
+  Heisenberg) → wave-nature explain → green teaser to the quantum model
+  next. PASS both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 35: The four scaling laws — reference-card stack: mvr=nh/2π →
+  rₙ boxed green → Eₙ boxed green → vₙ chip → proportionality guardrail
+  (r∝n²/Z, E∝Z²/n², v∝Z/n, ν̄∝Z²) → time-saver explain → Bohr-radius
+  landmark note. PASS both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 36: Rydberg, series, de Broglie, and Heisenberg — toolkit part 2:
+  Rydberg equation boxed green → R_H+series explain → line-count chip →
+  de Broglie λ boxed green → "light, fast particles only" guardrail →
+  uncertainty principle boxed green → RED closer ("the death blow to
+  Bohr's sharp path"). PASS both languages, FORCE_SHOTS eyeballed clean.
+  **Closes subtopic 3 (Bohr's Model & Wave-Particle Duality, Sec 28-41)
+  — fully done** (Sec 31-33, 37-38 were already done in an earlier
+  session).
+
+- Sec 49: Quantum numbers and counting relations — reference card 1:
+  the 4 QN ranges chip → L=√(l(l+1))·h/2π boxed green → orbital-count
+  and electron-capacity formulas boxed green → s-electron zero-L explain
+  → familiar capacities (s2p6d10f14) → guardrail (backbone of every
+  configuration question). PASS both languages, FORCE_SHOTS eyeballed
+  clean.
+
+- Sec 50: Nodes, the (n+l) rule, and the three principles — reference
+  card 2: node-count formula boxed green → (n+l) rule guardrail → Aufbau
+  order chip → three-principles explain → one-electron-degenerate
+  guardrail → Cr/Cu anomalies → guardrail (ions strip highest n first).
+  PASS both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 51: Worked example (CBSE): scandium configuration and quantum
+  numbers — opens subtopic-4 worked examples. Fill-order given →
+  Sc=[Ar]3d¹4s² boxed green → differentiating-electron explain → n,l
+  explain → mₗ/mₛ chip → guardrail ((n,l,mₗ,mₛ)=(3,2,−2,+½)) → assignment
+  routine closer. PASS both languages, FORCE_SHOTS eyeballed clean.
+
+- Sec 55: Pitfalls and pro-tips: the quantum model — 4 numbered pitfalls
+  (node types, lower-n≠lower-energy, 3d-before-4s error, Cr/Cu forgotten)
+  → allowed-QN-set subnote → pro-tip chip (neutral atom first, then
+  strip highest n) → closing (anchor on total=n−1). PASS both languages,
+  FORCE_SHOTS eyeballed clean. **Closes subtopic 4 (Quantum Model,
+  Orbitals & Electron Configurations, Sec 42-55) — fully done.**
+
+- Sec 56, 57: authored but **BLOCKED**, not VERDICT PASS — see the new
+  known-issue above. Both are 10-beat dense card-grid layouts (4×2 + a
+  closing strip for 56; 3×3 for 57) built from the real board content;
+  tsc-clean; content/positions manually confirmed correct via direct DOM
+  inspection since the broken audio CDN prevents driving the real player.
 
 ## Current
-Sections 39-48 and 52-54 (13 sections) authored and pushed this session.
-Remaining REAL sections to author: none from the originally assigned list
-(39-48, 52-54) — all done. Sections 49-51 and 55-57 remain deferred
-(placeholder audio). Next up whenever audio lands: revisit the full
-deferred list (4, 19-23, 24-30, 34-36, 49-51, 55-57) as one batch.
+All sections assigned this session are done: re-verified 4/19-23 (6),
+newly authored 24-30/34-36/49-51/55 (16) — 22 sections total, all VERDICT
+PASS except Sec 56-57 which are authored+committed but blocked on the
+r2.dev audio CDN's 401s (see known-issue). Every real-audio section in the
+chapter is now authored except 56-57. Nothing else is deferred for
+placeholder-timing reasons anymore — that issue is fully resolved.
+Next up: fix the r2.dev bucket's public access, then run verify-scene.mjs
+on 56 and 57 to close out the chapter.
