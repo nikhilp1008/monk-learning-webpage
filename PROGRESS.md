@@ -155,8 +155,12 @@ match across narration/board_events/reveals before starting.
   halogen displacement (Cl₂ frees Br₂), two red-margin cautions (not every combination/
   decomposition is redox; disproportionation needs intermediate O.N.), max/min limit note.
 
+- Sec 34 — Formal definitions, 6-badge ladder: combination/decomposition/displacement/
+  disproportionation with general forms + examples, red comproportionation (2H₂S+SO₂→3S+2H₂O),
+  intramolecular redox (2 different elements), qualitative-classification closer.
+
 ## Current
-Sec 34 — next.
+Sec 35 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
