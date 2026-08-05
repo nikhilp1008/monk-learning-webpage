@@ -47,8 +47,12 @@ match across narration/board_events/reveals before starting.
   numbers above every atom, Al 0→+3 oxidised, Mn +4→0 reduced, agent naming (Al=reductant,
   MnO₂=oxidant), green answer box.
 
+- Sec 8 — NEET speed trap: 5 chlorine species chips, "Cl=−1 everywhere" trap crossed out,
+  4 quick derivations (HCl/HClO/HClO₃/HClO₄), proportionally-spaced number line (−1→+7) with
+  species ticks, final inequality chain.
+
 ## Current
-Sec 8 — next.
+Sec 9 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
