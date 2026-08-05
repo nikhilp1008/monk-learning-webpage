@@ -54,6 +54,7 @@ already).
 ## Done
 (append one line per finished section: `Sec N: <title> — <one-line what the scene shows> — PASS [mocked-audio]`)
 - Sec 1: The hydrocarbon family tree — root "HYDROCARBONS" branches into ALIPHATIC/ALICYCLIC/AROMATIC, aliphatic splits saturated/unsaturated with CnH2n+2/CnH2n/CnH2n-2 chips, alicyclic vs aromatic rings (plain hexagon vs hexagon+circle), red theme banner — PASS [mocked-audio]
+- Sec 2: Cycloalkanes and Baeyer's ring strain — chain→ring pictogram, CnH2n formula, red "same formula as alkenes, no double bond" trap, cyclo-+hexane=cyclohexane naming, 109.5° tetrahedral icon, 4-ring strain row (triangle 60°/square 90° red-strained, pentagon ~108° near-strain-free, chair-zigzag cyclohexane green-stable) — PASS [mocked-audio]
 
 ## Current
 Sec 1 done (exemplar for this chapter's chem-kit usage). Moving to Sec 2.
