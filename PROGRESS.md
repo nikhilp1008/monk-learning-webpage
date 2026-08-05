@@ -196,8 +196,15 @@ match across narration/board_events/reveals before starting.
   (7.2), titration M₁n₁V₁=M₂n₂V₂/N=M×n (7.3), E°cell, ΔG°=−nFE°cell, logK & Nernst, red-margin
   n-factor memory table, unity closer.
 
-## Current
-Sec 44 — next (closes chapter, secs 43-44).
+- Sec 44 — Final cheat sheet: 3 lenses + master rule, O.N. assignment values, red-margin agents
+  rule (OIL RIG source), balancing methods + medium tools, MnO₄⁻ 5-3-1 memory, cells summary
+  (An Ox/Red Cat, E°cell, ΔG°), red-margin 4 types + reactivity series + disproportionation vs
+  comproportionation vs intramolecular + mnemonics. ✅ SUBTOPIC 5 COMPLETE.
+
+## 🎉 CHAPTER COMPLETE — 44/44 sections authored, verified PASS, and committed.
+File count = registry count = 44, no gaps (secs 1-44 all registered under C11CH07).
+Final tsc clean. All sections eye-checked via FORCE_SHOTS; chemistry spot-verified throughout
+(balanced equations, correct O.N. tracking, accurate standard potentials, correct arithmetic).
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
