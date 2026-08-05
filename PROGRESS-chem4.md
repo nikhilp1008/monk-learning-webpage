@@ -246,7 +246,13 @@ reveal patterns).
   σ2pz<π, red crossover emphasis) → magnetism line → LCAO conditions card →
   hydrogen-bond precise-definition card (strength 10−40 kJ/mol, 2 types).
 
+- Sec 23 — Building an MO diagram, second-period pattern: 4 step cards (count
+  e⁻ / choose ordering / fill Aufbau-Pauli-Hund's / BO+magnetism with N₂
+  worked to BO=3 diamagnetic) → period-2 pattern row (H₂ BO=1, He₂ BO=0
+  doesn't exist, Li₂ BO=1, Be₂ BO=0, B₂ BO=1 paramagnetic) → closing
+  (what VBT can't explain) + green chip.
+
 ## Current
-Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 4/9
-done (25, 20, 21, 22) — authoring 23,24,26,27,28 now. Subtopic 4: 3/8 done
+Subtopic 1: 10/10 DONE (sec 6 fixed). Subtopic 2: 9/9 DONE. Subtopic 3: 5/9
+done (25, 20, 21, 22, 23) — authoring 24,26,27,28 now. Subtopic 4: 3/8 done
 (31,32,34) — authoring 29,30,33,35,36 next. Subtopic 5: 2/2 DONE.
