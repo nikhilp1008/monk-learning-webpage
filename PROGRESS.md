@@ -13,7 +13,8 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 2.
+Starting Sec 3.
 
 ## Done
 - Sec 1 — what makes a collection a set (team-sheet well-defined demo, tall-students guardrail, roster A={2,3,5,7} + ∈/∉, repetition/order irrelevance, ∅)
+- Sec 2 — roster vs set-builder (built both forms token by token, colon = "such that", roster-trails-into-dots vs one-line set-builder, dots-are-a-hint ring)
