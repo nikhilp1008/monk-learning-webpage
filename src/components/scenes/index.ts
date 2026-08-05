@@ -2965,6 +2965,9 @@ import C11Ch02Sec51 from "./C11Ch02Sec51";
 import C11Ch02Sec52 from "./C11Ch02Sec52";
 import C11Ch02Sec53 from "./C11Ch02Sec53";
 import C11Ch02Sec54 from "./C11Ch02Sec54";
+import C11Ch02Sec55 from "./C11Ch02Sec55";
+import C11Ch02Sec56 from "./C11Ch02Sec56";
+import C11Ch02Sec57 from "./C11Ch02Sec57";
 
 const C11CH02 = "16bf043d-bc59-5ebb-93ad-7b0fddf484c9"; // Class 11 Chemistry · Structure of Atom
 
@@ -3022,3 +3025,6 @@ REGISTRY[`${C11CH02}:51`] = C11Ch02Sec51;
 REGISTRY[`${C11CH02}:52`] = C11Ch02Sec52;
 REGISTRY[`${C11CH02}:53`] = C11Ch02Sec53;
 REGISTRY[`${C11CH02}:54`] = C11Ch02Sec54;
+REGISTRY[`${C11CH02}:55`] = C11Ch02Sec55;
+REGISTRY[`${C11CH02}:56`] = C11Ch02Sec56;
+REGISTRY[`${C11CH02}:57`] = C11Ch02Sec57;
