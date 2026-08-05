@@ -67,6 +67,9 @@ already).
 - Sec 13: Free-radical halogenation: the three-step chain — Cl-Cl bond with single-barb curved (radical) arrows for homolysis, hν reaction arrow, two propagation equations, loop icon for chain regeneration, termination equation, red 3°>2°>1° selectivity — PASS [mocked-audio]
 - Sec 14: Conformational analysis of ethane — drawn Newman projections (staggered vs eclipsed spokes), energy bars (short green/tall red) with dashed gap connector, ΔE≈12.5 kJ/mol, red "conformers can't be isolated" note — PASS [mocked-audio]
 - Sec 15: Physical properties of alkanes — 3-segment phase bar (C1-C4 gas/C5-C17 liquid/C18+ solid), green rising arrow for boiling-point trend, red "like dissolves like" solubility note — PASS [mocked-audio]
+- Sec 16: The rest of the reaction map — boxed combustion equation (ΔcH=-890) plus 6 concise one-line reactions (incomplete combustion, controlled oxidation, KMnO4, isomerisation, aromatization, steam+pyrolysis) — PASS [mocked-audio]
+- Sec 17: CO2 volume from combustion of propane (CBSE worked example) — given→step1 moles→boxed balanced equation→step3 ratio→step4 volume→green answer chip "3.36 L CO2 at STP" — PASS [mocked-audio]
+- Sec 18: Counting monochloro products (NEET worked example) — drawn 2-methylbutane skeleton with 4 color-coded H-environment rings (red×2 equivalent methyls, amber tertiary H, green×2 methylene/methyl), green "4 products" answer, red over-counting trap — PASS [mocked-audio]
 
 ## Current
 Sec 1-5 done — Classification of Hydrocarbons subtopic complete. Moving to
