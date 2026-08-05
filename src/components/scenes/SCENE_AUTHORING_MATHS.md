@@ -9,7 +9,21 @@ This file changes the **domain**: who is teaching, what goes on a maths board, t
 notation, and the new geometry primitives (`math-kit.tsx`).
 
 Maths uses `math-kit.tsx` (number lines, Venn diagrams, nested-set boxes, rounded
-boxes) on top of `kit.tsx`.
+boxes, Cartesian axes, function-graph curves/steps) on top of `kit.tsx`.
+
+## Data source — check before trusting `JSON_LESSONS`
+
+For Chapter 1 the `JSON_LESSONS/Class11_Math/*.json` file's `sections` matched
+Supabase `lesson_sections` 1:1 (37 = 37). **That is not guaranteed.** Chapter 2's
+JSON file has only 10 coarse outline sections while Supabase actually has 28 —
+the JSON was an earlier, less granular draft; Supabase is the real, current,
+authoritative source. Confirm the section count matches (`select=position` from
+`lesson_sections`, count the rows) **before** trusting the JSON for narration.
+When Supabase has more sections than the JSON (or a mismatched count at all),
+pull everything directly from `lesson_sections` instead — recent rows already
+carry `board_content` (= the old `board_events`) and `segments_english` /
+`segments_hinglish` (the full narration transcript) alongside the reveal
+timestamps and audio URLs, so the JSON isn't even needed in that case.
 
 ---
 
@@ -143,6 +157,30 @@ screenshot). Rule of thumb:
   (Limits & Derivatives, Statistics) starts, add a `Frac`/stacked-bounds primitive
   to `math-kit.tsx` then, verified the same way. Until it exists, flatten inline
   (`p/q`, `Σ n(A)` prefix-style) — that covers everything in Sets.
+- **`\frac{a}{b}` / `\tfrac{a}{b}`** → flatten inline as `a/b` (same rule as
+  Chapter 1's `p/q`) unless the fraction is the star of the beat (a derivative
+  definition, a probability) — that case is still future work, see above.
+- **`\left`, `\right`, `\big`** (and similar sizing commands) → pure LaTeX
+  typesetting hints, no board meaning — drop the command, keep the delimiter
+  character itself (`\left(` → `(`).
+- **`\mathrm{...}`** → same treatment as `\text{...}`, plain words/letters.
+- **`\underbrace{expr}_{label}`** → no 2-D brace primitive exists (or is
+  planned) for this; substitute a ringed/labeled callout instead — `ringD`
+  or an arrow from a `T` label pointing at the relevant part, using the base
+  spec's Step 4 targeting math. Don't invent a new stacked-brace primitive for
+  what's usually a single occurrence per chapter.
+- **Prefer a glyph that's actually native over a fallback near-equivalent**:
+  set difference `\setminus` → write it the Chapter-1 way, `A − B` (plain
+  hyphen-minus, native to both fonts), not `A ∖ B` (U+2216, missing from both
+  fonts). "Divides"/"such that" `\mid` → plain `|` (U+007C, native), not `∣`
+  (U+2223, missing). Both pairs look identical on the board; only one of each
+  pair avoids the fallback-font clash.
+- **Second glyph audit (Chapter 2, Relations & Functions)** — floor brackets
+  `⌊ ⌋`, multiplication `× ·`, Greek `α`, and `⋯` were checked the same way.
+  `× ·` are native to both fonts, use freely. `⌊ ⌋ α ⋯` fall back (same
+  legible-but-mismatched category as `∈ ∪ ∩` from Chapter 1) — safe to use,
+  no plain-glyph substitute exists for floor brackets or Greek letters the
+  way there was for blackboard-bold, so accept the fallback there.
 - Hinglish board text stays **Latin script** (house style, inherited from
   physics/chem) — and all of the above symbols are language-agnostic, so a
   formula is byte-identical between the English and Hinglish boards; only the
@@ -153,15 +191,27 @@ screenshot). Rule of thumb:
 ## math-kit quick reference
 
 Path generators (feed to `<Draw d={…}/>`): `circleD` (arc-based circle, usable
-both as a drawn outline and inside a clip/mask), `axisD` (number-line shaft +
-arrowhead), `tickD`, `roundRectD` (rounded-rect outline, for nested-set boxes).
+both as a drawn outline and inside a clip/mask), `axisD`/`xAxisD`/`yAxisD`
+(number-line / axis shaft + arrowhead), `tickD`, `roundRectD` (rounded-rect
+outline, for nested-set boxes), `lineD` (straight segment — linear/identity/
+constant function pieces), `curveD(points)` (smooth curve through an ordered
+point list via Catmull-Rom — for polynomial/parabola graphs; **sample enough
+points near the curvature you want visible** — a shallow parabola sampled too
+coarsely near its vertex will legitimately look almost straight, that's the
+real shape, not a kit bug).
 
 Components: `<IntervalDot x y open />` (open = hollow ring, closed = filled dot —
 get this right per the interval's bracket), `<VennShade include exclude fill />`
 (shades the exact boolean region — circles listed in `include` are intersected,
 circles in `exclude` are subtracted — real SVG clip-path/mask composition, not
 hand-eyeballed overlap art), `<NestedSets levels />` (concentric labeled boxes for
-number-set containment, outer-to-inner order = the JSON's nesting order).
+number-set containment, outer-to-inner order = the JSON's nesting order),
+`<CartesianAxes originX originY xLeft xRight yTop yBottom />` (x/y axes with
+arrowheads + integer-spaced ticks — the default frame for any function graph;
+draw the function's own curve on a later beat than the axes), `<StepFunction
+steps />` (a list of `{x1,x2,y,leftOpen,rightOpen}` flat segments with jump-
+discontinuity dots — covers signum, greatest-integer/floor, or any piecewise
+function with the same primitive).
 
 All obey the base engine rules: gate every element on its beat (`on={beat >= k}`),
 board blank at t=0 (title always-on only), stagger with `dl(k, d)`, `dim`
