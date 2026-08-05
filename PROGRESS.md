@@ -65,8 +65,12 @@ match across narration/board_events/reveals before starting.
   Fixed: beat-0 heading and pitfall-1 row initially sat only 10px apart (read as one run-on
   line despite passing the overlap check since anchors differed) — pushed row1 down 30px.
 
+- Sec 12 — Two-account ledger (mass + charge) opens Subtopic 2: red-margin electron-conservation
+  rule, drawn electron see-saw (level beam, 2 e⁻ each side), two bookkeeping systems preview
+  (oxidation-number method vs half-reaction method).
+
 ## Current
-Subtopic 2 (Balancing Redox, secs 12-20). Sec 12 — next.
+Sec 13 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
