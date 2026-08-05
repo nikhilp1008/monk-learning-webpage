@@ -131,5 +131,10 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   right, ascending bottom-left to top-right), rounding-toward-−∞ guardrail,
   general graph-reading skill, JEE fractional-part note. Eye-checked all dots. PASS.
 
+- Sec 23 "Worked: is it a function? counting functions" — Ex1 two-chip promise
+  checklist landing "R IS a function" verdict, Domain/Range readout, codomain-
+  not-range guardrail (7); Ex2 boxed q^p=4^3=64 with all three named wrong
+  reflexes (2^12, 3^4 swap, 3×4). PASS.
+
 ## Current
-Starting Sec 23 (Worked: is it a function? — and counting functions).
+Starting Sec 24 (Worked: natural domain of √(x-2)/(x-5), and algebra of f and g).
