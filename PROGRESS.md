@@ -129,7 +129,11 @@ already).
 - Sec 63: Key definitions and formulae (arene fact-sheet) — CnH2n-6 series, planar hexagon facts, resonance energy, EAS, red activating/deactivating directing-group lists — PASS [mocked-audio]
 - Sec 64: Naming benzene derivatives — drawn ring with numbered 1/2/3/4 positions labeled ortho/meta/para, phenyl vs benzyl vs aryl, xylene isomers, red o/m/p-recognition note — PASS [mocked-audio]
 
+- Sec 65: Preparing benzene: three routes — (a) 3HC≡CH→C6H6 cyclic polymerisation over red-hot Fe, (b) sodium benzoate decarboxylation with soda lime, (c) red C6H5OH+Zn→C6H6+ZnO phenol reduction — PASS [mocked-audio]
+- Sec 66: Physical properties and the evidence for resonance — sooty/luminous flame + toxicity notes, three-bar heat-of-hydrogenation comparison (cyclohexene ~120, predicted "cyclohexatriene" ~360, benzene actual much lower), red shortfall≈150=resonance-energy bracket — PASS [mocked-audio]
+- Sec 67: The master reaction: electrophilic aromatic substitution — 3-ring EAS scheme (benzene+E⁺ → red arenium ion with curved arrow and + charge, aromaticity lost → green product ring, aromaticity restored), red rate-determining note, red punchline "pays in step 2, recovers in step 3" — PASS [mocked-audio]
+
 ## Current
-Sec 1-46, 48-52, 54-64 done (Sec 11, 47, 53 skipped). Classification +
+Sec 1-46, 48-52, 54-67 done (Sec 11, 47, 53 skipped). Classification +
 Alkanes + Alkenes + Alkynes complete. Aromatic Hydrocarbons subtopic
-underway (Sec 59-78).
+underway (Sec 59-78, currently at Sec 67).
