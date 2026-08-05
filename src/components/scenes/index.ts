@@ -2924,3 +2924,5 @@ import M11Ch01Sec7 from "./M11Ch01Sec7";
 REGISTRY[`${M11CH01}:7`] = M11Ch01Sec7;
 import M11Ch01Sec8 from "./M11Ch01Sec8";
 REGISTRY[`${M11CH01}:8`] = M11Ch01Sec8;
+import M11Ch01Sec9 from "./M11Ch01Sec9";
+REGISTRY[`${M11CH01}:9`] = M11Ch01Sec9;

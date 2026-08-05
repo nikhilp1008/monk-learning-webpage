@@ -13,7 +13,7 @@ Naming: `M11Ch01SecN.tsx`, component `M11Ch01SecN`, registered at END of `index.
 6. Cheat Sheet — sec 37
 
 ## Current
-Starting Sec 9.
+Subtopic 1 (secs 1-9) complete. Starting Sec 10 (Subtopic 2: Subsets/Power Set/Universal Set).
 
 ## Done
 - Sec 1 — what makes a collection a set (team-sheet well-defined demo, tall-students guardrail, roster A={2,3,5,7} + ∈/∉, repetition/order irrelevance, ∅)
@@ -24,3 +24,4 @@ Starting Sec 9.
 - Sec 6 — speed trap: which set is empty (4 options staged, (a)/(d) stamped EMPTY, decoys (b)/(c) staged as tempting "EMPTY?" then crossed out and corrected to NOT-empty, check-the-universe-first verdict)
 - Sec 7 — |x|≤2 vs x³=x cardinality/equality (one shared number line: A's 5 dots, factoring derivation x³=x⇒x(x-1)(x+1)=0, B's 3 members ringed green on the same line, -2/2 recolored red at the end as the A≠B evidence, B⊂A landing)
 - Sec 8 — advanced: parameter a with n(T)=1 (factor x²-(a+1)x+a=(x-1)(x-a), domain rule, 3-card casework table with dividers: a∈N,a≠1→n=2✗ / a=1→n=1✓ / a∉N→n=1✓, iff landing)
+- Sec 9 — pitfalls & pro-tips: representations (4 rapid traps — {0}/{∅} not empty w/ wrong-vs-right pair, counting repeats, ignoring the universe, equal vs equivalent — then circle-the-universe-symbol pro-tip)
