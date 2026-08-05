@@ -147,8 +147,12 @@ match across narration/board_events/reveals before starting.
   red-margin E°-ranking shortcut with negative-gap-means-backwards tip.
   ✅ SUBTOPIC 3 (secs 21-31) COMPLETE.
 
+- Sec 32 — Four families of redox opens Subtopic 4: 2×2 card grid (Combination 2Mg+O₂→2MgO,
+  Decomposition 2KClO₃→2KCl+3O₂, Displacement Zn+CuSO₄→ZnSO₄+Cu, Disproportionation), red-margin
+  payoff, cricket-shots analogy closer.
+
 ## Current
-Subtopic 4 (Types of Redox & Redox in Action, secs 32-42). Sec 32 — next.
+Sec 33 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
