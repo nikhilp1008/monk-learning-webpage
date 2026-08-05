@@ -77,8 +77,12 @@ match across narration/board_events/reveals before starting.
   make total ↑=↓ (red, core move + "electron-balance in disguise" insight), balance remaining
   atoms leaving H/O last, balance O/H via medium then verify charge (red closer).
 
+- Sec 15 — Half-reaction method (6 steps as 4 rows, erases), basic-medium shortcut (balance
+  acidic → add OH⁻ per H⁺ → H₂O), back-to-molecular rule, red-margin worked example
+  H₂S+2Fe³⁺ ionic → H₂S+2FeCl₃ molecular (verified balanced).
+
 ## Current
-Sec 15 — next.
+Sec 16 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
