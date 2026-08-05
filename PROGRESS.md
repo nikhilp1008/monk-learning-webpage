@@ -171,8 +171,12 @@ match across narration/board_events/reveals before starting.
   electrochemical cells, metallurgy, bleaching/disinfection, photography/electroplating) as
   category+description rows (tspan highlighting), red-margin unification closer.
 
+- Sec 38 — CBSE worked example: 3 reactions classified — (i) 2KClO₃→2KCl+3O₂ decomposition
+  redox, (ii) CaO+CO₂→CaCO₃ combination NOT redox, (iii) Fe+CuSO₄→FeSO₄+Cu metal-displacement
+  redox — all O.N. tracking verified correct, red-margin answer summary.
+
 ## Current
-Sec 38 — next.
+Sec 39 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
