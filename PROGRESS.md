@@ -24,5 +24,9 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   6 cups grid) / (a,b) definition with coordinate-slot arrows / swap-slots guardrail
   ringed red / cricket scoreline reinforcement / iff formula / a=b special case. PASS.
 
+- Sec 2 "The Cartesian product A × B and the grid picture" — formula built term by
+  term, hand-placed 3×2 grid (A up the side, B along the bottom, 6 green meeting
+  points labelled), A×B vs B×A contrast, guardrail, R×R=plane. Eye-checked. PASS.
+
 ## Current
-Starting Sec 2 (Cartesian product A×B grid — PROOF-adjacent, flagged for eye-check).
+Starting Sec 3 (boundary rules: empty sets, infinity, A×B=B×A special case).
