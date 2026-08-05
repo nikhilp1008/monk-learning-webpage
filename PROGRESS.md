@@ -115,8 +115,13 @@ match across narration/board_events/reveals before starting.
   left column (n-factor from medium, red-margin meq balance M₁n₁V₁=M₂n₂V₂, why-equivalents
   insight, substitute/solve, sanity-check by n-factor), green closer.
 
+- Sec 24 — Procedure B (galvanic cell, erases): higher-E°=cathode/lower=anode, E°cell formula,
+  n=total e⁻ in balanced rxn, ΔG°=−nFE°cell, activity-series shortcut (Zn/Cu). Then E°-explains-
+  titration: E°cell>0 condition, MnO₄⁻/Cr₂O₇²⁻ workhorse values vs Fe²⁺, HCl problem resolved
+  via Cl₂/Cl⁻ potential (all standard values verified accurate).
+
 ## Current
-Sec 24 — next.
+Sec 25 — next.
 
 ## Notes
 - GOTCHA (found sec2): `Draw`'s stroke-dash reveal trick only gates the STROKE — a filled
