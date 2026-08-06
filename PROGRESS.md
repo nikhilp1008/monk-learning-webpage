@@ -69,3 +69,7 @@ spot check).
   guardrail, ASTC mnemonic heading, color-coded quadrant sign labels pre-placed then framed by
   CartesianAxes (no ticks) + anticlockwise A→S→T→C rotation arc, reciprocal-sign closer.
   Eye-checked (ASTC quadrant geometry, correct I/II/III/IV placement). PASS.
+- Sec 10 "The three Pythagorean identities and the ranges" — sin²+cos²=1 hero, 1+tan²=sec²
+  and 1+cot²=csc² chips, mini right-triangle-on-circle sketch grounding a²+b²=1, ranges
+  ([-1,1] / never-strictly-inside / all-reals), red-margin range-check-every-answer closer.
+  PASS.
