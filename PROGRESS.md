@@ -39,8 +39,13 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - **Sec 6** — two worked examples: `(2x+3)^4` fully expanded with real numeric super/subscript binomial coefficients, boxed answer, x=1 sanity check + checkmark; JEE speed-trap example (crossed-out naive trinomial count 66 vs correct perfect-square insight → 21 terms, boxed). Caught+fixed an off-by-one beat-index bug here (see workflow notes). Math hand-verified correct. PASS, eye-checked.
 - **Sec 7** — Example 3 [JEE Main]: coeff of x³ in (1+x)(1-2x)^5 via product split, general term computes both needed coefficients, boxed −40. Example 4 [JEE Adv]: consecutive-ratio formulas solved to n=7, r=2, red-margin verify 7C1:7C2:7C3=7:21:35=1:3:5 + checkmark. Math verified. PASS.
 - **Sec 8** — subtopic 1 closer, `section_type=tips`: 2×3 grid of colored callout boxes (4 red traps: off-by-one term count, whole-bracket exponent, sign alternation, term-vs-index; 2 green pro-tips: x=1 sum check, nCr symmetry). PASS, eye-checked. **Subtopic 1 (secs 1-8) complete.**
+- **Sec 9** — general term as catalogue lookup: boxed T(r+1)=nCr a^(n-r)b^r, 3 chips (given/balance-point/cancels), red-margin m-th-term rule, mini-example. PASS.
+- **Sec 10** — middle/independent term intuition: seat-row diagrams (n=6 even→1 middle, n=5 odd→2 middles), tug-of-war diagram on exponent of x meeting at net=0, 3 red-margin guardrails. PASS.
+- **Sec 11** — specific-term machinery (`formulas`): general term simplified to net exponent E(r)=p(n-r)-qr boxed, set-E(r) rules, middle-index formula, red-margin from-the-end rule, glossary. PASS.
+- **Sec 12** — specific-term algorithm: numbered 5-step procedure (step 4 boxed: solve+validate), parity explanation, boxed r-formula, red-margin don't-expand tip. PASS.
+- **Sec 13** — two worked examples: 6th term of (2x+3/x)^9=489888/x boxed; independent term in (x²-1/x)^9→r=6→T7=84 boxed; red-margin sign trap. Math hand-verified correct. PASS.
 
-Pushed to origin through Sec 8.
+Pushed to origin through Sec 13. Subtopic 2 (secs 9-15) in progress.
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3036 > /tmp/dev-math7.log 2>&1 &`, confirmed READY.
