@@ -224,6 +224,15 @@ screenshot). Rule of thumb:
 - **`\underbrace{...}_{n}` for a term count** (e.g. "97 copies of 1"): same
   ringed/labeled-callout substitute as before — don't build a brace
   primitive for this.
+- **Fifth glyph audit (Chapter 5, Linear Inequalities)** — `γ`, `≶`
+  (lessgtr), `✓` (checkmark) all fall back. `γ` joins the accept-it Greek
+  list. For `≶` (used as a generic "insert < or >" placeholder), prefer
+  spelling it out as words ("< or >") — clearer anyway, and sidesteps the
+  fallback entirely. For `✓`, use the new `checkD` primitive (a real drawn
+  stroke) instead — it's common enough across worked-example/tips sections
+  to be worth drawing rather than relying on the mismatched fallback glyph.
+- **`\boxed{...}`** → wrap the content in a `Chip` (or a plain bordered
+  rect), same idea as chemistry's boxed final answer — no new primitive.
 - Hinglish board text stays **Latin script** (house style, inherited from
   physics/chem) — and all of the above symbols are language-agnostic, so a
   formula is byte-identical between the English and Hinglish boards; only the
@@ -271,6 +280,23 @@ bridge — draw those branch by branch instead).
 glyph/word (conjugate `z̄`, later a mean `x̄`) instead of the tofu combining
 mark; `x`/`y`/`size`/`anchor`/`script` must match the `<T/>` call it sits
 above.
+
+`<HalfPlaneShade x1 y1 x2 y2 testX testY />` — shades the side of a line
+containing a given test point, clipped to a bounding box (real SVG clip
+composition — verified correct on both sides of the same line with
+different test points before trusting it). Use the test point the section's
+own reasoning uses (often the origin) so the shading matches the narration.
+
+`wavyCurveD(roots, y, amplitude, xLeft, xRight, aboveOnRight)` — the
+snaking curve for the wavy-curve method (non-linear/rational inequalities),
+alternating above/below a number line at each root; verified to alternate
+correctly and cross exactly at each marked root. Mark each root with
+`IntervalDot` (open/closed per whether it's included), same as any interval
+endpoint. `aboveOnRight` comes from the leading coefficient's sign per the
+method — get this from the actual inequality, don't guess.
+
+`checkD(x, y, size)` — a drawn checkmark stroke (feed to `<Draw/>`), for
+sanity-check stamps in worked examples — safer than the fallback `✓` glyph.
 
 **Complex Numbers (Chapter 4) reuses the trig primitives almost entirely** —
 the Argand plane is `<CartesianAxes>` with "Re"/"Im" labels instead of

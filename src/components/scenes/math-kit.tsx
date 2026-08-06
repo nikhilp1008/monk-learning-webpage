@@ -550,5 +550,131 @@ export function Overline({
   return <Draw on={on} d={lineD(x1, top, x2, top)} stroke={stroke} sw={2} delay={delay} />;
 }
 
+/* ------------------------------------------------------------------ */
+/* half-plane shading (linear inequalities in two variables)           */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Shades the side of the line through (x1,y1)-(x2,y2) that contains
+ * (testX,testY), clipped to a bounding box — for graphing y > mx+c style
+ * inequalities. Real SVG clip composition (a large quadrilateral covering
+ * the correct side, intersected with the box via nested <clipPath>), not a
+ * hand-approximated polygon — pick `testX,testY` as the point the section's
+ * own "test point" argument uses (often the origin) so the shaded side
+ * matches the reasoning on the board.
+ */
+export function HalfPlaneShade({
+  on,
+  delay = 0,
+  x1,
+  y1,
+  x2,
+  y2,
+  testX,
+  testY,
+  boxX = 0,
+  boxY = 0,
+  boxW = 1080,
+  boxH = 620,
+  fill,
+  opacity = 0.28,
+}: {
+  on: boolean;
+  delay?: number;
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+  testX: number;
+  testY: number;
+  boxX?: number;
+  boxY?: number;
+  boxW?: number;
+  boxH?: number;
+  fill: string;
+  opacity?: number;
+}) {
+  const uid = useId().replace(/[:]/g, "");
+  const clipId = `halfplane-clip-${uid}`;
+  const dx = x2 - x1;
+  const dy = y2 - y1;
+  const len = Math.hypot(dx, dy) || 1;
+  const ux = dx / len;
+  const uy = dy / len;
+  const nx = -uy;
+  const ny = ux;
+  const side = (testX - x1) * nx + (testY - y1) * ny;
+  const sign = side >= 0 ? 1 : -1;
+  const EXT = 3000;
+  const p1 = { x: x1 - ux * EXT, y: y1 - uy * EXT };
+  const p2 = { x: x2 + ux * EXT, y: y2 + uy * EXT };
+  const p3 = { x: p2.x + nx * sign * EXT, y: p2.y + ny * sign * EXT };
+  const p4 = { x: p1.x + nx * sign * EXT, y: p1.y + ny * sign * EXT };
+  const polyD = `M ${p1.x} ${p1.y} L ${p2.x} ${p2.y} L ${p3.x} ${p3.y} L ${p4.x} ${p4.y} Z`;
+  return (
+    <Fade on={on} delay={delay}>
+      <defs>
+        <clipPath id={clipId}>
+          <path d={polyD} />
+        </clipPath>
+      </defs>
+      <g clipPath={`url(#${clipId})`}>
+        <rect x={boxX} y={boxY} width={boxW} height={boxH} fill={fill} opacity={opacity} />
+      </g>
+    </Fade>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* wavy-curve method (non-linear/rational inequalities)                 */
+/* ------------------------------------------------------------------ */
+
+/**
+ * The "wavy curve" that snakes through a number line's marked roots,
+ * alternating above/below at each crossing — the standard method for
+ * solving polynomial/rational inequalities. `roots` need not be pre-sorted.
+ * `aboveOnRight` sets the sign of the rightmost region (from the leading
+ * coefficient's sign, per the method) and the rest alternates from there.
+ * Feed the result to <Draw/>; mark each root itself with a plain dot
+ * (open/closed per whether it's included) using IntervalDot, same as any
+ * interval endpoint.
+ */
+export function wavyCurveD(
+  roots: number[],
+  y: number,
+  amplitude: number,
+  xLeft: number,
+  xRight: number,
+  aboveOnRight = true
+): string {
+  const sorted = [...roots].sort((a, b) => a - b);
+  const n = sorted.length;
+  const bounds = [xLeft, ...sorted, xRight];
+  const points: { x: number; y: number }[] = [];
+  for (let region = 0; region <= n; region++) {
+    const flip = (n - region) % 2 === 1;
+    const isAbove = flip ? !aboveOnRight : aboveOnRight;
+    const segLeft = bounds[region];
+    const segRight = bounds[region + 1];
+    const midY = y - (isAbove ? amplitude : -amplitude);
+    if (region === 0) points.push({ x: segLeft, y: midY });
+    points.push({ x: (segLeft + segRight) / 2, y: midY });
+    if (region < n) points.push({ x: sorted[region], y });
+    if (region === n) points.push({ x: segRight, y: midY });
+  }
+  return curveD(points);
+}
+
+/* ------------------------------------------------------------------ */
+/* checkmark (verified / sanity-check stamp)                           */
+/* ------------------------------------------------------------------ */
+
+/** Hand-drawn checkmark — short downstroke then a longer upstroke, same
+ * "draw it, don't rely on a fallback glyph" reasoning as Overline. Common
+ * enough across worked-example/tips sections to be worth a primitive. */
+export function checkD(x: number, y: number, size = 16): string {
+  return `M ${x - size * 0.5} ${y} L ${x - size * 0.15} ${y + size * 0.35} L ${x + size * 0.5} ${y - size * 0.4}`;
+}
+
 /* re-export the palette/base bits maths scenes reach for most */
 export { INK, MUTED } from "./kit";
