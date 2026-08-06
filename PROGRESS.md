@@ -55,3 +55,7 @@ spot check).
   diagram (r=20,half-chord=10) → sin(θ/2)=1/2 → θ=π/3 → s≈20.94cm boxed; Ex6 sector-inversion
   algebra puzzle (2r+s=16, ½r²θ=16 → r=4,θ=2 boxed), JEE-Advanced-pattern guardrail.
   Eye-checked (triangle geometry). PASS.
+- Sec 7 "The pitfalls that quietly cost marks" — 6 numbered red-circle pitfall rows (degrees-
+  in-s=rθ, flipped factor, radian dimensionless [data-bug fixed], DMS base-60, clockwise-
+  negative, calculator mode), red-margin sanity-check closer (1 rad ≈ 57°). SUBTOPIC 1
+  (Angle Measurement and Radians, Sec 1-7) COMPLETE. PASS.
