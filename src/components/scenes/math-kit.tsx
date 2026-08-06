@@ -378,5 +378,136 @@ export function StepFunction({
   );
 }
 
+/* ------------------------------------------------------------------ */
+/* angles + unit circle                                                 */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Point on a circle at standard math angle `theta` (radians, counterclockwise
+ * from positive x-axis) — flips the y term so increasing theta sweeps
+ * counterclockwise on screen despite SVG's y-down coordinate system.
+ */
+export function pointOnCircle(
+  cx: number,
+  cy: number,
+  r: number,
+  theta: number
+): { x: number; y: number } {
+  return { x: cx + r * Math.cos(theta), y: cy - r * Math.sin(theta) };
+}
+
+/**
+ * Arc marking the angle swept from theta1 to theta2 (radians, standard math
+ * convention — see pointOnCircle) at radius r from (cx,cy). Feed to <Draw/>.
+ */
+export function angleArcD(
+  cx: number,
+  cy: number,
+  r: number,
+  theta1: number,
+  theta2: number
+): string {
+  const p1 = pointOnCircle(cx, cy, r, theta1);
+  const p2 = pointOnCircle(cx, cy, r, theta2);
+  const large = Math.abs(theta2 - theta1) > Math.PI ? 1 : 0;
+  const sweep = theta2 > theta1 ? 0 : 1; // y-flip inverts the sweep-flag sense
+  return `M ${p1.x} ${p1.y} A ${r} ${r} 0 ${large} ${sweep} ${p2.x} ${p2.y}`;
+}
+
+/**
+ * Standard unit-circle diagram: circle, faint x/y axes through the center, a
+ * point at angle `theta`, the radius line to it, and (optional) drop
+ * perpendiculars to both axes — the classic "cos θ, sin θ as coordinates"
+ * picture. Drop lines render as thin MUTED strokes rather than a true dashed
+ * pattern (Draw's dasharray slot is already used for the reveal animation).
+ * Stage the circle/axes on one beat and the radius+point on a later one if
+ * the narration wants that; pass matching `on`/`delay` for both if not.
+ */
+export function UnitCircleDiagram({
+  on,
+  delay = 0,
+  cx,
+  cy,
+  r = 120,
+  theta,
+  stroke = INK,
+  radiusColor = INK,
+  showDrops = true,
+  axisOverhang = 20,
+}: {
+  on: boolean;
+  delay?: number;
+  cx: number;
+  cy: number;
+  r?: number;
+  theta: number;
+  stroke?: string;
+  radiusColor?: string;
+  showDrops?: boolean;
+  axisOverhang?: number;
+}) {
+  const p = pointOnCircle(cx, cy, r, theta);
+  return (
+    <>
+      <Draw on={on} d={circleD(cx, cy, r)} stroke={stroke} sw={2} delay={delay} />
+      <Draw
+        on={on}
+        d={lineD(cx - r - axisOverhang, cy, cx + r + axisOverhang, cy)}
+        stroke={MUTED}
+        sw={1.4}
+        delay={delay}
+      />
+      <Draw
+        on={on}
+        d={lineD(cx, cy + r + axisOverhang, cx, cy - r - axisOverhang)}
+        stroke={MUTED}
+        sw={1.4}
+        delay={delay}
+      />
+      <Draw on={on} d={lineD(cx, cy, p.x, p.y)} stroke={radiusColor} sw={2.4} delay={delay + 0.3} />
+      {showDrops && (
+        <>
+          <Draw on={on} d={lineD(p.x, p.y, p.x, cy)} stroke={MUTED} sw={1.4} delay={delay + 0.6} />
+          <Draw on={on} d={lineD(p.x, p.y, cx, p.y)} stroke={MUTED} sw={1.4} delay={delay + 0.6} />
+        </>
+      )}
+      <Fade on={on} delay={delay + 0.6}>
+        <circle cx={p.x} cy={p.y} r={4} fill={radiusColor} />
+      </Fade>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* periodic wave graphs (sin/cos)                                       */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Samples fn (default Math.sin) across [x0,x1] and threads a smooth curve
+ * through the samples via curveD — for graphing sin/cos-family functions.
+ * pxPerRadian sets the horizontal scale; amplitude/phaseShift are in board
+ * pixels/radians respectively. NOT for tan/cot/sec/csc — those have
+ * asymptotes a single continuous curve would wrongly bridge; draw those
+ * branch by branch with lineD/curveD per continuous piece instead.
+ */
+export function waveD(
+  x0: number,
+  x1: number,
+  y0: number,
+  amplitude: number,
+  pxPerRadian: number,
+  phaseShift = 0,
+  fn: (t: number) => number = Math.sin,
+  steps = 48
+): string {
+  const points: { x: number; y: number }[] = [];
+  for (let i = 0; i <= steps; i++) {
+    const x = x0 + ((x1 - x0) * i) / steps;
+    const t = (x - x0) / pxPerRadian - phaseShift;
+    points.push({ x, y: y0 - amplitude * fn(t) });
+  }
+  return curveD(points);
+}
+
 /* re-export the palette/base bits maths scenes reach for most */
 export { INK, MUTED } from "./kit";

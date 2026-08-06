@@ -181,6 +181,30 @@ screenshot). Rule of thumb:
   legible-but-mismatched category as `∈ ∪ ∩` from Chapter 1) — safe to use,
   no plain-glyph substitute exists for floor brackets or Greek letters the
   way there was for blackboard-bold, so accept the fallback there.
+- **Third glyph audit (Chapter 3, Trigonometry)** — `≈` and `°` are native to
+  both fonts. `θ ω ∓` fall back (same accept-it category as `α` — Greek
+  letters have no plain-letter substitute, unlike blackboard-bold). `θ` is
+  the chapter's single most-used symbol; use it freely despite the fallback,
+  there's no real alternative.
+- **`\begin{gathered} ... \\ ... \end{gathered}`** (seen throughout Chapter 3's
+  formula sections) is simpler than it looks — it's just multiple centered
+  lines stacked, NOT a braced system. Drop `\begin{gathered}`/`\end{gathered}`,
+  treat each `\\`-separated chunk as its own line/beat (or its own row in a
+  formula card) — no new primitive needed, this is standard multi-line
+  `Chip`/`T` layout. (A true `\begin{cases}` piecewise brace hasn't appeared
+  yet — if one does, that's the point to consider a hand-drawn brace
+  primitive, not before.)
+- **`\xrightarrow{label}`** (an arrow with a condition above it, e.g. "square"
+  over a squaring step) → base kit's `arrowD` plus a `T` label positioned
+  above it, same idea as chemistry's `ReactionArrow` — don't build a new
+  primitive for what appeared once.
+- **Known data bug, Chapter 3 specifically**: 13 `board_content` strings
+  contain a double-escaped em/en dash — the literal six-character sequence
+  backslash-u-2-0-1-4 (or -2013), not an actual dash character. Copying it
+  verbatim would put that raw escape text on the board. Read it as an em/en
+  dash and just write a plain hyphen (`-`) instead, consistent with the
+  existing Chapter 1 convention for set difference. Worth a quick scan for
+  the same bug in later chapters' `board_content` too.
 - Hinglish board text stays **Latin script** (house style, inherited from
   physics/chem) — and all of the above symbols are language-agnostic, so a
   formula is byte-identical between the English and Hinglish boards; only the
@@ -211,7 +235,18 @@ arrowheads + integer-spaced ticks — the default frame for any function graph;
 draw the function's own curve on a later beat than the axes), `<StepFunction
 steps />` (a list of `{x1,x2,y,leftOpen,rightOpen}` flat segments with jump-
 discontinuity dots — covers signum, greatest-integer/floor, or any piecewise
-function with the same primitive).
+function with the same primitive), `<UnitCircleDiagram cx cy r theta />` (the
+circle + faint axes + radius line to the point at angle theta + drop
+perpendiculars showing cos θ/sin θ as coordinates — `theta` in radians,
+standard math convention, verified counterclockwise on screen).
+
+Path generators for trig: `pointOnCircle(cx,cy,r,theta)` (returns `{x,y}` —
+use this to place angle labels, not hand computation), `angleArcD(cx,cy,r,
+theta1,theta2)` (the arc marking a swept angle — verified sweep direction),
+`waveD(x0,x1,y0,amplitude,pxPerRadian,phaseShift,fn)` (samples `fn` — default
+`Math.sin`, pass `Math.cos` for cosine — and threads it through `curveD`; NOT
+for tan/cot/sec/csc, which have asymptotes a single curve would wrongly
+bridge — draw those branch by branch instead).
 
 All obey the base engine rules: gate every element on its beat (`on={beat >= k}`),
 board blank at t=0 (title always-on only), stagger with `dl(k, d)`, `dim`
