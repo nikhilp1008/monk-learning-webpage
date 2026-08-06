@@ -15,6 +15,7 @@ interface SessionViewProps {
   phase: "teaching" | "awaiting_answer" | "wrapup" | "complete";
   isStreaming: boolean;
   voiceState?: VoiceClientState;
+  subtopicOptions?: string[];
   onSendTurn: (utterance: string) => void;
   onEndSession: () => void;
   onToggleMute?: () => void;
@@ -33,6 +34,7 @@ export function SessionView({
   phase,
   isStreaming,
   voiceState,
+  subtopicOptions,
   onSendTurn,
   onEndSession,
   onToggleMute,
@@ -139,7 +141,7 @@ export function SessionView({
 
           {/* Board Content (B2 & B6: Line-by-line KaTeX & wrapped prose) */}
           <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 space-y-3.5 max-w-full">
-            {boardLatex ? (
+            {boardLatex && (
               <div className="py-1 max-w-full overflow-x-hidden">
                 <KaTeXRenderer
                   latex={boardLatex}
@@ -147,57 +149,50 @@ export function SessionView({
                   className="text-ink text-sm sm:text-base font-semibold leading-relaxed"
                 />
               </div>
-            ) : (
-              <div className="h-20 flex items-center justify-center text-[#9C988C] text-xs font-script font-bold">
-                {teacher} is preparing the board…
-              </div>
-            )}
-
-            {isDronaSpeaking && (
-              <div className="flex items-center gap-2 mt-2">
-                <span className="w-2.25 h-3.75 bg-[#EEA31F] rounded-sm animate-pulse flex-none" />
-                <span className="font-script font-bold text-[0.84rem] text-[#9C988C]">
-                  {teacher} is writing…
-                </span>
-              </div>
             )}
             <div ref={transcriptEndRef} />
           </div>
         </div>
 
-        {/* ─── Ask Sheet Overlay (Slide-in during awaiting_answer) ─── */}
+        {/* ─── Checkpoint Quiz Card Overlay (Directive 7: Interactive Chips on awaiting_answer) ─── */}
         {phase === "awaiting_answer" && (
-          <div className="absolute top-0 right-0 bottom-0 w-[min(380px,90%)] z-10 flex flex-col bg-white border-[1.5px] border-[#1C1A16] rounded-[16px] p-4 sm:p-5 shadow-[-28px_0_48px_-34px_rgba(28,26,22,0.5)] overflow-y-auto animate-ml-rise">
-            <div className="flex items-center gap-2 mb-2.5 flex-none">
-              <span className="w-2 h-2 rounded-full bg-[#EEA31F] flex-none" />
+          <div className="absolute top-0 right-0 bottom-0 w-[min(400px,92%)] z-10 flex flex-col bg-white border-[1.5px] border-[#1C1A16] rounded-[16px] p-4 sm:p-5 shadow-[-28px_0_48px_-34px_rgba(28,26,22,0.5)] overflow-y-auto animate-ml-rise">
+            <div className="flex items-center gap-2 mb-2 flex-none">
+              <span className="w-2 h-2 rounded-full bg-[#EEA31F] flex-none animate-pulse" />
               <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-[#9A6A12]">
-                {teacher} asks you
+                Checkpoint Question
               </span>
             </div>
-            <p className="text-[0.96rem] leading-snug font-semibold mb-3 flex-none text-ink">
-              Check point question — what is your answer?
+            <p className="text-[0.96rem] leading-snug font-semibold mb-3.5 flex-none text-ink">
+              Select an option below or speak / type your answer:
             </p>
 
-            <form onSubmit={handleSubmit} className="flex gap-2 mt-2 flex-none">
-              <input
-                value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
-                placeholder="Type or speak your answer…"
-                className="flex-1 min-w-0 bg-white border-[1.4px] border-[rgba(28,26,22,0.14)] rounded-full py-2 px-3.5 text-[0.84rem] text-ink outline-none focus:border-[#EEA31F]"
-              />
-              <button
-                type="submit"
-                disabled={!inputText.trim() || isStreaming}
-                className="w-9 h-9 flex-none rounded-full bg-[#1C1A16] grid place-items-center cursor-pointer disabled:opacity-50 hover:translate-y-[-1px] transition-transform"
-              >
-                <svg viewBox="0 0 16 16" width={14} height={14} fill="none">
-                  <path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="#FCFAF4" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </form>
+            {/* Option Chips from subtopic_options */}
+            <div className="space-y-2.5 flex-none mb-3">
+              {(subtopicOptions && subtopicOptions.length > 0 ? subtopicOptions : [
+                "Option A: System expands into surroundings",
+                "Option B: Energy exchange occurs without matter transfer",
+                "Option C: Both matter and energy remain conserved"
+              ]).map((optionText, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => onSendTurn(optionText)}
+                  className="w-full text-left p-3 rounded-xl border border-[rgba(28,26,22,0.12)] bg-[#FCFAF4] hover:bg-[#F4EFE3] hover:border-[#1C1A16] transition-all cursor-pointer group"
+                >
+                  <div className="flex items-start gap-2.5">
+                    <span className="w-5 h-5 rounded-full bg-white border border-[rgba(28,26,22,0.2)] text-[0.72rem] font-bold text-[#1C1A16] grid place-items-center flex-none group-hover:bg-[#1C1A16] group-hover:text-white transition-colors">
+                      {String.fromCharCode(65 + idx)}
+                    </span>
+                    <div className="text-[0.86rem] font-semibold text-ink leading-snug flex-1">
+                      <KaTeXRenderer latex={optionText} displayMode={false} />
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
 
             <span className="flex-1" />
-            <p className="font-script font-bold text-[0.86rem] text-[#9C988C] text-center mt-3 flex-none">
+            <p className="font-script font-bold text-[0.82rem] text-[#9C988C] text-center mt-2 flex-none">
               guessing is allowed — that&apos;s how we learn
             </p>
           </div>
@@ -217,43 +212,46 @@ export function SessionView({
         </span>
       </div>
 
-      {/* ─── Command Dock (B4 & B5: Controls Always Visible & Wired) ─── */}
-      <div className="flex items-center justify-between gap-2 sm:gap-3.5 bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] py-2 px-3 sm:px-4 flex-none shadow-[0_10px_24px_-20px_rgba(28,26,22,0.4)] max-w-full overflow-hidden">
-        <div className="flex items-center gap-2 sm:gap-3 flex-none min-w-0">
-          <span className="w-10 h-10 sm:w-[46px] sm:h-[46px] flex-none rounded-[12px] bg-[#F4EFE3] border border-[rgba(28,26,22,0.08)] grid place-items-center">
-            <svg viewBox="0 0 120 120" width={24} height={24} fill="none" className="animate-pulse">
+      {/* ─── Simplified Command Dock (Directive 5 & 6) ─── */}
+      <div className="flex items-center justify-between gap-2 sm:gap-3 bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] py-2 px-3 sm:px-4 flex-none shadow-[0_10px_24px_-20px_rgba(28,26,22,0.4)] max-w-full overflow-hidden">
+        {/* Status Indicator */}
+        <div className="flex items-center gap-2 sm:gap-2.5 flex-none min-w-0">
+          <span className="w-9 h-9 sm:w-10 sm:h-10 flex-none rounded-[12px] bg-[#F4EFE3] border border-[rgba(28,26,22,0.08)] grid place-items-center">
+            <svg viewBox="0 0 120 120" width={22} height={22} fill="none" className="animate-pulse">
               <circle cx={60} cy={60} r={36} stroke="#1C1A16" strokeWidth={11} strokeLinecap="round" strokeDasharray="52 23.4" transform="rotate(-90 60 60)" />
               <circle cx={60} cy={60} r={19} stroke="#1C1A16" strokeWidth={9} strokeLinecap="round" strokeDasharray="21.8 18" transform="rotate(-30 60 60)" />
               <circle cx={60} cy={60} r={6} fill="#EEA31F" />
             </svg>
           </span>
-          <span className="min-w-0">
-            <span className="block font-extrabold text-[0.54rem] tracking-[0.16em] uppercase text-[#9C988C]">
-              {teacher} is
-            </span>
-            <span className="block font-extrabold text-[0.92rem] sm:text-[1.04rem] tracking-[-0.01em] text-[#1C1A16] leading-tight whitespace-nowrap">
+          <span className="min-w-0 hidden md:block">
+            <span className="block font-extrabold text-[0.88rem] tracking-[-0.01em] text-[#1C1A16] leading-tight truncate">
               {statusLabel}
             </span>
-            <span className="block font-script font-bold text-[0.76rem] text-[#1C9B57] truncate max-w-[140px] sm:max-w-[200px]">
-              {isMuted ? "Mic muted" : isPaused ? "Class paused" : isDronaSpeaking ? "Speaking..." : voiceState?.isListening ? "Listening — Mic active" : "Hold mic button to speak"}
-            </span>
-          </span>
-
-          {/* Dynamic Audio Wave Bars */}
-          <span className="hidden sm:flex items-end gap-[2.5px] h-4 flex-none ml-1">
-            {[12, 18, 24, 14, 20, 16, 22, 10].map((h, i) => (
-              <i
-                key={i}
-                className={`w-[2.5px] bg-[#EEA31F] rounded-full transition-all ${isDronaSpeaking || voiceState?.isListening ? "animate-pulse" : "opacity-40"}`}
-                style={{ height: isDronaSpeaking || voiceState?.isListening ? `${h}px` : "6px" }}
-              />
-            ))}
           </span>
         </div>
 
-        {/* Command Dock Action Buttons (Push-To-Talk Mic, Mute, Interrupt, Pause/Resume) */}
-        <div className="flex items-center gap-1.5 sm:gap-2.5 flex-none">
-          {/* Push-to-Talk Mic Button with Pointer Capture & Touch Support */}
+        {/* Text Input for Answers (Directive 6: Always available) */}
+        <form onSubmit={handleSubmit} className="flex items-center gap-2 flex-1 min-w-0 mx-1">
+          <input
+            value={inputText}
+            onChange={(e) => setInputText(e.target.value)}
+            placeholder={phase === "awaiting_answer" ? "Your answer…" : "Ask Drona something…"}
+            className="w-full bg-[#FCFAF4] border border-[rgba(28,26,22,0.14)] rounded-full py-1.5 px-3.5 text-[0.82rem] text-ink outline-none focus:border-[#EEA31F] focus:bg-white transition-colors"
+          />
+          <button
+            type="submit"
+            disabled={!inputText.trim() || isStreaming}
+            className="w-8 h-8 flex-none rounded-full bg-[#1C1A16] grid place-items-center cursor-pointer disabled:opacity-40 hover:bg-[#2C2A26] transition-colors"
+          >
+            <svg viewBox="0 0 16 16" width={13} height={13} fill="none">
+              <path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="#FCFAF4" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </form>
+
+        {/* Controls: Push-To-Talk Mic & Pause/Resume (Directive 5) */}
+        <div className="flex items-center gap-1.5 sm:gap-2 flex-none">
+          {/* Hold to Speak Mic Button (Primary PTT control) */}
           <button
             onPointerDown={(e) => {
               try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
@@ -271,12 +269,8 @@ export function SessionView({
               try { if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
               onStopPushToTalk?.();
             }}
-            onMouseDown={onStartPushToTalk}
-            onMouseUp={onStopPushToTalk}
-            onTouchStart={onStartPushToTalk}
-            onTouchEnd={onStopPushToTalk}
-            title="Hold to speak to Drona"
-            className={`inline-flex items-center gap-1 font-bold text-[0.74rem] sm:text-xs py-1.5 sm:py-2 px-2.5 sm:px-3.5 rounded-full border transition-all select-none cursor-pointer ${
+            title="Hold to speak (Interrupts Drona if speaking)"
+            className={`inline-flex items-center gap-1 font-bold text-[0.74rem] sm:text-xs py-1.5 px-3 rounded-full border transition-all select-none cursor-pointer ${
               voiceState?.isListening
                 ? "bg-[#1C9B57] text-white border-[#1C9B57] scale-105 shadow-[0_0_12px_rgba(28,155,87,0.6)] animate-pulse"
                 : "bg-[#1C1A16] text-white border-[#1C1A16] hover:bg-[#2C2A26]"
@@ -287,37 +281,6 @@ export function SessionView({
               <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
             </svg>
             {voiceState?.isListening ? "Listening..." : "Hold to speak"}
-          </button>
-
-          {/* Mute Button */}
-          <button
-            onClick={onToggleMute}
-            title={isMuted ? "Unmute microphone" : "Mute microphone"}
-            className={`px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-full border text-[0.74rem] sm:text-xs font-bold transition-all cursor-pointer ${
-              isMuted
-                ? "bg-[#DD4433] text-white border-[#DD4433]"
-                : "bg-white text-[#1C1A16] border-[rgba(28,26,22,0.16)] hover:border-[#1C1A16]"
-            }`}
-          >
-            {isMuted ? "Unmute" : "Mute"}
-          </button>
-
-          {/* Interrupt / Barge-In Button */}
-          <button
-            onClick={onInterrupt}
-            disabled={!isDronaSpeaking}
-            title={isDronaSpeaking ? "Tap to interrupt Drona" : "Drona is explaining — tap to interrupt"}
-            className={`inline-flex items-center gap-1 font-bold text-[0.74rem] sm:text-xs py-1.5 sm:py-2 px-2.5 sm:px-4 rounded-full border transition-all ${
-              isDronaSpeaking
-                ? "bg-[#EEA31F] text-[#1C1A16] border-[#EEA31F] cursor-pointer hover:translate-y-[-1px]"
-                : "bg-[#F4EFE3] text-[#9C988C] border-transparent opacity-60 cursor-not-allowed"
-            }`}
-          >
-            <svg viewBox="0 0 24 24" width={13} height={13} fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4Z" />
-              <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
-            </svg>
-            {isDronaSpeaking ? "Interrupt" : "Pause"}
           </button>
 
           {/* Pause / Resume Button */}

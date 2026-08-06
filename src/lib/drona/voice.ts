@@ -30,9 +30,11 @@ export class DronaVoiceClient {
   private micStream: MediaStream | null = null;
   private scriptProcessor: ScriptProcessorNode | null = null;
 
-  // Web Audio Playback Context & Queue
+  // Web Audio Playback Context & Capped Queue
   private playbackCtx: AudioContext | null = null;
   private nextAudioStartTime: number = 0;
+  private activeSources: AudioBufferSourceNode[] = [];
+  private pendingAudioBuffers: AudioBuffer[] = [];
 
   // Telemetry & Control Flags
   private isMuted: boolean = false;
@@ -137,6 +139,61 @@ export class DronaVoiceClient {
     }
   }
 
+  public flushAudioQueue(): void {
+    console.log("[AUDIO FLUSH] Flushing audio playback queue and stopping scheduled sources");
+    for (const source of this.activeSources) {
+      try {
+        source.stop();
+        source.disconnect();
+      } catch (e) {}
+    }
+    this.activeSources = [];
+    this.pendingAudioBuffers = [];
+    if (this.playbackCtx) {
+      this.nextAudioStartTime = this.playbackCtx.currentTime;
+    } else {
+      this.nextAudioStartTime = 0;
+    }
+  }
+
+  private scheduleAudioBuffer(buffer: AudioBuffer): void {
+    if (!this.playbackCtx) return;
+
+    const source = this.playbackCtx.createBufferSource();
+    source.buffer = buffer;
+    source.connect(this.playbackCtx.destination);
+
+    const currentTime = this.playbackCtx.currentTime;
+    const startTime = Math.max(currentTime, this.nextAudioStartTime);
+    const leadTime = startTime - currentTime;
+
+    console.log(`[AUDIO SCHEDULE] currentTime=${currentTime.toFixed(2)}s, startTime=${startTime.toFixed(2)}s (leadTime=${leadTime.toFixed(2)}s)`);
+
+    source.onended = () => {
+      const idx = this.activeSources.indexOf(source);
+      if (idx !== -1) this.activeSources.splice(idx, 1);
+      this.drainAudioBufferQueue();
+    };
+
+    this.activeSources.push(source);
+    source.start(startTime);
+    this.nextAudioStartTime = startTime + buffer.duration;
+  }
+
+  private drainAudioBufferQueue(): void {
+    if (!this.playbackCtx || this.pendingAudioBuffers.length === 0) return;
+    const currentTime = this.playbackCtx.currentTime;
+    const leadTime = this.nextAudioStartTime - currentTime;
+
+    // Capped at 2.0s lookahead ceiling to keep speech perfectly synced with board/captions
+    if (leadTime < 2.0) {
+      const nextBuffer = this.pendingAudioBuffers.shift();
+      if (nextBuffer) {
+        this.scheduleAudioBuffer(nextBuffer);
+      }
+    }
+  }
+
   public unlockAudio(): void {
     if (typeof window === "undefined") return;
     const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
@@ -159,8 +216,6 @@ export class DronaVoiceClient {
       }
 
       const binary = atob(base64Pcm);
-      console.log("base64 decode length:", binary.length);
-
       const bytes = new Uint8Array(binary.length);
       for (let i = 0; i < binary.length; i++) {
         bytes[i] = binary.charCodeAt(i);
@@ -171,16 +226,7 @@ export class DronaVoiceClient {
         this.playbackCtx = new AudioCtx({ sampleRate: 24000 });
       }
 
-      console.log("AudioContext state:", this.playbackCtx.state, "sampleRate:", this.playbackCtx.sampleRate);
-
-      if (this.playbackCtx.state === "suspended") {
-        console.warn("AudioContext is suspended by browser autoplay policy! Resuming...");
-        this.playbackCtx.resume();
-      }
-
       const int16 = new Int16Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 2);
-      console.log("Int16Array length:", int16.length);
-
       const float32 = new Float32Array(int16.length);
       for (let i = 0; i < int16.length; i++) {
         float32[i] = int16[i] / 32768.0;
@@ -188,16 +234,17 @@ export class DronaVoiceClient {
 
       const buffer = this.playbackCtx.createBuffer(1, float32.length, 24000);
       buffer.getChannelData(0).set(float32);
-      console.log("AudioBuffer duration:", buffer.duration);
 
-      const source = this.playbackCtx.createBufferSource();
-      source.buffer = buffer;
-      source.connect(this.playbackCtx.destination);
+      const currentTime = this.playbackCtx.currentTime;
+      const leadTime = this.nextAudioStartTime - currentTime;
 
-      const startTime = Math.max(this.playbackCtx.currentTime, this.nextAudioStartTime);
-      source.start(startTime);
-      console.log("source.start() called at startTime:", startTime);
-      this.nextAudioStartTime = startTime + buffer.duration;
+      // Capped lookahead (Max 2.0s ahead of speech playback)
+      if (leadTime > 2.0) {
+        console.log(`[AUDIO QUEUE BUFFERED] leadTime=${leadTime.toFixed(2)}s > 2.0s limit. Queuing chunk (${buffer.duration.toFixed(2)}s)`);
+        this.pendingAudioBuffers.push(buffer);
+      } else {
+        this.scheduleAudioBuffer(buffer);
+      }
     } catch (err) {
       console.error("Audio playback error:", err);
     }
