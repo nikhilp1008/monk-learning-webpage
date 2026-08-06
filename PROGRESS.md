@@ -59,8 +59,14 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - **Sec 25** — Example 1: x=1/x=-1 added to isolate C0+C2+...=2^(n-1), boxed. Example 2: index-weighted sum → n=10 → 5120, boxed. Math verified. PASS.
 - **Sec 26** — Example 3: reciprocal-weight sum, n=5 → 21/2, boxed. Example 4: (1+x)^n(1+x)^n symmetry proof of ΣCr²=(2n)Cn, n=4 → 70=8C4, boxed. Math verified. PASS.
 - **Sec 27** — subtopic 4 closer, `tips`: 2×3 grid (4 red traps, 2 green tips; fixed a text-overflowing-its-box cosmetic issue with a two-line layout). PASS. **Subtopic 4 (secs 22-27) complete.**
+- **Sec 28** [flagged] — opens subtopic 5: boxed generalized falling-factorial nCr formula, number-line diagram with open dots at ±1 shading the convergence region, two red-margin guardrails. PASS.
+- **Sec 29** [flagged] — dense `formulas` reference: boxed master series (1+x)^n, general term, the "standard four" ((1±x)^-1, (1±x)^-2), general (1-x)^-p, boxed small-|x| approximation. **Caught and fixed a real superscript-letter violation** (⁻ᵖ) via a chapter-wide glyph audit (`grep -nP '[\x{207F}\x{2090}-\x{209C}\x{1D2C}-\x{1D6A}]'`) before commit — worth re-running this audit periodically.
+- **Sec 30** [flagged] — three labeled MOVE blocks (factor/identify/approximate), two boxed formulas, red-margin Taylor's-theorem justification. PASS.
+- **Sec 31** [flagged] — Example 1: (1+x)^-2 first four terms boxed. Example 2: coeff of x^4 in (1-2x)^-3 via general series, p=3/y=2x → 240, boxed. Math verified. PASS.
+- **Sec 32** [flagged] — Example 3: (255)^(1/4) estimated via first-order approx → 3.9961, boxed. Example 4: match a numeric series to n(n-1)/2!y² → n=-3/2, y=-1/2 → sum=2√2, boxed. Advanced JEE-level derivation, math hand-verified. PASS.
+- **Sec 33** [flagged] — subtopic 5 closer, `tips`: 2×3 grid (4 red traps, 2 green tips). PASS. **Subtopic 5 (secs 28-33) complete — the flagged any-index run is done.**
 
-Pushed to origin through Sec 27. Starting subtopic 5 (Any Index & Approximations, secs 28-33) — flagged for extra eye-scrutiny per task brief.
+Pushed to origin through Sec 33. Starting subtopic 6 (Applications: Divisibility/Remainders/Last Digits, secs 34-39).
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3036 > /tmp/dev-math7.log 2>&1 &`, confirmed READY.
