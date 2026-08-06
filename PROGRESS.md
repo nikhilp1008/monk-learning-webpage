@@ -104,3 +104,8 @@ spot check).
 - Sec 18 "Long allied-angle products that collapse" — three columns: Ex5 four allied-angle
   reductions collapsing to -1; Ex6 cos(270°+θ)=sinθ proof (QIV, n=3 odd) boxed green; Ex7
   tan²θ/-tan²θ=-1; red-margin closer (products almost always collapse to ±1). PASS.
+- Sec 19 "Pitfalls in reduction and value recall" — 5 numbered red-circle pitfall rows (wrong
+  sign from whole-angle quadrant, co-function switch at 90/270, misremembered standard value,
+  even/odd slip, reduce-large-angles-first), red-margin two-routes-cross-check closer
+  (135°=90+45=180-45). SUBTOPIC 3 (Standard Values, Even-Odd Nature and Allied Angles,
+  Sec 15-19) COMPLETE. PASS.
