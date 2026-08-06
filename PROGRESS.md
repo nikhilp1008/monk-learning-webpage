@@ -77,3 +77,7 @@ spot check).
   cos²x=16/25 → sign-decision guardrail (QII⇒cos negative) → all five values in two boxed rows;
   Ex2 quadrantal evaluation boxed to -2; common-mistake (+4/5 without checking quadrant)
   guardrail. PASS.
+- Sec 12 "Reduce first, then read the sign" — Ex3 cos1170°: reduce to 90° → boxed answer 0,
+  guessing-a-sign-because-its-big trap guardrail; Ex4 cotθ=-4/3,QII: sign facts + small 3-4-5
+  reference-triangle diagram → cosθ=-4/5,sinθ=+3/5 → expression boxed to -17/48,
+  magnitude-then-sign discipline guardrail. PASS.
