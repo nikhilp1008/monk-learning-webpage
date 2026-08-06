@@ -52,3 +52,5 @@ clean.
 ## Done
 - Sec 1 — Multiplication Principle (thali counter 4×3×2=24, branching tree with abbreviated
   branches, "AND → multiply" guardrail, 6-char password 2bn+ punchline). VERDICT PASS both langs.
+- Sec 2 — Addition Principle: AND vs OR (separate-piles 4+2=6, AND/OR comparison table with
+  fan-icon vs separate-dots icon, VennShade double-counting warning). VERDICT PASS both langs.

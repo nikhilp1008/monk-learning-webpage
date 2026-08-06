@@ -3692,5 +3692,8 @@ REGISTRY[`${C11CH08}:52`] = C11Ch08Sec52;
 // ---- Class 11 Math · Chapter 6 "Permutations and Combinations" ----
 import M11Ch06Sec1 from "./M11Ch06Sec1";
 
+import M11Ch06Sec2 from "./M11Ch06Sec2";
+
 const M11CH06 = "e8c7f4cb-b1a3-5c5e-99d7-4341c4618bb8";
 REGISTRY[`${M11CH06}:1`] = M11Ch06Sec1;
+REGISTRY[`${M11CH06}:2`] = M11Ch06Sec2;
