@@ -251,3 +251,18 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       x+1>0 ⇒ x>-1, boxed x∈(-1,∞), closing number line with an open (RED)
       dot at -1 and a shaded ray to +∞, x=-1-undefined guardrail.
       VERDICT PASS both langs.
+- [x] Sec 40 (worked ex, JEE Adv) — the hardest wavy curve in the chapter:
+      (x+3)(x-1)²(x-4)/(x+2)≥0. Act 1 (4 critical-point chips incl. denom
+      root in red, anchor "+ far right", 4-line walk-left trace) erased at
+      beat 4 → Act 2: sign-region formula (−,+,−,−,+, hand-verified against
+      the walk), need-≥0 text, guardrail (include -3/4, exclude -2, keep
+      isolated {1}), boxed x∈[-3,-2)∪{1}∪[4,∞), hand-built wavy curve via
+      curveD with critical points spaced EQUALLY (not to true scale — the
+      standard wavy-curve teaching convention, matches the JSON's own
+      reference diagram) and a genuine tangent bounce at x=1 achieved by
+      giving curveD symmetric equal-y neighbor points either side of the
+      touch (guarantees zero slope there by construction, not eyeballed).
+      Open (RED) dot at the excluded denominator root -2, filled (GREEN)
+      dots at the three included points. Eye-verified all 5 sign labels
+      align with their regions and the touch reads as bounce-not-cross.
+      VERDICT PASS both langs.
