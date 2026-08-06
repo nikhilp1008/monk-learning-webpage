@@ -78,8 +78,19 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - **Sec 43** — Example 1: distinct terms in (a+b+c)^12 -> 14C2=91, boxed. Example 2: coeff of x^2y^3z^4 in (x+y+z)^9 -> exponent-sum check -> 9!/(2!3!4!)=1260, boxed. Math verified. PASS.
 - **Sec 44** — Example 3: coeff of x^4 in (1+x+x^2)^3 via two case-solutions -> 6, boxed, red-margin full-expansion cross-check. Example 4: geometric-series bridge (1-x)^-3 -> [x^7] -> 9C2=36, boxed, agrees with stars-and-bars. Math hand-verified with a full manual expansion check. PASS.
 - **Sec 45** — subtopic 7 closer, `tips`: 2×3 grid (4 red traps, 2 green tips). PASS. **Subtopic 7 (secs 40-45) complete.**
+- **Sec 46** — `formula_recap`: 2×4 grid of boxed formula cards covering all 7 subtopics in teaching order, plus a wide red "backbone" card (symmetry + Pascal's rule). PASS.
+- **Sec 47** — `cheat_sheet`, **FINAL section of the chapter**: color-coded 2×4 grid (red=rule/guardrail, amber=formula) of grab-and-go essentials across every subtopic, closing with a wide red "four mantras" banner (raise the whole bracket / solve for r first / read the weights pick the tool / divisor inside the bracket) as the last beat of the entire chapter. PASS. **Subtopic 8 (secs 46-47) complete — CHAPTER COMPLETE, 47/47.**
 
-Pushed to origin through Sec 45. 2 sections remain — 46-47, the chapter recap/cheat-sheet (subtopic 8), then the chapter is done.
+## Chapter complete — final status
+All 47 sections built, registered, type-checked (0 new tsc errors — only the 4 pre-existing/unrelated ones in `src/app/learn/page.tsx` remain), verified via `verify-scene.mjs` (VERDICT PASS, both languages, every section), and eye-checked via FORCE_SHOTS screenshots. All worked-example math hand-verified against the actual arithmetic (not just transcribed). Pushed to origin through Sec 47 — `git push origin premium-board-math7` is up to date with local history.
+
+Recurring issues found and fixed along the way (see notation/style decisions above for the general rules extracted from each):
+- Off-by-one beat-index bug (Sec 6) — now a mandatory pre-write checklist item.
+- Superscript-letter glyph violations (Sec 14 assumed one was a bug, wasn't; Sec 29 and Sec 38 had real ones) — fixed by a repo-wide regex audit, safe to re-run: `grep -nP '[\x{207F}\x{2090}-\x{209C}\x{1D2C}-\x{1D6A}]' src/components/scenes/M11Ch07Sec*.tsx` (should return nothing).
+- Two-line same-color text stacks need ≥40px baseline spacing, not ~20px — hit 3 times (Sec 16, 19, 47) before it became reflexive.
+- Text crowding its own callout-box edge (cosmetic, not gated by the verifier) — fixed in Sec 27 and 39 by shortening text or splitting to two lines.
+
+Nothing outstanding. No further action needed unless new content is added to this chapter.
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3036 > /tmp/dev-math7.log 2>&1 &`, confirmed READY.
