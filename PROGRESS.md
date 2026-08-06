@@ -36,3 +36,8 @@ spot check).
   words column, hand-drawn radian diagram (circle, radii OA/OB, red rim-arc AB = radius, amber
   angle arc, "1 rad" label), 57.3° chip, pure-number formula card, 2π full-turn chip, sign
   convention guardrail. Eye-checked (geometry). PASS.
+- Sec 2 "The cornerstone definition and the master conversion" — mini sector diagram (r,s,θ)
+  grounding θ=s/r built term by term, dimensionless explain line, π radian=180° amber hero,
+  two conversion-factor lines, red-margin benchmark note, 6-chip standard-angle table, bare-
+  number guardrail. Notebook-page top-to-bottom layout (deviates from band map — deliberate,
+  noted in header). Data-bug dash fixed (seq3). PASS.
