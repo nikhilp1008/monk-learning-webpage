@@ -676,5 +676,55 @@ export function checkD(x: number, y: number, size = 16): string {
   return `M ${x - size * 0.5} ${y} L ${x - size * 0.15} ${y + size * 0.35} L ${x + size * 0.5} ${y - size * 0.4}`;
 }
 
+/* ------------------------------------------------------------------ */
+/* Pascal's triangle                                                    */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Pascal's triangle, one row per beat. `rows` is an array of number arrays
+ * (row 0 = [1], row 1 = [1,1], row 2 = [1,2,1], ...) — compute the values
+ * yourself (or author only the rows a section needs); this handles the
+ * triangular layout only. `on` has one entry per row so each can be gated
+ * on its own beat as the narration builds the triangle downward.
+ */
+export function PascalsTriangle({
+  on,
+  delay = 0,
+  cx,
+  top,
+  rows,
+  rowHeight = 34,
+  colWidth = 40,
+  size = 17,
+  fill = INK,
+}: {
+  on: boolean[];
+  delay?: number;
+  cx: number;
+  top: number;
+  rows: number[][];
+  rowHeight?: number;
+  colWidth?: number;
+  size?: number;
+  fill?: string;
+}) {
+  return (
+    <>
+      {rows.map((row, r) => {
+        const rowWidth = (row.length - 1) * colWidth;
+        return (
+          <Fade key={r} on={on[r] ?? false} delay={delay}>
+            {row.map((val, c) => (
+              <T key={c} x={cx - rowWidth / 2 + c * colWidth} y={top + r * rowHeight} size={size} fill={fill}>
+                {val}
+              </T>
+            ))}
+          </Fade>
+        );
+      })}
+    </>
+  );
+}
+
 /* re-export the palette/base bits maths scenes reach for most */
 export { INK, MUTED } from "./kit";

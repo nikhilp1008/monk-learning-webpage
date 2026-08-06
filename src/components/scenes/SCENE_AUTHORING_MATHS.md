@@ -233,6 +233,43 @@ screenshot). Rule of thumb:
   to be worth drawing rather than relying on the mismatched fallback glyph.
 - **`\boxed{...}`** → wrap the content in a `Chip` (or a plain bordered
   rect), same idea as chemistry's boxed final answer — no new primitive.
+- **Sixth glyph audit (Chapters 6-7, Counting & Binomial Theorem)** — `÷ ∫`
+  are native to both fonts. `≡ ∝ λ` fall back (`λ` joins the Greek
+  accept-list; `≡` and `∝` are fine to use directly, or for `≡` specifically
+  you can lean on the accompanying "(mod n)" label to carry the meaning and
+  just use `=`, either is fine).
+- **Important font gap found while auditing this: `Kalam` (the script font)
+  is missing almost all superscript/subscript DIGITS** (only ¹²³ present;
+  ⁰⁴⁵⁶⁷⁸⁹ and every subscript digit ₀-₉ are missing), while `Anek Latin`
+  (the sans/body font, `<T script={false}>`, the default) has **full**
+  superscript/subscript digit coverage. This matters because `Chip`
+  defaults to `script={true}` (Kalam) — a chip showing something like "x²"
+  or a numeric subscript will hit the fallback in Kalam even though the
+  identical glyph is native in Anek. **Rule: any numeric superscript/
+  subscript goes in non-script (Anek) text.** If a Kalam-styled callout
+  needs one, don't rely on the Unicode digit — use two `T` calls at
+  computed offsets instead (small text above/below the baseline, same idea
+  as any hand-placed label).
+- **`\binom{n}{r}` (nCr/nPr) — the single most common symbol in Chapters 6-7,
+  read this before writing either chapter.** No new primitive; two cases:
+  - **Numeric** (`\binom{5}{3}`, `\binom{9}{6}`, etc. — the common case in
+    worked examples): write it as real superscript+subscript digits around
+    the letter, "⁵C₃" / "⁹P₆" style (the Indian-curriculum convention the
+    content itself already reaches for — see `C_r=\binom{n}{r}` used as a
+    running shorthand throughout Chapter 7). Native to Anek per the digit
+    coverage above — use non-script `T`, not a Chip.
+  - **Symbolic** (`\binom{n}{r}`, `\binom{n-1}{r-1}`, etc. — variables, not
+    literal numbers): just write "nCr" / "ⁿ⁻¹Cᵣ₋₁" as plain inline text,
+    no attempt at true superscript positioning for arbitrary letters (the
+    fonts don't have small-caps/superscript letter variants, and hand-
+    computing an unverified offset for this composite risks a worse result
+    than plain text). This matches how the content itself already
+    abbreviates to `C_r` after the first definition — don't re-derive the
+    stacked form every time either.
+- **Chapter 6's circular permutations reuse `pointOnCircle` directly**
+  (place n objects at n evenly-spaced angles, `2π/n` apart) — confirms the
+  general pattern: check what a chapter needs before assuming a new
+  primitive is required. Chapter 6 needed zero math-kit additions.
 - Hinglish board text stays **Latin script** (house style, inherited from
   physics/chem) — and all of the above symbols are language-agnostic, so a
   formula is byte-identical between the English and Hinglish boards; only the
@@ -297,6 +334,11 @@ method — get this from the actual inequality, don't guess.
 
 `checkD(x, y, size)` — a drawn checkmark stroke (feed to `<Draw/>`), for
 sanity-check stamps in worked examples — safer than the fallback `✓` glyph.
+
+`<PascalsTriangle cx top rows on />` — the triangular layout for Pascal's
+triangle, one row per beat (`rows` is your own precomputed number arrays;
+this only handles centering/positioning, verified to form a correctly
+centered diamond).
 
 **Complex Numbers (Chapter 4) reuses the trig primitives almost entirely** —
 the Argand plane is `<CartesianAxes>` with "Re"/"Im" labels instead of
