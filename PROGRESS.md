@@ -127,3 +127,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       using native numeral subscripts (x₁y₂−x₂y₁+...) instead of Σ-with-i/i+1
       (no 2-D bounds primitive exists), cyclic-order guardrail.
       VERDICT PASS both langs.
+- [x] Sec 19 (worked ex) — 2x+3y≤12 graphically: intercepts (6,0)/(0,4)
+      plotted, solid boundary (≤ included), origin tested (0≤12 ✓), region
+      shaded via HalfPlaneShade, final region label. Annotations placed
+      directly on the graph rather than a separate caption column.
+      VERDICT PASS both langs.
