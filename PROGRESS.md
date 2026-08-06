@@ -173,3 +173,7 @@ spot check).
   sin(A+B) with mixed quadrants (sinA=3/5 acute, cosB=-12/13 obtuse) boxed to -16/65; Ex5
   ratio proof (sin3A+sinA)/(cos3A+cosA)=tan2A via sum-to-product+cancel; Ex6 max/min of
   7cosx+24sinx+5 via R=25 boxed to [-20,30]. PASS.
+- Sec 34 "A telescoping product and a conditional identity" — two columns: Ex7 proves
+  cos20°cos40°cos80°=1/8 via multiply-by-2sin20° then cascading 2sinθcosθ=sin2θ to a
+  telescoping collapse; Ex8 proves tanA+tanB+tanC=tanAtanBtanC when A+B+C=π via
+  tan(A+B)=-tanC, red-margin scope-trap closer (condition used at the first step). PASS.
