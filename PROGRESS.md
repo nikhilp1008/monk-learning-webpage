@@ -235,3 +235,9 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       literal JSX text with a mid-line {t(...)} call rendered "or" glued to
       the following word with no visible gap ("orx") — consolidated each
       line into a single t() call instead. VERDICT PASS both langs.
+- [x] Sec 37 (worked ex) — x²-x-6>0 factored to (x-3)(x+2), roots -2/3,
+      positive leading coefficient ⇒ outside. Real sampled parabola (10
+      points from the actual function values, scaled) touching the axis
+      exactly at both roots, dipping below between them, shaded rays outside,
+      boxed answer (-∞,-2)∪(3,∞), strict-endpoints guardrail.
+      VERDICT PASS both langs.
