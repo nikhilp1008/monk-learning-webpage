@@ -90,3 +90,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       HalfPlaneShade calls (test points (0,0) and (6,~3)) + region labels.
       Eye-verified shading matches all 3 sample points' actual sides.
       VERDICT PASS both langs.
+- [x] Sec 14 — Budget-region story (register ₹40, pen ₹20, ₹120): 40x+20y≤120
+      simplified to 2x+y≤6, sample valid pairs (3,0)/(2,1) plotted, region
+      shaded via HalfPlaneShade, an outside point (3,3) fails the test, then
+      the origin explicitly tested (0≤6 ✓) as the guardrail's "one point"
+      trick. Swapped an unaudited ✗ glyph for plain text. VERDICT PASS both.
