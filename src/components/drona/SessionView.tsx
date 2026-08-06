@@ -218,11 +218,11 @@ export function SessionView({
 
             {/* Option Chips */}
             <div style={{ display: "flex", flexDirection: "column", gap: "8px", flex: "none" }}>
-              {(subtopicOptions && subtopicOptions.length > 0 ? subtopicOptions : [
-                "Option A: Near the hinge",
-                "Option B: At the far end",
-                "Option C: Not sure"
-              ]).map((optionText, idx) => (
+              {(subtopicOptions && subtopicOptions.length > 0 ? subtopicOptions : (
+                /aage badh|continue|ready|clear/i.test(cleanSpeech)
+                  ? ["Haan, aage badho", "Ek baar dubara samjhao"]
+                  : ["Option A: Near the hinge", "Option B: At the far end", "Option C: Not sure"]
+              )).map((optionText, idx) => (
                 <button
                   key={idx}
                   onClick={() => {
