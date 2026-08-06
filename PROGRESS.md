@@ -48,3 +48,6 @@ spot check).
 - Sec 4 "Converting an angle and finding a radius" — two side-by-side worked examples (Ex1
   40°20′→radians via fold-minutes; Ex2 find r from s=37.4cm, θ=60°→π/3), each builds its
   formula chain step by step to a boxed answer, shared convert-first guardrail. PASS.
+- Sec 5 "Angular motion and the shared-arc ratio" — Ex3 spinning wheel (rpm→rev/s→ω=12π≈37.7
+  rad/s boxed, v=rω bridge note); Ex4 equal-arc ratio trap (r1θ1=r2θ2 → r1/r2=θ2/θ1=5/4 boxed,
+  inverse-relationship guardrail). Two mirrored columns. PASS.
