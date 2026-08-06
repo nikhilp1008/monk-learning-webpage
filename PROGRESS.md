@@ -84,3 +84,8 @@ spot check).
 - Sec 13 "Range as the engine" — Ex5 R=√(5²+12²)=13 chip → interval+shift → f(x)∈[-10,16]
   boxed green; Ex6 sinx=(a²+b²)/2ab, AM-GM squeeze (data-bug fixed) → boxed only-if-|a|=|b|
   resolution, bounded-range-as-inequality-constraint closer. PASS.
+- Sec 14 "Pitfalls with signs, ranges and reciprocals" — 6 numbered red-circle pitfall rows
+  (±√ quadrant sign, range-check reflex, reciprocal third-letter rule, Pythagorean pairing,
+  tan/cot undefined points [data-bug fixed], reduce-large-angles-first), red-margin golden-rule
+  closer (magnitude from identity, sign from quadrant). SUBTOPIC 2 (Trigonometric Functions
+  and Quadrant Signs, Sec 8-14) COMPLETE. PASS.
