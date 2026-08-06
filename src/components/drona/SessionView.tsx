@@ -81,14 +81,20 @@ export function SessionView({
     }
   };
 
+  const [isTranscribing, setIsTranscribing] = useState<boolean>(false);
   const isDronaSpeaking = voiceState?.isSpeaking || isStreaming;
+  const hasAudioPlayed = voiceState?.hasPlayedFirstChunk || isDronaSpeaking;
   const isMuted = voiceState?.isMuted || false;
   const isPaused = voiceState?.isPaused || false;
   const isConnected = voiceState?.isConnected ?? true;
 
-  // B5: Driven strictly by actual socket and mic state
+  // B5: Explicit preparing state before first audio chunk plays
   const statusLabel = !isConnected
     ? "Connecting..."
+    : isTranscribing
+    ? "Transcribing..."
+    : !hasAudioPlayed
+    ? "Drona is preparing your lesson…"
     : isDronaSpeaking
     ? "Explaining concept"
     : isMuted

@@ -17,6 +17,7 @@ export interface VoiceClientState {
   isPaused: boolean;
   isListening: boolean;
   isSpeaking: boolean;
+  hasPlayedFirstChunk: boolean;
   tutorStatusLabel: string;
   dronaCaption: string;
   sessionCap: string;
@@ -48,6 +49,7 @@ export class DronaVoiceClient {
   private isListening: boolean = true;
   private isDronaSpeaking: boolean = false;
   private isPushToTalkActive: boolean = false;
+  private hasPlayedFirstChunk: boolean = false;
   private currentPlaybackPos: number = 0;
   private currentSpeechText: string = "";
   private DEBUG_AUDIO: boolean = false;
@@ -214,6 +216,7 @@ export class DronaVoiceClient {
 
     this.activeSources.push(source);
     source.start(startTime);
+    this.hasPlayedFirstChunk = true;
     this.nextAudioStartTime = startTime + item.buffer.duration;
   }
 
@@ -439,6 +442,7 @@ export class DronaVoiceClient {
       isPaused: this.isPaused,
       isListening: isConn && this.isPushToTalkActive && !this.isDronaSpeaking && !this.isMuted && !this.isPaused,
       isSpeaking: this.isDronaSpeaking,
+      hasPlayedFirstChunk: this.hasPlayedFirstChunk,
       tutorStatusLabel: statusLabel,
       dronaCaption: this.currentSpeechText,
       sessionCap: this.currentSpeechText,
