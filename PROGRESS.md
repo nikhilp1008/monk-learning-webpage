@@ -64,3 +64,8 @@ spot check).
   quadrant numerals (the source board_content's own decorative SVG had these mislabeled/rotated
   one position off standard convention — fixed here, verified by eye), cosθ=a/sinθ=b hero,
   |sinθ|≤1 |cosθ|≤1 chip, red-margin closer. Eye-checked (geometry). PASS.
+- Sec 9 "General definitions, reciprocal pairings and the sign engine" — sinθ=y/r etc and
+  cscθ=r/y etc chips, sign-engine explain (data-bug fixed), cosec↔sine/sec↔cosine pairing
+  guardrail, ASTC mnemonic heading, color-coded quadrant sign labels pre-placed then framed by
+  CartesianAxes (no ticks) + anticlockwise A→S→T→C rotation arc, reciprocal-sign closer.
+  Eye-checked (ASTC quadrant geometry, correct I/II/III/IV placement). PASS.
