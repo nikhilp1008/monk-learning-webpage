@@ -8,7 +8,6 @@ import {
   fetchCatalogue,
   startSession,
   scopeSession,
-  streamTurn,
   endSession,
 } from "@/lib/drona/client";
 import type {
@@ -239,57 +238,19 @@ export default function LearnPage() {
     if (!sid) return;
     setIsStreaming(true);
 
+    let retries = 0;
+    while (!voiceClientRef.current && retries < 30) {
+      await new Promise((r) => setTimeout(r, 100));
+      retries++;
+    }
+
     if (voiceClientRef.current) {
       console.log("[TEACHING TURN] Sending initial turn over WebSocket voice client");
       voiceClientRef.current.sendUtterance("Begin lesson segment");
-      return;
+    } else {
+      console.error("[TEACHING TURN ERROR] DronaVoiceClient WebSocket failed to initialize within 3s");
+      setIsStreaming(false);
     }
-
-    await streamTurn(
-      sid,
-      { utterance: null, turn_type: "no_response", playback_cutoff_point: null },
-      {
-        onSpeech: (delta) => {
-          setTranscript(prev => {
-            const last = prev[prev.length - 1];
-            if (last && last.sender === "drona" && last.id.startsWith("stream-")) {
-              return [...prev.slice(0, -1), { ...last, text: last.text + delta }];
-            }
-            return [...prev, {
-              id: "stream-" + Date.now(),
-              sender: "drona",
-              text: delta,
-              timestamp: new Date(),
-            }];
-          });
-        },
-        onAudioChunk: (audioB64) => {
-          if (audioB64 && voiceClientRef.current) {
-            voiceClientRef.current.playAudioChunk(audioB64);
-          }
-        },
-        onBoard: (latex) => {
-          setBoardLatex(latex);
-        },
-        onMeta: (meta) => {
-          setSegmentIndex(meta.segment_index);
-          setTotalSegments(meta.total_segments);
-        },
-        onState: (state) => {
-          setSessionPhase(state.phase);
-          if (state.phase === "complete") {
-            setFlowState("summary");
-          }
-        },
-        onError: (err) => {
-          console.error("Stream error:", err);
-          setIsStreaming(false);
-        },
-        onDone: () => {
-          setIsStreaming(false);
-        },
-      }
-    );
   }, []);
 
   const scopingInFlightRef = useRef<boolean>(false);
@@ -354,43 +315,6 @@ export default function LearnPage() {
     if (voiceClientRef.current) {
       console.log("[STUDENT TURN] Sending student turn over WebSocket voice client");
       voiceClientRef.current.sendUtterance(utterance);
-      return;
-    }
-
-    await streamTurn(
-      sessionId,
-      { utterance, turn_type: "answer", playback_cutoff_point: null },
-      {
-        onSpeech: (delta) => {
-          setTranscript(prev => {
-            const last = prev[prev.length - 1];
-            if (last && last.sender === "drona" && last.id.startsWith("stream-")) {
-              return [...prev.slice(0, -1), { ...last, text: last.text + delta }];
-            }
-            return [...prev, {
-              id: "stream-" + Date.now(),
-              sender: "drona",
-              text: delta,
-              timestamp: new Date(),
-            }];
-          });
-        },
-        onBoard: (latex) => setBoardLatex(latex),
-        onMeta: (meta) => {
-          setSegmentIndex(meta.segment_index);
-          setTotalSegments(meta.total_segments);
-        },
-        onState: (state) => {
-          setSessionPhase(state.phase);
-          if (state.phase === "complete") {
-            setFlowState("summary");
-          }
-        },
-        onError: (err) => {
-          console.error("Turn stream error:", err);
-          setIsStreaming(false);
-        },
-        onDone: () => setIsStreaming(false),
       }
     );
   }, [sessionId]);
