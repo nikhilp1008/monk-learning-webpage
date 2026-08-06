@@ -169,3 +169,7 @@ spot check).
 - Sec 32 "Exact values and a clean identity proof" — three columns: Ex1 cos15° via 45°-30°
   boxed to (√6+√2)/4; Ex2 proves cos(A+B)cos(A-B)=cos²A-sin²B via difference-of-squares
   expansion, boxed ✓; Ex3 sin(7π/12) via π/4+π/3 boxed to (√2+√6)/4. PASS.
+- Sec 33 "Signs in a compound angle, a ratio proof, and max/min" — three columns: Ex4
+  sin(A+B) with mixed quadrants (sinA=3/5 acute, cosB=-12/13 obtuse) boxed to -16/65; Ex5
+  ratio proof (sin3A+sinA)/(cos3A+cosA)=tan2A via sum-to-product+cancel; Ex6 max/min of
+  7cosx+24sinx+5 via R=25 boxed to [-20,30]. PASS.
