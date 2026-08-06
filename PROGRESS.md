@@ -98,3 +98,6 @@ spot check).
   reduction rule (n odd⇒co-function, n even⇒same; sign via ASTC on the whole angle's quadrant),
   red-margin closer on why odd multiples of 90° swap sin↔cos. Eye-checked (reflection
   geometry). PASS.
+- Sec 17 "Evaluating by reduction — basic to large angles" — four quick examples in a 2×2
+  grid (sin210°=-1/2, cos(-300°)=1/2, sin1230°→reduce→150°→1/2, tan135°=-cot45°=-1), red-margin
+  cross-check closer (two routes to tan135° agree). PASS.
