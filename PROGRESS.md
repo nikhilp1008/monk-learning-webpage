@@ -228,3 +228,10 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       shortcut with a hand-drawn parabola (a(x-α)(x-β): + outside roots, −
       between). Caught+fixed +/- sign labels overlapping the guardrail chip
       — shifted the whole diagram down 35px for clearance. VERDICT PASS both.
+- [x] Sec 36 (formulas) — Modulus results |x|<a/|x|>a each with a mini number
+      line (interval vs two rays, side by side for direct comparison),
+      squared-form bridge, quadratic between/outside boxed (extends Sec 35),
+      no-real-roots guardrail. Caught+fixed a real rendering bug: mixing
+      literal JSX text with a mid-line {t(...)} call rendered "or" glued to
+      the following word with no visible gap ("orx") — consolidated each
+      line into a single t() call instead. VERDICT PASS both langs.
