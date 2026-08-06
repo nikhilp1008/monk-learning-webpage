@@ -53,8 +53,14 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - **Sec 19** — Example 1: 12C6=924 boxed. Example 2: NGT in (1+4x)^8 at x=1/2 → tie at r=6, T6=T7=1792 boxed, red-margin |x| vs |4x| trap. Math hand-verified. PASS.
 - **Sec 20** — Example 3: greatest coeff of (1+2x)^6 = c4=240 boxed (not the middle term). Example 4: (4-3x)^8 at x=1 — |T4| numerically largest but negative, compare positive neighbours T3/T5 → algebraically greatest=T5, boxed. Math hand-verified. PASS.
 - **Sec 21** — subtopic 3 closer, `tips`: 2×3 grid (4 red traps, 2 green tips incl. k-formula mnemonic). PASS. **Subtopic 3 (secs 16-21) complete — chapter is now half done (21/47).**
+- **Sec 22** — opens subtopic 4: hub-and-spoke diagram, boxed identity (1+x)^n=ΣCr x^r as central "machine", fan-out arrows to 4 satellite results (x=1, x=-1, d/dx, ∫). PASS.
+- **Sec 23** — dense `formulas` reference: sum family, index-shift, weighted sums, reciprocal sums, square/product sums incl. Vandermonde. PASS.
+- **Sec 24** — 4-technique toolkit (title itself names them): boxed substitution/integration/compare formulas, limits caveat, red-margin meta-tip. PASS.
+- **Sec 25** — Example 1: x=1/x=-1 added to isolate C0+C2+...=2^(n-1), boxed. Example 2: index-weighted sum → n=10 → 5120, boxed. Math verified. PASS.
+- **Sec 26** — Example 3: reciprocal-weight sum, n=5 → 21/2, boxed. Example 4: (1+x)^n(1+x)^n symmetry proof of ΣCr²=(2n)Cn, n=4 → 70=8C4, boxed. Math verified. PASS.
+- **Sec 27** — subtopic 4 closer, `tips`: 2×3 grid (4 red traps, 2 green tips; fixed a text-overflowing-its-box cosmetic issue with a two-line layout). PASS. **Subtopic 4 (secs 22-27) complete.**
 
-Pushed to origin through Sec 21. Starting subtopic 4 (Properties & Summation of Series, secs 22-27).
+Pushed to origin through Sec 27. Starting subtopic 5 (Any Index & Approximations, secs 28-33) — flagged for extra eye-scrutiny per task brief.
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3036 > /tmp/dev-math7.log 2>&1 &`, confirmed READY.
