@@ -88,6 +88,18 @@ export class DronaVoiceClient {
     });
   }
 
+  public isReady(): boolean {
+    return this.ws !== null && this.ws.readyState === WebSocket.OPEN;
+  }
+
+  public async awaitReady(timeoutMs: number = 10000): Promise<boolean> {
+    const start = Date.now();
+    while (!this.isReady() && Date.now() - start < timeoutMs) {
+      await new Promise((r) => setTimeout(r, 100));
+    }
+    return this.isReady();
+  }
+
   private handleMessage(data: any): void {
     try {
       const msg = typeof data === "string" ? JSON.parse(data) : data;

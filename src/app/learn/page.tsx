@@ -238,19 +238,25 @@ export default function LearnPage() {
     if (!sid) return;
     setIsStreaming(true);
 
-    let retries = 0;
-    while (!voiceClientRef.current && retries < 30) {
-      await new Promise((r) => setTimeout(r, 100));
-      retries++;
+    if (!voiceClientRef.current) {
+      console.error("[TEACHING TURN ERROR] Voice client ref is null!");
+      setError("WebSocket connection failed to initialize. Please try again.");
+      setFlowState("error");
+      setIsStreaming(false);
+      return;
     }
 
-    if (voiceClientRef.current) {
-      console.log("[TEACHING TURN] Sending initial turn over WebSocket voice client");
-      voiceClientRef.current.sendUtterance("Begin lesson segment");
-    } else {
-      console.error("[TEACHING TURN ERROR] DronaVoiceClient WebSocket failed to initialize within 3s");
+    const isReady = await voiceClientRef.current.awaitReady(10000);
+    if (!isReady) {
+      console.error("[TEACHING TURN ERROR] WebSocket connection failed to open within 10s!");
+      setError("WebSocket connection timed out before initial turn could fire.");
+      setFlowState("error");
       setIsStreaming(false);
+      return;
     }
+
+    console.log("[TEACHING TURN SUCCESS] Sending initial turn over open WebSocket");
+    voiceClientRef.current.sendUtterance("Begin lesson segment");
   }, []);
 
   const scopingInFlightRef = useRef<boolean>(false);
@@ -368,7 +374,8 @@ export default function LearnPage() {
   const [voiceState, setVoiceState] = useState<VoiceClientState | undefined>();
 
   useEffect(() => {
-    if (flowState === "session" && sessionId) {
+    if (sessionId) {
+      console.log("[VOICE WS INIT] Opening WebSocket connection immediately for session:", sessionId);
       const client = new DronaVoiceClient({
         sessionId,
         onStateChange: (st) => setVoiceState(st),
@@ -403,11 +410,12 @@ export default function LearnPage() {
       voiceClientRef.current = client;
 
       return () => {
+        console.log("[VOICE WS CLEANUP] Disconnecting WebSocket for session:", sessionId);
         client.disconnect();
         voiceClientRef.current = null;
       };
     }
-  }, [flowState, sessionId]);
+  }, [sessionId, handleEndSession]);
 
   /* ─── RENDER: Session View ─── */
   if (flowState === "session") {
