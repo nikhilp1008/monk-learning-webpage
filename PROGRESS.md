@@ -241,3 +241,7 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       exactly at both roots, dipping below between them, shaded rays outside,
       boxed answer (-∞,-2)∪(3,∞), strict-endpoints guardrail.
       VERDICT PASS both langs.
+- [x] Sec 38 (worked ex, SPEED TRAP) — |2x-3|≥5: trap called out FIRST (≥
+      throws OUTSIDE into a union, opposite of ≤), split via |f|≥a⟺f≤-a or
+      f≥a, solved to x≤-1/x≥4, boxed x∈(-∞,-1]∪[4,∞), number line with
+      filled dots (non-strict) shaded outward. VERDICT PASS both langs.
