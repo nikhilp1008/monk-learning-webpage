@@ -245,3 +245,9 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       throws OUTSIDE into a union, opposite of ≤), split via |f|≥a⟺f≤-a or
       f≥a, solved to x≤-1/x≥4, boxed x∈(-∞,-1]∪[4,∞), number line with
       filled dots (non-strict) shaded outward. VERDICT PASS both langs.
+- [x] Sec 39 (worked ex) — (x-4)/(x+1)<1, "the safe route": trap called out
+      FIRST (do NOT cross-multiply — sign of x+1 unknown), bring-to-one-side
+      3-line chain to -5/(x+1)<0, negative-constant-numerator reasoning ⇒
+      x+1>0 ⇒ x>-1, boxed x∈(-1,∞), closing number line with an open (RED)
+      dot at -1 and a shaded ray to +∞, x=-1-undefined guardrail.
+      VERDICT PASS both langs.
