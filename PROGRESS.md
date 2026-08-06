@@ -206,3 +206,7 @@ scratch/math3/scan_bug_broad.py.
   (sinθ=sinα hero, cosθ=cosα/tanθ=tanα, squared cases), linear-form solvability test
   (|c|≤√(a²+b²)), red-margin root-validity checklist (keep n, restore division-lost roots,
   back-check after squaring, drop out-of-domain). PASS.
+- Sec 39 "Principal solutions, a general solution, and a quadratic" — three columns: Ex1
+  principal solutions of sinx=1/2 (π/6 QI, 5π/6 QII); Ex2 general solution of cosx=-1/2 via
+  cos(2π/3); Ex3 quadratic 2sin²x+sinx-1=0 factored to (2sinx-1)(sinx+1)=0, both solution
+  families boxed. PASS.
