@@ -73,3 +73,7 @@ spot check).
   and 1+cot²=csc² chips, mini right-triangle-on-circle sketch grounding a²+b²=1, ranges
   ([-1,1] / never-strictly-inside / all-reals), red-margin range-check-every-answer closer.
   PASS.
+- Sec 11 "The signature board problem — find the other five" — Ex1 sin x=3/5,QII: magnitude
+  cos²x=16/25 → sign-decision guardrail (QII⇒cos negative) → all five values in two boxed rows;
+  Ex2 quadrantal evaluation boxed to -2; common-mistake (+4/5 without checking quadrant)
+  guardrail. PASS.
