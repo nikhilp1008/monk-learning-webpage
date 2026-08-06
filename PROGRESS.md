@@ -149,3 +149,7 @@ spot check).
   sin(A±B)/tan(A±B) → Double/Product→Sum → Half-angle/Triple/Sum→Product → a cosx+b sinx
   application box. Learn-the-derivation-not-the-list closer. Eye-checked (tree structure
   reads cleanly, no overlaps). PASS.
+- Sec 28 "What a compound angle means" — staged-and-crossed-out false guess sin(A+B)=sinA+sinB
+  with A=B=30° numeric disproof, not-linear guardrail; vector-composition right-triangle
+  diagram (a-leg, b-leg, resultant R at angle α) grounding acosx+bsinx=Rcos(x-α), max/min=±R
+  closer (data-bug fixed). Eye-checked (vector triangle geometry). PASS.
