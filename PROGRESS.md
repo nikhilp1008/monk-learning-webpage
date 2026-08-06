@@ -56,3 +56,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
 - [x] Sec 6 — Compound inequality skeleton (p ≤ expr ≤ q), same-move-both-ends
       arrows, negative-multiply guardrail, concrete demo 1≤x≤4 →×(-1)→
       -1≥-x≥-4 re-read as -4≤-x≤-1, classic-error caption. VERDICT PASS both.
+- [x] Sec 7 (formulas) — Reference card: 4 order axioms (label|formula rows,
+      the negative-multiply one in red), general form ax+b>0 with a hand-drawn
+      piecewise bracket for the two a>0/a<0 cases, three-language equivalence
+      (mini number line, set-builder, interval), bracket-rule guardrail.
+      VERDICT PASS both langs. SUBTOPIC 1 (One Variable) 7/12 done.
