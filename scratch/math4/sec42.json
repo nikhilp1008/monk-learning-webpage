@@ -1,0 +1,162 @@
+{
+  "id": "fa8e0bf4-870b-48c0-bb0e-bc20dd7443ac",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 42,
+  "section_type": "tips",
+  "subtopic": "Quadratic Equations with Complex Roots",
+  "title": "Pitfalls & pro-tips: quadratics with complex roots",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Traps to avoid, shortcuts to keep",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$D<0$ never means 'no roots' — over $\\mathbb{C}$ there are always two.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Apply the conjugate-root theorem ONLY when coefficients are real.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Don't forget $\\sqrt{D}=i\\sqrt{|D|}$ when $D<0$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "A complex number has two square roots; fix the branch by $\\operatorname{sgn}(xy)=\\operatorname{sgn}(b)$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "Vieta's sum is $-b/a$, not $b/a$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Pro-tip: check $D$ first — it names the root type before any computation.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Real quadratic from root $p+iq$: $x^{2}-2px+(p^{2}+q^{2})=0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_42.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_42.mp3",
+  "duration_sec_english": 95.14,
+  "duration_sec_hinglish": 87.36,
+  "board_reveal_at_english": [
+    0,
+    6.31,
+    20.57,
+    33.11,
+    43.61,
+    53.25,
+    63.49,
+    75.35
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.66,
+    20.39,
+    31.4,
+    41.47,
+    49.58,
+    59.99,
+    71.77
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's close the subtopic with the traps that cost marks and the shortcuts that save them."
+    },
+    {
+      "seq": 2,
+      "text": "The biggest trap: a negative discriminant never means no roots. Over the complex numbers a quadratic always has exactly two roots. Declaring no solution when D is negative is simply wrong now."
+    },
+    {
+      "seq": 3,
+      "text": "Second: apply the conjugate-root theorem only when the coefficients are real. With complex coefficients the roots need not be conjugates, as we just saw."
+    },
+    {
+      "seq": 4,
+      "text": "Third: when D is negative, remember root D equals i times root of the size of D. Dropping that i is the recurring sign-flip error."
+    },
+    {
+      "seq": 5,
+      "text": "Fourth: a complex number always has two square roots. Get the branch right by making the sign of the product x y match the sign of b."
+    },
+    {
+      "seq": 6,
+      "text": "Fifth: Vieta's sum of roots is minus b over a, not plus b over a. That stray minus sign trips people up constantly."
+    },
+    {
+      "seq": 7,
+      "text": "Now the pro-tips. Always check the discriminant first; it names the type of roots before you compute anything, and with real coefficients you only need to find one complex root."
+    },
+    {
+      "seq": 8,
+      "text": "And keep this shortcut ready: to build a real quadratic from a complex root p plus i q, write x squared minus two p x plus p squared plus q squared equals zero. Sum is two p, product is p squared plus q squared."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Subtopic ko band karte hain un traps ke saath jo marks le jaate hain aur un shortcuts ke saath jo bachate hain."
+    },
+    {
+      "seq": 2,
+      "text": "Sabse bada trap: negative discriminant ka matlab kabhi no roots nahi hota. Complex numbers par quadratic ke hamesha theek do roots hote hain. D negative hone par no solution kehna ab bas galat hai."
+    },
+    {
+      "seq": 3,
+      "text": "Doosra: conjugate-root theorem sirf tab apply karo jab coefficients real hon. Complex coefficients ke saath roots conjugates hone zaroori nahi, jaisa abhi dekha."
+    },
+    {
+      "seq": 4,
+      "text": "Teesra: jab D negative ho, yaad rakho root D barabar i times root of the size of D. Wo i chhodna recurring sign-flip error hai."
+    },
+    {
+      "seq": 5,
+      "text": "Chautha: complex number ke hamesha do square roots hote hain. Branch sahi karo product x y ka sign b ke sign se match karke."
+    },
+    {
+      "seq": 6,
+      "text": "Paanchva: Vieta ka sum of roots hai minus b over a, plus b over a nahi. Wo bhatka minus sign logon ko lagataar phansaata hai."
+    },
+    {
+      "seq": 7,
+      "text": "Ab pro-tips. Hamesha discriminant pehle check karo; ye kuch bhi compute karne se pehle root type bata deta hai, aur real coefficients ke saath aapko sirf ek complex root nikaalna hota hai."
+    },
+    {
+      "seq": 8,
+      "text": "Aur ye shortcut ready rakho: complex root p plus i q se real quadratic banane ke liye likho x squared minus two p x plus p squared plus q squared equals zero. Sum hai two p, product hai p squared plus q squared."
+    }
+  ]
+}

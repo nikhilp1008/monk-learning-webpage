@@ -1,0 +1,160 @@
+{
+  "id": "03ada4da-fc1a-4f2a-815a-c6a7387d668e",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 17,
+  "section_type": "worked_examples",
+  "subtopic": "The Modulus and the Conjugate of a Complex Number",
+  "title": "Worked: conjugate, modulus, and a cube",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Basics: find conjugate and modulus",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$z=3+i$: conjugate $3-i$, modulus $\\sqrt{3^{2}+1^{2}}=\\sqrt{10}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "$w=2-5i$: conjugate $2+5i$, modulus $\\sqrt{4+25}=\\sqrt{29}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "(5-3i)^{3}=5^{3}-3(5^{2})(3i)+3(5)(3i)^{2}-(3i)^{3}",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Expand carefully, using $i^{2}=-1$ and $i^{3}=-i$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "(5-3i)^{3}=125-225i-135+27i=-10-198i",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "So its conjugate is $-10+198i$ — just flip the sign of the imaginary part.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Keep the $i^2,i^3$ substitutions clean; collect at the very end.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_17.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_17.mp3",
+  "duration_sec_english": 100.08,
+  "duration_sec_hinglish": 100.25,
+  "board_reveal_at_english": [
+    0,
+    4.52,
+    18.01,
+    32.94,
+    50.18,
+    62.63,
+    77.06,
+    90.2
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    5.03,
+    19.63,
+    31.91,
+    48.47,
+    60.42,
+    77.82,
+    89.6
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's ground the definitions on numbers, then push into a cube."
+    },
+    {
+      "seq": 2,
+      "text": "Take z equals three plus i. Its conjugate flips the imaginary sign, giving three minus i. Its modulus is the root of three squared plus one squared, which is root ten."
+    },
+    {
+      "seq": 3,
+      "text": "Take w equals two minus five i. Its conjugate is two plus five i, and its modulus is the root of four plus twenty five, which is root twenty nine."
+    },
+    {
+      "seq": 4,
+      "text": "Now a harder one: expand five minus three i, cubed. Use the binomial expansion: five cubed, minus three times five squared times three i, plus three times five times three i squared, minus three i cubed."
+    },
+    {
+      "seq": 5,
+      "text": "Substitute carefully. Three i squared uses i squared equals minus one, and three i cubed uses i cubed equals minus i. Keep those clean as you go."
+    },
+    {
+      "seq": 6,
+      "text": "Collecting everything: one hundred twenty five, minus two hundred twenty five i, minus one hundred thirty five, plus twenty seven i. The reals give minus ten, the imaginaries give minus one hundred ninety eight i."
+    },
+    {
+      "seq": 7,
+      "text": "So the cube is minus ten minus one hundred ninety eight i, and its conjugate is simply minus ten plus one hundred ninety eight i — flip only the imaginary sign."
+    },
+    {
+      "seq": 8,
+      "text": "The lesson: powers get messy, so substitute i squared and i cubed cleanly and only collect real and imaginary parts at the very end."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Definitions ko numbers par ground karte hain, phir ek cube tak jaate hain."
+    },
+    {
+      "seq": 2,
+      "text": "z equals three plus i lo. Iska conjugate imaginary sign flip karke deta hai three minus i. Iska modulus hai three square plus one square ka root, jo hai root ten."
+    },
+    {
+      "seq": 3,
+      "text": "w equals two minus five i lo. Iska conjugate hai two plus five i, aur modulus hai four plus twenty five ka root, jo hai root twenty nine."
+    },
+    {
+      "seq": 4,
+      "text": "Ab ek mushkil: five minus three i, cubed expand karo. Binomial expansion use karo: five cube, minus three times five square times three i, plus three times five times three i square, minus three i cube."
+    },
+    {
+      "seq": 5,
+      "text": "Dhyaan se substitute karo. Three i square mein i square barabar minus one, aur three i cube mein i cube barabar minus i. Inhe chalte-chalte clean rakho."
+    },
+    {
+      "seq": 6,
+      "text": "Sab collect karke: one hundred twenty five, minus two hundred twenty five i, minus one hundred thirty five, plus twenty seven i. Reals dete hain minus ten, imaginaries dete hain minus one hundred ninety eight i."
+    },
+    {
+      "seq": 7,
+      "text": "To cube hai minus ten minus one hundred ninety eight i, aur iska conjugate bas minus ten plus one hundred ninety eight i — sirf imaginary sign flip."
+    },
+    {
+      "seq": 8,
+      "text": "Sabak: powers messy ho jaati hain, to i square aur i cube ko cleanly substitute karo aur real aur imaginary parts sirf end mein collect karo."
+    }
+  ]
+}

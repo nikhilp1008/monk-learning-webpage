@@ -1,0 +1,160 @@
+{
+  "id": "c39af189-5972-4235-81f4-a116dcf2c384",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 27,
+  "section_type": "formulas",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "Argument, polar and De Moivre toolkit",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Consolidated: polar-form toolkit",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "|z|=r=\\sqrt{x^{2}+y^{2}},\\qquad \\arg z=\\theta\\in(-\\pi,\\pi]",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\text{ref }\\alpha=\\tan^{-1}\\left|\\tfrac{y}{x}\\right|:\\ \\text{I}\\!\\to\\!\\alpha,\\ \\text{II}\\!\\to\\!\\pi-\\alpha,\\ \\text{III}\\!\\to\\!\\alpha-\\pi,\\ \\text{IV}\\!\\to\\!-\\alpha",
+      "emphasis": "normal",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "z=r(\\cos\\theta+i\\sin\\theta)=r\\,\\mathrm{cis}\\,\\theta",
+      "emphasis": "high",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\arg(z_1 z_2)=\\arg z_1+\\arg z_2,\\quad \\arg(z_1/z_2)=\\arg z_1-\\arg z_2,\\quad \\arg\\bar z=-\\arg z",
+      "emphasis": "normal",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "z^{n}=r^{n}(\\cos n\\theta+i\\sin n\\theta)\\quad(n\\in\\mathbb{Z})",
+      "emphasis": "high",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "1,\\ \\omega,\\ \\omega^{2};\\quad \\omega^{3}=1;\\quad 1+\\omega+\\omega^{2}=0",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "Memorize: $1+i=\\sqrt2\\,\\angle\\tfrac{\\pi}{4}$, $1+i\\sqrt3=2\\,\\angle\\tfrac{\\pi}{3}$, $\\sqrt3+i=2\\,\\angle\\tfrac{\\pi}{6}$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_27.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_27.mp3",
+  "duration_sec_english": 86.52,
+  "duration_sec_hinglish": 81.65,
+  "board_reveal_at_english": [
+    0,
+    6.14,
+    16.9,
+    34.05,
+    41.3,
+    48.9,
+    61.35,
+    70.83
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.83,
+    16.55,
+    32.68,
+    40.79,
+    48.81,
+    59.73,
+    67.58
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is the polar toolkit on a single board, your quick reference for everything in this subtopic."
+    },
+    {
+      "seq": 2,
+      "text": "The modulus r is root x squared plus y squared, and the principal argument theta lives in the interval minus pi to pi, with pi included."
+    },
+    {
+      "seq": 3,
+      "text": "Find the reference angle as inverse tangent of the size of y over x, then place it: quadrant one gives alpha, quadrant two gives pi minus alpha, quadrant three gives alpha minus pi, quadrant four gives minus alpha."
+    },
+    {
+      "seq": 4,
+      "text": "Polar form itself: z equals r times cosine theta plus i sine theta, also written r cis theta."
+    },
+    {
+      "seq": 5,
+      "text": "The argument algebra: product adds arguments, quotient subtracts them, and conjugation negates the argument."
+    },
+    {
+      "seq": 6,
+      "text": "De Moivre for powers: z to the n equals r to the n times cosine n theta plus i sine n theta, for any integer n."
+    },
+    {
+      "seq": 7,
+      "text": "The cube roots of unity: one, omega, and omega squared, with omega cubed equal to one and their sum equal to zero."
+    },
+    {
+      "seq": 8,
+      "text": "<whisper>And three angles worth memorizing outright:</whisper> one plus i is root two at forty five degrees, one plus i root three is two at sixty degrees, and root three plus i is two at thirty degrees. They recur constantly."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye raha polar toolkit ek single board par, is subtopic ki har cheez ke liye aapka quick reference."
+    },
+    {
+      "seq": 2,
+      "text": "Modulus r hai root x square plus y square, aur principal argument theta interval minus pi se pi mein rehta hai, pi included."
+    },
+    {
+      "seq": 3,
+      "text": "Reference angle nikaalo inverse tangent of the size of y over x, phir use place karo: quadrant one deta hai alpha, quadrant two deta hai pi minus alpha, quadrant three deta hai alpha minus pi, quadrant four deta hai minus alpha."
+    },
+    {
+      "seq": 4,
+      "text": "Polar form khud: z equals r times cosine theta plus i sine theta, jise r cis theta bhi likha jaata hai."
+    },
+    {
+      "seq": 5,
+      "text": "Argument algebra: product arguments add karta hai, quotient subtract karta hai, aur conjugation argument negate karta hai."
+    },
+    {
+      "seq": 6,
+      "text": "Powers ke liye De Moivre: z to the n barabar r to the n times cosine n theta plus i sine n theta, kisi bhi integer n ke liye."
+    },
+    {
+      "seq": 7,
+      "text": "Cube roots of unity: one, omega, aur omega squared, omega cubed barabar one aur unka sum barabar zero."
+    },
+    {
+      "seq": 8,
+      "text": "<whisper>Aur teen angles seedhe yaad karne layak:</whisper> one plus i hai root two at forty five degrees, one plus i root three hai two at sixty degrees, aur root three plus i hai two at thirty degrees. Ye lagataar aate hain."
+    }
+  ]
+}

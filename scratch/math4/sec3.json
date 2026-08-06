@@ -1,0 +1,161 @@
+{
+  "id": "74ba944c-4648-4ed7-9b4d-91f0878884e2",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 3,
+  "section_type": "concept",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "The root-of-negatives trap",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "A trap: root a times root b can fail",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "The rule $\\sqrt{a}\\,\\sqrt{b}=\\sqrt{ab}$ holds for real $a,b$ only when they are NOT both negative.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "$\\sqrt{-2}\\,\\sqrt{-3}=-\\sqrt{6}$, not $+\\sqrt{6}$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\sqrt{-2}\\,\\sqrt{-3}=(i\\sqrt{2})(i\\sqrt{3})=i^{2}\\sqrt{6}=-\\sqrt{6}",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "text": "Always convert each root of a negative to $i$ times a root of a positive first.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 38
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\sqrt{-4}\\cdot\\sqrt{-9}=(2i)(3i)=6i^{2}=-6",
+      "emphasis": "normal",
+      "reveal_at": 48
+    },
+    {
+      "seq": 7,
+      "text": "The naive $\\sqrt{(-4)(-9)}=\\sqrt{36}=6$ is wrong — the sign flips.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 58
+    },
+    {
+      "seq": 8,
+      "text": "Rule of thumb: strip the $i$ out first, then simplify.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 68
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_3.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_3.mp3",
+  "duration_sec_english": 87.7,
+  "duration_sec_hinglish": 81.98,
+  "board_reveal_at_english": [
+    0,
+    10.84,
+    19.11,
+    30.29,
+    47.1,
+    56.49,
+    67.16,
+    77.91
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    10.07,
+    18.43,
+    27.82,
+    43.26,
+    52.57,
+    62.21,
+    73.22
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Now a trap that costs marks in every exam. The familiar rule that root a times root b equals root a b is not universal."
+    },
+    {
+      "seq": 2,
+      "text": "It holds for real numbers a and b only when they are not both negative. The moment both are negative, the rule breaks."
+    },
+    {
+      "seq": 3,
+      "text": "<whisper>Here's the secret exam catch:</whisper> root of minus two times root of minus three is minus root six, not plus root six."
+    },
+    {
+      "seq": 4,
+      "text": "Watch the honest calculation. Root of minus two is i root two, root of minus three is i root three. Multiply them and you get i squared times root six, and i squared is minus one, so the answer is minus root six."
+    },
+    {
+      "seq": 5,
+      "text": "So the safe habit is: convert each square root of a negative into i times the square root of a positive before you multiply anything."
+    },
+    {
+      "seq": 6,
+      "text": "Another one: root minus four times root minus nine. Write it as two i times three i, which is six i squared, equal to minus six."
+    },
+    {
+      "seq": 7,
+      "text": "If you had naively multiplied the negatives under one root, you'd get root of thirty six equals six. That is wrong. The correct answer carries a minus sign."
+    },
+    {
+      "seq": 8,
+      "text": "So the rule of thumb is simple: strip the i out first, then simplify. Never combine two negative radicands under a single root."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ab ek trap jo har exam mein marks le jaata hai. Ye familiar rule ki root a times root b equals root a b, universal nahi hai."
+    },
+    {
+      "seq": 2,
+      "text": "Ye real numbers a aur b ke liye tabhi valid hai jab wo dono negative na hon. Jaise hi dono negative hue, rule toot jaata hai."
+    },
+    {
+      "seq": 3,
+      "text": "<whisper>Ye raha exam ka chhupa hua catch:</whisper> root of minus two times root of minus three is minus root six, plus root six nahi."
+    },
+    {
+      "seq": 4,
+      "text": "Sahi calculation dekho. Root of minus two hai i root two, root of minus three hai i root three. Multiply karo to milta hai i squared times root six, aur i squared is minus one, to answer hai minus root six."
+    },
+    {
+      "seq": 5,
+      "text": "To safe habit ye hai: multiply karne se pehle har square root of a negative ko i times square root of a positive mein convert karo."
+    },
+    {
+      "seq": 6,
+      "text": "Ek aur: root minus four times root minus nine. Isko likho two i times three i, jo hai six i squared, barabar minus six."
+    },
+    {
+      "seq": 7,
+      "text": "Agar aap ne naively negatives ko ek hi root ke neeche multiply kiya, to milega root of thirty six equals six. Ye galat hai. Sahi answer mein minus sign aata hai."
+    },
+    {
+      "seq": 8,
+      "text": "To rule of thumb simple hai: pehle i ko bahar nikaalo, phir simplify karo. Do negative radicands ko kabhi ek root ke neeche mat milao."
+    }
+  ]
+}

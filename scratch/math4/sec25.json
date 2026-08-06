@@ -1,0 +1,160 @@
+{
+  "id": "93924cb4-a26c-4696-8620-ce08160ece95",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 25,
+  "section_type": "concept",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "Multiplication is rotation and scaling",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Multiply: moduli multiply, arguments add",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "z_1 z_2=r_1 r_2\\big(\\cos(\\theta_1+\\theta_2)+i\\sin(\\theta_1+\\theta_2)\\big)",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Multiplying by a number of modulus $r$ and argument $\\phi$ scales by $r$ and rotates by $\\phi$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "The angle-sum identities for $\\cos$ and $\\sin$ are exactly why the arguments add.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\arg(z_1 z_2)=\\arg z_1+\\arg z_2,\\quad \\arg\\!\\left(\\tfrac{z_1}{z_2}\\right)=\\arg z_1-\\arg z_2",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\arg(\\bar z)=-\\arg z",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "These hold up to a multiple of $2\\pi$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Use this instead of expanding: division subtracts arguments and divides moduli.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_25.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_25.mp3",
+  "duration_sec_english": 97.34,
+  "duration_sec_hinglish": 92.3,
+  "board_reveal_at_english": [
+    0,
+    9.56,
+    23.04,
+    40.87,
+    55.89,
+    65.96,
+    73.22,
+    85.59
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    9.13,
+    23.81,
+    41.56,
+    55.21,
+    64.26,
+    70.49,
+    81.49
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is the idea that powers the entire second half of the chapter: in polar form, multiplication is rotation combined with scaling."
+    },
+    {
+      "seq": 2,
+      "text": "When you multiply two numbers, the moduli multiply and the arguments add. So z one times z two has modulus r one times r two, and argument theta one plus theta two."
+    },
+    {
+      "seq": 3,
+      "text": "Say that as an action: multiplying by a number of modulus r and argument phi scales the picture by r and rotates it by phi. Multiplying by i, modulus one and angle ninety degrees, is a pure quarter-turn, no stretching."
+    },
+    {
+      "seq": 4,
+      "text": "And this isn't magic. Multiply the two polar forms out, and the cosine and sine angle-sum identities appear on their own, delivering cosine of theta one plus theta two and sine of theta one plus theta two."
+    },
+    {
+      "seq": 5,
+      "text": "So the argument obeys clean algebra. The argument of a product is the sum of the arguments, and the argument of a quotient is the difference of the arguments."
+    },
+    {
+      "seq": 6,
+      "text": "And the argument of a conjugate is minus the argument, matching the reflection we saw."
+    },
+    {
+      "seq": 7,
+      "text": "One caution: all these argument equalities hold only up to a whole multiple of two pi, since the argument is many-valued. If an answer strays out of range, reduce it."
+    },
+    {
+      "seq": 8,
+      "text": "The practical upshot: whenever you multiply or divide complex numbers, add or subtract the arguments and multiply or divide the moduli, instead of grinding through the algebra."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye raha wo idea jo poore chapter ke doosre half ko power deta hai: polar form mein, multiplication rotation aur scaling ka combination hai."
+    },
+    {
+      "seq": 2,
+      "text": "Jab aap do numbers multiply karte ho, moduli multiply hote hain aur arguments add hote hain. To z one times z two ka modulus hai r one times r two, aur argument theta one plus theta two."
+    },
+    {
+      "seq": 3,
+      "text": "Ise ek action ki tarah bolo: modulus r aur argument phi wale number se multiply karna picture ko r se scale karta hai aur phi se rotate karta hai. i se multiply, modulus one aur angle ninety degrees, ek pure quarter-turn hai, bina khinchaav."
+    },
+    {
+      "seq": 4,
+      "text": "Aur ye magic nahi hai. Dono polar forms ko multiply karo, to cosine aur sine ki angle-sum identities khud aa jaati hain, deti hain cosine of theta one plus theta two aur sine of theta one plus theta two."
+    },
+    {
+      "seq": 5,
+      "text": "To argument clean algebra follow karta hai. Product ka argument hai arguments ka sum, aur quotient ka argument hai arguments ka difference."
+    },
+    {
+      "seq": 6,
+      "text": "Aur conjugate ka argument hai minus argument, jo dekhi hui reflection se match karta hai."
+    },
+    {
+      "seq": 7,
+      "text": "Ek caution: ye saari argument equalities sirf two pi ke poore multiple tak hoti hain, kyunki argument many-valued hai. Agar answer range se bahar jaaye, reduce karo."
+    },
+    {
+      "seq": 8,
+      "text": "Practical upshot: jab bhi complex numbers multiply ya divide karo, arguments add ya subtract karo aur moduli multiply ya divide karo, algebra grind karne ke bajaay."
+    }
+  ]
+}

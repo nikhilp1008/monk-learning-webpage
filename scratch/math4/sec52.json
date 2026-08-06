@@ -1,0 +1,160 @@
+{
+  "id": "5755fbd2-def0-474e-94dd-a26461338869",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 52,
+  "section_type": "worked_examples",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "Worked (JEE Advanced): the cubic-sum identity",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "a^3 + b^3 + c^3 - 3abc",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Evaluate for $a=1,\\ b=2,\\ c=3$ using the standard factorization.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca)",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "a+b+c=6",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "a^{2}+b^{2}+c^{2}-ab-bc-ca=14-11=3",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "(6)(3)=18",
+      "emphasis": "high",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "The $\\omega$-factorization gives the same product as three complex linear factors.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Real answer, complex tools — the factors pair up to stay real.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_52.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_52.mp3",
+  "duration_sec_english": 83.35,
+  "duration_sec_hinglish": 75.94,
+  "board_reveal_at_english": [
+    0,
+    7,
+    16.04,
+    29.53,
+    36.61,
+    53.25,
+    58.79,
+    72.53
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.57,
+    16.3,
+    27.99,
+    34.22,
+    49.07,
+    53.33,
+    64.09
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is how the omega factorization delivers a concrete number for the classic cubic-sum expression."
+    },
+    {
+      "seq": 2,
+      "text": "Evaluate a cubed plus b cubed plus c cubed minus three a b c, for a equals one, b equals two, c equals three."
+    },
+    {
+      "seq": 3,
+      "text": "The standard real factorization is a plus b plus c, times a squared plus b squared plus c squared minus a b minus b c minus c a."
+    },
+    {
+      "seq": 4,
+      "text": "The first factor, a plus b plus c, is one plus two plus three, which is six."
+    },
+    {
+      "seq": 5,
+      "text": "The second factor: a squared plus b squared plus c squared is one plus four plus nine, fourteen; and a b plus b c plus c a is two plus six plus three, eleven. Fourteen minus eleven is three."
+    },
+    {
+      "seq": 6,
+      "text": "So the value is six times three, which is eighteen."
+    },
+    {
+      "seq": 7,
+      "text": "The omega version factors the very same expression into three complex linear factors, a plus b plus c, times the two omega-mixtures, and it produces exactly the same product."
+    },
+    {
+      "seq": 8,
+      "text": "That's the elegance: a real answer emerges from complex tools, because the complex factors pair up so that the imaginary parts cancel perfectly."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye raha kaise omega factorization classic cubic-sum expression ke liye ek concrete number deta hai."
+    },
+    {
+      "seq": 2,
+      "text": "Evaluate karo a cubed plus b cubed plus c cubed minus three a b c, a equals one, b equals two, c equals three ke liye."
+    },
+    {
+      "seq": 3,
+      "text": "Standard real factorization hai a plus b plus c, times a squared plus b squared plus c squared minus a b minus b c minus c a."
+    },
+    {
+      "seq": 4,
+      "text": "Pehla factor, a plus b plus c, hai one plus two plus three, jo hai six."
+    },
+    {
+      "seq": 5,
+      "text": "Doosra factor: a squared plus b squared plus c squared hai one plus four plus nine, fourteen; aur a b plus b c plus c a hai two plus six plus three, eleven. Fourteen minus eleven hai three."
+    },
+    {
+      "seq": 6,
+      "text": "To value hai six times three, jo hai eighteen."
+    },
+    {
+      "seq": 7,
+      "text": "Omega version usi expression ko teen complex linear factors mein factor karta hai, a plus b plus c, times do omega-mixtures, aur wo bilkul wahi product deta hai."
+    },
+    {
+      "seq": 8,
+      "text": "Yehi elegance hai: ek real answer complex tools se nikalta hai, kyunki complex factors aise pair up karte hain ki imaginary parts perfectly cancel ho jaate hain."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "7538e10d-d614-4774-bd21-87133fce6578",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 49,
+  "section_type": "worked_examples",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "Worked: Euler form powers and 4th roots of unity",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "A power, and a full set of roots",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Write $z=-1+i$ in Euler form and find $z^{8}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "r=\\sqrt2,\\ \\arg z=\\tfrac{3\\pi}{4}\\ \\Rightarrow\\ z=\\sqrt2\\,e^{i3\\pi/4}",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "z^{8}=(\\sqrt2)^{8}e^{i6\\pi}=16\\,e^{i6\\pi}=16",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Now the four 4th roots of unity: $\\alpha_k=e^{ik\\pi/2}$, $k=0,1,2,3$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "1,\\ i,\\ -1,\\ -i",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Their sum is $1+i-1-i=0$, as the roots-of-unity theorem promises.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Four roots, not one — always $k=0$ to $n-1$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_49.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_49.mp3",
+  "duration_sec_english": 80.02,
+  "duration_sec_hinglish": 78.07,
+  "board_reveal_at_english": [
+    0,
+    6.14,
+    14.08,
+    26.03,
+    40.11,
+    52.48,
+    61.18,
+    70.66
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    5.8,
+    12.97,
+    23.81,
+    38.49,
+    50.43,
+    59.73,
+    68.35
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's exercise Euler form on a power, then list a complete set of roots."
+    },
+    {
+      "seq": 2,
+      "text": "Write z equals minus one plus i in Euler form, then find z to the eighth."
+    },
+    {
+      "seq": 3,
+      "text": "The modulus is root two, and the argument, being in quadrant two, is three pi over four. So z is root two times e to the i three pi over four."
+    },
+    {
+      "seq": 4,
+      "text": "Raise to the eighth: root two to the eighth is sixteen, and the angle becomes eight times three pi over four, which is six pi. e to the i six pi is one, so z to the eighth is just sixteen."
+    },
+    {
+      "seq": 5,
+      "text": "Now the four fourth roots of unity, using the roots-of-unity formula: alpha sub k equals e to the i k pi over two, for k zero, one, two, three."
+    },
+    {
+      "seq": 6,
+      "text": "Stepping k gives one, then i, then minus one, then minus i. A perfect square on the unit circle."
+    },
+    {
+      "seq": 7,
+      "text": "Their sum is one plus i minus one minus i, which is zero, exactly as the roots-of-unity theorem promises."
+    },
+    {
+      "seq": 8,
+      "text": "And note we listed four roots, not one. Always run k from zero to n minus one, and you'll never fall into the root-count trap."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Euler form ko ek power par exercise karte hain, phir ek complete set of roots list karte hain."
+    },
+    {
+      "seq": 2,
+      "text": "z equals minus one plus i ko Euler form mein likho, phir z to the eighth nikaalo."
+    },
+    {
+      "seq": 3,
+      "text": "Modulus hai root two, aur argument, quadrant two mein hone se, three pi over four. To z hai root two times e to the i three pi over four."
+    },
+    {
+      "seq": 4,
+      "text": "Eighth tak raise karo: root two to the eighth hai sixteen, aur angle ban jaata hai eight times three pi over four, jo hai six pi. e to the i six pi hai one, to z to the eighth bas sixteen hai."
+    },
+    {
+      "seq": 5,
+      "text": "Ab chaar fourth roots of unity, roots-of-unity formula se: alpha sub k barabar e to the i k pi over two, k zero, one, two, three ke liye."
+    },
+    {
+      "seq": 6,
+      "text": "k step karne se milta hai one, phir i, phir minus one, phir minus i. Unit circle par ek perfect square."
+    },
+    {
+      "seq": 7,
+      "text": "Unka sum hai one plus i minus one minus i, jo hai zero, bilkul jaisa roots-of-unity theorem promise karta hai."
+    },
+    {
+      "seq": 8,
+      "text": "Aur dhyaan do humne chaar roots list kiye, ek nahi. Hamesha k ko zero se n minus one tak chalao, aur aap kabhi root-count trap mein nahi giroge."
+    }
+  ]
+}

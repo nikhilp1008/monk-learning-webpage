@@ -1,0 +1,161 @@
+{
+  "id": "78264bb7-8218-4f56-91da-2cad2afb22f8",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 61,
+  "section_type": "worked_examples",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "Worked: greatest and least |z| on a circle",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Extremes along the O-z0 line",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$z$ lies on $|z-3-4i|=2$. Find the greatest and least $|z|$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "z_0=3+4i,\\quad |z_0|=\\sqrt{9+16}=5,\\quad r=2",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 280' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='230' r='4' fill='#333'/><text x='24' y='250' font-size='12' fill='#333'>O</text><circle cx='250' cy='110' r='60' fill='none' stroke='#1f6feb' stroke-width='2'/><circle cx='250' cy='110' r='3.5' fill='#1f6feb'/><text x='258' y='108' font-size='12' fill='#1f6feb'>z0</text><line x1='40' y1='230' x2='430' y2='7' stroke='#999' stroke-width='1.2' stroke-dasharray='4 3'/><circle cx='198' cy='140' r='4' fill='#2ea043'/><text x='150' y='160' font-size='11' fill='#2ea043'>nearest |z0|-r</text><circle cx='302' cy='80' r='4' fill='#d29922'/><text x='300' y='70' font-size='11' fill='#d29922'>farthest |z0|+r</text></svg>",
+      "type": "diagram",
+      "caption": "Nearest and farthest points lie on the O-z0 line",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "|z|_{\\max}=|z_0|+r=7,\\qquad |z|_{\\min}=|z_0|-r=3",
+      "emphasis": "high",
+      "reveal_at": 40
+    },
+    {
+      "seq": 6,
+      "text": "The farthest point is beyond the centre; the nearest is on the near side.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 50
+    },
+    {
+      "seq": 7,
+      "text": "No calculus needed — just $|z_0|\\pm r$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 60
+    },
+    {
+      "seq": 8,
+      "text": "Always locate the centre's distance $|z_0|$ first.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 70
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_61.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_61.mp3",
+  "duration_sec_english": 87.46,
+  "duration_sec_hinglish": 79.85,
+  "board_reveal_at_english": [
+    0,
+    7.08,
+    18.26,
+    30.04,
+    40.11,
+    55.3,
+    65.62,
+    76.12
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.25,
+    17.75,
+    29.01,
+    37.12,
+    51.71,
+    61.53,
+    70.57
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "A very common exam question: the greatest and least distance of a point on a circle from the origin."
+    },
+    {
+      "seq": 2,
+      "text": "z lies on the circle modulus of z minus three minus four i equals two. Find the greatest and least values of the modulus of z."
+    },
+    {
+      "seq": 3,
+      "text": "Identify the pieces. The centre is z zero equals three plus four i, whose modulus is root of nine plus sixteen, which is five. The radius is two."
+    },
+    {
+      "seq": 4,
+      "text": "Now the picture. Draw the line from the origin through the centre. The nearest and farthest points of the circle lie exactly on that line."
+    },
+    {
+      "seq": 5,
+      "text": "So the maximum of modulus z is the centre distance plus the radius, five plus two, which is seven. The minimum is the centre distance minus the radius, five minus two, which is three."
+    },
+    {
+      "seq": 6,
+      "text": "Intuitively, the farthest point sits just beyond the centre along that line, and the nearest point sits on the near side of the circle, closest to the origin."
+    },
+    {
+      "seq": 7,
+      "text": "Notice there's no calculus at all. Once you have the centre distance and the radius, the extremes are simply the centre distance plus or minus the radius."
+    },
+    {
+      "seq": 8,
+      "text": "So the very first move on any such problem is to find the distance of the centre from the origin, the modulus of z zero. Everything else follows."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ek bahut common exam question: circle par ke point ki origin se greatest aur least distance."
+    },
+    {
+      "seq": 2,
+      "text": "z circle modulus of z minus three minus four i barabar two par hai. Modulus of z ki greatest aur least values nikaalo."
+    },
+    {
+      "seq": 3,
+      "text": "Pieces identify karo. Centre hai z zero barabar three plus four i, jiska modulus hai nine plus sixteen ka root, jo hai five. Radius hai two."
+    },
+    {
+      "seq": 4,
+      "text": "Ab picture. Origin se centre se hokar line kheencho. Circle ke nearest aur farthest points theek us line par hote hain."
+    },
+    {
+      "seq": 5,
+      "text": "To modulus z ka maximum hai centre distance plus radius, five plus two, jo hai seven. Minimum hai centre distance minus radius, five minus two, jo hai three."
+    },
+    {
+      "seq": 6,
+      "text": "Intuitively, farthest point us line ke saath centre se thoda aage baithta hai, aur nearest point circle ke near side par, origin ke sabse kareeb."
+    },
+    {
+      "seq": 7,
+      "text": "Dhyaan do koi calculus bilkul nahi. Ek baar centre distance aur radius mil gaye, extremes bas centre distance plus or minus radius hain."
+    },
+    {
+      "seq": 8,
+      "text": "To aise kisi bhi problem par pehla move hai centre ki origin se distance nikaalna, modulus of z zero. Baaki sab follow karta hai."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "5550d12a-fc4a-405b-a514-e233d7d7e7a7",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 66,
+  "section_type": "cheat_sheet",
+  "subtopic": null,
+  "title": "Cheat sheet: fast recall before the exam",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Quick-recall cheat sheet",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$i^{4k}=1$; four consecutive powers of $i$ sum to $0$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\sqrt{-a}\\sqrt{-b}=-\\sqrt{ab}\\ (a,b>0);\\quad (1+i)^{2}=2i,\\ (1-i)^{2}=-2i",
+      "emphasis": "normal",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "text": "$\\bar z$ flips imaginary sign; $-z$ flips both. Order undefined on $\\mathbb{C}$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\text{quadrant arg: I}\\!\\to\\!\\alpha,\\ \\text{II}\\!\\to\\!\\pi-\\alpha,\\ \\text{III}\\!\\to\\!\\alpha-\\pi,\\ \\text{IV}\\!\\to\\!-\\alpha",
+      "emphasis": "normal",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "1+i=\\sqrt2\\angle\\tfrac{\\pi}{4},\\ 1+i\\sqrt3=2\\angle\\tfrac{\\pi}{3},\\ \\sqrt3+i=2\\angle\\tfrac{\\pi}{6}",
+      "emphasis": "normal",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "text": "$n$th root: exactly $n$ values. Reduce $\\omega$ powers mod 3.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "Apollonius $k=1$ = line; arg-locus = arc; on a circle $|z|=|z_0|\\pm r$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_66.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_66.mp3",
+  "duration_sec_english": 97.27,
+  "duration_sec_hinglish": 93.77,
+  "board_reveal_at_english": [
+    0,
+    6.4,
+    17.24,
+    32.94,
+    43.01,
+    52.99,
+    68.27,
+    78.42
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.74,
+    17.92,
+    32.6,
+    43.35,
+    54.19,
+    68.18,
+    77.65
+  ],
+  "part": 3,
+  "segments_english": null,
+  "segments_hinglish": null
+}

@@ -1,0 +1,160 @@
+{
+  "id": "848e187f-fb4f-4458-8fe1-523854d0b1ee",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 31,
+  "section_type": "worked_examples",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "Worked: cube roots of unity",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Working with 1, omega, omega^2",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "z^{3}-1=(z-1)(z^{2}+z+1)=0",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "So the roots are $1$ and the two roots of $z^{2}+z+1=0$, namely $\\omega,\\omega^{2}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\omega+\\omega^{2}=-1\\ \\Rightarrow\\ 1+\\omega+\\omega^{2}=0",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Now simplify $(1+\\omega)^{3}$ using $1+\\omega=-\\omega^{2}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "(1+\\omega)^{3}=(-\\omega^{2})^{3}=-\\omega^{6}=-(\\omega^{3})^{2}=-1",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Reduce every $\\omega$ exponent mod 3: $\\omega^{6}=(\\omega^{3})^{2}=1$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "These identities turn ugly $\\omega$-expressions into single numbers.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_31.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_31.mp3",
+  "duration_sec_english": 88.06,
+  "duration_sec_hinglish": 90.6,
+  "board_reveal_at_english": [
+    0,
+    5.72,
+    13.82,
+    25.94,
+    41.64,
+    52.91,
+    66.22,
+    78.08
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.31,
+    14.34,
+    25.94,
+    42.41,
+    52.65,
+    69.03,
+    80.55
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "The cube roots of unity are a workhorse for the harder problems, so let's practise handling them."
+    },
+    {
+      "seq": 2,
+      "text": "Start by factoring z cubed minus one as z minus one, times z squared plus z plus one."
+    },
+    {
+      "seq": 3,
+      "text": "So one root is z equals one, and the other two roots come from z squared plus z plus one equals zero. Those two are exactly omega and omega squared."
+    },
+    {
+      "seq": 4,
+      "text": "From the sum of roots of z squared plus z plus one, omega plus omega squared is minus one. Add one to both sides and you get one plus omega plus omega squared equals zero, the identity we'll lean on."
+    },
+    {
+      "seq": 5,
+      "text": "Now simplify one plus omega, cubed. The key move: since the three sum to zero, one plus omega equals minus omega squared."
+    },
+    {
+      "seq": 6,
+      "text": "So one plus omega cubed is minus omega squared, cubed, which is minus omega to the sixth, which is minus omega cubed squared, and since omega cubed is one, that's minus one."
+    },
+    {
+      "seq": 7,
+      "text": "The habit that makes all of this fast: reduce every exponent of omega modulo three. Omega to the sixth is omega cubed squared, which is one squared, one."
+    },
+    {
+      "seq": 8,
+      "text": "With these two identities, ugly-looking omega expressions collapse into single numbers almost instantly. Reach for them whenever omega appears."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Cube roots of unity harder problems ke liye workhorse hain, to inhe handle karna practise karte hain."
+    },
+    {
+      "seq": 2,
+      "text": "z cubed minus one ko factor karke shuru karo: z minus one, times z squared plus z plus one."
+    },
+    {
+      "seq": 3,
+      "text": "To ek root hai z equals one, aur baaki do roots z squared plus z plus one equals zero se aati hain. Wo do bilkul omega aur omega squared hain."
+    },
+    {
+      "seq": 4,
+      "text": "z squared plus z plus one ke sum of roots se, omega plus omega squared hai minus one. Dono taraf one add karo to milta hai one plus omega plus omega squared equals zero, wahi identity jis par tikenge."
+    },
+    {
+      "seq": 5,
+      "text": "Ab one plus omega, cubed simplify karo. Key move: kyunki teenon ka sum zero hai, one plus omega barabar minus omega squared."
+    },
+    {
+      "seq": 6,
+      "text": "To one plus omega cubed hai minus omega squared, cubed, jo hai minus omega to the sixth, jo hai minus omega cubed squared, aur kyunki omega cubed one hai, wo hai minus one."
+    },
+    {
+      "seq": 7,
+      "text": "Wo aadat jo ye sab fast banati hai: omega ke har exponent ko modulo three reduce karo. Omega to the sixth hai omega cubed squared, jo hai one squared, one."
+    },
+    {
+      "seq": 8,
+      "text": "In do identities ke saath, ugly-looking omega expressions single numbers mein lagbhag turant collapse ho jaati hain. Jab bhi omega dikhe, inhe use karo."
+    }
+  ]
+}

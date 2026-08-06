@@ -1,0 +1,161 @@
+{
+  "id": "5d920fa1-73a2-448a-a03c-994acd06028f",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 35,
+  "section_type": "concept",
+  "subtopic": "Quadratic Equations with Complex Roots",
+  "title": "The conjugate-root theorem (real coefficients only)",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Complex roots travel in mirror-image pairs",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "If a polynomial has real coefficients and $p+iq$ ($q\\neq0$) is a root, so is $p-iq$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "a\\bar z^{2}+b\\bar z+c=\\overline{az^{2}+bz+c}=\\bar 0=0",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "The proof conjugates the whole equation; $\\bar a=a$ etc. because the coefficients are real.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Holds ONLY for real coefficients — with complex ones it fails.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "So with real coefficients you only ever find one complex root; the other is its conjugate.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Change to complex coefficients and the symmetry breaks: roots can be any two numbers.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Assuming conjugate pairs with complex coefficients is the classic conceptual error.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_35.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_35.mp3",
+  "duration_sec_english": 95.38,
+  "duration_sec_hinglish": 96.41,
+  "board_reveal_at_english": [
+    0,
+    8.62,
+    22.44,
+    31.4,
+    49.24,
+    60.33,
+    70.23,
+    81.41
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.59,
+    23.13,
+    30.81,
+    51.8,
+    63.91,
+    73.47,
+    84.31
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "The conjugate-root theorem is the most conceptually important idea in this subtopic, and its condition is easy to forget."
+    },
+    {
+      "seq": 2,
+      "text": "It says: if a quadratic, indeed any polynomial, has real coefficients, and p plus i q is a root with q nonzero, then its mirror image p minus i q is forced to be a root too."
+    },
+    {
+      "seq": 3,
+      "text": "Here's why. Suppose a z squared plus b z plus c is zero at some root. Take the conjugate of the entire equation."
+    },
+    {
+      "seq": 4,
+      "text": "Conjugation distributes over sums and products, and because the coefficients are real, a bar equals a, b bar equals b, c bar equals c. So the conjugated equation reads a z bar squared plus b z bar plus c equals zero, meaning z bar is also a root."
+    },
+    {
+      "seq": 5,
+      "text": "And this is the whole point: the proof used a bar equals a, which is exactly where real coefficients are required. With complex coefficients the theorem simply fails."
+    },
+    {
+      "seq": 6,
+      "text": "The practical upside for real coefficients is lovely: you only ever need to find one complex root. The other one is automatically its conjugate, for free."
+    },
+    {
+      "seq": 7,
+      "text": "But change the coefficients to complex and that symmetry breaks completely. The two roots can be any two complex numbers, with no mirror relationship at all."
+    },
+    {
+      "seq": 8,
+      "text": "So the classic conceptual error, and a favourite exam trap, is assuming roots come in conjugate pairs even when the coefficients are not real. Always check the coefficients first."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Conjugate-root theorem is subtopic ka sabse conceptually important idea hai, aur iski condition bhoolna aasan hai."
+    },
+    {
+      "seq": 2,
+      "text": "Ye kehta hai: agar ek quadratic, dar-asal koi bhi polynomial, ke real coefficients hon, aur p plus i q ek root ho with q nonzero, to iska mirror image p minus i q bhi root hone par majboor hai."
+    },
+    {
+      "seq": 3,
+      "text": "Kyun. Maano a z squared plus b z plus c kisi root par zero hai. Poori equation ka conjugate lo."
+    },
+    {
+      "seq": 4,
+      "text": "Conjugation sums aur products par distribute karti hai, aur kyunki coefficients real hain, a bar barabar a, b bar barabar b, c bar barabar c. To conjugated equation banti hai a z bar squared plus b z bar plus c equals zero, matlab z bar bhi ek root hai."
+    },
+    {
+      "seq": 5,
+      "text": "Aur yehi poora point hai: proof ne a bar barabar a use kiya, jo bilkul wahi jagah hai jahan real coefficients zaroori hain. Complex coefficients ke saath theorem bas fail ho jaata hai."
+    },
+    {
+      "seq": 6,
+      "text": "Real coefficients ke liye practical faayda pyaara hai: aapko sirf ek complex root nikaalna hota hai. Doosra apne aap uska conjugate hai, muft mein."
+    },
+    {
+      "seq": 7,
+      "text": "Par coefficients ko complex banao aur wo symmetry poori tarah toot jaati hai. Do roots koi bhi do complex numbers ho sakte hain, bina kisi mirror relationship ke."
+    },
+    {
+      "seq": 8,
+      "text": "To classic conceptual error, aur favourite exam trap, ye maan lena hai ki roots conjugate pairs mein aate hain chahe coefficients real na hon. Hamesha pehle coefficients check karo."
+    }
+  ]
+}

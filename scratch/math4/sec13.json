@@ -1,0 +1,160 @@
+{
+  "id": "4fb56c1a-869a-4d3d-b5ee-1472899650e4",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 13,
+  "section_type": "concept",
+  "subtopic": "The Modulus and the Conjugate of a Complex Number",
+  "title": "Conjugate properties",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "What the conjugate does to sums and products",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\overline{(\\bar z)}=z,\\quad z+\\bar z=2\\operatorname{Re}(z),\\quad z-\\bar z=2i\\operatorname{Im}(z)",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Adding a number to its conjugate kills the imaginary part; subtracting kills the real part.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "z\\bar z = a^{2}+b^{2}=|z|^{2}",
+      "emphasis": "high",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "text": "Multiplying a number by its mirror image gives a non-negative real — the squared distance.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\overline{z_1 z_2}=\\bar z_1\\,\\bar z_2,\\qquad \\overline{z_1\\pm z_2}=\\bar z_1\\pm\\bar z_2",
+      "emphasis": "normal",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "text": "$\\overline{z_1 z_2}=\\bar z_1\\bar z_2$ — a product, NOT $\\bar z_1+\\bar z_2$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "Likewise the conjugate of a quotient is the quotient of conjugates, and $\\overline{z^{n}}=(\\bar z)^{n}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_13.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_13.mp3",
+  "duration_sec_english": 87.46,
+  "duration_sec_hinglish": 81.74,
+  "board_reveal_at_english": [
+    0,
+    6.74,
+    17.41,
+    29.53,
+    37.72,
+    55.81,
+    65.71,
+    75.35
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.49,
+    18.86,
+    31.91,
+    40.7,
+    54.19,
+    64.09,
+    72.36
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "The conjugate has a small toolkit of properties that make it powerful. Let's walk through them."
+    },
+    {
+      "seq": 2,
+      "text": "First, conjugating twice returns you to z. Adding z and its conjugate gives two times the real part. Subtracting gives two i times the imaginary part."
+    },
+    {
+      "seq": 3,
+      "text": "Read that intuitively: adding a number to its mirror image cancels the up-down parts and leaves twice the horizontal, while subtracting cancels the horizontal and leaves the vertical."
+    },
+    {
+      "seq": 4,
+      "text": "Now the star property: z times z bar equals a squared plus b squared, which is the modulus of z, squared."
+    },
+    {
+      "seq": 5,
+      "text": "This is magical because a complex times its mirror image produces a plain, non-negative real number, exactly the squared distance from the origin. That's the trick behind every division and every proof of realness."
+    },
+    {
+      "seq": 6,
+      "text": "Conjugation also plays nicely with operations: the conjugate of a product is the product of conjugates, and the conjugate of a sum or difference splits across the terms."
+    },
+    {
+      "seq": 7,
+      "text": "Watch the trap here: the conjugate of a product is z one bar times z two bar. It is a product of conjugates, not a sum of them."
+    },
+    {
+      "seq": 8,
+      "text": "And it extends: the conjugate of a quotient is the quotient of the conjugates, and the conjugate of a power is that power of the conjugate."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Conjugate ke paas properties ka ek chhota toolkit hai jo ise powerful banata hai. Chalo inpe chalte hain."
+    },
+    {
+      "seq": 2,
+      "text": "Pehle, do baar conjugate karne se wapas z mil jaata hai. z aur uske conjugate ko add karne se milta hai two times real part. Subtract karne se milta hai two i times imaginary part."
+    },
+    {
+      "seq": 3,
+      "text": "Ise intuitively padho: kisi number ko uske mirror image se add karne par up-down parts cancel ho jaate hain aur twice horizontal bachta hai, jabki subtract karne par horizontal cancel aur vertical bachta hai."
+    },
+    {
+      "seq": 4,
+      "text": "Ab star property: z times z bar barabar a square plus b square, jo hai modulus of z, squared."
+    },
+    {
+      "seq": 5,
+      "text": "Ye magical hai kyunki ek complex apne mirror image se multiply hoke ek plain, non-negative real number banata hai, theek origin se squared distance. Yehi trick hai har division aur har realness proof ke peeche."
+    },
+    {
+      "seq": 6,
+      "text": "Conjugation operations ke saath achhe se chalti hai: product ka conjugate hai conjugates ka product, aur sum ya difference ka conjugate terms par split ho jaata hai."
+    },
+    {
+      "seq": 7,
+      "text": "Yahan trap dekho: product ka conjugate hai z one bar times z two bar. Ye conjugates ka product hai, unka sum nahi."
+    },
+    {
+      "seq": 8,
+      "text": "Aur ye extend hota hai: quotient ka conjugate hai conjugates ka quotient, aur power ka conjugate hai conjugate ki wahi power."
+    }
+  ]
+}

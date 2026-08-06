@@ -1,0 +1,161 @@
+{
+  "id": "ea39838d-2a1c-4528-8576-68ff0c9fb975",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 1,
+  "section_type": "concept",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "Why complex numbers exist, and what i really is",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Why do we need complex numbers?",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$x^2+1=0$ has no real solution: no real number squares to a negative.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Each time an equation refused to solve, we grew the number system — negatives, fractions, then all reals.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "$i$ is a quarter-turn, not a ghost.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 420 260' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='130' x2='390' y2='130' stroke='#555' stroke-width='1.5'/><line x1='210' y1='20' x2='210' y2='240' stroke='#555' stroke-width='1.5'/><text x='378' y='148' font-size='13' fill='#555'>Re</text><text x='218' y='30' font-size='13' fill='#555'>Im</text><line x1='210' y1='130' x2='330' y2='130' stroke='#1f6feb' stroke-width='3'/><polygon points='330,130 320,125 320,135' fill='#1f6feb'/><text x='300' y='150' font-size='12' fill='#1f6feb'>1</text><line x1='210' y1='130' x2='210' y2='40' stroke='#2ea043' stroke-width='3'/><polygon points='210,40 205,50 215,50' fill='#2ea043'/><text x='218' y='60' font-size='12' fill='#2ea043'>i</text><line x1='210' y1='130' x2='95' y2='130' stroke='#d29922' stroke-width='3'/><polygon points='95,130 105,125 105,135' fill='#d29922'/><text x='70' y='150' font-size='12' fill='#d29922'>-1</text><line x1='210' y1='130' x2='210' y2='215' stroke='#8957e5' stroke-width='3'/><polygon points='210,215 205,205 215,205' fill='#8957e5'/><text x='218' y='215' font-size='12' fill='#8957e5'>-i</text><path d='M 285 130 A 75 75 0 0 0 210 55' fill='none' stroke='#999' stroke-width='1.2' stroke-dasharray='4 3'/><text x='268' y='95' font-size='11' fill='#999'>x i (90 deg)</text></svg>",
+      "type": "diagram",
+      "caption": "Multiplying by i rotates 90 degrees anticlockwise",
+      "emphasis": "normal",
+      "reveal_at": 34
+    },
+    {
+      "seq": 6,
+      "text": "Multiply by $i$: turn 90 degrees. Do it twice and you have turned 180 degrees, landing on $-1$ — that is $i^2=-1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 48
+    },
+    {
+      "seq": 7,
+      "text": "Four quarter-turns bring you home, so $i^4=1$ and the powers of $i$ repeat every four steps.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 60
+    },
+    {
+      "seq": 8,
+      "text": "A complex number $z=a+ib$ is an address: real part is east–west, imaginary part is north–south.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 72
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_1.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_1.mp3",
+  "duration_sec_english": 103.66,
+  "duration_sec_hinglish": 95.98,
+  "board_reveal_at_english": [
+    0,
+    5.8,
+    19.71,
+    40.62,
+    51.63,
+    62.81,
+    79.02,
+    89.34
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.28,
+    19.11,
+    38.49,
+    46.51,
+    57.51,
+    71.68,
+    82.69
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's start with the question the whole chapter answers: why invent complex numbers at all?"
+    },
+    {
+      "seq": 2,
+      "text": "Look at x squared plus one equals zero. Over the real numbers this has no solution, because no real number, positive or negative, squares to give something negative."
+    },
+    {
+      "seq": 3,
+      "text": "But this discomfort is old. People once refused to accept that x plus five equals two could be solved, until negatives were allowed. Every time a familiar equation stalls, we enlarge the number system, and complex numbers are the enlargement that finally lets every polynomial have a root."
+    },
+    {
+      "seq": 4,
+      "text": "<curious>Here's the picture that makes i click.</curious> The word imaginary is bad PR. Think of i as a quarter-turn, not some ghost."
+    },
+    {
+      "seq": 5,
+      "text": "Picture a hand pointing right, along the positive real direction. Multiplying by i rotates it ninety degrees anticlockwise, so now it points up."
+    },
+    {
+      "seq": 6,
+      "text": "Multiply by i a second time and you have turned a full one hundred eighty degrees, so the hand now points left, at minus one. That single fact, two quarter-turns making a half-turn, is the entire meaning of i squared equals minus one."
+    },
+    {
+      "seq": 7,
+      "text": "Keep going: four quarter-turns is a full circle back to the start, which is exactly why i to the fourth equals one, and why every power of i just cycles through four values."
+    },
+    {
+      "seq": 8,
+      "text": "Finally, read z equals a plus i b like a city address. The real part a tells you how far east, the imaginary part b tells you how far north. Two numbers pin one point."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Chalo shuru karte hain us sawaal se jiska jawaab poora chapter deta hai: complex numbers invent karne ki zaroorat hi kyun padi?"
+    },
+    {
+      "seq": 2,
+      "text": "Dekho, $x^2+1=0$ — real numbers mein iska koi solution nahi hai, kyunki koi bhi real number square hoke negative nahi banta."
+    },
+    {
+      "seq": 3,
+      "text": "Par ye discomfort purani hai. Pehle log $x+5=2$ ko bhi unsolvable maante the, jab tak negatives accept nahi hue. Jab bhi koi equation atak jaati hai, hum number system ko bada karte hain, aur complex numbers wahi enlargement hain jo har polynomial ko ek root de deta hai."
+    },
+    {
+      "seq": 4,
+      "text": "<curious>Ab wo picture jisse i samajh aata hai.</curious> Naam imaginary thoda galat hai. i ko ek quarter-turn samjho, koi ghost nahi."
+    },
+    {
+      "seq": 5,
+      "text": "Socho ek hand right taraf point kar raha hai, positive real direction mein. i se multiply karo, to wo ninety degrees anticlockwise ghoom jaata hai, ab upar point karta hai."
+    },
+    {
+      "seq": 6,
+      "text": "Doosri baar i se multiply karo, to poore one hundred eighty degrees ghoom gaye, ab hand left taraf hai, yaani minus one par. Yehi baat, do quarter-turns milke half-turn, i squared equals minus one ka poora matlab hai."
+    },
+    {
+      "seq": 7,
+      "text": "Aage badho: chaar quarter-turns matlab poora circle, wapas start par. Isiliye i to the fourth equals one, aur i ki har power sirf chaar values mein cycle karti rehti hai."
+    },
+    {
+      "seq": 8,
+      "text": "Aakhri baat: z equals a plus i b ko ek address ki tarah padho. Real part a batata hai kitna east, imaginary part b batata hai kitna north. Do numbers, ek point fix."
+    }
+  ]
+}

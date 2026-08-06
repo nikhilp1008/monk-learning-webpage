@@ -1,0 +1,161 @@
+{
+  "id": "b9a97d72-0c92-4acd-94d5-add8d71c6a1f",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 12,
+  "section_type": "concept",
+  "subtopic": "The Modulus and the Conjugate of a Complex Number",
+  "title": "The conjugate: a mirror reflection",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "The conjugate reflects across the real axis",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\bar z = a - ib",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Only the sign of the imaginary part flips.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 15
+    },
+    {
+      "seq": 4,
+      "text": "Contrast the additive inverse $-z=-a-ib$: there BOTH signs flip.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 24
+    },
+    {
+      "seq": 5,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 420 300' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='150' x2='390' y2='150' stroke='#555' stroke-width='1.5'/><line x1='150' y1='20' x2='150' y2='280' stroke='#555' stroke-width='1.5'/><text x='378' y='168' font-size='13' fill='#555'>Re</text><text x='158' y='30' font-size='13' fill='#555'>Im</text><line x1='150' y1='150' x2='300' y2='80' stroke='#1f6feb' stroke-width='2.5'/><circle cx='300' cy='80' r='4' fill='#1f6feb'/><text x='308' y='78' font-size='13' fill='#1f6feb'>z = a + ib</text><line x1='150' y1='150' x2='300' y2='220' stroke='#d29922' stroke-width='2.5' stroke-dasharray='5 3'/><circle cx='300' cy='220' r='4' fill='#d29922'/><text x='308' y='226' font-size='13' fill='#d29922'>z-bar = a - ib</text><line x1='300' y1='80' x2='300' y2='220' stroke='#999' stroke-width='1' stroke-dasharray='3 3'/><text x='60' y='120' font-size='12' fill='#1f6feb'>|z|</text><text x='150' y='300' font-size='11' fill='#777'>real axis = the waterline</text></svg>",
+      "type": "diagram",
+      "caption": "z and its conjugate mirror across the real axis",
+      "emphasis": "normal",
+      "reveal_at": 33
+    },
+    {
+      "seq": 6,
+      "text": "A first-quadrant number has its conjugate in the fourth quadrant.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "z=\\bar z \\iff z\\ \\text{is purely real}",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "So $z=\\bar z$ exactly when $z$ sits on the real axis — the waterline.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_12.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_12.mp3",
+  "duration_sec_english": 82.85,
+  "duration_sec_hinglish": 77.98,
+  "board_reveal_at_english": [
+    0,
+    9.05,
+    18.18,
+    26.54,
+    37.97,
+    54.44,
+    63.23,
+    72.19
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.19,
+    16.21,
+    22.7,
+    36.52,
+    50.35,
+    59.14,
+    67.24
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "In the last subtopic the conjugate showed up only as a tool for division. Now we study it as an object in its own right."
+    },
+    {
+      "seq": 2,
+      "text": "The definition is simple. For z equals a plus i b, the conjugate, written z bar, is a minus i b."
+    },
+    {
+      "seq": 3,
+      "text": "Notice: only the sign of the imaginary part flips. The real part a stays exactly as it was."
+    },
+    {
+      "seq": 4,
+      "text": "Contrast this with the additive inverse, minus z, which is minus a minus i b. There both signs flip. Confusing the conjugate with minus z is a classic error."
+    },
+    {
+      "seq": 5,
+      "text": "<curious>Here's the picture.</curious> Imagine a temple beside a still water tank at dawn. The real axis is the waterline. The conjugate is the reflection of z below that waterline, sitting exactly as far below as z sits above."
+    },
+    {
+      "seq": 6,
+      "text": "Because only the vertical coordinate flips, a number in the first quadrant has its conjugate in the fourth quadrant, directly below it."
+    },
+    {
+      "seq": 7,
+      "text": "And here is a clean test: z equals its own conjugate if and only if z is purely real."
+    },
+    {
+      "seq": 8,
+      "text": "That makes sense from the picture: a point equals its reflection only when it lies right on the waterline, the real axis, with no height above or below."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Pichhle subtopic mein conjugate sirf division ke tool ki tarah aaya tha. Ab hum ise ek object ki tarah, apne aap mein, study karte hain."
+    },
+    {
+      "seq": 2,
+      "text": "Definition simple hai. z equals a plus i b ke liye, conjugate, likha z bar, hai a minus i b."
+    },
+    {
+      "seq": 3,
+      "text": "Dhyaan do: sirf imaginary part ka sign flip hota hai. Real part a bilkul waisa hi rehta hai."
+    },
+    {
+      "seq": 4,
+      "text": "Ise additive inverse, minus z, se contrast karo, jo hai minus a minus i b. Wahan dono signs flip hote hain. Conjugate ko minus z se confuse karna ek classic error hai."
+    },
+    {
+      "seq": 5,
+      "text": "<curious>Ye rahi picture.</curious> Socho subah ek shaant paani ke tank ke paas ek mandir. Real axis hai waterline. Conjugate hai z ka reflection us waterline ke neeche, utna hi neeche jitna z upar hai."
+    },
+    {
+      "seq": 6,
+      "text": "Kyunki sirf vertical coordinate flip hota hai, first quadrant ka number apne conjugate ko fourth quadrant mein, theek uske neeche, paata hai."
+    },
+    {
+      "seq": 7,
+      "text": "Aur ye raha ek clean test: z apne hi conjugate ke barabar hai if and only if z purely real ho."
+    },
+    {
+      "seq": 8,
+      "text": "Picture se sense banta hai: ek point apne reflection ke barabar tabhi hota hai jab wo theek waterline par ho, real axis par, bina kisi height ke upar ya neeche."
+    }
+  ]
+}

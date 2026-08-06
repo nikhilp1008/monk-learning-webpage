@@ -1,0 +1,160 @@
+{
+  "id": "77505a35-8ebc-438a-909a-7e42b5677526",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 51,
+  "section_type": "worked_examples",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "Worked (JEE Advanced): a product of omega-terms",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Reduce exponents, then collapse",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Evaluate $(1+\\omega)(1+\\omega^{2})(1+\\omega^{4})(1+\\omega^{8})$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Reduce exponents mod 3: $\\omega^{4}=\\omega$, $\\omega^{8}=\\omega^{2}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "=(1+\\omega)(1+\\omega^{2})(1+\\omega)(1+\\omega^{2})=\\big[(1+\\omega)(1+\\omega^{2})\\big]^{2}",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "(1+\\omega)(1+\\omega^{2})=1+\\omega+\\omega^{2}+\\omega^{3}=0+1=1",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\text{value}=1^{2}=1",
+      "emphasis": "high",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "The step $1+\\omega+\\omega^{2}=0$ does all the work.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Reduce $\\omega$ powers first — that is the whole game.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_51.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_51.mp3",
+  "duration_sec_english": 82.75,
+  "duration_sec_hinglish": 79.44,
+  "board_reveal_at_english": [
+    0,
+    6.66,
+    17.32,
+    29.18,
+    44.54,
+    57.69,
+    62.29,
+    72.96
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7,
+    16.64,
+    27.9,
+    42.92,
+    55.38,
+    59.31,
+    69.63
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "A classic Advanced problem that looks intimidating until you reduce the exponents."
+    },
+    {
+      "seq": 2,
+      "text": "Evaluate one plus omega, times one plus omega squared, times one plus omega to the fourth, times one plus omega to the eighth."
+    },
+    {
+      "seq": 3,
+      "text": "The first move is always the same: reduce every exponent modulo three. Omega to the fourth is omega, and omega to the eighth is omega squared."
+    },
+    {
+      "seq": 4,
+      "text": "So the product becomes one plus omega, times one plus omega squared, times one plus omega, times one plus omega squared. That's the bracket, one plus omega times one plus omega squared, all squared."
+    },
+    {
+      "seq": 5,
+      "text": "Expand that bracket: one plus omega plus omega squared plus omega cubed. The first three sum to zero, and omega cubed is one, so the bracket is just one."
+    },
+    {
+      "seq": 6,
+      "text": "Therefore the value is one squared, which is one."
+    },
+    {
+      "seq": 7,
+      "text": "Notice that the single identity, one plus omega plus omega squared equals zero, did essentially all the work once the exponents were reduced."
+    },
+    {
+      "seq": 8,
+      "text": "So the whole game with omega products is: reduce the powers modulo three first, then let the zero-sum identity collapse everything."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ek classic Advanced problem jo intimidating lagta hai jab tak aap exponents reduce na karo."
+    },
+    {
+      "seq": 2,
+      "text": "Evaluate karo one plus omega, times one plus omega squared, times one plus omega to the fourth, times one plus omega to the eighth."
+    },
+    {
+      "seq": 3,
+      "text": "Pehla move hamesha same hai: har exponent ko modulo three reduce karo. Omega to the fourth hai omega, aur omega to the eighth hai omega squared."
+    },
+    {
+      "seq": 4,
+      "text": "To product ban jaata hai one plus omega, times one plus omega squared, times one plus omega, times one plus omega squared. Wo hai bracket, one plus omega times one plus omega squared, poora squared."
+    },
+    {
+      "seq": 5,
+      "text": "Wo bracket expand karo: one plus omega plus omega squared plus omega cubed. Pehle teen sum hoke zero, aur omega cubed hai one, to bracket bas one hai."
+    },
+    {
+      "seq": 6,
+      "text": "Isliye value hai one squared, jo hai one."
+    },
+    {
+      "seq": 7,
+      "text": "Dhyaan do ki wo single identity, one plus omega plus omega squared barabar zero, ne essentially saara kaam kar diya jaise hi exponents reduce hue."
+    },
+    {
+      "seq": 8,
+      "text": "To omega products ka poora game hai: pehle powers ko modulo three reduce karo, phir zero-sum identity ko sab collapse karne do."
+    }
+  ]
+}

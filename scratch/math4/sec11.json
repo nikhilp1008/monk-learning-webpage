@@ -1,0 +1,162 @@
+{
+  "id": "de53b683-11db-423c-8c3a-9bc0291b050e",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 11,
+  "section_type": "tips",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "Pitfalls & pro-tips: algebra of complex numbers",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Traps to avoid, shortcuts to keep",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Replace $i^2$ with $-1$ immediately — never leave it.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Don't combine roots of negatives directly; strip the $i$ out first.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "$\\operatorname{Im}(z)=b$, not $bi$; and never write $<,>$ between non-real complex numbers.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Always rationalize: multiply by the conjugate so the denominator is real.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "Pro-tip: for $i^n$ only $n\\bmod 4$ matters; any four consecutive powers cancel.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Memorize $(1+i)^2=2i$ and $(1-i)^2=-2i$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "To test purely real or imaginary, clear the denominator first, then see which part must vanish.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_11.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_11.mp3",
+  "duration_sec_english": 93,
+  "duration_sec_hinglish": 92.74,
+  "board_reveal_at_english": [
+    0,
+    7.68,
+    19.54,
+    30.89,
+    43.95,
+    53.85,
+    66.13,
+    79.36
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.08,
+    19.54,
+    32,
+    43.69,
+    53.16,
+    66.05,
+    81.66
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's lock in the traps and shortcuts for this whole subtopic, because clean arithmetic here saves time everywhere later."
+    },
+    {
+      "seq": 2,
+      "text": "Trap one, and the biggest: the moment i squared appears, replace it with minus one. Leaving i squared un-simplified, or worse treating it as plus one, is the most common slip."
+    },
+    {
+      "seq": 3,
+      "text": "Trap two: don't combine two roots of negatives directly. Root minus two times root minus three is not root six. Strip the i out of each first, then multiply."
+    },
+    {
+      "seq": 4,
+      "text": "Trap three: the imaginary part is the real number b, never b i. And you can't order complex numbers, so never write a less-than or greater-than between two non-real ones."
+    },
+    {
+      "seq": 5,
+      "text": "Trap four: always rationalize. Multiply by the conjugate so the denominator becomes real; a complex denominator is not a finished answer."
+    },
+    {
+      "seq": 6,
+      "text": "Now the shortcuts. For any power of i, only the exponent modulo four matters, and any four consecutive powers of i add to zero, which collapses long sums."
+    },
+    {
+      "seq": 7,
+      "text": "<whisper>And a quiet exam secret:</whisper> memorize that one plus i squared is two i, and one minus i squared is minus two i. They shortcut a huge number of power problems."
+    },
+    {
+      "seq": 8,
+      "text": "Last shortcut: to test whether an expression is purely real or purely imaginary, clear the denominator first, then just read off which part is forced to vanish."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Is poore subtopic ke traps aur shortcuts lock kar lete hain, kyunki yahan clean arithmetic aage har jagah time bachati hai."
+    },
+    {
+      "seq": 2,
+      "text": "Trap ek, aur sabse bada: jaise hi i square aaye, use minus one se replace karo. i square ko un-simplified chhodna, ya usse bhi bura plus one maanna, sabse common slip hai."
+    },
+    {
+      "seq": 3,
+      "text": "Trap do: do roots of negatives ko directly combine mat karo. Root minus two times root minus three, root six nahi hai. Pehle har ek se i bahar nikaalo, phir multiply karo."
+    },
+    {
+      "seq": 4,
+      "text": "Trap teen: imaginary part real number b hai, kabhi b i nahi. Aur complex numbers ko order nahi kar sakte, to do non-real ke beech less-than ya greater-than kabhi mat likho."
+    },
+    {
+      "seq": 5,
+      "text": "Trap chaar: hamesha rationalize karo. Conjugate se multiply karo taaki denominator real ban jaaye; complex denominator finished answer nahi hai."
+    },
+    {
+      "seq": 6,
+      "text": "Ab shortcuts. i ki kisi bhi power ke liye sirf exponent modulo four matter karta hai, aur i ki koi bhi four consecutive powers add hoke zero, jo lambe sums collapse karti hai."
+    },
+    {
+      "seq": 7,
+      "text": "<whisper>Aur ek chupa exam secret:</whisper> yaad rakho ki one plus i square hai two i, aur one minus i square hai minus two i. Ye bahut saare power problems shortcut karte hain."
+    },
+    {
+      "seq": 8,
+      "text": "Aakhri shortcut: kisi expression ko purely real ya imaginary test karne ke liye pehle denominator clear karo, phir bas dekho kaun sa part vanish hone par majboor hai."
+    }
+  ]
+}

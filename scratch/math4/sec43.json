@@ -1,0 +1,160 @@
+{
+  "id": "9233769b-81ce-4bdd-8bdf-a29cd32a8624",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 43,
+  "section_type": "concept",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "Euler's formula packages the polar form",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "One symbol for cos + i sin",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "e^{i\\theta}=\\cos\\theta+i\\sin\\theta,\\qquad z=re^{i\\theta}",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "A unit number $e^{i\\theta}$ is just 'the arrow of length 1 pointing at angle $\\theta$'.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "e^{i\\theta_1}e^{i\\theta_2}=e^{i(\\theta_1+\\theta_2)}",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "'Multiplication is rotation' becomes 'multiplication adds exponents'.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "re^{i\\theta}\\ \\text{has conjugate}\\ re^{-i\\theta};\\quad \\frac{1}{re^{i\\theta}}=\\frac{1}{r}e^{-i\\theta}",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\cos\\theta=\\frac{e^{i\\theta}+e^{-i\\theta}}{2},\\qquad \\sin\\theta=\\frac{e^{i\\theta}-e^{-i\\theta}}{2i}",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "This is a JEE extension — beyond strict NCERT Class-11 scope.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_43.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_43.mp3",
+  "duration_sec_english": 92.14,
+  "duration_sec_hinglish": 85.66,
+  "board_reveal_at_english": [
+    0,
+    7.08,
+    20.05,
+    32.85,
+    45.74,
+    55.72,
+    67.33,
+    80.3
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.68,
+    18.94,
+    30.55,
+    41.9,
+    50.94,
+    63.32,
+    74.5
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "<curious>What if that whole polar bracket could be written as a single exponential?</curious> That's exactly what Euler's formula does."
+    },
+    {
+      "seq": 2,
+      "text": "Euler's formula says e to the i theta equals cosine theta plus i sine theta. So any number becomes z equals r times e to the i theta."
+    },
+    {
+      "seq": 3,
+      "text": "Read a unit number, e to the i theta, as simply the arrow of length one pointing at angle theta. The whole polar form collapses into one clean symbol."
+    },
+    {
+      "seq": 4,
+      "text": "And here the geometry becomes literal algebra: e to the i theta one, times e to the i theta two, equals e to the i, theta one plus theta two, by the ordinary exponent rule."
+    },
+    {
+      "seq": 5,
+      "text": "So the slogan from before, multiplication is rotation, upgrades to something even simpler: multiplication just adds exponents."
+    },
+    {
+      "seq": 6,
+      "text": "Two consequences fall out immediately. The conjugate of r e to the i theta is r e to the minus i theta, and its reciprocal is one over r, times e to the minus i theta."
+    },
+    {
+      "seq": 7,
+      "text": "And running Euler backwards gives the inverse relations: cosine theta is e to the i theta plus e to the minus i theta, over two, and sine theta is the difference, over two i."
+    },
+    {
+      "seq": 8,
+      "text": "A quick note on scope: this subtopic is a JEE extension, beyond strict NCERT Class eleven. If you're preparing for boards only, you can treat it lightly."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "<curious>Kya ho agar wo poora polar bracket ek single exponential ki tarah likha ja sake?</curious> Yehi Euler's formula karta hai."
+    },
+    {
+      "seq": 2,
+      "text": "Euler's formula kehta hai e to the i theta barabar cosine theta plus i sine theta. To koi bhi number ban jaata hai z equals r times e to the i theta."
+    },
+    {
+      "seq": 3,
+      "text": "Ek unit number, e to the i theta, ko bas length one wala arrow samjho jo angle theta par point karta hai. Poora polar form ek clean symbol mein collapse ho jaata hai."
+    },
+    {
+      "seq": 4,
+      "text": "Aur yahan geometry literal algebra ban jaati hai: e to the i theta one, times e to the i theta two, barabar e to the i, theta one plus theta two, ordinary exponent rule se."
+    },
+    {
+      "seq": 5,
+      "text": "To pehle wala slogan, multiplication is rotation, aur bhi simple cheez mein upgrade ho jaata hai: multiplication bas exponents add karta hai."
+    },
+    {
+      "seq": 6,
+      "text": "Do consequences turant nikalte hain. r e to the i theta ka conjugate hai r e to the minus i theta, aur iska reciprocal hai one over r, times e to the minus i theta."
+    },
+    {
+      "seq": 7,
+      "text": "Aur Euler ko ulta chalane se inverse relations milte hain: cosine theta hai e to the i theta plus e to the minus i theta, over two, aur sine theta hai difference, over two i."
+    },
+    {
+      "seq": 8,
+      "text": "Scope par ek quick note: ye subtopic JEE extension hai, strict NCERT Class eleven se aage. Agar sirf boards ke liye taiyaari hai, to ise halka le sakte ho."
+    }
+  ]
+}

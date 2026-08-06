@@ -1,0 +1,160 @@
+{
+  "id": "bbb900f7-1cb4-46cf-97cb-3aecedf91a52",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 38,
+  "section_type": "formulas",
+  "subtopic": "Quadratic Equations with Complex Roots",
+  "title": "Quadratic-roots toolkit",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Consolidated: quadratics over C",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "x=\\frac{-b\\pm\\sqrt{D}}{2a},\\qquad D=b^{2}-4ac",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\text{real coeff: } D>0\\ \\text{distinct},\\ D=0\\ \\text{equal},\\ D<0\\ \\text{conjugate pair}",
+      "emphasis": "normal",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "D<0:\\quad x=\\frac{-b\\pm i\\sqrt{4ac-b^{2}}}{2a}",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\alpha+\\beta=-\\frac{b}{a},\\qquad \\alpha\\beta=\\frac{c}{a}",
+      "emphasis": "normal",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "x^{2}-(\\alpha+\\beta)x+\\alpha\\beta=0;\\quad \\text{real from }p+iq:\\ x^{2}-2px+(p^{2}+q^{2})=0",
+      "emphasis": "normal",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\sqrt{a+ib}=\\pm(x+iy):\\ x^{2}=\\tfrac{|z|+a}{2},\\ y^{2}=\\tfrac{|z|-a}{2},\\ \\operatorname{sgn}(xy)=\\operatorname{sgn}(b)",
+      "emphasis": "high",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "The conjugate-root theorem applies to real coefficients only.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_38.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_38.mp3",
+  "duration_sec_english": 93.5,
+  "duration_sec_hinglish": 88.9,
+  "board_reveal_at_english": [
+    0,
+    6.14,
+    16.64,
+    29.01,
+    39.17,
+    47.62,
+    65.79,
+    85.93
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.14,
+    18.35,
+    30.29,
+    40.62,
+    47.45,
+    63.32,
+    81.24
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is the complete quadratic-roots toolkit for the whole subtopic on one board."
+    },
+    {
+      "seq": 2,
+      "text": "The formula: x equals minus b plus or minus root D, over two a, where D is b squared minus four a c."
+    },
+    {
+      "seq": 3,
+      "text": "For real coefficients, the discriminant forecasts the roots: positive means two distinct real, zero means one repeated real, negative means a complex-conjugate pair."
+    },
+    {
+      "seq": 4,
+      "text": "When D is negative, the roots are minus b plus or minus i root of four a c minus b squared, all over two a."
+    },
+    {
+      "seq": 5,
+      "text": "Vieta's relations: the sum of the roots is minus b over a, and the product is c over a."
+    },
+    {
+      "seq": 6,
+      "text": "To build a quadratic from roots, use x squared minus the sum times x plus the product. And for a real quadratic from a complex root p plus i q, it's x squared minus two p x plus p squared plus q squared."
+    },
+    {
+      "seq": 7,
+      "text": "The square root of a complex number: root of a plus i b is plus or minus x plus i y, where x squared is the modulus plus a over two, y squared is the modulus minus a over two, and the sign of the product x y matches the sign of b."
+    },
+    {
+      "seq": 8,
+      "text": "And the boundary line to never forget: the conjugate-root theorem applies to real coefficients only."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye raha poore subtopic ka complete quadratic-roots toolkit ek board par."
+    },
+    {
+      "seq": 2,
+      "text": "Formula: x equals minus b plus or minus root D, over two a, jahan D hai b squared minus four a c."
+    },
+    {
+      "seq": 3,
+      "text": "Real coefficients ke liye, discriminant roots forecast karta hai: positive matlab do distinct real, zero matlab ek repeated real, negative matlab ek complex-conjugate pair."
+    },
+    {
+      "seq": 4,
+      "text": "Jab D negative hai, roots hain minus b plus or minus i root of four a c minus b squared, poora over two a."
+    },
+    {
+      "seq": 5,
+      "text": "Vieta's relations: roots ka sum hai minus b over a, aur product hai c over a."
+    },
+    {
+      "seq": 6,
+      "text": "Roots se quadratic banane ke liye x squared minus sum times x plus product. Aur complex root p plus i q se real quadratic ke liye, wo hai x squared minus two p x plus p squared plus q squared."
+    },
+    {
+      "seq": 7,
+      "text": "Complex number ka square root: root of a plus i b hai plus or minus x plus i y, jahan x squared hai modulus plus a over two, y squared hai modulus minus a over two, aur product x y ka sign b ke sign se match karta hai."
+    },
+    {
+      "seq": 8,
+      "text": "Aur wo boundary line jo kabhi mat bhoolo: conjugate-root theorem sirf real coefficients par apply hota hai."
+    }
+  ]
+}

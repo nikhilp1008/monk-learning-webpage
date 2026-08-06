@@ -1,0 +1,161 @@
+{
+  "id": "8f3b084d-6c09-406a-b78a-5a7c935b397a",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 44,
+  "section_type": "concept",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "Roots live on a circle, equally spaced",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Taking an nth root divides the angle",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "An $n$th root divides the angle by $n$ — but the angle is known only up to $2\\pi$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "So there are $n$ legitimate answers, spaced $\\tfrac{2\\pi}{n}$ apart.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 460 300' xmlns='http://www.w3.org/2000/svg'><circle cx='120' cy='150' r='80' fill='none' stroke='#bbb' stroke-width='1.2'/><line x1='30' y1='150' x2='210' y2='150' stroke='#ddd' stroke-width='1'/><line x1='120' y1='60' x2='120' y2='240' stroke='#ddd' stroke-width='1'/><polygon points='200,150 80,81 80,219' fill='none' stroke='#2ea043' stroke-width='1.6'/><circle cx='200' cy='150' r='4' fill='#2ea043'/><circle cx='80' cy='81' r='4' fill='#2ea043'/><circle cx='80' cy='219' r='4' fill='#2ea043'/><text x='70' y='285' font-size='12' fill='#2ea043'>cube roots (n=3)</text><circle cx='350' cy='150' r='80' fill='none' stroke='#bbb' stroke-width='1.2'/><line x1='260' y1='150' x2='440' y2='150' stroke='#ddd' stroke-width='1'/><line x1='350' y1='60' x2='350' y2='240' stroke='#ddd' stroke-width='1'/><polygon points='430,150 350,70 270,150 350,230' fill='none' stroke='#1f6feb' stroke-width='1.6'/><circle cx='430' cy='150' r='4' fill='#1f6feb'/><circle cx='350' cy='70' r='4' fill='#1f6feb'/><circle cx='270' cy='150' r='4' fill='#1f6feb'/><circle cx='350' cy='230' r='4' fill='#1f6feb'/><text x='300' y='285' font-size='12' fill='#1f6feb'>4th roots (n=4)</text></svg>",
+      "type": "diagram",
+      "caption": "n roots = vertices of a regular n-gon",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "text": "They lie on a circle of radius $r^{1/n}$, forming a regular $n$-gon.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 41
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "z^{n}=r^{n}e^{in\\theta}\\ \\text{(De Moivre, Euler form)}",
+      "emphasis": "normal",
+      "reveal_at": 51
+    },
+    {
+      "seq": 7,
+      "text": "Powers multiply the angle; roots divide it over n branches.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 61
+    },
+    {
+      "seq": 8,
+      "text": "The $n$th roots of unity are that polygon inscribed in the unit circle, one vertex at $1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 71
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_44.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_44.mp3",
+  "duration_sec_english": 79.44,
+  "duration_sec_hinglish": 80.02,
+  "board_reveal_at_english": [
+    0,
+    7.17,
+    15.62,
+    27.82,
+    38.4,
+    45.91,
+    57.69,
+    67.75
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.59,
+    15.7,
+    28.42,
+    38.57,
+    46.34,
+    57.34,
+    68.18
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Euler form makes powers trivial, and it makes roots beautifully geometric. Here is the key picture."
+    },
+    {
+      "seq": 2,
+      "text": "Taking an nth root divides the angle by n. But remember the argument was only ever known up to a full turn, two pi."
+    },
+    {
+      "seq": 3,
+      "text": "That extra freedom is exactly why there are n legitimate answers, not one. They come out equally spaced, two pi over n apart, as you fold in each extra turn."
+    },
+    {
+      "seq": 4,
+      "text": "So the n roots are the vertices of a regular n-gon. The cube roots form an equilateral triangle; the fourth roots form a square."
+    },
+    {
+      "seq": 5,
+      "text": "They all sit on a circle whose radius is the nth root of the original modulus, spread evenly around it."
+    },
+    {
+      "seq": 6,
+      "text": "Contrast this with powers. In Euler form, z to the n is r to the n times e to the i n theta: a single answer, with the angle multiplied by n."
+    },
+    {
+      "seq": 7,
+      "text": "So keep the duality straight: powers multiply the angle and give one number, while roots divide the angle but spread over n branches."
+    },
+    {
+      "seq": 8,
+      "text": "And the special case we keep meeting, the nth roots of unity, is simply that regular polygon inscribed in the unit circle, with one vertex pinned at one."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Euler form powers ko trivial banata hai, aur roots ko khoobsurati se geometric. Ye rahi key picture."
+    },
+    {
+      "seq": 2,
+      "text": "Ek nth root angle ko n se divide karta hai. Par yaad rakho argument sirf ek full turn, two pi, tak hi known tha."
+    },
+    {
+      "seq": 3,
+      "text": "Wahi extra freedom exactly kyun hai ki n legitimate answers hote hain, ek nahi. Wo equally spaced nikalte hain, two pi over n apart, jaise aap har extra turn fold karte ho."
+    },
+    {
+      "seq": 4,
+      "text": "To n roots ek regular n-gon ke vertices hain. Cube roots ek equilateral triangle banate hain; fourth roots ek square."
+    },
+    {
+      "seq": 5,
+      "text": "Wo sab ek circle par baithte hain jiska radius original modulus ka nth root hai, uske around evenly faile hue."
+    },
+    {
+      "seq": 6,
+      "text": "Ise powers se contrast karo. Euler form mein, z to the n hai r to the n times e to the i n theta: ek single answer, angle n se multiply hua."
+    },
+    {
+      "seq": 7,
+      "text": "To duality clear rakho: powers angle ko multiply karke ek number dete hain, jabki roots angle ko divide karte hain par n branches par faile hote hain."
+    },
+    {
+      "seq": 8,
+      "text": "Aur wo special case jo baar baar milta hai, nth roots of unity, bas wahi regular polygon hai unit circle mein inscribed, ek vertex one par pinned."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "dc721c7c-926a-4350-ac14-f44a4687a4bb",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 50,
+  "section_type": "worked_examples",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "Worked: all cube roots of 8i",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "The nth-roots method in full",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Find all cube roots of $8i$. First, $8i=8e^{i\\pi/2}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\rho=8^{1/3}=2;\\quad \\text{angles}=\\frac{\\pi/2+2k\\pi}{3},\\ k=0,1,2",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\text{angles}=\\tfrac{\\pi}{6},\\ \\tfrac{5\\pi}{6},\\ \\tfrac{3\\pi}{2}",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "2\\left(\\cos\\tfrac{\\pi}{6}+i\\sin\\tfrac{\\pi}{6}\\right)=\\sqrt3+i",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "2\\left(\\cos\\tfrac{5\\pi}{6}+i\\sin\\tfrac{5\\pi}{6}\\right)=-\\sqrt3+i",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "2\\left(\\cos\\tfrac{3\\pi}{2}+i\\sin\\tfrac{3\\pi}{2}\\right)=-2i",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Three roots, evenly spaced 120 degrees apart on radius 2.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_50.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_50.mp3",
+  "duration_sec_english": 74.23,
+  "duration_sec_hinglish": 70.9,
+  "board_reveal_at_english": [
+    0,
+    5.97,
+    17.83,
+    30.21,
+    37.21,
+    45.4,
+    53.93,
+    63.06
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    5.46,
+    15.45,
+    27.05,
+    33.79,
+    42.67,
+    51.46,
+    60.16
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's run the full nth-roots method on a clean example: all cube roots of eight i."
+    },
+    {
+      "seq": 2,
+      "text": "First put eight i in Euler form. Its modulus is eight and its argument is pi over two, so eight i is eight times e to the i pi over two."
+    },
+    {
+      "seq": 3,
+      "text": "The radius of the roots is the cube root of eight, which is two. The angles are pi over two plus two k pi, all divided by three, for k equals zero, one, two."
+    },
+    {
+      "seq": 4,
+      "text": "Stepping k gives three angles: pi over six, five pi over six, and three pi over two."
+    },
+    {
+      "seq": 5,
+      "text": "The first root is two times cosine pi over six plus i sine pi over six, which works out to root three plus i."
+    },
+    {
+      "seq": 6,
+      "text": "The second is two times cosine five pi over six plus i sine five pi over six, which is minus root three plus i."
+    },
+    {
+      "seq": 7,
+      "text": "The third is two times cosine three pi over two plus i sine three pi over two, which is minus two i."
+    },
+    {
+      "seq": 8,
+      "text": "So three roots, each on a circle of radius two, evenly spaced one hundred twenty degrees apart. That even spacing is your built-in check that you found them all."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Full nth-roots method ek clean example par chalate hain: eight i ke saare cube roots."
+    },
+    {
+      "seq": 2,
+      "text": "Pehle eight i ko Euler form mein daalo. Iska modulus hai eight aur argument hai pi over two, to eight i hai eight times e to the i pi over two."
+    },
+    {
+      "seq": 3,
+      "text": "Roots ka radius hai eight ka cube root, jo hai two. Angles hain pi over two plus two k pi, poora divided by three, k barabar zero, one, two ke liye."
+    },
+    {
+      "seq": 4,
+      "text": "k step karne se teen angles milte hain: pi over six, five pi over six, aur three pi over two."
+    },
+    {
+      "seq": 5,
+      "text": "Pehla root hai two times cosine pi over six plus i sine pi over six, jo banta hai root three plus i."
+    },
+    {
+      "seq": 6,
+      "text": "Doosra hai two times cosine five pi over six plus i sine five pi over six, jo hai minus root three plus i."
+    },
+    {
+      "seq": 7,
+      "text": "Teesra hai two times cosine three pi over two plus i sine three pi over two, jo hai minus two i."
+    },
+    {
+      "seq": 8,
+      "text": "To teen roots, har ek radius two ke circle par, evenly spaced one hundred twenty degrees apart. Wo even spacing aapka built-in check hai ki aapne sab dhoondh liye."
+    }
+  ]
+}

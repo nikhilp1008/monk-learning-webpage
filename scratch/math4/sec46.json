@@ -1,0 +1,160 @@
+{
+  "id": "4c5ead70-a1eb-480a-a92b-fc5c2514fd26",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 46,
+  "section_type": "concept",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "nth roots of unity and the cube-root workhorse",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Roots of unity: a regular n-gon",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\alpha_k=e^{2\\pi i k/n}=\\cos\\tfrac{2k\\pi}{n}+i\\sin\\tfrac{2k\\pi}{n},\\ k=0,\\dots,n-1",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Writing $\\alpha=e^{2\\pi i/n}$, the roots are $1,\\alpha,\\alpha^{2},\\dots,\\alpha^{n-1}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "1+\\alpha+\\alpha^{2}+\\cdots+\\alpha^{n-1}=0\\quad(n\\ge2)",
+      "emphasis": "high",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "text": "Proof: a geometric series with ratio $\\alpha\\neq1$ and $\\alpha^{n}=1$ sums to zero.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\omega=e^{2\\pi i/3}=-\\tfrac{1}{2}+\\tfrac{\\sqrt3}{2}i,\\quad \\omega^{2}=\\bar\\omega,\\quad \\omega^{3}=1",
+      "emphasis": "high",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "1+\\omega+\\omega^{2}=0,\\qquad \\omega^{n}=\\omega^{\\,n\\bmod 3}",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "Always reduce an $\\omega$ exponent mod 3.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_46.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_46.mp3",
+  "duration_sec_english": 104.69,
+  "duration_sec_hinglish": 92.5,
+  "board_reveal_at_english": [
+    0,
+    9.3,
+    23.13,
+    37.55,
+    45.14,
+    62.98,
+    81.07,
+    92.07
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.42,
+    21.25,
+    35.07,
+    41.13,
+    55.98,
+    70.66,
+    81.07
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Set z equal to one in the roots formula and you get the nth roots of unity, the most useful special case of all."
+    },
+    {
+      "seq": 2,
+      "text": "They are alpha sub k equals e to the two pi i k over n, which is cosine of two k pi over n plus i sine of the same, for k from zero to n minus one."
+    },
+    {
+      "seq": 3,
+      "text": "Write alpha as e to the two pi i over n. Then the full set of roots is simply one, alpha, alpha squared, and so on up to alpha to the n minus one, the powers of a single root."
+    },
+    {
+      "seq": 4,
+      "text": "A key identity: for n at least two, the sum of all n roots of unity is zero."
+    },
+    {
+      "seq": 5,
+      "text": "The proof is a one-liner. The roots form a geometric series with common ratio alpha, and since alpha to the n is one but alpha itself is not one, the series sums to zero. Geometrically, the equally spaced arrows cancel."
+    },
+    {
+      "seq": 6,
+      "text": "The workhorse case is n equals three. The non-real cube root omega is e to the two pi i over three, which is minus one half plus root three over two i. And omega squared is its conjugate, with omega cubed equal to one."
+    },
+    {
+      "seq": 7,
+      "text": "Two facts to keep in muscle memory: one plus omega plus omega squared is zero, and omega to any power equals omega to that power reduced modulo three."
+    },
+    {
+      "seq": 8,
+      "text": "So whenever you see a high power of omega, immediately reduce the exponent mod three. Omega to the hundred is omega to the one, because one hundred leaves remainder one."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Roots formula mein z ko one ke barabar set karo aur milte hain nth roots of unity, sabse useful special case."
+    },
+    {
+      "seq": 2,
+      "text": "Wo hain alpha sub k barabar e to the two pi i k over n, jo hai cosine of two k pi over n plus i sine of the same, k zero se n minus one tak."
+    },
+    {
+      "seq": 3,
+      "text": "alpha ko e to the two pi i over n likho. To roots ka poora set bas hai one, alpha, alpha squared, aur aise hi alpha to the n minus one tak, ek single root ki powers."
+    },
+    {
+      "seq": 4,
+      "text": "Ek key identity: n at least two ke liye, saare n roots of unity ka sum zero hai."
+    },
+    {
+      "seq": 5,
+      "text": "Proof ek line ka hai. Roots ek geometric series banate hain common ratio alpha ke saath, aur kyunki alpha to the n one hai par alpha khud one nahi, series zero ban jaati hai. Geometrically, equally spaced arrows cancel ho jaate hain."
+    },
+    {
+      "seq": 6,
+      "text": "Workhorse case hai n barabar three. Non-real cube root omega hai e to the two pi i over three, jo hai minus one half plus root three over two i. Aur omega squared iska conjugate hai, omega cubed barabar one ke saath."
+    },
+    {
+      "seq": 7,
+      "text": "Do facts muscle memory mein rakho: one plus omega plus omega squared zero hai, aur omega ki koi bhi power barabar omega ki wo power modulo three reduce ki hui."
+    },
+    {
+      "seq": 8,
+      "text": "To jab bhi omega ki high power dikhe, turant exponent ko mod three reduce karo. Omega to the hundred hai omega to the one, kyunki one hundred remainder one deta hai."
+    }
+  ]
+}

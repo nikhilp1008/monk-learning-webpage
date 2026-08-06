@@ -1,0 +1,161 @@
+{
+  "id": "bee2fb0a-2a09-4f4b-9d88-b8aafaeb8777",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 4,
+  "section_type": "concept",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "Anatomy of a complex number",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "z = a + ib: real and imaginary parts",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "z=a+ib,\\qquad a,b\\in\\mathbb{R}",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "$a=\\operatorname{Re}(z)$ is the real part; $b=\\operatorname{Im}(z)$ is the imaginary part.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "$\\operatorname{Im}(z)=b$, a real number — not $ib$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "$z$ is purely real if $b=0$; purely imaginary if $a=0$ and $b\\neq 0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\mathbb{N}\\subset\\mathbb{W}\\subset\\mathbb{Z}\\subset\\mathbb{Q}\\subset\\mathbb{R}\\subset\\mathbb{C}",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Order is undefined on $\\mathbb{C}$: '$9+6i>3+2i$' is meaningless.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "You may compare real numbers, and compare moduli, but never two non-real complex numbers with $<$ or $>$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_4.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_4.mp3",
+  "duration_sec_english": 97.51,
+  "duration_sec_hinglish": 86.93,
+  "board_reveal_at_english": [
+    0,
+    10.24,
+    23.81,
+    32.77,
+    45.99,
+    55.64,
+    73.13,
+    85.59
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.53,
+    18.69,
+    27.14,
+    37.63,
+    46.42,
+    63.32,
+    73.81
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's pin down the anatomy of a complex number precisely, because small definitional slips here cascade into every later subtopic."
+    },
+    {
+      "seq": 2,
+      "text": "The standard form is z equals a plus i b, where both a and b are real numbers. That's the crucial part: a and b themselves live on the real line."
+    },
+    {
+      "seq": 3,
+      "text": "We call a the real part, written Re of z, and b the imaginary part, written Im of z."
+    },
+    {
+      "seq": 4,
+      "text": "Now the classic trap. The imaginary part of z is b, a plain real number. It is not i b. The i is not part of the imaginary part; only the coefficient b is."
+    },
+    {
+      "seq": 5,
+      "text": "Two special cases: z is purely real when b is zero, and purely imaginary when a is zero but b is not zero."
+    },
+    {
+      "seq": 6,
+      "text": "And complex numbers sit at the top of the whole nesting: naturals inside wholes inside integers inside rationals inside reals inside complex. Every real number is already a complex number with b equal to zero."
+    },
+    {
+      "seq": 7,
+      "text": "One more crucial fact. Order does not exist on the complex numbers. Writing nine plus six i is greater than three plus two i is simply meaningless."
+    },
+    {
+      "seq": 8,
+      "text": "You can compare two real numbers, and you can compare their moduli, which are real. But you can never put a less-than or greater-than between two non-real complex numbers."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Complex number ki anatomy ko theek se pin karte hain, kyunki yahan chhoti definitional galtiyan har baad wale subtopic mein cascade karti hain."
+    },
+    {
+      "seq": 2,
+      "text": "Standard form hai z equals a plus i b, jahan a aur b dono real numbers hain. Yehi crucial baat hai: a aur b khud real line par rehte hain."
+    },
+    {
+      "seq": 3,
+      "text": "a ko hum real part kehte hain, likha Re of z, aur b ko imaginary part, likha Im of z."
+    },
+    {
+      "seq": 4,
+      "text": "Ab classic trap. z ka imaginary part hai b, ek plain real number. Ye i b nahi hai. i imaginary part ka hissa nahi hai; sirf coefficient b hai."
+    },
+    {
+      "seq": 5,
+      "text": "Do special cases: z purely real hai jab b zero ho, aur purely imaginary jab a zero ho par b zero na ho."
+    },
+    {
+      "seq": 6,
+      "text": "Aur complex numbers poore nesting ke top par baithte hain: naturals inside wholes inside integers inside rationals inside reals inside complex. Har real number pehle se hi ek complex number hai jiska b zero hai."
+    },
+    {
+      "seq": 7,
+      "text": "Ek aur crucial fact. Complex numbers par order exist hi nahi karta. Nine plus six i is greater than three plus two i likhna bilkul meaningless hai."
+    },
+    {
+      "seq": 8,
+      "text": "Aap do real numbers compare kar sakte ho, aur unke moduli compare kar sakte ho, jo real hain. Par do non-real complex numbers ke beech less-than ya greater-than kabhi nahi laga sakte."
+    }
+  ]
+}

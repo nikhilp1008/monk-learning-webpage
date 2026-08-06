@@ -1,0 +1,160 @@
+{
+  "id": "032eebe9-9409-4bbe-bd99-5621e1b29d56",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 45,
+  "section_type": "concept",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "The nth roots formula",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "All n roots of a complex number",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Solve $w^{n}=z=re^{i\\theta}$: match modulus and argument.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "w_k=r^{1/n}e^{\\,i(\\theta+2k\\pi)/n},\\quad k=0,1,\\dots,n-1",
+      "emphasis": "high",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "text": "Equivalently $r^{1/n}\\left[\\cos\\tfrac{\\theta+2k\\pi}{n}+i\\sin\\tfrac{\\theta+2k\\pi}{n}\\right]$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "text": "Exactly n roots, from k = 0 to n-1. Fewer is the root-count error.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "text": "Using $k\\ge n$ just repeats roots already found.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "text": "Method: (1) put $z$ in Euler form, (2) take $r^{1/n}$, (3) list the $n$ angles, (4) convert back if needed.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "The proof: $\\rho^{n}e^{in\\phi}=re^{i\\theta}$ forces $\\rho=r^{1/n}$ and $n\\phi=\\theta+2k\\pi$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_45.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_45.mp3",
+  "duration_sec_english": 105.62,
+  "duration_sec_hinglish": 90.26,
+  "board_reveal_at_english": [
+    0,
+    7.08,
+    20.82,
+    34.9,
+    46.59,
+    59.99,
+    68.95,
+    82.43
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    5.8,
+    18.86,
+    32.26,
+    41.81,
+    51.2,
+    60.16,
+    73.64
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Now the workhorse formula of this subtopic: finding every nth root of a complex number."
+    },
+    {
+      "seq": 2,
+      "text": "We want all w with w to the n equal to z, where z is r e to the i theta. Match moduli and match arguments, remembering the argument is only fixed up to two pi."
+    },
+    {
+      "seq": 3,
+      "text": "The result is: w sub k equals r to the one over n, times e to the i, theta plus two k pi, over n, for k running from zero up to n minus one."
+    },
+    {
+      "seq": 4,
+      "text": "In trig form that's r to the one over n, times cosine of theta plus two k pi over n, plus i sine of the same angle."
+    },
+    {
+      "seq": 5,
+      "text": "The crucial counting rule: there are exactly n roots, given by k from zero to n minus one. Reporting fewer than n is the root-count error, the signature trap here."
+    },
+    {
+      "seq": 6,
+      "text": "And you don't get extra roots by pushing k to n or beyond; those just repeat roots you already listed. Stop at n minus one."
+    },
+    {
+      "seq": 7,
+      "text": "The method is four steps. Put z in Euler form. Take the nth root of the modulus. List the n angles by stepping k. Convert back to a plus i b form only if the question asks."
+    },
+    {
+      "seq": 8,
+      "text": "The proof is short: write w as rho e to the i phi. Then rho to the n e to the i n phi equals r e to the i theta forces rho to be r to the one over n, and n phi to be theta plus two k pi. Dividing gives the n angles."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ab is subtopic ka workhorse formula: kisi complex number ka har nth root nikaalna."
+    },
+    {
+      "seq": 2,
+      "text": "Humein saare w chahiye with w to the n barabar z, jahan z hai r e to the i theta. Moduli match karo aur arguments match karo, yaad rakhte hue ki argument sirf two pi tak fixed hai."
+    },
+    {
+      "seq": 3,
+      "text": "Result hai: w sub k barabar r to the one over n, times e to the i, theta plus two k pi, over n, k zero se n minus one tak."
+    },
+    {
+      "seq": 4,
+      "text": "Trig form mein wo hai r to the one over n, times cosine of theta plus two k pi over n, plus i sine of the same angle."
+    },
+    {
+      "seq": 5,
+      "text": "Crucial counting rule: theek n roots hote hain, k zero se n minus one tak. n se kam report karna root-count error hai, yahan ka signature trap."
+    },
+    {
+      "seq": 6,
+      "text": "Aur k ko n ya usse aage push karke extra roots nahi milte; wo bas pehle listed roots repeat karte hain. n minus one par ruko."
+    },
+    {
+      "seq": 7,
+      "text": "Method chaar steps hai. z ko Euler form mein daalo. Modulus ka nth root lo. k ko step karke n angles list karo. a plus i b form mein wapas sirf tab convert karo jab question maange."
+    },
+    {
+      "seq": 8,
+      "text": "Proof chhota hai: w ko rho e to the i phi likho. To rho to the n e to the i n phi barabar r e to the i theta majboor karta hai rho ko r to the one over n, aur n phi ko theta plus two k pi. Divide karke n angles milte hain."
+    }
+  ]
+}

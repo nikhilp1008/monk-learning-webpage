@@ -1,0 +1,159 @@
+{
+  "id": "eb7132fd-2729-4bc7-88f8-af624eddcf1d",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 48,
+  "section_type": "formulas",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "Euler, De Moivre and roots toolkit",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Consolidated: exponential form",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "e^{i\\theta}=\\cos\\theta+i\\sin\\theta,\\qquad z=re^{i\\theta}",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\cos\\theta=\\frac{e^{i\\theta}+e^{-i\\theta}}{2},\\quad \\sin\\theta=\\frac{e^{i\\theta}-e^{-i\\theta}}{2i}",
+      "emphasis": "normal",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "z^{n}=r^{n}e^{in\\theta}=r^{n}(\\cos n\\theta+i\\sin n\\theta)",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "w_k=r^{1/n}e^{\\,i(\\theta+2k\\pi)/n},\\ k=0,\\dots,n-1\\ (\\text{exactly }n)",
+      "emphasis": "high",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\text{unity: }1,\\alpha,\\dots,\\alpha^{n-1},\\ \\alpha=e^{2\\pi i/n};\\ \\text{sum}=0",
+      "emphasis": "normal",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "1,\\omega,\\omega^{2};\\ \\omega^{3}=1;\\ 1+\\omega+\\omega^{2}=0;\\ \\omega^{2}=\\bar\\omega",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "type": "formula",
+      "latex": "a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a+b\\omega+c\\omega^{2})(a+b\\omega^{2}+c\\omega)",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_48.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_48.mp3",
+  "duration_sec_english": 97.18,
+  "duration_sec_hinglish": 89.83,
+  "board_reveal_at_english": [
+    0,
+    6.74,
+    16.9,
+    28.5,
+    42.75,
+    57.17,
+    71.34,
+    82.94
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.17,
+    18.18,
+    29.61,
+    43.43,
+    55.04,
+    65.54,
+    75.52
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is the exponential-form toolkit, all on one board, restated for quick recall."
+    },
+    {
+      "seq": 2,
+      "text": "Euler's formula: e to the i theta equals cosine theta plus i sine theta, and any number is r times e to the i theta."
+    },
+    {
+      "seq": 3,
+      "text": "The inverse relations express the trig functions back: cosine theta as the sum of e to the plus and minus i theta over two, and sine theta as the difference over two i."
+    },
+    {
+      "seq": 4,
+      "text": "De Moivre for powers: z to the n equals r to the n times e to the i n theta, equivalently r to the n times cosine n theta plus i sine n theta."
+    },
+    {
+      "seq": 5,
+      "text": "The roots formula: w sub k equals r to the one over n times e to the i, theta plus two k pi, over n, for k from zero to n minus one, giving exactly n roots."
+    },
+    {
+      "seq": 6,
+      "text": "The roots of unity: one, alpha, up to alpha to the n minus one, with alpha equal to e to the two pi i over n, and they sum to zero."
+    },
+    {
+      "seq": 7,
+      "text": "The cube roots of unity: one, omega, omega squared, with omega cubed one, their sum zero, and omega squared equal to the conjugate of omega."
+    },
+    {
+      "seq": 8,
+      "text": "And the cubic-sum factorization: a cubed plus b cubed plus c cubed minus three a b c equals a plus b plus c, times the two omega-factors. Keep this whole board as your quick reference."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye raha exponential-form toolkit, sab ek board par, quick recall ke liye restate kiya hua."
+    },
+    {
+      "seq": 2,
+      "text": "Euler's formula: e to the i theta barabar cosine theta plus i sine theta, aur koi bhi number hai r times e to the i theta."
+    },
+    {
+      "seq": 3,
+      "text": "Inverse relations trig functions ko wapas express karte hain: cosine theta as e to the plus aur minus i theta ka sum over two, aur sine theta as difference over two i."
+    },
+    {
+      "seq": 4,
+      "text": "Powers ke liye De Moivre: z to the n barabar r to the n times e to the i n theta, equivalently r to the n times cosine n theta plus i sine n theta."
+    },
+    {
+      "seq": 5,
+      "text": "Roots formula: w sub k barabar r to the one over n times e to the i, theta plus two k pi, over n, k zero se n minus one tak, theek n roots dete hue."
+    },
+    {
+      "seq": 6,
+      "text": "Roots of unity: one, alpha, up to alpha to the n minus one, alpha barabar e to the two pi i over n, aur wo sum hoke zero."
+    },
+    {
+      "seq": 7,
+      "text": "Cube roots of unity: one, omega, omega squared, omega cubed one, unka sum zero, aur omega squared barabar omega ka conjugate."
+    },
+    {
+      "seq": 8,
+      "text": "Aur cubic-sum factorization: a cubed plus b cubed plus c cubed minus three a b c barabar a plus b plus c, times do omega-factors. Is poore board ko apna quick reference rakho."
+    }
+  ]
+}

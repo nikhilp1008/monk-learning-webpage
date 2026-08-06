@@ -1,0 +1,160 @@
+{
+  "id": "bafed52d-11c6-4bda-9958-590f52a5e231",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 36,
+  "section_type": "concept",
+  "subtopic": "Quadratic Equations with Complex Roots",
+  "title": "Vieta's relations and building a quadratic",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Roots and coefficients: Vieta",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\alpha+\\beta=-\\frac{b}{a},\\qquad \\alpha\\beta=\\frac{c}{a}",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Mind the minus sign on the sum: $\\alpha+\\beta=-b/a$, not $+b/a$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "x^{2}-(\\alpha+\\beta)x+\\alpha\\beta=0",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "To build a quadratic: $x^{2}-(\\text{sum})x+(\\text{product})=0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "From a real quadratic's complex root $p+iq$: the other is $p-iq$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\text{sum}=2p,\\quad \\text{product}=p^{2}+q^{2}\\ \\Rightarrow\\ x^{2}-2px+(p^{2}+q^{2})=0",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "A neat, fully real quadratic falls straight out of a single complex root.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_36.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_36.mp3",
+  "duration_sec_english": 89.42,
+  "duration_sec_hinglish": 85.22,
+  "board_reveal_at_english": [
+    0,
+    8.7,
+    21.25,
+    31.4,
+    40.96,
+    53.25,
+    65.02,
+    79.7
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    10.33,
+    22.1,
+    31.66,
+    40.53,
+    51.29,
+    61.95,
+    74.24
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Vieta's relations connect the roots of a quadratic directly to its coefficients, and they're the backbone of most root-manipulation problems."
+    },
+    {
+      "seq": 2,
+      "text": "If alpha and beta are the roots of a x squared plus b x plus c equals zero, then their sum is minus b over a, and their product is c over a."
+    },
+    {
+      "seq": 3,
+      "text": "Watch the sign carefully. The sum of the roots is minus b over a, with a minus sign. Dropping that minus is a common and costly slip."
+    },
+    {
+      "seq": 4,
+      "text": "Reverse the idea to build a quadratic from known roots: x squared minus the sum times x, plus the product, equals zero."
+    },
+    {
+      "seq": 5,
+      "text": "In words, that's x squared, minus the sum of the roots times x, plus the product of the roots. Two numbers, and the quadratic writes itself."
+    },
+    {
+      "seq": 6,
+      "text": "Now combine this with the conjugate-root theorem. If you want a real quadratic with a complex root p plus i q, the other root must be p minus i q."
+    },
+    {
+      "seq": 7,
+      "text": "Their sum is two p, and their product is p squared plus q squared. So the quadratic is x squared minus two p x, plus p squared plus q squared, equals zero."
+    },
+    {
+      "seq": 8,
+      "text": "Notice the result is fully real, as it must be, and it fell straight out of a single complex root. That's the standard route in exam problems."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Vieta's relations quadratic ke roots ko seedhe uske coefficients se jodti hain, aur ye zyaadatar root-manipulation problems ki backbone hain."
+    },
+    {
+      "seq": 2,
+      "text": "Agar alpha aur beta a x squared plus b x plus c equals zero ke roots hain, to unka sum hai minus b over a, aur unka product hai c over a."
+    },
+    {
+      "seq": 3,
+      "text": "Sign dhyaan se dekho. Roots ka sum hai minus b over a, minus sign ke saath. Wo minus chhodna ek common aur mehenga slip hai."
+    },
+    {
+      "seq": 4,
+      "text": "Idea ulta karo known roots se quadratic banane ke liye: x squared minus sum times x, plus product, equals zero."
+    },
+    {
+      "seq": 5,
+      "text": "Shabdon mein, wo hai x squared, minus roots ke sum times x, plus roots ka product. Do numbers, aur quadratic khud likh jaati hai."
+    },
+    {
+      "seq": 6,
+      "text": "Ab ise conjugate-root theorem ke saath combine karo. Agar aapko p plus i q complex root wali real quadratic chahiye, to doosra root p minus i q hona chahiye."
+    },
+    {
+      "seq": 7,
+      "text": "Unka sum hai two p, aur product hai p squared plus q squared. To quadratic hai x squared minus two p x, plus p squared plus q squared, equals zero."
+    },
+    {
+      "seq": 8,
+      "text": "Dhyaan do result poori tarah real hai, jaisa hona chahiye, aur ye ek single complex root se seedha nikal aaya. Ye exam problems mein standard route hai."
+    }
+  ]
+}

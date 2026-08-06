@@ -1,0 +1,161 @@
+{
+  "id": "6de30027-e3ed-42c0-9827-d9147bd8858c",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 57,
+  "section_type": "concept",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "Circles and the Apollonius locus",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Circles, and the k=1 vs k!=1 split",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "|z-z_0|=r\\quad(\\text{centre } z_0,\\ \\text{radius } r)",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 280' xmlns='http://www.w3.org/2000/svg'><circle cx='250' cy='140' r='75' fill='none' stroke='#1f6feb' stroke-width='2'/><circle cx='250' cy='140' r='3.5' fill='#1f6feb'/><text x='258' y='138' font-size='12' fill='#1f6feb'>z0</text><line x1='250' y1='140' x2='321' y2='118' stroke='#999' stroke-width='1.4' stroke-dasharray='4 3'/><text x='278' y='120' font-size='12' fill='#999'>r</text><text x='195' y='40' font-size='12' fill='#1f6feb'>|z - z0| = r</text><line x1='40' y1='60' x2='120' y2='220' stroke='#2ea043' stroke-width='2'/><text x='30' y='245' font-size='12' fill='#2ea043'>|z-z1|=|z-z2|: line</text></svg>",
+      "type": "diagram",
+      "caption": "A circle, and a perpendicular-bisector line",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "z\\bar z+\\bar a z+a\\bar z+b=0\\ (a\\in\\mathbb{C},b\\in\\mathbb{R}),\\ \\text{centre }-a,\\ \\text{radius }\\sqrt{|a|^{2}-b}",
+      "emphasis": "normal",
+      "reveal_at": 30
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\frac{|z-z_1|}{|z-z_2|}=k",
+      "emphasis": "normal",
+      "reveal_at": 40
+    },
+    {
+      "seq": 6,
+      "text": "$k=1$: perpendicular bisector (a LINE), not a circle.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 50
+    },
+    {
+      "seq": 7,
+      "text": "$k>0,\\ k\\neq1$: an Apollonius circle.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 60
+    },
+    {
+      "seq": 8,
+      "text": "Proof idea: expand with $|w|^{2}=w\\bar w$; the $z\\bar z$ term survives only when $k\\neq1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 70
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_57.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_57.mp3",
+  "duration_sec_english": 89.66,
+  "duration_sec_hinglish": 87.46,
+  "board_reveal_at_english": [
+    0,
+    6.49,
+    17.07,
+    26.28,
+    46.17,
+    57,
+    66.65,
+    74.33
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.34,
+    18.35,
+    27.48,
+    45.74,
+    56.92,
+    65.71,
+    71.77
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Circles are the other fundamental locus, and the Apollonius condition is where a subtle trap hides."
+    },
+    {
+      "seq": 2,
+      "text": "The cleanest circle is modulus of z minus z zero equals r: all points at fixed distance r from the centre z zero. That reads straight off as a circle."
+    },
+    {
+      "seq": 3,
+      "text": "The picture shows both loci: a circle of radius r about its centre, and, for contrast, a perpendicular-bisector line."
+    },
+    {
+      "seq": 4,
+      "text": "In general form, a circle is z z bar plus a bar z plus a z bar plus b equals zero, with a complex and b real, having centre minus a and radius root of the modulus of a squared minus b."
+    },
+    {
+      "seq": 5,
+      "text": "Now the Apollonius locus: the set where the ratio of distances, modulus of z minus z one over modulus of z minus z two, equals a constant k."
+    },
+    {
+      "seq": 6,
+      "text": "Here's the trap. When k equals one, the two distances are equal, so this is the perpendicular bisector, a straight line, not a circle."
+    },
+    {
+      "seq": 7,
+      "text": "But when k is positive and not equal to one, the locus really is a circle, the Apollonius circle."
+    },
+    {
+      "seq": 8,
+      "text": "The proof idea: square the condition and expand using modulus w squared equals w times w bar. The z z bar term survives only when k is not one; at k equal one it cancels, leaving a line."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Circles doosra fundamental locus hain, aur Apollonius condition wahan hai jahan ek subtle trap chhupa hai."
+    },
+    {
+      "seq": 2,
+      "text": "Sabse clean circle hai modulus of z minus z zero barabar r: saare points jo centre z zero se fixed distance r par hain. Ye seedha circle padha jaata hai."
+    },
+    {
+      "seq": 3,
+      "text": "Picture dono loci dikhati hai: apne centre ke around radius r ka circle, aur contrast ke liye, ek perpendicular-bisector line."
+    },
+    {
+      "seq": 4,
+      "text": "General form mein, circle hai z z bar plus a bar z plus a z bar plus b barabar zero, a complex aur b real ke saath, jiska centre hai minus a aur radius hai modulus of a squared minus b ka root."
+    },
+    {
+      "seq": 5,
+      "text": "Ab Apollonius locus: wo set jahan distances ka ratio, modulus of z minus z one over modulus of z minus z two, ek constant k ke barabar ho."
+    },
+    {
+      "seq": 6,
+      "text": "Ye raha trap. Jab k barabar one ho, dono distances equal hain, to ye perpendicular bisector hai, ek straight line, circle nahi."
+    },
+    {
+      "seq": 7,
+      "text": "Par jab k positive aur one ke barabar na ho, locus sach mein ek circle hai, Apollonius circle."
+    },
+    {
+      "seq": 8,
+      "text": "Proof idea: condition ko square karo aur modulus w squared barabar w times w bar se expand karo. z z bar term sirf tab survive karta hai jab k one na ho; k barabar one par wo cancel ho jaata hai, ek line chhodte hue."
+    }
+  ]
+}

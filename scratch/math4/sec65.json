@@ -1,0 +1,93 @@
+{
+  "id": "f8ecb2ba-c148-495f-b087-7b691d5c68e7",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 65,
+  "section_type": "formula_recap",
+  "subtopic": null,
+  "title": "Formula recap: your complete toolkit",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "The whole chapter's formulas, at a glance",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "i^{2}=-1;\\ i^{n}\\ \\text{by } n\\bmod 4;\\ z^{-1}=\\frac{a-ib}{a^{2}+b^{2}}",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\bar z=a-ib;\\quad z\\bar z=|z|^{2}=a^{2}+b^{2};\\quad |z_1z_2|=|z_1||z_2|",
+      "emphasis": "high",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "|z_1+z_2|\\le|z_1|+|z_2|;\\quad z=r(\\cos\\theta+i\\sin\\theta)=re^{i\\theta}",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "z^{n}=r^{n}e^{in\\theta};\\quad w_k=r^{1/n}e^{i(\\theta+2k\\pi)/n},\\ k=0,\\dots,n-1",
+      "emphasis": "high",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "1+\\omega+\\omega^{2}=0,\\ \\omega^{3}=1;\\quad x=\\frac{-b\\pm\\sqrt{D}}{2a},\\ D=b^{2}-4ac",
+      "emphasis": "normal",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\alpha+\\beta=-\\tfrac{b}{a},\\ \\alpha\\beta=\\tfrac{c}{a};\\quad \\sqrt{a+ib}=\\pm(x+iy),\\ \\operatorname{sgn}(xy)=\\operatorname{sgn}(b)",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "type": "formula",
+      "latex": "\\frac{z_2-z_1}{z_3-z_1}=\\left|\\cdot\\right|e^{i\\theta};\\ |z-z_0|=r;\\ \\big||z_0|-r\\big|\\le|z|\\le|z_0|+r",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_65.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_65.mp3",
+  "duration_sec_english": 107.59,
+  "duration_sec_hinglish": 101.11,
+  "board_reveal_at_english": [
+    0,
+    7.34,
+    19.97,
+    31.15,
+    44.97,
+    61.01,
+    71.17,
+    86.27
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.45,
+    20.82,
+    30.72,
+    43.26,
+    58.71,
+    69.46,
+    83.71
+  ],
+  "part": 3,
+  "segments_english": null,
+  "segments_hinglish": null
+}

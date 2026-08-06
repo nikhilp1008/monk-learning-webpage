@@ -1,0 +1,160 @@
+{
+  "id": "a7c81ba9-7bc7-4648-8960-80760f91693d",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 8,
+  "section_type": "worked_examples",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "Worked: equating real and imaginary parts",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Solve by equating parts",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Find real $x,y$ if $4x+i(3x-y)=3+i(-6)$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Match real parts: $4x=3$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Match imaginary parts: $3x-y=-6$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 25
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "4x=3 \\ \\Rightarrow\\ x=\\tfrac{3}{4}",
+      "emphasis": "normal",
+      "reveal_at": 34
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "y=3x+6=\\tfrac{9}{4}+6=\\tfrac{33}{4}",
+      "emphasis": "normal",
+      "reveal_at": 44
+    },
+    {
+      "seq": 7,
+      "text": "Two real equations from one complex equation.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 54
+    },
+    {
+      "seq": 8,
+      "text": "Answer: $x=\\tfrac{3}{4}$ and $y=\\tfrac{33}{4}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 63
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_8.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_8.mp3",
+  "duration_sec_english": 74.47,
+  "duration_sec_hinglish": 63.72,
+  "board_reveal_at_english": [
+    0,
+    7.25,
+    19.46,
+    29.01,
+    42.33,
+    46.34,
+    56.66,
+    65.96
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.23,
+    16.64,
+    24.32,
+    36.35,
+    39.77,
+    49.66,
+    57.6
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is Method B in action — turning one complex equation into two real ones and solving."
+    },
+    {
+      "seq": 2,
+      "text": "We're told, for real x and y, that four x plus i times three x minus y equals three plus i times minus six."
+    },
+    {
+      "seq": 3,
+      "text": "Match the real parts on both sides. On the left the real part is four x; on the right it is three. So four x equals three."
+    },
+    {
+      "seq": 4,
+      "text": "Now match the imaginary parts. On the left the imaginary part is three x minus y; on the right it is minus six. So three x minus y equals minus six."
+    },
+    {
+      "seq": 5,
+      "text": "From the first equation, x is three over four."
+    },
+    {
+      "seq": 6,
+      "text": "Substitute into the second: y equals three x plus six, which is nine over four plus six, giving thirty three over four."
+    },
+    {
+      "seq": 7,
+      "text": "Notice what happened: one complex equation split cleanly into two real equations, and each unknown fell out."
+    },
+    {
+      "seq": 8,
+      "text": "So the answer is x equals three over four and y equals thirty three over four."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye raha Method B action mein — ek complex equation ko do real equations mein badalna aur solve karna."
+    },
+    {
+      "seq": 2,
+      "text": "Humein bola gaya, real x aur y ke liye, ki four x plus i times three x minus y equals three plus i times minus six."
+    },
+    {
+      "seq": 3,
+      "text": "Dono taraf ke real parts match karo. Left par real part hai four x; right par three. To four x equals three."
+    },
+    {
+      "seq": 4,
+      "text": "Ab imaginary parts match karo. Left par imaginary part hai three x minus y; right par minus six. To three x minus y equals minus six."
+    },
+    {
+      "seq": 5,
+      "text": "Pehli equation se, x hai three over four."
+    },
+    {
+      "seq": 6,
+      "text": "Doosri mein substitute karo: y equals three x plus six, jo hai nine over four plus six, matlab thirty three over four."
+    },
+    {
+      "seq": 7,
+      "text": "Dekho kya hua: ek complex equation saaf do real equations mein bat gayi, aur har unknown nikal aaya."
+    },
+    {
+      "seq": 8,
+      "text": "To answer hai x equals three over four aur y equals thirty three over four."
+    }
+  ]
+}

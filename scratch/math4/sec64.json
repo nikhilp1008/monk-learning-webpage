@@ -1,0 +1,162 @@
+{
+  "id": "863789da-a5b4-430c-857e-059218327c04",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 64,
+  "section_type": "tips",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "Pitfalls & pro-tips: Argand geometry and loci",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Geometry traps, locus shortcuts",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$e^{i\\theta}$ is anticlockwise, $e^{-i\\theta}$ clockwise — fix the ratio order.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "The $k=1$ Apollonius locus is the perpendicular-bisector LINE, not a circle.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "A fixed-argument locus is an ARC, never the full circle.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Modulus extrema on a circle are $|z_0|\\pm r$ — don't guess.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "Pro-tip: translate words to a $z$-equation — distance, equidistant, constant angle.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "For vertex problems, reach for the rotation theorem: displacement $\\times\\,e^{i\\theta}$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Linearise every locus with $|w|^{2}=w\\bar w$; use $|z_0|\\pm r$ for extremes.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_64.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_64.mp3",
+  "duration_sec_english": 90.96,
+  "duration_sec_hinglish": 83.78,
+  "board_reveal_at_english": [
+    0,
+    8.19,
+    20.65,
+    33.54,
+    42.24,
+    53.42,
+    67.41,
+    76.54
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.06,
+    19.46,
+    30.04,
+    37.55,
+    46.68,
+    61.18,
+    69.89
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's close the subtopic, and the chapter's teaching, with the geometry traps and the locus shortcuts."
+    },
+    {
+      "seq": 2,
+      "text": "First trap, on rotation: e to the i theta turns anticlockwise, and e to the minus i theta turns clockwise. Also mind the ratio order, since flipping it flips the sign of the angle."
+    },
+    {
+      "seq": 3,
+      "text": "Second: the Apollonius locus with k equal to one is not a circle. Equal distances give the perpendicular-bisector line. Calling it a circle is the classic mistake."
+    },
+    {
+      "seq": 4,
+      "text": "Third: a locus of constant argument is an arc, never the full circle. The other half carries the opposite angle."
+    },
+    {
+      "seq": 5,
+      "text": "Fourth: for the extremes of modulus z on a circle, the answers are the centre distance plus or minus the radius. Don't guess and don't reach for calculus."
+    },
+    {
+      "seq": 6,
+      "text": "Now the pro-tips. Translate the words into a z-equation: distance from a point becomes modulus z minus z zero; equidistant becomes a perpendicular bisector; constant angle becomes an arc."
+    },
+    {
+      "seq": 7,
+      "text": "For any vertex-finding or configuration problem, reach straight for the rotation theorem: take a displacement and multiply by e to the i theta."
+    },
+    {
+      "seq": 8,
+      "text": "And two habits to keep: linearise every locus using modulus w squared equals w times w bar, and for modulus extremes on a circle just use the centre distance plus or minus the radius."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Subtopic, aur chapter ki teaching, band karte hain geometry traps aur locus shortcuts ke saath."
+    },
+    {
+      "seq": 2,
+      "text": "Pehla trap, rotation par: e to the i theta anticlockwise ghoomta hai, aur e to the minus i theta clockwise. Ratio order bhi dhyaan mein rakho, kyunki use flip karna angle ka sign flip kar deta hai."
+    },
+    {
+      "seq": 3,
+      "text": "Doosra: k barabar one wala Apollonius locus circle nahi hai. Equal distances perpendicular-bisector line dete hain. Ise circle kehna classic mistake hai."
+    },
+    {
+      "seq": 4,
+      "text": "Teesra: constant argument ka locus ek arc hai, kabhi poora circle nahi. Doosra half opposite angle rakhta hai."
+    },
+    {
+      "seq": 5,
+      "text": "Chautha: circle par modulus z ke extremes ke liye, answers hain centre distance plus or minus radius. Guess mat karo aur calculus mat uthao."
+    },
+    {
+      "seq": 6,
+      "text": "Ab pro-tips. Words ko z-equation mein translate karo: kisi point se distance banti hai modulus z minus z zero; equidistant banta hai perpendicular bisector; constant angle banta hai arc."
+    },
+    {
+      "seq": 7,
+      "text": "Kisi bhi vertex-finding ya configuration problem ke liye seedha rotation theorem uthao: ek displacement lo aur e to the i theta se multiply karo."
+    },
+    {
+      "seq": 8,
+      "text": "Aur do aadatein rakho: har locus ko modulus w squared barabar w times w bar se linearise karo, aur circle par modulus extremes ke liye bas centre distance plus or minus radius use karo."
+    }
+  ]
+}

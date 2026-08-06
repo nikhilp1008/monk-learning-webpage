@@ -1,0 +1,160 @@
+{
+  "id": "899566de-edcc-4bdd-839c-879baa925e97",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 58,
+  "section_type": "concept",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "Arg-loci, equilateral triangles, and modulus extrema",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Arcs, triangles, and extremes on a circle",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\arg\\frac{z-z_1}{z-z_2}=\\alpha\\ \\text{(fixed)}: \\text{ an ARC of a circle through } z_1,z_2",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "A fixed argument gives an arc, NOT the whole circle.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "text": "$\\alpha=\\tfrac{\\pi}{2}$ gives the circle with diameter $z_1z_2$ (minus endpoints).",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\text{concyclic}:\\ \\frac{(z_1-z_3)(z_2-z_4)}{(z_1-z_4)(z_2-z_3)}\\in\\mathbb{R}",
+      "emphasis": "normal",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\text{equilateral}:\\ z_1^{2}+z_2^{2}+z_3^{2}=z_1 z_2+z_2 z_3+z_3 z_1",
+      "emphasis": "normal",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\text{on } |z-z_0|=r:\\ \\big||z_0|-r\\big|\\le |z|\\le |z_0|+r",
+      "emphasis": "high",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "Nearest and farthest points lie along the line through $O$ and $z_0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_58.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_58.mp3",
+  "duration_sec_english": 101.95,
+  "duration_sec_hinglish": 92.5,
+  "board_reveal_at_english": [
+    0,
+    7,
+    19.11,
+    32.77,
+    44.03,
+    55.81,
+    72.28,
+    89.6
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.91,
+    19.29,
+    30.12,
+    40.53,
+    51.37,
+    64.17,
+    80.04
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "A few more standard loci and conditions round out the toolkit. First, the argument locus."
+    },
+    {
+      "seq": 2,
+      "text": "If the argument of z minus z one over z minus z two is held at a fixed value alpha, the locus is an arc of a circle passing through z one and z two."
+    },
+    {
+      "seq": 3,
+      "text": "Emphasize the word arc. A fixed argument does not give the whole circle, only the arc on which the segment subtends that constant angle. Calling it the full circle is a classic error."
+    },
+    {
+      "seq": 4,
+      "text": "The special case alpha equals pi over two is the familiar one: it gives the circle with the segment z one to z two as diameter, excluding the two endpoints."
+    },
+    {
+      "seq": 5,
+      "text": "For four points, the concyclic condition: z one, z two, z three, z four lie on a circle, or a line, exactly when their cross-ratio is real."
+    },
+    {
+      "seq": 6,
+      "text": "The equilateral-triangle condition is a clean symmetric identity: z one squared plus z two squared plus z three squared equals z one z two plus z two z three plus z three z one."
+    },
+    {
+      "seq": 7,
+      "text": "Finally, modulus extrema on a circle. If z lies on the circle of centre z zero and radius r, then the modulus of z is squeezed between the size of modulus z zero minus r, and modulus z zero plus r."
+    },
+    {
+      "seq": 8,
+      "text": "Geometrically, the nearest and farthest points from the origin lie along the straight line through O and the centre z zero. Don't guess the extremes — walk that line."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Kuch aur standard loci aur conditions toolkit ko poora karte hain. Pehle, argument locus."
+    },
+    {
+      "seq": 2,
+      "text": "Agar z minus z one over z minus z two ka argument ek fixed value alpha par rakha jaaye, to locus hai z one aur z two se guzarti ek circle ka arc."
+    },
+    {
+      "seq": 3,
+      "text": "Shabd arc par zor do. Fixed argument poora circle nahi deta, sirf wo arc jahan segment wo constant angle subtend karta hai. Ise full circle kehna ek classic error hai."
+    },
+    {
+      "seq": 4,
+      "text": "Special case alpha barabar pi over two familiar hai: ye wo circle deta hai jiska diameter segment z one se z two hai, do endpoints ko chhodkar."
+    },
+    {
+      "seq": 5,
+      "text": "Chaar points ke liye, concyclic condition: z one, z two, z three, z four ek circle par, ya ek line par, tabhi hain jab unka cross-ratio real ho."
+    },
+    {
+      "seq": 6,
+      "text": "Equilateral-triangle condition ek clean symmetric identity hai: z one squared plus z two squared plus z three squared barabar z one z two plus z two z three plus z three z one."
+    },
+    {
+      "seq": 7,
+      "text": "Aakhir mein, circle par modulus extrema. Agar z centre z zero aur radius r ke circle par ho, to z ka modulus dab jaata hai size of modulus z zero minus r, aur modulus z zero plus r ke beech."
+    },
+    {
+      "seq": 8,
+      "text": "Geometrically, origin se nearest aur farthest points O aur centre z zero se jaati straight line par hote hain. Extremes guess mat karo — us line par chalo."
+    }
+  ]
+}
