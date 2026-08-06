@@ -81,3 +81,6 @@ spot check).
   guessing-a-sign-because-its-big trap guardrail; Ex4 cotθ=-4/3,QII: sign facts + small 3-4-5
   reference-triangle diagram → cosθ=-4/5,sinθ=+3/5 → expression boxed to -17/48,
   magnitude-then-sign discipline guardrail. PASS.
+- Sec 13 "Range as the engine" — Ex5 R=√(5²+12²)=13 chip → interval+shift → f(x)∈[-10,16]
+  boxed green; Ex6 sinx=(a²+b²)/2ab, AM-GM squeeze (data-bug fixed) → boxed only-if-|a|=|b|
+  resolution, bounded-range-as-inequality-constraint closer. PASS.
