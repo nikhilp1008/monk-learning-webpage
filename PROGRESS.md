@@ -147,3 +147,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       + solving the two slant lines), exact shaded polygon, cyclic list,
       shoelace sum 0+(6·2)+(4·4)+0=28, boxed Area=14 sq units.
       VERDICT PASS both langs.
+- [x] Sec 23 (tips) — 4 pitfall rows (origin-on-line first, red; line style;
+      wrong-side shading; union-vs-intersection), pro-tip callout, worked
+      callback check reusing Sec 22's quadrilateral: test (1,1) against all
+      four constraints, region confirmed. VERDICT PASS both langs.
+      **SUBTOPIC 2 (Two Variables) DONE — 11/11.**
