@@ -132,3 +132,9 @@ spot check).
 - Sec 24 "Composite and identity periods" — Ex4 |sinx|+|cosx| hidden-shrink period π/2
   (roles swap via |cosx|=|sin(x+π/2)|, boxed f(x+π/2)=f(x)), don't-take-the-larger guardrail;
   Ex5 sin²x period π via power-reduction identity (data-bug fixed). PASS.
+- Sec 25 "Counting solutions and reading an inequality off the graph" — no bundled source
+  diagram, both graphs authored fresh. Ex6: |sinx| and |cosx| tent curves (waveD+Math.abs)
+  overlaid, 4 red crossing dots at π/4,3π/4,5π/4,7π/4, boxed count. Ex7: real sinx curve +
+  y=1/2 line, green highlighted segment between crossings π/6 and 5π/6 = the solution
+  interval, boxed answer, red-margin general-solution closer. Eye-checked (tent-crossing and
+  above-the-line regions verified against the real functions). PASS.
