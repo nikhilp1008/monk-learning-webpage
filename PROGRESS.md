@@ -44,8 +44,10 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - **Sec 11** — specific-term machinery (`formulas`): general term simplified to net exponent E(r)=p(n-r)-qr boxed, set-E(r) rules, middle-index formula, red-margin from-the-end rule, glossary. PASS.
 - **Sec 12** — specific-term algorithm: numbered 5-step procedure (step 4 boxed: solve+validate), parity explanation, boxed r-formula, red-margin don't-expand tip. PASS.
 - **Sec 13** — two worked examples: 6th term of (2x+3/x)^9=489888/x boxed; independent term in (x²-1/x)^9→r=6→T7=84 boxed; red-margin sign trap. Math hand-verified correct. PASS.
+- **Sec 14** — two worked examples: middle term T4 of (3x/2-1/3x)^6=-5/2 boxed; matching coeff of x^7/x^-7 across two (…)^11 expansions collapses via 11C5=11C6 to ab=1, boxed. Verified the superscript-minus glyph (⁻ U+207B) actually renders (non-zero width in Anek, confirmed via a Playwright glyph-width probe) — screenshots of it just look subtle at review resolution, not a bug. Math hand-verified. PASS.
+- **Sec 15** — subtopic 2 closer, `tips`: 2×3 grid (4 red traps: off-by-one, odd-n-two-middles, E(r) sign, non-integer/out-of-range r; 2 green tips: solve-then-validate, memory-aid mnemonic). PASS. **Subtopic 2 (secs 9-15) complete.**
 
-Pushed to origin through Sec 13. Subtopic 2 (secs 9-15) in progress.
+Pushed to origin through Sec 15. Starting subtopic 3 (Greatest Term & Coefficient, secs 16-21).
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3036 > /tmp/dev-math7.log 2>&1 &`, confirmed READY.
