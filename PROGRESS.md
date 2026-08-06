@@ -37,8 +37,10 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - **Sec 4** — induction proof [flagged]. Textbook layout: base case (checkmark), inductive hypothesis, multiply-by-(a+b), distribute+reindex (a-part/b-part color-paired), Pascal's-rule combine boxed, QED tombstone. Math hand-verified correct. PASS, eye-checked.
 - **Sec 5** — Pascal's rule proved algebraically [flagged] (factorials → common denominator → `(n+1)Cr`, boxed) + triangle rows 0-4 (row 4 ringed) reading off `(a+b)⁴`. Math hand-verified correct. PASS, eye-checked.
 - **Sec 6** — two worked examples: `(2x+3)^4` fully expanded with real numeric super/subscript binomial coefficients, boxed answer, x=1 sanity check + checkmark; JEE speed-trap example (crossed-out naive trinomial count 66 vs correct perfect-square insight → 21 terms, boxed). Caught+fixed an off-by-one beat-index bug here (see workflow notes). Math hand-verified correct. PASS, eye-checked.
+- **Sec 7** — Example 3 [JEE Main]: coeff of x³ in (1+x)(1-2x)^5 via product split, general term computes both needed coefficients, boxed −40. Example 4 [JEE Adv]: consecutive-ratio formulas solved to n=7, r=2, red-margin verify 7C1:7C2:7C3=7:21:35=1:3:5 + checkmark. Math verified. PASS.
+- **Sec 8** — subtopic 1 closer, `section_type=tips`: 2×3 grid of colored callout boxes (4 red traps: off-by-one term count, whole-bracket exponent, sign alternation, term-vs-index; 2 green pro-tips: x=1 sum check, nCr symmetry). PASS, eye-checked. **Subtopic 1 (secs 1-8) complete.**
 
-Pushed to origin through Sec 5 (Sec 6 committed locally, next push ~Sec 10).
+Pushed to origin through Sec 8.
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3036 > /tmp/dev-math7.log 2>&1 &`, confirmed READY.
