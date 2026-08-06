@@ -30,6 +30,15 @@ Sonnet for all — flag Sec 27-35 (identity-derivation) and any section with rea
 circle/graph geometry (8, 15, 20, 21, 23-26, 33) for an extra eye-check pass (FORCE_SHOTS=1
 spot check).
 
+## Data-bug audit (complete)
+Broadest scan (any literal \uXXXX escape, not just dashes) across all 44 sections'
+board_content/segments_* found exactly 13 occurrences, matching the task's stated count:
+sec2(1 em-dash), sec7(1 em-dash), sec9(1 em-dash), sec13(1 en-dash), sec14(1 em-dash + 1
+↔ arrow), sec21(3 em-dash), sec24(1 em-dash), sec28(1 em-dash), sec35(1 literal π escape —
+not a dash, write the real π character), sec36(1 em-dash). All fixed at authoring time by
+writing the real character/plain hyphen, never the escape text. Script:
+scratch/math3/scan_bug_broad.py.
+
 ## Done
 (append one line per finished section, in order)
 - Sec 1 "Why degrees are arbitrary and the radian is the circle's own ruler" — degree/radian
@@ -177,3 +186,8 @@ spot check).
   cos20°cos40°cos80°=1/8 via multiply-by-2sin20° then cascading 2sinθcosθ=sin2θ to a
   telescoping collapse; Ex8 proves tanA+tanB+tanC=tanAtanBtanC when A+B+C=π via
   tan(A+B)=-tanC, red-margin scope-trap closer (condition used at the first step). PASS.
+- Sec 35 "Pitfalls in identities and compound angles" — 6 numbered red-circle pitfall rows
+  (cos/tan sign flip, distribution assumption, wrong cos2A face, dropped leading 2/minus,
+  amplitude=√(a²+b²) never a+b, conditional needs A+B+C=π [literal-π-escape bug fixed - a
+  new bug variant, not a dash]), red-margin golden-rule closer. SUBTOPIC 5 (Identities and
+  Compound Angle Formulas, Sec 27-35) COMPLETE. PASS.
