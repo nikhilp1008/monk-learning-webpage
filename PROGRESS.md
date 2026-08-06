@@ -93,3 +93,8 @@ spot check).
   reference triangles (45-45-90 legs 1,1 hyp √2; 30-60-90 legs 1,√3 hyp 2) with angle marks,
   values read off each, 5-chip sine-row pattern (√0/2..√4/2) with cosine-reversed note, 0°/90°
   circle-readoff closer. Eye-checked (triangle proportions/angle placement). PASS.
+- Sec 16 "Even/odd nature and the one rule for all reductions" — mirror-across-x-axis diagram
+  (P(a,b) at θ, P'(a,-b) at -θ), even chip (cos,sec) and odd chip (sin,tan), the master
+  reduction rule (n odd⇒co-function, n even⇒same; sign via ASTC on the whole angle's quadrant),
+  red-margin closer on why odd multiples of 90° swap sin↔cos. Eye-checked (reflection
+  geometry). PASS.
