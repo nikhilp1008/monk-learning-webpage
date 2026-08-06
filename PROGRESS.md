@@ -214,3 +214,7 @@ scratch/math3/scan_bug_broad.py.
   reduced to cos(x-π/6)=cos(π/3), boxed to two families; Ex5 sin2x=sinx factored (never
   divided) to sinx(2cosx-1)=0, red-margin high-emphasis guardrail on the x=nπ family
   dividing by sinx would have erased. PASS.
+- Sec 41 "The squaring trap done right, and a range squeeze" — two columns: Ex6 sinx+cosx=1
+  solved via amplitude form (no squaring) to a clean boxed [2nπ, 2nπ+π/2], red-margin contrast
+  guardrail (squaring would introduce the fake x=π); Ex7 range squeeze 2sin²x+sin²2x=2 via
+  s=sin²x substitution to (2s-1)(s-1)=0, boxed two families. PASS.
