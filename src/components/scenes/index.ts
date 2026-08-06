@@ -3707,6 +3707,7 @@ import M11Ch06Sec9 from "./M11Ch06Sec9";
 import M11Ch06Sec10 from "./M11Ch06Sec10";
 import M11Ch06Sec11 from "./M11Ch06Sec11";
 import M11Ch06Sec12 from "./M11Ch06Sec12";
+import M11Ch06Sec13 from "./M11Ch06Sec13";
 
 const M11CH06 = "e8c7f4cb-b1a3-5c5e-99d7-4341c4618bb8";
 REGISTRY[`${M11CH06}:1`] = M11Ch06Sec1;
@@ -3721,3 +3722,4 @@ REGISTRY[`${M11CH06}:9`] = M11Ch06Sec9;
 REGISTRY[`${M11CH06}:10`] = M11Ch06Sec10;
 REGISTRY[`${M11CH06}:11`] = M11Ch06Sec11;
 REGISTRY[`${M11CH06}:12`] = M11Ch06Sec12;
+REGISTRY[`${M11CH06}:13`] = M11Ch06Sec13;
