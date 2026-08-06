@@ -205,3 +205,14 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       strictness), pro-tip (plug a scenario back in), worked callback check
       reusing Sec 28's triangle: x=10, perimeter=42≥42 ✓.
       VERDICT PASS both langs. **SUBTOPIC 3 (Applications) DONE — 9/9.**
+
+### Subtopic 4 (Non-Linear / Wavy-Curve Method)
+- [x] Sec 33 — First use of wavyCurveD in the chapter. Act 1 (linear=one
+      flip demo, invalid-method chips crossed) erased at beat 3 → Act 2:
+      critical points chop the line (regions I-IV, erased at beat 6), sign-
+      constant guardrail, wavy curve for (x-1)(x-3)(x+2) at roots -2,1,3,
+      multiplicity guardrail. Hand-verified the curve's sign pattern
+      (−,+,−,+ left to right) against the actual factored signs — matches
+      exactly. Fixed several tight/overlapping vertical-spacing estimates
+      before verifying (ring overshoot vs labels, curve amplitude vs
+      guardrail chips). VERDICT PASS both langs.
