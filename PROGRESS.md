@@ -266,3 +266,10 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       dots at the three included points. Eye-verified all 5 sign labels
       align with their regions and the touch reads as bounce-not-cross.
       VERDICT PASS both langs.
+- [x] Sec 41 (tips) — Five tick-mark rows (Sec 12/23/32 pattern): cross-
+      multiply-by-variable-denom trap (red) + its fix (bring to one side),
+      wrong modulus direction, denom-zero-always-open, forgetting the even-
+      multiplicity bounce (red); pro-tip callout (anchor far-right positive,
+      walk left, flip odd/bounce even). No worked-callback beat — JSON has
+      only 7 beats here, unlike Sec 12/23/32's 8. VERDICT PASS both langs.
+      **SUBTOPIC 4 (Wavy-Curve Method) DONE — 9/9.**
