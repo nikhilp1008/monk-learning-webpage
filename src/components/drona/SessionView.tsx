@@ -44,8 +44,29 @@ export function SessionView({
   onStopPushToTalk,
 }: SessionViewProps) {
   const [inputText, setInputText] = useState<string>("");
+  const [holdDuration, setHoldDuration] = useState<number>(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const transcriptEndRef = useRef<HTMLDivElement>(null);
   const teacher = getTutorName("male");
+
+  const handlePttDown = (e: React.PointerEvent<HTMLButtonElement>) => {
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
+    setHoldDuration(0);
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
+      setHoldDuration((prev) => prev + 0.1);
+    }, 100);
+    onStartPushToTalk?.();
+  };
+
+  const handlePttUp = (e: React.PointerEvent<HTMLButtonElement>) => {
+    try { if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+    onStopPushToTalk?.();
+  };
 
   useEffect(() => {
     transcriptEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -241,7 +262,7 @@ export function SessionView({
           />
           <button
             type="submit"
-            disabled={!inputText.trim() || isStreaming}
+            disabled={!inputText.trim()}
             className="w-8 h-8 flex-none rounded-full bg-[#1C1A16] grid place-items-center cursor-pointer disabled:opacity-40 hover:bg-[#2C2A26] transition-colors"
           >
             <svg viewBox="0 0 16 16" width={13} height={13} fill="none">
@@ -254,26 +275,14 @@ export function SessionView({
         <div className="flex items-center gap-1.5 sm:gap-2 flex-none">
           {/* Hold to Speak Mic Button (Primary PTT control) */}
           <button
-            onPointerDown={(e) => {
-              try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
-              onStartPushToTalk?.();
-            }}
-            onPointerUp={(e) => {
-              try { if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
-              onStopPushToTalk?.();
-            }}
-            onPointerCancel={(e) => {
-              try { if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
-              onStopPushToTalk?.();
-            }}
-            onPointerLeave={(e) => {
-              try { if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
-              onStopPushToTalk?.();
-            }}
+            onPointerDown={handlePttDown}
+            onPointerUp={handlePttUp}
+            onPointerCancel={handlePttUp}
+            onPointerLeave={handlePttUp}
             title="Hold to speak (Interrupts Drona if speaking)"
-            className={`inline-flex items-center gap-1 font-bold text-[0.74rem] sm:text-xs py-1.5 px-3 rounded-full border transition-all select-none cursor-pointer ${
+            className={`inline-flex items-center gap-1.5 font-bold text-[0.74rem] sm:text-xs py-1.5 px-3.5 rounded-full border transition-all select-none cursor-pointer ${
               voiceState?.isListening
-                ? "bg-[#1C9B57] text-white border-[#1C9B57] scale-105 shadow-[0_0_12px_rgba(28,155,87,0.6)] animate-pulse"
+                ? "bg-[#DD4433] text-white border-[#DD4433] scale-105 shadow-[0_0_16px_rgba(221,68,51,0.7)] animate-pulse"
                 : "bg-[#1C1A16] text-white border-[#1C1A16] hover:bg-[#2C2A26]"
             }`}
           >
@@ -281,7 +290,7 @@ export function SessionView({
               <path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4Z" />
               <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
             </svg>
-            {voiceState?.isListening ? "Listening..." : "Hold to speak"}
+            {voiceState?.isListening ? `Recording ${holdDuration.toFixed(1)}s` : "Hold to speak"}
           </button>
 
           {/* Pause / Resume Button */}

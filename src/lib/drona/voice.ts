@@ -23,6 +23,12 @@ export interface VoiceClientState {
   dronaCapColor: string;
 }
 
+interface AudioQueueItem {
+  buffer: AudioBuffer;
+  speechText?: string;
+  boardText?: string;
+}
+
 export class DronaVoiceClient {
   private sessionId: string;
   private ws: WebSocket | null = null;
@@ -34,7 +40,7 @@ export class DronaVoiceClient {
   private playbackCtx: AudioContext | null = null;
   private nextAudioStartTime: number = 0;
   private activeSources: AudioBufferSourceNode[] = [];
-  private pendingAudioBuffers: AudioBuffer[] = [];
+  private pendingAudioBuffers: AudioQueueItem[] = [];
 
   // Telemetry & Control Flags
   private isMuted: boolean = false;
@@ -44,6 +50,7 @@ export class DronaVoiceClient {
   private isPushToTalkActive: boolean = false;
   private currentPlaybackPos: number = 0;
   private currentSpeechText: string = "";
+  private DEBUG_AUDIO: boolean = false;
 
   // 20-30s PCM Ring Buffer (300 chunks of 100ms = 30s at 16kHz Int16)
   private pcmRingBuffer: Int16Array[] = [];
@@ -65,6 +72,7 @@ export class DronaVoiceClient {
     return new Promise((resolve, reject) => {
       try {
         this.ws = new WebSocket(wsUrl);
+        this.ws.binaryType = "arraybuffer";
 
         this.ws.onopen = () => {
           this.notifyState();
@@ -116,15 +124,23 @@ export class DronaVoiceClient {
       } else if (type === "transcript_final") {
         this.options.onSpeechText?.(msg.transcript || "", true);
       } else if (type === "board") {
+        console.log(`[BOARD EVENT RECEIVED] length: ${(msg.board || "").length}`);
         this.options.onBoardUpdate?.(msg.board || "");
       } else if (type === "audio_chunk") {
-        console.log("audio_chunk", msg.audio ? msg.audio.length : 0);
         this.isDronaSpeaking = true;
-        this.currentSpeechText = msg.speech || "";
-        this.options.onSpeechText?.(this.currentSpeechText, false);
-
+        const speechText = msg.speech || "";
+        const boardText = msg.board;
         if (msg.audio) {
-          this.playAudioChunk(msg.audio);
+          this.playAudioChunk(msg.audio, speechText, boardText);
+        } else {
+          if (speechText) {
+            this.currentSpeechText = speechText;
+            this.options.onSpeechText?.(speechText, false);
+          }
+          if (boardText !== undefined) {
+            console.log(`[BOARD EVENT RECEIVED] length: ${boardText.length}`);
+            this.options.onBoardUpdate?.(boardText);
+          }
         }
         this.notifyState();
       } else if (type === "meta") {
@@ -132,6 +148,8 @@ export class DronaVoiceClient {
         if (msg.phase === "complete") {
           this.options.onSessionEnded?.();
         }
+      } else if (type === "stt_too_short") {
+        this.options.onSpeechText?.(msg.message || "Hold the button while you speak", false);
       } else if (type === "error") {
         console.warn("Drona Voice Server Error:", msg.message);
       }
@@ -157,25 +175,36 @@ export class DronaVoiceClient {
     }
   }
 
-  private scheduleAudioBuffer(buffer: AudioBuffer): void {
+  private scheduleAudioBuffer(item: AudioQueueItem): void {
     if (!this.playbackCtx) return;
 
     const source = this.playbackCtx.createBufferSource();
-    source.buffer = buffer;
+    source.buffer = item.buffer;
     source.connect(this.playbackCtx.destination);
 
     const currentTime = this.playbackCtx.currentTime;
     const startTime = Math.max(currentTime, this.nextAudioStartTime);
     const leadTime = startTime - currentTime;
 
-    console.log(`[AUDIO SCHEDULE] currentTime=${currentTime.toFixed(2)}s, startTime=${startTime.toFixed(2)}s (leadTime=${leadTime.toFixed(2)}s)`);
+    if (this.DEBUG_AUDIO) {
+      console.log(`[AUDIO SCHEDULE] currentTime=${currentTime.toFixed(2)}s, startTime=${startTime.toFixed(2)}s (leadTime=${leadTime.toFixed(2)}s)`);
+    }
+
+    if (item.speechText) {
+      this.currentSpeechText = item.speechText;
+      this.options.onSpeechText?.(item.speechText, false);
+    }
+    if (item.boardText !== undefined) {
+      console.log(`[BOARD EVENT RECEIVED] length: ${item.boardText.length}`);
+      this.options.onBoardUpdate?.(item.boardText);
+    }
 
     source.onended = () => {
       const idx = this.activeSources.indexOf(source);
       if (idx !== -1) this.activeSources.splice(idx, 1);
 
       if (this.activeSources.length === 0 && this.pendingAudioBuffers.length === 0) {
-        console.log("[AUDIO PLAYBACK COMPLETE] All active and pending audio chunks finished playing naturally.");
+        if (this.DEBUG_AUDIO) console.log("[AUDIO PLAYBACK COMPLETE] All active and pending audio chunks finished playing naturally.");
         this.isDronaSpeaking = false;
         this.notifyState();
       } else {
@@ -185,7 +214,7 @@ export class DronaVoiceClient {
 
     this.activeSources.push(source);
     source.start(startTime);
-    this.nextAudioStartTime = startTime + buffer.duration;
+    this.nextAudioStartTime = startTime + item.buffer.duration;
   }
 
   private drainAudioBufferQueue(): void {
@@ -193,10 +222,10 @@ export class DronaVoiceClient {
     const currentTime = this.playbackCtx.currentTime;
     const leadTime = this.nextAudioStartTime - currentTime;
 
-    if (leadTime < 2.5) {
-      const nextBuffer = this.pendingAudioBuffers.shift();
-      if (nextBuffer) {
-        this.scheduleAudioBuffer(nextBuffer);
+    if (leadTime < 2.0) {
+      const nextItem = this.pendingAudioBuffers.shift();
+      if (nextItem) {
+        this.scheduleAudioBuffer(nextItem);
       }
     }
   }
@@ -209,12 +238,12 @@ export class DronaVoiceClient {
     }
     if (this.playbackCtx.state === "suspended") {
       this.playbackCtx.resume().then(() => {
-        console.log("[AUDIO UNLOCKED] Playback AudioContext resumed successfully!");
+        if (this.DEBUG_AUDIO) console.log("[AUDIO UNLOCKED] Playback AudioContext resumed successfully!");
       });
     }
   }
 
-  public async playAudioChunk(base64Pcm: string): Promise<void> {
+  public async playAudioChunk(base64Pcm: string, speechText?: string, boardText?: string): Promise<void> {
     if (!base64Pcm || typeof window === "undefined") return;
     try {
       this.unlockAudio();
@@ -244,13 +273,14 @@ export class DronaVoiceClient {
 
       const currentTime = this.playbackCtx.currentTime;
       const leadTime = this.nextAudioStartTime - currentTime;
+      const item: AudioQueueItem = { buffer, speechText, boardText };
 
       // Capped lookahead (Max 2.0s ahead of speech playback)
       if (leadTime > 2.0) {
-        console.log(`[AUDIO QUEUE BUFFERED] leadTime=${leadTime.toFixed(2)}s > 2.0s limit. Queuing chunk (${buffer.duration.toFixed(2)}s)`);
-        this.pendingAudioBuffers.push(buffer);
+        if (this.DEBUG_AUDIO) console.log(`[AUDIO QUEUE BUFFERED] leadTime=${leadTime.toFixed(2)}s > 2.0s limit. Queuing chunk (${buffer.duration.toFixed(2)}s)`);
+        this.pendingAudioBuffers.push(item);
       } else {
-        this.scheduleAudioBuffer(buffer);
+        this.scheduleAudioBuffer(item);
       }
     } catch (err) {
       console.error("Audio playback error:", err);
