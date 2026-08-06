@@ -82,8 +82,8 @@ export function SessionView({
   };
 
   const [isTranscribing, setIsTranscribing] = useState<boolean>(false);
-  const isDronaSpeaking = voiceState?.isSpeaking || isStreaming;
-  const hasAudioPlayed = voiceState?.hasPlayedFirstChunk || isDronaSpeaking;
+  const isDronaSpeaking = voiceState?.isSpeaking || false;
+  const hasAudioPlayed = voiceState?.hasPlayedFirstChunk || false;
   const isMuted = voiceState?.isMuted || false;
   const isPaused = voiceState?.isPaused || false;
   const isConnected = voiceState?.isConnected ?? true;
