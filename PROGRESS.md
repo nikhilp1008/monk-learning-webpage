@@ -43,3 +43,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       solution set on a line, 'linear'=power1 with x²/1/x/|x| crossed) → erase →
       safe moves (add/subtract demo, ±chips, cross-multiply/square guardrail).
       VERDICT PASS both langs.
+- [x] Sec 4 — Seven-step algorithm as a running worked example, (2x+1)/3≥x-1
+      carried through all 7 steps (STEPS|EXAMPLE two-column), landing on x≤4,
+      (-∞,4] on a number line. Caught+fixed: divider bled into the beat-7
+      diagram text on first render (eye-check, verifier doesn't gate text-vs-
+      stroke) — shortened it to stop before row 7. VERDICT PASS both langs.
