@@ -67,3 +67,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
 - [x] Sec 9 (worked ex, SPEED TRAP) — -7≤(3-2x)/4<5: ×4, -3, then ÷(-2) stages
       the tempting un-flipped "15.5≤x<-8.5" chip, crosses it out ("impossible"
       caption), lands the correctly flipped (-17/2, 31/2]. VERDICT PASS both.
+- [x] Sec 10 (worked ex) — 3x-2>4 AND 2(x-1)≤x+3: one shared number line with
+      two amber half-shades overlapping into a green (2,5] intersection bar,
+      then integers 3,4 marked and counted to sum=12. Caught+fixed a real
+      text-vs-chip visual overlap the automated check doesn't gate (only
+      text-vs-text) via eye-check on the screenshot. VERDICT PASS both.
