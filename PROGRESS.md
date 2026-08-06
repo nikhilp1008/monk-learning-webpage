@@ -125,3 +125,7 @@ spot check).
   odd π/2, composite-periods chip (|sinx| etc T=π, sum⇒LCM), asymptote-location rule, master
   transform-line summary. Eye-checked (tan branch shape and asymptote placement verified
   against the real function). PASS.
+- Sec 23 "Periods, ranges and amplitudes" — three columns: Ex1 three quick period reads
+  (sin3x=2π/3, tan2x=π/2, cos(x/2)=4π); Ex2 range/period of 3+2sinx ([1,5], 2π); Ex3
+  amp/period of -4cos(x/3) boxed (4, 6π), red-margin closer (minus flips vertically only).
+  PASS.
