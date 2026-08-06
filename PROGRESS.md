@@ -180,3 +180,12 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       x/2x/x+2 on the right. Caught+fixed the guardrail chip visually
       overlapping the triangle (shape-vs-shape, not verifier-gated) — confined
       it to the left column. VERDICT PASS both langs.
+- [x] Sec 29 (worked ex) — Consecutive odd naturals >10, sum<40: solved to
+      10<x<19, then the hidden-domain trap — x must be an odd natural, so
+      only {11,13,15,17} qualify, NOT the whole interval. Number line: open
+      circles at 10/19, filled odd dots inside. Caught+fixed a real bug:
+      literal "&gt;"/"&lt;" text rendered on the board because HTML entities
+      inside a JS string argument to t() are never decoded (only entities
+      written directly as JSX text get decoded by the parser) — swapped for
+      raw >/< characters. Audited all other sections for the same pattern,
+      none found. VERDICT PASS both langs.
