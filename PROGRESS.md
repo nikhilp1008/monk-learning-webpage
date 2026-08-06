@@ -114,3 +114,8 @@ spot check).
   zero-crossing dots at π/2π, periodicity definition f(x+T)=f(x) boxed, sin/cos T=2π vs tan
   T=π, red-margin closer on tangent's line-direction reasoning. Eye-checked (correct sine
   shape verified against real function). PASS.
+- Sec 21 "Stretching and shifting — what a, b, c, d do" — three overlaid waveD curves on one
+  axes (muted sinx baseline, red 2sinx visibly 2× taller, green sin2x completing 2 oscillations
+  in the same span = period π), amplitude/period/shift formula chip, red-margin range-shifts-
+  too closer ([d-|a|,d+|a|]). Data-bug dashes fixed (seq2,3,5). Eye-checked (curve
+  amplitude/period ratios verified against the real functions). PASS.
