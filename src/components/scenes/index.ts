@@ -3688,3 +3688,9 @@ REGISTRY[`${C11CH08}:49`] = C11Ch08Sec49;
 REGISTRY[`${C11CH08}:50`] = C11Ch08Sec50;
 REGISTRY[`${C11CH08}:51`] = C11Ch08Sec51;
 REGISTRY[`${C11CH08}:52`] = C11Ch08Sec52;
+
+// ---- Class 11 Math · Chapter 5 "Linear Inequalities" ----
+import M11Ch05Sec1 from "./M11Ch05Sec1";
+
+const M11CH05 = "7bc767a8-c36f-5f5c-93f5-fb8337ffd7f5";
+REGISTRY[`${M11CH05}:1`] = M11Ch05Sec1;
