@@ -218,3 +218,8 @@ scratch/math3/scan_bug_broad.py.
   solved via amplitude form (no squaring) to a clean boxed [2nπ, 2nπ+π/2], red-margin contrast
   guardrail (squaring would introduce the fake x=π); Ex7 range squeeze 2sin²x+sin²2x=2 via
   s=sin²x substitution to (2s-1)(s-1)=0, boxed two families. PASS.
+- Sec 42 "Pitfalls in solving trig equations" — 6 numbered red-circle pitfall rows (dividing
+  loses roots, squaring keeps extraneous roots, mixing families, principal-vs-general n,
+  ignoring solvability, undefined-domain roots), red-margin golden-rules closer (factor,
+  back-check, keep n, match family). SUBTOPIC 6 (Trigonometric Equations and Solutions,
+  Sec 36-42) COMPLETE. PASS.
