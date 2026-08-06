@@ -132,3 +132,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       shaded via HalfPlaneShade, final region label. Annotations placed
       directly on the graph rather than a separate caption column.
       VERDICT PASS both langs.
+- [x] Sec 20 (worked ex, SPEED TRAP) — y>2x: origin lies ON the boundary
+      (useless test), so (1,0) is tried and fails (crossed), (0,1) confirms
+      (checked), dotted line (strict >), region shaded via HalfPlaneShade.
+      Caught+fixed a real kit/math-kit import mix-up (crossD) — tsc genuinely
+      caught it this time. VERDICT PASS both langs.
