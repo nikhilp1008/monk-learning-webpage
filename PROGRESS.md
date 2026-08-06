@@ -71,8 +71,11 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - **Sec 37** — Example 1: 9^n-1=8(...) ⇒ 8|9^n-1, boxed. Example 2: completes Sec 34's 7^103 mod 25 example → 18, boxed. Math verified. PASS.
 - **Sec 38** — Example 3: 3^400=(80+1)^100 ⇒ last two digits 01, boxed+red-margin why. Example 4: (7+4√3)^n=I+f proof that (I+f)(1-f)=1 via conjugate product = (49-48)^n, boxed. Math verified. PASS.
 - **Sec 39** — subtopic 6 closer, `tips`: 2×3 grid (4 red traps, 2 green tips; shortened one cell's text that was crowding its box edge). PASS. **Subtopic 6 (secs 34-39) complete.**
+- **Sec 40** [flagged] — opens subtopic 7: binomial-vs-multinomial framing, 5-bracket a/b/c donation diagram (extends Sec 1's metaphor), boxed coefficient formula, red-margin k=2 note, boxed stars-and-bars term-count formula. PASS.
+- **Sec 41** [flagged] — dense `formulas`: boxed master multinomial theorem, coefficient def, boxed term-count formula, trinomial case, boxed sum-of-coefficients=k^n, red-margin k=2-recovers-binomial. PASS.
+- **Sec 42** [flagged] — two labeled PROOF blocks (coefficient via assignment-counting, term-count via stars-and-bars, both boxed) + two labeled TECHNIQUE blocks (direct extraction; geometric-series bridge). **Closes out every flagged section in the task brief.** PASS.
 
-Pushed to origin through Sec 39. Starting subtopic 7 (Multinomial Theorem, secs 40-45) — flagged for extra eye-scrutiny (secs 40-42) per task brief.
+Pushed to origin through Sec 42. 5 sections remain (43-45 finish subtopic 7, 46-47 are the chapter recap/cheat-sheet).
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3036 > /tmp/dev-math7.log 2>&1 &`, confirmed READY.
