@@ -39,3 +39,7 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       sign-flip rule: -2<3 →×(-1)→ 2>-3 with the flipped ">" in red, red-margin
       guardrail, reflection diagram (crossing arcs -2→2, 3→-3, red image dots).
       VERDICT PASS both langs.
+- [x] Sec 3 — Definitions (A rel B skeleton, 4 symbol chips strict/non-strict,
+      solution set on a line, 'linear'=power1 with x²/1/x/|x| crossed) → erase →
+      safe moves (add/subtract demo, ±chips, cross-multiply/square guardrail).
+      VERDICT PASS both langs.
