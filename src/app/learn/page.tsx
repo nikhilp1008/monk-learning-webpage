@@ -271,6 +271,7 @@ export default function LearnPage() {
     scopingInFlightRef.current = true;
     setLoadingSubtopic(utterance);
     setScopingPlanReady(false);
+    voiceClientRef.current?.unlockAudio();
     try {
       const res = await scopeSession(sid, utterance);
       setSessionTopic(res.subtopic || utterance);

@@ -137,9 +137,27 @@ export class DronaVoiceClient {
     }
   }
 
-  public playAudioChunk(base64Pcm: string): void {
+  public unlockAudio(): void {
+    if (typeof window === "undefined") return;
+    const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+    if (!this.playbackCtx) {
+      this.playbackCtx = new AudioCtx({ sampleRate: 24000 });
+    }
+    if (this.playbackCtx.state === "suspended") {
+      this.playbackCtx.resume().then(() => {
+        console.log("[AUDIO UNLOCKED] Playback AudioContext resumed successfully!");
+      });
+    }
+  }
+
+  public async playAudioChunk(base64Pcm: string): Promise<void> {
     if (!base64Pcm || typeof window === "undefined") return;
     try {
+      this.unlockAudio();
+      if (this.playbackCtx && this.playbackCtx.state === "suspended") {
+        await this.playbackCtx.resume();
+      }
+
       const binary = atob(base64Pcm);
       console.log("base64 decode length:", binary.length);
 
