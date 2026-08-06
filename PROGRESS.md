@@ -153,3 +153,9 @@ spot check).
   with A=B=30° numeric disproof, not-linear guardrail; vector-composition right-triangle
   diagram (a-leg, b-leg, resultant R at angle α) grounding acosx+bsinx=Rcos(x-α), max/min=±R
   closer (data-bug fixed). Eye-checked (vector triangle geometry). PASS.
+- Sec 29 "Sum and difference formulas, with the sign mnemonic" — cos/sin/tan(A±B) hero+chips,
+  sign-mnemonic guardrail, the equal-chords unit-circle proof of cos(A-B) (P₁,P₂,P₃,P₄
+  constructed so both chords subtend the identical 1.221 rad central angle — verified by
+  the math, not eyeballed; the source board_content's own decorative SVG had non-equal
+  chords, not copied), two useful-products chips. Eye-checked (chord-length geometry
+  verified against the construction angles). PASS.
