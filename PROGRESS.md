@@ -200,3 +200,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       green), Z=30x+50y evaluated at each (0, 540, 550, 580=MAX), boxed
       answer. First real preview of Class 12 Linear Programming.
       VERDICT PASS both langs.
+- [x] Sec 32 (tips) — 5 pitfall rows (comparison-word misreading first, red;
+      underline-then-symbol; hidden domain; interpret-back; "between"
+      strictness), pro-tip (plug a scenario back in), worked callback check
+      reusing Sec 28's triangle: x=10, perimeter=42≥42 ✓.
+      VERDICT PASS both langs. **SUBTOPIC 3 (Applications) DONE — 9/9.**
