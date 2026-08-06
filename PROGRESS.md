@@ -201,3 +201,8 @@ scratch/math3/scan_bug_broad.py.
   dividing (cancel cosθ from sinθcosθ=cosθ throws away cosθ=0, red-margin factor-never-divide
   guardrail); gaining roots by squaring (sinx+cosx=1 →square→ sin2x=0 but x=π fails the
   original, extraneous-root check guardrail, both-are-conceptual-not-careless closer). PASS.
+- Sec 38 "The master solution formulas and the root-validity check" — the central formula
+  reference for the whole subtopic. Zero cases, three master general solutions
+  (sinθ=sinα hero, cosθ=cosα/tanθ=tanα, squared cases), linear-form solvability test
+  (|c|≤√(a²+b²)), red-margin root-validity checklist (keep n, restore division-lost roots,
+  back-check after squaring, drop out-of-domain). PASS.
