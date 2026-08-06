@@ -95,3 +95,17 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       shaded via HalfPlaneShade, an outside point (3,3) fails the test, then
       the origin explicitly tested (0≤6 ✓) as the guardrail's "one point"
       trick. Swapped an unaudited ✗ glyph for plain text. VERDICT PASS both.
+- [x] Sec 15 — The four working rules: two-column RULES|PICTURE, one evolving
+      mini-diagram (boundary line → style legend → test point+shade → 2nd
+      line for system/intersection), erase → first-quadrant restriction +
+      origin-fails guardrail (crossed origin, (1,0) alternative).
+      **Found and fixed a real bug: `npx tsc --noEmit` had been silently
+      skipping semantic checking (missing-export errors) for the WHOLE
+      project since before this session started, because a pre-existing
+      syntax error in src/app/learn/page.tsx (stray `);` orphaned by the
+      streamTurn deletion in commit e16b531) made tsc bail out of full
+      checking. Fixed that stray fragment — tsc now genuinely gates.
+      This means Sec 11 and Sec 15's kit/math-kit import-boundary mistakes
+      were only ever caught by the dev-server bundler via verify-scene.mjs,
+      not by tsc — the verify step was the real safety net all along.**
+      VERDICT PASS both langs.
