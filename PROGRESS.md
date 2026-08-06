@@ -273,3 +273,15 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       walk left, flip odd/bounce even). No worked-callback beat — JSON has
       only 7 beats here, unlike Sec 12/23/32's 8. VERDICT PASS both langs.
       **SUBTOPIC 4 (Wavy-Curve Method) DONE — 9/9.**
+
+### Recap + Cheat Sheet
+- [x] Sec 42 (formula_recap) — every formula from the chapter on one board,
+      9 lines: negative-flip axiom, one-variable linear form, two-variable
+      general form+intercepts (reused Sec 18's exact "(≤, ≥, <, >)"
+      lessgtr flattening), shoelace area (concrete 3-vertex numeral-
+      subscript form, matching Sec 18 — no Σ-with-i/i+1 primitive exists),
+      average/mixture templates, modulus results, quadratic between/
+      outside, endpoint guardrail (num roots in, denom roots always out,
+      ∞ always round). 3 "high" formulas boxed amber, the guardrail boxed
+      red, rest plain text — all single-line, generously spaced.
+      VERDICT PASS both langs.
