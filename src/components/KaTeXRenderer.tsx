@@ -15,7 +15,8 @@ export function KaTeXRenderer({
 }: KaTeXRendererProps) {
   if (!latex) return null;
 
-  const lines = latex.split("\n");
+  const normalized = latex.replace(/\\n/g, "\n");
+  const lines = normalized.split("\n");
 
   return (
     <div className={`space-y-2 text-ink font-semibold leading-relaxed text-[0.96rem] ${className}`}>
