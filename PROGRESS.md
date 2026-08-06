@@ -101,3 +101,6 @@ spot check).
 - Sec 17 "Evaluating by reduction — basic to large angles" — four quick examples in a 2×2
   grid (sin210°=-1/2, cos(-300°)=1/2, sin1230°→reduce→150°→1/2, tan135°=-cot45°=-1), red-margin
   cross-check closer (two routes to tan135° agree). PASS.
+- Sec 18 "Long allied-angle products that collapse" — three columns: Ex5 four allied-angle
+  reductions collapsing to -1; Ex6 cos(270°+θ)=sinθ proof (QIV, n=3 odd) boxed green; Ex7
+  tan²θ/-tan²θ=-1; red-margin closer (products almost always collapse to ±1). PASS.
