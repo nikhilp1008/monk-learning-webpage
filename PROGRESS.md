@@ -65,8 +65,14 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - **Sec 31** [flagged] — Example 1: (1+x)^-2 first four terms boxed. Example 2: coeff of x^4 in (1-2x)^-3 via general series, p=3/y=2x → 240, boxed. Math verified. PASS.
 - **Sec 32** [flagged] — Example 3: (255)^(1/4) estimated via first-order approx → 3.9961, boxed. Example 4: match a numeric series to n(n-1)/2!y² → n=-3/2, y=-1/2 → sum=2√2, boxed. Advanced JEE-level derivation, math hand-verified. PASS.
 - **Sec 33** [flagged] — subtopic 5 closer, `tips`: 2×3 grid (4 red traps, 2 green tips). PASS. **Subtopic 5 (secs 28-33) complete — the flagged any-index run is done.**
+- **Sec 34** — opens subtopic 6: 7^103 mod 25 setup, red-margin K-divisibility rule, diagram of crossed-out vanishing terms with the survivor ringed green, conjugate-surd cancellation, red-margin 0<p-√q<1 requirement. PASS.
+- **Sec 35** — dense `formulas` reference: (K±1)^n expansion, boxed (1+K)^n≡1+nK mod K², divisibility identities, conjugate setup, boxed product identity (p²-q)^n. PASS.
+- **Sec 36** — title itself names 4 procedures (remainder/last-digits/divisibility/parts), each a one-line recipe, boxed evaluation formula, 2 red-margin guardrails. PASS.
+- **Sec 37** — Example 1: 9^n-1=8(...) ⇒ 8|9^n-1, boxed. Example 2: completes Sec 34's 7^103 mod 25 example → 18, boxed. Math verified. PASS.
+- **Sec 38** — Example 3: 3^400=(80+1)^100 ⇒ last two digits 01, boxed+red-margin why. Example 4: (7+4√3)^n=I+f proof that (I+f)(1-f)=1 via conjugate product = (49-48)^n, boxed. Math verified. PASS.
+- **Sec 39** — subtopic 6 closer, `tips`: 2×3 grid (4 red traps, 2 green tips; shortened one cell's text that was crowding its box edge). PASS. **Subtopic 6 (secs 34-39) complete.**
 
-Pushed to origin through Sec 33. Starting subtopic 6 (Applications: Divisibility/Remainders/Last Digits, secs 34-39).
+Pushed to origin through Sec 39. Starting subtopic 7 (Multinomial Theorem, secs 40-45) — flagged for extra eye-scrutiny (secs 40-42) per task brief.
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3036 > /tmp/dev-math7.log 2>&1 &`, confirmed READY.
