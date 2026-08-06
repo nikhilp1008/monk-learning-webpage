@@ -315,8 +315,7 @@ export default function LearnPage() {
     if (voiceClientRef.current) {
       console.log("[STUDENT TURN] Sending student turn over WebSocket voice client");
       voiceClientRef.current.sendUtterance(utterance);
-      }
-    );
+    }
   }, [sessionId]);
 
   /* ─── End session ─── */
