@@ -3693,8 +3693,10 @@ REGISTRY[`${C11CH08}:52`] = C11Ch08Sec52;
 import M11Ch03Sec1 from "./M11Ch03Sec1";
 import M11Ch03Sec2 from "./M11Ch03Sec2";
 import M11Ch03Sec3 from "./M11Ch03Sec3";
+import M11Ch03Sec4 from "./M11Ch03Sec4";
 
 const M11CH03 = "fab8d5c4-68ad-5772-8888-f5b1cd687633";
 REGISTRY[`${M11CH03}:1`] = M11Ch03Sec1;
 REGISTRY[`${M11CH03}:2`] = M11Ch03Sec2;
 REGISTRY[`${M11CH03}:3`] = M11Ch03Sec3;
+REGISTRY[`${M11CH03}:4`] = M11Ch03Sec4;

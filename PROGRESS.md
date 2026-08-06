@@ -45,3 +45,6 @@ spot check).
   proportion route (s/2πr=θ/2π), A=½r²θ chip, same-fraction-of-disc route, A=½rs green twin
   form, filled sector-wedge diagram (r,r,s,θ,O labels) grounding all three, radians-only
   guardrail. PASS.
+- Sec 4 "Converting an angle and finding a radius" — two side-by-side worked examples (Ex1
+  40°20′→radians via fold-minutes; Ex2 find r from s=37.4cm, θ=60°→π/3), each builds its
+  formula chain step by step to a boxed answer, shared convert-first guardrail. PASS.
