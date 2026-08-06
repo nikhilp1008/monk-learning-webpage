@@ -48,3 +48,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       (-∞,4] on a number line. Caught+fixed: divider bled into the beat-7
       diagram text on first render (eye-check, verifier doesn't gate text-vs-
       stroke) — shortened it to stop before row 7. VERDICT PASS both langs.
+- [x] Sec 5 — Formal proof (accumulating, no erase): order-means-b-a-positive
+      axiom boxed, c(b-a)<0 boxed, distribute chase, a<b BUT ca>cb (red), boxed
+      QED conclusion. Swapped an unaudited long-double-arrow glyph for the
+      safe-listed ⇔ and used "Q.E.D." instead of the unaudited ∎ mark.
+      VERDICT PASS both langs.
