@@ -159,3 +159,6 @@ spot check).
   the math, not eyeballed; the source board_content's own decorative SVG had non-equal
   chords, not copied), two useful-products chips. Eye-checked (chord-length geometry
   verified against the construction angles). PASS.
+- Sec 30 "Double, half, triple and the t-substitution" — pure formula catalogue, 2×2 grid:
+  double-angle (sin2A, tan2A, cos2A's three faces), half-angle/power-reduction (1±cosA),
+  t=tan(A/2) substitution (sinA/cosA/tanA in terms of t), triple-angle (sin3A, cos3A). PASS.
