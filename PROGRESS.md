@@ -72,3 +72,9 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       then integers 3,4 marked and counted to sum=12. Caught+fixed a real
       text-vs-chip visual overlap the automated check doesn't gate (only
       text-vs-text) via eye-check on the screenshot. VERDICT PASS both.
+- [x] Sec 11 (worked ex, JEE Adv) — a(x-1)<2x+3 for every x: 3-case-analysis
+      cards (a>2, a<2 both crossed out as half-lines, a=2 wins with 0<5 true
+      for every x), boxed a=2 answer. Caught+fixed a bad import (checkD lives
+      in math-kit not kit — tsc didn't flag it, only the dev-server bundler
+      did; runtime-check every new section, don't trust tsc alone for cross-
+      module re-exports). VERDICT PASS both langs. SUBTOPIC 1: 11/12 done.
