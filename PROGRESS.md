@@ -59,3 +59,8 @@ spot check).
   in-s=rθ, flipped factor, radian dimensionless [data-bug fixed], DMS base-60, clockwise-
   negative, calculator mode), red-margin sanity-check closer (1 rad ≈ 57°). SUBTOPIC 1
   (Angle Measurement and Radians, Sec 1-7) COMPLETE. PASS.
+- Sec 8 "From the right triangle to the unit circle" — opens subtopic 2. 90°-cap anchor,
+  full UnitCircleDiagram with P(a,b) in QII, θ arc, a/b/M/1 labels, correctly-placed I/II/III/IV
+  quadrant numerals (the source board_content's own decorative SVG had these mislabeled/rotated
+  one position off standard convention — fixed here, verified by eye), cosθ=a/sinθ=b hero,
+  |sinθ|≤1 |cosθ|≤1 chip, red-margin closer. Eye-checked (geometry). PASS.
