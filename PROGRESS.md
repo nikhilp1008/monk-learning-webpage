@@ -223,3 +223,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       multiplicity guardrail, denominator-always-open icon+guardrail,
       numerator-closed-only-if-non-strict icon+caption. Caught+fixed another
       kit/math-kit IntervalDot import mix-up via tsc. VERDICT PASS both.
+- [x] Sec 35 — Six-step algorithm as a left-aligned numbered list (long
+      lines don't center well), closing on the quadratic outside/between
+      shortcut with a hand-drawn parabola (a(x-α)(x-β): + outside roots, −
+      between). Caught+fixed +/- sign labels overlapping the guardrail chip
+      — shifted the whole diagram down 35px for clearance. VERDICT PASS both.
