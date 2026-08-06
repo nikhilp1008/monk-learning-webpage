@@ -27,6 +27,8 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - QED / checkmark stamps: `checkD`/other draw-path helpers live in **`math-kit.tsx`**, not `kit.tsx` — import from the right module (tripped this up once in Sec 4; tsc did not catch the bad import, only the dev-server bundler did, so a page-render check matters even when tsc is clean).
 - Row bands followed loosely: title 30–80, story/setup 90–260, main demo 270–470, verdict/conclusions 480–596 (not a straitjacket, see base spec).
 - Multi-row `PascalsTriangle` builds: call it once per row with a 1-element `rows` slice and a manually offset `top = TOP + i*rowHeight`, each with its own `delay` — the component's own `delay` prop is shared by every row passed in one call, so per-row staggering requires separate calls.
+- **Beat-index checklist (do this for every section, caught a real off-by-one in Sec 6)**: `len(board_content) == len(board_reveal_at_english) == len(board_reveal_at_hinglish)` always holds — N items map 1:1 to reveal indices `0..N-1`. When `board_content[0]` (seq1) is naturally a section-opening question/heading, treat it as the always-on title and gate the REST at `beat >= 1 .. beat >= N-1` (sections 1–5 pattern). When seq1 is NOT a general title (e.g. Sec 6's two-worked-example sections where seq1 is "Example 1" label and the real title is invented from Supabase's own `title` field, shown separately/always-on), gate ALL N items at `beat >= 0 .. beat >= N-1` instead — don't also burn a slot skipping index 0. Sanity check before writing: count board_content items, count reveals, decide which pattern applies, and make sure the highest `beat >=` used equals `N-1` exactly (not N).
+- Title at size 24-26 needs `y ≈ 58-60`, not 55 — a size-24 title at y=55 clipped the safe-area top by 1px in practice (Sec 6 first pass), even though size-26 at y=58 (Sec 1-5) was fine.
 
 ## Done
 - **Sec 1** — why coefficients are just counting (n-bracket product built term-by-term, 3-box pick-a/pick-b diagram with arrows, generalized term `a^(n-r)·b^r`, boxed landing formula `= nCr`, two red-margin guardrails). Reference exemplar for the rest of the chapter. VERDICT PASS, eye-checked (FORCE_SHOTS), clean.
@@ -34,8 +36,9 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - **Sec 3** — the master formula (`section_type=formulas`): master formula assembled chunk-by-chunk then boxed, `(1+x)^n` expansion (non-script: literal `x²`), `nCr` factorial def, general term boxed, two sum identities, two red-margin notes. PASS, eye-checked.
 - **Sec 4** — induction proof [flagged]. Textbook layout: base case (checkmark), inductive hypothesis, multiply-by-(a+b), distribute+reindex (a-part/b-part color-paired), Pascal's-rule combine boxed, QED tombstone. Math hand-verified correct. PASS, eye-checked.
 - **Sec 5** — Pascal's rule proved algebraically [flagged] (factorials → common denominator → `(n+1)Cr`, boxed) + triangle rows 0-4 (row 4 ringed) reading off `(a+b)⁴`. Math hand-verified correct. PASS, eye-checked.
+- **Sec 6** — two worked examples: `(2x+3)^4` fully expanded with real numeric super/subscript binomial coefficients, boxed answer, x=1 sanity check + checkmark; JEE speed-trap example (crossed-out naive trinomial count 66 vs correct perfect-square insight → 21 terms, boxed). Caught+fixed an off-by-one beat-index bug here (see workflow notes). Math hand-verified correct. PASS, eye-checked.
 
-Pushed to origin through Sec 5.
+Pushed to origin through Sec 5 (Sec 6 committed locally, next push ~Sec 10).
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3036 > /tmp/dev-math7.log 2>&1 &`, confirmed READY.
