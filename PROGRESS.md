@@ -41,3 +41,7 @@ spot check).
   two conversion-factor lines, red-margin benchmark note, 6-chip standard-angle table, bare-
   number guardrail. Notebook-page top-to-bottom layout (deviates from band map — deliberate,
   noted in header). Data-bug dash fixed (seq3). PASS.
+- Sec 3 "Arc length and sector area — both fall out of one definition" — s=rθ amber hero,
+  proportion route (s/2πr=θ/2π), A=½r²θ chip, same-fraction-of-disc route, A=½rs green twin
+  form, filled sector-wedge diagram (r,r,s,θ,O labels) grounding all three, radians-only
+  guardrail. PASS.
