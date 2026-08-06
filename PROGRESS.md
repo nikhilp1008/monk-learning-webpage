@@ -223,3 +223,7 @@ scratch/math3/scan_bug_broad.py.
   ignoring solvability, undefined-domain roots), red-margin golden-rules closer (factor,
   back-check, keep n, match family). SUBTOPIC 6 (Trigonometric Equations and Solutions,
   Sec 36-42) COMPLETE. PASS.
+- Sec 43 "Whole-chapter formula recap" — no segments (recap type, board_content only). 4×2 grid
+  of 8 boxed cards, one per subtopic in teaching order (Angle Measurement, Functions & Signs,
+  Standard Values, Graphs & Periods, Compound Angles, Double/Triple, Product-Sum/Amplitude,
+  Equations), each with a 2-line flattened formula summary. PASS.
