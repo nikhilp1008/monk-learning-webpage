@@ -315,8 +315,10 @@ export default function LearnPage() {
     if (voiceClientRef.current) {
       console.log("[STUDENT TURN] Sending student turn over WebSocket voice client");
       voiceClientRef.current.sendUtterance(utterance);
-      }
-    );
+    } else {
+      console.error("[STUDENT TURN ERROR] DronaVoiceClient is not connected via WebSocket");
+      setIsStreaming(false);
+    }
   }, [sessionId]);
 
   /* ─── End session ─── */
@@ -428,6 +430,8 @@ export default function LearnPage() {
             onToggleMute={() => voiceClientRef.current?.toggleMute()}
             onInterrupt={() => voiceClientRef.current?.interrupt()}
             onTogglePause={() => voiceClientRef.current?.togglePause()}
+            onStartPushToTalk={() => voiceClientRef.current?.startPushToTalk()}
+            onStopPushToTalk={() => voiceClientRef.current?.stopPushToTalk()}
           />
         </main>
       </div>

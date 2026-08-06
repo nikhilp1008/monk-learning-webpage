@@ -191,7 +191,7 @@ export class DronaVoiceClient {
       this.scriptProcessor.connect(this.audioCtx.destination);
 
       this.scriptProcessor.onaudioprocess = (e) => {
-        if (this.isMuted || this.isPaused || !this.ws || this.ws.readyState !== WebSocket.OPEN) {
+        if (!this.isPushToTalkActive || this.isMuted || this.isPaused || !this.ws || this.ws.readyState !== WebSocket.OPEN) {
           return;
         }
 
@@ -291,6 +291,21 @@ export class DronaVoiceClient {
     }
   }
 
+  private isPushToTalkActive: boolean = false;
+
+  public startPushToTalk(): void {
+    this.isPushToTalkActive = true;
+    if (!this.micStream) {
+      this.initAudioCapture();
+    }
+    this.notifyState();
+  }
+
+  public stopPushToTalk(): void {
+    this.isPushToTalkActive = false;
+    this.notifyState();
+  }
+
   private notifyState(): void {
     const isConn = this.ws?.readyState === WebSocket.OPEN;
     const statusLabel = !isConn
@@ -301,13 +316,15 @@ export class DronaVoiceClient {
       ? "Muted"
       : this.isPaused
       ? "Paused"
-      : "Listening";
+      : this.isPushToTalkActive
+      ? "Listening — Microphone active"
+      : "Tap or hold mic to speak";
 
     const state: VoiceClientState = {
       isConnected: isConn,
       isMuted: this.isMuted,
       isPaused: this.isPaused,
-      isListening: isConn && !this.isDronaSpeaking && !this.isMuted && !this.isPaused,
+      isListening: isConn && this.isPushToTalkActive && !this.isDronaSpeaking && !this.isMuted && !this.isPaused,
       isSpeaking: this.isDronaSpeaking,
       tutorStatusLabel: statusLabel,
       dronaCaption: this.currentSpeechText,

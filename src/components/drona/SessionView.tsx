@@ -20,6 +20,8 @@ interface SessionViewProps {
   onToggleMute?: () => void;
   onInterrupt?: () => void;
   onTogglePause?: () => void;
+  onStartPushToTalk?: () => void;
+  onStopPushToTalk?: () => void;
 }
 
 export function SessionView({
@@ -36,6 +38,8 @@ export function SessionView({
   onToggleMute,
   onInterrupt,
   onTogglePause,
+  onStartPushToTalk,
+  onStopPushToTalk,
 }: SessionViewProps) {
   const [inputText, setInputText] = useState<string>("");
   const transcriptEndRef = useRef<HTMLDivElement>(null);
@@ -231,7 +235,7 @@ export function SessionView({
               {statusLabel}
             </span>
             <span className="block font-script font-bold text-[0.76rem] text-[#1C9B57] truncate max-w-[140px] sm:max-w-[200px]">
-              {isMuted ? "Mic muted" : isPaused ? "Class paused" : isDronaSpeaking ? "Speaking..." : "Microphone active"}
+              {isMuted ? "Mic muted" : isPaused ? "Class paused" : isDronaSpeaking ? "Speaking..." : voiceState?.isListening ? "Listening — Mic active" : "Hold mic button to speak"}
             </span>
           </span>
 
@@ -240,15 +244,35 @@ export function SessionView({
             {[12, 18, 24, 14, 20, 16, 22, 10].map((h, i) => (
               <i
                 key={i}
-                className={`w-[2.5px] bg-[#EEA31F] rounded-full transition-all ${isDronaSpeaking ? "animate-pulse" : "opacity-40"}`}
-                style={{ height: isDronaSpeaking ? `${h}px` : "6px" }}
+                className={`w-[2.5px] bg-[#EEA31F] rounded-full transition-all ${isDronaSpeaking || voiceState?.isListening ? "animate-pulse" : "opacity-40"}`}
+                style={{ height: isDronaSpeaking || voiceState?.isListening ? `${h}px` : "6px" }}
               />
             ))}
           </span>
         </div>
 
-        {/* Command Dock Action Buttons (B4: Mute, Interrupt, Pause/Resume) */}
+        {/* Command Dock Action Buttons (Push-To-Talk Mic, Mute, Interrupt, Pause/Resume) */}
         <div className="flex items-center gap-1.5 sm:gap-2.5 flex-none">
+          {/* Push-to-Talk Mic Button */}
+          <button
+            onMouseDown={onStartPushToTalk}
+            onMouseUp={onStopPushToTalk}
+            onTouchStart={onStartPushToTalk}
+            onTouchEnd={onStopPushToTalk}
+            title="Hold to speak to Drona"
+            className={`inline-flex items-center gap-1 font-bold text-[0.74rem] sm:text-xs py-1.5 sm:py-2 px-2.5 sm:px-3.5 rounded-full border transition-all select-none cursor-pointer ${
+              voiceState?.isListening
+                ? "bg-[#1C9B57] text-white border-[#1C9B57] scale-105"
+                : "bg-[#1C1A16] text-white border-[#1C1A16] hover:bg-[#2C2A26]"
+            }`}
+          >
+            <svg viewBox="0 0 24 24" width={13} height={13} fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4Z" />
+              <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+            </svg>
+            {voiceState?.isListening ? "Listening..." : "Hold to speak"}
+          </button>
+
           {/* Mute Button */}
           <button
             onClick={onToggleMute}
@@ -266,7 +290,7 @@ export function SessionView({
           <button
             onClick={onInterrupt}
             disabled={!isDronaSpeaking}
-            title={isDronaSpeaking ? "Tap to interrupt Drona" : "Drona is listening — tap when speaking to interrupt"}
+            title={isDronaSpeaking ? "Tap to interrupt Drona" : "Drona is explaining — tap to interrupt"}
             className={`inline-flex items-center gap-1 font-bold text-[0.74rem] sm:text-xs py-1.5 sm:py-2 px-2.5 sm:px-4 rounded-full border transition-all ${
               isDronaSpeaking
                 ? "bg-[#EEA31F] text-[#1C1A16] border-[#EEA31F] cursor-pointer hover:translate-y-[-1px]"
@@ -277,7 +301,7 @@ export function SessionView({
               <path d="M12 3a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4Z" />
               <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
             </svg>
-            {isDronaSpeaking ? "Tap to interrupt" : "Listening"}
+            {isDronaSpeaking ? "Interrupt" : "Pause"}
           </button>
 
           {/* Pause / Resume Button */}
