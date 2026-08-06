@@ -3691,6 +3691,8 @@ REGISTRY[`${C11CH08}:52`] = C11Ch08Sec52;
 
 // ---- Class 11 Math · Chapter 5 "Linear Inequalities" ----
 import M11Ch05Sec1 from "./M11Ch05Sec1";
+import M11Ch05Sec2 from "./M11Ch05Sec2";
 
 const M11CH05 = "7bc767a8-c36f-5f5c-93f5-fb8337ffd7f5";
 REGISTRY[`${M11CH05}:1`] = M11Ch05Sec1;
+REGISTRY[`${M11CH05}:2`] = M11Ch05Sec2;

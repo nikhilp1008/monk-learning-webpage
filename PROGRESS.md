@@ -32,4 +32,10 @@ Flagged for extra scrutiny: Sec 17 (CBSE half-plane derivation), and any section
 geometric construction (half-plane shading, wavy-curve sign charts).
 
 ## Done
-(none yet — starting Sec 1)
+- [x] Sec 1 — Equation vs inequality: two-column number-line comparison (point vs
+      interval), POINT/INTERVAL guardrail chips, erase → real-life examples + stamp.
+      Reference exemplar for this chapter. VERDICT PASS both langs.
+- [x] Sec 2 — Hollow/filled dot notation (x>2 vs x≥2, two stacked lines) → erase →
+      sign-flip rule: -2<3 →×(-1)→ 2>-3 with the flipped ">" in red, red-margin
+      guardrail, reflection diagram (crossing arcs -2→2, 3→-3, red image dots).
+      VERDICT PASS both langs.
