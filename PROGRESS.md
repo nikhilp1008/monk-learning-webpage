@@ -51,3 +51,7 @@ spot check).
 - Sec 5 "Angular motion and the shared-arc ratio" — Ex3 spinning wheel (rpm→rev/s→ω=12π≈37.7
   rad/s boxed, v=rω bridge note); Ex4 equal-arc ratio trap (r1θ1=r2θ2 → r1/r2=θ2/θ1=5/4 boxed,
   inverse-relationship guardrail). Two mirrored columns. PASS.
+- Sec 6 "A chord-to-arc chain and the sector inversion" — Ex5 chord-bisector right-triangle
+  diagram (r=20,half-chord=10) → sin(θ/2)=1/2 → θ=π/3 → s≈20.94cm boxed; Ex6 sector-inversion
+  algebra puzzle (2r+s=16, ½r²θ=16 → r=4,θ=2 boxed), JEE-Advanced-pattern guardrail.
+  Eye-checked (triangle geometry). PASS.
