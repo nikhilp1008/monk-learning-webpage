@@ -158,3 +158,7 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       ringed amber as the hard step), translation dictionary (at least/more
       than/no more than → ≥/>/≤), guardrail, Diwali sweet-shop constraint
       chips, hidden-constraints closing note. VERDICT PASS both langs.
+- [x] Sec 25 — Phrase-to-symbol dictionary (6-row table matching the JSON's
+      own diagram exactly) → erase → 3 modeling rules (define variable+units,
+      one-condition-one-inequality, hidden domain), "between a,b is strict"
+      guardrail, units-carry-through closing note. VERDICT PASS both langs.
