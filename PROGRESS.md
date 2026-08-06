@@ -122,3 +122,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       crossing through the guardrail chip (shrank yBottom 520→470, moved the
       chip below it) — another text/shape-vs-stroke case tsc/verifier don't
       gate, eye-check only. VERDICT PASS both langs.
+- [x] Sec 18 (formulas) — General inequality form ax+by(≤≥<>)c, intercept
+      formula (c/a,0)/(0,c/b), shoelace area for the concrete 3-vertex case
+      using native numeral subscripts (x₁y₂−x₂y₁+...) instead of Σ-with-i/i+1
+      (no 2-D bounds primitive exists), cyclic-order guardrail.
+      VERDICT PASS both langs.
