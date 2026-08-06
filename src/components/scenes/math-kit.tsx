@@ -509,5 +509,46 @@ export function waveD(
   return curveD(points);
 }
 
+/* ------------------------------------------------------------------ */
+/* overline (conjugate z̄, mean x̄, ...)                                 */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Short bar drawn above a glyph/word — for conjugate (z̄) or mean (x̄)
+ * notation. The combining overline mark (like the physics combining
+ * vector-arrow, U+20D7) renders as tofu in the board fonts, so this is a
+ * real drawn stroke instead, positioned from the same text-box-top formula
+ * as the base spec's label math (Anek sans top = y − 0.78×size, Kalam
+ * script top = y − 1.3×size). `x`/`y`/`size`/`anchor` must match the <T/>
+ * call it sits above; `textWidth` is your estimate of that glyph's width
+ * (same estimation rules as base spec Step 3).
+ */
+export function Overline({
+  on,
+  delay = 0,
+  x,
+  y,
+  size,
+  textWidth,
+  anchor = "middle",
+  stroke = INK,
+  script = false,
+}: {
+  on: boolean;
+  delay?: number;
+  x: number;
+  y: number;
+  size: number;
+  textWidth: number;
+  anchor?: "start" | "middle" | "end";
+  stroke?: string;
+  script?: boolean;
+}) {
+  const top = y - (script ? 1.3 : 0.78) * size - 3;
+  const x1 = anchor === "middle" ? x - textWidth / 2 : anchor === "end" ? x - textWidth : x;
+  const x2 = anchor === "middle" ? x + textWidth / 2 : anchor === "end" ? x : x + textWidth;
+  return <Draw on={on} d={lineD(x1, top, x2, top)} stroke={stroke} sw={2} delay={delay} />;
+}
+
 /* re-export the palette/base bits maths scenes reach for most */
 export { INK, MUTED } from "./kit";

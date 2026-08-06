@@ -205,6 +205,25 @@ screenshot). Rule of thumb:
   dash and just write a plain hyphen (`-`) instead, consistent with the
   existing Chapter 1 convention for set difference. Worth a quick scan for
   the same bug in later chapters' `board_content` too.
+- **Fourth glyph audit (Chapter 4, Complex Numbers)** — `∠ ρ φ β` all fall
+  back, same accept-it category as the other Greek letters/angle symbol
+  already covered — no plain substitute exists, use as-is.
+- **`\bar{z}` / `\overline{z}` (conjugate, and later `\bar x` for a mean)**:
+  the combining overline mark is tofu in the board fonts, exactly like
+  physics's combining vector-arrow (U+20D7) problem. Use the new
+  `<Overline>` primitive (math-kit) instead — a real drawn bar above the
+  glyph, positioned from the same text-box-top formula the base spec
+  already uses for label math. This is genuinely drawing it, which is more
+  in-character for a hand-drawn board than any Unicode trick would be.
+- **`\vec{OP}` / `\vec{AB}` (position vectors)**: don't try to render a
+  combining arrow over two letters at all — you're almost always drawing
+  the actual vector as an arrow (`arrowD` from the base kit) between two
+  plotted points anyway, so just label it with the plain letters ("OP")
+  near the arrow. The drawn arrow carries the "this is a vector" meaning;
+  the text doesn't need to.
+- **`\underbrace{...}_{n}` for a term count** (e.g. "97 copies of 1"): same
+  ringed/labeled-callout substitute as before — don't build a brace
+  primitive for this.
 - Hinglish board text stays **Latin script** (house style, inherited from
   physics/chem) — and all of the above symbols are language-agnostic, so a
   formula is byte-identical between the English and Hinglish boards; only the
@@ -247,6 +266,21 @@ theta1,theta2)` (the arc marking a swept angle — verified sweep direction),
 `Math.sin`, pass `Math.cos` for cosine — and threads it through `curveD`; NOT
 for tan/cot/sec/csc, which have asymptotes a single curve would wrongly
 bridge — draw those branch by branch instead).
+
+`<Overline x y size textWidth anchor script />` — a real drawn bar above a
+glyph/word (conjugate `z̄`, later a mean `x̄`) instead of the tofu combining
+mark; `x`/`y`/`size`/`anchor`/`script` must match the `<T/>` call it sits
+above.
+
+**Complex Numbers (Chapter 4) reuses the trig primitives almost entirely** —
+the Argand plane is `<CartesianAxes>` with "Re"/"Im" labels instead of
+x/y (no new primitive needed for that alone); polar form, De Moivre's
+theorem, and nth-roots-of-unity are all `pointOnCircle`/`angleArcD`/`circleD`
+at whatever radius `r = |z|` instead of the unit circle's r=1; position
+vectors are the base kit's `arrowD` from one plotted point to another. This
+is the intended shape of things — a topic's diagrams should mostly compose
+from what already exists; only add a new primitive (like `Overline` above)
+when something genuinely doesn't fit the existing vocabulary.
 
 All obey the base engine rules: gate every element on its beat (`on={beat >= k}`),
 board blank at t=0 (title always-on only), stagger with `dl(k, d)`, `dim`
