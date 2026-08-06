@@ -119,3 +119,9 @@ spot check).
   in the same span = period π), amplitude/period/shift formula chip, red-margin range-shifts-
   too closer ([d-|a|,d+|a|]). Data-bug dashes fixed (seq2,3,5). Eye-checked (curve
   amplitude/period ratios verified against the real functions). PASS.
+- Sec 22 "Periods, the scaling rule and the transform summary" — base-periods hero chip
+  (sin/cos/sec/csc T=2π, tan/cot T=π), scaling rule, real y=tanx graph drawn branch by branch
+  (waveD+Math.tan per branch, NOT a continuous curve) with 3 correctly-placed asymptotes at
+  odd π/2, composite-periods chip (|sinx| etc T=π, sum⇒LCM), asymptote-location rule, master
+  transform-line summary. Eye-checked (tan branch shape and asymptote placement verified
+  against the real function). PASS.
