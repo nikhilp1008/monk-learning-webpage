@@ -162,3 +162,10 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       own diagram exactly) → erase → 3 modeling rules (define variable+units,
       one-condition-one-inequality, hidden domain), "between a,b is strict"
       guardrail, units-carry-through closing note. VERDICT PASS both langs.
+- [x] Sec 26 — Five-step vertical flowchart (matches JSON diagram exactly,
+      step 5 green) with a moving amber spotlight highlight across steps
+      1-2 then 3-4 (pure prop-driven color change, no re-animation), words-
+      vs-symbols guardrail (201 boxes vs bare x≥200, crossed), mixture-setup
+      preview. Caught+fixed two real bugs: heading caption overlapping box 1
+      (shifted flowchart down), and a Hinglish caption overflowing the safe
+      area (moved to full-width bottom placement). VERDICT PASS both langs.
