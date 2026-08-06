@@ -253,8 +253,24 @@ export function SessionView({
 
         {/* Command Dock Action Buttons (Push-To-Talk Mic, Mute, Interrupt, Pause/Resume) */}
         <div className="flex items-center gap-1.5 sm:gap-2.5 flex-none">
-          {/* Push-to-Talk Mic Button */}
+          {/* Push-to-Talk Mic Button with Pointer Capture & Touch Support */}
           <button
+            onPointerDown={(e) => {
+              try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
+              onStartPushToTalk?.();
+            }}
+            onPointerUp={(e) => {
+              try { if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
+              onStopPushToTalk?.();
+            }}
+            onPointerCancel={(e) => {
+              try { if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
+              onStopPushToTalk?.();
+            }}
+            onPointerLeave={(e) => {
+              try { if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
+              onStopPushToTalk?.();
+            }}
             onMouseDown={onStartPushToTalk}
             onMouseUp={onStopPushToTalk}
             onTouchStart={onStartPushToTalk}
@@ -262,7 +278,7 @@ export function SessionView({
             title="Hold to speak to Drona"
             className={`inline-flex items-center gap-1 font-bold text-[0.74rem] sm:text-xs py-1.5 sm:py-2 px-2.5 sm:px-3.5 rounded-full border transition-all select-none cursor-pointer ${
               voiceState?.isListening
-                ? "bg-[#1C9B57] text-white border-[#1C9B57] scale-105"
+                ? "bg-[#1C9B57] text-white border-[#1C9B57] scale-105 shadow-[0_0_12px_rgba(28,155,87,0.6)] animate-pulse"
                 : "bg-[#1C1A16] text-white border-[#1C1A16] hover:bg-[#2C2A26]"
             }`}
           >
