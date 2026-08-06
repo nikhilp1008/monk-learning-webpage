@@ -174,3 +174,9 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       double-inequality-in-y note; V+y>0 guardrail (clearing fractions never
       flips). Fractions flattened inline per notation guide (no stacked-
       fraction primitive exists). VERDICT PASS both langs.
+- [x] Sec 28 (worked ex) — Triangle perimeter (longest=2×shortest,
+      third=shortest+2, perimeter≥42): 5-step routine worked left-to-right
+      (x+2x+(x+2)≥42 → 4x+2≥42 → x≥10), triangle diagram with sides labeled
+      x/2x/x+2 on the right. Caught+fixed the guardrail chip visually
+      overlapping the triangle (shape-vs-shape, not verifier-gated) — confined
+      it to the left column. VERDICT PASS both langs.
