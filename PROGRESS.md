@@ -138,3 +138,8 @@ spot check).
   y=1/2 line, green highlighted segment between crossings π/6 and 5π/6 = the solution
   interval, boxed answer, red-margin general-solution closer. Eye-checked (tent-crossing and
   above-the-line regions verified against the real functions). PASS.
+- Sec 26 "Pitfalls with periods, ranges and asymptotes" — 6 numbered red-circle pitfall rows
+  (multiply-vs-divide for period, 2π-for-tangent, sum-period-LCM/hidden-shrink, forgetting
+  vertical shift in range, swapped asymptotes, open-vs-closed endpoints), red-margin
+  divide-not-multiply golden-rule closer. SUBTOPIC 4 (Graphs and Periodicity, Sec 20-26)
+  COMPLETE. PASS.
