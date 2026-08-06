@@ -155,5 +155,22 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
   segments as expected) — 7-row dense ledger covering ordered pairs through
   standard-function ranges, boxed for the 3 "high emphasis" counting formulas. PASS.
 
-## Current
-Starting Sec 28 (Cheat sheet: rapid recall for the whole chapter — final section).
+- Sec 28 "Cheat sheet: rapid recall for the whole chapter" (cheat_sheet type, no
+  segments as expected) — FINAL section. All the chapter's mnemonics compiled:
+  order-is-sacred, boxed pairs/relations/functions counting trio, D-L R-R,
+  function definition + VLT + strict/non-strict, margin note on recovering A
+  and common-pairs formula, standard ranges, closing mantras. PASS.
+
+**Subtopic 4 (Overview & Main Topics, Sec 27-28) — COMPLETE.**
+
+## CHAPTER COMPLETE — all 28/28 sections authored, verified PASS, and committed.
+
+Summary: 9 Cartesian Product sections, 7 Relations, 10 Functions, 2 chapter-summary
+recaps. 6 sections used real function/circle/step graphs (CartesianAxes, circleD,
+curveD, StepFunction) — all eye-checked for correct shape/geometry. 3 "Proof"
+sections (2, 5, 6) rendered as visual proofs (grid-slicing diagram, branch-
+and-converge tree) rather than plain formula walls. Every worked-example speed
+trap staged the wrong answer crossed out before landing the correct one. No
+blackboard-bold glyphs used anywhere; all notation followed the audited
+fallback-glyph list. One bug found and fixed during authoring (Sec 19: a
+cross-out overlapping the next word) — caught by eye-check, not the verifier.
