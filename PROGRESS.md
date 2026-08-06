@@ -210,3 +210,7 @@ scratch/math3/scan_bug_broad.py.
   principal solutions of sinx=1/2 (π/6 QI, 5π/6 QII); Ex2 general solution of cosx=-1/2 via
   cos(2π/3); Ex3 quadratic 2sin²x+sinx-1=0 factored to (2sinx-1)(sinx+1)=0, both solution
   families boxed. PASS.
+- Sec 40 "The linear form, and factoring instead of dividing" — two columns: Ex4 √3cosx+sinx=1
+  reduced to cos(x-π/6)=cos(π/3), boxed to two families; Ex5 sin2x=sinx factored (never
+  divided) to sinx(2cosx-1)=0, red-margin high-emphasis guardrail on the x=nπ family
+  dividing by sinx would have erased. PASS.
