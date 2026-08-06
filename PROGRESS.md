@@ -194,3 +194,9 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       0.30<(120+0.5y)/(600+y)<0.40, cleared by the positive total (no flip),
       split to y>300 and y<1200, boxed answer 300<y<1200 mL.
       VERDICT PASS both langs.
+- [x] Sec 31 (worked ex, JEE Adv) — Workshop LP bridge: 2x+3y≤36, x+2y≤22,
+      x,y≥0. Exact feasible quadrilateral shaded, all 4 vertices found and
+      labeled ((0,0),(18,0),(0,11),(6,8) — the joint-constraint vertex in
+      green), Z=30x+50y evaluated at each (0, 540, 550, 580=MAX), boxed
+      answer. First real preview of Class 12 Linear Programming.
+      VERDICT PASS both langs.
