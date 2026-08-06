@@ -82,3 +82,11 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       pro-tip callout (test a number inside the interval), worked sanity
       check reusing Sec 9's answer (-17/2,31/2], x=0 ⇒ 0.75, -7≤0.75<5 ✓.
       VERDICT PASS both langs. **SUBTOPIC 1 (One Variable) DONE — 12/12.**
+
+### Subtopic 2 (Two Variables / half-planes)
+- [x] Sec 13 — First 2-var section: CartesianAxes, boundary line x+y=4 drawn,
+      3 sample points ((1,1) origin-side, (2,2) on the line, (5,3) far side),
+      REGION-not-point guardrail, then BOTH half-planes shaded via two
+      HalfPlaneShade calls (test points (0,0) and (6,~3)) + region labels.
+      Eye-verified shading matches all 3 sample points' actual sides.
+      VERDICT PASS both langs.
