@@ -169,3 +169,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       preview. Caught+fixed two real bugs: heading caption overlapping box 1
       (shifted flowchart down), and a Hinglish caption overflowing the safe
       area (moved to full-width bottom placement). VERDICT PASS both langs.
+- [x] Sec 27 (formulas) — Average template (sum/n ≥ A) and mixture/
+      concentration template (((a/100)V+(b/100)y)/(V+y)), both boxed;
+      double-inequality-in-y note; V+y>0 guardrail (clearing fractions never
+      flips). Fractions flattened inline per notation guide (no stacked-
+      fraction primitive exists). VERDICT PASS both langs.
