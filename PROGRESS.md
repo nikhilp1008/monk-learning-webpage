@@ -197,3 +197,7 @@ scratch/math3/scan_bug_broad.py.
   solution θ=nπ+(-1)ⁿπ/6, train-timetable analogy, red-margin closer (describe every
   solution, not just find one). Data-bug fixed (seq2). Eye-checked (mirror-point geometry).
   PASS.
+- Sec 37 "The two great dangers: dividing and squaring" — two columns: losing roots by
+  dividing (cancel cosθ from sinθcosθ=cosθ throws away cosθ=0, red-margin factor-never-divide
+  guardrail); gaining roots by squaring (sinx+cosx=1 →square→ sin2x=0 but x=π fails the
+  original, extraneous-root check guardrail, both-are-conceptual-not-careless closer). PASS.
