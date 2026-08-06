@@ -227,3 +227,21 @@ scratch/math3/scan_bug_broad.py.
   of 8 boxed cards, one per subtopic in teaching order (Angle Measurement, Functions & Signs,
   Standard Values, Graphs & Periods, Compound Angles, Double/Triple, Product-Sum/Amplitude,
   Equations), each with a 2-line flattened formula summary. PASS.
+- Sec 44 "Chapter cheat sheet — golden rules and traps" — no segments (cheat_sheet type,
+  board_content only; Hinglish for the 6 rule rows hand-written since no segments_hinglish
+  source exists for 43-44). Single numbered red-circle column, one golden rule per subtopic
+  (angles: radians first; functions: magnitude-then-sign, two steps; allied angles: odd
+  multiple of 90° swaps co-function; graphs: divide for period, tan's period is π, shift in
+  range; identities: reconstruct from cos(A−B), watch every ±, amplitude √(a²+b²) never a+b;
+  equations: factor never divide, back-check, keep n, match family), row 1 bold/high-emphasis
+  matching its red-margin/high source flag, red-margin closer (final sanity check: |sin|/|cos|
+  >1 or a multiplied-not-divided period means stop and recheck). PASS.
+
+## CHAPTER COMPLETE — all 44/44 sections of M11 Ch03 Trigonometry authored, registered,
+## typechecked, and verified PASS (English + Hinglish). Two source-data geometry bugs caught
+## and corrected independently (Sec 8 mislabeled quadrants, Sec 29 non-equal chords). Data-bug
+## audit confirmed exactly 13/13 literal-escape occurrences found and fixed at authoring time
+## (see "Data-bug audit" section above). All 7 subtopics complete: Angle Measurement & Radians
+## (1-7), Trig Functions & Quadrant Signs (8-14), Standard Values & Allied Angles (15-19),
+## Graphs & Periodicity (20-26), Identities & Compound Angles (27-35), Trig Equations (36-42),
+## Recap/Cheat Sheet (43-44).
