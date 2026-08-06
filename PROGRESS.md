@@ -216,3 +216,10 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       exactly. Fixed several tight/overlapping vertical-spacing estimates
       before verifying (ring overshoot vs labels, curve amplitude vs
       guardrail chips). VERDICT PASS both langs.
+- [x] Sec 34 — Factor normalization ((x-r), positive coefficient; (3-x)=
+      -(x-3)), hand-drawn cross-vs-touch-bounce mini-diagram (odd root
+      crosses via a diagonal line, even root touches via a shallow arc,
+      since wavyCurveD can't represent a non-crossing root), even-
+      multiplicity guardrail, denominator-always-open icon+guardrail,
+      numerator-closed-only-if-non-strict icon+caption. Caught+fixed another
+      kit/math-kit IntervalDot import mix-up via tsc. VERDICT PASS both.
