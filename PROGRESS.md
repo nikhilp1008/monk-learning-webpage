@@ -89,3 +89,7 @@ spot check).
   tan/cot undefined points [data-bug fixed], reduce-large-angles-first), red-margin golden-rule
   closer (magnitude from identity, sign from quadrant). SUBTOPIC 2 (Trigonometric Functions
   and Quadrant Signs, Sec 8-14) COMPLETE. PASS.
+- Sec 15 "Standard values come from two special triangles" — opens subtopic 3. Two hand-drawn
+  reference triangles (45-45-90 legs 1,1 hyp √2; 30-60-90 legs 1,√3 hyp 2) with angle marks,
+  values read off each, 5-chip sine-row pattern (√0/2..√4/2) with cosine-reversed note, 0°/90°
+  circle-readoff closer. Eye-checked (triangle proportions/angle placement). PASS.
