@@ -152,3 +152,9 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       callback check reusing Sec 22's quadrilateral: test (1,1) against all
       four constraints, region confirmed. VERDICT PASS both langs.
       **SUBTOPIC 2 (Two Variables) DONE — 11/11.**
+
+### Subtopic 3 (Applications & Word Problems)
+- [x] Sec 24 — TRANSLATE→SOLVE→INTERPRET framework (3 boxes+arrows, TRANSLATE
+      ringed amber as the hard step), translation dictionary (at least/more
+      than/no more than → ≥/>/≤), guardrail, Diwali sweet-shop constraint
+      chips, hidden-constraints closing note. VERDICT PASS both langs.
