@@ -129,3 +129,6 @@ spot check).
   (sin3x=2π/3, tan2x=π/2, cos(x/2)=4π); Ex2 range/period of 3+2sinx ([1,5], 2π); Ex3
   amp/period of -4cos(x/3) boxed (4, 6π), red-margin closer (minus flips vertically only).
   PASS.
+- Sec 24 "Composite and identity periods" — Ex4 |sinx|+|cosx| hidden-shrink period π/2
+  (roles swap via |cosx|=|sin(x+π/2)|, boxed f(x+π/2)=f(x)), don't-take-the-larger guardrail;
+  Ex5 sin²x period π via power-reduction identity (data-bug fixed). PASS.
