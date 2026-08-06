@@ -53,8 +53,9 @@ export function SessionView({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (inputText.trim() && !isStreaming) {
-      onSendTurn(inputText.trim());
+    const text = inputText.trim();
+    if (text) {
+      onSendTurn(text);
       setInputText("");
     }
   };

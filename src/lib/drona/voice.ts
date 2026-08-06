@@ -41,6 +41,7 @@ export class DronaVoiceClient {
   private isPaused: boolean = false;
   private isListening: boolean = true;
   private isDronaSpeaking: boolean = false;
+  private isPushToTalkActive: boolean = false;
   private currentPlaybackPos: number = 0;
   private currentSpeechText: string = "";
 
@@ -139,8 +140,8 @@ export class DronaVoiceClient {
     }
   }
 
-  public flushAudioQueue(): void {
-    console.log("[AUDIO FLUSH] Flushing audio playback queue and stopping scheduled sources");
+  public flushAudioQueue(reason: string = "user_interrupt"): void {
+    console.log(`[AUDIO FLUSH] Stopped ${this.activeSources.length} active sources and cleared ${this.pendingAudioBuffers.length} queued buffers. Reason: '${reason}'`);
     for (const source of this.activeSources) {
       try {
         source.stop();
@@ -172,7 +173,14 @@ export class DronaVoiceClient {
     source.onended = () => {
       const idx = this.activeSources.indexOf(source);
       if (idx !== -1) this.activeSources.splice(idx, 1);
-      this.drainAudioBufferQueue();
+
+      if (this.activeSources.length === 0 && this.pendingAudioBuffers.length === 0) {
+        console.log("[AUDIO PLAYBACK COMPLETE] All active and pending audio chunks finished playing naturally.");
+        this.isDronaSpeaking = false;
+        this.notifyState();
+      } else {
+        this.drainAudioBufferQueue();
+      }
     };
 
     this.activeSources.push(source);
@@ -185,8 +193,7 @@ export class DronaVoiceClient {
     const currentTime = this.playbackCtx.currentTime;
     const leadTime = this.nextAudioStartTime - currentTime;
 
-    // Capped at 2.0s lookahead ceiling to keep speech perfectly synced with board/captions
-    if (leadTime < 2.0) {
+    if (leadTime < 2.5) {
       const nextBuffer = this.pendingAudioBuffers.shift();
       if (nextBuffer) {
         this.scheduleAudioBuffer(nextBuffer);
@@ -273,29 +280,14 @@ export class DronaVoiceClient {
         }
 
         const inputData = e.inputBuffer.getChannelData(0);
-
-        let sum = 0;
-        for (let i = 0; i < inputData.length; i++) {
-          sum += inputData[i] * inputData[i];
-        }
-        const rms = Math.sqrt(sum / inputData.length);
-
         const pcm16 = new Int16Array(inputData.length);
         for (let i = 0; i < inputData.length; i++) {
           const s = Math.max(-1, Math.min(1, inputData[i]));
           pcm16[i] = s < 0 ? s * 0x8000 : s * 0x7fff;
         }
 
-        if (!this.isDronaSpeaking) {
-          this.pcmRingBuffer.push(pcm16);
-          if (this.pcmRingBuffer.length > this.maxRingBufferChunks) {
-            this.pcmRingBuffer.shift();
-          }
-        }
-
-        if (rms > 0.015 && !this.isDronaSpeaking) {
-          this.ws.send(pcm16.buffer);
-        }
+        console.log(`[MIC PCM FORWARDED] ${pcm16.byteLength} bytes binary PCM audio frame sent over WebSocket`);
+        this.ws.send(pcm16.buffer);
       };
     } catch (err) {
       console.warn("Microphone access denied or audio init failed:", err);
@@ -303,6 +295,35 @@ export class DronaVoiceClient {
   }
 
   // ─── Public Command Controls ─── //
+
+  public startPushToTalk(): void {
+    console.log("[PTT START] Push-to-talk button activated");
+    this.isPushToTalkActive = true;
+    
+    // Stop Drona speech immediately on barge-in
+    if (this.isDronaSpeaking || this.activeSources.length > 0 || this.pendingAudioBuffers.length > 0) {
+      this.flushAudioQueue("ptt_barge_in");
+      this.isDronaSpeaking = false;
+    }
+
+    if (this.audioCtx && this.audioCtx.state === "suspended") {
+      this.audioCtx.resume();
+    }
+
+    if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+      this.ws.send(JSON.stringify({ type: "ptt_start" }));
+    }
+    this.notifyState();
+  }
+
+  public stopPushToTalk(): void {
+    console.log("[PTT STOP] Push-to-talk button released");
+    this.isPushToTalkActive = false;
+    if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+      this.ws.send(JSON.stringify({ type: "ptt_stop" }));
+    }
+    this.notifyState();
+  }
 
   public toggleMute(): void {
     this.isMuted = !this.isMuted;
@@ -366,21 +387,6 @@ export class DronaVoiceClient {
       this.ws.close();
       this.ws = null;
     }
-  }
-
-  private isPushToTalkActive: boolean = false;
-
-  public startPushToTalk(): void {
-    this.isPushToTalkActive = true;
-    if (!this.micStream) {
-      this.initAudioCapture();
-    }
-    this.notifyState();
-  }
-
-  public stopPushToTalk(): void {
-    this.isPushToTalkActive = false;
-    this.notifyState();
   }
 
   private notifyState(): void {
