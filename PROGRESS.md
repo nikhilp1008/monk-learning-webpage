@@ -151,5 +151,9 @@ graph-reading geometry (15, 18, 21, 22, 25) for an extra eye-check pass.
 
 **Subtopic 3 (Functions, Sec 17-26) — COMPLETE.**
 
+- Sec 27 "Formula recap: the complete chapter toolkit" (formula_recap type, no
+  segments as expected) — 7-row dense ledger covering ordered pairs through
+  standard-function ranges, boxed for the 3 "high emphasis" counting formulas. PASS.
+
 ## Current
-Starting Sec 27 (Formula recap: the complete chapter toolkit — no segments, use board_content).
+Starting Sec 28 (Cheat sheet: rapid recall for the whole chapter — final section).
