@@ -75,7 +75,11 @@ Flagged for extra eye-scrutiny per task brief: induction proof (secs 4–5), any
 - **Sec 41** [flagged] — dense `formulas`: boxed master multinomial theorem, coefficient def, boxed term-count formula, trinomial case, boxed sum-of-coefficients=k^n, red-margin k=2-recovers-binomial. PASS.
 - **Sec 42** [flagged] — two labeled PROOF blocks (coefficient via assignment-counting, term-count via stars-and-bars, both boxed) + two labeled TECHNIQUE blocks (direct extraction; geometric-series bridge). **Closes out every flagged section in the task brief.** PASS.
 
-Pushed to origin through Sec 42. 5 sections remain (43-45 finish subtopic 7, 46-47 are the chapter recap/cheat-sheet).
+- **Sec 43** — Example 1: distinct terms in (a+b+c)^12 -> 14C2=91, boxed. Example 2: coeff of x^2y^3z^4 in (x+y+z)^9 -> exponent-sum check -> 9!/(2!3!4!)=1260, boxed. Math verified. PASS.
+- **Sec 44** — Example 3: coeff of x^4 in (1+x+x^2)^3 via two case-solutions -> 6, boxed, red-margin full-expansion cross-check. Example 4: geometric-series bridge (1-x)^-3 -> [x^7] -> 9C2=36, boxed, agrees with stars-and-bars. Math hand-verified with a full manual expansion check. PASS.
+- **Sec 45** — subtopic 7 closer, `tips`: 2×3 grid (4 red traps, 2 green tips). PASS. **Subtopic 7 (secs 40-45) complete.**
+
+Pushed to origin through Sec 45. 2 sections remain — 46-47, the chapter recap/cheat-sheet (subtopic 8), then the chapter is done.
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3036 > /tmp/dev-math7.log 2>&1 &`, confirmed READY.
