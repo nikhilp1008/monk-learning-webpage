@@ -61,3 +61,6 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       piecewise bracket for the two a>0/a<0 cases, three-language equivalence
       (mini number line, set-builder, interval), bracket-rule guardrail.
       VERDICT PASS both langs. SUBTOPIC 1 (One Variable) 7/12 done.
+- [x] Sec 8 (worked ex) — 3(2x-1)≥2(x+3)-5 solved top-to-bottom (distribute →
+      collect → ÷4 → x≥1) with a boxed green answer chip, then represented on
+      a number line (filled dot at 1, shaded to +∞). VERDICT PASS both langs.
