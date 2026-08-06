@@ -166,3 +166,6 @@ spot check).
   formula-building run of subtopic 5. Product↔Sum (3 chips), Sum→Product (3 chips, the
   cosC-cosD leading-minus one in amber high-emphasis), Amplitude+conditional
   (acosx+bsinx=Rcos(x-α); tanA+tanB+tanC=tanAtanBtanC when A+B+C=π). PASS.
+- Sec 32 "Exact values and a clean identity proof" — three columns: Ex1 cos15° via 45°-30°
+  boxed to (√6+√2)/4; Ex2 proves cos(A+B)cos(A-B)=cos²A-sin²B via difference-of-squares
+  expansion, boxed ✓; Ex3 sin(7π/12) via π/4+π/3 boxed to (√2+√6)/4. PASS.
