@@ -189,3 +189,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       written directly as JSX text get decoded by the parser) — swapped for
       raw >/< characters. Audited all other sections for the same pattern,
       none found. VERDICT PASS both langs.
+- [x] Sec 30 (worked ex, JEE Main) — Acid mixture: 600mL 20% + y mL 50%,
+      result between 30-40%, applies Sec 27's mixture template directly:
+      0.30<(120+0.5y)/(600+y)<0.40, cleared by the positive total (no flip),
+      split to y>300 and y<1200, boxed answer 300<y<1200 mL.
+      VERDICT PASS both langs.
