@@ -64,3 +64,6 @@ geometric construction (half-plane shading, wavy-curve sign charts).
 - [x] Sec 8 (worked ex) — 3(2x-1)≥2(x+3)-5 solved top-to-bottom (distribute →
       collect → ÷4 → x≥1) with a boxed green answer chip, then represented on
       a number line (filled dot at 1, shaded to +∞). VERDICT PASS both langs.
+- [x] Sec 9 (worked ex, SPEED TRAP) — -7≤(3-2x)/4<5: ×4, -3, then ÷(-2) stages
+      the tempting un-flipped "15.5≤x<-8.5" chip, crosses it out ("impossible"
+      caption), lands the correctly flipped (-17/2, 31/2]. VERDICT PASS both.
