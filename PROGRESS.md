@@ -162,3 +162,7 @@ spot check).
 - Sec 30 "Double, half, triple and the t-substitution" — pure formula catalogue, 2×2 grid:
   double-angle (sin2A, tan2A, cos2A's three faces), half-angle/power-reduction (1±cosA),
   t=tan(A/2) substitution (sinA/cosA/tanA in terms of t), triple-angle (sin3A, cos3A). PASS.
+- Sec 31 "Product-to-sum, sum-to-product, amplitude and conditional identities" — closes the
+  formula-building run of subtopic 5. Product↔Sum (3 chips), Sum→Product (3 chips, the
+  cosC-cosD leading-minus one in amber high-emphasis), Amplitude+conditional
+  (acosx+bsinx=Rcos(x-α); tanA+tanB+tanC=tanAtanBtanC when A+B+C=π). PASS.
