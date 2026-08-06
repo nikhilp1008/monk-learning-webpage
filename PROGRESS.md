@@ -143,3 +143,9 @@ spot check).
   vertical shift in range, swapped asymptotes, open-vs-closed endpoints), red-margin
   divide-not-multiply golden-rule closer. SUBTOPIC 4 (Graphs and Periodicity, Sec 20-26)
   COMPLETE. PASS.
+- Sec 27 "One master key, and the tree that grows from it" — opens subtopic 5 (identity-
+  derivation care flagged for the whole subtopic). cos(A-B) hero, then a 4-row family-tree
+  diagram (boxes+connector lines, same technique as Sec9's ASTC ladder): root → cos(A+B)/
+  sin(A±B)/tan(A±B) → Double/Product→Sum → Half-angle/Triple/Sum→Product → a cosx+b sinx
+  application box. Learn-the-derivation-not-the-list closer. Eye-checked (tree structure
+  reads cleanly, no overlaps). PASS.
