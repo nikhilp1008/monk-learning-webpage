@@ -182,45 +182,133 @@ export function SessionView({
           </div>
         </div>
 
-        {/* ─── Checkpoint Quiz Card Overlay (Directive 7: Interactive Chips on awaiting_answer) ─── */}
-        {phase === "awaiting_answer" && (
-          <div className="absolute top-0 right-0 bottom-0 w-[min(400px,92%)] z-10 flex flex-col bg-white border-[1.5px] border-[#1C1A16] rounded-[16px] p-4 sm:p-5 shadow-[-28px_0_48px_-34px_rgba(28,26,22,0.5)] overflow-y-auto animate-ml-rise">
-            <div className="flex items-center gap-2 mb-2 flex-none">
-              <span className="w-2 h-2 rounded-full bg-[#EEA31F] flex-none animate-pulse" />
-              <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-[#9A6A12]">
-                Checkpoint Question
+        {/* ─── Ask Sheet Overlay — Ported 1:1 from design-reference/index.html (lines 620–643) ─── */}
+        {(phase === "awaiting_answer" || (subtopicOptions && subtopicOptions.length > 0)) && (
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              width: "min(380px, 85%)",
+              zIndex: 10,
+              display: "flex",
+              flexDirection: "column",
+              background: "#fff",
+              border: "1.5px solid #1C1A16",
+              borderRadius: "16px",
+              padding: "22px 22px 18px",
+              boxShadow: "-28px 0 48px -34px rgba(28,26,22,.5)",
+              animation: "mlSheetIn .45s cubic-bezier(.2,.7,.2,1)",
+              overflowY: "auto",
+            }}
+          >
+            {/* Header */}
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "12px", flex: "none" }}>
+              <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#EEA31F", flex: "none" }} />
+              <span style={{ fontWeight: 800, fontSize: ".62rem", letterSpacing: ".14em", textTransform: "uppercase", color: "#9A6A12" }}>
+                {teacher} asks you
               </span>
             </div>
-            <p className="text-[0.96rem] leading-snug font-semibold mb-3.5 flex-none text-ink">
-              Select an option below or speak / type your answer:
+
+            {/* Question Text */}
+            <p style={{ fontSize: "1rem", lineHeight: 1.5, fontWeight: 600, marginBottom: "14px", flex: "none", color: "#1C1A16" }}>
+              {cleanSpeech.length > 20 ? cleanSpeech : "Select an option or type your response below:"}
             </p>
 
-            {/* Option Chips from subtopic_options */}
-            <div className="space-y-2.5 flex-none mb-3">
+            {/* Option Chips */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "8px", flex: "none" }}>
               {(subtopicOptions && subtopicOptions.length > 0 ? subtopicOptions : [
-                "Option A: System expands into surroundings",
-                "Option B: Energy exchange occurs without matter transfer",
-                "Option C: Both matter and energy remain conserved"
+                "Option A: Near the hinge",
+                "Option B: At the far end",
+                "Option C: Not sure"
               ]).map((optionText, idx) => (
                 <button
                   key={idx}
-                  onClick={() => onSendTurn(optionText)}
-                  className="w-full text-left p-3 rounded-xl border border-[rgba(28,26,22,0.12)] bg-[#FCFAF4] hover:bg-[#F4EFE3] hover:border-[#1C1A16] transition-all cursor-pointer group"
+                  onClick={() => {
+                    onSendTurn(optionText);
+                    setInputText("");
+                  }}
+                  style={{
+                    padding: "10px 14px",
+                    borderRadius: "11px",
+                    border: "1.4px solid rgba(28,26,22,.14)",
+                    background: "#fff",
+                    fontFamily: "inherit",
+                    fontWeight: 600,
+                    fontSize: ".88rem",
+                    textAlign: "left",
+                    color: "#1C1A16",
+                    cursor: "pointer",
+                    transition: "all 0.2s ease"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "#1C1A16";
+                    e.currentTarget.style.background = "#FCFAF4";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(28,26,22,.14)";
+                    e.currentTarget.style.background = "#fff";
+                  }}
                 >
-                  <div className="flex items-start gap-2.5">
-                    <span className="w-5 h-5 rounded-full bg-white border border-[rgba(28,26,22,0.2)] text-[0.72rem] font-bold text-[#1C1A16] grid place-items-center flex-none group-hover:bg-[#1C1A16] group-hover:text-white transition-colors">
-                      {String.fromCharCode(65 + idx)}
-                    </span>
-                    <div className="text-[0.86rem] font-semibold text-ink leading-snug flex-1">
-                      <KaTeXRenderer latex={optionText} displayMode={false} />
-                    </div>
-                  </div>
+                  <KaTeXRenderer latex={optionText} displayMode={false} />
                 </button>
               ))}
             </div>
 
-            <span className="flex-1" />
-            <p className="font-script font-bold text-[0.82rem] text-[#9C988C] text-center mt-2 flex-none">
+            {/* Input Row */}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (inputText.trim()) {
+                  onSendTurn(inputText.trim());
+                  setInputText("");
+                }
+              }}
+              style={{ display: "flex", gap: "8px", marginTop: "12px", flex: "none" }}
+            >
+              <input
+                placeholder="or type your answer…"
+                value={inputText}
+                onChange={(e) => setInputText(e.target.value)}
+                style={{
+                  flex: 1,
+                  minWidth: 0,
+                  background: "#fff",
+                  border: "1.4px solid rgba(28,26,22,.14)",
+                  borderRadius: "99px",
+                  padding: "9px 15px",
+                  fontFamily: "inherit",
+                  fontSize: ".86rem",
+                  color: "#1C1A16",
+                  outline: "none"
+                }}
+              />
+              <button
+                type="submit"
+                aria-label="Send answer"
+                style={{
+                  width: "38px",
+                  height: "38px",
+                  flex: "none",
+                  borderRadius: "50%",
+                  border: "none",
+                  background: "#1C1A16",
+                  display: "grid",
+                  placeItems: "center",
+                  cursor: "pointer"
+                }}
+              >
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="none">
+                  <path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="#FCFAF4" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </form>
+
+            <span style={{ flex: 1 }} />
+
+            {/* Bottom Encouragement Caption */}
+            <p style={{ fontFamily: "'Kalam', cursive", fontWeight: 700, fontSize: ".9rem", color: "#9C988C", textAlign: "center", marginTop: "14px", flex: "none" }}>
               guessing is allowed — that&apos;s how we learn
             </p>
           </div>
