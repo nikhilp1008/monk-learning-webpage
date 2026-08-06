@@ -78,3 +78,7 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       in math-kit not kit — tsc didn't flag it, only the dev-server bundler
       did; runtime-check every new section, don't trust tsc alone for cross-
       module re-exports). VERDICT PASS both langs. SUBTOPIC 1: 11/12 done.
+- [x] Sec 12 (tips) — 5 pitfall rows (tick + text, negative-flip in red first),
+      pro-tip callout (test a number inside the interval), worked sanity
+      check reusing Sec 9's answer (-17/2,31/2], x=0 ⇒ 0.75, -7≤0.75<5 ✓.
+      VERDICT PASS both langs. **SUBTOPIC 1 (One Variable) DONE — 12/12.**
