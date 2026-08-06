@@ -191,3 +191,9 @@ scratch/math3/scan_bug_broad.py.
   amplitude=√(a²+b²) never a+b, conditional needs A+B+C=π [literal-π-escape bug fixed - a
   new bug variant, not a dash]), red-margin golden-rule closer. SUBTOPIC 5 (Identities and
   Compound Angle Formulas, Sec 27-35) COMPLETE. PASS.
+- Sec 36 "Why one equation has infinitely many answers" — opens subtopic 6. Unit-circle
+  diagram: y=1/2 line cutting the circle at two mirror points (π/6, 5π/6), both verified at
+  the same height; principal-solution/general-solution two-layer explanation, boxed general
+  solution θ=nπ+(-1)ⁿπ/6, train-timetable analogy, red-margin closer (describe every
+  solution, not just find one). Data-bug fixed (seq2). Eye-checked (mirror-point geometry).
+  PASS.
