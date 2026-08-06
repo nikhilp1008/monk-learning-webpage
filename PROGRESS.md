@@ -113,3 +113,12 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       quadrilateral, two non-touching shapes + ∅), erase → corner-points
       triangle (P,Q,R vertices) + Class-12-LP guardrail + solid⇔filled /
       dotted⇔hollow legend + closing callback. VERDICT PASS both langs.
+- [x] Sec 17 (FLAGGED — CBSE derivation) — Formal proof that ax+by>c (b>0) is
+      the half-plane above ax+by=c: PROOF|DIAGRAM two-column, P(α,β) on the
+      line, Q(α,γ) directly above, boxed key step aα+bγ>aα+bβ=c, regions I/II
+      labeled, red-margin QED conclusion. Hand-verified: P lies exactly on
+      the line, Q sits strictly above it, and regions I/II fall on the
+      correct sides algebraically. Caught+fixed the diagram's x-axis visibly
+      crossing through the guardrail chip (shrank yBottom 520→470, moved the
+      chip below it) — another text/shape-vs-stroke case tsc/verifier don't
+      gate, eye-check only. VERDICT PASS both langs.
