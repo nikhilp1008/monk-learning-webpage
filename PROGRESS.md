@@ -137,3 +137,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       (checked), dotted line (strict >), region shaded via HalfPlaneShade.
       Caught+fixed a real kit/math-kit import mix-up (crossD) — tsc genuinely
       caught it this time. VERDICT PASS both langs.
+- [x] Sec 21 (worked ex) — x+y≤4, x≥1, y≥0: three boundary lines drawn,
+      triangle shaded (exact polygon, vertices computed not guessed), all
+      three vertices found by pairwise intersection and labeled in place
+      ((1,0), (4,0), (1,3)), red-margin "bounded triangle" conclusion.
+      VERDICT PASS both langs.
