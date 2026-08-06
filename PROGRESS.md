@@ -109,3 +109,8 @@ spot check).
   even/odd slip, reduce-large-angles-first), red-margin two-routes-cross-check closer
   (135°=90+45=180-45). SUBTOPIC 3 (Standard Values, Even-Odd Nature and Allied Angles,
   Sec 15-19) COMPLETE. PASS.
+- Sec 20 "A graph is the unit circle, unrolled" — opens subtopic 4. Full y=sinx waveD curve
+  over one period (0..2π) on bare CartesianAxes, red max/min dots + labels at π/2 and 3π/2,
+  zero-crossing dots at π/2π, periodicity definition f(x+T)=f(x) boxed, sin/cos T=2π vs tan
+  T=π, red-margin closer on tangent's line-direction reasoning. Eye-checked (correct sine
+  shape verified against real function). PASS.
