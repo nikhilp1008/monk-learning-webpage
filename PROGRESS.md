@@ -53,3 +53,6 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       QED conclusion. Swapped an unaudited long-double-arrow glyph for the
       safe-listed ⇔ and used "Q.E.D." instead of the unaudited ∎ mark.
       VERDICT PASS both langs.
+- [x] Sec 6 — Compound inequality skeleton (p ≤ expr ≤ q), same-move-both-ends
+      arrows, negative-multiply guardrail, concrete demo 1≤x≤4 →×(-1)→
+      -1≥-x≥-4 re-read as -4≤-x≤-1, classic-error caption. VERDICT PASS both.
