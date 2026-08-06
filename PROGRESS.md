@@ -285,3 +285,15 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       ∞ always round). 3 "high" formulas boxed amber, the guardrail boxed
       red, rest plain text — all single-line, generously spaced.
       VERDICT PASS both langs.
+- [x] Sec 43 (cheat_sheet, FINAL SECTION) — "Quick recall for the whole
+      chapter": 4 subtopic blocks (ONE VARIABLE / TWO VARIABLES / WORD
+      PROBLEMS / WAVY CURVE, each a red-caps label + 1-2 summary lines,
+      matching C11Ch01Sec59's grouped-beat pattern) plus 2 boxed-red
+      mnemonic one-liners ("negative flips, positive sticks" / "odd
+      crosses, even bounces") and closing modulus/quadratic quick-facts.
+      Caught+fixed a real instance of the Sec 29 entity-in-string bug
+      before it ever hit the board (&lt;&gt; inside a t() string literal
+      for "≤≥ solid, <> dotted") — swapped for raw </> characters,
+      re-audited the whole file, none remaining. VERDICT PASS both langs.
+
+**CHAPTER COMPLETE — 43/43 sections done.**
