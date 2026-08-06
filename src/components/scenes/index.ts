@@ -3688,3 +3688,9 @@ REGISTRY[`${C11CH08}:49`] = C11Ch08Sec49;
 REGISTRY[`${C11CH08}:50`] = C11Ch08Sec50;
 REGISTRY[`${C11CH08}:51`] = C11Ch08Sec51;
 REGISTRY[`${C11CH08}:52`] = C11Ch08Sec52;
+
+// ── M11Ch07 "Binomial Theorem" (Class 11 Maths) ──
+import M11Ch07Sec1 from "./M11Ch07Sec1";
+
+const M11CH07 = "ad7f3197-f77b-5be6-8581-f5372ffb7797";
+REGISTRY[`${M11CH07}:1`] = M11Ch07Sec1;
