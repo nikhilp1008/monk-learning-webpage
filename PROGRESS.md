@@ -109,3 +109,7 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       were only ever caught by the dev-server bundler via verify-scene.mjs,
       not by tsc — the verify step was the real safety net all along.**
       VERDICT PASS both langs.
+- [x] Sec 16 — Bounded/unbounded/empty as 3 sketch panels (triangle, open
+      quadrilateral, two non-touching shapes + ∅), erase → corner-points
+      triangle (P,Q,R vertices) + Class-12-LP guardrail + solid⇔filled /
+      dotted⇔hollow legend + closing callback. VERDICT PASS both langs.
