@@ -1,0 +1,161 @@
+{
+  "id": "4320789d-9f8c-4423-9283-5614b0655df9",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 5,
+  "section_type": "worked_examples",
+  "subtopic": "01 · Angle Measurement and Radians",
+  "title": "Angular motion and the shared-arc ratio",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 3 — a spinning wheel",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$360$ revolutions per minute $= \\frac{360}{60}=6$ revolutions per second. Each revolution is $2\\pi$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\omega = 6\\times 2\\pi = 12\\pi \\approx 37.7\\ \\text{rad s}^{-1}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "This ω in rad s⁻¹ feeds straight into v = rω in rotational mechanics.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Example 4 — equal arcs in two circles",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "Same arc: $r_1\\theta_1 = r_2\\theta_2$. The angles appear only as a ratio, so degrees are fine here.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\frac{r_1}{r_2} = \\frac{\\theta_2}{\\theta_1} = \\frac{75}{60} = \\frac{5}{4}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "Bigger angle on the same arc means a smaller radius — the inverse relationship is the trap.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_5.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_5.mp3",
+  "duration_sec_english": 89.16,
+  "duration_sec_hinglish": 86.26,
+  "board_reveal_at_english": [
+    0.0,
+    5.29,
+    17.15,
+    27.31,
+    40.62,
+    45.14,
+    63.83,
+    74.24
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    4.27,
+    16.98,
+    25.69,
+    39.51,
+    42.67,
+    61.78,
+    71.68
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "This example is the quiet bridge from maths straight into physics."
+    },
+    {
+      "seq": 2,
+      "text": "A wheel makes three hundred sixty revolutions in a minute. Per second that's three hundred sixty over sixty, which is six revolutions. Each revolution is two pi radians."
+    },
+    {
+      "seq": 3,
+      "text": "So the angular speed omega is six times two pi, that is twelve pi, about thirty seven point seven radians per second."
+    },
+    {
+      "seq": 4,
+      "text": "That omega, in radians per second, is exactly what plugs into v equals r omega for rim speed. Fumble the units here and you lose marks in rotational mechanics too."
+    },
+    {
+      "seq": 5,
+      "text": "The fourth example is a favourite ratio trap."
+    },
+    {
+      "seq": 6,
+      "text": "Two circles have arcs of equal length subtending sixty degrees and seventy five degrees at their centres. Since the arcs are equal, r one theta one equals r two theta two. The angles only appear as a ratio, so we can leave them in degrees, the conversion factor would cancel anyway."
+    },
+    {
+      "seq": 7,
+      "text": "So r one over r two equals theta two over theta one, which is seventy five over sixty, equal to five over four."
+    },
+    {
+      "seq": 8,
+      "text": "Read the meaning: a bigger angle sitting on the same arc means a tighter, smaller circle. Students who memorised s equals r theta but never felt it often flip this and write four to five."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "ये example maths से सीधे physics में जाने वाला pul है."
+    },
+    {
+      "seq": 2,
+      "text": "एक wheel एक minute में तीन सौ साठ revolutions करता है. Per second ये three hundred sixty over sixty, यानी six revolutions. हर revolution two pi radians का है."
+    },
+    {
+      "seq": 3,
+      "text": "So angular speed omega है six times two pi, यानी twelve pi, करीब thirty seven point seven radians per second."
+    },
+    {
+      "seq": 4,
+      "text": "यही omega, radians per second में, exactly वही है जो v equals r omega में rim speed के लिए जाता है. Units यहाँ गड़बड़ की तो rotational mechanics में भी marks गए."
+    },
+    {
+      "seq": 5,
+      "text": "चौथा example एक favourite ratio trap है."
+    },
+    {
+      "seq": 6,
+      "text": "दो circles के arcs equal length के हैं, centres पर sixty और seventy five degrees बनाते हैं. Arcs equal हैं, so r one theta one equals r two theta two. Angles सिर्फ़ ratio में आते हैं, so degrees में छोड़ सकते हैं, conversion factor वैसे भी cancel हो जाता."
+    },
+    {
+      "seq": 7,
+      "text": "So r one over r two equals theta two over theta one, यानी seventy five over sixty, बराबर five over four."
+    },
+    {
+      "seq": 8,
+      "text": "मतलब समझिए: same arc पर बड़ा angle मतलब tighter, छोटा circle. जो s equals r theta रट लेते हैं पर feel नहीं करते वो अक्सर इसे उल्टा four to five लिख देते हैं."
+    }
+  ]
+}

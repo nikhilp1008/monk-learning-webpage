@@ -1,0 +1,144 @@
+{
+  "id": "63a8595a-5346-4707-b768-2c6b1139aafa",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 8,
+  "section_type": "concept",
+  "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+  "title": "From the right triangle to the unit circle",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Why we leave the triangle",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "A right triangle caps angles at $90^\\circ$. To reach $\\sin 210^\\circ$ or $\\cos(-40^\\circ)$ we need the unit circle.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 360 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"150\" x2=\"330\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"180\" y1=\"20\" x2=\"180\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"180\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"180\" y1=\"150\" x2=\"115.7\" y2=\"73.4\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"115.7\" y1=\"73.4\" x2=\"115.7\" y2=\"150\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><circle cx=\"115.7\" cy=\"73.4\" r=\"4\" fill=\"#2563eb\"/><text x=\"98\" y=\"66\" font-size=\"13\" fill=\"#2563eb\">P(a, b)</text><text x=\"140\" y=\"110\" font-size=\"12\" fill=\"#1e293b\">1</text><text x=\"112\" y=\"168\" font-size=\"12\" fill=\"#1e293b\">M</text><text x=\"128\" y=\"120\" font-size=\"11\" fill=\"#dc2626\">b = sin&#952; (+)</text><text x=\"60\" y=\"145\" font-size=\"11\" fill=\"#1e293b\">a = cos&#952; (&#8722;)</text><text x=\"235\" y=\"90\" font-size=\"12\" fill=\"#64748b\">II</text><text x=\"235\" y=\"215\" font-size=\"12\" fill=\"#64748b\">I</text><text x=\"100\" y=\"215\" font-size=\"12\" fill=\"#64748b\">IV</text><text x=\"100\" y=\"40\" font-size=\"12\" fill=\"#64748b\">III</text></svg>",
+      "type": "diagram",
+      "caption": "Unit circle: terminal point P in Quadrant II",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\cos\\theta = a\\ (x\\text{-coordinate}),\\qquad \\sin\\theta = b\\ (y\\text{-coordinate})",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Cosine is the across-coordinate; sine is the up-coordinate. Everything downstream falls out of this.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "The point never leaves the circle, so $|\\sin\\theta|\\le 1$ and $|\\cos\\theta|\\le 1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "This one idea — cosine across, sine up — runs the entire subtopic.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_8.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_8.mp3",
+  "duration_sec_english": 86.64,
+  "duration_sec_hinglish": 75.96,
+  "board_reveal_at_english": [
+    0.0,
+    6.14,
+    30.29,
+    42.41,
+    50.86,
+    62.98,
+    78.51
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    4.69,
+    25.69,
+    36.61,
+    43.78,
+    52.91,
+    67.75
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "This subtopic is the single biggest upgrade in the chapter: from ratios to functions."
+    },
+    {
+      "seq": 2,
+      "text": "In earlier classes, sine, cosine and tangent were just side ratios in a right triangle, and a right triangle can only hold angles between zero and ninety degrees. But we want to talk about sine of two hundred ten degrees, or cosine of minus forty. For that we need a frame with no ninety-degree cap: the unit circle, a circle of radius one at the origin."
+    },
+    {
+      "seq": 3,
+      "text": "Here it is. Rotate a ray to angle theta, anticlockwise as we locked in earlier, and look at where its tip P lands, at coordinates a and b."
+    },
+    {
+      "seq": 4,
+      "text": "The whole engine is this: cosine of theta is the x-coordinate a, and sine of theta is the y-coordinate b."
+    },
+    {
+      "seq": 5,
+      "text": "Say it as a picture: cosine is how far across, sine is how far up. Every sign, every range, every quadrantal value comes straight out of that."
+    },
+    {
+      "seq": 6,
+      "text": "And because the point sits on a circle of radius one, it can never be more than one unit from the centre. So the size of sine is at most one, and the size of cosine is at most one, a physical fact becoming a mathematical range."
+    },
+    {
+      "seq": 7,
+      "text": "<curious>Hold on to this one sentence</curious> — cosine across, sine up — and the rest of the subtopic is just reading it off the picture."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "ये subtopic chapter का सबसे बड़ा upgrade है: ratios से functions तक."
+    },
+    {
+      "seq": 2,
+      "text": "पहले sine, cosine, tangent बस right triangle के side ratios थे, और right triangle सिर्फ़ zero से ninety degrees के angles रख सकता है. पर हमें बात करनी है sine of two hundred ten degrees की, या cosine of minus forty की. इसके लिए चाहिए बिना ninety-degree cap वाला frame: unit circle, origin पर radius one का circle."
+    },
+    {
+      "seq": 3,
+      "text": "ये रहा. एक ray को angle theta तक घुमाइए, anticlockwise जैसा हमने lock किया, और देखिए उसका tip P कहाँ गिरता है, coordinates a और b पर."
+    },
+    {
+      "seq": 4,
+      "text": "पूरा engine यही है: cosine of theta है x-coordinate a, और sine of theta है y-coordinate b."
+    },
+    {
+      "seq": 5,
+      "text": "Picture की तरह कहिए: cosine कितना across, sine कितना up. हर sign, हर range, हर quadrantal value इसी से निकलती है."
+    },
+    {
+      "seq": 6,
+      "text": "और चूँकि point radius one के circle पर है, वो centre से कभी एक unit से ज़्यादा दूर नहीं जा सकता. So sine का size ज़्यादा से ज़्यादा one, cosine का size ज़्यादा से ज़्यादा one, एक physical fact गणित की range बन गई."
+    },
+    {
+      "seq": 7,
+      "text": "<curious>इस एक वाक्य को पकड़े रहिए</curious>, cosine across, sine up, और बाकी subtopic बस इसे picture से पढ़ना है."
+    }
+  ]
+}

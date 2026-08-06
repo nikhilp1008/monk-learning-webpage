@@ -1,0 +1,144 @@
+{
+  "id": "af421cc3-bc1d-4da2-ab65-61aa831714d8",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 19,
+  "section_type": "tips",
+  "subtopic": "03 · Standard Values, Even-Odd Nature and Allied Angles",
+  "title": "Pitfalls in reduction and value recall",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Reduction traps",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "#1 Signature trap: wrong sign in a reduction. The sign comes from the quadrant of the WHOLE allied angle via ASTC, applied to the original function.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "#2 Forgetting to switch to the co-function at 90°/270°. Odd multiples flip sin ↔ cos; even multiples (180°, 360°) don't.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "#3 Misremembering a standard value — use the √0..4 over 2 sine pattern and reverse it for cosine, never guess.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "#4 Even/odd slip: only cos and sec are even. Don't pull a minus out of cos(−θ).",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "#5 Reduce angles above 360° or below 0° by whole turns before applying the rule.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Two routes cross-check most reductions: 135° = 90°+45° = 180°−45°.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_19.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_19.mp3",
+  "duration_sec_english": 82.54,
+  "duration_sec_hinglish": 81.17,
+  "board_reveal_at_english": [
+    0.0,
+    4.52,
+    21.5,
+    34.39,
+    45.65,
+    58.28,
+    67.84
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.97,
+    19.8,
+    33.62,
+    45.31,
+    56.32,
+    67.07
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Five traps to close out standard values and allied angles."
+    },
+    {
+      "seq": 2,
+      "text": "The signature trap: a wrong sign in a reduction. The sign is never guessed, it comes from the quadrant of the whole allied angle, read through All Silver Tea Cups, applied to the original function. Identify the quadrant first."
+    },
+    {
+      "seq": 3,
+      "text": "Second, forgetting to switch to the co-function at ninety or two seventy. Odd multiples of ninety flip sine and cosine; the even ones, one eighty and three sixty, leave the function alone."
+    },
+    {
+      "seq": 4,
+      "text": "Third, misremembering a standard value. Don't guess, rebuild it: sine row is root zero to root four, each over two, and cosine is that reversed."
+    },
+    {
+      "seq": 5,
+      "text": "Fourth, an even-odd slip. Only cosine and secant are even. Pulling a minus sign out of cosine of minus theta is simply wrong, cosine doesn't care about the sign of the angle."
+    },
+    {
+      "seq": 6,
+      "text": "Fifth, for angles above three sixty or below zero, subtract or add whole turns first, then apply the rule to what's left."
+    },
+    {
+      "seq": 7,
+      "text": "And a habit that saves you: most reductions have two routes, one thirty five as ninety plus forty five, or as one eighty minus forty five. Use whichever is faster, and let the other confirm your answer."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Standard values और allied angles ख़त्म करने के लिए पाँच traps."
+    },
+    {
+      "seq": 2,
+      "text": "Signature trap: reduction में ग़लत sign. Sign कभी guess नहीं होता, वो पूरे allied angle के quadrant से आता है, All Silver Tea Cups से पढ़ा हुआ, original function पर लगाया हुआ. पहले quadrant पहचानिए."
+    },
+    {
+      "seq": 3,
+      "text": "दूसरा, ninety या two seventy पर co-function में switch करना भूलना. Ninety के odd multiples sine और cosine flip करते हैं; even वाले, one eighty और three sixty, function वैसा ही छोड़ देते हैं."
+    },
+    {
+      "seq": 4,
+      "text": "तीसरा, standard value ग़लत याद रखना. Guess मत कीजिए, rebuild कीजिए: sine row है root zero से root four, हर एक over two, और cosine वही उल्टा."
+    },
+    {
+      "seq": 5,
+      "text": "चौथा, even-odd slip. सिर्फ़ cosine और secant even हैं. Cosine of minus theta से minus sign बाहर खींचना बस ग़लत है, cosine को angle के sign की परवाह नहीं."
+    },
+    {
+      "seq": 6,
+      "text": "पाँचवाँ, three sixty से ऊपर या zero से नीचे वाले angles के लिए पहले whole turns घटाइए या जोड़िए, फिर बचे हुए पर rule लगाइए."
+    },
+    {
+      "seq": 7,
+      "text": "और एक आदत जो बचाती है: ज़्यादातर reductions के दो routes होते हैं, one thirty five को ninety plus forty five, या one eighty minus forty five. जो तेज़ हो वो use कीजिए, दूसरा answer confirm कर देगा."
+    }
+  ]
+}

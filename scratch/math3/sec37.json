@@ -1,0 +1,161 @@
+{
+  "id": "59bf679d-0476-4ffd-b528-d6bae88d7e99",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 37,
+  "section_type": "concept",
+  "subtopic": "06 · Trigonometric Equations and Solutions",
+  "title": "The two great dangers: dividing and squaring",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Losing roots by dividing",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "If you cancel $\\cos\\theta$ from $\\sin\\theta\\cos\\theta=\\cos\\theta$, you silently throw away every solution where $\\cos\\theta=0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "Cancelling assumes the thing you cancel is non-zero — but here it can be zero. Factor, never divide.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Gaining roots by squaring",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Squaring both sides can make a false equation look true, since $(-1)^2=1^2$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\sin x + \\cos x = 1 \\xrightarrow{\\text{square}} \\sin 2x = 0,\\ \\text{but } x=\\pi \\text{ fails the original}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Every solution from a squared equation must be checked back in the original.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "These two are the signature traps — both are conceptual gaps, not careless slips.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_37.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_37.mp3",
+  "duration_sec_english": 82.25,
+  "duration_sec_hinglish": 81.05,
+  "board_reveal_at_english": [
+    0.0,
+    6.14,
+    17.41,
+    24.23,
+    36.35,
+    46.59,
+    65.19,
+    73.47
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    6.23,
+    17.92,
+    24.83,
+    37.97,
+    48.73,
+    65.96,
+    72.62
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Two dangers cause almost every wrong answer in this subtopic, and both are conceptual."
+    },
+    {
+      "seq": 2,
+      "text": "The first is losing roots by dividing. Suppose you have sine theta cosine theta equals cosine theta, and you cancel cosine theta from both sides."
+    },
+    {
+      "seq": 3,
+      "text": "The moment you cancel, you silently throw away every solution where cosine theta is zero."
+    },
+    {
+      "seq": 4,
+      "text": "Cancelling secretly assumes the thing you cancel is non-zero. But here it can be zero, that's exactly the case you just deleted. So factor, and set each factor to zero, never divide."
+    },
+    {
+      "seq": 5,
+      "text": "The second danger is gaining roots by squaring. Squaring both sides can make a false statement look true, because minus one squared equals one squared."
+    },
+    {
+      "seq": 6,
+      "text": "Watch: sine x plus cosine x equals one. Square it and you get sine two x equals zero, which includes x equal to pi. But sine pi plus cosine pi is minus one, not one, so x equal to pi is a fake, an extraneous root."
+    },
+    {
+      "seq": 7,
+      "text": "So every candidate that comes out of a squared equation must be checked back in the original, and the fakes discarded."
+    },
+    {
+      "seq": 8,
+      "text": "These are the two signature traps of the whole subtopic, and notice, they're gaps in understanding, not careless arithmetic."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "दो dangers इस subtopic के लगभग हर ग़लत answer की वजह हैं, और दोनों conceptual हैं."
+    },
+    {
+      "seq": 2,
+      "text": "पहला है divide करके roots खोना. मान लीजिए sine theta cosine theta equals cosine theta है, और आप दोनों तरफ़ से cosine theta cancel कर देते हैं."
+    },
+    {
+      "seq": 3,
+      "text": "जिस पल आप cancel करते हैं, आप चुपचाप हर वो solution फेंक देते हैं जहाँ cosine theta zero है."
+    },
+    {
+      "seq": 4,
+      "text": "Cancel करना चुपके से मानता है कि जो cancel कर रहे हैं वो non-zero है. पर यहाँ वो zero हो सकता है, यही case आपने अभी delete किया. So factor कीजिए, हर factor को zero रखिए, divide कभी नहीं."
+    },
+    {
+      "seq": 5,
+      "text": "दूसरा danger है square करके roots पाना. दोनों तरफ़ square करना झूठे statement को सच दिखा सकता है, क्योंकि minus one squared equals one squared."
+    },
+    {
+      "seq": 6,
+      "text": "देखिए: sine x plus cosine x equals one. Square कीजिए और मिलता है sine two x equals zero, जिसमें x equal to pi शामिल है. पर sine pi plus cosine pi है minus one, one नहीं, so x equal to pi नक़ली है, extraneous root."
+    },
+    {
+      "seq": 7,
+      "text": "So squared equation से निकला हर candidate original में check होना चाहिए, और नक़ली हटा दीजिए."
+    },
+    {
+      "seq": 8,
+      "text": "ये पूरे subtopic के दो signature traps हैं, और ध्यान दीजिए, ये समझ की कमी हैं, careless arithmetic नहीं."
+    }
+  ]
+}

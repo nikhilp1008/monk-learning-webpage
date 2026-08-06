@@ -1,0 +1,143 @@
+{
+  "id": "f048b656-0a3a-4f1e-bfed-ec4dbf6d8f61",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 23,
+  "section_type": "worked_examples",
+  "subtopic": "04 · Graphs and Periodicity of Trigonometric Functions",
+  "title": "Periods, ranges and amplitudes",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 1 — read off three periods",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\sin 3x:\\ \\tfrac{2\\pi}{3};\\qquad \\tan 2x:\\ \\tfrac{\\pi}{2};\\qquad \\cos\\tfrac{x}{2}:\\ \\tfrac{2\\pi}{1/2}=4\\pi",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "Example 2 — range and period of 3 + 2 sin x",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Amplitude $2$, vertical shift $3$: range $=[3-2,\\,3+2]=[1,5]$. The $\\sin x$ is unscaled, so period $2\\pi$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Example 3 — amplitude and period of −4 cos(x/3)",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\text{amplitude}=|-4|=4,\\qquad T=\\tfrac{2\\pi}{1/3}=6\\pi",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "The minus flips the graph vertically but changes neither amplitude nor period.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_23.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_23.mp3",
+  "duration_sec_english": 66.91,
+  "duration_sec_hinglish": 62.57,
+  "board_reveal_at_english": [
+    0.0,
+    4.35,
+    23.81,
+    29.1,
+    43.01,
+    49.75,
+    57.26
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    3.93,
+    23.38,
+    28.59,
+    39.94,
+    45.74,
+    53.85
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Three quick reads to make the scaling rule automatic."
+    },
+    {
+      "seq": 2,
+      "text": "For the periods: sine three x divides two pi by three, giving two pi over three. Tangent two x uses the tangent base pi over two, so pi over two. And cosine of x over two divides two pi by one half, which is four pi, a stretched, slower wave."
+    },
+    {
+      "seq": 3,
+      "text": "Second, the range and period of three plus two sine x."
+    },
+    {
+      "seq": 4,
+      "text": "The amplitude is two and the vertical shift is three, so the range is three minus two to three plus two, that is one to five. The x inside sine is unscaled, so the period is just two pi."
+    },
+    {
+      "seq": 5,
+      "text": "Third, the amplitude and period of minus four cosine of x over three."
+    },
+    {
+      "seq": 6,
+      "text": "Amplitude is the size of minus four, which is four. Period is two pi over one third, which is six pi."
+    },
+    {
+      "seq": 7,
+      "text": "Notice the minus sign flips the graph upside down, but it touches neither the amplitude nor the period, both come from sizes only."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Scaling rule automatic करने के लिए तीन quick reads."
+    },
+    {
+      "seq": 2,
+      "text": "Periods के लिए: sine three x, two pi को three से divide, यानी two pi over three. Tangent two x tangent base pi over two use करता है, so pi over two. और cosine of x over two, two pi को one half से divide, यानी four pi, एक stretched, धीमी wave."
+    },
+    {
+      "seq": 3,
+      "text": "दूसरा, three plus two sine x का range और period."
+    },
+    {
+      "seq": 4,
+      "text": "Amplitude two और vertical shift three, so range है three minus two से three plus two, यानी one to five. Sine के अंदर x unscaled है, so period बस two pi."
+    },
+    {
+      "seq": 5,
+      "text": "तीसरा, minus four cosine of x over three का amplitude और period."
+    },
+    {
+      "seq": 6,
+      "text": "Amplitude है minus four का size, यानी four. Period है two pi over one third, यानी six pi."
+    },
+    {
+      "seq": 7,
+      "text": "ध्यान दीजिए minus sign graph को उल्टा flip करता है, पर ना amplitude ना period को छूता है, दोनों सिर्फ़ sizes से आते हैं."
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "25cec4d2-c9b4-4005-ac0e-a3c0714115fd",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 26,
+  "section_type": "tips",
+  "subtopic": "04 · Graphs and Periodicity of Trigonometric Functions",
+  "title": "Pitfalls with periods, ranges and asymptotes",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Graph and period traps",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "#1 Signature trap: multiplying instead of dividing for the period. sin(bx) has period 2π/|b|, not 2π·b. Bigger b means shorter period.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "#2 Using $2\\pi$ for tangent. $\\tan$ and $\\cot$ have base period $\\pi$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "#3 Period of a sum is the LCM of the parts — and watch for a hidden shrink, as in |sin x| + |cos x|.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "#4 Forgetting the vertical shift in the range. Range of $a\\sin x + d$ is $[d-|a|,\\,d+|a|]$, not $[-|a|,|a|]$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "#5 Swapping asymptotes: $\\tan,\\sec$ blow up at odd $\\tfrac{\\pi}{2}$; $\\cot,\\csc$ at $n\\pi$. #6 Decide open vs closed endpoints by whether the inequality is strict.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Golden rule: divide (don't multiply) for period; tangent's period is π.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_26.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_26.mp3",
+  "duration_sec_english": 78.26,
+  "duration_sec_hinglish": 76.73,
+  "board_reveal_at_english": [
+    0.0,
+    4.27,
+    18.18,
+    25.51,
+    38.49,
+    51.54,
+    68.86
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    3.93,
+    18.09,
+    26.11,
+    38.57,
+    50.6,
+    67.75
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Six traps that decide the graph and period marks."
+    },
+    {
+      "seq": 2,
+      "text": "The signature trap: multiplying when you should divide. Sine of b x has period two pi over the size of b, not two pi times b. A bigger b means a shorter period, more waves squeezed in."
+    },
+    {
+      "seq": 3,
+      "text": "Second, using two pi for tangent. Tangent and cotangent have base period pi, half of the others."
+    },
+    {
+      "seq": 4,
+      "text": "Third, the period of a sum is the least common multiple of the parts, and stay alert for a hidden shrink like absolute sine plus absolute cosine, which drops all the way to pi over two."
+    },
+    {
+      "seq": 5,
+      "text": "Fourth, forgetting the vertical shift in the range. The range of a sine x plus d is d minus the size of a to d plus the size of a, not simply minus the size of a to the size of a."
+    },
+    {
+      "seq": 6,
+      "text": "Fifth, swapping asymptote locations. Tangent and secant blow up at the odd multiples of pi over two; cotangent and cosecant at the whole multiples of pi. And sixth, decide open versus closed endpoints by whether the inequality is strict."
+    },
+    {
+      "seq": 7,
+      "text": "The golden rule to carry: divide, never multiply, when finding a period, and remember tangent's period is pi."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Graph और period के marks तय करने वाले छह traps."
+    },
+    {
+      "seq": 2,
+      "text": "Signature trap: divide करने की जगह multiply करना. Sine of b x का period है two pi over b का size, two pi times b नहीं. बड़ा b मतलब छोटा period, ज़्यादा waves ठुँसे हुए."
+    },
+    {
+      "seq": 3,
+      "text": "दूसरा, tangent के लिए two pi use करना. Tangent और cotangent का base period pi है, बाकी का आधा."
+    },
+    {
+      "seq": 4,
+      "text": "तीसरा, sum का period parts का least common multiple है, और hidden shrink के लिए alert रहिए जैसे absolute sine plus absolute cosine, जो सीधे pi over two तक गिर जाता है."
+    },
+    {
+      "seq": 5,
+      "text": "चौथा, range में vertical shift भूलना. a sine x plus d का range है d minus a का size से d plus a का size तक, सिर्फ़ minus a का size से a का size तक नहीं."
+    },
+    {
+      "seq": 6,
+      "text": "पाँचवाँ, asymptote locations swap करना. Tangent और secant odd multiples of pi over two पर blow up; cotangent और cosecant pi के whole multiples पर. और छठा, open versus closed endpoints तय कीजिए इस आधार पर कि inequality strict है या नहीं."
+    },
+    {
+      "seq": 7,
+      "text": "Golden rule साथ रखिए: period निकालते समय divide, कभी multiply नहीं, और याद रखिए tangent का period pi है."
+    }
+  ]
+}

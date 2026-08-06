@@ -1,0 +1,143 @@
+{
+  "id": "c0a134c2-b715-423f-98f6-a84f937359de",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 40,
+  "section_type": "worked_examples",
+  "subtopic": "06 · Trigonometric Equations and Solutions",
+  "title": "The linear form, and factoring instead of dividing",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 4 — solve √3 cos x + sin x = 1",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$R=\\sqrt{3+1}=2$, $\\tan\\alpha=\\tfrac{1}{\\sqrt3}\\Rightarrow\\alpha=\\tfrac{\\pi}{6}$. So $\\cos(x-\\tfrac{\\pi}{6})=\\tfrac12=\\cos\\tfrac{\\pi}{3}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "x = 2n\\pi + \\tfrac{\\pi}{2}\\quad\\text{or}\\quad x = 2n\\pi - \\tfrac{\\pi}{6}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Example 5 — factor, don't divide: sin 2x = sin x",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "2\\sin x\\cos x - \\sin x = 0 \\Rightarrow \\sin x(2\\cos x - 1)=0",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "$\\sin x = 0 \\Rightarrow x=n\\pi$; $\\cos x=\\tfrac12 \\Rightarrow x=2n\\pi\\pm\\tfrac{\\pi}{3}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Dividing by sin x would erase the entire x = nπ family — the signature trap.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_40.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_40.mp3",
+  "duration_sec_english": 94.92,
+  "duration_sec_hinglish": 95.09,
+  "board_reveal_at_english": [
+    0.0,
+    5.55,
+    23.13,
+    34.73,
+    53.93,
+    70.06,
+    81.07
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.29,
+    21.08,
+    32.51,
+    53.93,
+    71.51,
+    82.43
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Two workhorses: the linear form and the factor-don't-divide discipline."
+    },
+    {
+      "seq": 2,
+      "text": "Example four: solve root three cosine x plus sine x equals one. Here a is root three and b is one, so R is the square root of three plus one, which is two, and tangent alpha is one over root three, so alpha is pi over six."
+    },
+    {
+      "seq": 3,
+      "text": "Rewrite as two cosine of x minus pi over six equals one, that is cosine of x minus pi over six equals one half, which is cosine pi over three."
+    },
+    {
+      "seq": 4,
+      "text": "So x minus pi over six equals two n pi plus or minus pi over three, giving x equals two n pi plus pi over two, or x equals two n pi minus pi over six. And the size of c, one, is at most R, two, so solutions do exist."
+    },
+    {
+      "seq": 5,
+      "text": "Example five drives home factoring. Solve sine two x equals sine x. Move everything over: two sine x cosine x minus sine x equals zero, then factor out sine x to get sine x times two cosine x minus one equals zero."
+    },
+    {
+      "seq": 6,
+      "text": "So either sine x is zero, giving x equals n pi, or cosine x is one half, giving x equals two n pi plus or minus pi over three."
+    },
+    {
+      "seq": 7,
+      "text": "If instead you had divided both sides by sine x, you would have erased the entire x equals n pi family. That is the signature trap, factor, never divide."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "दो workhorses: linear form और factor-don't-divide discipline."
+    },
+    {
+      "seq": 2,
+      "text": "Example चार: solve कीजिए root three cosine x plus sine x equals one. यहाँ a है root three और b one, so R है square root of three plus one, यानी two, और tangent alpha है one over root three, so alpha है pi over six."
+    },
+    {
+      "seq": 3,
+      "text": "फिर से लिखिए two cosine of x minus pi over six equals one, यानी cosine of x minus pi over six equals one half, जो cosine pi over three है."
+    },
+    {
+      "seq": 4,
+      "text": "So x minus pi over six equals two n pi plus or minus pi over three, देता x equals two n pi plus pi over two, या x equals two n pi minus pi over six. और c का size, one, R यानी two से ज़्यादा नहीं, so solutions मौजूद हैं."
+    },
+    {
+      "seq": 5,
+      "text": "Example पाँच factoring पक्का करता है. Solve कीजिए sine two x equals sine x. सब एक तरफ़ लाइए: two sine x cosine x minus sine x equals zero, फिर sine x बाहर factor कीजिए, मिलता sine x times two cosine x minus one equals zero."
+    },
+    {
+      "seq": 6,
+      "text": "So या तो sine x zero है, देता x equals n pi, या cosine x one half है, देता x equals two n pi plus or minus pi over three."
+    },
+    {
+      "seq": 7,
+      "text": "अगर इसके बजाय आपने दोनों तरफ़ sine x से divide किया होता, आप पूरी x equals n pi family मिटा देते. यही signature trap है, factor, divide कभी नहीं."
+    }
+  ]
+}

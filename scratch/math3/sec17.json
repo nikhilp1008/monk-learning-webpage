@@ -1,0 +1,177 @@
+{
+  "id": "51addb53-19bc-4eaf-810d-eba8588e8525",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 17,
+  "section_type": "worked_examples",
+  "subtopic": "03 · Standard Values, Even-Odd Nature and Allied Angles",
+  "title": "Evaluating by reduction — basic to large angles",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 1 — sin 210°",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\sin 210^\\circ = \\sin(180^\\circ+30^\\circ) = -\\sin 30^\\circ = -\\tfrac{1}{2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "Example 2 — cos(−300°)",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\cos(-300^\\circ)=\\cos 300^\\circ = \\cos(360^\\circ-60^\\circ) = +\\cos 60^\\circ = \\tfrac{1}{2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Example 3 — sin 1230° (reduce first)",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "1230^\\circ - 1080^\\circ = 150^\\circ,\\quad \\sin 150^\\circ = \\sin 30^\\circ = \\tfrac{1}{2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Example 4 — tan 135° (the co-function case)",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "type": "formula",
+      "latex": "\\tan 135^\\circ = \\tan(90^\\circ+45^\\circ) = -\\cot 45^\\circ = -1",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 9,
+      "text": "Two routes agree: 135° = 180°−45° gives −tan 45° = −1 as well.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_17.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_17.mp3",
+  "duration_sec_english": 89.88,
+  "duration_sec_hinglish": 80.66,
+  "board_reveal_at_english": [
+    0.0,
+    3.33,
+    18.09,
+    22.02,
+    35.16,
+    40.87,
+    54.95,
+    59.73,
+    73.64
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    3.33,
+    16.3,
+    19.71,
+    32.85,
+    37.97,
+    50.01,
+    54.02,
+    66.99
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "First up, sine of two hundred ten."
+    },
+    {
+      "seq": 2,
+      "text": "Write it as one eighty plus thirty; that lands in Quadrant three where sine is negative, and n equals two is even so the function stays sine. So it's minus sine thirty, minus one half."
+    },
+    {
+      "seq": 3,
+      "text": "Next, cosine of minus three hundred."
+    },
+    {
+      "seq": 4,
+      "text": "Cosine is even, so this equals cosine three hundred. Three hundred is three sixty minus sixty, Quadrant four, cosine positive, so it's plus cosine sixty, one half."
+    },
+    {
+      "seq": 5,
+      "text": "Third, sine of twelve thirty — and here you must reduce first."
+    },
+    {
+      "seq": 6,
+      "text": "Subtract three full turns, that's minus ten eighty, giving one fifty. One fifty is one eighty minus thirty, Quadrant two, sine positive, so sine thirty, one half."
+    },
+    {
+      "seq": 7,
+      "text": "Fourth, tangent of one thirty five, the co-function case."
+    },
+    {
+      "seq": 8,
+      "text": "Ninety plus forty five, n equals one is odd, so tangent becomes cotangent. It's in Quadrant two where tangent is negative, so minus cotangent forty five, which is minus one."
+    },
+    {
+      "seq": 9,
+      "text": "<whisper>Notice the cross-check:</whisper> you could instead write one thirty five as one eighty minus forty five, giving minus tangent forty five, also minus one. Two routes, same answer — that's your safety net."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "सबसे पहले, sine of two hundred ten."
+    },
+    {
+      "seq": 2,
+      "text": "इसे one eighty plus thirty लिखिए; ये Quadrant three में गिरता है जहाँ sine negative, और n equals two even है so function sine रहता है. So minus sine thirty, minus one half."
+    },
+    {
+      "seq": 3,
+      "text": "अगला, cosine of minus three hundred."
+    },
+    {
+      "seq": 4,
+      "text": "Cosine even है, so ये equals cosine three hundred. Three hundred है three sixty minus sixty, Quadrant four, cosine positive, so plus cosine sixty, one half."
+    },
+    {
+      "seq": 5,
+      "text": "तीसरा, sine of twelve thirty, और यहाँ पहले reduce करना ज़रूरी है."
+    },
+    {
+      "seq": 6,
+      "text": "तीन full turns घटाइए, यानी minus ten eighty, देता है one fifty. One fifty है one eighty minus thirty, Quadrant two, sine positive, so sine thirty, one half."
+    },
+    {
+      "seq": 7,
+      "text": "चौथा, tangent of one thirty five, co-function case."
+    },
+    {
+      "seq": 8,
+      "text": "Ninety plus forty five, n equals one odd, so tangent बनता है cotangent. ये Quadrant two में है जहाँ tangent negative, so minus cotangent forty five, यानी minus one."
+    },
+    {
+      "seq": 9,
+      "text": "<whisper>Cross-check देखिए:</whisper> आप one thirty five को one eighty minus forty five भी लिख सकते थे, देता minus tangent forty five, वो भी minus one. दो routes, वही answer, यही आपकी safety net है."
+    }
+  ]
+}

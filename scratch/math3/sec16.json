@@ -1,0 +1,160 @@
+{
+  "id": "8553e1fc-6b89-490f-b586-9f7377a84e13",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 16,
+  "section_type": "concept",
+  "subtopic": "03 · Standard Values, Even-Odd Nature and Allied Angles",
+  "title": "Even/odd nature and the one rule for all reductions",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Even and odd — the mirror across the x-axis",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Replacing $\\theta$ by $-\\theta$ reflects the point across the $x$-axis: cosine (the $x$-coord) is unchanged, sine (the $y$-coord) flips.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\cos(-\\theta)=\\cos\\theta,\\quad \\sec(-\\theta)=\\sec\\theta\\qquad(\\text{even})",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\sin(-\\theta)=-\\sin\\theta,\\quad \\tan(-\\theta)=-\\tan\\theta\\qquad(\\text{odd})",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "One rule: '90° flips, 180° doesn't'",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "For $f(n\\cdot 90^\\circ \\pm \\theta)$: $n$ odd $\\Rightarrow$ change to the co-function; $n$ even $\\Rightarrow$ same function.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Sign: find the quadrant of the whole angle and apply ASTC to the original function.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "Odd multiples of 90° sit on the vertical axis and swap sin ↔ cos.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_16.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_16.mp3",
+  "duration_sec_english": 97.1,
+  "duration_sec_hinglish": 88.73,
+  "board_reveal_at_english": [
+    0.0,
+    5.63,
+    20.91,
+    28.67,
+    38.91,
+    50.43,
+    68.95,
+    80.64
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.03,
+    18.77,
+    26.79,
+    36.78,
+    47.1,
+    64.26,
+    75.43
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Two small ideas now let you evaluate essentially any angle."
+    },
+    {
+      "seq": 2,
+      "text": "First, even and odd. Replacing theta with minus theta reflects the point across the x-axis. The x-coordinate, cosine, is untouched; the y-coordinate, sine, flips sign."
+    },
+    {
+      "seq": 3,
+      "text": "So cosine of minus theta equals cosine theta, and secant is the same, these are even."
+    },
+    {
+      "seq": 4,
+      "text": "But sine of minus theta is minus sine theta, and tangent flips too, these are odd. Only cosine and secant are even; the other four are odd."
+    },
+    {
+      "seq": 5,
+      "text": "Second, the one rule that replaces the whole allied-angle table. To evaluate any function of n times ninety degrees, plus or minus theta."
+    },
+    {
+      "seq": 6,
+      "text": "Ask: is n odd or even? If n is odd, the ninety and two seventy cases, the function changes to its co-function, sine to cosine, tangent to cotangent. If n is even, the one eighty and three sixty cases, the function stays the same."
+    },
+    {
+      "seq": 7,
+      "text": "Then the sign: figure out which quadrant the whole angle lands in for small theta, and give the answer the sign the original function has there, straight from All Silver Tea Cups."
+    },
+    {
+      "seq": 8,
+      "text": "The reason odd flips: odd multiples of ninety sit on the vertical axis, and reflecting about a vertical direction swaps the roles of across and up, which is exactly swapping cosine and sine."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "दो छोटे ideas अब आपको लगभग किसी भी angle का value निकालने देते हैं."
+    },
+    {
+      "seq": 2,
+      "text": "पहला, even और odd. Theta को minus theta से replace करना point को x-axis के पार reflect करता है. X-coordinate, cosine, अछूता रहता है; y-coordinate, sine, sign flip करता है."
+    },
+    {
+      "seq": 3,
+      "text": "So cosine of minus theta equals cosine theta, और secant भी वही, ये even हैं."
+    },
+    {
+      "seq": 4,
+      "text": "पर sine of minus theta है minus sine theta, और tangent भी flip, ये odd हैं. सिर्फ़ cosine और secant even हैं; बाकी चार odd."
+    },
+    {
+      "seq": 5,
+      "text": "दूसरा, वो एक rule जो पूरी allied-angle table की जगह ले लेता है. किसी भी function of n times ninety degrees, plus or minus theta को evaluate करने के लिए."
+    },
+    {
+      "seq": 6,
+      "text": "पूछिए: n odd है या even? अगर n odd है, ninety और two seventy cases, तो function अपने co-function में बदलता है, sine to cosine, tangent to cotangent. अगर n even है, one eighty और three sixty cases, function वही रहता है."
+    },
+    {
+      "seq": 7,
+      "text": "फिर sign: छोटे theta के लिए पूरा angle किस quadrant में गिरता है देखिए, और answer को वही sign दीजिए जो original function का वहाँ है, सीधे All Silver Tea Cups से."
+    },
+    {
+      "seq": 8,
+      "text": "Odd क्यों flip करता है: ninety के odd multiples vertical axis पर होते हैं, और vertical direction के around reflect करने से across और up के roles swap हो जाते हैं, यानी cosine और sine का swap."
+    }
+  ]
+}

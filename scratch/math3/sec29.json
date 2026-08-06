@@ -1,0 +1,178 @@
+{
+  "id": "a9fcac21-9d88-4156-b5cb-99fcc521ce11",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 29,
+  "section_type": "formulas",
+  "subtopic": "05 · Trigonometric Identities and Compound Angle Formulas",
+  "title": "Sum and difference formulas, with the sign mnemonic",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Compound angle: sum and difference",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\cos(A\\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\sin(A\\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\tan(A\\pm B) = \\dfrac{\\tan A \\pm \\tan B}{1 \\mp \\tan A\\tan B}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Sign mnemonic: cosine flips the sign, sine follows the sign, tangent's denominator is opposite the numerator.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 320 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"150\" x2=\"300\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"20\" x2=\"160\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><circle cx=\"160\" cy=\"150\" r=\"110\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"160\" y1=\"150\" x2=\"245.5\" y2=\"80.6\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><line x1=\"160\" y1=\"150\" x2=\"255.9\" y2=\"94.4\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><line x1=\"245.5\" y1=\"80.6\" x2=\"255.9\" y2=\"94.4\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><line x1=\"160\" y1=\"150\" x2=\"270\" y2=\"150\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><line x1=\"160\" y1=\"150\" x2=\"238.5\" y2=\"72.9\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><line x1=\"270\" y1=\"150\" x2=\"238.5\" y2=\"72.9\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><circle cx=\"245.5\" cy=\"80.6\" r=\"3.5\" fill=\"#2563eb\"/><text x=\"250\" y=\"74\" font-size=\"11\" fill=\"#2563eb\">P&#8321;(A)</text><circle cx=\"255.9\" cy=\"94.4\" r=\"3.5\" fill=\"#2563eb\"/><text x=\"262\" y=\"100\" font-size=\"11\" fill=\"#2563eb\">P&#8322;(B)</text><circle cx=\"270\" cy=\"150\" r=\"3.5\" fill=\"#16a34a\"/><text x=\"272\" y=\"166\" font-size=\"11\" fill=\"#16a34a\">P&#8324;(1,0)</text><circle cx=\"238.5\" cy=\"72.9\" r=\"3.5\" fill=\"#16a34a\"/><text x=\"200\" y=\"60\" font-size=\"11\" fill=\"#16a34a\">P&#8323;(A&#8722;B)</text><text x=\"40\" y=\"40\" font-size=\"11\" fill=\"#dc2626\">equal chords P&#8321;P&#8322; = P&#8323;P&#8324;</text></svg>",
+      "type": "diagram",
+      "caption": "cos(A−B): equal chords on the unit circle give the master formula",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Useful products of compound angles",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "type": "formula",
+      "latex": "\\cos(A+B)\\cos(A-B) = \\cos^2 A - \\sin^2 B",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 9,
+      "type": "formula",
+      "latex": "\\sin(A+B)\\sin(A-B) = \\sin^2 A - \\sin^2 B",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_29.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_29.mp3",
+  "duration_sec_english": 89.54,
+  "duration_sec_hinglish": 88.7,
+  "board_reveal_at_english": [
+    0.0,
+    4.95,
+    16.38,
+    27.39,
+    38.14,
+    48.38,
+    69.38,
+    71.85,
+    79.79
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    4.1,
+    14.68,
+    26.28,
+    36.35,
+    45.91,
+    66.3,
+    69.46,
+    78.17
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here's the first block of the catalogue, the sum and difference formulas."
+    },
+    {
+      "seq": 2,
+      "text": "For cosine of A plus or minus B: cosine A cosine B, then minus or plus sine A sine B. The sign is opposite to the one inside."
+    },
+    {
+      "seq": 3,
+      "text": "For sine of A plus or minus B: sine A cosine B, then plus or minus cosine A sine B. The sign matches the one inside."
+    },
+    {
+      "seq": 4,
+      "text": "For tangent of A plus or minus B: tangent A plus or minus tangent B, all over one minus or plus tangent A tangent B."
+    },
+    {
+      "seq": 5,
+      "text": "One clean mnemonic ties them: cosine flips the sign, sine follows the sign, and for tangent the denominator's sign is opposite the numerator's."
+    },
+    {
+      "seq": 6,
+      "text": "And this is where the master formula comes from, geometrically: two equal chords on the unit circle, one spanning A to B and one spanning A minus B back to the point one, zero. Equal central angles force equal chords, and equating their squared lengths gives cosine of A minus B."
+    },
+    {
+      "seq": 7,
+      "text": "Two products worth memorising."
+    },
+    {
+      "seq": 8,
+      "text": "Cosine of A plus B times cosine of A minus B equals cosine squared A minus sine squared B."
+    },
+    {
+      "seq": 9,
+      "text": "And sine of A plus B times sine of A minus B equals sine squared A minus sine squared B."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Catalogue का पहला block, sum और difference formulas."
+    },
+    {
+      "seq": 2,
+      "text": "Cosine of A plus or minus B के लिए: cosine A cosine B, फिर minus या plus sine A sine B. Sign अंदर वाले के opposite है."
+    },
+    {
+      "seq": 3,
+      "text": "Sine of A plus or minus B के लिए: sine A cosine B, फिर plus या minus cosine A sine B. Sign अंदर वाले से match करता है."
+    },
+    {
+      "seq": 4,
+      "text": "Tangent of A plus or minus B के लिए: tangent A plus or minus tangent B, पूरे over one minus या plus tangent A tangent B."
+    },
+    {
+      "seq": 5,
+      "text": "एक clean mnemonic इन्हें जोड़ता है: cosine sign flip करता है, sine sign follow करता है, और tangent में denominator का sign numerator के opposite होता है."
+    },
+    {
+      "seq": 6,
+      "text": "और master formula यहीं से आता है, geometrically: unit circle पर दो equal chords, एक A से B तक और एक A minus B से वापस point one, zero तक. Equal central angles equal chords force करते हैं, और उनकी squared lengths बराबर करने से मिलता है cosine of A minus B."
+    },
+    {
+      "seq": 7,
+      "text": "दो products याद रखने लायक़."
+    },
+    {
+      "seq": 8,
+      "text": "Cosine of A plus B times cosine of A minus B equals cosine squared A minus sine squared B."
+    },
+    {
+      "seq": 9,
+      "text": "और sine of A plus B times sine of A minus B equals sine squared A minus sine squared B."
+    }
+  ]
+}

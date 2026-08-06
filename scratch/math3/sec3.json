@@ -1,0 +1,161 @@
+{
+  "id": "431a5a30-346c-4d0a-a6f5-3f04eecaba83",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 3,
+  "section_type": "formulas",
+  "subtopic": "01 · Angle Measurement and Radians",
+  "title": "Arc length and sector area — both fall out of one definition",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "From theta = s/r, everything follows",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "s = r\\theta\\quad(\\theta\\ \\text{in radians})",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "Proportion route: $\\frac{s}{2\\pi r}=\\frac{\\theta}{2\\pi}$. The $2\\pi$ cancels only because $\\theta$ is in radians.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "A_{\\text{sect}} = \\tfrac{1}{2}\\,r^2\\theta",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "A sector is the same fraction of the disc as its angle is of the full turn: $\\frac{A}{\\pi r^2}=\\frac{\\theta}{2\\pi}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "A_{\\text{sect}} = \\tfrac{1}{2}\\,r\\,s",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 360 240\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 150 160 L 253.4 122.4 A 110 110 0 0 0 169.1 51.7 Z\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"132\" y=\"176\" font-size=\"14\" fill=\"#1e293b\">O</text><text x=\"205\" y=\"130\" font-size=\"13\" fill=\"#1e293b\">r</text><text x=\"150\" y=\"100\" font-size=\"13\" fill=\"#1e293b\">r</text><text x=\"228\" y=\"78\" font-size=\"13\" fill=\"#dc2626\">s</text><text x=\"176\" y=\"150\" font-size=\"13\" fill=\"#2563eb\">&#952;</text><text x=\"60\" y=\"210\" font-size=\"13\" fill=\"#1e293b\">Area = &#189; r&#178; &#952;</text></svg>",
+      "type": "diagram",
+      "caption": "Sector: two radii r, arc s, central angle theta",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "All three assume θ in radians. Use degrees and your answer is roughly 57× too big.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_3.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_3.mp3",
+  "duration_sec_english": 88.56,
+  "duration_sec_hinglish": 80.21,
+  "board_reveal_at_english": [
+    0.0,
+    5.46,
+    13.82,
+    36.01,
+    42.58,
+    59.05,
+    66.65,
+    75.69
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    4.44,
+    13.82,
+    34.65,
+    41.56,
+    54.36,
+    61.7,
+    68.69
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is the payoff of that one definition: two famous formulas come out for free."
+    },
+    {
+      "seq": 2,
+      "text": "Rearrange theta equals s over r and you get arc length s equals r theta, with theta in radians."
+    },
+    {
+      "seq": 3,
+      "text": "The version examiners want is by proportion. Arc length is to the whole circumference as the angle is to the full turn: s over two pi r equals theta over two pi. The two pi cancels cleanly, and it only cancels because theta is in radians. In degrees you'd be stuck carrying an ugly pi over one eighty."
+    },
+    {
+      "seq": 4,
+      "text": "The sector area is just as easy. Area of a sector equals one half r squared theta."
+    },
+    {
+      "seq": 5,
+      "text": "The logic is identical: the sector is the same slice of the disc as its angle is of the whole turn, so area over pi r squared equals theta over two pi. Rearranged, that's one half r squared theta."
+    },
+    {
+      "seq": 6,
+      "text": "And a handy twin form, using s equals r theta, is area equals one half r times s."
+    },
+    {
+      "seq": 7,
+      "text": "This is the picture: two radii r, the arc s along the rim, the angle theta at the centre, and the shaded area."
+    },
+    {
+      "seq": 8,
+      "text": "<excited>Here's the warning that earns marks:</excited> all three formulas assume theta is in radians. Plug in degrees and your answer comes out about fifty seven times too big. Convert first, always."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "इस एक definition का फ़ायदा: दो famous formulas मुफ़्त में निकल आते हैं."
+    },
+    {
+      "seq": 2,
+      "text": "Theta equals s over r को rearrange कीजिए और मिलता है arc length s equals r theta, theta radians में."
+    },
+    {
+      "seq": 3,
+      "text": "Examiners जो चाहते हैं वो proportion वाला तरीका है. Arc length का whole circumference से वही ratio है जो angle का full turn से: s over two pi r equals theta over two pi. Two pi cleanly cancel हो जाता है, और सिर्फ़ इसलिए क्योंकि theta radians में है. Degrees में आप pi over one eighty ढोते रहते."
+    },
+    {
+      "seq": 4,
+      "text": "Sector area भी उतना ही आसान है. Area of a sector equals one half r squared theta."
+    },
+    {
+      "seq": 5,
+      "text": "Logic same है: sector disc का उतना ही हिस्सा है जितना उसका angle full turn का, so area over pi r squared equals theta over two pi. Rearrange करने पर one half r squared theta."
+    },
+    {
+      "seq": 6,
+      "text": "और एक काम का twin form, s equals r theta use करके: area equals one half r into s."
+    },
+    {
+      "seq": 7,
+      "text": "<excited>यही picture है:</excited> दो radii r, rim पर arc s, centre पर angle theta, और shaded area."
+    },
+    {
+      "seq": 8,
+      "text": "जो warning marks दिलाती है: तीनों formulas theta को radians में मानते हैं. Degrees डालेंगे तो answer करीब सत्तावन गुना बड़ा आएगा. पहले convert कीजिए, हमेशा."
+    }
+  ]
+}

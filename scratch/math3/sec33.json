@@ -1,0 +1,142 @@
+{
+  "id": "5e43513e-5aad-4442-9e56-10ace88f8edb",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 33,
+  "section_type": "worked_examples",
+  "subtopic": "05 · Trigonometric Identities and Compound Angle Formulas",
+  "title": "Signs in a compound angle, a ratio proof, and max/min",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 4 — sin(A+B) with mixed quadrants",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$\\sin A=\\tfrac35$ ($A$ acute $\\Rightarrow \\cos A=\\tfrac45$); $\\cos B=-\\tfrac{12}{13}$ ($B$ obtuse $\\Rightarrow \\sin B=\\tfrac{5}{13}$).",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\sin(A+B)=\\tfrac35\\!\\cdot\\!(-\\tfrac{12}{13})+\\tfrac45\\!\\cdot\\!\\tfrac{5}{13} = \\tfrac{-36+20}{65} = -\\tfrac{16}{65}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Example 5 — prove (sin3A + sinA)/(cos3A + cosA) = tan 2A",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\frac{2\\sin 2A\\cos A}{2\\cos 2A\\cos A} = \\tan 2A",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "Example 6 — max and min of 7 cos x + 24 sin x + 5",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "R=\\sqrt{7^2+24^2}=25\\ \\Rightarrow\\ \\max=30,\\ \\min=-20",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_33.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_33.mp3",
+  "duration_sec_english": 89.45,
+  "duration_sec_hinglish": 86.54,
+  "board_reveal_at_english": [
+    0.0,
+    6.31,
+    23.55,
+    39.51,
+    44.8,
+    65.19,
+    78.76
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    4.27,
+    20.99,
+    40.79,
+    46.34,
+    62.89,
+    77.74
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "These lean on signs, sum-to-product, and the amplitude trick."
+    },
+    {
+      "seq": 2,
+      "text": "Example four: given sine A is three fifths with A acute, so cosine A is four fifths; and cosine B is minus twelve thirteenths with B obtuse, so sine B is plus five thirteenths. The whole difficulty is that sign of sine B, straight from Subtopic two's quadrant rule."
+    },
+    {
+      "seq": 3,
+      "text": "Now sine of A plus B is sine A cosine B plus cosine A sine B: three fifths times minus twelve thirteenths, plus four fifths times five thirteenths. That's minus thirty six plus twenty, over sixty five, giving minus sixteen over sixty five."
+    },
+    {
+      "seq": 4,
+      "text": "Example five, a ratio proof. Convert top and bottom to products."
+    },
+    {
+      "seq": 5,
+      "text": "Sine three A plus sine A is two sine two A cosine A; cosine three A plus cosine A is two cosine two A cosine A. The common factor two cosine A cancels, leaving sine two A over cosine two A, which is tangent two A. Proved."
+    },
+    {
+      "seq": 6,
+      "text": "Example six, a max-min with no calculus. For seven cosine x plus twenty four sine x, the amplitude R is the square root of seven squared plus twenty four squared, which is twenty five."
+    },
+    {
+      "seq": 7,
+      "text": "So that part swings between minus twenty five and twenty five; add the five and the maximum is thirty, the minimum is minus twenty."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "ये signs, sum-to-product, और amplitude trick पर टिकते हैं."
+    },
+    {
+      "seq": 2,
+      "text": "Example चार: दिया sine A तीन बटा पाँच, A acute, so cosine A four fifths; और cosine B minus twelve thirteenths, B obtuse, so sine B plus five thirteenths. पूरी मुश्किल है sine B का वो sign, सीधे Subtopic two के quadrant rule से."
+    },
+    {
+      "seq": 3,
+      "text": "अब sine of A plus B है sine A cosine B plus cosine A sine B: three fifths times minus twelve thirteenths, plus four fifths times five thirteenths. यानी minus thirty six plus twenty, over sixty five, देता minus sixteen over sixty five."
+    },
+    {
+      "seq": 4,
+      "text": "Example पाँच, एक ratio proof. Top और bottom को products में बदलिए."
+    },
+    {
+      "seq": 5,
+      "text": "Sine three A plus sine A है two sine two A cosine A; cosine three A plus cosine A है two cosine two A cosine A. Common factor two cosine A cancel, बचता sine two A over cosine two A, यानी tangent two A. साबित."
+    },
+    {
+      "seq": 6,
+      "text": "Example छह, बिना calculus max-min. Seven cosine x plus twenty four sine x के लिए, amplitude R है square root of seven squared plus twenty four squared, यानी twenty five."
+    },
+    {
+      "seq": 7,
+      "text": "So वो part minus twenty five से twenty five के बीच झूलता है; five जोड़िए और maximum thirty, minimum minus twenty."
+    }
+  ]
+}

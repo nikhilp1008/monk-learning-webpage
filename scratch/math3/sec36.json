@@ -1,0 +1,161 @@
+{
+  "id": "c7da85b2-866d-43f2-a15a-c903e8a2fa94",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 36,
+  "section_type": "concept",
+  "subtopic": "06 · Trigonometric Equations and Solutions",
+  "title": "Why one equation has infinitely many answers",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "A timetable, not a single time",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Trig functions repeat, so if one angle solves $\\sin\\theta=\\tfrac12$, adding any whole number of turns gives another \\u2014 and so does its mirror.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 320 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"150\" x2=\"300\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"20\" x2=\"160\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><circle cx=\"160\" cy=\"150\" r=\"110\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"20\" y1=\"95\" x2=\"300\" y2=\"95\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><line x1=\"160\" y1=\"150\" x2=\"255.3\" y2=\"95\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"150\" x2=\"64.7\" y2=\"95\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"255.3\" cy=\"95\" r=\"4\" fill=\"#2563eb\"/><text x=\"258\" y=\"88\" font-size=\"11\" fill=\"#2563eb\">&#960;/6</text><circle cx=\"64.7\" cy=\"95\" r=\"4\" fill=\"#16a34a\"/><text x=\"40\" y=\"88\" font-size=\"11\" fill=\"#16a34a\">5&#960;/6</text><text x=\"205\" y=\"112\" font-size=\"11\" fill=\"#dc2626\">y = 1/2</text><text x=\"60\" y=\"200\" font-size=\"11\" fill=\"#1e293b\">two principal solutions; each repeats every 2&#960;</text></svg>",
+      "type": "diagram",
+      "caption": "sinθ = 1/2: two principal solutions, each repeating every 2π",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Two layers of answer",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "A principal solution lies in $[0,2\\pi)$. For $\\sin\\theta=\\tfrac12$ there are two: $\\tfrac{\\pi}{6}$ and $\\tfrac{5\\pi}{6}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\text{general solution: } \\theta = n\\pi + (-1)^n\\tfrac{\\pi}{6},\\quad n\\in\\mathbb{Z}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Like a train timetable: not one arrival time, but the whole recurring schedule, with n counting the laps.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "The job is never to find a solution — it is to describe every solution in one stroke.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_36.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_36.mp3",
+  "duration_sec_english": 76.1,
+  "duration_sec_hinglish": 72.7,
+  "board_reveal_at_english": [
+    0.0,
+    8.02,
+    21.59,
+    35.16,
+    37.8,
+    47.87,
+    57.17,
+    67.93
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    8.11,
+    21.5,
+    33.11,
+    35.41,
+    46.59,
+    57.26,
+    66.22
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "A trig equation asks: for which angles does this statement hold? And the answer is almost never a single number."
+    },
+    {
+      "seq": 2,
+      "text": "Because trig functions repeat forever, if one angle solves sine theta equals one half, then adding any whole number of full turns gives another solution, and so does that angle's mirror partner."
+    },
+    {
+      "seq": 3,
+      "text": "See it on the circle: the line y equals one half cuts the sine at two places in the first lap, at pi over six and five pi over six, and each of those repeats every two pi."
+    },
+    {
+      "seq": 4,
+      "text": "So think in two layers."
+    },
+    {
+      "seq": 5,
+      "text": "A principal solution lives in the first lap, zero up to two pi. For sine theta equals one half there are exactly two: pi over six and five pi over six."
+    },
+    {
+      "seq": 6,
+      "text": "The general solution packages every answer with an integer n: theta equals n pi plus minus one to the n, times pi over six."
+    },
+    {
+      "seq": 7,
+      "text": "It's exactly a train timetable. You don't answer when is a train here with one time, you give the recurring schedule, and n counts the laps."
+    },
+    {
+      "seq": 8,
+      "text": "So the real job is never just to find a solution, it's to describe all of them in a single formula."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "एक trig equation पूछती है: किन angles पर ये statement टिकता है? और answer लगभग कभी एक number नहीं होता."
+    },
+    {
+      "seq": 2,
+      "text": "चूँकि trig functions हमेशा repeat होते हैं, अगर एक angle sine theta equals one half solve करता है, तो कोई भी whole number of full turns जोड़ने से दूसरा solution मिलता है, और उस angle का mirror partner भी."
+    },
+    {
+      "seq": 3,
+      "text": "Circle पर देखिए: line y equals one half पहले lap में sine को दो जगह काटती है, pi over six और five pi over six पर, और हर एक every two pi repeat होता है."
+    },
+    {
+      "seq": 4,
+      "text": "So दो layers में सोचिए."
+    },
+    {
+      "seq": 5,
+      "text": "एक principal solution पहले lap में रहता है, zero से two pi तक. Sine theta equals one half के लिए बिल्कुल दो हैं: pi over six और five pi over six."
+    },
+    {
+      "seq": 6,
+      "text": "General solution हर answer को integer n के साथ package करता है: theta equals n pi plus minus one to the n, times pi over six."
+    },
+    {
+      "seq": 7,
+      "text": "ये बिल्कुल train timetable है. आप ये नहीं बताते कि train कब है एक time से, आप recurring schedule देते हैं, और n laps गिनता है."
+    },
+    {
+      "seq": 8,
+      "text": "So असली काम कभी सिर्फ़ एक solution ढूँढना नहीं, सबको एक single formula में describe करना है."
+    }
+  ]
+}

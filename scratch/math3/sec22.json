@@ -1,0 +1,160 @@
+{
+  "id": "0067805f-e011-4f7d-9760-567225b0810f",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 22,
+  "section_type": "formulas",
+  "subtopic": "04 · Graphs and Periodicity of Trigonometric Functions",
+  "title": "Periods, the scaling rule and the transform summary",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Base periods of the six functions",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\sin x,\\ \\cos x,\\ \\sec x,\\ \\csc x:\\ T=2\\pi\\qquad \\tan x,\\ \\cot x:\\ T=\\pi",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\text{period of } f(bx+c) = \\frac{\\text{base}}{|b|}\\quad(c\\ \\text{only shifts})",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 480 260\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"15\" y1=\"130\" x2=\"465\" y2=\"130\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"88\" y1=\"20\" x2=\"88\" y2=\"240\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"5 4\"/><line x1=\"240\" y1=\"20\" x2=\"240\" y2=\"240\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"5 4\"/><line x1=\"392\" y1=\"20\" x2=\"392\" y2=\"240\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"5 4\"/><path d=\"M 35.3 218.2 L 38.4 198.6 L 41.5 185.6 L 44.6 176.1 L 47.7 168.9 L 50.8 163.2 L 53.9 158.5 L 57.0 154.5 L 60.1 151.0 L 63.2 148.0 L 66.3 145.2 L 69.4 142.7 L 72.5 140.3 L 75.6 138.1 L 78.7 136.0 L 81.8 134.0 L 84.9 132.0 L 88.0 130.0 L 91.1 128.0 L 94.2 126.0 L 97.3 124.0 L 100.4 121.9 L 103.5 119.7 L 106.6 117.3 L 109.7 114.8 L 112.8 112.0 L 115.9 109.0 L 119.0 105.5 L 122.1 101.5 L 125.2 96.8 L 128.3 91.1 L 131.4 83.9 L 134.5 74.4 L 137.6 61.4 L 140.7 41.8\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><path d=\"M 163.5 218.2 L 168.0 198.6 L 172.5 185.6 L 177.0 176.1 L 181.5 168.9 L 186.0 163.2 L 190.5 158.5 L 195.0 154.5 L 199.5 151.0 L 204.0 148.0 L 208.5 145.2 L 213.0 142.7 L 217.5 140.3 L 222.0 138.1 L 226.5 136.0 L 231.0 134.0 L 235.5 132.0 L 240.0 130.0 L 244.5 128.0 L 249.0 126.0 L 253.5 124.0 L 258.0 121.9 L 262.5 119.7 L 267.0 117.3 L 271.5 114.8 L 276.0 112.0 L 280.5 109.0 L 285.0 105.5 L 289.5 101.5 L 294.0 96.8 L 298.5 91.1 L 303.0 83.9 L 307.5 74.4 L 312.0 61.4 L 316.5 41.8\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><path d=\"M 339.3 218.2 L 342.4 198.6 L 345.5 185.6 L 348.6 176.1 L 351.7 168.9 L 354.8 163.2 L 357.9 158.5 L 361.0 154.5 L 364.1 151.0 L 367.2 148.0 L 370.3 145.2 L 373.4 142.7 L 376.5 140.3 L 379.6 138.1 L 382.7 136.0 L 385.8 134.0 L 388.9 132.0 L 392.0 130.0 L 395.1 128.0 L 398.2 126.0 L 401.3 124.0 L 404.4 121.9 L 407.5 119.7 L 410.6 117.3 L 413.7 114.8 L 416.8 112.0 L 419.9 109.0 L 423.0 105.5 L 426.1 101.5 L 429.2 96.8 L 432.3 91.1 L 435.4 83.9 L 438.5 74.4 L 441.6 61.4 L 444.7 41.8\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><text x=\"66\" y=\"255\" font-size=\"11\" fill=\"#dc2626\">&#8722;&#960;/2</text><text x=\"224\" y=\"255\" font-size=\"11\" fill=\"#dc2626\">&#960;/2</text><text x=\"372\" y=\"255\" font-size=\"11\" fill=\"#dc2626\">3&#960;/2</text><text x=\"150\" y=\"30\" font-size=\"12\" fill=\"#2563eb\">y = tan x  (period &#960;, asymptotes at odd &#960;/2)</text></svg>",
+      "type": "diagram",
+      "caption": "y = tan x: period π, vertical asymptotes at odd multiples of π/2",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Special composites",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "|\\sin x|,\\ |\\cos x|,\\ \\sin^2 x,\\ \\cos^2 x:\\ T=\\pi;\\quad \\text{sum} \\Rightarrow \\text{LCM of periods}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Asymptotes: $\\tan,\\sec$ blow up where $\\cos=0$ (odd $\\tfrac{\\pi}{2}$); $\\cot,\\csc$ where $\\sin=0$ ($n\\pi$).",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "type": "formula",
+      "latex": "y=a\\sin(bx+c)+d:\\ \\text{amp}=|a|,\\ T=\\tfrac{2\\pi}{|b|},\\ \\text{phase}=-\\tfrac{c}{b},\\ \\text{range}=[d-|a|,\\,d+|a|]",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_22.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_22.mp3",
+  "duration_sec_english": 87.62,
+  "duration_sec_hinglish": 85.22,
+  "board_reveal_at_english": [
+    0.0,
+    5.12,
+    14.17,
+    26.97,
+    37.12,
+    39.77,
+    54.27,
+    67.75
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    4.61,
+    13.65,
+    24.49,
+    35.5,
+    38.91,
+    52.91,
+    67.24
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is the full reference you need to read or sketch any trig graph."
+    },
+    {
+      "seq": 2,
+      "text": "Base periods: sine, cosine, secant and cosecant all repeat over two pi; tangent and cotangent repeat over pi."
+    },
+    {
+      "seq": 3,
+      "text": "The scaling rule: the period of a function of b x plus c is the base period divided by the size of b. The constant c only shifts the graph, it never changes the period."
+    },
+    {
+      "seq": 4,
+      "text": "Here's the tangent graph to fix those ideas: period pi between branches, with vertical asymptotes at the odd multiples of pi over two, wherever cosine is zero."
+    },
+    {
+      "seq": 5,
+      "text": "Now the composites that trip students."
+    },
+    {
+      "seq": 6,
+      "text": "The absolute values of sine and cosine, and sine squared and cosine squared, all have period pi, not two pi. And for a sum of functions, the period is the least common multiple of the individual periods."
+    },
+    {
+      "seq": 7,
+      "text": "For asymptotes: tangent and secant blow up where cosine is zero, the odd multiples of pi over two; cotangent and cosecant blow up where sine is zero, the whole multiples of pi."
+    },
+    {
+      "seq": 8,
+      "text": "And the master transform line: for a sine of b x plus c, all plus d, amplitude is the size of a, period is two pi over the size of b, phase shift is minus c over b, and range is d minus the size of a to d plus the size of a."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "किसी भी trig graph को पढ़ने या sketch करने का पूरा reference यहाँ है."
+    },
+    {
+      "seq": 2,
+      "text": "Base periods: sine, cosine, secant और cosecant सब two pi पर repeat; tangent और cotangent pi पर repeat."
+    },
+    {
+      "seq": 3,
+      "text": "Scaling rule: function of b x plus c का period है base period divided by b का size. Constant c सिर्फ़ graph shift करता है, period कभी नहीं बदलता."
+    },
+    {
+      "seq": 4,
+      "text": "उन ideas को fix करने के लिए tangent graph: branches के बीच period pi, vertical asymptotes odd multiples of pi over two पर, जहाँ cosine zero है."
+    },
+    {
+      "seq": 5,
+      "text": "अब वो composites जहाँ students फँसते हैं."
+    },
+    {
+      "seq": 6,
+      "text": "Sine और cosine के absolute values, और sine squared और cosine squared, सबका period pi है, two pi नहीं. और functions के sum के लिए, period है individual periods का least common multiple."
+    },
+    {
+      "seq": 7,
+      "text": "Asymptotes के लिए: tangent और secant वहाँ blow up होते हैं जहाँ cosine zero है, odd multiples of pi over two; cotangent और cosecant वहाँ जहाँ sine zero है, pi के whole multiples."
+    },
+    {
+      "seq": 8,
+      "text": "और master transform line: a sine of b x plus c, पूरे में plus d के लिए, amplitude है a का size, period two pi over b का size, phase shift minus c over b, और range d minus a का size से d plus a का size तक."
+    }
+  ]
+}

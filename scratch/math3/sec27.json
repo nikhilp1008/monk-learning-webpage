@@ -1,0 +1,144 @@
+{
+  "id": "02d533e9-ec12-4738-a2e7-2e8c2f100e1b",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 27,
+  "section_type": "concept",
+  "subtopic": "05 · Trigonometric Identities and Compound Angle Formulas",
+  "title": "One master key, and the tree that grows from it",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "The forest is really one seed",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Sum, difference, double, half, triple, product-to-sum, sum-to-product — they all descend from a single identity.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\cos(A-B) = \\cos A\\cos B + \\sin A\\sin B",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 540 360\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"270\" y1=\"54\" x2=\"120\" y2=\"96\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><line x1=\"270\" y1=\"54\" x2=\"270\" y2=\"96\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><line x1=\"270\" y1=\"54\" x2=\"420\" y2=\"96\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><line x1=\"120\" y1=\"130\" x2=\"120\" y2=\"166\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><line x1=\"270\" y1=\"130\" x2=\"270\" y2=\"166\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><line x1=\"270\" y1=\"130\" x2=\"420\" y2=\"166\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><line x1=\"120\" y1=\"200\" x2=\"180\" y2=\"236\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><line x1=\"270\" y1=\"200\" x2=\"270\" y2=\"236\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><line x1=\"270\" y1=\"270\" x2=\"270\" y2=\"306\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><rect x=\"190\" y=\"20\" width=\"160\" height=\"34\" rx=\"6\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1.6\"/><text x=\"270.0\" y=\"41.0\" font-size=\"12\" fill=\"#1e293b\" text-anchor=\"middle\">cos(A&#8722;B)  master key</text><rect x=\"50\" y=\"96\" width=\"140\" height=\"34\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"120.0\" y=\"117.0\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">cos(A+B):  B&#8594;&#8722;B</text><rect x=\"210\" y=\"96\" width=\"120\" height=\"34\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"270.0\" y=\"117.0\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">sin(A&#177;B)</text><rect x=\"360\" y=\"96\" width=\"140\" height=\"34\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"430.0\" y=\"117.0\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">tan(A&#177;B):  ratio</text><rect x=\"60\" y=\"166\" width=\"120\" height=\"34\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"120.0\" y=\"187.0\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">Double  (B=A)</text><rect x=\"210\" y=\"166\" width=\"120\" height=\"34\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"270.0\" y=\"187.0\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">Product&#8594;Sum</text><rect x=\"360\" y=\"166\" width=\"140\" height=\"34\" rx=\"6\" fill=\"#f1f5f9\" stroke=\"#94a3b8\" stroke-width=\"1.6\"/><text x=\"430.0\" y=\"187.0\" font-size=\"10\" fill=\"#1e293b\" text-anchor=\"middle\">(add / subtract)</text><rect x=\"30\" y=\"236\" width=\"120\" height=\"34\" rx=\"6\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"1.6\"/><text x=\"90.0\" y=\"257.0\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">Half-angle</text><rect x=\"160\" y=\"236\" width=\"140\" height=\"34\" rx=\"6\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"1.6\"/><text x=\"230.0\" y=\"257.0\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">Triple (2A+A)</text><rect x=\"330\" y=\"236\" width=\"120\" height=\"34\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"270.0\" y=\"257.0\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">Sum&#8594;Product</text><rect x=\"150\" y=\"306\" width=\"240\" height=\"34\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"270.0\" y=\"327.0\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">a cos x + b sin x = R cos(x &#8722; &#945;)</text></svg>",
+      "type": "diagram",
+      "caption": "Every compound-angle formula descends from cos(A − B)",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Replace $B$ with $-B$ to get $\\cos(A+B)$. Use $\\sin\\theta=\\cos(\\tfrac{\\pi}{2}-\\theta)$ to get $\\sin(A\\pm B)$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "Set $B=A$ for the double-angle formulas; halve for half-angle; add and subtract pairs for product-to-sum.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Learn the derivation, not the list. Under pressure you reconstruct in twenty seconds.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_27.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_27.mp3",
+  "duration_sec_english": 81.34,
+  "duration_sec_hinglish": 77.16,
+  "board_reveal_at_english": [
+    0.0,
+    7.68,
+    19.29,
+    30.55,
+    38.06,
+    54.27,
+    67.58
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    6.49,
+    16.81,
+    27.56,
+    34.99,
+    50.77,
+    63.06
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "This subtopic looks like a forest of formulas, so let me hand you the one seed they all grow from."
+    },
+    {
+      "seq": 2,
+      "text": "Sum, difference, double, half, triple, product-to-sum, sum-to-product, every one of them is the same idea in a different costume."
+    },
+    {
+      "seq": 3,
+      "text": "The master key is the cosine difference formula: cosine of A minus B equals cosine A cosine B plus sine A sine B. Burn this one in."
+    },
+    {
+      "seq": 4,
+      "text": "Here's the family tree. Everything you'll ever need in this subtopic hangs off that single root at the top."
+    },
+    {
+      "seq": 5,
+      "text": "Watch how they grow. Replace B with minus B and you get cosine of A plus B. Use the cofunction shift, sine equals cosine of ninety minus the angle, and out fall sine of A plus or minus B."
+    },
+    {
+      "seq": 6,
+      "text": "Set B equal to A and you get the double-angle formulas. Halve the angle for half-angle. Add and subtract pairs and you get product-to-sum. One idea, eight costumes."
+    },
+    {
+      "seq": 7,
+      "text": "So the instruction is: don't memorise the list, learn the derivation. Under exam pressure you can rebuild any of them from cosine of A minus B in about twenty seconds, and it never fails you."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "ये subtopic formulas का जंगल लगता है, so मैं आपको वो एक बीज देता हूँ जिससे सब उगते हैं."
+    },
+    {
+      "seq": 2,
+      "text": "Sum, difference, double, half, triple, product-to-sum, sum-to-product, हर एक वही idea है अलग costume में."
+    },
+    {
+      "seq": 3,
+      "text": "Master key है cosine difference formula: cosine of A minus B equals cosine A cosine B plus sine A sine B. इसे पक्का कर लीजिए."
+    },
+    {
+      "seq": 4,
+      "text": "ये रहा family tree. इस subtopic में जो कुछ चाहिए वो सब ऊपर के उस एक root से लटकता है."
+    },
+    {
+      "seq": 5,
+      "text": "देखिए कैसे उगते हैं. B को minus B से replace कीजिए और मिलता है cosine of A plus B. Cofunction shift use कीजिए, sine equals cosine of ninety minus angle, और निकल आते हैं sine of A plus or minus B."
+    },
+    {
+      "seq": 6,
+      "text": "B को A के बराबर कीजिए और मिलते हैं double-angle formulas. Angle आधा कीजिए half-angle के लिए. Pairs add और subtract कीजिए product-to-sum के लिए. एक idea, आठ costumes."
+    },
+    {
+      "seq": 7,
+      "text": "So instruction ये है: list रटिए मत, derivation सीखिए. Exam pressure में आप किसी को भी cosine of A minus B से करीब बीस seconds में rebuild कर सकते हैं, और ये कभी fail नहीं करता."
+    }
+  ]
+}

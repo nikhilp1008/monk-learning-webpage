@@ -1,0 +1,144 @@
+{
+  "id": "dc339e20-d71c-426c-8cea-ae9968b152e7",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 21,
+  "section_type": "concept",
+  "subtopic": "04 · Graphs and Periodicity of Trigonometric Functions",
+  "title": "Stretching and shifting — what a, b, c, d do",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Reading y = a·sin(bx + c) + d",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$|a|$ stretches vertically \\u2014 the amplitude, how tall the wave is.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "$b$ squeezes horizontally \\u2014 bigger $b$ means more oscillations, so a shorter period.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 480 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"120\" x2=\"460\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"45\" y1=\"15\" x2=\"45\" y2=\"225\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><path d=\"M 45.0 120.0 L 47.9 118.0 L 50.7 116.0 L 53.6 114.0 L 56.4 112.0 L 59.3 110.0 L 62.1 108.0 L 65.0 106.1 L 67.9 104.2 L 70.7 102.3 L 73.6 100.5 L 76.4 98.7 L 79.3 96.9 L 82.1 95.2 L 85.0 93.5 L 87.9 91.9 L 90.7 90.4 L 93.6 88.9 L 96.4 87.5 L 99.3 86.1 L 102.1 84.8 L 105.0 83.6 L 107.9 82.4 L 110.7 81.4 L 113.6 80.4 L 116.4 79.5 L 119.3 78.6 L 122.1 77.9 L 125.0 77.2 L 127.9 76.6 L 130.7 76.1 L 133.6 75.7 L 136.4 75.4 L 139.3 75.2 L 142.1 75.0 L 145.0 75.0 L 147.9 75.0 L 150.7 75.2 L 153.6 75.4 L 156.4 75.7 L 159.3 76.1 L 162.1 76.6 L 165.0 77.2 L 167.9 77.9 L 170.7 78.6 L 173.6 79.5 L 176.4 80.4 L 179.3 81.4 L 182.1 82.4 L 185.0 83.6 L 187.9 84.8 L 190.7 86.1 L 193.6 87.5 L 196.4 88.9 L 199.3 90.4 L 202.1 91.9 L 205.0 93.5 L 207.9 95.2 L 210.7 96.9 L 213.6 98.7 L 216.4 100.5 L 219.3 102.3 L 222.1 104.2 L 225.0 106.1 L 227.9 108.0 L 230.7 110.0 L 233.6 112.0 L 236.4 114.0 L 239.3 116.0 L 242.1 118.0 L 245.0 120.0 L 247.9 122.0 L 250.7 124.0 L 253.6 126.0 L 256.4 128.0 L 259.3 130.0 L 262.1 132.0 L 265.0 133.9 L 267.9 135.8 L 270.7 137.7 L 273.6 139.5 L 276.4 141.3 L 279.3 143.1 L 282.1 144.8 L 285.0 146.5 L 287.9 148.1 L 290.7 149.6 L 293.6 151.1 L 296.4 152.5 L 299.3 153.9 L 302.1 155.2 L 305.0 156.4 L 307.9 157.6 L 310.7 158.6 L 313.6 159.6 L 316.4 160.5 L 319.3 161.4 L 322.1 162.1 L 325.0 162.8 L 327.9 163.4 L 330.7 163.9 L 333.6 164.3 L 336.4 164.6 L 339.3 164.8 L 342.1 165.0 L 345.0 165.0 L 347.9 165.0 L 350.7 164.8 L 353.6 164.6 L 356.4 164.3 L 359.3 163.9 L 362.1 163.4 L 365.0 162.8 L 367.9 162.1 L 370.7 161.4 L 373.6 160.5 L 376.4 159.6 L 379.3 158.6 L 382.1 157.6 L 385.0 156.4 L 387.9 155.2 L 390.7 153.9 L 393.6 152.5 L 396.4 151.1 L 399.3 149.6 L 402.1 148.1 L 405.0 146.5 L 407.9 144.8 L 410.7 143.1 L 413.6 141.3 L 416.4 139.5 L 419.3 137.7 L 422.1 135.8 L 425.0 133.9 L 427.9 132.0 L 430.7 130.0 L 433.6 128.0 L 436.4 126.0 L 439.3 124.0 L 442.1 122.0 L 445.0 120.0\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><path d=\"M 45.0 120.0 L 47.9 116.0 L 50.7 111.9 L 53.6 107.9 L 56.4 103.9 L 59.3 100.0 L 62.1 96.1 L 65.0 92.2 L 67.9 88.4 L 70.7 84.6 L 73.6 81.0 L 76.4 77.4 L 79.3 73.8 L 82.1 70.4 L 85.0 67.1 L 87.9 63.9 L 90.7 60.8 L 93.6 57.8 L 96.4 54.9 L 99.3 52.2 L 102.1 49.6 L 105.0 47.2 L 107.9 44.9 L 110.7 42.7 L 113.6 40.7 L 116.4 38.9 L 119.3 37.2 L 122.1 35.7 L 125.0 34.4 L 127.9 33.2 L 130.7 32.3 L 133.6 31.4 L 136.4 30.8 L 139.3 30.4 L 142.1 30.1 L 145.0 30.0 L 147.9 30.1 L 150.7 30.4 L 153.6 30.8 L 156.4 31.4 L 159.3 32.3 L 162.1 33.2 L 165.0 34.4 L 167.9 35.7 L 170.7 37.2 L 173.6 38.9 L 176.4 40.7 L 179.3 42.7 L 182.1 44.9 L 185.0 47.2 L 187.9 49.6 L 190.7 52.2 L 193.6 54.9 L 196.4 57.8 L 199.3 60.8 L 202.1 63.9 L 205.0 67.1 L 207.9 70.4 L 210.7 73.8 L 213.6 77.4 L 216.4 81.0 L 219.3 84.6 L 222.1 88.4 L 225.0 92.2 L 227.9 96.1 L 230.7 100.0 L 233.6 103.9 L 236.4 107.9 L 239.3 111.9 L 242.1 116.0 L 245.0 120.0 L 247.9 124.0 L 250.7 128.1 L 253.6 132.1 L 256.4 136.1 L 259.3 140.0 L 262.1 143.9 L 265.0 147.8 L 267.9 151.6 L 270.7 155.4 L 273.6 159.0 L 276.4 162.6 L 279.3 166.2 L 282.1 169.6 L 285.0 172.9 L 287.9 176.1 L 290.7 179.2 L 293.6 182.2 L 296.4 185.1 L 299.3 187.8 L 302.1 190.4 L 305.0 192.8 L 307.9 195.1 L 310.7 197.3 L 313.6 199.3 L 316.4 201.1 L 319.3 202.8 L 322.1 204.3 L 325.0 205.6 L 327.9 206.8 L 330.7 207.7 L 333.6 208.6 L 336.4 209.2 L 339.3 209.6 L 342.1 209.9 L 345.0 210.0 L 347.9 209.9 L 350.7 209.6 L 353.6 209.2 L 356.4 208.6 L 359.3 207.7 L 362.1 206.8 L 365.0 205.6 L 367.9 204.3 L 370.7 202.8 L 373.6 201.1 L 376.4 199.3 L 379.3 197.3 L 382.1 195.1 L 385.0 192.8 L 387.9 190.4 L 390.7 187.8 L 393.6 185.1 L 396.4 182.2 L 399.3 179.2 L 402.1 176.1 L 405.0 172.9 L 407.9 169.6 L 410.7 166.2 L 413.6 162.6 L 416.4 159.0 L 419.3 155.4 L 422.1 151.6 L 425.0 147.8 L 427.9 143.9 L 430.7 140.0 L 433.6 136.1 L 436.4 132.1 L 439.3 128.1 L 442.1 124.0 L 445.0 120.0\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><path d=\"M 45.0 120.0 L 47.9 116.0 L 50.7 112.0 L 53.6 108.0 L 56.4 104.2 L 59.3 100.5 L 62.1 96.9 L 65.0 93.5 L 67.9 90.4 L 70.7 87.5 L 73.6 84.8 L 76.4 82.4 L 79.3 80.4 L 82.1 78.6 L 85.0 77.2 L 87.9 76.1 L 90.7 75.4 L 93.6 75.0 L 96.4 75.0 L 99.3 75.4 L 102.1 76.1 L 105.0 77.2 L 107.9 78.6 L 110.7 80.4 L 113.6 82.4 L 116.4 84.8 L 119.3 87.5 L 122.1 90.4 L 125.0 93.5 L 127.9 96.9 L 130.7 100.5 L 133.6 104.2 L 136.4 108.0 L 139.3 112.0 L 142.1 116.0 L 145.0 120.0 L 147.9 124.0 L 150.7 128.0 L 153.6 132.0 L 156.4 135.8 L 159.3 139.5 L 162.1 143.1 L 165.0 146.5 L 167.9 149.6 L 170.7 152.5 L 173.6 155.2 L 176.4 157.6 L 179.3 159.6 L 182.1 161.4 L 185.0 162.8 L 187.9 163.9 L 190.7 164.6 L 193.6 165.0 L 196.4 165.0 L 199.3 164.6 L 202.1 163.9 L 205.0 162.8 L 207.9 161.4 L 210.7 159.6 L 213.6 157.6 L 216.4 155.2 L 219.3 152.5 L 222.1 149.6 L 225.0 146.5 L 227.9 143.1 L 230.7 139.5 L 233.6 135.8 L 236.4 132.0 L 239.3 128.0 L 242.1 124.0 L 245.0 120.0 L 247.9 116.0 L 250.7 112.0 L 253.6 108.0 L 256.4 104.2 L 259.3 100.5 L 262.1 96.9 L 265.0 93.5 L 267.9 90.4 L 270.7 87.5 L 273.6 84.8 L 276.4 82.4 L 279.3 80.4 L 282.1 78.6 L 285.0 77.2 L 287.9 76.1 L 290.7 75.4 L 293.6 75.0 L 296.4 75.0 L 299.3 75.4 L 302.1 76.1 L 305.0 77.2 L 307.9 78.6 L 310.7 80.4 L 313.6 82.4 L 316.4 84.8 L 319.3 87.5 L 322.1 90.4 L 325.0 93.5 L 327.9 96.9 L 330.7 100.5 L 333.6 104.2 L 336.4 108.0 L 339.3 112.0 L 342.1 116.0 L 345.0 120.0 L 347.9 124.0 L 350.7 128.0 L 353.6 132.0 L 356.4 135.8 L 359.3 139.5 L 362.1 143.1 L 365.0 146.5 L 367.9 149.6 L 370.7 152.5 L 373.6 155.2 L 376.4 157.6 L 379.3 159.6 L 382.1 161.4 L 385.0 162.8 L 387.9 163.9 L 390.7 164.6 L 393.6 165.0 L 396.4 165.0 L 399.3 164.6 L 402.1 163.9 L 405.0 162.8 L 407.9 161.4 L 410.7 159.6 L 413.6 157.6 L 416.4 155.2 L 419.3 152.5 L 422.1 149.6 L 425.0 146.5 L 427.9 143.1 L 430.7 139.5 L 433.6 135.8 L 436.4 132.0 L 439.3 128.0 L 442.1 124.0 L 445.0 120.0\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"300\" y=\"30\" font-size=\"11\" fill=\"#64748b\">y = sin x</text><text x=\"300\" y=\"46\" font-size=\"11\" fill=\"#dc2626\">y = 2 sin x  (amplitude 2)</text><text x=\"300\" y=\"62\" font-size=\"11\" fill=\"#16a34a\">y = sin 2x  (period &#960;)</text></svg>",
+      "type": "diagram",
+      "caption": "sin x vs 2 sin x (taller) vs sin 2x (twice as fast)",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "$c$ slides the wave left or right \\u2014 a phase shift. $d$ lifts the whole wave up or down.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\text{amplitude}=|a|,\\quad \\text{period}=\\tfrac{2\\pi}{|b|},\\quad \\text{shift}=d",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Range becomes [d − |a|, d + |a|] — the vertical shift moves the whole band.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_21.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_21.mp3",
+  "duration_sec_english": 63.17,
+  "duration_sec_hinglish": 57.29,
+  "board_reveal_at_english": [
+    0.0,
+    8.02,
+    15.36,
+    25.51,
+    37.63,
+    45.14,
+    52.22
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    8.28,
+    14.76,
+    23.72,
+    33.45,
+    40.62,
+    47.7
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "One template covers every sine and cosine you'll meet: y equals a sine of b x plus c, all plus d."
+    },
+    {
+      "seq": 2,
+      "text": "The size of a stretches the wave vertically. That's the amplitude, how tall the peaks are."
+    },
+    {
+      "seq": 3,
+      "text": "The b squeezes it horizontally. A bigger b packs in more oscillations in the same space, which means a shorter period."
+    },
+    {
+      "seq": 4,
+      "text": "See it here: compared to plain sine x, the red curve two sine x is twice as tall, and the green curve sine two x oscillates twice as fast."
+    },
+    {
+      "seq": 5,
+      "text": "The c slides the wave sideways, a phase shift, and d lifts the whole wave up or down."
+    },
+    {
+      "seq": 6,
+      "text": "So amplitude is the size of a, period is two pi over the size of b, and the vertical shift is d."
+    },
+    {
+      "seq": 7,
+      "text": "And crucially, the range becomes d minus the size of a, up to d plus the size of a. The shift d moves the entire band, don't forget it."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "एक template हर sine और cosine को cover करता है: y equals a sine of b x plus c, पूरे में plus d."
+    },
+    {
+      "seq": 2,
+      "text": "a का size wave को vertically stretch करता है. यही amplitude है, peaks कितने ऊँचे."
+    },
+    {
+      "seq": 3,
+      "text": "b इसे horizontally squeeze करता है. बड़ा b same space में ज़्यादा oscillations भरता है, यानी छोटा period."
+    },
+    {
+      "seq": 4,
+      "text": "यहाँ देखिए: plain sine x के मुक़ाबले, red curve two sine x दुगुना ऊँचा है, और green curve sine two x दुगनी तेज़ी से oscillate करता है."
+    },
+    {
+      "seq": 5,
+      "text": "c wave को sideways slide करता है, phase shift, और d पूरी wave को ऊपर या नीचे उठाता है."
+    },
+    {
+      "seq": 6,
+      "text": "So amplitude है a का size, period है two pi over b का size, और vertical shift है d."
+    },
+    {
+      "seq": 7,
+      "text": "और ज़रूरी बात, range बनता है d minus a का size, से d plus a का size तक. Shift d पूरी band हिला देता है, इसे मत भूलिए."
+    }
+  ]
+}

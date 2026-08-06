@@ -1,0 +1,144 @@
+{
+  "id": "d57e8cd4-11d0-4cd4-98b9-116140d7d13e",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 14,
+  "section_type": "tips",
+  "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+  "title": "Pitfalls with signs, ranges and reciprocals",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Where the marks leak away",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "#1 Signature trap: forgetting the quadrant sign on a square root. cos x = ±√(1−sin²x) — the ± is set by the quadrant, never defaulted to +.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "#2 Never claim $\\sin$ or $\\cos$ outside $[-1,1]$, or $\\sec/\\csc$ inside $(-1,1)$. Range-check as a reflex.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "#3 Reciprocal pairing: $\\sec=1/\\cos$, $\\csc=1/\\sin$. Third-letter rule: cosec \\u2194 sine.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "#4 Pythagorean: $1+\\tan^2=\\sec^2$, $1+\\cot^2=\\csc^2$. Don't swap them.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "#5 $\\tan\\tfrac{\\pi}{2}$, $\\cot 0$ are undefined \\u2014 not $\\infty$ or $0$. #6 Reduce large angles before reading a sign.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Golden rule: magnitude from the identity, sign from the quadrant — always two steps.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_14.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_14.mp3",
+  "duration_sec_english": 91.25,
+  "duration_sec_hinglish": 83.57,
+  "board_reveal_at_english": [
+    0.0,
+    4.27,
+    25.51,
+    38.31,
+    50.18,
+    64.09,
+    79.45
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    4.35,
+    20.65,
+    34.13,
+    44.97,
+    59.39,
+    74.33
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here are the six leaks that drain marks in this subtopic."
+    },
+    {
+      "seq": 2,
+      "text": "The signature trap: when you take a square root, you must attach the quadrant's sign. Cosine x equals plus or minus the root of one minus sine squared, and the plus or minus is chosen by the quadrant, never quietly defaulted to plus. This is the highest-yield error here."
+    },
+    {
+      "seq": 3,
+      "text": "Second, never let a sine or cosine escape the band from minus one to one, and never let a secant or cosecant sneak inside minus one to one. Make that check automatic before you finalise."
+    },
+    {
+      "seq": 4,
+      "text": "Third, the reciprocal pairing. Secant is one over cosine, cosecant is one over sine, not the other way. The third-letter rule keeps you honest: cosec matches sine."
+    },
+    {
+      "seq": 5,
+      "text": "Fourth, the Pythagorean identities. It's one plus tan squared equals sec squared, and one plus cot squared equals cosec squared. Swapping them is common, so pair tan with sec in your head."
+    },
+    {
+      "seq": 6,
+      "text": "Fifth, tangent of pi over two and cotangent of zero are undefined, not infinity, not zero. Watch domain exclusions. And sixth, reduce any large angle modulo three sixty before you dare read off a sign."
+    },
+    {
+      "seq": 7,
+      "text": "The golden rule that ties it together: magnitude from the identity, sign from the quadrant. Always two separate steps, so the sign step never gets skipped."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "इस subtopic में marks निकालने वाले छह leaks."
+    },
+    {
+      "seq": 2,
+      "text": "Signature trap: square root लेते समय quadrant का sign लगाना ज़रूरी है. Cosine x equals plus or minus root of one minus sine squared, और वो plus or minus quadrant चुनता है, चुपचाप plus default कभी नहीं. यहाँ यही सबसे बड़ी ग़लती है."
+    },
+    {
+      "seq": 3,
+      "text": "दूसरा, sine या cosine को minus one से one की band से बाहर मत जाने दीजिए, और secant या cosecant को minus one से one के अंदर मत घुसने दीजिए. Finalise से पहले ये check automatic कीजिए."
+    },
+    {
+      "seq": 4,
+      "text": "तीसरा, reciprocal pairing. Secant है one over cosine, cosecant one over sine, उल्टा नहीं. Third-letter rule सही रखता है: cosec sine से match."
+    },
+    {
+      "seq": 5,
+      "text": "चौथा, Pythagorean identities. ये है one plus tan squared equals sec squared, और one plus cot squared equals cosec squared. इन्हें swap करना common है, so दिमाग़ में tan को sec के साथ pair कीजिए."
+    },
+    {
+      "seq": 6,
+      "text": "पाँचवाँ, tangent of pi over two और cotangent of zero undefined हैं, infinity नहीं, zero नहीं. Domain exclusions देखिए. और छठा, sign पढ़ने से पहले किसी भी बड़े angle को three sixty से reduce कीजिए."
+    },
+    {
+      "seq": 7,
+      "text": "जो golden rule सब जोड़ता है: magnitude identity से, sign quadrant से. हमेशा दो अलग steps, ताकि sign step कभी skip ना हो."
+    }
+  ]
+}

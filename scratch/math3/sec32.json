@@ -1,0 +1,142 @@
+{
+  "id": "5ba04e75-f30f-423b-abad-52e9dd655e71",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 32,
+  "section_type": "worked_examples",
+  "subtopic": "05 · Trigonometric Identities and Compound Angle Formulas",
+  "title": "Exact values and a clean identity proof",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 1 — exact value of cos 15°",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\cos 15^\\circ = \\cos(45^\\circ-30^\\circ) = \\tfrac{1}{\\sqrt2}\\cdot\\tfrac{\\sqrt3}{2} + \\tfrac{1}{\\sqrt2}\\cdot\\tfrac12 = \\tfrac{\\sqrt6+\\sqrt2}{4}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "Example 2 — prove cos(A+B)cos(A−B) = cos²A − sin²B",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Expand as a difference of squares: $\\cos^2 A\\cos^2 B - \\sin^2 A\\sin^2 B$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "= \\cos^2 A(1-\\sin^2 B) - (1-\\cos^2 A)\\sin^2 B = \\cos^2 A - \\sin^2 B",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "Example 3 — sin(7π/12)",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\tfrac{7\\pi}{12}=\\tfrac{\\pi}{4}+\\tfrac{\\pi}{3}\\ \\Rightarrow\\ \\sin = \\tfrac{1}{\\sqrt2}\\cdot\\tfrac12 + \\tfrac{1}{\\sqrt2}\\cdot\\tfrac{\\sqrt3}{2} = \\tfrac{\\sqrt2+\\sqrt6}{4}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_32.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_32.mp3",
+  "duration_sec_english": 91.25,
+  "duration_sec_hinglish": 89.28,
+  "board_reveal_at_english": [
+    0.0,
+    5.12,
+    26.88,
+    43.52,
+    59.99,
+    63.91,
+    81.24
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.46,
+    26.28,
+    44.12,
+    58.03,
+    62.29,
+    79.53
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Three examples that show the formulas doing exact-value and proof work."
+    },
+    {
+      "seq": 2,
+      "text": "First, cosine fifteen. Write fifteen as forty five minus thirty, and use the cosine difference formula: cosine forty five cosine thirty plus sine forty five sine thirty. That's one over root two times root three over two, plus one over root two times one half, giving root six plus root two, all over four."
+    },
+    {
+      "seq": 3,
+      "text": "Second, a proof: show cosine of A plus B times cosine of A minus B equals cosine squared A minus sine squared B. The product is a difference of squares, cosine squared A cosine squared B minus sine squared A sine squared B."
+    },
+    {
+      "seq": 4,
+      "text": "Now substitute cosine squared B as one minus sine squared B, and sine squared A as one minus cosine squared A. Expand and everything cancels down to cosine squared A minus sine squared B. Proved."
+    },
+    {
+      "seq": 5,
+      "text": "Third, sine of seven pi over twelve."
+    },
+    {
+      "seq": 6,
+      "text": "Split seven pi over twelve as pi over four plus pi over three. Then sine of the sum is one over root two times one half, plus one over root two times root three over two, which is root two plus root six, over four."
+    },
+    {
+      "seq": 7,
+      "text": "Notice the pattern in all three: break the awkward angle into thirties, forty fives and sixties, then let the compound-angle formula finish it."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "तीन examples जो formulas को exact-value और proof का काम करते दिखाते हैं."
+    },
+    {
+      "seq": 2,
+      "text": "पहला, cosine fifteen. Fifteen को forty five minus thirty लिखिए, और cosine difference formula use कीजिए: cosine forty five cosine thirty plus sine forty five sine thirty. ये है one over root two times root three over two, plus one over root two times one half, देता root six plus root two, पूरे over four."
+    },
+    {
+      "seq": 3,
+      "text": "दूसरा, एक proof: दिखाइए cosine of A plus B times cosine of A minus B equals cosine squared A minus sine squared B. Product एक difference of squares है, cosine squared A cosine squared B minus sine squared A sine squared B."
+    },
+    {
+      "seq": 4,
+      "text": "अब cosine squared B को one minus sine squared B, और sine squared A को one minus cosine squared A रखिए. Expand कीजिए और सब कट कर cosine squared A minus sine squared B रह जाता है. साबित."
+    },
+    {
+      "seq": 5,
+      "text": "तीसरा, sine of seven pi over twelve."
+    },
+    {
+      "seq": 6,
+      "text": "Seven pi over twelve को pi over four plus pi over three में तोड़िए. फिर sine of sum है one over root two times one half, plus one over root two times root three over two, यानी root two plus root six, over four."
+    },
+    {
+      "seq": 7,
+      "text": "तीनों में pattern देखिए: awkward angle को thirties, forty fives, sixties में तोड़िए, फिर compound-angle formula उसे ख़त्म कर देता है."
+    }
+  ]
+}

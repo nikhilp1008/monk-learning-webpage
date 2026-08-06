@@ -1,0 +1,144 @@
+{
+  "id": "eaede109-5140-40a3-b16b-f8e25e07da0f",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 35,
+  "section_type": "tips",
+  "subtopic": "05 · Trigonometric Identities and Compound Angle Formulas",
+  "title": "Pitfalls in identities and compound angles",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Identity traps",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "#1 Signature trap: the cosine/tangent sign flip. cos(A+B) takes minus; cos(A−B) takes plus. Cosine disagrees with the angle sign; sine agrees.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "#2 Assuming distribution: $\\sin(A+B)\\ne\\sin A+\\sin B$. Always use the formula.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "#3 Wrong $\\cos 2A$ form. Given $\\sin A$ use $1-2\\sin^2 A$; given $\\cos A$ use $2\\cos^2 A-1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "#4 Dropping the leading 2 in product-to-sum, and the leading minus in cos C − cos D.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "#5 Amplitude is $\\sqrt{a^2+b^2}$, never $a+b$. #6 Conditional identities hold only when A + B + C = \\u03c0.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Golden rule: reconstruct from cos(A−B); watch every ±; amplitude is √(a²+b²).",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_35.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_35.mp3",
+  "duration_sec_english": 90.98,
+  "duration_sec_hinglish": 85.87,
+  "board_reveal_at_english": [
+    0.0,
+    5.63,
+    22.02,
+    33.28,
+    47.96,
+    60.42,
+    79.19
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.03,
+    21.93,
+    31.32,
+    46.76,
+    56.83,
+    73.3
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Six traps in the engine room, mostly structural, not arithmetic."
+    },
+    {
+      "seq": 2,
+      "text": "The signature trap: the sign flip in cosine and tangent. Cosine of A plus B takes a minus, cosine of A minus B takes a plus, so cosine disagrees with the angle's sign. Sine, by contrast, agrees. Get this backwards and everything downstream breaks."
+    },
+    {
+      "seq": 3,
+      "text": "Second, assuming distribution. Sine of A plus B is not sine A plus sine B. Trig functions are not linear, always reach for the formula."
+    },
+    {
+      "seq": 4,
+      "text": "Third, picking the wrong face of cosine two A. If you're given sine A, use one minus two sine squared A; if given cosine A, use two cosine squared A minus one. Match the form to what you have."
+    },
+    {
+      "seq": 5,
+      "text": "Fourth, dropping little pieces: the leading two in the product-to-sum formulas, and the leading minus in cosine C minus cosine D. Both are part of the formula."
+    },
+    {
+      "seq": 6,
+      "text": "Fifth, the amplitude of a sine plus b cosine is the square root of a squared plus b squared, never a plus b. And sixth, conditional identities like the tangent sum only hold when A plus B plus C is pi."
+    },
+    {
+      "seq": 7,
+      "text": "The golden rule: reconstruct everything from cosine of A minus B, watch every plus-or-minus, and remember the amplitude is root a squared plus b squared."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Engine room में छह traps, ज़्यादातर structural, arithmetic नहीं."
+    },
+    {
+      "seq": 2,
+      "text": "Signature trap: cosine और tangent में sign flip. Cosine of A plus B minus लेता है, cosine of A minus B plus लेता है, so cosine angle के sign से disagree करता है. Sine, इसके उलट, agree करता है. इसे उल्टा किया तो आगे सब टूट जाता है."
+    },
+    {
+      "seq": 3,
+      "text": "दूसरा, distribution मानना. Sine of A plus B, sine A plus sine B नहीं है. Trig functions linear नहीं, हमेशा formula उठाइए."
+    },
+    {
+      "seq": 4,
+      "text": "तीसरा, cosine two A का ग़लत चेहरा चुनना. अगर sine A दिया है, one minus two sine squared A use कीजिए; cosine A दिया है तो two cosine squared A minus one. Form को जो है उससे match कीजिए."
+    },
+    {
+      "seq": 5,
+      "text": "चौथा, छोटे टुकड़े छोड़ना: product-to-sum में leading two, और cosine C minus cosine D में leading minus. दोनों formula का हिस्सा हैं."
+    },
+    {
+      "seq": 6,
+      "text": "पाँचवाँ, a sine plus b cosine का amplitude है square root of a squared plus b squared, कभी a plus b नहीं. और छठा, conditional identities जैसे tangent sum सिर्फ़ तभी valid जब A plus B plus C is pi."
+    },
+    {
+      "seq": 7,
+      "text": "Golden rule: सब कुछ cosine of A minus B से reconstruct कीजिए, हर plus-or-minus देखिए, और याद रखिए amplitude है root a squared plus b squared."
+    }
+  ]
+}
