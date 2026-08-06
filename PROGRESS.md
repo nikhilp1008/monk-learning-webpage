@@ -142,3 +142,8 @@ geometric construction (half-plane shading, wavy-curve sign charts).
       three vertices found by pairwise intersection and labeled in place
       ((1,0), (4,0), (1,3)), red-margin "bounded triangle" conclusion.
       VERDICT PASS both langs.
+- [x] Sec 22 (worked ex, JEE Adv) — x+y≤6, x+2y≤8, x≥0, y≥0: quadrilateral
+      (0,0),(6,0),(4,2),(0,4) found vertex by vertex (tighter-bound reasoning
+      + solving the two slant lines), exact shaded polygon, cyclic list,
+      shoelace sum 0+(6·2)+(4·4)+0=28, boxed Area=14 sq units.
+      VERDICT PASS both langs.
