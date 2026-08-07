@@ -87,3 +87,15 @@ misrecorded observation).
   `FormulaRow` helpers verbatim. PASS both languages on first render,
   eye-checked (every arithmetic value in the table and both divisions
   confirmed correct).
+- **Sec 7** — concept (procedure): worked grouped-data table (classes
+  0-10..40-50, f=5,8,12,6,4) builds a cumulative-frequency column live
+  (5,13,25,31,35), rings the median class (20-30, first c.f. ≥ N/2=17.5),
+  then the interpolation formula M = ℓ + Frac(N/2-C, f)×h — first real
+  `<Frac>` use in this chapter, substituted to a hand-verified 20 +
+  (4.5/12)×10 = 23.75. Definitions (ℓ, C, f, h) carry their actual numeric
+  values inline, not just symbols. Closing line needed per-language JSX
+  branches (not just `t()` swapping strings) since the x̄ glyph's position
+  differs between the English and Hinglish sentence structures — computed
+  each language's text width separately to place the `XBar` without
+  overflowing the safe area. PASS both languages on first render,
+  eye-checked (cumulative sums and the interpolation arithmetic confirmed).
