@@ -5,7 +5,8 @@ export interface VoiceClientOptions {
   wsUrl?: string;
   onStateChange?: (state: VoiceClientState) => void;
   onSpeechText?: (text: string, isFinal: boolean) => void;
-  onBoardUpdate?: (latex: string) => void;
+  onBoardEvents?: (events: any[]) => void;
+  onBoardUpdate?: (latex: any) => void;
   onMetaUpdate?: (meta: any) => void;
   onError?: (err: Error) => void;
   onSessionEnded?: () => void;
