@@ -8,7 +8,7 @@
  * Beats (en [0, 11.43, 29.18, 42.33, 54.36, 68.78, 83.8, 104.45]):
  *  0 title (always-on)
  *  1 THE DEMO — two panels: chessboard squares (left, 1,2,4,8,16 doubling) +
- *     exponential graph (right, aₙ vs n curving upward with 5 discrete dots)
+ *     exponential graph (right, a_n vs n curving upward with 5 discrete dots)
  *  2 defining property: ratio never changes
  *  3 formula: r = a_2/a_1 = a_3/a_2 = ... = a_k/a_(k-1)
  *  4 real-world examples

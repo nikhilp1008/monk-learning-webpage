@@ -62,7 +62,7 @@ export default function M11Ch08Sec36({ currentTime, reveals, language }: ScenePr
       {/* beat 3 — substitute into S_n */}
       <Fade on={beat >= 3} delay={dl(3, 0.2)}>
         <T x={540} y={170} size={15} fill={INK} anchor="middle">
-          {"S₆₄ = a(rⁿ-1)/(r-1) = 1·(2⁶⁴-1)/(2-1)"}
+          {"S₆₄ = a(r^n-1)/(r-1) = 1·(2⁶⁴-1)/(2-1)"}
         </T>
       </Fade>
 

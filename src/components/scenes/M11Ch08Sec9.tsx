@@ -8,7 +8,7 @@
  * Beats (en [0, 9.3, 20.31, 30.89, 45.4, 61.95, 73.3, 86.87]):
  *  0 title (always-on) — "Arithmetic progression: add the same step, over and over"
  *  1 THE DEMO — two panels: staircase (left, rising bars a/a+d/a+2d/a+3d) +
- *     graph (right, aₙ vs n plotted as a straight line with 4 discrete dots)
+ *     graph (right, a_n vs n plotted as a straight line with 4 discrete dots)
  *  2 defining property: gap never changes
  *  3 formula: d = a_2-a_1 = a_3-a_2 = ... = a_k-a_(k-1)
  *  4 climb (n-1) steps from a
@@ -72,7 +72,7 @@ export default function M11Ch08Sec9({ currentTime, reveals, language }: ScenePro
         </T>
       </Fade>
 
-      {/* beat 1 — RIGHT: aₙ vs n graph */}
+      {/* beat 1 — RIGHT: a_n vs n graph */}
       <CartesianAxes on={beat >= 1} delay={dl(1, 2.1)} originX={650} originY={230} xLeft={650} xRight={900} yTop={110} yBottom={230} showTicks={false} />
       <Draw on={beat >= 1} delay={dl(1, 2.5)} d={lineD(665, 206, 895, 108)} stroke={GREEN_DARK} sw={2.2} dur={0.6} />
       {dotX.map((x, i) => (
