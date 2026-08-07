@@ -82,3 +82,10 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   side, left overlapping circles shaded (NOT mutually exclusive, red
   caption), right disjoint circles each shaded their own color (mutually
   exclusive, green caption). Clean PASS both languages, eye-checked.
+- **Sec 8** — concept: 4-step procedure ladder (STEP 1-4 prefixed lines),
+  ringed HIGH formula n(S)=m₁×m₂×⋯×mₖ, guardrail chip "list ≠ product" —
+  erased for the payoff diagram (beat 7): coin→die tree, root splits to
+  H/T, each fans via an arrow into a 6-card roster (H1-H6, T1-T6), closing
+  "2×6=12 → n(S)=12" chip. One caught bug: heading wasn't gated to the
+  erase group, collided with the tree's caption — fixed by adding it to
+  `aOn`. Clean PASS both languages after fix, eye-checked.
