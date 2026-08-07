@@ -69,3 +69,9 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   (n=2) check: 4 event chips {∅,{H},{T},{H,T}}, cross the n+1 non-compound
   ones, ring the 1 survivor, landing "4−2−1=1 ✓". Clean PASS both
   languages, zero stalls.
+- **Sec 6** — concept: direct reuse of Ch1Sec20's VennShade recipe-icon
+  row — 4 columns (complement/union/intersection/difference), each a real
+  shaded mini-Venn built on its own beat, captioned with the English-word
+  translation ("A or B" = at least one, "A and B" = both, "A but not B").
+  Guardrail chip closes on the or→∪/and→∩ translation habit. Clean PASS
+  both languages, eye-checked — all 4 shadings confirmed correct.
