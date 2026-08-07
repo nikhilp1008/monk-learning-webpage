@@ -20,7 +20,7 @@
  */
 
 import React, { useId } from "react";
-import { Draw, Fade, T, INK, MUTED } from "./kit";
+import { Draw, Fade, T, INK, MUTED, arrowD } from "./kit";
 
 /* ------------------------------------------------------------------ */
 /* circle (path form — usable as a drawn outline AND inside clip/mask) */
@@ -730,6 +730,84 @@ export function PascalsTriangle({
           </Fade>
         );
       })}
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* ellipse (conic sections — circleD generalized to two radii)         */
+/* ------------------------------------------------------------------ */
+
+/** Full ellipse as a two-arc path (same construction as circleD, with
+ * independent x/y radii) — for the Ellipse chapter, or any non-circular
+ * conic outline. Parabola/hyperbola branches don't get a dedicated path
+ * generator: sample points off the real equation and thread them through
+ * curveD (already verified smooth in Chapter 2) — both are open curves
+ * with a simple parametrization, not worth a bespoke generator. */
+export function ellipseD(cx: number, cy: number, rx: number, ry: number): string {
+  return `M ${cx - rx} ${cy} A ${rx} ${ry} 0 1 0 ${cx + rx} ${cy} A ${rx} ${ry} 0 1 0 ${cx - rx} ${cy} Z`;
+}
+
+/* ------------------------------------------------------------------ */
+/* 3D coordinate axes (oblique/cavalier projection, NCERT convention)  */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Projects a 3D point onto the 2D board using the standard NCERT-style
+ * oblique projection: +Y runs right, +Z runs up, +X runs down-left toward
+ * the viewer (foreshortened, since it represents depth). This is the
+ * convention behind every "eight octants" textbook diagram — verified by
+ * rendering the axes + a labeled test point and checking it lands in the
+ * expected up/right/toward-viewer position for octant I (all positive).
+ */
+export function project3D(
+  x: number,
+  y: number,
+  z: number,
+  originX: number,
+  originY: number,
+  scale = 40
+): { x: number; y: number } {
+  const xForeshorten = 0.6;
+  const xDirX = -Math.cos(Math.PI / 6);
+  const xDirY = Math.sin(Math.PI / 6);
+  return {
+    x: originX + y * scale + x * scale * xForeshorten * xDirX,
+    y: originY - z * scale + x * scale * xForeshorten * xDirY,
+  };
+}
+
+/**
+ * The three axes (X toward viewer/down-left, Y right, Z up), each drawn as
+ * an arrow from the origin, in the oblique projection above — the default
+ * frame for octant/3D-point sections. Plot points with project3D and join
+ * them with lineD on top of this, same layering as CartesianAxes.
+ */
+export function ThreeDAxes({
+  on,
+  delay = 0,
+  originX,
+  originY,
+  scale = 40,
+  axisLen = 5.5,
+  stroke = INK,
+}: {
+  on: boolean;
+  delay?: number;
+  originX: number;
+  originY: number;
+  scale?: number;
+  axisLen?: number;
+  stroke?: string;
+}) {
+  const xEnd = project3D(axisLen, 0, 0, originX, originY, scale);
+  const yEnd = project3D(0, axisLen, 0, originX, originY, scale);
+  const zEnd = project3D(0, 0, axisLen, originX, originY, scale);
+  return (
+    <>
+      <Draw on={on} d={arrowD(originX, originY, xEnd.x, xEnd.y)} stroke={stroke} sw={2} delay={delay} />
+      <Draw on={on} d={arrowD(originX, originY, yEnd.x, yEnd.y)} stroke={stroke} sw={2} delay={delay} />
+      <Draw on={on} d={arrowD(originX, originY, zEnd.x, zEnd.y)} stroke={stroke} sw={2} delay={delay} />
     </>
   );
 }

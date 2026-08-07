@@ -296,6 +296,34 @@ screenshot). Rule of thumb:
   finding) while `ℓ` is fine in both.
 - **`\bar{x}` reappears in Chapter 9** (centroid mean) — same `<Overline>`
   primitive from Chapter 4, first real cross-chapter reuse of it.
+- **Chapter 10 (Conic Sections)** needed one new primitive: `ellipseD` (a
+  circleD generalized to independent x/y radii). Parabola and hyperbola
+  curves do NOT get a dedicated path generator — sample points off the real
+  equation (both have a simple parametrization) and thread them through
+  `curveD`, same as any smooth graph. The "one cone, four slices" intro
+  concept (sections 1-2) is a one-off illustration, not a repeated need —
+  hand-draw a simple stylized double-cone (two triangles meeting at a
+  point) with plain `lineD`, don't build a primitive for a single diagram.
+- **Chapter 11 (3D Geometry) needed a real new system**: `project3D` +
+  `<ThreeDAxes>`, the standard NCERT oblique/cavalier projection (+Y right,
+  +Z up, +X down-left toward the viewer, foreshortened since it represents
+  depth). This is the convention behind every textbook "eight octants"
+  diagram. Verified by rendering the axes plus labeled test points for
+  three octants and confirming they land in the geometrically correct
+  regions (octant I "+++" up-right, octant VII "−−−" its mirror down-left,
+  octant II "−++" further up-right since its negative x *reinforces* the
+  positive y/z pull rather than opposing it) — this was the highest-risk
+  primitive added so far (three sign/direction choices that could each
+  independently be backwards) and is worth extra scrutiny if any future
+  chapter's 3D content looks visually "off" in a way that's hard to
+  pinpoint. **Note Chapter 11's unusual structure**: it's a merge of what
+  were originally separate NCERT topics — a 2D-coordinate-geometry
+  "Applications" unit (secs 1-12, centroid/collinearity/locus, reuses plain
+  `CartesianAxes`/`lineD`, nothing 3D about it) complete with its own
+  formula-recap/cheat-sheet checkpoint (secs 13-14, mid-chapter, not at the
+  end), THEN the actual 3D content begins (secs 15-37). The chapter ends on
+  a plain `tips` section (37) with no closing recap/cheat-sheet at all —
+  don't expect the usual last-two-sections pattern for this one.
 - **Eighth glyph audit (Chapter 8, Sequences & Series) — subscript LETTERS,
   read this before writing a single formula, `aₙ` is this chapter's most
   common symbol.** Checked via `fontTools` cmap inspection of the actual
@@ -385,6 +413,20 @@ sanity-check stamps in worked examples — safer than the fallback `✓` glyph.
 triangle, one row per beat (`rows` is your own precomputed number arrays;
 this only handles centering/positioning, verified to form a correctly
 centered diamond).
+
+`ellipseD(cx, cy, rx, ry)` — a closed ellipse outline (circleD generalized
+to two radii), feed to `<Draw/>`. For parabola/hyperbola branches, sample
+points off the real equation and use `curveD` instead — no dedicated
+generator, both are simple open-curve parametrizations.
+
+`project3D(x, y, z, originX, originY, scale)` + `<ThreeDAxes originX
+originY scale axisLen />` — the standard NCERT oblique/cavalier 3D
+projection (+Y right, +Z up, +X down-left toward the viewer, foreshortened).
+Plot any 3D point with `project3D`, then connect/label with the usual 2D
+primitives (`lineD`, `T`) on top. Verified against three octants' expected
+positions before trusting it — this is the highest-risk primitive in the
+kit (three independent sign/direction choices), worth extra scrutiny if a
+future 3D scene looks subtly wrong.
 
 **Complex Numbers (Chapter 4) reuses the trig primitives almost entirely** —
 the Argand plane is `<CartesianAxes>` with "Re"/"Im" labels instead of
