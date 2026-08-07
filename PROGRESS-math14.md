@@ -89,3 +89,10 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   "2×6=12 → n(S)=12" chip. One caught bug: heading wasn't gated to the
   erase group, collided with the tree's caption — fixed by adding it to
   `aOn`. Clean PASS both languages after fix, eye-checked.
+- **Sec 9** — concept, closes the "concept" run of Subtopic 1 (worked
+  examples start at Sec10): B1/B2 procedure lines, quantifier-trap
+  guardrail with a real 2-coin roster (HH/HT/TH/TT) and three concrete
+  subsets for "at least one"/"exactly one"/"at most one H", divider, then
+  the relationship-testing checklist (mutually exclusive / exhaustive,
+  each with a drawn checkmark) and a final guardrail chip that partition
+  needs both tests together. Clean PASS both languages, eye-checked.
