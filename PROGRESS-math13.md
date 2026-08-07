@@ -433,3 +433,15 @@ misrecorded observation).
   discussion: the misrecorded 50 was 4 standard deviations out, so
   correcting it alone collapsed the SD from 5 to 2. PASS both languages,
   eye-checked.
+- **Sec 41** — worked_examples: the chapter's finale problem, fusing the
+  combined-variance and C.V. procedures. Group I (n=40, mean=60, SD=8) and
+  Group II (n=60, mean=50, SD=6) hand-verified end to end: combined mean
+  x̄=(40×60+60×50)/100=5400/100=54; group-mean deviations d₁=60-54=6,
+  d₂=50-54=-4; combined variance σ²=[40(64+36)+60(36+16)]/100=
+  [4000+3120]/100=71.2; boxed landing formula σ=√71.2≈8.44, C.V.=
+  8.44/54×100≈15.6%. Closing red-margin note echoes Sec27's lesson with
+  fresh numbers: 8.44 exceeds both group SDs (8 and 6) since the d² terms
+  inject genuine between-group spread that a naive average-the-SDs
+  approach would miss. Real `XBar` used once for the combined mean (beat
+  2), positioned as a fixed-x pair per the Sec23/40 lesson rather than
+  chained. PASS both languages, eye-checked.
