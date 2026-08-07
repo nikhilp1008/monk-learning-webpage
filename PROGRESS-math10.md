@@ -340,6 +340,48 @@ lineD segments. Every foci placement uses the correct c=√(a²+b²) relation
 (the hyperbola's, not the ellipse's a²−b²) computed live, never hand-placed.
 No new math-kit primitives needed.
 
+## Subtopic 6 — Chapter Wrap-up (secs 35-36)
+- **Sec 35** — formula_recap, the whole-chapter consolidation card: 2x2 grid
+  (Circle, Parabola, Ellipse, Hyperbola — each cross-checked against its own
+  earlier section: Sec10/17/24/31), boxed shared ellipse/hyperbola formulas
+  (HIGH), a red eccentricity ladder with real tick marks capping the
+  chapter's running e-theme from Sec2's dial, and the closing a²−b² vs
+  a²+b² sign contrast. Fixed one real bug before verifying: HTML entities
+  (`&lt;`/`&gt;`) used inside a `t()` string argument, which only work in
+  direct JSX children (React does not re-parse string children as markup) —
+  would have rendered literally as "&lt;" on screen. PASS both languages,
+  eye-checked, dense but zero overlaps.
+- **Sec 36** — cheat_sheet, THE CHAPTER FINALE: 2-column x 4-row grid of 8
+  boxed mnemonic cards (Classifier, Eccentricity Ladder [RED/HIGH], Circle,
+  Parabola, Ellipse, Hyperbola, Semi-Not-Full [RED/HIGH], Shortcuts), each
+  cross-checked one final time against its originating section (classifier
+  Sec3/4, ladder Sec2, circle Sec10, parabola Sec17, ellipse Sec24,
+  hyperbola Sec31, semi-not-full Sec20/27, shortcuts Sec11+Sec24/31's c=ae).
+  Clean PASS both languages on first render — no fixes needed, closing the
+  36-section chapter on a fully verified note.
+
+## CHAPTER COMPLETE — all 36/36 sections
+M11 Chapter 10 "Conic Sections" fully authored, registered, typechecked, and
+VERDICT-PASS-verified (both English and Hinglish) across all 36 sections.
+Every section eye-checked via FORCE_SHOTS before being logged done. Flagged
+sections (task brief: 9, 15, 22, 29 derivations; 16, 23, 30 orientation-
+reading) all received documented extra scrutiny beyond the standard pass —
+full hand-verified algebra chains for the four derivations, and rigorous
+per-shape/per-branch eye-checks (including pixel-crop zooms) for the three
+orientation sections. Every worked example's arithmetic was hand-verified
+against the source JSON before logging, not just trusted. New primitive
+`ellipseD` (added to math-kit.tsx ahead of this run) used throughout
+Subtopics 4-6; parabola and hyperbola curves used no dedicated generator,
+sampled off their real equations via `curveD` per the task brief throughout
+Subtopics 3 and 5, with hyperbola's two branches always independently
+sampled and never bridged. Two real bugs were caught and fixed pre-commit
+(Sec3's too-tight multi-span equation offsets; Sec35's HTML-entity-in-
+string-argument bug) plus one invalid prop (Sec5's `weight` on `Chip`) and
+one stray nonsensical ternary (Sec27) — all caught by `tsc --noEmit` or
+`verify-scene.mjs` before ever reaching a screenshot. No section required
+more than one fix-and-reverify cycle. Pushed to origin/premium-board-math10
+after every subtopic (6 pushes total, ~5-7 sections per push).
+
 ## Subtopic 2 (The Circle, secs 8-13) — COMPLETE
 All 6 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
 Every worked-example computation hand-verified against the source JSON before
