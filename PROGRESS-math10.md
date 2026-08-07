@@ -271,6 +271,75 @@ c=√(a²−b²), never hand-placed, so "foci merge"/"foci spread"/"same c" clai
 in the narration are demonstrably true of the drawn shapes. No new math-kit
 primitives needed — ellipseD (added ahead of this run) covered everything.
 
+## Subtopic 5 — The Hyperbola (secs 28-34)
+- **Sec 28** — concept, opens the subtopic: the chapter's first real
+  hyperbola. Both branches sampled and `curveD`-threaded INDEPENDENTLY via
+  cosh/sinh parametrization (per the task brief — never bridged into one
+  curve), asymptotes drawn as plain `lineD` segments through the centre.
+  Used the correct hyperbola relation c=√(a²+b²) (NOT a²−b², that's the
+  ellipse's) — verified c=92.2>a=70, foci genuinely outside the vertices.
+  Hand-verified the constant-difference property numerically at a sample
+  point P: PF2≈39.3, PF1≈179.3, difference≈140.0=2a=140 ✓. PASS both
+  languages, eye-checked — two branches correctly separate, asymptote X
+  pattern correct, foci-outside-vertices confirmed visually.
+- **Sec 29** — concept, FLAGGED derivation section (task brief: extra
+  scrutiny). Independently hand-verified the FULL algebra chain (not just
+  the JSON's two checkpoints), including confirming that the JSON's stated
+  intermediate x²/a²+y²/(a²−c²)=1 is algebraically identical to my own
+  derived x²/a²−y²/(c²−a²)=1 (since a²−c² ≡ −(c²−a²)) rather than assuming
+  they matched. Mirrors Sec22's ellipse-derivation structure closely per the
+  JSON's own framing ("same algebra... nothing new to learn"), changing only
+  what actually differs: c>a, the resulting sign flip, and b²=c²−a² instead
+  of b²=a²−c². PASS both languages, eye-checked.
+- **Sec 30** — concept, FLAGGED orientation-reading section (task brief:
+  extra scrutiny — this section's whole point is that the hyperbola's
+  orientation rule is the OPPOSITE of the ellipse's, sign not size, so a
+  wrong icon would teach the exact confusion it warns against). LEFT: fully-
+  labeled horizontal hyperbola (same a=70/b=60/c=92.2 as Sec28, for
+  continuity). RIGHT: a small vertical-opening hyperbola icon built via the
+  SAME cosh/sinh parametrization with x/y roles swapped (not a relabeled
+  copy). Zoomed screenshot to verify each tiny arc individually: top =
+  smile/∪ (vertex at bottom, curving away upward), bottom = frown/∩ (vertex
+  at top, curving away downward) — together correctly reading as two
+  branches opening up and down with a gap between them. PASS both languages.
+- **Sec 31** — formulas, the hyperbola's reference card: pure text/formula
+  "notes page" (single column, mirrors Sec24's ellipse-toolkit layout)
+  covering the standard equation, boxed core relations (c²=a²+b²,
+  e=c/a=√(1+b²/a²), HIGH), vertices/foci, axis lengths, asymptotes, latus
+  rectum/directrices, the vertical-transverse-axis form, and the red
+  "ellipse minus vs hyperbola plus" contrast guardrail. Clean PASS both
+  languages on first render, eye-checked.
+- **Sec 32** — worked_examples: Example 1 (x²/16−y²/9=1 → a=4,b=3 →
+  c=√(16+9)=5, e=1.25 → boxed vertices/foci/asymptotes, all hand-verified
+  ✓). Example 2 directly exercises Sec30's flagged guardrail in a concrete
+  numeric case: y²/9−x²/25=1 has b²=25>a²=9, styled AMBER (not RED) since
+  the source JSON marks this beat 'normal' emphasis — a reinforced insight
+  building on the earlier guardrail, not a fresh warning. Clean PASS both
+  languages, eye-checked.
+- **Sec 33** — worked_examples: Example 3 (vertices(±3,0)/foci(±5,0)→a=3,c=5
+  → b²=25−9=16 → boxed x²/9−y²/16=1) and Example 4, a two-relation solve —
+  e=2 & LR=12 → e²=1+b²/a²=4 → b²/a²=3 → substitute into 2b²/a=12 → 6a=12 →
+  a=2, b²=12 (hand-verified 6×2=12 ✓, 3×4=12 ✓) → boxed x²/4−y²/12=1. Clean
+  PASS both languages, eye-checked.
+- **Sec 34** — tips, closes Subtopic 5: 2x2 pitfall grid (sign-not-size
+  flagged HIGH, c²=a²+b² add-direction, e always>1/rectangular case,
+  sketch-asymptotes-first), then a genuine two-column ELLIPSE-vs-HYPERBOLA
+  comparison table (4 rows: sign, focal relation, eccentricity, open/closed)
+  with a vertical divider — a real side-by-side diagram rather than the
+  source's single run-on comparison sentence — closing on a red guardrail.
+  Clean PASS both languages on first render, eye-checked.
+
+## Subtopic 5 (The Hyperbola, secs 28-34) — COMPLETE
+All 7 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
+Two flagged sections (Sec29 derivation, Sec30 orientation) both got extra
+scrutiny — independent full-chain algebra verification and a zoomed
+per-branch shape check respectively. First chapter-wide use of two
+independent branches per hyperbola, always sampled and curveD'd separately
+per the task brief (never bridged into one curve), with asymptotes as plain
+lineD segments. Every foci placement uses the correct c=√(a²+b²) relation
+(the hyperbola's, not the ellipse's a²−b²) computed live, never hand-placed.
+No new math-kit primitives needed.
+
 ## Subtopic 2 (The Circle, secs 8-13) — COMPLETE
 All 6 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
 Every worked-example computation hand-verified against the source JSON before
