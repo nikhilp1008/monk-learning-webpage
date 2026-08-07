@@ -58,3 +58,14 @@ misrecorded observation).
   silent blank-board-contract violation the overlap/overflow checks can't
   catch since nothing else occupied that spot yet. Both fixed, PASS both
   languages, re-eye-checked.
+- **Sec 4** — concept: two-column layout. LEFT = weakness 1, a real hand-drawn
+  y=|x| V-graph (two `lineD` segments meeting at a vertex, not a canned icon)
+  with the corner ringed in red. RIGHT = weakness 2, a genuine skewed data set
+  {2,4,5,6,20} on a number line with BOTH mean (7.4) and median (5) anchors
+  marked and their own mean-deviation values labeled (MD about mean = 5.04,
+  about median = 4.0 — hand-verified arithmetic, confirms the theorem the
+  formula states). Labels for the two close-together anchors diverge outward
+  (median anchor's text right-anchored to its left, mean's left-anchored to
+  its right) to avoid collision instead of stacking rows. PASS both
+  languages on first render, eye-checked (arithmetic and corner ring both
+  confirmed correct).
