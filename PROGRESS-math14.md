@@ -147,3 +147,11 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   flagging the classical definition only holds for fair dice/well-shuffled
   cards (sets up Sec16's cracks). Simple fractions flattened inline per
   notation rules (no Frac primitive needed). Clean PASS both languages.
+- **Sec 16** — concept: 3 stacked "CRACK N —" rows (equally-likely
+  assumption, infinite outcomes, circularity), each with a concrete
+  counterexample — a hand-drawn unequal-size circle pair for the
+  drawing-pin (point-up small circle ≠ point-down big circle, NOT
+  equally likely), a trailing "1,2,3,4,5,…→∞" for the infinite-outcomes
+  crack, plain text for the circularity crack (equally likely = equally
+  probable). Ringed amber closer sets up next section's axiomatic fix.
+  Clean PASS both languages.
