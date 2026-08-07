@@ -311,3 +311,11 @@ misrecorded observation).
   different value. Red-margin note explicitly warns not to drop the tiny
   (-1/30)² term, matching the JSON's own emphasis. PASS both languages,
   eye-checked.
+- **Sec 29** — tips, closes Subtopic 2: vertical stack (not a 2×2 grid this
+  time) — red card for the highest-severity slip (confusing variance with
+  SD), amber cards for the other three (transformation-rule mishandling,
+  stopping the shortcut early, averaging two SDs), with the negative-
+  variance diagnostic σ²=(1/n)Σx_i²-x̄² (σ²<0 ⇒ swapped terms) boxed in
+  green between slip 3 and slip 4 since it's the direct fix for slip 3.
+  Closing red note: the two instant checks plus the C.V. reminder. PASS
+  both languages, eye-checked.
