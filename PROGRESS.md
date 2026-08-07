@@ -144,3 +144,25 @@ Pushed through Sec21 (2026-08-06).
 
 **SUBTOPIC 3 COMPLETE (secs 19-26).** Flagged derivation Sec21 (nCr + bijective symmetry proof)
 handled with full rigor. Pushed through Sec26 (2026-08-06). 26/45 sections done.
+
+- Sec 27 — Tool 1: total selections, starts Subtopic 4 (binary take-or-leave string, subsets=2ⁿ,
+  at-least-one=2ⁿ−1, distinct-vs-identical guardrail sets up stars & bars). PASS both langs.
+- Sec 28 — Tool 2 (stars & bars model, concrete r=5/n=3 fruit example ★★|★|★★, deliberately no
+  formula yet) + Tool 3 (grouping vs distribution, bundles-vs-children). PASS both langs. Caught
+  a real bug: `Draw fill={COLOR}` is NOT gated by `on` (only strokeDashoffset animates) — wrap
+  filled shapes in `<Fade>` instead.
+- Sec 29 — Selections/stars&bars/distribution formula reference board (8 formulas, 3 erase
+  groups: 2ⁿ+alike-mixed; (n+r-1)C(r) stars&bars + integer-solution counts; grouping n!/(m1!m2!..)
+  + kⁿ distinct-into-boxes + "give one to each first" guardrail). PASS both langs.
+
+Pushed through Sec29 (2026-08-07). 29/45 sections done.
+
+- Sec 30 [FLAGGED] — Full bijection proof of stars & bars (concrete r=6,n=4 example with the
+  empty-block subtlety ringed and verified; two-directional bijection; symmetry-connected
+  (n+r-1)C(n-1)=(n+r-1)C(r); twin reading chain; give-one algebra x1+..+xn=r -> y1+..+yn=r-n).
+  PASS both langs.
+- Sec 31 [FLAGGED] — Justify 2ⁿ (real chain of "2" boxes multiplying, FPC) and the grouping vs
+  distribution rule (fresh 6-books/Asha-Ravi example, distinct from Sec23's, both /2!-present and
+  /2!-crossed-out computations shown: 10 vs 20). PASS both langs.
+
+Both flagged derivations in Subtopic 4 complete. Pushed through Sec31 (2026-08-07). 31/45 done.
