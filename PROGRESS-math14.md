@@ -63,3 +63,9 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   (dashed red "?" slot); divider; Assumption 2 (ordered pairs) + coin→die
   arrow building "(H, 4)" + guardrail "(H,4) ≠ (4,H)". Clean PASS both
   languages, zero stalls, eye-checked.
+- **Sec 5** — concept: vocab (sample point ω, n(S)) + SIMPLE/COMPOUND
+  contrast chips, ringed HIGH-emphasis "total events = 2ⁿ" (power-set
+  callback to Ch1), "compound = 2ⁿ−n−1" formula, then a concrete coin
+  (n=2) check: 4 event chips {∅,{H},{T},{H,T}}, cross the n+1 non-compound
+  ones, ring the 1 survivor, landing "4−2−1=1 ✓". Clean PASS both
+  languages, zero stalls.
