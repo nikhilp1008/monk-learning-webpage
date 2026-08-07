@@ -268,3 +268,12 @@ misrecorded observation).
   general lesson: don't chain unrelated formula fragments through one
   cursor when a fixed anchor is cheap and safer. PASS both languages after
   the fix, re-eye-checked.
+- **Sec 24** — worked_examples: data 12,15,18,21,24 → x̄=(12+15+18+21+24)/5=
+  90/5=18 (Frac, compound numerator). Table builds x_i/(x_i-x̄)/(x_i-x̄)²
+  (deviations -6,-3,0,3,6 — total shown as 0, a free zero-sum check;
+  squares 36,9,0,9,36 → Σ=90). Two green boxes side by side land σ²=90/5=18
+  (units²) and σ=√18=3√2≈4.24 units. While authoring this one, a grep sweep
+  turned up the raw-x̄-glyph bug fixed above (Sec13/15/20) — this section
+  itself was written correctly from the start (XBar for the mean label,
+  `x_bar` fallback in table headers). PASS both languages, eye-checked
+  (every arithmetic value and the √18=3√2 simplification confirmed).
