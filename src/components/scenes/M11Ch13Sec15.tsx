@@ -59,7 +59,7 @@ export default function M11Ch13Sec15({ currentTime, reveals, language }: ScenePr
           {t("1. Drop the modulus →", "1. Modulus drop karo →")}
         </T>
         <T x={290} y={153} size={13} fill={RED} anchor="middle" weight={700}>
-          {t("Σ(x_i-x̄)=0 → wrongly \"M.D.=0\"", "Σ(x_i-x̄)=0 → galat \"M.D.=0\"")}
+          {t("Σ(x_i-x_bar)=0 → wrongly \"M.D.=0\"", "Σ(x_i-x_bar)=0 → galat \"M.D.=0\"")}
         </T>
       </Fade>
 

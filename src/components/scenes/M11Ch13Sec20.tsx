@@ -178,14 +178,14 @@ export default function M11Ch13Sec20({ currentTime, reveals, language }: ScenePr
       <Fade on={beat >= 4} delay={dl(4, 0)}>
         <T x={140} y={248} size={13} fill={MUTED} anchor="start">
           {t(
-            "(1/n)Σx_i = x̄, so the middle term = -2x̄·x̄ = -2x̄².",
-            "(1/n)Σx_i = x̄, toh middle term = -2x̄·x̄ = -2x̄²."
+            "(1/n)Σx_i = x_bar, so the middle term = -2·x_bar·x_bar = -2x_bar².",
+            "(1/n)Σx_i = x_bar, toh middle term = -2·x_bar·x_bar = -2x_bar²."
           )}
         </T>
         <T x={140} y={268} size={13} fill={MUTED} anchor="start">
           {t(
-            "And Σx̄² = n·x̄² (a constant, summed n times), so (1/n)(nx̄²) = x̄².",
-            "Aur Σx̄² = n·x̄² (constant, n baar summed), toh (1/n)(nx̄²) = x̄²."
+            "And Σx_bar² = n·x_bar² (a constant, summed n times), so (1/n)(n·x_bar²) = x_bar².",
+            "Aur Σx_bar² = n·x_bar² (constant, n baar summed), toh (1/n)(n·x_bar²) = x_bar²."
           )}
         </T>
       </Fade>
@@ -208,8 +208,8 @@ export default function M11Ch13Sec20({ currentTime, reveals, language }: ScenePr
       <Fade on={beat >= 6} delay={dl(6, 0.6)}>
         <T x={76} y={382} size={14} fill={RED} anchor="start" weight={700}>
           {t(
-            "The workhorse: avoids every individual deviation — ideal when x̄ isn't whole.",
-            "Workhorse: ek bhi individual deviation nahi — best jab x̄ whole number na ho."
+            "The workhorse: avoids every individual deviation — ideal when the mean isn't whole.",
+            "Workhorse: ek bhi individual deviation nahi — best jab mean whole number na ho."
           )}
         </T>
       </Fade>

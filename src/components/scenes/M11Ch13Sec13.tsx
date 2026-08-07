@@ -143,9 +143,11 @@ export default function M11Ch13Sec13({ currentTime, reveals, language }: ScenePr
       {/* beat 4 — land (boxed, high emphasis): M.D. */}
       <Draw on={beat >= 4} delay={dl(4, 0)} d={roundRectD(630, 308, 390, 44)} stroke={GREEN} sw={2.2} dur={0.8} />
       <Fade on={beat >= 4} delay={dl(4, 1)}>
-        <T x={825} y={335} size={17} fill={GREEN} anchor="middle" weight={800}>
-          {"M.D.(x̄) = 3600/40 = 90"}
-        </T>
+        <T x={735} y={335} size={17} fill={GREEN} anchor="start" weight={800}>{"M.D."}</T>
+      </Fade>
+      <XBar on={beat >= 4} delay={dl(4, 1)} x={775} y={335} size={17} fill={GREEN} weight={800} />
+      <Fade on={beat >= 4} delay={dl(4, 1)}>
+        <T x={789} y={335} size={17} fill={GREEN} anchor="start" weight={800}>{" = 3600/40 = 90"}</T>
       </Fade>
 
       {/* beat 5 — explain: the mid-points used */}
