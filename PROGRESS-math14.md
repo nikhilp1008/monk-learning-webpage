@@ -51,3 +51,10 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   dot at the path start (strokeLinecap round + dasharray-hide interaction)
   — invisible at normal scale, not verifier-flagged, same erase pattern as
   Ch6Sec1; not worth restructuring the erase mechanism for.
+- **Sec 3** — concept: two-column mirror layout, LEFT = impossible event
+  (empty circle "∅", die example "shows a 7" crossed red), RIGHT = sure
+  event (circle "S (all 6)", die example "1-6" checked green), boxed
+  formula "Impossible = ∅ / Sure = S" (split into two anchored T calls to
+  dodge the SVG double-space-collapse bug), guardrail closes on outcome
+  (1 dot) vs event (ringed dot-cluster). Clean PASS both languages, zero
+  stalls, eye-checked.
