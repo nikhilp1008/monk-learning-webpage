@@ -305,3 +305,15 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   (⁹C₄/¹²C₄) per convention, HIGH landing P(at least one)=41/55, closes
   contrasting the 3-term direct route against the 1-line complement
   trick. Clean PASS both languages.
+- **Sec 37** — worked_examples, FLAGGED, the last flagged section: real
+  numbers plugged into Sec31's 3-event formula (M/P/C subject
+  probabilities), HIGH ringed landing =0.8, guardrail complement
+  P(none)=0.2 — erased for the payoff: the same 3-circle Venn as Sec31,
+  now with all 7 regions carrying real computed values (M-only=0.25,
+  P-only=0.10, C-only=0.10, M∩P=0.15, M∩C=0.05, P∩C=0.10, triple=0.05).
+  Verified every region by hand (inclusion-exclusion on each pairwise/
+  single probability) before trusting the diagram — sum=0.80 matches
+  P(M∪P∪C) exactly. Clean PASS both languages, eye-checked very
+  carefully as the final flagged section — all 7 values confirmed
+  landing in their geometrically correct regions. **All FLAG sections
+  (13, 21, 22, 23, 27, 37) now complete.**
