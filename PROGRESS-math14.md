@@ -210,3 +210,10 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   (normalization ⇒ uniform p, summed over n(A) points) before trusting
   it. Clean PASS both languages, eye-checked. **Derivation trio (Sec21-23)
   and Subtopic 2's axiomatic core (Sec15-23) complete.**
+- **Sec 24** — worked_examples: 12-marble grid (row1=4 red actual RED,
+  row2=5 green actual GREEN, row3=3 blue — house palette has no blue, so
+  per the notation rule blue uses INK fill + white "B" letter to
+  disambiguate). Amber ring isolates red for P(red)=1/3, red crosses kill
+  the 3 blue for P(not blue)=3/4, green ring wraps rows1+2 for P(red or
+  green)=3/4, guardrail chip confirms both 3/4 answers describe the same
+  9 marbles. Clean PASS both languages, eye-checked.
