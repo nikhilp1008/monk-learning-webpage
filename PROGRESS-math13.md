@@ -126,3 +126,14 @@ misrecorded observation).
   crossed, not just described. All values hand-verified (f_i sum, f_i·x_i
   sum, each f_i|x_i-1.8| term, final 24/25=0.96). PASS both languages,
   eye-checked.
+- **Sec 11** — worked_examples: two side-by-side before/after mini-demos
+  using the same illustrative points (10,12,16, gaps 2,4) — LEFT shows the
+  shift (-7) landing on 3,5,9 with gaps still 2,4 (arrows converge, since
+  shift doesn't reorder), RIGHT shows the scale (×3) landing on 30,36,48
+  with gaps 6,12 (arrows diverge, visibly stretching) — same starting data,
+  two operations compared directly. Boxed green landings for both
+  Range_new=|3|×40=120 and M.D._new=|3|×12=36. Kept the demo deliberately
+  illustrative (not tied to unstated real bill amounts) since the section
+  only gives range/M.D. summary stats, not raw data — verified the
+  before/after gap arithmetic (2×3=6, 4×3=12) is correct regardless. PASS
+  both languages on first render, eye-checked.
