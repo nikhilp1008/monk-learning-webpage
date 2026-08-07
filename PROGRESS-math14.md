@@ -266,3 +266,14 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   narrow for inline text. Clean PASS both languages, eye-checked — the
   visual proportion lands the point without needing narration to explain
   it. **Subtopic 3 file/registry counts now match at 30.**
+- **Sec 31** — concept: two-event recap + HIGH 3-event inclusion-exclusion
+  formula + guardrail (alternating-sign pattern) + exactly-one callback,
+  all erased for the payoff: a real 3-circle Venn (A/B/C in the classic
+  triangular arrangement) with VennShade's clip-path composition shading
+  the TRUE triple intersection (include:[A,B,C]) — not hand-approximated,
+  the small center lens computed by the browser exactly where the three
+  circles genuinely overlap. Color-coded formula recap beside it (ink
+  singles, red pairs, green triple). No purple available in house
+  palette (unlike the source SVG's 3-color scheme) — used circle
+  outlines + one green shade instead. Clean PASS both languages,
+  eye-checked — center region confirmed correctly positioned.
