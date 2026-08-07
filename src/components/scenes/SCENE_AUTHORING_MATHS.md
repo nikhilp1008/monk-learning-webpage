@@ -472,6 +472,16 @@ is the intended shape of things — a topic's diagrams should mostly compose
 from what already exists; only add a new primitive (like `Overline` above)
 when something genuinely doesn't fit the existing vocabulary.
 
+**Probability (Chapter 14, the last chapter) needed zero new primitives** —
+a fitting capstone, since it pulls together three earlier chapters'
+primitives directly: event algebra and the addition-rule derivation are
+`VennShade` carve-ups exactly like Chapter 1 (`A∪B = A∪(B−A)`, disjoint
+pieces shaded and summed); multi-outcome sample spaces (e.g. two dice,
+36 ordered pairs) are the same hand-placed `T`/`Chip` grid Chapter 6 used
+for Cartesian products; combinatorial counting reuses the nCr conventions
+from Chapters 6-7. Confirms the pattern held for the whole subject, not
+just a lucky run of a few chapters.
+
 All obey the base engine rules: gate every element on its beat (`on={beat >= k}`),
 board blank at t=0 (title always-on only), stagger with `dl(k, d)`, `dim`
 superseded steps rather than deleting them.
