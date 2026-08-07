@@ -4251,3 +4251,5 @@ import M11Ch08Sec3 from "./M11Ch08Sec3";
 REGISTRY[`${M11CH08}:3`] = M11Ch08Sec3;
 import M11Ch08Sec4 from "./M11Ch08Sec4";
 REGISTRY[`${M11CH08}:4`] = M11Ch08Sec4;
+import M11Ch08Sec5 from "./M11Ch08Sec5";
+REGISTRY[`${M11CH08}:5`] = M11Ch08Sec5;
