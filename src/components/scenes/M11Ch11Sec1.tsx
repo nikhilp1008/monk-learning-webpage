@@ -3,45 +3,55 @@
 /**
  * M11 Ch11 · Section 1 — "The centroid: a triangle's balance point"
  * Canvas 1080×620 · safe x36–1044, y30–596. Spec: SCENE_AUTHORING.md + SCENE_AUTHORING_MATHS.md.
- * section_type: concept — opens subtopic 1 (Applications: Centroid, Collinearity & Locus, 2D,
- * pure CartesianAxes/lineD — nothing 3D here). Reference exemplar for Ch11.
+ * section_type: concept — opens subtopic 1 (Applications: Centroid, Collinearity & Locus).
  *
- * Illustrative triangle (not given in JSON — conceptual opener): A(1,5), B(-3,-1), C(5,-1) math
- * units, scale 38px/unit, origin(280,380). toScreen(x,y) = {x:280+38x, y:380-38y}.
- *   A(1,5)->(318,190)  B(-3,-1)->(166,418)  C(5,-1)->(470,418)
- *   Centroid G = avg = ((1-3+5)/3,(5-1-1)/3) = (1,1) -> (318,342)
- *   D = midpoint BC = (1,-1) -> (318,418)  [median AD is vertical, x=318 throughout]
- *   E = midpoint AC = (3,2) -> (394,304)   F = midpoint AB = (-1,2) -> (242,304)
- * Verified all 3 medians concur at G: AD trivially (x=318 const). BE: G-B=(152,-76),
- * E-B=(228,-114), ratio 152/228=76/114=0.667=2/3 ✓. CF: G-C=(-152,-76), F-C=(-228,-114),
- * ratio 0.667 ✓. So AG:GD = BG:GE = CG:GF = 2:1 as the section claims.
+ * CORRECTION (post-authoring): this subtopic is NOT 2D. board_content's own narration says
+ * "add the x coordinates and divide by three, and likewise for y and z" and "balancing in three
+ * dimensions is really three separate one-dimensional balancing acts, one per axis" — genuinely
+ * 3D from the start. Rebuilt using project3D/ThreeDAxes (same system as Sec15) instead of the
+ * original flat CartesianAxes version. Reference exemplar for the rest of subtopic 1 (secs 2-14).
+ *
+ * Illustrative triangle (not given in JSON — conceptual opener), chosen so G lands on a clean
+ * integer point: A(1,5,3), B(-3,-1,-3), C(5,-1,3). origin(460,380), scale=38, project3D formula
+ * (xForeshorten=0.6): screenX = 460 + 38y - 19.746x ; screenY = 380 - 38z + 11.4x.
+ *   A -> (630,277)  B -> (481,460)  C -> (323,323)
+ *   G = avg = ((1-3+5)/3,(5-1-1)/3,(3-3+3)/3) = (1,1,1) -> (478,353)
+ *   D = midpoint BC = (1,-1,0) -> (402,391)  [median AD]
+ *   E = midpoint AC = (3,2,3) -> (477,300)   [median BE]
+ *   F = midpoint AB = (-1,2,0) -> (556,369)  [median CF]
+ * Verified all 3 medians concur at G=(1,1,1): AD: A+2/3(D-A) = (1,5,3)+2/3(0,-6,-3) = (1,1,1) ✓.
+ * BE: B+2/3(E-B) = (-3,-1,-3)+2/3(6,3,6) = (1,1,1) ✓. CF: C+2/3(F-C) = (5,-1,3)+2/3(-6,3,-3)
+ * = (1,1,1) ✓. So AG:GD = BG:GE = CG:GF = 2:1, in genuine 3D, as the section claims.
+ * Light ThreeDAxes (axisLen=6, MUTED) for orientation only — full octant teaching is Sec15+, this
+ * is just a preview glimpse: X(342,448) down-left, Y(688,380) right, Z(460,152) up. axisLen kept
+ * short (Z tip at y152) so the shaft clears the intro text band (bottom ~y127) with margin.
  *
  * reveals_english = [0, 10.24, 24.23, 35.07, 46.25, 60.07, 73.47, 88.66] (8 values, beats 0-7).
  *
  * Beats:
  *  0(title, always-on) | "The centroid: where a triangle balances"
  *  1 | intro: cut a triangle from card, balance on a fingertip = centroid G
- *  2 | THE DIAGRAM: axes, triangle ABC, midpoint D, all 3 medians, G marked
+ *  2 | THE DIAGRAM: light 3D axes, triangle ABC in 3D, midpoint D, all 3 medians, G marked
  *  3 | ring G — "where the three medians meet"
  *  4 | inline "2" / "1" labels on median AD — the 2:1 ratio
- *  5 | right-column: coordinate formula G = ((x1+x2+x3)/3, (y1+y2+y3)/3)
- *  6 | checkmark + caption: each coordinate balances alone (independence)
+ *  5 | right-column: 3 separate per-axis formulas — x_G, y_G, z_G
+ *  6 | checkmark + caption: each axis's own equation (independence, made concrete by beat 5)
  *  7 | guardrail (red): G always exists, always unique, independent of side lengths
  *
  * Layout plan:
  *  b0 | title (26,red,script)              | T mid  | x540 y58
  *  b1 | 2-line intro (15,ink)               | T mid  | x540 y98 / y122
- *  b2 | axes c(280,380) 120..520/150..450   | CartesianAxes (no ticks)
- *  b2 | triangle sides AB,BC,CA (ink)       | Draw   | A(318,190) B(166,418) C(470,418)
- *  b2 | A/B/C dots + coord labels           | circle+T | above A, left of B, right of C
- *  b2 | D dot (muted) + label               | circle+T | (318,418) label (330,432)
+ *  b2 | light axes o(460,380) len7 (muted)  | ThreeDAxes
+ *  b2 | triangle sides AB,BC,CA (ink)       | Draw   | A(630,277) B(481,460) C(323,323)
+ *  b2 | A/B/C dots + letter labels          | circle+T | above A, below B, left of C
+ *  b2 | D dot (muted) + label               | circle+T | (402,391) label (412,425)
  *  b2 | medians AD,BE,CF (amber)            | Draw   | A->D, B->E, C->F
- *  b2 | G dot (amber_dark) + label          | circle+T | (318,342) label (332,348)
- *  b3 | ring around G+label                 | Draw   | ringD(331,340,30,22)
- *  b4 | "2" at AG midpoint, "1" at GD mid   | T start | (336,270) / (336,390)
- *  b5 | right col label + formula           | T start | (600,210) / (600,240)
- *  b6 | checkmark + independence caption    | Draw+T | (605,288) / (628,292)
- *  b7 | red bar + 2-line guardrail          | Draw+T | x600 y320-372 / (616,340) (616,362)
+ *  b2 | G dot (amber_dark) + label          | circle+T | (478,353) label (492,347)
+ *  b3 | ring around G+label                 | Draw   | ringD(485,350,28,24)
+ *  b4 | "2" at AG midpoint, "1" at GD mid   | T start | (568,308) / (412,362)
+ *  b5 | right col label + 3 per-axis eqns   | T start | x780 y190/220/248/276
+ *  b6 | checkmark + independence caption    | Draw+T | (785,320) / (808,324)
+ *  b7 | red bar + 2-line guardrail          | Draw+T | x780 y410-462 / (796,430) (796,452)
  */
 
 import React from "react";
@@ -60,22 +70,20 @@ import {
   RED,
   ringD,
 } from "./kit";
-import { CartesianAxes, lineD, checkD } from "./math-kit";
+import { project3D, ThreeDAxes, lineD, checkD } from "./math-kit";
 
-const OX = 280;
+const OX = 460;
 const OY = 380;
 const SCALE = 38;
-function toScreen(x: number, y: number) {
-  return { x: OX + x * SCALE, y: OY - y * SCALE };
-}
+const proj = (x: number, y: number, z: number) => project3D(x, y, z, OX, OY, SCALE);
 
-const A = toScreen(1, 5); // (318,190)
-const B = toScreen(-3, -1); // (166,418)
-const C = toScreen(5, -1); // (470,418)
-const G = toScreen(1, 1); // (318,342)
-const D = toScreen(1, -1); // (318,418) midpoint BC
-const E = toScreen(3, 2); // (394,304) midpoint AC
-const F = toScreen(-1, 2); // (242,304) midpoint AB
+const A = proj(1, 5, 3); // (630,277)
+const B = proj(-3, -1, -3); // (481,460)
+const C = proj(5, -1, 3); // (323,323)
+const G = proj(1, 1, 1); // (478,353)
+const D = proj(1, -1, 0); // (402,391) midpoint BC
+const E = proj(3, 2, 3); // (477,300) midpoint AC
+const F = proj(-1, 2, 0); // (556,369) midpoint AB
 
 export default function M11Ch11Sec1({ currentTime, reveals, language }: SceneProps) {
   const beat = useBeat(currentTime, reveals);
@@ -105,8 +113,8 @@ export default function M11Ch11Sec1({ currentTime, reveals, language }: ScenePro
         </T>
       </Fade>
 
-      {/* beat 2 — THE DIAGRAM: axes, triangle, medians, G */}
-      <CartesianAxes on={beat >= 2} delay={dl(2, 0)} originX={OX} originY={OY} xLeft={120} xRight={520} yTop={150} yBottom={450} showTicks={false} />
+      {/* beat 2 — THE DIAGRAM: light 3D axes, triangle, medians, G */}
+      <ThreeDAxes on={beat >= 2} delay={dl(2, 0)} originX={OX} originY={OY} scale={SCALE} axisLen={6} stroke={MUTED} />
       <Draw on={beat >= 2} delay={dl(2, 0.5)} d={lineD(A.x, A.y, B.x, B.y)} stroke={INK} sw={2} dur={0.4} />
       <Draw on={beat >= 2} delay={dl(2, 0.9)} d={lineD(B.x, B.y, C.x, C.y)} stroke={INK} sw={2} dur={0.4} />
       <Draw on={beat >= 2} delay={dl(2, 1.3)} d={lineD(C.x, C.y, A.x, A.y)} stroke={INK} sw={2} dur={0.4} />
@@ -114,25 +122,25 @@ export default function M11Ch11Sec1({ currentTime, reveals, language }: ScenePro
         <circle cx={A.x} cy={A.y} r={4} fill={INK} />
       </Fade>
       <Fade on={beat >= 2} delay={dl(2, 2.0)}>
-        <T x={318} y={172} size={13} fill={INK} anchor="middle" weight={700}>A(1,5)</T>
+        <T x={630} y={260} size={14} fill={INK} anchor="middle" weight={700}>A</T>
       </Fade>
       <Fade on={beat >= 2} delay={dl(2, 2.3)}>
         <circle cx={B.x} cy={B.y} r={4} fill={INK} />
       </Fade>
       <Fade on={beat >= 2} delay={dl(2, 2.5)}>
-        <T x={150} y={438} size={13} fill={INK} anchor="end" weight={700}>B(-3,-1)</T>
+        <T x={481} y={478} size={14} fill={INK} anchor="middle" weight={700}>B</T>
       </Fade>
       <Fade on={beat >= 2} delay={dl(2, 2.8)}>
         <circle cx={C.x} cy={C.y} r={4} fill={INK} />
       </Fade>
       <Fade on={beat >= 2} delay={dl(2, 3.0)}>
-        <T x={480} y={438} size={13} fill={INK} anchor="start" weight={700}>C(5,-1)</T>
+        <T x={305} y={328} size={14} fill={INK} anchor="end" weight={700}>C</T>
       </Fade>
       <Fade on={beat >= 2} delay={dl(2, 3.4)}>
         <circle cx={D.x} cy={D.y} r={3} fill={MUTED} />
       </Fade>
       <Fade on={beat >= 2} delay={dl(2, 3.6)}>
-        <T x={330} y={432} size={12} fill={MUTED} anchor="start">D</T>
+        <T x={412} y={425} size={12} fill={MUTED} anchor="start">D</T>
       </Fade>
       <Draw on={beat >= 2} delay={dl(2, 4.0)} d={lineD(A.x, A.y, D.x, D.y)} stroke={AMBER} sw={2} dur={0.5} />
       <Draw on={beat >= 2} delay={dl(2, 4.6)} d={lineD(B.x, B.y, E.x, E.y)} stroke={AMBER} sw={2} dur={0.5} />
@@ -141,50 +149,54 @@ export default function M11Ch11Sec1({ currentTime, reveals, language }: ScenePro
         <circle cx={G.x} cy={G.y} r={5} fill={AMBER_DARK} />
       </Fade>
       <Fade on={beat >= 2} delay={dl(2, 6.1)}>
-        <T x={332} y={348} size={13} fill={AMBER_DARK} anchor="start" weight={700}>G</T>
+        <T x={492} y={347} size={13} fill={AMBER_DARK} anchor="start" weight={700}>G</T>
       </Fade>
 
       {/* beat 3 — ring G: "where the three medians meet" */}
-      <Draw on={beat >= 3} delay={dl(3, 0)} d={ringD(331, 340, 30, 22)} stroke={AMBER_DARK} sw={2.2} dur={0.6} />
+      <Draw on={beat >= 3} delay={dl(3, 0)} d={ringD(485, 350, 28, 24)} stroke={AMBER_DARK} sw={2.2} dur={0.6} />
 
       {/* beat 4 — the 2:1 ratio, marked directly on median AD */}
       <Fade on={beat >= 4} delay={dl(4, 0)}>
-        <T x={336} y={270} size={13} fill={AMBER_DARK} anchor="start" weight={700}>2</T>
+        <T x={568} y={308} size={13} fill={AMBER_DARK} anchor="start" weight={700}>2</T>
       </Fade>
       <Fade on={beat >= 4} delay={dl(4, 0.35)}>
-        <T x={336} y={390} size={13} fill={AMBER_DARK} anchor="start" weight={700}>1</T>
+        <T x={412} y={362} size={13} fill={AMBER_DARK} anchor="start" weight={700}>1</T>
       </Fade>
 
-      {/* beat 5 — right column: the coordinate formula */}
+      {/* beat 5 — right column: three separate per-axis formulas (the "3 acts" made concrete) */}
       <Fade on={beat >= 5} delay={dl(5, 0)}>
-        <T x={600} y={210} size={14} fill={INK} anchor="start">
-          {t("In coordinates:", "Coordinates mein:")}
+        <T x={780} y={190} size={14} fill={INK} anchor="start">
+          {t("Coordinate by coordinate:", "Coordinate by coordinate:")}
         </T>
       </Fade>
       <Fade on={beat >= 5} delay={dl(5, 0.4)}>
-        <T x={600} y={240} size={17} fill={AMBER_DARK} anchor="start" weight={700}>
-          G = ( (x1+x2+x3)/3 , (y1+y2+y3)/3 )
-        </T>
+        <T x={780} y={220} size={15} fill={AMBER_DARK} anchor="start" weight={700}>x_G = (x1+x2+x3)/3</T>
+      </Fade>
+      <Fade on={beat >= 5} delay={dl(5, 0.8)}>
+        <T x={780} y={248} size={15} fill={AMBER_DARK} anchor="start" weight={700}>y_G = (y1+y2+y3)/3</T>
+      </Fade>
+      <Fade on={beat >= 5} delay={dl(5, 1.2)}>
+        <T x={780} y={276} size={15} fill={AMBER_DARK} anchor="start" weight={700}>z_G = (z1+z2+z3)/3</T>
       </Fade>
 
-      {/* beat 6 — independence: each coordinate balances alone */}
-      <Draw on={beat >= 6} delay={dl(6, 0)} d={checkD(605, 288, 14)} stroke={GREEN} sw={2.5} dur={0.4} />
+      {/* beat 6 — independence: each axis gets its own equation, no mixing */}
+      <Draw on={beat >= 6} delay={dl(6, 0)} d={checkD(785, 320, 14)} stroke={GREEN} sw={2.5} dur={0.4} />
       <Fade on={beat >= 6} delay={dl(6, 0.4)}>
-        <T x={628} y={292} size={14} fill={INK} anchor="start">
-          {t("Each coordinate balances alone — three 1D acts.", "Har coordinate akela balance hota hai — teen 1D acts.")}
+        <T x={808} y={324} size={14} fill={INK} anchor="start">
+          {t("Each axis, its own equation.", "Har axis, apni equation.")}
         </T>
       </Fade>
 
       {/* beat 7 — guardrail: always exists, always unique, side-length independent */}
-      <Draw on={beat >= 7} delay={dl(7, 0)} d="M 600 320 L 600 372" stroke={RED} sw={4} dur={0.4} />
+      <Draw on={beat >= 7} delay={dl(7, 0)} d="M 780 410 L 780 462" stroke={RED} sw={4} dur={0.4} />
       <Fade on={beat >= 7} delay={dl(7, 0.5)}>
-        <T x={616} y={340} size={14} fill={RED} anchor="start" weight={700}>
-          {t("G always exists, always unique —", "G hamesha exist karta hai, hamesha unique hai —")}
+        <T x={796} y={430} size={13} fill={RED} anchor="start" weight={700}>
+          {t("G always exists, always unique —", "G hamesha exist, hamesha unique —")}
         </T>
       </Fade>
       <Fade on={beat >= 7} delay={dl(7, 0.8)}>
-        <T x={616} y={362} size={14} fill={RED} anchor="start" weight={700}>
-          {t("depends only on vertices, not side lengths.", "sirf vertices pe depend hai, side lengths pe nahi.")}
+        <T x={796} y={452} size={13} fill={RED} anchor="start" weight={700}>
+          {t("independent of side lengths.", "side lengths pe depend nahi karta.")}
         </T>
       </Fade>
     </svg>
