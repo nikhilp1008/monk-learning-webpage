@@ -158,3 +158,14 @@ misrecorded observation).
   since the JSON doesn't flag this one as a speed trap the way Sec10 was —
   saves the dramatic staging for where the source actually calls for it.
   PASS both languages on first render, eye-checked.
+- **Sec 14** — worked_examples: combines Sec7's interpolation pattern with
+  Sec13's 4-column table pattern in one section. Text-only cumulative-
+  frequency statement (matches the source's own choice — it's plain text in
+  board_content, not a diagram, so no table built for that part), boxed
+  interpolated median M=20+((20-15)/10)×10=25 via `<Frac>`, then the real
+  table (mid-points 5,15,25,35,45; |x_i-25| and f_i|x_i-25| columns,
+  Σ=430), boxed M.D.(M)=430/40=10.75 marks. Notably needs no `XBar`/
+  `Overline` at all — the anchor here is the median M (a plain letter), not
+  the mean x̄, so this section's formulas skip the drawn-overline machinery
+  every worked example so far has needed. All five f_i|x_i-25| terms and
+  the interpolation hand-verified. PASS both languages, eye-checked.
