@@ -30,7 +30,14 @@ Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25,
 - **`arrowD`/`ringD`/`crossD` live in `kit.tsx`, NOT `math-kit.tsx`** (only `roundRectD`/`circleD`/etc. are math-kit) — tripped this up in Sec 6, tsc caught it immediately (unlike math7's Sec4 where only the dev bundler caught a similar mistake).
 
 ## Done
-(section-by-section log goes here as work proceeds)
+- **Sec 1** — sequence-as-function machine diagram (input n → rule aₙ → output), 4 fixed-position boxes, explicit-vs-recursive (Fibonacci) example pair, not-a-set guardrail. Reference exemplar. PASS, eye-checked.
+- **Sec 2** — series as running total: 4-bead cumulative-sum build (S₁..S₄), sigma formula (bounds spelled out prefix-style below the line, not stacked), cricket over-by-over running-score demo, index-need-not-start-at-1 guardrail. PASS.
+- **Sec 3** — `formulas`: 3 sigma linearity rules (split/constant-multiple/constant-sum), each label→formula build, live numeric demo Σ(2k-1) k=1..4=16 built expand→substitute→add→boxed. PASS.
+- **Sec 4** — worked example: a_n=(2n-3)/4 substituted for n=1..4, AP-insight number line (4 equally-spaced dots, +1/2 gap labels) foreshadowing Unit 2. PASS.
+- **Sec 5** — worked example: general term from a pattern (3,8,15,24,35,…) — first/second differences built live (arcs+labels), quadratic conclusion, factored a_n=n(n+2), 3 checkD verification stamps. PASS, eye-checked.
+- **Sec 6** — worked example: recursive a_n=3a_(n-1)+1, feed-forward chain diagram (5 boxes+arrows) filling as each term computes, red-margin neither-AP-nor-GP note (differences AND ratios both change).
+- **Sec 7** — worked example: Σ(3k²-2k+1) split via linearity — 3 color-coded pieces (amber/green/ink) carried consistently through Σ-form → standard-sum substitution → simplify → n(2n²+n+1)/2 boxed.
+- **Sec 8** — `tips` closer: 2×3 grid (4 red traps, 2 green pro-tips) + wide red closing banner (golden habit). PASS, eye-checked. **Subtopic 1 (Foundations, secs 1-8) complete.**
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3037 > /tmp/dev-math8.log 2>&1 &`, confirmed READY.
