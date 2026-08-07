@@ -412,3 +412,12 @@ misrecorded observation).
   chips — "Consistency → Vikram" (green) and "Chase a steep total → Arjun"
   (amber) — making the split verdict concrete rather than just asserted in
   prose. PASS both languages, eye-checked.
+- **Sec 39** — worked_examples: the Sec35 procedure applied to real numbers
+  — 5 obs, mean=6, variance=6.8, known {2,4,9}, find a,b. Full derivation
+  chain rendered and hand-verified end to end: a+b=5(6)-15=15; (a-6)²+
+  (b-6)²=5(6.8)-29=5; substituting p=a-6,q=b-6 gives p+q=3, and (p+q)²=9=
+  5+2pq ⇒ pq=2; boxed quadratic t²-3t+2=0 factors to t=1,2 ⇒ {a,b}={7,8}.
+  Closing sanity check independently re-summed the reconstructed set
+  {2,4,9,7,8}: sum=30 (mean=6 ✓) and Σ(x_i-6)²=16+4+9+1+4=34 (34/5=6.8 ✓) —
+  both match the given statistics exactly, confirming the answer. PASS both
+  languages, eye-checked.
