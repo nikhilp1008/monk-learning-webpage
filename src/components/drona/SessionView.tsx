@@ -93,6 +93,8 @@ export function SessionView({
     ? "Connecting..."
     : isTranscribing
     ? "Transcribing..."
+    : voiceState?.hasTurnError
+    ? "Something went wrong — retrying"
     : !hasAudioPlayed
     ? "Drona is preparing your lesson…"
     : isDronaSpeaking

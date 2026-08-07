@@ -19,6 +19,7 @@ export interface VoiceClientState {
   isListening: boolean;
   isSpeaking: boolean;
   hasPlayedFirstChunk: boolean;
+  hasTurnError: boolean;
   tutorStatusLabel: string;
   dronaCaption: string;
   sessionCap: string;
@@ -51,6 +52,7 @@ export class DronaVoiceClient {
   private isDronaSpeaking: boolean = false;
   private isPushToTalkActive: boolean = false;
   private hasPlayedFirstChunk: boolean = false;
+  private hasTurnError: boolean = false;
   private currentPlaybackPos: number = 0;
   private currentSpeechText: string = "";
   private DEBUG_AUDIO: boolean = false;
@@ -131,10 +133,12 @@ export class DronaVoiceClient {
         if (msg.events && msg.events.length > 0) {
           this.options.onBoardEvents?.(msg.events);
         }
-      } else if (type === "board") {
-        console.log(`[BOARD EVENT RECEIVED] length: ${(msg.board || "").length}`);
-        this.options.onBoardUpdate?.(msg.board || "");
+      } else if (type === "turn_error") {
+        console.warn("[TURN ERROR RECEIVED]", msg.message);
+        this.hasTurnError = true;
+        this.notifyState();
       } else if (type === "audio_chunk") {
+        this.hasTurnError = false;
         this.isDronaSpeaking = true;
         const speechText = msg.speech || "";
         const boardEvent = msg.board_event || msg.board;
@@ -449,6 +453,7 @@ export class DronaVoiceClient {
       isListening: isConn && this.isPushToTalkActive && !this.isDronaSpeaking && !this.isMuted && !this.isPaused,
       isSpeaking: this.isDronaSpeaking,
       hasPlayedFirstChunk: this.hasPlayedFirstChunk,
+      hasTurnError: this.hasTurnError || false,
       tutorStatusLabel: statusLabel,
       dronaCaption: this.currentSpeechText,
       sessionCap: this.currentSpeechText,
