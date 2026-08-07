@@ -195,3 +195,15 @@ Advanced Tools, secs 35-43) and the closing Formula Recap/Cheat Sheet (44-45) re
   recursion verified against D₃-D₅, trailing zeros=E₅(n!), rank of a word). PASS both langs.
 
 Pushed through Sec38 (2026-08-07). 38/45 sections done.
+
+- Sec 39 [FLAGGED] — Proofs I: collinear correction (fan of red chords over 4 collinear points
+  crossed out against the single real line), divisors (FPC independence), sum-of-numbers-formed
+  centerpiece (digit 3 ringed/fixed in units slot, (n-1)!=6 computed, generalized, repunit built
+  term by term). PASS both langs.
+- Sec 40 [FLAGGED] — Proofs II: rank of DUCK (worked table, brute-force verified rank=11 against
+  a full 24-permutation listing), derangements via inclusion-exclusion (VennShade motivates the
+  overlap issue, nCi·(n-i)!=n!/i! shown as explicit algebra), Legendre's "prime staircase" (p=3,
+  n=12, subset-of-previous-tier justification, verified sum=5). PASS both langs.
+
+Both flagged proof sections in Subtopic 5 complete. Pushed through Sec40 (2026-08-07).
+40/45 sections done.
