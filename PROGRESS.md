@@ -102,4 +102,15 @@ verify-scene.mjs to PASS and NOT commit. Main session then independently re-runs
   TOGETHER fill-gaps 3!×⁴P₂=72, FIXED-position rule, unmissable 48+72=120=5! consistency check,
   nPr=r!·nCr bridge preview). Numeric ⁴P₂ correctly super/subscripted. PASS both langs.
 
-Pushed through Sec15 (2026-08-06).
+- Sec 16 — Worked examples: committee posts (⁸P₃=8!/5!=336, falling-count slots) + SAMOSA trap
+  (6!/(2!·2!)=180, reflex 6!=720 crossed out beside the correct answer). PASS both langs.
+- Sec 17 — Worked examples: even-number parity (2×⁴P₃=48, units-first) + circular gap method
+  (5 boys circle=(5-1)!=24, exactly 5 gaps via pointOnCircle, 3 girls ⁵P₃=60, 24×60=1440).
+  PASS both langs.
+- Sec 18 — Pitfalls & pro-tips, closes Subtopic 2 (6-card recap: order-confusion swap-test,
+  alike-objects division missed, circular slips, repetition fork missed, restriction reflex
+  missed, "fix one object" pro-tip). PASS both langs.
+
+**SUBTOPIC 2 COMPLETE (secs 10-18).** Both flagged derivations (Sec13 nPr, Sec14 alike/circular)
+handled with full rigor — every algebraic step shown, math independently verified. Pushed through
+Sec18 (2026-08-06).
