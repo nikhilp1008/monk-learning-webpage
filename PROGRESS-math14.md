@@ -354,3 +354,9 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   name) instead of forcing the boxed-card grid onto content that isn't
   actually multi-line formulas. HIGH lines (axioms, [0,1] sanity check)
   bolder and red. Clean PASS both languages, eye-checked.
+- **Sec 43** — cheat_sheet (second of two), the LAST section of the
+  chapter and of Class 11 Mathematics: same red-margin-bar list as
+  Sec42, reframed as a decision cheat sheet (equally-likely YES/NO
+  branch, order-matters YES/NO branch, "at least one" trigger, 2/3-event
+  overlap rule, odds↔probability both directions, empirical→classical).
+  Clean PASS both languages, eye-checked. **ALL 43 SECTIONS COMPLETE.**
