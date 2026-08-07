@@ -103,6 +103,16 @@ Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25,
 - **Sec 62** — worked example: 1+3x+5x²+... (d=2 instead of d=1), same multiply-by-x method, last coefficient 2n-1. Math hand-verified. PASS.
 - **Sec 63** — worked example: Σn²/2^n via split n²=n(n-1)+n and two standard AGP relatives → 4+2=6. Title's superscript-n (2ⁿ) translated to plain caret. Math hand-verified. PASS.
 - **Sec 64** — `tips` closer: 5 middle items again, stacked list (3 neutral + 2 pro-tip) bookended by red banners. PASS. **Subtopic 6 (AGP, secs 56-64) complete — chapter is now 63/85 authored (64/85 positions covered, 1 blocked).**
+- **Sec 65** — opens subtopic 7 (Special Series): two demos — telescoping stack k³-(k-1)³=3k²-3k+1 (collapses to n³), and growing squares 1+8+27=36=6²=(1+2+3)² (verifies Σr³=(Σr)² for n=3). Aryabhata history note, boxed key identity. Reference exemplar. PASS, eye-checked.
+- **Sec 66** [flagged] — telescoping origin of Σk² (from k³ telescoping) and Σk³ (from k⁴ telescoping), two-column board, plus the method-of-differences insight with a worked check (3,7,13,21→t_n=n²+n+1). All hand-verified. PASS, eye-checked.
+- **Sec 67** — standard sums + master technique (`formulas`): Σr,Σ1,Σr²,Σr³,Σr⁴ (Σr⁴ sanity-checked at n=1,2), the linear-combination master method, expand-first guardrail, partial-range closer.
+- **Sec 68** — worked example: 2·4+4·6+6·8+... → t_r=4r²+4r → S_n=4n(n+1)(n+2)/3. Math verified.
+- **Sec 69** — worked example: method of differences on 3+7+13+21+31 → t_n=n²+n+1 → S_n=n(n²+3n+5)/3, verified S_3=23. Math verified.
+- **Sec 70** — worked example: nested triangular-number sum (JEE Main 2020) → (1/2)(Σk²+Σk) for k=1..20 → 1540. Math verified.
+- **Sec 71** — worked example: repunit series 5+55+555+... → t_r=5(10^r-1)/9 → S_n=(5/81)(10^(n+1)-9n-10). Math verified.
+- **Sec 72** — worked example: sum of squares of an AP's terms given S_n=cn² → a_n=c(2n-1) → Σa_n²=N(4N²-1)c²/3. Full expansion hand-verified.
+- **Sec 73** — worked example: cubes-over-odd-sums series → t_r=(r+1)²/4 → S_n=n(2n²+9n+13)/24. Full expansion hand-verified.
+- **Sec 74** — `tips` closer: 5 middle items, stacked list (3 neutral + 2 pro-tip) bookended by red banners. PASS, eye-checked. **Subtopic 7 (Special Series, secs 65-74) complete — chapter is now 73/85 authored (74/85 positions covered, 1 blocked).**
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3037 > /tmp/dev-math8.log 2>&1 &`, confirmed READY.
