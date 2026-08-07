@@ -155,3 +155,11 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   crack, plain text for the circularity crack (equally likely = equally
   probable). Ringed amber closer sets up next section's axiomatic fix.
   Clean PASS both languages.
+- **Sec 17** — concept: Euclid-axioms analogy + the "1 kg of sand" picture
+  compact on top (erased at beat7), then the payoff diagram gets the full
+  canvas — fair die (6 equal amber blobs, r=20, each "1/6") vs loaded die
+  (6 unequal blobs radius-scaled to weight 1/12,1/12,1/6,1/6,1/4,1/4,
+  which sums to 1), closing "both valid — no negative sand, total=1kg".
+  New motif: probability-as-weighted-blob-size, not used before in this
+  chapter. Clean PASS both languages, eye-checked — blob sizes correctly
+  track the stated fractions.
