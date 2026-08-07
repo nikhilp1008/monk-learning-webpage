@@ -92,3 +92,14 @@ verify-scene.mjs to PASS and NOT commit. Main session then independently re-runs
   formula with live SAMOSA check =180, circular (n-1)! vs flippable (n-1)!/2, bridge-to-
   combinations preview, sanity tip). All nPr/nCr correctly symbolic plain-text (variables, not
   numbers). PASS both langs.
+- Sec 13 [FLAGGED] — Derive nPr=n!/(n-r)! (box-fill setup, honest falling-product milestone,
+  "multiply/divide by missing tail (n-r)!" shown as real algebra, bracket merges numerator to n!,
+  genuine 2-line stacked fraction landing via T+Draw+T). PASS both langs.
+- Sec 14 [FLAGGED] — Derive alike-objects (n!/p!, tagged-rows-collapse visual) and circular
+  ((n-1)!, pointOnCircle X/Y/Z concrete n=3 check tied to general n!/n algebra) formulas, plus
+  flippable/2 guardrail. PASS both langs.
+- Sec 15 — Restricted permutations + bridge to combinations (TOGETHER glue-block 4!×2!=48, NOT
+  TOGETHER fill-gaps 3!×⁴P₂=72, FIXED-position rule, unmissable 48+72=120=5! consistency check,
+  nPr=r!·nCr bridge preview). Numeric ⁴P₂ correctly super/subscripted. PASS both langs.
+
+Pushed through Sec15 (2026-08-06).
