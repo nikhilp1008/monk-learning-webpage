@@ -75,6 +75,16 @@ Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25,
 - **Sec 35** — worked example: each term = sum of next two → r²+r-1=0 → r=(-1±√5)/2 → positive terms reject the negative root → r=(√5-1)/2 = 1/golden-ratio. Math hand-verified. PASS.
 - **Sec 36** — worked example: chessboard grains in closed form, a=1,r=2,n=64 → S_64=2⁶⁴-1≈1.8×10¹⁹ (closes the loop on Sec23's opener). Math hand-verified. PASS.
 - **Sec 37** — `tips` closer: red top/bottom banners (convergence check, recurring-decimals) bookending a 3-trap + 2-tip grid — applied Sec22's row-spacing fix from the start, no overlap this time. PASS, eye-checked. **Subtopic 3 (GP, secs 23-37 minus blocked 32) complete — chapter is now 36/85 authored (37/85 positions covered, 1 blocked).**
+- **Sec 38** — opens subtopic 4 (HP): two demos — HP-box --reciprocate--> AP-box flip diagram, and a round-trip home↔town speed example (40/60 km/h → HM=48, not AM=50). Math hand-verified. Reference exemplar for HP. PASS, eye-checked.
+- **Sec 39** [flagged] — HM formula + p-q reciprocal trick, two columns: LEFT a,H,b in HP → 1/H as AM → boxed H=2ab/(a+b); RIGHT reciprocal-AP setup → d=1/pq → a_n=pq/n, a_(p+q)=pq/(p+q), red-margin reciprocate-first closer. Math hand-verified. PASS, eye-checked. Also documented the verifier's `dur-1` "final frame" quirk (not a bug — check `b<N>.png` for the true last beat when the gap to audio-end is small).
+- **Sec 40** — HP formula set (`formulas`): 3×2 grid of 6 boxed formula cards (definition, nth term, HM two/n numbers, insert n HMs, mean chain), red-margin the-'2'-is-essential / no-sum-formula guardrail. PASS.
+- **Sec 41** — worked example: HM of 4,12 → H=6, A=8, G=4√3, AH=48=G² (identity confirmed exactly). Math hand-verified. PASS.
+- **Sec 42** — worked example: 10th HP term from a_3=1/7, a_7=1/15 → reciprocal AP d=2 → a'_1=3 → a'_10=21 → flip back → 1/21. Math hand-verified. PASS.
+- **Sec 43** — worked example: pth term=q, qth term=p (JEE staple) → A_0=d=1/pq → a_n=pq/n, a_(p+q)=pq/(p+q). Same result as Sec39's RIGHT column, worked standalone. Math hand-verified. PASS.
+- **Sec 44** — worked example: insert 4 HMs between 1 and 1/6 → reciprocal-AP chain 1,2,3,4,5,6 (interior highlighted, D=1) → HMs=1/2,1/3,1/4,1/5. Math hand-verified. PASS.
+- **Sec 45** — worked example: AM=9,HM=4 → AH=G²=36→G=6 → sum=18,product=36 → x²-18x+36=0 → x=9±3√5. Math hand-verified. PASS.
+- **Sec 46** — worked example (a genuine proof, not on the flagged list but hand-verified anyway): a,b,c in HP → 1/a,1/b,1/c in AP → scale by (a+b+c) → subtract 1 → (b+c)/a,(c+a)/b,(a+b)/c in AP → reciprocate → a/(b+c),b/(c+a),c/(a+b) in HP. QED. PASS.
+- **Sec 47** — `tips` closer: red top/bottom banners (signature trap, HM≤GM≤AM) bookending a 3-trap + 2-tip grid, correct spacing applied from the start. PASS. **Subtopic 4 (HP, secs 38-47) complete — chapter is now 46/85 authored (47/85 positions covered, 1 blocked).**
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3037 > /tmp/dev-math8.log 2>&1 &`, confirmed READY.
