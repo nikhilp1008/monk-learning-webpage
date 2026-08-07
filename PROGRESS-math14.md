@@ -294,3 +294,8 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   notation rule (fixed an initial draft that tried a dy-positioned pseudo
   subscript before catching it against the rule). Clean PASS both
   languages. **Subtopic 3's two toolkit cards (Sec33-34) complete.**
+- **Sec 35** — worked_examples: 5 men (M) + 4 women (W) as circle icons,
+  numeric nCr in real super/subscript digits (⁹C₃, ⁴C₂, ⁵C₁) per Ch6-7
+  convention, green rings mark the selected 1 man + 2 women exactly when
+  n(E) is computed, guardrail on combination-consistency. Clean PASS both
+  languages, eye-checked.
