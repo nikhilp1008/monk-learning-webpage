@@ -42,3 +42,12 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   S={1..6} builds card by card (n(S)=6 chip), coin roster H/T below
   (n(S)=2), closing tagline ringed. PASS both languages, eye-checked via
   FORCE_SHOTS — die roster and ring both confirmed correct.
+- **Sec 2** — concept: die roster reused from Sec1, cards 2/4/6 highlighted
+  green (event A's scoop), formula A={2,4,6}⊆S / B={5,6}⊆S, guardrail chip
+  "EVENT = SUBSET", roll-4-vs-roll-3 occurs/doesn't scenarios — all erased
+  once the final payoff lands (beat 7): a real VennShade Venn (S box, circle
+  A shaded, 2/4/6 inside, 1/3/5 outside). PASS both languages, eye-checked.
+  Noted: Draw-erased rounded-rect highlights can leave a sub-2px residual
+  dot at the path start (strokeLinecap round + dasharray-hide interaction)
+  — invisible at normal scale, not verifier-flagged, same erase pattern as
+  Ch6Sec1; not worth restructuring the erase mechanism for.
