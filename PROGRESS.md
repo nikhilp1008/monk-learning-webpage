@@ -166,3 +166,16 @@ Pushed through Sec29 (2026-08-07). 29/45 sections done.
   /2!-crossed-out computations shown: 10 vs 20). PASS both langs.
 
 Both flagged derivations in Subtopic 4 complete. Pushed through Sec31 (2026-08-07). 31/45 done.
+
+- Sec 32 — Worked examples: 5 distinct keychains (2⁵−1=31) + fruit trap (3 red+2 green identical
+  +1 orange distinct, 4×3×2−1=23, wrong "all distinct" reflex 2⁶−1=63 crossed out). PASS both langs.
+- Sec 33 — Worked examples: non-neg a+b+c+d=12 (¹⁵C₃=455) + lower-bound chocolates (4 smiley
+  children each visibly get 2, running tally 2/4/6/8, 15−8=7 remain → ¹⁰C₃=120). PASS both langs.
+- Sec 34 — Pitfalls & pro-tips, closes Subtopic 4 (distinct-vs-alike mixups, wrong repetition
+  model, "identical into distinct boxes" recognition cue, division-vs-distribution, forgetting
+  the empty case, pre-give-the-minimum pro-tip). PASS both langs.
+
+**SUBTOPIC 4 COMPLETE (secs 27-34).** Both flagged derivations (Sec30 stars&bars bijection proof,
+Sec31 justify 2ⁿ + grouping rule) handled with full rigor. Pushed through Sec34 (2026-08-07).
+34/45 sections done — Subtopics 1-4 all complete, only Subtopic 5 (Counting Applications &
+Advanced Tools, secs 35-43) and the closing Formula Recap/Cheat Sheet (44-45) remain.
