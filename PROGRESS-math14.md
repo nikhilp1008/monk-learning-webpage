@@ -217,3 +217,8 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   the 3 blue for P(not blue)=3/4, green ring wraps rows1+2 for P(red or
   green)=3/4, guardrail chip confirms both 3/4 answers describe the same
   9 marbles. Clean PASS both languages, eye-checked.
+- **Sec 25** — worked_examples, JSON-flagged "Speed Trap" (second MCQ,
+  reuses Sec11's cross-out+ring motif): 4 candidate probability
+  assignments, guardrail states the 2-axiom test (≥0 and sum=1), (ii)
+  crossed for a negative value, (i)/(iv) crossed for wrong sums, (iii)
+  ringed green with a boxed HIGH conclusion. Clean PASS both languages.
