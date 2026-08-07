@@ -350,3 +350,11 @@ misrecorded observation).
   came back clean, confirming every x̄ here already went through XBar.
   Independently re-verified both derivations by hand before trusting the
   render. PASS both languages, eye-checked.
+- **Sec 33** — concept: three fine-print caveats as stacked amber cards
+  (needs non-zero mean, needs ratio data with a true zero — heights/wages/
+  marks qualify but °C doesn't since its zero is arbitrary, "more
+  consistent" ≠ "better") rather than the red-heavy tips-section treatment,
+  since these are conditions to respect, not mistakes already made. Closing
+  green box: use C.V. for spread, then answer the actual question. Grep-
+  checked for the raw combining-mark glyph before typechecking — clean.
+  PASS both languages, eye-checked.
