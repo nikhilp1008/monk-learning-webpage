@@ -172,3 +172,31 @@ not optional even when VERDICT is PASS.
 - **Sec 26** — tips, closes Subtopic 3: Sec17's 2×2 red-trap-grid + green-pro-tip-card
   precedent, drawn x/y-intercept mnemonic icon. PASS both languages, eye-checked.
   **Subtopic 3 (secs 18-26) complete — chapter is 26/62 (42%) done.**
+- **Sec 27** — opens Subtopic 4: line 3x+4y-12=0, point P(5,5), foot Q(2.24,1.32) verified
+  algebraically and via the distance formula (d=4.6, matches exactly); genuinely perpendicular
+  normal-vector arrow (dot-product verified); mini parallel-lines and symmetric-form diagrams.
+  PASS both languages, eye-checked.
+- **Sec 28** [PROOF] — the chapter's one `\hat{n}` occurrence: rendered as a real drawn arrow
+  labeled plain "n" (no hat accent). Line 3x+4y-12=0, R(4,0), P(1,1): unit normal (0.6,0.8),
+  signed distance -1.0 verified three ways. Side-test guardrail closes it. PASS both
+  languages, eye-checked (including the beat carrying the guardrail specifically).
+- **Sec 29** [PROOF] — Part A: parallel lines 3x+4y-12=0/3x+4y-27=0, d=3 verified via both the
+  point-line formula and the |C1-C2| shortcut. Part B: symmetric-form P(2,2), θ=60°, r=4,
+  Q verified to land exactly r=4 away. Full erase-and-reuse pivot between the two parts. PASS
+  both languages, eye-checked.
+- **Sec 30** — distance-formulas toolkit, single-column precedent from Sec5/13/22, two
+  visually-distinct red-margin guardrails (mid-list vs closing). PASS both languages,
+  independently re-verified.
+- **Sec 31** — worked: Ex1 point-to-line d=1 with a real perpendicular drop to its verified
+  foot; Ex2 stages the normalized d=1.9 before crossing out the un-normalized 2.4 speed trap.
+  Two side-by-side panels, both parallel lines confirmed same on-screen slope. PASS both
+  languages, eye-checked (caught+fixed a label-on-stroke defect during its own eye-check).
+- **Sec 32** — worked: chains the two-point line equation (A(1,2)/B(4,6) → 4x-3y+2=0) into the
+  origin distance d=0.4, foot of perpendicular verified on the line. PASS both languages,
+  eye-checked.
+- **Sec 33** — Advanced worked: line through P(1,1) at θ=60° meets 2x+y=8 at Q;
+  r=10(2-√3)=20-10√3≈2.68 derived and verified, Q's coordinates confirmed on the target line.
+  PASS both languages, eye-checked.
+- **Sec 34** — tips, closes Subtopic 4: Sec17/26 card-grid precedent; the same-side/
+  opposite-side mnemonic's dot placement verified via a cross-product side test. PASS both
+  languages, eye-checked. **Subtopic 4 (secs 27-34) complete — chapter is 34/62 (55%) done.**
