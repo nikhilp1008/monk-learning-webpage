@@ -192,3 +192,13 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   Verified the algebra by hand (R1 cancels P(S), R2 chains Axiom 3 into
   Axiom 2, R3 chains R2 through Axiom 1) before trusting it — matches
   narration exactly. Clean PASS both languages, eye-checked carefully.
+- **Sec 22** — formulas, FLAGGED, THE central derivation the task brief
+  explicitly named: two-column layout, LEFT = the real VennShade
+  carve-up (green = ALL of A via include:[A], amber = B−A via
+  include:[B] exclude:[A] — genuinely disjoint regions, not
+  hand-approximated), a red ring later marks the lens A∩B, RIGHT = the
+  algebra chain (A∪B=A∪(B−A) → Axiom 3 → carve B → substitute), landing
+  the HIGH boxed P(A∪B)=P(A)+P(B)−P(A∩B), closing caption+arrow
+  explaining the double-count. Clean PASS both languages, eye-checked
+  very carefully given both the flag and the brief's explicit callout —
+  shading regions confirmed algebraically correct.
