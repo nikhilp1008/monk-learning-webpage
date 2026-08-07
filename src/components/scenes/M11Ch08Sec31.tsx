@@ -90,7 +90,7 @@ export default function M11Ch08Sec31({ currentTime, reveals, language }: ScenePr
       {/* beat 6 — closer */}
       <Fade on={beat >= 6} delay={dl(6, 0.2)}>
         <T x={540} y={335} size={15} fill={INK} anchor="middle">
-          {"r = -1/2, a = 3;  check: 27/(9/8) = 24 ✓"}
+          {"r = -1/2, a = 3;  check: 27/(9/8) = 24"}
         </T>
       </Fade>
     </svg>

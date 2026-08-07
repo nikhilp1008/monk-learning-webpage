@@ -77,7 +77,7 @@ export default function M11Ch08Sec80({ currentTime, reveals, language }: ScenePr
       {/* beat 5 — n=1 check */}
       <Fade on={beat >= 5} delay={dl(5, 0.2)}>
         <T x={540} y={228} size={15} fill={GREEN_DARK} anchor="middle">
-          {"n=1: 1·2·3 = 6 = (1·2·3·4)/4 ✓"}
+          {"n=1: 1·2·3 = 6 = (1·2·3·4)/4"}
         </T>
       </Fade>
 

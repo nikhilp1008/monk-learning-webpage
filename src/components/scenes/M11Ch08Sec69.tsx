@@ -56,7 +56,7 @@ export default function M11Ch08Sec69({ currentTime, reveals, language }: ScenePr
       {/* beat 2 — t_n, checked */}
       <Fade on={beat >= 2} delay={dl(2, 0.2)}>
         <T x={540} y={135} size={16} fill={INK} anchor="middle">
-          {"t_n = n²+n+1   (check: t_4 = 16+4+1 = 21 ✓)"}
+          {"t_n = n²+n+1   (check: t_4 = 16+4+1 = 21)"}
         </T>
       </Fade>
 
@@ -88,7 +88,7 @@ export default function M11Ch08Sec69({ currentTime, reveals, language }: ScenePr
           {t("verify: S_3 = 3+7+13 = 23", "verify: S_3 = 3+7+13 = 23")}
         </T>
         <T x={96} y={316} size={15} fill={RED} anchor="start">
-          {"= 3(9+9+5)/3 ✓"}
+          {"= 3(9+9+5)/3"}
         </T>
       </Fade>
     </svg>

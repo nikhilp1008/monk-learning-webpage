@@ -47,7 +47,7 @@ export default function M11Ch08Sec60({ currentTime, reveals, language }: ScenePr
       {/* beat 1 — a, d, r */}
       <Fade on={beat >= 1} delay={dl(1, 0.2)}>
         <T x={540} y={100} size={16} fill={INK} anchor="middle">
-          {"a = 1,   d = 1,   r = 1/3   (|r| < 1 ✓)"}
+          {"a = 1,   d = 1,   r = 1/3   (|r| < 1)"}
         </T>
       </Fade>
 

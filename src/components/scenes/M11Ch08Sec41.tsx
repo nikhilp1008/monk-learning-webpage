@@ -75,7 +75,7 @@ export default function M11Ch08Sec41({ currentTime, reveals, language }: ScenePr
       {/* beat 5 — G² checks */}
       <Fade on={beat >= 5} delay={dl(5, 0.2)}>
         <T x={540} y={245} size={18} fill={GREEN_DARK} anchor="middle" weight={700}>
-          {"G² = (4√3)² = 48 ✓"}
+          {"G² = (4√3)² = 48"}
         </T>
       </Fade>
 
