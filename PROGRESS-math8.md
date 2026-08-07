@@ -113,6 +113,15 @@ Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25,
 - **Sec 72** — worked example: sum of squares of an AP's terms given S_n=cn² → a_n=c(2n-1) → Σa_n²=N(4N²-1)c²/3. Full expansion hand-verified.
 - **Sec 73** — worked example: cubes-over-odd-sums series → t_r=(r+1)²/4 → S_n=n(2n²+9n+13)/24. Full expansion hand-verified.
 - **Sec 74** — `tips` closer: 5 middle items, stacked list (3 neutral + 2 pro-tip) bookended by red banners. PASS, eye-checked. **Subtopic 7 (Special Series, secs 65-74) complete — chapter is now 73/85 authored (74/85 positions covered, 1 blocked).**
+- **Sec 75** — opens subtopic 8 (Telescoping): chain of 5 boxes V_1..V_(n+1) with interior terms crossed out via `crossD` (per task brief — base kit, no new primitive), survivors highlighted green/red. Formula, relay analogy, classic 1/(r(r+1)) example, V_n-method/surd pointers. Reference exemplar. Fixed subscript-letter violations (Vₙ→V_n) before verify. PASS, eye-checked.
+- **Sec 76** [flagged] — five telescopers built from scratch: basic + product-of-3 partial fractions, V_n method (V_r-V_(r-1)=3r(r+1)), factorial telescoper, surd telescoper. All five hand-verified. PASS, eye-checked.
+- **Sec 77** — telescoping toolkit recap (`formulas`): principle + 5 standard results, including a full derivation check of n(n+3)/[4(n+1)(n+2)]. Constant-multiplier guardrail.
+- **Sec 78** — worked example: basic telescoper 1/(r(r+1)) → S_n=n/(n+1) → limit 1, so 1/(1·2)+1/(2·3)+...=1 exactly. Math verified.
+- **Sec 79** — worked example: step-of-3 partial-fraction telescoper 1/((3r-2)(3r+1)) → S_n=n/(3n+1). Math verified.
+- **Sec 80** — worked example: V_n method on Σr(r+1)(r+2) → n(n+1)(n+2)(n+3)/4, verified n=1. Math verified.
+- **Sec 81** — worked example: factorial telescoper r/(r+1)! → S_n=1-1/(n+1)! → S_∞=1. Math verified.
+- **Sec 82** — worked example: surd telescoper, rationalise 1/(√r+√(r+1)) → S_n=√(n+1)-1 → S_99=9. Math verified.
+- **Sec 83** — `tips` closer: 5 middle items, stacked list (3 neutral + 2 pro-tip) bookended by red banners. PASS, eye-checked. **Subtopic 8 (Telescoping, secs 75-83) complete — chapter is now 82/85 authored (83/85 positions covered, 1 blocked). Only the Recap/Cheat Sheet (84-85) remains.**
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3037 > /tmp/dev-math8.log 2>&1 &`, confirmed READY.
