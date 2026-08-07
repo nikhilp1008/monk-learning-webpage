@@ -391,3 +391,16 @@ misrecorded observation).
   typechecking — clean. PASS both languages, eye-checked. This closes out
   the two sections the task brief flagged for extra scrutiny (35, 36) —
   both independently re-derived and confirmed correct against the source.
+- **Sec 37** — formulas: 5-card recap grid for the whole subtopic (green for
+  the two high-emphasis cards — C.V.+reverse form, the two master totals —
+  amber for the three normal ones — correction formulas, missing-
+  observations identity+quadratic, combined mean/variance), red-margin
+  close with the three guardrails. First render had a real overlap: the
+  always-on title and the beat-0 heading, both shrunk to fit this denser
+  section, ended up close enough in y that their Kalam ascent/descent boxes
+  genuinely intersected — caught by the verifier, not eye-check, and fixed
+  by widening the title→heading gap and shifting every card down to match.
+  Reused the plain `x_bar`/`x_bar1`/`x_bar2` fallback for the combined-
+  variance card (too many mean symbols to spell out with real `XBar`s at
+  this density) while keeping true `XBar` for the two simpler cards. PASS
+  both languages after the fix, eye-checked.
