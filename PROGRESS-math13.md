@@ -107,3 +107,12 @@ misrecorded observation).
   amber boxes for the two normal-emphasis ones (coefficient of M.D.,
   grouped-median interpolation with `<Frac>`), red-margin close for the two
   memorise-this facts. PASS both languages on first render, eye-checked.
+- **Sec 9** — worked_examples, first worked example of the chapter: marks
+  32,28,36,24,30. Table builds x_i then |x_i-x̄| columns; the two extreme
+  rows (36, 24) ring for the range calc. Mean formula uses `<Frac>` for its
+  genuinely compound 5-term numerator (32+28+36+24+30)/5=150/5=30 — the
+  simple 16/5 result stays flattened inline per the notation rule. Boxed
+  green landing formula MD(x̄)=16/5=3.2 marks, closed with a red sanity-check
+  line and a `checkD` stamp (per the kit's own guidance to prefer a drawn
+  check over the fallback ✓ glyph). Hand-verified every number: deviations
+  2,2,6,6,0 sum to 16, range 12, 3.2 ≤ 12. PASS both languages, eye-checked.
