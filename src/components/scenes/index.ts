@@ -4541,4 +4541,6 @@ REGISTRY[`${M11CH09}:62`] = M11Ch09Sec62;
 
 const M11CH11 = "f516713d-c4ae-43ee-a7b3-91b68e709cbf";
 import M11Ch11Sec1 from "./M11Ch11Sec1";
+import M11Ch11Sec15 from "./M11Ch11Sec15";
 REGISTRY[`${M11CH11}:1`] = M11Ch11Sec1;
+REGISTRY[`${M11CH11}:15`] = M11Ch11Sec15;
