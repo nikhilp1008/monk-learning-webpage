@@ -358,3 +358,13 @@ misrecorded observation).
   green box: use C.V. for spread, then answer the actual question. Grep-
   checked for the raw combining-mark glyph before typechecking — clean.
   PASS both languages, eye-checked.
+- **Sec 34** — concept (procedure): 3-step comparison list (compute x̄ and σ
+  for each series → if means equal, compare σ directly → otherwise boxed
+  C.V.=σ/x̄×100 for each) plus a boxed reverse form x̄=(σ/C.V.)×100 for
+  algebraic-cousin problems. Grep sweep caught a real bug before it ever
+  rendered: the Hinglish translation for beat 1 redundantly re-typed a raw
+  "x̄" in the trailing string even though the `XBar` component immediately
+  before it already draws the bar — same class of mistake as Sec20/31, but
+  this time in a translation string rather than a fresh formula, showing
+  the check needs to run on every language branch of `t()`, not just the
+  English one. PASS both languages after the fix, eye-checked.
