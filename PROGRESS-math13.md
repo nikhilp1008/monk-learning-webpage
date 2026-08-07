@@ -44,3 +44,17 @@ misrecorded observation).
   numerator/denominator). Fixed one bad import (`ringD` is kit.tsx, not
   math-kit.tsx) caught by tsc. PASS both languages after the overlap fix,
   eye-checked via FORCE_SHOTS.
+- **Sec 3** — concept: mini symmetric ±5 diagram shows distance ignoring
+  direction, guardrail on dropping signs, then the zero-sum identity
+  `Σ(x_i - x̄) = 0` (first `<Overline>` use in this chapter, via a local
+  `XBar` helper mirroring Ch04's `ZBar`) landing into THE diagram — a number
+  line with 4 points and a chosen centre `a`, distance lines alternating
+  above/below axis (same convention as the source SVG) to avoid crossing.
+  Caught two real bugs via eye-check (not the automated verifier): (1) an
+  overlap between the "distance ignores direction" caption and its ±5 labels
+  from underestimating vertical clearance, fixed by re-spacing; (2) the
+  `XBar` helper's plain "x" glyph wasn't wrapped in `<Fade on=.../>` like the
+  reference `ZBar`, so it rendered on EVERY beat regardless of gating — a
+  silent blank-board-contract violation the overlap/overflow checks can't
+  catch since nothing else occupied that spot yet. Both fixed, PASS both
+  languages, re-eye-checked.
