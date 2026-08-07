@@ -301,3 +301,13 @@ misrecorded observation).
   sum 3840/50=76.8; √76.8≈8.76). Closing note lands the actual insight —
   combined SD exceeds BOTH individual SDs, not some average of them. PASS
   both languages, eye-checked.
+- **Sec 28** — worked_examples: 5-column table (x_i,f_i,d_i,f_i·d_i,f_i·d_i²)
+  for the step-deviation method — mid-points 10,30,50,70,90, A=50, h=20 →
+  codes -2..2, Σf_id_i=-1, Σf_id_i²=41 (both hand-verified). Boxed formula
+  uses two side-by-side `<Frac>`s inside brackets (41/30 and (-1/30)²,
+  matching Sec22's pattern) → σ²=400[1.36667-0.00111]=546.22≈546.2 → σ=
+  √546.2≈23.37, which the source rounds to 23.4 — kept that rounding to
+  match board_content exactly rather than introducing a second correct-but-
+  different value. Red-margin note explicitly warns not to drop the tiny
+  (-1/30)² term, matching the JSON's own emphasis. PASS both languages,
+  eye-checked.
