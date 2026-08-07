@@ -291,3 +291,13 @@ misrecorded observation).
   =3072 expanded and hand-verified. Boxed σ²=3072/20-(11.6)²=153.6-134.56=
   19.04 (11.6²=134.56 confirmed by hand) and σ=√19.04≈4.36. PASS both
   languages, eye-checked.
+- **Sec 27** — worked_examples (JEE Advanced): Section A (n=30,mean=60,σ=8)
+  and Section B (n=20,mean=70,σ=6) combined. Real number line (linear
+  scale) plots both group means plus the combined mean (64) as a dashed
+  red line between them, with d1=-4 and d2=6 drawn as green underline spans
+  whose relative lengths are genuinely proportional (d2's span visibly
+  longer than d1's, matching 6>4). Boxed σ²=[30(64+16)+20(72)]/50=76.8 and
+  σ=√76.8≈8.76 (hand-verified: 8²+4²=80, 6²+6²=72, 30×80=2400, 20×72=1440,
+  sum 3840/50=76.8; √76.8≈8.76). Closing note lands the actual insight —
+  combined SD exceeds BOTH individual SDs, not some average of them. PASS
+  both languages, eye-checked.
