@@ -282,3 +282,7 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   guardrail on the m+n (not just n) denominator trap, then empirical
   probability with a concrete 37/50 example and a law-of-large-numbers
   guardrail. Clean PASS both languages.
+- **Sec 33** — formulas, mid-chapter recap card (same stacked-row pattern
+  as Sec20): 6 rows (counting P(E), ringed HIGH at-least-one, complement,
+  2-event and 3-event addition, exactly-one), closing guardrail against
+  mixing raw counts with probabilities. Clean PASS both languages.
