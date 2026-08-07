@@ -368,3 +368,13 @@ misrecorded observation).
   this time in a translation string rather than a fresh formula, showing
   the check needs to run on every language branch of `t()`, not just the
   English one. PASS both languages after the fix, eye-checked.
+- **Sec 35** — concept (procedure), FLAGGED for extra scrutiny (reverse
+  problem — this is the general method only; the worked numeric example
+  lands in Sec 39). Independently re-derived the algebra before trusting
+  the render: p+q known from Σx_i=nx̄, p²+q² known from Σ(x_i-x̄)²=nσ²,
+  then (p+q)²=p²+q²+2pq ⇒ pq=[(p+q)²-(p²+q²)]/2 (valid algebra), landing
+  p,q as roots of the standard sum/product quadratic t²-(p+q)t+pq=0 — all
+  confirmed correct against the source. 3-step procedure list + boxed
+  identity + red-margin note stating the final quadratic. Grep-checked for
+  the raw combining-mark glyph before typechecking — clean. PASS both
+  languages, eye-checked.
