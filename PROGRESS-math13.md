@@ -459,3 +459,23 @@ misrecorded observation).
   formulas, used the plain `x_bar` text fallback instead of true `XBar`
   rather than risk misaligning two manually-cursored inline bars. PASS
   both languages, eye-checked.
+
+## Subtopic 4
+- **Sec 43** — formula_recap: the whole-chapter toolkit on one board, all
+  three subtopics restated (not re-derived) as a six-card grid — closely
+  mirrors Sec37's dense-recap card pattern but scaled up to cover the
+  full chapter. Cards, colored by board_content's own emphasis (green =
+  high, amber = normal): range & coefficient of range; mean deviation
+  about a (least at the median); the variance shortcut and frequency
+  form with σ=+√σ²; grouped/coded variance with step deviation d_i; C.V.
+  plus the a/b transformation scaling rules; and the densest card —
+  combined variance, Var(1..n)=(n²-1)/12, and the two reverse-problem
+  master totals — all three packed into one row at size 10, the smallest
+  font used anywhere in the chapter. Closes on the four permanent
+  guardrails in red (M.D.≤Range, σ²≥0, σ≤Range, C.V. dimensionless), an
+  exact restatement of board_content's own closing note. Used the plain
+  `x_bar` text fallback uniformly across every card rather than mixing
+  real `XBar` in for the 1-2-occurrence cards, since consistency across
+  six back-to-back dense rows mattered more than exactness on any one of
+  them. PASS both languages, eye-checked — all six cards render legibly
+  with zero overlap despite the density.
