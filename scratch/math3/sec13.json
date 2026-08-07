@@ -1,0 +1,160 @@
+{
+  "id": "51eaf505-427f-4aae-b930-855ca2638002",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 13,
+  "section_type": "worked_examples",
+  "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+  "title": "Range as the engine — a sin x + b cos x, and impossibility",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 5 — range of 5 sin x − 12 cos x + 3",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "R = \\sqrt{5^2 + 12^2} = 13",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "So $5\\sin x - 12\\cos x \\in [-13,13]$; adding $3$ shifts the whole interval.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "f(x)\\in[-13+3,\\ 13+3] = [-10,\\ 16]",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Example 6 — when no solution can exist",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "$\\sin x = \\frac{a^2+b^2}{2ab}$. By AM\\u2013GM this is $\\ge 1$, but $\\sin x \\le 1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\sin x = 1 \\Rightarrow x=\\tfrac{\\pi}{2}+2n\\pi,\\quad \\text{only if } |a|=|b|",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "The bounded range turns a trig equation into an inequality constraint.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_13.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_13.mp3",
+  "duration_sec_english": 83.86,
+  "duration_sec_hinglish": 79.61,
+  "board_reveal_at_english": [
+    0.0,
+    4.86,
+    15.7,
+    24.75,
+    36.61,
+    43.52,
+    58.54,
+    73.47
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    3.93,
+    14.76,
+    22.44,
+    33.88,
+    40.19,
+    55.47,
+    69.89
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Example five shows the range fact doing real work."
+    },
+    {
+      "seq": 2,
+      "text": "For five sine x minus twelve cosine x, the amplitude R is the square root of five squared plus twelve squared, which is thirteen."
+    },
+    {
+      "seq": 3,
+      "text": "So that combination ranges from minus thirteen to thirteen. The plus three at the end just shifts the whole window up."
+    },
+    {
+      "seq": 4,
+      "text": "So f of x runs from minus thirteen plus three to thirteen plus three, that is minus ten to sixteen. No calculus needed, just the amplitude."
+    },
+    {
+      "seq": 5,
+      "text": "Example six is the advanced version, where the range fact rules out solutions entirely."
+    },
+    {
+      "seq": 6,
+      "text": "We're asked to solve sine x equals a squared plus b squared over two a b. By the arithmetic-mean geometric-mean inequality, that right side is at least one. But sine x can never exceed one."
+    },
+    {
+      "seq": 7,
+      "text": "So a solution exists only when the right side is exactly one, which forces a equal to b in magnitude, and then sine x equals one, giving x equal to pi over two plus two n pi."
+    },
+    {
+      "seq": 8,
+      "text": "That's the deep move: the fact that the size of sine is at most one converts a trig equation into a pure inequality constraint on a and b."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Example पाँच range fact को असली काम करते दिखाता है."
+    },
+    {
+      "seq": 2,
+      "text": "Five sine x minus twelve cosine x के लिए, amplitude R है square root of five squared plus twelve squared, यानी thirteen."
+    },
+    {
+      "seq": 3,
+      "text": "So ये combination minus thirteen से thirteen तक range करता है. आख़िर का plus three पूरी window ऊपर shift कर देता है."
+    },
+    {
+      "seq": 4,
+      "text": "So f of x चलता है minus thirteen plus three से thirteen plus three तक, यानी minus ten to sixteen. Calculus नहीं चाहिए, बस amplitude."
+    },
+    {
+      "seq": 5,
+      "text": "Example छह advanced version है, जहाँ range fact solutions को पूरी तरह ख़ारिज कर देता है."
+    },
+    {
+      "seq": 6,
+      "text": "पूछा है solve कीजिए sine x equals a squared plus b squared over two a b. A M G M inequality से, वो right side कम से कम one है. पर sine x कभी one से ज़्यादा नहीं हो सकता."
+    },
+    {
+      "seq": 7,
+      "text": "So solution तभी है जब right side exactly one हो, जो a को b के बराबर magnitude में force करता है, और तब sine x equals one, यानी x equals pi over two plus two n pi."
+    },
+    {
+      "seq": 8,
+      "text": "यही deep move है: sine का size ज़्यादा से ज़्यादा one होना एक trig equation को a और b पर pure inequality constraint बना देता है."
+    }
+  ]
+}

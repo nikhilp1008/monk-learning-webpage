@@ -1,0 +1,177 @@
+{
+  "id": "db0fbee9-2f92-4ed8-998d-fd6961d2f65c",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 18,
+  "section_type": "worked_examples",
+  "subtopic": "03 · Standard Values, Even-Odd Nature and Allied Angles",
+  "title": "Long allied-angle products that collapse",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 5 — simplify to a constant",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$\\sin(90^\\circ{+}\\theta)=\\cos\\theta$; $\\cos(180^\\circ{-}\\theta)=-\\cos\\theta$; $\\cos(90^\\circ{-}\\theta)=\\sin\\theta$; $\\sin(180^\\circ{+}\\theta)=-\\sin\\theta$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "(\\cos\\theta)(-\\cos\\theta)+(\\sin\\theta)(-\\sin\\theta) = -(\\cos^2\\theta+\\sin^2\\theta) = -1",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Example 6 — prove cos(270°+θ) = sinθ",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "$270^\\circ+\\theta$ is in Quadrant IV (cosine $+$); $n=3$ is odd, so $\\cos\\to\\sin$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\cos(270^\\circ+\\theta) = +\\sin\\theta",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Example 7 — a long product (JEE Advanced)",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "type": "formula",
+      "latex": "\\frac{\\tan^2\\theta}{-\\tan^2\\theta} = -1",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 9,
+      "text": "Long allied-angle products almost always collapse to ±1. If yours doesn't, recheck a sign.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_18.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_18.mp3",
+  "duration_sec_english": 86.81,
+  "duration_sec_hinglish": 84.5,
+  "board_reveal_at_english": [
+    0.0,
+    5.72,
+    20.57,
+    34.99,
+    41.56,
+    52.31,
+    56.58,
+    63.32,
+    75.43
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.63,
+    18.86,
+    32.17,
+    39.59,
+    50.94,
+    54.78,
+    60.59,
+    70.91
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Example five simplifies a four-term expression down to a single constant."
+    },
+    {
+      "seq": 2,
+      "text": "Reduce each piece: sine of ninety plus theta is cosine theta; cosine of one eighty minus theta is minus cosine theta; cosine of ninety minus theta is sine theta; sine of one eighty plus theta is minus sine theta."
+    },
+    {
+      "seq": 3,
+      "text": "Multiply and add: cosine times minus cosine, plus sine times minus sine, gives minus cosine squared minus sine squared, which is minus one. The whole expression collapses to a constant."
+    },
+    {
+      "seq": 4,
+      "text": "Example six is a short proof: show cosine of two seventy plus theta equals sine theta."
+    },
+    {
+      "seq": 5,
+      "text": "Two seventy plus theta sits in Quadrant four for small theta, where cosine is positive, and n equals three is odd so cosine becomes sine."
+    },
+    {
+      "seq": 6,
+      "text": "So the result is plus sine theta. Done."
+    },
+    {
+      "seq": 7,
+      "text": "Example seven is an intimidating-looking product and quotient of six reduced terms."
+    },
+    {
+      "seq": 8,
+      "text": "Reduce each term: the numerator becomes tangent squared theta while the denominator becomes minus tangent squared theta, so their ratio is simply minus one."
+    },
+    {
+      "seq": 9,
+      "text": "<excited>The lesson is worth gold:</excited> long allied-angle products almost always collapse to plus or minus one. If yours refuses to, you've dropped a sign — go back and find it."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Example पाँच एक four-term expression को एक single constant में simplify करता है."
+    },
+    {
+      "seq": 2,
+      "text": "हर piece reduce कीजिए: sine of ninety plus theta है cosine theta; cosine of one eighty minus theta minus cosine theta; cosine of ninety minus theta sine theta; sine of one eighty plus theta minus sine theta."
+    },
+    {
+      "seq": 3,
+      "text": "Multiply और add कीजिए: cosine times minus cosine, plus sine times minus sine, देता minus cosine squared minus sine squared, यानी minus one. पूरी expression एक constant में collapse हो जाती है."
+    },
+    {
+      "seq": 4,
+      "text": "Example छह एक short proof है: दिखाइए cosine of two seventy plus theta equals sine theta."
+    },
+    {
+      "seq": 5,
+      "text": "Two seventy plus theta छोटे theta के लिए Quadrant four में बैठता है, जहाँ cosine positive, और n equals three odd so cosine बनता है sine."
+    },
+    {
+      "seq": 6,
+      "text": "So result है plus sine theta. हो गया."
+    },
+    {
+      "seq": 7,
+      "text": "Example सात छह reduced terms का डरावना दिखने वाला product और quotient है."
+    },
+    {
+      "seq": 8,
+      "text": "हर term reduce कीजिए: numerator बनता है tangent squared theta जबकि denominator minus tangent squared theta, so इनका ratio बस minus one."
+    },
+    {
+      "seq": 9,
+      "text": "<excited>ये सबक सोने के बराबर है:</excited> long allied-angle products लगभग हमेशा plus या minus one में collapse होते हैं. अगर नहीं हो रहा, तो एक sign छूट गया, वापस जाकर ढूँढिए."
+    }
+  ]
+}

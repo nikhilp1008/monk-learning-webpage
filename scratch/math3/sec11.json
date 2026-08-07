@@ -1,0 +1,144 @@
+{
+  "id": "0f73766a-3b8f-42cb-ab0a-b810900510da",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 11,
+  "section_type": "worked_examples",
+  "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+  "title": "The signature board problem — find the other five",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 1 — sin x = 3/5, x in Quadrant II",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Magnitude first: $\\cos^2 x = 1-\\tfrac{9}{25}=\\tfrac{16}{25}$, so $\\cos x=\\pm\\tfrac{4}{5}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "The sign decision is the whole question. In Quadrant II, cosine is negative.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\cos x=-\\tfrac{4}{5},\\ \\tan x=-\\tfrac{3}{4},\\ \\cot x=-\\tfrac{4}{3},\\ \\sec x=-\\tfrac{5}{4},\\ \\csc x=\\tfrac{5}{3}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Example 2 — quadrantal evaluation",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\sin\\tfrac{3\\pi}{2}+\\cos\\pi-\\tan\\pi = -1+(-1)-0 = -2",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Writing cos x = +4/5 here is the most common board mistake.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_11.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_11.mp3",
+  "duration_sec_english": 77.83,
+  "duration_sec_hinglish": 75.62,
+  "board_reveal_at_english": [
+    0.0,
+    5.55,
+    22.95,
+    33.11,
+    48.9,
+    52.65,
+    67.41
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    4.95,
+    21.76,
+    30.12,
+    48.21,
+    52.22,
+    64.43
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "This is the problem that appears on nearly every board paper, so do it cleanly."
+    },
+    {
+      "seq": 2,
+      "text": "Given sine x is three fifths with x in the second quadrant. Do magnitude first: cosine squared x is one minus nine over twenty five, which is sixteen over twenty five, so cosine x is plus or minus four fifths."
+    },
+    {
+      "seq": 3,
+      "text": "Now the part that is the entire question, the sign. x is in Quadrant two, where cosine is negative. So we take the minus."
+    },
+    {
+      "seq": 4,
+      "text": "Cosine x is minus four fifths. From there, tangent is sine over cosine, minus three quarters; cotangent minus four thirds; secant minus five fourths; and cosecant, the reciprocal of sine, is plus five thirds."
+    },
+    {
+      "seq": 5,
+      "text": "A quick quadrantal one to warm the axis values."
+    },
+    {
+      "seq": 6,
+      "text": "Sine of three pi over two is minus one; cosine of pi is minus one; tangent of pi is zero. So minus one plus minus one minus zero gives minus two."
+    },
+    {
+      "seq": 7,
+      "text": "The single most common board mistake in this whole topic is writing cosine x as plus four fifths, skipping the quadrant. Magnitude, then sign, always two steps."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "ये problem लगभग हर board paper पर आता है, so इसे साफ़ कीजिए."
+    },
+    {
+      "seq": 2,
+      "text": "दिया है sine x तीन बटा पाँच, x second quadrant में. पहले magnitude: cosine squared x है one minus nine over twenty five, यानी sixteen over twenty five, so cosine x है plus or minus four fifths."
+    },
+    {
+      "seq": 3,
+      "text": "अब वो हिस्सा जो पूरा सवाल है, sign. x Quadrant two में है, जहाँ cosine negative है. So हम minus लेते हैं."
+    },
+    {
+      "seq": 4,
+      "text": "Cosine x है minus four fifths. वहाँ से tangent है sine over cosine, minus three quarters; cotangent minus four thirds; secant minus five fourths; और cosecant, sine का reciprocal, plus five thirds."
+    },
+    {
+      "seq": 5,
+      "text": "एक quick quadrantal, axis values गरम करने के लिए."
+    },
+    {
+      "seq": 6,
+      "text": "Sine of three pi over two है minus one; cosine of pi minus one; tangent of pi zero. So minus one plus minus one minus zero देता है minus two."
+    },
+    {
+      "seq": 7,
+      "text": "पूरे topic की सबसे common board mistake है cosine x को plus four fifths लिखना, quadrant छोड़कर. Magnitude, फिर sign, हमेशा दो steps."
+    }
+  ]
+}

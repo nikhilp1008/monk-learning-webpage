@@ -1,0 +1,177 @@
+{
+  "id": "e34836e8-83c6-41af-a9c0-8d5e708fd7e6",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 38,
+  "section_type": "formulas",
+  "subtopic": "06 · Trigonometric Equations and Solutions",
+  "title": "The master solution formulas and the root-validity check",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Zero cases",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\sin\\theta=0 \\Leftrightarrow \\theta=n\\pi;\\quad \\cos\\theta=0 \\Leftrightarrow \\theta=(2n+1)\\tfrac{\\pi}{2};\\quad \\tan\\theta=0 \\Leftrightarrow \\theta=n\\pi",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "The three master general solutions",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\sin\\theta=\\sin\\alpha \\Leftrightarrow \\theta=n\\pi+(-1)^n\\alpha",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\cos\\theta=\\cos\\alpha \\Leftrightarrow \\theta=2n\\pi\\pm\\alpha,\\qquad \\tan\\theta=\\tan\\alpha \\Leftrightarrow \\theta=n\\pi+\\alpha",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\text{squared: } \\sin^2\\theta=\\sin^2\\alpha\\ (\\text{etc.}) \\Leftrightarrow \\theta=n\\pi\\pm\\alpha",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Linear form and solvability",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "type": "formula",
+      "latex": "a\\cos\\theta+b\\sin\\theta=c \\Rightarrow R\\cos(\\theta-\\alpha)=c;\\ \\text{solvable iff } |c|\\le\\sqrt{a^2+b^2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 9,
+      "text": "Checklist: keep n; restore roots lost to division; back-check after squaring; drop out-of-domain roots. (n ∈ ℤ)",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_38.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_38.mp3",
+  "duration_sec_english": 92.28,
+  "duration_sec_hinglish": 90.82,
+  "board_reveal_at_english": [
+    0.0,
+    6.91,
+    17.49,
+    22.27,
+    30.29,
+    44.97,
+    56.15,
+    60.42,
+    77.23
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    7.51,
+    17.15,
+    21.67,
+    29.87,
+    44.71,
+    56.83,
+    61.1,
+    76.71
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is the short, fixed list that solves the whole subtopic. Start with the zero cases."
+    },
+    {
+      "seq": 2,
+      "text": "Sine theta is zero at whole multiples of pi; cosine theta at odd multiples of pi over two; tangent theta at whole multiples of pi."
+    },
+    {
+      "seq": 3,
+      "text": "Now the three master general solutions, one per function."
+    },
+    {
+      "seq": 4,
+      "text": "For sine theta equals sine alpha: theta is n pi plus minus one to the n, times alpha."
+    },
+    {
+      "seq": 5,
+      "text": "For cosine theta equals cosine alpha: theta is two n pi plus or minus alpha; and for tangent theta equals tangent alpha: theta is n pi plus alpha. Never borrow another function's form."
+    },
+    {
+      "seq": 6,
+      "text": "One more covers all squared cases: sine squared, cosine squared, or tangent squared equal to the same of alpha gives theta equals n pi plus or minus alpha."
+    },
+    {
+      "seq": 7,
+      "text": "Then the linear form and its solvability test."
+    },
+    {
+      "seq": 8,
+      "text": "Rewrite a cosine theta plus b sine theta as R cosine of theta minus alpha equals c; it's solvable only if the size of c is at most the square root of a squared plus b squared, otherwise there is no solution."
+    },
+    {
+      "seq": 9,
+      "text": "And run the root-validity checklist every time: keep the integer n, restore any roots lost to division, back-check every candidate after squaring, and drop any out-of-domain root. Throughout, n is an integer."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "पूरे subtopic को solve करने वाली short, fixed list यहाँ है. Zero cases से शुरू कीजिए."
+    },
+    {
+      "seq": 2,
+      "text": "Sine theta zero है pi के whole multiples पर; cosine theta odd multiples of pi over two पर; tangent theta pi के whole multiples पर."
+    },
+    {
+      "seq": 3,
+      "text": "अब तीन master general solutions, हर function के लिए एक."
+    },
+    {
+      "seq": 4,
+      "text": "Sine theta equals sine alpha के लिए: theta है n pi plus minus one to the n, times alpha."
+    },
+    {
+      "seq": 5,
+      "text": "Cosine theta equals cosine alpha के लिए: theta है two n pi plus or minus alpha; और tangent theta equals tangent alpha के लिए: theta है n pi plus alpha. दूसरे function का form कभी मत उधार लीजिए."
+    },
+    {
+      "seq": 6,
+      "text": "एक और सारे squared cases cover करता है: sine squared, cosine squared, या tangent squared, alpha के same के बराबर, देता theta equals n pi plus or minus alpha."
+    },
+    {
+      "seq": 7,
+      "text": "फिर linear form और उसका solvability test."
+    },
+    {
+      "seq": 8,
+      "text": "a cosine theta plus b sine theta को R cosine of theta minus alpha equals c लिखिए; ये तभी solvable है जब c का size square root of a squared plus b squared से ज़्यादा ना हो, वरना no solution."
+    },
+    {
+      "seq": 9,
+      "text": "और हर बार root-validity checklist चलाइए: integer n रखिए, division से खोए roots restore कीजिए, squaring के बाद हर candidate back-check कीजिए, और कोई out-of-domain root हटाइए. पूरे में, n एक integer है."
+    }
+  ]
+}

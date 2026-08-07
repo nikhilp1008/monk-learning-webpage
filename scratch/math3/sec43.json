@@ -1,0 +1,102 @@
+{
+  "id": "650558b2-fa5f-40f7-9bcd-8baf626e7f28",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 43,
+  "section_type": "formula_recap",
+  "subtopic": null,
+  "title": "Whole-chapter formula recap",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Every formula, at a glance",
+      "type": "heading",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\begin{gathered}\\theta=\\tfrac{s}{r}\\quad(\\text{rad}),\\qquad \\pi\\ \\text{rad}=180^\\circ\\\\ s=r\\theta,\\qquad A_{\\text{sect}}=\\tfrac12 r^2\\theta=\\tfrac12 rs\\end{gathered}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\begin{gathered}\\sin^2\\theta+\\cos^2\\theta=1,\\quad 1+\\tan^2\\theta=\\sec^2\\theta,\\quad 1+\\cot^2\\theta=\\csc^2\\theta\\\\ \\text{ASTC: QI all}+,\\ \\text{QII }\\sin,\\ \\text{QIII }\\tan,\\ \\text{QIV }\\cos\\end{gathered}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\begin{gathered}\\text{sine row }0^\\circ\\!-\\!90^\\circ:\\ \\tfrac{\\sqrt0}{2},\\tfrac{\\sqrt1}{2},\\tfrac{\\sqrt2}{2},\\tfrac{\\sqrt3}{2},\\tfrac{\\sqrt4}{2}\\\\ f(n\\cdot 90^\\circ\\pm\\theta):\\ n\\ \\text{odd}\\Rightarrow\\text{co-function};\\ \\text{sign from quadrant}\\end{gathered}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\begin{gathered}\\text{periods: }\\sin,\\cos,\\sec,\\csc\\to 2\\pi;\\ \\tan,\\cot\\to\\pi\\\\ y=a\\sin(bx+c)+d:\\ \\text{amp }|a|,\\ T=\\tfrac{2\\pi}{|b|},\\ \\text{range }[d-|a|,d+|a|]\\end{gathered}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\begin{gathered}\\cos(A\\pm B)=\\cos A\\cos B\\mp\\sin A\\sin B\\\\ \\sin(A\\pm B)=\\sin A\\cos B\\pm\\cos A\\sin B,\\quad \\tan(A\\pm B)=\\tfrac{\\tan A\\pm\\tan B}{1\\mp\\tan A\\tan B}\\end{gathered}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\begin{gathered}\\sin 2A=2\\sin A\\cos A,\\ \\cos 2A=1-2\\sin^2 A=2\\cos^2 A-1\\\\ \\sin 3A=3\\sin A-4\\sin^3 A,\\quad \\cos 3A=4\\cos^3 A-3\\cos A\\end{gathered}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "type": "formula",
+      "latex": "\\begin{gathered}2\\sin A\\cos B=\\sin(A{+}B)+\\sin(A{-}B)\\\\ \\sin C+\\sin D=2\\sin\\tfrac{C+D}{2}\\cos\\tfrac{C-D}{2},\\quad a\\cos x+b\\sin x=R\\cos(x-\\alpha)\\end{gathered}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 9,
+      "type": "formula",
+      "latex": "\\begin{gathered}\\sin\\theta=\\sin\\alpha\\Rightarrow\\theta=n\\pi+(-1)^n\\alpha\\\\ \\cos\\theta=\\cos\\alpha\\Rightarrow\\theta=2n\\pi\\pm\\alpha,\\quad \\tan\\theta=\\tan\\alpha\\Rightarrow\\theta=n\\pi+\\alpha\\end{gathered}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_43.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_43.mp3",
+  "duration_sec_english": 79.73,
+  "duration_sec_hinglish": 74.88,
+  "board_reveal_at_english": [
+    0.0,
+    5.46,
+    18.09,
+    25.17,
+    38.91,
+    51.71,
+    60.16,
+    65.88,
+    71.34
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.63,
+    17.24,
+    23.98,
+    36.1,
+    47.02,
+    55.38,
+    61.44,
+    66.47
+  ],
+  "part": 2,
+  "segments_english": null,
+  "segments_hinglish": null
+}

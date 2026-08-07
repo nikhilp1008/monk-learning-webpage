@@ -1,0 +1,247 @@
+# Class 11 Maths — Chapter 3 "Trigonometry" — Progress
+
+- Branch: `premium-board-math3` · Worktree: `~/Downloads/monk-scenes-math3` · Port: `3032`
+- chapter_id: `fab8d5c4-68ad-5772-8888-f5b1cd687633` (subject `mathematics`, class_level 11)
+- Naming: `M11Ch03SecN.tsx` / component `M11Ch03SecN`; registered at END of `index.ts` as
+  `const M11CH03 = "fab8d5c4-68ad-5772-8888-f5b1cd687633"; REGISTRY[`${M11CH03}:N`] = M11Ch03SecN;`
+- Data source: Supabase `lesson_sections` directly (JSON_LESSONS is stale — 11 sections vs the
+  real 44 — ignored). Cached locally at `scratch/math3/sec<N>.json` (full row) and
+  `scratch/math3/all_sections.json` (all 44). Sections 43-44 have no `segments_*` (recap/cheat-
+  sheet types) — use `board_content` text directly. All 44 confirmed clean.
+- **Known data bug**: 13 `board_content` strings (11 occurrences found across 9 sections: 2, 7,
+  9, 13, 14 (x1 each), 21 (x3), 24, 28, 36) contain a literal 6-character escaped em/en dash
+  (`—` or `–` as literal backslash+text, not a real dash char). Read as a dash, write a
+  plain hyphen `-` on the board — never copy the escape text.
+- New math-kit trig primitives (already merged into this branch): `UnitCircleDiagram`,
+  `pointOnCircle`, `angleArcD`, `waveD` (sin/cos only — NOT tan/cot/sec/csc, draw those branch by
+  branch), `CartesianAxes`, `curveD`, `lineD` (from Ch2 extension).
+
+## Subtopic map
+1. Sec 1-7   Angle Measurement and Radians
+2. Sec 8-14  Trigonometric Functions and Quadrant Signs
+3. Sec 15-19 Standard Values, Even-Odd Nature and Allied Angles
+4. Sec 20-26 Graphs and Periodicity of Trigonometric Functions
+5. Sec 27-35 Trigonometric Identities and Compound Angle Formulas
+6. Sec 36-42 Trigonometric Equations and Solutions
+7. Sec 43-44 Formula Recap and Cheat Sheet
+
+## Model tiering
+Sonnet for all — flag Sec 27-35 (identity-derivation) and any section with real unit-
+circle/graph geometry (8, 15, 20, 21, 23-26, 33) for an extra eye-check pass (FORCE_SHOTS=1
+spot check).
+
+## Data-bug audit (complete)
+Broadest scan (any literal \uXXXX escape, not just dashes) across all 44 sections'
+board_content/segments_* found exactly 13 occurrences, matching the task's stated count:
+sec2(1 em-dash), sec7(1 em-dash), sec9(1 em-dash), sec13(1 en-dash), sec14(1 em-dash + 1
+↔ arrow), sec21(3 em-dash), sec24(1 em-dash), sec28(1 em-dash), sec35(1 literal π escape —
+not a dash, write the real π character), sec36(1 em-dash). All fixed at authoring time by
+writing the real character/plain hyphen, never the escape text. Script:
+scratch/math3/scan_bug_broad.py.
+
+## Done
+(append one line per finished section, in order)
+- Sec 1 "Why degrees are arbitrary and the radian is the circle's own ruler" — degree/radian
+  words column, hand-drawn radian diagram (circle, radii OA/OB, red rim-arc AB = radius, amber
+  angle arc, "1 rad" label), 57.3° chip, pure-number formula card, 2π full-turn chip, sign
+  convention guardrail. Eye-checked (geometry). PASS.
+- Sec 2 "The cornerstone definition and the master conversion" — mini sector diagram (r,s,θ)
+  grounding θ=s/r built term by term, dimensionless explain line, π radian=180° amber hero,
+  two conversion-factor lines, red-margin benchmark note, 6-chip standard-angle table, bare-
+  number guardrail. Notebook-page top-to-bottom layout (deviates from band map — deliberate,
+  noted in header). Data-bug dash fixed (seq3). PASS.
+- Sec 3 "Arc length and sector area — both fall out of one definition" — s=rθ amber hero,
+  proportion route (s/2πr=θ/2π), A=½r²θ chip, same-fraction-of-disc route, A=½rs green twin
+  form, filled sector-wedge diagram (r,r,s,θ,O labels) grounding all three, radians-only
+  guardrail. PASS.
+- Sec 4 "Converting an angle and finding a radius" — two side-by-side worked examples (Ex1
+  40°20′→radians via fold-minutes; Ex2 find r from s=37.4cm, θ=60°→π/3), each builds its
+  formula chain step by step to a boxed answer, shared convert-first guardrail. PASS.
+- Sec 5 "Angular motion and the shared-arc ratio" — Ex3 spinning wheel (rpm→rev/s→ω=12π≈37.7
+  rad/s boxed, v=rω bridge note); Ex4 equal-arc ratio trap (r1θ1=r2θ2 → r1/r2=θ2/θ1=5/4 boxed,
+  inverse-relationship guardrail). Two mirrored columns. PASS.
+- Sec 6 "A chord-to-arc chain and the sector inversion" — Ex5 chord-bisector right-triangle
+  diagram (r=20,half-chord=10) → sin(θ/2)=1/2 → θ=π/3 → s≈20.94cm boxed; Ex6 sector-inversion
+  algebra puzzle (2r+s=16, ½r²θ=16 → r=4,θ=2 boxed), JEE-Advanced-pattern guardrail.
+  Eye-checked (triangle geometry). PASS.
+- Sec 7 "The pitfalls that quietly cost marks" — 6 numbered red-circle pitfall rows (degrees-
+  in-s=rθ, flipped factor, radian dimensionless [data-bug fixed], DMS base-60, clockwise-
+  negative, calculator mode), red-margin sanity-check closer (1 rad ≈ 57°). SUBTOPIC 1
+  (Angle Measurement and Radians, Sec 1-7) COMPLETE. PASS.
+- Sec 8 "From the right triangle to the unit circle" — opens subtopic 2. 90°-cap anchor,
+  full UnitCircleDiagram with P(a,b) in QII, θ arc, a/b/M/1 labels, correctly-placed I/II/III/IV
+  quadrant numerals (the source board_content's own decorative SVG had these mislabeled/rotated
+  one position off standard convention — fixed here, verified by eye), cosθ=a/sinθ=b hero,
+  |sinθ|≤1 |cosθ|≤1 chip, red-margin closer. Eye-checked (geometry). PASS.
+- Sec 9 "General definitions, reciprocal pairings and the sign engine" — sinθ=y/r etc and
+  cscθ=r/y etc chips, sign-engine explain (data-bug fixed), cosec↔sine/sec↔cosine pairing
+  guardrail, ASTC mnemonic heading, color-coded quadrant sign labels pre-placed then framed by
+  CartesianAxes (no ticks) + anticlockwise A→S→T→C rotation arc, reciprocal-sign closer.
+  Eye-checked (ASTC quadrant geometry, correct I/II/III/IV placement). PASS.
+- Sec 10 "The three Pythagorean identities and the ranges" — sin²+cos²=1 hero, 1+tan²=sec²
+  and 1+cot²=csc² chips, mini right-triangle-on-circle sketch grounding a²+b²=1, ranges
+  ([-1,1] / never-strictly-inside / all-reals), red-margin range-check-every-answer closer.
+  PASS.
+- Sec 11 "The signature board problem — find the other five" — Ex1 sin x=3/5,QII: magnitude
+  cos²x=16/25 → sign-decision guardrail (QII⇒cos negative) → all five values in two boxed rows;
+  Ex2 quadrantal evaluation boxed to -2; common-mistake (+4/5 without checking quadrant)
+  guardrail. PASS.
+- Sec 12 "Reduce first, then read the sign" — Ex3 cos1170°: reduce to 90° → boxed answer 0,
+  guessing-a-sign-because-its-big trap guardrail; Ex4 cotθ=-4/3,QII: sign facts + small 3-4-5
+  reference-triangle diagram → cosθ=-4/5,sinθ=+3/5 → expression boxed to -17/48,
+  magnitude-then-sign discipline guardrail. PASS.
+- Sec 13 "Range as the engine" — Ex5 R=√(5²+12²)=13 chip → interval+shift → f(x)∈[-10,16]
+  boxed green; Ex6 sinx=(a²+b²)/2ab, AM-GM squeeze (data-bug fixed) → boxed only-if-|a|=|b|
+  resolution, bounded-range-as-inequality-constraint closer. PASS.
+- Sec 14 "Pitfalls with signs, ranges and reciprocals" — 6 numbered red-circle pitfall rows
+  (±√ quadrant sign, range-check reflex, reciprocal third-letter rule, Pythagorean pairing,
+  tan/cot undefined points [data-bug fixed], reduce-large-angles-first), red-margin golden-rule
+  closer (magnitude from identity, sign from quadrant). SUBTOPIC 2 (Trigonometric Functions
+  and Quadrant Signs, Sec 8-14) COMPLETE. PASS.
+- Sec 15 "Standard values come from two special triangles" — opens subtopic 3. Two hand-drawn
+  reference triangles (45-45-90 legs 1,1 hyp √2; 30-60-90 legs 1,√3 hyp 2) with angle marks,
+  values read off each, 5-chip sine-row pattern (√0/2..√4/2) with cosine-reversed note, 0°/90°
+  circle-readoff closer. Eye-checked (triangle proportions/angle placement). PASS.
+- Sec 16 "Even/odd nature and the one rule for all reductions" — mirror-across-x-axis diagram
+  (P(a,b) at θ, P'(a,-b) at -θ), even chip (cos,sec) and odd chip (sin,tan), the master
+  reduction rule (n odd⇒co-function, n even⇒same; sign via ASTC on the whole angle's quadrant),
+  red-margin closer on why odd multiples of 90° swap sin↔cos. Eye-checked (reflection
+  geometry). PASS.
+- Sec 17 "Evaluating by reduction — basic to large angles" — four quick examples in a 2×2
+  grid (sin210°=-1/2, cos(-300°)=1/2, sin1230°→reduce→150°→1/2, tan135°=-cot45°=-1), red-margin
+  cross-check closer (two routes to tan135° agree). PASS.
+- Sec 18 "Long allied-angle products that collapse" — three columns: Ex5 four allied-angle
+  reductions collapsing to -1; Ex6 cos(270°+θ)=sinθ proof (QIV, n=3 odd) boxed green; Ex7
+  tan²θ/-tan²θ=-1; red-margin closer (products almost always collapse to ±1). PASS.
+- Sec 19 "Pitfalls in reduction and value recall" — 5 numbered red-circle pitfall rows (wrong
+  sign from whole-angle quadrant, co-function switch at 90/270, misremembered standard value,
+  even/odd slip, reduce-large-angles-first), red-margin two-routes-cross-check closer
+  (135°=90+45=180-45). SUBTOPIC 3 (Standard Values, Even-Odd Nature and Allied Angles,
+  Sec 15-19) COMPLETE. PASS.
+- Sec 20 "A graph is the unit circle, unrolled" — opens subtopic 4. Full y=sinx waveD curve
+  over one period (0..2π) on bare CartesianAxes, red max/min dots + labels at π/2 and 3π/2,
+  zero-crossing dots at π/2π, periodicity definition f(x+T)=f(x) boxed, sin/cos T=2π vs tan
+  T=π, red-margin closer on tangent's line-direction reasoning. Eye-checked (correct sine
+  shape verified against real function). PASS.
+- Sec 21 "Stretching and shifting — what a, b, c, d do" — three overlaid waveD curves on one
+  axes (muted sinx baseline, red 2sinx visibly 2× taller, green sin2x completing 2 oscillations
+  in the same span = period π), amplitude/period/shift formula chip, red-margin range-shifts-
+  too closer ([d-|a|,d+|a|]). Data-bug dashes fixed (seq2,3,5). Eye-checked (curve
+  amplitude/period ratios verified against the real functions). PASS.
+- Sec 22 "Periods, the scaling rule and the transform summary" — base-periods hero chip
+  (sin/cos/sec/csc T=2π, tan/cot T=π), scaling rule, real y=tanx graph drawn branch by branch
+  (waveD+Math.tan per branch, NOT a continuous curve) with 3 correctly-placed asymptotes at
+  odd π/2, composite-periods chip (|sinx| etc T=π, sum⇒LCM), asymptote-location rule, master
+  transform-line summary. Eye-checked (tan branch shape and asymptote placement verified
+  against the real function). PASS.
+- Sec 23 "Periods, ranges and amplitudes" — three columns: Ex1 three quick period reads
+  (sin3x=2π/3, tan2x=π/2, cos(x/2)=4π); Ex2 range/period of 3+2sinx ([1,5], 2π); Ex3
+  amp/period of -4cos(x/3) boxed (4, 6π), red-margin closer (minus flips vertically only).
+  PASS.
+- Sec 24 "Composite and identity periods" — Ex4 |sinx|+|cosx| hidden-shrink period π/2
+  (roles swap via |cosx|=|sin(x+π/2)|, boxed f(x+π/2)=f(x)), don't-take-the-larger guardrail;
+  Ex5 sin²x period π via power-reduction identity (data-bug fixed). PASS.
+- Sec 25 "Counting solutions and reading an inequality off the graph" — no bundled source
+  diagram, both graphs authored fresh. Ex6: |sinx| and |cosx| tent curves (waveD+Math.abs)
+  overlaid, 4 red crossing dots at π/4,3π/4,5π/4,7π/4, boxed count. Ex7: real sinx curve +
+  y=1/2 line, green highlighted segment between crossings π/6 and 5π/6 = the solution
+  interval, boxed answer, red-margin general-solution closer. Eye-checked (tent-crossing and
+  above-the-line regions verified against the real functions). PASS.
+- Sec 26 "Pitfalls with periods, ranges and asymptotes" — 6 numbered red-circle pitfall rows
+  (multiply-vs-divide for period, 2π-for-tangent, sum-period-LCM/hidden-shrink, forgetting
+  vertical shift in range, swapped asymptotes, open-vs-closed endpoints), red-margin
+  divide-not-multiply golden-rule closer. SUBTOPIC 4 (Graphs and Periodicity, Sec 20-26)
+  COMPLETE. PASS.
+- Sec 27 "One master key, and the tree that grows from it" — opens subtopic 5 (identity-
+  derivation care flagged for the whole subtopic). cos(A-B) hero, then a 4-row family-tree
+  diagram (boxes+connector lines, same technique as Sec9's ASTC ladder): root → cos(A+B)/
+  sin(A±B)/tan(A±B) → Double/Product→Sum → Half-angle/Triple/Sum→Product → a cosx+b sinx
+  application box. Learn-the-derivation-not-the-list closer. Eye-checked (tree structure
+  reads cleanly, no overlaps). PASS.
+- Sec 28 "What a compound angle means" — staged-and-crossed-out false guess sin(A+B)=sinA+sinB
+  with A=B=30° numeric disproof, not-linear guardrail; vector-composition right-triangle
+  diagram (a-leg, b-leg, resultant R at angle α) grounding acosx+bsinx=Rcos(x-α), max/min=±R
+  closer (data-bug fixed). Eye-checked (vector triangle geometry). PASS.
+- Sec 29 "Sum and difference formulas, with the sign mnemonic" — cos/sin/tan(A±B) hero+chips,
+  sign-mnemonic guardrail, the equal-chords unit-circle proof of cos(A-B) (P₁,P₂,P₃,P₄
+  constructed so both chords subtend the identical 1.221 rad central angle — verified by
+  the math, not eyeballed; the source board_content's own decorative SVG had non-equal
+  chords, not copied), two useful-products chips. Eye-checked (chord-length geometry
+  verified against the construction angles). PASS.
+- Sec 30 "Double, half, triple and the t-substitution" — pure formula catalogue, 2×2 grid:
+  double-angle (sin2A, tan2A, cos2A's three faces), half-angle/power-reduction (1±cosA),
+  t=tan(A/2) substitution (sinA/cosA/tanA in terms of t), triple-angle (sin3A, cos3A). PASS.
+- Sec 31 "Product-to-sum, sum-to-product, amplitude and conditional identities" — closes the
+  formula-building run of subtopic 5. Product↔Sum (3 chips), Sum→Product (3 chips, the
+  cosC-cosD leading-minus one in amber high-emphasis), Amplitude+conditional
+  (acosx+bsinx=Rcos(x-α); tanA+tanB+tanC=tanAtanBtanC when A+B+C=π). PASS.
+- Sec 32 "Exact values and a clean identity proof" — three columns: Ex1 cos15° via 45°-30°
+  boxed to (√6+√2)/4; Ex2 proves cos(A+B)cos(A-B)=cos²A-sin²B via difference-of-squares
+  expansion, boxed ✓; Ex3 sin(7π/12) via π/4+π/3 boxed to (√2+√6)/4. PASS.
+- Sec 33 "Signs in a compound angle, a ratio proof, and max/min" — three columns: Ex4
+  sin(A+B) with mixed quadrants (sinA=3/5 acute, cosB=-12/13 obtuse) boxed to -16/65; Ex5
+  ratio proof (sin3A+sinA)/(cos3A+cosA)=tan2A via sum-to-product+cancel; Ex6 max/min of
+  7cosx+24sinx+5 via R=25 boxed to [-20,30]. PASS.
+- Sec 34 "A telescoping product and a conditional identity" — two columns: Ex7 proves
+  cos20°cos40°cos80°=1/8 via multiply-by-2sin20° then cascading 2sinθcosθ=sin2θ to a
+  telescoping collapse; Ex8 proves tanA+tanB+tanC=tanAtanBtanC when A+B+C=π via
+  tan(A+B)=-tanC, red-margin scope-trap closer (condition used at the first step). PASS.
+- Sec 35 "Pitfalls in identities and compound angles" — 6 numbered red-circle pitfall rows
+  (cos/tan sign flip, distribution assumption, wrong cos2A face, dropped leading 2/minus,
+  amplitude=√(a²+b²) never a+b, conditional needs A+B+C=π [literal-π-escape bug fixed - a
+  new bug variant, not a dash]), red-margin golden-rule closer. SUBTOPIC 5 (Identities and
+  Compound Angle Formulas, Sec 27-35) COMPLETE. PASS.
+- Sec 36 "Why one equation has infinitely many answers" — opens subtopic 6. Unit-circle
+  diagram: y=1/2 line cutting the circle at two mirror points (π/6, 5π/6), both verified at
+  the same height; principal-solution/general-solution two-layer explanation, boxed general
+  solution θ=nπ+(-1)ⁿπ/6, train-timetable analogy, red-margin closer (describe every
+  solution, not just find one). Data-bug fixed (seq2). Eye-checked (mirror-point geometry).
+  PASS.
+- Sec 37 "The two great dangers: dividing and squaring" — two columns: losing roots by
+  dividing (cancel cosθ from sinθcosθ=cosθ throws away cosθ=0, red-margin factor-never-divide
+  guardrail); gaining roots by squaring (sinx+cosx=1 →square→ sin2x=0 but x=π fails the
+  original, extraneous-root check guardrail, both-are-conceptual-not-careless closer). PASS.
+- Sec 38 "The master solution formulas and the root-validity check" — the central formula
+  reference for the whole subtopic. Zero cases, three master general solutions
+  (sinθ=sinα hero, cosθ=cosα/tanθ=tanα, squared cases), linear-form solvability test
+  (|c|≤√(a²+b²)), red-margin root-validity checklist (keep n, restore division-lost roots,
+  back-check after squaring, drop out-of-domain). PASS.
+- Sec 39 "Principal solutions, a general solution, and a quadratic" — three columns: Ex1
+  principal solutions of sinx=1/2 (π/6 QI, 5π/6 QII); Ex2 general solution of cosx=-1/2 via
+  cos(2π/3); Ex3 quadratic 2sin²x+sinx-1=0 factored to (2sinx-1)(sinx+1)=0, both solution
+  families boxed. PASS.
+- Sec 40 "The linear form, and factoring instead of dividing" — two columns: Ex4 √3cosx+sinx=1
+  reduced to cos(x-π/6)=cos(π/3), boxed to two families; Ex5 sin2x=sinx factored (never
+  divided) to sinx(2cosx-1)=0, red-margin high-emphasis guardrail on the x=nπ family
+  dividing by sinx would have erased. PASS.
+- Sec 41 "The squaring trap done right, and a range squeeze" — two columns: Ex6 sinx+cosx=1
+  solved via amplitude form (no squaring) to a clean boxed [2nπ, 2nπ+π/2], red-margin contrast
+  guardrail (squaring would introduce the fake x=π); Ex7 range squeeze 2sin²x+sin²2x=2 via
+  s=sin²x substitution to (2s-1)(s-1)=0, boxed two families. PASS.
+- Sec 42 "Pitfalls in solving trig equations" — 6 numbered red-circle pitfall rows (dividing
+  loses roots, squaring keeps extraneous roots, mixing families, principal-vs-general n,
+  ignoring solvability, undefined-domain roots), red-margin golden-rules closer (factor,
+  back-check, keep n, match family). SUBTOPIC 6 (Trigonometric Equations and Solutions,
+  Sec 36-42) COMPLETE. PASS.
+- Sec 43 "Whole-chapter formula recap" — no segments (recap type, board_content only). 4×2 grid
+  of 8 boxed cards, one per subtopic in teaching order (Angle Measurement, Functions & Signs,
+  Standard Values, Graphs & Periods, Compound Angles, Double/Triple, Product-Sum/Amplitude,
+  Equations), each with a 2-line flattened formula summary. PASS.
+- Sec 44 "Chapter cheat sheet — golden rules and traps" — no segments (cheat_sheet type,
+  board_content only; Hinglish for the 6 rule rows hand-written since no segments_hinglish
+  source exists for 43-44). Single numbered red-circle column, one golden rule per subtopic
+  (angles: radians first; functions: magnitude-then-sign, two steps; allied angles: odd
+  multiple of 90° swaps co-function; graphs: divide for period, tan's period is π, shift in
+  range; identities: reconstruct from cos(A−B), watch every ±, amplitude √(a²+b²) never a+b;
+  equations: factor never divide, back-check, keep n, match family), row 1 bold/high-emphasis
+  matching its red-margin/high source flag, red-margin closer (final sanity check: |sin|/|cos|
+  >1 or a multiplied-not-divided period means stop and recheck). PASS.
+
+## CHAPTER COMPLETE — all 44/44 sections of M11 Ch03 Trigonometry authored, registered,
+## typechecked, and verified PASS (English + Hinglish). Two source-data geometry bugs caught
+## and corrected independently (Sec 8 mislabeled quadrants, Sec 29 non-equal chords). Data-bug
+## audit confirmed exactly 13/13 literal-escape occurrences found and fixed at authoring time
+## (see "Data-bug audit" section above). All 7 subtopics complete: Angle Measurement & Radians
+## (1-7), Trig Functions & Quadrant Signs (8-14), Standard Values & Allied Angles (15-19),
+## Graphs & Periodicity (20-26), Identities & Compound Angles (27-35), Trig Equations (36-42),
+## Recap/Cheat Sheet (43-44).

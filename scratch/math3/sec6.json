@@ -1,0 +1,160 @@
+{
+  "id": "42431a51-45f8-468f-95ea-57916ca22df9",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 6,
+  "section_type": "worked_examples",
+  "subtopic": "01 · Angle Measurement and Radians",
+  "title": "A chord-to-arc chain and the sector inversion",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 5 — from chord to arc",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Diameter $40$ cm gives $r=20$. A chord of $20$ cm; the perpendicular from the centre bisects it.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\sin\\tfrac{\\theta}{2} = \\tfrac{10}{20} = \\tfrac{1}{2}\\ \\Rightarrow\\ \\tfrac{\\theta}{2}=\\tfrac{\\pi}{6}\\ \\Rightarrow\\ \\theta=\\tfrac{\\pi}{3}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "s = r\\theta = 20\\times\\tfrac{\\pi}{3} = \\tfrac{20\\pi}{3}\\approx 20.94\\ \\text{cm}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Example 6 — the sector inversion",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "Perimeter $2r+s=16$; area $\\tfrac{1}{2}r^2\\theta=16$, so $r^2\\theta=32$ and $s=\\tfrac{32}{r}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "2r+\\tfrac{32}{r}=16\\ \\Rightarrow\\ (r-4)^2=0\\ \\Rightarrow\\ r=4,\\ \\theta=2",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "Two unknowns from two conditions — the JEE Advanced pattern: easy trig, hard algebra.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_6.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_6.mp3",
+  "duration_sec_english": 106.73,
+  "duration_sec_hinglish": 95.21,
+  "board_reveal_at_english": [
+    0.0,
+    6.14,
+    22.44,
+    35.5,
+    48.73,
+    55.13,
+    74.75,
+    94.46
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.63,
+    19.54,
+    30.46,
+    40.45,
+    47.27,
+    67.5,
+    83.37
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Example five chains two ideas: a chord relation, then the arc formula."
+    },
+    {
+      "seq": 2,
+      "text": "A circle of diameter forty gives radius twenty. A chord is twenty centimetres long. Drop a perpendicular from the centre; it bisects the chord, leaving a right triangle with hypotenuse twenty and half-chord ten."
+    },
+    {
+      "seq": 3,
+      "text": "So sine of theta over two equals ten over twenty, which is one half. That means theta over two is pi over six, so theta is pi over three."
+    },
+    {
+      "seq": 4,
+      "text": "Now the arc: s equals r theta, twenty times pi over three, which is twenty pi over three, about twenty point nine four centimetres."
+    },
+    {
+      "seq": 5,
+      "text": "Example six looks the hardest but the trig is trivial — it's an algebra puzzle in disguise."
+    },
+    {
+      "seq": 6,
+      "text": "A sector has perimeter sixteen and area sixteen. Perimeter is two radii plus the arc: two r plus s equals sixteen. Area is one half r squared theta equals sixteen, so r squared theta is thirty two, and since s equals r theta, s equals thirty two over r."
+    },
+    {
+      "seq": 7,
+      "text": "Substitute into the perimeter: two r plus thirty two over r equals sixteen. Clear it and you get r minus four, all squared, equals zero. So r is four, s is eight, and theta is s over r, which is two radians."
+    },
+    {
+      "seq": 8,
+      "text": "Notice the design: two unknowns pinned down by two conditions. The angle work is child's play; the difficulty is the algebra. That's the signature JEE Advanced move."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Example पाँच दो ideas को chain करता है: पहले chord relation, फिर arc formula."
+    },
+    {
+      "seq": 2,
+      "text": "Diameter चालीस वाले circle का radius बीस. Chord बीस centimetres लंबा है. Centre से perpendicular गिराइए; वो chord को bisect करता है, बनता है right triangle जिसका hypotenuse बीस और half-chord दस."
+    },
+    {
+      "seq": 3,
+      "text": "So sine of theta over two equals ten over twenty, यानी one half. मतलब theta over two is pi over six, so theta is pi over three."
+    },
+    {
+      "seq": 4,
+      "text": "अब arc: s equals r theta, twenty times pi over three, यानी twenty pi over three, करीब twenty point nine four centimetres."
+    },
+    {
+      "seq": 5,
+      "text": "Example छह सबसे मुश्किल दिखता है पर trig मामूली है, ये असल में algebra की पहेली है."
+    },
+    {
+      "seq": 6,
+      "text": "एक sector का perimeter सोलह और area सोलह. Perimeter है two radii plus arc: two r plus s equals sixteen. Area है one half r squared theta equals sixteen, so r squared theta is thirty two, और s equals r theta से s equals thirty two over r."
+    },
+    {
+      "seq": 7,
+      "text": "Perimeter में डालिए: two r plus thirty two over r equals sixteen. साफ़ करने पर r minus four, whole squared, equals zero. So r चार, s आठ, और theta equals s over r, यानी two radians."
+    },
+    {
+      "seq": 8,
+      "text": "Design देखिए: दो unknowns, दो conditions से fix. Angle का काम बच्चों जैसा; मुश्किल algebra है. यही signature J E E Advanced move है."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "6993dd4e-b2cf-4c8e-b965-b3489d5f97c9",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 12,
+  "section_type": "worked_examples",
+  "subtopic": "02 · Trigonometric Functions and Quadrant Signs",
+  "title": "Reduce first, then read the sign",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 3 — the sign of cos 1170°",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Always reduce first: $1170^\\circ - 3(360^\\circ) = 1170^\\circ - 1080^\\circ = 90^\\circ$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\cos 1170^\\circ = \\cos 90^\\circ = 0",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "The trap is guessing a sign 'because it's big'. The answer is the boundary value 0.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Example 4 — cot θ = −4/3, θ in Quadrant II",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "Q II: $\\sin>0$, $\\cos<0$. Reference triangle $3\\!-\\!4\\!-\\!5$ gives $\\cos\\theta=-\\tfrac{4}{5},\\ \\sin\\theta=+\\tfrac{3}{5}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\frac{2\\cos\\theta-3\\sin\\theta}{4\\sin\\theta-9\\cos\\theta} = \\frac{-17/5}{48/5} = -\\frac{17}{48}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "Two steps always: magnitude from the triangle, sign from the quadrant.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_12.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_12.mp3",
+  "duration_sec_english": 93.26,
+  "duration_sec_hinglish": 78.48,
+  "board_reveal_at_english": [
+    0.0,
+    3.84,
+    18.52,
+    25.09,
+    38.74,
+    45.31,
+    67.16,
+    85.33
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    3.07,
+    16.98,
+    23.21,
+    33.62,
+    39.08,
+    56.58,
+    72.53
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "For a large angle, never guess, reduce."
+    },
+    {
+      "seq": 2,
+      "text": "We want the sign of cosine of one thousand one hundred seventy degrees. Subtract whole turns: three times three hundred sixty is one thousand eighty, and eleven seventy minus ten eighty is ninety degrees."
+    },
+    {
+      "seq": 3,
+      "text": "So cosine of eleven seventy equals cosine of ninety, which is exactly zero."
+    },
+    {
+      "seq": 4,
+      "text": "The trap here is students eyeballing a big angle and guessing positive or negative. The honest answer is the boundary value, zero, neither positive nor negative. Reduce first, then read."
+    },
+    {
+      "seq": 5,
+      "text": "The fourth example evaluates an expression once the quadrant fixes the signs."
+    },
+    {
+      "seq": 6,
+      "text": "Given cotangent theta is minus four thirds with theta in Quadrant two. In two, sine is positive and cosine negative, which is consistent with a negative cotangent. The reference triangle three, four, five gives cosine theta minus four fifths and sine theta plus three fifths."
+    },
+    {
+      "seq": 7,
+      "text": "Substitute into the expression: two cosine minus three sine over four sine minus nine cosine. The top is minus seventeen fifths, the bottom is forty eight fifths, so the whole thing is minus seventeen over forty eight."
+    },
+    {
+      "seq": 8,
+      "text": "Same discipline every time: get the magnitudes from the reference triangle, then let the quadrant decide the signs."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "बड़े angle के लिए guess कभी नहीं, reduce कीजिए."
+    },
+    {
+      "seq": 2,
+      "text": "हमें चाहिए cosine of one thousand one hundred seventy degrees का sign. Whole turns घटाइए: three times three hundred sixty is one thousand eighty, और eleven seventy minus ten eighty is ninety degrees."
+    },
+    {
+      "seq": 3,
+      "text": "So cosine of eleven seventy equals cosine of ninety, जो exactly zero है."
+    },
+    {
+      "seq": 4,
+      "text": "Trap यहाँ ये है कि students बड़ा angle देखकर positive या negative guess कर लेते हैं. सही answer boundary value है, zero, ना positive ना negative. पहले reduce, फिर पढ़िए."
+    },
+    {
+      "seq": 5,
+      "text": "चौथा example एक expression evaluate करता है जब quadrant signs fix कर देता है."
+    },
+    {
+      "seq": 6,
+      "text": "दिया cotangent theta minus four thirds, theta Quadrant two में. Two में sine positive और cosine negative, जो negative cotangent से consistent है. Reference triangle three, four, five देता है cosine theta minus four fifths और sine theta plus three fifths."
+    },
+    {
+      "seq": 7,
+      "text": "Expression में डालिए: two cosine minus three sine over four sine minus nine cosine. ऊपर minus seventeen fifths, नीचे forty eight fifths, so पूरा minus seventeen over forty eight."
+    },
+    {
+      "seq": 8,
+      "text": "हर बार वही discipline: magnitudes reference triangle से, फिर signs quadrant से."
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "8947a50c-9b38-4af6-b349-c89bace288e8",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 42,
+  "section_type": "tips",
+  "subtopic": "06 · Trigonometric Equations and Solutions",
+  "title": "Pitfalls in solving trig equations",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Equation traps",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "#1 Signature trap: dividing by a trig factor and losing roots. Never cancel sin x or cos x — factor and set each factor to zero.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "#2 Squaring and keeping extraneous roots. Every candidate from a squared step must be checked in the original equation.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "#3 Mixing the families. Sine: $n\\pi+(-1)^n\\alpha$; cosine: $2n\\pi\\pm\\alpha$; tangent: $n\\pi+\\alpha$. Never borrow another's form.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "#4 Giving only principal solutions when 'general' is asked — the integer n is mandatory.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "#5 Ignoring solvability: if $|c|>\\sqrt{a^2+b^2}$, declare 'no solution'. #6 Drop roots where tan, sec, cot or csc is undefined.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Golden rules: factor (never divide); back-check after squaring; keep the n; match the right family.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_42.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_42.mp3",
+  "duration_sec_english": 88.94,
+  "duration_sec_hinglish": 86.11,
+  "board_reveal_at_english": [
+    0.0,
+    3.24,
+    18.77,
+    31.4,
+    47.79,
+    58.37,
+    77.65
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    3.58,
+    19.03,
+    31.4,
+    48.81,
+    58.62,
+    75.95
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Six traps that decide the equations marks."
+    },
+    {
+      "seq": 2,
+      "text": "The signature trap: dividing by a trig factor and losing roots. Never cancel sine x or cosine x, because the thing you cancel might be zero. Factor instead, and set each factor to zero."
+    },
+    {
+      "seq": 3,
+      "text": "Second, squaring and keeping extraneous roots. Squaring can manufacture false solutions, so every candidate that came through a squared step must be checked back in the original equation."
+    },
+    {
+      "seq": 4,
+      "text": "Third, mixing up the solution families. Sine gives n pi plus minus one to the n times alpha; cosine gives two n pi plus or minus alpha; tangent gives n pi plus alpha. Each function has its own form, never borrow another's."
+    },
+    {
+      "seq": 5,
+      "text": "Fourth, giving only principal solutions when the question asks for the general one. The integer n is mandatory; drop it and you lose infinitely many answers."
+    },
+    {
+      "seq": 6,
+      "text": "Fifth, ignoring solvability of the linear form. If the size of c exceeds the square root of a squared plus b squared, just declare no solution instead of grinding. And sixth, discard any root where tangent, secant, cotangent or cosecant is undefined."
+    },
+    {
+      "seq": 7,
+      "text": "The golden rules for the whole subtopic: factor, never divide; back-check after squaring; keep the n; and match the right family to the right function."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Equations के marks तय करने वाले छह traps."
+    },
+    {
+      "seq": 2,
+      "text": "Signature trap: trig factor से divide करके roots खोना. Sine x या cosine x कभी cancel मत कीजिए, क्योंकि जो cancel कर रहे हैं वो zero हो सकता है. इसके बजाय factor कीजिए, और हर factor को zero रखिए."
+    },
+    {
+      "seq": 3,
+      "text": "दूसरा, square करके extraneous roots रखना. Squaring झूठे solutions बना सकता है, so squared step से आया हर candidate original equation में back-check होना चाहिए."
+    },
+    {
+      "seq": 4,
+      "text": "तीसरा, solution families mix करना. Sine देता n pi plus minus one to the n times alpha; cosine देता two n pi plus or minus alpha; tangent देता n pi plus alpha. हर function का अपना form, दूसरे का कभी उधार नहीं."
+    },
+    {
+      "seq": 5,
+      "text": "चौथा, सिर्फ़ principal solutions देना जब सवाल general माँगे. Integer n ज़रूरी है; छोड़िए और infinitely many answers खो जाते हैं."
+    },
+    {
+      "seq": 6,
+      "text": "पाँचवाँ, linear form की solvability ignore करना. अगर c का size square root of a squared plus b squared से ज़्यादा है, बस no solution घोषित कीजिए grind करने के बजाय. और छठा, जहाँ tangent, secant, cotangent या cosecant undefined हो वो root हटाइए."
+    },
+    {
+      "seq": 7,
+      "text": "पूरे subtopic के golden rules: factor, divide कभी नहीं; squaring के बाद back-check; n रखिए; और सही family को सही function से match कीजिए."
+    }
+  ]
+}

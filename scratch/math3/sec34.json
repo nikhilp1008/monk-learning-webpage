@@ -1,0 +1,143 @@
+{
+  "id": "2bbe0035-1a93-469f-84d6-bf6441413e3f",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 34,
+  "section_type": "worked_examples",
+  "subtopic": "05 · Trigonometric Identities and Compound Angle Formulas",
+  "title": "A telescoping product and a conditional identity",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 7 — prove cos20° cos40° cos80° = 1/8",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Multiply and divide by $2\\sin 20^\\circ$, then cascade $2\\sin\\theta\\cos\\theta=\\sin 2\\theta$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\frac{\\sin 40^\\circ\\cos 40^\\circ\\cos 80^\\circ}{2\\sin 20^\\circ} = \\frac{\\sin 160^\\circ}{8\\sin 20^\\circ} = \\frac{\\sin 20^\\circ}{8\\sin 20^\\circ} = \\tfrac18",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Example 8 — if A + B + C = π, prove ∑tan = ∏tan",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "From $A+B=\\pi-C$: $\\tan(A+B)=-\\tan C$, so $\\dfrac{\\tan A+\\tan B}{1-\\tan A\\tan B}=-\\tan C$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\tan A+\\tan B+\\tan C = \\tan A\\tan B\\tan C",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "The condition A + B + C = π is used at the very first step — drop it and the identity is false.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_34.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_34.mp3",
+  "duration_sec_english": 85.34,
+  "duration_sec_hinglish": 88.58,
+  "board_reveal_at_english": [
+    0.0,
+    7.51,
+    20.39,
+    35.16,
+    44.63,
+    63.15,
+    73.05
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    8.28,
+    19.88,
+    37.12,
+    47.96,
+    66.22,
+    76.2
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Example seven: prove cosine twenty times cosine forty times cosine eighty equals one eighth."
+    },
+    {
+      "seq": 2,
+      "text": "The trick is deliberate: multiply and divide by twice sine twenty, then cascade the double-angle identity, twice sine theta cosine theta is sine two theta."
+    },
+    {
+      "seq": 3,
+      "text": "Each step doubles the angle, giving sine one sixty over eight sine twenty; since sine one sixty equals sine twenty, it collapses to one eighth. That opening move is a signature technique you must know, not something you pattern-match."
+    },
+    {
+      "seq": 4,
+      "text": "Example eight is a conditional identity in a triangle: given A plus B plus C is pi, prove the sum of tangents equals the product."
+    },
+    {
+      "seq": 5,
+      "text": "From A plus B equals pi minus C, take tangents: tangent of A plus B is minus tangent C, so the sum formula gives tangent A plus tangent B, over one minus tangent A tangent B, equal to minus tangent C."
+    },
+    {
+      "seq": 6,
+      "text": "Cross-multiply and rearrange, and you land exactly on tangent A plus tangent B plus tangent C equals tangent A tangent B tangent C."
+    },
+    {
+      "seq": 7,
+      "text": "The key warning: the condition A plus B plus C equals pi is used at the very first step. Without it the identity is simply false, the scope trap examiners love."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Example सात: साबित कीजिए cosine twenty times cosine forty times cosine eighty equals one eighth."
+    },
+    {
+      "seq": 2,
+      "text": "Trick deliberate है: twice sine twenty से multiply और divide कीजिए, फिर double-angle identity cascade कीजिए, twice sine theta cosine theta is sine two theta."
+    },
+    {
+      "seq": 3,
+      "text": "हर step angle दुगुना करता है, देता sine one sixty over eight sine twenty; चूँकि sine one sixty equals sine twenty, ये one eighth में collapse हो जाता है. वो शुरुआती move एक signature technique है जो आपको पता होनी चाहिए, pattern-match करने की चीज़ नहीं."
+    },
+    {
+      "seq": 4,
+      "text": "Example आठ triangle में conditional identity है: दिया A plus B plus C is pi, साबित कीजिए sum of tangents equals product."
+    },
+    {
+      "seq": 5,
+      "text": "A plus B equals pi minus C से, tangents लीजिए: tangent of A plus B है minus tangent C, so sum formula देता tangent A plus tangent B, over one minus tangent A tangent B, बराबर minus tangent C."
+    },
+    {
+      "seq": 6,
+      "text": "Cross-multiply और rearrange कीजिए, और आप बिल्कुल tangent A plus tangent B plus tangent C equals tangent A tangent B tangent C पर पहुँचते हैं."
+    },
+    {
+      "seq": 7,
+      "text": "मुख्य warning: condition A plus B plus C equals pi पहले ही step में use होती है. इसके बिना identity बस झूठ है, यही scope trap है जो examiners को पसंद है."
+    }
+  ]
+}

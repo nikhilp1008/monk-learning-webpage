@@ -1,0 +1,144 @@
+{
+  "id": "11051491-61c8-4259-8972-ade7f89b19de",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 15,
+  "section_type": "concept",
+  "subtopic": "03 · Standard Values, Even-Odd Nature and Allied Angles",
+  "title": "Standard values come from two special triangles",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Why only a handful of angles are 'nice'",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Every standard value is a side ratio in one of two triangles: the 45-45-90 and the 30-60-90.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 420 220\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,180 160,180 40,60\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><rect x=\"40\" y=\"164\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.2\"/><text x=\"92\" y=\"198\" font-size=\"13\" fill=\"#1e293b\">1</text><text x=\"24\" y=\"125\" font-size=\"13\" fill=\"#1e293b\">1</text><text x=\"108\" y=\"112\" font-size=\"13\" fill=\"#dc2626\">&#8730;2</text><text x=\"140\" y=\"176\" font-size=\"11\" fill=\"#64748b\">45&#176;</text><text x=\"46\" y=\"76\" font-size=\"11\" fill=\"#64748b\">45&#176;</text><polygon points=\"250,180 390,180 250,60\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"250\" y=\"164\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"315\" y=\"198\" font-size=\"13\" fill=\"#1e293b\">&#8730;3</text><text x=\"234\" y=\"125\" font-size=\"13\" fill=\"#1e293b\">1</text><text x=\"330\" y=\"112\" font-size=\"13\" fill=\"#dc2626\">2</text><text x=\"366\" y=\"176\" font-size=\"11\" fill=\"#64748b\">30&#176;</text><text x=\"256\" y=\"76\" font-size=\"11\" fill=\"#64748b\">60&#176;</text></svg>",
+      "type": "diagram",
+      "caption": "The two special triangles behind all standard values",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\sin 45^\\circ = \\cos 45^\\circ = \\tfrac{1}{\\sqrt{2}},\\qquad \\tan 45^\\circ = 1",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\sin 30^\\circ = \\tfrac{1}{2},\\quad \\cos 30^\\circ = \\tfrac{\\sqrt{3}}{2},\\quad \\sin 60^\\circ=\\tfrac{\\sqrt{3}}{2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "Sine row 0° to 90°: √0/2, √1/2, √2/2, √3/2, √4/2. Cosine row is the same list reversed.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "$0^\\circ$ and $90^\\circ$ read straight off the circle: the points $(1,0)$ and $(0,1)$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_15.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_15.mp3",
+  "duration_sec_english": 85.7,
+  "duration_sec_hinglish": 76.06,
+  "board_reveal_at_english": [
+    0.0,
+    7.51,
+    20.82,
+    35.67,
+    45.14,
+    54.02,
+    75.18
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.21,
+    16.64,
+    29.95,
+    39.42,
+    47.53,
+    66.13
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "The famous standard values aren't magic — they come from two triangles you already know."
+    },
+    {
+      "seq": 2,
+      "text": "Every so-called standard value is just a side ratio read off the forty five, forty five, ninety triangle, or the thirty, sixty, ninety triangle, and placed on the unit circle."
+    },
+    {
+      "seq": 3,
+      "text": "Here they are. On the left, an isosceles right triangle with legs one and one and hypotenuse root two. On the right, half an equilateral triangle: hypotenuse two, short side one, long side root three."
+    },
+    {
+      "seq": 4,
+      "text": "From the left triangle: sine forty five equals cosine forty five equals one over root two, and tangent forty five is one."
+    },
+    {
+      "seq": 5,
+      "text": "From the right triangle: sine thirty is one half, cosine thirty is root three over two, and sine sixty is root three over two."
+    },
+    {
+      "seq": 6,
+      "text": "<curious>Here's a lovely pattern to lock the sine row:</curious> for zero, thirty, forty five, sixty, ninety, sine is root zero over two, root one over two, root two over two, root three over two, root four over two. The cosine row is exactly that list, reversed."
+    },
+    {
+      "seq": 7,
+      "text": "And the two ends, zero and ninety, you just read off the circle: the point at zero is one comma zero, and at ninety it's zero comma one."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Famous standard values कोई जादू नहीं, वो दो triangles से आती हैं जो आप जानते हैं."
+    },
+    {
+      "seq": 2,
+      "text": "हर so-called standard value बस एक side ratio है, forty five forty five ninety triangle से या thirty sixty ninety triangle से पढ़ा हुआ, और unit circle पर रखा हुआ."
+    },
+    {
+      "seq": 3,
+      "text": "ये रहे. Left पर isosceles right triangle, legs one और one, hypotenuse root two. Right पर आधा equilateral triangle: hypotenuse two, short side one, long side root three."
+    },
+    {
+      "seq": 4,
+      "text": "Left triangle से: sine forty five equals cosine forty five equals one over root two, और tangent forty five is one."
+    },
+    {
+      "seq": 5,
+      "text": "Right triangle से: sine thirty is one half, cosine thirty root three over two, और sine sixty root three over two."
+    },
+    {
+      "seq": 6,
+      "text": "<curious>Sine row lock करने का सुंदर pattern:</curious> zero, thirty, forty five, sixty, ninety के लिए sine है root zero over two, root one over two, root two over two, root three over two, root four over two. Cosine row बिल्कुल वही list है, उल्टी."
+    },
+    {
+      "seq": 7,
+      "text": "और दो सिरे, zero और ninety, बस circle से पढ़िए: zero पर point one comma zero, ninety पर zero comma one."
+    }
+  ]
+}

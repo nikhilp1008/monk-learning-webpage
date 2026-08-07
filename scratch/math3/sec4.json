@@ -1,0 +1,143 @@
+{
+  "id": "d21bb0a6-2690-4f8c-b7c4-98efbaa2586c",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 4,
+  "section_type": "worked_examples",
+  "subtopic": "01 · Angle Measurement and Radians",
+  "title": "Converting an angle and finding a radius",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 1 — convert 40°20′ to radians",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Fold the minutes into degrees first: $40^\\circ 20' = 40 + \\tfrac{20}{60} = \\tfrac{121}{3}$ degrees.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\frac{121}{3}\\times\\frac{\\pi}{180} = \\frac{121\\pi}{540}\\ \\text{radian}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Example 2 — find the radius",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "A central angle of $60^\\circ$ cuts an arc of $37.4$ cm. Convert first: $60^\\circ=\\frac{\\pi}{3}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "r = \\frac{s}{\\theta} = \\frac{37.4}{\\pi/3} = \\frac{112.2\\times 7}{22} = 35.7\\ \\text{cm}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Signature trap: forgetting to turn 60° into radians before using s = rθ.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_4.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_4.mp3",
+  "duration_sec_english": 79.37,
+  "duration_sec_hinglish": 70.75,
+  "board_reveal_at_english": [
+    0.0,
+    4.18,
+    18.6,
+    34.39,
+    38.23,
+    51.8,
+    67.41
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    3.41,
+    15.19,
+    28.93,
+    33.37,
+    45.48,
+    59.31
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's put the conversion factor to work on a board-level problem."
+    },
+    {
+      "seq": 2,
+      "text": "We want forty degrees twenty minutes in radians. First deal with the minutes: twenty minutes is twenty over sixty of a degree, so the whole angle is one hundred twenty one over three degrees."
+    },
+    {
+      "seq": 3,
+      "text": "Now multiply by pi over one hundred eighty. One hundred twenty one over three, times pi over one hundred eighty, gives one hundred twenty one pi over five hundred forty radians. That's the answer, left symbolic in pi."
+    },
+    {
+      "seq": 4,
+      "text": "Second example, a classic find-the-radius problem."
+    },
+    {
+      "seq": 5,
+      "text": "A central angle of sixty degrees intercepts an arc of thirty seven point four centimetres. Before touching s equals r theta, convert: sixty degrees is pi over three radians."
+    },
+    {
+      "seq": 6,
+      "text": "Now r equals s over theta, which is thirty seven point four divided by pi over three. Using pi as twenty two over seven, this works out to thirty five point seven centimetres."
+    },
+    {
+      "seq": 7,
+      "text": "<whisper>Watch this one:</whisper> the single biggest mistake here is using sixty directly in s equals r theta without converting. Always send the angle to radians first."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Conversion factor को एक board-level problem पर लगाते हैं."
+    },
+    {
+      "seq": 2,
+      "text": "हमें चाहिए forty degrees twenty minutes radians में. पहले minutes: twenty minutes यानी twenty over sixty degree, so पूरा angle one hundred twenty one over three degrees."
+    },
+    {
+      "seq": 3,
+      "text": "अब pi over one hundred eighty से multiply. One hundred twenty one over three, times pi over one hundred eighty, देता है one hundred twenty one pi over five hundred forty radians. यही answer है, pi में symbolic."
+    },
+    {
+      "seq": 4,
+      "text": "दूसरा example, classic find-the-radius problem."
+    },
+    {
+      "seq": 5,
+      "text": "साठ degrees का central angle thirty seven point four centimetre का arc काटता है. s equals r theta छूने से पहले convert: sixty degrees is pi over three radians."
+    },
+    {
+      "seq": 6,
+      "text": "अब r equals s over theta, यानी thirty seven point four divided by pi over three. Pi को twenty two over seven लेने पर, ये आता है thirty five point seven centimetres."
+    },
+    {
+      "seq": 7,
+      "text": "<whisper>इसका ध्यान रखिए:</whisper> यहाँ सबसे बड़ी ग़लती है sixty को सीधे s equals r theta में डाल देना बिना convert किए. Angle हमेशा पहले radians में भेजिए."
+    }
+  ]
+}

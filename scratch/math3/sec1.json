@@ -1,0 +1,162 @@
+{
+  "id": "a23e03bc-2892-42be-ac3c-2e734d08f39a",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 1,
+  "section_type": "concept",
+  "subtopic": "01 · Angle Measurement and Radians",
+  "title": "Why degrees are arbitrary and the radian is the circle's own ruler",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Degrees vs radians: whose ruler?",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "A degree is 1/360 of a full turn. Why 360? A Babylonian convention — nothing about a circle demands it.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "A radian uses the circle itself: walk along the rim a distance equal to the radius, and the angle you sweep is 1 radian.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"200\" cy=\"150\" r=\"90\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"200\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"200\" y1=\"150\" x2=\"248.6\" y2=\"74.3\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 290 150 A 90 90 0 0 0 248.6 74.3\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3.5\"/><circle cx=\"200\" cy=\"150\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"188\" y=\"170\" font-size=\"14\" fill=\"#1e293b\">O</text><text x=\"295\" y=\"155\" font-size=\"14\" fill=\"#1e293b\">A</text><text x=\"252\" y=\"70\" font-size=\"14\" fill=\"#1e293b\">B</text><text x=\"235\" y=\"128\" font-size=\"12\" fill=\"#1e293b\">r</text><text x=\"300\" y=\"105\" font-size=\"12\" fill=\"#dc2626\">arc AB = radius</text><text x=\"120\" y=\"120\" font-size=\"13\" fill=\"#2563eb\">angle AOB = 1 rad</text><text x=\"120\" y=\"138\" font-size=\"12\" fill=\"#2563eb\">&#8776; 57.3&#176;</text></svg>",
+      "type": "diagram",
+      "caption": "One radian: arc length equal to the radius",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "1 radian ≈ 57.3° — a little less than 60°.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "Radian = arc ÷ radius = length ÷ length, so it is a pure number with no units.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "The whole rim is 2πr, i.e. 2π radius-lengths, so one full turn = $2\\pi$ radians.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "Anticlockwise rotation is a positive angle; clockwise is negative.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_1.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_1.mp3",
+  "duration_sec_english": 120.31,
+  "duration_sec_hinglish": 109.3,
+  "board_reveal_at_english": [
+    0.0,
+    5.29,
+    29.1,
+    44.71,
+    57.17,
+    67.93,
+    88.06,
+    106.92
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    4.35,
+    25.86,
+    41.98,
+    53.85,
+    64.26,
+    80.13,
+    96.68
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's begin the whole chapter with one honest question about angles."
+    },
+    {
+      "seq": 2,
+      "text": "You've always measured angles in degrees, but think about it: why exactly three hundred sixty parts in a full turn? The answer is just history. The Babylonians liked three hundred sixty because it divides so neatly. There is nothing about a circle that wants to be cut into that many pieces. A degree is a convention, like measuring cloth in cubits."
+    },
+    {
+      "seq": 3,
+      "text": "The radian throws away the invented number and lets the circle measure itself. Take any circle, walk along its edge a distance exactly equal to the radius, and the angle you've turned through, seen from the centre, is defined as one radian."
+    },
+    {
+      "seq": 4,
+      "text": "<curious>Here is that idea drawn out.</curious> The bent arc from A to B has the same length as the straight radius, and the angle it opens up at the centre O is precisely one radian."
+    },
+    {
+      "seq": 5,
+      "text": "Notice the size: one radian is about fifty seven point three degrees, a bit under sixty. Keep that picture, it's your sanity check for the whole chapter."
+    },
+    {
+      "seq": 6,
+      "text": "And here is the deep point. A radian is arc length divided by radius, that is, a length divided by a length. The units cancel completely, so a radian is a pure number. This is why later it can sit inside derivatives and power series where a degree never could."
+    },
+    {
+      "seq": 7,
+      "text": "Because the entire rim measures two pi radius-lengths, one complete turn is two pi radians. Half a turn is pi, a quarter turn is pi over two. The pi isn't decoration, it's literally how many radius-lengths wrap around the circle, halved."
+    },
+    {
+      "seq": 8,
+      "text": "One more convention we lock in now: rotating anticlockwise gives a positive angle, clockwise gives a negative one. An old clock's hands move clockwise, so by our rule they move in the negative direction."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Chapter की शुरुआत एक simple सवाल से करते हैं angles के बारे में."
+    },
+    {
+      "seq": 2,
+      "text": "आपने हमेशा angles को degrees में measure किया है, but सोचिए: एक full turn में तीन सौ साठ parts ही क्यों? इसका जवाब सिर्फ़ history है. Babylonians को तीन सौ साठ पसंद था क्योंकि ये आसानी से divide हो जाता है. Circle में ऐसा कुछ नहीं जो इतने pieces माँगे. Degree बस एक convention है."
+    },
+    {
+      "seq": 3,
+      "text": "<curious>Radian इस बनाए हुए number को हटा देता है</curious> और circle को खुद measure करने देता है. किसी भी circle का edge उतना चलिए जितना उसका radius है, और centre से देखा हुआ वो angle define होता है one radian."
+    },
+    {
+      "seq": 4,
+      "text": "यही idea यहाँ बना हुआ है. A से B तक का ये arc बिल्कुल radius जितना लंबा है, और centre O पर जो angle खुलता है वो exactly one radian है."
+    },
+    {
+      "seq": 5,
+      "text": "Size देखिए: one radian लगभग सत्तावन point three degrees होता है, साठ से थोड़ा कम. ये picture याद रखिए, पूरे chapter का sanity check यही है."
+    },
+    {
+      "seq": 6,
+      "text": "अब deep point. Radian का मतलब है arc length divided by radius, यानी length divided by length. Units पूरी तरह cancel हो जाती हैं, so radian एक pure number है. इसीलिए बाद में ये derivatives और series के अंदर बैठ सकता है, degree नहीं."
+    },
+    {
+      "seq": 7,
+      "text": "पूरा rim two pi radius-lengths का होता है, so one complete turn is two pi radians. आधा turn pi, quarter turn pi over two. ये pi सजावट नहीं, ये गिनती है कि कितने radius circle के around fit होते हैं, आधा किया हुआ."
+    },
+    {
+      "seq": 8,
+      "text": "एक और convention अभी fix कर लेते हैं: anticlockwise घुमाने पर angle positive, clockwise पर negative. पुरानी clock के हाथ clockwise चलते हैं, so हमारे rule से वो negative direction में हैं."
+    }
+  ]
+}

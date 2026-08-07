@@ -1,0 +1,159 @@
+{
+  "id": "c184745b-22e4-44cc-976f-65ee5ef82781",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 31,
+  "section_type": "formulas",
+  "subtopic": "05 · Trigonometric Identities and Compound Angle Formulas",
+  "title": "Product-to-sum, sum-to-product, amplitude and conditional identities",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Product ↔ Sum",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "2\\sin A\\cos B = \\sin(A+B)+\\sin(A-B),\\quad 2\\cos A\\cos B=\\cos(A+B)+\\cos(A-B)",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "2\\sin A\\sin B = \\cos(A-B)-\\cos(A+B)",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Sum → Product",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\sin C+\\sin D = 2\\sin\\tfrac{C+D}{2}\\cos\\tfrac{C-D}{2},\\quad \\cos C+\\cos D = 2\\cos\\tfrac{C+D}{2}\\cos\\tfrac{C-D}{2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\cos C-\\cos D = -2\\sin\\tfrac{C+D}{2}\\sin\\tfrac{C-D}{2}",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Amplitude and conditional (A + B + C = π)",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "type": "formula",
+      "latex": "a\\cos x+b\\sin x=R\\cos(x-\\alpha),\\ R=\\sqrt{a^2+b^2};\\qquad \\tan A+\\tan B+\\tan C=\\tan A\\tan B\\tan C",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_31.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_31.mp3",
+  "duration_sec_english": 88.82,
+  "duration_sec_hinglish": 79.08,
+  "board_reveal_at_english": [
+    0.0,
+    7.0,
+    27.14,
+    35.33,
+    38.57,
+    54.19,
+    64.51,
+    67.33
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    8.19,
+    24.15,
+    30.89,
+    33.88,
+    46.42,
+    56.15,
+    59.22
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "The last formula block: turning products into sums and back, plus two headline results."
+    },
+    {
+      "seq": 2,
+      "text": "Product to sum: twice sine A cosine B is sine of A plus B plus sine of A minus B; twice cosine A cosine B is cosine of A plus B plus cosine of A minus B. The leading two is part of the formula, never drop it."
+    },
+    {
+      "seq": 3,
+      "text": "And twice sine A sine B is cosine of A minus B minus cosine of A plus B."
+    },
+    {
+      "seq": 4,
+      "text": "Now run it backwards, sum to product."
+    },
+    {
+      "seq": 5,
+      "text": "Sine C plus sine D is two sine of the half-sum times cosine of the half-difference; cosine C plus cosine D is two cosine of the half-sum times cosine of the half-difference."
+    },
+    {
+      "seq": 6,
+      "text": "The one to watch: cosine C minus cosine D carries a leading minus, it's minus two sine of the half-sum times sine of the half-difference."
+    },
+    {
+      "seq": 7,
+      "text": "Finally, two headline tools."
+    },
+    {
+      "seq": 8,
+      "text": "The amplitude form, a cosine x plus b sine x equals R cosine of x minus alpha with R the root of a squared plus b squared, instantly gives max and min; and the conditional identity, true only when A plus B plus C is pi, says the sum of tangents equals their product."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "आख़िरी formula block: products को sums में बदलना और वापस, plus दो headline results."
+    },
+    {
+      "seq": 2,
+      "text": "Product to sum: twice sine A cosine B है sine of A plus B plus sine of A minus B; twice cosine A cosine B है cosine of A plus B plus cosine of A minus B. Leading two formula का हिस्सा है, कभी मत छोड़िए."
+    },
+    {
+      "seq": 3,
+      "text": "और twice sine A sine B है cosine of A minus B minus cosine of A plus B."
+    },
+    {
+      "seq": 4,
+      "text": "अब इसे उल्टा चलाइए, sum to product."
+    },
+    {
+      "seq": 5,
+      "text": "Sine C plus sine D है two sine of half-sum times cosine of half-difference; cosine C plus cosine D है two cosine of half-sum times cosine of half-difference."
+    },
+    {
+      "seq": 6,
+      "text": "जिसका ध्यान रखना है: cosine C minus cosine D leading minus रखता है, ये है minus two sine of half-sum times sine of half-difference."
+    },
+    {
+      "seq": 7,
+      "text": "आख़िर में, दो headline tools."
+    },
+    {
+      "seq": 8,
+      "text": "Amplitude form, a cosine x plus b sine x equals R cosine of x minus alpha, R root of a squared plus b squared के साथ, तुरंत max और min देता है; और conditional identity, सिर्फ़ तभी सच जब A plus B plus C is pi, कहती है sum of tangents बराबर उनका product."
+    }
+  ]
+}

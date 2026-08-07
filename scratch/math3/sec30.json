@@ -1,0 +1,176 @@
+{
+  "id": "8edcdd10-2d37-4811-8352-af4af8a15821",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 30,
+  "section_type": "formulas",
+  "subtopic": "05 · Trigonometric Identities and Compound Angle Formulas",
+  "title": "Double, half, triple and the t-substitution",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Double-angle",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\sin 2A = 2\\sin A\\cos A,\\qquad \\tan 2A = \\dfrac{2\\tan A}{1-\\tan^2 A}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\cos 2A = \\cos^2 A - \\sin^2 A = 2\\cos^2 A - 1 = 1 - 2\\sin^2 A",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Half-angle / power reduction",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "1+\\cos A = 2\\cos^2\\tfrac{A}{2},\\qquad 1-\\cos A = 2\\sin^2\\tfrac{A}{2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "The t = tan(A/2) substitution",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\sin A = \\dfrac{2t}{1+t^2},\\quad \\cos A = \\dfrac{1-t^2}{1+t^2},\\quad \\tan A = \\dfrac{2t}{1-t^2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "Triple-angle",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 9,
+      "type": "formula",
+      "latex": "\\sin 3A = 3\\sin A - 4\\sin^3 A,\\qquad \\cos 3A = 4\\cos^3 A - 3\\cos A",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_30.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_30.mp3",
+  "duration_sec_english": 85.63,
+  "duration_sec_hinglish": 85.37,
+  "board_reveal_at_english": [
+    0.0,
+    7.25,
+    16.04,
+    28.93,
+    34.3,
+    46.34,
+    52.57,
+    67.75,
+    74.07
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.89,
+    14.93,
+    28.84,
+    35.75,
+    46.85,
+    51.8,
+    69.38,
+    75.18
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Set B equal to A in the sum formulas and the double-angle family drops out."
+    },
+    {
+      "seq": 2,
+      "text": "Sine two A is two sine A cosine A, and tangent two A is two tangent A over one minus tangent squared A."
+    },
+    {
+      "seq": 3,
+      "text": "Cosine two A has three faces: cosine squared A minus sine squared A, or two cosine squared A minus one, or one minus two sine squared A. Choose whichever matches what you're given."
+    },
+    {
+      "seq": 4,
+      "text": "Rearranging cosine two A gives the half-angle, or power-reduction, forms."
+    },
+    {
+      "seq": 5,
+      "text": "One plus cosine A is two cosine squared of A over two; one minus cosine A is two sine squared of A over two, the workhorses for integrals later."
+    },
+    {
+      "seq": 6,
+      "text": "Next, the t-substitution, with t as tangent of A over two."
+    },
+    {
+      "seq": 7,
+      "text": "It turns any rational trig expression into a rational function of t: sine A is two t over one plus t squared, cosine A is one minus t squared over one plus t squared, tangent A is two t over one minus t squared."
+    },
+    {
+      "seq": 8,
+      "text": "And the triple-angle pair, built from three A equals two A plus A."
+    },
+    {
+      "seq": 9,
+      "text": "Sine three A is three sine A minus four sine cubed A, and cosine three A is four cosine cubed A minus three cosine A."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Sum formulas में B को A के बराबर कीजिए और double-angle family निकल आती है."
+    },
+    {
+      "seq": 2,
+      "text": "Sine two A है two sine A cosine A, और tangent two A है two tangent A over one minus tangent squared A."
+    },
+    {
+      "seq": 3,
+      "text": "Cosine two A के तीन चेहरे हैं: cosine squared A minus sine squared A, या two cosine squared A minus one, या one minus two sine squared A. जो दिया है उससे match करता वाला चुनिए."
+    },
+    {
+      "seq": 4,
+      "text": "Cosine two A को rearrange करने से half-angle, या power-reduction, forms मिलते हैं."
+    },
+    {
+      "seq": 5,
+      "text": "One plus cosine A है two cosine squared of A over two; one minus cosine A है two sine squared of A over two, बाद में integrals के workhorses."
+    },
+    {
+      "seq": 6,
+      "text": "अगला, t-substitution, t को tangent of A over two लेकर."
+    },
+    {
+      "seq": 7,
+      "text": "ये किसी भी rational trig expression को t के rational function में बदल देता है: sine A है two t over one plus t squared, cosine A one minus t squared over one plus t squared, tangent A two t over one minus t squared."
+    },
+    {
+      "seq": 8,
+      "text": "और triple-angle pair, three A equals two A plus A से बना."
+    },
+    {
+      "seq": 9,
+      "text": "Sine three A है three sine A minus four sine cubed A, और cosine three A है four cosine cubed A minus three cosine A."
+    }
+  ]
+}

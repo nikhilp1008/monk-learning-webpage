@@ -1,0 +1,143 @@
+{
+  "id": "8b0babae-bf2f-455b-980a-0b03f1c2ea25",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 24,
+  "section_type": "worked_examples",
+  "subtopic": "04 · Graphs and Periodicity of Trigonometric Functions",
+  "title": "Composite and identity periods",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 4 — period of |sin x| + |cos x|",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Each of $|\\sin x|,|\\cos x|$ has period $\\pi$. But $|\\cos x|=|\\sin(x+\\tfrac{\\pi}{2})|$, so the sum repeats sooner.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "f\\!\\left(x+\\tfrac{\\pi}{2}\\right)=|\\cos x|+|\\sin x| = f(x)\\ \\Rightarrow\\ T=\\tfrac{\\pi}{2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "A hidden shrink: the sum's period is smaller than either part. Don't just take the larger.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Example 5 — period of sin²x",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\sin^2 x = \\frac{1-\\cos 2x}{2},\\quad \\cos 2x\\ \\text{has period}\\ \\tfrac{2\\pi}{2}=\\pi",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "So $\\sin^2 x$ has period $\\pi$, not $2\\pi$ \\u2014 squaring halves the period here.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_24.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_24.mp3",
+  "duration_sec_english": 77.33,
+  "duration_sec_hinglish": 72.29,
+  "board_reveal_at_english": [
+    0.0,
+    5.21,
+    24.41,
+    40.02,
+    49.58,
+    53.93,
+    67.5
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.29,
+    23.04,
+    38.4,
+    46.85,
+    50.43,
+    63.83
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "These two show that periods can shrink in ways you must watch for."
+    },
+    {
+      "seq": 2,
+      "text": "Take the absolute value of sine x plus the absolute value of cosine x. Each absolute value on its own has period pi. But the absolute value of cosine x is the same as the absolute value of sine of x plus pi over two, so the two swap roles."
+    },
+    {
+      "seq": 3,
+      "text": "Push x forward by pi over two and the sum returns to itself: it becomes absolute cosine plus absolute sine, exactly f of x again. No smaller shift works, so the period is pi over two."
+    },
+    {
+      "seq": 4,
+      "text": "This is a hidden shrink. The sum repeats faster than either piece alone, so never just take the larger of the two periods, check carefully."
+    },
+    {
+      "seq": 5,
+      "text": "Example five: the period of sine squared x."
+    },
+    {
+      "seq": 6,
+      "text": "Use the power-reduction identity: sine squared x equals one minus cosine two x, all over two. The only moving part is cosine two x, which has period two pi over two, that is pi."
+    },
+    {
+      "seq": 7,
+      "text": "So sine squared x has period pi, not two pi. Squaring the sine has quietly halved its period."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "ये दोनों दिखाते हैं कि periods ऐसे तरीक़ों से shrink हो सकते हैं जिनका ध्यान ज़रूरी है."
+    },
+    {
+      "seq": 2,
+      "text": "Absolute value of sine x plus absolute value of cosine x लीजिए. हर absolute value अकेले का period pi है. पर absolute value of cosine x वही है जो absolute value of sine of x plus pi over two, so दोनों roles swap कर लेते हैं."
+    },
+    {
+      "seq": 3,
+      "text": "x को pi over two आगे बढ़ाइए और sum ख़ुद पर लौट आता है: बनता है absolute cosine plus absolute sine, फिर exactly f of x. इससे छोटा shift काम नहीं करता, so period pi over two."
+    },
+    {
+      "seq": 4,
+      "text": "ये hidden shrink है. Sum किसी भी अकेले piece से तेज़ repeat होता है, so कभी सिर्फ़ बड़ा वाला period मत लीजिए, ध्यान से check कीजिए."
+    },
+    {
+      "seq": 5,
+      "text": "Example पाँच: sine squared x का period."
+    },
+    {
+      "seq": 6,
+      "text": "Power-reduction identity use कीजिए: sine squared x equals one minus cosine two x, पूरे over two. एकमात्र moving part है cosine two x, जिसका period two pi over two, यानी pi."
+    },
+    {
+      "seq": 7,
+      "text": "So sine squared x का period pi है, two pi नहीं. Sine को square करने ने चुपचाप उसका period आधा कर दिया."
+    }
+  ]
+}

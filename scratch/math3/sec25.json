@@ -1,0 +1,143 @@
+{
+  "id": "175d0d2f-3a62-452b-a65d-9dbcc628201f",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 25,
+  "section_type": "worked_examples",
+  "subtopic": "04 · Graphs and Periodicity of Trigonometric Functions",
+  "title": "Counting solutions and reading an inequality off the graph",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 6 — how many solutions of |sin x| = |cos x| in [0, 2π]?",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$|\\sin x|=|\\cos x| \\iff |\\tan x|=1$, the four points where the two 'tent' graphs cross.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "x=\\tfrac{\\pi}{4},\\ \\tfrac{3\\pi}{4},\\ \\tfrac{5\\pi}{4},\\ \\tfrac{7\\pi}{4}\\ \\Rightarrow\\ 4\\ \\text{solutions}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Example 7 — solve sin x ≥ 1/2 on [0, 2π]",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Draw the line $y=\\tfrac12$ and shade where the sine curve sits on or above it, between its two crossings.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "x\\in\\left[\\tfrac{\\pi}{6},\\,\\tfrac{5\\pi}{6}\\right]",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "General solution: x ∈ [2nπ + π/6, 2nπ + 5π/6], n an integer.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_25.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_25.mp3",
+  "duration_sec_english": 69.48,
+  "duration_sec_hinglish": 70.25,
+  "board_reveal_at_english": [
+    0.0,
+    4.52,
+    20.65,
+    30.29,
+    37.72,
+    49.24,
+    55.21
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.12,
+    20.74,
+    31.4,
+    38.4,
+    49.49,
+    55.98
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Graphs are the fastest way to count solutions and solve inequalities."
+    },
+    {
+      "seq": 2,
+      "text": "How many x in zero to two pi satisfy absolute sine equals absolute cosine? Divide through and it becomes the absolute value of tangent equals one, the points where the two tent-shaped graphs cross."
+    },
+    {
+      "seq": 3,
+      "text": "Those are pi over four, three pi over four, five pi over four, and seven pi over four, four solutions in one lap."
+    },
+    {
+      "seq": 4,
+      "text": "Example seven, an inequality: solve sine x at least one half on zero to two pi."
+    },
+    {
+      "seq": 5,
+      "text": "Draw the horizontal line y equals one half, and shade every place the sine curve sits on or above it. That's the stretch between its two crossing points."
+    },
+    {
+      "seq": 6,
+      "text": "Reading it off, x runs from pi over six to five pi over six, inclusive."
+    },
+    {
+      "seq": 7,
+      "text": "And by periodicity the general answer repeats every full turn: x lies between two n pi plus pi over six and two n pi plus five pi over six, for any integer n."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Graphs solutions गिनने और inequalities solve करने का सबसे तेज़ तरीक़ा हैं."
+    },
+    {
+      "seq": 2,
+      "text": "Zero से two pi में कितने x satisfy करते हैं absolute sine equals absolute cosine? Divide कीजिए और बनता है absolute value of tangent equals one, वो points जहाँ दोनों tent-shaped graphs cross करते हैं."
+    },
+    {
+      "seq": 3,
+      "text": "वो हैं pi over four, three pi over four, five pi over four, और seven pi over four, एक lap में four solutions."
+    },
+    {
+      "seq": 4,
+      "text": "Example सात, एक inequality: solve कीजिए sine x कम से कम one half, zero से two pi पर."
+    },
+    {
+      "seq": 5,
+      "text": "Horizontal line y equals one half खींचिए, और हर वो जगह shade कीजिए जहाँ sine curve उस पर या ऊपर बैठा है. वो है इसके दो crossing points के बीच का हिस्सा."
+    },
+    {
+      "seq": 6,
+      "text": "पढ़ने पर, x चलता है pi over six से five pi over six तक, दोनों शामिल."
+    },
+    {
+      "seq": 7,
+      "text": "और periodicity से general answer हर full turn पर repeat: x होता है two n pi plus pi over six और two n pi plus five pi over six के बीच, किसी भी integer n के लिए."
+    }
+  ]
+}

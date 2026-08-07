@@ -1,0 +1,143 @@
+{
+  "id": "bc44ea9b-6804-41f6-ab3e-ed3daafc2b88",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 41,
+  "section_type": "worked_examples",
+  "subtopic": "06 · Trigonometric Equations and Solutions",
+  "title": "The squaring trap done right, and a range squeeze",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Example 6 — solve sin x + cos x = 1 (without squaring)",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Amplitude form: $\\sin x+\\cos x=\\sqrt2\\,\\sin(x+\\tfrac{\\pi}{4})$, so $\\sin(x+\\tfrac{\\pi}{4})=\\tfrac{1}{\\sqrt2}=\\sin\\tfrac{\\pi}{4}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "x = 2n\\pi\\quad\\text{or}\\quad x = 2n\\pi + \\tfrac{\\pi}{2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Squaring instead gives sin 2x = 0, which admits x = π — but sinπ + cosπ = −1. Back-checking removes it.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Example 7 — range squeeze: 2sin²x + sin²2x = 2",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "With $\\sin^2 2x = 4\\sin^2 x\\cos^2 x$ and $s=\\sin^2 x$: $2s+4s(1-s)=2 \\Rightarrow (2s-1)(s-1)=0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "x = n\\pi \\pm \\tfrac{\\pi}{4}\\quad\\text{or}\\quad x=(2n+1)\\tfrac{\\pi}{2}",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_41.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_41.mp3",
+  "duration_sec_english": 102.67,
+  "duration_sec_hinglish": 101.83,
+  "board_reveal_at_english": [
+    0.0,
+    4.78,
+    26.54,
+    35.93,
+    56.15,
+    63.74,
+    85.16
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.29,
+    27.05,
+    35.75,
+    54.78,
+    61.18,
+    79.96
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "The finale: how to beat the squaring trap, and a neat substitution."
+    },
+    {
+      "seq": 2,
+      "text": "Example six: solve sine x plus cosine x equals one. The safe route avoids squaring entirely, use the amplitude form. Sine x plus cosine x is root two times sine of x plus pi over four, so sine of x plus pi over four equals one over root two, which is sine pi over four."
+    },
+    {
+      "seq": 3,
+      "text": "Solving that gives x equals two n pi, or x equals two n pi plus pi over two. Clean, with no fakes."
+    },
+    {
+      "seq": 4,
+      "text": "Contrast the squaring route: square the original and you get sine two x equals zero, which admits x equal to pi. But sine pi plus cosine pi is minus one, not one, so pi is extraneous. Only back-checking removes it, which is why the amplitude form is safer."
+    },
+    {
+      "seq": 5,
+      "text": "Example seven, a range squeeze: two sine squared x plus sine squared two x equals two."
+    },
+    {
+      "seq": 6,
+      "text": "Write sine squared two x as four sine squared x cosine squared x, and let s be sine squared x. Then two s plus four s times one minus s equals two, which tidies to two s minus one, times s minus one, equals zero."
+    },
+    {
+      "seq": 7,
+      "text": "So s is one half or s is one. Sine squared x equals one half gives x equals n pi plus or minus pi over four; sine squared x equals one means cosine x is zero, giving x equals two n plus one, times pi over two."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Finale: squaring trap को कैसे हराएँ, और एक neat substitution."
+    },
+    {
+      "seq": 2,
+      "text": "Example छह: solve कीजिए sine x plus cosine x equals one. Safe route squaring से पूरी तरह बचता है, amplitude form use कीजिए. Sine x plus cosine x है root two times sine of x plus pi over four, so sine of x plus pi over four equals one over root two, जो sine pi over four है."
+    },
+    {
+      "seq": 3,
+      "text": "इसे solve करने पर x equals two n pi, या x equals two n pi plus pi over two. साफ़, कोई नक़ली नहीं."
+    },
+    {
+      "seq": 4,
+      "text": "Squaring route से तुलना: original को square कीजिए और मिलता sine two x equals zero, जिसमें x equal to pi है. पर sine pi plus cosine pi है minus one, one नहीं, so pi extraneous है. सिर्फ़ back-checking इसे हटाता है, इसीलिए amplitude form safer है."
+    },
+    {
+      "seq": 5,
+      "text": "Example सात, एक range squeeze: two sine squared x plus sine squared two x equals two."
+    },
+    {
+      "seq": 6,
+      "text": "Sine squared two x को four sine squared x cosine squared x लिखिए, और s को sine squared x लीजिए. तो two s plus four s times one minus s equals two, जो साफ़ होकर two s minus one, times s minus one, equals zero बनता है."
+    },
+    {
+      "seq": 7,
+      "text": "So s है one half या s है one. Sine squared x equals one half देता x equals n pi plus or minus pi over four; sine squared x equals one मतलब cosine x zero, देता x equals two n plus one, times pi over two."
+    }
+  ]
+}

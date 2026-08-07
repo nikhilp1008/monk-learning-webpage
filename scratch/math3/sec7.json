@@ -1,0 +1,144 @@
+{
+  "id": "1dfc624a-2389-4cf5-aa4d-8357dbecca6d",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 7,
+  "section_type": "tips",
+  "subtopic": "01 · Angle Measurement and Radians",
+  "title": "The pitfalls that quietly cost marks",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Traps in angle measurement",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "#1 Signature trap: using degrees inside s = rθ or A = ½ r²θ. Convert to radians first — always.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "#2 Flipping the factor. Degree to radian uses π/180; radian to degree uses 180/π. They are reciprocals.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "#3 A radian is dimensionless \\u2014 don't 'cancel radians' like metres. In $\\omega=\\theta/t$ you simply get $\\text{s}^{-1}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "#4 DMS is base-60: 0.5° is 30′, not 50′; and 20′ is one-third of a degree.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "#5 Clockwise is a negative angle. #6 Check your calculator's DEG vs RAD mode before numerical work.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Sanity check: 1 rad ≈ 57°. A huge 'radian' answer for a small angle means you flipped the factor.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_7.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_7.mp3",
+  "duration_sec_english": 95.86,
+  "duration_sec_hinglish": 79.37,
+  "board_reveal_at_english": [
+    0.0,
+    5.8,
+    26.71,
+    39.42,
+    54.61,
+    70.31,
+    83.97
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.03,
+    20.99,
+    32.85,
+    46.25,
+    59.22,
+    69.63
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Before we leave radians, here are the traps that decide the easy marks."
+    },
+    {
+      "seq": 2,
+      "text": "The signature trap, number one: using degrees inside s equals r theta or the sector area formula. Both are defined for theta in radians. Convert first, every single time. A wrong answer about fifty seven times too large is the fingerprint of this error."
+    },
+    {
+      "seq": 3,
+      "text": "Number two, flipping the conversion factor. Degree to radian uses pi over one eighty; radian to degree uses one eighty over pi. They're reciprocals, so mixing them up scales your answer wildly."
+    },
+    {
+      "seq": 4,
+      "text": "Number three, treating radian as a unit you carry along. It's dimensionless. In omega equals theta over time, the radian vanishes and you're left with per-second. Don't cancel radians as if they were metres."
+    },
+    {
+      "seq": 5,
+      "text": "Number four, the base-sixty arithmetic of degrees, minutes, seconds. Half a degree is thirty minutes, not fifty. Twenty minutes is one third of a degree. Convert minutes and seconds to fractions before multiplying."
+    },
+    {
+      "seq": 6,
+      "text": "Number five, clockwise rotation is negative. And number six, when you start numerical trig, check whether your calculator is in degree or radian mode, wrong mode gives nonsense."
+    },
+    {
+      "seq": 7,
+      "text": "And the one-second sanity check to keep forever: one radian is about fifty seven degrees. If a small angle gives you a huge number of radians, you almost certainly flipped the factor."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Radians छोड़ने से पहले, वो traps जो आसान marks तय करते हैं."
+    },
+    {
+      "seq": 2,
+      "text": "Signature trap, number one: degrees को s equals r theta या sector area formula के अंदर use करना. दोनों theta radians के लिए बने हैं. पहले convert, हर बार. करीब सत्तावन गुना बड़ा answer इसी ग़लती का fingerprint है."
+    },
+    {
+      "seq": 3,
+      "text": "Number two, conversion factor flip करना. Degree to radian pi over one eighty; radian to degree one eighty over pi. Reciprocals हैं, so mix करने पर answer बुरी तरह scale हो जाता है."
+    },
+    {
+      "seq": 4,
+      "text": "Number three, radian को unit मानकर ढोना. ये dimensionless है. Omega equals theta over time में radian ग़ायब हो जाता है, बचता है per second. Radians को metres की तरह cancel मत कीजिए."
+    },
+    {
+      "seq": 5,
+      "text": "Number four, degrees minutes seconds की base sixty arithmetic. आधा degree तीस minutes है, पचास नहीं. बीस minutes एक तिहाई degree है. Multiply से पहले minutes seconds को fractions में बदलिए."
+    },
+    {
+      "seq": 6,
+      "text": "Number five, clockwise negative है. और number six, numerical trig शुरू करते ही check कीजिए calculator degree mode में है या radian, ग़लत mode बकवास देता है."
+    },
+    {
+      "seq": 7,
+      "text": "और एक-second का sanity check हमेशा के लिए: one radian करीब सत्तावन degrees. छोटे angle पर बहुत बड़ा radian number आया तो factor flip हो गया है."
+    }
+  ]
+}

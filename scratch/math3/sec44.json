@@ -1,0 +1,95 @@
+{
+  "id": "8c852edb-9333-4010-a384-e18a7727afea",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 44,
+  "section_type": "cheat_sheet",
+  "subtopic": null,
+  "title": "Chapter cheat sheet — golden rules and traps",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Fast-recall golden rules",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Angles: any arc / sector / calculus formula assumes radians. Convert first, always.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "Functions: magnitude from the identity, sign from the quadrant — always two steps. Range-check every answer.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Allied angles: odd multiple of 90° ⇒ swap to co-function; sign from the quadrant via ASTC.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "text": "Graphs: divide (don't multiply) for the period; tangent's period is π; include the vertical shift in the range.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "Identities: reconstruct everything from cos(A−B); watch every ±; amplitude is √(a²+b²), never a+b.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "Equations: factor (never divide); back-check after squaring; keep the n; match the right solution family.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "If a final sin or cos exceeds 1 in magnitude, or a period looks multiplied not divided — stop and recheck.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/english_sec_44.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p2/hinglish_sec_44.mp3",
+  "duration_sec_english": 78.07,
+  "duration_sec_hinglish": 75.77,
+  "board_reveal_at_english": [
+    0.0,
+    5.46,
+    13.74,
+    21.25,
+    30.12,
+    39.42,
+    53.85,
+    63.32
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    5.38,
+    12.8,
+    20.74,
+    30.12,
+    37.8,
+    49.75,
+    59.99
+  ],
+  "part": 2,
+  "segments_english": null,
+  "segments_hinglish": null
+}

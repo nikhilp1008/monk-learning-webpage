@@ -1,0 +1,178 @@
+{
+  "id": "887a72a3-6a68-4230-b776-adcba4b574cd",
+  "chapter_id": "fab8d5c4-68ad-5772-8888-f5b1cd687633",
+  "position": 2,
+  "section_type": "concept",
+  "subtopic": "01 · Angle Measurement and Radians",
+  "title": "The cornerstone definition and the master conversion",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "The cornerstone definition",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\theta = \\dfrac{s}{r}\\quad(\\theta\\ \\text{in radians})",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 3,
+      "text": "Here $s$ is arc length and $r$ is radius. Both are lengths, so $\\theta$ is dimensionless \\u2014 a pure number.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 4,
+      "text": "Master conversion relation",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\pi\\ \\text{radian} = 180^\\circ",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 6,
+      "text": "Degree to radian: multiply by $\\frac{\\pi}{180}$. Radian to degree: multiply by $\\frac{180}{\\pi}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 7,
+      "text": "1° ≈ 0.01746 rad; 1 rad ≈ 57°16′. The two factors are reciprocals.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 0
+    },
+    {
+      "seq": 8,
+      "text": "Standard angles: $30^\\circ=\\frac{\\pi}{6}$, $45^\\circ=\\frac{\\pi}{4}$, $60^\\circ=\\frac{\\pi}{3}$, $90^\\circ=\\frac{\\pi}{2}$, $180^\\circ=\\pi$, $360^\\circ=2\\pi$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 9,
+      "text": "A bare number in this chapter always means radians.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 0
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/english_sec_2.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch03_trigonometric-functions/p1/hinglish_sec_2.mp3",
+  "duration_sec_english": 96.89,
+  "duration_sec_hinglish": 83.5,
+  "board_reveal_at_english": [
+    0.0,
+    4.95,
+    17.49,
+    32.34,
+    37.55,
+    44.03,
+    58.2,
+    72.79,
+    88.58
+  ],
+  "board_reveal_at_hinglish": [
+    0.0,
+    3.75,
+    14.59,
+    27.31,
+    32.17,
+    38.91,
+    50.18,
+    63.49,
+    76.54
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Now the one definition everything else in this subtopic is built on."
+    },
+    {
+      "seq": 2,
+      "text": "The angle theta equals the arc length s divided by the radius r, with theta in radians. Memorise this single relation, not its consequences."
+    },
+    {
+      "seq": 3,
+      "text": "Look at the right side: s and r are both lengths, so their ratio has no dimension. That is the clean, formal reason a radian is a pure number, and it's the fact that quietly rescues you in Class twelve calculus."
+    },
+    {
+      "seq": 4,
+      "text": "From that definition comes the one relation you truly need for conversions."
+    },
+    {
+      "seq": 5,
+      "text": "Pi radians equal one hundred eighty degrees. Everything else is just scaling this."
+    },
+    {
+      "seq": 6,
+      "text": "To go from degrees to radians, multiply by pi over one hundred eighty. To go the other way, multiply by one hundred eighty over pi. Same relation, read in two directions."
+    },
+    {
+      "seq": 7,
+      "text": "<whisper>Two benchmarks worth burning in:</whisper> one degree is about zero point zero one seven radian, and one radian is about fifty seven degrees sixteen minutes. The two conversion factors are simply reciprocals of each other."
+    },
+    {
+      "seq": 8,
+      "text": "And lock the standard table cold: thirty is pi over six, forty five is pi over four, sixty is pi over three, ninety is pi over two, one hundred eighty is pi, three hundred sixty is two pi."
+    },
+    {
+      "seq": 9,
+      "text": "From here on, a bare number with no degree sign always means radians — no exceptions in this chapter."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "अब वो एक definition जिस पर इस subtopic का सब कुछ खड़ा है."
+    },
+    {
+      "seq": 2,
+      "text": "Angle theta equals arc length s divided by radius r, theta radians में. सिर्फ़ यही एक relation याद कीजिए, इसके consequences नहीं."
+    },
+    {
+      "seq": 3,
+      "text": "Right side देखिए: s और r दोनों lengths हैं, so इनके ratio का कोई dimension नहीं. यही clean reason है कि radian एक pure number है, और यही fact Class twelve calculus में आपको बचाता है."
+    },
+    {
+      "seq": 4,
+      "text": "इसी definition से वो एक relation निकलता है जो conversions के लिए ज़रूरी है."
+    },
+    {
+      "seq": 5,
+      "text": "Pi radians बराबर एक सौ अस्सी degrees. बाकी सब बस इसी की scaling है."
+    },
+    {
+      "seq": 6,
+      "text": "Degrees से radians जाने के लिए pi over one hundred eighty से multiply कीजिए. उल्टा जाने के लिए one hundred eighty over pi से. वही relation, दो directions में."
+    },
+    {
+      "seq": 7,
+      "text": "<whisper>दो benchmarks पक्के कर लीजिए:</whisper> one degree करीब zero point zero one seven radian, और one radian करीब सत्तावन degrees सोलह minutes. दोनों factors एक दूसरे के reciprocals हैं."
+    },
+    {
+      "seq": 8,
+      "text": "और standard table बिल्कुल रट लीजिए: तीस pi over six, पैंतालीस pi over four, साठ pi over three, नब्बे pi over two, एक सौ अस्सी pi, तीन सौ साठ two pi."
+    },
+    {
+      "seq": 9,
+      "text": "अब से बिना degree sign वाला bare number हमेशा radians में है, इस chapter में कोई exception नहीं."
+    }
+  ]
+}
