@@ -812,5 +812,96 @@ export function ThreeDAxes({
   );
 }
 
+/* ------------------------------------------------------------------ */
+/* stacked fraction (finally needed — Chapter 1 deferred this)         */
+/* ------------------------------------------------------------------ */
+
+/**
+ * A real stacked fraction — numerator above a horizontal bar, denominator
+ * below. Earlier chapters flattened every fraction inline ("a/b") since
+ * nothing needed more; Chapter 12's derivative definition
+ * (f(x+h)-f(x))/h has a compound numerator where flattening stops being
+ * readable. `numerator`/`denominator` are plain already-translated board
+ * text; `width` is your box-width estimate for the wider of the two (same
+ * estimation rules as any text box — measure/adjust after first render).
+ */
+export function Frac({
+  on,
+  delay = 0,
+  x,
+  y,
+  size,
+  numerator,
+  denominator,
+  width,
+  fill = INK,
+}: {
+  on: boolean;
+  delay?: number;
+  x: number;
+  y: number;
+  size: number;
+  numerator: string;
+  denominator: string;
+  width: number;
+  fill?: string;
+}) {
+  const barY = y - size * 0.35;
+  const numY = barY - size * 0.35;
+  const denY = barY + size * 0.75;
+  return (
+    <Fade on={on} delay={delay}>
+      <T x={x} y={numY} size={size * 0.85} fill={fill} anchor="middle">
+        {numerator}
+      </T>
+      <line x1={x - width / 2} y1={barY} x2={x + width / 2} y2={barY} stroke={fill} strokeWidth={1.6} />
+      <T x={x} y={denY} size={size * 0.85} fill={fill} anchor="middle">
+        {denominator}
+      </T>
+    </Fade>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* limit notation (lim with its condition stacked beneath)             */
+/* ------------------------------------------------------------------ */
+
+/**
+ * "lim" with its condition (e.g. "x→a", "h→0") positioned as a subscript
+ * beneath it, the standard textbook layout — Chapter 12 uses this
+ * constantly, unlike the one-off inline "lim (n→∞)" earlier chapters used
+ * when it appeared only once or twice.
+ */
+export function Limit({
+  on,
+  delay = 0,
+  x,
+  y,
+  size,
+  condition,
+  fill = INK,
+  anchor = "middle",
+}: {
+  on: boolean;
+  delay?: number;
+  x: number;
+  y: number;
+  size: number;
+  condition: string;
+  fill?: string;
+  anchor?: "start" | "middle" | "end";
+}) {
+  return (
+    <Fade on={on} delay={delay}>
+      <T x={x} y={y} size={size} fill={fill} anchor={anchor}>
+        lim
+      </T>
+      <T x={x} y={y + size * 0.62} size={size * 0.5} fill={fill} anchor={anchor}>
+        {condition}
+      </T>
+    </Fade>
+  );
+}
+
 /* re-export the palette/base bits maths scenes reach for most */
 export { INK, MUTED } from "./kit";

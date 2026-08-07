@@ -152,11 +152,14 @@ screenshot). Rule of thumb:
   two things in separate `T`/`Chip` calls with real x-distance between them, don't
   try to encode the space as characters). **`\textstyle`** → ignore, it's a
   LaTeX typesetting hint with no board meaning.
-- **No true 2-D math yet** (stacked fractions, `lim`/`Σ` with sub/superscript
-  bounds, integral signs) — Chapter 1 doesn't need it; when a chapter that does
-  (Limits & Derivatives, Statistics) starts, add a `Frac`/stacked-bounds primitive
-  to `math-kit.tsx` then, verified the same way. Until it exists, flatten inline
-  (`p/q`, `Σ n(A)` prefix-style) — that covers everything in Sets.
+- **Stacked fractions and `lim` now exist** (`<Frac>`, `<Limit>` — added for
+  Chapter 12, see the kit reference below). Keep flattening inline (`p/q`)
+  for simple fractions where the numerator/denominator are each a single
+  term — only reach for `<Frac>` when flattening would genuinely hurt
+  readability (a compound numerator, e.g. Chapter 12's derivative
+  definition `(f(x+h)-f(x))/h`). `Σ` with sub/superscript bounds and true
+  integral notation still don't have a primitive — still flatten those
+  (`Σ` prefix-style) until a chapter's content forces the issue.
 - **`\frac{a}{b}` / `\tfrac{a}{b}`** → flatten inline as `a/b` (same rule as
   Chapter 1's `p/q`) unless the fraction is the star of the beat (a derivative
   definition, a probability) — that case is still future work, see above.
@@ -283,9 +286,12 @@ screenshot). Rule of thumb:
   additions is a good sign the kit now covers most of the subject's visual
   vocabulary; keep checking each new chapter rather than assuming that
   holds forever.
-- **`\lim_{n\to\infty}`** (Chapter 8, two occurrences) — don't attempt true
-  subscript-under-`lim` layout for something this rare; write it inline as
-  "lim (n→∞)".
+- **`\lim_{n\to\infty}`** (Chapter 8, two occurrences) — too rare there to
+  justify a primitive at the time; inline "lim (n→∞)" was fine. **Update
+  (Chapter 12)**: `\lim` is that chapter's central, constantly-repeated
+  notation, so it got a real primitive — see `<Limit>` below. Use `<Limit>`
+  whenever `lim` appears more than a couple of times in a chapter; inline
+  text remains fine for a one-off.
 - **`\hat{n}`** (Chapter 9, unit normal vector) — same resolution as
   `\vec`: don't render a combining hat accent, draw the actual unit vector
   as a real short arrow and label it with the plain letter ("n").
@@ -357,6 +363,17 @@ screenshot). Rule of thumb:
   physics/chem) — and all of the above symbols are language-agnostic, so a
   formula is byte-identical between the English and Hinglish boards; only the
   surrounding prose labels differ.
+- **Ninth glyph audit (Chapters 12-13, Limits & Derivatives / Statistics)** —
+  `σ ψ ↦ □` all fall back (`σ`/`ψ` join the Greek accept-list; `↦` is fine
+  used directly; `□` — likely a QED/end-of-proof mark in the source — has
+  no primitive, either accept the fallback or skip the mark entirely, it's
+  decorative, not load-bearing).
+- **`\lim` and stacked fractions finally got real primitives** (Chapter 12)
+  — see `<Limit>`/`<Frac>` in the kit reference below. This is the payoff
+  of Chapter 1's original deferral: wait until a chapter's content actually
+  needs 2-D math layout, then build it, verified the same way as every
+  other primitive (render it, check nothing overlaps/misaligns) rather
+  than guessing the right offsets up front.
 
 ---
 
@@ -436,6 +453,14 @@ primitives (`lineD`, `T`) on top. Verified against three octants' expected
 positions before trusting it — this is the highest-risk primitive in the
 kit (three independent sign/direction choices), worth extra scrutiny if a
 future 3D scene looks subtly wrong.
+
+`<Frac x y size numerator denominator width />` — a real stacked fraction
+(numerator, bar, denominator), for compound fractions where flattening to
+`a/b` inline would hurt readability. `<Limit x y size condition anchor />`
+— "lim" with its condition ("h→0", "x→∞") stacked beneath, standard
+textbook layout. Both verified by rendering a real derivative definition
+(`f'(x) = lim(h→0) [f(x+h)-f(x)]/h`) and checking every piece lines up
+before trusting them.
 
 **Complex Numbers (Chapter 4) reuses the trig primitives almost entirely** —
 the Argand plane is `<CartesianAxes>` with "Re"/"Im" labels instead of
