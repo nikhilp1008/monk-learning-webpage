@@ -30,3 +30,17 @@ misrecorded observation).
   rather than overlapping exactly. Closing question boxed in the verdict
   band. PASS both languages on first render, eye-checked via FORCE_SHOTS
   (dot positions verified against actual data values, not eyeballed).
+- **Sec 2** — concept: a 7-point number line (12,18,22,25,30,33,38) rings its
+  real min/max, a double-headed arrow spans them, arithmetic "38 - 12 = 26"
+  under the formula `Range = x_max - x_min`. Grouped-data tweak gets a small
+  4-bar class-boundary illustration; the weather example (22°C→41°C) sits
+  beside it as a real worked mini-case. Guardrail beat adds a genuine outlier
+  (82) ringed in red with its own red double-arrow (old max/arrow dim via a
+  plain `<g opacity>` wrapper, since `Draw` has no built-in `dim` prop like
+  `Fade` does) — the arithmetic (82-12=70) folded into the guardrail sentence
+  itself rather than a separate label, after the first pass caught 3 Hinglish
+  text-overlaps from two competing labels sharing one row. First real use of
+  `<Frac>` in this chapter for the coefficient-of-range formula (compound
+  numerator/denominator). Fixed one bad import (`ringD` is kit.tsx, not
+  math-kit.tsx) caught by tsc. PASS both languages after the overlap fix,
+  eye-checked via FORCE_SHOTS.
