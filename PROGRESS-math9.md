@@ -137,3 +137,38 @@ not optional even when VERDICT is PASS.
 - **Sec 17** — tips, closes Subtopic 2: 2×2 red trap grid + a green pro-tip card with four
   hand-drawn rising/falling/flat/vertical mnemonic icons. PASS both languages, eye-checked.
   **Subtopic 2 (secs 10-17) complete — chapter is 17/62 (27%) done.**
+- **Sec 18** — opens Subtopic 3: one line (2x+3y-12=0) labeled four ways at once — intercepts
+  A(6,0)/B(0,4), point P(3,2) verified as the AB midpoint, perpendicular foot N computed via
+  the standard formula and verified on-line, angle ω swept from the x-axis to ON. PASS both
+  languages, eye-checked.
+- **Sec 19** [PROOF] — point-slope form: line through (1,1)/(3,5), all numbers computed at
+  runtime (not hardcoded) so labels stay self-consistent; specializes to two-point form and
+  slope-intercept form (y-intercept (0,-1) marked on the same diagram). PASS both languages,
+  eye-checked.
+- **Sec 20** [PROOF] — intercept form (a=6,b=4, filled OAB triangle) + normal form (p=5, ω=30°,
+  N computed literally via pointOnCircle, landed line confirmed perpendicular to ON by a
+  screen-space dot-product check) — two independent side-by-side derivations, 9 beats. PASS
+  both languages, eye-checked.
+- **Sec 21** — reducing general form to normal form (A=3,B=4,C=-20): the sign-choice guardrail
+  gets a concrete wrong-vs-right demo (dividing by -5 gives the invalid p=-4, crossed out
+  beside the correct p=4), side-column diagram with verified foot N=(2.4,3.2). PASS both
+  languages, eye-checked.
+- **Sec 22** — equations-of-a-line formula toolkit (9 items, densest so far), single-column
+  precedent from Sec5/Sec13. PASS both languages, eye-checked.
+- **Sec 23** — worked: two independent examples — line through (-2,5)/(3,-1) extended to its
+  y-intercept 13/5; 3x-4y+12=0 via its intercepts. Sign-trap (m=A/B vs -A/B) staged and
+  crossed out. PASS both languages, eye-checked.
+- **Sec 24** — worked: single uniform-scale diagram chains reduction→slope→flip-negate→
+  perpendicular→intercept form; the two drawn lines confirmed perpendicular via a screen-space
+  dot-product check, not just algebraically. PASS both languages, eye-checked.
+- **Sec 25** — Advanced worked: normal form of x-√3y+8=0 (√(A²+B²)=2, divide by -2 since C=8>0,
+  cosω=-1/2, sinω=√3/2, p=4, ω=120° in Q2), foot N verified on-line, wrong-sign aside (÷+2 →
+  forbidden p=-4) crossed out. PASS both languages, eye-checked. NOTE: this section's English
+  audio has its last `board_reveal_at` only ~0.04s before the clip ends, so the automated
+  verifier's capped seek time never activates the final beat for English (confirmed via
+  Hinglish, which has a healthy buffer, that the final beat renders correctly with no
+  overlap/overflow) — a data-timing quirk upstream of the scene code, not a scene defect.
+  Worth a spot-check if this pattern recurs elsewhere.
+- **Sec 26** — tips, closes Subtopic 3: Sec17's 2×2 red-trap-grid + green-pro-tip-card
+  precedent, drawn x/y-intercept mnemonic icon. PASS both languages, eye-checked.
+  **Subtopic 3 (secs 18-26) complete — chapter is 26/62 (42%) done.**
