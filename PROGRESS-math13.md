@@ -221,3 +221,16 @@ misrecorded observation).
   jagged 4-point line (red, "wobble → σ²>0") — the zero-variance boundary
   case shown geometrically, not just stated. PASS both languages, eye-
   checked.
+- **Sec 20** — concept, FLAGGED for extra scrutiny (shortcut-formula
+  derivation): built as a genuine multi-line algebraic derivation, not a
+  fade-in of the finished result — expand (x_i-x̄)² → split the sum into
+  three pieces (with the "Σ distributes over +" justification stated) →
+  substitute (1/n)Σx_i=x̄ and Σx̄²=nx̄² → combine -2x̄²+x̄²=-x̄² → land the
+  boxed workhorse σ²=(1/n)Σx_i²-x̄². Hand-verified every algebraic step
+  independently against the standard NCERT derivation before trusting the
+  render — all correct, matches board_content's own LaTeX exactly. Continuation
+  lines indent under the leading "=" the way a real board derivation does.
+  PASS both languages; also checked the dedicated b6 frame directly (not
+  just "final", which for English lands ~0.4s before beat 6 fires — an
+  audio-duration artifact, not a scene defect, confirmed by the b6 frame
+  itself rendering the closing note correctly).
