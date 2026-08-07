@@ -222,3 +222,12 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   assignments, guardrail states the 2-axiom test (≥0 and sum=1), (ii)
   crossed for a negative value, (i)/(iv) crossed for wrong sums, (iii)
   ringed green with a boxed HIGH conclusion. Clean PASS both languages.
+- **Sec 26** — worked_examples: Venn diagram carries real numeric region
+  values (lens 0.3, A-only 0.3, B-only 0.2, outside 0.2 — sums to 1.0 ✓),
+  outside region fills in exactly when P(A′∩B′) is derived on the right
+  column, syncing the visual to the algebra. Three linked questions
+  (union, exactly-one with a cross-check, De Morgan neither) plus a
+  guardrail naming the JEE Main "addition rule → complement" pattern.
+  Fixed a same-color-on-same-background contrast issue (region labels
+  were AMBER_DARK on an AMBER_DARK-tinted union) by switching to INK.
+  Clean PASS both languages, eye-checked.
