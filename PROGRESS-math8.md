@@ -59,6 +59,21 @@ Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25,
 - **Sec 20** — worked example: S_7:S_11=6:11 → a=9d → a_7=15d → 130<15d<140 → natural-number constraint forces d=9. Math verified. PASS.
 - **Sec 21** — worked example: three APs as residue classes (CRT), 3 congruences, d=lcm(3,5,7)=105, verified x=52 (checkD), a+d=157. Math verified. PASS.
 - **Sec 22** — `tips` closer: red top/bottom banners (off-by-one, fast tests) bookending a 3-red-trap + 2-green-tip grid. Caught and fixed a shape-vs-shape box overlap the verifier didn't gate on (see notation decisions). PASS, eye-checked. **Subtopic 2 (AP, secs 9-22) complete — chapter is now 22/85.**
+- **Sec 23** — opens subtopic 3 (GP): two-panel demo — 5 doubling squares (1,2,4,8,16 grains) beside a CartesianAxes+curveD exponential graph of aₙ vs n with 5 dots. Reference exemplar for the graph-of-GP (curve, not line) visual language. PASS, eye-checked.
+- **Sec 24** [flagged] — nth-term + sum derivations, two-column layout mirroring Sec10: LEFT telescoping product stack (a_2/a_1=r,...,multiply all) → boxed a_n=a·r^(n-1); RIGHT S_n vs rS_n subtraction → boxed S_n both forms (r≠1), r=1 special-case guardrail. Math hand-verified. PASS, eye-checked.
+- **Sec 25** [flagged] — sum-to-infinity convergence proof + why AM≥GM, two columns: LEFT S_n split → S_∞=a/(1-r) boxed, |r|≥1-diverges guardrail (IS the proof); RIGHT (√a-√b)²≥0 → boxed AM≥GM, closing with the AM≥GM≥HM chain (AM×HM=GM² verified). Caught+fixed a truncated sentence (beat2) by re-reading, not just checking geometry. Math hand-verified. PASS, eye-checked.
+- **Sec 26** — GP core formula set (`formulas`): 2×2 grid (nth term, nth-from-end, sum r≠1, sum to infinity), never-skip-|r|<1 guardrail, no-zero-term / r<0-alternates closers. PASS.
+- **Sec 27** — geometric mean + AM-GM (`formulas`): b²=ac condition, r for n inserted GMs, product of GMs (capital Π glyph-audited MISSING from both fonts, written as explicit dot-multiplication — new finding, documented), boxed general AM-GM inequality, GM-sign guardrail, logs-turn-GP-into-AP closer. PASS.
+- **Sec 28** — symmetric selection for products, GP analogue of Sec13: number-line demo (a/r,a,ar with ×r arcs, r's cancel), 3/5-term odd cases, 4-term even case (ratio=r²), red-margin guardrail. Math hand-verified. PASS.
+- **Sec 29** — worked example: 3 GP numbers from product=216, pairwise-sum=156 → symmetric terms a/r,a,ar → a=6 → 3r²-10r+3=0 → r=3 or 1/3 (same set reversed) → 2,6,18. Math hand-verified. PASS.
+- **Sec 30** — worked example: 0.333...(recurring)=3/10+3/100+... GP, a=3/10,r=1/10, S_∞=1/3. Repeating-decimal overbar (combining mark) written as plain "recurring". PASS.
+- **Sec 31** — worked example: infinite GP sum=2, cubes sum=24 → 2r²+5r+2=0 → (2r+1)(r+2)=0 → |r|<1 rejects r=-2 → r=-1/2, a=3, checked 27/(9/8)=24. Math hand-verified. PASS.
+- **Sec 32 — SKIPPED, see BLOCKED section above** (source data + audio both state a wrong final answer; needs a content-team fix, not a scene-authoring workaround).
+- **Sec 33** — worked example: nested squares (join midpoints forever) — 4 nested squares/diamonds drawn live (each half the area of the one outside it), a=256,r=1/2, total=512. Math hand-verified (rotated-square-halves-area geometry). PASS, eye-checked.
+- **Sec 34** — worked example: AM-GM optimisation, multiply two inequalities — (a+b+c)≥3(abc)^(1/3) times its reciprocal form → (a+b+c)(1/a+1/b+1/c)≥9, equality iff a=b=c. Math hand-verified. PASS.
+- **Sec 35** — worked example: each term = sum of next two → r²+r-1=0 → r=(-1±√5)/2 → positive terms reject the negative root → r=(√5-1)/2 = 1/golden-ratio. Math hand-verified. PASS.
+- **Sec 36** — worked example: chessboard grains in closed form, a=1,r=2,n=64 → S_64=2⁶⁴-1≈1.8×10¹⁹ (closes the loop on Sec23's opener). Math hand-verified. PASS.
+- **Sec 37** — `tips` closer: red top/bottom banners (convergence check, recurring-decimals) bookending a 3-trap + 2-tip grid — applied Sec22's row-spacing fix from the start, no overlap this time. PASS, eye-checked. **Subtopic 3 (GP, secs 23-37 minus blocked 32) complete — chapter is now 36/85 authored (37/85 positions covered, 1 blocked).**
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3037 > /tmp/dev-math8.log 2>&1 &`, confirmed READY.
