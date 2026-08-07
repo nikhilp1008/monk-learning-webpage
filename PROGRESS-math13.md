@@ -330,3 +330,14 @@ misrecorded observation).
   scale) — red "big relative wobble" caption on the short bar, green
   "small relative wobble" on the long one. Boxed C.V.=(σ/x̄)×100. PASS both
   languages, eye-checked.
+- **Sec 31** — concept: a real decision-tree flowchart — "Same mean?"
+  decision box branches YES (green arrow → "compare σ directly, smaller σ
+  = steadier") and NO (amber arrow → "different means/units? MUST use
+  C.V."), the section's whole logic in one diagram rather than described in
+  prose. Boxed x̄₁=x̄₂ ⇒ compare σ directly — caught and fixed the same
+  raw-combining-mark mistake again (typed literal "x̄₁"/"x̄₂" while
+  drafting) before it ever reached a render: swapped in `XBar` for each bar
+  plus a trailing native Unicode subscript digit (₁/₂, confirmed safe)
+  rather than any combining mark on the numeral. Worth a standing habit for
+  the rest of this chapter: grep the diff for the bar character before
+  verifying, not just after. PASS both languages, eye-checked.
