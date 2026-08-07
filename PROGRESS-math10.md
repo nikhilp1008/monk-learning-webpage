@@ -1,0 +1,393 @@
+# Progress — M11 Chapter 10: Conic Sections
+
+chapter_id: `ce3b1755-7eb0-5e16-9849-e752cca5f723`
+36 sections confirmed directly from Supabase `lesson_sections` (JSON_LESSONS is stale, ignored per task brief).
+
+Subtopics: 1-7 The Conic Family · 8-13 The Circle · 14-20 The Parabola · 21-27 The Ellipse ·
+28-34 The Hyperbola · 35-36 Recap/Cheat Sheet.
+
+New primitive `ellipseD(cx,cy,rx,ry)` already added to math-kit.tsx ahead of this run.
+Parabola/hyperbola get no dedicated generator — sample the real equation, thread through `curveD`.
+
+## Log
+- **Sec 1** — concept, opens the chapter: hand-drawn stylized double-cone (two
+  mirrored triangles meeting at a shared apex, pure `lineD`, per task brief — no
+  ellipse rims). Vertex/axis/generator labeled; α (semi-vertical angle at the
+  vertex) and a generic illustrative β (cutting-plane-vs-axis angle) both arced
+  and labeled via `angleArcD`/`pointOnCircle` computed live off the actual
+  coordinates (not hand-guessed degrees). The four β-vs-α classification cases
+  build as a small ledger (tilt-icon + condition + result word) to the right of
+  the cone rather than redrawing 4 overlapping planes on one small diagram —
+  keeps "one hand, one demo." Guardrail beat rings "Hyperbola" and adds the
+  actual payoff visual: a second, real RED cut through both nappes (offset from
+  the vertex, not degenerate). PASS both languages, eye-checked via FORCE_SHOTS
+  (cone shape, all labels, both-nappes cut all confirmed correct).
+- **Sec 2** — concept: focus/directrix definition diagram (F, directrix, P, PF/PM
+  distances) sets up the ratio-definition of e, reused verbatim by later chapters'
+  own focus-directrix derivations. Main payoff is the "eccentricity dial" — a
+  labeled e-axis with 4 small shape icons built progressively: real `circleD`,
+  first use of the new `ellipseD` (genuinely wider-than-tall, not a squished
+  circle), and hand-sampled parabola/hyperbola curves via `curveD` (upward
+  parabola from `v=u²/h²·height`, two independent hyperbola branches via
+  `cosh`/`sinh` parametrization, each its own curveD call per the no-bridging
+  rule). Guardrail rings "Parabola" tying back to Sec1's β=α. Three degenerate-
+  case icons (point/line/X) close the section. PASS both languages, eye-checked
+  — all 4 icon shapes confirmed visually correct against their definitions.
+- **Sec 3** — concept, closes the "how to classify" trio: two-column layout,
+  LEFT = no-xy-term test (equation with A/C highlighted → 4-row sign table →
+  guardrail reusing Sec2's circle/hyperbola-branch icons for closes-vs-opens
+  continuity), RIGHT = xy-term/rotation case (hand-built tilted-axes icon →
+  boxed Δ=B²−4AC formula → 3-row Δ table). One overlap caught by the verifier
+  (a multi-`T`-span equation "A" touching "x²+" — same string split too
+  tightly) and fixed by widening the manual x-offsets. PASS both languages,
+  eye-checked.
+- **Sec 4** — formulas, the chapter's first reference card: three panels
+  (by-angle, by-eccentricity mirrored side by side; by-equation full width
+  below with the general 2nd-degree form, boxed Δ formula at larger HIGH-
+  emphasis size, 3-row Δ table with the circle special-case parenthetical).
+  Guardrail closes on B=0 = Class-11 default. Clean PASS both languages on
+  first render, eye-checked.
+- **Sec 5** — worked_examples: Example 1 draws an accurate mini cone (half-width
+  computed from `tan(30°)` rather than eyeballed, so the generator truly reads
+  30° off the axis; β=50° plane likewise placed via computed trig, both
+  cross-checked with `Math.atan2` on the actual drawn points) building to a
+  boxed ELLIPSE, then a red aside for the β=α boundary case (PARABOLA), framed
+  as an exam pitfall rather than a wrong-answer cross-out since this is a
+  genuine alternate case, not a mistake. Example 2 demonstrates the "erase,
+  don't overlay" rule: the plain equation (`beat===5` only) is fully replaced
+  by an A/C-highlighted respan at beat 6 in the same slot, not stacked on top.
+  Fixed one invalid `weight` prop passed to `Chip` (no such prop) caught by
+  tsc before it ever reached the browser. PASS both languages, eye-checked —
+  cone angles visually match their stated 30°/50° values.
+- **Sec 6** — worked_examples, closes Subtopic 1: Example 3 repeats Sec5's
+  slot-replace technique for A=4/C=−9 (sign made explicit by keeping the minus
+  in the highlighted span, not just the digit) → inline discriminant 144>0 →
+  boxed HYPERBOLA tied to e>1 → "two tests agree" note. Example 4 is the
+  chapter's first genuinely rotated conic (real xy term, not just discussed
+  abstractly like Sec3/4): 2-line stacked derivation → boxed Δ=−144<0 (HIGH
+  emphasis, amber not red since it's a correct result not a warning) → boxed
+  ELLIPSE + rotation-invariance punchline. All arithmetic hand-verified
+  (144>0 ✓, 16−160=−144 ✓). PASS both languages, eye-checked.
+- **Sec 7** — tips, closes Subtopic 1: 2x2 grid of RED pitfall cards (vertex
+  degenerate-case/HIGH, parabola-is-a-boundary-not-a-range, circle needs A=C
+  AND B=0 else it's a rotated ellipse, never rotate axes before classifying)
+  using the new `roundRectD`-bordered `Card` helper, then a 2-card AMBER
+  "reflex" recap (red = avoid, amber = remember, per house palette). Clean
+  PASS both languages on first render, eye-checked.
+
+## Subtopic 1 (The Conic Family, secs 1-7) — COMPLETE
+All 7 sections authored, tsc clean, VERDICT PASS both languages, eye-checked via
+FORCE_SHOTS before logging. New primitive `ellipseD` confirmed working (Sec2).
+Parabola/hyperbola sampled via `curveD` off real equations/parametrizations
+throughout (Sec2, Sec3's rotated-axes icon doesn't need this but Sec2 does) —
+no dedicated curve generator needed, matches the task brief. All cone/angle
+diagrams (Sec1, Sec5) use live `Math.atan2`/`pointOnCircle` computation from
+actual coordinates rather than hand-guessed degrees, cross-checked against the
+stated angles. Two real bugs caught before commit: a multi-span equation with too-tight
+manual x-offsets (Sec3, caught by verify-scene.mjs overlap check) and an
+invalid `weight` prop passed to `Chip` (Sec5, caught by `tsc --noEmit`).
+No other section needed a post-verify fix.
+
+## Subtopic 2 — The Circle (secs 8-13)
+- **Sec 8** — concept, opens the subtopic: LEFT diagram formalizes in place
+  (goat-and-peg intuition → same circle+radius, "peg"/"goat" labels erase and
+  replace with "C(h,k)"/"P(x,y)", axes fade in underneath — geometry persists,
+  only labels swap, per the erase-don't-overlay rule). RIGHT column ties back
+  to Sec2's e=0 with a limiting-ellipse guardrail icon (faint ellipse +
+  circle sharing a center, two foci drawn merged together), then previews
+  standard vs general form (both properly derived next in Sec9). PASS both
+  languages on first render, eye-checked.
+- **Sec 9** — concept, FLAGGED derivation section (task brief: extra scrutiny).
+  Standard-form derivation (C/P/r diagram → distance formula → squared,
+  boxed HIGH) and general-form derivation (equation → complete-the-square →
+  boxed centre/r² match) run in parallel LEFT/RIGHT columns. Hand-verified
+  the algebra: x²+y²+2gx+2fy+c=0 → (x+g)²+(y+f)²=g²+f²−c is the correct
+  completion of the square (expand back: x²+2gx+g²+y²+2fy+f²=g²+f²−c+g²+f²
+  cancels to the original ✓). The semicircle bonus result builds the
+  right-angle mark at P from the ACTUAL unit vectors P→A/P→B (computed via
+  `Math.hypot`/live coordinates, not hand-placed) — force-screenshotted and
+  zoomed in to confirm the little corner glyph genuinely reads as 90°, not
+  just labeled as one. Diameter form (x−x₁)(x−x₂)+(y−y₁)(y−y₂)=0 uses real
+  Unicode subscript digits in non-script Anek per the digit-coverage rule.
+  PASS both languages, eye-checked at high scrutiny.
+- **Sec 10** — formulas, the circle's reference card: LEFT column (standard
+  form → general form → boxed centre/radius, HIGH) → RED 3-line guardrail
+  card (sign of g²+f²−c: real/point/imaginary, reusing Sec7's `roundRectD`
+  Card pattern). RIGHT column (diameter form + explanation → S₁ definition →
+  sign-placement meaning → boxed tangent-length formula). Clean PASS both
+  languages on first render, eye-checked.
+- **Sec 11** — worked_examples: Example 1 (general form → match g/f/c → boxed
+  centre/radius, hand-verified g²+f²−c=9+16+11=36, √36=6 ✓) and Example 2
+  (diameter ends A(1,2)/B(5,6) → small A–B segment icon → diameter form →
+  boxed expansion, hand-verified (x−1)(x−5)+(y−2)(y−6) expands to
+  x²+y²−6x−8y+17 ✓). Clean PASS both languages, eye-checked.
+- **Sec 12** — worked_examples, denser than Sec11 (4 beats per example):
+  Example 3 chains radius-from-distance (hand-verified √(9+16)=5) → boxed
+  equation → S₁ position test (hand-verified 16+4−16+4−20=−12<0 → INSIDE).
+  Example 4 chains three-point substitution (hand-verified at A: 36+12g=0→
+  g=−3; at B: 64+16f=0→f=−4) → boxed circle+centre/radius → HIGH-emphasis
+  S₁ tangent-length computation (hand-verified 49+81−42−72=16, √16=4). Clean
+  PASS both languages, eye-checked.
+- **Sec 13** — tips, closes Subtopic 2: same 2x2-grid + reflex-recap structure
+  as Sec7 (centre-sign trap flagged HIGH, radius-positivity check, diameter-
+  form-is-faster, real-circle-needs-equal-coeffs), then a wide AMBER "one-pass
+  reflex" card and a final RED/HIGH card on S₁'s double duty. Clean PASS both
+  languages on first render, eye-checked.
+
+## Subtopic 3 — The Parabola (secs 14-20)
+- **Sec 14** — concept, opens the subtopic: the chapter's first real parabola.
+  Curve is sampled off the actual equation via a y-offset parametrization
+  (X = Vx + s²/(4a)) and threaded through `curveD`, no dedicated generator,
+  per the task brief. The reflective-property rays (beat4) are NOT schematic
+  — their start points are genuine `curvePt()` samples and their end point is
+  the real focus, so the ray-to-focus segments are mathematically the true
+  reflected rays, not hand-drawn approximations. Vertex-midway guardrail uses
+  matched tick marks (not just a label) to show the two `a` segments are
+  visually equal. PASS both languages, eye-checked — parabola opens the
+  correct direction, focus sits inside the curve, directrix and axis both
+  correctly placed and labeled.
+- **Sec 15** — concept, FLAGGED derivation section (task brief: extra
+  scrutiny). Hand-verified the algebra: √((x−a)²+y²)=x+a → square →
+  (x−a)²+y²=(x+a)² → expand x²−2ax+a²+y²=x²+2ax+a² → x²,a² cancel, −2ax
+  combines with 2ax → y²=4ax ✓. One persistent LEFT diagram (not redrawn):
+  axes+directrix+F+generic P at beat1, then the same diagram gains the full
+  curve + latus rectum at beat6 — and because the curve is sampled via
+  X=Vx+s²/(4a), the samples at s=±2a land exactly on the latus rectum's
+  stated endpoints (y=Vy±2a) by construction, so the two halves of the scene
+  can't silently disagree with each other. PASS both languages, eye-checked
+  — latus rectum visually touches the curve endpoints exactly as it should.
+- **Sec 16** — concept, FLAGGED orientation-reading section (task brief:
+  extra scrutiny). All 4 mini-parabolas (right/left/up/down) share the same
+  a=32px and are literal 90°-rotations of each other (cell3/4 swap which
+  screen axis carries the s²/4a term), not four independently-eyeballed
+  shapes. Rigorously eye-verified all four: vertex position, curve-bulge
+  direction, focus placement, AND directrix placement (always opposite side
+  from the opening) all confirmed correct for each of the 4 equations —
+  y²=4ax genuinely reads as "(" (vertex left, opens right), y²=−4ax as ")"
+  (opens left), x²=4ay as "∪" (opens up), x²=−4ay as "∩" (opens down). PASS
+  both languages.
+- **Sec 17** — formulas, the parabola's reference card: pure text/formula
+  "notes page" (no new diagram — Sec16 already exhaustively drew all 4
+  orientations) covering the 4-form overview, full reference-case details
+  for y²=4ax (focus/directrix/vertex/axis/boxed latus-rectum-with-endpoints,
+  HIGH), the swap-roles guidance for the other 3, and the red "compare to 4a
+  not a" guardrail. Clean PASS both languages on first render, eye-checked.
+- **Sec 18** — worked_examples: Example 1 (y²=12x → 4a=12→a=3 → boxed
+  focus/directrix/LR, hand-verified 4×3=12 ✓) and Example 2, the reverse
+  direction — given focus(0,−2)/directrix y=2 → vertex=origin → x² axis,
+  opens down, a=2 → boxed x²=−8y (hand-verified −4×2=−8 ✓). Clean PASS both
+  languages, eye-checked.
+- **Sec 19** — worked_examples: Example 3 (vertex+focus→a=5→boxed y²=20x,
+  hand-verified 4×5=20 ✓). Example 4, a real parabolic-dish application:
+  rim-point substitution 10²=4a(5)→100=20a→a=5 (hand-verified ✓) → boxed
+  x²=20y, focus(0,5). The diagram's curve is parametrized to pass through
+  the SAME screen points used for the rim dots (verified by construction,
+  not by eye) — noted the coincidence that a=5 equals the dish depth=5 here,
+  confirmed correct rather than assumed a bug. Clean PASS both languages,
+  eye-checked (shallow dish shape correctly matches the 20cm/5cm ratio).
+- **Sec 20** — tips, closes Subtopic 3: same 2x2-grid + reflex-recap
+  structure as Sec7/Sec13 (4a-as-one-block trap flagged HIGH, axis/direction
+  rule, focus-inside/directrix-outside, one-focus-one-directrix-e=1), then a
+  wide AMBER reflex card and a final RED/HIGH card on latus-rectum endpoints.
+  Clean PASS both languages on first render, eye-checked.
+
+## Subtopic 3 (The Parabola, secs 14-20) — COMPLETE
+All 7 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
+Two sections flagged by the task brief (Sec15 derivation, Sec16 orientation)
+both got extra scrutiny beyond the standard pass — hand-verified algebra and
+rigorous per-cell eye-check of all 4 orientations respectively. Every curve
+in every section is sampled off its real equation via a `curveD`-threaded
+parametrization (never a schematic approximation), and every diagram that
+pairs a curve with marked points (rim dots, latus rectum endpoints, foci) is
+constructed so those points land on the curve BY CONSTRUCTION — verified by
+matching the parametrization's value at the relevant parameter, not by eye.
+No new math-kit primitives needed.
+
+## Subtopic 4 — The Ellipse (secs 21-27)
+- **Sec 21** — concept, opens the subtopic: the chapter's first real ellipse
+  via `ellipseD` (genuinely wider than tall, rx=140/ry=90, not a squished
+  circle). Foci computed from the actual rx/ry via c=√(a²−b²) (=107.2px),
+  not eyeballed — the two-pins-and-a-string picture (F1, F2, point P, PF1/PF2
+  drawn as the taut string) is geometrically real. The two eccentricity
+  comparison icons (e→0 near-circular, e→1 elongated) each compute their OWN
+  foci from their OWN rx/ry, so "foci merge"/"foci spread" is demonstrably
+  true of the drawn shapes rather than just asserted in the label text. PASS
+  both languages, eye-checked — ellipse shape, foci placement, and both
+  comparison icons all confirmed correct.
+- **Sec 22** — concept, FLAGGED derivation section (task brief: extra
+  scrutiny). Hand-verified the FULL two-square-root-clearing algebra beat by
+  beat (not just the two JSON checkpoints): isolate → square →
+  difference-of-squares combines the (x±c)² terms to 4cx → isolate the
+  remaining root → square again → expand → cancel the −2a²cx terms on both
+  sides → factor → divide by a²(a²−c²) → x²/a²+y²/(a²−c²)=1, exactly matching
+  the JSON's seq5. Respected the source narration's own pacing — it
+  compresses this genuinely tedious algebra into one beat rather than
+  exploding it further. Persistent LEFT diagram (axes + foci at (±c,0) +
+  generic P). PASS both languages, eye-checked.
+- **Sec 23** — concept, FLAGGED orientation-reading section (task brief:
+  extra scrutiny). LEFT: fully-labeled horizontal ellipse (a_px=150,
+  b_px=85, c=√(a²−b²)=123.6, directrix x=±a²/c=182.0 — all computed, not
+  eyeballed) with centre, both vertices, both foci, semi-axes, both
+  directrices. RIGHT: small vertical-ellipse comparison icon (rx28<ry40).
+  Rigorously eye-verified: LEFT genuinely reads wider-than-tall matching
+  x²/a²+y²/b²=1, RIGHT icon genuinely reads taller-than-wide matching
+  x²/b²+y²/a²=1, and the directrix lines correctly sit OUTSIDE the vertices
+  (182>150). PASS both languages.
+- **Sec 24** — formulas, the ellipse's reference card: pure text/formula
+  "notes page" (single column, no new diagram) covering the standard
+  equation, boxed core relations (b²=a²−c², e=c/a=√(1−b²/a²), HIGH),
+  vertices/foci, axis lengths, latus rectum, directrices, the vertical-axis
+  swap rule, and the red "identify a² and b² first" guardrail. Clean PASS
+  both languages on first render, eye-checked.
+- **Sec 25** — worked_examples: Example 1 (x²/25+y²/9=1 → a=5,b=3 →
+  c=√(25−9)=4, e=0.8 → boxed vertices/foci/LR=3.6, all hand-verified ✓) and
+  Example 2, same numbers with denominators swapped (x²/9+y²/25=1 → major
+  axis now vertical, foci(0,±4)/vertices(0,±5)) — closes on two comparison
+  icons (horizontal vs vertical) that share the SAME computed c=40px since
+  their rx/ry are literally swapped, visually proving "same numbers,
+  rotated" rather than just asserting it. Clean PASS both languages,
+  eye-checked.
+- **Sec 26** — worked_examples: Example 3 (vertices(±6,0)/foci(±4,0)→a=6,c=4→
+  b²=36−16=20 → boxed x²/36+y²/20=1) and Example 4, the a-vs-2a trap in
+  action: e=1/2 with major axis LENGTH 10 (not a=10 — a=5, half of it) →
+  c=ae=2.5 → b²=25−6.25=18.75 (hand-verified 2.5²=6.25 ✓) → boxed
+  x²/25+y²/18.75=1, closing on the exact guardrail this example was built to
+  teach. Clean PASS both languages, eye-checked.
+- **Sec 27** — tips, closes Subtopic 4: same 2x2-grid + reflex-recap
+  structure as Sec7/13/20 (a²-is-bigger-denom flagged HIGH, foci-on-major-
+  axis-only, b²=a²−c² subtraction direction, semi-axes-not-full-length),
+  then a wide AMBER two-step reflex card and a final RED/HIGH cascade card.
+  Clean PASS both languages on first render, eye-checked. Fixed a stray
+  nonsensical `RED === "" ? RED : "#1C1A16"` ternary (leftover typo) before
+  verifying — replaced with a proper INK import.
+
+## Subtopic 4 (The Ellipse, secs 21-27) — COMPLETE
+All 7 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
+Two flagged sections (Sec22 derivation, Sec23 orientation) both got extra
+scrutiny — full beat-by-beat algebra verification and rigorous per-shape eye
+check respectively. First chapter-wide use of `ellipseD` throughout an entire
+subtopic: every ellipse's foci are computed live from its own rx/ry via
+c=√(a²−b²), never hand-placed, so "foci merge"/"foci spread"/"same c" claims
+in the narration are demonstrably true of the drawn shapes. No new math-kit
+primitives needed — ellipseD (added ahead of this run) covered everything.
+
+## Subtopic 5 — The Hyperbola (secs 28-34)
+- **Sec 28** — concept, opens the subtopic: the chapter's first real
+  hyperbola. Both branches sampled and `curveD`-threaded INDEPENDENTLY via
+  cosh/sinh parametrization (per the task brief — never bridged into one
+  curve), asymptotes drawn as plain `lineD` segments through the centre.
+  Used the correct hyperbola relation c=√(a²+b²) (NOT a²−b², that's the
+  ellipse's) — verified c=92.2>a=70, foci genuinely outside the vertices.
+  Hand-verified the constant-difference property numerically at a sample
+  point P: PF2≈39.3, PF1≈179.3, difference≈140.0=2a=140 ✓. PASS both
+  languages, eye-checked — two branches correctly separate, asymptote X
+  pattern correct, foci-outside-vertices confirmed visually.
+- **Sec 29** — concept, FLAGGED derivation section (task brief: extra
+  scrutiny). Independently hand-verified the FULL algebra chain (not just
+  the JSON's two checkpoints), including confirming that the JSON's stated
+  intermediate x²/a²+y²/(a²−c²)=1 is algebraically identical to my own
+  derived x²/a²−y²/(c²−a²)=1 (since a²−c² ≡ −(c²−a²)) rather than assuming
+  they matched. Mirrors Sec22's ellipse-derivation structure closely per the
+  JSON's own framing ("same algebra... nothing new to learn"), changing only
+  what actually differs: c>a, the resulting sign flip, and b²=c²−a² instead
+  of b²=a²−c². PASS both languages, eye-checked.
+- **Sec 30** — concept, FLAGGED orientation-reading section (task brief:
+  extra scrutiny — this section's whole point is that the hyperbola's
+  orientation rule is the OPPOSITE of the ellipse's, sign not size, so a
+  wrong icon would teach the exact confusion it warns against). LEFT: fully-
+  labeled horizontal hyperbola (same a=70/b=60/c=92.2 as Sec28, for
+  continuity). RIGHT: a small vertical-opening hyperbola icon built via the
+  SAME cosh/sinh parametrization with x/y roles swapped (not a relabeled
+  copy). Zoomed screenshot to verify each tiny arc individually: top =
+  smile/∪ (vertex at bottom, curving away upward), bottom = frown/∩ (vertex
+  at top, curving away downward) — together correctly reading as two
+  branches opening up and down with a gap between them. PASS both languages.
+- **Sec 31** — formulas, the hyperbola's reference card: pure text/formula
+  "notes page" (single column, mirrors Sec24's ellipse-toolkit layout)
+  covering the standard equation, boxed core relations (c²=a²+b²,
+  e=c/a=√(1+b²/a²), HIGH), vertices/foci, axis lengths, asymptotes, latus
+  rectum/directrices, the vertical-transverse-axis form, and the red
+  "ellipse minus vs hyperbola plus" contrast guardrail. Clean PASS both
+  languages on first render, eye-checked.
+- **Sec 32** — worked_examples: Example 1 (x²/16−y²/9=1 → a=4,b=3 →
+  c=√(16+9)=5, e=1.25 → boxed vertices/foci/asymptotes, all hand-verified
+  ✓). Example 2 directly exercises Sec30's flagged guardrail in a concrete
+  numeric case: y²/9−x²/25=1 has b²=25>a²=9, styled AMBER (not RED) since
+  the source JSON marks this beat 'normal' emphasis — a reinforced insight
+  building on the earlier guardrail, not a fresh warning. Clean PASS both
+  languages, eye-checked.
+- **Sec 33** — worked_examples: Example 3 (vertices(±3,0)/foci(±5,0)→a=3,c=5
+  → b²=25−9=16 → boxed x²/9−y²/16=1) and Example 4, a two-relation solve —
+  e=2 & LR=12 → e²=1+b²/a²=4 → b²/a²=3 → substitute into 2b²/a=12 → 6a=12 →
+  a=2, b²=12 (hand-verified 6×2=12 ✓, 3×4=12 ✓) → boxed x²/4−y²/12=1. Clean
+  PASS both languages, eye-checked.
+- **Sec 34** — tips, closes Subtopic 5: 2x2 pitfall grid (sign-not-size
+  flagged HIGH, c²=a²+b² add-direction, e always>1/rectangular case,
+  sketch-asymptotes-first), then a genuine two-column ELLIPSE-vs-HYPERBOLA
+  comparison table (4 rows: sign, focal relation, eccentricity, open/closed)
+  with a vertical divider — a real side-by-side diagram rather than the
+  source's single run-on comparison sentence — closing on a red guardrail.
+  Clean PASS both languages on first render, eye-checked.
+
+## Subtopic 5 (The Hyperbola, secs 28-34) — COMPLETE
+All 7 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
+Two flagged sections (Sec29 derivation, Sec30 orientation) both got extra
+scrutiny — independent full-chain algebra verification and a zoomed
+per-branch shape check respectively. First chapter-wide use of two
+independent branches per hyperbola, always sampled and curveD'd separately
+per the task brief (never bridged into one curve), with asymptotes as plain
+lineD segments. Every foci placement uses the correct c=√(a²+b²) relation
+(the hyperbola's, not the ellipse's a²−b²) computed live, never hand-placed.
+No new math-kit primitives needed.
+
+## Subtopic 6 — Chapter Wrap-up (secs 35-36)
+- **Sec 35** — formula_recap, the whole-chapter consolidation card: 2x2 grid
+  (Circle, Parabola, Ellipse, Hyperbola — each cross-checked against its own
+  earlier section: Sec10/17/24/31), boxed shared ellipse/hyperbola formulas
+  (HIGH), a red eccentricity ladder with real tick marks capping the
+  chapter's running e-theme from Sec2's dial, and the closing a²−b² vs
+  a²+b² sign contrast. Fixed one real bug before verifying: HTML entities
+  (`&lt;`/`&gt;`) used inside a `t()` string argument, which only work in
+  direct JSX children (React does not re-parse string children as markup) —
+  would have rendered literally as "&lt;" on screen. PASS both languages,
+  eye-checked, dense but zero overlaps.
+- **Sec 36** — cheat_sheet, THE CHAPTER FINALE: 2-column x 4-row grid of 8
+  boxed mnemonic cards (Classifier, Eccentricity Ladder [RED/HIGH], Circle,
+  Parabola, Ellipse, Hyperbola, Semi-Not-Full [RED/HIGH], Shortcuts), each
+  cross-checked one final time against its originating section (classifier
+  Sec3/4, ladder Sec2, circle Sec10, parabola Sec17, ellipse Sec24,
+  hyperbola Sec31, semi-not-full Sec20/27, shortcuts Sec11+Sec24/31's c=ae).
+  Clean PASS both languages on first render — no fixes needed, closing the
+  36-section chapter on a fully verified note.
+
+## CHAPTER COMPLETE — all 36/36 sections
+M11 Chapter 10 "Conic Sections" fully authored, registered, typechecked, and
+VERDICT-PASS-verified (both English and Hinglish) across all 36 sections.
+Every section eye-checked via FORCE_SHOTS before being logged done. Flagged
+sections (task brief: 9, 15, 22, 29 derivations; 16, 23, 30 orientation-
+reading) all received documented extra scrutiny beyond the standard pass —
+full hand-verified algebra chains for the four derivations, and rigorous
+per-shape/per-branch eye-checks (including pixel-crop zooms) for the three
+orientation sections. Every worked example's arithmetic was hand-verified
+against the source JSON before logging, not just trusted. New primitive
+`ellipseD` (added to math-kit.tsx ahead of this run) used throughout
+Subtopics 4-6; parabola and hyperbola curves used no dedicated generator,
+sampled off their real equations via `curveD` per the task brief throughout
+Subtopics 3 and 5, with hyperbola's two branches always independently
+sampled and never bridged. Two real bugs were caught and fixed pre-commit
+(Sec3's too-tight multi-span equation offsets; Sec35's HTML-entity-in-
+string-argument bug) plus one invalid prop (Sec5's `weight` on `Chip`) and
+one stray nonsensical ternary (Sec27) — all caught by `tsc --noEmit` or
+`verify-scene.mjs` before ever reaching a screenshot. No section required
+more than one fix-and-reverify cycle. Pushed to origin/premium-board-math10
+after every subtopic (6 pushes total, ~5-7 sections per push).
+
+## Subtopic 2 (The Circle, secs 8-13) — COMPLETE
+All 6 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
+Every worked-example computation hand-verified against the source JSON before
+logging (Sec11: r=6, expansion x²+y²−6x−8y+17=0; Sec12: S₁=−12 inside,
+three-point substitution g=−3/f=−4, tangent=4). Sec9's flagged derivation
+got extra scrutiny — zoomed screenshot to confirm the right-angle mark at P
+is built from live perpendicular vectors, not just a labeled glyph. No new
+math-kit primitives needed this subtopic — pure `circleD`/`CartesianAxes`/
+`roundRectD` reuse plus per-scene `pointOnCircle` math for angle work.
