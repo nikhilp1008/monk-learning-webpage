@@ -1,0 +1,160 @@
+{
+  "id": "254ed3d2-b23a-4dac-91e1-826d5beddede",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 29,
+  "section_type": "worked_examples",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "Worked: all four quadrants at once",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "One example, every quadrant",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Find modulus and principal argument of each of $\\pm 1\\pm i\\sqrt3$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "r=\\sqrt{1+3}=2,\\qquad \\alpha=\\tan^{-1}\\sqrt3=\\tfrac{\\pi}{3}",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\arg(1+i\\sqrt3)=\\tfrac{\\pi}{3},\\qquad \\arg(-1+i\\sqrt3)=\\tfrac{2\\pi}{3}",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\arg(-1-i\\sqrt3)=-\\tfrac{2\\pi}{3},\\qquad \\arg(1-i\\sqrt3)=-\\tfrac{\\pi}{3}",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "All four share $r=2$ and reference angle $\\tfrac{\\pi}{3}$; only the quadrant differs.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Quadrants III and IV give negative principal arguments.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "This single problem drills every row of the quadrant table.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_29.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_29.mp3",
+  "duration_sec_english": 88.73,
+  "duration_sec_hinglish": 82.75,
+  "board_reveal_at_english": [
+    0,
+    6.74,
+    16.21,
+    28.84,
+    44.54,
+    59.05,
+    68.95,
+    80.13
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7,
+    14.59,
+    25.51,
+    41.13,
+    57.43,
+    64.94,
+    74.5
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "This one example exercises the entire quadrant table at once, so it's worth doing carefully."
+    },
+    {
+      "seq": 2,
+      "text": "Find the modulus and principal argument of all four numbers plus or minus one, plus or minus i root three."
+    },
+    {
+      "seq": 3,
+      "text": "Every one of them has the same modulus: root of one plus three, which is two. And every one has the same reference angle: inverse tangent of root three, which is pi over three."
+    },
+    {
+      "seq": 4,
+      "text": "Now the quadrants. One plus i root three is in quadrant one, so its argument is pi over three. Minus one plus i root three is in quadrant two, so its argument is pi minus pi over three, which is two pi over three."
+    },
+    {
+      "seq": 5,
+      "text": "Minus one minus i root three is in quadrant three, giving alpha minus pi, that is minus two pi over three. And one minus i root three is in quadrant four, giving minus alpha, which is minus pi over three."
+    },
+    {
+      "seq": 6,
+      "text": "So all four have modulus two and reference angle pi over three. The only thing that changed across the four was the quadrant."
+    },
+    {
+      "seq": 7,
+      "text": "Notice that quadrants three and four produce negative principal arguments, because the point sits below the real axis, and the principal range dips into the negatives there."
+    },
+    {
+      "seq": 8,
+      "text": "If you can do this one problem cleanly, you have effectively drilled every row of the quadrant table in a single stroke."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye ek example poore quadrant table ko ek saath exercise karta hai, to ise dhyaan se karna worth hai."
+    },
+    {
+      "seq": 2,
+      "text": "Chaaron numbers plus or minus one, plus or minus i root three ke modulus aur principal argument nikaalo."
+    },
+    {
+      "seq": 3,
+      "text": "In sab ka modulus same hai: root of one plus three, jo hai two. Aur sab ka reference angle same hai: inverse tangent of root three, jo hai pi over three."
+    },
+    {
+      "seq": 4,
+      "text": "Ab quadrants. One plus i root three quadrant one mein hai, to iska argument pi over three. Minus one plus i root three quadrant two mein hai, to iska argument pi minus pi over three, jo hai two pi over three."
+    },
+    {
+      "seq": 5,
+      "text": "Minus one minus i root three quadrant three mein hai, deta hai alpha minus pi, yaani minus two pi over three. Aur one minus i root three quadrant four mein hai, deta hai minus alpha, jo hai minus pi over three."
+    },
+    {
+      "seq": 6,
+      "text": "To chaaron ka modulus two aur reference angle pi over three. Chaaron mein sirf quadrant badla."
+    },
+    {
+      "seq": 7,
+      "text": "Dhyaan do ki quadrant three aur four negative principal arguments dete hain, kyunki point real axis ke neeche baithta hai, aur principal range wahan negatives mein dip karti hai."
+    },
+    {
+      "seq": 8,
+      "text": "Agar aap ye ek problem cleanly kar lo, to aapne effectively poore quadrant table ki har row ek hi stroke mein drill kar li."
+    }
+  ]
+}

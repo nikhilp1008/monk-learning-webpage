@@ -1,0 +1,161 @@
+{
+  "id": "e6918b8e-74ba-4cb2-924d-00ce7c83a260",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 21,
+  "section_type": "concept",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "The Argand plane: distance and direction",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Complex numbers as points and arrows",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$z=x+iy$ is the point $(x,y)$, or the arrow from the origin to it.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "The horizontal axis is real, the vertical axis is imaginary.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 300' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='240' x2='410' y2='240' stroke='#555' stroke-width='1.5'/><line x1='80' y1='30' x2='80' y2='280' stroke='#555' stroke-width='1.5'/><text x='398' y='258' font-size='13' fill='#555'>Re</text><text x='88' y='42' font-size='13' fill='#555'>Im</text><line x1='80' y1='240' x2='320' y2='90' stroke='#1f6feb' stroke-width='2.5'/><circle cx='320' cy='90' r='4' fill='#1f6feb'/><text x='328' y='88' font-size='13' fill='#1f6feb'>P(x, y)</text><line x1='320' y1='90' x2='320' y2='240' stroke='#999' stroke-width='1' stroke-dasharray='4 3'/><line x1='80' y1='240' x2='320' y2='240' stroke='#2ea043' stroke-width='2'/><text x='180' y='258' font-size='12' fill='#2ea043'>x = r cos(theta)</text><text x='326' y='170' font-size='12' fill='#999'>y = r sin(theta)</text><text x='150' y='150' font-size='13' fill='#1f6feb'>|z| = r</text><path d='M 130 240 A 50 50 0 0 0 111 205' fill='none' stroke='#d29922' stroke-width='1.5'/><text x='120' y='228' font-size='12' fill='#d29922'>theta</text></svg>",
+      "type": "diagram",
+      "caption": "Modulus is the length; argument is the angle",
+      "emphasis": "normal",
+      "reveal_at": 25
+    },
+    {
+      "seq": 5,
+      "text": "Modulus $|z|=r$ is how far (distance); argument $\\arg z=\\theta$ is which way (bearing).",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 39
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "x=r\\cos\\theta,\\qquad y=r\\sin\\theta",
+      "emphasis": "normal",
+      "reveal_at": 49
+    },
+    {
+      "seq": 7,
+      "text": "Same point, two descriptions: Cartesian '$x$ east, $y$ north' or polar '$r$ at angle $\\theta$'.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 59
+    },
+    {
+      "seq": 8,
+      "text": "Multiplying by $i$ ($r=1$, $\\theta=90^{\\circ}$) is a pure quarter-turn.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 69
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_21.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_21.mp3",
+  "duration_sec_english": 85.15,
+  "duration_sec_hinglish": 80.11,
+  "board_reveal_at_english": [
+    0,
+    7.94,
+    18.6,
+    27.14,
+    35.5,
+    48.13,
+    56.75,
+    71.59
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.59,
+    19.46,
+    26.62,
+    34.99,
+    46.34,
+    54.27,
+    67.75
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "<curious>So far complex numbers were algebra. Now let's see them.</curious> On the Argand plane they become points and arrows."
+    },
+    {
+      "seq": 2,
+      "text": "z equals x plus i y is simply the point with coordinates x comma y, or equivalently the arrow from the origin out to that point."
+    },
+    {
+      "seq": 3,
+      "text": "The horizontal axis carries the real part, and the vertical axis carries the imaginary part. That's the whole picture."
+    },
+    {
+      "seq": 4,
+      "text": "Think of flying a kite from a rooftop. Two numbers fix the kite: the length of string, and the angle the string makes with the horizon."
+    },
+    {
+      "seq": 5,
+      "text": "Those two numbers are exactly the modulus and the argument. The modulus r tells you how far the point is; the argument theta tells you which direction, like a compass bearing."
+    },
+    {
+      "seq": 6,
+      "text": "The two pictures connect through simple trigonometry: x equals r cosine theta, and y equals r sine theta."
+    },
+    {
+      "seq": 7,
+      "text": "So it's one point with two descriptions. Cartesian says go x east and y north. Polar says go distance r at angle theta. An auto-rickshaw direction and a straight-line bearing for the same destination."
+    },
+    {
+      "seq": 8,
+      "text": "And here's the payoff coming: multiplying by i, which has modulus one and angle ninety degrees, is a pure quarter-turn, exactly the rotation picture from the first subtopic, now made precise."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "<curious>Ab tak complex numbers algebra the. Ab inhe dekhte hain.</curious> Argand plane par ye points aur arrows ban jaate hain."
+    },
+    {
+      "seq": 2,
+      "text": "z equals x plus i y bas wo point hai jiske coordinates hain x comma y, ya equivalently origin se us point tak jaata arrow."
+    },
+    {
+      "seq": 3,
+      "text": "Horizontal axis real part rakhti hai, aur vertical axis imaginary part. Bas yehi poori picture hai."
+    },
+    {
+      "seq": 4,
+      "text": "Socho chhat se patang uda rahe ho. Do numbers patang ko fix karte hain: dhaage ki length, aur dhaaga horizon se jo angle banata hai."
+    },
+    {
+      "seq": 5,
+      "text": "Wo do numbers bilkul modulus aur argument hain. Modulus r batata hai point kitna door hai; argument theta batata hai kaunsi direction, jaise compass bearing."
+    },
+    {
+      "seq": 6,
+      "text": "Dono pictures simple trigonometry se judti hain: x equals r cosine theta, aur y equals r sine theta."
+    },
+    {
+      "seq": 7,
+      "text": "To ek hi point, do descriptions. Cartesian kehta hai x east aur y north jao. Polar kehta hai distance r, angle theta par jao. Ek hi destination ke liye do raaste bataana."
+    },
+    {
+      "seq": 8,
+      "text": "Aur ye raha aane wala payoff: i se multiply karna, jiska modulus one aur angle ninety degrees hai, ek pure quarter-turn hai, bilkul pehle subtopic wali rotation picture, ab precise."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "d8202ffd-274f-4955-8468-a88c7f0be2e6",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 60,
+  "section_type": "worked_examples",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "Worked: reading a locus off the words",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Perpendicular bisector, and a circle",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Find the locus of $z$ if $|z-2|=|z+2|$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Equidistant from $2$ and $-2$ — the perpendicular bisector of that segment.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "|z-2|=|z+2|\\ \\Rightarrow\\ \\operatorname{Re}(z)=0\\ (\\text{the imaginary axis})",
+      "emphasis": "high",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Now identify the curve $|z-3|=2$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "|z-3|=2\\ \\Rightarrow\\ \\text{circle, centre }(3,0),\\ \\text{radius }2",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Match to the standard form $|z-z_0|=r$: read off $z_0$ and $r$ directly.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Translate the words; you rarely need to expand.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_60.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_60.mp3",
+  "duration_sec_english": 66.72,
+  "duration_sec_hinglish": 66.29,
+  "board_reveal_at_english": [
+    0,
+    5.55,
+    12.71,
+    23.04,
+    32.6,
+    38.49,
+    46.59,
+    57.94
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    5.89,
+    14.42,
+    24.41,
+    33.19,
+    39.34,
+    48.04,
+    57.94
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's practise reading a locus straight from the words, with two quick examples."
+    },
+    {
+      "seq": 2,
+      "text": "First, find the locus of z satisfying modulus of z minus two equals modulus of z plus two."
+    },
+    {
+      "seq": 3,
+      "text": "In words, z is equidistant from the points two and minus two. That is exactly the perpendicular bisector of the segment joining them."
+    },
+    {
+      "seq": 4,
+      "text": "That segment lies on the real axis, so its perpendicular bisector is the imaginary axis: the real part of z is zero."
+    },
+    {
+      "seq": 5,
+      "text": "Second, identify the curve modulus of z minus three equals two."
+    },
+    {
+      "seq": 6,
+      "text": "This is the set of points at distance two from the point three, so it's a circle with centre at three comma zero and radius two."
+    },
+    {
+      "seq": 7,
+      "text": "You get that just by matching to the standard form, modulus of z minus z zero equals r, and reading off z zero and r directly. No algebra needed."
+    },
+    {
+      "seq": 8,
+      "text": "That's the pattern throughout: translate the geometric words, and you rarely need to expand anything into a plus i b."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Locus ko seedha words se padhna practise karte hain, do quick examples ke saath."
+    },
+    {
+      "seq": 2,
+      "text": "Pehle, z ka locus nikaalo jo modulus of z minus two barabar modulus of z plus two satisfy karta ho."
+    },
+    {
+      "seq": 3,
+      "text": "Words mein, z points two aur minus two se equidistant hai. Ye bilkul unhe jodne wale segment ka perpendicular bisector hai."
+    },
+    {
+      "seq": 4,
+      "text": "Wo segment real axis par hai, to iska perpendicular bisector imaginary axis hai: z ka real part zero."
+    },
+    {
+      "seq": 5,
+      "text": "Doosra, curve modulus of z minus three barabar two ko identify karo."
+    },
+    {
+      "seq": 6,
+      "text": "Ye point three se distance two par ke points ka set hai, to ye ek circle hai centre three comma zero aur radius two ke saath."
+    },
+    {
+      "seq": 7,
+      "text": "Ye aapko bas standard form, modulus of z minus z zero barabar r, se match karke, z zero aur r seedha padhke milta hai. Koi algebra nahi chahiye."
+    },
+    {
+      "seq": 8,
+      "text": "Ye pattern har jagah hai: geometric words translate karo, aur aapko shaayad hi kabhi kuch a plus i b mein expand karna pade."
+    }
+  ]
+}

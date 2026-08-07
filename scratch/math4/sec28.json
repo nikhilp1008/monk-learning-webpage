@@ -1,0 +1,160 @@
+{
+  "id": "fd7b2282-fe88-43b4-b616-3928b4dc69f3",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 28,
+  "section_type": "worked_examples",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "Worked: polar form in Q1 and Q2",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Modulus, principal argument, polar form",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$z=1+i$: point in quadrant I.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "r=\\sqrt{1^{2}+1^{2}}=\\sqrt2,\\qquad \\alpha=\\tan^{-1}1=\\tfrac{\\pi}{4}",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "z=\\sqrt2\\left(\\cos\\tfrac{\\pi}{4}+i\\sin\\tfrac{\\pi}{4}\\right)",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "$z=-1+i$: point in quadrant II, so $\\arg z=\\pi-\\alpha$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "r=\\sqrt2,\\quad \\alpha=\\tfrac{\\pi}{4}\\ \\Rightarrow\\ \\arg z=\\pi-\\tfrac{\\pi}{4}=\\tfrac{3\\pi}{4}",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "z=\\sqrt2\\left(\\cos\\tfrac{3\\pi}{4}+i\\sin\\tfrac{3\\pi}{4}\\right)",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Same $r$, same $\\alpha$ — the quadrant alone changes the argument.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_28.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_28.mp3",
+  "duration_sec_english": 83.95,
+  "duration_sec_hinglish": 77.54,
+  "board_reveal_at_english": [
+    0,
+    5.38,
+    13.57,
+    24.83,
+    34.56,
+    51.54,
+    61.95,
+    69.46
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.31,
+    14.85,
+    24.75,
+    33.96,
+    46.76,
+    57.43,
+    65.45
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's convert two numbers to polar form and watch the quadrant do its job."
+    },
+    {
+      "seq": 2,
+      "text": "First, z equals one plus i. Both parts are positive, so the point sits in quadrant one."
+    },
+    {
+      "seq": 3,
+      "text": "The modulus is root of one squared plus one squared, which is root two. The reference angle is inverse tangent of one, which is pi over four."
+    },
+    {
+      "seq": 4,
+      "text": "In quadrant one the argument is just the reference angle, so the polar form is root two times cosine pi over four plus i sine pi over four."
+    },
+    {
+      "seq": 5,
+      "text": "Now change one sign: z equals minus one plus i. The real part is negative, the imaginary part positive, so the point is in quadrant two, and the argument is pi minus alpha."
+    },
+    {
+      "seq": 6,
+      "text": "The modulus is still root two and the reference angle is still pi over four, but now the argument is pi minus pi over four, which is three pi over four."
+    },
+    {
+      "seq": 7,
+      "text": "So the polar form is root two times cosine three pi over four plus i sine three pi over four."
+    },
+    {
+      "seq": 8,
+      "text": "Notice the lesson: the modulus and the reference angle were identical in both problems. Only the quadrant changed, and that alone shifted the argument. That is exactly why the quadrant step matters."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Do numbers ko polar form mein convert karte hain aur dekhte hain quadrant apna kaam kaise karta hai."
+    },
+    {
+      "seq": 2,
+      "text": "Pehle, z equals one plus i. Dono parts positive hain, to point quadrant one mein baithta hai."
+    },
+    {
+      "seq": 3,
+      "text": "Modulus hai one square plus one square ka root, jo hai root two. Reference angle hai inverse tangent of one, jo hai pi over four."
+    },
+    {
+      "seq": 4,
+      "text": "Quadrant one mein argument bas reference angle hai, to polar form hai root two times cosine pi over four plus i sine pi over four."
+    },
+    {
+      "seq": 5,
+      "text": "Ab ek sign badlo: z equals minus one plus i. Real part negative, imaginary part positive, to point quadrant two mein hai, aur argument hai pi minus alpha."
+    },
+    {
+      "seq": 6,
+      "text": "Modulus abhi bhi root two aur reference angle abhi bhi pi over four, par ab argument hai pi minus pi over four, jo hai three pi over four."
+    },
+    {
+      "seq": 7,
+      "text": "To polar form hai root two times cosine three pi over four plus i sine three pi over four."
+    },
+    {
+      "seq": 8,
+      "text": "Sabak dekho: modulus aur reference angle dono problems mein identical the. Sirf quadrant badla, aur usi ne argument shift kar diya. Yehi hai kyun quadrant step matter karta hai."
+    }
+  ]
+}

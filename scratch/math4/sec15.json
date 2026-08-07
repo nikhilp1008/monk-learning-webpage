@@ -1,0 +1,161 @@
+{
+  "id": "1e428bc9-e27e-4b1f-8d39-b3c685009311",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 15,
+  "section_type": "concept",
+  "subtopic": "The Modulus and the Conjugate of a Complex Number",
+  "title": "Triangle inequality & parallelogram identity",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "How moduli behave under addition",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "|z_1+z_2|\\ \\le\\ |z_1|+|z_2|",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "The modulus does NOT distribute over a sum — only $\\le$ holds.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Equality holds only when the two point the same way (one a non-negative real multiple of the other).",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 25
+    },
+    {
+      "seq": 5,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 260' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='210' r='4' fill='#333'/><text x='24' y='230' font-size='12' fill='#333'>O</text><line x1='40' y1='210' x2='230' y2='120' stroke='#1f6feb' stroke-width='2.5'/><polygon points='230,120 218,120 226,130' fill='#1f6feb'/><text x='120' y='150' font-size='12' fill='#1f6feb'>z1</text><line x1='230' y1='120' x2='360' y2='60' stroke='#2ea043' stroke-width='2.5'/><polygon points='360,60 348,62 354,72' fill='#2ea043'/><text x='300' y='78' font-size='12' fill='#2ea043'>z2</text><line x1='40' y1='210' x2='360' y2='60' stroke='#d29922' stroke-width='2.5' stroke-dasharray='6 4'/><text x='150' y='205' font-size='12' fill='#d29922'>z1 + z2</text><text x='40' y='30' font-size='12' fill='#777'>|z1+z2| &#8804; |z1| + |z2|</text></svg>",
+      "type": "diagram",
+      "caption": "Two sides plus the closing side: the triangle inequality",
+      "emphasis": "normal",
+      "reveal_at": 35
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\big||z_1|-|z_2|\\big|\\ \\le\\ |z_1-z_2|",
+      "emphasis": "normal",
+      "reveal_at": 49
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "|z_1+z_2|^{2}+|z_1-z_2|^{2}=2\\left(|z_1|^{2}+|z_2|^{2}\\right)",
+      "emphasis": "normal",
+      "reveal_at": 59
+    },
+    {
+      "seq": 8,
+      "text": "The parallelogram identity: the two diagonals and the two sides are locked together.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 69
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_15.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_15.mp3",
+  "duration_sec_english": 86.42,
+  "duration_sec_hinglish": 78.67,
+  "board_reveal_at_english": [
+    0,
+    9.13,
+    18.6,
+    30.12,
+    39.94,
+    54.1,
+    61.7,
+    75.43
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.36,
+    18.35,
+    28.42,
+    37.12,
+    50.26,
+    56.58,
+    67.75
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Modulus is multiplicative, and that was clean. But under addition it behaves differently, and this is where mistakes cluster."
+    },
+    {
+      "seq": 2,
+      "text": "The triangle inequality says: the modulus of z one plus z two is less than or equal to the modulus of z one plus the modulus of z two."
+    },
+    {
+      "seq": 3,
+      "text": "Read the warning carefully. The modulus does not distribute over a sum. It is only ever less than or equal, never automatically equal."
+    },
+    {
+      "seq": 4,
+      "text": "Equality is special: it holds only when the two numbers point in the same direction, that is, when one is a non-negative real multiple of the other."
+    },
+    {
+      "seq": 5,
+      "text": "The name comes straight from geometry. Draw z one, then z two starting where z one ended; the straight closing side, z one plus z two, can never be longer than going around the two other sides."
+    },
+    {
+      "seq": 6,
+      "text": "There's a companion lower bound too: the size of the difference of the moduli is at most the modulus of the difference."
+    },
+    {
+      "seq": 7,
+      "text": "And a beautiful equality, the parallelogram identity: the modulus of the sum squared plus the modulus of the difference squared equals two times the sum of the individual moduli squared."
+    },
+    {
+      "seq": 8,
+      "text": "Geometrically that says the two diagonals of a parallelogram and its two sides are rigidly locked together — a fact you can quote directly in proofs."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Modulus multiplicative tha, aur wo clean tha. Par addition ke under ye alag behave karta hai, aur yahin mistakes cluster hoti hain."
+    },
+    {
+      "seq": 2,
+      "text": "Triangle inequality kehti hai: z one plus z two ka modulus less than or equal to hai z one ke modulus plus z two ke modulus."
+    },
+    {
+      "seq": 3,
+      "text": "Warning dhyaan se padho. Modulus sum par distribute nahi karta. Ye hamesha sirf less than or equal hai, kabhi automatically equal nahi."
+    },
+    {
+      "seq": 4,
+      "text": "Equality special hai: ye tabhi hoti hai jab dono numbers same direction mein point karein, yaani jab ek doosre ka non-negative real multiple ho."
+    },
+    {
+      "seq": 5,
+      "text": "Naam geometry se seedha aata hai. z one banao, phir z two wahan se jahan z one khatam hua; seedhi closing side, z one plus z two, kabhi do doosri sides ke around jaane se lambi nahi ho sakti."
+    },
+    {
+      "seq": 6,
+      "text": "Ek companion lower bound bhi hai: moduli ke difference ka size at most difference ke modulus jitna hai."
+    },
+    {
+      "seq": 7,
+      "text": "Aur ek khoobsurat equality, parallelogram identity: sum ke modulus squared plus difference ke modulus squared barabar two times individual moduli squared ka sum."
+    },
+    {
+      "seq": 8,
+      "text": "Geometrically ye kehti hai ki parallelogram ke do diagonals aur uski do sides rigidly locked hain — ek fact jo aap proofs mein seedhe quote kar sakte ho."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "id": "faff97b7-4287-4e22-b6fd-c78e77874ff1",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 6,
+  "section_type": "formulas",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "The four operations and the inverse",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Arithmetic of a + ib",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "z_1+z_2=(a+c)+i(b+d)",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "z_1-z_2=(a-c)+i(b-d)",
+      "emphasis": "normal",
+      "reveal_at": 15
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "z_1 z_2=(ac-bd)+i(ad+bc)",
+      "emphasis": "high",
+      "reveal_at": 23
+    },
+    {
+      "seq": 5,
+      "text": "Multiply like two binomials, replace $i^2$ with $-1$, then collect.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 33
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\frac{z_1}{z_2}=\\frac{(ac+bd)+i(bc-ad)}{c^{2}+d^{2}}\\quad (z_2\\neq 0)",
+      "emphasis": "normal",
+      "reveal_at": 43
+    },
+    {
+      "seq": 7,
+      "text": "For division, multiply top and bottom by $c-id$ so the denominator becomes the real number $c^2+d^2$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 53
+    },
+    {
+      "seq": 8,
+      "type": "formula",
+      "latex": "z^{-1}=\\frac{a-ib}{a^{2}+b^{2}}\\quad (z\\neq 0)",
+      "emphasis": "high",
+      "reveal_at": 63
+    },
+    {
+      "seq": 9,
+      "text": "Leaving a complex denominator is not standard form.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 73
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_6.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_6.mp3",
+  "duration_sec_english": 96.38,
+  "duration_sec_hinglish": 94.58,
+  "board_reveal_at_english": [
+    0,
+    9.39,
+    19.29,
+    26.88,
+    36.95,
+    50.26,
+    61.18,
+    75.35,
+    85.25
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.91,
+    17.15,
+    24.58,
+    34.82,
+    47.53,
+    60.5,
+    73.64,
+    84.05
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's gather the four operations in one place — this is the machinery every later subtopic assumes is automatic."
+    },
+    {
+      "seq": 2,
+      "text": "Addition is easy: add the real parts and add the imaginary parts. z one plus z two is a plus c, all plus i times b plus d."
+    },
+    {
+      "seq": 3,
+      "text": "Subtraction is the same idea with minus signs: a minus c, plus i times b minus d."
+    },
+    {
+      "seq": 4,
+      "text": "Multiplication is where i earns its keep. z one times z two equals a c minus b d, plus i times a d plus b c."
+    },
+    {
+      "seq": 5,
+      "text": "You don't memorize that as a formula; you just multiply the two brackets like ordinary binomials, replace i squared by minus one wherever it appears, and collect real and imaginary parts."
+    },
+    {
+      "seq": 6,
+      "text": "Division is the interesting one. z one over z two equals a c plus b d, plus i times b c minus a d, all over c squared plus d squared."
+    },
+    {
+      "seq": 7,
+      "text": "The trick behind it: multiply top and bottom by c minus i d. That turns the denominator into the real number c squared plus d squared, and now you can split into real and imaginary parts cleanly."
+    },
+    {
+      "seq": 8,
+      "text": "The multiplicative inverse is just one over z: it equals a minus i b over a squared plus b squared, valid whenever z is not zero."
+    },
+    {
+      "seq": 9,
+      "text": "And a standing rule for the whole chapter: never leave a complex number sitting in a denominator. An answer with a complex denominator is not in standard form."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Chaaron operations ek jagah rakhte hain — ye wo machinery hai jo har baad wale subtopic automatic maanta hai."
+    },
+    {
+      "seq": 2,
+      "text": "Addition aasan hai: real parts add karo aur imaginary parts add karo. z one plus z two hai a plus c, poora plus i times b plus d."
+    },
+    {
+      "seq": 3,
+      "text": "Subtraction wahi idea minus signs ke saath: a minus c, plus i times b minus d."
+    },
+    {
+      "seq": 4,
+      "text": "Multiplication mein i apni keemat vasool karta hai. z one times z two barabar a c minus b d, plus i times a d plus b c."
+    },
+    {
+      "seq": 5,
+      "text": "Isko formula ki tarah rattne ki zaroorat nahi; bas dono brackets ko ordinary binomials ki tarah multiply karo, jahan i square dikhe use minus one se replace karo, aur real aur imaginary parts collect karo."
+    },
+    {
+      "seq": 6,
+      "text": "Division interesting hai. z one over z two barabar a c plus b d, plus i times b c minus a d, poora over c square plus d square."
+    },
+    {
+      "seq": 7,
+      "text": "Iske peeche trick: top aur bottom ko c minus i d se multiply karo. Isse denominator ban jaata hai real number c square plus d square, aur ab aap real aur imaginary parts cleanly alag kar sakte ho."
+    },
+    {
+      "seq": 8,
+      "text": "Multiplicative inverse bas one over z hai: barabar a minus i b over a square plus b square, valid jab bhi z zero na ho."
+    },
+    {
+      "seq": 9,
+      "text": "Aur poore chapter ke liye ek pakka rule: complex number ko kabhi denominator mein mat chhodo. Complex denominator wala answer standard form mein nahi hai."
+    }
+  ]
+}

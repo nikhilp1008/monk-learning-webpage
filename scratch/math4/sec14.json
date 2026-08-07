@@ -1,0 +1,160 @@
+{
+  "id": "30ffc0f1-09c1-4204-aafe-8bfbea2e70dc",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 14,
+  "section_type": "concept",
+  "subtopic": "The Modulus and the Conjugate of a Complex Number",
+  "title": "The modulus: distance from the origin",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Modulus: 'as the crow flies'",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "|z|=\\sqrt{a^{2}+b^{2}}\\ \\ge 0",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "The modulus is the straight-line distance from the origin to $(a,b)$ — Pythagoras on the grid.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 15
+    },
+    {
+      "seq": 4,
+      "text": "$|z|$ is always non-negative — you cannot write $|z|=\\pm z$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 25
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "|z|=|\\bar z|=|-z|,\\quad |z_1 z_2|=|z_1||z_2|,\\quad |z^{n}|=|z|^{n}",
+      "emphasis": "normal",
+      "reveal_at": 35
+    },
+    {
+      "seq": 6,
+      "text": "Modulus is multiplicative — take it factor by factor across products, powers, quotients.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 45
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "|\\operatorname{Re}(z)|\\le |z|,\\qquad |\\operatorname{Im}(z)|\\le |z|",
+      "emphasis": "normal",
+      "reveal_at": 55
+    },
+    {
+      "seq": 8,
+      "text": "Each coordinate is at most the whole distance — obvious from the right triangle.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 65
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_14.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_14.mp3",
+  "duration_sec_english": 87.89,
+  "duration_sec_hinglish": 83.62,
+  "board_reveal_at_english": [
+    0,
+    7.42,
+    15.27,
+    29.35,
+    44.37,
+    60.5,
+    71.68,
+    80.04
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    5.72,
+    15.45,
+    29.7,
+    44.37,
+    56.58,
+    66.47,
+    75.18
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "The conjugate is a reflection; the modulus is a distance. Together they run the whole chapter."
+    },
+    {
+      "seq": 2,
+      "text": "The modulus of z is the square root of a squared plus b squared, and it is always greater than or equal to zero."
+    },
+    {
+      "seq": 3,
+      "text": "Geometrically it's the straight-line distance from the origin to the point a comma b. If the address tells you how to walk there, the modulus tells you how far it is, as the crow flies. It's just Pythagoras on the grid."
+    },
+    {
+      "seq": 4,
+      "text": "A crucial warning: the modulus is always non-negative. The real-number habit of writing absolute value equals plus or minus x does not carry over. You can never write modulus of z equals plus or minus z."
+    },
+    {
+      "seq": 5,
+      "text": "The properties are clean. The modulus of z equals the modulus of its conjugate equals the modulus of minus z. The modulus of a product is the product of moduli, and the modulus of a power is the power of the modulus."
+    },
+    {
+      "seq": 6,
+      "text": "So modulus is multiplicative. For any product, power, or quotient, take the modulus factor by factor instead of multiplying everything out first."
+    },
+    {
+      "seq": 7,
+      "text": "Two more bounds: the size of the real part is at most the modulus, and the size of the imaginary part is at most the modulus."
+    },
+    {
+      "seq": 8,
+      "text": "That's obvious once you picture the right triangle: neither leg can be longer than the hypotenuse, which is the modulus."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Conjugate ek reflection hai; modulus ek distance hai. Dono milke poora chapter chalate hain."
+    },
+    {
+      "seq": 2,
+      "text": "z ka modulus hai a square plus b square ka square root, aur ye hamesha zero se greater than or equal to hota hai."
+    },
+    {
+      "seq": 3,
+      "text": "Geometrically ye origin se point a comma b tak ki straight-line distance hai. Agar address batata hai wahan kaise chalna hai, to modulus batata hai kitna door hai, as the crow flies. Ye bas grid par Pythagoras hai."
+    },
+    {
+      "seq": 4,
+      "text": "Ek crucial warning: modulus hamesha non-negative hai. Real-number wali aadat, absolute value barabar plus or minus x likhne ki, yahan nahi chalti. Aap kabhi modulus of z barabar plus or minus z nahi likh sakte."
+    },
+    {
+      "seq": 5,
+      "text": "Properties clean hain. z ka modulus barabar uske conjugate ka modulus barabar minus z ka modulus. Product ka modulus hai moduli ka product, aur power ka modulus hai modulus ki power."
+    },
+    {
+      "seq": 6,
+      "text": "To modulus multiplicative hai. Kisi bhi product, power, ya quotient ke liye, sab kuch expand karne ke bajaay modulus ko factor by factor lo."
+    },
+    {
+      "seq": 7,
+      "text": "Do aur bounds: real part ka size at most modulus hai, aur imaginary part ka size at most modulus hai."
+    },
+    {
+      "seq": 8,
+      "text": "Ye obvious hai jab aap right triangle picture karo: koi bhi leg hypotenuse se lambi nahi ho sakti, jo hai modulus."
+    }
+  ]
+}

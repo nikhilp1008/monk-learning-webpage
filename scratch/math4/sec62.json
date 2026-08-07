@@ -1,0 +1,160 @@
+{
+  "id": "c46c0f9b-0c09-4666-b53c-2d008a13af75",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 62,
+  "section_type": "worked_examples",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "Worked (JEE Advanced): find a square's vertex by rotation",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Rotation theorem builds the vertex",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Square $ABCD$ (anticlockwise): $A=1+2i$, $B=3+i$. Find $C$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Rotate $\\vec{BA}$ about $B$ by $-90^{\\circ}$ to reach $\\vec{BC}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "z_C-z_B=(z_A-z_B)\\cdot e^{-i\\pi/2}=(z_A-z_B)(-i)",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "z_A-z_B=(1+2i)-(3+i)=-2+i",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "z_C-z_B=(-2+i)(-i)=2i-i^{2}=1+2i",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "z_C=(3+i)+(1+2i)=4+3i",
+      "emphasis": "high",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Pick the turn direction from the labelling (anticlockwise here).",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_62.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_62.mp3",
+  "duration_sec_english": 89.83,
+  "duration_sec_hinglish": 90.1,
+  "board_reveal_at_english": [
+    0,
+    5.55,
+    16.9,
+    32.68,
+    45.65,
+    54.7,
+    66.73,
+    78.42
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.06,
+    16.9,
+    32.94,
+    47.96,
+    57.77,
+    68.35,
+    79.02
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "<excited>Here's the rotation theorem doing real work: finding a missing vertex of a square.</excited>"
+    },
+    {
+      "seq": 2,
+      "text": "A square A B C D is labelled anticlockwise, with A equals one plus two i and B equals three plus i. Find the vertex C."
+    },
+    {
+      "seq": 3,
+      "text": "At vertex B, the side to C is the side to A turned by ninety degrees. For this anticlockwise labelling, we rotate the vector from B to A about B by minus ninety degrees to reach the vector from B to C."
+    },
+    {
+      "seq": 4,
+      "text": "In formula terms: z C minus z B equals z A minus z B, times e to the minus i pi over two, and e to the minus i pi over two is just minus i."
+    },
+    {
+      "seq": 5,
+      "text": "Compute the displacement z A minus z B: one plus two i, minus three plus i, which is minus two plus i."
+    },
+    {
+      "seq": 6,
+      "text": "Multiply by minus i: minus two plus i, times minus i, gives two i minus i squared, which is one plus two i."
+    },
+    {
+      "seq": 7,
+      "text": "Add that back to z B: three plus i, plus one plus two i, gives four plus three i. So C is four plus three i."
+    },
+    {
+      "seq": 8,
+      "text": "The one judgement call is the direction of the turn, which you read from the labelling. Anticlockwise labelling here fixed the minus ninety degrees; get that sign right and the rest is mechanical."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "<excited>Ye raha rotation theorem asli kaam karte hue: square ka ek missing vertex nikaalna.</excited>"
+    },
+    {
+      "seq": 2,
+      "text": "Ek square A B C D anticlockwise labelled hai, A barabar one plus two i aur B barabar three plus i ke saath. Vertex C nikaalo."
+    },
+    {
+      "seq": 3,
+      "text": "Vertex B par, C tak ki side, A tak ki side ko ninety degrees turn karke banti hai. Is anticlockwise labelling ke liye, hum B se A tak ke vector ko B ke baare mein minus ninety degrees rotate karke B se C tak ka vector paate hain."
+    },
+    {
+      "seq": 4,
+      "text": "Formula mein: z C minus z B barabar z A minus z B, times e to the minus i pi over two, aur e to the minus i pi over two bas minus i hai."
+    },
+    {
+      "seq": 5,
+      "text": "Displacement z A minus z B compute karo: one plus two i, minus three plus i, jo hai minus two plus i."
+    },
+    {
+      "seq": 6,
+      "text": "Minus i se multiply karo: minus two plus i, times minus i, deta hai two i minus i squared, jo hai one plus two i."
+    },
+    {
+      "seq": 7,
+      "text": "Ise z B mein wapas add karo: three plus i, plus one plus two i, deta hai four plus three i. To C hai four plus three i."
+    },
+    {
+      "seq": 8,
+      "text": "Ek judgement call hai turn ki direction, jo aap labelling se padhte ho. Yahan anticlockwise labelling ne minus ninety degrees fix kiya; wo sign sahi karo aur baaki mechanical hai."
+    }
+  ]
+}

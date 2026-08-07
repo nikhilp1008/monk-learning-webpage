@@ -1,0 +1,160 @@
+{
+  "id": "81485c8a-8654-4b4b-8cdb-ed0303b3b0b8",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 47,
+  "section_type": "concept",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "Factorization identities using omega",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "omega turns sums into products",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "a^{2}+ab+b^{2}=(a-b\\omega)(a-b\\omega^{2})",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "a^{2}-ab+b^{2}=(a+b\\omega)(a+b\\omega^{2})",
+      "emphasis": "normal",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "a^{3}+b^{3}=(a+b)(a+b\\omega)(a+b\\omega^{2})",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "a^{3}-b^{3}=(a-b)(a-b\\omega)(a-b\\omega^{2})",
+      "emphasis": "normal",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a+b\\omega+c\\omega^{2})(a+b\\omega^{2}+c\\omega)",
+      "emphasis": "high",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "text": "These come from splitting a real polynomial into its complex linear factors.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "Heavily used in JEE Advanced algebra — memorize the cubic-sum one.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_47.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_47.mp3",
+  "duration_sec_english": 95.81,
+  "duration_sec_hinglish": 90.19,
+  "board_reveal_at_english": [
+    0,
+    9.81,
+    19.37,
+    30.46,
+    44.89,
+    58.97,
+    75.01,
+    86.02
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.36,
+    17.07,
+    27.9,
+    41.13,
+    53.08,
+    69.38,
+    81.07
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Because omega and omega squared are the non-trivial cube roots, they factor several standard expressions into neat products."
+    },
+    {
+      "seq": 2,
+      "text": "First, a squared plus a b plus b squared factors as a minus b omega, times a minus b omega squared."
+    },
+    {
+      "seq": 3,
+      "text": "Flip the middle sign and you get a squared minus a b plus b squared equals a plus b omega, times a plus b omega squared."
+    },
+    {
+      "seq": 4,
+      "text": "The sum of two cubes gets a full factorization: a cubed plus b cubed equals a plus b, times a plus b omega, times a plus b omega squared."
+    },
+    {
+      "seq": 5,
+      "text": "Similarly the difference of two cubes: a cubed minus b cubed equals a minus b, times a minus b omega, times a minus b omega squared."
+    },
+    {
+      "seq": 6,
+      "text": "And the star identity, worth memorizing outright: a cubed plus b cubed plus c cubed minus three a b c factors as a plus b plus c, times a plus b omega plus c omega squared, times a plus b omega squared plus c omega."
+    },
+    {
+      "seq": 7,
+      "text": "All of these arise for the same reason: a real polynomial is being split into its complex linear factors, and omega supplies exactly the right roots to do it."
+    },
+    {
+      "seq": 8,
+      "text": "These show up heavily in JEE Advanced algebra. The cubic-sum identity in particular is one you should have instantly at your fingertips."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Kyunki omega aur omega squared non-trivial cube roots hain, wo kai standard expressions ko neat products mein factor karte hain."
+    },
+    {
+      "seq": 2,
+      "text": "Pehle, a squared plus a b plus b squared factor hota hai a minus b omega, times a minus b omega squared."
+    },
+    {
+      "seq": 3,
+      "text": "Beech ka sign flip karo aur milta hai a squared minus a b plus b squared barabar a plus b omega, times a plus b omega squared."
+    },
+    {
+      "seq": 4,
+      "text": "Sum of two cubes ko full factorization milti hai: a cubed plus b cubed barabar a plus b, times a plus b omega, times a plus b omega squared."
+    },
+    {
+      "seq": 5,
+      "text": "Waise hi difference of two cubes: a cubed minus b cubed barabar a minus b, times a minus b omega, times a minus b omega squared."
+    },
+    {
+      "seq": 6,
+      "text": "Aur star identity, seedhe yaad karne layak: a cubed plus b cubed plus c cubed minus three a b c factor hota hai a plus b plus c, times a plus b omega plus c omega squared, times a plus b omega squared plus c omega."
+    },
+    {
+      "seq": 7,
+      "text": "Ye sab ek hi wajah se aate hain: ek real polynomial apne complex linear factors mein split ho raha hai, aur omega bilkul sahi roots deta hai ye karne ke liye."
+    },
+    {
+      "seq": 8,
+      "text": "Ye JEE Advanced algebra mein bahut aate hain. Cubic-sum identity khaas taur par aapke fingertips par turant honi chahiye."
+    }
+  ]
+}

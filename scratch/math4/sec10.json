@@ -1,0 +1,160 @@
+{
+  "id": "c13fd864-420c-4c68-b1c3-a4cbf0a01533",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 10,
+  "section_type": "worked_examples",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "Worked (JEE Advanced): big sums and powers",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Advanced: collapse with the period-4 trick",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "S=\\sum_{n=1}^{100} i^{\\,n!}",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "For $n\\ge 4$, $n!$ is a multiple of 4, so $i^{n!}=1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "First three terms: $i^{1!}=i$, $i^{2!}=i^{2}=-1$, $i^{3!}=i^{6}=-1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "S=(i-1-1)+\\underbrace{(1+\\cdots+1)}_{97}=95+i",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "Next: least positive $m$ with $\\left(\\dfrac{1+i}{1-i}\\right)^{m}=1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\frac{1+i}{1-i}=\\frac{(1+i)^{2}}{2}=\\frac{2i}{2}=i",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "So $i^{m}=1$; least positive $m=4$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_10.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_10.mp3",
+  "duration_sec_english": 88.56,
+  "duration_sec_hinglish": 85.15,
+  "board_reveal_at_english": [
+    0,
+    7.94,
+    15.53,
+    27.48,
+    41.81,
+    56.23,
+    66.9,
+    78.17
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.7,
+    16.38,
+    27.56,
+    41.98,
+    55.47,
+    65.96,
+    76.89
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "<excited>Now two Advanced-tier problems that look scary but collapse instantly once you use the period-four idea.</excited>"
+    },
+    {
+      "seq": 2,
+      "text": "Evaluate the sum S, of i to the power n factorial, as n runs from one to one hundred."
+    },
+    {
+      "seq": 3,
+      "text": "Key observation: as soon as n is four or more, n factorial contains the factor four, so it's a multiple of four, and i to that power is just one."
+    },
+    {
+      "seq": 4,
+      "text": "So only the first three terms are interesting. i to the one factorial is i. i to the two factorial is i squared, minus one. i to the three factorial is i to the six, which is minus one."
+    },
+    {
+      "seq": 5,
+      "text": "So the sum is i minus one minus one, from the first three terms, plus ninety seven ones from the rest. That's i minus two plus ninety seven, which is ninety five plus i."
+    },
+    {
+      "seq": 6,
+      "text": "Second problem: find the least positive integer m for which one plus i over one minus i, all to the power m, equals one."
+    },
+    {
+      "seq": 7,
+      "text": "Simplify the base first. Multiply top and bottom to get one plus i squared over two, which is two i over two, exactly i."
+    },
+    {
+      "seq": 8,
+      "text": "So the condition becomes i to the m equals one, true precisely when m is a multiple of four. The least positive value is four."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "<excited>Ab do Advanced-tier problems jo scary lagte hain par period-four idea use karte hi turant collapse ho jaate hain.</excited>"
+    },
+    {
+      "seq": 2,
+      "text": "Sum S nikaalo, i to the power n factorial ka, jahan n one se one hundred tak chalta hai."
+    },
+    {
+      "seq": 3,
+      "text": "Key observation: jaise hi n four ya zyada hota hai, n factorial mein factor four aa jaata hai, to wo multiple of four hai, aur i us power par bas one hai."
+    },
+    {
+      "seq": 4,
+      "text": "To sirf pehle teen terms interesting hain. i to the one factorial hai i. i to the two factorial hai i square, minus one. i to the three factorial hai i to the six, jo hai minus one."
+    },
+    {
+      "seq": 5,
+      "text": "To sum hai i minus one minus one, pehle teen terms se, plus ninety seven ones baaki se. Wo hai i minus two plus ninety seven, jo hai ninety five plus i."
+    },
+    {
+      "seq": 6,
+      "text": "Doosra problem: wo least positive integer m nikaalo jiske liye one plus i over one minus i, poora to the power m, barabar one ho."
+    },
+    {
+      "seq": 7,
+      "text": "Pehle base simplify karo. Top aur bottom multiply karke milta hai one plus i square over two, jo hai two i over two, bilkul i."
+    },
+    {
+      "seq": 8,
+      "text": "To condition ban jaati hai i to the m barabar one, jo tabhi sach hai jab m multiple of four ho. Least positive value hai four."
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "id": "61449331-5a00-48ee-841f-74de2f24ace0",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 53,
+  "section_type": "tips",
+  "subtopic": "Euler Form, De Moivre's Theorem & Roots of a Complex Number",
+  "title": "Pitfalls & pro-tips: Euler form and roots",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Root traps, exponential shortcuts",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "An $n$th root has exactly $n$ values — never report just one.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Reduce every $\\omega$ exponent mod 3; reduce roots-of-unity powers mod $n$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Don't confuse $e^{i\\theta}$ with $e^{\\theta}$, or mix degrees and radians.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Remember $\\omega^{2}=\\bar\\omega$, and $\\omega,\\omega^{2}$ are a conjugate pair.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "Pro-tip: powers multiply the angle; roots divide it over $n$ branches — go Euler first.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "$1+\\omega=-\\omega^{2}$ and $1+\\omega^{2}=-\\omega$ — instant simplifiers.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "The $n$ roots of unity sum to zero — use symmetry to kill sums fast.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_53.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_53.mp3",
+  "duration_sec_english": 88.22,
+  "duration_sec_hinglish": 83.69,
+  "board_reveal_at_english": [
+    0,
+    4.78,
+    14.68,
+    28.42,
+    40.02,
+    49.49,
+    63.06,
+    75.52
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    4.61,
+    14.34,
+    24.58,
+    36.01,
+    45.74,
+    59.99,
+    71.59
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's lock in the traps and shortcuts for Euler form and roots."
+    },
+    {
+      "seq": 2,
+      "text": "The signature trap: an nth root has exactly n values. Reporting just the principal root, or the wrong count, is the classic mistake here."
+    },
+    {
+      "seq": 3,
+      "text": "Keep the arithmetic tidy: reduce every omega exponent modulo three, and reduce roots-of-unity powers modulo n. That prevents almost all algebra slips."
+    },
+    {
+      "seq": 4,
+      "text": "Second trap: don't confuse e to the i theta with e to the theta, and never mix degrees and radians inside the exponent. Pick radians and stay there."
+    },
+    {
+      "seq": 5,
+      "text": "Third: remember omega squared is the conjugate of omega, so omega and omega squared always come as a conjugate pair."
+    },
+    {
+      "seq": 6,
+      "text": "Now the pro-tips. Keep the duality clear: powers multiply the angle, roots divide it over n branches. For anything with powers or roots, go to Euler form first, never expand."
+    },
+    {
+      "seq": 7,
+      "text": "<whisper>And two instant simplifiers:</whisper> one plus omega equals minus omega squared, and one plus omega squared equals minus omega. They shortcut a huge number of omega problems."
+    },
+    {
+      "seq": 8,
+      "text": "Finally, the n roots of unity always sum to zero and form a regular polygon. Use that symmetry to kill sums instantly instead of adding term by term."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Euler form aur roots ke traps aur shortcuts lock kar lete hain."
+    },
+    {
+      "seq": 2,
+      "text": "Signature trap: ek nth root ke theek n values hote hain. Sirf principal root, ya galat count, report karna yahan ki classic mistake hai."
+    },
+    {
+      "seq": 3,
+      "text": "Arithmetic tidy rakho: har omega exponent ko modulo three reduce karo, aur roots-of-unity powers ko modulo n. Ye lagbhag saare algebra slips rok deta hai."
+    },
+    {
+      "seq": 4,
+      "text": "Doosra trap: e to the i theta ko e to the theta se confuse mat karo, aur exponent ke andar degrees aur radians kabhi mix mat karo. Radians chuno aur usi mein raho."
+    },
+    {
+      "seq": 5,
+      "text": "Teesra: yaad rakho omega squared hai omega ka conjugate, to omega aur omega squared hamesha ek conjugate pair ki tarah aate hain."
+    },
+    {
+      "seq": 6,
+      "text": "Ab pro-tips. Duality clear rakho: powers angle ko multiply karte hain, roots use n branches par divide karte hain. Powers ya roots wali kisi bhi cheez ke liye pehle Euler form mein jaao, expand kabhi mat karo."
+    },
+    {
+      "seq": 7,
+      "text": "<whisper>Aur do instant simplifiers:</whisper> one plus omega barabar minus omega squared, aur one plus omega squared barabar minus omega. Ye bahut saare omega problems shortcut karte hain."
+    },
+    {
+      "seq": 8,
+      "text": "Aakhir mein, n roots of unity hamesha sum hoke zero aur ek regular polygon banate hain. Us symmetry ko use karke sums turant khatam karo, term by term add karne ke bajaay."
+    }
+  ]
+}

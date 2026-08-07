@@ -1,0 +1,162 @@
+{
+  "id": "8132415e-c1ac-4cf1-846a-c404660d544b",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 32,
+  "section_type": "tips",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "Pitfalls & pro-tips: Argand plane and polar form",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Argument traps, polar shortcuts",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Never report $\\tan^{-1}(y/x)$ without fixing the quadrant.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "The calculator value lives in $(-\\tfrac{\\pi}{2},\\tfrac{\\pi}{2})$; always place $\\theta$ by quadrant.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Keep the principal value in $(-\\pi,\\pi]$; $\\arg(0)$ is undefined.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "$r(\\cos\\theta-i\\sin\\theta)$ is not polar form — convert via $\\cos(-\\theta),\\sin(-\\theta)$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "Don't mix degrees and radians inside De Moivre.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Pro-tip: sketch first; multiplication adds arguments, division subtracts — use it, don't expand.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "For any integer power, go polar and apply De Moivre.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_32.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_32.mp3",
+  "duration_sec_english": 88.46,
+  "duration_sec_hinglish": 83.78,
+  "board_reveal_at_english": [
+    0,
+    4.86,
+    14.08,
+    26.97,
+    38.83,
+    52.57,
+    62.12,
+    75.35
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    4.44,
+    13.82,
+    25.26,
+    35.93,
+    49.15,
+    58.62,
+    71.34
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's lock in the traps and shortcuts for the Argand plane and polar form."
+    },
+    {
+      "seq": 2,
+      "text": "The number-one trap, and it defines this subtopic: never report inverse tangent of y over x as the argument without fixing the quadrant."
+    },
+    {
+      "seq": 3,
+      "text": "Remember why: the calculator only returns values between minus pi over two and pi over two, covering two quadrants. You must always place theta into the actual quadrant by hand."
+    },
+    {
+      "seq": 4,
+      "text": "Second: keep the principal value inside the interval minus pi to pi, with pi included. And never assign an argument to zero, because the argument of zero is undefined."
+    },
+    {
+      "seq": 5,
+      "text": "Third: r times cosine theta minus i sine theta is not polar form. Convert it using cosine of minus theta and sine of minus theta to restore the required plus sign."
+    },
+    {
+      "seq": 6,
+      "text": "Fourth: do not mix degrees and radians inside De Moivre. Pick one convention and stay in it for the whole calculation."
+    },
+    {
+      "seq": 7,
+      "text": "Now the pro-tips. Always sketch the point first, so the quadrant is obvious. And remember multiplication adds arguments while division subtracts them, so use that instead of expanding brackets."
+    },
+    {
+      "seq": 8,
+      "text": "<whisper>And the one rule that saves the most time:</whisper> for any integer power, go to polar form and apply De Moivre. Never reach for the binomial theorem on a power problem."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Argand plane aur polar form ke traps aur shortcuts lock kar lete hain."
+    },
+    {
+      "seq": 2,
+      "text": "Number-one trap, aur ye is subtopic ko define karta hai: quadrant fix kiye bina inverse tangent of y over x ko argument mat report karo."
+    },
+    {
+      "seq": 3,
+      "text": "Kyun yaad rakho: calculator sirf minus pi over two aur pi over two ke beech values deta hai, do quadrants cover karke. Aapko hamesha theta ko actual quadrant mein khud rakhna padta hai."
+    },
+    {
+      "seq": 4,
+      "text": "Doosra: principal value ko interval minus pi se pi mein rakho, pi included. Aur zero ko kabhi argument mat do, kyunki zero ka argument undefined hai."
+    },
+    {
+      "seq": 5,
+      "text": "Teesra: r times cosine theta minus i sine theta polar form nahi hai. Ise cosine of minus theta aur sine of minus theta se convert karo taaki zaroori plus sign wapas aaye."
+    },
+    {
+      "seq": 6,
+      "text": "Chautha: De Moivre ke andar degrees aur radians mix mat karo. Ek convention chuno aur poore calculation mein usi mein raho."
+    },
+    {
+      "seq": 7,
+      "text": "Ab pro-tips. Hamesha point pehle sketch karo, taaki quadrant obvious ho. Aur yaad rakho multiplication arguments add karta hai jabki division subtract karta hai, to usse use karo, brackets expand karne ke bajaay."
+    },
+    {
+      "seq": 8,
+      "text": "<whisper>Aur wo ek rule jo sabse zyada time bachata hai:</whisper> kisi bhi integer power ke liye polar form mein jaao aur De Moivre apply karo. Power problem par kabhi binomial theorem mat uthao."
+    }
+  ]
+}

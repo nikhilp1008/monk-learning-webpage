@@ -1,0 +1,160 @@
+{
+  "id": "b276af0c-60c3-45d9-813b-0ca8678e8a61",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 56,
+  "section_type": "concept",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "Lines, collinearity, and the perpendicular bisector",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Straight-line conditions in z",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$z$ lies on the line through $z_1,z_2$ iff $\\dfrac{z-z_1}{z_2-z_1}$ is real.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\frac{z-z_1}{z_2-z_1}=\\overline{\\left(\\frac{z-z_1}{z_2-z_1}\\right)}",
+      "emphasis": "normal",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\bar a z+a\\bar z+b=0\\quad(a\\in\\mathbb{C},\\ b\\in\\mathbb{R})",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "text": "Collinearity: $z_1,z_2,z_3$ collinear iff $\\dfrac{z_3-z_1}{z_2-z_1}\\in\\mathbb{R}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "|z-z_1|=|z-z_2|\\ \\Rightarrow\\ \\text{perpendicular bisector of } z_1 z_2",
+      "emphasis": "high",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "text": "'Equidistant from two points' reads directly as the perpendicular bisector.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "Translate words to a $z$-equation; that is the whole skill.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_56.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_56.mp3",
+  "duration_sec_english": 91.2,
+  "duration_sec_hinglish": 90.86,
+  "board_reveal_at_english": [
+    0,
+    10.07,
+    24.66,
+    32.17,
+    44.89,
+    57.77,
+    69.97,
+    81.83
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    10.24,
+    22.95,
+    30.46,
+    41.47,
+    55.55,
+    69.63,
+    81.41
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's express straight-line conditions in the language of z. The recurring skill is translating a geometric sentence into a complex equation."
+    },
+    {
+      "seq": 2,
+      "text": "A point z lies on the line through z one and z two exactly when the ratio z minus z one, over z two minus z one, is a real number — because being on the line means zero turning."
+    },
+    {
+      "seq": 3,
+      "text": "Equivalently, that ratio equals its own conjugate, which is just the algebraic way of saying it's real."
+    },
+    {
+      "seq": 4,
+      "text": "The general equation of a line in this notation is a bar z, plus a z bar, plus b equals zero, where a is complex and b is real."
+    },
+    {
+      "seq": 5,
+      "text": "Collinearity is the same idea for three points: z one, z two, z three are collinear exactly when z three minus z one, over z two minus z one, is real — same direction, no turn."
+    },
+    {
+      "seq": 6,
+      "text": "Now the perpendicular bisector. The condition modulus of z minus z one equals modulus of z minus z two describes all points equidistant from z one and z two."
+    },
+    {
+      "seq": 7,
+      "text": "And equidistant from two fixed points is, word for word, the perpendicular bisector of the segment joining them. Reading the words straight off gives the locus."
+    },
+    {
+      "seq": 8,
+      "text": "That's the whole skill of this subtopic: translate the geometric words into a z-equation, and translate a z-equation back into geometry."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Straight-line conditions ko z ki bhaasha mein express karte hain. Recurring skill hai ek geometric sentence ko complex equation mein translate karna."
+    },
+    {
+      "seq": 2,
+      "text": "Ek point z, z one aur z two se jaati line par tabhi hai jab ratio z minus z one, over z two minus z one, ek real number ho — kyunki line par hona matlab zero turning."
+    },
+    {
+      "seq": 3,
+      "text": "Equivalently, wo ratio apne hi conjugate ke barabar hai, jo bas real hone ka algebraic tareeka hai."
+    },
+    {
+      "seq": 4,
+      "text": "Is notation mein line ki general equation hai a bar z, plus a z bar, plus b barabar zero, jahan a complex hai aur b real."
+    },
+    {
+      "seq": 5,
+      "text": "Collinearity teen points ke liye wahi idea hai: z one, z two, z three collinear tabhi hain jab z three minus z one, over z two minus z one, real ho — same direction, koi turn nahi."
+    },
+    {
+      "seq": 6,
+      "text": "Ab perpendicular bisector. Condition modulus of z minus z one barabar modulus of z minus z two un saare points ko describe karti hai jo z one aur z two se equidistant hain."
+    },
+    {
+      "seq": 7,
+      "text": "Aur do fixed points se equidistant hona, shabd-ba-shabd, unhe jodne wale segment ka perpendicular bisector hai. Shabdon ko seedha padhne se locus mil jaata hai."
+    },
+    {
+      "seq": 8,
+      "text": "Yehi is subtopic ki poori skill hai: geometric words ko z-equation mein translate karo, aur z-equation ko wapas geometry mein."
+    }
+  ]
+}

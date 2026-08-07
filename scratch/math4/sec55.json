@@ -1,0 +1,162 @@
+{
+  "id": "6aadce75-ed1b-4d9d-8e13-1cae1ed1d84f",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 55,
+  "section_type": "concept",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "The rotation theorem",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Rotation = multiply the displacement by e^{i theta}",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "To rotate $\\vec{AB}$ about $A$ by angle $\\theta$, multiply $z_B-z_A$ by $e^{i\\theta}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 300' xmlns='http://www.w3.org/2000/svg'><circle cx='90' cy='210' r='4' fill='#333'/><text x='70' y='228' font-size='13' fill='#333'>z1</text><line x1='90' y1='210' x2='330' y2='150' stroke='#1f6feb' stroke-width='2.5'/><polygon points='330,150 316,148 322,160' fill='#1f6feb'/><circle cx='330' cy='150' r='4' fill='#1f6feb'/><text x='336' y='150' font-size='13' fill='#1f6feb'>z2</text><line x1='90' y1='210' x2='250' y2='60' stroke='#2ea043' stroke-width='2.5'/><polygon points='250,60 244,73 256,71' fill='#2ea043'/><circle cx='250' cy='60' r='4' fill='#2ea043'/><text x='256' y='58' font-size='13' fill='#2ea043'>z3</text><path d='M 175 191 A 90 90 0 0 0 148 132' fill='none' stroke='#d29922' stroke-width='1.5'/><text x='150' y='170' font-size='13' fill='#d29922'>theta</text><text x='40' y='285' font-size='11' fill='#777'>angle at z1, from z1z3 to z1z2</text></svg>",
+      "type": "diagram",
+      "caption": "Angle at the common vertex, between two displacements",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\frac{z_2-z_1}{z_3-z_1}=\\left|\\frac{z_2-z_1}{z_3-z_1}\\right|e^{i\\theta},\\quad \\theta=\\arg\\frac{z_2-z_1}{z_3-z_1}",
+      "emphasis": "high",
+      "reveal_at": 30
+    },
+    {
+      "seq": 5,
+      "text": "The angle is measured at the common vertex $z_1$, from $\\vec{z_1z_3}$ to $\\vec{z_1z_2}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 40
+    },
+    {
+      "seq": 6,
+      "text": "Reversing the ratio reverses the angle's sign.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 50
+    },
+    {
+      "seq": 7,
+      "text": "This single move finds a third vertex, proves a right angle, or builds a square.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 60
+    },
+    {
+      "seq": 8,
+      "text": "$e^{i\\theta}$ is anticlockwise; $e^{-i\\theta}$ is clockwise.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 70
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_55.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_55.mp3",
+  "duration_sec_english": 93.6,
+  "duration_sec_hinglish": 85.92,
+  "board_reveal_at_english": [
+    0,
+    9.9,
+    24.06,
+    34.47,
+    49.49,
+    61.7,
+    73.22,
+    83.37
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.7,
+    21.08,
+    29.87,
+    44.89,
+    55.89,
+    65.96,
+    76.71
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "The rotation theorem is the single most powerful tool in Argand geometry. It solves a huge class of configuration problems in one line."
+    },
+    {
+      "seq": 2,
+      "text": "The core idea: to rotate the vector from A to B about the point A through an angle theta, you multiply the displacement z B minus z A by e to the i theta."
+    },
+    {
+      "seq": 3,
+      "text": "Picture three points forming a triangle, with two displacement vectors leaving the common vertex z one, and an angle theta between them."
+    },
+    {
+      "seq": 4,
+      "text": "The theorem packages that as a ratio: z two minus z one, over z three minus z one, equals the ratio of their lengths times e to the i theta, where theta is the argument of that same ratio."
+    },
+    {
+      "seq": 5,
+      "text": "Read the geometry carefully: the angle sits at the common vertex z one, measured from the direction of z one to z three, turning toward z one to z two."
+    },
+    {
+      "seq": 6,
+      "text": "And mind the order: reversing the ratio, swapping which displacement is on top, reverses the sign of the angle. Getting this backwards is the rotation-sign error."
+    },
+    {
+      "seq": 7,
+      "text": "With this one move you can find an unknown third vertex, prove that an angle is a right angle, or construct a square or an equilateral triangle."
+    },
+    {
+      "seq": 8,
+      "text": "Keep the direction convention firm: multiplying by e to the i theta rotates anticlockwise, while e to the minus i theta rotates clockwise."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Rotation theorem Argand geometry ka sabse powerful tool hai. Ye configuration problems ki ek badi class ek line mein solve karta hai."
+    },
+    {
+      "seq": 2,
+      "text": "Core idea: A se B tak ke vector ko point A ke baare mein angle theta se rotate karne ke liye, aap displacement z B minus z A ko e to the i theta se multiply karo."
+    },
+    {
+      "seq": 3,
+      "text": "Teen points ko triangle banate socho, do displacement vectors common vertex z one se nikalte hue, aur unke beech ek angle theta."
+    },
+    {
+      "seq": 4,
+      "text": "Theorem ise ek ratio ki tarah package karta hai: z two minus z one, over z three minus z one, barabar unki lengths ka ratio times e to the i theta, jahan theta hai usi ratio ka argument."
+    },
+    {
+      "seq": 5,
+      "text": "Geometry dhyaan se padho: angle common vertex z one par baithta hai, z one se z three ki direction se naapa, z one se z two ki taraf ghoomte hue."
+    },
+    {
+      "seq": 6,
+      "text": "Aur order dhyaan se: ratio ulta karna, upar kaun sa displacement hai wo swap karna, angle ka sign ulta kar deta hai. Ise ulta karna rotation-sign error hai."
+    },
+    {
+      "seq": 7,
+      "text": "Is ek move se aap ek unknown teesra vertex nikaal sakte ho, prove kar sakte ho ki koi angle right angle hai, ya ek square ya equilateral triangle bana sakte ho."
+    },
+    {
+      "seq": 8,
+      "text": "Direction convention pakka rakho: e to the i theta se multiply karna anticlockwise rotate karta hai, jabki e to the minus i theta clockwise."
+    }
+  ]
+}

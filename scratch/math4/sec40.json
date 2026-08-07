@@ -1,0 +1,160 @@
+{
+  "id": "9a444184-fd65-4d73-a038-0cc79303ccce",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 40,
+  "section_type": "worked_examples",
+  "subtopic": "Quadratic Equations with Complex Roots",
+  "title": "Worked: build a quadratic, and a complex square root",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "From a root, and root of a complex number",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Real quadratic with one root $2-3i$: the other is $2+3i$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\text{sum}=4,\\quad \\text{product}=(2-3i)(2+3i)=4+9=13",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "x^{2}-4x+13=0",
+      "emphasis": "high",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Now find $\\sqrt{-15-8i}$. Set it $=x+iy$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "x^{2}-y^{2}=-15,\\ \\ 2xy=-8,\\ \\ |z|=\\sqrt{225+64}=17",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "x^{2}=\\tfrac{17-15}{2}=1,\\ \\ y^{2}=\\tfrac{17+15}{2}=16,\\ \\ xy<0",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "So $\\sqrt{-15-8i}=\\pm(1-4i)$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_40.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_40.mp3",
+  "duration_sec_english": 88.73,
+  "duration_sec_hinglish": 88.73,
+  "board_reveal_at_english": [
+    0,
+    8.19,
+    18.86,
+    30.63,
+    39.59,
+    48.9,
+    62.21,
+    76.37
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.83,
+    19.11,
+    28.07,
+    36.35,
+    45.57,
+    61.01,
+    76.29
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Two staple techniques: building a real quadratic from a complex root, and extracting a complex square root."
+    },
+    {
+      "seq": 2,
+      "text": "Suppose a quadratic has real coefficients and one root is two minus three i. By the conjugate-root theorem, the other root must be two plus three i."
+    },
+    {
+      "seq": 3,
+      "text": "Their sum is four, and their product is two minus three i times two plus three i, which is four plus nine, thirteen."
+    },
+    {
+      "seq": 4,
+      "text": "So the quadratic is x squared minus four x plus thirteen equals zero. Fully real, as it must be."
+    },
+    {
+      "seq": 5,
+      "text": "Now a square root: find root of minus fifteen minus eight i. Set it equal to x plus i y and square."
+    },
+    {
+      "seq": 6,
+      "text": "Equating parts gives x squared minus y squared equals minus fifteen, and two x y equals minus eight. The modulus is root of two hundred twenty five plus sixty four, which is seventeen."
+    },
+    {
+      "seq": 7,
+      "text": "So x squared is seventeen minus fifteen, over two, which is one; and y squared is seventeen plus fifteen, over two, which is sixteen. Since two x y is negative, x y is negative."
+    },
+    {
+      "seq": 8,
+      "text": "With x squared one and y squared sixteen and x y negative, the square roots are plus or minus the quantity one minus four i."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Do staple techniques: complex root se real quadratic banana, aur complex square root nikaalna."
+    },
+    {
+      "seq": 2,
+      "text": "Maano ek quadratic ke real coefficients hain aur ek root two minus three i hai. Conjugate-root theorem se, doosra root two plus three i hona chahiye."
+    },
+    {
+      "seq": 3,
+      "text": "Unka sum hai four, aur product hai two minus three i times two plus three i, jo hai four plus nine, thirteen."
+    },
+    {
+      "seq": 4,
+      "text": "To quadratic hai x squared minus four x plus thirteen equals zero. Poori tarah real, jaisa hona chahiye."
+    },
+    {
+      "seq": 5,
+      "text": "Ab ek square root: root of minus fifteen minus eight i nikaalo. Ise x plus i y ke barabar set karo aur square karo."
+    },
+    {
+      "seq": 6,
+      "text": "Parts equate karne se milta hai x squared minus y squared barabar minus fifteen, aur two x y barabar minus eight. Modulus hai two hundred twenty five plus sixty four ka root, jo hai seventeen."
+    },
+    {
+      "seq": 7,
+      "text": "To x squared hai seventeen minus fifteen, over two, jo hai one; aur y squared hai seventeen plus fifteen, over two, jo hai sixteen. Kyunki two x y negative hai, x y negative hai."
+    },
+    {
+      "seq": 8,
+      "text": "x squared one aur y squared sixteen aur x y negative ke saath, square roots hain plus or minus the quantity one minus four i."
+    }
+  ]
+}

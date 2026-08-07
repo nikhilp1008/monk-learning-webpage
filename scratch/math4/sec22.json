@@ -1,0 +1,161 @@
+{
+  "id": "8512f077-b663-4607-a975-1796cf039c93",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 22,
+  "section_type": "concept",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "The argument, and its principal value",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Argument: the angle, made unique",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\tan\\theta=\\frac{y}{x}",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "The argument is many-valued: if $\\theta$ works, so does $\\theta+2n\\pi$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "The principal value $\\arg z$ is the unique angle with $-\\pi<\\theta\\le\\pi$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "$\\arg(0)$ is undefined — the origin has no direction.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "A calculator's $\\tan^{-1}(y/x)$ lives only in $(-\\tfrac{\\pi}{2},\\tfrac{\\pi}{2})$ — you must correct by quadrant.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "A value outside $(-\\pi,\\pi]$ is not the principal argument.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Reduce any stray angle by adding or subtracting $2\\pi$ until it lands in range.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_22.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_22.mp3",
+  "duration_sec_english": 88.56,
+  "duration_sec_hinglish": 85.75,
+  "board_reveal_at_english": [
+    0,
+    9.3,
+    17.41,
+    28.42,
+    39.94,
+    50.09,
+    68.44,
+    78.08
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    9.73,
+    17.24,
+    29.44,
+    42.84,
+    51.46,
+    66.9,
+    75.86
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "The modulus was easy — just a distance. The argument, the angle, is where care is needed, because an angle is not unique."
+    },
+    {
+      "seq": 2,
+      "text": "The basic relation is tangent of theta equals y over x, coming straight from the right triangle on the plane."
+    },
+    {
+      "seq": 3,
+      "text": "But the argument is many-valued: if theta names the direction, so does theta plus any whole number of full turns. Two arguments always differ by a multiple of two pi."
+    },
+    {
+      "seq": 4,
+      "text": "To make it single-valued we pick the principal value, written arg z, defined as the unique angle strictly greater than minus pi and up to and including pi."
+    },
+    {
+      "seq": 5,
+      "text": "One important exception: the argument of zero is undefined. The origin has a modulus of zero but simply no direction to point in."
+    },
+    {
+      "seq": 6,
+      "text": "Now the practical trap. When you type inverse tangent of y over x, the calculator only ever returns an angle between minus pi over two and pi over two. That covers only two quadrants, so you must correct by hand for the actual quadrant."
+    },
+    {
+      "seq": 7,
+      "text": "And remember the range rule: any answer outside the interval minus pi to pi is not the principal argument, even if it's a correct direction."
+    },
+    {
+      "seq": 8,
+      "text": "If you land outside, just add or subtract two pi until the angle falls into that principal range. Same direction, correct representative."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Modulus aasan tha — bas ek distance. Argument, yaani angle, wahan care chahiye, kyunki angle unique nahi hota."
+    },
+    {
+      "seq": 2,
+      "text": "Basic relation hai tangent of theta equals y over x, jo plane ke right triangle se seedha aata hai."
+    },
+    {
+      "seq": 3,
+      "text": "Par argument many-valued hai: agar theta direction batata hai, to theta plus koi bhi poora number of full turns bhi. Do arguments hamesha two pi ke multiple se differ karte hain."
+    },
+    {
+      "seq": 4,
+      "text": "Ise single-valued banane ke liye hum principal value chunte hain, likha arg z, defined as wo unique angle jo minus pi se strictly bada aur pi tak, pi included, ho."
+    },
+    {
+      "seq": 5,
+      "text": "Ek important exception: zero ka argument undefined hai. Origin ka modulus zero hai par point karne ke liye koi direction hi nahi."
+    },
+    {
+      "seq": 6,
+      "text": "Ab practical trap. Jab aap inverse tangent of y over x type karte ho, calculator sirf minus pi over two aur pi over two ke beech ka angle deta hai. Ye sirf do quadrants cover karta hai, to aapko actual quadrant ke liye khud correct karna padta hai."
+    },
+    {
+      "seq": 7,
+      "text": "Aur range rule yaad rakho: minus pi se pi ke interval ke bahar ka koi bhi answer principal argument nahi hai, chahe direction sahi ho."
+    },
+    {
+      "seq": 8,
+      "text": "Agar bahar land karo, bas two pi add ya subtract karo jab tak angle us principal range mein na aa jaaye. Same direction, sahi representative."
+    }
+  ]
+}

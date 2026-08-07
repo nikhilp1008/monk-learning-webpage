@@ -1,0 +1,160 @@
+{
+  "id": "7a54ebcb-722d-4629-b435-b189313c52f7",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 54,
+  "section_type": "concept",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "Complex numbers as position vectors",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "z is a point AND an arrow",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$z=x+iy$ is the point $(x,y)$ and the position vector $\\vec{OP}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "$z_2-z_1$ is the displacement from $z_1$ to $z_2$; $|z_2-z_1|$ is the distance.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\text{distance}=|z_1-z_2|,\\qquad \\text{midpoint}=\\frac{z_1+z_2}{2}",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\text{dividing } z_1 z_2 \\text{ in } m:n=\\frac{nz_1+mz_2}{m+n}",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\text{centroid}=\\frac{z_1+z_2+z_3}{3}",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Every vector idea from coordinate geometry transfers directly to $z$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "This is a JEE extension — the heart of Advanced complex numbers.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_54.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_54.mp3",
+  "duration_sec_english": 104.18,
+  "duration_sec_hinglish": 93.5,
+  "board_reveal_at_english": [
+    0,
+    10.84,
+    24.92,
+    39.68,
+    53.5,
+    68.52,
+    80.81,
+    94.21
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    9.39,
+    23.3,
+    35.75,
+    47.19,
+    61.01,
+    72.28,
+    84.14
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "The final subtopic turns complex numbers into geometry. The key realization: a complex number is both a point and a position vector."
+    },
+    {
+      "seq": 2,
+      "text": "z equals x plus i y is the point x comma y, and simultaneously the arrow from the origin O to that point P. So everything you know about vectors carries over."
+    },
+    {
+      "seq": 3,
+      "text": "In particular, z two minus z one is the displacement vector from z one to z two, and its modulus, the modulus of z two minus z one, is the distance between the two points."
+    },
+    {
+      "seq": 4,
+      "text": "From this, the standard formulas follow directly. The distance between z one and z two is the modulus of their difference. The midpoint is their average, z one plus z two over two."
+    },
+    {
+      "seq": 5,
+      "text": "The point dividing the segment from z one to z two in the ratio m to n is n z one plus m z two, over m plus n — the section formula, unchanged from coordinate geometry."
+    },
+    {
+      "seq": 6,
+      "text": "And the centroid of a triangle with vertices z one, z two, z three is simply their average, z one plus z two plus z three, over three."
+    },
+    {
+      "seq": 7,
+      "text": "The theme is that every vector idea from coordinate geometry transfers directly into complex numbers, often more cleanly, because one complex number packs both coordinates."
+    },
+    {
+      "seq": 8,
+      "text": "Like the previous subtopic, this is a JEE extension, but it's the heart of Advanced complex numbers, so it rewards careful study."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Aakhri subtopic complex numbers ko geometry mein badalta hai. Key realization: ek complex number ek point bhi hai aur ek position vector bhi."
+    },
+    {
+      "seq": 2,
+      "text": "z equals x plus i y hai point x comma y, aur saath hi origin O se us point P tak jaata arrow. To vectors ke baare mein jo kuch aap jaante ho, sab carry over hota hai."
+    },
+    {
+      "seq": 3,
+      "text": "Khaas taur par, z two minus z one hai z one se z two tak ka displacement vector, aur iska modulus, z two minus z one ka modulus, do points ke beech ki distance hai."
+    },
+    {
+      "seq": 4,
+      "text": "Isse standard formulas seedhe nikalte hain. z one aur z two ke beech distance hai unke difference ka modulus. Midpoint hai unka average, z one plus z two over two."
+    },
+    {
+      "seq": 5,
+      "text": "z one se z two tak ke segment ko ratio m to n mein divide karne wala point hai n z one plus m z two, over m plus n — section formula, coordinate geometry se unchanged."
+    },
+    {
+      "seq": 6,
+      "text": "Aur z one, z two, z three vertices wale triangle ka centroid bas unka average hai, z one plus z two plus z three, over three."
+    },
+    {
+      "seq": 7,
+      "text": "Theme ye hai ki coordinate geometry ka har vector idea seedha complex numbers mein transfer hota hai, aksar zyada cleanly, kyunki ek complex number dono coordinates pack karta hai."
+    },
+    {
+      "seq": 8,
+      "text": "Pichhle subtopic ki tarah, ye JEE extension hai, par ye Advanced complex numbers ka dil hai, to careful study reward karta hai."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "b47db454-bb5e-480a-9d28-8156bc92cf72",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 7,
+  "section_type": "worked_examples",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "Worked: arithmetic and powers of i",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Warm-up: add, multiply, powers of i",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$(3+2i)+(-6+5i)$: add the parts to get $-3+7i$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "(2+3i)(1-4i)=2-8i+3i-12i^{2}",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Replace $i^2=-1$: $=2-5i+12=14-5i$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "i^{135}+i^{-50}",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "$135=4\\times 33+3\\Rightarrow i^{135}=i^{3}=-i$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "i^{-50}=i^{-50+52}=i^{2}=-1",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Sum $=-1-i$. Divide the exponent by 4, keep the remainder.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_7.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_7.mp3",
+  "duration_sec_english": 92.3,
+  "duration_sec_hinglish": 94.87,
+  "board_reveal_at_english": [
+    0,
+    8.11,
+    20.48,
+    33.02,
+    50.52,
+    56.92,
+    68.1,
+    82.69
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.23,
+    19.54,
+    32.6,
+    50.01,
+    57.17,
+    68.86,
+    83.46
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's put the arithmetic to work on a few quick examples, board level building up to the powers of i."
+    },
+    {
+      "seq": 2,
+      "text": "First, a pure addition. Three plus two i, plus minus six plus five i. Add real to real, imaginary to imaginary: minus three plus seven i. Done."
+    },
+    {
+      "seq": 3,
+      "text": "Now a product: two plus three i, times one minus four i. Expand it like any binomial: two, minus eight i, plus three i, minus twelve i squared."
+    },
+    {
+      "seq": 4,
+      "text": "Replace i squared with minus one, so minus twelve i squared becomes plus twelve. Collect: two plus twelve is fourteen, and minus eight i plus three i is minus five i. The answer is fourteen minus five i."
+    },
+    {
+      "seq": 5,
+      "text": "Next, powers. Evaluate i to the one hundred thirty five plus i to the minus fifty."
+    },
+    {
+      "seq": 6,
+      "text": "For the first, one hundred thirty five divided by four leaves remainder three, so i to the one hundred thirty five is i cubed, which is minus i."
+    },
+    {
+      "seq": 7,
+      "text": "For the second, the exponent is negative, so add fifty two to reach a positive multiple structure: minus fifty plus fifty two is two. So i to the minus fifty equals i squared equals minus one."
+    },
+    {
+      "seq": 8,
+      "text": "Add them: minus one, minus i. Notice the whole method is just: divide the exponent by four and keep the remainder."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Arithmetic ko kuch quick examples par kaam pe lagate hain, board level se shuru karke powers of i tak."
+    },
+    {
+      "seq": 2,
+      "text": "Pehle, pure addition. Three plus two i, plus minus six plus five i. Real ko real se, imaginary ko imaginary se add karo: minus three plus seven i. Ho gaya."
+    },
+    {
+      "seq": 3,
+      "text": "Ab ek product: two plus three i, times one minus four i. Kisi bhi binomial ki tarah expand karo: two, minus eight i, plus three i, minus twelve i squared."
+    },
+    {
+      "seq": 4,
+      "text": "i squared ko minus one se replace karo, to minus twelve i squared ban jaata hai plus twelve. Collect: two plus twelve is fourteen, aur minus eight i plus three i is minus five i. Answer hai fourteen minus five i."
+    },
+    {
+      "seq": 5,
+      "text": "Aage, powers. Nikaalo i to the one hundred thirty five plus i to the minus fifty."
+    },
+    {
+      "seq": 6,
+      "text": "Pehle wale mein, one hundred thirty five ko four se divide karne par remainder three, to i to the one hundred thirty five hai i cube, yaani minus i."
+    },
+    {
+      "seq": 7,
+      "text": "Doosre mein exponent negative hai, to fifty two add karke positive banao: minus fifty plus fifty two is two. To i to the minus fifty barabar i square barabar minus one."
+    },
+    {
+      "seq": 8,
+      "text": "Add karo: minus one, minus i. Dhyaan do, poora method bas ye hai: exponent ko four se divide karo aur remainder rakho."
+    }
+  ]
+}

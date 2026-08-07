@@ -1,0 +1,160 @@
+{
+  "id": "57044d46-5b65-4c5f-bbab-341a0afce655",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 9,
+  "section_type": "worked_examples",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "Worked: inverse & the purely-real condition",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Inverse, and 'when is it purely real?'",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Inverse of $z=3-4i$: compute $a^2+b^2=9+16=25$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "z^{-1}=\\frac{3+4i}{25}=\\tfrac{3}{25}+\\tfrac{4}{25}i",
+      "emphasis": "high",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Check: $(3-4i)\\cdot\\dfrac{3+4i}{25}=\\dfrac{9+16}{25}=1.$",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "For real $\\theta$, when is $z=\\dfrac{3+2i\\sin\\theta}{1-2i\\sin\\theta}$ purely real?",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "z=\\frac{(3-4\\sin^{2}\\theta)+8i\\sin\\theta}{1+4\\sin^{2}\\theta}",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Purely real means the imaginary part vanishes: $8\\sin\\theta=0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "So $\\theta=n\\pi,\\ n\\in\\mathbb{Z}$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_9.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_9.mp3",
+  "duration_sec_english": 99.41,
+  "duration_sec_hinglish": 92.9,
+  "board_reveal_at_english": [
+    0,
+    6.74,
+    17.58,
+    29.53,
+    45.99,
+    58.2,
+    74.67,
+    87.47
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.23,
+    17.75,
+    26.45,
+    41.9,
+    52.65,
+    71,
+    82.86
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Two JEE-Main flavoured examples: a multiplicative inverse, then a purely-real condition."
+    },
+    {
+      "seq": 2,
+      "text": "For z equals three minus four i, the inverse formula needs a squared plus b squared. That's nine plus sixteen, which is twenty five."
+    },
+    {
+      "seq": 3,
+      "text": "So z inverse is the conjugate three plus four i over twenty five, which we write as three twenty-fifths plus four twenty-fifths i."
+    },
+    {
+      "seq": 4,
+      "text": "Always verify: multiply three minus four i by three plus four i over twenty five. The top is nine plus sixteen, twenty five over twenty five equals one. The inverse checks out."
+    },
+    {
+      "seq": 5,
+      "text": "Now the second question. For real theta, when is z equals three plus two i sine theta, over one minus two i sine theta, purely real?"
+    },
+    {
+      "seq": 6,
+      "text": "Clear the denominator by multiplying top and bottom by one plus two i sine theta. After simplifying, z becomes three minus four sine squared theta, plus eight i sine theta, all over one plus four sine squared theta."
+    },
+    {
+      "seq": 7,
+      "text": "For z to be purely real, its imaginary part must be zero. The imaginary numerator is eight sine theta, so we need eight sine theta equal to zero."
+    },
+    {
+      "seq": 8,
+      "text": "That forces sine theta equals zero, so theta is any integer multiple of pi. Clearing the denominator first is what made the imaginary part readable."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Do JEE-Main flavour ke examples: ek multiplicative inverse, phir ek purely-real condition."
+    },
+    {
+      "seq": 2,
+      "text": "z equals three minus four i ke liye, inverse formula ko chahiye a square plus b square. Wo hai nine plus sixteen, jo hai twenty five."
+    },
+    {
+      "seq": 3,
+      "text": "To z inverse hai conjugate three plus four i over twenty five, jise hum likhte hain three twenty-fifths plus four twenty-fifths i."
+    },
+    {
+      "seq": 4,
+      "text": "Hamesha verify karo: three minus four i ko three plus four i over twenty five se multiply karo. Top hai nine plus sixteen, twenty five over twenty five barabar one. Inverse sahi hai."
+    },
+    {
+      "seq": 5,
+      "text": "Ab doosra sawaal. Real theta ke liye, z equals three plus two i sine theta, over one minus two i sine theta, kab purely real hai?"
+    },
+    {
+      "seq": 6,
+      "text": "Denominator clear karo, top aur bottom ko one plus two i sine theta se multiply karke. Simplify karne ke baad, z ban jaata hai three minus four sine square theta, plus eight i sine theta, poora over one plus four sine square theta."
+    },
+    {
+      "seq": 7,
+      "text": "z ke purely real hone ke liye, uska imaginary part zero hona chahiye. Imaginary numerator hai eight sine theta, to humein chahiye eight sine theta barabar zero."
+    },
+    {
+      "seq": 8,
+      "text": "Isse sine theta barabar zero, to theta hai pi ka koi bhi integer multiple. Pehle denominator clear karna hi imaginary part ko readable banata hai."
+    }
+  ]
+}

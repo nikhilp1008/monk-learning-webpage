@@ -1,0 +1,160 @@
+{
+  "id": "213b0e34-6e73-4fff-91e3-fde89d930abe",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 37,
+  "section_type": "concept",
+  "subtopic": "Quadratic Equations with Complex Roots",
+  "title": "The square root of a complex number",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Finding root(a + ib) directly",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Set $\\sqrt{a+ib}=x+iy$, square, and equate real and imaginary parts.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "x^{2}-y^{2}=a,\\qquad 2xy=b",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "x^{2}=\\frac{|z|+a}{2},\\qquad y^{2}=\\frac{|z|-a}{2},\\quad |z|=\\sqrt{a^{2}+b^{2}}",
+      "emphasis": "high",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Then fix the sign so that the sign of $xy$ matches the sign of $b$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "There are always TWO square roots, $\\pm(x+iy)$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "This is what makes the quadratic formula usable even when $D$ is complex.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Example: $\\sqrt{3+4i}$: $|z|=5$, so $x^{2}=4,\\,y^{2}=1$, and $xy>0\\Rightarrow\\pm(2+i)$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_37.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_37.mp3",
+  "duration_sec_english": 105.96,
+  "duration_sec_hinglish": 94.7,
+  "board_reveal_at_english": [
+    0,
+    8.79,
+    24.32,
+    38.91,
+    53.76,
+    65.96,
+    77.4,
+    89.86
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.79,
+    21.33,
+    35.75,
+    50.01,
+    59.9,
+    69.46,
+    80.3
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "To handle quadratics with complex discriminants, we need one more tool: the square root of a complex number, found directly."
+    },
+    {
+      "seq": 2,
+      "text": "The method is Method B in disguise. Set root of a plus i b equal to x plus i y, square both sides, and equate real and imaginary parts."
+    },
+    {
+      "seq": 3,
+      "text": "Squaring x plus i y gives x squared minus y squared plus two i x y. Matching parts: x squared minus y squared equals a, and two x y equals b."
+    },
+    {
+      "seq": 4,
+      "text": "Combined with the modulus, these solve neatly: x squared is the modulus plus a, over two, and y squared is the modulus minus a, over two, where the modulus is root of a squared plus b squared."
+    },
+    {
+      "seq": 5,
+      "text": "That gives the sizes of x and y, but you still must fix their signs. The rule is: choose signs so that the sign of the product x y matches the sign of b."
+    },
+    {
+      "seq": 6,
+      "text": "And there are always exactly two square roots, plus or minus the whole thing x plus i y, just as every positive real has two square roots."
+    },
+    {
+      "seq": 7,
+      "text": "This is precisely the tool that makes the quadratic formula work even when the discriminant itself is complex — you can now take the root of any complex number."
+    },
+    {
+      "seq": 8,
+      "text": "For example, root of three plus four i. The modulus is five, so x squared is four and y squared is one. Since b is positive, x y is positive, giving plus or minus two plus i."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Complex discriminants wali quadratics handle karne ke liye, humein ek aur tool chahiye: complex number ka square root, seedha nikaala hua."
+    },
+    {
+      "seq": 2,
+      "text": "Method Method B ka bhes badla roop hai. Root of a plus i b ko x plus i y ke barabar set karo, dono taraf square karo, aur real aur imaginary parts equate karo."
+    },
+    {
+      "seq": 3,
+      "text": "x plus i y ko square karne se milta hai x squared minus y squared plus two i x y. Parts match karo: x squared minus y squared barabar a, aur two x y barabar b."
+    },
+    {
+      "seq": 4,
+      "text": "Modulus ke saath, ye neatly solve hote hain: x squared hai modulus plus a, over two, aur y squared hai modulus minus a, over two, jahan modulus hai a squared plus b squared ka root."
+    },
+    {
+      "seq": 5,
+      "text": "Ye x aur y ke sizes deta hai, par aapko abhi unke signs fix karne hain. Rule hai: signs aise chuno ki product x y ka sign b ke sign se match kare."
+    },
+    {
+      "seq": 6,
+      "text": "Aur hamesha theek do square roots hote hain, plus or minus poora x plus i y, bilkul jaise har positive real ke do square roots hote hain."
+    },
+    {
+      "seq": 7,
+      "text": "Ye bilkul wahi tool hai jo quadratic formula ko tab bhi kaam karwaata hai jab discriminant khud complex ho — aap ab kisi bhi complex number ka root le sakte ho."
+    },
+    {
+      "seq": 8,
+      "text": "Misaal ke liye, root of three plus four i. Modulus hai five, to x squared hai four aur y squared hai one. Kyunki b positive hai, x y positive hai, deta hai plus or minus two plus i."
+    }
+  ]
+}

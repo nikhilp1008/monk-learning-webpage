@@ -1,0 +1,159 @@
+{
+  "id": "3dd83252-1e67-431d-9e7a-4abce93ed0bf",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 19,
+  "section_type": "worked_examples",
+  "subtopic": "The Modulus and the Conjugate of a Complex Number",
+  "title": "Worked (JEE Advanced): conjugate identities & product moduli",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Advanced: z^2 = (z-bar)^2, and a big product",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "If $z^{2}=(\\bar z)^{2}$, show $z$ is purely real or purely imaginary.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "z^{2}=(x^{2}-y^{2})+2ixy,\\qquad (\\bar z)^{2}=(x^{2}-y^{2})-2ixy",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Equating forces $2xy=-2xy$, so $xy=0$: either $x=0$ or $y=0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Now the product $(2+i)(2+2i)\\cdots(2+ni)=x+iy$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\prod_{k=1}^{n}\\sqrt{4+k^{2}}=|x+iy|=\\sqrt{x^{2}+y^{2}}",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\prod_{k=1}^{n}(4+k^{2})=x^{2}+y^{2}",
+      "emphasis": "high",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "So $5\\cdot 8\\cdot 13\\cdots(4+n^{2})=x^{2}+y^{2}$ — moduli tamed a scary product.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_19.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_19.mp3",
+  "duration_sec_english": 109.39,
+  "duration_sec_hinglish": 99.41,
+  "board_reveal_at_english": [
+    0,
+    6.14,
+    14.51,
+    36.27,
+    51.8,
+    67.5,
+    84.65,
+    93.95
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    5.72,
+    13.23,
+    30.55,
+    45.14,
+    60.59,
+    75.26,
+    84.39
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "<excited>Two Advanced-tier problems where the conjugate and modulus do all the heavy lifting.</excited>"
+    },
+    {
+      "seq": 2,
+      "text": "First: if z squared equals z bar squared, prove that z must be purely real or purely imaginary."
+    },
+    {
+      "seq": 3,
+      "text": "Write z as x plus i y. Then z squared is x squared minus y squared, plus two i x y. And z bar squared is x squared minus y squared, minus two i x y."
+    },
+    {
+      "seq": 4,
+      "text": "Equating the two forces two x y to equal minus two x y, so four x y is zero, meaning the product x y is zero. That means either x is zero, purely imaginary, or y is zero, purely real. Done."
+    },
+    {
+      "seq": 5,
+      "text": "Second: the product of two plus i, two plus two i, up to two plus n i, equals some x plus i y. We want the value of five times eight times thirteen, and so on, up to four plus n squared."
+    },
+    {
+      "seq": 6,
+      "text": "Take the modulus across the product. The modulus of two plus k i is the root of four plus k squared, so the product of those roots equals the modulus of x plus i y, which is the root of x squared plus y squared."
+    },
+    {
+      "seq": 7,
+      "text": "Now square both sides: the product of four plus k squared, from k equals one to n, equals x squared plus y squared."
+    },
+    {
+      "seq": 8,
+      "text": "And that left side is exactly five times eight times thirteen and onward to four plus n squared. So the whole scary product equals x squared plus y squared. Modulus turned it into one clean line."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "<excited>Do Advanced-tier problems jahan conjugate aur modulus saara heavy lifting karte hain.</excited>"
+    },
+    {
+      "seq": 2,
+      "text": "Pehla: agar z square barabar z bar square, prove karo ki z purely real ya purely imaginary hona chahiye."
+    },
+    {
+      "seq": 3,
+      "text": "z ko x plus i y likho. To z square hai x square minus y square, plus two i x y. Aur z bar square hai x square minus y square, minus two i x y."
+    },
+    {
+      "seq": 4,
+      "text": "Dono ko equate karna two x y ko minus two x y ke barabar karta hai, to four x y zero, matlab product x y zero. Iska matlab ya to x zero, purely imaginary, ya y zero, purely real. Ho gaya."
+    },
+    {
+      "seq": 5,
+      "text": "Doosra: two plus i, two plus two i, up to two plus n i ka product, barabar koi x plus i y. Humein chahiye five times eight times thirteen, waise hi aage, up to four plus n square ki value."
+    },
+    {
+      "seq": 6,
+      "text": "Product par modulus lo. Two plus k i ka modulus hai four plus k square ka root, to un roots ka product barabar x plus i y ke modulus, jo hai x square plus y square ka root."
+    },
+    {
+      "seq": 7,
+      "text": "Ab dono taraf square karo: four plus k square ka product, k barabar one se n tak, barabar x square plus y square."
+    },
+    {
+      "seq": 8,
+      "text": "Aur wo left side bilkul wahi hai, five times eight times thirteen aur aage four plus n square tak. To poora scary product barabar x square plus y square. Modulus ne ise ek clean line bana diya."
+    }
+  ]
+}

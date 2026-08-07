@@ -1,0 +1,162 @@
+{
+  "id": "2c054fcf-a306-4176-b72d-4253b16a3abf",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 33,
+  "section_type": "concept",
+  "subtopic": "Quadratic Equations with Complex Roots",
+  "title": "Every quadratic now has two roots",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "The discriminant is a weather forecast",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Over $\\mathbb{R}$, $x^{2}+1=0$ had no roots; over $\\mathbb{C}$ it has two, $\\pm i$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "x=\\frac{-b\\pm\\sqrt{D}}{2a},\\qquad D=b^{2}-4ac",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 640 220' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='120' x2='200' y2='120' stroke='#555' stroke-width='1.2'/><line x1='110' y1='40' x2='110' y2='200' stroke='#555' stroke-width='1.2'/><circle cx='70' cy='120' r='5' fill='#2ea043'/><circle cx='160' cy='120' r='5' fill='#2ea043'/><text x='60' y='30' font-size='13' fill='#2ea043'>D &gt; 0: two real</text><line x1='230' y1='120' x2='410' y2='120' stroke='#555' stroke-width='1.2'/><line x1='320' y1='40' x2='320' y2='200' stroke='#555' stroke-width='1.2'/><circle cx='360' cy='120' r='6' fill='#d29922'/><text x='250' y='30' font-size='13' fill='#d29922'>D = 0: one repeated</text><line x1='440' y1='120' x2='620' y2='120' stroke='#555' stroke-width='1.2'/><line x1='530' y1='40' x2='530' y2='200' stroke='#555' stroke-width='1.2'/><circle cx='575' cy='80' r='5' fill='#1f6feb'/><circle cx='575' cy='160' r='5' fill='#1f6feb'/><line x1='575' y1='80' x2='575' y2='160' stroke='#bbb' stroke-width='1' stroke-dasharray='3 3'/><text x='460' y='30' font-size='13' fill='#1f6feb'>D &lt; 0: conjugate pair</text></svg>",
+      "type": "diagram",
+      "caption": "What the discriminant predicts (real coefficients)",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "$D>0$: two distinct real roots. $D=0$: one repeated real root.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 40
+    },
+    {
+      "seq": 6,
+      "text": "$D<0$: two complex-conjugate roots — they have left the real line.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 50
+    },
+    {
+      "seq": 7,
+      "text": "This table assumes REAL coefficients.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 60
+    },
+    {
+      "seq": 8,
+      "text": "If $a,b,c$ are complex, the '$D<0$' classification is meaningless.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 70
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_33.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_33.mp3",
+  "duration_sec_english": 96.24,
+  "duration_sec_hinglish": 93.34,
+  "board_reveal_at_english": [
+    0,
+    10.58,
+    30.29,
+    42.75,
+    53.67,
+    65.96,
+    77.06,
+    84.48
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    11.86,
+    30.89,
+    42.84,
+    54.61,
+    66.73,
+    75.61,
+    82.09
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "This subtopic is where the whole chapter pays off. The quadratic formula that used to fail now always succeeds — the missing roots were complex all along."
+    },
+    {
+      "seq": 2,
+      "text": "Over the reals, x squared plus one equals zero had no solution. Over the complex numbers it has exactly two, plus i and minus i. This is the first glimpse of a deep fact: a degree-n polynomial has exactly n roots once you allow complex numbers."
+    },
+    {
+      "seq": 3,
+      "text": "The formula is the familiar one: x equals minus b plus or minus root D, all over two a, where D, the discriminant, is b squared minus four a c."
+    },
+    {
+      "seq": 4,
+      "text": "Think of D as a weather forecast. Before you solve anything, D tells you what kind of roots to expect, the way a monsoon forecast tells you whether to carry an umbrella."
+    },
+    {
+      "seq": 5,
+      "text": "If D is positive, you get two distinct real roots, both sitting on the number line. If D is zero, you get one repeated real root, right at minus b over two a."
+    },
+    {
+      "seq": 6,
+      "text": "And if D is negative, you get two complex-conjugate roots. The roots have left the real line and moved off into the plane, as a mirror-image pair."
+    },
+    {
+      "seq": 7,
+      "text": "One crucial caveat: this whole forecast table assumes the coefficients a, b, c are real numbers."
+    },
+    {
+      "seq": 8,
+      "text": "If the coefficients are themselves complex, the idea of D being negative doesn't even make sense, and the roots need not be conjugates. Keep that boundary firmly in mind."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye subtopic wahan hai jahan poora chapter pay off karta hai. Wo quadratic formula jo pehle fail hoti thi, ab hamesha succeed karti hai — missing roots hamesha se complex the."
+    },
+    {
+      "seq": 2,
+      "text": "Reals par, x squared plus one equals zero ka koi solution nahi tha. Complex numbers par iske theek do hain, plus i aur minus i. Ye ek deep fact ki pehli jhalak hai: degree-n polynomial ke theek n roots hote hain jab aap complex numbers allow karo."
+    },
+    {
+      "seq": 3,
+      "text": "Formula wahi familiar hai: x equals minus b plus or minus root D, poora over two a, jahan D, discriminant, hai b squared minus four a c."
+    },
+    {
+      "seq": 4,
+      "text": "D ko ek weather forecast samjho. Kuch bhi solve karne se pehle, D batata hai kis tarah ke roots expect karne hain, jaise monsoon forecast batata hai umbrella le jaana hai ya nahi."
+    },
+    {
+      "seq": 5,
+      "text": "Agar D positive hai, do distinct real roots milte hain, dono number line par. Agar D zero hai, ek repeated real root milta hai, theek minus b over two a par."
+    },
+    {
+      "seq": 6,
+      "text": "Aur agar D negative hai, do complex-conjugate roots milte hain. Roots real line chhodke plane mein chale gaye, ek mirror-image pair ki tarah."
+    },
+    {
+      "seq": 7,
+      "text": "Ek crucial caveat: ye poora forecast table maanta hai ki coefficients a, b, c real numbers hain."
+    },
+    {
+      "seq": 8,
+      "text": "Agar coefficients khud complex hain, to D ke negative hone ka idea sense hi nahi banata, aur roots conjugates hone zaroori nahi. Is boundary ko pakka dhyaan mein rakho."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "5bcf28c9-5aa0-4aa5-82c9-c54766209309",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 41,
+  "section_type": "worked_examples",
+  "subtopic": "Quadratic Equations with Complex Roots",
+  "title": "Worked (JEE Advanced): complex coefficients, no conjugate pair",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "When roots are NOT conjugates",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Solve $x^{2}-(3+i)x+(2+i)=0$ (complex coefficients).",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "D=(3+i)^{2}-4(2+i)=(8+6i)-(8+4i)=2i",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Find $\\sqrt{2i}$: $x^{2}-y^{2}=0,\\ 2xy=2,\\ |2i|=2\\Rightarrow x^{2}=y^{2}=1,\\ xy>0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\sqrt{2i}=\\pm(1+i)",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "x=\\frac{(3+i)\\pm(1+i)}{2}\\ \\Rightarrow\\ x=2+i\\ \\text{or}\\ x=1",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "$2+i$ and $1$ are NOT conjugates — the coefficients are complex.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Check: sum $=3+i$, product $=2+i$. Consistent with Vieta.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_41.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_41.mp3",
+  "duration_sec_english": 93.94,
+  "duration_sec_hinglish": 86.16,
+  "board_reveal_at_english": [
+    0,
+    7.25,
+    20.91,
+    32.68,
+    50.86,
+    56.49,
+    69.8,
+    84.82
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    6.83,
+    16.55,
+    29.95,
+    46.51,
+    51.37,
+    63.49,
+    76.8
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "<curious>Now the Advanced case that breaks the comfortable pattern: a quadratic with complex coefficients.</curious>"
+    },
+    {
+      "seq": 2,
+      "text": "Solve x squared minus three plus i, times x, plus two plus i, equals zero. Notice the coefficients themselves are complex."
+    },
+    {
+      "seq": 3,
+      "text": "Compute the discriminant. Three plus i, squared, is eight plus six i. Four times two plus i is eight plus four i. Subtracting gives two i."
+    },
+    {
+      "seq": 4,
+      "text": "So we need the square root of two i. Set it equal to x plus i y: x squared minus y squared is zero, two x y is two, and the modulus of two i is two. That gives x squared and y squared both one, with x y positive."
+    },
+    {
+      "seq": 5,
+      "text": "So root of two i is plus or minus one plus i."
+    },
+    {
+      "seq": 6,
+      "text": "Substitute into the formula: x equals three plus i, plus or minus one plus i, all over two. The plus branch gives two plus i; the minus branch gives one."
+    },
+    {
+      "seq": 7,
+      "text": "Here's the punchline: the two roots, two plus i and one, are not conjugates of each other. And that is completely fine, because the coefficients were complex, so the conjugate-root theorem simply does not apply."
+    },
+    {
+      "seq": 8,
+      "text": "Quick check with Vieta: the sum is three plus i and the product is two plus i, both matching the coefficients. Everything is consistent."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "<curious>Ab wo Advanced case jo comfortable pattern todta hai: complex coefficients wali quadratic.</curious>"
+    },
+    {
+      "seq": 2,
+      "text": "Solve karo x squared minus three plus i, times x, plus two plus i, equals zero. Dhyaan do coefficients khud complex hain."
+    },
+    {
+      "seq": 3,
+      "text": "Discriminant compute karo. Three plus i, squared, hai eight plus six i. Four times two plus i hai eight plus four i. Subtract karne se milta hai two i."
+    },
+    {
+      "seq": 4,
+      "text": "To humein two i ka square root chahiye. Ise x plus i y ke barabar set karo: x squared minus y squared zero hai, two x y two hai, aur two i ka modulus two hai. Ye deta hai x squared aur y squared dono one, with x y positive."
+    },
+    {
+      "seq": 5,
+      "text": "To root of two i hai plus or minus one plus i."
+    },
+    {
+      "seq": 6,
+      "text": "Formula mein substitute karo: x equals three plus i, plus or minus one plus i, poora over two. Plus branch deta hai two plus i; minus branch deta hai one."
+    },
+    {
+      "seq": 7,
+      "text": "Ye raha punchline: do roots, two plus i aur one, ek doosre ke conjugates nahi hain. Aur ye bilkul theek hai, kyunki coefficients complex the, to conjugate-root theorem bas apply hi nahi hota."
+    },
+    {
+      "seq": 8,
+      "text": "Vieta se quick check: sum hai three plus i aur product hai two plus i, dono coefficients se match. Sab consistent hai."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "2fa0af22-529e-4421-8a68-665c8f41118f",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 5,
+  "section_type": "concept",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "Equality needs two conditions",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "When are two complex numbers equal?",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "a+ib=c+id \\iff a=c \\ \\text{and}\\ b=d",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Two addresses match only if BOTH coordinates agree.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Satisfying only one equation is the partial-equality error.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "One complex equation therefore becomes TWO real equations.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "Standard Method B: for $A+iB=C+iD$ in real unknowns, set $A=C$ and $B=D$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "You then solve the two simultaneous real equations for the real unknowns.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Match real-to-real and imaginary-to-imaginary — never mix them.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_5.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_5.mp3",
+  "duration_sec_english": 88.39,
+  "duration_sec_hinglish": 89.42,
+  "board_reveal_at_english": [
+    0,
+    8.87,
+    22.53,
+    35.33,
+    47.79,
+    55.13,
+    68.61,
+    77.74
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    9.05,
+    21.93,
+    32.68,
+    45.14,
+    53.67,
+    68.01,
+    77.31
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "When do we say two complex numbers are equal? This looks trivial but it hides the single most-tested technique of the subtopic."
+    },
+    {
+      "seq": 2,
+      "text": "a plus i b equals c plus i d if and only if a equals c and b equals d. Both conditions, joined by and, are required."
+    },
+    {
+      "seq": 3,
+      "text": "Go back to the address analogy: two addresses name the same place only when both the east coordinate and the north coordinate agree. One matching coordinate is not enough."
+    },
+    {
+      "seq": 4,
+      "text": "That's exactly where students lose marks: they satisfy only the real part or only the imaginary part. That's the partial-equality error, and it's an easy trap to fall into under time pressure."
+    },
+    {
+      "seq": 5,
+      "text": "The upside is powerful: a single complex equation quietly hands you two real equations for free."
+    },
+    {
+      "seq": 6,
+      "text": "This is Standard Method B. Given some expression A plus i B equals C plus i D in real unknowns, you set A equal to C, and separately B equal to D."
+    },
+    {
+      "seq": 7,
+      "text": "Now you have two ordinary simultaneous real equations, and you solve them for your real unknowns like any system from earlier algebra."
+    },
+    {
+      "seq": 8,
+      "text": "Just remember the discipline: match real part to real part, and imaginary part to imaginary part. Never let a real term equal an imaginary term."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Do complex numbers ko equal kab kehte hain? Ye trivial lagta hai par isme subtopic ki sabse zyada test hone wali technique chhupi hai."
+    },
+    {
+      "seq": 2,
+      "text": "a plus i b equals c plus i d if and only if a equals c aur b equals d. Dono conditions, and se judi, zaroori hain."
+    },
+    {
+      "seq": 3,
+      "text": "Address analogy par wapas: do addresses ek hi jagah ko tabhi naam dete hain jab east coordinate aur north coordinate dono match karein. Ek coordinate match karna kaafi nahi."
+    },
+    {
+      "seq": 4,
+      "text": "Yehi wo jagah hai jahan students marks khote hain: wo sirf real part ya sirf imaginary part satisfy karte hain. Ye partial-equality error hai, aur time pressure mein aasani se ho jaata hai."
+    },
+    {
+      "seq": 5,
+      "text": "Faayda powerful hai: ek single complex equation chupke se aapko do real equations muft mein de deti hai."
+    },
+    {
+      "seq": 6,
+      "text": "Ye hai Standard Method B. Kisi expression A plus i B equals C plus i D mein, real unknowns ke saath, aap A ko C ke barabar, aur alag se B ko D ke barabar set karo."
+    },
+    {
+      "seq": 7,
+      "text": "Ab aapke paas do ordinary simultaneous real equations hain, aur unhe apne real unknowns ke liye solve karo, jaise koi bhi purana algebra system."
+    },
+    {
+      "seq": 8,
+      "text": "Bas discipline yaad rakho: real part ko real part se, aur imaginary part ko imaginary part se match karo. Kabhi real term ko imaginary term ke barabar mat karo."
+    }
+  ]
+}

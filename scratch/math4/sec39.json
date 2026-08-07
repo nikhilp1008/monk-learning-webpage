@@ -1,0 +1,208 @@
+{
+  "id": "ca5b9027-a1ad-4ebf-bb46-059b23c6121b",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 39,
+  "section_type": "worked_examples",
+  "subtopic": "Quadratic Equations with Complex Roots",
+  "title": "Worked: solving real quadratics with D < 0",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Real coefficients, negative discriminant",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$x^{2}+1=0\\Rightarrow x^{2}=-1\\Rightarrow x=\\pm i$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "$x^{2}+x+1=0$: $D=1-4=-3<0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "x=\\frac{-1\\pm i\\sqrt3}{2}",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "These are the complex cube roots of unity, $\\omega$ and $\\omega^{2}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "Now $\\sqrt2\\,x^{2}+x+\\sqrt2=0$: $D=1-4(\\sqrt2)(\\sqrt2)=1-8=-7$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "x=\\frac{-1\\pm i\\sqrt7}{2\\sqrt2}",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Both are conjugate pairs — as guaranteed by real coefficients.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/c11_ch04/english_sec_39.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/c11_ch04/hinglish_sec_39.mp3",
+  "duration_sec_english": 81.5,
+  "duration_sec_hinglish": 79.71,
+  "board_reveal_at_english": [
+    0,
+    6.74,
+    18.26,
+    29.44,
+    36.19,
+    46.85,
+    64.43,
+    72.03
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    5.97,
+    18.43,
+    29.27,
+    37.12,
+    46.68,
+    62.47,
+    70.15
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's solve a few real-coefficient quadratics where the discriminant turns out negative.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 2,
+      "text": "Start with the simplest, x squared plus one equals zero. That gives x squared equals minus one, so x is plus or minus i. The two roots that used to be missing.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 3,
+      "text": "Now x squared plus x plus one equals zero. Compute the discriminant: one minus four, which is minus three, negative.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 4,
+      "text": "So the roots are minus one plus or minus i root three, all over two.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 5,
+      "text": "These two numbers are exactly the complex cube roots of unity, omega and omega squared, tying this subtopic back to the polar work.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 6,
+      "text": "One more, with irrational coefficients: root two x squared plus x plus root two equals zero. The discriminant is one minus four times root two times root two, which is one minus eight, minus seven.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 7,
+      "text": "So the roots are minus one plus or minus i root seven, all over two root two.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 8,
+      "text": "In both problems the roots came out as conjugate pairs, exactly as the conjugate-root theorem guarantees whenever the coefficients are real.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Kuch real-coefficient quadratics solve karte hain jahan discriminant negative nikalta hai.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 2,
+      "text": "Sabse simple se shuru karo, x squared plus one equals zero. Ye deta hai x squared barabar minus one, to x hai plus or minus i. Wahi do roots jo pehle missing the.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 3,
+      "text": "Ab x squared plus x plus one equals zero. Discriminant compute karo: one minus four, jo hai minus three, negative.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 4,
+      "text": "To roots hain minus one plus or minus i root three, poora over two.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 5,
+      "text": "Ye do numbers bilkul complex cube roots of unity hain, omega aur omega squared, is subtopic ko polar work se jodte hue.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 6,
+      "text": "Ek aur, irrational coefficients ke saath: root two x squared plus x plus root two equals zero. Discriminant hai one minus four times root two times root two, jo hai one minus eight, minus seven.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 7,
+      "text": "To roots hain minus one plus or minus i root seven, poora over two root two.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    },
+    {
+      "seq": 8,
+      "text": "Dono problems mein roots conjugate pairs nikle, bilkul jaisa conjugate-root theorem guarantee karta hai jab bhi coefficients real hon.",
+      "tts_voice": "Ira",
+      "tts_engine": "rumik_mulberry",
+      "tts_description": "a warm 30s female hindi accent voice, conversational pacing, neutral register, elearning_instructor."
+    }
+  ]
+}

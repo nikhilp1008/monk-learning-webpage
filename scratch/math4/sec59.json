@@ -1,0 +1,160 @@
+{
+  "id": "c81ff24b-99b8-4ec0-ac5a-f995ed2123ad",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 59,
+  "section_type": "formulas",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "Argand geometry & loci toolkit",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Consolidated: geometry in z",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\text{dist}=|z_1-z_2|,\\ \\text{mid}=\\tfrac{z_1+z_2}{2},\\ \\text{centroid}=\\tfrac{z_1+z_2+z_3}{3}",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\frac{z_2-z_1}{z_3-z_1}=\\left|\\frac{z_2-z_1}{z_3-z_1}\\right|e^{i\\theta};\\ \\text{multiply by } i=+90^{\\circ}",
+      "emphasis": "high",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\text{collinear}:\\ \\tfrac{z_3-z_1}{z_2-z_1}\\in\\mathbb{R};\\quad \\text{perp bisector}:\\ |z-z_1|=|z-z_2|",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\text{circle}:\\ |z-z_0|=r;\\quad \\text{Apollonius}:\\ \\tfrac{|z-z_1|}{|z-z_2|}=k\\ (k\\neq1\\Rightarrow\\text{circle})",
+      "emphasis": "normal",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "\\arg\\tfrac{z-z_1}{z-z_2}=\\alpha\\Rightarrow \\text{arc};\\quad \\text{equilateral}:\\ \\sum z_i^{2}=\\sum z_i z_j",
+      "emphasis": "normal",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\text{on } |z-z_0|=r:\\ \\big||z_0|-r\\big|\\le|z|\\le|z_0|+r",
+      "emphasis": "high",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "Simplify every locus with $|w|^{2}=w\\bar w$ — it linearises the algebra.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_59.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_59.mp3",
+  "duration_sec_english": 84.22,
+  "duration_sec_hinglish": 76.44,
+  "board_reveal_at_english": [
+    0,
+    5.03,
+    13.31,
+    26.88,
+    40.02,
+    52.99,
+    61.95,
+    70.49
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    4.52,
+    11.26,
+    24.06,
+    36.35,
+    46.34,
+    54.36,
+    63.32
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is the Argand-geometry toolkit consolidated on one board."
+    },
+    {
+      "seq": 2,
+      "text": "Distance is the modulus of the difference; the midpoint is the average of two; the centroid is the average of three."
+    },
+    {
+      "seq": 3,
+      "text": "The rotation theorem: the ratio z two minus z one over z three minus z one equals its length-ratio times e to the i theta. And multiplying by i is a plus ninety degree turn."
+    },
+    {
+      "seq": 4,
+      "text": "Collinearity means the ratio z three minus z one over z two minus z one is real; the perpendicular bisector is modulus z minus z one equals modulus z minus z two."
+    },
+    {
+      "seq": 5,
+      "text": "A circle is modulus z minus z zero equals r; the Apollonius ratio equals k gives a circle when k is not one, and a line when k is one."
+    },
+    {
+      "seq": 6,
+      "text": "A fixed argument of the ratio gives an arc; and the equilateral condition is the sum of the squares equals the sum of the pairwise products."
+    },
+    {
+      "seq": 7,
+      "text": "On a circle, the modulus of z is bounded between the size of modulus z zero minus r, and modulus z zero plus r."
+    },
+    {
+      "seq": 8,
+      "text": "And the one habit that unlocks every locus problem: simplify using modulus w squared equals w times w bar. It linearises the algebra every single time."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye raha Argand-geometry toolkit ek board par consolidated."
+    },
+    {
+      "seq": 2,
+      "text": "Distance hai difference ka modulus; midpoint hai do ka average; centroid hai teen ka average."
+    },
+    {
+      "seq": 3,
+      "text": "Rotation theorem: ratio z two minus z one over z three minus z one barabar uske length-ratio times e to the i theta. Aur i se multiply karna ek plus ninety degree turn hai."
+    },
+    {
+      "seq": 4,
+      "text": "Collinearity matlab ratio z three minus z one over z two minus z one real hai; perpendicular bisector hai modulus z minus z one barabar modulus z minus z two."
+    },
+    {
+      "seq": 5,
+      "text": "Circle hai modulus z minus z zero barabar r; Apollonius ratio barabar k ek circle deta hai jab k one na ho, aur ek line jab k one ho."
+    },
+    {
+      "seq": 6,
+      "text": "Ratio ka fixed argument ek arc deta hai; aur equilateral condition hai squares ka sum barabar pairwise products ka sum."
+    },
+    {
+      "seq": 7,
+      "text": "Circle par, z ka modulus size of modulus z zero minus r, aur modulus z zero plus r ke beech bounded hai."
+    },
+    {
+      "seq": 8,
+      "text": "Aur wo ek aadat jo har locus problem unlock karti hai: modulus w squared barabar w times w bar se simplify karo. Ye har baar algebra ko linearise kar deti hai."
+    }
+  ]
+}

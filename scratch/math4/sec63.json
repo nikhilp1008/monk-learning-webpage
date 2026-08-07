@@ -1,0 +1,160 @@
+{
+  "id": "cacb0a80-f91d-4389-ab15-14c7c1c11528",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 63,
+  "section_type": "worked_examples",
+  "subtopic": "Geometry of Complex Numbers (Argand Geometry & Loci)",
+  "title": "Worked (JEE Advanced): an arg-locus is an arc",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "A constant argument gives a semicircle",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Find the locus of $z$ with $\\arg\\dfrac{z-1}{z+1}=\\dfrac{\\pi}{2}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "A constant argument of $\\tfrac{\\pi}{2}$ means the segment from $-1$ to $1$ subtends a right angle at $z$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Points where a fixed segment subtends $90^{\\circ}$ lie on the circle with that segment as diameter.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "\\text{circle } |z|=1,\\ \\text{diameter from }-1\\text{ to }1",
+      "emphasis": "high",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "It is an ARC (a semicircle), not the whole circle.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "The sign $+\\tfrac{\\pi}{2}$ selects the upper half, $\\operatorname{Im}(z)>0$, endpoints excluded.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "So: the open upper unit semicircle.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/english_sec_63.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p3/hinglish_sec_63.mp3",
+  "duration_sec_english": 81.55,
+  "duration_sec_hinglish": 78.91,
+  "board_reveal_at_english": [
+    0,
+    5.55,
+    13.99,
+    29.53,
+    38.74,
+    48.64,
+    60.07,
+    73.22
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    5.29,
+    13.65,
+    26.97,
+    37.12,
+    48.13,
+    58.2,
+    70.14
+  ],
+  "part": 3,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "<curious>What curve do you get when an argument is held constant?</curious> Let's work it out."
+    },
+    {
+      "seq": 2,
+      "text": "Find the locus of z for which the argument of z minus one, over z plus one, equals pi over two."
+    },
+    {
+      "seq": 3,
+      "text": "A constant argument of pi over two means the directed angle from the vector z plus one to the vector z minus one is a right angle. In other words, the segment from minus one to one subtends ninety degrees at z."
+    },
+    {
+      "seq": 4,
+      "text": "And there's a classical fact: the set of points at which a fixed segment subtends a right angle is the circle having that segment as a diameter."
+    },
+    {
+      "seq": 5,
+      "text": "Here the segment runs from minus one to one, so the circle is the unit circle, modulus of z equals one, with that segment as its diameter."
+    },
+    {
+      "seq": 6,
+      "text": "But be careful: a fixed argument gives only an arc, a semicircle, not the whole circle. Half the circle would give the opposite sign of the angle."
+    },
+    {
+      "seq": 7,
+      "text": "The plus sign, plus pi over two, selects the upper half, where the imaginary part of z is positive, and the two endpoints are excluded because the ratio is undefined there."
+    },
+    {
+      "seq": 8,
+      "text": "So the final locus is the open upper half of the unit circle — an arc, exactly as the arg-locus rule warns."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "<curious>Jab ek argument constant rakha jaaye to kaunsa curve milta hai?</curious> Chalo nikaalte hain."
+    },
+    {
+      "seq": 2,
+      "text": "z ka locus nikaalo jiske liye z minus one, over z plus one, ka argument barabar pi over two ho."
+    },
+    {
+      "seq": 3,
+      "text": "Pi over two ka constant argument matlab z plus one vector se z minus one vector tak ka directed angle ek right angle hai. Doosre shabdon mein, minus one se one tak ka segment z par ninety degrees subtend karta hai."
+    },
+    {
+      "seq": 4,
+      "text": "Aur ek classical fact hai: wo points ka set jahan ek fixed segment right angle subtend karta hai, wo circle hai jiska diameter wahi segment ho."
+    },
+    {
+      "seq": 5,
+      "text": "Yahan segment minus one se one tak chalta hai, to circle hai unit circle, modulus of z barabar one, us segment ko apna diameter banate hue."
+    },
+    {
+      "seq": 6,
+      "text": "Par savdhaan: fixed argument sirf ek arc deta hai, ek semicircle, poora circle nahi. Aadha circle angle ka opposite sign deta."
+    },
+    {
+      "seq": 7,
+      "text": "Plus sign, plus pi over two, upper half select karta hai, jahan z ka imaginary part positive hai, aur do endpoints exclude hain kyunki wahan ratio undefined hai."
+    },
+    {
+      "seq": 8,
+      "text": "To final locus hai unit circle ka open upper half — ek arc, bilkul jaisa arg-locus rule warn karta hai."
+    }
+  ]
+}

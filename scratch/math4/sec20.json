@@ -1,0 +1,162 @@
+{
+  "id": "473a320f-ea36-47e7-8ab7-c3d54a8cfc6d",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 20,
+  "section_type": "tips",
+  "subtopic": "The Modulus and the Conjugate of a Complex Number",
+  "title": "Pitfalls & pro-tips: modulus and conjugate",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "The classic modulus / conjugate traps",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$|z_1+z_2|\\neq |z_1|+|z_2|$ in general — only $\\le$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "Never write $|z|=\\pm z$; the modulus is a single non-negative real.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "$\\bar z$ flips only the imaginary sign; $-z$ flips both — don't confuse them.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "And $z\\bar z=|z|^{2}$ is a non-negative real — not $(\\bar z)^{2}$ and not $|z|$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "Pro-tip: to prove '$E$ is real', show $E=\\bar E$; for 'imaginary', show $E+\\bar E=0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "For moduli of products, powers, and quotients, take $|\\cdot|$ factor by factor.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "On $|z|=1$, substitute $\\bar z=1/z$ — it collapses unit-circle problems.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_20.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_20.mp3",
+  "duration_sec_english": 86.69,
+  "duration_sec_hinglish": 83.45,
+  "board_reveal_at_english": [
+    0,
+    7.17,
+    19.54,
+    30.04,
+    40.36,
+    51.8,
+    64.51,
+    74.07
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.19,
+    18.26,
+    28.16,
+    38.83,
+    48.47,
+    62.46,
+    71.42
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's finish this subtopic with the traps that reliably cost marks, and the shortcuts that reliably save them."
+    },
+    {
+      "seq": 2,
+      "text": "Biggest trap first: the modulus of a sum is not the sum of the moduli. In general only the less-than-or-equal holds; equality is the exception, not the rule."
+    },
+    {
+      "seq": 3,
+      "text": "Second: never write modulus of z equals plus or minus z. The modulus is one single non-negative real number, full stop."
+    },
+    {
+      "seq": 4,
+      "text": "Third: the conjugate flips only the imaginary sign, while minus z flips both signs. Mixing these two up is one of the most common errors in the chapter."
+    },
+    {
+      "seq": 5,
+      "text": "Fourth: z times z bar is the modulus squared, a non-negative real. It is not z bar squared, and it is not the modulus itself."
+    },
+    {
+      "seq": 6,
+      "text": "Now the pro-tips. To prove an expression E is real, show it equals its own conjugate. To prove it's purely imaginary, show E plus E bar is zero. This usually beats expanding."
+    },
+    {
+      "seq": 7,
+      "text": "For moduli of products, powers, and quotients, always take the modulus factor by factor rather than multiplying everything out."
+    },
+    {
+      "seq": 8,
+      "text": "<whisper>And the unit-circle secret:</whisper> whenever modulus of z is one, replace z bar with one over z. That single substitution collapses a whole class of hard problems."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Is subtopic ko finish karte hain un traps ke saath jo pakka marks le jaate hain, aur un shortcuts ke saath jo pakka bachate hain."
+    },
+    {
+      "seq": 2,
+      "text": "Sabse bada trap pehle: sum ka modulus, moduli ka sum nahi hai. Generally sirf less-than-or-equal chalta hai; equality exception hai, rule nahi."
+    },
+    {
+      "seq": 3,
+      "text": "Doosra: kabhi modulus of z barabar plus or minus z mat likho. Modulus ek single non-negative real number hai, bas."
+    },
+    {
+      "seq": 4,
+      "text": "Teesra: conjugate sirf imaginary sign flip karta hai, jabki minus z dono signs flip karta hai. In dono ko mix karna chapter ki sabse common errors mein se ek hai."
+    },
+    {
+      "seq": 5,
+      "text": "Chautha: z times z bar hai modulus squared, ek non-negative real. Ye z bar squared nahi hai, aur ye khud modulus bhi nahi hai."
+    },
+    {
+      "seq": 6,
+      "text": "Ab pro-tips. Kisi expression E ko real prove karne ke liye dikhao ki wo apne hi conjugate ke barabar hai. Purely imaginary prove karne ke liye dikhao ki E plus E bar zero hai. Ye aksar expanding se behtar hai."
+    },
+    {
+      "seq": 7,
+      "text": "Products, powers, aur quotients ke moduli ke liye hamesha modulus factor by factor lo, sab kuch multiply karne ke bajaay."
+    },
+    {
+      "seq": 8,
+      "text": "<whisper>Aur unit-circle secret:</whisper> jab bhi modulus of z one ho, z bar ko one over z se replace karo. Wo ek substitution mushkil problems ki poori class collapse kar deti hai."
+    }
+  ]
+}

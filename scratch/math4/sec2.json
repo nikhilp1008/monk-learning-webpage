@@ -1,0 +1,160 @@
+{
+  "id": "5507d6b5-dd8d-4bec-bcbf-0d0b4e10a971",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 2,
+  "section_type": "concept",
+  "subtopic": "Algebra of Complex Numbers",
+  "title": "Powers of i cycle with period four",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Powers of i repeat every 4",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "i^{1}=i,\\quad i^{2}=-1,\\quad i^{3}=-i,\\quad i^{4}=1",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "i^{4k}=1,\\ \\ i^{4k+1}=i,\\ \\ i^{4k+2}=-1,\\ \\ i^{4k+3}=-i",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "To evaluate $i^{n}$, divide $n$ by 4 and keep only the remainder.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "$i^{135}$: $135=4\\times 33+3$, so $i^{135}=i^{3}=-i$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "For negative powers, add a multiple of 4 first: $i^{-1}=i^{3}=-i$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "i^{n}+i^{n+1}+i^{n+2}+i^{n+3}=0",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Any four consecutive powers of $i$ add to zero — a huge shortcut for long sums.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_2.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_2.mp3",
+  "duration_sec_english": 89.16,
+  "duration_sec_hinglish": 93.43,
+  "board_reveal_at_english": [
+    0,
+    7.25,
+    18.01,
+    34.99,
+    43.86,
+    57.51,
+    67.24,
+    75.01
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.51,
+    20.65,
+    38.4,
+    46.51,
+    60.67,
+    71.42,
+    79.87
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "From the rotation picture, the powers of i can only ever be four things, and they repeat in a cycle."
+    },
+    {
+      "seq": 2,
+      "text": "Here is the cycle: i to the one is i, i squared is minus one, i cubed is minus i, and i to the fourth is back to one."
+    },
+    {
+      "seq": 3,
+      "text": "Writing that generally: i to the power four k is one, four k plus one gives i, four k plus two gives minus one, and four k plus three gives minus i. The exponent's remainder on division by four is all that matters."
+    },
+    {
+      "seq": 4,
+      "text": "So to evaluate any power of i, you don't compute the whole thing. You just divide the exponent by four and keep the remainder."
+    },
+    {
+      "seq": 5,
+      "text": "Take i to the one hundred thirty five. One hundred thirty five is four times thirty three plus three, so the remainder is three, and i to the one hundred thirty five equals i cubed equals minus i."
+    },
+    {
+      "seq": 6,
+      "text": "For a negative exponent, add a multiple of four to make it positive first. So i to the minus one becomes i cubed, which is minus i."
+    },
+    {
+      "seq": 7,
+      "text": "And here is a gorgeous fact worth memorizing: any four consecutive powers of i sum to zero."
+    },
+    {
+      "seq": 8,
+      "text": "Why? Factor out the first one and you're left with one plus i plus i squared plus i cubed, which is one plus i minus one minus i, exactly zero. Use this to collapse long sums instantly."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Rotation wali picture se i ki powers sirf chaar cheezein ho sakti hain, aur wo ek cycle mein repeat hoti hain."
+    },
+    {
+      "seq": 2,
+      "text": "Ye rahi cycle: i to the one is i, i squared is minus one, i cubed is minus i, aur i to the fourth wapas one."
+    },
+    {
+      "seq": 3,
+      "text": "Generally likhein to: i to the power four k is one, four k plus one deta hai i, four k plus two deta hai minus one, aur four k plus three deta hai minus i. Sirf exponent ka remainder, four se divide karke, matter karta hai."
+    },
+    {
+      "seq": 4,
+      "text": "To i ki koi bhi power nikaalne ke liye poora calculate mat karo. Bas exponent ko four se divide karo aur remainder rakho."
+    },
+    {
+      "seq": 5,
+      "text": "Lo i to the one hundred thirty five. One hundred thirty five is four times thirty three plus three, to remainder three, aur i to the one hundred thirty five equals i cubed equals minus i."
+    },
+    {
+      "seq": 6,
+      "text": "Negative exponent ke liye pehle four ka multiple add karke positive banao. To i to the minus one ban jaata hai i cubed, yaani minus i."
+    },
+    {
+      "seq": 7,
+      "text": "Aur ye ek khoobsurat fact hai yaad rakhne layak: i ki koi bhi four consecutive powers add hoke zero ban jaati hain."
+    },
+    {
+      "seq": 8,
+      "text": "Kyun? Pehli power factor out karo, bachta hai one plus i plus i squared plus i cubed, jo hai one plus i minus one minus i, bilkul zero. Isse lambe sums turant collapse karo."
+    }
+  ]
+}

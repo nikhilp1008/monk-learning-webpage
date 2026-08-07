@@ -1,0 +1,160 @@
+{
+  "id": "5a5154c4-98c8-4ade-bf36-f7a67035bd0e",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 16,
+  "section_type": "formulas",
+  "subtopic": "The Modulus and the Conjugate of a Complex Number",
+  "title": "Modulus & conjugate: the toolkit",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Consolidated properties",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "\\bar z=a-ib;\\ \\ z+\\bar z=2\\operatorname{Re}(z);\\ \\ z-\\bar z=2i\\operatorname{Im}(z)",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "z\\bar z=|z|^{2}=a^{2}+b^{2}",
+      "emphasis": "high",
+      "reveal_at": 17
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\overline{z_1 z_2}=\\bar z_1\\bar z_2;\\ \\ \\overline{\\left(\\tfrac{z_1}{z_2}\\right)}=\\tfrac{\\bar z_1}{\\bar z_2};\\ \\ \\overline{z^{\\,n}}=(\\bar z)^{n}",
+      "emphasis": "normal",
+      "reveal_at": 27
+    },
+    {
+      "seq": 5,
+      "type": "formula",
+      "latex": "|z_1 z_2|=|z_1||z_2|;\\ \\ \\left|\\tfrac{z_1}{z_2}\\right|=\\tfrac{|z_1|}{|z_2|};\\ \\ |z^{n}|=|z|^{n}",
+      "emphasis": "normal",
+      "reveal_at": 37
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "z^{-1}=\\frac{\\bar z}{|z|^{2}}=\\frac{a-ib}{a^{2}+b^{2}}",
+      "emphasis": "high",
+      "reveal_at": 47
+    },
+    {
+      "seq": 7,
+      "text": "On the unit circle, where $|z|=1$, the conjugate equals the reciprocal: $\\bar z=\\tfrac{1}{z}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 57
+    },
+    {
+      "seq": 8,
+      "text": "The one identity to internalize: $z\\bar z=|z|^2$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 67
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_16.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_16.mp3",
+  "duration_sec_english": 86.26,
+  "duration_sec_hinglish": 75.41,
+  "board_reveal_at_english": [
+    0,
+    6.91,
+    16.38,
+    25,
+    37.03,
+    50.09,
+    60.42,
+    74.33
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    7.25,
+    17.58,
+    24.92,
+    33.54,
+    43.01,
+    53.25,
+    65.11
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is the whole toolkit on one board — your consolidated reference for modulus and conjugate."
+    },
+    {
+      "seq": 2,
+      "text": "The conjugate is a minus i b. Adding z and its conjugate gives twice the real part; subtracting gives two i times the imaginary part."
+    },
+    {
+      "seq": 3,
+      "text": "The workhorse: z times z bar equals the modulus squared, which is a squared plus b squared."
+    },
+    {
+      "seq": 4,
+      "text": "Conjugation over operations: the conjugate of a product is the product of conjugates, of a quotient the quotient of conjugates, and of a power the power of the conjugate."
+    },
+    {
+      "seq": 5,
+      "text": "Modulus over operations: the modulus of a product is the product of moduli, of a quotient the quotient of moduli, and of a power the power of the modulus."
+    },
+    {
+      "seq": 6,
+      "text": "The inverse, cleanly: z inverse equals z bar over the modulus squared, which is a minus i b over a squared plus b squared."
+    },
+    {
+      "seq": 7,
+      "text": "And a favourite special case: when z sits on the unit circle, so its modulus is one, the conjugate equals the reciprocal, one over z. That substitution simplifies a huge number of problems."
+    },
+    {
+      "seq": 8,
+      "text": "If you internalize only one line from this board, make it this: z times z bar equals modulus squared. Everything downstream leans on it."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye raha poora toolkit ek board par — modulus aur conjugate ke liye aapka consolidated reference."
+    },
+    {
+      "seq": 2,
+      "text": "Conjugate hai a minus i b. z aur uske conjugate ko add karne se milta hai twice real part; subtract karne se two i times imaginary part."
+    },
+    {
+      "seq": 3,
+      "text": "Workhorse: z times z bar barabar modulus squared, jo hai a square plus b square."
+    },
+    {
+      "seq": 4,
+      "text": "Conjugation operations par: product ka conjugate hai conjugates ka product, quotient ka quotient, aur power ka conjugate ki wahi power."
+    },
+    {
+      "seq": 5,
+      "text": "Modulus operations par: product ka modulus hai moduli ka product, quotient ka quotient, aur power ka modulus ki wahi power."
+    },
+    {
+      "seq": 6,
+      "text": "Inverse, cleanly: z inverse barabar z bar over modulus squared, jo hai a minus i b over a square plus b square."
+    },
+    {
+      "seq": 7,
+      "text": "Aur ek favourite special case: jab z unit circle par ho, to modulus one, conjugate barabar reciprocal, one over z. Ye substitution bahut saare problems simplify karti hai."
+    },
+    {
+      "seq": 8,
+      "text": "Agar is board se sirf ek line internalize karni ho, to ye karo: z times z bar barabar modulus squared. Aage sab kuch isi par tika hai."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "b11d7c0f-e12f-400c-ac95-307967d7a816",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 24,
+  "section_type": "concept",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "Polar (trigonometric) form",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Writing z as r(cos + i sin)",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "type": "formula",
+      "latex": "z=r(\\cos\\theta+i\\sin\\theta)=r\\,\\mathrm{cis}\\,\\theta",
+      "emphasis": "high",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "text": "With $r=|z|$ and $\\theta=\\arg z$; and $x=r\\cos\\theta$, $y=r\\sin\\theta$ to go back.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Standard polar uses a $+$ between cosine and sine.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "$r(\\cos\\theta-i\\sin\\theta)$ is NOT standard — rewrite as $r(\\cos(-\\theta)+i\\sin(-\\theta))$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "Method: (1) find $r$, (2) find $\\alpha=\\tan^{-1}|y/x|$, (3) place $\\theta$ by quadrant, (4) write it out.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "type": "formula",
+      "latex": "\\bar z=r\\big(\\cos(-\\theta)+i\\sin(-\\theta)\\big)=r\\angle(-\\theta)",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "The conjugate keeps the same modulus and negates the argument.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_24.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_24.mp3",
+  "duration_sec_english": 91.03,
+  "duration_sec_hinglish": 91.3,
+  "board_reveal_at_english": [
+    0,
+    10.24,
+    19.71,
+    31.23,
+    39.94,
+    54.53,
+    72.62,
+    81.41
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    10.75,
+    21.33,
+    32.68,
+    41.9,
+    56.83,
+    71.77,
+    81.24
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "With modulus and argument in hand, we can write any nonzero complex number in polar form, the launchpad for rotation and powers."
+    },
+    {
+      "seq": 2,
+      "text": "Polar form is z equals r times, in brackets, cosine theta plus i sine theta. This is sometimes abbreviated r cis theta."
+    },
+    {
+      "seq": 3,
+      "text": "Here r is the modulus and theta is the argument. And to convert back to Cartesian, just use x equals r cosine theta and y equals r sine theta."
+    },
+    {
+      "seq": 4,
+      "text": "A formatting rule that examiners love to test: standard polar form uses a plus sign between the cosine and the sine terms."
+    },
+    {
+      "seq": 5,
+      "text": "So r times cosine theta minus i sine theta is not standard polar form. If you meet it, rewrite it using cosine of minus theta plus i sine of minus theta, which restores the plus."
+    },
+    {
+      "seq": 6,
+      "text": "The conversion method is four clean steps. One, compute r. Two, compute the reference angle alpha. Three, place theta in the correct quadrant. Four, write out r times cosine theta plus i sine theta. Step three is where most marks are lost."
+    },
+    {
+      "seq": 7,
+      "text": "The conjugate in polar form is elegant: it keeps the same modulus r but flips the sign of the angle, giving r at angle minus theta."
+    },
+    {
+      "seq": 8,
+      "text": "That matches the reflection picture from before: reflecting across the real axis leaves the distance unchanged and simply negates the direction."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Modulus aur argument haath mein hone se, hum kisi bhi nonzero complex number ko polar form mein likh sakte hain, jo rotation aur powers ka launchpad hai."
+    },
+    {
+      "seq": 2,
+      "text": "Polar form hai z equals r times, brackets mein, cosine theta plus i sine theta. Ise kabhi kabhi r cis theta likha jaata hai."
+    },
+    {
+      "seq": 3,
+      "text": "Yahan r modulus hai aur theta argument. Aur Cartesian mein wapas jaane ke liye bas x equals r cosine theta aur y equals r sine theta use karo."
+    },
+    {
+      "seq": 4,
+      "text": "Ek formatting rule jise examiners test karna pasand karte hain: standard polar form cosine aur sine terms ke beech plus sign use karta hai."
+    },
+    {
+      "seq": 5,
+      "text": "To r times cosine theta minus i sine theta standard polar form nahi hai. Agar mile, to ise cosine of minus theta plus i sine of minus theta se rewrite karo, jo plus wapas laata hai."
+    },
+    {
+      "seq": 6,
+      "text": "Conversion method chaar clean steps hai. Ek, r nikaalo. Do, reference angle alpha nikaalo. Teen, theta ko sahi quadrant mein rakho. Chaar, r times cosine theta plus i sine theta likho. Step teen mein sabse zyada marks jaate hain."
+    },
+    {
+      "seq": 7,
+      "text": "Polar form mein conjugate elegant hai: ye same modulus r rakhta hai par angle ka sign flip karta hai, deta hai r at angle minus theta."
+    },
+    {
+      "seq": 8,
+      "text": "Ye pehle wali reflection picture se match karta hai: real axis par reflect karne se distance same rehti hai aur bas direction negate ho jaati hai."
+    }
+  ]
+}

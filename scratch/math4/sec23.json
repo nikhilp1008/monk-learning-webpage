@@ -1,0 +1,161 @@
+{
+  "id": "deb6aa8c-fbfb-4db7-972f-c199e0950bf6",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 23,
+  "section_type": "concept",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "Finding the principal argument by quadrant",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Fix the quadrant, then the angle",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Let $\\alpha=\\tan^{-1}\\left|\\dfrac{y}{x}\\right|$ be the acute reference angle.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "svg": "<svg font-family=\"system-ui, sans-serif\" viewBox='0 0 440 300' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='150' x2='410' y2='150' stroke='#555' stroke-width='1.5'/><line x1='220' y1='20' x2='220' y2='280' stroke='#555' stroke-width='1.5'/><text x='398' y='168' font-size='12' fill='#555'>Re</text><text x='228' y='32' font-size='12' fill='#555'>Im</text><text x='300' y='90' font-size='14' fill='#1f6feb'>I: alpha</text><text x='90' y='90' font-size='14' fill='#2ea043'>II: pi - alpha</text><text x='90' y='215' font-size='14' fill='#d29922'>III: alpha - pi</text><text x='300' y='215' font-size='14' fill='#8957e5'>IV: -alpha</text><text x='120' y='265' font-size='11' fill='#777'>alpha = arctan |y/x| (acute)</text></svg>",
+      "type": "diagram",
+      "caption": "Reference angle -> principal argument, by quadrant",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "\\text{I}:\\alpha \\quad \\text{II}:\\pi-\\alpha \\quad \\text{III}:\\alpha-\\pi \\quad \\text{IV}:-\\alpha",
+      "emphasis": "normal",
+      "reveal_at": 30
+    },
+    {
+      "seq": 5,
+      "text": "Signature trap: returning $\\tan^{-1}(y/x)$ without fixing the quadrant.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "high",
+      "reveal_at": 40
+    },
+    {
+      "seq": 6,
+      "text": "Axis cases: $\\arg z=0$ if real $>0$; $\\pi$ if real $<0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 50
+    },
+    {
+      "seq": 7,
+      "text": "Purely imaginary: $\\arg z=\\tfrac{\\pi}{2}$ if $y>0$, and $-\\tfrac{\\pi}{2}$ if $y<0$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 60
+    },
+    {
+      "seq": 8,
+      "text": "Habit: sketch the point first — the quadrant, and the angle, become obvious.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 70
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_23.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_23.mp3",
+  "duration_sec_english": 87.62,
+  "duration_sec_hinglish": 79.18,
+  "board_reveal_at_english": [
+    0,
+    10.41,
+    22.95,
+    32.85,
+    45.57,
+    56.66,
+    66.82,
+    77.14
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    9.05,
+    21.33,
+    29.27,
+    41.3,
+    51.97,
+    60.07,
+    68.78
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "This is the single most important skill of the subtopic, and the cleanest test of real understanding: getting the principal argument right by quadrant."
+    },
+    {
+      "seq": 2,
+      "text": "Start with the reference angle alpha. It's the acute angle whose tangent is the size of y over x, always taken positive, so alpha is always between zero and ninety degrees."
+    },
+    {
+      "seq": 3,
+      "text": "Now place that reference angle into the correct quadrant of the plane. The quadrant decides how alpha becomes the actual argument."
+    },
+    {
+      "seq": 4,
+      "text": "In quadrant one the argument is just alpha. In quadrant two it's pi minus alpha. In quadrant three it's alpha minus pi. In quadrant four it's minus alpha. Learn this table cold."
+    },
+    {
+      "seq": 5,
+      "text": "The signature trap of the whole chapter is right here: blindly reporting inverse tangent of y over x without fixing the quadrant. That's how marks vanish."
+    },
+    {
+      "seq": 6,
+      "text": "Handle the axis cases separately. If z is a positive real, the argument is zero. If z is a negative real, the argument is pi."
+    },
+    {
+      "seq": 7,
+      "text": "If z is purely imaginary, the argument is pi over two when y is positive, and minus pi over two when y is negative."
+    },
+    {
+      "seq": 8,
+      "text": "The habit that saves you every time: sketch the point first. Once you see which quadrant it's in, the sign and the formula for the argument almost write themselves."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye subtopic ki sabse important skill hai, aur real understanding ka sabse clean test: principal argument ko quadrant se sahi nikaalna."
+    },
+    {
+      "seq": 2,
+      "text": "Reference angle alpha se shuru karo. Ye wo acute angle hai jiska tangent y over x ka size hai, hamesha positive liya, to alpha hamesha zero aur ninety degrees ke beech."
+    },
+    {
+      "seq": 3,
+      "text": "Ab us reference angle ko plane ke sahi quadrant mein rakho. Quadrant decide karta hai ki alpha kaise actual argument banta hai."
+    },
+    {
+      "seq": 4,
+      "text": "Quadrant one mein argument bas alpha hai. Quadrant two mein pi minus alpha. Quadrant three mein alpha minus pi. Quadrant four mein minus alpha. Is table ko pakka yaad karo."
+    },
+    {
+      "seq": 5,
+      "text": "Poore chapter ka signature trap yahin hai: bina quadrant fix kiye inverse tangent of y over x report kar dena. Isi tarah marks gayab hote hain."
+    },
+    {
+      "seq": 6,
+      "text": "Axis cases alag handle karo. Agar z positive real hai, argument zero hai. Agar z negative real hai, argument pi hai."
+    },
+    {
+      "seq": 7,
+      "text": "Agar z purely imaginary hai, argument pi over two hai jab y positive ho, aur minus pi over two jab y negative ho."
+    },
+    {
+      "seq": 8,
+      "text": "Wo aadat jo har baar bachati hai: pehle point sketch karo. Jaise hi dikhe kis quadrant mein hai, argument ka sign aur formula khud likh jaate hain."
+    }
+  ]
+}

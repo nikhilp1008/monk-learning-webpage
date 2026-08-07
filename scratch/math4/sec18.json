@@ -1,0 +1,160 @@
+{
+  "id": "01bc8610-48d4-47bc-81a4-c124d50aa8d2",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 18,
+  "section_type": "worked_examples",
+  "subtopic": "The Modulus and the Conjugate of a Complex Number",
+  "title": "Worked: inverse via conjugate & a modulus proof",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Inverse from z-bar over |z|^2, and prove via modulus",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "$z=4-3i$: $|z|^{2}=16+9=25$ and $\\bar z=4+3i$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "z^{-1}=\\frac{4+3i}{25}=\\tfrac{4}{25}+\\tfrac{3}{25}i",
+      "emphasis": "high",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "text": "Now prove: if $a+ib=\\dfrac{c+i}{c-i}$ with $c$ real, then $a^{2}+b^{2}=1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "Take the modulus of both sides — moduli are multiplicative.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "|a+ib|=\\frac{|c+i|}{|c-i|}=\\frac{\\sqrt{c^{2}+1}}{\\sqrt{c^{2}+1}}=1",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "So $\\sqrt{a^{2}+b^{2}}=1$, giving $a^{2}+b^{2}=1$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Taking $|\\cdot|$ across a quotient beats expanding into $a+ib$.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/english_sec_18.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p1/hinglish_sec_18.mp3",
+  "duration_sec_english": 85.82,
+  "duration_sec_hinglish": 76.27,
+  "board_reveal_at_english": [
+    0,
+    4.61,
+    17.49,
+    29.87,
+    44.03,
+    52.74,
+    64,
+    76.71
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    5.12,
+    17.41,
+    28.42,
+    38.57,
+    45.65,
+    56.41,
+    67.41
+  ],
+  "part": 1,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Two examples that show off the conjugate-and-modulus toolkit in action."
+    },
+    {
+      "seq": 2,
+      "text": "First, the inverse of z equals four minus three i, but now using the clean formula. The modulus squared is sixteen plus nine, twenty five. The conjugate is four plus three i."
+    },
+    {
+      "seq": 3,
+      "text": "So z inverse is z bar over modulus squared: four plus three i over twenty five, which is four twenty-fifths plus three twenty-fifths i."
+    },
+    {
+      "seq": 4,
+      "text": "Now a proof. Suppose a plus i b equals c plus i, over c minus i, where c is real. Show that a squared plus b squared equals one."
+    },
+    {
+      "seq": 5,
+      "text": "The elegant move is to take the modulus of both sides, because modulus is multiplicative and splits across the quotient."
+    },
+    {
+      "seq": 6,
+      "text": "On the right, the top has modulus root c squared plus one, and the bottom has the very same modulus, root c squared plus one. They cancel to give one."
+    },
+    {
+      "seq": 7,
+      "text": "So the modulus of a plus i b is one, meaning root of a squared plus b squared equals one, hence a squared plus b squared equals one. Proof complete."
+    },
+    {
+      "seq": 8,
+      "text": "Notice how much work we skipped: taking the modulus across the quotient was far faster than expanding the fraction into a plus i b form."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Do examples jo conjugate-and-modulus toolkit ko action mein dikhate hain."
+    },
+    {
+      "seq": 2,
+      "text": "Pehle, z equals four minus three i ka inverse, par ab clean formula use karke. Modulus squared hai sixteen plus nine, twenty five. Conjugate hai four plus three i."
+    },
+    {
+      "seq": 3,
+      "text": "To z inverse hai z bar over modulus squared: four plus three i over twenty five, jo hai four twenty-fifths plus three twenty-fifths i."
+    },
+    {
+      "seq": 4,
+      "text": "Ab ek proof. Maano a plus i b barabar c plus i, over c minus i, jahan c real hai. Dikhao ki a square plus b square barabar one."
+    },
+    {
+      "seq": 5,
+      "text": "Elegant move hai dono taraf ka modulus lena, kyunki modulus multiplicative hai aur quotient par split ho jaata hai."
+    },
+    {
+      "seq": 6,
+      "text": "Right par, top ka modulus hai root c square plus one, aur bottom ka bilkul wahi modulus, root c square plus one. Wo cancel hoke dete hain one."
+    },
+    {
+      "seq": 7,
+      "text": "To a plus i b ka modulus hai one, matlab a square plus b square ka root barabar one, isliye a square plus b square barabar one. Proof poora."
+    },
+    {
+      "seq": 8,
+      "text": "Dekho kitna kaam bach gaya: quotient par modulus lena fraction ko a plus i b form mein expand karne se kaafi tez tha."
+    }
+  ]
+}

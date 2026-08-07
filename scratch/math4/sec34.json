@@ -1,0 +1,160 @@
+{
+  "id": "d0435bf4-d321-4ce6-a4b3-6597c57858fe",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 34,
+  "section_type": "concept",
+  "subtopic": "Quadratic Equations with Complex Roots",
+  "title": "Complex roots when D < 0",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Solving with a negative discriminant",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "When $D<0$ (real coeff), write $\\sqrt{D}=i\\sqrt{|D|}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "\\sqrt{D}=\\sqrt{-(4ac-b^{2})}=i\\sqrt{4ac-b^{2}}",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "x=\\frac{-b\\pm i\\sqrt{4ac-b^{2}}}{2a}",
+      "emphasis": "high",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "The two roots share the real part $-\\tfrac{b}{2a}$ and opposite imaginary parts.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "text": "So they are conjugates of each other — a mirror-image pair.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "Forgetting $\\sqrt{D}=i\\sqrt{|D|}$ is the recurring $i^2$ sign-flip error.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Example: $x^{2}+x+1=0$ gives $x=\\dfrac{-1\\pm i\\sqrt3}{2}$ — exactly $\\omega,\\omega^{2}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_34.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_34.mp3",
+  "duration_sec_english": 100.51,
+  "duration_sec_hinglish": 87.12,
+  "board_reveal_at_english": [
+    0,
+    9.56,
+    17.92,
+    33.71,
+    45.82,
+    58.03,
+    68.61,
+    81.92
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.96,
+    17.07,
+    31.15,
+    40.28,
+    49.58,
+    58.37,
+    70.57
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Let's see exactly how the quadratic formula produces complex roots when the discriminant is negative and the coefficients are real."
+    },
+    {
+      "seq": 2,
+      "text": "The only new step is handling the square root of a negative discriminant: write root D as i times root of the size of D."
+    },
+    {
+      "seq": 3,
+      "text": "Concretely, when D is negative, root D equals root of minus the quantity four a c minus b squared, which is i times root of four a c minus b squared."
+    },
+    {
+      "seq": 4,
+      "text": "Substituting into the formula, the roots become minus b plus or minus i root of four a c minus b squared, all over two a."
+    },
+    {
+      "seq": 5,
+      "text": "Look at the structure. Both roots share the same real part, minus b over two a, and they carry opposite imaginary parts because of the plus-or-minus."
+    },
+    {
+      "seq": 6,
+      "text": "So the two roots are conjugates of each other, a mirror-image pair across the real axis, exactly what the discriminant forecast predicted."
+    },
+    {
+      "seq": 7,
+      "text": "The recurring slip here is forgetting that root D equals i times root of the size of D. That's the same i-squared sign-flip error from the very first subtopic, coming back to bite."
+    },
+    {
+      "seq": 8,
+      "text": "A familiar example: x squared plus x plus one equals zero has D equals minus three, giving roots minus one plus or minus i root three, over two — which are exactly omega and omega squared, the cube roots of unity."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Dekhte hain ki quadratic formula exactly kaise complex roots deta hai jab discriminant negative ho aur coefficients real hon."
+    },
+    {
+      "seq": 2,
+      "text": "Ek hi naya step hai negative discriminant ka square root handle karna: root D ko likho i times root of the size of D."
+    },
+    {
+      "seq": 3,
+      "text": "Concretely, jab D negative hai, root D barabar root of minus the quantity four a c minus b squared, jo hai i times root of four a c minus b squared."
+    },
+    {
+      "seq": 4,
+      "text": "Formula mein substitute karo, to roots ban jaate hain minus b plus or minus i root of four a c minus b squared, poora over two a."
+    },
+    {
+      "seq": 5,
+      "text": "Structure dekho. Dono roots ka same real part hai, minus b over two a, aur unke imaginary parts opposite hain plus-or-minus ki wajah se."
+    },
+    {
+      "seq": 6,
+      "text": "To dono roots ek doosre ke conjugates hain, real axis par ek mirror-image pair, bilkul jaise discriminant forecast ne predict kiya."
+    },
+    {
+      "seq": 7,
+      "text": "Yahan recurring slip hai ye bhoolna ki root D barabar i times root of the size of D. Ye wahi i-squared sign-flip error hai pehle subtopic se, wapas aakar bite karne ke liye."
+    },
+    {
+      "seq": 8,
+      "text": "Ek familiar example: x squared plus x plus one equals zero ka D barabar minus three, deta hai roots minus one plus or minus i root three, over two — jo bilkul omega aur omega squared hain, cube roots of unity."
+    }
+  ]
+}

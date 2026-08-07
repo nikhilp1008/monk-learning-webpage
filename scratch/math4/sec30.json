@@ -1,0 +1,160 @@
+{
+  "id": "336410c4-b403-4414-94ea-4149d45c9276",
+  "chapter_id": "ea46f354-2c41-542e-bf5c-e990c56d2a1d",
+  "position": 30,
+  "section_type": "worked_examples",
+  "subtopic": "The Argand Plane and Polar Representation",
+  "title": "Worked: powers via De Moivre",
+  "board_content": [
+    {
+      "seq": 1,
+      "text": "Big powers become one line",
+      "type": "heading",
+      "emphasis": "normal",
+      "reveal_at": 0
+    },
+    {
+      "seq": 2,
+      "text": "Write $z=-\\sqrt3+i$ in polar form, then find $z^{6}$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 7
+    },
+    {
+      "seq": 3,
+      "type": "formula",
+      "latex": "r=\\sqrt{3+1}=2,\\ \\alpha=\\tfrac{\\pi}{6}\\ (\\text{Q II})\\Rightarrow \\arg z=\\tfrac{5\\pi}{6}",
+      "emphasis": "normal",
+      "reveal_at": 16
+    },
+    {
+      "seq": 4,
+      "type": "formula",
+      "latex": "z^{6}=2^{6}\\left(\\cos 6\\cdot\\tfrac{5\\pi}{6}+i\\sin 6\\cdot\\tfrac{5\\pi}{6}\\right)=64(\\cos 5\\pi+i\\sin 5\\pi)",
+      "emphasis": "normal",
+      "reveal_at": 26
+    },
+    {
+      "seq": 5,
+      "text": "$\\cos 5\\pi=-1$, $\\sin 5\\pi=0$, so $z^{6}=-64$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 36
+    },
+    {
+      "seq": 6,
+      "type": "formula",
+      "latex": "(1+i)^{20}=(\\sqrt2)^{20}\\left(\\cos\\tfrac{20\\pi}{4}+i\\sin\\tfrac{20\\pi}{4}\\right)",
+      "emphasis": "normal",
+      "reveal_at": 46
+    },
+    {
+      "seq": 7,
+      "text": "$=2^{10}(\\cos 5\\pi+i\\sin 5\\pi)=1024\\cdot(-1)=-1024$.",
+      "type": "text",
+      "emphasis": "normal",
+      "reveal_at": 56
+    },
+    {
+      "seq": 8,
+      "text": "Polar + De Moivre beats the binomial theorem every time.",
+      "type": "note",
+      "style": "red-margin",
+      "emphasis": "normal",
+      "reveal_at": 66
+    }
+  ],
+  "audio_url_english": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/english_sec_30.mp3",
+  "audio_url_hinglish": "https://audio.monklearning.com/11/Mathematics/m11_ch04_complex-numbers-and-quadratic-equations/p2/hinglish_sec_30.mp3",
+  "duration_sec_english": 102.38,
+  "duration_sec_hinglish": 98.38,
+  "board_reveal_at_english": [
+    0,
+    8.19,
+    16.9,
+    30.63,
+    47.79,
+    59.39,
+    76.37,
+    91.82
+  ],
+  "board_reveal_at_hinglish": [
+    0,
+    8.62,
+    16.47,
+    29.95,
+    46.25,
+    56.92,
+    72.96,
+    89
+  ],
+  "part": 2,
+  "segments_english": [
+    {
+      "seq": 1,
+      "text": "Here is where polar form pays off dramatically: high powers that would be brutal by hand become a single line."
+    },
+    {
+      "seq": 2,
+      "text": "Write z equals minus root three plus i in polar form, then compute z to the sixth."
+    },
+    {
+      "seq": 3,
+      "text": "The modulus is root of three plus one, which is two. The point is in quadrant two with reference angle pi over six, so the argument is pi minus pi over six, which is five pi over six."
+    },
+    {
+      "seq": 4,
+      "text": "By De Moivre, z to the sixth is two to the sixth times cosine of six times five pi over six, plus i sine of the same. That's sixty four times cosine five pi plus i sine five pi."
+    },
+    {
+      "seq": 5,
+      "text": "Now cosine five pi is minus one and sine five pi is zero, so z to the sixth is sixty four times minus one, which is minus sixty four."
+    },
+    {
+      "seq": 6,
+      "text": "Second example: one plus i, to the twentieth. One plus i is root two at angle pi over four, so by De Moivre we get root two to the twentieth times cosine twenty pi over four plus i sine twenty pi over four."
+    },
+    {
+      "seq": 7,
+      "text": "Root two to the twentieth is two to the tenth, one thousand twenty four. And twenty pi over four is five pi, whose cosine is minus one. So the answer is one thousand twenty four times minus one, minus one thousand twenty four."
+    },
+    {
+      "seq": 8,
+      "text": "The takeaway is blunt: for any integer power, go to polar form and use De Moivre. It beats the binomial theorem every single time."
+    }
+  ],
+  "segments_hinglish": [
+    {
+      "seq": 1,
+      "text": "Ye wahan hai jahan polar form dramatically pay off karta hai: high powers jo haath se brutal hote, ek single line ban jaate hain."
+    },
+    {
+      "seq": 2,
+      "text": "z equals minus root three plus i ko polar form mein likho, phir z to the sixth compute karo."
+    },
+    {
+      "seq": 3,
+      "text": "Modulus hai root of three plus one, jo hai two. Point quadrant two mein hai reference angle pi over six ke saath, to argument hai pi minus pi over six, jo hai five pi over six."
+    },
+    {
+      "seq": 4,
+      "text": "De Moivre se, z to the sixth hai two to the sixth times cosine of six times five pi over six, plus i sine of the same. Wo hai sixty four times cosine five pi plus i sine five pi."
+    },
+    {
+      "seq": 5,
+      "text": "Ab cosine five pi hai minus one aur sine five pi hai zero, to z to the sixth hai sixty four times minus one, jo hai minus sixty four."
+    },
+    {
+      "seq": 6,
+      "text": "Doosra example: one plus i, to the twentieth. One plus i hai root two at angle pi over four, to De Moivre se milta hai root two to the twentieth times cosine twenty pi over four plus i sine twenty pi over four."
+    },
+    {
+      "seq": 7,
+      "text": "Root two to the twentieth hai two to the tenth, one thousand twenty four. Aur twenty pi over four hai five pi, jiska cosine minus one hai. To answer hai one thousand twenty four times minus one, minus one thousand twenty four."
+    },
+    {
+      "seq": 8,
+      "text": "Takeaway blunt hai: kisi bhi integer power ke liye polar form mein jaao aur De Moivre use karo. Ye har baar binomial theorem ko beat karta hai."
+    }
+  ]
+}
