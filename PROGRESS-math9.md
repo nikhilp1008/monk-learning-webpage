@@ -232,3 +232,37 @@ not optional even when VERDICT is PASS.
   precedent; fan-of-3-lines mnemonic with a legend row avoiding label-on-line collision.
   PASS both languages, eye-checked. **Subtopic 5 (secs 35-43) complete — chapter is 43/62
   (69%) done.**
+- **Sec 44** — opens Subtopic 6: schematic two-crossing-lines diagram (slope +1/-1 through
+  O) with the two perpendicular bisectors drawn as MUTED construction lines; bisector
+  directions verified as the normalized sum/difference of the two unit direction vectors
+  (dot product 0). PASS both languages, eye-checked.
+- **Sec 45** [PROOF] — the bisector is the equidistant locus: from-scratch wedge diagram
+  (vertex V, two rays L1/L2, P placed on the internal bisector by construction so both
+  perpendicular drops are exactly 45px — verified numerically, not hand-picked); modulus-
+  bar formula dims in place as the ± formula lands below it, making the core "bars drop,
+  ± appears" proof step visible in one settled frame. PASS both languages, eye-checked.
+- **Sec 46** [FLAGGED, "Which bisector is which?"] — 3-step numbered procedure (normalize
+  → '+' = origin's bisector → compute a1a2+b1b2) with a color-coded two-branch fork
+  (>0 obtuse / <0 acute) and two visually distinct red-margin guardrails. Sign-logic
+  direction independently re-verified against sibling Sec47/Sec49 and the standard NCERT
+  result before committing. PASS both languages, eye-checked with extra scrutiny.
+- **Sec 47** — angle-bisectors formula toolkit, single-column precedent from Sec5/13/22/
+  30/39; two visually-distinct red-margin guardrails (mid-list normalize note, closing
+  own-denominator note). PASS both languages, eye-checked.
+- **Sec 48** — worked: erase-and-reuse pivot (Sec29 idiom) between Example 1 (both
+  bisectors of 3x-4y+7=0 / 5x+12y-2=0 → 14x-112y+101=0 and 64x+8y+81=0) and Example 2
+  (origin's bisector of 4x+3y-6=0 / 5x+12y+9=0 → 7x+9y-3=0). All cross-multiplications
+  independently re-verified by hand before dispatch. PASS both languages, eye-checked.
+- **Sec 49** — worked: identifying the acute bisector for x+y-2=0 / 7x-y+3=0
+  (a1a2+b1b2=-6<0 ⟹ acute) → 12x+4y-7=0, cross-checked via the line's actual intersection
+  point. Single flowing derivation (Sec33 precedent), no diagram (pure algebra). PASS both
+  languages, eye-checked.
+- **Sec 50** — Advanced worked: verifies Sec48 Example 1's two bisectors are perpendicular
+  (m1=1/8, m2=-8, product=-1); diagram lines built from exact-integer perpendicular
+  direction vectors with a runtime-computed 90° arc (Sec11 discipline), not hardcoded
+  degrees. PASS both languages, eye-checked.
+- **Sec 51** — tips, closes Subtopic 6: one red trap card (normalization) + a 3-row amber
+  checklist + the green pro-tip card (origin's bisector = '+' one) with a drawn crossing-
+  lines mnemonic — deliberately NOT a padded 2x2 red grid, since the JSON only tags one
+  beat as an actual trap. PASS both languages, eye-checked. **Subtopic 6 (secs 44-51)
+  complete — chapter is 51/62 (82%) done.**
