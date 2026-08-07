@@ -346,3 +346,11 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   geometry to Sec40, this time covering addition through odds (2-event
   and 3-event addition, exactly-one/neither, HIGH green at-least-one
   card, nPr/nCr counting, odds/empirical). Clean PASS both languages.
+- **Sec 42** — cheat_sheet (first of two): noticed this section's own
+  board_content is entirely type "note" style "red-margin" (unlike
+  Sec40/41's type "formula"), so used a genuinely different visual
+  register — a dense stacked list of 6 one-liners each with a drawn red
+  margin-bar (literally matching the data's own "red-margin" style
+  name) instead of forcing the boxed-card grid onto content that isn't
+  actually multi-line formulas. HIGH lines (axioms, [0,1] sanity check)
+  bolder and red. Clean PASS both languages, eye-checked.
