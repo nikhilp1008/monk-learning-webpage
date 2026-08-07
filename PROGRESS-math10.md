@@ -134,6 +134,75 @@ No other section needed a post-verify fix.
   reflex" card and a final RED/HIGH card on S₁'s double duty. Clean PASS both
   languages on first render, eye-checked.
 
+## Subtopic 3 — The Parabola (secs 14-20)
+- **Sec 14** — concept, opens the subtopic: the chapter's first real parabola.
+  Curve is sampled off the actual equation via a y-offset parametrization
+  (X = Vx + s²/(4a)) and threaded through `curveD`, no dedicated generator,
+  per the task brief. The reflective-property rays (beat4) are NOT schematic
+  — their start points are genuine `curvePt()` samples and their end point is
+  the real focus, so the ray-to-focus segments are mathematically the true
+  reflected rays, not hand-drawn approximations. Vertex-midway guardrail uses
+  matched tick marks (not just a label) to show the two `a` segments are
+  visually equal. PASS both languages, eye-checked — parabola opens the
+  correct direction, focus sits inside the curve, directrix and axis both
+  correctly placed and labeled.
+- **Sec 15** — concept, FLAGGED derivation section (task brief: extra
+  scrutiny). Hand-verified the algebra: √((x−a)²+y²)=x+a → square →
+  (x−a)²+y²=(x+a)² → expand x²−2ax+a²+y²=x²+2ax+a² → x²,a² cancel, −2ax
+  combines with 2ax → y²=4ax ✓. One persistent LEFT diagram (not redrawn):
+  axes+directrix+F+generic P at beat1, then the same diagram gains the full
+  curve + latus rectum at beat6 — and because the curve is sampled via
+  X=Vx+s²/(4a), the samples at s=±2a land exactly on the latus rectum's
+  stated endpoints (y=Vy±2a) by construction, so the two halves of the scene
+  can't silently disagree with each other. PASS both languages, eye-checked
+  — latus rectum visually touches the curve endpoints exactly as it should.
+- **Sec 16** — concept, FLAGGED orientation-reading section (task brief:
+  extra scrutiny). All 4 mini-parabolas (right/left/up/down) share the same
+  a=32px and are literal 90°-rotations of each other (cell3/4 swap which
+  screen axis carries the s²/4a term), not four independently-eyeballed
+  shapes. Rigorously eye-verified all four: vertex position, curve-bulge
+  direction, focus placement, AND directrix placement (always opposite side
+  from the opening) all confirmed correct for each of the 4 equations —
+  y²=4ax genuinely reads as "(" (vertex left, opens right), y²=−4ax as ")"
+  (opens left), x²=4ay as "∪" (opens up), x²=−4ay as "∩" (opens down). PASS
+  both languages.
+- **Sec 17** — formulas, the parabola's reference card: pure text/formula
+  "notes page" (no new diagram — Sec16 already exhaustively drew all 4
+  orientations) covering the 4-form overview, full reference-case details
+  for y²=4ax (focus/directrix/vertex/axis/boxed latus-rectum-with-endpoints,
+  HIGH), the swap-roles guidance for the other 3, and the red "compare to 4a
+  not a" guardrail. Clean PASS both languages on first render, eye-checked.
+- **Sec 18** — worked_examples: Example 1 (y²=12x → 4a=12→a=3 → boxed
+  focus/directrix/LR, hand-verified 4×3=12 ✓) and Example 2, the reverse
+  direction — given focus(0,−2)/directrix y=2 → vertex=origin → x² axis,
+  opens down, a=2 → boxed x²=−8y (hand-verified −4×2=−8 ✓). Clean PASS both
+  languages, eye-checked.
+- **Sec 19** — worked_examples: Example 3 (vertex+focus→a=5→boxed y²=20x,
+  hand-verified 4×5=20 ✓). Example 4, a real parabolic-dish application:
+  rim-point substitution 10²=4a(5)→100=20a→a=5 (hand-verified ✓) → boxed
+  x²=20y, focus(0,5). The diagram's curve is parametrized to pass through
+  the SAME screen points used for the rim dots (verified by construction,
+  not by eye) — noted the coincidence that a=5 equals the dish depth=5 here,
+  confirmed correct rather than assumed a bug. Clean PASS both languages,
+  eye-checked (shallow dish shape correctly matches the 20cm/5cm ratio).
+- **Sec 20** — tips, closes Subtopic 3: same 2x2-grid + reflex-recap
+  structure as Sec7/Sec13 (4a-as-one-block trap flagged HIGH, axis/direction
+  rule, focus-inside/directrix-outside, one-focus-one-directrix-e=1), then a
+  wide AMBER reflex card and a final RED/HIGH card on latus-rectum endpoints.
+  Clean PASS both languages on first render, eye-checked.
+
+## Subtopic 3 (The Parabola, secs 14-20) — COMPLETE
+All 7 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
+Two sections flagged by the task brief (Sec15 derivation, Sec16 orientation)
+both got extra scrutiny beyond the standard pass — hand-verified algebra and
+rigorous per-cell eye-check of all 4 orientations respectively. Every curve
+in every section is sampled off its real equation via a `curveD`-threaded
+parametrization (never a schematic approximation), and every diagram that
+pairs a curve with marked points (rim dots, latus rectum endpoints, foci) is
+constructed so those points land on the curve BY CONSTRUCTION — verified by
+matching the parametrization's value at the relevant parameter, not by eye.
+No new math-kit primitives needed.
+
 ## Subtopic 2 (The Circle, secs 8-13) — COMPLETE
 All 6 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
 Every worked-example computation hand-verified against the source JSON before
