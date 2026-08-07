@@ -270,6 +270,32 @@ screenshot). Rule of thumb:
   (place n objects at n evenly-spaced angles, `2π/n` apart) — confirms the
   general pattern: check what a chapter needs before assuming a new
   primitive is required. Chapter 6 needed zero math-kit additions.
+- **Chapters 8-9 (Sequences & Series, Straight Lines) also needed zero new
+  primitives** — don't assume a diagram-sounding section title (AP's
+  "staircase", GP's "chessboard") implies a bespoke visual before checking
+  `board_content`: both chapters explicitly frame their sequences as
+  **graphs** ("plot aₙ vs n and you get a straight line", "log aₙ plots as a
+  straight line") — exactly `CartesianAxes` + `lineD`/`curveD` from Chapter
+  2. Straight Lines is pure coordinate geometry end to end: points, lines,
+  angles, distances, loci and reflections all compose from `CartesianAxes`/
+  `lineD`/`angleArcD`/`circleD`/base-kit `crossD`+`dim` (for telescoping
+  cancellation) — nothing new needed. Two chapters in a row with zero
+  additions is a good sign the kit now covers most of the subject's visual
+  vocabulary; keep checking each new chapter rather than assuming that
+  holds forever.
+- **`\lim_{n\to\infty}`** (Chapter 8, two occurrences) — don't attempt true
+  subscript-under-`lim` layout for something this rare; write it inline as
+  "lim (n→∞)".
+- **`\hat{n}`** (Chapter 9, unit normal vector) — same resolution as
+  `\vec`: don't render a combining hat accent, draw the actual unit vector
+  as a real short arrow and label it with the plain letter ("n").
+- **Seventh glyph audit (Chapters 8-9)** — `⊥` (perpendicular, central to
+  Chapter 9) falls back, no substitute exists, use as-is. `ℓ` (script L, a
+  line's name) and `Δ` are native to Anek; `Δ` is missing from Kalam
+  specifically (same "prefer non-script text" rule as the digit-coverage
+  finding) while `ℓ` is fine in both.
+- **`\bar{x}` reappears in Chapter 9** (centroid mean) — same `<Overline>`
+  primitive from Chapter 4, first real cross-chapter reuse of it.
 - Hinglish board text stays **Latin script** (house style, inherited from
   physics/chem) — and all of the above symbols are language-agnostic, so a
   formula is byte-identical between the English and Hinglish boards; only the
