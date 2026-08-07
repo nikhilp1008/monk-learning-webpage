@@ -202,3 +202,11 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   explaining the double-count. Clean PASS both languages, eye-checked
   very carefully given both the flag and the brief's explicit callout —
   shading regions confirmed algebraically correct.
+- **Sec 23** — formulas, FLAGGED, last of the three derivation sections:
+  n(S)·p=1⇒p=1/n(S) then ringed HIGH P(A)=Σp=n(A)/n(S), sanity-checked
+  with 6 uniform sand blobs (reusing Sec17's motif) — one ringed to show
+  a single-point event gives p=1/n(S) (=1/6 for a die), closing guardrail
+  that this is a THEOREM not a definition. Verified the algebra by hand
+  (normalization ⇒ uniform p, summed over n(A) points) before trusting
+  it. Clean PASS both languages, eye-checked. **Derivation trio (Sec21-23)
+  and Subtopic 2's axiomatic core (Sec15-23) complete.**
