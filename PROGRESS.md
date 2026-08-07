@@ -114,3 +114,15 @@ verify-scene.mjs to PASS and NOT commit. Main session then independently re-runs
 **SUBTOPIC 2 COMPLETE (secs 10-18).** Both flagged derivations (Sec13 nPr, Sec14 alike/circular)
 handled with full rigor — every algebraic step shown, math independently verified. Pushed through
 Sec18 (2026-08-06).
+
+- Sec 19 — Order doesn't matter, combination intro (Subtopic 3 starts). Mirrors Sec10: cricket
+  team anchor, "ORDER DOESN'T MATTER" guardrail, 4-point/6-edge complete-graph diagram (⁴C₂=6),
+  ⁹P₂=72 vs ⁹C₂=36 contrast, nCr=nPr/r! intuitive preview. PASS both langs.
+- Sec 20 — The combination formula and its properties (nCr both forms, 4 boundary cases,
+  symmetry property with same-pool choose/reject dot diagram, Pascal's rule stated-not-proved,
+  r=s-or-r+s=n corollary, ¹²C₁₀=¹²C₂=66 shortcut). PASS both langs.
+- Sec 21 [FLAGGED] — Derive nCr and symmetry (SELECT→ORDER bridge → real algebra → n!/(r!(n-r)!);
+  bijective symmetry proof: one row of 7 dots, 5 turn green + 2 turn red simultaneously — same
+  act, two names — closes with verified ⁷C₅=⁷C₂=21). PASS both langs.
+
+Pushed through Sec21 (2026-08-06).
