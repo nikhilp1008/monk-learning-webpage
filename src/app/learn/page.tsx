@@ -103,6 +103,7 @@ export default function LearnPage() {
 
   /* ─── Session playback state ─── */
   const [boardLatex, setBoardLatex] = useState("");
+  const [boardEvents, setBoardEvents] = useState<any[]>([]);
   const [transcript, setTranscript] = useState<TranscriptEntry[]>([]);
   const [segmentIndex, setSegmentIndex] = useState(1);
   const [totalSegments, setTotalSegments] = useState(1);
@@ -401,13 +402,15 @@ export default function LearnPage() {
         },
         onBoardEvents: (events) => {
           console.log(`[BOARD EVENTS RECEIVED ON CLIENT] count: ${events.length}`, events);
+          if (Array.isArray(events) && events.length > 0) {
+            setBoardEvents((prev) => [...prev, ...events]);
+          }
         },
         onBoardUpdate: (payload: any) => {
-          if (typeof payload === "string" && payload) {
-            setBoardLatex(payload);
-          } else if (payload && typeof payload === "object") {
-            const content = payload.latex || payload.text || "";
-            if (content) setBoardLatex(content);
+          if (payload && typeof payload === "object") {
+            setBoardEvents((prev) => [...prev, payload]);
+          } else if (typeof payload === "string" && payload) {
+            setBoardLatex((prev) => (prev ? `${prev}\n${payload}` : payload));
           }
         },
         onSessionEnded: () => {
@@ -436,6 +439,7 @@ export default function LearnPage() {
           <SessionView
             sessionTopic={sessionTopic}
             boardLatex={boardLatex}
+            boardEvents={boardEvents}
             transcript={transcript}
             segmentIndex={segmentIndex}
             totalSegments={totalSegments}

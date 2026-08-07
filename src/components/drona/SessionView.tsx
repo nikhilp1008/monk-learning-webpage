@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { KaTeXRenderer } from "@/components/KaTeXRenderer";
+import { PremiumBoardEvent } from "@/components/PremiumBoardEvent";
 import { TranscriptEntry } from "@/lib/drona/types";
 import { getTutorName } from "@/lib/drona/tutor";
 import { VoiceClientState } from "@/lib/drona/voice";
@@ -9,6 +10,7 @@ import { VoiceClientState } from "@/lib/drona/voice";
 interface SessionViewProps {
   sessionTopic: string;
   boardLatex: string;
+  boardEvents?: any[];
   transcript: TranscriptEntry[];
   segmentIndex: number;
   totalSegments: number;
@@ -28,6 +30,7 @@ interface SessionViewProps {
 export function SessionView({
   sessionTopic,
   boardLatex,
+  boardEvents = [],
   transcript,
   segmentIndex,
   totalSegments,
@@ -171,14 +174,20 @@ export function SessionView({
 
           {/* Board Content (B2 & B6: Line-by-line KaTeX & wrapped prose) */}
           <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 space-y-3.5 max-w-full">
-            {boardLatex && (
-              <div className="py-1 max-w-full overflow-x-hidden">
+            {boardEvents && boardEvents.length > 0 ? (
+              boardEvents.map((evt, idx) => (
+                <PremiumBoardEvent key={idx} event={evt} animate={idx === boardEvents.length - 1} />
+              ))
+            ) : boardLatex ? (
+              <div className="py-1 max-w-full overflow-x-hidden whitespace-pre-wrap">
                 <KaTeXRenderer
                   latex={boardLatex}
                   displayMode={true}
                   className="text-ink text-sm sm:text-base font-semibold leading-relaxed"
                 />
               </div>
+            ) : (
+              <div className="text-ink-muted text-sm italic">Board will update as Drona speaks...</div>
             )}
             <div ref={transcriptEndRef} />
           </div>
