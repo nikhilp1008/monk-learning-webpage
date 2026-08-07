@@ -66,14 +66,15 @@ export function BoardEvent({ event }: BoardEventProps) {
       );
 
     case "formula":
+      const formulaLatex = event.latex || event.text || "";
       return (
         <div
-          className={`my-4 py-3 px-4 bg-cream/30 rounded-xl border border-border-subtle flex items-center justify-center overflow-x-auto ${
-            isHigh ? "text-xl md:text-2xl font-bold" : "text-lg md:text-xl"
+          className={`my-2 py-1 px-0 w-full text-left text-ink leading-relaxed overflow-x-auto ${
+            isHigh ? "text-xl md:text-2xl font-bold" : "text-lg md:text-xl font-semibold"
           }`}
         >
-          {event.latex ? (
-            <KaTeXRenderer latex={event.latex} displayMode={true} />
+          {formulaLatex ? (
+            <KaTeXRenderer latex={formulaLatex} displayMode={false} />
           ) : null}
         </div>
       );

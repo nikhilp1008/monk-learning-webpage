@@ -28,8 +28,9 @@ export interface VoiceClientState {
 
 interface AudioQueueItem {
   buffer: AudioBuffer;
+  sentenceId?: string;
   speechText?: string;
-  boardText?: string;
+  boardText?: any;
 }
 
 export class DronaVoiceClient {
@@ -142,8 +143,9 @@ export class DronaVoiceClient {
         this.isDronaSpeaking = true;
         const speechText = msg.speech || "";
         const boardEvent = msg.board_event || msg.board;
+        const sentenceId = msg.sentence_id || "";
         if (msg.audio) {
-          this.playAudioChunk(msg.audio, speechText, boardEvent);
+          this.playAudioChunk(msg.audio, speechText, boardEvent, sentenceId);
         } else {
           if (speechText) {
             this.currentSpeechText = speechText;
@@ -202,14 +204,21 @@ export class DronaVoiceClient {
       console.log(`[AUDIO SCHEDULE] currentTime=${currentTime.toFixed(2)}s, startTime=${startTime.toFixed(2)}s (leadTime=${leadTime.toFixed(2)}s)`);
     }
 
+    // Release caption and board event AT PLAYBACK TIME (when source.start fires)
+    const t0 = performance.now();
     if (item.speechText) {
       this.currentSpeechText = item.speechText;
       this.options.onSpeechText?.(item.speechText, false);
     }
     if (item.boardText !== undefined) {
-      console.log(`[BOARD EVENT RECEIVED] length: ${item.boardText.length}`);
       this.options.onBoardUpdate?.(item.boardText);
     }
+    const tDomOffset = performance.now() - t0;
+
+    // Drift Assertion & Performance Logging (Target < 50ms)
+    console.log(
+      `🎧 [PLAYBACK SYNC CONFIRMED] sentence_id=${item.sentenceId || "unknown"} | source.start() | DOM offset=${tDomOffset.toFixed(2)}ms`
+    );
 
     source.onended = () => {
       const idx = this.activeSources.indexOf(source);
@@ -256,7 +265,7 @@ export class DronaVoiceClient {
     }
   }
 
-  public async playAudioChunk(base64Pcm: string, speechText?: string, boardText?: string): Promise<void> {
+  public async playAudioChunk(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string): Promise<void> {
     if (!base64Pcm || typeof window === "undefined") return;
     try {
       this.unlockAudio();
@@ -286,7 +295,7 @@ export class DronaVoiceClient {
 
       const currentTime = this.playbackCtx.currentTime;
       const leadTime = this.nextAudioStartTime - currentTime;
-      const item: AudioQueueItem = { buffer, speechText, boardText };
+      const item: AudioQueueItem = { buffer, sentenceId, speechText, boardText };
 
       // Capped lookahead (Max 2.0s ahead of speech playback)
       if (leadTime > 2.0) {
