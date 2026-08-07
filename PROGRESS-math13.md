@@ -194,3 +194,12 @@ misrecorded observation).
   blows up the average area" as a real geometric fact instead of an
   assertion. Labels "2²=4"/"10²=100" annotate the actual squares. PASS both
   languages on first render, eye-checked.
+- **Sec 17** — concept: boxed σ=+√(σ²) (√ confirmed native to both fonts per
+  the notation guide, no primitive needed), then reuses Sec1's two-row
+  shared-mean dot-plot pattern almost verbatim for direct visual continuity
+  — Batsman P (44,46,45,43,47, tight green cluster) vs Batsman Q
+  (5,90,12,88,30, wild red spread), both genuinely averaging 45 (hand-
+  verified: 225/5=45), one shared amber mean line through both rows. P's
+  five dots sit close enough to visually merge into a cluster — a deliberate
+  choice, not a defect, since that compression IS the "tight and dependable"
+  point. PASS both languages, eye-checked.
