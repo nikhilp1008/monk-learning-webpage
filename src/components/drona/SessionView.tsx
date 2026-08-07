@@ -216,45 +216,43 @@ export function SessionView({
               {cleanSpeech.length > 20 ? cleanSpeech : "Select an option or type your response below:"}
             </p>
 
-            {/* Option Chips */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", flex: "none" }}>
-              {(subtopicOptions && subtopicOptions.length > 0 ? subtopicOptions : (
-                /aage badh|continue|ready|clear/i.test(cleanSpeech)
-                  ? ["Haan, aage badho", "Ek baar dubara samjhao"]
-                  : ["Option A: Near the hinge", "Option B: At the far end", "Option C: Not sure"]
-              )).map((optionText, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    onSendTurn(optionText);
-                    setInputText("");
-                  }}
-                  style={{
-                    padding: "10px 14px",
-                    borderRadius: "11px",
-                    border: "1.4px solid rgba(28,26,22,.14)",
-                    background: "#fff",
-                    fontFamily: "inherit",
-                    fontWeight: 600,
-                    fontSize: ".88rem",
-                    textAlign: "left",
-                    color: "#1C1A16",
-                    cursor: "pointer",
-                    transition: "all 0.2s ease"
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = "#1C1A16";
-                    e.currentTarget.style.background = "#FCFAF4";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = "rgba(28,26,22,.14)";
-                    e.currentTarget.style.background = "#fff";
-                  }}
-                >
-                  <KaTeXRenderer latex={optionText} displayMode={false} />
-                </button>
-              ))}
-            </div>
+            {/* Option Chips — Renders 2 chips for procedural, 3 chips for check/checkpoint; empty if prompt omitted options */}
+            {subtopicOptions && subtopicOptions.length > 0 && (
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px", flex: "none" }}>
+                {subtopicOptions.map((optionText, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      onSendTurn(optionText);
+                      setInputText("");
+                    }}
+                    style={{
+                      padding: "10px 14px",
+                      borderRadius: "11px",
+                      border: "1.4px solid rgba(28,26,22,.14)",
+                      background: "#fff",
+                      fontFamily: "inherit",
+                      fontWeight: 600,
+                      fontSize: ".88rem",
+                      textAlign: "left",
+                      color: "#1C1A16",
+                      cursor: "pointer",
+                      transition: "all 0.2s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = "#1C1A16";
+                      e.currentTarget.style.background = "#FCFAF4";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = "rgba(28,26,22,.14)";
+                      e.currentTarget.style.background = "#fff";
+                    }}
+                  >
+                    <KaTeXRenderer latex={optionText} displayMode={false} />
+                  </button>
+                ))}
+              </div>
+            )}
 
             {/* Input Row */}
             <form
