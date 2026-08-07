@@ -403,13 +403,18 @@ export default function LearnPage() {
         onBoardEvents: (events) => {
           console.log(`[BOARD EVENTS RECEIVED ON CLIENT] count: ${events.length}`, events);
           if (Array.isArray(events) && events.length > 0) {
-            setBoardEvents((prev) => [...prev, ...events]);
+            setBoardEvents((prev) => {
+              const existingKeys = new Set(prev.map((e) => (e.latex || e.text || "").trim().toLowerCase()));
+              const uniqueNew = events.filter((e) => {
+                const key = (e.latex || e.text || "").trim().toLowerCase();
+                return key && !existingKeys.has(key);
+              });
+              return [...prev, ...uniqueNew];
+            });
           }
         },
         onBoardUpdate: (payload: any) => {
-          if (payload && typeof payload === "object") {
-            setBoardEvents((prev) => [...prev, payload]);
-          } else if (typeof payload === "string" && payload) {
+          if (typeof payload === "string" && payload) {
             setBoardLatex((prev) => (prev ? `${prev}\n${payload}` : payload));
           }
         },
