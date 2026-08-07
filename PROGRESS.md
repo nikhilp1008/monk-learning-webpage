@@ -222,3 +222,39 @@ Both flagged proof sections in Subtopic 5 complete. Pushed through Sec40 (2026-0
 Sec40 rank/derangements/Legendre) handled with full rigor, including brute-force cross-checks.
 Pushed through Sec43 (2026-08-07). 43/45 sections done — only the closing Formula Recap (44) and
 Cheat Sheet (45) remain.
+
+- Sec 44 — Complete formula toolkit recap (3×3 grid, all 5 subtopics' formulas, never erased,
+  cumulative whole-chapter reference sheet). PASS both langs, clean on first full run.
+- Sec 45 — Rapid-recall cheat sheet, THE CHAPTER'S FINAL SECTION (9-row cumulative trigger→action
+  checklist, red pills on the 4 guardrail rows, closing green checkmark). PASS both langs (one
+  transient verify flake on the first run, confirmed stable and correct on repeat).
+
+## CHAPTER COMPLETE — all 45/45 sections done (2026-08-07)
+
+Final checks passed:
+- All 45 sections registered in index.ts (`REGISTRY[`${M11CH06}:1`]` through `:45`), no gaps,
+  no duplicates.
+- `npx tsc --noEmit` shows zero errors from any M11Ch06Sec*.tsx file — only the ~4 pre-existing
+  unrelated errors in `src/app/learn/page.tsx` remain (confirmed not mine, per task brief).
+- Every section independently verified via `verify-scene.mjs` to `VERDICT: PASS` for both
+  English and Hinglish by the main session (not just the delegated subagent), after each subagent
+  completed its own verify loop — a "trust but verify" double-check that caught and fixed real
+  issues along the way (see Workflow notes below).
+- All 7 flagged derivation sections (13, 14, 21, 30, 31, 39, 40) handled with full step-by-step
+  rigor: every algebraic move shown, every bijection genuinely two-directional, brute-force
+  cross-checks where practical (Sec13 nPr, Sec14 alike/circular, Sec21 nCr+symmetry, Sec30
+  stars&bars bijection, Sec31 justify 2ⁿ+grouping, Sec39 collinear/divisors/sum-of-numbers,
+  Sec40 rank/derangements/Legendre).
+- Real bugs found and fixed along the way (documented for future chapters):
+  1. **Erase-group visibility bug** (Sec1): a custom outer `<g style={{opacity}}>` wrapper to
+     "erase" a superseded group is invisible to verify-scene.mjs's overlap checker (it only
+     recognizes the nearest `Fade` component's own `g.sc-fade` opacity). Fix: bound each
+     element's own `on` prop to its beat window instead.
+  2. **Filled-shape gating bug** (Sec28): `<Draw fill={COLOR}/>`'s `on` prop only animates
+     `strokeDashoffset` — a filled shape's `fill` renders permanently regardless of beat state.
+     Fix: wrap filled shapes in `<Fade>` instead.
+  3. **SVG whitespace-collapse bug** (Sec36): leading/trailing spaces in text segments silently
+     collapse per SVG's `xml:space` handling, breaking hand-tuned inter-segment gaps. Fix: use
+     explicit pixel `gapBefore` offsets instead of encoding spacing as literal space characters.
+
+Pushed through Sec45 (2026-08-07). **45/45 sections done — chapter complete.**
