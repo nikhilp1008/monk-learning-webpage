@@ -286,3 +286,11 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   as Sec20): 6 rows (counting P(E), ringed HIGH at-least-one, complement,
   2-event and 3-event addition, exactly-one), closing guardrail against
   mixing raw counts with probabilities. Clean PASS both languages.
+- **Sec 34** — formulas, part 2 of the toolkit card: odds-to-probability
+  both directions, ringed HIGH reverse conversion P(E)/(1−P(E))=m:n,
+  empirical P_empirical(E)=f/N with law-of-large-numbers guardrail,
+  closing HIGH guardrail on the two conversion directions. Used plain
+  "P_empirical"/"P_classical" underscore text per the symbolic-subscript
+  notation rule (fixed an initial draft that tried a dy-positioned pseudo
+  subscript before catching it against the rule). Clean PASS both
+  languages. **Subtopic 3's two toolkit cards (Sec33-34) complete.**
