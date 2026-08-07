@@ -28,6 +28,7 @@ Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25,
 - **Two-AP comparison notation** (JSON sometimes writes `a^{(1)}_m` for "AP1's mth term" vs `a^{(2)}_m` — a true 2-D superscript+subscript stack on one letter, not supported): rename to distinct plain letters instead, e.g. AP1 = `a_m`/`S_n`, AP2 = `b_m`/`T_n`. Same math, no stacked notation (Sec 16).
 - **Per-LINE subscript consistency**: if one formula line mixes a numeric index with a symbolic one (e.g. `a_1 = a_2 = 1, a_n = a_(n-1)+a_(n-2)`), use underscore for EVERY index on that line, even the numeric ones — don't mix real subscript digits with underscore-symbolic on the same line. Only use real subscript digits (`a₁`, `a₂`) on a line that is purely numeric-indexed throughout.
 - House palette only: INK, AMBER, AMBER_DARK, GREEN(_DARK), RED, CREAM, MUTED.
+- **The verifier only gates text-vs-text overlap and safe-area overflow — it does NOT catch shape-vs-shape overlap** (e.g. two bordered `roundRectD` cells whose boxes intersect). Caught this by eye (FORCE_SHOTS) in Sec 22: two 340-wide cells at cx 380/700 overlapped by 20px and still verified PASS. Hand-check cell `x ± w/2` math whenever laying out a multi-cell grid with cx+w, don't trust the verifier alone for box layouts.
 - **`arrowD`/`ringD`/`crossD` live in `kit.tsx`, NOT `math-kit.tsx`** (only `roundRectD`/`circleD`/etc. are math-kit) — tripped this up in Sec 6, tsc caught it immediately (unlike math7's Sec4 where only the dev bundler caught a similar mistake).
 
 ## Done
@@ -39,6 +40,20 @@ Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25,
 - **Sec 6** — worked example: recursive a_n=3a_(n-1)+1, feed-forward chain diagram (5 boxes+arrows) filling as each term computes, red-margin neither-AP-nor-GP note (differences AND ratios both change).
 - **Sec 7** — worked example: Σ(3k²-2k+1) split via linearity — 3 color-coded pieces (amber/green/ink) carried consistently through Σ-form → standard-sum substitution → simplify → n(2n²+n+1)/2 boxed.
 - **Sec 8** — `tips` closer: 2×3 grid (4 red traps, 2 green pro-tips) + wide red closing banner (golden habit). PASS, eye-checked. **Subtopic 1 (Foundations, secs 1-8) complete.**
+- **Sec 9** — opens subtopic 2 (AP): two-panel demo — rising-bar staircase (a,a+d,a+2d,a+3d) beside a CartesianAxes+lineD graph of aₙ vs n with 4 dots on the line. Reference exemplar for the graph-of-AP visual language. PASS, eye-checked.
+- **Sec 10** [flagged] — nth-term + Gauss-sum derivations, two-column layout: LEFT telescoping stack (a_2-a_1=d,...,a_n-a_(n-1)=d, add all) → boxed a_n=a+(n-1)d; RIGHT forwards+backwards sum → 2S_n=n[2a+(n-1)d] with column-pairing note → boxed S_n both forms. Math hand-verified. PASS, eye-checked.
+- **Sec 11** — `formulas`: notation legend (a/d/l/S_n) + 2×2 grid of boxed core formulas (nth term, nth-from-end, sum via a-d-n, sum via a-l-n), off-by-one red-margin, d-sign closer. PASS.
+- **Sec 12** — `formulas`: number-line mean visual (a,b,c), insert-means chain, d/A_k formulas, boxed S_n=An²+Bn characterization test (verified a_1=A+B,d=2A), zero-constant-term guardrail, three-term test closer. PASS.
+- **Sec 13** [flagged] — symmetric-selection technique: number-line demo (a-d,a,a+d with +d arcs, d's cancel), 3/5-term odd cases, 4-term even case (CD=2d), red-margin even-count guardrail. Math hand-verified for r=1,2 and the even case. PASS, eye-checked.
+- **Sec 14** — worked example: a=20,d=19¼-20=-¾ AP; a₂₈=-¼; solve 80-3(n-1)<0→n>27⅔→round up to n=28 (matches a₂₈, elegant consistency). Math verified. PASS.
+- **Sec 15** — worked example: 6 scattered terms with 3 nested arcs pairing equidistant ones (a₁+a₂₄=a₅+a₂₀=a₁₀+a₁₅), each pair=75, S₂₄=900. Math verified. PASS.
+- **Sec 16** — worked example: ratio-of-sums device (renamed JSON's stacked a^(1)_m notation to distinct letters a_m/S_n vs b_m/T_n — see notation decisions). m=24→n=47→ratio 66:41. Math verified. PASS.
+- **Sec 17** — worked example: insert 11 AMs between 28,10; d=-3/2; position row 1-11 with middle three highlighted; A_5=41/2,A_6=19(=AM,centre),A_7=35/2. Math verified. PASS.
+- **Sec 18** — worked example: savings word problem, bar chart (flat 200×3 then rising by 40), S_n=11040 target, n=21 months (quadratic (n-3)(n+8)=522). Math verified. PASS.
+- **Sec 19** — worked example: AP fused with logs, log2/log(2^x-1)/log(2^x+3) → u²-4u-5=0 → domain check 2^x>0 rejects u=-1 → x=log₂5. Superscript-x translated to plain caret. Math verified. PASS.
+- **Sec 20** — worked example: S_7:S_11=6:11 → a=9d → a_7=15d → 130<15d<140 → natural-number constraint forces d=9. Math verified. PASS.
+- **Sec 21** — worked example: three APs as residue classes (CRT), 3 congruences, d=lcm(3,5,7)=105, verified x=52 (checkD), a+d=157. Math verified. PASS.
+- **Sec 22** — `tips` closer: red top/bottom banners (off-by-one, fast tests) bookending a 3-red-trap + 2-green-tip grid. Caught and fixed a shape-vs-shape box overlap the verifier didn't gate on (see notation decisions). PASS, eye-checked. **Subtopic 2 (AP, secs 9-22) complete — chapter is now 22/85.**
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3037 > /tmp/dev-math8.log 2>&1 &`, confirmed READY.
