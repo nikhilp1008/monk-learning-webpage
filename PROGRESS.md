@@ -126,3 +126,21 @@ Sec18 (2026-08-06).
   act, two names — closes with verified ⁷C₅=⁷C₂=21). PASS both langs.
 
 Pushed through Sec21 (2026-08-06).
+
+- Sec 22 — Pascal's rule + selection under constraints (bijective IN/OUT proof: n+1 objects, one
+  starred, forks into IN (nC(r-1)) vs OUT (nCr) — mutually exclusive & exhaustive callback to
+  Sec2 → add; must-include-k / must-exclude-k toolkit). PASS both langs.
+- Sec 23 — Dividing objects into equal unlabelled groups (labelled telescoping product → n!/(m!)^g,
+  relabelling-collapse over-counting insight → ÷g!, verified 12 books/3 groups of 4 = 5,775,
+  unlabelled-piles-vs-named-recipients guardrail). PASS both langs.
+- Sec 24 — Worked examples: sub-committee (¹¹C₄=330) + team-vs-posts trap (⁶C₃=20 vs ⁶P₃=120,
+  explicit ×3! arrow bridging them). PASS both langs.
+- Sec 25 — Worked examples: two independent categories (⁷C₂×⁵C₂=210) + "at least 3 women"
+  3-case sum (560+120+6=686), closing "3 cases either way" complement-isn't-always-shorter
+  lesson. PASS both langs.
+- Sec 26 — Pitfalls & pro-tips, closes Subtopic 3 (order confusion, forgetting ÷r!, at-least
+  case-slips, forgetting ÷(equal groups)!, ⁵⁰C₄₈=⁵⁰C₂=1225 symmetry shortcut, "in or out?"
+  heuristic). PASS both langs.
+
+**SUBTOPIC 3 COMPLETE (secs 19-26).** Flagged derivation Sec21 (nCr + bijective symmetry proof)
+handled with full rigor. Pushed through Sec26 (2026-08-06). 26/45 sections done.
