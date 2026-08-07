@@ -132,3 +132,10 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   (3ⁿ−2ⁿ⁺¹+1)/2, sanity-checked n=2→1. Verified the algebra by hand
   before trusting it (inclusion-exclusion on A=∅/B=∅, matches narration).
   Clean PASS both languages, eye-checked carefully given the flag.
+- **Sec 14** — tips, closes Subtopic 1: numbered-badge pitfall ladder
+  (1-4: outcome≠event with an inline {4}✓/4✗ color pair via tspan,
+  ME⇏exhaustive, mis-built S poisons events, ME≠independent Class-12
+  warning), boxed formula clarifying ME is about sets not probabilities,
+  amber HIGH pro-tip card closing on the "search not calculation" habit.
+  Clean PASS both languages, eye-checked. **Subtopic 1 (Sample Space and
+  Events, secs 1-14) complete.**
