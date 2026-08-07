@@ -137,3 +137,15 @@ misrecorded observation).
   only gives range/M.D. summary stats, not raw data — verified the
   before/after gap arithmetic (2×3=6, 4×3=12) is correct regardless. PASS
   both languages on first render, eye-checked.
+- **Sec 12** — worked_examples (JEE Advanced): the outside-in pairing proof
+  that the median MINIMISES S(a)=Σ|x_i-a|, not just ties it. Real
+  linear-scaled number line (7,11,13,16,20,24, true proportional spacing via
+  `axisD`) with two nested Bezier pairing arcs (outer purple (7,24) gap 17,
+  inner blue (11,20) gap 9) and the median interval [13,16] shaded amber
+  directly on the axis — mirrors the source SVG's own diagram almost
+  exactly, just rebuilt with real geometry instead of copied coordinates.
+  Boxed green landing S(a)=17+9+3=29 (hand-verified: 24-7=17, 20-11=9,
+  16-13=3). Closing red note lands the paper's actual payoff — the minimiser
+  is an interval, not a point, so "how many a" is infinitely many. PASS both
+  languages on first render, eye-checked (arc nesting and interval placement
+  both confirmed correct, no crossing/overlap).
