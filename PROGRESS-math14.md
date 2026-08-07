@@ -106,3 +106,9 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   discs behind each number. Boxed A∩B={6}≠∅, guardrail "NOT mutually
   exclusive". Clean PASS both languages, eye-checked — spinner numbering
   and both A/B markings confirmed correct.
+- **Sec 11** — worked_examples, JSON-flagged "Speed Trap": MCQ options
+  row (i)-(iv), guardrail chip states the elimination method (hunt one
+  counterexample, don't enumerate), options (i)/(iii)/(iv) crossed red
+  with their overlap reasoning appended inline, survivor (ii) ringed
+  green, final "Answer: (ii)" chip. Reused the MCQ cross-out+ring motif.
+  Clean PASS both languages, eye-checked.
