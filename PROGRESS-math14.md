@@ -163,3 +163,8 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   New motif: probability-as-weighted-blob-size, not used before in this
   chapter. Clean PASS both languages, eye-checked — blob sizes correctly
   track the stated fractions.
+- **Sec 18** — concept: 3 stacked caveats (finite S, additivity needs
+  mutually exclusive, and the big one: P(E)=n(E)/n(S) is a special case
+  not an axiom), then a compact counterexample continuing Sec17's loaded-
+  die thread — "naive: P(face)=1/6" crossed red vs "actual: sum the sand
+  → 1/4" green — closing guardrail chip. Clean PASS both languages.
