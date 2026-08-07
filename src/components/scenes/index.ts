@@ -4790,6 +4790,8 @@ const M11CH14 = "35830227-5b8e-5d97-a032-a5f775c28b07";
 import M11Ch14Sec1 from "./M11Ch14Sec1";
 import M11Ch14Sec2 from "./M11Ch14Sec2";
 import M11Ch14Sec3 from "./M11Ch14Sec3";
+import M11Ch14Sec4 from "./M11Ch14Sec4";
 REGISTRY[`${M11CH14}:1`] = M11Ch14Sec1;
 REGISTRY[`${M11CH14}:2`] = M11Ch14Sec2;
 REGISTRY[`${M11CH14}:3`] = M11Ch14Sec3;
+REGISTRY[`${M11CH14}:4`] = M11Ch14Sec4;

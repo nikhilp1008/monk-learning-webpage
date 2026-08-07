@@ -58,3 +58,8 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   dodge the SVG double-space-collapse bug), guardrail closes on outcome
   (1 dot) vs event (ringed dot-cluster). Clean PASS both languages, zero
   stalls, eye-checked.
+- **Sec 4** — concept, single-canvas top/bottom split (no erasing needed):
+  Assumption 1 (S complete) + guardrail chip + die roster missing "6"
+  (dashed red "?" slot); divider; Assumption 2 (ordered pairs) + coin→die
+  arrow building "(H, 4)" + guardrail "(H,4) ≠ (4,H)". Clean PASS both
+  languages, zero stalls, eye-checked.
