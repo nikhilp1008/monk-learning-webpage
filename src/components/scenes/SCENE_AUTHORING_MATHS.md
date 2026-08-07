@@ -317,12 +317,21 @@ screenshot). Rule of thumb:
   independently be backwards) and is worth extra scrutiny if any future
   chapter's 3D content looks visually "off" in a way that's hard to
   pinpoint. **Note Chapter 11's unusual structure**: it's a merge of what
-  were originally separate NCERT topics — a 2D-coordinate-geometry
-  "Applications" unit (secs 1-12, centroid/collinearity/locus, reuses plain
-  `CartesianAxes`/`lineD`, nothing 3D about it) complete with its own
-  formula-recap/cheat-sheet checkpoint (secs 13-14, mid-chapter, not at the
-  end), THEN the actual 3D content begins (secs 15-37). The chapter ends on
-  a plain `tips` section (37) with no closing recap/cheat-sheet at all —
+  were originally separate NCERT topics — an "Applications" unit (secs
+  1-12, centroid/collinearity/locus) complete with its own formula-recap/
+  cheat-sheet checkpoint (secs 13-14, mid-chapter, not at the end), THEN
+  the coordinate-axes/octants content begins (secs 15-37). **Correction**:
+  secs 1-12 are 3D, not 2D as originally assumed here — Sec 1 intro-frames
+  the centroid with a vague "balance point" analogy and no explicit
+  coordinates (easy to misread as 2D from that alone), but secs 5/8's
+  actual derivation and worked example use full `(x,y,z)` triples
+  throughout (e.g. centroid of `A(2,-1,4), B(6,3,-2), C(1,4,5)`) — use
+  `project3D`/`ThreeDAxes` for all of secs 1-12 too, not `CartesianAxes`.
+  **Lesson: don't conclude a subtopic's dimensionality (2D vs 3D, or any
+  similar classification) from its intro section alone** — intro sections
+  are often deliberately vague/analogy-driven; check a formula or worked-
+  example section from the same subtopic before deciding. The chapter ends
+  on a plain `tips` section (37) with no closing recap/cheat-sheet at all —
   don't expect the usual last-two-sections pattern for this one.
 - **Eighth glyph audit (Chapter 8, Sequences & Series) — subscript LETTERS,
   read this before writing a single formula, `aₙ` is this chapter's most
