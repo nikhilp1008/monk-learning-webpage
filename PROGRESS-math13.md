@@ -277,3 +277,10 @@ misrecorded observation).
   itself was written correctly from the start (XBar for the mean label,
   `x_bar` fallback in table headers). PASS both languages, eye-checked
   (every arithmetic value and the √18=3√2 simplification confirmed).
+- **Sec 25** — worked_examples: σ²=5 for 20 obs, rule y=3x+4 → new σ²=3²×5=45,
+  new σ=|3|×√5=3√5≈6.71 (hand-verified: √5≈2.236, 3×2.236≈6.708). Two green
+  boxes land both results side by side. Trap staged as an explicit
+  wrong-vs-right chip pair — "5×3=15 ✗" beside "5×3²=45 ✓" — the exact
+  naive mistake the narration calls out, shown numerically rather than only
+  described, same pattern as Sec10's divisor trap. PASS both languages,
+  eye-checked.
