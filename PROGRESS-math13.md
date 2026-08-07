@@ -479,3 +479,24 @@ misrecorded observation).
   six back-to-back dense rows mattered more than exactness on any one of
   them. PASS both languages, eye-checked — all six cards render legibly
   with zero overlap despite the density.
+- **Sec 44** — cheat_sheet: the chapter's FINAL section. board_content's
+  seq2 was a genuine `type: diagram` (a raw embedded SVG, not a formula) —
+  per "diagram beats formula" this was hand-translated into real
+  boxes+arrows rather than flattened to text: a 4-box refinement ladder,
+  Range → Mean Deviation → Variance → Standard Deviation, built one
+  box/arrow at a time (the "one hand" rule), with the final box
+  highlighted in red exactly as the source SVG did, closing on the same
+  muted caption ("crude → smooth, differentiable, unit-restored").
+  Researched precedent before writing (M11Ch08Sec1's 3-box input→rule→
+  output machine diagram) via an Explore agent since no prior `cheat_sheet`
+  section in this codebase had drawn a multi-box flow — confirmed
+  `arrowD`+`Draw` with `MUTED` stroke and hand-computed fixed box
+  positions is the established pattern, not an auto-layout. Below the
+  diagram: the "Median Minimises Mean-deviation" 3-M's mnemonic (red-
+  margin, high), the N=Σf_i divisor guardrail, the transformation
+  mnemonic, the C.V. consistency shortcut, and a closing red-margin note
+  with the reverse-problem kit + sanity trio (again `x_bar` fallback for
+  the two dense x̄ occurrences, per the Sec42/43 rule). PASS both
+  languages, eye-checked — the diagram in particular rendered cleanly
+  with correct arrow directions, box spacing, and red highlight on the
+  final box. This closes the chapter: all 44 sections complete.
