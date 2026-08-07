@@ -323,3 +323,10 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   7 individual equal segments (3 green win + 4 red not) matching the
   narration's "seven equal parts" framing, HIGH guardrail on the classic
   odds-against direction trap. Clean PASS both languages.
+- **Sec 39** — tips, closes Subtopic 3: numbered-badge ladder (1-2 HIGH:
+  mixing ordered/unordered counts, odds≠probability; 3-4: forgetting
+  +triple, enumerating instead of complement), amber HIGH pro-tip card
+  (order first, then the "at least" trigger — two reflexes), closing
+  caption. Same motif as Sec14/28. Clean PASS both languages. **Subtopic
+  3 (Computing Probabilities, secs 29-39) complete — all 4 formula/tips
+  subtopics of the whole chapter now done (39/43).**
