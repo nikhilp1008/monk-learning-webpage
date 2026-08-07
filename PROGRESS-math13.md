@@ -341,3 +341,12 @@ misrecorded observation).
   rather than any combining mark on the numeral. Worth a standing habit for
   the rest of this chapter: grep the diff for the bar character before
   verifying, not just after. PASS both languages, eye-checked.
+- **Sec 32** — concept, foundational for the reverse-problem sections ahead
+  (Sec35/36 lean on exactly these two identities, extra care taken here):
+  two side-by-side "MASTER TOTAL" boxes — #1 derives Σx_i=nx̄ from the mean
+  definition, #2 derives Σx_i²=n(σ²+x̄²) from the shortcut variance formula,
+  each shown as "given → result" on two lines. Grepped the file for the raw
+  combining-mark glyph before typechecking (per the habit noted in Sec31) —
+  came back clean, confirming every x̄ here already went through XBar.
+  Independently re-verified both derivations by hand before trusting the
+  render. PASS both languages, eye-checked.
