@@ -27,6 +27,7 @@ Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25,
 - **Subscript convention (this chapter's `aₙ` is the most-used symbol — glyph-audited via fontTools cmap, both board fonts confirmed MISSING the entire Unicode subscript-letter block, same failure as Ch7's superscript-letter block):** numeric index → real Unicode subscript digit, non-script Anek (`a₁`, `a₂`, `S₅`). Symbolic index → plain underscore, no true subscript positioning (`a_n`, `a_(n-1)`, `a_(n+1)`, `S_n`, `T_n`, `a_p`, `a_q`). Never use the literal `ₙ` glyph even when a raw `board_content` string contains it. See SCENE_AUTHORING_MATHS.md's 8th glyph audit for the full writeup.
 - **Per-LINE subscript consistency**: if one formula line mixes a numeric index with a symbolic one (e.g. `a_1 = a_2 = 1, a_n = a_(n-1)+a_(n-2)`), use underscore for EVERY index on that line, even the numeric ones — don't mix real subscript digits with underscore-symbolic on the same line. Only use real subscript digits (`a₁`, `a₂`) on a line that is purely numeric-indexed throughout.
 - House palette only: INK, AMBER, AMBER_DARK, GREEN(_DARK), RED, CREAM, MUTED.
+- **`arrowD`/`ringD`/`crossD` live in `kit.tsx`, NOT `math-kit.tsx`** (only `roundRectD`/`circleD`/etc. are math-kit) — tripped this up in Sec 6, tsc caught it immediately (unlike math7's Sec4 where only the dev bundler caught a similar mistake).
 
 ## Done
 (section-by-section log goes here as work proceeds)
