@@ -1,5 +1,16 @@
 # Ch14 (Math) · Probability — scene progress
 
+**STATUS: COMPLETE — all 43/43 sections done, verified, committed, pushed.**
+This is the LAST chapter of Class 11 Mathematics — the subject is closed.
+File count = registry count = import count = 43, no gaps (checked 1-43).
+Full-project `npx tsc --noEmit` clean (zero errors, including the file
+that previously had pre-existing unrelated errors in other chapters' work).
+13-section live smoke test across all 4 subtopics + every flagged section
+passed (SVG renders, no page errors). All 5 flagged sections (13, 21, 22,
+23, 27, 37) eye-checked with extra care; the addition-rule derivation
+(Sec22) and the JEE Main three-event worked example (Sec37) were verified
+algebraically by hand against every rendered number before trusting them.
+
 Branch: premium-board-math14 · port 3037 · chapter_id 35830227-5b8e-5d97-a032-a5f775c28b07
 Total sections: 43 (confirmed 43=43 against Supabase `lesson_sections`; JSON_LESSONS is stale
 at 10 sections — ignore it per task brief). Full Supabase dump cached at
