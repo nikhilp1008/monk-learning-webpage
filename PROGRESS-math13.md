@@ -99,3 +99,11 @@ misrecorded observation).
   each language's text width separately to place the `XBar` without
   overflowing the safe area. PASS both languages on first render,
   eye-checked (cumulative sums and the interpolation arithmetic confirmed).
+- **Sec 8** — formulas: a restated reference card (not new teaching, per its
+  own narration), so treated as a boxed 5-card grid rather than a live
+  derivation — closer to the `formula_recap` house style than a literal
+  `formulas` build. Green boxes for the three high-emphasis formulas (range
+  + coefficient of range with `<Frac>`, M.D. ungrouped, M.D. frequency),
+  amber boxes for the two normal-emphasis ones (coefficient of M.D.,
+  grouped-median interpolation with `<Frac>`), red-margin close for the two
+  memorise-this facts. PASS both languages on first render, eye-checked.
