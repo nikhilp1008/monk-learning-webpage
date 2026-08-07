@@ -399,8 +399,16 @@ export default function LearnPage() {
             });
           }
         },
-        onBoardUpdate: (latex) => {
-          if (latex) setBoardLatex(latex);
+        onBoardEvents: (events) => {
+          console.log(`[BOARD EVENTS RECEIVED ON CLIENT] count: ${events.length}`, events);
+        },
+        onBoardUpdate: (payload: any) => {
+          if (typeof payload === "string" && payload) {
+            setBoardLatex(payload);
+          } else if (payload && typeof payload === "object") {
+            const content = payload.latex || payload.text || "";
+            if (content) setBoardLatex(content);
+          }
         },
         onSessionEnded: () => {
           handleEndSession();

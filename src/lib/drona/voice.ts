@@ -125,23 +125,28 @@ export class DronaVoiceClient {
         this.notifyState();
       } else if (type === "transcript_final") {
         this.options.onSpeechText?.(msg.transcript || "", true);
+      } else if (type === "board_events") {
+        console.log(`[BOARD EVENTS RECEIVED] count: ${(msg.events || []).length}`);
+        if (msg.events && msg.events.length > 0) {
+          this.options.onBoardEvents?.(msg.events);
+        }
       } else if (type === "board") {
         console.log(`[BOARD EVENT RECEIVED] length: ${(msg.board || "").length}`);
         this.options.onBoardUpdate?.(msg.board || "");
       } else if (type === "audio_chunk") {
         this.isDronaSpeaking = true;
         const speechText = msg.speech || "";
-        const boardText = msg.board;
+        const boardEvent = msg.board_event || msg.board;
         if (msg.audio) {
-          this.playAudioChunk(msg.audio, speechText, boardText);
+          this.playAudioChunk(msg.audio, speechText, boardEvent);
         } else {
           if (speechText) {
             this.currentSpeechText = speechText;
             this.options.onSpeechText?.(speechText, false);
           }
-          if (boardText !== undefined) {
-            console.log(`[BOARD EVENT RECEIVED] length: ${boardText.length}`);
-            this.options.onBoardUpdate?.(boardText);
+          if (boardEvent !== undefined) {
+            console.log(`[BOARD EVENT ATTACHED TO CHUNK]`, boardEvent);
+            this.options.onBoardUpdate?.(boardEvent);
           }
         }
         this.notifyState();
