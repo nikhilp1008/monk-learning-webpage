@@ -182,3 +182,15 @@ misrecorded observation).
   only. Fixed by merging to two lines and shrinking the aside to size 12.
   PASS both languages after the fix, re-eye-checked (all four boxes now
   clear their borders with margin).
+
+## Subtopic 2 (Variance & Standard Deviation, secs 16-29)
+- **Sec 16** — concept, opens Subtopic 2: mini before/after icon pair (hand-
+  drawn V with a ringed sharp corner vs a smooth curveD-sampled U) sets up
+  |deviation| vs (deviation)², a red-margin 3-item checklist for what
+  squaring buys, boxed formula σ²=(1/n)Σ(x_i-x̄)². Main diagram: four squares
+  sitting directly on a number line, side ∝ |deviation| so area ∝ deviation²
+  (sides 10,10,20,100 px for deviations 1,1,2,10) — the far square is
+  visibly ~100× the near ones' area, not just bigger, landing "one outlier
+  blows up the average area" as a real geometric fact instead of an
+  assertion. Labels "2²=4"/"10²=100" annotate the actual squares. PASS both
+  languages on first render, eye-checked.
