@@ -176,3 +176,11 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   with domain condition flattened as a trailing parenthetical per
   notation rules (no stacked-sigma primitive exists). Clean PASS both
   languages, eye-checked given this section anchors everything after it.
+- **Sec 20** — formulas, a PREVIEW toolkit (JSON's own heading: "all
+  derived next" — Sec21-23 prove these): 7 formula rows build one at a
+  time, HIGH ones (the "not" law, general addition rule) in larger green
+  text, the addition rule ringed. Inline captions via tspan for each
+  formula's condition. Caught the same SVG whitespace-collapse bug as
+  Sec3 on row1's 3-clause line — fixed by splitting into 3 separately
+  positioned T elements (anchor start/middle/end) instead of relying on
+  multi-space gaps. Clean PASS both languages after fix, eye-checked.
