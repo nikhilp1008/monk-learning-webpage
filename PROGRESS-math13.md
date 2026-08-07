@@ -445,3 +445,17 @@ misrecorded observation).
   approach would miss. Real `XBar` used once for the combined mean (beat
   2), positioned as a fixed-x pair per the Sec23/40 lesson rather than
   chained. PASS both languages, eye-checked.
+- **Sec 42** — tips: closes Subtopic 3 (and the chapter's teaching arc)
+  with the four reverse-problem slips, mirroring Sec29's chapter-section-
+  close structure but built from board_content's own beat shape rather
+  than a card grid: a red-margin high-emphasis note for slip 1 (σ vs C.V.
+  on different-mean series), three plain centered lines for slips 2-4
+  (forgetting to repair Σx_i², feeding variance instead of SD into C.V.,
+  misreading "more consistent" as "better"), a boxed green landing formula
+  for the two master totals (Σx_i=n·x̄, Σx_i²=n(σ²+x̄²)), and a closing
+  red-margin note with the two sanity checks (σ²≥0, C.V. must stay
+  dimensionless). The master-totals formula uses two x̄ occurrences in one
+  line — per the established Sec37 rule for dense multi-symbol recap
+  formulas, used the plain `x_bar` text fallback instead of true `XBar`
+  rather than risk misaligning two manually-cursored inline bars. PASS
+  both languages, eye-checked.
