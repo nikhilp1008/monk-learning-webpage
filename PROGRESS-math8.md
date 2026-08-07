@@ -1,0 +1,149 @@
+# M11 Ch08 — Sequences and Series — scene progress
+
+Worktree: branch `premium-board-math8` · port 3037 · chapter_id `7936f031-5b80-5350-ad08-bc78bef84e12`.
+85 sections total (Supabase `lesson_sections`, positions 1–85 — confirmed via `node scratch/dump-math8.mjs` with no args). JSON_LESSONS is stale (10 sections) — **not used**; all content pulled live from Supabase (`board_content`, `segments_english/hinglish`, `board_reveal_at_english/hinglish`, audio URLs). Full cache: `scratch/math8-all.json` (all 85 sections' full rows, `node scratch/dump-math8.mjs 1 2 3...85` regenerates). Concise per-section viewer for planning: `python3 scratch/show.py <positions...>`.
+
+## Subtopics
+1. Foundations (sequence/series/sigma) — secs 1–8
+2. AP (Arithmetic Progression) — secs 9–22
+3. GP (Geometric Progression) — secs 23–37
+4. HP (Harmonic Progression) — secs 38–47
+5. AM–GM–HM — secs 48–55
+6. AGP (Arithmetico-Geometric Progression) — secs 56–64
+7. Special Series — secs 65–74
+8. Telescoping — secs 75–83
+9. Recap/Cheat Sheet — secs 84–85
+
+Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25, 39, 49, 57, 66, 76.
+
+## Chapter-wide notation/style decisions (keep consistent across all 85 sections)
+- Per SCENE_AUTHORING_MATHS.md notation audit (already pre-documented before this chapter started): NO new math-kit primitives needed. Sequences are framed as GRAPHS in the content itself ("plot aₙ vs n" for AP → straight line via `CartesianAxes`+`lineD`, discrete dots at integer n; "log aₙ" for GP → straight line, or plot aₙ itself as `curveD` exponential) — use those from Ch02's kit. Telescoping (75–83) uses base kit's `crossD`+`dim` for cancelling terms in a sum.
+- `\lim_{n\to\infty}` → write inline "lim (n→∞)", no stacked-bounds attempt.
+- `\bar{x}` (mean, later chapters) — not expected in this chapter (that's Ch09/Statistics), but if it appears use the `<Overline>` primitive from math-kit.
+- **Beat-index convention** (same as math7): `len(board_content) == len(board_reveal_at_english) == len(board_reveal_at_hinglish)`. When `board_content[0]` is a general section-opening heading, treat it as the always-on title and gate the REST at `beat >= 1 .. beat >= N-1`. Verify this per section before writing.
+- Script default: `script={true}` (Kalam) for prose/labels; `script={false}` (Anek, non-script) ONLY when a line contains a literal numeric superscript/subscript digit (Kalam is missing most of those glyphs).
+- Minus sign: plain hyphen `-`, never U+2212.
+- Red-margin guardrail: short vertical red bar (`M x y1 v h`, RED, sw 3) to the left of a short red caption.
+- **Subscript convention (this chapter's `aₙ` is the most-used symbol — glyph-audited via fontTools cmap, both board fonts confirmed MISSING the entire Unicode subscript-letter block, same failure as Ch7's superscript-letter block):** numeric index → real Unicode subscript digit, non-script Anek (`a₁`, `a₂`, `S₅`). Symbolic index → plain underscore, no true subscript positioning (`a_n`, `a_(n-1)`, `a_(n+1)`, `S_n`, `T_n`, `a_p`, `a_q`). Never use the literal `ₙ` glyph even when a raw `board_content` string contains it. See SCENE_AUTHORING_MATHS.md's 8th glyph audit for the full writeup.
+- **Capital Pi `Π` (product notation, JSON's `\prod_{k=1}^n G_k`) is MISSING from both board fonts** (checked via fontTools cmap, same method as the other audits) — unlike Σ this hasn't been accepted anywhere else in the codebase and appears only once in this chapter (Sec 27), so avoid it entirely rather than accept a fallback: write the product out as explicit dot-multiplication instead, `G_1 · G_2 · ... · G_n`.
+- **Two-AP comparison notation** (JSON sometimes writes `a^{(1)}_m` for "AP1's mth term" vs `a^{(2)}_m` — a true 2-D superscript+subscript stack on one letter, not supported): rename to distinct plain letters instead, e.g. AP1 = `a_m`/`S_n`, AP2 = `b_m`/`T_n`. Same math, no stacked notation (Sec 16).
+- **Per-LINE subscript consistency**: if one formula line mixes a numeric index with a symbolic one (e.g. `a_1 = a_2 = 1, a_n = a_(n-1)+a_(n-2)`), use underscore for EVERY index on that line, even the numeric ones — don't mix real subscript digits with underscore-symbolic on the same line. Only use real subscript digits (`a₁`, `a₂`) on a line that is purely numeric-indexed throughout.
+- House palette only: INK, AMBER, AMBER_DARK, GREEN(_DARK), RED, CREAM, MUTED.
+- **Chapter-end sweep caught 7 stray literal `✓` checkmark glyphs in rendered content** (Secs 30, 31, 41, 60, 69×2, 80) — confirmed missing from both board fonts back in Ch5's audit, and `checkD` exists specifically to avoid it, but inline parenthetical asides like `"(|r| < 1 ✓)"` slipped through since they don't look like a dedicated "verification stamp" moment. Fixed by dropping the glyph (not worth a precisely-positioned `checkD` stroke for a one-word inline aside) — re-verified all 6 affected sections, still PASS. Worth a repo-wide `grep -n "✓" src/components/scenes/M11Ch08Sec*.tsx` sanity pass at the end of any future chapter, not just when writing a section.
+- **The inverse of the above can also happen: `reveals[last]+1` can EXCEED the actual audio duration** (Sec 52 EN: reveal[6]=77.91s, duration=78.19s, so the verifier's `b6` check seeks to 78.91s — past the end). Seeking past duration appears to clamp/misbehave in a way that makes that one probe frame under-render, even though the scene logic is correct. Confirmed by manually seeking to a valid in-duration timestamp (78.0s) with a throwaway Playwright script and finding the beat-6 content present. Don't conclude a beat is broken from a single late-beat screenshot without checking whether `reveals[k]+1 > duration` first.
+- **The verifier's "final" screenshot is `dur-1` (audio duration minus 1s), NOT the last beat's reveal time** — when the last beat fires very close to the audio's end (Sec 39 EN: last reveal 93.77s, duration 94.27s, gap only 0.5s), `dur-1=93.27s` lands BEFORE that beat fires, so `english-final.png` shows the second-to-last beat, not the last one. This is correct pure-function-of-time behavior, not a bug — check the actual `b<N>.png` (reveals[N]+1s) for the true last-beat content, don't assume "final" always means "every beat is showing."
+- **The verifier cannot catch a truncated/incomplete sentence** (Sec 25 beat2 originally read "|r|<1 ⇒ each multiplication" with no verb — a copy-paste-shortening slip, not a layout bug). Re-read every beat's actual sentence for completeness before moving on, not just its box geometry.
+- **The verifier only gates text-vs-text overlap and safe-area overflow — it does NOT catch shape-vs-shape overlap** (e.g. two bordered `roundRectD` cells whose boxes intersect). Caught this by eye (FORCE_SHOTS) in Sec 22: two 340-wide cells at cx 380/700 overlapped by 20px and still verified PASS. Hand-check cell `x ± w/2` math whenever laying out a multi-cell grid with cx+w, don't trust the verifier alone for box layouts.
+- **`arrowD`/`ringD`/`crossD` live in `kit.tsx`, NOT `math-kit.tsx`** (only `roundRectD`/`circleD`/etc. are math-kit) — tripped this up in Sec 6, tsc caught it immediately (unlike math7's Sec4 where only the dev bundler caught a similar mistake).
+
+## BLOCKED — needs content-team fix
+- **Sec 32** ("Alternating signs select the ratio") — **not authored, skipped intentionally.** Both `board_content` (item 5/6) and the narration audio (segments_english seq 6-7) state the final answer as `a = -4`, but this is a genuine arithmetic error: solving `a(1+r) = a(-1) = 12` gives `a = -12`, not `-4`. Independently verified: with a=-12, r=-2, the four terms are -12, 24, -48, 96 — term1+term2=12 ✓, term3+term4=48 ✓, signs alternate ✓, all conditions satisfied. With a=-4 (the stated wrong answer), term1+term2 = -4+8 = 4 ≠ 12 — fails the problem's own first given condition. User decision (asked via AskUserQuestion, 2026-08-06): do not paper over this with a scene-authoring workaround (neither "match the wrong audio" nor "silently show correct math that contradicts the audio") — leave the section unbuilt and flag it here for the content team to fix the underlying derivation and regenerate the audio. Resume authoring Sec 32 once the source Supabase row + audio are corrected. Chapter numbering/registry has a gap at position 32 until then (Secs 1-31, 33-85 registered; 32 is not).
+
+## Done
+- **Sec 1** — sequence-as-function machine diagram (input n → rule aₙ → output), 4 fixed-position boxes, explicit-vs-recursive (Fibonacci) example pair, not-a-set guardrail. Reference exemplar. PASS, eye-checked.
+- **Sec 2** — series as running total: 4-bead cumulative-sum build (S₁..S₄), sigma formula (bounds spelled out prefix-style below the line, not stacked), cricket over-by-over running-score demo, index-need-not-start-at-1 guardrail. PASS.
+- **Sec 3** — `formulas`: 3 sigma linearity rules (split/constant-multiple/constant-sum), each label→formula build, live numeric demo Σ(2k-1) k=1..4=16 built expand→substitute→add→boxed. PASS.
+- **Sec 4** — worked example: a_n=(2n-3)/4 substituted for n=1..4, AP-insight number line (4 equally-spaced dots, +1/2 gap labels) foreshadowing Unit 2. PASS.
+- **Sec 5** — worked example: general term from a pattern (3,8,15,24,35,…) — first/second differences built live (arcs+labels), quadratic conclusion, factored a_n=n(n+2), 3 checkD verification stamps. PASS, eye-checked.
+- **Sec 6** — worked example: recursive a_n=3a_(n-1)+1, feed-forward chain diagram (5 boxes+arrows) filling as each term computes, red-margin neither-AP-nor-GP note (differences AND ratios both change).
+- **Sec 7** — worked example: Σ(3k²-2k+1) split via linearity — 3 color-coded pieces (amber/green/ink) carried consistently through Σ-form → standard-sum substitution → simplify → n(2n²+n+1)/2 boxed.
+- **Sec 8** — `tips` closer: 2×3 grid (4 red traps, 2 green pro-tips) + wide red closing banner (golden habit). PASS, eye-checked. **Subtopic 1 (Foundations, secs 1-8) complete.**
+- **Sec 9** — opens subtopic 2 (AP): two-panel demo — rising-bar staircase (a,a+d,a+2d,a+3d) beside a CartesianAxes+lineD graph of aₙ vs n with 4 dots on the line. Reference exemplar for the graph-of-AP visual language. PASS, eye-checked.
+- **Sec 10** [flagged] — nth-term + Gauss-sum derivations, two-column layout: LEFT telescoping stack (a_2-a_1=d,...,a_n-a_(n-1)=d, add all) → boxed a_n=a+(n-1)d; RIGHT forwards+backwards sum → 2S_n=n[2a+(n-1)d] with column-pairing note → boxed S_n both forms. Math hand-verified. PASS, eye-checked.
+- **Sec 11** — `formulas`: notation legend (a/d/l/S_n) + 2×2 grid of boxed core formulas (nth term, nth-from-end, sum via a-d-n, sum via a-l-n), off-by-one red-margin, d-sign closer. PASS.
+- **Sec 12** — `formulas`: number-line mean visual (a,b,c), insert-means chain, d/A_k formulas, boxed S_n=An²+Bn characterization test (verified a_1=A+B,d=2A), zero-constant-term guardrail, three-term test closer. PASS.
+- **Sec 13** [flagged] — symmetric-selection technique: number-line demo (a-d,a,a+d with +d arcs, d's cancel), 3/5-term odd cases, 4-term even case (CD=2d), red-margin even-count guardrail. Math hand-verified for r=1,2 and the even case. PASS, eye-checked.
+- **Sec 14** — worked example: a=20,d=19¼-20=-¾ AP; a₂₈=-¼; solve 80-3(n-1)<0→n>27⅔→round up to n=28 (matches a₂₈, elegant consistency). Math verified. PASS.
+- **Sec 15** — worked example: 6 scattered terms with 3 nested arcs pairing equidistant ones (a₁+a₂₄=a₅+a₂₀=a₁₀+a₁₅), each pair=75, S₂₄=900. Math verified. PASS.
+- **Sec 16** — worked example: ratio-of-sums device (renamed JSON's stacked a^(1)_m notation to distinct letters a_m/S_n vs b_m/T_n — see notation decisions). m=24→n=47→ratio 66:41. Math verified. PASS.
+- **Sec 17** — worked example: insert 11 AMs between 28,10; d=-3/2; position row 1-11 with middle three highlighted; A_5=41/2,A_6=19(=AM,centre),A_7=35/2. Math verified. PASS.
+- **Sec 18** — worked example: savings word problem, bar chart (flat 200×3 then rising by 40), S_n=11040 target, n=21 months (quadratic (n-3)(n+8)=522). Math verified. PASS.
+- **Sec 19** — worked example: AP fused with logs, log2/log(2^x-1)/log(2^x+3) → u²-4u-5=0 → domain check 2^x>0 rejects u=-1 → x=log₂5. Superscript-x translated to plain caret. Math verified. PASS.
+- **Sec 20** — worked example: S_7:S_11=6:11 → a=9d → a_7=15d → 130<15d<140 → natural-number constraint forces d=9. Math verified. PASS.
+- **Sec 21** — worked example: three APs as residue classes (CRT), 3 congruences, d=lcm(3,5,7)=105, verified x=52 (checkD), a+d=157. Math verified. PASS.
+- **Sec 22** — `tips` closer: red top/bottom banners (off-by-one, fast tests) bookending a 3-red-trap + 2-green-tip grid. Caught and fixed a shape-vs-shape box overlap the verifier didn't gate on (see notation decisions). PASS, eye-checked. **Subtopic 2 (AP, secs 9-22) complete — chapter is now 22/85.**
+- **Sec 23** — opens subtopic 3 (GP): two-panel demo — 5 doubling squares (1,2,4,8,16 grains) beside a CartesianAxes+curveD exponential graph of aₙ vs n with 5 dots. Reference exemplar for the graph-of-GP (curve, not line) visual language. PASS, eye-checked.
+- **Sec 24** [flagged] — nth-term + sum derivations, two-column layout mirroring Sec10: LEFT telescoping product stack (a_2/a_1=r,...,multiply all) → boxed a_n=a·r^(n-1); RIGHT S_n vs rS_n subtraction → boxed S_n both forms (r≠1), r=1 special-case guardrail. Math hand-verified. PASS, eye-checked.
+- **Sec 25** [flagged] — sum-to-infinity convergence proof + why AM≥GM, two columns: LEFT S_n split → S_∞=a/(1-r) boxed, |r|≥1-diverges guardrail (IS the proof); RIGHT (√a-√b)²≥0 → boxed AM≥GM, closing with the AM≥GM≥HM chain (AM×HM=GM² verified). Caught+fixed a truncated sentence (beat2) by re-reading, not just checking geometry. Math hand-verified. PASS, eye-checked.
+- **Sec 26** — GP core formula set (`formulas`): 2×2 grid (nth term, nth-from-end, sum r≠1, sum to infinity), never-skip-|r|<1 guardrail, no-zero-term / r<0-alternates closers. PASS.
+- **Sec 27** — geometric mean + AM-GM (`formulas`): b²=ac condition, r for n inserted GMs, product of GMs (capital Π glyph-audited MISSING from both fonts, written as explicit dot-multiplication — new finding, documented), boxed general AM-GM inequality, GM-sign guardrail, logs-turn-GP-into-AP closer. PASS.
+- **Sec 28** — symmetric selection for products, GP analogue of Sec13: number-line demo (a/r,a,ar with ×r arcs, r's cancel), 3/5-term odd cases, 4-term even case (ratio=r²), red-margin guardrail. Math hand-verified. PASS.
+- **Sec 29** — worked example: 3 GP numbers from product=216, pairwise-sum=156 → symmetric terms a/r,a,ar → a=6 → 3r²-10r+3=0 → r=3 or 1/3 (same set reversed) → 2,6,18. Math hand-verified. PASS.
+- **Sec 30** — worked example: 0.333...(recurring)=3/10+3/100+... GP, a=3/10,r=1/10, S_∞=1/3. Repeating-decimal overbar (combining mark) written as plain "recurring". PASS.
+- **Sec 31** — worked example: infinite GP sum=2, cubes sum=24 → 2r²+5r+2=0 → (2r+1)(r+2)=0 → |r|<1 rejects r=-2 → r=-1/2, a=3, checked 27/(9/8)=24. Math hand-verified. PASS.
+- **Sec 32 — SKIPPED, see BLOCKED section above** (source data + audio both state a wrong final answer; needs a content-team fix, not a scene-authoring workaround).
+- **Sec 33** — worked example: nested squares (join midpoints forever) — 4 nested squares/diamonds drawn live (each half the area of the one outside it), a=256,r=1/2, total=512. Math hand-verified (rotated-square-halves-area geometry). PASS, eye-checked.
+- **Sec 34** — worked example: AM-GM optimisation, multiply two inequalities — (a+b+c)≥3(abc)^(1/3) times its reciprocal form → (a+b+c)(1/a+1/b+1/c)≥9, equality iff a=b=c. Math hand-verified. PASS.
+- **Sec 35** — worked example: each term = sum of next two → r²+r-1=0 → r=(-1±√5)/2 → positive terms reject the negative root → r=(√5-1)/2 = 1/golden-ratio. Math hand-verified. PASS.
+- **Sec 36** — worked example: chessboard grains in closed form, a=1,r=2,n=64 → S_64=2⁶⁴-1≈1.8×10¹⁹ (closes the loop on Sec23's opener). Math hand-verified. PASS.
+- **Sec 37** — `tips` closer: red top/bottom banners (convergence check, recurring-decimals) bookending a 3-trap + 2-tip grid — applied Sec22's row-spacing fix from the start, no overlap this time. PASS, eye-checked. **Subtopic 3 (GP, secs 23-37 minus blocked 32) complete — chapter is now 36/85 authored (37/85 positions covered, 1 blocked).**
+- **Sec 38** — opens subtopic 4 (HP): two demos — HP-box --reciprocate--> AP-box flip diagram, and a round-trip home↔town speed example (40/60 km/h → HM=48, not AM=50). Math hand-verified. Reference exemplar for HP. PASS, eye-checked.
+- **Sec 39** [flagged] — HM formula + p-q reciprocal trick, two columns: LEFT a,H,b in HP → 1/H as AM → boxed H=2ab/(a+b); RIGHT reciprocal-AP setup → d=1/pq → a_n=pq/n, a_(p+q)=pq/(p+q), red-margin reciprocate-first closer. Math hand-verified. PASS, eye-checked. Also documented the verifier's `dur-1` "final frame" quirk (not a bug — check `b<N>.png` for the true last beat when the gap to audio-end is small).
+- **Sec 40** — HP formula set (`formulas`): 3×2 grid of 6 boxed formula cards (definition, nth term, HM two/n numbers, insert n HMs, mean chain), red-margin the-'2'-is-essential / no-sum-formula guardrail. PASS.
+- **Sec 41** — worked example: HM of 4,12 → H=6, A=8, G=4√3, AH=48=G² (identity confirmed exactly). Math hand-verified. PASS.
+- **Sec 42** — worked example: 10th HP term from a_3=1/7, a_7=1/15 → reciprocal AP d=2 → a'_1=3 → a'_10=21 → flip back → 1/21. Math hand-verified. PASS.
+- **Sec 43** — worked example: pth term=q, qth term=p (JEE staple) → A_0=d=1/pq → a_n=pq/n, a_(p+q)=pq/(p+q). Same result as Sec39's RIGHT column, worked standalone. Math hand-verified. PASS.
+- **Sec 44** — worked example: insert 4 HMs between 1 and 1/6 → reciprocal-AP chain 1,2,3,4,5,6 (interior highlighted, D=1) → HMs=1/2,1/3,1/4,1/5. Math hand-verified. PASS.
+- **Sec 45** — worked example: AM=9,HM=4 → AH=G²=36→G=6 → sum=18,product=36 → x²-18x+36=0 → x=9±3√5. Math hand-verified. PASS.
+- **Sec 46** — worked example (a genuine proof, not on the flagged list but hand-verified anyway): a,b,c in HP → 1/a,1/b,1/c in AP → scale by (a+b+c) → subtract 1 → (b+c)/a,(c+a)/b,(a+b)/c in AP → reciprocate → a/(b+c),b/(c+a),c/(a+b) in HP. QED. PASS.
+- **Sec 47** — `tips` closer: red top/bottom banners (signature trap, HM≤GM≤AM) bookending a 3-trap + 2-tip grid, correct spacing applied from the start. PASS. **Subtopic 4 (HP, secs 38-47) complete — chapter is now 46/85 authored (47/85 positions covered, 1 blocked).**
+- **Sec 48** — opens subtopic 5 (AM-GM-HM): color-coded AM/GM/HM definitions (add/multiply/rate), number-line demo a-H-G-A-b always in this order, boxed A≥G≥H, AH=G² GP-chain formula, G-is-GM-of-both-pairs closer. Reference exemplar. PASS, eye-checked.
+- **Sec 49** [flagged] — four short proofs: AH=ab=G² (means form a GP), (√a-√b)²≥0 proves A≥G, H=G²/A≤G proves G≥H, Vieta recovers a,b=A±√(A²-G²) with the discriminant condition literally being the mean inequality. All four hand-verified. PASS, eye-checked.
+- **Sec 50** — means/identity/recovery-quadratic recap (`formulas`): A/G/H definitions, AH=G²/GP identity, A≥G≥H, recovery quadratic+roots, reality-condition guardrail, n-number generalization closer. PASS.
+- **Sec 51** — worked example: AM=10,GM=8 → sum=20,product=64 → x²-20x+64=0 → (x-4)(x-16)=0 → 4,16 (checked via 10±6). Math hand-verified. PASS.
+- **Sec 52** — worked example: min of x+9/x via AM-GM — CartesianAxes+curveD graph of y=x+9/x dipping to its minimum at x=3, (x+9/x)/2≥√9=3 → x+9/x≥6, equality-is-minimiser guardrail. Math hand-verified against sampled curve points. Confirmed a `b6.png` screenshot gap was a seek-past-duration verifier artifact (reveals[6]+1 > actual audio duration), not a scene bug — see notation decisions. PASS, eye-checked.
+- **Sec 53** — worked example: distinct positives → strict A>G>H; AH=G² makes A,G,H a decreasing GP (ratio G/A=H/G<1), middle term = same G as the pair's GM. Math hand-verified. PASS.
+- **Sec 54** — worked example: a,b=A±√(A²-G²), ratio a/b depends only on A/G, reality condition A≥G, Advanced form A:G=(m+n):2√(mn). Math hand-verified. PASS.
+- **Sec 55** — `tips` closer: only 5 middle items (not the usual 4+2), so a simple stacked list (2 neutral + 3 pro-tip lines) bookended by red banners instead of forcing a grid. PASS, eye-checked. **Subtopic 5 (AM-GM-HM, secs 48-55) complete — chapter is now 54/85 authored (55/85 positions covered, 1 blocked).**
+- **Sec 56** — opens subtopic 6 (AGP): 3-row table demo (AP part × GP part = AGP, term by term), general term t_n=[a+(n-1)d]r^(n-1), finance connection, convergence guardrail, recognise-the-shape closer. Reference exemplar for AGP. PASS, eye-checked.
+- **Sec 57** [flagged] — the master AGP-sum derivation (densest single derivation in the chapter): S_n, rS_n shifted, subtract collapses interior terms to clean d·r^k, (1-r)S_n, full S_n form, S_∞ as n→∞. Every algebraic step hand-verified. PASS, eye-checked.
+- **Sec 58** — AGP formula set recap (`formulas`): general term, S_n, S_∞, and two relatives (Σn·r^n, Σn²·r^n), r=1 guardrail, differentiation-connection closer. PASS.
+- **Sec 59** — worked example: Σ(n+1)x^n-style sum 1+2x+3x²+... → multiply-by-x → S_n=(1-x^n)/(1-x)²-nx^n/(1-x). Math hand-verified. PASS.
+- **Sec 60** — worked example: S_∞ of 1+2/3+3/3²+... via the compact two-term formula → 3/2+3/4=9/4. Math hand-verified. PASS.
+- **Sec 61** — worked example: numerators (AP a=3,d=2) over denominators (GP r=1/2) → S_∞=6+4=10. Math hand-verified. PASS.
+- **Sec 62** — worked example: 1+3x+5x²+... (d=2 instead of d=1), same multiply-by-x method, last coefficient 2n-1. Math hand-verified. PASS.
+- **Sec 63** — worked example: Σn²/2^n via split n²=n(n-1)+n and two standard AGP relatives → 4+2=6. Title's superscript-n (2ⁿ) translated to plain caret. Math hand-verified. PASS.
+- **Sec 64** — `tips` closer: 5 middle items again, stacked list (3 neutral + 2 pro-tip) bookended by red banners. PASS. **Subtopic 6 (AGP, secs 56-64) complete — chapter is now 63/85 authored (64/85 positions covered, 1 blocked).**
+- **Sec 65** — opens subtopic 7 (Special Series): two demos — telescoping stack k³-(k-1)³=3k²-3k+1 (collapses to n³), and growing squares 1+8+27=36=6²=(1+2+3)² (verifies Σr³=(Σr)² for n=3). Aryabhata history note, boxed key identity. Reference exemplar. PASS, eye-checked.
+- **Sec 66** [flagged] — telescoping origin of Σk² (from k³ telescoping) and Σk³ (from k⁴ telescoping), two-column board, plus the method-of-differences insight with a worked check (3,7,13,21→t_n=n²+n+1). All hand-verified. PASS, eye-checked.
+- **Sec 67** — standard sums + master technique (`formulas`): Σr,Σ1,Σr²,Σr³,Σr⁴ (Σr⁴ sanity-checked at n=1,2), the linear-combination master method, expand-first guardrail, partial-range closer.
+- **Sec 68** — worked example: 2·4+4·6+6·8+... → t_r=4r²+4r → S_n=4n(n+1)(n+2)/3. Math verified.
+- **Sec 69** — worked example: method of differences on 3+7+13+21+31 → t_n=n²+n+1 → S_n=n(n²+3n+5)/3, verified S_3=23. Math verified.
+- **Sec 70** — worked example: nested triangular-number sum (JEE Main 2020) → (1/2)(Σk²+Σk) for k=1..20 → 1540. Math verified.
+- **Sec 71** — worked example: repunit series 5+55+555+... → t_r=5(10^r-1)/9 → S_n=(5/81)(10^(n+1)-9n-10). Math verified.
+- **Sec 72** — worked example: sum of squares of an AP's terms given S_n=cn² → a_n=c(2n-1) → Σa_n²=N(4N²-1)c²/3. Full expansion hand-verified.
+- **Sec 73** — worked example: cubes-over-odd-sums series → t_r=(r+1)²/4 → S_n=n(2n²+9n+13)/24. Full expansion hand-verified.
+- **Sec 74** — `tips` closer: 5 middle items, stacked list (3 neutral + 2 pro-tip) bookended by red banners. PASS, eye-checked. **Subtopic 7 (Special Series, secs 65-74) complete — chapter is now 73/85 authored (74/85 positions covered, 1 blocked).**
+- **Sec 75** — opens subtopic 8 (Telescoping): chain of 5 boxes V_1..V_(n+1) with interior terms crossed out via `crossD` (per task brief — base kit, no new primitive), survivors highlighted green/red. Formula, relay analogy, classic 1/(r(r+1)) example, V_n-method/surd pointers. Reference exemplar. Fixed subscript-letter violations (Vₙ→V_n) before verify. PASS, eye-checked.
+- **Sec 76** [flagged] — five telescopers built from scratch: basic + product-of-3 partial fractions, V_n method (V_r-V_(r-1)=3r(r+1)), factorial telescoper, surd telescoper. All five hand-verified. PASS, eye-checked.
+- **Sec 77** — telescoping toolkit recap (`formulas`): principle + 5 standard results, including a full derivation check of n(n+3)/[4(n+1)(n+2)]. Constant-multiplier guardrail.
+- **Sec 78** — worked example: basic telescoper 1/(r(r+1)) → S_n=n/(n+1) → limit 1, so 1/(1·2)+1/(2·3)+...=1 exactly. Math verified.
+- **Sec 79** — worked example: step-of-3 partial-fraction telescoper 1/((3r-2)(3r+1)) → S_n=n/(3n+1). Math verified.
+- **Sec 80** — worked example: V_n method on Σr(r+1)(r+2) → n(n+1)(n+2)(n+3)/4, verified n=1. Math verified.
+- **Sec 81** — worked example: factorial telescoper r/(r+1)! → S_n=1-1/(n+1)! → S_∞=1. Math verified.
+- **Sec 82** — worked example: surd telescoper, rationalise 1/(√r+√(r+1)) → S_n=√(n+1)-1 → S_99=9. Math verified.
+- **Sec 83** — `tips` closer: 5 middle items, stacked list (3 neutral + 2 pro-tip) bookended by red banners. PASS, eye-checked. **Subtopic 8 (Telescoping, secs 75-83) complete — chapter is now 82/85 authored (83/85 positions covered, 1 blocked). Only the Recap/Cheat Sheet (84-85) remains.**
+- **Sec 84** — `formula_recap`, "your complete toolkit": 2-row grid (AP/GP/HP/Means, then AGP/Sums/Telescope) covering all 7 formula-bearing subtopics, wide red closing banner. Fixed a two-line same-block overlap (needed ≥40px baseline gap). PASS, eye-checked.
+- **Sec 85** — `cheat_sheet`, **FINAL section of the chapter**: one line per subtopic (AP through Telescoping), closing on the golden habit (position → general term aₙ → then list or sum) that ran through every section. PASS, eye-checked. **Subtopic 9 (Recap/Cheat Sheet, secs 84-85) complete — CHAPTER COMPLETE, 84/85 authored, 85/85 positions covered (1 intentionally blocked: Sec 32).**
+
+## Chapter complete — final status
+All sections except Sec 32 (blocked, see above) are built, registered, type-checked (`npx tsc --noEmit` clean, no errors), verified via `verify-scene.mjs` (VERDICT PASS, both languages, every section), and eye-checked via FORCE_SHOTS screenshots for every reference exemplar (Secs 1, 5, 9, 10, 13, 22, 23, 25, 33, 37, 38, 39, 48, 49, 52, 55, 56, 57, 64, 65, 66, 74, 75, 76, 83, 84, 85) plus all 9 flagged derivation/proof sections. All worked-example math hand-verified against the actual arithmetic (not just transcribed) — every section's file header carries its own "Math check" comment showing the verification. Pushed to origin through Sec 85 — `git push origin premium-board-math8` is up to date with local history.
+
+**84 of 85 positions are authored and registered.** Position 32 is intentionally unregistered pending a content-team fix to the source Supabase row + narration audio (see the BLOCKED section at the top of this file) — this is a deliberate content-correctness decision, not an oversight.
+
+Recurring issues found and fixed along the way (see the notation/style decisions section above for the general rules extracted from each):
+- Subscript-letter glyph violations (aₙ, Vₙ, rⁿ) — missing from both board fonts (glyph-audited via fontTools, 8th audit for this chapter) — fixed via a chapter-wide regex sweep, safe to re-run: `grep -nP '[\x{207F}\x{2090}-\x{209C}\x{1D2C}-\x{1D6A}\x{2099}]' src/components/scenes/M11Ch08Sec*.tsx` (should return nothing outside comments).
+- Literal `✓` checkmark glyph slipping into inline text asides (7 occurrences) — same "missing from both fonts" issue as the subscript letters, caught in the final chapter-end sweep: `grep -n "✓" src/components/scenes/M11Ch08Sec*.tsx` (comments are fine; check any hit inside a `{"..."}` string).
+- Shape-vs-shape box overlaps the verifier doesn't gate on (Sec 22) — the verifier only checks text-vs-text overlap and safe-area overflow, not `roundRectD`-cell-vs-cell geometry; hand-check `cx ± w/2` math for any multi-cell grid.
+- Two-line same-color/same-block text stacks needing ≥40px baseline spacing, not ~20px (Sec 84) — a lesson carried over from math7 that still bit once here.
+- A genuine source-data arithmetic error (Sec 32) — handled by user decision to skip and flag rather than silently "fix" math that would then contradict the fixed narration audio.
+- The verifier's frame-sampling conventions (`dur-1` for "final", `reveals[k]+1` for each beat) can occasionally land just before or just after a beat's true active window when that beat sits very close to the audio's natural end (Secs 39, 52) — not scene bugs; confirmed by manually seeking to an in-window timestamp when in doubt.
+
+Nothing outstanding except Sec 32. No further action needed on Secs 1-31, 33-85 unless new content is added to this chapter.
+
+## Workflow notes
+- Dev server: `nohup npm run dev -- -p 3037 > /tmp/dev-math8.log 2>&1 &`, confirmed READY.
+- Data pull: `node scratch/dump-math8.mjs <positions...>` (no args = list all titles/count; with positions = full JSON rows).
+- Plan viewer: `python3 scratch/show.py <positions...>` — concise board_content + reveals dump for planning without re-fetching.
+- Verify: `PORT=3037 CHAPTER_ID=7936f031-5b80-5350-ad08-bc78bef84e12 node verify-scene.mjs <sec> '<rev_en>' '<rev_hi>' ./shots/sec<N>`.
+- Registration: single `M11CH08` block appended at END of `src/components/scenes/index.ts` (import + REGISTRY lines).
