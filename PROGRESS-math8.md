@@ -94,6 +94,15 @@ Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25,
 - **Sec 53** — worked example: distinct positives → strict A>G>H; AH=G² makes A,G,H a decreasing GP (ratio G/A=H/G<1), middle term = same G as the pair's GM. Math hand-verified. PASS.
 - **Sec 54** — worked example: a,b=A±√(A²-G²), ratio a/b depends only on A/G, reality condition A≥G, Advanced form A:G=(m+n):2√(mn). Math hand-verified. PASS.
 - **Sec 55** — `tips` closer: only 5 middle items (not the usual 4+2), so a simple stacked list (2 neutral + 3 pro-tip lines) bookended by red banners instead of forcing a grid. PASS, eye-checked. **Subtopic 5 (AM-GM-HM, secs 48-55) complete — chapter is now 54/85 authored (55/85 positions covered, 1 blocked).**
+- **Sec 56** — opens subtopic 6 (AGP): 3-row table demo (AP part × GP part = AGP, term by term), general term t_n=[a+(n-1)d]r^(n-1), finance connection, convergence guardrail, recognise-the-shape closer. Reference exemplar for AGP. PASS, eye-checked.
+- **Sec 57** [flagged] — the master AGP-sum derivation (densest single derivation in the chapter): S_n, rS_n shifted, subtract collapses interior terms to clean d·r^k, (1-r)S_n, full S_n form, S_∞ as n→∞. Every algebraic step hand-verified. PASS, eye-checked.
+- **Sec 58** — AGP formula set recap (`formulas`): general term, S_n, S_∞, and two relatives (Σn·r^n, Σn²·r^n), r=1 guardrail, differentiation-connection closer. PASS.
+- **Sec 59** — worked example: Σ(n+1)x^n-style sum 1+2x+3x²+... → multiply-by-x → S_n=(1-x^n)/(1-x)²-nx^n/(1-x). Math hand-verified. PASS.
+- **Sec 60** — worked example: S_∞ of 1+2/3+3/3²+... via the compact two-term formula → 3/2+3/4=9/4. Math hand-verified. PASS.
+- **Sec 61** — worked example: numerators (AP a=3,d=2) over denominators (GP r=1/2) → S_∞=6+4=10. Math hand-verified. PASS.
+- **Sec 62** — worked example: 1+3x+5x²+... (d=2 instead of d=1), same multiply-by-x method, last coefficient 2n-1. Math hand-verified. PASS.
+- **Sec 63** — worked example: Σn²/2^n via split n²=n(n-1)+n and two standard AGP relatives → 4+2=6. Title's superscript-n (2ⁿ) translated to plain caret. Math hand-verified. PASS.
+- **Sec 64** — `tips` closer: 5 middle items again, stacked list (3 neutral + 2 pro-tip) bookended by red banners. PASS. **Subtopic 6 (AGP, secs 56-64) complete — chapter is now 63/85 authored (64/85 positions covered, 1 blocked).**
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3037 > /tmp/dev-math8.log 2>&1 &`, confirmed READY.
