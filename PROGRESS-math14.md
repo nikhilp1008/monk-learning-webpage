@@ -299,3 +299,9 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   convention, green rings mark the selected 1 man + 2 women exactly when
   n(E) is computed, guardrail on combination-consistency. Clean PASS both
   languages, eye-checked.
+- **Sec 36** — worked_examples: 12-bulb grid (2 rows × 6, 9 good green
+  outlines + 3 defective red-filled), the 3 defective bulbs crossed out
+  exactly at the "compute none defective" guardrail beat, numeric nCr
+  (⁹C₄/¹²C₄) per convention, HIGH landing P(at least one)=41/55, closes
+  contrasting the 3-term direct route against the 1-line complement
+  trick. Clean PASS both languages.
