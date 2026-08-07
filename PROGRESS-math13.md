@@ -421,3 +421,15 @@ misrecorded observation).
   {2,4,9,7,8}: sum=30 (mean=6 ✓) and Σ(x_i-6)²=16+4+9+1+4=34 (34/5=6.8 ✓) —
   both match the given statistics exactly, confirming the answer. PASS both
   languages, eye-checked.
+- **Sec 40** — worked_examples: the Sec36 procedure applied to real numbers
+  — 20 obs, wrong mean=30, wrong SD=5, one value recorded as 50 should be
+  30. Full correction chain hand-verified end to end: Σx_wrong=20×30=600,
+  Σx²_wrong=20(25+900)=18500; repairing the sum gives Σx_corr=600-50+30=
+  580 ⇒ x̄_corr=580/20=29 (real `XBar` used here — single occurrence, split
+  the line into three fixed-x pieces around it rather than chaining, per
+  the Sec23 lesson); repairing the sum of squares gives Σx²_corr=18500-
+  2500+900=16900; boxed landing formula σ²=16900/20-29²=845-841=4 ⇒ σ=2.
+  Closing red-margin note ties it back to the earlier C.V./outlier
+  discussion: the misrecorded 50 was 4 standard deviations out, so
+  correcting it alone collapsed the SD from 5 to 2. PASS both languages,
+  eye-checked.
