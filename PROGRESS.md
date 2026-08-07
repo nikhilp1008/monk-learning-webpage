@@ -179,3 +179,19 @@ Both flagged derivations in Subtopic 4 complete. Pushed through Sec31 (2026-08-0
 Sec31 justify 2ⁿ + grouping rule) handled with full rigor. Pushed through Sec34 (2026-08-07).
 34/45 sections done — Subtopics 1-4 all complete, only Subtopic 5 (Counting Applications &
 Advanced Tools, secs 35-43) and the closing Formula Recap/Cheat Sheet (44-45) remain.
+
+- Sec 35 — Geometry as selection, starts Subtopic 5 (lines=nC2, triangles=nC3; concrete collinear
+  diagram verifies 4 collinear points; asymmetric correction badges: lines get a real +1, triangles
+  get a crossed-out +1). PASS both langs.
+- Sec 36 — Divisors as selection + place-value preview (N=360=2³·3²·5¹ built concretely with
+  exponent tiles, 4×3×2=24, general (a₁+1)(a₂+1)⋯ formula; previews sum-of-numbers/rank-of-word
+  and the each-digit-equally-often symmetry). PASS both langs. Found+documented a real SVG
+  whitespace-collapse bug (leading/trailing text-segment spaces vanish — use gapBefore offsets).
+- Sec 37 — Derangements (letters/envelopes, inclusion-exclusion named not taught, Dₙ formula,
+  memorize-table D₁..D₅=0,1,2,9,44) + Legendre's formula (1-10 sieve with concentric rings,
+  verified 10! example = 5+2+1=8). Both proofs deferred to flagged Sec40. PASS both langs.
+- Sec 38 — The applications formula board (9 formulas, 3 groups: geometry — diagonals n(n-3)/2,
+  rectangles aC2·bC2; number theory — divisor sum, sum of numbers formed; advanced — derangement
+  recursion verified against D₃-D₅, trailing zeros=E₅(n!), rank of a word). PASS both langs.
+
+Pushed through Sec38 (2026-08-07). 38/45 sections done.
