@@ -234,3 +234,12 @@ misrecorded observation).
   just "final", which for English lands ~0.4s before beat 6 fires — an
   audio-duration artifact, not a scene defect, confirmed by the b6 frame
   itself rendering the closing note correctly).
+- **Sec 21** — concept, a calculus proof built live: g(a)=(1/n)Σ(x_i-a)² →
+  g'(a)=(1/n)Σ·2(x_i-a)(-1)=-(2/n)Σ(x_i-a) (chain rule) → set to zero →
+  boxed green Σx_i=na ⇒ a=x̄. Independently re-derived and confirmed correct
+  before trusting the render (Σ(x_i-a)=0 ⇒ Σx_i-na=0 ⇒ a=x̄). Closes with a
+  two-chip "median → minimises Σ|x_i-a|" vs "mean → minimises Σ(x_i-a)²"
+  parallel, connected by a plain "vs" — the same visual grammar as Sec19's
+  anchor-comparison chips, reused for a genuinely different point (this
+  time both are valid, just for different loss functions, not one right one
+  wrong). PASS both languages, eye-checked via the dedicated b6 frame.
