@@ -249,3 +249,12 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   1−P(none). Same motif as Sec14. Clean PASS both languages. **Subtopic
   2 (Probability of Events and the Axiomatic Approach, secs 15-28)
   complete.**
+
+### Subtopic 3 begins — Computing Probabilities: Combinatorial Methods, Multi-Event Addition and Odds (secs 29-39)
+- **Sec 29** — concept, opens Subtopic 3: symbolic nPr/nCr (variables,
+  not literal numbers) written as plain text per Ch6-7 convention — no
+  attempt at superscript letter positioning. Two mirrored boxed columns
+  (order matters → nPr=n!/(n−r)!, order doesn't matter →
+  nCr=n!/(r!(n−r)!)), two guardrail chips (always ask "does order
+  matter?" first; count n(E) and n(S) the same way). Clean PASS both
+  languages.
