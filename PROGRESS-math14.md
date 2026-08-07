@@ -231,3 +231,14 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   Fixed a same-color-on-same-background contrast issue (region labels
   were AMBER_DARK on an AMBER_DARK-tinted union) by switching to INK.
   Clean PASS both languages, eye-checked.
+
+### Subtopic 2's worked examples (Sec24-27) complete — last flagged section done
+- **Sec 27** — worked_examples, FLAGGED, the capstone the whole subtopic
+  built toward: loaded die P(k)=k/21 (verified Σk=21 for k=1..6), ringed
+  HIGH formula, guardrail that n(A)/n(S) is wrong here, P(prime)=10/21,
+  addition-rule P(E∪G)=17/21 cross-checked by direct sand summation —
+  all erased for the closing payoff: a real bar chart, 6 bars with
+  height genuinely proportional to k (20px/unit, not just illustrative),
+  each labeled k/21. Verified every fraction by hand before trusting it.
+  Clean PASS both languages, eye-checked very carefully as the last
+  flagged section. **All FLAG sections (13, 21, 22, 23, 27) done.**
