@@ -96,3 +96,13 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   the relationship-testing checklist (mutually exclusive / exhaustive,
   each with a drawn checkmark) and a final guardrail chip that partition
   needs both tests together. Clean PASS both languages, eye-checked.
+
+### Subtopic 2 begins — worked examples (secs 10-13)
+- **Sec 10** — worked_examples, opens the worked-example run: NEW visual —
+  a real 8-sector spinner (circleD + 8 pointOnCircle spokes + numbers 1-8
+  placed clockwise from top, reusing Ch6's circular-permutation angle
+  pattern). A={3,6} marked amber, B={6,7,8} green, sector 6 gets both
+  (amber disc + green ring) — no pie-slice fill needed, just colored
+  discs behind each number. Boxed A∩B={6}≠∅, guardrail "NOT mutually
+  exclusive". Clean PASS both languages, eye-checked — spinner numbering
+  and both A/B markings confirmed correct.
