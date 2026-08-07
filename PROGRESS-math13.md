@@ -243,3 +243,13 @@ misrecorded observation).
   anchor-comparison chips, reused for a genuinely different point (this
   time both are valid, just for different loss functions, not one right one
   wrong). PASS both languages, eye-checked via the dedicated b6 frame.
+- **Sec 22** — concept: two `<Frac>` moments — the coding step d_i=(x_i-A)/h
+  (compound numerator, textbook Frac case) and the boxed step-deviation
+  formula σ²=h²[Σf_id_i²/N - (Σf_id_i/N)²], two side-by-side fractions
+  inside brackets with the second one squared (the ² glyph is inherently a
+  raised Unicode character, so it reads correctly as an exponent even
+  placed as plain trailing text after the Frac, no manual y-offset needed).
+  Red-margin note gives the h²-not-h guardrail real weight since the JSON
+  flags it high-emphasis and the narration calls it "a classic error."
+  PASS both languages, eye-checked (fraction layout and bracket/exponent
+  placement both confirmed correct).
