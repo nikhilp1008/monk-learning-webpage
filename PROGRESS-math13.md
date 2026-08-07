@@ -319,3 +319,14 @@ misrecorded observation).
   green between slip 3 and slip 4 since it's the direct fix for slip 3.
   Closing red note: the two instant checks plus the C.V. reminder. PASS
   both languages, eye-checked.
+
+## Subtopic 3 (Analysis of Frequency Distributions & Advanced Problems, secs 30-42)
+- **Sec 30** — concept, opens Subtopic 3: two proportionally-scaled bars
+  (mean=40 vs mean=200, genuinely 5× longer matching 200/40=5) each with a
+  fixed-size error-bar indicator for the SAME σ=5 — replicates the source
+  SVG's own approach exactly (bar length scaled to the mean, error-bar
+  width kept a constant visual size rather than true-to-scale, since a
+  truly-proportional σ=5 marker would be too small to read at either
+  scale) — red "big relative wobble" caption on the short bar, green
+  "small relative wobble" on the long one. Boxed C.V.=(σ/x̄)×100. PASS both
+  languages, eye-checked.
