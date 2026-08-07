@@ -123,3 +123,12 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   r+c≥9 for C, 0-indexed) before trusting it. No erasing needed — algebra
   and grid coexist as the final notes photo. Clean PASS both languages,
   eye-checked, diagonal/corner placement confirmed correct.
+- **Sec 13** — worked_examples, FLAGGED (JEE Advanced abstract counting,
+  hardest derivation in the subtopic): parts (a)/(b) recap 2ⁿ events /
+  2ⁿ−n−1 compound (callback to Sec5), erased for part (c)'s full-canvas
+  derivation — a 3-bin sorting visual (1 outcome → only-A/only-B/neither,
+  ×n → 3ⁿ) then a staggered single-beat derivation: 3ⁿ−2ⁿ(A=∅)−2ⁿ(B=∅)+1
+  (both ∅) = 3ⁿ−2·2ⁿ+1 ordered, ÷2 unordered, boxed HIGH final
+  (3ⁿ−2ⁿ⁺¹+1)/2, sanity-checked n=2→1. Verified the algebra by hand
+  before trusting it (inclusion-exclusion on A=∅/B=∅, matches narration).
+  Clean PASS both languages, eye-checked carefully given the flag.
