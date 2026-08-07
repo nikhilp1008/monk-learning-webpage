@@ -266,3 +266,39 @@ not optional even when VERDICT is PASS.
   lines mnemonic — deliberately NOT a padded 2x2 red grid, since the JSON only tags one
   beat as an actual trap. PASS both languages, eye-checked. **Subtopic 6 (secs 44-51)
   complete — chapter is 51/62 (82%) done.**
+- **Sec 52** — opens Subtopic 7 (final content subtopic): torch/wall diagram with a real
+  computed foot Q (vector projection of P onto the mirror line, via a footOnLine helper
+  generalizing Sec45's footOnRay) and reflection P'=2Q-P, verified numerically so "Q is
+  the midpoint of P and P'" holds by construction, not assertion. PASS both languages,
+  eye-checked.
+- **Sec 53** [PROOF] — foot of the perpendicular: diagram uses a genuine computed line
+  (x+4y-1400=0, screen-pixel space) with t and Q derived by the real formula, verified
+  Q lands exactly on the line and PQ is perpendicular by dot product; single-column
+  symbolic derivation lands on the boxed compact foot formula. PASS both languages,
+  eye-checked with extra scrutiny.
+- **Sec 54** [PROOF] — image of a point, reflecting a line: continues Sec53 symbolically
+  (P'=2Q-P → P'=P+2t(a,b) → boxed coordinate formula, denominator stays raw a²+b², no
+  root), pivots via a divider to the reflect-a-line procedure and the m∩ℓ intersection
+  shortcut. PASS both languages, eye-checked with extra scrutiny.
+- **Sec 55** — foot/image/reflection formula toolkit (9 beats), single-column precedent
+  from Sec5/13/22/30/39/47; foot and image formulas paired as matched Chips, the three
+  mirror-shortcut formulas (y=x, x-axis, y-axis) grouped with tighter rhythm, closing
+  no-square-root guardrail. PASS both languages, eye-checked.
+- **Sec 56** — worked: Example 1 foot of perpendicular from P(2,3) to x+y-1=0 → Q(0,1),
+  plotted with a genuinely perpendicular PQ segment (dot-product verified); Example 2
+  swap trick for y=x, (4,-1)→(-1,4). PASS both languages, eye-checked.
+- **Sec 57** — worked: image of P(1,1) in 3x-4y+5=0 → P'(1/25,57/25), both sides'
+  distances independently confirmed equal at 0.8 (sign flip +4/-4 confirms opposite
+  sides); diagram draws the full P-M-P' perpendicular chord in two matching green
+  halves. PASS both languages, eye-checked.
+- **Sec 58** — Advanced worked: reflected ray. Optics-to-coordinates: incidence point
+  I(6,11/2), reflect A(-5,0) in the mirror to A'(-59/25,-88/25), reflected ray
+  41x-38y-37=0 confirmed through both points exactly and on screen via an affine-
+  collinearity argument. PASS both languages, eye-checked.
+- **Sec 59** — tips, closes Subtopic 7: 2x2 red-trap grid (4 genuinely-named traps in
+  the narration, unlike Sec51's lighter layout) + green pro-tip card with a drawn
+  mirror/line/image mnemonic, closing into the "Subtopic 7 — complete" chip. Documents
+  a genuine data-timing anomaly in the English reveal array (non-monotonic, exceeds
+  clip duration) as an upstream quirk — verified clean via Hinglish and a forced-time
+  manual seek. PASS (with documented quirk), eye-checked. **Subtopic 7 (secs 52-59)
+  complete — chapter is 59/62 (95%) done.**
