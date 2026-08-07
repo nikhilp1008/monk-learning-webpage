@@ -207,3 +207,18 @@ Pushed through Sec38 (2026-08-07). 38/45 sections done.
 
 Both flagged proof sections in Subtopic 5 complete. Pushed through Sec40 (2026-08-07).
 40/45 sections done.
+
+- Sec 41 — Worked examples: divisors of 360 (compact recap, =24) + collinear-triangle trap (10
+  points, 6 scattered + 4 real collinear, ringed 3-point subset shows "0 area", 10C3-4C3=120-4=116).
+  PASS both langs.
+- Sec 42 — Worked examples: sum of all 4-digit numbers from {2,3,4,5} (reuses Sec39's Th/H/T/U
+  proof diagram, 14×6=84, 84×1111=93,324) + D₅ via two independent routes (closed form 120×11/30
+  and Sec38's recursion 4(9+2)) both converging on 44. PASS both langs.
+- Sec 43 — Pitfalls & pro-tips, closes Subtopic 5 (collinear corrections ignored, incomplete
+  prime factorisation, n! vs (n-1)! for sums, derangement-as-one-subtraction, Legendre stopping
+  early, "name the selection" pro-tip). PASS both langs.
+
+**SUBTOPIC 5 COMPLETE (secs 35-43).** Both flagged proofs (Sec39 collinear/divisors/sum-of-numbers,
+Sec40 rank/derangements/Legendre) handled with full rigor, including brute-force cross-checks.
+Pushed through Sec43 (2026-08-07). 43/45 sections done — only the closing Formula Recap (44) and
+Cheat Sheet (45) remain.
