@@ -184,3 +184,11 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   Sec3 on row1's 3-clause line — fixed by splitting into 3 separately
   positioned T elements (anchor start/middle/end) instead of relying on
   multi-space gaps. Clean PASS both languages after fix, eye-checked.
+- **Sec 21** — formulas, FLAGGED (axiom derivation): three real proofs
+  (R1 P(∅)=0, R2 the complement law, R3 the [0,1] bounds), each built as
+  a vertically-stacked equality chain (line1 → line2 → boxed/ringed
+  conclusion) rather than pasted whole — reuses the safe stacked-chain
+  pattern from Sec13 instead of risky same-line term x-positioning.
+  Verified the algebra by hand (R1 cancels P(S), R2 chains Axiom 3 into
+  Axiom 2, R3 chains R2 through Axiom 1) before trusting it — matches
+  narration exactly. Clean PASS both languages, eye-checked carefully.
