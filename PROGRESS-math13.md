@@ -149,3 +149,12 @@ misrecorded observation).
   is an interval, not a point, so "how many a" is infinitely many. PASS both
   languages on first render, eye-checked (arc nesting and interval placement
   both confirmed correct, no crossing/overlap).
+- **Sec 13** — worked_examples: daily-wages continuous distribution, same
+  4-column worked-table pattern as Sec10 (x_i, f_i, f_i·x_i, f_i|x_i-x̄|),
+  reused verbatim with new data — mid-points 150,250,350,450,550, f=6,10,14,
+  8,2 (N=40), Σf_ix_i=13000→x̄=325, Σf_i|x_i-x̄|=3600→M.D.=90. All five
+  f_i|x_i-x̄| terms hand-verified (1050,750,350,1000,450). Lighter-touch
+  divisor note this time (plain red-margin line, no wrong/right chip pair)
+  since the JSON doesn't flag this one as a speed trap the way Sec10 was —
+  saves the dramatic staging for where the source actually calls for it.
+  PASS both languages on first render, eye-checked.
