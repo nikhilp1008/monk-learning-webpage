@@ -242,3 +242,10 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   each labeled k/21. Verified every fraction by hand before trusting it.
   Clean PASS both languages, eye-checked very carefully as the last
   flagged section. **All FLAG sections (13, 21, 22, 23, 27) done.**
+- **Sec 28** — tips, closes Subtopic 2: numbered-badge pitfall ladder
+  (1-4: n(A)/n(S) on unfair experiments, forgetting the overlap subtract,
+  ME≠independent with both formulas contrasted, [0,1] range as a free
+  check), amber HIGH pro-tip card previewing Sec30: P(at least one) =
+  1−P(none). Same motif as Sec14. Clean PASS both languages. **Subtopic
+  2 (Probability of Events and the Axiomatic Approach, secs 15-28)
+  complete.**
