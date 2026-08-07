@@ -344,7 +344,7 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
       return (
         <WriteIn animate={animate} seconds={wipeSeconds(event.text, 0.045, 0.9, 2.6)}>
           <h3
-            className={`font-script text-red-note mt-5 mb-2 leading-snug -rotate-[0.35deg] origin-left ${
+            className={`font-script text-red-note mt-4 mb-2 leading-snug text-left ${
               isHigh ? "text-2xl md:text-[1.72rem]" : "text-xl md:text-2xl"
             }`}
           >
@@ -357,7 +357,7 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
       return (
         <WriteIn animate={animate} seconds={wipeSeconds(event.text, 0.028, 0.8, 2.8)}>
           <p
-            className={`leading-relaxed my-2 ${
+            className={`leading-relaxed my-1.5 text-left ${
               isHigh
                 ? "text-base md:text-lg font-semibold text-ink"
                 : "text-[0.95rem] md:text-base text-ink-light"
@@ -369,33 +369,17 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
       );
 
     case "formula":
+      const formulaLatex = event.latex || event.text || "";
       return (
         <WriteIn animate={animate} seconds={1.6} chalkBottom="0.9em">
           <div
-            className={`my-3.5 py-3 px-5 bg-cream/40 rounded-xl border border-orange/25 w-fit max-w-full mx-auto overflow-x-auto ${
-              isHigh ? "text-xl md:text-2xl" : "text-lg md:text-xl"
+            className={`my-2 py-1 px-0 w-full text-left text-ink leading-relaxed overflow-x-auto ${
+              isHigh ? "text-xl md:text-2xl font-bold" : "text-lg md:text-xl font-semibold"
             }`}
           >
-            {event.latex ? (
-              <KaTeXRenderer latex={event.latex} displayMode={true} />
+            {formulaLatex ? (
+              <KaTeXRenderer latex={formulaLatex} displayMode={false} />
             ) : null}
-            {/* hand-drawn amber underline */}
-            <svg
-              viewBox="0 0 220 8"
-              preserveAspectRatio="none"
-              className="block w-full h-[7px] mt-1.5"
-              aria-hidden
-            >
-              <path
-                d="M3 5.5 C 40 2.5, 90 6.5, 130 4 S 200 3, 217 5"
-                fill="none"
-                stroke="#EEA31F"
-                strokeWidth="2.4"
-                strokeLinecap="round"
-                className={animate ? "pb-underline" : undefined}
-                pathLength={100}
-              />
-            </svg>
           </div>
         </WriteIn>
       );
