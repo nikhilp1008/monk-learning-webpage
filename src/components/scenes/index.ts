@@ -4245,3 +4245,5 @@ import M11Ch08Sec1 from "./M11Ch08Sec1";
 
 const M11CH08 = "7936f031-5b80-5350-ad08-bc78bef84e12";
 REGISTRY[`${M11CH08}:1`] = M11Ch08Sec1;
+import M11Ch08Sec2 from "./M11Ch08Sec2";
+REGISTRY[`${M11CH08}:2`] = M11Ch08Sec2;

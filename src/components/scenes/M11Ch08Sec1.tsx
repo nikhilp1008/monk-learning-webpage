@@ -8,7 +8,7 @@
  * Beats (en [0, 11.52, 22.36, 32.26, 41.73, 66.56, 80.3, 98.73]):
  *  0 title (always-on) — "A sequence: an ordered list with a rule"
  *  1 order matters: 4 numbered position slots holding a₁..a₄
- *  2 the machine diagram: input n → rule aₙ → output a₁,a₂,a₃,…
+ *  2 the machine diagram: input n → rule a_n → output a₁,a₂,a₃,…
  *  3 highlighted restatement: term = function of position
  *  4 explicit rule example: a_n = 2n-1 ⇒ 1,3,5,7,...
  *  5 recursive rule example: a_1=a_2=1, a_n=a_(n-1)+a_(n-2) (Fibonacci)
@@ -106,7 +106,7 @@ export default function M11Ch08Sec1({ currentTime, reveals, language }: ScenePro
 
       <Draw on={beat >= 2} delay={dl(2, 1.3)} d={roundRectD(445, 240, 150, 64)} stroke={AMBER_DARK} sw={2} dur={0.6} />
       <Fade on={beat >= 2} delay={dl(2, 1.6)}>
-        <T x={520} y={278} size={16} fill={AMBER_DARK} anchor="middle" script>{t("rule aₙ", "rule aₙ")}</T>
+        <T x={520} y={278} size={16} fill={AMBER_DARK} anchor="middle" script>{t("rule a_n", "rule a_n")}</T>
       </Fade>
 
       <Draw on={beat >= 2} delay={dl(2, 2.0)} d={arrowD(595, 272, 680, 272)} stroke={MUTED} sw={2} dur={0.5} />
@@ -119,14 +119,14 @@ export default function M11Ch08Sec1({ currentTime, reveals, language }: ScenePro
 
       <Fade on={beat >= 2} delay={dl(2, 3.2)}>
         <T x={470} y={330} size={15} fill={INK_LIGHT} anchor="middle" script>
-          {t("position n goes in, term aₙ comes out", "position n andar jaata hai, term aₙ bahar aata hai")}
+          {t("position n goes in, term a_n comes out", "position n andar jaata hai, term a_n bahar aata hai")}
         </T>
       </Fade>
 
       {/* beat 3 — highlighted restatement */}
       <Fade on={beat >= 3} delay={dl(3, 0.2)}>
         <Chip x={290} y={355} w={500} h={44} fill={CREAM} stroke={AMBER_DARK} textFill={INK} size={17}>
-          {t("term as a function of position: input n, output aₙ", "term = position ka function: input n, output aₙ")}
+          {t("term as a function of position: input n, output a_n", "term = position ka function: input n, output a_n")}
         </Chip>
       </Fade>
 
@@ -170,7 +170,7 @@ export default function M11Ch08Sec1({ currentTime, reveals, language }: ScenePro
       {/* beat 7 — finite vs infinite closer */}
       <Fade on={beat >= 7} delay={dl(7, 0.2)}>
         <T x={640} y={520} size={15} fill={INK} anchor="start" script>
-          {t("finite: a₁, a₂, ..., aₙ  |  (stops)", "finite: a₁, a₂, ..., aₙ  |  (ruk jaata hai)")}
+          {t("finite: a_1, a_2, ..., a_n  |  (stops)", "finite: a_1, a_2, ..., a_n  |  (ruk jaata hai)")}
         </T>
         <T x={640} y={548} size={15} fill={INK} anchor="start" script>
           {t("infinite: a₁, a₂, a₃, ...  →  (runs on)", "infinite: a₁, a₂, a₃, ...  →  (chalta rehta hai)")}
