@@ -284,3 +284,10 @@ misrecorded observation).
   naive mistake the narration calls out, shown numerically rather than only
   described, same pattern as Sec10's divisor trap. PASS both languages,
   eye-checked.
+- **Sec 26** — worked_examples: same 4-column table pattern as Sec10/13
+  (x_i, f_i, f_i·x_i, f_i·x_i²) applied to a frequency distribution whose
+  mean comes out non-whole (x̄=232/20=11.6 — exactly when the shortcut
+  formula earns its keep, per the narration). Σf_ix_i²=32+320+1152+768+800
+  =3072 expanded and hand-verified. Boxed σ²=3072/20-(11.6)²=153.6-134.56=
+  19.04 (11.6²=134.56 confirmed by hand) and σ=√19.04≈4.36. PASS both
+  languages, eye-checked.
