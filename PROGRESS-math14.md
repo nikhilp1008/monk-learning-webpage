@@ -168,3 +168,11 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   not an axiom), then a compact counterexample continuing Sec17's loaded-
   die thread — "naive: P(face)=1/6" crossed red vs "actual: sum the sand
   → 1/4" green — closing guardrail chip. Clean PASS both languages.
+- **Sec 19** — formulas, the chapter's foundational reference card: one
+  boxed card (drawn once) with the three Kolmogorov axioms building
+  inside it line by line (non-negativity, normalization, additivity),
+  then the sample-point companion formulas below (P(ωᵢ)≥0, ΣP(ωᵢ)=1,
+  ringed P(E)=ΣP(ωᵢ)), closing guardrail on the [0,1] "unit check". Σ
+  with domain condition flattened as a trailing parenthetical per
+  notation rules (no stacked-sigma primitive exists). Clean PASS both
+  languages, eye-checked given this section anchors everything after it.
