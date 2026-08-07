@@ -169,3 +169,16 @@ misrecorded observation).
   the mean x̄, so this section's formulas skip the drawn-overline machinery
   every worked example so far has needed. All five f_i|x_i-25| terms and
   the interpolation hand-verified. PASS both languages, eye-checked.
+- **Sec 15** — tips, closes Subtopic 1: four boxed pitfall cards in a 2×2
+  grid (card 1 red-bordered/red-text for the highest-severity slip —
+  dropping the modulus — cards 2-4 amber for the normal-emphasis ones:
+  wrong divisor, mean-vs-median for "least M.D.", shift-doesn't-change-
+  spread), boxed green transformation rule, closing red sanity check with a
+  `checkD` stamp. Caught a real box-overflow via eye-check the automated
+  verifier couldn't see: card 2's third line baseline (163) sat past its
+  own box's bottom edge (160) — the overlap/overflow gate only checks the
+  canvas safe-area and text-vs-text collisions, not a text run spilling out
+  of its own decorative rounded-rect, so this class of defect is eye-check-
+  only. Fixed by merging to two lines and shrinking the aside to size 12.
+  PASS both languages after the fix, re-eye-checked (all four boxes now
+  clear their borders with margin).
