@@ -86,6 +86,14 @@ Flagged derivation sections per task brief (extra eye-scrutiny): 10, 13, 24, 25,
 - **Sec 45** — worked example: AM=9,HM=4 → AH=G²=36→G=6 → sum=18,product=36 → x²-18x+36=0 → x=9±3√5. Math hand-verified. PASS.
 - **Sec 46** — worked example (a genuine proof, not on the flagged list but hand-verified anyway): a,b,c in HP → 1/a,1/b,1/c in AP → scale by (a+b+c) → subtract 1 → (b+c)/a,(c+a)/b,(a+b)/c in AP → reciprocate → a/(b+c),b/(c+a),c/(a+b) in HP. QED. PASS.
 - **Sec 47** — `tips` closer: red top/bottom banners (signature trap, HM≤GM≤AM) bookending a 3-trap + 2-tip grid, correct spacing applied from the start. PASS. **Subtopic 4 (HP, secs 38-47) complete — chapter is now 46/85 authored (47/85 positions covered, 1 blocked).**
+- **Sec 48** — opens subtopic 5 (AM-GM-HM): color-coded AM/GM/HM definitions (add/multiply/rate), number-line demo a-H-G-A-b always in this order, boxed A≥G≥H, AH=G² GP-chain formula, G-is-GM-of-both-pairs closer. Reference exemplar. PASS, eye-checked.
+- **Sec 49** [flagged] — four short proofs: AH=ab=G² (means form a GP), (√a-√b)²≥0 proves A≥G, H=G²/A≤G proves G≥H, Vieta recovers a,b=A±√(A²-G²) with the discriminant condition literally being the mean inequality. All four hand-verified. PASS, eye-checked.
+- **Sec 50** — means/identity/recovery-quadratic recap (`formulas`): A/G/H definitions, AH=G²/GP identity, A≥G≥H, recovery quadratic+roots, reality-condition guardrail, n-number generalization closer. PASS.
+- **Sec 51** — worked example: AM=10,GM=8 → sum=20,product=64 → x²-20x+64=0 → (x-4)(x-16)=0 → 4,16 (checked via 10±6). Math hand-verified. PASS.
+- **Sec 52** — worked example: min of x+9/x via AM-GM — CartesianAxes+curveD graph of y=x+9/x dipping to its minimum at x=3, (x+9/x)/2≥√9=3 → x+9/x≥6, equality-is-minimiser guardrail. Math hand-verified against sampled curve points. Confirmed a `b6.png` screenshot gap was a seek-past-duration verifier artifact (reveals[6]+1 > actual audio duration), not a scene bug — see notation decisions. PASS, eye-checked.
+- **Sec 53** — worked example: distinct positives → strict A>G>H; AH=G² makes A,G,H a decreasing GP (ratio G/A=H/G<1), middle term = same G as the pair's GM. Math hand-verified. PASS.
+- **Sec 54** — worked example: a,b=A±√(A²-G²), ratio a/b depends only on A/G, reality condition A≥G, Advanced form A:G=(m+n):2√(mn). Math hand-verified. PASS.
+- **Sec 55** — `tips` closer: only 5 middle items (not the usual 4+2), so a simple stacked list (2 neutral + 3 pro-tip lines) bookended by red banners instead of forcing a grid. PASS, eye-checked. **Subtopic 5 (AM-GM-HM, secs 48-55) complete — chapter is now 54/85 authored (55/85 positions covered, 1 blocked).**
 
 ## Workflow notes
 - Dev server: `nohup npm run dev -- -p 3037 > /tmp/dev-math8.log 2>&1 &`, confirmed READY.
