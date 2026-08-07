@@ -277,3 +277,8 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   palette (unlike the source SVG's 3-color scheme) — used circle
   outlines + one green shade instead. Clean PASS both languages,
   eye-checked — center region confirmed correctly positioned.
+- **Sec 32** — concept: reuses Sec30's split-bar motif for odds — a real
+  3:2 bar (green m-part wider than red n-part) landing P=m/(m+n)=3/5,
+  guardrail on the m+n (not just n) denominator trap, then empirical
+  probability with a concrete 37/50 example and a law-of-large-numbers
+  guardrail. Clean PASS both languages.
