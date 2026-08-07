@@ -213,3 +213,11 @@ misrecorded observation).
   contrast still reads, while the label carries "invisible") — the relative-
   spread point lands geometrically, not just asserted. PASS both languages,
   eye-checked.
+- **Sec 19** — concept: chip-row contrast makes the structural fact visual —
+  M.D. gets three green ticks (mean/median/mode all valid anchors),
+  variance gets one green tick and two red crosses (only the mean is
+  valid). Boxed σ²=0 ⟺ x_i=x̄ for every i. Closing pair of mini icons: a
+  perfectly flat 4-point line (green, "flat → σ²=0") beside a genuinely
+  jagged 4-point line (red, "wobble → σ²>0") — the zero-variance boundary
+  case shown geometrically, not just stated. PASS both languages, eye-
+  checked.
