@@ -45,6 +45,7 @@ export class DronaVoiceClient {
   private nextAudioStartTime: number = 0;
   private activeSources: AudioBufferSourceNode[] = [];
   private pendingAudioBuffers: AudioQueueItem[] = [];
+  private pendingTimers: any[] = [];
 
   // Telemetry & Control Flags
   private isMuted: boolean = false;
@@ -173,15 +174,21 @@ export class DronaVoiceClient {
   }
 
   public flushAudioQueue(reason: string = "user_interrupt"): void {
-    console.log(`[AUDIO FLUSH] Stopped ${this.activeSources.length} active sources and cleared ${this.pendingAudioBuffers.length} queued buffers. Reason: '${reason}'`);
+    console.log(`[AUDIO FLUSH] Stopped ${this.activeSources.length} active sources, cleared ${this.pendingAudioBuffers.length} queued buffers, and cancelled ${this.pendingTimers.length} pending timers. Reason: '${reason}'`);
     for (const source of this.activeSources) {
       try {
         source.stop();
         source.disconnect();
       } catch (e) {}
     }
+    for (const timerId of this.pendingTimers) {
+      try {
+        clearTimeout(timerId);
+      } catch (e) {}
+    }
     this.activeSources = [];
     this.pendingAudioBuffers = [];
+    this.pendingTimers = [];
     if (this.playbackCtx) {
       this.nextAudioStartTime = this.playbackCtx.currentTime;
     } else {
@@ -204,21 +211,26 @@ export class DronaVoiceClient {
       console.log(`[AUDIO SCHEDULE] currentTime=${currentTime.toFixed(2)}s, startTime=${startTime.toFixed(2)}s (leadTime=${leadTime.toFixed(2)}s)`);
     }
 
-    // Release caption and board event AT PLAYBACK TIME (when source.start fires)
-    const t0 = performance.now();
-    if (item.speechText) {
-      this.currentSpeechText = item.speechText;
-      this.options.onSpeechText?.(item.speechText, false);
-    }
-    if (item.boardText !== undefined) {
-      this.options.onBoardUpdate?.(item.boardText);
-    }
-    const tDomOffset = performance.now() - t0;
+    // Schedule caption & board event release at EXACT audio playback time (startTime = currentTime + leadTime)
+    const leadTimeMs = Math.max(0, (startTime - currentTime) * 1000);
 
-    // Drift Assertion & Performance Logging (Target < 50ms)
-    console.log(
-      `🎧 [PLAYBACK SYNC CONFIRMED] sentence_id=${item.sentenceId || "unknown"} | source.start() | DOM offset=${tDomOffset.toFixed(2)}ms`
-    );
+    const timerId = setTimeout(() => {
+      const t0 = performance.now();
+      if (item.speechText) {
+        this.currentSpeechText = item.speechText;
+        this.options.onSpeechText?.(item.speechText, false);
+      }
+      if (item.boardText !== undefined) {
+        this.options.onBoardUpdate?.(item.boardText);
+      }
+      const tDomOffset = performance.now() - t0;
+
+      console.log(
+        `🎧 [REAL PLAYBACK SYNC] sentence_id=${item.sentenceId || "unknown"} | Audio Start | Queue Lead=${leadTimeMs.toFixed(1)}ms | DOM Offset=${tDomOffset.toFixed(2)}ms`
+      );
+    }, leadTimeMs);
+
+    this.pendingTimers.push(timerId);
 
     source.onended = () => {
       const idx = this.activeSources.indexOf(source);
