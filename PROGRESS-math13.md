@@ -69,3 +69,11 @@ misrecorded observation).
   its right) to avoid collision instead of stacking rows. PASS both
   languages on first render, eye-checked (arithmetic and corner ring both
   confirmed correct).
+- **Sec 5** — concept (procedure): two-column step list. LEFT = about the
+  mean (steps 1-4, boxed final formula MD(x̄) = (1/n)Σ|x_i - x̄|), RIGHT =
+  about the median (red-margin note: same steps, Step 1 swaps) + boxed "why
+  bother" payoff. Introduced a reusable local `FormulaRow` helper (parts
+  array mixing plain text chunks and `"xbar"` tokens, auto-advances a cursor
+  left-to-right by estimated width) since x̄ now appears inline inside
+  formulas repeatedly — worth generalizing beyond Sec3's one-off `XBar`
+  splicing. PASS both languages on first render, eye-checked.
