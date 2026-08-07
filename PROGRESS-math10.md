@@ -203,6 +203,74 @@ constructed so those points land on the curve BY CONSTRUCTION — verified by
 matching the parametrization's value at the relevant parameter, not by eye.
 No new math-kit primitives needed.
 
+## Subtopic 4 — The Ellipse (secs 21-27)
+- **Sec 21** — concept, opens the subtopic: the chapter's first real ellipse
+  via `ellipseD` (genuinely wider than tall, rx=140/ry=90, not a squished
+  circle). Foci computed from the actual rx/ry via c=√(a²−b²) (=107.2px),
+  not eyeballed — the two-pins-and-a-string picture (F1, F2, point P, PF1/PF2
+  drawn as the taut string) is geometrically real. The two eccentricity
+  comparison icons (e→0 near-circular, e→1 elongated) each compute their OWN
+  foci from their OWN rx/ry, so "foci merge"/"foci spread" is demonstrably
+  true of the drawn shapes rather than just asserted in the label text. PASS
+  both languages, eye-checked — ellipse shape, foci placement, and both
+  comparison icons all confirmed correct.
+- **Sec 22** — concept, FLAGGED derivation section (task brief: extra
+  scrutiny). Hand-verified the FULL two-square-root-clearing algebra beat by
+  beat (not just the two JSON checkpoints): isolate → square →
+  difference-of-squares combines the (x±c)² terms to 4cx → isolate the
+  remaining root → square again → expand → cancel the −2a²cx terms on both
+  sides → factor → divide by a²(a²−c²) → x²/a²+y²/(a²−c²)=1, exactly matching
+  the JSON's seq5. Respected the source narration's own pacing — it
+  compresses this genuinely tedious algebra into one beat rather than
+  exploding it further. Persistent LEFT diagram (axes + foci at (±c,0) +
+  generic P). PASS both languages, eye-checked.
+- **Sec 23** — concept, FLAGGED orientation-reading section (task brief:
+  extra scrutiny). LEFT: fully-labeled horizontal ellipse (a_px=150,
+  b_px=85, c=√(a²−b²)=123.6, directrix x=±a²/c=182.0 — all computed, not
+  eyeballed) with centre, both vertices, both foci, semi-axes, both
+  directrices. RIGHT: small vertical-ellipse comparison icon (rx28<ry40).
+  Rigorously eye-verified: LEFT genuinely reads wider-than-tall matching
+  x²/a²+y²/b²=1, RIGHT icon genuinely reads taller-than-wide matching
+  x²/b²+y²/a²=1, and the directrix lines correctly sit OUTSIDE the vertices
+  (182>150). PASS both languages.
+- **Sec 24** — formulas, the ellipse's reference card: pure text/formula
+  "notes page" (single column, no new diagram) covering the standard
+  equation, boxed core relations (b²=a²−c², e=c/a=√(1−b²/a²), HIGH),
+  vertices/foci, axis lengths, latus rectum, directrices, the vertical-axis
+  swap rule, and the red "identify a² and b² first" guardrail. Clean PASS
+  both languages on first render, eye-checked.
+- **Sec 25** — worked_examples: Example 1 (x²/25+y²/9=1 → a=5,b=3 →
+  c=√(25−9)=4, e=0.8 → boxed vertices/foci/LR=3.6, all hand-verified ✓) and
+  Example 2, same numbers with denominators swapped (x²/9+y²/25=1 → major
+  axis now vertical, foci(0,±4)/vertices(0,±5)) — closes on two comparison
+  icons (horizontal vs vertical) that share the SAME computed c=40px since
+  their rx/ry are literally swapped, visually proving "same numbers,
+  rotated" rather than just asserting it. Clean PASS both languages,
+  eye-checked.
+- **Sec 26** — worked_examples: Example 3 (vertices(±6,0)/foci(±4,0)→a=6,c=4→
+  b²=36−16=20 → boxed x²/36+y²/20=1) and Example 4, the a-vs-2a trap in
+  action: e=1/2 with major axis LENGTH 10 (not a=10 — a=5, half of it) →
+  c=ae=2.5 → b²=25−6.25=18.75 (hand-verified 2.5²=6.25 ✓) → boxed
+  x²/25+y²/18.75=1, closing on the exact guardrail this example was built to
+  teach. Clean PASS both languages, eye-checked.
+- **Sec 27** — tips, closes Subtopic 4: same 2x2-grid + reflex-recap
+  structure as Sec7/13/20 (a²-is-bigger-denom flagged HIGH, foci-on-major-
+  axis-only, b²=a²−c² subtraction direction, semi-axes-not-full-length),
+  then a wide AMBER two-step reflex card and a final RED/HIGH cascade card.
+  Clean PASS both languages on first render, eye-checked. Fixed a stray
+  nonsensical `RED === "" ? RED : "#1C1A16"` ternary (leftover typo) before
+  verifying — replaced with a proper INK import.
+
+## Subtopic 4 (The Ellipse, secs 21-27) — COMPLETE
+All 7 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
+Two flagged sections (Sec22 derivation, Sec23 orientation) both got extra
+scrutiny — full beat-by-beat algebra verification and rigorous per-shape eye
+check respectively. First chapter-wide use of `ellipseD` throughout an entire
+subtopic: every ellipse's foci are computed live from its own rx/ry via
+c=√(a²−b²), never hand-placed, so "foci merge"/"foci spread"/"same c" claims
+in the narration are demonstrably true of the drawn shapes. No new math-kit
+primitives needed — ellipseD (added ahead of this run) covered everything.
+
 ## Subtopic 2 (The Circle, secs 8-13) — COMPLETE
 All 6 sections authored, tsc clean, VERDICT PASS both languages, eye-checked.
 Every worked-example computation hand-verified against the source JSON before
