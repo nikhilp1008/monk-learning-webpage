@@ -330,3 +330,15 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   caption. Same motif as Sec14/28. Clean PASS both languages. **Subtopic
   3 (Computing Probabilities, secs 29-39) complete — all 4 formula/tips
   subtopics of the whole chapter now done (39/43).**
+
+### Chapter closer begins — sections 40-43, a 4th sidebar unit "Overview & Main Topics"
+- **Sec 40** — formula_recap (first of two, per task brief — this chapter
+  has TWO recap + TWO cheat-sheet sections instead of the usual one
+  pair): no segments_english/hinglish in Supabase (expected), all text
+  from board_content directly. 2×3 boxed card grid (counting, 2ⁿ events,
+  ME/exhaustive/partition, 3 axioms, ∅/bounds/complement, HIGH green-
+  bordered classical formula), each card revealed on its own beat.
+  Confirmed via the live sidebar that Sec40-43 form a genuine 4th
+  subtopic unit ("Overview & Main Topics") distinct from the three
+  numbered subtopics, which are now all marked complete. Clean PASS both
+  languages, eye-checked.
