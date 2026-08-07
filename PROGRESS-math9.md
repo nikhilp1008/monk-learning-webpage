@@ -200,3 +200,35 @@ not optional even when VERDICT is PASS.
 - **Sec 34** — tips, closes Subtopic 4: Sec17/26 card-grid precedent; the same-side/
   opposite-side mnemonic's dot placement verified via a cross-product side test. PASS both
   languages, eye-checked. **Subtopic 4 (secs 27-34) complete — chapter is 34/62 (55%) done.**
+- **Sec 35** — opens Subtopic 5: L1(x+y-4=0)/L2(x-y=0) meet at J(2,2) via a real elimination
+  derivation, then L3(2x-y-2=0) joins through the same ringed point. PASS both languages,
+  eye-checked.
+- **Sec 36** — the family trick: a genuine 5-line fan through J(2,2) — L1, L2 plus three
+  family members at λ=1,-1,2 (vertical/horizontal/slope-3), all verified through J,
+  concretely grounding "one line per λ" and the L2-unreachable guardrail. PASS both
+  languages, eye-checked.
+- **Sec 37** [PROOF] — two-column build (symbolic proof left, concrete L1(x+y-3=0)/
+  L2(x-y-1=0)/J(2,1) grounding right with checkmarked verifications); λ=3 family member
+  lands ringed through J, three more thin members sweep in to concretely sell "for every λ".
+  PASS both languages, eye-checked.
+- **Sec 38** [PROOF] — densest section in the subtopic (9 beats). L1/L2/L3 through J(2,1),
+  determinant verified 0 by hand; first literal 3x3 determinant grid (Draw bars + T grid,
+  no new primitive), compact 3-line "asterisk" diagram, concrete verification line. PASS
+  both languages, eye-checked with zoomed-crop clearance verification.
+- **Sec 39** — intersection/family formula toolkit incl. Cramer's rule, ratio tests, and the
+  determinant grid (second occurrence, same construction pattern as Sec38). Single-column
+  precedent held via a taller determinant row. PASS both languages, eye-checked.
+- **Sec 40** — worked: Ex1 intersection (1,2) plotted; Ex2's determinant (=6, ringed) with
+  the +/-/+ cofactor sign pattern stamped above the grid. PASS both languages, eye-checked.
+- **Sec 41** — worked: the family-method payoff made concrete — the actual (ugly-fraction)
+  intersection J=(3/7,16/7) is computed only for illustration, never shown in the algebra;
+  the final answer line confirmed on-screen to pass through the never-computed J. PASS both
+  languages, eye-checked.
+- **Sec 42** — Advanced worked: determinant |a 2 1; 2 a 2; 1 1 -1|=0 → a=-5 or a=2. Two-panel
+  visual contrast is the payoff — a=2 genuinely renders as two parallel lines (crossed out);
+  a=-5 genuinely renders as three lines converging at the verified (3/7,4/7). PASS both
+  languages, eye-checked.
+- **Sec 43** — tips, closes Subtopic 5: established 2x2-red-grid + green-pro-tip-card
+  precedent; fan-of-3-lines mnemonic with a legend row avoiding label-on-line collision.
+  PASS both languages, eye-checked. **Subtopic 5 (secs 35-43) complete — chapter is 43/62
+  (69%) done.**
