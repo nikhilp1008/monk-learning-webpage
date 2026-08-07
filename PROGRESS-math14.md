@@ -317,3 +317,9 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   carefully as the final flagged section — all 7 values confirmed
   landing in their geometrically correct regions. **All FLAG sections
   (13, 21, 22, 23, 27, 37) now complete.**
+- **Sec 38** — worked_examples, closes Subtopic 3's worked examples:
+  part (a) odds-against 4:3→P(win)=3/7, part (b) empirical 130/200=13/20
+  and odds-in-favour 13:7, payoff bar reuses the split-bar motif but as
+  7 individual equal segments (3 green win + 4 red not) matching the
+  narration's "seven equal parts" framing, HIGH guardrail on the classic
+  odds-against direction trap. Clean PASS both languages.
