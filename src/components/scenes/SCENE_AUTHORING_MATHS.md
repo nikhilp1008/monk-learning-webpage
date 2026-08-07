@@ -296,6 +296,26 @@ screenshot). Rule of thumb:
   finding) while `ℓ` is fine in both.
 - **`\bar{x}` reappears in Chapter 9** (centroid mean) — same `<Overline>`
   primitive from Chapter 4, first real cross-chapter reuse of it.
+- **Eighth glyph audit (Chapter 8, Sequences & Series) — subscript LETTERS,
+  read this before writing a single formula, `aₙ` is this chapter's most
+  common symbol.** Checked via `fontTools` cmap inspection of the actual
+  Anek Latin / Kalam font files (same rigor as the earlier Chromium-render
+  audits): the whole Unicode subscript-letter block (`ₐ ₑ ᵢ ⱼ ₖ ₗ ₘ ₙ ₒ ₚ ᵣ ₛ
+  ₜ ᵤ ᵥ ₓ`) is **missing from BOTH fonts** — same failure mode as the
+  superscript-letter block already forbidden in Chapter 7 (`ⁿ ᵣ`). Numeric
+  subscript digits (`₀-₉`) remain fine in Anek only, per the existing
+  digit-coverage rule. Resolution, extending the Chapter 7 numeric/symbolic
+  split to subscripts: **numeric index → real Unicode subscript digit,
+  non-script Anek** (`a₁`, `a₂`, `S₅` — already used freely elsewhere in the
+  codebase, e.g. `E₁`, `z₁`, `P₁`); **symbolic index → plain underscore
+  text, no attempt at true subscript positioning** (`a_n`, `a_(n-1)`,
+  `a_(n+1)`, `S_n`, `T_n`, `a_p`, `a_q`) — parenthesize a compound index the
+  same way Chapter 7 parenthesized compound binomial subscripts. Do not
+  reach for the Unicode subscript-n glyph (`ₙ`, U+2099) anywhere, even
+  though a few `board_content` strings in this chapter's Supabase rows use
+  it directly — translate it to `_n` on the board, same as any other
+  raw-LaTeX-shaped source text that needs translating before it's legible
+  in-font.
 - Hinglish board text stays **Latin script** (house style, inherited from
   physics/chem) — and all of the above symbols are language-agnostic, so a
   formula is byte-identical between the English and Hinglish boards; only the
