@@ -77,3 +77,13 @@ misrecorded observation).
   left-to-right by estimated width) since x̄ now appears inline inside
   formulas repeatedly — worth generalizing beyond Sec3's one-off `XBar`
   splicing. PASS both languages on first render, eye-checked.
+- **Sec 6** — concept (procedure): a real 4-column worked table (Class, x_i,
+  f_i, f_i·|x_i-x̄|) builds column by column across beats for classes
+  0-10/10-20/20-30 with f=2,5,3 (N=10, x̄=16, Σf_i|x_i-x̄|=54, M.D.=5.4 — all
+  hand-verified). Guardrail beat (flagged high-emphasis, "the single biggest
+  trap") gets real teeth: a crossed-out "54÷3=18 ✗" chip beside the correct
+  "54÷10=5.4 ✓" chip, since the wrong-divisor mistake is concrete enough here
+  to show numerically rather than just state. Reused Sec5's `XBar`/
+  `FormulaRow` helpers verbatim. PASS both languages on first render,
+  eye-checked (every arithmetic value in the table and both divisions
+  confirmed correct).
