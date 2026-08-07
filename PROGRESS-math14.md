@@ -112,3 +112,14 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   with their overlap reasoning appended inline, survivor (ii) ringed
   green, final "Answer: (ii)" chip. Reused the MCQ cross-out+ring motif.
   Clean PASS both languages, eye-checked.
+- **Sec 12** — worked_examples, THE section the task brief specifically
+  called out: two-column layout, LEFT = full algebra ladder (n(S)=36,
+  A={(1,6)...(6,1)} n(A)=6, C={(5,6),(6,5),(6,6)}, A∩C=∅, guardrail
+  "event+complement always a partition"), RIGHT = the real 36-cell 6×6
+  grid (columns=blue die, rows=red die, drawn as 7+7 gridlines not 36
+  individual rects) with the sum=7 anti-diagonal shaded amber and the
+  sum≥11 corner cluster shaded green — verified by hand that both
+  shaded regions land on the algebraically correct cells (r+c=5 for A,
+  r+c≥9 for C, 0-indexed) before trusting it. No erasing needed — algebra
+  and grid coexist as the final notes photo. Clean PASS both languages,
+  eye-checked, diagonal/corner placement confirmed correct.
