@@ -171,13 +171,19 @@ export function roundRectD(x: number, y: number, w: number, h: number, r = 14): 
 }
 
 /**
- * Concentric labeled boxes for number-set nesting, e.g. levels=["N","Z","Q","R"]
- * (outermost first) draws R as the biggest box down to N as the smallest,
- * each gated on its own beat so the containment builds outward-in as narrated.
+ * Concentric labeled boxes for number-set nesting, e.g. levels=["R","Q","Z","W","N"]
+ * (outermost/biggest first, listed in the same order as the JSON's nesting chain
+ * read right-to-left) draws R as the biggest box down to N as the smallest, each
+ * gated on its own beat so the containment builds outward-in as narrated.
+ *
+ * `delays` (optional): per-level delay so rings draw one at a time (the "one
+ * hand" rule) instead of all at once — falls back to the single `delay` for
+ * every level when omitted.
  */
 export function NestedSets({
   on,
   delay = 0,
+  delays,
   cx,
   cy,
   levels,
@@ -189,6 +195,7 @@ export function NestedSets({
 }: {
   on: boolean[];
   delay?: number;
+  delays?: number[];
   cx: number;
   cy: number;
   levels: string[];
@@ -205,6 +212,7 @@ export function NestedSets({
         const h = outerH - i * step * (outerH / outerW);
         const x = cx - w / 2;
         const y = cy - h / 2;
+        const d = delays?.[i] ?? delay;
         return (
           <React.Fragment key={label}>
             <Draw
@@ -212,9 +220,9 @@ export function NestedSets({
               d={roundRectD(x, y, w, h)}
               stroke={stroke}
               sw={2}
-              delay={delay}
+              delay={d}
             />
-            <Fade on={on[i] ?? false} delay={delay + 0.4}>
+            <Fade on={on[i] ?? false} delay={d + 0.4}>
               <T x={x + 18} y={y + 24} size={17} fill={labelFill} anchor="start">
                 {label}
               </T>
