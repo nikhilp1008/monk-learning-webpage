@@ -203,3 +203,13 @@ misrecorded observation).
   five dots sit close enough to visually merge into a cluster — a deliberate
   choice, not a defect, since that compression IS the "tight and dependable"
   point. PASS both languages, eye-checked.
+- **Sec 18** — concept: "Height: σ=5cm ≠ Weight: σ=5kg" chip pair makes the
+  units problem concrete before the fix. Boxed C.V.=(σ/x̄)×100 (simple
+  single-term fraction, flattened inline per the notation rule despite high
+  emphasis). Payoff diagram: two identically-sized outline bars, one with a
+  chunky 20%-width red fill (±₹10 on a ₹50 item) and one with a hairline
+  2px sliver (±₹10 on a ₹50,000 item, true proportional width would be
+  0.04px — kept it a visible sliver rather than literally invisible so the
+  contrast still reads, while the label carries "invisible") — the relative-
+  spread point lands geometrically, not just asserted. PASS both languages,
+  eye-checked.
