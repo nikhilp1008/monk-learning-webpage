@@ -378,3 +378,16 @@ misrecorded observation).
   identity + red-margin note stating the final quadratic. Grep-checked for
   the raw combining-mark glyph before typechecking — clean. PASS both
   languages, eye-checked.
+- **Sec 36** — concept (procedure), FLAGGED for extra scrutiny (reverse
+  problem — general method only; the worked numeric example lands in
+  Sec 40). Verified: Σx_correct=Σx_wrong-w+c and Σx²_correct=Σx²_wrong-w²+c²
+  (both remove the wrong value's contribution and add the correct one's,
+  correctly done in parallel for the linear and squared totals); the
+  omitted-value variant correctly drops only the "+c"/"+c²" terms and
+  reduces n by 1 since one fewer observation genuinely exists. Two boxed
+  green formulas side by side, red-margin note (2 lines) on the single most
+  common half-mark loss — fixing only the mean and forgetting Σx² needs the
+  same repair. Grep-checked for the raw combining-mark glyph before
+  typechecking — clean. PASS both languages, eye-checked. This closes out
+  the two sections the task brief flagged for extra scrutiny (35, 36) —
+  both independently re-derived and confirmed correct against the source.
