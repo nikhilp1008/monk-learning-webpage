@@ -253,3 +253,18 @@ misrecorded observation).
   flags it high-emphasis and the narration calls it "a classic error."
   PASS both languages, eye-checked (fraction layout and bracket/exponent
   placement both confirmed correct).
+- **Sec 23** — formulas: 5-card recap grid (green for the three high-emphasis
+  formulas — core variance+shortcut+SD, C.V.+transformation rule, and the
+  red-margin close — amber for the two normal ones — frequency-distribution
+  and grouped/coded variance), everything flattened inline (no `<Frac>`)
+  since this is explicitly "restating for quick recall, not re-teaching"
+  and the true stacked forms already had their moment in Sec7/8/22. Caught
+  and fixed a real spacing defect via eye-check: chaining `σ = +√(σ²)` onto
+  the end of a `FormulaRow` via the cursor-advance estimate left it visually
+  butted against the preceding `x̄²` with no perceptible gap in both
+  languages — the estimate wasn't wrong, just tight at that font size. Fixed
+  by un-chaining it into its own independently-positioned `<T>` at a fixed
+  x, which guarantees clearance regardless of estimate accuracy — the
+  general lesson: don't chain unrelated formula fragments through one
+  cursor when a fixed anchor is cheap and safer. PASS both languages after
+  the fix, re-eye-checked.
