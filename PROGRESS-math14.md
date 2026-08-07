@@ -342,3 +342,7 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   subtopic unit ("Overview & Main Topics") distinct from the three
   numbered subtopics, which are now all marked complete. Clean PASS both
   languages, eye-checked.
+- **Sec 41** — formula_recap (second of two): identical 2×3 card-grid
+  geometry to Sec40, this time covering addition through odds (2-event
+  and 3-event addition, exactly-one/neither, HIGH green at-least-one
+  card, nPr/nCr counting, odds/empirical). Clean PASS both languages.
