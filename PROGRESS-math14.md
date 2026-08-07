@@ -75,3 +75,10 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   translation ("A or B" = at least one, "A and B" = both, "A but not B").
   Guardrail chip closes on the or→∪/and→∩ translation habit. Clean PASS
   both languages, eye-checked — all 4 shadings confirmed correct.
+- **Sec 7** — concept: definitions ladder (mutually exclusive / exhaustive
+  / partition formulas stacked with plain-English captions), partition
+  statement ringed amber, guardrail chip "needs BOTH conditions" — all
+  erased once the payoff diagram lands (beat 7): two Venn panels side by
+  side, left overlapping circles shaded (NOT mutually exclusive, red
+  caption), right disjoint circles each shaded their own color (mutually
+  exclusive, green caption). Clean PASS both languages, eye-checked.
