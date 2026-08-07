@@ -4240,3 +4240,9 @@ REGISTRY[`${M11CH07}:44`] = M11Ch07Sec44;
 REGISTRY[`${M11CH07}:45`] = M11Ch07Sec45;
 REGISTRY[`${M11CH07}:46`] = M11Ch07Sec46;
 REGISTRY[`${M11CH07}:47`] = M11Ch07Sec47;
+
+// ── M11Ch09 "Straight Lines" (Class 11 Maths) ──
+import M11Ch09Sec1 from "./M11Ch09Sec1";
+
+const M11CH09 = "5edf4eb2-af54-5da2-b8fa-bfbb3270e702";
+REGISTRY[`${M11CH09}:1`] = M11Ch09Sec1;
