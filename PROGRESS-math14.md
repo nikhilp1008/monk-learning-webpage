@@ -139,3 +139,11 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   amber HIGH pro-tip card closing on the "search not calculation" habit.
   Clean PASS both languages, eye-checked. **Subtopic 1 (Sample Space and
   Events, secs 1-14) complete.**
+
+### Subtopic 2 begins — Probability of Events and the Axiomatic Approach (secs 15-28)
+- **Sec 15** — concept, opens Subtopic 2: die roster (reused from Sec1/2)
+  with evens 2/4/6 highlighted green, "3 good faces out of 6" caption,
+  P(even)=3/6=1/2, ringed HIGH formula P(E)=n(E)/n(S), guardrail chip
+  flagging the classical definition only holds for fair dice/well-shuffled
+  cards (sets up Sec16's cracks). Simple fractions flattened inline per
+  notation rules (no Frac primitive needed). Clean PASS both languages.
