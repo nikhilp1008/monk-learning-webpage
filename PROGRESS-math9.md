@@ -302,3 +302,36 @@ not optional even when VERDICT is PASS.
   clip duration) as an upstream quirk — verified clean via Hinglish and a forced-time
   manual seek. PASS (with documented quirk), eye-checked. **Subtopic 7 (secs 52-59)
   complete — chapter is 59/62 (95%) done.**
+- **Sec 60** — formula recap I, opens the Chapter Wrap-Up subtopic: 7-card grid
+  (borrowed M11Ch04Sec65's 2x3-grid-plus-full-width-7th-card layout geometry, adapted
+  to this chapter's own title-always-on beat convention) + closing guardrail. Every
+  formula verified byte-for-byte against its source toolkit section (Sec5/13/22),
+  deliberately keeping each card's own subscript style (Unicode vs plain digits)
+  rather than forcing one convention across all 7. PASS both languages, eye-checked.
+- **Sec 61** — formula recap II: same 7-card-grid-plus-guardrail structure, formulas
+  verified against Sec30/39/47/55. The chapter's one literal 3x3 determinant (from
+  Sec38/39) is flattened to inline pipe-delimited notation for card-width space;
+  foot and image formulas visually paired (GREEN, matching typography) as "same
+  shape, factor of 2". PASS both languages, eye-checked.
+- **Sec 62** — cheat sheet, closes the chapter: 2x4 grid of 8 red mnemonic cards
+  (borrowed M11Ch04Sec66's grid-of-cards geometry), the final HIGH-emphasis card
+  given a visibly thicker capstone border, closing into a "Straight Lines —
+  complete!" chip (extending the chapter's own "Subtopic N — complete" convention
+  up one level). Every one-line mnemonic cross-checked against the section that
+  actually taught it. PASS both languages, eye-checked. **Subtopic 8 (secs 60-62)
+  complete — chapter is 62/62 (100%) done. Chapter 9 "Straight Lines" complete.**
+
+## Chapter complete
+All 62 sections authored, `tsc --noEmit` clean, VERDICT PASS (both languages) on every
+section, and every section eye-checked via FORCE_SHOTS before commit. No new math-kit
+primitives were needed (confirmed at the outset and held true through all 62 sections) —
+the chapter composes entirely from `CartesianAxes`/`lineD`/`angleArcD`/`circleD`/`Overline`
+plus per-scene `toScreen` helpers, base-kit `arrowD`/`crossD`/`ringD`/`checkD`, and two
+from-scratch constructions introduced along the way: the literal 3x3 determinant grid
+(Draw bars + T grid, first built in Sec39) and the grid-of-`Card` layout for the three
+recap/cheat-sheet closers (Sec60-62, borrowed from M11Ch04's own Sec65/66 precedent).
+One data-timing quirk was found and documented rather than worked around: Sec59's English
+`board_reveal_at` array is non-monotonic and exceeds the clip's own duration (upstream
+Supabase data, not a scene defect) — verified clean via Hinglish and a forced-time manual
+seek, following the Sec25/26 precedent for similar (milder) timing quirks earlier in the
+chapter.
