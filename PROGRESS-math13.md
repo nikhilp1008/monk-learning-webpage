@@ -116,3 +116,13 @@ misrecorded observation).
   line and a `checkD` stamp (per the kit's own guidance to prefer a drawn
   check over the fallback ✓ glyph). Hand-verified every number: deviations
   2,2,6,6,0 sum to 16, range 12, 3.2 ≤ 12. PASS both languages, eye-checked.
+- **Sec 10** — worked_examples, JSON-flagged "speed trap": goals-per-match
+  frequency table (x_i=0-4, f_i=4,6,8,5,2) builds as one 4-column worked
+  table (x_i, f_i, f_i·x_i, f_i|x_i-1.8|) matching the source SVG's own
+  layout, then rings each column's total (N=25, Σf_ix_i=45→x̄=1.8,
+  Σf_i|x_i-x̄|=24.0) as its beat narrates it. The trap gets full staging per
+  the maths spec's speed-trap rule: a red "24÷5=4.8 ✗" chip beside the
+  correct green "24÷25=0.96 ✓" — the actual tempting wrong answer shown and
+  crossed, not just described. All values hand-verified (f_i sum, f_i·x_i
+  sum, each f_i|x_i-1.8| term, final 24/25=0.96). PASS both languages,
+  eye-checked.
