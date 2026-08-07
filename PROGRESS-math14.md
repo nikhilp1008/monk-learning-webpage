@@ -258,3 +258,11 @@ Flagged for extra scrutiny (axiom-derivation / JEE Advanced): 13, 21, 22, 23, 27
   nCr=n!/(r!(n−r)!)), two guardrail chips (always ask "does order
   matter?" first; count n(E) and n(S) the same way). Clean PASS both
   languages.
+- **Sec 30** — concept: ringed HIGH P(at least one)=1−P(none), worked on
+  5 coin tosses (31/32), guardrail names the trigger phrase, closing
+  payoff is a real probability bar (width=900px=1.0) — none's 1/32 slice
+  is genuinely ~28px vs the ~872px "at least one" remainder, with a
+  leader line to the thin slice's label since the slice itself is too
+  narrow for inline text. Clean PASS both languages, eye-checked — the
+  visual proportion lands the point without needing narration to explain
+  it. **Subtopic 3 file/registry counts now match at 30.**
