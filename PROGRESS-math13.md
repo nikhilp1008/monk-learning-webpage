@@ -404,3 +404,11 @@ misrecorded observation).
   variance card (too many mean symbols to spell out with real `XBar`s at
   this density) while keeping true `XBar` for the two simpler cards. PASS
   both languages after the fix, eye-checked.
+- **Sec 38** — worked_examples: Arjun (mean 50, SD 10 → C.V.=10/50×100=20%)
+  vs Vikram (mean 40, SD 6 → C.V.=6/40×100=15%), both hand-verified. Two
+  boxed C.V. cards land side by side, red-margin note carries the actual
+  point of the example (Arjun's higher average makes him the better chase
+  bet despite losing on consistency), closing with two labeled verdict
+  chips — "Consistency → Vikram" (green) and "Chase a steep total → Arjun"
+  (amber) — making the split verdict concrete rather than just asserted in
+  prose. PASS both languages, eye-checked.
