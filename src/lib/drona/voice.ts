@@ -171,6 +171,8 @@ export class DronaVoiceClient {
         this.options.onSpeechText?.(msg.message || "Hold the button while you speak", false);
       } else if (type === "error") {
         console.warn("Drona Voice Server Error:", msg.message);
+        this.options.onSpeechText?.(msg.message || "Something went wrong — please try again.", false);
+        this.options.onError?.(new Error(msg.message || "Drona server error"));
       }
     } catch (e) {
       console.error("Failed to parse WS message:", e);
