@@ -108,7 +108,7 @@ export function SessionView({
     ? "Paused"
     : phase === "awaiting_answer" || (subtopicOptions && subtopicOptions.length > 0)
     ? "Waiting for your answer"
-    : voiceState?.isRecording
+    : voiceState?.isListening
     ? "Listening"
     : "Ready";
 
