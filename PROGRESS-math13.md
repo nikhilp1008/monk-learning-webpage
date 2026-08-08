@@ -1,0 +1,502 @@
+# Progress — M11 Chapter 13: Statistics
+
+chapter_id: `be419d00-be96-52c5-9704-c4331213c6e9`
+branch: `premium-board-math13` · port: 3036
+44 sections confirmed directly from Supabase `lesson_sections` (JSON_LESSONS is stale — 10 sections vs 44 — ignored per task brief).
+
+Subtopics: 1-15 Measures of Dispersion & Mean Deviation · 16-29 Variance & Standard
+Deviation · 30-42 Analysis of Frequency Distributions & Advanced Problems ·
+43-44 Recap/Cheat Sheet.
+
+No new math-kit primitives needed (per task brief) — reuse Ch01's axisD/tickD/dots
+for spread comparisons, `<Overline>` for x̄ (mean), `<Frac>` from Ch12 if a
+variance formula's fraction gets compound enough (most flatten fine as `Σ/N`).
+σ falls back (Greek, accept it) — safe to use directly.
+
+Flagged for extra scrutiny (reverse-problem / derivation arithmetic): Sec 20
+(shortcut formula derivation), Sec 35-36 (reverse problems: missing observations,
+misrecorded observation).
+
+## Log
+- **Sec 1** — concept, opens the chapter: two empty vendor "stalls" (Ramesh /
+  Suresh) drawn as cards, filled one at a time with their five prices + a
+  green mean chip (both ₹29.6 — identical), red-margin guardrail calling out
+  the identical mean. Central-tendency-vs-dispersion split gets its own tiny
+  icon pair (target = WHERE, burst = HOW SPREAD OUT), erased before the main
+  diagram to free the band (spec's "erase, don't overlay" rule). Payoff: two
+  stacked real number lines (shared linear ₹10-50 scale, `axisD`/`tickD`),
+  Ramesh's dots in a tight knot vs Suresh's flung wide, one shared red dashed
+  mean line through both at ₹29.6 — Ramesh's duplicate 30 stacked as two dots
+  rather than overlapping exactly. Closing question boxed in the verdict
+  band. PASS both languages on first render, eye-checked via FORCE_SHOTS
+  (dot positions verified against actual data values, not eyeballed).
+- **Sec 2** — concept: a 7-point number line (12,18,22,25,30,33,38) rings its
+  real min/max, a double-headed arrow spans them, arithmetic "38 - 12 = 26"
+  under the formula `Range = x_max - x_min`. Grouped-data tweak gets a small
+  4-bar class-boundary illustration; the weather example (22°C→41°C) sits
+  beside it as a real worked mini-case. Guardrail beat adds a genuine outlier
+  (82) ringed in red with its own red double-arrow (old max/arrow dim via a
+  plain `<g opacity>` wrapper, since `Draw` has no built-in `dim` prop like
+  `Fade` does) — the arithmetic (82-12=70) folded into the guardrail sentence
+  itself rather than a separate label, after the first pass caught 3 Hinglish
+  text-overlaps from two competing labels sharing one row. First real use of
+  `<Frac>` in this chapter for the coefficient-of-range formula (compound
+  numerator/denominator). Fixed one bad import (`ringD` is kit.tsx, not
+  math-kit.tsx) caught by tsc. PASS both languages after the overlap fix,
+  eye-checked via FORCE_SHOTS.
+- **Sec 3** — concept: mini symmetric ±5 diagram shows distance ignoring
+  direction, guardrail on dropping signs, then the zero-sum identity
+  `Σ(x_i - x̄) = 0` (first `<Overline>` use in this chapter, via a local
+  `XBar` helper mirroring Ch04's `ZBar`) landing into THE diagram — a number
+  line with 4 points and a chosen centre `a`, distance lines alternating
+  above/below axis (same convention as the source SVG) to avoid crossing.
+  Caught two real bugs via eye-check (not the automated verifier): (1) an
+  overlap between the "distance ignores direction" caption and its ±5 labels
+  from underestimating vertical clearance, fixed by re-spacing; (2) the
+  `XBar` helper's plain "x" glyph wasn't wrapped in `<Fade on=.../>` like the
+  reference `ZBar`, so it rendered on EVERY beat regardless of gating — a
+  silent blank-board-contract violation the overlap/overflow checks can't
+  catch since nothing else occupied that spot yet. Both fixed, PASS both
+  languages, re-eye-checked.
+- **Sec 4** — concept: two-column layout. LEFT = weakness 1, a real hand-drawn
+  y=|x| V-graph (two `lineD` segments meeting at a vertex, not a canned icon)
+  with the corner ringed in red. RIGHT = weakness 2, a genuine skewed data set
+  {2,4,5,6,20} on a number line with BOTH mean (7.4) and median (5) anchors
+  marked and their own mean-deviation values labeled (MD about mean = 5.04,
+  about median = 4.0 — hand-verified arithmetic, confirms the theorem the
+  formula states). Labels for the two close-together anchors diverge outward
+  (median anchor's text right-anchored to its left, mean's left-anchored to
+  its right) to avoid collision instead of stacking rows. PASS both
+  languages on first render, eye-checked (arithmetic and corner ring both
+  confirmed correct).
+- **Sec 5** — concept (procedure): two-column step list. LEFT = about the
+  mean (steps 1-4, boxed final formula MD(x̄) = (1/n)Σ|x_i - x̄|), RIGHT =
+  about the median (red-margin note: same steps, Step 1 swaps) + boxed "why
+  bother" payoff. Introduced a reusable local `FormulaRow` helper (parts
+  array mixing plain text chunks and `"xbar"` tokens, auto-advances a cursor
+  left-to-right by estimated width) since x̄ now appears inline inside
+  formulas repeatedly — worth generalizing beyond Sec3's one-off `XBar`
+  splicing. PASS both languages on first render, eye-checked.
+- **Sec 6** — concept (procedure): a real 4-column worked table (Class, x_i,
+  f_i, f_i·|x_i-x̄|) builds column by column across beats for classes
+  0-10/10-20/20-30 with f=2,5,3 (N=10, x̄=16, Σf_i|x_i-x̄|=54, M.D.=5.4 — all
+  hand-verified). Guardrail beat (flagged high-emphasis, "the single biggest
+  trap") gets real teeth: a crossed-out "54÷3=18 ✗" chip beside the correct
+  "54÷10=5.4 ✓" chip, since the wrong-divisor mistake is concrete enough here
+  to show numerically rather than just state. Reused Sec5's `XBar`/
+  `FormulaRow` helpers verbatim. PASS both languages on first render,
+  eye-checked (every arithmetic value in the table and both divisions
+  confirmed correct).
+- **Sec 7** — concept (procedure): worked grouped-data table (classes
+  0-10..40-50, f=5,8,12,6,4) builds a cumulative-frequency column live
+  (5,13,25,31,35), rings the median class (20-30, first c.f. ≥ N/2=17.5),
+  then the interpolation formula M = ℓ + Frac(N/2-C, f)×h — first real
+  `<Frac>` use in this chapter, substituted to a hand-verified 20 +
+  (4.5/12)×10 = 23.75. Definitions (ℓ, C, f, h) carry their actual numeric
+  values inline, not just symbols. Closing line needed per-language JSX
+  branches (not just `t()` swapping strings) since the x̄ glyph's position
+  differs between the English and Hinglish sentence structures — computed
+  each language's text width separately to place the `XBar` without
+  overflowing the safe area. PASS both languages on first render,
+  eye-checked (cumulative sums and the interpolation arithmetic confirmed).
+- **Sec 8** — formulas: a restated reference card (not new teaching, per its
+  own narration), so treated as a boxed 5-card grid rather than a live
+  derivation — closer to the `formula_recap` house style than a literal
+  `formulas` build. Green boxes for the three high-emphasis formulas (range
+  + coefficient of range with `<Frac>`, M.D. ungrouped, M.D. frequency),
+  amber boxes for the two normal-emphasis ones (coefficient of M.D.,
+  grouped-median interpolation with `<Frac>`), red-margin close for the two
+  memorise-this facts. PASS both languages on first render, eye-checked.
+- **Sec 9** — worked_examples, first worked example of the chapter: marks
+  32,28,36,24,30. Table builds x_i then |x_i-x̄| columns; the two extreme
+  rows (36, 24) ring for the range calc. Mean formula uses `<Frac>` for its
+  genuinely compound 5-term numerator (32+28+36+24+30)/5=150/5=30 — the
+  simple 16/5 result stays flattened inline per the notation rule. Boxed
+  green landing formula MD(x̄)=16/5=3.2 marks, closed with a red sanity-check
+  line and a `checkD` stamp (per the kit's own guidance to prefer a drawn
+  check over the fallback ✓ glyph). Hand-verified every number: deviations
+  2,2,6,6,0 sum to 16, range 12, 3.2 ≤ 12. PASS both languages, eye-checked.
+- **Sec 10** — worked_examples, JSON-flagged "speed trap": goals-per-match
+  frequency table (x_i=0-4, f_i=4,6,8,5,2) builds as one 4-column worked
+  table (x_i, f_i, f_i·x_i, f_i|x_i-1.8|) matching the source SVG's own
+  layout, then rings each column's total (N=25, Σf_ix_i=45→x̄=1.8,
+  Σf_i|x_i-x̄|=24.0) as its beat narrates it. The trap gets full staging per
+  the maths spec's speed-trap rule: a red "24÷5=4.8 ✗" chip beside the
+  correct green "24÷25=0.96 ✓" — the actual tempting wrong answer shown and
+  crossed, not just described. All values hand-verified (f_i sum, f_i·x_i
+  sum, each f_i|x_i-1.8| term, final 24/25=0.96). PASS both languages,
+  eye-checked.
+- **Sec 11** — worked_examples: two side-by-side before/after mini-demos
+  using the same illustrative points (10,12,16, gaps 2,4) — LEFT shows the
+  shift (-7) landing on 3,5,9 with gaps still 2,4 (arrows converge, since
+  shift doesn't reorder), RIGHT shows the scale (×3) landing on 30,36,48
+  with gaps 6,12 (arrows diverge, visibly stretching) — same starting data,
+  two operations compared directly. Boxed green landings for both
+  Range_new=|3|×40=120 and M.D._new=|3|×12=36. Kept the demo deliberately
+  illustrative (not tied to unstated real bill amounts) since the section
+  only gives range/M.D. summary stats, not raw data — verified the
+  before/after gap arithmetic (2×3=6, 4×3=12) is correct regardless. PASS
+  both languages on first render, eye-checked.
+- **Sec 12** — worked_examples (JEE Advanced): the outside-in pairing proof
+  that the median MINIMISES S(a)=Σ|x_i-a|, not just ties it. Real
+  linear-scaled number line (7,11,13,16,20,24, true proportional spacing via
+  `axisD`) with two nested Bezier pairing arcs (outer purple (7,24) gap 17,
+  inner blue (11,20) gap 9) and the median interval [13,16] shaded amber
+  directly on the axis — mirrors the source SVG's own diagram almost
+  exactly, just rebuilt with real geometry instead of copied coordinates.
+  Boxed green landing S(a)=17+9+3=29 (hand-verified: 24-7=17, 20-11=9,
+  16-13=3). Closing red note lands the paper's actual payoff — the minimiser
+  is an interval, not a point, so "how many a" is infinitely many. PASS both
+  languages on first render, eye-checked (arc nesting and interval placement
+  both confirmed correct, no crossing/overlap).
+- **Sec 13** — worked_examples: daily-wages continuous distribution, same
+  4-column worked-table pattern as Sec10 (x_i, f_i, f_i·x_i, f_i|x_i-x̄|),
+  reused verbatim with new data — mid-points 150,250,350,450,550, f=6,10,14,
+  8,2 (N=40), Σf_ix_i=13000→x̄=325, Σf_i|x_i-x̄|=3600→M.D.=90. All five
+  f_i|x_i-x̄| terms hand-verified (1050,750,350,1000,450). Lighter-touch
+  divisor note this time (plain red-margin line, no wrong/right chip pair)
+  since the JSON doesn't flag this one as a speed trap the way Sec10 was —
+  saves the dramatic staging for where the source actually calls for it.
+  PASS both languages on first render, eye-checked.
+- **Sec 14** — worked_examples: combines Sec7's interpolation pattern with
+  Sec13's 4-column table pattern in one section. Text-only cumulative-
+  frequency statement (matches the source's own choice — it's plain text in
+  board_content, not a diagram, so no table built for that part), boxed
+  interpolated median M=20+((20-15)/10)×10=25 via `<Frac>`, then the real
+  table (mid-points 5,15,25,35,45; |x_i-25| and f_i|x_i-25| columns,
+  Σ=430), boxed M.D.(M)=430/40=10.75 marks. Notably needs no `XBar`/
+  `Overline` at all — the anchor here is the median M (a plain letter), not
+  the mean x̄, so this section's formulas skip the drawn-overline machinery
+  every worked example so far has needed. All five f_i|x_i-25| terms and
+  the interpolation hand-verified. PASS both languages, eye-checked.
+- **Sec 15** — tips, closes Subtopic 1: four boxed pitfall cards in a 2×2
+  grid (card 1 red-bordered/red-text for the highest-severity slip —
+  dropping the modulus — cards 2-4 amber for the normal-emphasis ones:
+  wrong divisor, mean-vs-median for "least M.D.", shift-doesn't-change-
+  spread), boxed green transformation rule, closing red sanity check with a
+  `checkD` stamp. Caught a real box-overflow via eye-check the automated
+  verifier couldn't see: card 2's third line baseline (163) sat past its
+  own box's bottom edge (160) — the overlap/overflow gate only checks the
+  canvas safe-area and text-vs-text collisions, not a text run spilling out
+  of its own decorative rounded-rect, so this class of defect is eye-check-
+  only. Fixed by merging to two lines and shrinking the aside to size 12.
+  PASS both languages after the fix, re-eye-checked (all four boxes now
+  clear their borders with margin).
+
+## Subtopic 2 (Variance & Standard Deviation, secs 16-29)
+- **Sec 16** — concept, opens Subtopic 2: mini before/after icon pair (hand-
+  drawn V with a ringed sharp corner vs a smooth curveD-sampled U) sets up
+  |deviation| vs (deviation)², a red-margin 3-item checklist for what
+  squaring buys, boxed formula σ²=(1/n)Σ(x_i-x̄)². Main diagram: four squares
+  sitting directly on a number line, side ∝ |deviation| so area ∝ deviation²
+  (sides 10,10,20,100 px for deviations 1,1,2,10) — the far square is
+  visibly ~100× the near ones' area, not just bigger, landing "one outlier
+  blows up the average area" as a real geometric fact instead of an
+  assertion. Labels "2²=4"/"10²=100" annotate the actual squares. PASS both
+  languages on first render, eye-checked.
+- **Sec 17** — concept: boxed σ=+√(σ²) (√ confirmed native to both fonts per
+  the notation guide, no primitive needed), then reuses Sec1's two-row
+  shared-mean dot-plot pattern almost verbatim for direct visual continuity
+  — Batsman P (44,46,45,43,47, tight green cluster) vs Batsman Q
+  (5,90,12,88,30, wild red spread), both genuinely averaging 45 (hand-
+  verified: 225/5=45), one shared amber mean line through both rows. P's
+  five dots sit close enough to visually merge into a cluster — a deliberate
+  choice, not a defect, since that compression IS the "tight and dependable"
+  point. PASS both languages, eye-checked.
+- **Sec 18** — concept: "Height: σ=5cm ≠ Weight: σ=5kg" chip pair makes the
+  units problem concrete before the fix. Boxed C.V.=(σ/x̄)×100 (simple
+  single-term fraction, flattened inline per the notation rule despite high
+  emphasis). Payoff diagram: two identically-sized outline bars, one with a
+  chunky 20%-width red fill (±₹10 on a ₹50 item) and one with a hairline
+  2px sliver (±₹10 on a ₹50,000 item, true proportional width would be
+  0.04px — kept it a visible sliver rather than literally invisible so the
+  contrast still reads, while the label carries "invisible") — the relative-
+  spread point lands geometrically, not just asserted. PASS both languages,
+  eye-checked.
+- **Sec 19** — concept: chip-row contrast makes the structural fact visual —
+  M.D. gets three green ticks (mean/median/mode all valid anchors),
+  variance gets one green tick and two red crosses (only the mean is
+  valid). Boxed σ²=0 ⟺ x_i=x̄ for every i. Closing pair of mini icons: a
+  perfectly flat 4-point line (green, "flat → σ²=0") beside a genuinely
+  jagged 4-point line (red, "wobble → σ²>0") — the zero-variance boundary
+  case shown geometrically, not just stated. PASS both languages, eye-
+  checked.
+- **Sec 20** — concept, FLAGGED for extra scrutiny (shortcut-formula
+  derivation): built as a genuine multi-line algebraic derivation, not a
+  fade-in of the finished result — expand (x_i-x̄)² → split the sum into
+  three pieces (with the "Σ distributes over +" justification stated) →
+  substitute (1/n)Σx_i=x̄ and Σx̄²=nx̄² → combine -2x̄²+x̄²=-x̄² → land the
+  boxed workhorse σ²=(1/n)Σx_i²-x̄². Hand-verified every algebraic step
+  independently against the standard NCERT derivation before trusting the
+  render — all correct, matches board_content's own LaTeX exactly. Continuation
+  lines indent under the leading "=" the way a real board derivation does.
+  PASS both languages; also checked the dedicated b6 frame directly (not
+  just "final", which for English lands ~0.4s before beat 6 fires — an
+  audio-duration artifact, not a scene defect, confirmed by the b6 frame
+  itself rendering the closing note correctly).
+- **Sec 21** — concept, a calculus proof built live: g(a)=(1/n)Σ(x_i-a)² →
+  g'(a)=(1/n)Σ·2(x_i-a)(-1)=-(2/n)Σ(x_i-a) (chain rule) → set to zero →
+  boxed green Σx_i=na ⇒ a=x̄. Independently re-derived and confirmed correct
+  before trusting the render (Σ(x_i-a)=0 ⇒ Σx_i-na=0 ⇒ a=x̄). Closes with a
+  two-chip "median → minimises Σ|x_i-a|" vs "mean → minimises Σ(x_i-a)²"
+  parallel, connected by a plain "vs" — the same visual grammar as Sec19's
+  anchor-comparison chips, reused for a genuinely different point (this
+  time both are valid, just for different loss functions, not one right one
+  wrong). PASS both languages, eye-checked via the dedicated b6 frame.
+- **Sec 22** — concept: two `<Frac>` moments — the coding step d_i=(x_i-A)/h
+  (compound numerator, textbook Frac case) and the boxed step-deviation
+  formula σ²=h²[Σf_id_i²/N - (Σf_id_i/N)²], two side-by-side fractions
+  inside brackets with the second one squared (the ² glyph is inherently a
+  raised Unicode character, so it reads correctly as an exponent even
+  placed as plain trailing text after the Frac, no manual y-offset needed).
+  Red-margin note gives the h²-not-h guardrail real weight since the JSON
+  flags it high-emphasis and the narration calls it "a classic error."
+  PASS both languages, eye-checked (fraction layout and bracket/exponent
+  placement both confirmed correct).
+- **Sec 23** — formulas: 5-card recap grid (green for the three high-emphasis
+  formulas — core variance+shortcut+SD, C.V.+transformation rule, and the
+  red-margin close — amber for the two normal ones — frequency-distribution
+  and grouped/coded variance), everything flattened inline (no `<Frac>`)
+  since this is explicitly "restating for quick recall, not re-teaching"
+  and the true stacked forms already had their moment in Sec7/8/22. Caught
+  and fixed a real spacing defect via eye-check: chaining `σ = +√(σ²)` onto
+  the end of a `FormulaRow` via the cursor-advance estimate left it visually
+  butted against the preceding `x̄²` with no perceptible gap in both
+  languages — the estimate wasn't wrong, just tight at that font size. Fixed
+  by un-chaining it into its own independently-positioned `<T>` at a fixed
+  x, which guarantees clearance regardless of estimate accuracy — the
+  general lesson: don't chain unrelated formula fragments through one
+  cursor when a fixed anchor is cheap and safer. PASS both languages after
+  the fix, re-eye-checked.
+- **Sec 24** — worked_examples: data 12,15,18,21,24 → x̄=(12+15+18+21+24)/5=
+  90/5=18 (Frac, compound numerator). Table builds x_i/(x_i-x̄)/(x_i-x̄)²
+  (deviations -6,-3,0,3,6 — total shown as 0, a free zero-sum check;
+  squares 36,9,0,9,36 → Σ=90). Two green boxes side by side land σ²=90/5=18
+  (units²) and σ=√18=3√2≈4.24 units. While authoring this one, a grep sweep
+  turned up the raw-x̄-glyph bug fixed above (Sec13/15/20) — this section
+  itself was written correctly from the start (XBar for the mean label,
+  `x_bar` fallback in table headers). PASS both languages, eye-checked
+  (every arithmetic value and the √18=3√2 simplification confirmed).
+- **Sec 25** — worked_examples: σ²=5 for 20 obs, rule y=3x+4 → new σ²=3²×5=45,
+  new σ=|3|×√5=3√5≈6.71 (hand-verified: √5≈2.236, 3×2.236≈6.708). Two green
+  boxes land both results side by side. Trap staged as an explicit
+  wrong-vs-right chip pair — "5×3=15 ✗" beside "5×3²=45 ✓" — the exact
+  naive mistake the narration calls out, shown numerically rather than only
+  described, same pattern as Sec10's divisor trap. PASS both languages,
+  eye-checked.
+- **Sec 26** — worked_examples: same 4-column table pattern as Sec10/13
+  (x_i, f_i, f_i·x_i, f_i·x_i²) applied to a frequency distribution whose
+  mean comes out non-whole (x̄=232/20=11.6 — exactly when the shortcut
+  formula earns its keep, per the narration). Σf_ix_i²=32+320+1152+768+800
+  =3072 expanded and hand-verified. Boxed σ²=3072/20-(11.6)²=153.6-134.56=
+  19.04 (11.6²=134.56 confirmed by hand) and σ=√19.04≈4.36. PASS both
+  languages, eye-checked.
+- **Sec 27** — worked_examples (JEE Advanced): Section A (n=30,mean=60,σ=8)
+  and Section B (n=20,mean=70,σ=6) combined. Real number line (linear
+  scale) plots both group means plus the combined mean (64) as a dashed
+  red line between them, with d1=-4 and d2=6 drawn as green underline spans
+  whose relative lengths are genuinely proportional (d2's span visibly
+  longer than d1's, matching 6>4). Boxed σ²=[30(64+16)+20(72)]/50=76.8 and
+  σ=√76.8≈8.76 (hand-verified: 8²+4²=80, 6²+6²=72, 30×80=2400, 20×72=1440,
+  sum 3840/50=76.8; √76.8≈8.76). Closing note lands the actual insight —
+  combined SD exceeds BOTH individual SDs, not some average of them. PASS
+  both languages, eye-checked.
+- **Sec 28** — worked_examples: 5-column table (x_i,f_i,d_i,f_i·d_i,f_i·d_i²)
+  for the step-deviation method — mid-points 10,30,50,70,90, A=50, h=20 →
+  codes -2..2, Σf_id_i=-1, Σf_id_i²=41 (both hand-verified). Boxed formula
+  uses two side-by-side `<Frac>`s inside brackets (41/30 and (-1/30)²,
+  matching Sec22's pattern) → σ²=400[1.36667-0.00111]=546.22≈546.2 → σ=
+  √546.2≈23.37, which the source rounds to 23.4 — kept that rounding to
+  match board_content exactly rather than introducing a second correct-but-
+  different value. Red-margin note explicitly warns not to drop the tiny
+  (-1/30)² term, matching the JSON's own emphasis. PASS both languages,
+  eye-checked.
+- **Sec 29** — tips, closes Subtopic 2: vertical stack (not a 2×2 grid this
+  time) — red card for the highest-severity slip (confusing variance with
+  SD), amber cards for the other three (transformation-rule mishandling,
+  stopping the shortcut early, averaging two SDs), with the negative-
+  variance diagnostic σ²=(1/n)Σx_i²-x̄² (σ²<0 ⇒ swapped terms) boxed in
+  green between slip 3 and slip 4 since it's the direct fix for slip 3.
+  Closing red note: the two instant checks plus the C.V. reminder. PASS
+  both languages, eye-checked.
+
+## Subtopic 3 (Analysis of Frequency Distributions & Advanced Problems, secs 30-42)
+- **Sec 30** — concept, opens Subtopic 3: two proportionally-scaled bars
+  (mean=40 vs mean=200, genuinely 5× longer matching 200/40=5) each with a
+  fixed-size error-bar indicator for the SAME σ=5 — replicates the source
+  SVG's own approach exactly (bar length scaled to the mean, error-bar
+  width kept a constant visual size rather than true-to-scale, since a
+  truly-proportional σ=5 marker would be too small to read at either
+  scale) — red "big relative wobble" caption on the short bar, green
+  "small relative wobble" on the long one. Boxed C.V.=(σ/x̄)×100. PASS both
+  languages, eye-checked.
+- **Sec 31** — concept: a real decision-tree flowchart — "Same mean?"
+  decision box branches YES (green arrow → "compare σ directly, smaller σ
+  = steadier") and NO (amber arrow → "different means/units? MUST use
+  C.V."), the section's whole logic in one diagram rather than described in
+  prose. Boxed x̄₁=x̄₂ ⇒ compare σ directly — caught and fixed the same
+  raw-combining-mark mistake again (typed literal "x̄₁"/"x̄₂" while
+  drafting) before it ever reached a render: swapped in `XBar` for each bar
+  plus a trailing native Unicode subscript digit (₁/₂, confirmed safe)
+  rather than any combining mark on the numeral. Worth a standing habit for
+  the rest of this chapter: grep the diff for the bar character before
+  verifying, not just after. PASS both languages, eye-checked.
+- **Sec 32** — concept, foundational for the reverse-problem sections ahead
+  (Sec35/36 lean on exactly these two identities, extra care taken here):
+  two side-by-side "MASTER TOTAL" boxes — #1 derives Σx_i=nx̄ from the mean
+  definition, #2 derives Σx_i²=n(σ²+x̄²) from the shortcut variance formula,
+  each shown as "given → result" on two lines. Grepped the file for the raw
+  combining-mark glyph before typechecking (per the habit noted in Sec31) —
+  came back clean, confirming every x̄ here already went through XBar.
+  Independently re-verified both derivations by hand before trusting the
+  render. PASS both languages, eye-checked.
+- **Sec 33** — concept: three fine-print caveats as stacked amber cards
+  (needs non-zero mean, needs ratio data with a true zero — heights/wages/
+  marks qualify but °C doesn't since its zero is arbitrary, "more
+  consistent" ≠ "better") rather than the red-heavy tips-section treatment,
+  since these are conditions to respect, not mistakes already made. Closing
+  green box: use C.V. for spread, then answer the actual question. Grep-
+  checked for the raw combining-mark glyph before typechecking — clean.
+  PASS both languages, eye-checked.
+- **Sec 34** — concept (procedure): 3-step comparison list (compute x̄ and σ
+  for each series → if means equal, compare σ directly → otherwise boxed
+  C.V.=σ/x̄×100 for each) plus a boxed reverse form x̄=(σ/C.V.)×100 for
+  algebraic-cousin problems. Grep sweep caught a real bug before it ever
+  rendered: the Hinglish translation for beat 1 redundantly re-typed a raw
+  "x̄" in the trailing string even though the `XBar` component immediately
+  before it already draws the bar — same class of mistake as Sec20/31, but
+  this time in a translation string rather than a fresh formula, showing
+  the check needs to run on every language branch of `t()`, not just the
+  English one. PASS both languages after the fix, eye-checked.
+- **Sec 35** — concept (procedure), FLAGGED for extra scrutiny (reverse
+  problem — this is the general method only; the worked numeric example
+  lands in Sec 39). Independently re-derived the algebra before trusting
+  the render: p+q known from Σx_i=nx̄, p²+q² known from Σ(x_i-x̄)²=nσ²,
+  then (p+q)²=p²+q²+2pq ⇒ pq=[(p+q)²-(p²+q²)]/2 (valid algebra), landing
+  p,q as roots of the standard sum/product quadratic t²-(p+q)t+pq=0 — all
+  confirmed correct against the source. 3-step procedure list + boxed
+  identity + red-margin note stating the final quadratic. Grep-checked for
+  the raw combining-mark glyph before typechecking — clean. PASS both
+  languages, eye-checked.
+- **Sec 36** — concept (procedure), FLAGGED for extra scrutiny (reverse
+  problem — general method only; the worked numeric example lands in
+  Sec 40). Verified: Σx_correct=Σx_wrong-w+c and Σx²_correct=Σx²_wrong-w²+c²
+  (both remove the wrong value's contribution and add the correct one's,
+  correctly done in parallel for the linear and squared totals); the
+  omitted-value variant correctly drops only the "+c"/"+c²" terms and
+  reduces n by 1 since one fewer observation genuinely exists. Two boxed
+  green formulas side by side, red-margin note (2 lines) on the single most
+  common half-mark loss — fixing only the mean and forgetting Σx² needs the
+  same repair. Grep-checked for the raw combining-mark glyph before
+  typechecking — clean. PASS both languages, eye-checked. This closes out
+  the two sections the task brief flagged for extra scrutiny (35, 36) —
+  both independently re-derived and confirmed correct against the source.
+- **Sec 37** — formulas: 5-card recap grid for the whole subtopic (green for
+  the two high-emphasis cards — C.V.+reverse form, the two master totals —
+  amber for the three normal ones — correction formulas, missing-
+  observations identity+quadratic, combined mean/variance), red-margin
+  close with the three guardrails. First render had a real overlap: the
+  always-on title and the beat-0 heading, both shrunk to fit this denser
+  section, ended up close enough in y that their Kalam ascent/descent boxes
+  genuinely intersected — caught by the verifier, not eye-check, and fixed
+  by widening the title→heading gap and shifting every card down to match.
+  Reused the plain `x_bar`/`x_bar1`/`x_bar2` fallback for the combined-
+  variance card (too many mean symbols to spell out with real `XBar`s at
+  this density) while keeping true `XBar` for the two simpler cards. PASS
+  both languages after the fix, eye-checked.
+- **Sec 38** — worked_examples: Arjun (mean 50, SD 10 → C.V.=10/50×100=20%)
+  vs Vikram (mean 40, SD 6 → C.V.=6/40×100=15%), both hand-verified. Two
+  boxed C.V. cards land side by side, red-margin note carries the actual
+  point of the example (Arjun's higher average makes him the better chase
+  bet despite losing on consistency), closing with two labeled verdict
+  chips — "Consistency → Vikram" (green) and "Chase a steep total → Arjun"
+  (amber) — making the split verdict concrete rather than just asserted in
+  prose. PASS both languages, eye-checked.
+- **Sec 39** — worked_examples: the Sec35 procedure applied to real numbers
+  — 5 obs, mean=6, variance=6.8, known {2,4,9}, find a,b. Full derivation
+  chain rendered and hand-verified end to end: a+b=5(6)-15=15; (a-6)²+
+  (b-6)²=5(6.8)-29=5; substituting p=a-6,q=b-6 gives p+q=3, and (p+q)²=9=
+  5+2pq ⇒ pq=2; boxed quadratic t²-3t+2=0 factors to t=1,2 ⇒ {a,b}={7,8}.
+  Closing sanity check independently re-summed the reconstructed set
+  {2,4,9,7,8}: sum=30 (mean=6 ✓) and Σ(x_i-6)²=16+4+9+1+4=34 (34/5=6.8 ✓) —
+  both match the given statistics exactly, confirming the answer. PASS both
+  languages, eye-checked.
+- **Sec 40** — worked_examples: the Sec36 procedure applied to real numbers
+  — 20 obs, wrong mean=30, wrong SD=5, one value recorded as 50 should be
+  30. Full correction chain hand-verified end to end: Σx_wrong=20×30=600,
+  Σx²_wrong=20(25+900)=18500; repairing the sum gives Σx_corr=600-50+30=
+  580 ⇒ x̄_corr=580/20=29 (real `XBar` used here — single occurrence, split
+  the line into three fixed-x pieces around it rather than chaining, per
+  the Sec23 lesson); repairing the sum of squares gives Σx²_corr=18500-
+  2500+900=16900; boxed landing formula σ²=16900/20-29²=845-841=4 ⇒ σ=2.
+  Closing red-margin note ties it back to the earlier C.V./outlier
+  discussion: the misrecorded 50 was 4 standard deviations out, so
+  correcting it alone collapsed the SD from 5 to 2. PASS both languages,
+  eye-checked.
+- **Sec 41** — worked_examples: the chapter's finale problem, fusing the
+  combined-variance and C.V. procedures. Group I (n=40, mean=60, SD=8) and
+  Group II (n=60, mean=50, SD=6) hand-verified end to end: combined mean
+  x̄=(40×60+60×50)/100=5400/100=54; group-mean deviations d₁=60-54=6,
+  d₂=50-54=-4; combined variance σ²=[40(64+36)+60(36+16)]/100=
+  [4000+3120]/100=71.2; boxed landing formula σ=√71.2≈8.44, C.V.=
+  8.44/54×100≈15.6%. Closing red-margin note echoes Sec27's lesson with
+  fresh numbers: 8.44 exceeds both group SDs (8 and 6) since the d² terms
+  inject genuine between-group spread that a naive average-the-SDs
+  approach would miss. Real `XBar` used once for the combined mean (beat
+  2), positioned as a fixed-x pair per the Sec23/40 lesson rather than
+  chained. PASS both languages, eye-checked.
+- **Sec 42** — tips: closes Subtopic 3 (and the chapter's teaching arc)
+  with the four reverse-problem slips, mirroring Sec29's chapter-section-
+  close structure but built from board_content's own beat shape rather
+  than a card grid: a red-margin high-emphasis note for slip 1 (σ vs C.V.
+  on different-mean series), three plain centered lines for slips 2-4
+  (forgetting to repair Σx_i², feeding variance instead of SD into C.V.,
+  misreading "more consistent" as "better"), a boxed green landing formula
+  for the two master totals (Σx_i=n·x̄, Σx_i²=n(σ²+x̄²)), and a closing
+  red-margin note with the two sanity checks (σ²≥0, C.V. must stay
+  dimensionless). The master-totals formula uses two x̄ occurrences in one
+  line — per the established Sec37 rule for dense multi-symbol recap
+  formulas, used the plain `x_bar` text fallback instead of true `XBar`
+  rather than risk misaligning two manually-cursored inline bars. PASS
+  both languages, eye-checked.
+
+## Subtopic 4
+- **Sec 43** — formula_recap: the whole-chapter toolkit on one board, all
+  three subtopics restated (not re-derived) as a six-card grid — closely
+  mirrors Sec37's dense-recap card pattern but scaled up to cover the
+  full chapter. Cards, colored by board_content's own emphasis (green =
+  high, amber = normal): range & coefficient of range; mean deviation
+  about a (least at the median); the variance shortcut and frequency
+  form with σ=+√σ²; grouped/coded variance with step deviation d_i; C.V.
+  plus the a/b transformation scaling rules; and the densest card —
+  combined variance, Var(1..n)=(n²-1)/12, and the two reverse-problem
+  master totals — all three packed into one row at size 10, the smallest
+  font used anywhere in the chapter. Closes on the four permanent
+  guardrails in red (M.D.≤Range, σ²≥0, σ≤Range, C.V. dimensionless), an
+  exact restatement of board_content's own closing note. Used the plain
+  `x_bar` text fallback uniformly across every card rather than mixing
+  real `XBar` in for the 1-2-occurrence cards, since consistency across
+  six back-to-back dense rows mattered more than exactness on any one of
+  them. PASS both languages, eye-checked — all six cards render legibly
+  with zero overlap despite the density.
+- **Sec 44** — cheat_sheet: the chapter's FINAL section. board_content's
+  seq2 was a genuine `type: diagram` (a raw embedded SVG, not a formula) —
+  per "diagram beats formula" this was hand-translated into real
+  boxes+arrows rather than flattened to text: a 4-box refinement ladder,
+  Range → Mean Deviation → Variance → Standard Deviation, built one
+  box/arrow at a time (the "one hand" rule), with the final box
+  highlighted in red exactly as the source SVG did, closing on the same
+  muted caption ("crude → smooth, differentiable, unit-restored").
+  Researched precedent before writing (M11Ch08Sec1's 3-box input→rule→
+  output machine diagram) via an Explore agent since no prior `cheat_sheet`
+  section in this codebase had drawn a multi-box flow — confirmed
+  `arrowD`+`Draw` with `MUTED` stroke and hand-computed fixed box
+  positions is the established pattern, not an auto-layout. Below the
+  diagram: the "Median Minimises Mean-deviation" 3-M's mnemonic (red-
+  margin, high), the N=Σf_i divisor guardrail, the transformation
+  mnemonic, the C.V. consistency shortcut, and a closing red-margin note
+  with the reverse-problem kit + sanity trio (again `x_bar` fallback for
+  the two dense x̄ occurrences, per the Sec42/43 rule). PASS both
+  languages, eye-checked — the diagram in particular rendered cleanly
+  with correct arrow directions, box spacing, and red highlight on the
+  final box. This closes the chapter: all 44 sections complete.
