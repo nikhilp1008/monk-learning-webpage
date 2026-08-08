@@ -106,9 +106,11 @@ export function SessionView({
     ? "Muted"
     : isPaused
     ? "Paused"
-    : phase === "awaiting_answer"
+    : phase === "awaiting_answer" || (subtopicOptions && subtopicOptions.length > 0)
     ? "Waiting for your answer"
-    : "Listening";
+    : voiceState?.isRecording
+    ? "Listening"
+    : "Ready";
 
   // Clean speech text for captions bar (B1 fix: never raw JSON)
   const rawSpeech = voiceState?.sessionCap || (
@@ -214,11 +216,23 @@ export function SessionView({
               overflowY: "auto",
             }}
           >
-            {/* Header */}
+            {/* Header / Quiz Badge */}
             <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "12px", flex: "none" }}>
-              <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#EEA31F", flex: "none" }} />
-              <span style={{ fontWeight: 800, fontSize: ".62rem", letterSpacing: ".14em", textTransform: "uppercase", color: "#9A6A12" }}>
-                {teacher} asks you
+              <span style={{
+                padding: "3px 8px",
+                borderRadius: "9999px",
+                background: phase === "awaiting_answer" ? "#FCFAF4" : "#F4F6FB",
+                border: `1px solid ${phase === "awaiting_answer" ? "#EEA31F" : "#3B82F6"}`,
+                fontWeight: 800,
+                fontSize: ".62rem",
+                letterSpacing: ".14em",
+                textTransform: "uppercase",
+                color: phase === "awaiting_answer" ? "#9A6A12" : "#1D4ED8"
+              }}>
+                {phase === "awaiting_answer" ? "⚡ CHECKPOINT QUIZ" : "💡 SUGGESTED RESPONSES"}
+              </span>
+              <span style={{ fontSize: ".75rem", color: "#6E685C", fontWeight: 500 }}>
+                {phase === "awaiting_answer" ? "Tap an option to answer:" : "Select an option to respond:"}
               </span>
             </div>
 
@@ -227,41 +241,81 @@ export function SessionView({
               {cleanSpeech.length > 20 ? cleanSpeech : "Select an option or type your response below:"}
             </p>
 
-            {/* Option Chips — Renders 2 chips for procedural, 3 chips for check/checkpoint; empty if prompt omitted options */}
+            {/* MCQ Quiz Cards (A, B, C, D) */}
             {subtopicOptions && subtopicOptions.length > 0 && (
               <div style={{ display: "flex", flexDirection: "column", gap: "8px", flex: "none" }}>
-                {subtopicOptions.map((optionText, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => {
-                      onSendTurn(optionText);
-                      setInputText("");
-                    }}
-                    style={{
-                      padding: "10px 14px",
-                      borderRadius: "11px",
-                      border: "1.4px solid rgba(28,26,22,.14)",
-                      background: "#fff",
-                      fontFamily: "inherit",
-                      fontWeight: 600,
-                      fontSize: ".88rem",
-                      textAlign: "left",
-                      color: "#1C1A16",
-                      cursor: "pointer",
-                      transition: "all 0.2s ease"
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.borderColor = "#1C1A16";
-                      e.currentTarget.style.background = "#FCFAF4";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.borderColor = "rgba(28,26,22,.14)";
-                      e.currentTarget.style.background = "#fff";
-                    }}
-                  >
-                    <KaTeXRenderer latex={optionText} displayMode={false} />
-                  </button>
-                ))}
+                {subtopicOptions.map((optionText, idx) => {
+                  const letters = ["A", "B", "C", "D"];
+                  const letter = letters[idx % letters.length];
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => {
+                        onSendTurn(optionText);
+                        setInputText("");
+                      }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "12px",
+                        padding: "12px 14px",
+                        borderRadius: "12px",
+                        border: "1.5px solid rgba(28,26,22,.14)",
+                        background: "#fff",
+                        fontFamily: "inherit",
+                        fontWeight: 600,
+                        fontSize: ".88rem",
+                        textAlign: "left",
+                        color: "#1C1A16",
+                        cursor: "pointer",
+                        transition: "all 0.2s cubic-bezier(.2,.7,.2,1)"
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.borderColor = "#1C1A16";
+                        e.currentTarget.style.background = "#FCFAF4";
+                        e.currentTarget.style.transform = "translateY(-1px)";
+                        const badge = e.currentTarget.querySelector("span.mcq-badge") as HTMLElement;
+                        if (badge) {
+                          badge.style.background = "#EEA31F";
+                          badge.style.color = "#1C1A16";
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor = "rgba(28,26,22,.14)";
+                        e.currentTarget.style.background = "#fff";
+                        e.currentTarget.style.transform = "translateY(0)";
+                        const badge = e.currentTarget.querySelector("span.mcq-badge") as HTMLElement;
+                        if (badge) {
+                          badge.style.background = "#1C1A16";
+                          badge.style.color = "#fff";
+                        }
+                      }}
+                    >
+                      <span
+                        className="mcq-badge"
+                        style={{
+                          width: "28px",
+                          height: "28px",
+                          borderRadius: "50%",
+                          background: "#1C1A16",
+                          color: "#fff",
+                          fontWeight: 700,
+                          fontSize: ".75rem",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flex: "none",
+                          transition: "all 0.2s ease"
+                        }}
+                      >
+                        {letter}
+                      </span>
+                      <span style={{ flex: 1 }}>
+                        <KaTeXRenderer latex={optionText} displayMode={false} />
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             )}
 
