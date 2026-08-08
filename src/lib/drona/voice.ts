@@ -8,6 +8,7 @@ export interface VoiceClientOptions {
   onBoardEvents?: (events: any[]) => void;
   onBoardUpdate?: (latex: any) => void;
   onMetaUpdate?: (meta: any) => void;
+  onPhaseChange?: (phase: string, checkOptions: string[]) => void;
   onError?: (err: Error) => void;
   onSessionEnded?: () => void;
 }
@@ -124,6 +125,9 @@ export class DronaVoiceClient {
       const type = msg.type;
 
       if (type === "state") {
+        if (msg.phase) {
+          this.options.onPhaseChange?.(msg.phase, Array.isArray(msg.check_options) ? msg.check_options : []);
+        }
         if (msg.phase === "complete") {
           this.options.onSessionEnded?.();
         }

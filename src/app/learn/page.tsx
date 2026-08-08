@@ -108,6 +108,7 @@ export default function LearnPage() {
   const [segmentIndex, setSegmentIndex] = useState(1);
   const [totalSegments, setTotalSegments] = useState(1);
   const [sessionPhase, setSessionPhase] = useState<"teaching" | "awaiting_answer" | "wrapup" | "complete">("teaching");
+  const [checkOptions, setCheckOptions] = useState<string[]>([]);
   const [isStreaming, setIsStreaming] = useState(false);
   const [summaryData, setSummaryData] = useState<EndSessionResponse | null>(null);
 
@@ -318,6 +319,7 @@ export default function LearnPage() {
       text: utterance,
       timestamp: new Date(),
     }]);
+    setCheckOptions([]);
     setIsStreaming(true);
 
     if (voiceClientRef.current) {
@@ -418,6 +420,11 @@ export default function LearnPage() {
             setBoardLatex((prev) => (prev ? `${prev}\n${payload}` : payload));
           }
         },
+        onPhaseChange: (phase, options) => {
+          console.log(`[PHASE CHANGE] phase=${phase} check_options=${options.length}`);
+          setSessionPhase(phase as "teaching" | "awaiting_answer" | "wrapup" | "complete");
+          setCheckOptions(options);
+        },
         onSessionEnded: () => {
           handleEndSession();
         },
@@ -451,6 +458,7 @@ export default function LearnPage() {
             phase={sessionPhase}
             isStreaming={isStreaming}
             voiceState={voiceState}
+            subtopicOptions={checkOptions}
             onSendTurn={handleSendTurn}
             onEndSession={handleEndSession}
             onToggleMute={() => voiceClientRef.current?.toggleMute()}
