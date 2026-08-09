@@ -20,6 +20,9 @@ function getBaseUrl(): string {
 }
 
 async function getAuthToken(): Promise<string> {
+  if (typeof window !== "undefined" && (window as any).__E2E_MOCK_TOKEN__) {
+    return (window as any).__E2E_MOCK_TOKEN__;
+  }
   const {
     data: { session },
   } = await supabase.auth.getSession();

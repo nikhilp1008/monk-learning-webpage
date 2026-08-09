@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:e2e": "node scripts/e2e_student_smoke_test.js",
+    "test:cross-subject": "node scripts/e2e_4_subject_cross_validation.js"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",

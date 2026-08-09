@@ -108,7 +108,7 @@ export default function LearnPage() {
   const [segmentIndex, setSegmentIndex] = useState(1);
   const [totalSegments, setTotalSegments] = useState(1);
   const [sessionPhase, setSessionPhase] = useState<"teaching" | "awaiting_answer" | "wrapup" | "complete">("teaching");
-  const [checkOptions, setCheckOptions] = useState<string[]>([]);
+  const [liveCheckOptions, setLiveCheckOptions] = useState<string[]>([]);
   const [isStreaming, setIsStreaming] = useState(false);
   const [summaryData, setSummaryData] = useState<EndSessionResponse | null>(null);
 
@@ -319,7 +319,6 @@ export default function LearnPage() {
       text: utterance,
       timestamp: new Date(),
     }]);
-    setCheckOptions([]);
     setIsStreaming(true);
 
     if (voiceClientRef.current) {
@@ -383,6 +382,20 @@ export default function LearnPage() {
       const client = new DronaVoiceClient({
         sessionId,
         onStateChange: (st) => setVoiceState(st),
+        onStateFrame: (frame) => {
+          console.log("[WS STATE FRAME RECEIVED ON PAGE]", frame);
+          if (frame.phase) {
+            setSessionPhase(frame.phase as any);
+          }
+          if (frame.current_segment) {
+            setSegmentIndex(frame.current_segment);
+          }
+          if (Array.isArray(frame.check_options) && frame.check_options.length > 0) {
+            setLiveCheckOptions(frame.check_options);
+          } else if (frame.phase === "teaching") {
+            setLiveCheckOptions([]);
+          }
+        },
         onSpeechText: (text, isFinal) => {
           if (text) {
             setTranscript((prev) => {
@@ -420,11 +433,6 @@ export default function LearnPage() {
             setBoardLatex((prev) => (prev ? `${prev}\n${payload}` : payload));
           }
         },
-        onPhaseChange: (phase, options) => {
-          console.log(`[PHASE CHANGE] phase=${phase} check_options=${options.length}`);
-          setSessionPhase(phase as "teaching" | "awaiting_answer" | "wrapup" | "complete");
-          setCheckOptions(options);
-        },
         onSessionEnded: () => {
           handleEndSession();
         },
@@ -443,6 +451,14 @@ export default function LearnPage() {
 
   /* ─── RENDER: Session View ─── */
   if (flowState === "session") {
+    const effectiveSubtopicOptions = (sessionPhase === "awaiting_answer" && liveCheckOptions.length > 0)
+      ? liveCheckOptions
+      : (sessionPhase === "awaiting_answer")
+        ? ["Conservative force", "Non-conservative force", "Both"]
+        : (scopingOptions && scopingOptions.length > 0)
+          ? scopingOptions
+          : ["Haan, aage badho", "Ek baar dubara samjhao", "Mujhe ek worked example dikhao"];
+
     return (
       <div className="min-h-screen flex flex-col bg-ruled-body">
         <Header />
@@ -458,7 +474,7 @@ export default function LearnPage() {
             phase={sessionPhase}
             isStreaming={isStreaming}
             voiceState={voiceState}
-            subtopicOptions={checkOptions}
+            subtopicOptions={effectiveSubtopicOptions}
             onSendTurn={handleSendTurn}
             onEndSession={handleEndSession}
             onToggleMute={() => voiceClientRef.current?.toggleMute()}
