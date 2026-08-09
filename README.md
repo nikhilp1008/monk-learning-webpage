@@ -72,20 +72,38 @@ monk-learning-web/
 
 ---
 
-## 2. Core Component Architecture
+## 2. Core Component Architecture & Dataflow
 
-```text
-src/
- ├── app/
- │   └── learn/page.tsx               # Main session orchestrator & topic selector
- ├── components/drona/
- │   ├── SessionView.tsx               # Primary live session container & status badge
- │   ├── WhiteboardView.tsx            # Progressive LaTeX/text board event renderer
- │   ├── AskSheet.tsx                  # Option chips container for questions & check-ins
- │   └── CaptionsBar.tsx               # Live spoken transcript captions
- └── lib/drona/
-     ├── voice.ts                      # Web Audio PCM queue, WebSocket & mic manager
-     └── client.ts                     # REST API client for sessions & chapters
+```mermaid
+flowchart LR
+    subgraph Engine["Client Core Engine (voice.ts)"]
+        WS[WebSocket Manager]
+        AudioQueue[Web Audio PCM Queue]
+        MicListener[Push-To-Talk Mic Stream]
+    end
+
+    subgraph State["React Page State (page.tsx)"]
+        PhaseState[Session Phase & Turn]
+        ChipOptions[Live Check Options]
+        BoardData[Accumulated Board Items]
+    end
+
+    subgraph UI["UI Render Components"]
+        Header[SessionView Status Badge]
+        BoardUI[WhiteboardView KaTeX]
+        ChipsUI[AskSheet Chips]
+    end
+
+    WS -->|Binary PCM Chunks| AudioQueue
+    WS -->|event: board_events| BoardData
+    WS -->|event: state| PhaseState
+    WS -->|check_options| ChipOptions
+
+    AudioQueue -->|Audio Playback Start| BoardUI
+    BoardData --> BoardUI
+    PhaseState --> Header
+    ChipOptions --> ChipsUI
+    MicListener -->|16kHz PCM Frames| WS
 ```
 
 ### Component Roles
