@@ -28,6 +28,50 @@ The application provides a real-time, low-latency learning canvas featuring a pr
 
 ---
 
+## 1.5 Directory & Folder Breakdown
+
+Here is an explanatory guide to every primary directory in the frontend repository and what it does:
+
+```text
+monk-learning-web/
+ ├── src/                      # Application source code
+ │    ├── app/                 # Next.js App Router routes and page layouts
+ │    │    ├── learn/          # Core live Drona tutoring canvas page (/learn)
+ │    │    ├── dashboard/      # Student learning progress dashboard (/dashboard)
+ │    │    ├── lessons/        # Subject chapter index & section browser (/lessons)
+ │    │    ├── practice/       # Practice question solving interface (/practice)
+ │    │    ├── onboarding/     # Initial student setup and persona selection
+ │    │    ├── auth/           # OAuth login callbacks & Supabase session handlers
+ │    │    └── login/          # User authentication login view
+ │    ├── components/          # Reusable UI components
+ │    │    ├── drona/          # Live Drona Tutoring Canvas components (SessionView, WhiteboardView, AskSheet)
+ │    │    ├── practice/       # Practice question cards & solution step components
+ │    │    └── ui/             # Core UI primitives (buttons, modals, badges, inputs)
+ │    └── lib/                 # Core client libraries, utilities, & state managers
+ │         └── drona/          # Client API & Web Audio engines (voice.ts, client.ts)
+ ├── public/                   # Static web assets, media samples, SVG icons, and fonts
+ ├── scripts/                  # Automated browser E2E test scripts & Playwright capture tools
+ └── styles/                   # Global CSS design tokens, animations, and KaTeX overrides
+```
+
+### Folder Explanations
+
+- **`src/app/`**: Contains Next.js App Router endpoints.
+  - **`src/app/learn/page.tsx`**: The main live tutoring canvas page where Drona sessions run. Orchestrates topic selection, WebSocket connection, Ask Sheet rendering, and audio streaming.
+  - **`src/app/lessons/`**: Displays chapter hierarchies, subtopic cards, and lesson preparation drawers for Physics, Chemistry, Biology, and Mathematics.
+  - **`src/app/practice/`**: Practice question bank solver interface with step-by-step solutions.
+- **`src/components/drona/`**: Contains specialized UI elements for the live Drona lesson screen:
+  - `SessionView.tsx`: Manages top status badges, audio controls, transcript drawers, and layout bounds.
+  - `WhiteboardView.tsx`: Renders formatted LaTeX formulas (KaTeX) and text note bullet points as Drona speaks.
+  - `AskSheet.tsx`: Displays interactive option chips whenever Drona poses a question or check-in.
+- **`src/lib/drona/`**:
+  - `voice.ts`: Manages Web Audio API (`AudioContext`), PCM 16kHz audio buffer decoding, sentence queueing, WebSocket protocol handling, and microphone push-to-talk state.
+  - `client.ts`: Supabase REST client for starting sessions, advancing subtopics, and fetching chapter plans.
+- **`scripts/`**: Developer E2E verification utilities (Puppeteer/Playwright browser automation scripts for visual regression and Ask Sheet testing).
+- **`public/`**: Serves static media assets, sound effects, fallback audio files, and brand icons.
+
+---
+
 ## 2. Core Component Architecture
 
 ```text
