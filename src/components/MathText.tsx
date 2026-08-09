@@ -18,6 +18,20 @@ export function MathText({ content, className = "" }: MathTextProps) {
           displayMode,
           throwOnError: false, // Malformed LaTeX degrades gracefully to text
         });
+        // A display block wider than the viewport must scroll, not clip. The
+        // scroll container has to be block-level: overflow-x and max-width have
+        // no effect on an inline element, so putting these classes on the outer
+        // inline span below is inert (measured: still clipped at 380px).
+        // Scoping it to the equation also means only the equation scrolls,
+        // rather than the whole stem.
+        if (displayMode) {
+          return (
+            <span
+              className="block overflow-x-auto max-w-full"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          );
+        }
         return <span dangerouslySetInnerHTML={{ __html: html }} />;
       } catch {
         return <span>{tex}</span>;
@@ -25,6 +39,14 @@ export function MathText({ content, className = "" }: MathTextProps) {
     };
 
     let processedContent = content;
+
+    // Normalise LaTeX bracket delimiters to dollar form BEFORE anything else.
+    // The splitter below only recognises $...$ and $$...$$, so \(...\) and \[...\]
+    // previously fell through and reached the student as raw LaTeX source.
+    // Display form \[...\] is converted first so it cannot be eaten by the inline rule.
+    processedContent = processedContent
+      .replace(/\\\[([\s\S]+?)\\\]/g, (_match, body) => `$$${body}$$`)
+      .replace(/\\\(([\s\S]+?)\\\)/g, (_match, body) => `$${body}$`);
 
     // Detect undelimited LaTeX expressions (e.g. \text{...}, \frac{...}, \, \mu, etc.)
     const hasDelimiters = processedContent.includes("$") || processedContent.includes("\\(");
@@ -59,5 +81,9 @@ export function MathText({ content, className = "" }: MathTextProps) {
     });
   }, [content]);
 
+  // NOTE: overflow-x-auto/max-w-full are deliberately NOT applied here. This
+  // span is inline, and both properties are ignored on inline boxes -- measured
+  // at 380px, a wide equation still clipped (scrollWidth 380 > clientWidth 348).
+  // The scroll container lives on the display-math block in renderMathString.
   return <span className={className}>{renderedElements}</span>;
 }
