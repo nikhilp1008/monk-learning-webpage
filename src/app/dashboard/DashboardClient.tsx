@@ -182,8 +182,11 @@ export function DashboardClient({
             </span>
           </Link>
 
-          {/* Action Card 2: Snap a doubt (Disabled with Viewfinder Corners & COMING SOON badge) */}
-          <div className="flex flex-col p-5 rounded-[22px] bg-white border border-[rgba(28,26,22,0.08)] shadow-ref-card opacity-75 cursor-not-allowed">
+          {/* Action Card 2: Snap a doubt */}
+          <Link
+            href="/snap"
+            className="group flex flex-col p-5 rounded-[22px] bg-white border border-[rgba(28,26,22,0.08)] shadow-ref-card hover:-translate-y-0.5 transition-transform"
+          >
             <div className="relative flex-1 min-h-[128px] rounded-[14px] bg-[#FBF8EF] border border-[rgba(28,26,22,0.07)] flex flex-col items-center justify-center gap-2 p-4">
               {/* Signature Amber Viewfinder Corners */}
               <span className="absolute top-[10px] left-[10px] w-[19px] h-[19px] border-2 border-orange border-r-0 border-b-0 rounded-tl-[5px]" />
@@ -212,11 +215,14 @@ export function DashboardClient({
             </div>
             <div className="mt-3.5 flex items-center justify-between">
               <h3 className="font-bold text-[1.14rem] tracking-[-0.02em] text-[#1C1A16]">Snap a doubt</h3>
-              <span className="font-extrabold text-[0.58rem] tracking-wider uppercase text-ink-muted bg-ink/5 px-2 py-0.5 rounded-full">
-                COMING SOON
+              <span className="inline-flex items-center gap-1.5 font-bold text-[0.82rem] text-[#1C1A16] group-hover:gap-2.5 transition-all">
+                Snap it
+                <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="1.9" strokeLinecap="round">
+                  <path d="M2 8h11M9 3.5 13.5 8 9 12.5" />
+                </svg>
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Action Card 3: Practice unlimited (Disabled with COMING SOON badge) */}
           <div className="flex flex-col p-5 rounded-[22px] bg-white border border-[rgba(28,26,22,0.08)] shadow-ref-card opacity-75 cursor-not-allowed">
