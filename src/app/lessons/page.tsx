@@ -207,7 +207,7 @@ export default function LessonsPage() {
           </div>
 
           {/* Subject Tabs */}
-          <div className="grid grid-cols-3 shadow-[inset_0_-1px_rgba(28,26,22,0.1)] mb-1">
+          <div className="grid grid-cols-4 shadow-[inset_0_-1px_rgba(28,26,22,0.1)] mb-1">
             {SUBJECTS.map((subj) => {
               const isActive = selectedSubject === subj.id;
               return (
