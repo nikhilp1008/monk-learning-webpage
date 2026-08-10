@@ -1,25 +1,54 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { EndSessionResponse } from "@/lib/drona/types";
-import { getTutorName } from "@/lib/drona/tutor";
+import { DEFAULT_VOICE, getTutorName } from "@/lib/drona/tutor";
+import { saveSessionNote } from "@/lib/notes";
 
 interface EndStatesViewProps {
   type: "normal" | "session_ended" | "error";
+  /** Display name of the persona the student picked ("Veda" / "Drona"). */
+  tutorName?: string;
   summaryData?: EndSessionResponse | null;
   errorMessage?: string;
+  /** Needed to save the board; without it the save button is not offered. */
+  sessionId?: string | null;
   onReturnToCatalogue: () => void;
   onRetry?: () => void;
+  onViewNotes?: () => void;
 }
 
 export function EndStatesView({
   type,
+  tutorName,
   summaryData,
   errorMessage,
+  sessionId,
   onReturnToCatalogue,
   onRetry,
+  onViewNotes,
 }: EndStatesViewProps) {
-  const teacher = getTutorName("male");
+  const teacher = tutorName || getTutorName(DEFAULT_VOICE);
+
+  const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const [saveError, setSaveError] = useState<string | null>(null);
+
+  const handleSaveNote = async () => {
+    if (!sessionId || saveState === "saving") return;
+    setSaveState("saving");
+    setSaveError(null);
+    try {
+      await saveSessionNote(sessionId);
+      setSaveState("saved");
+    } catch (err) {
+      // A board that could not be saved must say so. Showing "Saved" over a
+      // failed write is exactly the silent-success failure Rule 4 forbids.
+      setSaveState("error");
+      setSaveError(
+        err instanceof Error ? err.message : "Could not save this board."
+      );
+    }
+  };
 
   // STATE 1: Quiet Session Ended
   if (type === "session_ended") {
@@ -172,12 +201,52 @@ export function EndStatesView({
           </div>
         </div>
 
-        <p className="text-center text-[0.82rem] text-[#57534B] mb-3.5">
-          The full board is backed up in <b className="font-bold">Recent sessions</b> for 7 days.
-        </p>
+        {saveState === "saved" ? (
+          <p className="text-center text-[0.82rem] text-[#157A45] font-bold mb-3.5">
+            ✓ Saved to your notes — revisit it any time.
+          </p>
+        ) : saveState === "error" ? (
+          <p className="text-center text-[0.82rem] text-[#C53A2B] font-semibold mb-3.5">
+            {saveError} Your board is still backed up with the session.
+          </p>
+        ) : (
+          <p className="text-center text-[0.82rem] text-[#57534B] mb-3.5">
+            The full board is backed up in <b className="font-bold">Recent sessions</b>{" "}
+            for 7 days — save it as a note to keep it forever.
+          </p>
+        )}
 
         {/* Buttons */}
         <div className="flex items-center justify-center gap-3 flex-wrap">
+          {sessionId && saveState !== "saved" && (
+            <button
+              onClick={handleSaveNote}
+              disabled={saveState === "saving"}
+              className="inline-flex items-center gap-2 font-bold text-[0.9rem] py-3 px-5 rounded-full border-none bg-ink text-cream-light cursor-pointer shadow-[0_10px_22px_-10px_rgba(28,26,22,0.7)] hover:-translate-y-0.5 transition-transform disabled:opacity-60 disabled:translate-y-0"
+            >
+              <svg viewBox="0 0 24 24" width={15} height={15} fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 4h12v16l-6-3-6 3z" />
+              </svg>
+              {saveState === "saving"
+                ? "Saving…"
+                : saveState === "error"
+                ? "Try saving again"
+                : "Save board to notes"}
+            </button>
+          )}
+
+          {saveState === "saved" && onViewNotes && (
+            <button
+              onClick={onViewNotes}
+              className="inline-flex items-center gap-2 font-semibold text-[0.9rem] py-3 px-5 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink cursor-pointer hover:border-ink transition-colors"
+            >
+              Open my notes
+              <svg viewBox="0 0 16 16" width={14} height={14} fill="none">
+                <path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          )}
+
           <button
             onClick={onReturnToCatalogue}
             className="inline-flex items-center gap-2 font-semibold text-[0.9rem] py-3 px-5 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink cursor-pointer hover:border-ink transition-colors"

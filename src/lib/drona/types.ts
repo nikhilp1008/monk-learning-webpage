@@ -20,6 +20,10 @@ export interface StartSessionResponse {
   session_id: string;
   phase: string;
   speech: string;
+  /** Echoed by the API so the UI shows the persona the session actually got. */
+  language?: 'english' | 'hinglish';
+  tutor_voice?: 'male' | 'female';
+  tutor_name?: string;
 }
 
 export interface ScopeSessionRequest {
@@ -32,6 +36,9 @@ export interface ScopeSessionResponse {
   subtopic?: string;
   plan_ready: boolean;
   options?: string[];
+  language?: 'english' | 'hinglish';
+  tutor_voice?: 'male' | 'female';
+  tutor_name?: string;
 }
 
 export interface TurnRequest {

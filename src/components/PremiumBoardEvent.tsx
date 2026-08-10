@@ -13,6 +13,7 @@
  */
 
 import React, { useEffect, useMemo, useRef } from "react";
+import katex from "katex";
 import { KaTeXRenderer } from "./KaTeXRenderer";
 import type { BoardEventData } from "./BoardEvent";
 
@@ -368,8 +369,29 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
         </WriteIn>
       );
 
-    case "formula":
+    case "formula": {
+      // A `latex` field is PURE LaTeX and must be handed to KaTeX whole.
+      //
+      // KaTeXRenderer is a prose-with-inline-maths renderer: given an
+      // undelimited string it looks for a hardcoded list of commands and wraps
+      // them individually in $…$. That destroyed real formulas — "\quad" is not
+      // in its list so "a_x = 0, \quad a_y = -g" printed verbatim, and
+      // "\frac{g x^2}{2u^2\cos^2\theta}" was split so only "\frac{g x^2}"
+      // became maths and the denominator was orphaned as text.
       const formulaLatex = event.latex || event.text || "";
+      let html = "";
+      let failed = false;
+      if (formulaLatex) {
+        try {
+          html = katex.renderToString(formulaLatex, {
+            displayMode: false,
+            throwOnError: false,
+            output: "html",
+          });
+        } catch {
+          failed = true;
+        }
+      }
       return (
         <WriteIn animate={animate} seconds={1.6} chalkBottom="0.9em">
           <div
@@ -377,12 +399,16 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
               isHigh ? "text-xl md:text-2xl font-bold" : "text-lg md:text-xl font-semibold"
             }`}
           >
-            {formulaLatex ? (
-              <KaTeXRenderer latex={formulaLatex} displayMode={false} />
-            ) : null}
+            {!formulaLatex ? null : failed ? (
+              // Never silently drop a board line: show the source rather than nothing.
+              <span className="font-mono text-[0.9em]">{formulaLatex}</span>
+            ) : (
+              <span dangerouslySetInnerHTML={{ __html: html }} />
+            )}
           </div>
         </WriteIn>
       );
+    }
 
     case "note":
       return (

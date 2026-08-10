@@ -35,7 +35,12 @@ export async function apiFetch<T>(
   }
 
   const headers = new Headers(options.headers || {});
-  if (!headers.has("Content-Type") && options.body) {
+  // FormData must set its own Content-Type: the multipart boundary is generated
+  // by the browser, and forcing application/json here makes the upload
+  // unparseable server-side.
+  const isFormData =
+    typeof FormData !== "undefined" && options.body instanceof FormData;
+  if (!headers.has("Content-Type") && options.body && !isFormData) {
     headers.set("Content-Type", "application/json");
   }
   headers.set("Authorization", `Bearer ${token}`);

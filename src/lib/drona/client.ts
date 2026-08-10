@@ -10,6 +10,7 @@ import {
   SSEEventMeta,
   SSEEventState,
 } from "./types";
+import { DEFAULT_VOICE, type SessionLanguage, type TutorVoice } from "./tutor";
 
 function getBaseUrl(): string {
   const url = process.env.NEXT_PUBLIC_API_URL;
@@ -50,9 +51,44 @@ export async function fetchCatalogue(): Promise<SubjectGroup[]> {
   return res.json();
 }
 
+export interface TopicCheckResult {
+  status: "ok" | "other_chapter" | "out_of_syllabus" | "ambiguous";
+  chapter_id?: string;
+  subtopic?: string;
+  subtopic_key?: string;
+  chapter?: { id: string; name: string; subject?: string; class_level?: number };
+  options?: string[];
+  message?: string;
+}
+
+/**
+ * Validates a topic BEFORE a session is created, so the UI can show a loading
+ * card and then either open the lesson or point the student at the chapter that
+ * actually covers it. Creates nothing server-side.
+ */
+export async function checkTopic(
+  chapterId: string | null,
+  utterance: string
+): Promise<TopicCheckResult> {
+  const token = await getAuthToken();
+  const res = await fetch(`${getBaseUrl()}/drona/topic/check`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ chapter_id: chapterId, utterance }),
+  });
+  if (!res.ok) {
+    throw new Error(`Topic check failed: ${res.status}`);
+  }
+  return res.json();
+}
+
 export async function startSession(
   chapterId: string,
-  language: "english" | "hinglish"
+  language: SessionLanguage,
+  voice: TutorVoice = DEFAULT_VOICE
 ): Promise<StartSessionResponse> {
   const token = await getAuthToken();
   const res = await fetch(`${getBaseUrl()}/drona/session/start`, {
@@ -61,7 +97,7 @@ export async function startSession(
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ chapter_id: chapterId, language }),
+    body: JSON.stringify({ chapter_id: chapterId, language, voice }),
   });
   if (!res.ok) {
     throw new Error(`Start session failed: ${res.status}`);

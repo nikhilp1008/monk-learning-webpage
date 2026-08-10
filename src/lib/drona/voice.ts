@@ -8,7 +8,22 @@ export interface VoiceClientOptions {
   onBoardEvents?: (events: any[]) => void;
   onBoardUpdate?: (latex: any) => void;
   onMetaUpdate?: (meta: any) => void;
-  onStateFrame?: (stateFrame: { phase: string; current_segment: number; check_options?: string[] }) => void;
+  onStateFrame?: (stateFrame: {
+    phase: string;
+    current_segment: number;
+    check_options?: string[];
+    /** The question actually asked, so the Ask Sheet shows it rather than the caption. */
+    question_text?: string | null;
+    /** Outcome of the student's own last answer — drives the green/red chip. */
+    answer_result?: "correct" | "partial" | "incorrect" | null;
+  }) => void;
+  /** Turn finished streaming — flush any board lines audio never got to reveal. */
+  onTurnComplete?: () => void;
+  /** Push-to-talk actually cut Drona off mid-speech (as opposed to starting
+   *  while she was already silent) — the caller should drop any board/state
+   *  buffers held for the turn that just got cut off, since it's never
+   *  reaching its own turn_complete now. */
+  onBargeIn?: () => void;
   onError?: (err: Error) => void;
   onSessionEnded?: () => void;
 }
@@ -34,6 +49,19 @@ interface AudioQueueItem {
   boardText?: any;
 }
 
+/**
+ * A caption + board-line reveal, armed to fire at the instant its sentence
+ * starts playing. Tracked as a record rather than a bare timer id so a pause
+ * can cancel it and re-arm with the time that was still outstanding.
+ */
+interface ScheduledReveal {
+  timerId: ReturnType<typeof setTimeout> | null;
+  fireAt: number;
+  remainingMs: number | null;
+  run: () => void;
+  fired: boolean;
+}
+
 export class DronaVoiceClient {
   private sessionId: string;
   private ws: WebSocket | null = null;
@@ -46,7 +74,19 @@ export class DronaVoiceClient {
   private nextAudioStartTime: number = 0;
   private activeSources: AudioBufferSourceNode[] = [];
   private pendingAudioBuffers: AudioQueueItem[] = [];
-  private pendingTimers: any[] = [];
+  private pendingReveals: ScheduledReveal[] = [];
+  // The turn_complete wait used to be a bare, untracked setTimeout — a
+  // barge-in mid-wait couldn't cancel it, so it fired later against a turn
+  // that had already been cut off and flushed a stale board/state buffer
+  // onto whatever the new turn was doing.
+  private turnCompleteTimer: ReturnType<typeof setTimeout> | null = null;
+  // turn_error set hasTurnError and the UI showed "...retrying" — but nothing
+  // ever retried anything. If the turn genuinely recovers (another audio_chunk
+  // or a real turn_complete arrives) this timer is cancelled; if not, it
+  // forces the UI back out of the stuck "retrying" state so the student can
+  // act instead of waiting on a promise nothing is keeping.
+  private turnErrorRecoveryTimer: ReturnType<typeof setTimeout> | null = null;
+  private static readonly TURN_ERROR_RECOVERY_MS = 15000;
 
   // Telemetry & Control Flags
   private isMuted: boolean = false;
@@ -64,6 +104,18 @@ export class DronaVoiceClient {
   private pcmRingBuffer: Int16Array[] = [];
   private readonly maxRingBufferChunks = 300;
 
+  // Reconnection
+  //
+  // Nothing was re-opening `ws` after it closed for any reason other than an
+  // explicit disconnect() — a dropped connection, a backend restart, a
+  // network blip — so the client sat on "Connecting..." forever with nothing
+  // actually attempting to reconnect. `manualDisconnect` distinguishes an
+  // intentional close (component unmount) from one that should be retried.
+  private manualDisconnect: boolean = false;
+  private reconnectAttempts: number = 0;
+  private reconnectTimer: ReturnType<typeof setTimeout> | null = null;
+  private readonly maxReconnectAttempts = 6;
+
   // Options & Callbacks
   private options: VoiceClientOptions;
 
@@ -73,39 +125,76 @@ export class DronaVoiceClient {
   }
 
   public async connect(): Promise<void> {
+    this.manualDisconnect = false;
+    return new Promise((resolve, reject) => {
+      try {
+        this.openSocket(resolve);
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+
+  /** Opens the WebSocket. `onFirstOpen` (only passed by connect()'s own Promise)
+   * fires once, on whichever open succeeds first — the initial one or a retry. */
+  private openSocket(onFirstOpen?: () => void): void {
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
     const wsBase = baseUrl.replace(/^http/, "ws");
     const token = (typeof window !== "undefined" && (window as any).__E2E_MOCK_TOKEN__) || "e2e_mock_token_123";
     const wsUrl = this.options.wsUrl || `${wsBase}/drona/session/${this.sessionId}/live?token=${encodeURIComponent(token)}`;
 
-    return new Promise((resolve, reject) => {
-      try {
-        this.ws = new WebSocket(wsUrl);
-        this.ws.binaryType = "arraybuffer";
+    this.ws = new WebSocket(wsUrl);
+    this.ws.binaryType = "arraybuffer";
 
-        this.ws.onopen = () => {
-          this.notifyState();
-          this.initAudioCapture();
-          resolve();
-        };
+    this.ws.onopen = () => {
+      this.reconnectAttempts = 0;
+      this.notifyState();
+      this.initAudioCapture();
+      onFirstOpen?.();
+    };
 
-        this.ws.onmessage = (event) => {
-          this.handleMessage(event.data);
-        };
+    this.ws.onmessage = (event) => {
+      this.handleMessage(event.data);
+    };
 
-        this.ws.onerror = (err) => {
-          console.warn("Drona Voice WS connection warning:", err);
-          this.options.onError?.(new Error("WebSocket warning"));
-          resolve();
-        };
+    this.ws.onerror = (err) => {
+      console.warn("Drona Voice WS connection warning:", err);
+      this.options.onError?.(new Error("WebSocket warning"));
+      onFirstOpen?.();
+      // A failed connection attempt (as opposed to a live connection dropping)
+      // isn't guaranteed to also fire `close` — observed in practice: only
+      // `error` fired for a retry against a still-down backend. Schedule from
+      // here too; scheduleReconnect() is idempotent against onclose also
+      // firing for the same failure.
+      this.scheduleReconnect();
+    };
 
-        this.ws.onclose = () => {
-          this.notifyState();
-        };
-      } catch (err) {
-        reject(err);
-      }
-    });
+    this.ws.onclose = () => {
+      this.notifyState();
+      this.scheduleReconnect();
+    };
+  }
+
+  /** Idempotent: a no-op if a retry is already pending, we've given up, or
+   * this is an intentional disconnect. Safe to call from both onerror and
+   * onclose since either, or both, may fire for the same failure. */
+  private scheduleReconnect(): void {
+    if (this.manualDisconnect || this.reconnectTimer) return;
+
+    if (this.reconnectAttempts >= this.maxReconnectAttempts) {
+      console.warn("Drona Voice WS: giving up after", this.reconnectAttempts, "reconnect attempts");
+      this.options.onError?.(new Error("WebSocket reconnect attempts exhausted"));
+      return;
+    }
+
+    // Capped exponential backoff: 1s, 2s, 4s, 8s, 8s, 8s...
+    const delayMs = Math.min(1000 * 2 ** this.reconnectAttempts, 8000);
+    this.reconnectAttempts += 1;
+    console.log(`[VOICE WS RECONNECT] Attempt ${this.reconnectAttempts}/${this.maxReconnectAttempts} in ${delayMs}ms`);
+    this.reconnectTimer = setTimeout(() => {
+      this.reconnectTimer = null;
+      if (!this.manualDisconnect) this.openSocket();
+    }, delayMs);
   }
 
   public isReady(): boolean {
@@ -134,6 +223,8 @@ export class DronaVoiceClient {
             phase: msg.phase,
             current_segment: msg.current_segment || msg.segment_index || 1,
             check_options: Array.isArray(msg.check_options) ? msg.check_options : [],
+            question_text: msg.question_text ?? null,
+            answer_result: msg.answer_result ?? null,
           });
         }
         this.notifyState();
@@ -148,8 +239,22 @@ export class DronaVoiceClient {
         console.warn("[TURN ERROR RECEIVED]", msg.message);
         this.hasTurnError = true;
         this.notifyState();
+        if (this.turnErrorRecoveryTimer) clearTimeout(this.turnErrorRecoveryTimer);
+        this.turnErrorRecoveryTimer = setTimeout(() => {
+          this.turnErrorRecoveryTimer = null;
+          if (!this.hasTurnError) return;
+          console.warn("[TURN ERROR] No recovery within", DronaVoiceClient.TURN_ERROR_RECOVERY_MS, "ms — forcing the UI back out of 'retrying'.");
+          this.hasTurnError = false;
+          this.notifyState();
+          this.options.onError?.(new Error("Turn failed and did not recover"));
+          this.options.onTurnComplete?.();
+        }, DronaVoiceClient.TURN_ERROR_RECOVERY_MS);
       } else if (type === "audio_chunk") {
         this.hasTurnError = false;
+        if (this.turnErrorRecoveryTimer) {
+          clearTimeout(this.turnErrorRecoveryTimer);
+          this.turnErrorRecoveryTimer = null;
+        }
         this.isDronaSpeaking = true;
         const speechText = msg.speech || "";
         const boardEvent = msg.board_event || msg.board;
@@ -157,14 +262,26 @@ export class DronaVoiceClient {
         if (msg.audio) {
           this.playAudioChunk(msg.audio, speechText, boardEvent, sentenceId);
         } else {
-          if (speechText) {
-            this.currentSpeechText = speechText;
-            this.options.onSpeechText?.(speechText, false);
-          }
-          if (boardEvent !== undefined) {
-            console.log(`[BOARD EVENT ATTACHED TO CHUNK]`, boardEvent);
-            this.options.onBoardUpdate?.(boardEvent);
-          }
+          // No audio (checkpoint questions are delivered as a silent caption),
+          // so there's nothing to arm this against via scheduleAudioBuffer.
+          // But this chunk can still carry the turn's LAST board item — reveal
+          // it immediately and it jumps ahead of whatever audio is still
+          // playing from earlier chunks in this same turn. Arm it for the same
+          // "end of what's currently queued" time a real chunk would use,
+          // just without a duration of its own to push the queue further out.
+          const delayMs = this.playbackCtx
+            ? Math.max(0, (this.nextAudioStartTime - this.playbackCtx.currentTime) * 1000)
+            : 0;
+          this.armReveal(() => {
+            if (speechText) {
+              this.currentSpeechText = speechText;
+              this.options.onSpeechText?.(speechText, false);
+            }
+            if (boardEvent !== undefined) {
+              console.log(`[BOARD EVENT ATTACHED TO CHUNK]`, boardEvent);
+              this.options.onBoardUpdate?.(boardEvent);
+            }
+          }, delayMs);
         }
         this.notifyState();
       } else if (type === "meta") {
@@ -172,6 +289,32 @@ export class DronaVoiceClient {
         if (msg.phase === "complete") {
           this.options.onSessionEnded?.();
         }
+      } else if (type === "turn_complete") {
+        if (this.turnErrorRecoveryTimer) {
+          clearTimeout(this.turnErrorRecoveryTimer);
+          this.turnErrorRecoveryTimer = null;
+        }
+        // Wait for the audio to FINISH, not merely to start.
+        //
+        // Reveals are armed against chunk start times, so waiting on the last
+        // reveal still fired while the final sentence was mid-playback — which
+        // is why the question and its options appeared on screen while Drona
+        // was visibly still explaining. nextAudioStartTime is the end of the
+        // queue in the playback clock, so use whichever is later.
+        const outstanding = this.pendingReveals.filter((r) => !r.fired);
+        const lastRevealMs = Math.max(
+          0,
+          outstanding.reduce((max, r) => Math.max(max, r.fireAt), 0) - performance.now()
+        );
+        const remainingAudioMs = this.playbackCtx
+          ? Math.max(0, (this.nextAudioStartTime - this.playbackCtx.currentTime) * 1000)
+          : 0;
+        const waitMs = Math.max(lastRevealMs, remainingAudioMs);
+        if (this.turnCompleteTimer) clearTimeout(this.turnCompleteTimer);
+        this.turnCompleteTimer = setTimeout(() => {
+          this.turnCompleteTimer = null;
+          this.options.onTurnComplete?.();
+        }, waitMs + 200);
       } else if (type === "stt_too_short") {
         this.options.onSpeechText?.(msg.message || "Hold the button while you speak", false);
       } else if (type === "error") {
@@ -182,22 +325,70 @@ export class DronaVoiceClient {
     }
   }
 
+  /** Arms a caption/board reveal, remembering when it is due so pause can re-arm it. */
+  private armReveal(run: () => void, delayMs: number): void {
+    const reveal: ScheduledReveal = {
+      timerId: null,
+      fireAt: performance.now() + delayMs,
+      remainingMs: null,
+      fired: false,
+      run,
+    };
+    const fire = () => {
+      reveal.fired = true;
+      run();
+    };
+    reveal.timerId = this.isPaused ? null : setTimeout(fire, delayMs);
+    if (this.isPaused) reveal.remainingMs = delayMs;
+    this.pendingReveals.push(reveal);
+  }
+
+  private pauseScheduledReveals(): void {
+    const now = performance.now();
+    for (const reveal of this.pendingReveals) {
+      if (reveal.fired || reveal.timerId === null) continue;
+      clearTimeout(reveal.timerId);
+      reveal.timerId = null;
+      reveal.remainingMs = Math.max(0, reveal.fireAt - now);
+    }
+  }
+
+  private resumeScheduledReveals(): void {
+    const now = performance.now();
+    for (const reveal of this.pendingReveals) {
+      if (reveal.fired || reveal.timerId !== null) continue;
+      const delay = reveal.remainingMs ?? 0;
+      reveal.fireAt = now + delay;
+      reveal.remainingMs = null;
+      reveal.timerId = setTimeout(() => {
+        reveal.fired = true;
+        reveal.run();
+      }, delay);
+    }
+  }
+
+  private clearScheduledReveals(): void {
+    for (const reveal of this.pendingReveals) {
+      if (reveal.timerId !== null) {
+        try {
+          clearTimeout(reveal.timerId);
+        } catch {}
+      }
+    }
+    this.pendingReveals = [];
+  }
+
   public flushAudioQueue(reason: string = "user_interrupt"): void {
-    console.log(`[AUDIO FLUSH] Stopped ${this.activeSources.length} active sources, cleared ${this.pendingAudioBuffers.length} queued buffers, and cancelled ${this.pendingTimers.length} pending timers. Reason: '${reason}'`);
+    console.log(`[AUDIO FLUSH] Stopped ${this.activeSources.length} active sources, cleared ${this.pendingAudioBuffers.length} queued buffers, and cancelled ${this.pendingReveals.length} pending reveals. Reason: '${reason}'`);
     for (const source of this.activeSources) {
       try {
         source.stop();
         source.disconnect();
       } catch (e) {}
     }
-    for (const timerId of this.pendingTimers) {
-      try {
-        clearTimeout(timerId);
-      } catch (e) {}
-    }
+    this.clearScheduledReveals();
     this.activeSources = [];
     this.pendingAudioBuffers = [];
-    this.pendingTimers = [];
     if (this.playbackCtx) {
       this.nextAudioStartTime = this.playbackCtx.currentTime;
     } else {
@@ -223,13 +414,13 @@ export class DronaVoiceClient {
     // Schedule caption & board event release at EXACT audio playback time (startTime = currentTime + leadTime)
     const leadTimeMs = Math.max(0, (startTime - currentTime) * 1000);
 
-    const timerId = setTimeout(() => {
+    this.armReveal(() => {
       const t0 = performance.now();
       if (item.speechText) {
         this.currentSpeechText = item.speechText;
         this.options.onSpeechText?.(item.speechText, false);
       }
-      if (item.boardText !== undefined) {
+      if (item.boardText !== undefined && item.boardText !== null) {
         this.options.onBoardUpdate?.(item.boardText);
       }
       const tDomOffset = performance.now() - t0;
@@ -238,8 +429,6 @@ export class DronaVoiceClient {
         `🎧 [REAL PLAYBACK SYNC] sentence_id=${item.sentenceId || "unknown"} | Audio Start | Queue Lead=${leadTimeMs.toFixed(1)}ms | DOM Offset=${tDomOffset.toFixed(2)}ms`
       );
     }, leadTimeMs);
-
-    this.pendingTimers.push(timerId);
 
     source.onended = () => {
       const idx = this.activeSources.indexOf(source);
@@ -279,6 +468,10 @@ export class DronaVoiceClient {
     if (!this.playbackCtx) {
       this.playbackCtx = new AudioCtx({ sampleRate: 24000 });
     }
+    // A paused context must STAY paused. This runs on every arriving audio
+    // chunk, so without this guard the next chunk (a few seconds later) silently
+    // un-paused playback — which is exactly what "pause doesn't hold" was.
+    if (this.isPaused) return;
     if (this.playbackCtx.state === "suspended") {
       this.playbackCtx.resume().then(() => {
         if (this.DEBUG_AUDIO) console.log("[AUDIO UNLOCKED] Playback AudioContext resumed successfully!");
@@ -290,7 +483,11 @@ export class DronaVoiceClient {
     if (!base64Pcm || typeof window === "undefined") return;
     try {
       this.unlockAudio();
-      if (this.playbackCtx && this.playbackCtx.state === "suspended") {
+      // Second guard: this resume is independent of unlockAudio's, and would
+      // also defeat a pause. While paused we still decode and schedule the
+      // chunk — the suspended context freezes its own clock, so the queue stays
+      // correctly ordered and simply starts playing again on resume.
+      if (!this.isPaused && this.playbackCtx && this.playbackCtx.state === "suspended") {
         await this.playbackCtx.resume();
       }
 
@@ -377,6 +574,15 @@ export class DronaVoiceClient {
     if (this.isDronaSpeaking || this.activeSources.length > 0 || this.pendingAudioBuffers.length > 0) {
       this.flushAudioQueue("ptt_barge_in");
       this.isDronaSpeaking = false;
+      // The turn being cut off is never going to reach its own turn_complete
+      // now — its wait timer, if one was pending, would otherwise fire later
+      // and flush this cut-off turn's leftover board/state onto whatever the
+      // student interrupted it to do instead.
+      if (this.turnCompleteTimer) {
+        clearTimeout(this.turnCompleteTimer);
+        this.turnCompleteTimer = null;
+      }
+      this.options.onBargeIn?.();
     }
 
     if (this.audioCtx && this.audioCtx.state === "suspended") {
@@ -408,11 +614,23 @@ export class DronaVoiceClient {
 
   public interrupt(): void {
     this.isDronaSpeaking = false;
-    this.nextAudioStartTime = 0;
+    // Previously just suspended the context and dropped the reference —
+    // suspend() doesn't release anything, and losing the only reference
+    // meant it could never be close()'d, leaking one AudioContext per call.
+    // Chrome cuts a tab off at roughly 6 live contexts; a few interrupts in
+    // one session and the next `new AudioContext()` throws, breaking audio
+    // for the rest of the tab. Also skipped clearing pendingReveals, so a
+    // wall-clock reveal armed for the cut-off sentence could still fire.
+    this.flushAudioQueue("manual_interrupt");
+    if (this.turnCompleteTimer) {
+      clearTimeout(this.turnCompleteTimer);
+      this.turnCompleteTimer = null;
+    }
     if (this.playbackCtx) {
-      this.playbackCtx.suspend();
+      this.playbackCtx.close().catch(() => {});
       this.playbackCtx = null;
     }
+    this.nextAudioStartTime = 0;
     if (this.ws && this.ws.readyState === WebSocket.OPEN) {
       this.ws.send(
         JSON.stringify({
@@ -427,6 +645,28 @@ export class DronaVoiceClient {
 
   public togglePause(): void {
     this.isPaused = !this.isPaused;
+
+    // Suspending the playback AudioContext freezes its currentTime, so every
+    // already-scheduled BufferSource halts and resumes in place — and because
+    // nextAudioStartTime is expressed in that same clock, the queue stays
+    // consistent across the pause. Previously this method only flipped the
+    // flag, so "Pause" changed the status label and nothing else.
+    if (this.playbackCtx) {
+      if (this.isPaused) {
+        this.playbackCtx.suspend().catch((err) => console.warn("Pause failed:", err));
+      } else {
+        this.playbackCtx.resume().catch((err) => console.warn("Resume failed:", err));
+      }
+    }
+
+    // Caption/board reveal timers are wall-clock, not audio-clock, so they
+    // would run ahead while paused. Hold them and re-arm on resume.
+    if (this.isPaused) {
+      this.pauseScheduledReveals();
+    } else {
+      this.resumeScheduledReveals();
+    }
+
     this.notifyState();
   }
 
@@ -440,6 +680,24 @@ export class DronaVoiceClient {
   }
 
   public disconnect(): void {
+    this.manualDisconnect = true;
+    if (this.reconnectTimer) {
+      clearTimeout(this.reconnectTimer);
+      this.reconnectTimer = null;
+    }
+    if (this.turnCompleteTimer) {
+      clearTimeout(this.turnCompleteTimer);
+      this.turnCompleteTimer = null;
+    }
+    if (this.turnErrorRecoveryTimer) {
+      clearTimeout(this.turnErrorRecoveryTimer);
+      this.turnErrorRecoveryTimer = null;
+    }
+    // Leftover reveal timers used to survive teardown and could still fire
+    // afterward against page-level refs (pendingBoardRef/pendingStateRef)
+    // that a fresh session effect doesn't reset — compounding stale content
+    // bleeding into whatever comes next in the same tab.
+    this.clearScheduledReveals();
     if (this.scriptProcessor) {
       this.scriptProcessor.disconnect();
       this.scriptProcessor = null;

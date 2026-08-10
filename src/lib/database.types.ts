@@ -266,6 +266,13 @@ export type Database = {
           concept: string | null
           content: string | null
           created_at: string
+          session_id: string | null
+          chapter_id: string | null
+          board_items: Json
+          segments_covered: number
+          total_segments: number
+          item_count: number
+          session_started_at: string | null
         }
         Insert: {
           id?: string
@@ -275,6 +282,13 @@ export type Database = {
           concept?: string | null
           content?: string | null
           created_at?: string
+          session_id?: string | null
+          chapter_id?: string | null
+          board_items: Json
+          segments_covered: number
+          total_segments: number
+          item_count: number
+          session_started_at?: string | null
         }
         Update: {
           id?: string
@@ -284,6 +298,13 @@ export type Database = {
           concept?: string | null
           content?: string | null
           created_at?: string
+          session_id?: string | null
+          chapter_id?: string | null
+          board_items?: Json
+          segments_covered?: number
+          total_segments?: number
+          item_count?: number
+          session_started_at?: string | null
         }
         Relationships: []
       }
@@ -291,37 +312,100 @@ export type Database = {
         Row: {
           id: string
           user_id: string
+          question_text: string
           subject: string | null
           chapter: string | null
-          concept: string | null
-          question_text: string | null
-          image_url: string | null
-          explanation: string | null
           solved: boolean
           created_at: string
+          concept: string | null
+          explanation: string | null
+          submission_id: string | null
+          question_index: number
+          image_key: string | null
+          legible: boolean
+          legibility_note: string | null
+          answer: string | null
+          steps: Json
+          key_idea: string | null
+          status: string
+          failure_reason: string | null
+          transcriber_model: string | null
+          solver_model: string | null
+          transcribe_ms: number | null
+          latency_ms: number | null
         }
         Insert: {
           id?: string
           user_id: string
+          question_text: string
           subject?: string | null
           chapter?: string | null
-          concept?: string | null
-          question_text?: string | null
-          image_url?: string | null
-          explanation?: string | null
-          solved?: boolean
+          solved: boolean
           created_at?: string
+          concept?: string | null
+          explanation?: string | null
+          submission_id?: string | null
+          question_index: number
+          image_key?: string | null
+          legible: boolean
+          legibility_note?: string | null
+          answer?: string | null
+          steps: Json
+          key_idea?: string | null
+          status: string
+          failure_reason?: string | null
+          transcriber_model?: string | null
+          solver_model?: string | null
+          transcribe_ms?: number | null
+          latency_ms?: number | null
         }
         Update: {
           id?: string
           user_id?: string
+          question_text?: string
           subject?: string | null
           chapter?: string | null
-          concept?: string | null
-          question_text?: string | null
-          image_url?: string | null
-          explanation?: string | null
           solved?: boolean
+          created_at?: string
+          concept?: string | null
+          explanation?: string | null
+          submission_id?: string | null
+          question_index?: number
+          image_key?: string | null
+          legible?: boolean
+          legibility_note?: string | null
+          answer?: string | null
+          steps?: Json
+          key_idea?: string | null
+          status?: string
+          failure_reason?: string | null
+          transcriber_model?: string | null
+          solver_model?: string | null
+          transcribe_ms?: number | null
+          latency_ms?: number | null
+        }
+        Relationships: []
+      }
+      doubt_reports: {
+        Row: {
+          id: string
+          doubt_id: string
+          user_id: string
+          comment: string | null
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          doubt_id: string
+          user_id: string
+          comment?: string | null
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          doubt_id?: string
+          user_id?: string
+          comment?: string | null
           created_at?: string
         }
         Relationships: []

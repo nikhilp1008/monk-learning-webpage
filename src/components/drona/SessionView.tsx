@@ -2,19 +2,37 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { KaTeXRenderer } from "@/components/KaTeXRenderer";
+import { MathText } from "@/components/MathText";
 import { PremiumBoardEvent } from "@/components/PremiumBoardEvent";
 import { TranscriptEntry } from "@/lib/drona/types";
-import { getTutorName } from "@/lib/drona/tutor";
+import {
+  DEFAULT_LANGUAGE,
+  DEFAULT_VOICE,
+  getLanguageLabel,
+  getTutorName,
+  type SessionLanguage,
+} from "@/lib/drona/tutor";
 import { VoiceClientState } from "@/lib/drona/voice";
 
 interface SessionViewProps {
   sessionTopic: string;
+  /** Display name of the persona the student picked ("Veda" / "Drona"). */
+  tutorName?: string;
+  /** Session language — drives the captions-bar badge and input copy. */
+  language?: SessionLanguage;
   boardLatex: string;
   boardEvents?: any[];
   transcript: TranscriptEntry[];
   segmentIndex: number;
   totalSegments: number;
   phase: "teaching" | "awaiting_answer" | "wrapup" | "complete";
+  /** The chip the student tapped, awaiting or showing a verdict. */
+  selectedOption?: string | null;
+  /** The question that was actually asked. The sheet used to show the live
+   *  caption instead, so a statement appeared above the answer chips. */
+  questionText?: string | null;
+  /** Server verdict on that chip — green for correct, red for incorrect. */
+  answerResult?: "correct" | "partial" | "incorrect" | null;
   isStreaming: boolean;
   voiceState?: VoiceClientState;
   subtopicOptions?: string[];
@@ -29,12 +47,17 @@ interface SessionViewProps {
 
 export function SessionView({
   sessionTopic,
+  tutorName,
+  language = DEFAULT_LANGUAGE,
   boardLatex,
   boardEvents = [],
   transcript,
   segmentIndex,
   totalSegments,
   phase,
+  selectedOption,
+  questionText,
+  answerResult,
   isStreaming,
   voiceState,
   subtopicOptions,
@@ -50,7 +73,7 @@ export function SessionView({
   const [holdDuration, setHoldDuration] = useState<number>(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const transcriptEndRef = useRef<HTMLDivElement>(null);
-  const teacher = getTutorName("male");
+  const teacher = tutorName || getTutorName(DEFAULT_VOICE);
 
   const handlePttDown = (e: React.PointerEvent<HTMLButtonElement>) => {
     try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
@@ -75,14 +98,54 @@ export function SessionView({
     transcriptEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [transcript]);
 
+  // handlePttUp only ever fired from onPointerUp/Cancel/Leave — none of which
+  // fire if the component unmounts mid-press (e.g. "End class" tapped while
+  // still holding the mic) or the tab loses focus (a call/notification
+  // backgrounding the page). Either left the hold-duration interval running
+  // forever and the mic showing "Recording…" with nothing to stop it.
+  useEffect(() => {
+    const stopIfHeld = () => {
+      if (!timerRef.current) return;
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+      onStopPushToTalk?.();
+    };
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "hidden") stopIfHeld();
+    };
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    window.addEventListener("blur", stopIfHeld);
+    return () => {
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      window.removeEventListener("blur", stopIfHeld);
+      stopIfHeld();
+    };
+    // onStopPushToTalk is passed fresh each render from an inline arrow in
+    // page.tsx, so it's deliberately not a dependency — including it would
+    // tear down and re-register these listeners (and call stopIfHeld) on
+    // every render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // A second utterance sent before the first turn's response lands can
+    // make the new turn inherit stale chips/question text from a
+    // single-slot buffer meant for one turn at a time (page.tsx's
+    // pendingStateRef). PTT still barge-ins freely — this only gates the
+    // no-barge-in text path.
+    if (isStreaming) return;
     const text = inputText.trim();
     if (text) {
       onSendTurn(text);
       setInputText("");
     }
   };
+
+  // Locks the Ask Sheet's own free-text box the same way its MCQ chips lock:
+  // once a chip is tapped, typing a second answer for the same question was
+  // still possible in the gap before the next render disables anything.
+  const answerLocked = Boolean(selectedOption);
 
   const [isTranscribing, setIsTranscribing] = useState<boolean>(false);
   const isDronaSpeaking = voiceState?.isSpeaking || false;
@@ -99,7 +162,7 @@ export function SessionView({
     : voiceState?.hasTurnError
     ? "Something went wrong — retrying"
     : !hasAudioPlayed
-    ? "Drona is preparing your lesson…"
+    ? `${teacher} is preparing your lesson…`
     : isDronaSpeaking
     ? "Explaining concept"
     : isMuted
@@ -189,7 +252,7 @@ export function SessionView({
                 />
               </div>
             ) : (
-              <div className="text-ink-muted text-sm italic">Board will update as Drona speaks...</div>
+              <div className="text-ink-muted text-sm italic">Board will update as {teacher} speaks...</div>
             )}
             <div ref={transcriptEndRef} />
           </div>
@@ -234,11 +297,30 @@ export function SessionView({
               <span style={{ fontSize: ".75rem", color: "#6E685C", fontWeight: 500 }}>
                 {phase === "awaiting_answer" ? "Tap an option to answer:" : "Select an option to respond:"}
               </span>
+              {answerResult && (
+                <span
+                  data-testid="answer-verdict"
+                  data-verdict={answerResult}
+                  style={{
+                    marginLeft: "auto",
+                    padding: "3px 10px",
+                    borderRadius: "9999px",
+                    fontWeight: 800,
+                    fontSize: ".68rem",
+                    letterSpacing: ".04em",
+                    background: answerResult === "correct" ? "#E4F3EA" : answerResult === "partial" ? "#FCF4E0" : "#FBEAE7",
+                    color: answerResult === "correct" ? "#0F5B33" : answerResult === "partial" ? "#7A5210" : "#8E2317",
+                    border: `1px solid ${answerResult === "correct" ? "#1C9B57" : answerResult === "partial" ? "#EEA31F" : "#DD4433"}`,
+                  }}
+                >
+                  {answerResult === "correct" ? "✓ Correct" : answerResult === "partial" ? "~ Partly right" : "✕ Not quite"}
+                </span>
+              )}
             </div>
 
             {/* Question Text */}
             <p style={{ fontSize: "1rem", lineHeight: 1.5, fontWeight: 600, marginBottom: "14px", flex: "none", color: "#1C1A16" }}>
-              {cleanSpeech.length > 20 ? cleanSpeech : "Select an option or type your response below:"}
+              {questionText || (cleanSpeech.length > 20 ? cleanSpeech : "Select an option or type your response below:")}
             </p>
 
             {/* MCQ Quiz Cards (A, B, C, D) */}
@@ -247,10 +329,31 @@ export function SessionView({
                 {subtopicOptions.map((optionText, idx) => {
                   const letters = ["A", "B", "C", "D"];
                   const letter = letters[idx % letters.length];
+
+                  // Verdict styling. Only the chip the student actually tapped
+                  // is coloured; the rest stay neutral so the answer key for a
+                  // question is never revealed by elimination.
+                  const isChosen = selectedOption === optionText;
+                  const verdict = isChosen ? answerResult : null;
+                  const awaitingVerdict = isChosen && !answerResult;
+                  const locked = Boolean(selectedOption);
+
+                  const VERDICT_STYLES = {
+                    correct: { border: "#1C9B57", bg: "#E4F3EA", badge: "#1C9B57", text: "#0F5B33", mark: "✓" },
+                    partial: { border: "#EEA31F", bg: "#FCF4E0", badge: "#B87A14", text: "#7A5210", mark: "~" },
+                    incorrect: { border: "#DD4433", bg: "#FBEAE7", badge: "#DD4433", text: "#8E2317", mark: "✕" },
+                  } as const;
+                  const v = verdict ? VERDICT_STYLES[verdict] : null;
+
                   return (
                     <button
                       key={idx}
+                      data-testid="ask-sheet-option"
+                      data-option-state={verdict ? verdict : awaitingVerdict ? "pending" : "idle"}
+                      disabled={locked}
+                      aria-disabled={locked}
                       onClick={() => {
+                        if (locked) return;
                         onSendTurn(optionText);
                         setInputText("");
                       }}
@@ -260,17 +363,19 @@ export function SessionView({
                         gap: "12px",
                         padding: "12px 14px",
                         borderRadius: "12px",
-                        border: "1.5px solid rgba(28,26,22,.14)",
-                        background: "#fff",
+                        border: `1.5px solid ${v ? v.border : awaitingVerdict ? "#1C1A16" : "rgba(28,26,22,.14)"}`,
+                        background: v ? v.bg : awaitingVerdict ? "#FCFAF4" : "#fff",
                         fontFamily: "inherit",
                         fontWeight: 600,
                         fontSize: ".88rem",
                         textAlign: "left",
-                        color: "#1C1A16",
-                        cursor: "pointer",
+                        color: v ? v.text : "#1C1A16",
+                        cursor: locked ? "default" : "pointer",
+                        opacity: locked && !isChosen ? 0.45 : 1,
                         transition: "all 0.2s cubic-bezier(.2,.7,.2,1)"
                       }}
                       onMouseEnter={(e) => {
+                        if (locked) return;
                         e.currentTarget.style.borderColor = "#1C1A16";
                         e.currentTarget.style.background = "#FCFAF4";
                         e.currentTarget.style.transform = "translateY(-1px)";
@@ -281,6 +386,7 @@ export function SessionView({
                         }
                       }}
                       onMouseLeave={(e) => {
+                        if (locked) return;
                         e.currentTarget.style.borderColor = "rgba(28,26,22,.14)";
                         e.currentTarget.style.background = "#fff";
                         e.currentTarget.style.transform = "translateY(0)";
@@ -297,7 +403,7 @@ export function SessionView({
                           width: "28px",
                           height: "28px",
                           borderRadius: "50%",
-                          background: "#1C1A16",
+                          background: v ? v.badge : "#1C1A16",
                           color: "#fff",
                           fontWeight: 700,
                           fontSize: ".75rem",
@@ -308,10 +414,15 @@ export function SessionView({
                           transition: "all 0.2s ease"
                         }}
                       >
-                        {letter}
+                        {v ? v.mark : letter}
                       </span>
                       <span style={{ flex: 1 }}>
-                        <KaTeXRenderer latex={optionText} displayMode={false} />
+                        {/* Chips are prose, not maths. Passing the whole option
+                            through KaTeX made it parse "They hit at the same
+                            time" as an expression and paint the unparseable
+                            parts in its red error colour. MathText renders only
+                            $…$ spans as maths and leaves words alone. */}
+                        <MathText content={optionText} />
                       </span>
                     </button>
                   );
@@ -323,6 +434,7 @@ export function SessionView({
             <form
               onSubmit={(e) => {
                 e.preventDefault();
+                if (answerLocked) return;
                 if (inputText.trim()) {
                   onSendTurn(inputText.trim());
                   setInputText("");
@@ -334,10 +446,11 @@ export function SessionView({
                 placeholder="or type your answer…"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
+                disabled={answerLocked}
                 style={{
                   flex: 1,
                   minWidth: 0,
-                  background: "#fff",
+                  background: answerLocked ? "#F4EFE3" : "#fff",
                   border: "1.4px solid rgba(28,26,22,.14)",
                   borderRadius: "99px",
                   padding: "9px 15px",
@@ -350,6 +463,7 @@ export function SessionView({
               <button
                 type="submit"
                 aria-label="Send answer"
+                disabled={answerLocked}
                 style={{
                   width: "38px",
                   height: "38px",
@@ -357,6 +471,7 @@ export function SessionView({
                   borderRadius: "50%",
                   border: "none",
                   background: "#1C1A16",
+                  opacity: answerLocked ? 0.4 : 1,
                   display: "grid",
                   placeItems: "center",
                   cursor: "pointer"
@@ -381,9 +496,15 @@ export function SessionView({
       {/* ─── Captions Bar (B1: Clean Speech Text) ─── */}
       <div className="flex items-center gap-3 bg-[#211C15] text-[#EFEBDD] border border-[#2a2419] rounded-[14px] py-2.5 px-4 sm:px-5 flex-none mb-2 overflow-hidden max-w-full">
         <span className="font-extrabold text-[0.6rem] tracking-[0.14em] uppercase text-[#EEA31F] flex-none">
-          HINGLISH
+          {getLanguageLabel(language)}
         </span>
-        <span className="min-w-0 flex-1 whitespace-nowrap overflow-hidden text-ellipsis text-[0.98rem] leading-normal font-medium">
+        {/* Wrap rather than truncate: this is the student's caption of what is
+            being said, so cutting it off with "…" loses the sentence. Capped at
+            3 lines so the dock never grows unbounded. */}
+        <span
+          className="min-w-0 flex-1 text-[0.98rem] leading-snug font-medium"
+          style={{ display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}
+        >
           {cleanSpeech}
           {isDronaSpeaking && (
             <span className="inline-block w-0.5 h-[1.05em] bg-[#EEA31F] ml-0.5 align-middle animate-pulse" />
@@ -409,17 +530,19 @@ export function SessionView({
           </span>
         </div>
 
-        {/* Text Input for Answers (Directive 6: Always available) */}
+        {/* Text Input for Answers (Directive 6: Always available — except
+            while a turn is actually mid-flight; PTT can still barge in). */}
         <form onSubmit={handleSubmit} className="flex items-center gap-2 flex-1 min-w-0 mx-1">
           <input
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
-            placeholder={phase === "awaiting_answer" ? "Your answer…" : "Ask Drona something…"}
-            className="w-full bg-[#FCFAF4] border border-[rgba(28,26,22,0.14)] rounded-full py-1.5 px-3.5 text-[0.82rem] text-ink outline-none focus:border-[#EEA31F] focus:bg-white transition-colors"
+            placeholder={isStreaming ? `${teacher} is responding…` : phase === "awaiting_answer" ? "Your answer…" : `Ask ${teacher} something…`}
+            disabled={isStreaming}
+            className="w-full bg-[#FCFAF4] border border-[rgba(28,26,22,0.14)] rounded-full py-1.5 px-3.5 text-[0.82rem] text-ink outline-none focus:border-[#EEA31F] focus:bg-white transition-colors disabled:opacity-60"
           />
           <button
             type="submit"
-            disabled={!inputText.trim()}
+            disabled={!inputText.trim() || isStreaming}
             className="w-8 h-8 flex-none rounded-full bg-[#1C1A16] grid place-items-center cursor-pointer disabled:opacity-40 hover:bg-[#2C2A26] transition-colors"
           >
             <svg viewBox="0 0 16 16" width={13} height={13} fill="none">
@@ -436,7 +559,7 @@ export function SessionView({
             onPointerUp={handlePttUp}
             onPointerCancel={handlePttUp}
             onPointerLeave={handlePttUp}
-            title="Hold to speak (Interrupts Drona if speaking)"
+            title={`Hold to speak (Interrupts ${teacher} if speaking)`}
             className={`inline-flex items-center gap-1.5 font-bold text-[0.74rem] sm:text-xs py-1.5 px-3.5 rounded-full border transition-all select-none cursor-pointer ${
               voiceState?.isListening
                 ? "bg-[#DD4433] text-white border-[#DD4433] scale-105 shadow-[0_0_16px_rgba(221,68,51,0.7)] animate-pulse"
