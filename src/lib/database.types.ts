@@ -214,6 +214,12 @@ export type Database = {
           id: string
           target_exam: string | null
           teaching_language: string | null
+          teacher_voice: string | null
+          read_equations_aloud: boolean | null
+          allow_interrupt: boolean | null
+          daily_reminder: boolean | null
+          notify_new_content: boolean | null
+          notify_product_updates: boolean | null
         }
         Insert: {
           created_at?: string | null
@@ -222,6 +228,12 @@ export type Database = {
           id?: string
           target_exam?: string | null
           teaching_language?: string | null
+          teacher_voice?: string | null
+          read_equations_aloud?: boolean | null
+          allow_interrupt?: boolean | null
+          daily_reminder?: boolean | null
+          notify_new_content?: boolean | null
+          notify_product_updates?: boolean | null
         }
         Update: {
           created_at?: string | null
@@ -230,6 +242,114 @@ export type Database = {
           id?: string
           target_exam?: string | null
           teaching_language?: string | null
+          teacher_voice?: string | null
+          read_equations_aloud?: boolean | null
+          allow_interrupt?: boolean | null
+          daily_reminder?: boolean | null
+          notify_new_content?: boolean | null
+          notify_product_updates?: boolean | null
+        }
+        Relationships: []
+      }
+      notes: {
+        Row: {
+          id: string
+          user_id: string
+          subject: string | null
+          chapter: string | null
+          concept: string | null
+          content: string | null
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          subject?: string | null
+          chapter?: string | null
+          concept?: string | null
+          content?: string | null
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          subject?: string | null
+          chapter?: string | null
+          concept?: string | null
+          content?: string | null
+          created_at?: string
+        }
+        Relationships: []
+      }
+      doubts: {
+        Row: {
+          id: string
+          user_id: string
+          subject: string | null
+          chapter: string | null
+          concept: string | null
+          question_text: string | null
+          image_url: string | null
+          explanation: string | null
+          solved: boolean
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          subject?: string | null
+          chapter?: string | null
+          concept?: string | null
+          question_text?: string | null
+          image_url?: string | null
+          explanation?: string | null
+          solved?: boolean
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          subject?: string | null
+          chapter?: string | null
+          concept?: string | null
+          question_text?: string | null
+          image_url?: string | null
+          explanation?: string | null
+          solved?: boolean
+          created_at?: string
+        }
+        Relationships: []
+      }
+      plan_items: {
+        Row: {
+          id: string
+          user_id: string
+          plan_date: string
+          label: string
+          minutes: number | null
+          is_done: boolean
+          sort_order: number
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          plan_date?: string
+          label: string
+          minutes?: number | null
+          is_done?: boolean
+          sort_order?: number
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          plan_date?: string
+          label?: string
+          minutes?: number | null
+          is_done?: boolean
+          sort_order?: number
+          created_at?: string
         }
         Relationships: []
       }

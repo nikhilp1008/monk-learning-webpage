@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
+import { TodaysPlan } from "./TodaysPlan";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -15,11 +16,19 @@ interface ResumeSessionData {
   position: number;
 }
 
+interface DoubtOfDayData {
+  subject: string;
+  concept: string;
+  questionText: string;
+  chapterId: string | null;
+}
+
 interface DashboardClientProps {
   profile: ProfileRow;
   questionsPracticed: number;
   chaptersStarted: number;
   resumeSession: ResumeSessionData | null;
+  doubtOfDay: DoubtOfDayData | null;
 }
 
 export function DashboardClient({
@@ -27,6 +36,7 @@ export function DashboardClient({
   questionsPracticed,
   chaptersStarted,
   resumeSession,
+  doubtOfDay,
 }: DashboardClientProps) {
   const [teachingLang, setTeachingLang] = useState<"hinglish" | "english">(
     profile.teaching_language === "english" ? "english" : "hinglish"
@@ -322,51 +332,26 @@ export function DashboardClient({
                   doubt of the day
                 </span>
                 <span className="font-extrabold text-[0.6rem] tracking-[0.1em] uppercase text-[#C53A2B]">
-                  PHYSICS · MODERN
+                  {(doubtOfDay?.subject || "Physics").toUpperCase()}
+                  {doubtOfDay?.concept ? ` · ${doubtOfDay.concept.toUpperCase()}` : ""}
                 </span>
               </div>
 
               <p className="mt-2 leading-[1.55] text-[1.02rem] text-[#1C1A16] font-medium">
-                Why do photoelectrons stop the moment intensity drops — but not when frequency drops below threshold?
+                {doubtOfDay?.questionText ||
+                  "Why do photoelectrons stop the moment intensity drops — but not when frequency drops below threshold?"}
               </p>
             </div>
 
             <Link
-              href="/lessons"
+              href={doubtOfDay?.chapterId ? `/lessons/${doubtOfDay.chapterId}` : "/lessons"}
               className="inline-flex items-center gap-2 font-semibold text-[0.86rem] px-4 py-2 rounded-full border border-[rgba(28,26,22,0.16)] bg-white/70 text-[#1C1A16] hover:border-ink transition-colors mt-4 self-start"
             >
               <span>Learn this with Monk →</span>
             </Link>
           </div>
 
-          {/* Today's Plan Card (Styled Placeholder) */}
-          <div className="bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-[18px_22px] shadow-ref-stat flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between gap-2.5 mb-2">
-                <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-[#9C988C]">
-                  Today&apos;s plan
-                </span>
-                <span className="font-extrabold text-[0.58rem] tracking-wider uppercase text-ink-muted bg-ink/5 px-2 py-0.5 rounded-full">
-                  COMING SOON
-                </span>
-              </div>
-
-              <div className="space-y-2 py-2">
-                <div className="flex items-center gap-3 p-2.5 rounded-lg bg-[#FBF8EF] border border-border-subtle/70 text-xs text-ink-light font-medium">
-                  <span className="w-4 h-4 rounded border border-ink/20 flex-none" />
-                  <span>Review Oscillations restoring force derivations</span>
-                </div>
-                <div className="flex items-center gap-3 p-2.5 rounded-lg bg-[#FBF8EF] border border-border-subtle/70 text-xs text-ink-light font-medium">
-                  <span className="w-4 h-4 rounded border border-ink/20 flex-none" />
-                  <span>Solve 5 practice questions on Hooke&apos;s region</span>
-                </div>
-              </div>
-            </div>
-
-            <span className="text-xs text-ink-muted pt-2 border-t border-border-subtle italic">
-              Personalized daily study schedules coming in the next release.
-            </span>
-          </div>
+          <TodaysPlan />
         </div>
       </main>
     </div>
