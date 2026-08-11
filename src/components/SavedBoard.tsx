@@ -4,7 +4,7 @@ import React from "react";
 import { BoardEvent } from "@/components/BoardEvent";
 import { MathText } from "@/components/MathText";
 import type { NoteSegment } from "@/lib/notes";
-import type { SolutionStep } from "@/lib/doubts";
+import type { Remedy, SolutionStep } from "@/lib/doubts";
 
 /**
  * A saved note's board, rendered through the same BoardEvent components the
@@ -148,6 +148,109 @@ export function QuestionSheet({
       <p className="mt-1.5 leading-[1.5] text-[0.96rem] text-ink">
         <MathText content={questionText} />
       </p>
+    </div>
+  );
+}
+
+
+/**
+ * A refusal, shown as the ACTION the student can take rather than one generic
+ * error. "Upload a better photo" is right for a blurry image and wrong for a
+ * question we read perfectly and still could not answer — sending them back to
+ * retake that is a loop they cannot win.
+ */
+export function RefusalCard({
+  message,
+  remedy = "our_side",
+  teacher,
+  onRetake,
+  onAskInSession,
+}: {
+  message: string;
+  remedy?: Remedy;
+  teacher: string;
+  onRetake?: () => void;
+  onAskInSession?: () => void;
+}) {
+  const copy = {
+    retake: {
+      title: "That photo needs another go",
+      tone: "amber" as const,
+      action: onRetake && { label: "↺ Retake the photo", fn: onRetake, primary: true },
+    },
+    not_photo: {
+      title: "This one needs the board",
+      tone: "amber" as const,
+      action: onAskInSession && {
+        label: `Ask ${teacher} in a session →`, fn: onAskInSession, primary: true,
+      },
+    },
+    our_side: {
+      title: `${teacher} couldn't answer this one`,
+      tone: "red" as const,
+      action: onAskInSession && {
+        label: `Ask ${teacher} in a session →`, fn: onAskInSession, primary: true,
+      },
+    },
+  }[remedy];
+
+  const amber = copy.tone === "amber";
+  return (
+    <div
+      className={`rounded-2xl p-5 border ${
+        amber
+          ? "bg-[rgba(238,163,31,0.08)] border-[rgba(238,163,31,0.4)]"
+          : "bg-[rgba(221,68,51,0.05)] border-[rgba(221,68,51,0.3)]"
+      }`}
+    >
+      <b className={`block font-bold text-[0.95rem] mb-1 ${amber ? "text-orange-dark" : "text-red-dark"}`}>
+        {copy.title}
+      </b>
+      <p className="text-[0.88rem] text-ink-light leading-relaxed">{message}</p>
+
+      {/* Only offered when retaking can actually change the outcome. */}
+      {copy.action && (
+        <button
+          onClick={copy.action.fn}
+          className="mt-3.5 inline-flex items-center gap-2 font-semibold text-[0.86rem] py-2.5 px-4 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink cursor-pointer hover:border-ink transition-colors"
+        >
+          {copy.action.label}
+        </button>
+      )}
+    </div>
+  );
+}
+
+/**
+ * An answer Monk worked out but will not state, because it disagreed with the
+ * answer printed on the page. The working is still worth reading — the answer
+ * is the part we cannot vouch for.
+ */
+export function UnsureCard({
+  reason,
+  steps,
+  keyIdea,
+  teacher,
+}: {
+  reason: string | null;
+  steps: SolutionStep[];
+  keyIdea: string | null;
+  teacher: string;
+}) {
+  return (
+    <div className="flex flex-col gap-3.5">
+      <div className="rounded-2xl p-4 bg-[rgba(238,163,31,0.08)] border border-[rgba(238,163,31,0.4)]">
+        <b className="block font-bold text-[0.92rem] text-orange-dark mb-1">
+          {teacher} might be unsure of this one
+        </b>
+        <p className="text-[0.86rem] text-ink-light leading-relaxed">
+          {reason ||
+            `${teacher}'s working disagrees with the answer printed on the page, so it is not stating one it might have wrong.`}
+        </p>
+      </div>
+      <RuledSheet label={`${teacher.toUpperCase()}'S WORKING`}>
+        <Solution answer={null} steps={steps} keyIdea={keyIdea} />
+      </RuledSheet>
     </div>
   );
 }

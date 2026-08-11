@@ -3,7 +3,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
-import { QuestionSheet, RuledSheet, Solution } from "@/components/SavedBoard";
+import {
+  QuestionSheet,
+  RefusalCard,
+  RuledSheet,
+  Solution,
+  UnsureCard,
+} from "@/components/SavedBoard";
 import { DEFAULT_VOICE, getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
 import {
   MAX_QUESTIONS,
@@ -118,6 +124,7 @@ export function SnapClient() {
    * it.
    */
   const askFollowUp = (questionText: string | null) => {
+    // A refusal may have no transcribed text to seed with; the session still opens.
     if (questionText) {
       try {
         window.sessionStorage.setItem("monk.snap.followup", questionText);
@@ -251,25 +258,50 @@ export function SnapClient() {
         )}
 
         {/* ─── Whole submission failed: show what was unclear, offer a retake ─── */}
-        {failure && !busy && (
+        {failure && !busy && failure.stage === "quota" && (
+          <div className="max-w-[560px] rounded-2xl p-6 bg-white border border-border-subtle shadow-ref-card">
+            <b className="block font-bold text-[1.02rem] text-ink mb-1.5">
+              That&apos;s today&apos;s questions used up
+            </b>
+            <p className="text-[0.9rem] text-ink-light leading-relaxed">
+              {failure.message}
+            </p>
+            {typeof failure.used_today === "number" && (
+              <div className="mt-3.5">
+                <div className="h-1.5 rounded-full bg-ink/8 overflow-hidden">
+                  <div
+                    className="h-full bg-orange rounded-full"
+                    style={{
+                      width: `${Math.min(100, (failure.used_today / (failure.daily_limit || 50)) * 100)}%`,
+                    }}
+                  />
+                </div>
+                <span className="block text-[0.76rem] text-ink-muted font-semibold mt-1.5">
+                  {failure.used_today} of {failure.daily_limit} used
+                </span>
+              </div>
+            )}
+            <button
+              onClick={() => router.push("/doubts")}
+              className="mt-4 inline-flex items-center gap-2 font-semibold text-[0.88rem] py-2.5 px-5 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink cursor-pointer hover:border-ink transition-colors"
+            >
+              Revisit your solved doubts →
+            </button>
+          </div>
+        )}
+
+        {failure && !busy && failure.stage !== "quota" && (
           <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-5 items-start">
             <PhotoCard previewUrl={previewUrl} readable={false} />
-            <div className="bg-[rgba(221,68,51,0.05)] border border-[rgba(221,68,51,0.3)] rounded-2xl p-5">
-              <b className="block font-bold text-[0.95rem] text-red-dark mb-1">
-                {failure.stage === "transcribe"
-                  ? `${teacher} could not read that photo.`
-                  : `${teacher} could not solve that one.`}
-              </b>
-              <p className="text-[0.88rem] text-ink-light leading-relaxed">
-                {failure.message}
-              </p>
-              <button
-                onClick={retake}
-                className="mt-3.5 inline-flex items-center gap-2 font-semibold text-[0.86rem] py-2.5 px-4 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink cursor-pointer hover:border-ink transition-colors"
-              >
-                ↺ Retake
-              </button>
-            </div>
+            <RefusalCard
+              message={failure.message}
+              remedy={failure.remedy}
+              teacher={teacher}
+              onRetake={failure.remedy === "retake" ? retake : undefined}
+              onAskInSession={
+                failure.remedy === "retake" ? undefined : () => askFollowUp(null)
+              }
+            />
           </div>
         )}
 
@@ -342,7 +374,7 @@ export function SnapClient() {
 
                   {/* Right — DRONA EXPLAINS */}
                   <div className="flex flex-col gap-4">
-                    {q.status === "solved" ? (
+                    {q.status === "solved" && (
                       <RuledSheet label={`${teacher.toUpperCase()} EXPLAINS`}>
                         <Solution
                           answer={q.answer}
@@ -350,19 +382,33 @@ export function SnapClient() {
                           keyIdea={q.key_idea}
                         />
                       </RuledSheet>
-                    ) : (
-                      <div className="bg-[rgba(221,68,51,0.05)] border border-[rgba(221,68,51,0.3)] rounded-2xl p-5">
-                        <b className="block font-bold text-[0.95rem] text-red-dark mb-1">
-                          {q.status === "illegible"
-                            ? "This one was not clear enough."
-                            : `${teacher} could not solve this one.`}
-                        </b>
-                        <p className="text-[0.88rem] text-ink-light leading-relaxed">
-                          {q.legibility_note ||
-                            q.failure_reason ||
-                            "Try a clearer, well-lit shot."}
-                        </p>
-                      </div>
+                    )}
+
+                    {q.status === "unsure" && (
+                      <UnsureCard
+                        reason={q.failure_reason}
+                        steps={q.steps}
+                        keyIdea={q.key_idea}
+                        teacher={teacher}
+                      />
+                    )}
+
+                    {q.status !== "solved" && q.status !== "unsure" && (
+                      <RefusalCard
+                        message={
+                          q.legibility_note ||
+                          q.failure_reason ||
+                          "Try a clearer, well-lit shot."
+                        }
+                        remedy={q.remedy}
+                        teacher={teacher}
+                        onRetake={q.remedy === "retake" ? retake : undefined}
+                        onAskInSession={
+                          q.remedy === "retake"
+                            ? undefined
+                            : () => askFollowUp(q.question_text)
+                        }
+                      />
                     )}
 
                     {q.status === "solved" && (

@@ -6,7 +6,10 @@ export interface SolutionStep {
   text: string;
 }
 
-export type DoubtStatus = "solved" | "failed" | "illegible";
+export type DoubtStatus = "solved" | "failed" | "illegible" | "unsure";
+
+/** What the student can actually DO about a refusal. */
+export type Remedy = "retake" | "not_photo" | "our_side";
 
 export interface DoubtSummary {
   id: string;
@@ -42,6 +45,10 @@ export interface DoubtsListResponse {
 export interface SnappedQuestion {
   id: string;
   question_index: number;
+  question_type?: string | null;
+  option_labels?: string[] | null;
+  remedy?: Remedy;
+  retake_helps?: boolean;
   question_text: string | null;
   subject: string | null;
   topic: string | null;
@@ -56,17 +63,27 @@ export interface SnappedQuestion {
 
 export interface SnapResponse {
   submission_id: string;
-  /** Set when more than two questions were visible, or the read was partial. */
+  /** Set when more questions were visible than were read, or the read was partial. */
   note: string | null;
   solved_count: number;
   questions: SnappedQuestion[];
+  questions_used_today?: number;
+  daily_limit?: number;
 }
 
 /** POST /doubts rejects with this shape, so the UI can name the failing stage. */
 export interface SnapFailure {
   message: string;
-  stage: "transcribe" | "solve" | "config" | string;
+  stage: "transcribe" | "solve" | "config" | "quota" | string;
+  reason?: string;
+  /** retake = their photo | not_photo = needs a figure | our_side = ours */
+  remedy?: Remedy;
+  retake_helps?: boolean;
   doubt_id?: string;
+  /** Quota refusals only. */
+  used_today?: number;
+  daily_limit?: number;
+  retry_after_seconds?: number | null;
 }
 
 export async function listDoubts(
@@ -113,6 +130,7 @@ export function readSnapFailure(error: unknown): SnapFailure {
   const fallback: SnapFailure = {
     message: "Something went wrong reading that photo.",
     stage: "unknown",
+    remedy: "our_side",
   };
   if (!error || typeof error !== "object") return fallback;
 
@@ -127,7 +145,13 @@ export function readSnapFailure(error: unknown): SnapFailure {
       return {
         message: d.message || fallback.message,
         stage: d.stage || "unknown",
+        reason: d.reason,
+        remedy: d.remedy,
+        retake_helps: d.retake_helps,
         doubt_id: d.doubt_id,
+        used_today: d.used_today,
+        daily_limit: d.daily_limit,
+        retry_after_seconds: d.retry_after_seconds,
       };
     }
   }
