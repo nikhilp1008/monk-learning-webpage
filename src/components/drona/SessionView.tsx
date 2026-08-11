@@ -38,8 +38,6 @@ interface SessionViewProps {
   subtopicOptions?: string[];
   onSendTurn: (utterance: string) => void;
   onEndSession: () => void;
-  onToggleMute?: () => void;
-  onInterrupt?: () => void;
   onTogglePause?: () => void;
   onStartPushToTalk?: () => void;
   onStopPushToTalk?: () => void;
@@ -63,8 +61,6 @@ export function SessionView({
   subtopicOptions,
   onSendTurn,
   onEndSession,
-  onToggleMute,
-  onInterrupt,
   onTogglePause,
   onStartPushToTalk,
   onStopPushToTalk,
@@ -129,12 +125,9 @@ export function SessionView({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // A second utterance sent before the first turn's response lands can
-    // make the new turn inherit stale chips/question text from a
-    // single-slot buffer meant for one turn at a time (page.tsx's
-    // pendingStateRef). PTT still barge-ins freely — this only gates the
-    // no-barge-in text path.
-    if (isStreaming) return;
+    // Typing mid-explanation is a raised hand: sendUtterance barge-ins the
+    // local audio and the server aborts the in-flight turn, so submitting
+    // while the teacher is speaking is now safe — and intended.
     const text = inputText.trim();
     if (text) {
       onSendTurn(text);
@@ -536,19 +529,18 @@ export function SessionView({
           </span>
         </div>
 
-        {/* Text Input for Answers (Directive 6: Always available — except
-            while a turn is actually mid-flight; PTT can still barge in). */}
+        {/* Text Input for Answers (Directive 6: Always available — typing
+            mid-explanation barge-ins the teacher, like raising a hand). */}
         <form onSubmit={handleSubmit} className="flex items-center gap-2 flex-1 min-w-0 mx-1">
           <input
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
-            placeholder={isStreaming ? `${teacher} is responding…` : phase === "awaiting_answer" ? "Your answer…" : `Ask ${teacher} something…`}
-            disabled={isStreaming}
-            className="w-full bg-[#FCFAF4] border border-[rgba(28,26,22,0.14)] rounded-full py-1.5 px-3.5 text-[0.82rem] text-ink outline-none focus:border-[#EEA31F] focus:bg-white transition-colors disabled:opacity-60"
+            placeholder={phase === "awaiting_answer" ? "Your answer…" : `Ask ${teacher} something…`}
+            className="w-full bg-[#FCFAF4] border border-[rgba(28,26,22,0.14)] rounded-full py-1.5 px-3.5 text-[0.82rem] text-ink outline-none focus:border-[#EEA31F] focus:bg-white transition-colors"
           />
           <button
             type="submit"
-            disabled={!inputText.trim() || isStreaming}
+            disabled={!inputText.trim()}
             className="w-8 h-8 flex-none rounded-full bg-[#1C1A16] grid place-items-center cursor-pointer disabled:opacity-40 hover:bg-[#2C2A26] transition-colors"
           >
             <svg viewBox="0 0 16 16" width={13} height={13} fill="none">

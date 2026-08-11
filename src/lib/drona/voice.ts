@@ -6,6 +6,9 @@ export interface VoiceClientOptions {
   onStateChange?: (state: VoiceClientState) => void;
   onSpeechText?: (text: string, isFinal: boolean) => void;
   onBoardEvents?: (events: any[]) => void;
+  /** Board history re-sent by the server on (re)connect — paint immediately,
+   *  no reveal timing: it's what was already on the board before a refresh. */
+  onBoardReplay?: (events: any[]) => void;
   onBoardUpdate?: (latex: any) => void;
   onMetaUpdate?: (meta: any) => void;
   onStateFrame?: (stateFrame: {
@@ -283,6 +286,11 @@ export class DronaVoiceClient {
         console.log(`[BOARD EVENTS RECEIVED] count: ${(msg.events || []).length}`);
         if (msg.events && msg.events.length > 0) {
           this.options.onBoardEvents?.(msg.events);
+        }
+      } else if (type === "board_replay") {
+        console.log(`[BOARD REPLAY] restoring ${(msg.events || []).length} items after reconnect/refresh`);
+        if (msg.events && msg.events.length > 0) {
+          this.options.onBoardReplay?.(msg.events);
         }
       } else if (type === "turn_error") {
         console.warn("[TURN ERROR RECEIVED]", msg.message);
@@ -679,25 +687,35 @@ export class DronaVoiceClient {
 
   // ─── Public Command Controls ─── //
 
+  /** The student took the floor (mic or typing) while the teacher was mid-
+   *  speech: silence the local pipeline and drop everything buffered for the
+   *  turn being cut off. The server aborts its half (generation + TTS) when
+   *  the ptt_start / utterance control lands. */
+  private bargeInIfSpeaking(reason: string): void {
+    if (!this.isDronaSpeaking && this.activeSources.length === 0 && this.pendingAudioBuffers.length === 0) {
+      return;
+    }
+    this.flushAudioQueue(reason);
+    this.isDronaSpeaking = false;
+    // The turn being cut off is never going to reach its own turn_complete
+    // now — its wait timer, if one was pending, would otherwise fire later
+    // and flush this cut-off turn's leftover board/state onto whatever the
+    // student interrupted it to do instead.
+    if (this.turnCompleteTimer) {
+      clearTimeout(this.turnCompleteTimer);
+      this.turnCompleteTimer = null;
+    }
+    this.turnCompleteRemainingMs = null;
+    this.options.onBargeIn?.();
+    this.notifyState();
+  }
+
   public startPushToTalk(): void {
     console.log("[PTT START] Push-to-talk button activated");
     this.isPushToTalkActive = true;
-    
+
     // Stop Drona speech immediately on barge-in
-    if (this.isDronaSpeaking || this.activeSources.length > 0 || this.pendingAudioBuffers.length > 0) {
-      this.flushAudioQueue("ptt_barge_in");
-      this.isDronaSpeaking = false;
-      // The turn being cut off is never going to reach its own turn_complete
-      // now — its wait timer, if one was pending, would otherwise fire later
-      // and flush this cut-off turn's leftover board/state onto whatever the
-      // student interrupted it to do instead.
-      if (this.turnCompleteTimer) {
-        clearTimeout(this.turnCompleteTimer);
-        this.turnCompleteTimer = null;
-      }
-      this.turnCompleteRemainingMs = null;
-      this.options.onBargeIn?.();
-    }
+    this.bargeInIfSpeaking("ptt_barge_in");
 
     if (this.audioCtx && this.audioCtx.state === "suspended") {
       this.audioCtx.resume();
@@ -807,6 +825,10 @@ export class DronaVoiceClient {
 
   public sendUtterance(text: string): void {
     if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+      // Typing mid-explanation is a raised hand: cut the local audio the
+      // same way holding the mic does. The server aborts its own half when
+      // this utterance lands.
+      this.bargeInIfSpeaking("text_barge_in");
       console.log("[WS OUTGOING] Sending utterance over WebSocket:", text);
       this.ws.send(JSON.stringify({ type: "utterance", text }));
     } else {

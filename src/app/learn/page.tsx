@@ -249,6 +249,43 @@ export default function LearnPage() {
     setSessionIdState(id);
   }, []);
 
+  /* ─── Refresh-safe sessions ───
+   * sessionId lived only in React state, so an accidental refresh (or tab
+   * crash) mid-lesson dropped the student back at the picker with no way
+   * back into a class that was still alive server-side. The active session
+   * is remembered here; on return within 90 minutes the picker offers to
+   * resume it, and the backend replays the board and the pending question
+   * on reconnect.
+   */
+  const ACTIVE_SESSION_KEY = "monk.drona.activeSession";
+  const [resumable, setResumable] = useState<{ id: string; topic: string } | null>(null);
+
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(ACTIVE_SESSION_KEY);
+      if (!raw) return;
+      const saved = JSON.parse(raw);
+      if (saved?.id && Date.now() - (saved.ts || 0) < 90 * 60 * 1000) {
+        setResumable({ id: saved.id, topic: saved.topic || "your class" });
+      } else {
+        window.localStorage.removeItem(ACTIVE_SESSION_KEY);
+      }
+    } catch {}
+  }, []);
+
+  const rememberActiveSession = useCallback((id: string, topic: string) => {
+    try {
+      window.localStorage.setItem(ACTIVE_SESSION_KEY, JSON.stringify({ id, topic, ts: Date.now() }));
+    } catch {}
+  }, []);
+
+  const forgetActiveSession = useCallback(() => {
+    setResumable(null);
+    try {
+      window.localStorage.removeItem(ACTIVE_SESSION_KEY);
+    } catch {}
+  }, []);
+
   /* ─── Derived: chapters for selected subject & class ─── */
   const allSubjectChapters = useMemo(() => {
     const group = catalogue.find(g => g.subject === selectedSubject);
@@ -429,6 +466,7 @@ export default function LearnPage() {
 
       // Transition to session
       setFlowState("session");
+      rememberActiveSession(sid, res.subtopic || utterance);
       resetSessionPlaybackState();
       setBoardLatex("");
       setTranscript([{
@@ -450,7 +488,7 @@ export default function LearnPage() {
       scopingInFlightRef.current = false;
       setLoadingSubtopic(null);
     }
-  }, [fireTeachingTurn, selectedChapterId, resetSessionPlaybackState]);
+  }, [fireTeachingTurn, selectedChapterId, resetSessionPlaybackState, rememberActiveSession]);
 
   /* ─── Send student turn ─── */
   const handleSendTurn = useCallback(async (utterance: string) => {
@@ -513,8 +551,9 @@ export default function LearnPage() {
       // (its own 5s auto-clear timer still pending) could survive onto the
       // summary screen or the next lesson.
       resetSessionPlaybackState();
+      forgetActiveSession();
     }
-  }, [sessionId, resetSessionPlaybackState]);
+  }, [sessionId, resetSessionPlaybackState, forgetActiveSession]);
 
   /* ─── Return to picker ─── */
   const handleReturnToPicker = useCallback(() => {
@@ -525,7 +564,8 @@ export default function LearnPage() {
     setSummaryData(null);
     setSelectedChapterId(null);
     resetSessionPlaybackState();
-  }, [resetSessionPlaybackState]);
+    forgetActiveSession();
+  }, [resetSessionPlaybackState, forgetActiveSession]);
 
   /* ─── Free text "Talk to teacher" ─── */
   const handleFreeText = useCallback(async () => {
@@ -687,6 +727,11 @@ export default function LearnPage() {
             pendingBoardRef.current = [...pendingBoardRef.current, ...events];
           }
         },
+        // History after a refresh/reconnect: paint at once, no reveal pacing —
+        // the student already watched these lines get written.
+        onBoardReplay: (events) => {
+          if (Array.isArray(events)) events.forEach(appendBoardEvent);
+        },
         onBoardUpdate: (payload: any) => {
           if (!payload) return;
           // Legacy string form — a bare LaTeX line with no event wrapper.
@@ -810,8 +855,6 @@ export default function LearnPage() {
             subtopicOptions={effectiveSubtopicOptions}
             onSendTurn={handleSendTurn}
             onEndSession={handleEndSession}
-            onToggleMute={() => voiceClientRef.current?.toggleMute()}
-            onInterrupt={() => voiceClientRef.current?.interrupt()}
             onTogglePause={() => voiceClientRef.current?.togglePause()}
             onStartPushToTalk={() => voiceClientRef.current?.startPushToTalk()}
             onStopPushToTalk={() => voiceClientRef.current?.stopPushToTalk()}
@@ -1016,6 +1059,45 @@ export default function LearnPage() {
       <Header />
 
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 pt-[30px] pb-16 animate-ml-rise">
+        {/* Resume banner: a refresh/crash mid-lesson used to lose the class
+            entirely even though it was still live server-side. */}
+        {resumable && (
+          <div className="flex items-center justify-between gap-3 flex-wrap bg-white border-[1.5px] border-ink rounded-[14px] py-3 px-4 mb-5 shadow-[0_12px_28px_-22px_rgba(28,26,22,0.5)]">
+            <span className="text-[0.95rem] text-ink">
+              <b>Class in progress:</b> {resumable.topic} — pick up where you left off?
+            </span>
+            <span className="flex items-center gap-2">
+              <button
+                type="button"
+                data-testid="resume-session"
+                onClick={() => {
+                  const r = resumable;
+                  if (!r) return;
+                  setResumable(null);
+                  rememberActiveSession(r.id, r.topic);
+                  resetSessionPlaybackState();
+                  setBoardLatex("");
+                  setTranscript([]);
+                  setSessionTopic(r.topic);
+                  setSessionPhase("teaching");
+                  setSessionId(r.id);
+                  setFlowState("session");
+                }}
+                className="font-bold text-[0.84rem] py-1.5 px-4 rounded-full bg-[#1C1A16] text-white hover:bg-[#2C2A26] transition-colors cursor-pointer"
+              >
+                Resume class
+              </button>
+              <button
+                type="button"
+                onClick={forgetActiveSession}
+                className="font-bold text-[0.84rem] py-1.5 px-3.5 rounded-full border-[1.4px] border-[rgba(28,26,22,0.16)] text-ink hover:border-[#1C1A16] transition-colors cursor-pointer"
+              >
+                Dismiss
+              </button>
+            </span>
+          </div>
+        )}
+
         {/* Title + persona / language controls */}
         <div className="flex items-end justify-between gap-4 flex-wrap mb-5">
           <div>
