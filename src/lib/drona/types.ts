@@ -69,6 +69,12 @@ export interface SSEEventState {
 export interface EndSessionResponse {
   summary_points: string[];
   mistakes_count: number;
+  /** Real class length in minutes (the UI used to show a hardcoded "~10m"). */
+  duration_minutes?: number;
+  /** Checkpoint questions the student actually answered (graded turns). */
+  questions_answered?: number;
+  /** Chapter the session belonged to. */
+  chapter_name?: string | null;
   next_suggestion?: {
     chapter_id: string;
     chapter_name: string;

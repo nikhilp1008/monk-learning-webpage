@@ -137,7 +137,7 @@ export function EndStatesView({
               Chapter
             </span>
             <b className="block font-bold text-[1.1rem] tracking-[-0.01em] text-ink">
-              {summaryData?.next_suggestion?.chapter_name || "Live Session"}
+              {summaryData?.chapter_name || summaryData?.next_suggestion?.chapter_name || "Live Session"}
             </b>
             <span className="block text-[0.8rem] text-[#57534B] mt-1">
               taught by {teacher}, on the board
@@ -150,7 +150,7 @@ export function EndStatesView({
                 Time
               </span>
               <b className="block font-bold text-[1.6rem] tracking-[-0.03em] leading-none text-ink">
-                ~10m
+                {summaryData?.duration_minutes ? `${summaryData.duration_minutes}m` : "—"}
               </b>
               <span className="block text-[0.76rem] text-[#9C988C] font-semibold mt-1">
                 of live class
@@ -161,7 +161,7 @@ export function EndStatesView({
                 Questions
               </span>
               <b className="block font-bold text-[1.6rem] tracking-[-0.03em] leading-none text-ink">
-                {summaryData?.mistakes_count ?? 0}
+                {summaryData?.questions_answered ?? summaryData?.mistakes_count ?? 0}
               </b>
               <span className="block text-[0.76rem] font-bold text-[#157A45] mt-1">
                 checkpoint questions
