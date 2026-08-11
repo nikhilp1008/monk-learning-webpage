@@ -92,7 +92,7 @@ function SolutionBody({ solution }: { solution: Solution }) {
   return (
     <div className="space-y-3 text-sm text-ink-light leading-relaxed">
       {solution?.approach?.trim() && (
-        <p className="whitespace-pre-line">
+        <p className="whitespace-pre-line overflow-x-auto">
           <MathText content={solution.approach} />
         </p>
       )}
@@ -104,7 +104,7 @@ function SolutionBody({ solution }: { solution: Solution }) {
               <span className="flex-none w-5 h-5 mt-0.5 rounded-md bg-ink/5 text-ink-muted grid place-items-center font-bold text-[0.6rem]">
                 {i + 1}
               </span>
-              <span className="min-w-0 whitespace-pre-line">
+              <span className="min-w-0 whitespace-pre-line overflow-x-auto">
                 <MathText content={step} />
               </span>
             </li>
@@ -540,8 +540,13 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                   </div>
                 </div>
 
-                {/* Question Text */}
-                <div className="text-base md:text-lg text-ink font-medium leading-relaxed">
+                {/* Question Text.
+                    overflow-x-auto because MathText only gives DISPLAY math its
+                    own scroll box. A long INLINE $...$ is a single unbreakable
+                    run, and at 380px one measured 343px wide inside a 380px
+                    viewport, scrolling the whole page sideways. Letting the
+                    stem scroll keeps the page still; prose still wraps. */}
+                <div className="text-base md:text-lg text-ink font-medium leading-relaxed overflow-x-auto">
                   <MathText content={question.question_text} />
                 </div>
 
@@ -631,7 +636,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                           >
                             {opt.key}
                           </span>
-                          <span className="text-sm md:text-base leading-snug pt-0.5">
+                          <span className="text-sm md:text-base leading-snug pt-0.5 min-w-0 overflow-x-auto">
                             <MathText content={opt.text} />
                           </span>
                         </button>
