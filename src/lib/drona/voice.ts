@@ -301,14 +301,27 @@ export class DronaVoiceClient {
         // is why the question and its options appeared on screen while Drona
         // was visibly still explaining. nextAudioStartTime is the end of the
         // queue in the playback clock, so use whichever is later.
+        //
+        // nextAudioStartTime only reflects chunks actually handed to
+        // scheduleAudioBuffer — playAudioChunk caps lookahead at 2s and parks
+        // anything further out in pendingAudioBuffers, drained one at a time
+        // as earlier chunks finish. For a turn with several/long chunks
+        // arriving faster than they play (the normal case — synthesis and
+        // network are much faster than speech), most of the queue was still
+        // sitting unscheduled when turn_complete arrived, so this wait was
+        // measured against only the first couple of seconds of a turn that
+        // could have another 30-60s left to play. Add the still-queued
+        // buffers' own durations to cover the whole thing.
         const outstanding = this.pendingReveals.filter((r) => !r.fired);
         const lastRevealMs = Math.max(
           0,
           outstanding.reduce((max, r) => Math.max(max, r.fireAt), 0) - performance.now()
         );
-        const remainingAudioMs = this.playbackCtx
+        const scheduledRemainingMs = this.playbackCtx
           ? Math.max(0, (this.nextAudioStartTime - this.playbackCtx.currentTime) * 1000)
           : 0;
+        const queuedMs = this.pendingAudioBuffers.reduce((sum, item) => sum + item.buffer.duration * 1000, 0);
+        const remainingAudioMs = scheduledRemainingMs + queuedMs;
         const waitMs = Math.max(lastRevealMs, remainingAudioMs);
         if (this.turnCompleteTimer) clearTimeout(this.turnCompleteTimer);
         this.turnCompleteTimer = setTimeout(() => {
