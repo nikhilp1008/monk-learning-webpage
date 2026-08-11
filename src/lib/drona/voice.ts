@@ -108,6 +108,8 @@ export class DronaVoiceClient {
   // visible in pendingAudioBuffers/nextAudioStartTime, so any remaining-audio
   // math done while this is non-zero undercounts.
   private pendingDecodes = 0;
+  // Serializes playAudioChunk so chunks schedule in the order they arrived.
+  private audioChain: Promise<void> = Promise.resolve();
 
   // Telemetry & Control Flags
   private isMuted: boolean = false;
@@ -601,9 +603,34 @@ export class DronaVoiceClient {
     }
   }
 
-  public async playAudioChunk(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string): Promise<void> {
-    if (!base64Pcm || typeof window === "undefined") return;
+  /** Schedules an audio chunk, STRICTLY in arrival order.
+   *
+   * The work below awaits (resuming a suspended context), and callers fire
+   * this without awaiting — so a chunk that hit the await could be overtaken
+   * by the next chunk, which scheduled itself first. One frame per sentence
+   * mostly hid it; streaming makes a sentence 13-15 frames, so the reordering
+   * spliced the next sentence into the middle of the current one. Chaining
+   * every call onto the previous one restores order without blocking the
+   * WebSocket handler.
+   */
+  public playAudioChunk(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string): Promise<void> {
+    // Counted at ENQUEUE, not at execution: a chunk waiting its turn in the
+    // chain is still audio this turn owes, and armTurnCompleteWait() must not
+    // measure "remaining audio" until the queue has drained into the schedule.
     this.pendingDecodes += 1;
+    this.audioChain = this.audioChain
+      .then(() => this._playAudioChunkOrdered(base64Pcm, speechText, boardText, sentenceId))
+      .catch((err) => {
+        console.error("Audio chunk scheduling failed:", err);
+      })
+      .finally(() => {
+        this.pendingDecodes = Math.max(0, this.pendingDecodes - 1);
+      });
+    return this.audioChain;
+  }
+
+  private async _playAudioChunkOrdered(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string): Promise<void> {
+    if (!base64Pcm || typeof window === "undefined") return;
     try {
       this.unlockAudio();
       // Second guard: this resume is independent of unlockAudio's, and would
@@ -648,8 +675,6 @@ export class DronaVoiceClient {
       }
     } catch (err) {
       console.error("Audio playback error:", err);
-    } finally {
-      this.pendingDecodes = Math.max(0, this.pendingDecodes - 1);
     }
   }
 
