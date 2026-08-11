@@ -230,7 +230,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   }, [exam, classLevelStr, fetchNextQuestion]);
 
   // Submit Answer
-  const handleRevealAnswer = async () => {
+  const handleSubmitAnswer = async () => {
     if (!question || submitting || answerResult) return;
 
     const isNumerical = question.question_type === "numerical";
@@ -712,7 +712,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                   {!answerResult ? (
                     <button
                       type="button"
-                      onClick={handleRevealAnswer}
+                      onClick={handleSubmitAnswer}
                       disabled={
                         submitting ||
                         (question.question_type === "numerical"
@@ -724,7 +724,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                       {submitting ? (
                         <div className="w-4 h-4 border-2 border-dark-card border-t-transparent rounded-full animate-ml-spin" />
                       ) : (
-                        "Reveal answer"
+                        "Submit"
                       )}
                     </button>
                   ) : (
