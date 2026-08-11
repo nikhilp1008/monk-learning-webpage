@@ -164,7 +164,14 @@ export class DronaVoiceClient {
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
     const wsBase = baseUrl.replace(/^http/, "ws");
     const token = (typeof window !== "undefined" && (window as any).__E2E_MOCK_TOKEN__) || "e2e_mock_token_123";
-    const wsUrl = this.options.wsUrl || `${wsBase}/drona/session/${this.sessionId}/live?token=${encodeURIComponent(token)}`;
+    // Pass ?stream_tts=0 through from the page URL, so streamed-vs-whole
+    // sentence audio can be A/B'd on the deployed app without a rebuild.
+    let passthrough = "";
+    if (typeof window !== "undefined") {
+      const streamFlag = new URLSearchParams(window.location.search).get("stream_tts");
+      if (streamFlag === "0") passthrough = "&stream_tts=0";
+    }
+    const wsUrl = this.options.wsUrl || `${wsBase}/drona/session/${this.sessionId}/live?token=${encodeURIComponent(token)}${passthrough}`;
 
     // Never leave a previous socket alive. `onerror` can fire WITHOUT a
     // following `close` (a transient network error on an otherwise open
