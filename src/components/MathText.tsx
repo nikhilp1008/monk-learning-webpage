@@ -12,6 +12,17 @@ export function MathText({ content, className = "" }: MathTextProps) {
   const renderedElements = useMemo(() => {
     if (!content) return null;
 
+    // Defence in depth. A caller passing a non-string -- an object column such
+    // as `questions.solution`, a number -- used to reach .replace below, throw,
+    // and unmount the whole route through the error boundary. Rendering
+    // nothing is always preferable to taking the page down.
+    if (typeof content !== "string") {
+      if (process.env.NODE_ENV !== "production") {
+        console.error("MathText: expected a string, received", typeof content, content);
+      }
+      return null;
+    }
+
     const renderMathString = (tex: string, displayMode: boolean): React.ReactNode => {
       try {
         const html = katex.renderToString(tex, {

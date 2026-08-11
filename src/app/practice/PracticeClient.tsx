@@ -32,11 +32,25 @@ interface QuestionPayload {
   message?: string;
 }
 
+// `questions.solution` is a JSONB object, not a string -- measured across all
+// 2,920 servable rows: {steps} x2780, {approach,steps} x119,
+// {final_answer,steps} x21, and zero strings. /practice/answer returns the
+// column verbatim, so the object arrives here untouched. Typing this as
+// `string` is what crashed the page: React cannot render a plain object as a
+// child, and MathText calls .replace on it.
+interface SolutionPayload {
+  approach?: string | null;
+  steps?: string[] | null;
+  final_answer?: string | null;
+}
+
+type Solution = string | SolutionPayload | null;
+
 interface AnswerResult {
   is_correct: boolean;
   correct_option?: string | null;
   correct_value?: number | null;
-  solution?: string | null;
+  solution?: Solution;
 }
 
 interface PracticeStats {
@@ -47,6 +61,64 @@ interface PracticeStats {
 
 interface PracticeClientProps {
   profile: ProfileRow;
+}
+
+/** True when there is nothing worth showing in the solution box. */
+function isSolutionEmpty(solution: Solution | undefined): boolean {
+  if (!solution) return true;
+  if (typeof solution === "string") return !solution.trim();
+  const { approach, steps, final_answer } = solution;
+  return (
+    !approach?.trim() && !steps?.some((s) => s?.trim()) && !final_answer?.trim()
+  );
+}
+
+/**
+ * Renders a solution in either shape it can arrive in: a bare string (legacy)
+ * or the {approach, steps, final_answer} object every live row actually uses.
+ * Every text fragment goes through MathText so LaTeX inside a step renders.
+ */
+function SolutionBody({ solution }: { solution: Solution }) {
+  if (typeof solution === "string") {
+    return (
+      <div className="text-sm text-ink-light leading-relaxed whitespace-pre-line">
+        <MathText content={solution} />
+      </div>
+    );
+  }
+
+  const steps = (solution?.steps ?? []).filter((s) => s?.trim());
+
+  return (
+    <div className="space-y-3 text-sm text-ink-light leading-relaxed">
+      {solution?.approach?.trim() && (
+        <p className="whitespace-pre-line">
+          <MathText content={solution.approach} />
+        </p>
+      )}
+
+      {steps.length > 0 && (
+        <ol className="space-y-2">
+          {steps.map((step, i) => (
+            <li key={i} className="flex gap-2.5">
+              <span className="flex-none w-5 h-5 mt-0.5 rounded-md bg-ink/5 text-ink-muted grid place-items-center font-bold text-[0.6rem]">
+                {i + 1}
+              </span>
+              <span className="min-w-0 whitespace-pre-line">
+                <MathText content={step} />
+              </span>
+            </li>
+          ))}
+        </ol>
+      )}
+
+      {solution?.final_answer?.trim() && (
+        <p className="font-semibold text-ink">
+          Answer: <MathText content={solution.final_answer} />
+        </p>
+      )}
+    </div>
+  );
 }
 
 export function PracticeClient({ profile }: PracticeClientProps) {
@@ -70,6 +142,22 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   // Explain Drona state
   const [explaining, setExplaining] = useState<boolean>(false);
   const [explainBanner, setExplainBanner] = useState<string | null>(null);
+
+  // Transient notice for things that are not errors but must not be silent,
+  // e.g. a question the server cannot grade and we had to swap out.
+  const [notice, setNotice] = useState<string | null>(null);
+
+  // A numerical answer is only submittable once it parses to a real number.
+  // Testing `.trim()` alone let "abc" through: parseFloat gave NaN, which
+  // JSON.stringify serialises as null, and the server recorded a wrong answer.
+  const parsedNumericalValue = (() => {
+    const raw = numericalValue.trim();
+    if (!raw) return null;
+    const parsed = Number(raw);
+    return Number.isFinite(parsed) ? parsed : null;
+  })();
+  const numericalValueIsInvalid =
+    Boolean(numericalValue.trim()) && parsedNumericalValue === null;
 
   // Session stats
   const [lifetimeStats, setLifetimeStats] = useState<PracticeStats>({
@@ -105,6 +193,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
       setSelectedOption("");
       setNumericalValue("");
       setExplainBanner(null);
+      setNotice(null);
 
       try {
         const payload = await apiFetch<QuestionPayload>("/practice/next", {
@@ -146,7 +235,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
 
     const isNumerical = question.question_type === "numerical";
 
-    if (isNumerical && !numericalValue.trim()) return;
+    if (isNumerical && parsedNumericalValue === null) return;
     if (!isNumerical && !selectedOption) return;
 
     setSubmitting(true);
@@ -157,7 +246,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     };
 
     if (isNumerical) {
-      body.chosen_value = parseFloat(numericalValue.trim());
+      body.chosen_value = parsedNumericalValue;
     } else {
       body.chosen_option = selectedOption;
     }
@@ -177,8 +266,13 @@ export function PracticeClient({ profile }: PracticeClientProps) {
       console.error("Error submitting answer:", err);
       if (err instanceof ApiError) {
         if (err.status === 409) {
-          // Ungradeable numerical question -> skip silently to next question
-          fetchNextQuestion();
+          // Ungradeable question (no ground-truth value on the row). Swap it
+          // out, but say so -- a question vanishing without explanation reads
+          // as the app losing the student's work.
+          await fetchNextQuestion();
+          setNotice(
+            "That question wasn't ready to be graded, so we've swapped it for another. Your score is unaffected."
+          );
           return;
         }
         setErrorMsg(err.message);
@@ -465,9 +559,26 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                         onChange={(e) => setNumericalValue(e.target.value)}
                         disabled={Boolean(answerResult)}
                         placeholder="e.g. 14.5 or -2"
-                        className="w-full max-w-xs px-4 py-3 rounded-xl border border-border-subtle bg-white text-base font-bold text-ink focus:outline-none focus:border-orange disabled:bg-cream-light transition-colors"
+                        aria-invalid={numericalValueIsInvalid}
+                        aria-describedby={
+                          numericalValueIsInvalid ? "numerical-hint" : undefined
+                        }
+                        className={`w-full max-w-xs px-4 py-3 rounded-xl border bg-white text-base font-bold text-ink focus:outline-none disabled:bg-cream-light transition-colors ${
+                          numericalValueIsInvalid
+                            ? "border-[#DD4433] focus:border-[#DD4433]"
+                            : "border-border-subtle focus:border-orange"
+                        }`}
                       />
                     </div>
+                    {numericalValueIsInvalid && (
+                      <p
+                        id="numerical-hint"
+                        className="text-xs font-semibold text-[#C53A2B]"
+                      >
+                        Enter a number — digits only, with an optional decimal
+                        point or minus sign. Leave out any units.
+                      </p>
+                    )}
                   </div>
                 ) : (
                   <div className="space-y-3 pt-2">
@@ -540,7 +651,16 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                           : "bg-[rgba(221,68,51,0.1)] border-[rgba(221,68,51,0.3)] text-[#C53A2B]"
                       }`}
                     >
-                      <span className="w-6 h-6 rounded-full grid place-items-center font-bold text-xs text-white bg-current">
+                      {/* `bg-current` used to sit alongside `text-white`, so the
+                          badge painted white-on-white and the tick was never
+                          visible. The fill has to be named explicitly. */}
+                      <span
+                        className={`w-6 h-6 flex-none rounded-full grid place-items-center font-bold text-xs text-white ${
+                          answerResult.is_correct
+                            ? "bg-[#157A45]"
+                            : "bg-[#C53A2B]"
+                        }`}
+                      >
                         {answerResult.is_correct ? "✓" : "✕"}
                       </span>
                       <b className="text-sm font-bold">
@@ -557,16 +677,21 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                       <b className="block font-bold text-xs text-ink uppercase tracking-wider">
                         Step-by-Step Solution
                       </b>
-                      {answerResult.solution ? (
-                        <div className="text-sm text-ink-light leading-relaxed whitespace-pre-line">
-                          <MathText content={answerResult.solution} />
-                        </div>
+                      {!isSolutionEmpty(answerResult.solution) ? (
+                        <SolutionBody solution={answerResult.solution ?? null} />
                       ) : (
                         <p className="text-xs text-ink-muted italic">
                           No detailed solution text provided for this question yet.
                         </p>
                       )}
                     </div>
+                  </div>
+                )}
+
+                {/* Swapped-question notice */}
+                {notice && (
+                  <div className="p-3.5 rounded-xl bg-ink/5 border border-border-subtle text-ink-light text-xs font-semibold animate-ml-rise">
+                    ℹ {notice}
                   </div>
                 )}
 
@@ -586,7 +711,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                       disabled={
                         submitting ||
                         (question.question_type === "numerical"
-                          ? !numericalValue.trim()
+                          ? parsedNumericalValue === null
                           : !selectedOption)
                       }
                       className="px-6 py-3 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill hover:bg-orange-light transition-all disabled:opacity-40 flex items-center gap-2"
@@ -635,8 +760,11 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                 <b className="font-extrabold text-xs tracking-wider uppercase text-ink-muted">
                   This Session
                 </b>
+                {/* Lifetime total. It used to read "{totalAttempted} Attempted"
+                    directly under the "This session" heading, which made a
+                    fresh session look like it already had 13 attempts. */}
                 <span className="text-xs font-bold text-ink-light">
-                  {totalAttempted} Attempted
+                  {totalAttempted} all-time
                 </span>
               </div>
 
