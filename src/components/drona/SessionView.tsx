@@ -154,21 +154,24 @@ export function SessionView({
   const isPaused = voiceState?.isPaused || false;
   const isConnected = voiceState?.isConnected ?? true;
 
-  // B5: Explicit preparing state before first audio chunk plays
+  // B5: Explicit preparing state before first audio chunk plays.
+  // Paused outranks speaking: pause suspends audio without ending it, so
+  // isDronaSpeaking stays true and the label read "Explaining concept"
+  // through the whole pause.
   const statusLabel = !isConnected
     ? "Connecting..."
     : isTranscribing
     ? "Transcribing..."
     : voiceState?.hasTurnError
     ? "Something went wrong — retrying"
+    : isPaused
+    ? "Paused"
     : !hasAudioPlayed
     ? `${teacher} is preparing your lesson…`
     : isDronaSpeaking
     ? "Explaining concept"
     : isMuted
     ? "Muted"
-    : isPaused
-    ? "Paused"
     : phase === "awaiting_answer" || (subtopicOptions && subtopicOptions.length > 0)
     ? "Waiting for your answer"
     : voiceState?.isListening

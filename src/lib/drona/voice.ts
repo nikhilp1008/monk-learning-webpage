@@ -90,6 +90,13 @@ export class DronaVoiceClient {
   // act instead of waiting on a promise nothing is keeping.
   private turnErrorRecoveryTimer: ReturnType<typeof setTimeout> | null = null;
   private static readonly TURN_ERROR_RECOVERY_MS = 15000;
+  // When the checkpoint wait is due to fire (performance.now() clock), and how
+  // much of it was left when a pause interrupted it. The timer is wall-clock
+  // while the audio it waits on is audio-clock: an unpaused timer kept
+  // counting through a pause, so a 90s pause put the checkpoint 90s out of
+  // step with the (frozen) speech.
+  private turnCompleteFireAt = 0;
+  private turnCompleteRemainingMs: number | null = null;
   // Audio chunks received since the last turn_complete — distinguishes "this
   // turn simply hasn't produced audio yet / at all" from a mid-turn synthesis
   // gap when deciding whether a state frame may be applied immediately.
@@ -392,12 +399,21 @@ export class DronaVoiceClient {
       ? Math.max(0, (this.nextAudioStartTime - this.playbackCtx.currentTime) * 1000)
       : 0;
     const queuedMs = this.pendingAudioBuffers.reduce((sum, item) => sum + item.buffer.duration * 1000, 0);
-    const waitMs = Math.max(lastRevealMs, scheduledRemainingMs + queuedMs);
+    const waitMs = Math.max(lastRevealMs, scheduledRemainingMs + queuedMs) + 200;
+    console.log(`⏱️ [SYNC] turn_complete: checkpoint due in ${(waitMs / 1000).toFixed(1)}s (reveal=${(lastRevealMs / 1000).toFixed(1)}s scheduled=${(scheduledRemainingMs / 1000).toFixed(1)}s queued=${(queuedMs / 1000).toFixed(1)}s paused=${this.isPaused})`);
     if (this.turnCompleteTimer) clearTimeout(this.turnCompleteTimer);
+    this.turnCompleteFireAt = performance.now() + waitMs;
+    if (this.isPaused) {
+      // Paused mid-turn: hold the whole wait and start it on resume.
+      this.turnCompleteRemainingMs = waitMs;
+      this.turnCompleteTimer = null;
+      return;
+    }
     this.turnCompleteTimer = setTimeout(() => {
       this.turnCompleteTimer = null;
+      console.log("⏱️ [SYNC] checkpoint wait elapsed — applying question/chips now");
       this.options.onTurnComplete?.();
-    }, waitMs + 200);
+    }, waitMs);
   }
 
   /** Arms a caption/board reveal, remembering when it is due so pause can re-arm it. */
@@ -679,6 +695,7 @@ export class DronaVoiceClient {
         clearTimeout(this.turnCompleteTimer);
         this.turnCompleteTimer = null;
       }
+      this.turnCompleteRemainingMs = null;
       this.options.onBargeIn?.();
     }
 
@@ -723,6 +740,7 @@ export class DronaVoiceClient {
       clearTimeout(this.turnCompleteTimer);
       this.turnCompleteTimer = null;
     }
+    this.turnCompleteRemainingMs = null;
     if (this.playbackCtx) {
       this.playbackCtx.close().catch(() => {});
       this.playbackCtx = null;
@@ -757,11 +775,31 @@ export class DronaVoiceClient {
     }
 
     // Caption/board reveal timers are wall-clock, not audio-clock, so they
-    // would run ahead while paused. Hold them and re-arm on resume.
+    // would run ahead while paused. Hold them and re-arm on resume. The
+    // checkpoint's turn_complete timer is wall-clock too and was NOT held —
+    // a pause of N seconds put the checkpoint N seconds out of step with the
+    // frozen speech for the rest of the turn.
     if (this.isPaused) {
       this.pauseScheduledReveals();
+      if (this.turnCompleteTimer) {
+        clearTimeout(this.turnCompleteTimer);
+        this.turnCompleteTimer = null;
+        this.turnCompleteRemainingMs = Math.max(0, this.turnCompleteFireAt - performance.now());
+        console.log(`⏱️ [SYNC] pause: holding checkpoint timer with ${(this.turnCompleteRemainingMs / 1000).toFixed(1)}s left`);
+      }
     } else {
       this.resumeScheduledReveals();
+      if (this.turnCompleteRemainingMs !== null) {
+        const remaining = this.turnCompleteRemainingMs;
+        this.turnCompleteRemainingMs = null;
+        this.turnCompleteFireAt = performance.now() + remaining;
+        console.log(`⏱️ [SYNC] resume: checkpoint timer re-armed for ${(remaining / 1000).toFixed(1)}s`);
+        this.turnCompleteTimer = setTimeout(() => {
+          this.turnCompleteTimer = null;
+          console.log("⏱️ [SYNC] checkpoint wait elapsed — applying question/chips now");
+          this.options.onTurnComplete?.();
+        }, remaining);
+      }
     }
 
     this.notifyState();
@@ -786,6 +824,7 @@ export class DronaVoiceClient {
       clearTimeout(this.turnCompleteTimer);
       this.turnCompleteTimer = null;
     }
+    this.turnCompleteRemainingMs = null;
     if (this.turnErrorRecoveryTimer) {
       clearTimeout(this.turnErrorRecoveryTimer);
       this.turnErrorRecoveryTimer = null;
@@ -819,14 +858,17 @@ export class DronaVoiceClient {
 
   private notifyState(): void {
     const isConn = this.ws?.readyState === WebSocket.OPEN;
+    // Paused must outrank speaking: pausing suspends the audio without ending
+    // it, so isDronaSpeaking stays true through the whole pause and the label
+    // kept reading "Explaining concept" while everything was frozen.
     const statusLabel = !isConn
       ? "Connecting..."
+      : this.isPaused
+      ? "Paused"
       : this.isDronaSpeaking
       ? "Explaining concept"
       : this.isMuted
       ? "Muted"
-      : this.isPaused
-      ? "Paused"
       : this.isPushToTalkActive
       ? "Listening — Microphone active"
       : "Tap or hold mic to speak";
