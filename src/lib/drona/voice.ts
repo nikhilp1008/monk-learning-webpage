@@ -90,6 +90,10 @@ export class DronaVoiceClient {
   // act instead of waiting on a promise nothing is keeping.
   private turnErrorRecoveryTimer: ReturnType<typeof setTimeout> | null = null;
   private static readonly TURN_ERROR_RECOVERY_MS = 15000;
+  // Audio chunks received since the last turn_complete — distinguishes "this
+  // turn simply hasn't produced audio yet / at all" from a mid-turn synthesis
+  // gap when deciding whether a state frame may be applied immediately.
+  private audioChunksThisTurn = 0;
 
   // Telemetry & Control Flags
   private isMuted: boolean = false;
@@ -152,6 +156,10 @@ export class DronaVoiceClient {
     this.ws.onopen = () => {
       const isReconnect = this.reconnectAttempts > 0;
       this.reconnectAttempts = 0;
+      // Fresh connection, fresh turn accounting — a resume state frame sent by
+      // the server right after this open must qualify for the idle flush even
+      // if the previous connection had audio in flight when it died.
+      this.audioChunksThisTurn = 0;
       this.notifyState();
       this.initAudioCapture();
       onFirstOpen?.();
@@ -238,14 +246,22 @@ export class DronaVoiceClient {
           // and no turn_complete coming: this is the resume-after-reconnect
           // frame for a question whose turn died with the old connection.
           // Flush immediately or the student sits on "Ready" forever.
+          //
+          // `audioChunksThisTurn === 0` is load-bearing: the pipeline is ALSO
+          // momentarily idle mid-turn whenever TTS synthesis lags playback (a
+          // gap between sentences), and the state frame routinely lands in
+          // such a gap — flushing there put the question up while the turn's
+          // remaining sentences were still being synthesized. Only a turn
+          // that has produced no audio at all (the resume case) qualifies.
           const pipelineIdle =
+            this.audioChunksThisTurn === 0 &&
             !this.isDronaSpeaking &&
             this.activeSources.length === 0 &&
             this.pendingAudioBuffers.length === 0 &&
             this.turnCompleteTimer === null &&
             !this.pendingReveals.some((r) => !r.fired);
           if (pipelineIdle && Array.isArray(msg.check_options) && msg.check_options.length > 0) {
-            console.log("[STATE FRAME - IDLE FLUSH] No audio in flight; applying question/chips immediately.");
+            console.log("[STATE FRAME - IDLE FLUSH] No audio this turn; applying question/chips immediately.");
             this.options.onTurnComplete?.();
           }
         }
@@ -273,6 +289,7 @@ export class DronaVoiceClient {
         }, DronaVoiceClient.TURN_ERROR_RECOVERY_MS);
       } else if (type === "audio_chunk") {
         this.hasTurnError = false;
+        this.audioChunksThisTurn += 1;
         if (this.turnErrorRecoveryTimer) {
           clearTimeout(this.turnErrorRecoveryTimer);
           this.turnErrorRecoveryTimer = null;
@@ -312,6 +329,7 @@ export class DronaVoiceClient {
           this.options.onSessionEnded?.();
         }
       } else if (type === "turn_complete") {
+        this.audioChunksThisTurn = 0;
         if (this.turnErrorRecoveryTimer) {
           clearTimeout(this.turnErrorRecoveryTimer);
           this.turnErrorRecoveryTimer = null;
@@ -446,24 +464,39 @@ export class DronaVoiceClient {
       console.log(`[AUDIO SCHEDULE] currentTime=${currentTime.toFixed(2)}s, startTime=${startTime.toFixed(2)}s (leadTime=${leadTime.toFixed(2)}s)`);
     }
 
-    // Schedule caption & board event release at EXACT audio playback time (startTime = currentTime + leadTime)
     const leadTimeMs = Math.max(0, (startTime - currentTime) * 1000);
 
-    this.armReveal(() => {
-      const t0 = performance.now();
-      if (item.speechText) {
-        this.currentSpeechText = item.speechText;
-        this.options.onSpeechText?.(item.speechText, false);
-      }
-      if (item.boardText !== undefined && item.boardText !== null) {
+    // Board line lands BEFORE its sentence is spoken (up to 3s, bounded by the
+    // queue lookahead) — reading the line first and then hearing it explained
+    // beats watching the board trail the voice, especially for formulas.
+    if (item.boardText !== undefined && item.boardText !== null) {
+      this.armReveal(() => {
         this.options.onBoardUpdate?.(item.boardText);
-      }
-      const tDomOffset = performance.now() - t0;
+        console.log(`📝 [BOARD LEAD] sentence_id=${item.sentenceId || "unknown"} board revealed ${Math.min(3000, leadTimeMs).toFixed(0)}ms ahead of audio`);
+      }, Math.max(0, leadTimeMs - 3000));
+    }
 
-      console.log(
-        `🎧 [REAL PLAYBACK SYNC] sentence_id=${item.sentenceId || "unknown"} | Audio Start | Queue Lead=${leadTimeMs.toFixed(1)}ms | DOM Offset=${tDomOffset.toFixed(2)}ms`
-      );
-    }, leadTimeMs);
+    // Caption tracks the sentence word-by-word across its real audio duration
+    // instead of dumping the full sentence at chunk start — a long sentence
+    // used to leave the caption frozen while the voice kept going, which read
+    // as "out of sync" even though the chunk timing was right.
+    if (item.speechText) {
+      const words = item.speechText.split(/\s+/).filter(Boolean);
+      const durationMs = item.buffer.duration * 1000;
+      const steps = Math.max(1, Math.min(words.length, Math.round(durationMs / 350)));
+      for (let s = 1; s <= steps; s++) {
+        const upTo = Math.ceil((words.length * s) / steps);
+        const text = words.slice(0, upTo).join(" ");
+        this.armReveal(() => {
+          this.currentSpeechText = text;
+          this.options.onSpeechText?.(text, false);
+        }, leadTimeMs + (durationMs * (s - 1)) / steps);
+      }
+    }
+
+    console.log(
+      `🎧 [PLAYBACK SCHEDULED] sentence_id=${item.sentenceId || "unknown"} | Queue Lead=${leadTimeMs.toFixed(1)}ms | dur=${(item.buffer.duration).toFixed(1)}s`
+    );
 
     source.onended = () => {
       const idx = this.activeSources.indexOf(source);
@@ -489,7 +522,10 @@ export class DronaVoiceClient {
     const currentTime = this.playbackCtx.currentTime;
     const leadTime = this.nextAudioStartTime - currentTime;
 
-    if (leadTime < 2.0) {
+    // 3.5s (was 2.0s): the board line for a sentence is revealed up to 3s
+    // before its audio starts, which only works if the chunk is actually
+    // scheduled that far ahead.
+    if (leadTime < 3.5) {
       const nextItem = this.pendingAudioBuffers.shift();
       if (nextItem) {
         this.scheduleAudioBuffer(nextItem);
@@ -550,9 +586,10 @@ export class DronaVoiceClient {
       const leadTime = this.nextAudioStartTime - currentTime;
       const item: AudioQueueItem = { buffer, sentenceId, speechText, boardText };
 
-      // Capped lookahead (Max 2.0s ahead of speech playback)
-      if (leadTime > 2.0) {
-        if (this.DEBUG_AUDIO) console.log(`[AUDIO QUEUE BUFFERED] leadTime=${leadTime.toFixed(2)}s > 2.0s limit. Queuing chunk (${buffer.duration.toFixed(2)}s)`);
+      // Capped lookahead (max 3.5s ahead of playback, so board lines can lead
+      // their sentence by up to 3s)
+      if (leadTime > 3.5) {
+        if (this.DEBUG_AUDIO) console.log(`[AUDIO QUEUE BUFFERED] leadTime=${leadTime.toFixed(2)}s > 3.5s limit. Queuing chunk (${buffer.duration.toFixed(2)}s)`);
         this.pendingAudioBuffers.push(item);
       } else {
         this.scheduleAudioBuffer(item);
