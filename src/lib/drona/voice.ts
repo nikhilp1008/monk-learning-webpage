@@ -526,9 +526,14 @@ export class DronaVoiceClient {
     // instead of dumping the full sentence at chunk start — a long sentence
     // used to leave the caption frozen while the voice kept going, which read
     // as "out of sync" even though the chunk timing was right.
+    //
+    // With streamed TTS, this chunk may be only the FIRST ~1s part of its
+    // sentence (continuation parts carry no text), so pace the words across
+    // the estimated full-sentence duration (~14 chars/sec measured for Rumik)
+    // rather than this part's length.
     if (item.speechText) {
       const words = item.speechText.split(/\s+/).filter(Boolean);
-      const durationMs = item.buffer.duration * 1000;
+      const durationMs = Math.max(item.buffer.duration * 1000, (item.speechText.length / 14) * 1000);
       const steps = Math.max(1, Math.min(words.length, Math.round(durationMs / 350)));
       for (let s = 1; s <= steps; s++) {
         const upTo = Math.ceil((words.length * s) / steps);
