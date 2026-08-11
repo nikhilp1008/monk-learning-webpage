@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Header } from "@/components/Header";
+import { NoteContent } from "@/components/NoteContent";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 
@@ -76,13 +77,29 @@ export default function NoteDetailPage() {
                   {note.chapter}
                 </span>
               )}
+              {/* Class progress and size were saved with the note all along —
+                  a student picking between three "Projectile Motion" notes
+                  needs to see which class got further, not three identical
+                  cards. */}
+              {note.total_segments > 0 && (
+                <span className="text-[0.78rem] text-ink-light font-semibold border border-border-subtle rounded-full px-2.5 py-1">
+                  {note.segments_covered >= note.total_segments
+                    ? "Full lesson covered"
+                    : `Class covered ${note.segments_covered} of ${note.total_segments} parts`}
+                </span>
+              )}
               <span className="text-[0.76rem] text-ink-muted">
+                {note.item_count > 0 ? `${note.item_count} board items · ` : ""}
                 Saved {new Date(note.created_at).toLocaleDateString()} · from a Drona session
               </span>
             </div>
 
-            <div className="bg-ruled-card border border-border-subtle rounded-[16px] p-6 shadow-ref-card whitespace-pre-wrap text-[0.98rem] text-ink leading-relaxed">
-              {note.content || "No content saved for this note."}
+            <div className="bg-ruled-card border border-border-subtle rounded-[16px] px-6 py-7 md:px-8 shadow-ref-card">
+              {note.content ? (
+                <NoteContent content={note.content} />
+              ) : (
+                <span className="text-ink-muted text-sm">No content saved for this note.</span>
+              )}
             </div>
           </>
         )}

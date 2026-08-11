@@ -18,6 +18,26 @@ const SUBJECT_DOT: Record<string, string> = {
   Maths: "bg-orange",
 };
 
+/** First real prose of the note, cleaned for a two-line card. The raw content
+ *  opens with an ALL-CAPS heading and bullet markers, so the cards all read
+ *  "PROJECTILE MOTION • After launch…" — noise at card size, and identical
+ *  for every note on the same topic. Skip headings and formula lines, strip
+ *  markers and $ delimiters, and join the first bullets into a sentence. */
+function previewText(n: NoteRow): string {
+  if (!n.content) return "";
+  const lines = n.content
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(
+      (l) =>
+        l &&
+        !(/[A-Z]/.test(l) && !/[a-z]/.test(l)) && // ALL-CAPS headings
+        !(l.startsWith("$") && l.endsWith("$")) // formula-only lines
+    )
+    .map((l) => l.replace(/^•\s*/, "").replace(/\$/g, ""));
+  return lines.slice(0, 3).join(" ");
+}
+
 function dayLabel(iso: string) {
   const d = new Date(iso);
   const diffMs = Date.now() - d.getTime();
@@ -159,7 +179,7 @@ export default function NotesPage() {
                 </div>
                 <h4 className="font-bold text-[1rem] text-ink mt-2.5">{n.concept || "Untitled note"}</h4>
                 <p className="text-[0.82rem] text-ink-light mt-1.5 line-clamp-2 leading-relaxed">
-                  {n.content || n.chapter}
+                  {previewText(n) || n.chapter}
                 </p>
               </Link>
             ))}
