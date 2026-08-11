@@ -110,6 +110,12 @@ export async function snapDoubt(file: File): Promise<SnapResponse> {
 
 export interface SnapStreamHandlers {
   onMeta?: (m: { submission_id: string; question_count: number; note: string | null }) => void;
+  /** Solver heartbeat while it reasons — lets the UI show live activity. */
+  onThinking?: (t: { question_index: number; seconds: number }) => void;
+  /** One step of the working, emitted AS the solver writes it. Never an answer. */
+  onStep?: (s: { question_index: number; n: number; text: string }) => void;
+  /** A retry started; discard the steps shown so far for this question. */
+  onStepsReset?: (r: { question_index: number }) => void;
   onQuestion?: (q: SnappedQuestion) => void;
   onDone?: (d: { solved_count: number; questions_used_today: number; daily_limit: number }) => void;
   onError?: (f: SnapFailure) => void;
@@ -180,6 +186,9 @@ export async function streamSnap(
         } else if (line.startsWith("data: ")) {
           const payload = JSON.parse(line.slice(6));
           if (eventName === "meta") handlers.onMeta?.(payload);
+          else if (eventName === "thinking") handlers.onThinking?.(payload);
+          else if (eventName === "step") handlers.onStep?.(payload);
+          else if (eventName === "steps_reset") handlers.onStepsReset?.(payload);
           else if (eventName === "question") handlers.onQuestion?.(payload);
           else if (eventName === "done") handlers.onDone?.(payload);
           else if (eventName === "error") handlers.onError?.(payload);

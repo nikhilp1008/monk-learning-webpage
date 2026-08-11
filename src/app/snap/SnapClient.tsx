@@ -37,6 +37,14 @@ export function SnapClient() {
   const [questions, setQuestions] = useState<SnappedQuestion[]>([]);
   const [expected, setExpected] = useState<number | null>(null);
   const [streamNote, setStreamNote] = useState<string | null>(null);
+  // The question currently being solved, printing live: thinking seconds while
+  // the solver reasons, then each step as it is written. Never an answer —
+  // that arrives only in the validated final card.
+  const [live, setLive] = useState<{
+    qIndex: number;
+    seconds: number;
+    steps: { n: number; text: string }[];
+  } | null>(null);
   const [failure, setFailure] = useState<SnapFailure | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
@@ -88,9 +96,32 @@ export function SnapClient() {
           setExpected(m.question_count);
           setStreamNote(m.note);
         },
-        onQuestion: (q) => setQuestions((prev) => [...prev, q]),
+        onThinking: (t) =>
+          setLive((prev) =>
+            prev && prev.qIndex === t.question_index
+              ? { ...prev, seconds: t.seconds }
+              : { qIndex: t.question_index, seconds: t.seconds, steps: [] }
+          ),
+        onStep: (st) =>
+          setLive((prev) => {
+            const base =
+              prev && prev.qIndex === st.question_index
+                ? prev
+                : { qIndex: st.question_index, seconds: 0, steps: [] };
+            if (base.steps.some((x) => x.n === st.n)) return base;
+            return { ...base, steps: [...base.steps, { n: st.n, text: st.text }] };
+          }),
+        onStepsReset: (r) =>
+          setLive((prev) =>
+            prev && prev.qIndex === r.question_index ? { ...prev, steps: [] } : prev
+          ),
+        onQuestion: (q) => {
+          setLive(null);
+          setQuestions((prev) => [...prev, q]);
+        },
         onError: (f) => setFailure(f),
       });
+      setLive(null);
       setBusy(false);
     },
     [setPreview, teacher]
@@ -122,6 +153,7 @@ export function SnapClient() {
     setQuestions([]);
     setExpected(null);
     setStreamNote(null);
+    setLive(null);
     setFailure(null);
     setNotice(null);
   };
@@ -251,7 +283,23 @@ export function SnapClient() {
         )}
 
         {/* ─── Working ─── */}
-        {busy && questions.length === 0 && (
+        {busy && questions.length === 0 && live && (
+          <div className="max-w-[720px]">
+            <RuledSheet label={`${teacher.toUpperCase()} IS WORKING`}>
+              {live.steps.length > 0 && (
+                <Solution answer={null} steps={live.steps} keyIdea={null} />
+              )}
+              <div className="flex items-center gap-2.5 text-ink-muted text-[0.86rem] mt-1">
+                <span className="w-3.5 h-3.5 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
+                {live.steps.length === 0
+                  ? `${teacher} is thinking it through… ${live.seconds}s`
+                  : "writing the next step…"}
+              </div>
+            </RuledSheet>
+          </div>
+        )}
+
+        {busy && questions.length === 0 && !live && (
           <div className="flex items-center gap-3.5 bg-white border border-border-subtle rounded-2xl px-6 py-8 shadow-ref-card">
             <span className="w-5 h-5 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
             <div>
@@ -452,7 +500,32 @@ export function SnapClient() {
               </div>
             ))}
 
-            {busy && (
+            {busy && live && (
+              <div>
+                {(expected ?? 1) > 1 && (
+                  <span className="block font-extrabold text-[0.6rem] tracking-[0.14em] uppercase text-ink-muted mb-2">
+                    Question {live.qIndex} of {expected}
+                  </span>
+                )}
+                <RuledSheet label={`${teacher.toUpperCase()} IS WORKING`}>
+                  {live.steps.length > 0 && (
+                    <Solution
+                      answer={null}
+                      steps={live.steps}
+                      keyIdea={null}
+                    />
+                  )}
+                  <div className="flex items-center gap-2.5 text-ink-muted text-[0.86rem] mt-1">
+                    <span className="w-3.5 h-3.5 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
+                    {live.steps.length === 0
+                      ? `${teacher} is thinking it through… ${live.seconds}s`
+                      : "writing the next step…"}
+                  </div>
+                </RuledSheet>
+              </div>
+            )}
+
+            {busy && !live && (
               <div className="flex items-center gap-3 text-ink-muted text-[0.88rem]">
                 <span className="w-4 h-4 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
                 {expected && expected > questions.length
