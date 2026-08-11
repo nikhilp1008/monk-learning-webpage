@@ -9,7 +9,13 @@ interface KaTeXRendererProps {
   className?: string;
 }
 
-export function KaTeXRenderer({
+// Memoized because the output is a pure function of the props, and the render
+// is NOT cheap: katex.renderToString per formula line, regexes per prose line.
+// The caption is word-paced (several React updates per second while the tutor
+// speaks), and each update re-rendered every board item from scratch — as the
+// board filled up over a lesson, that main-thread load starved the caption
+// timers, which is how captions fell behind the voice on later turns.
+export const KaTeXRenderer = React.memo(function KaTeXRenderer({
   latex,
   className = "",
 }: KaTeXRendererProps) {
@@ -80,4 +86,4 @@ export function KaTeXRenderer({
       })}
     </div>
   );
-}
+});

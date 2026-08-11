@@ -375,6 +375,10 @@ export class DronaVoiceClient {
             if (speechText) {
               this.currentSpeechText = speechText;
               this.options.onSpeechText?.(speechText, false);
+              // Same reason as the word-paced reveals: the caption bar shows
+              // the notifyState snapshot, and this reveal fires after the WS
+              // frames have gone quiet.
+              this.notifyState();
             }
             if (boardEvent !== undefined) {
               console.log(`[BOARD EVENT ATTACHED TO CHUNK]`, boardEvent);
@@ -590,6 +594,13 @@ export class DronaVoiceClient {
         this.armReveal(() => {
           this.currentSpeechText = text;
           this.options.onSpeechText?.(text, false);
+          // The caption bar renders sessionCap, which is a SNAPSHOT of
+          // currentSpeechText taken at notifyState time — without this call
+          // the bar only refreshed when a WS frame happened to arrive. Early
+          // in a turn frames are still streaming in, so it looked alive; once
+          // synthesis outran playback the frames stopped and the bar froze on
+          // the first few words of whatever sentence was playing.
+          this.notifyState();
         }, leadTimeMs + (durationMs * (s - 1)) / steps);
       }
     }
