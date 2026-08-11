@@ -490,12 +490,30 @@ export default function LearnPage() {
     }
   }, [fireTeachingTurn, selectedChapterId, resetSessionPlaybackState, rememberActiveSession]);
 
-  /* ─── Send student turn ─── */
-  const handleSendTurn = useCallback(async (utterance: string) => {
-    if (!sessionId) return;
+  /* ─── Record a student answer ───
+   * Shared by all three ways of answering — tapping a chip, typing, and
+   * dictating over push-to-talk. Dictation used to skip this entirely: the
+   * transcript came back on Drona's caption channel, so a spoken answer was
+   * shown as something the teacher said and the question stayed open on
+   * screen as though nothing had been answered.
+   *
+   * When the words match one of the chips (however loosely — "the dropped
+   * one", "b", "both together"), that chip is the selection, so a dictated
+   * answer paints the same verdict a tapped one does.
+   */
+  const acceptStudentAnswer = useCallback((utterance: string) => {
+    const chips = liveCheckOptionsRef.current;
+    const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9\s]/g, "").replace(/\s+/g, " ").trim();
+    const spoken = norm(utterance);
+    const letters = ["a", "b", "c", "d"];
+    const matched =
+      chips.find((c) => norm(c) === spoken) ??
+      chips.find((c) => spoken.includes(norm(c)) || norm(c).includes(spoken)) ??
+      chips[letters.indexOf(spoken)];
+
     // Remember the tapped chip so the verdict can be painted onto it, and clear
     // any previous verdict immediately for responsive feedback.
-    setSelectedOption(utterance);
+    setSelectedOption(matched ?? utterance);
     setAnswerResult(null);
 
     // Take the question down as soon as it is answered. Chips used to survive
@@ -512,6 +530,12 @@ export default function LearnPage() {
       text: utterance,
       timestamp: new Date(),
     }]);
+  }, []);
+
+  /* ─── Send student turn (chip tap / typed answer) ─── */
+  const handleSendTurn = useCallback(async (utterance: string) => {
+    if (!sessionId) return;
+    acceptStudentAnswer(utterance);
     setIsStreaming(true);
 
     if (voiceClientRef.current) {
@@ -521,7 +545,7 @@ export default function LearnPage() {
       console.error("[STUDENT TURN ERROR] DronaVoiceClient is not connected via WebSocket");
       setIsStreaming(false);
     }
-  }, [sessionId]);
+  }, [sessionId, acceptStudentAnswer]);
 
   /* ─── End session ─── */
   const handleEndSession = useCallback(async () => {
@@ -698,6 +722,15 @@ export default function LearnPage() {
             answerResult: frame.answer_result ?? pendingStateRef.current?.answerResult ?? null,
           };
         },
+        // Push-to-talk came back with the student's words. The server has
+        // already launched the turn from this transcript, so this only has to
+        // record the answer on screen — never re-send it.
+        onStudentTranscript: (text) => {
+          if (!text.trim()) return;
+          console.log("[STUDENT TRANSCRIPT] Dictated answer:", text);
+          acceptStudentAnswer(text);
+          setIsStreaming(true);
+        },
         onSpeechText: (text, isFinal) => {
           if (text) {
             setTranscript((prev) => {
@@ -812,7 +845,7 @@ export default function LearnPage() {
         voiceClientRef.current = null;
       };
     }
-  }, [sessionId, handleEndSession, revealBoardEvent, appendBoardEvent]);
+  }, [sessionId, handleEndSession, revealBoardEvent, appendBoardEvent, acceptStudentAnswer]);
 
   /* ─── RENDER: Session View ─── */
   if (flowState === "session") {

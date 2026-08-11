@@ -27,6 +27,11 @@ export interface VoiceClientOptions {
    *  buffers held for the turn that just got cut off, since it's never
    *  reaching its own turn_complete now. */
   onBargeIn?: () => void;
+  /** The student's own words, transcribed from push-to-talk. Distinct from
+   *  onSpeechText, which is Drona's caption — routing the STT result through
+   *  that made a dictated answer appear on screen as something the TEACHER
+   *  said, and left the open question sitting there unanswered. */
+  onStudentTranscript?: (text: string) => void;
   /** The socket re-opened after a drop. Any turn that was streaming on the old
    *  connection is gone — the caller should clear "responding…" state. */
   onReconnect?: () => void;
@@ -53,6 +58,9 @@ interface AudioQueueItem {
   sentenceId?: string;
   speechText?: string;
   boardText?: any;
+  /** True when this frame is only the FIRST streamed part of a longer
+   *  sentence, so its buffer duration is not the caption's duration. */
+  isPartialSentence?: boolean;
 }
 
 /**
@@ -309,7 +317,7 @@ export class DronaVoiceClient {
         }
         this.notifyState();
       } else if (type === "transcript_final") {
-        this.options.onSpeechText?.(msg.transcript || "", true);
+        this.options.onStudentTranscript?.(msg.transcript || "");
       } else if (type === "board_events") {
         console.log(`[BOARD EVENTS RECEIVED] count: ${(msg.events || []).length}`);
         if (msg.events && msg.events.length > 0) {
@@ -346,7 +354,10 @@ export class DronaVoiceClient {
         const boardEvent = msg.board_event || msg.board;
         const sentenceId = msg.sentence_id || "";
         if (msg.audio) {
-          this.playAudioChunk(msg.audio, speechText, boardEvent, sentenceId);
+          // `continuation` is present only in streamed-TTS mode; `false` marks
+          // part 1 of a sentence still being synthesized. A whole-sentence
+          // frame carries no such key at all.
+          this.playAudioChunk(msg.audio, speechText, boardEvent, sentenceId, msg.continuation === false);
         } else {
           // No audio (checkpoint questions are delivered as a silent caption),
           // so there's nothing to arm this against via scheduleAudioBuffer.
@@ -559,9 +570,17 @@ export class DronaVoiceClient {
     // sentence (continuation parts carry no text), so pace the words across
     // the estimated full-sentence duration (~14 chars/sec measured for Rumik)
     // rather than this part's length.
+    //
+    // Only for that case. When the frame carries a WHOLE sentence, its buffer
+    // duration is the truth, and the old unconditional Math.max let the
+    // 14-chars/sec estimate override it — Rumik actually runs ~15.2 chars/sec,
+    // so every caption was paced ~8% slower than the voice and finished more
+    // than a second behind it on a long sentence.
     if (item.speechText) {
       const words = item.speechText.split(/\s+/).filter(Boolean);
-      const durationMs = Math.max(item.buffer.duration * 1000, (item.speechText.length / 14) * 1000);
+      const durationMs = item.isPartialSentence
+        ? Math.max(item.buffer.duration * 1000, (item.speechText.length / 14) * 1000)
+        : item.buffer.duration * 1000;
       const steps = Math.max(1, Math.min(words.length, Math.round(durationMs / 350)));
       for (let s = 1; s <= steps; s++) {
         const upTo = Math.ceil((words.length * s) / steps);
@@ -639,13 +658,13 @@ export class DronaVoiceClient {
    * every call onto the previous one restores order without blocking the
    * WebSocket handler.
    */
-  public playAudioChunk(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string): Promise<void> {
+  public playAudioChunk(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string, isPartialSentence?: boolean): Promise<void> {
     // Counted at ENQUEUE, not at execution: a chunk waiting its turn in the
     // chain is still audio this turn owes, and armTurnCompleteWait() must not
     // measure "remaining audio" until the queue has drained into the schedule.
     this.pendingDecodes += 1;
     this.audioChain = this.audioChain
-      .then(() => this._playAudioChunkOrdered(base64Pcm, speechText, boardText, sentenceId))
+      .then(() => this._playAudioChunkOrdered(base64Pcm, speechText, boardText, sentenceId, isPartialSentence))
       .catch((err) => {
         console.error("Audio chunk scheduling failed:", err);
       })
@@ -655,7 +674,7 @@ export class DronaVoiceClient {
     return this.audioChain;
   }
 
-  private async _playAudioChunkOrdered(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string): Promise<void> {
+  private async _playAudioChunkOrdered(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string, isPartialSentence?: boolean): Promise<void> {
     if (!base64Pcm || typeof window === "undefined") return;
     try {
       this.unlockAudio();
@@ -689,7 +708,7 @@ export class DronaVoiceClient {
 
       const currentTime = this.playbackCtx.currentTime;
       const leadTime = this.nextAudioStartTime - currentTime;
-      const item: AudioQueueItem = { buffer, sentenceId, speechText, boardText };
+      const item: AudioQueueItem = { buffer, sentenceId, speechText, boardText, isPartialSentence };
 
       // Capped lookahead (max 3.5s ahead of playback, so board lines can lead
       // their sentence by up to 3s)
@@ -751,6 +770,13 @@ export class DronaVoiceClient {
     if (!this.isDronaSpeaking && this.activeSources.length === 0 && this.pendingAudioBuffers.length === 0) {
       return;
     }
+    // Did the turn already finish arriving? armTurnCompleteWait() only runs on
+    // the turn_complete frame, so a pending wait means the whole turn —
+    // question and chips included — is already here and merely waiting for its
+    // audio tail to drain.
+    const turnFullyArrived =
+      this.turnCompleteTimer !== null || this.turnCompleteRemainingMs !== null;
+
     this.flushAudioQueue(reason);
     this.isDronaSpeaking = false;
     // The turn being cut off is never going to reach its own turn_complete
@@ -762,7 +788,20 @@ export class DronaVoiceClient {
       this.turnCompleteTimer = null;
     }
     this.turnCompleteRemainingMs = null;
-    this.options.onBargeIn?.();
+
+    if (turnFullyArrived) {
+      // Answering IS taking the floor. A checkpoint question is the last
+      // sentence of its turn, so the student reaches for the mic the moment
+      // they hear it — a fraction of a second before the wait timer would have
+      // mounted the chips. Treating that as "discard the interrupted turn"
+      // threw away the question they were answering: the Ask Sheet never
+      // appeared and the page stayed in `teaching` with no chips at all.
+      // The turn is complete; apply it, then let the utterance be the answer.
+      console.log("[BARGE-IN] Turn had fully arrived — applying its question/chips instead of dropping them.");
+      this.options.onTurnComplete?.();
+    } else {
+      this.options.onBargeIn?.();
+    }
     this.notifyState();
   }
 
