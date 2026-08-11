@@ -172,12 +172,14 @@ export class DronaVoiceClient {
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
     const wsBase = baseUrl.replace(/^http/, "ws");
     const token = (typeof window !== "undefined" && (window as any).__E2E_MOCK_TOKEN__) || "e2e_mock_token_123";
-    // Pass ?stream_tts=0 through from the page URL, so streamed-vs-whole
+    // Pass ?stream_tts through from the page URL, so streamed-vs-whole
     // sentence audio can be A/B'd on the deployed app without a rebuild.
+    // Whole-sentence is the server default now; "1" opts back into streamed
+    // parts (for working on the seam artifact), "0" stays as an explicit off.
     let passthrough = "";
     if (typeof window !== "undefined") {
       const streamFlag = new URLSearchParams(window.location.search).get("stream_tts");
-      if (streamFlag === "0") passthrough = "&stream_tts=0";
+      if (streamFlag === "0" || streamFlag === "1") passthrough = `&stream_tts=${streamFlag}`;
     }
     const wsUrl = this.options.wsUrl || `${wsBase}/drona/session/${this.sessionId}/live?token=${encodeURIComponent(token)}${passthrough}`;
 
