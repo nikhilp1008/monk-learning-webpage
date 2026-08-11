@@ -13,12 +13,11 @@ import {
 import { DEFAULT_VOICE, getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
 import {
   MAX_QUESTIONS,
-  readSnapFailure,
   rejectReason,
   reportDoubt,
-  snapDoubt,
+  streamSnap,
   type SnapFailure,
-  type SnapResponse,
+  type SnappedQuestion,
 } from "@/lib/doubts";
 
 export function SnapClient() {
@@ -33,7 +32,11 @@ export function SnapClient() {
 
   const [busy, setBusy] = useState(false);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [result, setResult] = useState<SnapResponse | null>(null);
+  // Questions land one at a time as the stream delivers them, so the first
+  // answer is on screen while the rest are still being solved.
+  const [questions, setQuestions] = useState<SnappedQuestion[]>([]);
+  const [expected, setExpected] = useState<number | null>(null);
+  const [streamNote, setStreamNote] = useState<string | null>(null);
   const [failure, setFailure] = useState<SnapFailure | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
@@ -74,18 +77,21 @@ export function SnapClient() {
 
       setNotice(extraNote);
       setFailure(null);
-      setResult(null);
+      setQuestions([]);
+      setExpected(null);
+      setStreamNote(null);
       setPreview(URL.createObjectURL(file));
       setBusy(true);
 
-      try {
-        const res = await snapDoubt(file);
-        setResult(res);
-      } catch (err) {
-        setFailure(readSnapFailure(err));
-      } finally {
-        setBusy(false);
-      }
+      await streamSnap(file, {
+        onMeta: (m) => {
+          setExpected(m.question_count);
+          setStreamNote(m.note);
+        },
+        onQuestion: (q) => setQuestions((prev) => [...prev, q]),
+        onError: (f) => setFailure(f),
+      });
+      setBusy(false);
     },
     [setPreview, teacher]
   );
@@ -113,7 +119,9 @@ export function SnapClient() {
 
   const retake = () => {
     setPreview(null);
-    setResult(null);
+    setQuestions([]);
+    setExpected(null);
+    setStreamNote(null);
     setFailure(null);
     setNotice(null);
   };
@@ -144,7 +152,7 @@ export function SnapClient() {
     }
   };
 
-  const showCapture = !busy && !result && !failure;
+  const showCapture = !busy && questions.length === 0 && !failure;
 
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
@@ -243,15 +251,17 @@ export function SnapClient() {
         )}
 
         {/* ─── Working ─── */}
-        {busy && (
+        {busy && questions.length === 0 && (
           <div className="flex items-center gap-3.5 bg-white border border-border-subtle rounded-2xl px-6 py-8 shadow-ref-card">
             <span className="w-5 h-5 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
             <div>
               <b className="block font-bold text-[0.98rem] text-ink">
-                {teacher} is reading your question…
+                {expected === null
+                  ? `${teacher} is reading your photo…`
+                  : `Found ${expected} question${expected === 1 ? "" : "s"} — working through the first…`}
               </b>
               <span className="block text-[0.84rem] text-ink-light mt-0.5">
-                Reading the photo first, then working through it.
+                Answers appear one at a time, as soon as each is ready.
               </span>
             </div>
           </div>
@@ -306,17 +316,17 @@ export function SnapClient() {
         )}
 
         {/* ─── Results ─── */}
-        {result && !busy && (
+        {questions.length > 0 && (
           <div className="flex flex-col gap-7">
-            {result.note && (
-              <p className="text-[0.86rem] text-ink-light">{result.note}</p>
+            {streamNote && (
+              <p className="text-[0.86rem] text-ink-light">{streamNote}</p>
             )}
 
-            {result.questions.map((q, idx) => (
+            {questions.map((q, idx) => (
               <div key={q.id}>
-                {result.questions.length > 1 && (
+                {(expected ?? questions.length) > 1 && (
                   <span className="block font-extrabold text-[0.6rem] tracking-[0.14em] uppercase text-ink-muted mb-2">
-                    Question {idx + 1} of {result.questions.length}
+                    Question {idx + 1} of {expected ?? questions.length}
                   </span>
                 )}
 
@@ -442,10 +452,20 @@ export function SnapClient() {
               </div>
             ))}
 
+            {busy && (
+              <div className="flex items-center gap-3 text-ink-muted text-[0.88rem]">
+                <span className="w-4 h-4 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
+                {expected && expected > questions.length
+                  ? `Working through question ${questions.length + 1} of ${expected}…`
+                  : "Finishing up…"}
+              </div>
+            )}
+
             <div className="flex gap-3 flex-wrap">
               <button
                 onClick={retake}
-                className="inline-flex items-center gap-2 font-semibold text-[0.88rem] py-2.5 px-5 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink cursor-pointer hover:border-ink transition-colors"
+                disabled={busy}
+                className="inline-flex items-center gap-2 font-semibold text-[0.88rem] py-2.5 px-5 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink cursor-pointer hover:border-ink transition-colors disabled:opacity-50"
               >
                 ↺ Snap another
               </button>

@@ -1,4 +1,5 @@
-import { apiFetch } from "@/lib/api";
+import { ApiError, apiFetch } from "@/lib/api";
+import { supabase } from "@/lib/supabase";
 
 /** One move of the solution. Math arrives as `$…$` / `$$…$$`. */
 export interface SolutionStep {
@@ -100,11 +101,92 @@ export async function getDoubt(doubtId: string): Promise<DoubtDetail> {
   return apiFetch<DoubtDetail>(`/doubts/${doubtId}`);
 }
 
-/** Uploads one photo and waits for its questions to be read and solved. */
+/** Uploads one photo and waits for ALL its questions. Prefer streamSnap. */
 export async function snapDoubt(file: File): Promise<SnapResponse> {
   const body = new FormData();
   body.append("file", file);
   return apiFetch<SnapResponse>("/doubts", { method: "POST", body });
+}
+
+export interface SnapStreamHandlers {
+  onMeta?: (m: { submission_id: string; question_count: number; note: string | null }) => void;
+  onQuestion?: (q: SnappedQuestion) => void;
+  onDone?: (d: { solved_count: number; questions_used_today: number; daily_limit: number }) => void;
+  onError?: (f: SnapFailure) => void;
+}
+
+/**
+ * Streams one photo's questions, delivering each answer as it lands.
+ *
+ * A solve takes ~25s, so a page of five kept the student on a spinner for over
+ * a minute before anything appeared. Measured on a JEE page: the first answer
+ * arrives at 26s instead of 75s.
+ */
+export async function streamSnap(
+  file: File,
+  handlers: SnapStreamHandlers
+): Promise<void> {
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+  if (!baseUrl) throw new Error("NEXT_PUBLIC_API_URL is not defined");
+
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+  const token = session?.access_token;
+  if (!token) {
+    if (typeof window !== "undefined") window.location.href = "/login";
+    throw new ApiError("No authentication session found", 401);
+  }
+
+  const body = new FormData();
+  body.append("file", file);
+
+  const res = await fetch(`${baseUrl.replace(/\/$/, "")}/doubts/stream`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}` },
+    body,
+  });
+
+  // Quota and validation failures arrive as ordinary JSON, not as a stream.
+  if (!res.ok || !res.body) {
+    let data: unknown = null;
+    try {
+      data = await res.json();
+    } catch {
+      /* non-JSON error body */
+    }
+    handlers.onError?.(readSnapFailure(new ApiError("Snap failed", res.status, data)));
+    return;
+  }
+
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  let eventName = "";
+
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+
+    // SSE frames are separated by a blank line; keep the partial tail.
+    const frames = buffer.split("\n\n");
+    buffer = frames.pop() ?? "";
+
+    for (const frame of frames) {
+      for (const line of frame.split("\n")) {
+        if (line.startsWith("event: ")) {
+          eventName = line.slice(7).trim();
+        } else if (line.startsWith("data: ")) {
+          const payload = JSON.parse(line.slice(6));
+          if (eventName === "meta") handlers.onMeta?.(payload);
+          else if (eventName === "question") handlers.onQuestion?.(payload);
+          else if (eventName === "done") handlers.onDone?.(payload);
+          else if (eventName === "error") handlers.onError?.(payload);
+        }
+      }
+    }
+  }
 }
 
 export async function reportDoubt(
