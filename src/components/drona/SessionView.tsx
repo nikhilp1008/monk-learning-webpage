@@ -258,8 +258,11 @@ export function SessionView({
           </div>
         </div>
 
-        {/* ─── Ask Sheet Overlay — Ported 1:1 from design-reference/index.html (lines 620–643) ─── */}
-        {(phase === "awaiting_answer" || (subtopicOptions && subtopicOptions.length > 0)) && (
+        {/* ─── Ask Sheet Overlay — Ported 1:1 from design-reference/index.html (lines 620–643) ───
+            Opens only when there are real chips to show. An awaiting_answer
+            phase with no chips is a transitional/broken state — opening the
+            sheet then showed the live caption as a fake "question". */}
+        {subtopicOptions && subtopicOptions.length > 0 && (
           <div
             style={{
               position: "absolute",

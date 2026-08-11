@@ -94,6 +94,10 @@ export class DronaVoiceClient {
   // turn simply hasn't produced audio yet / at all" from a mid-turn synthesis
   // gap when deciding whether a state frame may be applied immediately.
   private audioChunksThisTurn = 0;
+  // Chunks received but still inside playAudioChunk's async decode — not yet
+  // visible in pendingAudioBuffers/nextAudioStartTime, so any remaining-audio
+  // math done while this is non-zero undercounts.
+  private pendingDecodes = 0;
 
   // Telemetry & Control Flags
   private isMuted: boolean = false;
@@ -352,22 +356,7 @@ export class DronaVoiceClient {
         // measured against only the first couple of seconds of a turn that
         // could have another 30-60s left to play. Add the still-queued
         // buffers' own durations to cover the whole thing.
-        const outstanding = this.pendingReveals.filter((r) => !r.fired);
-        const lastRevealMs = Math.max(
-          0,
-          outstanding.reduce((max, r) => Math.max(max, r.fireAt), 0) - performance.now()
-        );
-        const scheduledRemainingMs = this.playbackCtx
-          ? Math.max(0, (this.nextAudioStartTime - this.playbackCtx.currentTime) * 1000)
-          : 0;
-        const queuedMs = this.pendingAudioBuffers.reduce((sum, item) => sum + item.buffer.duration * 1000, 0);
-        const remainingAudioMs = scheduledRemainingMs + queuedMs;
-        const waitMs = Math.max(lastRevealMs, remainingAudioMs);
-        if (this.turnCompleteTimer) clearTimeout(this.turnCompleteTimer);
-        this.turnCompleteTimer = setTimeout(() => {
-          this.turnCompleteTimer = null;
-          this.options.onTurnComplete?.();
-        }, waitMs + 200);
+        this.armTurnCompleteWait();
       } else if (type === "stt_too_short") {
         this.options.onSpeechText?.(msg.message || "Hold the button while you speak", false);
       } else if (type === "error") {
@@ -376,6 +365,39 @@ export class DronaVoiceClient {
     } catch (e) {
       console.error("Failed to parse WS message:", e);
     }
+  }
+
+  /** Computes how long the turn's audio still has to play and defers the
+   *  page-level turn_complete until then. Retries while chunks are mid-decode:
+   *  playAudioChunk decodes base64 → AudioBuffer asynchronously, so the final
+   *  sentence of a turn routinely isn't IN pendingAudioBuffers yet when the
+   *  turn_complete frame arrives — computing immediately undercounted the
+   *  remaining audio and opened the checkpoint early. */
+  private armTurnCompleteWait(retries: number = 0): void {
+    if (this.pendingDecodes > 0 && retries < 40) {
+      if (this.turnCompleteTimer) clearTimeout(this.turnCompleteTimer);
+      this.turnCompleteTimer = setTimeout(() => {
+        this.turnCompleteTimer = null;
+        this.armTurnCompleteWait(retries + 1);
+      }, 150);
+      return;
+    }
+
+    const outstanding = this.pendingReveals.filter((r) => !r.fired);
+    const lastRevealMs = Math.max(
+      0,
+      outstanding.reduce((max, r) => Math.max(max, r.fireAt), 0) - performance.now()
+    );
+    const scheduledRemainingMs = this.playbackCtx
+      ? Math.max(0, (this.nextAudioStartTime - this.playbackCtx.currentTime) * 1000)
+      : 0;
+    const queuedMs = this.pendingAudioBuffers.reduce((sum, item) => sum + item.buffer.duration * 1000, 0);
+    const waitMs = Math.max(lastRevealMs, scheduledRemainingMs + queuedMs);
+    if (this.turnCompleteTimer) clearTimeout(this.turnCompleteTimer);
+    this.turnCompleteTimer = setTimeout(() => {
+      this.turnCompleteTimer = null;
+      this.options.onTurnComplete?.();
+    }, waitMs + 200);
   }
 
   /** Arms a caption/board reveal, remembering when it is due so pause can re-arm it. */
@@ -552,6 +574,7 @@ export class DronaVoiceClient {
 
   public async playAudioChunk(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string): Promise<void> {
     if (!base64Pcm || typeof window === "undefined") return;
+    this.pendingDecodes += 1;
     try {
       this.unlockAudio();
       // Second guard: this resume is independent of unlockAudio's, and would
@@ -596,6 +619,8 @@ export class DronaVoiceClient {
       }
     } catch (err) {
       console.error("Audio playback error:", err);
+    } finally {
+      this.pendingDecodes = Math.max(0, this.pendingDecodes - 1);
     }
   }
 

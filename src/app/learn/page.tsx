@@ -97,10 +97,6 @@ type FlowState = "picker" | "scoping" | "session" | "summary" | "error";
 
 /* Shown when the tutor is mid-explanation and the backend has sent no chips.
  * Must follow the session language like every other student-facing string. */
-const GENERIC_REPLY_CHIPS: Record<SessionLanguage, string[]> = {
-  hinglish: ["Haan, aage badho", "Ek baar dubara samjhao", "Mujhe ek worked example dikhao"],
-  english: ["Yes, let's move on", "Explain that again", "Show me a worked example"],
-};
 
 export default function LearnPage() {
   const router = useRouter();
@@ -780,12 +776,16 @@ export default function LearnPage() {
     // turn — showing the chapter's SUBTOPIC list as if it were a quiz, and
     // pinning the status to "Waiting for your answer". It also had a hardcoded
     // Physics triple that appeared in Chemistry and Biology lessons.
+    // No generic fallback: the backend guarantees real chips for every spoken
+    // question, so an awaiting_answer state with no chips is always a broken
+    // or transitional state. Inventing "Yes, let's move on / Show me a worked
+    // example" over it paired wrong answers with a real content question (the
+    // sheet showed the caption as the "question" above chips that answered
+    // nothing).
     const effectiveSubtopicOptions =
       sessionPhase === "awaiting_answer" && liveCheckOptions.length > 0
         ? liveCheckOptions
-        : sessionPhase === "awaiting_answer"
-          ? GENERIC_REPLY_CHIPS[languagePref]
-          : [];
+        : [];
 
     return (
       <div className="min-h-screen flex flex-col bg-ruled-body">
