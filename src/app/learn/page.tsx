@@ -753,6 +753,13 @@ export default function LearnPage() {
           pendingBoardRef.current = [];
           pendingStateRef.current = null;
         },
+        // A reconnect means whatever turn was streaming died with the old
+        // socket — its turn_complete is never coming, and isStreaming was
+        // stuck true, leaving the answer box disabled on "Veda is responding…"
+        // forever.
+        onReconnect: () => {
+          setIsStreaming(false);
+        },
       });
 
       client.connect().catch((err) => console.warn("Voice WS connect failed:", err));

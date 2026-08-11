@@ -24,6 +24,9 @@ export interface VoiceClientOptions {
    *  buffers held for the turn that just got cut off, since it's never
    *  reaching its own turn_complete now. */
   onBargeIn?: () => void;
+  /** The socket re-opened after a drop. Any turn that was streaming on the old
+   *  connection is gone — the caller should clear "responding…" state. */
+  onReconnect?: () => void;
   onError?: (err: Error) => void;
   onSessionEnded?: () => void;
 }
@@ -147,10 +150,12 @@ export class DronaVoiceClient {
     this.ws.binaryType = "arraybuffer";
 
     this.ws.onopen = () => {
+      const isReconnect = this.reconnectAttempts > 0;
       this.reconnectAttempts = 0;
       this.notifyState();
       this.initAudioCapture();
       onFirstOpen?.();
+      if (isReconnect) this.options.onReconnect?.();
     };
 
     this.ws.onmessage = (event) => {
@@ -226,6 +231,23 @@ export class DronaVoiceClient {
             question_text: msg.question_text ?? null,
             answer_result: msg.answer_result ?? null,
           });
+          // The page buffers state frames and applies them on turn_complete so
+          // chips wait for the speech to finish. But when a frame arrives with
+          // the WHOLE audio pipeline idle — nothing playing, nothing queued, no
+          // reveal or completion timer pending — there is no speech to wait for
+          // and no turn_complete coming: this is the resume-after-reconnect
+          // frame for a question whose turn died with the old connection.
+          // Flush immediately or the student sits on "Ready" forever.
+          const pipelineIdle =
+            !this.isDronaSpeaking &&
+            this.activeSources.length === 0 &&
+            this.pendingAudioBuffers.length === 0 &&
+            this.turnCompleteTimer === null &&
+            !this.pendingReveals.some((r) => !r.fired);
+          if (pipelineIdle && Array.isArray(msg.check_options) && msg.check_options.length > 0) {
+            console.log("[STATE FRAME - IDLE FLUSH] No audio in flight; applying question/chips immediately.");
+            this.options.onTurnComplete?.();
+          }
         }
         this.notifyState();
       } else if (type === "transcript_final") {
