@@ -166,6 +166,25 @@ export class DronaVoiceClient {
     const token = (typeof window !== "undefined" && (window as any).__E2E_MOCK_TOKEN__) || "e2e_mock_token_123";
     const wsUrl = this.options.wsUrl || `${wsBase}/drona/session/${this.sessionId}/live?token=${encodeURIComponent(token)}`;
 
+    // Never leave a previous socket alive. `onerror` can fire WITHOUT a
+    // following `close` (a transient network error on an otherwise open
+    // socket), and it schedules a reconnect — so this method could replace
+    // this.ws while the old socket stayed open with its handlers attached.
+    // Both then fed audio_chunk frames into the same player: two turns of
+    // speech playing over each other, which no amount of ordering inside the
+    // queue can fix because it is two independent streams.
+    const stale = this.ws;
+    if (stale) {
+      stale.onopen = null;
+      stale.onmessage = null;
+      stale.onerror = null;
+      stale.onclose = null;
+      if (stale.readyState === WebSocket.OPEN || stale.readyState === WebSocket.CONNECTING) {
+        console.warn("[VOICE WS] Closing a still-live previous socket before reconnecting.");
+        try { stale.close(); } catch {}
+      }
+    }
+
     this.ws = new WebSocket(wsUrl);
     this.ws.binaryType = "arraybuffer";
 
