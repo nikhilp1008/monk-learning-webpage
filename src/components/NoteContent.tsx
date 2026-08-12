@@ -25,6 +25,7 @@ import { KaTeXRenderer } from "@/components/KaTeXRenderer";
 
 const SELF_STUDY_HEADING = "NOT COVERED IN CLASS YET — SELF-STUDY";
 const CLASS_END_MARKER_PREFIX = "——— class ended here";
+const MISTAKES_HEADING = "FROM YOUR CLASS — WHAT TO REWORK";
 
 interface Section {
   heading: string | null;
@@ -123,13 +124,14 @@ function BodyLine({ line }: { line: string }) {
 
 function SectionBlock({ section }: { section: Section }) {
   const isQuickRevision = section.heading === "QUICK REVISION";
+  const isMistakes = section.heading === MISTAKES_HEADING;
 
   const body = (
     <>
       {section.heading && (
         <h2
           className={`font-extrabold text-[0.78rem] tracking-[0.1em] uppercase mb-2.5 ${
-            isQuickRevision ? "text-orange-dark" : "text-ink"
+            isQuickRevision ? "text-orange-dark" : isMistakes ? "text-[#8E2317]" : "text-ink"
           }`}
         >
           {section.heading}
@@ -146,6 +148,17 @@ function SectionBlock({ section }: { section: Section }) {
   if (isQuickRevision) {
     return (
       <section className="mt-7 bg-orange/8 border border-orange/30 rounded-[12px] px-5 py-4">
+        {body}
+      </section>
+    );
+  }
+
+  // The rework section is the student's OWN graded answers — same card
+  // pattern, but in the verdict palette the Ask Sheet already uses for
+  // "not quite", so "review this" reads differently from "memorize this".
+  if (isMistakes) {
+    return (
+      <section className="mt-7 bg-[#FBEAE7]/45 border border-[#DD4433]/25 rounded-[12px] px-5 py-4">
         {body}
       </section>
     );
