@@ -4,9 +4,9 @@ export const dynamic = "force-dynamic";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Header } from "@/components/Header";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
+import { MathText } from "@/components/MathText";
 
 type DoubtRow = Database["public"]["Tables"]["doubts"]["Row"];
 
@@ -79,7 +79,6 @@ export default function DoubtsPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
-      <Header />
 
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
         <h1 className="text-[2.3rem] leading-[1.05] tracking-[-0.025em] font-medium text-ink">
@@ -152,7 +151,9 @@ export default function DoubtsPage() {
                   <div className="text-[0.76rem] text-ink-muted font-semibold">
                     {d.subject} · {d.chapter} · {dayLabel(d.created_at)}
                   </div>
-                  <p className="font-bold text-[0.96rem] text-ink mt-0.5 line-clamp-2">{d.question_text}</p>
+                  <p className="font-bold text-[0.96rem] text-ink mt-0.5 line-clamp-2">
+                    <MathText content={d.question_text} />
+                  </p>
                   {d.solved && (
                     <span className="inline-flex items-center gap-1 text-[0.72rem] font-bold text-green-badge mt-1.5">
                       <svg viewBox="0 0 24 24" width={12} height={12} fill="none" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

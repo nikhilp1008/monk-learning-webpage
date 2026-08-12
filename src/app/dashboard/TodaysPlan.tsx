@@ -148,7 +148,7 @@ export function TodaysPlan() {
               <button
                 key={item.id}
                 onClick={() => toggleItem(item)}
-                className="w-full flex items-center gap-3 p-2.5 rounded-lg bg-[#FBF8EF] border border-border-subtle/70 text-xs text-ink-light font-medium text-left hover:bg-[#F4EFE3] transition-colors cursor-pointer"
+                className="btn-press w-full flex items-center gap-3 p-2.5 rounded-lg bg-[#FBF8EF] border border-border-subtle/70 text-xs text-ink-light font-medium text-left hover:bg-[#F4EFE3] transition-colors cursor-pointer"
               >
                 <span
                   className={`w-4 h-4 rounded border flex-none grid place-items-center transition-colors ${

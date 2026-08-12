@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Header } from "@/components/Header";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 import { TodaysPlan } from "./TodaysPlan";
@@ -78,7 +77,6 @@ export function DashboardClient({
 
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
-      <Header />
 
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 space-y-5 animate-ml-rise">
         {/* 1. Greeting */}

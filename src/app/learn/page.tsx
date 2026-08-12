@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useMemo, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { Header } from "@/components/Header";
 import { supabase } from "@/lib/supabase";
 import {
   DEFAULT_LANGUAGE,
@@ -867,7 +866,6 @@ export default function LearnPage() {
 
     return (
       <div className="min-h-screen flex flex-col bg-ruled-body">
-        <Header />
         <main className="flex-1 max-w-[1180px] w-full mx-auto px-0 md:px-6 animate-ml-rise" style={{ paddingTop: 0 }}>
           {/* Board + Transcript + Command Dock */}
           <SessionView
@@ -901,7 +899,6 @@ export default function LearnPage() {
   if (flowState === "summary") {
     return (
       <div className="min-h-screen flex flex-col bg-ruled-body">
-        <Header />
         <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
           <EndStatesView
             type="normal"
@@ -920,7 +917,6 @@ export default function LearnPage() {
   if (flowState === "error") {
     return (
       <div className="min-h-screen flex flex-col bg-ruled-body">
-        <Header />
         <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
           <EndStatesView
             type="error"
@@ -938,7 +934,6 @@ export default function LearnPage() {
   if (flowState === "scoping") {
     return (
       <div className="min-h-screen flex flex-col bg-ruled-body">
-        <Header />
         <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 pt-[30px] pb-16 animate-ml-rise">
           <div className="mb-5">
             <button
@@ -1089,7 +1084,6 @@ export default function LearnPage() {
   /* ═══════════════════ PICKER (design-reference lines 490–565) ═══════════════════ */
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
-      <Header />
 
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 pt-[30px] pb-16 animate-ml-rise">
         {/* Resume banner: a refresh/crash mid-lesson used to lose the class

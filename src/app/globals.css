@@ -74,6 +74,22 @@
   animation: mlFloat 10s ease-in-out infinite;
 }
 
+/* ── Instant press feedback ──────────────────────────────────────
+ * Buttons across the app only changed via a colour swap that itself waited
+ * on a network response (e.g. Submit going orange->spinner after the
+ * fetch resolved). Nothing acknowledged the click itself. `active:` fires
+ * on pointerdown, before any JS handler even runs, so this paints within a
+ * frame (<16ms) regardless of what the click handler ends up doing. Apply
+ * alongside a button's existing classes: className={`... ${BTN_PRESS}`}.
+ */
+.btn-press {
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+.btn-press:active {
+  transform: scale(0.96);
+  opacity: 0.85;
+}
+
 /* Ruled notebook line background utilities */
 .bg-ruled-body {
   background-color: #FCFAF4;

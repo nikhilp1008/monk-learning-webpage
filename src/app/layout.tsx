@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Anek_Latin, Anek_Devanagari, Kalam } from "next/font/google";
 import "katex/dist/katex.min.css";
 import "./globals.css";
+import { Header } from "@/components/Header";
 
 const anekLatin = Anek_Latin({
   subsets: ["latin"],
@@ -40,6 +41,14 @@ export default function RootLayout({
       className={`${anekLatin.variable} ${anekDevanagari.variable} ${kalam.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream-light text-ink font-sans">
+        {/* Rendered once in the shared layout instead of per-page: previously
+            every page.tsx imported its own <Header/>, so each client-side
+            navigation unmounted and remounted it, re-running its
+            supabase.auth.getUser() + profiles fetch on top of the same calls
+            already made by middleware and the destination page. Hoisting it
+            here means Header persists across navigations like Next.js
+            layouts are meant to, and only fetches once per session. */}
+        <Header />
         {children}
       </body>
     </html>

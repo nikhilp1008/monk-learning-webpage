@@ -5,7 +5,6 @@ export const dynamic = "force-dynamic";
 import { useEffect, useState, useRef, useMemo, useCallback } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Header } from "@/components/Header";
 import type { BoardEventData } from "@/components/BoardEvent";
 import { PremiumBoardEvent } from "@/components/PremiumBoardEvent";
 import { getScene } from "@/components/scenes";
@@ -508,7 +507,6 @@ export default function LessonPlayerPage() {
 
   return (
     <div className="h-screen overflow-hidden flex flex-col bg-ruled-body">
-      <Header />
 
       <audio
         ref={audioRef}

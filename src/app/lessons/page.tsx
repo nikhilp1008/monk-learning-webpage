@@ -4,7 +4,6 @@ export const dynamic = "force-dynamic";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Header } from "@/components/Header";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 
@@ -141,7 +140,6 @@ export default function LessonsPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
-      <Header />
 
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 pt-[30px] pb-16 animate-ml-rise">
         {/* Title Header */}

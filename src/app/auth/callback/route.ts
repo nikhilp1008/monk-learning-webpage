@@ -27,6 +27,16 @@ export async function GET(request: Request) {
           // Send user to onboarding
           return NextResponse.redirect(`${origin}/onboarding`);
         }
+
+        // Already have the answer from the query above -- hand it to
+        // middleware.ts as a cookie so it doesn't repeat this same
+        // `profiles` lookup on this user's next navigation.
+        const response = NextResponse.redirect(`${origin}${next}`);
+        response.cookies.set("ml_onboarded", "1", {
+          maxAge: 60 * 60 * 24 * 365,
+          path: "/",
+        });
+        return response;
       }
 
       return NextResponse.redirect(`${origin}${next}`);

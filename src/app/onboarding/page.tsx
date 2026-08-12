@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { setOnboardedCookie } from "@/lib/onboarding";
 
 export default function OnboardingPage() {
   const router = useRouter();
@@ -85,6 +86,12 @@ export default function OnboardingPage() {
         setSubmitting(false);
         return;
       }
+
+      // Mirrors the cookie middleware.ts sets once it confirms a profile
+      // exists -- setting it here too means the very next navigation (the
+      // one we're about to trigger) already skips middleware's DB fallback
+      // instead of paying for it once more before the cookie catches up.
+      setOnboardedCookie(true);
 
       router.push("/dashboard");
       router.refresh();

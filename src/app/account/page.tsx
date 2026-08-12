@@ -4,7 +4,6 @@ export const dynamic = "force-dynamic";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Header } from "@/components/Header";
 import { supabase } from "@/lib/supabase";
 
 export default function AccountPage() {
@@ -47,7 +46,6 @@ export default function AccountPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
-      <Header />
 
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
         <div className="flex items-end justify-between gap-4 flex-wrap mb-6">

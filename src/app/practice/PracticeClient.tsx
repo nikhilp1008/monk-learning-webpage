@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
-import { Header } from "@/components/Header";
 import { MathText } from "@/components/MathText";
 import { supabase } from "@/lib/supabase";
 import { apiFetch, ApiError } from "@/lib/api";
@@ -183,17 +182,29 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     loadStats();
   }, []);
 
+  // Holds a question fetched in the background while the student is still
+  // reading the previous question's solution, so clicking "Next" can apply
+  // it from memory instead of waiting on a fresh round trip. Cleared
+  // whenever the filters change, since a prefetch made under the old
+  // exam/class no longer matches what "next" should mean.
+  const prefetchedQuestionRef = useRef<QuestionPayload | null>(null);
+  const prefetchInFlightRef = useRef(false);
+
+  const resetQuestionUiState = useCallback(() => {
+    setErrorMsg(null);
+    setExhausted(false);
+    setAnswerResult(null);
+    setSelectedOption("");
+    setNumericalValue("");
+    setExplainBanner(null);
+    setNotice(null);
+  }, []);
+
   // Fetch Next Question
   const fetchNextQuestion = useCallback(
     async () => {
       setLoading(true);
-      setErrorMsg(null);
-      setExhausted(false);
-      setAnswerResult(null);
-      setSelectedOption("");
-      setNumericalValue("");
-      setExplainBanner(null);
-      setNotice(null);
+      resetQuestionUiState();
 
       try {
         const payload = await apiFetch<QuestionPayload>("/practice/next", {
@@ -221,13 +232,58 @@ export function PracticeClient({ profile }: PracticeClientProps) {
         setLoading(false);
       }
     },
-    [exam, classLevelStr]
+    [exam, classLevelStr, resetQuestionUiState]
   );
+
+  // Warm the prefetch cache. Only ever called after an answer has been
+  // graded -- at that point the server has already recorded the current
+  // question as attempted, so asking it for "next" here is the exact same
+  // call fetchNextQuestion makes on a button click, just started earlier
+  // instead of blocking on the click.
+  const prefetchNextQuestion = useCallback(async () => {
+    if (prefetchInFlightRef.current) return;
+    prefetchInFlightRef.current = true;
+    try {
+      const payload = await apiFetch<QuestionPayload>("/practice/next", {
+        method: "POST",
+        body: JSON.stringify({ exam, class_level: classLevelStr }),
+      });
+      if (!payload.exhausted) {
+        prefetchedQuestionRef.current = payload;
+      }
+    } catch (err) {
+      // Silent: this is a background optimization, not a user-facing
+      // action. The Next button's own fetchNextQuestion() fallback still
+      // covers the real error path if this failed.
+      console.error("Background prefetch of next question failed:", err);
+    } finally {
+      prefetchInFlightRef.current = false;
+    }
+  }, [exam, classLevelStr]);
+
+  // A prefetch made under different filters answers the wrong question.
+  const invalidatePrefetch = useCallback(() => {
+    prefetchedQuestionRef.current = null;
+  }, []);
+
+  const goToNextQuestion = useCallback(() => {
+    setQuestionIndex((prev) => prev + 1);
+    const cached = prefetchedQuestionRef.current;
+    if (cached) {
+      prefetchedQuestionRef.current = null;
+      resetQuestionUiState();
+      setQuestion(cached);
+      setLoading(false);
+      return;
+    }
+    fetchNextQuestion();
+  }, [fetchNextQuestion, resetQuestionUiState]);
 
   // Trigger initial fetch when exam or classLevelStr changes
   useEffect(() => {
+    invalidatePrefetch();
     fetchNextQuestion();
-  }, [exam, classLevelStr, fetchNextQuestion]);
+  }, [exam, classLevelStr, fetchNextQuestion, invalidatePrefetch]);
 
   // Submit Answer
   const handleSubmitAnswer = async () => {
@@ -262,6 +318,10 @@ export function PracticeClient({ profile }: PracticeClientProps) {
       if (result.is_correct) {
         setSessionCorrect((prev) => prev + 1);
       }
+      // Student is about to spend several seconds reading the solution box
+      // -- start fetching what "Next" will need now instead of waiting for
+      // them to click it.
+      prefetchNextQuestion();
     } catch (err) {
       console.error("Error submitting answer:", err);
       if (err instanceof ApiError) {
@@ -341,7 +401,6 @@ export function PracticeClient({ profile }: PracticeClientProps) {
 
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
-      <Header />
 
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 space-y-6 animate-ml-rise">
         {/* Top Header Controls Panel */}
@@ -621,7 +680,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                           type="button"
                           disabled={Boolean(answerResult)}
                           onClick={() => setSelectedOption(opt.key)}
-                          className={`w-full flex items-start gap-3.5 p-4 rounded-xl border text-left transition-all ${cardStyles}`}
+                          className={`btn-press w-full flex items-start gap-3.5 p-4 rounded-xl border text-left transition-all ${cardStyles}`}
                         >
                           <span
                             className={`w-7 h-7 rounded-lg border grid place-items-center flex-none font-bold text-xs ${
@@ -719,7 +778,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                           ? parsedNumericalValue === null
                           : !selectedOption)
                       }
-                      className="px-6 py-3 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill hover:bg-orange-light transition-all disabled:opacity-40 flex items-center gap-2"
+                      className="btn-press px-6 py-3 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill hover:bg-orange-light transition-all disabled:opacity-40 flex items-center gap-2"
                     >
                       {submitting ? (
                         <div className="w-4 h-4 border-2 border-dark-card border-t-transparent rounded-full animate-ml-spin" />
@@ -744,11 +803,8 @@ export function PracticeClient({ profile }: PracticeClientProps) {
 
                   <button
                     type="button"
-                    onClick={() => {
-                      setQuestionIndex((prev) => prev + 1);
-                      fetchNextQuestion();
-                    }}
-                    className="px-6 py-3 rounded-full bg-ink text-white font-bold text-sm shadow-xs hover:bg-ink/90 transition-all flex items-center gap-2 ml-auto"
+                    onClick={goToNextQuestion}
+                    className="btn-press px-6 py-3 rounded-full bg-ink text-white font-bold text-sm shadow-xs hover:bg-ink/90 transition-all flex items-center gap-2 ml-auto"
                   >
                     Next →
                   </button>

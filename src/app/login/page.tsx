@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { setOnboardedCookie } from "@/lib/onboarding";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -86,6 +87,12 @@ export default function LoginPage() {
             .eq("id", data.user.id)
             .maybeSingle();
 
+          // Authoritative for THIS login: overwrites any ml_onboarded cookie
+          // a previous account left behind on a shared browser, so
+          // middleware's cached check never leaks one user's onboarding
+          // status onto the next person who logs in.
+          setOnboardedCookie(Boolean(profile));
+
           if (!profile) {
             router.push("/onboarding");
           } else {
@@ -119,6 +126,8 @@ export default function LoginPage() {
             .select("id")
             .eq("id", data.user.id)
             .maybeSingle();
+
+          setOnboardedCookie(Boolean(profile));
 
           if (!profile) {
             router.push("/onboarding");

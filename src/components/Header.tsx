@@ -4,9 +4,16 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { setOnboardedCookie } from "@/lib/onboarding";
 import type { Database } from "@/lib/database.types";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
+
+// Routes with their own full-bleed layout and branding — Header now lives in
+// the root layout (see src/app/layout.tsx) so it persists across
+// navigations instead of remounting per page, but these routes never showed
+// it and must keep not showing it.
+const HEADERLESS_ROUTES = ["/login", "/onboarding", "/test"];
 
 export function Header() {
   const pathname = usePathname();
@@ -58,6 +65,10 @@ export function Header() {
   const handleSignOut = async () => {
     setMenuOpen(false);
     await supabase.auth.signOut();
+    // Prevents a shared-browser leak: without this, the next person to log
+    // in on this machine would inherit this account's ml_onboarded=1 cookie
+    // and skip the onboarding gate in middleware.ts even with no profile.
+    setOnboardedCookie(false);
     setProfile(null);
     router.push("/lessons");
     router.refresh();
@@ -77,6 +88,13 @@ export function Header() {
     : "S";
 
   const displayName = profile?.display_name || "Student";
+
+  if (
+    HEADERLESS_ROUTES.includes(pathname) ||
+    pathname.startsWith("/preview-ch")
+  ) {
+    return null;
+  }
 
   return (
     <header className="flex flex-col flex-none w-full z-40">
@@ -271,7 +289,7 @@ export function Header() {
             ) : (
               <Link
                 href="/login"
-                className="inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-full bg-ink text-cream-light hover:bg-ink/90 transition-colors shadow-xs"
+                className="btn-press inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-full bg-ink text-cream-light hover:bg-ink/90 transition-colors shadow-xs"
               >
                 Sign in
               </Link>
