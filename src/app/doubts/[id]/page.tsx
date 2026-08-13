@@ -155,6 +155,8 @@ export default function DoubtDetailPage() {
                     questionText={doubt.question_text}
                     subject={doubt.subject}
                     topic={doubt.chapter}
+                    stem={doubt.stem}
+                    options={doubt.options}
                   />
                 </div>
               </div>

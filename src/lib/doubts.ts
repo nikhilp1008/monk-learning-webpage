@@ -12,11 +12,20 @@ export type DoubtStatus = "solved" | "failed" | "illegible" | "unsure";
 /** What the student can actually DO about a refusal. */
 export type Remedy = "retake" | "not_photo" | "our_side";
 
+/** One answer choice, as read off the page. */
+export interface DoubtOption {
+  label: string;
+  text: string;
+}
+
 export interface DoubtSummary {
   id: string;
   submission_id: string;
   question_index: number;
   question_text: string | null;
+  /** The question WITHOUT its options — pairs with `options` for structured display. */
+  stem?: string | null;
+  options?: DoubtOption[] | null;
   subject: string | null;
   /** Chapter-level topic ("Waves and Organ Pipes") — the API column is `chapter`. */
   chapter: string | null;
@@ -56,8 +65,13 @@ export interface SnappedQuestion {
   remedy?: Remedy;
   retake_helps?: boolean;
   question_text: string | null;
+  stem?: string | null;
+  options?: DoubtOption[] | null;
   subject: string | null;
-  topic: string | null;
+  /** Chapter-level topic. Was typed `topic` while the API always sent
+   * `chapter`, so the chapter chip never rendered on the live snap screen —
+   * fixed alongside adding stem/options. */
+  chapter: string | null;
   legible: boolean;
   legibility_note: string | null;
   answer: string | null;
@@ -286,7 +300,7 @@ export function readSnapFailure(error: unknown): SnapFailure {
 
 /** Mirrors the API's own caps, so bad input is rejected before upload. */
 export const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
-export const MAX_QUESTIONS = 2;
+export const MAX_QUESTIONS = 3;
 export const ACCEPTED_MIME = [
   "image/jpeg",
   "image/png",

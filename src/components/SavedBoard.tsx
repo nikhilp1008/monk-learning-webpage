@@ -4,7 +4,7 @@ import React from "react";
 import { BoardEvent } from "@/components/BoardEvent";
 import { MathText } from "@/components/MathText";
 import type { NoteSegment } from "@/lib/notes";
-import type { Remedy, SolutionStep } from "@/lib/doubts";
+import type { DoubtOption, Remedy, SolutionStep } from "@/lib/doubts";
 
 /**
  * A saved note's board, rendered through the same BoardEvent components the
@@ -55,13 +55,13 @@ export function Solution({
   return (
     <div className="flex flex-col">
       {steps?.length > 0 && (
-        <ol className="flex flex-col gap-2.5 mb-3.5">
+        <ol className="flex flex-col gap-5 mb-5">
           {steps.map((step, idx) => (
-            <li key={step.n ?? idx} className="flex gap-2.5 items-start">
-              <span className="mt-0.5 w-[19px] h-[19px] flex-none rounded-full bg-ink/5 border border-border-subtle grid place-items-center font-bold text-[0.62rem] text-ink-light">
+            <li key={step.n ?? idx} className="flex gap-3.5 items-start">
+              <span className="mt-0.5 w-6 h-6 flex-none rounded-full bg-ink/[0.04] border border-border-subtle grid place-items-center font-bold text-[0.68rem] text-ink-light">
                 {step.n ?? idx + 1}
               </span>
-              <span className="flex-1 min-w-0 text-[0.94rem] leading-[1.55] text-ink-light">
+              <span className="flex-1 min-w-0 text-[0.98rem] leading-[1.75] text-ink-light">
                 <MathText content={step.text} />
               </span>
             </li>
@@ -70,13 +70,18 @@ export function Solution({
       )}
 
       {answer && (
-        <p className="text-[1rem] leading-[1.5] font-bold text-[#157A45] bg-[rgba(28,155,87,0.08)] border border-[rgba(28,155,87,0.3)] rounded-xl px-3.5 py-2.5">
-          <MathText content={answer} />
-        </p>
+        <div className="rounded-xl bg-[rgba(28,155,87,0.06)] border border-[rgba(28,155,87,0.3)] px-4.5 py-3.5">
+          <span className="block font-extrabold text-[0.6rem] tracking-[0.14em] uppercase text-[#157A45]/70 mb-1">
+            Answer
+          </span>
+          <p className="text-[1.05rem] leading-[1.6] font-bold text-[#157A45]">
+            <MathText content={answer} />
+          </p>
+        </div>
       )}
 
       {keyIdea && (
-        <p className="font-script font-bold text-red-note text-[0.95rem] mt-3.5">
+        <p className="font-script font-bold text-red-note text-[1rem] leading-[1.5] mt-4.5">
           <MathText content={keyIdea} />
         </p>
       )}
@@ -122,16 +127,33 @@ export function RuledSheet({
  * `Q · Subject · Topic` tag in red caps, and the transcribed question rendered
  * through MathText.
  */
+/**
+ * The left panel of a snapped doubt: ruled paper, red margin rule, a
+ * `Q · Subject · Chapter` tag, the stem, and — when the pipeline captured them
+ * as structured data — the options as a clean list rather than run into the
+ * stem as one paragraph.
+ *
+ * `stem`/`options` are only present on doubts solved after migration 0015; a
+ * doubt saved before that (or a legacy row) falls back to `questionText`,
+ * which is stem and options concatenated as the pipeline always produced for
+ * display — still correct, just one paragraph instead of a structured list.
+ */
 export function QuestionSheet({
   questionText,
   subject,
   topic,
+  stem,
+  options,
 }: {
   questionText: string | null;
   subject: string | null;
   topic: string | null;
+  stem?: string | null;
+  options?: DoubtOption[] | null;
 }) {
   const tag = ["Q", subject, topic].filter(Boolean).join(" · ");
+  const hasStructure = Boolean(stem) && (options?.length ?? 0) > 0;
+
   return (
     <div
       className="relative border border-[rgba(28,26,22,0.1)] rounded-xl py-4 pr-4 pl-9"
@@ -145,9 +167,30 @@ export function QuestionSheet({
       <span className="font-extrabold text-[0.6rem] tracking-[0.1em] uppercase text-[#C53A2B]">
         {tag}
       </span>
-      <p className="mt-1.5 leading-[1.5] text-[0.96rem] text-ink">
-        <MathText content={questionText} />
-      </p>
+
+      {hasStructure ? (
+        <>
+          <p className="mt-2 leading-[1.6] text-[0.96rem] text-ink">
+            <MathText content={stem} />
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-3.5">
+            {options!.map((opt) => (
+              <div key={opt.label} className="flex gap-2 items-baseline min-w-0">
+                <span className="flex-none font-bold text-[0.86rem] text-ink-muted">
+                  ({opt.label})
+                </span>
+                <span className="flex-1 min-w-0 text-[0.92rem] leading-[1.5] text-ink">
+                  <MathText content={opt.text} />
+                </span>
+              </div>
+            ))}
+          </div>
+        </>
+      ) : (
+        <p className="mt-1.5 leading-[1.5] text-[0.96rem] text-ink">
+          <MathText content={questionText} />
+        </p>
+      )}
     </div>
   );
 }

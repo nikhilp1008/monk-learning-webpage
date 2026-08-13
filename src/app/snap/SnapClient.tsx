@@ -412,7 +412,9 @@ export function SnapClient() {
                       <QuestionSheet
                         questionText={q.question_text}
                         subject={q.subject}
-                        topic={q.topic}
+                        topic={q.chapter}
+                        stem={q.stem}
+                        options={q.options}
                       />
                     ) : (
                       <p className="text-[0.88rem] text-ink-light">
