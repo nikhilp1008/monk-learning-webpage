@@ -292,7 +292,7 @@ export type Database = {
         }
         Update: {
           id?: string
-          user_id?: string
+          user_id: string
           subject?: string | null
           chapter?: string | null
           concept?: string | null
@@ -300,10 +300,10 @@ export type Database = {
           created_at?: string
           session_id?: string | null
           chapter_id?: string | null
-          board_items?: Json
-          segments_covered?: number
-          total_segments?: number
-          item_count?: number
+          board_items: Json
+          segments_covered: number
+          total_segments: number
+          item_count: number
           session_started_at?: string | null
         }
         Relationships: []
@@ -312,7 +312,7 @@ export type Database = {
         Row: {
           id: string
           user_id: string
-          question_text: string
+          question_text: string | null
           subject: string | null
           chapter: string | null
           solved: boolean
@@ -333,11 +333,14 @@ export type Database = {
           solver_model: string | null
           transcribe_ms: number | null
           latency_ms: number | null
+          question_type: string | null
+          printed_answer: string | null
+          option_labels: Json
         }
         Insert: {
           id?: string
           user_id: string
-          question_text: string
+          question_text?: string | null
           subject?: string | null
           chapter?: string | null
           solved: boolean
@@ -358,31 +361,37 @@ export type Database = {
           solver_model?: string | null
           transcribe_ms?: number | null
           latency_ms?: number | null
+          question_type?: string | null
+          printed_answer?: string | null
+          option_labels: Json
         }
         Update: {
           id?: string
-          user_id?: string
-          question_text?: string
+          user_id: string
+          question_text?: string | null
           subject?: string | null
           chapter?: string | null
-          solved?: boolean
+          solved: boolean
           created_at?: string
           concept?: string | null
           explanation?: string | null
           submission_id?: string | null
-          question_index?: number
+          question_index: number
           image_key?: string | null
-          legible?: boolean
+          legible: boolean
           legibility_note?: string | null
           answer?: string | null
-          steps?: Json
+          steps: Json
           key_idea?: string | null
-          status?: string
+          status: string
           failure_reason?: string | null
           transcriber_model?: string | null
           solver_model?: string | null
           transcribe_ms?: number | null
           latency_ms?: number | null
+          question_type?: string | null
+          printed_answer?: string | null
+          option_labels: Json
         }
         Relationships: []
       }
@@ -403,8 +412,8 @@ export type Database = {
         }
         Update: {
           id?: string
-          doubt_id?: string
-          user_id?: string
+          doubt_id: string
+          user_id: string
           comment?: string | null
           created_at?: string
         }

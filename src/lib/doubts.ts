@@ -18,13 +18,18 @@ export interface DoubtSummary {
   question_index: number;
   question_text: string | null;
   subject: string | null;
-  topic: string | null;
+  /** Chapter-level topic ("Waves and Organ Pipes") — the API column is `chapter`. */
+  chapter: string | null;
+  /** Short display title for the doubt. */
+  concept: string | null;
+  question_type: string | null;
   legible: boolean;
   legibility_note: string | null;
   answer: string | null;
   key_idea: string | null;
   status: DoubtStatus;
   failure_reason: string | null;
+  option_labels?: string[] | null;
   created_at: string;
   scrap: string;
 }
@@ -132,6 +137,20 @@ export async function streamSnap(
   file: File,
   handlers: SnapStreamHandlers
 ): Promise<void> {
+  // Seconds after a deploy, the fresh container has been seen returning an
+  // empty stream (headers OK, zero events). One silent retry covers it; a
+  // second empty response is reported honestly.
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    const sawEvent = await streamSnapOnce(file, handlers, attempt === 2);
+    if (sawEvent) return;
+  }
+}
+
+async function streamSnapOnce(
+  file: File,
+  handlers: SnapStreamHandlers,
+  lastAttempt: boolean
+): Promise<boolean> {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL;
   if (!baseUrl) throw new Error("NEXT_PUBLIC_API_URL is not defined");
 
@@ -162,13 +181,14 @@ export async function streamSnap(
       /* non-JSON error body */
     }
     handlers.onError?.(readSnapFailure(new ApiError("Snap failed", res.status, data)));
-    return;
+    return true; // a real HTTP error is an outcome, not a cold start — no retry
   }
 
   const reader = res.body.getReader();
   const decoder = new TextDecoder();
   let buffer = "";
   let eventName = "";
+  let sawEvent = false;
 
   for (;;) {
     const { done, value } = await reader.read();
@@ -185,6 +205,7 @@ export async function streamSnap(
           eventName = line.slice(7).trim();
         } else if (line.startsWith("data: ")) {
           const payload = JSON.parse(line.slice(6));
+          sawEvent = true;
           if (eventName === "meta") handlers.onMeta?.(payload);
           else if (eventName === "thinking") handlers.onThinking?.(payload);
           else if (eventName === "step") handlers.onStep?.(payload);
@@ -196,6 +217,17 @@ export async function streamSnap(
       }
     }
   }
+
+  if (!sawEvent && lastAttempt) {
+    handlers.onError?.({
+      message: "The server went quiet before answering. Please try again.",
+      stage: "unknown",
+      remedy: "our_side",
+      retake_helps: false,
+    });
+    return true;
+  }
+  return sawEvent;
 }
 
 export async function reportDoubt(
