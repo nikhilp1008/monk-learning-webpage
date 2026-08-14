@@ -241,9 +241,20 @@ follow.
   overlaps/overflow/empty, 2 advisory stalls (b6/b7). Eye-checked via
   FORCE_SHOTS — clean roadmap diagram for the rest of the subtopic.
 
+- **Sec 16** — Chrysophytes/diatoms: plankton dots + "chief ocean producer"
+  caption, then the signature soap-box wall diagram (wider "lid" box
+  overlapping down over a narrower "base" box, labelled epitheca/
+  hypotheca with leader arrows), silica/indestructible ID clue, jewel-like
+  pattern lines, diatomaceous-earth uses (polishing, filtration), 2
+  closing fact chips (chrysolaminarin+oil food store, major O2 source).
+  VERDICT PASS both languages, 0 overlaps/overflow/empty, 1 advisory
+  stall (b4). Eye-checked via FORCE_SHOTS — clean, reads as intended
+  though the lid/base overlap is a simplified board-sketch, not an
+  anatomically exact frustule cross-section.
+
 ## Current
-Sec 15 done, committed, pushed. Next: Sec 16 — "Chrysophytes: diatoms and
-the soap-box wall".
+Sec 16 done, committed, pushed. Next: Sec 17 — "Dinoflagellates and
+euglenoids".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
