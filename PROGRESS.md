@@ -215,6 +215,15 @@
   option 3 "mere restatement" trap crossed out, option 1 correct).
   VERDICT PASS both languages.
 
+- Sec 23 — Worked examples: monotypic vs polytypic & statement count:
+  Example 3 (Corvus POLYtypic box with 3 species vs Pavo MONOtypic box
+  with 1 species, mono/poly prefix speed-trap) and Example 4 (4-statement
+  count — A/C/D TRUE, B FALSE with a correction note on the
+  Family/Felidae reversal, THREE correct). Recovered from a mid-task dev-
+  server kill (background stall) with zero data loss — repo state was
+  intact, just restarted the server and continued. VERDICT PASS both
+  languages.
+
 ## Current
 
-Starting Section 23.
+Starting Section 24 (last section of subtopic 3: tips).
