@@ -856,3 +856,14 @@ REGISTRY[`${CH07}:27`] = Ch07Sec27;
 REGISTRY[`${CH07}:28`] = Ch07Sec28;
 REGISTRY[`${CH07}:29`] = Ch07Sec29;
 /* ============================ end Ch07 ============================ */
+
+/* ================================================================== */
+/* B11 Ch02 — Biological Classification (branch premium-board-bio2)    */
+/* Appended at the end of the file; do not edit blocks above.          */
+/* ================================================================== */
+import B11Ch02Sec1 from "./B11Ch02Sec1";
+
+const B11CH02 = "8c9c091c-052a-51a1-841e-8304c7fe90ca"; // Class 11 · Biological Classification
+
+REGISTRY[`${B11CH02}:1`] = B11Ch02Sec1;
+/* ========================= end B11 Ch02 ============================ */
