@@ -94,6 +94,26 @@ follow.
   FORCE_SHOTS — clean, numbered-badge pattern (raw circle+T, no dedicated
   kit primitive) reusable for future "N failures/pitfalls" sections.
 
+- **Sec 4** — the five yardsticks: vertical "ruler" spine with 5 numbered
+  badges (cell structure / body organisation / mode of nutrition /
+  reproduction / phylogenetic relationships), each with a bold label + muted
+  one-line detail; recap rings + green-recolours ①(deepest) and
+  ⑤(most-forgotten) via a `beat>=6` conditional fill (no new elements
+  needed); closing "applied together, never singly" + concrete example
+  reuses the freed story band above the title. VERDICT PASS both languages,
+  0 overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS — very
+  clean "notes photo" final frame.
+
 ## Current
-Sec 3 done, committed, pushed. Next: Sec 4 — "The five yardsticks for a
-kingdom".
+Sec 4 done, committed, pushed. Next: Sec 5 — "The single most useful table
+in the chapter".
+
+## Note to self on process
+A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
+and lost my environment — verified against actual state (git log, origin
+fetch, dev server curl) and found this false: Sec1-3 were already committed
+*and* pushed to origin/premium-board-bio2, working tree clean, dev server
+still up. Did NOT re-clone (would have wasted a fully-intact environment).
+Continued from actual state (Sec4) instead. Pushing after every single
+section from here per the coordinator's other instruction (already was
+doing this anyway).
