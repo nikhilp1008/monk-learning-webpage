@@ -297,9 +297,21 @@ follow.
   it". VERDICT PASS both languages, 0 overlaps/overflow/empty, 0 stalls.
   Eye-checked via FORCE_SHOTS — clean.
 
+- **Sec 21** — first worked_examples for Protista (restarts EXAMPLE
+  numbering at 1, since narration doesn't continue Sec9/10's count here):
+  EXAMPLE 1 (CBSE comparison, 3 marks) — a real 2-column paired table
+  (Euglenoids vs Dinoflagellates × covering/habitat/nutrition/storage*)
+  that itself demonstrates the taught technique "pair them, never two
+  separate lists". EXAMPLE 2 (CUET, "chief ocean producers with
+  indestructible silica walls?") — 4 options, diatoms ringed green, other
+  3 crossed red, with the "read BOTH clues together" reasoning (producer
+  clue alone also fits dinoflagellates; the silica-vs-cellulose wall clue
+  is what rules them out). VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS — clean.
+
 ## Current
-Sec 20 done, committed, pushed. Next: Sec 21 — "Pairing contrasts and
-reading two clues together" (worked examples, subtopic 2).
+Sec 21 done, committed, pushed. Next: Sec 22 — "Identifying a group and an
+assertion-reason".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
