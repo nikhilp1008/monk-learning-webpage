@@ -558,9 +558,41 @@ follow.
   FORCE_SHOTS, both languages, all 9 frames — clean; the 4-box cascade is
   the visual highlight and reads very clearly in both languages.
 
+- **Sec 40** — "The diagnostic table": a Feature × Plantae × Animalia
+  3-column, 8-row table (Sec5's proven grid-path table pattern, adapted to
+  2 kingdoms). Row 1 (cell type) is drawn genuinely merged — the
+  Plantae/Animalia divider skips that row's band in the grid path — to
+  make the narration's point visible ("cell type alone can't separate
+  them"). Rows fill in the narration's own reasoning order: cell
+  wall+nutrition (the cleanest separators, ringed), stored food+plastids
+  (the tiebreakers, ringed), movement+reproduction, then body
+  organisation (Animalia's "organ-system level" cell highlighted green
+  and ringed — "animals go one further"). Closes with a green box around
+  the whole table + "read every row back to the axis" callback to Sec36.
+  Row data kept in English for both languages (technical terms), matching
+  Sec5's precedent. **Process note**: eyeballed Sec5 itself via
+  FORCE_SHOTS as a sanity check on the reusable-caption-slot pattern and
+  found its final frame has illegible stacked ghost-text below the table
+  — every prior caption is left "dimmed" at the same (540, 495) slot
+  forever, so by the last beat 5 dimmed captions overlap into an
+  unreadable smear. This is real but invisible to verify-scene.mjs
+  (dimmed opacity ≤0.5 is excluded from overlap checking, and marks/text
+  aren't checked against each other at low opacity). Did NOT touch Sec5
+  (out of scope). Fixed it in Sec40's own caption slot instead: each
+  caption is gated `beat === k` (visible only during its own beat, not
+  `beat >= k` + dim-forever), so at most one occupies the slot at any
+  time and the final frame is genuinely clean. Flagging here in case a
+  human wants to backport the same fix to Sec5 and any other pre-Sec36
+  section using the same reusable-slot pattern. VERDICT PASS both
+  languages, 0 overlaps/overflow/empty, 1 advisory stall (b3). Eye-checked
+  via FORCE_SHOTS, both languages, all 9 frames, plus a direct comparison
+  against Sec5's final frame — Sec40's final frame confirmed clean with no
+  stacked captions.
+
 ## Current
-Sec 39 done, committed, pushed. Next: Sec 40 — "The diagnostic table"
-(subtopic 4 continues, Kingdoms Plantae & Animalia).
+Sec 40 done, committed, pushed. Next: Sec 41 — "Inside the plant, and why
+it feeds everything else" (subtopic 4 continues, Kingdoms Plantae &
+Animalia).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
