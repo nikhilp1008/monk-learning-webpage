@@ -486,9 +486,27 @@ follow.
   checked via FORCE_SHOTS — clean, exam-ready. **Subtopic 3 (secs 24-35)
   complete — 35/59 sections done (59%), 3 of 6 subtopics fully finished.**
 
+- **Sec 36** — subtopic 4 opener (Kingdoms Plantae & Animalia): recap line
+  (Monera/Protista/Fungi done, last two met with the naked eye) → one-line
+  definitions (Plantae = multicellular green makers, Animalia = multicellular
+  movers & eaters) → visible-world examples (tree/grass vs fish/bird/insect/
+  mammal) → setup line ("the single most valuable idea in this sub-topic") →
+  THE AXIS: PLANTAE (green, "make food") vs ANIMALIA (amber, "find food")
+  boxes with a ringed "VS" between them → cascade 1 (make food → cellulose
+  wall/plastids/fixed & rooted; find food → wall-less/plastid-free/mobile
+  body, 3 fanned arrows each side) → cascade 2 (storage follows too: starch
+  slow-store vs glycogen ready-store) → "nothing here is arbitrary" close.
+  Superseded recap/definition/example lines all dim once the main axis boxes
+  land at beat 4 (freed the story band, matches Sec1's pattern). VERDICT PASS
+  both languages, 0 overlaps/overflow/empty, 1 advisory stall (b4 — several
+  prior beats dim simultaneously as the axis boxes take over, expected, not
+  a defect). Eye-checked via FORCE_SHOTS (first section of a new subtopic)
+  both languages, all 9 frames — clean; cascade chips and storage row fit
+  comfortably in both languages including the longer Hinglish strings.
+
 ## Current
-Sec 35 done, committed, pushed. Next: Sec 36 — "Make food versus find
-food" (opens subtopic 4, Kingdoms Plantae & Animalia).
+Sec 36 done, committed, pushed. Next: Sec 37 — "Kingdom Plantae, and the
+range it covers" (subtopic 4 continues, Kingdoms Plantae & Animalia).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
