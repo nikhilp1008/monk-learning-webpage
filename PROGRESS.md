@@ -190,6 +190,15 @@
   no stalls, beat count double-checked (8 reveals = beats 0-7, all mapped).
   VERDICT PASS both languages.
 
+- Sec 20 — Classifying an organism and Table 1.1: Phase A (housefly's full
+  lineage built inside-out, Species→Genus→Family landing first then Order→
+  Class→Phylum→Kingdom, top-down readback, plant Division note) then Phase
+  B (NCERT Table 1.1 — 4 reference-organism chips, Man's 5-step lineage
+  chain, Mango-vs-Wheat comparison showing same Division/different Class).
+  Caught one real overlap (dimmed intro text colliding with the Kingdom row
+  it shared a y-coordinate with) — fixed with dim@3 instead of repositioning.
+  VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 20.
+Starting Section 21.
