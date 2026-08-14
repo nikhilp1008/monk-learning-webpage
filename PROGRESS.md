@@ -156,9 +156,20 @@ follow.
   0 stalls. Eye-checked via FORCE_SHOTS — clean. **Subtopic 1 concept
   sections (1-8) complete.**
 
+- **Sec 9** — first worked_examples section, established the reusable
+  two-example layout: EXAMPLE 1 (CBSE 3-marker, "state 3 limitations")
+  with the "failed to separate X from Y" technique tip + 3 numbered-badge
+  points (recaps Sec3's three failures) + a green "3/3 marks" stamp;
+  EXAMPLE 2 (CUET MCQ, "who proposed Five-Kingdom?") with a 4-option row,
+  3 wrong options crossed out, Whittaker ringed green + "1969" + a
+  chronology-trick caption (recaps Sec2's timeline). VERDICT PASS both
+  languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
+  FORCE_SHOTS — clean, dense-but-legible worked-example format that later
+  worked_examples sections in this chapter can reuse.
+
 ## Current
-Sec 8 done, committed, pushed. Next: Sec 9 — "Stating limitations and who
-proposed what" (first worked-example section, subtopic 1).
+Sec 9 done, committed, pushed. Next: Sec 10 — "The odd-one-out and an
+assertion-reason" (2nd worked-example section, subtopic 1).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
