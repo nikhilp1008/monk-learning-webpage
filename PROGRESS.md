@@ -359,9 +359,18 @@ follow.
   checked via FORCE_SHOTS — the compartmented-vs-dotted-continuous-tube
   visual reads immediately.
 
+- **Sec 26** — three fungal lifestyles: 3-branch scaffold (mirrors Sec15's
+  pattern) — "food source: dead? alive? a partner?" fans to ①SAPROPHYTIC
+  (Rhizopus/bread mould), ②PARASITIC (rusts, smuts, Albugo), ③SYMBIOTIC
+  (lichens, mycorrhizae — "more soon", forward reference to Sec31).
+  Closing: one habit (absorption) explains surface area/habitat/chitin
+  wall, ecological decomposer role, "strip fungi from a forest" thought
+  experiment. VERDICT PASS both languages, 0 overlaps/overflow/empty, 0
+  stalls. Eye-checked via FORCE_SHOTS — clean.
+
 ## Current
-Sec 25 done, committed, pushed. Next: Sec 26 — "Three ways of making a
-living".
+Sec 26 done, committed, pushed. Next: Sec 27 — "The four classes: the
+table half the questions come from".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
