@@ -411,9 +411,23 @@ follow.
   languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
   FORCE_SHOTS — clean.
 
+- **Sec 30** — the sub-topic's single most-tested process: 3-cell visual
+  progression — plasmogamy (1 cell, 2 separate amber nuclei dots),
+  karyogamy (1 cell, nuclei fused into one green dot, 2n), meiosis (1
+  cell, 4 scattered red spore dots, n) — connected by plain arrows. Below,
+  a bracket line spanning the plasmogamy→karyogamy gap labelled "dikaryon
+  (n+n) — delayed karyogamy, only in Ascomycetes + Basidiomycetes",
+  clamp-connections note, somatogamy (Basidiomycetes lack sex organs),
+  and the significance close (delayed genetic commitment, meiosis restores
+  variation). Hit and recovered from the known transient audio-load
+  network glitch on first verify attempt (empty duration → NaN
+  currentTime); retry passed clean. VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS — the
+  2-dots→1-dot→4-dots progression makes the nuclear fusion/split sequence
+  immediately legible.
+
 ## Current
-Sec 29 done, committed, pushed. Next: Sec 30 — "Plasmogamy, karyogamy,
-meiosis and the dikaryon".
+Sec 30 done, committed, pushed. Next: Sec 31 — "Lichens and mycorrhizae".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
