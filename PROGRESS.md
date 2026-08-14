@@ -199,6 +199,15 @@
   it shared a y-coordinate with) — fixed with dim@3 instead of repositioning.
   VERDICT PASS both languages.
 
+- Sec 21 — Taxon vs category, and phylum vs division: Phase A (side-by-side
+  CATEGORY box vs TAXON box with example rank/taxon chips, abstract-vs-
+  concrete definitions, catalogue-heading mnemonic) then Phase B (Phylum=
+  animals(Cuvier) vs Division=plants(Eichler) chips, closing trap Q&A
+  resolving to DIVISION). Clean PASS on first try. VERDICT PASS both
+  languages.
+  === End of "concept" sections for subtopic 3; sections 22-23 are worked
+  examples, 24 is tips. ===
+
 ## Current
 
-Starting Section 21.
+Starting Section 22.
