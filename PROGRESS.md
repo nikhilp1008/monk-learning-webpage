@@ -383,9 +383,24 @@ follow.
   stalls. Eye-checked via FORCE_SHOTS — dense but accurate and clean, one
   of the chapter's highest-value reference tables.
 
+- **Sec 28** — the name-based diagnostic anchors: Phycomycetes/"algal
+  fungi" anchor (aseptate=this one, septate=not this one), then the
+  chapter's most memorable visual — a closed sac shape with 4 dots drawn
+  INSIDE ("ASCOMYCETES = sac fungi", spores inside the ascus) beside a
+  stalked club/cap shape with 5 dots on the OUTSIDE of the flared top
+  ("BASIDIOMYCETES = club fungi", spores outside on the basidium),
+  directly visualizing endogenous vs exogenous. Deuteromycetes anchor (no
+  sexual stage ≠ flawed, just unseen) + the reclassification consequence.
+  Caught and fixed 3 tight/overlapping clearances during authoring
+  (header-to-shape, shape-to-label, and a caption stack that needed more
+  vertical pitch) before the first verify run. VERDICT PASS both
+  languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
+  FORCE_SHOTS — the inside/outside dot placement makes the ascus/basidium
+  distinction immediately intuitive.
+
 ## Current
-Sec 27 done, committed, pushed. Next: Sec 28 — "The diagnostic anchors
-hidden in the names".
+Sec 28 done, committed, pushed. Next: Sec 29 — "Three routes of
+reproduction".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
