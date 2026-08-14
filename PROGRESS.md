@@ -216,9 +216,24 @@ follow.
   advisory stalls (b5/b6 — single-slot swaps net zero group count,
   expected). Eye-checked via FORCE_SHOTS.
 
+- **Sec 14** — second full diagnostic table (6×6 grid, same generated-path
+  technique as Sec5): 5 Protista sub-groups (Chrysophytes, Dinoflagellates,
+  Euglenoids, Slime moulds, Protozoans) × 5 characteristics (lifestyle,
+  wall/covering, flagella, stored food, example). Wall/covering and Stored
+  food columns highlighted amber (the two diagnostic columns per
+  narration), filled in the narration's own reasoning order (wall clue
+  first for all 5, then the stored-food clue for the 3 plant-like ones:
+  chrysolaminarin/paramylon/starch, then the rest completes). Slime
+  mould/Protozoan stored-food cells left honestly blank — narration and
+  standard NCERT content don't give them a single diagnostic storage
+  product (that's not a data gap, it's accurate). VERDICT PASS both
+  languages, 0 overlaps/overflow/empty, 2 advisory stalls (b4/b7 — caption-
+  only or same-count beats). Eye-checked via FORCE_SHOTS — clean,
+  accurate.
+
 ## Current
-Sec 13 done, committed, pushed. Next: Sec 14 — "The group table examiners
-love".
+Sec 14 done, committed, pushed. Next: Sec 15 — "Three lifestyles inside
+one kingdom".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
