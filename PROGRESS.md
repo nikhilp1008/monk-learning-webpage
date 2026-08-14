@@ -606,9 +606,26 @@ follow.
   subscripted chemical formula renders correctly, left/right/hinge
   structure reads exactly as the narration frames it.
 
+- **Sec 42** — "Alternation of generations": a genuine 4-node diamond
+  life-cycle diagram — SPOROPHYTE (2n, top) --meiosis--> SPORES (n,
+  right) --grows into--> GAMETOPHYTE (n, bottom) --mitosis--> GAMETES
+  (n, left) --fertilisation--> back to SPOROPHYTE, all 4 edges drawn and
+  labelled, closing the loop exactly in the beat where narration says
+  "trace the loop on the board". A small hand-drawn ring + "round and
+  round" sits in the diamond's naturally-empty centre (no extra vertical
+  space needed — the four edge arrows never cross the middle). Closes
+  with the dominance refinement (gametophyte dominant in bryophytes —
+  moss IS the visible plant; sporophyte dominant in pteridophytes/
+  gymnosperms/angiosperms) and the named exam-mapping (moss→gametophyte,
+  fern/pine/mango→sporophyte) plus "universal in Plantae — the plant
+  signature". VERDICT PASS both languages, 0 overlaps/overflow/empty, 0
+  stalls. Eye-checked via FORCE_SHOTS, both languages, all 9 frames —
+  very clean; this is the chapter's first true cycle diagram and reads
+  as a genuine textbook diagram, not a list dressed up as one.
+
 ## Current
-Sec 41 done, committed, pushed. Next: Sec 42 — "Alternation of
-generations" (subtopic 4 continues, Kingdoms Plantae & Animalia).
+Sec 42 done, committed, pushed. Next: Sec 43 — "Inside the animal: the
+organ-system level" (subtopic 4 continues, Kingdoms Plantae & Animalia).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
