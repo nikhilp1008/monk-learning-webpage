@@ -144,6 +144,13 @@
   (Assertion-Reason on Mangifera indica Linn.'s 3-items-still-binomial
   point, option 1 underlined correct). VERDICT PASS both languages.
 
+- Sec 15 — Worked examples: Brassica names & statement count: Example 3
+  (3 Brassica names side by side, italic genus+species, "read first two
+  words only" trick, cabbage/cauliflower same species vs mustard same
+  genus, ANSWER option 2) and Example 4 (4-statement count — A/C FALSE,
+  B TRUE, D FALSE, only ONE correct, "reversed word" trap pattern insight).
+  VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 15.
+Starting Section 16 (last section of subtopic 2: tips).
