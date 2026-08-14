@@ -131,6 +131,13 @@
   correctly unitalicized/unederlined per the rules). VERDICT PASS both
   languages — one of the strongest sections so far.
 
+- Sec 13 — The naming codes and the biological species concept: Phase A
+  (binomial nomenclature intro, ICBN/ICZN/ICNB code chips, the
+  ICBN↔ICZN-swap trap with "Z=zoo=animals" mnemonic) then Phase B (horse ×
+  donkey → sterile mule → still two species diagram, Mayr's definition,
+  tautonym note, 5 classification-system chips). VERDICT PASS both
+  languages.
+
 ## Current
 
-Starting Section 13.
+Starting Section 14 (first worked_examples of subtopic 2).
