@@ -160,6 +160,14 @@
   === SUBTOPIC 2 "Biodiversity & Nomenclature" COMPLETE (sections 10-16 of
   7). ===
 
+- Sec 17 — The nested hierarchy and the master trend: house→village→
+  district→state→nation analogy, then the SIGNATURE diagram for this whole
+  subtopic — 7 nested boxes narrowing Kingdom→Phylum/Division→Class→Order→
+  Family→Genus→Species with rotated side labels ("organisms increase ↑" /
+  "common characters increase ↓"), master-key/nesting/reverse-fails recap
+  lines, seven-ranks list, optional-intermediates note. Clean PASS on first
+  try. VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 17 (subtopic 3: Taxonomic Hierarchy).
+Starting Section 18.
