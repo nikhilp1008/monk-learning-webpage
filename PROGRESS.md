@@ -683,9 +683,24 @@ follow.
   via FORCE_SHOTS, both languages, all 10 frames — clean, matches the
   Sec33 exemplar's density and style precisely.
 
+- **Sec 46** — continues Sec45's numbering (EXAMPLE 3 & 4, mirrors
+  Sec34's exact pattern): EXAMPLE 3 (NEET placement) — 4-clue organism
+  ("multicellular, eukaryotic, NO wall, ingests food, glycogen storage")
+  against 4 candidate chips (Plantae/Fungi/Animalia/Protista),
+  systematic 2-step elimination (no wall → not Plantae/Fungi; ingests →
+  not fungi/plants, multicellular → not Protista), Animalia ringed as
+  the sole survivor with "three clues converge" framing — explicitly
+  modelling "don't second-guess a convergence". EXAMPLE 4
+  (assertion-reason on Cuscuta, the section this chapter first flagged
+  back in Sec38) — A/R statements, 3 drill chips (A✓/R✓/R-explains-A✓),
+  green answer stamp, plus the narration's own cave-fish-that-lost-its-
+  eyes analogy as a closing punchline. VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS, both
+  languages, all 9 frames — clean, matches the Sec34 exemplar precisely.
+
 ## Current
-Sec 45 done, committed, pushed. Next: Sec 46 — "Placing an organism, and
-the Cuscuta assertion-reason" (worked_examples, subtopic 4 continues).
+Sec 46 done, committed, pushed. Next: Sec 47 — "Plantae and Animalia
+pitfalls, and the one-question tool" (tips, closes subtopic 4).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
