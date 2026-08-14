@@ -82,6 +82,18 @@ follow.
   adjacent newly-added kingdoms intentionally overlap slightly, reads as a
   "growth chain", not a defect.
 
+- **Sec 3** — three failures of the two-kingdom split: Plantae/Animalia boxes
+  set up, then 3 numbered red-badge failures (prokaryote/eukaryote,
+  unicellular/multicellular, photosynthetic/non-photosynthetic) each with an
+  organism tag (Bacteria / "alga & giant tree" / Fungi) arrowed into the
+  Plantae box — Plantae re-stroked red as "the dustbin" (dims @7); zoom-ring
+  on Fungi with 3 fact chips (absorbs food / chitin not cellulose / no
+  chlorophyll, dim @7); closing recap "patched in stages" callback to Sec2's
+  timeline. VERDICT PASS both languages, 0 overlaps/overflow/empty, 2
+  advisory stalls (b5/b7 — dim-heavy beats, expected). Eye-checked via
+  FORCE_SHOTS — clean, numbered-badge pattern (raw circle+T, no dedicated
+  kit primitive) reusable for future "N failures/pitfalls" sections.
+
 ## Current
-Sec 2 done, committed, pushed. Next: Sec 3 — "Three failures of the
-two-kingdom split".
+Sec 3 done, committed, pushed. Next: Sec 4 — "The five yardsticks for a
+kingdom".
