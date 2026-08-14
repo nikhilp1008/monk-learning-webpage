@@ -107,6 +107,14 @@
   === SUBTOPIC 1 "What is 'Living'? Characteristics of Living Organisms"
   COMPLETE (sections 1-9 of 9). ===
 
+- Sec 10 — Why scientific names? Local chaos to one universal label: Phase A
+  (5-names-one-vegetable hook, 4 local-name chips converging on "one plant"
+  ellipse → Solanum melongena, vernacular-precision warning, pin-code
+  analogy) then Phase B (biodiversity definition, single-crop-field(1) vs
+  mixed-habitat(40) comparison, closing "naming is unavoidable" banner).
+  Two-phase `beat<6` visibility split (Sec8's pattern) again avoided any
+  ghost-clutter between the two halves. VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 10 (subtopic 2: Biodiversity & Nomenclature).
+Starting Section 11.
