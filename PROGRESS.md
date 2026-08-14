@@ -182,8 +182,14 @@
   caption; re-verified visually in both languages after the fix.
   VERDICT PASS both languages.
 
+- Sec 19 — Reading the ladder: containment and inference: 7 true concentric
+  nesting boxes (Kingdom outermost down to Species innermost, scaled
+  directly from the lesson JSON's own proven proportions), containment
+  definition, golden inference (downward implies upward), concrete family
+  example, reverse-fails warning, NEET speed-tip. Clean PASS on first try,
+  no stalls, beat count double-checked (8 reveals = beats 0-7, all mapped).
+  VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 19. Note: will double-check beat-count-vs-content-count
-alignment (declared reveals.length vs highest beat used) more carefully
-on remaining sections after the Sec18 near-miss.
+Starting Section 20.
