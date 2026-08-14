@@ -589,10 +589,26 @@ follow.
   against Sec5's final frame — Sec40's final frame confirmed clean with no
   stacked captions.
 
+- **Sec 41** — "Inside the plant, and why it feeds everything else":
+  the narration's own frame ("cell on the left, consequences on the
+  right") built literally — LEFT column stacks cell structure (cellulose
+  wall, plastids/chloroplasts, central vacuole with "wilted = lost
+  turgor"), a CENTER vertical arrow hinge labelled "photosynthesis" with
+  the reaction equation below it (chlorophyll + light: CO₂ + H₂O →
+  sugars + O₂, real subscripts via tspan), RIGHT column stacks the
+  consequences (PRODUCERS — feeds nearly every other organism, "every
+  meal traces back to a chloroplast", starch storage + fixed/non-motile,
+  tissue/organ level with algae flagged as simpler). Closes with a
+  6-chip recap row (wall/plastids/vacuole/starch/fixed life/tissue-organ)
+  and "six consequences of being a maker of food" — ties back to Sec36's
+  axis. VERDICT PASS both languages, 0 overlaps/overflow/empty, 0 stalls.
+  Eye-checked via FORCE_SHOTS, both languages, all 9 frames — clean;
+  subscripted chemical formula renders correctly, left/right/hinge
+  structure reads exactly as the narration frames it.
+
 ## Current
-Sec 40 done, committed, pushed. Next: Sec 41 — "Inside the plant, and why
-it feeds everything else" (subtopic 4 continues, Kingdoms Plantae &
-Animalia).
+Sec 41 done, committed, pushed. Next: Sec 42 — "Alternation of
+generations" (subtopic 4 continues, Kingdoms Plantae & Animalia).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
