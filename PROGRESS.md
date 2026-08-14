@@ -119,9 +119,23 @@ follow.
   worth a human's extra look given its outsized exam importance per the
   narration itself.
 
+- **Sec 6** — Woese's three-domain refinement: two-tier hierarchy/tower
+  diagram — 3 amber domain boxes (Archaea, Bacteria, Eukarya) on top, the
+  familiar 5-kingdom row below (reusing Sec1/2/5's x-positions again),
+  connected by plain hierarchy lines (no arrowheads — IS-A membership, not
+  flow): Archaea+Bacteria both land on Monera's top edge at different
+  x-points (visually splitting it without a literal divider), Eukarya fans
+  out to all 4 remaining kingdoms with verified non-crossing lines. Green
+  box around the kingdom row for "still fully intact". Single
+  replaced-caption-slot pattern again (verdict band this time, y535).
+  VERDICT PASS both languages, 0 overlaps/overflow/empty, 2 advisory stalls
+  (b5/b7 — line-only/no-caption-change beats, expected). Eye-checked via
+  FORCE_SHOTS — very clean, reads exactly like the "tower" metaphor the
+  narration describes.
+
 ## Current
-Sec 5 done, committed, pushed. Next: Sec 6 — "Woese's three-domain
-refinement".
+Sec 6 done, committed, pushed. Next: Sec 7 — "Why the five kingdoms are a
+better map". **Subtopic 1 (secs 1-11) now 6/11 done.**
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
