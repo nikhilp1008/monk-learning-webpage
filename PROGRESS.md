@@ -89,6 +89,15 @@
   doesn't catch, only eye-check does) — replaced with a plain underline.
   VERDICT PASS both languages.
 
+- Sec 8 — Worked examples: the dividing alga & statement count: Example 3
+  (unicellular alga MCQ — cell-division diagram, option 3 "BOTH" underlined,
+  options 1/2 crossed out as the speed-trap) and Example 4 (4-statement
+  count — A marked FALSE, B/C/D marked TRUE, verdict THREE correct). Used a
+  `beat < boundary` visibility window so Example 3's content vanishes
+  cleanly (not dim-ghosted) when Example 4 takes over the same coordinates —
+  same lesson learned from Sec6's ghost-clutter issue, applied proactively.
+  VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 8.
+Starting Section 9 (first tips section).
