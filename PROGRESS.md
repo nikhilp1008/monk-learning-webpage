@@ -72,6 +72,14 @@
   VERDICT PASS both languages. End of subtopic 1 (What is 'Living'?) concept
   sections — sections 7-9 are worked examples / tips for the same subtopic.
 
+- Sec 6 — Key terms and precise definitions: a running "terms covered"
+  checklist accumulates across the top (LIVING/GROWTH/REPRODUCTION/
+  METABOLISM/CONSCIOUSNESS/STIMULUS/EMERGENT) while a single flashcard slot
+  below swaps cleanly between each term's precise definition (exact-beat
+  visibility, not dim-stacking, to avoid ghost clutter in a reused slot);
+  METABOLISM gets its own anabolism+catabolism box diagram.
+  VERDICT PASS both languages. End of subtopic-1 concept sections.
+
 ## Current
 
-Starting Section 6.
+Starting Section 7 (first worked_examples section).
