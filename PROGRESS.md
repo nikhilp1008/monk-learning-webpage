@@ -167,9 +167,20 @@ follow.
   FORCE_SHOTS — clean, dense-but-legible worked-example format that later
   worked_examples sections in this chapter can reuse.
 
+- **Sec 10** — continues Sec9's EXAMPLE numbering (3 & 4): EXAMPLE 3 (NEET
+  odd-one-out, "which was NOT a Whittaker criterion?") — 4 options, Gram-
+  staining ringed red as the answer + "not kingdom-level, it's a bacteria
+  sub-classification tool" + defence via the 5-criteria checklist (recaps
+  Sec4). EXAMPLE 4 (high-difficulty Assertion-Reason on Monera/Protista
+  heterogeneity) — A/R statements, the decide-A/decide-R/does-R-explain-A
+  technique, 3 green checkmark chips, green answer stamp "both true — R is
+  the correct explanation of A". VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS — dense
+  but clean, matches CBSE/NEET AR-question conventions.
+
 ## Current
-Sec 9 done, committed, pushed. Next: Sec 10 — "The odd-one-out and an
-assertion-reason" (2nd worked-example section, subtopic 1).
+Sec 10 done, committed, pushed. Next: Sec 11 — "Pitfalls and the placement
+decision tree" (tips closer, completes subtopic 1).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
