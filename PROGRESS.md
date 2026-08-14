@@ -67,6 +67,21 @@ follow.
   or delivered via un-Fade'd `Draw` marks, not a real defect). Eye-checked
   via FORCE_SHOTS, both languages, all 9 frames — clean.
 
+- **Sec 2** — from morphology to five kingdoms: historical timeline (arrow +
+  5 empty kingdom slots at fixed x-positions matching Sec1's closing row) →
+  Aristotle prelude (no kingdom, just the sorting instinct) → Linnaeus fills
+  Plantae+Animalia (Two-Kingdom) → Haeckel 1866 fills+rings Protista (3) →
+  later workers fill+ring Monera (4) → Whittaker 1969 fills+rings Fungi (5),
+  full row boxed green + "backbone of the whole chapter" → closing
+  "subdivided, not discarded". Reuses Sec1's exact 5-slot x-positions for
+  chapter-wide continuity. Only stated dates used (1866, 1969); Linnaeus/
+  Aristotle/"later workers" left undated since narration doesn't give one —
+  don't invent facts not in source. VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 1 advisory stall (b1 — all-Draw beat, no Fade
+  groups, expected). Eye-checked via FORCE_SHOTS — clean; rings between
+  adjacent newly-added kingdoms intentionally overlap slightly, reads as a
+  "growth chain", not a defect.
+
 ## Current
-Sec 1 done, committed, pushed. Next: Sec 2 — "From morphology to five
-kingdoms".
+Sec 2 done, committed, pushed. Next: Sec 3 — "Three failures of the
+two-kingdom split".
