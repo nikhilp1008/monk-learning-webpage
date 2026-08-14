@@ -287,9 +287,19 @@ follow.
   the 4 icons are immediately visually distinguishable, worth a human's
   look as one of the chapter's highest-yield exam sections.
 
+- **Sec 20** — closes Kingdom Protista: reproduction lines (asexual —
+  binary fission/cysts/budding/sporulation; sexual — syngamy+conjugation),
+  then a two-column BENEFICIAL/HARMFUL significance table with a vertical
+  divider — phytoplankton→O2 (the big one), diatomaceous earth,
+  slime-mould recycling vs the 3 harmful pairings (Plasmodium→malaria,
+  Trypanosoma→sleeping sickness, Entamoeba→amoebic dysentery) + red tides,
+  closing punchline "the same group that feeds the ocean can also poison
+  it". VERDICT PASS both languages, 0 overlaps/overflow/empty, 0 stalls.
+  Eye-checked via FORCE_SHOTS — clean.
+
 ## Current
-Sec 19 done, committed, pushed. Next: Sec 20 — "Reproduction and why
-protists matter".
+Sec 20 done, committed, pushed. Next: Sec 21 — "Pairing contrasts and
+reading two clues together" (worked examples, subtopic 2).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
