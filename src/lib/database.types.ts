@@ -17,12 +17,16 @@ export type Database = {
           name: string | null
           status: string | null
           subject: string | null
+          slug: string | null
+          source_file_prefix: string | null
         }
         Insert: {
           chapter_order?: number | null
           class_level?: number | null
           id?: string
           name?: string | null
+          slug?: string | null
+          source_file_prefix?: string | null
           status?: string | null
           subject?: string | null
         }
@@ -31,6 +35,8 @@ export type Database = {
           class_level?: number | null
           id?: string
           name?: string | null
+          slug?: string | null
+          source_file_prefix?: string | null
           status?: string | null
           subject?: string | null
         }

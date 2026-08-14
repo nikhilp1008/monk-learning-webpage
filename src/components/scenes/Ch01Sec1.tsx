@@ -97,8 +97,9 @@ export default function Ch01Sec1({ currentTime, reveals, language }: SceneProps)
       preserveAspectRatio="xMidYMin meet"
       className="w-full h-full select-none"
     >
-      {/* beat 0 — title, then the two words get a drawn underline */}
-      <Fade on={beat >= 0} delay={dl(0, 0.3)}>
+      {/* title is always-on — the heading stays on the blank board before play;
+          everything else is beat-gated and draws only once playback begins */}
+      <Fade on={true}>
         <T x={540} y={64} size={32} fill={RED} script>
           {t("a measurement = a number + a unit", "measurement = number + unit")}
         </T>

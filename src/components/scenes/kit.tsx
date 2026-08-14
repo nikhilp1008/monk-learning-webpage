@@ -17,11 +17,22 @@ export interface SceneProps {
   language: "english" | "hinglish";
 }
 
-/** Index of the latest beat whose reveal time has passed (-1 = none). */
+/**
+ * Index of the latest beat whose reveal time has STRICTLY passed (-1 = none).
+ *
+ * Strictly-greater (not >=) is deliberate: every section's first reveal is 0.0,
+ * so at currentTime === 0 (paused, before the student presses play) this returns
+ * -1 — the board is empty, nothing pre-drawn. The instant playback advances past
+ * 0 the first beat activates and its elements animate in (a Fade/Draw that mounts
+ * already `on` skips its transition, so gating from off→on is what makes them
+ * actually draw). Everything therefore draws in step with the narration, never
+ * before it. (Author the section title as always-on — `on={true}` — if you want
+ * the heading visible on the blank board.)
+ */
 export function useBeat(currentTime: number, reveals: number[]): number {
   let beat = -1;
   for (let i = 0; i < reveals.length; i++) {
-    if (currentTime >= (reveals[i] ?? 0)) beat = i;
+    if (currentTime > (reveals[i] ?? 0)) beat = i;
     else break;
   }
   return beat;
