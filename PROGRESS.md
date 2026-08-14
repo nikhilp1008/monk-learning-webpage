@@ -309,9 +309,24 @@ follow.
   is what rules them out). VERDICT PASS both languages, 0
   overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS — clean.
 
+- **Sec 22** — continues Sec21's numbering (EXAMPLE 3 & 4, per explicit
+  "third"/"fourth question" narration): EXAMPLE 3 (NEET clue-pile,
+  identify-the-group) — 4 options, eliminate on the covering clue first
+  (cross diatom/euglenoid via wall mismatch), then confirm dinoflagellate
+  (ringed) over slime mould (crossed, terrestrial/non-photosynthetic).
+  EXAMPLE 4 (assertion-reason on Euglena's mixotrophy) — A/R statements,
+  3 checkmark chips, green answer stamp. Caught and fixed a real ring-vs-
+  caption clearance violation during authoring (ring's spec-formula
+  overshoot reached into a caption sitting right below it) by switching 3
+  captions to a single dim-and-replace slot moved further down — a good
+  concrete example of the "estimates get you to the first render, verify
+  the real boxes" workflow. VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 2 advisory stalls (b3/b4). Eye-checked via
+  FORCE_SHOTS — clean.
+
 ## Current
-Sec 21 done, committed, pushed. Next: Sec 22 — "Identifying a group and an
-assertion-reason".
+Sec 22 done, committed, pushed. Next: Sec 23 — "Protista pitfalls and the
+covering-clue tool" (tips closer, completes subtopic 2).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
