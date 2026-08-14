@@ -151,6 +151,15 @@
   B TRUE, D FALSE, only ONE correct, "reversed word" trap pattern insight).
   VERDICT PASS both languages.
 
+- Sec 16 — Pitfalls & pro-tips: the four-check name scan: 4 numbered
+  red-badge pitfalls (capitalisation slip, author confusion, ICBN/ICZN
+  swap, taxonomy-vs-systematics inversion), then the four-check scan-list
+  diagram (two words? case? italic/underline? author Roman & last?), scan
+  order recap, and two memory-aid banners. Clean PASS on first try, no
+  stalls. VERDICT PASS both languages.
+  === SUBTOPIC 2 "Biodiversity & Nomenclature" COMPLETE (sections 10-16 of
+  7). ===
+
 ## Current
 
-Starting Section 16 (last section of subtopic 2: tips).
+Starting Section 17 (subtopic 3: Taxonomic Hierarchy).
