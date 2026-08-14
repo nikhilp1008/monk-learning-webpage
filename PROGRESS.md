@@ -59,6 +59,12 @@
   two names"); REPRODUCTION chip crossed out at the close.
   VERDICT PASS both languages.
 
+- Sec 4 — Metabolism and the test-tube argument: first PASSING candidate
+  (green title); "Inside a cell" box (nested circle, organised, LIVING ✓) vs
+  "Cell-free test tube" box (flask icon, neither living nor non-living);
+  closing trap warning about the most-tested exam mistake.
+  VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 4.
+Starting Section 5.
