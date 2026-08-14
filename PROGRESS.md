@@ -231,9 +231,19 @@ follow.
   only or same-count beats). Eye-checked via FORCE_SHOTS — clean,
   accurate.
 
+- **Sec 15** — the sub-topic's mental scaffold: 3-way branch diagram —
+  "how does it make a living?" root fans to photosynthesizes→algal
+  protists, hunts/parasitizes→protozoa, absorbs decay→fungus-like, each
+  with its member groups listed beneath (chrysophytes/dinoflagellates/
+  euglenoids; the four protozoan classes — detail deferred to Sec19;
+  slime moulds). 3-beat single-slot caption on why the scaffold matters
+  and the "lifestyle first" exam strategy. VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 2 advisory stalls (b6/b7). Eye-checked via
+  FORCE_SHOTS — clean roadmap diagram for the rest of the subtopic.
+
 ## Current
-Sec 14 done, committed, pushed. Next: Sec 15 — "Three lifestyles inside
-one kingdom".
+Sec 15 done, committed, pushed. Next: Sec 16 — "Chrysophytes: diatoms and
+the soap-box wall".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
