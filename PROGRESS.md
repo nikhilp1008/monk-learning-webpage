@@ -144,9 +144,21 @@ follow.
   (b6 — ring-only beat). Eye-checked via FORCE_SHOTS — the extraction
   arrows read exactly as "2 crowded boxes become 5 clean ones".
 
+- **Sec 8** — where Whittaker's scheme falls short: the 5-kingdom row a
+  4th time (Monera/Protista re-stroked red + "heterogeneous" fact chips —
+  auto+hetero, walled+naked for Monera, "leftovers kingdom" for Protista),
+  2 boundary-case tags (Chlamydomonas?, Euglena?) floating unconnected
+  above the row (ambiguity = no firm link drawn), a dashed "outside the
+  kingdom system" zone below holding Viruses/Viroids/Lichens. Closing
+  (story band): scheme says little about evolution — callback to Sec6's
+  domains — but still the standard framework (reassurance, not a
+  contradiction). VERDICT PASS both languages, 0 overlaps/overflow/empty,
+  0 stalls. Eye-checked via FORCE_SHOTS — clean. **Subtopic 1 concept
+  sections (1-8) complete.**
+
 ## Current
-Sec 7 done, committed, pushed. Next: Sec 8 — "Where Whittaker's scheme
-still falls short". **Subtopic 1 (secs 1-11) now 7/11 done.**
+Sec 8 done, committed, pushed. Next: Sec 9 — "Stating limitations and who
+proposed what" (first worked-example section, subtopic 1).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
