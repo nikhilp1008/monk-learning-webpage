@@ -646,10 +646,30 @@ follow.
   stall (b1, expected). Eye-checked via FORCE_SHOTS, both languages, all
   9 frames, plus a targeted crop-zoom on the fixed region.
 
+- **Sec 44** — "The unifying contrast, and what they share": ties the
+  whole sub-topic to a single restated axis banner ("make food vs find
+  food — that's it, that's the sub-topic", persistent), then two
+  condensed mini-cascade chains reprising Sec36/41/43's facts —
+  chloroplasts→cell wall→fixed→starch (green, left) and wall-less→
+  locomotion→sensory→glycogen (amber, right) — each capped with an
+  ecological label (GREEN BASE / MOBILE TOP). Pivots to the part
+  "students forget": a dashed shared-facts box (both eukaryotic,
+  multicellular, sexual reproduction, division of labour), the
+  historical payoff (both kept since the first 2-kingdom split; Monera/
+  Protista/Fungi carved out later — callback to Sec2's timeline), and
+  the closing image (two halves of the multicellular eukaryotic world,
+  producers and consumers). Learned from Sec43's caught defect: beat0's
+  transient intro line is beat-scoped (`beat === 0`) from the start
+  rather than dim-forever, since it sits close to beat1's persistent axis
+  banner. VERDICT PASS both languages, 0 overlaps/overflow/empty, 1
+  advisory stall (b1, expected — axis banner alone, no dim/hide of
+  beat0). Eye-checked via FORCE_SHOTS, both languages, all 9 frames —
+  clean; reads as a genuine "tie it together" recap rather than a rehash.
+
 ## Current
-Sec 43 done, committed, pushed. Next: Sec 44 — "The unifying contrast,
-and what they share" (subtopic 4 continues, Kingdoms Plantae &
-Animalia).
+Sec 44 done, committed, pushed. Next: Sec 45 — "Three distinguishing
+features, and reading a word precisely" (worked_examples, subtopic 4
+continues).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
