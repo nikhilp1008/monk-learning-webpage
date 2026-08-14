@@ -426,8 +426,23 @@ follow.
   2-dots→1-dot→4-dots progression makes the nuclear fusion/split sequence
   immediately legible.
 
+- **Sec 31** — split-screen (deliberately kept apart per narration): LEFT
+  LICHEN — green alga circle wrapped by amber fungal-thread curves
+  (phycobiont=food-maker, mycobiont=shelter, "phyco feeds, myco mounts"
+  mnemonic), pollution-indicator (SO₂) + dye facts (litmus, orcein). RIGHT
+  MYCORRHIZA — a drawn root wrapped by fungal threads ("fungus + PLANT
+  ROOT, not alga!" — the single swap that distinguishes it), opposite-
+  direction trade arrows (fungus→plant: minerals+water; plant→fungus:
+  sugars), scale/significance (majority of land plants, colonising land).
+  Hit the same transient audio-load network glitch as Sec30 on first
+  attempt; retry passed clean. VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 2 advisory stalls (b2/b5). Eye-checked via
+  FORCE_SHOTS — the two partnerships read as clearly distinct, which is
+  the whole point given how often they're confused.
+
 ## Current
-Sec 30 done, committed, pushed. Next: Sec 31 — "Lichens and mycorrhizae".
+Sec 31 done, committed, pushed. Next: Sec 32 — "Why fungi matter: the
+double-edged ledger".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
