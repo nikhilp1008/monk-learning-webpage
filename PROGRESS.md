@@ -115,6 +115,12 @@
   Two-phase `beat<6` visibility split (Sec8's pattern) again avoided any
   ghost-clutter between the two halves. VERDICT PASS both languages.
 
+- Sec 11 — Key terms: identification, nomenclature, taxonomy, systematics:
+  flashcard-swap definitions (Nomenclature/Identification/Classification),
+  then the payoff nested-boxes diagram (Systematics ⊃ Taxonomy ⊃ the four
+  jobs), recap lines, and a bonus TAXON definition with 3 example chips
+  (Panthera/Panthera leo/Mammalia). VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 11.
+Starting Section 12.

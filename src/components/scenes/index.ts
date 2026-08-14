@@ -872,6 +872,7 @@ import B11Ch01Sec7 from "./B11Ch01Sec7";
 import B11Ch01Sec8 from "./B11Ch01Sec8";
 import B11Ch01Sec9 from "./B11Ch01Sec9";
 import B11Ch01Sec10 from "./B11Ch01Sec10";
+import B11Ch01Sec11 from "./B11Ch01Sec11";
 
 const B11CH01 = "3087fd40-3dd1-500e-8485-f9f79ec81d76"; // Class 11 · Biology · The Living World
 
@@ -885,4 +886,5 @@ REGISTRY[`${B11CH01}:7`] = B11Ch01Sec7;
 REGISTRY[`${B11CH01}:8`] = B11Ch01Sec8;
 REGISTRY[`${B11CH01}:9`] = B11Ch01Sec9;
 REGISTRY[`${B11CH01}:10`] = B11Ch01Sec10;
+REGISTRY[`${B11CH01}:11`] = B11Ch01Sec11;
 /* ============================ end B11Ch01 ============================ */
