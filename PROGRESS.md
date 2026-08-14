@@ -178,9 +178,20 @@ follow.
   overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS — dense
   but clean, matches CBSE/NEET AR-question conventions.
 
+- **Sec 11** — subtopic 1 closer: 4 numbered red-badge pitfalls (say
+  "refined" not "discarded"; kingdoms ≠ domains; don't drop phylogeny;
+  five kingdoms aren't flawless — recaps Sec2/4/6/8), then the section's
+  real payoff — a full identification decision tree flowchart: "prokaryote?"
+  root → yes→Monera(done)/no→eukaryote→"food & wall?" → fans to
+  Plantae/Fungi/Animalia/Protista by condition. VERDICT PASS both
+  languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
+  FORCE_SHOTS — the decision tree is genuinely exam-ready reference
+  material, worth a human's look as the subtopic's key takeaway diagram.
+  **Subtopic 1 (secs 1-11) complete — 11/59 sections done.**
+
 ## Current
-Sec 10 done, committed, pushed. Next: Sec 11 — "Pitfalls and the placement
-decision tree" (tips closer, completes subtopic 1).
+Sec 11 done, committed, pushed. Next: Sec 12 — "The kingdom at the
+crossroads" (opens subtopic 2, Kingdom Protista).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
