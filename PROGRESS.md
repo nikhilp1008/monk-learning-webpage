@@ -224,6 +224,17 @@
   intact, just restarted the server and continued. VERDICT PASS both
   languages.
 
+- Sec 24 — Pitfalls & pro-tips: King Philip and the containment rule: 4
+  numbered red-badge traps (family/order swap, taxon/category reversal,
+  mono/poly flip, master-trend reversal), then the King Philip Came Over
+  For Good Soup mnemonic table (7 rows) beside the containment-rule box
+  (same lower category ⇒ share all higher, reverse does not hold), pro-tip,
+  closing memory-aid banner. Clean PASS on first try, no stalls.
+  VERDICT PASS both languages.
+  === SUBTOPIC 3 "Taxonomic Hierarchy" COMPLETE (sections 17-24 of 8). ===
+  === Only Section 25 (cheat_sheet, chapter revision) remains. ===
+
 ## Current
 
-Starting Section 24 (last section of subtopic 3: tips).
+Starting Section 25 — the final section (cheat_sheet: one-screen chapter
+recall).
