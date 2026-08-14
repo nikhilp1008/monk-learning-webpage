@@ -205,9 +205,20 @@ follow.
   by design — cosmetically minor, doesn't affect any gate, seen in a few
   sections' last beat transition (e.g. Sec1 b7, Sec12 b7).
 
+- **Sec 13** — where Protista sits: 3-line table recap (vs Monera on
+  nuclear membrane, vs the multicellular 3 on body plan, nutrition — gets
+  all 3 modes), the "single-celled EUKARYOTE, not small" boxed test, the
+  Bacteria trap (same-pond comparison cards connected by a labelled line —
+  same size/habitat, different kingdom, nucleus is what matters), 3-beat
+  single-slot caption sequence on the "leftovers drawer" framing, closing
+  trap on alternation of generations (plant concept, don't force it onto
+  protists). VERDICT PASS both languages, 0 overlaps/overflow/empty, 2
+  advisory stalls (b5/b6 — single-slot swaps net zero group count,
+  expected). Eye-checked via FORCE_SHOTS.
+
 ## Current
-Sec 12 done, committed, pushed. Next: Sec 13 — "Where Protista sits, and
-why it is ill-defined".
+Sec 13 done, committed, pushed. Next: Sec 14 — "The group table examiners
+love".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
