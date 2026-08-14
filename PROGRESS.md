@@ -104,9 +104,24 @@ follow.
   0 overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS — very
   clean "notes photo" final frame.
 
+- **Sec 5** — the single most useful table: a real 6×6 grid (5 kingdoms ×
+  cell type / cell wall / nuclear membrane / body organisation / nutrition),
+  built via a generated grid path + data-driven cell arrays. Filled in the
+  narration's own reasoning order (cell type first, then nuclear membrane as
+  "the fastest test" isolating Monera, then wall+nutrition for the 4
+  eukaryote kingdoms, Protista/Monera + body-organisation last for
+  completeness), single replaced caption-slot pattern (each beat dims the
+  previous). Standard NCERT Five-Kingdom table content, cross-checked
+  against narration for accuracy. Closing: green box around the whole table
+  + "memorise this" in the freed story band. VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 1 advisory stall (b4 — ring-only beat, expected).
+  Eye-checked via FORCE_SHOTS — this is the chapter's reference table scene,
+  worth a human's extra look given its outsized exam importance per the
+  narration itself.
+
 ## Current
-Sec 4 done, committed, pushed. Next: Sec 5 — "The single most useful table
-in the chapter".
+Sec 5 done, committed, pushed. Next: Sec 6 — "Woese's three-domain
+refinement".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
