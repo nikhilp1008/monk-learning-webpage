@@ -121,6 +121,16 @@
   jobs), recap lines, and a bonus TAXON definition with 3 example chips
   (Panthera/Panthera leo/Mammalia). VERDICT PASS both languages.
 
+- Sec 12 — Writing a scientific name: the five conventions: a single live
+  example "Mangifera indica" persists across beats and gets re-styled in
+  front of you (plain → ringed as the most-tested capitalisation point →
+  turns italic → gets separate underlines) using raw SVG `fontStyle`
+  toggled directly off `beat` (T component has no italic prop), then the
+  anatomy-diagram boxes (generic name / specific epithet / author citation)
+  connect to each styled word, with "Linn." added last (correctly Roman,
+  correctly unitalicized/unederlined per the rules). VERDICT PASS both
+  languages — one of the strongest sections so far.
+
 ## Current
 
-Starting Section 12.
+Starting Section 13.
