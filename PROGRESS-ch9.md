@@ -1,0 +1,170 @@
+# Ch09 — Mechanical Properties of Fluids — scene progress
+
+Worktree: branch `premium-board-ch9` · port 3009 only · chapter_id `33795397-f8fe-5ef6-ba2d-64549905ecd3`.
+86 sections total (Supabase positions 1–86 match JSON `section_index` — confirmed 1:1 by title, and
+`board_reveal_at_english`/`_hinglish` arrays confirmed equal length for all 86 rows).
+
+## Subtopics
+1. Fluid Pressure and Pascal's Law — secs 1–11
+2. Buoyancy and Floatation — secs 12–22
+3. Fluids in Accelerated and Rotating Frames — secs 23–34
+4. Fluid Dynamics and Bernoulli's Theorem — secs 35–47
+5. Viscosity and Terminal Velocity — secs 48–57
+6. Poiseuille's Law and Viscous Flow Resistance — secs 58–68
+7. Surface Tension and Capillarity — secs 69–84
+8. Mechanical Properties of Fluids: Recap — secs 85–86
+
+## Done
+Subtopic 1 (Fluid Pressure and Pascal's Law), Sec 1–11 — ALL PASS both languages, committed:
+- Sec 1 — "Pressure: the all-directions squeeze": packed-train hook (dims) → tank+droplet demo with 4-arrow normal-push diagram → flat-surface mini-diagram (perpendicular survives, sideways crossed out) → formula P=F⊥/A (tank dims) → vector-vs-scalar note → closing insight. Eyeballed clean.
+- Sec 2 — "Why pressure deepens with depth": tank + 3 depth-arrows growing → P=P0+ρgh, graph.
+- Sec 3 — "The hydrostatic paradox": three vessels (narrow/wide/funnel), same water level, equal base-pressure arrows, cream volume fills. Eyeballed clean.
+- Sec 4 — "Pascal's law and the hydraulic lift": sealed vessel, transmitted-pressure arrows, second piston appears, F2=F1(A2/A1).
+- Sec 5 — "Deriving the depth law from a force balance": free-body diagram (P1A/P2A/weight) → P=P0+ρgh derivation. Eyeballed clean.
+- Sec 6 — "Your pressure toolkit": 7-row colour-coded formula recap list. Eyeballed clean.
+- Sec 7 — "Overhead tank worked example": tank+h-bracket, gauge→absolute→force calc. Eyeballed clean.
+- Sec 8 — "Scuba depth for two atmospheres": depth-scale water column + diver marker, h=Pg/ρg≈19.4m.
+- Sec 9 — "The hydraulic car lift": to-scale piston circles, F2=mg→area ratio→F1→h1, energy check.
+- Sec 10 — "Mercury U-tube: the factor of two": U-tube diagram, water column, mercury drop/rise, 2x bracket, derivation to x=0.5cm. Eyeballed clean.
+- Sec 11 — "Pitfalls and pro-tips": 6-row red/amber tips list.
+
+- Sec 12 — "Where buoyancy comes from": submerged cube, small top-push/big bottom-push arrows, P=P0+ρgh, F_B net arrow.
+
+## Drafted but UNVERIFIED (blocking issue below)
+- Sec 13 — "Archimedes' principle by fluid replacement": two tanks (real solid body vs dashed fluid-blob), "≡" equivalence, F_B=ρf·Vsub·g, centroid arrow. Written, registered in index.ts, passes `npx tsc --noEmit`. NOT verified — see incident below.
+
+- Sec 14 — "Float, sink, or hover": tank with 3 objects (sink/hover/float), density-comparison labels.
+- Sec 15 — "Fraction submerged and the iceberg": iceberg polygon straddling waterline (~10/90 split), Vsub/V=ρb/ρf.
+- Sec 16 — "Buoyancy in accelerating frames": lift cabin, floating object, accel arrow, F_B=ρf Vsub g_eff.
+- Sec 17 — "Your buoyancy toolkit": 7-row colour-coded formula recap list.
+- Sec 18 — "Submerged iron block worked example": tank+block, weight/buoyancy arrows, W=39N, F_B=5N, Wapp=34N.
+- Sec 19 — "Wooden block in two liquids worked example": two waterlines, block at 75% then 62.5% (dim/resolve pattern).
+- Sec 20 — "Cube at oil-water interface worked example": two-layer container, 50/50 split cube, f=0.5.
+- Sec 21 — "Tethered cork in accelerating lift worked example": cork+string+3 forces, T=1.125N.
+- Sec 22 — "Pitfalls and pro-tips: buoyancy": 6-row red/amber tips list.
+
+All of sec 13–22 (subtopic 2, Buoyancy and Floatation) are DRAFTED (pass `npx tsc --noEmit`,
+registered in `index.ts`) but UNVERIFIED — see incident below.
+
+- Sec 23 — "Effective gravity": g/a/g_eff vector triangle, g_eff=√(a²+g²).
+- Sec 24 — "Horizontal acceleration tilts the surface": tank, tilted line, Δh bracket, θ, tanθ=a/g.
+- Sec 25 — "Vertical acceleration and free fall": two tanks (g+a up / g−a down), free-fall note.
+- Sec 26 — "Spin makes a paraboloid": rotating container, paraboloid curve, ω loop, inward arrows.
+- Sec 27 — "Deriving the tilt angle": mg/ma/net vector triangle + perpendicular-surface tick.
+- Sec 28 — "Deriving the paraboloid surface": axis+paraboloid+radius bracket+growing dP/dr arrows.
+- Sec 29 — "Accelerated and rotating toolkit": 7-row colour-coded formula recap list.
+- Sec 30 — "Diesel tanker tilt worked example": tanker+tilted line, θ≈16.7°.
+- Sec 31 — "45° means a=g worked example": right triangle (g=a legs, 45° hypotenuse).
+- Sec 32 — "Accelerating tank height gap worked example": tank, pivot-about-centre tilt, spill check.
+- Sec 33 — "Rotating cylinder exposing the bottom": paraboloid touching base, rim at 2H.
+- Sec 34 — "Pitfalls and pro-tips: accelerated/rotating fluids": 6-row red/amber tips list.
+
+Subtopic 3 (Fluids in Accelerated and Rotating Frames, sec 23–34) fully DRAFTED (tsc clean,
+registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13/35/60/86).
+
+- Sec 35 — "Streamline versus turbulent flow": 5 parallel streamlines vs 2 chaotic paths.
+- Sec 36 — "The equation of continuity": tapered pipe, slow/fast arrows, A1v1=A2v2.
+- Sec 37 — "Bernoulli energy conservation": tapered pipe + tall/short pressure gauges, P+½ρv²+ρgh=const.
+- Sec 38 — "Bernoulli everywhere": airfoil + compressed/spread streamlines + LIFT arrow.
+- Sec 39 — "Deriving continuity": pipe + two equal-volume slugs (short/wide vs long/narrow).
+- Sec 40 — "Deriving Bernoulli by work and energy": inclined pipe, rising slug (solid→dashed), full derivation.
+- Sec 41 — "Torricelli's efflux": tank, H bracket, hole, jet arc, v=√(2g(H−h)).
+- Sec 42 — "Flow toolkit": 7-row colour-coded formula recap list.
+- Sec 43 — "Narrowing pipe worked example": tapered pipe, d1/d2 labels, v2=18m/s.
+- Sec 44 — "Efflux from a side hole worked example": tank with low hole, v≈17.3m/s.
+- Sec 45 — "Continuity then Bernoulli worked example": tapered pipe + pressure gauges, P2=1.325e5Pa.
+- Sec 46 — "Tank draining time worked example": tank + falling-level arrow + low hole, t≈2.8 hours.
+- Sec 47 — "Pitfalls and pro-tips: flow and Bernoulli": 6-row red/amber tips list.
+
+Subtopic 4 (Fluid Dynamics and Bernoulli's Theorem, sec 35–47) fully DRAFTED (tsc clean,
+registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13/47/70/86).
+
+- Sec 48 — "Viscosity: fluid friction": plates + growing-length velocity arrows, F=-ηA(dv/dx).
+- Sec 49 — "Temperature: liquids down, gases up": two mini η-vs-T graphs (falling/rising).
+- Sec 50 — "Terminal velocity": sphere + W (down)/F_B (up small)/F_v (up growing) arrows.
+- Sec 51 — "Deriving terminal velocity": reuses sec50 diagram, full derivation to v_t formula.
+- Sec 52 — "Viscosity toolkit": 7-row colour-coded formula recap list.
+- Sec 53 — "Dragging a plate over glycerine worked example": plates + 3 velocity arrows, F=37.5N.
+- Sec 54 — "Raindrop splitting into 8 worked example": big drop → 8 small drops grid, v'=v/4.
+- Sec 55 — "Glass sphere in glycerine worked example": reuses sphere+3-force diagram, drag=W_app.
+- Sec 56 — "Power dissipated as r^5 worked example": small/large sphere with heat-burst ticks.
+- Sec 57 — "Pitfalls and pro-tips: viscosity": 6-row red/amber tips list.
+
+Subtopic 5 (Viscosity and Terminal Velocity, sec 48–57) fully DRAFTED (tsc clean,
+registered) but UNVERIFIED — audio still 404 for sec 13+ (re-checked sec13).
+
+- Sec 58 — "Poiseuille: flow through a thin tube": tube+P1/P2+L/r brackets, r^4 dependence.
+- Sec 59 — "Why radius to the fourth": cross-section circle + parabolic velocity arrows.
+- Sec 60 — "The parabolic velocity profile": tube + symmetric profile arrows, v_avg=v_max/2.
+- Sec 61 — "Fluid resistance Ohm's law analogy": series/parallel tube-resistor icons, R=8ηl/πr⁴.
+- Sec 62 — "Deriving the profile and pi/8": concentric circles (r,s), Q=πΔPr⁴/8ηl derivation.
+- Sec 63 — "Poiseuille toolkit": 7-row colour-coded formula recap list.
+- Sec 64 — "Capillary flow rate worked example": tube+L/r brackets, Q≈1.23e-7≈0.12mL/s.
+- Sec 65 — "Halving radius drops flow 16x worked example": two tubes (r vs r/2), Q'=Q/16.
+- Sec 66 — "Tubes in series worked example": narrow+wide tubes joined, ΔP1≈0.94ΔP.
+- Sec 67 — "Mean versus max velocity worked example": concentric circles, s≈0.71r.
+- Sec 68 — "Pitfalls and pro-tips: Poiseuille flow": 6-row red/amber tips list.
+
+Subtopic 6 (Poiseuille's Law and Viscous Flow Resistance, sec 58–68) fully DRAFTED
+(tsc clean, registered) but UNVERIFIED — audio still 404 for sec 13+.
+
+- Sec 69 — "Surface tension: the stretched skin": interior (balanced) vs surface (net pull) molecules.
+- Sec 70 — "Two faces: force/length = energy/area": U-frame, sliding bar, F=S·L.
+- Sec 71 — "Excess pressure in drops and bubbles": single vs double circle, 2S/r vs 4S/r.
+- Sec 72 — "Angle of contact": concave water tube vs convex mercury tube.
+- Sec 73 — "Capillarity: the third consequence": water-rise tube vs mercury-depression tube.
+- Sec 74 — "Surface tension = surface energy": U-frame wire pulled out by x, S=E derivation.
+- Sec 75 — "Excess pressure in a soap bubble": hemisphere cut, tension vs pressure arrows, ΔP=4S/R.
+- Sec 76 — "Capillary rise: Jurin's law": tube+r/θ/h geometry, h=2Scosθ/rρg derivation.
+- Sec 77 — "Surface tension toolkit": 7-row colour-coded formula recap list.
+- Sec 78 — "Work to blow a soap bubble worked example": double-ring bubble, W=6.8e-4J.
+- Sec 79 — "Bubble beats drop 2:1 worked example": drop vs bubble circles, ratio=2.
+- Sec 80 — "Capillary rise and Jurin scaling worked example": tube, h=5.76cm→h'=11.52cm.
+- Sec 81 — "Coalescing droplets heat up worked example": droplet cluster→big drop, ΔT≈5.1e-4K.
+- Sec 82 — "Capillary tube cut too short worked example": short tube, flat meniscus, R'=1.6r.
+- Sec 83 — "Parallel plates and double bubble worked example": plates+meniscus, two-part derivation.
+- Sec 84 — "Pitfalls and pro-tips: surface tension": 6-row red/amber tips list.
+
+Subtopic 7 (Surface Tension and Capillarity, sec 69–84) fully DRAFTED (tsc clean,
+registered) but UNVERIFIED — audio still 404 for sec 13+.
+
+- Sec 85 — "Chapter formula recap": 7-row amber-bar formula list, one row per subtopic (1–8, viscosity/Poiseuille/surface-tension rows combined into 7).
+- Sec 86 — "Chapter cheat sheet": 7-row red-bar one-line takeaway per subtopic.
+
+Subtopic 8 (Recap, sec 85–86) fully DRAFTED (tsc clean, registered) but UNVERIFIED.
+
+## Chapter status
+**All 86 sections authored, registered in `index.ts`, and `npx tsc --noEmit` clean.**
+Sec 1–12 fully verified (`verify-scene.mjs` PASS both languages). Sec 13–86 drafted but
+UNVERIFIED — blocked on upstream audio (see Incident log).
+
+## Current
+Chapter authoring is complete. Remaining work is entirely the deferred verify sweep.
+Resume by: re-checking
+`curl -s -o /dev/null -w "%{http_code}" https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/english_sec_13.mp3`
+until it returns 200, then running `verify-scene.mjs` over sec 13 onward in order, fixing
+any real overlap/overflow found (the layouts were authored carefully but without the
+automated safety net, so budget more fix time than usual), committing each as it passes.
+
+## Incident log
+- 2026-07-31: `verify-scene.mjs` timed out waiting for the audio element on sec 13
+  (`page.waitForFunction` 30s timeout). Diagnosed with a throwaway Playwright script
+  (console/pageerror/requestfailed listeners): the scene SVG renders fine (1080×620
+  found, no pageerror), but the `<audio>` src
+  `https://audio.monklearning.com/11/Physics/p11_ch09_mechanical-properties-of-fluids/hinglish_sec_13.mp3`
+  fails `net::ERR_BLOCKED_BY_ORB`. Root cause: **404** from the CDN. Scanned English
+  audio for all 86 sections via curl — sec 1–12 return 200, sec 13–86 ALL return 404.
+  This is an audio-pipeline/content gap upstream of this worktree (URLs come from
+  Supabase `lesson_sections.audio_url_english/hinglish`, not something this session
+  writes) — not a bug in any `Ch09Sec*.tsx` or `index.ts`. Not fixable from here;
+  flagged to the user rather than worked around.
+
+## Working notes
+- Reveal arrays cached from Supabase REST at session start to scratchpad
+  `ch9_reveals.json` (position, title, board_reveal_at_english/hinglish) — re-derivable via
+  `lesson_sections?chapter_id=eq.33795397-f8fe-5ef6-ba2d-64549905ecd3&select=position,title,board_reveal_at_english,board_reveal_at_hinglish&order=position`.
+- Narration + board_events per section: `JSON_LESSONS/Class11_Phy/p11_ch09_mechanical-properties-of-fluids_full.json`.
+- Registration: ONE delimited Ch09 block appended at END of `src/components/scenes/index.ts`.
+- Verify: `PORT=3009 CHAPTER_ID=33795397-f8fe-5ef6-ba2d-64549905ecd3 node verify-scene.mjs <sec> '<reveals_en>' '<reveals_hi>' ./shots/sec<N>` — done only on final `VERDICT sec=N: PASS`.
+- Model: Sonnet, tiered by section type per kickoff (concept/example/pitfall/recap on Sonnet; multi-part
+  derivations with real geometry get extra care).
