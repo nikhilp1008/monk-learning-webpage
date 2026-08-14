@@ -440,9 +440,21 @@ follow.
   FORCE_SHOTS — the two partnerships read as clearly distinct, which is
   the whole point given how often they're confused.
 
+- **Sec 32** — beneficial/harmful two-column ledger (mirrors Sec20's
+  proven layout): BENEFICIAL — Penicillium→penicillin, Saccharomyces→
+  fermentation (bread/idli/beer/wine, CO₂ puffs dough), Neurospora→
+  genetics research ("Drosophila of the plant kingdom"), Deuteromycetes→
+  decomposers, morels/truffles→delicacies. HARMFUL — Puccinia/Ustilago/
+  Albugo as a 3-item block (wheat rust/smut/mustard white rust), Rhizopus
+  spoils food + "your fridge = an anti-fungal device" closer. Caught and
+  fixed two typos during authoring (an undefined `AMBER_placeholder`
+  identifier and a stray extra closing parenthesis) via the tsc gate
+  before ever reaching the browser. VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS — clean.
+
 ## Current
-Sec 31 done, committed, pushed. Next: Sec 32 — "Why fungi matter: the
-double-edged ledger".
+Sec 32 done, committed, pushed. Next: Sec 33 — "The sac-versus-club
+contrast and an example-to-class recall" (worked examples, subtopic 3).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
