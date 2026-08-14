@@ -525,9 +525,27 @@ follow.
   frames — clean; dense final frame reads as a complete "notes photo"
   with definition, ladder, tags and boundary all visible at once.
 
+- **Sec 38** — "The autotroph exceptions": opens with the false claim "all
+  plants make their own food" crossed out, then splits into two columns —
+  green INSECTIVOROUS vs red PARASITIC. Left column builds "partially
+  heterotrophic" (keeps chlorophyll, photosynthesises normally) → the
+  nitrogen reason (marshy, N-poor soil) → all 3 named examples (Venus
+  flytrap snaps shut / bladderwort sucks into bladder-traps / pitcher
+  plant drowns in a fluid-filled leaf). Right column builds Cuscuta
+  (dodder/Amarbel, ringed) → chlorophyll lost entirely, twines + suckers
+  → the visual clue (yellowish threads, "not green = not
+  photosynthesising"). Closes with the conceptual payoff (Plantae =
+  body + ancestry, not strictly self-feeding) and a dashed-red boundary
+  chip: "insectivorous ≠ parasitic — read the word precisely". VERDICT
+  PASS both languages, 0 overlaps/overflow/empty, 1 advisory stall (b1 —
+  two header chips only, expected). Eye-checked via FORCE_SHOTS, both
+  languages, all 9 frames — clean two-column split, nothing crowds the
+  100px gutter between columns.
+
 ## Current
-Sec 37 done, committed, pushed. Next: Sec 38 — "The autotroph exceptions"
-(subtopic 4 continues, Kingdoms Plantae & Animalia).
+Sec 38 done, committed, pushed. Next: Sec 39 — "Kingdom Animalia, and
+what no wall makes possible" (subtopic 4 continues, Kingdoms Plantae &
+Animalia).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
