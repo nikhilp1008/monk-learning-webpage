@@ -98,6 +98,15 @@
   same lesson learned from Sec6's ghost-clutter issue, applied proactively.
   VERDICT PASS both languages.
 
+- Sec 9 — Pitfalls & pro-tips: the two-gate speed test: 4 numbered red-badge
+  traps (growth/reproduction/test-tube/consciousness confusions), then the
+  payoff two-gate speed-test flowchart (candidate → Gate 1 → Gate 2 → FAILS/
+  DEFINING branches, matching the lesson JSON's own diagram), pro-tip, and
+  the MCC-defines/G&R-decline memory-aid banner. Clean PASS on first try, no
+  stalls even. VERDICT PASS both languages.
+  === SUBTOPIC 1 "What is 'Living'? Characteristics of Living Organisms"
+  COMPLETE (sections 1-9 of 9). ===
+
 ## Current
 
-Starting Section 9 (first tips section).
+Starting Section 10 (subtopic 2: Biodiversity & Nomenclature).
