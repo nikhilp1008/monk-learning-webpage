@@ -894,6 +894,7 @@ import B11Ch02Sec30 from "./B11Ch02Sec30";
 import B11Ch02Sec31 from "./B11Ch02Sec31";
 import B11Ch02Sec32 from "./B11Ch02Sec32";
 import B11Ch02Sec33 from "./B11Ch02Sec33";
+import B11Ch02Sec34 from "./B11Ch02Sec34";
 
 const B11CH02 = "8c9c091c-052a-51a1-841e-8304c7fe90ca"; // Class 11 · Biological Classification
 
@@ -930,4 +931,5 @@ REGISTRY[`${B11CH02}:30`] = B11Ch02Sec30;
 REGISTRY[`${B11CH02}:31`] = B11Ch02Sec31;
 REGISTRY[`${B11CH02}:32`] = B11Ch02Sec32;
 REGISTRY[`${B11CH02}:33`] = B11Ch02Sec33;
+REGISTRY[`${B11CH02}:34`] = B11Ch02Sec34;
 /* ========================= end B11 Ch02 ============================ */

@@ -465,9 +465,20 @@ follow.
   languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
   FORCE_SHOTS — clean.
 
+- **Sec 34** — continues Sec33's numbering (EXAMPLE 3 & 4): EXAMPLE 3
+  (NEET feature pile, "septate, exogenous conidia, endogenous sac spores,
+  ascocarp → which class?") — 4 candidate chips, systematic 2-step
+  elimination (septate→not Phyco, has sexual stage→not Deutero; then
+  endogenous/sac→not Basidio), Ascomycetes ringed as the sole survivor —
+  explicitly modeling "never needed to recognise an organism, just read
+  the features". EXAMPLE 4 (assertion-reason on why Deuteromycetes is an
+  artificial group) — A/R statements, 3 checkmark chips, green answer
+  stamp. VERDICT PASS both languages, 0 overlaps/overflow/empty, 0 stalls.
+  Eye-checked via FORCE_SHOTS — clean.
+
 ## Current
-Sec 33 done, committed, pushed. Next: Sec 34 — "Class from a feature set,
-and the Deuteromycetes assertion-reason".
+Sec 34 done, committed, pushed. Next: Sec 35 — "Fungi pitfalls and the
+two-question class tool" (tips closer, completes subtopic 3).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
