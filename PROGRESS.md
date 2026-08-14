@@ -189,9 +189,25 @@ follow.
   material, worth a human's look as the subtopic's key takeaway diagram.
   **Subtopic 1 (secs 1-11) complete — 11/59 sections done.**
 
+- **Sec 12** — opens subtopic 2: hub-and-spoke diagram — PROTISTA hub
+  (filled ink circle) radiating to 3 spoke chips (algal protists
+  plant-like, protozoa animal-like, slime moulds fungus-like) + a two-way
+  arrow down to a Monera chip below, matching the "railway junction"
+  metaphor exactly. 2 unifying traits (eukaryote✓, single-celled✓) +
+  aquatic trait as small chips in the free corners. Ring around Monera
+  link + single-slot caption swap for the kirana-shop/office analogy then
+  the nutrition-variety line. VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 2 advisory stalls (b5/b7, expected). Eye-checked
+  via FORCE_SHOTS — clean. Noted for later polish (not worth a fix-cycle
+  now): when a single-slot caption's `dim={beat>=N}` fires on the exact
+  same beat the next caption appears, the settled final frame briefly
+  shows both stacked (old at 0.14 opacity) since they share one y-position
+  by design — cosmetically minor, doesn't affect any gate, seen in a few
+  sections' last beat transition (e.g. Sec1 b7, Sec12 b7).
+
 ## Current
-Sec 11 done, committed, pushed. Next: Sec 12 — "The kingdom at the
-crossroads" (opens subtopic 2, Kingdom Protista).
+Sec 12 done, committed, pushed. Next: Sec 13 — "Where Protista sits, and
+why it is ill-defined".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
