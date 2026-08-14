@@ -864,9 +864,11 @@ REGISTRY[`${CH07}:29`] = Ch07Sec29;
 /* ================================================================== */
 import B11Ch01Sec1 from "./B11Ch01Sec1";
 import B11Ch01Sec2 from "./B11Ch01Sec2";
+import B11Ch01Sec3 from "./B11Ch01Sec3";
 
 const B11CH01 = "3087fd40-3dd1-500e-8485-f9f79ec81d76"; // Class 11 · Biology · The Living World
 
 REGISTRY[`${B11CH01}:1`] = B11Ch01Sec1;
 REGISTRY[`${B11CH01}:2`] = B11Ch01Sec2;
+REGISTRY[`${B11CH01}:3`] = B11Ch01Sec3;
 /* ============================ end B11Ch01 ============================ */

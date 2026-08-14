@@ -53,6 +53,12 @@
   dots land on faces, non-living); GROWTH chip crossed out at the close.
   VERDICT PASS both languages.
 
+- Sec 3 — Reproduction fails: the all-inclusive gap: mule/sterile-bee/
+  infertile-couple counterexamples; unicellular one-division diagram (1 cell
+  → divides → 2 daughters → GROWTH arrow + REPRODUCTION arrow, "SAME event,
+  two names"); REPRODUCTION chip crossed out at the close.
+  VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 3.
+Starting Section 4.
