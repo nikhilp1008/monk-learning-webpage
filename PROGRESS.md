@@ -264,9 +264,19 @@ follow.
   the two cell illustrations read as clearly distinct (rigid-plated vs
   flexible-organic) which is the whole pedagogical point of the contrast.
 
+- **Sec 18** — slime moulds: hand-drawn irregular "creeping body" blob at
+  top forks (favorable/unfavorable condition arrows) into PLASMODIUM
+  (left, with the loud "≠ Plasmodium the malaria parasite!" same-word trap)
+  and a small stalk+cap fruiting body releasing spore dots (right, unusual
+  haploid+diploid life cycle noted below), nickname "protistan fungi", and
+  the closing exam-trap logic (wall-less + crawls like protozoa →
+  classification follows structure not nutrition alone). VERDICT PASS both
+  languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
+  FORCE_SHOTS — clean, evocative fork diagram.
+
 ## Current
-Sec 17 done, committed, pushed. Next: Sec 18 — "Slime moulds: the
-fungus-like protists".
+Sec 18 done, committed, pushed. Next: Sec 19 — "Protozoa: the four
+classes".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
