@@ -168,6 +168,22 @@
   lines, seven-ranks list, optional-intermediates note. Clean PASS on first
   try. VERDICT PASS both languages.
 
+- Sec 18 — The seven ranks, defined: a persistent 7-band ladder whose
+  highlight (stroke/fill computed live from `beat`, not per-beat redraw)
+  moves like a pointer down through Species→Genus→(mono/polytypic)→Family/
+  Order/Class→Phylum-Division/Kingdom→(preview)→all-bands-for-the-trends,
+  with a single flashcard-slot definition below. Caught and fixed a real
+  off-by-one bug during review: 9 reveal timestamps = beats 0-8, but content
+  was originally mapped to beats 0-7, leaving beat 8 (the true final/settled
+  frame) with no HIGHLIGHT entry — bands went dark at the very end even
+  though verify-scene.mjs still PASSED (mechanically valid, just wrong
+  content — the gate doesn't catch "wrong beat mapping", only overlap/
+  overflow/empty). Re-numbered beats 1-7 to 2-8 and added a genuine beat-1
+  caption; re-verified visually in both languages after the fix.
+  VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 18.
+Starting Section 19. Note: will double-check beat-count-vs-content-count
+alignment (declared reveals.length vs highest beat used) more carefully
+on remaining sections after the Sec18 near-miss.
