@@ -336,9 +336,21 @@ follow.
   FORCE_SHOTS — clean, genuinely exam-ready reference material.
   **Subtopic 2 (secs 12-23) complete — 23/59 sections done.**
 
+- **Sec 24** — opens subtopic 3 (Kingdom Fungi): "ABSORBS, not eats" big
+  emphasis word, us-vs-fungus digestion-order contrast, then the 3-step
+  external-digestion process diagram (circle+outward-arrows "secrete
+  enzymes" → wavy dissolve line "digest externally" → circle+inward-arrows
+  "absorb nutrients"), consequence (must live in/on food, can't chase),
+  decomposer-role analogy (plant=farmer, animal=hunter, fungus=recycler),
+  closing trap (not a plant — no chlorophyll/photosynthesis, why the old
+  2-kingdom system failed for fungi specifically). VERDICT PASS both
+  languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
+  FORCE_SHOTS — clean, the arrows-in/arrows-out circle pair reads
+  intuitively as the secrete/absorb reversal.
+
 ## Current
-Sec 23 done, committed, pushed. Next: Sec 24 — "A fungus does not eat, it
-absorbs" (opens subtopic 3, Kingdom Fungi).
+Sec 24 done, committed, pushed. Next: Sec 25 — "Hyphae, mycelium, and the
+septate divide".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
