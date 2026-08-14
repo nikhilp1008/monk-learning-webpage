@@ -133,9 +133,20 @@ follow.
   FORCE_SHOTS — very clean, reads exactly like the "tower" metaphor the
   narration describes.
 
+- **Sec 7** — why five kingdoms are a better map: before/after extraction
+  diagram — crowded "Plantae (old)" box holds 3 misfit tags (Bacteria,
+  Euglena, Fungi) + a clean "Animalia (old)" box, each misfit arrowed out
+  one at a time into its own new dark kingdom chip (Monera/Protista/Fungi)
+  on the right, then new Plantae/Animalia chips appear, ringed green with
+  "= multicellular autotrophs/heterotrophs" definitions. Closing (story
+  band): fundamental vs superficial features, green-alga/moss example.
+  VERDICT PASS both languages, 0 overlaps/overflow/empty, 1 advisory stall
+  (b6 — ring-only beat). Eye-checked via FORCE_SHOTS — the extraction
+  arrows read exactly as "2 crowded boxes become 5 clean ones".
+
 ## Current
-Sec 6 done, committed, pushed. Next: Sec 7 — "Why the five kingdoms are a
-better map". **Subtopic 1 (secs 1-11) now 6/11 done.**
+Sec 7 done, committed, pushed. Next: Sec 8 — "Where Whittaker's scheme
+still falls short". **Subtopic 1 (secs 1-11) now 7/11 done.**
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
