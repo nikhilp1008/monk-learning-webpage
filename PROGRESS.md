@@ -452,9 +452,22 @@ follow.
   before ever reaching the browser. VERDICT PASS both languages, 0
   overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS — clean.
 
+- **Sec 33** — first worked_examples for Fungi (restarts EXAMPLE numbering
+  at 1, matching Sec21's pattern since narration doesn't continue a
+  count): EXAMPLE 1 (CBSE structured 3-marker) — a 3-axis paired table
+  (Ascomycetes vs Basidiomycetes × common name/sexual spores/example) that
+  hands the marking scheme directly to the student. EXAMPLE 2 (CUET
+  example→class recall) — "Mucor, Rhizopus, Albugo → which class?", 4
+  options, Phycomycetes ringed green with "confirm, don't just recall"
+  feature-check reasoning + a memory-hook line for the recurring trio.
+  Caught and fixed a ring-vs-caption overshoot collision (same category of
+  issue as Sec27/28) before the first verify run. VERDICT PASS both
+  languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
+  FORCE_SHOTS — clean.
+
 ## Current
-Sec 32 done, committed, pushed. Next: Sec 33 — "The sac-versus-club
-contrast and an example-to-class recall" (worked examples, subtopic 3).
+Sec 33 done, committed, pushed. Next: Sec 34 — "Class from a feature set,
+and the Deuteromycetes assertion-reason".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
