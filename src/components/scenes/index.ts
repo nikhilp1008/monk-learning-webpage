@@ -856,3 +856,15 @@ REGISTRY[`${CH07}:27`] = Ch07Sec27;
 REGISTRY[`${CH07}:28`] = Ch07Sec28;
 REGISTRY[`${CH07}:29`] = Ch07Sec29;
 /* ============================ end Ch07 ============================ */
+
+/* ================================================================== */
+/* B11Ch01 — The Living World (branch premium-board-bio1)              */
+/* Registered via REGISTRY[key] = Component so this block stays        */
+/* self-contained at the end of the file; do not edit blocks above.    */
+/* ================================================================== */
+import B11Ch01Sec1 from "./B11Ch01Sec1";
+
+const B11CH01 = "3087fd40-3dd1-500e-8485-f9f79ec81d76"; // Class 11 · Biology · The Living World
+
+REGISTRY[`${B11CH01}:1`] = B11Ch01Sec1;
+/* ============================ end B11Ch01 ============================ */

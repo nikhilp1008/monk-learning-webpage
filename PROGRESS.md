@@ -43,8 +43,11 @@
 
 ## Done
 
-(none yet)
+- Sec 1 — The two-gate defining-property test: two gate boxes (FAILS/PASSES)
+  open empty, 5 candidate chips queue up, verdicts land inside each box
+  (Growth✗/Reproduction✗ · Metabolism✓/Cellular organisation✓/Consciousness✓),
+  green ring on PASSES. VERDICT PASS both languages.
 
 ## Current
 
-Starting Section 1.
+Starting Section 2.
