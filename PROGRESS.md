@@ -368,9 +368,24 @@ follow.
   experiment. VERDICT PASS both languages, 0 overlaps/overflow/empty, 0
   stalls. Eye-checked via FORCE_SHOTS — clean.
 
+- **Sec 27** — the fungi chapter's master table: 5×5 grid (4 classes ×
+  Mycelium/Asexual spores/Sexual spores+fruiting body/Examples), standard
+  NCERT content — Phycomycetes (aseptate/coenocytic, odd one out, amber
+  label), Ascomycetes (ascospores→ascocarp), Basidiomycetes (generally no
+  asexual spores, basidiospores→basidiocarp), Deuteromycetes (conidia
+  only, sexual stage absent/unknown). Green box around the whole Sexual
+  spores column per narration's emphasis ("that column alone is worth the
+  most"). Caught and fixed a real overlap during authoring: a separate
+  "(odd one out)" tag stacked directly under "Phycomycetes" in the same
+  narrow header cell collided with it — removed the redundant tag,
+  relying on the amber label colour alone to mark the row (simpler and
+  correct). VERDICT PASS both languages, 0 overlaps/overflow/empty, 0
+  stalls. Eye-checked via FORCE_SHOTS — dense but accurate and clean, one
+  of the chapter's highest-value reference tables.
+
 ## Current
-Sec 26 done, committed, pushed. Next: Sec 27 — "The four classes: the
-table half the questions come from".
+Sec 27 done, committed, pushed. Next: Sec 28 — "The diagnostic anchors
+hidden in the names".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
