@@ -65,6 +65,13 @@
   closing trap warning about the most-tested exam mistake.
   VERDICT PASS both languages.
 
+- Sec 5 — Consciousness, cellular organisation, and the defining bundle:
+  universal-response examples, consciousness-vs-self-consciousness caveat,
+  then the payoff 3-circle Venn (Metabolism / Cellular organisation /
+  Consciousness overlapping on LIFE) closing with the M+C+C=LIFE stamp.
+  VERDICT PASS both languages. End of subtopic 1 (What is 'Living'?) concept
+  sections — sections 7-9 are worked examples / tips for the same subtopic.
+
 ## Current
 
-Starting Section 5.
+Starting Section 6.
