@@ -398,9 +398,22 @@ follow.
   FORCE_SHOTS — the inside/outside dot placement makes the ascus/basidium
   distinction immediately intuitive.
 
+- **Sec 29** — three reproduction routes as a 3-branch header row
+  (VEGETATIVE / ASEXUAL-spores / SEXUAL, sexual chip distinctly green per
+  narration's "coloured differently"): vegetative lists fragmentation/
+  budding/fission; asexual covers conidia→Asco+Deutero, sporangiospores,
+  zoospores (motile, Phycomycetes, "swims!"), aplanospores (non-motile);
+  sexual previews "own section, right after this" (forward reference to
+  Sec30). Caught and fixed a beat-gating bug during authoring: the sexual
+  branch's explanatory text was wrongly gated to beat 4 instead of beat 1
+  (when narration actually explains why that branch is colored
+  differently) — fixed before the first verify run. VERDICT PASS both
+  languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
+  FORCE_SHOTS — clean.
+
 ## Current
-Sec 28 done, committed, pushed. Next: Sec 29 — "Three routes of
-reproduction".
+Sec 29 done, committed, pushed. Next: Sec 30 — "Plasmogamy, karyogamy,
+meiosis and the dikaryon".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
