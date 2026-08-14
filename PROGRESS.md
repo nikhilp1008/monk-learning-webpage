@@ -252,9 +252,21 @@ follow.
   though the lid/base overlap is a simplified board-sketch, not an
   anatomically exact frustule cross-section.
 
+- **Sec 17** — genuine split-screen comparison (divider line down the
+  canvas middle): LEFT = Dinoflagellates (plated oval with 3 internal
+  curved "armour" lines, 2 perpendicular flagella → spins as it swims,
+  Gonyaulax/red-tide + Noctiluca/bioluminescent example chips); RIGHT =
+  Euglenoids (organic flexible-outline oval "Euglena" with a red eyespot
+  dot, gullet/flagellum/eyespot equipment, paramylon storage, mixotroph
+  punchline "standing between plant and animal"). Both sides mirror the
+  same vertical rhythm for visual parity. VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS — clean,
+  the two cell illustrations read as clearly distinct (rigid-plated vs
+  flexible-organic) which is the whole pedagogical point of the contrast.
+
 ## Current
-Sec 16 done, committed, pushed. Next: Sec 17 — "Dinoflagellates and
-euglenoids".
+Sec 17 done, committed, pushed. Next: Sec 18 — "Slime moulds: the
+fungus-like protists".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
