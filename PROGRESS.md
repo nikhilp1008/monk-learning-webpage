@@ -504,9 +504,30 @@ follow.
   both languages, all 9 frames — clean; cascade chips and storage row fit
   comfortably in both languages including the longer Hinglish strings.
 
+- **Sec 37** — "Kingdom Plantae, and the range it covers": Act 1, the
+  one-line NCERT definition built word by word as a 4-chip chain
+  (multicellular + eukaryotic + chlorophyll autotroph + cellulose wall)
+  under a "the definition, word by word:" label, closing with "say it as a
+  unit". Act 2, the 5-group span ladder (algae → bryophytes →
+  pteridophytes → gymnosperms → angiosperms) as a chained row of chips
+  with connecting arrows, "pond alga → banyan tree" unifying caption, then
+  quick one/two-word tags dropped under each of the four higher groups
+  (plant amphibians / first vascular / naked seed / enclosed seed) with
+  the "5 words" naked-vs-enclosed punchline. Closes with a single long
+  green arrow + 3 trend labels for "direction of travel" (water
+  transport / embryo protection / dependence on water), then a
+  dashed-red boundary chip flagging that full Chapter 3-level
+  classification is out of scope here. Kept technical/Latin group names
+  identical across languages per chapter style; only connective phrasing
+  changed. VERDICT PASS both languages, 0 overlaps/overflow/empty, 1
+  advisory stall (b2 — beat1's 8 groups dim together as span-setup takes
+  over, expected). Eye-checked via FORCE_SHOTS, both languages, all 9
+  frames — clean; dense final frame reads as a complete "notes photo"
+  with definition, ladder, tags and boundary all visible at once.
+
 ## Current
-Sec 36 done, committed, pushed. Next: Sec 37 — "Kingdom Plantae, and the
-range it covers" (subtopic 4 continues, Kingdoms Plantae & Animalia).
+Sec 37 done, committed, pushed. Next: Sec 38 — "The autotroph exceptions"
+(subtopic 4 continues, Kingdoms Plantae & Animalia).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
