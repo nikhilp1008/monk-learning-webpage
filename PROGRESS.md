@@ -80,6 +80,15 @@
   METABOLISM gets its own anabolism+catabolism box diagram.
   VERDICT PASS both languages. End of subtopic-1 concept sections.
 
+- Sec 7 — Worked examples: define metabolism & the growth A-R: Example 1
+  (2-mark definition question, MARK1/MARK2 flashcard-swap answer + marking-
+  scheme banner) then Example 2 (Assertion-Reason: A/R statements, TRUE
+  checkmarks, 4-option list with option 1 underlined correct, option 2
+  crossed out as the trap). Note: an initial ringD around option 1
+  overshot into option 2's text (a stroke-vs-text issue the automated gate
+  doesn't catch, only eye-check does) — replaced with a plain underline.
+  VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 7 (first worked_examples section).
+Starting Section 8.
