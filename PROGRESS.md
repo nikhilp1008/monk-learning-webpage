@@ -348,9 +348,20 @@ follow.
   FORCE_SHOTS — clean, the arrows-in/arrows-out circle pair reads
   intuitively as the secrete/absorb reversal.
 
+- **Sec 25** — hyphae → mycelium build-up (hand-drawn tangling thread),
+  surface-area-for-absorption note, then the key classification split as
+  a side-by-side comparison: SEPTATE tube (4 internal cross-wall dividers,
+  Ascomycetes/Basidiomycetes/Deuteromycetes) vs ASEPTATE/coenocytic tube
+  (no dividers, 5 floating nuclei dots, Phycomycetes — "free
+  identification!"), chitin wall note (callback to Sec5's/14's tables),
+  closing 2 exceptions (yeast, pseudomycelium). VERDICT PASS both
+  languages, 0 overlaps/overflow/empty, 2 advisory stalls (b2/b4). Eye-
+  checked via FORCE_SHOTS — the compartmented-vs-dotted-continuous-tube
+  visual reads immediately.
+
 ## Current
-Sec 24 done, committed, pushed. Next: Sec 25 — "Hyphae, mycelium, and the
-septate divide".
+Sec 25 done, committed, pushed. Next: Sec 26 — "Three ways of making a
+living".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
