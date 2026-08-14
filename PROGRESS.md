@@ -542,10 +542,25 @@ follow.
   languages, all 9 frames — clean two-column split, nothing crowds the
   100px gutter between columns.
 
+- **Sec 39** — "Kingdom Animalia, and what no wall makes possible": the
+  exact definition (multicellular, eukaryotic heterotrophs) with "...with
+  NO CELL WALL" emphasised in bold red underneath, feeding contrast
+  (ingest → digest = holozoic, vs fungi's digest-outside-and-absorb from
+  subtopic 3), storage fact (glycogen + fat, not starch), then the main
+  event — a 4-stage horizontal cascade chain (NO WALL → FLEXIBLE & MOBILE
+  → MUSCLE + NERVE → SENSORY + NEUROMOTOR) built up one arrow-and-chip at
+  a time across 3 beats, mirroring Sec36's "one axis generates everything"
+  device but for the wall-less cell. Closes with the determinate-growth
+  contrast against plants ("a tree keeps growing — you stopped").
+  VERDICT PASS both languages, 0 overlaps/overflow/empty, 0 stalls — every
+  beat added new visible content, no dimming needed since accumulated
+  notes above the chain never collided with it. Eye-checked via
+  FORCE_SHOTS, both languages, all 9 frames — clean; the 4-box cascade is
+  the visual highlight and reads very clearly in both languages.
+
 ## Current
-Sec 38 done, committed, pushed. Next: Sec 39 — "Kingdom Animalia, and
-what no wall makes possible" (subtopic 4 continues, Kingdoms Plantae &
-Animalia).
+Sec 39 done, committed, pushed. Next: Sec 40 — "The diagnostic table"
+(subtopic 4 continues, Kingdoms Plantae & Animalia).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
