@@ -476,9 +476,19 @@ follow.
   stamp. VERDICT PASS both languages, 0 overlaps/overflow/empty, 0 stalls.
   Eye-checked via FORCE_SHOTS — clean.
 
+- **Sec 35** — subtopic 3 closer: 5 numbered red-badge pitfalls
+  (plasmogamy/karyogamy root-word trick; dikaryon not universal; "in a
+  sac, on a club" pair; Deuteromycetes = waiting room not a family;
+  heterotroph ≠ ingests, fungi absorb) then the payoff — a clean
+  2-question decision tree ("septate?" no→Phycomycetes(done)/yes→"sac /
+  club / absent?" fanning to Ascomycetes/Basidiomycetes/Deuteromycetes).
+  VERDICT PASS both languages, 0 overlaps/overflow/empty, 0 stalls. Eye-
+  checked via FORCE_SHOTS — clean, exam-ready. **Subtopic 3 (secs 24-35)
+  complete — 35/59 sections done (59%), 3 of 6 subtopics fully finished.**
+
 ## Current
-Sec 34 done, committed, pushed. Next: Sec 35 — "Fungi pitfalls and the
-two-question class tool" (tips closer, completes subtopic 3).
+Sec 35 done, committed, pushed. Next: Sec 36 — "Make food versus find
+food" (opens subtopic 4, Kingdoms Plantae & Animalia).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
