@@ -234,7 +234,19 @@
   === SUBTOPIC 3 "Taxonomic Hierarchy" COMPLETE (sections 17-24 of 8). ===
   === Only Section 25 (cheat_sheet, chapter revision) remains. ===
 
-## Current
+- Sec 25 — The Living World — one-screen recall (cheat_sheet, FINAL
+  SECTION): a true 3-column reference card, one column per subtopic
+  (WHAT IS LIVING? / NOMENCLATURE / HIERARCHY), each accumulating short
+  bullet lines as the 10 beats progress through the whole chapter, closing
+  with all 3 exam mnemonics (MCC defines G&R decline / B in ICBN=Botany /
+  King Philip Came Over For Good Soup) and a tagline. Clean PASS on first
+  try, no stalls, no overlaps — 10 reveal timestamps double-checked against
+  beats 0-9 before writing any code, after the Sec18 near-miss.
+  VERDICT PASS both languages.
 
-Starting Section 25 — the final section (cheat_sheet: one-screen chapter
-recall).
+## ============================================================
+## CHAPTER COMPLETE: 25 of 25 sections reached VERDICT PASS and are
+## committed. Branch premium-board-bio1 is pushed to origin after every
+## single section throughout (confirmed via `git log origin/... -1` each
+## time). See final agent report for the full summary.
+## ============================================================
