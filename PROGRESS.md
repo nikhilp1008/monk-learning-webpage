@@ -623,9 +623,33 @@ follow.
   very clean; this is the chapter's first true cycle diagram and reads
   as a genuine textbook diagram, not a list dressed up as one.
 
+- **Sec 43** — "Inside the animal: the organ-system level": mirrors
+  Sec41's cell/consequence split for Animalia. LEFT column: no wall/no
+  plastids, flexible plasma membrane → movement + ingestion,
+  heterotrophic/holozoic ingest→digest→absorb (vs fungi's digest-outside,
+  callback to subtopic 3), glycogen+fat storage, locomotion + determinate
+  growth. RIGHT column: the headline payoff "ORGAN-SYSTEM LEVEL" ("most
+  complex body plan — no other kingdom reaches it") then the 4 systems in
+  a 2×2 grid (digestive/circulatory/nervous/muscular, "one purpose").
+  Closes with reproduction (mostly sexual) and the mobility+coordination
+  = active-life summary. **Caught a self-authored defect via FORCE_SHOTS**
+  before committing: beat1's "cell on the left, systems on the right"
+  setup line, dimmed per the usual pattern, ghosted directly through the
+  beat5 "ORGAN-SYSTEM LEVEL" headline (same failure family as the Sec5/
+  Sec40 caption-stacking issue — invisible to verify-scene.mjs since
+  dimmed opacity is excluded from checks, but visibly messy on inspection
+  of shots/sec43_force/crop_check.png). Fixed the same way as Sec40: beat1
+  is now beat-scoped (`beat === 1`) instead of dim-forever, since it's
+  transient framing commentary, not a fact worth keeping on the board.
+  Re-verified clean before and after crop-zooming the exact region.
+  VERDICT PASS both languages, 0 overlaps/overflow/empty, 1 advisory
+  stall (b1, expected). Eye-checked via FORCE_SHOTS, both languages, all
+  9 frames, plus a targeted crop-zoom on the fixed region.
+
 ## Current
-Sec 42 done, committed, pushed. Next: Sec 43 — "Inside the animal: the
-organ-system level" (subtopic 4 continues, Kingdoms Plantae & Animalia).
+Sec 43 done, committed, pushed. Next: Sec 44 — "The unifying contrast,
+and what they share" (subtopic 4 continues, Kingdoms Plantae &
+Animalia).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
