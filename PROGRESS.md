@@ -48,6 +48,11 @@
   (Growth✗/Reproduction✗ · Metabolism✓/Cellular organisation✓/Consciousness✓),
   green ring on PASSES. VERDICT PASS both languages.
 
+- Sec 2 — Growth fails: intrinsic vs extrinsic: INTRINSIC circle (dashed
+  cross, living, grows from within) vs EXTRINSIC crystal polygon (accretion
+  dots land on faces, non-living); GROWTH chip crossed out at the close.
+  VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 2.
+Starting Section 3.
