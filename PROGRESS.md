@@ -208,6 +208,13 @@
   === End of "concept" sections for subtopic 3; sections 22-23 are worked
   examples, 24 is tips. ===
 
+- Sec 22 — Worked examples: arrange the ranks & the containment A-R:
+  Example 1 (7 scrambled category chips → sorted Species→...→Kingdom chain,
+  family/order classic-slip warning, characters-decrease/size-increase
+  trend) and Example 2 (Assertion-Reason on order⊂class containment,
+  option 3 "mere restatement" trap crossed out, option 1 correct).
+  VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 22.
+Starting Section 23.
