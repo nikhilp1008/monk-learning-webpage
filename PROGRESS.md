@@ -138,6 +138,12 @@
   tautonym note, 5 classification-system chips). VERDICT PASS both
   languages.
 
+- Sec 14 — Worked examples: correct the name & the binomial A-R: Example 1
+  (crosses out wrong "felis"/"Catus", shows corrections, then both Print
+  (italic) and Hand (separately underlined) correct forms) and Example 2
+  (Assertion-Reason on Mangifera indica Linn.'s 3-items-still-binomial
+  point, option 1 underlined correct). VERDICT PASS both languages.
+
 ## Current
 
-Starting Section 14 (first worked_examples of subtopic 2).
+Starting Section 15.
