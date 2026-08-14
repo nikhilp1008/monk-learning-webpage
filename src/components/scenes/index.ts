@@ -2516,3 +2516,86 @@ REGISTRY[`${CH13}:56`] = Ch13Sec56;
 REGISTRY[`${CH13}:57`] = Ch13Sec57;
 REGISTRY[`${CH13}:58`] = Ch13Sec58;
 /* ============================ end Ch13 ============================ */
+/* ================================================================== */
+/* Ch14 · Waves — scene block (branch premium-board-ch14)             */
+/* ================================================================== */
+import Ch14Sec1 from "./Ch14Sec1";
+import Ch14Sec2 from "./Ch14Sec2";
+import Ch14Sec3 from "./Ch14Sec3";
+import Ch14Sec4 from "./Ch14Sec4";
+import Ch14Sec5 from "./Ch14Sec5";
+import Ch14Sec6 from "./Ch14Sec6";
+import Ch14Sec7 from "./Ch14Sec7";
+import Ch14Sec8 from "./Ch14Sec8";
+import Ch14Sec9 from "./Ch14Sec9";
+import Ch14Sec10 from "./Ch14Sec10";
+import Ch14Sec11 from "./Ch14Sec11";
+import Ch14Sec12 from "./Ch14Sec12";
+import Ch14Sec13 from "./Ch14Sec13";
+import Ch14Sec14 from "./Ch14Sec14";
+import Ch14Sec15 from "./Ch14Sec15";
+import Ch14Sec16 from "./Ch14Sec16";
+import Ch14Sec17 from "./Ch14Sec17";
+import Ch14Sec18 from "./Ch14Sec18";
+import Ch14Sec19 from "./Ch14Sec19";
+import Ch14Sec20 from "./Ch14Sec20";
+import Ch14Sec21 from "./Ch14Sec21";
+import Ch14Sec22 from "./Ch14Sec22";
+import Ch14Sec23 from "./Ch14Sec23";
+import Ch14Sec24 from "./Ch14Sec24";
+import Ch14Sec25 from "./Ch14Sec25";
+import Ch14Sec26 from "./Ch14Sec26";
+import Ch14Sec27 from "./Ch14Sec27";
+import Ch14Sec28 from "./Ch14Sec28";
+import Ch14Sec29 from "./Ch14Sec29";
+import Ch14Sec30 from "./Ch14Sec30";
+import Ch14Sec31 from "./Ch14Sec31";
+import Ch14Sec32 from "./Ch14Sec32";
+import Ch14Sec33 from "./Ch14Sec33";
+import Ch14Sec34 from "./Ch14Sec34";
+import Ch14Sec35 from "./Ch14Sec35";
+import Ch14Sec36 from "./Ch14Sec36";
+import Ch14Sec37 from "./Ch14Sec37";
+import Ch14Sec38 from "./Ch14Sec38";
+
+const CH14 = "7dca7b5a-e77c-530d-bbe8-01a3518dc5d0"; // Class 11 · Waves
+
+REGISTRY[`${CH14}:1`] = Ch14Sec1;
+REGISTRY[`${CH14}:2`] = Ch14Sec2;
+REGISTRY[`${CH14}:3`] = Ch14Sec3;
+REGISTRY[`${CH14}:4`] = Ch14Sec4;
+REGISTRY[`${CH14}:5`] = Ch14Sec5;
+REGISTRY[`${CH14}:6`] = Ch14Sec6;
+REGISTRY[`${CH14}:7`] = Ch14Sec7;
+REGISTRY[`${CH14}:8`] = Ch14Sec8;
+REGISTRY[`${CH14}:9`] = Ch14Sec9;
+REGISTRY[`${CH14}:10`] = Ch14Sec10;
+REGISTRY[`${CH14}:11`] = Ch14Sec11;
+REGISTRY[`${CH14}:12`] = Ch14Sec12;
+REGISTRY[`${CH14}:13`] = Ch14Sec13;
+REGISTRY[`${CH14}:14`] = Ch14Sec14;
+REGISTRY[`${CH14}:15`] = Ch14Sec15;
+REGISTRY[`${CH14}:16`] = Ch14Sec16;
+REGISTRY[`${CH14}:17`] = Ch14Sec17;
+REGISTRY[`${CH14}:18`] = Ch14Sec18;
+REGISTRY[`${CH14}:19`] = Ch14Sec19;
+REGISTRY[`${CH14}:20`] = Ch14Sec20;
+REGISTRY[`${CH14}:21`] = Ch14Sec21;
+REGISTRY[`${CH14}:22`] = Ch14Sec22;
+REGISTRY[`${CH14}:23`] = Ch14Sec23;
+REGISTRY[`${CH14}:24`] = Ch14Sec24;
+REGISTRY[`${CH14}:25`] = Ch14Sec25;
+REGISTRY[`${CH14}:26`] = Ch14Sec26;
+REGISTRY[`${CH14}:27`] = Ch14Sec27;
+REGISTRY[`${CH14}:28`] = Ch14Sec28;
+REGISTRY[`${CH14}:29`] = Ch14Sec29;
+REGISTRY[`${CH14}:30`] = Ch14Sec30;
+REGISTRY[`${CH14}:31`] = Ch14Sec31;
+REGISTRY[`${CH14}:32`] = Ch14Sec32;
+REGISTRY[`${CH14}:33`] = Ch14Sec33;
+REGISTRY[`${CH14}:34`] = Ch14Sec34;
+REGISTRY[`${CH14}:35`] = Ch14Sec35;
+REGISTRY[`${CH14}:36`] = Ch14Sec36;
+REGISTRY[`${CH14}:37`] = Ch14Sec37;
+REGISTRY[`${CH14}:38`] = Ch14Sec38;
+/* ============================ end Ch14 ============================ */
