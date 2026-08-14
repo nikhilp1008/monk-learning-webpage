@@ -666,10 +666,26 @@ follow.
   beat0). Eye-checked via FORCE_SHOTS, both languages, all 9 frames —
   clean; reads as a genuine "tie it together" recap rather than a rehash.
 
+- **Sec 45** — first worked_examples of subtopic 4 (restarts EXAMPLE
+  numbering at 1, matching Sec21/33's pattern): EXAMPLE 1 (CBSE
+  3-marker) — reuses Sec33's exact 3-row grid geometry (Feature|col1|
+  col2, same column dividers/row baselines) for a matched-pairs table:
+  cell wall (present/cellulose vs absent), nutrition (autotrophic/
+  photosynthetic vs heterotrophic/holozoic), stored food (starch vs
+  glycogen+fat), closing with the strategic note to lead with the most
+  fundamental pair and never split into two separate lists. EXAMPLE 2
+  (CUET "read the word precisely") — 4-option MCQ (Cuscuta/Venus
+  flytrap/Spirogyra/mushroom), Venus flytrap ringed as the answer with
+  the "partially" reasoning (traps for nitrogen, keeps photosynthesising),
+  then all 3 distractors analysed for why each fails differently —
+  directly reuses Sec38's insectivorous-vs-parasitic distinction. VERDICT
+  PASS both languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked
+  via FORCE_SHOTS, both languages, all 10 frames — clean, matches the
+  Sec33 exemplar's density and style precisely.
+
 ## Current
-Sec 44 done, committed, pushed. Next: Sec 45 — "Three distinguishing
-features, and reading a word precisely" (worked_examples, subtopic 4
-continues).
+Sec 45 done, committed, pushed. Next: Sec 46 — "Placing an organism, and
+the Cuscuta assertion-reason" (worked_examples, subtopic 4 continues).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
