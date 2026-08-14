@@ -274,9 +274,22 @@ follow.
   languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
   FORCE_SHOTS — clean, evocative fork diagram.
 
+- **Sec 19** — protozoa's four classes (heavily NEET-tested, per
+  narration): 4-card layout with hand-drawn locomotion icons distinct per
+  class — amoeboid (blob + 4 flowing pseudopodia, star-like), flagellated
+  (blob + 1 long tail), ciliated (cup shape + 8 radiating cilia hairs),
+  sporozoan (dashed circle — no locomotor organ, breaks the pattern).
+  Examples: Amoeba/Entamoeba, Trypanosoma (sleeping sickness), Paramecium
+  (gullet+water current), Plasmodium (malaria, "most tested!"). Closing 2
+  facts: contractile vacuole (osmoregulation), Paramecium's two nuclei
+  types. VERDICT PASS both languages, 0 overlaps/overflow/empty, 1
+  advisory stall (b2, divider-only beat). Eye-checked via FORCE_SHOTS —
+  the 4 icons are immediately visually distinguishable, worth a human's
+  look as one of the chapter's highest-yield exam sections.
+
 ## Current
-Sec 18 done, committed, pushed. Next: Sec 19 — "Protozoa: the four
-classes".
+Sec 19 done, committed, pushed. Next: Sec 20 — "Reproduction and why
+protists matter".
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
