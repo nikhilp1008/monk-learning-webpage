@@ -324,9 +324,21 @@ follow.
   overlaps/overflow/empty, 2 advisory stalls (b3/b4). Eye-checked via
   FORCE_SHOTS — clean.
 
+- **Sec 23** — subtopic 2 closer: 5 numbered red-badge pitfalls (Monera vs
+  Protista size trap — check nucleus; Euglena isn't pure plant; wall
+  material differs per group, diatom=silica NOT CaCO₃; don't scramble the
+  4 protozoan classes; don't classify by nutrition alone), then the real
+  payoff — a 5-row covering-clue lookup tool (silica→chrysophyte,
+  cellulose plates→dinoflagellate, pellicle/no wall→euglenoid, crawling
+  saprophyte→slime mould, animal-like feeder→protozoan), explicitly framed
+  as "jump straight to the clue, don't read options first". VERDICT PASS
+  both languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked via
+  FORCE_SHOTS — clean, genuinely exam-ready reference material.
+  **Subtopic 2 (secs 12-23) complete — 23/59 sections done.**
+
 ## Current
-Sec 22 done, committed, pushed. Next: Sec 23 — "Protista pitfalls and the
-covering-clue tool" (tips closer, completes subtopic 2).
+Sec 23 done, committed, pushed. Next: Sec 24 — "A fungus does not eat, it
+absorbs" (opens subtopic 3, Kingdom Fungi).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
