@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
+import { MAX_QUESTIONS } from "@/lib/doubts";
 import { TodaysPlan } from "./TodaysPlan";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
@@ -208,7 +209,7 @@ export function DashboardClient({
               </span>
               <span className="text-center font-semibold text-[0.82rem] text-[#57534B] leading-snug">
                 Drop, paste or snap<br />
-                <b className="text-[#1C1A16] font-bold">max 2 questions</b>
+                <b className="text-[#1C1A16] font-bold">max {MAX_QUESTIONS} questions</b>
               </span>
             </div>
             <div className="mt-3.5 flex items-center justify-between">

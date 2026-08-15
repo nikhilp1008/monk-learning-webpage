@@ -251,9 +251,9 @@ export function SnapClient() {
             </div>
 
             <p className="text-[0.78rem] text-ink-muted mt-4 mx-auto max-w-[30rem]">
-              Two at a time keeps {teacher} focused, so it reads and explains each
-              one properly instead of rushing a whole page. You can also drag a
-              file here, or paste one.
+              Up to {MAX_QUESTIONS} at a time keeps {teacher} focused, so it reads
+              and explains each one properly instead of rushing a whole page. You
+              can also drag a file here, or paste one.
             </p>
 
             <input
