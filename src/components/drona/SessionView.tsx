@@ -68,7 +68,7 @@ export function SessionView({
   const [inputText, setInputText] = useState<string>("");
   const [holdDuration, setHoldDuration] = useState<number>(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const transcriptEndRef = useRef<HTMLDivElement>(null);
+  const boardEndRef = useRef<HTMLDivElement>(null);
   const teacher = tutorName || getTutorName(DEFAULT_VOICE);
 
   const handlePttDown = (e: React.PointerEvent<HTMLButtonElement>) => {
@@ -90,9 +90,14 @@ export function SessionView({
     onStopPushToTalk?.();
   };
 
+  // Keyed on boardEvents, not transcript: this sentinel sits at the bottom of
+  // the BOARD's scroll container, so it is board writes that need to pull it
+  // into view. Watching the transcript only scrolled when the caption text
+  // happened to change, which left new board lines sitting below the fold for
+  // the rest of a long turn.
   useEffect(() => {
-    transcriptEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [transcript]);
+    boardEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  }, [boardEvents]);
 
   // handlePttUp only ever fired from onPointerUp/Cancel/Leave — none of which
   // fire if the component unmounts mid-press (e.g. "End class" tapped while
@@ -216,14 +221,15 @@ export function SessionView({
 
       {/* ─── Whiteboard Area (B6: Board Overflow Fix) ─── */}
       <div className="relative flex-1 min-h-0 flex flex-col mb-3 max-w-full overflow-hidden">
-        <div
-          className="relative flex flex-col flex-1 min-h-0 bg-white border-[1.5px] border-[#1C1A16] rounded-[16px] p-4 sm:p-5 pl-10 sm:pl-13 shadow-[0_20px_44px_-28px_rgba(28,26,22,0.5)] max-w-full overflow-hidden"
-          style={{
-            backgroundImage: "repeating-linear-gradient(transparent 0 28px, rgba(28,26,22,0.055) 28px 29px)",
-          }}
-        >
+        {/* Same board shell the lessons player uses, via the shared tokens
+            rather than a hand-copy of their values: bg-ruled-board and
+            shadow-ref-board are byte-identical to the literals that used to
+            sit here, and now the two boards re-theme together instead of
+            drifting apart. sm:pl-[52px] restores the lessons gutter — 16px
+            of space between the red margin line and the first character. */}
+        <div className="relative flex flex-col flex-1 min-h-0 bg-ruled-board border-[1.5px] border-ink rounded-2xl p-4 sm:p-5 pl-10 sm:pl-[52px] shadow-ref-board max-w-full overflow-hidden">
           {/* Red margin line */}
-          <span className="absolute top-5 bottom-5 left-7 sm:left-9 w-[1.4px] bg-[rgba(221,68,51,0.35)]" />
+          <span aria-hidden="true" className="absolute top-5 bottom-5 left-7 sm:left-9 w-[1.4px] bg-red-note/35 pointer-events-none" />
 
           {/* Board Header */}
           <div className="flex items-center gap-2.5 mb-3 flex-none">
@@ -234,7 +240,12 @@ export function SessionView({
           </div>
 
           {/* Board Content (B2 & B6: Line-by-line KaTeX & wrapped prose) */}
-          <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 space-y-3.5 max-w-full">
+          {/* No space-y here on purpose. PremiumBoardEvent authors its own
+              asymmetric rhythm per kind — mt-4/mb-2 on a heading, my-1.5 on
+              prose, my-3 on a margin note — which is what gives the lessons
+              board its handwritten cadence. A uniform gap flattened all of
+              that into evenly-spaced rows. */}
+          <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 max-w-full">
             {boardEvents && boardEvents.length > 0 ? (
               boardEvents.map((evt, idx) => (
                 <PremiumBoardEvent key={idx} event={evt} animate={idx === boardEvents.length - 1} />
@@ -250,7 +261,7 @@ export function SessionView({
             ) : (
               <div className="text-ink-muted text-sm italic">Board will update as {teacher} speaks...</div>
             )}
-            <div ref={transcriptEndRef} />
+            <div ref={boardEndRef} />
           </div>
         </div>
 

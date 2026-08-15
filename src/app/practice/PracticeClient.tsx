@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MathText } from "@/components/MathText";
 import { supabase } from "@/lib/supabase";
 import { apiFetch, ApiError } from "@/lib/api";
+import { PracticeExplainOverlay } from "@/components/drona/PracticeExplainOverlay";
 import type { Database } from "@/lib/database.types";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
@@ -138,9 +139,8 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [answerResult, setAnswerResult] = useState<AnswerResult | null>(null);
 
-  // Explain Drona state
-  const [explaining, setExplaining] = useState<boolean>(false);
-  const [explainBanner, setExplainBanner] = useState<string | null>(null);
+  // Explain Drona state — session creation itself is owned by the overlay.
+  const [explainSessionActive, setExplainSessionActive] = useState<boolean>(false);
 
   // Transient notice for things that are not errors but must not be silent,
   // e.g. a question the server cannot grade and we had to swap out.
@@ -196,7 +196,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     setAnswerResult(null);
     setSelectedOption("");
     setNumericalValue("");
-    setExplainBanner(null);
+    setExplainSessionActive(false);
     setNotice(null);
   }, []);
 
@@ -344,31 +344,11 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     }
   };
 
-  // Explain with Drona Handler
-  const handleExplainWithDrona = async () => {
-    if (!question || explaining) return;
-    setExplaining(true);
-    setExplainBanner(null);
-
-    try {
-      await apiFetch("/practice/explain", {
-        method: "POST",
-        body: JSON.stringify({
-          question_id: question.question_id,
-          chosen_option: selectedOption || undefined,
-          chosen_value: numericalValue ? parseFloat(numericalValue) : undefined,
-        }),
-      });
-      setExplainBanner("Drona AI voice explanation for this question coming soon!");
-    } catch (err) {
-      if (err instanceof ApiError && err.status === 501) {
-        setExplainBanner("Drona AI voice explanation for this question coming soon!");
-      } else {
-        setExplainBanner("Drona explanation is currently unavailable.");
-      }
-    } finally {
-      setExplaining(false);
-    }
+  // Explain with Drona Handler — opens the overlay, which creates the
+  // session itself (see PracticeExplainOverlay).
+  const handleExplainWithDrona = () => {
+    if (!question) return;
+    setExplainSessionActive(true);
   };
 
   // Normalize options for MCQ
@@ -759,13 +739,6 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                   </div>
                 )}
 
-                {/* Explain Banner */}
-                {explainBanner && (
-                  <div className="p-3.5 rounded-xl bg-orange/15 border border-orange/30 text-ink text-xs font-semibold animate-ml-rise">
-                    ℹ {explainBanner}
-                  </div>
-                )}
-
                 {/* Action Buttons Row */}
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-border-subtle">
                   {!answerResult ? (
@@ -790,14 +763,9 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                     <button
                       type="button"
                       onClick={handleExplainWithDrona}
-                      disabled={explaining}
                       className="px-5 py-2.5 rounded-full border border-border-subtle bg-white text-ink font-bold text-xs hover:border-ink transition-colors flex items-center gap-2"
                     >
-                      {explaining ? (
-                        <div className="w-3.5 h-3.5 border-2 border-ink border-t-transparent rounded-full animate-ml-spin" />
-                      ) : (
-                        "🎙 Explain this with Drona"
-                      )}
+                      🎙 Explain this with Drona
                     </button>
                   )}
 
@@ -884,6 +852,15 @@ export function PracticeClient({ profile }: PracticeClientProps) {
           </div>
         </div>
       </main>
+
+      {explainSessionActive && question && (
+        <PracticeExplainOverlay
+          questionId={question.question_id}
+          chosenOption={selectedOption || undefined}
+          chosenValue={numericalValue ? parseFloat(numericalValue) : undefined}
+          onClose={() => setExplainSessionActive(false)}
+        />
+      )}
     </div>
   );
 }

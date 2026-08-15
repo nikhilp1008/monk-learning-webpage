@@ -11,8 +11,14 @@ export interface BoardEventData {
   svg?: string;
   caption?: string;
   style?: string;
-  emphasis?: "high" | "normal" | string;
+  emphasis?: "high" | "key" | "normal" | string;
 }
+
+/** The live turn prompts emit "key"; the planner prompts emit "high". Both mean
+ * the same thing to the board, so treat them as one. Checking only "high" made
+ * emphasis a no-op for every live tutor turn. */
+export const isEmphasized = (emphasis?: string) =>
+  emphasis === "high" || emphasis === "key";
 
 interface BoardEventProps {
   event: BoardEventData;
@@ -38,7 +44,7 @@ function renderTextWithMath(textStr: string) {
 }
 
 export function BoardEvent({ event }: BoardEventProps) {
-  const isHigh = event.emphasis === "high";
+  const isHigh = isEmphasized(event.emphasis);
 
   switch (event.type) {
     case "heading":

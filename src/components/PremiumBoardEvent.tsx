@@ -15,7 +15,7 @@
 import React, { useEffect, useMemo, useRef } from "react";
 import katex from "katex";
 import { KaTeXRenderer } from "./KaTeXRenderer";
-import type { BoardEventData } from "./BoardEvent";
+import { isEmphasized, type BoardEventData } from "./BoardEvent";
 
 /* ------------------------------------------------------------------ */
 /* helpers                                                             */
@@ -338,7 +338,7 @@ interface PremiumBoardEventProps {
 }
 
 export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
-  const isHigh = event.emphasis === "high";
+  const isHigh = isEmphasized(event.emphasis);
 
   switch (event.type) {
     case "heading":
@@ -395,8 +395,13 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
       return (
         <WriteIn animate={animate} seconds={1.6} chalkBottom="0.9em">
           <div
-            className={`my-2 py-1 px-0 w-full text-left text-ink leading-relaxed overflow-x-auto ${
-              isHigh ? "text-xl md:text-2xl font-bold" : "text-lg md:text-xl font-semibold"
+            // Weight is always font-bold here, independent of isHigh: a formula
+            // is the one board item that must read as a formula at a glance, so
+            // emphasis is left to size only. font-semibold on "normal" formulas
+            // looked visibly thinner next to a "high" one on the same board —
+            // inconsistent for two lines that are equally load-bearing content.
+            className={`my-2 py-1 px-0 w-full text-left text-ink leading-relaxed overflow-x-auto font-bold ${
+              isHigh ? "text-xl md:text-2xl" : "text-lg md:text-xl"
             }`}
           >
             {!formulaLatex ? null : failed ? (

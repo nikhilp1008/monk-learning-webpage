@@ -66,6 +66,14 @@ export interface SSEEventState {
   reason?: 'session_ended' | string;
 }
 
+export interface PracticeExplainSessionResponse {
+  session_id: string;
+  phase: string;
+  language?: 'english' | 'hinglish';
+  tutor_voice?: 'male' | 'female';
+  tutor_name?: string;
+}
+
 export interface EndSessionResponse {
   summary_points: string[];
   mistakes_count: number;
