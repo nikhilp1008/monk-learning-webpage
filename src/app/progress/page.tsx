@@ -1,129 +1,163 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { apiFetch } from "@/lib/api";
 
-interface SubjectCard {
-  key: string;
+/* ── API contract: GET /progress (monk-learning-api) ──────────────────── */
+
+type ApiState = "strong" | "improving" | "needs_revision" | "not_started";
+
+interface ApiConcept {
+  concept_id: string;
   name: string;
+  mastery: number;
+  state: ApiState;
+}
+
+interface ApiChapter {
+  chapter_id: string;
+  name: string;
+  class_level: number;
+  subject: string;
+  mastery: number;
+  weight_marks: number | null;
+  state: ApiState;
+  headroom: number;
+  concepts: ApiConcept[];
+  curated: boolean;
+}
+
+interface ApiSubject {
+  subject: string;
   score: number;
-  delta: string;
-  barColor: string;
-  flag: string;
+  chapters: ApiChapter[];
 }
 
-const SUBJECTS: SubjectCard[] = [
-  {
-    key: "physics",
-    name: "Physics",
-    score: 764,
-    delta: "+18 this week",
-    barColor: "bg-red-note",
-    flag: "Rotational Motion",
-  },
-  {
-    key: "chemistry",
-    name: "Chemistry",
-    score: 618,
-    delta: "+6 this week",
-    barColor: "bg-green-badge",
-    flag: "Coordination Compounds",
-  },
-  {
-    key: "maths",
-    name: "Maths",
-    score: 727,
-    delta: "+12 this week",
-    barColor: "bg-orange",
-    flag: "Integration",
-  },
-];
-
-type ChapterStatus = "Strong" | "Improving" | "Needs revision" | "Not started";
-
-interface Chapter {
-  n: string;
-  name: string;
-  marks: string;
-  status: ChapterStatus;
-  subtopics?: { name: string; status: ChapterStatus }[];
+interface ApiRecommendation {
+  role: "highest_lever" | "clear_flag" | "exam_craft" | "pace_fix";
+  title: string;
+  reason: string;
+  subject?: string;
+  chapter_id?: string;
+  concept_id?: string;
 }
 
-const CHAPTERS: Chapter[] = [
-  { n: "01", name: "Kinematics", marks: "~8 marks", status: "Strong" },
-  { n: "02", name: "Newton's Laws", marks: "~8 marks", status: "Strong" },
-  { n: "03", name: "Work, Power & Energy", marks: "~4 marks", status: "Improving" },
-  {
-    n: "04",
-    name: "Rotational Motion",
-    marks: "~12 marks",
-    status: "Improving",
-    subtopics: [
-      { name: "Moment of inertia", status: "Improving" },
-      { name: "Torque & angular acceleration", status: "Improving" },
-      { name: "Angular momentum conservation", status: "Needs revision" },
-      { name: "Rolling without slipping", status: "Not started" },
-      { name: "Rotational kinetic energy", status: "Strong" },
-    ],
-  },
-  { n: "05", name: "Thermodynamics", marks: "~8 marks", status: "Needs revision" },
-  { n: "06", name: "Current Electricity", marks: "~8 marks", status: "Improving" },
-  { n: "07", name: "Modern Physics", marks: "~8 marks", status: "Strong" },
-  { n: "08", name: "Waves & SHM", marks: "~4 marks", status: "Not started" },
-];
+interface ProgressResponse {
+  exam: string;
+  monk_score: {
+    display: number;
+    raw: number;
+    ceiling: number;
+    delta_week: number;
+    flagged_concepts: number;
+    climb: { date: string; score: number }[];
+  };
+  subjects: ApiSubject[];
+  pace: { available: boolean; note: string };
+  recommendations: ApiRecommendation[];
+  ledger: {
+    doubts_solved: number;
+    questions_attempted: number;
+    concepts_mastered: number;
+    chapters_strong: number;
+  };
+}
 
-const STATUS_STYLE: Record<ChapterStatus, string> = {
-  Strong: "bg-green-badge/15 text-green-badge",
-  Improving: "bg-orange/15 text-orange-dark",
-  "Needs revision": "bg-red-note/12 text-red-dark",
-  "Not started": "bg-ink/6 text-ink-muted",
+/* ── presentation maps ─────────────────────────────────────────────────── */
+
+const SUBJECT_LABEL: Record<string, string> = {
+  physics: "Physics",
+  chemistry: "Chemistry",
+  mathematics: "Maths",
+  biology: "Biology",
 };
 
-const STATUS_DOT: Record<ChapterStatus, string> = {
-  Strong: "bg-green-badge",
-  Improving: "bg-orange",
-  "Needs revision": "bg-red-note",
-  "Not started": "bg-ink-dim",
+const SUBJECT_BAR: Record<string, string> = {
+  physics: "bg-red-note",
+  chemistry: "bg-green-badge",
+  mathematics: "bg-orange",
+  biology: "bg-green-badge",
 };
 
-const PACE = [
-  { name: "Physics", time: "3m 06s", target: "target 2m 54s", delta: "▼ 22s in 4 weeks", bar: "bg-orange", pct: 82 },
-  { name: "Chemistry", time: "1m 48s", target: "target 2m 00s", delta: "▼ 6s in 4 weeks", bar: "bg-green-badge", pct: 60 },
-  { name: "Maths", time: "3m 42s", target: "target 3m 30s", delta: "▼ 15s in 4 weeks", bar: "bg-orange", pct: 88 },
-];
+const STATE_LABEL: Record<ApiState, string> = {
+  strong: "Strong",
+  improving: "Improving",
+  needs_revision: "Needs revision",
+  not_started: "Not started",
+};
 
-const LEVERS = [
-  {
-    tag: "HIGHEST LEVER",
-    hint: "worth ≈ +9",
-    title: "Practice Rotational Motion",
-    body: "~12 marks in the paper and your widest Physics gap — no other hour moves the score more.",
-    cta: "Practice this →",
-    primary: true,
-  },
-  {
-    tag: "CLEAR A FLAG",
-    hint: "lifts the cap",
-    title: "Refresh Thermochemistry with Drona",
-    body: "A needs-revision flag is holding your ceiling down. One revision session and the climb reopens.",
-    cta: "Revise with Drona →",
-    primary: false,
-  },
-  {
-    tag: "PACE FIX",
-    hint: "mock-day marks",
-    title: "Timed drill · Physics mechanics",
-    body: "Your answers are right but ~40s over budget. Speed is the last mile — drill it on the clock.",
-    cta: "Start timed drill →",
-    primary: false,
-  },
-];
+const STATUS_STYLE: Record<ApiState, string> = {
+  strong: "bg-green-badge/15 text-green-badge",
+  improving: "bg-orange/15 text-orange-dark",
+  needs_revision: "bg-red-note/12 text-red-dark",
+  not_started: "bg-ink/6 text-ink-muted",
+};
+
+const STATUS_DOT: Record<ApiState, string> = {
+  strong: "bg-green-badge",
+  improving: "bg-orange",
+  needs_revision: "bg-red-note",
+  not_started: "bg-ink-dim",
+};
+
+const REC_TAG: Record<ApiRecommendation["role"], { tag: string; hint: string; cta: string }> = {
+  highest_lever: { tag: "HIGHEST LEVER", hint: "most headroom", cta: "Practice this →" },
+  clear_flag: { tag: "CLEAR A FLAG", hint: "lifts the cap", cta: "Revise with Drona →" },
+  pace_fix: { tag: "PACE FIX", hint: "mock-day marks", cta: "Start timed drill →" },
+  exam_craft: { tag: "EXAM CRAFT", hint: "1.15× premium", cta: "Take a mock →" },
+};
+
+const CONCEPTS_PREVIEW = 15;
 
 export default function ProgressPage() {
-  const [expanded, setExpanded] = useState<string | null>("04");
+  const [data, setData] = useState<ProgressResponse | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [subjectKey, setSubjectKey] = useState<string>("physics");
+  const [expanded, setExpanded] = useState<string | null>(null);
+  const [showAllConcepts, setShowAllConcepts] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    apiFetch<ProgressResponse>("/progress")
+      .then(setData)
+      .catch((e) => setError(e instanceof Error ? e.message : "Failed to load progress"));
+  }, []);
+
+  if (error) {
+    return (
+      <div className="min-h-screen grid place-items-center bg-ruled-body">
+        <div className="text-center">
+          <p className="text-ink font-bold">Couldn&apos;t load your progress.</p>
+          <p className="text-ink-muted text-sm mt-1">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return (
+      <div className="min-h-screen flex flex-col bg-ruled-body">
+        <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 space-y-5">
+          <div className="h-10 w-96 max-w-full rounded-xl bg-ink/6 animate-pulse" />
+          <div className="h-44 rounded-[20px] bg-white border border-border-subtle animate-pulse" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
+            {[0, 1, 2].map((i) => (
+              <div key={i} className="h-36 rounded-[16px] bg-white border border-border-subtle animate-pulse" />
+            ))}
+          </div>
+          <div className="h-80 rounded-[18px] bg-white border border-border-subtle animate-pulse" />
+        </main>
+      </div>
+    );
+  }
+
+  const ms = data.monk_score;
+  const started = ms.raw > 0 || data.ledger.questions_attempted > 0;
+  const selected = data.subjects.find((s) => s.subject === subjectKey) ?? data.subjects[0];
+  const eightWeeksAgo = ms.climb.length > 0 ? ms.climb[0] : null;
 
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
-
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 space-y-5 animate-ml-rise">
         <div>
           <h1 className="text-[2.3rem] leading-[1.05] tracking-[-0.025em] font-medium text-ink">
@@ -145,12 +179,14 @@ export default function ProgressPage() {
             </span>
             <div className="flex items-baseline gap-2 mt-1">
               <span className="font-bold text-[3.4rem] leading-none tracking-[-0.03em] text-ink">
-                703
+                {ms.display}
               </span>
               <span className="text-lg text-ink-muted font-semibold">/1000</span>
-              <span className="ml-1 text-xs font-bold text-green-badge bg-green-badge/12 px-2.5 py-1 rounded-full">
-                ▲ +14 this week
-              </span>
+              {ms.delta_week > 0 && (
+                <span className="ml-1 text-xs font-bold text-green-badge bg-green-badge/12 px-2.5 py-1 rounded-full">
+                  ▲ +{ms.delta_week} this week
+                </span>
+              )}
             </div>
             <p className="text-ink-light text-sm mt-3 leading-relaxed max-w-[30ch]">
               It moves only when you prove concepts — on questions you have never seen before.
@@ -162,44 +198,70 @@ export default function ProgressPage() {
               <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
                 The climb · 0 → 1000
               </span>
-              <span className="font-script font-bold text-red-dark text-[0.92rem] -rotate-[0.5deg] inline-block">
-                +142 in eight weeks — keep the slope.
-              </span>
+              {eightWeeksAgo && ms.display > eightWeeksAgo.score && (
+                <span className="font-script font-bold text-red-dark text-[0.92rem] -rotate-[0.5deg] inline-block">
+                  +{ms.display - eightWeeksAgo.score} since {new Date(eightWeeksAgo.date).toLocaleDateString("en-IN", { day: "numeric", month: "short" })} — keep the slope.
+                </span>
+              )}
             </div>
             <div className="relative h-2 rounded-full bg-ink/8 overflow-hidden">
-              <div className="absolute inset-y-0 left-0 bg-orange rounded-full" style={{ width: "70.3%" }} />
+              <div
+                className="absolute inset-y-0 left-0 bg-orange rounded-full"
+                style={{ width: `${Math.max(ms.display / 10, 0.5)}%` }}
+              />
               <span
                 className="absolute -top-1.5 w-4 h-4 rounded-full bg-orange border-2 border-white shadow-ref-pill"
-                style={{ left: "calc(70.3% - 8px)" }}
+                style={{ left: `calc(${Math.max(ms.display / 10, 0.5)}% - 8px)` }}
               />
             </div>
             <div className="flex items-center justify-between text-[0.72rem] text-ink-muted font-semibold mt-1.5">
               <span>0</span>
-              <span>8 weeks ago · 561</span>
+              {eightWeeksAgo ? <span>{eightWeeksAgo.score} · {new Date(eightWeeksAgo.date).toLocaleDateString("en-IN", { day: "numeric", month: "short" })}</span> : <span />}
               <span>1000</span>
             </div>
             <div className="mt-3 flex items-start gap-2 bg-orange/10 border border-orange/25 rounded-xl px-3.5 py-2.5 text-xs text-ink-light leading-relaxed">
               <span className="flex-none mt-0.5">ⓘ</span>
-              <span>
-                Your score never falls — but <b className="text-ink font-bold">3 concepts are flagged &quot;needs revision&quot;</b> and
-                cap how high it can climb until you refresh them.
-              </span>
+              {ms.flagged_concepts > 0 ? (
+                <span>
+                  Your score never falls — but{" "}
+                  <b className="text-ink font-bold">
+                    {ms.flagged_concepts} concept{ms.flagged_concepts > 1 ? "s are" : " is"} flagged &quot;needs revision&quot;
+                  </b>{" "}
+                  and cap{ms.flagged_concepts > 1 ? "" : "s"} how high it can climb until you refresh them.
+                </span>
+              ) : started ? (
+                <span>
+                  Your score never falls, and nothing is capping it right now —{" "}
+                  <b className="text-ink font-bold">every point of headroom is open</b>.
+                </span>
+              ) : (
+                <span>
+                  Everyone starts at 0 — it&apos;s not a judgment, it&apos;s a blank ledger.{" "}
+                  <b className="text-ink font-bold">Answer your first practice questions</b> and the climb begins.
+                </span>
+              )}
             </div>
           </div>
         </div>
 
-        {/* Subject cards */}
+        {/* Subject cards — double as the selector for the chapter block */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
-          {SUBJECTS.map((s) => (
-            <div
-              key={s.key}
-              className={`bg-white rounded-[16px] p-5 shadow-ref-stat border ${
-                s.key === "physics" ? "border-ink" : "border-border-subtle"
+          {data.subjects.map((s) => (
+            <button
+              key={s.subject}
+              onClick={() => {
+                setSubjectKey(s.subject);
+                setExpanded(null);
+              }}
+              className={`bg-white rounded-[16px] p-5 shadow-ref-stat border text-left cursor-pointer transition-colors ${
+                s.subject === selected.subject ? "border-ink" : "border-border-subtle hover:border-ink/40"
               }`}
             >
               <div className="flex items-center justify-between gap-2">
-                <span className="font-bold text-ink">{s.name}</span>
-                <span className="text-[0.7rem] font-bold text-green-badge">{s.delta}</span>
+                <span className="font-bold text-ink">{SUBJECT_LABEL[s.subject] ?? s.subject}</span>
+                <span className="text-[0.7rem] font-bold text-ink-muted">
+                  {s.chapters.filter((c) => c.state !== "not_started").length}/{s.chapters.length} chapters started
+                </span>
               </div>
               <div className="flex items-baseline gap-1.5 mt-1">
                 <span className="font-bold text-[1.9rem] leading-none tracking-[-0.02em] text-ink">
@@ -208,12 +270,15 @@ export default function ProgressPage() {
                 <span className="text-sm text-ink-muted font-semibold">/1000</span>
               </div>
               <div className="h-1.5 rounded-full bg-ink/8 overflow-hidden mt-3">
-                <div className={`h-full rounded-full ${s.barColor}`} style={{ width: `${s.score / 10}%` }} />
+                <div
+                  className={`h-full rounded-full ${SUBJECT_BAR[s.subject] ?? "bg-orange"}`}
+                  style={{ width: `${Math.max(s.score / 10, 1)}%` }}
+                />
               </div>
               <p className="text-[0.76rem] text-ink-muted font-semibold mt-2.5">
-                Drona flags: <span className="text-ink font-bold">{s.flag}</span>
+                {s.subject === selected.subject ? "Shown below · chapter by chapter" : "Tap to inspect"}
               </p>
-            </div>
+            </button>
           ))}
         </div>
 
@@ -221,38 +286,46 @@ export default function ProgressPage() {
         <div className="bg-white border border-border-subtle rounded-[18px] p-5 shadow-ref-card">
           <div className="flex items-center justify-between gap-3 flex-wrap mb-3">
             <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
-              Why Physics is 764 · chapter by chapter
+              Why {SUBJECT_LABEL[selected.subject] ?? selected.subject} is {selected.score} · chapter by chapter
             </span>
             <div className="flex items-center gap-3 text-[0.72rem] text-ink-light font-semibold flex-wrap">
-              {(["Strong", "Improving", "Needs revision", "Not started"] as ChapterStatus[]).map((s) => (
+              {(["strong", "improving", "needs_revision", "not_started"] as ApiState[]).map((s) => (
                 <span key={s} className="flex items-center gap-1.5">
                   <span className={`w-1.5 h-1.5 rounded-full ${STATUS_DOT[s]}`} />
-                  {s}
+                  {STATE_LABEL[s]}
                 </span>
               ))}
             </div>
           </div>
 
           <div className="divide-y divide-dashed divide-border-subtle">
-            {CHAPTERS.map((c) => {
-              const isOpen = expanded === c.n;
+            {selected.chapters.map((c, i) => {
+              const isOpen = expanded === c.chapter_id;
+              const hasConcepts = c.concepts.length > 0;
+              const showAll = showAllConcepts[c.chapter_id];
+              const visibleConcepts = showAll ? c.concepts : c.concepts.slice(0, CONCEPTS_PREVIEW);
               return (
-                <div key={c.n} className={isOpen ? "bg-orange/8 -mx-2 px-2 rounded-xl" : ""}>
+                <div key={c.chapter_id} className={isOpen ? "bg-orange/8 -mx-2 px-2 rounded-xl" : ""}>
                   <button
-                    onClick={() => setExpanded(isOpen ? null : c.subtopics ? c.n : null)}
+                    onClick={() => setExpanded(isOpen ? null : hasConcepts ? c.chapter_id : null)}
                     className="w-full flex items-center gap-3.5 py-3 text-left cursor-pointer"
                   >
                     <span className="font-script font-bold text-[0.86rem] text-ink-dim flex-none w-[22px]">
-                      {c.n}
+                      {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="flex-1 font-bold text-[0.95rem] text-ink">{c.name}</span>
-                    <span className="flex-none text-[0.76rem] text-ink-muted font-semibold">{c.marks}</span>
+                    <span className="flex-1 font-bold text-[0.95rem] text-ink">
+                      {c.name}
+                      <span className="ml-2 font-semibold text-[0.7rem] text-ink-dim">Class {c.class_level}</span>
+                    </span>
+                    <span className="flex-none text-[0.76rem] text-ink-muted font-semibold">
+                      {c.weight_marks != null ? `~${Math.round(c.weight_marks)} marks` : ""}
+                    </span>
                     <span
-                      className={`flex-none font-bold text-[0.68rem] px-2.5 py-1 rounded-full ${STATUS_STYLE[c.status]}`}
+                      className={`flex-none font-bold text-[0.68rem] px-2.5 py-1 rounded-full ${STATUS_STYLE[c.state]}`}
                     >
-                      {c.status}
+                      {STATE_LABEL[c.state]}
                     </span>
-                    {c.subtopics && (
+                    {hasConcepts && (
                       <svg
                         viewBox="0 0 16 16"
                         width={12}
@@ -271,33 +344,47 @@ export default function ProgressPage() {
                     )}
                   </button>
 
-                  {isOpen && c.subtopics && (
+                  {isOpen && hasConcepts && (
                     <div className="pb-4 pl-[34px] space-y-2">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
-                        {c.subtopics.map((st) => (
-                          <div key={st.name} className="flex items-center justify-between gap-2 text-[0.84rem]">
+                        {visibleConcepts.map((ct) => (
+                          <div
+                            key={ct.concept_id}
+                            className="flex items-center justify-between gap-2 text-[0.84rem]"
+                          >
                             <span className="flex items-center gap-2 text-ink-light font-medium">
-                              <span className={`w-1.5 h-1.5 rounded-full flex-none ${STATUS_DOT[st.status]}`} />
-                              {st.name}
+                              <span className={`w-1.5 h-1.5 rounded-full flex-none ${STATUS_DOT[ct.state]}`} />
+                              {ct.name}
                             </span>
                             <span
-                              className={`flex-none font-bold text-[0.66rem] px-2 py-0.5 rounded-full ${STATUS_STYLE[st.status]}`}
+                              className={`flex-none font-bold text-[0.66rem] px-2 py-0.5 rounded-full ${STATUS_STYLE[ct.state]}`}
                             >
-                              {st.status}
+                              {ct.state === "not_started" ? STATE_LABEL[ct.state] : `${Math.round(ct.mastery)}`}
                             </span>
                           </div>
                         ))}
                       </div>
+                      {c.concepts.length > CONCEPTS_PREVIEW && !showAll && (
+                        <button
+                          onClick={() => setShowAllConcepts((m) => ({ ...m, [c.chapter_id]: true }))}
+                          className="font-bold text-[0.76rem] text-ink-muted border border-border-subtle rounded-full px-3 py-1.5"
+                        >
+                          Show all {c.concepts.length} concepts
+                        </button>
+                      )}
                       <div className="flex items-center gap-3 flex-wrap pt-2">
-                        <button className="font-bold text-[0.8rem] px-4 py-2 rounded-full bg-ink text-cream-light">
+                        <Link
+                          href="/practice"
+                          className="font-bold text-[0.8rem] px-4 py-2 rounded-full bg-ink text-cream-light"
+                        >
                           Practice this →
-                        </button>
-                        <button className="font-bold text-[0.8rem] px-4 py-2 rounded-full border border-border-subtle text-ink">
+                        </Link>
+                        <Link
+                          href="/learn"
+                          className="font-bold text-[0.8rem] px-4 py-2 rounded-full border border-border-subtle text-ink"
+                        >
                           Revise with Drona
-                        </button>
-                        <span className="font-script font-bold text-red-dark text-[0.86rem] -rotate-[0.5deg] inline-block">
-                          Drona&apos;s pick this week
-                        </span>
+                        </Link>
                       </div>
                     </div>
                   )}
@@ -307,68 +394,25 @@ export default function ProgressPage() {
           </div>
 
           <p className="text-[0.72rem] text-ink-muted font-medium mt-3">
-            Opens on what Drona is flagging right now. Every state describes you — the syllabus itself is complete
-            everywhere.
+            Every state describes you — the syllabus itself is complete everywhere.
           </p>
         </div>
 
-        {/* Pace + speed×accuracy */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-[18px] items-start">
-          <div className="bg-white border border-border-subtle rounded-[18px] p-5 shadow-ref-card">
-            <div className="flex items-center justify-between gap-3 flex-wrap mb-4">
-              <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
-                Pace · average time per question
-              </span>
-              <span className="font-bold text-[0.66rem] text-ink-muted border border-border-subtle rounded-full px-2.5 py-1">
-                Display only — doesn&apos;t move your score yet
-              </span>
-            </div>
-
-            <div className="space-y-4">
-              {PACE.map((p) => (
-                <div key={p.name} className="flex items-center gap-4">
-                  <span className="w-[74px] flex-none font-bold text-[0.86rem] text-ink">{p.name}</span>
-                  <div className="flex-1 h-1.5 rounded-full bg-ink/8 overflow-hidden">
-                    <div className={`h-full rounded-full ${p.bar}`} style={{ width: `${p.pct}%` }} />
-                  </div>
-                  <span className="flex-none text-right w-[64px] font-bold text-[0.86rem] text-ink">{p.time}</span>
-                  <span className="flex-none w-[100px] text-[0.68rem] text-ink-muted font-semibold">{p.target}</span>
-                  <span className="flex-none text-[0.7rem] font-bold text-green-badge w-[110px] text-right">
-                    {p.delta}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-[0.72rem] text-ink-muted font-medium mt-4 pt-3 border-t border-border-subtle">
-              Measured silently from Practice — you never run a timer. Targets follow the exam&apos;s own
-              per-question budget, adjusted for difficulty; the black tick is yours. Less time is the win here.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            <span className="block font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted mb-1">
-              Speed × accuracy — what it catches
+        {/* Pace */}
+        <div className="bg-white border border-border-subtle rounded-[18px] p-5 shadow-ref-card">
+          <div className="flex items-center justify-between gap-3 flex-wrap mb-4">
+            <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
+              Pace · average time per question
             </span>
-            <div className="bg-orange/10 border border-orange/25 rounded-[16px] p-4">
-              <b className="block font-bold text-ink text-[0.92rem] mb-1">Correct but slow</b>
-              <p className="text-[0.8rem] text-ink-light leading-relaxed">
-                Rotational Motion — right answers, ~40s over budget. Mastery looks fine; mock scores won&apos;t.
-              </p>
-              <span className="font-script font-bold text-orange-dark text-[0.84rem] mt-1.5 inline-block -rotate-[0.5deg]">
-                → timed drills
-              </span>
-            </div>
-            <div className="bg-red-note/8 border border-red-note/25 rounded-[16px] p-4">
-              <b className="block font-bold text-ink text-[0.92rem] mb-1">Fast but careless</b>
-              <p className="text-[0.8rem] text-ink-light leading-relaxed">
-                Organic GOC — well under target, but accuracy slipped to 71% this week. That&apos;s rushing.
-              </p>
-              <span className="font-script font-bold text-red-dark text-[0.84rem] mt-1.5 inline-block -rotate-[0.5deg]">
-                → slow down; deliberate sets
-              </span>
-            </div>
+            <span className="font-bold text-[0.66rem] text-ink-muted border border-border-subtle rounded-full px-2.5 py-1">
+              Display only — doesn&apos;t move your score yet
+            </span>
           </div>
+          <p className="text-[0.84rem] text-ink-light leading-relaxed">
+            {data.pace.available
+              ? data.pace.note
+              : "Measured silently from Practice — you never run a timer. Answer more questions and your pace against the exam's own per-question budget appears here."}
+          </p>
         </div>
 
         {/* What moves it next */}
@@ -382,27 +426,36 @@ export default function ProgressPage() {
             </span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
-            {LEVERS.map((lv) => (
-              <div key={lv.title} className="bg-white border border-border-subtle rounded-[16px] p-5 shadow-ref-stat flex flex-col">
-                <div className="flex items-center justify-between gap-2 mb-1.5">
-                  <span className="font-extrabold text-[0.6rem] tracking-[0.12em] uppercase text-ink-muted">
-                    {lv.tag}
-                  </span>
-                  <span className="font-script font-bold text-red-dark text-[0.82rem] -rotate-[0.5deg] inline-block">
-                    {lv.hint}
-                  </span>
-                </div>
-                <b className="font-bold text-[1.02rem] text-ink leading-snug">{lv.title}</b>
-                <p className="text-[0.8rem] text-ink-light leading-relaxed mt-1.5 flex-1">{lv.body}</p>
-                <button
-                  className={`mt-4 font-bold text-[0.82rem] px-4 py-2.5 rounded-full self-start ${
-                    lv.primary ? "bg-ink text-cream-light" : "border border-border-subtle text-ink"
-                  }`}
+            {data.recommendations.map((rec, i) => {
+              const meta = REC_TAG[rec.role];
+              const href =
+                rec.role === "clear_flag" ? "/learn" : rec.role === "exam_craft" ? "/test" : "/practice";
+              return (
+                <div
+                  key={`${rec.role}-${i}`}
+                  className="bg-white border border-border-subtle rounded-[16px] p-5 shadow-ref-stat flex flex-col"
                 >
-                  {lv.cta}
-                </button>
-              </div>
-            ))}
+                  <div className="flex items-center justify-between gap-2 mb-1.5">
+                    <span className="font-extrabold text-[0.6rem] tracking-[0.12em] uppercase text-ink-muted">
+                      {meta.tag}
+                    </span>
+                    <span className="font-script font-bold text-red-dark text-[0.82rem] -rotate-[0.5deg] inline-block">
+                      {meta.hint}
+                    </span>
+                  </div>
+                  <b className="font-bold text-[1.02rem] text-ink leading-snug">{rec.title}</b>
+                  <p className="text-[0.8rem] text-ink-light leading-relaxed mt-1.5 flex-1">{rec.reason}</p>
+                  <Link
+                    href={href}
+                    className={`mt-4 font-bold text-[0.82rem] px-4 py-2.5 rounded-full self-start ${
+                      i === 0 ? "bg-ink text-cream-light" : "border border-border-subtle text-ink"
+                    }`}
+                  >
+                    {meta.cta}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -424,13 +477,21 @@ export default function ProgressPage() {
             </span>
             <div>
               <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-orange-dark">
-                Drona&apos;s word · this week
+                Drona&apos;s word
               </span>
               <p className="text-[0.94rem] text-ink leading-relaxed mt-1.5 max-w-[64ch]">
-                The score moved because Physics moved — those Rotational Motion sets are starting to pay. What&apos;s
-                holding you back isn&apos;t new learning; it&apos;s the three concepts waiting for revision, quietly
-                capping your climb. This week is simple: clear the flags, keep the mechanics sets on a clock, and give
-                Coordination Compounds one honest hour. <b className="font-bold">The number will follow.</b>
+                {started ? (
+                  <>
+                    Your climb has begun — every point on this page came from a question you proved on your own.
+                    Keep the practice honest and steady; <b className="font-bold">the number will follow.</b>
+                  </>
+                ) : (
+                  <>
+                    Nothing on this page moves by watching or reading — only by proving concepts on questions
+                    you&apos;ve never seen. Start with one honest practice set today.{" "}
+                    <b className="font-bold">The number will follow.</b>
+                  </>
+                )}
               </p>
               <span className="font-script font-bold text-red-dark text-[0.88rem] mt-2 inline-block -rotate-[0.5deg]">
                 — Drona
@@ -446,13 +507,13 @@ export default function ProgressPage() {
               The journey so far
             </span>
             {[
-              ["214", "doubts solved"],
-              ["1,862", "questions attempted"],
-              ["143", "concepts mastered"],
-              ["9", "chapters strong"],
+              [data.ledger.doubts_solved, "doubts solved"],
+              [data.ledger.questions_attempted, "questions attempted"],
+              [data.ledger.concepts_mastered, "concepts mastered"],
+              [data.ledger.chapters_strong, "chapters strong"],
             ].map(([n, label]) => (
-              <span key={label} className="text-[0.86rem] text-ink font-semibold">
-                <b className="font-bold">{n}</b> {label}
+              <span key={String(label)} className="text-[0.86rem] text-ink font-semibold">
+                <b className="font-bold">{Number(n).toLocaleString("en-IN")}</b> {label}
               </span>
             ))}
           </div>
