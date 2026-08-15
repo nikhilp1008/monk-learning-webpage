@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { apiFetch } from "@/lib/api";
+import { getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
 
 /* ── API contract: GET /progress (monk-learning-api) ──────────────────── */
 
@@ -101,11 +102,11 @@ const STATUS_DOT: Record<ApiState, string> = {
   not_started: "bg-ink-dim",
 };
 
-const REC_TAG: Record<ApiRecommendation["role"], { tag: string; hint: string; cta: string }> = {
-  highest_lever: { tag: "HIGHEST LEVER", hint: "most headroom", cta: "Practice this →" },
-  clear_flag: { tag: "CLEAR A FLAG", hint: "lifts the cap", cta: "Revise with Drona →" },
-  pace_fix: { tag: "PACE FIX", hint: "mock-day marks", cta: "Start timed drill →" },
-  exam_craft: { tag: "EXAM CRAFT", hint: "1.15× premium", cta: "Take a mock →" },
+const REC_TAG: Record<ApiRecommendation["role"], { tag: string; hint: string; cta: (tutor: string) => string }> = {
+  highest_lever: { tag: "HIGHEST LEVER", hint: "most headroom", cta: () => "Practice this →" },
+  clear_flag: { tag: "CLEAR A FLAG", hint: "lifts the cap", cta: (t) => `Revise with ${t} →` },
+  pace_fix: { tag: "PACE FIX", hint: "mock-day marks", cta: () => "Start timed drill →" },
+  exam_craft: { tag: "EXAM CRAFT", hint: "1.15× premium", cta: () => "Take a mock →" },
 };
 
 const CONCEPTS_PREVIEW = 15;
@@ -114,10 +115,15 @@ export default function ProgressPage() {
   const [data, setData] = useState<ProgressResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [subjectKey, setSubjectKey] = useState<string>("physics");
+  const [classLevel, setClassLevel] = useState<11 | 12>(11);
   const [expanded, setExpanded] = useState<string | null>(null);
   const [showAllConcepts, setShowAllConcepts] = useState<Record<string, boolean>>({});
+  // Voice preference lives in localStorage — read after mount so SSR and
+  // hydration agree on the default persona.
+  const [tutorName, setTutorName] = useState(getTutorName());
 
   useEffect(() => {
+    setTutorName(getTutorName(loadVoicePreference()));
     apiFetch<ProgressResponse>("/progress")
       .then(setData)
       .catch((e) => setError(e instanceof Error ? e.message : "Failed to load progress"));
@@ -154,6 +160,7 @@ export default function ProgressPage() {
   const ms = data.monk_score;
   const started = ms.raw > 0 || data.ledger.questions_attempted > 0;
   const selected = data.subjects.find((s) => s.subject === subjectKey) ?? data.subjects[0];
+  const classChapters = selected.chapters.filter((c) => c.class_level === classLevel);
   const eightWeeksAgo = ms.climb.length > 0 ? ms.climb[0] : null;
 
   return (
@@ -288,18 +295,36 @@ export default function ProgressPage() {
             <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
               Why {SUBJECT_LABEL[selected.subject] ?? selected.subject} is {selected.score} · chapter by chapter
             </span>
-            <div className="flex items-center gap-3 text-[0.72rem] text-ink-light font-semibold flex-wrap">
-              {(["strong", "improving", "needs_revision", "not_started"] as ApiState[]).map((s) => (
-                <span key={s} className="flex items-center gap-1.5">
-                  <span className={`w-1.5 h-1.5 rounded-full ${STATUS_DOT[s]}`} />
-                  {STATE_LABEL[s]}
-                </span>
-              ))}
+            <div className="flex items-center gap-3 flex-wrap">
+              <div className="flex items-center rounded-full border border-border-subtle p-0.5 bg-ink/4">
+                {([11, 12] as const).map((cl) => (
+                  <button
+                    key={cl}
+                    onClick={() => {
+                      setClassLevel(cl);
+                      setExpanded(null);
+                    }}
+                    className={`font-bold text-[0.72rem] px-3 py-1 rounded-full transition-colors cursor-pointer ${
+                      classLevel === cl ? "bg-ink text-cream-light" : "text-ink-muted"
+                    }`}
+                  >
+                    Class {cl}
+                  </button>
+                ))}
+              </div>
+              <div className="flex items-center gap-3 text-[0.72rem] text-ink-light font-semibold flex-wrap">
+                {(["strong", "improving", "needs_revision", "not_started"] as ApiState[]).map((s) => (
+                  <span key={s} className="flex items-center gap-1.5">
+                    <span className={`w-1.5 h-1.5 rounded-full ${STATUS_DOT[s]}`} />
+                    {STATE_LABEL[s]}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
           <div className="divide-y divide-dashed divide-border-subtle">
-            {selected.chapters.map((c, i) => {
+            {classChapters.map((c, i) => {
               const isOpen = expanded === c.chapter_id;
               const hasConcepts = c.concepts.length > 0;
               const showAll = showAllConcepts[c.chapter_id];
@@ -383,7 +408,7 @@ export default function ProgressPage() {
                           href="/learn"
                           className="font-bold text-[0.8rem] px-4 py-2 rounded-full border border-border-subtle text-ink"
                         >
-                          Revise with Drona
+                          Revise with {tutorName}
                         </Link>
                       </div>
                     </div>
@@ -451,7 +476,7 @@ export default function ProgressPage() {
                       i === 0 ? "bg-ink text-cream-light" : "border border-border-subtle text-ink"
                     }`}
                   >
-                    {meta.cta}
+                    {meta.cta(tutorName)}
                   </Link>
                 </div>
               );
@@ -477,7 +502,7 @@ export default function ProgressPage() {
             </span>
             <div>
               <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-orange-dark">
-                Drona&apos;s word
+                {tutorName}&apos;s word
               </span>
               <p className="text-[0.94rem] text-ink leading-relaxed mt-1.5 max-w-[64ch]">
                 {started ? (
@@ -494,7 +519,7 @@ export default function ProgressPage() {
                 )}
               </p>
               <span className="font-script font-bold text-red-dark text-[0.88rem] mt-2 inline-block -rotate-[0.5deg]">
-                — Drona
+                — {tutorName}
               </span>
             </div>
           </div>
