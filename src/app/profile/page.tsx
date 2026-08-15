@@ -4,16 +4,29 @@ export const dynamic = "force-dynamic";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
+import {
+  getTutorName,
+  saveVoicePreference,
+  saveLanguagePreference,
+  isSessionLanguage,
+} from "@/lib/drona/tutor";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
 
+// Sessions teach in Hinglish or English only (persona.py normalize_language) —
+// mirrors the mobile profile's two-option control.
 const LANGS: { key: string; label: string }[] = [
-  { key: "hi", label: "हिंदी" },
   { key: "hinglish", label: "Hinglish" },
   { key: "english", label: "English" },
 ];
+
+/** profiles.teacher_voice ('drona'|'vedha') → tutor.ts voice ('male'|'female'). */
+function voiceFromTeacher(teacher: string | null | undefined): "male" | "female" {
+  return teacher === "vedha" ? "female" : "male";
+}
 
 function Switch({ on, onToggle }: { on: boolean; onToggle: () => void }) {
   return (
@@ -33,9 +46,11 @@ function Switch({ on, onToggle }: { on: boolean; onToggle: () => void }) {
 }
 
 export default function ProfilePage() {
+  const router = useRouter();
   const [userId, setUserId] = useState<string | null>(null);
   const [profile, setProfile] = useState<ProfileRow | null>(null);
   const [loading, setLoading] = useState(true);
+  const [signingOut, setSigningOut] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -57,7 +72,18 @@ export default function ProfilePage() {
           .select("*")
           .eq("id", user.id)
           .maybeSingle();
-        if (isMounted) setProfile(data);
+        if (isMounted) {
+          setProfile(data);
+          // The profile is the source of truth for the tutor persona and
+          // language; keep the session-side localStorage prefs in step so
+          // Learn/Progress show the same teacher the profile shows.
+          if (data) {
+            saveVoicePreference(voiceFromTeacher(data.teacher_voice));
+            if (isSessionLanguage(data.teaching_language)) {
+              saveLanguagePreference(data.teaching_language);
+            }
+          }
+        }
       } catch (err) {
         console.error("Failed to load profile:", err);
       } finally {
@@ -77,7 +103,21 @@ export default function ProfilePage() {
     if (error) {
       console.error("Failed to update profile:", error);
       setProfile(profile);
+      return;
     }
+    // Mirror into the session-side prefs the tutor actually reads.
+    if (patch.teacher_voice !== undefined) {
+      saveVoicePreference(voiceFromTeacher(patch.teacher_voice));
+    }
+    if (patch.teaching_language !== undefined && isSessionLanguage(patch.teaching_language)) {
+      saveLanguagePreference(patch.teaching_language);
+    }
+  };
+
+  const signOut = async () => {
+    setSigningOut(true);
+    await supabase.auth.signOut();
+    router.push("/login");
   };
 
   const initial = profile?.display_name?.trim().charAt(0).toUpperCase() || "S";
@@ -85,6 +125,10 @@ export default function ProfilePage() {
     profile?.target_exam === "NEET"
       ? ["Physics", "Chemistry", "Biology"]
       : ["Physics", "Chemistry", "Maths"];
+  const tutorName = getTutorName(voiceFromTeacher(profile?.teacher_voice));
+  const since = profile?.created_at
+    ? new Date(profile.created_at).toLocaleDateString("en-IN", { month: "long" })
+    : null;
 
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
@@ -131,8 +175,8 @@ export default function ProfilePage() {
                     {profile?.display_name || "Student"}
                   </b>
                   <span className="text-[0.82rem] text-ink-light font-medium">
-                    Class {profile?.enrolled_class || 11} ·{" "}
-                    {profile?.target_exam === "NEET" ? "NEET" : "JEE Main"}
+                    Class {profile?.enrolled_class || 11}
+                    {since ? ` · with ${tutorName} since ${since}` : ""}
                   </span>
                   <span className="inline-block ml-2 text-[0.72rem] font-bold text-orange-dark bg-orange/12 px-2.5 py-0.5 rounded-full">
                     {profile?.target_exam || "JEE Main"}
@@ -152,8 +196,8 @@ export default function ProfilePage() {
                   <span className="block text-[0.8rem] font-bold text-ink mb-2">Your teacher</span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
                     {[
-                      { key: "drona", name: "Drona", tag: "Male voice", traits: ["Calm", "Strict", "Disciplined"] },
-                      { key: "vedha", name: "Vedha", tag: "Female voice", traits: ["Warm", "Precise", "Patient"] },
+                      { key: "drona", name: "Drona", tag: "Male voice", traits: ["Steady", "Exacting"] },
+                      { key: "vedha", name: "Veda", tag: "Female voice", traits: ["Warm", "Patient"] },
                     ].map((t) => {
                       const active = (profile?.teacher_voice || "drona") === t.key;
                       return (
@@ -309,6 +353,41 @@ export default function ProfilePage() {
                 </p>
               </div>
             </div>
+
+            {/* Account & legal — mirrors the mobile profile's link rows */}
+            <div className="bg-white border border-border-subtle rounded-[18px] px-5 py-1 shadow-ref-card mt-5">
+              {[
+                { label: "Personal information", href: "/account" },
+                { label: "Privacy policy", href: "/privacy" },
+                { label: "Terms & conditions", href: "/terms" },
+                { label: "About us", href: "/about" },
+              ].map((row) => (
+                <Link
+                  key={row.href}
+                  href={row.href}
+                  className="flex items-center justify-between gap-3 py-3.5 border-t border-border-subtle first:border-t-0 group"
+                >
+                  <b className="font-bold text-[0.92rem] text-ink">{row.label}</b>
+                  <svg viewBox="0 0 16 16" width={12} height={12} fill="none" className="flex-none">
+                    <path
+                      d="M6 3.5 10.5 8 6 12.5"
+                      stroke="#C2BCAF"
+                      strokeWidth="1.9"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+              ))}
+            </div>
+
+            <button
+              onClick={signOut}
+              disabled={signingOut}
+              className="w-full mt-5 font-bold text-[0.9rem] px-4 py-3 rounded-full border border-red-note/40 text-red-dark hover:bg-red-note/8 transition-colors cursor-pointer disabled:opacity-60"
+            >
+              {signingOut ? "Signing out…" : "Log out"}
+            </button>
           </>
         )}
       </main>
