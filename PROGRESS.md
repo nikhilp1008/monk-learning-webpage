@@ -105,6 +105,13 @@ fill MUST be Fade-wrapped.**
   assertions, read crowded by eye) — widened b4–b7 spacing by 28px, re-verified
   clean.
 
+- Sec 6 — "The three root systems: tap, fibrous, adventitious" — 3-column
+  frame (TAP | FIBROUS | ADVENTITIOUS) with a drawn icon per type (taproot
+  w/ laterals, fanning fibrous mass, roots off a stem's side), origin/group/
+  example facts, "classifier is ORIGIN not appearance", tap-vs-fibrous
+  opposites line with a double-headed arrow, verdict on adventitious as a
+  negative definition. PASS both languages, 0 stalls. Spot-checked clean.
+
 ## Current
 
-Starting Section 6.
+Starting Section 7.
