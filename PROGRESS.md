@@ -148,6 +148,8 @@ for every position, zero mismatches. `_full_merged.json` cannot match at all
 
 - Sec 3 — Locking proponent to system: 3-column wiring diagram — Linnaeus/Bentham&Hooker/Engler&Prantl chips on top, ARTIFICIAL/NATURAL/PHYLOGENETIC chips below, framework revealed empty first then one straight vertical arrow wired per beat (no crossing, visually literal) with a trigger-word caption per column → weakness note under column 1 (veg=sex equal weight, veg is environment-plastic → unnatural) → concrete two-plant illustration (same stamen count, everything else different, Linnaeus still boxes them together) → closing correction banner (artificial ≠ bad/wrong). Verified both langs, verify-scene.mjs fully clean (0 overlap/overflow/empty, no stalls); spot-checked with FORCE_SHOTS — reads as a clean wiring diagram.
 
+- Sec 4 — Numerical, cyto- and chemotaxonomy: 3 titled panels (NUMERICAL taxonomy / CYTOTAXONOMY / CHEMOTAXONOMY, same column x's as Sec3's wiring diagram) revealed empty first, then each panel's evidence-definition fills in its own beat → single compressed prefix-decoder line under all three → high-value "advantage: objectivity" line + underline inside the NUMERICAL panel → closing banner (modern layers feed objective data into the classical systems, don't replace them). Verified both langs, verify-scene.mjs fully clean (0 overlap/overflow/empty, no stalls); spot-checked with FORCE_SHOTS.
+
 ## Current
 
-Sec 4 — Numerical, cyto- and chemotaxonomy — next.
+Sec 5 — Artificial vs natural, and the match-the-column — next.
