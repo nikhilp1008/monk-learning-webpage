@@ -5333,8 +5333,10 @@ REGISTRY[`${B11CH01}:25`] = B11Ch01Sec25;
 /* self-contained at the end of the file; do not edit blocks above.    */
 /* ================================================================== */
 import B11Ch03Sec1 from "./B11Ch03Sec1";
+import B11Ch03Sec2 from "./B11Ch03Sec2";
 
 const B11CH03 = "1380c5e5-1556-5626-97fa-8237c6cb021b"; // Class 11 · Biology · Plant Kingdom
 
 REGISTRY[`${B11CH03}:1`] = B11Ch03Sec1;
+REGISTRY[`${B11CH03}:2`] = B11Ch03Sec2;
 /* ============================ end B11Ch03 ============================ */
