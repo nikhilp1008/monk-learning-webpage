@@ -129,15 +129,19 @@ export default function B11Ch04Sec2({ currentTime, reveals, language }: ScenePro
       {/* beat 2 — sessile exception */}
       <>
         <Draw on={act1 && beat >= 2} delay={dl(2, 0.2)} d="M 600 198 C 700 194, 860 194, 980 198" stroke={MUTED} sw={1.6} dur={0.5} />
-        <Draw
-          on={act1 && beat >= 2}
-          delay={dl(2, 0.7)}
-          d="M 648 198 L 655 158 Q 675 145, 695 158 L 702 198 Z"
-          stroke={INK}
-          sw={1.6}
-          fill={CREAM}
-          dur={0.5}
-        />
+        {/* fill=CREAM Draw paths render their fill immediately regardless of
+            `on` (Draw only animates stroke-dashoffset) — gate visibility with
+            a Fade wrapper instead so this doesn't appear before beat 2. */}
+        <Fade on={act1 && beat >= 2} delay={dl(2, 0.7)}>
+          <Draw
+            on={true}
+            d="M 648 198 L 655 158 Q 675 145, 695 158 L 702 198 Z"
+            stroke={INK}
+            sw={1.6}
+            fill={CREAM}
+            dur={0.5}
+          />
+        </Fade>
         <Draw
           on={act1 && beat >= 2}
           delay={dl(2, 1.2)}

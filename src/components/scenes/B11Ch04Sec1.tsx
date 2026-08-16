@@ -156,7 +156,12 @@ export default function B11Ch04Sec1({ currentTime, reveals, language }: ScenePro
         </T>
       </Fade>
       <Draw on={beat >= 3} delay={dl(3, 1.4)} d={circleD(265, 390, 125)} stroke={INK} sw={2.2} dur={0.9} />
-      <Draw on={beat >= 3} delay={dl(3, 2.3)} d={circleD(265, 378, 22)} stroke={INK} sw={1.4} fill={CREAM} dur={0.5} />
+      {/* fill=CREAM Draw paths render their fill immediately regardless of `on`
+          (Draw only animates stroke-dashoffset) — gate visibility with a Fade
+          wrapper instead so the nucleus doesn't appear before beat 3. */}
+      <Fade on={beat >= 3} delay={dl(3, 2.3)}>
+        <Draw on={true} d={circleD(265, 378, 22)} stroke={INK} sw={1.4} fill={CREAM} dur={0.5} />
+      </Fade>
       <Fade on={beat >= 3} delay={dl(3, 2.8)}>
         <T x={265} y={382} size={10} fill={INK} script={false}>
           {t("nucleus", "nucleus")}
@@ -181,7 +186,9 @@ export default function B11Ch04Sec1({ currentTime, reveals, language }: ScenePro
         sw={5}
         dur={0.9}
       />
-      <Draw on={beat >= 3} delay={dl(3, 2.5)} d={circleD(780, 387, 20)} stroke={INK} sw={1.4} fill={CREAM} dur={0.5} />
+      <Fade on={beat >= 3} delay={dl(3, 2.5)}>
+        <Draw on={true} d={circleD(780, 387, 20)} stroke={INK} sw={1.4} fill={CREAM} dur={0.5} />
+      </Fade>
       <Fade on={beat >= 3} delay={dl(3, 3)}>
         <T x={780} y={391} size={10} fill={INK} script={false}>
           {t("nucleus", "nucleus")}
