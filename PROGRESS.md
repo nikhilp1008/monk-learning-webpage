@@ -124,6 +124,8 @@ registry key `` REGISTRY[`${B11CH04}:N`] = B11Ch04SecN; `` — appended at the e
 
 - [x] Sec 4 — The ten non-chordate phyla as a 4-column table (PHYLUM/GRADE/SIGNATURE/EXAMPLE), amber rung-tick per row, 2 rows drawn per beat across beats 2–6, closing line "not ONE ever develops a notochord" + SIGNATURE banner. Verified both langs, audits clean; spot-checked — clean readable table, good reusable pattern for future table sections.
 
+- [x] Sec 5 — Reading the right branch: full Chordata tree — CHORDATA root → cranium? → PROTOCHORDATA (Urochordata/Ascidia, Cephalochordata/Branchiostoma) vs VERTEBRATA → jaws? → AGNATHA (Cyclostomata/Petromyzon) vs GNATHOSTOMATA → PISCES (Chondrichthyes, Osteichthyes) + TETRAPODA (Amphibia, Reptilia, Aves, Mammalia). 9 leaf taxa across the full canvas width, nothing erased. Verified both langs, audits clean; caught+fixed a title-overflow bug (Kalam ascender needs baseline y ≥ ~1.3×size + 30) before it passed. Spot-checked — clean complete tree.
+
 ## Current
 
-Subtopic 1 (Master Map, secs 1–10). Next: Sec 5.
+Subtopic 1 (Master Map, secs 1–10). Next: Sec 6.
