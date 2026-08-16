@@ -805,9 +805,23 @@ follow.
   via FORCE_SHOTS, both languages, all 9 frames — clean; the 3-card
   timeline reads immediately as a memorisable sequence.
 
+- **Sec 53** — "DNA or RNA, never both": red rule banner (exactly ONE
+  type, never both) + the "contains both" trap, then a genuine 2×2 grid
+  (double/single-stranded × DNA/AMBER-RNA) filling with one example each
+  (Hepatitis B / coliphage / Reovirus / TMV), 3 rules of thumb (plant→
+  ssRNA, phage→dsDNA, animal→either), the retrovirus special case (RNA
+  reverse-transcribed to DNA, HIV), a 2-box disease list (humans/plants),
+  closing with the select-the-viral-disease trap (Cholera=bacterial,
+  Rusts/smuts=fungal — check the AGENT). Dense content section (8 facts)
+  kept legible via consistent GREEN=DNA / AMBER_DARK=RNA colour coding
+  across every element. VERDICT PASS both languages, 0 overlaps/overflow/
+  empty, 0 stalls. Eye-checked via FORCE_SHOTS, both languages, all 9
+  frames — clean, fits comfortably with room to spare despite the fact
+  density.
+
 ## Current
-Sec 52 done, committed, pushed. Next: Sec 53 — "DNA or RNA, never both"
-(subtopic 5 continues).
+Sec 53 done, committed, pushed. Next: Sec 54 — "Viroids and prions in
+detail" (subtopic 5 continues).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
