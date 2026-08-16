@@ -162,8 +162,11 @@ export function Header() {
 
       {/* Nav Row — full width, links pinned left */}
       <div className="bg-white/70 backdrop-blur-md border-b border-border-subtle px-6 md:px-9 py-2.5 z-30">
-        <div className="w-full flex items-center justify-between gap-2 overflow-x-auto">
-          <nav className="flex items-center gap-1.5 flex-nowrap">
+        <div className="w-full flex items-center justify-between gap-2">
+          {/* Scrolls independently of the account menu below, so overflow-x-auto
+              can't clip the dropdown's height (it forces overflow-y: auto too,
+              per the CSS overflow spec, silencing everything but a sliver). */}
+          <nav className="flex items-center gap-1.5 flex-nowrap overflow-x-auto">
             {navItems.map((item) => {
               const isActive =
                 pathname === item.href ||
