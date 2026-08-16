@@ -698,9 +698,26 @@ follow.
   overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS, both
   languages, all 9 frames — clean, matches the Sec34 exemplar precisely.
 
+- **Sec 47** — subtopic 4 closer (tips): 5 numbered red-badge pitfalls
+  (autotroph exceptions — Venus flytrap/bladderwort/Cuscuta; don't give
+  animal cells a wall; don't swap stored foods, P-with-S/A-with-G; don't
+  classify by nutrition alone — chlorophyll-less Cuscuta is still a plant;
+  don't confuse a mushroom/pond alga with these kingdoms — recaps Sec38/39/
+  40/41/43), then the payoff — a genuine one-question decision tool
+  ("cell wall + own food?" box, yes->PLANTAE green chip / no wall+ingests->
+  ANIMALIA amber chip) plus a 2-row tiebreaker table (stored food:
+  starch=plant|glycogen=animal; plastids: present=plant|absent=animal),
+  closing whisper line "one question, two tiebreakers — sub-topic
+  answered". Row/tiebreaker technical terms kept in English for both
+  languages (Sec5/Sec40 precedent). VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS, both
+  languages, all 9 frames — clean; arrow tips land cleanly on both kingdom
+  chips, tiebreaker rows read clearly. **Subtopic 4 (secs 36-47) complete
+  — 47/59 sections done.**
+
 ## Current
-Sec 46 done, committed, pushed. Next: Sec 47 — "Plantae and Animalia
-pitfalls, and the one-question tool" (tips, closes subtopic 4).
+Sec 47 done, committed, pushed. Next: Sec 48 — opens subtopic 5
+(Viruses, Viroids, Prions & Lichens).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
