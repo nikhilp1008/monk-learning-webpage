@@ -734,9 +734,27 @@ follow.
   9 frames — clean; both pen-drive cards render symmetrically, arrow
   lands cleanly in the gap between them.
 
+- **Sec 49** — "The strip-down ladder": a genuine literal staircase diagram
+  — VIRUS (GREEN box, protein-coat + nucleic-acid chips, highest/leftmost)
+  --"-coat" arrow--> VIROID (AMBER_DARK box, free-RNA chip only, lands
+  lower-right) --"-acid" arrow--> PRION (INK box, protein-only chip,
+  lands lowest-right), each box + its narration fact landing together
+  beat-by-beat as the ladder is built left to right. 3 columns never
+  share x-range so the vertically-overlapping boxes (the staircase look)
+  never collide. Decorative squiggle-underline for "the board lines them
+  up" transition beat (satisfies the one-drawn-element-per-beat rule
+  without crossing any box). Closing: below-box captions read the
+  composition (coat+acid / acid only, no coat / protein only, NO acid),
+  green insight (each step throws something away, yet stays infectious),
+  muted housekeeping aside on Lichens (forward reference, "more soon").
+  VERDICT PASS both languages, 0 overlaps/overflow/empty, 0 stalls.
+  Eye-checked via FORCE_SHOTS, both languages, all 9 frames — clean; the
+  staircase reads immediately as "things get simpler going right", which
+  is the whole point of the metaphor.
+
 ## Current
-Sec 48 done, committed, pushed. Next: Sec 49 — "The strip-down ladder"
-(subtopic 5 continues).
+Sec 49 done, committed, pushed. Next: Sec 50 — "The diagnostic table, and
+why they sit outside" (subtopic 5 continues).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
