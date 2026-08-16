@@ -5337,6 +5337,7 @@ import B11Ch03Sec2 from "./B11Ch03Sec2";
 import B11Ch03Sec3 from "./B11Ch03Sec3";
 import B11Ch03Sec4 from "./B11Ch03Sec4";
 import B11Ch03Sec5 from "./B11Ch03Sec5";
+import B11Ch03Sec6 from "./B11Ch03Sec6";
 
 const B11CH03 = "1380c5e5-1556-5626-97fa-8237c6cb021b"; // Class 11 · Biology · Plant Kingdom
 
@@ -5345,4 +5346,5 @@ REGISTRY[`${B11CH03}:2`] = B11Ch03Sec2;
 REGISTRY[`${B11CH03}:3`] = B11Ch03Sec3;
 REGISTRY[`${B11CH03}:4`] = B11Ch03Sec4;
 REGISTRY[`${B11CH03}:5`] = B11Ch03Sec5;
+REGISTRY[`${B11CH03}:6`] = B11Ch03Sec6;
 /* ============================ end B11Ch03 ============================ */
