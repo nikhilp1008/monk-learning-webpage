@@ -115,7 +115,8 @@ registry key `` REGISTRY[`${B11CH04}:N`] = B11Ch04SecN; `` — appended at the e
 (append one line per finished section, in order)
 
 - [x] Sec 1 — Cell-level signature: cell-cluster diagram, animal vs plant/fungal/bacterial cell (wall-less vs rigid wall), consequence → movement, glycogen vs starch, SIGNATURE banner. Verified both langs, audits clean.
+- [x] Sec 2 — Movement/growth/control/reproduction: footprint trail + sessile sponge/coral/larva exception, growth graph (animal plateaus vs plant keeps climbing) as Act 1, ERASED at beat 5 and replaced with Act 2 (control flow ENVIRONMENT→ANIMAL→MUSCLES, reproduction chip, asexual footnote, SIGNATURE banner). Verified both langs, audits clean; spot-checked frames by eye.
 
 ## Current
 
-Subtopic 1 (Master Map, secs 1–10). Next: Sec 2.
+Subtopic 1 (Master Map, secs 1–10). Next: Sec 3.
