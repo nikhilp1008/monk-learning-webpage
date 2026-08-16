@@ -131,6 +131,24 @@ registry key `` REGISTRY[`${B11CH04}:N`] = B11Ch04SecN; `` — appended at the e
 
 - [x] Sec 1/2 retro-fix — applied the sibling-chapter (Ch5) `fill`-on-bare-`Draw` gotcha to this file's own Sec1/Sec2: confirmed by eye on the dev server that Sec1's two `fill={CREAM}` nucleus circles and Sec2's `fill={CREAM}` sessile-coral icon were visibly present at t=0, before their beat fired. Fixed both by wrapping in `Fade` (see Gotchas above). tsc clean, verify-scene PASS both langs for sec 1 and 2, t=0 re-screenshotted clean. Commit a626a3f8.
 
+- [x] Sec 7 — Development vocabulary: whole-board scaffold drawn at beat1 (3 row
+  captions × 6 empty def boxes: eggs/live-young, internal/external fertilisation,
+  direct/indirect; tall amber METAGENESIS box on the right, "the odd one"), then
+  each box fills in on its own beat (oviparous, viviparous [cartilaginous-fish
+  trap flagged amber], internal, external — one beat for both, direct [baby-circle
+  → arrow → same-shape-bigger-circle icon], indirect [egg → tadpole → frog icon
+  chain, shape changes color/size to sell metamorphosis], metagenesis [polyp ⇌
+  medusa icons + cyclic double-arrow, Obelia]), closing metamorphosis-vs-metagenesis
+  distinction line + SIGNATURE banner. All icons are stroke-only (no `fill`), by
+  design, to sidestep the Draw-fill-gating gotcha entirely rather than wrapping
+  each in Fade. tsc clean, verify-scene PASS both langs (frames=10, 0
+  overlaps/overflow/empty; one advisory "stall" at b1 that's a false positive —
+  manually confirmed by eye via dev-server screenshots at b1 that all 3 row
+  captions + all 7 box outlines DO render distinctly at that beat, in both
+  languages). FORCE-eyeballed all 9 beats end-to-end in both languages via
+  screenshots (scaffold, each filled box, metagenesis, closing banner) — clean,
+  no overlaps, reads well.
+
 ## Current
 
-Subtopic 1 (Master Map, secs 1–10). Next: Sec 7.
+Subtopic 1 (Master Map, secs 1–10). Next: Sec 8.
