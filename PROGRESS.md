@@ -178,6 +178,25 @@ registry key `` REGISTRY[`${B11CH04}:N`] = B11Ch04SecN; `` — appended at the e
   dev-server screenshots — reads very clearly, good reusable pattern for future
   worked-example sections.
 
+- [x] Sec 10 — Working the map, and the traps hidden in the vocabulary (closes
+  subtopic 1). ROADMAP row (beat1 draws Basis of Classification → Non-Chordata →
+  Chordata with connecting arrows; beat2 adds a 4th amber box, Master Revision —
+  Test Yourself). Then a 2×2 grid of 4 trap cards, each a ✗-misconception /
+  ✓-correction pair, filled one per beat: hermaphrodite≠asexual; mono/di
+  (bodies) ≠ internal/external (where gametes meet); ovi/vivi (where embryo
+  develops) ≠ direct/indirect (larva or not), reptile=ovi+direct vs frog=
+  ovi+indirect; metagenesis (Obelia) ≠ metamorphosis (tadpole). Closing pro-tip:
+  4 term→example mnemonic chips (Budding–Hydra, Regeneration–Planaria,
+  Metagenesis–Obelia, Bipinnaria–Asterias) + SIGNATURE banner. tsc clean,
+  verify-scene PASS both langs (frames=9, 0 overlaps/overflow/empty). Same
+  advisory "stall" at b1 as Sec7/Sec8 (bare Draw box outlines, not Fade-wrapped,
+  don't register as new `g.sc-fade` groups in the stall heuristic) — confirmed
+  by eye via dev-server screenshots that the roadmap row DOES render correctly
+  at that beat. Eyeballed the full timeline (roadmap, all 4 trap cards, pro-tip
+  + signature) — clean, no overlaps, reads well. **Subtopic 1 (Master Map of the
+  Animal Kingdom, secs 1–10) is now fully done.**
+
 ## Current
 
-Subtopic 1 (Master Map, secs 1–10). Next: Sec 10 (closes out subtopic 1).
+Subtopic 1 (Master Map, secs 1–10) is complete. Next: Sec 11, subtopic 2
+(Basis of Classification, secs 11–27) starts here.
