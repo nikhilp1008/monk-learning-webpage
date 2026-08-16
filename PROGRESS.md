@@ -792,8 +792,21 @@ follow.
   most diagram-dense section so far, renders cleanly; dimmed bullseye
   reads as a faint "ghost" under the phage, not a defect.
 
+- **Sec 52** — "The discovery story": a 3-scientist timeline (mirrors
+  Sec2's proven pattern) — bare timeline arrow drawn first, then
+  IVANOWSKY (GREEN, tiny agent from tobacco / passed bacteria-stopping
+  filters) --arrow--> BEIJERINCK (AMBER_DARK, tobacco extract infects
+  healthy plants / named it Contagium vivum fluidum) --arrow--> STANLEY
+  (INK, viruses can be CRYSTALLISED / TMV first virus purified), each
+  card landing with its own beat. Closing: why Stanley's result mattered
+  conceptually (callback to Sec48's half-alive idea), the "virus" =
+  Latin for poison/venom etymology, and the I-B-S mnemonic stamp. VERDICT
+  PASS both languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked
+  via FORCE_SHOTS, both languages, all 9 frames — clean; the 3-card
+  timeline reads immediately as a memorisable sequence.
+
 ## Current
-Sec 51 done, committed, pushed. Next: Sec 52 — "The discovery story"
+Sec 52 done, committed, pushed. Next: Sec 53 — "DNA or RNA, never both"
 (subtopic 5 continues).
 
 ## Note to self on process
