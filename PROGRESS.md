@@ -773,9 +773,28 @@ follow.
   the mid-build b1 frame specifically — table renders correctly, no
   overshoot on the amber emphasis boxes.
 
+- **Sec 51** — "Virion, capsid, capsomeres": a genuine bullseye diagram
+  (capsid ring around a nucleic-acid core, 8 capsomere dots ringing the
+  rim, one dot leadered out to "= capsomeres (repeating subunits)") lands
+  first, dashed divider splits the board, then a TMV rod (coiled-RNA wave
+  + vertical capsomere ticks, labelled "capsomeres arranged HELICALLY")
+  lands on the right — the two-architectures beat. Later, the bullseye
+  dims (`dim={beat>=7}`, same technique as Sec3's Plantae box) and a
+  bacteriophage anatomy (hexagon head / collar / sheath-tail / fanned
+  tail fibres, each part labelled) is drawn directly in its place —
+  verify-scene explicitly excludes dimmed (≤0.5 opacity) elements from
+  overlap checks, so this reuse is safe by the tool's own rule, not just
+  eyeballed. Closing sequence chip: HEAD → COLLAR → SHEATH/TAIL → TAIL
+  FIBRES. One advisory stall (English b7 only — phage anatomy's Fade
+  delays land after the verifier's 1s snapshot; confirmed present by eye
+  in the final frame). VERDICT PASS both languages, 0 overlaps/overflow/
+  empty. Eye-checked via FORCE_SHOTS, both languages, all 9 frames — the
+  most diagram-dense section so far, renders cleanly; dimmed bullseye
+  reads as a faint "ghost" under the phage, not a defect.
+
 ## Current
-Sec 50 done, committed, pushed. Next: Sec 51 — "Virion, capsid,
-capsomeres" (subtopic 5 continues).
+Sec 51 done, committed, pushed. Next: Sec 52 — "The discovery story"
+(subtopic 5 continues).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
