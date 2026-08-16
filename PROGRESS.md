@@ -819,9 +819,43 @@ follow.
   frames — clean, fits comfortably with room to spare despite the fact
   density.
 
+- **Sec 54** — "Viroids and prions in detail": two outline cards, never
+  sharing x-range (VIROID amber-stroked left, PRION ink-stroked right).
+  VIROID: naked-RNA squiggle icon, "naked RNA — no coat at all", discovery
+  facts (T. O. Diener, 1971 · low molecular weight), the memory-hook
+  disease chip (Potato spindle tuber disease), the missing-coat contrast
+  + "harder to inactivate" consequence. PRION: normal-fold (green wavy)
+  -> arrow -> mis-folded (red jagged) icon pair, "protein only — NO
+  nucleic acid", how it spreads (forces normal copies to mis-fold, reuses
+  the "spreads like a rumour" narration phrase directly), the surprise
+  (infectious without any genes), closing RED disease chip (mad-cow/BSE,
+  CJD, kuru — fatal, no cure). VERDICT PASS both languages, 0
+  overlaps/overflow/empty, 0 stalls. Eye-checked via FORCE_SHOTS, both
+  languages, all 9 frames — clean; the fold/mis-fold icon pair reads
+  immediately as "same shape, different fold".
+
 ## Current
-Sec 53 done, committed, pushed. Next: Sec 54 — "Viroids and prions in
-detail" (subtopic 5 continues).
+Sec 54 done, committed, pushed. Next: Sec 55 — "Lichens: two organisms
+living as one" (subtopic 5 continues).
+
+## Environment note (2026-08-16)
+Mid-Sec54, the original worktree clone
+(`.../scratchpad/monk-learning-webpage`) was found switched to branch
+`premium-board-bio4` with unrelated merge commits into `main` (bio1 +
+phy8-14) that this session did not make — some other process was cycling
+branches in that same directory, which is not actually exclusive/isolated
+as assumed. Verified no data loss: all commits through Sec53 were already
+pushed to `origin/premium-board-bio2` (confirmed via `git log
+origin/premium-board-bio2`). Recovered the in-progress Sec54 file (still
+present on disk, untracked) and re-cloned into a new, uniquely-named
+directory — `.../scratchpad/monk-learning-webpage-bio2-safe` — checked out
+`premium-board-bio2` there (verified 53 scene files + matching commit
+log), and continued exclusively from that clone from Sec54 onward, dev
+server on port 3901. If a future session picks this up, prefer the
+`-bio2-safe` clone if both exist; check `git log --oneline -3` and
+`git branch --show-current` before trusting either one, since the
+original directory may still be contended by whatever external process
+was cycling it.
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
