@@ -62,7 +62,11 @@ exists on `main` yet, despite the kickoff prompt mentioning it — noted, not bl
 - Sec 1 — "Two departments: the root system and the shoot system" — plant body
   as a 2-box diagram (underground/above-ground), root+shoot facts, job chips,
   converge to "plant body axis", closing teaser (thorn/tendril/potato). PASS.
+- Sec 2 — "Root versus stem: the defining checklist" — two-column checklist
+  (ROOT | STEM) built row by row: direction, colour, decisive 0/4 vs 4/4
+  nodes/internodes/leaves/buds, root hairs/origin; whisper verdict crosses out
+  a depth-ruler icon ("features decide, not depth"). PASS.
 
 ## Current
 
-Starting Section 2.
+Starting Section 3.
