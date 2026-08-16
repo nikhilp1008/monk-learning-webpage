@@ -71,7 +71,7 @@ export default function DoubtsPage() {
     if (filter !== "All" && d.subject !== filter) return false;
     if (query) {
       const q = query.toLowerCase();
-      const hay = `${d.question_text || ""} ${d.concept || ""} ${d.chapter || ""} ${d.subject || ""}`.toLowerCase();
+      const hay = `${d.stem || d.question_text || ""} ${d.concept || ""} ${d.chapter || ""} ${d.subject || ""}`.toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;
@@ -152,14 +152,27 @@ export default function DoubtsPage() {
                     {d.subject} · {d.chapter} · {dayLabel(d.created_at)}
                   </div>
                   <p className="font-bold text-[0.96rem] text-ink mt-0.5 line-clamp-2">
-                    <MathText content={d.question_text} />
+                    {/* stem is the clean question alone, without its options run
+                        into the same string — question_text is the fallback for
+                        doubts saved before that column existed. */}
+                    <MathText content={d.stem || d.question_text} />
                   </p>
-                  {d.solved && (
+                  {d.status === "solved" && (
                     <span className="inline-flex items-center gap-1 text-[0.72rem] font-bold text-green-badge mt-1.5">
                       <svg viewBox="0 0 24 24" width={12} height={12} fill="none" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M20 6 9 17l-5-5" />
                       </svg>
                       Solved
+                    </span>
+                  )}
+                  {d.status === "unsure" && (
+                    <span className="inline-flex items-center gap-1 text-[0.72rem] font-bold text-orange-dark mt-1.5">
+                      Unsure — working shown
+                    </span>
+                  )}
+                  {(d.status === "failed" || d.status === "illegible") && (
+                    <span className="inline-flex items-center gap-1 text-[0.72rem] font-bold text-red-dark mt-1.5">
+                      Not solved
                     </span>
                   )}
                 </div>

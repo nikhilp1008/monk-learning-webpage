@@ -336,6 +336,8 @@ export type Database = {
           question_type: string | null
           printed_answer: string | null
           option_labels: Json
+          stem: string | null
+          options: Json
         }
         Insert: {
           id?: string
@@ -364,6 +366,8 @@ export type Database = {
           question_type?: string | null
           printed_answer?: string | null
           option_labels: Json
+          stem?: string | null
+          options: Json
         }
         Update: {
           id?: string
@@ -392,6 +396,8 @@ export type Database = {
           question_type?: string | null
           printed_answer?: string | null
           option_labels: Json
+          stem?: string | null
+          options: Json
         }
         Relationships: []
       }
