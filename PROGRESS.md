@@ -112,6 +112,16 @@ fill MUST be Fade-wrapped.**
   opposites line with a double-headed arrow, verdict on adventitious as a
   negative definition. PASS both languages, 0 stalls. Spot-checked clean.
 
+- Sec 7 — "The four zones of the root tip" — vertical root-axis diagram
+  built bottom-up (tip first, matching "reasoning tip to base"): ROOT CAP
+  (dome icon) → MERISTEMATIC ZONE (dividing-cell dots) → ZONE OF ELONGATION
+  (stretch arrows) → ZONE OF MATURATION (root-hair ticks), each with a
+  colour-coded label+fact beside it; ring around the root-hair ticks calls
+  out the "working zone" (absorption + lateral roots); DIVISION→ELONGATION→
+  MATURATION logic-chain chips; whisper verdict "root hairs = NEVER at the
+  very tip". PASS both languages, 0 stalls. Spot-checked with FORCE_SHOTS —
+  clean composition, nothing overlaps, both languages fit.
+
 ## Current
 
-Starting Section 7.
+Starting Section 8.
