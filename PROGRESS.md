@@ -59,6 +59,10 @@ exists on `main` yet, despite the kickoff prompt mentioning it — noted, not bl
 
 (append one line per finished section, in order)
 
+- Sec 1 — "Two departments: the root system and the shoot system" — plant body
+  as a 2-box diagram (underground/above-ground), root+shoot facts, job chips,
+  converge to "plant body axis", closing teaser (thorn/tendril/potato). PASS.
+
 ## Current
 
-Setup complete. Starting Section 1.
+Starting Section 2.
