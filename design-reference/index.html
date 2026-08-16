@@ -1437,7 +1437,7 @@ button{font-family:inherit}
             <div role="button" onClick="{{ setTeacherVedha }}" style="{{ vCardS }}">
               <div style="display:flex;align-items:center;gap:10px">
                 <span style="width:40px;height:40px;border-radius:50%;background:#EEA31F;display:grid;place-items:center;flex:none"><b style="color:#241a06;font-weight:800;font-size:1.05rem">V</b></span>
-                <span style="flex:1;min-width:0"><b style="display:block;font-weight:700;font-size:.98rem">Vedha</b><span style="display:block;font-weight:800;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#9C988C">Female voice</span></span>
+                <span style="flex:1;min-width:0"><b style="display:block;font-weight:700;font-size:.98rem">Veda</b><span style="display:block;font-weight:800;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#9C988C">Female voice</span></span>
                 <sc-if value="{{ vOn }}" hint-placeholder-val="{{ false }}"><span style="width:20px;height:20px;border-radius:50%;background:#EEA31F;display:grid;place-items:center;flex:none"><svg viewBox="0 0 16 16" width="10" height="10" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="#241a06" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></sc-if>
               </div>
               <span style="display:flex;flex-wrap:wrap;gap:5px;margin-top:10px">
@@ -2276,7 +2276,7 @@ class Component extends DCLogic {
     document.addEventListener('keydown', this._fsHandler);
   }
 
-  teacherName() { return this.state.teacher === 'vedha' ? 'Vedha' : 'Drona'; }
+  teacherName() { return this.state.teacher === 'vedha' ? 'Veda' : 'Drona'; }
   setTeacher(t) { try { localStorage.setItem('ml_teacher', t); } catch (e) {} this.setState({ teacher: t }); }
   stopVoice() { try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) {} if (this._pvT) { clearTimeout(this._pvT); this._pvT = null; } }
   previewVoice(t) {
@@ -2290,7 +2290,7 @@ class Component extends DCLogic {
       return;
     }
     const line = t === 'vedha'
-      ? 'Namaste! I am Vedha, your teacher. Ready when you are — we will take it one clear step at a time.'
+      ? 'Namaste! I am Veda, your teacher. Ready when you are — we will take it one clear step at a time.'
       : 'Namaste! I am Drona, your teacher. Chalo, let us pick up where you left off and finish it properly.';
     const u = new SpeechSynthesisUtterance(line);
     const vs = synth.getVoices() || [];
