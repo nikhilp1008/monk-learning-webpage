@@ -1,5 +1,7 @@
 "use client";
 
+import { supabase } from "@/lib/supabase";
+
 export interface VoiceClientOptions {
   sessionId: string;
   wsUrl?: string;
@@ -158,20 +160,37 @@ export class DronaVoiceClient {
   public async connect(): Promise<void> {
     this.manualDisconnect = false;
     return new Promise((resolve, reject) => {
-      try {
-        this.openSocket(resolve);
-      } catch (err) {
-        reject(err);
-      }
+      this.openSocket(resolve).catch(reject);
     });
+  }
+
+  /** Real Supabase access token for this student, or the E2E mock the test
+   * harness sets. The server now verifies this on every connection (it used
+   * to accept any value, including no token at all) and rejects a token that
+   * doesn't belong to the session's own owner — so this must be the same
+   * token backing every other authenticated call, not a placeholder. */
+  private async getWsToken(): Promise<string> {
+    if (typeof window !== "undefined" && (window as any).__E2E_MOCK_TOKEN__) {
+      return (window as any).__E2E_MOCK_TOKEN__;
+    }
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+    if (!session?.access_token) {
+      throw new Error("No authentication session found");
+    }
+    return session.access_token;
   }
 
   /** Opens the WebSocket. `onFirstOpen` (only passed by connect()'s own Promise)
    * fires once, on whichever open succeeds first — the initial one or a retry. */
-  private openSocket(onFirstOpen?: () => void): void {
+  private async openSocket(onFirstOpen?: () => void): Promise<void> {
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
     const wsBase = baseUrl.replace(/^http/, "ws");
-    const token = (typeof window !== "undefined" && (window as any).__E2E_MOCK_TOKEN__) || "e2e_mock_token_123";
+    // Fetched fresh on every open/reopen, not cached on the instance: a
+    // reconnect can happen well over an hour into a session, after the
+    // token from connect()-time has expired.
+    const token = await this.getWsToken();
     // Pass ?stream_tts through from the page URL, so streamed-vs-whole
     // sentence audio can be A/B'd on the deployed app without a rebuild.
     // Whole-sentence is the server default now; "1" opts back into streamed
@@ -258,7 +277,12 @@ export class DronaVoiceClient {
     console.log(`[VOICE WS RECONNECT] Attempt ${this.reconnectAttempts}/${this.maxReconnectAttempts} in ${delayMs}ms`);
     this.reconnectTimer = setTimeout(() => {
       this.reconnectTimer = null;
-      if (!this.manualDisconnect) this.openSocket();
+      if (!this.manualDisconnect) {
+        this.openSocket().catch((err) => {
+          console.error("[VOICE WS RECONNECT] Failed to reopen:", err);
+          this.options.onError?.(err instanceof Error ? err : new Error(String(err)));
+        });
+      }
     }, delayMs);
   }
 
