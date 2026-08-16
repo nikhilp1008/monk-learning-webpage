@@ -66,7 +66,13 @@ exists on `main` yet, despite the kickoff prompt mentioning it — noted, not bl
   (ROOT | STEM) built row by row: direction, colour, decisive 0/4 vs 4/4
   nodes/internodes/leaves/buds, root hairs/origin; whisper verdict crosses out
   a depth-ruler icon ("features decide, not depth"). PASS.
+- Sec 3 — "Nodes, internodes and buds: the railway analogy" — stem as a
+  railway line with 3 station dots, a leaf boarding at a node (ringed),
+  internode track highlighted, terminal/axillary bud icons, glossary lines
+  accumulate left while a root (no stations, crossed) grows on the right;
+  verdict chip; closing potato (eyes=buds→stem) vs sweet potato (no buds→
+  root). PASS both languages; spot-checked with FORCE_SHOTS — clean, legible.
 
 ## Current
 
-Starting Section 3.
+Starting Section 4.
