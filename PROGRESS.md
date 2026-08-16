@@ -149,6 +149,22 @@ registry key `` REGISTRY[`${B11CH04}:N`] = B11Ch04SecN; `` — appended at the e
   screenshots (scaffold, each filled box, metagenesis, closing banner) — clean,
   no overlaps, reads well.
 
+- [x] Sec 8 — The canonical larval forms: flashcard-drill scaffold (beat1 draws
+  two "LARVA → GROUP" column headers + ruled underlines), then two columns of 3
+  rows each fill in on their own beats — left: planula→Cnidaria, trochophore→
+  Annelida & Mollusca, veliger→Mollusca ONLY; right: bipinnaria→Echinodermata
+  (· Asterias), tadpole→Amphibia, ammocoete→Cyclostomata (· Petromyzon). Beat6
+  rings the trochophore row (red) + a red trap callout ("shared by 2 phyla, need
+  a 2nd clue"). Closing beat ties back to Sec7 (named larva = indirect
+  development) + SIGNATURE banner. tsc clean, verify-scene PASS both langs
+  (frames=9, 0 overlaps/overflow/empty, no stalls). Note: verify-scene.mjs's own
+  Playwright browser timed out twice in a row on first attempts for this section
+  (page itself loaded fine per curl/manual browser check both times — looked like
+  local flakiness, not a scene defect); third attempt passed clean. Eyeballed the
+  full list, the trap ring+callout, and the closing banner via dev-server
+  screenshots in Hinglish (matches structurally in English — verify-scene
+  exercises both languages independently and both passed with 0 overflow).
+
 ## Current
 
-Subtopic 1 (Master Map, secs 1–10). Next: Sec 8.
+Subtopic 1 (Master Map, secs 1–10). Next: Sec 9.
