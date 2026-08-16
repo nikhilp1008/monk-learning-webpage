@@ -122,6 +122,8 @@ registry key `` REGISTRY[`${B11CH04}:N`] = B11Ch04SecN; `` — appended at the e
 - Do NOT wrap a group in a manual `<g style={{opacity}}>` to "erase" superseded content — the verifier's visibility check only reads opacity from the nearest ancestor `g.sc-fade` (i.e. from `Fade`'s own `on` prop), so an outer inline-style wrapper is invisible to it (silent overlap bug, caught in Sec 2). To erase a whole beat-range's content, AND the erase condition directly into each element's own `on` prop (e.g. `on={act1 && beat >= k}` where `act1 = beat >= 1 && beat < 5`), not into a wrapping element.
 - `Draw` has no `dashed` prop (only `Chip` does). For a dashed line, use a plain `<path strokeDasharray="…">` inside `Fade` (Sec1's dashed divider is the precedent) instead of passing `dashed` to `Draw`.
 
+- [x] Sec 4 — The ten non-chordate phyla as a 4-column table (PHYLUM/GRADE/SIGNATURE/EXAMPLE), amber rung-tick per row, 2 rows drawn per beat across beats 2–6, closing line "not ONE ever develops a notochord" + SIGNATURE banner. Verified both langs, audits clean; spot-checked — clean readable table, good reusable pattern for future table sections.
+
 ## Current
 
-Subtopic 1 (Master Map, secs 1–10). Next: Sec 4.
+Subtopic 1 (Master Map, secs 1–10). Next: Sec 5.
