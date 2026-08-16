@@ -5331,6 +5331,7 @@ import B11Ch05Sec1 from "./B11Ch05Sec1";
 import B11Ch05Sec2 from "./B11Ch05Sec2";
 import B11Ch05Sec3 from "./B11Ch05Sec3";
 import B11Ch05Sec4 from "./B11Ch05Sec4";
+import B11Ch05Sec5 from "./B11Ch05Sec5";
 
 const B11CH05 = "ca9c37dd-ac72-50d6-96bf-fb3da5aba16e"; // Class 11 · Biology · Morphology of Flowering Plants
 
@@ -5338,4 +5339,5 @@ REGISTRY[`${B11CH05}:1`] = B11Ch05Sec1;
 REGISTRY[`${B11CH05}:2`] = B11Ch05Sec2;
 REGISTRY[`${B11CH05}:3`] = B11Ch05Sec3;
 REGISTRY[`${B11CH05}:4`] = B11Ch05Sec4;
+REGISTRY[`${B11CH05}:5`] = B11Ch05Sec5;
 /* ============================ end B11Ch05 ============================ */

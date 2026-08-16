@@ -95,6 +95,16 @@ Re-verified Sec2/3/4 — all still PASS — and re-confirmed by eye that t=0 and
 early-beat frames are now clean. **Going forward: any Draw with a non-"none"
 fill MUST be Fade-wrapped.**
 
+- Sec 5 — "Where morphology stops and anatomy begins" — pitfalls/limits
+  section: eye icon + "MORPHOLOGY = what you can see" definition, LIMIT 1 (not
+  anatomy, crossed-out internal-tissue chip, trigger-word list), LIMIT 2
+  (underground ≠ root; ginger/turmeric/potato are underground stems), LIMIT 3
+  (typical-case rules, adventitious-root exception), verdict ("reason from
+  features, never location"). PASS both languages, 0 stalls. Spot-check caught
+  a cramped gap between the b3 trigger-chip and the b4 heading (passed the
+  assertions, read crowded by eye) — widened b4–b7 spacing by 28px, re-verified
+  clean.
+
 ## Current
 
-Starting Section 5.
+Starting Section 6.
