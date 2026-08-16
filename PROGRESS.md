@@ -715,9 +715,28 @@ follow.
   chips, tiebreaker rows read clearly. **Subtopic 4 (secs 36-47) complete
   — 47/59 sections done.**
 
+- **Sec 48** — opens subtopic 5 (Viruses, Viroids, Prions & Lichens):
+  "stepping off the edge of the cellular world" — acellular fact (-> no
+  place in Whittaker's 5 kingdoms), living/non-living borderland (no wall,
+  no nucleus to check), then the section's central metaphor as a genuine
+  split-screen: LEFT "OUTSIDE a host" card (unplugged pen-drive icon, no
+  movement/metabolism/reproduction, CRYSTALLISED-and-shelved red emphasis,
+  virus definition, "behaves NON-LIVING" in MUTED) --plug it in--> RIGHT
+  "INSIDE a host cell" card (plugged pen-drive icon, hijacks machinery,
+  "= obligate intracellular parasite" in GREEN, "behaves LIVING" in
+  GREEN), shared-fact banner (no ribosomes/enzymes/metabolism of their
+  own), closing verdict stamp "NON-LIVING outside a host -> LIVING inside
+  one" + exam-priority subline (heredity yes, self-sufficient metabolism
+  no). Colour-codes the living/non-living duality itself (MUTED=inert,
+  GREEN=living) rather than just using red/green for right/wrong. VERDICT
+  PASS both languages, 0 overlaps/overflow/empty, 0 stalls. Eye-checked
+  via FORCE_SHOTS (first section of a new subtopic), both languages, all
+  9 frames — clean; both pen-drive cards render symmetrically, arrow
+  lands cleanly in the gap between them.
+
 ## Current
-Sec 47 done, committed, pushed. Next: Sec 48 — opens subtopic 5
-(Viruses, Viroids, Prions & Lichens).
+Sec 48 done, committed, pushed. Next: Sec 49 — "The strip-down ladder"
+(subtopic 5 continues).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
