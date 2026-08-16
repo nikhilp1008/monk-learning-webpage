@@ -150,6 +150,8 @@ for every position, zero mismatches. `_full_merged.json` cannot match at all
 
 - Sec 4 — Numerical, cyto- and chemotaxonomy: 3 titled panels (NUMERICAL taxonomy / CYTOTAXONOMY / CHEMOTAXONOMY, same column x's as Sec3's wiring diagram) revealed empty first, then each panel's evidence-definition fills in its own beat → single compressed prefix-decoder line under all three → high-value "advantage: objectivity" line + underline inside the NUMERICAL panel → closing banner (modern layers feed objective data into the classical systems, don't replace them). Verified both langs, verify-scene.mjs fully clean (0 overlap/overflow/empty, no stalls); spot-checked with FORCE_SHOTS.
 
+- Sec 5 — Artificial vs natural, and the match-the-column: first worked_examples section, two full questions with a hard erase between them (`q1On = beat<6` gated into every Q1 element's own `on` prop, per the Ch04 gotcha). Q1 (board 2-marker): question line → instruction-parse captions (distinguish=CONTRAST, one-proponent-each=name COMPULSORY) → shared row-axis table (CHARACTERS/PROPONENT/CONSEQUENCE × ARTIFICIAL/NATURAL) filled column by column, consequences colour-mirrored red/green → closing rule. Q2 (entrance-level match-the-column): two given-order lists (A/B/C vs 1/2/3, deliberately NOT row-aligned) → three curved crossing connectors drawn one at a time (A-3, B-1, C-2) → answer chip + anchor-and-eliminate technique note. Verified both langs, verify-scene.mjs clean (0 overlap/overflow/empty; one advisory beat-6 stall — spot-checked, Q1 genuinely vacates and Q2's ~8 fresh elements render correctly, same heuristic quirk as Sec2's beat-1 stall). The q1On erase-gate + crossing-connector patterns are reusable for every future worked_examples section with a match-the-column.
+
 ## Current
 
-Sec 5 — Artificial vs natural, and the match-the-column — next.
+Sec 6 — Naming the approach, and the Linnaeus assertion–reason — next.
