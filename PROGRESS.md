@@ -122,6 +122,18 @@ fill MUST be Fade-wrapped.**
   very tip". PASS both languages, 0 stalls. Spot-checked with FORCE_SHOTS —
   clean composition, nothing overlaps, both languages fit.
 
+- Sec 8 — "Root modifications: a root doing another job" — 2×2 grid
+  (STORAGE | PROP ROOTS / STILT ROOTS | PNEUMATOPHORES), each cell a small
+  schematic icon + colour-coded label + fact + example, built up beat by
+  beat (STORAGE gets a beat-2 adventitious/sweet-potato addon, PNEUMATOPHORE
+  a beat-6 mangrove-trio addon); closes with a "keep the triplet" mnemonic
+  (STILT ROOT→SUPPORT→SUGARCANE chip chain) + a red caution line. PASS both
+  languages, 0 stalls. FORCE_SHOTS spot-check caught a real defect the
+  automated gate doesn't cover (text-vs-stroke, not text-vs-text): the tap-
+  root icon's tapered tip ran through the "tap root swells" fact line —
+  shrank the icon and moved the adventitious-cluster icon + both fact
+  baselines down for clearance; re-verified clean.
+
 ## Current
 
-Starting Section 8.
+Starting Section 9.
