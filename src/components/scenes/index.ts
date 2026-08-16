@@ -5326,3 +5326,15 @@ REGISTRY[`${B11CH01}:23`] = B11Ch01Sec23;
 REGISTRY[`${B11CH01}:24`] = B11Ch01Sec24;
 REGISTRY[`${B11CH01}:25`] = B11Ch01Sec25;
 /* ============================ end B11Ch01 ============================ */
+
+/* ================================================================== */
+/* B11Ch03 — Plant Kingdom (branch premium-board-bio3)                 */
+/* Registered via REGISTRY[key] = Component so this block stays        */
+/* self-contained at the end of the file; do not edit blocks above.    */
+/* ================================================================== */
+import B11Ch03Sec1 from "./B11Ch03Sec1";
+
+const B11CH03 = "1380c5e5-1556-5626-97fa-8237c6cb021b"; // Class 11 · Biology · Plant Kingdom
+
+REGISTRY[`${B11CH03}:1`] = B11Ch03Sec1;
+/* ============================ end B11Ch03 ============================ */

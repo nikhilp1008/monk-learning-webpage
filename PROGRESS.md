@@ -143,8 +143,8 @@ for every position, zero mismatches. `_full_merged.json` cannot match at all
 
 ## Done log (append one line per finished, PASS + committed + pushed section)
 
-(none yet)
+- Sec 1 — Why classification needs a basis: music-library warm-up analogy (colour/features/lineage chips, erased once the diagram starts) → 3-step ascending staircase (gross form / anatomy→chemicals / evolutionary descent) + direction-of-travel arrow → ARTIFICIAL/NATURAL/PHYLOGENETIC chips mapped to steps → flower-colour caution cross-out → NATURAL∩PHYLOGENETIC overlap note → provisional-classification dashed chip closer.
 
 ## Current
 
-Setup complete. Starting section 1.
+Sec 2 — next.
