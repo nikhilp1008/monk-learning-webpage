@@ -134,6 +134,22 @@ fill MUST be Fade-wrapped.**
   shrank the icon and moved the adventitious-cluster icon + both fact
   baselines down for clearance; re-verified clean.
 
+- Sec 9 — "Stem modifications: underground and subaerial" — two families
+  stacked top/bottom, no dividers. Top: underground family as a single row
+  of 4 small distinct icons (RHIZOME/TUBER/CORM/BULB) below a ground line,
+  jobs triplet (STORAGE/PERENNATION/VEGETATIVE PROPAGATION) chips, examples
+  line, "still a STEM" verdict chip (nodes/scale-leaves/buds). Bottom:
+  subaerial family — RUNNER/STOLON (arc from base down to a rooting tip;
+  mint, jasmine) and OFFSET (aquatic version — water line, one thick
+  internode, leaf rosette + root tuft; Pistia, Eichhornia). Narration gives
+  turmeric/zaminkand/Colocasia as further underground examples WITHOUT
+  pairing each to corm vs bulb specifically — deliberately listed as "more
+  of the family" rather than inventing a mapping. PASS both languages, 0
+  stalls on first verify. FORCE_SHOTS spot-check caught one text-vs-icon
+  collision (the "OFFSET" label sitting on the drawn root-tuft lines,
+  invisible to the automated text-vs-text check) — moved the label
+  above-right of the icon; re-verified clean.
+
 ## Current
 
-Starting Section 9.
+Starting Section 10.
