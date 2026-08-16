@@ -114,6 +114,8 @@ registry key `` REGISTRY[`${B11CH04}:N`] = B11Ch04SecN; `` — appended at the e
 
 (append one line per finished section, in order)
 
+- [x] Sec 1 — Cell-level signature: cell-cluster diagram, animal vs plant/fungal/bacterial cell (wall-less vs rigid wall), consequence → movement, glycogen vs starch, SIGNATURE banner. Verified both langs, audits clean.
+
 ## Current
 
-Setup complete, data verified. Starting Section 1.
+Subtopic 1 (Master Map, secs 1–10). Next: Sec 2.

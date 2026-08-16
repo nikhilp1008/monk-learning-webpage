@@ -5326,3 +5326,10 @@ REGISTRY[`${B11CH01}:23`] = B11Ch01Sec23;
 REGISTRY[`${B11CH01}:24`] = B11Ch01Sec24;
 REGISTRY[`${B11CH01}:25`] = B11Ch01Sec25;
 /* ============================ end B11Ch01 ============================ */
+
+import B11Ch04Sec1 from "./B11Ch04Sec1";
+
+const B11CH04 = "f6bee128-d309-5443-b6f2-e9914769623d"; // Class 11 · Biology · Animal Kingdom
+
+REGISTRY[`${B11CH04}:1`] = B11Ch04Sec1;
+/* ============================ end B11Ch04 ============================ */
