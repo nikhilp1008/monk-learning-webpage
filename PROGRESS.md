@@ -165,6 +165,19 @@ registry key `` REGISTRY[`${B11CH04}:N`] = B11Ch04SecN; `` — appended at the e
   screenshots in Hinglish (matches structurally in English — verify-scene
   exercises both languages independently and both passed with 0 overflow).
 
+- [x] Sec 9 — Worked example: reading a life-history fingerprint. 4 given-clue
+  chips (marine · sexes separate · fuse outside water · → bipinnaria larva) up
+  top, then a narrowing FUNNEL of 4 stacked bars (ALL ANIMALS → filter1 dioecious
+  [amber, deletes hermaphrodite groups] → filter2 external fertilisation [amber,
+  narrows but doesn't decide] → bipinnaria→Echinodermata [GREEN, deciding]) drawn
+  as empty dashed slots at the scaffold beat then filled/recolored one at a time.
+  Bonus step (larva → indirect development), green ring on the deciding band +
+  answer line, closing consistency check + SIGNATURE. tsc clean, verify-scene
+  PASS both langs on the first attempt (frames=10, 0 overlaps/overflow/empty, no
+  stalls). Eyeballed the funnel narrowing and the full closing stack via
+  dev-server screenshots — reads very clearly, good reusable pattern for future
+  worked-example sections.
+
 ## Current
 
-Subtopic 1 (Master Map, secs 1–10). Next: Sec 9.
+Subtopic 1 (Master Map, secs 1–10). Next: Sec 10 (closes out subtopic 1).

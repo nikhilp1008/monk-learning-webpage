@@ -5335,6 +5335,7 @@ import B11Ch04Sec5 from "./B11Ch04Sec5";
 import B11Ch04Sec6 from "./B11Ch04Sec6";
 import B11Ch04Sec7 from "./B11Ch04Sec7";
 import B11Ch04Sec8 from "./B11Ch04Sec8";
+import B11Ch04Sec9 from "./B11Ch04Sec9";
 
 const B11CH04 = "f6bee128-d309-5443-b6f2-e9914769623d"; // Class 11 · Biology · Animal Kingdom
 
@@ -5346,4 +5347,5 @@ REGISTRY[`${B11CH04}:5`] = B11Ch04Sec5;
 REGISTRY[`${B11CH04}:6`] = B11Ch04Sec6;
 REGISTRY[`${B11CH04}:7`] = B11Ch04Sec7;
 REGISTRY[`${B11CH04}:8`] = B11Ch04Sec8;
+REGISTRY[`${B11CH04}:9`] = B11Ch04Sec9;
 /* ============================ end B11Ch04 ============================ */
