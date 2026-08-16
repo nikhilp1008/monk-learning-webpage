@@ -126,6 +126,8 @@ registry key `` REGISTRY[`${B11CH04}:N`] = B11Ch04SecN; `` — appended at the e
 
 - [x] Sec 5 — Reading the right branch: full Chordata tree — CHORDATA root → cranium? → PROTOCHORDATA (Urochordata/Ascidia, Cephalochordata/Branchiostoma) vs VERTEBRATA → jaws? → AGNATHA (Cyclostomata/Petromyzon) vs GNATHOSTOMATA → PISCES (Chondrichthyes, Osteichthyes) + TETRAPODA (Amphibia, Reptilia, Aves, Mammalia). 9 leaf taxa across the full canvas width, nothing erased. Verified both langs, audits clean; caught+fixed a title-overflow bug (Kalam ascender needs baseline y ≥ ~1.3×size + 30) before it passed. Spot-checked — clean complete tree.
 
+- [x] Sec 6 — Reproduction vocabulary: ASEXUAL (left, budding + fragmentation cards) vs SEXUAL (right, dashed divider between), hermaphrodite/mono def+list vs dioecious/di def+list, closing mono/di house pictograms + SIGNATURE banner. Verified both langs, audits clean; spot-checked.
+
 ## Current
 
-Subtopic 1 (Master Map, secs 1–10). Next: Sec 6.
+Subtopic 1 (Master Map, secs 1–10). Next: Sec 7.
