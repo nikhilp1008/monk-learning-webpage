@@ -116,7 +116,12 @@ registry key `` REGISTRY[`${B11CH04}:N`] = B11Ch04SecN; `` — appended at the e
 
 - [x] Sec 1 — Cell-level signature: cell-cluster diagram, animal vs plant/fungal/bacterial cell (wall-less vs rigid wall), consequence → movement, glycogen vs starch, SIGNATURE banner. Verified both langs, audits clean.
 - [x] Sec 2 — Movement/growth/control/reproduction: footprint trail + sessile sponge/coral/larva exception, growth graph (animal plateaus vs plant keeps climbing) as Act 1, ERASED at beat 5 and replaced with Act 2 (control flow ENVIRONMENT→ANIMAL→MUSCLES, reproduction chip, asexual footnote, SIGNATURE banner). Verified both langs, audits clean; spot-checked frames by eye.
+- [x] Sec 3 — The master map: full 3-level cascading decision tree (ANIMALIA → notochord? → NON-CHORDATA/CHORDATA → cranium? → PROTOCHORDATA/VERTEBRATA → jaws? → AGNATHA/GNATHOSTOMATA), accumulates across all 8 beats (nothing erased — this IS the chapter map), SIGNATURE banner. Verified both langs, audits clean; spot-checked frames by eye — reads as a clean, complete dichotomous key.
+
+## Gotchas learned (for future sections in this file)
+- Do NOT wrap a group in a manual `<g style={{opacity}}>` to "erase" superseded content — the verifier's visibility check only reads opacity from the nearest ancestor `g.sc-fade` (i.e. from `Fade`'s own `on` prop), so an outer inline-style wrapper is invisible to it (silent overlap bug, caught in Sec 2). To erase a whole beat-range's content, AND the erase condition directly into each element's own `on` prop (e.g. `on={act1 && beat >= k}` where `act1 = beat >= 1 && beat < 5`), not into a wrapping element.
+- `Draw` has no `dashed` prop (only `Chip` does). For a dashed line, use a plain `<path strokeDasharray="…">` inside `Fade` (Sec1's dashed divider is the precedent) instead of passing `dashed` to `Draw`.
 
 ## Current
 
-Subtopic 1 (Master Map, secs 1–10). Next: Sec 3.
+Subtopic 1 (Master Map, secs 1–10). Next: Sec 4.
