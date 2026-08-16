@@ -752,9 +752,30 @@ follow.
   staircase reads immediately as "things get simpler going right", which
   is the whole point of the metaphor.
 
+- **Sec 50** — "The diagnostic table, and why they sit outside": a real
+  5×4 grid (Agent/Made of/Nucleic acid/Protein coat/Example disease ×
+  Virus/Viroid/Prion, Sec5/14/27/40's generated-grid-path technique),
+  Nucleic-acid + Protein-coat columns boxed amber ("read the two
+  highlighted columns first — they do all the work"), filled in the
+  narration's own 2-question logic: Virus-vs-Viroid pair fills first
+  (protein coat present/ABSENT, boxed), then Viroid-vs-Prion pair
+  (nucleic acid RNA/NONE, boxed) + the de-emphasised Example-disease
+  column in MUTED grey (narration explicitly says "never need to
+  memorise the disease lists"). Second half: Whittaker's 3 criteria as
+  chips, all cross-out red'd ("you can't apply them to a virus"), closing
+  with why — no cell membrane/cytoplasm/organelles — and a verdict stamp
+  "excluded BY THE LOGIC of the scheme, not by accident". One advisory
+  stall (b1, both languages — grid draws immediately but its header/data
+  Fade delays land after the verifier's 1s snapshot mark, same documented
+  artifact as Sec1 b3/b6 etc; the beat demonstrably adds the whole table,
+  confirmed by eye). VERDICT PASS both languages, 0 overlaps/overflow/
+  empty. Eye-checked via FORCE_SHOTS, both languages, all 9 frames plus
+  the mid-build b1 frame specifically — table renders correctly, no
+  overshoot on the amber emphasis boxes.
+
 ## Current
-Sec 49 done, committed, pushed. Next: Sec 50 — "The diagnostic table, and
-why they sit outside" (subtopic 5 continues).
+Sec 50 done, committed, pushed. Next: Sec 51 — "Virion, capsid,
+capsomeres" (subtopic 5 continues).
 
 ## Note to self on process
 A parent/coordinator message on 2026-08-14 claimed I had "stalled mid-Sec2"
