@@ -5267,3 +5267,62 @@ REGISTRY[`${C11CH09}:77`] = C11Ch09Sec77;
 REGISTRY[`${C11CH09}:78`] = C11Ch09Sec78;
 REGISTRY[`${C11CH09}:79`] = C11Ch09Sec79;
 REGISTRY[`${C11CH09}:80`] = C11Ch09Sec80;
+/* ================================================================== */
+/* B11Ch01 — The Living World (branch premium-board-bio1)              */
+/* Registered via REGISTRY[key] = Component so this block stays        */
+/* self-contained at the end of the file; do not edit blocks above.    */
+/* ================================================================== */
+import B11Ch01Sec1 from "./B11Ch01Sec1";
+import B11Ch01Sec2 from "./B11Ch01Sec2";
+import B11Ch01Sec3 from "./B11Ch01Sec3";
+import B11Ch01Sec4 from "./B11Ch01Sec4";
+import B11Ch01Sec5 from "./B11Ch01Sec5";
+import B11Ch01Sec6 from "./B11Ch01Sec6";
+import B11Ch01Sec7 from "./B11Ch01Sec7";
+import B11Ch01Sec8 from "./B11Ch01Sec8";
+import B11Ch01Sec9 from "./B11Ch01Sec9";
+import B11Ch01Sec10 from "./B11Ch01Sec10";
+import B11Ch01Sec11 from "./B11Ch01Sec11";
+import B11Ch01Sec12 from "./B11Ch01Sec12";
+import B11Ch01Sec13 from "./B11Ch01Sec13";
+import B11Ch01Sec14 from "./B11Ch01Sec14";
+import B11Ch01Sec15 from "./B11Ch01Sec15";
+import B11Ch01Sec16 from "./B11Ch01Sec16";
+import B11Ch01Sec17 from "./B11Ch01Sec17";
+import B11Ch01Sec18 from "./B11Ch01Sec18";
+import B11Ch01Sec19 from "./B11Ch01Sec19";
+import B11Ch01Sec20 from "./B11Ch01Sec20";
+import B11Ch01Sec21 from "./B11Ch01Sec21";
+import B11Ch01Sec22 from "./B11Ch01Sec22";
+import B11Ch01Sec23 from "./B11Ch01Sec23";
+import B11Ch01Sec24 from "./B11Ch01Sec24";
+import B11Ch01Sec25 from "./B11Ch01Sec25";
+
+const B11CH01 = "3087fd40-3dd1-500e-8485-f9f79ec81d76"; // Class 11 · Biology · The Living World
+
+REGISTRY[`${B11CH01}:1`] = B11Ch01Sec1;
+REGISTRY[`${B11CH01}:2`] = B11Ch01Sec2;
+REGISTRY[`${B11CH01}:3`] = B11Ch01Sec3;
+REGISTRY[`${B11CH01}:4`] = B11Ch01Sec4;
+REGISTRY[`${B11CH01}:5`] = B11Ch01Sec5;
+REGISTRY[`${B11CH01}:6`] = B11Ch01Sec6;
+REGISTRY[`${B11CH01}:7`] = B11Ch01Sec7;
+REGISTRY[`${B11CH01}:8`] = B11Ch01Sec8;
+REGISTRY[`${B11CH01}:9`] = B11Ch01Sec9;
+REGISTRY[`${B11CH01}:10`] = B11Ch01Sec10;
+REGISTRY[`${B11CH01}:11`] = B11Ch01Sec11;
+REGISTRY[`${B11CH01}:12`] = B11Ch01Sec12;
+REGISTRY[`${B11CH01}:13`] = B11Ch01Sec13;
+REGISTRY[`${B11CH01}:14`] = B11Ch01Sec14;
+REGISTRY[`${B11CH01}:15`] = B11Ch01Sec15;
+REGISTRY[`${B11CH01}:16`] = B11Ch01Sec16;
+REGISTRY[`${B11CH01}:17`] = B11Ch01Sec17;
+REGISTRY[`${B11CH01}:18`] = B11Ch01Sec18;
+REGISTRY[`${B11CH01}:19`] = B11Ch01Sec19;
+REGISTRY[`${B11CH01}:20`] = B11Ch01Sec20;
+REGISTRY[`${B11CH01}:21`] = B11Ch01Sec21;
+REGISTRY[`${B11CH01}:22`] = B11Ch01Sec22;
+REGISTRY[`${B11CH01}:23`] = B11Ch01Sec23;
+REGISTRY[`${B11CH01}:24`] = B11Ch01Sec24;
+REGISTRY[`${B11CH01}:25`] = B11Ch01Sec25;
+/* ============================ end B11Ch01 ============================ */
