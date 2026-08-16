@@ -73,6 +73,28 @@ exists on `main` yet, despite the kickoff prompt mentioning it — noted, not bl
   verdict chip; closing potato (eyes=buds→stem) vs sweet potato (no buds→
   root). PASS both languages; spot-checked with FORCE_SHOTS — clean, legible.
 
+- Sec 4 — "The leaf: flat by design, the plant's kitchen" — leaf outline +
+  sun → PHOTOSYNTHESIS chip ("the plant's kitchen"), node/axil-bud markers,
+  "why flat?" teaser into a thin-sheet-vs-stacked-block sunlight demo,
+  shopkeeper analogy, verdict trio (ROOT+STEM+LEAF chips). PASS both
+  languages; spot-checked with FORCE_SHOTS.
+
+## Bugfix (applies to Sec 2–4, landed before Sec 5)
+
+`kit.tsx`'s `Draw` only animates `stroke-dashoffset` — a `fill` color on a
+Draw path renders immediately and is NOT gated by `on`. Any filled icon (node
+dots, bud/sun/leaf blobs, potato blobs, colour swatches, the sheet/block
+rects) used as a bare `<Draw fill=... />` was visible from t=0, before its
+beat and even before play — a blank-board-contract violation the verdict
+checks don't catch (they only gate opacity via `g.sc-fade`, and Draw fills
+aren't fade-wrapped by default). Caught by eye on a Sec4 FORCE_SHOTS spot
+check (pale rectangles showing at beat 3 that belonged to beat 5). Fixed by
+wrapping every filled Draw in `<Fade on={beat>=k} delay={...}><Draw on={true}
+.../></Fade>` (same pattern Sec1's taproot icon already used correctly).
+Re-verified Sec2/3/4 — all still PASS — and re-confirmed by eye that t=0 and
+early-beat frames are now clean. **Going forward: any Draw with a non-"none"
+fill MUST be Fade-wrapped.**
+
 ## Current
 
-Starting Section 4.
+Starting Section 5.

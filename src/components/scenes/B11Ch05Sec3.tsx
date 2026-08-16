@@ -96,18 +96,25 @@ export default function B11Ch05Sec3({ currentTime, reveals, language }: ScenePro
 
       {/* beat 1 — the line, its stations, and a leaf boarding one */}
       <Draw on={beat >= 1} delay={dl(1, 0.3)} d="M 150 200 L 740 200" stroke={INK} sw={2.4} dur={1.2} />
-      <Draw on={beat >= 1} delay={dl(1, 1.6)} d="M 255 200 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0" stroke={INK} sw={1.4} fill={INK} dur={0.3} />
-      <Draw on={beat >= 1} delay={dl(1, 1.8)} d="M 425 200 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0" stroke={INK} sw={1.4} fill={INK} dur={0.3} />
-      <Draw on={beat >= 1} delay={dl(1, 2)} d="M 595 200 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0" stroke={INK} sw={1.4} fill={INK} dur={0.3} />
-      <Draw
-        on={beat >= 1}
-        delay={dl(1, 2.5)}
-        d="M 430 200 C 415 182, 415 168, 430 158 C 445 168, 445 182, 430 200 Z"
-        stroke={GREEN}
-        sw={1.2}
-        fill={GREEN}
-        dur={0.8}
-      />
+      <Fade on={beat >= 1} delay={dl(1, 1.6)}>
+        <Draw on={true} d="M 255 200 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0" stroke={INK} sw={1.4} fill={INK} dur={0.3} />
+      </Fade>
+      <Fade on={beat >= 1} delay={dl(1, 1.8)}>
+        <Draw on={true} d="M 425 200 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0" stroke={INK} sw={1.4} fill={INK} dur={0.3} />
+      </Fade>
+      <Fade on={beat >= 1} delay={dl(1, 2)}>
+        <Draw on={true} d="M 595 200 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0" stroke={INK} sw={1.4} fill={INK} dur={0.3} />
+      </Fade>
+      <Fade on={beat >= 1} delay={dl(1, 2.5)}>
+        <Draw
+          on={true}
+          d="M 430 200 C 415 182, 415 168, 430 158 C 445 168, 445 182, 430 200 Z"
+          stroke={GREEN}
+          sw={1.2}
+          fill={GREEN}
+          dur={0.8}
+        />
+      </Fade>
 
       {/* beat 2 — NODE: ring the boarding station */}
       <Draw on={beat >= 2} delay={dl(2, 0.3)} d={ringD(430, 200, 19, 17)} stroke={AMBER_DARK} sw={2} dur={0.7} />
@@ -129,24 +136,26 @@ export default function B11Ch05Sec3({ currentTime, reveals, language }: ScenePro
       </Fade>
 
       {/* beat 4 — BUD: terminal at the apex, axillary at the leaf's axil */}
-      <Draw
-        on={beat >= 4}
-        delay={dl(4, 0.3)}
-        d="M 740 200 C 730 188, 730 178, 740 170 C 750 178, 750 188, 740 200 Z"
-        stroke={AMBER_DARK}
-        sw={1.2}
-        fill={AMBER_DARK}
-        dur={0.6}
-      />
-      <Draw
-        on={beat >= 4}
-        delay={dl(4, 1)}
-        d="M 436 210 a 4 4 0 1 0 8 0 a 4 4 0 1 0 -8 0"
-        stroke={AMBER_DARK}
-        sw={1.2}
-        fill={AMBER_DARK}
-        dur={0.4}
-      />
+      <Fade on={beat >= 4} delay={dl(4, 0.3)}>
+        <Draw
+          on={true}
+          d="M 740 200 C 730 188, 730 178, 740 170 C 750 178, 750 188, 740 200 Z"
+          stroke={AMBER_DARK}
+          sw={1.2}
+          fill={AMBER_DARK}
+          dur={0.6}
+        />
+      </Fade>
+      <Fade on={beat >= 4} delay={dl(4, 1)}>
+        <Draw
+          on={true}
+          d="M 436 210 a 4 4 0 1 0 8 0 a 4 4 0 1 0 -8 0"
+          stroke={AMBER_DARK}
+          sw={1.2}
+          fill={AMBER_DARK}
+          dur={0.4}
+        />
+      </Fade>
       <Fade on={beat >= 4} delay={dl(4, 1.7)}>
         <T x={150} y={358} size={13} fill={AMBER_DARK} weight={700} anchor="start">
           {t("BUD — a compact, undeveloped shoot", "BUD — ek compact, undeveloped shoot")}
@@ -197,32 +206,40 @@ export default function B11Ch05Sec3({ currentTime, reveals, language }: ScenePro
       <Draw on={beat >= 6} delay={dl(6, 1.3)} d="M 305 468 L 775 468" stroke={INK} sw={2} dur={0.5} />
 
       {/* beat 7 — chuckle: potato (stem) vs sweet potato (root) */}
-      <Draw
-        on={beat >= 7}
-        delay={dl(7, 0.3)}
-        d="M 300 510 C 260 500, 258 550, 298 562 C 338 573, 380 552, 378 525 C 376 500, 338 500, 300 510 Z"
-        stroke={AMBER_DARK}
-        sw={2}
-        fill={CREAM}
-        dur={0.8}
-      />
-      <Draw on={beat >= 7} delay={dl(7, 1.3)} d="M 307 519 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0" stroke={AMBER_DARK} sw={1} fill={AMBER_DARK} dur={0.3} />
-      <Draw on={beat >= 7} delay={dl(7, 1.5)} d="M 337 534 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0" stroke={AMBER_DARK} sw={1} fill={AMBER_DARK} dur={0.3} />
-      <Draw on={beat >= 7} delay={dl(7, 1.7)} d="M 317 546 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0" stroke={AMBER_DARK} sw={1} fill={AMBER_DARK} dur={0.3} />
+      <Fade on={beat >= 7} delay={dl(7, 0.3)}>
+        <Draw
+          on={true}
+          d="M 300 510 C 260 500, 258 550, 298 562 C 338 573, 380 552, 378 525 C 376 500, 338 500, 300 510 Z"
+          stroke={AMBER_DARK}
+          sw={2}
+          fill={CREAM}
+          dur={0.8}
+        />
+      </Fade>
+      <Fade on={beat >= 7} delay={dl(7, 1.3)}>
+        <Draw on={true} d="M 307 519 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0" stroke={AMBER_DARK} sw={1} fill={AMBER_DARK} dur={0.3} />
+      </Fade>
+      <Fade on={beat >= 7} delay={dl(7, 1.5)}>
+        <Draw on={true} d="M 337 534 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0" stroke={AMBER_DARK} sw={1} fill={AMBER_DARK} dur={0.3} />
+      </Fade>
+      <Fade on={beat >= 7} delay={dl(7, 1.7)}>
+        <Draw on={true} d="M 317 546 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0" stroke={AMBER_DARK} sw={1} fill={AMBER_DARK} dur={0.3} />
+      </Fade>
       <Fade on={beat >= 7} delay={dl(7, 2.2)}>
         <T x={330} y={584} size={12} fill={AMBER_DARK} weight={700}>
           {t("potato: eyes = buds at nodes → STEM", "potato: eyes = nodes ke buds → STEM")}
         </T>
       </Fade>
-      <Draw
-        on={beat >= 7}
-        delay={dl(7, 2.8)}
-        d="M 700 510 C 660 502, 655 550, 695 562 C 735 573, 775 552, 772 526 C 770 502, 732 502, 700 510 Z"
-        stroke={INK}
-        sw={2}
-        fill={CREAM}
-        dur={0.8}
-      />
+      <Fade on={beat >= 7} delay={dl(7, 2.8)}>
+        <Draw
+          on={true}
+          d="M 700 510 C 660 502, 655 550, 695 562 C 735 573, 775 552, 772 526 C 770 502, 732 502, 700 510 Z"
+          stroke={INK}
+          sw={2}
+          fill={CREAM}
+          dur={0.8}
+        />
+      </Fade>
       <Fade on={beat >= 7} delay={dl(7, 3.6)}>
         <T x={725} y={584} size={12} fill={INK} weight={700}>
           {t("sweet potato: no buds → ROOT", "sweet potato: koi bud nahi → ROOT")}

@@ -130,13 +130,17 @@ export default function B11Ch05Sec2({ currentTime, reveals, language }: ScenePro
           {t("usually non-green (lives in dark)", "aam taur par non-green (andhere mein)")}
         </Chip>
       </Fade>
-      <Draw on={beat >= 3} delay={dl(3, 0.8)} d="M 128 240 a 7 7 0 1 0 14 0 a 7 7 0 1 0 -14 0" stroke={INK} sw={1.4} fill={INK} dur={0.4} />
+      <Fade on={beat >= 3} delay={dl(3, 0.8)}>
+        <Draw on={true} d="M 128 240 a 7 7 0 1 0 14 0 a 7 7 0 1 0 -14 0" stroke={INK} sw={1.4} fill={INK} dur={0.4} />
+      </Fade>
       <Fade on={beat >= 3} delay={dl(3, 1.4)}>
         <Chip x={639} y={226} w={302} h={28} fill={CREAM} stroke={GREEN} textFill={INK} size={12} script={false}>
           {t("green when young → woody, brown with age", "young mein green → age ke saath woody, brown")}
         </Chip>
       </Fade>
-      <Draw on={beat >= 3} delay={dl(3, 1.9)} d="M 958 240 a 7 7 0 1 0 14 0 a 7 7 0 1 0 -14 0" stroke={GREEN} sw={1.4} fill={GREEN} dur={0.4} />
+      <Fade on={beat >= 3} delay={dl(3, 1.9)}>
+        <Draw on={true} d="M 958 240 a 7 7 0 1 0 14 0 a 7 7 0 1 0 -14 0" stroke={GREEN} sw={1.4} fill={GREEN} dur={0.4} />
+      </Fade>
 
       {/* beat 4 — decisive row, root side: zero on all four */}
       <Draw on={beat >= 4} delay={dl(4, 0.3)} d={crossD(95, 298, 16, 16)} stroke={RED} sw={2.2} dur={0.5} />
