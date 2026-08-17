@@ -223,25 +223,33 @@ export function DashboardClient({
             </div>
           </Link>
 
-          {/* Action Card 3: Practice unlimited (Disabled with COMING SOON badge) */}
-          <div className="flex flex-col p-5 rounded-[22px] bg-white border border-[rgba(28,26,22,0.08)] shadow-ref-card opacity-75 cursor-not-allowed">
+          {/* Action Card 3: Practice unlimited */}
+          <Link
+            href="/practice"
+            className="group flex flex-col p-5 rounded-[22px] bg-white border border-[rgba(28,26,22,0.08)] shadow-ref-card hover:-translate-y-0.5 transition-transform"
+          >
             <div className="flex-1 flex flex-col items-center justify-center min-h-[128px] rounded-[14px] bg-[#FBF8EF] border border-[rgba(28,26,22,0.07)] p-4">
               <span className="flex items-baseline gap-1 leading-none">
-                <b className="font-bold text-[2.5rem] tracking-[-0.03em] text-[#1C1A16]">0</b>
+                <b className="font-bold text-[2.5rem] tracking-[-0.03em] text-[#1C1A16]">
+                  {questionsPracticed}
+                </b>
                 <span className="font-semibold text-[1.5rem] text-[#9C988C]"> / </span>
                 <span className="font-bold text-[2rem] text-[#EEA31F] relative top-[2px]">∞</span>
               </span>
               <span className="font-bold text-[0.62rem] tracking-[0.12em] uppercase text-[#9C988C] mt-2">
-                solved today · never runs out
+                solved so far · never runs out
               </span>
             </div>
             <div className="mt-3.5 flex items-center justify-between">
               <h3 className="font-bold text-[1.14rem] tracking-[-0.02em] text-[#1C1A16]">Practice unlimited</h3>
-              <span className="font-extrabold text-[0.58rem] tracking-wider uppercase text-ink-muted bg-ink/5 px-2 py-0.5 rounded-full">
-                COMING SOON
+              <span className="inline-flex items-center gap-1.5 font-bold text-[0.82rem] text-[#1C1A16] group-hover:gap-2.5 transition-all">
+                Start practising
+                <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="1.9" strokeLinecap="round">
+                  <path d="M2 8h11M9 3.5 13.5 8 9 12.5" />
+                </svg>
               </span>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* 3. Stat Cards Row (Balanced 2-Card Layout for Real Metrics) */}

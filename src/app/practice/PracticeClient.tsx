@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
 import { MathText } from "@/components/MathText";
+import { QuestionStem } from "@/components/QuestionStem";
 import { supabase } from "@/lib/supabase";
 import { apiFetch, ApiError } from "@/lib/api";
 import { PracticeExplainOverlay } from "@/components/drona/PracticeExplainOverlay";
@@ -98,14 +99,17 @@ function SolutionBody({ solution }: { solution: Solution }) {
       )}
 
       {steps.length > 0 && (
-        <ol className="space-y-2">
+        // Numbered rail: the connecting line makes the steps read as one
+        // derivation rather than four loose sentences. Steps arrive with a
+        // "Step N: " prefix already, so it is stripped to avoid "1 Step 1:".
+        <ol className="relative space-y-3.5 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-px before:bg-border-subtle">
           {steps.map((step, i) => (
-            <li key={i} className="flex gap-2.5">
-              <span className="flex-none w-5 h-5 mt-0.5 rounded-md bg-ink/5 text-ink-muted grid place-items-center font-bold text-[0.6rem]">
+            <li key={i} className="relative flex gap-3">
+              <span className="relative z-10 flex-none w-[23px] h-[23px] rounded-full bg-white border border-orange/40 text-orange grid place-items-center font-extrabold text-[0.62rem]">
                 {i + 1}
               </span>
-              <span className="min-w-0 whitespace-pre-line overflow-x-auto">
-                <MathText content={step} />
+              <span className="min-w-0 flex-1 whitespace-pre-line overflow-x-auto pt-0.5 text-ink">
+                <MathText content={step.replace(/^\s*step\s*\d+\s*[:.)-]\s*/i, "")} />
               </span>
             </li>
           ))}
@@ -117,6 +121,39 @@ function SolutionBody({ solution }: { solution: Solution }) {
           Answer: <MathText content={solution.final_answer} />
         </p>
       )}
+    </div>
+  );
+}
+
+/**
+ * The worked solution, presented as its own panel rather than a box tacked
+ * onto the bottom of the question card. On desktop this lives in the right
+ * rail so the steps sit beside the stem the student is still reading; the
+ * accent bar and numbered steps come from SolutionBody underneath.
+ */
+function SolutionPanel({ solution }: { solution: Solution }) {
+  const empty = isSolutionEmpty(solution);
+  return (
+    <div className="bg-white border border-[rgba(28,26,22,0.08)] rounded-[22px] shadow-ref-card overflow-hidden animate-ml-rise">
+      <div className="flex items-center gap-2.5 px-5 py-3.5 bg-[#FBF8EF] border-b border-border-subtle">
+        <span className="w-6 h-6 rounded-lg bg-orange/15 border border-orange/30 grid place-items-center flex-none">
+          <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 fill-none stroke-orange" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 8.5 6.2 11.5 13 4.5" />
+          </svg>
+        </span>
+        <b className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
+          Step-by-step solution
+        </b>
+      </div>
+      <div className="p-5">
+        {!empty ? (
+          <SolutionBody solution={solution} />
+        ) : (
+          <p className="text-xs text-ink-muted italic">
+            No detailed solution text provided for this question yet.
+          </p>
+        )}
+      </div>
     </div>
   );
 }
@@ -579,15 +616,14 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                   </div>
                 </div>
 
-                {/* Question Text.
+                {/* Question stem. QuestionStem keeps the exam structure the
+                    extraction preserved in line breaks — Assertion/Reason,
+                    numbered statement lists, Column I/II — instead of
+                    collapsing it into one run-on paragraph. Each block keeps
                     overflow-x-auto because MathText only gives DISPLAY math its
-                    own scroll box. A long INLINE $...$ is a single unbreakable
-                    run, and at 380px one measured 343px wide inside a 380px
-                    viewport, scrolling the whole page sideways. Letting the
-                    stem scroll keeps the page still; prose still wraps. */}
-                <div className="text-base md:text-lg text-ink font-medium leading-relaxed overflow-x-auto">
-                  <MathText content={question.question_text} />
-                </div>
+                    own scroll box; a long INLINE $...$ is a single unbreakable
+                    run that would otherwise scroll the whole page sideways. */}
+                <QuestionStem content={question.question_text} />
 
                 {/* Question Inputs: MCQ vs Numerical */}
                 {question.question_type === "numerical" ? (
@@ -684,7 +720,10 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                   </div>
                 )}
 
-                {/* Answer Feedback & Solution Box */}
+                {/* Answer feedback. The verdict stays with the question; the
+                    worked solution moves to the right rail so a student can
+                    read it beside the stem and options instead of scrolling
+                    the question off-screen to follow the steps. */}
                 {answerResult && (
                   <div className="space-y-4 pt-3 animate-ml-rise">
                     {/* Correct / Incorrect Banner */}
@@ -716,18 +755,10 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                       </b>
                     </div>
 
-                    {/* Solution Box (with graceful empty state) */}
-                    <div className="bg-[#FFFEFB] border border-[rgba(28,26,22,0.12)] rounded-xl p-5 shadow-xs space-y-2">
-                      <b className="block font-bold text-xs text-ink uppercase tracking-wider">
-                        Step-by-Step Solution
-                      </b>
-                      {!isSolutionEmpty(answerResult.solution) ? (
-                        <SolutionBody solution={answerResult.solution ?? null} />
-                      ) : (
-                        <p className="text-xs text-ink-muted italic">
-                          No detailed solution text provided for this question yet.
-                        </p>
-                      )}
+                    {/* On narrow screens there is no right rail to move the
+                        solution to, so it stays inline below the verdict. */}
+                    <div className="lg:hidden">
+                      <SolutionPanel solution={answerResult.solution ?? null} />
                     </div>
                   </div>
                 )}
@@ -781,8 +812,16 @@ export function PracticeClient({ profile }: PracticeClientProps) {
             )}
           </div>
 
-          {/* RIGHT: Session Panel */}
-          <div className="space-y-4">
+          {/* RIGHT: Solution rail + session panel. The solution sits at the
+              top so it appears level with the question the moment an answer
+              is graded, rather than below the session stats. */}
+          <div className="space-y-4 lg:sticky lg:top-4">
+            {answerResult && (
+              <div className="hidden lg:block">
+                <SolutionPanel solution={answerResult.solution ?? null} />
+              </div>
+            )}
+
             {/* "This session" Card */}
             <div className="bg-white border border-[rgba(28,26,22,0.08)] rounded-[22px] p-6 shadow-ref-card space-y-4">
               <div className="flex items-center justify-between border-b border-dashed border-border-subtle pb-3">
