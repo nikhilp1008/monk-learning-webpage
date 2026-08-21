@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import katex from "katex";
 import { KaTeXRenderer } from "./KaTeXRenderer";
 
 export interface BoardEventData {
@@ -36,8 +37,26 @@ function renderTextWithMath(textStr: string) {
   const parts = textStr.split(/(\$[^\$]+\$)/g);
   return parts.map((part, idx) => {
     if (part.startsWith("$") && part.endsWith("$") && part.length > 2) {
-      const math = part.slice(1, -1);
-      return <KaTeXRenderer key={idx} latex={math} displayMode={false} />;
+      // Rendered here rather than via KaTeXRenderer — see the long note on the
+      // twin of this function in PremiumBoardEvent.tsx. In short: handing it the
+      // delimiter-stripped inner text made it treat the string as "bare LaTeX"
+      // and re-wrap each command capturing only the first brace group, so
+      // \frac{a}{b} came back as $\frac{a}$ plus a literal "{b}".
+      try {
+        const html = katex.renderToString(part.slice(1, -1), {
+          displayMode: false,
+          throwOnError: false,
+        });
+        return (
+          <span
+            key={idx}
+            className="inline-block mx-0.5"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        );
+      } catch {
+        return <React.Fragment key={idx}>{part}</React.Fragment>;
+      }
     }
     return <React.Fragment key={idx}>{part}</React.Fragment>;
   });
