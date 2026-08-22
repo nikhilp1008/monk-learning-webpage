@@ -425,6 +425,51 @@ export type Database = {
         }
         Relationships: []
       }
+      doubt_of_the_day: {
+        Row: {
+          id: string
+          subject: string
+          subject_ordinal: number
+          chapter: string | null
+          concept: string | null
+          question_text: string
+          answer: string
+          explanation: string
+          difficulty: string | null
+          exam_tracks: string[]
+          active: boolean
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          subject: string
+          subject_ordinal: number
+          chapter?: string | null
+          concept?: string | null
+          question_text: string
+          answer: string
+          explanation: string
+          difficulty?: string | null
+          exam_tracks?: string[]
+          active?: boolean
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          subject?: string
+          subject_ordinal?: number
+          chapter?: string | null
+          concept?: string | null
+          question_text?: string
+          answer?: string
+          explanation?: string
+          difficulty?: string | null
+          exam_tracks?: string[]
+          active?: boolean
+          created_at?: string
+        }
+        Relationships: []
+      }
       plan_items: {
         Row: {
           id: string

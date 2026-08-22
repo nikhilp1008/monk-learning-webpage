@@ -34,6 +34,8 @@ interface SessionViewProps {
   /** Server verdict on that chip — green for correct, red for incorrect. */
   answerResult?: "correct" | "partial" | "incorrect" | null;
   isStreaming: boolean;
+  /** Live, still-changing STT text while the mic is held. Empty when idle. */
+  partialTranscript?: string;
   voiceState?: VoiceClientState;
   subtopicOptions?: string[];
   onSendTurn: (utterance: string) => void;
@@ -57,6 +59,7 @@ export function SessionView({
   questionText,
   answerResult,
   isStreaming,
+  partialTranscript,
   voiceState,
   subtopicOptions,
   onSendTurn,
@@ -67,6 +70,12 @@ export function SessionView({
 }: SessionViewProps) {
   const [inputText, setInputText] = useState<string>("");
   const [holdDuration, setHoldDuration] = useState<number>(0);
+  // Tracked here rather than read off voiceState.isListening, which is
+  // `isPushToTalkActive && !isDronaSpeaking && …`. Any audio_chunk arriving
+  // mid-hold flips isDronaSpeaking true, so the live-transcript box vanished
+  // while the student was still talking — it read as the mic cutting out.
+  // The mic itself keeps streaming in that case, so the box must too.
+  const [isHolding, setIsHolding] = useState<boolean>(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const boardEndRef = useRef<HTMLDivElement>(null);
   const teacher = tutorName || getTutorName(DEFAULT_VOICE);
@@ -74,6 +83,7 @@ export function SessionView({
   const handlePttDown = (e: React.PointerEvent<HTMLButtonElement>) => {
     try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
     setHoldDuration(0);
+    setIsHolding(true);
     if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
       setHoldDuration((prev) => prev + 0.1);
@@ -83,6 +93,7 @@ export function SessionView({
 
   const handlePttUp = (e: React.PointerEvent<HTMLButtonElement>) => {
     try { if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
+    setIsHolding(false);
     if (timerRef.current) {
       clearInterval(timerRef.current);
       timerRef.current = null;
@@ -109,6 +120,7 @@ export function SessionView({
       if (!timerRef.current) return;
       clearInterval(timerRef.current);
       timerRef.current = null;
+      setIsHolding(false);
       onStopPushToTalk?.();
     };
     const onVisibilityChange = () => {
@@ -521,6 +533,35 @@ export function SessionView({
           )}
         </span>
       </div>
+
+      {/* Live transcription of the student's own voice while the mic is held.
+          The server has always streamed these partials; without somewhere to
+          show them a student had no evidence they were being heard until the
+          whole turn came back, which read as the mic having failed. Rendered
+          only while actually listening, so a stale line can't sit on screen. */}
+      {isHolding && (
+        <div className="flex items-start gap-2.5 bg-[#FCF4E0] border border-[rgba(238,163,31,0.45)] rounded-[14px] py-2 px-3.5 mb-2 flex-none max-w-full overflow-hidden">
+          <span className="flex-none mt-[3px] w-1.5 h-1.5 rounded-full bg-[#DD4433] animate-pulse" aria-hidden="true" />
+          <span
+            className="min-w-0 flex-1 text-[0.92rem] leading-snug text-[#1C1A16]"
+            aria-live="polite"
+            style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}
+          >
+            {partialTranscript?.trim()
+              ? partialTranscript
+              : (
+                // Two different silences look identical to a student: the mic
+                // working but no words yet, and live streaming being
+                // unavailable so nothing will EVER appear until they release.
+                // After ~1.5s of holding with no partial, say which one it is
+                // instead of showing "Listening…" forever.
+                <span className="text-[#9C988C] italic">
+                  {holdDuration > 1.5 ? "Recording — your words appear when you release" : "Listening…"}
+                </span>
+              )}
+          </span>
+        </div>
+      )}
 
       {/* ─── Simplified Command Dock (Directive 5 & 6) ─── */}
       <div className="flex items-center justify-between gap-2 sm:gap-3 bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] py-2 px-3 sm:px-4 flex-none shadow-[0_10px_24px_-20px_rgba(28,26,22,0.4)] max-w-full overflow-hidden">

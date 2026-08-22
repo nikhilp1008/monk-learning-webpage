@@ -6,6 +6,7 @@ import {
   TurnRequest,
   EndSessionResponse,
   PracticeExplainSessionResponse,
+  DoubtOfDaySessionResponse,
   SSEEventSpeech,
   SSEEventBoard,
   SSEEventMeta,
@@ -160,6 +161,36 @@ export async function startPracticeExplainSession(
   });
   if (!res.ok) {
     throw new Error(`Practice explain session start failed: ${res.status}`);
+  }
+  return res.json();
+}
+
+/**
+ * Creates a doubt_of_day session for one curated doubt from the dashboard
+ * card. Only the doubt's id goes over the wire — the answer and explanation
+ * are read server-side, so the client never holds the answer it is about to
+ * ask the student to guess.
+ */
+export async function startDoubtOfDaySession(
+  doubtId: string,
+  language: SessionLanguage,
+  voice: TutorVoice = DEFAULT_VOICE
+): Promise<DoubtOfDaySessionResponse> {
+  const token = await getAuthToken();
+  const res = await fetch(`${getBaseUrl()}/doubt-of-day/chat`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      doubt_id: doubtId,
+      language,
+      voice,
+    }),
+  });
+  if (!res.ok) {
+    throw new Error(`Doubt-of-day session start failed: ${res.status}`);
   }
   return res.json();
 }

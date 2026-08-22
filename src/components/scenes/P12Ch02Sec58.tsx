@@ -1,20 +1,46 @@
 "use client";
 
 /**
- * P12Ch02 · Section 58 — "Deriving common potential and energy loss on connecting two conductors"
+ * P12Ch02 · Section 58 — "Deriving the parallel combination formula"
  * Subtopic: Series & Parallel Combinations Derivations
- * OPEN CHALKBOARD DESIGN WITH ALGEBRAIC ΔU PROOF (NO CONTAINER BOXES):
- *  - Initial Energy U_i = ½ C₁ V₁² + ½ C₂ V₂²
- *  - Final Energy U_f = ½ (C₁ + C₂) V_com² = ½ (C₁ V₁ + C₂ V₂)² / (C₁ + C₂)
- *  - Algebraic Expansion ΔU = U_i - U_f:
- *      ΔU = ½ [ C₁ C₂ / (C₁ + C₂) ] (V₁ - V₂)²
- *  - Since (V₁ - V₂)² ≥ 0, ΔU ≥ 0 ALWAYS!
+ *
+ * THREE DEFECTS FIXED (2026-08-21):
+ *
+ * 1. THE BOARD DERIVED A DIFFERENT FORMULA FROM THE VOICE. The scene was built
+ *    for an older section titled "Deriving common potential and energy loss on
+ *    connecting two conductors": it ran the whole U_i − U_f algebra and ended
+ *    at ΔU = ½[C₁C₂/(C₁+C₂)](V₁ − V₂)². The narration now at position 58 is the
+ *    PARALLEL combination derivation — C₁, C₂, C₃ across one source, V factored
+ *    out, C_parallel = C₁ + C₂ + C₃ — and never mentions common potential or
+ *    energy loss. (That derivation is what position 59 narrates.) Narration is
+ *    authoritative, so every line on the board is now a step the voice takes.
+ *
+ * 2. A WHOLE BLOCK NEVER RENDERED. The verdict badge, its heading, its two
+ *    lines and the footer chip were gated on `beat >= 7`, but this section has
+ *    7 narration segments so useBeat only ever returns 0..6.
+ *
+ * 3. DEAD AIR. The old gate set was {0,1,3,4,6,7}: beats 2 and 5 drew nothing.
+ *
+ * Beats now map 1:1 onto the seven segments
+ * (board_reveal_at_english [0, 5.63, 15.87, 22.19, 33.37, 45.06, 56.66]):
+ *
+ *   0  "the mirror-image path"                      title
+ *   1  "C₁, C₂, C₃ side by side, same V on each"     three-branch schematic
+ *   2  "each draws its own capacitance times V"      Q₁ = C₁V, Q₂ = C₂V, Q₃ = C₃V
+ *   3  "the battery supplies the total; factor out   Q = ΣQᵢ = (C₁+C₂+C₃)V
+ *       the common V"
+ *   4  "here it is V that factors out, not Q"        the mirror observation
+ *   5  "Q = C_parallel V, comparing gives the sum"   the result
+ *   6  "always exceeds the largest member"           verdict + chip
+ *
+ * NUMBERS: this derivation is purely symbolic — no worked numbers to check
+ * against the narration.
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
-  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip,
+  INK, INK_LIGHT, MUTED, AMBER_DARK, GREEN, RED,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
@@ -38,109 +64,145 @@ export default function P12Ch02Sec58({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
-      {/* Title */}
+      {/* beat 0 — the framing */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
         <T x={540} y={48} size={25} fill={RED} script>
-          {t("Derivation: Heat Loss Formula ΔU = ½[C₁C₂/(C₁+C₂)](V₁−V₂)² Algebraic Proof", "Derivation: Heat Loss Formula ΔU = ½[C₁C₂/(C₁+C₂)](V₁−V₂)² Algebraic Proof")}
+          {t("Deriving C_parallel = C₁ + C₂ + C₃ — the mirror image of the series proof",
+             "Deriving C_parallel = C₁ + C₂ + C₃ — the mirror image of the series proof")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.0)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* LEFT SECTION: ALGEBRAIC STEPS (U_i and U_f) */}
+      {/* LEFT SECTION: THREE BRANCHES ACROSS ONE SOURCE */}
       <g transform="translate(40, 75)">
+        {/* beat 1 — the same V across each */}
         <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
-            {t("INITIAL AND FINAL ENERGY FORMULATIONS", "INITIAL AND FINAL ENERGY FORMULATIONS")}
+            {t("THREE CAPACITORS SIDE BY SIDE ACROSS ONE SOURCE", "THREE CAPACITORS SIDE BY SIDE ACROSS ONE SOURCE")}
           </T>
         </Fade>
 
-        {/* Floating Derivation Steps */}
-        <Fade on={beat >= 1}>
-          <T x={45} y={80} size={14} fill={INK} weight={800} anchor="start">
-            1. Initial Energy U_i = ½ C₁ V₁² + ½ C₂ V₂²
-          </T>
+        <Fade on={beat >= 1} delay={dl(1, 0.9)}>
+          {/* rails */}
+          <line x1="45" y1="165" x2="100" y2="165" stroke={INK} strokeWidth={2} />
+          <line x1="100" y1="100" x2="100" y2="230" stroke={INK} strokeWidth={2} />
+          <line x1="320" y1="100" x2="320" y2="230" stroke={INK} strokeWidth={2} />
+          <line x1="320" y1="165" x2="380" y2="165" stroke={INK} strokeWidth={2} />
 
-          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
-            2. Substitute V_com: U_f = ½ (C₁ + C₂) [ (C₁ V₁ + C₂ V₂) / (C₁ + C₂) ]²
-          </T>
+          {/* branch 1 — C1 */}
+          <line x1="100" y1="100" x2="200" y2="100" stroke={INK} strokeWidth={2} />
+          <line x1="200" y1="80" x2="200" y2="120" stroke={RED} strokeWidth={3} />
+          <line x1="220" y1="80" x2="220" y2="120" stroke={RED} strokeWidth={3} />
+          <line x1="220" y1="100" x2="320" y2="100" stroke={INK} strokeWidth={2} />
+          <T x={210} y={70} size={13} fill={RED} weight={900} anchor="middle">C₁</T>
 
-          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
-            3. Simplify: U_f = ½ (C₁ V₁ + C₂ V₂)² / (C₁ + C₂)
+          {/* branch 2 — C2 */}
+          <line x1="100" y1="165" x2="200" y2="165" stroke={INK} strokeWidth={2} />
+          <line x1="200" y1="145" x2="200" y2="185" stroke={GREEN} strokeWidth={3} />
+          <line x1="220" y1="145" x2="220" y2="185" stroke={GREEN} strokeWidth={3} />
+          <line x1="220" y1="165" x2="320" y2="165" stroke={INK} strokeWidth={2} />
+          <T x={210} y={137} size={13} fill={GREEN} weight={900} anchor="middle">C₂</T>
+
+          {/* branch 3 — C3 */}
+          <line x1="100" y1="230" x2="200" y2="230" stroke={INK} strokeWidth={2} />
+          <line x1="200" y1="210" x2="200" y2="250" stroke={AMBER_DARK} strokeWidth={3} />
+          <line x1="220" y1="210" x2="220" y2="250" stroke={AMBER_DARK} strokeWidth={3} />
+          <line x1="220" y1="230" x2="320" y2="230" stroke={INK} strokeWidth={2} />
+          <T x={210} y={202} size={13} fill={AMBER_DARK} weight={900} anchor="middle">C₃</T>
+        </Fade>
+        <Fade on={beat >= 1} delay={dl(1, 1.3)}>
+          <T x={45} y={282} anchor="start" size={13.5} fill={INK} weight={800}>
+            {t("All three hang on the same two rails — so each has exactly the same V across it.",
+               "All three hang on the same two rails — so each has exactly the same V across it.")}
           </T>
         </Fade>
 
-        {/* Free Floating Formula */}
-        <Fade on={beat >= 3}>
-          <T x={45} y={268} anchor="start" size={13} fill={RED} weight={800}>
-            (Subtracting U_i − U_f reveals a perfect square term (V₁ − V₂))
+        {/* beat 2 — each draws its own charge */}
+        <Fade on={beat >= 2} delay={dl(2, 0.3)}>
+          <T x={45} y={314} anchor="start" size={15} fill={AMBER_DARK} weight={900}>
+            Q₁ = C₁ V,   Q₂ = C₂ V,   Q₃ = C₃ V
           </T>
         </Fade>
       </g>
 
-      {/* RIGHT SECTION: PERFECT SQUARE SIMPLIFICATION */}
+      {/* RIGHT SECTION: FACTOR OUT THE SHARED V */}
       <g transform="translate(540, 75)">
-        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
-        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+        {/* beat 3 — the total, then factor */}
+        <Badge n={2} cx={20} cy={18} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Fade on={beat >= 3} delay={dl(3, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
-            {t("PERFECT SQUARE HEAT LOSS RESULT", "PERFECT SQUARE HEAT LOSS RESULT")}
+            {t("FACTOR OUT THE QUANTITY THEY SHARE", "FACTOR OUT THE QUANTITY THEY SHARE")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps */}
-        <Fade on={beat >= 4}>
-          <T x={45} y={80} size={13} fill={AMBER_DARK} weight={800} anchor="start">
-            1. ΔU = ½ [ (C₁ V₁² + C₂ V₂²)(C₁ + C₂) − (C₁ V₁ + C₂ V₂)² ] / (C₁ + C₂)
+        <Fade on={beat >= 3} delay={dl(3, 0.8)}>
+          <T x={45} y={80} size={14} fill={INK} weight={800} anchor="start">
+            1. The battery supplies the total: Q = Q₁ + Q₂ + Q₃
           </T>
-
-          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
-            2. Expand: C₁ C₂ V₁² + C₁ C₂ V₂² − 2 C₁ C₂ V₁ V₂
-          </T>
-
-          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
-            3. Factor: C₁ C₂ (V₁² − 2 V₁ V₂ + V₂²) = C₁ C₂ (V₁ − V₂)²
-          </T>
-
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
-
-          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
-            4. ΔU = ½ [ (C₁ C₂) / (C₁ + C₂) ] (V₁ − V₂)²  (Q.E.D.)
+        </Fade>
+        <Fade on={beat >= 3} delay={dl(3, 1.2)}>
+          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
+            2. Q = C₁V + C₂V + C₃V = (C₁ + C₂ + C₃) V
           </T>
         </Fade>
 
-        {/* Open Text Explanation */}
-        <Fade on={beat >= 6}>
-          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
-            (Because (V₁ − V₂)² ≥ 0, energy is ALWAYS lost during sharing)
+        {/* beat 4 — it is V that factors out here, not Q */}
+        <Fade on={beat >= 4} delay={dl(4, 0.2)}>
+          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
+            3. Here it is V that factors out — in series it was Q.
+          </T>
+        </Fade>
+        <Fade on={beat >= 4} delay={dl(4, 0.6)}>
+          <T x={45} y={194} size={12.5} fill={INK_LIGHT} weight={600} anchor="start">
+            {t("the exact mirror of the series derivation — it traces straight back to which quantity is shared",
+               "the exact mirror of the series derivation — it traces straight back to which quantity is shared")}
+          </T>
+        </Fade>
+
+        {/* beat 5 — compare with Q = C_parallel V */}
+        <Draw on={beat >= 5} delay={dl(5, 0.15)} d="M 45 214 L 450 214" stroke={INK} sw={1.8} dur={0.5} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={252} size={16} fill={GREEN} weight={900} anchor="start">
+            4. Q = C_parallel V  ⇒  C_parallel = C₁ + C₂ + C₃
+          </T>
+        </Fade>
+        <Fade on={beat >= 5} delay={dl(5, 0.9)}>
+          <T x={45} y={282} anchor="start" size={13} fill={MUTED} weight={600}>
+            (the one equivalent capacitor holds the same total charge at the same voltage V)
           </T>
         </Fade>
       </g>
 
-      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 415)">
-        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
-        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+      {/* LOWER SECTION: THE VERDICT */}
+      <g transform="translate(40, 410)">
+        {/* beat 6 */}
+        <Badge n={3} cx={20} cy={18} on={beat >= 6} delay={dl(6, 0.2)} />
+        <Fade on={beat >= 6} delay={dl(6, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
             {t("DERIVATION VERDICT", "DERIVATION VERDICT")}
           </T>
         </Fade>
-
-        <Fade on={beat >= 7}>
-          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
-            The lost electrostatic potential energy converts into Joulean heat in connecting wires and spark radiation!
+        <Fade on={beat >= 6} delay={dl(6, 0.9)}>
+          <T x={45} y={54} size={14.5} anchor="start" fill={GREEN} weight={900}>
+            {t("Because the capacitances add directly, the parallel value always exceeds the largest member of the group.",
+               "Because the capacitances add directly, the parallel value always exceeds the largest member of the group.")}
           </T>
-          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
-            Zero energy loss occurs ONLY if initial potentials are already equal (V₁ = V₂)!
+        </Fade>
+        <Fade on={beat >= 6} delay={dl(6, 1.2)}>
+          <T x={45} y={80} size={13} anchor="start" fill={INK} weight={700}>
+            {t("Which quantity is shared decides which one factors out — and that single fact separates the two derivations.",
+               "Which quantity is shared decides which one factors out — and that single fact separates the two derivations.")}
           </T>
         </Fade>
       </g>
 
-      {/* Footer Summary Chip (Floating without card boxes) */}
-      <Fade on={beat >= 7}>
+      {/* beat 6 — footer */}
+      <Fade on={beat >= 6} delay={dl(6, 1.6)}>
         <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
-            "★ Proof Completed: ΔU = ½[C₁C₂/(C₁+C₂)](V₁−V₂)² rigorously proven via algebraic expansion of U_i − U_f! ✓",
-            "★ Proof Completed: ΔU = ½[C₁C₂/(C₁+C₂)](V₁−V₂)² rigorously proven via algebraic expansion of U_i − U_f! ✓"
+            "★ Shared V factors out ⇒ C_parallel = C₁ + C₂ + C₃, always larger than the biggest capacitor in the group",
+            "★ Shared V factors out ⇒ C_parallel = C₁ + C₂ + C₃, always larger than the biggest capacitor in the group"
           )}
         </Chip>
       </Fade>

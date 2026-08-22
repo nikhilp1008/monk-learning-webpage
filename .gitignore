@@ -42,3 +42,7 @@ next-env.d.ts
 
 # scene verify output
 /shots/
+
+# Claude Code local config (machine-specific paths)
+.claude/
+.claudeignore

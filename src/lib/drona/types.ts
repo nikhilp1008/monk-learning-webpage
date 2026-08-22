@@ -74,6 +74,13 @@ export interface PracticeExplainSessionResponse {
   tutor_name?: string;
 }
 
+/** Same session-creation contract as practice-explain, plus the doubt's own
+ * subject/concept so the overlay can label the session before turn 1 lands. */
+export interface DoubtOfDaySessionResponse extends PracticeExplainSessionResponse {
+  subject?: string;
+  concept?: string;
+}
+
 export interface EndSessionResponse {
   summary_points: string[];
   mistakes_count: number;

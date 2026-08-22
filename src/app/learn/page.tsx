@@ -169,6 +169,7 @@ export default function LearnPage() {
   } | null>(null);
   const [questionText, setQuestionText] = useState<string | null>(null);
   const [isStreaming, setIsStreaming] = useState(false);
+  const [partialTranscript, setPartialTranscript] = useState("");
   const [summaryData, setSummaryData] = useState<EndSessionResponse | null>(null);
 
   /* ─── Topic pre-check ───
@@ -668,8 +669,22 @@ export default function LearnPage() {
    */
   const pendingBoardRef = useRef<any[]>([]);
 
+  // Identity for dedupe. `svg` and `seq` are in the chain because a diagram
+  // event carries NEITHER latex nor text — it used to key to "" and get
+  // early-returned by both append paths below, so diagrams were silently
+  // dropped before they ever reached the renderer (which has supported them
+  // all along). svg is sliced because a full diagram string is large and only
+  // needs to be distinctive, not complete.
   const boardKey = useCallback(
-    (evt: any) => String(evt?.latex || evt?.text || "").trim().toLowerCase(),
+    (evt: any) =>
+      String(
+        evt?.latex ||
+        evt?.text ||
+        (evt?.svg ? `svg:${String(evt.svg).slice(0, 120)}` : "") ||
+        (evt?.seq != null ? `seq:${evt.seq}` : "")
+      )
+        .trim()
+        .toLowerCase(),
     []
   );
 
@@ -727,9 +742,11 @@ export default function LearnPage() {
         onStudentTranscript: (text) => {
           if (!text.trim()) return;
           console.log("[STUDENT TRANSCRIPT] Dictated answer:", text);
+          setPartialTranscript("");
           acceptStudentAnswer(text);
           setIsStreaming(true);
         },
+        onPartialTranscript: (text) => setPartialTranscript(text),
         onSpeechText: (text, isFinal) => {
           if (text) {
             setTranscript((prev) => {
@@ -859,8 +876,13 @@ export default function LearnPage() {
     // example" over it paired wrong answers with a real content question (the
     // sheet showed the caption as the "question" above chips that answered
     // nothing).
+    // questionText is required too, not just chips: the sheet falls back to the
+    // live caption when it has no question, so chips arriving without one put a
+    // "CHECKPOINT QUIZ" panel over whatever sentence happened to be on screen.
+    // The server suppresses that case as well; this is the client-side half of
+    // the same rule — no question asked, no checkpoint shown.
     const effectiveSubtopicOptions =
-      sessionPhase === "awaiting_answer" && liveCheckOptions.length > 0
+      sessionPhase === "awaiting_answer" && questionText && liveCheckOptions.length > 0
         ? liveCheckOptions
         : [];
 
@@ -882,6 +904,7 @@ export default function LearnPage() {
             questionText={questionText}
             answerResult={answerResult}
             isStreaming={isStreaming}
+            partialTranscript={partialTranscript}
             voiceState={voiceState}
             subtopicOptions={effectiveSubtopicOptions}
             onSendTurn={handleSendTurn}

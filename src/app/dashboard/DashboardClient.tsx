@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 import { MAX_QUESTIONS } from "@/lib/doubts";
 import { TodaysPlan } from "./TodaysPlan";
+import { DoubtChatOverlay } from "@/components/drona/DoubtChatOverlay";
+import { getTutorName } from "@/lib/drona/tutor";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -17,10 +19,10 @@ interface ResumeSessionData {
 }
 
 interface DoubtOfDayData {
+  id: string;
   subject: string;
   concept: string;
   questionText: string;
-  chapterId: string | null;
 }
 
 interface DashboardClientProps {
@@ -42,6 +44,17 @@ export function DashboardClient({
     profile.teaching_language === "english" ? "english" : "hinglish"
   );
   const [updatingLang, setUpdatingLang] = useState(false);
+  const [doubtChatOpen, setDoubtChatOpen] = useState(false);
+
+  // The card names the teacher the student will actually get, and that choice
+  // lives in localStorage. Start from the SSR-safe default and correct it
+  // after mount so the markup matches on hydration.
+  const [tutorName, setTutorName] = useState(getTutorName());
+  useEffect(() => {
+    import("@/lib/drona/tutor").then(({ loadVoicePreference }) =>
+      setTutorName(getTutorName(loadVoicePreference()))
+    );
+  }, []);
 
   const getGreeting = () => {
     const hour = new Date().getHours();
@@ -356,17 +369,39 @@ export function DashboardClient({
               </p>
             </div>
 
-            <Link
-              href={doubtOfDay?.chapterId ? `/lessons/${doubtOfDay.chapterId}` : "/lessons"}
-              className="inline-flex items-center gap-2 font-semibold text-[0.86rem] px-4 py-2 rounded-full border border-[rgba(28,26,22,0.16)] bg-white/70 text-[#1C1A16] hover:border-ink transition-colors mt-4 self-start"
+            {/* The CTA is deliberately a dare, not a lesson link. Tapping it
+                opens a two-minute chat where {tutorName} asks for the
+                student's guess BEFORE revealing anything — so the button has
+                to promise that conversation, not a chapter. */}
+            <button
+              type="button"
+              onClick={() => doubtOfDay && setDoubtChatOpen(true)}
+              disabled={!doubtOfDay}
+              className="group inline-flex items-center gap-2 font-semibold text-[0.86rem] px-4 py-2 rounded-full border border-[rgba(28,26,22,0.16)] bg-white/70 text-[#1C1A16] hover:border-ink hover:bg-white transition-colors mt-4 self-start disabled:opacity-50 disabled:cursor-default"
             >
-              <span>Learn this with Monk →</span>
-            </Link>
+              <span>Think you know? Tell {tutorName}</span>
+              <svg
+                viewBox="0 0 16 16"
+                className="w-3.5 h-3.5 fill-none stroke-current group-hover:translate-x-0.5 transition-transform"
+                strokeWidth="1.9"
+                strokeLinecap="round"
+              >
+                <path d="M2 8h11M9 3.5 13.5 8 9 12.5" />
+              </svg>
+            </button>
           </div>
 
           <TodaysPlan />
         </div>
       </main>
+
+      {doubtChatOpen && doubtOfDay && (
+        <DoubtChatOverlay
+          doubtId={doubtOfDay.id}
+          concept={doubtOfDay.concept}
+          onClose={() => setDoubtChatOpen(false)}
+        />
+      )}
     </div>
   );
 }

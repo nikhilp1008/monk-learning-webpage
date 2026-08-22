@@ -34,6 +34,11 @@ export interface VoiceClientOptions {
    *  that made a dictated answer appear on screen as something the TEACHER
    *  said, and left the open question sitting there unanswered. */
   onStudentTranscript?: (text: string) => void;
+  /** Live, still-changing transcript while the student holds the mic. The
+   *  backend has always emitted these (transcript_partial); nothing consumed
+   *  them, so a student holding the button saw no evidence they were being
+   *  heard. Superseded by onStudentTranscript once the final lands. */
+  onPartialTranscript?: (text: string) => void;
   /** The socket re-opened after a drop. Any turn that was streaming on the old
    *  connection is gone — the caller should clear "responding…" state. */
   onReconnect?: () => void;
@@ -120,6 +125,10 @@ export class DronaVoiceClient {
   private pendingDecodes = 0;
   // Serializes playAudioChunk so chunks schedule in the order they arrived.
   private audioChain: Promise<void> = Promise.resolve();
+  // Bumped by every flush. A chunk carries the epoch it arrived under and is
+  // dropped if that no longer matches, so audio belonging to an interrupted
+  // turn cannot surface on top of the turn that replaced it.
+  private audioEpoch = 0;
 
   // Telemetry & Control Flags
   private isMuted: boolean = false;
@@ -342,7 +351,10 @@ export class DronaVoiceClient {
           }
         }
         this.notifyState();
+      } else if (type === "transcript_partial") {
+        this.options.onPartialTranscript?.(msg.transcript || "");
       } else if (type === "transcript_final") {
+        this.options.onPartialTranscript?.("");
         this.options.onStudentTranscript?.(msg.transcript || "");
       } else if (type === "board_events") {
         console.log(`[BOARD EVENTS RECEIVED] count: ${(msg.events || []).length}`);
@@ -442,8 +454,10 @@ export class DronaVoiceClient {
         // buffers' own durations to cover the whole thing.
         this.armTurnCompleteWait();
       } else if (type === "stt_too_short") {
+        this.options.onPartialTranscript?.("");
         this.options.onSpeechText?.(msg.message || "Hold the button while you speak", false);
       } else if (type === "error") {
+        this.options.onPartialTranscript?.("");
         console.warn("Drona Voice Server Error:", msg.message);
       }
     } catch (e) {
@@ -548,6 +562,12 @@ export class DronaVoiceClient {
 
   public flushAudioQueue(reason: string = "user_interrupt"): void {
     console.log(`[AUDIO FLUSH] Stopped ${this.activeSources.length} active sources, cleared ${this.pendingAudioBuffers.length} queued buffers, and cancelled ${this.pendingReveals.length} pending reveals. Reason: '${reason}'`);
+    // Retires every chunk still mid-decode. Stopping the sources and emptying
+    // the queue was not enough: chunks already inside playAudioChunk's chain,
+    // and frames still arriving during the server's abort window, decoded
+    // afterwards and scheduled themselves over the new turn — two voices at
+    // once, from the turn the student had just interrupted.
+    this.audioEpoch += 1;
     for (const source of this.activeSources) {
       try {
         source.stop();
@@ -653,18 +673,22 @@ export class DronaVoiceClient {
   }
 
   private drainAudioBufferQueue(): void {
-    if (!this.playbackCtx || this.pendingAudioBuffers.length === 0) return;
-    const currentTime = this.playbackCtx.currentTime;
-    const leadTime = this.nextAudioStartTime - currentTime;
+    if (!this.playbackCtx) return;
 
     // 3.5s (was 2.0s): the board line for a sentence is revealed up to 3s
     // before its audio starts, which only works if the chunk is actually
     // scheduled that far ahead.
-    if (leadTime < 3.5) {
+    //
+    // Drains as far as the lookahead allows rather than one chunk per call.
+    // Now that arriving chunks always queue behind an existing backlog, a
+    // single release per finished sentence could not refill the schedule fast
+    // enough and the queue only ever grew.
+    while (this.pendingAudioBuffers.length > 0) {
+      const leadTime = this.nextAudioStartTime - this.playbackCtx.currentTime;
+      if (leadTime >= 3.5) break;
       const nextItem = this.pendingAudioBuffers.shift();
-      if (nextItem) {
-        this.scheduleAudioBuffer(nextItem);
-      }
+      if (!nextItem) break;
+      this.scheduleAudioBuffer(nextItem);
     }
   }
 
@@ -700,8 +724,9 @@ export class DronaVoiceClient {
     // chain is still audio this turn owes, and armTurnCompleteWait() must not
     // measure "remaining audio" until the queue has drained into the schedule.
     this.pendingDecodes += 1;
+    const epoch = this.audioEpoch;
     this.audioChain = this.audioChain
-      .then(() => this._playAudioChunkOrdered(base64Pcm, speechText, boardText, sentenceId, isPartialSentence))
+      .then(() => this._playAudioChunkOrdered(base64Pcm, speechText, boardText, sentenceId, isPartialSentence, epoch))
       .catch((err) => {
         console.error("Audio chunk scheduling failed:", err);
       })
@@ -711,8 +736,9 @@ export class DronaVoiceClient {
     return this.audioChain;
   }
 
-  private async _playAudioChunkOrdered(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string, isPartialSentence?: boolean): Promise<void> {
+  private async _playAudioChunkOrdered(base64Pcm: string, speechText?: string, boardText?: any, sentenceId?: string, isPartialSentence?: boolean, epoch?: number): Promise<void> {
     if (!base64Pcm || typeof window === "undefined") return;
+    if (epoch !== undefined && epoch !== this.audioEpoch) return;
     try {
       this.unlockAudio();
       // Second guard: this resume is independent of unlockAudio's, and would
@@ -734,7 +760,10 @@ export class DronaVoiceClient {
         this.playbackCtx = new AudioCtx({ sampleRate: 24000 });
       }
 
-      const int16 = new Int16Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 2);
+      // Floor to whole 16-bit samples. The server flushes "whatever reached
+      // ~48000 bytes", not exactly 48000, so a part can end on a half sample;
+      // Int16Array would throw on the fractional length.
+      const int16 = new Int16Array(bytes.buffer, bytes.byteOffset, Math.floor(bytes.byteLength / 2));
       const float32 = new Float32Array(int16.length);
       for (let i = 0; i < int16.length; i++) {
         float32[i] = int16[i] / 32768.0;
@@ -743,14 +772,25 @@ export class DronaVoiceClient {
       const buffer = this.playbackCtx.createBuffer(1, float32.length, 24000);
       buffer.getChannelData(0).set(float32);
 
+      // Re-checked after the awaits above: a barge-in landing mid-decode must
+      // not have this chunk schedule itself into the turn that replaced it.
+      if (epoch !== undefined && epoch !== this.audioEpoch) return;
+
       const currentTime = this.playbackCtx.currentTime;
       const leadTime = this.nextAudioStartTime - currentTime;
       const item: AudioQueueItem = { buffer, sentenceId, speechText, boardText, isPartialSentence };
 
       // Capped lookahead (max 3.5s ahead of playback, so board lines can lead
-      // their sentence by up to 3s)
-      if (leadTime > 3.5) {
-        if (this.DEBUG_AUDIO) console.log(`[AUDIO QUEUE BUFFERED] leadTime=${leadTime.toFixed(2)}s > 3.5s limit. Queuing chunk (${buffer.duration.toFixed(2)}s)`);
+      // their sentence by up to 3s).
+      //
+      // The queue must also be EMPTY to schedule directly. Without that check,
+      // once lead time decayed back under the cap an arriving chunk scheduled
+      // itself ahead of chunks already parked — the sentence it belonged to
+      // then played before theirs, and since captions and board lines are armed
+      // at schedule time, text and voice scrambled together. Chaining in
+      // playAudioChunk fixed the async race; this is the synchronous one.
+      if (leadTime > 3.5 || this.pendingAudioBuffers.length > 0) {
+        if (this.DEBUG_AUDIO) console.log(`[AUDIO QUEUE BUFFERED] leadTime=${leadTime.toFixed(2)}s, queued=${this.pendingAudioBuffers.length}. Queuing chunk (${buffer.duration.toFixed(2)}s)`);
         this.pendingAudioBuffers.push(item);
       } else {
         this.scheduleAudioBuffer(item);
@@ -763,6 +803,12 @@ export class DronaVoiceClient {
   private async initAudioCapture(): Promise<void> {
     try {
       if (typeof window === "undefined" || !navigator.mediaDevices) return;
+      // Runs on every ws.onopen, reconnects included. Without this guard each
+      // reconnect built a second capture chain and orphaned the first — still
+      // live, still forwarding, so Sarvam received overlapping copies of the
+      // student. Worse, browsers cap a tab at ~6 AudioContexts: after a few
+      // reconnects construction threw and took playback down with it.
+      if (this.micStream) return;
 
       this.micStream = await navigator.mediaDevices.getUserMedia({
         audio: { channelCount: 1, sampleRate: 16000 },
@@ -845,6 +891,9 @@ export class DronaVoiceClient {
   public startPushToTalk(): void {
     console.log("[PTT START] Push-to-talk button activated");
     this.isPushToTalkActive = true;
+    // Clear any leftover text so the previous hold's words don't read as
+    // this one's.
+    this.options.onPartialTranscript?.("");
 
     // Stop Drona speech immediately on barge-in
     this.bargeInIfSpeaking("ptt_barge_in");

@@ -13,7 +13,7 @@
  */
 
 import React, { useEffect, useMemo, useRef } from "react";
-import katex from "katex";
+import katex from "@/lib/katex-setup";
 import { KaTeXRenderer } from "./KaTeXRenderer";
 import { isEmphasized, type BoardEventData } from "./BoardEvent";
 
@@ -230,9 +230,34 @@ function renderTextWithMath(textStr: string) {
   const parts = textStr.split(/(\$[^$]+\$)/g);
   return parts.map((part, idx) => {
     if (part.startsWith("$") && part.endsWith("$") && part.length > 2) {
-      return (
-        <KaTeXRenderer key={idx} latex={part.slice(1, -1)} displayMode={false} />
-      );
+      // Render the math HERE rather than delegating to KaTeXRenderer.
+      //
+      // THE BUG THIS FIXES: we split on $…$ and then handed KaTeXRenderer the
+      // INNER text — a string with no delimiters left in it. KaTeXRenderer reads
+      // a delimiter-free string as "bare LaTeX" and re-wraps each command with
+      // `\\(text|frac|vec|…)(\{[^}]*\})?`, a regex that captures only the FIRST
+      // brace group. So $\frac{2.303RT}{nF}$ arrived here and went back out as
+      // $\frac{2.303RT}$ plus a literal "{nF}" — KaTeX threw on the one-argument
+      // \frac, putting a red error box on the board with a stray {nF} beside it.
+      // 224 board items across 134 sections rendered that way, concentrated in
+      // Class 12 Maths. The stored LaTeX was valid throughout; only this round
+      // trip broke it. Rendering inline here also keeps the math in the text
+      // flow — KaTeXRenderer wraps its output in a block-level div.
+      try {
+        const html = katex.renderToString(part.slice(1, -1), {
+          displayMode: false,
+          throwOnError: false,
+        });
+        return (
+          <span
+            key={idx}
+            className="inline-block mx-0.5"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        );
+      } catch {
+        return <React.Fragment key={idx}>{part}</React.Fragment>;
+      }
     }
     return <React.Fragment key={idx}>{part}</React.Fragment>;
   });

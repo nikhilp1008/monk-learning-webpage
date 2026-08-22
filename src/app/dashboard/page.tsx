@@ -2,53 +2,79 @@ import { createClient } from "@/lib/supabase/server";
 import { DashboardClient } from "./DashboardClient";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database } from "@/lib/database.types";
+import {
+  normalizeTrack,
+  pickOrdinal,
+  pickSubject,
+  type DotdSubject,
+} from "@/lib/dotd";
 
 export const dynamic = "force-dynamic";
 
-function dayOfYear() {
-  const now = new Date();
-  return Math.floor(
-    (now.getTime() - new Date(now.getFullYear(), 0, 0).getTime()) / 86400000
-  );
-}
-
 type DoubtOfDay = {
+  id: string;
   subject: string;
   concept: string;
   questionText: string;
-  chapterId: string | null;
 } | null;
 
-// Doubt of the day: deterministic pick from `questions`, changes once per
-// calendar day. Independent of `user`, so it doesn't need to wait on
-// anything else this page fetches.
+// Doubt of the day: a pure function of (user, IST calendar day) over the
+// curated `doubt_of_the_day` pool -- see src/lib/dotd.ts for why the pick is
+// deterministic rather than random, and how the rotation avoids repeats.
+//
+// This used to read `questions` by day-of-year, which served an ordinary
+// practice question, identical for every student, regardless of their exam.
 async function loadDoubtOfDay(
-  supabase: SupabaseClient<Database>
+  supabase: SupabaseClient<Database>,
+  userId: string | null,
+  targetExam: string | null
 ): Promise<DoubtOfDay> {
   try {
+    // Signed-out visitors see the shared default rather than a personal
+    // rotation; any stable string works as the seed.
+    const seed = userId || "anonymous";
+    const subject: DotdSubject = pickSubject(seed, normalizeTrack(targetExam));
+
     const { count } = await supabase
-      .from("questions")
+      .from("doubt_of_the_day")
       .select("*", { count: "exact", head: true })
-      .not("question_text", "is", null);
+      .eq("subject", subject)
+      .eq("active", true);
 
     if (!count || count <= 0) return null;
 
-    const offset = dayOfYear() % count;
-    const { data: picked } = await supabase
-      .from("questions")
-      .select("subject, concept, question_text, chapter_id")
-      .not("question_text", "is", null)
-      .order("id", { ascending: true })
-      .range(offset, offset);
+    const ordinal = pickOrdinal(seed, subject, count);
+    const columns = "id, subject, concept, question_text";
+
+    let { data: picked } = await supabase
+      .from("doubt_of_the_day")
+      .select(columns)
+      .eq("subject", subject)
+      .eq("active", true)
+      .eq("subject_ordinal", ordinal)
+      .limit(1);
+
+    // Ordinals are dense as seeded, but deactivating a row leaves a hole that
+    // makes the direct lookup miss. Fall back to position within whatever
+    // rows are actually live so the card never goes blank over a gap.
+    if (!picked?.length) {
+      ({ data: picked } = await supabase
+        .from("doubt_of_the_day")
+        .select(columns)
+        .eq("subject", subject)
+        .eq("active", true)
+        .order("subject_ordinal", { ascending: true })
+        .range(ordinal - 1, ordinal - 1));
+    }
 
     const row = picked?.[0];
     if (!row?.question_text) return null;
 
     return {
+      id: row.id,
       subject: row.subject || "General",
       concept: row.concept || "Concept",
       questionText: row.question_text,
-      chapterId: row.chapter_id,
     };
   } catch (err) {
     console.error("Failed to load doubt of the day:", err);
@@ -111,16 +137,24 @@ export default async function DashboardPage() {
   // Previously this was up to 7 SEQUENTIAL round trips to Supabase
   // (getUser -> profile -> questions count -> questions range -> practice
   // count -> lesson_progress -> lesson_sections), each one waiting on the
-  // last, before the dashboard could render anything. The three pieces of
-  // data below don't actually depend on each other -- only on `user` -- so
-  // fetching them with Promise.all collapses that chain down to whichever
-  // single branch is slowest, run once, instead of paying for all of them
-  // back to back on every dashboard visit.
+  // last, before the dashboard could render anything. Fetching the
+  // independent branches together collapses that chain down to whichever
+  // single branch is slowest, instead of paying for all of them back to back.
+  //
+  // The doubt branch is the one genuine dependency: which subject to draw
+  // from is decided by the student's exam track, so it has to wait for the
+  // profile. It is chained off that same promise rather than awaited
+  // separately, so it still overlaps with the practice/progress branch
+  // instead of adding a third leg to the critical path.
+  const profilePromise = user
+    ? supabase.from("profiles").select("*").eq("id", user.id).maybeSingle()
+    : Promise.resolve({ data: null });
+
   const [profileResult, doubtOfDay, practiceAndProgress] = await Promise.all([
-    user
-      ? supabase.from("profiles").select("*").eq("id", user.id).maybeSingle()
-      : Promise.resolve({ data: null }),
-    loadDoubtOfDay(supabase),
+    profilePromise,
+    profilePromise.then((res) =>
+      loadDoubtOfDay(supabase, user?.id ?? null, res.data?.target_exam ?? null)
+    ),
     user
       ? loadPracticeAndProgress(supabase, user.id)
       : Promise.resolve({ questionsPracticedCount: 0, chaptersStartedCount: 0 }),

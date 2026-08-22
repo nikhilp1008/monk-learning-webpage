@@ -10,7 +10,7 @@ export default function OnboardingPage() {
 
   const [step, setStep] = useState<number>(1);
   const [displayName, setDisplayName] = useState<string>("");
-  const [targetExam, setTargetExam] = useState<"JEE" | "NEET">("JEE");
+  const [targetExam, setTargetExam] = useState<"JEE" | "NEET" | "Both">("JEE");
   const [enrolledClass, setEnrolledClass] = useState<number>(11);
   const [teachingLanguage, setTeachingLanguage] = useState<"english" | "hinglish">("hinglish");
 
@@ -297,17 +297,18 @@ export default function OnboardingPage() {
                   <label className="block text-xs font-bold text-ink-light mb-2">
                     Target exam
                   </label>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-3 gap-2.5">
                     {[
                       { id: "JEE", label: "JEE Main & Adv" },
                       { id: "NEET", label: "NEET UG" },
+                      { id: "Both", label: "Both" },
                     ].map((exam) => {
                       const isSelected = targetExam === exam.id;
                       return (
                         <button
                           key={exam.id}
                           type="button"
-                          onClick={() => setTargetExam(exam.id as "JEE" | "NEET")}
+                          onClick={() => setTargetExam(exam.id as "JEE" | "NEET" | "Both")}
                           className={`py-3 px-4 rounded-xl border text-center transition-all ${
                             isSelected
                               ? "border-orange bg-cream-card text-ink font-extrabold shadow-xs"

@@ -8,7 +8,7 @@ The `src/lib/drona/` directory handles low-level client-side network communicati
 
 ### 1. [`voice.ts`](file:///Users/raasikhnaveed/Desktop/monk-learning-web/src/lib/drona/voice.ts) — Drona Voice Client Engine
 - **WebSockets Manager**: Connects to `wss://<backend>/drona/session/{id}/live`.
-- **Web Audio PCM Queue**: Buffers incoming 16kHz binary PCM audio chunks, decoding and playing sentences sequentially through `AudioContext`.
+- **Web Audio PCM Queue**: Buffers incoming 24kHz binary PCM audio chunks (Rumik TTS output rate), decoding and playing sentences sequentially through `AudioContext`.
 - **Sentence-level Board Sync**: Attaches matching `board_event` objects directly to sentence audio chunks so whiteboard notes write onto the canvas as Drona speaks.
 - **Push-to-Talk Microphone Listener**: Captures 16kHz PCM audio from student microphone (`MediaStream`) and sends binary audio frames over WebSocket.
 
@@ -24,7 +24,7 @@ The `src/lib/drona/` directory handles low-level client-side network communicati
 ```text
 WebSocket Event (audio_chunk)
  ├── 1. Base64 Decode PCM Audio Payload
- ├── 2. Create AudioBuffer (16kHz PCM)
+ ├── 2. Create AudioBuffer (24kHz PCM)
  ├── 3. Enqueue AudioBufferSourceNode
  ├── 4. Trigger Matching Board Event on Playback Start
  └── 5. Update Voice State (isDronaSpeaking = true)

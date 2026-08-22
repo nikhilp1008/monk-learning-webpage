@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react";
-import katex from "katex";
+import katex from "@/lib/katex-setup";
 
 interface MathTextProps {
   content?: string | null;

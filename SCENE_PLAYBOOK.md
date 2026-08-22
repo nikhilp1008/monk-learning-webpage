@@ -1,3 +1,4 @@
+
 1.  The two documents, and what to tell Claude first SCENE_AUTHORING.md
     is the contract: canvas 1080×620, safe area x∈\[36,1044\]
     y∈\[30,596\], row bands, text-size floor 14, the measured text-box

@@ -1,6 +1,6 @@
 "use client";
 
-import katex from "katex";
+import katex from "@/lib/katex-setup";
 import React from "react";
 
 interface KaTeXRendererProps {
