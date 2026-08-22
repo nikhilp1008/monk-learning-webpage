@@ -3,26 +3,39 @@
 /**
  * P12Ch05 · Section 24 — "Board level: rebuilding the field from two given numbers"
  * Subtopic: Earth's Magnetism
+ * Canvas 1080×620 · safe x36–1044, y30..596.
+ *
+ * BOARD REBUILT AGAINST THE NARRATION (2026-08-21).
+ *
+ * WHAT THE BOARD USED TO TEACH: a different instance — B_H = 0.36×10⁻⁴ T with
+ * a dip of 60°, giving B_V = 0.624×10⁻⁴ T and B = 0.72×10⁻⁴ T. Not one of
+ * those numbers is spoken.
+ *
+ * WHAT THE NARRATION ACTUALLY TEACHES: B_H = 0.40 G, dip δ = 30°.
+ *     (a)  B_H = B cos δ  ⇒  B = B_H / cos δ = 0.40 / 0.866 = 0.46 G
+ *          (bigger than B_H, as a hypotenuse must be)
+ *     (b)  B_V = B sin δ = 0.46 × 0.5 = 0.23 G
+ *     check: B_V = B_H tan δ = 0.40 × 0.577 = 0.23 G  — a second, independent
+ *          route that never touches B.
+ * The triangle is drawn to scale: the horizontal leg is 300 units and the
+ * vertical leg 173, so tan⁻¹(173/300) really is 30°.
+ *
+ * BEAT MAP (n_reveals = 8, so valid gates are 0..7):
+ *   0  "did you draw the triangle first?"    title + underline
+ *   1  "here is that triangle"               the labelled right triangle
+ *   2  "we are told… we want…"               givens and asks
+ *   3  "part a — the relation"               B = B_H / cos δ
+ *   4  "put the numbers in"                  B = 0.46 G, and why it must be bigger
+ *   5  "part b"                              B_V = 0.23 G
+ *   6  "the check that costs ten seconds"    B_V = B_H tan δ = 0.23 G
+ *   7  "both routes land on the same answer" the two confirmations + chip
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, ringD,
-  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip,
+  INK, MUTED, AMBER_DARK, GREEN, RED,
 } from "./kit";
-
-function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
-  return (
-    <g>
-      <Draw on={on} delay={delay}
-        d={`M ${cx - 13} ${cy} A 13 13 0 1 1 ${cx + 13} ${cy} A 13 13 0 1 1 ${cx - 13} ${cy}`}
-        stroke={RED} sw={2.2} dur={0.4} />
-      <Fade on={on} delay={delay + 0.3}>
-        <T x={cx} y={cy + 5} size={14} fill={RED} weight={800}>{n}</T>
-      </Fade>
-    </g>
-  );
-}
 
 export default function P12Ch05Sec24({ currentTime, reveals, language }: SceneProps) {
   const beat = useBeat(currentTime, reveals);
@@ -32,114 +45,142 @@ export default function P12Ch05Sec24({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
-      {/* Title */}
-      <Fade on={beat >= 0} delay={dl(0, 0.4)}>
-        <T x={540} y={48} size={25} fill={RED} script>
-          {t("Board Level: Rebuilding Earth's Field from B_H and Dip I", "Board Level: Rebuilding Earth's Field from B_H and Dip I")}
+      {/* ---------------- beat 0 — title ---------------- */}
+      <Fade on={beat >= 0} delay={dl(0, 0.35)}>
+        <T x={540} y={46} size={25} fill={RED} script>
+          {t("Draw the triangle — then it is only trigonometry",
+             "Draw the triangle — then it is only trigonometry")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 1.6)}
+        d="M 250 62 C 480 58, 660 66, 830 60" stroke={RED} sw={2.2} dur={0.7} />
 
-      {/* LEFT SECTION: STEP 1: FIND VERTICAL COMPONENT B_V */}
-      <g transform="translate(40, 75)">
-        <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
-        <Fade on={beat >= 1} delay={dl(1, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
-            {t("STEP 1: FIND VERTICAL COMPONENT B_V", "STEP 1: FIND VERTICAL COMPONENT B_V")}
-          </T>
+      {/* ---------------- beat 1 — the triangle (to scale, 30°) ---------------- */}
+      <g transform="translate(60, 90)">
+        <Draw on={beat >= 1} delay={dl(1, 0.3)} d="M 20 40 L 320 40" stroke={INK} sw={2.4} dur={0.6} />
+        <Draw on={beat >= 1} delay={dl(1, 0.9)} d="M 20 40 L 320 213" stroke={RED} sw={2.4} dur={0.8} />
+        <Draw on={beat >= 1} delay={dl(1, 1.7)} d="M 320 40 L 320 213" stroke={GREEN} sw={2.4} dur={0.5} />
+        <Draw on={beat >= 1} delay={dl(1, 2.1)} d="M 75 40 A 55 55 0 0 1 67.6 67.5" stroke={AMBER_DARK} sw={2} dur={0.4} />
+        <Fade on={beat >= 1} delay={dl(1, 2.4)}>
+          <path d="M 306 40 L 306 54 L 320 54" fill="none" stroke={INK} strokeWidth={1.5} />
+          <T x={170} y={28} size={13.5} fill={INK} weight={800}>B_H = 0.40 G</T>
+          <T x={86} y={68} size={13} fill={AMBER_DARK} weight={800} anchor="start">δ = 30°</T>
         </Fade>
 
-        {/* Floating Solution Steps */}
-        <Fade on={beat >= 1}>
-          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
-            1. Given Values: B_H = 0.36 × 10⁻⁴ T and Dip angle I = 60°.
-          </T>
-
-          <T x={45} y={125} size={14} fill={INK} weight={800} anchor="start">
-            2. Tangent Relation: tan I = B_V / B_H ⇒ B_V = B_H tan I.
-          </T>
-
-          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
-            3. Substitute Angle: tan 60° = √3 ≈ 1.732.
-          </T>
-
-          <Draw on={beat >= 5} delay={dl(5, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
-
-          <T x={45} y={235} size={16} fill={RED} weight={900} anchor="start">
-            4. Calculate B_V: B_V = 0.36 × 10⁻⁴ × 1.732 ≈ 0.624 × 10⁻⁴ T!
-          </T>
+        <Fade on={beat >= 1} delay={dl(1, 2.8)} dim={beat >= 4}>
+          <T x={108} y={128} size={13.5} fill={RED} weight={800} anchor="start">B = ?</T>
+        </Fade>
+        <Fade on={beat >= 1} delay={dl(1, 3.0)} dim={beat >= 5}>
+          <T x={334} y={118} size={13.5} fill={GREEN} weight={800} anchor="start">B_V = ?</T>
         </Fade>
 
-        <Fade on={beat >= 5}>
-          <T x={45} y={268} anchor="start" size={13} fill={INK} weight={800}>
-            (Vertical component is larger than horizontal component because I &gt; 45°)
+        <Fade on={beat >= 4} delay={dl(4, 1.4)}>
+          <T x={108} y={152} size={14} fill={RED} weight={900} anchor="start">B = 0.46 G</T>
+        </Fade>
+        <Fade on={beat >= 5} delay={dl(5, 1.4)}>
+          <T x={334} y={142} size={14} fill={GREEN} weight={900} anchor="start">B_V = 0.23 G</T>
+        </Fade>
+
+        <Fade on={beat >= 1} delay={dl(1, 3.3)}>
+          <T x={20} y={252} size={12.5} fill={MUTED} weight={600} anchor="start">
+            {t("horizontal leg known, angle at the left known — the hypotenuse and the vertical leg are what we want",
+               "horizontal leg known, angle at the left known — the hypotenuse and the vertical leg are what we want")}
           </T>
         </Fade>
       </g>
 
-      {/* RIGHT SECTION: STEP 2: FIND TOTAL EARTH FIELD B_E */}
-      <g transform="translate(540, 75)">
-        <Badge n={2} cx={20} cy={18} on={beat >= 5} delay={dl(5, 0.2)} />
-        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
-            {t("STEP 2: FIND TOTAL EARTH FIELD B_E", "STEP 2: FIND TOTAL EARTH FIELD B_E")}
+      {/* ---------------- beats 2–5 — the working ---------------- */}
+      <g transform="translate(560, 90)">
+        <Fade on={beat >= 2} delay={dl(2, 0.2)}>
+          <T x={0} y={16} size={14} fill={RED} weight={800} anchor="start">
+            {t("GIVEN", "GIVEN")}
+          </T>
+        </Fade>
+        <Fade on={beat >= 2} delay={dl(2, 0.6)}>
+          <T x={0} y={46} size={14.5} fill={INK} weight={800} anchor="start">
+            B_H = 0.40 G   ·   angle of dip δ = 30°
+          </T>
+        </Fade>
+        <Fade on={beat >= 2} delay={dl(2, 1.1)}>
+          <T x={0} y={72} size={13} fill={AMBER_DARK} weight={700} anchor="start">
+            {t("want: (a) the total field B   (b) the vertical component B_V",
+               "want: (a) the total field B   (b) the vertical component B_V")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps */}
-        <Fade on={beat >= 5}>
-          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
-            1. Cosine Relation: B_H = B_E cos I ⇒ B_E = B_H / cos I.
+        <Fade on={beat >= 3} delay={dl(3, 0.2)}>
+          <T x={0} y={112} size={14} fill={RED} weight={800} anchor="start">
+            {t("(a)  START FROM WHAT CONNECTS THEM", "(a)  START FROM WHAT CONNECTS THEM")}
           </T>
-
-          <T x={45} y={125} size={14} fill={GREEN} weight={800} anchor="start">
-            2. Substitute Angle: cos 60° = 0.5.
-          </T>
-
-          <T x={45} y={170} size={14} fill={RED} weight={800} anchor="start">
-            3. Division: B_E = (0.36 × 10⁻⁴ T) / 0.5.
-          </T>
-
-          <Draw on={beat >= 7} delay={dl(7, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
-
-          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
-            4. Calculate B_E: B_E = 0.72 × 10⁻⁴ T = 0.72 Gauss!
+        </Fade>
+        <Fade on={beat >= 3} delay={dl(3, 0.8)}>
+          <T x={0} y={144} size={15} fill={INK} weight={800} anchor="start">
+            B_H = B cos δ   ⇒   B = B_H / cos δ
           </T>
         </Fade>
 
-        <Fade on={beat >= 7}>
-          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
-            (Total magnetic field B_E is exactly double B_H at 60° dip)
+        <Fade on={beat >= 4} delay={dl(4, 0.3)}>
+          <T x={0} y={184} size={15} fill={INK} weight={800} anchor="start">
+            B = 0.40 / 0.866 = 0.46 G
           </T>
         </Fade>
-      </g>
-
-      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 415)">
-        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
-        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
-          <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
-            {t("RESULT VERIFICATION & CHECK", "RESULT VERIFICATION & CHECK")}
+        <Fade on={beat >= 4} delay={dl(4, 0.9)}>
+          <T x={0} y={210} size={13} fill={GREEN} weight={800} anchor="start">
+            {t("larger than B_H — exactly what a hypotenuse has to be",
+               "larger than B_H — exactly what a hypotenuse has to be")}
           </T>
         </Fade>
 
-        <Fade on={beat >= 7}>
-          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
-            Pythagorean Check: B_E = √(B_H² + B_V²) = √((0.36)² + (0.624)²) × 10⁻⁴ T = 0.72 × 10⁻⁴ T.
+        <Fade on={beat >= 5} delay={dl(5, 0.2)}>
+          <T x={0} y={250} size={14} fill={RED} weight={800} anchor="start">
+            {t("(b)  B_V = B sin δ,  and sin 30° = ½", "(b)  B_V = B sin δ,  and sin 30° = ½")}
           </T>
-          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
-            Units Conversion: 0.72 × 10⁻⁴ Tesla = 0.72 Gauss (matches typical surface Earth field).
+        </Fade>
+        <Fade on={beat >= 5} delay={dl(5, 0.8)}>
+          <T x={0} y={282} size={15} fill={INK} weight={800} anchor="start">
+            B_V = 0.46 × 0.5 = 0.23 G
           </T>
         </Fade>
       </g>
 
-      {/* Footer Summary Chip (Floating without card boxes) */}
-      <Fade on={beat >= 7}>
-        <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
-          {t(
-            "★ Board Numerical: B_V = 0.624 × 10⁻⁴ T and total field B_E = 0.72 × 10⁻⁴ T (0.72 G)! ✓",
-            "★ Board Numerical: B_V = 0.624 × 10⁻⁴ T and total field B_E = 0.72 × 10⁻⁴ T (0.72 G)! ✓"
-          )}
+      {/* ---------------- beat 6 — the second route ---------------- */}
+      <Draw on={beat >= 6} delay={dl(6, 0.2)} d="M 66 388 v 62" stroke={GREEN} sw={3.4} dur={0.4} />
+      <Fade on={beat >= 6} delay={dl(6, 0.6)}>
+        <T x={84} y={410} size={14} fill={GREEN} weight={800} anchor="start">
+          {t("the ten-second check — a second route to B_V that skips the total field entirely",
+             "the ten-second check — a second route to B_V that skips the total field entirely")}
+        </T>
+      </Fade>
+      <Fade on={beat >= 6} delay={dl(6, 1.2)}>
+        <T x={84} y={438} size={15} fill={INK} weight={800} anchor="start">
+          B_V = B_H tan δ = 0.40 × 0.577 = 0.23 G
+        </T>
+      </Fade>
+
+      {/* ---------------- beat 7 — both routes agree ---------------- */}
+      <Fade on={beat >= 7} delay={dl(7, 0.2)}>
+        <T x={84} y={480} size={13.5} fill={INK} weight={700} anchor="start">
+          {t("both routes land on 0.23 G, so the arithmetic is confirmed",
+             "both routes land on 0.23 G, so the arithmetic is confirmed")}
+        </T>
+      </Fade>
+      <Fade on={beat >= 7} delay={dl(7, 0.7)}>
+        <T x={84} y={506} size={13.5} fill={INK} weight={700} anchor="start">
+          {t("and B = 0.46 G came out bigger than B_H = 0.40 G, as it must",
+             "and B = 0.46 G came out bigger than B_H = 0.40 G, as it must")}
+        </T>
+      </Fade>
+      <Fade on={beat >= 7} delay={dl(7, 1.2)}>
+        <T x={84} y={532} size={12.5} fill={MUTED} weight={600} anchor="start">
+          {t("two independent checks, almost no extra work — build the habit now",
+             "two independent checks, almost no extra work — build the habit now")}
+        </T>
+      </Fade>
+
+      <Fade on={beat >= 7} delay={dl(7, 1.7)}>
+        <Chip x={40} y={548} w={1000} h={42} fill={GREEN} textFill="#ffffff" size={14}>
+          {t("★ B = 0.46 G · B_V = 0.23 G · confirmed independently by B_H tan δ = 0.23 G",
+             "★ B = 0.46 G · B_V = 0.23 G · confirmed independently by B_H tan δ = 0.23 G")}
         </Chip>
       </Fade>
     </svg>
