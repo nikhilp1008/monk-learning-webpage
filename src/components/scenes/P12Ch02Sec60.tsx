@@ -1,20 +1,46 @@
 "use client";
 
 /**
- * P12Ch02 · Section 60 — "NEET speed trap: equivalent capacitance with a wire bridge"
+ * P12Ch02 · Section 60 — "CBSE level: three capacitors in series and in parallel"
  * Subtopic: Series & Parallel Combinations & Charge Sharing
- * OPEN CHALKBOARD DESIGN WITH WIRE BRIDGE NODE REDRAWING (NO CONTAINER BOXES):
- *  - 3 identical capacitors C connected with 2 wire bridges
- *  - Trap: Mistaking it for 3 capacitors in series (C/3)!
- *  - Node Analysis: Labeling nodes 1, 2, 3, 4 reveals all 3 capacitors are in PARALLEL!
- *  - Correct Equivalent Capacitance C_eq = 3 C ! (9× larger than C/3!)
- *  - Zero card box containers
+ *
+ * THREE DEFECTS FIXED (2026-08-21):
+ *
+ * 1. THE BOARD WORKED A DIFFERENT PROBLEM FROM THE VOICE. The scene was built
+ *    for an older "NEET speed trap: equivalent capacitance with a wire bridge"
+ *    section: three identical capacitors C, two crossover bridges, the C/3
+ *    distractor and the answer C_eq = 3C. The narration now at position 60 is a
+ *    plain CBSE numerical on 2 µF, 3 µF and 6 µF — no bridges, no nodes, no
+ *    multiple-choice options. Narration is authoritative, so every number on
+ *    the board now comes from it, with the arithmetic redone:
+ *        1/C_s = 1/2 + 1/3 + 1/6 = 3/6 + 2/6 + 1/6 = 6/6 = 1  ⇒  C_s = 1 µF
+ *        C_p  = 2 + 3 + 6 = 11 µF
+ *        checks: 1 µF is below the smallest (2 µF); 11 µF is above the
+ *        largest (6 µF)
+ *
+ * 2. A WHOLE BLOCK NEVER RENDERED. The warning badge, its heading, its two
+ *    lines and the footer chip were gated on `beat >= 7`, but this section has
+ *    7 narration segments so useBeat only ever returns 0..6.
+ *
+ * 3. DEAD AIR. The old gate set was {0,1,3,4,6,7}: beats 2 and 5 drew nothing.
+ *
+ * Beats now map 1:1 onto the seven segments
+ * (board_reveal_at_english [0, 3.64, 11.66, 20.4, 24.41, 34.25, 38.98]):
+ *
+ *   0  "a clean numerical to anchor both formulas"  title
+ *   1  "two, three and six microfarads"             the three capacitors
+ *   2  "add the reciprocals over a common           3/6 + 2/6 + 1/6 = 1
+ *       denominator of six"
+ *   3  "the series capacitance is one microfarad"   C_s = 1 µF
+ *   4  "forgetting to flip back is a common slip"   the flip-back warning
+ *   5  "for parallel, they simply add: eleven"      C_p = 11 µF
+ *   6  "run the sanity checks"                      both checks + chip
  */
 
 import React from "react";
 import {
-  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip, arrowD,
-  INK, MUTED, AMBER_DARK, GREEN, RED, CREAM,
+  SceneProps, useBeat, delayFor, Fade, Draw, T, Chip,
+  INK, INK_LIGHT, MUTED, AMBER_DARK, GREEN, RED,
 } from "./kit";
 
 function Badge({ n, cx, cy, on, delay }: { n: number; cx: number; cy: number; on: boolean; delay: number }) {
@@ -38,122 +64,140 @@ export default function P12Ch02Sec60({ currentTime, reveals, language }: ScenePr
 
   return (
     <svg viewBox="0 0 1080 620" preserveAspectRatio="xMidYMin meet" className="w-full h-full select-none">
-      {/* Title */}
+      {/* beat 0 — the framing */}
       <Fade on={beat >= 0} delay={dl(0, 0.4)}>
         <T x={540} y={48} size={25} fill={RED} script>
-          {t("NEET Speed Trap: Wire Bridge Circuits (Series Appearance → Parallel C_eq = 3C)", "NEET Speed Trap: Wire Bridge Circuits (Series Appearance → Parallel C_eq = 3C)")}
+          {t("2 µF, 3 µF and 6 µF — the equivalent capacitance in series and in parallel",
+             "2 µF, 3 µF and 6 µF — the equivalent capacitance in series and in parallel")}
         </T>
       </Fade>
-      <Draw on={beat >= 0} delay={dl(0, 2.5)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
+      <Draw on={beat >= 0} delay={dl(0, 2.0)} d="M 120 60 C 420 56, 660 64, 960 59" stroke={RED} sw={2.4} dur={0.7} />
 
-      {/* LEFT SECTION: WIRE BRIDGE CIRCUIT SCHEMATIC */}
-      <g transform="translate(40, 75)">
+      {/* LEFT SECTION: THE THREE CAPACITORS AND THE SERIES SUM */}
+      <g transform="translate(40, 84)">
+        {/* beat 1 — the given values */}
         <Badge n={1} cx={20} cy={18} on={beat >= 1} delay={dl(1, 0.2)} />
         <Fade on={beat >= 1} delay={dl(1, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
-            {t("CIRCUIT WITH TWO CROSSOVER WIRE BRIDGES", "CIRCUIT WITH TWO CROSSOVER WIRE BRIDGES")}
+            {t("THREE CAPACITORS ARE AVAILABLE", "THREE CAPACITORS ARE AVAILABLE")}
           </T>
         </Fade>
 
-        {/* Crossover Circuit Diagram (Open Chalkboard) */}
-        <Fade on={beat >= 1}>
-          <line x1="45" y1="170" x2="110" y2="170" stroke={INK} strokeWidth={2} />
+        <Fade on={beat >= 1} delay={dl(1, 0.9)}>
+          {/* 2 µF */}
+          <line x1="100" y1="120" x2="100" y2="180" stroke={RED} strokeWidth={3.2} />
+          <line x1="120" y1="120" x2="120" y2="180" stroke={RED} strokeWidth={3.2} />
+          <T x={110} y={208} size={16} fill={RED} weight={900} anchor="middle">2 µF</T>
 
-          {/* C1 */}
-          <line x1="110" y1="140" x2="110" y2="200" stroke={RED} strokeWidth={3} />
-          <line x1="130" y1="140" x2="130" y2="200" stroke={RED} strokeWidth={3} />
-          <line x1="130" y1="170" x2="200" y2="170" stroke={INK} strokeWidth={2} />
+          {/* 3 µF */}
+          <line x1="210" y1="120" x2="210" y2="180" stroke={GREEN} strokeWidth={3.2} />
+          <line x1="230" y1="120" x2="230" y2="180" stroke={GREEN} strokeWidth={3.2} />
+          <T x={220} y={208} size={16} fill={GREEN} weight={900} anchor="middle">3 µF</T>
 
-          {/* C2 */}
-          <line x1="200" y1="140" x2="200" y2="200" stroke={GREEN} strokeWidth={3} />
-          <line x1="220" y1="140" x2="220" y2="200" stroke={GREEN} strokeWidth={3} />
-          <line x1="220" y1="170" x2="290" y2="170" stroke={INK} strokeWidth={2} />
-
-          {/* C3 */}
-          <line x1="290" y1="140" x2="290" y2="200" stroke={AMBER_DARK} strokeWidth={3} />
-          <line x1="310" y1="140" x2="310" y2="200" stroke={AMBER_DARK} strokeWidth={3} />
-          <line x1="310" y1="170" x2="380" y2="170" stroke={INK} strokeWidth={2} />
-
-          {/* Wire Bridge 1 */}
-          <path d="M 80 170 Q 165 95, 255 170" stroke={RED} strokeWidth={2} fill="none" />
-          <T x={165} y={115} size={11} fill={RED} weight={800} anchor="middle">Wire Bridge 1 (Node A)</T>
-
-          {/* Wire Bridge 2 */}
-          <path d="M 165 170 Q 255 245, 345 170" stroke={GREEN} strokeWidth={2} fill="none" />
-          <T x={255} y={240} size={11} fill={GREEN} weight={800} anchor="middle">Wire Bridge 2 (Node B)</T>
+          {/* 6 µF */}
+          <line x1="320" y1="120" x2="320" y2="180" stroke={AMBER_DARK} strokeWidth={3.2} />
+          <line x1="340" y1="120" x2="340" y2="180" stroke={AMBER_DARK} strokeWidth={3.2} />
+          <T x={330} y={208} size={16} fill={AMBER_DARK} weight={900} anchor="middle">6 µF</T>
+        </Fade>
+        <Fade on={beat >= 1} delay={dl(1, 1.3)}>
+          <T x={45} y={244} anchor="start" size={13.5} fill={INK} weight={800}>
+            {t("Find the equivalent capacitance both in series and in parallel.",
+               "Find the equivalent capacitance both in series and in parallel.")}
+          </T>
         </Fade>
 
-        {/* Free Floating Formula */}
-        <Fade on={beat >= 3}>
-          <T x={45} y={268} anchor="start" size={13} fill={RED} weight={800}>
-            (Trap: Looks like C/3 in series, but bridges force C_eq = 3C!)
+        {/* beat 2 — reciprocals over a common denominator of six */}
+        <Fade on={beat >= 2} delay={dl(2, 0.2)}>
+          <T x={45} y={288} anchor="start" size={15} fill={INK} weight={800}>
+            1/C_s = 1/2 + 1/3 + 1/6
+          </T>
+        </Fade>
+        <Fade on={beat >= 2} delay={dl(2, 0.6)}>
+          <T x={45} y={318} anchor="start" size={15} fill={AMBER_DARK} weight={900}>
+            = 3/6 + 2/6 + 1/6 = 6/6 = 1
           </T>
         </Fade>
       </g>
 
-      {/* RIGHT SECTION: NODE LABELING ANALYSIS */}
-      <g transform="translate(540, 75)">
-        <Badge n={2} cx={20} cy={18} on={beat >= 4} delay={dl(4, 0.2)} />
-        <Fade on={beat >= 4} delay={dl(4, 0.5)}>
+      {/* RIGHT SECTION: FLIP BACK, THEN THE PARALLEL SUM */}
+      <g transform="translate(560, 84)">
+        {/* beat 3 — the series answer */}
+        <Badge n={2} cx={20} cy={18} on={beat >= 3} delay={dl(3, 0.2)} />
+        <Fade on={beat >= 3} delay={dl(3, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
-            {t("NODE-BY-NODE REDRAWING PROOF", "NODE-BY-NODE REDRAWING PROOF")}
+            {t("FLIP IT BACK — THEN DO THE EASY ONE", "FLIP IT BACK — THEN DO THE EASY ONE")}
           </T>
         </Fade>
 
-        {/* Floating Solution Steps */}
-        <Fade on={beat >= 4}>
-          <T x={45} y={80} size={14} fill={AMBER_DARK} weight={800} anchor="start">
-            1. Label all wires connected to Node A with Potential V_A.
-          </T>
-
-          <T x={45} y={125} size={14} fill={AMBER_DARK} weight={800} anchor="start">
-            2. Label all wires connected to Node B with Potential V_B.
-          </T>
-
-          <T x={45} y={170} size={14} fill={GREEN} weight={800} anchor="start">
-            3. C₁, C₂, C₃ are ALL connected between V_A and V_B!
-          </T>
-
-          <Draw on={beat >= 4} delay={dl(4, 1.2)} d="M 45 195 L 450 195" stroke={INK} sw={1.8} />
-
-          <T x={45} y={235} size={16} fill={GREEN} weight={900} anchor="start">
-            4. C_eq = C + C + C = 3 C !
+        <Fade on={beat >= 3} delay={dl(3, 0.8)}>
+          <T x={45} y={76} size={18} fill={GREEN} weight={900} anchor="start">
+            1/C_s = 1  ⇒  C_s = 1 µF
           </T>
         </Fade>
 
-        {/* Open Text Explanation */}
-        <Fade on={beat >= 6}>
-          <T x={45} y={268} anchor="start" size={13} fill={GREEN} weight={800}>
-            (Always re-draw circuits by labeling node potentials before calculating)
+        {/* beat 4 — the classic slip */}
+        <Fade on={beat >= 4} delay={dl(4, 0.2)}>
+          <T x={45} y={116} size={13.5} fill={RED} weight={800} anchor="start">
+            {t("Watch that last step: 1/C_s = 1 is not the answer — C_s = 1 µF is.",
+               "Watch that last step: 1/C_s = 1 is not the answer — C_s = 1 µF is.")}
+          </T>
+        </Fade>
+        <Fade on={beat >= 4} delay={dl(4, 0.55)}>
+          <T x={45} y={140} size={12.5} fill={INK_LIGHT} weight={600} anchor="start">
+            {t("forgetting to flip the reciprocal back is a very common slip",
+               "forgetting to flip the reciprocal back is a very common slip")}
+          </T>
+        </Fade>
+
+        {/* beat 5 — the parallel answer */}
+        <Draw on={beat >= 5} delay={dl(5, 0.15)} d="M 45 162 L 450 162" stroke={INK} sw={1.8} dur={0.5} />
+        <Fade on={beat >= 5} delay={dl(5, 0.5)}>
+          <T x={45} y={204} size={18} fill={GREEN} weight={900} anchor="start">
+            C_p = 2 + 3 + 6 = 11 µF
+          </T>
+        </Fade>
+        <Fade on={beat >= 5} delay={dl(5, 0.9)}>
+          <T x={45} y={234} anchor="start" size={13} fill={MUTED} weight={600}>
+            (in parallel the capacitances simply add — no reciprocals at all)
           </T>
         </Fade>
       </g>
 
-      {/* LOWER SECTION: OPEN SPACIOUS SUMMARY */}
-      <g transform="translate(40, 415)">
-        <Badge n={3} cx={20} cy={18} on={beat >= 7} delay={dl(7, 0.2)} />
-        <Fade on={beat >= 7} delay={dl(7, 0.5)}>
+      {/* LOWER SECTION: THE SANITY CHECKS */}
+      <g transform="translate(40, 430)">
+        {/* beat 6 */}
+        <Badge n={3} cx={20} cy={18} on={beat >= 6} delay={dl(6, 0.2)} />
+        <Fade on={beat >= 6} delay={dl(6, 0.5)}>
           <T x={45} y={23} size={15} fill={RED} weight={800} anchor="start">
-            {t("NEET MCQ SPEED TRAP WARNING", "NEET MCQ SPEED TRAP WARNING")}
+            {t("NOW RUN THE SANITY CHECKS", "NOW RUN THE SANITY CHECKS")}
           </T>
         </Fade>
-
-        <Fade on={beat >= 7}>
-          <T x={45} y={50} size={14} anchor="start" fill={GREEN} weight={800}>
-            Option (A) C/3 is the classic distractor! Correct answer is Option (D) 3C!
+        <Fade on={beat >= 6} delay={dl(6, 0.8)}>
+          <T x={45} y={52} size={14.5} anchor="start" fill={GREEN} weight={900}>
+            {t("C_s = 1 µF sits below the smallest member, which was 2 µF.  ✓",
+               "C_s = 1 µF sits below the smallest member, which was 2 µF.  ✓")}
           </T>
-          <T x={45} y={72} size={13} anchor="start" fill={INK} weight={700}>
-            Zero resistance wires collapse node potentials V_1 = V_3 and V_2 = V_4!
+        </Fade>
+        <Fade on={beat >= 6} delay={dl(6, 1.1)}>
+          <T x={45} y={78} size={14.5} anchor="start" fill={GREEN} weight={900}>
+            {t("C_p = 11 µF sits above the largest member, which was 6 µF.  ✓",
+               "C_p = 11 µF sits above the largest member, which was 6 µF.  ✓")}
+          </T>
+        </Fade>
+        <Fade on={beat >= 6} delay={dl(6, 1.4)}>
+          <T x={45} y={102} size={12.5} anchor="start" fill={INK} weight={700}>
+            {t("Both checks hold, so the answers are trustworthy.",
+               "Both checks hold, so the answers are trustworthy.")}
           </T>
         </Fade>
       </g>
 
-      {/* Footer Summary Chip (Floating without card boxes) */}
-      <Fade on={beat >= 7}>
+      {/* beat 6 — footer */}
+      <Fade on={beat >= 6} delay={dl(6, 1.8)}>
         <Chip x={40} y={545} w={1000} h={46} fill={GREEN} textFill="#ffffff" size={14}>
           {t(
-            "★ NEET Trap Neutralized: Crossover wire bridges turn series appearance into parallel C_eq = 3C! ✓",
-            "★ NEET Trap Neutralized: Crossover wire bridges turn series appearance into parallel C_eq = 3C! ✓"
+            "★ 2 µF, 3 µF, 6 µF → C_series = 1 µF (below the smallest) · C_parallel = 11 µF (above the largest)",
+            "★ 2 µF, 3 µF, 6 µF → C_series = 1 µF (below the smallest) · C_parallel = 11 µF (above the largest)"
           )}
         </Chip>
       </Fade>
