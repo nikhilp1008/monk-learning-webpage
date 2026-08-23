@@ -21,6 +21,11 @@ interface QuestionOption {
   text: string;
 }
 
+interface DiagramFigure {
+  url: string;
+  form?: string;
+}
+
 interface QuestionPayload {
   question_id: string;
   question_text: string;
@@ -31,6 +36,7 @@ interface QuestionPayload {
   difficulty?: string;
   exhausted?: boolean;
   message?: string;
+  diagram?: DiagramFigure[] | null;
 }
 
 // `questions.solution` is a JSONB object, not a string -- measured across all
@@ -624,6 +630,23 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                     own scroll box; a long INLINE $...$ is a single unbreakable
                     run that would otherwise scroll the whole page sideways. */}
                 <QuestionStem content={question.question_text} />
+
+                {/* Diagram, when the question has one. Only `cdn_crop` figures
+                    ever reach here — the backend/data pipeline withholds any
+                    figure it isn't confident renders correctly on its own. */}
+                {question.diagram && question.diagram.length > 0 && (
+                  <div className="flex flex-col items-center gap-3">
+                    {question.diagram.map((fig, i) => (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        key={i}
+                        src={fig.url}
+                        alt="Question diagram"
+                        className="max-w-full rounded-xl border border-border-subtle"
+                      />
+                    ))}
+                  </div>
+                )}
 
                 {/* Question Inputs: MCQ vs Numerical */}
                 {question.question_type === "numerical" ? (

@@ -340,9 +340,18 @@ export function SessionView({
               )}
             </div>
 
-            {/* Question Text */}
+            {/* Question Text — through MathText, like the options below it.
+                The question is pulled from the SPOKEN sentence, so it arrives
+                as words ("3 times x squared plus 2"); when the model writes any
+                of it as notation instead, rendering it raw put source in front
+                of the student while the chips right underneath rendered
+                properly. */}
             <p style={{ fontSize: "1rem", lineHeight: 1.5, fontWeight: 600, marginBottom: "14px", flex: "none", color: "#1C1A16" }}>
-              {questionText || (cleanSpeech.length > 20 ? cleanSpeech : "Select an option or type your response below:")}
+              {questionText || cleanSpeech.length > 20 ? (
+                <MathText content={questionText || cleanSpeech} />
+              ) : (
+                "Select an option or type your response below:"
+              )}
             </p>
 
             {/* MCQ Quiz Cards (A, B, C, D) */}

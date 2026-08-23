@@ -127,8 +127,27 @@ export async function snapDoubt(file: File): Promise<SnapResponse> {
   return apiFetch<SnapResponse>("/doubts", { method: "POST", body });
 }
 
+/**
+ * A question as READ off the photo, before any solving. Carries no answer —
+ * it exists so the page can show the student their own question while the
+ * solver works, instead of an empty panel for the whole ~20-30s solve.
+ */
+export interface ReadQuestion {
+  question_index: number;
+  question_text: string | null;
+  stem?: string | null;
+  options?: DoubtOption[] | null;
+  subject: string | null;
+  chapter: string | null;
+  question_type?: string | null;
+  legible: boolean;
+  legibility_note: string | null;
+}
+
 export interface SnapStreamHandlers {
   onMeta?: (m: { submission_id: string; question_count: number; note: string | null }) => void;
+  /** Everything read off the photo, sent before the first solve starts. */
+  onQuestionsRead?: (r: { questions: ReadQuestion[] }) => void;
   /** Solver heartbeat while it reasons — lets the UI show live activity. */
   onThinking?: (t: { question_index: number; seconds: number }) => void;
   /** One step of the working, emitted AS the solver writes it. Never an answer. */
@@ -221,6 +240,7 @@ async function streamSnapOnce(
           const payload = JSON.parse(line.slice(6));
           sawEvent = true;
           if (eventName === "meta") handlers.onMeta?.(payload);
+          else if (eventName === "questions_read") handlers.onQuestionsRead?.(payload);
           else if (eventName === "thinking") handlers.onThinking?.(payload);
           else if (eventName === "step") handlers.onStep?.(payload);
           else if (eventName === "steps_reset") handlers.onStepsReset?.(payload);

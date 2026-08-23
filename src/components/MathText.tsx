@@ -59,8 +59,24 @@ export function MathText({ content, className = "" }: MathTextProps) {
       .replace(/\\\[([\s\S]+?)\\\]/g, (_match, body) => `$$${body}$$`)
       .replace(/\\\(([\s\S]+?)\\\)/g, (_match, body) => `$${body}$`);
 
+    // Brace multi-character super/subscripts.
+    //
+    // A caret takes exactly ONE token in LaTeX, so "MLT^-2" means "MLT^{-}2" —
+    // the minus is raised and the 2 falls back to the baseline, giving MLT⁻2
+    // instead of MLT⁻². The model writes the plain form because that is how a
+    // student types it, so normalise rather than expecting LaTeX discipline.
+    // Already-braced forms are skipped by requiring a non-brace first char.
+    processedContent = processedContent.replace(
+      /([\^_])(-?[A-Za-z0-9]{2,}|-[A-Za-z0-9])(?![A-Za-z0-9}])/g,
+      (_m, op: string, body: string) => `${op}{${body}}`
+    );
+
     // Detect undelimited LaTeX expressions (e.g. \text{...}, \frac{...}, \, \mu, etc.)
-    const hasDelimiters = processedContent.includes("$") || processedContent.includes("\\(");
+    // `let`, not `const`: the whole-expression wrap below can introduce
+    // delimiters, and the sweep after it must see that. Left stale, the sweep
+    // re-processed content it had just wrapped and nested the dollars, which
+    // silently un-rendered every chip it had only just fixed.
+    let hasDelimiters = processedContent.includes("$") || processedContent.includes("\\(");
     const hasLatexCmds = /\\(?:text|frac|,|pm|mu|theta|alpha|beta|sigma|omega|pi|infty|circ|text\{|[a-zA-Z]+)|\^[^{}\s]+|_[^{}\s]+/.test(processedContent);
 
     // A wrap is only ever kept when KaTeX can actually parse the fragment.
@@ -78,11 +94,52 @@ export function MathText({ content, className = "" }: MathTextProps) {
       }
     };
 
+    // A whole line that IS one expression: "x^3 + 2x + C", "[MLT^-2]", "v^2/r".
+    //
+    // Checkpoint chips are written this way — the model emits the answer, not a
+    // sentence containing it — and nothing below caught them: the undelimited
+    // sweep only wraps BRACED exponents (`x^{3}`), so a bare `x^3` fell through
+    // and reached the student as source. Wrapping the line whole also keeps
+    // "+ 2x + C" inside the same expression rather than rendering one term and
+    // leaving the rest as plain text.
+    //
+    // Gated on the line containing no prose: any alphabetic run of 3+ letters
+    // that is not a known function name means this is a sentence, and sentences
+    // are served by the delimiter rules below.
+    const MATH_WORDS = /^(sin|cos|tan|sec|csc|cot|log|ln|exp|lim|max|min|det|mod)$/i;
+    const isOneExpression = (s: string): boolean => {
+      const t = s.trim();
+      if (!t || t.length > 120) return false;
+      if (!/[\^_\\]/.test(t)) return false; // no maths marker at all
+      if (!/^[A-Za-z0-9\s^_{}()[\]+\-*/=.,<>|\\'°·×÷±−–]+$/.test(t)) return false;
+      // Command names are not prose: strip "\dfrac", "\int", "\quad" before
+      // looking for words, or any expression using them reads as a sentence
+      // and is left as source.
+      const withoutCommands = t.replace(/\\[A-Za-z]+/g, " ");
+      return (withoutCommands.match(/[A-Za-z]{3,}/g) || []).every(
+        // ALL-CAPS runs are symbols, not words: dimension clusters like MLT and
+        // variable groups like PV are exactly what these chips carry.
+        (w) => MATH_WORDS.test(w) || w === w.toUpperCase()
+      );
+    };
+    if (!hasDelimiters && isOneExpression(processedContent)) {
+      const whole = processedContent.trim();
+      if (wrapsCleanly(whole)) {
+        processedContent = `$${whole}$`;
+        hasDelimiters = true;
+      }
+    }
+
     if (hasLatexCmds) {
       if (!hasDelimiters) {
         // Nothing is delimited: wrap whole segments that look like expressions.
         processedContent = processedContent.replace(
-          /([a-zA-Z0-9.\s-]*\\[a-zA-Z,]+\{[^}]*\}[\w\s\\,^{}_-]*|[a-zA-Z0-9.\s-]*\\[a-zA-Z,]+[\w\s\\,^{}_-]*|[a-zA-Z0-9._-]+\^\{[^}]*\}|[a-zA-Z0-9._-]+_\{[^}]*\})/g,
+          // The last alternative catches UNBRACED super/subscripts — "x^2",
+          // "r^-1", "a_1". Only braced forms were handled, so a question like
+          // "If x^2 + y^2 = r^2, what does r represent?" showed its notation as
+          // source while the chips beneath it rendered. wrapsCleanly still
+          // vetoes anything KaTeX cannot parse.
+          /([a-zA-Z0-9.\s-]*\\[a-zA-Z,]+\{[^}]*\}[\w\s\\,^{}_-]*|[a-zA-Z0-9.\s-]*\\[a-zA-Z,]+[\w\s\\,^{}_-]*|[a-zA-Z0-9._-]+\^\{[^}]*\}|[a-zA-Z0-9._-]+_\{[^}]*\}|[a-zA-Z0-9]+[\^_]-?[a-zA-Z0-9]+)/g,
           (match) => {
             const tex = match.trim();
             if (tex && (tex.includes("\\") || tex.includes("^") || tex.includes("_"))) {

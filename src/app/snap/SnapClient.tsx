@@ -15,6 +15,7 @@ import {
   rejectReason,
   reportDoubt,
   streamSnap,
+  type ReadQuestion,
   type SnapFailure,
   type SnappedQuestion,
 } from "@/lib/doubts";
@@ -34,6 +35,10 @@ export function SnapClient() {
   // Questions land one at a time as the stream delivers them, so the first
   // answer is on screen while the rest are still being solved.
   const [questions, setQuestions] = useState<SnappedQuestion[]>([]);
+  // What was READ off the photo, delivered before the first solve starts. The
+  // question card renders from this immediately; each answer fills in beside
+  // it as it lands.
+  const [readQuestions, setReadQuestions] = useState<ReadQuestion[]>([]);
   const [expected, setExpected] = useState<number | null>(null);
   const [streamNote, setStreamNote] = useState<string | null>(null);
   // The question currently being solved, printing live: thinking seconds while
@@ -85,6 +90,7 @@ export function SnapClient() {
       setNotice(extraNote);
       setFailure(null);
       setQuestions([]);
+      setReadQuestions([]);
       setExpected(null);
       setStreamNote(null);
       setPreview(URL.createObjectURL(file));
@@ -95,6 +101,7 @@ export function SnapClient() {
           setExpected(m.question_count);
           setStreamNote(m.note);
         },
+        onQuestionsRead: (r) => setReadQuestions(r.questions),
         onThinking: (t) =>
           setLive((prev) =>
             prev && prev.qIndex === t.question_index
@@ -150,6 +157,7 @@ export function SnapClient() {
   const retake = () => {
     setPreview(null);
     setQuestions([]);
+    setReadQuestions([]);
     setExpected(null);
     setStreamNote(null);
     setLive(null);
@@ -183,7 +191,27 @@ export function SnapClient() {
     }
   };
 
-  const showCapture = !busy && questions.length === 0 && !failure;
+  // One card per question read off the photo: the question on the left, its
+  // answer (or live working) on the right. Built from readQuestions so the
+  // question is on screen as soon as it is read, ~20-30s before its solve
+  // lands. Falls back to the solved list if questions_read never arrived, so
+  // an older API keeps rendering.
+  const cards = readQuestions.length
+    ? readQuestions.map((r) => ({
+        key: `q${r.question_index}`,
+        index: r.question_index,
+        read: r as ReadQuestion | null,
+        solved:
+          questions.find((q) => q.question_index === r.question_index) ?? null,
+      }))
+    : questions.map((q) => ({
+        key: q.id,
+        index: q.question_index,
+        read: null as ReadQuestion | null,
+        solved: q as SnappedQuestion | null,
+      }));
+
+  const showCapture = !busy && cards.length === 0 && !failure;
 
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
@@ -280,24 +308,9 @@ export function SnapClient() {
           </div>
         )}
 
-        {/* ─── Working ─── */}
-        {busy && questions.length === 0 && live && (
-          <div className="max-w-[720px]">
-            <RuledSheet label={`${teacher.toUpperCase()} IS WORKING`}>
-              {live.steps.length > 0 && (
-                <Solution answer={null} steps={live.steps} keyIdea={null} />
-              )}
-              <div className="flex items-center gap-2.5 text-ink-muted text-[0.86rem] mt-1">
-                <span className="w-3.5 h-3.5 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
-                {live.steps.length === 0
-                  ? `${teacher} is thinking it through… ${live.seconds}s`
-                  : "writing the next step…"}
-              </div>
-            </RuledSheet>
-          </div>
-        )}
-
-        {busy && questions.length === 0 && !live && (
+        {/* ─── Reading the photo. Only until the questions themselves arrive;
+             from then on each question's own card carries its progress. ─── */}
+        {busy && cards.length === 0 && (
           <div className="flex items-center gap-3.5 bg-white border border-border-subtle rounded-2xl px-6 py-8 shadow-ref-card">
             <span className="w-5 h-5 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
             <div>
