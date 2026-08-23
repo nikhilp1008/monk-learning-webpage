@@ -383,10 +383,16 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
       return (
         <WriteIn animate={animate} seconds={wipeSeconds(event.text, 0.028, 0.8, 2.8)}>
           <p
-            className={`leading-relaxed my-1.5 text-left ${
+            // Both weights use text-ink now. ink-light (#57534B) is 7.7:1 on
+            // the board against ink's 17.4:1, and on a projected/laptop board
+            // at arm's length that read as washed out — but every line on the
+            // board is content the student is meant to read, so none of it
+            // should be de-emphasised by colour. Hierarchy is carried by weight
+            // and size instead, which survives glare and bad screens.
+            className={`leading-relaxed my-1.5 text-left text-ink ${
               isHigh
-                ? "text-base md:text-lg font-semibold text-ink"
-                : "text-[0.95rem] md:text-base text-ink-light"
+                ? "text-lg md:text-xl font-semibold"
+                : "text-base md:text-lg"
             }`}
           >
             {event.text ? renderTextWithMath(event.text) : null}
@@ -426,7 +432,7 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
             // looked visibly thinner next to a "high" one on the same board —
             // inconsistent for two lines that are equally load-bearing content.
             className={`my-2 py-1 px-0 w-full text-left text-ink leading-relaxed overflow-x-auto font-bold ${
-              isHigh ? "text-xl md:text-2xl" : "text-lg md:text-xl"
+              isHigh ? "text-2xl md:text-3xl" : "text-xl md:text-2xl"
             }`}
           >
             {!formulaLatex ? null : failed ? (
@@ -445,7 +451,7 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
         <WriteIn animate={animate} seconds={wipeSeconds(event.text, 0.035, 0.9, 3)}>
           <div
             className={`my-3 py-2.5 pl-4 pr-3 border-l-[3px] border-red-note/70 font-script text-red-note leading-snug -rotate-[0.25deg] origin-left ${
-              isHigh ? "text-lg md:text-xl" : "text-base md:text-lg"
+              isHigh ? "text-xl md:text-2xl" : "text-lg md:text-xl"
             }`}
           >
             {event.text ? renderTextWithMath(event.text) : null}
