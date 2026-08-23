@@ -75,10 +75,31 @@ export function MathText({ content, className = "" }: MathTextProps) {
     // instead of MLT⁻². The model writes the plain form because that is how a
     // student types it, so normalise rather than expecting LaTeX discipline.
     // Already-braced forms are skipped by requiring a non-brace first char.
+    //
+    // The trailing ^ and _ in the lookahead are what keep chemistry working.
+    // "C^-Na^+" is VALID and means C⁻Na⁺ — two bases, one script each. Without
+    // them this rule swallowed "-Na" as one superscript body, producing
+    // "C^{-Na}^+": two superscripts on the same C, which is a KaTeX error, so
+    // a correct ionic equation reached the student as red source text. Same for
+    // "C_3H_4" -> "C_{3H}_4". A charge sign followed by another script belongs
+    // to the atom before it, not to the token after it.
     processedContent = processedContent.replace(
-      /([\^_])(-?[A-Za-z0-9]{2,}|-[A-Za-z0-9])(?![A-Za-z0-9}])/g,
+      /([\^_])(-?[A-Za-z0-9]{2,}|-[A-Za-z0-9])(?![A-Za-z0-9}^_])/g,
       (_m, op: string, body: string) => `${op}{${body}}`
     );
+
+    // Safety net for double scripts from any other source — the solver's own
+    // output included. "x^{a}^{b}" is a hard KaTeX error that renders as red
+    // source; an empty group between them is the standard LaTeX fix and keeps
+    // both scripts visible. Runs until stable so triples are covered too.
+    for (let pass = 0; pass < 3; pass += 1) {
+      const repaired = processedContent.replace(
+        /([_^])(\{[^{}]*\}|[A-Za-z0-9])(?=\s*\1)/g,
+        (_m, op: string, body: string) => `${op}${body}{}`
+      );
+      if (repaired === processedContent) break;
+      processedContent = repaired;
+    }
 
     // Detect undelimited LaTeX expressions (e.g. \text{...}, \frac{...}, \, \mu, etc.)
     // `let`, not `const`: the whole-expression wrap below can introduce
