@@ -2,11 +2,19 @@
 
 import React, { useMemo } from "react";
 import katex from "@/lib/katex-setup";
+import { SmilesStructure } from "./SmilesStructure";
 
 interface MathTextProps {
   content?: string | null;
   className?: string;
 }
+
+// A molecule the OCR converted from a structure drawn on the page. Split out
+// BEFORE any LaTeX handling below: a SMILES string is chemistry, not maths,
+// and the normalisers would happily mangle "CC=CC(C)O" — the parentheses and
+// the "=" are exactly what the undelimited-expression sweep looks for.
+const SMILES_SPLIT_RE = /(<smiles>[\s\S]*?<\/smiles>)/g;
+const SMILES_BODY_RE = /^<smiles>([\s\S]*?)<\/smiles>$/;
 
 export function MathText({ content, className = "" }: MathTextProps) {
   const renderedElements = useMemo(() => {
@@ -49,7 +57,8 @@ export function MathText({ content, className = "" }: MathTextProps) {
       }
     };
 
-    let processedContent = content;
+    const renderSegment = (segment: string): React.ReactNode[] => {
+    let processedContent = segment;
 
     // Normalise LaTeX bracket delimiters to dollar form BEFORE anything else.
     // The splitter below only recognises $...$ and $$...$$, so \(...\) and \[...\]
@@ -181,6 +190,19 @@ export function MathText({ content, className = "" }: MathTextProps) {
         return <React.Fragment key={index}>{renderMathString(math, false)}</React.Fragment>;
       }
       return <span key={index}>{part}</span>;
+    });
+    };
+
+    // No molecule: the content takes exactly the path it always did.
+    if (!content.includes("<smiles>")) return renderSegment(content);
+
+    return content.split(SMILES_SPLIT_RE).map((part, index) => {
+      const molecule = part.match(SMILES_BODY_RE);
+      if (molecule) {
+        const smiles = molecule[1].trim();
+        return smiles ? <SmilesStructure key={index} smiles={smiles} /> : null;
+      }
+      return <React.Fragment key={index}>{renderSegment(part)}</React.Fragment>;
     });
   }, [content]);
 
