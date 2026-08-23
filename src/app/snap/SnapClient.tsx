@@ -375,177 +375,184 @@ export function SnapClient() {
         )}
 
         {/* ─── Results ─── */}
-        {questions.length > 0 && (
+        {cards.length > 0 && (
           <div className="flex flex-col gap-7">
             {streamNote && (
               <p className="text-[0.86rem] text-ink-light">{streamNote}</p>
             )}
 
-            {questions.map((q, idx) => (
-              <div key={q.id}>
-                {(expected ?? questions.length) > 1 && (
-                  <span className="block font-extrabold text-[0.6rem] tracking-[0.14em] uppercase text-ink-muted mb-2">
-                    Question {idx + 1} of {expected ?? questions.length}
-                  </span>
-                )}
+            {cards.map(({ key, index, read, solved }, idx) => {
+              // The question comes from whichever we have — they agree on these
+              // fields, and `read` arrives ~20-30s before `solved`.
+              const q = solved ?? read;
+              if (!q) return null;
+              const isWorking = !solved && live?.qIndex === index;
+              const isQueued = !solved && !isWorking;
 
-                <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-5 items-start">
-                  {/* Left — YOUR QUESTION */}
-                  <div className="bg-white border border-border-subtle rounded-[20px] p-5 shadow-[0_14px_30px_-22px_rgba(28,26,22,0.4)]">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
-                        Your question
-                      </span>
-                      {q.legible ? (
-                        <span className="inline-flex items-center gap-1.5 font-bold text-[0.7rem] text-[#157A45]">
-                          <span className="w-1.5 h-1.5 rounded-full bg-green-badge" />
-                          Read clearly
+              return (
+                <div key={key}>
+                  {(expected ?? cards.length) > 1 && (
+                    <span className="block font-extrabold text-[0.6rem] tracking-[0.14em] uppercase text-ink-muted mb-2">
+                      Question {idx + 1} of {expected ?? cards.length}
+                    </span>
+                  )}
+
+                  <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-5 items-start">
+                    {/* Left — YOUR QUESTION. On screen as soon as the photo is
+                        read, without waiting for the solve. */}
+                    <div className="bg-white border border-border-subtle rounded-[20px] p-5 shadow-[0_14px_30px_-22px_rgba(28,26,22,0.4)]">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
+                          Your question
                         </span>
-                      ) : (
-                        <span className="inline-flex items-center gap-1.5 font-bold text-[0.7rem] text-red-dark">
-                          <span className="w-1.5 h-1.5 rounded-full bg-red-note" />
-                          Not clear
-                        </span>
+                        {q.legible ? (
+                          <span className="inline-flex items-center gap-1.5 font-bold text-[0.7rem] text-[#157A45]">
+                            <span className="w-1.5 h-1.5 rounded-full bg-green-badge" />
+                            Read clearly
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1.5 font-bold text-[0.7rem] text-red-dark">
+                            <span className="w-1.5 h-1.5 rounded-full bg-red-note" />
+                            Not clear
+                          </span>
+                        )}
+                      </div>
+
+                      {idx === 0 && previewUrl && (
+                        // A local object URL of the student's own file — next/image
+                        // would add an optimizer round-trip for a preview that is
+                        // discarded on retake.
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={previewUrl}
+                          alt="The question you photographed"
+                          className="w-full max-h-[260px] object-contain rounded-xl border border-[rgba(28,26,22,0.1)] bg-[#FBF8EF] mb-3.5"
+                        />
                       )}
+
+                      {q.question_text ? (
+                        <QuestionSheet
+                          questionText={q.question_text}
+                          subject={q.subject}
+                          topic={q.chapter}
+                          stem={q.stem}
+                          options={q.options}
+                        />
+                      ) : (
+                        <p className="text-[0.88rem] text-ink-light">
+                          {q.legibility_note || "This one could not be read."}
+                        </p>
+                      )}
+
+                      <button
+                        onClick={retake}
+                        className="font-semibold text-[0.84rem] py-2.5 px-4 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink-light cursor-pointer mt-3.5 hover:border-ink hover:text-ink transition-colors"
+                      >
+                        ↺ Retake
+                      </button>
                     </div>
 
-                    {idx === 0 && previewUrl && (
-                      // A local object URL of the student's own file — next/image
-                      // would add an optimizer round-trip for a preview that is
-                      // discarded on retake.
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={previewUrl}
-                        alt="The question you photographed"
-                        className="w-full max-h-[260px] object-contain rounded-xl border border-[rgba(28,26,22,0.1)] bg-[#FBF8EF] mb-3.5"
-                      />
-                    )}
+                    {/* Right — DRONA EXPLAINS */}
+                    <div className="flex flex-col gap-4">
+                      {/* Still solving: the working prints here, beside its own
+                          question rather than above a blank panel. */}
+                      {isWorking && (
+                        <RuledSheet label={`${teacher.toUpperCase()} IS WORKING`}>
+                          {live.steps.length > 0 && (
+                            <Solution
+                              answer={null}
+                              steps={live.steps}
+                              keyIdea={null}
+                            />
+                          )}
+                          <div className="flex items-center gap-2.5 text-ink-muted text-[0.86rem] mt-1">
+                            <span className="w-3.5 h-3.5 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
+                            {live.steps.length === 0
+                              ? `${teacher} is thinking it through… ${live.seconds}s`
+                              : "writing the next step…"}
+                          </div>
+                        </RuledSheet>
+                      )}
 
-                    {q.question_text ? (
-                      <QuestionSheet
-                        questionText={q.question_text}
-                        subject={q.subject}
-                        topic={q.chapter}
-                        stem={q.stem}
-                        options={q.options}
-                      />
-                    ) : (
-                      <p className="text-[0.88rem] text-ink-light">
-                        {q.legibility_note || "This one could not be read."}
-                      </p>
-                    )}
+                      {isQueued && q.legible && (
+                        <div className="flex items-center gap-3 bg-white border border-border-subtle rounded-2xl px-5 py-6 text-ink-muted text-[0.86rem] shadow-ref-card">
+                          <span className="w-4 h-4 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
+                          {busy ? "Working on this one…" : "Finishing up…"}
+                        </div>
+                      )}
 
-                    <button
-                      onClick={retake}
-                      className="font-semibold text-[0.84rem] py-2.5 px-4 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink-light cursor-pointer mt-3.5 hover:border-ink hover:text-ink transition-colors"
-                    >
-                      ↺ Retake
-                    </button>
-                  </div>
+                      {solved?.status === "solved" && (
+                        <RuledSheet label={`${teacher.toUpperCase()} EXPLAINS`}>
+                          <Solution
+                            answer={solved.answer}
+                            steps={solved.steps}
+                            keyIdea={solved.key_idea}
+                          />
+                        </RuledSheet>
+                      )}
 
-                  {/* Right — DRONA EXPLAINS */}
-                  <div className="flex flex-col gap-4">
-                    {q.status === "solved" && (
-                      <RuledSheet label={`${teacher.toUpperCase()} EXPLAINS`}>
-                        <Solution
-                          answer={q.answer}
-                          steps={q.steps}
-                          keyIdea={q.key_idea}
+                      {solved?.status === "unsure" && (
+                        <UnsureCard
+                          reason={solved.failure_reason}
+                          steps={solved.steps}
+                          keyIdea={solved.key_idea}
+                          teacher={teacher}
                         />
-                      </RuledSheet>
-                    )}
+                      )}
 
-                    {q.status === "unsure" && (
-                      <UnsureCard
-                        reason={q.failure_reason}
-                        steps={q.steps}
-                        keyIdea={q.key_idea}
-                        teacher={teacher}
-                      />
-                    )}
+                      {solved &&
+                        solved.status !== "solved" &&
+                        solved.status !== "unsure" && (
+                          <RefusalCard
+                            message={
+                              solved.legibility_note ||
+                              solved.failure_reason ||
+                              "Try a clearer, well-lit shot."
+                            }
+                            remedy={solved.remedy}
+                            teacher={teacher}
+                            onRetake={
+                              solved.remedy === "retake" ? retake : undefined
+                            }
+                            onAskInSession={
+                              solved.remedy === "retake"
+                                ? undefined
+                                : () => askFollowUp(solved.question_text)
+                            }
+                          />
+                        )}
 
-                    {q.status !== "solved" && q.status !== "unsure" && (
-                      <RefusalCard
-                        message={
-                          q.legibility_note ||
-                          q.failure_reason ||
-                          "Try a clearer, well-lit shot."
-                        }
-                        remedy={q.remedy}
-                        teacher={teacher}
-                        onRetake={q.remedy === "retake" ? retake : undefined}
-                        onAskInSession={
-                          q.remedy === "retake"
-                            ? undefined
-                            : () => askFollowUp(q.question_text)
-                        }
-                      />
-                    )}
-
-                    {q.status === "solved" && (
-                      <div className="flex gap-3 flex-wrap items-center">
-                        <button
-                          onClick={() => askFollowUp(q.question_text)}
-                          className="inline-flex items-center gap-2 font-semibold text-[0.9rem] py-2.5 px-5 rounded-full border-none text-cream-light bg-ink shadow-[0_10px_24px_-12px_rgba(28,26,22,0.7)] cursor-pointer hover:-translate-y-0.5 transition-transform"
-                        >
-                          Ask a follow-up
-                          <ArrowIcon />
-                        </button>
-                        <button
-                          onClick={() => handleReport(q.id)}
-                          disabled={reportedIds.has(q.id)}
-                          title={`Did ${teacher} get this wrong? Report it`}
-                          className={`inline-flex items-center gap-1.5 ml-auto font-semibold text-[0.82rem] py-2.5 px-3 rounded-full border-none bg-transparent cursor-pointer transition-colors ${
-                            reportedIds.has(q.id)
-                              ? "text-red-dark cursor-default"
-                              : "text-ink-muted hover:text-red-dark"
-                          }`}
-                        >
-                          <FlagIcon />
-                          {reportedIds.has(q.id)
-                            ? "Reported — thank you"
-                            : "Report a mistake"}
-                        </button>
-                      </div>
-                    )}
+                      {solved?.status === "solved" && (
+                        <div className="flex gap-3 flex-wrap items-center">
+                          <button
+                            onClick={() => askFollowUp(solved.question_text)}
+                            className="inline-flex items-center gap-2 font-semibold text-[0.9rem] py-2.5 px-5 rounded-full border-none text-cream-light bg-ink shadow-[0_10px_24px_-12px_rgba(28,26,22,0.7)] cursor-pointer hover:-translate-y-0.5 transition-transform"
+                          >
+                            Ask a follow-up
+                            <ArrowIcon />
+                          </button>
+                          <button
+                            onClick={() => handleReport(solved.id)}
+                            disabled={reportedIds.has(solved.id)}
+                            title={`Did ${teacher} get this wrong? Report it`}
+                            className={`inline-flex items-center gap-1.5 ml-auto font-semibold text-[0.82rem] py-2.5 px-3 rounded-full border-none bg-transparent cursor-pointer transition-colors ${
+                              reportedIds.has(solved.id)
+                                ? "text-red-dark cursor-default"
+                                : "text-ink-muted hover:text-red-dark"
+                            }`}
+                          >
+                            <FlagIcon />
+                            {reportedIds.has(solved.id)
+                              ? "Reported — thank you"
+                              : "Report a mistake"}
+                          </button>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-
-            {busy && live && (
-              <div>
-                {(expected ?? 1) > 1 && (
-                  <span className="block font-extrabold text-[0.6rem] tracking-[0.14em] uppercase text-ink-muted mb-2">
-                    Question {live.qIndex} of {expected}
-                  </span>
-                )}
-                <RuledSheet label={`${teacher.toUpperCase()} IS WORKING`}>
-                  {live.steps.length > 0 && (
-                    <Solution
-                      answer={null}
-                      steps={live.steps}
-                      keyIdea={null}
-                    />
-                  )}
-                  <div className="flex items-center gap-2.5 text-ink-muted text-[0.86rem] mt-1">
-                    <span className="w-3.5 h-3.5 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
-                    {live.steps.length === 0
-                      ? `${teacher} is thinking it through… ${live.seconds}s`
-                      : "writing the next step…"}
-                  </div>
-                </RuledSheet>
-              </div>
-            )}
-
-            {busy && !live && (
-              <div className="flex items-center gap-3 text-ink-muted text-[0.88rem]">
-                <span className="w-4 h-4 rounded-full border-2 border-ink-dim border-t-ink animate-ml-spin" />
-                {expected && expected > questions.length
-                  ? `Working through question ${questions.length + 1} of ${expected}…`
-                  : "Finishing up…"}
-              </div>
-            )}
+              );
+            })}
 
             <div className="flex gap-3 flex-wrap">
               <button
