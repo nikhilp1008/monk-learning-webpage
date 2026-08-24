@@ -41,6 +41,20 @@ export interface DoubtSummary {
   option_labels?: string[] | null;
   created_at: string;
   scrap: string;
+  /** What to PRINT for `subject` — the column stores the corpus key
+   * ("mathematics"), this is the label ("Math"). Null when nothing was read. */
+  subject_label?: string | null;
+  /** False when this subject is not on the student's exam. Never a refusal —
+   * the doubt is solved and saved either way — just worth marking. Null when
+   * the photo carried no readable question. */
+  on_syllabus?: boolean | null;
+}
+
+/** A filter chip: the stored key to filter on, and the label to show. */
+export interface SubjectChip {
+  key: string;
+  label: string;
+  on_syllabus: boolean;
 }
 
 export interface DoubtDetail extends Omit<DoubtSummary, "scrap"> {
@@ -53,7 +67,13 @@ export interface DoubtDetail extends Omit<DoubtSummary, "scrap"> {
 export interface DoubtsListResponse {
   doubts: DoubtSummary[];
   count: number;
-  subjects: string[];
+  /** The student's syllabus first, then any subject they have actually snapped
+   * from outside it (`on_syllabus: false`). Off-syllabus doubts are appended
+   * rather than hidden — a doubt you cannot find is worse than a chip you did
+   * not expect. */
+  subjects: SubjectChip[];
+  /** 'jee' | 'neet' | 'both', resolved from the student's entitlement. */
+  exam: string;
 }
 
 /** One question inside a submission, as returned by POST /doubts. */
