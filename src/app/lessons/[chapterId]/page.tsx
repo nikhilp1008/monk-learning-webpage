@@ -803,15 +803,46 @@ export default function LessonPlayerPage() {
                 <div
                   ref={boardContainerRef}
                   className={`flex-1 min-h-0 ${
-                    SceneComp ? "overflow-hidden" : "overflow-y-auto pr-1.5"
+                    SceneComp
+                      ? "overflow-hidden flex items-center justify-center"
+                      : "overflow-y-auto pr-1.5"
                   }`}
                 >
                   {SceneComp ? (
-                    <SceneComp
-                      currentTime={currentTime}
-                      reveals={revealTimestamps}
-                      language={language}
-                    />
+                    // Scenes are authored on a fixed 1080x620 canvas, but this
+                    // container just takes whatever height the page's flex
+                    // layout hands it -- no aspect ratio of its own. With
+                    // `preserveAspectRatio="xMidYMin meet"` on the child <svg>,
+                    // a container taller/narrower than 1080:620 (common: tall
+                    // viewport, narrow sidebar-shrunk column) left the drawing
+                    // scaled to fit the WIDTH and pinned to the top, wasting
+                    // up to two-thirds of the box as blank space below it --
+                    // measured directly at 67% on one real layout. It reads as
+                    // "the board only uses the top of the canvas," but no
+                    // amount of content redistribution inside the SVG's own
+                    // viewBox fixes it, because the container discards the
+                    // space before the SVG is ever positioned inside it.
+                    //
+                    // This wrapper is the fix: aspect-ratio only takes effect
+                    // when at least one axis is free, so width:100% is paired
+                    // with max-height:100% (not height:100%) to leave height
+                    // free for the ratio to resolve against, then clamped by
+                    // max-height if that would overflow -- the standard
+                    // "contain" sizing for a fixed-ratio box in CSS. The
+                    // parent flex centers whatever size comes out, and because
+                    // the wrapper's ratio now matches the SVG's viewBox
+                    // exactly, xMidYMin has nothing left to do: the drawing
+                    // fills the box with no gap on any side.
+                    <div
+                      className="w-full max-h-full mx-auto"
+                      style={{ aspectRatio: "1080 / 620" }}
+                    >
+                      <SceneComp
+                        currentTime={currentTime}
+                        reveals={revealTimestamps}
+                        language={language}
+                      />
+                    </div>
                   ) : boardEvents.length === 0 ? (
                     <div className="py-12 text-center text-ink-muted text-sm italic">
                       No board content available for this section.

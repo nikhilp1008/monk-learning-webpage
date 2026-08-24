@@ -83,6 +83,14 @@ interface ScheduledReveal {
   fired: boolean;
 }
 
+/** How close to the checkpoint question a student must be for an interruption
+ *  to count as "answering it" rather than "cutting the explanation short".
+ *  A turn's audio is buffered well ahead of what has actually been heard, so
+ *  the gap to turnCompleteFireAt — not the mere existence of a pending wait —
+ *  is what separates the two. 2.5s covers the moment between hearing the
+ *  question and reaching for the mic. */
+const HEARD_THE_QUESTION_MS = 2500;
+
 export class DronaVoiceClient {
   private sessionId: string;
   private ws: WebSocket | null = null;
@@ -853,12 +861,27 @@ export class DronaVoiceClient {
     if (!this.isDronaSpeaking && this.activeSources.length === 0 && this.pendingAudioBuffers.length === 0) {
       return;
     }
-    // Did the turn already finish arriving? armTurnCompleteWait() only runs on
-    // the turn_complete frame, so a pending wait means the whole turn —
-    // question and chips included — is already here and merely waiting for its
-    // audio tail to drain.
-    const turnFullyArrived =
+    // Did the student interrupt AT the question, or in the middle of the
+    // explanation leading up to it?
+    //
+    // armTurnCompleteWait() runs on the turn_complete frame, so a pending wait
+    // means the whole turn — question and chips included — has arrived and is
+    // merely waiting for its audio to finish playing. But "arrived" is not the
+    // same as "heard". A turn's audio can be buffered 20s ahead of what the
+    // student has actually listened to, and treating an interruption there as
+    // "they are answering the checkpoint" mounted the quiz the instant they
+    // pressed hold, mid-explanation, then tore it down on release.
+    //
+    // turnCompleteFireAt is when the question is DUE, so the gap to it is
+    // exactly how much the student has not heard yet. Only a student within a
+    // couple of seconds of the question can have heard it.
+    const waitPending =
       this.turnCompleteTimer !== null || this.turnCompleteRemainingMs !== null;
+    const remainingMs = this.turnCompleteRemainingMs
+      ?? (this.turnCompleteFireAt > 0
+            ? this.turnCompleteFireAt - performance.now()
+            : 0);
+    const turnFullyArrived = waitPending && remainingMs <= HEARD_THE_QUESTION_MS;
 
     this.flushAudioQueue(reason);
     this.isDronaSpeaking = false;
@@ -880,11 +903,15 @@ export class DronaVoiceClient {
       // threw away the question they were answering: the Ask Sheet never
       // appeared and the page stayed in `teaching` with no chips at all.
       // The turn is complete; apply it, then let the utterance be the answer.
-      console.log("[BARGE-IN] Turn had fully arrived — applying its question/chips instead of dropping them.");
+      console.log(`[BARGE-IN] Student is at the question (${Math.round(remainingMs)}ms of audio left) — applying its question/chips instead of dropping them.`);
       this.options.onTurnComplete?.();
     } else {
+      if (waitPending) {
+        console.log(`[BARGE-IN] Interrupted mid-explanation with ${Math.round(remainingMs / 100) / 10}s still unheard — discarding the turn rather than mounting its checkpoint.`);
+      }
       this.options.onBargeIn?.();
     }
+    this.turnCompleteFireAt = 0;
     this.notifyState();
   }
 
