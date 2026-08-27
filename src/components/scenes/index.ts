@@ -5971,3 +5971,65 @@ REGISTRY[`${CH14}:35`] = Ch14Sec35;
 REGISTRY[`${CH14}:36`] = Ch14Sec36;
 REGISTRY[`${CH14}:37`] = Ch14Sec37;
 REGISTRY[`${CH14}:38`] = Ch14Sec38;
+
+/* ================================================================== */
+/* Class 12 Mathematics · Ch08 — Application of Integrals             */
+/* 27 sections, every one hand-choreographed against its narration.   */
+/* ================================================================== */
+import M12Ch08Sec1 from "./M12Ch08Sec1";
+import M12Ch08Sec2 from "./M12Ch08Sec2";
+import M12Ch08Sec3 from "./M12Ch08Sec3";
+import M12Ch08Sec4 from "./M12Ch08Sec4";
+import M12Ch08Sec5 from "./M12Ch08Sec5";
+import M12Ch08Sec6 from "./M12Ch08Sec6";
+import M12Ch08Sec7 from "./M12Ch08Sec7";
+import M12Ch08Sec8 from "./M12Ch08Sec8";
+import M12Ch08Sec9 from "./M12Ch08Sec9";
+import M12Ch08Sec10 from "./M12Ch08Sec10";
+import M12Ch08Sec11 from "./M12Ch08Sec11";
+import M12Ch08Sec12 from "./M12Ch08Sec12";
+import M12Ch08Sec13 from "./M12Ch08Sec13";
+import M12Ch08Sec14 from "./M12Ch08Sec14";
+import M12Ch08Sec15 from "./M12Ch08Sec15";
+import M12Ch08Sec16 from "./M12Ch08Sec16";
+import M12Ch08Sec17 from "./M12Ch08Sec17";
+import M12Ch08Sec18 from "./M12Ch08Sec18";
+import M12Ch08Sec19 from "./M12Ch08Sec19";
+import M12Ch08Sec20 from "./M12Ch08Sec20";
+import M12Ch08Sec21 from "./M12Ch08Sec21";
+import M12Ch08Sec22 from "./M12Ch08Sec22";
+import M12Ch08Sec23 from "./M12Ch08Sec23";
+import M12Ch08Sec24 from "./M12Ch08Sec24";
+import M12Ch08Sec25 from "./M12Ch08Sec25";
+import M12Ch08Sec26 from "./M12Ch08Sec26";
+import M12Ch08Sec27 from "./M12Ch08Sec27";
+
+const M12CH08 = "4aeaa5f2-e183-530c-abca-da24207c63f9"; // Class 12 · Application of Integrals
+
+REGISTRY[`${M12CH08}:1`] = M12Ch08Sec1;
+REGISTRY[`${M12CH08}:2`] = M12Ch08Sec2;
+REGISTRY[`${M12CH08}:3`] = M12Ch08Sec3;
+REGISTRY[`${M12CH08}:4`] = M12Ch08Sec4;
+REGISTRY[`${M12CH08}:5`] = M12Ch08Sec5;
+REGISTRY[`${M12CH08}:6`] = M12Ch08Sec6;
+REGISTRY[`${M12CH08}:7`] = M12Ch08Sec7;
+REGISTRY[`${M12CH08}:8`] = M12Ch08Sec8;
+REGISTRY[`${M12CH08}:9`] = M12Ch08Sec9;
+REGISTRY[`${M12CH08}:10`] = M12Ch08Sec10;
+REGISTRY[`${M12CH08}:11`] = M12Ch08Sec11;
+REGISTRY[`${M12CH08}:12`] = M12Ch08Sec12;
+REGISTRY[`${M12CH08}:13`] = M12Ch08Sec13;
+REGISTRY[`${M12CH08}:14`] = M12Ch08Sec14;
+REGISTRY[`${M12CH08}:15`] = M12Ch08Sec15;
+REGISTRY[`${M12CH08}:16`] = M12Ch08Sec16;
+REGISTRY[`${M12CH08}:17`] = M12Ch08Sec17;
+REGISTRY[`${M12CH08}:18`] = M12Ch08Sec18;
+REGISTRY[`${M12CH08}:19`] = M12Ch08Sec19;
+REGISTRY[`${M12CH08}:20`] = M12Ch08Sec20;
+REGISTRY[`${M12CH08}:21`] = M12Ch08Sec21;
+REGISTRY[`${M12CH08}:22`] = M12Ch08Sec22;
+REGISTRY[`${M12CH08}:23`] = M12Ch08Sec23;
+REGISTRY[`${M12CH08}:24`] = M12Ch08Sec24;
+REGISTRY[`${M12CH08}:25`] = M12Ch08Sec25;
+REGISTRY[`${M12CH08}:26`] = M12Ch08Sec26;
+REGISTRY[`${M12CH08}:27`] = M12Ch08Sec27;
