@@ -345,7 +345,7 @@ function AnimatedDiagram({
     <div className="my-5 flex flex-col items-center justify-center">
       <div
         ref={hostRef}
-        className="relative w-full max-w-xl overflow-hidden py-3 px-9 bg-cream-soft/70 rounded-xl border-[1.5px] border-ink/70 shadow-sm [&_svg]:w-full [&_svg]:h-auto"
+        className="relative w-full max-w-xl overflow-hidden py-3 px-2 sm:px-9 bg-cream-soft/70 rounded-xl border-[1.5px] border-ink/70 shadow-sm [&_svg]:w-full [&_svg]:h-auto"
       >
         <div dangerouslySetInnerHTML={{ __html: cleanSvg }} />
         {/* chalk dot that follows whichever line is being drawn */}
