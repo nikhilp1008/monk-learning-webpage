@@ -125,7 +125,19 @@ function animateSvg(
   const steps = buildDrawPlan(root);
   if (steps.length === 0) return () => {};
 
-  const TOTAL_BUDGET = Math.min(4200, Math.max(1800, steps.length * 120));
+  // Raised from 4200ms alongside the API's SVG budget (8000 -> 14000 chars).
+  // The two are coupled and it is not obvious why: `dur` below floors at 60ms
+  // per step, so once steps exceed TOTAL_BUDGET/60 the floor takes over and the
+  // draw stretches linearly instead of fitting its budget. At 4200ms that
+  // ceiling was ~70 steps — which, at the ~105 chars per step these diagrams
+  // actually run at, is almost exactly 8000 characters. The old byte cap and
+  // this animation ceiling were accidentally the same limit.
+  //
+  // So raising the character budget WITHOUT raising this would not have bought
+  // richer diagrams, it would have bought diagrams that draw for 6-8 seconds.
+  // 7000ms holds ~116 steps; diagram_author.MAX_DRAW_STEPS caps authoring at
+  // 110 to stay inside it.
+  const TOTAL_BUDGET = Math.min(7000, Math.max(1800, steps.length * 120));
   const per = TOTAL_BUDGET / steps.length;
   let cancelled = false;
   const rafIds: number[] = [];
