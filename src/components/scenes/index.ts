@@ -1725,6 +1725,7 @@ import P12Ch07Sec10 from "./P12Ch07Sec10";
 import P12Ch07Sec11 from "./P12Ch07Sec11";
 import P12Ch07Sec12 from "./P12Ch07Sec12";
 import P12Ch07Sec13 from "./P12Ch07Sec13";
+import P12Ch07Sec14 from "./P12Ch07Sec14";
 
 const P12CH07 = "69dbf2ca-bc1d-514e-a033-de1eefec09c9"; // Class 12 · Alternating Current
 
@@ -1741,6 +1742,7 @@ REGISTRY[`${P12CH07}:10`] = P12Ch07Sec10;
 REGISTRY[`${P12CH07}:11`] = P12Ch07Sec11;
 REGISTRY[`${P12CH07}:12`] = P12Ch07Sec12;
 REGISTRY[`${P12CH07}:13`] = P12Ch07Sec13;
+REGISTRY[`${P12CH07}:14`] = P12Ch07Sec14;
 /* ============================ end P12Ch07 ============================ */
 
 
