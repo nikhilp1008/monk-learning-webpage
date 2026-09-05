@@ -47,8 +47,19 @@ function splitRow(line: string): string[] {
 // No /s flag: the splitter feeds this one line at a time, and `.` already
 // matches everything in a line. (/s needs an es2018 target this build predates.)
 const LABELLED = /^\s*((?:assertion|reason|statement|column)\s*[-–—]?\s*(?:\([A-Za-z]\)|[IVX]+|[A-D])?)\s*[:.]\s*(.*)$/i;
-// "(1) benzene", "1) benzene", "A. sodium", "(i) ..." — list rows inside a stem
-const LISTITEM = /^\s*\(?([0-9]{1,2}|[ivx]{1,4}|[A-D])\)[.\s]\s*(.+)$/i;
+// "(1) benzene", "1) benzene", "A. sodium", "(i) ..." — list rows inside a stem.
+// Letters run to H, not D: a five- or six-item statement list is common, and
+// with [A-D] the tail items ("e) Water vascular system") matched nothing and
+// reached the student as an unstyled paragraph while a)-d) carried badges.
+const LISTITEM = /^\s*\(?([0-9]{1,2}|[ivx]{1,4}|[A-H])\)[.\s]\s*(.+)$/i;
+// A second list marker sitting INSIDE a row's body — "a) Spongocoel b) Choanocytes".
+// PDF two-column lists extract onto one line, so splitting on newlines alone
+// swallowed every even-numbered item into the odd one before it.
+// The leading \s is required: it keeps "f(x) is" and "(0, 1) and" intact,
+// because there the character before the marker is "(" or a digit, not a space.
+const INLINE_ITEM = /\s+(?=\(?[0-9]{1,2}\)\s|\(?[a-hA-H]\)\s|\(?[ivxIVX]{1,4}\)\s)/g;
+// A whole line that is nothing but a marker: "A.", "(i)", "3)".
+const LONE_MARKER = /^\s*\(?(?:[0-9]{1,2}|[ivxIVX]{1,4}|[A-Ha-h])[).]\s*$/;
 // closing instruction lines
 const TAIL = /^\s*(choose|select|identify|in the light of|given below|match the|the correct answer is|which of the)\b/i;
 
@@ -57,7 +68,13 @@ function classify(line: string): Block | null {
   if (!raw) return null;
 
   const labelled = raw.match(LABELLED);
-  if (labelled && labelled[2] !== undefined) {
+  // Require real body content. "Match Column I with Column II." is prose that
+  // NAMES the columns, not a label introducing content — but INLINE_LABEL still
+  // breaks a line before "Column II." because it ends in a period, and without
+  // this guard that orphan line rendered as an empty, content-free orange card
+  // sitting right above the actual table. An empty match falls through to the
+  // plain-paragraph branches below instead, so the sentence just reads as text.
+  if (labelled && labelled[2] !== undefined && labelled[2].trim().length > 0) {
     return { kind: "labelled", label: labelled[1].replace(/\s+/g, " ").trim(), body: labelled[2].trim() };
   }
 
@@ -85,7 +102,27 @@ function parseStem(text: string): Block[] {
   // sentence ends generally would shatter ordinary multi-sentence prose into
   // fragments, which is worse than the run-on paragraph this component fixes.
   const withBreaks = text.replace(INLINE_LABEL, "\n$1");
-  const lines = withBreaks.split(/\r?\n/);
+  const rawLines = withBreaks.split(/\r?\n/);
+
+  // Extraction often strands a list marker on its own line:
+  //   "A. \nRestriction enzymes \nB. \nPolymerase enzymes"
+  // Neither half matches LISTITEM on its own (the marker has no body, the body
+  // has no marker), so both fell through as plain paragraphs and the student
+  // read a column of naked letters above their own items. Re-join a lone
+  // marker with the next non-empty line before anything else looks at them.
+  const lines: string[] = [];
+  for (let i = 0; i < rawLines.length; i += 1) {
+    if (LONE_MARKER.test(rawLines[i])) {
+      let j = i + 1;
+      while (j < rawLines.length && !rawLines[j].trim()) j += 1;
+      if (j < rawLines.length && !LONE_MARKER.test(rawLines[j])) {
+        lines.push(`${rawLines[i].trim()} ${rawLines[j].trim()}`);
+        i = j;
+        continue;
+      }
+    }
+    lines.push(rawLines[i]);
+  }
 
   const blocks: Block[] = [];
   for (let i = 0; i < lines.length; i += 1) {
@@ -108,6 +145,27 @@ function parseStem(text: string): Block[] {
       if (rows.length >= 2) {
         blocks.push({ kind: "table", body: "", rows, hasHeader });
         i = j - 1;
+        continue;
+      }
+    }
+    // A line that IS a list row may carry further rows inline. Split it and
+    // classify each piece, so "a) X b) Y" becomes two badged items rather than
+    // one item whose body still shows "b) Y" as raw text. Only list rows are
+    // split, so ordinary prose containing a stray "c)" is left alone.
+    if (LISTITEM.test(lines[i])) {
+      const parts = lines[i].split(INLINE_ITEM).filter((p) => p.trim());
+      const labels = parts.map((p) => p.match(LISTITEM)?.[1]?.toUpperCase());
+      // Every piece must be a list row AND the markers must be distinct. The
+      // distinctness check is what protects an interval: "1) The set (0, 1) is
+      // open" splits at the "1)" inside (0, 1) and yields labels 1 and 1, so it
+      // is rejected and the line stays whole. A real list reads a, b, c.
+      const distinct =
+        labels.every(Boolean) && new Set(labels).size === labels.length;
+      if (parts.length > 1 && parts.every((p) => LISTITEM.test(p)) && distinct) {
+        for (const p of parts) {
+          const pb = classify(p);
+          if (pb) blocks.push(pb);
+        }
         continue;
       }
     }
