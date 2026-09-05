@@ -19,12 +19,28 @@ import { MathText } from "./MathText";
  * stem is unchanged.
  */
 
-type BlockKind = "lead" | "labelled" | "listitem" | "tail";
+type BlockKind = "lead" | "labelled" | "listitem" | "tail" | "table";
 
 interface Block {
   kind: BlockKind;
   label?: string;
   body: string;
+  rows?: string[][];
+  hasHeader?: boolean;
+}
+
+// A markdown pipe table row: "| A. | Pyruvic acid | I. | Undergoes ... |".
+// Match-the-following stems arrive from extraction as these, and without a
+// table branch they fell through to `classify` as ordinary paragraphs, so the
+// student read the raw pipes and the "| :--- |" separator as question text.
+const TABLE_ROW = /^\s*\|(.+)\|\s*$/;
+// The alignment row directly under a header: "| :--- | ---: | :-: |"
+const TABLE_SEP = /^\s*\|[\s:|-]+\|\s*$/;
+
+function splitRow(line: string): string[] {
+  const m = line.match(TABLE_ROW);
+  if (!m) return [];
+  return m[1].split("|").map((c) => c.trim());
 }
 
 // "Assertion (A) :", "Reason (R):", "Statement I :", "Column - I"
@@ -69,10 +85,36 @@ function parseStem(text: string): Block[] {
   // sentence ends generally would shatter ordinary multi-sentence prose into
   // fragments, which is worse than the run-on paragraph this component fixes.
   const withBreaks = text.replace(INLINE_LABEL, "\n$1");
-  return withBreaks
-    .split(/\r?\n/)
-    .map(classify)
-    .filter((b): b is Block => b !== null);
+  const lines = withBreaks.split(/\r?\n/);
+
+  const blocks: Block[] = [];
+  for (let i = 0; i < lines.length; i += 1) {
+    // Consecutive pipe rows form one table. Consume the whole run here so the
+    // rows never reach `classify`, which would render them as raw text.
+    if (TABLE_ROW.test(lines[i]) && !TABLE_SEP.test(lines[i])) {
+      const rows: string[][] = [];
+      let hasHeader = false;
+      let j = i;
+      while (j < lines.length && TABLE_ROW.test(lines[j])) {
+        if (TABLE_SEP.test(lines[j])) {
+          // A separator immediately after the first row marks it as a header.
+          if (rows.length === 1) hasHeader = true;
+        } else {
+          rows.push(splitRow(lines[j]));
+        }
+        j += 1;
+      }
+      // A single stray pipe line is not a table; let it fall through as prose.
+      if (rows.length >= 2) {
+        blocks.push({ kind: "table", body: "", rows, hasHeader });
+        i = j - 1;
+        continue;
+      }
+    }
+    const b = classify(lines[i]);
+    if (b) blocks.push(b);
+  }
+  return blocks;
 }
 
 export function QuestionStem({ content }: { content?: string | null }) {
@@ -91,7 +133,9 @@ export function QuestionStem({ content }: { content?: string | null }) {
 
   // A stem with no structural blocks renders as one flowing paragraph, which
   // is correct for the ordinary case and avoids gratuitous vertical gaps.
-  const hasStructure = blocks.some((b) => b.kind === "labelled" || b.kind === "listitem");
+  const hasStructure = blocks.some(
+    (b) => b.kind === "labelled" || b.kind === "listitem" || b.kind === "table"
+  );
   if (!hasStructure) {
     return (
       <div className="text-base md:text-lg text-ink font-medium leading-relaxed overflow-x-auto whitespace-pre-line">
@@ -103,6 +147,48 @@ export function QuestionStem({ content }: { content?: string | null }) {
   return (
     <div className="space-y-3 text-base md:text-lg text-ink font-medium leading-relaxed">
       {blocks.map((b, i) => {
+        if (b.kind === "table" && b.rows?.length) {
+          const rows = b.rows;
+          const head = b.hasHeader ? rows[0] : null;
+          const body = b.hasHeader ? rows.slice(1) : rows;
+          // Overflow lives on the wrapper, not the table: a wide match-table
+          // must scroll inside its own box rather than push the page sideways.
+          return (
+            <div key={i} className="overflow-x-auto rounded-xl border border-border-subtle">
+              <table className="w-full border-collapse text-[0.9rem] md:text-[0.95rem]">
+                {head && (
+                  <thead>
+                    <tr className="bg-[#FBF8EF]">
+                      {head.map((c, k) => (
+                        <th
+                          key={k}
+                          className="text-left font-extrabold text-ink px-3 py-2 border-b border-border-subtle align-top"
+                        >
+                          <MathText content={c} />
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                )}
+                <tbody>
+                  {body.map((r, ri) => (
+                    <tr key={ri} className={ri % 2 ? "bg-black/[0.02]" : undefined}>
+                      {r.map((c, ci) => (
+                        <td
+                          key={ci}
+                          className="px-3 py-2 align-top border-b border-border-subtle/60 last:border-r-0"
+                        >
+                          <MathText content={c} />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+
         if (b.kind === "labelled") {
           return (
             <div
