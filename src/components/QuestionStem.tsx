@@ -37,10 +37,35 @@ const TABLE_ROW = /^\s*\|(.+)\|\s*$/;
 // The alignment row directly under a header: "| :--- | ---: | :-: |"
 const TABLE_SEP = /^\s*\|[\s:|-]+\|\s*$/;
 
+// Only a `|` OUTSIDE any $...$ span is a real cell boundary. Absolute-value
+// notation inside math ("$\left|1-z_1\right|\left|1-z_2\right|$", or the
+// bare-escape idiom "$\|x\|$") is never a delimiter, but a plain .split("|")
+// cut through both forms — measured live: a 4-column row whose one cell held
+// three `\left|...\right|` pairs split into 10 pieces instead of 4, so that
+// row's data landed under the wrong header and the table looked ragged next
+// to its neighbours. `\left|` doesn't have a backslash directly before the
+// pipe (the backslash is on "left"), so escaping only a literal `\|` was not
+// enough — the general fix is to track math-span state across the whole cell
+// string and ignore every pipe seen while inside one, regardless of form.
 function splitRow(line: string): string[] {
   const m = line.match(TABLE_ROW);
   if (!m) return [];
-  return m[1].split("|").map((c) => c.trim());
+  const inner = m[1];
+  const cells: string[] = [];
+  let current = "";
+  let inMath = false;
+  for (let i = 0; i < inner.length; i += 1) {
+    const ch = inner[i];
+    if (ch === "$") inMath = !inMath;
+    if (ch === "|" && !inMath) {
+      cells.push(current.trim());
+      current = "";
+    } else {
+      current += ch;
+    }
+  }
+  cells.push(current.trim());
+  return cells;
 }
 
 // "Assertion (A) :", "Reason (R):", "Statement I :", "Column - I"
