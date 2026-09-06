@@ -5,7 +5,8 @@ export const dynamic = "force-dynamic";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
+import { FollowUp } from "@/components/FollowUp";
 import { MathText } from "@/components/MathText";
 import { QuestionSheet, RuledSheet, Solution } from "@/components/SavedBoard";
 import { DEFAULT_VOICE, getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
@@ -19,7 +20,6 @@ import { getDoubt, reportDoubt, type DoubtDetail } from "@/lib/doubts";
  */
 export default function DoubtDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const router = useRouter();
 
   const [teacher, setTeacher] = useState(() => getTutorName(DEFAULT_VOICE));
   useEffect(() => {
@@ -30,6 +30,7 @@ export default function DoubtDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [reported, setReported] = useState(false);
+  const [asking, setAsking] = useState(false);
 
   useEffect(() => {
     if (!id) return;
@@ -194,9 +195,17 @@ export default function DoubtDetailPage() {
                   </div>
                 )}
 
+                {asking && (
+                  <FollowUp
+                    doubtId={doubt.id}
+                    teacher={teacher}
+                    onClose={() => setAsking(false)}
+                  />
+                )}
+
                 <div className="flex gap-3 flex-wrap items-center">
                   <button
-                    onClick={() => router.push("/learn?from=snap")}
+                    onClick={() => setAsking((a) => !a)}
                     className="inline-flex items-center gap-2 font-semibold text-[0.88rem] py-2.5 px-5 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink cursor-pointer hover:border-ink transition-colors"
                   >
                     Ask a follow-up →

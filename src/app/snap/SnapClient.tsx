@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { FollowUp } from "@/components/FollowUp";
 import {
   QuestionSheet,
   RefusalCard,
@@ -53,6 +54,9 @@ export function SnapClient() {
   const [notice, setNotice] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
   const [reportedIds, setReportedIds] = useState<Set<string>>(new Set());
+  // Which solved question the student is currently asking about, if any.
+  // One at a time: the bar sits over that question's solution.
+  const [askingId, setAskingId] = useState<string | null>(null);
 
   // Object URLs are only valid while held; release the previous one on replace
   // and on unmount.
@@ -522,10 +526,20 @@ export function SnapClient() {
                           />
                         )}
 
+                      {solved && askingId === solved.id && (
+                        <FollowUp
+                          doubtId={solved.id}
+                          teacher={teacher}
+                          onClose={() => setAskingId(null)}
+                        />
+                      )}
+
                       {solved?.status === "solved" && (
                         <div className="flex gap-3 flex-wrap items-center">
                           <button
-                            onClick={() => askFollowUp(solved.question_text)}
+                            onClick={() =>
+                              setAskingId(askingId === solved.id ? null : solved.id)
+                            }
                             className="inline-flex items-center gap-2 font-semibold text-[0.9rem] py-2.5 px-5 rounded-full border-none text-cream-light bg-ink shadow-[0_10px_24px_-12px_rgba(28,26,22,0.7)] cursor-pointer hover:-translate-y-0.5 transition-transform"
                           >
                             Ask a follow-up
