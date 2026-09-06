@@ -147,21 +147,31 @@ export async function askVoice(
 }
 
 /**
- * The answer read aloud, in the teacher this student picked.
+ * The answer read aloud, a sentence at a time, in the teacher this student
+ * picked. Each chunk is handed over as it is synthesised.
  *
- * Returns null when it could not be synthesised. Call this only once the steps
- * are on screen: they are useful in silence, so a slow or refused synthesis
- * must cost nothing that was already readable — and a missing voice is not an
- * error worth showing.
+ * Not one file: an answer read in one piece cannot start until all of it
+ * exists, which measured at 9.4s of silence for a 588-character answer — and
+ * 24.7s once that answer is split into the several requests it takes to get
+ * past Rumik's ~25s ceiling. The student has been reading the steps for all of
+ * it, which is what makes the wait feel wrong rather than merely long. Sent a
+ * sentence at a time the first plays at ~4s, and the rest are made while it is
+ * playing.
+ *
+ * Call this only once the steps are on screen: they are useful in silence, so
+ * a slow or refused synthesis must cost nothing already readable — and a
+ * missing voice is not an error worth showing.
  */
-export async function speakFollowUp(
+export async function streamFollowUpSpeech(
   doubtId: string,
-  text: string
-): Promise<Blob | null> {
-  if (!text.trim()) return null;
+  text: string,
+  onChunk: (wav: Blob, index: number, total: number) => void,
+  shouldStop?: () => boolean
+): Promise<void> {
+  if (!text.trim()) return;
   try {
     const token = await bearer();
-    const res = await fetch(`${apiBase()}/doubts/${doubtId}/speak`, {
+    const res = await fetch(`${apiBase()}/doubts/${doubtId}/speak-stream`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -169,10 +179,52 @@ export async function speakFollowUp(
       },
       body: JSON.stringify({ text }),
     });
-    if (!res.ok) return null;      // 503 included: skip silently
-    return await res.blob();
+    if (!res.ok || !res.body) return;      // 503 included: skip silently
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    let eventName = "";
+
+    for (;;) {
+      // The student has moved on — stop pulling audio nobody will hear.
+      if (shouldStop?.()) {
+        await reader.cancel().catch(() => {});
+        return;
+      }
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+
+      const frames = buffer.split("\n\n");
+      buffer = frames.pop() ?? "";
+
+      for (const frame of frames) {
+        for (const line of frame.split("\n")) {
+          if (line.startsWith("event: ")) {
+            eventName = line.slice(7).trim();
+          } else if (line.startsWith("data: ") && eventName === "audio") {
+            let payload: { b64?: string; n?: number; total?: number };
+            try {
+              payload = JSON.parse(line.slice(6));
+            } catch {
+              continue;
+            }
+            if (!payload.b64) continue;
+            const bin = atob(payload.b64);
+            const bytes = new Uint8Array(bin.length);
+            for (let i = 0; i < bin.length; i += 1) bytes[i] = bin.charCodeAt(i);
+            onChunk(
+              new Blob([bytes], { type: "audio/wav" }),
+              payload.n ?? 0,
+              payload.total ?? 0
+            );
+          }
+        }
+      }
+    }
   } catch {
-    return null;
+    /* the steps are on screen; a missing voice is not worth an error */
   }
 }
 

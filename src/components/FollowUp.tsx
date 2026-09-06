@@ -6,7 +6,7 @@ import { useRecorder } from "@/lib/useRecorder";
 import {
   answerFitsInline,
   askVoice,
-  speakFollowUp,
+  streamFollowUpSpeech,
   type FollowUpStep,
   type FollowUpTurn,
 } from "@/lib/followup";
@@ -44,16 +44,49 @@ export function FollowUp({
   const [history, setHistory] = useState<FollowUpTurn[]>([]);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const objectUrlRef = useRef<string | null>(null);
   const startedRef = useRef(false);
+  // Sentences arrive faster than they play, so they queue. Playing chunk N+1
+  // from chunk N's `ended` is what keeps the reading continuous — waiting for
+  // a fetch between sentences is audible.
+  const queueRef = useRef<string[]>([]);
+  const playingRef = useRef(false);
+  const abandonedRef = useRef(false);
 
   const stopAudio = useCallback(() => {
+    abandonedRef.current = true;
     audioRef.current?.pause();
     audioRef.current = null;
-    if (objectUrlRef.current) {
-      URL.revokeObjectURL(objectUrlRef.current);
-      objectUrlRef.current = null;
-    }
+    playingRef.current = false;
+    queueRef.current.forEach((u) => URL.revokeObjectURL(u));
+    queueRef.current = [];
+  }, []);
+
+  /** Plays whatever is queued, in order, and stops when it runs dry. */
+  const drainQueue = useCallback(() => {
+    if (playingRef.current || abandonedRef.current) return;
+    const url = queueRef.current.shift();
+    if (!url) return;
+    playingRef.current = true;
+    const audio = new Audio(url);
+    audioRef.current = audio;
+    const next = () => {
+      URL.revokeObjectURL(url);
+      playingRef.current = false;
+      audioRef.current = null;
+      if (!abandonedRef.current) drainQueue();
+    };
+    audio.onended = next;
+    // A chunk that will not play must not stall the ones behind it.
+    audio.onerror = next;
+    void audio.play().catch(() => {
+      // Autoplay refused. The steps are readable, so this is not an error —
+      // but the queue is dropped rather than left half-spoken.
+      URL.revokeObjectURL(url);
+      playingRef.current = false;
+      abandonedRef.current = true;
+      queueRef.current.forEach((u) => URL.revokeObjectURL(u));
+      queueRef.current = [];
+    });
   }, []);
 
   const beginListening = useCallback(async () => {
@@ -115,15 +148,17 @@ export function FollowUp({
         // Only once the steps are on screen. They are useful in silence, and a
         // slow or refused synthesis must cost nothing already readable.
         if (spokenLine) {
-          const wav = await speakFollowUp(doubtId, spokenLine);
-          if (!wav) return;                        // 503: skip, no error shown
-          const url = URL.createObjectURL(wav);
-          objectUrlRef.current = url;
-          const audio = new Audio(url);
-          audioRef.current = audio;
-          void audio.play().catch(() => {
-            /* autoplay refused — the steps are already readable */
-          });
+          abandonedRef.current = false;
+          await streamFollowUpSpeech(
+            doubtId,
+            spokenLine,
+            (wav) => {
+              if (abandonedRef.current) return;
+              queueRef.current.push(URL.createObjectURL(wav));
+              drainQueue();
+            },
+            () => abandonedRef.current
+          );
         }
       },
       onNotHeard: (m) => {
@@ -135,7 +170,7 @@ export function FollowUp({
         setMessage(m);
       },
     });
-  }, [doubtId, history, recorder, teacher, transcript]);
+  }, [doubtId, drainQueue, history, recorder, teacher, transcript]);
 
   const close = useCallback(() => {
     recorder.cancel();
