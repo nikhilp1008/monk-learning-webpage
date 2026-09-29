@@ -9,7 +9,7 @@ export default function PrivacyPage() {
         <h1 className="text-[2rem] leading-tight tracking-[-0.02em] font-medium text-ink mb-2">
           Privacy policy
         </h1>
-        <p className="text-[0.8rem] text-ink-muted font-semibold mb-8">Last updated: August 2026</p>
+        <p className="text-[0.8rem] text-ink-muted font-semibold mb-8">Last updated: September 2026</p>
 
         <div className="space-y-6 text-[0.95rem] text-ink-light leading-relaxed">
           <section>
@@ -19,6 +19,18 @@ export default function PrivacyPage() {
               (questions attempted, sessions, doubts, notes), and the preferences you set
               (teacher, language). This is what makes your teaching and your progress tracking
               personal to you.
+            </p>
+          </section>
+          <section>
+            <h2 className="font-bold text-ink text-[1.05rem] mb-1.5">Your device and location</h2>
+            <p>
+              The app records your phone&apos;s make, model and OS version, and which screens you
+              open. We work out your state (and a rough city) from your internet connection&apos;s IP
+              address on our own servers, and keep only the state and city &mdash; never the
+              address itself, and it is never sent to anyone else to look up. We don&apos;t use GPS
+              or ask for your location, and we don&apos;t collect your phone&apos;s serial number,
+              advertising ID or anything else that identifies the handset. We use this, in
+              aggregate, to know which phones to test on and which regions we&apos;re reaching.
             </p>
           </section>
           <section>
