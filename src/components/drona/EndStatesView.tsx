@@ -7,7 +7,7 @@ import { saveSessionNote } from "@/lib/notes";
 
 interface EndStatesViewProps {
   type: "normal" | "session_ended" | "error";
-  /** Display name of the persona the student picked ("Veda" / "Drona"). */
+  /** Display name of the persona the student picked ("Vedha" / "Drona"). */
   tutorName?: string;
   summaryData?: EndSessionResponse | null;
   errorMessage?: string;

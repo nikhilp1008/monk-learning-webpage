@@ -27,7 +27,7 @@ const kalam = Kalam({
 
 export const metadata: Metadata = {
   title: "monk learning — Lessons",
-  description: "Every chapter taught by Monk out loud on a real board",
+  description: "Every chapter taught by Drona or Vedha, out loud on a real board",
 };
 
 export default function RootLayout({

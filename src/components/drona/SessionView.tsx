@@ -16,7 +16,7 @@ import { VoiceClientState } from "@/lib/drona/voice";
 
 interface SessionViewProps {
   sessionTopic: string;
-  /** Display name of the persona the student picked ("Veda" / "Drona"). */
+  /** Display name of the persona the student picked ("Vedha" / "Drona"). */
   tutorName?: string;
   /** Session language — drives the captions-bar badge and input copy. */
   language?: SessionLanguage;

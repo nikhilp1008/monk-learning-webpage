@@ -164,7 +164,7 @@ export default function OnboardingPage() {
               </span>
               <div>
                 <b className="block font-bold text-[0.98rem] text-ink">Live classes on a real board</b>
-                <span className="text-[0.84rem] text-ink-light">Monk writes every step as he speaks — pause any time.</span>
+                <span className="text-[0.84rem] text-ink-light">Drona and Vedha write every step as they speak — pause any time.</span>
               </div>
             </div>
 
@@ -414,7 +414,7 @@ export default function OnboardingPage() {
                     {submitting ? (
                       <div className="w-4 h-4 border-2 border-dark-card border-t-transparent rounded-full animate-ml-spin" />
                     ) : (
-                      "Start learning with Monk →"
+                      "Start learning with Drona or Vedha →"
                     )}
                   </button>
                 </div>
