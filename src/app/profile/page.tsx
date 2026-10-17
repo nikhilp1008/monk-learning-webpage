@@ -193,11 +193,11 @@ export default function ProfilePage() {
                     Learning preferences
                   </span>
 
-                  <span className="block text-[0.8rem] font-bold text-ink mb-2">Your teacher</span>
+                  <span className="block text-[0.8rem] font-bold text-ink mb-2">Choose Drona or Vedha</span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
                     {[
                       { key: "drona", name: "Drona", tag: "Male voice", traits: ["Steady", "Exacting"] },
-                      { key: "vedha", name: "Veda", tag: "Female voice", traits: ["Warm", "Patient"] },
+                      { key: "vedha", name: "Vedha", tag: "Female voice", traits: ["Warm", "Patient"] },
                     ].map((t) => {
                       const active = (profile?.teacher_voice || "drona") === t.key;
                       return (

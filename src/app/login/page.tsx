@@ -323,7 +323,7 @@ export default function LoginPage() {
             <p className="text-ink-light text-sm mt-1">
               {mode === "signup"
                 ? "Create your account to save progress and customize your plan."
-                : "Sign in to continue your lessons with Monk."}
+                : "Sign in to continue your lessons with Drona or Vedha."}
             </p>
           </div>
 

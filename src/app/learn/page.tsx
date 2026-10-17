@@ -340,7 +340,7 @@ export default function LearnPage() {
     // languagePref/voicePref MUST be dependencies: without them this callback
     // closes over the values from first render, so toggling the persona or
     // language changed the heading but still started every session as
-    // Veda/Hinglish. Caught by the browser matrix.
+    // Vedha/Hinglish. Caught by the browser matrix.
   }, [setSessionId, languagePref, voicePref]);
 
   /* ─── Fire a teaching turn ─── */
@@ -845,7 +845,7 @@ export default function LearnPage() {
         },
         // A reconnect means whatever turn was streaming died with the old
         // socket — its turn_complete is never coming, and isStreaming was
-        // stuck true, leaving the answer box disabled on "Veda is responding…"
+        // stuck true, leaving the answer box disabled on "Vedha is responding…"
         // forever.
         onReconnect: () => {
           setIsStreaming(false);
@@ -1160,7 +1160,7 @@ export default function LearnPage() {
           </div>
 
           <div className="flex items-center gap-4 flex-wrap">
-            {/* Teacher toggle — Veda (female voice) / Drona (male voice) */}
+            {/* Teacher toggle — Vedha (female voice) / Drona (male voice) */}
             <label className="flex flex-col gap-1.5">
               <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-[#9C988C]">
                 Teacher

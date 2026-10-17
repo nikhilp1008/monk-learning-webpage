@@ -2,7 +2,7 @@
  * Tutor persona + session language preferences.
  *
  * Single source of truth for the tutor's display name — never hardcode
- * "Drona" or "Veda" anywhere else, always call getTutorName().
+ * "Drona" or "Vedha" anywhere else, always call getTutorName().
  *
  * Mirrors app/drona/persona.py in the API repo. The two must agree: the
  * backend keys Hindi verb-form agreement (tutor.md Rule 12) and the Rumik
@@ -21,10 +21,10 @@ const LANGUAGE_STORAGE_KEY = "monk.drona.language";
 export function getTutorName(
   voicePreference: TutorVoice | string = DEFAULT_VOICE
 ): string {
-  return voicePreference === "male" ? "Drona" : "Veda";
+  return voicePreference === "male" ? "Drona" : "Vedha";
 }
 
-/** "Learn with Veda" — the branded heading on the picker and session header. */
+/** "Learn with Vedha" — the branded heading on the picker and session header. */
 export function getLearnWithLabel(
   voicePreference: TutorVoice | string = DEFAULT_VOICE
 ): string {

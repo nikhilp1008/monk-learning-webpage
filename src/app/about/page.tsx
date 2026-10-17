@@ -15,7 +15,7 @@ export default function AboutPage() {
             your hand, and knows exactly where you stand.
           </p>
           <p>
-            Drona and Veda teach every chapter of Class 11 and 12 in Hinglish or English. Practice
+            Drona and Vedha teach every chapter of Class 11 and 12 in Hinglish or English. Practice
             never runs out. Doubts get solved from a photograph. And the Monk Score tells you the
             one thing every student actually wants to know:{" "}
             <b className="font-bold text-ink">how good have you become?</b>
