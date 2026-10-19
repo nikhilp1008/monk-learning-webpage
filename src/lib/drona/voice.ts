@@ -1,5 +1,6 @@
 "use client";
 
+import { widgetManifestParam } from "@/lib/widgets/registry";
 import { supabase } from "@/lib/supabase";
 
 export interface VoiceClientOptions {
@@ -225,8 +226,9 @@ export class DronaVoiceClient {
     // claim ("a build from before negotiation") and the server assumes the
     // phone's 12-widget baseline: it then sends payload-only board events
     // (no `svg`) that this page cannot draw, i.e. a blank board.
-    // When a widget is ported, list it here as `id@version`.
-    const widgetManifest = "&widgets=";
+    // Widgets this client CAN draw come from the registry (lib/widgets/registry.ts);
+    // porting one there is what turns it on.
+    const widgetManifest = `&widgets=${encodeURIComponent(widgetManifestParam())}`;
     const wsUrl = this.options.wsUrl || `${wsBase}/drona/session/${this.sessionId}/live?token=${encodeURIComponent(token)}${passthrough}${widgetManifest}`;
 
     // Never leave a previous socket alive. `onerror` can fire WITHOUT a

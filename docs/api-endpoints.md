@@ -54,8 +54,8 @@ Verified by grep of both clients; the web column was re-checked by hand for Dron
 ## Live-class board: widget negotiation (WS query string)
 `WS /drona/session/{id}/live?token=...&widgets=id@ver,id@ver`
 - **Mobile** sends its 17-widget manifest.
-- **Web** sends `widgets=` (present, empty): "I draw no registry widgets", so the server serves the
-  illustration or SVG instead. Omitting the parameter would be read as "a pre-negotiation build" and the
+- **Web** sends the widgets it has ported (`xy_plot@4`, from `src/lib/widgets/registry.ts`), so the server serves
+  those as payloads and everything else as the illustration or SVG. (An empty `widgets=` means "none".) Omitting the parameter would be read as "a pre-negotiation build" and the
   server would assume the phone's 12-widget baseline, then send payload-only events (no `svg`) that the web
   cannot draw (a blank board). When a widget is ported, add it to `widgetManifest` in `src/lib/drona/voice.ts`.
 - `labelled_figure` (stored illustrations, about 48 concepts) is dispatched OUTSIDE negotiation, so it arrives

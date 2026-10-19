@@ -50,6 +50,23 @@ interface SessionViewProps {
   onStopPushToTalk?: () => void;
 }
 
+/**
+ * The highest board-event `seq` revealed so far in the turn that event `idx`
+ * belongs to: scan forward while `seq` keeps rising; a drop means a new turn
+ * started. A widget's narration cues fire off this number, so a cue fires when
+ * its sentence is spoken (the board only receives events as they are revealed).
+ */
+function activeSeqFor(events: { seq?: number }[], idx: number): number | null {
+  let seq = typeof events[idx]?.seq === "number" ? (events[idx].seq as number) : null;
+  if (seq === null) return null;
+  for (let i = idx + 1; i < events.length; i++) {
+    const s = events[i]?.seq;
+    if (typeof s !== "number" || s <= seq) break;
+    seq = s;
+  }
+  return seq;
+}
+
 export function SessionView({
   sessionTopic,
   tutorName,
@@ -275,7 +292,12 @@ export function SessionView({
           <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 max-w-full">
             {boardEvents && boardEvents.length > 0 ? (
               boardEvents.map((evt, idx) => (
-                <PremiumBoardEvent key={idx} event={evt} animate={idx === boardEvents.length - 1} />
+                <PremiumBoardEvent
+                  key={idx}
+                  event={evt}
+                  animate={idx === boardEvents.length - 1}
+                  activeSeq={activeSeqFor(boardEvents, idx)}
+                />
               ))
             ) : boardLatex ? (
               <div className="py-1 max-w-full overflow-x-hidden whitespace-pre-wrap">

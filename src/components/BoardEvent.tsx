@@ -13,7 +13,15 @@ export interface BoardEventData {
   /** A widget payload ({widget, version, params}). Present INSTEAD of `svg`
    *  for registry widgets and for stored illustrations (`labelled_figure`);
    *  the web has no renderer for either yet. */
-  payload?: { widget?: string; version?: number; params?: Record<string, unknown> } | null;
+  payload?: {
+    widget?: string;
+    version?: number;
+    params?: Record<string, unknown>;
+    /** `board_sequence`: 1-3 complete boards revealed in turn, each by its own seq. */
+    kind?: string;
+    steps?: { payload: { widget?: string; version?: number; params?: unknown; cues?: unknown }; caption?: string; seq?: number }[];
+    cues?: { seq: number; patch: Record<string, number | string | boolean>; tween?: number; caption?: string }[];
+  } | null;
   route?: string;
   /** A stored illustration the server bound to this concept, offered as a
    *  fallback when the event carries no `svg`. */

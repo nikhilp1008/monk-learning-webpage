@@ -17,6 +17,7 @@ import katex from "@/lib/katex-setup";
 import { KaTeXRenderer } from "./KaTeXRenderer";
 import { isEmphasized, type BoardEventData } from "./BoardEvent";
 import { LabelledFigure } from "./LabelledFigure";
+import { SequenceHost, WidgetHost, canHost, canHostSequence } from "./widgets/WidgetHost";
 import { loadLanguagePreference } from "@/lib/drona/tutor";
 
 /* ------------------------------------------------------------------ */
@@ -372,11 +373,14 @@ function AnimatedDiagram({
 
 interface PremiumBoardEventProps {
   event: BoardEventData;
+  /** The highest board-event `seq` revealed so far in this widget's turn;
+   *  selects which narration cue a widget is showing. */
+  activeSeq?: number | null;
   /** Run the entrance animation (true only for the newest revealed event). */
   animate: boolean;
 }
 
-export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
+export function PremiumBoardEvent({ event, animate, activeSeq = null }: PremiumBoardEventProps) {
   const isHigh = isEmphasized(event.emphasis);
 
   switch (event.type) {
@@ -499,6 +503,21 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
             />
           );
         }
+      }
+      // A registry widget this client has declared (see registry.ts). If its
+      // payload cannot be drawn (version too new, invalid params) fall through
+      // to the event's own SVG, then to the placeholder below.
+      if (event.payload?.kind === "board_sequence" && canHostSequence(event.payload.steps as never)) {
+        return <SequenceHost steps={event.payload.steps as never} activeSeq={activeSeq} />;
+      }
+      if (event.payload?.widget && canHost(event.payload)) {
+        return (
+          <WidgetHost
+            payload={{ widget: event.payload.widget, version: event.payload.version, params: event.payload.params, cues: event.payload.cues }}
+            activeSeq={activeSeq}
+            caption={event.caption}
+          />
+        );
       }
       if (!event.svg && event.payload) {
         return (
