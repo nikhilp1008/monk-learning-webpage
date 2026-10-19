@@ -16,6 +16,8 @@ import React, { useEffect, useMemo, useRef } from "react";
 import katex from "@/lib/katex-setup";
 import { KaTeXRenderer } from "./KaTeXRenderer";
 import { isEmphasized, type BoardEventData } from "./BoardEvent";
+import { LabelledFigure } from "./LabelledFigure";
+import { loadLanguagePreference } from "@/lib/drona/tutor";
 
 /* ------------------------------------------------------------------ */
 /* helpers                                                             */
@@ -475,6 +477,29 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
       // A payload-only figure (registry widget or stored illustration) has no
       // SVG for this page to draw. An empty bordered box reads as a bug; say
       // what is missing instead.
+      // The illustration tier: sourced art plus a label layer, named by slug.
+      // This is the one payload the web can draw (labelled_figure is dispatched
+      // outside widget negotiation, so it arrives whatever the manifest says).
+      {
+        const params = event.payload?.params ?? {};
+        const slug =
+          event.payload?.widget === "labelled_figure" && typeof params.asset_slug === "string"
+            ? params.asset_slug
+            : !event.svg && event.illustration_slug
+              ? event.illustration_slug
+              : null;
+        if (slug) {
+          const lang = params.lang === "english" || params.lang === "hinglish" ? params.lang : loadLanguagePreference();
+          return (
+            <LabelledFigure
+              slug={slug}
+              lang={lang}
+              activeGroup={typeof params.active_group === "string" ? params.active_group : null}
+              caption={event.caption}
+            />
+          );
+        }
+      }
       if (!event.svg && event.payload) {
         return (
           <div className="my-4 mx-auto max-w-xl rounded-xl border border-dashed border-ink/25 bg-cream-soft/60 px-4 py-5 text-center text-sm text-ink-light">

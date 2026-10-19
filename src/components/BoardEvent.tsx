@@ -13,8 +13,11 @@ export interface BoardEventData {
   /** A widget payload ({widget, version, params}). Present INSTEAD of `svg`
    *  for registry widgets and for stored illustrations (`labelled_figure`);
    *  the web has no renderer for either yet. */
-  payload?: { widget?: string } | null;
+  payload?: { widget?: string; version?: number; params?: Record<string, unknown> } | null;
   route?: string;
+  /** A stored illustration the server bound to this concept, offered as a
+   *  fallback when the event carries no `svg`. */
+  illustration_slug?: string;
   caption?: string;
   style?: string;
   emphasis?: "high" | "key" | "normal" | string;

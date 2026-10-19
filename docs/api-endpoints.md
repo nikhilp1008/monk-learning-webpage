@@ -50,3 +50,14 @@ Verified by grep of both clients; the web column was re-checked by hand for Dron
 4. `POST /events` → analytics parity.
 5. `GET /drona/chapter/{id}/figures` → stored board figures (board widget work).
 6. Not in this API at all (mobile-only, client-side or third party): daily plan (AsyncStorage), textbooks (bundled content), payments/promo (check the mobile `lib/pass.ts` + `app/plans*.tsx` before scoping).
+
+## Live-class board: widget negotiation (WS query string)
+`WS /drona/session/{id}/live?token=...&widgets=id@ver,id@ver`
+- **Mobile** sends its 17-widget manifest.
+- **Web** sends `widgets=` (present, empty): "I draw no registry widgets", so the server serves the
+  illustration or SVG instead. Omitting the parameter would be read as "a pre-negotiation build" and the
+  server would assume the phone's 12-widget baseline, then send payload-only events (no `svg`) that the web
+  cannot draw (a blank board). When a widget is ported, add it to `widgetManifest` in `src/lib/drona/voice.ts`.
+- `labelled_figure` (stored illustrations, about 48 concepts) is dispatched OUTSIDE negotiation, so it arrives
+  whatever the manifest says. The web draws it (`src/components/LabelledFigure.tsx`) from
+  `{ASSETS_BASE}/concept-assets/{slug}.json|png` on the public R2 bucket.

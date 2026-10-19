@@ -1,0 +1,1066 @@
+/**
+ * Layout maths for the `labelled_figure` illustration tier.
+ *
+ * Implements docs/label-layer.md §1.3 (the letterbox arithmetic), §2.2 (two
+ * columns pinned to the art, leaders back to the anchor), §2.3 (deterministic
+ * vertical de-collision) and §2.4 (the schema caps, derived at 343x236) —
+ * with one structural change the spec did not anticipate, recorded in
+ * "WHERE THE SPEC IS WRONG" below.
+ *
+ * No React and no react-native import in this file, on purpose — same reason
+ * `projectile-motion/physics.ts` is separate: this is the part that needs
+ * reviewing as geometry, and it is the part the tests assert over directly.
+ *
+ * THE FRAME RULE (docs/small-screen-rendering-rules.md), applied to labels:
+ * a label's POSITION is a world quantity and scales with the board; its FONT
+ * SIZE is chrome and never does. Every constant below is one or the other and
+ * says which.
+ *
+ * ---------------------------------------------------------------------------
+ * WHERE THE SPEC IS WRONG: the 10-label cap is a wall, not a cap.
+ *
+ * docs/label-layer.md §2.4 proposes "cap: 10 per figure" and adds that "a
+ * figure that genuinely needs 18 labels is two figures". Measured against the
+ * real work order (48 anchored biology plates, `illustration-manifest.csv`):
+ *
+ *     labels per figure   min 6   median 11.5   max 28   total 595
+ *     figures over 10     28 of 48  (58%)
+ *
+ * The spec's cap therefore rejects the majority of the corpus, and "it is two
+ * figures" is not available: `must_show` binds each figure to ONE anchor
+ * plate — cockroach morphology AND digestive system is one 1886 Miall & Denny
+ * engraving — so splitting the figure means re-sourcing the art.
+ *
+ * The resolution is that the cap is per GROUP, not per figure. A figure
+ * declares ordered subsets ("digestive", "nervous"), each within the cap, and
+ * the board draws one at a time — selected by the existing `Cue.seq` track, so
+ * the labels on screen are the ones the narration is talking about. See
+ * `MAX_LABELS_PER_GROUP` and `boardCapacity` for the measured numbers this
+ * rests on.
+ * ---------------------------------------------------------------------------
+ */
+import {
+  CHAR_W, DEVA_MAX_CHAR_W, LABEL_SIZE, LINE_STROKE, PAD_EDGE, READOUT_BAND,
+  READOUT_SIZE, TICK_R, charWidthFor, hasDevanagari, textWidth,
+} from '../chrome';
+
+/* ------------------------------------------------------------------ types */
+
+/**
+ * The two languages a session can run in, named EXACTLY as the app names them
+ * (`lib/preferences.ts`: `LanguageId = 'hinglish' | 'english'`).
+ *
+ * This was 'english' | 'hinglish'. Nothing in the app can produce 'hinglish' -- there is no
+ * Hindi mode -- so the second-language branch was unreachable while
+ * `validate()` still REFUSED every record that lacked a `hi` term. All 48
+ * commissioned figures were blocked on a language the product does not have.
+ *
+ * WHAT 'hinglish' IS, because the name misleads: romanised Latin, not
+ * Devanagari. From app/drona/persona.py:
+ *
+ *     "Bahut badhiya! Chalo {subtopic} shuru karte hain."
+ *
+ * There is no Devanagari string anywhere in either repo. The app does load
+ * AnekDevanagari_500Medium and use it for the classroom caption strip
+ * (components/classroom-chrome.tsx:410) -- that family renders Latin too, and
+ * is chosen there for its metrics -- so a Devanagari FACE being present is not
+ * evidence that Devanagari TEXT is ever shown.
+ *
+ * The Devanagari width path stays live regardless. It costs nothing when no
+ * Devanagari appears, and it is the one thing standing between a future
+ * Devanagari term and a label off the board. It is no longer the unmeasured
+ * CHAR_W_DEVA guardrail: chrome.ts now prices Devanagari code unit by code
+ * unit from Anek Devanagari's own advance table.
+ */
+export type Lang = 'english' | 'hinglish';
+export type Side = 'left' | 'right';
+
+/** Where the art comes from. A bundled asset module id, or a LOCAL file uri
+ *  already written to disk by the resolver's prefetch. Never a remote URL:
+ *  CLAUDE.md §3 "Never fetch at render time" — a live class renders with the
+ *  radio off. */
+export type FigureArtSource = number | { uri: string };
+
+/**
+ * An ordered subset of a figure's labels (see "WHERE THE SPEC IS WRONG").
+ *
+ * `id` is what a `Cue.patch` names; `label` is bilingual for the same reason
+ * every term is — retrofitting a second language is how a layout budget gets
+ * discovered after the figures are authored.
+ */
+export interface FigureGroup {
+  id: string;
+  label: { english: string; hinglish: string };
+}
+
+/** docs/label-layer.md §1.2, plus `group`. */
+export interface LabelRecord {
+  id: string;
+  term: { english: string; hinglish: string };
+  /** Normalised 0..1 against the art's INTRINSIC size (§1.3). */
+  anchor: { u: number; v: number };
+  /** Authored: a judgement about which way the structure faces (§1.5). */
+  side: Side;
+  /**
+   * Which subset this label belongs to. REQUIRED, with no default and no
+   * "ungrouped" fallback — §4.2's rule is that a field which can be satisfied
+   * by a plausible value nobody supplied is the bug, and `group: "general"`
+   * auto-filled by an ingest tool is exactly that shape. A figure with one
+   * group declares one group and every label names it.
+   */
+  group: string;
+  /** A HINT for the label's row, consumed BEFORE de-collision, never after. */
+  v_hint?: number;
+  /** Optional elbow, to route a leader around ink. */
+  leader_via?: { u: number; v: number };
+}
+
+export interface FigureArt {
+  source: FigureArtSource;
+  /** Pixels, of THIS file, measured at ingest (§1.3). */
+  intrinsic_w: number;
+  intrinsic_h: number;
+}
+
+/** The widget's params ARE the figure record plus what is being drawn right
+ *  now. The resolver's whole job is turning an `asset_slug` into this. */
+export interface LabelledFigureParams {
+  asset_slug: string;
+  art: FigureArt;
+  /** Ordered. `groups[0]` is where a reveal starts. */
+  groups: readonly FigureGroup[];
+  labels: readonly LabelRecord[];
+  /** ONE language is drawn (§5.1); both ship in the payload. */
+  lang: Lang;
+  /** The group currently drawn. Patched by a cue to advance the reveal. */
+  active_group: string;
+}
+
+/* -------------------------------------------------------------- constants */
+
+/* CHROME — device points, never multiplied by a board dimension. */
+
+/** The gate models a text box as `fontSize * 1.15` tall. ROW adds 4pt of
+ *  slack on top of that: 12 * 1.15 + 4 = 17.80 (§2.3). Slack, not a floor. */
+export const ROW = LABEL_SIZE * 1.15 + 4;
+/** How far a leader reaches between the plate's inner edge and the art. */
+export const LEADER_STUB = 8;
+/** Horizontal breathing room inside a plate, each side. */
+export const PLATE_PAD_X = 3;
+/**
+ * Plate height.
+ *
+ * DEVIATION from §2.1, which says `bandFor(LABEL_SIZE)`. That is
+ * `12 * 1.6 + 6 = 25.2pt`, TALLER than ROW (17.8) — two plates in adjacent
+ * de-collided rows would overlap by 7.4pt and hide each other. Sized from the
+ * gate's own text-box model instead (`fontSize * 1.15` plus 1.5pt either
+ * side), which leaves exactly 1pt of art visible between rows.
+ */
+export const PLATE_H = LABEL_SIZE * 1.15 + 3;
+/** Where the gate puts a text box's top relative to its baseline. Mirrored
+ *  here so the plate and the checker agree about what is being covered. */
+export const TEXT_ASCENT = LABEL_SIZE * 0.82;
+
+/** The dot at the anchor. A bare line-end reads as ambiguous on dense art. */
+export const ANCHOR_R = TICK_R;
+export const LEADER_STROKE = LINE_STROKE;
+
+/** The group strip's baseline, when one is drawn. */
+export const STRIP_BASELINE = 18;
+
+/* ---------------------------------------------- NEAR-ANCHOR PLACEMENT (v2)
+
+ * Labels sit BESIDE the structure they name, not stacked in a column at the
+ * frame edge with a long leader reaching back. The column layout is gone.
+ *
+ * Raasikh reviewed the edge-column render on 2026-09-11 and rejected the
+ * LAYOUT while accepting the anchors: a reader should not have to trace a
+ * 200pt line across the plate to find out what a dot is called.
+ */
+
+/** Gap between the anchor dot and the nearest edge of the pill, at 1x. */
+export const LABEL_OFFSET = 14;
+/** Hard cap on leader length at 1x. Past this the label is not "near". */
+export const LEADER_MAX = 40;
+/** Below this a leader is noise between two things already touching. */
+export const LEADER_MIN_DRAW = 8;
+/** Step used when no direction fits at the default offset. */
+export const LEADER_STEP = 12;
+/** Every pill stays this far inside the frame. */
+export const FRAME_INSET = 6;
+
+export const PILL_PAD_X = 6;
+export const PILL_PAD_Y = 3;
+export const PILL_RADIUS = 4;
+/** One text line's box. The model is `fontSize * 1.15`, matching the gate. */
+export const PILL_LINE_H = LABEL_SIZE * 1.15;
+/** A single-line pill. Two-line pills are `pillHeight(2)`. */
+export const PILL_H = PILL_LINE_H + 2 * PILL_PAD_Y;
+
+export function pillHeight(lines: number): number {
+  return lines * PILL_LINE_H + 2 * PILL_PAD_Y;
+}
+
+/**
+ * A pill wider than this fraction of the frame's usable width wraps.
+ *
+ * WHY A FRACTION AND NOT A CHARACTER COUNT. The thing that goes wrong is
+ * geometric, not typographic: `supra-oesophageal ganglion` renders a 209pt
+ * pill, the usable width at 340x340 is 328pt, and with `LEADER_MAX` at 40pt a
+ * pill that wide has nowhere to go unless its anchor happens to sit near the
+ * horizontal centre. Five ch7 terms exceeded half the narrow frames; at
+ * 495x270 and wider, none did. So the threshold has to move with the frame —
+ * the same term is a problem on a phone in portrait and completely fine on the
+ * landscape board, and a character count cannot express that.
+ *
+ * 0.45 rather than 0.5: two pills of the same group must be able to sit side
+ * by side with a gap, and at exactly half they cannot.
+ */
+export const WRAP_FRACTION = 0.45;
+
+/**
+ * Split a term into at most two lines, at the LAST space.
+ *
+ * Raasikh's rule, 2026-09-12, and it is the right one for these terms: they
+ * are anatomical Latin where the final word is the noun and everything before
+ * it qualifies — "supra-oesophageal | ganglion", "integumentary | nephridium".
+ * Breaking anywhere else splits the qualifier from what it qualifies.
+ *
+ * A term with no space cannot wrap and is returned whole. That is not a
+ * failure to handle: it is a single word, and hyphenating an examinable term
+ * would teach a string the exam does not print.
+ */
+export function wrapTerm(text: string): string[] {
+  const i = text.lastIndexOf(' ');
+  if (i <= 0) return [text];
+  return [text.slice(0, i), text.slice(i + 1)];
+}
+
+/**
+ * THE THREE FRAMES A SET MUST SURVIVE.
+ *
+ * A label set is accepted at REVIEW only if every group places clear at all
+ * three. The runtime never pages, never splits and never drops a label: a
+ * figure that silently shows five of twelve is a figure the student cannot
+ * know is incomplete, and that is worse than a set which was refused before
+ * it shipped. Density is an authoring decision, taken once, with the group
+ * and label named — see `gateLabelSet`.
+ */
+export const GATE_FRAMES = [
+  { w: 340, h: 340 },
+  { w: 343, h: 236 },
+  { w: 495, h: 270 },
+  { w: 702, h: 289 },
+  { w: 900, h: 430 },
+] as const;
+
+/**
+ * THE TWO FRAMES THAT ACTUALLY SHIP — measured, not assumed.
+ *
+ * The classroom is no longer landscape-locked: as of `db00ac4` the STUDENT
+ * chooses the orientation, so both are shipping configurations and both are
+ * gated. Measured on an iPhone 17 via the `[diagram-box]` probe in
+ * live-classroom.tsx, 2026-09-12, reading the computed `diagramBox` itself
+ * rather than re-deriving the formula beside it:
+ *
+ *   landscape window=874pt board=402.0pt -> 702x289
+ *   portrait  window=402pt board=874.0pt -> 340x340
+ *
+ * PORTRAIT IS A SQUARE, and that is deliberate rather than incidental: the
+ * portrait board is twice as tall, so the landscape 0.72 share would hand one
+ * diagram six hundred points and push the argument around it off screen.
+ * Width binds instead and the cap is the square width allows. No frame gated
+ * before today had an aspect anywhere near 1:1 — 343x236 is 1.45:1 and
+ * 900x430 is 2.09:1 — so anything whose layout assumed a landscape-ish box
+ * meets a genuinely new case here.
+ *
+ * CORRECTIONS TO WHAT WAS WRITTEN DOWN. The docs table said ~734x292: the
+ * height is close (289) and the width is not (702). And an earlier pass of
+ * this measurement read 702x251, taken BEFORE the orientation work landed —
+ * the chrome changed, `boardHeight` went 348 -> 402, and the number moved.
+ * Both numbers here are post-merge.
+ */
+export const SHIPPING_FRAMES = {
+  landscape: { w: 702, h: 289 },
+  portrait: { w: 340, h: 340 },
+} as const;
+
+/** The eight compass directions, in SVG axes (y grows downward). */
+export const COMPASS: readonly { name: string; x: number; y: number }[] = [
+  { name: 'E', x: 1, y: 0 },
+  { name: 'SE', x: Math.SQRT1_2, y: Math.SQRT1_2 },
+  { name: 'S', x: 0, y: 1 },
+  { name: 'SW', x: -Math.SQRT1_2, y: Math.SQRT1_2 },
+  { name: 'W', x: -1, y: 0 },
+  { name: 'NW', x: -Math.SQRT1_2, y: -Math.SQRT1_2 },
+  { name: 'N', x: 0, y: -1 },
+  { name: 'NE', x: Math.SQRT1_2, y: -Math.SQRT1_2 },
+];
+
+/** WORLD — the sizes the caps below were derived at. §2.4/§2.5: "measure the
+ *  new bound at the SMALLEST board". */
+export const SMALLEST_BOARD = { width: 343, height: 236 } as const;
+
+/**
+ * Term length caps, derived at 343x236 (§2.4).
+ *
+ * Worst case is a left and a right label on the SAME row:
+ *
+ *     2 * (L * LABEL_SIZE * charW) + 2 * PAD_EDGE + 2 * LEADER_STUB <= W
+ *
+ * THE REAL CAP IS PER STRING, and `termCapFor` below is what validate() uses.
+ * The two constants here are the endpoints of the range it can return, kept
+ * as named reference points rather than as the thing doing the work:
+ *
+ *   MAX_TERM_LATIN  the board's default Latin width (chrome.CHAR_W)
+ *   MAX_TERM_DEVA   the WIDEST single codepoint in Anek Devanagari's block,
+ *                   so no Devanagari term of any composition can need a
+ *                   shorter cap than this
+ *
+ * This used to be one cap per SCRIPT, chosen by `hasDevanagari`, with the
+ * Devanagari one derived from chrome's `CHAR_W_DEVA` — a number whose own doc
+ * comment said in capitals that it was not a measurement. Both are gone.
+ * chrome.ts now prices each code unit from the measured advance of the face
+ * that draws it, so a term's cap can simply be computed from the term, and a
+ * mixed-script term gets a cap that reflects its actual mixture instead of
+ * being charged the Devanagari rate for its Latin half.
+ */
+/**
+ * The GEOMETRIC two-labels-sharing-one-row figure, at 343x236. Derived.
+ *
+ * This briefly became a literal 32 on 2026-09-19 and that was a mistake worth
+ * writing down: 32 is an EDITORIAL ceiling ("a label is a name, not a
+ * sentence") and this is a MEASURED width, and giving one name to both meant
+ * the editorial number silently re-defined `MAX_TERM_DEVA`'s reference point
+ * and flattened `termCapFor`'s per-script pricing to a constant — the exact
+ * script-blind behaviour the measured advance tables were introduced to end.
+ * The ceiling now lives in `MAX_TERM_LINE`, where it can be argued about on
+ * its own terms.
+ */
+export const MAX_TERM_LATIN = maxTermChars(CHAR_W);
+
+/**
+ * The editorial ceiling on ONE WRAPPED LINE, in code units.
+ *
+ * Not geometry — geometry allows more. A full row at 343 fits 40 Latin units
+ * (`maxTermChars(CHAR_W) * 2`), and `layoutFigure` is what actually decides
+ * whether a pill places. This exists only so a label stays a name: past about
+ * this length the thing under the leader is a sentence, and the student reads
+ * prose instead of a term.
+ *
+ * MEASURED against the corpus it governs: the longest wrapped line across all
+ * 116 published sets is 22 units ("region of meristematic" | "activity"). 32
+ * clears every real label with room, and sits below the 40 that geometry would
+ * allow. It was 20 before 2026-09-19 — the two-per-row figure misapplied to a
+ * single line — which refused "dumbbell-shaped guard | cell" at 21 and took
+ * every other label on that plate down with it.
+ */
+export const MAX_TERM_LINE = 32;
+
+/**
+ * The longest a term may be IN TOTAL, across both wrapped lines.
+ *
+ * `wrapTerm` produces at most two lines, so this is the line ceiling twice
+ * over: it bounds the whole string even when both lines are at the limit.
+ *
+ * Raised from an effective 20 on 2026-09-19. At 20 the cap was applied to the
+ * UNWRAPPED term and refused "supra-oesophageal ganglion" (26) and
+ * "interventricular septum" (23), both of which wrap to lines well inside the
+ * per-line ceiling. Two published sets drew no labels at all because of it.
+ */
+export const MAX_TERM_TOTAL = 2 * MAX_TERM_LINE;
+
+export const MAX_TERM_DEVA = maxTermChars(DEVA_MAX_CHAR_W);
+
+function maxTermChars(charW: number): number {
+  const budget = SMALLEST_BOARD.width - 2 * PAD_EDGE - 2 * LEADER_STUB;
+  return Math.floor(budget / (2 * LABEL_SIZE * charW));
+}
+
+/**
+ * The cap that applies to THIS term, measured from the term itself.
+ *
+ * `charWidthFor` returns the string's own average advance per code unit under
+ * the measured tables, so this is exact for pure Latin, exact for pure
+ * Devanagari, and correct for a term that mixes the two — which the old
+ * script-flag version could not represent at all.
+ */
+export function termCapFor(text: string): number {
+  // ONE label may use the row, not half of it.
+  //
+  // `maxTermChars` divides the board by `2 * LABEL_SIZE * charW`, and that 2 is
+  // the worst case of a left and a right label sharing one row. As a PER-LINE
+  // cap it was far too tight: "dumbbell-shaped guard | cell" has a 21-unit
+  // first line and was refused, taking the other four labels on that plate
+  // with it. Whether two pills actually fit side by side is decided by
+  // `layoutFigure`, which measures them.
+  //
+  // PURE GEOMETRY, deliberately. The editorial ceiling is applied on top of
+  // this by validate(), not folded in here: clamping inside this function made
+  // it return the same number for every script, which is precisely the
+  // script-blind answer `charWidthFor`'s measured tables exist to replace.
+  return maxTermChars(charWidthFor(text || 'x')) * 2;
+}
+
+/**
+ * How many label rows one column can hold at a board height, MEASURED.
+ *
+ *   first baseline  top    = oy + LABEL_SIZE           (>= 12)
+ *   last  baseline  bottom = oy + sH - PAD_EDGE        (<= H - 10)
+ *   rows            n      : top + (n-1) * ROW <= bottom
+ *   =>              n      = floor((H - PAD_EDGE - LABEL_SIZE) / ROW) + 1
+ *
+ * For a full-height art (`oy = 0`, `sH = H`), at the three boards this runtime
+ * renders into:
+ *
+ *   | board   | usable band | rows/column | both columns |
+ *   |---------|------------:|------------:|-------------:|
+ *   | 900x430 |      408.0  |          23 |           46 |
+ *   | 495x270 |      248.0  |          14 |           28 |
+ *   | 343x236 |      214.0  |          13 |           26 |
+ *
+ * `reserveStrip` takes the top READOUT_BAND (28.4pt) for the group strip,
+ * giving 22 / 13 / 11 rows per column — 44 / 26 / 22 in total.
+ *
+ * This is a GEOMETRIC CEILING, not a shippable number: at the ceiling every
+ * plate touches its neighbour and every label has been displaced from its true
+ * `v`. `MAX_LABELS_PER_GROUP` is the shippable figure.
+ */
+export function rowsPerColumn(H: number, reserveStrip = false): number {
+  const band = H - PAD_EDGE - LABEL_SIZE - (reserveStrip ? READOUT_BAND : 0);
+  return Math.max(0, Math.floor(band / ROW) + 1);
+}
+
+/** Both columns. See `rowsPerColumn` for the arithmetic and the caveat. */
+export function boardCapacity(H: number, reserveStrip = false): number {
+  return 2 * rowsPerColumn(H, reserveStrip);
+}
+
+/**
+ * Labels drawn at once (§2.4's reasoning, rescoped to a group).
+ *
+ * The number is unchanged from the spec and the argument is unchanged with
+ * it: at 10 (5/5) each column is 89 of 216pt — 41% occupied — so de-collision
+ * rarely displaces a label more than one ROW from its true `v` and leaders
+ * stay short. At 16 (8/8) occupancy is 66%, displacement is routine, and a
+ * leader becomes a line that crosses the illustration. What changed is what
+ * the cap applies TO: a figure may carry any number of labels, in as many
+ * groups as it needs, and only one group is on the board at a time.
+ *
+ * The geometric ceiling at 343x236 is 26 (22 with a strip). The manifest's
+ * largest figure is 28. So the spec's "cap" was not merely tight for that
+ * figure — it is over the ceiling, and no arrangement of 28 simultaneous
+ * labels fits the smallest board at the 11pt font floor. That is the fact
+ * that makes grouping mandatory rather than preferable.
+ */
+export const MAX_LABELS_PER_GROUP = 10;
+
+/** Assertion 8's floor: two circles of the same radius closer than 2r + 4 are
+ *  a hard error. Anchor dots are all ANCHOR_R, so this binds on every pair
+ *  DRAWN AT ONCE — i.e. within a group, not across the whole figure. */
+export const MIN_ANCHOR_GAP_PT = 2 * ANCHOR_R + 4;
+
+/* ------------------------------------------------------- the letterbox (§1.3) */
+
+export interface FittedRect {
+  /** Scale from intrinsic pixels to board points. */
+  s: number;
+  /** The DRAWN size of the art, which is not the board size. */
+  sW: number;
+  sH: number;
+  /** Top-left of the drawn art within the board. */
+  ox: number;
+  oy: number;
+}
+
+/**
+ * Letterbox the art into the board box, preserving aspect.
+ *
+ *   s  = min(W / intrinsic_w, H / intrinsic_h)
+ *   sW = s * intrinsic_w        sH = s * intrinsic_h
+ *   ox = (W - sW) / 2           oy = (H - sH) / 2
+ *
+ * This is the same "fit to the box, preserve aspect" job
+ * `components/board-diagram.tsx` does for the SVG tier, and its arithmetic is
+ * correct — but it is not reusable here. It fits a viewBox read out of a
+ * markup string, returns only a width/height for a React `<SvgXml>`, and
+ * never computes the OFFSET. The offset is the entire point of this function:
+ * a normalised anchor must map through the FITTED rect, and without `ox`/`oy`
+ * every label on a letterboxed figure lands in the wrong place.
+ */
+export function fitRect(W: number, H: number, iw: number, ih: number): FittedRect {
+  const s = Math.min(W / iw, H / ih);
+  const sW = s * iw;
+  const sH = s * ih;
+  return { s, sW, sH, ox: (W - sW) / 2, oy: (H - sH) / 2 };
+}
+
+/** A normalised 0..1 anchor, through the fitted rect, in board points. */
+export function anchorAt(fit: FittedRect, u: number, v: number): { x: number; y: number } {
+  return { x: fit.ox + u * fit.sW, y: fit.oy + v * fit.sH };
+}
+
+/* ------------------------------------------------------------- the layout */
+
+export interface PlacedLabel {
+  id: string;
+  /** The whole term, unsplit — what the label MEANS, and what `familyFor`
+   *  and any accessibility reader should see. */
+  text: string;
+  /** The term as drawn: one line normally, two when the pill would be wider
+   *  than `WRAP_FRACTION` of the frame. `ty` is the FIRST line's baseline. */
+  lines: string[];
+  side: Side;
+  /** The point on the art this label names. */
+  anchor: { x: number; y: number };
+  /** Optional elbow the leader routes through. */
+  via: { x: number; y: number } | null;
+  /** Text baseline. `textAnchor` is 'end' on the left column, 'start' right. */
+  tx: number;
+  ty: number;
+  textAnchor: 'start' | 'end';
+  /** The filled plate under the text. Fill only — NEVER a stroke, or
+   *  assertion 7's 1.2 floor becomes a live risk for a decorative hairline. */
+  plate: { x: number; y: number; w: number; h: number };
+  /** Where the leader leaves the plate. */
+  stub: { x: number; y: number };
+  /** Which compass direction was chosen, e.g. 'NE'. Inspectable in the dev
+   *  overlay and asserted in the fixture. */
+  dir: string;
+  /** Drawn leader length in points. Below LEADER_MIN_DRAW no leader is drawn. */
+  leaderLen: number;
+  /** True when no direction fit even at LEADER_MAX and the pill was placed
+   *  overlapping. Always accompanied by a console warning naming the label. */
+  overlapped: boolean;
+}
+
+export interface FigureLayout {
+  fit: FittedRect;
+  labels: PlacedLabel[];
+  /** The group strip, or null for a single-group figure. */
+  strip: { text: string; x: number; y: number; plate: { x: number; y: number; w: number; h: number } } | null;
+}
+
+/** The term actually drawn, for the language being rendered. */
+export function termFor(label: LabelRecord, lang: Lang): string {
+  return label.term[lang];
+}
+
+/** The labels of the active group, in record order. */
+export function activeLabels(params: LabelledFigureParams): LabelRecord[] {
+  return params.labels.filter((l) => l.group === params.active_group);
+}
+
+/* ------------------------------------------------------- placement helpers */
+
+interface Rect { x: number; y: number; w: number; h: number }
+
+/** Distance from the anchor to the nearest point of the pill — the leader as
+ *  it is actually drawn. */
+function leaderLenFor(anchor: { x: number; y: number }, r: Rect): number {
+  const sx = Math.min(Math.max(anchor.x, r.x), r.x + r.w);
+  const sy = Math.min(Math.max(anchor.y, r.y), r.y + r.h);
+  return Math.hypot(sx - anchor.x, sy - anchor.y);
+}
+
+function rectsOverlap(a: Rect, b: Rect): boolean {
+  return a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h;
+}
+
+function insideFrame(r: Rect, W: number, H: number): boolean {
+  return (
+    r.x >= FRAME_INSET && r.y >= FRAME_INSET &&
+    r.x + r.w <= W - FRAME_INSET && r.y + r.h <= H - FRAME_INSET
+  );
+}
+
+function intersectArea(a: Rect, b: Rect): number {
+  const w = Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x);
+  const h = Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y);
+  return w > 0 && h > 0 ? w * h : 0;
+}
+
+/**
+ * Pill rect for one candidate direction.
+ *
+ * `LABEL_OFFSET` (or an extended leader) is measured from the anchor to the
+ * pill's NEAREST EDGE, not to its centre — otherwise a long term would sit
+ * closer than a short one in the same direction.
+ */
+function pillRect(anchor: { x: number; y: number }, d: { x: number; y: number },
+                  len: number, w: number, h: number): Rect {
+  const halfW = w / 2;
+  const halfH = h / 2;
+  const reach = len + Math.abs(d.x) * halfW + Math.abs(d.y) * halfH;
+  return { x: anchor.x + d.x * reach - halfW, y: anchor.y + d.y * reach - halfH, w, h };
+}
+
+/**
+ * How much ART a candidate pill would cover — the (iii) term.
+ *
+ * DELIBERATELY A PROXY, AND SAID SO. The brief asks to "sample plate
+ * alpha/darkness under the pill rect". This runtime cannot: the art is an
+ * `<Image>` handed to react-native-svg, there is no pixel read at layout
+ * time, and CLAUDE.md forbids a layout that could differ between the CI tree
+ * and the device. A real ink term needs a coarse darkness grid computed at
+ * INGEST and carried with the asset — and the same brief freezes the label-set
+ * schema, so there is nowhere to put one yet.
+ *
+ * So the cost uses two things already known, both exact and both deterministic:
+ *   - the fraction of the pill that lands on the DRAWN ART rect at all
+ *     (outside the letterboxed art there is nothing to cover);
+ *   - whether it would sit on another label's anchor dot, which marks a
+ *     structure and is therefore ink that matters.
+ * The second is an integer penalty and dominates, so a pill never lands on a
+ * neighbouring dot to save a little art overlap.
+ */
+function inkCost(r: Rect, art: Rect, dots: readonly { x: number; y: number }[]): number {
+  const covered = intersectArea(r, art) / (r.w * r.h);
+  let onDots = 0;
+  for (const p of dots) {
+    if (p.x >= r.x - 2 && p.x <= r.x + r.w + 2 && p.y >= r.y - 2 && p.y <= r.y + r.h + 2) onDots++;
+  }
+  return onDots * 10 + covered;
+}
+
+/**
+ * Place the ACTIVE GROUP's labels beside the structures they name.
+ *
+ * For each label, in group order:
+ *   1. take the outward vector from the art's centre through the anchor;
+ *   2. try the eight compass directions, nearest that vector first;
+ *   3. keep the candidates that stay inside the frame and clear every pill
+ *      already placed, and take the one covering least art;
+ *   4. if none fit, extend the leader in LEADER_STEP points up to LEADER_MAX
+ *      and try again;
+ *   5. if it still cannot fit, place it outward at LABEL_OFFSET, mark it
+ *      `overlapped`, and warn naming the label.
+ *
+ * Order matters and is the record order, so the layout is deterministic: the
+ * same set at the same box always produces the same picture.
+ */
+export function layoutFigure(
+  params: LabelledFigureParams,
+  W: number,
+  H: number
+): FigureLayout {
+  const fit = fitRect(W, H, params.art.intrinsic_w, params.art.intrinsic_h);
+  // A SINGLE-GROUP SET SHOWS NO CAPTION, and already did — the strip says
+  // "you are looking at a SUBSET", and with one group there is no subset, so
+  // "1/1" would be noise. Sets of <=5 labels are published with one group,
+  // id "all", and an EMPTY name on the strength of this: there is no name to
+  // invent because no caption is drawn. Pinned by
+  // __tests__/single-group-caption.test.tsx so it cannot drift.
+  const multi = params.groups.length > 1;
+  const drawn = activeLabels(params);
+
+  const artRect: Rect = { x: fit.ox, y: fit.oy, w: fit.sW, h: fit.sH };
+  const centre = { x: fit.ox + fit.sW / 2, y: fit.oy + fit.sH / 2 };
+  const dots = drawn.map((l) => anchorAt(fit, l.anchor.u, l.anchor.v));
+
+  /*
+   * THE GROUP STRIP IS PLACED FIRST AND OCCUPIES ITS RECTANGLE.
+   *
+   * It used to be computed on the way out, after every label had been placed,
+   * which meant placement never knew it was there. On the frog heart's
+   * arterial group at 343x236 that put the "carotid arch" pill straight on
+   * top of "Arteries · 2/3" — and the gate called the set clear, because it
+   * compares labels against each other and against the frame and the strip
+   * was in neither set. A caught-by-looking defect, in the first label set
+   * this pipeline ever published.
+   *
+   * Seeding `placed` with the strip's plate fixes both halves at once: the
+   * eight-direction search now skips any candidate that would cover the
+   * caption, and when no direction survives, the existing `overlapped` flag
+   * fires and `gateLabelSet` refuses the set instead of calling it clear.
+   *
+   * The strip is the one thing on the board a label must never cover. It is
+   * what says "2/3" — the difference between a subset the student knows is a
+   * subset, and a figure that looks complete and is not.
+   */
+  /*
+   * TOP FIRST, BOTTOM IF THE TOP IS CONTESTED.
+   *
+   * The strip has no anchor — it is chrome, and the only thing fixing it to
+   * the top was that nothing had ever asked. The frog heart's arterial group
+   * is the case that asks: all four arches leave the heart upward, so their
+   * anchors and the caption want the same corner, and at 343x236 there is not
+   * room for both. Moving the caption to the bottom costs nothing, because
+   * the bottom of that plate is empty.
+   *
+   * So placement is run with the caption reserved at the top, and if any
+   * label came out overlapping, run again with it at the bottom and keep
+   * whichever placed more labels clear. A tie keeps the top, which is where
+   * a reader looks first.
+   */
+  const attempt = (baseline: number) => {
+    const strip = multi ? stripFor(params, W, baseline) : null;
+    const placed: Rect[] = strip ? [strip.plate] : [];
+    const out: PlacedLabel[] = [];
+    place(drawn, dots, params, W, H, fit, artRect, placed, out);
+    return { strip, out, bad: out.filter((l) => l.overlapped).length };
+  };
+
+  const top = attempt(STRIP_BASELINE);
+  const best =
+    top.bad === 0 || !multi
+      ? top
+      : (() => {
+          const bottom = attempt(H - PAD_EDGE - 4);
+          return bottom.bad < top.bad ? bottom : top;
+        })();
+
+  // Loud, and it names the label: a silently overlapping pill is a wrong
+  // figure that looks like a rendered one. Emitted for the CHOSEN placement.
+  for (const l of best.out) {
+    if (!l.overlapped) continue;
+    console.warn(
+      `[labelled_figure] "${l.id}" could not be placed clear of the frame, its ` +
+        `neighbours or the group caption at any of the eight directions up to ` +
+        `${LEADER_MAX}pt — placed ${l.dir} with overlap. The group is too dense ` +
+        `for this board.`
+    );
+  }
+
+  return { fit, labels: best.out, strip: best.strip };
+}
+
+/** The eight-direction search, extracted so it can be run more than once. */
+function place(
+  drawn: LabelRecord[],
+  dots: { x: number; y: number }[],
+  params: LabelledFigureParams,
+  W: number,
+  H: number,
+  fit: FittedRect,
+  artRect: Rect,
+  placed: Rect[],
+  out: PlacedLabel[]
+): void {
+  const centre = { x: artRect.x + artRect.w / 2, y: artRect.y + artRect.h / 2 };
+
+  // The frame's usable width, which is what "too wide" is measured against.
+  const usable = W - 2 * FRAME_INSET;
+
+  drawn.forEach((l, idx) => {
+    const text = termFor(l, params.lang);
+    /*
+     * WRAP, DO NOT SHRINK OR STRETCH. The font stays at LABEL_SIZE and
+     * LEADER_MAX stays 40; the pill grows downward instead. Shrinking the type
+     * would make the longest, least familiar terms the hardest to read, which
+     * is backwards; stretching the leader would let a label drift away from the
+     * structure it names.
+     */
+    let lines = [text];
+    if (textWidth(text, LABEL_SIZE) + 2 * PILL_PAD_X > WRAP_FRACTION * usable) {
+      lines = wrapTerm(text);
+    }
+    const tw = Math.max(...lines.map((t) => textWidth(t, LABEL_SIZE)));
+    const w = tw + 2 * PILL_PAD_X;
+    const h = pillHeight(lines.length);
+    const anchor = dots[idx];
+
+    // Outward from the plate centre. A label on a structure at the centre has
+    // no outward direction; E is the deterministic fallback.
+    let ox = anchor.x - centre.x;
+    let oy = anchor.y - centre.y;
+    const mag = Math.hypot(ox, oy);
+    if (mag < 1e-6) { ox = 1; oy = 0; } else { ox /= mag; oy /= mag; }
+
+    const order = [...COMPASS].sort(
+      (a, b) => (b.x * ox + b.y * oy) - (a.x * ox + a.y * oy)
+    );
+
+    let chosen: { rect: Rect; dir: string } | null = null;
+    for (let len = LABEL_OFFSET; len <= LEADER_MAX && !chosen; len += LEADER_STEP) {
+      let best: { rect: Rect; dir: string; cost: number } | null = null;
+      for (const d of order) {
+        const r = pillRect(anchor, d, len, w, h);
+        if (!insideFrame(r, W, H)) continue;
+        if (placed.some((p) => rectsOverlap(p, r))) continue;
+        // MEASURED, not assumed. `len` is the offset along the direction
+        // axis; the drawn leader runs to the nearest point of the rect, and
+        // on a diagonal that is a CORNER, which is further. A 38pt step was
+        // measuring 42.99pt on the frog heart. The cap is on what is drawn.
+        if (leaderLenFor(anchor, r) > LEADER_MAX) continue;
+        // Other labels' dots, not this one's.
+        const others = dots.filter((_, i) => i !== idx);
+        const cost = inkCost(r, artRect, others);
+        if (!best || cost < best.cost) best = { rect: r, dir: d.name, cost };
+      }
+      if (best) chosen = { rect: best.rect, dir: best.dir };
+    }
+
+    let overlapped = false;
+    if (!chosen) {
+      overlapped = true;
+      const d = order[0];
+      chosen = { rect: pillRect(anchor, d, LABEL_OFFSET, w, h), dir: d.name };
+      // The warning is NOT emitted here. `place` is run speculatively — once
+      // with the caption at the top and once at the bottom — and warning from
+      // inside it reported failures for a placement that was then thrown
+      // away, which reads as a broken board when the chosen one is fine.
+      // `layoutFigure` warns once, for the attempt it actually returns.
+    }
+
+    const r = chosen.rect;
+    placed.push(r);
+
+    const stub = {
+      x: Math.min(Math.max(anchor.x, r.x), r.x + r.w),
+      y: Math.min(Math.max(anchor.y, r.y), r.y + r.h),
+    };
+    const leaderLen = Math.hypot(stub.x - anchor.x, stub.y - anchor.y);
+
+    out.push({
+      id: l.id,
+      text,
+      lines,
+      side: anchor.x < W / 2 ? 'left' : 'right',
+      anchor,
+      via: l.leader_via ? anchorAt(fit, l.leader_via.u, l.leader_via.v) : null,
+      tx: r.x + PILL_PAD_X,
+      ty: r.y + PILL_PAD_Y + LABEL_SIZE * 0.82,
+      textAnchor: 'start',
+      plate: { x: r.x, y: r.y, w: r.w, h: r.h },
+      stub,
+      dir: chosen.dir,
+      leaderLen,
+      overlapped,
+    });
+  });
+}
+
+/**
+ * "Nervous system  ·  2/3" — what tells the student they are looking at a
+ * SUBSET rather than a complete figure.
+ *
+ * This is why grouping is not the same failure as silently rendering ten of
+ * twenty-eight labels: the board says which subset it is showing and how many
+ * there are, and `group_index`/`group_count` are `derived` quantities, so a
+ * caption cannot disagree with it either.
+ */
+function stripFor(params: LabelledFigureParams, W: number, baseline: number) {
+  const i = params.groups.findIndex((g) => g.id === params.active_group);
+  const full = params.groups[i] ? params.groups[i].label[params.lang] : '';
+  const counter = `${i + 1}/${params.groups.length}`;
+  const sep = '  \u00b7  ';
+
+  // The font is fixed; what varies with the box is how many characters FIT
+  // (chrome.ts's maxChars rule, not a shrunken font). The counter is never
+  // dropped — it is the part that says this is a subset.
+  const perChar = READOUT_SIZE * charWidthFor(full + sep + counter);
+  const room = W - 2 * PAD_EDGE - 2 * PLATE_PAD_X;
+  const budget = Math.max(0, Math.floor(room / perChar) - sep.length - counter.length);
+  const name = full.slice(0, budget);
+  const text = name.length > 0 ? `${name}${sep}${counter}` : counter;
+
+  return {
+    text,
+    x: PAD_EDGE + PLATE_PAD_X,
+    y: baseline,
+    plate: {
+      x: PAD_EDGE,
+      y: baseline - READOUT_SIZE * 0.82 - 1.5,
+      w: textWidth(text, READOUT_SIZE) + 2 * PLATE_PAD_X,
+      h: READOUT_SIZE * 1.15 + 3,
+    },
+  };
+}
+
+/* ------------------------------------------------------------- THE SET GATE */
+
+export interface SetViolation {
+  group: string;
+  frame: string;
+  /** The label that could not be placed, or the pair that collided. */
+  labels: string[];
+  reason: 'overlap' | 'exits-frame' | 'leader-too-long'
+    | 'no-group' | 'empty-group' | 'never-placed';
+  detail: string;
+}
+
+/**
+ * Is this label set drawable, as authored, on every board?
+ *
+ * ACCEPTED ONLY IF EVERY GROUP PLACES CLEAR AT ALL THREE FRAMES. No overlap,
+ * nothing outside the frame, no leader past LEADER_MAX. A set that fails is
+ * REFUSED AT REVIEW, naming the group and the label — it is not shipped and
+ * then quietly degraded on a small screen.
+ *
+ * WHY THIS IS A GATE AND NOT A RUNTIME BEHAVIOUR. The runtime could page a
+ * dense group, or drop the labels that do not fit, and an earlier draft of
+ * this widget did page at the phone frame. Both are worse than refusing:
+ * a figure showing five of twelve structures looks complete, says nothing
+ * about what is missing, and the student has no way to know. Density is a
+ * decision for whoever authors the set — split it into groups, or move terms
+ * to another sub-figure — taken ONCE, at review, with the evidence in hand.
+ *
+ * MEASURED, and it is not the frame you would guess: the binding board for
+ * density is 495x270, not 343x236. The frog heart's twelve anchors in a
+ * single group place clear at 343 and at 900 and collide only in the middle
+ * frame, because 343 scales the art down until the anchors are close enough
+ * for short leaders to work while 900 simply has the room. "343 binds" is the
+ * rule for device-point floors, not for this.
+ */
+export function gateLabelSet(
+  labels: readonly LabelRecord[],
+  groups: readonly FigureGroup[],
+  art: FigureArt,
+  lang: Lang = 'english'
+): SetViolation[] {
+  const out: SetViolation[] = [];
+
+  /* "CLEAR" MUST MEAN EVERY LABEL WAS PLACED SOMEWHERE, NOT THAT NOTHING WAS
+   * TRIED. This loop is over GROUPS, so before 2026-09-18 a label belonging to
+   * no group was never iterated and an empty group hit a bare `continue` — a
+   * set with `groups: []` produced ZERO violations and was reported clear. 45
+   * of 116 published sets were in that state, 140 labels that could never be
+   * drawn, and the gate said every one of them was fine. */
+  const groupIds = new Set(groups.map((g) => g.id));
+  for (const l of labels) {
+    if (!l.group || !groupIds.has(l.group)) {
+      out.push({
+        group: l.group ?? '(none)', frame: 'all', labels: [l.id], reason: 'no-group',
+        detail: `"${l.id}" belongs to ${l.group ? `group "${l.group}", which the set `
+          + `does not declare` : 'no group'} — the board draws the ACTIVE GROUP, so it `
+          + `can never appear`,
+      });
+    }
+  }
+  if (labels.length > 0 && groups.length === 0) {
+    out.push({
+      group: '(none)', frame: 'all', labels: labels.map((l) => l.id), reason: 'no-group',
+      detail: `the set declares no groups at all, so none of its ${labels.length} `
+        + `label(s) can ever be drawn`,
+    });
+  }
+
+  const placedEver = new Set<string>();
+
+  for (const g of groups) {
+    const inGroup = labels.filter((l) => l.group === g.id);
+    if (inGroup.length === 0) {
+      out.push({
+        group: g.id, frame: 'all', labels: [], reason: 'empty-group',
+        detail: `group "${g.id}" has no labels; selecting it shows a plate with nothing `
+          + `on it`,
+      });
+      continue;
+    }
+
+    for (const f of GATE_FRAMES) {
+      const frame = `${f.w}x${f.h}`;
+      const params = {
+        asset_slug: 'gate', art, groups, labels, active_group: g.id, lang,
+      } as LabelledFigureParams;
+      const placed = layoutFigure(params, f.w, f.h).labels;
+
+      for (const l of placed) {
+        placedEver.add(l.id);
+        if (l.overlapped) {
+          out.push({
+            group: g.id, frame, labels: [l.id], reason: 'overlap',
+            detail: `"${l.id}" could not be placed clear of the frame and its `
+              + `neighbours in any of the eight directions up to ${LEADER_MAX}pt`,
+          });
+        }
+        if (l.leaderLen > LEADER_MAX + 1e-6) {
+          out.push({
+            group: g.id, frame, labels: [l.id], reason: 'leader-too-long',
+            detail: `"${l.id}" leader is ${l.leaderLen.toFixed(1)}pt, over ${LEADER_MAX}pt`,
+          });
+        }
+        const r = l.plate;
+        if (r.x < FRAME_INSET - 1e-6 || r.y < FRAME_INSET - 1e-6 ||
+            r.x + r.w > f.w - FRAME_INSET + 1e-6 || r.y + r.h > f.h - FRAME_INSET + 1e-6) {
+          out.push({
+            group: g.id, frame, labels: [l.id], reason: 'exits-frame',
+            detail: `"${l.id}" pill at (${r.x.toFixed(1)}, ${r.y.toFixed(1)}) `
+              + `${r.w.toFixed(1)}x${r.h.toFixed(1)} leaves the ${frame} frame`,
+          });
+        }
+      }
+
+      // Checked independently of `overlapped`, which records only that the
+      // SEARCH gave up. Trusting the engine's own flag to prove the engine's
+      // own output is the identity-check failure CLAUDE.md names.
+      for (let i = 0; i < placed.length; i++) {
+        for (let j = i + 1; j < placed.length; j++) {
+          const a = placed[i].plate;
+          const b = placed[j].plate;
+          if (a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h) {
+            out.push({
+              group: g.id, frame, labels: [placed[i].id, placed[j].id], reason: 'overlap',
+              detail: `"${placed[i].id}" and "${placed[j].id}" overlap at ${frame}`,
+            });
+          }
+        }
+      }
+    }
+  }
+  // A label the layout never emitted at ANY frame in ANY group. Distinct from
+  // `overlapped`, which records that the search gave up while still returning
+  // the label: this catches the case where it never appeared at all.
+  for (const l of labels) {
+    if (!placedEver.has(l.id) && l.group && groupIds.has(l.group)) {
+      out.push({
+        group: l.group, frame: 'all', labels: [l.id], reason: 'never-placed',
+        detail: `"${l.id}" was never laid out at any frame — clear must mean every `
+          + `label was placed somewhere, not that nothing was tried`,
+      });
+    }
+  }
+
+  return out;
+}
+
+/** One line per violation, for a reviewer. */
+export function describeViolations(v: readonly SetViolation[]): string {
+  if (v.length === 0) return 'set places clear at every frame';
+  return v.map((x) => `[${x.group} @ ${x.frame}] ${x.reason}: ${x.detail}`).join('\n');
+}
+
+/* --------------------------------------------------- schema-side checks */
+
+/**
+ * Anchor separations WITHIN a group, checked at the SMALLEST board (§2.5).
+ *
+ * 343x236 is always the tightest of the three boards this runtime renders:
+ * `s = min(W / iw, H / ih)` is monotonic in both W and H, and 343x236 is
+ * smaller than 495x270 and 900x430 in both. A separation that clears here
+ * clears everywhere, so the other two need no check.
+ *
+ * Per GROUP, not per figure: assertion 8 compares circles that are in the
+ * tree together, and two anchors in different groups are never drawn at the
+ * same time. This is a real relaxation the spec did not have — a 28-label
+ * plate could not satisfy a whole-figure separation rule at 343pt.
+ *
+ * Returns the offending pairs as `[idA, idB, gapPt]`.
+ */
+export function tooCloseAnchors(
+  labels: readonly LabelRecord[],
+  art: FigureArt
+): [string, string, number][] {
+  const fit = fitRect(
+    SMALLEST_BOARD.width, SMALLEST_BOARD.height, art.intrinsic_w, art.intrinsic_h
+  );
+  const byGroup = new Map<string, LabelRecord[]>();
+  for (const l of labels) {
+    const list = byGroup.get(l.group);
+    if (list) list.push(l);
+    else byGroup.set(l.group, [l]);
+  }
+
+  const bad: [string, string, number][] = [];
+  for (const group of byGroup.values()) {
+    const pts = group.map((l) => ({ id: l.id, ...anchorAt(fit, l.anchor.u, l.anchor.v) }));
+    for (let i = 0; i < pts.length; i++) {
+      for (let j = i + 1; j < pts.length; j++) {
+        const d = Math.hypot(pts[i].x - pts[j].x, pts[i].y - pts[j].y);
+        if (d < MIN_ANCHOR_GAP_PT) bad.push([pts[i].id, pts[j].id, d]);
+      }
+    }
+  }
+  return bad;
+}

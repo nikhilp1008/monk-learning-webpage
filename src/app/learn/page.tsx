@@ -681,6 +681,13 @@ export default function LearnPage() {
         evt?.latex ||
         evt?.text ||
         (evt?.svg ? `svg:${String(evt.svg).slice(0, 120)}` : "") ||
+        // A payload-only figure (stored illustration / widget) carries no text
+        // or svg. Keyed on seq alone, two turns' figures that both arrive as
+        // seq 1 collapse into one and the second is dropped, so the payload's
+        // own identity is part of the key.
+        (evt?.payload
+          ? `payload:${evt.seq ?? ""}:${evt.payload.widget ?? ""}:${JSON.stringify(evt.payload.params ?? {}).slice(0, 160)}`
+          : "") ||
         (evt?.seq != null ? `seq:${evt.seq}` : "")
       )
         .trim()
