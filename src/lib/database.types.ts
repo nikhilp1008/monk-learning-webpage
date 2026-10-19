@@ -230,6 +230,8 @@ export type Database = {
         Insert: {
           created_at?: string | null
           display_name?: string | null
+          phone?: string | null
+          phone_verified?: boolean | null
           enrolled_class?: number | null
           id?: string
           target_exam?: string | null
@@ -244,6 +246,8 @@ export type Database = {
         Update: {
           created_at?: string | null
           display_name?: string | null
+          phone?: string | null
+          phone_verified?: boolean | null
           enrolled_class?: number | null
           id?: string
           target_exam?: string | null
