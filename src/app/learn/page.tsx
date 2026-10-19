@@ -909,6 +909,9 @@ export default function LearnPage() {
             subtopicOptions={effectiveSubtopicOptions}
             onSendTurn={handleSendTurn}
             onEndSession={handleEndSession}
+            sessionId={sessionId}
+            reportSubject={selectedSubject}
+            reportChapter={sessionTopic}
             onTogglePause={() => voiceClientRef.current?.togglePause()}
             onStartPushToTalk={() => voiceClientRef.current?.startPushToTalk()}
             onStopPushToTalk={() => voiceClientRef.current?.stopPushToTalk()}

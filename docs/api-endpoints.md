@@ -36,17 +36,17 @@ Verified by grep of both clients; the web column was re-checked by hand for Dron
 | GET/POST | `/drona/persona` | Teacher persona (Drona/Vedha) sync | Y | Y |
 | POST | `/doubt-of-day/chat` | Chat over the doubt of the day | – | Y |
 | POST | `/events` | Product analytics events | Y | – |
-| POST | `/reports` | Report-a-mistake from snap / class / practice | Y | – |
+| POST | `/reports` | Report-a-mistake from snap / class / practice | Y | Y |
 | POST | `/account/erase` | Delete own account (body `{confirm: <email>}`) | Y | Y (this change) |
-| GET | `/me` | Plan / pass entitlement | Y | – |
+| GET | `/me` | Returns only `{user_id}` (no plan/pass). Mobile reads it in `lib/pass.ts`; nothing else | Y | – |
 
 ## Ops / not client-facing
 `GET /version`, `GET /health`, and `/admin/*` (dashboard, users, costs, reports, delete/restore/erase/exclude).
 
 ## Gaps for web (endpoints that exist, web does not call)
 1. `POST /practice/next` with **`chapter_id`** → weak-areas / chapter-focus practice (in progress).
-2. `POST /reports` → report-a-mistake.
-3. `GET /me` → plan/pass state, needed before any paywall or promo work.
+2. ~~`POST /reports` → report-a-mistake.~~ Done: snap, live class and practice.
+3. `GET /me` → **nothing to port.** It returns `{"user_id": ...}` only. Passes/plans live in the phone's AsyncStorage (`lib/pass.ts`, keyed per user); the API has no passes table or purchases endpoint. Web plan/promo work needs a server-side `passes` model first.
 4. `POST /events` → analytics parity.
 5. `GET /drona/chapter/{id}/figures` → stored board figures (board widget work).
 6. Not in this API at all (mobile-only, client-side or third party): daily plan (AsyncStorage), textbooks (bundled content), payments/promo (check the mobile `lib/pass.ts` + `app/plans*.tsx` before scoping).

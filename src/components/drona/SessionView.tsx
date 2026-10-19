@@ -13,6 +13,7 @@ import {
   type SessionLanguage,
 } from "@/lib/drona/tutor";
 import { VoiceClientState } from "@/lib/drona/voice";
+import { ReportSheet } from "@/components/ReportSheet";
 
 interface SessionViewProps {
   sessionTopic: string;
@@ -40,6 +41,10 @@ interface SessionViewProps {
   subtopicOptions?: string[];
   onSendTurn: (utterance: string) => void;
   onEndSession: () => void;
+  /** For report-a-mistake: which class this is. */
+  sessionId?: string | null;
+  reportSubject?: string | null;
+  reportChapter?: string | null;
   onTogglePause?: () => void;
   onStartPushToTalk?: () => void;
   onStopPushToTalk?: () => void;
@@ -64,11 +69,15 @@ export function SessionView({
   subtopicOptions,
   onSendTurn,
   onEndSession,
+  sessionId,
+  reportSubject,
+  reportChapter,
   onTogglePause,
   onStartPushToTalk,
   onStopPushToTalk,
 }: SessionViewProps) {
   const [inputText, setInputText] = useState<string>("");
+  const [reportOpen, setReportOpen] = useState(false);
   const [holdDuration, setHoldDuration] = useState<number>(0);
   // Tracked here rather than read off voiceState.isListening, which is
   // `isPushToTalkActive && !isDronaSpeaking && …`. Any audio_chunk arriving
@@ -219,6 +228,12 @@ export function SessionView({
           </span>
         </div>
         <div className="flex items-center gap-3">
+          <button
+            onClick={() => setReportOpen(true)}
+            className="font-semibold text-[0.82rem] py-2 px-3 rounded-full text-ink-muted hover:text-red-dark transition-colors cursor-pointer"
+          >
+            Report a mistake
+          </button>
           <button
             onClick={onEndSession}
             className="inline-flex items-center gap-2 font-bold text-[0.86rem] py-2 px-4 rounded-full border-[1.4px] border-[rgba(221,68,51,0.4)] bg-[rgba(221,68,51,0.05)] text-[#C53A2B] hover:bg-[#DD4433] hover:border-[#DD4433] hover:text-white transition-colors cursor-pointer"
@@ -651,6 +666,20 @@ export function SessionView({
           </button>
         </div>
       </div>
+      {reportOpen && (
+        <ReportSheet
+          target={{
+            surface: "live",
+            sessionId,
+            subject: reportSubject,
+            chapter: reportChapter,
+            // What Drona was saying when they reported it: the diagnosis.
+            quote: cleanSpeech,
+            context: { phase, segment_index: segmentIndex, subtopic: sessionTopic },
+          }}
+          onClose={() => setReportOpen(false)}
+        />
+      )}
     </div>
   );
 }

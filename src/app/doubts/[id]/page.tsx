@@ -10,7 +10,8 @@ import { FollowUp } from "@/components/FollowUp";
 import { MathText } from "@/components/MathText";
 import { QuestionSheet, RuledSheet, Solution } from "@/components/SavedBoard";
 import { DEFAULT_VOICE, getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
-import { getDoubt, reportDoubt, type DoubtDetail } from "@/lib/doubts";
+import { getDoubt, type DoubtDetail } from "@/lib/doubts";
+import { ReportSheet } from "@/components/ReportSheet";
 
 /**
  * One saved doubt. Everything mathematical renders through the SAME KaTeX
@@ -30,6 +31,7 @@ export default function DoubtDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [reported, setReported] = useState(false);
+  const [reporting, setReporting] = useState(false);
   const [asking, setAsking] = useState(false);
 
   useEffect(() => {
@@ -56,15 +58,6 @@ export default function DoubtDetailPage() {
     };
   }, [id]);
 
-  const handleReport = async () => {
-    if (!doubt || reported) return;
-    try {
-      await reportDoubt(doubt.id);
-      setReported(true);
-    } catch {
-      /* best-effort; the page stays useful */
-    }
-  };
 
   const chosen =
     doubt?.option_labels && doubt.option_labels.length > 0
@@ -212,7 +205,7 @@ export default function DoubtDetailPage() {
                   </button>
                   {doubt.status === "solved" && (
                     <button
-                      onClick={handleReport}
+                      onClick={() => setReporting(true)}
                       disabled={reported}
                       className={`ml-auto font-semibold text-[0.82rem] py-2.5 px-3 rounded-full bg-transparent cursor-pointer transition-colors ${
                         reported ? "text-red-dark cursor-default" : "text-ink-muted hover:text-red-dark"
@@ -227,6 +220,13 @@ export default function DoubtDetailPage() {
           </>
         )}
       </main>
+      {reporting && doubt && (
+        <ReportSheet
+          target={{ surface: "snap", doubtId: doubt.id, subject: doubt.subject, chapter: doubt.chapter }}
+          onClose={() => setReporting(false)}
+          onSent={() => setReported(true)}
+        />
+      )}
     </div>
   );
 }

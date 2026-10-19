@@ -7,6 +7,7 @@ import { MathText } from "@/components/MathText";
 import { QuestionStem } from "@/components/QuestionStem";
 import { supabase } from "@/lib/supabase";
 import { apiFetch, ApiError } from "@/lib/api";
+import { ReportSheet } from "@/components/ReportSheet";
 import { PracticeExplainOverlay } from "@/components/drona/PracticeExplainOverlay";
 import type { Database } from "@/lib/database.types";
 import {
@@ -189,6 +190,8 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   });
   const [focusChapters, setFocusChapters] = useState<FocusChapter[] | null>(null);
   const [focusOpen, setFocusOpen] = useState(false);
+  const [reportOpen, setReportOpen] = useState(false);
+  const [reportedId, setReportedId] = useState<string | null>(null);
   const focusChaptersRef = useRef<FocusChapter[] | null>(null);
 
   // Question & Session state
@@ -946,6 +949,33 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                   <div className="p-3.5 rounded-xl bg-ink/5 border border-border-subtle text-ink-light text-xs font-semibold animate-ml-rise">
                     ℹ {notice}
                   </div>
+                )}
+
+                {/* Report a mistake: once the answer is graded, so the student
+                    has seen the key and solution they are disputing. */}
+                {answerResult && (
+                  <div className="flex justify-end">
+                    <button
+                      type="button"
+                      onClick={() => setReportOpen(true)}
+                      disabled={reportedId === question.question_id}
+                      className="font-semibold text-xs text-ink-muted hover:text-red-dark transition-colors disabled:text-red-dark disabled:cursor-default"
+                    >
+                      {reportedId === question.question_id ? "Reported — thank you" : "Report a mistake"}
+                    </button>
+                  </div>
+                )}
+                {reportOpen && (
+                  <ReportSheet
+                    target={{
+                      surface: "practice",
+                      questionId: question.question_id,
+                      chapter: question.chapter_name ?? null,
+                      context: { concept: question.concept ?? null, difficulty: question.difficulty ?? null },
+                    }}
+                    onClose={() => setReportOpen(false)}
+                    onSent={() => setReportedId(question.question_id)}
+                  />
                 )}
 
                 {/* Action Buttons Row */}
