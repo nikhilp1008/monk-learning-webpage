@@ -183,6 +183,11 @@ type Scale = (n: number) => number;
 // Module-level so the default keeps a stable identity for useMemo.
 const IDENTITY_SCALE: Scale = (n) => n;
 
+/** The phone's figure column (316 less the card padding) and the largest
+ *  enlargement a figure gets on a wide screen. See `TextbookDiagram`. */
+const FIGURE_DESIGN_W = 308;
+const FIGURE_ZOOM_MAX = 1.8;
+
 // React Native Views are position:relative flex columns with border-box sizing
 // and solid borders; the web's divs are none of those, so every box here
 // starts from this.
@@ -240,6 +245,22 @@ export function TextbookDiagram({
   // reference-width device and onLayout only corrects unusual containers.
   const figureWidth = Math.max(1, (measured || scale(316)) - scale(8));
 
+  /**
+   * THE FIGURES ARE DRAWN FOR A PHONE AND ENLARGED, NOT RE-LAID-OUT.
+   *
+   * Every SVG figure sizes itself from a pixel width, and its labels, strokes
+   * and glyphs are fixed pixel values chosen for the phone's 308px column. Fed
+   * a 600px column it kept the same 10px labels and 1.4px wires and drew them
+   * across twice the area, so a circuit read as a thin sketch lost in a tall
+   * white box. So the figure is still drawn at (about) the phone's width and
+   * then enlarged as a whole with CSS zoom, which scales text and strokes
+   * with the geometry and keeps layout honest. Capped: past ~1.8x a figure
+   * stops being a diagram in a page and becomes a poster.
+   */
+  const ratio = Math.min(FIGURE_ZOOM_MAX, Math.max(1, figureWidth / FIGURE_DESIGN_W));
+  const drawWidth = Math.max(1, Math.floor(figureWidth / ratio));
+  const zoomed: CSSProperties = { zoom: ratio, margin: '0 auto', width: drawWidth };
+
   if (!config) return null;
 
   const sel = Math.min(Math.max(selected, 0), config.chips.length - 1);
@@ -249,37 +270,41 @@ export function TextbookDiagram({
       <div ref={figureRef} style={styles.figure}>
         {kind === 'numsys' && <NumberSystems selected={sel} styles={styles} />}
         {kind === 'lattice' && <Lattice selected={sel} styles={styles} />}
-        {kind === 'venn2' && <VennTwo selected={sel} width={figureWidth} />}
-        {kind === 'venn3' && <VennThree selected={sel} width={figureWidth} />}
-        {kind === 'family' && <IntervalFamily selected={sel} width={figureWidth} />}
+        <div style={zoomed}>
+        {kind === 'venn2' && <VennTwo selected={sel} width={drawWidth} />}
+        {kind === 'venn3' && <VennThree selected={sel} width={drawWidth} />}
+        {kind === 'family' && <IntervalFamily selected={sel} width={drawWidth} />}
+        </div>
         {kind === 'grid' && <IncidenceGrid selected={sel} styles={styles} />}
+        <div style={zoomed}>
         {(kind === 'plot' || kind === 'numberline') && frames?.[sel] && (
-          <Plot frame={frames[sel]} width={figureWidth} kind={kind} />
+          <Plot frame={frames[sel]} width={drawWidth} kind={kind} />
         )}
         {kind === 'unitcircle' && frames?.[sel] && (
-          <UnitCircle frame={frames[sel]} width={figureWidth} />
+          <UnitCircle frame={frames[sel]} width={drawWidth} />
         )}
         {kind === 'tree' && frames?.[sel] && (
-          <CountingTree frame={frames[sel]} width={figureWidth} />
+          <CountingTree frame={frames[sel]} width={drawWidth} />
         )}
         {kind === 'pascal' && frames?.[sel] && (
-          <PascalTriangle frame={frames[sel]} width={figureWidth} />
+          <PascalTriangle frame={frames[sel]} width={drawWidth} />
         )}
         {kind === 'axes3d' && frames?.[sel] && (
-          <Axes3D frame={frames[sel]} width={figureWidth} />
+          <Axes3D frame={frames[sel]} width={drawWidth} />
         )}
         {kind === 'flow' && frames?.[sel] && (
-          <FlowChart frame={frames[sel]} width={figureWidth} />
+          <FlowChart frame={frames[sel]} width={drawWidth} />
         )}
         {kind === 'levels' && frames?.[sel] && (
-          <EnergyLevels frame={frames[sel]} width={figureWidth} />
+          <EnergyLevels frame={frames[sel]} width={drawWidth} />
         )}
         {kind === 'circuit' && frames?.[sel] && (
-          <CircuitDiagram frame={frames[sel]} width={figureWidth} />
+          <CircuitDiagram frame={frames[sel]} width={drawWidth} />
         )}
         {kind === 'optics' && frames?.[sel] && (
-          <RayDiagram frame={frames[sel]} width={figureWidth} />
+          <RayDiagram frame={frames[sel]} width={drawWidth} />
         )}
+        </div>
       </div>
       <div style={styles.chipRow}>
         {config.chips.map((label, i) => (
