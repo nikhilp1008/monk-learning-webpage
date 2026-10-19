@@ -1,0 +1,808 @@
+"use client";
+
+import type { CSSProperties } from "react";
+
+import { colors } from "@/components/textbook/brand";
+import { Carousel, CarouselCard } from "@/components/textbook/carousel";
+import { TextbookDiagram } from "@/components/textbook/diagrams";
+import { Markup as BaseMarkup, type MarkupProps } from "@/components/textbook/markup";
+import Svg, { Path } from "@/components/textbook/svg";
+import {
+  BORDER_SOFT,
+  BORDER_STRONG,
+  CARD_BORDER,
+  DASH,
+  kicker,
+  makeBlockStyles,
+  mathText,
+} from "@/components/textbook/theme";
+import { labelCase } from "@/lib/label-case";
+import { splitProse } from "@/lib/prose-paragraphs";
+import type { Block, RenderBlock } from "@/lib/textbooks";
+
+/**
+ * Every content block, rendered.
+ *
+ * Nothing here knows which chapter it is drawing. A block is data and this is
+ * the only place that turns a `t` into pixels, which is what lets a new
+ * chapter ship as one data module and no screen changes at all.
+ *
+ * Interaction state lives in the reader, not in these components, so it
+ * survives a topic switch. See `BlockState`.
+ */
+
+export interface BlockState {
+  hook: Record<string, boolean>;
+  deriv: Record<string, number | null>;
+  diagram: Record<string, number>;
+  page: Record<string, number>;
+  mcq: Record<string, { pick: number | null; solved: boolean }>;
+  practice: Record<string, boolean>;
+}
+
+export const EMPTY_BLOCK_STATE: BlockState = {
+  hook: {},
+  deriv: {},
+  diagram: {},
+  page: {},
+  mcq: {},
+  practice: {},
+};
+
+interface Ctx {
+  uid: string;
+  /** Layout scale. Boxes, radii, pads, icons, figure viewports. */
+  scale: (n: number) => number;
+  /** Layout scale × the reader's chosen text size. Font sizes only. */
+  type: (n: number) => number;
+  state: BlockState;
+  set: <K extends keyof BlockState>(key: K, id: string, value: BlockState[K][string]) => void;
+  topicNumber: string;
+}
+
+const SANS = "var(--font-sans), system-ui, sans-serif";
+
+/**
+ * Markup is an inline <span>; the phone's Text is a block-level flex item.
+ * Everything here stacks it, so it is made a block once, in one place.
+ */
+function Markup({ style, ...rest }: MarkupProps) {
+  return <BaseMarkup {...rest} style={{ display: "block", ...style }} />;
+}
+
+/** A pressable that looks like nothing until styled: the browser button reset. */
+const BUTTON_RESET: CSSProperties = {
+  display: "flex",
+  width: "100%",
+  boxSizing: "border-box",
+  border: "none",
+  background: "none",
+  margin: 0,
+  font: "inherit",
+  color: "inherit",
+  textAlign: "left",
+  cursor: "pointer",
+};
+
+function Chevron({ open, scale }: { open: boolean; scale: (n: number) => number }) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        transform: open ? "rotate(180deg)" : "rotate(0deg)",
+        transition: "transform 200ms ease",
+      }}>
+      <Svg viewBox="0 0 16 16" width={scale(12)} height={scale(12)} fill="none" aria-hidden>
+        <Path
+          d="M3.5 6 8 10.5 12.5 6"
+          stroke={colors.faint}
+          strokeWidth={1.9}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </Svg>
+    </div>
+  );
+}
+
+/**
+ * A SECTION LABEL, in one place so its case rule is in one place.
+ *
+ * It takes a string rather than children because the rule has to run ON the
+ * text — 1,515 of the authored labels are in full capitals, so a style alone
+ * cannot bring them down. See `labelCase`.
+ */
+function Kicker({
+  type,
+  style,
+  children,
+}: {
+  type: (n: number) => number;
+  style?: CSSProperties;
+  children: string;
+}) {
+  return <div style={{ ...kicker(type), ...style }}>{labelCase(children)}</div>;
+}
+
+export function TextbookBlock({ block, ctx }: { block: RenderBlock; ctx: Ctx }) {
+  const { scale, type } = ctx;
+  const s = makeBlockStyles(scale, type);
+  const st = makeStyles(scale, type);
+
+  switch (block.t) {
+    case "hook": {
+      const open = !!ctx.state.hook[ctx.uid];
+      return (
+        <div style={s.cardFlush}>
+          <button
+            type="button"
+            aria-expanded={open}
+            onClick={() => ctx.set("hook", ctx.uid, !open)}
+            style={{ ...BUTTON_RESET, ...st.hookHead }}>
+            <Kicker type={type} style={st.grow}>Why this matters in the exam</Kicker>
+            <Chevron open={open} scale={scale} />
+          </button>
+          {open && (
+            <Markup html={block.html} size={type(14.5)} style={{ ...s.blockBody, ...st.hookBody }} />
+          )}
+        </div>
+      );
+    }
+
+    case "p": {
+      /**
+       * BROKEN INTO PARAGRAPHS THE AUTHOR DID NOT WRITE, at boundaries the
+       * author did. The corpus's median prose block is 518 characters, which in
+       * this column is thirteen lines in one run — see `splitProse` for the
+       * measurements and for why this happens at render rather than in the
+       * content. A block short enough to read comes back as one piece, so this
+       * is a no-op on most of them.
+       *
+       * The gap between these is smaller than the gap between BLOCKS. They are
+       * one thought the author wrote long; a block is a different thought, and
+       * the page should say which is which.
+       */
+      const paras = splitProse(block.html);
+      if (paras.length === 1) {
+        return <Markup html={block.html} size={type(16.5)} style={s.body} />;
+      }
+      return (
+        <div style={st.proseGroup}>
+          {paras.map((para, i) => (
+            <Markup key={i} html={para} size={type(16.5)} style={s.body} />
+          ))}
+        </div>
+      );
+    }
+
+    case "think":
+      return (
+        <div style={st.think}>
+          <Markup
+            html={`think about it this way… ${block.html}`}
+            size={type(16)}
+            style={{ ...s.hand, ...st.thinkText }}
+          />
+        </div>
+      );
+
+    // Four blocks below carry no card any more: def, defgrid, proc and
+    // mistakes are prose and lists, and boxing them turned a page of reading
+    // into a stack of panels. On a warm ground every white panel is also a
+    // seam, so the page looked patched the further you scrolled. A kicker and
+    // a rule carry the same "this is a definition" signal at a fraction of the
+    // weight. Boxes are kept only where the content is genuinely a discrete
+    // object: a formula, a figure, an accordion, a swipeable card, and the
+    // end-of-topic checkpoint.
+    case "def":
+      return (
+        <div style={st.plainBlock}>
+          <Kicker type={type}>Definition</Kicker>
+          <Markup html={block.term} size={type(15)} style={st.defTerm} />
+          <Markup html={block.html} size={type(15)} style={{ ...s.blockBody, ...st.defBody }} />
+        </div>
+      );
+
+    case "defgrid":
+      return (
+        <div>
+          <Kicker type={type} style={st.gridTitle}>{block.title}</Kicker>
+          {block.rows.map((row, i) => (
+            <div key={i} style={st.gridRow}>
+              <Markup html={row.k} size={type(13)} style={st.gridKey} />
+              <Markup html={row.v} size={type(13.5)} style={st.gridVal} />
+            </div>
+          ))}
+        </div>
+      );
+
+    case "formula":
+      return (
+        <div style={s.card}>
+          <div style={st.formulaHead}>
+            <Kicker type={type} style={st.headLabel}>{block.kicker}</Kicker>
+            {!!block.tag && <Kicker type={type} style={st.tag}>{block.tag}</Kicker>}
+          </div>
+          <Markup
+            html={block.main}
+            size={type(20)}
+            style={{ ...mathText(type, 20), ...st.formulaMain }}
+          />
+          <div style={st.formulaLegend}>
+            {block.legend.map((line, i) => (
+              <Markup key={i} html={line} size={type(13)} style={st.legendLine} />
+            ))}
+            {!!block.note && <Markup html={block.note} size={type(13)} style={st.formulaNote} />}
+          </div>
+        </div>
+      );
+
+    case "proc":
+      return (
+        <div style={st.plainBlock}>
+          <Kicker type={type}>{`How to · ${block.title}`}</Kicker>
+          <div style={st.procList}>
+            {block.steps.map((step, i) => (
+              <div key={i} style={st.procRow}>
+                <span style={st.stepNum}>{i + 1}</span>
+                <Markup html={step} size={type(14.5)} style={{ ...s.blockBody, ...st.grow }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+
+    case "deriv": {
+      const openStep = ctx.state.deriv[ctx.uid] ?? null;
+      return (
+        <div style={s.cardFlush}>
+          <Kicker type={type} style={st.derivKicker}>{block.kicker}</Kicker>
+          {block.steps.map((step, i) => {
+            const open = openStep === i;
+            return (
+              <div key={i} style={st.derivStep}>
+                <button
+                  type="button"
+                  aria-expanded={open}
+                  onClick={() => ctx.set("deriv", ctx.uid, open ? null : i)}
+                  style={{ ...BUTTON_RESET, ...st.derivHead, ...(open ? st.derivHeadOpen : null) }}>
+                  <span style={st.derivNum}>{i + 1}</span>
+                  <Markup
+                    html={step.eq}
+                    size={type(15.5)}
+                    style={{ ...mathText(type, 15.5), ...st.grow }}
+                  />
+                  <Chevron open={open} scale={scale} />
+                </button>
+                {open && <Markup html={step.why} size={type(13.5)} style={st.derivWhy} />}
+              </div>
+            );
+          })}
+        </div>
+      );
+    }
+
+    case "diagram": {
+      const selected = ctx.state.diagram[ctx.uid] ?? 0;
+      return (
+        <div style={s.card}>
+          <Kicker type={type} style={st.diaKicker}>{block.kicker}</Kicker>
+          <TextbookDiagram
+            kind={block.kind}
+            selected={selected}
+            onSelect={(i) => ctx.set("diagram", ctx.uid, i)}
+            chips={block.chips}
+            captions={block.captions}
+            mathChips={block.mathChips}
+            frames={block.frames}
+          />
+        </div>
+      );
+    }
+
+    case "exGroup": {
+      const page = ctx.state.page[ctx.uid] ?? 0;
+      return (
+        <Carousel
+          count={block.items.length}
+          page={page}
+          onPage={(i) => ctx.set("page", ctx.uid, i)}
+          scale={scale}>
+          {(live) =>
+            block.items.map((ex, i) => (
+              <CarouselCard key={i} index={i} active={i === live} scale={scale}>
+                <div style={st.swipeCard}>
+                  <div style={st.formulaHead}>
+                    <Kicker type={type} style={st.headLabel}>
+                      {`Solved example · ${i + 1} of ${block.items.length}`}
+                    </Kicker>
+                    <span style={{ ...kicker(type, 9.5), ...st.tag }}>{ex.tag}</span>
+                  </div>
+                  <Markup html={ex.q} size={type(15)} style={st.cardQ} />
+                  <div style={st.exSteps}>
+                    {ex.steps.map((step, j) => (
+                      <div key={j} style={st.procRow}>
+                        <span style={st.stepNum}>{j + 1}</span>
+                        <Markup html={step} size={type(13.5)} style={{ ...st.exStep, ...st.grow }} />
+                      </div>
+                    ))}
+                  </div>
+                  <Markup html={ex.ans} size={type(14)} style={{ ...s.tintPanel, ...st.exAns }} />
+                </div>
+              </CarouselCard>
+            ))
+          }
+        </Carousel>
+      );
+    }
+
+    case "mcqGroup": {
+      const page = ctx.state.page[ctx.uid] ?? 0;
+      return (
+        <Carousel
+          count={block.items.length}
+          page={page}
+          onPage={(i) => ctx.set("page", ctx.uid, i)}
+          scale={scale}>
+          {(live) =>
+            block.items.map((q, i) => {
+              const key = `${ctx.uid}_${i}`;
+              const answer = ctx.state.mcq[key] ?? { pick: null, solved: false };
+              const nudge =
+                !answer.solved && answer.pick !== null ? q.opts[answer.pick]?.nudge : null;
+              return (
+                <CarouselCard key={i} index={i} active={i === live} scale={scale}>
+                  <div style={st.swipeCard}>
+                    <Kicker type={type}>{`Crack the MCQ · Q${i + 1} of ${block.items.length}`}</Kicker>
+                    <Markup html={q.q} size={type(15)} style={st.cardQ} />
+                    <div style={st.opts}>
+                      {q.opts.map((opt, oi) => {
+                        const right = oi === q.correct && answer.solved;
+                        const wrong = answer.pick === oi && oi !== q.correct;
+                        return (
+                          <button
+                            key={oi}
+                            type="button"
+                            aria-pressed={answer.pick === oi}
+                            disabled={answer.solved}
+                            onClick={() =>
+                              ctx.set("mcq", key, { pick: oi, solved: oi === q.correct })
+                            }
+                            style={{
+                              ...BUTTON_RESET,
+                              ...st.opt,
+                              ...(right ? st.optRight : null),
+                              ...(wrong ? st.optWrong : null),
+                              cursor: answer.solved ? "default" : "pointer",
+                            }}>
+                            <span style={st.optTag}>{"ABCD"[oi]}</span>
+                            <Markup
+                              html={opt.label}
+                              size={type(14)}
+                              style={{ ...st.optLabel, ...st.grow }}
+                            />
+                            {(right || wrong) && (
+                              <span
+                                style={{
+                                  ...st.optMark,
+                                  color: right ? colors.amberText : colors.red,
+                                }}>
+                                {right ? "✓" : "✗"}
+                              </span>
+                            )}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {!!nudge && (
+                      <div style={{ ...s.tintPanel, ...st.reveal }}>
+                        <div style={kicker(type, 9.5)}>Not quite. Here&apos;s the trap</div>
+                        <Markup html={nudge} size={type(13.5)} style={st.revealBody} />
+                      </div>
+                    )}
+                    {answer.solved && (
+                      <div style={{ ...s.tintPanel, ...st.reveal }}>
+                        <div style={{ ...kicker(type, 9.5), color: colors.amberText }}>Solved ✓</div>
+                        <Markup html={q.solution} size={type(13.5)} style={st.revealBody} />
+                      </div>
+                    )}
+                  </div>
+                </CarouselCard>
+              );
+            })
+          }
+        </Carousel>
+      );
+    }
+
+    case "practice": {
+      const page = ctx.state.page[ctx.uid] ?? 0;
+      return (
+        <Carousel
+          count={block.items.length}
+          page={page}
+          onPage={(i) => ctx.set("page", ctx.uid, i)}
+          scale={scale}>
+          {(live) =>
+            block.items.map((item, i) => {
+              const key = `${ctx.uid}_${i}`;
+              const shown = !!ctx.state.practice[key];
+              return (
+                <CarouselCard key={i} index={i} active={i === live} scale={scale}>
+                  <div style={st.swipeCard}>
+                    <div style={st.formulaHead}>
+                      <Kicker type={type} style={st.headLabel}>
+                        {`Practice · ${i + 1} of ${block.items.length}`}
+                      </Kicker>
+                      <span style={{ ...kicker(type, 9.5), ...st.tag }}>Try first</span>
+                    </div>
+                    <Markup html={item.q} size={type(15)} style={{ ...st.cardQ, ...st.practiceQ }} />
+                    {shown ? (
+                      <Markup
+                        html={item.a}
+                        size={type(13.5)}
+                        style={{ ...s.tintPanel, ...st.exAns }}
+                      />
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => ctx.set("practice", key, true)}
+                        style={{ ...st.checkBtn, ...st.checkBtnText }}>
+                        Check answer
+                      </button>
+                    )}
+                  </div>
+                </CarouselCard>
+              );
+            })
+          }
+        </Carousel>
+      );
+    }
+
+    case "mistakes":
+      return (
+        <div style={st.plainBlock}>
+          <Kicker type={type}>Watch out</Kicker>
+          <div style={st.procList}>
+            {block.items.map((item, i) => (
+              <div key={i} style={st.procRow}>
+                <span style={st.cross}>✗</span>
+                <Markup html={item} size={type(14)} style={{ ...st.mistakeText, ...st.grow }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+
+    case "protip":
+      return (
+        <div style={st.protip}>
+          <Kicker type={type}>Pro-tip</Kicker>
+          <Markup html={block.html} size={type(15.5)} style={{ ...s.hand, ...st.protipText }} />
+        </div>
+      );
+
+    case "snapshot":
+      return (
+        <div style={st.snapshot}>
+          <div style={st.snapHead}>
+            <Kicker type={type} style={st.snapKicker}>
+              {`Checkpoint · Topic ${ctx.topicNumber} snapshot`}
+            </Kicker>
+            <span style={st.snapTick}>✓</span>
+          </div>
+          <div style={st.snapBody}>
+            {block.rows.map((row, i) => (
+              <div key={i} style={st.snapRow}>
+                <Markup html={row.f} size={type(14.5)} style={mathText(type, 14.5)} />
+                <Markup html={row.note} size={type(13)} style={st.snapNote} />
+              </div>
+            ))}
+            <div style={st.snapAids}>
+              {block.aids.map((aid, i) => (
+                <Markup key={i} html={aid} size={type(14)} style={{ ...s.hand, ...st.snapAid }} />
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+
+    default:
+      return null;
+  }
+}
+
+/** Everything a block might need that the reader must supply. */
+export type { Block };
+
+function makeStyles(scale: (n: number) => number, type = scale) {
+  const lh = (size: number, ratio: number) => `${type(size * ratio)}px`;
+  return {
+    /** Between paragraphs of ONE block. Smaller than the 20 between blocks,
+     *  because these are one thought written long and a block is a new one. */
+    proseGroup: { display: "flex", flexDirection: "column", gap: type(11) },
+    grow: { flex: 1, minWidth: 0 },
+    /**
+     * NO RULE, AND NO INDENT EITHER.
+     *
+     * These blocks carried a 2pt line down the left and 14 of padding to clear
+     * it. On a numbered how-to that put a rule, then a gap, then the step
+     * number, then another gap, then the text — four things before a word, in a
+     * column already only 41 characters wide. The label above each block
+     * already says where it begins and the gap between blocks already says
+     * where it ends; the line was a third way of saying the same thing, paid
+     * for in measure.
+     */
+    plainBlock: {},
+    hookHead: {
+      alignItems: "center",
+      gap: scale(10),
+      padding: `${scale(12)}px ${scale(15)}px`,
+    },
+    hookBody: { padding: `0 ${scale(15)}px ${scale(13)}px` },
+    /** The aside loses its rule too. It is already marked by its own voice —
+     *  lowercase, and set in slate rather than ink — so the line was decorating
+     *  a distinction the words had already made. */
+    think: { padding: `${scale(6)}px 0` },
+    thinkText: { fontSize: type(16), lineHeight: lh(16, 1.55) },
+    defTerm: {
+      fontFamily: SANS,
+      fontWeight: 700,
+      fontSize: type(17),
+      letterSpacing: scale(-0.26),
+      color: colors.ink,
+      marginTop: scale(6),
+    },
+    defBody: { marginTop: scale(4) },
+    gridTitle: { paddingBottom: scale(6) },
+    gridRow: {
+      display: "flex",
+      gap: scale(12),
+      padding: `${scale(9)}px 0`,
+      borderTop: `1px solid ${BORDER_SOFT}`,
+    },
+    gridKey: {
+      width: scale(116),
+      flexShrink: 0,
+      fontFamily: SANS,
+      fontWeight: 700,
+      fontSize: type(13),
+      lineHeight: lh(13, 1.45),
+      color: colors.ink,
+    },
+    gridVal: {
+      flex: 1,
+      minWidth: 0,
+      fontFamily: SANS,
+      fontWeight: 400,
+      fontSize: type(13.5),
+      lineHeight: lh(13.5, 1.5),
+      color: colors.slate,
+    },
+    // Wraps rather than squeezing. Both children carry real text -- a label
+    // and a gloss -- and across the corpus they run to 105 characters
+    // combined. `flex: 1` on the label gave it a flex basis of 0, so the tag
+    // claimed its full content width first and the label was left breaking
+    // mid-word down a column two characters wide. Now neither has a zero
+    // basis, so they share the line when they fit and the tag drops to its
+    // own line when they do not.
+    formulaHead: {
+      display: "flex",
+      flexWrap: "wrap",
+      alignItems: "flex-start",
+      columnGap: scale(10),
+      rowGap: scale(3),
+    },
+    // Shrinks to share the line, but never to a zero basis the way `grow` did.
+    headLabel: { flexShrink: 1 },
+    // `marginLeft: auto` keeps a short tag against the right edge on a shared
+    // line; a long one fills its own line and the auto margin does nothing.
+    tag: { color: colors.quiet, letterSpacing: scale(0.6), flexShrink: 1, marginLeft: "auto" },
+    formulaMain: { textAlign: "center", padding: `${scale(16)}px 0 ${scale(14)}px` },
+    formulaLegend: {
+      display: "flex",
+      flexDirection: "column",
+      gap: scale(4),
+      borderTop: "1px solid rgba(28,26,22,.08)",
+      paddingTop: scale(10),
+    },
+    legendLine: {
+      fontFamily: SANS,
+      fontWeight: 400,
+      fontSize: type(13),
+      lineHeight: lh(13, 1.55),
+      color: colors.faint,
+    },
+    formulaNote: {
+      fontFamily: SANS,
+      fontWeight: 400,
+      fontSize: type(13),
+      lineHeight: lh(13, 1.5),
+      color: colors.slate,
+    },
+    procList: { display: "flex", flexDirection: "column", gap: scale(9), marginTop: scale(10) },
+    procRow: { display: "flex", gap: scale(11) },
+    stepNum: {
+      fontFamily: SANS,
+      fontWeight: 800,
+      fontSize: type(10.5),
+      color: colors.quiet,
+      paddingTop: scale(2),
+    },
+    derivKicker: { padding: `${scale(13)}px ${scale(16)}px ${scale(9)}px` },
+    derivStep: { borderTop: `1px solid ${BORDER_SOFT}` },
+    derivHead: {
+      alignItems: "center",
+      gap: scale(12),
+      padding: `${scale(11)}px ${scale(16)}px`,
+    },
+    // The open row lifts off the card just enough to show which "why" belongs
+    // to which step. Fainter than a pressed state on purpose.
+    derivHeadOpen: { backgroundColor: "rgba(28,26,22,.03)" },
+    derivNum: {
+      fontFamily: SANS,
+      fontWeight: 800,
+      fontSize: type(10.5),
+      color: colors.quiet,
+      width: scale(16),
+      flexShrink: 0,
+    },
+    derivWhy: {
+      fontFamily: SANS,
+      fontWeight: 400,
+      fontSize: type(13.5),
+      lineHeight: lh(13.5, 1.55),
+      color: colors.slate,
+      paddingLeft: scale(44),
+      paddingRight: scale(16),
+      paddingBottom: scale(12),
+    },
+    diaKicker: { marginBottom: scale(10) },
+    swipeCard: {
+      backgroundColor: colors.readingCard,
+      border: `1px solid ${CARD_BORDER}`,
+      borderRadius: scale(14),
+      padding: `${scale(14)}px ${scale(16)}px`,
+    },
+    cardQ: {
+      fontFamily: SANS,
+      fontWeight: 400,
+      fontSize: type(15),
+      lineHeight: lh(15, 1.6),
+      color: colors.ink,
+      marginTop: scale(8),
+    },
+    practiceQ: { minHeight: scale(48) },
+    exSteps: {
+      display: "flex",
+      flexDirection: "column",
+      gap: scale(7),
+      marginTop: scale(11),
+      borderTop: `1px dashed ${CARD_BORDER}`,
+      paddingTop: scale(11),
+    },
+    exStep: {
+      fontFamily: SANS,
+      fontWeight: 400,
+      fontSize: type(13.5),
+      lineHeight: lh(13.5, 1.55),
+      color: colors.slate,
+    },
+    exAns: {
+      marginTop: scale(10),
+      fontFamily: SANS,
+      fontWeight: 400,
+      fontSize: type(13.5),
+      lineHeight: lh(13.5, 1.55),
+      color: colors.slate,
+      overflow: "hidden",
+    },
+    opts: { display: "flex", flexDirection: "column", gap: scale(7), marginTop: scale(11) },
+    opt: {
+      alignItems: "center",
+      gap: scale(11),
+      padding: `${scale(9)}px ${scale(12)}px`,
+      borderRadius: scale(10),
+      border: `1px solid ${CARD_BORDER}`,
+      backgroundColor: colors.reading,
+    },
+    optRight: { backgroundColor: colors.tint, borderColor: colors.ink },
+    optWrong: { borderColor: "rgba(221,68,51,.5)" },
+    optTag: {
+      fontFamily: SANS,
+      fontWeight: 800,
+      fontSize: type(10.5),
+      color: colors.quiet,
+    },
+    optLabel: {
+      fontFamily: SANS,
+      fontWeight: 600,
+      fontSize: type(14),
+      lineHeight: lh(14, 1.45),
+      color: colors.ink,
+    },
+    optMark: { fontFamily: SANS, fontWeight: 700, fontSize: type(13.5) },
+    reveal: { marginTop: scale(9) },
+    revealBody: {
+      fontFamily: SANS,
+      fontWeight: 400,
+      fontSize: type(13.5),
+      lineHeight: lh(13.5, 1.55),
+      color: colors.slate,
+      marginTop: scale(4),
+    },
+    checkBtn: {
+      display: "flex",
+      alignItems: "center",
+      alignSelf: "flex-start",
+      height: scale(36),
+      padding: `0 ${scale(16)}px`,
+      marginTop: scale(10),
+      borderRadius: scale(99),
+      border: "1px solid rgba(28,26,22,.22)",
+      background: "none",
+      cursor: "pointer",
+    },
+    checkBtnText: {
+      fontFamily: SANS,
+      fontWeight: 700,
+      fontSize: type(13.5),
+      color: colors.ink,
+    },
+    cross: {
+      fontFamily: SANS,
+      fontWeight: 700,
+      fontSize: type(12),
+      color: colors.red,
+      paddingTop: scale(1),
+    },
+    mistakeText: {
+      fontFamily: SANS,
+      fontWeight: 400,
+      fontSize: type(14),
+      lineHeight: lh(14, 1.55),
+      color: colors.slate,
+    },
+    protip: {
+      border: `1px dashed ${DASH}`,
+      borderRadius: scale(12),
+      padding: `${scale(13)}px ${scale(16)}px`,
+    },
+    protipText: { fontSize: type(15.5), lineHeight: lh(15.5, 1.5), marginTop: scale(6) },
+    snapshot: {
+      border: `1px solid ${BORDER_STRONG}`,
+      borderRadius: scale(14),
+      overflow: "hidden",
+      marginTop: scale(2),
+    },
+    snapHead: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      padding: `${scale(11)}px ${scale(16)}px`,
+      borderBottom: "1px solid rgba(28,26,22,.1)",
+      backgroundColor: colors.tint,
+    },
+    snapKicker: { color: colors.slate },
+    snapTick: { fontFamily: SANS, fontWeight: 800, fontSize: type(10), color: colors.amberText },
+    snapBody: { padding: `${scale(14)}px ${scale(16)}px` },
+    snapRow: {
+      display: "flex",
+      alignItems: "baseline",
+      gap: scale(10),
+      flexWrap: "wrap",
+      marginBottom: scale(8),
+    },
+    snapNote: { fontFamily: SANS, fontWeight: 400, fontSize: type(12), color: colors.faint },
+    snapAids: {
+      display: "flex",
+      flexDirection: "column",
+      borderTop: "1px dashed rgba(28,26,22,.16)",
+      marginTop: scale(4),
+      paddingTop: scale(9),
+      gap: scale(3),
+    },
+    snapAid: { fontSize: type(14) },
+  } satisfies Record<string, CSSProperties>;
+}
