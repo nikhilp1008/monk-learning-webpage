@@ -472,6 +472,17 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
       );
 
     case "diagram":
+      // A payload-only figure (registry widget or stored illustration) has no
+      // SVG for this page to draw. An empty bordered box reads as a bug; say
+      // what is missing instead.
+      if (!event.svg && event.payload) {
+        return (
+          <div className="my-4 mx-auto max-w-xl rounded-xl border border-dashed border-ink/25 bg-cream-soft/60 px-4 py-5 text-center text-sm text-ink-light">
+            {event.caption ? <p className="font-semibold text-ink mb-1">{event.caption}</p> : null}
+            <p>This figure is drawn in the phone app. Follow along with the explanation here.</p>
+          </div>
+        );
+      }
       return (
         <AnimatedDiagram
           svg={event.svg || ""}

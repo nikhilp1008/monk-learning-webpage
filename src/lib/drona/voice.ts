@@ -217,7 +217,17 @@ export class DronaVoiceClient {
       const streamFlag = new URLSearchParams(window.location.search).get("stream_tts");
       if (streamFlag === "0" || streamFlag === "1") passthrough = `&stream_tts=${streamFlag}`;
     }
-    const wsUrl = this.options.wsUrl || `${wsBase}/drona/session/${this.sessionId}/live?token=${encodeURIComponent(token)}${passthrough}`;
+    // WIDGET MANIFEST: this client draws none of the board widgets yet, and
+    // says so. `widgets=` (present, empty) is a claim the server honours:
+    // live_session_ws parses it to {} and client_can_render() then returns
+    // False for every registry widget, so those segments resolve to the
+    // illustration / stored SVG instead. Sending NO parameter is a different
+    // claim ("a build from before negotiation") and the server assumes the
+    // phone's 12-widget baseline: it then sends payload-only board events
+    // (no `svg`) that this page cannot draw, i.e. a blank board.
+    // When a widget is ported, list it here as `id@version`.
+    const widgetManifest = "&widgets=";
+    const wsUrl = this.options.wsUrl || `${wsBase}/drona/session/${this.sessionId}/live?token=${encodeURIComponent(token)}${passthrough}${widgetManifest}`;
 
     // Never leave a previous socket alive. `onerror` can fire WITHOUT a
     // following `close` (a transient network error on an otherwise open

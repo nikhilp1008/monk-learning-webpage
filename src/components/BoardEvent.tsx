@@ -10,6 +10,11 @@ export interface BoardEventData {
   text?: string;
   latex?: string;
   svg?: string;
+  /** A widget payload ({widget, version, params}). Present INSTEAD of `svg`
+   *  for registry widgets and for stored illustrations (`labelled_figure`);
+   *  the web has no renderer for either yet. */
+  payload?: { widget?: string } | null;
+  route?: string;
   caption?: string;
   style?: string;
   emphasis?: "high" | "key" | "normal" | string;
