@@ -3,6 +3,15 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { apiFetch } from "@/lib/api";
+import {
+  earnedTowardNext,
+  formatClock,
+  formatDay,
+  getMockStatus,
+  listMockRuns,
+  type MockRunRow,
+  type MockStatus,
+} from "@/lib/mock";
 import { getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
 
 /* ── API contract: GET /progress (monk-learning-api) ──────────────────── */
@@ -121,11 +130,28 @@ export default function ProgressPage() {
   // Voice preference lives in localStorage — read after mount so SSR and
   // hydration agree on the default persona.
   const [tutorName, setTutorName] = useState(getTutorName());
+  // The mock gate and the newest finished paper, so the Exam Craft card can
+  // show the count rather than send a student to a screen that refuses them,
+  // and say how the last paper went. Null until known.
+  const [mockStatus, setMockStatus] = useState<MockStatus | null>(null);
+  const [lastPaper, setLastPaper] = useState<MockRunRow | null>(null);
 
   useEffect(() => {
     setTutorName(getTutorName(loadVoicePreference()));
     apiFetch<ProgressResponse>("/progress")
-      .then(setData)
+      .then((d) => {
+        setData(d);
+        // The gate is per exam, and the exam is whatever this summary was
+        // built for -- never a guess made on this page.
+        const exam = String(d.exam).toLowerCase().includes("neet") ? "neet" : "jee";
+        getMockStatus(exam).then(setMockStatus).catch(() => undefined);
+        listMockRuns()
+          .then((runs) => {
+            // Newest first from the server, for the exam this page shows.
+            setLastPaper(runs.find((r) => r.exam === exam && r.status === "submitted" && r.score) ?? null);
+          })
+          .catch(() => undefined);
+      })
       .catch((e) => setError(e instanceof Error ? e.message : "Failed to load progress"));
   }, []);
 
@@ -453,11 +479,39 @@ export default function ProgressPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
             {data.recommendations.map((rec, i) => {
               const meta = REC_TAG[rec.role];
+              // A paper still open (the tab was closed mid-paper) means the
+              // card must say Resume, not offer to earn another.
+              const waiting = mockStatus?.active_paper ?? null;
+              const gated = !waiting && !!mockStatus && mockStatus.credits_available === 0;
+              const isMock = rec.role === "exam_craft";
+              // The mock card says what a mock is, in words: the server's line
+              // is a ratio out of the scoring model ("1.15x exam conditions"),
+              // and what it describes is a three-hour commitment.
+              const reason = !isMock
+                ? rec.reason
+                : waiting
+                  ? waiting.expired
+                    ? "Your paper's time ran out while you were away. Open it and it is marked on the answers you gave."
+                    : `Your paper is waiting, with ${formatClock(waiting.seconds_left)} left on its clock.`
+                  : gated
+                    ? `A full paper, on the clock, marked the way the real one is. You earn one by answering ${mockStatus!.threshold} practice questions correctly.`
+                    : "A full paper, on the clock, marked the way the real one is. It shows where you run out of time and which mistakes cost you marks.";
+              const cta = !isMock
+                ? meta.cta(tutorName)
+                : waiting
+                  ? waiting.expired
+                    ? "Mark my paper →"
+                    : "Resume mock test →"
+                  : gated || !mockStatus
+                    ? "See mock tests →"
+                    : "Start mock test →";
               const href =
                 rec.role === "clear_flag"
                   ? "/learn"
                   : rec.role === "exam_craft"
-                    ? "/test"
+                    ? waiting
+                      ? "/mocks/paper"
+                      : "/mocks"
                     : rec.chapter_id
                       ? `/practice?chapter=${encodeURIComponent(rec.chapter_id)}`
                       : "/practice";
@@ -475,14 +529,45 @@ export default function ProgressPage() {
                     </span>
                   </div>
                   <b className="font-bold text-[1.02rem] text-ink leading-snug">{rec.title}</b>
-                  <p className="text-[0.8rem] text-ink-light leading-relaxed mt-1.5 flex-1">{rec.reason}</p>
+                  <p className="text-[0.8rem] text-ink-light leading-relaxed mt-1.5 flex-1">{reason}</p>
+                  {isMock && lastPaper?.score && (
+                    <Link
+                      href={`/mocks/report/${lastPaper.id}`}
+                      className="mt-3 flex items-center justify-between gap-2 rounded-xl border border-border-subtle bg-cream-light px-3 py-2 hover:border-ink transition-colors"
+                      aria-label="See the report for your last paper"
+                    >
+                      <span className="text-[0.72rem] text-ink-muted">
+                        Last paper · {formatDay(lastPaper.submitted_at ?? lastPaper.created_at)}
+                        <b className="block text-[1rem] text-ink">
+                          {lastPaper.score.total_marks}
+                          <span className="text-[0.72rem] text-ink-muted font-bold"> / {lastPaper.score.max_marks}</span>
+                        </b>
+                      </span>
+                      <span className="text-[0.74rem] font-bold text-ink">See report →</span>
+                    </Link>
+                  )}
+                  {isMock && gated && mockStatus && (
+                    <div className="mt-3">
+                      <div className="h-1.5 rounded-full bg-cream-card overflow-hidden">
+                        <div
+                          className="h-full bg-orange rounded-full"
+                          style={{
+                            width: `${Math.min(100, Math.round((earnedTowardNext(mockStatus) / mockStatus.threshold) * 100))}%`,
+                          }}
+                        />
+                      </div>
+                      <p className="text-[0.7rem] text-ink-muted mt-1">
+                        {earnedTowardNext(mockStatus)} of {mockStatus.threshold} correct
+                      </p>
+                    </div>
+                  )}
                   <Link
                     href={href}
                     className={`mt-4 font-bold text-[0.82rem] px-4 py-2.5 rounded-full self-start ${
                       i === 0 ? "bg-ink text-cream-light" : "border border-border-subtle text-ink"
                     }`}
                   >
-                    {meta.cta(tutorName)}
+                    {cta}
                   </Link>
                 </div>
               );
