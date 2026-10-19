@@ -218,9 +218,17 @@ export default function MockReportPage({ params }: { params: Promise<{ runId: st
               </li>
             ))}
           </ul>
-          <Link href="/practice" className="inline-block mt-3 px-4 py-2 rounded-full bg-orange text-ink text-sm font-bold">
-            Practice these
-          </Link>
+          <div className="flex flex-wrap gap-2 mt-3">
+            {insights.weakChapters.slice(0, 3).map((c) => (
+              <Link
+                key={c.chapterId}
+                href={`/practice?chapter=${encodeURIComponent(c.chapterId)}&name=${encodeURIComponent(c.name)}`}
+                className="px-4 py-2 rounded-full bg-orange text-ink text-sm font-bold"
+              >
+                Practice {c.name}
+              </Link>
+            ))}
+          </div>
         </section>
       )}
 

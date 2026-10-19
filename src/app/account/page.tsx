@@ -5,13 +5,18 @@ export const dynamic = "force-dynamic";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import { apiFetch } from "@/lib/api";
+import { setOnboardedCookie } from "@/lib/onboarding";
 
 export default function AccountPage() {
   const [email, setEmail] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [resetSent, setResetSent] = useState(false);
   const [resetting, setResetting] = useState(false);
-  const [deleteConfirm, setDeleteConfirm] = useState(false);
+  const [deleteOpen, setDeleteOpen] = useState(false);
+  const [confirmText, setConfirmText] = useState("");
+  const [deleting, setDeleting] = useState(false);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -41,6 +46,34 @@ export default function AccountPage() {
       console.error("Failed to send password reset:", err);
     } finally {
       setResetting(false);
+    }
+  };
+
+  // The server checks the typed email against the signed-in token's email and
+  // erases content, identity and photos in one call. Not reversible.
+  const confirmMatches =
+    !!email && confirmText.trim().toLowerCase() === email.trim().toLowerCase();
+
+  const deleteForever = async () => {
+    if (!email || !confirmMatches || deleting) return;
+    setDeleting(true);
+    setDeleteError(null);
+    try {
+      await apiFetch<{ ok: boolean }>("/account/erase", {
+        method: "POST",
+        body: JSON.stringify({ confirm: email.trim().toLowerCase() }),
+      });
+      // The account no longer exists; the local session is the last trace.
+      await supabase.auth.signOut();
+      setOnboardedCookie(false);
+      window.location.href = "/login";
+    } catch (err) {
+      setDeleteError(
+        err instanceof Error && err.message
+          ? err.message
+          : "Deletion didn't finish. Please try again."
+      );
+      setDeleting(false);
     }
   };
 
@@ -139,25 +172,51 @@ export default function AccountPage() {
                   </a>
                 </div>
 
-                <div className="flex items-center justify-between gap-3 py-3 border-t border-border-subtle">
-                  <div>
-                    <b className="block font-bold text-[0.86rem] text-red-dark">Delete account</b>
-                    <span className="text-[0.74rem] text-ink-muted">Permanently removes your data.</span>
-                  </div>
-                  {deleteConfirm ? (
-                    <a
-                      href="mailto:support@monklearning.com?subject=Delete my account"
-                      className="font-bold text-[0.78rem] px-3.5 py-2 rounded-full bg-red-note text-white"
-                    >
-                      Email support →
-                    </a>
-                  ) : (
+                <div className="py-3 border-t border-border-subtle">
+                  <div className="flex items-center justify-between gap-3">
+                    <div>
+                      <b className="block font-bold text-[0.86rem] text-red-dark">Delete account</b>
+                      <span className="text-[0.74rem] text-ink-muted">Permanently removes your data.</span>
+                    </div>
                     <button
-                      onClick={() => setDeleteConfirm(true)}
-                      className="font-bold text-[0.78rem] px-3.5 py-2 rounded-full border border-red-note/40 text-red-dark hover:bg-red-note/8 transition-colors cursor-pointer"
+                      onClick={() => {
+                        setDeleteOpen(!deleteOpen);
+                        setConfirmText("");
+                        setDeleteError(null);
+                      }}
+                      disabled={deleting}
+                      className="font-bold text-[0.78rem] px-3.5 py-2 rounded-full border border-red-note/40 text-red-dark hover:bg-red-note/8 transition-colors cursor-pointer disabled:opacity-40"
                     >
-                      Delete
+                      {deleteOpen ? "Keep it" : "Delete"}
                     </button>
+                  </div>
+                  {deleteOpen && (
+                    <div className="mt-3 rounded-xl border border-red-note/30 bg-red-note/5 p-4 space-y-3">
+                      <p className="text-[0.8rem] text-ink leading-relaxed">
+                        This permanently deletes your account: your notes, doubts, photos, practice
+                        history, progress and mock papers. It cannot be undone, and any subscription
+                        is not refunded.
+                      </p>
+                      <label className="block text-[0.74rem] font-bold text-ink-light">
+                        Type your email ({email}) to confirm
+                      </label>
+                      <input
+                        type="email"
+                        value={confirmText}
+                        onChange={(e) => setConfirmText(e.target.value)}
+                        autoComplete="off"
+                        disabled={deleting}
+                        className="w-full rounded-xl border border-border-subtle px-3 py-2 text-[0.86rem] text-ink bg-white"
+                      />
+                      <button
+                        onClick={deleteForever}
+                        disabled={!confirmMatches || deleting}
+                        className="font-bold text-[0.8rem] px-4 py-2 rounded-full bg-red-note text-white disabled:opacity-40"
+                      >
+                        {deleting ? "Deleting…" : "Delete my account forever"}
+                      </button>
+                      {deleteError && <p className="text-[0.78rem] text-red-dark">{deleteError}</p>}
+                    </div>
                   )}
                 </div>
               </div>

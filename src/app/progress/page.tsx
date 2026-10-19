@@ -399,7 +399,7 @@ export default function ProgressPage() {
                       )}
                       <div className="flex items-center gap-3 flex-wrap pt-2">
                         <Link
-                          href="/practice"
+                          href={`/practice?chapter=${encodeURIComponent(c.chapter_id)}&name=${encodeURIComponent(c.name)}`}
                           className="font-bold text-[0.8rem] px-4 py-2 rounded-full bg-ink text-cream-light"
                         >
                           Practice this →
@@ -454,7 +454,13 @@ export default function ProgressPage() {
             {data.recommendations.map((rec, i) => {
               const meta = REC_TAG[rec.role];
               const href =
-                rec.role === "clear_flag" ? "/learn" : rec.role === "exam_craft" ? "/test" : "/practice";
+                rec.role === "clear_flag"
+                  ? "/learn"
+                  : rec.role === "exam_craft"
+                    ? "/test"
+                    : rec.chapter_id
+                      ? `/practice?chapter=${encodeURIComponent(rec.chapter_id)}`
+                      : "/practice";
               return (
                 <div
                   key={`${rec.role}-${i}`}

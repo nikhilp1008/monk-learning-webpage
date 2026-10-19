@@ -2,12 +2,20 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { MathText } from "@/components/MathText";
 import { QuestionStem } from "@/components/QuestionStem";
 import { supabase } from "@/lib/supabase";
 import { apiFetch, ApiError } from "@/lib/api";
 import { PracticeExplainOverlay } from "@/components/drona/PracticeExplainOverlay";
 import type { Database } from "@/lib/database.types";
+import {
+  DEFAULT_FOCUS,
+  loadFocusChapters,
+  sampleWeakChapterId,
+  type FocusChapter,
+  type PracticeFocus,
+} from "@/lib/weak-focus";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -170,6 +178,19 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   const [classLevelStr, setClassLevelStr] = useState<string>("both"); // "11", "12", "both"
   const [questionIndex, setQuestionIndex] = useState<number>(1);
 
+  // Focus mode: all chapters, weak areas first, or one chapter. A chapter can
+  // arrive pre-selected from Progress or a mock report as ?chapter=<id>.
+  const searchParams = useSearchParams();
+  const [focus, setFocus] = useState<PracticeFocus>(() => {
+    const id = searchParams.get("chapter");
+    return id
+      ? { mode: "chapter", chapterId: id, chapterName: searchParams.get("name") }
+      : DEFAULT_FOCUS;
+  });
+  const [focusChapters, setFocusChapters] = useState<FocusChapter[] | null>(null);
+  const [focusOpen, setFocusOpen] = useState(false);
+  const focusChaptersRef = useRef<FocusChapter[] | null>(null);
+
   // Question & Session state
   const [question, setQuestion] = useState<QuestionPayload | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -243,6 +264,36 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     setNotice(null);
   }, []);
 
+  // The chapter filter for the next request. Chapter mode pins one id; weak
+  // mode samples one in proportion to headroom. Weak mode with no progress
+  // yet (or every chapter strong) sends no filter -- an unfiltered question
+  // is the right one then.
+  const requestNext = useCallback(async (): Promise<QuestionPayload> => {
+    const post = (chapterId: string | null) =>
+      apiFetch<QuestionPayload>("/practice/next", {
+        method: "POST",
+        body: JSON.stringify({
+          exam,
+          class_level: classLevelStr,
+          ...(chapterId ? { chapter_id: chapterId } : {}),
+        }),
+      });
+    if (focus.mode === "chapter" && focus.chapterId) return post(focus.chapterId);
+    if (focus.mode !== "weak") return post(null);
+    // Weak mode needs the progress payload; wait for it once so the first
+    // question is already aimed.
+    const chapters = focusChaptersRef.current ?? (await loadFocusChapters().catch(() => null));
+    focusChaptersRef.current = chapters;
+    const first = sampleWeakChapterId(chapters, classLevelStr);
+    const result = await post(first);
+    // A weak chapter whose pool is spent serves nothing (and costs no
+    // quota); retry once against a different weak chapter, then unfiltered.
+    if (result.exhausted && first) {
+      return post(sampleWeakChapterId(chapters, classLevelStr, [first]));
+    }
+    return result;
+  }, [exam, classLevelStr, focus]);
+
   // Fetch Next Question
   const fetchNextQuestion = useCallback(
     async () => {
@@ -250,13 +301,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
       resetQuestionUiState();
 
       try {
-        const payload = await apiFetch<QuestionPayload>("/practice/next", {
-          method: "POST",
-          body: JSON.stringify({
-            exam,
-            class_level: classLevelStr,
-          }),
-        });
+        const payload = await requestNext();
 
         if (payload.exhausted) {
           setExhausted(true);
@@ -275,7 +320,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
         setLoading(false);
       }
     },
-    [exam, classLevelStr, resetQuestionUiState]
+    [requestNext, resetQuestionUiState]
   );
 
   // Warm the prefetch cache. Only ever called after an answer has been
@@ -287,10 +332,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     if (prefetchInFlightRef.current) return;
     prefetchInFlightRef.current = true;
     try {
-      const payload = await apiFetch<QuestionPayload>("/practice/next", {
-        method: "POST",
-        body: JSON.stringify({ exam, class_level: classLevelStr }),
-      });
+      const payload = await requestNext();
       if (!payload.exhausted) {
         prefetchedQuestionRef.current = payload;
       }
@@ -302,7 +344,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     } finally {
       prefetchInFlightRef.current = false;
     }
-  }, [exam, classLevelStr]);
+  }, [requestNext]);
 
   // A prefetch made under different filters answers the wrong question.
   const invalidatePrefetch = useCallback(() => {
@@ -322,7 +364,28 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     fetchNextQuestion();
   }, [fetchNextQuestion, resetQuestionUiState]);
 
-  // Trigger initial fetch when exam or classLevelStr changes
+  // The chapter list for the focus picker (and weak sampling), from Progress.
+  useEffect(() => {
+    let cancelled = false;
+    loadFocusChapters()
+      .then((chapters) => {
+        if (cancelled) return;
+        focusChaptersRef.current = chapters;
+        setFocusChapters(chapters);
+        // A chapter that arrived as ?chapter=<id> without a name gets one.
+        setFocus((f) =>
+          f.mode === "chapter" && f.chapterId && !f.chapterName
+            ? { ...f, chapterName: chapters.find((c) => c.chapter_id === f.chapterId)?.name ?? null }
+            : f
+        );
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Trigger initial fetch when exam, class or focus changes
   useEffect(() => {
     invalidatePrefetch();
     fetchNextQuestion();
@@ -446,12 +509,12 @@ export function PracticeClient({ profile }: PracticeClientProps) {
               >
                 Unlimited practice
               </button>
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-ink-muted opacity-60 cursor-not-allowed">
-                <span>Mock test</span>
-                <span className="font-extrabold text-[0.55rem] tracking-wider uppercase bg-ink/10 px-1.5 py-0.5 rounded-full">
-                  COMING SOON
-                </span>
-              </div>
+              <Link
+                href="/mocks"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-ink-light hover:text-ink transition-colors"
+              >
+                Mock test
+              </Link>
             </div>
           </div>
 
@@ -523,6 +586,98 @@ export function PracticeClient({ profile }: PracticeClientProps) {
           </div>
         </div>
 
+        {/* Focus mode: all chapters, weak areas first, or a single chapter */}
+        <div className="bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-4 shadow-ref-stat">
+          <div className="flex items-center justify-between gap-3">
+            <div className="min-w-0">
+              <span className="text-xs font-bold text-ink-muted uppercase tracking-wider">Focus mode</span>
+              <p className="text-sm font-bold text-ink truncate">
+                {focus.mode === "weak"
+                  ? "Weak areas first"
+                  : focus.mode === "chapter"
+                    ? (focus.chapterName ?? "One chapter")
+                    : "All chapters"}
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setFocusOpen(!focusOpen)}
+              className="font-bold text-xs px-4 py-2 rounded-full border border-border-subtle text-ink hover:border-ink transition-colors"
+            >
+              {focusOpen ? "Close" : "Change"}
+            </button>
+          </div>
+          {focusOpen && (
+            <div className="mt-4 space-y-4 border-t border-border-subtle pt-4">
+              <div className="flex flex-wrap gap-2">
+                {([
+                  ["mixed", "All chapters"],
+                  ["weak", "Weak areas first"],
+                ] as const).map(([mode, label]) => (
+                  <button
+                    key={mode}
+                    type="button"
+                    onClick={() => {
+                      setFocus({ mode, chapterId: null, chapterName: null });
+                      setQuestionIndex(1);
+                      setFocusOpen(false);
+                    }}
+                    className={`px-4 py-1.5 rounded-full text-xs font-bold border ${
+                      focus.mode === mode
+                        ? "bg-ink text-white border-ink"
+                        : "border-border-subtle text-ink-light hover:text-ink"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+              <p className="text-xs text-ink-muted">
+                Weak areas first picks chapters where you have the most marks to gain, using your Progress.
+                Or pin one chapter:
+              </p>
+              {focusChapters === null ? (
+                <p className="text-xs text-ink-muted">Loading chapters…</p>
+              ) : (
+                Object.entries(
+                  focusChapters
+                    .filter(
+                      (c) => c.curated && (classLevelStr === "both" || String(c.class_level) === classLevelStr)
+                    )
+                    .reduce<Record<string, FocusChapter[]>>((acc, c) => {
+                      (acc[c.subject] ??= []).push(c);
+                      return acc;
+                    }, {})
+                ).map(([subject, chapters]) => (
+                  <div key={subject}>
+                    <p className="text-xs font-bold text-ink-light mb-1.5 capitalize">{subject}</p>
+                    <div className="flex flex-wrap gap-1.5 max-h-40 overflow-y-auto">
+                      {chapters.map((c) => (
+                        <button
+                          key={c.chapter_id}
+                          type="button"
+                          onClick={() => {
+                            setFocus({ mode: "chapter", chapterId: c.chapter_id, chapterName: c.name });
+                            setQuestionIndex(1);
+                            setFocusOpen(false);
+                          }}
+                          className={`px-3 py-1 rounded-full text-xs border ${
+                            focus.chapterId === c.chapter_id
+                              ? "bg-orange text-dark-card border-orange font-bold"
+                              : "border-border-subtle text-ink-light hover:text-ink"
+                          }`}
+                        >
+                          {c.name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+          )}
+        </div>
+
         {/* Main Grid: Left Question Card (1.3fr) + Right Session Panel (1fr) */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-[18px] items-start">
           {/* LEFT: Question Card Container */}
@@ -577,7 +732,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                     You&apos;ve completed every question in this set!
                   </h3>
                   <p className="text-xs text-ink-light mt-1.5 max-w-md mx-auto leading-relaxed">
-                    You have attempted all available questions under your current filter. Try selecting &quot;Both&quot; or switching exam modes.
+                    You have attempted all available questions under your current filter. Try selecting &quot;Both&quot;, switching exam modes, or changing the focus mode.
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
