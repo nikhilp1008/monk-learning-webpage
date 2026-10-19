@@ -78,6 +78,7 @@ export function Header() {
     { label: "Dashboard", href: "/dashboard" },
     { label: "Practice", href: "/practice" },
     { label: "Progress", href: "/progress" },
+    { label: "Mocks", href: "/mocks" },
     { label: "Lessons", href: "/lessons" },
     { label: "Notes", href: "/notes" },
     { label: "My doubts", href: "/doubts" },
