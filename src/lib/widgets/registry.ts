@@ -1,4 +1,5 @@
 import type { WidgetModule } from "./types";
+import { comparisonTable } from "./comparison-table";
 import { xyPlot } from "./xy-plot";
 
 /**
@@ -9,10 +10,12 @@ import { xyPlot } from "./xy-plot";
  *
  * The phone registers 17. The web has these:
  *   xy_plot@4
+ *   comparison_table@1
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const REGISTRY: Record<string, WidgetModule<any>> = {
   [xyPlot.id]: xyPlot,
+  [comparisonTable.id]: comparisonTable,
 };
 
 /** `lookup()` refuses only a payload whose version is GREATER than the
