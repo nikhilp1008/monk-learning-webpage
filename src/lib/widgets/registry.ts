@@ -3,6 +3,7 @@ import { comparisonTable } from "./comparison-table";
 import { dataTableTrend } from "./data-table-trend";
 import { processFlow } from "./process-flow";
 import { regionPlot } from "./region-plot";
+import { vectorSum } from "./vector-sum";
 import { xyPlot } from "./xy-plot";
 
 /**
@@ -17,6 +18,7 @@ import { xyPlot } from "./xy-plot";
  *   data_table_trend@1
  *   process_flow@1
  *   region_plot@1
+ *   vector_sum@1
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const REGISTRY: Record<string, WidgetModule<any>> = {
@@ -25,6 +27,7 @@ const REGISTRY: Record<string, WidgetModule<any>> = {
   [dataTableTrend.id]: dataTableTrend,
   [processFlow.id]: processFlow,
   [regionPlot.id]: regionPlot,
+  [vectorSum.id]: vectorSum,
 };
 
 /** `lookup()` refuses only a payload whose version is GREATER than the
