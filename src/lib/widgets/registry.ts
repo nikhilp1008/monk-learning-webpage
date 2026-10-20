@@ -1,6 +1,7 @@
 import type { WidgetModule } from "./types";
 import { comparisonTable } from "./comparison-table";
 import { dataTableTrend } from "./data-table-trend";
+import { processFlow } from "./process-flow";
 import { xyPlot } from "./xy-plot";
 
 /**
@@ -13,12 +14,14 @@ import { xyPlot } from "./xy-plot";
  *   xy_plot@4
  *   comparison_table@1
  *   data_table_trend@1
+ *   process_flow@1
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const REGISTRY: Record<string, WidgetModule<any>> = {
   [xyPlot.id]: xyPlot,
   [comparisonTable.id]: comparisonTable,
   [dataTableTrend.id]: dataTableTrend,
+  [processFlow.id]: processFlow,
 };
 
 /** `lookup()` refuses only a payload whose version is GREATER than the
