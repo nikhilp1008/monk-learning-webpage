@@ -70,7 +70,7 @@ export function Header() {
     // and skip the onboarding gate in middleware.ts even with no profile.
     setOnboardedCookie(false);
     setProfile(null);
-    router.push("/lessons");
+    router.push("/login");
     router.refresh();
   };
 
@@ -80,7 +80,7 @@ export function Header() {
     { label: "Progress", href: "/progress" },
     { label: "Mocks", href: "/mocks" },
     { label: "Textbooks", href: "/textbooks" },
-    { label: "Lessons", href: "/lessons" },
+    { label: "Lessons", href: "/learn" },
     { label: "Notes", href: "/notes" },
     { label: "My doubts", href: "/doubts" },
   ];

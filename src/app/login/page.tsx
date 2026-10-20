@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { setOnboardedCookie } from "@/lib/onboarding";
@@ -426,12 +425,6 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <p className="text-xs text-ink-muted text-center pt-2">
-            Or browse without signing in —{" "}
-            <Link href="/lessons" className="font-semibold text-ink underline">
-              All lessons are public
-            </Link>
-          </p>
         </div>
       </div>
     </div>

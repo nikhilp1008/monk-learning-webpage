@@ -295,7 +295,7 @@ export function DashboardClient({
               </div>
 
               <Link
-                href={`/lessons/${resumeSession.chapterId}`}
+                href="/learn"
                 className="inline-flex items-center justify-center gap-2 font-bold text-xs px-5 py-2.5 rounded-full bg-ink text-cream-light shadow-sm hover:bg-ink/90 transition-colors self-start sm:self-auto"
               >
                 Resume lesson →
@@ -312,7 +312,7 @@ export function DashboardClient({
                 </span>
               </div>
               <Link
-                href="/lessons"
+                href="/learn"
                 className="inline-flex items-center justify-center gap-2 font-bold text-xs px-4 py-2 rounded-full bg-orange text-dark-card shadow-xs self-center sm:self-auto"
               >
                 Start your first lesson →

@@ -1090,7 +1090,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                 If a question topic feels weak, jump into Monk&apos;s live board lessons for a full step-by-step walkthrough.
               </p>
               <Link
-                href="/lessons"
+                href="/learn"
                 className="inline-flex items-center gap-2 font-bold text-xs px-4 py-2 rounded-full bg-orange text-dark-card hover:bg-orange-light transition-colors shadow-xs"
               >
                 Go to lessons →

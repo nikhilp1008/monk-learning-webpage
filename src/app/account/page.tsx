@@ -266,7 +266,7 @@ export default function AccountPage() {
                 <button
                   onClick={async () => {
                     await supabase.auth.signOut();
-                    window.location.href = "/lessons";
+                    window.location.href = "/login";
                   }}
                   className="font-bold text-[0.8rem] px-4 py-2 rounded-full border border-border-subtle text-red-dark hover:bg-red-note/8 transition-colors cursor-pointer"
                 >
