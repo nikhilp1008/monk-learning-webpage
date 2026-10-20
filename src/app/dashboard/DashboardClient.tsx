@@ -1,13 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 import { MAX_QUESTIONS } from "@/lib/doubts";
 import { TodaysPlan } from "./TodaysPlan";
-import { DoubtChatOverlay } from "@/components/drona/DoubtChatOverlay";
-import { getTutorName } from "@/lib/drona/tutor";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -18,19 +16,11 @@ interface ResumeSessionData {
   position: number;
 }
 
-interface DoubtOfDayData {
-  id: string;
-  subject: string;
-  concept: string;
-  questionText: string;
-}
-
 interface DashboardClientProps {
   profile: ProfileRow;
   questionsPracticed: number;
   chaptersStarted: number;
   resumeSession: ResumeSessionData | null;
-  doubtOfDay: DoubtOfDayData | null;
 }
 
 export function DashboardClient({
@@ -38,23 +28,11 @@ export function DashboardClient({
   questionsPracticed,
   chaptersStarted,
   resumeSession,
-  doubtOfDay,
 }: DashboardClientProps) {
   const [teachingLang, setTeachingLang] = useState<"hinglish" | "english">(
     profile.teaching_language === "english" ? "english" : "hinglish"
   );
   const [updatingLang, setUpdatingLang] = useState(false);
-  const [doubtChatOpen, setDoubtChatOpen] = useState(false);
-
-  // The card names the teacher the student will actually get, and that choice
-  // lives in localStorage. Start from the SSR-safe default and correct it
-  // after mount so the markup matches on hydration.
-  const [tutorName, setTutorName] = useState(getTutorName());
-  useEffect(() => {
-    import("@/lib/drona/tutor").then(({ loadVoicePreference }) =>
-      setTutorName(getTutorName(loadVoicePreference()))
-    );
-  }, []);
 
   const getGreeting = () => {
     const hour = new Date().getHours();
@@ -343,65 +321,12 @@ export function DashboardClient({
           )}
         </div>
 
-        {/* 5. Middle Grid: Doubt of the Day (Ruled Paper) + Today's Plan (Placeholder) */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-[18px] items-stretch">
-          {/* Doubt of the Day Card (Ruled Notebook Paper Styling) */}
-          <div className="relative flex flex-col justify-between bg-ruled-card border border-[rgba(28,26,22,0.12)] rounded-[16px] p-[20px_24px_20px_48px] shadow-ref-card overflow-hidden">
-            <span
-              aria-hidden="true"
-              className="absolute top-[12px] bottom-[12px] left-[32px] w-[1.5px] bg-[rgba(221,68,51,0.4)] pointer-events-none"
-            />
-
-            <div>
-              <div className="flex items-center justify-between gap-3">
-                <span className="font-script font-bold text-[#DD4433] text-[1rem] -rotate-[0.6deg] inline-block">
-                  doubt of the day
-                </span>
-                <span className="font-extrabold text-[0.6rem] tracking-[0.1em] uppercase text-[#C53A2B]">
-                  {(doubtOfDay?.subject || "Physics").toUpperCase()}
-                  {doubtOfDay?.concept ? ` · ${doubtOfDay.concept.toUpperCase()}` : ""}
-                </span>
-              </div>
-
-              <p className="mt-2 leading-[1.55] text-[1.02rem] text-[#1C1A16] font-medium">
-                {doubtOfDay?.questionText ||
-                  "Why do photoelectrons stop the moment intensity drops — but not when frequency drops below threshold?"}
-              </p>
-            </div>
-
-            {/* The CTA is deliberately a dare, not a lesson link. Tapping it
-                opens a two-minute chat where {tutorName} asks for the
-                student's guess BEFORE revealing anything — so the button has
-                to promise that conversation, not a chapter. */}
-            <button
-              type="button"
-              onClick={() => doubtOfDay && setDoubtChatOpen(true)}
-              disabled={!doubtOfDay}
-              className="group inline-flex items-center gap-2 font-semibold text-[0.86rem] px-4 py-2 rounded-full border border-[rgba(28,26,22,0.16)] bg-white/70 text-[#1C1A16] hover:border-ink hover:bg-white transition-colors mt-4 self-start disabled:opacity-50 disabled:cursor-default"
-            >
-              <span>Think you know? Tell {tutorName}</span>
-              <svg
-                viewBox="0 0 16 16"
-                className="w-3.5 h-3.5 fill-none stroke-current group-hover:translate-x-0.5 transition-transform"
-                strokeWidth="1.9"
-                strokeLinecap="round"
-              >
-                <path d="M2 8h11M9 3.5 13.5 8 9 12.5" />
-              </svg>
-            </button>
-          </div>
-
+        {/* 5. Today's plan */}
+        <div className="grid grid-cols-1 gap-[18px] items-stretch">
           <TodaysPlan />
         </div>
       </main>
 
-      {doubtChatOpen && doubtOfDay && (
-        <DoubtChatOverlay
-          doubtId={doubtOfDay.id}
-          concept={doubtOfDay.concept}
-          onClose={() => setDoubtChatOpen(false)}
-        />
-      )}
     </div>
   );
 }
