@@ -22,8 +22,14 @@ import { xyPlot } from "./xy-plot";
  * what turns it on for live classes: port it, register it, and the manifest
  * follows.
  *
- * The phone registers 17; the web has all but molecule_3d (which needs a 3D
- * view, not SVG):
+ * The phone registers 17; the web has 16. molecule_3d is deliberately NOT
+ * ported: it is a 3Dmol WebView, and on the phone its structure resolver is a
+ * stub that always throws ("No structure cache yet"), so it draws an empty box
+ * there today, and no concept routes to it at high confidence. Declaring it
+ * here would swap the server's SVG/illustration fallback for that empty box.
+ * Port it when the phone's resolver exists (host page: the phone's
+ * assets/molecule-host.html in an iframe, postMessage in, PubChem REST for the
+ * SDF; PubChem answers with Access-Control-Allow-Origin: *).
  *   xy_plot@4 comparison_table@1 data_table_trend@1 process_flow@1
  *   region_plot@1 vector_sum@1 conic_plot@1 projectile_motion@1
  *   free_body_forces@1 flux_surface@1 lcr_resonance@1 field_lines@2
