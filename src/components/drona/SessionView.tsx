@@ -104,6 +104,37 @@ export function SessionView({
   const [isHolding, setIsHolding] = useState<boolean>(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const boardEndRef = useRef<HTMLDivElement>(null);
+  // WHO MOVED THE BOARD: the student or the board itself. The board follows
+  // new lines to the end, but a student who scrolls back to re-read must not be
+  // yanked down; a "Jump to live" chip brings them back. The rule is the
+  // phone's (lib/board-follow.ts): a student's own scroll decides whether we
+  // are following, the board's own glide never does. Browsers fire scroll
+  // events for programmatic scrolls too, so a scroll only counts as the
+  // student's if a wheel/touch/key/drag came just before it.
+  const [following, setFollowing] = useState(true);
+  const followingRef = useRef(true);
+  const studentMotionRef = useRef(false);
+  const studentTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const markStudent = () => {
+    studentMotionRef.current = true;
+    if (studentTimerRef.current) clearTimeout(studentTimerRef.current);
+    studentTimerRef.current = setTimeout(() => {
+      studentMotionRef.current = false;
+    }, 450);
+  };
+  const onBoardScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    if (!studentMotionRef.current) return;
+    const el = e.currentTarget;
+    const atBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 80;
+    followingRef.current = atBottom;
+    setFollowing(atBottom);
+  };
+  const jumpToLive = () => {
+    studentMotionRef.current = false;
+    followingRef.current = true;
+    setFollowing(true);
+    boardEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  };
   const teacher = tutorName || getTutorName(DEFAULT_VOICE);
 
   const handlePttDown = (e: React.PointerEvent<HTMLButtonElement>) => {
@@ -133,6 +164,10 @@ export function SessionView({
   // happened to change, which left new board lines sitting below the fold for
   // the rest of a long turn.
   useEffect(() => {
+    // Only while following: the board never pulls a student away from what
+    // they scrolled back to read.
+    if (!followingRef.current) return;
+    studentMotionRef.current = false;
     boardEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
   }, [boardEvents]);
 
@@ -289,7 +324,16 @@ export function SessionView({
               prose, my-3 on a margin note — which is what gives the lessons
               board its handwritten cadence. A uniform gap flattened all of
               that into evenly-spaced rows. */}
-          <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 max-w-full">
+          <div className="relative flex-1 min-h-0 flex flex-col">
+          <div
+            onScroll={onBoardScroll}
+            onWheel={markStudent}
+            onTouchStart={markStudent}
+            onTouchMove={markStudent}
+            onPointerDown={markStudent}
+            onKeyDown={markStudent}
+            className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 max-w-full"
+          >
             {boardEvents && boardEvents.length > 0 ? (
               boardEvents.map((evt, idx) => (
                 <PremiumBoardEvent
@@ -311,6 +355,16 @@ export function SessionView({
               <div className="text-ink-muted text-sm italic">Board will update as {teacher} speaks...</div>
             )}
             <div ref={boardEndRef} />
+          </div>
+          {!following && boardEvents && boardEvents.length > 0 && (
+            <button
+              type="button"
+              onClick={jumpToLive}
+              className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-ink text-white text-xs font-bold px-4 py-2 shadow-lg"
+            >
+              Jump to live ↓
+            </button>
+          )}
           </div>
         </div>
 
