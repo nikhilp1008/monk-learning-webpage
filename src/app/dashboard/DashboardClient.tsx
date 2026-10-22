@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 import { MAX_QUESTIONS } from "@/lib/doubts";
 import { TodaysPlan } from "./TodaysPlan";
+import { apiFetch } from "@/lib/api";
+import { observe, type Observation, type ObservationAction, type ProgressSummary } from "@/lib/noticed";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -33,6 +35,29 @@ export function DashboardClient({
     profile.teaching_language === "english" ? "english" : "hinglish"
   );
   const [updatingLang, setUpdatingLang] = useState(false);
+
+  // The Monk Score and the one observation come off the same /progress
+  // payload, as on the phone. Until it lands (or if it fails) neither shows:
+  // silence is a valid answer, so there is no placeholder.
+  const [score, setScore] = useState<number | null>(null);
+  const [noticed, setNoticed] = useState<Observation | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    apiFetch<ProgressSummary>("/progress")
+      .then((p) => {
+        if (cancelled) return;
+        setScore(p.monk_score.display);
+        // The phone counts classes taken on the device; the web's closest
+        // honest signal is chapters with recorded lesson progress.
+        setNoticed(observe(p, chaptersStarted));
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [chaptersStarted]);
+  const noticedHref = (a: ObservationAction | undefined) =>
+    !a ? null : a.kind === "progress" ? "/progress" : a.kind === "textbooks" ? "/textbooks" : "/learn";
 
   const getGreeting = () => {
     const hour = new Date().getHours();
@@ -243,6 +268,18 @@ export function DashboardClient({
           </Link>
         </div>
 
+        {/* One observation, or nothing. */}
+        {noticed && noticedHref(noticed.action) && (
+          <Link
+            href={noticedHref(noticed.action)!}
+            className="flex items-center gap-3 rounded-[12px] bg-[#CDE9DA] px-4 py-3.5 hover:brightness-[0.98] transition"
+          >
+            <span className="flex-1 min-w-0 text-[0.95rem] leading-snug text-ink">{noticed.text}</span>
+            {noticed.meta && <span className="flex-none text-[0.8rem] text-[#12703E]">{noticed.meta}</span>}
+            <span className="flex-none text-[#12703E]" aria-hidden>→</span>
+          </Link>
+        )}
+
         {/* 3. Stat Cards Row (Balanced 2-Card Layout for Real Metrics) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[18px]">
           <div className="flex items-center gap-[13px] bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-[16px_20px] shadow-ref-stat">
@@ -259,19 +296,18 @@ export function DashboardClient({
             </div>
           </div>
 
-          <div className="flex items-center gap-[13px] bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-[16px_20px] shadow-ref-stat">
+          <Link
+            href="/progress"
+            className="flex items-center gap-[13px] bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-[16px_20px] shadow-ref-stat hover:-translate-y-0.5 transition-transform"
+          >
             <span className="font-bold text-[2rem] leading-none tracking-[-0.03em] text-[#157A45] flex-none min-w-[45px]">
-              {chaptersStarted}
+              {score ?? "–"}
             </span>
             <div>
-              <b className="block font-bold text-[0.86rem] text-[#1C1A16]">
-                chapters started
-              </b>
-              <span className="text-[0.72rem] text-[#157A45] font-bold">
-                Unique chapters with recorded progress
-              </span>
+              <b className="block font-bold text-[0.86rem] text-[#1C1A16]">Monk Score</b>
+              <span className="text-[0.72rem] text-[#157A45] font-bold">Where you stand, chapter by chapter</span>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* 4. Resume Last Session Card (Real User Session Data) */}
@@ -325,6 +361,22 @@ export function DashboardClient({
         <div className="grid grid-cols-1 gap-[18px] items-stretch">
           <TodaysPlan />
         </div>
+
+        {/* Last thing on the page, deliberately quiet: a reference students
+            visit once or twice, not a daily action. */}
+        <Link
+          href="/exam-scope"
+          className="flex items-center justify-between gap-4 rounded-[16px] border border-border-subtle bg-white px-5 py-4 hover:border-ink transition-colors"
+        >
+          <div>
+            <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">Exam scope</span>
+            <b className="block text-[1rem] text-ink mt-0.5">What&apos;s actually in your exam</b>
+            <span className="block text-[0.8rem] text-ink-light mt-0.5">
+              Not every NCERT chapter is examinable. See what counts, and what you can stop studying.
+            </span>
+          </div>
+          <span className="text-ink-light" aria-hidden>→</span>
+        </Link>
       </main>
 
     </div>
