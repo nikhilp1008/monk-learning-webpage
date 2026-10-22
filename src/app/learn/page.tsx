@@ -221,7 +221,10 @@ export default function LearnPage() {
             .select("enrolled_class")
             .eq("id", user.id)
             .maybeSingle();
-          if (profile?.enrolled_class) {
+          // A ?chapter= deep link (Practice's "isn't landing" card) carries
+          // its own class; the profile default must not overwrite it.
+          const deepLinked = new URLSearchParams(window.location.search).has("chapter");
+          if (profile?.enrolled_class && !deepLinked) {
             setSelectedClass(profile.enrolled_class);
           }
         }
@@ -245,6 +248,20 @@ export default function LearnPage() {
           // Default to first subject from API
           if (data.length > 0 && !data.find(g => g.subject === selectedSubject)) {
             setSelectedSubject(data[0].subject);
+          }
+          // ?chapter=<name>: land on that chapter, in its subject and class,
+          // with the list narrowed to it. A hint, never a block.
+          const want = new URLSearchParams(window.location.search).get("chapter")?.trim().toLowerCase();
+          if (want) {
+            for (const g of data) {
+              const hit = g.chapters.find(c => c.name.toLowerCase() === want);
+              if (hit) {
+                setSelectedSubject(g.subject);
+                if (hit.class_level) setSelectedClass(hit.class_level);
+                setSearchTerm(hit.name);
+                break;
+              }
+            }
           }
         }
       } catch (err: unknown) {

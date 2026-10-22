@@ -81,6 +81,8 @@ interface PracticeStats {
   accuracy: number;
 }
 
+const STUCK_RUN = 5;
+
 interface PracticeClientProps {
   profile: ProfileRow;
 }
@@ -207,6 +209,38 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   const [exhausted, setExhausted] = useState<boolean>(false);
   // The daily allowance (150), as on the phone: "N questions left today", and a
   // plain message when it runs out instead of the "set completed" copy.
+  // How long the question has actually been ON SCREEN (a hidden tab does not
+  // count). The server can only see when it handed the question out, and the
+  // page fetches one ahead, so its own clock runs while the student is still
+  // reading the previous solution: every server-derived time is inflated by an
+  // unknown amount. The client's reading is trusted when present.
+  const shownAtRef = useRef(0);
+  const hiddenSinceRef = useRef<number | null>(null);
+  const hiddenMsRef = useRef(0);
+  const questionKey = question?.question_id ?? null;
+  useEffect(() => {
+    shownAtRef.current = Date.now();
+    hiddenMsRef.current = 0;
+    hiddenSinceRef.current = document.hidden ? Date.now() : null;
+  }, [questionKey]);
+  useEffect(() => {
+    const onVis = () => {
+      if (document.hidden) hiddenSinceRef.current = Date.now();
+      else if (hiddenSinceRef.current !== null) {
+        hiddenMsRef.current += Date.now() - hiddenSinceRef.current;
+        hiddenSinceRef.current = null;
+      }
+    };
+    document.addEventListener("visibilitychange", onVis);
+    return () => document.removeEventListener("visibilitychange", onVis);
+  }, []);
+  const elapsedMs = () => {
+    const hidden = hiddenMsRef.current + (hiddenSinceRef.current !== null ? Date.now() - hiddenSinceRef.current : 0);
+    return Math.max(0, Date.now() - shownAtRef.current - hidden);
+  };
+  // Consecutive "I don't know"s in one chapter. At STUCK_RUN the page offers
+  // the lesson: an offer, never a block.
+  const [stuck, setStuck] = useState<{ chapter: string | null; run: number }>({ chapter: null, run: 0 });
   const [quota, setQuota] = useState<{ used: number; limit: number } | null>(null);
   const [limitMessage, setLimitMessage] = useState<string | null>(null);
   const noteQuota = useCallback((p: QuestionPayload) => {
@@ -414,25 +448,38 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   }, [exam, classLevelStr, fetchNextQuestion, invalidatePrefetch]);
 
   // Submit Answer
-  const handleSubmitAnswer = async () => {
+  // `giveUp` is "I don't know": it submits with NO answer, so the server
+  // records an honest wrong answer, closes the question and returns the worked
+  // solution. The student still gets taught and the question still re-enters
+  // the pool as a miss (a skip would have vanished from the record, and a
+  // forced guess would write a false signal into mastery).
+  const handleSubmitAnswer = async (giveUp = false) => {
     if (!question || submitting || answerResult) return;
 
     const isNumerical = question.question_type === "numerical";
 
-    if (isNumerical && parsedNumericalValue === null) return;
-    if (!isNumerical && !selectedOption) return;
+    if (!giveUp) {
+      if (isNumerical && parsedNumericalValue === null) return;
+      if (!isNumerical && !selectedOption) return;
+    }
 
     setSubmitting(true);
     setErrorMsg(null);
 
     const body: Record<string, unknown> = {
       question_id: question.question_id,
+      elapsed_ms: Math.round(elapsedMs()),
+      // Graded incorrect and spaced the same way, but excluded from timing
+      // statistics: giving up is fast, solving is slow.
+      gave_up: giveUp,
     };
 
-    if (isNumerical) {
-      body.chosen_value = parsedNumericalValue;
-    } else {
-      body.chosen_option = selectedOption;
+    if (!giveUp) {
+      if (isNumerical) {
+        body.chosen_value = parsedNumericalValue;
+      } else {
+        body.chosen_option = selectedOption;
+      }
     }
 
     try {
@@ -446,6 +493,15 @@ export function PracticeClient({ profile }: PracticeClientProps) {
       if (result.is_correct) {
         setSessionCorrect((prev) => prev + 1);
       }
+      // A run of give-ups in ONE chapter is the signal, not a daily total:
+      // five in a row means this chapter is not landing, while forty spread
+      // across a hard day just means a hard day. Any correct answer clears it,
+      // and so does moving to a different chapter.
+      setStuck((prev) => {
+        if (!giveUp || result.is_correct) return { chapter: null, run: 0 };
+        const chapter = question.chapter_name ?? "this chapter";
+        return prev.chapter === chapter ? { chapter, run: prev.run + 1 } : { chapter, run: 1 };
+      });
       // Student is about to spend several seconds reading the solution box
       // -- start fetching what "Next" will need now instead of waiting for
       // them to click it.
@@ -831,6 +887,21 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                   </div>
                 )}
 
+                {stuck.run >= STUCK_RUN && !answerResult && (
+                  <div className="rounded-xl bg-orange/12 border border-orange/30 p-4 space-y-2">
+                    <b className="block text-ink">{stuck.chapter} isn&apos;t landing</b>
+                    <p className="text-sm text-ink-light">
+                      That&apos;s {stuck.run} in a row you haven&apos;t known. A lesson will get you further than another question.
+                    </p>
+                    <Link
+                      href={`/learn?chapter=${encodeURIComponent(stuck.chapter ?? "")}`}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ink text-white text-xs font-bold"
+                    >
+                      Learn it with Drona →
+                    </Link>
+                  </div>
+                )}
+
                 {/* Question Inputs: MCQ vs Numerical */}
                 {question.question_type === "numerical" ? (
                   <div className="space-y-3 pt-2">
@@ -1006,9 +1077,10 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                 {/* Action Buttons Row */}
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-border-subtle">
                   {!answerResult ? (
+                    <div className="flex items-center gap-4">
                     <button
                       type="button"
-                      onClick={handleSubmitAnswer}
+                      onClick={() => handleSubmitAnswer()}
                       disabled={
                         submitting ||
                         (question.question_type === "numerical"
@@ -1023,6 +1095,15 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                         "Submit"
                       )}
                     </button>
+                    <button
+                      type="button"
+                      onClick={() => handleSubmitAnswer(true)}
+                      disabled={submitting}
+                      className="text-xs font-bold text-ink-muted hover:text-ink underline-offset-2 hover:underline disabled:opacity-40"
+                    >
+                      I don&apos;t know
+                    </button>
+                    </div>
                   ) : (
                     <button
                       type="button"
