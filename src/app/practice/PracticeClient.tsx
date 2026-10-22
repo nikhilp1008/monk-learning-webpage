@@ -10,7 +10,6 @@ import { apiFetch, ApiError } from "@/lib/api";
 import { ReportSheet } from "@/components/ReportSheet";
 import { FollowUp } from "@/components/FollowUp";
 import { getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
-import { PracticeExplainOverlay } from "@/components/drona/PracticeExplainOverlay";
 import type { Database } from "@/lib/database.types";
 import {
   DEFAULT_FOCUS,
@@ -259,8 +258,6 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [answerResult, setAnswerResult] = useState<AnswerResult | null>(null);
 
-  // Explain Drona state — session creation itself is owned by the overlay.
-  const [explainSessionActive, setExplainSessionActive] = useState<boolean>(false);
 
   // Transient notice for things that are not errors but must not be silent,
   // e.g. a question the server cannot grade and we had to swap out.
@@ -316,7 +313,6 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     setAnswerResult(null);
     setSelectedOption("");
     setNumericalValue("");
-    setExplainSessionActive(false);
     setNotice(null);
     setAskOpen(false);
   }, []);
@@ -531,13 +527,6 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     } finally {
       setSubmitting(false);
     }
-  };
-
-  // Explain with Drona Handler — opens the overlay, which creates the
-  // session itself (see PracticeExplainOverlay).
-  const handleExplainWithDrona = () => {
-    if (!question) return;
-    setExplainSessionActive(true);
   };
 
   // Normalize options for MCQ
@@ -1128,15 +1117,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                       I don&apos;t know
                     </button>
                     </div>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={handleExplainWithDrona}
-                      className="px-5 py-2.5 rounded-full border border-border-subtle bg-white text-ink font-bold text-xs hover:border-ink transition-colors flex items-center gap-2"
-                    >
-                      🎙 Explain this with Drona
-                    </button>
-                  )}
+                  ) : null}
 
                   <button
                     type="button"
@@ -1230,14 +1211,6 @@ export function PracticeClient({ profile }: PracticeClientProps) {
         </div>
       </main>
 
-      {explainSessionActive && question && (
-        <PracticeExplainOverlay
-          questionId={question.question_id}
-          chosenOption={selectedOption || undefined}
-          chosenValue={numericalValue ? parseFloat(numericalValue) : undefined}
-          onClose={() => setExplainSessionActive(false)}
-        />
-      )}
     </div>
   );
 }
