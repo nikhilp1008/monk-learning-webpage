@@ -44,7 +44,13 @@ interface QuestionPayload {
   concept?: string;
   difficulty?: string;
   exhausted?: boolean;
+  /** "daily_limit" when the student has used today's allowance, "pool_empty"
+   *  when the chosen filter has nothing left. */
+  reason?: string;
   message?: string;
+  /** Today's allowance, on every answer from POST /practice/next. */
+  questions_used_today?: number;
+  daily_limit?: number;
   diagram?: DiagramFigure[] | null;
 }
 
@@ -199,6 +205,15 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   const [loading, setLoading] = useState<boolean>(true);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [exhausted, setExhausted] = useState<boolean>(false);
+  // The daily allowance (150), as on the phone: "N questions left today", and a
+  // plain message when it runs out instead of the "set completed" copy.
+  const [quota, setQuota] = useState<{ used: number; limit: number } | null>(null);
+  const [limitMessage, setLimitMessage] = useState<string | null>(null);
+  const noteQuota = useCallback((p: QuestionPayload) => {
+    if (typeof p.questions_used_today === "number" && typeof p.daily_limit === "number") {
+      setQuota({ used: p.questions_used_today, limit: p.daily_limit });
+    }
+  }, []);
 
   // Answer & Selection state
   const [selectedOption, setSelectedOption] = useState<string>("");
@@ -306,10 +321,13 @@ export function PracticeClient({ profile }: PracticeClientProps) {
       try {
         const payload = await requestNext();
 
+        noteQuota(payload);
         if (payload.exhausted) {
           setExhausted(true);
+          setLimitMessage(payload.reason === "daily_limit" ? (payload.message ?? "You have used today's questions.") : null);
           setQuestion(null);
         } else {
+          setLimitMessage(null);
           setQuestion(payload);
         }
       } catch (err) {
@@ -323,7 +341,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
         setLoading(false);
       }
     },
-    [requestNext, resetQuestionUiState]
+    [requestNext, resetQuestionUiState, noteQuota]
   );
 
   // Warm the prefetch cache. Only ever called after an answer has been
@@ -360,12 +378,13 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     if (cached) {
       prefetchedQuestionRef.current = null;
       resetQuestionUiState();
+      noteQuota(cached);
       setQuestion(cached);
       setLoading(false);
       return;
     }
     fetchNextQuestion();
-  }, [fetchNextQuestion, resetQuestionUiState]);
+  }, [fetchNextQuestion, resetQuestionUiState, noteQuota]);
 
   // The chapter list for the focus picker (and weak sampling), from Progress.
   useEffect(() => {
@@ -602,6 +621,11 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                     : "All chapters"}
               </p>
             </div>
+            {quota && (
+              <span className="ml-auto mr-3 text-xs font-semibold text-ink-muted whitespace-nowrap">
+                {Math.max(0, quota.limit - quota.used)} questions left today
+              </span>
+            )}
             <button
               type="button"
               onClick={() => setFocusOpen(!focusOpen)}
@@ -732,13 +756,14 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl text-ink">
-                    You&apos;ve completed every question in this set!
+                    {limitMessage ? "That's today's practice done." : "You've completed every question in this set!"}
                   </h3>
                   <p className="text-xs text-ink-light mt-1.5 max-w-md mx-auto leading-relaxed">
-                    You have attempted all available questions under your current filter. Try selecting &quot;Both&quot;, switching exam modes, or changing the focus mode.
+                    {limitMessage ??
+                      'You have attempted all available questions under your current filter. Try selecting "Both", switching exam modes, or changing the focus mode.'}
                   </p>
                 </div>
-                <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                <div className={`flex flex-wrap items-center justify-center gap-3 pt-2 ${limitMessage ? "hidden" : ""}`}>
                   <button
                     type="button"
                     onClick={() => {
