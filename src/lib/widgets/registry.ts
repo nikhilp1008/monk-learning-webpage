@@ -6,6 +6,14 @@ import { regionPlot } from "./region-plot";
 import { vectorSum } from "./vector-sum";
 import { conicPlot } from "./conic-plot";
 import { projectileMotion } from "./projectile-motion";
+import { freeBodyForces } from "./free-body-forces";
+import { fluxSurface } from "./flux-surface";
+import { lcrResonance } from "./lcr-resonance";
+import { fieldLines } from "./field-lines";
+import { reactionScheme } from "./reaction-scheme";
+import { circuitNetwork } from "./circuit-network";
+import { moleculeStruct } from "./molecule-struct";
+import { linesPlanes3d } from "./lines-planes-3d";
 import { xyPlot } from "./xy-plot";
 
 /**
@@ -14,15 +22,12 @@ import { xyPlot } from "./xy-plot";
  * what turns it on for live classes: port it, register it, and the manifest
  * follows.
  *
- * The phone registers 17. The web has these:
- *   xy_plot@4
- *   comparison_table@1
- *   data_table_trend@1
- *   process_flow@1
- *   region_plot@1
- *   vector_sum@1
- *   conic_plot@1
- *   projectile_motion@1
+ * The phone registers 17; the web has all but molecule_3d (which needs a 3D
+ * view, not SVG):
+ *   xy_plot@4 comparison_table@1 data_table_trend@1 process_flow@1
+ *   region_plot@1 vector_sum@1 conic_plot@1 projectile_motion@1
+ *   free_body_forces@1 flux_surface@1 lcr_resonance@1 field_lines@2
+ *   reaction_scheme@1 circuit_network@1 molecule_struct@2 lines_planes_3d@1
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const REGISTRY: Record<string, WidgetModule<any>> = {
@@ -34,6 +39,14 @@ const REGISTRY: Record<string, WidgetModule<any>> = {
   [vectorSum.id]: vectorSum,
   [conicPlot.id]: conicPlot,
   [projectileMotion.id]: projectileMotion,
+  [linesPlanes3d.id]: linesPlanes3d,
+  [moleculeStruct.id]: moleculeStruct,
+  [circuitNetwork.id]: circuitNetwork,
+  [reactionScheme.id]: reactionScheme,
+  [fieldLines.id]: fieldLines,
+  [lcrResonance.id]: lcrResonance,
+  [fluxSurface.id]: fluxSurface,
+  [freeBodyForces.id]: freeBodyForces,
 };
 
 /** `lookup()` refuses only a payload whose version is GREATER than the

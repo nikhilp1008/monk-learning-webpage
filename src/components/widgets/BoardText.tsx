@@ -1,8 +1,8 @@
 "use client";
 
-import type { ComponentProps } from "react";
+import { useLayoutEffect, useRef, type ComponentProps } from "react";
 import { Text as SvgText } from "@/components/textbook/svg";
-import { SAFETY_MARGIN, textWidth } from "@/lib/widgets/chrome";
+import { textWidth } from "@/lib/widgets/chrome";
 
 /**
  * Board text for web widgets. The phone's BoardText splits a string into runs
@@ -29,22 +29,38 @@ function measure(text: string, size: number, weight: string | number | undefined
 
 type Props = ComponentProps<typeof SvgText> & { children?: React.ReactNode };
 
+/**
+ * The squeeze is applied to the DOM node after mount, not decided during
+ * render: it depends on a browser measurement, so deciding it in render would
+ * make server and client HTML disagree (a hydration mismatch) for any widget
+ * that is ever server-rendered.
+ */
 export function BoardText({ children, ...rest }: Props) {
+  const ref = useRef<SVGTextElement>(null);
   const text = typeof children === "string" ? children : typeof children === "number" ? String(children) : null;
   const size = typeof rest.fontSize === "number" ? rest.fontSize : Number(rest.fontSize);
-  if (text === null || !Number.isFinite(size)) return <SvgText {...rest}>{children}</SvgText>;
+  const weight =
+    typeof rest.fontWeight === "string" || typeof rest.fontWeight === "number" ? rest.fontWeight : undefined;
 
-  // Planned width = what the layout priced it at, less the safety margin.
-  const planned = textWidth(text, size) / SAFETY_MARGIN;
-  const weight = typeof rest.fontWeight === "string" || typeof rest.fontWeight === "number" ? rest.fontWeight : undefined;
-  const actual = measure(text, size, weight);
-  const squeeze = actual !== null && actual > planned * SAFETY_MARGIN;
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el || text === null || !Number.isFinite(size)) return;
+    // Planned width = what the layout priced it at (textWidth includes the
+    // safety margin the layout reserved).
+    const planned = textWidth(text, size);
+    const actual = measure(text, size, weight);
+    if (actual !== null && actual > planned) {
+      el.setAttribute("textLength", String(planned));
+      el.setAttribute("lengthAdjust", "spacingAndGlyphs");
+    } else {
+      el.removeAttribute("textLength");
+      el.removeAttribute("lengthAdjust");
+    }
+  });
+
   return (
-    <SvgText
-      {...rest}
-      {...(squeeze ? { textLength: planned * SAFETY_MARGIN, lengthAdjust: "spacingAndGlyphs" as const } : null)}
-    >
-      {text}
+    <SvgText ref={ref} {...rest}>
+      {text ?? children}
     </SvgText>
   );
 }

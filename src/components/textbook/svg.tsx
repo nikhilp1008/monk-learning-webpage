@@ -12,17 +12,26 @@ import type { ComponentProps, SVGProps } from "react";
 
 type P<T extends keyof React.JSX.IntrinsicElements> = ComponentProps<T>;
 
+/** react-native-svg takes dash patterns as number arrays; the DOM wants a
+ *  string. Accept both and convert, so widgets stay line-for-line the phone's. */
+type Dash = { strokeDasharray?: string | number | readonly number[] };
+type W<T extends keyof React.JSX.IntrinsicElements> = Omit<P<T>, "strokeDasharray"> & Dash;
+function dash<T extends Dash>(p: T): Omit<T, "strokeDasharray"> & { strokeDasharray?: string | number } {
+  const d = p.strokeDasharray;
+  return Array.isArray(d) ? { ...p, strokeDasharray: d.join(" ") } : (p as never);
+}
+
 export default function Svg(props: P<"svg">) {
   return <svg {...props} />;
 }
-export const G = (p: P<"g">) => <g {...p} />;
-export const Path = (p: P<"path">) => <path {...p} />;
-export const Line = (p: P<"line">) => <line {...p} />;
-export const Rect = (p: P<"rect">) => <rect {...p} />;
-export const Circle = (p: P<"circle">) => <circle {...p} />;
-export const Ellipse = (p: P<"ellipse">) => <ellipse {...p} />;
-export const Polygon = (p: P<"polygon">) => <polygon {...p} />;
-export const Polyline = (p: P<"polyline">) => <polyline {...p} />;
+export const G = (p: W<"g">) => <g {...dash(p)} />;
+export const Path = (p: W<"path">) => <path {...dash(p)} />;
+export const Line = (p: W<"line">) => <line {...dash(p)} />;
+export const Rect = (p: W<"rect">) => <rect {...dash(p)} />;
+export const Circle = (p: W<"circle">) => <circle {...dash(p)} />;
+export const Ellipse = (p: W<"ellipse">) => <ellipse {...dash(p)} />;
+export const Polygon = (p: W<"polygon">) => <polygon {...dash(p)} />;
+export const Polyline = (p: W<"polyline">) => <polyline {...dash(p)} />;
 export const Defs = (p: P<"defs">) => <defs {...p} />;
 export const Pattern = (p: P<"pattern">) => <pattern {...p} />;
 export const ClipPath = (p: P<"clipPath">) => <clipPath {...p} />;
