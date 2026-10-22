@@ -8,6 +8,8 @@ import { QuestionStem } from "@/components/QuestionStem";
 import { supabase } from "@/lib/supabase";
 import { apiFetch, ApiError } from "@/lib/api";
 import { ReportSheet } from "@/components/ReportSheet";
+import { FollowUp } from "@/components/FollowUp";
+import { getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
 import { PracticeExplainOverlay } from "@/components/drona/PracticeExplainOverlay";
 import type { Database } from "@/lib/database.types";
 import {
@@ -199,6 +201,8 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   const [focusChapters, setFocusChapters] = useState<FocusChapter[] | null>(null);
   const [focusOpen, setFocusOpen] = useState(false);
   const [reportOpen, setReportOpen] = useState(false);
+  // Ask the teacher about THIS solution out loud (the phone's follow-up bar).
+  const [askOpen, setAskOpen] = useState(false);
   const [reportedId, setReportedId] = useState<string | null>(null);
   const focusChaptersRef = useRef<FocusChapter[] | null>(null);
 
@@ -314,6 +318,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     setNumericalValue("");
     setExplainSessionActive(false);
     setNotice(null);
+    setAskOpen(false);
   }, []);
 
   // The chapter filter for the next request. Chapter mode pins one id; weak
@@ -1072,6 +1077,25 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                     onClose={() => setReportOpen(false)}
                     onSent={() => setReportedId(question.question_id)}
                   />
+                )}
+
+                {answerResult && (
+                  askOpen ? (
+                    <FollowUp
+                      doubtId={question.question_id}
+                      surface="practice"
+                      teacher={getTutorName(loadVoicePreference())}
+                      onClose={() => setAskOpen(false)}
+                    />
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setAskOpen(true)}
+                      className="inline-flex items-center gap-2 font-semibold text-[0.88rem] py-2.5 px-5 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink hover:border-ink transition-colors"
+                    >
+                      Ask a follow-up →
+                    </button>
+                  )
                 )}
 
                 {/* Action Buttons Row */}

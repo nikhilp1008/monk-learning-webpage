@@ -8,6 +8,7 @@ import {
   askVoice,
   streamFollowUpSpeech,
   type FollowUpStep,
+  type FollowUpSurface,
   type FollowUpTurn,
 } from "@/lib/followup";
 
@@ -31,10 +32,13 @@ export function FollowUp({
   doubtId,
   teacher,
   onClose,
+  surface = "doubts",
 }: {
+  /** The doubt's id, or the practice question's id when surface is "practice". */
   doubtId: string;
   teacher: string;
   onClose: () => void;
+  surface?: FollowUpSurface;
 }) {
   const recorder = useRecorder();
   const [phase, setPhase] = useState<Phase>("listening");
@@ -157,7 +161,8 @@ export function FollowUp({
               queueRef.current.push(URL.createObjectURL(wav));
               drainQueue();
             },
-            () => abandonedRef.current
+            () => abandonedRef.current,
+            surface
           );
         }
       },
@@ -169,8 +174,8 @@ export function FollowUp({
         setPhase("error");
         setMessage(m);
       },
-    });
-  }, [doubtId, drainQueue, history, recorder, teacher, transcript]);
+    }, surface);
+  }, [doubtId, drainQueue, history, recorder, teacher, transcript, surface]);
 
   const close = useCallback(() => {
     recorder.cancel();
