@@ -1,5 +1,7 @@
 "use client";
 
+import { ProofMoment } from "@/components/ProofMoment";
+import { captureProof, collectProof, markSeen, noteClassTaken, rankEvents, type ProofEvent } from "@/lib/proof";
 import { useEffect, useState, useMemo, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
@@ -135,6 +137,28 @@ export default function LearnPage() {
 
   /* ─── Flow state ─── */
   const [flowState, setFlowState] = useState<FlowState>("picker");
+  // What the class just ended moved on the student's progress (the phone's
+  // "proof moment"). Collected once per class at the summary; saying nothing
+  // is the designed outcome when there is nothing honest to say.
+  const [proof, setProof] = useState<ProofEvent[]>([]);
+  const gatherProof = useCallback(async (recorded: boolean) => {
+    try {
+      // Only a class the backend actually recorded counts as a class taken.
+      const firstClass = recorded ? await noteClassTaken() : null;
+      let events: ProofEvent[] = [];
+      try {
+        events = await collectProof();
+      } catch {
+        // Offline, or the score has not been recomputed yet.
+      }
+      if (firstClass) events = rankEvents([firstClass, ...events]);
+      if (!events.length) return;
+      setProof(events);
+      void markSeen(events);
+    } catch {
+      /* the summary stands on its own */
+    }
+  }, []);
 
   /* ─── Session state ─── */
   const [sessionTopic, setSessionTopic] = useState("");
@@ -466,6 +490,9 @@ export default function LearnPage() {
 
       // Transition to session
       setFlowState("session");
+      // The baseline the proof moment at the end is measured against. Taken
+      // when a class STARTS (not on resume, which would hide earlier progress).
+      void captureProof();
       rememberActiveSession(sid, res.subtopic || utterance);
       resetSessionPlaybackState();
       setBoardLatex("");
@@ -567,9 +594,11 @@ export default function LearnPage() {
       const res = await endSession(sessionId);
       setSummaryData(res);
       setFlowState("summary");
+      void gatherProof(true);
     } catch (err) {
       console.error("End session failed:", err);
       setFlowState("summary");
+      void gatherProof(false);
     } finally {
       // Otherwise a verdict shown in the last few seconds before ending class
       // (its own 5s auto-clear timer still pending) could survive onto the
@@ -933,6 +962,7 @@ export default function LearnPage() {
     return (
       <div className="min-h-screen flex flex-col bg-ruled-body">
         <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
+          <ProofMoment events={proof} teacher={teacher} />
           <EndStatesView
             type="normal"
             tutorName={teacher}
