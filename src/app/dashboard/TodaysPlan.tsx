@@ -6,6 +6,11 @@ import type { Database } from "@/lib/database.types";
 
 type PlanItemRow = Database["public"]["Tables"]["plan_items"]["Row"];
 
+// The phone's limits and chips (lib/plan.ts, app/plan-sheet.tsx): at most three
+// plans a day, because a plan you cannot finish is a list, not a plan.
+const MAX_PLAN_ITEMS = 3;
+const SUGGESTIONS = ["20 min practice", "Revise a weak chapter", "Clear 2 doubts", "One lesson with Drona"];
+
 function todayDate() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(
@@ -79,9 +84,18 @@ export function TodaysPlan() {
     }
   };
 
-  const addItem = async () => {
-    const label = newLabel.trim();
-    if (!label || !userId) return;
+  const removeItem = async (item: PlanItemRow) => {
+    setItems((prev) => prev.filter((i) => i.id !== item.id));
+    const { error } = await supabase.from("plan_items").delete().eq("id", item.id);
+    if (error) {
+      console.error("Failed to remove plan item:", error);
+      setItems((prev) => [...prev, item].sort((a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0)));
+    }
+  };
+
+  const addItem = async (text?: string) => {
+    const label = (text ?? newLabel).trim();
+    if (!label || !userId || items.length >= MAX_PLAN_ITEMS) return;
 
     const { data, error } = await supabase
       .from("plan_items")
@@ -105,6 +119,9 @@ export function TodaysPlan() {
   };
 
   const doneCount = items.filter((i) => i.is_done).length;
+  const hasSlot = items.length < MAX_PLAN_ITEMS;
+  const taken = new Set(items.map((i) => i.label.toLowerCase()));
+  const suggestions = SUGGESTIONS.filter((x) => !taken.has(x.toLowerCase()));
 
   return (
     <div className="bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-[18px_22px] shadow-ref-stat flex flex-col justify-between">
@@ -119,7 +136,7 @@ export function TodaysPlan() {
                 {doneCount} of {items.length} done
               </span>
             )}
-            {userId && (
+            {userId && hasSlot && (
               <button
                 onClick={() => setAdding((a) => !a)}
                 className="font-extrabold text-[0.58rem] tracking-wider uppercase text-ink-light border border-border-subtle rounded-full px-2.5 py-1 hover:border-ink transition-colors cursor-pointer"
@@ -145,10 +162,10 @@ export function TodaysPlan() {
             </div>
           ) : (
             items.map((item) => (
+              <div key={item.id} className="flex items-center gap-1.5">
               <button
-                key={item.id}
                 onClick={() => toggleItem(item)}
-                className="btn-press w-full flex items-center gap-3 p-2.5 rounded-lg bg-[#FBF8EF] border border-border-subtle/70 text-xs text-ink-light font-medium text-left hover:bg-[#F4EFE3] transition-colors cursor-pointer"
+                className="btn-press flex-1 min-w-0 flex items-center gap-3 p-2.5 rounded-lg bg-[#FBF8EF] border border-border-subtle/70 text-xs text-ink-light font-medium text-left hover:bg-[#F4EFE3] transition-colors cursor-pointer"
               >
                 <span
                   className={`w-4 h-4 rounded border flex-none grid place-items-center transition-colors ${
@@ -179,6 +196,14 @@ export function TodaysPlan() {
                   </span>
                 )}
               </button>
+              <button
+                onClick={() => removeItem(item)}
+                aria-label={`Remove ${item.label}`}
+                className="flex-none w-6 h-6 rounded-full text-ink-muted hover:text-red-dark hover:bg-red-note/10 transition-colors cursor-pointer"
+              >
+                ×
+              </button>
+              </div>
             ))
           )}
 
@@ -196,12 +221,31 @@ export function TodaysPlan() {
                 className="flex-1 min-w-0 bg-transparent text-xs text-ink font-medium outline-none placeholder:text-ink-muted"
               />
               <button
-                onClick={addItem}
+                onClick={() => addItem()}
                 className="font-bold text-[0.7rem] text-orange-dark cursor-pointer flex-none"
               >
                 Add
               </button>
             </div>
+          )}
+          {adding && hasSlot && suggestions.length > 0 && (
+            <div className="pt-1">
+              <span className="font-extrabold text-[0.58rem] tracking-wider uppercase text-ink-muted">Suggestions</span>
+              <div className="flex flex-wrap gap-1.5 mt-1.5">
+                {suggestions.map((sg) => (
+                  <button
+                    key={sg}
+                    onClick={() => addItem(sg)}
+                    className="text-[0.7rem] font-semibold text-ink-light border border-border-subtle rounded-full px-2.5 py-1 hover:border-ink transition-colors cursor-pointer"
+                  >
+                    + {sg}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          {userId && !hasSlot && (
+            <p className="text-[0.68rem] text-ink-muted font-semibold pt-1">All {MAX_PLAN_ITEMS} plans set for today.</p>
           )}
         </div>
       </div>
