@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FollowUp } from "@/components/FollowUp";
 import { SnapCrop } from "@/components/SnapCrop";
+import { EnlargeOnClick } from "@/components/PhotoLightbox";
 import {
   QuestionSheet,
   RefusalCard,
@@ -447,12 +448,14 @@ export function SnapClient() {
                         // A local object URL of the student's own file — next/image
                         // would add an optimizer round-trip for a preview that is
                         // discarded on retake.
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={previewUrl}
-                          alt="The question you photographed"
-                          className="w-full max-h-[260px] object-contain rounded-xl border border-[rgba(28,26,22,0.1)] bg-[#FBF8EF] mb-3.5"
-                        />
+                        <EnlargeOnClick src={previewUrl} alt="The question you photographed" className="mb-3.5">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={previewUrl}
+                            alt="The question you photographed"
+                            className="w-full max-h-[260px] object-contain rounded-xl border border-[rgba(28,26,22,0.1)] bg-[#FBF8EF]"
+                          />
+                        </EnlargeOnClick>
                       )}
 
                       {q.question_text ? (
@@ -638,12 +641,14 @@ function PhotoCard({
         </span>
       </div>
       {previewUrl && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={previewUrl}
-          alt="The question you photographed"
-          className="w-full max-h-[280px] object-contain rounded-xl border border-[rgba(28,26,22,0.1)] bg-[#FBF8EF]"
-        />
+        <EnlargeOnClick src={previewUrl} alt="The question you photographed">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={previewUrl}
+            alt="The question you photographed"
+            className="w-full max-h-[280px] object-contain rounded-xl border border-[rgba(28,26,22,0.1)] bg-[#FBF8EF]"
+          />
+        </EnlargeOnClick>
       )}
     </div>
   );

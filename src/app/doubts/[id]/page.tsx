@@ -12,6 +12,7 @@ import { QuestionSheet, RuledSheet, Solution } from "@/components/SavedBoard";
 import { DEFAULT_VOICE, getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
 import { getDoubt, type DoubtDetail } from "@/lib/doubts";
 import { ReportSheet } from "@/components/ReportSheet";
+import { EnlargeOnClick } from "@/components/PhotoLightbox";
 
 /**
  * One saved doubt. Everything mathematical renders through the SAME KaTeX
@@ -130,15 +131,17 @@ export default function DoubtDetailPage() {
                     <div className="bg-dark-bg text-[#EFEBDD] font-bold text-[0.72rem] py-2.5 px-4">
                       Your photo
                     </div>
-                    <div className="relative w-full aspect-4/3 bg-[#FBF8EF]">
-                      <Image
-                        src={doubt.image_url}
-                        alt="The question you photographed"
-                        fill
-                        unoptimized
-                        className="object-contain"
-                      />
-                    </div>
+                    <EnlargeOnClick src={doubt.image_url} alt="The question you photographed">
+                      <div className="relative w-full aspect-4/3 bg-[#FBF8EF]">
+                        <Image
+                          src={doubt.image_url}
+                          alt="The question you photographed"
+                          fill
+                          unoptimized
+                          className="object-contain"
+                        />
+                      </div>
+                    </EnlargeOnClick>
                   </div>
                 )}
                 <div className="bg-white border border-border-subtle rounded-2xl p-5 shadow-ref-card">
