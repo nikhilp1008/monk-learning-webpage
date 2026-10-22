@@ -4,11 +4,33 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { setOnboardedCookie } from "@/lib/onboarding";
+import { saveLanguagePreference, saveVoicePreference, type TutorVoice } from "@/lib/drona/tutor";
+
+// The two teachers, described once (phone: constants/teachers.ts). `voice` is
+// the tutor.ts axis the live class reads; `id` is what profiles.teacher_voice
+// stores.
+const TEACHERS = [
+  { id: "drona", voice: "male", name: "Drona", trait: "calm · thorough", line: "Takes it slowly, and will not move on until the step is proved." },
+  { id: "vedha", voice: "female", name: "Vedha", trait: "warm · encouraging", line: "Keeps the pace up, and talks you through the turns." },
+] as const satisfies readonly { id: string; voice: TutorVoice; name: string; trait: string; line: string }[];
+
+const LANGUAGES = [
+  { id: "english", label: "English", speech: "Everything in English, start to finish." },
+  { id: "hinglish", label: "Hinglish", speech: "Explains in Hindi, keeps the terms in English." },
+] as const;
+
+const LOOP = [
+  { key: "class", title: "Start a live class", body: "Pick any chapter. Your teacher takes it aloud on a board you can talk back to." },
+  { key: "snap", title: "Snap and Solve", body: "Photograph a question you are stuck on. Up to three in one shot, worked line by line." },
+  { key: "practice", title: "Practice", body: "150 questions a day, picked from what you have proved and what you have not." },
+] as const;
 
 export default function OnboardingPage() {
   const router = useRouter();
 
   const [step, setStep] = useState<number>(1);
+  const [phone, setPhone] = useState<string>("");
+  const [teacher, setTeacher] = useState<"drona" | "vedha">("vedha");
   const [displayName, setDisplayName] = useState<string>("");
   const [targetExam, setTargetExam] = useState<"JEE" | "NEET" | "Both">("JEE");
   const [enrolledClass, setEnrolledClass] = useState<number>(11);
@@ -55,6 +77,8 @@ export default function OnboardingPage() {
 
   const handleFinish = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Only the last step saves; Enter in an earlier step must not.
+    if (step !== 3) return;
 
     if (!userId) {
       router.push("/login");
@@ -72,13 +96,18 @@ export default function OnboardingPage() {
     try {
       const numericClass = Number(enrolledClass);
 
-      const { error } = await supabase.from("profiles").upsert({
+      const row = {
         id: userId,
         display_name: displayName.trim(),
         target_exam: targetExam,
         enrolled_class: numericClass,
         teaching_language: teachingLanguage,
-      });
+        teacher_voice: teacher,
+        // Collected, not verified: nothing is sent to this number. Only
+        // written when given, so a skipped field never blanks an existing one.
+        ...(phone ? { phone: `+91 ${phone.slice(0, 5)} ${phone.slice(5)}`, phone_verified: false } : {}),
+      };
+      const { error } = await supabase.from("profiles").upsert(row);
 
       if (error) {
         console.error("Error creating profile:", error);
@@ -92,6 +121,9 @@ export default function OnboardingPage() {
       // one we're about to trigger) already skips middleware's DB fallback
       // instead of paying for it once more before the cookie catches up.
       setOnboardedCookie(true);
+      // The live class and Snap read these local copies.
+      saveVoicePreference(TEACHERS.find((t) => t.id === teacher)!.voice);
+      saveLanguagePreference(teachingLanguage);
 
       router.push("/dashboard");
       router.refresh();
@@ -247,7 +279,7 @@ export default function OnboardingPage() {
           {/* Progress Meter Bar */}
           <div className="w-full space-y-2">
             <div className="flex gap-1.5">
-              {[1, 2].map((i) => (
+              {[1, 2, 3].map((i) => (
                 <span
                   key={i}
                   className={`h-1.5 flex-1 rounded-full transition-colors ${
@@ -257,7 +289,7 @@ export default function OnboardingPage() {
               ))}
             </div>
             <div className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
-              Step {step} of 2: {step === 1 ? "Study Profile" : "Preferences"}
+              Step {step} of 3: {step === 1 ? "Study Profile" : step === 2 ? "Your teacher" : "What's inside"}
             </div>
           </div>
 
@@ -347,6 +379,24 @@ export default function OnboardingPage() {
                   </div>
                 </div>
 
+                <div>
+                  <div className="flex items-baseline justify-between mb-1.5">
+                    <label htmlFor="ob-phone" className="text-xs font-bold text-ink-light">Phone</label>
+                    <span className="text-[0.6rem] font-extrabold tracking-wider text-ink-muted">OPTIONAL</span>
+                  </div>
+                  <input
+                    id="ob-phone"
+                    type="tel"
+                    inputMode="numeric"
+                    autoComplete="tel-national"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value.replace(/[^0-9]/g, "").slice(0, 10))}
+                    placeholder="98765 43210"
+                    className="w-full px-4 py-3 rounded-xl border border-border-subtle bg-white text-sm text-ink focus:outline-none focus:border-orange transition-colors"
+                  />
+                  <p className="text-[0.72rem] text-ink-muted mt-1.5">No calls from a sales team. Ever.</p>
+                </div>
+
                 <button
                   type="button"
                   onClick={() => {
@@ -362,46 +412,108 @@ export default function OnboardingPage() {
                   Continue →
                 </button>
               </div>
-            ) : (
+            ) : step === 2 ? (
               <div className="space-y-5 animate-ml-rise">
                 <div>
-                  <h2 className="text-[1.55rem] font-bold tracking-[-0.02em] text-ink">
-                    Teaching language preference
-                  </h2>
-                  <p className="text-ink-light text-sm mt-1">
-                    Choose how Monk narrates your lessons on the board.
-                  </p>
+                  <h2 className="text-[1.55rem] font-bold tracking-[-0.02em] text-ink">Select your teacher</h2>
+                  <p className="text-ink-light text-sm mt-1">You can switch any time, even mid-class.</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3" role="radiogroup" aria-label="Teacher">
+                  {TEACHERS.map((t) => {
+                    const on = teacher === t.id;
+                    return (
+                      <button
+                        key={t.id}
+                        type="button"
+                        role="radio"
+                        aria-checked={on}
+                        onClick={() => setTeacher(t.id)}
+                        className={`p-4 rounded-2xl border text-center transition-all ${
+                          on ? "border-orange bg-cream-card shadow-xs" : "border-border-subtle hover:border-ink/20"
+                        }`}
+                      >
+                        <svg viewBox="0 0 120 120" className={`w-16 h-16 mx-auto transition-opacity ${on ? "" : "opacity-40"}`} fill="none" aria-hidden>
+                          <circle cx="60" cy="60" r="36" stroke="#1C1A16" strokeWidth="11" strokeLinecap="round" strokeDasharray="52 23.4" transform="rotate(-90 60 60)" />
+                          <circle cx="60" cy="60" r="19" stroke="#1C1A16" strokeWidth="9" strokeLinecap="round" strokeDasharray="21.8 18" transform={t.id === "drona" ? "rotate(-30 60 60)" : "rotate(150 60 60)"} />
+                          <circle cx="60" cy="60" r="6" className="fill-orange" />
+                        </svg>
+                        <b className={`block mt-2 text-base ${on ? "text-ink" : "text-ink-light"}`}>{t.name}</b>
+                        <span className="block text-xs text-ink-muted">{t.trait}</span>
+                        <span className="block text-xs text-ink-light mt-2 leading-snug">{t.line}</span>
+                      </button>
+                    );
+                  })}
                 </div>
 
                 <div>
-                  <div className="grid grid-cols-1 gap-3">
-                    {[
-                      { id: "hinglish", label: "Hinglish (Hindi + English explanation)" },
-                      { id: "english", label: "English (Full English narration)" },
-                    ].map((lang) => {
-                      const isSelected = teachingLanguage === lang.id;
+                  <p className="text-xs font-bold text-ink-light mb-2">Speaks</p>
+                  <div className="grid grid-cols-2 gap-1 p-1 bg-cream-card rounded-full border border-border-subtle" role="radiogroup" aria-label="Teaching language">
+                    {LANGUAGES.map((l) => {
+                      const on = teachingLanguage === l.id;
                       return (
                         <button
-                          key={lang.id}
+                          key={l.id}
                           type="button"
-                          onClick={() => setTeachingLanguage(lang.id as "english" | "hinglish")}
-                          className={`p-4 rounded-xl border text-left transition-all ${
-                            isSelected
-                              ? "border-orange bg-cream-card text-ink font-extrabold shadow-xs"
-                              : "border-border-subtle text-ink-light hover:border-ink/20 font-medium"
+                          role="radio"
+                          aria-checked={on}
+                          onClick={() => setTeachingLanguage(l.id)}
+                          className={`py-2 rounded-full text-sm font-bold transition-colors ${
+                            on ? "bg-orange text-dark-card" : "text-ink-light hover:text-ink"
                           }`}
                         >
-                          <span className="text-sm block">{lang.label}</span>
+                          {l.label}
                         </button>
                       );
                     })}
                   </div>
+                  <p className="text-xs text-ink-muted mt-2">
+                    {LANGUAGES.find((l) => l.id === teachingLanguage)!.speech}
+                  </p>
                 </div>
 
                 <div className="flex items-center gap-3 pt-2">
                   <button
                     type="button"
                     onClick={() => setStep(1)}
+                    className="px-5 py-3 rounded-full border border-border-subtle text-ink font-semibold text-xs hover:border-ink"
+                  >
+                    ← Back
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setStep(3)}
+                    className="flex-1 py-3.5 px-6 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill hover:-translate-y-0.5 transition-transform"
+                  >
+                    Continue →
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-5 animate-ml-rise">
+                <div>
+                  <h2 className="text-[1.55rem] font-bold tracking-[-0.02em] text-ink">Class, doubt, practice.</h2>
+                  <p className="text-ink-light text-sm mt-1">All three are open from today, across every subject.</p>
+                </div>
+
+                <ol className="divide-y divide-border-subtle border-y border-border-subtle">
+                  {LOOP.map((item, i) => (
+                    <li key={item.key} className="flex gap-4 py-4">
+                      <span className="w-8 h-8 rounded-full bg-ink text-white grid place-items-center text-sm font-bold flex-none">
+                        {i + 1}
+                      </span>
+                      <div>
+                        <b className="block text-ink">{item.title}</b>
+                        <span className="block text-sm text-ink-light mt-0.5 leading-snug">{item.body}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+
+                <div className="flex items-center gap-3 pt-2">
+                  <button
+                    type="button"
+                    onClick={() => setStep(2)}
                     className="px-5 py-3 rounded-full border border-border-subtle text-ink font-semibold text-xs hover:border-ink"
                   >
                     ← Back
@@ -414,7 +526,7 @@ export default function OnboardingPage() {
                     {submitting ? (
                       <div className="w-4 h-4 border-2 border-dark-card border-t-transparent rounded-full animate-ml-spin" />
                     ) : (
-                      "Start learning with Drona or Vedha →"
+                      "Start learning →"
                     )}
                   </button>
                 </div>

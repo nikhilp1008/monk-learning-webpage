@@ -63,11 +63,16 @@ async function bearer(): Promise<string> {
  * separated by a blank line and a chunk can split one down the middle, so the
  * partial tail is carried to the next read rather than parsed and dropped.
  */
+/** Where a follow-up is asked. Same wire format on both: a snapped doubt, or a
+ *  practice question (the server builds the context from the stored row). */
+export type FollowUpSurface = "doubts" | "practice";
+
 export async function askVoice(
   doubtId: string,
   audio: Blob,
   history: FollowUpTurn[],
-  handlers: AskVoiceHandlers
+  handlers: AskVoiceHandlers,
+  surface: FollowUpSurface = "doubts"
 ): Promise<void> {
   const token = await bearer();
   const body = new FormData();
@@ -77,7 +82,7 @@ export async function askVoice(
   body.append("audio", audio, `ask.${ext}`);
   body.append("history", JSON.stringify(history ?? []));
 
-  const res = await fetch(`${apiBase()}/doubts/${doubtId}/ask-voice`, {
+  const res = await fetch(`${apiBase()}/${surface}/${doubtId}/ask-voice`, {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
     body,
@@ -166,12 +171,13 @@ export async function streamFollowUpSpeech(
   doubtId: string,
   text: string,
   onChunk: (wav: Blob, index: number, total: number) => void,
-  shouldStop?: () => boolean
+  shouldStop?: () => boolean,
+  surface: FollowUpSurface = "doubts"
 ): Promise<void> {
   if (!text.trim()) return;
   try {
     const token = await bearer();
-    const res = await fetch(`${apiBase()}/doubts/${doubtId}/speak-stream`, {
+    const res = await fetch(`${apiBase()}/${surface}/${doubtId}/speak-stream`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

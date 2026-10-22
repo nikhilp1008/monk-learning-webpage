@@ -6,8 +6,8 @@ import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 import { MAX_QUESTIONS } from "@/lib/doubts";
 import { TodaysPlan } from "./TodaysPlan";
-import { DoubtChatOverlay } from "@/components/drona/DoubtChatOverlay";
-import { getTutorName } from "@/lib/drona/tutor";
+import { apiFetch } from "@/lib/api";
+import { observe, type Observation, type ObservationAction, type ProgressSummary } from "@/lib/noticed";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -18,19 +18,11 @@ interface ResumeSessionData {
   position: number;
 }
 
-interface DoubtOfDayData {
-  id: string;
-  subject: string;
-  concept: string;
-  questionText: string;
-}
-
 interface DashboardClientProps {
   profile: ProfileRow;
   questionsPracticed: number;
   chaptersStarted: number;
   resumeSession: ResumeSessionData | null;
-  doubtOfDay: DoubtOfDayData | null;
 }
 
 export function DashboardClient({
@@ -38,23 +30,34 @@ export function DashboardClient({
   questionsPracticed,
   chaptersStarted,
   resumeSession,
-  doubtOfDay,
 }: DashboardClientProps) {
   const [teachingLang, setTeachingLang] = useState<"hinglish" | "english">(
     profile.teaching_language === "english" ? "english" : "hinglish"
   );
   const [updatingLang, setUpdatingLang] = useState(false);
-  const [doubtChatOpen, setDoubtChatOpen] = useState(false);
 
-  // The card names the teacher the student will actually get, and that choice
-  // lives in localStorage. Start from the SSR-safe default and correct it
-  // after mount so the markup matches on hydration.
-  const [tutorName, setTutorName] = useState(getTutorName());
+  // The Monk Score and the one observation come off the same /progress
+  // payload, as on the phone. Until it lands (or if it fails) neither shows:
+  // silence is a valid answer, so there is no placeholder.
+  const [score, setScore] = useState<number | null>(null);
+  const [noticed, setNoticed] = useState<Observation | null>(null);
   useEffect(() => {
-    import("@/lib/drona/tutor").then(({ loadVoicePreference }) =>
-      setTutorName(getTutorName(loadVoicePreference()))
-    );
-  }, []);
+    let cancelled = false;
+    apiFetch<ProgressSummary>("/progress")
+      .then((p) => {
+        if (cancelled) return;
+        setScore(p.monk_score.display);
+        // The phone counts classes taken on the device; the web's closest
+        // honest signal is chapters with recorded lesson progress.
+        setNoticed(observe(p, chaptersStarted));
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [chaptersStarted]);
+  const noticedHref = (a: ObservationAction | undefined) =>
+    !a ? null : a.kind === "progress" ? "/progress" : a.kind === "textbooks" ? "/textbooks" : "/learn";
 
   const getGreeting = () => {
     const hour = new Date().getHours();
@@ -265,6 +268,18 @@ export function DashboardClient({
           </Link>
         </div>
 
+        {/* One observation, or nothing. */}
+        {noticed && noticedHref(noticed.action) && (
+          <Link
+            href={noticedHref(noticed.action)!}
+            className="flex items-center gap-3 rounded-[12px] bg-[#CDE9DA] px-4 py-3.5 hover:brightness-[0.98] transition"
+          >
+            <span className="flex-1 min-w-0 text-[0.95rem] leading-snug text-ink">{noticed.text}</span>
+            {noticed.meta && <span className="flex-none text-[0.8rem] text-[#12703E]">{noticed.meta}</span>}
+            <span className="flex-none text-[#12703E]" aria-hidden>→</span>
+          </Link>
+        )}
+
         {/* 3. Stat Cards Row (Balanced 2-Card Layout for Real Metrics) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[18px]">
           <div className="flex items-center gap-[13px] bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-[16px_20px] shadow-ref-stat">
@@ -281,19 +296,18 @@ export function DashboardClient({
             </div>
           </div>
 
-          <div className="flex items-center gap-[13px] bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-[16px_20px] shadow-ref-stat">
+          <Link
+            href="/progress"
+            className="flex items-center gap-[13px] bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-[16px_20px] shadow-ref-stat hover:-translate-y-0.5 transition-transform"
+          >
             <span className="font-bold text-[2rem] leading-none tracking-[-0.03em] text-[#157A45] flex-none min-w-[45px]">
-              {chaptersStarted}
+              {score ?? "–"}
             </span>
             <div>
-              <b className="block font-bold text-[0.86rem] text-[#1C1A16]">
-                chapters started
-              </b>
-              <span className="text-[0.72rem] text-[#157A45] font-bold">
-                Unique chapters with recorded progress
-              </span>
+              <b className="block font-bold text-[0.86rem] text-[#1C1A16]">Monk Score</b>
+              <span className="text-[0.72rem] text-[#157A45] font-bold">Where you stand, chapter by chapter</span>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* 4. Resume Last Session Card (Real User Session Data) */}
@@ -317,7 +331,7 @@ export function DashboardClient({
               </div>
 
               <Link
-                href={`/lessons/${resumeSession.chapterId}`}
+                href="/learn"
                 className="inline-flex items-center justify-center gap-2 font-bold text-xs px-5 py-2.5 rounded-full bg-ink text-cream-light shadow-sm hover:bg-ink/90 transition-colors self-start sm:self-auto"
               >
                 Resume lesson →
@@ -334,7 +348,7 @@ export function DashboardClient({
                 </span>
               </div>
               <Link
-                href="/lessons"
+                href="/learn"
                 className="inline-flex items-center justify-center gap-2 font-bold text-xs px-4 py-2 rounded-full bg-orange text-dark-card shadow-xs self-center sm:self-auto"
               >
                 Start your first lesson →
@@ -343,65 +357,28 @@ export function DashboardClient({
           )}
         </div>
 
-        {/* 5. Middle Grid: Doubt of the Day (Ruled Paper) + Today's Plan (Placeholder) */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-[18px] items-stretch">
-          {/* Doubt of the Day Card (Ruled Notebook Paper Styling) */}
-          <div className="relative flex flex-col justify-between bg-ruled-card border border-[rgba(28,26,22,0.12)] rounded-[16px] p-[20px_24px_20px_48px] shadow-ref-card overflow-hidden">
-            <span
-              aria-hidden="true"
-              className="absolute top-[12px] bottom-[12px] left-[32px] w-[1.5px] bg-[rgba(221,68,51,0.4)] pointer-events-none"
-            />
-
-            <div>
-              <div className="flex items-center justify-between gap-3">
-                <span className="font-script font-bold text-[#DD4433] text-[1rem] -rotate-[0.6deg] inline-block">
-                  doubt of the day
-                </span>
-                <span className="font-extrabold text-[0.6rem] tracking-[0.1em] uppercase text-[#C53A2B]">
-                  {(doubtOfDay?.subject || "Physics").toUpperCase()}
-                  {doubtOfDay?.concept ? ` · ${doubtOfDay.concept.toUpperCase()}` : ""}
-                </span>
-              </div>
-
-              <p className="mt-2 leading-[1.55] text-[1.02rem] text-[#1C1A16] font-medium">
-                {doubtOfDay?.questionText ||
-                  "Why do photoelectrons stop the moment intensity drops — but not when frequency drops below threshold?"}
-              </p>
-            </div>
-
-            {/* The CTA is deliberately a dare, not a lesson link. Tapping it
-                opens a two-minute chat where {tutorName} asks for the
-                student's guess BEFORE revealing anything — so the button has
-                to promise that conversation, not a chapter. */}
-            <button
-              type="button"
-              onClick={() => doubtOfDay && setDoubtChatOpen(true)}
-              disabled={!doubtOfDay}
-              className="group inline-flex items-center gap-2 font-semibold text-[0.86rem] px-4 py-2 rounded-full border border-[rgba(28,26,22,0.16)] bg-white/70 text-[#1C1A16] hover:border-ink hover:bg-white transition-colors mt-4 self-start disabled:opacity-50 disabled:cursor-default"
-            >
-              <span>Think you know? Tell {tutorName}</span>
-              <svg
-                viewBox="0 0 16 16"
-                className="w-3.5 h-3.5 fill-none stroke-current group-hover:translate-x-0.5 transition-transform"
-                strokeWidth="1.9"
-                strokeLinecap="round"
-              >
-                <path d="M2 8h11M9 3.5 13.5 8 9 12.5" />
-              </svg>
-            </button>
-          </div>
-
+        {/* 5. Today's plan */}
+        <div className="grid grid-cols-1 gap-[18px] items-stretch">
           <TodaysPlan />
         </div>
+
+        {/* Last thing on the page, deliberately quiet: a reference students
+            visit once or twice, not a daily action. */}
+        <Link
+          href="/exam-scope"
+          className="flex items-center justify-between gap-4 rounded-[16px] border border-border-subtle bg-white px-5 py-4 hover:border-ink transition-colors"
+        >
+          <div>
+            <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">Exam scope</span>
+            <b className="block text-[1rem] text-ink mt-0.5">What&apos;s actually in your exam</b>
+            <span className="block text-[0.8rem] text-ink-light mt-0.5">
+              Not every NCERT chapter is examinable. See what counts, and what you can stop studying.
+            </span>
+          </div>
+          <span className="text-ink-light" aria-hidden>→</span>
+        </Link>
       </main>
 
-      {doubtChatOpen && doubtOfDay && (
-        <DoubtChatOverlay
-          doubtId={doubtOfDay.id}
-          concept={doubtOfDay.concept}
-          onClose={() => setDoubtChatOpen(false)}
-        />
-      )}
     </div>
   );
 }

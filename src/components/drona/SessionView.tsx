@@ -13,6 +13,7 @@ import {
   type SessionLanguage,
 } from "@/lib/drona/tutor";
 import { VoiceClientState } from "@/lib/drona/voice";
+import { ReportSheet } from "@/components/ReportSheet";
 
 interface SessionViewProps {
   sessionTopic: string;
@@ -40,9 +41,30 @@ interface SessionViewProps {
   subtopicOptions?: string[];
   onSendTurn: (utterance: string) => void;
   onEndSession: () => void;
+  /** For report-a-mistake: which class this is. */
+  sessionId?: string | null;
+  reportSubject?: string | null;
+  reportChapter?: string | null;
   onTogglePause?: () => void;
   onStartPushToTalk?: () => void;
   onStopPushToTalk?: () => void;
+}
+
+/**
+ * The highest board-event `seq` revealed so far in the turn that event `idx`
+ * belongs to: scan forward while `seq` keeps rising; a drop means a new turn
+ * started. A widget's narration cues fire off this number, so a cue fires when
+ * its sentence is spoken (the board only receives events as they are revealed).
+ */
+function activeSeqFor(events: { seq?: number }[], idx: number): number | null {
+  let seq = typeof events[idx]?.seq === "number" ? (events[idx].seq as number) : null;
+  if (seq === null) return null;
+  for (let i = idx + 1; i < events.length; i++) {
+    const s = events[i]?.seq;
+    if (typeof s !== "number" || s <= seq) break;
+    seq = s;
+  }
+  return seq;
 }
 
 export function SessionView({
@@ -64,11 +86,15 @@ export function SessionView({
   subtopicOptions,
   onSendTurn,
   onEndSession,
+  sessionId,
+  reportSubject,
+  reportChapter,
   onTogglePause,
   onStartPushToTalk,
   onStopPushToTalk,
 }: SessionViewProps) {
   const [inputText, setInputText] = useState<string>("");
+  const [reportOpen, setReportOpen] = useState(false);
   const [holdDuration, setHoldDuration] = useState<number>(0);
   // Tracked here rather than read off voiceState.isListening, which is
   // `isPushToTalkActive && !isDronaSpeaking && …`. Any audio_chunk arriving
@@ -78,6 +104,37 @@ export function SessionView({
   const [isHolding, setIsHolding] = useState<boolean>(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const boardEndRef = useRef<HTMLDivElement>(null);
+  // WHO MOVED THE BOARD: the student or the board itself. The board follows
+  // new lines to the end, but a student who scrolls back to re-read must not be
+  // yanked down; a "Jump to live" chip brings them back. The rule is the
+  // phone's (lib/board-follow.ts): a student's own scroll decides whether we
+  // are following, the board's own glide never does. Browsers fire scroll
+  // events for programmatic scrolls too, so a scroll only counts as the
+  // student's if a wheel/touch/key/drag came just before it.
+  const [following, setFollowing] = useState(true);
+  const followingRef = useRef(true);
+  const studentMotionRef = useRef(false);
+  const studentTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const markStudent = () => {
+    studentMotionRef.current = true;
+    if (studentTimerRef.current) clearTimeout(studentTimerRef.current);
+    studentTimerRef.current = setTimeout(() => {
+      studentMotionRef.current = false;
+    }, 450);
+  };
+  const onBoardScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    if (!studentMotionRef.current) return;
+    const el = e.currentTarget;
+    const atBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 80;
+    followingRef.current = atBottom;
+    setFollowing(atBottom);
+  };
+  const jumpToLive = () => {
+    studentMotionRef.current = false;
+    followingRef.current = true;
+    setFollowing(true);
+    boardEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  };
   const teacher = tutorName || getTutorName(DEFAULT_VOICE);
 
   const handlePttDown = (e: React.PointerEvent<HTMLButtonElement>) => {
@@ -107,6 +164,10 @@ export function SessionView({
   // happened to change, which left new board lines sitting below the fold for
   // the rest of a long turn.
   useEffect(() => {
+    // Only while following: the board never pulls a student away from what
+    // they scrolled back to read.
+    if (!followingRef.current) return;
+    studentMotionRef.current = false;
     boardEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
   }, [boardEvents]);
 
@@ -220,6 +281,12 @@ export function SessionView({
         </div>
         <div className="flex items-center gap-3">
           <button
+            onClick={() => setReportOpen(true)}
+            className="font-semibold text-[0.82rem] py-2 px-3 rounded-full text-ink-muted hover:text-red-dark transition-colors cursor-pointer"
+          >
+            Report a mistake
+          </button>
+          <button
             onClick={onEndSession}
             className="inline-flex items-center gap-2 font-bold text-[0.86rem] py-2 px-4 rounded-full border-[1.4px] border-[rgba(221,68,51,0.4)] bg-[rgba(221,68,51,0.05)] text-[#C53A2B] hover:bg-[#DD4433] hover:border-[#DD4433] hover:text-white transition-colors cursor-pointer"
           >
@@ -257,10 +324,24 @@ export function SessionView({
               prose, my-3 on a margin note — which is what gives the lessons
               board its handwritten cadence. A uniform gap flattened all of
               that into evenly-spaced rows. */}
-          <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 max-w-full">
+          <div className="relative flex-1 min-h-0 flex flex-col">
+          <div
+            onScroll={onBoardScroll}
+            onWheel={markStudent}
+            onTouchStart={markStudent}
+            onTouchMove={markStudent}
+            onPointerDown={markStudent}
+            onKeyDown={markStudent}
+            className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 max-w-full"
+          >
             {boardEvents && boardEvents.length > 0 ? (
               boardEvents.map((evt, idx) => (
-                <PremiumBoardEvent key={idx} event={evt} animate={idx === boardEvents.length - 1} />
+                <PremiumBoardEvent
+                  key={idx}
+                  event={evt}
+                  animate={idx === boardEvents.length - 1}
+                  activeSeq={activeSeqFor(boardEvents, idx)}
+                />
               ))
             ) : boardLatex ? (
               <div className="py-1 max-w-full overflow-x-hidden whitespace-pre-wrap">
@@ -274,6 +355,16 @@ export function SessionView({
               <div className="text-ink-muted text-sm italic">Board will update as {teacher} speaks...</div>
             )}
             <div ref={boardEndRef} />
+          </div>
+          {!following && boardEvents && boardEvents.length > 0 && (
+            <button
+              type="button"
+              onClick={jumpToLive}
+              className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-ink text-white text-xs font-bold px-4 py-2 shadow-lg"
+            >
+              Jump to live ↓
+            </button>
+          )}
           </div>
         </div>
 
@@ -651,6 +742,20 @@ export function SessionView({
           </button>
         </div>
       </div>
+      {reportOpen && (
+        <ReportSheet
+          target={{
+            surface: "live",
+            sessionId,
+            subject: reportSubject,
+            chapter: reportChapter,
+            // What Drona was saying when they reported it: the diagnosis.
+            quote: cleanSpeech,
+            context: { phase, segment_index: segmentIndex, subtopic: sessionTopic },
+          }}
+          onClose={() => setReportOpen(false)}
+        />
+      )}
     </div>
   );
 }

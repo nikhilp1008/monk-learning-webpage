@@ -66,21 +66,6 @@ export interface SSEEventState {
   reason?: 'session_ended' | string;
 }
 
-export interface PracticeExplainSessionResponse {
-  session_id: string;
-  phase: string;
-  language?: 'english' | 'hinglish';
-  tutor_voice?: 'male' | 'female';
-  tutor_name?: string;
-}
-
-/** Same session-creation contract as practice-explain, plus the doubt's own
- * subject/concept so the overlay can label the session before turn 1 lands. */
-export interface DoubtOfDaySessionResponse extends PracticeExplainSessionResponse {
-  subject?: string;
-  concept?: string;
-}
-
 export interface EndSessionResponse {
   summary_points: string[];
   mistakes_count: number;
@@ -90,6 +75,9 @@ export interface EndSessionResponse {
   questions_answered?: number;
   /** Chapter the session belonged to. */
   chapter_name?: string | null;
+  /** The server decides whether the class got far enough (two segments) to
+   *  have takeaways; "no points" and "too early for points" differ. */
+  too_short_for_summary?: boolean;
   next_suggestion?: {
     chapter_id: string;
     chapter_name: string;

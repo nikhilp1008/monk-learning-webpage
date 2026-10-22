@@ -3,6 +3,15 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { apiFetch } from "@/lib/api";
+import {
+  earnedTowardNext,
+  formatClock,
+  formatDay,
+  getMockStatus,
+  listMockRuns,
+  type MockRunRow,
+  type MockStatus,
+} from "@/lib/mock";
 import { getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
 
 /* ── API contract: GET /progress (monk-learning-api) ──────────────────── */
@@ -55,7 +64,12 @@ interface ProgressResponse {
     climb: { date: string; score: number }[];
   };
   subjects: ApiSubject[];
-  pace: { available: boolean; note: string };
+  pace: {
+    available: boolean;
+    note?: string;
+    /** Per subject with enough samples (a subject is omitted, not guessed). */
+    rows?: { subject: string; actual_seconds: number; target_seconds: number; over: boolean; samples: number }[];
+  };
   recommendations: ApiRecommendation[];
   ledger: {
     doubts_solved: number;
@@ -111,6 +125,21 @@ const REC_TAG: Record<ApiRecommendation["role"], { tag: string; hint: string; ct
 
 const CONCEPTS_PREVIEW = 15;
 
+/** "45s", "1m 05s". */
+function asClock(seconds: number): string {
+  const whole = Math.max(0, Math.round(seconds));
+  if (whole < 60) return `${whole}s`;
+  return `${Math.floor(whole / 60)}m ${String(whole % 60).padStart(2, "0")}s`;
+}
+
+/** Subject keys arrive as the questions table stores them. */
+const PACE_SUBJECT: Record<string, string> = {
+  physics: "Physics",
+  chemistry: "Chemistry",
+  mathematics: "Maths",
+  biology: "Biology",
+};
+
 export default function ProgressPage() {
   const [data, setData] = useState<ProgressResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -121,11 +150,28 @@ export default function ProgressPage() {
   // Voice preference lives in localStorage — read after mount so SSR and
   // hydration agree on the default persona.
   const [tutorName, setTutorName] = useState(getTutorName());
+  // The mock gate and the newest finished paper, so the Exam Craft card can
+  // show the count rather than send a student to a screen that refuses them,
+  // and say how the last paper went. Null until known.
+  const [mockStatus, setMockStatus] = useState<MockStatus | null>(null);
+  const [lastPaper, setLastPaper] = useState<MockRunRow | null>(null);
 
   useEffect(() => {
     setTutorName(getTutorName(loadVoicePreference()));
     apiFetch<ProgressResponse>("/progress")
-      .then(setData)
+      .then((d) => {
+        setData(d);
+        // The gate is per exam, and the exam is whatever this summary was
+        // built for -- never a guess made on this page.
+        const exam = String(d.exam).toLowerCase().includes("neet") ? "neet" : "jee";
+        getMockStatus(exam).then(setMockStatus).catch(() => undefined);
+        listMockRuns()
+          .then((runs) => {
+            // Newest first from the server, for the exam this page shows.
+            setLastPaper(runs.find((r) => r.exam === exam && r.status === "submitted" && r.score) ?? null);
+          })
+          .catch(() => undefined);
+      })
       .catch((e) => setError(e instanceof Error ? e.message : "Failed to load progress"));
   }, []);
 
@@ -399,7 +445,7 @@ export default function ProgressPage() {
                       )}
                       <div className="flex items-center gap-3 flex-wrap pt-2">
                         <Link
-                          href="/practice"
+                          href={`/practice?chapter=${encodeURIComponent(c.chapter_id)}&name=${encodeURIComponent(c.name)}`}
                           className="font-bold text-[0.8rem] px-4 py-2 rounded-full bg-ink text-cream-light"
                         >
                           Practice this →
@@ -423,21 +469,60 @@ export default function ProgressPage() {
           </p>
         </div>
 
-        {/* Pace */}
+        {/* Pace. Real numbers: a subject without enough samples is absent
+            rather than estimated. Both bars are drawn against the SAME scale
+            (the slower of actual and target, plus a margin), so the fill and
+            the tick compare by eye; scaling each row to its own maximum would
+            put every tick in the same place. */}
         <div className="bg-white border border-border-subtle rounded-[18px] p-5 shadow-ref-card">
           <div className="flex items-center justify-between gap-3 flex-wrap mb-4">
             <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
-              Pace · average time per question
+              Pace · typical time per question
             </span>
             <span className="font-bold text-[0.66rem] text-ink-muted border border-border-subtle rounded-full px-2.5 py-1">
               Display only — doesn&apos;t move your score yet
             </span>
           </div>
-          <p className="text-[0.84rem] text-ink-light leading-relaxed">
-            {data.pace.available
-              ? data.pace.note
-              : "Measured silently from Practice — you never run a timer. Answer more questions and your pace against the exam's own per-question budget appears here."}
-          </p>
+          {data.pace.rows?.length ? (
+            <div className="space-y-3.5">
+              {data.pace.rows.map((row) => {
+                const ceiling = Math.max(row.actual_seconds, row.target_seconds) * 1.25 || 1;
+                const fill = Math.min(1, row.actual_seconds / ceiling);
+                const tick = Math.min(1, row.target_seconds / ceiling);
+                return (
+                  <div key={row.subject}>
+                    <div className="flex items-baseline justify-between gap-3 text-[0.84rem]">
+                      <b className="text-ink capitalize">{PACE_SUBJECT[row.subject] ?? row.subject}</b>
+                      <span className="text-ink-light">
+                        <b className="text-ink">{asClock(row.actual_seconds)}</b> · target {asClock(row.target_seconds)}
+                      </span>
+                    </div>
+                    <div className="relative mt-1.5 h-2 rounded-full bg-cream-card">
+                      <div
+                        className={`h-full rounded-full ${row.over ? "bg-orange" : "bg-green-badge"}`}
+                        style={{ width: `${fill * 100}%` }}
+                      />
+                      <span
+                        className="absolute -top-0.5 h-3 w-0.5 bg-ink rounded-full"
+                        style={{ left: `${tick * 100}%` }}
+                        aria-hidden
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+              <p className="text-[0.76rem] text-ink-muted leading-relaxed pt-1">
+                Measured silently from Practice — you never run a timer. The black tick is the exam&apos;s own
+                per-question budget, and the time shown is your middle question, not your average, so one long
+                one can&apos;t skew it.
+              </p>
+            </div>
+          ) : (
+            <p className="text-[0.84rem] text-ink-light leading-relaxed">
+              {data.pace.note ??
+                "Measured silently from Practice — you never run a timer. Answer a few more questions and your pace per subject appears here."}
+            </p>
+          )}
         </div>
 
         {/* What moves it next */}
@@ -453,8 +538,42 @@ export default function ProgressPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
             {data.recommendations.map((rec, i) => {
               const meta = REC_TAG[rec.role];
+              // A paper still open (the tab was closed mid-paper) means the
+              // card must say Resume, not offer to earn another.
+              const waiting = mockStatus?.active_paper ?? null;
+              const gated = !waiting && !!mockStatus && mockStatus.credits_available === 0;
+              const isMock = rec.role === "exam_craft";
+              // The mock card says what a mock is, in words: the server's line
+              // is a ratio out of the scoring model ("1.15x exam conditions"),
+              // and what it describes is a three-hour commitment.
+              const reason = !isMock
+                ? rec.reason
+                : waiting
+                  ? waiting.expired
+                    ? "Your paper's time ran out while you were away. Open it and it is marked on the answers you gave."
+                    : `Your paper is waiting, with ${formatClock(waiting.seconds_left)} left on its clock.`
+                  : gated
+                    ? `A full paper, on the clock, marked the way the real one is. You earn one by answering ${mockStatus!.threshold} practice questions correctly.`
+                    : "A full paper, on the clock, marked the way the real one is. It shows where you run out of time and which mistakes cost you marks.";
+              const cta = !isMock
+                ? meta.cta(tutorName)
+                : waiting
+                  ? waiting.expired
+                    ? "Mark my paper →"
+                    : "Resume mock test →"
+                  : gated || !mockStatus
+                    ? "See mock tests →"
+                    : "Start mock test →";
               const href =
-                rec.role === "clear_flag" ? "/learn" : rec.role === "exam_craft" ? "/test" : "/practice";
+                rec.role === "clear_flag"
+                  ? "/learn"
+                  : rec.role === "exam_craft"
+                    ? waiting
+                      ? "/mocks/paper"
+                      : "/mocks"
+                    : rec.chapter_id
+                      ? `/practice?chapter=${encodeURIComponent(rec.chapter_id)}`
+                      : "/practice";
               return (
                 <div
                   key={`${rec.role}-${i}`}
@@ -469,14 +588,45 @@ export default function ProgressPage() {
                     </span>
                   </div>
                   <b className="font-bold text-[1.02rem] text-ink leading-snug">{rec.title}</b>
-                  <p className="text-[0.8rem] text-ink-light leading-relaxed mt-1.5 flex-1">{rec.reason}</p>
+                  <p className="text-[0.8rem] text-ink-light leading-relaxed mt-1.5 flex-1">{reason}</p>
+                  {isMock && lastPaper?.score && (
+                    <Link
+                      href={`/mocks/report/${lastPaper.id}`}
+                      className="mt-3 flex items-center justify-between gap-2 rounded-xl border border-border-subtle bg-cream-light px-3 py-2 hover:border-ink transition-colors"
+                      aria-label="See the report for your last paper"
+                    >
+                      <span className="text-[0.72rem] text-ink-muted">
+                        Last paper · {formatDay(lastPaper.submitted_at ?? lastPaper.created_at)}
+                        <b className="block text-[1rem] text-ink">
+                          {lastPaper.score.total_marks}
+                          <span className="text-[0.72rem] text-ink-muted font-bold"> / {lastPaper.score.max_marks}</span>
+                        </b>
+                      </span>
+                      <span className="text-[0.74rem] font-bold text-ink">See report →</span>
+                    </Link>
+                  )}
+                  {isMock && gated && mockStatus && (
+                    <div className="mt-3">
+                      <div className="h-1.5 rounded-full bg-cream-card overflow-hidden">
+                        <div
+                          className="h-full bg-orange rounded-full"
+                          style={{
+                            width: `${Math.min(100, Math.round((earnedTowardNext(mockStatus) / mockStatus.threshold) * 100))}%`,
+                          }}
+                        />
+                      </div>
+                      <p className="text-[0.7rem] text-ink-muted mt-1">
+                        {earnedTowardNext(mockStatus)} of {mockStatus.threshold} correct
+                      </p>
+                    </div>
+                  )}
                   <Link
                     href={href}
                     className={`mt-4 font-bold text-[0.82rem] px-4 py-2.5 rounded-full self-start ${
                       i === 0 ? "bg-ink text-cream-light" : "border border-border-subtle text-ink"
                     }`}
                   >
-                    {meta.cta(tutorName)}
+                    {cta}
                   </Link>
                 </div>
               );

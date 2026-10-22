@@ -5,8 +5,6 @@ import {
   ScopeSessionResponse,
   TurnRequest,
   EndSessionResponse,
-  PracticeExplainSessionResponse,
-  DoubtOfDaySessionResponse,
   SSEEventSpeech,
   SSEEventBoard,
   SSEEventMeta,
@@ -130,70 +128,6 @@ export async function scopeSession(
 }
 
 // streamTurn removed — WebSocket /drona/session/{id}/live is the sole live turn transport
-
-/**
- * Creates a practice_explain session seeded with a just-answered practice
- * question's full context (stem, options, the student's answer, the correct
- * answer, the solution). Returns a session_id ready to open over the same
- * WebSocket transport a chapter session uses.
- */
-export async function startPracticeExplainSession(
-  questionId: string,
-  chosenOption: string | undefined,
-  chosenValue: number | undefined,
-  language: SessionLanguage,
-  voice: TutorVoice = DEFAULT_VOICE
-): Promise<PracticeExplainSessionResponse> {
-  const token = await getAuthToken();
-  const res = await fetch(`${getBaseUrl()}/practice/explain`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      question_id: questionId,
-      chosen_option: chosenOption,
-      chosen_value: chosenValue,
-      language,
-      voice,
-    }),
-  });
-  if (!res.ok) {
-    throw new Error(`Practice explain session start failed: ${res.status}`);
-  }
-  return res.json();
-}
-
-/**
- * Creates a doubt_of_day session for one curated doubt from the dashboard
- * card. Only the doubt's id goes over the wire — the answer and explanation
- * are read server-side, so the client never holds the answer it is about to
- * ask the student to guess.
- */
-export async function startDoubtOfDaySession(
-  doubtId: string,
-  language: SessionLanguage,
-  voice: TutorVoice = DEFAULT_VOICE
-): Promise<DoubtOfDaySessionResponse> {
-  const token = await getAuthToken();
-  const res = await fetch(`${getBaseUrl()}/doubt-of-day/chat`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      doubt_id: doubtId,
-      language,
-      voice,
-    }),
-  });
-  if (!res.ok) {
-    throw new Error(`Doubt-of-day session start failed: ${res.status}`);
-  }
-  return res.json();
-}
 
 export async function endSession(
   sessionId: string

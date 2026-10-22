@@ -1,5 +1,6 @@
 "use client";
 
+import { widgetManifestParam } from "@/lib/widgets/registry";
 import { supabase } from "@/lib/supabase";
 
 export interface VoiceClientOptions {
@@ -217,7 +218,18 @@ export class DronaVoiceClient {
       const streamFlag = new URLSearchParams(window.location.search).get("stream_tts");
       if (streamFlag === "0" || streamFlag === "1") passthrough = `&stream_tts=${streamFlag}`;
     }
-    const wsUrl = this.options.wsUrl || `${wsBase}/drona/session/${this.sessionId}/live?token=${encodeURIComponent(token)}${passthrough}`;
+    // WIDGET MANIFEST: this client draws none of the board widgets yet, and
+    // says so. `widgets=` (present, empty) is a claim the server honours:
+    // live_session_ws parses it to {} and client_can_render() then returns
+    // False for every registry widget, so those segments resolve to the
+    // illustration / stored SVG instead. Sending NO parameter is a different
+    // claim ("a build from before negotiation") and the server assumes the
+    // phone's 12-widget baseline: it then sends payload-only board events
+    // (no `svg`) that this page cannot draw, i.e. a blank board.
+    // Widgets this client CAN draw come from the registry (lib/widgets/registry.ts);
+    // porting one there is what turns it on.
+    const widgetManifest = `&widgets=${encodeURIComponent(widgetManifestParam())}`;
+    const wsUrl = this.options.wsUrl || `${wsBase}/drona/session/${this.sessionId}/live?token=${encodeURIComponent(token)}${passthrough}${widgetManifest}`;
 
     // Never leave a previous socket alive. `onerror` can fire WITHOUT a
     // following `close` (a transient network error on an otherwise open

@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FollowUp } from "@/components/FollowUp";
+import { SnapCrop } from "@/components/SnapCrop";
+import { EnlargeOnClick } from "@/components/PhotoLightbox";
 import {
   QuestionSheet,
   RefusalCard,
@@ -72,24 +74,12 @@ export function SnapClient() {
     };
   }, []);
 
-  const handleFile = useCallback(
-    async (fileList: FileList | File[]) => {
-      const files = Array.from(fileList);
-      if (!files.length) return;
+  // The photo waiting to be cropped. Every way in (file picker, camera, drop,
+  // paste) lands here first, so the student always chooses what is sent.
+  const [pending, setPending] = useState<{ file: File; extraNote: string | null } | null>(null);
 
-      // One photo per submission; it may hold up to MAX_QUESTIONS questions,
-      // which the server enforces when it transcribes.
-      const file = files[0];
-      const extraNote =
-        files.length > 1
-          ? `You picked ${files.length} files. ${teacher} reads one photo at a time — the first was used.`
-          : null;
-
-      const reason = rejectReason(file);
-      if (reason) {
-        setNotice(reason);
-        return;
-      }
+  const processFile = useCallback(
+    async (file: File, extraNote: string | null) => {
 
       setNotice(extraNote);
       setFailure(null);
@@ -134,7 +124,28 @@ export function SnapClient() {
       setLive(null);
       setBusy(false);
     },
-    [setPreview, teacher]
+    [setPreview]
+  );
+
+  const handleFile = useCallback(
+    (fileList: FileList | File[]) => {
+      const files = Array.from(fileList);
+      if (!files.length) return;
+      // One photo per submission; it may hold up to MAX_QUESTIONS questions,
+      // which the server enforces when it transcribes.
+      const file = files[0];
+      const extraNote =
+        files.length > 1
+          ? `You picked ${files.length} files. ${teacher} reads one photo at a time — the first was used.`
+          : null;
+      const reason = rejectReason(file);
+      if (reason) {
+        setNotice(reason);
+        return;
+      }
+      setPending({ file, extraNote });
+    },
+    [teacher]
   );
 
   const onDrop = (e: React.DragEvent) => {
@@ -219,6 +230,17 @@ export function SnapClient() {
 
   return (
     <div className="min-h-screen flex flex-col bg-ruled-body">
+      {pending && (
+        <SnapCrop
+          file={pending.file}
+          onCancel={() => setPending(null)}
+          onDone={(cropped) => {
+            const { extraNote } = pending;
+            setPending(null);
+            void processFile(cropped, extraNote);
+          }}
+        />
+      )}
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
         <div className="mb-6">
           <h1 className="text-[2.3rem] font-normal tracking-[-0.025em] leading-tight text-ink">
@@ -426,12 +448,14 @@ export function SnapClient() {
                         // A local object URL of the student's own file — next/image
                         // would add an optimizer round-trip for a preview that is
                         // discarded on retake.
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={previewUrl}
-                          alt="The question you photographed"
-                          className="w-full max-h-[260px] object-contain rounded-xl border border-[rgba(28,26,22,0.1)] bg-[#FBF8EF] mb-3.5"
-                        />
+                        <EnlargeOnClick src={previewUrl} alt="The question you photographed" className="mb-3.5">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={previewUrl}
+                            alt="The question you photographed"
+                            className="w-full max-h-[260px] object-contain rounded-xl border border-[rgba(28,26,22,0.1)] bg-[#FBF8EF]"
+                          />
+                        </EnlargeOnClick>
                       )}
 
                       {q.question_text ? (
@@ -617,12 +641,14 @@ function PhotoCard({
         </span>
       </div>
       {previewUrl && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={previewUrl}
-          alt="The question you photographed"
-          className="w-full max-h-[280px] object-contain rounded-xl border border-[rgba(28,26,22,0.1)] bg-[#FBF8EF]"
-        />
+        <EnlargeOnClick src={previewUrl} alt="The question you photographed">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={previewUrl}
+            alt="The question you photographed"
+            className="w-full max-h-[280px] object-contain rounded-xl border border-[rgba(28,26,22,0.1)] bg-[#FBF8EF]"
+          />
+        </EnlargeOnClick>
       )}
     </div>
   );

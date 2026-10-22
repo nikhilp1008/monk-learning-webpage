@@ -16,6 +16,9 @@ import React, { useEffect, useMemo, useRef } from "react";
 import katex from "@/lib/katex-setup";
 import { KaTeXRenderer } from "./KaTeXRenderer";
 import { isEmphasized, type BoardEventData } from "./BoardEvent";
+import { LabelledFigure } from "./LabelledFigure";
+import { SequenceHost, WidgetHost, canHost, canHostSequence } from "./widgets/WidgetHost";
+import { loadLanguagePreference } from "@/lib/drona/tutor";
 
 /* ------------------------------------------------------------------ */
 /* helpers                                                             */
@@ -370,11 +373,14 @@ function AnimatedDiagram({
 
 interface PremiumBoardEventProps {
   event: BoardEventData;
+  /** The highest board-event `seq` revealed so far in this widget's turn;
+   *  selects which narration cue a widget is showing. */
+  activeSeq?: number | null;
   /** Run the entrance animation (true only for the newest revealed event). */
   animate: boolean;
 }
 
-export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
+export function PremiumBoardEvent({ event, animate, activeSeq = null }: PremiumBoardEventProps) {
   const isHigh = isEmphasized(event.emphasis);
 
   switch (event.type) {
@@ -472,6 +478,55 @@ export function PremiumBoardEvent({ event, animate }: PremiumBoardEventProps) {
       );
 
     case "diagram":
+      // A payload-only figure (registry widget or stored illustration) has no
+      // SVG for this page to draw. An empty bordered box reads as a bug; say
+      // what is missing instead.
+      // The illustration tier: sourced art plus a label layer, named by slug.
+      // This is the one payload the web can draw (labelled_figure is dispatched
+      // outside widget negotiation, so it arrives whatever the manifest says).
+      {
+        const params = event.payload?.params ?? {};
+        const slug =
+          event.payload?.widget === "labelled_figure" && typeof params.asset_slug === "string"
+            ? params.asset_slug
+            : !event.svg && event.illustration_slug
+              ? event.illustration_slug
+              : null;
+        if (slug) {
+          const lang = params.lang === "english" || params.lang === "hinglish" ? params.lang : loadLanguagePreference();
+          return (
+            <LabelledFigure
+              slug={slug}
+              lang={lang}
+              activeGroup={typeof params.active_group === "string" ? params.active_group : null}
+              caption={event.caption}
+            />
+          );
+        }
+      }
+      // A registry widget this client has declared (see registry.ts). If its
+      // payload cannot be drawn (version too new, invalid params) fall through
+      // to the event's own SVG, then to the placeholder below.
+      if (event.payload?.kind === "board_sequence" && canHostSequence(event.payload.steps as never)) {
+        return <SequenceHost steps={event.payload.steps as never} activeSeq={activeSeq} />;
+      }
+      if (event.payload?.widget && canHost(event.payload)) {
+        return (
+          <WidgetHost
+            payload={{ widget: event.payload.widget, version: event.payload.version, params: event.payload.params, cues: event.payload.cues }}
+            activeSeq={activeSeq}
+            caption={event.caption}
+          />
+        );
+      }
+      if (!event.svg && event.payload) {
+        return (
+          <div className="my-4 mx-auto max-w-xl rounded-xl border border-dashed border-ink/25 bg-cream-soft/60 px-4 py-5 text-center text-sm text-ink-light">
+            {event.caption ? <p className="font-semibold text-ink mb-1">{event.caption}</p> : null}
+            <p>This figure is drawn in the phone app. Follow along with the explanation here.</p>
+          </div>
+        );
+      }
       return (
         <AnimatedDiagram
           svg={event.svg || ""}

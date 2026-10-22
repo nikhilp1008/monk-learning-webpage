@@ -2,12 +2,22 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { MathText } from "@/components/MathText";
 import { QuestionStem } from "@/components/QuestionStem";
 import { supabase } from "@/lib/supabase";
 import { apiFetch, ApiError } from "@/lib/api";
-import { PracticeExplainOverlay } from "@/components/drona/PracticeExplainOverlay";
+import { ReportSheet } from "@/components/ReportSheet";
+import { FollowUp } from "@/components/FollowUp";
+import { getTutorName, loadVoicePreference } from "@/lib/drona/tutor";
 import type { Database } from "@/lib/database.types";
+import {
+  DEFAULT_FOCUS,
+  loadFocusChapters,
+  sampleWeakChapterId,
+  type FocusChapter,
+  type PracticeFocus,
+} from "@/lib/weak-focus";
 
 type ProfileRow = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -35,7 +45,13 @@ interface QuestionPayload {
   concept?: string;
   difficulty?: string;
   exhausted?: boolean;
+  /** "daily_limit" when the student has used today's allowance, "pool_empty"
+   *  when the chosen filter has nothing left. */
+  reason?: string;
   message?: string;
+  /** Today's allowance, on every answer from POST /practice/next. */
+  questions_used_today?: number;
+  daily_limit?: number;
   diagram?: DiagramFigure[] | null;
 }
 
@@ -65,6 +81,8 @@ interface PracticeStats {
   correct: number;
   accuracy: number;
 }
+
+const STUCK_RUN = 5;
 
 interface PracticeClientProps {
   profile: ProfileRow;
@@ -170,11 +188,69 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   const [classLevelStr, setClassLevelStr] = useState<string>("both"); // "11", "12", "both"
   const [questionIndex, setQuestionIndex] = useState<number>(1);
 
+  // Focus mode: all chapters, weak areas first, or one chapter. A chapter can
+  // arrive pre-selected from Progress or a mock report as ?chapter=<id>.
+  const searchParams = useSearchParams();
+  const [focus, setFocus] = useState<PracticeFocus>(() => {
+    const id = searchParams.get("chapter");
+    return id
+      ? { mode: "chapter", chapterId: id, chapterName: searchParams.get("name") }
+      : DEFAULT_FOCUS;
+  });
+  const [focusChapters, setFocusChapters] = useState<FocusChapter[] | null>(null);
+  const [focusOpen, setFocusOpen] = useState(false);
+  const [reportOpen, setReportOpen] = useState(false);
+  // Ask the teacher about THIS solution out loud (the phone's follow-up bar).
+  const [askOpen, setAskOpen] = useState(false);
+  const [reportedId, setReportedId] = useState<string | null>(null);
+  const focusChaptersRef = useRef<FocusChapter[] | null>(null);
+
   // Question & Session state
   const [question, setQuestion] = useState<QuestionPayload | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [exhausted, setExhausted] = useState<boolean>(false);
+  // The daily allowance (150), as on the phone: "N questions left today", and a
+  // plain message when it runs out instead of the "set completed" copy.
+  // How long the question has actually been ON SCREEN (a hidden tab does not
+  // count). The server can only see when it handed the question out, and the
+  // page fetches one ahead, so its own clock runs while the student is still
+  // reading the previous solution: every server-derived time is inflated by an
+  // unknown amount. The client's reading is trusted when present.
+  const shownAtRef = useRef(0);
+  const hiddenSinceRef = useRef<number | null>(null);
+  const hiddenMsRef = useRef(0);
+  const questionKey = question?.question_id ?? null;
+  useEffect(() => {
+    shownAtRef.current = Date.now();
+    hiddenMsRef.current = 0;
+    hiddenSinceRef.current = document.hidden ? Date.now() : null;
+  }, [questionKey]);
+  useEffect(() => {
+    const onVis = () => {
+      if (document.hidden) hiddenSinceRef.current = Date.now();
+      else if (hiddenSinceRef.current !== null) {
+        hiddenMsRef.current += Date.now() - hiddenSinceRef.current;
+        hiddenSinceRef.current = null;
+      }
+    };
+    document.addEventListener("visibilitychange", onVis);
+    return () => document.removeEventListener("visibilitychange", onVis);
+  }, []);
+  const elapsedMs = () => {
+    const hidden = hiddenMsRef.current + (hiddenSinceRef.current !== null ? Date.now() - hiddenSinceRef.current : 0);
+    return Math.max(0, Date.now() - shownAtRef.current - hidden);
+  };
+  // Consecutive "I don't know"s in one chapter. At STUCK_RUN the page offers
+  // the lesson: an offer, never a block.
+  const [stuck, setStuck] = useState<{ chapter: string | null; run: number }>({ chapter: null, run: 0 });
+  const [quota, setQuota] = useState<{ used: number; limit: number } | null>(null);
+  const [limitMessage, setLimitMessage] = useState<string | null>(null);
+  const noteQuota = useCallback((p: QuestionPayload) => {
+    if (typeof p.questions_used_today === "number" && typeof p.daily_limit === "number") {
+      setQuota({ used: p.questions_used_today, limit: p.daily_limit });
+    }
+  }, []);
 
   // Answer & Selection state
   const [selectedOption, setSelectedOption] = useState<string>("");
@@ -182,8 +258,6 @@ export function PracticeClient({ profile }: PracticeClientProps) {
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [answerResult, setAnswerResult] = useState<AnswerResult | null>(null);
 
-  // Explain Drona state — session creation itself is owned by the overlay.
-  const [explainSessionActive, setExplainSessionActive] = useState<boolean>(false);
 
   // Transient notice for things that are not errors but must not be silent,
   // e.g. a question the server cannot grade and we had to swap out.
@@ -239,9 +313,39 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     setAnswerResult(null);
     setSelectedOption("");
     setNumericalValue("");
-    setExplainSessionActive(false);
     setNotice(null);
+    setAskOpen(false);
   }, []);
+
+  // The chapter filter for the next request. Chapter mode pins one id; weak
+  // mode samples one in proportion to headroom. Weak mode with no progress
+  // yet (or every chapter strong) sends no filter -- an unfiltered question
+  // is the right one then.
+  const requestNext = useCallback(async (): Promise<QuestionPayload> => {
+    const post = (chapterId: string | null) =>
+      apiFetch<QuestionPayload>("/practice/next", {
+        method: "POST",
+        body: JSON.stringify({
+          exam,
+          class_level: classLevelStr,
+          ...(chapterId ? { chapter_id: chapterId } : {}),
+        }),
+      });
+    if (focus.mode === "chapter" && focus.chapterId) return post(focus.chapterId);
+    if (focus.mode !== "weak") return post(null);
+    // Weak mode needs the progress payload; wait for it once so the first
+    // question is already aimed.
+    const chapters = focusChaptersRef.current ?? (await loadFocusChapters().catch(() => null));
+    focusChaptersRef.current = chapters;
+    const first = sampleWeakChapterId(chapters, classLevelStr);
+    const result = await post(first);
+    // A weak chapter whose pool is spent serves nothing (and costs no
+    // quota); retry once against a different weak chapter, then unfiltered.
+    if (result.exhausted && first) {
+      return post(sampleWeakChapterId(chapters, classLevelStr, [first]));
+    }
+    return result;
+  }, [exam, classLevelStr, focus]);
 
   // Fetch Next Question
   const fetchNextQuestion = useCallback(
@@ -250,18 +354,15 @@ export function PracticeClient({ profile }: PracticeClientProps) {
       resetQuestionUiState();
 
       try {
-        const payload = await apiFetch<QuestionPayload>("/practice/next", {
-          method: "POST",
-          body: JSON.stringify({
-            exam,
-            class_level: classLevelStr,
-          }),
-        });
+        const payload = await requestNext();
 
+        noteQuota(payload);
         if (payload.exhausted) {
           setExhausted(true);
+          setLimitMessage(payload.reason === "daily_limit" ? (payload.message ?? "You have used today's questions.") : null);
           setQuestion(null);
         } else {
+          setLimitMessage(null);
           setQuestion(payload);
         }
       } catch (err) {
@@ -275,7 +376,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
         setLoading(false);
       }
     },
-    [exam, classLevelStr, resetQuestionUiState]
+    [requestNext, resetQuestionUiState, noteQuota]
   );
 
   // Warm the prefetch cache. Only ever called after an answer has been
@@ -287,10 +388,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     if (prefetchInFlightRef.current) return;
     prefetchInFlightRef.current = true;
     try {
-      const payload = await apiFetch<QuestionPayload>("/practice/next", {
-        method: "POST",
-        body: JSON.stringify({ exam, class_level: classLevelStr }),
-      });
+      const payload = await requestNext();
       if (!payload.exhausted) {
         prefetchedQuestionRef.current = payload;
       }
@@ -302,7 +400,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     } finally {
       prefetchInFlightRef.current = false;
     }
-  }, [exam, classLevelStr]);
+  }, [requestNext]);
 
   // A prefetch made under different filters answers the wrong question.
   const invalidatePrefetch = useCallback(() => {
@@ -315,39 +413,74 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     if (cached) {
       prefetchedQuestionRef.current = null;
       resetQuestionUiState();
+      noteQuota(cached);
       setQuestion(cached);
       setLoading(false);
       return;
     }
     fetchNextQuestion();
-  }, [fetchNextQuestion, resetQuestionUiState]);
+  }, [fetchNextQuestion, resetQuestionUiState, noteQuota]);
 
-  // Trigger initial fetch when exam or classLevelStr changes
+  // The chapter list for the focus picker (and weak sampling), from Progress.
+  useEffect(() => {
+    let cancelled = false;
+    loadFocusChapters()
+      .then((chapters) => {
+        if (cancelled) return;
+        focusChaptersRef.current = chapters;
+        setFocusChapters(chapters);
+        // A chapter that arrived as ?chapter=<id> without a name gets one.
+        setFocus((f) =>
+          f.mode === "chapter" && f.chapterId && !f.chapterName
+            ? { ...f, chapterName: chapters.find((c) => c.chapter_id === f.chapterId)?.name ?? null }
+            : f
+        );
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Trigger initial fetch when exam, class or focus changes
   useEffect(() => {
     invalidatePrefetch();
     fetchNextQuestion();
   }, [exam, classLevelStr, fetchNextQuestion, invalidatePrefetch]);
 
   // Submit Answer
-  const handleSubmitAnswer = async () => {
+  // `giveUp` is "I don't know": it submits with NO answer, so the server
+  // records an honest wrong answer, closes the question and returns the worked
+  // solution. The student still gets taught and the question still re-enters
+  // the pool as a miss (a skip would have vanished from the record, and a
+  // forced guess would write a false signal into mastery).
+  const handleSubmitAnswer = async (giveUp = false) => {
     if (!question || submitting || answerResult) return;
 
     const isNumerical = question.question_type === "numerical";
 
-    if (isNumerical && parsedNumericalValue === null) return;
-    if (!isNumerical && !selectedOption) return;
+    if (!giveUp) {
+      if (isNumerical && parsedNumericalValue === null) return;
+      if (!isNumerical && !selectedOption) return;
+    }
 
     setSubmitting(true);
     setErrorMsg(null);
 
     const body: Record<string, unknown> = {
       question_id: question.question_id,
+      elapsed_ms: Math.round(elapsedMs()),
+      // Graded incorrect and spaced the same way, but excluded from timing
+      // statistics: giving up is fast, solving is slow.
+      gave_up: giveUp,
     };
 
-    if (isNumerical) {
-      body.chosen_value = parsedNumericalValue;
-    } else {
-      body.chosen_option = selectedOption;
+    if (!giveUp) {
+      if (isNumerical) {
+        body.chosen_value = parsedNumericalValue;
+      } else {
+        body.chosen_option = selectedOption;
+      }
     }
 
     try {
@@ -361,6 +494,15 @@ export function PracticeClient({ profile }: PracticeClientProps) {
       if (result.is_correct) {
         setSessionCorrect((prev) => prev + 1);
       }
+      // A run of give-ups in ONE chapter is the signal, not a daily total:
+      // five in a row means this chapter is not landing, while forty spread
+      // across a hard day just means a hard day. Any correct answer clears it,
+      // and so does moving to a different chapter.
+      setStuck((prev) => {
+        if (!giveUp || result.is_correct) return { chapter: null, run: 0 };
+        const chapter = question.chapter_name ?? "this chapter";
+        return prev.chapter === chapter ? { chapter, run: prev.run + 1 } : { chapter, run: 1 };
+      });
       // Student is about to spend several seconds reading the solution box
       // -- start fetching what "Next" will need now instead of waiting for
       // them to click it.
@@ -385,13 +527,6 @@ export function PracticeClient({ profile }: PracticeClientProps) {
     } finally {
       setSubmitting(false);
     }
-  };
-
-  // Explain with Drona Handler — opens the overlay, which creates the
-  // session itself (see PracticeExplainOverlay).
-  const handleExplainWithDrona = () => {
-    if (!question) return;
-    setExplainSessionActive(true);
   };
 
   // Normalize options for MCQ
@@ -446,12 +581,12 @@ export function PracticeClient({ profile }: PracticeClientProps) {
               >
                 Unlimited practice
               </button>
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-ink-muted opacity-60 cursor-not-allowed">
-                <span>Mock test</span>
-                <span className="font-extrabold text-[0.55rem] tracking-wider uppercase bg-ink/10 px-1.5 py-0.5 rounded-full">
-                  COMING SOON
-                </span>
-              </div>
+              <Link
+                href="/mocks"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-ink-light hover:text-ink transition-colors"
+              >
+                Mock test
+              </Link>
             </div>
           </div>
 
@@ -523,6 +658,103 @@ export function PracticeClient({ profile }: PracticeClientProps) {
           </div>
         </div>
 
+        {/* Focus mode: all chapters, weak areas first, or a single chapter */}
+        <div className="bg-white border border-[rgba(28,26,22,0.08)] rounded-[18px] p-4 shadow-ref-stat">
+          <div className="flex items-center justify-between gap-3">
+            <div className="min-w-0">
+              <span className="text-xs font-bold text-ink-muted uppercase tracking-wider">Focus mode</span>
+              <p className="text-sm font-bold text-ink truncate">
+                {focus.mode === "weak"
+                  ? "Weak areas first"
+                  : focus.mode === "chapter"
+                    ? (focus.chapterName ?? "One chapter")
+                    : "All chapters"}
+              </p>
+            </div>
+            {quota && (
+              <span className="ml-auto mr-3 text-xs font-semibold text-ink-muted whitespace-nowrap">
+                {Math.max(0, quota.limit - quota.used)} questions left today
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={() => setFocusOpen(!focusOpen)}
+              className="font-bold text-xs px-4 py-2 rounded-full border border-border-subtle text-ink hover:border-ink transition-colors"
+            >
+              {focusOpen ? "Close" : "Change"}
+            </button>
+          </div>
+          {focusOpen && (
+            <div className="mt-4 space-y-4 border-t border-border-subtle pt-4">
+              <div className="flex flex-wrap gap-2">
+                {([
+                  ["mixed", "All chapters"],
+                  ["weak", "Weak areas first"],
+                ] as const).map(([mode, label]) => (
+                  <button
+                    key={mode}
+                    type="button"
+                    onClick={() => {
+                      setFocus({ mode, chapterId: null, chapterName: null });
+                      setQuestionIndex(1);
+                      setFocusOpen(false);
+                    }}
+                    className={`px-4 py-1.5 rounded-full text-xs font-bold border ${
+                      focus.mode === mode
+                        ? "bg-ink text-white border-ink"
+                        : "border-border-subtle text-ink-light hover:text-ink"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+              <p className="text-xs text-ink-muted">
+                Weak areas first picks chapters where you have the most marks to gain, using your Progress.
+                Or pin one chapter:
+              </p>
+              {focusChapters === null ? (
+                <p className="text-xs text-ink-muted">Loading chapters…</p>
+              ) : (
+                Object.entries(
+                  focusChapters
+                    .filter(
+                      (c) => c.curated && (classLevelStr === "both" || String(c.class_level) === classLevelStr)
+                    )
+                    .reduce<Record<string, FocusChapter[]>>((acc, c) => {
+                      (acc[c.subject] ??= []).push(c);
+                      return acc;
+                    }, {})
+                ).map(([subject, chapters]) => (
+                  <div key={subject}>
+                    <p className="text-xs font-bold text-ink-light mb-1.5 capitalize">{subject}</p>
+                    <div className="flex flex-wrap gap-1.5 max-h-40 overflow-y-auto">
+                      {chapters.map((c) => (
+                        <button
+                          key={c.chapter_id}
+                          type="button"
+                          onClick={() => {
+                            setFocus({ mode: "chapter", chapterId: c.chapter_id, chapterName: c.name });
+                            setQuestionIndex(1);
+                            setFocusOpen(false);
+                          }}
+                          className={`px-3 py-1 rounded-full text-xs border ${
+                            focus.chapterId === c.chapter_id
+                              ? "bg-orange text-dark-card border-orange font-bold"
+                              : "border-border-subtle text-ink-light hover:text-ink"
+                          }`}
+                        >
+                          {c.name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+          )}
+        </div>
+
         {/* Main Grid: Left Question Card (1.3fr) + Right Session Panel (1fr) */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-[18px] items-start">
           {/* LEFT: Question Card Container */}
@@ -574,13 +806,14 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl text-ink">
-                    You&apos;ve completed every question in this set!
+                    {limitMessage ? "That's today's practice done." : "You've completed every question in this set!"}
                   </h3>
                   <p className="text-xs text-ink-light mt-1.5 max-w-md mx-auto leading-relaxed">
-                    You have attempted all available questions under your current filter. Try selecting &quot;Both&quot; or switching exam modes.
+                    {limitMessage ??
+                      'You have attempted all available questions under your current filter. Try selecting "Both", switching exam modes, or changing the focus mode.'}
                   </p>
                 </div>
-                <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                <div className={`flex flex-wrap items-center justify-center gap-3 pt-2 ${limitMessage ? "hidden" : ""}`}>
                   <button
                     type="button"
                     onClick={() => {
@@ -645,6 +878,21 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                         className="max-w-full rounded-xl border border-border-subtle"
                       />
                     ))}
+                  </div>
+                )}
+
+                {stuck.run >= STUCK_RUN && !answerResult && (
+                  <div className="rounded-xl bg-orange/12 border border-orange/30 p-4 space-y-2">
+                    <b className="block text-ink">{stuck.chapter} isn&apos;t landing</b>
+                    <p className="text-sm text-ink-light">
+                      That&apos;s {stuck.run} in a row you haven&apos;t known. A lesson will get you further than another question.
+                    </p>
+                    <Link
+                      href={`/learn?chapter=${encodeURIComponent(stuck.chapter ?? "")}`}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ink text-white text-xs font-bold"
+                    >
+                      Learn it with Drona →
+                    </Link>
                   </div>
                 )}
 
@@ -793,12 +1041,59 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                   </div>
                 )}
 
+                {/* Report a mistake: once the answer is graded, so the student
+                    has seen the key and solution they are disputing. */}
+                {answerResult && (
+                  <div className="flex justify-end">
+                    <button
+                      type="button"
+                      onClick={() => setReportOpen(true)}
+                      disabled={reportedId === question.question_id}
+                      className="font-semibold text-xs text-ink-muted hover:text-red-dark transition-colors disabled:text-red-dark disabled:cursor-default"
+                    >
+                      {reportedId === question.question_id ? "Reported — thank you" : "Report a mistake"}
+                    </button>
+                  </div>
+                )}
+                {reportOpen && (
+                  <ReportSheet
+                    target={{
+                      surface: "practice",
+                      questionId: question.question_id,
+                      chapter: question.chapter_name ?? null,
+                      context: { concept: question.concept ?? null, difficulty: question.difficulty ?? null },
+                    }}
+                    onClose={() => setReportOpen(false)}
+                    onSent={() => setReportedId(question.question_id)}
+                  />
+                )}
+
+                {answerResult && (
+                  askOpen ? (
+                    <FollowUp
+                      doubtId={question.question_id}
+                      surface="practice"
+                      teacher={getTutorName(loadVoicePreference())}
+                      onClose={() => setAskOpen(false)}
+                    />
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setAskOpen(true)}
+                      className="inline-flex items-center gap-2 font-semibold text-[0.88rem] py-2.5 px-5 rounded-full border-[1.4px] border-[rgba(28,26,22,0.14)] bg-white text-ink hover:border-ink transition-colors"
+                    >
+                      Ask a follow-up →
+                    </button>
+                  )
+                )}
+
                 {/* Action Buttons Row */}
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-border-subtle">
                   {!answerResult ? (
+                    <div className="flex items-center gap-4">
                     <button
                       type="button"
-                      onClick={handleSubmitAnswer}
+                      onClick={() => handleSubmitAnswer()}
                       disabled={
                         submitting ||
                         (question.question_type === "numerical"
@@ -813,15 +1108,16 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                         "Submit"
                       )}
                     </button>
-                  ) : (
                     <button
                       type="button"
-                      onClick={handleExplainWithDrona}
-                      className="px-5 py-2.5 rounded-full border border-border-subtle bg-white text-ink font-bold text-xs hover:border-ink transition-colors flex items-center gap-2"
+                      onClick={() => handleSubmitAnswer(true)}
+                      disabled={submitting}
+                      className="text-xs font-bold text-ink-muted hover:text-ink underline-offset-2 hover:underline disabled:opacity-40"
                     >
-                      🎙 Explain this with Drona
+                      I don&apos;t know
                     </button>
-                  )}
+                    </div>
+                  ) : null}
 
                   <button
                     type="button"
@@ -905,7 +1201,7 @@ export function PracticeClient({ profile }: PracticeClientProps) {
                 If a question topic feels weak, jump into Monk&apos;s live board lessons for a full step-by-step walkthrough.
               </p>
               <Link
-                href="/lessons"
+                href="/learn"
                 className="inline-flex items-center gap-2 font-bold text-xs px-4 py-2 rounded-full bg-orange text-dark-card hover:bg-orange-light transition-colors shadow-xs"
               >
                 Go to lessons →
@@ -915,14 +1211,6 @@ export function PracticeClient({ profile }: PracticeClientProps) {
         </div>
       </main>
 
-      {explainSessionActive && question && (
-        <PracticeExplainOverlay
-          questionId={question.question_id}
-          chosenOption={selectedOption || undefined}
-          chosenValue={numericalValue ? parseFloat(numericalValue) : undefined}
-          onClose={() => setExplainSessionActive(false)}
-        />
-      )}
     </div>
   );
 }

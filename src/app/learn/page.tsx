@@ -1,5 +1,7 @@
 "use client";
 
+import { ProofMoment } from "@/components/ProofMoment";
+import { captureProof, collectProof, markSeen, noteClassTaken, rankEvents, type ProofEvent } from "@/lib/proof";
 import { useEffect, useState, useMemo, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
@@ -135,6 +137,34 @@ export default function LearnPage() {
 
   /* ─── Flow state ─── */
   const [flowState, setFlowState] = useState<FlowState>("picker");
+  // What the class just ended moved on the student's progress (the phone's
+  // "proof moment"). Collected once per class at the summary; saying nothing
+  // is the designed outcome when there is nothing honest to say.
+  const [proof, setProof] = useState<ProofEvent[]>([]);
+  // Sets of options the teacher offered this class: the summary's denominator
+  // ("answered 3 / 4"). The end payload only reports how many were answered,
+  // so the page keeps the tally, as the phone's classroom does.
+  const askedRef = useRef(0);
+  const lastPhaseRef = useRef<string | null>(null);
+  const [questionsAsked, setQuestionsAsked] = useState(0);
+  const gatherProof = useCallback(async (recorded: boolean) => {
+    try {
+      // Only a class the backend actually recorded counts as a class taken.
+      const firstClass = recorded ? await noteClassTaken() : null;
+      let events: ProofEvent[] = [];
+      try {
+        events = await collectProof();
+      } catch {
+        // Offline, or the score has not been recomputed yet.
+      }
+      if (firstClass) events = rankEvents([firstClass, ...events]);
+      if (!events.length) return;
+      setProof(events);
+      void markSeen(events);
+    } catch {
+      /* the summary stands on its own */
+    }
+  }, []);
 
   /* ─── Session state ─── */
   const [sessionTopic, setSessionTopic] = useState("");
@@ -197,7 +227,10 @@ export default function LearnPage() {
             .select("enrolled_class")
             .eq("id", user.id)
             .maybeSingle();
-          if (profile?.enrolled_class) {
+          // A ?chapter= deep link (Practice's "isn't landing" card) carries
+          // its own class; the profile default must not overwrite it.
+          const deepLinked = new URLSearchParams(window.location.search).has("chapter");
+          if (profile?.enrolled_class && !deepLinked) {
             setSelectedClass(profile.enrolled_class);
           }
         }
@@ -221,6 +254,20 @@ export default function LearnPage() {
           // Default to first subject from API
           if (data.length > 0 && !data.find(g => g.subject === selectedSubject)) {
             setSelectedSubject(data[0].subject);
+          }
+          // ?chapter=<name>: land on that chapter, in its subject and class,
+          // with the list narrowed to it. A hint, never a block.
+          const want = new URLSearchParams(window.location.search).get("chapter")?.trim().toLowerCase();
+          if (want) {
+            for (const g of data) {
+              const hit = g.chapters.find(c => c.name.toLowerCase() === want);
+              if (hit) {
+                setSelectedSubject(g.subject);
+                if (hit.class_level) setSelectedClass(hit.class_level);
+                setSearchTerm(hit.name);
+                break;
+              }
+            }
           }
         }
       } catch (err: unknown) {
@@ -466,6 +513,11 @@ export default function LearnPage() {
 
       // Transition to session
       setFlowState("session");
+      // The baseline the proof moment at the end is measured against. Taken
+      // when a class STARTS (not on resume, which would hide earlier progress).
+      void captureProof();
+      askedRef.current = 0;
+      lastPhaseRef.current = null;
       rememberActiveSession(sid, res.subtopic || utterance);
       resetSessionPlaybackState();
       setBoardLatex("");
@@ -566,10 +618,13 @@ export default function LearnPage() {
     try {
       const res = await endSession(sessionId);
       setSummaryData(res);
+      setQuestionsAsked(askedRef.current);
       setFlowState("summary");
+      void gatherProof(true);
     } catch (err) {
       console.error("End session failed:", err);
       setFlowState("summary");
+      void gatherProof(false);
     } finally {
       // Otherwise a verdict shown in the last few seconds before ending class
       // (its own 5s auto-clear timer still pending) could survive onto the
@@ -681,6 +736,13 @@ export default function LearnPage() {
         evt?.latex ||
         evt?.text ||
         (evt?.svg ? `svg:${String(evt.svg).slice(0, 120)}` : "") ||
+        // A payload-only figure (stored illustration / widget) carries no text
+        // or svg. Keyed on seq alone, two turns' figures that both arrive as
+        // seq 1 collapse into one and the second is dropped, so the payload's
+        // own identity is part of the key.
+        (evt?.payload
+          ? `payload:${evt.seq ?? ""}:${evt.payload.widget ?? ""}:${JSON.stringify(evt.payload.params ?? {}).slice(0, 160)}`
+          : "") ||
         (evt?.seq != null ? `seq:${evt.seq}` : "")
       )
         .trim()
@@ -812,7 +874,11 @@ export default function LearnPage() {
           pendingStateRef.current = null;
           if (!next) return;
 
-          if (next.phase) setSessionPhase(next.phase as any);
+          if (next.phase) {
+            if (next.phase === "awaiting_answer" && lastPhaseRef.current !== "awaiting_answer") askedRef.current += 1;
+            lastPhaseRef.current = String(next.phase);
+            setSessionPhase(next.phase as any);
+          }
 
           if (next.answerResult) {
             setAnswerResult(next.answerResult);
@@ -909,6 +975,9 @@ export default function LearnPage() {
             subtopicOptions={effectiveSubtopicOptions}
             onSendTurn={handleSendTurn}
             onEndSession={handleEndSession}
+            sessionId={sessionId}
+            reportSubject={selectedSubject}
+            reportChapter={sessionTopic}
             onTogglePause={() => voiceClientRef.current?.togglePause()}
             onStartPushToTalk={() => voiceClientRef.current?.startPushToTalk()}
             onStopPushToTalk={() => voiceClientRef.current?.stopPushToTalk()}
@@ -923,10 +992,13 @@ export default function LearnPage() {
     return (
       <div className="min-h-screen flex flex-col bg-ruled-body">
         <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
+          <ProofMoment events={proof} teacher={teacher} />
           <EndStatesView
             type="normal"
             tutorName={teacher}
             summaryData={summaryData}
+            topicTitle={sessionTopic}
+            questionsAsked={questionsAsked}
             sessionId={sessionId}
             onReturnToCatalogue={handleReturnToPicker}
             onViewNotes={() => router.push("/notes")}
