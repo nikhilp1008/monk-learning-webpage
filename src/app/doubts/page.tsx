@@ -5,7 +5,10 @@ export const dynamic = "force-dynamic";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { MathText } from "@/components/MathText";
-import { listDoubts, type DoubtSummary, type SubjectChip } from "@/lib/doubts";
+import { deleteDoubt, listDoubts, type DoubtSummary, type SubjectChip } from "@/lib/doubts";
+import { Erasable } from "@/components/erase/Erasable";
+import { useEraseList } from "@/components/erase/useEraseList";
+import { EraseModeLine, EraseTool, UndoRow } from "@/components/erase/EraseUi";
 
 /**
  * Every snapped doubt.
@@ -36,6 +39,21 @@ export default function DoubtsPage() {
   // Holds the stored KEY ("mathematics"), not the label — that is what the
   // column stores and what a filter has to match.
   const [filter, setFilter] = useState<string>("all");
+  // Erase mode: rub a card to delete it (the phone's gesture). Undoable for 5s.
+  const [erase, setErase] = useState(false);
+  const [eraseNotice, setEraseNotice] = useState<string | null>(null);
+  const { remove, undo, canUndo } = useEraseList<DoubtSummary>(
+    setDoubts,
+    (d) => deleteDoubt(d.id),
+    () => setEraseNotice("Couldn't delete that doubt. It is back in your list.")
+  );
+  const eraseOn = erase && doubts.length > 0;
+  useEffect(() => {
+    if (!erase) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setErase(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [erase]);
 
   useEffect(() => {
     let isMounted = true;
@@ -78,7 +96,10 @@ export default function DoubtsPage() {
   const offSyllabusCount = doubts.filter((d) => d.on_syllabus === false).length;
 
   return (
-    <div className="min-h-screen flex flex-col bg-ruled-body">
+    <div
+      className="min-h-screen flex flex-col bg-ruled-body transition-colors duration-300"
+      style={eraseOn ? { backgroundColor: "#F4F3EF", backgroundImage: "none" } : undefined}
+    >
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
         <h1 className="text-[2.3rem] leading-[1.05] tracking-[-0.025em] font-medium text-ink">
           Every question you&apos;ve snapped.
@@ -142,7 +163,16 @@ export default function DoubtsPage() {
           <span className="text-[0.76rem] text-ink-muted font-semibold ml-auto">
             {doubts.length} snapped doubt{doubts.length === 1 ? "" : "s"}
           </span>
+          {doubts.length > 0 && <EraseTool on={eraseOn} onToggle={() => setErase((v) => !v)} />}
         </div>
+
+        {eraseOn && <EraseModeLine onDone={() => setErase(false)} />}
+        {eraseNotice && (
+          <p className="text-[0.8rem] text-red-dark mb-3" role="alert">
+            {eraseNotice}
+          </p>
+        )}
+        {canUndo && <UndoRow onUndo={undo} />}
 
         {offSyllabusCount > 0 && filter === "all" && (
           <p className="text-[0.8rem] text-ink-muted mb-4 -mt-2">
@@ -169,8 +199,14 @@ export default function DoubtsPage() {
         ) : (
           <div className="space-y-3">
             {filtered.map((d) => (
-              <Link
+              <Erasable
                 key={d.id}
+                active={eraseOn}
+                label="doubt"
+                onRemove={() => remove(d, doubts.findIndex((x) => x.id === d.id))}
+                className={eraseOn ? "animate-ml-nudge" : ""}
+              >
+              <Link
                 href={`/doubts/${d.id}`}
                 className="flex items-center gap-4 bg-white border border-border-subtle rounded-[16px] p-4 shadow-ref-stat hover:-translate-y-0.5 transition-transform"
               >
@@ -220,6 +256,7 @@ export default function DoubtsPage() {
                   <path d="M9 6l6 6-6 6" />
                 </svg>
               </Link>
+              </Erasable>
             ))}
           </div>
         )}

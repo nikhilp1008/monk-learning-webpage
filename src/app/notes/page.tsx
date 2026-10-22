@@ -6,6 +6,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
+import { deleteNote } from "@/lib/notes";
+import { Erasable } from "@/components/erase/Erasable";
+import { useEraseList } from "@/components/erase/useEraseList";
+import { EraseModeLine, EraseTool, UndoRow } from "@/components/erase/EraseUi";
 
 type NoteRow = Database["public"]["Tables"]["notes"]["Row"];
 
@@ -51,6 +55,22 @@ export default function NotesPage() {
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<string>("All");
+  // Erase mode: rub a card to delete it (the phone's gesture). Undoable for 5s.
+  const [erase, setErase] = useState(false);
+  const [eraseNotice, setEraseNotice] = useState<string | null>(null);
+  const { remove, undo, canUndo } = useEraseList<NoteRow>(
+    setNotes,
+    (n) => deleteNote(n.id),
+    (n) => setEraseNotice(`Couldn't delete "${n.concept || "that note"}". It is back in your list.`)
+  );
+  // Nothing left to erase: put the eraser down. Escape does the same.
+  const eraseOn = erase && notes.length > 0;
+  useEffect(() => {
+    if (!erase) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setErase(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [erase]);
 
   useEffect(() => {
     let isMounted = true;
@@ -102,7 +122,10 @@ export default function NotesPage() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col bg-ruled-body">
+    <div
+      className="min-h-screen flex flex-col bg-ruled-body transition-colors duration-300"
+      style={eraseOn ? { backgroundColor: "#F4F3EF", backgroundImage: "none" } : undefined}
+    >
 
       <main className="flex-1 max-w-[1180px] w-full mx-auto px-6 md:px-11 py-8 animate-ml-rise">
         <h1 className="text-[2.3rem] leading-[1.05] tracking-[-0.025em] font-medium text-ink">
@@ -143,7 +166,16 @@ export default function NotesPage() {
           <span className="text-[0.76rem] text-ink-muted font-semibold ml-auto">
             {notes.length} note{notes.length === 1 ? "" : "s"}
           </span>
+          {notes.length > 0 && <EraseTool on={eraseOn} onToggle={() => setErase((v) => !v)} />}
         </div>
+
+        {eraseOn && <EraseModeLine onDone={() => setErase(false)} />}
+        {eraseNotice && (
+          <p className="text-[0.8rem] text-red-dark mb-3" role="alert">
+            {eraseNotice}
+          </p>
+        )}
+        {canUndo && <UndoRow onUndo={undo} />}
 
         {loading ? (
           <div className="py-20 flex flex-col items-center justify-center gap-3 text-ink-muted">
@@ -161,10 +193,16 @@ export default function NotesPage() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {filtered.map((n) => (
-              <Link
+              <Erasable
                 key={n.id}
+                active={eraseOn}
+                label={n.concept || "note"}
+                onRemove={() => remove(n, notes.findIndex((x) => x.id === n.id))}
+                className={eraseOn ? "animate-ml-nudge" : ""}
+              >
+              <Link
                 href={`/notes/${n.id}`}
-                className="bg-white border border-border-subtle rounded-[16px] p-4 shadow-ref-stat hover:-translate-y-0.5 transition-transform"
+                className="block bg-white border border-border-subtle rounded-[16px] p-4 shadow-ref-stat hover:-translate-y-0.5 transition-transform"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="flex items-center gap-1.5 font-extrabold text-[0.66rem] tracking-[0.08em] uppercase text-ink-light">
@@ -180,6 +218,7 @@ export default function NotesPage() {
                   {previewText(n) || n.chapter}
                 </p>
               </Link>
+              </Erasable>
             ))}
           </div>
         )}
