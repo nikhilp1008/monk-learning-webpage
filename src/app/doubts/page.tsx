@@ -190,11 +190,20 @@ export default function DoubtsPage() {
           <p className="py-20 text-center text-ink-muted text-sm font-semibold">{error}</p>
         ) : filtered.length === 0 ? (
           <div className="py-20 text-center">
-            <p className="text-ink-muted text-sm font-semibold">
-              {doubts.length === 0
-                ? "Nothing snapped yet. Questions you photograph for Drona will show up here, solved."
-                : "No doubts match that. Try another search."}
-            </p>
+            {doubts.length === 0 ? (
+              <div className="max-w-sm mx-auto space-y-3">
+                <b className="block text-ink text-lg">Stuck on a question?</b>
+                <p className="text-ink-light text-sm">You get the steps, not just the answer.</p>
+                <Link
+                  href="/snap"
+                  className="inline-flex px-5 py-2.5 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill"
+                >
+                  Snap a question
+                </Link>
+              </div>
+            ) : (
+              <p className="text-ink-muted text-sm font-semibold">No doubts match that. Try another search.</p>
+            )}
           </div>
         ) : (
           <div className="space-y-3">

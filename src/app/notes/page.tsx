@@ -184,11 +184,22 @@ export default function NotesPage() {
           </div>
         ) : filtered.length === 0 ? (
           <div className="py-20 text-center">
-            <p className="text-ink-muted text-sm font-semibold">
-              {notes.length === 0
-                ? "Nothing saved yet. Notes you keep from a Drona session will show up here."
-                : "No notes match that. Try another search."}
-            </p>
+            {notes.length === 0 ? (
+              <div className="max-w-sm mx-auto space-y-3">
+                <b className="block text-ink text-lg">Your notes start with a class.</b>
+                <p className="text-ink-light text-sm">
+                  When a class ends, save the board and those notes are kept here.
+                </p>
+                <Link
+                  href="/learn"
+                  className="inline-flex px-5 py-2.5 rounded-full bg-orange text-dark-card font-bold text-sm shadow-ref-pill"
+                >
+                  Start a live class
+                </Link>
+              </div>
+            ) : (
+              <p className="text-ink-muted text-sm font-semibold">No notes match that. Try another search.</p>
+            )}
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
