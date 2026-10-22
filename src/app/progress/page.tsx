@@ -64,7 +64,12 @@ interface ProgressResponse {
     climb: { date: string; score: number }[];
   };
   subjects: ApiSubject[];
-  pace: { available: boolean; note: string };
+  pace: {
+    available: boolean;
+    note?: string;
+    /** Per subject with enough samples (a subject is omitted, not guessed). */
+    rows?: { subject: string; actual_seconds: number; target_seconds: number; over: boolean; samples: number }[];
+  };
   recommendations: ApiRecommendation[];
   ledger: {
     doubts_solved: number;
@@ -119,6 +124,21 @@ const REC_TAG: Record<ApiRecommendation["role"], { tag: string; hint: string; ct
 };
 
 const CONCEPTS_PREVIEW = 15;
+
+/** "45s", "1m 05s". */
+function asClock(seconds: number): string {
+  const whole = Math.max(0, Math.round(seconds));
+  if (whole < 60) return `${whole}s`;
+  return `${Math.floor(whole / 60)}m ${String(whole % 60).padStart(2, "0")}s`;
+}
+
+/** Subject keys arrive as the questions table stores them. */
+const PACE_SUBJECT: Record<string, string> = {
+  physics: "Physics",
+  chemistry: "Chemistry",
+  mathematics: "Maths",
+  biology: "Biology",
+};
 
 export default function ProgressPage() {
   const [data, setData] = useState<ProgressResponse | null>(null);
@@ -449,21 +469,60 @@ export default function ProgressPage() {
           </p>
         </div>
 
-        {/* Pace */}
+        {/* Pace. Real numbers: a subject without enough samples is absent
+            rather than estimated. Both bars are drawn against the SAME scale
+            (the slower of actual and target, plus a margin), so the fill and
+            the tick compare by eye; scaling each row to its own maximum would
+            put every tick in the same place. */}
         <div className="bg-white border border-border-subtle rounded-[18px] p-5 shadow-ref-card">
           <div className="flex items-center justify-between gap-3 flex-wrap mb-4">
             <span className="font-extrabold text-[0.62rem] tracking-[0.14em] uppercase text-ink-muted">
-              Pace · average time per question
+              Pace · typical time per question
             </span>
             <span className="font-bold text-[0.66rem] text-ink-muted border border-border-subtle rounded-full px-2.5 py-1">
               Display only — doesn&apos;t move your score yet
             </span>
           </div>
-          <p className="text-[0.84rem] text-ink-light leading-relaxed">
-            {data.pace.available
-              ? data.pace.note
-              : "Measured silently from Practice — you never run a timer. Answer more questions and your pace against the exam's own per-question budget appears here."}
-          </p>
+          {data.pace.rows?.length ? (
+            <div className="space-y-3.5">
+              {data.pace.rows.map((row) => {
+                const ceiling = Math.max(row.actual_seconds, row.target_seconds) * 1.25 || 1;
+                const fill = Math.min(1, row.actual_seconds / ceiling);
+                const tick = Math.min(1, row.target_seconds / ceiling);
+                return (
+                  <div key={row.subject}>
+                    <div className="flex items-baseline justify-between gap-3 text-[0.84rem]">
+                      <b className="text-ink capitalize">{PACE_SUBJECT[row.subject] ?? row.subject}</b>
+                      <span className="text-ink-light">
+                        <b className="text-ink">{asClock(row.actual_seconds)}</b> · target {asClock(row.target_seconds)}
+                      </span>
+                    </div>
+                    <div className="relative mt-1.5 h-2 rounded-full bg-cream-card">
+                      <div
+                        className={`h-full rounded-full ${row.over ? "bg-orange" : "bg-green-badge"}`}
+                        style={{ width: `${fill * 100}%` }}
+                      />
+                      <span
+                        className="absolute -top-0.5 h-3 w-0.5 bg-ink rounded-full"
+                        style={{ left: `${tick * 100}%` }}
+                        aria-hidden
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+              <p className="text-[0.76rem] text-ink-muted leading-relaxed pt-1">
+                Measured silently from Practice — you never run a timer. The black tick is the exam&apos;s own
+                per-question budget, and the time shown is your middle question, not your average, so one long
+                one can&apos;t skew it.
+              </p>
+            </div>
+          ) : (
+            <p className="text-[0.84rem] text-ink-light leading-relaxed">
+              {data.pace.note ??
+                "Measured silently from Practice — you never run a timer. Answer a few more questions and your pace per subject appears here."}
+            </p>
+          )}
         </div>
 
         {/* What moves it next */}
